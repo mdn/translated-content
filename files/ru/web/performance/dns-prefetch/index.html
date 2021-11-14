@@ -17,12 +17,12 @@ translation_of: Web/Performance/dns-prefetch
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="brush: html notranslate">&lt;link rel="dns-prefetch" href="https://fonts.gstatic.com/" &gt;
+<pre class="brush: html">&lt;link rel="dns-prefetch" href="https://fonts.gstatic.com/" &gt;
 </pre>
 
 <h2 id="Примеры">Примеры</h2>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
   &lt;head&gt;
     &lt;link rel="dns-prefetch" href="https://fonts.gstatic.com/"&gt;
     &lt;!-- and all other head elements --&gt;
@@ -42,11 +42,11 @@ translation_of: Web/Performance/dns-prefetch
 
 <p><strong>Во-вторых,</strong> существует возможность добавить <code>dns-prefetch</code> (и другие подсказки) как <a href="/en-US/docs/Web/HTTP/Headers">HTTP заголовок</a> с помощью <a href="/en-US/docs/Web/HTTP/Headers/Link">HTTP Link field</a>:</p>
 
-<pre class="brush: unix notranslate">Link: &lt;https://fonts.gstatic.com/&gt;; rel=dns-prefetch</pre>
+<pre class="brush: unix">Link: &lt;https://fonts.gstatic.com/&gt;; rel=dns-prefetch</pre>
 
 <p><strong>В третьих, </strong> хорошей практикой считается использование <code>dns-prefetch</code> в паре с  <code>preconnect</code>. В то время, как <code>dns-prefetch</code> срабатывает только при DNS поиске, <code>preconnect</code> устанавливает соединение к нужному серверу. Этот процесс включает в себя DNS resolution, установку TCP соединения и установление безопасного соединения (<a href="/en-US/docs/Glossary/TLS">TLS</a> рукопожатие), если оно доступно. Комбинирование этих двух инструкций даёт возможность ещё больше сократить время ожидания для кросс-доменных запросов. Вы можете использовать их вместе таким образом:</p>
 
-<pre class="brush: html notranslate">&lt;link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin&gt;
+<pre class="brush: html">&lt;link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin&gt;
 &lt;link rel="dns-prefetch" href="https://fonts.gstatic.com/"&gt;
 </pre>
 

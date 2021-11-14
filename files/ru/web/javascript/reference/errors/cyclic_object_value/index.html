@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Errors/Cyclic_object_value
 
 <h2 id="Сообщения">Сообщения</h2>
 
-<pre class="syntaxbox notranslate">TypeError: циклическое значение объекта (Firefox)
+<pre class="syntaxbox">TypeError: циклическое значение объекта (Firefox)
 TypeError: преобразование круговой структуры в JSON (Chrome и Opera)
 TypeError: циклическая ссылка в аргументе значения не поддерживается (Edge)
 </pre>
@@ -27,13 +27,13 @@ TypeError: циклическая ссылка в аргументе значе�
 
 <p>В круговой структуре как эта</p>
 
-<pre class="brush: js notranslate">var circularReference = {otherData: 123};
+<pre class="brush: js">var circularReference = {otherData: 123};
 circularReference.myself = circularReference;
 </pre>
 
 <p>{{jsxref("JSON.stringify()")}} закончится неудачей</p>
 
-<pre class="brush: js example-bad notranslate">JSON.stringify(circularReference);
+<pre class="brush: js example-bad">JSON.stringify(circularReference);
 // TypeError: циклическое значение объекта
 </pre>
 
@@ -45,7 +45,7 @@ circularReference.myself = circularReference;
 
 
 
-<pre class="brush: js notranslate">const getCircularReplacer = () =&gt; {
+<pre class="brush: js">const getCircularReplacer = () =&gt; {
   const seen = new WeakSet();
   return (key, value) =&gt; {
     if (typeof value === "object" &amp;&amp; value !== null) {

@@ -112,7 +112,7 @@ original_slug: Learn/Server-side/Django/Введение
 
 <p>Сопоставитель URL-адресов обычно содержится в файле <strong>urls.py</strong>. В примере ниже сопоставитель (<code>urlpatterns</code>) определяет список сопоставлений между<em>маршрутами </em>(определёнными URL-<em>шаблонами</em>) и соответствующими функциями отображения (view). Если получен HTTP-запрос, который имеет URL-адрес, соответствующий определённому шаблону, то затем будет вызвана связанная функция отображения (view) и передана в запрос.</p>
 
-<pre class="notranslate">urlpatterns = [
+<pre>urlpatterns = [
     <strong>path('admin/', admin.site.urls),
     </strong>path('book/&lt;int:id&gt;/', views.book_detail, name='book_detail'),
     path('catalog/', include('catalog.urls')),
@@ -131,7 +131,7 @@ original_slug: Learn/Server-side/Django/Введение
 
 <p>В приведённом ниже примере показана минимальная функция представления <code>index()</code>, которая могла быть вызвана нашим сопоставителем URL-адресов в предыдущем разделе. Как и все функции отображения (view), она получает объект <code>HttpRequest</code> в качестве параметра (<code>request</code>) и возвращает объект <code>HttpResponse</code>. В этом случае мы ничего не делаем с запросом, и наш ответ просто возвращает жёстко запрограммированную строку. Мы покажем вам запрос, который делает что-то более интересное в следующем разделе.</p>
 
-<pre class="brush: python notranslate">## filename: views.py (Django view functions)
+<pre class="brush: python">## filename: views.py (Django view functions)
 
 from django.http import HttpResponse
 
@@ -162,7 +162,7 @@ def index(request):
 
 <p>В приведённом ниже фрагменте кода показана очень простая модель Django для объекта <code>Team</code>. Класс <code>Team</code> наследуется от класса <code>models.Model</code>. Он определяет имя команды и командный уровень в качестве полей символов и задаёт максимальное количество символов, которые могут быть сохранены для каждой записи. <code>Team_level</code> может быть одним из нескольких значений, поэтому мы определяем его как поле выбора и предоставляем сопоставление между отображаемыми вариантами и хранимыми данными вместе со значением по умолчанию.</p>
 
-<pre class="brush: python notranslate"># filename: models.py
+<pre class="brush: python"># filename: models.py
 
 from django.db import models
 
@@ -194,7 +194,7 @@ class Team(models.Model):
 
 <p>Фрагмент кода показывает функцию view (обработчик ресурсов) для отображения всех команд U09. Выделенная жирным строка показывает, как мы можем использовать модель API-запросов для того, чтобы отфильтровать все записи, где поле <code>team_level</code> в точности содержит текст 'U09' (обратите внимание, как эти критерии передаются функции <code>filter()</code> в качестве аргумента с именем поля и типом соответствия, разделённым двойным подчёркиванием: <strong>team_level__exact</strong>). </p>
 
-<pre class="brush: python notranslate">## filename: views.py
+<pre class="brush: python">## filename: views.py
 
 from django.shortcuts import render
 from .models import Team
@@ -216,7 +216,7 @@ def index(request):
 
 <p>Фрагмент кода показывает, как может выглядеть HTML-шаблон, вызванный функцией  <code>render()</code> из предыдущего раздела. Этот шаблон был написан с предположением, что во время отрисовки он будет иметь доступ к переменной списка, названной <code>youngest_teams</code> (содержащейся в контекстной переменной внутри функции <code>render()</code> выше). Внутри скелета HTML мы имеем выражение, которое сначала проверяет, существует ли переменная <code>youngest_teams</code>, а затем повторяет её в цикле <code>for</code>. При каждом повторе шаблон отображает значение <code>team_name</code> каждой команды в элементе <code>{{htmlelement("li")}}</code>.</p>
 
-<pre class="notranslate">## filename: best/templates/best/index.html
+<pre>## filename: best/templates/best/index.html
 
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;

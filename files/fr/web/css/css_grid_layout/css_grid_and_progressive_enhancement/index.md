@@ -1,12 +1,6 @@
 ---
 title: Les grilles CSS et l'amélioration progressive
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
-tags:
-  - CSS
-  - CSS Grids
-  - Grilles CSS
-  - Guide
-  - Intermédiaire
 translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
 original_slug: Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_amélioration_progressive
 ---
@@ -182,7 +176,7 @@ Dans le prochain exemple, nous aurons un ensemble de cartes disposées avec du f
 </div>
 ```
 
-{{EmbedLiveSample('un_exemple_plus_complexe', '550', '400')}}
+{{EmbedLiveSample('Un_exemple_plus_complexe', '550', '400')}}
 
 Dans la capture qui suit, on voit un problème classique qui est causé par les dispositions flottantes : si on ajoute du contenu à l'une des cartes, la disposition est chamboulée.
 
@@ -291,7 +285,7 @@ On utilise donc `@supports` pour vérifier la prise en charge de `display: grid`
 </div>
 ```
 
-{{EmbedLiveSample('une_solution_avec_les_requetes_de_fonctionnalité', '550', '480')}}
+{{EmbedLiveSample('Une_solution_avec_les_requêtes_de_fonctionnalité', '550', '480')}}
 
 ## Surcharger les autres valeurs pour `display`
 

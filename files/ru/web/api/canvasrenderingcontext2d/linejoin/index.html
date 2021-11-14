@@ -38,7 +38,7 @@ translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Using_the_lineCap_property" name="Using_the_lineCap_property">Использование свойства lineJoin</h3>
+<h3 id="Использование_свойства_lineJoin">Использование свойства lineJoin</h3>
 
 <p>Ниже представлен простой фрагмент кода, использующий <code>lineJoin</code> для скругления места соединения линий.</p>
 
@@ -46,11 +46,11 @@ translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 
 <h4 id="HTML">HTML</h4>
 
-<pre><code>&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</code></pre>
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre><code>const canvas = document.getElementById('canvas');
+<pre class="brush: html">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.lineWidth = 20;
@@ -60,25 +60,25 @@ ctx.moveTo(20, 20);
 ctx.lineTo(190, 100);
 ctx.lineTo(280, 20);
 ctx.lineTo(280, 150);
-ctx.stroke();</code></pre>
+ctx.stroke();</pre>
 
 <h4 id="Result">Result</h4>
 
-<p>{{ EmbedLiveSample('Changing_the_joins_in_a_path', 700, 180) }}</p>
+<p>{{ EmbedLiveSample('Использование_свойства_lineJoin', 700, 180) }}</p>
 
 <p> </p>
 
-<h3 id="A_lineJoin_example" name="A_lineJoin_example">Разница между значениями lineJoin</h3>
+<h3 id="Разница_между_значениями_lineJoin">Разница между значениями lineJoin</h3>
 
 <p>Пример ниже наглядно демонстрирует разницу между значениями свойства <code>lineJoin.</code></p>
 
 <p> </p>
 
 <div class="hidden">
-<pre><code>&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</code></pre>
+<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 </div>
 
-<pre><code>var ctx = document.getElementById('canvas').getContext('2d');
+<pre class="brush: html">var ctx = document.getElementById('canvas').getContext('2d');
 var lineJoin = ['round', 'bevel', 'miter'];
 ctx.lineWidth = 10;
 
@@ -91,34 +91,21 @@ for (let i = 0; i &lt; lineJoin.length; i++) {
   ctx.lineTo(115, 45 + i * 40);
   ctx.lineTo(155, 5 + i * 40);
   ctx.stroke();
-}</code></pre>
+}</pre>
 
-<p>{{EmbedLiveSample("Comparison_of_line_joins", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}</p>
+<p>{{EmbedLiveSample("Разница_между_значениями_lineJoin", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}</p>
 
 <p> </p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linejoin", "CanvasRenderingContext2D.lineJoin")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 <p> </p>
 
-<p>{{Compat("api.CanvasRenderingContext2D.lineJoin")}}</p>
+<p>{{Compat}}</p>
 
 <p> </p>
 

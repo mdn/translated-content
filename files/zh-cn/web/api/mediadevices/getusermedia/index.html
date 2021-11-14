@@ -117,7 +117,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
  <dd>找不到满足请求参数的媒体类型。</dd>
  <dt><code>NotReadableError</code>［无法读取错误］</dt>
  <dd>尽管用户已经授权使用相应的设备，操作系统上某个硬件、浏览器或者网页层面发生的错误导致设备无法被访问。</dd>
- <dt><code>OverConstrainedError</code>［无法满足要求错误］</dt>
+ <dt><code>OverconstrainedError</code>［无法满足要求错误］</dt>
  <dd>指定的要求无法被设备满足，此异常是一个类型为<code>OverconstrainedError</code>的对象，拥有一个<code>constraint</code>属性，这个属性包含了当前无法被满足的<code>constraint</code>对象，还拥有一个<code>message</code>属性，包含了阅读友好的字符串用来说明情况。</dd>
  <dd>
  <div class="note">因为这个异常甚至可以在用户尚未授权使用当前设备的情况下抛出，所以应当可以当作一个探测设备能力属性的手段［fingerprinting surface］。</div>

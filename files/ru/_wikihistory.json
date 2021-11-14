@@ -12751,14 +12751,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property": {
-    "modified": "2019-03-23T22:05:55.809Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "Cheg"
-    ]
-  },
   "Web/CSS/CSS_Box_Alignment": {
     "modified": "2019-03-18T21:33:03.343Z",
     "contributors": [
@@ -12831,6 +12823,13 @@
       "ldone"
     ]
   },
+  "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
+    "modified": "2020-04-28T15:39:35.383Z",
+    "contributors": [
+      "arnoldovich",
+      "moshenskyDV"
+    ]
+  },
   "Web/CSS/CSS_Flexible_Box_Layout": {
     "modified": "2020-10-19T05:53:46.314Z",
     "contributors": [
@@ -12887,12 +12886,6 @@
     "modified": "2020-03-07T13:30:09.947Z",
     "contributors": [
       "Radragon"
-    ]
-  },
-  "Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow": {
-    "modified": "2020-11-03T12:58:17.297Z",
-    "contributors": [
-      "at940266"
     ]
   },
   "Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts": {
@@ -13018,13 +13011,6 @@
     "modified": "2019-03-23T22:23:15.839Z",
     "contributors": [
       "TylerH"
-    ]
-  },
-  "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
-    "modified": "2020-04-28T15:39:35.383Z",
-    "contributors": [
-      "arnoldovich",
-      "moshenskyDV"
     ]
   },
   "Web/CSS/CSS_Positioning": {
@@ -24326,6 +24312,14 @@
       "dixiony",
       "SKaznadei",
       "iamale"
+    ]
+  },
+  "conflicting/Web/CSS/cursor": {
+    "modified": "2019-03-23T22:05:55.809Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "Cheg"
     ]
   },
   "conflicting/Web/CSS/gap": {

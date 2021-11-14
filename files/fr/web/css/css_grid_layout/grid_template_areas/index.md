@@ -1,11 +1,6 @@
 ---
 title: Définir des zones sur une grille
 slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
-tags:
-  - CSS
-  - CSS Grids
-  - Grilles CSS
-  - Guide
 translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 ---
@@ -232,7 +227,7 @@ La zone qu'on crée avec les noms doit être rectangulaires. Actuellement, il n'
 
 La valeur utilisée pour {{cssxref("grid-template-areas")}} doit obligatoirement décrire une grille complète, sinon elle est considérée invalide et la propriété est ignorée. Cela signifie qu'il faut le même nombre de cellules pour chaque ligne (si une cellule est vide, on l'indiquera avec un point). Si des zones ne sont pas rectangulaires, cela sera également considéré comme invalide.
 
-## Redéfinir une grille à avec des _media queries_
+## Redéfinir une grille avec des _media queries_
 
 Notre disposition fait désormais partie de notre feuille de style CSS. On peut donc l'adapter très facilement pour différentes résolutions. On peut redéfinir la position des objets sur la grille ou la grille elle-même, ou les deux simultanément.
 

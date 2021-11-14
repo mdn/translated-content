@@ -49,7 +49,7 @@ original_slug: Learn/JavaScript/Объекты/Object_building_practice
 
 <p>Первая часть скрипта выглядит так:</p>
 
-<pre class="brush: js notranslate">var canvas = document.querySelector('canvas');
+<pre class="brush: js">var canvas = document.querySelector('canvas');
 
 var ctx = canvas.getContext('2d');
 
@@ -64,7 +64,7 @@ var height = canvas.height = window.innerHeight;</pre>
 
 <p>Последний бит исходного скрипта выглядит следующим образом:</p>
 
-<pre class="brush: js notranslate">function random(min, max) {
+<pre class="brush: js">function random(min, max) {
   var num = Math.floor(Math.random() * (max - min + 1)) + min;
   return num;
 }</pre>
@@ -75,7 +75,7 @@ var height = canvas.height = window.innerHeight;</pre>
 
 <p>В нашей программе будет много шаров, подпрыгивающих вокруг экрана. Поскольку эти шары будут вести себя одинаково, имеет смысл представлять их в виде объекта. Начнём с добавления следующего конструктора в конец нашего кода.</p>
 
-<pre class="brush: js notranslate">function Ball(x, y, velX, velY, color, size) {
+<pre class="brush: js">function Ball(x, y, velX, velY, color, size) {
   this.x = x;
   this.y = y;
   this.velX = velX;
@@ -99,7 +99,7 @@ var height = canvas.height = window.innerHeight;</pre>
 
 <p>Сначала добавьте следующий метод <code>draw()</code> к <code>Ball()</code>'s <code>prototype</code>:</p>
 
-<pre class="brush: js notranslate">Ball.prototype.draw = function() {
+<pre class="brush: js">Ball.prototype.draw = function() {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -127,10 +127,10 @@ var height = canvas.height = window.innerHeight;</pre>
  <li>Сохраните код и загрузите HTML-файл в браузер.</li>
  <li>Откройте консоль JavaScript браузера, а затем обновите страницу, чтобы размер холста изменился в соответствии с новой шириной и высотой окна просмотра браузера после открытия консоли.</li>
  <li>Чтобы создать новый экземпляр шара, введите следующее:
-  <pre class="brush: js notranslate">var testBall = new Ball(50, 100, 4, 4, 'blue', 10);</pre>
+  <pre class="brush: js">var testBall = new Ball(50, 100, 4, 4, 'blue', 10);</pre>
  </li>
  <li>Попробуйте вызвать его свойства и методы:
-  <pre class="brush: js notranslate">testBall.x
+  <pre class="brush: js">testBall.x
 testBall.size
 testBall.color
 testBall.draw()</pre>
@@ -142,7 +142,7 @@ testBall.draw()</pre>
 
 <p>Мы можем нарисовать мяч в нужном положении, но чтобы начать движение мяча, нам нужна функция обновления. Добавьте следующий код внизу вашего файла JavaScript, чтобы добавить метод <code>update()</code> к <code>Ball()</code>'s <code>prototype</code>:</p>
 
-<pre class="brush: js notranslate">Ball.prototype.update = function() {
+<pre class="brush: js">Ball.prototype.update = function() {
   if ((this.x + this.size) &gt;= width) {
     this.velX = -(this.velX);
   }
@@ -186,12 +186,12 @@ testBall.draw()</pre>
 
 <ol>
  <li>Во-первых, нам нужно где-то хранить все наши шары. Следующий массив выполнит это задание - добавьте его внизу кода:
-  <pre class="brush: js notranslate">var balls = [];</pre>
+  <pre class="brush: js">var balls = [];</pre>
 
   <p>Все программы, которые оживляют вещи, обычно включают цикл анимации, который служит для обновления информации в программе, а затем визуализации результирующего представления для каждого кадра анимации; это основа для большинства игр и других подобных программ.</p>
  </li>
  <li>Добавьте ниже эту часть кода:
-  <pre class="brush: js notranslate">function loop() {
+  <pre class="brush: js">function loop() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
   ctx.fillRect(0, 0, width, height);
 
@@ -225,7 +225,7 @@ testBall.draw()</pre>
   </ul>
  </li>
  <li>И последнее, но не менее важное: добавьте следующую строку в конец вашего кода - нам нужно вызвать функцию один раз, чтобы начать анимацию.
-  <pre class="brush: js notranslate">loop();</pre>
+  <pre class="brush: js">loop();</pre>
  </li>
 </ol>
 
@@ -238,7 +238,7 @@ testBall.draw()</pre>
 <ol>
  <li>Прежде всего, добавьте следующее определение метода ниже, где вы определили метод <code>update()</code> (т.е. блок <code>Ball.prototype.update</code>).
 
-  <pre class="brush: js notranslate">Ball.prototype.collisionDetect = function() {
+  <pre class="brush: js">Ball.prototype.collisionDetect = function() {
   for (var j = 0; j &lt; balls.length; j++) {
     if (!(this === balls[j])) {
       var dx = this.x - balls[j].x;
@@ -262,7 +262,7 @@ testBall.draw()</pre>
   </ul>
  </li>
  <li>Вы также должны вызвать этот метод в каждом кадре анимации. Добавьте следующий код после строки <code>balls[i].update();</code>
-  <pre class="brush: js notranslate">balls[i].collisionDetect();</pre>
+  <pre class="brush: js">balls[i].collisionDetect();</pre>
  </li>
  <li>Сохраните и обновите демо снова, и вы увидите, как ваши мячи меняют цвет, когда они сталкиваются!</li>
 </ol>

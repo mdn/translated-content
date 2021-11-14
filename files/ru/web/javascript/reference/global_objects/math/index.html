@@ -13,11 +13,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
 
 <p><code>Math</code> не работает с числами типа {{jsxref("BigInt")}}.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>В отличие от других глобальных объектов, объект <code>Math</code> не является конструктором. Все свойства и методы объекта <code>Math</code> являются статическими. Вы ссылаетесь на константу π через <code>Math.PI</code> и вызываете функцию синуса через <code>Math.sin(x)</code>, где <code>x</code> является аргументом метода. Константы в JavaScript определены с полной точностью действительных чисел.</p>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt>{{jsxref("Math.E")}}</dt>
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
  <dd>Квадратный корень из 2, приблизительно равен 1,414.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <div class="note">
 <p>Обратите внимание, что тригонометрические функции (<code>sin()</code>, <code>cos()</code>, <code>tan()</code>, <code>asin()</code>, <code>acos()</code>, <code>atan()</code> и <code>atan2()</code>) принимают в параметрах или возвращают углы в радианах. Для преобразования радианов в градусы, поделите их на величину <code>(Math.PI / 180)</code>; для преобразования в обратном направлении, умножьте градусы на эту же величину.</p>
@@ -151,43 +151,15 @@ Math.gcd = function() {
 
 <pre><code>console.log(Math.gcd(20, 30, 15, 70, 40)); // `5`</code></pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8', 'Math')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math-object', 'Math')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Добавлены новые методы: {{jsxref("Math.log10()", "log10()")}}, {{jsxref("Math.log2()", "log2()")}}, {{jsxref("Math.log1p()", "log1p()")}}, {{jsxref("Math.expm1()", "expm1()")}}, {{jsxref("Math.cosh()", "cosh()")}}, {{jsxref("Math.sinh()", "sinh()")}}, {{jsxref("Math.tanh()", "tanh()")}}, {{jsxref("Math.acosh()", "acosh()")}}, {{jsxref("Math.asinh()", "asinh()")}}, {{jsxref("Math.atanh()", "atanh()")}}, {{jsxref("Math.hypot()", "hypot()")}}, {{jsxref("Math.trunc()", "trunc()")}}, {{jsxref("Math.sign()", "sign()")}}, {{jsxref("Math.imul()", "imul()")}}, {{jsxref("Math.fround()", "fround()")}}, {{jsxref("Math.cbrt()", "cbrt()")}} и {{jsxref("Math.clz32()", "clz32()")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math-object', 'Math')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.Math")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/Number", "Number")}}</li>

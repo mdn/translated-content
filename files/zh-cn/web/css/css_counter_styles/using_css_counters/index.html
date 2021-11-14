@@ -1,0 +1,121 @@
+---
+title: 使用CSS计数器
+slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
+tags:
+  - CSS
+  - CSS List
+  - Web
+  - counter
+  - 教程
+translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+---
+<div>{{CSSRef}}</div>
+
+<p>本质上CSS计数器是由CSS维护的变量，这些变量可能根据CSS规则增加以跟踪使用次数。这允许你根据文档位置来调整内容表现。 CSS计数器是CSS2.1中<a class="external" href="http://www.w3.org/TR/CSS21/generate.html#counters">自动计数编号</a>部分的实现。</p>
+
+<p>计数器的值通过使用{{cssxref("counter-reset")}} 和 {{cssxref("counter-increment")}} 操作，在 <code><a href="/en-US/docs/CSS/content" title="CSS/content">content</a></code> 上应用 <code>counter()</code> 或 <code>counters()</code>函数来显示在页面上。</p>
+
+<h2 id="使用计数器">使用计数器</h2>
+
+<p>使用CSS计数器之前，必须<a href="/en-US/docs/CSS/counter-reset" title="CSS/counter-reset">重置</a>一个值，默认是0。使用{{cssxref("counter()")}}函数来给元素增加计数器。 下面的CSS给每个h3元素的前面增加了 "Section <em>&lt;计算器值&gt;</em>:"。</p>
+
+<pre class="brush: css">body {
+  counter-reset: section;           /* 重置计数器成0 */
+}
+h3:before {
+  counter-increment: section;      /* 增加计数器值 */
+  content: "Section " counter(section) ": "; /* 显示计数器 */
+}
+</pre>
+
+<p>例如：</p>
+
+<pre class="brush: html">&lt;h3&gt;Introduction&lt;/h3&gt;
+&lt;h3&gt;Body&lt;/h3&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;</pre>
+
+<p>{{ EmbedLiveSample('使用计数器', 300,200) }}</p>
+
+<h2 id="计数器嵌套">计数器嵌套</h2>
+
+<p>CSS计数器对创建有序列表特别有用，因为在子元素中会自动创建一个CSS计数器的实例。使用 <code>counters()</code> 函数，在不同级别的嵌套计数器之间可以插入字符串。比如这个CSS例子：</p>
+
+<pre class="brush: css">ol {
+  counter-reset: section;                /* 为每个ol元素创建新的计数器实例 */
+  list-style-type: none;
+}
+li:before {
+  counter-increment: section;            /* 只增加计数器的当前实例 */
+  content: counters(section, ".") " ";   /* 为所有计数器实例增加以“.”分隔的值 */
+}
+</pre>
+
+<p>结合下面的HTML：</p>
+
+<pre class="brush: html">&lt;ol&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 1     --&gt;
+  &lt;li&gt;item               &lt;!-- 2     --&gt;
+    &lt;ol&gt;
+      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.1   --&gt;
+      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.2   --&gt;
+      &lt;li&gt;item           &lt;!-- 2.3   --&gt;
+        &lt;ol&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.1 --&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.2 --&gt;
+        &lt;/ol&gt;
+        &lt;ol&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.1 --&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.2 --&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.3 --&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.4   --&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 3     --&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 4     --&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 1     --&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 2     --&gt;
+&lt;/ol&gt;</pre>
+
+<p>结果为：</p>
+
+<p>{{ EmbedLiveSample('计数器嵌套') }}</p>
+
+<h2 id="Specifications" name="Specifications">规范</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">注释</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS3 Lists", "#auto-numbering", "CSS Counters")}}</td>
+   <td>{{Spec2("CSS3 Lists")}}</td>
+   <td>无变化</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'generate.html#generate.html#counters', 'counter-reset')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>初始定义</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="See_also" name="See_also">其它</h2>
+
+<ul>
+ <li><a href="/en-US/docs/CSS/counter-reset" title="CSS/counter-reset">counter-reset</a></li>
+ <li><a href="/en-US/docs/CSS/counter-increment" title="CSS/counter-increment">counter-increment</a></li>
+</ul>
+
+<p><em>另一个可用的示例在 <a class="external" href="http://www.mezzoblue.com/archives/2006/11/01/counter_intu/" rel="freelink">http://www.mezzoblue.com/archives/20.../counter_intu/</a>。这篇博客 发布于2006年11月1日，但是看上去写得还是准确的。</em></p>
+
+<div id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd"> </div>

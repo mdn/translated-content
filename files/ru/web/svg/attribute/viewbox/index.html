@@ -11,8 +11,9 @@ translation_of: Web/SVG/Attribute/viewBox
 
 <p>Значение атрибута <code>viewBox</code> — это набор четырёх чисел: <code>min-x</code>, <code>min-y</code>, <code>width</code> и <code>height</code>, — разделённых пробелами и/или запятой, которые задают прямоугольник в пользовательском пространстве, стороны которого определяют границы окна отображения элемента SVG (не <a href="/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Viewport">браузера</a>).</p>
 
+<div id="topExample">
 <div class="hidden">
-<pre class="notranslate">html, body, svg {
+<pre>html, body, svg {
   height:100%
 }
 
@@ -21,7 +22,7 @@ svg:not(:root) {
 }</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!--
   С относительными единицами, такими как проценты,
   размер квадрата не меняется в зависимости от
@@ -69,6 +70,7 @@ svg:not(:root) {
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
+</div>
 
 <p>На отображение с <code>viewBox</code> также влияет атрибут {{ SVGAttr("preserveAspectRatio") }}.</p>
 

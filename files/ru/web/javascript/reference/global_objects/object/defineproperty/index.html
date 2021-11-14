@@ -13,15 +13,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
 <div>{{JSRef("Global_Objects", "Object")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>Object.defineProperty()</strong></code> определяет новое или изменяет существующее свойство непосредственно на объекте, возвращая этот объект.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>Object.defineProperty(<var>obj</var>, <var>prop</var>, <var>descriptor</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>obj</code></dt>
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
  <dd>Дескриптор определяемого или изменяемого свойства.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Этот метод позволяет точно добавлять или изменять свойства объекта. Обычное добавление свойств через присваивание создаёт свойства, которые можно увидеть через перечисление свойств (с помощью цикла {{jsxref("Statements/for...in", "for...in")}} или метода {{jsxref("Object.keys")}}), чьи значения могут быть изменены и которые могут быть {{jsxref("Operators/delete", "удалены", "", 1)}}. Этот же метод позволяет настроить эти дополнительные детали свойства.</p>
 
@@ -112,11 +112,11 @@ Object.defineProperty(obj, 'key', withValue('static'));
 (Object.freeze || Object)(Object.prototype);
 </pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <p>Если вы хотите посмотреть, как использовать метод <code>Object.defineProperty()</code> с синтаксисом <em>похожим-на-бинарные-флаги</em>, смотрите <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples">дополнительные примеры</a>.</p>
 
-<h3 id="Example:_Creating_a_property" name="Example:_Creating_a_property">Пример: создание свойства</h3>
+<h3 id="Example:_Creating_a_property">Пример: создание свойства</h3>
 
 <p>Если указанное свойство не существует в объекте, метод <code>Object.defineProperty()</code> создаст новое свойство по переданному описанию. Поля в дескрипторе могут быть опущены, в этом случае их значения будут значениями по умолчанию. Все логические поля будут по умолчанию установлены в <code>false</code>. Поля <code>value</code>, <code>get</code> и <code>set</code> по умолчанию будут установлены в {{jsxref("Global_Objects/undefined", "undefined")}}. Свойство, определённое без атрибутов <code>get</code>/<code>set</code>/<code>value</code>/<code>writable</code> называется «общим», а дескриптор данных — «типовым».</p>
 
@@ -156,7 +156,7 @@ Object.defineProperty(o, 'conflict', {
 // доступа
 </pre>
 
-<h3 id="Example:_Modifying_a_property" name="Example:_Modifying_a_property">Пример: изменение свойства</h3>
+<h3 id="Example:_Modifying_a_property">Пример: изменение свойства</h3>
 
 <p>Если свойство уже существует, метод <code>Object.defineProperty()</code> попытается изменить свойство в соответствии со значениями в дескрипторе и текущим состоянием объекта. Если у старого дескриптора атрибут <code>configurable</code> был установлен в <code>false</code> (говорит, что свойство является «ненастраиваемым»), то никакие атрибуты, кроме атрибута <code>writable</code>, не смогут быть изменены. В этом случае так же невозможно переключаться между типами дескрипторов.</p>
 
@@ -164,7 +164,7 @@ Object.defineProperty(o, 'conflict', {
 
 <p>При попытке изменить ненастраиваемые атрибуты свойства будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}} (кроме случая изменения атрибута <code>writable</code>), даже в том случае, если текущее и новое значения идентичны.</p>
 
-<h4 id="Writable_attribute" name="Writable_attribute">Атрибут <code>writable</code></h4>
+<h4 id="Writable_attribute">Атрибут <code>writable</code></h4>
 
 <p>Если атрибут <code>writable</code> свойства установлен в <code>false</code>, свойство становится «незаписываемым». Ему невозможно будет присвоить новое значение.</p>
 
@@ -183,7 +183,7 @@ console.log(o.a); // Выведет 37. Присваивание не срабо
 
 <p>Как видно в этом примере, попытка записи в незаписываемое свойство его не изменило, но и исключение так же не было выброшено.</p>
 
-<h4 id="Enumerable_attribute" name="Enumerable_attribute">Атрибут <code>enumerable</code></h4>
+<h4 id="Enumerable_attribute">Атрибут <code>enumerable</code></h4>
 
 <p>Атрибут <code>enumerable</code> свойства определяет, просматривается ли свойство в цикле {{jsxref("Statements/for...in", "for...in")}} и методом {{jsxref("Object.keys()")}} или нет.</p>
 
@@ -208,7 +208,7 @@ o.propertyIsEnumerable('b'); // false
 o.propertyIsEnumerable('c'); // false
 </pre>
 
-<h4 id="Configurable_attribute" name="Configurable_attribute">Атрибут <code>configurable</code></h4>
+<h4 id="Configurable_attribute">Атрибут <code>configurable</code></h4>
 
 <p>Атрибут <code>configurable</code> одновременно контролирует, может ли свойство быть удалено из объекта и могут ли быть изменены его атрибуты (кроме контроля изменения атрибута <code>writable</code>).</p>
 
@@ -231,7 +231,7 @@ console.log(o.a); // Выведет 1
 
 <p>Если бы атрибут <code>configurable</code> объекта <code>o.a</code> был установлен в <code>true</code>, никакие ошибки не были бы выброшены и в конце свойство было бы удалено.</p>
 
-<h3 id="Example:_Adding_properties_and_default_values" name="Example:_Adding_properties_and_default_values">Пример: добавление свойств и значений по умолчанию</h3>
+<h3 id="Example:_Adding_properties_and_default_values">Пример: добавление свойств и значений по умолчанию</h3>
 
 <p>Важно понимать, как устанавливаются значения по умолчанию атрибутам свойств. Часто существует разница между простым назначением значения посредством точечной нотации и использованием метода <code>Object.defineProperty()</code>, что и показывает пример ниже.</p>
 
@@ -258,7 +258,7 @@ Object.defineProperty(o, 'a', {
 });
 </pre>
 
-<h3 id="Example:_Custom_setters_and_getters" name="Example:_Custom_setters_and_getters">Пример: пользовательские сеттеры и геттеры</h3>
+<h3 id="Example:_Custom_setters_and_getters">Пример: пользовательские сеттеры и геттеры</h3>
 
 <p>Пример ниже показывает, как реализовать самоархивирующийся объект. При установке свойства <code>temperature</code> в массив <code>archive</code> попадает запись журнала.</p>
 
@@ -287,34 +287,16 @@ arc.temperature = 13;
 arc.getArchive(); // [{ val: 11 }, { val: 13 }]
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 <p>На основе <a class="external" href="http://kangax.github.com/es5-compat-table/">таблицы совместимости Kangax</a>.</p>
 
-<h3 id="Redefining_the_length_property_of_an_Array_object" name="Redefining_the_length_property_of_an_Array_object">Переопределение свойства <code>length</code> на объекте <code>Array</code></h3>
+<h3 id="Redefining_the_length_property_of_an_Array_object">Переопределение свойства <code>length</code> на объекте <code>Array</code></h3>
 
 <p>На массивах возможно переопределить свойство {{jsxref("Array.length", "length")}}, при условии соблюдения обычных ограничений на переопределение. (Изначально свойство {{jsxref("Array.length", "length")}} является ненастраиваемым, неперечисляемым и записываемым. Таким образом, на неизмененном массиве возможно изменить значение свойства {{jsxref("Array.length", "length")}} либо сделать его незаписываемым. Его перечисляемость или настраиваемость изменить нельзя, так же как и его записываемость, если оно сделано не записываемым.) Однако не все браузеры поддерживают такое переопределение.</p>
 
@@ -326,7 +308,7 @@ arc.getArchive(); // [{ val: 11 }, { val: 13 }]
 
 <p>Только Internet Explorer 9 и выше, а так же Firefox 23 и выше, по-видимому, полностью и правильно реализуют переопределение свойства {{jsxref("Array.length", "length")}} массивов. В настоящее время не стоит полагаться на работу переопределения свойства {{jsxref("Array.length", "length")}} массива, или что оно работает определённым образом. И даже если вы <em>можете</em> положиться на это, <a href="http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/">есть действительно веская причина не делать этого</a>.</p>
 
-<h3 id="Internet_Explorer_8_specific_notes" name="Internet_Explorer_8_specific_notes">Примечания по Internet Explorer 8</h3>
+<h3 id="Internet_Explorer_8_specific_notes">Примечания по Internet Explorer 8</h3>
 
 <p>Реализация метода <code>Object.defineProperty()</code> в Internet Explorer 8 предусматривает, что он может быть <a class="external" href="http://msdn.microsoft.com/en-us/library/dd229916%28VS.85%29.aspx">использован только для объектов DOM</a>. Нужно также отметить несколько моментов:</p>
 
@@ -343,7 +325,7 @@ arc.getArchive(); // [{ val: 11 }, { val: 13 }]
   attempt to define a "prototype" property, on a function, with
   <code>writable: false</code> doesn't work as expected.</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Enumerability_and_ownership_of_properties">Перечисляемость и собственность свойств</a></li>

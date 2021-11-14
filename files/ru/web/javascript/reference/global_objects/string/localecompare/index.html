@@ -12,17 +12,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>localeCompare()</code></strong> возвращает число, указывающее, должна ли данная строка находиться до, после или в том же самом месте, что и строка, переданная через параметр, при сортировке этих строк.</p>
 
 <p>Новые аргументы <code>locales</code> и <code>options</code> позволяют приложениям определять язык, чей порядок сортировки оно хочет использовать и настраивать поведение этой функции. В старых реализациях, игнорирующих аргументы <code>locales</code> и <code>options</code>, используемая локаль и порядок сортировки целиком зависят от реализации.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.localeCompare(<var>compareString</var>[, <var>locales</var>[, <var>options</var>]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <p>Проверьте раздел <a href="#Browser_compatibility">Совместимость с браузерами</a>, чтобы увидеть, какие браузеры поддерживают аргументы <code>locales</code> и <code>options</code>, и <a href="#Example:_Checking_for_support_for_locales_and_options_arguments">Пример: проверка поддержки аргументов <code>locales</code> и <code>options</code></a> для определения этой возможности.</p>
 
@@ -33,13 +33,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Collator', 'Parameters')}}</div>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Возвращает число, указывающее, должна данная строка находится до, после или в том же самом месте, что и строка, переданная через параметр, при сортировке этих строк. Если данная строка предшествует строке <code>compareString</code>, возвращает отрицательное число, если она следует за строкой <code>compareString</code>, возвращает положительное значение и возвращает 0, если строки находятся на одном уровне.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_localeCompare" name="Example:_Using_localeCompare">Пример: использование метода <code>localeCompare()</code></h3>
+<h3 id="Example:_Using_localeCompare">Пример: использование метода <code>localeCompare()</code></h3>
 
 <p>Следующий пример демонстрирует различные потенциальные результаты для строки, находящейся до, после или на том же самом уровне, что и другая строка:</p>
 
@@ -50,7 +50,7 @@ console.log(new Intl.Collator().compare('a', 'a')); // 0
 
 <p>Обратите внимание, что результат, показанный в коде выше, может сильно различаться в зависимости от браузера и его версии. Происходит это потому, что возвращаемые значения зависят от реализации. То есть, спецификация требует только того, чтобы значение было отрицательным, если строка данная следует до переданной, и положительным — если после.</p>
 
-<h3 id="Example:_Checking_for_support_for_locales_and_options_arguments" name="Example:_Checking_for_support_for_locales_and_options_arguments">Пример: проверка поддержки аргументов <code>locales</code> и <code>options</code></h3>
+<h3 id="Example:_Checking_for_support_for_locales_and_options_arguments">Пример: проверка поддержки аргументов <code>locales</code> и <code>options</code></h3>
 
 <p>Аргументы <code>locales</code> и <code>options</code> поддерживаются ещё не всеми браузерами. Для проверки того, поддерживает ли их уже реализация, можно затребовать несуществующую метку языка и проверить, будет ли выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}:</p>
 
@@ -64,7 +64,7 @@ console.log(new Intl.Collator().compare('a', 'a')); // 0
 }
 </pre>
 
-<h3 id="Example:_Using_locales" name="Example:_Using_locales">Пример: использование аргумента <code>locales</code></h3>
+<h3 id="Example:_Using_locales">Пример: использование аргумента <code>locales</code></h3>
 
 <p>Результаты, предоставляемые методом <code>localeCompare()</code>, сильно различаются в зависимости от языка. Для получения порядка сортировки языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент <code>locales</code>:</p>
 
@@ -72,7 +72,7 @@ console.log(new Intl.Collator().compare('a', 'a')); // 0
 console.log('ä'.localeCompare('z', 'sv')); // положительное значение: в шведском буква ä следует после буквы z
 </pre>
 
-<h3 id="Example:_Using_options" name="Example:_Using_options">Пример: использование аргумента <code>options</code></h3>
+<h3 id="Example:_Using_options">Пример: использование аргумента <code>options</code></h3>
 
 <p>Результат, предоставляемый методом <code>localeCompare()</code>, может быть настроен с помощью аргумента <code>options</code>:</p>
 
@@ -83,47 +83,19 @@ console.log('ä'.localeCompare('a', 'de', { sensitivity: 'base' })); // 0
 console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // положительное значение
 </pre>
 
-<h2 id="Performance" name="Performance">Производительность</h2>
+<h2 id="Performance">Производительность</h2>
 
 <p>При сравнении большого количества строк, например, при сортировке больших массивов, лучшим вариантом будет создание объекта {{jsxref("Global_Objects/Collator", "Intl.Collator")}} и использование функции, предоставляемой его свойством {{jsxref("Collator.prototype.compare", "compare")}}.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.9', 'String.prototype.localeCompare')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.localecompare', 'String.prototype.localeCompare')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-13.1.1', 'String.prototype.localeCompare')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td>Определение параметров <code>locale</code> и <code>option</code>.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/Collator", "Intl.Collator")}}</li>

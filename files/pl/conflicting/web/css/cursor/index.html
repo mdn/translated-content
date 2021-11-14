@@ -1,0 +1,42 @@
+---
+title: Użycie wartości URL dla własności cursor
+slug: conflicting/Web/CSS/cursor
+tags:
+  - CSS
+  - CSS_2.1
+  - Programowanie_WWW
+  - Programowanie_dla_wielu_przeglądarek
+  - Wszystkie_kategorie
+translation_of: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+original_slug: Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+---
+<p> </p>
+<p><a href="pl/Gecko">Gecko</a> 1.8 (<a href="pl/Firefox_1.5">Firefox 1.5</a>, SeaMonkey 1.0) wspiera wartości URL dla <a class="external" href="http://www.w3.org/TR/CSS21/ui.html#cursor-props">własności cursor CSS 2/2.1</a>. To pozwala używać zewnętrzne obrazki jako kursory myszy — można użyć każdego formatu wspieranego przez Gecko.</p>
+<h3 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h3>
+<p>Składnia dla tej własności:</p>
+<pre class="eval">cursor: [&lt;url&gt;,]* słowo_kluczowe;
+</pre>
+<p>To oznacza, że można podać zero lub więcej adresów URL (oddzielonych przecinkiem), a na końcu musi pojawić się jedno ze słów kluczowych zdefiniowanych w specyfikacji <a href="pl/CSS">CSS</a>, takie jak <code>auto</code> czy <code>pointer</code>.</p>
+<p>Na przykład, taka wartość jest dozwolona:</p>
+<pre class="eval">cursor: url(foo.cur), url(<span class="nowiki">http://www.example.com/bar.gif</span>), auto;
+</pre>
+<p>Najpierw nastąpi próba pobrania pliku foo.cur. Jeżeli ten plik nie istnieje, lub jest nieprawidłowy z jakiegoś powodu, nastąpi próba pobrania bar.gif, a jeśli to się nie uda, zostanie użyta wartość <code>auto</code>.</p>
+<p>Wsparcie dla <a class="external" href="http://www.w3.org/TR/css3-ui/#cursor">składni</a> CSS3 dla wartości własności cursor zostało dodane w Gecko 1.8beta3 (Deer Partk Alpha 2); zatem działa ono w Firefoksie 1.5. Pozwala to na określanie punktu wiązania kursora, który <b>musi</b> być wewnątrz wymiarów obrazka kursora; koordynaty na zewnątrz obrazka będą przybliżane do krawędzi (n.p. ujemna wartość będzie interpretowana jako 0, a wartości wykraczające poza wymiary obrazka będą przycinane do najbliższego piksela w obrazku). Jeśli nie zostaną podane, dla plików CUR i XBM wartości zostaną pobrane z plików, a dla pozostałych zostanie ustalony lewy górny róg obrazka. Przykładem składni CSS3 jest:</p>
+<pre class="eval">cursor: url(foo.png) 4 12, auto;
+</pre>
+<p>Pierwsza liczba to wartość x, a drugi y. W tym przypadku punkt wiązania zostanie ustawiony w pikselu (4,12) licząc od lewego górnego rogu (0,0).</p>
+<h3 id="Ograniczenia" name="Ograniczenia">Ograniczenia</h3>
+<p>Można używać wszystkich formatów obrazków wspieranych przez Gecko. To oznacza, że możesz użyć BMP, JPG, CUR, GIF, itp. Jednak ANI nie jest wspierane. I nawet, jeżeli zostanie podany animowany GIF, kursor nie będzie animowany. To ograniczenie zostanie usunięte w przyszłych wersjach.</p>
+<p>Gecko, samo w sobie, nie tworzy żadnych ograniczeń, co do rozmiaru kursora. Jednak powinieneś ograniczyć obrazek do 32x32 dla maksymalnej kompatybilności z różnymi systemami operacyjnymi. W szczególności kursory większe, niż podany rozmiar nie będą działały na Windows 9x (95, 98, ME).</p>
+<p>Przezroczyste kursory nie są wspierane na systemie Windows w wersjach wcześniejszych niż XP. To ograniczenie systemu operacyjnego. Przezroczystość działa na pozostałych platformach.</p>
+<p>Tylko wydania Mozilli na platformy Windows, OS/2 i Linux (z GTK+ 2.4 lub nowszym) wspierają wartości URL dla kursorów. Wsparcie dla innych platform może zostać dodane w przyszłości (Mac OS: {{ Bug(286304) }}, QNX Neutrino: {{ Bug(286307) }}, XLib: {{ Bug(286309) }}, Qt: {{ Bug(286310) }}, BeOS: {{ Bug(298184) }}, Gtk 2.0/2.2: {{ Bug(308536) }})</p>
+<h3 id="Kompatybilno.C5.9B.C4.87_z_innymi_przegl.C4.85darkami" name="Kompatybilno.C5.9B.C4.87_z_innymi_przegl.C4.85darkami">Kompatybilność z innymi przeglądarkami</h3>
+<p>Microsoft Internet Explorer także wspiera wartości URI dla własności cursor. Jednak wspiera wyłącznie formaty CUR i ANI.</p>
+<p>Jest także znacznie mniej restrykcyjny w zakresie składni. To oznacza, że wartości takie jak:</p>
+<pre class="eval">cursor: url(foo.cur);
+</pre>
+<p>lub:</p>
+<pre class="eval">cursor: url(foo.cur), pointer, url(bar.cur), auto;
+</pre>
+<p>będą działały w MSIE, ale nie będą w Gecko. Dla kompatybilności z Gecko i zgodności ze specyfikacja CSS, zawsze na początku należy podać URI, oraz użyć dokładnie jednego słowa kluczowego na końcu.</p>
+<p> </p>

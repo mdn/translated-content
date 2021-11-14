@@ -147,7 +147,7 @@ class MyModelName(models.Model):
     ordering = ['-my_field_name']
 </pre>
 
-<p>L'une des fonctionnalités les plus utiles disponible à l'aide des métadonnées est de définir et contrôler le classement des enregistrement. Vous l'obtenez en précisant la liste des champs dans l'attribut <code>ordering</code> comme indiqué ci-dessous. Le classement est fonction du type de l'attribut (une chaîne de caractère a un classement alphabétique alors qu'une date a un classement chronologique). Si vous préfixez le nom du champs du signe <em>moins</em> (-) alors le classement sera naturellement inversé.</p>
+<p>L'une des fonctionnalités les plus utiles disponible à l'aide des métadonnées est de définir et contrôler le classement des enregistrements. Vous l'obtenez en précisant la liste des champs dans l'attribut <code>ordering</code> comme indiqué ci-dessous. Le classement est fonction du type de l'attribut (une chaîne de caractère a un classement alphabétique alors qu'une date a un classement chronologique). Si vous préfixez le nom du champs du signe <em>moins</em> (-) alors le classement sera naturellement inversé.</p>
 
 <p>Voici un exemple de classe de livre par titre et dates de parution :</p>
 
@@ -159,9 +159,9 @@ class MyModelName(models.Model):
 
 <pre class="brush: python">verbose_name = 'BetterName'</pre>
 
-<p>D'autres attributs vous permettent de compléter des droits d'accès à ceux appliqués par défaut, des classement s'appuyant sur le comportement d'autres champs, ou de définir une classe abstraite (c'est-à-dire qui n'aura pas de transcription dans une table et des enregistrement, mais servira de support à d'autres classes partageant des éléments communs).</p>
+<p>D'autres attributs vous permettent de compléter des droits d'accès à ceux appliqués par défaut, des classements s'appuyant sur le comportement d'autres champs, ou de définir une classe abstraite (c'est-à-dire qui n'aura pas de transcription dans une table et des enregistrements, mais servira de support à d'autres classes partageant des éléments communs).</p>
 
-<p>D'autres éléments sont aussi disponible pour contrôler le comportement d'une base de données, mais sont principalement utilisé pour appliquer le modèle ORM sur une base de données déjà existante.</p>
+<p>D'autres éléments sont aussi disponibles pour contrôler le comportement d'une base de données, mais sont principalement utilisés pour appliquer le modèle ORM sur une base de données déjà existante.</p>
 
 <p>L'ensemble <a href="https://docs.djangoproject.com/fr/2.2/ref/models/options/">des métadonnées de classe</a> peut être consulté sur le site Django.</p>
 
@@ -191,7 +191,7 @@ class MyModelName(models.Model):
 
 <h3 id="Administration_des_données">Administration des données</h3>
 
-<p>A partir du moment où vous avez créé votre modèle de données, vous pouvez manipuler les instances pour créer, mettre à jour ou supprimer les enregistrements en base de données. Vous pouvez aussi faire des requêtes pour obtenir tout ou parti des enregistrements de la base. L'objet de cette section est d'évoquer la manière de manipuler ces données et cela revu progressivement dans les avancées de l'application Bibliothèque.</p>
+<p>A partir du moment où vous avez créé votre modèle de données, vous pouvez manipuler les instances pour créer, mettre à jour ou supprimer les enregistrements en base de données. Vous pouvez aussi faire des requêtes pour obtenir tout ou parti des enregistrements de la base. L'objet de cette section est d'évoquer la manière de manipuler ces données et sera revu progressivement dans les avancées de l'application Bibliothèque.</p>
 
 <h4 id="Créer_et_modifier_des_enregistrements">Créer et modifier des enregistrements</h4>
 
@@ -231,17 +231,17 @@ record.save()</pre>
 <pre class="brush: python">all_books = Book.objects.all()
 </pre>
 
-<p>Un filtre Django ou <code>filter()</code> est une méthode qui permet de sélectionner un jeu de données répondant à des critères (texte ou numérique) de sélection. Par exemple, nus filtrons les livres dont le titre contient le mot "wild", puis nous dénombrons le jeu de données.</p>
+<p>Un filtre Django ou <code>filter()</code> est une méthode qui permet de sélectionner un jeu de données répondant à des critères (texte ou numérique) de sélection. Par exemple, nous filtrons les livres dont le titre contient le mot "wild", puis nous dénombrons le jeu de données.</p>
 
 <pre class="brush: python">wild_books = Book.objects.filter(title__contains='wild')
 number_wild_books = wild_books.count()
 </pre>
 
-<p>Les arguments passés en option sont le champs et la nature du contrôle à effectuer. On utilise le format : <code>field_name__match_type</code> : dans l'exemple ci-dessus, le double sous-ligné marque la séparation entre le champ <code>title</code> et le type de contrôle <code>contains</code> ; concrètement, le filtre est appliqué sur le champ <code>title</code> contenant le mot <code>wild</code> en respectant la casse. Il existe d'autres options de contrôle : <code>icontains</code> (sans respect de la casse), <code>iexact</code> (le chmaps correspond exactement à la valeur donnée sans respect de la casse), <code>exact</code> (idem en respectant la casse) et <code>in</code>, <code>gt</code> (plus grand que), <code>startswith</code>(commence par), etc. La liste complète est <a href="https://docs.djangoproject.com/fr/2.2/ref/models/querysets/#field-lookups">consultatble sur la documentation de Django</a>.</p>
+<p>Les arguments passés en option sont le champs et la nature du contrôle à effectuer. On utilise le format : <code>field_name__match_type</code> : dans l'exemple ci-dessus, le double sous-ligné marque la séparation entre le champ <code>title</code> et le type de contrôle <code>contains</code> ; concrètement, le filtre est appliqué sur le champ <code>title</code> contenant le mot <code>wild</code> en respectant la casse. Il existe d'autres options de contrôle : <code>icontains</code> (sans respect de la casse), <code>iexact</code> (le champs correspond exactement à la valeur donnée sans respect de la casse), <code>exact</code> (idem en respectant la casse) et <code>in</code>, <code>gt</code> (plus grand que), <code>startswith</code>(commence par), etc. La liste complète est <a href="https://docs.djangoproject.com/fr/2.2/ref/models/querysets/#field-lookups">consultable sur la documentation de Django</a>.</p>
 
 <p>Le marqueur "double souligné" permet de construire une chaîne de navigation à travers les objets lorsque le champ considéré est une clé étrangère (<code>ForeignKey</code>). C'est systématiquement le cas lorsque l'on doit filtrer sur une propriété d'un attribut dans une relation un-à-un. Dans ce cas (exemple ci-dessous), vous identifiez l'attribut de la clé étrangère par le biais d'un "double souligné" qui indique le champs à filter. L'exemple ci-dessous indique que vous filtrez les livres selon le nom (<code>name</code>) du genre (<code>genre</code>) du livre.</p>
 
-<pre class="brush: python"># Le criètre s'appliquera sur les genres contenant 'fiction' i.e. : Fiction, Science fiction, non-fiction etc.
+<pre class="brush: python"># Le critère s'appliquera sur les genres contenant 'fiction' i.e. : Fiction, Science fiction, non-fiction etc.
 books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong>__</strong>icontains='fiction')
 </pre>
 
@@ -307,7 +307,7 @@ class Book(models.Model):
         return reverse('book-detail', args=[str(self.id)])
 </pre>
 
-<p>Le genre littéraire est une relation n à n (<code>ManyToManyField</code>)car un livre peut avoir plusieurs genre et inversement. Bien que des livres soient écrits à plusieurs, dans le modèle de données présent un livre n'aura qu'un et un seul auteur. Un auteur est donc vu comme une clé étrangère <code>(ForeignKey</code>) de telle sorte qu'un livre n'a qu'un seul auteur et une auteur peut avoir écrit plusieurs livres.</p>
+<p>Le genre littéraire est une relation n à n (<code>ManyToManyField</code>) car un livre peut avoir plusieurs genres et inversement. Bien que des livres soient écrits à plusieurs, dans le modèle de données présent un livre n'aura qu'un et un seul auteur. Un auteur est donc vu comme une clé étrangère <code>(ForeignKey</code>) de telle sorte qu'un livre n'a qu'un seul auteur et une auteur peut avoir écrit plusieurs livres.</p>
 
 <p>La modélisation des relations entre les objets, c'est le cas pour les deux champs décrits à l'instant, nécessite de manipuler les classes d'objet par leur nom de classe. Vous devez déclarer l'objet par son de classe dans la déclaration de la relation entre les objets, si celui-ci a déjà été déclaré vous pouvez l'utiliser comme un nom d'objet - à l'identique d'une variable Python - ou comme une chaîne de caractère si l'objet n'a pas déjà fait l'objet d'un déclaration. les autres paramètres dans la déclaration des relations permettent de spécifier les comportement des attributs : l'option <code>null</code> positionné à <code>True</code> permet d'avoir un contenu vide en base de données, la second option<code> on_delete=models.SET_NULL</code> qualifie le fonctionnement de cet attribut si l'objet est supprimé en base de données, en l'occurence il peut être positionné à vide en base de données.</p>
 

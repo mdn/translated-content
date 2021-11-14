@@ -11,15 +11,15 @@ translation_of: Web/API/Window/requestIdleCallback
 
 <div class="note">Опция <code>timeout</code> настоятельно рекомендована для работы, в противном случае может пройти несколько секунд прежде, чем будет вызван колбэк.</div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>var <em>handle</em> = <em>window</em>.requestIdleCallback(<em>callback</em>[, <em>options</em>])</code></pre>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <p>Возвращает ID, который может быть использован для отмены колбэка, передав значение в метод {{domxref("window.cancelIdleCallback()")}}.</p>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -32,30 +32,17 @@ translation_of: Web/API/Window/requestIdleCallback
  </dd>
 </dl>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <p>Посмотрите наш <a href="/en-US/docs/Web/API/Background_Tasks_API#Example">готовый пример</a> в статье <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a>.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификация</h2>
+<h2 id="Specifications">Спецификация</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Спецификация</th>
-   <th>Статус</th>
-   <th>Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Background Tasks')}}</td>
-   <td>{{Spec2('Background Tasks')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Window.requestIdleCallback")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

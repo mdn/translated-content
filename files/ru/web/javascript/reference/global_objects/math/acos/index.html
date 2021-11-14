@@ -10,26 +10,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/acos
 ---
 <div>{{JSRef("Global_Objects", "Math")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <strong><code>Math.acos()</code></strong> возвращает арккосинус числа (в радианах), то есть</p>
 <p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>;</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acos</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arccos</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> уникальный </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mo stretchy="false">[</mo><mn>0</mn><mo>;</mo><mi>π</mi><mo stretchy="false">]</mo><mspace width="thinmathspace"></mspace><mtext>такой, что</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1};1],\;\mathtt{\operatorname{Math.acos}(x)} = \arccos(x) = \text{ уникальный } \; y \in [0; \pi] \, \text{такой, что} \; \cos(y) = x</annotation></semantics></math></p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code>Math.acos(<var>x</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>x</code></dt>
  <dd>Число.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Метод <code>Math.acos()</code> возвращает числовое значение между 0 и π радианами для значения <code>x</code>, лежащего в диапазоне от -1 до 1. Метод вернёт {{jsxref("NaN")}}, если значение <code>x</code> выйдет за этот диапазон.</p>
 <p>Поскольку метод <code>acos()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.acos()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_Math.acos" name="Example:_Using_Math.acos">Пример: использование метода <code>Math.acos()</code></h3>
+<h3 id="Example:_Using_Math.acos">Пример: использование метода <code>Math.acos()</code></h3>
 <pre class="brush:js">Math.acos(-2);  // NaN
 Math.acos(-1);  // 3.141592653589793
 Math.acos(0);   // 1.5707963267948966
@@ -39,7 +39,7 @@ Math.acos(2);   // NaN
 </pre>
 <p>Для значений, меньших -1 или больших 1, метод <code>Math.acos()</code> возвращает {{jsxref("NaN")}}.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -65,10 +65,10 @@ Math.acos(2);   // NaN
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Math.asin()")}}</li>
  <li>{{jsxref("Math.atan()")}}</li>

@@ -11,7 +11,7 @@ translation_of: Web/API/Range/surroundContents
 
 <p>Если {{ domxref("Range") }} разделяет любой не <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text">текстовый</a> элемент хотя бы одной точкой, произойдёт исключение. В отличие от альтернативы выше, если в диапазоне есть частично выделенные элементы, они не будут клонированы, а вместо этого производит ошибка.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>range</em>.surroundContents(<em>newNode</em>);
 </pre>
@@ -23,7 +23,7 @@ translation_of: Web/API/Range/surroundContents
  <dd><a href="/en-US/docs/Glossary/Node/DOM">Элемент</a> который будет содержать в себе выделенный текст. </dd>
 </dl>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush:js">var range = document.createRange();
 var newNode = document.createElement("p");
@@ -32,7 +32,7 @@ range.selectNode(document.getElementsByTagName("div").item(0));
 range.surroundContents(newNode);
 </pre>
 
-<h2 id="Specification" name="Specification">Спецификации</h2>
+<h2 id="Specification">Спецификации</h2>
 
 <table class="standard-table">
  <tbody>
@@ -56,7 +56,7 @@ range.surroundContents(newNode);
 
 <h2 id="Совместимость">Совместимость</h2>
 
-<p>{{Compat("api.Range.surroundContents")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

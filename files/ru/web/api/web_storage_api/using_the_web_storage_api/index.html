@@ -37,7 +37,7 @@ localStorage.setItem('colorSetting', '#a4509b');
 
 <p>Функция, которая проверяет браузеры на поддержку и доступность localStorage:</p>
 
-<pre class="brush: js notranslate">function storageAvailable(type) {
+<pre class="brush: js">function storageAvailable(type) {
 	try {
 		var storage = window[type],
 			x = '__storage_test__';
@@ -52,7 +52,7 @@ localStorage.setItem('colorSetting', '#a4509b');
 
 <p>Вот как вы бы могли использовать это:</p>
 
-<pre class="brush: js notranslate">if (storageAvailable('localStorage')) {
+<pre class="brush: js">if (storageAvailable('localStorage')) {
 	// Yippee! We can use localStorage awesomeness
 }
 else {
@@ -79,7 +79,7 @@ else {
 
 <p>Начнём с main.js, мы проверим был ли уже заполнен объект Storage (т.е страница была ранее доступна)</p>
 
-<pre class="brush: js notranslate">if(!localStorage.getItem('bgcolor')) {
+<pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
@@ -93,7 +93,7 @@ else {
 
 <p>Как было отмечено выше, значения хранилища могут быть извлечены используя {{domxref("Storage.getItem()")}}. В качестве аргумента функция принимает значение ключа элемента хранилища, а возвращает значение этого элемента. Например:</p>
 
-<pre class="brush: js notranslate">function setStyles() {
+<pre class="brush: js">function setStyles() {
   var currentColor = localStorage.getItem('bgcolor');
   var currentFont = localStorage.getItem('font');
   var currentImage = localStorage.getItem('image');
@@ -113,7 +113,7 @@ else {
 
 <p>{{domxref("Storage.setItem()")}} is used both to create new data items, and (if the data item already exists) update existing values. This takes two arguments — the key of the data item to create/modify, and the value to store in it.</p>
 
-<pre class="brush: js notranslate">function populateStorage() {
+<pre class="brush: js">function populateStorage() {
   localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
   localStorage.setItem('font', document.getElementById('font').value);
   localStorage.setItem('image', document.getElementById('image').value);
@@ -125,7 +125,7 @@ else {
 
 <p>We've also included an <code>onchange</code> handler on each form element, so that the data and styling is updated whenever a form value is changed:</p>
 
-<pre class="brush: js notranslate">bgcolorForm.onchange = populateStorage;
+<pre class="brush: js">bgcolorForm.onchange = populateStorage;
 fontForm.onchange = populateStorage;
 imageForm.onchange = populateStorage;</pre>
 
@@ -135,7 +135,7 @@ imageForm.onchange = populateStorage;</pre>
 
 <p>On the events page (see <a href="https://github.com/mdn/web-storage-demo/blob/gh-pages/event.js">events.js</a>) the only JavaScript is as follows:</p>
 
-<pre class="brush: js notranslate">window.addEventListener('storage', function(e) {
+<pre class="brush: js">window.addEventListener('storage', function(e) {
   document.querySelector('.my-key').textContent = e.key;
   document.querySelector('.my-old').textContent = e.oldValue;
   document.querySelector('.my-new').textContent = e.newValue;

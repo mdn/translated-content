@@ -37,7 +37,6 @@ paint(workletName, parameters)
 CSS の paint() 関数で追加の引数を渡すことができます。この例では、二つの引数を渡しています。リストアイテムのグループの背景画像が塗りつぶしか輪郭線だけかと、輪郭線の太さです。
 
 ```html hidden
-<ul>
     <li>item 1</li>
     <li>item 2</li>
     <li>item 3</li>

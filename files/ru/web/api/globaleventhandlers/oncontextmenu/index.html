@@ -19,12 +19,12 @@ translation_of: Web/API/GlobalEventHandlers/oncontextmenu
 
 <p><span class="seoSummary">Обратите внимание что это событие будет происходить вместе с другими событиями right-click и не зависит от <a href="http://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/">"contextmenu" атрибута</a> элемента.</span></p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">window.oncontextmenu = funcRef;
 //funcRef - ссылка на функцию, которая будет вызвана в ответ на событие "oncontextmenu", происходящее при клике правой кнопкой мыши внутри объекта window.</pre>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <p>Код в этом примере меняет стандартное поведение браузера, отключая клик правой кнопкой мыши.</p>
 
@@ -37,25 +37,12 @@ window.addEventListener('contextmenu', function (e) { // Не совместим
 }, false);
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификация</h2>
+<h2 id="Specifications">Спецификация</h2>
 
-<table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-oncontextmenu','oncontextmenu')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 <div>
-<p>{{Compat("api.GlobalEventHandlers.oncontextmenu")}}</p>
+<p>{{Compat}}</p>
 </div>

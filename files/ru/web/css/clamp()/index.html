@@ -9,14 +9,14 @@ translation_of: Web/CSS/clamp()
 
 <p><code>clamp(MIN, VAL, MAX)</code> вычисляется как <code>{{CSSxRef("max", "max")}}(MIN, {{CSSxRef("min", "min")}}(VAL, MAX))</code></p>
 
-<pre class="brush: css; no-line-numbers notranslate">/* свойство: clamp(expression{3}) */
+<pre class="brush: css; no-line-numbers">/* свойство: clamp(expression{3}) */
 width: clamp(10px, 4em, 80px);</pre>
 
 <p>В примере выше ширина будет не меньше 10px и не больше 80px. Но если размер одного "em" будет находиться в диапазоне от 2.5px до 20px (в сумме от 10px до 80px), то ширина будет равняться этим 4em.</p>
 
 <p>Давайте предположим, что в примере выше 1em равен 16px:</p>
 
-<pre class="brush: css; no-line-numbers notranslate">width: clamp(10px, 4em, 80px);
+<pre class="brush: css; no-line-numbers">width: clamp(10px, 4em, 80px);
 /* если 1em = 16px, 4em = (16px * 4) = 64px */
 width: clamp(10px, 64px, 80px);
 /* clamp(MIN, VAL, MAX) вычисляется как max(MIN, min(VAL, MAX))) */
@@ -57,17 +57,17 @@ width: 64px;</pre>
 
 <p><code>clamp()</code> позволяет вам установить размер шрифта, который изменяется в зависимости от ширины области видимости, но не уменьшается ниже и не увеличивается выше заданного размера. Она имеет тот же эффект, что и в <a href="https://css-tricks.com/snippets/css/fluid-typography/">Fluid Typography</a>, но в одну строку и без использования медиавыражений.</p>
 
-<pre class="brush: css notranslate">p { font-size: clamp(1rem, 2.5vw, 1.5rem); }
+<pre class="brush: css">p { font-size: clamp(1rem, 2.5vw, 1.5rem); }
 </pre>
 
-<pre class="brush: html; notranslate">&lt;p&gt;
+<pre class="brush: html;">&lt;p&gt;
 If 2.5vw is less than 1rem, the font-size will be 1rem.
 If 2.5vw is greater than 1.5rem, the font-size will be 1.5rem.
 Otherwise, it will be 2.5vw.
 &lt;/p&gt;
 </pre>
 
-<p>{{EmbedLiveSample("Setting_a_minimum_and_max_size_for_a_font", "100%", "300")}}</p>
+<p>{{EmbedLiveSample("Установка_минимального_и_максимального_размера_шрифта", "100%", "300")}}</p>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
@@ -96,7 +96,7 @@ Otherwise, it will be 2.5vw.
 
 
 
-<p>{{Compat("css.types.clamp")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

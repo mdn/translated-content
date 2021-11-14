@@ -11,66 +11,43 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>getMonth()</code></strong> возвращает месяц указанной даты по местному времени, нумерация месяцев начинается с нуля для первого месяца в году.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.getMonth()</code></pre>
+<pre class="syntaxbox"><code><var>dateObj</var>.getMonth()</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <p>Нет.</p>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <p>Значение, возвращённое методом <code>getMonth()</code>, является целым числом от 0 до 11. 0 соответствует январю, 1 — февралю и так далее.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_getMonth" name="Example:_Using_getMonth">Пример: использование метода <code>getMonth()</code></h3>
+<h3 id="Example_Using_getMonth">Пример: использование метода <code>getMonth()</code></h3>
 
 <p>Вторая инструкция в примере ниже присваивает значение 11 переменной <code>month</code> из значения переменной <code>date</code> объекта {{jsxref("Global_Objects/Date", "Date")}}.</p>
 
-<pre class="brush: js notranslate">let date = new Date('December 25, 1995 23:15:30');
+<pre class="brush: js">let date = new Date('December 25, 1995 23:15:30');
 let month = date.getMonth();
 
 console.log(month); // 11
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.12', 'Date.prototype.getMonth')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getmonth', 'Date.prototype.getMonth')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.getUTCMonth()")}}</li>

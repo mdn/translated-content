@@ -265,11 +265,11 @@ fish.displayType(); // Output:Fishes
 
 <p>该函数更多的信息及详细用法，参见 {{ web.link("/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/create", "Object.create method") }}</p>
 
-<h3 id="继承"><strong>继承</strong></h3>
+<h2 id="继承"><strong>继承</strong></h2>
 
 <p>所有的 JavaScript 对象至少继承于一个对象。被继承的对象被称作原型，并且继承的属性可通过构造函数的 <code>prototype</code> 对象找到。查看更多详细 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a></p>
 
-<h3 id="对象属性索引"><strong>对象属性索引</strong></h3>
+<h2 id="对象属性索引"><strong>对象属性索引</strong></h2>
 
 <p>在 JavaScript 1.0 中，你可以通过名称或序号访问一个属性。但是在 JavaScript 1.1 及之后版本中，如果你最初使用名称定义了一个属性，则你必须通过名称来访问它；而如果你最初使用序号来定义一个属性，则你必须通过索引来访问它。</p>
 
@@ -287,7 +287,7 @@ car1.color = "black";
 
 <p>参见<span style="line-height: 1.5;"> </span><a href="/zh-CN/docs/JavaScript/Reference" style="line-height: 1.5; text-decoration: underline;" title="zh-CN/docs/JavaScript/Reference">JavaScript Reference</a><span style="line-height: 1.5;"> 中</span><span style="line-height: 1.5;"> Function 对象的 </span><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/prototype" style="line-height: 1.5;" title="zh-CN/docs/JavaScript/Reference/Global Objects/Function/prototype"><code>prototype</code> 属性</a><span style="line-height: 1.5;"> 。</span></p>
 
-<h3 id="定义方法">定义方法</h3>
+<h2 id="定义方法">定义方法</h2>
 
 <p>一个<em>方法</em> 是关联到某个对象的函数，或者简单地说，一个方法是一个值为某个函数的对象属性。定义方法就像定义普通的函数，除了它们必须被赋给对象的某个属性。查看 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a>了解更多详情例如：</p>
 
@@ -347,7 +347,7 @@ car2.displayCar();
 
 
 
-<h3 id="通过_this_引用对象">通过 <code>this</code> 引用对象</h3>
+<h2 id="通过_this_引用对象">通过 <code>this</code> 引用对象</h2>
 
 
 
@@ -377,7 +377,7 @@ car2.displayCar();
 &lt;/p&gt;
 &lt;/form&gt;</pre>
 
-<h3 id="定义_getters_与_setters"><strong>定义 getters 与 setters</strong></h3>
+<h2 id="定义_getters_与_setters"><strong>定义 getters 与 setters</strong></h2>
 
 <p>一个 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/get">getter</a> 是一个获取某个特定属性的值的方法。一个  <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/set">setter</a> 是一个设定某个属性的值的方法。你可以为预定义的或用户定义的对象定义 getter 和 setter 以支持新增的属性。定义 getter 和 setter 的语法采用对象字面量语法。</p>
 
@@ -461,7 +461,7 @@ console.log(o.b) // Runs the getter, which yields a + 1 or 6
 
 <p>这两种定义方式的选择取决于你的编程风格和手头的工作量。当你定义一个原型准备进行初始化时，可以选择第一种方式，这种方式更简洁和自然。但是，当你需要添加getter和setter方法 —— 因为并没有编写原型或者特定的对象 ——使用第二种方式更好。第二种方式可能更能表现JavaScript语法的动态特性——但也会使代码变得难以阅读和理解。</p>
 
-<h3 id="删除属性">删除属性</h3>
+<h2 id="删除属性">删除属性</h2>
 
 <p>你可以用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/delete">delete</a> 操作符删除一个<strong style="color: red;">不是继承而来</strong>的属性。下面的例子说明如何删除一个属性：</p>
 
@@ -482,7 +482,7 @@ delete g;
 
 <p>参见<code>{{ web.link("Expressions_and_operators#delete", "delete") }}</code> 以获取更多信息。</p>
 
-<h3 id="比较对象">比较对象</h3>
+<h2 id="比较对象">比较对象</h2>
 
 <p>在 JavaScript 中 objects 是一种引用类型。两个独立声明的对象永远也不会相等，即使他们有相同的属性，只有在比较一个对象和这个对象的引用时，才会返回true.</p>
 

@@ -36,7 +36,7 @@ a:local-link {
 
 ### Résultat
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 

@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><var>leftExpr</var> ?? <var>rightExpr</var>
+<pre class="syntaxbox"><var>leftExpr</var> ?? <var>rightExpr</var>
 </pre>
 
 <h2 id="Примеры">Примеры</h2>
@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 
 <p>В этом примере показано как устанавливать значения по умолчанию, оставив в покое значения отличные от <code>null</code> или <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">const nullValue = null;
+<pre class="brush: js">const nullValue = null;
 const emptyText = ""; // falsy
 const someNumber = 42;
 
@@ -41,14 +41,14 @@ console.log(valC); // 42</pre>
 
 <p>Ранее, для присваивания значения по умолчанию переменной использовался оператор логического ИЛИ (<code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2">||</a></code>):</p>
 
-<pre class="brush: js notranslate">let foo;
+<pre class="brush: js">let foo;
 
 //  переменной foo никогда не присваивалось значение, поэтому она undefined
 let someDummyText = foo || 'Hello!';</pre>
 
 <p>Однако, оператор <code>||</code> это логический оператор, левый операнд которого при сравнении неявно приводится к булевому значению, поэтому любое <em>ложное</em> значение (<code>0</code>, <code>''</code>, <code>NaN</code>, <code>null</code>, <code>undefined</code>) не возвращается. Данное поведение может быть нежелательным если вы рассматриваете <code>0</code>, <code>''</code>, или <code>NaN</code> как корректные значения.</p>
 
-<pre class="brush: js notranslate">let count = 0;
+<pre class="brush: js">let count = 0;
 let text = "";
 
 let qty = count || 42;
@@ -59,7 +59,7 @@ console.log(message); // "hi!" and not ""
 
 <p>Оператор нулевого слияния предотвращает попадание в такую ловушку, возвращая второй операнд если первый оказывается <code>null</code> or <code>undefined</code> (но не любым другим <em>ложным</em> значением):</p>
 
-<pre class="brush: js notranslate">let myText = ''; // Пустая строка (тоже является ложным значением при приведении к логическому типу)
+<pre class="brush: js">let myText = ''; // Пустая строка (тоже является ложным значением при приведении к логическому типу)
 
 let notFalsyText = myText || 'Hello world';
 console.log(notFalsyText); // Hello world
@@ -72,7 +72,7 @@ console.log(preservingFalsy); // '' (так как myText не undefined и не
 
 <p>Так же как при использовании логического И и ИЛИ, правое выражение не вычисляется если найдено подходящее значение в левом.</p>
 
-<pre class="brush: js notranslate">function A() { console.log('A was called'); return undefined;}
+<pre class="brush: js">function A() { console.log('A was called'); return undefined;}
 function B() { console.log('B was called'); return false;}
 function C() { console.log('C was called'); return "foo";}
 
@@ -90,19 +90,19 @@ console.log( B() ?? C() );
 
 <p>Нельзя напрямую объединять И (<code>&amp;&amp;</code>) и ИЛИ (<code>||</code>) операторы с <code>??</code>. При таком выражении будет выброшен <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code>.</p>
 
-<pre class="brush: js example-bad notranslate">null || undefined ?? "foo"; // выбрасывает SyntaxError
+<pre class="brush: js example-bad">null || undefined ?? "foo"; // выбрасывает SyntaxError
 true || undefined ?? "foo"; // выбрасывает SyntaxError</pre>
 
 <p>Однако, при заключении в скобки выражение является корректным:</p>
 
-<pre class="brush: js example-good notranslate">(null || undefined) ?? "foo"; // returns "foo"
+<pre class="brush: js example-good">(null || undefined) ?? "foo"; // returns "foo"
 </pre>
 
 <h3 id="Отношение_к_оператору_опциональной_последовательности_.">Отношение к оператору опциональной последовательности (<code>?.</code>)</h3>
 
 <p>Оператор нулевого слияния определяет <code>undefined</code> и <code>null</code> как специальные значения так же как и <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Optional_chaining">оператор опциональной последовательности (<code>?.</code>)</a>, который используется для доступа к свойствам объекта, значение которого может быть <code>null</code> или <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">let foo = { someFooProp: "hi" };
+<pre class="brush: js">let foo = { someFooProp: "hi" };
 
 console.log(foo.someFooProp?.toUpperCase());  // "HI"
 console.log(foo.someBarProp?.toUpperCase()); // undefined
@@ -110,24 +110,13 @@ console.log(foo.someBarProp?.toUpperCase()); // undefined
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#prod-Nulli', 'nullish coalescing expression')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 
 
-<p>{{Compat("javascript.operators.nullish_coalescing")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

@@ -10,17 +10,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 ---
 <div>{{JSRef("Global_Objects", "Math")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>Math.sqrt()</code></strong> возвращает квадратный корень числа, то есть</p>
 
 <p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>s</mi><mi>q</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mi>x</mi></msqrt><mo>=</mo><mtext>уникальный</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>такой, что</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 0, \mathtt{Math.sqrt(x)} = \sqrt{x} = \text{уникальный} \; y \geq 0 \; \text{такой, что} \; y^2 = x</annotation></semantics></math></p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>Math.sqrt(<var>x</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>x</code></dt>
@@ -31,15 +31,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 
 <p>Квадратный корень заданного числа. Если число отрицательное, то вернётся {{jsxref("NaN")}}.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Если значение <code>x</code> отрицательно, метод <code>Math.sqrt()</code> вернёт {{jsxref("NaN")}}.</p>
 
 <p>Поскольку метод <code>sqrt()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.sqrt()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_Math.sqrt" name="Example:_Using_Math.sqrt">Пример: использование метода <code>Math.sqrt()</code></h3>
+<h3 id="Example:_Using_Math.sqrt">Пример: использование метода <code>Math.sqrt()</code></h3>
 
 <pre class="brush: js">Math.sqrt(9); // 3
 Math.sqrt(2); // 1.414213562373095
@@ -49,43 +49,15 @@ Math.sqrt(0);  // 0
 Math.sqrt(-1); // NaN
 Math.sqrt(-0); // -0</pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.17', 'Math.sqrt')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.sqrt', 'Math.sqrt')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.sqrt', 'Math.sqrt')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Math.cbrt()")}} {{experimental_inline}}</li>

@@ -1,12 +1,6 @@
 ---
 title: CanvasRenderingContext2D.clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
-tags:
-  - API
-  - Canvas
-  - CanvasRendering2D
-  - Méthode
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
 {{APIRef}}
@@ -110,7 +104,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 400) }}
+{{ EmbedLiveSample('Code_jouable', 700, 400) }}
 
 ## Spécifications
 

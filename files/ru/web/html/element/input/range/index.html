@@ -56,7 +56,7 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Атрибут {{htmlattrxref("value", "input")}} содержит {{domxref("DOMString")}}, который содержит строковое представление выбранного числа. Значение никогда не является пустой строкой (<code>""</code>). Значение, по умолчанию, находится посередине, между указанными минимальным и максимальным значениями — если максимум оказывается меньше минимума, то значение по умолчанию приравнивается к значению атрибута <code>min</code>. Алгоритм определения значения по умолчанию:</p>
 
-<pre class="brush: js notranslate">defaultValue = (rangeElem.max &lt; rangeElem.min) ? rangeElem.min
+<pre class="brush: js">defaultValue = (rangeElem.max &lt; rangeElem.min) ? rangeElem.min
                : rangeElem.min + (rangeElem.max - rangeElem.min)/2;</pre>
 
 <p>Если предпринята попытка установить значение меньше минимального, то оно примет значение атрибута min. Аналогично, попытка установить значение больше максимального, приведёт к установлению значения равного атрибуту max.</p>
@@ -159,16 +159,16 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Например, указать диапазон значений между -10 и 10, вы можете, используя:</p>
 
-<pre class="brush: html notranslate">&lt;input type="range" min="-10" max="10"&gt;</pre>
+<pre class="brush: html">&lt;input type="range" min="-10" max="10"&gt;</pre>
 
-<p>{{EmbedLiveSample("Specifying_the_minimum_and_maximum", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Указание_минимума_и_максимума", 600, 40)}}</p>
 
 <h3 id="Настройка_детализации_значения">Настройка детализации значения</h3>
 
 <p>По умолчанию, степень детализации равна 1, тем самым показывая, что значение всегда является целым числом. Вы можете изменить атрибут {{htmlattrxref("step")}} контроля степени детализации. Например, если вам нужно значение между 5 и 10, с точностью до двух знаков после запятой, вы должны установить значение <code>step</code> на 0.01:</p>
 
 <div id="Granularity_sample1">
-<pre class="brush: html notranslate">&lt;input type="range" min="5" max="10" step="0.01"&gt;</pre>
+<pre class="brush: html">&lt;input type="range" min="5" max="10" step="0.01"&gt;</pre>
 
 <p>{{EmbedLiveSample("Granularity_sample1", 600, 40)}}</p>
 </div>
@@ -176,7 +176,7 @@ translation_of: Web/HTML/Element/input/range
 <p>Если вы хотите принять любое значение, независимо от разрядности, вы можете указать значение <code>any</code> для атрибута {{htmlattrxref("step", "input")}}:</p>
 
 <div id="Granularity_sample2">
-<pre class="brush: html notranslate">&lt;input type="range" min="0" max="3.14" step="any"&gt;</pre>
+<pre class="brush: html">&lt;input type="range" min="0" max="3.14" step="any"&gt;</pre>
 
 <p>{{EmbedLiveSample("Granularity_sample2", 600, 40)}}</p>
 
@@ -203,7 +203,7 @@ translation_of: Web/HTML/Element/input/range
   </tr>
   <tr>
    <td>
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;input type="range"&gt;</pre>
    </td>
    <td><img alt="Screenshot of a plain slider control on macOS" src="https://mdn.mozillademos.org/files/14989/macslider-plain.png" style="height: 28px; width: 184px;"></td>
@@ -223,7 +223,7 @@ translation_of: Web/HTML/Element/input/range
   </tr>
   <tr>
    <td>
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;input type="range" list="tickmarks"&gt;
 
 &lt;datalist id="tickmarks"&gt;
@@ -258,7 +258,7 @@ translation_of: Web/HTML/Element/input/range
   </tr>
   <tr>
    <td>
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;input type="range" list="tickmarks"&gt;
 
 &lt;datalist id="tickmarks"&gt;
@@ -293,9 +293,11 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Рассмотрим контроллер диапазона:</p>
 
-<pre class="notranslate">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
+<div id="Orientation_sample1">
+<pre class="brush: html">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
 
 <p>{{EmbedLiveSample("Orientation_sample1", 200, 200, "https://mdn.mozillademos.org/files/14983/Orientation_sample1.png")}}</p>
+</div>
 
 <p>Это горизонтальный контроллер (по крайне мере на большинстве основных браузеров, другие могут отличаться).</p>
 
@@ -303,20 +305,22 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Следуя спецификации, сделать его вертикальным также просто как добавить CSS, чтобы изменить размеры контроллера, чтобы его высота оказалась больше ширины:</p>
 
+<div id="Orientation_sample2">
 <h4 id="CSS">CSS</h4>
 
-<pre class="notranslate">#volume {
+<pre class="brush: css">#volume {
   height: 150px;
   width: 50px;
 }</pre>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="notranslate">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
+<pre class="brush: html">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
 
 <h4 id="Результат">Результат</h4>
 
 <p>{{EmbedLiveSample("Orientation_sample2", 200, 200, "https://mdn.mozillademos.org/files/14985/Orientation_sample2.png")}}</p>
+</div>
 
 <p>К сожалению, большинство браузеров сейчас не поддерживают вертикальные контроллы напрямую.</p>
 
@@ -329,7 +333,7 @@ translation_of: Web/HTML/Element/input/range
 
 <p>В HTML нужно добавить обёртку вокруг {{HTMLElement("input")}}  - {{HTMLElement("div")}}, что позволит нам исправить макет после выполнения трансформации (т.к. трансформация автоматически не влияет на макет страницы):</p>
 
-<pre class="brush: html notranslate">&lt;div class="slider-wrapper"&gt;
+<pre class="brush: html">&lt;div class="slider-wrapper"&gt;
   &lt;input type="range" min="0" max="11" value="7" step="1"&gt;
 &lt;/div&gt;</pre>
 
@@ -337,7 +341,7 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Теперь нам нужно немного CSS. Во-первых, это CSS для самой обёртки; это указание дисплея и размеров для правильного расположения на странице; по сути, он резервирует область страницы для слайдера, так, чтобы можно было поместить повёрнутый слайдер в зарезервированном пространстве, не создавая беспорядка.</p>
 
-<pre class="brush: css notranslate">.slider-wrapper {
+<pre class="brush: css">.slider-wrapper {
   display: inline-block;
   width: 20px;
   height: 150px;
@@ -347,7 +351,7 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Затем информация о стиле элемента <code>&lt;input&gt;</code> в зарезервированном пространстве:</p>
 
-<pre class="brush: css notranslate">.slider-wrapper input {
+<pre class="brush: css">.slider-wrapper input {
   width: 150px;
   height: 20px;
   margin: 0;
@@ -367,14 +371,14 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Используем тот же HTML что и в предыдущем примере:</p>
 
-<pre class="notranslate">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
+<pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
 </pre>
 
 <h4 id="CSS_3">CSS</h4>
 
 <p>Берём только те инпуты что имеют тип range:</p>
 
-<pre class="notranslate">input[type="range"] {
+<pre>input[type="range"] {
   -webkit-appearance: slider-vertical;
 }</pre>
 
@@ -388,7 +392,7 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Используем тот же HTML что и в предыдущем примере и добавляем атрибут со значением <code>vertical</code>:</p>
 
-<pre class="notranslate">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
+<pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
 </pre>
 
 <p>{{EmbedLiveSample("orient_attribute", 200, 200)}}</p>
@@ -401,14 +405,14 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Используем тот же HTML что и в предыдущем примере:</p>
 
-<pre class="notranslate">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
+<pre class="brush:html">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
 </pre>
 
 <h4 id="CSS_4">CSS</h4>
 
 <p>Берём только те инпуты что имеют тип range, меняем writing mode с default на <code>bt-lr</code>, или bottom-to-top и left-to-right:</p>
 
-<pre class="notranslate">input[type="range"] {
+<pre class="brush: css">input[type="range"] {
   writing-mode: bt-lr;
 }</pre>
 
@@ -422,50 +426,30 @@ translation_of: Web/HTML/Element/input/range
 
 <p>Оставим <code>orient</code> атрибут  со значением <code>vertical</code> для Firefox:</p>
 
-<pre class="notranslate">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
+<pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
 </pre>
 
 <h4 id="CSS_5">CSS</h4>
 
 <p>Берём только те инпуты что имеют тип range, меняем writing mode с default на <code>bt-lr</code>, или bottom-to-top и left-to-right, для Edge и Internet Explorer, и добавляем <code>-webkit-appearance: slider-vertical</code> для всех -webkit-based браузеров:</p>
 
-<pre class="notranslate">input[type="range"] {
+<pre class="brush: css">input[type="range"] {
   writing-mode: bt-lr;
   -webkit-appearance: slider-vertical;
 }</pre>
 
-<p>{{EmbedLiveSample("Putting_it_all_together", 200, 200)}}</p>
+<p>{{EmbedLiveSample("Все_вместе", 200, 200)}}</p>
 </div>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#range-state-(type=range)', '&lt;input type="range"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Первое определение</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sec-forms.html#range-state-typerange', '&lt;input type="range"&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Первое определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
 
 
-<p>{{Compat("html.elements.input.input-range")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

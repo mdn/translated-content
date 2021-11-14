@@ -1,14 +1,6 @@
 ---
 title: Empilement et éléments flottants
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
-tags:
-  - Avancé
-  - CSS
-  - Contextes d’empilement
-  - Guide
-  - Ordre d’empilement
-  - float
-  - z-index
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 original_slug: Web/CSS/Comprendre_z-index/Empilement_et_float
 ---
@@ -35,7 +27,7 @@ Ce comportement peut être expliqué en améliorant la liste précédente :
 
 > **Note :** Dans l'exemple qui suit, tous les blocs sont transparents, excepté celui qui n'est pas positionné, montrant ainsi l'ordre d'empilement. Si l'on réduit l'opacité du bloc non positionné (DIV #4), il se produit quelque chose d'étrange : l'arrière-plan et la bordure de cet élément se placent par dessus les blocs flottants et les blocs positionnés. Il s'agit d'une interprétation particulière des spécifications CSS : l'application de l'opacité crée un nouveau contexte d'empilement (voir l'article : [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) de Philip Walton ou son excellente traduction de Vincent De Oliveira, [Ce que personne ne vous a dit sur z-index](https://iamvdo.me/blog/comprendre-z-index-et-les-contextes-dempilement) et, bien-sûr, la [spécification](https://www.w3.org/TR/CSS2/zindex.html)).
 
-{{EmbedLiveSample("Code_source_de_l’exemple", 600, 250)}}
+{{EmbedLiveSample("Code_source_de_lexemple", 600, 250)}}
 
 ## Code source de l'exemple
 

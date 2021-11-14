@@ -16,30 +16,30 @@ translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 
 
 
-<h2 id="Associativity" name="Associativity">Ассоциативность</h2>
+<h2 id="Associativity">Ассоциативность</h2>
 
 <p>Ассоциативность определяет порядок, в котором обрабатываются операторы с одинаковым приоритетом. Например, рассмотрим выражение:</p>
 
-<pre class="syntaxbox notranslate">a OP b OP c
+<pre class="syntaxbox">a OP b OP c
 </pre>
 
 <p>Левая ассоциативность (слева направо) означает, что оно обрабатывается как <code>(a OP b) OP c</code>, в то время как правая ассоциативность (справа налево) означает, что они интерпретируются как <code>a OP (b OP c)</code>. Операторы присваивания являются право-ассоциативными, так что вы можете написать:</p>
 
-<pre class="brush: js notranslate">a = b = 5;
+<pre class="brush: js">a = b = 5;
 </pre>
 
 <p>с ожидаемым результатом, что <code>a</code> и <code>b</code> будут равны 5. Это происходит, потому что оператор присваивания возвращает тот результат, который присваивает. Сначала <code>b</code> становится равным 5, затем <code>a</code> принимает значение <code>b</code>.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<pre class="brush: js notranslate"><code>3 &gt; 2 &amp;&amp; 2 &gt; 1
+<pre class="brush: js"><code>3 &gt; 2 &amp;&amp; 2 &gt; 1
 // вернёт true
 
 3 &gt; 2 &gt; 1
 // вернёт false, потому что 3 &gt; 2 возвращает true, в свою очередь true &gt; 1 вернёт false
 // Добавление скобок значительно повышает читаемость выражения: (3 &gt; 2) &gt; 1</code></pre>
 
-<h2 id="Table" name="Table">Таблица</h2>
+<h2 id="Table">Таблица</h2>
 
 <p>Данная таблица упорядочена с самого высокого приоритета (20) до самого низкого (1).</p>
 

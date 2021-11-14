@@ -2,31 +2,80 @@
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
+browser-compat: html.elements.allSettled
 ---
 <p>{{JSRef}}</p>
 
-<p><code><strong>Promise.allSettled()</strong></code> 메소드는 배열이나 별도의 나열 가능한 객체를 통해 나열된 Promise모음이 모두 이행하거나 거부했을 때에 대한 대응을 할 수 있는 Promise 객체를 반환한다.</p>
+<p><code><strong>Promise.allSettled()</strong></code> 메서드는 주어진 모든 프로미스를 이행하거나 거부한 후, 각 프로미스에 대한 결과를 나타내는 객체 배열을 반환합니다.</p>
+
+<p>일반적으로 서로의 성공 여부에 관련 없는 여러 비동기 작업을 수행해야 하거나, 항상 각 프로미스의 실행 결과를 알고 싶을 때 사용합니다.</p>
+
+<p>그에 비해, {{jsxref("Promise.all()")}}이 반환한 프로미스는 서로 연관된 작업을 수행하거나, 하나라도 거부 당했을 때 즉시 거부하고 싶을 때 적합합니다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}</div>
 
-<h2 id="문법">문법</h2>
+<h2 id="syntax">문법</h2>
 
 <pre class="syntaxbox"><em>Promise</em>.allSettled(<em>iterable</em>);</pre>
 
-<h3 id="인자">인자</h3>
+<h3 id="parameters">인자</h3>
 
 <dl>
  <dt><code>iterable</code></dt>
- <dd><a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a> 객체로, 주로 배열({{jsxref("Array")}})을 사용하며, 이들의 요소들은 모두 <code>Promise</code> 객체.</dd>
+ <dd>멤버가 모두 <code>Promise</code>인, 배열({{jsxref("Array")}})과 같은 <a href="ko/docs/Web/JavaScript/Reference/Iteration_protocols">이터러블</a> 객체입니다.</dd>
 </dl>
 
-<h3 id="반환_값">반환 값</h3>
+<h3 id="return_value">반환 값</h3>
 
-<p><strong>실행할</strong> {{jsxref("Promise")}} 객체로 <strong>비동기</strong> 방식으로 이행(Resolved) 및 거부(Rejected)된 결과의 모음을 담아 인자로 전달된다. 이 때 반환된 Promise 객체의 핸들러는 각 본래 Promise 객체가 담긴 배열을 전달할 것이다.</p>
+<p>지정된 Promise 컬렉션의 모든 Promise가 성공적으로 이행되거나 거부되어 완료되면, <strong>보류 중</strong>인 Promise는 <strong>비동기적</strong>으로 이행됩니다. 그 때, 반환된 Promise의 핸들러는 원래 프로미스 집합에 있는 각 프로미스의 결과를 포함하는 배열을 입력으로 전달합니다.</p>
 
-<p>각 출력 객체는 <code>status</code> 속성을 통해,  <code>fulfilled</code>,상태로 전달되면 <code>value</code> 속성이 전달되고, <code>rejected</code> 상태로 전달 시 <code>reason</code> 속성으로 전달된다. 각 Promise가 어떻게 이행(또는 거부)됐는지 value 속성 및 reason 속성을 통해 알 수 있다.</p>
+<p>단, <code>Promise.allSettled()</code>는 빈 이터러블 객체를 인자로 전달받았을 <strong>경우에만</strong> 빈 배열로써 <strong>이미 이행된</strong> 객체를 반환합니다.</p>
 
-<h2 id="문서_표준">문서 표준</h2>
+<p>반환된 각 객체별로 <code>status</code>를 확인할 수 있습니다. 만약 <code>fulfilled</code> 상태라면 <code>value</code>를, <code>rejected</code> 상태라면면 <code>reason</code> 속성을 확인할 수 있습니다. value나 reason을 통해 각 Promise가 어떻게 이행(또는 거부)됐는지 알 수 있습니다.</p>
+
+<h2 id="examples">예제</h2>
+
+<h3 id="using_promise.allSettled">Promise.allSettled의 사용</h3>
+
+<h4>{{jsxref("Promise.then", "Promise.prototype.then()")}}</h4>
+
+<pre class="brush: js">
+Promise.allSettled([
+  Promise.resolve(33),
+  new Promise(resolve => setTimeout(() => resolve(66), 0)),
+  99,
+  Promise.reject(new Error('an error'))
+])
+.then(values => console.log(values));
+
+// [
+//   {status: "fulfilled", value: 33},
+//   {status: "fulfilled", value: 66},
+//   {status: "fulfilled", value: 99},
+//   {status: "rejected",  reason: Error: an error}
+// ]
+</pre>
+
+<h4>{{jsxref("Operators/await", "await")}}</h4>
+
+<pre class="brush: js">
+const values = await Promise.allSettled([
+  Promise.resolve(33),
+  new Promise(resolve => setTimeout(() => resolve(66), 0)),
+  99,
+  Promise.reject(new Error('an error'))
+])
+console.log(values)
+
+// [
+//   {status: "fulfilled", value: 33},
+//   {status: "fulfilled", value: 66},
+//   {status: "fulfilled", value: 99},
+//   {status: "rejected",  reason: Error: an error}
+// ]
+</pre>
+
+<h2 id="specifications">명세</h2>
 
 <table class="standard-table">
  <tbody>
@@ -43,11 +92,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
  </tbody>
 </table>
 
-<h2 id="지원_브라우저">지원 브라우저<p>{{Compat("javascript.builtins.Promise.allSettled")}}</p>
+<h2 id="browser_compatibility">브라우저 호환성</h2>
 
-<h2 id="같이_보기">같이 보기</h2>
+<p>{{Compat("javascript.builtins.Promise.allSettled")}}</p>
+
+<h2 id="see_also">같이 보기</h2>
 
 <ul>
+ <li><a href="https://github.com/zloirock/core-js#ecmascript-promise">core-js</a>에서 사용가능한 <code>Promise.allSettled</code>의 폴리필</li>
  <li><a href="/en-US/docs/Archive/Add-ons/Techniques/Promises">Promises</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with promises</a></li>

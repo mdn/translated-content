@@ -1,11 +1,6 @@
 ---
 title: transition-duration
 slug: Web/CSS/transition-duration
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - Transitions
 translation_of: Web/CSS/transition-duration
 ---
 {{CSSRef}}
@@ -110,7 +105,7 @@ changeButton.addEventListener("click", change);
 
 #### Résultat
 
-{{EmbedLiveSample("exemple_illustrant_differentes_durees",275,200)}}
+{{EmbedLiveSample("Exemples",275,200)}}
 
 ## Spécifications
 

@@ -64,7 +64,7 @@ p:target i {
 
 #### Résultat
 
-{{EmbedLiveSample('examples', 500, 300)}}
+{{EmbedLiveSample('Exemples', 500, 300)}}
 
 ## Spécifications
 
