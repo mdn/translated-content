@@ -9,4 +9,4 @@ tags:
 translation_of: Learn/Index
 original_slug: Apprendre/Index
 ---
-<p>{{Index("/fr/docs/Apprendre")}}</p>
+{{Index("/fr/docs/Apprendre")}}

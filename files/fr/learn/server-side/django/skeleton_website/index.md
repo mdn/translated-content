@@ -13,191 +13,199 @@ tags:
   - django
 translation_of: Learn/Server-side/Django/skeleton_website
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-<div>{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}</div>
-
-<p>Ce second article de la série <a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">didactique Django</a> va décrire comment créer le squelette du site web du projet. Ensuite, vous pourrez paramètrer et développer les composants spécifiques comme les modèles de données, les vues, les gabarits, les formulaires...</p>
+Ce second article de la série [didactique Django](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) va décrire comment créer le squelette du site web du projet. Ensuite, vous pourrez paramètrer et développer les composants spécifiques comme les modèles de données, les vues, les gabarits, les formulaires...
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prérequis:</th>
-   <td><a href="/fr/docs/Learn/Server-side/Django/development_environment">Set up a Django development environment</a>. Avoir pris connaissance de <a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">l'article précédent</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objectifs:</th>
-   <td>Être capable d'utiliser les outils de Django pour initier un nouveau projet.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prérequis:</th>
+      <td>
+        <a href="/fr/docs/Learn/Server-side/Django/development_environment"
+          >Set up a Django development environment</a
+        >. Avoir pris connaissance de
+        <a
+          href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          >l'article précédent</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objectifs:</th>
+      <td>
+        Être capable d'utiliser les outils de Django pour initier un nouveau
+        projet.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Vue_densemble">Vue d'ensemble</h2>
+## Vue d'ensemble
 
-<p>Cet article décrit comment créer le squelette du site web du projet. Ensuite, vous pourrez paramètrer et développer les composants spcifiques comme les modèles de données, vues, formulaires... qui chacun seront vus plus en details dans les articles suivants.</p>
+Cet article décrit comment créer le squelette du site web du projet. Ensuite, vous pourrez paramètrer et développer les composants spcifiques comme les modèles de données, vues, formulaires... qui chacun seront vus plus en details dans les articles suivants.
 
-<p>La création est aisée:</p>
+La création est aisée:
 
-<ol>
- <li>Utilisez la commande <code>django-admin</code> pour créer le dossier du projet ainsi que les sous-dossiers et fichiers de base ainsi que le script de gestion du projet (<strong>manage.py</strong>).</li>
- <li>Utilisez <strong>manage.py</strong> pour créer une ou plusieurs <em>applications</em> du projet.
-  <div class="note">
-  <p><strong>Note :</strong> Un site web consiste en une ou plusieurs sections, par exemple un site principal, un blog, un wiki,... La bonne pratique avec Django est de réaliser chacun des composants comme des applications séparées qui pourront éventuellement être réutilisées dans d'autres projets.</p>
-  </div>
- </li>
- <li>Enregistrez la nouvelle application dans le projet. </li>
- <li>Liez les urls et chemins pour chaque application.</li>
-</ol>
+1.  Utilisez la commande `django-admin` pour créer le dossier du projet ainsi que les sous-dossiers et fichiers de base ainsi que le script de gestion du projet (**manage.py**).
+2.  Utilisez **manage.py** pour créer une ou plusieurs _applications_ du projet.
 
-<p>Pour <a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">le site web "Bibliothèque locale"</a>, le dossier du site web et celui du projet auront le même nom <em>locallibrary</em>. Une seule application <em>catalog</em> sera utilisée. La hiérachie de dossier du projet à la forme ci-dessous :</p>
+    > **Note :** Un site web consiste en une ou plusieurs sections, par exemple un site principal, un blog, un wiki,... La bonne pratique avec Django est de réaliser chacun des composants comme des applications séparées qui pourront éventuellement être réutilisées dans d'autres projets.
 
-<pre class="brush: bash"><em>locallibrary/         # Website folder</em>
-    <strong>manage.py         </strong># Script to run Django tools for this project (created using django-admin)
-    <em>locallibrary/     # Website/project folder </em>(created using django-admin)
-    <em>catalog/          # Application folder </em>(created using manage.py)
-</pre>
+3.  Enregistrez la nouvelle application dans le projet.
+4.  Liez les urls et chemins pour chaque application.
 
-<div class="note">
-<p><strong>Note :</strong> Afin de respecter la cohérence du code et pouvoir utiliser les développements sur GitHub, les noms du site et des applications, <em>en anglais</em>, n'ont pas été modifiés.</p>
-</div>
+Pour [le site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website), le dossier du site web et celui du projet auront le même nom _locallibrary_. Une seule application _catalog_ sera utilisée. La hiérachie de dossier du projet à la forme ci-dessous :
 
-<p>La suite de ce chapitre est consacrée pas à pas aux étapes de création d'un projet et d'une application. La fin du chapitre sera consacré à quelques éléments de configuration du site qui peuvent être réalisés à ce stade.</p>
+```bash
+locallibrary/         # Website folder
+    manage.py         # Script to run Django tools for this project (created using django-admin)
+    locallibrary/     # Website/project folder (created using django-admin)
+    catalog/          # Application folder (created using manage.py)
+```
 
-<h2 id="Créer_le_projet_locallibrary">Créer le projet <em>locallibrary</em></h2>
+> **Note :** Afin de respecter la cohérence du code et pouvoir utiliser les développements sur GitHub, les noms du site et des applications, _en anglais_, n'ont pas été modifiés.
 
-<p>Tout d'abord, il est nécessaire d'ouvrir une fenêtre pour exécuter des commandes en ligne (un terminal sous Linux/MacOS ou une fenêtre command sous Windows). Assurez-vous d'être dans un <a href="/fr/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment">environnement virtuel python</a>, déplacez-vous dans votre arborescence de dossiers pour être dans votre zone de développement des applications Django. Créez-y un sous-dossier pour les projets Django <code>django_projects</code> et déplacez-vous dans ce dernier :</p>
+La suite de ce chapitre est consacrée pas à pas aux étapes de création d'un projet et d'une application. La fin du chapitre sera consacré à quelques éléments de configuration du site qui peuvent être réalisés à ce stade.
 
-<pre class="brush: bash">mkdir django_projects
-cd django_projects</pre>
+## Créer le projet _locallibrary_
 
-<p>Pour créer un nouveau projet avec le quadriciel Django, il suffit d'utiliser la commande  <code>django-admin startproject</code>. Le résultat de cette commande sera un sous-dossier du nom du projet dans lequel il suffit de s'y déplacer comme indiqué ci-dessous :</p>
+Tout d'abord, il est nécessaire d'ouvrir une fenêtre pour exécuter des commandes en ligne (un terminal sous Linux/MacOS ou une fenêtre command sous Windows). Assurez-vous d'être dans un [environnement virtuel python](/fr/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment), déplacez-vous dans votre arborescence de dossiers pour être dans votre zone de développement des applications Django. Créez-y un sous-dossier pour les projets Django `django_projects` et déplacez-vous dans ce dernier :
 
-<pre class="brush: bash">django-admin startproject locallibrary
-cd locallibrary</pre>
+```bash
+mkdir django_projects
+cd django_projects
+```
 
-<p>La commande <code>django-admin</code> crée une arboresence contenant des fichiers et un sous-dossier portant le même nom que le projet :</p>
+Pour créer un nouveau projet avec le quadriciel Django, il suffit d'utiliser la commande  `django-admin startproject`. Le résultat de cette commande sera un sous-dossier du nom du projet dans lequel il suffit de s'y déplacer comme indiqué ci-dessous :
 
-<pre class="brush: bash"><em>locallibrary/</em>
+```bash
+django-admin startproject locallibrary
+cd locallibrary
+```
+
+La commande `django-admin` crée une arboresence contenant des fichiers et un sous-dossier portant le même nom que le projet :
+
+```bash
+locallibrary/
     manage.py
-    <em>locallibrary/</em>
+    locallibrary/
         __init__.py
         settings.py
         urls.py
-        wsgi.py</pre>
+        wsgi.py
+```
 
-<p>Votre répertoire de travail est de la forme :</p>
+Votre répertoire de travail est de la forme :
 
-<pre class="syntaxbox">../django_projects/locallibrary/</pre>
+    ../django_projects/locallibrary/
 
-<p>Le sous-dossier <em>locallibrary</em> permettra de gérer les requêtes web, il contient :</p>
+Le sous-dossier _locallibrary_ permettra de gérer les requêtes web, il contient :
 
-<ul>
- <li><strong>__init__.py </strong>est un fichier vide qui indique au langage Python de considérer ce dossier comme un module Python.</li>
- <li><strong>settings.py</strong> contient les paramètrages du site web. C'est ce fichier qui permet de contrôler l'enregistrement des applications créées - qui va être exposé plus bas -, la configuration de la base de données ou des variables globales au site. </li>
- <li><strong>urls.py</strong> contient les indications de routage des urls du site web. Alors qu'il pourraient contenir toutes les urls, nous verrons plus loin qu'ils est plus pratique de déléguer la gestion des urls à propre à chacune des applications dans le contexte de l'application. </li>
- <li><strong>wsgi.py</strong> est utilisé pour la gestion de l'interface entre Python et le serveur web. Il est recommandé de ne pas y toucher.</li>
-</ul>
+- **\_\_init\_\_.py** est un fichier vide qui indique au langage Python de considérer ce dossier comme un module Python.
+- **settings.py** contient les paramètrages du site web. C'est ce fichier qui permet de contrôler l'enregistrement des applications créées - qui va être exposé plus bas -, la configuration de la base de données ou des variables globales au site.
+- **urls.py** contient les indications de routage des urls du site web. Alors qu'il pourraient contenir toutes les urls, nous verrons plus loin qu'ils est plus pratique de déléguer la gestion des urls à propre à chacune des applications dans le contexte de l'application.
+- **wsgi.py** est utilisé pour la gestion de l'interface entre Python et le serveur web. Il est recommandé de ne pas y toucher.
 
-<p>Le fichier <strong>manage.py</strong> est utilisé pour créer et gérer les applications au sein du projet. C'est une boîte à outil précieuse qu'il ne faut pas modifier.</p>
+Le fichier **manage.py** est utilisé pour créer et gérer les applications au sein du projet. C'est une boîte à outil précieuse qu'il ne faut pas modifier.
 
-<h2 id="Créer_lapplication_catalog">Créer l'application <em>catalog</em></h2>
+## Créer l'application _catalog_
 
-<p>La commande ci-dessous va créer l'application <em>catalog</em>. Vous devez être dans le dossier de votre projet locallibrary pour exécuter cette commande (dans le même dossier que le fichier <strong>manage.py</strong> de votre projet) :</p>
+La commande ci-dessous va créer l'application _catalog_. Vous devez être dans le dossier de votre projet locallibrary pour exécuter cette commande (dans le même dossier que le fichier **manage.py** de votre projet) :
 
-<pre class="brush: bash">python3 manage.py startapp catalog</pre>
+```bash
+python3 manage.py startapp catalog
+```
 
-<div class="note">
-<p><strong>Note :</strong> La commande ci-dessus est exécutée dans un environnement Linux/macOS X. Sous Windows, il se peut que la commande soit : <code>py -3 manage.py startapp catalog</code></p>
+> **Note :** La commande ci-dessus est exécutée dans un environnement Linux/macOS X. Sous Windows, il se peut que la commande soit : `py -3 manage.py startapp catalog`
+>
+> Si vous travaillez dans un environnement Windows, l'ensemble de la série didactique est écrite pour un environnement Linux/MacOS. Pensez, alors, à remplacer les commandes `python3` par `py -3`.
+>
+> Si vous utilisez une version postérieure à la version 3.7.0, la commande devrait désormais être  `py manage.py startapp catalog`
 
-<p>Si vous travaillez dans un environnement Windows, l'ensemble de la série didactique est écrite pour un environnement Linux/MacOS. Pensez, alors, à remplacer les commandes <code>python3</code> par <code>py -3</code>.</p>
+Cet outil crée un nouveau dossier, du nom de l'application, et le peuple de fichiers essentiels. La plupart des fichiers ont des noms caractéristiques de leur fonction dans le fonctionnement de Django (par exemple, les vues sont traitées dans **views.py**, le modèle de données dans **models.py**, etc.). Ces fichiers contiennent les éléments minimaux nécessaires à leur utilisation dans le projet.
 
-<p>Si vous utilisez une version postérieure à la version 3.7.0, la commande devrait désormais être  <code>py manage.py startapp catalog</code></p>
-</div>
+Le dossier projet _locallibrary_ est agrémenté d'un nouveau sous-dossier _catalog_ :
 
-<p>Cet outil crée un nouveau dossier, du nom de l'application, et le peuple de fichiers essentiels. La plupart des fichiers ont des noms caractéristiques de leur fonction dans le fonctionnement de Django (par exemple, les vues sont traitées dans <strong>views.py</strong>, le modèle de données dans <strong>models.py</strong>, etc.). Ces fichiers contiennent les éléments minimaux nécessaires à leur utilisation dans le projet.</p>
-
-<p>Le dossier projet <em>locallibrary</em> est agrémenté d'un nouveau sous-dossier <em>catalog</em> :</p>
-
-<pre class="brush: bash"><em>locallibrary/</em>
+```bash
+locallibrary/
     manage.py
-    <em>locallibrary/
-</em><strong>    <em>catalog/</em>
+    locallibrary/
+    catalog/
         admin.py
         apps.py
         models.py
         tests.py
         views.py
         __init__.py
-        <em>migrations/</em></strong>
-</pre>
+        migrations/
+```
 
-<p>A ceci s'ajoute :</p>
+A ceci s'ajoute :
 
-<ul>
- <li>Un dossier <em>migrations</em>, qui sera utilisé par django pour gérer les migrations et les modifications progressives apportées à la base de données quand des modifications seront faîtes dans les fichiers <em>models.py.</em></li>
- <li><strong>__init__.py</strong> — est un fichier vide qui indique au langage Python de considérer ce dossier comme un module Python.</li>
-</ul>
+- Un dossier _migrations_, qui sera utilisé par django pour gérer les migrations et les modifications progressives apportées à la base de données quand des modifications seront faîtes dans les fichiers _models.py._
+- **\_\_init\_\_.py** — est un fichier vide qui indique au langage Python de considérer ce dossier comme un module Python.
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez constater que dans le dossier de l'application, il n'y a pas de fichier pour gérer les urls, les gabarits ou les fichiers statiques. Nouys verrons ce point un peu plus loin, ils ne sont pas systématiquement nécessaires.</p>
-</div>
+> **Note :** Vous pouvez constater que dans le dossier de l'application, il n'y a pas de fichier pour gérer les urls, les gabarits ou les fichiers statiques. Nouys verrons ce point un peu plus loin, ils ne sont pas systématiquement nécessaires.
 
-<h2 id="Enregistrer_lapplication_catalog">Enregistrer l'application <em>catalog</em></h2>
+## Enregistrer l'application _catalog_
 
-<p>Après avoir créé l'application, il est necessaire de l'enregistrée au sein du projet. Ceci permet de prendre en charge l'ensemble des éléments de l'application pour qu'ils soient pris automatiquement en charge par le quadriciel. L'enregistrement se fait dans la section <code>INSTALLED_APPS</code> en ajoutant le nom de l'application à la liste déjà présente.</p>
+Après avoir créé l'application, il est necessaire de l'enregistrée au sein du projet. Ceci permet de prendre en charge l'ensemble des éléments de l'application pour qu'ils soient pris automatiquement en charge par le quadriciel. L'enregistrement se fait dans la section `INSTALLED_APPS` en ajoutant le nom de l'application à la liste déjà présente.
 
-<p>Éditez le fichier <strong>django_projects/locallibrary/locallibrary/settings.py</strong> et allez jusqu'à la liste <code>INSTALLED_APPS</code>. Ajoutez alors comme indiqué ci-dessous l'application à la liste.</p>
+Éditez le fichier **django_projects/locallibrary/locallibrary/settings.py** et allez jusqu'à la liste `INSTALLED_APPS`. Ajoutez alors comme indiqué ci-dessous l'application à la liste.
 
-<pre class="brush: bash">INSTALLED_APPS = [
+```bash
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<strong>    'catalog.apps.CatalogConfig', </strong>
-]</pre>
+    'catalog.apps.CatalogConfig',
+]
+```
 
-<p>Le nouvel enregistrement défini l'objet pour cette nouvelle application avec le nom (<code>CatalogConfig</code>) qui a été généré dans le fichier <strong>/locallibrary/catalog/apps.py</strong> quand l'application a été créée.</p>
+Le nouvel enregistrement défini l'objet pour cette nouvelle application avec le nom (`CatalogConfig`) qui a été généré dans le fichier **/locallibrary/catalog/apps.py** quand l'application a été créée.
 
-<div class="note">
-<p><strong>Note :</strong> Nous verrons plus loin les autres paramètres de ce fichier(comme <code>MIDDLEWARE</code>). Cela permet la prise en charge par <a href="/fr/docs/Learn/Server-side/Django/Admin_site">Django administration site</a> et donne accès à de nombreuses fonctionnalités (gestion des sessions, de l'authentication, etc).</p>
-</div>
+> **Note :** Nous verrons plus loin les autres paramètres de ce fichier(comme `MIDDLEWARE`). Cela permet la prise en charge par [Django administration site](/fr/docs/Learn/Server-side/Django/Admin_site) et donne accès à de nombreuses fonctionnalités (gestion des sessions, de l'authentication, etc).
 
-<h2 id="Définir_la_base_de_données">Définir la base de données</h2>
+## Définir la base de données
 
-<p>Dès à présent, la base de données doit être décrite. Il est souvent recommandé pour minimiser une transition délicate d'utiliser la même base de données en développement et en production. La documentation concernant les <a href="https://docs.djangoproject.com/fr/2.2/ref/settings/#databases">bases de données</a> prises en charge sont bien décrites sur le site du projet Django.</p>
+Dès à présent, la base de données doit être décrite. Il est souvent recommandé pour minimiser une transition délicate d'utiliser la même base de données en développement et en production. La documentation concernant les [bases de données](https://docs.djangoproject.com/fr/2.2/ref/settings/#databases) prises en charge sont bien décrites sur le site du projet Django.
 
-<p>Le système de gestion de base de données (SGBD) SQLite sera utilisé dans le projet de cette série didactique ; nous n'aurons pas d'accès concurents massifs et ce système ne requiert pas  de paramétrages complémentaires. Ci-dessous la définition dans <strong>settings.py</strong> est nécessaire pour utiliser ce SGBD :</p>
+Le système de gestion de base de données (SGBD) SQLite sera utilisé dans le projet de cette série didactique ; nous n'aurons pas d'accès concurents massifs et ce système ne requiert pas  de paramétrages complémentaires. Ci-dessous la définition dans **settings.py** est nécessaire pour utiliser ce SGBD :
 
-<pre class="brush: python">DATABASES = {
+```python
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-</pre>
+```
 
-<h2 id="Dautres_paramètrages_du_projet">D'autres paramètrages du projet</h2>
+## D'autres paramètrages du projet
 
-<p>Le fichier <strong>settings.py</strong> est utilisé pour l'ensemble des paramètres du projet, mais pour le moment nous n'allons nous occuper du fuseau horaire. Le format des fuseaux horaires est le format standard en informatique (<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Liste des codes - <em>en anglais</em></a>). Changez la variable <code>TIME_ZONE</code> de votre projet avec la chaîne appropriée à votre fuseau, par exemple :</p>
+Le fichier **settings.py** est utilisé pour l'ensemble des paramètres du projet, mais pour le moment nous n'allons nous occuper du fuseau horaire. Le format des fuseaux horaires est le format standard en informatique ([Liste des codes - _en anglais_](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)). Changez la variable `TIME_ZONE` de votre projet avec la chaîne appropriée à votre fuseau, par exemple :
 
-<pre class="brush: python">TIME_ZONE = 'Europe/Paris'</pre>
+```python
+TIME_ZONE = 'Europe/Paris'
+```
 
-<p>Il y a deux paramètres à connaître, même s'il ne seront pas modifiés pour l'instant :</p>
+Il y a deux paramètres à connaître, même s'il ne seront pas modifiés pour l'instant :
 
-<ul>
- <li><code>SECRET_KEY</code>. Il s'agit d'une clé utilisée pour la gestion de la sécurité d'un site web par Django. Si vous ne protégez pas cette clé - c'est-à-dire si vous divulguez cette information à des tiers - vous devrez changer cette clé lors de la mise en production. </li>
- <li><code>DEBUG</code>. Ce paramètre est utilisé pour afficher les journaux de traces en cas d'erreur plutôt qu'une simple erreur HTTP en réponse à une requête. Ce paramètre <strong>doit</strong> être positionné à <code>False</code> lors du passage en production, dans le cas contraire vous divulguerez des informations essentielles à un potentiel attaquant. Pendant la période de développement, il est très utile de la conserver à <code>True</code>.</li>
-</ul>
+- `SECRET_KEY`. Il s'agit d'une clé utilisée pour la gestion de la sécurité d'un site web par Django. Si vous ne protégez pas cette clé - c'est-à-dire si vous divulguez cette information à des tiers - vous devrez changer cette clé lors de la mise en production.
+- `DEBUG`. Ce paramètre est utilisé pour afficher les journaux de traces en cas d'erreur plutôt qu'une simple erreur HTTP en réponse à une requête. Ce paramètre **doit** être positionné à `False` lors du passage en production, dans le cas contraire vous divulguerez des informations essentielles à un potentiel attaquant. Pendant la période de développement, il est très utile de la conserver à `True`.
 
-<h2 id="Configurer_le_routage_des_URLs">Configurer le routage des URLs</h2>
+## Configurer le routage des URLs
 
-<p>La création du site web s'appuie sur un routage d'URL et une gestion de la cartographie des URLs dans le fichier <strong>urls.py</strong>) présent dans le dossier du projet. Même si vous pouvez directement utiliser ce fichier pour gérer le routage des URLs, il est recommandé d'utiliser un mécanisme de subsidiarité avec une gestion d'URLs par application. En outre cette méthode de délégation permet une meilleure poratbilité de vos développements dans vos différents projets.</p>
+La création du site web s'appuie sur un routage d'URL et une gestion de la cartographie des URLs dans le fichier **urls.py**) présent dans le dossier du projet. Même si vous pouvez directement utiliser ce fichier pour gérer le routage des URLs, il est recommandé d'utiliser un mécanisme de subsidiarité avec une gestion d'URLs par application. En outre cette méthode de délégation permet une meilleure poratbilité de vos développements dans vos différents projets.
 
-<p>A l'ouverture du fichier <strong>locallibrary/locallibrary/urls.py</strong>,  vous pouvez remarquer les premières instructions sur la manière de gérer la cartographie des URLs.</p>
+A l'ouverture du fichier **locallibrary/locallibrary/urls.py**,  vous pouvez remarquer les premières instructions sur la manière de gérer la cartographie des URLs.
 
-<pre class="brush: python">"""locallibrary URL Configuration
+```python
+"""locallibrary URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -218,120 +226,115 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
-</pre>
+```
 
-<p>Le routage des URLs est géré à l'aide de la variable <code>urlpatterns</code>. Elle consititue une liste Python de fonctions <code>path()</code>. Chaque instance <code>path()</code> peut associer des motifs d'URL à une vue particulière, qui sera appelée si l'URL appellée correspond au motif décrit, ou vers une autre liste d'URL (dans ce cas, le motif est à considérer comme le motif de base pour le module dans lequel il est décrit). La variable <code>urlpatterns</code> contient au démarrage une seule fonction qui permet de gérer l'URL d'administration du site et utilisant le module par défaut de Django <code>admin.site.urls</code>.</p>
+Le routage des URLs est géré à l'aide de la variable `urlpatterns`. Elle consititue une liste Python de fonctions `path()`. Chaque instance `path()` peut associer des motifs d'URL à une vue particulière, qui sera appelée si l'URL appellée correspond au motif décrit, ou vers une autre liste d'URL (dans ce cas, le motif est à considérer comme le motif de base pour le module dans lequel il est décrit). La variable `urlpatterns` contient au démarrage une seule fonction qui permet de gérer l'URL d'administration du site et utilisant le module par défaut de Django `admin.site.urls`.
 
-<div class="note">
-<p><strong>Note :</strong> Dans la fonction <code>path()</code>, une route est une chaîne de caractères définissant une URL ou un motif d'URL. Cette chaîne peut inclure des variables nommées (entre &lt; et &gt;, par exemple <code>'catalog/&lt;id&gt;/'</code>). Ce motif correspondra à une URL du type <strong>/catalog/</strong><em>des_caracteres</em><strong>/</strong>. La chaîne <em>des_caracteres</em> sera transmis à la vue comme une chaîne de caractère associée à une variable nommée <code>id</code>. Ce point sera vu en détails plus loin dans la série didactique.</p>
-</div>
+> **Note :** Dans la fonction `path()`, une route est une chaîne de caractères définissant une URL ou un motif d'URL. Cette chaîne peut inclure des variables nommées (entre < et >, par exemple `'catalog/<id>/'`). Ce motif correspondra à une URL du type **/catalog/\***des_caracteres**\*/**. La chaîne _des_caracteres_ sera transmis à la vue comme une chaîne de caractère associée à une variable nommée `id`. Ce point sera vu en détails plus loin dans la série didactique.
 
-<p>Ajoutez les lignes ci-dessous à la fin du fichier de manière à ajouter dans la variable <code>urlpatterns</code> une nouvelle entrée à la liste des routes. Cette nouvelle entrée permet une nouvelle route pour <code>catalog/</code> dont la gestion est déléguée au fichier <strong>urls.py</strong> du module <strong>catalog</strong> (c'est-à-dire le fichier <strong>catalog/urls.py</strong>).</p>
+Ajoutez les lignes ci-dessous à la fin du fichier de manière à ajouter dans la variable `urlpatterns` une nouvelle entrée à la liste des routes. Cette nouvelle entrée permet une nouvelle route pour `catalog/` dont la gestion est déléguée au fichier **urls.py** du module **catalog** (c'est-à-dire le fichier **catalog/urls.py**).
 
-<pre class="brush: python"># Use include() to add paths from the catalog application
+```python
+# Use include() to add paths from the catalog application
 from django.urls import include
 from django.urls import path
 
 urlpatterns += [
     path('catalog/', include('catalog.urls')),
 ]
+```
 
-</pre>
+Il est nécessaire de rediriger la racine du site (concrètement `https://127.0.0.1:8000/`) vers celui de la seule application _catalog_ qui va être utilisée dans ce projet (concrètemen `127.0.0.1:8000/catalog/`). Pour cette étape, nous utilisons la fonction particulière (`RedirectView`) qui prend comme argument le lien relatif (concrètement `/catalog/`) quand le motif de l'URL correspondra (concrètement la racine du site).
 
-<p>Il est nécessaire de rediriger la racine du site (concrètement <code>https://127.0.0.1:8000/</code>) vers celui de la seule application <em>catalog</em> qui va être utilisée dans ce projet (concrètemen <code>127.0.0.1:8000/catalog/</code>). Pour cette étape, nous utilisons la fonction particulière (<code>RedirectView</code>) qui prend comme argument le lien relatif (concrètement <code>/catalog/</code>) quand le motif de l'URL correspondra (concrètement la racine du site).</p>
+Ajoutez les lignes ci-dessous au bas du fichier **urls.py** :
 
-<p>Ajoutez les lignes ci-dessous au bas du fichier <strong>urls.py</strong> :</p>
-
-<pre class="brush: python">#Add URL maps to redirect the base URL to our application
+```python
+#Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
 urlpatterns += [
     path('', RedirectView.as_view(url='/catalog/', permanent=True)),
 ]
-</pre>
+```
 
-<p>La racine du site ('/') est prise en compte par Django, il est donc inutile d'écrire le chemin avec le caractère '/' en début. Si vous maintenez ce mode d'écriture, vous aurez le message ci-dessous au démarrage du serveur :</p>
+La racine du site ('/') est prise en compte par Django, il est donc inutile d'écrire le chemin avec le caractère '/' en début. Si vous maintenez ce mode d'écriture, vous aurez le message ci-dessous au démarrage du serveur :
 
-<pre class="brush: python">System check identified some issues:
+```python
+System check identified some issues:
 
 WARNINGS:
 ?: (urls.W002) Your URL pattern '/' has a route beginning with a '/'.
 Remove this slash as it is unnecessary.
 If this pattern is targeted in an include(), ensure the include() pattern has a trailing '/'.
-</pre>
+```
 
-<p>Django ne s'occupe pas nativement de fichiers statiques tels que des fichiers CSS, JavaScript, ou des images, cependant il est très utile pour que le serveur de développement le fasse pendant la création du site. Une dernière étape de configuration du routage générique des urls, consiste donc à gérer la publication des fichiers statiques. </p>
+Django ne s'occupe pas nativement de fichiers statiques tels que des fichiers CSS, JavaScript, ou des images, cependant il est très utile pour que le serveur de développement le fasse pendant la création du site. Une dernière étape de configuration du routage générique des urls, consiste donc à gérer la publication des fichiers statiques.
 
-<p>Ajoutez les lignes ci-dessous au bas du fichier <strong>urls.py</strong> :</p>
+Ajoutez les lignes ci-dessous au bas du fichier **urls.py** :
 
-<pre><code># Use static() to add url mapping to serve static files during development (only)
-from django.conf import settings
-from django.conf.urls.static import static
+    # Use static() to add url mapping to serve static files during development (only)
+    from django.conf import settings
+    from django.conf.urls.static import static
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)</code>
-</pre>
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-<div class="note">
-<p><strong>Note :</strong> Il y a plusieurs manière pour ajouter des routes à la variable <code>urlpatterns</code> (dans les étapes décrites ci-dessus nous avons ajouté petit à patir en utilisant l'opérateur <code>+=</code> pour bien séparer les étapes). Il est en réalité tout à fait possible de tout regrouper dans une seule étape :</p>
+> **Note :** Il y a plusieurs manière pour ajouter des routes à la variable `urlpatterns` (dans les étapes décrites ci-dessus nous avons ajouté petit à patir en utilisant l'opérateur `+=` pour bien séparer les étapes). Il est en réalité tout à fait possible de tout regrouper dans une seule étape :
+>
+> ```python
+> urlpatterns = [
+>     path('admin/', admin.site.urls),
+>     path('catalog/', include('catalog.urls')),
+>     path('', RedirectView.as_view(url='/catalog/')),
+> ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+> ```
+>
+> De même, nous avons ajouté des imports de module à chaque étapes (par exemple, `from django.urls import include`) ce qui permet de bien voir les différentes étapes. Cependant, l'habitude veut que tous les imports soient traités en début de fichier Python.
 
-<pre class="brush: python">urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('catalog/', include('catalog.urls')),
-    path('', RedirectView.as_view(url='/catalog/')),
-] + <code>static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)</code>
-</pre>
+Dernière étape ! Il faut créer le fichier urls.py dans l'application (ou le module) catalog et de définir la variable `urlpatterns` vide pour le moment.
 
-<p>De même, nous avons ajouté des imports de module à chaque étapes (par exemple, <code>from django.urls import include</code>) ce qui permet de bien voir les différentes étapes. Cependant, l'habitude veut que tous les imports soient traités en début de fichier Python.</p>
-</div>
-
-<p>Dernière étape ! Il faut créer le fichier urls.py dans l'application (ou le module) catalog et de définir la variable <code>urlpatterns</code> vide pour le moment. </p>
-
-<pre class="brush: python">from django.urls import path
+```python
+from django.urls import path
 from . import views
 
 urlpatterns = [
 
 ]
-</pre>
+```
 
-<h2 id="Tester_le_site_web">Tester le site web</h2>
+## Tester le site web
 
-<p>A ce niveau, le squelette du site est prêt. Le site ne produit rien de concret mais il peut être démarré pour s'assurer que les modifications apportées ne génèrent pas d'erreur au démarrage du serveur.</p>
+A ce niveau, le squelette du site est prêt. Le site ne produit rien de concret mais il peut être démarré pour s'assurer que les modifications apportées ne génèrent pas d'erreur au démarrage du serveur.
 
-<p>Avant de démarer le serveur, et si vous vous souvenez bien, nous devrions faire une mise à niveau de la base de données. Il s'agit de préparer et de faire une migration de la base de données.</p>
+Avant de démarer le serveur, et si vous vous souvenez bien, nous devrions faire une mise à niveau de la base de données. Il s'agit de préparer et de faire une migration de la base de données.
 
-<h3 id="Exécuter_la_migartion_de_la_base_de_données">Exécuter la migartion de la base de données</h3>
+### Exécuter la migartion de la base de données
 
-<p>Django utilise une cartographie d'objet relation ou mapping d'objet relationnel pour simuler une base de données orientée objet avec une base de données relationnelles. Au fur et à mesure des modification qui sont apportées dans la définition du modèle de données, le quadriciel va générer les scripts de migration (ces scripts sont localisés dans <code>locallibrary/catalog/migration</code>) pour modifier les structures de données associées dans la base de données.</p>
+Django utilise une cartographie d'objet relation ou mapping d'objet relationnel pour simuler une base de données orientée objet avec une base de données relationnelles. Au fur et à mesure des modification qui sont apportées dans la définition du modèle de données, le quadriciel va générer les scripts de migration (ces scripts sont localisés dans `locallibrary/catalog/migration`) pour modifier les structures de données associées dans la base de données.
 
-<p>Quand le site a été créé (cf. supra), Django a automatiquement ajouté plusieurs modèles de base pour pouvoir administrer le site (point qui sera abordé plus loin). Pour configurer la base de données, avec ces éléments de base, il vous faut exécuter les commandes en ligne ci-dessous dans le répertoire racine du projet (dossier où se trouve<strong> manage.py</strong>):</p>
+Quand le site a été créé (cf. supra), Django a automatiquement ajouté plusieurs modèles de base pour pouvoir administrer le site (point qui sera abordé plus loin). Pour configurer la base de données, avec ces éléments de base, il vous faut exécuter les commandes en ligne ci-dessous dans le répertoire racine du projet (dossier où se trouve **manage.py**):
 
-<pre class="brush: bash">python3 manage.py makemigrations
+```bash
+python3 manage.py makemigrations
 python3 manage.py migrate
-</pre>
+```
 
-<div class="warning">
-<p><strong>Attention :</strong> Chaque fois que vous ferez évoluer le modèle de données, vous devrez exécuter le commandes ci-dessus (elles seront traduites en structure dans la base de données que cela conduise à l'ajout ou au retrait d'objets ou d'attributs).</p>
-</div>
+> **Attention :** Chaque fois que vous ferez évoluer le modèle de données, vous devrez exécuter le commandes ci-dessus (elles seront traduites en structure dans la base de données que cela conduise à l'ajout ou au retrait d'objets ou d'attributs).
 
-<p>L'option <code>makemigrations</code> réalise (sans les appliquer) les migrations nécessaires à toutes les applications du projet. Vous pouvez cependant préciser le nom de l'application pour laquelle vous souhaitez réaliser la migration. Ceci permet de vérifier le code et la cohérence du modèle de donner avant de l'appliquer réellement. Quand vous aurez un niveau expert, vous pourrez choisir de les modifier à la marge.</p>
+L'option `makemigrations` réalise (sans les appliquer) les migrations nécessaires à toutes les applications du projet. Vous pouvez cependant préciser le nom de l'application pour laquelle vous souhaitez réaliser la migration. Ceci permet de vérifier le code et la cohérence du modèle de donner avant de l'appliquer réellement. Quand vous aurez un niveau expert, vous pourrez choisir de les modifier à la marge.
 
-<p>L'option <code>migrate</code> applique les modifications sur la base de données (Django trace les modifications réalisées dans la base de données).</p>
+L'option `migrate` applique les modifications sur la base de données (Django trace les modifications réalisées dans la base de données).
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez consulter la documentation <a href="https://docs.djangoproject.com/fr/2.2/topics/migrations/">Migrations</a> (sur le site Django) pour plus d'informations.</p>
-</div>
+> **Note :** Vous pouvez consulter la documentation [Migrations](https://docs.djangoproject.com/fr/2.2/topics/migrations/) (sur le site Django) pour plus d'informations.
 
-<h3 id="Démarrer_le_site_web">Démarrer le site web</h3>
+### Démarrer le site web
 
-<p>Pendant la phase de développement, vous pouvez tester votre serveur sur un mode local et le consulter avec votre navigateur.</p>
+Pendant la phase de développement, vous pouvez tester votre serveur sur un mode local et le consulter avec votre navigateur.
 
-<div class="note">
-<p><strong>Note :</strong> Le serveur local n'est ni robuste ni performant, il n'est donc pas fait pour être utilisé en production, mais il permet d'être autonome pour les travaux de développement. La configuration par défaut de ce serveur est telle que votre site est accessible à l'URL <code>http://127.0.0.1:8000/</code>. Cependant, vous pouvez modifier ces paramètres et pour plus d'information vous pouvez consulter la documentation sur le site Django des commandes <a href="https://docs.djangoproject.com/fr/2.2/ref/django-admin/#runserver">django-admin and manage.py: runserver</a>.</p>
-</div>
+> **Note :** Le serveur local n'est ni robuste ni performant, il n'est donc pas fait pour être utilisé en production, mais il permet d'être autonome pour les travaux de développement. La configuration par défaut de ce serveur est telle que votre site est accessible à l'URL `http://127.0.0.1:8000/`. Cependant, vous pouvez modifier ces paramètres et pour plus d'information vous pouvez consulter la documentation sur le site Django des commandes [django-admin and manage.py: runserver](https://docs.djangoproject.com/fr/2.2/ref/django-admin/#runserver).
 
-<p>Pour démarrer le serveur local, il suffit d'exécuter la commande ci-dessous dans le répertoire du projet (dossier où se trouver <strong>manage.py</strong>) :</p>
+Pour démarrer le serveur local, il suffit d'exécuter la commande ci-dessous dans le répertoire du projet (dossier où se trouver **manage.py**) :
 
-<pre class="brush: bash">python3 manage.py runserver
+```bash
+python3 manage.py runserver
 
  Performing system checks...
 
@@ -340,64 +343,53 @@ python3 manage.py migrate
  Django version 2.1, using settings 'locallibrary.settings'
  Starting development server at http://127.0.0.1:8000/
  Quit the server with CTRL-BREAK.
-</pre>
+```
 
-<p>Dès que le serveur est actif, vous pouvez utiliser votre navigateur est accéder à l'URL <code>http://127.0.0.1:8000/</code>. Vous devriez accéder à la page d'erreur ci-dessous :</p>
+Dès que le serveur est actif, vous pouvez utiliser votre navigateur est accéder à l'URL `http://127.0.0.1:8000/`. Vous devriez accéder à la page d'erreur ci-dessous :
 
-<p><img alt="Django Debug page for Django 2.0" src="django_404_debug_page.png"></p>
+![Django Debug page for Django 2.0](django_404_debug_page.png)
 
-<p>Ne vous inquitez ! Cette erreur était attendue ; elle est due à l'absence de défintion de routes dans le fichier catalog/urls.py ou dans le module <code>catalog.urls</code> module (que nous avons déclaré dans le fichier urls.py du projet). </p>
+Ne vous inquitez ! Cette erreur était attendue ; elle est due à l'absence de défintion de routes dans le fichier catalog/urls.py ou dans le module `catalog.urls` module (que nous avons déclaré dans le fichier urls.py du projet).
 
-<div class="note">
-<p><strong>Note :</strong> La page web ci-dessus met en exergue une fonctionnalité utile de Django ; le mode des traces de debogag. Au lieu d'une simple erreur renvoyée par le serveur, celui-ci affiche un écran d'erreur avec des informations utiles pour corriger le développement conduisant à cette erreur d'affichage. Dans le cas présent, l'erreur est due au motif de l'URL qui ne correspond pas à ce qui a été configuré.</p>
-</div>
+> **Note :** La page web ci-dessus met en exergue une fonctionnalité utile de Django ; le mode des traces de debogag. Au lieu d'une simple erreur renvoyée par le serveur, celui-ci affiche un écran d'erreur avec des informations utiles pour corriger le développement conduisant à cette erreur d'affichage. Dans le cas présent, l'erreur est due au motif de l'URL qui ne correspond pas à ce qui a été configuré.
 
-<p>À ce stade, nous pouvons considérer que le serveur fonctionne !</p>
+À ce stade, nous pouvons considérer que le serveur fonctionne !
 
-<div class="note">
-<p><strong>Note :</strong> Chaque fois que vous apportez des modifications significatives, il est important d'exécuter à nouveau un migration et un test du serveur. Cela est assez rapide, pour ne pas s'en priver !</p>
-</div>
+> **Note :** Chaque fois que vous apportez des modifications significatives, il est important d'exécuter à nouveau un migration et un test du serveur. Cela est assez rapide, pour ne pas s'en priver !
 
-<h2 id="Relevez_le_défi...">Relevez le défi...</h2>
+## Relevez le défi...
 
-<p>Le dossier <strong>catalog/</strong> a été créé automatiquement et contient des fichiers pour les vues, modèles de données, etc. Ouvrez-les pour les consulter. </p>
+Le dossier **catalog/** a été créé automatiquement et contient des fichiers pour les vues, modèles de données, etc. Ouvrez-les pour les consulter.
 
-<p>Comme vous avez pu le constatez plus haut, une route pour l'administration du site (<code>http://127.0.0.1:8000/admin/</code>) existe déjà dans le fichier <strong>urls.py</strong> du projet. Avec votre navigateur web, vous pouvez découvrir ce qui est derrière ce site.</p>
+Comme vous avez pu le constatez plus haut, une route pour l'administration du site (`http://127.0.0.1:8000/admin/`) existe déjà dans le fichier **urls.py** du projet. Avec votre navigateur web, vous pouvez découvrir ce qui est derrière ce site.
 
-<ul>
-</ul>
+## Résumé
 
-<h2 id="Résumé">Résumé</h2>
+Le squelette du site web est entièrement construit à ce stade. Désormais, vous allez pouvoir y ajouter des urls, des vues, des modèles de données, des gabarits et des formulaires.
 
-<p>Le squelette du site web est entièrement construit à ce stade. Désormais, vous allez pouvoir y ajouter des urls, des vues, des modèles de données, des gabarits et des formulaires.</p>
+Maintenant que ceci est fait, [le site web Local Library](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) est opérationnel et nous allons passer à la partie codage et développement pour que le site produise ce qu'il est censé faire.
 
-<p>Maintenant que ceci est fait, <a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">le site web Local Library</a> est opérationnel et nous allons passer à la partie codage et développement pour que le site produise ce qu'il est censé faire.</p>
+## A voir aussi...
 
-<h2 id="A_voir_aussi...">A voir aussi...</h2>
+- [Écriture de votre première application Django, 1ère partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial01/)  (Django docs)
+- [Applications](https://docs.djangoproject.com/fr/2.2/ref/applications/#configuring-applications) (Django Docs). Contains information on configuring applications.
 
-<ul>
- <li><a href="https://docs.djangoproject.com/fr/2.2/intro/tutorial01/">Écriture de votre première application Django, 1ère partie</a>  (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/fr/2.2/ref/applications/#configuring-applications">Applications</a> (Django Docs). Contains information on configuring applications.</li>
-</ul>
+{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-<p>{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}</p>
+## Dans ce module
 
-<h2 id="Dans_ce_module">Dans ce module</h2>
-
-<ul>
- <li><a href="/fr/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
- <li><a href="/fr/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
- <li><a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Didactique: Site web "Bibliothèque locale"</a></li>
- <li><a href="/fr/docs/Learn/Server-side/Django/skeleton_website">Django didactique Section 2: Créer le squelette du site web</a></li>
- <li><a href="/fr/docs/Learn/Server-side/Django/Models">Django didactique Section 3: Utilisation des modèles de données</a></li>
- <li><a href="/fr/docs/Learn/Server-side/Django/Admin_site">Django didactique Section 4 : Site d'administration de Django</a></li>
- <li><a href="/fr/docs/Learn/Server-side/Django/Home_page">Django didactique Section 5: Créer la page d'accuei</a></li>
- <li><a href="/fr/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
- <li><a href="/fr/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
- <li><a href="/fr/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
- <li><a href="/fr/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
- <li><a href="/fr/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
- <li><a href="/fr/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
- <li><a href="/fr/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
- <li><a href="/fr/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
-</ul>
+- [Django introduction](/fr/docs/Learn/Server-side/Django/Introduction)
+- [Setting up a Django development environment](/fr/docs/Learn/Server-side/Django/development_environment)
+- [Django Didactique: Site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django didactique Section 2: Créer le squelette du site web](/fr/docs/Learn/Server-side/Django/skeleton_website)
+- [Django didactique Section 3: Utilisation des modèles de données](/fr/docs/Learn/Server-side/Django/Models)
+- [Django didactique Section 4 : Site d'administration de Django](/fr/docs/Learn/Server-side/Django/Admin_site)
+- [Django didactique Section 5: Créer la page d'accuei](/fr/docs/Learn/Server-side/Django/Home_page)
+- [Django Tutorial Part 6: Generic list and detail views](/fr/docs/Learn/Server-side/Django/Generic_views)
+- [Django Tutorial Part 7: Sessions framework](/fr/docs/Learn/Server-side/Django/Sessions)
+- [Django Tutorial Part 8: User authentication and permissions](/fr/docs/Learn/Server-side/Django/Authentication)
+- [Django Tutorial Part 9: Working with forms](/fr/docs/Learn/Server-side/Django/Forms)
+- [Django Tutorial Part 10: Testing a Django web application](/fr/docs/Learn/Server-side/Django/Testing)
+- [Django Tutorial Part 11: Deploying Django to production](/fr/docs/Learn/Server-side/Django/Deployment)
+- [Django web application security](/fr/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django mini blog](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

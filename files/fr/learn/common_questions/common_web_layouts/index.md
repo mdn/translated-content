@@ -10,117 +10,121 @@ tags:
 translation_of: Learn/Common_questions/Common_web_layouts
 original_slug: Apprendre/Concevoir_page_web
 ---
-<div>{{IncludeSubnav("/fr/Apprendre")}}</div>
+{{IncludeSubnav("/fr/Apprendre")}}
 
-<p>Lorsque vous concevez des pages pour votre site Internet, il est utile d'avoir en tête les modèles de mise en page les plus fréquemment utilisés.</p>
+Lorsque vous concevez des pages pour votre site Internet, il est utile d'avoir en tête les modèles de mise en page les plus fréquemment utilisés.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prérequis :</th>
-   <td>Assurez-vous d'avoir d'abord identifié <a href="/fr/Apprendre/Commencez_votre_projet_web">ce que vous souhaitez accomplir</a> avec votre projet web.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objectif :</th>
-   <td>Apprendre où (et comment !) disposer des éléments dans vos pages web.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prérequis :</th>
+      <td>
+        Assurez-vous d'avoir d'abord identifié
+        <a href="/fr/Apprendre/Commencez_votre_projet_web"
+          >ce que vous souhaitez accomplir</a
+        >
+        avec votre projet web.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objectif :</th>
+      <td>
+        Apprendre où (et comment !) disposer des éléments dans vos pages web.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Nous avons une bonne raison de vous initier à la conception web. Vous commencez avec une page vierge, puis vous devez choisir entre tellement de possibilités… Si vous avez peu d'expérience, la page blanche initiale pourrait vous paraître intimidante. Comme nous avons plus de 25 ans d'expérience dans le domaine, nous allons vous présenter quelques règles générales qui pourront vous aider dans la conception de votre site web.</p>
+Nous avons une bonne raison de vous initier à la conception web. Vous commencez avec une page vierge, puis vous devez choisir entre tellement de possibilités… Si vous avez peu d'expérience, la page blanche initiale pourrait vous paraître intimidante. Comme nous avons plus de 25 ans d'expérience dans le domaine, nous allons vous présenter quelques règles générales qui pourront vous aider dans la conception de votre site web.
 
-<p>Même aujourd'hui, malgré toute l'attention portée aux appareils mobiles, la majorité des pages web contient les sections suivantes :</p>
+Même aujourd'hui, malgré toute l'attention portée aux appareils mobiles, la majorité des pages web contient les sections suivantes :
 
-<dl>
- <dt>En-tête</dt>
- <dd>Visible au haut de chaque page du site, cette section comprend des informations pertinentes pour l'ensemble des pages (par exemple, le nom du site ou un logo) et un menu de navigation convivial.</dd>
- <dt>Contenu principal</dt>
- <dd>Cette section occupe la plus grande partie de l'espace et contient du contenu unique, relatif à la page consultée.</dd>
- <dt>Contenu secondaire</dt>
- <dd>Il peut s'agir :
- <ol>
-  <li>d'informations complémentaires au contenu principal ;</li>
-  <li>d'informations partagées entre un sous-ensemble de pages ;</li>
-  <li>d'un moyen alternatif de navigation. En fait, ce peut être un peu tout ce qui est superflu par rapport au contenu principal.</li>
- </ol>
- </dd>
- <dt>Bas de page</dt>
- <dd>Visible au bas de chaque page du site, cette section contient, tout comme l'en-tête, des informations pertinentes pour l'ensemble des pages. On peut, entre autres, y trouver les mentions légales et les informations nécessaires pour contacter les responsables du site.</dd>
-</dl>
+- En-tête
+  - : Visible au haut de chaque page du site, cette section comprend des informations pertinentes pour l'ensemble des pages (par exemple, le nom du site ou un logo) et un menu de navigation convivial.
+- Contenu principal
+  - : Cette section occupe la plus grande partie de l'espace et contient du contenu unique, relatif à la page consultée.
+- Contenu secondaire
 
-<p>Ces quatre sections sont généralement présentes, mais elles peuvent être disposées de plusieurs façons distinctes. Voici quelques exemples de dispositions possibles (où <strong>1 </strong>représente l'entête ; <strong>2,  </strong>le bas de page ; <strong>A</strong>, le contenu principal ; et <strong>B1, B2</strong>, le contenu secondaire) :</p>
+  - : Il peut s'agir :
 
-<p><strong>Dispostion à une colonne : </strong>particulièrement utile pour l'affichage sur téléphone mobile, car cette disposition évite d'encombrer les petits écrans.</p>
+    1.  d'informations complémentaires au contenu principal ;
+    2.  d'informations partagées entre un sous-ensemble de pages ;
+    3.  d'un moyen alternatif de navigation. En fait, ce peut être un peu tout ce qui est superflu par rapport au contenu principal.
 
-<p><img alt="Example of a 1 column layout: Main on top and asides stacked beneath it." src="1-col-layout.png"></p>
+- Bas de page
+  - : Visible au bas de chaque page du site, cette section contient, tout comme l'en-tête, des informations pertinentes pour l'ensemble des pages. On peut, entre autres, y trouver les mentions légales et les informations nécessaires pour contacter les responsables du site.
 
-<p><strong>Disposition à deux colonnes :</strong> souvent utilisée pour l'affichage sur tablettes, car elles disposent d'un écran de taille moyenne.</p>
+Ces quatre sections sont généralement présentes, mais elles peuvent être disposées de plusieurs façons distinctes. Voici quelques exemples de dispositions possibles (où **1** représente l'entête ; **2,**  le bas de page ; **A**, le contenu principal ; et **B1, B2**, le contenu secondaire) :
 
-<p> <img alt="Example of a basic 2 column layout: One aside on the left column, and main on the right column." src="2-col-layout-right.png"> <img alt="Example of a basic 2 column layout: One aside on the right column, and main on the left column." src="2-col-layout-left.png"></p>
+**Dispostion à une colonne :** particulièrement utile pour l'affichage sur téléphone mobile, car cette disposition évite d'encombrer les petits écrans.
 
-<p><strong>Disposition à trois colonnes :</strong> adaptée uniquement pour les ordinateurs de bureau ayant un grand écran (et encore, cela est relatif, car plusieurs utilisateurs d'ordinateurs de bureau préférent visionner les sites dans des fenêtres de taille réduite plutôt qu'en mode plein écran).</p>
+![Example of a 1 column layout: Main on top and asides stacked beneath it.](1-col-layout.png)
 
-<p><img alt="Example of a basic 3 column layout: Aside on the left and right column, Main on the middle column." src="3-col-layout.png"> <img alt="Another example of a 3 column layout: Aside side by side on the left, Main on the right column." src="3-col-layout-alt.png"> <img alt="Another example of a 3 column layout: Aside side by side on the right, Main on the left column." src="3-col-layout-alt2.png"></p>
+**Disposition à deux colonnes :** souvent utilisée pour l'affichage sur tablettes, car elles disposent d'un écran de taille moyenne.
 
-<p>Il est aussi possible de mélanger tous ces modèles classiques :</p>
+![Example of a basic 2 column layout: One aside on the left column, and main on the right column.](2-col-layout-right.png) ![Example of a basic 2 column layout: One aside on the right column, and main on the left column.](2-col-layout-left.png)
 
-<p><img alt="Example of mixed layout: Main on top and asides beneath it side by side." src="1-col-layout-alt.png"> <img alt="Example of a mixed layout: Main on the left column and asides stack on top of each other on the right column" src="2-col-layout-left-alt.png"> <img alt="Example of a mixed layout: one aside on the left column and main in the right column with a aside beneath main." src="2-col-layout-mix.png"> <img alt="Example of a mixed layout: Main on the left of the first row and one aside on the right of that same row, a second aside convering the whole second row." src="2-col-layout-mix-alt.png">…</p>
+**Disposition à trois colonnes :** adaptée uniquement pour les ordinateurs de bureau ayant un grand écran (et encore, cela est relatif, car plusieurs utilisateurs d'ordinateurs de bureau préférent visionner les sites dans des fenêtres de taille réduite plutôt qu'en mode plein écran).
 
-<p>Sachez que ce ne sont que des exemples et que vous êtes libre de disposer les sections à votre façon. Vous remarquerez toutefois que l'en-tête demeure toujours en haut et le bas de page, en bas, peu importe les autres déplacements du contenu. Aussi, comme la section la plus importante est celle du contenu principal, assurez-vous d'y laisser le plus de place possible.</p>
+![Example of a basic 3 column layout: Aside on the left and right column, Main on the middle column.](3-col-layout.png) ![Another example of a 3 column layout: Aside side by side on the left, Main on the right column.](3-col-layout-alt.png) ![Another example of a 3 column layout: Aside side by side on the right, Main on the left column.](3-col-layout-alt2.png)
 
-<p>Ce sont là des règles générales dont vous pouvez vous inspirer. Bien entendu, il existera toujours des exceptions aux règles et des mises en page plus complexes. Nous discuterons d'ailleurs, dans d'autres articles, de la création de sites webs adaptatifs (c'est-à-dire qui s'ajustent à la taille de l'écran) et de sites utilisant plus d'un modèle de mise en page selon la page consultée. Pour l'instant, il serait cependant mieux de garder une mise en page uniforme sur l'ensemble de votre site.</p>
+Il est aussi possible de mélanger tous ces modèles classiques :
 
-<h2 id="Pédagogie_active">Pédagogie active</h2>
+![Example of mixed layout: Main on top and asides beneath it side by side.](1-col-layout-alt.png) ![Example of a mixed layout: Main on the left column and asides stack on top of each other on the right column](2-col-layout-left-alt.png) ![Example of a mixed layout: one aside on the left column and main in the right column with a aside beneath main.](2-col-layout-mix.png) ![Example of a mixed layout: Main on the left of the first row and one aside on the right of that same row, a second aside convering the whole second row.](2-col-layout-mix-alt.png)…
 
-<p><em>Aucun exercice pratique n'est disponible actuellement. <a href="/fr/docs/MDN/Débuter_sur_MDN">S.V.P., pensez à contribuer !</a></em></p>
+Sachez que ce ne sont que des exemples et que vous êtes libre de disposer les sections à votre façon. Vous remarquerez toutefois que l'en-tête demeure toujours en haut et le bas de page, en bas, peu importe les autres déplacements du contenu. Aussi, comme la section la plus importante est celle du contenu principal, assurez-vous d'y laisser le plus de place possible.
 
-<h2 id="Aller_plus_loin">Aller plus loin</h2>
+Ce sont là des règles générales dont vous pouvez vous inspirer. Bien entendu, il existera toujours des exceptions aux règles et des mises en page plus complexes. Nous discuterons d'ailleurs, dans d'autres articles, de la création de sites webs adaptatifs (c'est-à-dire qui s'ajustent à la taille de l'écran) et de sites utilisant plus d'un modèle de mise en page selon la page consultée. Pour l'instant, il serait cependant mieux de garder une mise en page uniforme sur l'ensemble de votre site.
 
-<p>Regardons maintenant quelques exemples concrets tirés de sites connus.</p>
+## Pédagogie active
 
-<h3 id="Disposition_à_une_colonne">Disposition à une colonne</h3>
+_Aucun exercice pratique n'est disponible actuellement. [S.V.P., pensez à contribuer !](/fr/docs/MDN/Débuter_sur_MDN)_
 
-<p><strong><a href="http://www.invisionapp.com/" rel="external">Invision</a> </strong>: un exemple de disposition classique à une colonne où toute l'information est présentée de façon linéaire sur une page.</p>
+## Aller plus loin
 
-<p><img alt="Example of a 1 column layout in the wild" src="screenshot-product.jpg">        <img alt="1 column layout with header, main content, a stack of aside contents and a footer" src="screenshot-product-overlay.jpg"></p>
+Regardons maintenant quelques exemples concrets tirés de sites connus.
 
-<p>Un style simple et direct.  N'oubliez pas, toutefois, que certains utilisateurs navigeront à partir d'un ordinateur de bureau et qu'il faut donc s'assurer que le contenu soit accessible sur cette plateforme également.</p>
+### Disposition à une colonne
 
-<h3 id="Disposition_à_deux_colonnes">Disposition à deux colonnes</h3>
+**[Invision](http://www.invisionapp.com/) **: un exemple de disposition classique à une colonne où toute l'information est présentée de façon linéaire sur une page.
 
-<p><strong><a href="http://abduzeedo.com/typography-mania-261" rel="external">Abduzeedo</a></strong>, un blog à disposition simple. En règle générale, les blogs comprennent deux colonnes : une large pour le contenu principal et une plus étroite pour les à-côtés (comme des widgets, les menus de navigation et les publicités).</p>
+![Example of a 1 column layout in the wild](screenshot-product.jpg)        ![1 column layout with header, main content, a stack of aside contents and a footer](screenshot-product-overlay.jpg)
 
-<p><img alt="Example of a 2 column layout for a blog" src="screenshot-blog.jpg">        <img alt="A 2 column layout with the main content on the left column" src="screenshot-blog-overlay.jpg"></p>
+Un style simple et direct.  N'oubliez pas, toutefois, que certains utilisateurs navigeront à partir d'un ordinateur de bureau et qu'il faut donc s'assurer que le contenu soit accessible sur cette plateforme également.
 
-<p>Dans cet exemple, regardez bien l'image (B1) située directement sous l'en-tête. L'image est en rapport avec le contenu principal, mais n'est pas essentielle à sa compréhension. Nous pourrions donc considérer que l'image fait partie du contenu principal ou bien qu'il s'agit d'un à-côté (contenu secondaire).  La distinction importe peu. Ce qui est vraiment important, c'est qu'un élément placé directement sous l'en-tête devrait soit faire partie du contenu principal, soit y être <em>directement relié</em>.</p>
+### Disposition à deux colonnes
 
-<h3 id="Attention_c'est_un_piège_!">Attention, c'est un piège !</h3>
+**[Abduzeedo](http://abduzeedo.com/typography-mania-261)**, un blog à disposition simple. En règle générale, les blogs comprennent deux colonnes : une large pour le contenu principal et une plus étroite pour les à-côtés (comme des widgets, les menus de navigation et les publicités).
 
-<p><strong><a href="http://www.mica.edu/About_MICA.html" rel="external">MICA</a></strong>. Cet exemple est un peu plus embêtant. On dirait une disposition à trois colonnes…</p>
+![Example of a 2 column layout for a blog](screenshot-blog.jpg)        ![A 2 column layout with the main content on the left column](screenshot-blog-overlay.jpg)
 
-<p><img alt="Example of a false 3 columns layout" src="screenshot-education.jpg">        <img alt="It looks like a 3 columns layout but actually, the aside content is floating around." src="screenshot-education-overlay.jpg"></p>
+Dans cet exemple, regardez bien l'image (B1) située directement sous l'en-tête. L'image est en rapport avec le contenu principal, mais n'est pas essentielle à sa compréhension. Nous pourrions donc considérer que l'image fait partie du contenu principal ou bien qu'il s'agit d'un à-côté (contenu secondaire).  La distinction importe peu. Ce qui est vraiment important, c'est qu'un élément placé directement sous l'en-tête devrait soit faire partie du contenu principal, soit y être _directement relié_.
 
-<p>…mais non ! B1 et B2 flottent autour du contenu principal. Rappelez-vousce mot-clé : "flotte" (<em>float</em> en anglais) - nous y reviendrons lorsque vous commencerez à apprendre le {{Glossary("CSS")}}.</p>
+### Attention, c'est un piège !
 
-<p>Pourquoi êtes-vous porté à penser qu'il s'agit d'une disposition à trois colonnes ? Eh bien, pour trois raisons : parce que l'image en haut à droite est en forme de L, parce que B1 semble être une colonne soutenant un contenu principal décalé vers la gauche et parce le "M" et le "I" du logo de  MICA forment une ligne de force verticale.</p>
+**[MICA](http://www.mica.edu/About_MICA.html)**. Cet exemple est un peu plus embêtant. On dirait une disposition à trois colonnes…
 
-<p>Il s'agit ici d'un bon exemple d'une mise en page classique qui a été rehaussée avec un peu de créativité. Les dispositions simples sont plus faciles à mettre en place, mais ne devraient pas restreindre votre créativité.</p>
+![Example of a false 3 columns layout](screenshot-education.jpg)        ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
 
-<h3 id="Une_disposition_en_apparence_beaucoup_plus_complexe">Une disposition en apparence beaucoup plus complexe</h3>
+…mais non ! B1 et B2 flottent autour du contenu principal. Rappelez-vousce mot-clé : "flotte" (_float_ en anglais) - nous y reviendrons lorsque vous commencerez à apprendre le {{Glossary("CSS")}}.
 
-<p><strong>L'<a href="https://www.operadeparis.fr/en/saison-2014-2015/opera/la-boheme-puccini" rel="external">Opéra de Paris</a>.</strong></p>
+Pourquoi êtes-vous porté à penser qu'il s'agit d'une disposition à trois colonnes ? Eh bien, pour trois raisons : parce que l'image en haut à droite est en forme de L, parce que B1 semble être une colonne soutenant un contenu principal décalé vers la gauche et parce le "M" et le "I" du logo de  MICA forment une ligne de force verticale.
 
-<p><img alt="An example of a tricky layout." src="screenshot-opera.jpg">        <img alt="This is a 2 column layout but the header is overlaping the main content." src="screenshot-opera-overlay.jpg"></p>
+Il s'agit ici d'un bon exemple d'une mise en page classique qui a été rehaussée avec un peu de créativité. Les dispositions simples sont plus faciles à mettre en place, mais ne devraient pas restreindre votre créativité.
 
-<p>Il s'agit à la base d'une disposition à deux colonnes, mais vous noterez quelques ajustements ici et là qui viennent rompre la linéarité de la disposition. On remarque surtout que l'en-tête est superposée à l'image du contenu principal. En raison de la courbe du menu de navigation qui rappelle celle au bas de l'image principale, l'en-tête et l'image semblent former un seul élément uni alors qu'il s'agit en fait d'éléments techniquement distincts.  L'exemple de l'Opéra de Paris semble plus complexe à réaliser que celui de MICA, mais est en réalité plus facile à mettre en place (la facilité étant bien entendu, un concept plutôt relatif).</p>
+### Une disposition en apparence beaucoup plus complexe
 
-<p>Comme vous pouvez le voir, il est possible de créer des sites sensationnels avec des mises en page somme toute assez simples. Jetez un coup d'œil à vos sites préférés. Pouvez-vous repérer l'en-tête, le bas de page, le contenu principal et le contenu secondaire ? Cet exercice pourra vous fournir de l'inspiration pour vos propres réalisations et vous aider à distinguer les dispositions qui fonctionnent bien de celles qui posent problème.</p>
+**L'[Opéra de Paris](https://www.operadeparis.fr/en/saison-2014-2015/opera/la-boheme-puccini).**
 
-<h2 id="Prochaines_étapes">Prochaines étapes</h2>
+![An example of a tricky layout.](screenshot-opera.jpg)        ![This is a 2 column layout but the header is overlaping the main content.](screenshot-opera-overlay.jpg)
 
-<p>Deux options s'offrent maintenant à vous :</p>
+Il s'agit à la base d'une disposition à deux colonnes, mais vous noterez quelques ajustements ici et là qui viennent rompre la linéarité de la disposition. On remarque surtout que l'en-tête est superposée à l'image du contenu principal. En raison de la courbe du menu de navigation qui rappelle celle au bas de l'image principale, l'en-tête et l'image semblent former un seul élément uni alors qu'il s'agit en fait d'éléments techniquement distincts.  L'exemple de l'Opéra de Paris semble plus complexe à réaliser que celui de MICA, mais est en réalité plus facile à mettre en place (la facilité étant bien entendu, un concept plutôt relatif).
 
-<ul>
- <li>Approfondir vos connaissances <a href="/fr/Apprendre/Commencer_avec_le_web">sur les bases de la conception web</a>.</li>
- <li>Mettre le tout en pratique en <a href="/fr/Learn/HTML/Write_a_simple_page_in_HTML">créant votre toute première page web</a>.</li>
-</ul>
+Comme vous pouvez le voir, il est possible de créer des sites sensationnels avec des mises en page somme toute assez simples. Jetez un coup d'œil à vos sites préférés. Pouvez-vous repérer l'en-tête, le bas de page, le contenu principal et le contenu secondaire ? Cet exercice pourra vous fournir de l'inspiration pour vos propres réalisations et vous aider à distinguer les dispositions qui fonctionnent bien de celles qui posent problème.
+
+## Prochaines étapes
+
+Deux options s'offrent maintenant à vous :
+
+- Approfondir vos connaissances [sur les bases de la conception web](/fr/Apprendre/Commencer_avec_le_web).
+- Mettre le tout en pratique en [créant votre toute première page web](/fr/Learn/HTML/Write_a_simple_page_in_HTML).

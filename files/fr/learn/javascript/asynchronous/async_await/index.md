@@ -13,17 +13,19 @@ tags:
   - await
 translation_of: Learn/JavaScript/Asynchronous/Async_await
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}</div>
-
-<p>Plus récemment, les <a href="/fr/docs/Web/JavaScript/Reference/Statements/async_function">fonctions async</a> et le mot-clé <code><a href="/fr/docs/Web/JavaScript/Reference/Operators/await">await</a></code> ont été ajoutés au langage JavaScript avec l'édition intitulée ECMAScript 2017. Ces fonctionnalités agissent essentiellement comme du sucre syntaxique sur les promesses, rendant le code asynchrone plus facile à écrire et à lire par la suite. Elles font en sorte que le code asynchrone ressemble davantage au code synchrone de la vieille école, et elles valent donc la peine d'être apprises. Cet article fournit les informations à connaître.</p>
+Plus récemment, les [fonctions async](/fr/docs/Web/JavaScript/Reference/Statements/async_function) et le mot-clé [`await`](/fr/docs/Web/JavaScript/Reference/Operators/await) ont été ajoutés au langage JavaScript avec l'édition intitulée ECMAScript 2017. Ces fonctionnalités agissent essentiellement comme du sucre syntaxique sur les promesses, rendant le code asynchrone plus facile à écrire et à lire par la suite. Elles font en sorte que le code asynchrone ressemble davantage au code synchrone de la vieille école, et elles valent donc la peine d'être apprises. Cet article fournit les informations à connaître.
 
 <table class="standard-table">
   <tbody>
     <tr>
       <th scope="row">Prérequis :</th>
-      <td>Connaissances informatiques de base, compréhension raisonnable des principes fondamentaux de JavaScript, compréhension du code asynchrone en général et des promesses.</td>
+      <td>
+        Connaissances informatiques de base, compréhension raisonnable des
+        principes fondamentaux de JavaScript, compréhension du code asynchrone
+        en général et des promesses.
+      </td>
     </tr>
     <tr>
       <th scope="row">Objectif :</th>
@@ -32,93 +34,110 @@ translation_of: Learn/JavaScript/Asynchronous/Async_await
   </tbody>
 </table>
 
-<h2 id="the_basics_of_asyncawait">Les bases de async/await</h2>
+## Les bases de async/await
 
-<p>L'utilisation <code>async/await</code> dans votre code comporte deux parties.</p>
+L'utilisation `async/await` dans votre code comporte deux parties.
 
-<h3 id="the_async_keyword">Le mot-clé async</h3>
+### Le mot-clé async
 
-<p>Tout d'abord, nous avons le mot-clé <code>async</code>, que vous mettez devant une déclaration de fonction pour la transformer en une <a href="/fr/docs/Web/JavaScript/Reference/Statements/async_function">fonction asynchrone</a>. Une fonction asynchrone est une fonction qui saura réagir à une éventuelle utilisation du mot-clé <code>await</code> pour invoquer du code asynchrone.</p>
+Tout d'abord, nous avons le mot-clé `async`, que vous mettez devant une déclaration de fonction pour la transformer en une [fonction asynchrone](/fr/docs/Web/JavaScript/Reference/Statements/async_function). Une fonction asynchrone est une fonction qui saura réagir à une éventuelle utilisation du mot-clé `await` pour invoquer du code asynchrone.
 
-<p>Essayez de taper les lignes suivantes dans la console JS de votre navigateur :</p>
+Essayez de taper les lignes suivantes dans la console JS de votre navigateur :
 
-<pre class="brush: js">function hello() { return "Bonjour" };
-hello();</pre>
+```js
+function hello() { return "Bonjour" };
+hello();
+```
 
-<p>La fonction renvoie « Bonjour » — rien de spécial, n'est-ce pas ?</p>
+La fonction renvoie « Bonjour » — rien de spécial, n'est-ce pas ?
 
-<p>Mais que se passe-t-il si nous transformons cette fonction en une fonction asynchrone ? Essayez ce qui suit :</p>
+Mais que se passe-t-il si nous transformons cette fonction en une fonction asynchrone ? Essayez ce qui suit :
 
-<pre class="brush: js">async function hello() { return "Bonjour" };
-hello();</pre>
+```js
+async function hello() { return "Bonjour" };
+hello();
+```
 
-<p>Ah. L'invocation de la fonction renvoie maintenant une promesse. C'est l'une des caractéristiques des fonctions asynchrones - leurs valeurs de retour sont nécessairement converties en promesses.</p>
+Ah. L'invocation de la fonction renvoie maintenant une promesse. C'est l'une des caractéristiques des fonctions asynchrones - leurs valeurs de retour sont nécessairement converties en promesses.
 
-<p>Vous pouvez également créer une <a href="/fr/docs/Web/JavaScript/Reference/Operators/async_function">expression de fonction asynchrone</a>, comme suit :</p>
+Vous pouvez également créer une [expression de fonction asynchrone](/fr/docs/Web/JavaScript/Reference/Operators/async_function), comme suit :
 
-<pre class="brush: js">let hello = async function() { return "Bonjour" };
-hello();</pre>
+```js
+let hello = async function() { return "Bonjour" };
+hello();
+```
 
-<p>Et vous pouvez utiliser les fonctions fléchées :</p>
+Et vous pouvez utiliser les fonctions fléchées :
 
-<pre class="brush: js">let hello = async () =&gt; { return "Bonjour" };</pre>
+```js
+let hello = async () => { return "Bonjour" };
+```
 
-<p>Elles font toutes à peu près la même chose.</p>
+Elles font toutes à peu près la même chose.
 
-<p>Pour consommer réellement la valeur renvoyée lorsque la promesse se réalise, puisqu'elle renvoie une promesse, nous pourrions utiliser un bloc <code>.then()</code> :</p>
+Pour consommer réellement la valeur renvoyée lorsque la promesse se réalise, puisqu'elle renvoie une promesse, nous pourrions utiliser un bloc `.then()` :
 
-<pre class="brush: js">hello().then((value) =&gt; console.log(value));</pre>
+```js
+hello().then((value) => console.log(value));
+```
 
-<p>ou même simplement un raccourci tel que</p>
+ou même simplement un raccourci tel que
 
-<pre class="brush: js">hello().then(console.log);</pre>
+```js
+hello().then(console.log);
+```
 
-<p>Comme nous l'avons vu dans l'article précédent.</p>
+Comme nous l'avons vu dans l'article précédent.
 
-<p>Ainsi, le mot-clé <code>async</code> est ajouté aux fonctions pour leur indiquer de retourner une promesse plutôt que de retourner directement la valeur.</p>
+Ainsi, le mot-clé `async` est ajouté aux fonctions pour leur indiquer de retourner une promesse plutôt que de retourner directement la valeur.
 
-<h3 id="the_await_keyword">Le mot-clé await</h3>
+### Le mot-clé await
 
-<p>L'avantage d'une fonction asynchrone ne devient apparent que lorsque vous la combinez avec le mot-clé <code>await</code>. <code>await</code> ne fonctionne qu'à l'intérieur de fonctions asynchrones dans du code JavaScript ordinaire, mais il peut être utilisé seul avec <a href="/fr/docs/Web/JavaScript/Guide/Modules">des modules JavaScript</a>.</p>
+L'avantage d'une fonction asynchrone ne devient apparent que lorsque vous la combinez avec le mot-clé `await`. `await` ne fonctionne qu'à l'intérieur de fonctions asynchrones dans du code JavaScript ordinaire, mais il peut être utilisé seul avec [des modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules).
 
-<p><code>await</code> peut être placé devant toute fonction asynchrone basée sur une promesse pour mettre en pause votre code sur cette ligne jusqu'à ce que la promesse se réalise, puis retourner la valeur résultante.</p>
+`await` peut être placé devant toute fonction asynchrone basée sur une promesse pour mettre en pause votre code sur cette ligne jusqu'à ce que la promesse se réalise, puis retourner la valeur résultante.
 
-<p>Vous pouvez utiliser <code>await</code> lors de l'appel de toute fonction qui renvoie une promesse, y compris les fonctions de l'API web.</p>
+Vous pouvez utiliser `await` lors de l'appel de toute fonction qui renvoie une promesse, y compris les fonctions de l'API web.
 
-<p>Voici un exemple trivial :</p>
+Voici un exemple trivial :
 
-<pre class="brush: js">async function hello() {
+```js
+async function hello() {
   return salutation = await Promise.resolve("Bonjour");
 };
 
-hello().then(console.log);</pre>
+hello().then(console.log);
+```
 
-<p>Bien sûr, l'exemple ci-dessus n'est pas très utile, même s'il sert à illustrer la syntaxe. Passons maintenant à un exemple réel.</p>
+Bien sûr, l'exemple ci-dessus n'est pas très utile, même s'il sert à illustrer la syntaxe. Passons maintenant à un exemple réel.
 
-<h2 id="rewriting_promise_code_with_asyncawait">Réécriture du code des promesses avec async/await</h2>
+## Réécriture du code des promesses avec async/await
 
-<p>Reprenons un exemple simple de récupération que nous avons vu dans l'article précédent :</p>
+Reprenons un exemple simple de récupération que nous avons vu dans l'article précédent :
 
-<pre class="brush: js">fetch('coffee.jpg')
-.then(response =&gt; {
+```js
+fetch('coffee.jpg')
+.then(response => {
   if (!response.ok) {
     throw new Error(`Erreur HTTP ! statut : ${response.status}`);
   }
   return response.blob();
 })
-.then(myBlob =&gt; {
+.then(myBlob => {
   let objectURL = URL.createObjectURL(myBlob);
   let image = document.createElement('img');
   image.src = objectURL;
   document.body.appendChild(image);
 })
-.catch(e =&gt; {
+.catch(e => {
   console.log('Il y a eu un problème avec votre opération de récupération : ' + e.message);
-});</pre>
+});
+```
 
-<p>À ce stade, vous devriez avoir une compréhension raisonnable des promesses et de leur fonctionnement, mais convertissons le tout en utilisant async/await pour voir à quel point cela simplifie les choses :</p>
+À ce stade, vous devriez avoir une compréhension raisonnable des promesses et de leur fonctionnement, mais convertissons le tout en utilisant async/await pour voir à quel point cela simplifie les choses :
 
-<pre class="brush: js">async function myFetch() {
+```js
+async function myFetch() {
   let response = await fetch('coffee.jpg');
 
   if (!response.ok) {
@@ -134,15 +153,17 @@ hello().then(console.log);</pre>
 }
 
 myFetch()
-.catch(e =&gt; {
+.catch(e => {
   console.log('Il y a eu un problème avec votre opération de récupération : ' + e.message);
-});</pre>
+});
+```
 
-<p>Cela rend le code beaucoup plus simple et plus facile à comprendre — plus de blocs <code>.then()</code> partout !</p>
+Cela rend le code beaucoup plus simple et plus facile à comprendre — plus de blocs `.then()` partout !
 
-<p>Étant donné qu'un mot-clé <code>async</code> transforme une fonction en promesse, vous pourriez remanier votre code pour utiliser une approche hybride de promesses et de <code>await</code>, en faisant sortir la seconde moitié de la fonction dans un nouveau bloc pour la rendre plus flexible :</p>
+Étant donné qu'un mot-clé `async` transforme une fonction en promesse, vous pourriez remanier votre code pour utiliser une approche hybride de promesses et de `await`, en faisant sortir la seconde moitié de la fonction dans un nouveau bloc pour la rendre plus flexible :
 
-<pre class="brush: js">async function myFetch() {
+```js
+async function myFetch() {
   let response = await fetch('coffee.jpg');
   if (!response.ok) {
     throw new Error(`Erreur HTTP ! statut : ${response.status}`);
@@ -151,38 +172,42 @@ myFetch()
 
 }
 
-myFetch().then((blob) =&gt; {
+myFetch().then((blob) => {
   let objectURL = URL.createObjectURL(blob);
   let image = document.createElement('img');
   image.src = objectURL;
   document.body.appendChild(image);
-}).catch(e =&gt; console.log(e));</pre>
+}).catch(e => console.log(e));
+```
 
-<p>Vous pouvez essayer de taper vous-même l'exemple, ou d'exécuter notre <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await.html">exemple en direct</a> (voir aussi le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await.html">code source</a>).</p>
+Vous pouvez essayer de taper vous-même l'exemple, ou d'exécuter notre [exemple en direct](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await.html)).
 
-<h3 id="but_how_does_it_work">Mais comment est-ce que cela fonctionne ?</h3>
+### Mais comment est-ce que cela fonctionne ?
 
-<p>Vous remarquerez que nous avons enveloppé le code à l'intérieur d'une fonction, et que nous avons inclus le mot-clé <code>async</code> avant le mot-clé <code>function</code>. C'est nécessaire - vous devez créer une fonction async pour définir un bloc de code dans lequel vous exécuterez votre code async ; comme nous l'avons dit précédemment, <code>await</code> ne fonctionne qu'à l'intérieur de fonctions async.</p>
+Vous remarquerez que nous avons enveloppé le code à l'intérieur d'une fonction, et que nous avons inclus le mot-clé `async` avant le mot-clé `function`. C'est nécessaire - vous devez créer une fonction async pour définir un bloc de code dans lequel vous exécuterez votre code async ; comme nous l'avons dit précédemment, `await` ne fonctionne qu'à l'intérieur de fonctions async.
 
-<p>À l'intérieur de la définition de la fonction <code>myFetch()</code>, vous pouvez voir que le code ressemble beaucoup à la version précédente de la promesse, mais il y a quelques différences. Au lieu de devoir enchaîner un bloc <code>.then()</code> à la fin de chaque méthode basée sur une promesse, il suffit d'ajouter un mot-clé <code>await</code> avant l'appel de la méthode, puis d'affecter le résultat à une variable. Le mot-clé <code>await</code> fait en sorte que le moteur d'exécution JavaScript mette votre code en pause sur cette ligne, ne permettant pas à d'autres codes de s'exécuter entre-temps jusqu'à ce que l'appel de fonction asynchrone ait retourné son résultat - très utile si le code suivant dépend de ce résultat !</p>
+À l'intérieur de la définition de la fonction `myFetch()`, vous pouvez voir que le code ressemble beaucoup à la version précédente de la promesse, mais il y a quelques différences. Au lieu de devoir enchaîner un bloc `.then()` à la fin de chaque méthode basée sur une promesse, il suffit d'ajouter un mot-clé `await` avant l'appel de la méthode, puis d'affecter le résultat à une variable. Le mot-clé `await` fait en sorte que le moteur d'exécution JavaScript mette votre code en pause sur cette ligne, ne permettant pas à d'autres codes de s'exécuter entre-temps jusqu'à ce que l'appel de fonction asynchrone ait retourné son résultat - très utile si le code suivant dépend de ce résultat !
 
-<p>Une fois que c'est terminé, votre code continue à s'exécuter à partir de la ligne suivante. Par exemple :</p>
+Une fois que c'est terminé, votre code continue à s'exécuter à partir de la ligne suivante. Par exemple :
 
-<pre class="brush: js">let response = await fetch('coffee.jpg');</pre>
+```js
+let response = await fetch('coffee.jpg');
+```
 
-<p>La réponse retournée par la promesse <code>fetch()</code> remplie est affectée à la variable <code>response</code> lorsque cette réponse devient disponible, et le parseur fait une pause sur cette ligne jusqu'à ce que cela se produise. Une fois que la réponse est disponible, le parseur passe à la ligne suivante, qui crée un <code><a href="/fr/docs/Web/API/Blob">Blob</a></code> à partir de celle-ci. Cette ligne invoque également une méthode async basée sur les promesses, nous utilisons donc <code>await</code> ici aussi. Lorsque le résultat de l'opération revient, nous le retournons hors de la fonction <code>myFetch()</code>.</p>
+La réponse retournée par la promesse `fetch()` remplie est affectée à la variable `response` lorsque cette réponse devient disponible, et le parseur fait une pause sur cette ligne jusqu'à ce que cela se produise. Une fois que la réponse est disponible, le parseur passe à la ligne suivante, qui crée un [`Blob`](/fr/docs/Web/API/Blob) à partir de celle-ci. Cette ligne invoque également une méthode async basée sur les promesses, nous utilisons donc `await` ici aussi. Lorsque le résultat de l'opération revient, nous le retournons hors de la fonction `myFetch()`.
 
-<p>Cela signifie que lorsque nous appelons la fonction <code>myFetch()</code>, elle retourne une promesse, de sorte que nous pouvons enchaîner un <code>.then()</code> à la fin de celle-ci à l'intérieur duquel nous gérons l'affichage du blob à l'écran.</p>
+Cela signifie que lorsque nous appelons la fonction `myFetch()`, elle retourne une promesse, de sorte que nous pouvons enchaîner un `.then()` à la fin de celle-ci à l'intérieur duquel nous gérons l'affichage du blob à l'écran.
 
-<p>Vous vous dites probablement déjà « c'est vraiment cool ! », et vous avez raison — moins de blocs <code>.then()</code> pour envelopper le code, et cela ressemble surtout à du code synchrone, donc c'est vraiment intuitif.</p>
+Vous vous dites probablement déjà « c'est vraiment cool ! », et vous avez raison — moins de blocs `.then()` pour envelopper le code, et cela ressemble surtout à du code synchrone, donc c'est vraiment intuitif.
 
-<h3 id="adding_error_handling">Ajout de la gestion des erreurs</h3>
+### Ajout de la gestion des erreurs
 
-<p>Si vous voulez ajouter la gestion des erreurs, vous avez plusieurs options.</p>
+Si vous voulez ajouter la gestion des erreurs, vous avez plusieurs options.
 
-<p>Vous pouvez utiliser une structure synchrone <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> avec <code>async</code>/<code>await</code>. Cet exemple développe la première version du code que nous avons montré ci-dessus :</p>
+Vous pouvez utiliser une structure synchrone [`try...catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch) avec `async`/`await`. Cet exemple développe la première version du code que nous avons montré ci-dessus :
 
-<pre class="brush: js">async function myFetch() {
+```js
+async function myFetch() {
   try {
     let response = await fetch('coffee.jpg');
 
@@ -200,13 +225,15 @@ myFetch().then((blob) =&gt; {
   }
 }
 
-myFetch();</pre>
+myFetch();
+```
 
-<p>Le bloc <code>catch() {}</code> reçoit un objet d'erreur, que nous avons appelé <code>e</code> ; nous pouvons maintenant l'enregistrer dans la console, et il nous donnera un message d'erreur détaillé montrant où dans le code l'erreur a été lancée.</p>
+Le bloc `catch() {}` reçoit un objet d'erreur, que nous avons appelé `e` ; nous pouvons maintenant l'enregistrer dans la console, et il nous donnera un message d'erreur détaillé montrant où dans le code l'erreur a été lancée.
 
-<p>Si vous vouliez utiliser la deuxième version (remaniée) du code que nous avons montré ci-dessus, il serait préférable de continuer l'approche hybride et d'enchaîner un bloc <code>.catch()</code> à la fin de l'appel <code>.then()</code>, comme ceci :</p>
+Si vous vouliez utiliser la deuxième version (remaniée) du code que nous avons montré ci-dessus, il serait préférable de continuer l'approche hybride et d'enchaîner un bloc `.catch()` à la fin de l'appel `.then()`, comme ceci :
 
-<pre class="brush: js">async function myFetch() {
+```js
+async function myFetch() {
   let response = await fetch('coffee.jpg');
   if (!response.ok) {
     throw new Error(`Erreur HTTP ! statut : ${response.status}`);
@@ -215,32 +242,32 @@ myFetch();</pre>
 
 }
 
-myFetch().then((blob) =&gt; {
+myFetch().then((blob) => {
   let objectURL = URL.createObjectURL(blob);
   let image = document.createElement('img');
   image.src = objectURL;
   document.body.appendChild(image);
 })
-.catch((e) =&gt;
+.catch((e) =>
   console.log(e)
-);</pre>
+);
+```
 
-<p>En effet, le bloc <code>.catch()</code> attrapera les erreurs survenant à la fois dans l'appel de fonction asynchrone et dans la chaîne de promesses. Si vous utilisiez le bloc <code>try</code>/<code>catch</code> ici, vous pourriez toujours obtenir des erreurs non gérées dans la fonction <code>myFetch()</code> lorsqu'elle est appelée.</p>
+En effet, le bloc `.catch()` attrapera les erreurs survenant à la fois dans l'appel de fonction asynchrone et dans la chaîne de promesses. Si vous utilisiez le bloc `try`/`catch` ici, vous pourriez toujours obtenir des erreurs non gérées dans la fonction `myFetch()` lorsqu'elle est appelée.
 
-<p>Vous pouvez trouver ces deux exemples sur GitHub :</p>
+Vous pouvez trouver ces deux exemples sur GitHub :
 
-<ul>
-  <li><a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await-try-catch.html">simple-fetch-async-await-try-catch.html</a> (voir le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await-try-catch.html">code source</a>)</li>
-  <li><a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await-promise-catch.html">simple-fetch-async-await-promise-catch.html</a> (voir le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await-promise-catch.html">code source</a>)</li>
-</ul>
+- [simple-fetch-async-await-try-catch.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await-try-catch.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await-try-catch.html))
+- [simple-fetch-async-await-promise-catch.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await-promise-catch.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await-promise-catch.html))
 
-<h2 id="awaiting_a_promise.all">En attente d'un Promise.all()</h2>
+## En attente d'un Promise.all()
 
-<p><code>async</code>/<code>await</code> est construit au-dessus de <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise" >Promises</a>, il est donc compatible avec toutes les fonctionnalités offertes par les promesses. Cela inclut <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise.all()</a></code> — vous pouvez tout à fait attendre un appel <code>Promise.all()</code> pour obtenir tous les résultats retournés dans une variable d'une manière qui ressemble à du simple code synchrone. Encore une fois, revenons à <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html">un exemple que nous avons vu dans notre article précédent</a>. Gardez-le ouvert dans un onglet séparé afin de pouvoir le comparer avec la nouvelle version présentée ci-dessous.</p>
+`async`/`await` est construit au-dessus de [Promises](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), il est donc compatible avec toutes les fonctionnalités offertes par les promesses. Cela inclut [`Promise.all()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) — vous pouvez tout à fait attendre un appel `Promise.all()` pour obtenir tous les résultats retournés dans une variable d'une manière qui ressemble à du simple code synchrone. Encore une fois, revenons à [un exemple que nous avons vu dans notre article précédent](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html). Gardez-le ouvert dans un onglet séparé afin de pouvoir le comparer avec la nouvelle version présentée ci-dessous.
 
-<p>En convertissant cela en <code>async</code>/<code>await</code> (voir la <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-all-async-await.html">démo live</a> et le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-all-async-await.html">code source</a>), cela ressemble maintenant à ceci :</p>
+En convertissant cela en `async`/`await` (voir la [démo live](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-all-async-await.html) et le [code source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-all-async-await.html)), cela ressemble maintenant à ceci :
 
-<pre class="brush: js">async function fetchAndDecode(url, type) {
+```js
+async function fetchAndDecode(url, type) {
   let response = await fetch(url);
 
   let content;
@@ -282,31 +309,33 @@ async function displayContent() {
 }
 
 displayContent()
-.catch((e) =&gt;
+.catch((e) =>
   console.log(e)
-);</pre>
+);
+```
 
-<p>Vous verrez que la fonction <code>fetchAndDecode()</code> a été convertie facilement en fonction asynchrone avec seulement quelques modifications. Voir la ligne <code>Promise.all()</code> :</p>
+Vous verrez que la fonction `fetchAndDecode()` a été convertie facilement en fonction asynchrone avec seulement quelques modifications. Voir la ligne `Promise.all()` :
 
-<pre class="brush: js">let values = await Promise.all([coffee, tea, description]);</pre>
+```js
+let values = await Promise.all([coffee, tea, description]);
+```
 
-<p>En utilisant <code>await</code> ici, nous sommes en mesure d'obtenir tous les résultats des trois promesses retournées dans le tableau <code>values</code>, quand ils sont tous disponibles, d'une manière qui ressemble beaucoup à du code synchrone. Nous avons dû envelopper tout le code dans une nouvelle fonction asynchrone, <code>displayContent()</code>, et nous n'avons pas réduit le code de beaucoup de lignes, mais être capable de déplacer la majeure partie du code hors du bloc <code>.then()</code> fournit une simplification agréable et utile, nous laissant avec un programme beaucoup plus lisible.</p>
+En utilisant `await` ici, nous sommes en mesure d'obtenir tous les résultats des trois promesses retournées dans le tableau `values`, quand ils sont tous disponibles, d'une manière qui ressemble beaucoup à du code synchrone. Nous avons dû envelopper tout le code dans une nouvelle fonction asynchrone, `displayContent()`, et nous n'avons pas réduit le code de beaucoup de lignes, mais être capable de déplacer la majeure partie du code hors du bloc `.then()` fournit une simplification agréable et utile, nous laissant avec un programme beaucoup plus lisible.
 
-<p>Pour la gestion des erreurs, nous avons inclus un bloc <code>.catch()</code> sur notre appel <code>displayContent()</code> ; cela permettra de gérer les erreurs survenant dans les deux fonctions.</p>
+Pour la gestion des erreurs, nous avons inclus un bloc `.catch()` sur notre appel `displayContent()` ; cela permettra de gérer les erreurs survenant dans les deux fonctions.
 
-<div class="notecard note">
-  <p><strong>Note :</strong> Il est également possible d'utiliser un bloc <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_clause">finally</a></code> au sein d'une fonction asynchrone, à la place d'un bloc asynchrone <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally">.finally()</a></code>, pour montrer un état final sur le déroulement de l'opération — vous pouvez voir cela en action dans notre <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html">exemple en direct</a> (voir aussi le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html">code source</a>).</p>
-</div>
+> **Note :** Il est également possible d'utiliser un bloc [`finally`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_clause) au sein d'une fonction asynchrone, à la place d'un bloc asynchrone [`.finally()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally), pour montrer un état final sur le déroulement de l'opération — vous pouvez voir cela en action dans notre [exemple en direct](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
 
-<h2 id="handling_asyncawait_slowdown">Gérer les ralentissements potentiellement causés par async/await</h2>
+## Gérer les ralentissements potentiellement causés par async/await
 
-<p>Il est vraiment utile de connaître <code>async</code>/<code>await</code>, mais il y a quelques inconvénients à prendre en compte.</p>
+Il est vraiment utile de connaître `async`/`await`, mais il y a quelques inconvénients à prendre en compte.
 
-<p><code>async</code>/<code>await</code> donne à votre code une apparence synchrone, et d'une certaine manière, il le fait se comporter de manière plus synchrone. Le mot-clé <code>await</code> bloque l'exécution de tout le code qui le suit jusqu'à ce que la promesse se réalise, exactement comme dans le cas d'une opération synchrone. Il permet certes aux autres tâches de continuer à s'exécuter entre-temps, mais le code attendu est bloqué.</p>
+`async`/`await` donne à votre code une apparence synchrone, et d'une certaine manière, il le fait se comporter de manière plus synchrone. Le mot-clé `await` bloque l'exécution de tout le code qui le suit jusqu'à ce que la promesse se réalise, exactement comme dans le cas d'une opération synchrone. Il permet certes aux autres tâches de continuer à s'exécuter entre-temps, mais le code attendu est bloqué.
 
-<pre class="brush: js">async function makeResult(items) {
+```js
+async function makeResult(items) {
   let newArr = [];
-  for(let i=0; i &lt; items.length; i++) {
+  for(let i=0; i < items.length; i++) {
     newArr.push('word_'+i);
   }
   return newArr;
@@ -315,52 +344,62 @@ displayContent()
 async function getResult() {
   let result = await makeResult(items); // Bloqué sur cette ligne
   useThatResult(result); // Pas exécuté tant que makeResult() n'a pas fini
-}</pre>
+}
+```
 
-<p>Cela signifie que votre code pourrait être ralenti par un nombre important de promesses attendues se produisant directement les unes après les autres. Chaque <code>await</code> attendra que la précédente se termine, alors qu'en réalité ce que vous voulez, c'est que les promesses commencent à être traitées simultanément, comme elles le feraient si nous n'utilisions pas <code>async</code>/<code>await</code>.</p>
+Cela signifie que votre code pourrait être ralenti par un nombre important de promesses attendues se produisant directement les unes après les autres. Chaque `await` attendra que la précédente se termine, alors qu'en réalité ce que vous voulez, c'est que les promesses commencent à être traitées simultanément, comme elles le feraient si nous n'utilisions pas `async`/`await`.
 
-<p>Il existe un modèle qui peut atténuer ce problème - déclencher tous les processus de promesse en stockant les objets <code>Promise</code> dans des variables, et en les attendant tous ensuite. Jetons un coup d'œil à quelques exemples qui prouvent le concept.</p>
+Il existe un modèle qui peut atténuer ce problème - déclencher tous les processus de promesse en stockant les objets `Promise` dans des variables, et en les attendant tous ensuite. Jetons un coup d'œil à quelques exemples qui prouvent le concept.
 
-<p>Nous disposons de deux exemples - <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html">slow-async-await.html</a> (voir le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html">code source</a>) et <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html">fast-async-await.html</a> (voir le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html">code source</a>). Les deux commencent par une fonction promise personnalisée qui simule un processus asynchrone avec un appel <code><a href="/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> :</p>
+Nous disposons de deux exemples - [slow-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html)) et [fast-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html)). Les deux commencent par une fonction promise personnalisée qui simule un processus asynchrone avec un appel [`setTimeout()`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) :
 
-<pre class="brush: js">function timeoutPromise(interval) {
-  return new Promise((resolve, reject) =&gt; {
+```js
+function timeoutPromise(interval) {
+  return new Promise((resolve, reject) => {
     setTimeout(function(){
       resolve("fait");
     }, interval);
   });
-};</pre>
+};
+```
 
-<p>Ensuite, chacun comprend une fonction asynchrone <code>timeTest()</code> qui attend trois appels <code>timeoutPromise()</code> :</p>
+Ensuite, chacun comprend une fonction asynchrone `timeTest()` qui attend trois appels `timeoutPromise()` :
 
-<pre class="brush: js">async function timeTest() {
+```js
+async function timeTest() {
   ...
-}</pre>
+}
+```
 
-<p>Chacune d'entre elles se termine en enregistrant une heure de début, en voyant combien de temps la promesse <code>timeTest()</code> met à se réaliser, puis en enregistrant une heure de fin et en indiquant combien de temps l'opération a pris au total :</p>
+Chacune d'entre elles se termine en enregistrant une heure de début, en voyant combien de temps la promesse `timeTest()` met à se réaliser, puis en enregistrant une heure de fin et en indiquant combien de temps l'opération a pris au total :
 
-<pre class="brush: js">let startTime = Date.now();
-timeTest().then(() =&gt; {
+```js
+let startTime = Date.now();
+timeTest().then(() => {
   let finishTime = Date.now();
   let timeTaken = finishTime - startTime;
   console.log("Temps pris en millisecondes : " + timeTaken);
-})</pre>
+})
+```
 
-<p>C'est la fonction <code>timeTest()</code> qui diffère dans chaque cas.</p>
+C'est la fonction `timeTest()` qui diffère dans chaque cas.
 
-<p>Dans l'exemple <code>slow-async-await.html</code>, <code>timeTest()</code> ressemble à ceci :</p>
+Dans l'exemple `slow-async-await.html`, `timeTest()` ressemble à ceci :
 
-<pre class="brush: js">async function timeTest() {
+```js
+async function timeTest() {
   await timeoutPromise(3000);
   await timeoutPromise(3000);
   await timeoutPromise(3000);
-}</pre>
+}
+```
 
-<p>Ici, nous attendons les trois appels <code>timeoutPromise()</code> directement, en faisant en sorte que chacun d'eux alerte pendant 3 secondes. Chaque appel suivant est forcé d'attendre jusqu'à ce que le dernier soit terminé - si vous exécutez le premier exemple, vous verrez la boîte d'alerte signaler une durée d'exécution totale d'environ 9 secondes.</p>
+Ici, nous attendons les trois appels `timeoutPromise()` directement, en faisant en sorte que chacun d'eux alerte pendant 3 secondes. Chaque appel suivant est forcé d'attendre jusqu'à ce que le dernier soit terminé - si vous exécutez le premier exemple, vous verrez la boîte d'alerte signaler une durée d'exécution totale d'environ 9 secondes.
 
-<p>Dans l'exemple <code>fast-async-await.html</code>, <code>timeTest()</code> ressemble à ceci :</p>
+Dans l'exemple `fast-async-await.html`, `timeTest()` ressemble à ceci :
 
-<pre class="brush: js">async function timeTest() {
+```js
+async function timeTest() {
   const timeoutPromise1 = timeoutPromise(3000);
   const timeoutPromise2 = timeoutPromise(3000);
   const timeoutPromise3 = timeoutPromise(3000);
@@ -368,19 +407,21 @@ timeTest().then(() =&gt; {
   await timeoutPromise1;
   await timeoutPromise2;
   await timeoutPromise3;
-}</pre>
+}
+```
 
-<p>Ici, nous stockons les trois objets <code>Promise</code> dans des variables, ce qui a pour effet de déclencher leurs processus associés, tous exécutés simultanément.</p>
+Ici, nous stockons les trois objets `Promise` dans des variables, ce qui a pour effet de déclencher leurs processus associés, tous exécutés simultanément.
 
-<p>Ensuite, nous attendons leurs résultats - parce que les promesses ont toutes commencé à être traitées essentiellement au même moment, les promesses se réaliseront toutes en même temps ; lorsque vous exécuterez le deuxième exemple, vous verrez la boîte d'alerte indiquant un temps d'exécution total d'un peu plus de 3 secondes !</p>
+Ensuite, nous attendons leurs résultats - parce que les promesses ont toutes commencé à être traitées essentiellement au même moment, les promesses se réaliseront toutes en même temps ; lorsque vous exécuterez le deuxième exemple, vous verrez la boîte d'alerte indiquant un temps d'exécution total d'un peu plus de 3 secondes !
 
-<h3 id="handling_errors">Gestion des erreurs</h3>
+### Gestion des erreurs
 
-<p>La stratégie précédente a un défaut : on pourrait avoir des erreurs qui ne seraient pas gérées.</p>
+La stratégie précédente a un défaut : on pourrait avoir des erreurs qui ne seraient pas gérées.
 
-<p>Mettons à jour les exemples précédents en ajoutant une promesse rejetée et une instruction <code>catch</code> à la fin :</p>
+Mettons à jour les exemples précédents en ajoutant une promesse rejetée et une instruction `catch` à la fin :
 
-<pre class="brush: js">function timeoutPromiseResolve(interval) {
+```js
+function timeoutPromiseResolve(interval) {
   return new Promise((resolve, reject) => {
     setTimeout(function(){
       resolve("Succès");
@@ -409,13 +450,15 @@ timeTest().then(() => {})
   let finishTime = Date.now();
   let timeTaken = finishTime - startTime;
   console.log("Temps écoulé en millisecondes : " + timeTaken);
-})</pre>
+})
+```
 
-<p>Dans l'exemple qui précède, l'erreur est gérée correctement et le message dans la console apparaît après environ 7 secondes.</p>
+Dans l'exemple qui précède, l'erreur est gérée correctement et le message dans la console apparaît après environ 7 secondes.
 
-<p>Voyons maintenant la deuxième approche :</p>
+Voyons maintenant la deuxième approche :
 
-<pre class="brush: js">function timeoutPromiseResolve(interval) {
+```js
+function timeoutPromiseResolve(interval) {
   return new Promise((resolve, reject) => {
     setTimeout(function(){
       resolve("Succès");
@@ -448,13 +491,15 @@ timeTest().then(() => {
   let finishTime = Date.now();
   let timeTaken = finishTime - startTime;
   console.log("Temps écoulé en millisecondes : " + timeTaken);
-})</pre>
+})
+```
 
-<p>Dans cet exemple, on a une erreur qui n'est pas gérée dans la console (après 2 secondes) et le message apparaît après environ 5 secondes.</p>
+Dans cet exemple, on a une erreur qui n'est pas gérée dans la console (après 2 secondes) et le message apparaît après environ 5 secondes.
 
-<p>Pour démarrer les promesses en parallèles et intercepter les erreurs correctement, on pourrait utiliser <code>Promise.all()</code> comme vu auparavant :</p> 
+Pour démarrer les promesses en parallèles et intercepter les erreurs correctement, on pourrait utiliser `Promise.all()` comme vu auparavant :
 
-<pre class="brush: js">function timeoutPromiseResolve(interval) {
+```js
+function timeoutPromiseResolve(interval) {
   return new Promise((resolve, reject) => {
     setTimeout(function(){
       resolve("Succès");
@@ -486,17 +531,19 @@ timeTest().then(() => {
   let finishTime = Date.now();
   let timeTaken = finishTime - startTime;
   console.log("Temps écoulé en millisecondes : " + timeTaken);
-})</pre>
+})
+```
 
-<p>Dans cet exemple, l'erreur est gérée correctement après 2 secondes et on a le message dans la console après environ 2 secondes.</p>
+Dans cet exemple, l'erreur est gérée correctement après 2 secondes et on a le message dans la console après environ 2 secondes.
 
-<p>La méthode <code>Promise.all()</code> rejète lorsqu'au moins un de ses promesses d'entrée rejète. Si on veut que toutes les promesses soient résolues (correctement ou avec un rejet), on pourra utiliser la méthode <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled"><code>Promise.allSettled()</code></a> à la place.</p>
+La méthode `Promise.all()` rejète lorsqu'au moins un de ses promesses d'entrée rejète. Si on veut que toutes les promesses soient résolues (correctement ou avec un rejet), on pourra utiliser la méthode [`Promise.allSettled()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled) à la place.
 
-<h2 id="asyncawait_class_methods">Méthodes de classe async/await</h2>
+## Méthodes de classe async/await
 
-<p>Une dernière remarque avant de poursuivre, vous pouvez même ajouter <code>async</code> devant les méthodes de classe/objet pour qu'elles renvoient des promesses, et <code>await</code> des promesses à l'intérieur de celles-ci. Jetez un œil au <a href="/fr/docs/Learn/JavaScript/Objects/Inheritance#ecmascript_2015_classes">code de la classe ES que nous avons vu dans notre article sur le JavaScript orienté objet</a>, puis regardez notre version modifiée avec une méthode <code>async</code> :</p>
+Une dernière remarque avant de poursuivre, vous pouvez même ajouter `async` devant les méthodes de classe/objet pour qu'elles renvoient des promesses, et `await` des promesses à l'intérieur de celles-ci. Jetez un œil au [code de la classe ES que nous avons vu dans notre article sur le JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects/Inheritance#ecmascript_2015_classes), puis regardez notre version modifiée avec une méthode `async` :
 
-<pre class="brush: js">class Personne {
+```js
+class Personne {
   constructor(prenom, nomFamille, age, genre, interets) {
     this.nom = {
       prenom,
@@ -516,31 +563,32 @@ timeTest().then(() => {
   };
 }
 
-let han = new Personne('Han', 'Solo', 25, 'homme', ['Contrebande']);</pre>
+let han = new Personne('Han', 'Solo', 25, 'homme', ['Contrebande']);
+```
 
-<p>La méthode de la première classe peut maintenant être utilisée de la manière suivante :</p>
+La méthode de la première classe peut maintenant être utilisée de la manière suivante :
 
-<pre class="brush: js">han.salutation().then(console.log);</pre>
+```js
+han.salutation().then(console.log);
+```
 
-<h2 id="browser_support">Prise en charge des navigateurs</h2>
+## Prise en charge des navigateurs
 
-<p>L'une des considérations à prendre en compte pour décider d'utiliser <code>async</code>/<code>await</code>est la prise en charge des anciens navigateurs. Ces fonctionnalités sont disponibles dans les versions modernes de la plupart des navigateurs, tout comme les promesses ; les principaux problèmes de prise en charge concernent Internet Explorer et Opera Mini.</p>
+L'une des considérations à prendre en compte pour décider d'utiliser `async`/`await`est la prise en charge des anciens navigateurs. Ces fonctionnalités sont disponibles dans les versions modernes de la plupart des navigateurs, tout comme les promesses ; les principaux problèmes de prise en charge concernent Internet Explorer et Opera Mini.
 
-<p>Si vous souhaitez utiliser <code>async</code>/<code>await</code> mais que vous êtes préoccupé par la prise en charge de navigateurs plus anciens, vous pouvez envisager d'utiliser la bibliothèque <a href="https://babeljs.io/">BabelJS</a>. Cela vous permet d'écrire vos applications en utilisant les dernières versions de JavaScript et de laisser Babel déterminer les modifications éventuellement nécessaires pour les navigateurs de vos utilisateurs. Lorsque vous rencontrez un navigateur qui ne supporte pas async/await, le <i>polyfill</i> « prothèse d'émulation » de Babel peut automatiquement fournir des <i>fallbacks</i> « solutions de secours » qui fonctionnent dans les anciens navigateurs.</p>
+Si vous souhaitez utiliser `async`/`await` mais que vous êtes préoccupé par la prise en charge de navigateurs plus anciens, vous pouvez envisager d'utiliser la bibliothèque [BabelJS](https://babeljs.io/). Cela vous permet d'écrire vos applications en utilisant les dernières versions de JavaScript et de laisser Babel déterminer les modifications éventuellement nécessaires pour les navigateurs de vos utilisateurs. Lorsque vous rencontrez un navigateur qui ne supporte pas async/await, le _polyfill_ « prothèse d'émulation » de Babel peut automatiquement fournir des _fallbacks_ « solutions de secours » qui fonctionnent dans les anciens navigateurs.
 
-<h2 id="conclusion">Conclusion</h2>
+## Conclusion
 
-<p>Et voilà, <code>async</code>/<code>await</code> offre un moyen agréable et simplifié d'écrire du code asynchrone, plus facile à lire et à maintenir. Même si la prise en charge par les navigateurs est plus limitée que d'autres mécanismes de code asynchrone à l'heure où nous écrivons ces lignes, cela vaut la peine de l'apprendre et d'envisager de l'utiliser, maintenant et à l'avenir.</p>
+Et voilà, `async`/`await` offre un moyen agréable et simplifié d'écrire du code asynchrone, plus facile à lire et à maintenir. Même si la prise en charge par les navigateurs est plus limitée que d'autres mécanismes de code asynchrone à l'heure où nous écrivons ces lignes, cela vaut la peine de l'apprendre et d'envisager de l'utiliser, maintenant et à l'avenir.
 
-<p>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}</p>
+{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}
 
-<h2 id="in_this_module">Dans ce module</h2>
+## Dans ce module
 
-<ul>
-  <li><a href="/fr/docs/Learn/JavaScript/Asynchronous/Concepts">Concepts généraux de programmation asynchrone</a></li>
-  <li><a href="/fr/docs/Learn/JavaScript/Asynchronous/Introducing">Introduction au JavaScript asynchrone</a></li>
-  <li><a href="/fr/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">JavaScript asynchrone coopératif : Délais et intervalles</a></li>
-  <li><a href="/fr/docs/Learn/JavaScript/Asynchronous/Promises">Gérer les opérations asynchrones avec élégance grâce aux Promesses</a></li>
-  <li><a href="/fr/docs/Learn/JavaScript/Asynchronous/Async_await">Faciliter la programmation asynchrone avec async et await</a></li>
-  <li><a href="/fr/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Choisir la bonne approche</a></li>
-</ul>
+- [Concepts généraux de programmation asynchrone](/fr/docs/Learn/JavaScript/Asynchronous/Concepts)
+- [Introduction au JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous/Introducing)
+- [JavaScript asynchrone coopératif : Délais et intervalles](/fr/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
+- [Gérer les opérations asynchrones avec élégance grâce aux Promesses](/fr/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Faciliter la programmation asynchrone avec async et await](/fr/docs/Learn/JavaScript/Asynchronous/Async_await)
+- [Choisir la bonne approche](/fr/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)

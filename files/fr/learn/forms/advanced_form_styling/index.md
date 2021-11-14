@@ -4,133 +4,117 @@ slug: Learn/Forms/Advanced_form_styling
 translation_of: Learn/Forms/Advanced_form_styling
 original_slug: Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms
 ---
-<div>{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML", "Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets", "Web/Guide/HTML/Formulaires")}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML", "Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets", "Web/Guide/HTML/Formulaires")}}
 
-<p>Dans cet article, nous verrons comment utiliser les <a href="/fr/docs/Learn/CSS">CSS</a> avec les formulaires <a href="/fr/docs/Glossary/HTML">HTML</a> pour modifier le style de certains widgets difficiles à personnaliser. Comme nous l'avons vu dans l'<a href="/fr/docs/Learn/Forms/Styling_web_forms">article précédent</a>, les champs texte et les boutons sont parfaitement compatibles avec les CSS. Maintenant, nous allons approfondir la part sombre de la composition stylistique des formulaires HTML.</p>
+Dans cet article, nous verrons comment utiliser les [CSS](/fr/docs/Learn/CSS) avec les formulaires [HTML](/fr/docs/Glossary/HTML) pour modifier le style de certains widgets difficiles à personnaliser. Comme nous l'avons vu dans l'[article précédent](/fr/docs/Learn/Forms/Styling_web_forms), les champs texte et les boutons sont parfaitement compatibles avec les CSS. Maintenant, nous allons approfondir la part sombre de la composition stylistique des formulaires HTML.
 
-<p>Avant d'aller plus loin, faisons un rappel pour deux types de widgets de formulaires :</p>
+Avant d'aller plus loin, faisons un rappel pour deux types de widgets de formulaires :
 
-<dl>
- <dt>la brute</dt>
- <dd>Éléments, dont le style n'est que difficilement modifiable, demandant des astuces complexes, nécessitant parfois de faire appel à une connaissance avancée des CSS3.</dd>
- <dt>le truand</dt>
- <dd>Oubliez l'emploi des CSS pour modifier le style de ces éléments. Au mieux, vous pourrez faire des petites choses, mais elle ne seront pas reproductibles sur d'autres navigateurs ; il ne sera jamais possible de prendre un contrôle total de leur apparence.</dd>
-</dl>
+- la brute
+  - : Éléments, dont le style n'est que difficilement modifiable, demandant des astuces complexes, nécessitant parfois de faire appel à une connaissance avancée des CSS3.
+- le truand
+  - : Oubliez l'emploi des CSS pour modifier le style de ces éléments. Au mieux, vous pourrez faire des petites choses, mais elle ne seront pas reproductibles sur d'autres navigateurs ; il ne sera jamais possible de prendre un contrôle total de leur apparence.
 
-<h2 id="Possibilités_d'expression_avec_les_CSS">Possibilités d'expression avec les CSS</h2>
+## Possibilités d'expression avec les CSS
 
-<p>Le problème fondamental avec les widgets de formulaire, autres que champs de texte et boutons, est que dans de nombreux cas, le CSS ne possède pas assez d'expressions pour styliser correctement les widgets complexes.</p>
+Le problème fondamental avec les widgets de formulaire, autres que champs de texte et boutons, est que dans de nombreux cas, le CSS ne possède pas assez d'expressions pour styliser correctement les widgets complexes.
 
-<p>L'évolution récente du HTML et des CSS a étendu l'expressivité des CSS :</p>
+L'évolution récente du HTML et des CSS a étendu l'expressivité des CSS :
 
-<ul>
- <li><a href="https://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes" rel="external">CSS 2.1</a> était très limité et n'offrait que trois pseudo-classes :
+- [CSS 2.1](https://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes) était très limité et n'offrait que trois pseudo-classes :
 
-  <ul>
-   <li>{{cssxref(":active")}}</li>
-   <li>{{cssxref(":focus")}}</li>
-   <li>{{cssxref(":hover")}}</li>
-  </ul>
- </li>
- <li><a href="https://www.w3.org/TR/css3-selectors/" rel="external">CSS Selector Level 3</a> a ajouté quelques nouvelles pseudo-classes relatives aux formulaires HTML :
-  <ul>
-   <li>{{cssxref(":enabled")}}</li>
-   <li>{{cssxref(":disabled")}}</li>
-   <li>{{cssxref(":checked")}}</li>
-   <li>{{cssxref(":indeterminate")}}</li>
-  </ul>
- </li>
- <li><a href="https://dev.w3.org/csswg/css3-ui/#pseudo-classes" rel="external">CSS Basic UI Level 3</a> a ajouté quelques autres pseudo-classes pour décrire l'état du widget :
-  <ul>
-   <li>{{cssxref(":default")}}</li>
-   <li>{{cssxref(":valid")}}</li>
-   <li>{{cssxref(":invalid")}}</li>
-   <li>{{cssxref(":in-range")}}</li>
-   <li>{{cssxref(":out-of-range")}}</li>
-   <li>{{cssxref(":required")}}</li>
-   <li>{{cssxref(":optional")}}</li>
-   <li>{{cssxref(":read-only")}}</li>
-   <li>{{cssxref(":read-write")}}</li>
-  </ul>
- </li>
- <li><a href="https://dev.w3.org/csswg/selectors4/" rel="external">CSS Selector Level 4</a> actuellement en développement actif et objet de grandes discussions ne prévoit pas d'ajouter grand‑chose pour améliorer les formulaires :
-  <ul>
-   <li>{{cssxref(":user-error")}} qui est juste une amélioration de la pseudo‑classe {{cssxref(":invalid")}}.</li>
-  </ul>
- </li>
-</ul>
+  - {{cssxref(":active")}}
+  - {{cssxref(":focus")}}
+  - {{cssxref(":hover")}}
 
-<p>Voilà un bon début, mais il y a deux problèmes. Primo, certains navigateurs ne mettent pas en œuvre des fonctionnalités au-delà de CSS 2.1. Secundo, ils ne sont tout simplement pas assez perfectionnés pour styliser des widgets complexes, comme les sélecteurs de date.</p>
+- [CSS Selector Level 3](https://www.w3.org/TR/css3-selectors/) a ajouté quelques nouvelles pseudo-classes relatives aux formulaires HTML :
 
-<p>Il y a quelques expérimentations par les fournisseurs de navigateurs pour étendre l'expressivité des CSS sur les formulaires ; dans certains cas, il est bon de savoir ce qui est disponible..</p>
+  - {{cssxref(":enabled")}}
+  - {{cssxref(":disabled")}}
+  - {{cssxref(":checked")}}
+  - {{cssxref(":indeterminate")}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Même si ces expérimentations sont intéressantes, <strong>elles ne sont pas normées, ce qui signifie qu'elles ne sont pas fiables</strong>. Si vous les utilisez (et vous ne devriez probablement pas le faire souvent), vous le faites à vos propres risques et périls ; <a href="https://www.alistapart.com/articles/every-time-you-call-a-proprietary-feature-css3-a-kitten-dies/">vous faites quelque chose qui peut être mauvais pour le Web</a> en utilisant des propriétés non standard.</p>
-</div>
+- [CSS Basic UI Level 3](https://dev.w3.org/csswg/css3-ui/#pseudo-classes) a ajouté quelques autres pseudo-classes pour décrire l'état du widget :
 
-<ul>
- <li><a href="/fr/docs/CSS/CSS_Reference/Mozilla_Extensions" title="/en-US/docs/CSS/CSS_Reference/Mozilla_Extensions">Extensions des CSS Mozilla </a>
+  - {{cssxref(":default")}}
+  - {{cssxref(":valid")}}
+  - {{cssxref(":invalid")}}
+  - {{cssxref(":in-range")}}
+  - {{cssxref(":out-of-range")}}
+  - {{cssxref(":required")}}
+  - {{cssxref(":optional")}}
+  - {{cssxref(":read-only")}}
+  - {{cssxref(":read-write")}}
 
-  <ul>
-   <li>{{cssxref(":placeholder-shown")}}</li>
-   <li>{{cssxref(":-moz-submit-invalid")}}</li>
-   <li>{{cssxref(":user-invalid")}}</li>
-   <li>{{cssxref(":-moz-ui-valid")}}</li>
-  </ul>
- </li>
- <li><a href="/fr/docs/CSS/CSS_Reference/Webkit_Extensions" title="/en-US/docs/CSS/CSS_Reference/Webkit_Extensions">Extensions des CSS WebKit </a>
-  <ul>
-   <li>{{cssxref("::-webkit-input-placeholder")}}</li>
-   <li><a href="http://trac.webkit.org/wiki/Styling%20Form%20Controls" rel="external">et beaucoup d'autres</a></li>
-  </ul>
- </li>
- <li><a href="http://msdn.microsoft.com/en-us/library/ie/hh869403%28v=vs.85%29.aspx" rel="external">Extensions des CSS Microsoft</a>
-  <ul>
-   <li><code><a href="http://msdn.microsoft.com/en-us/library/ie/hh772745%28v=vs.85%29.aspx" rel="external">:-ms-input-placeholder</a></code></li>
-  </ul>
- </li>
-</ul>
+- [CSS Selector Level 4](https://dev.w3.org/csswg/selectors4/) actuellement en développement actif et objet de grandes discussions ne prévoit pas d'ajouter grand‑chose pour améliorer les formulaires :
 
-<h3 id="Contrôle_du_style_des_éléments_de_formulaire">Contrôle du style des éléments de formulaire</h3>
+  - {{cssxref(":user-error")}} qui est juste une amélioration de la pseudo‑classe {{cssxref(":invalid")}}.
 
-<p>Les navigateurs fondés sur WebKit- (Chrome, Safari) et Gecko- (Firefox) offrent les meilleures possibilités de personnalisation des widgets HTML. Ils sont aussi disponibles sur plateforme croisées, et donc ils nécessitent un mécanisme de bascule entre les widgets de « look and feel » natif  et widget stylistiquement composables par l'utilisateur.</p>
+Voilà un bon début, mais il y a deux problèmes. Primo, certains navigateurs ne mettent pas en œuvre des fonctionnalités au-delà de CSS 2.1. Secundo, ils ne sont tout simplement pas assez perfectionnés pour styliser des widgets complexes, comme les sélecteurs de date.
 
-<p>À cette fin, ils utilisent une propriété propriétaire : {{cssxref("-webkit-appearance")}} ou {{cssxref("appearance")}}. <strong>Ces propriétés ne sont pas normées et ne doivent pas être utilisées</strong>. En fait, elles se comportent même différemment entre WebKit et Gecko. Cependant, il y a une valeur qu'il est bon de connaître : <code>none</code>. Avec cette valeur, vous êtes en mesure d'obtenir un contrôle (presque total) sur le style des widgets donnés.</p>
+Il y a quelques expérimentations par les fournisseurs de navigateurs pour étendre l'expressivité des CSS sur les formulaires ; dans certains cas, il est bon de savoir ce qui est disponible..
 
-<p>Donc, si vous avez du mal à appliquer un style à un élément, essayez d'utiliser ces propriétés propriétaires. Nous verrons quelques exemples ci-dessous, mais le cas d'utilisation le plus connu de cette propriété est relatif au style des champs de recherche sur les navigateurs WebKit :</p>
+> **Attention :** Même si ces expérimentations sont intéressantes, **elles ne sont pas normées, ce qui signifie qu'elles ne sont pas fiables**. Si vous les utilisez (et vous ne devriez probablement pas le faire souvent), vous le faites à vos propres risques et périls ; [vous faites quelque chose qui peut être mauvais pour le Web](https://www.alistapart.com/articles/every-time-you-call-a-proprietary-feature-css3-a-kitten-dies/) en utilisant des propriétés non standard.
 
-<pre class="brush: html">&lt;style&gt;
+- [Extensions des CSS Mozilla](/fr/docs/CSS/CSS_Reference/Mozilla_Extensions "/en-US/docs/CSS/CSS_Reference/Mozilla_Extensions")
+
+  - {{cssxref(":placeholder-shown")}}
+  - {{cssxref(":-moz-submit-invalid")}}
+  - {{cssxref(":user-invalid")}}
+  - {{cssxref(":-moz-ui-valid")}}
+
+- [Extensions des CSS WebKit](/fr/docs/CSS/CSS_Reference/Webkit_Extensions "/en-US/docs/CSS/CSS_Reference/Webkit_Extensions")
+
+  - {{cssxref("::-webkit-input-placeholder")}}
+  - [et beaucoup d'autres](http://trac.webkit.org/wiki/Styling%20Form%20Controls)
+
+- [Extensions des CSS Microsoft](http://msdn.microsoft.com/en-us/library/ie/hh869403%28v=vs.85%29.aspx)
+
+  - [`:-ms-input-placeholder`](http://msdn.microsoft.com/en-us/library/ie/hh772745%28v=vs.85%29.aspx)
+
+### Contrôle du style des éléments de formulaire
+
+Les navigateurs fondés sur WebKit- (Chrome, Safari) et Gecko- (Firefox) offrent les meilleures possibilités de personnalisation des widgets HTML. Ils sont aussi disponibles sur plateforme croisées, et donc ils nécessitent un mécanisme de bascule entre les widgets de « look and feel » natif  et widget stylistiquement composables par l'utilisateur.
+
+À cette fin, ils utilisent une propriété propriétaire : {{cssxref("-webkit-appearance")}} ou {{cssxref("appearance")}}. **Ces propriétés ne sont pas normées et ne doivent pas être utilisées**. En fait, elles se comportent même différemment entre WebKit et Gecko. Cependant, il y a une valeur qu'il est bon de connaître : `none`. Avec cette valeur, vous êtes en mesure d'obtenir un contrôle (presque total) sur le style des widgets donnés.
+
+Donc, si vous avez du mal à appliquer un style à un élément, essayez d'utiliser ces propriétés propriétaires. Nous verrons quelques exemples ci-dessous, mais le cas d'utilisation le plus connu de cette propriété est relatif au style des champs de recherche sur les navigateurs WebKit :
+
+```html
+<style>
 input[type=search] {
     border: 1px dotted #999;
     border-radius: 0;
 
     -webkit-appearance: none;
 }
-&lt;/style&gt;
+</style>
 
-&lt;form&gt;
-    &lt;input type="search"&gt;
-&lt;/form&gt;</pre>
+<form>
+    <input type="search">
+</form>
+```
 
-<p>{{EmbedLiveSample("Contrôle_du_style_des_éléments_de_formulaire", 250, 40)}}</p>
+{{EmbedLiveSample("Contrôle_du_style_des_éléments_de_formulaire", 250, 40)}}
 
-<div class="note">
-<p><strong>Note :</strong> Il est toujours difficile de prédire l'avenir, quand on parle de techniques Web. L'extension des possibilités d'expression des CSS est difficile ; il y a un travail exploratoire avec d'autres spécifications, telles que <a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html" rel="external">Shadow DOM</a> qui offrent certaines perspectives. La quête du formulaire de style totalement composable est loin d'être terminée.</p>
-</div>
+> **Note :** Il est toujours difficile de prédire l'avenir, quand on parle de techniques Web. L'extension des possibilités d'expression des CSS est difficile ; il y a un travail exploratoire avec d'autres spécifications, telles que [Shadow DOM](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html) qui offrent certaines perspectives. La quête du formulaire de style totalement composable est loin d'être terminée.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Cases_à_cocher_et_boutons_radio">Cases à cocher et boutons radio</h3>
+### Cases à cocher et boutons radio
 
-<p>Composer le style d'une case à cocher ou d'un bouton radio conduit à un certain désordre en soi. Par exemple, la taille des cases à cocher et des boutons radio n'est pas vraiment destinée à être modifiée et les navigateurs peuvent réagir très différemment, si vous essayez de le faire.</p>
+Composer le style d'une case à cocher ou d'un bouton radio conduit à un certain désordre en soi. Par exemple, la taille des cases à cocher et des boutons radio n'est pas vraiment destinée à être modifiée et les navigateurs peuvent réagir très différemment, si vous essayez de le faire.
 
-<h4 id="Une_simple_case_à_cocher">Une simple case à cocher</h4>
+#### Une simple case à cocher
 
-<p>Considérons la case à cocher suivante :</p>
+Considérons la case à cocher suivante :
 
-<pre class="brush: html">&lt;span&gt;&lt;input type="checkbox"&gt;&lt;/span&gt;</pre>
+```html
+<span><input type="checkbox"></span>
+```
 
-<pre class="brush: css">span {
+```css
+span {
     display: inline-block;
     background: red;
 }
@@ -138,73 +122,48 @@ input[type=search] {
 input[type=checkbox] {
     width : 100px;
     height: 100px;
-}</pre>
+}
+```
 
-<p>Voici les différentes façons dont divers navigateurs gèrent cela :</p>
+Voici les différentes façons dont divers navigateurs gèrent cela :
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Navigateur</th>
-   <th scope="col">Rendu</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Firefox 57 (Mac OSX)</td>
-   <td><img alt="" src="firefox-mac-checkbox.png"></td>
-  </tr>
-  <tr>
-   <td>Firefox 57 (Windows 10)</td>
-   <td><img alt="" src="firefox-windows-checkbox.png"></td>
-  </tr>
-  <tr>
-   <td>Chrome 63 (Mac OSX)</td>
-   <td><img alt="" src="chrome-mac-checkbox.png"></td>
-  </tr>
-  <tr>
-   <td>Chrome 63 (Windows 10)</td>
-   <td><img alt="" src="chrome-windows-checkbox.png"></td>
-  </tr>
-  <tr>
-   <td>Opera 49 (Mac OSX)</td>
-   <td><img alt="" src="opera-mac-checkbox.png"></td>
-  </tr>
-  <tr>
-   <td>Internet Explorer 11 (Windows 10)</td>
-   <td><img alt="" src="ie11-checkbox.png"></td>
-  </tr>
-  <tr>
-   <td>Edge 16 (Windows 10)</td>
-   <td><img alt="" src="edge-checkbox.png"></td>
-  </tr>
- </tbody>
-</table>
+| Navigateur                        | Rendu                             |
+| --------------------------------- | --------------------------------- |
+| Firefox 57 (Mac OSX)              | ![](firefox-mac-checkbox.png)     |
+| Firefox 57 (Windows 10)           | ![](firefox-windows-checkbox.png) |
+| Chrome 63 (Mac OSX)               | ![](chrome-mac-checkbox.png)      |
+| Chrome 63 (Windows 10)            | ![](chrome-windows-checkbox.png)  |
+| Opera 49 (Mac OSX)                | ![](opera-mac-checkbox.png)       |
+| Internet Explorer 11 (Windows 10) | ![](ie11-checkbox.png)            |
+| Edge 16 (Windows 10)              | ![](edge-checkbox.png)            |
 
-<h4 id="Un_exemple_un_peu_plus_compliqué">Un exemple un peu plus compliqué</h4>
+#### Un exemple un peu plus compliqué
 
-<p>Comme Opera et Internet Explorer n'ont pas de fonctionnalités telles que {{cssxref("-webkit-appearance")}} ou {{cssxref("appearance")}}, leur utilisation n'est pas appropriée. Heureusement, nous sommes dans un cas où les CSS disposent d'assez d'expressions pour trouver des solutions. Prenons un exemple courant :</p>
+Comme Opera et Internet Explorer n'ont pas de fonctionnalités telles que {{cssxref("-webkit-appearance")}} ou {{cssxref("appearance")}}, leur utilisation n'est pas appropriée. Heureusement, nous sommes dans un cas où les CSS disposent d'assez d'expressions pour trouver des solutions. Prenons un exemple courant :
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;fieldset&gt;
-    &lt;p&gt;
-      &lt;input type="checkbox" id="first" name="fruit-1" value="cerise"&gt;
-      &lt;label for="first"&gt;J'aime les cerises&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;input type="checkbox" id="second" name="fruit-2" value="banane" disabled&gt;
-      &lt;label for="second"&gt;Je ne peux pas aimer la banane&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;input type="checkbox" id="third" name="fruit-3" value="fraise"&gt;
-      &lt;label for="third"&gt;J'aime les fraises&lt;/label&gt;
-    &lt;/p&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <fieldset>
+    <p>
+      <input type="checkbox" id="first" name="fruit-1" value="cerise">
+      <label for="first">J'aime les cerises</label>
+    </p>
+    <p>
+      <input type="checkbox" id="second" name="fruit-2" value="banane" disabled>
+      <label for="second">Je ne peux pas aimer la banane</label>
+    </p>
+    <p>
+      <input type="checkbox" id="third" name="fruit-3" value="fraise">
+      <label for="third">J'aime les fraises</label>
+    </p>
+  </fieldset>
+</form>
+```
 
-<p>avec une composition stylistique élémentaire :</p>
+avec une composition stylistique élémentaire :
 
-<pre class="brush: css">body {
+```css
+body {
   font: 1em sans-serif;
 }
 
@@ -232,30 +191,32 @@ p {
 
 p+p {
   margin : .5em 0 0;
-}</pre>
+}
+```
 
-<p>Maintenant composons pour avoir une case à cocher personnalisée.</p>
+Maintenant composons pour avoir une case à cocher personnalisée.
 
-<p>Le plan consiste à remplacer la case à cocher native par une image de notre choix. Tout d'abord, nous devons préparer une image avec tous les états requis pour une case à cocher. Ces états sont : non coché, coché, non coché désactivé et coché désactivé. Cette image sera utilisée comme fantôme des CSS :</p>
+Le plan consiste à remplacer la case à cocher native par une image de notre choix. Tout d'abord, nous devons préparer une image avec tous les états requis pour une case à cocher. Ces états sont : non coché, coché, non coché désactivé et coché désactivé. Cette image sera utilisée comme fantôme des CSS :
 
-<p><img alt="Check box CSS Sprite" src="checkbox-sprite.png"></p>
+![Check box CSS Sprite](checkbox-sprite.png)
 
-<p>Commençons par masquer les cases à cocher d'origine. Nous les déplacerons simplement à l'extérieur de la fenêtre de visualisation de la page. Il y a deux choses importantes à considérer ici :</p>
+Commençons par masquer les cases à cocher d'origine. Nous les déplacerons simplement à l'extérieur de la fenêtre de visualisation de la page. Il y a deux choses importantes à considérer ici :
 
-<ul>
- <li>N'utilisez pas <code>display:none</code> pour masquer la case à cocher, car comme nous le verrons ci-dessous, nous avons besoin que la case à cocher soit disponible pour l'utilisateur. Avec <code>display:none</code>, la case à cocher n'est plus accessible à l'utilisateur, ce qui signifie qu'il est impossible de la cocher ou de la décocher.</li>
- <li>Nous utiliserons quelques sélecteurs CSS3 pour réaliser notre style. Afin de prendre en charge les navigateurs existants, nous pouvons préfixer tous nos sélecteurs avec la pseudo-classe {{cssxref(":root")}}. Dans l'état actuel des implémentations, tous les navigateurs prenant en charge ce dont nous avons besoin prenent en charge également la pseudo-classe {{cssxref(":root")}}, mais d'autres ne le font pas. Ceci est un exemple de moyen pratique pour filtrer l'ancien Internet Explorer. Ces anciens navigateurs verront la case à cocher normale tandis que les navigateurs modernes verront la case à cocher personnalisée.</li>
-</ul>
+- N'utilisez pas `display:none` pour masquer la case à cocher, car comme nous le verrons ci-dessous, nous avons besoin que la case à cocher soit disponible pour l'utilisateur. Avec `display:none`, la case à cocher n'est plus accessible à l'utilisateur, ce qui signifie qu'il est impossible de la cocher ou de la décocher.
+- Nous utiliserons quelques sélecteurs CSS3 pour réaliser notre style. Afin de prendre en charge les navigateurs existants, nous pouvons préfixer tous nos sélecteurs avec la pseudo-classe {{cssxref(":root")}}. Dans l'état actuel des implémentations, tous les navigateurs prenant en charge ce dont nous avons besoin prenent en charge également la pseudo-classe {{cssxref(":root")}}, mais d'autres ne le font pas. Ceci est un exemple de moyen pratique pour filtrer l'ancien Internet Explorer. Ces anciens navigateurs verront la case à cocher normale tandis que les navigateurs modernes verront la case à cocher personnalisée.
 
-<pre class="brush: css">:root input[type=checkbox] {
+```css
+:root input[type=checkbox] {
   /* les cases à cocher d'origine sont placées en dehors de la vue */
   position: absolute;
   left: -1000em;
-}</pre>
+}
+```
 
-<p>Maintenant que nous sommes débarrassés des cases à cocher natives, ajoutons la nôtre. Pour cela, nous utiliserons le pseudo élément {{cssxref("::before")}} de l'élément {{HTMLElement("label")}} qui suit la case à cocher originale. Ainsi, dans le sélecteur suivant, nous utilisons le sélecteur d'attributs pour cibler la case à cocher, puis nous utilisons le sélecteur de parents adjacent pour cibler le <code>label</code> suivant la case à cocher originale. Enfin, nous accédons au pseudo-élément {{cssxref("::before")}} et le styliser pour qu'il affiche notre case à cocher personnalisée non cochée.</p>
+Maintenant que nous sommes débarrassés des cases à cocher natives, ajoutons la nôtre. Pour cela, nous utiliserons le pseudo élément {{cssxref("::before")}} de l'élément {{HTMLElement("label")}} qui suit la case à cocher originale. Ainsi, dans le sélecteur suivant, nous utilisons le sélecteur d'attributs pour cibler la case à cocher, puis nous utilisons le sélecteur de parents adjacent pour cibler le `label` suivant la case à cocher originale. Enfin, nous accédons au pseudo-élément {{cssxref("::before")}} et le styliser pour qu'il affiche notre case à cocher personnalisée non cochée.
 
-<pre class="brush: css">:root input[type=checkbox] + label:before {
+```css
+:root input[type=checkbox] + label:before {
   content: "";
   display: inline-block;
   width  : 16px;
@@ -269,11 +230,13 @@ p+p {
   vertical-align: bottom;
   position: relative;
   bottom: 2px;
-}</pre>
+}
+```
 
-<p>Nous utilisons les pseudo-classes {{cssxref(":checked")}} et {{cssxref(":disabled")}} sur la case à cocher d'origine pour changer l'état de notre case à cocher personnalisée en conséquence. Comme nous utilisons un fantôme des CSS, tout ce que nous avons à faire est de changer la position de l'arrière-plan.</p>
+Nous utilisons les pseudo-classes {{cssxref(":checked")}} et {{cssxref(":disabled")}} sur la case à cocher d'origine pour changer l'état de notre case à cocher personnalisée en conséquence. Comme nous utilisons un fantôme des CSS, tout ce que nous avons à faire est de changer la position de l'arrière-plan.
 
-<pre class="brush: css">:root input[type=checkbox]:checked + label:before {
+```css
+:root input[type=checkbox]:checked + label:before {
   background-position: 0 -16px;
 }
 
@@ -283,29 +246,35 @@ p+p {
 
 :root input[type=checkbox]:checked:disabled + label:before {
   background-position: 0 -48px;
-}</pre>
+}
+```
 
-<p>Une dernière chose (mais très importante) : lorsqu'un utilisateur utilise le clavier pour naviguer d'un widget à un autre, chaque widget qui reçoit le focus doit être marqué visuellement. Comme nous cachons les cases à cocher natives, nous devons implémenter cette fonctionnalité nous-mêmes : l'utilisateur doit pouvoir voir où elles se trouvent dans le formulaire. Le CSS suivant met en œuvre le focus sur les cases à cocher personnalisées.</p>
+Une dernière chose (mais très importante) : lorsqu'un utilisateur utilise le clavier pour naviguer d'un widget à un autre, chaque widget qui reçoit le focus doit être marqué visuellement. Comme nous cachons les cases à cocher natives, nous devons implémenter cette fonctionnalité nous-mêmes : l'utilisateur doit pouvoir voir où elles se trouvent dans le formulaire. Le CSS suivant met en œuvre le focus sur les cases à cocher personnalisées.
 
-<pre class="brush: css">:root input[type=checkbox]:focus + label:before {
+```css
+:root input[type=checkbox]:focus + label:before {
   outline: 1px dotted black;
-}</pre>
+}
+```
 
-<p>Voyez directement ici le résultat :</p>
+Voyez directement ici le résultat :
 
-<p>{{EmbedLiveSample("Un_exemple_un_peu_plus_compliqué", 250, 130)}}</p>
+{{EmbedLiveSample("Un_exemple_un_peu_plus_compliqué", 250, 130)}}
 
-<h3 id="Gérer_le_cauchemar_&lt;select>">Gérer le cauchemar &lt;select&gt;</h3>
+### Gérer le cauchemar \<select>
 
-<p>L'élément {{HTMLElement("select")}} est considéré comme un widget « truand », car il est impossible de lui composer un style cohérent entre les plateformes. Toutefois, certaines choses restent possibles. Plutôt qu'une longue explication, voyons un exemple :</p>
+L'élément {{HTMLElement("select")}} est considéré comme un widget « truand », car il est impossible de lui composer un style cohérent entre les plateformes. Toutefois, certaines choses restent possibles. Plutôt qu'une longue explication, voyons un exemple :
 
-<pre class="brush: html">&lt;select&gt;
-  &lt;option&gt;Cerise&lt;/option&gt;
-  &lt;option&gt;Banane&lt;/option&gt;
-  &lt;option&gt;Fraise&lt;/option&gt;
-&lt;/select&gt;</pre>
+```html
+<select>
+  <option>Cerise</option>
+  <option>Banane</option>
+  <option>Fraise</option>
+</select>
+```
 
-<pre class="brush: css">select {
+```css
+select {
   width   : 80px;
   padding : 10px;
 }
@@ -313,150 +282,203 @@ p+p {
 option {
   padding : 5px;
   color   : red;
-}</pre>
+}
+```
 
-<p>Le tableau suivant montre comment divers navigateurs gèrent cela, dans deux cas. Les deux premières colonnes ne sont que l'exemple ci-dessus. Les deux colonnes suivantes utilisent des CSS personnalisés supplémentaires, pour avoir plus de contrôle sur l'apparence du widget :</p>
+Le tableau suivant montre comment divers navigateurs gèrent cela, dans deux cas. Les deux premières colonnes ne sont que l'exemple ci-dessus. Les deux colonnes suivantes utilisent des CSS personnalisés supplémentaires, pour avoir plus de contrôle sur l'apparence du widget :
 
-<pre class="brush: css">select, option {
+```css
+select, option {
   -webkit-appearance : none; /* Pour avoir le contrôle de l'apparence sur WebKit/Chromium */
   -moz-appearance : none; /* Pour avoir le contrôle sur l'apparence sur Gecko */
 
   /* Pour avoir le contrôle sur l'apparence et sur Trident (IE)
      Notez que cela fonctionne aussi sur Gecko et a des effets limités sur WebKit */
   background : none;
-}</pre>
+}
+```
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th colspan="1" rowspan="2" scope="col">Navigateur</th>
-   <th colspan="2" scope="col" style="text-align: center;">Rendu classique</th>
-   <th colspan="2" scope="col" style="text-align: center;">Rendu travaillé</th>
-  </tr>
-  <tr>
-   <th scope="col" style="text-align: center;">fermé</th>
-   <th scope="col" style="text-align: center;">ouvert</th>
-   <th scope="col" style="text-align: center;">fermé</th>
-   <th scope="col" style="text-align: center;">ouvert</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Firefox 57 (Mac OSX)</td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="firefox-mac-select-1-closed.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="firefox-mac-select-1-open.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="firefox-mac-select-2-closed.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="firefox-mac-select-2-open.png"></td>
-  </tr>
-  <tr>
-   <td>Firefox 57 (Windows 10)</td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="firefox-windows-select-1-closed.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="firefox-windows-select-1-open.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="firefox-windows-select-2-closed.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="firefox-windows-select-2-open.png"></td>
-  </tr>
-  <tr>
-   <td>Chrome 63 (Mac OSX)</td>
-   <td style="vertical-align: top; text-align: center;"><img alt="" src="chrome-mac-select-1-closed.png"></td>
-   <td style="vertical-align: top; text-align: center;"><img alt="" src="chrome-mac-select-1-open.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="chrome-windows-select-2-closed.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="chrome-mac-select-2-open.png"></td>
-  </tr>
-  <tr>
-   <td>Chrome 63 (Windows 10)</td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="chrome-windows-select-1-closed.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="chrome-windows-select-1-open.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="chrome-windows-select-2-closed.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="chrome-windows-select-2-open.png"></td>
-  </tr>
-  <tr>
-   <td>Opera 49 (Mac OSX)</td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="opera-mac-select-1-closed.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="opera-mac-select-1-open.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="opera-mac-select-2-closed.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="opera-mac-select-2-open.png"></td>
-  </tr>
-  <tr>
-   <td>IE11 (Windows 10)</td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="ie11-select-1-closed.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="ie11-select-1-open.png"></td>
-   <td style="text-align: center; vertical-align: middle;"><img alt="" src="ie11-select-2-closed.png"></td>
-   <td style="text-align: center; vertical-align: middle;"><img alt="" src="ie11-select-2-open.png"></td>
-  </tr>
-  <tr>
-   <td>Edge 16 (Windows 10)</td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="edge-select-1-closed.png"></td>
-   <td style="text-align: center; vertical-align: top;"><img alt="" src="edge-select-1-open.png"></td>
-   <td style="text-align: center; vertical-align: middle;"><img alt="" src="edge-select-2-closed.png"></td>
-   <td style="text-align: center; vertical-align: middle;"><img alt="" src="edge-select-2-open.png"></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th colspan="1" rowspan="2" scope="col">Navigateur</th>
+      <th colspan="2" scope="col" style="text-align: center">
+        Rendu classique
+      </th>
+      <th colspan="2" scope="col" style="text-align: center">
+        Rendu travaillé
+      </th>
+    </tr>
+    <tr>
+      <th scope="col" style="text-align: center">fermé</th>
+      <th scope="col" style="text-align: center">ouvert</th>
+      <th scope="col" style="text-align: center">fermé</th>
+      <th scope="col" style="text-align: center">ouvert</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Firefox 57 (Mac OSX)</td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="firefox-mac-select-1-closed.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="firefox-mac-select-1-open.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="firefox-mac-select-2-closed.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="firefox-mac-select-2-open.png" />
+      </td>
+    </tr>
+    <tr>
+      <td>Firefox 57 (Windows 10)</td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="firefox-windows-select-1-closed.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="firefox-windows-select-1-open.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="firefox-windows-select-2-closed.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="firefox-windows-select-2-open.png" />
+      </td>
+    </tr>
+    <tr>
+      <td>Chrome 63 (Mac OSX)</td>
+      <td style="vertical-align: top; text-align: center">
+        <img alt="" src="chrome-mac-select-1-closed.png" />
+      </td>
+      <td style="vertical-align: top; text-align: center">
+        <img alt="" src="chrome-mac-select-1-open.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="chrome-windows-select-2-closed.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="chrome-mac-select-2-open.png" />
+      </td>
+    </tr>
+    <tr>
+      <td>Chrome 63 (Windows 10)</td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="chrome-windows-select-1-closed.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="chrome-windows-select-1-open.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="chrome-windows-select-2-closed.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="chrome-windows-select-2-open.png" />
+      </td>
+    </tr>
+    <tr>
+      <td>Opera 49 (Mac OSX)</td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="opera-mac-select-1-closed.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="opera-mac-select-1-open.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="opera-mac-select-2-closed.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="opera-mac-select-2-open.png" />
+      </td>
+    </tr>
+    <tr>
+      <td>IE11 (Windows 10)</td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="ie11-select-1-closed.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="ie11-select-1-open.png" />
+      </td>
+      <td style="text-align: center; vertical-align: middle">
+        <img alt="" src="ie11-select-2-closed.png" />
+      </td>
+      <td style="text-align: center; vertical-align: middle">
+        <img alt="" src="ie11-select-2-open.png" />
+      </td>
+    </tr>
+    <tr>
+      <td>Edge 16 (Windows 10)</td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="edge-select-1-closed.png" />
+      </td>
+      <td style="text-align: center; vertical-align: top">
+        <img alt="" src="edge-select-1-open.png" />
+      </td>
+      <td style="text-align: center; vertical-align: middle">
+        <img alt="" src="edge-select-2-closed.png" />
+      </td>
+      <td style="text-align: center; vertical-align: middle">
+        <img alt="" src="edge-select-2-open.png" />
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Comme vous pouvez le voir, malgré l'aide des propriétés <code>-*-appearance</code>, il reste quelques problèmes :</p>
+Comme vous pouvez le voir, malgré l'aide des propriétés `-*-appearance`, il reste quelques problèmes :
 
-<ul>
- <li>La propriété {{cssxref("padding")}} est gérée de manière incohérente entre les divers systèmes d'exploitation et navigateurs.</li>
- <li>Internet Explorer ancien ne permet pas un style sans à-coups.</li>
- <li>Firefox ne dispose d'aucun moyen pour rendre la flèche de déroulement.</li>
- <li>Si vous voulez donner un style aux éléments {{HTMLElement("option")}} dans la liste déroulante, le comportement de Chrome et Opera varie d'un système à l'autre.</li>
-</ul>
+- La propriété {{cssxref("padding")}} est gérée de manière incohérente entre les divers systèmes d'exploitation et navigateurs.
+- Internet Explorer ancien ne permet pas un style sans à-coups.
+- Firefox ne dispose d'aucun moyen pour rendre la flèche de déroulement.
+- Si vous voulez donner un style aux éléments {{HTMLElement("option")}} dans la liste déroulante, le comportement de Chrome et Opera varie d'un système à l'autre.
 
-<p>De plus, avec notre exemple, nous n'utilisons que trois propriétés CSS. Imaginez le désordre quand on considère encore plus de propriétés CSS. Comme vous pouvez le voir, les CSS ne sont pas adaptées pour changer l'apparence et la convivialité de ces widgets de manière cohérente, mais elles vous permettent quand même d'ajuster certaines choses. Pour autant que vous soyez prêt à vivre avec des différences d'un navigateur et d'un système d'exploitation à l'autre.</p>
+De plus, avec notre exemple, nous n'utilisons que trois propriétés CSS. Imaginez le désordre quand on considère encore plus de propriétés CSS. Comme vous pouvez le voir, les CSS ne sont pas adaptées pour changer l'apparence et la convivialité de ces widgets de manière cohérente, mais elles vous permettent quand même d'ajuster certaines choses. Pour autant que vous soyez prêt à vivre avec des différences d'un navigateur et d'un système d'exploitation à l'autre.
 
-<p>Nous vous aiderons à comprendre quelles sont les propriétés qui conviennent dans l'article suivant : <a href="/fr/docs/Properties_compatibility_table_for_forms_widgets" title="/en-US/docs/Properties_compatibility_table_for_forms_widgets">Tableau de compatibilité des propriétés entre les widgets de formulaire</a>.</p>
+Nous vous aiderons à comprendre quelles sont les propriétés qui conviennent dans l'article suivant : [Tableau de compatibilité des propriétés entre les widgets de formulaire](/fr/docs/Properties_compatibility_table_for_forms_widgets "/en-US/docs/Properties_compatibility_table_for_forms_widgets").
 
-<h2 id="Vers_des_formulaires_plus_sympas_bibliothèques_utiles_et_«_polyfill_»_(prothèses_d'émulation)">Vers des formulaires plus sympas : bibliothèques utiles et<strong> </strong>« <strong>polyfill » (prothèses d'émulation)</strong></h2>
+## Vers des formulaires plus sympas : bibliothèques utiles et\*\* **« **polyfill » (prothèses d'émulation)\*\*
 
-<p>Bien que les CSS soient assez expressives pour les cases à cocher et les boutons radio, c'est loin d'être vrai pour les widgets plus avancés. Même si certaines choses sont possibles avec l'élément {{HTMLElement("select")}}, le widget <code>file</code> ne peut pas être stylisé du tout. Il en est de même pour le sélecteur de date, etc.</p>
+Bien que les CSS soient assez expressives pour les cases à cocher et les boutons radio, c'est loin d'être vrai pour les widgets plus avancés. Même si certaines choses sont possibles avec l'élément {{HTMLElement("select")}}, le widget `file` ne peut pas être stylisé du tout. Il en est de même pour le sélecteur de date, etc.
 
-<p>Si vous souhaitez avoir un contrôle total sur les widgets de formulaire, vous n'avez pas d'autre choix que de compter sur JavaScript. Dans l'article<a href="/fr/docs/HTML/Forms/How_to_build_custom_form_widgets"> Comment créer des widgets de formulaires personnalisés</a>, nous voyons comment le faire nous-mêmes, mais il existe des bibliothèques très utiles pouvant vous aider :</p>
+Si vous souhaitez avoir un contrôle total sur les widgets de formulaire, vous n'avez pas d'autre choix que de compter sur JavaScript. Dans l'article[ Comment créer des widgets de formulaires personnalisés](/fr/docs/HTML/Forms/How_to_build_custom_form_widgets), nous voyons comment le faire nous-mêmes, mais il existe des bibliothèques très utiles pouvant vous aider :
 
-<ul>
- <li><a href="http://sprawsm.com/uni-form/" rel="external">Uni-form</a> est un canevas de standardisation du balisage des formulaires, en le composant stylistiquement avec des CSS. Il offre également quelques fonctionnalités supplémentaires lorsqu'il est utilisé avec jQuery, mais c'est optionnel.</li>
- <li><a href="http://formalize.me/" rel="external">Formalize</a> est une extension des canevas JavaScript courants (tels que jQuery, Dojo, YUI, etc.) aidant à rationaliser et personnaliser les formulaires.</li>
- <li><a href="http://www.emblematiq.com/lab/niceforms/" rel="external">Niceforms</a> est une méthode JavaScript autonome fournissant une personnalisation complète des formulaires Web. Vous pouvez utiliser certains thèmes intégrés ou créer les vôtres.</li>
-</ul>
+- [Uni-form](http://sprawsm.com/uni-form/) est un canevas de standardisation du balisage des formulaires, en le composant stylistiquement avec des CSS. Il offre également quelques fonctionnalités supplémentaires lorsqu'il est utilisé avec jQuery, mais c'est optionnel.
+- [Formalize](http://formalize.me/) est une extension des canevas JavaScript courants (tels que jQuery, Dojo, YUI, etc.) aidant à rationaliser et personnaliser les formulaires.
+- [Niceforms](http://www.emblematiq.com/lab/niceforms/) est une méthode JavaScript autonome fournissant une personnalisation complète des formulaires Web. Vous pouvez utiliser certains thèmes intégrés ou créer les vôtres.
 
-<p>Les bibliothèques suivantes ne visent pas seulement les formulaires, mais elles ont des fonctionnalités très intéressantes pour les traiter :</p>
+Les bibliothèques suivantes ne visent pas seulement les formulaires, mais elles ont des fonctionnalités très intéressantes pour les traiter :
 
-<ul>
- <li><a href="http://jqueryui.com/" rel="external">jQuery UI</a> offre des widgets avancés et personnalisables très intéressants, comme les sélecteurs de date (avec une attention particulière pour l'accessibilité).</li>
- <li><a href="http://twitter.github.com/bootstrap/base-css.html#forms" rel="external">Twitter Bootstrap</a> peut être très utile si vous voulez normaliser vos formulaires.</li>
- <li><a href="https://afarkas.github.io/webshim/demos/" rel="external">WebShim</a> est un énorme outil pouvant vous aider à gérer la prise en charge des navigateurs HTML5. La partie formulaires Web peut être très utile.</li>
-</ul>
+- [jQuery UI](http://jqueryui.com/) offre des widgets avancés et personnalisables très intéressants, comme les sélecteurs de date (avec une attention particulière pour l'accessibilité).
+- [Twitter Bootstrap](http://twitter.github.com/bootstrap/base-css.html#forms) peut être très utile si vous voulez normaliser vos formulaires.
+- [WebShim](https://afarkas.github.io/webshim/demos/) est un énorme outil pouvant vous aider à gérer la prise en charge des navigateurs HTML5. La partie formulaires Web peut être très utile.
 
-<p>Rappelez-vous que lier CSS et JavaScript peut avoir des effets collatéraux. Donc, si vous choisissez d'utiliser l'une de ces bibliothèques, vous devez toujours prévoir des solutions de repli dans les feuilles de style en cas d'échec du script. Il y a de nombreuses raisons pour lesquelles les scripts peuvent échouer, surtout dans le monde des mobiles et vous devez concevoir votre site Web ou votre application pour traiter ces cas le mieux possible.</p>
+Rappelez-vous que lier CSS et JavaScript peut avoir des effets collatéraux. Donc, si vous choisissez d'utiliser l'une de ces bibliothèques, vous devez toujours prévoir des solutions de repli dans les feuilles de style en cas d'échec du script. Il y a de nombreuses raisons pour lesquelles les scripts peuvent échouer, surtout dans le monde des mobiles et vous devez concevoir votre site Web ou votre application pour traiter ces cas le mieux possible.
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p> </p>
 
-<p>Bien qu'il y ait encore des points noirs avec l'utilisation des CSS dans les formulaires HTML, il y a souvent moyen de les contourner. Il n'existe pas de solution générale et nette, mais les navigateurs modernes offrent de nouvelles possibilités. Pour l'instant, la meilleure solution est d'en savoir plus sur la façon dont les divers navigateurs prennent en charge les CSS, telles qu'appliquées aux widgets de formulaires HTML.</p>
 
-<p>Dans le prochain article de ce guide, nous explorerons comment les différents widgets de formulaire HTML prennent en charge  les plus importantes propriétés des CSS : <a href="/fr/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Tableau de compatibilité des propriétés entre widgets de formulaire</a>.</p>
+Bien qu'il y ait encore des points noirs avec l'utilisation des CSS dans les formulaires HTML, il y a souvent moyen de les contourner. Il n'existe pas de solution générale et nette, mais les navigateurs modernes offrent de nouvelles possibilités. Pour l'instant, la meilleure solution est d'en savoir plus sur la façon dont les divers navigateurs prennent en charge les CSS, telles qu'appliquées aux widgets de formulaires HTML.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+Dans le prochain article de ce guide, nous explorerons comment les différents widgets de formulaire HTML prennent en charge  les plus importantes propriétés des CSS : [Tableau de compatibilité des propriétés entre widgets de formulaire](/fr/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets).
 
-<ul>
- <li><a href="http://diveintohtml5.info/forms.html" rel="external">Dive into HTML5: Forms </a>(en anglais)</li>
- <li><a href="http://www.smashingmagazine.com/2011/06/27/useful-ideas-and-guidelines-for-good-web-form-design/" rel="external">Idées utiles et lignes‑guides pour un bon design des formulaires Web</a> (en anglais)</li>
-</ul>
+## Voir aussi
 
-<p>{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML", "Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets", "Web/Guide/HTML/Formulaires")}}</p>
+- [Dive into HTML5: Forms ](http://diveintohtml5.info/forms.html)(en anglais)
+- [Idées utiles et lignes‑guides pour un bon design des formulaires Web](http://www.smashingmagazine.com/2011/06/27/useful-ideas-and-guidelines-for-good-web-form-design/) (en anglais)
 
-<h2 id="Dans_ce_module">Dans ce module</h2>
+{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML", "Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets", "Web/Guide/HTML/Formulaires")}}
 
-<ul>
- <li><a href="/fr/docs/Learn/Forms/Your_first_form">Mon premier formulaire HTML</a></li>
- <li><a href="/fr/docs/Learn/Forms/How_to_structure_a_web_form">Comment structurer un formulaire HTML</a></li>
- <li><a href="/fr/docs/Learn/Forms/Basic_native_form_controls">Les widgets natifs pour formulaire</a></li>
- <li><a href="/fr/docs/Learn/Forms/Sending_and_retrieving_form_data">Envoi des données de formulaire</a></li>
- <li><a href="/fr/docs/Learn/Forms/Form_validation">Validation des données de formulaire</a></li>
- <li><a href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls">Comment construire des widgets personnalisés pour formulaire</a></li>
- <li><a href="/fr/docs/Learn/Forms/Sending_forms_through_JavaScript">Envoi de formulaires à l'aide du JavaScript</a></li>
- <li><a href="/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers">Formulaires HTML dans les navigateurs anciens</a></li>
- <li><a href="/fr/docs/Learn/Forms/Styling_web_forms">Mise en forme des formulaires HTML</a></li>
- <li>Mise en forme avancée des formulaires HTML</li>
- <li><a href="/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Table de compatibilité des propriétés pour les widgets de formulaire</a></li>
-</ul>
+## Dans ce module
+
+- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Your_first_form)
+- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
+- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Basic_native_form_controls)
+- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Validation des données de formulaire](/fr/docs/Learn/Forms/Form_validation)
+- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms)
+- Mise en forme avancée des formulaires HTML
+- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

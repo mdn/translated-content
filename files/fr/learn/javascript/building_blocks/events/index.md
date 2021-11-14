@@ -4,62 +4,71 @@ slug: Learn/JavaScript/Building_blocks/Events
 translation_of: Learn/JavaScript/Building_blocks/Events
 original_slug: Apprendre/JavaScript/Building_blocks/Evènements
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}</div>
-
-<p>Les événements sont des actions ou des occurrences qui se produisent dans le système que vous programmez et dont le système vous informe afin que vous puissiez y répondre d'une manière ou d'une autre si vous le souhaitez. Par exemple, si l'utilisateur clique sur un bouton d'une page Web, vous pouvez répondre à cette action en affichant une boîte d'information. Dans cet article, nous allons discuter de quelques concepts importants concernant les événements, et regarder comment ils fonctionnent dans les navigateurs. Ce ne sera pas une étude exhaustive; mais seulement ce que vous devez savoir à ce stade.</p>
+Les événements sont des actions ou des occurrences qui se produisent dans le système que vous programmez et dont le système vous informe afin que vous puissiez y répondre d'une manière ou d'une autre si vous le souhaitez. Par exemple, si l'utilisateur clique sur un bouton d'une page Web, vous pouvez répondre à cette action en affichant une boîte d'information. Dans cet article, nous allons discuter de quelques concepts importants concernant les événements, et regarder comment ils fonctionnent dans les navigateurs. Ce ne sera pas une étude exhaustive; mais seulement ce que vous devez savoir à ce stade.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prérequis:</th>
-   <td>Connaissances de base en informatique, une compréhension de base de HTML et CSS, <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas en JavaScript</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objectif:</th>
-   <td>Comprendre la théorie fondamentale des événements, comment ils fonctionnent dans les navigateurs et comment les événements peuvent différer dans différents environnements de programmation.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prérequis:</th>
+      <td>
+        Connaissances de base en informatique, une compréhension de base de HTML
+        et CSS,
+        <a href="/fr/docs/Learn/JavaScript/First_steps"
+          >Premiers pas en JavaScript</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objectif:</th>
+      <td>
+        Comprendre la théorie fondamentale des événements, comment ils
+        fonctionnent dans les navigateurs et comment les événements peuvent
+        différer dans différents environnements de programmation.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Une_série_d'événements_heureux">Une série d'événements heureux</h2>
+## Une série d'événements heureux
 
-<p>Comme mentionné ci-dessus, les événements sont des actions ou des occurrences qui se produisent dans le système que vous programmez — le système déclenche un signal quelconque lorsqu'un événement se produit, et fournit également un mécanisme par lequel une  action est exécutée automatiquement (p.ex. un code en cours d'exécution) lorsque l'événement se produit. Par exemple, dans un aéroport, lorsque la piste est libre pour qu'un avion décolle, un signal est communiqué au pilote et, par conséquent, il commence à piloter l'avion.</p>
+Comme mentionné ci-dessus, les événements sont des actions ou des occurrences qui se produisent dans le système que vous programmez — le système déclenche un signal quelconque lorsqu'un événement se produit, et fournit également un mécanisme par lequel une  action est exécutée automatiquement (p.ex. un code en cours d'exécution) lorsque l'événement se produit. Par exemple, dans un aéroport, lorsque la piste est libre pour qu'un avion décolle, un signal est communiqué au pilote et, par conséquent, il commence à piloter l'avion.
 
-<p><img alt="" src="MDN-mozilla-events-runway.png"></p>
+![](MDN-mozilla-events-runway.png)
 
-<p>Dans le cas du Web, les événements sont déclenchés à l'intérieur de la fenêtre du navigateur et tendent à être rattachés à un élément spécifique qui s'y trouve - il peut s'agir d'un élément unique, d'un ensemble d'éléments, du document HTML chargé dans l'onglet en cours ou toute la fenêtre du navigateur. Il y a beaucoup de types différents d'événements qui peuvent se produire, par exemple :</p>
+Dans le cas du Web, les événements sont déclenchés à l'intérieur de la fenêtre du navigateur et tendent à être rattachés à un élément spécifique qui s'y trouve - il peut s'agir d'un élément unique, d'un ensemble d'éléments, du document HTML chargé dans l'onglet en cours ou toute la fenêtre du navigateur. Il y a beaucoup de types différents d'événements qui peuvent se produire, par exemple :
 
-<ul>
- <li>L'utilisateur clique avec la souris sur un certain élément ou en place le curseur sur un certain élément.</li>
- <li>L'utilisateur appuie sur une touche du clavier.     </li>
- <li>L'utilisateur redimensionne ou ferme la fenêtre du navigateur.     </li>
- <li>Une page web finissant de se charger.     </li>
- <li>Un formulaire en cours de soumission     </li>
- <li>Une vidéo en cours de lecture, en pause ou en fin de lecture.     </li>
- <li>Une erreur qui survient.</li>
-</ul>
+- L'utilisateur clique avec la souris sur un certain élément ou en place le curseur sur un certain élément.
+- L'utilisateur appuie sur une touche du clavier.
+- L'utilisateur redimensionne ou ferme la fenêtre du navigateur.
+- Une page web finissant de se charger.
+- Un formulaire en cours de soumission
+- Une vidéo en cours de lecture, en pause ou en fin de lecture.
+- Une erreur qui survient.
 
-<p>Vous vous en rendrez compte (notamment en jetant un coup d'œil à la section MDN <a href="/fr/docs/Web/Events">Référence des événements</a> ), il y a <strong>beaucoup</strong> d'événements auxquels vous pouvez répondre.<br>
- <br>
- Chaque événement disponible a un <strong>gestionnaire d'événement</strong>, qui est un bloc de code (généralement une fonction JavaScript définie par l'utilisateur) qui sera exécuté lorsque l'événement se déclenchera. Lorsqu'un tel bloc de code est défini pour être exécuté en réponse à un déclenchement d'événement, nous disons que nous <strong>enregistrons un gestionnaire d'événements</strong>. Notez que les gestionnaires d'événements sont parfois appelés <strong>écouteurs d'événements</strong> - ils sont à peu près interchangeables pour ce qui nous concerne, même si à la rigueur, ils fonctionnent ensemble. L'écouteur écoute l'événement qui se produit et le gestionnaire est le code qui est exécuté en réponse à ce qui se passe.</p>
+Vous vous en rendrez compte (notamment en jetant un coup d'œil à la section MDN [Référence des événements](/fr/docs/Web/Events) ), il y a **beaucoup** d'événements auxquels vous pouvez répondre.
 
-<div class="note">
-<p><strong>Note :</strong> il est important de noter que les événements web ne font pas partie du langage du noyau JavaScript — ils sont définis comme faisant partie des APIs JavaScript intégrées du navigateur</p>
-</div>
+Chaque événement disponible a un **gestionnaire d'événement**, qui est un bloc de code (généralement une fonction JavaScript définie par l'utilisateur) qui sera exécuté lorsque l'événement se déclenchera. Lorsqu'un tel bloc de code est défini pour être exécuté en réponse à un déclenchement d'événement, nous disons que nous **enregistrons un gestionnaire d'événements**. Notez que les gestionnaires d'événements sont parfois appelés **écouteurs d'événements** - ils sont à peu près interchangeables pour ce qui nous concerne, même si à la rigueur, ils fonctionnent ensemble. L'écouteur écoute l'événement qui se produit et le gestionnaire est le code qui est exécuté en réponse à ce qui se passe.
 
-<h3 id="Un_exemple_simple">Un exemple simple</h3>
+> **Note :** il est important de noter que les événements web ne font pas partie du langage du noyau JavaScript — ils sont définis comme faisant partie des APIs JavaScript intégrées du navigateur
 
-<p>Regardons un exemple simple pour expliquer ce que nous entendons ici. Vous avez déjà utilisé des événements et des gestionnaires d'événements dans de nombreux exemples de ce cours, mais récapitulons simplement pour consolider nos connaissances. Dans l'exemple suivant, nous avons un {{htmlelement ("bouton")}} unique, qui, lorsqu'il est pressé, fera passer l'arrière-plan à une couleur aléatoire:</p>
+### Un exemple simple
 
-<pre class="brush: html">&lt;button&gt;Change color&lt;/button&gt;</pre>
+Regardons un exemple simple pour expliquer ce que nous entendons ici. Vous avez déjà utilisé des événements et des gestionnaires d'événements dans de nombreux exemples de ce cours, mais récapitulons simplement pour consolider nos connaissances. Dans l'exemple suivant, nous avons un {{htmlelement ("bouton")}} unique, qui, lorsqu'il est pressé, fera passer l'arrière-plan à une couleur aléatoire:
 
-<pre class="brush: css hidden">button { margin: 10px };</pre>
+```html
+<button>Change color</button>
+```
 
-<p>Le JavaScript ressemblera à ça :</p>
+```css hidden
+button { margin: 10px };
+```
 
-<pre class="brush: js">var btn = document.querySelector('button');
+Le JavaScript ressemblera à ça :
+
+```js
+var btn = document.querySelector('button');
 
 function random(number) {
   return Math.floor(Math.random()*(number+1));
@@ -68,228 +77,242 @@ function random(number) {
 btn.onclick = function() {
   var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   document.body.style.backgroundColor = rndCol;
-}</pre>
+}
+```
 
-<p> </p>
 
-<p>Dans ce code, nous stockons une référence au bouton dans une variable appelée btn, en utilisant la fonction {{domxref ("Document.querySelector ()")}}. Nous définissons également une fonction qui renvoie un nombre aléatoire. La troisième partie du code est le gestionnaire d'événement. La variable <code>btn</code> pointe sur un élément <code>&lt;button&gt;</code> , et ce type d'objet a un certain nombre d'événements qui peuvent être déclenchés, et par conséquent, des gestionnaires d'événements sont disponibles. Nous sommes à l'écoute du déclenchement de l'événement click, en définissant la propriété <code>onclick</code>   du gestionnaire d'événements comme une fonction anonyme contenant du code qui génère une couleur RVB aléatoire et lui affecte la couleur d'arrière-plan <code>&lt;body&gt;</code> .<br>
- <br>
- Ce code sera maintenant exécuté chaque fois que l'événement "click" se déclenchera sur l'élément <code>&lt;button&gt;</code>, c'est-à-dire chaque fois qu'un utilisateur cliquera dessus.</p>
 
-<p>Vous pourrez voir cet exemple s'afficher sur toute la page en cliquant sur <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html">ce lien.</a></p>
+Dans ce code, nous stockons une référence au bouton dans une variable appelée btn, en utilisant la fonction {{domxref ("Document.querySelector ()")}}. Nous définissons également une fonction qui renvoie un nombre aléatoire. La troisième partie du code est le gestionnaire d'événement. La variable `btn` pointe sur un élément `<button>` , et ce type d'objet a un certain nombre d'événements qui peuvent être déclenchés, et par conséquent, des gestionnaires d'événements sont disponibles. Nous sommes à l'écoute du déclenchement de l'événement click, en définissant la propriété `onclick`   du gestionnaire d'événements comme une fonction anonyme contenant du code qui génère une couleur RVB aléatoire et lui affecte la couleur d'arrière-plan `<body>` .
 
-<p> </p>
+Ce code sera maintenant exécuté chaque fois que l'événement "click" se déclenchera sur l'élément `<button>`, c'est-à-dire chaque fois qu'un utilisateur cliquera dessus.
 
-<h3 id="Ce_ne_sont_pas_que_des_pages_web">Ce ne sont pas que des pages web</h3>
+Vous pourrez voir cet exemple s'afficher sur toute la page en cliquant sur [ce lien.](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)
 
-<p>Une autre chose qui mérite d'être mentionnée à ce stade est que les événements ne sont pas particuliers à JavaScript - la plupart des langages de programmation ont un certain type de modèle d'événement, et la façon dont cela fonctionne diffère souvent de celle de JavaScript. En fait, le modèle d'événement en JavaScript pour les pages Web diffère du modèle d'événement pour JavaScript tel qu'il est utilisé dans d'autres environnements.</p>
 
-<p>Par exemple, <a href="/fr/docs/Learn/Server-side/Express_Nodejs">Node.js</a> est un runtime JavaScript très populaire qui permet aux développeurs d'utiliser JavaScript pour créer des applications réseau et serveur. Le modèle <a href="https://nodejs.org/docs/latest-v5.x/api/events.html">Node.js event model</a> s'appuie sur des écouteurs pour écouter les événements et des émetteurs pour générer des événements périodiquement — bien qu'il ne le semble pas à première vue, le code est très différent, en particulier lorsqu'il utilise des fonctions comme <code>on()</code> pour enregistrer un écouteur d'événement, et <code>once()</code> pour enregistrer un écouteur d'événement qui s'efface après sa première exécution. le document <a href="https://nodejs.org/docs/latest-v8.x/api/http.html#http_event_connect">HTTP connect event docs</a> propose un bon exemple d'utilisation.</p>
 
-<p>Comme autre exemple, vous pouvez désormais utiliser JavaScript pour créer des extensions inter-navigateurs — comme améliorations de la fonctionnalité du navigateur — à l'aide d'une technologie appelée <a href="/fr/Add-ons/WebExtensions">WebExtensions</a>. Le modèle d'événement est similaire au modèle d'événements Web, mais un peu différent — les écouteurs d'événements sont sensibles à la casse (p.ex.<code>onMessage</code> plutôt que <code>onmessage</code>), et doivent êtres combinés à la fonction <code>addListener</code>. Jetez un oeil à la page <a href="/fr/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage page</a> pour voir un exemple.</p>
+### Ce ne sont pas que des pages web
 
-<p>Vous n'avez pas besoin de comprendre quoi que ce soit à propos d'autres environnements de ce type à ce stade de votre apprentissage; nous voulions juste préciser que les événements peuvent différer selon les environnements de programmation.</p>
+Une autre chose qui mérite d'être mentionnée à ce stade est que les événements ne sont pas particuliers à JavaScript - la plupart des langages de programmation ont un certain type de modèle d'événement, et la façon dont cela fonctionne diffère souvent de celle de JavaScript. En fait, le modèle d'événement en JavaScript pour les pages Web diffère du modèle d'événement pour JavaScript tel qu'il est utilisé dans d'autres environnements.
 
-<h2 id="De_quelle_manière_utiliser_les_événements_Web">De quelle manière utiliser les événements Web ?</h2>
+Par exemple, [Node.js](/fr/docs/Learn/Server-side/Express_Nodejs) est un runtime JavaScript très populaire qui permet aux développeurs d'utiliser JavaScript pour créer des applications réseau et serveur. Le modèle [Node.js event model](https://nodejs.org/docs/latest-v5.x/api/events.html) s'appuie sur des écouteurs pour écouter les événements et des émetteurs pour générer des événements périodiquement — bien qu'il ne le semble pas à première vue, le code est très différent, en particulier lorsqu'il utilise des fonctions comme `on()` pour enregistrer un écouteur d'événement, et `once()` pour enregistrer un écouteur d'événement qui s'efface après sa première exécution. le document [HTTP connect event docs](https://nodejs.org/docs/latest-v8.x/api/http.html#http_event_connect) propose un bon exemple d'utilisation.
 
-<p>Il existe plusieurs façons d'ajouter un code d'écouteur d'événement aux pages Web afin qu'il soit exécuté lorsque l'événement associé se déclenche. Dans cette section, nous allons passer en revue les différents mécanismes et discuter de ceux que vous devriez utiliser.</p>
+Comme autre exemple, vous pouvez désormais utiliser JavaScript pour créer des extensions inter-navigateurs — comme améliorations de la fonctionnalité du navigateur — à l'aide d'une technologie appelée [WebExtensions](/fr/Add-ons/WebExtensions). Le modèle d'événement est similaire au modèle d'événements Web, mais un peu différent — les écouteurs d'événements sont sensibles à la casse (p.ex.`onMessage` plutôt que `onmessage`), et doivent êtres combinés à la fonction `addListener`. Jetez un oeil à la page [runtime.onMessage page](/fr/Add-ons/WebExtensions/API/runtime/onMessage) pour voir un exemple.
 
-<h3 id="Les_propriétés_du_gestionnaire_d'événement">Les propriétés du gestionnaire d'événement</h3>
+Vous n'avez pas besoin de comprendre quoi que ce soit à propos d'autres environnements de ce type à ce stade de votre apprentissage; nous voulions juste préciser que les événements peuvent différer selon les environnements de programmation.
 
-<p>Voici les propriétés qui existent pour contenir le code du gestionnaire d'événement que nous avons vu le plus fréquemment pendant le cours. Revenons à l'exemple ci-dessus :</p>
+## De quelle manière utiliser les événements Web ?
 
-<pre class="brush: js">var btn = document.querySelector('button');
+Il existe plusieurs façons d'ajouter un code d'écouteur d'événement aux pages Web afin qu'il soit exécuté lorsque l'événement associé se déclenche. Dans cette section, nous allons passer en revue les différents mécanismes et discuter de ceux que vous devriez utiliser.
+
+### Les propriétés du gestionnaire d'événement
+
+Voici les propriétés qui existent pour contenir le code du gestionnaire d'événement que nous avons vu le plus fréquemment pendant le cours. Revenons à l'exemple ci-dessus :
+
+```js
+var btn = document.querySelector('button');
 
 btn.onclick = function() {
   var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   document.body.style.backgroundColor = rndCol;
-}</pre>
+}
+```
 
-<p>La propriété <code><a href="/fr/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></code> est la propriété du gestionnaire d'événement utilisée dans cette situation. C'est essentiellement une propriété comme les autres disponibles sur le bouton (p.ex. <code><a href="/fr/docs/Web/API/Node/textContent">btn.textContent</a></code>, ou <code><a href="/fr/docs/Web/API/HTMLElement/style">btn.style</a></code>), mais d'un type spécial — lorsque vous la définissez comme étant égale à du code, ce code est exécuté lorsque l'événement se déclenche sur le bouton.</p>
+La propriété [`onclick`](/fr/docs/Web/API/GlobalEventHandlers/onclick) est la propriété du gestionnaire d'événement utilisée dans cette situation. C'est essentiellement une propriété comme les autres disponibles sur le bouton (p.ex. [`btn.textContent`](/fr/docs/Web/API/Node/textContent), ou [`btn.style`](/fr/docs/Web/API/HTMLElement/style)), mais d'un type spécial — lorsque vous la définissez comme étant égale à du code, ce code est exécuté lorsque l'événement se déclenche sur le bouton.
 
-<p>Vous pouvez également définir la propriété du gestionnaire d'événement comme étant égale au nom d'une fonction définie (comme nous l'avons vu dans <a href="/fr/Apprendre/JavaScript/Building_blocks/Build_your_own_function">Construire votre propre fonction</a>). Le code suivant fonctionnera tout pareil:</p>
+Vous pouvez également définir la propriété du gestionnaire d'événement comme étant égale au nom d'une fonction définie (comme nous l'avons vu dans [Construire votre propre fonction](/fr/Apprendre/JavaScript/Building_blocks/Build_your_own_function)). Le code suivant fonctionnera tout pareil:
 
-<pre class="brush: js">var btn = document.querySelector('button');
+```js
+var btn = document.querySelector('button');
 
 function bgChange() {
   var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   document.body.style.backgroundColor = rndCol;
 }
 
-btn.onclick = bgChange;</pre>
+btn.onclick = bgChange;
+```
 
-<p>De nombreuses propriétés de gestionnaire d'événement sont disponibles. Faisons une expérience.</p>
+De nombreuses propriétés de gestionnaire d'événement sont disponibles. Faisons une expérience.
 
-<p>Tout d'abord, faites une copie locale de <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerproperty.html">random-color-eventhandlerproperty.html</a>, et ouvrez-le dans votre navigateur. C'est juste une copie de l'exemple simple de couleur aléatoire avec lequel nous avons déjà joué dans cet article. Maintenant, changez <code>btn.onclick</code> pour lui attribuer, tour à tour, les différentes valeurs qui suivent, et observez le résultat:</p>
+Tout d'abord, faites une copie locale de [random-color-eventhandlerproperty.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerproperty.html), et ouvrez-le dans votre navigateur. C'est juste une copie de l'exemple simple de couleur aléatoire avec lequel nous avons déjà joué dans cet article. Maintenant, changez `btn.onclick` pour lui attribuer, tour à tour, les différentes valeurs qui suivent, et observez le résultat:
 
-<ul>
- <li><code><a href="/fr/docs/Web/API/GlobalEventHandlers/onfocus">btn.onfocus</a></code> et <code><a href="/fr/docs/Web/API/GlobalEventHandlers/onblur">btn.onblur</a></code> — La couleur change lorsque le bouton est net ou grisé (essayez d'appuyer sur la touche Tab pour l'activer et l'éteindre à nouveau). Ceux-ci sont souvent utilisés pour afficher des informations sur la façon de remplir les champs de formulaire lorsqu'ils sont sélectionnés, ou afficher un message d'erreur si un champ de formulaire vient d'être rempli avec une valeur incorrecte.</li>
- <li><code><a href="/fr/docs/Web/API/GlobalEventHandlers/ondblclick">btn.ondblclick</a></code> — La couleur change seulement si l'élément est double-cliqué.</li>
- <li><code><a href="/fr/docs/Web/API/GlobalEventHandlers/onkeypress">window.onkeypress</a></code>, <code><a href="/fr/docs/Web/API/GlobalEventHandlers/onkeydown">window.onkeydown</a></code>, <code><a href="/fr/docs/Web/API/GlobalEventHandlers/onkeyup">window.onkeyup</a></code> — La couleur change si l'on appuie sur une touche du clavier. <code>keypress</code> se réfère à un appui normal sur la touche (bouton appuyé puis relâché), alors que <code>keydown</code> et <code>keyup</code> se réfèrent respectivement à l'appui et au relâchement sur la touche. Notez que cela ne fonctionne pas si vous essayez d'enregistrer ce gestionnaire d'événement sur le bouton lui-même - nous avons dû l'enregistrer sur l'objet <a href="/fr/docs/Web/API/Window">window</a>, qui représente la fenêtre entière du navigateur.</li>
- <li><code><a href="/fr/docs/Web/API/GlobalEventHandlers/onmouseover">btn.onmouseover</a></code> et <code><a href="/fr/docs/Web/API/GlobalEventHandlers/onmouseout">btn.onmouseout</a></code> — La couleur changera respectivement lorsque le pointeur de la souris survolera le bouton, ou lorsque le curseur arrêtera le survol du bouton pour s'éloigner de ce dernier.</li>
-</ul>
+- [`btn.onfocus`](/fr/docs/Web/API/GlobalEventHandlers/onfocus) et [`btn.onblur`](/fr/docs/Web/API/GlobalEventHandlers/onblur) — La couleur change lorsque le bouton est net ou grisé (essayez d'appuyer sur la touche Tab pour l'activer et l'éteindre à nouveau). Ceux-ci sont souvent utilisés pour afficher des informations sur la façon de remplir les champs de formulaire lorsqu'ils sont sélectionnés, ou afficher un message d'erreur si un champ de formulaire vient d'être rempli avec une valeur incorrecte.
+- [`btn.ondblclick`](/fr/docs/Web/API/GlobalEventHandlers/ondblclick) — La couleur change seulement si l'élément est double-cliqué.
+- [`window.onkeypress`](/fr/docs/Web/API/GlobalEventHandlers/onkeypress), [`window.onkeydown`](/fr/docs/Web/API/GlobalEventHandlers/onkeydown), [`window.onkeyup`](/fr/docs/Web/API/GlobalEventHandlers/onkeyup) — La couleur change si l'on appuie sur une touche du clavier. `keypress` se réfère à un appui normal sur la touche (bouton appuyé puis relâché), alors que `keydown` et `keyup` se réfèrent respectivement à l'appui et au relâchement sur la touche. Notez que cela ne fonctionne pas si vous essayez d'enregistrer ce gestionnaire d'événement sur le bouton lui-même - nous avons dû l'enregistrer sur l'objet [window](/fr/docs/Web/API/Window), qui représente la fenêtre entière du navigateur.
+- [`btn.onmouseover`](/fr/docs/Web/API/GlobalEventHandlers/onmouseover) et [`btn.onmouseout`](/fr/docs/Web/API/GlobalEventHandlers/onmouseout) — La couleur changera respectivement lorsque le pointeur de la souris survolera le bouton, ou lorsque le curseur arrêtera le survol du bouton pour s'éloigner de ce dernier.
 
-<p>Certains événements sont très généraux et disponibles presque partout (par exemple un gestionnaire <code>onclick</code> peut être enregistré sur presque n'importe quel élément), alors que certains sont plus spécifiques et seulement utiles dans certaines situations (par exemple, il est logique d'utiliser <a href="/fr/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay">onplay</a> seulement sur des éléments spécifiques, comme des {{htmlelement("video")}}).</p>
+Certains événements sont très généraux et disponibles presque partout (par exemple un gestionnaire `onclick` peut être enregistré sur presque n'importe quel élément), alors que certains sont plus spécifiques et seulement utiles dans certaines situations (par exemple, il est logique d'utiliser [onplay](/fr/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay) seulement sur des éléments spécifiques, comme des {{htmlelement("video")}}).
 
-<h3 id="Les_gestionnaires_d'événements_en_ligne_ne_les_utilisez_pas_!">Les gestionnaires d'événements en ligne : ne les utilisez pas !</h3>
+### Les gestionnaires d'événements en ligne : ne les utilisez pas !
 
-<p>Vous pourriez également voir un motif comme celui-ci dans votre code:</p>
+Vous pourriez également voir un motif comme celui-ci dans votre code:
 
-<pre class="brush: html">&lt;button onclick="bgChange()"&gt;Press me&lt;/button&gt;
-</pre>
+```html
+<button onclick="bgChange()">Press me</button>
+```
 
-<pre class="brush: js">function bgChange() {
+```js
+function bgChange() {
   var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   document.body.style.backgroundColor = rndCol;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note :</strong> Vous trouverez le <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html">code source complet </a>de cet exemple sur GitHub (également <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html">le voir s'exécuter</a>).</p>
-</div>
+> **Note :** Vous trouverez le [code source complet ](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html)de cet exemple sur GitHub (également [le voir s'exécuter](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)).
 
-<p>La première méthode d'enregistrement des gestionnaires d'événements trouvés sur le Web impliquait des <strong>attributs HTML du gestionnaire d'événement</strong> (c'est-à-dire <strong>les gestionnaires d'événements en ligne</strong>) comme celui présenté ci-dessus — la valeur de l'attribut est littéralement le code JavaScript que vous souhaitez exécuter lorsque l'événement survient. L'exemple ci-dessus appelle une fonction définie dans un élément {{htmlelement("script")}} sur la même page, mais vous pouvez également insérer du JavaScript directement dans l'attribut comme par exemple :</p>
+La première méthode d'enregistrement des gestionnaires d'événements trouvés sur le Web impliquait des **attributs HTML du gestionnaire d'événement** (c'est-à-dire **les gestionnaires d'événements en ligne**) comme celui présenté ci-dessus — la valeur de l'attribut est littéralement le code JavaScript que vous souhaitez exécuter lorsque l'événement survient. L'exemple ci-dessus appelle une fonction définie dans un élément {{htmlelement("script")}} sur la même page, mais vous pouvez également insérer du JavaScript directement dans l'attribut comme par exemple :
 
-<pre class="brush: html">&lt;button onclick="alert('Hello, this is my old-fashioned event handler!');"&gt;Press me&lt;/button&gt;</pre>
+```html
+<button onclick="alert('Hello, this is my old-fashioned event handler!');">Press me</button>
+```
 
-<p>Vous trouverez des équivalents d'attributs HTML pour la plupart des propriétés du gestionnaire d'événement; cependant, vous ne devriez pas les utiliser — ils sont considérés comme une mauvaise pratique. Il peut sembler facile d'utiliser un attribut de gestionnaire d'événement si vous voulez avancer rapidement, mais ils deviennent rapidement ingérables et inefficaces.<br>
- <br>
- Pour commencer, ce n'est pas une bonne idée de mélanger votre HTML et votre JavaScript, car il deviennent difficile à analyser — garder votre JavaScript au même endroit est préférable; s'il se trouve dans un fichier séparé, vous pourrez l'appliquer à plusieurs documents HTML.</p>
+Vous trouverez des équivalents d'attributs HTML pour la plupart des propriétés du gestionnaire d'événement; cependant, vous ne devriez pas les utiliser — ils sont considérés comme une mauvaise pratique. Il peut sembler facile d'utiliser un attribut de gestionnaire d'événement si vous voulez avancer rapidement, mais ils deviennent rapidement ingérables et inefficaces.
 
-<p>Même dans un fichier unique, les gestionnaires d'événement en ligne ne sont pas une bonne idée. Un bouton ça va, mais que faire si vous avez 100 boutons ? Vous devez ajouter 100 attributs au fichier; la maintenance se transformerait très vite en un cauchemar. Avec JavaScript, vous pouvez facilement ajouter une fonction de gestionnaire d'événement à tous les boutons de la page, peu importe leur nombre, en utilisant quelque chose comme ceci :</p>
+Pour commencer, ce n'est pas une bonne idée de mélanger votre HTML et votre JavaScript, car il deviennent difficile à analyser — garder votre JavaScript au même endroit est préférable; s'il se trouve dans un fichier séparé, vous pourrez l'appliquer à plusieurs documents HTML.
 
-<pre class="brush: js">var buttons = document.querySelectorAll('button');
+Même dans un fichier unique, les gestionnaires d'événement en ligne ne sont pas une bonne idée. Un bouton ça va, mais que faire si vous avez 100 boutons ? Vous devez ajouter 100 attributs au fichier; la maintenance se transformerait très vite en un cauchemar. Avec JavaScript, vous pouvez facilement ajouter une fonction de gestionnaire d'événement à tous les boutons de la page, peu importe leur nombre, en utilisant quelque chose comme ceci :
 
-for (var i = 0; i &lt; buttons.length; i++) {
+```js
+var buttons = document.querySelectorAll('button');
+
+for (var i = 0; i < buttons.length; i++) {
   buttons[i].onclick = bgChange;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note :</strong> Séparer votre logique de programmation de votre contenu rend également votre site plus convivial pour les moteurs de recherche.</p>
-</div>
+> **Note :** Séparer votre logique de programmation de votre contenu rend également votre site plus convivial pour les moteurs de recherche.
 
-<h3 id="addEventListener()_et_removeEventListener()">addEventListener() et removeEventListener()</h3>
+### addEventListener() et removeEventListener()
 
-<p>Le dernier type de mécanisme d'événement est défini dans le <a href="https://www.w3.org/TR/DOM-Level-2-Events/">Document Object Model (DOM) Level 2 Events</a> , qui fournit aux navigateurs une nouvelle fonction: <code><a href="/fr/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>. Cela fonctionne de la même manière que les propriétés du gestionnaire d'événement, mais la syntaxe est évidemment différente. Nous pourrions réécrire notre exemple de couleur aléatoire comme ceci:</p>
+Le dernier type de mécanisme d'événement est défini dans le [Document Object Model (DOM) Level 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/) , qui fournit aux navigateurs une nouvelle fonction: [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener). Cela fonctionne de la même manière que les propriétés du gestionnaire d'événement, mais la syntaxe est évidemment différente. Nous pourrions réécrire notre exemple de couleur aléatoire comme ceci:
 
-<pre class="brush: js">var btn = document.querySelector('button');
+```js
+var btn = document.querySelector('button');
 
 function bgChange() {
   var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   document.body.style.backgroundColor = rndCol;
 }
 
-btn.addEventListener('click', bgChange);</pre>
+btn.addEventListener('click', bgChange);
+```
 
-<div class="note">
-<p><strong>Note :</strong> Vous trouverez le <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html">code source complet </a>de cet exemple sur GitHub (également <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html">le voir s'exécuter</a>).</p>
-</div>
+> **Note :** Vous trouverez le [code source complet ](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html)de cet exemple sur GitHub (également [le voir s'exécuter](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
 
-<p>Dans la fonction <code><a href="/fr/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> , nous spécifions deux paramètres - le nom de l'événement pour lequel nous voulons enregistrer ce gestionnaire, et le code qui comprend la fonction du gestionnaire que nous voulons exécuter en réponse. Notez qu'il est parfaitement approprié de placer tout le code dans la fonction  <code><a href="/fr/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>, dans une fonction anonyme, comme ceci:</p>
+Dans la fonction [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) , nous spécifions deux paramètres - le nom de l'événement pour lequel nous voulons enregistrer ce gestionnaire, et le code qui comprend la fonction du gestionnaire que nous voulons exécuter en réponse. Notez qu'il est parfaitement approprié de placer tout le code dans la fonction [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), dans une fonction anonyme, comme ceci:
 
-<pre class="brush: js">btn.addEventListener('click', function() {
+```js
+btn.addEventListener('click', function() {
   var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   document.body.style.backgroundColor = rndCol;
-});</pre>
+});
+```
 
-<p>Ce mécanisme a certains avantages par rapport aux mécanismes plus anciens discutés précédemment. Pour commencer, il existe une fonction réciproque,  <code><a href="/fr/docs/Web/API/EventTarget/removeEventListener">removeEventListener()</a></code>, qui supprime un écouteur ajouté précédemment. Par exemple, cela supprimerait l'écouteur du premier bloc de code de cette section:</p>
+Ce mécanisme a certains avantages par rapport aux mécanismes plus anciens discutés précédemment. Pour commencer, il existe une fonction réciproque, [`removeEventListener()`](/fr/docs/Web/API/EventTarget/removeEventListener), qui supprime un écouteur ajouté précédemment. Par exemple, cela supprimerait l'écouteur du premier bloc de code de cette section:
 
-<pre class="brush: js">btn.removeEventListener('click', bgChange);</pre>
+```js
+btn.removeEventListener('click', bgChange);
+```
 
-<p>Ceci n'a pas beaucoup de sens pour les programmes simples et de petite taille, mais pour les programmes plus grands et plus complexes, cela peut améliorer l'efficacité, de nettoyer les anciens gestionnaires d'événements inutilisés. De plus, par exemple, cela vous permet d'avoir un même bouton qui effectue différentes actions dans des circonstances différentes - tout ce que vous avez à faire est d'ajouter / supprimer des gestionnaires d'événements convenablement.<br>
- <br>
- D'autre part, vous pouvez également enregistrer plusieurs gestionnaires pour le même écouteur. Les deux gestionnaires suivants ne seraient pas appliqués:</p>
+Ceci n'a pas beaucoup de sens pour les programmes simples et de petite taille, mais pour les programmes plus grands et plus complexes, cela peut améliorer l'efficacité, de nettoyer les anciens gestionnaires d'événements inutilisés. De plus, par exemple, cela vous permet d'avoir un même bouton qui effectue différentes actions dans des circonstances différentes - tout ce que vous avez à faire est d'ajouter / supprimer des gestionnaires d'événements convenablement.
 
-<pre class="brush: js">myElement.onclick = functionA;
-myElement.onclick = functionB;</pre>
+D'autre part, vous pouvez également enregistrer plusieurs gestionnaires pour le même écouteur. Les deux gestionnaires suivants ne seraient pas appliqués:
 
-<p>Comme la deuxième ligne remplacerait la valeur de <code>onclick</code> définie par le premier. Cependant, ceci fonctionnerait:</p>
+```js
+myElement.onclick = functionA;
+myElement.onclick = functionB;
+```
 
-<pre class="brush: js">myElement.addEventListener('click', functionA);
-myElement.addEventListener('click', functionB);</pre>
+Comme la deuxième ligne remplacerait la valeur de `onclick` définie par le premier. Cependant, ceci fonctionnerait:
 
-<p>Les deux fonctions seraient maintenant exécutées lorsque l'élément est cliqué.<br>
- <br>
- En outre, il existe un certain nombre d'autres fonctionnalités et options puissantes disponibles avec ce mécanisme d'événement. Celles-ci sont un peu hors de propos pour cet article, mais si vous voulez en savoir plus sur elles, jetez un oeil aux pages de référence de  <code><a href="/fr/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> et <code><a href="/fr/docs/Web/API/EventTarget/removeEventListener">removeEventListener()</a></code>.</p>
+```js
+myElement.addEventListener('click', functionA);
+myElement.addEventListener('click', functionB);
+```
 
-<h3 id="Quel_mécanisme_devrais-je_utiliser">Quel mécanisme devrais-je utiliser ?</h3>
+Les deux fonctions seraient maintenant exécutées lorsque l'élément est cliqué.
 
-<p>Parmi les trois mécanismes, vous ne devriez certainement pas utiliser les attributs du gestionnaire d'événement HTML - ceux-ci sont obsolètes et constituent une mauvaise pratique, comme mentionné ci-dessus.<br>
- <br>
- Les deux autres sont relativement interchangeables, au moins pour des utilisations simples:<br>
-  </p>
+En outre, il existe un certain nombre d'autres fonctionnalités et options puissantes disponibles avec ce mécanisme d'événement. Celles-ci sont un peu hors de propos pour cet article, mais si vous voulez en savoir plus sur elles, jetez un oeil aux pages de référence de  [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) et [`removeEventListener()`](/fr/docs/Web/API/EventTarget/removeEventListener).
 
-<ul>
- <li>     Les propriétés du gestionnaire d'événement ont moins de puissance et d'options, mais une meilleure compatibilité entre les navigateurs (prise en charge depuis Internet Explorer 8). Vous devriez probablement commencer par ceux-ci pendant votre apprentissage.</li>
- <li>      Les événements du DOM Niveau 2 (<code>addEventListener()</code>, etc.) sont plus puissants, mais peuvent aussi devenir plus complexes et moins bien supportés (supportés depuis Internet Explorer 9). Vous devriez également vous entraîner avec, et tenter de les utiliser si possible.</li>
-</ul>
+### Quel mécanisme devrais-je utiliser ?
 
-<p>Les principaux avantages du troisième mécanisme : vous pouvez supprimer le code du gestionnaire d'événement si nécessaire en utilisant <code>removeEventListener()</code>, et vous pouvez ajouter plusieurs écouteurs du même type aux éléments si nécessaire. Par exemple, vous pouvez appeler <code>addEventListener('click', function() { ... })</code> sur un élément plusieurs fois, avec différentes fonctions spécifiées dans le deuxième argument. Cela est impossible avec les propriétés du gestionnaire d'événement car toute tentative ultérieure de définition d'une propriété remplacera les propriétés précédentes, par exemple:</p>
+Parmi les trois mécanismes, vous ne devriez certainement pas utiliser les attributs du gestionnaire d'événement HTML - ceux-ci sont obsolètes et constituent une mauvaise pratique, comme mentionné ci-dessus.
 
-<pre class="brush: js">element.onclick = function1;
+Les deux autres sont relativement interchangeables, au moins pour des utilisations simples:
+
+
+
+- Les propriétés du gestionnaire d'événement ont moins de puissance et d'options, mais une meilleure compatibilité entre les navigateurs (prise en charge depuis Internet Explorer 8). Vous devriez probablement commencer par ceux-ci pendant votre apprentissage.
+- Les événements du DOM Niveau 2 (`addEventListener()`, etc.) sont plus puissants, mais peuvent aussi devenir plus complexes et moins bien supportés (supportés depuis Internet Explorer 9). Vous devriez également vous entraîner avec, et tenter de les utiliser si possible.
+
+Les principaux avantages du troisième mécanisme : vous pouvez supprimer le code du gestionnaire d'événement si nécessaire en utilisant `removeEventListener()`, et vous pouvez ajouter plusieurs écouteurs du même type aux éléments si nécessaire. Par exemple, vous pouvez appeler `addEventListener('click', function() { ... })` sur un élément plusieurs fois, avec différentes fonctions spécifiées dans le deuxième argument. Cela est impossible avec les propriétés du gestionnaire d'événement car toute tentative ultérieure de définition d'une propriété remplacera les propriétés précédentes, par exemple:
+
+```js
+element.onclick = function1;
 element.onclick = function2;
-etc.</pre>
+etc.
+```
 
-<div class="note">
-<p><strong>Note:</strong> Si vous êtes appelé à prendre en charge des navigateurs plus anciens qu'Internet Explorer 8 dans votre travail, vous risquez de rencontrer des difficultés, car ces anciens navigateurs utilisent des modèles d'événements différents des nouveaux navigateurs. Mais n'ayez crainte, la plupart des bibliothèques JavaScript (par exemple <code>jQuery</code>) ont des fonctions intégrées qui permettent d'éliminer les différences entre navigateurs. Ne vous en faites pas trop à ce stade de votre parcours d'apprentissage.</p>
-</div>
+> **Note :** Si vous êtes appelé à prendre en charge des navigateurs plus anciens qu'Internet Explorer 8 dans votre travail, vous risquez de rencontrer des difficultés, car ces anciens navigateurs utilisent des modèles d'événements différents des nouveaux navigateurs. Mais n'ayez crainte, la plupart des bibliothèques JavaScript (par exemple `jQuery`) ont des fonctions intégrées qui permettent d'éliminer les différences entre navigateurs. Ne vous en faites pas trop à ce stade de votre parcours d'apprentissage.
 
-<h2 id="D'autres_concepts_liés_aux_événements">D'autres concepts liés aux événements</h2>
+## D'autres concepts liés aux événements
 
-<p>Dans cette section, nous aborderons brièvement quelques concepts avancés relatifs aux événements. Il n'est pas important de les comprendre entièrement à ce stade, mais cela pourra servir à expliquer certains modèles de code que vous rencontrerez probablement de temps en temps.</p>
+Dans cette section, nous aborderons brièvement quelques concepts avancés relatifs aux événements. Il n'est pas important de les comprendre entièrement à ce stade, mais cela pourra servir à expliquer certains modèles de code que vous rencontrerez probablement de temps en temps.
 
-<h3 id="L'objet_événement">L'objet événement</h3>
+### L'objet événement
 
-<p>Parfois, dans une fonction de gestionnaire d'événement, vous pouvez voir un paramètre spécifié avec un nom tel que  <code>event</code>, <code>evt</code>, ou simplement <code>e</code> . C'est ce qu'on appelle l'objet événement, qui est automatiquement transmis aux gestionnaires d'événements pour fournir des fonctionnalités et des informations supplémentaires. Par exemple, réécrivons légèrement notre exemple de couleur aléatoire:</p>
+Parfois, dans une fonction de gestionnaire d'événement, vous pouvez voir un paramètre spécifié avec un nom tel que `event`, `evt`, ou simplement `e` . C'est ce qu'on appelle l'objet événement, qui est automatiquement transmis aux gestionnaires d'événements pour fournir des fonctionnalités et des informations supplémentaires. Par exemple, réécrivons légèrement notre exemple de couleur aléatoire:
 
-<pre class="brush: js">function bgChange(e) {
+```js
+function bgChange(e) {
   var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   e.target.style.backgroundColor = rndCol;
   console.log(e);
 }
 
-btn.addEventListener('click', bgChange);</pre>
+btn.addEventListener('click', bgChange);
+```
 
-<div class="note">
-<p><strong>Note :</strong> Vous trouverez le <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html">code source complet </a>de cet exemple sur GitHub (également <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html">le voir s'exécuter</a>).</p>
-</div>
+> **Note :** Vous trouverez le [code source complet ](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html)de cet exemple sur GitHub (également [le voir s'exécuter](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
 
-<p>Ici, vous pouvez voir que nous incluons un objet événement, <strong>e</strong>, dans la fonction, et dans la fonction définissant un style de couleur d'arrière-plan sur <code>e.target</code> - qui est le bouton lui-même. La propriété <code>target</code> de l'objet événement est toujours une référence à l'élément sur lequel l'événement vient de se produire. Donc, dans cet exemple, nous définissons une couleur d'arrière-plan aléatoire sur le bouton, pas sur la page.</p>
+Ici, vous pouvez voir que nous incluons un objet événement, **e**, dans la fonction, et dans la fonction définissant un style de couleur d'arrière-plan sur `e.target` - qui est le bouton lui-même. La propriété `target` de l'objet événement est toujours une référence à l'élément sur lequel l'événement vient de se produire. Donc, dans cet exemple, nous définissons une couleur d'arrière-plan aléatoire sur le bouton, pas sur la page.
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez utiliser n'importe quel nom pour l'objet d'événement - il vous suffit de choisir un nom que vous pouvez ensuite utiliser pour le référencer dans la fonction du gestionnaire d'événements. <code>e</code>/<code>evt</code>/<code>event</code> sont les plus couramment utilisés par les développeurs car ils sont courts et faciles à retenir. C'est toujours bon de s'en tenir à une norme.</p>
-</div>
+> **Note :** Vous pouvez utiliser n'importe quel nom pour l'objet d'événement - il vous suffit de choisir un nom que vous pouvez ensuite utiliser pour le référencer dans la fonction du gestionnaire d'événements. `e`/`evt`/`event` sont les plus couramment utilisés par les développeurs car ils sont courts et faciles à retenir. C'est toujours bon de s'en tenir à une norme.
 
-<p><code>e.target</code>est incroyablement utile lorsque vous voulez définir le même gestionnaire d'événements sur plusieurs éléments et affecter une action à chacun d'entre eux quand un événement se produit sur eux. Vous pourriez, par exemple, avoir un ensemble de 16 tuiles qui disparaissent quand on clique dessus. Il est utile de toujours pouvoir affecter une action à  <code>e.target</code>, plutôt que de devoir la sélectionner de manière plus difficile. Dans l'exemple suivant (voir <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html">useful-eventtarget.html</a> pour le code source ; et ici pour le voir <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html">s'exécuter</a>), nous avons créé 16 éléments {{htmlelement("div")}} avec JavaScript. Quand nous les sélectionnons tous en utilisant {{domxref("document.querySelectorAll()")}}, puis que nous faisons une boucle sur chacun d'eux, en ajoutant un gestionnaire <code>onclick</code> à chacun de sorte qu'une couleur aléatoire est appliquée lorsque l'élément est cliqué:</p>
+`e.target`est incroyablement utile lorsque vous voulez définir le même gestionnaire d'événements sur plusieurs éléments et affecter une action à chacun d'entre eux quand un événement se produit sur eux. Vous pourriez, par exemple, avoir un ensemble de 16 tuiles qui disparaissent quand on clique dessus. Il est utile de toujours pouvoir affecter une action à  `e.target`, plutôt que de devoir la sélectionner de manière plus difficile. Dans l'exemple suivant (voir [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html) pour le code source ; et ici pour le voir [s'exécuter](http://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)), nous avons créé 16 éléments {{htmlelement("div")}} avec JavaScript. Quand nous les sélectionnons tous en utilisant {{domxref("document.querySelectorAll()")}}, puis que nous faisons une boucle sur chacun d'eux, en ajoutant un gestionnaire `onclick` à chacun de sorte qu'une couleur aléatoire est appliquée lorsque l'élément est cliqué:
 
-<pre class="brush: js">var divs = document.querySelectorAll('div');
+```js
+var divs = document.querySelectorAll('div');
 
-for (var i = 0; i &lt; divs.length; i++) {
+for (var i = 0; i < divs.length; i++) {
   divs[i].onclick = function(e) {
     e.target.style.backgroundColor = bgChange();
   }
-}</pre>
+}
+```
 
-<h4>Résultat</h4>
+#### Résultat
 
-<p>Le résultat est le suivant (essayez de cliquer dessus - amusez-vous):</p>
+Le résultat est le suivant (essayez de cliquer dessus - amusez-vous):
 
-<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Useful event target example&lt;/title&gt;
-    &lt;style&gt;
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Useful event target example</title>
+    <style>
       div {
         background-color: red;
         height: 100px;
         width: 25%;
         float: left;
       }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;script&gt;
-      for (var i = 1; i &lt;= 16; i++) {
+    </style>
+  </head>
+  <body>
+    <script>
+      for (var i = 1; i <= 16; i++) {
         var myDiv = document.createElement('div');
         document.body.appendChild(myDiv);
       }
@@ -305,50 +328,55 @@ for (var i = 0; i &lt; divs.length; i++) {
 
       var divs = document.querySelectorAll('div');
 
-      for (var i = 0; i &lt; divs.length; i++) {
+      for (var i = 0; i < divs.length; i++) {
         divs[i].onclick = function(e) {
           e.target.style.backgroundColor = bgChange();
         }
       }
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+  </body>
+</html>
+```
 
-<p>{{ EmbedLiveSample('Résultat', '100%', 400, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Résultat', '100%', 400, "", "", "hide-codepen-jsfiddle") }}
 
-<p>La plupart des gestionnaires d'événements que vous rencontrerez ne disposent que d'un ensemble standard de propriétés et de fonctions (méthodes) disponibles sur l'objet événement (voir la liste complète sur {{domxref("Event")}} ). Cependant, certains gestionnaires plus avancés ajoutent des propriétés spécialisées contenant des données supplémentaires dont ils ont besoin pour fonctionner. Le <a href="/fr/docs/Web/API/MediaRecorder_API">Media Recorder API</a>, par exemple, a un événement <code>dataavailable</code> , qui se déclenche quand un fichier audio ou vidéo a été enregistré et est disponible pour être utilisé (par exemple, pour l'enregistrer ou le lire). L'objet événement du gestionnaire <a href="/fr/docs/Web/API/MediaRecorder/ondataavailable">ondataavailable</a> correspondant dispose d'une propriété <code>data</code> contenant les données audio ou vidéo enregistrées pour vous permettre d'y accéder et de l'utiliser.</p>
+La plupart des gestionnaires d'événements que vous rencontrerez ne disposent que d'un ensemble standard de propriétés et de fonctions (méthodes) disponibles sur l'objet événement (voir la liste complète sur {{domxref("Event")}} ). Cependant, certains gestionnaires plus avancés ajoutent des propriétés spécialisées contenant des données supplémentaires dont ils ont besoin pour fonctionner. Le [Media Recorder API](/fr/docs/Web/API/MediaRecorder_API), par exemple, a un événement `dataavailable` , qui se déclenche quand un fichier audio ou vidéo a été enregistré et est disponible pour être utilisé (par exemple, pour l'enregistrer ou le lire). L'objet événement du gestionnaire [ondataavailable](/fr/docs/Web/API/MediaRecorder/ondataavailable) correspondant dispose d'une propriété `data` contenant les données audio ou vidéo enregistrées pour vous permettre d'y accéder et de l'utiliser.
 
-<h3 id="Éviter_le_comportement_par_défaut">Éviter le comportement par défaut</h3>
+### Éviter le comportement par défaut
 
-<p>Parfois, vous rencontrerez une situation où vous voudrez arrêter un événement qui adopte son comportement par défaut. L'exemple le plus courant est celui d'un formulaire Web, par exemple un formulaire d'inscription personnalisé. Lorsque vous remplissez les détails et appuyez sur le bouton "Soumettre", le comportement naturel consiste à soumettre les données à une page spécifiée sur le serveur pour traitement, et le navigateur redirige vers une page de "message de réussite" quelconque (ou la même page, si une autre n'est pas spécifiée.).<br>
- <br>
- Le problème survient lorsque l'utilisateur n'a pas soumis les données correctement. En tant que développeur, vous devez arrêter la soumission au serveur et lui envoyer un message d'erreur indiquant ce qui ne va pas et ce qui doit être fait pour corriger les erreurs. Certains navigateurs prennent en charge les fonctions de validation automatique des données de formulaire, mais comme beaucoup ne le font pas, il est conseillé de ne pas vous y fier et d'implémenter vos propres contrôles de validation. Regardons un exemple simple.<br>
- <br>
- Tout d'abord, un simple formulaire HTML qui vous oblige à entrer votre nom et votre prénom:</p>
+Parfois, vous rencontrerez une situation où vous voudrez arrêter un événement qui adopte son comportement par défaut. L'exemple le plus courant est celui d'un formulaire Web, par exemple un formulaire d'inscription personnalisé. Lorsque vous remplissez les détails et appuyez sur le bouton "Soumettre", le comportement naturel consiste à soumettre les données à une page spécifiée sur le serveur pour traitement, et le navigateur redirige vers une page de "message de réussite" quelconque (ou la même page, si une autre n'est pas spécifiée.).
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="fname"&gt;First name: &lt;/label&gt;
-    &lt;input id="fname" type="text"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="lname"&gt;Last name: &lt;/label&gt;
-    &lt;input id="lname" type="text"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-     &lt;input id="submit" type="submit"&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-&lt;p&gt;&lt;/p&gt;</pre>
+Le problème survient lorsque l'utilisateur n'a pas soumis les données correctement. En tant que développeur, vous devez arrêter la soumission au serveur et lui envoyer un message d'erreur indiquant ce qui ne va pas et ce qui doit être fait pour corriger les erreurs. Certains navigateurs prennent en charge les fonctions de validation automatique des données de formulaire, mais comme beaucoup ne le font pas, il est conseillé de ne pas vous y fier et d'implémenter vos propres contrôles de validation. Regardons un exemple simple.
 
-<pre class="brush: css hidden">div {
+Tout d'abord, un simple formulaire HTML qui vous oblige à entrer votre nom et votre prénom:
+
+```html
+<form>
+  <div>
+    <label for="fname">First name: </label>
+    <input id="fname" type="text">
+  </div>
+  <div>
+    <label for="lname">Last name: </label>
+    <input id="lname" type="text">
+  </div>
+  <div>
+     <input id="submit" type="submit">
+  </div>
+</form>
+<p></p>
+```
+
+```css hidden
+div {
   margin-bottom: 10px;
 }
-</pre>
+```
 
-<p>Maintenant un peu de JavaScript - ici nous implémentons une vérification très simple dans un gestionnaire d'événement <a href="/fr/docs/Web/API/GlobalEventHandlers/onsubmit">onsubmit</a> (l'événement submit est renvoyé sur un formulaire quand il est soumis) qui vérifie si les champs de texte sont vides. Si c'est le cas, nous appelons la fonction  <code><a href="/fr/docs/Web/API/Event/preventDefault">preventDefault()</a></code> sur l'objet événement - ce qui stoppe la soumission du formulaire - puis nous affichons un message d'erreur dans le paragraphe sous notre formulaire pour indiquer à l'utilisateur ce qui ne va pas :</p>
+Maintenant un peu de JavaScript - ici nous implémentons une vérification très simple dans un gestionnaire d'événement [onsubmit](/fr/docs/Web/API/GlobalEventHandlers/onsubmit) (l'événement submit est renvoyé sur un formulaire quand il est soumis) qui vérifie si les champs de texte sont vides. Si c'est le cas, nous appelons la fonction [`preventDefault()`](/fr/docs/Web/API/Event/preventDefault) sur l'objet événement - ce qui stoppe la soumission du formulaire - puis nous affichons un message d'erreur dans le paragraphe sous notre formulaire pour indiquer à l'utilisateur ce qui ne va pas :
 
-<pre class="brush: js">var form = document.querySelector('form');
+```js
+var form = document.querySelector('form');
 var fname = document.getElementById('fname');
 var lname = document.getElementById('lname');
 var submit = document.getElementById('submit');
@@ -359,26 +387,26 @@ form.onsubmit = function(e) {
     e.preventDefault();
     para.textContent = 'You need to fill in both names!';
   }
-}</pre>
+}
+```
 
-<p>Évidemment, cette validation est assez faible - cela n'empêcherait pas l'utilisateur de valider le formulaire avec des espaces ou des nombres entrés dans les champs, par exemple - mais cela est acceptable. Le résultat est le suivant :</p>
+Évidemment, cette validation est assez faible - cela n'empêcherait pas l'utilisateur de valider le formulaire avec des espaces ou des nombres entrés dans les champs, par exemple - mais cela est acceptable. Le résultat est le suivant :
 
-<p>{{ EmbedLiveSample('Éviter_le_comportement_par_défaut', '100%', 140, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Éviter_le_comportement_par_défaut', '100%', 140, "", "", "hide-codepen-jsfiddle") }}
 
-<div class="note">
-<p><strong>Note :</strong> pour le code source, voir <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html">preventdefault-validation.html</a> (et le voir s'exécuter <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html">ici</a>.)</p>
-</div>
+> **Note :** pour le code source, voir [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (et le voir s'exécuter [ici](http://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html).)
 
-<h3 id="Le_bouillonnement_et_la_capture">Le bouillonnement et la capture</h3>
+### Le bouillonnement et la capture
 
-<p>Le dernier sujet à aborder ici est quelque chose que vous ne rencontrerez pas souvent, mais cela peut être une vraie difficulté si vous ne le comprenez pas. Le bouillonnement et la capture d'événements sont deux mécanismes qui décrivent ce qui se passe lorsque deux gestionnaires du même type d'événement sont activés sur un même élément. Regardons un exemple pour faciliter cela - ouvrez l'exemple <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html">show-video-box.html</a> dans un nouvel onglet (et le <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html">code source </a>dans un autre). C'est également disponible en live ci-dessous.</p>
+Le dernier sujet à aborder ici est quelque chose que vous ne rencontrerez pas souvent, mais cela peut être une vraie difficulté si vous ne le comprenez pas. Le bouillonnement et la capture d'événements sont deux mécanismes qui décrivent ce qui se passe lorsque deux gestionnaires du même type d'événement sont activés sur un même élément. Regardons un exemple pour faciliter cela - ouvrez l'exemple [show-video-box.html](http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html) dans un nouvel onglet (et le [code source ](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html)dans un autre). C'est également disponible en live ci-dessous.
 
-<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Show video box example&lt;/title&gt;
-    &lt;style&gt;
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Show video box example</title>
+    <style>
       div {
         position: absolute;
         top: 50%;
@@ -404,20 +432,20 @@ form.onsubmit = function(e) {
         margin: 40px auto;
       }
 
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;button&gt;Display video&lt;/button&gt;
+    </style>
+  </head>
+  <body>
+    <button>Display video</button>
 
-    &lt;div class="hidden"&gt;
-      &lt;video&gt;
-        &lt;source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4" type="video/mp4"&gt;
-        &lt;source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm"&gt;
-        &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="rabbit320.mp4"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
+    <div class="hidden">
+      <video>
+        <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4" type="video/mp4">
+        <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm">
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+      </video>
+    </div>
 
-    &lt;script&gt;
+    <script>
 
       var btn = document.querySelector('button');
       var videoBox = document.querySelector('div');
@@ -441,128 +469,121 @@ form.onsubmit = function(e) {
         video.play();
       });
 
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+  </body>
+</html>
+```
 
-<p>{{ EmbedLiveSample('Le_bouillonnement_et_la_capture', '100%', 500, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('Le_bouillonnement_et_la_capture', '100%', 500, "", "", "hide-codepen-jsfiddle") }}
 
-<p>Ceci est un exemple assez simple qui montre et cache une balise {{htmlelement("div")}} avec une balise {{htmlelement("video")}} à l'intérieur:</p>
+Ceci est un exemple assez simple qui montre et cache une balise {{htmlelement("div")}} avec une balise {{htmlelement("video")}} à l'intérieur:
 
-<pre class="brush: html">&lt;button&gt;Display video&lt;/button&gt;
+```html
+<button>Display video</button>
 
-&lt;div class="hidden"&gt;
-  &lt;video&gt;
-    &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
-    &lt;source src="rabbit320.webm" type="video/webm"&gt;
-    &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="rabbit320.mp4"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
-  &lt;/video&gt;
-&lt;/div&gt;</pre>
+<div class="hidden">
+  <video>
+    <source src="rabbit320.mp4" type="video/mp4">
+    <source src="rabbit320.webm" type="video/webm">
+    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  </video>
+</div>
+```
 
-<p>Quand le {{htmlelement("button")}} est cliqué, la vidéo est affichée, en changeant l'attribut de classe sur la balise <code>&lt;div&gt;</code> de <code>hidden</code> à <code>showing</code> ( le CSS de l'exemple contient ces deux classes, qui positionnent respectivement la boîte hors de l'écran et sur l'écran.) :</p>
+Quand le {{htmlelement("button")}} est cliqué, la vidéo est affichée, en changeant l'attribut de classe sur la balise `<div>` de `hidden` à `showing` ( le CSS de l'exemple contient ces deux classes, qui positionnent respectivement la boîte hors de l'écran et sur l'écran.) :
 
-<pre class="brush: js">btn.onclick = function() {
+```js
+btn.onclick = function() {
   videoBox.setAttribute('class', 'showing');
-}</pre>
+}
+```
 
-<p>Nous ajoutons ensuite quelques gestionnaires d'événements  <code>onclick</code> supplémentaires - le premier à <code>&lt;div&gt;</code> et le second à <code>&lt;video&gt;</code>. L'idée est que lorsque l'on clique sur la zone du <code>&lt;div&gt;</code> en dehors de la vidéo, la boîte doit être masquée à nouveau; Lorsque la vidéo elle-même est cliquée, la vidéo devrait commencer à jouer. </p>
+Nous ajoutons ensuite quelques gestionnaires d'événements `onclick` supplémentaires - le premier à `<div>` et le second à `<video>`. L'idée est que lorsque l'on clique sur la zone du `<div>` en dehors de la vidéo, la boîte doit être masquée à nouveau; Lorsque la vidéo elle-même est cliquée, la vidéo devrait commencer à jouer.
 
-<pre>videoBox.onclick = function() {
-  videoBox.setAttribute('class', 'hidden');
-};
+    videoBox.onclick = function() {
+      videoBox.setAttribute('class', 'hidden');
+    };
 
-video.onclick = function() {
-  video.play();
-};</pre>
+    video.onclick = function() {
+      video.play();
+    };
 
-<p>Mais il y a un problème - actuellement, lorsque vous cliquez sur la vidéo, elle commence à jouer, mais cela entraîne le fait que <code>&lt;div&gt;</code> est également caché en même temps. C'est parce que la vidéo est dans le <code>&lt;div&gt;</code> - elle en fait partie - alors que cliquer sur la vidéo lance les <em>deux</em> gestionnaires d'événements ci-dessus.</p>
+Mais il y a un problème - actuellement, lorsque vous cliquez sur la vidéo, elle commence à jouer, mais cela entraîne le fait que `<div>` est également caché en même temps. C'est parce que la vidéo est dans le `<div>` - elle en fait partie - alors que cliquer sur la vidéo lance les _deux_ gestionnaires d'événements ci-dessus.
 
-<h4 id="Explication_du_bouillonnement_et_de_la_capture">Explication du bouillonnement et de la capture</h4>
+#### Explication du bouillonnement et de la capture
 
-<p>Quand un événement se déclenche sur un élément qui a des éléments parents (p.ex. l'élément {{htmlelement("video")}} dans notre cas), les navigateurs modernes utilisent deux phases différentes: la phase de <strong>capture</strong> et la phase de <strong>bouillonnement</strong>.<br>
- <br>
- Dans la phase de capture:</p>
+Quand un événement se déclenche sur un élément qui a des éléments parents (p.ex. l'élément {{htmlelement("video")}} dans notre cas), les navigateurs modernes utilisent deux phases différentes: la phase de **capture** et la phase de **bouillonnement**.
 
-<ul>
- <li>Le navigateur vérifie si l'ancêtre le plus éloigné de l'élément ({{htmlelement("html")}}) dispose d'un gestionnaire d'événement <code>onclick</code> enregistré pendant la phase de capture et le lance si c'est le cas.</li>
- <li>Ensuite, il passe à l'élément suivant à l'intérieur de <code>&lt;html&gt;</code> et fait la même chose, puis la suivante, et ainsi de suite jusqu'à ce qu'il atteigne l'élément sur lequel on a cliqué.</li>
-</ul>
+Dans la phase de capture:
 
-<p>Dans la phase de bouillonnement, l'opposé exact se produit:<br>
- <br>
-      Le navigateur vérifie si l'élément qui a été cliqué a un gestionnaire d'événement <code>onclick</code> enregistré dans la phase de bouillonnement et l'exécute si c'est le cas.<br>
-      Ensuite, il passe à l'élément ancêtre immédiat et fait la même chose, puis le suivant, et ainsi de suite jusqu'à ce qu'il atteigne l'élément <code>&lt;html&gt;</code>.</p>
+- Le navigateur vérifie si l'ancêtre le plus éloigné de l'élément ({{htmlelement("html")}}) dispose d'un gestionnaire d'événement `onclick` enregistré pendant la phase de capture et le lance si c'est le cas.
+- Ensuite, il passe à l'élément suivant à l'intérieur de `<html>` et fait la même chose, puis la suivante, et ainsi de suite jusqu'à ce qu'il atteigne l'élément sur lequel on a cliqué.
 
-<p><a href="https://mdn.mozillademos.org/files/16064/bubbling-capturing.png"><img alt="" src="bubbling-capturing.png"></a></p>
+Dans la phase de bouillonnement, l'opposé exact se produit:
 
-<p>(Cliquez sur l'image pour l'agrandir et la voir traduite en français.)</p>
+Le navigateur vérifie si l'élément qui a été cliqué a un gestionnaire d'événement `onclick` enregistré dans la phase de bouillonnement et l'exécute si c'est le cas.
+     Ensuite, il passe à l'élément ancêtre immédiat et fait la même chose, puis le suivant, et ainsi de suite jusqu'à ce qu'il atteigne l'élément `<html>`.
 
-<p>Dans les navigateurs modernes, par défaut, tous les gestionnaires d'événements sont enregistrés dans la phase de bouillonnement. Ainsi, dans notre exemple actuel, lorsque vous cliquez sur la vidéo, l'événement click fait un bouillonnement de l'élément <code>&lt;video&gt;</code> vers l'élément <code>&lt;html&gt;</code>. Comme ceci :</p>
+[![](bubbling-capturing.png)](https://mdn.mozillademos.org/files/16064/bubbling-capturing.png)
 
-<ul>
- <li>Il trouve d'abord le gestionnaire <code>video.onclick...</code> et le lance, de manière à ce que la vidéo soit jouée en premier.</li>
- <li>Ensuite il trouve le gestionnaire <code>videoBox.onclick...</code> et le lance, de sorte que la vidéo est cachée.</li>
-</ul>
+(Cliquez sur l'image pour l'agrandir et la voir traduite en français.)
 
-<h4 id="Régler_le_problème_avec_stopPropagation()">Régler le problème avec stopPropagation()</h4>
+Dans les navigateurs modernes, par défaut, tous les gestionnaires d'événements sont enregistrés dans la phase de bouillonnement. Ainsi, dans notre exemple actuel, lorsque vous cliquez sur la vidéo, l'événement click fait un bouillonnement de l'élément `<video>` vers l'élément `<html>`. Comme ceci :
 
-<p>C'est un comportement ennuyeux, mais il y a un moyen de l'éviter ! L'objet événement standard dispose d'une fonction appelée <code><a href="/fr/docs/Web/API/Event/stopPropagation">stopPropagation()</a></code>, qui, lorsqu'il est invoqué sur l'objet événement d'un gestionnaire, fait en sorte que le gestionnaire soit exécuté, mais l'événement ne remonte pas plus haut dans la chaîne, et donc plus aucun autre gestionnaire ne sera exécuté.<br>
- <br>
- Nous pouvons donc résoudre notre problème actuel en changeant la fonction du deuxième gestionnaire dans le bloc de code précédent comme ceci:</p>
+- Il trouve d'abord le gestionnaire `video.onclick...` et le lance, de manière à ce que la vidéo soit jouée en premier.
+- Ensuite il trouve le gestionnaire `videoBox.onclick...` et le lance, de sorte que la vidéo est cachée.
 
-<pre class="brush: js">video.onclick = function(e) {
+#### Régler le problème avec stopPropagation()
+
+C'est un comportement ennuyeux, mais il y a un moyen de l'éviter ! L'objet événement standard dispose d'une fonction appelée [`stopPropagation()`](/fr/docs/Web/API/Event/stopPropagation), qui, lorsqu'il est invoqué sur l'objet événement d'un gestionnaire, fait en sorte que le gestionnaire soit exécuté, mais l'événement ne remonte pas plus haut dans la chaîne, et donc plus aucun autre gestionnaire ne sera exécuté.
+
+Nous pouvons donc résoudre notre problème actuel en changeant la fonction du deuxième gestionnaire dans le bloc de code précédent comme ceci:
+
+```js
+video.onclick = function(e) {
   e.stopPropagation();
   video.play();
-};</pre>
+};
+```
 
-<p>Vous pouvez faire une copie locale du <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html">code source show-video-box.html </a> et le modifier vous-même ou regarder le résultat ici :  <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html">show-video-box-fixed.html</a> (ou voir le <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html">code source</a>).</p>
+Vous pouvez faire une copie locale du [code source show-video-box.html ](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html)et le modifier vous-même ou regarder le résultat ici :  [show-video-box-fixed.html](http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html) (ou voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html)).
 
-<div class="note">
-<p><strong>Note :</strong> Pourquoi s'embêter à capturer et bouillonner ? Eh bien, aux heures sombres où les navigateurs étaien peu compatibles entre eux qu'ils ne le sont aujourd'hui, Netscape n'utilisait que la capture d'événements, et Internet Explorer n'utilisait que les bouillonnements. Quand le W3C a décidé d'essayer de normaliser le comportement et de parvenir à un consensus, ils en sont arrivés à ce système qui inclue les deux, qui est celui implémenté dans les navigateurs modernes.</p>
-</div>
+> **Note :** Pourquoi s'embêter à capturer et bouillonner ? Eh bien, aux heures sombres où les navigateurs étaien peu compatibles entre eux qu'ils ne le sont aujourd'hui, Netscape n'utilisait que la capture d'événements, et Internet Explorer n'utilisait que les bouillonnements. Quand le W3C a décidé d'essayer de normaliser le comportement et de parvenir à un consensus, ils en sont arrivés à ce système qui inclue les deux, qui est celui implémenté dans les navigateurs modernes.
 
-<div class="note">
-<p><strong>Note :</strong> Comme mentionné ci-dessus, par défaut, tous les gestionnaires d'événements sont enregistrés dans la phase de bouillonnement, ce qui est plus logique la plupart du temps. Si vous voulez vraiment enregistrer un événement dans la phase de capture, vous pouvez le faire en enregistrant votre gestionnaire avec <code><a href="/fr/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>, et en positionnant la troisième propriété, qui est optionnelle, sur<code>true</code>.</p>
-</div>
+> **Note :** Comme mentionné ci-dessus, par défaut, tous les gestionnaires d'événements sont enregistrés dans la phase de bouillonnement, ce qui est plus logique la plupart du temps. Si vous voulez vraiment enregistrer un événement dans la phase de capture, vous pouvez le faire en enregistrant votre gestionnaire avec [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), et en positionnant la troisième propriété, qui est optionnelle, sur`true`.
 
-<h4 id="Délégation_d'événement">Délégation d'événement</h4>
+#### Délégation d'événement
 
-<p>Le bouillonnement nous permet également de tirer parti de la délégation d'événements - ce concept repose sur le fait que si vous voulez exécuter du code lorsque vous cliquez sur l'un des nombreux éléments enfants, vous pouvez définir l'écouteur d'événement sur leur parent et ainsi leur répercuter les événement, plutôt que de devoir définir l'écouteur d'événement sur chaque enfant individuellement.<br>
- <br>
- Un bon exemple est une série d'éléments de liste - si vous voulez que chacun d'eux fasse apparaître un message lorsque vous cliquez dessus, vous pouvez définir l'écouteur d'événement <code>click</code> sur la balise parente <code>&lt;ul&gt;</code>, et il apparaîtra sur les éléments de la liste.</p>
+Le bouillonnement nous permet également de tirer parti de la délégation d'événements - ce concept repose sur le fait que si vous voulez exécuter du code lorsque vous cliquez sur l'un des nombreux éléments enfants, vous pouvez définir l'écouteur d'événement sur leur parent et ainsi leur répercuter les événement, plutôt que de devoir définir l'écouteur d'événement sur chaque enfant individuellement.
 
-<p>Ce concept est expliqué plus loin sur le blog de David Walsh, avec de multiples exemples - voir <a href="https://davidwalsh.name/event-delegate">How JavaScript Event Delegation Works</a>.</p>
+Un bon exemple est une série d'éléments de liste - si vous voulez que chacun d'eux fasse apparaître un message lorsque vous cliquez dessus, vous pouvez définir l'écouteur d'événement `click` sur la balise parente `<ul>`, et il apparaîtra sur les éléments de la liste.
 
-<h2 id="Conclusion">Conclusion</h2>
+Ce concept est expliqué plus loin sur le blog de David Walsh, avec de multiples exemples - voir [How JavaScript Event Delegation Works](https://davidwalsh.name/event-delegate).
 
-<p>Vous devriez maintenant maîtriser tout ce que vous devez savoir sur les événements Web à ce stade de votre apprentissage. Comme mentionné ci-dessus, les événements ne font pas vraiment partie du langage du noyau JavaScript principal - ils sont définis dans les API Web du navigateur.<br>
- <br>
- En outre, il est important de comprendre que les différents contextes dans lesquels JavaScript est utilisé tendent à avoir des modèles d'événements différents - des API Web à d'autres domaines tels que WebExtensions du navigateur et Node.js (JavaScript côté serveur). Nous ne nous attendons pas à ce que vous compreniez tous ces domaines maintenant, mais cela aide certainement à comprendre les bases des événements à mesure que vous avancez dans l'apprentissage du développement Web.</p>
+## Conclusion
 
-<p>S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'article, ou <a href="/fr/Learn#Contact_us">contactez-nous </a>pour demander de l'aide.</p>
+Vous devriez maintenant maîtriser tout ce que vous devez savoir sur les événements Web à ce stade de votre apprentissage. Comme mentionné ci-dessus, les événements ne font pas vraiment partie du langage du noyau JavaScript principal - ils sont définis dans les API Web du navigateur.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+En outre, il est important de comprendre que les différents contextes dans lesquels JavaScript est utilisé tendent à avoir des modèles d'événements différents - des API Web à d'autres domaines tels que WebExtensions du navigateur et Node.js (JavaScript côté serveur). Nous ne nous attendons pas à ce que vous compreniez tous ces domaines maintenant, mais cela aide certainement à comprendre les bases des événements à mesure que vous avancez dans l'apprentissage du développement Web.
 
-<ul>
- <li><a href="http://www.quirksmode.org/js/events_order.html">Event order</a> (discussion sur la capture et le bouillonnement) — une pièce superbement détaillée de Peter-Paul Koch.</li>
- <li><a href="http://www.quirksmode.org/js/events_access.html">Event accessing</a> (discussion sur l'objet événement) — une autre pièce superbement détaillée de Peter-Paul Koch.</li>
- <li><a href="/fr/docs/Web/Events">Event reference</a></li>
-</ul>
+S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'article, ou [contactez-nous ](/fr/Learn#Contact_us)pour demander de l'aide.
 
-<p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}</p>
+## Voir aussi
 
-<p> </p>
+- [Event order](http://www.quirksmode.org/js/events_order.html) (discussion sur la capture et le bouillonnement) — une pièce superbement détaillée de Peter-Paul Koch.
+- [Event accessing](http://www.quirksmode.org/js/events_access.html) (discussion sur l'objet événement) — une autre pièce superbement détaillée de Peter-Paul Koch.
+- [Event reference](/fr/docs/Web/Events)
 
-<h2 id="Dans_ce_module">Dans ce module</h2>
+{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
-<ul>
- <li><a href="/fr/Apprendre/JavaScript/Building_blocks/conditionals">Prendre des décisions dans le code - les conditions</a></li>
- <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Looping_code">Les boucles dans le code</a></li>
- <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Fonctions">les fonctions - des blocs de code réutilisables</a></li>
- <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Build_your_own_function">Construisez votre propre fonction</a></li>
- <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Return_values">les valeurs de retour des fonction</a><a href="/fr/docs/Learn/JavaScript/Building_blocks/Return_values">s</a></li>
- <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements">Introduction aux événement</a><a href="/fr/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements">s</a></li>
- <li><a href="/fr/docs/Apprendre/JavaScript/Building_blocks/Image_gallery">Galerie d'images</a></li>
-</ul>
 
-<p> </p>
+
+## Dans ce module
+
+- [Prendre des décisions dans le code - les conditions](/fr/Apprendre/JavaScript/Building_blocks/conditionals)
+- [Les boucles dans le code](/fr/Apprendre/JavaScript/Building_blocks/Looping_code)
+- [les fonctions - des blocs de code réutilisables](/fr/Apprendre/JavaScript/Building_blocks/Fonctions)
+- [Construisez votre propre fonction](/fr/Apprendre/JavaScript/Building_blocks/Build_your_own_function)
+- [les valeurs de retour des fonction](/fr/Apprendre/JavaScript/Building_blocks/Return_values)[s](/fr/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [Introduction aux événement](/fr/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements)[s](/fr/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements)
+- [Galerie d'images](/fr/docs/Apprendre/JavaScript/Building_blocks/Image_gallery)

@@ -4,313 +4,330 @@ slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 original_slug: Apprendre/CSS/Building_blocks/Backgrounds_and_borders
 ---
-<div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
 
-<p>Dans cette leçon, nous verrons quelques-unes des mises en forme créatives autorisées par les bordures et les arrière-plans CSS. On peut ajouter des dégradés, des images de fond, et des coins arrondis, les arrière-plans et les bordures répondent à de nombreux besoins de mise en forme CSS.</p>
+Dans cette leçon, nous verrons quelques-unes des mises en forme créatives autorisées par les bordures et les arrière-plans CSS. On peut ajouter des dégradés, des images de fond, et des coins arrondis, les arrière-plans et les bordures répondent à de nombreux besoins de mise en forme CSS.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prérequis&nbsp;:</th>
-   <td>Compétences informatique basiques, <a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">logiciels de base installés</a>, connaissance simple en <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files">manipulation de fichiers</a>, les bases du HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction au HTML</a>), et une esquisse du fonctionnement du CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">premiers pas en CSS</a>. )</td>
-  </tr>
-  <tr>
-   <th scope="row">Objectif&nbsp;:</th>
-   <td>Apprendre comment mettre en forme l'arrière-plan et les bordures.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prérequis :</th>
+      <td>
+        Compétences informatique basiques,
+        <a
+          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >logiciels de base installés</a
+        >, connaissance simple en
+        <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >manipulation de fichiers</a
+        >, les bases du HTML (voir
+        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+          >Introduction au HTML</a
+        >), et une esquisse du fonctionnement du CSS (voir
+        <a href="/fr/docs/Learn/CSS/First_steps">premiers pas en CSS</a>. )
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objectif :</th>
+      <td>Apprendre comment mettre en forme l'arrière-plan et les bordures.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="styling_backgrounds_in_css">Mettre en forme l'arrière-plan avec CSS</h2>
+## Mettre en forme l'arrière-plan avec CSS
 
-<p>La propriété CSS <a href="/fr/docs/Web/CSS/background"><code>background</code></a> est un raccourci pour une famille de propriétés concernant l'arrière-plan. Nous les explorons dans cette partie. On peut rencontrer dans une feuille de style des déclarations de la propriété <code>background</code> difficiles à analyser, tant le nombre de valeurs qu'on peut lui passer est important.</p>
+La propriété CSS [`background`](/fr/docs/Web/CSS/background) est un raccourci pour une famille de propriétés concernant l'arrière-plan. Nous les explorons dans cette partie. On peut rencontrer dans une feuille de style des déclarations de la propriété `background` difficiles à analyser, tant le nombre de valeurs qu'on peut lui passer est important.
 
-<pre class="brush: css">.box {
+```css
+.box {
   background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
   url(big-star.png) center no-repeat, rebeccapurple;
-}</pre>
+}
+```
 
-<p>Nous reviendrons un peu plus loin sur le fonctionnement des raccourcis. Pour l'instant, passons en revue les propriétés CSS des arrière-plans.</p>
+Nous reviendrons un peu plus loin sur le fonctionnement des raccourcis. Pour l'instant, passons en revue les propriétés CSS des arrière-plans.
 
-<h3 id="background_colors">Couleurs d'arrière-plan</h3>
+### Couleurs d'arrière-plan
 
-<p>La propriété <a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a> définit la couleur d'arrière-plan d'un élément HTML. La propriété accepte comme valeur n'importe quelle <code><a href="/fr/docs/Web/CSS/color_value">&lt;color&gt;</a></code>. La <code>background-color</code> s'étend sous le contenu dans la zone de remplissage (padding box) de l'élément.</p>
+La propriété [`background-color`](/fr/docs/Web/CSS/background-color) définit la couleur d'arrière-plan d'un élément HTML. La propriété accepte comme valeur n'importe quelle [`<color>`](/fr/docs/Web/CSS/color_value). La `background-color` s'étend sous le contenu dans la zone de remplissage (padding box) de l'élément.
 
-<p>Dans l'exemple ci-dessous, nous ajoutons des couleurs de fond à une boîte, un titre et un élément <a href="/fr/docs/Web/HTML/Element/span"><code>&lt;span&gt;</code></a>.</p>
+Dans l'exemple ci-dessous, nous ajoutons des couleurs de fond à une boîte, un titre et un élément [`<span>`](/fr/docs/Web/HTML/Element/span).
 
-<p><strong>Expérimentez avec ce code, en faisant varier les valeurs <a href="/fr/docs/Web/CSS/color_value">&lt;color&gt;</a> dans les différentes déclarations.</strong></p>
+**Expérimentez avec ce code, en faisant varier les valeurs [\<color>](/fr/docs/Web/CSS/color_value) dans les différentes déclarations.**
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 700)}}
 
-<h3 id="background_images">Images d'arrière-plan</h3>
+### Images d'arrière-plan
 
-<p>La propriété <a href="/fr/docs/Web/CSS/background-image"><code>background-image</code></a> permet d'afficher une image dans l'arrière-plan d'un élément. L'exemple ci-dessous montre deux boîtes — l'une avec une image de fond trop grande (<a href="https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg">balloons.jpg</a>), l'autre avec comme fond une petite image représentant une étoile (<a href="https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png">star.png</a>).</p>
+La propriété [`background-image`](/fr/docs/Web/CSS/background-image) permet d'afficher une image dans l'arrière-plan d'un élément. L'exemple ci-dessous montre deux boîtes — l'une avec une image de fond trop grande ([balloons.jpg](https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg)), l'autre avec comme fond une petite image représentant une étoile ([star.png](https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png)).
 
-<p>Cet exemple illustre deux points concernant l'utilisation d'images de fond. Par défaut, une image trop large n'est pas redimensionnée pour correspondre aux dimensions de la boîte, on n'en voit qu'un coin, alors qu'une image de fond ne remplissant pas la boîte sera automatiquement répétée en pavage pour occuper tout l'espace disponible. Dans l'exemple, l'image d'origine est juste une étoile.</p>
+Cet exemple illustre deux points concernant l'utilisation d'images de fond. Par défaut, une image trop large n'est pas redimensionnée pour correspondre aux dimensions de la boîte, on n'en voit qu'un coin, alors qu'une image de fond ne remplissant pas la boîte sera automatiquement répétée en pavage pour occuper tout l'espace disponible. Dans l'exemple, l'image d'origine est juste une étoile.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 700)}}
 
-<p><strong>Si on spécifie une couleur de fond en plus de l'image de fond, l'image s'affiche par-dessus la couleur. Expérimentez ce comportement en ajoutant une propriété </strong><code>background-color</code><strong> dans l'exemple ci-dessus.</strong></p>
+**Si on spécifie une couleur de fond en plus de l'image de fond, l'image s'affiche par-dessus la couleur. Expérimentez ce comportement en ajoutant une propriété** `background-color` **dans l'exemple ci-dessus.**
 
-<h4 id="controlling_background-repeat">Contrôler la répétition de l'arrière-plan</h4>
+#### Contrôler la répétition de l'arrière-plan
 
-<p>La propriété <a href="/fr/docs/Web/CSS/background-repeat"><code>background-repeat</code></a> permet de contrôler la répétition d'image pour former des pavages. Les valeurs possibles sont :</p>
+La propriété [`background-repeat`](/fr/docs/Web/CSS/background-repeat) permet de contrôler la répétition d'image pour former des pavages. Les valeurs possibles sont :
 
-<ul>
- <li><code>no-repeat</code> — aucune répétition de l'arrière-plan.</li>
- <li><code>repeat-x</code> — répétition horizontale.</li>
- <li><code>repeat-y</code> — répétition verticale.</li>
- <li><code>repeat</code> — comportement par défaut : répétition dans les deux directions.</li>
-</ul>
+- `no-repeat` — aucune répétition de l'arrière-plan.
+- `repeat-x` — répétition horizontale.
+- `repeat-y` — répétition verticale.
+- `repeat` — comportement par défaut : répétition dans les deux directions.
 
-<p><strong>Expérimentez l'effet de ces valeurs dans l'exemple ci-dessous. La valeur est fixée à <code>no-repeat</code>, une seule étoile apparaît donc. Remplacez par <code>repeat-x</code> et <code>repeat-y</code> et observez.</strong></p>
+**Expérimentez l'effet de ces valeurs dans l'exemple ci-dessous. La valeur est fixée à `no-repeat`, une seule étoile apparaît donc. Remplacez par `repeat-x` et `repeat-y` et observez.**
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/repeat.html", '100%', 600)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/repeat.html", '100%', 600)}}
 
-<h4 id="sizing_the_background_image">Dimensionner l'image de fond</h4>
+#### Dimensionner l'image de fond
 
-<p>Dans l'exemple ci-dessus on voit qu'une image d'arrière-plan est recadrée quand elle dépasse de l'élément dont elle est le fond. Dans un tel cas, la propriété <a href="/fr/docs/Web/CSS/background-size"><code>background-size</code></a> — avec comme valeur une  <a href="/fr/docs/Web/CSS/length">longueur</a> ou un <a href="/fr/docs/Web/CSS/percentage">pourcentage</a>, permet d'adapter l'image à l'élément pour en occuper tout le fond.</p>
+Dans l'exemple ci-dessus on voit qu'une image d'arrière-plan est recadrée quand elle dépasse de l'élément dont elle est le fond. Dans un tel cas, la propriété [`background-size`](/fr/docs/Web/CSS/background-size) — avec comme valeur une [longueur](/fr/docs/Web/CSS/length) ou un [pourcentage](/fr/docs/Web/CSS/percentage), permet d'adapter l'image à l'élément pour en occuper tout le fond.
 
-<p>On peut aussi utiliser les mots-clé :</p>
+On peut aussi utiliser les mots-clé :
 
-<ul>
- <li><code>cover</code> — le navigateur redimensionne l'image pour que tout le fond soit couvert, en conservant le format de l'image. La plupart du temps, une partie de l'image est en dehors de la boîte.</li>
- <li><code>contain</code> — le navigateur donne à l'image la plus grande taille possible à l'intérieur de la boîte. Quand le format de l'image ne coïncide pas avec celui de la boîte, on se retrouve avec des bandes laissées vides en haut et en bas ou sur les côtés de l'image.</li>
-</ul>
+- `cover` — le navigateur redimensionne l'image pour que tout le fond soit couvert, en conservant le format de l'image. La plupart du temps, une partie de l'image est en dehors de la boîte.
+- `contain` — le navigateur donne à l'image la plus grande taille possible à l'intérieur de la boîte. Quand le format de l'image ne coïncide pas avec celui de la boîte, on se retrouve avec des bandes laissées vides en haut et en bas ou sur les côtés de l'image.
 
-<p>Dans l'exemple ci-dessous, l'image trop grande vue plus haut est retaillée aux dimensions de la boîte en précisant les valeurs numériques des côtés. On voit comment cela a déformé l'image.</p>
+Dans l'exemple ci-dessous, l'image trop grande vue plus haut est retaillée aux dimensions de la boîte en précisant les valeurs numériques des côtés. On voit comment cela a déformé l'image.
 
-<p>Essayez ce qui suit :</p>
+Essayez ce qui suit :
 
-<ul>
- <li>Changez les dimensions de l'arrière-plan.</li>
- <li>Supprimez les dimensions numériques et observez ce qui se passe en les remplaçant par <code>background-size: cover</code> ou <code>background-size: contain</code>.</li>
- <li>Si votre image est plus petite que la boîte, vous pouvez changer la valeur de <code>background-repeat</code> pour répéter l'image.</li>
-</ul>
+- Changez les dimensions de l'arrière-plan.
+- Supprimez les dimensions numériques et observez ce qui se passe en les remplaçant par `background-size: cover` ou `background-size: contain`.
+- Si votre image est plus petite que la boîte, vous pouvez changer la valeur de `background-repeat` pour répéter l'image.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/size.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/size.html", '100%', 800)}}
 
-<h4 id="positioning_the_background_image">Positionner l'image de fond</h4>
+#### Positionner l'image de fond
 
-<p>La propriété <a href="/fr/docs/Web/CSS/background-position"><code>background-position</code></a> permet de choisir la position de l'arrière-plan à l'intérieur de la boîte dans laquelle il est appliqué. On utilise pour cela un système de coordonnées avec l'origine <code>(0,0)</code> au coin en haut à gauche de la boîte, l'axe (<code>x</code>) étant horizontal, l'axe (<code>y</code>) vertical.</p>
+La propriété [`background-position`](/fr/docs/Web/CSS/background-position) permet de choisir la position de l'arrière-plan à l'intérieur de la boîte dans laquelle il est appliqué. On utilise pour cela un système de coordonnées avec l'origine `(0,0)` au coin en haut à gauche de la boîte, l'axe (`x`) étant horizontal, l'axe (`y`) vertical.
 
-<div class="note">
-<p><strong>Note :</strong> La valeur par défaut de <code>background-position</code> est <code>(0,0)</code>.</p>
-</div>
+> **Note :** La valeur par défaut de `background-position` est `(0,0)`.
 
-<p>Les valeurs les plus communes pour <code>background-position</code> se présentent sous la forme d'un couple — une valeur horizontale suivie d'une valeur verticale.</p>
+Les valeurs les plus communes pour `background-position` se présentent sous la forme d'un couple — une valeur horizontale suivie d'une valeur verticale.
 
-<p>Vous pouvez utiliser les mots-clé tels que <code>top</code> et <code>right</code> (vous trouverez les autres valeurs possibles sur la page <a href="/fr/docs/Web/CSS/background-image"><code>background-image</code></a>)&nbsp;:</p>
+Vous pouvez utiliser les mots-clé tels que `top` et `right` (vous trouverez les autres valeurs possibles sur la page [`background-image`](/fr/docs/Web/CSS/background-image)) :
 
-<pre class="brush: css">.box {
+```css
+.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top center;
-}</pre>
+}
+```
 
-<p>Ainsi que des valeurs de <a href="/fr/docs/Web/CSS/length">longueurs</a>, ou des <a href="/fr/docs/Web/CSS/percentage">pourcentages</a>&nbsp;:</p>
+Ainsi que des valeurs de [longueurs](/fr/docs/Web/CSS/length), ou des [pourcentages](/fr/docs/Web/CSS/percentage) :
 
-<pre class="brush: css">.box {
+```css
+.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: 20px 10%;
-}</pre>
+}
+```
 
-<p>On peut utiliser simultanément mots-clé, dimensions et pourcentages, par exemple&nbsp;:</p>
+On peut utiliser simultanément mots-clé, dimensions et pourcentages, par exemple :
 
-<pre class="brush: css">.box {
+```css
+.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top 20px;
-}</pre>
+}
+```
 
-<p>La syntaxe à quatre valeurs enfin permet d'indiquer la distance depuis certains bords de la boîte — dans ce cas, la longueur correspond à un décalage par rapport à la valeur précédente. Par exemple dans le CSS ci-dessous on positionne l'arrière-plan à 20px du haut et à 10px de la droite :</p>
+La syntaxe à quatre valeurs enfin permet d'indiquer la distance depuis certains bords de la boîte — dans ce cas, la longueur correspond à un décalage par rapport à la valeur précédente. Par exemple dans le CSS ci-dessous on positionne l'arrière-plan à 20px du haut et à 10px de la droite :
 
-<pre class="brush: css">.box {
+```css
+.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top 20px right 10px;
-}</pre>
+}
+```
 
-<p><strong>Dans l'exemple ci-dessous, modifiez les valeurs pour déplacer l'étoile à l'intérieur de la boîte.</strong></p>
+**Dans l'exemple ci-dessous, modifiez les valeurs pour déplacer l'étoile à l'intérieur de la boîte.**
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 600)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 600)}}
 
-<div class="note">
-<p><strong>Note :</strong> <code>background-position</code> est un raccourci pour<a href="/fr/docs/Web/CSS/background-position-x"><code>background-position-x</code></a> et <a href="/fr/docs/Web/CSS/background-position-y"><code>background-position-y</code></a>, qui permettent de fixer individuellement les positions sur chaque axe.</p>
-</div>
+> **Note :** `background-position` est un raccourci pour[`background-position-x`](/fr/docs/Web/CSS/background-position-x) et [`background-position-y`](/fr/docs/Web/CSS/background-position-y), qui permettent de fixer individuellement les positions sur chaque axe.
 
-<h3 id="gradient_backgrounds">Utiliser un dégradé comme arrière-plan</h3>
+### Utiliser un dégradé comme arrière-plan
 
-<p>Un dégradé — quand on l'utilise pour arrière-plan — se comporte comme une image, il se paramètre aussi avec la propriété <a href="/fr/docs/Web/CSS/background-image"><code>background-image</code></a>.</p>
+Un dégradé — quand on l'utilise pour arrière-plan — se comporte comme une image, il se paramètre aussi avec la propriété [`background-image`](/fr/docs/Web/CSS/background-image).
 
-<p>Vous en apprendrez plus sur les différents types de dégradés et tout ce qu'on peut faire avec sur la page MDN consacrée au type <code><a href="/fr/docs/Web/CSS/gradient">&lt;gradient&gt;</a></code>. Une manière amusante de découvrir les dégradés est d'utiliser l'un des nombreux générateurs de dégradés CSS disponibles en ligne, par exemple <a href="https://cssgradient.io/">celui-là</a>. Créez votre dégradé puis copiez-collez le code source qui l'a généré.</p>
+Vous en apprendrez plus sur les différents types de dégradés et tout ce qu'on peut faire avec sur la page MDN consacrée au type [`<gradient>`](/fr/docs/Web/CSS/gradient). Une manière amusante de découvrir les dégradés est d'utiliser l'un des nombreux générateurs de dégradés CSS disponibles en ligne, par exemple [celui-là](https://cssgradient.io/). Créez votre dégradé puis copiez-collez le code source qui l'a généré.
 
-<p>Essayez différents dégradés dans l'exemple ci-dessous. Dans les deux boîtes on trouve respectivement un dégradé linéaire étendu sur toute la boîte et un dégradé circulaire de taille donné, qui du coup se répète.</p>
+Essayez différents dégradés dans l'exemple ci-dessous. Dans les deux boîtes on trouve respectivement un dégradé linéaire étendu sur toute la boîte et un dégradé circulaire de taille donné, qui du coup se répète.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 650)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 650)}}
 
-<h3 id="multiple_background_images">Images de fond multiples</h3>
+### Images de fond multiples
 
-<p>Il est aussi possible d'ajouter plusieurs images en arrière-plan — il suffit de spécifier plusieurs valeurs pour <code>background-image</code>, chacune séparé par une virgule.</p>
+Il est aussi possible d'ajouter plusieurs images en arrière-plan — il suffit de spécifier plusieurs valeurs pour `background-image`, chacune séparé par une virgule.
 
-<p>Quand vous faites cela, il est possible de se retrouver avec plusieurs arrière-plans qui se chevauchent. Les arrière-plans se superposeront les uns sur les autres, avec le dernier se retrouvant sur le dessus, chacun suivant à leur tour, jusqu'au premier.</p>
+Quand vous faites cela, il est possible de se retrouver avec plusieurs arrière-plans qui se chevauchent. Les arrière-plans se superposeront les uns sur les autres, avec le dernier se retrouvant sur le dessus, chacun suivant à leur tour, jusqu'au premier.
 
-<div class="note">
-<p><strong>Note :</strong> On peut joyeusement mélanger dégradés et images de fond classiques.</p>
-</div>
+> **Note :** On peut joyeusement mélanger dégradés et images de fond classiques.
 
-<p>Les autres propriétés <code>background-*</code> peuvent aussi avoir une série de valeurs séparées de virgules, de la même manière que <code>background-image</code>:</p>
+Les autres propriétés `background-*` peuvent aussi avoir une série de valeurs séparées de virgules, de la même manière que `background-image`:
 
-<pre class="brush: css">background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
+```css
+background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
-background-position: 10px 20px,  top right;</pre>
+background-position: 10px 20px,  top right;
+```
 
-<p>Chaque valeur des différentes propriétés va correspondre aux valeurs placées à la même position dans les autres propriétés. Au-dessus, par exemple, la valeur <code>background-repeat</code> de l' <code>image1</code> sera <code>no-repeat</code>. Cependant, qu'arrive-t-il quand différentes propriétés ont différents nombres de valeurs? La réponse est que s'il y a moins de valeurs, elles seront réutilisées — dans l'exemple au-dessus il y a quatre images de fond mais seulement deux valeurs <code>background-position</code>. Les deux premières valeurs seront appliquées aux deux premières images, puis elles seront réutilisées pour les images suivantes — l'<code>image3</code> recevra la première valeur, et l'<code>image4</code> recevra la seconde valeur.</p>
+Chaque valeur des différentes propriétés va correspondre aux valeurs placées à la même position dans les autres propriétés. Au-dessus, par exemple, la valeur `background-repeat` de l' `image1` sera `no-repeat`. Cependant, qu'arrive-t-il quand différentes propriétés ont différents nombres de valeurs? La réponse est que s'il y a moins de valeurs, elles seront réutilisées — dans l'exemple au-dessus il y a quatre images de fond mais seulement deux valeurs `background-position`. Les deux premières valeurs seront appliquées aux deux premières images, puis elles seront réutilisées pour les images suivantes — l'`image3` recevra la première valeur, et l'`image4` recevra la seconde valeur.
 
-<p><strong>Jouons un peu. Dans l'exemple ci-dessous j'ai inclus deux images. Afin de visualiser l'ordre d'empilement, essayez d'alterner la première image d'arrière-plan dans la liste. Vous pouvez aussi modifier les autres propriétés afin de changer la position, la taille ou la répétition.</strong></p>
+**Jouons un peu. Dans l'exemple ci-dessous j'ai inclus deux images. Afin de visualiser l'ordre d'empilement, essayez d'alterner la première image d'arrière-plan dans la liste. Vous pouvez aussi modifier les autres propriétés afin de changer la position, la taille ou la répétition.**
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/multiple-background-image.html", '100%', 600)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/multiple-background-image.html", '100%', 600)}}
 
-<h3 id="background_attachment">Défilement de l'arrière-plan</h3>
+### Défilement de l'arrière-plan
 
-<p>Une autre option que nous avons à notre disposition pour les arrières-plans est de spécifier comment ils défilent quand le contenu défile lui-même. Ce comportement est contrôlé grâce à la propriété <a href="/fr/docs/Web/CSS/background-attachment"><code>background-attachment</code></a> , qui peut prendre ces valeurs:</p>
+Une autre option que nous avons à notre disposition pour les arrières-plans est de spécifier comment ils défilent quand le contenu défile lui-même. Ce comportement est contrôlé grâce à la propriété [`background-attachment`](/fr/docs/Web/CSS/background-attachment) , qui peut prendre ces valeurs:
 
-<ul>
- <li><code>scroll</code>&nbsp;: L'arrière-plan de l'élément défile lorsqu'on fait défiler la page. Si le contenu de l'élément défile, l'arrière-plan ne bouge pas. Dans la pratique, l'effet obtenu est que l'arrière-plan est fixé à la position de la page et défile comme elle.</li>
- <li><code>fixed</code>&nbsp;: L'arrière-plan de l'élément est fixe dans la zone d'affichage (<i lang="en">viewport</i>) et il ne défile pas lorsqu'on fait défiler ou la page ou le contenu de l'élément. L'arrière-plan reste toujours à la même position sur l'écran.</li>
- <li><code>local</code>&nbsp;: Cette valeur fut ajoutée plus tard en raison de la confusion engendrée par la valeur <code>scroll</code> et son comportement qui ne correspond pas aux cas d'usage. <code>local</code> permet de fixer l'arrière-plan sur l'élément sur lequel il est défini afin que, lorsqu'on fait défiler l'élément, l'arrière-plan défile avec lui.</li>
-</ul>
+- `scroll` : L'arrière-plan de l'élément défile lorsqu'on fait défiler la page. Si le contenu de l'élément défile, l'arrière-plan ne bouge pas. Dans la pratique, l'effet obtenu est que l'arrière-plan est fixé à la position de la page et défile comme elle.
+- `fixed` : L'arrière-plan de l'élément est fixe dans la zone d'affichage (
 
-<p>La propriété <a href="/fr/docs/Web/CSS/background-attachment"><code>background-attachment</code></a> n'a d'effet que lorsque le contenu défile. Pour observer cet effet, nous avons construit une démo afin d'illustrer les différences entre les trois valeurs : <a href="https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">background-attachment.html</a> (vous pouvez également consulter <a href="https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds">le code source de cette démo</a>).</p>
+  <i lang="en">viewport</i>
 
-<h3 id="using_the_background_shorthand_property">Utiliser la propriété raccourcie background</h3>
+  ) et il ne défile pas lorsqu'on fait défiler ou la page ou le contenu de l'élément. L'arrière-plan reste toujours à la même position sur l'écran.
 
-<p>Comme mentionné au début de cet article, vous verrez souvent des arrières-plans définis grâce à la propriété <a href="/fr/docs/Web/CSS/background"><code>background</code></a>. Cette propriété raccourcie permet de définir les différentes propriétés en une seule déclaration.</p>
+- `local` : Cette valeur fut ajoutée plus tard en raison de la confusion engendrée par la valeur `scroll` et son comportement qui ne correspond pas aux cas d'usage. `local` permet de fixer l'arrière-plan sur l'élément sur lequel il est défini afin que, lorsqu'on fait défiler l'élément, l'arrière-plan défile avec lui.
 
-<p>Si vous utilisez plusieurs arrières-plans, vous devrez indiquer toutes les propriétés pour le premier arrière-plan puis ajouter l'arrière-plan suivant après une virgule. Dans l'exemple qui suit, on a un dégradé avec une taille et une position puis une image d'arrière-plan avec <code>no-repeat</code> et un position et enfin une couleur d'arrière-plan.</p>
+La propriété [`background-attachment`](/fr/docs/Web/CSS/background-attachment) n'a d'effet que lorsque le contenu défile. Pour observer cet effet, nous avons construit une démo afin d'illustrer les différences entre les trois valeurs : [background-attachment.html](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (vous pouvez également consulter [le code source de cette démo](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds)).
 
-<p>Quelques règles sont à respecter lorsqu'on déclare des images d'arrière-plan avec cette propriété raccourcie :</p>
+### Utiliser la propriété raccourcie background
 
-<ul>
- <li>La valeur pour <code>background-color</code> ne peut être définie qu'après la virgule finale.</li>
- <li>La valeur pour <code>background-size</code> ne peut être incluse qu'immédiatement après celle <code>background-position</code> en la séparant de celle-ci avec une barre oblique (« / »), par exemple : <code>center/80%</code>.</li>
-</ul>
+Comme mentionné au début de cet article, vous verrez souvent des arrières-plans définis grâce à la propriété [`background`](/fr/docs/Web/CSS/background). Cette propriété raccourcie permet de définir les différentes propriétés en une seule déclaration.
 
-<p>N'hésitez pas à consulter la page de documentation pour <a href="/fr/docs/Web/CSS/background"><code>background</code></a> qui détaille ces différents points.</p>
+Si vous utilisez plusieurs arrières-plans, vous devrez indiquer toutes les propriétés pour le premier arrière-plan puis ajouter l'arrière-plan suivant après une virgule. Dans l'exemple qui suit, on a un dégradé avec une taille et une position puis une image d'arrière-plan avec `no-repeat` et un position et enfin une couleur d'arrière-plan.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 850)}}</p>
+Quelques règles sont à respecter lorsqu'on déclare des images d'arrière-plan avec cette propriété raccourcie :
 
-<h3 id="accessibility_considerations_with_backgrounds">Arrière-plans et accessibilité</h3>
+- La valeur pour `background-color` ne peut être définie qu'après la virgule finale.
+- La valeur pour `background-size` ne peut être incluse qu'immédiatement après celle `background-position` en la séparant de celle-ci avec une barre oblique (« / »), par exemple : `center/80%`.
 
-<p>Quand on place un texte sur une image ou une couleur de fond, il faut s'assurer d'un contraste suffisant pour une bonne lisibilité. Quand un texte est écrit par-dessus une image, déclarez toujours une <code>background-color</code> qui rendra le texte lisible si l'image n'est pas chargée.</p>
+N'hésitez pas à consulter la page de documentation pour [`background`](/fr/docs/Web/CSS/background) qui détaille ces différents points.
 
-<p>Les lecteurs d'écran ne traitent pas les images de fond, elles ne doivent donc pas être autre chose que décoratives ; tout contenu important doit faire partie de la page HTML et pas de la mise en forme du fond.</p>
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 850)}}
 
-<h2 id="borders">Bordures</h2>
+### Arrière-plans et accessibilité
 
-<p>Lors de l'apprentissage du modèle de boîte, on a pu voir comment les bordures jouaient un rôle sur la taille de la boîte. Dans cette leçon, nous allons voir comment créer des bordures. Généralement, lorsqu'on ajoute des bordures à un élément avec CSS, on utilise une propriété raccourcie qui définit la couleur, l'épaisseur et le style de la bordure.</p>
+Quand on place un texte sur une image ou une couleur de fond, il faut s'assurer d'un contraste suffisant pour une bonne lisibilité. Quand un texte est écrit par-dessus une image, déclarez toujours une `background-color` qui rendra le texte lisible si l'image n'est pas chargée.
 
-<p>On peut définir une bordure pour les quatre côtés d'une boîte avec la propriété <a href="/fr/docs/Web/CSS/border"><code>border</code></a>&nbsp;:</p>
+Les lecteurs d'écran ne traitent pas les images de fond, elles ne doivent donc pas être autre chose que décoratives ; tout contenu important doit faire partie de la page HTML et pas de la mise en forme du fond.
 
-<pre class="brush: css">*.box {
+## Bordures
+
+Lors de l'apprentissage du modèle de boîte, on a pu voir comment les bordures jouaient un rôle sur la taille de la boîte. Dans cette leçon, nous allons voir comment créer des bordures. Généralement, lorsqu'on ajoute des bordures à un élément avec CSS, on utilise une propriété raccourcie qui définit la couleur, l'épaisseur et le style de la bordure.
+
+On peut définir une bordure pour les quatre côtés d'une boîte avec la propriété [`border`](/fr/docs/Web/CSS/border) :
+
+```css
+*.box {
   border: 1px solid black;
-}*</pre>
+}*
+```
 
-<p>On peut aussi cibler un seul des côtés de la boîte, par exemple&nbsp;:</p>
+On peut aussi cibler un seul des côtés de la boîte, par exemple :
 
-<pre class="brush: css">.box {
+```css
+.box {
   border-top: 1px solid black;
-}</pre>
+}
+```
 
-<p>Les propriétés individuelles équivalentes pour ces notations raccourcies seraient&nbsp;:</p>
+Les propriétés individuelles équivalentes pour ces notations raccourcies seraient :
 
-<pre class="brush: css">.box {
+```css
+.box {
   border-width: 1px;
   border-style: solid;
   border-color: black;
-}</pre>
+}
+```
 
-<p>Pour la propriété qui concerne un des côtés&nbsp;:</p>
+Pour la propriété qui concerne un des côtés :
 
-<pre class="brush: css">.box {
+```css
+.box {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: black;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note :</strong> Ces propriétés pour les bordures des côtés haut, droit, bas et gauche ont également des propriétés équivalentes <em>logiques</em> qui ciblent les différents côtés de la boîte en fonction du mode d'écriture du document (par exemple de gauche à droite, de droite à gauche ou bien encore de haut en bas). Nous aborderons celles-ci dans la prochaine leçon qui traitera <a href="/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">de la directionnalité du texte</a>.</p>
-</div>
+> **Note :** Ces propriétés pour les bordures des côtés haut, droit, bas et gauche ont également des propriétés équivalentes _logiques_ qui ciblent les différents côtés de la boîte en fonction du mode d'écriture du document (par exemple de gauche à droite, de droite à gauche ou bien encore de haut en bas). Nous aborderons celles-ci dans la prochaine leçon qui traitera [de la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
-<p><strong>Il existe différents styles qui peuvent être utilisés pour les bordures. Dans l'exemple qui suit, nous avons utilisé un style différent pour chacun des côtés de la boîte. N'hésitez pas à modifier l'exemple pour modifier le style, l'épaisseur et la couleur afin de voir comment les bordures fonctionnent.</strong></p>
+**Il existe différents styles qui peuvent être utilisés pour les bordures. Dans l'exemple qui suit, nous avons utilisé un style différent pour chacun des côtés de la boîte. N'hésitez pas à modifier l'exemple pour modifier le style, l'épaisseur et la couleur afin de voir comment les bordures fonctionnent.**
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/borders.html", '100%', 750)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/borders.html", '100%', 750)}}
 
-<h3 id="rounded_corners">Coins arrondis</h3>
+### Coins arrondis
 
-<p>On peut arrondir les coins d'une boîte avec la propriété <a href="/fr/docs/Web/CSS/border-radius"><code>border-radius</code></a> ou les propriétés détaillées correspondantes (une pour chaque coin de la boîte). Cette propriété peut s'utiliser avec deux longueurs ou pourcentages : la première de ces valeurs définit le rayon horizontal et la seconde le rayon vertical. Dans de nombreux cas, on utilisera une seule valeur qui sera alors utilisée pour les deux rayons de courbure.</p>
+On peut arrondir les coins d'une boîte avec la propriété [`border-radius`](/fr/docs/Web/CSS/border-radius) ou les propriétés détaillées correspondantes (une pour chaque coin de la boîte). Cette propriété peut s'utiliser avec deux longueurs ou pourcentages : la première de ces valeurs définit le rayon horizontal et la seconde le rayon vertical. Dans de nombreux cas, on utilisera une seule valeur qui sera alors utilisée pour les deux rayons de courbure.
 
-<p>Par exemple, pour donner par exemple un rayon de 10px à chacun des quatre coins :</p>
+Par exemple, pour donner par exemple un rayon de 10px à chacun des quatre coins :
 
-<pre class="brush: css">.box {
+```css
+.box {
   border-radius: 10px;
-}</pre>
+}
+```
 
-<p>Ou pour donner au coin en haut à droite un rayon horizontal de 1em et un rayon vertical de 10% :</p>
+Ou pour donner au coin en haut à droite un rayon horizontal de 1em et un rayon vertical de 10% :
 
-<pre class="brush: css">.box {
+```css
+.box {
   border-top-right-radius: 1em 10%;
-}</pre>
+}
+```
 
-<p>Dans l'exemple ci-dessus, nous avons d'abord fixé la valeur pour les quatre coins, puis modifié celle du coin en haut à droite. Vous pouvez jouer avec les différentes valeurs pour changer le rendu des coins. Jetez un œil à la page de documentation de <a href="/fr/docs/Web/CSS/border-radius"><code>border-radius</code></a>, vous y trouverez la syntaxe pour les différentes options.</p>
+Dans l'exemple ci-dessus, nous avons d'abord fixé la valeur pour les quatre coins, puis modifié celle du coin en haut à droite. Vous pouvez jouer avec les différentes valeurs pour changer le rendu des coins. Jetez un œil à la page de documentation de [`border-radius`](/fr/docs/Web/CSS/border-radius), vous y trouverez la syntaxe pour les différentes options.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/corners.html", '100%', 750)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/corners.html", '100%', 750)}}
 
-<h2 id="test_your_skills">Testez vos compétences&nbsp;!</h2>
+## Testez vos compétences !
 
-<p>Testons vos nouvelles connaissances : en partant de l'exemple fourni plus bas :</p>
+Testons vos nouvelles connaissances : en partant de l'exemple fourni plus bas :
 
-<ol>
- <li>Donnez au bloc une bordure en trait plein noir de 5px de large, avec des coins arrondis de 10px.</li>
- <li>Ajouter une image de fond (utiliser l'URL <code>balloons.jpg</code>) à redimensionner pour qu'elle recouvre la boîte.</li>
- <li>Donnez au <code>&lt;h2&gt;</code> une couleur de fond noire semi-transparente, avec un texte en blanc.</li>
-</ol>
+1.  Donnez au bloc une bordure en trait plein noir de 5px de large, avec des coins arrondis de 10px.
+2.  Ajouter une image de fond (utiliser l'URL `balloons.jpg`) à redimensionner pour qu'elle recouvre la boîte.
+3.  Donnez au `<h2>` une couleur de fond noire semi-transparente, avec un texte en blanc.
 
-<p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/task.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/task.html", '100%', 700)}}
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez <a href="https://github.com/mdn/css-examples/blob/master/learn/solutions.md">jeter un œil à la solution ici</a> — mais essayez d'abord de la trouver par vous-même !</p>
-</div>
+> **Note :** Vous pouvez [jeter un œil à la solution ici](https://github.com/mdn/css-examples/blob/master/learn/solutions.md) — mais essayez d'abord de la trouver par vous-même !
 
-<h2 id="summary">Résumé</h2>
+## Résumé
 
-<p>Nous avons vu beaucoup de choses dans cette leçon, ajouter un arrière-plan à une boîte ou  une bordure n'est pas si simple. N'hésitez pas à explorer les pages de référence des propriétés rencontrées si vous voulez creuser les points évoqués ici. Chaque page sur MDN vous proposera de nouveaux exemples sur lesquels vous pourrez continuer à vous entraîner et renforcer vos connaissances.</p>
+Nous avons vu beaucoup de choses dans cette leçon, ajouter un arrière-plan à une boîte ou une bordure n'est pas si simple. N'hésitez pas à explorer les pages de référence des propriétés rencontrées si vous voulez creuser les points évoqués ici. Chaque page sur MDN vous proposera de nouveaux exemples sur lesquels vous pourrez continuer à vous entraîner et renforcer vos connaissances.
 
-<p>Dans la leçon suivante nous découvrirons comment le mode d'écriture de votre document interagit avec CSS. Que se passe-t-il quand le texte ne se déroule pas de la gauche vers la droite ?</p>
+Dans la leçon suivante nous découvrirons comment le mode d'écriture de votre document interagit avec CSS. Que se passe-t-il quand le texte ne se déroule pas de la gauche vers la droite ?
 
-<p>{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}</p>
+{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
 
-<h2 id="Dans_ce_cours">Dans ce cours</h2>
+## Dans ce cours
 
-<ol>
-  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade et héritage</a></li>
-  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors">Sélecteurs CSS</a>
-   <ul>
-    <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Sélecteurs de classe, de type et d'identifiant</a></li>
-    <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Sélecteurs d'attribut</a></li>
-    <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes et pseudo-éléments</a></li>
-    <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinateurs</a></li>
-   </ul>
-  </li>
-  <li><a href="/fr/docs/Learn/CSS/Building_blocks/The_box_model">Le modèle de boîte</a></li>
-  <li>Arrières-plans et bordures</li>
-  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Gérer la directionnalité du texte</a></li>
-  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Overflowing_content">Le dépassement du contenu</a></li>
-  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Values_and_units">Valeurs et unités</a></li>
-  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Dimensionnement des objets en CSS</a></li>
-  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, médias, et formulaires</a></li>
-  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Styling_tables">Mettre en forme les tableaux</a></li>
-  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS">Déboguer CSS</a></li>
-  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Organizing">Organiser son code CSS</a></li>
- </ol>
+1.  [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2.  [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
+
+    - [Sélecteurs de classe, de type et d'identifiant](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+    - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+    - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+    - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
+3.  [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+4.  Arrières-plans et bordures
+5.  [Gérer la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6.  [Le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7.  [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+8.  [Dimensionnement des objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9.  [Images, médias, et formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+10. [Mettre en forme les tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
+11. [Déboguer CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+12. [Organiser son code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

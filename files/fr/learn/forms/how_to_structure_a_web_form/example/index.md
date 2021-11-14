@@ -4,92 +4,95 @@ slug: Learn/Forms/How_to_structure_a_web_form/Example
 translation_of: Learn/Forms/How_to_structure_a_web_form/Example
 original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML/Exemple
 ---
-<p>Ceci est un exemple de formulaire de paiement basique extrait de l'article <a href="/fr/docs/HTML/Formulaires/Comment_structurer_un_formulaire_HTML" title="/fr/docs/HTML/Formulaires/Comment_structurer_un_formulaire_HTML">Comment structurer un formulaire HTML</a>.</p>
+Ceci est un exemple de formulaire de paiement basique extrait de l'article [Comment structurer un formulaire HTML](/fr/docs/HTML/Formulaires/Comment_structurer_un_formulaire_HTML "/fr/docs/HTML/Formulaires/Comment_structurer_un_formulaire_HTML").
 
-<h2 id="Un_formulaire_de_paiement">Un formulaire de paiement</h2>
+## Un formulaire de paiement
 
-<h3 id="Contenu_HTML">Contenu HTML</h3>
+### Contenu HTML
 
-<pre class="brush: html">&lt;form&gt;
-        &lt;h1&gt;Formulaire de paiement&lt;/h1&gt;
-        &lt;p&gt;Les champs obligatoires sont suivis par &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;.&lt;/p&gt;
-        &lt;section&gt;
-            &lt;h2&gt;Informations de contact&lt;/h2&gt;
-            &lt;fieldset&gt;
-              &lt;legend&gt;Qualité&lt;/legend&gt;
-              &lt;ul&gt;
-                  &lt;li&gt;
-                    &lt;label for="title_1"&gt;
-                      &lt;input type="radio" id="title_1" name="title" value="M." &gt;
+```html
+<form>
+        <h1>Formulaire de paiement</h1>
+        <p>Les champs obligatoires sont suivis par <strong><abbr title="required">*</abbr></strong>.</p>
+        <section>
+            <h2>Informations de contact</h2>
+            <fieldset>
+              <legend>Qualité</legend>
+              <ul>
+                  <li>
+                    <label for="title_1">
+                      <input type="radio" id="title_1" name="title" value="M." >
                       Monsieur
-                    &lt;/label&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;label for="title_2"&gt;
-                      &lt;input type="radio" id="title_2" name="title" value="Mme."&gt;
+                    </label>
+                  </li>
+                  <li>
+                    <label for="title_2">
+                      <input type="radio" id="title_2" name="title" value="Mme.">
                       Madame
-                    &lt;/label&gt;
-                  &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/fieldset&gt;
-            &lt;p&gt;
-              &lt;label for="name"&gt;
-                &lt;span&gt;Nom :&lt;/span&gt;
-                &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
-              &lt;/label&gt;
-              &lt;input type="text" id="name" name="username"&gt;
-            &lt;/p&gt;
-            &lt;p&gt;
-              &lt;label for="mail"&gt;
-                &lt;span&gt;e-mail :&lt;/span&gt;
-                &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
-              &lt;/label&gt;
-              &lt;input type="email" id="mail" name="usermail"&gt;
-            &lt;/p&gt;
-            &lt;p&gt;
-              &lt;label for="password"&gt;
-                &lt;span&gt;Mot de passe :&lt;/span&gt;
-                &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
-              &lt;/label&gt;
-              &lt;input type="password" id="pwd" name="password"&gt;
-            &lt;/p&gt;
-        &lt;/section&gt;
-        &lt;section&gt;
-            &lt;h2&gt;Informations de paiement&lt;/h2&gt;
-            &lt;p&gt;
-              &lt;label for="card"&gt;
-                &lt;span&gt;Type de carte :&lt;/span&gt;
-              &lt;/label&gt;
-              &lt;select id="card" name="usercard"&gt;
-                &lt;option value="visa"&gt;Visa&lt;/option&gt;
-                &lt;option value="mc"&gt;Mastercard&lt;/option&gt;
-                &lt;option value="amex"&gt;American Express&lt;/option&gt;
-              &lt;/select&gt;
-            &lt;/p&gt;
-            &lt;p&gt;
-              &lt;label for="number"&gt;
-                &lt;span&gt;Numéro :&lt;/span&gt;
-                &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
-              &lt;/label&gt;
-                &lt;input type="text" id="number" name="cardnumber"&gt;
-            &lt;/p&gt;
-            &lt;p&gt;
-              &lt;label for="date"&gt;
-                &lt;span&gt;Validité :&lt;/span&gt;
-                &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
-                &lt;em&gt;format mm/aa&lt;/em&gt;
-              &lt;/label&gt;
-              &lt;input type="text" id="date" name="expiration"&gt;
-            &lt;/p&gt;
-        &lt;/section&gt;
-        &lt;section&gt;
-            &lt;p&gt; &lt;button type="submit"&gt;Valider le paiement&lt;/button&gt; &lt;/p&gt;
-        &lt;/section&gt;
-    &lt;/form&gt;</pre>
+                    </label>
+                  </li>
+              </ul>
+            </fieldset>
+            <p>
+              <label for="name">
+                <span>Nom :</span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+              <input type="text" id="name" name="username">
+            </p>
+            <p>
+              <label for="mail">
+                <span>e-mail :</span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+              <input type="email" id="mail" name="usermail">
+            </p>
+            <p>
+              <label for="password">
+                <span>Mot de passe :</span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+              <input type="password" id="pwd" name="password">
+            </p>
+        </section>
+        <section>
+            <h2>Informations de paiement</h2>
+            <p>
+              <label for="card">
+                <span>Type de carte :</span>
+              </label>
+              <select id="card" name="usercard">
+                <option value="visa">Visa</option>
+                <option value="mc">Mastercard</option>
+                <option value="amex">American Express</option>
+              </select>
+            </p>
+            <p>
+              <label for="number">
+                <span>Numéro :</span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+                <input type="text" id="number" name="cardnumber">
+            </p>
+            <p>
+              <label for="date">
+                <span>Validité :</span>
+                <strong><abbr title="required">*</abbr></strong>
+                <em>format mm/aa</em>
+              </label>
+              <input type="text" id="date" name="expiration">
+            </p>
+        </section>
+        <section>
+            <p> <button type="submit">Valider le paiement</button> </p>
+        </section>
+    </form>
+```
 
-<h3 id="Contenu_CSS">Contenu CSS</h3>
+### Contenu CSS
 
-<pre class="brush: css">      h1 {
+```css
+      h1 {
           margin-top: 0;
       }
 
@@ -158,10 +161,9 @@ original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML/
         position: absolute;
         right: 5px;
         top: 20px;
-      }</pre>
+      }
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{ EmbedLiveSample("Un_formulaire_de_paiement", "100%", "620") }}</p>
-
-<p> </p>
+{{ EmbedLiveSample("Un_formulaire_de_paiement", "100%", "620") }}

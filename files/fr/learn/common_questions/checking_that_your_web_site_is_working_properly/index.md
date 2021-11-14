@@ -12,166 +12,166 @@ tags:
 translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 original_slug: Apprendre/Tester_le_bon_fonctionnement_de_votre_site_web
 ---
-<p>Dans cet article, nous présenterons les différentes étapes permettant de diagnostiquer les problèmes d'un site web ainsi que les mesures à prendre pour corriger certains de ces problèmes.</p>
+Dans cet article, nous présenterons les différentes étapes permettant de diagnostiquer les problèmes d'un site web ainsi que les mesures à prendre pour corriger certains de ces problèmes.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prérequis :</th>
-   <td>Vous devez au préalable savoir <a href="/fr/Apprendre/Transférer_des_fichiers_vers_un_serveur_web">comment transférer des fichiers vers un serveur web</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objectifs :</th>
-   <td>Apprendre à diagnostiquer et à résoudre certains problèmes simples qui peuvent se produire lors du développement ou de la maintenance d'un site web.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prérequis :</th>
+      <td>
+        Vous devez au préalable savoir
+        <a href="/fr/Apprendre/Transférer_des_fichiers_vers_un_serveur_web"
+          >comment transférer des fichiers vers un serveur web</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objectifs :</th>
+      <td>
+        Apprendre à diagnostiquer et à résoudre certains problèmes simples qui
+        peuvent se produire lors du développement ou de la maintenance d'un site
+        web.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Vous avez donc publié votre site web en ligne. Bien. Mais êtes-vous sûr-e que celui-ci fonctionne correctement ?</p>
+Vous avez donc publié votre site web en ligne. Bien. Mais êtes-vous sûr-e que celui-ci fonctionne correctement ?
 
-<p>Un serveur web distant se comportera différemment d'un serveur local. Mieux vaut donc tester le bon fonctionnement d'un site web une fois qu'il est en ligne. Des problèmes « étonnants » peuvent survenir : les images peuvent ne pas apparaître, des pages ne se chargeront pas ou se chargeront lentement, etc. La plupart du temps, ce n'est pas un problème critique : il s'agit de corriger une erreur ou de paramétrer correctement la configuration du serveur hébergé.</p>
+Un serveur web distant se comportera différemment d'un serveur local. Mieux vaut donc tester le bon fonctionnement d'un site web une fois qu'il est en ligne. Des problèmes « étonnants » peuvent survenir : les images peuvent ne pas apparaître, des pages ne se chargeront pas ou se chargeront lentement, etc. La plupart du temps, ce n'est pas un problème critique : il s'agit de corriger une erreur ou de paramétrer correctement la configuration du serveur hébergé.
 
-<p>Voyons donc comment diagnostiquer et résoudre ces problèmes.</p>
+Voyons donc comment diagnostiquer et résoudre ces problèmes.
 
-<h2 id="Pédagogie_active">Pédagogie active</h2>
+## Pédagogie active
 
-<p><em>Il n'existe pas encore de matériau interactif pour cet article. <a href="/fr/docs/MDN/Débuter_sur_MDN">N'hésitez pas à contribuer !</a></em></p>
+_Il n'existe pas encore de matériau interactif pour cet article. [N'hésitez pas à contribuer !](/fr/docs/MDN/Débuter_sur_MDN)_
 
-<h2 id="Aller_plus_loin">Aller plus loin</h2>
+## Aller plus loin
 
-<h3 id="Tester_avec_votre_navigateur">Tester avec votre navigateur</h3>
+### Tester avec votre navigateur
 
-<p>La première chose à faire pour tester une page donnée est d'ouvrir votre navigateur et d'aller sur cette page.</p>
+La première chose à faire pour tester une page donnée est d'ouvrir votre navigateur et d'aller sur cette page.
 
-<h4 id="Où_est_passée_l'image">Où est passée l'image ?</h4>
+#### Où est passée l'image ?
 
-<p>Allons sur notre site web : <code>http://demozilla.hebergeurexemple.net/</code>. L'image n'apparaît pas alors qu'il y aurait du y en avoir une !</p>
+Allons sur notre site web : `http://demozilla.hebergeurexemple.net/`. L'image n'apparaît pas alors qu'il y aurait du y en avoir une !
 
-<p><img alt="Oops, the ‘unicorn’ image is missing" src="Capture%20du%202015-10-12%2017-21-20.png"></p>
+![Oops, the ‘unicorn’ image is missing](Capture%20du%202015-10-12%2017-21-20.png)
 
-<p>Ouvrons les outils de développement et plus particulièrement ceux qui portent sur le réseau (<strong>Outils ➤ Développement Web ➤ Réseau</strong>) puis rechargeons la page :</p>
+Ouvrons les outils de développement et plus particulièrement ceux qui portent sur le réseau (**Outils ➤ Développement Web ➤ Réseau**) puis rechargeons la page :
 
-<p><img alt="The image has a 404 error" src="Capture%20du%202015-10-12%2018-21-23.png"></p>
+![The image has a 404 error](Capture%20du%202015-10-12%2018-21-23.png)
 
-<p>Le problème c'est ce 404 qu'on voit en bas. 404 signifie que la ressource n'a pas été trouvée et c'est pour ça que nous ne voyons pas l'image.</p>
+Le problème c'est ce 404 qu'on voit en bas. 404 signifie que la ressource n'a pas été trouvée et c'est pour ça que nous ne voyons pas l'image.
 
-<h4 id="Les_status_HTTP">Les status HTTP</h4>
+#### Les status HTTP
 
-<p>Le serveur répond avec une message de statut à chaque fois qu'il reçoit une requête. Voici les statuts les plus communs ainsi que leur code :</p>
+Le serveur répond avec une message de statut à chaque fois qu'il reçoit une requête. Voici les statuts les plus communs ainsi que leur code :
 
-<dl>
- <dt><strong> 200 : OK</strong></dt>
- <dd>La ressource demandée a bien été transmise.</dd>
- <dt><strong>301 : Déplacée de façon permanente (<em>Moved permanently</em>)</strong></dt>
- <dd>La ressource a été déplacée à un nouvel emplacement. Vous ne verrez cette erreur que rarement mais elle est utile à connaître car les moteurs de recherchee utilise cette information pour mettre à jour leurs index.</dd>
- <dt><strong>304 : Non modifiée (<em>Not modified</em>)</strong></dt>
- <dd>La ressource n'a pas été modifiée depuis la dernière fois qu'elle a été demandée. Le navigateur affiche alors la version qu'il a dans son cache afin de répondre plus rapidement et d'économiser de la bande passante.</dd>
- <dt><strong>403 : Accès interdit (<em>Forbidden</em>)</strong></dt>
- <dd>Vous n'êtes pas autorisé-e à afficher cette ressource. Généralement, cela est dû à un problème de configuration (par exemple votre hébergeur ne vous a pas donné les droits sur un répertoire).</dd>
- <dt><strong>404 : Non trouvée (<em>Not found</em>)</strong></dt>
- <dd>Le message est plutôt explicite, nous en discuterons dans la suite de cet article.</dd>
- <dt><strong>500 : Erreur interne du serveur (<em>Internal server error</em>)</strong></dt>
- <dd>Une erreur s'est produite sur le serveur. Cela peut par exemple être dû à une erreur de langage côté serveur ({{Glossary("PHP")}}, .Net, etc.) ou à un problème de configuration. Généralement, mieux vaut voir avec l'équipe support de l'hébergeur.</dd>
- <dt><strong>503 : Service indisponible (<em>Service unavailable</em>)</strong></dt>
- <dd>Cela est généralement lié à une surcharge temporaire du serveur. Réessayez dans quelques temps.</dd>
-</dl>
+- **200 : OK**
+  - : La ressource demandée a bien été transmise.
+- **301 : Déplacée de façon permanente (_Moved permanently_)**
+  - : La ressource a été déplacée à un nouvel emplacement. Vous ne verrez cette erreur que rarement mais elle est utile à connaître car les moteurs de recherchee utilise cette information pour mettre à jour leurs index.
+- **304 : Non modifiée (_Not modified_)**
+  - : La ressource n'a pas été modifiée depuis la dernière fois qu'elle a été demandée. Le navigateur affiche alors la version qu'il a dans son cache afin de répondre plus rapidement et d'économiser de la bande passante.
+- **403 : Accès interdit (_Forbidden_)**
+  - : Vous n'êtes pas autorisé-e à afficher cette ressource. Généralement, cela est dû à un problème de configuration (par exemple votre hébergeur ne vous a pas donné les droits sur un répertoire).
+- **404 : Non trouvée (_Not found_)**
+  - : Le message est plutôt explicite, nous en discuterons dans la suite de cet article.
+- **500 : Erreur interne du serveur (_Internal server error_)**
+  - : Une erreur s'est produite sur le serveur. Cela peut par exemple être dû à une erreur de langage côté serveur ({{Glossary("PHP")}}, .Net, etc.) ou à un problème de configuration. Généralement, mieux vaut voir avec l'équipe support de l'hébergeur.
+- **503 : Service indisponible (_Service unavailable_)**
+  - : Cela est généralement lié à une surcharge temporaire du serveur. Réessayez dans quelques temps.
 
-<ul>
-</ul>
+<!---->
 
-<p>Lorsqu'on débute avec une site simple, on rencontre le plus souvent des codes 200, 304, 403, et 404.</p>
+Lorsqu'on débute avec une site simple, on rencontre le plus souvent des codes 200, 304, 403, et 404.
 
-<h4 id="Corriger_l'erreur_404">Corriger l'erreur 404</h4>
+#### Corriger l'erreur 404
 
-<p>Où est donc le problème ?</p>
+Où est donc le problème ?
 
-<p><img alt="Le list of images in our project" src="Capture%20du%202015-10-12%2018-45-07.png"></p>
+![Le list of images in our project](Capture%20du%202015-10-12%2018-45-07.png)
 
-<p>À premièrve vue, l'image semble être au bon endroit mais l'outil d'analyse réseau affiche un code 404 renvoyé par le serveur. Le problème ici est une coquille dans le code de la page HTML <code>licornes.png</code> plutôt que <code>licorne.png</code>. En corrigeant cette erreur avec l'attribut <code>src</code></p>
+À premièrve vue, l'image semble être au bon endroit mais l'outil d'analyse réseau affiche un code 404 renvoyé par le serveur. Le problème ici est une coquille dans le code de la page HTML `licornes.png` plutôt que `licorne.png`. En corrigeant cette erreur avec l'attribut `src`
 
-<p><img alt="Deleting the ‘s’" src="Capture%20du%202015-10-12%2018-50-56.png"></p>
+![Deleting the ‘s’](Capture%20du%202015-10-12%2018-50-56.png)
 
-<p>Puis en sauvegardant et <a href="/fr/Learn/Upload_files_to_a_web_server">en envoyant le fichier vers le serveur</a>, on peut ensuite recharger la page dans le navigateur :</p>
+Puis en sauvegardant et [en envoyant le fichier vers le serveur](/fr/Learn/Upload_files_to_a_web_server), on peut ensuite recharger la page dans le navigateur :
 
-<p><img alt="The image loads corectly in the browser" src="Capture%20du%202015-10-12%2018-53-50.png"></p>
+![The image loads corectly in the browser](Capture%20du%202015-10-12%2018-53-50.png)
 
-<p>Et voilà, revenons sur les status {{Glossary("HTTP")}} :</p>
+Et voilà, revenons sur les status {{Glossary("HTTP")}} :
 
-<ul>
- <li><strong>200</strong> apparaît pour toutes les ressources ici <code>/</code>, <code>basics.css</code> et <code>licorne.png</code> : cela signifie que tous les éléments ont été rechargés.</li>
- <li><strong>304</strong> : Vous pouvez obtenir un code pour <code>basic.css</code>, cela signifie que le fichier n'a pas été modifié depuis la dernière requête. Le navigateur utilise alors la version du fichier qu'il a en cache plutôt que d'en demander un nouvel exemplaire.</li>
-</ul>
+- **200** apparaît pour toutes les ressources ici `/`, `basics.css` et `licorne.png` : cela signifie que tous les éléments ont été rechargés.
+- **304** : Vous pouvez obtenir un code pour `basic.css`, cela signifie que le fichier n'a pas été modifié depuis la dernière requête. Le navigateur utilise alors la version du fichier qu'il a en cache plutôt que d'en demander un nouvel exemplaire.
 
-<p>Nous avons donc corrigé l'erreur tout en en apprenant un peu plus sur les statuts HTTP !</p>
+Nous avons donc corrigé l'erreur tout en en apprenant un peu plus sur les statuts HTTP !
 
-<h3 id="Les_erreurs_fréquentes">Les erreurs fréquentes</h3>
+### Les erreurs fréquentes
 
-<p>Les erreurs les plus fréquentes sont les suivantes.</p>
+Les erreurs les plus fréquentes sont les suivantes.
 
-<h4 id="Des_coquilles_dans_l'adresse">Des coquilles dans l'adresse</h4>
+#### Des coquilles dans l'adresse
 
-<p>Dans la capture suivante, nous avons voulu accéder à <code>http://demozilla.hebergeurexemple.net/</code> mais nous avons oublié un « m » :</p>
+Dans la capture suivante, nous avons voulu accéder à `http://demozilla.hebergeurexemple.net/` mais nous avons oublié un « m » :
 
-<p><img alt="Address unreachable" src="Capture%20du%202015-10-12%2018-58-19.png"></p>
+![Address unreachable](Capture%20du%202015-10-12%2018-58-19.png)
 
-<p>L'adresse est introuvable… en effet.</p>
+L'adresse est introuvable… en effet.
 
-<h4 id="Les_erreurs_404">Les erreurs 404</h4>
+#### Les erreurs 404
 
-<p>La plupart du temps, ces erreurs sont dues à des fautes d'orthographes mais parfois cela peut être la faute d'un fichier qui n'a pas été transféré ou d'une connexion réseau instable lors du transfert. Commencez par vérifier l'orthographe des noms et des chemins de fichiers. Si le problème persiste, transférez à nouveau vos fichiers.</p>
+La plupart du temps, ces erreurs sont dues à des fautes d'orthographes mais parfois cela peut être la faute d'un fichier qui n'a pas été transféré ou d'une connexion réseau instable lors du transfert. Commencez par vérifier l'orthographe des noms et des chemins de fichiers. Si le problème persiste, transférez à nouveau vos fichiers.
 
-<h4 id="Les_erreurs_JavaScript">Les erreurs JavaScript</h4>
+#### Les erreurs JavaScript
 
-<p>Quelqu'un (peut-être vous) peut avoir ajouté un script à la page et avoir fait une erreur. Cela n'empêchera pas la page de charger mais cela pourra avoir des conséquences selon le rôle du script.</p>
+Quelqu'un (peut-être vous) peut avoir ajouté un script à la page et avoir fait une erreur. Cela n'empêchera pas la page de charger mais cela pourra avoir des conséquences selon le rôle du script.
 
-<p>Pour voir ces erreurs, ouvrez la console (<strong>Outils ➤ Développement web ➤ Console web</strong>) and puis rechargez la page:</p>
+Pour voir ces erreurs, ouvrez la console (**Outils ➤ Développement web ➤ Console web**) and puis rechargez la page:
 
-<p><img alt="A Javascript error is shown in the Console" src="Capture%20du%202015-10-12%2019-10-52.png"></p>
+![A Javascript error is shown in the Console](Capture%20du%202015-10-12%2019-10-52.png)
 
-<p>Ici, nous voyons comment détecter une erreur, la console affiche sur quoi porte l'erreur et éventuellement comment la résoudre (nous verrons JavaScript dans <a href="/fr/Apprendre/JavaScript">une autre série d'articles</a>).</p>
+Ici, nous voyons comment détecter une erreur, la console affiche sur quoi porte l'erreur et éventuellement comment la résoudre (nous verrons JavaScript dans [une autre série d'articles](/fr/Apprendre/JavaScript)).
 
-<h3 id="D'autres_points_de_contrôles">D'autres points de contrôles</h3>
+### D'autres points de contrôles
 
-<p>Nous avons vu quelques points simples pour s'assurer qu'un site fonctionne correctement. Mais une page peut fonctionner correctement sans fonctionner « parfaitement ».</p>
+Nous avons vu quelques points simples pour s'assurer qu'un site fonctionne correctement. Mais une page peut fonctionner correctement sans fonctionner « parfaitement ».
 
-<h4 id="Qu'en_est-il_de_la_performance">Qu'en est-il de la performance ?</h4>
+#### Qu'en est-il de la performance ?
 
-<p>Est-ce que la page charge suffisamment vite ? Pour le savoir, vous pouvez utiliser des outils comme <a href="http://www.webpagetest.org/">webpagetest.org</a> ou des modules complémentaires comme <a href="https://addons.mozilla.org/en-US/firefox/addon/yslow/">YSlow</a> qui peuvent fournir des indications intéressantes :</p>
+Est-ce que la page charge suffisamment vite ? Pour le savoir, vous pouvez utiliser des outils comme [webpagetest.org](http://www.webpagetest.org/) ou des modules complémentaires comme [YSlow](https://addons.mozilla.org/en-US/firefox/addon/yslow/) qui peuvent fournir des indications intéressantes :
 
-<p><img alt="Yslow diagnostics" src="yslow-diagnostics.png"></p>
+![Yslow diagnostics](yslow-diagnostics.png)
 
-<p>Les notes vont de A à F. La page actuelle est pluôt légère et respecte donc la plupart des critères. On voit ici qu'il aurait été préférable d'utiliser un {{Glossary("CDN")}}. Dans notre cas, cette remarque n'est pas très critique car notre site web n'est pas un site à forte audience qui sert des milliers d'images.</p>
+Les notes vont de A à F. La page actuelle est pluôt légère et respecte donc la plupart des critères. On voit ici qu'il aurait été préférable d'utiliser un {{Glossary("CDN")}}. Dans notre cas, cette remarque n'est pas très critique car notre site web n'est pas un site à forte audience qui sert des milliers d'images.
 
-<h4 id="Est-ce_que_le_serveur_réagit_suffisamment_vite">Est-ce que le serveur réagit suffisamment vite ?</h4>
+#### Est-ce que le serveur réagit suffisamment vite ?
 
-<p><code>ping</code> est une commande plutôt utile pour tester si le serveur rattaché à votre nom de domaine répond correctement :</p>
+`ping` est une commande plutôt utile pour tester si le serveur rattaché à votre nom de domaine répond correctement :
 
-<pre>$ ping mozilla.org
-PING mozilla.org (63.245.215.20): 56 data bytes
-64 bytes from 63.245.215.20: icmp_seq=0 ttl=44 time=148.741 ms
-64 bytes from 63.245.215.20: icmp_seq=1 ttl=44 time=148.541 ms
-64 bytes from 63.245.215.20: icmp_seq=2 ttl=44 time=148.734 ms
-64 bytes from 63.245.215.20: icmp_seq=3 ttl=44 time=147.857 ms
-^C
---- mozilla.org ping statistics ---
-4 packets transmitted, 4 packets received, 0.0% packet loss
-round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms</pre>
+    $ ping mozilla.org
+    PING mozilla.org (63.245.215.20): 56 data bytes
+    64 bytes from 63.245.215.20: icmp_seq=0 ttl=44 time=148.741 ms
+    64 bytes from 63.245.215.20: icmp_seq=1 ttl=44 time=148.541 ms
+    64 bytes from 63.245.215.20: icmp_seq=2 ttl=44 time=148.734 ms
+    64 bytes from 63.245.215.20: icmp_seq=3 ttl=44 time=147.857 ms
+    ^C
+    --- mozilla.org ping statistics ---
+    4 packets transmitted, 4 packets received, 0.0% packet loss
+    round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 
-<p>Si vous utilisez Windows, le ping s'arrêtera après quelques envois mais si vous utilisez Mac ou Linux, mémorisez le raccourci <strong>Ctrl+C</strong> pour arrêter l'envoi des pings.  Ctrl+C envoie un signal d'interruption qui arrêtera l'exécution du programme. Si vous n'utilisez pas Ctrl+C, le programme <code>ping</code> contactera le serveur indéfiniment.</p>
+Si vous utilisez Windows, le ping s'arrêtera après quelques envois mais si vous utilisez Mac ou Linux, mémorisez le raccourci **Ctrl+C** pour arrêter l'envoi des pings.  Ctrl+C envoie un signal d'interruption qui arrêtera l'exécution du programme. Si vous n'utilisez pas Ctrl+C, le programme `ping` contactera le serveur indéfiniment.
 
-<h3 id="Une_checklist_de_base">Une <em>checklist</em> de base</h3>
+### Une _checklist_ de base
 
-<ul>
- <li>Vérifier les erreurs 404</li>
- <li>S'assurer que chaque page web fonctionne comme attenu</li>
- <li>Vérifier le site web avec plusieurs navigateurs pour s'assurer qu'il s'affiche de façon cohérente sur ces différents navigateurs</li>
-</ul>
+- Vérifier les erreurs 404
+- S'assurer que chaque page web fonctionne comme attenu
+- Vérifier le site web avec plusieurs navigateurs pour s'assurer qu'il s'affiche de façon cohérente sur ces différents navigateurs
 
-<h2 id="Prochaines_étapes">Prochaines étapes</h2>
+## Prochaines étapes
 
-<p>Félicitations ! Votre site est en ligne, fonctionne correctement et tout le monde peut le visiter. C'est une belle réussite ! Vous pouvez maintenant approfondir d'autres sujets.</p>
+Félicitations ! Votre site est en ligne, fonctionne correctement et tout le monde peut le visiter. C'est une belle réussite ! Vous pouvez maintenant approfondir d'autres sujets.
 
-<ul>
- <li>De nombreuses personnes peuvent accéder à votre site, mieux vaut donc que celui-ci <a href="/fr/Apprendre/Accessibilité">soit le plus accessible possible</a>.</li>
- <li>Le site a l'air brut de décoffrage ? C'est le bon moment pour <a href="/fr/Apprendre/CSS/Utiliser_CSS_dans_une_page_web">apprendre un peu de CSS</a>.</li>
-</ul>
+- De nombreuses personnes peuvent accéder à votre site, mieux vaut donc que celui-ci [soit le plus accessible possible](/fr/Apprendre/Accessibilité).
+- Le site a l'air brut de décoffrage ? C'est le bon moment pour [apprendre un peu de CSS](/fr/Apprendre/CSS/Utiliser_CSS_dans_une_page_web).

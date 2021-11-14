@@ -14,112 +14,104 @@ translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 original_slug: >-
   Learn/JavaScript/Objects/Ajouter_des_fonctionnalités_à_notre_démo_de_balles_rebondissantes
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}</div>
-
-<p>Dans cet exercice, vous devrez utiliser le jeu des balles rebondissantes de l'article précédent comme base, pour y ajouter de nouvelles fonctionnalitées intéressantes.</p>
+Dans cet exercice, vous devrez utiliser le jeu des balles rebondissantes de l'article précédent comme base, pour y ajouter de nouvelles fonctionnalitées intéressantes.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prérequis:</th>
-   <td>Avant de vous lancer dans cet exercice, il est fortement conseillé d'avoir vus et compris tous les précédents articles de ce module.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objectifs:</th>
-   <td>Tester votre connaissance du Javascript orienté objet en conception et en pratique.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prérequis:</th>
+      <td>
+        Avant de vous lancer dans cet exercice, il est fortement conseillé
+        d'avoir vus et compris tous les précédents articles de ce module.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objectifs:</th>
+      <td>
+        Tester votre connaissance du Javascript orienté objet en conception et
+        en pratique.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Pour_commencer">Pour commencer</h2>
+## Pour commencer
 
-<p>Pour commencer, faite une copie locale de <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html">index-finished.html</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css">style.css</a>, et <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js">main-finished.js</a> de l'article précédent, dans un nouveau dossier.</p>
+Pour commencer, faite une copie locale de [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html), [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), et [main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) de l'article précédent, dans un nouveau dossier.
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez utiliser un site comme <a class="external external-icon" href="http://jsbin.com/">JSBin</a> ou <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a>. Vous pouvez copier vos codes HTML, CSS et JavaScript dans l'un d'entre eux. Si celui que vous utilisez ne possède pas de fenêtres séparées pour les différents langages, ajoutez les dans des balises <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code> dans votre code HTML.</p>
-</div>
+> **Note :** Vous pouvez utiliser un site comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/). Vous pouvez copier vos codes HTML, CSS et JavaScript dans l'un d'entre eux. Si celui que vous utilisez ne possède pas de fenêtres séparées pour les différents langages, ajoutez les dans des balises `<script>`/`<style>` dans votre code HTML.
 
-<h2 id="Le_projet_en_bref">Le projet en bref</h2>
+## Le projet en bref
 
-<p>Notre jeu des balles est assez sympa, mais maintenant il s'agit de le rendre plus interactif en y ajoutant un viseur controlé par l'utilisateur, qui va détruire une balle si il l'a touche. Nous voulons aussi testé votre capacité en programmation orienté objet en créant un object <code>Shape()</code> dont le viseur et les balles peuvent hériter. Pour terminer nous voulons créer un compteur qui permet d'afficher combien de balle il nous reste encore à détruire.</p>
+Notre jeu des balles est assez sympa, mais maintenant il s'agit de le rendre plus interactif en y ajoutant un viseur controlé par l'utilisateur, qui va détruire une balle si il l'a touche. Nous voulons aussi testé votre capacité en programmation orienté objet en créant un object `Shape()` dont le viseur et les balles peuvent hériter. Pour terminer nous voulons créer un compteur qui permet d'afficher combien de balle il nous reste encore à détruire.
 
-<p>Ce screenshot vous donne une idée du résultat final:</p>
+Ce screenshot vous donne une idée du résultat final:
 
-<p><img alt="" src="bouncing-evil-circle.png"></p>
+![](bouncing-evil-circle.png)
 
-<ul>
-</ul>
+Si vous voulez en savoir plus regardez l'exemple finit [finished example](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (N'en profitez pas pour récupérer le code source !)
 
-<p>Si vous voulez en savoir plus regardez l'exemple finit <a href="http://mdn.github.io/learning-area/javascript/oojs/assessment/">finished example</a> (N'en profitez pas pour récupérer le code source !)</p>
+## Vos objectifs
 
-<h2 id="Vos_objectifs">Vos objectifs</h2>
+Cette section décrit ce que vous aurez à faire.
 
-<p>Cette section décrit ce que vous aurez à faire.</p>
+### Créons nos nouveaux objets
 
-<h3 id="Créons_nos_nouveaux_objets">Créons nos nouveaux objets</h3>
+Pour commencer, modifions le constructeur de l'objet `Ball()` pour qu'il devienne le constructeur de `Shape()` puis créons en un nouveau pour `Ball()` :
 
-<p>Pour commencer, modifions le constructeur de l'objet <code>Ball()</code> pour qu'il devienne le constructeur de <code>Shape()</code> puis créons en un nouveau pour <code>Ball()</code> :</p>
+1.  Le constructeur `Shape()` devra définir les propriétés `x`, `y`, `velX`, et `velY` de la même manière que le constructeur `Ball()` auparavent, mais sans les propriétés `color` et `size`.
+2.  `Shape()` doit aussi définir une nouvelle propriété `exists`, qui servira à identifier les balles qu'il reste à détruire dans la fenêtre (celles qui n'on pas encore été détruites). Elle doit retourner un booléen (`true`/`false`).
+3.  Le constructeur `Ball()` doit hériter des propriétés `x`, `y`, `velX`, `velY`, et `exists` du constructeur `Shape()`.
+4.  `Ball()` doit aussi définir les propriétés `color` et `size`, comme à l'origine.
+5.  N'oubliez pas de définir le prototype de `Ball()` et son constructeur de manière approprié.
 
-<ol>
- <li>Le constructeur <code>Shape()</code> devra définir les propriétés <code>x</code>, <code>y</code>, <code>velX</code>, et <code>velY</code> de la même manière que le constructeur <code>Ball()</code> auparavent, mais sans les propriétés <code>color</code> et <code>size</code>.</li>
- <li><code>Shape()</code> doit aussi définir une nouvelle propriété <code>exists</code>, qui servira à identifier les balles qu'il reste à détruire dans la fenêtre (celles qui n'on pas encore été détruites). Elle doit retourner un booléen (<code>true</code>/<code>false</code>).</li>
- <li>Le constructeur <code>Ball()</code> doit hériter des propriétés <code>x</code>, <code>y</code>, <code>velX</code>, <code>velY</code>, et <code>exists</code> du constructeur <code>Shape()</code>.</li>
- <li><code>Ball()</code> doit aussi définir les propriétés <code>color</code> et <code>size</code>, comme à l'origine.</li>
- <li>N'oubliez pas de définir le prototype de <code>Ball()</code> et son constructeur de manière approprié.</li>
-</ol>
+Les méthodes `draw()`, `update()`, et `collisionDetect()` doivent fonctionnées comme avant, sans être modifiées.
 
-<p>Les méthodes <code>draw()</code>, <code>update()</code>, et <code>collisionDetect()</code> doivent fonctionnées comme avant, sans être modifiées.</p>
+Vous devrez ajouter un nouveau paramètre au constructeur `new Ball() ( ... )` — le paramètre `exists` doit être le 5ème et être égal à  `true`.
 
-<p>Vous devrez ajouter un nouveau paramètre au constructeur <code>new Ball() ( ... )</code> — le paramètre <code>exists</code> doit être le 5ème et être égal à  <code>true</code>.</p>
+Vous pouvez recharger la page — Tout doit fonctionner comme avant même après les modifications que vous avez effectuées sur les objets.
 
-<p>Vous pouvez recharger la page — Tout doit fonctionner comme avant même après les modifications que vous avez effectuées sur les objets.</p>
+### Définition du EvilCircle() (viseur)
 
-<h3 id="Définition_du_EvilCircle()_(viseur)">Définition du EvilCircle() (viseur)</h3>
+Il est temps de vous équipez ! — le `EvilCircle()`! Dans notre jeu nous allons créer un viseur, mais nous allons nous servir de l'objet `Shape()` pour le définir. Vous voudrez certainement en ajouter un (plusieurs) autre plus tard, qu'un autre joueur ou l'ordinateur pourra contrôler. Vous n'irez probablement pas bien loin avec un seul viseur, mais ce sera suffisant pour le moment !
 
-<p>Il est temps de vous équipez ! — le <code>EvilCircle()</code>! Dans notre jeu nous allons créer un viseur, mais nous allons nous servir de l'objet <code>Shape()</code> pour le définir. Vous voudrez certainement en ajouter un (plusieurs) autre plus tard, qu'un autre joueur ou l'ordinateur pourra contrôler. Vous n'irez probablement pas bien loin avec un seul viseur, mais ce sera suffisant pour le moment !</p>
+Le constructeur du `EvilCircle()` doit hériter des propriétés `x`, `y`, `velX`, `velY`, et `exists` de `Shape()`, mais `velX` et `velY` doivent toujours être égales à 20.
 
-<p>Le constructeur du <code>EvilCircle()</code> doit hériter des propriétés <code>x</code>, <code>y</code>, <code>velX</code>, <code>velY</code>, et <code>exists</code> de <code>Shape()</code>, mais <code>velX</code> et <code>velY</code> doivent toujours être égales à 20.</p>
+Vous devriez utiliser quelque chose comme `Shape.call(this, x, y, 20, 20, exists);`
 
-<p>Vous devriez utiliser quelque chose comme <code>Shape.call(this, x, y, 20, 20, exists);</code></p>
+Le constructeur doit aussi définir ses propres propriétés:
 
-<p>Le constructeur doit aussi définir ses propres propriétés:</p>
+- `color` — `'white'`
+- `size` — `10`
 
-<ul>
- <li><code>color</code> — <code>'white'</code></li>
- <li><code>size</code> — <code>10</code></li>
-</ul>
+Une fois de plus, souvenez vous de définir vos propriétés héritées en paramètre du constructeur et de définir le prototype et son constructeur de manière appropriée.
 
-<p>Une fois de plus, souvenez vous de définir vos propriétés héritées en paramètre du constructeur et de définir le prototype et son constructeur de manière appropriée.</p>
+### Définir les méthodes du EvilCircle() (viseur)
 
-<h3 id="Définir_les_méthodes_du_EvilCircle()_(viseur)">Définir les méthodes du EvilCircle() (viseur)</h3>
+`EvilCircle()` doit avoir quatre méthodes, comme définie en dessous.
 
-<p><code>EvilCircle()</code> doit avoir quatre méthodes, comme définie en dessous.</p>
+#### `draw()`
 
-<h4 id="draw()"><code>draw()</code></h4>
+Cette méthode doit avoir la même fonction que celle de `Ball()`: soit dessiner l'objet dans le canvas. Elle fonctionnera quasiment de la même manière, copiez la fonction `Ball.prototype.draw`. Puis appliquez les modifications suivantes:
 
-<p>Cette méthode doit avoir la même fonction que celle de <code>Ball()</code>: soit dessiner l'objet dans le canvas. Elle fonctionnera quasiment de la même manière, copiez la fonction <code>Ball.prototype.draw</code>. Puis appliquez les modifications suivantes:</p>
+- On ne veut pas que le viseur soit plein, mais qu'il ait seulement un contour. Changez [`fillStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle) et [`fill()`](/fr/docs/Web/API/CanvasRenderingContext2D/fill) pour [`strokeStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/strokeStyle) et [`stroke()`](/fr/docs/Web/API/CanvasRenderingContext2D/stroke).
+- On voudrait qu'il soit aussi un peu plus épais, pour être plus facile à voir. Pour ça on doit définir un attribut [`lineWidth`](/fr/docs/Web/API/CanvasRenderingContext2D/lineWidth) à ctx après l'appel à la fonction [`beginPath()`](/fr/docs/Web/API/CanvasRenderingContext2D/beginPath) (avec une valeur de 3).
 
-<ul>
- <li>On ne veut pas que le viseur soit plein, mais qu'il ait seulement un contour. Changez <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> et <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/fill">fill()</a></code> pour <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/strokeStyle">strokeStyle</a></code> et <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/stroke">stroke()</a></code>.</li>
- <li>On voudrait qu'il soit aussi un peu plus épais, pour être plus facile à voir. Pour ça on doit définir un attribut <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/lineWidth">lineWidth</a></code> à ctx après l'appel à la fonction <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> (avec une valeur de 3).</li>
-</ul>
+#### `checkBounds()`
 
-<h4 id="checkBounds()"><code>checkBounds()</code></h4>
+Cette méthode à la même fonction que la première partie de `Ball()` `update()` — Savoir si le viseur va hors de l'écran, et l'arrêter si besoin. Une fois encore, copié la méthode `Ball.prototype.update`, mais en effectuant quelques changements:
 
-<p>Cette méthode à la même fonction que la première partie de <code>Ball()</code> <code>update()</code> — Savoir si le viseur va hors de l'écran, et l'arrêter si besoin. Une fois encore, copié la méthode <code>Ball.prototype.update</code>, mais en effectuant quelques changements:</p>
+- Débarrassez-vous des deux dernières lignes — on a pas besoin de connaître la position du viseur à chaque frame, car nous le déplacerons d'une manière différente comme vous pourrez le voir.
+- Dans les conditions en `if()` , si la condition retourne true on ne veut pas modifier (update) les propriétés `velX`/`velY`; mais plutôt changer les valeurs de `x`/`y` de manière à ce que le viseur revienne doucement dans l'écran. Ajouter ou soustraire de manière appropriée la taille (`size)` du viseur sera suffisant.
 
-<ul>
- <li>Débarrassez-vous des deux dernières lignes — on a pas besoin de connaître la position du viseur à chaque frame, car nous le déplacerons d'une manière différente comme vous pourrez le voir.</li>
- <li>Dans les conditions en <code>if()</code> , si la condition retourne true on ne veut pas modifier (update) les propriétés <code>velX</code>/<code>velY</code>; mais plutôt changer les valeurs de <code>x</code>/<code>y</code> de manière à ce que le viseur revienne doucement dans l'écran. Ajouter ou soustraire de manière appropriée la taille (<code>size)</code> du viseur sera suffisant.</li>
-</ul>
+#### `setControls()`
 
-<h4 id="setControls()"><code>setControls()</code></h4>
+Cette méthode ajoute un écouteur d'évènement `onkeydown` à l'objet `window` ce qui permettra en enfonçant certaine touche du clavier de déplacer le viseur dans la fenêtre. Insérez le code suivant dans la méthode:
 
-<p>Cette méthode ajoute un écouteur d'évènement <code>onkeydown</code> à l'objet <code>window</code> ce qui permettra en enfonçant certaine touche du clavier de déplacer le viseur dans la fenêtre. Insérez le code suivant dans la méthode:</p>
-
-<pre class="brush: js">var _this = this;
+```js
+var _this = this;
 window.onkeydown = function(e) {
     if (e.keyCode === 65) {
       _this.x -= _this.velX;
@@ -130,80 +122,70 @@ window.onkeydown = function(e) {
     } else if (e.keyCode === 83) {
       _this.y += _this.velY;
     }
-  }</pre>
+  }
+```
 
-<p>Quand une touche est enfoncée, la propriété <a href="/fr/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> de l'objet event est consultée pour savoir quelle touche est enfoncée. Si c'est une des touches spécifiée, alors le viseur ce déplacera à gauche, à droite, en haut ou en bas.</p>
+Quand une touche est enfoncée, la propriété [keyCode](/fr/docs/Web/API/KeyboardEvent/keyCode) de l'objet event est consultée pour savoir quelle touche est enfoncée. Si c'est une des touches spécifiée, alors le viseur ce déplacera à gauche, à droite, en haut ou en bas.
 
-<ul>
- <li>Pour un point bonus, faite apparaître à quel touche correspond le code de celle que l'utilisateur a enfoncé.</li>
- <li>Pour un second point bonus, pouvez vous nous dire pourquoi nous devons définir <code>var _this = this;</code> de cette façon ? Cela à quelque chose à voir avec la portée des fonction.</li>
-</ul>
+- Pour un point bonus, faite apparaître à quel touche correspond le code de celle que l'utilisateur a enfoncé.
+- Pour un second point bonus, pouvez vous nous dire pourquoi nous devons définir `var _this = this;` de cette façon ? Cela à quelque chose à voir avec la portée des fonction.
 
-<h4 id="collisionDetect()"><code>collisionDetect()</code></h4>
+#### `collisionDetect()`
 
-<p>Cette méthode fonctionne d'une manière similaire à <code>Ball()</code> <code>collisionDetect()</code>, copier celle-ci pour vous en servir comme base. Il y a deux différences:</p>
+Cette méthode fonctionne d'une manière similaire à `Ball()` `collisionDetect()`, copier celle-ci pour vous en servir comme base. Il y a deux différences:
 
-<ul>
- <li>Dans la condition extérieure <code>if</code>, nous n'avons plus besoin de vérifier si la balle actuellement dans la boucle est celle actuellement surveiller — Parce que ce n'est plus une balle, mais notre viseur ! A la place, on doit tester si la balle visée existe (avec quelle propriété pourrez vous faire cela?). Si elle n'existe pas, c'est qu'elle a déjà été détruite, on a donc pas besoin de la vérifier encore une fois.</li>
- <li>Dans la condition intérieur <code>if</code>, on ne souhaite plus changer un élément de couleur lorsqu'une collision est détéctée — A la place, on veut détruire les balles qui entre en collision avec le viseur (encore une fois, comment pensez-vous faire cela ?).</li>
-</ul>
+- Dans la condition extérieure `if`, nous n'avons plus besoin de vérifier si la balle actuellement dans la boucle est celle actuellement surveiller — Parce que ce n'est plus une balle, mais notre viseur ! A la place, on doit tester si la balle visée existe (avec quelle propriété pourrez vous faire cela?). Si elle n'existe pas, c'est qu'elle a déjà été détruite, on a donc pas besoin de la vérifier encore une fois.
+- Dans la condition intérieur `if`, on ne souhaite plus changer un élément de couleur lorsqu'une collision est détéctée — A la place, on veut détruire les balles qui entre en collision avec le viseur (encore une fois, comment pensez-vous faire cela ?).
 
-<h3 id="Insérer_le_viseur_dans_notre_programme">Insérer le viseur dans notre programme</h3>
+### Insérer le viseur dans notre programme
 
-<p>Maintenant que nous avons définit notre viseur, on a besoin de le faire apparaître à l'écran. Pour ce faire on doit appliquer quelques modifications à la fonction <code>loop()</code>.</p>
+Maintenant que nous avons définit notre viseur, on a besoin de le faire apparaître à l'écran. Pour ce faire on doit appliquer quelques modifications à la fonction `loop()`.
 
-<ul>
- <li>Premièrement, créons une nouvelle instance de l'objet viseur (en spécifiant les paramètres nécessaire), et appelons sa méthode <code>setControls()</code>. On doit seulement effectuer ses deux actions une seule fois, pas à chaque itération.</li>
- <li>Au moment où l'on boucle à travers toutes les balles et que l'on appelle les méthodes <code>draw()</code>, <code>update()</code>, et <code>collisionDetect()</code> pour chacune d'entre elle, faite de manière à ce que ces fonctions soit appelées seulement si la balle existe.</li>
- <li>Appellez les méthodes de l'instance du viseur <code>draw()</code>, <code>checkBounds()</code>, et <code>collisionDetect()</code> à chaque itération de la boucle.</li>
-</ul>
+- Premièrement, créons une nouvelle instance de l'objet viseur (en spécifiant les paramètres nécessaire), et appelons sa méthode `setControls()`. On doit seulement effectuer ses deux actions une seule fois, pas à chaque itération.
+- Au moment où l'on boucle à travers toutes les balles et que l'on appelle les méthodes `draw()`, `update()`, et `collisionDetect()` pour chacune d'entre elle, faite de manière à ce que ces fonctions soit appelées seulement si la balle existe.
+- Appellez les méthodes de l'instance du viseur `draw()`, `checkBounds()`, et `collisionDetect()` à chaque itération de la boucle.
 
-<h3 id="Implémenter_le_compteur_de_score">Implémenter le compteur de score</h3>
+### Implémenter le compteur de score
 
-<p>Pour implémenter le compteur de score, suivez les étapes suivantes:</p>
+Pour implémenter le compteur de score, suivez les étapes suivantes:
 
-<ol>
- <li>Dans votre fichier HTML, ajoutez un élement {{HTMLElement("p")}} qui contiendra le texte suivant "Ball count: ", juste en dessous de l'élément {{HTMLElement("h1")}} .</li>
- <li>Dans votre fichier CSS, ajouter les règlesz suivantes:
-  <pre class="brush: css">p {
-  position: absolute;
-  margin: 0;
-  top: 35px;
-  right: 5px;
-  color: #aaa;
-}</pre>
- </li>
- <li>Dans votre JavaScript, effectuez les modifications suivante:
-  <ul>
-   <li>Créez une variable qui contiendra la référence vers le paragraphe.</li>
-   <li>Stocker et afficher le nombre de balle présentent à l'écran.</li>
-   <li>Incrémentez le compteur de balle à chaque fois qu'une balle apparait à l'écran.</li>
-   <li>Décrementez le compteur à chaque fois qu'une balle est détruite par le viseur.</li>
-  </ul>
- </li>
-</ol>
+1.  Dans votre fichier HTML, ajoutez un élement {{HTMLElement("p")}} qui contiendra le texte suivant "Ball count: ", juste en dessous de l'élément {{HTMLElement("h1")}} .
+2.  Dans votre fichier CSS, ajouter les règlesz suivantes:
 
-<h2 id="Conseils_et_astuces">Conseils et astuces</h2>
+    ```css
+    p {
+      position: absolute;
+      margin: 0;
+      top: 35px;
+      right: 5px;
+      color: #aaa;
+    }
+    ```
 
-<ul>
- <li>Cet exercice est un bon challenge. Prenez le temps de faire et de comprendre chaque étape.</li>
- <li>Ce serait une bonne idée de garder une copie de chaque étape lorsque vous arrivez à la faire marcher correctement, pour vous y réferrer si vous n'arrivez plus à progresser ensuite.</li>
-</ul>
+3.  Dans votre JavaScript, effectuez les modifications suivante:
 
-<h2 id="Evaluation">Evaluation</h2>
+    - Créez une variable qui contiendra la référence vers le paragraphe.
+    - Stocker et afficher le nombre de balle présentent à l'écran.
+    - Incrémentez le compteur de balle à chaque fois qu'une balle apparait à l'écran.
+    - Décrementez le compteur à chaque fois qu'une balle est détruite par le viseur.
 
-<p>Si vous effectuez cette évalutation dans le cadre d'un cours, vous devriez pouvoir fournir votre travail à votre professeur/mentor pour correction. Si vous apprenez par vous même, vous pouvez obtenir la correction sur <a href="https://discourse.mozilla.org/t/adding-features-to-our-bouncing-balls-demo-assessment/24689">discussion thread for this exercise</a>, ou sur <a href="irc://irc.mozilla.org/mdn">#mdn</a> IRC channel sur <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a>. Tout d'abord effectuez cet exercice — vous n'obtiendrez jamais rien en trichant !</p>
+## Conseils et astuces
 
-<p>{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}</p>
+- Cet exercice est un bon challenge. Prenez le temps de faire et de comprendre chaque étape.
+- Ce serait une bonne idée de garder une copie de chaque étape lorsque vous arrivez à la faire marcher correctement, pour vous y réferrer si vous n'arrivez plus à progresser ensuite.
 
-<h2 id="Dans_ce_Module">Dans ce Module</h2>
+## Evaluation
 
-<ul>
- <li><a href="/fr/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
- <li><a href="/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
- <li><a href="/fr/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
- <li><a href="/fr/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
- <li><a href="/fr/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
- <li><a href="/fr/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
- <li><a href="/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
-</ul>
+Si vous effectuez cette évalutation dans le cadre d'un cours, vous devriez pouvoir fournir votre travail à votre professeur/mentor pour correction. Si vous apprenez par vous même, vous pouvez obtenir la correction sur [discussion thread for this exercise](https://discourse.mozilla.org/t/adding-features-to-our-bouncing-balls-demo-assessment/24689), ou sur [#mdn](irc://irc.mozilla.org/mdn) IRC channel sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Tout d'abord effectuez cet exercice — vous n'obtiendrez jamais rien en trichant !
+
+{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+
+## Dans ce Module
+
+- [Object basics](/fr/docs/Learn/JavaScript/Objects/Basics)
+- [Object-oriented JavaScript for beginners](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+- [Object prototypes](/fr/docs/Learn/JavaScript/Objects/Object_prototypes)
+- [Inheritance in JavaScript](/fr/docs/Learn/JavaScript/Objects/Inheritance)
+- [Working with JSON data](/fr/docs/Learn/JavaScript/Objects/JSON)
+- [Object building practice](/fr/docs/Learn/JavaScript/Objects/Object_building_practice)
+- [Adding features to our bouncing balls demo](/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
