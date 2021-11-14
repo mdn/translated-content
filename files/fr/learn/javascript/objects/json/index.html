@@ -16,13 +16,13 @@ translation_of: Learn/JavaScript/Objects/JSON
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}</div>
 
-<p class="summary">Le JavaScript Object Notation (JSON) est un format standard utilisé pour représenter des données structurées de façon semblable aux objets Javascript. Il est habituellement utilisé pour structurer et transmettre des données sur des sites web (par exemple, envoyer des données depuis un serveur vers un client afin de les afficher sur une page web ou vice versa). Comme cette notation est extrêmement courante, cet article a pour but de vous donner les connaissances nécessaires pour travailler avec JSON en JavaScript, vous apprendre à analyser la syntaxe du JSON afin d'en extraire des données et écrire vos propres objets JSON.</p>
+<p>Le JavaScript Object Notation (JSON) est un format standard utilisé pour représenter des données structurées de façon semblable aux objets Javascript. Il est habituellement utilisé pour structurer et transmettre des données sur des sites web (par exemple, envoyer des données depuis un serveur vers un client afin de les afficher sur une page web ou vice versa). Comme cette notation est extrêmement courante, cet article a pour but de vous donner les connaissances nécessaires pour travailler avec JSON en JavaScript, vous apprendre à analyser la syntaxe du JSON afin d'en extraire des données et écrire vos propres objets JSON.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Vocabulaire de base d'informatique, connaissances de base en HTML et CSS, connaissances de base en JavaScript (voir <a href="/en-US/docs/Learn/JavaScript/First_steps">Premiers pas</a> et <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Les blocs</a>) et en Javascript orienté objets (voir <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction aux objets</a>).</td>
+   <td>Vocabulaire de base d'informatique, connaissances de base en HTML et CSS, connaissances de base en JavaScript (voir <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas</a> et <a href="/fr/docs/Learn/JavaScript/Building_blocks">Les blocs</a>) et en Javascript orienté objets (voir <a href="/fr/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction aux objets</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objectif :</th>
@@ -35,10 +35,10 @@ translation_of: Learn/JavaScript/Objects/JSON
 
 <p>{{glossary("JSON")}} est un format de données semblable à la syntaxe des objets JavaScript, qui a été popularisé par <a href="https://en.wikipedia.org/wiki/Douglas_Crockford">Douglas Crockford</a>. Malgré sa syntaxe très similaire à celle des objets littéraux JavaScript, JSON peut être utilisé indépendamment de ce langage et ainsi, de nombreux autres langages de programmation disposent de fonctionnalités permettant d'analyser la syntaxe du JSON et d'en générer.</p>
 
-<p>Le JSON se présente sous la forme  d'une chaîne de caractères —utile lorsque vous souhaitez transmettre les données sur un réseau. Il a donc besoin d'être converti en un objet JavaScript natif lorsque vous souhaitez accéder aux données. Ce n'est pas vraiment un souci puisque le JavaScript fournit un objet global <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> disposant des méthodes pour assurer la conversion entre les deux.</p>
+<p>Le JSON se présente sous la forme  d'une chaîne de caractères —utile lorsque vous souhaitez transmettre les données sur un réseau. Il a donc besoin d'être converti en un objet JavaScript natif lorsque vous souhaitez accéder aux données. Ce n'est pas vraiment un souci puisque le JavaScript fournit un objet global <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> disposant des méthodes pour assurer la conversion entre les deux.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Convertir une chaîne de caractères en un objet natif se nomme <strong>analyse syntaxique (parsage)</strong> tandis que le contraire porte le nom  de la <strong>linéarisation (stringification)</strong>.</p>
+<p><strong>Note :</strong> Convertir une chaîne de caractères en un objet natif se nomme <strong>analyse syntaxique (parsage)</strong> tandis que le contraire porte le nom  de la <strong>linéarisation (stringification)</strong>.</p>
 </div>
 
 <p>Un objet JSON peut être stocké dans son propre fichier qui se présente simplement sous la forme d'un fichier texte avec l'extension <code>.json</code> et le {{glossary("MIME type")}} <code>application/json</code>.</p>
@@ -107,7 +107,7 @@ superHeroes['active']</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note </strong>: L'objet JSON vu ci-dessus est disponible au sein d'une variable dans notre exemple <a href="http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html">JSONTest.html</a> (voir le <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html">code source</a>). Essayez de le charger et d'accéder aux données en utilisant la console Javascript de votre navigateur.</p>
+<p><strong>Note :</strong> L'objet JSON vu ci-dessus est disponible au sein d'une variable dans notre exemple <a href="http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html">JSONTest.html</a> (voir le <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html">code source</a>). Essayez de le charger et d'accéder aux données en utilisant la console Javascript de votre navigateur.</p>
 </div>
 
 <h3 id="Des_tableaux_en_tant_que_JSON">Des tableaux en tant que JSON</h3>
@@ -172,7 +172,7 @@ var section = document.querySelector('section');</pre>
 
 <p>Nous souhaitons les récupérer et, après quelques manipulations du DOM, les afficher comme ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13857/json-superheroes.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="json-superheroes.png"></p>
 
 <h3 id="Chargeons_notre_JSON">Chargeons notre JSON</h3>
 
@@ -185,17 +185,17 @@ var section = document.querySelector('section');</pre>
  <li>Afin de créer une requête, nous avons besoin d'instancier un nouvel objet <code>XMLHttpRequest</code> à partir de son constructeur en utilisant le mot clé new. Ajouter la ligne suivante à votre script :
   <pre class="brush: js">var request = new XMLHttpRequest();</pre>
  </li>
- <li>Maintenant, nous avons besoin d'ouvrir une nouvelle requête grâce à la méthode <code><a href="/en-US/docs/Web/API/XMLHttpRequest/open">open()</a></code>. Ajoutez la ligne suivante :
+ <li>Maintenant, nous avons besoin d'ouvrir une nouvelle requête grâce à la méthode <code><a href="/fr/docs/Web/API/XMLHttpRequest/open">open()</a></code>. Ajoutez la ligne suivante :
   <pre class="brush: js">request.open('GET', requestURL);</pre>
 
   <p>Cette méthode prend au moins deux paramètres — il y a d'autres paramètres optionnels disponibles.  Deux suffiront pour notre exemple :</p>
 
   <ul>
-   <li>La méthode HTTP à utiliser sur le réseau pour notre requête. Dans notre cas, la méthode <code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code> est appropriée dans la mesure où nous voulons simplement récupérer quelques données.</li>
+   <li>La méthode HTTP à utiliser sur le réseau pour notre requête. Dans notre cas, la méthode <code><a href="/fr/docs/Web/HTTP/Methods/GET">GET</a></code> est appropriée dans la mesure où nous voulons simplement récupérer quelques données.</li>
    <li>L'URL où adresser notre requête — il s'agit de l'URL du fichier JSON dont nous parlions tout à l'heure.</li>
   </ul>
  </li>
- <li>Ensuite, ajoutez les deux lignes suivantes — ici, nous attribuons la valeur <code>'json'</code><strong> </strong>à  <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseType">responseType</a></code>, signalant ainsi au serveur que nous attendons une réponse au format JSON. Puis, nous envoyons notre requête à l'aide de la méthode <code><a href="/en-US/docs/Web/API/XMLHttpRequest/send">send()</a></code> :
+ <li>Ensuite, ajoutez les deux lignes suivantes — ici, nous attribuons la valeur <code>'json'</code><strong> </strong>à  <code><a href="/fr/docs/Web/API/XMLHttpRequest/responseType">responseType</a></code>, signalant ainsi au serveur que nous attendons une réponse au format JSON. Puis, nous envoyons notre requête à l'aide de la méthode <code><a href="/fr/docs/Web/API/XMLHttpRequest/send">send()</a></code> :
   <pre class="brush: js">request.responseType = 'json';
 request.send();</pre>
  </li>
@@ -208,9 +208,9 @@ request.send();</pre>
  </li>
 </ol>
 
-<p>Ici, nous stockons la réponse à notre requête (disponible au travers de la propriété <code><a href="/en-US/docs/Web/API/XMLHttpRequest/response">response</a></code>) dans la variable <code>superHeroes</code> ; cette variable contiendra désormais l'objet JavaScript basé sur le JSON ! Nous passerons ensuite cet objet en paramètre à deux fonctions — la première remplira le &lt;<code>header&gt;</code> avec les données correspondantes tandis que la seconde créera une carte d'identité pour chaque héros de l'équipe et l'ajoutera dans la <code>&lt;section&gt;</code>.</p>
+<p>Ici, nous stockons la réponse à notre requête (disponible au travers de la propriété <code><a href="/fr/docs/Web/API/XMLHttpRequest/response">response</a></code>) dans la variable <code>superHeroes</code> ; cette variable contiendra désormais l'objet JavaScript basé sur le JSON ! Nous passerons ensuite cet objet en paramètre à deux fonctions — la première remplira le &lt;<code>header&gt;</code> avec les données correspondantes tandis que la seconde créera une carte d'identité pour chaque héros de l'équipe et l'ajoutera dans la <code>&lt;section&gt;</code>.</p>
 
-<p>Nous avons encapsulé ce code dans un gestionnaire d'évènements qui s'exécutera quand l'évènement load sera déclenché sur l'objet request (voir <code><a href="/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code>) — simplement parce que l'évènement load est déclenché quand une réponse a été renvoyée avec succès ; en procédant de la sorte, nous serons certains que la propriété <code>request.response</code> sera disponible au moment où nous essayerons d'en faire quelque chose.</p>
+<p>Nous avons encapsulé ce code dans un gestionnaire d'évènements qui s'exécutera quand l'évènement load sera déclenché sur l'objet request (voir <code><a href="/fr/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code>) — simplement parce que l'évènement load est déclenché quand une réponse a été renvoyée avec succès ; en procédant de la sorte, nous serons certains que la propriété <code>request.response</code> sera disponible au moment où nous essayerons d'en faire quelque chose.</p>
 
 <h3 id="Remplissage_de_len-tête">Remplissage de l'en-tête</h3>
 
@@ -226,7 +226,7 @@ request.send();</pre>
   header.appendChild(myPara);
 }</pre>
 
-<p>Nous avons appelé le paramètre de cette fonction <code>jsonObj</code>  afin de garder en tête que cet objet JavaScript provient du JSON. Ici, nous créons tout d'abord un élément {{HTMLElement("h1")}} à l'aide de <code><a href="/en-US/docs/Web/API/Document/createElement">createElement()</a></code>, nous fixons son <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> à la valeur de la propriété <code>squadName</code> de l'objet, puis nous l'ajoutons à l'en-tête en utilisant <code><a href="/en-US/docs/Web/API/Node/appendChild">appendChild()</a></code>. Ensuite, nous faisons quelque chose de relativement similaire avec un élément paragraphe : nous le créons, fixons son contenu et l'ajoutons à l'en-tête. La seule différence est que pour son contenu, nous avons concaténé la chaîne de caractère <code>homeTown</code> et la propriété <code>formed</code> de l'objet.</p>
+<p>Nous avons appelé le paramètre de cette fonction <code>jsonObj</code>  afin de garder en tête que cet objet JavaScript provient du JSON. Ici, nous créons tout d'abord un élément {{HTMLElement("h1")}} à l'aide de <code><a href="/fr/docs/Web/API/Document/createElement">createElement()</a></code>, nous fixons son <code><a href="/fr/docs/Web/API/Node/textContent">textContent</a></code> à la valeur de la propriété <code>squadName</code> de l'objet, puis nous l'ajoutons à l'en-tête en utilisant <code><a href="/fr/docs/Web/API/Node/appendChild">appendChild()</a></code>. Ensuite, nous faisons quelque chose de relativement similaire avec un élément paragraphe : nous le créons, fixons son contenu et l'ajoutons à l'en-tête. La seule différence est que pour son contenu, nous avons concaténé la chaîne de caractère <code>homeTown</code> et la propriété <code>formed</code> de l'objet.</p>
 
 <h3 id="Création_des_fiches_des_héros">Création des fiches des héros</h3>
 
@@ -279,11 +279,11 @@ request.send();</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note </strong>: Si vous ne parvenez pas à faire fonctionner l'exemple, consultez notre code source <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html">heroes-finished.html</a> (ou regardez-le <a href="http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html">en action</a>.)</p>
+<p><strong>Note :</strong> Si vous ne parvenez pas à faire fonctionner l'exemple, consultez notre code source <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html">heroes-finished.html</a> (ou regardez-le <a href="http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html">en action</a>.)</p>
 </div>
 
 <div class="note">
-<p><strong>Note </strong>: Si vous comprenez difficilement la notation avec un point/une accolade utilisée pour accéder au JSON, ouvrez le fichier <a href="http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json">superheroes.json</a> dans un nouvel onglet ou dans votre éditeur de texte et consultez-le pendant la lecture de notre code Javascript. Vous pouvez également vous reporter à notre article <a href="/fr/docs/Learn/JavaScript/Objects/Basics">Les bases du JavaScript orienté objet</a> pour obtenir plus de détails sur la notation avec un point et avec une accolade.</p>
+<p><strong>Note :</strong> Si vous comprenez difficilement la notation avec un point/une accolade utilisée pour accéder au JSON, ouvrez le fichier <a href="http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json">superheroes.json</a> dans un nouvel onglet ou dans votre éditeur de texte et consultez-le pendant la lecture de notre code Javascript. Vous pouvez également vous reporter à notre article <a href="/fr/docs/Learn/JavaScript/Objects/Basics">Les bases du JavaScript orienté objet</a> pour obtenir plus de détails sur la notation avec un point et avec une accolade.</p>
 </div>
 
 <h2 id="Conversion_entre_objets_et_textes">Conversion entre objets et textes</h2>
@@ -295,8 +295,8 @@ request.send();</pre>
 <p>Mais on n'a pas toujours cette chance — il est possible de recevoir la réponse JSON sous la forme d'une chaîne de caractères et il faut alors la convertir en objet. À l'inverse, lorsqu'on veut envoyer un objet JavaScript à travers le réseau il faut au préalable le convertir en JSON (une chaîne de caractères). Heureusement, ces deux problèmes sont tellement communs dans le développement web qu'un objet <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON">JSON</a> interne a été ajouté aux navigateurs depuis longtemps, contenant les deux méthodes suivantes :</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">parse()</a></code> qui accepte un objet JSON sous la forme d'une chaîne de caractères en paramètre et renvoie l'objet JavaScript correspondant.</li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">stringify()</a></code> qui accepte un objet JavaScript  en paramètre et renvoie son équivalent sous la forme d'une chaîne de caractères JSON.</li>
+ <li><code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">parse()</a></code> qui accepte un objet JSON sous la forme d'une chaîne de caractères en paramètre et renvoie l'objet JavaScript correspondant.</li>
+ <li><code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">stringify()</a></code> qui accepte un objet JavaScript  en paramètre et renvoie son équivalent sous la forme d'une chaîne de caractères JSON.</li>
 </ul>
 
 <p>Vous pouvez voir la première méthode en action dans notre exemple <a href="http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html">heroes-finished-json-parse.html</a> (voir le <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html">code source</a>) — C'est la même chose que pour l'exemple que nous avons écrit un peu plus tôt, à ceci près qu'on indique à la requête XHR de renvoyer la réponse en JSON sous forme de texte avant d'utiliser la méthode <code>parse()</code> pour la convertir en objet JavaScript. La partie du code correspondante se trouve ci-dessous :</p>
@@ -328,10 +328,10 @@ myString</pre>
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">La page de référence sur l'objet JSON</a></li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest">La page de référence sur l'objet XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Utiliser XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Methods">Les méthodes de requêtes HTTP </a></li>
+ <li><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON">La page de référence sur l'objet JSON</a></li>
+ <li><a href="/fr/docs/Web/API/XMLHttpRequest">La page de référence sur l'objet XMLHttpRequest</a></li>
+ <li><a href="/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Utiliser XMLHttpRequest</a></li>
+ <li><a href="/fr/docs/Web/HTTP/Methods">Les méthodes de requêtes HTTP </a></li>
  <li><a href="http://json.org">Le site web officiel  avec un lien vers les normes de l' ECMA</a></li>
 </ul>
 

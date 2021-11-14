@@ -1,25 +1,15 @@
 ---
 title: Gérer du texte — les chaînes de caractères en JavaScript
 slug: Learn/JavaScript/First_steps/Strings
-tags:
-  - Article
-  - Attacher
-  - Codage
-  - Débutant
-  - Guide
-  - Guillemets
-  - JavaScript
-  - chaînes
-  - concatenation
 translation_of: Learn/JavaScript/First_steps/Strings
 ---
 <div>{{LearnSidebar}}</div>
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">Concentrons-nous maintenant sur les chaînes de caractères - c'est le nom donné à un segment de texte en programmation. Dans cet article, nous aborderons les aspects les plus communs des chaînes de caractères que vous devez vraiment connaître quand vous apprenez JavaScript, comme créer une chaîne de caractères, échapper des guillemets dans une chaîne ou encore concaténer des chaînes.</p>
+<p>Concentrons-nous maintenant sur les chaînes de caractères - c'est le nom donné à un segment de texte en programmation. Dans cet article, nous aborderons les aspects les plus communs des chaînes de caractères que vous devez vraiment connaître quand vous apprenez JavaScript, comme créer une chaîne de caractères, échapper des guillemets dans une chaîne ou encore concaténer des chaînes.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -40,12 +30,9 @@ translation_of: Learn/JavaScript/First_steps/Strings
 
 <h2 id="Chaînes_de_caractères_—_les_bases">Chaînes de caractères — les bases</h2>
 
-<p>À première vue, les chaînes se traitent de la même manière que les nombres ; mais si vous approfondissez la chose, vous commencerez à percevoir des différences notables. Entrons sur la console quelques lignes simples pour nous familiariser avec la chose. À propos de la console, nous en avons placé une ci‑dessous (vous pouvez  <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">l'ouvrir</a> dans un onglet ou une fenêtre séparée, ou bien utiliser celle de <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">l'explorateur, </a>comme vous préférez).</p>
+<p>À première vue, les chaînes se traitent de la même manière que les nombres ; mais si vous approfondissez la chose, vous commencerez à percevoir des différences notables. Entrons sur la console quelques lignes simples pour nous familiariser avec la chose. À propos de la console, nous en avons placé une ci‑dessous (vous pouvez  <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">l'ouvrir</a> dans un onglet ou une fenêtre séparée, ou bien utiliser celle de <a href="/fr/docs/Learn/Common_questions/What_are_browser_developer_tools">l'explorateur, </a>comme vous préférez).</p>
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -150,9 +137,8 @@ translation_of: Learn/JavaScript/First_steps/Strings
 
   &lt;/script&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('Chaînes_de_caractères_—_les_bases', '100%', 300) }}</p>
 
 <h3 id="Créer_une_chaîne_de_texte">Créer une chaîne de texte</h3>
 
@@ -202,7 +188,7 @@ dblSgl;</pre>
 <pre class="brush: js">let bigmouth = 'Je n\'ai pas eu droit à prendre place...';
 bigmouth;</pre>
 
-<p>Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de la même manière, par ex. <code>\"</code>,  et il y a certains codes spéciaux à côté. Voyez  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation">Notations d'échappement</a> pour plus de détails.</p>
+<p>Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de la même manière, par ex. <code>\"</code>,  et il y a certains codes spéciaux à côté. Voyez  <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation">Notations d'échappement</a> pour plus de détails.</p>
 
 <h2 id="Concaténation_de_chaînes">Concaténation de chaînes</h2>
 
@@ -224,7 +210,7 @@ response;</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note </strong>: Quand vous entrez une chaîne dans votre code, entre guillemets simples ou doubles, on l'appelle <strong>chaîne littérale</strong>.</p>
+<p><strong>Note :</strong> Quand vous entrez une chaîne dans votre code, entre guillemets simples ou doubles, on l'appelle <strong>chaîne littérale</strong>.</p>
 </div>
 
 <h3 id="Concaténation_dans_un_contexte">Concaténation dans un contexte</h3>
@@ -240,7 +226,7 @@ button.onclick = function() {
   alert('Hello ' + name + ', sympa de vous voir !');
 }</pre>
 
-<p>{{ EmbedLiveSample('Concatenation_in_context', '100%', 50) }}</p>
+<p>{{ EmbedLiveSample('Concaténation_dans_un_contexte', '100%', 50) }}</p>
 
 <p>Ici nous utilisons en ligne 4 la fonction {{domxref("Window.prompt()", "Window.prompt()")}}, qui demande à l'utilisateur de répondre à une question par l'intermédiaire d'une boîte de dialogue, puis qui stocke le texte entré dans une variable donnée — dans ce cas <code>name</code>. En ligne 5, nous nous servons de la fonction {{domxref("Window.alert()", "Window.alert()")}} pour afficher un dialogue contenant une chaîne assemblée à partir de deux chaînes littérales et de la variable <code>name</code>, par concaténation.</p>
 
@@ -262,7 +248,7 @@ typeof myDate;</pre>
 let myNum = Number(myString);
 typeof myNum;</pre>
    </li>
-   <li>D'autre part, tout nombre possède une méthode nommée <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a></code> qui le convertit en chaîne équivalente. Essayez :
+   <li>D'autre part, tout nombre possède une méthode nommée <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a></code> qui le convertit en chaîne équivalente. Essayez :
     <pre class="brush: js">let myNum = 123;
 let myString = myNum.toString();
 typeof myString;</pre>

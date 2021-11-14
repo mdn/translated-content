@@ -13,9 +13,9 @@ original_slug: Learn/Server-side/Premiers_pas/Website_security
 
 <div>{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/Premiers_pas")}}</div>
 
-<p class="summary">La sécurité d'un site web exige de la vigilance dans tous les aspects de sa conception et de son utilisation. Cet article d'introduction ne fera pas de vous un gourou de la sécurité des sites web, mais il vous aidera à comprendre d'où viennent les menaces et ce que vous pouvez faire pour renforcer votre application web contre les attaques les plus courantes.</p>
+<p>La sécurité d'un site web exige de la vigilance dans tous les aspects de sa conception et de son utilisation. Cet article d'introduction ne fera pas de vous un gourou de la sécurité des sites web, mais il vous aidera à comprendre d'où viennent les menaces et ce que vous pouvez faire pour renforcer votre application web contre les attaques les plus courantes.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Pré-requis :</th>
@@ -39,7 +39,7 @@ original_slug: Learn/Server-side/Premiers_pas/Website_security
 <p>Le reste de cet article détaille les menaces les plus courantes qui pèsent sur les sites web et quelques étapes simples pour protèger votre site.</p>
 
 <div class="note">
-<p><strong>Note </strong>: ceci est un article d'introduction, conçu pour vous aider à réflechir à la sécurité de votre site web. Il n'est en rien exhaustif.</p>
+<p><strong>Note :</strong> ceci est un article d'introduction, conçu pour vous aider à réflechir à la sécurité de votre site web. Il n'est en rien exhaustif.</p>
 </div>
 
 <h2 id="Menaces_visant_la_sécurité_des_sites_web">Menaces visant la sécurité des sites web</h2>
@@ -51,7 +51,7 @@ original_slug: Learn/Server-side/Premiers_pas/Website_security
 <p>XSS est un terme utilisé pour décrire une classe d'attaque qui permet à l'attaquant d'injecter des scripts, exécutés côté-client, <em>au travers</em> du site web pour viser le navigateur web des autres utilisateurs. Comme le code injecté provient du site web le navigateur web le considère comme sûr, il peut de ce fait faire des choses comme transmettre le cookie d'authentification de l'utilisateur à l'attaquant. Une fois que l'attaquant obtient ce cookie il peut se connecter sur le site comme si il était l'utilisateur attaqué et peut faire tout ce que l'utilisateur pourrait faire. En fonction du site sur lequel l'attaque se produit, cela peut inclure l'accès aux détails de carte bancaire, les informations des contacts, la modification du mot de passe, etc.</p>
 
 <div class="note">
-<p><strong>Note </strong>: les vulnérabilités XSS ont historiquement été les plus courantes.</p>
+<p><strong>Note :</strong> les vulnérabilités XSS ont historiquement été les plus courantes.</p>
 </div>
 
 <p>Il y a deux manières principales pour demander au site de retourner un script injecté vers un navigateur web — elles sont désignées en tant que vulnérabilités XSS <em>réfléchie</em> et <em>persistante</em>.</p>
@@ -87,7 +87,7 @@ original_slug: Learn/Server-side/Premiers_pas/Website_security
 <p>Le moyen pour éviter ce type d'attaque est de s'assurer que toute saisie de l'utilisateur transmise à une requête SQL ne peut pas changer la nature de cette requête. Un moyen de faire cela est d'<a href="https://fr.wikipedia.org/wiki/Caract%C3%A8re_d%27%C3%A9chappement">échapper</a> tous les caractères de la saisie utilisateur quand ils ont un sens particulier en SQL.</p>
 
 <div class="note">
-<p><strong>Note </strong>: la requête SQL considère le symbole ' comme le début et la fin d'une chaine de texte. En ajoutant le caractère \ nous allons "échapper" ce symbole, et dire à SQL de le traiter comme une simple partie de la chaîne de caractères.</p>
+<p><strong>Note :</strong> la requête SQL considère le symbole ' comme le début et la fin d'une chaine de texte. En ajoutant le caractère \ nous allons "échapper" ce symbole, et dire à SQL de le traiter comme une simple partie de la chaîne de caractères.</p>
 </div>
 
 <p>Dans la requête ci-dessous nous avons échappé le caractère '. Le SQL va donc interpréter la chaine complète (en gras) comme un nom (un nom étrange en effet, mais pas nuisible).</p>
@@ -99,7 +99,7 @@ original_slug: Learn/Server-side/Premiers_pas/Website_security
 <p>Les frameworks web se chargent bien souvent d'échapper ces caractères à votre place. Django, par exemple, s'assure que toute saisie d'un utilisateur transmise au modèle est bien échappée.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Cette section s'inspire beaucoup des informations de <a href="https://en.wikipedia.org/wiki/SQL_injection">Wikipedia ici</a>.</p>
+<p><strong>Note :</strong> Cette section s'inspire beaucoup des informations de <a href="https://en.wikipedia.org/wiki/SQL_injection">Wikipedia ici</a>.</p>
 </div>
 
 <h3 id="Falsification_de_requête_inter-sites_CSRF">Falsification de requête inter-sites (CSRF)</h3>
@@ -113,7 +113,7 @@ original_slug: Learn/Server-side/Premiers_pas/Website_security
 <p>Au final tout utilisateur qui va cliquer sur le bouton de validation, alors qu'il sera connecté sur le site d'échange d'argent, va autoriser la transaction. John va devenir riche !</p>
 
 <div class="note">
-<p><strong>Note </strong>: l'astuce ici est que John n'a pas besoin d'accéder aux cookies de l'utilisateur (ou à ses identifiants), le navigateur web stocke cette information et l'inclut automatiquement dans toute les requêtes destinées au serveur associé.</p>
+<p><strong>Note :</strong> l'astuce ici est que John n'a pas besoin d'accéder aux cookies de l'utilisateur (ou à ses identifiants), le navigateur web stocke cette information et l'inclut automatiquement dans toute les requêtes destinées au serveur associé.</p>
 </div>
 
 <p>Un moyen de prévenir ce type d'attaque est que le serveur demande que chaque requête POST possède un secret généré par le serveur et spécifique à l'utilisateur (le secret serait transmis par le serveur lors de l'envoi du formulaire de transaction). Cette approche empêche John de créer son propre formulaire car il n'est pas capable de connaitre le secret que le serveur founit à l'utilisateur. Même si il venait à trouver ce secret et créer un formulaire pour un utilisateur particulier, il ne pourrait pas utiliser ce formulaire pour attaquer d'autres utilisateurs</p>
@@ -139,15 +139,15 @@ original_slug: Learn/Server-side/Premiers_pas/Website_security
 <p>La majorité des attaques citées précédement réusissent lorsque l'application web fait confiance aux données provenant du navigateur web. Quoique vous fassiez d'autre pour améliorer la sécurité de votre site web, vous devez désinfecter toutes les saisies des utilisateurs avant de les afficher, de les utiliser dans les requêtes SQL ou de les transmettre dans les appels du système ou du système de fichier.</p>
 
 <div class="warning">
-<p><strong>Important</strong> : la leçon la plus importante à retenir concernant la sécurité d'un site web est de ne <strong>jamais faire confiance aux données du navigateur web</strong>. Cela comprend les requêtes <code>GET</code> avec la présence des paramètres dans l'URL, les données envoyées avec les <code>POST</code>, les en-têtes HTTP, les cookies, les fichiers chargés par l'utilisateur, etc. Il faut toujours vérifier et assainir les données. Il faut toujours s'attendre au pire.</p>
+<p><strong>Attention :</strong> la leçon la plus importante à retenir concernant la sécurité d'un site web est de ne <strong>jamais faire confiance aux données du navigateur web</strong>. Cela comprend les requêtes <code>GET</code> avec la présence des paramètres dans l'URL, les données envoyées avec les <code>POST</code>, les en-têtes HTTP, les cookies, les fichiers chargés par l'utilisateur, etc. Il faut toujours vérifier et assainir les données. Il faut toujours s'attendre au pire.</p>
 </div>
 
 <p>Quelques autres points que vous pouvez mettre en place :</p>
 
 <ul>
  <li>Utilisez une politique de gestion des mots de passe efficace. Encouragez les mots de passe solides avec leur renouvellement fréquent. Prenez en compte une authentification à deux facteurs sur votre site (l'utilisateur, en plus du mot de passe, devra fournir un autre code d'authentification généralement fourni par un matériel physique, que seul l'utilisateur possède, comme un code envoyé sur le téléphone par SMS).</li>
- <li>Configurez vos serveurs web pour utiliser <a href="/en-US/docs/Glossary/https">HTTPS</a> et <a href="/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a> (HSTS). HTTPS chiffre les données transmises entre le client et le serveur. Cela garantit que les données d'authentification, les cookies, les données transistant avec <code>POST</code> et les informations d'en-têtes deviennent moins disponibles pour l'attaquant.</li>
- <li>Tenez vous informé des dernières menaces (<a href="/en-US/docs/">la liste actuelle d'OWASP est ici</a>) et préoccupez vous toujours des vulnerabilités les plus courantes en premier.</li>
+ <li>Configurez vos serveurs web pour utiliser <a href="/fr/docs/Glossary/https">HTTPS</a> et <a href="/fr/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a> (HSTS). HTTPS chiffre les données transmises entre le client et le serveur. Cela garantit que les données d'authentification, les cookies, les données transistant avec <code>POST</code> et les informations d'en-têtes deviennent moins disponibles pour l'attaquant.</li>
+ <li>Tenez vous informé des dernières menaces (<a href="/fr/docs/">la liste actuelle d'OWASP est ici</a>) et préoccupez vous toujours des vulnerabilités les plus courantes en premier.</li>
  <li>Utilisez <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">des outils de recherche de vulnérabilités </a> pour faire automatiquement des recherches de bug sur votre site (votre site pourra également proposer un programme de <em>buf bounty </em>pour déceler des bugs, <a href="https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/">comme le fait Mozilla ici</a>).</li>
  <li>Ne stockez et n'affichez que les données nécessaires. Par exemple, si votre utilisateur doit stocker des données sensibles comme des informations bancaires, affichez seulement ce qui sera suffisant pour être identifié par l'utilisateur, mais pas suffisament pour être copié par un attaquant et être utilisé sur un autre site. La méthode la plus courante en ce moment est de n'afficher que les quatre derniers chiffres du numéro de carte bancaire.</li>
 </ul>

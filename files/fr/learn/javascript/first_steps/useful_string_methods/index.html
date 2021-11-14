@@ -21,9 +21,9 @@ original_slug: Learn/JavaScript/First_steps/methode_chaine_utile
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">À présent que nous avons vu les bases de la manipulation des chaînes de caractères, allons un cran plus loin et commençons à imaginer les opérations utiles que nous pourrions faire sur les chaînes de caractères avec les méthodes intégrées : trouver la longueur d'une chaîne, assembler ou couper des chaînes, substituer un caractère à un autre dans une chaîne, et plus encore.</p>
+<p>À présent que nous avons vu les bases de la manipulation des chaînes de caractères, allons un cran plus loin et commençons à imaginer les opérations utiles que nous pourrions faire sur les chaînes de caractères avec les méthodes intégrées : trouver la longueur d'une chaîne, assembler ou couper des chaînes, substituer un caractère à un autre dans une chaîne, et plus encore.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -38,7 +38,7 @@ original_slug: Learn/JavaScript/First_steps/methode_chaine_utile
 
 <h2 id="Les_chaînes_de_caractères_sont_des_objets">Les chaînes de caractères sont des objets</h2>
 
-<p id="Useful_string_methods">Nous l'avons déjà dit, et nous le redirons — <em>tout</em> est objet en JavaScript. Lorsque vous créez une chaîne, par exemple en utilisant :</p>
+<p>Nous l'avons déjà dit, et nous le redirons — <em>tout</em> est objet en JavaScript. Lorsque vous créez une chaîne, par exemple en utilisant :</p>
 
 <pre class="brush: js">let string = 'Ceci est une chaîne';</pre>
 
@@ -46,12 +46,9 @@ original_slug: Learn/JavaScript/First_steps/methode_chaine_utile
 
 <p><strong>Avant que votre cervelle ne commence à bouillir, pas de panique !</strong> Vous n'avez vraiment pas besoin de connaître la plupart des méthodes de cette liste au début de cet apprentissage. Mais il est probable que vous utiliserez  certaines assez souvent. Nous allons les voir maintenant.</p>
 
-<p>Entrez quelques exemples dans une console vierge. En voici une ci-dessous (vous pouvez aussi <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">ouvrir cette console</a> dans un onglet ou une fenêtre séparés, ou utiliser la <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">console de développement du navigateur</a> si vous préférez).</p>
+<p>Entrez quelques exemples dans une console vierge. En voici une ci-dessous (vous pouvez aussi <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">ouvrir cette console</a> dans un onglet ou une fenêtre séparés, ou utiliser la <a href="/fr/docs/Learn/Common_questions/What_are_browser_developer_tools">console de développement du navigateur</a> si vous préférez).</p>
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -152,9 +149,8 @@ original_slug: Learn/JavaScript/First_steps/methode_chaine_utile
 
   &lt;/script&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('Les_chaînes_de_caractères_sont_des_objets', '100%', 300) }}</p>
 
 <h3 id="Trouver_la_longueur_dune_chaîne">Trouver la longueur d'une chaîne</h3>
 
@@ -184,9 +180,6 @@ browserType.length;</pre>
 
   <pre class="brush: js">browserType.indexOf('zilla');</pre>
   La commande donne 2 comme résultat, car la sous-chaîne « zilla » commence à la position 2 (0, 1, 2 — donc au troisième caractère) dans « mozilla ». Un tel code s'utilise pour filtrer des chaînes. Par exemple, vous pourriez avoir une liste d'adresses web et ne vouloir afficher que celles qui contiennent « mozilla ».</li>
-</ol>
-
-<ol start="2">
  <li>On peut faire cela autrement, peut-être plus efficacement encore. Écrivez :
   <pre class="brush: js">browserType.indexOf('vanilla');</pre>
   Cela doit vous donner <code>-1</code> comme résultat — renvoyé quand la sous-chaîne, en l'occurence « vanilla », n'est pas trouvée dans la chaîne principale.<br>
@@ -206,7 +199,7 @@ browserType.length;</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong> : Le second paramètre de <code>slice()</code> est optionnel : s'il n'est pas defini, l'extraction va jusqu'à la fin de la chaîne originale. Il existe aussi d'autres options, allez à la page de {{jsxref("String.prototype.slice()", "slice()")}} pour voir ces autres options.</p>
+<p><strong>Note :</strong> Le second paramètre de <code>slice()</code> est optionnel : s'il n'est pas defini, l'extraction va jusqu'à la fin de la chaîne originale. Il existe aussi d'autres options, allez à la page de {{jsxref("String.prototype.slice()", "slice()")}} pour voir ces autres options.</p>
 </div>
 
 <h3 id="Changer_la_casse">Changer la casse</h3>
@@ -245,10 +238,7 @@ radData.toUpperCase();</pre>
  <li>Conseil : dans notre cas, il est probablement plus utile de tester si le résultat de l'appel de notre méthode <em>n'est pas égal</em> à un certain résultat.</li>
 </ol>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="min-height: 125px;"&gt;
 
 &lt;ul&gt;
 
@@ -284,7 +274,7 @@ for (var i = 0; i &lt; greetings.length; i++) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -308,9 +298,8 @@ var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.inner
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 490) }}</p>
+<p>{{ EmbedLiveSample('Filtrer_des_messages_de_vœux', '100%', 490) }}</p>
 
 <h3 id="Remettre_les_majuscules">Remettre les majuscules</h3>
 
@@ -324,13 +313,10 @@ window.addEventListener('load', updateCode);
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: Un conseil — les paramètres des méthodes de chaîne n'ont pas besoin d'être des chaînes, elle peuvent aussi être des variables, ou même des variables avec une méthode invoquée sur elles.</p>
+<p><strong>Note :</strong> Un conseil — les paramètres des méthodes de chaîne n'ont pas besoin d'être des chaînes, elle peuvent aussi être des variables, ou même des variables avec une méthode invoquée sur elles.</p>
 </div>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="min-height: 125px;"&gt;
 
 &lt;ul&gt;
 
@@ -359,7 +345,7 @@ for(var i = 0; i &lt; cities.length; i++) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -383,9 +369,8 @@ var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.inner
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 450) }}</p>
+<p>{{ EmbedLiveSample('Remettre_les_majuscules', '100%', 450) }}</p>
 
 <h3 id="Créer_de_nouvelles_chaînes_à_partir_de_morceaux">Créer de nouvelles chaînes à partir de morceaux</h3>
 
@@ -407,10 +392,7 @@ window.addEventListener('load', updateCode);
  <li>Changer la valeur de la variable <code>result</code> pour qu'elle soit égale à la chaîne finale, plutôt qu'à <code>input</code>.</li>
 </ol>
 
-<div class="hidden">
-<h6 id="Playable_code_3">Playable code 3</h6>
-
-<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="min-height: 125px;"&gt;
 
 &lt;ul&gt;
 
@@ -444,7 +426,7 @@ for (var i = 0; i &lt; stations.length; i++) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -469,9 +451,8 @@ var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.inner
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_3', '100%', 485) }}</p>
+<p>{{ EmbedLiveSample('Créer_de_nouvelles_chaînes_à_partir_de_morceaux', '100%', 485) }}</p>
 
 <h2 id="Conclusion">Conclusion</h2>
 

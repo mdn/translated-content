@@ -14,9 +14,7 @@ original_slug: Apprendre/Commencer_avec_le_web/Les_bases_CSS
 <div>{{LearnSidebar}}<br>
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_HTML", "Apprendre/Commencer_avec_le_web/Les_bases_JavaScript","Apprendre/Commencer_avec_le_web")}}</div>
 
-<div class="summary">
 <p>Les CSS (<em>Cascading Style Sheets</em> en anglais, ou « feuilles de style en cascade ») sont le code utilisé pour mettre en forme une page web. <em>Les bases des CSS</em> présentent ce qu'il faut savoir pour commencer. Nous répondrons à des questions comme : Comment rendre mon texte rouge ou noir ? Comment faire apparaître mon contenu à tel endroit de l'écran ? Comment décorer ma page web avec une image ou une couleur d'arrière-plan ?</p>
-</div>
 
 <h2 id="Donc_que_sont_les_CSS_réellement">Donc, que sont les CSS, réellement ?</h2>
 
@@ -38,13 +36,13 @@ original_slug: Apprendre/Commencer_avec_le_web/Les_bases_CSS
  <li>Sauvegardez <code>index.html</code> puis chargez-le dans votre navigateur. Vous devriez obtenir quelque chose comme :</li>
 </ol>
 
-<p><img alt="A mozilla logo and some paragraphs. The paragraph text has been styled red by our css." src="https://mdn.mozillademos.org/files/9435/website-screenshot-styled.png" style="display: block; height: 832px; margin: 0px auto; width: 711px;">Si le texte de votre paragraphe s'affiche en rouge, félicitations ! Vous venez d'écrire votre premier CSS fonctionnel !</p>
+<p><img alt="A mozilla logo and some paragraphs. The paragraph text has been styled red by our css." src="website-screenshot-styled.png">Si le texte de votre paragraphe s'affiche en rouge, félicitations ! Vous venez d'écrire votre premier CSS fonctionnel !</p>
 
 <h3 id="Anatomie_d'une_règle_CSS">Anatomie d'une règle CSS</h3>
 
 <p>Regardons un peu plus en détails ce que nous avons écrit en CSS :</p>
 
-<p><img alt="Diagramme expliquant les différents éléments d'une déclaration CSS" src="https://mdn.mozillademos.org/files/11525/CSS.svg" style="display: block; height: 293px; margin: 0px auto; width: 353px;"></p>
+<p><img alt="Diagramme expliquant les différents éléments d'une déclaration CSS" src="CSS.svg"></p>
 
 <p>Cette structure s'appelle <strong>un ensemble de règles </strong>(ou seulement « une règle »). Les différentes parties se nomment :</p>
 
@@ -136,7 +134,7 @@ original_slug: Apprendre/Commencer_avec_le_web/Les_bases_CSS
 <p>Maintenant que nous avons vu quelques bases de CSS, ajoutons quelques règles et informations à notre fichier <code>style.css</code> pour que notre exemple soit réussi. Tout d'abord, améliorons les polices et le texte.</p>
 
 <ol>
- <li>Pour commencer, revenez quelques étapes en arrière et récupérez le <a href="/en-US/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Font">résultat de Google Fonts</a> enregistré quelque part. Ensuite, ajoutez l'élément <code>&lt;link ... &gt;</code> quelque part au sein de <code>head</code> dans le fichier <code>index.html</code> (c'est-à-dire quelque part entre les balises <code>&lt;head&gt;</code> et <code>&lt;/head&gt;</code>). Ça devrait ressembler à :
+ <li>Pour commencer, revenez quelques étapes en arrière et récupérez le <a href="/fr/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Font">résultat de Google Fonts</a> enregistré quelque part. Ensuite, ajoutez l'élément <code>&lt;link ... &gt;</code> quelque part au sein de <code>head</code> dans le fichier <code>index.html</code> (c'est-à-dire quelque part entre les balises <code>&lt;head&gt;</code> et <code>&lt;/head&gt;</code>). Ça devrait ressembler à :
 
   <pre class="brush: html">&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre>
  </li>
@@ -148,7 +146,7 @@ original_slug: Apprendre/Commencer_avec_le_web/Les_bases_CSS
 }</pre>
 
   <div class="note">
-  <p><strong>Note</strong>: Tout ce qui est entre <code>/*</code> et <code>*/</code> dans un document CSS est un <strong>commentaire</strong>  <strong>de CSS. </strong> Le navigateur l'ignorera dans le rendu du code. C'est un endroit commode pour écrire des notes à propos de ce que vous faites.</p>
+  <p><strong>Note :</strong> Tout ce qui est entre <code>/*</code> et <code>*/</code> dans un document CSS est un <strong>commentaire</strong>  <strong>de CSS. </strong> Le navigateur l'ignorera dans le rendu du code. C'est un endroit commode pour écrire des notes à propos de ce que vous faites.</p>
   </div>
  </li>
  <li>Ensuite, fixons les tailles des différents textes contenus dans le corps du HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, et {{htmlelement("p")}}). Nous allons également centrer le texte du titre et donner une taille de ligne et un espacement de caractère entre les lettres pour que le contenu du corps (<em>body</em>) du document soit plus lisible :
@@ -167,13 +165,13 @@ p, li {
 
 <p>Vous pouvez ajuster ces valeurs en <code>px</code> comme vous voulez pour que le style obtenu soit celui que vous souhaitez. Vous devriez obtenir quelque chose comme ça :</p>
 
-<p><img alt="a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered" src="https://mdn.mozillademos.org/files/9447/website-screenshot-font-small.png" style="display: block; height: 1020px; margin: 0px auto; width: 921px;"></p>
+<p><img alt="a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered" src="website-screenshot-font-small.png"></p>
 
 <h2 id="Boîtes_boîtes_encore_et_toujours_des_boîtes">Boîtes, boîtes, encore et toujours des boîtes</h2>
 
 <p>Vous verrez rapidement qu'avec les CSS, tout tourne autour de boîtes : définir leurs tailles, leurs couleurs, leurs positions, etc. Les éléments HTML d'une page peuvent, pour la plupart, être vus comme des boîtes placées les unes sur les autres.</p>
 
-<p><img alt="a big stack of boxes or crates sat on top of one another" src="https://mdn.mozillademos.org/files/9441/boxes.jpg" style="display: block; height: 463px; margin: 0px auto; width: 640px;"></p>
+<p><img alt="a big stack of boxes or crates sat on top of one another" src="boxes.jpg"></p>
 
 <p>C'est pour cette raison que l'architecture de CSS est principalement basée sur un <em>modèle de boîtes</em>.<em> </em>Chacun de ces blocs prend un certain espace sur la page, de cette façon :</p>
 
@@ -183,7 +181,7 @@ p, li {
  <li><code>margin</code>, l'espace extérieur, autour de l'élément (en français cela correspond à la marge)</li>
 </ul>
 
-<p><img alt="three boxes sat inside one another. From outside to in they are labelled margin, border and padding" src="https://mdn.mozillademos.org/files/9443/box-model.png" style="display: block; height: 450px; margin: 0px auto; width: 574px;"></p>
+<p><img alt="three boxes sat inside one another. From outside to in they are labelled margin, border and padding" src="box-model.png"></p>
 
 <p>Dans cette section, nous utilisons aussi :</p>
 
@@ -259,14 +257,14 @@ p, li {
 <p>Dernière chose : on va centrer l'image pour que ce soit plus joli. On pourrait utiliser <code>margin: 0 auto</code>, comme on l'a fait avant, mais on a besoin d'autre chose. L'élément <code>body</code> est un <strong>élément de bloc</strong>, cela signifie qu'il prend de l'espace et qu'on peut lui appliquer des marges et d'autres valeur pour l'espacement. En revanche, les images sont des éléments <strong><em>inline</em></strong> (ce qu'on pourrait traduire par « en ligne »), ce qui signifie qu'on ne peut pas leur appliquer ces valeurs d'espacement. Pour pouvoir appliquer des marges sur l'image comme pour un bloc, on utilise <code>display: block;</code> pour que l'image se comporte comme un élément de bloc.</p>
 
 <div class="note">
-<p><strong>Note </strong>: C'est tout à fait normal si vous ne comprenez pas complètement <code>display: block;</code> et les différences entre bloc et inline. Ça viendra plus tard, une fois que vous aurez plus utilisé CSS. Les différentes valeurs qu'on peut utiliser pour <code>display</code> sont expliquées sur <a href="/fr/docs/Web/CSS/display">la page de référence de la propriété <code>display</code></a>.</p>
+<p><strong>Note :</strong> C'est tout à fait normal si vous ne comprenez pas complètement <code>display: block;</code> et les différences entre bloc et inline. Ça viendra plus tard, une fois que vous aurez plus utilisé CSS. Les différentes valeurs qu'on peut utiliser pour <code>display</code> sont expliquées sur <a href="/fr/docs/Web/CSS/display">la page de référence de la propriété <code>display</code></a>.</p>
 </div>
 
 <h2 id="Conclusion">Conclusion</h2>
 
 <p>Si vous avez suivi les différentes étapes de cet article, vous devriez obtenir une page qui ressemble à celle-ci (vous pouvez aussi voir <a href="http://mdn.github.io/beginner-html-site-styled/">notre version finale ici</a>) :</p>
 
-<p><img alt="a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip." src="https://mdn.mozillademos.org/files/9455/website-screenshot-final.png" style="display: block; height: 1084px; margin: 0px auto; width: 940px;"></p>
+<p><img alt="a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip." src="website-screenshot-final.png"></p>
 
 <p>Si vous êtes bloqué·e quelque part, vous pouvez toujours comparer votre travail avec <a href="https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css">le code final de cet exemple disponible sur GitHub</a>.</p>
 
@@ -277,12 +275,12 @@ p, li {
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li id="Installing_basic_software"><a href="/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base">Installer les logiciels de base</a></li>
- <li id="What_will_your_website_look_like"><a href="/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site">Quel aspect pour votre site Web ?</a></li>
- <li id="Dealing_with_files"><a href="/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers">Gérer les fichiers</a></li>
- <li id="HTML_basics"><a href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML">Bases du HTML</a></li>
- <li id="CSS_basics"><a href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS">Bases des CSS</a></li>
- <li id="JavaScript_basics"><a href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript">Bases du JavaScript</a></li>
- <li id="Publishing_your_website"><a href="/fr/Apprendre/Commencer_avec_le_web/Publier_votre_site_web">Publier votre site Web</a></li>
- <li id="How_the_web_works"><a href="/fr/Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web">Comment fonctionne le Web</a></li>
+ <li><a href="/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base">Installer les logiciels de base</a></li>
+ <li><a href="/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site">Quel aspect pour votre site Web ?</a></li>
+ <li><a href="/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers">Gérer les fichiers</a></li>
+ <li><a href="/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML">Bases du HTML</a></li>
+ <li><a href="/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS">Bases des CSS</a></li>
+ <li><a href="/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript">Bases du JavaScript</a></li>
+ <li><a href="/fr/Apprendre/Commencer_avec_le_web/Publier_votre_site_web">Publier votre site Web</a></li>
+ <li><a href="/fr/Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web">Comment fonctionne le Web</a></li>
 </ul>

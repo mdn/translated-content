@@ -14,13 +14,13 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
 ---
 <p>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}</p>
 
-<p>Voyons maintenant les sélecteurs de<span> <strong>pseudo-classes</strong> et de <strong>pseudo-éléments</strong>. Il en existe un grand nombre, ces sélecteurs sont souvent assez spécifiques. Une fois que vous aurez compris comment les utiliser, revenez consulter leur liste pour voir si quelque chose peut fonctionner dans la tâche que vous essayez d'accomplir. Une fois encore, vérifiez la prise en charge par les navigateurs sur la page MDN associée à chaque sélecteur.</span></p>
+<p>Voyons maintenant les sélecteurs de <strong>pseudo-classes</strong> et de <strong>pseudo-éléments</strong>. Il en existe un grand nombre, ces sélecteurs sont souvent assez spécifiques. Une fois que vous aurez compris comment les utiliser, revenez consulter leur liste pour voir si quelque chose peut fonctionner dans la tâche que vous essayez d'accomplir. Une fois encore, vérifiez la prise en charge par les navigateurs sur la page MDN associée à chaque sélecteur.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Maîtrise élémentaire de l'informatique, <a href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base">suite logicielle de base installée</a>, compétences élémentaires pour <a href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers">travailler avec des fichiers</a>, connaissance de base du HTML  (cf. <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML">Introduction à HTML</a>), et une idée de <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works">Comment fonctionne CSS</a>.</td>
+   <td>Maîtrise élémentaire de l'informatique, <a href="/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base">suite logicielle de base installée</a>, compétences élémentaires pour <a href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers">travailler avec des fichiers</a>, connaissance de base du HTML  (cf. <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML">Introduction à HTML</a>), et une idée de <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works">Comment fonctionne CSS</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objectif :</th>
@@ -35,7 +35,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
 
 <p>Les pseudo-classes sont signalées par un mot clé commençant par deux points <code>:</code></p>
 
-<pre class="notranslate">:<em>pseudo-class-name</em></pre>
+<pre>:<em>pseudo-class-name</em></pre>
 
 <h3 id="Exemple_dune_pseudo-classe_élémentaire">Exemple d'une pseudo-classe élémentaire </h3>
 
@@ -50,17 +50,17 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
 <p>Toutes les pseudo-classes se comportent de la même manière. Elles ciblent les éléments du document dans un état donné, comme si vous aviez ajouté une classe dans votre code HTML. Jetez un œil à quelques exemples sur MDN :</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/CSS/:last-child">:last-child</a></code></li>
- <li><code><a href="/en-US/docs/Web/CSS/:only-child">:only-child</a></code></li>
- <li><code><a href="/en-US/docs/Web/CSS/:invalid">:invalid</a></code></li>
+ <li><code><a href="/fr/docs/Web/CSS/:last-child">:last-child</a></code></li>
+ <li><code><a href="/fr/docs/Web/CSS/:only-child">:only-child</a></code></li>
+ <li><code><a href="/fr/docs/Web/CSS/:invalid">:invalid</a></code></li>
 </ul>
 
 <h3 id="Pseudo-classes_daction_utilisateur">Pseudo-classes d'action utilisateur</h3>
 
 <p>Certaines pseudo-classes ne s'appliquent que lorsque l'utilisateur interagit avec le document d'une manière ou d'une autre. Ces pseudo-classes d'action utilisateur, parfois appelées <em>pseudo-classes dynamiques</em>, agissent comme si une classe avait été ajoutée à l'élément lorsque l'utilisateur interagit avec lui. Par exemple :</p>
 
-<p><code><a href="/en-US/docs/Web/CSS/:hover">:hover</a></code> — mentionné ci-dessus ; s'applique quand l'utilisateur déplace son pointeur sur un élément, généralement un lien.<br>
- <code><a href="/en-US/docs/Web/CSS/:focus">:focus</a></code> — s'applique uniquement si l'utilisateur concentre l'élément à l'aide des commandes du clavier.</p>
+<p><code><a href="/fr/docs/Web/CSS/:hover">:hover</a></code> — mentionné ci-dessus ; s'applique quand l'utilisateur déplace son pointeur sur un élément, généralement un lien.<br>
+ <code><a href="/fr/docs/Web/CSS/:focus">:focus</a></code> — s'applique uniquement si l'utilisateur concentre l'élément à l'aide des commandes du clavier.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/hover.html", '100%', 500)}}</p>
 
@@ -68,10 +68,10 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
 
 <p>Les pseudo-éléments se comportent de manière similaire, même s'ils se comportent comme si vous aviez ajouté un tout nouvel élément HTML dans le balisage, au lieu d'appliquer une classe à des éléments existants. Les pseudo-éléments commencent avec un double deux-points <code>::</code>.</p>
 
-<pre class="notranslate"><em>::pseudo-element-name</em></pre>
+<pre><em>::pseudo-element-name</em></pre>
 
-<div class="blockIndicator note">
-<p><strong>Note </strong>: Certains anciens pseudo-éléments utilisaient un simple deux-points, vous pouvez donc parfois rencontrer cette syntaxe dans du code ou des exemples. Les navigateurs modernes supportent les anciens pseudo-éléments avec un simple ou double deux-points pour assurer la compatibilité.</p>
+<div class="note">
+<p><strong>Note :</strong> Certains anciens pseudo-éléments utilisaient un simple deux-points, vous pouvez donc parfois rencontrer cette syntaxe dans du code ou des exemples. Les navigateurs modernes supportent les anciens pseudo-éléments avec un simple ou double deux-points pour assurer la compatibilité.</p>
 </div>
 
 <p>Par exemple, si vous souhaitez sélectionner la première ligne d'un paragraphe, vous pouvez l'entourer d'un élément &lt;span&gt; et utiliser un sélecteur d'éléments ; cependant, cela échouerait si le nombre de mots que vous avez entourés était plus long ou plus court que la largeur de l'élément parent. Comme nous avons tendance à ne pas savoir combien de mots tiendront sur une ligne - étant donné que cela peut varier si la largeur de l'écran ou la taille de la police change - il est impossible de le faire de manière robuste en ajoutant du HTML.</p>
@@ -88,14 +88,14 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
 
 <p>Si vous souhaitez mettre en gras la première ligne du premier paragraphe, vous pouvez enchaîner les sélecteurs <code>:first-child</code> et <code>::first-line</code> Essayez de modifier l'exemple précédent en direct pour qu'il utilise le CSS suivant. Nous souhaitons sélectionner la première ligne du premier élément <code>&lt;p&gt;</code>, qui se trouve à l'intérieur d'un élément <code>&lt;article&gt;</code></p>
 
-<pre class="brush: css notranslate"><code>article p:first-child::first-line {
+<pre class="brush: css">article p:first-child::first-line {
   font-size: 120%;
   font-weight: bold;
-}</code></pre>
+}</pre>
 
 <h2 id="Générer_du_contenu_avec_before_et_after">Générer du contenu avec ::before et ::after</h2>
 
-<p>Il existe quelques pseudo-éléments spéciaux, qui sont utilisés avec la propriété <code><a href="/en-US/docs/Web/CSS/content">content</a></code> pour insérer du contenu dans votre document en utilisant le CSS.</p>
+<p>Il existe quelques pseudo-éléments spéciaux, qui sont utilisés avec la propriété <code><a href="/fr/docs/Web/CSS/content">content</a></code> pour insérer du contenu dans votre document en utilisant le CSS.</p>
 
 <p>Vous pouvez les utiliser pour insérer une chaîne de texte, comme dans l'exemple ci-dessous. Essayez de changer la valeur du texte de la propriété {{cssxref("content")}} et vous verrez qu'elle change en sortie. Vous pouvez également changer le pseudo-élément <code>::before</code> en  <code>::after</code> et voir le texte inséré à la fin de l'élément au lieu du début.</p>
 
@@ -139,7 +139,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
   </tr>
   <tr>
    <td>{{ Cssxref(":blank") }}</td>
-   <td>Matches an <a href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code> element</a> whose input value is empty.</td>
+   <td>Matches an <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code> element</a> whose input value is empty.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":checked") }}</td>
@@ -155,7 +155,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
   </tr>
   <tr>
    <td>{{ Cssxref(":dir") }}</td>
-   <td>Select an element based on its directionality (value of the HTML <code><a href="/en-US/docs/Web/HTML/Global_attributes/dir">dir</a></code> attribute or CSS <code><a href="/en-US/docs/Web/CSS/direction">direction</a></code> property).</td>
+   <td>Select an element based on its directionality (value of the HTML <code><a href="/fr/docs/Web/HTML/Global_attributes/dir">dir</a></code> attribute or CSS <code><a href="/fr/docs/Web/CSS/direction">direction</a></code> property).</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":disabled") }}</td>
@@ -171,7 +171,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
   </tr>
   <tr>
    <td>{{ Cssxref(":first") }}</td>
-   <td>In <a href="/en-US/docs/Web/CSS/Paged_Media">Paged Media</a>, matches the first page.</td>
+   <td>In <a href="/fr/docs/Web/CSS/Paged_Media">Paged Media</a>, matches the first page.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":first-child") }}</td>
@@ -203,7 +203,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
   </tr>
   <tr>
    <td>{{ Cssxref(":indeterminate") }}</td>
-   <td>Matches UI elements whose value is in an indeterminate state, usually <a href="/en-US/docs/Web/HTML/Element/input/checkbox">checkboxes</a>.</td>
+   <td>Matches UI elements whose value is in an indeterminate state, usually <a href="/fr/docs/Web/HTML/Element/input/checkbox">checkboxes</a>.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":in-range") }}</td>
@@ -215,7 +215,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
   </tr>
   <tr>
    <td>{{ Cssxref(":lang") }}</td>
-   <td>Matches an element based on language (value of the HTML <a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a> attribute).</td>
+   <td>Matches an element based on language (value of the HTML <a href="/fr/docs/Web/HTML/Global_attributes/lang">lang</a> attribute).</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":last-child") }}</td>
@@ -227,7 +227,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
   </tr>
   <tr>
    <td>{{ Cssxref(":left") }}</td>
-   <td>In <a href="/en-US/docs/Web/CSS/CSS_Pages">Paged Media</a>, matches left-hand pages.</td>
+   <td>In <a href="/fr/docs/Web/CSS/CSS_Pages">Paged Media</a>, matches left-hand pages.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":link")}}</td>
@@ -307,7 +307,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
   </tr>
   <tr>
    <td>{{ Cssxref(":right") }}</td>
-   <td>In <a href="/en-US/docs/Web/CSS/CSS_Pages">Paged Media</a>, matches right-hand pages.</td>
+   <td>In <a href="/fr/docs/Web/CSS/CSS_Pages">Paged Media</a>, matches right-hand pages.</td>
   </tr>
   <tr>
    <td>{{ Cssxref(":root") }}</td>
@@ -378,23 +378,23 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
 <h2 id="Dans_ce_cours">Dans ce cours</h2>
 
 <ol>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
   <ul>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
 </ol>

@@ -8,9 +8,9 @@ original_slug: Learn/Server-side/Premiers_pas/Client-Serveur
 
 <div>{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}</div>
 
-<p class="summary">Maintenant que vous connaissez le but et le bénéfice de la programmation côté serveur, nous allons analyser en détails ce qui se passe quand un serveur reçoit une requête dynamique de la part d'un navigateur. Comme la plupart des sites gèrent le code côté serveur (requêtes et réponses) de la même manière, cela vous aidera à comprendre ce que vous devrez faire ensuite en écrivant votre propre code.</p>
+<p>Maintenant que vous connaissez le but et le bénéfice de la programmation côté serveur, nous allons analyser en détails ce qui se passe quand un serveur reçoit une requête dynamique de la part d'un navigateur. Comme la plupart des sites gèrent le code côté serveur (requêtes et réponses) de la même manière, cela vous aidera à comprendre ce que vous devrez faire ensuite en écrivant votre propre code.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -27,7 +27,7 @@ original_slug: Learn/Server-side/Premiers_pas/Client-Serveur
 
 <h2 id="Serveurs_Web_et_HTTP_un_avant-goût">Serveurs Web et HTTP (un avant-goût)</h2>
 
-<p>Les navigateurs web communiquent avec les serveurs web avec le protocole <a href="/en-US/docs/Web/HTTP">HTTP</a><strong> : H</strong>yper<strong>T</strong>ext<strong>T</strong>ransfer <strong>P</strong>rotocol. Quand vous cliquez un lien sur une page, soumettez un formulaire ou lancez une recherche, le navigateur envoie une requête HTTP (<em>HTTP Request) </em>au serveur.</p>
+<p>Les navigateurs web communiquent avec les serveurs web avec le protocole <a href="/fr/docs/Web/HTTP">HTTP</a><strong> : H</strong>yper<strong>T</strong>ext<strong>T</strong>ransfer <strong>P</strong>rotocol. Quand vous cliquez un lien sur une page, soumettez un formulaire ou lancez une recherche, le navigateur envoie une requête HTTP (<em>HTTP Request) </em>au serveur.</p>
 
 <p>Cette requête inclut :</p>
 
@@ -54,7 +54,7 @@ original_slug: Learn/Server-side/Premiers_pas/Client-Serveur
  <li>Cookies côté Client.  Contient les données de session du client, incluant les clés dont peut se servir le serveur pour déterminer le statut de login et les accés/permissions aux ressources.</li>
 </ul>
 
-<p>Les serveurs Web attendent une requête du client puis la traitent quand elle arrive. Il répond ensuite au navigateur avec un message HTTP Response. La réponse contient un statut <a href="/en-US/docs/Web/HTTP/Status">HTTP Response </a>indiquant si, oui ou non, la requête a abouti. (ex : "<code>200 OK</code>" pour un succés, "<code>404 Not Found</code>" si la ressource ne peut être trouvée, "<code>403 Forbidden</code>" si l'utilisateur n'est pas autorisé à voir la ressource etc. Le corps d'une réponse aboutie à une requête  <code>GET</code> contiendrait la ressource demandée.</p>
+<p>Les serveurs Web attendent une requête du client puis la traitent quand elle arrive. Il répond ensuite au navigateur avec un message HTTP Response. La réponse contient un statut <a href="/fr/docs/Web/HTTP/Status">HTTP Response </a>indiquant si, oui ou non, la requête a abouti. (ex : "<code>200 OK</code>" pour un succés, "<code>404 Not Found</code>" si la ressource ne peut être trouvée, "<code>403 Forbidden</code>" si l'utilisateur n'est pas autorisé à voir la ressource etc. Le corps d'une réponse aboutie à une requête  <code>GET</code> contiendrait la ressource demandée.</p>
 
 <p>Quand une page HTML est retournée, elle est affichée par le navigateur. Le navigateur, nativement, pourra découvrir des liens vers d'autres ressources (ex : une page HTML intégre habituellement des pages JavaScript et CSS ), et enverra des requêtes séparées pour télécharger ces fichiers.</p>
 
@@ -65,12 +65,12 @@ original_slug: Learn/Server-side/Premiers_pas/Client-Serveur
 <p>Vous faites une simple requête <code>GET</code> en cliquant sur un lien ou en faisant une recherche sur un site (sur une page de moteur de recherche par exemple). Une requête HTTP envoyée lorsque vous effectuez une recherche sur MDN pour les termes : "La relation Client-Serveur" ressemblera beaucoup à ce qui suit mais ne sera pas identique car des parties du message dépendent des paramètres de votre navigateur.</p>
 
 <div class="note">
-<p>Le format des messsages HTTP est défini par un standard web  (<a href="http://www.rfc-editor.org/rfc/rfc7230.txt">RFC7230</a>). Vous n'avez pas besoin de connaître ce niveau de détails mais vous saurez au moins d'où vient tout ça !</p>
+<p><strong>Note :</strong> Le format des messsages HTTP est défini par un standard web  (<a href="http://www.rfc-editor.org/rfc/rfc7230.txt">RFC7230</a>). Vous n'avez pas besoin de connaître ce niveau de détails mais vous saurez au moins d'où vient tout ça !</p>
 </div>
 
 <h4 id="La_requête">La requête</h4>
 
-<p>Chaque ligne de la requête contient des informations sur celle-ci. La première partie est appelée l'en-tête ( <strong>header</strong>) et contient beaucoup de données utiles. De la même manière qu'un <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">HTML head</a> contient des informations utiles (pas le contenu réel qui lui, se trouve dans le corps (body) :</p>
+<p>Chaque ligne de la requête contient des informations sur celle-ci. La première partie est appelée l'en-tête ( <strong>header</strong>) et contient beaucoup de données utiles. De la même manière qu'un <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">HTML head</a> contient des informations utiles (pas le contenu réel qui lui, se trouve dans le corps (body) :</p>
 
 <pre>GET https://developer.mozilla.org/en-US/search?q=la+relation+Client+-+serveur&amp;topic=apps&amp;topic=html&amp;topic=css&amp;topic=js&amp;topic=api&amp;topic=webdev HTTP/1.1
 Host: developer.mozilla.org
@@ -197,7 +197,7 @@ Content-Length: 0
 </pre>
 
 <div class="note">
-<p><strong>Note </strong>: Les requêtes et réponses montrées dans ces exemples ont été capturées avec l'application <a href="https://www.telerik.com/download/fiddler">Fiddler</a> , mais vous pouvez avoir des informations similaires en utilisant des "renifleurs" web  (e.g. <a href="http://websniffer.cc/">Websniffer</a>, <a href="https://www.wireshark.org/">Wireshark</a>) ou des extensions de navigateur comme  <a href="https://addons.mozilla.org/en-US/firefox/addon/httpfox/">HttpFox</a>. Vous pouvez essayer seul. Utilisez tous les outils recommandés, naviguez sur des sites et  éditez des profils de données pour explorer les différentes requêtes et réponses. La plupart des navigateurs modernes ont aussi des outils qui gérent les requêtes réseau, par exemple le <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> dans Firefox).</p>
+<p><strong>Note :</strong> Les requêtes et réponses montrées dans ces exemples ont été capturées avec l'application <a href="https://www.telerik.com/download/fiddler">Fiddler</a> , mais vous pouvez avoir des informations similaires en utilisant des "renifleurs" web  (e.g. <a href="http://websniffer.cc/">Websniffer</a>, <a href="https://www.wireshark.org/">Wireshark</a>) ou des extensions de navigateur comme  <a href="https://addons.mozilla.org/en-US/firefox/addon/httpfox/">HttpFox</a>. Vous pouvez essayer seul. Utilisez tous les outils recommandés, naviguez sur des sites et  éditez des profils de données pour explorer les différentes requêtes et réponses. La plupart des navigateurs modernes ont aussi des outils qui gérent les requêtes réseau, par exemple le <a href="/fr/docs/Tools/Network_Monitor">Network Monitor</a> dans Firefox).</p>
 </div>
 
 <h2 id="Les_sites_statiques">Les sites statiques</h2>
@@ -205,14 +205,14 @@ Content-Length: 0
 <p>Un site statique renvoie le même contenu codé en dur depuis le serveur quelle que soit la ressource demandée. Si vous avez une page concernant un produit à l'adresse  <code>/static/myproduct1.html</code>, cette même page sera retournée à chaque utilisateur. Si vous ajoutez un nouveau produit, vous devez ajouter une nouvelle page (par ex : <code>myproduct2.html</code>) et ainsi de suite. Cela peut être vraiment inefficace — Comment faire quand vous avez des milliers de pages "produit" à faire ? Vous allez répéter beaucoup de code identique dans chaque page (le modèle de base de la page, sa structure, etc.) et si vous voulez changer quoique ce soit dans la structure de la page — comme une section "produits dérivés" par exemple — alors, il faudra changer chaque page individuellement..</p>
 
 <div class="note">
-<p><strong>Note </strong>: Les sites statiques sont trés efficace quand vous avez un petit nombre de pages et que vous voulez envoyer le même contenu à chaque utilisateur. De toutes façons, ils peuvent avoir un coût certain de maintenance au fur et à mesure de l'augmentation du nombre de pages.</p>
+<p><strong>Note :</strong> Les sites statiques sont trés efficace quand vous avez un petit nombre de pages et que vous voulez envoyer le même contenu à chaque utilisateur. De toutes façons, ils peuvent avoir un coût certain de maintenance au fur et à mesure de l'augmentation du nombre de pages.</p>
 </div>
 
 <p>Voyons comment tout cela marche en révisant un diagramme d'architecture de site statique vu dans l'article précédent.</p>
 
-<p><img alt="A simplified diagram of a static web server." src="https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png"></p>
+<p><img alt="A simplified diagram of a static web server." src="Basic%20Static%20App%20Server.png"></p>
 
-<p>Quand un utilisateur veut naviguer jusqu'à une page, le navigateur envoie une requête HTTP <code>GET</code> spécifiant l'URL de sa page HTML. Le serveur retourne le document demandé depuis son système de fichiers et retourne une réponse  HTTP contenant le document et un  <a href="/en-US/docs/Web/HTTP/Status">HTTP Response status code</a> ( statut codé de la réponse HTTP) qui est  "<code>200 OK</code>" (indiquant le succés de l'opération). Le serveur peut retourner un statut différent, par exemple "<code>404 Not Found</code>"  si le fichier est absent sur le serveur , ou bien "<code>301 Moved Permanently</code>" si le fichier existe mais a été déplacé vers une nouvelle localisation.</p>
+<p>Quand un utilisateur veut naviguer jusqu'à une page, le navigateur envoie une requête HTTP <code>GET</code> spécifiant l'URL de sa page HTML. Le serveur retourne le document demandé depuis son système de fichiers et retourne une réponse  HTTP contenant le document et un  <a href="/fr/docs/Web/HTTP/Status">HTTP Response status code</a> ( statut codé de la réponse HTTP) qui est  "<code>200 OK</code>" (indiquant le succés de l'opération). Le serveur peut retourner un statut différent, par exemple "<code>404 Not Found</code>"  si le fichier est absent sur le serveur , ou bien "<code>301 Moved Permanently</code>" si le fichier existe mais a été déplacé vers une nouvelle localisation.</p>
 
 <p>Le serveur d'un site statique n'aura à faire face qu'à des requêtes  GET vu qu'il ne stocke aucune donnée modifiable. Il ne change pas non plus ses réponses basées sur les données des requêtes HTTP (c'est à dire les paramètres URL ou les cookies). </p>
 
@@ -230,11 +230,11 @@ Content-Length: 0
 
 <p>Cette section présente une vue d'ensemble du cycle dynamique HTTP de requête/réponse, construit avec ce que nous avons vu précédemment avec de plus amples détails. Toujours dans l'optique de "faire les choses en réel" nous utiliserons le contexte du site d'une équipe de sport où l'entraîneur peut sélectionner le nom de l'équipe et le nombre de joueurs dans un formulaire HTML et avoir en retour une suggestion "Meilleure composition" pour le prochain match.</p>
 
-<p><span style='color: rgba(0, 0, 0, 0.87); font-family: "Roboto",arial,sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: pre-wrap;' title="">Le diagramme ci-dessous montre les principaux éléments du site Web "entraîneur d'équipe", ainsi que des étiquettes numérotées pour la séquence des opérations lorsque l'entraîneur accède à la liste "meilleure équipe".</span><span style='background-color: #f5f5f5; color: rgba(0, 0, 0, 0.87); display: inline !important; float: none; font-family: "Roboto",arial,sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; line-height: 28px; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: pre-wrap;'> </span><span style='color: rgba(0, 0, 0, 0.87); font-family: "Roboto",arial,sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: pre-wrap;' title="">Les parties du site qui le rendent dynamique sont l’application Web (c’est ainsi que nous nous référerons au code côté serveur qui traite les requêtes HTTP et renvoie les réponses HTTP), la base de données, qui contient des informations sur les joueurs, les équipes, les entraîneurs et leurs partenaires.</span><span style='background-color: #f5f5f5; color: rgba(0, 0, 0, 0.87); display: inline !important; float: none; font-family: "Roboto",arial,sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; line-height: 28px; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: pre-wrap;'> </span><span style='color: rgba(0, 0, 0, 0.87); font-family: "Roboto",arial,sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: pre-wrap;' title="">relations, et les modèles HTML.</span></p>
+<p>Le diagramme ci-dessous montre les principaux éléments du site Web "entraîneur d'équipe", ainsi que des étiquettes numérotées pour la séquence des opérations lorsque l'entraîneur accède à la liste "meilleure équipe". Les parties du site qui le rendent dynamique sont l’application Web (c’est ainsi que nous nous référerons au code côté serveur qui traite les requêtes HTTP et renvoie les réponses HTTP), la base de données, qui contient des informations sur les joueurs, les équipes, les entraîneurs et leurs partenaires. relations, et les modèles HTML.</p>
 
-<p><img alt="This is a diagram of a simple web server with step numbers for each of step of the client-server interaction." src="https://mdn.mozillademos.org/files/13829/Web%20Application%20with%20HTML%20and%20Steps.png" style="height: 584px; width: 1226px;"></p>
+<p><img alt="This is a diagram of a simple web server with step numbers for each of step of the client-server interaction." src="Web%20Application%20with%20HTML%20and%20Steps.png"></p>
 
-<p><font color="#001000" face="Arial,x-locale-body,sans-serif">Une fois que l’entraîneur a soumis le formulaire avec le nom de l’équipe et le nombre de joueurs, la séquence des opérations est la suivante:</font></p>
+<p>Une fois que l’entraîneur a soumis le formulaire avec le nom de l’équipe et le nombre de joueurs, la séquence des opérations est la suivante:</p>
 
 <ol>
  <li>Le navigateur Web crée une requête HTTP GET au serveur en utilisant l’URL de base de la ressource (/ best) et en codant l’équipe et le numéro du joueur sous forme de paramètres d’URL (par exemple / best? team=my_team_name&amp;show = 11) ou dans le cadre de l’URL modèle (par exemple / best / my_team_name / 11 /). Une requête GET est utilisée car la requête extrait uniquement des données (sans les modifier).</li>
@@ -242,11 +242,11 @@ Content-Length: 0
  <li>L'application Web identifie l'objectif de la demande d'obtenir la "meilleure liste d'équipes" en fonction de l'URL (/ best /) et recherche le nom d'équipe requis et le nombre de joueurs à partir de l'URL. L'application Web obtient alors les informations requises de la base de données (en utilisant des paramètres "internes" supplémentaires pour définir quels joueurs sont les "meilleurs", et éventuellement en obtenant également l'identité de l'entraîneur connecté à partir d'un cookie côté client).</li>
  <li>L'application Web crée dynamiquement une page HTML en plaçant les données (de la base de données) dans des espaces réservés dans un modèle HTML.</li>
  <li>L'application Web renvoie le code HTML généré au navigateur Web (via le serveur Web), ainsi qu'un code d'état HTTP de 200 ("success"). Si quoi que ce soit empêche le code HTML d'être renvoyé, l'application Web renvoie un autre code, par exemple "404" pour indiquer que l'équipe n'existe pas.</li>
- <li><span style='background-color: #f5f5f5; color: rgba(0, 0, 0, 0.87); display: inline !important; float: none; font-family: "Roboto",arial,sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: pre-wrap;'>Le navigateur Web commence alors à traiter le code HTML renvoyé, en envoyant des demandes distinctes pour obtenir tous les fichiers CSS ou JavaScript qu’il référence (voir étape 7).</span></li>
- <li><span style='background-color: #f5f5f5; color: rgba(0, 0, 0, 0.87); display: inline !important; float: none; font-family: "Roboto",arial,sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: pre-wrap;'>Le serveur Web charge les fichiers statiques à partir du système de fichiers et les renvoie directement au navigateur (là encore, le traitement correct des fichiers est basé sur les règles de configuration et la correspondance des types d'URL).</span></li>
+ <li>Le navigateur Web commence alors à traiter le code HTML renvoyé, en envoyant des demandes distinctes pour obtenir tous les fichiers CSS ou JavaScript qu’il référence (voir étape 7).</li>
+ <li>Le serveur Web charge les fichiers statiques à partir du système de fichiers et les renvoie directement au navigateur (là encore, le traitement correct des fichiers est basé sur les règles de configuration et la correspondance des types d'URL).</li>
 </ol>
 
-<p><span style='background-color: #f5f5f5; color: rgba(0, 0, 0, 0.87); display: inline !important; float: none; font-family: "Roboto",arial,sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: pre-wrap;'>Une opération de mise à jour d'un enregistrement dans la base de données serait gérée de la même manière, sauf que, comme toute mise à jour de base de données, la demande HTTP du navigateur devrait être codée en tant que demande POST.</span></p>
+<p>Une opération de mise à jour d'un enregistrement dans la base de données serait gérée de la même manière, sauf que, comme toute mise à jour de base de données, la demande HTTP du navigateur devrait être codée en tant que demande POST.</p>
 
 <h3 id="que_faire_dautre">que faire d'autre?</h3>
 
@@ -275,7 +275,7 @@ urlpatterns = [
 ]</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Les premiers paramètres des fonctions url () peuvent paraître un peu bizarres (par exemple, r '^ junior / $') car ils utilisent une technique de correspondance de modèle appelée "expressions régulières" (RegEx ou RE). Vous n'avez pas besoin de savoir comment fonctionnent les expressions régulières à ce stade, car elles nous permettent également de faire correspondre les modèles de l'URL (plutôt que les valeurs codées en dur ci-dessus) et de les utiliser comme paramètres dans nos fonctions d'affichage. À titre d'exemple, un RegEx très simple pourrait dire "faire correspondre une seule lettre majuscule, suivie de 4 à 7 lettres minuscules".</p>
+<p><strong>Note :</strong> Les premiers paramètres des fonctions url () peuvent paraître un peu bizarres (par exemple, r '^ junior / $') car ils utilisent une technique de correspondance de modèle appelée "expressions régulières" (RegEx ou RE). Vous n'avez pas besoin de savoir comment fonctionnent les expressions régulières à ce stade, car elles nous permettent également de faire correspondre les modèles de l'URL (plutôt que les valeurs codées en dur ci-dessus) et de les utiliser comme paramètres dans nos fonctions d'affichage. À titre d'exemple, un RegEx très simple pourrait dire "faire correspondre une seule lettre majuscule, suivie de 4 à 7 lettres minuscules".</p>
 </div>
 
 <div>L'infrastructure Web permet également à une fonction d'affichage d'extraire facilement des informations de la base de données. La structure de nos données est définie dans des modèles, qui sont des classes Python qui définissent les champs à stocker dans la base de données sous-jacente. Si nous avons un modèle nommé Team avec un champ "team_type", nous pouvons utiliser une syntaxe de requête simple pour récupérer toutes les équipes ayant un type particulier.</div>
@@ -305,13 +305,13 @@ def junior(request):
 
 <p>Dans un module suivant, nous vous aiderons à choisir le meilleur framework Web pour votre premier site.</p>
 
-<p><span style="background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: Arial,x-locale-body,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;">{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}</span></p>
+<p>{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}</p>
 
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server side</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server side</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li>
 </ul>

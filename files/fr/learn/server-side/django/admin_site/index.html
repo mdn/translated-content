@@ -15,9 +15,9 @@ translation_of: Learn/Server-side/Django/Admin_site
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">Nous avons créé le modèle de données pour le site web de la <a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">bibliothèque locale</a>. Dans ce chapitre nous allons utiliser le site d'administration pour introduire des données réelles pour les livres. Dans un premier temps, nous aborderons la manière d'enregistrer les données des objets sur le site d'administration et comment se connecter au site et créer des données. La fin de ce chapitre sera dédié à des éléments d'amélioration possible du site d'administration.</p>
+<p>Nous avons créé le modèle de données pour le site web de la <a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">bibliothèque locale</a>. Dans ce chapitre nous allons utiliser le site d'administration pour introduire des données réelles pour les livres. Dans un premier temps, nous aborderons la manière d'enregistrer les données des objets sur le site d'administration et comment se connecter au site et créer des données. La fin de ce chapitre sera dédié à des éléments d'amélioration possible du site d'administration.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Pré-requis:</th>
@@ -57,9 +57,10 @@ admin.site.register(Genre)
 admin.site.register(BookInstance)
 </pre>
 
-<div class="note"><strong>Note</strong>: Si vous avez répondu au défi de la modelisation des langues des livres (<a href="/fr/docs/Learn/Server-side/Django/Models">voir le chapitre précédent sur les modèles de données</a>), vous pouvez aussi importer cet objet !<br>
-<br>
-Cela devrait être de la forme : <code>admin.site.register(Language)</code> et n'oubliez pas d'importer l'objet.</div>
+<div class="note">
+    <p><strong>Note :</strong> Si vous avez répondu au défi de la modelisation des langues des livres (<a href="/fr/docs/Learn/Server-side/Django/Models">voir le chapitre précédent sur les modèles de données</a>), vous pouvez aussi importer cet objet !</p>
+    <p>Cela devrait être de la forme : <code>admin.site.register(Language)</code> et n'oubliez pas d'importer l'objet.</p>
+</div>
 
 <p>C'est la méthode la plus rapide et la plus simple pour enregistrer un ou plusieurs modèles. Le site d'administration est très adaptable et nous aborderons plus loin ces questions.</p>
 
@@ -82,41 +83,41 @@ Cela devrait être de la forme : <code>admin.site.register(Language)</code> et n
 
 <p>Pour vous authentifier au site, ouvrez l'URL <em>/admin </em>du site local (concrètement, <a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin</a>) et identifiez vous avec votre compte de super-utilisateur.</p>
 
-<div class="blockIndicator note">
-<p>Vous serez redirigez vers l'application interne à Django de gestion de l'authentification et la pages de demande d'authentitification avant d'accéder réellement au site d'administration.</p>
+<div class="note">
+<p><strong>Note :</strong> Vous serez redirigé⋅e vers l'application interne à Django de gestion de l'authentification et la pages de demande d'authentitification avant d'accéder réellement au site d'administration.</p>
 
 <p>Si vous accéder au site local sans /admin, vous aurez un message d'erreur car les routages d'URL n'ont pas encore été traité. ne vous en inquiétez pas cela va venir...</p>
 </div>
 
 <p>Cet partie du site affiche tous les modèles définis et déclarés dans le fichier de contrôle de l'administration du site. Les objets sont regroupés par application (pour notre cas, uniquement l'application Catalog à cette étape des travaux). Vous pouvez cliquez sur chacun des noms d'objet publiés pour accéder à l'écran qui gère les informations sur les objets de ce type contenu en base de données et vous pouvez les éditer et les modifier. Vous pouvez aussi cliquer sur le lien <strong>+ Ajouter</strong> pour créer un nouvel enregistrement.</p>
 
-<p><img alt="Admin Site - Home page" src="https://mdn.mozillademos.org/files/13975/admin_home.png" style="display: block; height: 634px; margin: 0px auto; width: 998px;"></p>
+<p><img alt="Admin Site - Home page" src="admin_home.png"></p>
 
 <p>Cliquez sur le lien <strong>+ Ajouter</strong> à la droite de l'objet Books pour créer un nouveau livre. Le site va afficher une page de saisie de données (analogue à celle ci-dessous). Notez que Django prend en compte le type de champs définit dans le modèle pour utiliser le widget associé ainsi que le champs <code>help_text</code> quand vous l'aviez défini. </p>
 
 <p>Entrez les valeurs des champs. Pour les champs qui relèvent de relations entre objet, vous pouvez utiliser le bouton + pour accéder en cascade au formulaire de saisie des informations nécessaires à la créarion de cette objet. Vous pouvez aussi sélectionner un objet si d'autres avaient été créés précédement. Ne pas oublier de cliquer sur <strong>Enregistrer et ajouter un nouveau</strong> ou <strong>Enregistrer et continuer les modification</strong> pour sauvegarder en base de données les informations saisies.</p>
 
-<p><img alt="Admin Site - Book Add" src="https://mdn.mozillademos.org/files/13979/admin_book_add.png" style="border-style: solid; border-width: 1px; display: block; height: 780px; margin: 0px auto; width: 841px;"></p>
+<p><img alt="Admin Site - Book Add" src="admin_book_add.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: À ce stade, prenez le temps d'enregistrer plusieurs livres, genres et auteurs. Assurez-vous que chacun est associé à plusieurs autres éléments cela rendra vos listes à venir plus riches et intéressantes quand nous aborderons ces sujets.</p>
+<p><strong>Note :</strong> À ce stade, prenez le temps d'enregistrer plusieurs livres, genres et auteurs. Assurez-vous que chacun est associé à plusieurs autres éléments cela rendra vos listes à venir plus riches et intéressantes quand nous aborderons ces sujets.</p>
 </div>
 
 <p>Après avoir saisie les informations et ajouté vos livres, cliquez sur le lien <strong>Accueil</strong> pour revenir à la page principale du site d'administration. Cliquez sur le lien <strong>Books</strong> pour afficher la liste des livres enregistrés (ou sur d'autres liens pour voir les autres objets présents en base). Après avoir ajouter quelques livres, votre page devrait ressembler à celle ci-dessous. La liste des livres est affichée par titre ; c'est, en fait, la valeur délivrée par la méthode <code>__str__()</code> du modèle d'objet Book comme cela a été codé dans le précédent chapitre.</p>
 
-<p><img alt="Admin Site - List of book objects" src="https://mdn.mozillademos.org/files/13935/admin_book_list.png" style="border-style: solid; border-width: 1px; display: block; height: 407px; margin: 0px auto; width: 1000px;"></p>
+<p><img alt="Admin Site - List of book objects" src="admin_book_list.png"></p>
 
 <p>À partir de la liste affichée, vous pouvez supprimer des instances en selectionnant les items par les cases à cocher à gauche du titre puis <em>supprimer...</em> dans la liste des actions proposée puis en cliquant sur <strong>Envoyer</strong>. Vous pouvez aussi ajouter des livres en cliquant sur <strong>AJOUTER BOOK</strong>.</p>
 
 <p>Vous pouvez editer un livre en cliquant son nom sur la liste des ouvrages. La page d'édition, image ci-dessous, est proche de celle d'ajout d'un livre. Les principales différences sont le titre de la page (Modification de book, au lieu d'ajout de bbok), l'ajout en rouge du bouton supprimer, l'historique des modifications et voir sur le site. Ce dernier bouton est visible car nous créer la méthode <code>get_absolute_url()</code> dans la définition du modèle de données (à ce stade, une erreur sera provoquée si vous cliquez sur ce bouton).</p>
 
-<p><img alt="Admin Site - Book Edit" src="https://mdn.mozillademos.org/files/13977/admin_book_modify.png" style="border-style: solid; border-width: 1px; display: block; height: 780px; margin: 0px auto; width: 841px;"></p>
+<p><img alt="Admin Site - Book Edit" src="admin_book_modify.png"></p>
 
 <p>Revenez à la page d'accueil (à l'aide du lien <strong>Accueil</strong> du fil d'Ariane), puis affichez les listes des <strong>Authors</strong> et des <strong>Genres</strong>. Vous devriez déjà en avoir créé un certain nombre à partir de l'ajout des nouveaux livres, mais n'hésitez pas à en ajouter d'autres.</p>
 
 <p>Ce qui manque actuellement ce sont des <em>Book Instances</em>. Vous n'en avez pas car elles ne sont pas créées à partir des objets Books (bien que vous pourriez créer un objet <code>Book</code> à partir d'un objet <code>BookInstance</code> car c'est la nature de la relation <code>ForeignKey</code>). Retournez à la page d'acceuil et cliquez sur le bouton <strong>Ajouter</strong> associé aux objets Book Instance et accéder à l'écran de création. Vous pouvez noter le très grand identifiant unique global utilisé pour identifier séparelment les ouvrages.</p>
 
-<p><img alt="Admin Site - BookInstance Add" src="https://mdn.mozillademos.org/files/13981/admin_bookinstance_add.png" style="border-style: solid; border-width: 1px; display: block; height: 514px; margin: 0px auto; width: 863px;"></p>
+<p><img alt="Admin Site - BookInstance Add" src="admin_bookinstance_add.png"></p>
 
 <p>Créez plusieurs de ces enregistrements pour chacun de vos livres. Définissez un statut <strong>Available</strong> (<em>Disponible</em>) pour certains d'entre eux et <strong>On loan</strong> (<em>Prêt</em>) pour d’autres. Pour un statut différent de <em>Available</em>, vous devrez préciser une date d'échéance à venir.</p>
 
@@ -141,10 +142,10 @@ Cela devrait être de la forme : <code>admin.site.register(Language)</code> et n
    <li>Ajouter des options supplémentaires au menu Actions dans les vues de liste et choisir l'emplacement où ce menu est affiché dans le formulaire.</li>
   </ul>
  </li>
- <li><span class="tlid-translation translation" lang="fr"><span title="">Vues détaillées</span></span>
+ <li>Vues détaillées
   <ul>
-   <li><span class="tlid-translation translation" lang="fr"><span title="">Choisir les champs à afficher (ou à exclure), ainsi que leur ordre, leur groupement, leur caractère modifiable, le widget utilisé, leur orientation, etc.</span></span></li>
-   <li><span class="tlid-translation translation" lang="fr"><span title="">Ajouter des champs associés à un enregistrement pour permettre la modification en ligne (par exemple, ajoutez la possibilité d'ajouter et de modifier des enregistrements de livre lors de la création de leur auteur).</span></span></li>
+   <li>Choisir les champs à afficher (ou à exclure), ainsi que leur ordre, leur groupement, leur caractère modifiable, le widget utilisé, leur orientation, etc.</li>
+   <li>Ajouter des champs associés à un enregistrement pour permettre la modification en ligne (par exemple, ajoutez la possibilité d'ajouter et de modifier des enregistrements de livre lors de la création de leur auteur).</li>
   </ul>
  </li>
 </ul>
@@ -195,7 +196,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>La liste des auteurs (objet <code>Author</code>) est affichée dans l'application <em>LocalLibrary</em> à l'aide du nom généré par la méthode  <code>__str__()</code>. Ceci fonctionne bien, judqu'à ce que vous aurez de nombreux auteurs et éventuellement des doublons parmi ces auteurs. Pour bien les différencier, ou simplement parce que vous souhaitez avoir directement plus d'information, vous allez utiliser la directive <a href="https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin">list_display</a> pour ajouter d'autres champs de l'objet <code>Author</code>.</p>
 
-<p><span class="tlid-translation translation" lang="fr"><span title="">Modifiez votre classe <code>AuthorAdmin</code> comme décrit ci-dessous (vous pouvez copier et coller le code).</span> <span title="">Les noms de champs à afficher dans la liste sont déclarés dans un tuple dans l'ordre requis. Ils sont identiques à </span></span><span class="tlid-translation translation" lang="fr"><span title="">ceux spécifiés dans votre modèle d'objet <code>Author</code>.</span></span></p>
+<p>Modifiez votre classe <code>AuthorAdmin</code> comme décrit ci-dessous (vous pouvez copier et coller le code). Les noms de champs à afficher dans la liste sont déclarés dans un tuple dans l'ordre requis. Ils sont identiques à ceux spécifiés dans votre modèle d'objet <code>Author</code>.</p>
 
 <pre class="brush: python">class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
@@ -203,7 +204,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Si vous accèdez à la page d'administration des auteurs, vous devriez obtenir une page équivalente à celle ci-dessous :</p>
 
-<p><img alt="Admin Site - Improved Author List" src="https://mdn.mozillademos.org/files/14023/admin_improved_author_list.png" style="border-style: solid; border-width: 1px; display: block; height: 302px; margin: 0px auto; width: 941px;"></p>
+<p><img alt="Admin Site - Improved Author List" src="admin_improved_author_list.png"></p>
 
 <p>Pour les livres, nous allons visulaiser les objets  <code>Book</code> en affichant les champs <code>author</code> and <code>genre</code>. Le champs <code>author</code> est de type <code>ForeignKey</code> décrivant une relation un à n. En conséquence, nous afficherons l'élément produit par la méthode <code>__str__()</code> de l'objet <code>Author</code> pour l'instance associée à votre livre. Le genre est une relation n à n, donc nous allons avoir à traiter son affichage de manière particulière. Modifiez la classe <code>BookAdmin</code> comme suit :</p>
 
@@ -211,10 +212,10 @@ class BookInstanceAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'display_genre')
 </pre>
 
-<p>Le champ <font face="Consolas, Liberation Mono, Courier, monospace">genre </font>représente une relation n à n (<code>ManyToManyField</code>) qui ne peut pas être prise en charge par la directive <code>list_display</code>. Le coût d'accès à la base de donnée peut être important et donc le cadriciel se protège de ce phénomène. A la place, nous devons définir une fonction(<code>display_genre</code>) qui permettra de traiter l'affichage des informations souhaitées pour le genre.</p>
+<p>Le champ genre représente une relation n à n (<code>ManyToManyField</code>) qui ne peut pas être prise en charge par la directive <code>list_display</code>. Le coût d'accès à la base de donnée peut être important et donc le cadriciel se protège de ce phénomène. A la place, nous devons définir une fonction(<code>display_genre</code>) qui permettra de traiter l'affichage des informations souhaitées pour le genre.</p>
 
 <div class="note">
-<p><strong>Note</strong>: C'est dans un but pédagogique que nous recherchons ici l'affichage du <code>genre</code> qui n'a peut-être pas nécessaire d'intérêt et peut représenter un coût d'accès. Nous montrons, ici, comment appler les fonctions dans vos modèles ce qui sera très utile pour la suite de vos applications  — par exemple pour ajouter un lien de suppression de vos enregistrements en liste.</p>
+<p><strong>Note :</strong> C'est dans un but pédagogique que nous recherchons ici l'affichage du <code>genre</code> qui n'a peut-être pas nécessaire d'intérêt et peut représenter un coût d'accès. Nous montrons, ici, comment appler les fonctions dans vos modèles ce qui sera très utile pour la suite de vos applications  — par exemple pour ajouter un lien de suppression de vos enregistrements en liste.</p>
 </div>
 
 <p>Ajoutez le code ci-dessous dans votre modèle d'objet <code>Book</code> (concrètement dans le fichier <strong>locallibrary/catalog/models.py</strong>). Cette fonction génère une chaîne de caractère contenant les trois premières valeurs de tous les genres (s'ils existent) et créer une courte destription (<code>short_description</code>) qui sera utilisé par le site d'administration avec cette méthode.</p>
@@ -228,12 +229,12 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Après avoir sauvegardé vos fichiers models.py et admin.py, vous pouvez accéder à la page web d'administration des livres et vous y découvrirez une page semblable à celle ci-dessous :</p>
 
-<p><img alt="Admin Site - Improved Book List" src="https://mdn.mozillademos.org/files/14025/admin_improved_book_list.png" style="border-style: solid; border-width: 1px; display: block; height: 337px; margin: 0px auto; width: 947px;"></p>
+<p><img alt="Admin Site - Improved Book List" src="admin_improved_book_list.png"></p>
 
 <p>Les champs <code>Genre</code> <code>Language</code> ne dispose que d'une seule valeur. Il n'est donc pas utile de créer une page d'affichage spélicale.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous trouverez en fin d'article dans la défis personnel des propositions pour améliorer les ouvrages en prêt <code>BookInstance</code> !</p>
+<p><strong>Note :</strong> Vous trouverez en fin d'article dans la défis personnel des propositions pour améliorer les ouvrages en prêt <code>BookInstance</code> !</p>
 </div>
 
 <h3 id="Ajouter_des_filtres">Ajouter des filtres</h3>
@@ -246,14 +247,14 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>La page de la vue en liste des ouvrages à consultation (BookInstance) est désormais agrémentée d'un bloc de filtrage par statut (champs status) et date de retour (due back). Vous pouvez sélectionner la valeur de ces deux critères de filtrage (remarquez la manière avec laquelle les valeurs des critères est proposée).</p>
 
-<p><img alt="Admin Site - BookInstance List Filters" src="https://mdn.mozillademos.org/files/14037/admin_improved_bookinstance_list_filters.png" style="height: 528px; width: 960px;"></p>
+<p><img alt="Admin Site - BookInstance List Filters" src="admin_improved_bookinstance_list_filters.png"></p>
 
 <h3 id="Organiser_la_vue_d'affichage_d'un_modèle">Organiser la vue d'affichage d'un modèle</h3>
 
 <p>La vue est agencée, par défaut, en affichant verticalement dans l'ordre de déclaration des champs de l'objet modèle. Cette règle d'affichage peut être modifiée en indiquant quels champs afficher (ou exclure) et organiser les informations en sections avec un affichage horizontal ou vertical et les widgets à utiliser.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Les modèles de l'application <em>LocalLibrary</em> ne sont pas très compliqués sans énormément d'information à traiter. Il n'y a pas un grand besoin de changement d'affichage ; les éléments ci-dessous sont données pour avoir une idée des possibilités et savoir, le moment venu, comment faire.</p>
+<p><strong>Note :</strong> Les modèles de l'application <em>LocalLibrary</em> ne sont pas très compliqués sans énormément d'information à traiter. Il n'y a pas un grand besoin de changement d'affichage ; les éléments ci-dessous sont données pour avoir une idée des possibilités et savoir, le moment venu, comment faire.</p>
 </div>
 
 <h4 id="Contrôler_l'affichage_et_la_dispostion_des_champs">Contrôler l'affichage et la dispostion des champs</h4>
@@ -269,10 +270,10 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>La page web de votre application locale devrait ressembler à celle ci-dessous :</p>
 
-<p><img alt="Admin Site - Improved Author Detail" src="https://mdn.mozillademos.org/files/14027/admin_improved_author_detail.png" style="border-style: solid; border-width: 1px; display: block; height: 282px; margin: 0px auto; width: 928px;"></p>
+<p><img alt="Admin Site - Improved Author Detail" src="admin_improved_author_detail.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez aussi utiliser l'attribut <code>exclude</code> pour identifier des attributs du modèle que vous souhaitez exclure de l'affichage (les autres attributs seront alors affichés). Pour plus de détails vous pouvez consulter la documentation Django sur l'attribut <a href="https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.exclude">exclude</a>.</p>
+<p><strong>Note :</strong> Vous pouvez aussi utiliser l'attribut <code>exclude</code> pour identifier des attributs du modèle que vous souhaitez exclure de l'affichage (les autres attributs seront alors affichés). Pour plus de détails vous pouvez consulter la documentation Django sur l'attribut <a href="https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.exclude">exclude</a>.</p>
 </div>
 
 <h4 id="Organiser_des_sections_dans_votre_vue_de_détail">Organiser des sections dans votre vue de détail</h4>
@@ -298,7 +299,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Le résultat de cette description devrait vous apparaître de manière analogue à celle présente  ci-dessous :</p>
 
-<p><img alt="Admin Site - Improved BookInstance Detail with sections" src="https://mdn.mozillademos.org/files/14029/admin_improved_bookinstance_detail_sections.png" style="border-style: solid; border-width: 1px; display: block; height: 580px; margin: 0px auto; width: 947px;"></p>
+<p><img alt="Admin Site - Improved BookInstance Detail with sections" src="admin_improved_bookinstance_detail_sections.png"></p>
 
 <h3 id="Publier_des_enregistrements_associés">Publier des enregistrements associés</h3>
 
@@ -317,12 +318,12 @@ class BookAdmin(admin.ModelAdmin):
 
 <p>Si vous allez consulter un livre, vous devriez pouvoir, au bas de la page, consulter la liste des copies enregistrées :</p>
 
-<p><img alt="Admin Site - Book with Inlines" src="https://mdn.mozillademos.org/files/14033/admin_improved_book_detail_inlines.png" style="border-style: solid; border-width: 1px; display: block; height: 889px; margin: 0px auto; width: 937px;"></p>
+<p><img alt="Admin Site - Book with Inlines" src="admin_improved_book_detail_inlines.png"></p>
 
 <p>Dans le cas présent nous avons juste décidé d'afficher toutes les informations des copies associées à un livre. Si vous consultez sur la documentation Django les informations relatives au type <a href="https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> vous aurez accès à l'ensemble des éléments qui permettent de filtrer et afficher les éléments dont vous aurez besoin. </p>
 
 <div class="note">
-<p><strong>Note</strong>: Il y a quelques limitations pénibles à ces outils. Si vous observez bien la liste des copies pour un ouvrage, vous decouvrirez des copies fantômes sans nom et informations pré-reservées pour de futures instances à enregistrer. Il serait préférable de ne pas les avoir et vous devriez alors appliquer un filtre pour éliminer de l'affichage ces copies. Vous pourriez aussi ajouter une section particulière pour permettre d'ajouter de nouvelles copies dans les rayonnages... La première solution est assez rapide à traiter en utilisant l'attribut <code>extra</code> à 0 dans la définition de l'objet <code>BooksInstanceInline</code> ... essayez !</p>
+<p><strong>Note :</strong> Il y a quelques limitations pénibles à ces outils. Si vous observez bien la liste des copies pour un ouvrage, vous decouvrirez des copies fantômes sans nom et informations pré-reservées pour de futures instances à enregistrer. Il serait préférable de ne pas les avoir et vous devriez alors appliquer un filtre pour éliminer de l'affichage ces copies. Vous pourriez aussi ajouter une section particulière pour permettre d'ajouter de nouvelles copies dans les rayonnages... La première solution est assez rapide à traiter en utilisant l'attribut <code>extra</code> à 0 dans la définition de l'objet <code>BooksInstanceInline</code> ... essayez !</p>
 </div>
 
 <h2 id="Défi">Défi</h2>
@@ -354,18 +355,18 @@ class BookAdmin(admin.ModelAdmin):
 
 <ul>
  <li><a href="/fr/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
  <li><a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Didactique: Site web "Bibliothèque locale"</a></li>
  <li><a href="/fr/docs/Learn/Server-side/Django/skeleton_website">Django didactique Section 2: Créer le squelette du site web</a></li>
  <li><a href="/fr/docs/Learn/Server-side/Django/Models">Django didactique Section 3: Utilisation des modèles de données</a></li>
  <li><a href="/fr/docs/Learn/Server-side/Django/Admin_site">Django didactique Section 4 : Site d'administration de Django</a></li>
  <li><a href="/fr/docs/Learn/Server-side/Django/Home_page">Django didactique Section 5: Créer la page d'accueil</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a> </li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a> </li>
 </ul>

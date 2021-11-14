@@ -54,7 +54,7 @@ original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page
 <p>Ce type de problème n'existait pas quand le web a vu le jour, du début jusqu'au milieu des années 90 — à l'époque, les seuls appareils permettant de naviguer sur le web étaient les ordinateurs de bureau et les portables, de sorte que les ingénieurs et rédacteurs de spécifications pour les navigateurs ne pouvaient même pas imaginer l'existence de ces problèmes. Pour résoudre les problèmes indiqués ci-dessus, les techniques d'images adaptatives sont de mise en œuvre récente&nbsp;: elles offrent au navigateur plusieurs fichiers d'images, soit montrant tous la même chose mais avec un nombre de pixels différent (commutation de résolution), soit des images différentes selon l'espace alloué (décisions artistiques).</p>
 
 <div class="note">
-  <p><strong>Note&nbsp;:</strong> Toutes les nouvelles fonctionnalités présentées dans cet article — <a href="/fr/docs/Web/HTML/Element/Img#attr-srcset"><code>srcset</code></a>/<a href="/fr/docs/Web/HTML/Element/Img#attr-sizes"><code>sizes</code></a>/<a href="/fr/docs/Web/HTML/Element/picture"><code>&lt;picture&gt;</code></a> — sont toutes prises en charge dans les versions de navigateurs récemment publiées pour les ordinateurs de bureau et pour les mobiles (y compris le navigateur Edge de Microsoft, même si ce n'est pas le cas d'Internet Explorer).</p>
+  <p><strong>Note :</strong> Toutes les nouvelles fonctionnalités présentées dans cet article — <a href="/fr/docs/Web/HTML/Element/Img#attr-srcset"><code>srcset</code></a>/<a href="/fr/docs/Web/HTML/Element/Img#attr-sizes"><code>sizes</code></a>/<a href="/fr/docs/Web/HTML/Element/picture"><code>&lt;picture&gt;</code></a> — sont toutes prises en charge dans les versions de navigateurs récemment publiées pour les ordinateurs de bureau et pour les mobiles (y compris le navigateur Edge de Microsoft, même si ce n'est pas le cas d'Internet Explorer).</p>
 </div>
 
 <h2 id="Comment_créer_des_images_adaptatives">Comment créer des images adaptatives&nbsp;?</h2>
@@ -97,7 +97,7 @@ original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page
 </ol>
 
 <div class="note">
-<p><strong>Note&nbsp;:</strong> pour définir une largeur d'emplacement, vous pouvez indiquer une taille absolue (<code>px</code>, <code>em</code>) ou relative au viewport (<code>vw</code>), mais pas en pourcentage. Vous avez peut‑être noté que la dernière largeur d'emplacement ne comporte pas d'indication pour le média — c'est la valeur par défaut retenue quand aucune des conditions n'est vraie). Le navigateur ignore tout ce qui suit dès la première condition concordante&nbsp;; donc soyez attentif à l'ordre de ces conditions pour le média.</p>
+<p><strong>Note :</strong> pour définir une largeur d'emplacement, vous pouvez indiquer une taille absolue (<code>px</code>, <code>em</code>) ou relative au viewport (<code>vw</code>), mais pas en pourcentage. Vous avez peut‑être noté que la dernière largeur d'emplacement ne comporte pas d'indication pour le média — c'est la valeur par défaut retenue quand aucune des conditions n'est vraie). Le navigateur ignore tout ce qui suit dès la première condition concordante&nbsp;; donc soyez attentif à l'ordre de ces conditions pour le média.</p>
 </div>
 
 <p>Ainsi, une fois ces attributs en place, le navigateur va&nbsp;:</p>
@@ -112,14 +112,14 @@ original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page
 <p>Et c'est tout&nbsp;! Donc à ce stade, si un navigateur prenant en charge une largeur de vue de 480 px charge la page, la condition pour le média <code>(max-width: 480px)</code> sera vraie, donc une largeur d'emplacement de 440px sera choisie, donc le fichier <code>elva-fairy-480w.jpg</code> sera chargé, car sa largeur intrinsèque (<code>480w</code>) est celle qui est la plus proche de <code>440px</code>. L'image 800 px a une taille de 128 Ko sur disque alors que la version 480 px n'occupe que 63 Ko — une économie de 65Ko. Imaginez maintenant qu'il s'agisse d'une page avec beaucoup d'images. L'utilisation de cette technique peut permettre aux personnes naviguant sur mobile d'économiser beaucoup de bande passante.</p>
 
 <div class="note">
-  <p><strong>Note&nbsp;:</strong> lorsque vous testez cela avec un navigateur de bureau, si ce dernier échoue à charger l'image la plus étroite alors que vous avez réduit la largeur de la fenêtre au maximum, regardez la taille du <i lang="en">viewport</i> (dont vous pouvez avoir une approximation via l'instruction <code>document.querySelector("html").clientWidth</code> dans la console JavaScript). Selon les navigateurs, il existe différentes tailles minimales au-delà desquelles on ne pourra pas plus réduire la fenêtre (tailles minimales qui pourraient être plus larges qu'on ne le pense). Lorsque vous testez avec un navigateur mobile, vous pouvez utiliser les outils comme la page <code>about:debugging</code> de Firefox pour inspecter la page chargée sur le mobile à l'aide des outils de développement pour navigateur de bureau.</p>
+  <p><strong>Note :</strong> lorsque vous testez cela avec un navigateur de bureau, si ce dernier échoue à charger l'image la plus étroite alors que vous avez réduit la largeur de la fenêtre au maximum, regardez la taille du <i lang="en">viewport</i> (dont vous pouvez avoir une approximation via l'instruction <code>document.querySelector("html").clientWidth</code> dans la console JavaScript). Selon les navigateurs, il existe différentes tailles minimales au-delà desquelles on ne pourra pas plus réduire la fenêtre (tailles minimales qui pourraient être plus larges qu'on ne le pense). Lorsque vous testez avec un navigateur mobile, vous pouvez utiliser les outils comme la page <code>about:debugging</code> de Firefox pour inspecter la page chargée sur le mobile à l'aide des outils de développement pour navigateur de bureau.</p>
   <p>Pour observer les images chargées, vous pouvez utiliser l'onglet <a href="/fr/docs/Tools/Network_Monitor">Moniteur réseau</a> dans les outils de développement de Firefox.</p>
 </div>
 
 <p>Les navigateurs les plus anciens qui ne prennent pas en charge ces fonctionnalités les ignorent; poursuivent et chargent normalement l'image référencée dans l'attribut <a href="/fr/docs/Web/HTML/Element/Img#attr-src"><code>src</code></a>.</p>
 
 <div class="note">
-<p><strong>Note&nbsp;:</strong> dans l'élément <a href="/fr/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a> du document, vous trouvez la ligne <code>&lt;meta name="viewport" content="width=device-width"&gt;</code>&nbsp;: ceci force les navigateurs mobiles de prendre la largeur réelle de leur vue pour charger des pages web (certains navigateurs mobiles mentent à propos de la largeur de leur vue, et à la place chargent des pages pour une vue plus large, puis rétrécissent la page chargée, ce qui n'est pas vraiment une aide pour les pages adaptatives ou pour la conception).</p>
+<p><strong>Note :</strong> dans l'élément <a href="/fr/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a> du document, vous trouvez la ligne <code>&lt;meta name="viewport" content="width=device-width"&gt;</code>&nbsp;: ceci force les navigateurs mobiles de prendre la largeur réelle de leur vue pour charger des pages web (certains navigateurs mobiles mentent à propos de la largeur de leur vue, et à la place chargent des pages pour une vue plus large, puis rétrécissent la page chargée, ce qui n'est pas vraiment une aide pour les pages adaptatives ou pour la conception).</p>
 </div>
 
 
@@ -169,7 +169,7 @@ original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page
 <p><img alt="Notre exemple vu sur un écran assez large : la première image est OK et on voit le détail au centre." src="picture-element-wide.png"><img alt="Notre exemple vu sur un écran étroit où l'élément picture permet de passer la première image à une image en portrait, plus utile sur un écran étroit." src="picture-element-narrow.png"></p>
 
 <div class="note">
-<p><strong>Note&nbsp;:</strong> vous ne devez utiliser l'attribut <code>media</code> qu'avec un scénario de décision de nature artistique&nbsp;; quand vous utilisez <code>media</code>, ne mettez pas de conditions pour le média avec l'attribut <code>sizes.</code></p>
+<p><strong>Note :</strong> vous ne devez utiliser l'attribut <code>media</code> qu'avec un scénario de décision de nature artistique&nbsp;; quand vous utilisez <code>media</code>, ne mettez pas de conditions pour le média avec l'attribut <code>sizes.</code></p>
 </div>
 
 <h3 id="Pourquoi_ne_peut-on_pas_réaliser_cela_avec_le_CSS_ou_du_JavaScript">Pourquoi ne peut-on pas réaliser cela avec le CSS ou du JavaScript&nbsp;?</h3>
