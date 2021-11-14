@@ -2,29 +2,26 @@
 title: background-origin
 slug: Web/CSS/background-origin
 tags:
-  - Background
   - CSS
+  - CSS 背景
   - CSS プロパティ
-  - CSS 背景と境界
-  - Reference
-  - background-origin
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.background-origin
 translation_of: Web/CSS/background-origin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>background-origin</code></strong> プロパティは、<em>背景配置領域</em>を設定します。言い換えれば、 {{cssxref("background-image")}} プロパティで指定された画像の原点の位置を設定します。</p>
+[CSS](/ja/docs/Web/CSS) の **`background-origin`** プロパティは、背景配置領域を境界の開始位置、境界の内部、パディングの内部から設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/background-origin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-origin.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+{{cssxref("background-attachment")}} が `fixed` のときは `background-origin` が無視されることに注意してください。
 
-<p>{{cssxref("background-attachment")}} が <code>fixed</code> のときは <code>background-origin</code> が無視されることに注意してください。</p>
+## 構文
 
-<div class="note"><strong>メモ:</strong> {{cssxref("background")}} 一括指定プロパティは、該当する値を設定しなかった場合、このプロパティの値を初期値にリセットします。</div>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush: css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 background-origin: border-box;
 background-origin: padding-box;
 background-origin: content-box;
@@ -32,79 +29,93 @@ background-origin: content-box;
 /* グローバル値 */
 background-origin: inherit;
 background-origin: initial;
+background-origin: revert;
 background-origin: unset;
-</pre>
+```
 
-<p><code>background-origin</code> プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。</p>
+`background-origin` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd>背景は境界ボックスからの相対位置になります。</dd>
- <dt><code>padding-box</code></dt>
- <dd>背景はパディングボックスからの相対位置になります。</dd>
- <dt><code>content-box</code></dt>
- <dd>背景はコンテンツボックスからの相対位置になります。</dd>
-</dl>
+- `border-box`
+  - : 背景は境界ボックスからの相対位置になります。
+- `padding-box`
+  - : 背景はパディングボックスからの相対位置になります。
+- `content-box`
+  - : 背景はコンテンツボックスからの相対位置になります。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush:css; highlight:[6];">.example {
+### 背景画像の原点を設定
+
+```css
+.example {
   border: 10px double;
   padding: 10px;
   background: url('image.jpg');
   background-position: center left;
   background-origin: content-box;
 }
-</pre>
+```
 
-<pre class="brush:css; highlight:[6];">#example2 {
+```css
+#example2 {
   border: 4px solid black;
   padding: 10px;
   background: url('image.gif');
   background-repeat: no-repeat;
   background-origin: border-box;
 }
-</pre>
+```
 
-<pre class="brush:css; highlight:[4];">div {
-  background-image: url('logo.jpg'), url('mainback.png'); /* 背景に二つの画像を適用 */
+```css
+div {
+  background-image: url('logo.jpg'), url('mainback.png'); /* 背景に 2 つの画像を適用 */
   background-position: top right, 0px 0px;
   background-origin: content-box, padding-box;
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h3 id="Using_two_gradients">2 つのグラデーションの使用</h3>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-origin', 'background-origin')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+この例では、ボックスに太い点線の境界線が付いています。最初のグラデーションでは、 `padding-box` を `background-origin` として使用しているため、背景は境界線の内側に表示されます。2 つ目のグラデーションは、`content-box`を使用しているため、コンテンツの後ろにのみ表示されます。
 
-<p>{{cssinfo}}</p>
+```css
+.box {
+  margin: 10px 0;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.6) 60%, rgba(252,176,69,1) 100%),
+  radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 28%);
+  border: 20px dashed black;
+  padding: 20px;
+  width: 400px;
+  background-origin: padding-box, content-box;
+  background-repeat: no-repeat;
+}
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+```html
+<div class="box">Hello!</div>
+```
 
-<p>{{Compat("css.properties.background-origin")}}</p>
+{{EmbedLiveSample('Using_two_gradients', 420, 140)}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 仕様書
 
-<ul>
- <li>{{cssxref("background-clip")}}</li>
-</ul>
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{cssxref("background-clip")}}
