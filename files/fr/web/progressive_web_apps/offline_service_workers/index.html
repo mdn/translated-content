@@ -12,13 +12,13 @@ translation_of: Web/Progressive_web_apps/Offline_Service_workers
 ---
 <div>{{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}</div>
 
-<p class="summary">Maintenant que nous avons vu à quoi ressemble l'architecture de js13kPWA et que nous avons configuré et exécuté la structure de base, voyons comment sont implémentées les fonctionnalités en mode déconnecté mettant en oeuvre Service Worker. Dans cet article, nous examinerons comment cela est utilisé dans notre <a href="https://mdn.github.io/pwa-examples/js13kpwa/">exemple js13kPWA</a> (<a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa">voir également le code source</a>). Nous examinerons comment ajouter la fonctionnalité mode déconnecté.</p>
+<p>Maintenant que nous avons vu à quoi ressemble l'architecture de js13kPWA et que nous avons configuré et exécuté la structure de base, voyons comment sont implémentées les fonctionnalités en mode déconnecté mettant en oeuvre Service Worker. Dans cet article, nous examinerons comment cela est utilisé dans notre <a href="https://mdn.github.io/pwa-examples/js13kpwa/">exemple js13kPWA</a> (<a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa">voir également le code source</a>). Nous examinerons comment ajouter la fonctionnalité mode déconnecté.</p>
 
 <h2 id="Les_Service_workers_expliqués">Les Service workers expliqués</h2>
 
 <p>Les Service Workers sont des proxy virtuels entre le navigateur et le réseau. Ils permettent enfin de régler les problèmes auxquels les développeurs front-end se débattent depuis des années — et plus particulièrement comment mettre proprement en cache les composants d'un site web et les rendre disponibles quand l'appareil de l'utilisateur est hors connexion.</p>
 
-<p>Ils s'exécutent dans un processus séparé de celui du code JavaScript principal de notre page et n'ont aucun accès à la structure DOM. Cela introduit une approche différente de celle de la programmation web traditionnelle — l'API est non bloquante et peut émettre et recevoir de la communication entre différents contextes. Vous pouvez donner à un Service Worker quelque chose à faire et recevoir le résultat quand il est prêt en utilisant une approche basée sur les <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>.</p>
+<p>Ils s'exécutent dans un processus séparé de celui du code JavaScript principal de notre page et n'ont aucun accès à la structure DOM. Cela introduit une approche différente de celle de la programmation web traditionnelle — l'API est non bloquante et peut émettre et recevoir de la communication entre différents contextes. Vous pouvez donner à un Service Worker quelque chose à faire et recevoir le résultat quand il est prêt en utilisant une approche basée sur les <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>.</p>
 
 <p>Ils peuvent faire beaucoup plus que "simplement" offrir des capacités en mode déconnecté, comme gérer des notifications, exécuter des calculs intensifs dans des processus séparés, etc. Les Service Workers sont assez puissants car ils peuvent prendre le contrôle de requêtes réseau, les modifier, fournir des réponses personnalisées récupérées du cache ou générer complètement des réponses.</p>
 
@@ -112,9 +112,9 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>Le service worker ne s'installe pas tant que le code de <code>waitUntil</code> n'est pas exécuté. Il renvoie une promesse — Cette approche est nécessaire car l'installation peut prendre du temps, donc nous devons attendre qu'elle soit terminée.</p>
 
-<p><code>caches</code> est un objet {{domxref("CacheStorage")}} spécial accessible dans la portée du Service Worker et qui permet d'enregistrer les données — l'enregistrement dans le <a href="/en-US/docs/Web/API/Web_Storage_API">web storage</a> ne fonctionnera pas, parce que le web storage fonctionne de façon synchrone. Avec les Service Workers, nous utilisons l'API Cache à la place. Ici, nous ouvrons un cache sous un nom donné, puis nous lui ajoutons tous les fichiers que notre app utilise, de telle sorte qu'ils soient disponibles la prochaine fois qu'il sera chargé (identifié par l'URL de la requête).</p>
+<p><code>caches</code> est un objet {{domxref("CacheStorage")}} spécial accessible dans la portée du Service Worker et qui permet d'enregistrer les données — l'enregistrement dans le <a href="/fr/docs/Web/API/Web_Storage_API">web storage</a> ne fonctionnera pas, parce que le web storage fonctionne de façon synchrone. Avec les Service Workers, nous utilisons l'API Cache à la place. Ici, nous ouvrons un cache sous un nom donné, puis nous lui ajoutons tous les fichiers que notre app utilise, de telle sorte qu'ils soient disponibles la prochaine fois qu'il sera chargé (identifié par l'URL de la requête).</p>
 
-<p>Vous avez remarqué que nous n'avons pas mis en cache le fichier <code>game.js</code>. Ce fichier contient les données utilisées pour afficher les jeux. En réalité, ces données seront appelées depuis le endpoint d'une API ou depuis une base de données.Mettre en cache ces données signifierait qu'elles ne seraient mises à jour que périodiquement quand il y' a une connexion au réseau. Nous n'irons pas plus loin sur ce sujet, pour en savoir plus : <a href="/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API">Web_Periodic_Background_Synchronization_API</a> .</p>
+<p>Vous avez remarqué que nous n'avons pas mis en cache le fichier <code>game.js</code>. Ce fichier contient les données utilisées pour afficher les jeux. En réalité, ces données seront appelées depuis le endpoint d'une API ou depuis une base de données.Mettre en cache ces données signifierait qu'elles ne seraient mises à jour que périodiquement quand il y' a une connexion au réseau. Nous n'irons pas plus loin sur ce sujet, pour en savoir plus : <a href="/fr/docs/Web/API/Web_Periodic_Background_Synchronization_API">Web_Periodic_Background_Synchronization_API</a> .</p>
 
 <h4 id="Activation">Activation</h4>
 
@@ -191,7 +191,7 @@ self.addEventListener('install', (e) =&gt; {
   );
 });</pre>
 
-<p>Ceci nous assure que nous avons seulement les fichiers dont nous avons besoin dans le cache, de telle sorte que nous ne laissions pas de déchets derrière nous; l'<a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">espace de cache disponible dans le navigateur est limité</a>, c'est donc une bonne idée de nettoyer derrière nous.</p>
+<p>Ceci nous assure que nous avons seulement les fichiers dont nous avons besoin dans le cache, de telle sorte que nous ne laissions pas de déchets derrière nous; l'<a href="/fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">espace de cache disponible dans le navigateur est limité</a>, c'est donc une bonne idée de nettoyer derrière nous.</p>
 
 <h2 id="Autres_cas_dusage">Autres cas d'usage</h2>
 
@@ -199,9 +199,9 @@ self.addEventListener('install', (e) =&gt; {
 
 <h2 id="Résumé">Résumé</h2>
 
-<p>Dans cet article, nous avons rapidement abordé la façon de faire fonctionner notre PWA en mode déconnecté grâce aux service workers. Consultez  la documentation si vous voulez en apprendre davantage sur les concepts qui sont derrière l'<a href="/en-US/docs/Web/API/Service_Worker_API">API Service Worker</a> et comment l'exploiter au mieux.</p>
+<p>Dans cet article, nous avons rapidement abordé la façon de faire fonctionner notre PWA en mode déconnecté grâce aux service workers. Consultez  la documentation si vous voulez en apprendre davantage sur les concepts qui sont derrière l'<a href="/fr/docs/Web/API/Service_Worker_API">API Service Worker</a> et comment l'exploiter au mieux.</p>
 
-<p>Les Service Workers sont également utilisés pour gérer les <a href="https://developer.mozilla.org/fr/docs/Web/API/Push_API">push notifications </a><a href="/fr/docs//Web/API/Push_API"> </a>— ceci sera expliqué dans un prochain article.</p>
+<p>Les Service Workers sont également utilisés pour gérer les <a href="/fr/docs/Web/API/Push_API">push notifications </a><a href="/fr/docs//Web/API/Push_API"> </a>— ceci sera expliqué dans un prochain article.</p>
 
 <p>{{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}</p>
 

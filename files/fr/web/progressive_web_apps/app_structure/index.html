@@ -5,7 +5,7 @@ translation_of: Web/Progressive_web_apps/App_structure
 ---
 <div>{{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive")}}</div>
 
-<p class="summary">Maintenant que nous avons pris connaissances des principes théoriques sur lesquelles sont bâties les PWAs, penchons nous sur la structure recommandée d'une vraie application. Nous commencerons par analyser l'application <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> et par examiner pourquoi elle est construite de cette façon et quels bénéfices elle en retire.</p>
+<p>Maintenant que nous avons pris connaissances des principes théoriques sur lesquelles sont bâties les PWAs, penchons nous sur la structure recommandée d'une vraie application. Nous commencerons par analyser l'application <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> et par examiner pourquoi elle est construite de cette façon et quels bénéfices elle en retire.</p>
 
 <h2 id="Architecture_dune_application">Architecture d'une application</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/Progressive_web_apps/App_structure
 
 <p>Mélanger SSR et CSR peut permettre d'obtenir de meilleurs résultats - vous pouvez générer un site web côté serveur, mettre en cache son contenu puis mettre à jour le rendu côté client si et quand c'est nécessaire. Le chargement de la première page est rapide grâce au SSR et la navigation entre les pages est fluide car le client peut regénérer la page en ne modifiant que les parties qui ont changé.</p>
 
-<p>Les PWAs peuvent être construite en utilisant l'approche que vous préférez, mais certaines fonctionneront mieux que les autres. L'approche la plus populaire est celle utilisant le concept d' "app shell"; qui mélange SSR et CSR exactement comme cela a été décrit plus haut et se conforme de surcroit à la méthodologie "déconnectée d'abord" ("offline first") que nous expliquerons en détails dans de prochains articles et que nous utiliserons dans notre application exemple. Il existe également une nouvelle approche utilisant l'<a href="/en-US/docs/Web/API/Streams_API">API Streams</a> et dont nous parlerons brièvement.</p>
+<p>Les PWAs peuvent être construite en utilisant l'approche que vous préférez, mais certaines fonctionneront mieux que les autres. L'approche la plus populaire est celle utilisant le concept d' "app shell"; qui mélange SSR et CSR exactement comme cela a été décrit plus haut et se conforme de surcroit à la méthodologie "déconnectée d'abord" ("offline first") que nous expliquerons en détails dans de prochains articles et que nous utiliserons dans notre application exemple. Il existe également une nouvelle approche utilisant l'<a href="/fr/docs/Web/API/Streams_API">API Streams</a> et dont nous parlerons brièvement.</p>
 
 <h2 id="App_shell">App shell</h2>
 
@@ -26,11 +26,11 @@ translation_of: Web/Progressive_web_apps/App_structure
 
 <p>Cette structure est rapide et est également ressentie comme telle par l'utilisateur car il voit "quelque chose" instantanément, plutôt qu'un indicateur de chargement en train de tourner ou une page blanche. Cela permet également au site web d'être accessible en mode déconnecté si une connexion réseau n'est pas disponible.</p>
 
-<p>Nous pouvons contrôler ce qui est demandé au serveur et ce qui est récupéré dans le cache grâce à un <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a> qui sera expliqué en détail dans le prochain article - pour le moment, concentrons-nous sur la structure en elle-même.</p>
+<p>Nous pouvons contrôler ce qui est demandé au serveur et ce qui est récupéré dans le cache grâce à un <a href="/fr/docs/Web/API/Service_Worker_API">service worker</a> qui sera expliqué en détail dans le prochain article - pour le moment, concentrons-nous sur la structure en elle-même.</p>
 
 <h3 id="Pourquoi_dois-je_lutiliser">Pourquoi dois-je l'utiliser ?</h3>
 
-<p>Cette architecture permet à un site web de bénéficier de la plupart des fonctionnalités PWA - elle met en cache l'app shell et gère le contenu dynamique d'une manière qui améliore grandement les performances. En plus de la structure de base, vous pouvez ajouter d'autres fonctionnalités telles que <a href="/en-US/docs/Web/Apps/Progressive/Add_to_home_screen">l'ajouter à l'écran d'accueil</a> ou <a href="/en-US/docs/Web/API/Push_API">l'envoi de notifications</a>, sachant que l'application fonctionnera toujours correctement si elles ne sont pas prises en charge par le navigateur de l'utilisateur - c'est la beauté de l'amélioration continue.</p>
+<p>Cette architecture permet à un site web de bénéficier de la plupart des fonctionnalités PWA - elle met en cache l'app shell et gère le contenu dynamique d'une manière qui améliore grandement les performances. En plus de la structure de base, vous pouvez ajouter d'autres fonctionnalités telles que <a href="/fr/docs/Web/Apps/Progressive/Add_to_home_screen">l'ajouter à l'écran d'accueil</a> ou <a href="/fr/docs/Web/API/Push_API">l'envoi de notifications</a>, sachant que l'application fonctionnera toujours correctement si elles ne sont pas prises en charge par le navigateur de l'utilisateur - c'est la beauté de l'amélioration continue.</p>
 
 <p>Le site web se comporte comme une application native, offrant une interaction instantannée et de solides performances tout en conservant les avantages du web.</p>
 
@@ -41,12 +41,12 @@ translation_of: Web/Progressive_web_apps/App_structure
 <ul>
  <li>Accessible par un lien: Même s'il se comporte comme une application native, il reste un site web - vous pouvez cliquer sur les liens d'une page et envoyer une URL à quelqu'un si vous voulez le partager.</li>
  <li>Progressive: Commencer avec un "bon vieux site web basic” et ajouter progressivement de nouvelles fonctionnalités tout en se rappelant de détecter si elles sont disponibles dans le navigateur et de gérer proprement toute erreur qui pourrait survenir si la prise en charge n'est pas disponible. Par exemple, un mode déconnecté possible grâce aux service workers n'est qu'une caractéristique bonus qui améliore l'expérience sur le site web, mais ce dernier reste totalement fonctionnel sans elle.</li>
- <li>Adaptatif: La conception web adaptative s'applique également aux applications web progressives, attendu que les deux sont principalement destinés aux appareils mobiles. Il y a tellements d'appareils différents en plus des navigateurs - il est important de préparer votre site web à fonctionner sur différentes tailles d'écran, supports d'affichage ou densité de pixels, en utilisant des technologies telles que  <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">les tags meta viewport</a>, <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">les reqêtes media CSS</a>, <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">les Flexbox</a> et les <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">Grid CSS</a>.</li>
+ <li>Adaptatif: La conception web adaptative s'applique également aux applications web progressives, attendu que les deux sont principalement destinés aux appareils mobiles. Il y a tellements d'appareils différents en plus des navigateurs - il est important de préparer votre site web à fonctionner sur différentes tailles d'écran, supports d'affichage ou densité de pixels, en utilisant des technologies telles que  <a href="/fr/docs/Mozilla/Mobile/Viewport_meta_tag">les tags meta viewport</a>, <a href="/fr/docs/Web/CSS/Media_Queries/Using_media_queries">les reqêtes media CSS</a>, <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout">les Flexbox</a> et les <a href="/fr/docs/Web/CSS/CSS_Grid_Layout">Grid CSS</a>.</li>
 </ul>
 
 <h2 id="Approche_différente_les_streams">Approche différente : les streams</h2>
 
-<p>Une approche totalement différente du rendu côté serveur - ou client - peut être obtenue à l'aide de l'<a href="/en-US/docs/Web/API/Streams_API">API Streams</a>. Avec un peu d'aide des service workers, les streams peuvent grandement améliorer la façon dont nous analysons le contenu.</p>
+<p>Une approche totalement différente du rendu côté serveur - ou client - peut être obtenue à l'aide de l'<a href="/fr/docs/Web/API/Streams_API">API Streams</a>. Avec un peu d'aide des service workers, les streams peuvent grandement améliorer la façon dont nous analysons le contenu.</p>
 
 <p>Le modèle app shell nécessite que toutes les ressources soient disponibles avant que le site puisse commencer à être rendu. C'est différent avec HTML pour lequel le navigateur diffuse immédiatement les données si bien que vous pouvez voir quand les éléments sont chargés et et rendus sur le site web. Pour que le JavaScript soit "opérationnel", cependant, il faut attendre qu'il ait été entièrement téléchargé au préalable.</p>
 
@@ -54,13 +54,13 @@ translation_of: Web/Progressive_web_apps/App_structure
 
 <p>En théorie, le flux est un meilleur modèle, mais il est également plus complexe et au moment de la rédaction (mars 2018), l'API Stream est toujours un travail en cours et pas encore totalement disponible pour l'ensemble des navigateurs principaux. Quand elle sera disponible, elle sera le moyen le plus rapide de servir le contenu - les bénéfices sont sur le point d'être énormes en terme de performance.</p>
 
-<p>Pour voir des exemples fonctionnels et disposer de davantage d'information, voir <a href="/en-US/docs/Web/API/Streams_API">la documention de l'API Streams</a>.</p>
+<p>Pour voir des exemples fonctionnels et disposer de davantage d'information, voir <a href="/fr/docs/Web/API/Streams_API">la documention de l'API Streams</a>.</p>
 
 <h2 id="Structure_de_notre_application_exemple">Structure de notre application exemple</h2>
 
 <p>La structure du site web <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> est plutôt simple: elle consiste en un simple fichier HTML (<a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa/index.html">index.html</a>) avec un style CSS basique (<a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa/style.css">style.css</a>) et quelques images, scripts et polices de caractères. La structure du répertoire ressemble à ceci:</p>
 
-<p><img alt="Folder structure of js13kPWA." src="https://mdn.mozillademos.org/files/15925/js13kpwa-directory.png" style="border-style: solid; border-width: 1px; display: block; height: 356px; margin: 0px auto; width: 320px;"></p>
+<p><img alt="Folder structure of js13kPWA." src="js13kpwa-directory.png"></p>
 
 <h3 id="Le_HTML">Le HTML</h3>
 
