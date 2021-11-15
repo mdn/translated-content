@@ -6237,16 +6237,6 @@
       "hamasaki"
     ]
   },
-  "MDN/Guidelines/CSS_style_guide": {
-    "modified": "2020-09-30T15:30:25.061Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3"
-    ]
-  },
   "MDN/Guidelines/Code_guidelines": {
     "modified": "2020-09-30T15:30:24.568Z",
     "contributors": [
@@ -21480,12 +21470,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/ServiceWorkerGlobalScope/caches": {
-    "modified": "2020-10-15T22:29:46.631Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/API/ServiceWorkerGlobalScope/clients": {
     "modified": "2019-03-23T22:21:03.744Z",
     "contributors": [
@@ -28135,14 +28119,6 @@
     "contributors": [
       "mfuji09",
       "ExE-Boss"
-    ]
-  },
-  "Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property": {
-    "modified": "2020-12-06T14:47:19.654Z",
-    "contributors": [
-      "mfuji09",
-      "ExE-Boss",
-      "hommaam"
     ]
   },
   "Web/CSS/CSS_Box_Alignment": {
@@ -48537,6 +48513,16 @@
       "silverskyvicto"
     ]
   },
+  "conflicting/MDN/Contribute/Markdown_in_MDN": {
+    "modified": "2020-09-30T15:30:25.061Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "silverskyvicto",
+      "wbamberg",
+      "Uemmra3"
+    ]
+  },
   "conflicting/Web/API/Blob/size": {
     "modified": "2020-09-25T16:46:05.461Z",
     "contributors": [
@@ -48613,6 +48599,12 @@
       "Wind1808"
     ]
   },
+  "conflicting/Web/API/caches": {
+    "modified": "2020-10-15T22:29:46.631Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
     "modified": "2020-05-24T03:45:53.652Z",
     "contributors": [
@@ -48621,6 +48613,14 @@
       "siokoshou",
       "ethertank",
       "sosleepy"
+    ]
+  },
+  "conflicting/Web/CSS/cursor": {
+    "modified": "2020-12-06T14:47:19.654Z",
+    "contributors": [
+      "mfuji09",
+      "ExE-Boss",
+      "hommaam"
     ]
   },
   "conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {

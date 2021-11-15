@@ -23,20 +23,13 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 
 <div>{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}</div>
 
-<blockquote>
-<dl>
- <dd>Cet article vous initie aux tableaux en HTML. Il porte sur les bases comme les rangées, les cellules, les en-têtes, les cellules sur plusieurs colonnes ou lignes, ainsi que sur la façon de regrouper les cellules dans une colonne en vue d'affecter un style.</dd>
-</dl>
-</blockquote>
+<p>Cet article vous initie aux tableaux en HTML. Il porte sur les bases comme les rangées, les cellules, les en-têtes, les cellules sur plusieurs colonnes ou lignes, ainsi que sur la façon de regrouper les cellules dans une colonne en vue d'affecter un style.</p>
 
-<dl>
-</dl>
-
-<table class="learn-box standard-table" style="height: 97px; width: 672px;">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Les bases de HTML (voir <a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML">Introduction au HTML</a>).</td>
+   <td>Les bases de HTML (voir <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML">Introduction au HTML</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objectif :</th>
@@ -47,17 +40,17 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 
 <h2 id="Quest-ce_quun_tableau">Qu'est-ce qu'un tableau ?</h2>
 
-<p>Un tableau est un ensemble structuré de données (<strong>table de données</strong>) présentées en lignes et colonnes. <span class="translation">Un tableau vous permet de retrouver rapidement et facilement des valeurs au croisement entre différents types de données, par exemple : une personne et son âge, ou un jour et la semaine, ou les horaires d'ouverture de la piscine du quartier</span>.</p>
+<p>Un tableau est un ensemble structuré de données (<strong>table de données</strong>) présentées en lignes et colonnes. Un tableau vous permet de retrouver rapidement et facilement des valeurs au croisement entre différents types de données, par exemple : une personne et son âge, ou un jour et la semaine, ou les horaires d'ouverture de la piscine du quartier.</p>
 
-<p><img alt="A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47." src="https://mdn.mozillademos.org/files/14583/numbers-table.png" style="display: block; height: 156px; margin: 0px auto; width: 350px;"></p>
+<p><img alt="A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47." src="numbers-table.png"></p>
 
-<p><img alt="A swimming timetable showing a sample data table" src="https://mdn.mozillademos.org/files/14587/swimming-timetable.png" style="display: block; height: 301px; margin: 0px auto; width: 794px;"></p>
+<p><img alt="A swimming timetable showing a sample data table" src="swimming-timetable.png"></p>
 
-<p><span class="translation">Les tableaux sont très couramment utilisés dans la société humaine, et depuis très longtemps, pour preuve ce document du recensement américain datant de 1800</span> :</p>
+<p>Les tableaux sont très couramment utilisés dans la société humaine, et depuis très longtemps, pour preuve ce document du recensement américain datant de 1800 :</p>
 
-<p><img alt="A very old parchment document; the data is not easily readable, but it clearly shows a data table being used." src="https://mdn.mozillademos.org/files/14585/1800-census.jpg" style="display: block; height: 505px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="A very old parchment document; the data is not easily readable, but it clearly shows a data table being used." src="1800-census.jpg"></p>
 
-<p><span class="translation">Il n'est donc pas étonnant que les créateurs du HTML fournissent un moyen de structurer et de présenter des tableaux de données sur le Web</span> .</p>
+<p>Il n'est donc pas étonnant que les créateurs du HTML fournissent un moyen de structurer et de présenter des tableaux de données sur le Web .</p>
 
 <h3 id="Comment_fonctionne_un_tableau">Comment fonctionne un tableau ?</h3>
 
@@ -197,13 +190,13 @@ original_slug: Apprendre/HTML/Tableaux/Basics
  </tbody>
 </table>
 
-<p><span class="translation">Lorsque cela est fait correctement, même les personnes malvoyantes peuvent interpréter des données tabulaires dans un tableau HTML — un tableau HTML réussi doit permettre la perception des données à des utilisateurs déficients visuels ou malvoyants.</span></p>
+<p>Lorsque cela est fait correctement, même les personnes malvoyantes peuvent interpréter des données tabulaires dans un tableau HTML — un tableau HTML réussi doit permettre la perception des données à des utilisateurs déficients visuels ou malvoyants.</p>
 
 <h3 id="Style_de_tableau">Style de tableau</h3>
 
 <p>Vous pouvez également <a href="https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html">regarder sur l'exemple réel</a> sur GitHub ! Vous remarquerez sur celui-ci que le tableau est légèrement plus lisible  — car le tableau figurant ci-dessus présente un style minimal, alors que sa version sur GitHub est liée à un  CSS plus signifiant.</p>
 
-<p>Ne vous faites pas d'illusions ; pour obtenir un tableau avec un certain effet sur le web, vous devez fournir un minimum d'informations de style avec <a href="/en-US/docs/Learn/CSS">CSS</a>, ainsi qu'une structure solide avec HTML. Dans ce module nous nous concentrons sur la partie HTML ; pour en savoir plus sur la partie CSS, vous devrez lire notre article <a href="/fr/docs/Learn/CSS/Styling_boxes/Styling_tables">Style et tableaux</a> quand vous aurez fini ici.</p>
+<p>Ne vous faites pas d'illusions ; pour obtenir un tableau avec un certain effet sur le web, vous devez fournir un minimum d'informations de style avec <a href="/fr/docs/Learn/CSS">CSS</a>, ainsi qu'une structure solide avec HTML. Dans ce module nous nous concentrons sur la partie HTML ; pour en savoir plus sur la partie CSS, vous devrez lire notre article <a href="/fr/docs/Learn/CSS/Styling_boxes/Styling_tables">Style et tableaux</a> quand vous aurez fini ici.</p>
 
 <p>Nous n'approfondirons pas le CSS dans ce module, mais nous avons écrit une feuille de style minimale CSS à utiliser ici, feuille de style qui rendra les tableaux plus lisibles qu'avec un format par défaut sans style. Vous trouverez cette <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">feuille de style ici</a>, et également <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">un exemple HTML d'application de cette feuille de style là</a> — ensemble ils vous donneront un bon point de départ pour expérimenter sur les tableaux HTML.</p>
 
@@ -227,10 +220,10 @@ original_slug: Apprendre/HTML/Tableaux/Basics
  <li>Avant tout, faites une copie locale de <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">blank-template.html</a> et <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">minimal-table.css</a> dans un nouveau répertoire de votre ordinateur.</li>
  <li>Le contenu de chaque tableau est encadré par ces deux balises : <strong><code><a href="/fr/docs/Web/HTML/Element/table">&lt;table&gt;&lt;/table&gt;</a></code></strong>. Ajoutez‑les dans le corps de votre HTML.</li>
  <li>Le plus petit conteneur d'un tableau est la cellule ; elle est créée avec l'élément  <strong><code><a href="/fr/docs/Web/HTML/Element/td">&lt;td&gt;</a></code></strong> (« td » comme « tableau données »). Ajoutez ceci entre les balises du tableau :
-  <pre class="brush: html notranslate">&lt;td&gt;Bonjour, je suis votre première cellule.&lt;/td&gt;</pre>
+  <pre class="brush: html">&lt;td&gt;Bonjour, je suis votre première cellule.&lt;/td&gt;</pre>
  </li>
  <li>Si nous voulons une rangée de quatre cellules, nous devons copier la première trois fois. Mettez à jour le contenu du tableau pour avoir quelque chose comme :
-  <pre class="brush: html notranslate">&lt;td&gt;Bonjour, je suis votre première cellule &lt;/td&gt;
+  <pre class="brush: html">&lt;td&gt;Bonjour, je suis votre première cellule &lt;/td&gt;
 &lt;td&gt;je suis votre deuxième cellule&lt;/td&gt;
 &lt;td&gt;je suis votre troisième cellule&lt;/td&gt;
 &lt;td&gt;je suis votre quatrième cellule&lt;/td&gt;</pre>
@@ -244,7 +237,7 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 <ol>
  <li>Placez les quatre cellules que vous avez créées entre deux balises <code>&lt;tr&gt;</code> ainsi :
 
-  <pre class="brush: html notranslate">&lt;tr&gt;
+  <pre class="brush: html">&lt;tr&gt;
   &lt;td&gt;Bonjour, je suis votre première cellule &lt;/td&gt;
   &lt;td&gt;je suis votre deuxième cellule &lt;/td&gt;
   &lt;td&gt;je suis votre troisième cellule &lt;/td&gt;
@@ -274,14 +267,14 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez également trouver cela sur GitHub <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html">simple-table.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/basic/simple-table.html">voir en direct aussi</a>).</p>
+<p><strong>Note :</strong> Vous pouvez également trouver cela sur GitHub <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html">simple-table.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/basic/simple-table.html">voir en direct aussi</a>).</p>
 </div>
 
-<h2 id="Ajouter_des_en-têtes_avec_&lt;th>"><a id="Adding_headers_with_%3Cth%3E_elements" name="Adding_headers_with_%3Cth%3E_elements"></a>Ajouter des en-têtes avec &lt;th&gt;</h2>
+<h2 id="Ajouter_des_en-têtes_avec_&lt;th>">Ajouter des en-têtes avec &lt;th&gt;</h2>
 
 <p>Intéressons-nous maintenant aux en-têtes du tableau — cellules spéciales qui débutent une ligne ou une colonne et définissent le type de données que contiennent la rangée ou la colonne (à titre d'exemple, voir les cellules "Personne" et "Âge" dans le premier exemple illustré dans cet article). Pour comprendre pourquoi ils sont utiles, regardez l'exemple du tableau suivant. Tout d'abord, le code source :</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;&amp;nbsp;&lt;/td&gt;
     &lt;td&gt;Knocky&lt;/td&gt;
@@ -369,12 +362,12 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 
 <ol>
  <li>En premier lieu, faites une copie des fichiers <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html">dogs-table.html</a> et <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">minimal-table.css</a> dans un nouveau répertoire sur votre ordinateur. Le contenu HTML est similaire à l'exemple « Dogs » ci-dessus.</li>
- <li>Pour reconnaître les en-têtes de tableau en tant qu'en-têtes, visuellement et sémantiquement, vous pouvez utiliser la balise <strong><code><a href="/en-US/docs/Web/HTML/Element/th">&lt;th&gt;</a></code></strong> (« th » comme « table header » ou en-tête de tableau). Il fonctionne exactement comme la balise <code>&lt;td&gt;</code>, à ceci près qu'il indique un en-tête et non une cellule normale. Allez dans le code HTML, et remplacez tous les <code>&lt;td&gt;</code> des cellules entourant le tableau par des <code>&lt;th&gt;</code>.</li>
+ <li>Pour reconnaître les en-têtes de tableau en tant qu'en-têtes, visuellement et sémantiquement, vous pouvez utiliser la balise <strong><code><a href="/fr/docs/Web/HTML/Element/th">&lt;th&gt;</a></code></strong> (« th » comme « table header » ou en-tête de tableau). Il fonctionne exactement comme la balise <code>&lt;td&gt;</code>, à ceci près qu'il indique un en-tête et non une cellule normale. Allez dans le code HTML, et remplacez tous les <code>&lt;td&gt;</code> des cellules entourant le tableau par des <code>&lt;th&gt;</code>.</li>
  <li>Enregistrez votre HTML et chargez-le dans un navigateur. Vous devriez voir que les en-têtes ressemblent maintenant à des en-têtes.</li>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong> : Vous pouvez trouver notre exemple achevé <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html">dogs-table-fixed.html</a> sur GitHub (<a href="http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html">voir en direct aussi</a>).</p>
+<p><strong>Note :</strong> Vous pouvez trouver notre exemple achevé <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html">dogs-table-fixed.html</a> sur GitHub (<a href="http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html">voir en direct aussi</a>).</p>
 </div>
 
 <h3 id="Pourquoi_les_en-têtes_sont-ils_utiles">Pourquoi les en-têtes sont-ils utiles ?</h3>
@@ -382,7 +375,7 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 <p>Nous avons déjà partiellement répondu à cette question — il vous est plus facile de trouver les données que vous cherchez quand les en-têtes sont marqués clairement, et la conception globale du tableau paraît meilleure.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Les en-têtes de tableau sont accompagnés d'un style par défaut — ils sont en gras et centrés même si vous n'ajoutez pas votre propre style pour les démarquer.</p>
+<p><strong>Note :</strong> Les en-têtes de tableau sont accompagnés d'un style par défaut — ils sont en gras et centrés même si vous n'ajoutez pas votre propre style pour les démarquer.</p>
 </div>
 
 <p>Les en-têtes de tableau ont un autre avantage — avec l'attribut <code>scope</code> (que nous étudierons dans le prochain article), ils rendent les tableaux plus accessibles en associant chaque en-tête à toutes les données des cellules d'une ligne ou d'une colonne. Les lecteurs d'écran peuvent alors lire toute une ligne ou une colonne de données, ce qui peut être très utile.</p>
@@ -393,7 +386,7 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 
 <p>Le code initial ressemble à cela :</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;Animaux&lt;/th&gt;
   &lt;/tr&gt;
@@ -461,19 +454,17 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 </ol>
 
 <div class="note">
-<p><strong>Note</strong> : Vous pouvez trouver l'exemple achevé dans <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html">animals-table-fixed.html</a> sur GitHub (<a href="http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html">voir en direct aussi</a>).</p>
+<p><strong>Note :</strong> Vous pouvez trouver l'exemple achevé dans <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html">animals-table-fixed.html</a> sur GitHub (<a href="http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html">voir en direct aussi</a>).</p>
 </div>
-
-<table id="tabular" style="background-color: white;">
-</table>
 
 <h2 id="Attribuer_un_style_commun_aux_colonnes">Attribuer un style commun aux colonnes</h2>
 
-<p>Il y a une dernière fonctionnalité dont nous devons parler dans cet article avant de passer à autre chose. HTML a une méthode de définition des styles pour une colonne entière de données en un seul endroit — les éléments <strong><code><a href="/en-US/docs/Web/HTML/Element/col">&lt;col&gt;</a></code></strong> and <strong><code><a href="/en-US/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></code></strong>. Ils existent parce qu'il peut être ennuyeux et inefficace de préciser le style dans chaque colonne  — vous devez généralement spécifier les éléments de style dans chaque  <code>&lt;td&gt;</code> ou <code>&lt;th&gt;</code> de la colonne, ou utiliser un selecteur complexe tel que {{cssxref(":nth-child()")}}.</p>
+<p>Il y a une dernière fonctionnalité dont nous devons parler dans cet article avant de passer à autre chose. HTML a une méthode de définition des styles pour une colonne entière de données en un seul endroit — les éléments <strong><code><a href="/fr/docs/Web/HTML/Element/col">&lt;col&gt;</a></code></strong> and <strong><code><a href="/fr/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></code></strong>. Ils existent parce qu'il peut être ennuyeux et inefficace de préciser le style dans chaque colonne  — vous devez généralement spécifier les éléments de style dans chaque  <code>&lt;td&gt;</code> ou <code>&lt;th&gt;</code> de la colonne, ou utiliser un selecteur complexe tel que {{cssxref(":nth-child()")}}.</p>
 
+<h3>Premier exemple</h3>
 <p>Observez l'exemple simple suivant :</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;Data 1&lt;/th&gt;
     &lt;th style="background-color: yellow"&gt;Data 2&lt;/th&gt;
@@ -489,27 +480,13 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 &lt;/table&gt;</pre>
 
 <p>Ce qui nous donne comme résultat :</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Data 1</th>
-   <th style="background-color: yellow;">Data 2</th>
-  </tr>
-  <tr>
-   <td>Calcutta</td>
-   <td style="background-color: yellow;">Orange</td>
-  </tr>
-  <tr>
-   <td>Robots</td>
-   <td style="background-color: yellow;">Jazz</td>
-  </tr>
- </tbody>
-</table>
+<p>{{EmbedLiveSample("Premier_exemple")}}</p>
 
 <p>Ce n'est pas idéal, car nous devons répéter les informations de style dans les trois cellules de la colonne  (nous aurions probablement défini une <code>classe</code> dans un projet réel et spécifié le style dans une feuille de style séparée). À la place, nous pouvons préciser l'information une seule fois dans un élément <code>&lt;col&gt;</code>. Les éléments <code>&lt;col&gt;</code> sont utilisés dans un conteneur <code>&lt;colgroup&gt;</code> juste en-dessous de la balise <code>&lt;table&gt;</code>. Nous pourrions créer le même effet que  celui vu plus haut en spécifiant notre tableau comme suit :</p>
 
-<pre class="brush: html notranslate"> &lt;table&gt;
+<h3>Autres exemples</h3>
+
+<pre class="brush: html"> &lt;table&gt;
    &lt;colgroup&gt;
     &lt;col&gt;
     &lt;col style="background-color: yellow"&gt;
@@ -532,13 +509,13 @@ original_slug: Apprendre/HTML/Tableaux/Basics
 
 <p>Si nous voulions appliquer les informations de style aux deux colonnes, nous devrions juste inclure un élément <code>&lt;col&gt;</code> avec un attribut span, comme ceci :</p>
 
-<pre class="brush: html notranslate">&lt;colgroup&gt;
+<pre class="brush: html">&lt;colgroup&gt;
   &lt;col style="background-color: yellow" span="2"&gt;
 &lt;/colgroup&gt;</pre>
 
 <p>Comme <code>colspan</code> et <code>rowspan</code>, <code>span</code> reçoit une valeur numérique qui précise le nombre de colonnes sur lesquelles le style s'applique.</p>
 
-<h3 id="Apprentissage_actif_colgroup_et_col"><a id="Active_learning_colgroup_and_col" name="Active_learning_colgroup_and_col"></a>Apprentissage actif : <code>colgroup</code> et <code>col</code></h3>
+<h3 id="Apprentissage_actif_colgroup_et_col">Apprentissage actif : <code>colgroup</code> et <code>col</code></h3>
 
 <p>Maintenant, il est temps de vous y mettre vous-même.</p>
 
@@ -559,7 +536,7 @@ original_slug: Apprendre/HTML/Tableaux/Basics
  <li>Les deux derniers jours sont libres, alors pas de couleur de fond mais une largeur à spécifier ; la valeur de votre attribut <code>style</code> est <code>width: 42px;</code></li>
 </ol>
 
-<p><span lang="fr">Voyez comment vous lisez avec l'exemple. Si vous êtes coincé ou souhaitez vérifier votre travail, vous pouvez trouver notre version </span> <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html">timetable-fixed.html</a> (à<a href="http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html"> voir aussi</a> directement) <span lang="fr">sur GitHub</span> .</p>
+<p>Voyez comment vous lisez avec l'exemple. Si vous êtes coincé ou souhaitez vérifier votre travail, vous pouvez trouver notre version  <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html">timetable-fixed.html</a> (à<a href="http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html"> voir aussi</a> directement) sur GitHub .</p>
 
 <h2 id="Résumé">Résumé</h2>
 

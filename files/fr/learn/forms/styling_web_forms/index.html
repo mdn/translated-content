@@ -81,7 +81,7 @@ original_slug: Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML
   -webkit-appearance: none;
 }</pre>
 
-<p><img alt="This is a screenshot of a search filed on Chrome, with and without the use of -webkit-appearance" src="/files/4153/search-chrome-macos.png" style="border-style: solid; border-width: 1px; height: 107px; width: 179px;"></p>
+<p><img alt="This is a screenshot of a search filed on Chrome, with and without the use of -webkit-appearance" src="search-chrome-macos.png"></p>
 
 <p>Comme vous pouvez le voir sur la capture d'écran pour Chrome, les deux champs ont une bordure, mais le premier champ n'utilise pas la propriété <code>-webkit-appearance</code> tandis que le second a recours à la propriété <code>-webkit-appearance:none</code>. La différence est notable.</p>
 
@@ -96,7 +96,7 @@ original_slug: Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML
 
 <p>La capture d'écran ci-dessous montre les différences. Sur la gauche il y a l'affichage par défaut de Firefox pour Mac OS X, avec les réglages de police par défaut du système. Sur la droite, les mêmes éléments avec la règle d'harmonisation utilisée.</p>
 
-<p><img alt="This is a screenshot of the main form widgets on Firefox on Mac OSX, with and without font harmonization" src="/files/4157/font-firefox-macos.png" style="border-style: solid; border-width: 1px; height: 234px; width: 420px;"></p>
+<p><img alt="This is a screenshot of the main form widgets on Firefox on Mac OSX, with and without font harmonization" src="font-firefox-macos.png"></p>
 
 <p>Il existe un débat animé sur le fait qu'un formulaire ait une meilleure apparence en utilisant les valeurs par défaut du système d'exploitation ou en utilisant des valeurs unifiant l'apparence. C'est à vous de décider en tant que designer du site ou de l'application.</p>
 
@@ -115,7 +115,7 @@ original_slug: Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML
           box-sizing: border-box;
 }</pre>
 
-<p><img alt="This is a screenshot of the main form widgets on Chrome on Windows 7, with and without the use of box-sizing." src="/files/4161/size-chrome-win7.png" style="border-style: solid; border-width: 1px; height: 213px; width: 358px;"></p>
+<p><img alt="This is a screenshot of the main form widgets on Chrome on Windows 7, with and without the use of box-sizing." src="size-chrome-win7.png"></p>
 
 <p>Dans la capture d'écran ci-dessous, la colonne de gauche n'utilise pas {{cssxref("box-sizing")}}, alors que la colonne de droite utilise la propriété CSS <code>border-box</code>. Remarquez comment tous les éléments occupent le même espace, malgré les valeurs par défaut de la plateforme pour chacun des blocs.</p>
 
@@ -156,7 +156,7 @@ original_slug: Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML
 
 <p>Regardons sur un exemple concret la façon de composer un formulaire HTML. Cela aidera à clarifier nombre de ces concepts. Nous allons construire un formulaire de contact sous forme de « carte postale » :</p>
 
-<p><img alt="C'est ce que nous voulons réaliser avec le HTML et les CSS." src="https://mdn.mozillademos.org/files/16012/fr-carte.png" style="border-style: solid; border-width: 1px; height: 315px; width: 465px;"></p>
+<p><img alt="C'est ce que nous voulons réaliser avec le HTML et les CSS." src="fr-carte.png"></p>
 
 <h3 id="HTML_2">HTML</h3>
 
@@ -203,7 +203,7 @@ original_slug: Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML
  <li>Allez sur le <a href="https://www.fontsquirrel.com/tools/webfont-generator">Webfont Generator</a> de fontsquirrel.</li>
  <li>En utilisant le formulaire, téléversez les fichiers de polices et créez un kit de polices pou le Web. Téléchargez le kit sur votre ordinateur.</li>
  <li>Décompressez le fichier zip fourni.</li>
- <li>Dans le contenu décompressé vous trouverez deux fichiers <code>.woff</code> et deux fichiers <code>.woff2</code>. Copiez ces quatre fichiers dans un répertoire nommé <code>fonts</code>, dans le même répertoire que ci‑dessus. Nous utilisons deux fichiers différents pour maximiser la compatibilité avec les navigateurs ; voyez notre article sur les <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts">Web fonts</a> pour des informations plus détaillées.</li>
+ <li>Dans le contenu décompressé vous trouverez deux fichiers <code>.woff</code> et deux fichiers <code>.woff2</code>. Copiez ces quatre fichiers dans un répertoire nommé <code>fonts</code>, dans le même répertoire que ci‑dessus. Nous utilisons deux fichiers différents pour maximiser la compatibilité avec les navigateurs ; voyez notre article sur les <a href="/fr/docs/Learn/CSS/Styling_text/Web_fonts">Web fonts</a> pour des informations plus détaillées.</li>
 </ol>
 
 <h3 id="Le_CSS">Le CSS</h3>
@@ -216,18 +216,18 @@ original_slug: Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML
 
 <pre class="brush: css">@font-face{
   font-family : "handwriting";
-<code class="language-css"><span class="property token">  src</span><span class="punctuation token">:</span> <span class="token url">url('fonts/journal-webfont.woff2')</span> <span class="function token">format</span><span class="punctuation token">(</span><span class="string token">'woff2'</span><span class="punctuation token">)</span>,
-       <span class="token url">url('fonts/journal-webfont.woff')</span> <span class="function token">format</span><span class="punctuation token">(</span><span class="string token">'woff'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="property token">font-weight</span><span class="punctuation token">:</span> normal<span class="punctuation token">;</span>
-  <span class="property token">font-style</span><span class="punctuation token">:</span> normal<span class="punctuation token">;</span></code>
+<code class="language-css">  src: url('fonts/journal-webfont.woff2') format('woff2'),
+       url('fonts/journal-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;</code>
 }
 
 @font-face{
   font-family : "typewriter";
-<code class="language-css">  <span class="property token">src</span><span class="punctuation token">:</span> <span class="token url">url('fonts/veteran_typewriter-webfont.woff2')</span> <span class="function token">format</span><span class="punctuation token">(</span><span class="string token">'woff2'</span><span class="punctuation token">)</span>,
-       <span class="token url">url('fonts/veteran_typewriter-webfont.woff')</span> <span class="function token">format</span><span class="punctuation token">(</span><span class="string token">'woff'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="property token">font-weight</span><span class="punctuation token">:</span> normal<span class="punctuation token">;</span>
-  <span class="property token">font-style</span><span class="punctuation token">:</span> normal<span class="punctuation token">;</span></code>
+<code class="language-css">  src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
+       url('fonts/veteran_typewriter-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;</code>
 }
 
 body {
@@ -327,7 +327,7 @@ form {
   overflow: auto;
 }</pre>
 
-<p>L'élément {{HTMLElement("button")}} est très accommodant avec les CSS ; vous faites ce que vous voulez, même en utilisant les <a href="/en-US/docs/CSS/Pseudo-elements" title="/en-US/docs/CSS/Pseudo-elements">pseudo-elements</a> !</p>
+<p>L'élément {{HTMLElement("button")}} est très accommodant avec les CSS ; vous faites ce que vous voulez, même en utilisant les <a href="/fr/docs/CSS/Pseudo-elements" title="/en-US/docs/CSS/Pseudo-elements">pseudo-elements</a> !</p>
 
 <pre class="brush: css">button {
   position     : absolute;
@@ -379,7 +379,7 @@ button:focus {
 
 <ul>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML">Mon premier formulaire HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML"><span>Comment structurer un formulaire HTML</span></a></li>
+ <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML">Comment structurer un formulaire HTML</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs">Les widgets natifs pour formulaire</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires">Envoi des données de formulaire</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire">Validation des données de formulaire</a></li>

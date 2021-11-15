@@ -13,9 +13,9 @@ original_slug: Learn/Server-side/Premiers_pas/Web_frameworks
 
 <div>{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}</div>
 
-<p class="summary">L'article précédent nous a montré à quoi ressemble la communication entre les clients et les serveurs web, la nature des demandes et des réponses HTTP et ce qu’une application web côté serveur doit faire pour répondre aux demandes d’un navigateur web. Avec ces connaissances en main, il est temps d'explorer comment les frameworks peuvent nous simplifier la tâche.  En chemin, vous comprendrez comment choisir le framework le mieux adapté pour votre première application web côté serveur.</p>
+<p>L'article précédent nous a montré à quoi ressemble la communication entre les clients et les serveurs web, la nature des demandes et des réponses HTTP et ce qu’une application web côté serveur doit faire pour répondre aux demandes d’un navigateur web. Avec ces connaissances en main, il est temps d'explorer comment les frameworks peuvent nous simplifier la tâche.  En chemin, vous comprendrez comment choisir le framework le mieux adapté pour votre première application web côté serveur.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -137,7 +137,7 @@ def youngest(request):
 <p>Par exemple, le système de templates Django vous permet de spécifier des variables en utilisant une syntaxe "double-handlebars" (par exemple,<code>{</code><code>{ <em>variable_name</em> </code><code>}</code><code>}</code> ), qui sera remplacée par les valeurs transmises à partir de la fonction d'affichage lors du rendu d'une page. Le système de templates prend également en charge les expressions (avec la syntaxe:<code>{% <em>expression</em> %}</code> ), qui permettent aux templates d'effectuer des opérations simples, telles que l'itération des valeurs de liste transmises au modèle.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.</p>
+<p><strong>Note :</strong> Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.</p>
 </div>
 
 <p>L'extrait de code ci-dessous montre comment cela fonctionne. En reprenant l'exemple "youngest_teams" de la section précédente, le modèle HTML se voit transmettre par la vue une variable de liste nommée youngest_teams. Dans le squelette HTML, nous avons une expression qui vérifie d'abord si la variable youngest_teams existe, puis itère dans une boucle for. À chaque itération, le modèle affiche la valeur team_name de l'équipe dans un élément de liste.</p>
@@ -162,7 +162,7 @@ def youngest(request):
 &lt;/html&gt;
 </pre>
 
-<h2 id="Comment_choisir_un_framework_web"><span style='background-color: #f5f5f5; color: rgba(0, 0, 0, 0.87); display: inline !important; float: none; font-family: "Roboto",arial,sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: pre-wrap;'>Comment choisir un framework web</span></h2>
+<h2 id="Comment_choisir_un_framework_web">Comment choisir un framework web</h2>
 
 <p>Il existe de nombreux frameworks web pour presque tous les langages de programmation que vous souhaitez utiliser (nous énumérons quelques-uns des frameworks les plus populaires dans la section suivante). Avec autant de choix, il peut devenir difficile de déterminer quel framework constitue le meilleur point de départ pour votre nouvelle application web.</p>
 
@@ -189,7 +189,7 @@ def youngest(request):
 <p>Si vous débutez en programmation, vous choisirez probablement un framework facile à prendre en main. Une documentation riche et une communauté active sont également des critères pertinents pour votre choix. Pour la suite de ce cours, nous avons choisi Django (Python) et Express (Node/JavaScript) principalement parce que ces frameworks sont faciles à apprendre et bénéficient d'un bon soutien.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Let's go to the main websites for <a href="https://www.djangoproject.com/">Django</a> (Python) and <a href="http://expressjs.com/">Express</a> (Node/JavaScript) and check out their documentation and community.</p>
+<p><strong>Note :</strong> Let's go to the main websites for <a href="https://www.djangoproject.com/">Django</a> (Python) and <a href="http://expressjs.com/">Express</a> (Node/JavaScript) and check out their documentation and community.</p>
 
 <ol>
  <li>Navigate to the main sites (linked above)
@@ -216,7 +216,7 @@ def youngest(request):
 <p>The server-side frameworks below represent <em>a few </em>of the most popular available at the time of writing. All of them have everything you need to be productive — they are open source, are under active development, have enthusiastic communities creating documentation and helping users on discussion boards, and are used in large numbers of high-profile websites. There are many other great server-side frameworks that you can discover using a basic internet search.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Descriptions come (partially) from the framework websites!</p>
+<p><strong>Note :</strong> Descriptions come (partially) from the framework websites!</p>
 </div>
 
 <h3 id="Django_Python">Django (Python)</h3>
@@ -237,7 +237,7 @@ def youngest(request):
 
 <h3 id="Express_Node.jsJavaScript">Express (Node.js/JavaScript)</h3>
 
-<p><a href="http://expressjs.com/">Express</a> is a fast, unopinionated, flexible and minimalist web framework for <a href="https://nodejs.org/en/">Node.js</a> (node is a browserless environment for running JavaScript). It provides a robust set of features for web and mobile applications and delivers useful HTTP utility methods and <a href="/en-US/docs/Glossary/Middleware">middleware</a>.</p>
+<p><a href="http://expressjs.com/">Express</a> is a fast, unopinionated, flexible and minimalist web framework for <a href="https://nodejs.org/en/">Node.js</a> (node is a browserless environment for running JavaScript). It provides a robust set of features for web and mobile applications and delivers useful HTTP utility methods and <a href="/fr/docs/Glossary/Middleware">middleware</a>.</p>
 
 <p>Express is extremely popular, partially because it eases the migration of client-side JavaScript web programmers into server-side development, and partially because it is resource-efficient (the underlying node environment uses lightweight multitasking within a thread rather than spawning separate processes for every new web request).</p>
 
@@ -300,8 +300,8 @@ def youngest(request):
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server side</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server side</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li>
 </ul>

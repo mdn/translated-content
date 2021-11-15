@@ -25,9 +25,9 @@ original_slug: Apprendre/HTML/Tableaux/Advanced
 
 <div>{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}</div>
 
-<p class="summary">Dans le second article de ce module, nous examinerons quelques dispositions avancées des tableaux HTML — comme intitulés ou résumés, groupement des rangées dans l'en-tête, le corps ou le pied de page du tableau — ainsi que l'accessibilité des tableaux aux utilisateurs malvoyants.</p>
+<p>Dans le second article de ce module, nous examinerons quelques dispositions avancées des tableaux HTML — comme intitulés ou résumés, groupement des rangées dans l'en-tête, le corps ou le pied de page du tableau — ainsi que l'accessibilité des tableaux aux utilisateurs malvoyants.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -55,7 +55,7 @@ original_slug: Apprendre/HTML/Tableaux/Advanced
 <p>Le titre est placé directement sous la balise <code>&lt;table&gt;</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong> : L'attribut {{htmlattrxref("summary","table")}} peut aussi être utilisé dans un élément <code>&lt;table&gt;</code> pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément <code>&lt;caption&gt;</code>,  car <code>summary</code> est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant  (il n'apparaît pas dans la page).</p>
+<p><strong>Note :</strong> L'attribut {{htmlattrxref("summary","table")}} peut aussi être utilisé dans un élément <code>&lt;table&gt;</code> pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément <code>&lt;caption&gt;</code>,  car <code>summary</code> est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant  (il n'apparaît pas dans la page).</p>
 </div>
 
 <h3 id="Apprentissage_actif_Ajouter_un_titre">Apprentissage actif : Ajouter un titre</h3>
@@ -69,7 +69,7 @@ original_slug: Apprendre/HTML/Tableaux/Advanced
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez trouver notre version sur GitHub — voir <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html">timetable-caption.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html">voir aussi directement</a>).</p>
+<p><strong>Note :</strong> Vous pouvez trouver notre version sur GitHub — voir <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html">timetable-caption.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html">voir aussi directement</a>).</p>
 </div>
 
 <h2 id="Ajout_d'une_structure_avec_&lt;thead>_&lt;tfoot>_et_&lt;tbody>">Ajout d'une structure avec &lt;thead&gt;, &lt;tfoot&gt;, et &lt;tbody&gt;</h2>
@@ -87,7 +87,7 @@ original_slug: Apprendre/HTML/Tableaux/Advanced
 </ul>
 
 <div class="note">
-<p><strong>Note</strong> : <code>&lt;tbody&gt;</code> est toujours inclus dans tous les tableaux, implicitement si vous ne l'avez pas spécifié dans votre code. Pour le vérifier, ouvrez un tableau ne contenant pas l'élément <code>&lt;tbody&gt;</code> et regardez le code HTML dans les <a href="/fr/docs/Learn/Common_questions/What_are_browser_developer_tools">outils de développement de votre navigateur</a> — vous verrez que le navigateur a ajouté cette balise pour vous. Si vous vous demandez pourquoi  vous ennuyer à gérer ce qui est ajouté automatiquement — parce que cela vous donne plus de contrôle sur la structure et l'apparence de votre tableau.</p>
+<p><strong>Note :</strong> <code>&lt;tbody&gt;</code> est toujours inclus dans tous les tableaux, implicitement si vous ne l'avez pas spécifié dans votre code. Pour le vérifier, ouvrez un tableau ne contenant pas l'élément <code>&lt;tbody&gt;</code> et regardez le code HTML dans les <a href="/fr/docs/Learn/Common_questions/What_are_browser_developer_tools">outils de développement de votre navigateur</a> — vous verrez que le navigateur a ajouté cette balise pour vous. Si vous vous demandez pourquoi  vous ennuyer à gérer ce qui est ajouté automatiquement — parce que cela vous donne plus de contrôle sur la structure et l'apparence de votre tableau.</p>
 </div>
 
 <h3 id="Apprentissage_actif_Ajout_d'une_structure_au_tableau">Apprentissage actif : Ajout d'une structure au tableau</h3>
@@ -115,15 +115,12 @@ tfoot {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong> : Nous ne nous attendons pas à ce que vous compreniez les CSS maintenant. Vous en apprendrez plus avec les modules à propos des CSS (<a href="/fr/docs/Learn/CSS/Introduction_to_CSS">Introduction aux CSS</a> est un bon moyen de commencer ; il y a aussi un article spécifique sur <a href="/fr/docs/Learn/CSS/Styling_boxes/Styling_tables">l'esthétique des tables</a>).</p>
+<p><strong>Note :</strong> Nous ne nous attendons pas à ce que vous compreniez les CSS maintenant. Vous en apprendrez plus avec les modules à propos des CSS (<a href="/fr/docs/Learn/CSS/Introduction_to_CSS">Introduction aux CSS</a> est un bon moyen de commencer ; il y a aussi un article spécifique sur <a href="/fr/docs/Learn/CSS/Styling_boxes/Styling_tables">l'esthétique des tables</a>).</p>
 </div>
 
 <p>Le code de votre tableau fini devrait ressembler à quelque chose comme :</p>
 
-<div class="hidden">
-<h6 id="Hidden_example">Hidden example</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -228,12 +225,11 @@ tfoot {
 
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample("Apprentissage_actif_Ajout_d'une_structure_au_tableau", '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>Note </strong>: Vous pouvez aussi le trouver sur Github  <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html">spending-record-finished.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html">voir aussi le résultat</a> directement).</p>
+<p><strong>Note :</strong> Vous pouvez aussi le trouver sur Github  <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html">spending-record-finished.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html">voir aussi le résultat</a> directement).</p>
 </div>
 
 <h2 id="Tableaux_imbriqués">Tableaux imbriqués</h2>
@@ -270,7 +266,7 @@ tfoot {
 
 <p>Voici la sortie qui en résulte :</p>
 
-<table id="table1">
+<table>
  <tbody>
   <tr>
    <th>title1</th>
@@ -278,8 +274,8 @@ tfoot {
    <th>title3</th>
   </tr>
   <tr>
-   <td id="nested">
-    <table id="table2">
+   <td>
+    <table>
      <tbody>
       <tr>
        <td>cell1</td>
@@ -370,18 +366,18 @@ tfoot {
 <p>Mais que faire si vous ne pouvez pas créer ces associations visuelles ? Comment pouvez-vous lire un tableau comme celui ci-dessus ? Les personnes malvoyantes utilisent souvent un lecteur d'écran qui leur lit les informations des pages web. Ce n'est pas un problème quand vous lisez du texte brut, mais l'interprêtation d'un tableau peut constituer un défi pour une personne aveugle. Néanmoins, avec le balisage approprié, nous pouvons remplacer des associations visuelles par des associations programmées.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les  <a href="http://www.who.int/mediacentre/factsheets/fs282/fr/" title="Vision Impairment Data">données de l'OMS en 2017</a>.</p>
+<p><strong>Note :</strong> Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les  <a href="http://www.who.int/mediacentre/factsheets/fs282/fr/" title="Vision Impairment Data">données de l'OMS en 2017</a>.</p>
 </div>
 
 <p>Cette partie de l'article indique des techniques avancées pour rendre les tableaux les plus accessibles possible.</p>
 
-<h3 class="attTitle" id="Utilisation_des_en-têtes_de_colonnes_et_de_lignes">Utilisation des en-têtes de colonnes et de lignes</h3>
+<h3 id="Utilisation_des_en-têtes_de_colonnes_et_de_lignes">Utilisation des en-têtes de colonnes et de lignes</h3>
 
 <p>Les lecteurs d'écran identifieront tous les en-têtes et les utiliseront pour réaliser automatiquement les associations entre ces en-têtes et les cellules correspondantes.  La combinaison des en-têtes des colonnes et des lignes doit permettre d'identifier et d'interprêter les données de chaque cellule. Ainsi, les utilisateurs de lecteurs d'écran peuvent accéder aux données d'une façon similaire à celle des utilisateurs voyants.</p>
 
 <p>Nous avons déjà traité des en-têtes dans notre article précédent — voir <a href="/fr/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements">Ajouter des en-têtes avec &lt;th&gt;</a> .</p>
 
-<h3 class="attTitle" id="L'attribut_scope">L'attribut <code>scope</code></h3>
+<h3 id="L'attribut_scope">L'attribut <code>scope</code></h3>
 
 <p>Aux balises <code>&lt;th&gt;</code>, sujet de l'article précédent, ajoutons l'attribut {{htmlattrxref("scope","th")}}. Il peut être mentionné dans un élément <code>&lt;th&gt;</code> pour indiquer précisément à un lecteur d'écran si la cellule contient un en-tête de colonne ou de ligne — par exemple, sommes‑nous dans un en-tête de ligne, ou de colonne ? En revenant à notre exemple d'enregistrement de dépenses vu plus tôt, il est possible de définir sans ambiguité un en-tête de colonne comme étant un en-tête de colonne ainsi :</p>
 
@@ -409,7 +405,7 @@ tfoot {
 
 <p><code>scope</code> a deux autres valeurs possibles — <code>colgroup</code> et <code>rowgroup</code>. Elles sont utilisées pour les en-têtes qui couvrent plusieurs colonnes ou lignes. Si vous revenez au tableau « Articles vendus... » au début de ce paragraphe du présent article, vous voyez que la cellule « Vêtements » se trouve au-dessus des cellules  « Pantalons », « Jupes » et « Robes ». Toutes ces cellules sont marquées comme en-têtes (<code>&lt;th&gt;</code>), mais « Vêtements » est un en-tête de niveau supérieur qui définit trois « sous-en-têtes ». « Vêtements » comportera donc un attribut  <code>scope="colgroup"</code>, alors que les autres doivent recevront un attribut <code>scope="col"</code>.</p>
 
-<h3 class="attTitle" id="Les_attributs_id_et_headers">Les attributs <code>id</code> et <code>headers</code></h3>
+<h3 id="Les_attributs_id_et_headers">Les attributs <code>id</code> et <code>headers</code></h3>
 
 <p>Une alternative à l'usage de l'attribut <code>scope</code> est l'utilisation des attributs {{htmlattrxref("id")}} et {{htmlattrxref("headers", "td")}} pour créer une association entre en-têtes et cellules. Ils sont utilisés de la manière suivante :</p>
 
@@ -445,7 +441,7 @@ tfoot {
 &lt;/tbody&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Cette méthode crée des associations très précises entre en-têtes et données mais elle utilise <strong>beaucoup</strong> plus de balisage et ne laisse aucune marge d'erreur.  L'approche <code>scope</code> est généralement suffisante pour la plupart des tableaux.</p>
+<p><strong>Note :</strong> Cette méthode crée des associations très précises entre en-têtes et données mais elle utilise <strong>beaucoup</strong> plus de balisage et ne laisse aucune marge d'erreur.  L'approche <code>scope</code> est généralement suffisante pour la plupart des tableaux.</p>
 </div>
 
 <h3 id="Apprentissage_actif_jouer_avec_scope_et_headers">Apprentissage actif : jouer avec <code>scope</code> et <code>headers</code></h3>
@@ -457,7 +453,7 @@ tfoot {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong> : Vous pouvez contrôler votre travail en le comparant à nos exemples finis  — voir <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html">items-sold-scope.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html">voir aussi directement</a>)<br>
+<p><strong>Note :</strong> Vous pouvez contrôler votre travail en le comparant à nos exemples finis  — voir <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html">items-sold-scope.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html">voir aussi directement</a>)<br>
           et <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html">items-sold-headers.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html">voir aussi directement</a>).</p>
 </div>
 
@@ -474,7 +470,7 @@ tfoot {
 <ul>
  <li><a href="/fr/docs/Learn/HTML/Tables/Basics">Tableaux HTML : notions de base</a></li>
  <li><a href="/fr/docs/Learn/HTML/Tables/Advanced">Tableaux HTML : dispositions avancées et accessibilité</a></li>
- <li><a class="new" href="/fr/docs/Learn/HTML/Tables/Structuring_planet_data" rel="nofollow">Structuration de données sur les planètes</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Tables/Structuring_planet_data">Structuration de données sur les planètes</a></li>
 </ul>
 </div>
 </div>

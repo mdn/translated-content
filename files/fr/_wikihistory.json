@@ -5615,13 +5615,6 @@
       "Lamaw"
     ]
   },
-  "MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web": {
-    "modified": "2019-07-17T03:15:29.432Z",
-    "contributors": [
-      "SphinxKnight",
-      "AkwindFr"
-    ]
-  },
   "MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary": {
     "modified": "2019-03-23T22:09:42.767Z",
     "contributors": [
@@ -5662,15 +5655,6 @@
       "jswisher"
     ]
   },
-  "MDN/Structures/Compatibility_tables": {
-    "modified": "2020-10-15T22:02:05.521Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "jcletousey",
-      "loella16"
-    ]
-  },
   "MDN/Structures/Live_samples": {
     "modified": "2020-09-30T09:06:59.551Z",
     "contributors": [
@@ -5705,15 +5689,6 @@
       "Voulto",
       "wbamberg",
       "jswisher"
-    ]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-09-30T16:48:33.592Z",
-    "contributors": [
-      "chrisdavidmills",
-      "JNa0",
-      "wbamberg",
-      "SaintCyr"
     ]
   },
   "MDN/Yari": {
@@ -18303,8 +18278,9 @@
     ]
   },
   "Web/API/Node/baseURI": {
-    "modified": "2019-03-18T21:40:03.713Z",
+    "modified": "2019-05-01T21:49:37.439Z",
     "contributors": [
+      "ExE-Boss",
       "loella16"
     ]
   },
@@ -22195,13 +22171,6 @@
       "Fredchat"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/ARIA_Technique_Template": {
-    "modified": "2019-03-23T23:17:02.348Z",
-    "contributors": [
-      "BenoitL",
-      "Fredchat"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role": {
     "modified": "2019-03-23T23:16:30.067Z",
     "contributors": [
@@ -22354,12 +22323,6 @@
       "Goofy"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role": {
-    "modified": "2019-03-18T21:16:59.818Z",
-    "contributors": [
-      "paul.bignier"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role": {
     "modified": "2019-03-23T23:14:53.364Z",
     "contributors": [
@@ -22373,12 +22336,6 @@
     "contributors": [
       "J.DMB",
       "@lucieLme",
-      "Fredchat"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role": {
-    "modified": "2019-03-23T23:15:02.491Z",
-    "contributors": [
       "Fredchat"
     ]
   },
@@ -24437,21 +24394,6 @@
       "ExE-Boss"
     ]
   },
-  "Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property": {
-    "modified": "2019-04-06T12:43:13.926Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "teoli",
-      "Kyodev",
-      "Mgjbot",
-      "Sheppy",
-      "BenoitL",
-      "Fredchat",
-      "Learning",
-      "Chbok"
-    ]
-  },
   "Web/CSS/CSS_Box_Alignment": {
     "modified": "2019-04-06T12:42:39.208Z",
     "contributors": [
@@ -24601,6 +24543,17 @@
     "modified": "2020-10-15T21:58:13.628Z",
     "contributors": [
       "SphinxKnight"
+    ]
+  },
+  "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
+    "modified": "2019-07-27T03:11:03.371Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "Delapouite",
+      "FredB",
+      "Kyodev",
+      "Fredchat"
     ]
   },
   "Web/CSS/CSS_Device_Adaptation": {
@@ -24901,17 +24854,6 @@
       "BenoitL",
       "Ferbenoit",
       "Laurent Denis"
-    ]
-  },
-  "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
-    "modified": "2019-07-27T03:11:03.371Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "Delapouite",
-      "FredB",
-      "Kyodev",
-      "Fredchat"
     ]
   },
   "Web/CSS/CSS_Logical_Properties": {
@@ -41506,13 +41448,6 @@
       "Lbergere"
     ]
   },
-  "Web/XML/xml:base": {
-    "modified": "2019-05-01T21:49:37.439Z",
-    "contributors": [
-      "ExE-Boss",
-      "loella16"
-    ]
-  },
   "Web/XPath": {
     "modified": "2020-06-19T03:44:39.700Z",
     "contributors": [
@@ -42458,17 +42393,6 @@
     "modified": "2019-06-18T08:32:36.065Z",
     "contributors": [
       "BenoitDel"
-    ]
-  },
-  "WebAssembly/Understanding_the_text_format": {
-    "modified": "2020-11-08T19:45:23.458Z",
-    "contributors": [
-      "duduindo",
-      "lassana.drame.avenir",
-      "SphinxKnight",
-      "neilbryson",
-      "afauroux",
-      "marcpicaud"
     ]
   },
   "WebAssembly/Using_the_JavaScript_API": {
@@ -43450,13 +43374,18 @@
     ]
   },
   "conflicting/Web/CSS/cursor": {
-    "modified": "2019-04-05T07:25:43.783Z",
+    "modified": "2019-04-06T12:43:13.926Z",
     "contributors": [
       "SphinxKnight",
+      "ExE-Boss",
       "teoli",
-      "FredB",
       "Kyodev",
-      "Fredchat"
+      "Mgjbot",
+      "Sheppy",
+      "BenoitL",
+      "Fredchat",
+      "Learning",
+      "Chbok"
     ]
   },
   "conflicting/Web/CSS/float": {

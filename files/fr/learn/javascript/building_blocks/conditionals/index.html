@@ -21,7 +21,7 @@ original_slug: Apprendre/JavaScript/Building_blocks/conditionals
 
 <p>Dans tout langage de programmation, le code doit prendre des décisions et agir en fonction des différents paramètres. Par exemple dans un jeu, si le nombre de vies du joueur atteint 0, alors le jeu est terminé. Dans une application météo, si elle est consultée le matin, l'application montrera une image du lever de soleil ; l'application proposera des étoiles et la lune s'il fait nuit. Dans cet article nous allons découvrir comment ces instructions conditionnelles fonctionnent en JavaScript.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -40,7 +40,7 @@ original_slug: Apprendre/JavaScript/Building_blocks/conditionals
 
 <p>Les instructions conditionnelles nous permettent de représenter ce genre de prise de décision en JavaScript, du choix qui doit être fait (par ex. « un biscuit ou deux »), à la conséquence de ces choix (il se peut que la conséquence de « manger un biscuit » soit « avoir encore faim », et celle de « manger deux biscuits » soit « se sentir rassasié, mais se faire gronder par maman pour avoir mangé tous les biscuits ».)</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13703/cookie-choice-small.png"></p>
+<p><img alt="" src="cookie-choice-small.png"></p>
 
 <h2 id="Instruction_if_..._else">Instruction if ... else</h2>
 
@@ -100,7 +100,7 @@ if (coursesFaites === true) {
 <p>Avec un tel code, la variable <code>coursesFaites</code> renvoie toujours <code>false</code>, imaginez la déception de ce pauvre enfant. Il ne tient qu'à nous de fournir un mécanisme pour que le parent assigne <code>true</code> à la variable <code>coursesFaites</code> si l'enfant a fait les courses.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Vous pouvez voir une <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">version plus complète de cet exemple sur GitHub</a> (ainsi qu'en <a href="http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">version live</a>.)</p>
+<p><strong>Note :</strong> Vous pouvez voir une <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">version plus complète de cet exemple sur GitHub</a> (ainsi qu'en <a href="http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">version live</a>.)</p>
 </div>
 
 <h3 id="else_if">else if</h3>
@@ -109,37 +109,37 @@ if (coursesFaites === true) {
 
 <p>Il existe un moyen d'enchaîner des choix / résultats supplémentaires à <code>if...else</code> — en utilisant <code>else if</code> entre. Chaque choix supplémentaire nécessite un bloc additionnel à placer entre <code>if() { ... }</code> et <code>else { ... }</code> — regardez l'exemple suivant plus élaboré, qui pourrait faire partie d'une simple application de prévisions météo:</p>
 
-<pre class="brush: html line-numbers  language-html" style="font-size: 16px !important; line-height: 24px !important;"><code class="language-html" style="font-size: 16px !important; line-height: 24px !important;"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"weather</span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Select the weather type today: <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>select</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>weather<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>--Make a choice--<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>sunny<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Sunny<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>rainy<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Rainy<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>snowing<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Snowing<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>option</span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>overcast<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Overcast<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>option</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>select</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html">&lt;label for="weather"&gt;Select the weather type today: &lt;/label&gt;
+&lt;select id="weather"&gt;
+  &lt;option value=""&gt;--Make a choice--&lt;/option&gt;
+  &lt;option value="sunny"&gt;Sunny&lt;/option&gt;
+  &lt;option value="rainy"&gt;Rainy&lt;/option&gt;
+  &lt;option value="snowing"&gt;Snowing&lt;/option&gt;
+  &lt;option value="overcast"&gt;Overcast&lt;/option&gt;
+&lt;/select&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;p&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js line-numbers  language-js" style="font-size: 16px !important; line-height: 24px !important;"><code class="language-js" style="font-size: 16px !important; line-height: 24px !important;">const select <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'select'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-const para <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'p'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js">const select = document.querySelector('select');
+const para = document.querySelector('p');
 
-select<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'change'</span><span class="punctuation token">,</span> setWeather<span class="punctuation token">)</span><span class="punctuation token">;</span>
+select.addEventListener('change', setWeather);
 
-<span class="keyword token">function</span> <span class="function token">setWeather</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  const choice <span class="operator token">=</span> select<span class="punctuation token">.</span>value<span class="punctuation token">;</span>
+function setWeather() {
+  const choice = select.value;
 
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>choice <span class="operator token">===</span> <span class="string token">'sunny'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.'</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="keyword token">if</span> <span class="punctuation token">(</span>choice <span class="operator token">===</span> <span class="string token">'rainy'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'Rain is falling outside; take a rain coat and a brolly, and don\'t stay out for too long.'</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="keyword token">if</span> <span class="punctuation token">(</span>choice <span class="operator token">===</span> <span class="string token">'snowing'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.'</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="keyword token">if</span> <span class="punctuation token">(</span>choice <span class="operator token">===</span> <span class="string token">'overcast'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'It isn\'t raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.'</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-    para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">''</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+  if (choice === 'sunny') {
+    para.textContent = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
+  } else if (choice === 'rainy') {
+    para.textContent = 'Rain is falling outside; take a rain coat and a brolly, and don\'t stay out for too long.';
+  } else if (choice === 'snowing') {
+    para.textContent = 'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.';
+  } else if (choice === 'overcast') {
+    para.textContent = 'It isn\'t raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.';
+  } else {
+    para.textContent = '';
+  }
+}</pre>
 
 <p>{{ EmbedLiveSample('else_if', '100%', 100) }}</p>
 
@@ -151,7 +151,7 @@ select<span class="punctuation token">.</span><span class="function token">addEv
 </ol>
 
 <div class="note">
-<p><strong>Note </strong>: Vous trouverez également <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html">cet exemple sur GitHub</a> (ainsi qu'en <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html">version live</a> ici.)</p>
+<p><strong>Note :</strong> Vous trouverez également <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html">cet exemple sur GitHub</a> (ainsi qu'en <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html">version live</a> ici.)</p>
 </div>
 
 <h3 id="Une_note_sur_les_opérateurs_de_comparaison">Une note sur les opérateurs de comparaison</h3>
@@ -165,7 +165,7 @@ select<span class="punctuation token">.</span><span class="function token">addEv
 </ul>
 
 <div class="note">
-<p><strong>Note </strong>: Revoyez le contenu du lien précédent si vous voulez vous rafraîchir la mémoire.</p>
+<p><strong>Note :</strong> Revoyez le contenu du lien précédent si vous voulez vous rafraîchir la mémoire.</p>
 </div>
 
 <p>Nous souhaitons mentionner à propos des tests des valeurs booléennes (<code>true</code>/<code>false</code>) un modèle courant que vous rencontrerez souvent. Toute valeur autre que <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code> ou une chaîne vide  (<code>''</code>) renvoie <code>true</code> lorsqu'elle est testée dans une structure conditionnelle, vous pouvez donc simplement utiliser un nom de variable pour tester si elle est <code>true</code>, ou même si elle existe (c'est-à-dire si elle n'est pas <code>undefined</code>).<br>
@@ -262,7 +262,7 @@ if (coursesFaites) { // pas besoin d'écrire explicitement '=== true'
 
 <p>Les Instructions <code>if...else</code>  font bien le travail d'aiguiller la programmation selon des conditions, mais elles ne sont pas sans inconvénient. Elles sont principalement adaptées aux cas où vous avez un choix binaire, chacun nécessitant une quantité raisonnable de code à exécuter, et/ou au cas où les conditions sont complexes (par ex. plusieurs opérateurs logiques). Si vous voulez juste fixer la valeur d'une variable à un choix donné ou afficher une déclaration particulière en fonction d'une condition, cette syntaxe peut devenir un peu lourde, surtout si le nombre de choix est important.</p>
 
-<p>Les <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/switch">instructions switch</a> sont vos amies — elles prennent une seule valeur ou expression en entrée, puis examinent une palette de choix jusqu'à trouver celui qui correspond, et exécutent le code qui va avec. Voici un peu de pseudo-code, pour vous donner l'idée :</p>
+<p>Les <a href="/fr/docs/Web/JavaScript/Reference/Instructions/switch">instructions switch</a> sont vos amies — elles prennent une seule valeur ou expression en entrée, puis examinent une palette de choix jusqu'à trouver celui qui correspond, et exécutent le code qui va avec. Voici un peu de pseudo-code, pour vous donner l'idée :</p>
 
 <pre class="brush: js"><strong>switch (expression) {</strong>
   <strong>case</strong> choix1<strong>:</strong>
@@ -292,7 +292,7 @@ if (coursesFaites) { // pas besoin d'écrire explicitement '=== true'
 </ol>
 
 <div class="note">
-<p><strong>Note</strong> : Vous n'avez pas à inclure la section  <code>default</code> — elle peut être omise en toute sécurité s'il n'y a aucune chance que l'expression finisse par égaler une valeur inconnue. À contrario, vous devez l'inclure s'il est possible qu'il y ait des cas inconnus.</p>
+<p><strong>Note :</strong> Vous n'avez pas à inclure la section  <code>default</code> — elle peut être omise en toute sécurité s'il n'y a aucune chance que l'expression finisse par égaler une valeur inconnue. À contrario, vous devez l'inclure s'il est possible qu'il y ait des cas inconnus.</p>
 </div>
 
 <h3 id="Un_exemple_de_switch">Un exemple de switch</h3>
@@ -340,12 +340,12 @@ function setWeather() {
 <p>{{ EmbedLiveSample('Un_exemple_de_switch', '100%', 100) }}</p>
 
 <div class="note">
-<p><strong>Note</strong><strong> </strong>: Vous trouverez également cet <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html">exemple sur GitHub</a> (voyez‑le en <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">cours d'exécution </a>ici aussi.)</p>
+<p><strong>Note :</strong> Vous trouverez également cet <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html">exemple sur GitHub</a> (voyez‑le en <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">cours d'exécution </a>ici aussi.)</p>
 </div>
 
 <h2 id="Opérateur_ternaire">Opérateur ternaire</h2>
 
-<p>Voici une dernière syntaxe que nous souhaitons vous présenter avant de nous amuser avec quelques exemples. L'<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel">opérateur ternaire ou conditionnel</a> est un petit morceau de code qui teste une condition et renvoie une valeur ou expression si elle est <code>true</code> et une autre si elle est <code>false</code> — elle est utile dans certains cas, et occupe moins de place qu'un bloc <code>if...else</code> si votre choix est limité à deux possibilités à choisir via une condition <code>true</code>/<code>false</code>. Voici le pseudo‑code correspondant :</p>
+<p>Voici une dernière syntaxe que nous souhaitons vous présenter avant de nous amuser avec quelques exemples. L'<a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel">opérateur ternaire ou conditionnel</a> est un petit morceau de code qui teste une condition et renvoie une valeur ou expression si elle est <code>true</code> et une autre si elle est <code>false</code> — elle est utile dans certains cas, et occupe moins de place qu'un bloc <code>if...else</code> si votre choix est limité à deux possibilités à choisir via une condition <code>true</code>/<code>false</code>. Voici le pseudo‑code correspondant :</p>
 
 <pre>( condition ) ? exécuter ce code : exécuter celui‑ci à la place</pre>
 
@@ -385,10 +385,10 @@ select.onchange = function() {
 
 <p>Nous mettons un élément {{htmlelement('select')}} pour choisir un thème (noir ou blanc), plus un simple élément {{htmlelement('h1')}} pour afficher un titre de site web. Nous avons aussi une fonction <code>update()</code>, qui prend deux couleurs en paramètre (entrées). La couleur de fond du site est déterminée par la couleur indiquée dans le premier paramètre fourni, et la couleur du texte par le deuxième.</p>
 
-<p>Nous avons également mis un écouteur d'événement <a href="https://developer.mozilla.org/fr/docs/Web/API/GlobalEventHandlers/onchange">onchange</a> qui sert à exécuter une fonction contenant un opérateur ternaire. Il débute par un test de condition — <code>select.value === 'black'</code>. Si le test renvoie <code>true</code>, nous exécutons la fonction <code>update()</code> avec les paramètres blanc et noir : cela signifie que le fond sera noir et le texte blanc. S'il renvoie <code>false</code>, nous exécutons <code>update()</code> avec les paramètres noir et blanc, les couleurs du site seront inversées.</p>
+<p>Nous avons également mis un écouteur d'événement <a href="/fr/docs/Web/API/GlobalEventHandlers/onchange">onchange</a> qui sert à exécuter une fonction contenant un opérateur ternaire. Il débute par un test de condition — <code>select.value === 'black'</code>. Si le test renvoie <code>true</code>, nous exécutons la fonction <code>update()</code> avec les paramètres blanc et noir : cela signifie que le fond sera noir et le texte blanc. S'il renvoie <code>false</code>, nous exécutons <code>update()</code> avec les paramètres noir et blanc, les couleurs du site seront inversées.</p>
 
 <div class="note">
-<p><strong>Note</strong><strong> </strong>: Vous trouverez également cet <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">exemple sur GitHub</a> (voyez‑le en <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">cours d'exécution </a>ici aussi.)</p>
+<p><strong>Note :</strong> Vous trouverez également cet <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">exemple sur GitHub</a> (voyez‑le en <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">cours d'exécution </a>ici aussi.)</p>
 </div>
 
 <h2 id="Apprentissage_actif_un_calendrier_simple">Apprentissage actif : un calendrier simple</h2>
@@ -417,10 +417,7 @@ select.onchange = function() {
 
 <p>Si vous faites une erreur, vous pouvez toujours réinitialiser l'exemple avec le bouton "Réinitialiser". Si vous êtes vraiment bloqué, pressez "Voir la solution".</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;div class="output" style="height: 500px;overflow: auto;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="height: 500px;overflow: auto;"&gt;
   &lt;label for="month"&gt;Choisissez un mois : &lt;/label&gt;
   &lt;select id="month"&gt;
     &lt;option value="Janvier"&gt;Janvier&lt;/option&gt;
@@ -476,7 +473,7 @@ createCalendar(31,'Janvier');
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">.output * {
+<pre class="brush: css hidden">.output * {
   box-sizing: border-box;
 }
 
@@ -496,7 +493,7 @@ createCalendar(31,'Janvier');
 }
 </pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -520,11 +517,10 @@ var jsSolution = 'var select = document.querySelector(\'select\');\nvar list = d
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Apprentissage_actif_un_calendrier_simple', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<h2 id="Activité_plus_de_choix_de_couleurs_!">Activité : plus de choix de couleurs !</h2>
+<h2 id="Activité_plus_de_choix_de_couleurs">Activité : plus de choix de couleurs</h2>
 
 <p>Nous allons reprendre l'exemple de l'opérateur ternaire vu plus haut et transformer cet opérateur ternaire en une directive <code>switch</code>  qui nous permettra une plus grande variété de choix pour le site web tout simple. Voyez l'élément {{htmlelement("select")}} — cette fois, il n'y a pas deux options de thème, mais cinq. Il vous faut ajouter une directive <code>switch</code> au dessous du commentaire  <code>// AJOUT D'UNE DIRECTIVE SWITCH</code> :</p>
 
@@ -536,10 +532,7 @@ window.addEventListener('load', updateCode);
 
 <p>Si vous faites une erreur, vous pouvez toujours réinitialiser l'exemple avec le bouton « Réinitialiser ». Si vous êtes vraiment bloqué, pressez « Voir la solution ».</p>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html">&lt;div class="output" style="height: 300px;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="height: 300px;"&gt;
   &lt;label for="theme"&gt;Choisissez un thème : &lt;/label&gt;
   &lt;select id="theme"&gt;
     &lt;option value="white"&gt;Blanc&lt;/option&gt;
@@ -575,7 +568,7 @@ function update(bgColor, textColor) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">const textarea = document.getElementById('code');
+<pre class="brush: js hidden">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -599,21 +592,20 @@ const jsSolution = 'const select = document.querySelector(\'select\');\nlet html
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 850) }}</p>
+<p>{{ EmbedLiveSample('Activité_plus_de_choix_de_couleurs', '100%', 850) }}</p>
 
 <h2 id="Conclusion">Conclusion</h2>
 
-<p>C'est tout ce qu'il est nécessaire de connaître à propos des structures conditionnelles en JavaScript pour le moment ! Je pense que vous avez assurément compris ces concepts et travaillé les exemples aisément ; s'il y a quelque chose que vous n'avez pas compris, relisez cet article à nouveau, ou bien <a href="https://developer.mozilla.org/fr/Apprendre#Nous_contacter">contactez‑nous</a> pour une aide.</p>
+<p>C'est tout ce qu'il est nécessaire de connaître à propos des structures conditionnelles en JavaScript pour le moment ! Je pense que vous avez assurément compris ces concepts et travaillé les exemples aisément ; s'il y a quelque chose que vous n'avez pas compris, relisez cet article à nouveau, ou bien <a href="/fr/Apprendre#Nous_contacter">contactez‑nous</a> pour une aide.</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Learn/JavaScript/First_steps/Math#Opérateurs_de_comparaison">Opérateurs de comparaison</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs#Les_instructions_conditionnelles">Les instructions conditionnelles</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/if...else">Référence if...else</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel">Référence opérateur conditionnel (ternaire)</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/First_steps/Math#Opérateurs_de_comparaison">Opérateurs de comparaison</a></li>
+ <li><a href="/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs#Les_instructions_conditionnelles">Les instructions conditionnelles</a></li>
+ <li><a href="/fr/docs/Web/JavaScript/Reference/Instructions/if...else">Référence if...else</a></li>
+ <li><a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel">Référence opérateur conditionnel (ternaire)</a></li>
 </ul>
 
 <p>{{NextMenu("Apprendre/JavaScript/Building_blocks/Looping_code", "Apprendre/JavaScript/Building_blocks")}}</p>
@@ -621,11 +613,11 @@ window.addEventListener('load', updateCode);
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/conditionals">Prendre des décisions dans du code — conditions</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/Looping_code">Les boucles dans le code</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/Fonctions">Fonctions — blocs de code réutilisables</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/Build_your_own_function">Construire vos propres fonctions</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/Return_values">Valeurs de retour des fonctions</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements">Introduction aux événements</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/JavaScript/Building_blocks/Image_gallery">Gallerie d'images</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Building_blocks/conditionals">Prendre des décisions dans du code — conditions</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Looping_code">Les boucles dans le code</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Fonctions">Fonctions — blocs de code réutilisables</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Build_your_own_function">Construire vos propres fonctions</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Return_values">Valeurs de retour des fonctions</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements">Introduction aux événements</a></li>
+ <li><a href="/fr/Apprendre/JavaScript/Building_blocks/Image_gallery">Gallerie d'images</a></li>
 </ul>

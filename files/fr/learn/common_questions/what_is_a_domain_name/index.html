@@ -10,15 +10,13 @@ tags:
 translation_of: Learn/Common_questions/What_is_a_domain_name
 original_slug: Apprendre/Comprendre_noms_de_domaine
 ---
-<div class="summary">
 <p>Dans cet article, nous discutons des noms de domaine : ce qu'ils sont, comment ils sont organisés et comment en avoir un.</p>
-</div>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Pour commencer, vous devez comprendre <a href="/fr/Apprendre/Fonctionnement_Internet">comment Internet fonctionne</a> et ce que sont les <a href="/en-US/Learn/Understanding_URLs">URL</a>.</td>
+   <td>Pour commencer, vous devez comprendre <a href="/fr/Apprendre/Fonctionnement_Internet">comment Internet fonctionne</a> et ce que sont les <a href="/fr/Learn/Understanding_URLs">URL</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objectif :</th>
@@ -27,13 +25,13 @@ original_slug: Apprendre/Comprendre_noms_de_domaine
  </tbody>
 </table>
 
-<p><span class="seoSummary">Les noms de domaine jouent un rôle clé dans l'infrastructure d'Internet. Ils fournissent des adresses, humainement compréhensibles pour retrouver des serveurs web connectés sur Internet.</span></p>
+<p>Les noms de domaine jouent un rôle clé dans l'infrastructure d'Internet. Ils fournissent des adresses, humainement compréhensibles pour retrouver des serveurs web connectés sur Internet.</p>
 
 <p>Tout ordinateur relié à Internet peut être contacté via une adresse {{Glossary("IP")}} publique. En IPv4, cette adresse est constituée de 32 bits, souvent exprimés avec quatre groupes de chiffes, compris entre 0 et 225, séparés par des points (par exemple <code>173.194.121.32</code>). Avec IPv6, on a 128 bits, soit huit groupes de quatre chiffres hexadécimaux séparés par deux points (par exemple <code>2001:0db8:85a3:0042:1000:8a2e:0370:7334</code>). Les ordinateurs n'ont aucun problème pour mémoriser ces adresses mais ça peut être difficile pour quelqu'un de faire le rapprochement entre un site web/service et cette adresse. De plus, le site peut « déménager » sur un autre ordinateur, l'ordinateur peut changer d'adresse... Dans ces cas, l'adresse correspondante à un site sera modifiée au cours du temps : il faudra alors utiliser la nouvelle adresse pour l'atteindre. Afin de résoudre ces problèmes (mémorisation et stabilité), on utilise des adresses compréhensibles appelée noms de domaine.</p>
 
 <h2 id="Pédagogie_active">Pédagogie active</h2>
 
-<p><em>Ce contenu a besoin d'être enrichi, <a href="/en-US/docs/MDN/Getting_started">n'hésitez pas à contribuer !</a></em></p>
+<p><em>Ce contenu a besoin d'être enrichi, <a href="/fr/docs/MDN/Getting_started">n'hésitez pas à contribuer !</a></em></p>
 
 <ul>
  <li><a href="http://www.afnic.fr/fr/votre-nom-de-domaine/qu-est-ce-qu-un-nom-de-domaine/">Qu'est-ce qu'un nom de domaine</a> sur le site de l'AFNIC</li>
@@ -46,7 +44,7 @@ original_slug: Apprendre/Comprendre_noms_de_domaine
 
 <p>Un nom de domaine est composé de plusieurs parties, séparées par des points. Ces différents composants sont lus <strong>de droite à gauche</strong> :</p>
 
-<p><img alt="Anatomy of the MDN domain name" src="https://mdn.mozillademos.org/files/11241/structure_fr.png" style="height: 76px; width: 252px;"></p>
+<p><img alt="Anatomy of the MDN domain name" src="structure_fr.png"></p>
 
 <p>Chacune de ces parties fournit des informations sur le nom de domaine dans son ensemble.</p>
 
@@ -146,7 +144,7 @@ Registrant Phone:+1.6509030800
  <li>Une fois que l'ordinateur connaît l'adresse IP demandée, le navigateur peut commencer à échanger du contenu avec le serveur web.</li>
 </ol>
 
-<p><img alt="Explanation of the steps needed to obtain the result to a DNS request" src="https://mdn.mozillademos.org/files/8961/2014-10-dns-request2.png" style="height: 702px; width: 544px;"></p>
+<p><img alt="Explanation of the steps needed to obtain the result to a DNS request" src="2014-10-dns-request2.png"></p>
 
 <div class="note">
 <p><strong>Note :</strong> Si c'est la première fois que quelqu'un demande l'adresse IP pour mozilla.org au serveur DNS, celui-ci ne la connaîtra pas. Il demandera alors au serveur faisant autorité qui possède l'information. Une fois l'adresse connue, il la transmettra à l'ordinateur.</p>

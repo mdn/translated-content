@@ -10,7 +10,7 @@ tags:
 translation_of: Learn/Common_questions/Using_Github_pages
 original_slug: Apprendre/Utiliser_les_pages_GitHub
 ---
-<p class="summary"><a href="https://github.com/">GitHub</a> est un site de partage de code, sur lequel on peut publier des projets dont le code est géré avec le système de gestion de version <a href="http://git-scm.com/">Git</a><strong>. </strong>Par défaut, le système est <em>open source</em>, ce qui signifie que tout le monde peut consulter le code, l'utiliser pour apprendre ou l'améliorer et collaborer aux projets. Vous pouvez donc participer à d'autres projets ou, à l'inverse, des personnes peuvent collaborer à vos projets ! Dans cet article, nous verrons comment publier du contenu sur le web en utilisant les « pages GitHub » (aussi appelées <em>gh-pages</em>) qui sont une des fonctionnalités de GitHub.</p>
+<p><a href="https://github.com/">GitHub</a> est un site de partage de code, sur lequel on peut publier des projets dont le code est géré avec le système de gestion de version <a href="http://git-scm.com/">Git</a><strong>. </strong>Par défaut, le système est <em>open source</em>, ce qui signifie que tout le monde peut consulter le code, l'utiliser pour apprendre ou l'améliorer et collaborer aux projets. Vous pouvez donc participer à d'autres projets ou, à l'inverse, des personnes peuvent collaborer à vos projets ! Dans cet article, nous verrons comment publier du contenu sur le web en utilisant les « pages GitHub » (aussi appelées <em>gh-pages</em>) qui sont une des fonctionnalités de GitHub.</p>
 
 <h2 id="Publier_du_contenu">Publier du contenu</h2>
 
@@ -48,13 +48,13 @@ original_slug: Apprendre/Utiliser_les_pages_GitHub
 
 <p>La meilleure façon d'envoyer votre code sur GitHub est d'utiliser l'interface en ligne de commande de votre ordinateur. La ligne de commande est une fenêtre où on saisit des commandes au clavier pour créer des fichiers, lancer des programmes, plutôt que de cliquer avec la souris en utilisant une interface graphique. Une interface en ligne de commande ressemblera à quelque chose comme ceci :</p>
 
-<p><img alt="Interface en ligne de commande" src="https://mdn.mozillademos.org/files/12271/commande.png" style="height: 309px; width: 499px;"></p>
+<p><img alt="Interface en ligne de commande" src="commande.png"></p>
 
 <div class="note">
-<p><strong>Note : </strong>Il existe également des <a href="http://git-scm.com/downloads/guis">interfaces graphiques pour Git</a> qui permettent de faire la même chose. N'hésitez pas à les utiliser si vous ne vous sentez pas à l'aise avec la ligne de commande.</p>
+<p><strong>Note :</strong> Il existe également des <a href="http://git-scm.com/downloads/guis">interfaces graphiques pour Git</a> qui permettent de faire la même chose. N'hésitez pas à les utiliser si vous ne vous sentez pas à l'aise avec la ligne de commande.</p>
 </div>
 
-<p><span id="command-line">Chaque système d'exploitation possède sa propre interface en ligne de commande  :</span></p>
+<p>Chaque système d'exploitation possède sa propre interface en ligne de commande  :</p>
 
 <ul>
  <li><strong>Windows</strong> : <strong>l'invite de commande</strong>. Celle-ci peut être lancée en utilisant la touche Windows et en tapant <em>Invite de commande</em> avant de sélectionner l'option dans la liste qui apparaît. Windows utilise certaines conventions différentes de celles choisies par Linux et OS X, les commandes peuvent donc varier légèrement (par exemple, dans Windows, on utilisera <code>\</code> pour indiquer un sous-répertoire alors que Linux et OS X utiliseront <code>/</code>).</li>
@@ -70,9 +70,9 @@ original_slug: Apprendre/Utiliser_les_pages_GitHub
  <li>Ensuite, vous aurez besoin de créer un dépôt GitHub sur lequel envoyer les fichiers de votre site. Quand vous êtes connecté-e sur GitHub, cliquez sur l'icône Plus (+) en haut à droite de la page d'accueil puis sélectionner l'option <em>New Repository</em> (qui signifie « Créer un nouveau dépôt »).</li>
  <li>Sur la page qui s'affiche, dans le champ « <em>Repository name</em> », entrez un nom pour votre dépôt. Vous pouvez par exemple saisir <em>mon-premier-depot</em>.</li>
  <li>Il y a également un champ qui décrit le projet qui sera placé dans ce dépôt. Votre écran devrait ressembler à quelque chose comme :<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/12143/create-new-repo.png" style="display: block; height: 548px; margin: 0px auto; width: 800px;"></li>
+  <img alt="" src="create-new-repo.png"></li>
  <li>Ensuite, cliquez sur « <em>Create repository</em> » (pour créer le dépôt). Vous arrieverez alors sur la page suivante :<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/12141/github-repo.png" style="display: block; height: 520px; margin: 0px auto; width: 800px;"></li>
+  <img alt="" src="github-repo.png"></li>
 </ol>
 
 <h3 id="Envoyer_vos_fichiers_vers_GitHub">Envoyer vos fichiers vers GitHub</h3>
@@ -80,7 +80,7 @@ original_slug: Apprendre/Utiliser_les_pages_GitHub
 <ol>
  <li>Sur cette page, une section vous intéresse particulièrement : « <em>…or push an existing repository from the command line</em> » (ce qui signifie « ou pousser un dépôt existant grâce à la ligne de commande »). Vous devrez voir deux lignes de codes sous cette section. Copiez la première ligne et collez la dans votre interface en ligne de commande puis tapez sur Entrée. La commande devrait ressembler à :
 
-  <pre class="copyable-terminal-content js-zeroclipboard-target"><span class="user-select-contain">git remote add origin <span class="js-live-clone-url">https://github.com/chrisdavidmills/mon-premier-depot.git</span></span></pre>
+  <pre>git remote add origin https://github.com/chrisdavidmills/mon-premier-depot.git</pre>
  </li>
  <li>Ensuite, saisissez ces deux commandes en tapant sur la touche Entrée après chacune. Ces commandes permettent d'indiquer à Git qu'il doit gérer tous les fichiers du dossier et d'enregistrer cette action.
   <pre class="brush: bash">git add --all
@@ -90,7 +90,7 @@ git commit -m 'ajout des fichiers au dépôt'</pre>
   <pre class="brush: bash">git push -u origin master</pre>
  </li>
  <li>Votre code est publié sur GitHub. Pour avoir une page GitHub, vous devrez créer une <em>branche</em> <code>gh-pages</code> sur votre dépôt. Actualisez la page web de votre dépôt, vous devriez obtenir une page semblable à celle présentée ci-dessous. Ensuite, cliquez que le bouton « <em>Branch: <strong>master</strong></em> » (GitHub indique que vous êtes sur la branche <code>master</code> de votre dépôt). Dans la liste qui s'affiche, saisissez le texte <strong>gh-pages</strong> puis cliquez sur <em>Create branch: gh-pages</em> (« créer la branche intitulée gh-pages »). Cela créera une nouvelle branche pour votre dépôt, cette branche s'appellera gh-pages et sera publiée à un endroit spécifique. L'URL du site sera <em>nom-utilisateur.github.io/nom-du-depot</em>. Dans mon exemple, l'URL est donc <em>https://chrisdavidmills.github.io/my-repository</em>. La page qui est affichée à cette URL est la page <code>index.html</code> contenue dans le dépôt.<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/12145/repo-site.png" style="display: block; margin: 0 auto;"></li>
+  <img alt="" src="repo-site.png"></li>
  <li>Utilisez votre navigateur préféré pour visiter cette URL. Voici votre site ! Partagez le lien avec vos amis pour leur montrer :)</li>
 </ol>
 

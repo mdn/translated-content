@@ -246,7 +246,6 @@ function updateName() {
 
 <p>Notez que parfois vous tomberez sur des morceaux de JavaScript directement dans le HTML. Ce qui peut ressembler à ça&nbsp;:</p>
 
-<div id="inline_js_example">
 <pre class="brush: js example-bad">function createParagraph() {
   let para = document.createElement('p');
   para.textContent = 'Vous avez cliqué !';
@@ -254,15 +253,16 @@ function updateName() {
 }</pre>
 
 <pre class="brush: html example-bad">&lt;button onclick="createParagraph()"&gt;Cliquez-moi!&lt;/button&gt;</pre>
-</div>
 
 <p>Vous pouvez essayer cette version dans la démonstration ci-dessous.</p>
 
-<p>{{ EmbedLiveSample('inline_js_example', '100%', 150) }}</p>
+<p>{{ EmbedLiveSample('Handlers_JavaScript_en_ligne', '100%', 150) }}</p>
 
 <p>Cet exemple a exactement le même comportement que ceux des deux sections précédentes, sauf que l'élément {{htmlelement("button")}} a un handler <code>onclick</code> en ligne pour déclencher l'exécution de la fonction à la pression du bouton.</p>
 
 <p><strong>Évitez cependant de faire cela.</strong> C'est une mauvaise habitude de polluer le HTML avec du JavaScript, en plus d'être inefficace. Dans cette méthode, on doit inclure l'attribut <code>onclick="createParagraph()"</code> sur chaque bouton où le JavaScript doit s'appliquer.</p>
+
+<h3 id="En_JavaScript_pur">En JavaScript pur</h3>
 
 <p>Une construction en JavaScript pur permet de sélectionner tous les boutons avec une instruction. Dans l'exemple précédent c'est cette partie qui s'en charge&nbsp;:</p>
 
@@ -311,13 +311,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <p>Les scripts asynchrones téléchargeront le script sans bloquer le rendu de la page et l'exécuteront dès que le téléchargement du script sera terminé. Vous n'obtenez aucune garantie que les scripts s'exécutent dans un ordre spécifique, mais seulement qu'ils n'empêcheront pas le reste de la page de s'afficher. Il est préférable d'utiliser <code>async</code> lorsque les scripts de la page s'exécutent indépendamment les uns des autres et ne dépendent d'aucun autre script de la page.</p>
 
-<figure>
-  <img src="async-defer.jpg" alt="async vs defer" >
-  <figcaption>Image de <a href="https://html.spec.whatwg.org/images/asyncdefer.svg" target="_blank" >la spécification HTML</a>, copiée et rognée selon les termes de la licence <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
-  </figcaption>
-</figure>
+<img src="async-defer.jpg" alt="async vs defer" >
 
-<br>
+<p>Image de <a href="https://html.spec.whatwg.org/images/asyncdefer.svg" target="_blank" >la spécification HTML</a>, copiée et rognée selon les termes de la licence <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+</p>
 
 <p>Par exemple, si vous avez les éléments de script suivants :</p>
 

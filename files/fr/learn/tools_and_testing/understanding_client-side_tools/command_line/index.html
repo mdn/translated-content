@@ -18,7 +18,7 @@ original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Ligne_de_
 
 <p>Au cours de tout process de développement, vous allez très certainement être confronté à la nécessité d'exécuter des commandes dans un terminal (ce que l'on appelle "travailler en ligne de commande"). Cet article vous propose une introduction au terminal et vous dévoile les commandes essentielles dont vous aurez besoin, la façon de les chaîner, et comment ajouter vos propres outils d'interface en ligne de commande (CLI, command line interface).</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -129,7 +129,7 @@ original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Ligne_de_
 </ul>
 
 <div class="note">
-<p><strong>Note </strong>: On trouve  sur le web un bon nombre de tutoriels de qualité qui permettent d'aller beaucoup plus loin avec la ligne de commande — ceci n'est qu'une brève introduction ! L'auteur de ces lignes lui-même a sa propre <a href="https://terminal.training/?coupon=mdn">série de vidéos de formation au terminal</a> (80% de réduction en utilisant le code mdn au moment du paiement — 19$).</p>
+<p><strong>Note :</strong> On trouve  sur le web un bon nombre de tutoriels de qualité qui permettent d'aller beaucoup plus loin avec la ligne de commande — ceci n'est qu'une brève introduction ! L'auteur de ces lignes lui-même a sa propre <a href="https://terminal.training/?coupon=mdn">série de vidéos de formation au terminal</a> (80% de réduction en utilisant le code mdn au moment du paiement — 19$).</p>
 </div>
 
 <p>Pour aller plus loin, voyons maintenant comment utiliser quelques-uns de ces outils en ligne de commande. Commencez par ouvrir votre programme de terminal (ou console) !</p>
@@ -153,7 +153,7 @@ original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Ligne_de_
 <pre class="brush: bash">cd ..</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Raccourci vraiment utile sur un terminal, la touche <kbd>tab</kbd> émule la saisie automatique des mots dont vous connaissez l'existence, ce qui vous évite de les taper en entier. Par exemple, après avoir tapé les deux commandes ci-dessus, essayez de taper <code>cd B</code> puis de presser la touche <kbd>tab</kbd> — cela devrait saisir automatiquement le nom de répertoire <code>Bureau</code>, à condition qu'il soit présent dans le répertoire courant. Gardez ceci à l'esprit tout en poursuivant.</p>
+<p><strong>Note :</strong> Raccourci vraiment utile sur un terminal, la touche <kbd>tab</kbd> émule la saisie automatique des mots dont vous connaissez l'existence, ce qui vous évite de les taper en entier. Par exemple, après avoir tapé les deux commandes ci-dessus, essayez de taper <code>cd B</code> puis de presser la touche <kbd>tab</kbd> — cela devrait saisir automatiquement le nom de répertoire <code>Bureau</code>, à condition qu'il soit présent dans le répertoire courant. Gardez ceci à l'esprit tout en poursuivant.</p>
 </div>
 
 <p>Si le répertoire que vous visez est placé assez loin dans l'arborisation des fichiers, il vous faut connaître le chemin (on dit souvent path, qui est le terme anglais) pour vous y rendre. Cela devient en général plus facile à mesure que vous vous familiarisez avec la structure de votre système de fichiers, mais si vous n'êtes pas sûr vous pouvez le retrouver en combinant la commande <code>ls</code> avec des clicks dans votre Explorer ou autre gestionnaire graphique de fichiers, ce qui va vous permettre de voir où se trouve le répertoire (ou dossier) cherché par rapport à votre répertoire actuel (= répertoire courant).</p>
@@ -171,7 +171,7 @@ cd src</pre>
 <p>Notez que si vous commencez le chemin par un slash, vous le rendez absolu, par exemple <code>/Utilisateurs/votre-nom/Bureau</code>. Omettre le premier slash comme nous l'avons fait ci-dessus construit un chemin relatif à votre répertoire de travail actuel. C'est exactement la même chose qu'une URL dans un navigateur. Un slash au début signifie "à la racine du site web", alors qu'omettre le slash signifie "l'URL est relative à ma page courante".</p>
 
 <div class="note">
-<p><strong>Note</strong>: Sur windows vous devez utiliser des backslashes et non des slashes, p. ex. <code>cd Bureau\projet\src</code> — cela peut vous paraître vraiment étrange, mais si la question vous intéresse,<a href="https://www.youtube.com/watch?v=5T3IJfBfBmI"> regardez cette vidéo YouTube</a> (en anglais) qui présente une explication par l'un des ingénieurs principaux de Microsoft.</p>
+<p><strong>Note :</strong> Sur windows vous devez utiliser des backslashes et non des slashes, p. ex. <code>cd Bureau\projet\src</code> — cela peut vous paraître vraiment étrange, mais si la question vous intéresse,<a href="https://www.youtube.com/watch?v=5T3IJfBfBmI"> regardez cette vidéo YouTube</a> (en anglais) qui présente une explication par l'un des ingénieurs principaux de Microsoft.</p>
 </div>
 
 <h3 id="Lister_le_contenu_dun_répertoire">Lister le contenu d'un répertoire</h3>
@@ -199,11 +199,11 @@ cd src</pre>
 <p><img alt="A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command" src="mac-terminals-ls.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: Pour savoir exactement quelles sont les options d'une commande, vous pouvez consulter sa <a href="https://fr.wikipedia.org/wiki/Man_(Unix)">page de manuel</a> (<a href="https://en.wikipedia.org/wiki/Man_page">man page</a> en anglais). Pour cela, tapez la commande <code>man</code> suivie du nom de la commande que vous cherchez, par exemple <code>man ls</code>. La page de manuel va s'ouvrir dans le lecteur de texte par défaut de votre terminal (par exemple, <code><a href="https://en.wikipedia.org/wiki/Less_(Unix)">less</a></code> sur mon terminal), et vous allez pouvoir faire défiler la page avec les touches de flèches ou un mécanisme similaire. La page de manuel liste toutes les options de façon très détaillée, ce qui peut être un peu intimidant au début, mais au moins vous savez où les trouver si vous en avez besoin. Lorsque vous avez terminé avec la page de manuel, vous la refermez avec la commande "quitter" de votre visionneur de texte (pour <code>less</code> c'est "q" ; si ce n'est pas évident cherchez sur Internet).</p>
+<p><strong>Note :</strong> Pour savoir exactement quelles sont les options d'une commande, vous pouvez consulter sa <a href="https://fr.wikipedia.org/wiki/Man_(Unix)">page de manuel</a> (<a href="https://en.wikipedia.org/wiki/Man_page">man page</a> en anglais). Pour cela, tapez la commande <code>man</code> suivie du nom de la commande que vous cherchez, par exemple <code>man ls</code>. La page de manuel va s'ouvrir dans le lecteur de texte par défaut de votre terminal (par exemple, <code><a href="https://en.wikipedia.org/wiki/Less_(Unix)">less</a></code> sur mon terminal), et vous allez pouvoir faire défiler la page avec les touches de flèches ou un mécanisme similaire. La page de manuel liste toutes les options de façon très détaillée, ce qui peut être un peu intimidant au début, mais au moins vous savez où les trouver si vous en avez besoin. Lorsque vous avez terminé avec la page de manuel, vous la refermez avec la commande "quitter" de votre visionneur de texte (pour <code>less</code> c'est "q" ; si ce n'est pas évident cherchez sur Internet).</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Pour lancer une commande avec des options multiples, on peut en général les regrouper dans une seule chaîne de caractères après le tiret, par exemple <code>ls -lah</code>, ou <code>ls -ltrh</code>. Exercez-vous à consulter la page man de <code>ls</code> pour savoir ce que vous donnent ces options !</p>
+<p><strong>Note :</strong> Pour lancer une commande avec des options multiples, on peut en général les regrouper dans une seule chaîne de caractères après le tiret, par exemple <code>ls -lah</code>, ou <code>ls -ltrh</code>. Exercez-vous à consulter la page man de <code>ls</code> pour savoir ce que vous donnent ces options !</p>
 </div>
 
 <p>Maintenant que vous connaissez ces deux commandes fondamentales, allez un peu fouiller dans votre système de fichiers en naviguant à partir de votre répertoire.</p>
@@ -224,7 +224,7 @@ cd src</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong> : Beaucoup de commandes de terminal autorisent l'emploi d'astérisques comme caractère "joker", dont le sens est "une séquence de caractères quelconque". Cela vous permet d'exécuter une commande en une seule fois sur un nombre potentiellement important de fichiers qui correspondent au modèle donné. À titre d'exemple, <code>rm mdn-*</code> va effacer tous les fichiers qui commencent par <code>mdn-</code>. <code>rm mdn-*.bak</code> va effacer tous les fichiers qui commencent par <code>mdn- </code>et finissent par <code>.bak</code>.</p>
+<p><strong>Note :</strong> Beaucoup de commandes de terminal autorisent l'emploi d'astérisques comme caractère "joker", dont le sens est "une séquence de caractères quelconque". Cela vous permet d'exécuter une commande en une seule fois sur un nombre potentiellement important de fichiers qui correspondent au modèle donné. À titre d'exemple, <code>rm mdn-*</code> va effacer tous les fichiers qui commencent par <code>mdn-</code>. <code>rm mdn-*.bak</code> va effacer tous les fichiers qui commencent par <code>mdn- </code>et finissent par <code>.bak</code>.</p>
 </div>
 
 <h2 id="Le_terminal_—_une_pratique_à_risque">Le terminal — une pratique à risque ?</h2>
@@ -454,7 +454,7 @@ printMe(myObj);</pre>
  <li>En tant qu'élément des contrôles continus d'intégration grâce à des outils tels que <a href="https://github.com/features/actions">Github Actions</a>.</li>
 </ul>
 
-<p>Nous préférons personnellement la deuxième solution — quand on code par exemple sur VS Code, Prettier entre en jeu et nettoie le formatage lors de chaque  enregistrement. Vous trouverez dans les<span> </span><a href="https://prettier.io/docs/en/">Prettier docs</a><span> </span><span>beaucoup plus d'informations sur les différentes façons d'utiliser Prettier.</span></p>
+<p>Nous préférons personnellement la deuxième solution — quand on code par exemple sur VS Code, Prettier entre en jeu et nettoie le formatage lors de chaque  enregistrement. Vous trouverez dans les <a href="https://prettier.io/docs/en/">Prettier docs</a> beaucoup plus d'informations sur les différentes façons d'utiliser Prettier.</p>
 
 <h2 id="Autres_outils_à_essayer">Autres outils à essayer</h2>
 

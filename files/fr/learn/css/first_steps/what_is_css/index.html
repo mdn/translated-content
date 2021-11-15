@@ -15,9 +15,9 @@ original_slug: Learn/CSS/First_steps/Qu_est_ce_que_CSS
 
 <div>{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}</div>
 
-<p class="summary"><strong>{{Glossary("CSS")}}</strong> (<em>Cascading Style Sheets</em>) permet de créer des pages web à l'apparence soignée. Cet article vous propose de lever le voile en expliquant ce qu'est CSS ; un exemple simple en présentera la syntaxe puis quelques termes clé du langage seront introduits.</p>
+<p><strong>{{Glossary("CSS")}}</strong> (<em>Cascading Style Sheets</em>) permet de créer des pages web à l'apparence soignée. Cet article vous propose de lever le voile en expliquant ce qu'est CSS ; un exemple simple en présentera la syntaxe puis quelques termes clé du langage seront introduits.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -32,7 +32,7 @@ original_slug: Learn/CSS/First_steps/Qu_est_ce_que_CSS
 
 <p>Dans le cours <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML">Introduction à HTML</a>, nous avons présenté le langage HTML et comment l'utiliser afin de rédiger des documents structurés. Ces documents seront consultables dans un navigateur. Les titres apparaîtront dans une police plus grande que le corps de texte, la rupture entre deux paragraphes sera marquée par un saut de ligne. Les liens seront soulignés et colorés pour les distinguer du reste du texte. L'image ci-dessous montre comment un navigateur affiche un document HTML — la mise en forme par défaut garantit un minimum de lisibilité, même si l'auteur de la page n'a spécifié aucune règle de style.</p>
 
-<p><img alt="La mise en forme par défaut appliquée par un navigateur." src="https://mdn.mozillademos.org/files/17059/basic_styling_fr.png" style="border: 1px solid #cccccc; height: 232px; width: 953px;"></p>
+<p><img alt="La mise en forme par défaut appliquée par un navigateur." src="basic_styling_fr.png"></p>
 
 <p>Le Web serait d'un ennui terrible si tous les sites ressemblaient à la page ci-dessus. Grâce à CSS, vous pouvez contrôler exactement l'affichage de chaque élément HTML dans le navigateur et ainsi présenter vos documents avec la mise en forme de votre choix.</p>
 
@@ -48,8 +48,8 @@ original_slug: Learn/CSS/First_steps/Qu_est_ce_que_CSS
 
 <p><strong>"Présenter</strong> un document à l'utilisateur" signifie convertir ce document dans une forme utilisable par le public visé. Les {{Glossary("browser","navigateurs")}}, tels {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}}, {{Glossary("Safari","Safari")}} ou {{Glossary("Microsoft Edge","Edge")}} sont conçus pour présenter visuellement des documents, que ce soit sur l'écran d'un ordinateur, un vidéo-projecteur ou une imprimante.</p>
 
-<div class="blockIndicator note">
-<p><strong>Note </strong>: Un navigateur est parfois appelé {{Glossary("User agent","agent utilisateur")}}. On entend par là un programme informatique qui agit pour un utilisateur au sein d'un système informatique. Pour CSS, les premiers agents utilisateur qui nous viennent à l'esprit sont les navigateurs. Ce ne sont pourtant pas les seuls. Il existe d'autres "agents utilisateurs" comme les programmes qui convertissent des documents  HTML et CSS en documents PDF imprimables.</p>
+<div class="note">
+<p><strong>Note :</strong> Un navigateur est parfois appelé {{Glossary("User agent","agent utilisateur")}}. On entend par là un programme informatique qui agit pour un utilisateur au sein d'un système informatique. Pour CSS, les premiers agents utilisateur qui nous viennent à l'esprit sont les navigateurs. Ce ne sont pourtant pas les seuls. Il existe d'autres "agents utilisateurs" comme les programmes qui convertissent des documents  HTML et CSS en documents PDF imprimables.</p>
 </div>
 
 <p>CSS peut être utilisé pour une mise en forme élémentaire des documents — par exemple changer <a href="/fr/docs/Web/CSS/Type_color">la couleur</a> et <a href="/fr/docs/Web/CSS/font-size">la taille</a> des titres et des liens. Il peut être utilisé pour concevoir une maquette — par exemple transformer <a href="/fr/docs/Web/CSS/Layout_cookbook/Disposition_en_colonnes">un texte affiché sur une colonne</a> en une composition avec un cadre principal et une barre latérale pour les informations reliées. Avec CSS, on peut aussi produire des <a href="/fr/docs/Web/CSS/Animations_CSS">animations</a>. N'hésitez pas à cliquer sur les liens de ce paragraphe pour observer différents exemples.</p>
@@ -62,7 +62,7 @@ original_slug: Learn/CSS/First_steps/Qu_est_ce_que_CSS
 
 <p>Dans le code suivant, une règle CSS élémentaire réalise cette mise en forme :</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   color: red;
   font-size: 5em;
 }</pre>
@@ -73,7 +73,7 @@ original_slug: Learn/CSS/First_steps/Qu_est_ce_que_CSS
 
 <p>Une feuille de style CSS est constituée d'une succession de telles règles :</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   color: red;
   font-size: 5em;
 }
@@ -84,8 +84,8 @@ p {
 
 <p>On retient facilement certaines valeurs, d'autres sont plus difficiles à mémoriser. Pour s'y retrouver, sur MDN, la page individuelle de chaque propriété donne un aperçu rapide et complet des valeurs applicables.</p>
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Sur MDN, dans <a href="/fr/docs/Web/CSS/Reference">la référence CSS</a>, vous trouverez une collection de liens à propos de chaque propriété CSS (ainsi que d'autres aspects de CSS). Par ailleurs, n'hésitez pas à lancer des requêtes "mdn <em>nom-de-propriété-ou-fonctionnalité-css</em>" dans votre moteur de recherche préféré dès qu'un aspect de CSS vous interpelle. Vous pouvez par exemple tester les requêtes "mdn color" et "mdn font-size" !</p>
+<div class="note">
+<p><strong>Note :</strong> Sur MDN, dans <a href="/fr/docs/Web/CSS/Reference">la référence CSS</a>, vous trouverez une collection de liens à propos de chaque propriété CSS (ainsi que d'autres aspects de CSS). Par ailleurs, n'hésitez pas à lancer des requêtes "mdn <em>nom-de-propriété-ou-fonctionnalité-css</em>" dans votre moteur de recherche préféré dès qu'un aspect de CSS vous interpelle. Vous pouvez par exemple tester les requêtes "mdn color" et "mdn font-size" !</p>
 </div>
 
 <h2 id="Modules_CSS">Modules CSS</h2>

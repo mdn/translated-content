@@ -14,12 +14,12 @@ original_slug: >-
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Validation_donnees_formulaire", "Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript", "Web/Guide/HTML/Formulaires")}}</div>
 
-<p class="summary">Dans de nombreux cas les <a href="/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs">widgets de formulaires HTML disponibles</a> ne suffisent pas. Si vous voulez composer certains widgets dans un <a href="/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms">style avancé</a> tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.</p>
+<p>Dans de nombreux cas les <a href="/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs">widgets de formulaires HTML disponibles</a> ne suffisent pas. Si vous voulez composer certains widgets dans un <a href="/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms">style avancé</a> tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.</p>
 
 <p>Dans cet article, nous verrons comment construire un tel widget. Pour cela, nous allons travailler avec un exemple : reconstruire l'élément {{HTMLElement("select")}}.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Nous nous resterons centrés sur la construction des widgets, et non sur la façon de rendre le code générique et réutilisable ; cela impliquerait une manipulation de code JavaScript et de DOM dans un contexte inconnu, et nous sortirions de la portée de cet article.</p>
+<p><strong>Note :</strong> Nous nous resterons centrés sur la construction des widgets, et non sur la façon de rendre le code générique et réutilisable ; cela impliquerait une manipulation de code JavaScript et de DOM dans un contexte inconnu, et nous sortirions de la portée de cet article.</p>
 </div>
 
 <h2 id="Conception_structure_et_sémantique">Conception, structure et sémantique</h2>
@@ -28,58 +28,46 @@ original_slug: >-
 
 <p>Dans notre exemple, nous allons reconstruire l'élément {{HTMLElement("select")}}}. Voici le résultat que nous voulons atteindre :</p>
 
-<p><img alt="The three states of a select box" src="/files/4481/custom-select.png" style="height: 135px; width: 366px;"></p>
+<p><img alt="The three states of a select box" src="custom-select.png"></p>
 
 <p>Cette capture d'écran montre les trois états principaux du widget : l'état normal (à gauche), l'état actif (au milieu) et l'état ouvert (à droite).</p>
 
 <p>En termes de comportement, nous voulons que notre widget soit utilisable aussi bien avec une souris qu'avec un clavier, comme n'importe quel widget natif. Commençons par définir comment le widget atteint chaque état :</p>
 
-<dl>
- <dt>Le widget est dans son état normal :</dt>
- <dd>
+<p>Le widget est dans son état normal :</p>
+
  <ul>
   <li>la page se charge</li>
   <li>le widget était actif et l'utilisateur a cliqué quelque part en dehors du widget</li>
   <li>le widget était actif et l'utilisateur a déplacé le focus sur un autre avec le clavier</li>
  </ul>
- </dd>
-</dl>
 
-<p> </p>
-
-<dl>
- <dd>
  <div class="note">
- <p><strong>Note :</strong> Déplacer le focus dans la page entre les divers widgets se fait généralement en appuyant sur la touche de tabulation, mais ce n'est pas la norme partout. Par exemple, circuler parmi les liens sur une page se fait dans Safari par défaut en utilisant la <a href="http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/">combinaison Option+Tab</a>.</p>
+ <p><strong>Note :</strong> Déplacer le focus dans la page entre les divers widgets se fait généralement en appuyant sur la touche de tabulation, mais ce n'est pas la norme partout. Par exemple, circuler parmi les liens sur une page se fait dans Safari par défaut en utilisant la <a href="http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/">combinaison Option+Tab</a>.</p>
  </div>
- </dd>
- <dt>Le widget est sans son état actif :</dt>
- <dd>
+
+ <p>Le widget est sans son état actif :</p>
+ 
  <ul>
   <li>l'utilisateur clique sur lui</li>
   <li>l'utilisateur presse la touche Tabulation et obtient le focus</li>
   <li>le widget était dans l'état ouvert et l'utilisateur a cliqué dessus.</li>
  </ul>
- </dd>
- <dt>Le widget est dans un état ouvert :</dt>
- <dd>
+ 
+ <p>Le widget est dans un état ouvert :</p>
+ 
  <ul>
   <li>le widget est dans un état autre que ouvert et l'utilisateur clique dessus.</li>
  </ul>
- </dd>
-</dl>
 
 <p>Maintenant que nous savons comment changer les états du widget, il est important de définir comment changer la valeur du widget :</p>
 
-<dl>
- <dt>La valeur change quand :</dt>
- <dd>
+ <p>La valeur change quand :</p>
+
  <ul>
   <li>l'utilisateur clique sur une option quand le widget est dans l'état ouvert</li>
   <li>l'utilisateur presse la touche <kbd>↑</kbd> ou <kbd>↓</kbd> quand le widget est dans l'état actif</li>
  </ul>
- </dd>
-</dl>
 
 <p>Enfin, définissons comment les options du widget doivent se comporter :</p>
 
@@ -92,7 +80,7 @@ original_slug: >-
 
 <p>Autre exemple amusant : que se passera-t-il si l'utilisateur presse les touches <kbd>↑</kbd> ou <kbd>↓</kbd> alors que le widget est à l'état ouvert ? Ici, c'est un peu plus délicat. Si vous considérez que l'état actif et l'état ouvert sont totalement différents, la réponse est encore une fois « rien ne se produira » parce que nous n'avons pas défini d'interactions clavier pour l'état ouvert. D'autre part, si vous considérez que l'état actif et l'état ouvert coïncident, la valeur peut changer mais l'option ne sera certainement pas mise en valeur en conséquence, encore une fois parce que nous n'avons pas défini d'interactions clavier sur les options lorsque le widget est dans son état ouvert (nous avons seulement défini ce qui doit se passer lorsque le widget est ouvert, mais rien après).</p>
 
-<p>Dans notre exemple, les spécifications manquantes sont évidentes et nous les traiterons, mais cela peut devenir un problème réel sur de nouveaux widgets exotiques, pour lesquels personne n'a la moindre idée de ce qu'est le bon comportement. Il est donc toujours bon de passer du temps à l'étape conception, car si vous définissez pauvrement le comportement, ou si vous oubliez de le définir, il sera très difficile de le redéfinir une fois les utilisateurs habitués. Si vous avez des doutes, demandez l'avis des autres, et si vous avez le budget pour cela, n'hésitez pas à <a href="https://fr.wikipedia.org/wiki/Test_utilisateur">faire des tests utilisateur</a>. Ce processus est appelé UX Design <span class="CLPzrc Y0NH2b">(<strong>U</strong>ser e<strong>X</strong>perience)</span>. Si vous voulez en savoir plus sur ce sujet, vous devriez consulter les ressources utiles suivantes :</p>
+<p>Dans notre exemple, les spécifications manquantes sont évidentes et nous les traiterons, mais cela peut devenir un problème réel sur de nouveaux widgets exotiques, pour lesquels personne n'a la moindre idée de ce qu'est le bon comportement. Il est donc toujours bon de passer du temps à l'étape conception, car si vous définissez pauvrement le comportement, ou si vous oubliez de le définir, il sera très difficile de le redéfinir une fois les utilisateurs habitués. Si vous avez des doutes, demandez l'avis des autres, et si vous avez le budget pour cela, n'hésitez pas à <a href="https://fr.wikipedia.org/wiki/Test_utilisateur">faire des tests utilisateur</a>. Ce processus est appelé UX Design (<strong>U</strong>ser e<strong>X</strong>perience). Si vous voulez en savoir plus sur ce sujet, vous devriez consulter les ressources utiles suivantes :</p>
 
 <ul>
  <li><a href="http://www.uxmatters.com/" rel="external">UXMatters.com</a></li>
@@ -101,7 +89,7 @@ original_slug: >-
 </ul>
 
 <div class="note">
-<p><strong>Note : </strong>De plus, dans la plupart des systèmes, il y a moyen d'ouvrir l'élément {{HTMLElement("select")}} pour voir tous les choix disponibles (c'est la même chose que de cliquer sur l'élément {{HTMLElement("select")}} avec une souris). Cela se fait avec <kbd>Alt</kbd>+<strong><kbd>↓</kbd></strong> sous Windows et n'a pas été implémenté dans notre exemple - mais il serait facile de le faire, car le mécanisme a déjà été implémenté pour l'événement <code>click</code>.</p>
+<p><strong>Note :</strong> De plus, dans la plupart des systèmes, il y a moyen d'ouvrir l'élément {{HTMLElement("select")}} pour voir tous les choix disponibles (c'est la même chose que de cliquer sur l'élément {{HTMLElement("select")}} avec une souris). Cela se fait avec <kbd>Alt</kbd>+<strong><kbd>↓</kbd></strong> sous Windows et n'a pas été implémenté dans notre exemple - mais il serait facile de le faire, car le mécanisme a déjà été implémenté pour l'événement <code>click</code>.</p>
 </div>
 
 <h3 id="Definition_de_la_structure_HTML_et_de_la_sémantique">Definition de la structure HTML et de la sémantique</h3>
@@ -323,7 +311,7 @@ original_slug: >-
    <td>{{EmbedLiveSample("Open_state",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1")}}</td>
   </tr>
   <tr>
-   <td colspan="3" style="text-align: center;"><a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1">Check out the source code</a></td>
+   <td colspan="3" style="text-align: center;"><a href="/fr/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1">Check out the source code</a></td>
   </tr>
  </tbody>
 </table>
@@ -333,11 +321,11 @@ original_slug: >-
 <p>Maintenant que le design et la structure sont prêts, nous pouvons écrire le code JAvaScript pour que le widget fonctionne vraiment.</p>
 
 <div class="warning">
-<p>Avertissement : Le code qui suit a été conçu à des fins éducatives et ne doit pas être utilisé tel quel. Entre autres choses, comme nous le verrons, il n'est pas à l'épreuve du temps et ne fonctionnera pas sur des navigateurs historiques. Il comporte également des parties redondantes. Elles devraient être optimisées pour du code de production.</p>
+<p><strong>Attention :</strong> Le code qui suit a été conçu à des fins éducatives et ne doit pas être utilisé tel quel. Entre autres choses, comme nous le verrons, il n'est pas à l'épreuve du temps et ne fonctionnera pas sur des navigateurs historiques. Il comporte également des parties redondantes. Elles devraient être optimisées pour du code de production.</p>
 </div>
 
 <div class="note">
-<p>Note : Créer des widgets réutilisables peut se révéler un peu délicat. L'ébauche de la norme « <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html">W3C Web Component</a> » apporte des réponses à cette question particulière. Le <a href="http://x-tags.org/">projet X-Tag</a> est un essai de mise en œuvre de cette spécification ; nous vous encourageons à y jeter un coup d'œil.</p>
+<p><strong>Note :</strong> Créer des widgets réutilisables peut se révéler un peu délicat. L'ébauche de la norme « <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html">W3C Web Component</a> » apporte des réponses à cette question particulière. Le <a href="http://x-tags.org/">projet X-Tag</a> est un essai de mise en œuvre de cette spécification ; nous vous encourageons à y jeter un coup d'œil.</p>
 </div>
 
 <h3 id="Pourquoi_ne_fonctionne-t-il_pas">Pourquoi ne fonctionne-t-il pas ?</h3>
@@ -433,7 +421,7 @@ original_slug: >-
    <td>{{EmbedLiveSample("JS",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_2")}}</td>
   </tr>
   <tr>
-   <td colspan="2" style="text-align: center;"><a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2">Testez le code source</a></td>
+   <td colspan="2" style="text-align: center;"><a href="/fr/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2">Testez le code source</a></td>
   </tr>
  </tbody>
 </table>
@@ -459,7 +447,7 @@ original_slug: >-
  <li>{{domxref("element.querySelector","querySelector")}} et {{domxref("element.querySelectorAll","querySelectorAll")}}</li>
 </ol>
 
-<p>Au-delà de la disponibilité de ces fonctionnalités spécifiques, il reste encore un problème avant de commencer. L'objet retourné par la fonction {{domxref("element.querySelectorAll","querySelectorAll()")}} est une {{domxref("NodeList")}} plutôt qu'un <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code>. C'est important, car les objets  <code>Array</code> acceptent la fonction <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code>, mais {{domxref("NodeList")}} ne le fait pas. Comme {{domxref("NodeList")}} ressemble vraiment à un <code>Array</code> et que <code>forEach</code> est d'utilisation si commode, nous pouvons facilement ajouter la prise en charge de <code>forEach à</code> {{domxref("NodeList")}} pour nous faciliter la vie, comme ceci :</p>
+<p>Au-delà de la disponibilité de ces fonctionnalités spécifiques, il reste encore un problème avant de commencer. L'objet retourné par la fonction {{domxref("element.querySelectorAll","querySelectorAll()")}} est une {{domxref("NodeList")}} plutôt qu'un <code><a href="/fr/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code>. C'est important, car les objets  <code>Array</code> acceptent la fonction <code><a href="/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code>, mais {{domxref("NodeList")}} ne le fait pas. Comme {{domxref("NodeList")}} ressemble vraiment à un <code>Array</code> et que <code>forEach</code> est d'utilisation si commode, nous pouvons facilement ajouter la prise en charge de <code>forEach à</code> {{domxref("NodeList")}} pour nous faciliter la vie, comme ceci :</p>
 
 <pre class="brush: js">NodeList.prototype.forEach = function (callback) {
   Array.prototype.forEach.call(this, callback);
@@ -706,7 +694,7 @@ window.addEventListener('load', function () {
   });
 });</pre>
 
-<p>Dans le code ci-dessus, il faut noter l'utilisation de la propriété <code><a href="/en-US/docs/Web/API/HTMLElement/tabIndex" title="/en-US/docs/Web/API/HTMLElement/tabIndex">tabIndex</a></code>. Utiliser cette propriété est nécessaire pour être sûr que le widget natif n'obtiendra jamais le focus et que le widget personnalisé l'obtiendra quand l'utilisateur utilise le clavier ou la souris.</p>
+<p>Dans le code ci-dessus, il faut noter l'utilisation de la propriété <code><a href="/fr/docs/Web/API/HTMLElement/tabIndex" title="/en-US/docs/Web/API/HTMLElement/tabIndex">tabIndex</a></code>. Utiliser cette propriété est nécessaire pour être sûr que le widget natif n'obtiendra jamais le focus et que le widget personnalisé l'obtiendra quand l'utilisateur utilise le clavier ou la souris.</p>
 
 <p>Et voilà, nous avons terminé ! Voici le résultat :</p>
 
@@ -734,11 +722,11 @@ window.addEventListener('load', function () {
 
 <p>Nous venons de faire quelque chose qui fonctionne, même si nous sommes loin d'avoir une boîte de sélection avec toutes les fonctionnalités, elle fonctionne parfaitement. Mais ce que nous avons fait n'est rien de plus que de jouer avec les DOM. Elle n'a pas de sémantique réelle, et même si elle ressemble à une boîte de sélection, du point de vue du navigateur, ce n'en est pas une, de sorte que les technologies d'assistance ne pourront pas comprendre que c'est une boîte de sélection. Bref, cette jolie nouvelle boîte de sélection n'est pas accessible !</p>
 
-<p>Heureusement, il existe une solution et elle s'appelle <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a>. ARIA signifie « Accessible Rich Internet Application » et c'est une<a href="http://www.w3.org/TR/wai-aria/" rel="external"> norme W3C </a>spécialement conçue pour ce que nous faisons ici : rendre accessibles les applications web et les widgets personnalisés. Il s'agit essentiellement d'un ensemble d'attributs qui étendent le HTML afin que nous puissions mieux décrire les rôles, les états et les propriétés comme si l'élément que nous venons de concevoir était l'élément natif pour lequel il essaie de passer. L'utilisation de ces attributs est très simple, alors faisons-le.</p>
+<p>Heureusement, il existe une solution et elle s'appelle <a href="/fr/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a>. ARIA signifie « Accessible Rich Internet Application » et c'est une<a href="http://www.w3.org/TR/wai-aria/" rel="external"> norme W3C </a>spécialement conçue pour ce que nous faisons ici : rendre accessibles les applications web et les widgets personnalisés. Il s'agit essentiellement d'un ensemble d'attributs qui étendent le HTML afin que nous puissions mieux décrire les rôles, les états et les propriétés comme si l'élément que nous venons de concevoir était l'élément natif pour lequel il essaie de passer. L'utilisation de ces attributs est très simple, alors faisons-le.</p>
 
 <h3 id="L'attribut_role">L'attribut <code>role</code></h3>
 
-<p>L'attribut clé utilisé par <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a> est l'attribut <a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques" title="/en-US/docs/Accessibility/ARIA/ARIA_Techniques"><code>role</code></a>. L'attribut <a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques" title="/en-US/docs/Accessibility/ARIA/ARIA_Techniques"><code>role </code></a> accepte une valeur qui définit à quoi sert un élément. Chaque rôle définit ses propres exigences et comportements. Dans notre exemple, nous utiliserons le rôle de <code><a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role" title="/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role">listbox</a></code>. C'est un « rôle composite », ce qui signifie que les éléments ayant ce rôle s'attendent à avoir des enfants, chacun avec un rôle spécifique (dans ce cas, au moins un enfant avec le rôle <code>option</code>).</p>
+<p>L'attribut clé utilisé par <a href="/fr/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a> est l'attribut <a href="/fr/docs/Accessibility/ARIA/ARIA_Techniques" title="/en-US/docs/Accessibility/ARIA/ARIA_Techniques"><code>role</code></a>. L'attribut <a href="/fr/docs/Accessibility/ARIA/ARIA_Techniques" title="/en-US/docs/Accessibility/ARIA/ARIA_Techniques"><code>role </code></a> accepte une valeur qui définit à quoi sert un élément. Chaque rôle définit ses propres exigences et comportements. Dans notre exemple, nous utiliserons le rôle de <code><a href="/fr/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role" title="/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role">listbox</a></code>. C'est un « rôle composite », ce qui signifie que les éléments ayant ce rôle s'attendent à avoir des enfants, chacun avec un rôle spécifique (dans ce cas, au moins un enfant avec le rôle <code>option</code>).</p>
 
 <p>Il faut aussi noter qu'ARIA définit les rôles appliqués par défaut aux balises HTML standard. Par exemple, l'élément {{HTMLElement("table")}} correspond au rôle <code>grid</code>, et l'élément {{HTMLElement("ul")}} correspond au rôle <code>list</code>. Comme nous utilisons un élément {{HTMLElement("ul")}}, nous voulons nous assurer que le rôle <code>listbox</code> de notre widget remplacera le rôle <code>list</code> de l'élément {{HTMLElement("ul")}}. À cette fin, nous utiliserons le rôle <code>presentation</code>. Ce rôle est conçu pour nous permettre d'indiquer qu'un élément n'a pas de signification particulière, et est utilisé uniquement pour présenter de l'information. Nous l'appliquerons à notre élément {{HTMLElement("ul")}}.</p>
 
@@ -759,12 +747,12 @@ window.addEventListener('load', function () {
 &lt;/div&gt;</pre>
 
 <div class="note">
-<p><strong>Note :</strong> Inclure à la fois l'attribut <code>role</code> et l'attribut <code>class</code> n'est nécessaire que si vous souhaitez prendre en charge les navigateurs anciens qui n'acceptent pas les <a href="/en-US/docs/CSS/Attribute_selectors" title="/en-US/docs/CSS/Attribute_selectors">selecteurs d'attribut CSS</a>.</p>
+<p><strong>Note :</strong> Inclure à la fois l'attribut <code>role</code> et l'attribut <code>class</code> n'est nécessaire que si vous souhaitez prendre en charge les navigateurs anciens qui n'acceptent pas les <a href="/fr/docs/CSS/Attribute_selectors" title="/en-US/docs/CSS/Attribute_selectors">selecteurs d'attribut CSS</a>.</p>
 </div>
 
 <h3 id="L'attribut_aria-selected">L'attribut  <code>aria-selected</code></h3>
 
-<p>Utiliser l'attribut <code>role</code> ne suffit pas. <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a> fournit également de nombreux états et attributs de propriété. Plus vous les utiliserez, mieux votre widget sera compris par les techniques d'assistance. Dans notre cas, nous limiterons notre utilisation à un seul attribut : <code>aria-selected</code>.</p>
+<p>Utiliser l'attribut <code>role</code> ne suffit pas. <a href="/fr/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a> fournit également de nombreux états et attributs de propriété. Plus vous les utiliserez, mieux votre widget sera compris par les techniques d'assistance. Dans notre cas, nous limiterons notre utilisation à un seul attribut : <code>aria-selected</code>.</p>
 
 <p>L'attribut <code>aria-selected</code> s'utilise pour marquer l'option actuellement sélectionnée ; ceci permet aux techniques d'assistance d'informer l'utilisateur quelle est la sélection en cours. Nous l'utiliserons dynamiquement avec JavaScript pour marquer l'option sélectionnée chaque fois que l'utilisateur en choisit une. Pour cela, nous devons réviser la fonction <code>updateValue()</code> :</p>
 
@@ -825,7 +813,7 @@ window.addEventListener('load', function () {
 
 <ul>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML">Mon premier formulaire HTML</a></li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML"><span>Comment structurer un formulaire HTML</span></a></li>
+ <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML">Comment structurer un formulaire HTML</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs">Les widgets natifs pour formulaire</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires">Envoi des données de formulaire</a></li>
  <li><a href="/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire">Validation des données de formulaire</a></li>

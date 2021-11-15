@@ -12,9 +12,9 @@ translation_of: Learn/JavaScript/Asynchronous/Concepts
 ---
 <div>{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}</div>
 
-<p class="summary">Dans cet article, nous allons passer en revue un certain nombre de concepts importants relatifs à la programmation asynchrone et à la façon dont elle se présente dans les navigateurs web et JavaScript. Vous devriez comprendre ces concepts avant de travailler sur les autres articles du module.</p>
+<p>Dans cet article, nous allons passer en revue un certain nombre de concepts importants relatifs à la programmation asynchrone et à la façon dont elle se présente dans les navigateurs web et JavaScript. Vous devriez comprendre ces concepts avant de travailler sur les autres articles du module.</p>
 
-<table class="learn-box standard-table">
+<table class="standard-table">
   <tbody>
     <tr>
       <th scope="row">Prérequis :</th>
@@ -33,7 +33,7 @@ translation_of: Learn/JavaScript/Asynchronous/Concepts
 
 <p>Les utilisatrices et utilisateurs de macOS, par exemple, le voient parfois avec le curseur rotatif de couleur arc-en-ciel (ou « ballon de plage », comme on l'appelle souvent). Ce curseur est la façon dont le système d'exploitation dit "le programme que vous utilisez actuellement a dû s'arrêter et attendre que quelque chose se termine, et cela prend tellement de temps que je craignais que vous vous demandiez ce qui se passe".</p>
 
-<p><img alt="Spinner multicolore pour macOS avec ballon de plage." src="beachball.jpg" style="display: block; float: left; margin: 0px 30px 0px 0px;"></p>
+<p><img alt="Spinner multicolore pour macOS avec ballon de plage." src="beachball.jpg"></p>
 
 
 <p>C'est une expérience frustrante qui n'est pas une bonne utilisation de la puissance de traitement de l'ordinateur, surtout à une époque où les ordinateurs disposent de plusieurs cœurs de processeur. Il est inutile de rester assis à attendre quelque chose alors que vous pouvez laisser une tâche se dérouler sur un autre cœur de processeur et être averti quand elle a terminé. Cela vous permet d'effectuer d'autres travaux en même temps, ce qui est la base de la <strong>programmation asynchrone</strong>. C'est à l'environnement de programmation que vous utilisez (les navigateurs web, dans le cas du développement web) de vous fournir des API qui vous permettent d'exécuter de telles tâches de manière asynchrone.</p>
@@ -63,9 +63,8 @@ btn.addEventListener('click', () =&gt; {
 
 <p>Lorsque vous exécutez l'exemple, ouvrez votre console JavaScript, puis cliquez sur le bouton. Vous remarquerez que le paragraphe n'apparaît qu'une fois que le calcul des dates est terminé et que le message de la console a été enregistré. Le code s'exécute dans l'ordre où il apparaît dans la source, et la dernière opération ne s'exécute pas tant que la première n'est pas terminée.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>L'exemple précédent est très peu réaliste. Vous ne calculeriez jamais 10 millions de dates sur une véritable application web ! Il sert cependant à vous donner l'idée de base.</p>
+<div class="note">
+  <p><strong>Note :</strong> L'exemple précédent est très peu réaliste. Vous ne calculeriez jamais 10 millions de dates sur une véritable application web ! Il sert cependant à vous donner l'idée de base.</p>
 </div>
 
 <p>Dans notre deuxième exemple, <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-ui-blocking.html">simple-sync-ui-blocking.html</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-ui-blocking.html">voir en direct</a>), nous simulons quelque chose de légèrement plus réaliste que vous pourriez rencontrer sur une page réelle. Nous bloquons l'interactivité de l'utilisateur avec le rendu de l'interface utilisateur. Dans cet exemple, nous avons deux boutons :</p>
@@ -92,9 +91,8 @@ alertBtn.addEventListener('click', () =&gt;
 
 <p>Si vous cliquez sur le premier bouton, puis rapidement sur le second, vous verrez que l'alerte n'apparaît pas avant que les cercles aient fini d'être rendus. La première opération bloque la seconde jusqu'à ce qu'elle ait fini de s'exécuter.</p>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>D'accord, dans notre cas, c'est laid et nous simulons l'effet de blocage, mais il s'agit d'un problème courant contre lequel les développeuses et développeurs d'applications réelles se battent sans cesse pour atténuer les impacts indésirables.</p>
+<div class="note">
+  <p><strong>Note :</strong> D'accord, dans notre cas, c'est laid et nous simulons l'effet de blocage, mais il s'agit d'un problème courant contre lequel les développeuses et développeurs d'applications réelles se battent sans cesse pour atténuer les impacts indésirables.</p>
 </div>
 
 <p>Pourquoi ? La réponse est que JavaScript, de manière générale, ne s'exécute que sur <strong>un seul <i>thread</i></strong>. À ce stade, nous devons introduire le concept de <strong><i>threads</i></strong>.</p>

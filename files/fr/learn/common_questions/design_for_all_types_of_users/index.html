@@ -11,11 +11,10 @@ translation_of: Learn/Common_questions/Design_for_all_types_of_users
 original_slug: Apprendre/Concevoir_site_tous_types_utilisateurs
 ---
 <div>{{IncludeSubnav("/fr/Apprendre")}}</div>
-<div class="summary">
-<p>Cet article aborde les concepts de bases pour vous aider à construire des sites web accessibles à tous.</p>
-</div>
 
-<table class="learn-box nostripe standard-table">
+<p>Cet article aborde les concepts de bases pour vous aider à construire des sites web accessibles à tous.</p>
+
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
@@ -32,7 +31,7 @@ original_slug: Apprendre/Concevoir_site_tous_types_utilisateurs
 
 <h2 id="Pédagogie_active">Pédagogie active</h2>
 
-<p><em>Il n'y a, pour le moment, pas de matériau pour la pédagogie active. <a href="https://developer.mozilla.org/fr/docs/MDN/D%C3%A9buter_sur_MDN">Cependant, vous pouvez contribuer</a>.</em></p>
+<p><em>Il n'y a, pour le moment, pas de matériau pour la pédagogie active. <a href="/fr/docs/MDN/D%C3%A9buter_sur_MDN">Cependant, vous pouvez contribuer</a>.</em></p>
 
 <h2 id="Aller_plus_loin">Aller plus loin</h2>
 
@@ -45,12 +44,12 @@ original_slug: Apprendre/Concevoir_site_tous_types_utilisateurs
 <p>Pour contrôler le contraste, vous pouvez télécharger et installer <a href="http://www.paciellogroup.com/resources/contrastanalyser/">l'analyseur de contraste</a> du Groupe Paciello.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Sinon, vous pouvez également trouver différents vérificateurs de contrastes disponibles en ligne, par exemple celui de WebAIM : <a href="http://webaim.org/resources/contrastchecker/">Color Contrast Checker</a>. Il est préférable d'utiliser un vérificateur qui fonctionne en local sur votre ordinateur car généralement, ceux-ci ont également une pipette qui permet de prélever la valeur d'une couleur sur tout l'écran.</p>
+<p><strong>Note :</strong> Sinon, vous pouvez également trouver différents vérificateurs de contrastes disponibles en ligne, par exemple celui de WebAIM : <a href="http://webaim.org/resources/contrastchecker/">Color Contrast Checker</a>. Il est préférable d'utiliser un vérificateur qui fonctionne en local sur votre ordinateur car généralement, ceux-ci ont également une pipette qui permet de prélever la valeur d'une couleur sur tout l'écran.</p>
 </div>
 
 <p>Par exemple, testons les couleurs de cette page et voyons ce que cela donne avec l'outil d'analyse de contraste :</p>
 
-<p><img alt="Colour contrast on this page: excellent!" src="https://mdn.mozillademos.org/files/9671/colour-contrast.png" style="height: 575px; width: 799px;"></p>
+<p><img alt="Colour contrast on this page: excellent!" src="colour-contrast.png"></p>
 
 <p>Le ratio de contraste pour la luminosité entre le texte est l'arrière plan est de 8.30:1, ce qui est mieux que le minimum recommandé par le standard (4.5:1). Avec cette valeur, de nombreuses personnes devraient être en mesure de lire le texte..</p>
 
@@ -147,7 +146,7 @@ span.subheading { font-size:1rem; }
 <p>C'est plus facile de cette façon, n'est-ce pas ? Cela fonctionne, à partir d'<a href="http://caniuse.com/#search=rem">Internet Explorer 9 et dans n'importe quel autre navigateur récent</a>, n'hésitez pas à l'utiliser.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Vous remarquerez qu'Opera Mini ne supporte pas les tailles de police exprimées en rem, il utilisera sa propre taille de police.</p>
+<p><strong>Note :</strong> Vous remarquerez qu'Opera Mini ne supporte pas les tailles de police exprimées en rem, il utilisera sa propre taille de police.</p>
 </div>
 
 <h4 id="Pourquoi_aurais-je_besoin_d'utiliser_des_unités_proportionnelles">Pourquoi aurais-je besoin d'utiliser des unités proportionnelles ?</h4>
@@ -162,7 +161,7 @@ span.subheading { font-size:1rem; }
 </ul>
 
 <div class="note">
-<p><strong>Note :</strong> Votre utilisation de ces unités pourra varier. S'il est nécessaire pour vous de gérer les anciens navigateurs, vous aurez besoin d'utiliser des <code>em</code>s, quitte à faire un peu de mathématique en chemin.</p>
+<p><strong>Note :</strong> Votre utilisation de ces unités pourra varier. S'il est nécessaire pour vous de gérer les anciens navigateurs, vous aurez besoin d'utiliser des <code>em</code>s, quitte à faire un peu de mathématique en chemin.</p>
 </div>
 
 <h3 id="Largeur_de_ligne">Largeur de ligne</h3>
@@ -220,7 +219,7 @@ span.subheading { font-size:1rem; }
 <p>Si l'image peut être décrite succintement, vous pouvez fournir un attribut <code>alt</code> qui sera suffisant. En revanche, si l'image ne peut pas être décrite rapidement, il est préférable de fournir un contenu équivalent sous un autre format sur la page (par exemple, si l'image est un graphique en camembert, on pourra fournir le tableau des données numériques) ou sinon, on pourra recourir à un attribut <code>longdesc</code>. La valeur de cet attribut est un URL qui pointe vers une ressource dont le seul but est de décrire en détails le contenu de l'image.</p>
 
 <div class="note">
-<p><strong>Note :</strong> L'utilisation voire l'existence de <code>longdesc</code> ont toujours été débatues. Veuillez vous référer à la page du W3C' <a href="http://www.w3.org/TR/html-longdesc/">Image Description Extension (longdesc)</a> pour une explication complète et des exemples détaillés.</p>
+<p><strong>Note :</strong> L'utilisation voire l'existence de <code>longdesc</code> ont toujours été débatues. Veuillez vous référer à la page du W3C' <a href="http://www.w3.org/TR/html-longdesc/">Image Description Extension (longdesc)</a> pour une explication complète et des exemples détaillés.</p>
 </div>
 
 <h4 id="AudioVidéo">Audio/Vidéo</h4>
@@ -245,4 +244,4 @@ span.subheading { font-size:1rem; }
 
 <h2 id="Prochaines_étapes">Prochaines étapes</h2>
 
-<p>Cet article ne décrit que les bases d'un design accessible et universel. Si vous souhaitez aller plus loin dan ce domaine, vous pouvez poursuivre avec <a href="/en-US/docs/Learn/Basics_of_UX_Design">les bases de l'ergonomie ou UX (<em>User Experience</em> en anglais)</a>.</p>
+<p>Cet article ne décrit que les bases d'un design accessible et universel. Si vous souhaitez aller plus loin dan ce domaine, vous pouvez poursuivre avec <a href="/fr/docs/Learn/Basics_of_UX_Design">les bases de l'ergonomie ou UX (<em>User Experience</em> en anglais)</a>.</p>
