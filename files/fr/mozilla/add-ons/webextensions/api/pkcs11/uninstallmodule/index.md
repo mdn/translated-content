@@ -12,40 +12,41 @@ tags:
   - uninstallModule
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/uninstallModule
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Désinstalle le module PKCS #11 nommé de Firefox.</p>
+Désinstalle le module PKCS #11 nommé de Firefox.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var uninstalling = browser.pkcs11.uninstallModule(
+```js
+var uninstalling = browser.pkcs11.uninstallModule(
   name              // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>string</code>. Nom du module à désinstaller. Cela doit correspondre à la propriété <code>name</code> dans le <a href="/fr/Add-ons/WebExtensions/Native_manifests#PKCS_11_manifests">manifest PKCS #11</a> pour le module.</dd>
-</dl>
+- `name`
+  - : `string`. Nom du module à désinstaller. Cela doit correspondre à la propriété `name` dans le [manifest PKCS #11](/fr/Add-ons/WebExtensions/Native_manifests#PKCS_11_manifests) pour le module.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera accompli sans arguments une fois le module désinstallée.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera accompli sans arguments une fois le module désinstallée.
 
-<p>Si le module n'a pas pu être trouvé ou qu'une autre erreur se produit, la promise sera rejetée avec un message d'erreur.</p>
+Si le module n'a pas pu être trouvé ou qu'une autre erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.pkcs11.uninstallModule", 10)}}</p>
+{{Compat("webextensions.api.pkcs11.uninstallModule", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Désinstalle le module nommé "pkcs11_module" :</p>
+Désinstalle le module nommé "pkcs11_module" :
 
-<pre class="brush: js">browser.pkcs11.uninstallModule("pkcs11_module");</pre>
+```js
+browser.pkcs11.uninstallModule("pkcs11_module");
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

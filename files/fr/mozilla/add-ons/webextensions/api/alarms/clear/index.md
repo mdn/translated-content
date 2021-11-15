@@ -13,45 +13,44 @@ tags:
   - clear
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/clear
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Cette méthode supprime une alarme à partir du nom passé en argument. Il s'agit d'une fonction asynchrone qui renvoie une {{jsxref("Promise")}}.</p>
+Cette méthode supprime une alarme à partir du nom passé en argument. Il s'agit d'une fonction asynchrone qui renvoie une {{jsxref("Promise")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var clearAlarm = browser.alarms.clear(
-  name // string
-);
-</pre>
+    var clearAlarm = browser.alarms.clear(
+      name // string
+    );
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>name</code>{{optional_inline}}</dt>
- <dd><code><code>string</code></code>. Le nom de l'alarme à supprimer. Si le paramètre n'est pas fourni, c'est la chaîne vide "" qui sera utilisée.</dd>
-</dl>
+- `name`{{optional_inline}}
+  - : `string`. Le nom de l'alarme à supprimer. Si le paramètre n'est pas fourni, c'est la chaîne vide "" qui sera utilisée.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une promesse ({{jsxref("Promise")}}) qui sera tenue avec un booléen. Ce booléen vaudra <code>true</code> si l'alarme a bien été effacée et <code>false</code> sinon.</p>
+Une promesse ({{jsxref("Promise")}}) qui sera tenue avec un booléen. Ce booléen vaudra `true` si l'alarme a bien été effacée et `false` sinon.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">function onCleared(wasCleared) {
+```js
+function onCleared(wasCleared) {
   console.log(wasCleared);  // true/false
 }
 
 var clearAlarm = browser.alarms.clear("my-periodic-alarm");
-clearAlarm.then(onCleared);</pre>
+clearAlarm.then(onCleared);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("webextensions.api.alarms.clear")}}</p>
+{{Compat("webextensions.api.alarms.clear")}}
 
-<p><strong>Remerciements :</strong></p>
+**Remerciements :**
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a>.</p>
+Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/extensions/alarms).
 
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
+Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

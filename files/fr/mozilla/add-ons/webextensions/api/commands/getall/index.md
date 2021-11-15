@@ -13,47 +13,49 @@ tags:
   - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/getAll
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obient toutes les commandes pour l'exécution que vous avez enregistré à l'aide d'une des <a href="/fr/Add-ons/WebExtensions/manifest.json/commands"><code>commandes</code> clef du manifest.json</a>.</p>
+Obient toutes les commandes pour l'exécution que vous avez enregistré à l'aide d'une des [`commandes` clef du manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
 
-<p>Les commandes sont renvoyées sous la forme d'un tableau d'objets   {{WebExtAPIRef('commands.Command')}}. Altenativement, si vous utilisez la version de base promise de l'API, <code>browser.commands.getAll()</code>,  les commandes sont passées dans l'argument <code>onFulfilled</code> à <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise/then">Promise.then()</a></code>.</p>
+Les commandes sont renvoyées sous la forme d'un tableau d'objets   {{WebExtAPIRef('commands.Command')}}. Altenativement, si vous utilisez la version de base promise de l'API, `browser.commands.getAll()`,  les commandes sont passées dans l'argument `onFulfilled` à [`Promise.then()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise/then).
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var getCommands = browser.commands.getAll();
-</pre>
+```js
+var getCommands = browser.commands.getAll();
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera accompli avec un tableau  d'objets <code>{{WebExtAPIRef('commands.Command')}}</code>, un pour  chaque commande enregistrée pour l'extension. Si aucune n'a été enregistrée, le tableau  sera vide.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera accompli avec un tableau  d'objets `{{WebExtAPIRef('commands.Command')}}`, un pour  chaque commande enregistrée pour l'extension. Si aucune n'a été enregistrée, le tableau  sera vide.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.commands.getAll")}}</p>
+{{Compat("webextensions.api.commands.getAll")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">function logCommands(commands) {
+```js
+function logCommands(commands) {
   commands.forEach(function(command) {
     console.log(command);
   });
 }
 
 var getCommands = browser.commands.getAll();
-getCommands.then(logCommands);</pre>
+getCommands.then(logCommands);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/commands"><code>chrome.commands</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/extensions/commands).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

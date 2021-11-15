@@ -12,30 +12,27 @@ tags:
   - omnibox
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/SuggestResult
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Le type <strong><code>omnibox.SuggestResult</code></strong> définit une suggestion unique que l'extension peut ajouter à la liste déroulante de la barre d'adresse.</p>
+Le type **`omnibox.SuggestResult`** définit une suggestion unique que l'extension peut ajouter à la liste déroulante de la barre d'adresse.
 
-<p>L'écouteur d'événement {{WebExtAPIRef("omnibox.onInputChanged")}} de l'extension reçoit un rappel. Pour remplir la liste déroulante de la barre d'adresse en réponse à l'entrée de l'utilisateur,  l'extension peut transmettre un tableau d'objets <code>omnibox.SuggestResult</code> dans ce rappel.</p>
+L'écouteur d'événement {{WebExtAPIRef("omnibox.onInputChanged")}} de l'extension reçoit un rappel. Pour remplir la liste déroulante de la barre d'adresse en réponse à l'entrée de l'utilisateur,  l'extension peut transmettre un tableau d'objets `omnibox.SuggestResult` dans ce rappel.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils ont les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils ont les propriétés suivantes :
 
-<dl>
- <dt><code>content</code></dt>
- <dd>C'est la valeur qui apparaîtra dans la barre d'adresse elle-même lorsque l'utilisateur mettra cette suggestion en évidence dans la liste déroulante. C'est également la chaîne envoyée à l'écouteur d'événement  {{WebExtAPIRef("omnibox.onInputEntered")}} si l'utilisateur sélectionne cette suggestion. Si la chaîne est la même que celle que l'utilisateur a déjà tapée, cette entrée n'apparaîtra pas dans la liste déroulante.</dd>
- <dt><code>description</code></dt>
- <dd>C'est la chaîne qui est affichée dans la liste déroulante de la barre d'adresse.</dd>
-</dl>
+- `content`
+  - : C'est la valeur qui apparaîtra dans la barre d'adresse elle-même lorsque l'utilisateur mettra cette suggestion en évidence dans la liste déroulante. C'est également la chaîne envoyée à l'écouteur d'événement  {{WebExtAPIRef("omnibox.onInputEntered")}} si l'utilisateur sélectionne cette suggestion. Si la chaîne est la même que celle que l'utilisateur a déjà tapée, cette entrée n'apparaîtra pas dans la liste déroulante.
+- `description`
+  - : C'est la chaîne qui est affichée dans la liste déroulante de la barre d'adresse.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.omnibox.SuggestResult")}}</p>
+{{Compat("webextensions.api.omnibox.SuggestResult")}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/omnibox"><code>chrome.omnibox</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

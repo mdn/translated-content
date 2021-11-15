@@ -12,47 +12,47 @@ tags:
   - setWindowsValue
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/setWindowValue
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Stocke une paire clé / valeur à associer à une fenêtre donnée. Vous pouvez ensuite récupérer cette valeur en utilisant {{WebExtAPIRef("sessions.getWindowValue")}}.</p>
+Stocke une paire clé / valeur à associer à une fenêtre donnée. Vous pouvez ensuite récupérer cette valeur en utilisant {{WebExtAPIRef("sessions.getWindowValue")}}.
 
-<p>Notez que ces données ne seront visibles que par l'extension qui l'a définie, et non par les autres extensions..</p>
+Notez que ces données ne seront visibles que par l'extension qui l'a définie, et non par les autres extensions..
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var storing = browser.sessions.setWindowValue(
+```js
+var storing = browser.sessions.setWindowValue(
   windowId,    // integer
   key,         // string
   value        // string or object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>windowId</code></dt>
- <dd><code>integer</code>. ID de la fenêtre avec laquelle vous souhaitez associer les données.</dd>
- <dt><code>key</code></dt>
- <dd><code>string</code>. Clé que vous pouvez utiliser ultérieurement pour récupérer cette valeur de données particulière.</dd>
- <dt><code>value</code></dt>
- <dd><code>string</code> ou <code>object</code>. S'il s'agit d'un objet, il est <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">stringified</a>, donc les méthodes d'objet, par exemple, seront omises. Si une fonction est donnée ici, elle sera stockée sous la valeur <code>null</code>.</dd>
-</dl>
+- `windowId`
+  - : `integer`. ID de la fenêtre avec laquelle vous souhaitez associer les données.
+- `key`
+  - : `string`. Clé que vous pouvez utiliser ultérieurement pour récupérer cette valeur de données particulière.
+- `value`
+  - : `string` ou `object`. S'il s'agit d'un objet, il est [stringified](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify), donc les méthodes d'objet, par exemple, seront omises. Si une fonction est donnée ici, elle sera stockée sous la valeur `null`.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera résolue sans argument si l'appel a réussi. Si l'appel a échoué (par exemple, parce que l'ID de la fenêtre n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera résolue sans argument si l'appel a réussi. Si l'appel a échoué (par exemple, parce que l'ID de la fenêtre n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.sessions.setWindowValue", 10)}}</p>
+{{Compat("webextensions.api.sessions.setWindowValue", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Définissez une valeur sur la fenêtre active lorsque l'utilisateur sélectionne un élément de menu. Notez que vous aurez besoin de la  <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "menus" pour exécuter cet exemple :</p>
+Définissez une valeur sur la fenêtre active lorsque l'utilisateur sélectionne un élément de menu. Notez que vous aurez besoin de la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "menus" pour exécuter cet exemple :
 
-<pre class="brush: js">async function setOnActiveWindow() {
+```js
+async function setOnActiveWindow() {
   let currentWindow = await browser.windows.getLastFocused();
   await browser.sessions.setWindowValue(currentWindow.id, "my-key", "my-value");
 }
@@ -63,6 +63,7 @@ browser.menus.create({
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener(setOnActiveWindow);</pre>
+browser.menus.onClicked.addListener(setOnActiveWindow);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

@@ -13,80 +13,75 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La fonction <strong><code>download()</code></strong> de l'API {{WebExtAPIRef("downloads")}} télécharge le fichier, compte tenu de son URL et d'autres préférences optionnelles.</p>
+La fonction **`download()`** de l'API {{WebExtAPIRef("downloads")}} télécharge le fichier, compte tenu de son URL et d'autres préférences optionnelles.
 
-<ul>
- <li>Si l'<code>url</code> spécifiée utilise le protocole HTTP ou HTTPS, la requête inclura tous les cookies actuellement définis pour son nom d'hôte.</li>
- <li>Si à la fois le  <code>nom de fichier</code> et <code>saveAs</code> sont spécifiés, la boîte de dialogue Enregistrer sous s'affiche, pré-remplie avec le <code>nom du fichier</code> spécifié.</li>
-</ul>
+- Si l'`url` spécifiée utilise le protocole HTTP ou HTTPS, la requête inclura tous les cookies actuellement définis pour son nom d'hôte.
+- Si à la fois le  `nom de fichier` et `saveAs` sont spécifiés, la boîte de dialogue Enregistrer sous s'affiche, pré-remplie avec le `nom du fichier` spécifié.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var downloading = browser.downloads.download(
+```js
+var downloading = browser.downloads.download(
   options                   // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>options</code></dt>
- <dd><p>Un <code>object</code> spécifiant le fichier que vous souhaitez télécharger et toutes les autres préférences que vous souhaitez définir concernant le téléchargement. Il peut contenir les propriétés suivantes :</p>
- <dl>
-  <dt><code>allowHttpErrors</code>{{optional_inline}}</dt>
-  <dd><p>Un tag <code>booléen</code> qui permet de poursuivre les téléchargements même s'ils rencontrent des erreurs HTTP. L'utilisation de ce drapeau, par exemple, permet le téléchargement des pages d'erreur du serveur. La valeur par défaut est <code>false</code>. Lorsqu'il est défini à :</p>
-  <ul>
-   <li><code>false</code>, le téléchargement est annulé lorsqu'il rencontre une erreur HTTP.</li>
-   <li><code>true</code>, le téléchargement se poursuit lorsqu'une erreur HTTP est rencontrée et que l'erreur du serveur HTTP n'est pas signalée. Toutefois, si le téléchargement échoue en raison d'une erreur liée au fichier, au réseau, à l'utilisateur ou autre, cette erreur est signalée.</li>
-  </ul>
-  </dd>
-  <dt><code>body</code>{{optional_inline}}</dt>
-  <dd>Un <code>string</code> représentant le corps du message de la requête.</dd>
-  <dt><code>conflictAction</code>{{optional_inline}}</dt>
-  <dd>Une chaîne représentant l'action que vous voulez effectuer s'il y a un conflit de nom de fichier, tel que défini dans le  {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (par défaut "uniquify" quand il n'est pas spécifié).</dd>
-  <dt><code>filename</code>{{optional_inline}}</dt>
-  <dd>Un <code>string</code> eprésentant un chemin d'accès au fichier par rapport au répertoire de téléchargement par défaut,  qui indique l'emplacement où vous souhaitez enregistrer le fichier et le nom de fichier que vous souhaitez utiliser. Les chemins absolus, les chemins vides et les chemins contenant des références arrières  (<code>../</code>) provoqueront une erreur. Si elle est omise, cette valeur sera par défaut le nom de fichier déjà donné au fichier de téléchargement, et un emplacement immédiatement dans le répertoire de téléchargement.</dd>
-  <dt><code>headers</code>{{optional_inline}}</dt>
-  <dd>Si l'URL utilise les protocoles HTTP ou HTTPS, un <code>array</code> d'<code>objects</code> représentant des en-têtes HTTP supplémentaires à envoyer avec la requête. Chaque en-tête est représenté sous la forme d'un objet dictionnaire contenant le <code>name</code> des clés et soit la <code>value</code>, soit la valeur <code>binaryValue</code>. Les en-têtes interdits par <code>XMLHttpRequest</code> et <code>fetch</code> ne peuvent pas être spécifiés, cependant, Firefox 70 et les versions ultérieures permettent d'utiliser l'en-tête <code>Referer</code>. Tenter d'utiliser un en-tête interdit provoque une erreur.</dd>
-  <dt><code>incognito</code>{{optional_inline}}</dt>
-  <dd>Un <code>boolean</code>: s'il est présent et défini sur true, associez ce téléchargement à une session de navigation privée. Cela signifie qu'il n'apparaîtra dans le gestionnaire de téléchargement que pour les fenêtres privées actuellement ouvertes.</dd>
-  <dt><code>method</code>{{optional_inline}}</dt>
-  <dd>Un <code>string</code> représentant la méthode HTTP à utiliser si l'<code>url</code> utilise le protocole HTTP[S]. Cela peut être "GET" ou "POST".</dd>
-  <dt><code>saveAs</code>{{optional_inline}}</dt>
-  <dd>
-  <p>Un <code>boolean</code> qui spécifie s'il faut fournir une boîte de dialogue de sélection de fichier pour permettre à l'utilisateur de sélectionner un nom de fichier (<code>true</code>), ou non (<code>false</code>).</p>
+- `options`
 
-  <p>Si cette option est omise, le navigateur affichera le sélecteur de fichier ou non en fonction de la préférence générale de l'utilisateur pour ce comportement (dans Firefox cette préférence est intitulée "Toujours vous demander où enregistrer les fichiers" dans about:preferences, ou <code>browser.download.useDownloadDir</code> dans about:config).</p>
+  - : Un `object` spécifiant le fichier que vous souhaitez télécharger et toutes les autres préférences que vous souhaitez définir concernant le téléchargement. Il peut contenir les propriétés suivantes :
 
-  <div class="note">
-  <p><strong>Note :</strong> Firefox pour Android provoque une erreur si <code>saveAs</code> est à  <code>true</code>. Le paramètre est ignoré lorsque <code>saveAs</code> est <code>false</code> ou non inclus.</p>
-  </div>
-  </dd>
-  <dt><code>url</code></dt>
-  <dd>Un <code>string</code> représentant l'URL à télécharger.</dd>
- </dl>
- </dd>
-</dl>
+    - `allowHttpErrors`{{optional_inline}}
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+      - : Un tag `booléen` qui permet de poursuivre les téléchargements même s'ils rencontrent des erreurs HTTP. L'utilisation de ce drapeau, par exemple, permet le téléchargement des pages d'erreur du serveur. La valeur par défaut est `false`. Lorsqu'il est défini à :
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. Si le téléchargement a démarré avec succès, la promesse sera remplie avec l'<code>id</code> de la nouvelle {{WebExtAPIRef("downloads.DownloadItem")}}. Sinon, la promesse sera rejetée avec un message d'erreur venant de  {{WebExtAPIRef("downloads.InterruptReason")}}.</p>
+        - `false`, le téléchargement est annulé lorsqu'il rencontre une erreur HTTP.
+        - `true`, le téléchargement se poursuit lorsqu'une erreur HTTP est rencontrée et que l'erreur du serveur HTTP n'est pas signalée. Toutefois, si le téléchargement échoue en raison d'une erreur liée au fichier, au réseau, à l'utilisateur ou autre, cette erreur est signalée.
 
-<p>Si vous utilisez <a href="/fr/docs/Web/API/URL/createObjectURL">URL.createObjectURL()</a> pour télécharger des données créées en JavaScript et que vous voulez révoquer l'URL de l'objet (avec <a href="/fr/docs/Web/API/URL/revokeObjectURL">revokeObjectURL</a>) plus tard (comme il est fortement recommandé), vous devez le faire après le téléchargement. Pour ce faire, écoutez l'événement <a href="/fr/Add-ons/WebExtensions/API/downloads/onChanged">downloads.onChanged</a>.</p>
+    - `body`{{optional_inline}}
+      - : Un `string` représentant le corps du message de la requête.
+    - `conflictAction`{{optional_inline}}
+      - : Une chaîne représentant l'action que vous voulez effectuer s'il y a un conflit de nom de fichier, tel que défini dans le  {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (par défaut "uniquify" quand il n'est pas spécifié).
+    - `filename`{{optional_inline}}
+      - : Un `string` eprésentant un chemin d'accès au fichier par rapport au répertoire de téléchargement par défaut,  qui indique l'emplacement où vous souhaitez enregistrer le fichier et le nom de fichier que vous souhaitez utiliser. Les chemins absolus, les chemins vides et les chemins contenant des références arrières  (`../`) provoqueront une erreur. Si elle est omise, cette valeur sera par défaut le nom de fichier déjà donné au fichier de téléchargement, et un emplacement immédiatement dans le répertoire de téléchargement.
+    - `headers`{{optional_inline}}
+      - : Si l'URL utilise les protocoles HTTP ou HTTPS, un `array` d'`objects` représentant des en-têtes HTTP supplémentaires à envoyer avec la requête. Chaque en-tête est représenté sous la forme d'un objet dictionnaire contenant le `name` des clés et soit la `value`, soit la valeur `binaryValue`. Les en-têtes interdits par `XMLHttpRequest` et `fetch` ne peuvent pas être spécifiés, cependant, Firefox 70 et les versions ultérieures permettent d'utiliser l'en-tête `Referer`. Tenter d'utiliser un en-tête interdit provoque une erreur.
+    - `incognito`{{optional_inline}}
+      - : Un `boolean`: s'il est présent et défini sur true, associez ce téléchargement à une session de navigation privée. Cela signifie qu'il n'apparaîtra dans le gestionnaire de téléchargement que pour les fenêtres privées actuellement ouvertes.
+    - `method`{{optional_inline}}
+      - : Un `string` représentant la méthode HTTP à utiliser si l'`url` utilise le protocole HTTP\[S]. Cela peut être "GET" ou "POST".
+    - `saveAs`{{optional_inline}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+      - : Un `boolean` qui spécifie s'il faut fournir une boîte de dialogue de sélection de fichier pour permettre à l'utilisateur de sélectionner un nom de fichier (`true`), ou non (`false`).
 
-<p>{{Compat("webextensions.api.downloads.download")}}</p>
+        Si cette option est omise, le navigateur affichera le sélecteur de fichier ou non en fonction de la préférence générale de l'utilisateur pour ce comportement (dans Firefox cette préférence est intitulée "Toujours vous demander où enregistrer les fichiers" dans about:preferences, ou `browser.download.useDownloadDir` dans about:config).
 
-<h2 id="Examples">Examples</h2>
+        > **Note :** Firefox pour Android provoque une erreur si `saveAs` est à  `true`. Le paramètre est ignoré lorsque `saveAs` est `false` ou non inclus.
 
-<p>Le fragment suivant tente de télécharger un exemple de fichier, en spécifiant également un nom de fichier et un emplacement pour l'enregistrer, ainsi que l'option <code>uniquify</code> <code>conflictAction</code>.</p>
+    - `url`
+      - : Un `string` représentant l'URL à télécharger.
 
-<pre class="brush: js">function onStartedDownload(id) {
+### Valeur retournée
+
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si le téléchargement a démarré avec succès, la promesse sera remplie avec l'`id` de la nouvelle {{WebExtAPIRef("downloads.DownloadItem")}}. Sinon, la promesse sera rejetée avec un message d'erreur venant de  {{WebExtAPIRef("downloads.InterruptReason")}}.
+
+Si vous utilisez [URL.createObjectURL()](/fr/docs/Web/API/URL/createObjectURL) pour télécharger des données créées en JavaScript et que vous voulez révoquer l'URL de l'objet (avec [revokeObjectURL](/fr/docs/Web/API/URL/revokeObjectURL)) plus tard (comme il est fortement recommandé), vous devez le faire après le téléchargement. Pour ce faire, écoutez l'événement [downloads.onChanged](/fr/Add-ons/WebExtensions/API/downloads/onChanged).
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.downloads.download")}}
+
+## Examples
+
+Le fragment suivant tente de télécharger un exemple de fichier, en spécifiant également un nom de fichier et un emplacement pour l'enregistrer, ainsi que l'option `uniquify` `conflictAction`.
+
+```js
+function onStartedDownload(id) {
   console.log(`Started downloading: ${id}`);
 }
 
@@ -102,17 +97,16 @@ var downloading = browser.downloads.download({
   conflictAction : 'uniquify'
 });
 
-downloading.then(onStartedDownload, onFailed);</pre>
+downloading.then(onStartedDownload, onFailed);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-</div>
-
-<div class="hidden">
-<pre> // Copyright 2015 Les auteurs de chrome. Tous les droits sont réservés.
+<div class="hidden"><pre> // Copyright 2015 Les auteurs de chrome. Tous les droits sont réservés.
 //
 // Redistribution et utilisation sous forme source et binaire, avec ou sans
 // modification, sont autorisées à condition que les conditions suivantes soient
@@ -138,5 +132,4 @@ downloading.then(onStartedDownload, onFailed);</pre>
 // THÉORIE DE LA RESPONSABILITÉ, QU'IL SOIT UN CONTRAT, UNE RESPONSABILITÉ STRICTE OU UN TORT
 // (INCLUANT LA NÉGLIGENCE OU AUTREMENT) SURVENANT DE TOUTE MANIÈRE DE L'UTILISER
 // DE CE LOGICIEL, MÊME SI AVISÉ DE LA POSSIBILITÉ D'UN TEL DOMMAGE.
-</pre>
-</div>
+</pre></div>

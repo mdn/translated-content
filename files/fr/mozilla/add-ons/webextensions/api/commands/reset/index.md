@@ -12,46 +12,47 @@ tags:
   - reset
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/reset
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Réinitialise la description de la commande donnée et le raccourci clavier aux valeurs indiquées dans <a href="/fr/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> de la clé du manifest.json</a> de l'extension.</p>
+Réinitialise la description de la commande donnée et le raccourci clavier aux valeurs indiquées dans [`commands` de la clé du manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands) de l'extension.
 
-<p>Cela annule efficacement les modifications apportées à la commande à l'aide de la fonction {{WEbExtAPIRef("commands.update()")}}.</p>
+Cela annule efficacement les modifications apportées à la commande à l'aide de la fonction {{WEbExtAPIRef("commands.update()")}}.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.commands.reset(
+```js
+browser.commands.reset(
   name // string
 );
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>string</code>. Nom de la commande à réinitialiser, comme indiqué par la propriété <code>name</code> de l'objet {{WebExtAPIRef("commands.Command")}}.</dd>
-</dl>
+- `name`
+  - : `string`. Nom de la commande à réinitialiser, comme indiqué par la propriété `name` de l'objet {{WebExtAPIRef("commands.Command")}}.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans arguments lorsque le raccourci a été réinitialisé.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque le raccourci a été réinitialisé.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.commands.reset")}}</p>
+{{Compat("webextensions.api.commands.reset")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Réinitialise la commande "my-command" lorsque l'utilisateur clique sur le bouton "reset" :</p>
+Réinitialise la commande "my-command" lorsque l'utilisateur clique sur le bouton "reset" :
 
-<pre class="brush: js">const commandName = 'my-command';
+```js
+const commandName = 'my-command';
 
 function resetShortcut() {
   browser.commands.reset(commandName);
 }
 
-document.querySelector('#reset').addEventListener('click', resetShortcut);</pre>
+document.querySelector('#reset').addEventListener('click', resetShortcut);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

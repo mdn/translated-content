@@ -13,77 +13,69 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onUpdateAvailable
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Déclenché quand une mise à jour de l'extension est disponible. Cet événement permet à une extension de retarder une mise à jour : par exemple, car elle est au milieu d'une opération qui ne doit pas être interrompue.</p>
+Déclenché quand une mise à jour de l'extension est disponible. Cet événement permet à une extension de retarder une mise à jour : par exemple, car elle est au milieu d'une opération qui ne doit pas être interrompue.
 
-<p>Si l'extension n'écoute pas cet événement lorsqu'une mise à jour est disponible, l'extension est rechargée immédiatement et la mise à jour est appliquée. Si l'extension est à l'écoute, la mise à jour sera appliquée la prochaine fois que l'extension sera rechargée. Cela arrive si :</p>
+Si l'extension n'écoute pas cet événement lorsqu'une mise à jour est disponible, l'extension est rechargée immédiatement et la mise à jour est appliquée. Si l'extension est à l'écoute, la mise à jour sera appliquée la prochaine fois que l'extension sera rechargée. Cela arrive si :
 
-<ul>
- <li>Le navigateur est redémarré</li>
- <li>L'extension est désactivée et réactivée</li>
- <li>L'extension se recharge explicitement en appelant {{WebExtAPIRef('runtime.reload()')}}.</li>
-</ul>
+- Le navigateur est redémarré
+- L'extension est désactivée et réactivée
+- L'extension se recharge explicitement en appelant {{WebExtAPIRef('runtime.reload()')}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.runtime.onUpdateAvailable.addListener()
+```js
+browser.runtime.onUpdateAvailable.addListener()
 browser.runtime.onUpdateAvailable.removeListener(listener)
 browser.runtime.onUpdateAvailable.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajouter un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument<code>listener</code> est un écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifie que l'<code>écouteur</code> est enregistré pour cet événement. Retourne <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajouter un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument`listener` est un écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifie que l'`écouteur` est enregistré pour cet événement. Retourne `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée quand cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>details</code></dt>
-  <dd><code>object</code>. Contient une seule propriété, une chaîne nommée <code>version</code>, qui représente le numéro de version de la mise à jour.</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui sera appelée quand cet événement se produit. La fonction recevra les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `details`
+      - : `object`. Contient une seule propriété, une chaîne nommée `version`, qui représente le numéro de version de la mise à jour.
 
-<p>{{Compat("webextensions.api.runtime.onUpdateAvailable")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.runtime.onUpdateAvailable")}}
 
-<p>Ecoutez les événements <code>UpdateAvailable</code>:</p>
+## Exemples
 
-<pre class="brush: js">function handleUpdateAvailable(details) {
+Ecoutez les événements `UpdateAvailable`:
+
+```js
+function handleUpdateAvailable(details) {
   console.log(details.version);
 }
 
-browser.runtime.onUpdateAvailable.addListener(handleUpdateAvailable);</pre>
+browser.runtime.onUpdateAvailable.addListener(handleUpdateAvailable);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -110,5 +102,4 @@ browser.runtime.onUpdateAvailable.addListener(handleUpdateAvailable);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

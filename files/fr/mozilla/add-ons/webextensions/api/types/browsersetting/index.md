@@ -12,49 +12,41 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un <code>BrowserSetting</code> est un objet représentant un paramètre de navigateur.</p>
+Un `BrowserSetting` est un objet représentant un paramètre de navigateur.
 
-<p>Il fournit des méthodes pour définir et obtenir la valeur sous-jacente du paramètre, pour effacer tout changement que vous avez apporté et pour écouter les modifications apportées à sa valeur.</p>
+Il fournit des méthodes pour définir et obtenir la valeur sous-jacente du paramètre, pour effacer tout changement que vous avez apporté et pour écouter les modifications apportées à sa valeur.
 
-<p>Notez que si cet objet est basé sur le type <a href="https://developer.chrome.com/extensions/types#type-ChromeSetting">ChromeSetting</a>, cet objet ne fait pas de distinction entre le réglage de la valeur dans les fenêtres de navigation privées. Cela  signifie que toutes les parties de l'API relatives à la navigation privée (telles que l'option <code>scope</code> de <code>ChromeSetting.set()</code>) ne sont pas implémentées.</p>
+Notez que si cet objet est basé sur le type [ChromeSetting](https://developer.chrome.com/extensions/types#type-ChromeSetting), cet objet ne fait pas de distinction entre le réglage de la valeur dans les fenêtres de navigation privées. Cela  signifie que toutes les parties de l'API relatives à la navigation privée (telles que l'option `scope` de `ChromeSetting.set()`) ne sont pas implémentées.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{WebExtAPIRef("types.BrowserSetting.get()")}}</dt>
- <dd>Obtenez la valeur actuelle du paramètre et une énumération représentant la façon dont le paramètre est actuellement contrôlé.</dd>
- <dt>{{WebExtAPIRef("types.BrowserSetting.set()")}}</dt>
- <dd>Réglez le paramètre sur une nouvelle valeur.</dd>
- <dt>{{WebExtAPIRef("types.BrowserSetting.clear()")}}</dt>
- <dd>Effacez toute modification apportée au paramètre par cette extension.</dd>
-</dl>
+- {{WebExtAPIRef("types.BrowserSetting.get()")}}
+  - : Obtenez la valeur actuelle du paramètre et une énumération représentant la façon dont le paramètre est actuellement contrôlé.
+- {{WebExtAPIRef("types.BrowserSetting.set()")}}
+  - : Réglez le paramètre sur une nouvelle valeur.
+- {{WebExtAPIRef("types.BrowserSetting.clear()")}}
+  - : Effacez toute modification apportée au paramètre par cette extension.
 
-<h2 id="Evénements">Evénements</h2>
+## Evénements
 
-<dl>
- <dt>{{WebExtAPIRef("types.BrowserSetting.onChange")}}</dt>
- <dd>Définit lorsque la valeur du paramètre change.</dd>
-</dl>
+- {{WebExtAPIRef("types.BrowserSetting.onChange")}}
+  - : Définit lorsque la valeur du paramètre change.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("webextensions.api.types.BrowserSetting")}}
 
+{{WebExtExamples}}
 
-<p>{{Compat("webextensions.api.types.BrowserSetting")}}</p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/extensions/types).
 
-<p>{{WebExtExamples}}</p>
-
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/types"><code>chrome.types</code></a>.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -81,5 +73,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,64 +13,57 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connect
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<div></div>
+Créer une connexion pour plusieurs cas d'utilisation pout votre extension.
 
-<p>Créer une connexion pour plusieurs cas d'utilisation pout votre extension.</p>
+Vous pouvez utiliser cette facilité dans les situations suivantes:
 
-<p>Vous pouvez utiliser cette facilité dans les situations suivantes:</p>
+- Dans un script de contenu, pour établir une connexion avec le script d'arrière plan (ou tout script priviligié, comme les scripts de popup ou scripts de page d'option)
+- Dans un script d'arrière plan (ou script priviligié équivalent), pour établir une connexion avec une extension différente.
 
-<ul>
- <li>Dans un script de contenu, pour établir une connexion avec le script d'arrière plan (ou tout script priviligié, comme les scripts de popup ou scripts de page d'option)</li>
- <li>Dans un script d'arrière plan (ou script priviligié équivalent), pour établir une connexion avec une extension différente.</li>
-</ul>
+Attention, vous ne pouvez pas utiliser cette fonctionnalité pour connecter une extension à son script de contenu. Pour réaliser cette opération, il vaut mieux utiliser {{WebExtAPIRef('tabs.connect()')}}.
 
-<p>Attention, vous ne pouvez pas utiliser cette fonctionnalité pour connecter une extension à son script de contenu. Pour réaliser cette opération, il vaut mieux utiliser {{WebExtAPIRef('tabs.connect()')}}.</p>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: js">var port = browser.runtime.connect(
+```js
+var port = browser.runtime.connect(
   extensionId, // optional string
   connectInfo  // optional object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>extensionId</code>{{optional_inline}}</dt>
- <dd><code>string</code>. L'ID de l'extension à laquelle se connecter. Si la cible à défini un ID dans la clé <a href="/fr/Add-ons/WebExtensions/manifest.json/applications">applications</a> du fichier manifest.json, alors <code>extensionId</code> doit avoir cette valeur. Autrement, il doit avoir l'ID qui a été généré pour la cible.</dd>
- <dt><code>connectInfo</code>{{optional_inline}}</dt>
- <dd><p><code>object</code>. Détails de la connexion:</p>
- <dl>
-  <dt><code>name</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Sera passé dans {{WebExtAPIRef("runtime.onConnect")}} pour les processus qui écoutent un évènement de type connexion.</dd>
-  <dt><code>includeTlsChannelId</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. indique si l'ID du canal TLS sera transmis à  {{WebExtAPIRef("runtime.onConnectExternal")}} pour le processus qui écoutent l'événement de connexion.</dd>
- </dl>
- </dd>
-</dl>
+- `extensionId`{{optional_inline}}
+  - : `string`. L'ID de l'extension à laquelle se connecter. Si la cible à défini un ID dans la clé [applications](/fr/Add-ons/WebExtensions/manifest.json/applications) du fichier manifest.json, alors `extensionId` doit avoir cette valeur. Autrement, il doit avoir l'ID qui a été généré pour la cible.
+- `connectInfo`{{optional_inline}}
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`. Détails de la connexion:
 
-<p>{{WebExtAPIRef('runtime.Port')}}. Port à travers lequel les messages peuvent être envoyés et reçus. L'événement <code>onDisconnect</code> du port est déclenché si l'extension n'existe pas.</p>
+    - `name`{{optional_inline}}
+      - : `string`. Sera passé dans {{WebExtAPIRef("runtime.onConnect")}} pour les processus qui écoutent un évènement de type connexion.
+    - `includeTlsChannelId`{{optional_inline}}
+      - : `boolean`. indique si l'ID du canal TLS sera transmis à  {{WebExtAPIRef("runtime.onConnectExternal")}} pour le processus qui écoutent l'événement de connexion.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.runtime.connect")}}</p>
+{{WebExtAPIRef('runtime.Port')}}. Port à travers lequel les messages peuvent être envoyés et reçus. L'événement `onDisconnect` du port est déclenché si l'extension n'existe pas.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Le script de contenu :</p>
+{{Compat("webextensions.api.runtime.connect")}}
 
-<ul>
- <li>se connecte au script d'arrière-plan et stocke le port dans une variable appelée <code>myPort</code>.</li>
- <li>Ecoute les messages sur <code>myPort</code> et les enregistre</li>
- <li>Envoie des messages au script d'arrière pla, en utilisant <code>myPort</code>, lorsque l'utilisateur clique sur le document.</li>
-</ul>
+## Exemples
 
-<pre class="brush: js">// content-script.js
+Le script de contenu :
+
+- se connecte au script d'arrière-plan et stocke le port dans une variable appelée `myPort`.
+- Ecoute les messages sur `myPort` et les enregistre
+- Envoie des messages au script d'arrière pla, en utilisant `myPort`, lorsque l'utilisateur clique sur le document.
+
+```js
+// content-script.js
 
 var myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -82,23 +75,22 @@ myPort.onMessage.addListener(function(m) {
 
 document.body.addEventListener("click", function() {
   myPort.postMessage({greeting: "they clicked the page!"});
-});</pre>
+});
+```
 
-<p>Les scripts d'arrière plan correspondant :</p>
+Les scripts d'arrière plan correspondant :
 
-<ul>
- <li>Ecoute les tentatives de connexion du script de contenu.</li>
- <li>Quand il reçoit une tentative de connexion :
-  <ul>
-   <li>Stocke le port dans une variable nommé <code>portFromCS</code>.</li>
-   <li>envoie un message au script de contenu en utiliant le port.</li>
-   <li>Commence à écouter les messages reçus sur le port, et les enregistre.</li>
-  </ul>
- </li>
- <li>Envoie des messages au script de contenu, à l'aide de <code>portFromCS</code>, lorsque l'utilisateur clique sur l'action du navigateur de l'extension.</li>
-</ul>
+- Ecoute les tentatives de connexion du script de contenu.
+- Quand il reçoit une tentative de connexion :
 
-<pre class="brush: js">// background-script.js
+  - Stocke le port dans une variable nommé `portFromCS`.
+  - envoie un message au script de contenu en utiliant le port.
+  - Commence à écouter les messages reçus sur le port, et les enregistre.
+
+- Envoie des messages au script de contenu, à l'aide de `portFromCS`, lorsque l'utilisateur clique sur l'action du navigateur de l'extension.
+
+```js
+// background-script.js
 
 var portFromCS;
 
@@ -115,19 +107,18 @@ browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(function() {
   portFromCS.postMessage({greeting: "they clicked the button!"});
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -154,5 +145,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

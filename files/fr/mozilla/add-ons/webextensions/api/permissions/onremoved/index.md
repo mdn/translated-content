@@ -11,63 +11,57 @@ tags:
   - onRemoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Activé lorsque certaines permissions sont supprimés de l'extension.</p>
+Activé lorsque certaines permissions sont supprimés de l'extension.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.permissions.onRemoved.addListener(listener)
+```js
+browser.permissions.onRemoved.addListener(listener)
 browser.permissions.onRemoved.removeListener(listener)
 browser.permissions.onRemoved.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur a supprimée.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré dans l'événement. Retourne <code>true</code> s'il écoute, sinon  <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur a supprimée.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré dans l'événement. Retourne `true` s'il écoute, sinon  `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui ne sera appelée lorsque cet événement se produira. La fonction sera passée avec les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>permissions</code></dt>
-  <dd>L'objet {{WebExtAPIRef("permissions.Permissions")}} contenant les permissions qui ont été supprimées.</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui ne sera appelée lorsque cet événement se produira. La fonction sera passée avec les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `permissions`
+      - : L'objet {{WebExtAPIRef("permissions.Permissions")}} contenant les permissions qui ont été supprimées.
 
-<p>{{Compat("webextensions.api.permissions.onRemoved")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.permissions.onRemoved")}}
 
-<pre class="brush: js">function handleRemoved(permissions) {
+## Exemples
+
+```js
+function handleRemoved(permissions) {
   console.log(`Removed API permissions: ${permissions.permissions}`);
   console.log(`Removed host permissions: ${permissions.origins}`);
 }
 
 browser.permissions.onRemoved.addListener(handleRemoved);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/permissions"><code>chrome.permissions</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/extensions/permissions).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

@@ -12,17 +12,16 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/elements
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/elements
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet <code><a href="/fr/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel">ElementsPanel</a></code> qui représente l'inspecteur HTML/CSS du navigateur</p>
+Un objet [`ElementsPanel`](/fr/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel) qui représente l'inspecteur HTML/CSS du navigateur
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.devtools.panels.elements", 10)}}</p>
+{{Compat("webextensions.api.devtools.panels.elements", 10)}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a>.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).

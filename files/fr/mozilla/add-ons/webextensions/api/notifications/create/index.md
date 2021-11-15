@@ -13,52 +13,50 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/create
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Crée et affiche une notification.</p>
+Crée et affiche une notification.
 
-<p>Passez un {{WebExtAPIRef("notifications.NotificationOptions")}} pour définir le contenu et le comportement de la notification.</p>
+Passez un {{WebExtAPIRef("notifications.NotificationOptions")}} pour définir le contenu et le comportement de la notification.
 
-<p>Vous pouvez éventuellement fournir un ID pour la notification. Si vous omettez l'ID, un ID sera généré. Vous pouvez utiliser l'ID pour {{WebExtAPIRef("notifications.update()", "update")}} ou {{WebExtAPIRef("notifications.clear()", "clear")}} la notification.</p>
+Vous pouvez éventuellement fournir un ID pour la notification. Si vous omettez l'ID, un ID sera généré. Vous pouvez utiliser l'ID pour {{WebExtAPIRef("notifications.update()", "update")}} ou {{WebExtAPIRef("notifications.clear()", "clear")}} la notification.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<div class="warning">
-<p><strong>Attention :</strong> Si vous appelez <code>notifications.create()</code> plus d'une fois de suite, Firefox peut ne pas afficher de notification pour tout.</p>
-</div>
+> **Attention :** Si vous appelez `notifications.create()` plus d'une fois de suite, Firefox peut ne pas afficher de notification pour tout.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var creating = browser.notifications.create(
+```js
+var creating = browser.notifications.create(
   id,                   // optional string
   options               // NotificationOptions
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>id</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Ceci est utilisé pour faire référence à cette notification dans {{WebExtAPIRef("notifications.update()")}}, {{WebExtAPIRef("notifications.clear()")}}, et les écouteurs d'événements. Si vous omettez cet argument ou passez une chaîne vide, un nouvel ID sera généré pour cette notification. Si l'ID que vous fournissez correspond à l'ID d'une notification existante provenant de cette extension, l'autre notification sera effacée.</dd>
- <dt><code>options</code></dt>
- <dd>{{WebExtAPIRef('notifications.NotificationOptions')}}. Définit le contenu et le comportement de la notification.</dd>
-</dl>
+- `id`{{optional_inline}}
+  - : `string`. Ceci est utilisé pour faire référence à cette notification dans {{WebExtAPIRef("notifications.update()")}}, {{WebExtAPIRef("notifications.clear()")}}, et les écouteurs d'événements. Si vous omettez cet argument ou passez une chaîne vide, un nouvel ID sera généré pour cette notification. Si l'ID que vous fournissez correspond à l'ID d'une notification existante provenant de cette extension, l'autre notification sera effacée.
+- `options`
+  - : {{WebExtAPIRef('notifications.NotificationOptions')}}. Définit le contenu et le comportement de la notification.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie lorsque la notification est créée et que le processus d'affichage a été démarré, avant que la notification ne s'affiche réellement à l'utilisateur. Il est rempli avec une chaîne représentant l'identifiant de la notification.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie lorsque la notification est créée et que le processus d'affichage a été démarré, avant que la notification ne s'affiche réellement à l'utilisateur. Il est rempli avec une chaîne représentant l'identifiant de la notification.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.notifications.create")}}</p>
+{{Compat("webextensions.api.notifications.create")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Créez et affichez périodiquement une notification de base à l'aide d'un  {{WebExtAPIRef("alarms", "alarm")}}. En cliquant sur l'action du navigateur, la notification est rejetée.</p>
+Créez et affichez périodiquement une notification de base à l'aide d'un  {{WebExtAPIRef("alarms", "alarm")}}. En cliquant sur l'action du navigateur, la notification est rejetée.
 
-<p>Notez que vous aurez besoin de la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications).</p>
+Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications).
 
-<pre class="brush: js">var cakeNotification = "cake-notification"
+```js
+var cakeNotification = "cake-notification"
 
 /*
 
@@ -82,16 +80,18 @@ browser.alarms.onAlarm.addListener(function(alarm) {
   });
 });
 
-browser.browserAction.onClicked.addListener(()=&gt; {
+browser.browserAction.onClicked.addListener(()=> {
   var clearing = browser.notifications.clear(cakeNotification);
-  clearing.then(() =&gt; {
+  clearing.then(() => {
     console.log("cleared");
   });
-});</pre>
+});
+```
 
-<p>Affichez une notification similaire, mais ajoutez des boutons nommant des gâteaux et consignez le gâteau sélectionné lorsque vous cliquez sur un bouton :</p>
+Affichez une notification similaire, mais ajoutez des boutons nommant des gâteaux et consignez le gâteau sélectionné lorsque vous cliquez sur un bouton :
 
-<pre class="brush: js">var cakeNotification = "cake-notification"
+```js
+var cakeNotification = "cake-notification"
 
 /*
 
@@ -124,24 +124,23 @@ browser.alarms.onAlarm.addListener(function(alarm) {
   });
 });
 
-browser.browserAction.onClicked.addListener(()=&gt; {
+browser.browserAction.onClicked.addListener(()=> {
   var clearing = browser.notifications.clear(cakeNotification);
-  clearing.then(() =&gt; {
+  clearing.then(() => {
     console.log("cleared");
   });
 });
 
-browser.notifications.onButtonClicked.addListener((id, index) =&gt; {
+browser.notifications.onButtonClicked.addListener((id, index) => {
   browser.notifications.clear(id);
   console.log("You chose: " + buttons[index].title);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

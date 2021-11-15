@@ -13,65 +13,58 @@ tags:
   - onRemoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onRemoved
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsqu'un signet ou un dossier est supprimé. Lorsqu'un dossier est supprimé de manière récursive, une seule notification est envoyée pour le dossier et aucune pour son contenu.</p>
+Lancé lorsqu'un signet ou un dossier est supprimé. Lorsqu'un dossier est supprimé de manière récursive, une seule notification est envoyée pour le dossier et aucune pour son contenu.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.bookmarks.onRemoved.addListener(listener)
+```js
+browser.bookmarks.onRemoved.addListener(listener)
 browser.bookmarks.onRemoved.removeListener(listener)
 browser.bookmarks.onRemoved.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>id</code></dt>
-  <dd><code>string</code>. ID de l'article qui a été supprimé.</dd>
- </dl>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
- <dl>
-  <dt><code>removeInfo</code></dt>
-  <dd><a href="#removeInfo"><code>object</code></a>. Plus de détails sur l'élément supprimé.</dd>
- </dl>
- </dd>
-</dl>
+    - `id`
+      - : `string`. ID de l'article qui a été supprimé.
 
-<h2 id="Objets_supplémentaires">Objets supplémentaires</h2>
+    <!---->
 
-<h3 id="removeInfo">removeInfo</h3>
+    - `removeInfo`
+      - : [`object`](#removeInfo). Plus de détails sur l'élément supprimé.
 
-<dl>
- <dt><code>parentId</code></dt>
- <dd><code>string</code>. ID du parent de l'élément dans l'arborescence.</dd>
- <dt><code>index</code></dt>
- <dd><code>integer</code>. Position d'index basée sur zéro de cet élément dans son parent.</dd>
- <dt><code>node</code></dt>
- <dd>{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}. Informations détaillées sur l'élément qui a été supprimé.</dd>
-</dl>
+## Objets supplémentaires
 
-<h2 id="Exemples">Exemples</h2>
+### removeInfo
 
-<pre class="brush: js">function handleRemoved(id, removeInfo) {
+- `parentId`
+  - : `string`. ID du parent de l'élément dans l'arborescence.
+- `index`
+  - : `integer`. Position d'index basée sur zéro de cet élément dans son parent.
+- `node`
+  - : {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}. Informations détaillées sur l'élément qui a été supprimé.
+
+## Exemples
+
+```js
+function handleRemoved(id, removeInfo) {
   console.log("Item: " + id + " removed");
   console.log("Title: " + removeInfo.node.title);
   console.log("Url: " + removeInfo.node.url);
@@ -81,23 +74,22 @@ function handleClick() {
   browser.bookmarks.onRemoved.addListener(handleRemoved);
 }
 
-browser.browserAction.onClicked.addListener(handleClick);</pre>
+browser.browserAction.onClicked.addListener(handleClick);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.bookmarks.onRemoved")}}</p>
+{{Compat("webextensions.api.bookmarks.onRemoved")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -124,5 +116,4 @@ browser.browserAction.onClicked.addListener(handleClick);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

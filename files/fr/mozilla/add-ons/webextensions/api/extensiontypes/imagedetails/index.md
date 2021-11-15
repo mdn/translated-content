@@ -13,36 +13,32 @@ tags:
   - extensionType
 translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Details sur le format et la qualité de l'image.</p>
+Details sur le format et la qualité de l'image.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>format</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('extensionTypes.ImageFormat')}}. Le format du résultat de l'image. Par défaut est <code>"png"</code>.</dd>
- <dt><code>quality</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. Quand le format est <code>"jpeg"</code>, cela controle la qualité du résultat de l'image. C'est un nombre compris entre 0 et 100, qui est converti en une valeur entre 0 et 1 puis utilisé comme argument  <code>encoderOptions</code> sur <code><a href="/fr/docs/Web/API/HTMLCanvasElement/toDataURL">HTMLCanvasElement.toDataURL()</a></code>. Si c'est choisi, 92 est utilisé. A mesure que la qualité baisse, le résultat de l'image aura plus d'artefacts visuel, et le nombre d'octets nécessaires pour le stocker diminuera. Cette valeur est ignorée pour les images PNG.</dd>
-</dl>
+- `format`{{optional_inline}}
+  - : {{WebExtAPIRef('extensionTypes.ImageFormat')}}. Le format du résultat de l'image. Par défaut est `"png"`.
+- `quality`{{optional_inline}}
+  - : `integer`. Quand le format est `"jpeg"`, cela controle la qualité du résultat de l'image. C'est un nombre compris entre 0 et 100, qui est converti en une valeur entre 0 et 1 puis utilisé comme argument  `encoderOptions` sur [`HTMLCanvasElement.toDataURL()`](/fr/docs/Web/API/HTMLCanvasElement/toDataURL). Si c'est choisi, 92 est utilisé. A mesure que la qualité baisse, le résultat de l'image aura plus d'artefacts visuel, et le nombre d'octets nécessaires pour le stocker diminuera. Cette valeur est ignorée pour les images PNG.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.extensionTypes.ImageDetails")}}</p>
+{{Compat("webextensions.api.extensionTypes.ImageDetails")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basé sur l'API Chromium [`chrome.extensionTypes`](https://developer.chrome.com/extensions/extensionTypes) . Cette documentation provient de [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) dans le code de Chromium.
+>
+> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<p>Cette API est basé sur l'API Chromium <a href="https://developer.chrome.com/extensions/extensionTypes"><code>chrome.extensionTypes</code></a> . Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json"><code>extension_types.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -69,5 +65,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

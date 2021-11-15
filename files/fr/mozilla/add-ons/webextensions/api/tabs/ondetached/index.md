@@ -13,87 +13,79 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onDetached
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsqu'un onglet est détaché d'une fenêtre, par exemple parce qu'il est déplacé entre des fenêtres.</p>
+Lancé lorsqu'un onglet est détaché d'une fenêtre, par exemple parce qu'il est déplacé entre des fenêtres.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.tabs.onDetached.addListener(listener)
+```js
+browser.tabs.onDetached.addListener(listener)
 browser.tabs.onDetached.removeListener(listener)
 browser.tabs.onDetached.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument de <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>l'écouteur</code> est enregistré pour cet événemen. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument de `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `l'écouteur` est enregistré pour cet événemen. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. ID de l'onglet qui a été détaché.</dd>
- </dl>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
- <dl>
-  <dt><code>detachInfo</code></dt>
-  <dd><a href="#detachInfo"><code>object</code></a>. ID de la fenêtre précédente et index de l'onglet à l'intérieur.</dd>
- </dl>
- </dd>
-</dl>
+    - `tabId`
+      - : `integer`. ID de l'onglet qui a été détaché.
 
-<h2 id="Objets_supplémentaires">Objets supplémentaires</h2>
+    <!---->
 
-<h3 id="detachInfo">detachInfo</h3>
+    - `detachInfo`
+      - : [`object`](#detachInfo). ID de la fenêtre précédente et index de l'onglet à l'intérieur.
 
-<dl>
- <dt><code>oldWindowId</code></dt>
- <dd><code>integer</code>. ID de la fenêtre précédente</dd>
- <dt><code>oldPosition</code></dt>
- <dd><code>integer</code>. Position de l'index que l'onglet avait dans l'ancienne fenêtre.</dd>
-</dl>
+## Objets supplémentaires
 
-<h2 id="Exemples">Exemples</h2>
+### detachInfo
 
-<p>Ecoutez les événements de détachement et consignez les informations :</p>
+- `oldWindowId`
+  - : `integer`. ID de la fenêtre précédente
+- `oldPosition`
+  - : `integer`. Position de l'index que l'onglet avait dans l'ancienne fenêtre.
 
-<pre class="brush: js">function handleDetached(tabId, detachInfo) {
+## Exemples
+
+Ecoutez les événements de détachement et consignez les informations :
+
+```js
+function handleDetached(tabId, detachInfo) {
   console.log("Tab: " + tabId + " moved");
   console.log("Old window: " + detachInfo.oldWindowId);
   console.log("Old index: " + detachInfo.oldPosition);
 }
 
-browser.tabs.onDetached.addListener(handleDetached);</pre>
+browser.tabs.onDetached.addListener(handleDetached);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.onDetached")}}</p>
+{{Compat("webextensions.api.tabs.onDetached")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -120,5 +112,4 @@ browser.tabs.onDetached.addListener(handleDetached);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -6,85 +6,71 @@ tags:
   - TopicStub
 translation_of: Mozilla/Firefox/Releases/26
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 26 est sorti le 10 Décembre 2013. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeurs Web, mais également pour les développeurs Firefox et Gecko ainsi que pour les développeurs de modules complémentaires.</p>
+Firefox 26 est sorti le 10 Décembre 2013. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeurs Web, mais également pour les développeurs Firefox et Gecko ainsi que pour les développeurs de modules complémentaires.
 
-<h2 id="Changements_pour_les_développeurs_Web">Changements pour les développeurs Web</h2>
+## Changements pour les développeurs Web
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>La propriété {{cssxref("text-decoration-line")}}, toujours préfixée, considère désormais <code>'blink'</code> comme une valeur valide, bien qu'elle ne fasse pas du tout clignoter le contenu ({{bug("812995")}}).</li>
- <li>La propriété <code>non standard</code> {{cssxref("-moz-text-blink")}} a été supprimée ({{bug("812995")}}).</li>
- <li>Le support de la propriété {{cssxref("image-orientation")}}, dans sa version CSS Images &amp; Values Level 4, c'est-à-dire avec le mot clé <code>from-image</code> et le support EXIF, a été ajouté ({{bug(825771)}}).</li>
- <li>Le support expérimental <code>position: sticky</code> a été implémenté et peut être activé par pref <code>layout.css.sticky.enabled</code> ({{bug(886646)}}).</li>
- <li>La propriété {{cssxref("text-align")}} s'applique désormais au pseudo-élément {{cssxref("::-moz-placeholder")}} ({{bug(915551)}}).</li>
-</ul>
+- La propriété {{cssxref("text-decoration-line")}}, toujours préfixée, considère désormais `'blink'` comme une valeur valide, bien qu'elle ne fasse pas du tout clignoter le contenu ({{bug("812995")}}).
+- La propriété `non standard` {{cssxref("-moz-text-blink")}} a été supprimée ({{bug("812995")}}).
+- Le support de la propriété {{cssxref("image-orientation")}}, dans sa version CSS Images & Values Level 4, c'est-à-dire avec le mot clé `from-image` et le support EXIF, a été ajouté ({{bug(825771)}}).
+- Le support expérimental `position: sticky` a été implémenté et peut être activé par pref `layout.css.sticky.enabled` ({{bug(886646)}}).
+- La propriété {{cssxref("text-align")}} s'applique désormais au pseudo-élément {{cssxref("::-moz-placeholder")}} ({{bug(915551)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>La proprété <code>HTMLSelectElement.selectedOptions</code> a été implémentée ({{bug("596681")}}).</li>
- <li>Dans l'élément {{HTMLElement("input")}} de type <code>email</code>, les valeurs avec des étiquettes de domaine de plus de 63 caractères ne sont plus considérées comme valides ({{bug("884332")}}).</li>
- <li>Les propriétés <code>HTMLInputElement.width</code> et <code>height</code> renvoient désormais <code>0</code> lorsque le <code>type</code> n'est pas <code>image</code> ({{bug("905240")}}).</li>
- <li>Un élément {{HTMLElement("fieldset")}} est désormais invalide, et peut être stylisé en utilisant la pseudo-classe {{cssxref(":invalid")}}, quand l'un des éléments qu'il contient est invalide ({{bug("717181")}}).</li>
-</ul>
+- La proprété `HTMLSelectElement.selectedOptions` a été implémentée ({{bug("596681")}}).
+- Dans l'élément {{HTMLElement("input")}} de type `email`, les valeurs avec des étiquettes de domaine de plus de 63 caractères ne sont plus considérées comme valides ({{bug("884332")}}).
+- Les propriétés `HTMLInputElement.width` et `height` renvoient désormais `0` lorsque le `type` n'est pas `image` ({{bug("905240")}}).
+- Un élément {{HTMLElement("fieldset")}} est désormais invalide, et peut être stylisé en utilisant la pseudo-classe {{cssxref(":invalid")}}, quand l'un des éléments qu'il contient est invalide ({{bug("717181")}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>L'implémentation d'<a href="/fr/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla">EcmaScript 6</a> se poursuit!</p>
+L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) se poursuit!
 
-<ul>
- <li>La syntaxe conforme à ECMAScript 6 pour les <a href="http://wiki.ecmascript.org/doku.php?id=harmony:generators">Générateurs (yield)</a> a été implémentée ({{bug("666399")}}).</li>
- <li>Les résultats du générateur / itérateur sont maintenant encadrés comme <code>{ value: foo, done: bool }</code> ({{bug(907744)}}).</li>
- <li>De nouvelles méthodes mathématiques ont été implémentées sur <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Math"><code>Math</code></a>: <a href="/fr/docs/JavaScript/Reference/Global_Objects/Math/fround"><code>Math.fround()</code></a> ({{bug("900125")}}).</li>
- <li>Les <a href="/fr/docs/Web/JavaScript/Reference/Reserved_Words">mots réservés</a> ne peuvent pas être utilisés pour les noms de fonctions: une telle utilisation lève désormis une <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a> ({{bug("907958")}}).</li>
- <li>La syntaxe des <a href="/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters">paramètres par défaut</a> a été mise à jour pour autoriser les paramètres sans valeurs par défaut après les paramètres par défaut, tels que la <code>function f(x=1, y)</code>. See {{bug(777060)}}.</li>
- <li>{{jsxref("Global_Objects/GeneratorFunction", "GeneratorFunction")}} est implémenté ({{bug(904701)}}).</li>
-</ul>
+- La syntaxe conforme à ECMAScript 6 pour les [Générateurs (yield)](http://wiki.ecmascript.org/doku.php?id=harmony:generators) a été implémentée ({{bug("666399")}}).
+- Les résultats du générateur / itérateur sont maintenant encadrés comme `{ value: foo, done: bool }` ({{bug(907744)}}).
+- De nouvelles méthodes mathématiques ont été implémentées sur [`Math`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math): [`Math.fround()`](/fr/docs/JavaScript/Reference/Global_Objects/Math/fround) ({{bug("900125")}}).
+- Les [mots réservés](/fr/docs/Web/JavaScript/Reference/Reserved_Words) ne peuvent pas être utilisés pour les noms de fonctions: une telle utilisation lève désormis une [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) ({{bug("907958")}}).
+- La syntaxe des [paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters) a été mise à jour pour autoriser les paramètres sans valeurs par défaut après les paramètres par défaut, tels que la `function f(x=1, y)`. See {{bug(777060)}}.
+- {{jsxref("Global_Objects/GeneratorFunction", "GeneratorFunction")}} est implémenté ({{bug(904701)}}).
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+### Interfaces/APIs/DOM
 
-<ul>
- <li>Rendez le dernier argument (doctype) de {{domxref("DOMImplementation.createDocument")}} facultatif ({{bug(909859)}}).</li>
- <li>Implémentez la nouvelle spécification {{domxref("element.classList")}} qui permet d'ajouter / supprimer plusieurs classes en un seul appel ({{bug(814014)}}).</li>
- <li>Le constructeur {{domxref("URL.URL", "URL()")}} a été implémenté sur l'interface {{domxref("URL")}} ({{bug("887364")}}).</li>
- <li>Les propriétés {{domxref("URLUtils.origin")}}, {{domxref("URLUtils.password")}}, et {{domxref("URLUtils.username")}} sont désormais disponibles pour toutes les interfaces implémentant {{domxref("URLUtils")}}: {{domxref("URL")}}, {{domxref("Location")}}, {{domxref("HTMLAnchorElement")}}, et {{domxref("HTMLAreaElement")}} ({{bug("887364")}}).</li>
- <li>L'interface {{domxref("URL")}} est désormais accessible depuis Web Workers ({{bug("887364")}}).</li>
- <li>IndexedDB peut maintenant être utilisé comme une zone de stockage "optimiste" donc il ne nécessite aucune invite et les données sont stockées dans un pool avec une politique d'éviction LRU, dans un court stockage temporaire ({{bug("785884")}}).</li>
- <li>Le support de {{domxref("WaveShaperNode.oversample")}} a été ajouté ({{bug(875277)}}).</li>
- <li>Le chemin du stockage persistant a été changé de <code>&lt;profile&gt;/indexedDB</code> à <code>&lt;profile&gt;/storage/persistent</code> (sur b2g de <code>/data/local/indexedDB</code> à <code>/data/local/storage/persistent</code>).</li>
- <li>La propriété {{domxref("Screen.orientation")}} et la méthode {{domxref("Screen.lockOrientation()")}} prennent désormais en charge la valeur <code>default</code>, mappant sur <code>portrait-primary</code> ou <code>landscape-primary</code>, selon l'appareil ({{bug(908058)}}). Cela ne fonctionne que pour Firefox OS et Firefox pour Android. Firefox Desktop n'est pas pris en charge.</li>
- <li>Les constructeurs {{domxref("Event")}} peuvent être utilisés dans les Web workers ({{bug(910910)}}).</li>
- <li>Tenter de définir la propriété {{domxref("Document.domain")}} sur une page intégrée dans un {{HTMLElement("iframe")}} avec l'attribut <code>sandbox</code> génère maintenant une erreur de sécurité ({{bug(907892)}}).</li>
- <li>L'interface {{domxref("MessageEvent")}} a été mise à jour pour se conformer à la dernière spécification. La méthode <code>initMessageEvent</code> a été supprimée alors que l'interface a maintenant un constructeur ({{bug(848294)}}).</li>
- <li>L'API HTML5 <code>MessageChannel</code> a été implémentée, derrière la préférence <code>dom.messageChannel.enabled</code> ({{bug("677638")}}).</li>
- <li>Le support pour <code>VTTCue</code>, derrière la préférence <code>media.webvtt.enabled</code>, comme pour toutes les implémentations liées à WebVTT, a été ajouté ({{bug("868509")}}).</li>
-</ul>
+- Rendez le dernier argument (doctype) de {{domxref("DOMImplementation.createDocument")}} facultatif ({{bug(909859)}}).
+- Implémentez la nouvelle spécification {{domxref("element.classList")}} qui permet d'ajouter / supprimer plusieurs classes en un seul appel ({{bug(814014)}}).
+- Le constructeur {{domxref("URL.URL", "URL()")}} a été implémenté sur l'interface {{domxref("URL")}} ({{bug("887364")}}).
+- Les propriétés {{domxref("URLUtils.origin")}}, {{domxref("URLUtils.password")}}, et {{domxref("URLUtils.username")}} sont désormais disponibles pour toutes les interfaces implémentant {{domxref("URLUtils")}}: {{domxref("URL")}}, {{domxref("Location")}}, {{domxref("HTMLAnchorElement")}}, et {{domxref("HTMLAreaElement")}} ({{bug("887364")}}).
+- L'interface {{domxref("URL")}} est désormais accessible depuis Web Workers ({{bug("887364")}}).
+- IndexedDB peut maintenant être utilisé comme une zone de stockage "optimiste" donc il ne nécessite aucune invite et les données sont stockées dans un pool avec une politique d'éviction LRU, dans un court stockage temporaire ({{bug("785884")}}).
+- Le support de {{domxref("WaveShaperNode.oversample")}} a été ajouté ({{bug(875277)}}).
+- Le chemin du stockage persistant a été changé de `<profile>/indexedDB` à `<profile>/storage/persistent` (sur b2g de `/data/local/indexedDB` à `/data/local/storage/persistent`).
+- La propriété {{domxref("Screen.orientation")}} et la méthode {{domxref("Screen.lockOrientation()")}} prennent désormais en charge la valeur `default`, mappant sur `portrait-primary` ou `landscape-primary`, selon l'appareil ({{bug(908058)}}). Cela ne fonctionne que pour Firefox OS et Firefox pour Android. Firefox Desktop n'est pas pris en charge.
+- Les constructeurs {{domxref("Event")}} peuvent être utilisés dans les Web workers ({{bug(910910)}}).
+- Tenter de définir la propriété {{domxref("Document.domain")}} sur une page intégrée dans un {{HTMLElement("iframe")}} avec l'attribut `sandbox` génère maintenant une erreur de sécurité ({{bug(907892)}}).
+- L'interface {{domxref("MessageEvent")}} a été mise à jour pour se conformer à la dernière spécification. La méthode `initMessageEvent` a été supprimée alors que l'interface a maintenant un constructeur ({{bug(848294)}}).
+- L'API HTML5 `MessageChannel` a été implémentée, derrière la préférence `dom.messageChannel.enabled` ({{bug("677638")}}).
+- Le support pour `VTTCue`, derrière la préférence `media.webvtt.enabled`, comme pour toutes les implémentations liées à WebVTT, a été ajouté ({{bug("868509")}}).
 
-<h3 id="MathML">MathML</h3>
+### MathML
 
-<ul>
- <li>Les rendus incohérents de {{MathMLElement("mmultiscripts")}},  {{MathMLElement("msub")}}, {{MathMLElement("msup")}} et {{MathMLElement("msubsup")}} ont été unifiés et la gestion des erreurs de ces éléments a été améliorée ({{bug("827713")}}).</li>
-</ul>
+- Les rendus incohérents de {{MathMLElement("mmultiscripts")}},  {{MathMLElement("msub")}}, {{MathMLElement("msup")}} et {{MathMLElement("msubsup")}} ont été unifiés et la gestion des erreurs de ces éléments a été améliorée ({{bug("827713")}}).
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<ul>
- <li>L'inclusion de glyphes SVG dans OpenType, <em>SVG-in-OpenType</em>, a été mise à jour pour correspondre à la version actuelle de la spécification ({{bug("906521")}}).</li>
- <li>La méthode <code>SVGElement.ownerSVGElement()</code> ne lance plus ({{bug("835048")}}).</li>
-</ul>
+- L'inclusion de glyphes SVG dans OpenType, _SVG-in-OpenType_, a été mise à jour pour correspondre à la version actuelle de la spécification ({{bug("906521")}}).
+- La méthode `SVGElement.ownerSVGElement()` ne lance plus ({{bug("835048")}}).
 
-<h2 id="Outils_de_développement">Outils de développement</h2>
+## Outils de développement
 
-<ul>
- <li>L'Inspector est désormais accessible à distance ({{bug(805526)}}).</li>
- <li>Le texte de la console Web peut être sélectionné, {{cssxref("::before")}} et {{cssxref("::after")}} maintenant inspectables, des fonctionnalités de débogage et de conception réactive sont prévues pour cette version. (<a href="https://hacks.mozilla.org/2013/09/new-features-in-the-firefox-developer-tools-episode-26/">https://hacks.mozilla.org/2013/09/new-features-in-the-firefox-developer-tools-episode-26/</a>)</li>
-</ul>
+- L'Inspector est désormais accessible à distance ({{bug(805526)}}).
+- Le texte de la console Web peut être sélectionné, {{cssxref("::before")}} et {{cssxref("::after")}} maintenant inspectables, des fonctionnalités de débogage et de conception réactive sont prévues pour cette version. (<https://hacks.mozilla.org/2013/09/new-features-in-the-firefox-developer-tools-episode-26/>)
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<h3 id="Versions_plus_anciennes">Versions plus anciennes</h3>
+### Versions plus anciennes
 
-<p>{{Firefox_for_developers('25')}}</p>
+{{Firefox_for_developers('25')}}

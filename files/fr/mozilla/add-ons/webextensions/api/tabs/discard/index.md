@@ -12,41 +12,41 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Rejette un ou plusieurs onglets.</p>
+Rejette un ou plusieurs onglets.
 
-<p>Certains navigateurs "suppriment" automatiquement les onglets dont ils ne pensent pas qu'ils seront bientôt utiles à l'utilisateur. L'onglet reste visible dans la bande d'onglets et le navigateur se souvient de son état, donc si l'utilisateur sélectionne un onglet qui a été supprimé, il est immédiatement restauré.</p>
+Certains navigateurs "suppriment" automatiquement les onglets dont ils ne pensent pas qu'ils seront bientôt utiles à l'utilisateur. L'onglet reste visible dans la bande d'onglets et le navigateur se souvient de son état, donc si l'utilisateur sélectionne un onglet qui a été supprimé, il est immédiatement restauré.
 
-<p>Les détails de ce qui est supprimé sont spécifiques au navigateur, mais en général, l'abandon d'un onglet permet au navigateur de libérer une partie de la mémoire occupée par cet onglet.</p>
+Les détails de ce qui est supprimé sont spécifiques au navigateur, mais en général, l'abandon d'un onglet permet au navigateur de libérer une partie de la mémoire occupée par cet onglet.
 
-<p>L'API {{WebExtAPIRef("tabs.discard()")}} permet à une extension d'ignorer un ou plusieurs onglets. Il n'est pas possible de supprimer l'onglet actuellement actif ou un onglet dont le document contient un programme d'écoute <code><a href="/fr/docs/Web/Events/beforeunload">beforeunload</a></code> qui afficherait une invite.</p>
+L'API {{WebExtAPIRef("tabs.discard()")}} permet à une extension d'ignorer un ou plusieurs onglets. Il n'est pas possible de supprimer l'onglet actuellement actif ou un onglet dont le document contient un programme d'écoute [`beforeunload`](/fr/docs/Web/Events/beforeunload) qui afficherait une invite.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var discarding = browser.tabs.discard(
+```js
+var discarding = browser.tabs.discard(
   tabIds          // integer or integer array
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabIds</code></dt>
- <dd><code><code>integer</code></code> or <code><code>array</code></code> of <code><code><code>integer</code></code></code>. Les ID de l'onglet ou des onglets à ignorer.</dd>
-</dl>
+- `tabIds`
+  - : `integer` or `array` of `integer`. Les ID de l'onglet ou des onglets à ignorer.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans argument lorsque tous les onglets spécifiés ont été supprimés. Si une erreur se produit (par exemple, ID d'onglet non valide), la promesse sera rejetée avec un message d'erreur.Si l'ID de l'onglet actif est transmis, il ne sera pas supprimé, mais la promesse sera satisfaite et tous les autres onglets transférés seront supprimés.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque tous les onglets spécifiés ont été supprimés. Si une erreur se produit (par exemple, ID d'onglet non valide), la promesse sera rejetée avec un message d'erreur.Si l'ID de l'onglet actif est transmis, il ne sera pas supprimé, mais la promesse sera satisfaite et tous les autres onglets transférés seront supprimés.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Supprimer un seul onglet :</p>
+Supprimer un seul onglet :
 
-<pre class="brush: js">function onDiscarded() {
+```js
+function onDiscarded() {
   console.log(`Discarded`);
 }
 
@@ -55,11 +55,13 @@ function onError(error) {
 }
 
 var discarding = browser.tabs.discard(2);
-discarding.then(onDiscarded, onError);</pre>
+discarding.then(onDiscarded, onError);
+```
 
-<p>Ignorer plusieurs onglets :</p>
+Ignorer plusieurs onglets :
 
-<pre class="brush: js">function onDiscarded() {
+```js
+function onDiscarded() {
   console.log(`Discarded`);
 }
 
@@ -68,21 +70,20 @@ function onError(error) {
 }
 
 var discarding = browser.tabs.discard([15, 14, 1]);
-discarding.then(onDiscarded, onError);</pre>
+discarding.then(onDiscarded, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.discard", 10)}}</p>
+{{Compat("webextensions.api.tabs.discard", 10)}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript).
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,5 +110,4 @@ discarding.then(onDiscarded, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

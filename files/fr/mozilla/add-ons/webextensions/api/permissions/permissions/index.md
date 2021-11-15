@@ -10,30 +10,27 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/Permissions
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet <code>Permissions</code> représente une collection de permissions.</p>
+Un objet `Permissions` représente une collection de permissions.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Un {{jsxref("object")}} avec les propriétés suivantes :</p>
+Un {{jsxref("object")}} avec les propriétés suivantes :
 
-<dl>
- <dt><code>origins</code>{{optional_inline}}</dt>
- <dd>Un tableau de <a href="/fr/Add-ons/WebExtensions/Match_patterns">modèles de correspondance</a>, représentant les <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">permissions de l'hôte</a>.</dd>
- <dt><code>permissions</code>{{optional_inline}}</dt>
- <dd>Un tableau de permissions nommées, y compris les <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permissions d'API </a> et les <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Clipboard_access">permissions du presse-papiers</a>.</dd>
-</dl>
+- `origins`{{optional_inline}}
+  - : Un tableau de [modèles de correspondance](/fr/Add-ons/WebExtensions/Match_patterns), représentant les [permissions de l'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions).
+- `permissions`{{optional_inline}}
+  - : Un tableau de permissions nommées, y compris les [permissions d'API ](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) et les [permissions du presse-papiers](/fr/Add-ons/WebExtensions/manifest.json/permissions#Clipboard_access).
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.permissions.Permissions")}}</p>
+{{Compat("webextensions.api.permissions.Permissions")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/permissions"><code>chrome.permissions</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/extensions/permissions).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

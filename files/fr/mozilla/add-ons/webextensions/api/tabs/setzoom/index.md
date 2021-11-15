@@ -13,68 +13,69 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/setZoom
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Effectue un zoom sur l'onglet spécifié.</p>
+Effectue un zoom sur l'onglet spécifié.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var zooming = browser.tabs.setZoom(
+```js
+var zooming = browser.tabs.setZoom(
   tabId,           // optional integer
   zoomFactor       // number
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. L'ID de l'onglet à zoomer. Par défaut à l'onglet actif de la fenêtre en cours.</dd>
- <dt><code>zoomFactor</code></dt>
- <dd><code>number</code>. Le nouveau facteur de zoom. Utilisez une valeur de 0 ici pour régler l'onglet à son facteur de zoom par défaut actuel. Sinon, il doit s'agir d'un nombre compris entre 0,3 et 3, en spécifiant un facteur de zoom.</dd>
-</dl>
+- `tabId`{{optional_inline}}
+  - : `integer`. L'ID de l'onglet à zoomer. Par défaut à l'onglet actif de la fenêtre en cours.
+- `zoomFactor`
+  - : `number`. Le nouveau facteur de zoom. Utilisez une valeur de 0 ici pour régler l'onglet à son facteur de zoom par défaut actuel. Sinon, il doit s'agir d'un nombre compris entre 0,3 et 3, en spécifiant un facteur de zoom.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> cela sera accompli sans arguments après que le facteur de zoom ait été changé. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) cela sera accompli sans arguments après que le facteur de zoom ait été changé. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Set the zoom factor for the current tab to 2:</p>
+Set the zoom factor for the current tab to 2:
 
-<pre class="brush: js">function onError(error) {
+```js
+function onError(error) {
   console.log(`Error: ${error}`);
 }
 
 var setting = browser.tabs.setZoom(2);
-setting.then(null, onError);</pre>
+setting.then(null, onError);
+```
 
-<p>Set the zoom factor for the tab whose ID is 16 tab to 0.5:</p>
+Set the zoom factor for the tab whose ID is 16 tab to 0.5:
 
-<pre class="brush: js">function onError(error) {
+```js
+function onError(error) {
   console.log(`Error: ${error}`);
 }
 
 var setting = browser.tabs.setZoom(16, 0.5);
-setting.then(null, onError);</pre>
+setting.then(null, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.setZoom")}}</p>
+{{Compat("webextensions.api.tabs.setZoom")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,5 +102,4 @@ setting.then(null, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

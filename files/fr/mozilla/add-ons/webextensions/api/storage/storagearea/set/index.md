@@ -14,47 +14,46 @@ tags:
   - set
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Stocke un ou plusieurs éléments dans la zone de stockage ou met à jour les éléments existants..</p>
+Stocke un ou plusieurs éléments dans la zone de stockage ou met à jour les éléments existants..
 
-<p>Lorsque vous stockez ou mettez à jour une valeur à l'aide de cette API, l'événement  {{WebExtAPIRef("storage.onChanged")}} se déclenche.</p>
+Lorsque vous stockez ou mettez à jour une valeur à l'aide de cette API, l'événement  {{WebExtAPIRef("storage.onChanged")}} se déclenche.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">let settingItem = browser.storage.&lt;storageType&gt;.set(
+```js
+let settingItem = browser.storage.<storageType>.set(
   keys             // object
 )
-</pre>
+```
 
-<p><code>&lt;storageType&gt;</code> sera l'un des types de stockage accessibles en écriture — {{WebExtAPIRef("storage.sync")}} ou {{WebExtAPIRef("storage.local")}}.</p>
+`<storageType>` sera l'un des types de stockage accessibles en écriture — {{WebExtAPIRef("storage.sync")}} ou {{WebExtAPIRef("storage.local")}}.
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>keys</code></dt>
- <dd>
- <p>Un objet contenant une ou plusieurs paires clé / valeur à stocker dans le stockage. Si un élément existe déjà, sa valeur sera mise à jour.</p>
+- `keys`
 
- <p>Les valeurs peuvent être des <a href="/fr/docs/Glossary/Primitive">types primitifs</a> tels que des nombres, des booléens et des chaînes) ou des types de <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Array">tableau</a></code>.</p>
+  - : Un objet contenant une ou plusieurs paires clé / valeur à stocker dans le stockage. Si un élément existe déjà, sa valeur sera mise à jour.
 
- <p>Il n'est généralement pas possible de stocker d'autres types, tels que <code>Function</code>, <code>Date</code>, <code>RegExp</code>, <code>Set</code>, <code>Map</code>, <code>ArrayBuffer</code> et etc. Certains de ces types non pris en charge seront restaurés en tant qu'objet vide, et d'autres entraîneront <code>set()</code> à lancer une erreur. Le comportement exact ici est spécifique au navigateur.</p>
- </dd>
-</dl>
+    Les valeurs peuvent être des [types primitifs](/fr/docs/Glossary/Primitive) tels que des nombres, des booléens et des chaînes) ou des types de [`tableau`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+    Il n'est généralement pas possible de stocker d'autres types, tels que `Function`, `Date`, `RegExp`, `Set`, `Map`, `ArrayBuffer` et etc. Certains de ces types non pris en charge seront restaurés en tant qu'objet vide, et d'autres entraîneront `set()` à lancer une erreur. Le comportement exact ici est spécifique au navigateur.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans arguments si l'opération a réussi. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur.</p>
+### Valeur retournée
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments si l'opération a réussi. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur.
 
-<p>{{Compat("webextensions.api.storage.StorageArea.set")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.storage.StorageArea.set")}}
 
-<pre class="brush: js">function setItem() {
+## Exemples
+
+```js
+function setItem() {
   console.log("OK");
 }
 
@@ -91,11 +90,10 @@ browser.storage.local.get("kitten")
   .then(gotKitten, onError);
 browser.storage.local.get("monster")
   .then(gotMonster, onError);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> dans le code de Chromium.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.

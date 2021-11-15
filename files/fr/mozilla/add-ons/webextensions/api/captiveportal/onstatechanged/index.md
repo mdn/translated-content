@@ -11,65 +11,57 @@ tags:
   - captivePortal
 translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/onStateChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>S'allume lorsque l'état de portail captif change.</p>
+S'allume lorsque l'état de portail captif change.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.captivePortal.onStateChanged.addListener(callback)
+```js
+browser.captivePortal.onStateChanged.addListener(callback)
 browser.captivePortal.onStateChanged.removeListener(listener)
 browser.captivePortal.onStateChanged.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un auditeur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument de <code>listener</code> est l'auditeur à retirer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est inscrit à cet événement. Renvoie <code>true</code> si c'est un auditeur, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un auditeur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument de `listener` est l'auditeur à retirer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est inscrit à cet événement. Renvoie `true` si c'est un auditeur, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramétres">Paramétres</h3>
+### Paramétres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui est appelée lorsque cet événement se produit. La fonction se voit transmettre les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>details</code></dt>
-  <dd>
-  <p><code>string</code> L'État portail captif, étant l'un des <code>unknown</code>, <code>not_captive</code>, <code>unlocked_portal</code>, ou <code>locked_portal</code>.</p>
-  </dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui est appelée lorsque cet événement se produit. La fonction se voit transmettre les arguments suivants :
 
-<h2 id="Exemples">Exemples</h2>
+    - `details`
+      - : `string` L'État portail captif, étant l'un des `unknown`, `not_captive`, `unlocked_portal`, ou `locked_portal`.
 
-<p>Gérer un changement de statut de portail captif :</p>
+## Exemples
 
-<pre class="brush: js">function handlePortalStatus(portalstatusInfo) {
+Gérer un changement de statut de portail captif :
+
+```js
+function handlePortalStatus(portalstatusInfo) {
   console.log("The portal status is now: " + portalstatusInfo.details);
 }
 
 browser.captivePortal.onStateChanged.addListener(handlePortalStatus)
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.captivePortal.onStateChanged")}}</p>
+{{Compat("webextensions.api.captivePortal.onStateChanged")}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,5 +88,4 @@ browser.captivePortal.onStateChanged.addListener(handlePortalStatus)
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

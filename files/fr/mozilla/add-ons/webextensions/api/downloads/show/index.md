@@ -13,39 +13,39 @@ tags:
   - show
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/show
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La fonction <code><strong>show</strong></code><strong><code>()</code></strong> de l'API {{WebExtAPIRef("downloads")}} affiche le fichier téléchargé dans son dossier contenant dans le gestionnaire de fichiers de la plate-forme sous-jacente.</p>
+La fonction **`show`\*\***`()`\*\* de l'API {{WebExtAPIRef("downloads")}} affiche le fichier téléchargé dans son dossier contenant dans le gestionnaire de fichiers de la plate-forme sous-jacente.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var showing = browser.downloads.show(
+```js
+var showing = browser.downloads.show(
   downloadId             // integer
 )
-</pre>
+```
 
-<h3 id="Paramètes">Paramètes</h3>
+### Paramètes
 
-<dl>
- <dt><code>downloadId</code></dt>
- <dd>Un <code>integer</code> représentant l'ID du {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} à afficher.</dd>
-</dl>
+- `downloadId`
+  - : Un `integer` représentant l'ID du {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} à afficher.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. Si la demande est acceptée, la promise sera remplie avec un booléen indiquant si la demande a été acceptée. Si la demande échoue, la promise sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la demande est acceptée, la promise sera remplie avec un booléen indiquant si la demande a été acceptée. Si la demande échoue, la promise sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.downloads.show")}}</p>
+{{Compat("webextensions.api.downloads.show")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple montre l'élément le plus récemment téléchargé :</p>
+Cet exemple montre l'élément le plus récemment téléchargé :
 
-<pre class="brush: js">function onShowing(success) {
+```js
+function onShowing(success) {
   console.log(`Showing download item: ${success}`);
 }
 
@@ -54,7 +54,7 @@ function onError(error) {
 }
 
 function openDownload(downloadItems) {
-    if (downloadItems.length &gt; 0) {
+    if (downloadItems.length > 0) {
       latestDownloadId = downloadItems[0].id;
       var showing = browser.downloads.show(latestDownloadId);
       showing.then(onShowing, onError);
@@ -66,19 +66,18 @@ var searching = browser.downloads.search({
   orderBy: ["-startTime"]
 });
 
-searching.then(openDownload, onError);</pre>
+searching.then(openDownload, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -105,5 +104,4 @@ searching.then(openDownload, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

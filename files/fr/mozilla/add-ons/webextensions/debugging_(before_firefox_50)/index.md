@@ -11,43 +11,37 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)
 original_slug: Mozilla/Add-ons/WebExtensions/Debogage_(avant_Firefox_50)
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="note">
-<p><strong>Note :</strong> Cet article explique comment vous pouvez déboguer des extensions à l'aide des API WebExtension sur des versions de Firefox antérieures à la version 50.</p>
+> **Note :** Cet article explique comment vous pouvez déboguer des extensions à l'aide des API WebExtension sur des versions de Firefox antérieures à la version 50.
+>
+> Si vous utilisez Firefox 50 ou version ultérieure, consultez l'[article principal sur les extensions de débogage](/fr/Add-ons/WebExtensions/Debugging).
 
-<p>Si vous utilisez Firefox 50 ou version ultérieure, consultez l'<a href="/fr/Add-ons/WebExtensions/Debugging">article principal sur les extensions de débogage</a>.</p>
-</div>
+Cet article explique comment utiliser les outils de développement Firefox intégrés pour déboguer les extensions développées avec les API WebExtension. Si vous essayez de déboguer un module développé avec le Kit de développement logiciel complémentaire, consultez le guide du [débogueur de module complémentaire](/fr/Add-ons/Add-on_Debugger).
 
-<p>Cet article explique comment utiliser les outils de développement Firefox intégrés pour déboguer les extensions développées avec les API WebExtension. Si vous essayez de déboguer un module développé avec le Kit de développement logiciel complémentaire, consultez le guide du <a href="/fr/Add-ons/Add-on_Debugger">débogueur de module complémentaire</a>.</p>
+## Un exemple simple : notify-link-clicks-i18n
 
-<ul>
-</ul>
+Pour montrer comment connecter les outils de débogage, nous utiliserons une simple extension d'exemple appelée "notify-link-clicks-i18n". Le code est dans [dépôt d'exemples d'extensions sur GitHub](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n).
 
-<h2 id="Un_exemple_simple_notify-link-clicks-i18n">Un exemple simple : notify-link-clicks-i18n</h2>
+L'extension se compose de :
 
-<p>Pour montrer comment connecter les outils de débogage, nous utiliserons une simple extension d'exemple appelée "notify-link-clicks-i18n". Le code est dans <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">dépôt d'exemples d'extensions sur GitHub</a>.</p>
+- un script de fond, "background-script.js"
+- un script de contenu, "content-script.js", qui est injecté dans toutes les pages.
 
-<p>L'extension se compose de :</p>
+Le script de contenu écoute les clics sur les liens dans la page : lorsqu'un clic sur un lien se produit, le script de contenu envoie un message au script d'arrière-plan contenant la référence du lien.
 
-<ul>
- <li>un script de fond, "background-script.js"</li>
- <li>un script de contenu, "content-script.js", qui est injecté dans toutes les pages.</li>
-</ul>
+Lorsque le script d'arrière-plan reçoit le message, il affiche une notification contenant la href.
 
-<p>Le script de contenu écoute les clics sur les liens dans la page : lorsqu'un clic sur un lien se produit, le script de contenu envoie un message au script d'arrière-plan contenant la référence du lien.</p>
+Voici "content-script.js":
 
-<p>Lorsque le script d'arrière-plan reçoit le message, il affiche une notification contenant la href.</p>
-
-<p>Voici "content-script.js":</p>
-
-<pre class="brush: js">/*
+```js
+/*
 If the click was on a link, send a message to the background page.
 The message contains the link's URL.
 */
 function notifyExtension(e) {
   var target = e.target;
-  while ((target.tagName != "A" || !target.href) &amp;&amp; target.parentNode) {
+  while ((target.tagName != "A" || !target.href) && target.parentNode) {
     target = target.parentNode;
   }
   if (target.tagName != "A")
@@ -61,11 +55,12 @@ function notifyExtension(e) {
 Add notifyExtension() as a listener to click events.
 */
 window.addEventListener("click", notifyExtension);
-</pre>
+```
 
-<p>Voici "background-script.js":</p>
+Voici "background-script.js":
 
-<pre class="brush: js">/*
+```js
+/*
 Log that we received the message.
 Then display a notification. The notification contains the URL,
 which we read from the message.
@@ -86,150 +81,134 @@ function notify(message) {
 Assign `notify()` as a listener to messages from the content script.
 */
 chrome.runtime.onMessage.addListener(notify);
-</pre>
+```
 
-<p>Si vous voulez suivre, clonez le référentiel <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a>, puis <a href="/fr/Add-ons/WebExtensions/Packaging_and_installation">package et installez</a> "notify-link-clicks-i18n".</p>
+Si vous voulez suivre, clonez le référentiel [webextensions-examples](https://github.com/mdn/webextensions-examples), puis [package et installez](/fr/Add-ons/WebExtensions/Packaging_and_installation) "notify-link-clicks-i18n".
 
-<h2 id="La_boite_à_outils_du_navigateur">La boite à outils du navigateur</h2>
+## La boite à outils du navigateur
 
-<p>Nous utiliserons la boîte à outils du navigateur pour déboguer l'extension.</p>
+Nous utiliserons la boîte à outils du navigateur pour déboguer l'extension.
 
-<h3 id="Conditions_préalables">Conditions préalables</h3>
+### Conditions préalables
 
-<p>Avant de pouvoir utiliser la boîte à outils du navigateur, vous devez être configuré.</p>
+Avant de pouvoir utiliser la boîte à outils du navigateur, vous devez être configuré.
 
-<ul>
- <li>ouvrir les outils de développement Firefox</li>
- <li>ouvrir les <a href="/fr/docs/Tools/Settings">paramètres</a> des outils</li>
- <li>sous Paramètres avancés, assurez-vous que les deux paramètres suivants sont vérifiés :
-  <ul>
-   <li><em>Activer le chrome du navigateur et les boîtes à outils de débogage supplémentaires</em></li>
-   <li><em>Activer le débogage à distance</em></li>
-  </ul>
- </li>
-</ul>
+- ouvrir les outils de développement Firefox
+- ouvrir les [paramètres](/fr/docs/Tools/Settings) des outils
+- sous Paramètres avancés, assurez-vous que les deux paramètres suivants sont vérifiés :
 
-<p>{{EmbedYouTube("LJAM2vXJ790")}}</p>
+  - _Activer le chrome du navigateur et les boîtes à outils de débogage supplémentaires_
+  - _Activer le débogage à distance_
 
-<h3 id="Ouverture_de_la_boîte_à_outils_du_navigateur">Ouverture de la boîte à outils du navigateur</h3>
+{{EmbedYouTube("LJAM2vXJ790")}}
 
-<p>Ensuite, nous ouvrirons la boîte à outils du navigateur..</p>
+### Ouverture de la boîte à outils du navigateur
 
-<ul>
- <li>ouvrez le menu Web Developer dans Firefox, et sélectionnez "Browser Toolbox" (note : <em>pas</em> "Browser Console").</li>
- <li>une boîte de dialogue d'avertissement s'affiche : cliquez sur OK.</li>
-</ul>
+Ensuite, nous ouvrirons la boîte à outils du navigateur..
 
-<p>La boîte à outils du navigateur s'ouvrira alors dans une nouvelle fenêtre. La fenêtre principale de Firefox passera au premier plan, vous devrez donc cliquer sur la boîte à outils du navigateur pour la ramener devant vous :</p>
+- ouvrez le menu Web Developer dans Firefox, et sélectionnez "Browser Toolbox" (note : _pas_ "Browser Console").
+- une boîte de dialogue d'avertissement s'affiche : cliquez sur OK.
 
-<p>{{EmbedYouTube("fZ492zAAy3o")}}</p>
+La boîte à outils du navigateur s'ouvrira alors dans une nouvelle fenêtre. La fenêtre principale de Firefox passera au premier plan, vous devrez donc cliquer sur la boîte à outils du navigateur pour la ramener devant vous :
 
-<p>Dans Firefox, une "Toolbox" est le nom d'une fenêtre séparée contenant un ensemble d'outils dans une interface à onglets, comme ceci :</p>
+{{EmbedYouTube("fZ492zAAy3o")}}
 
-<p><img alt="" src="browser-toolbox.png">La boîte à outils ci-dessus contient cinq outils, que vous pouvez commuter entre les onglets en haut de la fenêtre : "Inspecteur", "Console", "Debugger", "Style Editor" et "Scratchpad". Nous n'utiliserons que deux de ces outils : "Console" et "Debugger".</p>
+Dans Firefox, une "Toolbox" est le nom d'une fenêtre séparée contenant un ensemble d'outils dans une interface à onglets, comme ceci :
 
-<h3 id="Affichage_de_la_sortie_du_journal">Affichage de la sortie du journal</h3>
+![](browser-toolbox.png)La boîte à outils ci-dessus contient cinq outils, que vous pouvez commuter entre les onglets en haut de la fenêtre : "Inspecteur", "Console", "Debugger", "Style Editor" et "Scratchpad". Nous n'utiliserons que deux de ces outils : "Console" et "Debugger".
 
-<p>Nous pouvons utiliser la console pour voir la sortie des journaux : Cela inclus les messages de :</p>
+### Affichage de la sortie du journal
 
-<ul>
- <li>scripts d'arrière plan</li>
- <li>scripts s'exécutant dans des popups</li>
- <li>les scripts de contenu.</li>
-</ul>
+Nous pouvons utiliser la console pour voir la sortie des journaux : Cela inclus les messages de :
 
-<p>Il inclut les messages de vos journaux de code à l'aide de l'<a href="/fr/docs/Web/API/Console">API de console</a> que les messages d'erreur enregistrés par le moteur JavaScript lors de l'exécution de votre code.</p>
+- scripts d'arrière plan
+- scripts s'exécutant dans des popups
+- les scripts de contenu.
 
-<p>Essayons avec l'exemple ci-dessus : sélectionnez l'onglet Console dans la boîte à outils du navigateur, ouvrez une page Web et cliquez sur un lien pour voir les messages enregistrés à partir du script de contenu et du script d'arrière-plan :</p>
+Il inclut les messages de vos journaux de code à l'aide de l'[API de console](/fr/docs/Web/API/Console) que les messages d'erreur enregistrés par le moteur JavaScript lors de l'exécution de votre code.
 
-<p>{{EmbedYouTube("Qpx0n8gP3Qw")}}</p>
+Essayons avec l'exemple ci-dessus : sélectionnez l'onglet Console dans la boîte à outils du navigateur, ouvrez une page Web et cliquez sur un lien pour voir les messages enregistrés à partir du script de contenu et du script d'arrière-plan :
 
-<p>Un problème ici est que la console vous montre les messages de l'ensemble du navigateur, donc il peut y avoir beaucoup de bruit. Lisez  <a href="/fr/docs/Tools/Web_Console/Console_messages#Filtering_and_searching">comment filtrer les messages de journal</a> pour obtenir de l'aide à ce sujet.</p>
+{{EmbedYouTube("Qpx0n8gP3Qw")}}
 
-<h3 id="Débogage_JavaScript">Débogage JavaScript</h3>
+Un problème ici est que la console vous montre les messages de l'ensemble du navigateur, donc il peut y avoir beaucoup de bruit. Lisez  [comment filtrer les messages de journal](/fr/docs/Tools/Web_Console/Console_messages#Filtering_and_searching) pour obtenir de l'aide à ce sujet.
 
-<p>Avec la Toolbox du navigateur, vous pouvez utiliser le débogueur JavaScript pour définir des points d'arrêt dans les scripts d'arrière-plan et les scripts s'exécutant dans le navigateur ou les fenêtres contextuelles d'action de page.</p>
+### Débogage JavaScript
 
-<p>Les scripts en arrière-plan sont toujours disponibles dans le débogueur si l'extension est installée et activée. Les scripts popup ne deviennent visibles que lorsque le popup est ouvert. Si vous avez besoin d'accéder aux scripts popup dès qu'ils se chargent, essayez d'ajouter un <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/debugger">debogueur</a></code> ; instruction au début du script.</p>
+Avec la Toolbox du navigateur, vous pouvez utiliser le débogueur JavaScript pour définir des points d'arrêt dans les scripts d'arrière-plan et les scripts s'exécutant dans le navigateur ou les fenêtres contextuelles d'action de page.
 
-<p>Pour utiliser le débogueur JavaScript, sélectionnez l'onglet Débogueur dans la boîte à outils du navigateur. Le travail suivant est donc de trouver le code de votre extension  : pour ce faire <a href="/fr/docs/Tools/Debugger/How_to/Search_and_filter">cliquez dans la boite de recherche et tapez le nom de la source</a>.</p>
+Les scripts en arrière-plan sont toujours disponibles dans le débogueur si l'extension est installée et activée. Les scripts popup ne deviennent visibles que lorsque le popup est ouvert. Si vous avez besoin d'accéder aux scripts popup dès qu'ils se chargent, essayez d'ajouter un [`debogueur`](/fr/docs/Web/JavaScript/Reference/Statements/debugger) ; instruction au début du script.
 
-<p>Une fois que vous avez trouvé votre source, vous pouvez définir des points d'arrêt, passer en revue le code et  faire <a href="/fr/docs/Tools/Debugger">tout ce que vous vous attendez à pouvoir faire dans un débogueur</a>.</p>
+Pour utiliser le débogueur JavaScript, sélectionnez l'onglet Débogueur dans la boîte à outils du navigateur. Le travail suivant est donc de trouver le code de votre extension  : pour ce faire [cliquez dans la boite de recherche et tapez le nom de la source](/fr/docs/Tools/Debugger/How_to/Search_and_filter).
 
-<p>{{EmbedYouTube("3edeJiG38ZA")}}</p>
+Une fois que vous avez trouvé votre source, vous pouvez définir des points d'arrêt, passer en revue le code et  faire [tout ce que vous vous attendez à pouvoir faire dans un débogueur](/fr/docs/Tools/Debugger).
 
-<h3 id="Interpréteur_en_ligne_de_commande_JavaScript">Interpréteur en ligne de commande JavaScript</h3>
+{{EmbedYouTube("3edeJiG38ZA")}}
 
-<p>La console comprend un <a href="/fr/docs/Tools/Web_Console/The_command_line_interpreter">interpréteur de ligne de commande</a> que vous pouvez utiliser pour interroger et manipuler l'état d'un programme en cours d'exécution. Cette fonctionnalité est couramment utilisée lorsque la console est attachée à une page Web, mais elle est généralement difficile à utiliser avec la Toolbox du navigateur, parce que la portée de cette console est le navigateur entier plutôt que l'extension spécifique que vous essayez de déboguer.</p>
+### Interpréteur en ligne de commande JavaScript
 
-<p>Cependant, il y a un truc qui peut vous aider : pendant que le débogueur soit mis en pause à un point d'arrêt, la portée de la Console est la portée au point du programme dans lequel le débogueur est mis en pause. Ainsi, si vous avez atteint un point d'arrêt dans le code de votre extension, vous pouvez interagir directement avec votre extension : vous pouvez appeler des fonctions d'extension, réassigner des valeurs de variables, etc.</p>
+La console comprend un [interpréteur de ligne de commande](/fr/docs/Tools/Web_Console/The_command_line_interpreter) que vous pouvez utiliser pour interroger et manipuler l'état d'un programme en cours d'exécution. Cette fonctionnalité est couramment utilisée lorsque la console est attachée à une page Web, mais elle est généralement difficile à utiliser avec la Toolbox du navigateur, parce que la portée de cette console est le navigateur entier plutôt que l'extension spécifique que vous essayez de déboguer.
 
-<p>Cette fonction est particulièrement utile en combinaison avec une autre fonction : la <a href="/fr/docs/Tools/Web_Console/Split_console">console split</a>. Cela vous permet de diviser la boîte à outils en deux : une moitié contient la console et l'autre moitié contient un outil différent (dans ce cas, le débogueur JavaScript) :</p>
+Cependant, il y a un truc qui peut vous aider : pendant que le débogueur soit mis en pause à un point d'arrêt, la portée de la Console est la portée au point du programme dans lequel le débogueur est mis en pause. Ainsi, si vous avez atteint un point d'arrêt dans le code de votre extension, vous pouvez interagir directement avec votre extension : vous pouvez appeler des fonctions d'extension, réassigner des valeurs de variables, etc.
 
-<p>{{EmbedYouTube("xprf58qOtLY")}}</p>
+Cette fonction est particulièrement utile en combinaison avec une autre fonction : la [console split](/fr/docs/Tools/Web_Console/Split_console). Cela vous permet de diviser la boîte à outils en deux : une moitié contient la console et l'autre moitié contient un outil différent (dans ce cas, le débogueur JavaScript) :
 
-<h3 id="Débogage_des_scripts_de_contenus">Débogage des scripts de contenus</h3>
+{{EmbedYouTube("xprf58qOtLY")}}
 
-<p>Une grande limitation de la Browser Toolbox est la suivante : si vous développez avec <a href="/fr/docs/Mozilla/Firefox/Multiprocess_Firefox">firefox multiprocessus</a>, vous ne pouvez pas utiliser la Toolbox du navigateur pour attacher le débogueur JavaScript aux scripts de contenu.</p>
+### Débogage des scripts de contenus
 
-<p>Dans Firefox multiprocessus, le navigateur est divisé en (au moins) deux processus : un pour exécuter l'interface utilisateur et le code système du navigateur, et un (ou plusieurs) processus de contenu, qui exécutent des scripts chargés à partir de pages Web. La ToolBox du navigateur s'attache au premier de ces processus : mais les scripts de contenu s'exécutent dans les processus de contenu, de sorte qu'ils n'apparaissent pas dans la liste des sources de la ToolBox du navigateur.</p>
+Une grande limitation de la Browser Toolbox est la suivante : si vous développez avec [firefox multiprocessus](/fr/docs/Mozilla/Firefox/Multiprocess_Firefox), vous ne pouvez pas utiliser la Toolbox du navigateur pour attacher le débogueur JavaScript aux scripts de contenu.
 
-<p>Pour déboguer les scripts de contenu dans Firefox multiprocessus, vous devrez utiliser le contenu de la boite à outils du navigateur. Le contenu de la boite à outils du navigateur est tout comme la Toolbox de navigateur, sauf qu'elle attache les outils de développement au processus de contenu du navigateur, de sorte que les scripts de contenu sont visibles..</p>
+Dans Firefox multiprocessus, le navigateur est divisé en (au moins) deux processus : un pour exécuter l'interface utilisateur et le code système du navigateur, et un (ou plusieurs) processus de contenu, qui exécutent des scripts chargés à partir de pages Web. La ToolBox du navigateur s'attache au premier de ces processus : mais les scripts de contenu s'exécutent dans les processus de contenu, de sorte qu'ils n'apparaissent pas dans la liste des sources de la ToolBox du navigateur.
 
-<p>Notez que les scripts de contenu n'apparaîtront pas dans la liste des sources jusqu'à ce qu'ils soient chargés. Si vous avez besoin d'y accéder dès qu'ils se chargent, essayez d'ajouter un <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/debugger">debuggueur</a></code> ; instruction au début de votre script.</p>
+Pour déboguer les scripts de contenu dans Firefox multiprocessus, vous devrez utiliser le contenu de la boite à outils du navigateur. Le contenu de la boite à outils du navigateur est tout comme la Toolbox de navigateur, sauf qu'elle attache les outils de développement au processus de contenu du navigateur, de sorte que les scripts de contenu sont visibles..
 
-<div class="note">
-<p><strong>Note :</strong> vous n'avez besoin et ne pouvez accéder à la Browser Content Toolbox que si vous développez contre Firefox multiprocessus.</p>
-</div>
+Notez que les scripts de contenu n'apparaîtront pas dans la liste des sources jusqu'à ce qu'ils soient chargés. Si vous avez besoin d'y accéder dès qu'ils se chargent, essayez d'ajouter un [`debuggueur`](/fr/docs/Web/JavaScript/Reference/Statements/debugger) ; instruction au début de votre script.
 
-<div class="warning">
-<p><strong>Attention :</strong> L'activation du débogage des travailleurs dans les Options de la boîte à outils désactivera le débogage de la boîte à outils du contenu du navigateur, le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1236892">Bug 1236892</a> devrait régler ce problème..</p>
-</div>
+> **Note :** vous n'avez besoin et ne pouvez accéder à la Browser Content Toolbox que si vous développez contre Firefox multiprocessus.
 
-<p>{{EmbedYouTube("xAt3Q0PgJP4")}}</p>
+> **Attention :** L'activation du débogage des travailleurs dans les Options de la boîte à outils désactivera le débogage de la boîte à outils du contenu du navigateur, le [Bug 1236892](https://bugzilla.mozilla.org/show_bug.cgi?id=1236892) devrait régler ce problème..
 
-<h3 id="Débogage_des_fenêtres_contextuelles">Débogage des fenêtres contextuelles</h3>
+{{EmbedYouTube("xAt3Q0PgJP4")}}
 
-<p>A partir de Firefox 47, vous pouvez utiliser la Browser Toolbox pour déboguer le contenu des popups. Il s'agit d'un processus en trois étapes :</p>
+### Débogage des fenêtres contextuelles
 
-<ul>
- <li>désactiver l'autohide pour les panneaux</li>
- <li>ouvrir la fenêtre contextuelle</li>
- <li>sélectionner le document contenant le popup</li>
-</ul>
+A partir de Firefox 47, vous pouvez utiliser la Browser Toolbox pour déboguer le contenu des popups. Il s'agit d'un processus en trois étapes :
 
-<p>{{EmbedYouTube("EEU4NeAS1s4")}}</p>
+- désactiver l'autohide pour les panneaux
+- ouvrir la fenêtre contextuelle
+- sélectionner le document contenant le popup
 
-<h4 id="Désactiver_l'autohide">Désactiver l'autohide</h4>
+{{EmbedYouTube("EEU4NeAS1s4")}}
 
-<p>Le problème avec les panneaux de débogage en général est qu'ils sont cachés lorsque vous cliquez en dehors d'eux. La première étape consiste donc à désactiver ce comportement. Dans la boîte à outils du navigateur, cliquez sur l'icône qui ressemble à quatre petits carrés :</p>
+#### Désactiver l'autohide
 
-<p><img alt="" src="disable-autohide.png">Maintenant, lorsque vous ouvrez un panneau dans Firefox, il restera ouvert jusqu'à ce que vous appuyiez sur Escape.</p>
+Le problème avec les panneaux de débogage en général est qu'ils sont cachés lorsque vous cliquez en dehors d'eux. La première étape consiste donc à désactiver ce comportement. Dans la boîte à outils du navigateur, cliquez sur l'icône qui ressemble à quatre petits carrés :
 
-<div class="note">
-<p><strong>Note :</strong> Que ce changement s'applique aux <a href="/fr/docs/Tools/Browser_Toolbox#Debugging_popups">fenêtre contextuelles intégrés au navigateur</a>, comme le menu Hamburger, ainsi qu'aux fenêtres contextuelles d'extension.</p>
+![](disable-autohide.png)Maintenant, lorsque vous ouvrez un panneau dans Firefox, il restera ouvert jusqu'à ce que vous appuyiez sur Escape.
 
-<p>Notez également que le changement est persistant, même si le navigateur redémarre. Nous travaillons à résoudre ce problème dans le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1251658">bug 1251658</a>, mais d'ici là, vous préférerez peut-être réactiver la fonction Autohide en cliquant à nouveau sur le bouton avant de fermer la boîte à outils du navigateur.</p>
+> **Note :** Que ce changement s'applique aux [fenêtre contextuelles intégrés au navigateur](/fr/docs/Tools/Browser_Toolbox#Debugging_popups), comme le menu Hamburger, ainsi qu'aux fenêtres contextuelles d'extension.
+>
+> Notez également que le changement est persistant, même si le navigateur redémarre. Nous travaillons à résoudre ce problème dans le [bug 1251658](https://bugzilla.mozilla.org/show_bug.cgi?id=1251658), mais d'ici là, vous préférerez peut-être réactiver la fonction Autohide en cliquant à nouveau sur le bouton avant de fermer la boîte à outils du navigateur.
+>
+> En interne, ce bouton bascule juste la préférence  `ui.popup.disable_autohide` que vous pouvez basculer manuellement en utilisant using about:config.
 
-<p>En interne, ce bouton bascule juste la préférence  <code>ui.popup.disable_autohide</code> que vous pouvez basculer manuellement en utilisant using about:config.</p>
-</div>
+#### Ouvrir la fenêtre contextuelle
 
-<h4 id="Ouvrir_la_fenêtre_contextuelle">Ouvrir la fenêtre contextuelle</h4>
+Ensuite, ouvrez le popup. Vous pouvez ensuite revenir à la boîte à outils du navigateur, et le panneau restera ouvert.
 
-<p>Ensuite, ouvrez le popup. Vous pouvez ensuite revenir à la boîte à outils du navigateur, et le panneau restera ouvert.</p>
+#### Sélectionner le cadre de la fenêtre popup
 
-<h4 id="Sélectionner_le_cadre_de_la_fenêtre_popup">Sélectionner le cadre de la fenêtre popup</h4>
+Le popup est chargé dans son propre cadre. Ensuite, sélectionnez le document de votre popup à l'aide du [bouton sélection de cadre ](/fr/docs/Tools/Browser_Toolbox#Targeting_a_document)boîte à outils du navigateur :![](frame-selection.png)Le document s'appellera quelque chose comme
 
-<p>Le popup est chargé dans son propre cadre. Ensuite, sélectionnez le document de votre popup à l'aide du <a href="/fr/docs/Tools/Browser_Toolbox#Targeting_a_document">bouton sélection de cadre </a>boîte à outils du navigateur :<img alt="" src="frame-selection.png">Le document s'appellera quelque chose comme</p>
+    moz-extension://<some-uuid>/path/to/your-popup.html
 
-<pre>moz-extension://&lt;some-uuid&gt;/path/to/your-popup.html</pre>
+{{EmbedYouTube("/9jdHDCKIN-U")}}
 
-<p>{{EmbedYouTube("/9jdHDCKIN-U")}}</p>
+Maintenant, le champ d'application de la boîte à outils est le popup. Dans l'Inspecteur, vous pouvez examiner et modifier le HTML et le CSS du popup. Dans le Debugger, vous pouvez rechercher tous les scripts chargés dans le popup et définir des points d'arrêt.
 
-<p>Maintenant, le champ d'application de la boîte à outils est le popup. Dans l'Inspecteur, vous pouvez examiner et modifier le HTML et le CSS du popup. Dans le Debugger, vous pouvez rechercher tous les scripts chargés dans le popup et définir des points d'arrêt.</p>
+## Qu'en est-il de l'Add-on Deboguer ?
 
-<h2 id="Qu'en_est-il_de_l'Add-on_Deboguer">Qu'en est-il de l'Add-on Deboguer ?</h2>
+Le [deboguer des modules complémentaires](/fr/Add-ons/Add-on_Debugger) est destiné à être l'évanir du débogage des add-on dans Firefox.
 
-<p>Le <a href="/fr/Add-ons/Add-on_Debugger">deboguer des modules complémentaires</a> est destiné à être l'évanir du débogage des add-on dans Firefox.</p>
-
-<p>Son grand avantage par rapport à la Browser Toolbox est qu'il ne montre que les fichiers de votre extension, donc il est beaucoup plus facile de trouver votre code. Cependant, pour le moment, vous ne pouvez pas voir les messages de console de votre extension dans l'Add-on Debugger, donc la Browser Toolbox est plus fonctionnelle.</p>
+Son grand avantage par rapport à la Browser Toolbox est qu'il ne montre que les fichiers de votre extension, donc il est beaucoup plus facile de trouver votre code. Cependant, pour le moment, vous ne pouvez pas voir les messages de console de votre extension dans l'Add-on Debugger, donc la Browser Toolbox est plus fonctionnelle.

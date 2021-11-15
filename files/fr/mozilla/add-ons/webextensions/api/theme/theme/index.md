@@ -8,16 +8,16 @@ tags:
   - add-on
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/Theme
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet thème représente la spécification d'un thème.</p>
+Un objet thème représente la spécification d'un thème.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Un <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object">object</a> JSON qui prend les mêmes propriétés que la clé du manifest <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">"theme"</a>.</p>
+Un [object](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object) JSON qui prend les mêmes propriétés que la clé du manifest ["theme"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme).
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.theme.Theme")}}</p>
+{{Compat("webextensions.api.theme.Theme")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

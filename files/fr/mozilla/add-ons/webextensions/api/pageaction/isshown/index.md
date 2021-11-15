@@ -12,46 +12,43 @@ tags:
   - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/isShown
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Renvoie <code>true</code> si l'action de la page est affichée pour l'onglet donné..</p>
+Renvoie `true` si l'action de la page est affichée pour l'onglet donné..
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">let gettingIsShown = browser.pageAction.isShown(
+```js
+let gettingIsShown = browser.pageAction.isShown(
   details // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. Un objet contenant le <code>tabId</code> à vérifier.</p>
- <dl>
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. ID de l'onglet à vérifier.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
+  - : `object`. Un objet contenant le `tabId` à vérifier.
 
+    - `tabId`
+      - : `integer`. ID de l'onglet à vérifier.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec <code>true</code> si l'action de page de l'extension est affichée pour l'onglet donné, et <code>false</code> dans le cas contraire.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `true` si l'action de page de l'extension est affichée pour l'onglet donné, et `false` dans le cas contraire.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.pageAction.isShown")}}</p>
+{{Compat("webextensions.api.pageAction.isShown")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Vérifiez l'état de l'onglet actuellement actif :</p>
+Vérifiez l'état de l'onglet actuellement actif :
 
-<pre class="brush: js">async function shownInActiveTab() {
+```js
+async function shownInActiveTab() {
   let tabs = await browser.tabs.query({
     currentWindow:true,
     active: true
@@ -60,6 +57,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/isShown
     tabId: tabs[0].id
   });
   console.log(shown);
-}</pre>
+}
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

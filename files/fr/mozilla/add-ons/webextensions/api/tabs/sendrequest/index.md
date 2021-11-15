@@ -13,50 +13,45 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("tabs.sendMessage()")}} à la place.</p>
-</div>
+> **Attention :** Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("tabs.sendMessage()")}} à la place.
 
-<p>Envoie une seule requête au(x) script(s) de contenu dans l'onglet spécifié, avec un rappel facultatif à exécuter lorsqu'une réponse est renvoyée. L'événement {{WebExtAPIRef('extension.onRequest')}} est déclenché dans chaque script de contenu exécuté dans l'onglet spécifié pour l'extension en cours.</p>
+Envoie une seule requête au(x) script(s) de contenu dans l'onglet spécifié, avec un rappel facultatif à exécuter lorsqu'une réponse est renvoyée. L'événement {{WebExtAPIRef('extension.onRequest')}} est déclenché dans chaque script de contenu exécuté dans l'onglet spécifié pour l'extension en cours.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var sending = browser.tabs.sendRequest(
+```js
+var sending = browser.tabs.sendRequest(
   tabId,                   // integer
   request                  // any
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>.</dd>
- <dt><code>request</code></dt>
- <dd><code>any</code>.</dd>
-</dl>
+- `tabId`
+  - : `integer`.
+- `request`
+  - : `any`.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec l'objet de réponse JSON envoyé par le gestionnaire du message dans le script de contenu, ou sans arguments si le script de contenu n'a pas envoyé de réponse. Si une erreur survient lors de la connexion à l'onglet spécifié ou si une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec l'objet de réponse JSON envoyé par le gestionnaire du message dans le script de contenu, ou sans arguments si le script de contenu n'a pas envoyé de réponse. Si une erreur survient lors de la connexion à l'onglet spécifié ou si une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.sendRequest")}}</p>
+{{Compat("webextensions.api.tabs.sendRequest")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -83,5 +78,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

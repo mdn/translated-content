@@ -11,27 +11,27 @@ tags:
   - captivePortal
 translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/getLastChecked
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Retourne le temps écoulé depuis que la dernière demande a été complétée.</p>
+Retourne le temps écoulé depuis que la dernière demande a été complétée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var state = browser.captivePortal.getLastChecked()
-</pre>
+```js
+var state = browser.captivePortal.getLastChecked()
+```
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a> qui est remplie avec un nombre entier représentant le temps en millisecondes.</p>
+Une [Promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est remplie avec un nombre entier représentant le temps en millisecondes.
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.captivePortal.getLastChecked")}}</p>
+{{Compat("webextensions.api.captivePortal.getLastChecked")}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -58,5 +58,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/getLastChecked
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

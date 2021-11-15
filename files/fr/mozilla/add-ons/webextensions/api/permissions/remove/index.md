@@ -11,58 +11,58 @@ tags:
   - remove
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/remove
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Demander d'abandonner les permissions listées dans l'objet {{WebExtAPIRef("permissions.Permissions")}}.</p>
+Demander d'abandonner les permissions listées dans l'objet {{WebExtAPIRef("permissions.Permissions")}}.
 
-<p>L'argument <code>Permissions</code> peut contenir soit une propriété  <code>origins</code> ,qui est un tableau de <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">permissions d'hôte</a> , ou une propriété <code>permissions</code>, qui est un tableau de <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permissions d'API</a>, ou les deux. Les permissions  doivent provenir de l'ensemble des permissions définies dans la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></code> du manifest.json.</p>
+L'argument `Permissions` peut contenir soit une propriété  `origins` ,qui est un tableau de [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) , ou une propriété `permissions`, qui est un tableau de [permissions d'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions), ou les deux. Les permissions  doivent provenir de l'ensemble des permissions définies dans la clé [`optional_permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) du manifest.json.
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesse</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var removing = browser.permissions.remove(
+```js
+var removing = browser.permissions.remove(
   permissions                // Permissions object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>permissions</code></dt>
- <dd>Un objet {{WebExtAPIRef("permissions.Permissions")}}.</dd>
-</dl>
+- `permissions`
+  - : Un objet {{WebExtAPIRef("permissions.Permissions")}}.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesse</a></code> qui sera remplie avec <code>true</code> si les permissions répertoriées dans l'argument <code>permissions</code> ont été supprimées, ou <code>false</code> dans le cas contraire.</p>
+Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `true` si les permissions répertoriées dans l'argument `permissions` ont été supprimées, ou `false` dans le cas contraire.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("webextensions.api.permissions.remove")}}</p>
+{{Compat("webextensions.api.permissions.remove")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Ce code ajoute un gestionnaire de clic qui supprime une permission donnée.</p>
+Ce code ajoute un gestionnaire de clic qui supprime une permission donnée.
 
-<pre class="brush: js">const permissionToRemove = {
+```js
+const permissionToRemove = {
   permissions: ["history"]
 }
 
 function remove() {
   console.log("removing");
-  browser.permissions.remove(permissionToRemove).then(result =&gt; {
+  browser.permissions.remove(permissionToRemove).then(result => {
     console.log(result);
   });
 }
 
-document.querySelector("#remove").addEventListener("click", remove);</pre>
+document.querySelector("#remove").addEventListener("click", remove);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/permissions"><code>chrome.permissions</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/extensions/permissions).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

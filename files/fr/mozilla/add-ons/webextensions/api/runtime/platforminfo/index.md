@@ -13,38 +13,34 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformInfo
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet contenant des informations sur la plate-forme actuelle.</p>
+Un objet contenant des informations sur la plate-forme actuelle.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets qui contiennent les propriétés suivantes:</p>
+Les valeurs de ce type sont des objets qui contiennent les propriétés suivantes:
 
-<dl>
- <dt><code>os</code></dt>
- <dd>{{WebExtAPIRef('runtime.PlatformOs')}}. Le système d'exploitation de la plateforme.</dd>
- <dt><code>arch</code></dt>
- <dd>{{WebExtAPIRef('runtime.PlatformArch')}}. L'architecture du processeur de la plateforme.</dd>
- <dt><code>nacl_arch</code></dt>
- <dd>{{WebExtAPIRef('runtime.PlatformNaclArch')}}. L'architecture du client natif Cela peut être différent de <code>arch</code> sur certaines plates-formes.</dd>
-</dl>
+- `os`
+  - : {{WebExtAPIRef('runtime.PlatformOs')}}. Le système d'exploitation de la plateforme.
+- `arch`
+  - : {{WebExtAPIRef('runtime.PlatformArch')}}. L'architecture du processeur de la plateforme.
+- `nacl_arch`
+  - : {{WebExtAPIRef('runtime.PlatformNaclArch')}}. L'architecture du client natif Cela peut être différent de `arch` sur certaines plates-formes.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.runtime.PlatformInfo")}}</p>
+{{Compat("webextensions.api.runtime.PlatformInfo")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -71,5 +67,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformInfo
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

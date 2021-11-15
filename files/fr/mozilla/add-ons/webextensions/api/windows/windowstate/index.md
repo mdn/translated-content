@@ -13,44 +13,40 @@ tags:
   - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>L'état de cette fenêtre du navigateur.</p>
+L'état de cette fenêtre du navigateur.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:</p>
+Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
 
-<dl>
- <dt><code>"normal"</code></dt>
- <dd>La fenêtre est à la taille par défaut ou à la taille sélectionnée par l'utilisateur.</dd>
- <dt><code>"minimized"</code></dt>
- <dd>La fenêtre n'est visible que sous la forme d'une icône dans la barre des tâches ou .</dd>
- <dt><code>"maximized"</code></dt>
- <dd>La fenêtre remplit l'écran sur lequel elle est affichée sans inclure les zones d'écran réservées par le système d'exploitation.</dd>
- <dt><code>"fullscreen"</code></dt>
- <dd>La fenêtre s'exécute en plein écran ou le contenu d'un onglet utilise l'<a href="/fr/docs/Web/API/Fullscreen_API">API Fullscreen</a></dd>
- <dt><code>"docked"</code></dt>
- <dd>Une fenêtre ancrée occupe une position fixe par rapport aux autres fenêtres appartenant à la même application.</dd>
-</dl>
+- `"normal"`
+  - : La fenêtre est à la taille par défaut ou à la taille sélectionnée par l'utilisateur.
+- `"minimized"`
+  - : La fenêtre n'est visible que sous la forme d'une icône dans la barre des tâches ou .
+- `"maximized"`
+  - : La fenêtre remplit l'écran sur lequel elle est affichée sans inclure les zones d'écran réservées par le système d'exploitation.
+- `"fullscreen"`
+  - : La fenêtre s'exécute en plein écran ou le contenu d'un onglet utilise l'[API Fullscreen](/fr/docs/Web/API/Fullscreen_API)
+- `"docked"`
+  - : Une fenêtre ancrée occupe une position fixe par rapport aux autres fenêtres appartenant à la même application.
 
-<p>Compatibilité macOS : A partir de macOS 10.10, le comportement de maximisation par défaut pour les fenêtres a été modifié pour exécuter les applications en plein écran au lieu des fenêtres "zoomées". <code>fullscreen</code> fait référence à la fois au navigateur fonctionnant en plein écran et lorsque le contenu dans un onglet utilise l'API Fullscreen.</p>
+Compatibilité macOS : A partir de macOS 10.10, le comportement de maximisation par défaut pour les fenêtres a été modifié pour exécuter les applications en plein écran au lieu des fenêtres "zoomées". `fullscreen` fait référence à la fois au navigateur fonctionnant en plein écran et lorsque le contenu dans un onglet utilise l'API Fullscreen.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.windows.WindowState")}}</p>
+{{Compat("webextensions.api.windows.WindowState")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+>
+> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -77,5 +73,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

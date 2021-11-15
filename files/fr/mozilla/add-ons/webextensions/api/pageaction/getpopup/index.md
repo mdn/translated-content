@@ -13,44 +13,43 @@ tags:
   - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient l'URL d'un document HTML en tant que popup pour cette action de page.</p>
+Obtient l'URL d'un document HTML en tant que popup pour cette action de page.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingPopup = browser.pageAction.getPopup(
+```js
+var gettingPopup = browser.pageAction.getPopup(
   details               // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>.</p>
- <dl>
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. ID de l'onglet dont vous souhaitez obtenir la fenêtre contextuelle.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera accompli avec une chaîne contenant l'URL du popup.</p>
+    - `tabId`
+      - : `integer`. ID de l'onglet dont vous souhaitez obtenir la fenêtre contextuelle.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.pageAction.getPopup")}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera accompli avec une chaîne contenant l'URL du popup.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Ajoutez un élément de menu contextuel qui enregistre l'URL contextuelle de l'onglet en cours. Notez que vous aurez besoin de la  <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> <code>contextMenus</code> dans votre <a href="/fr/Add-ons/WebExtensions/manifest.json">manifest</a> pour créer des éléments de menu contextuel.</p>
+{{Compat("webextensions.api.pageAction.getPopup")}}
 
-<pre class="brush: js">function gotPopup(popupURL) {
+## Exemples
+
+Ajoutez un élément de menu contextuel qui enregistre l'URL contextuelle de l'onglet en cours. Notez que vous aurez besoin de la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus` dans votre [manifest](/fr/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
+
+```js
+function gotPopup(popupURL) {
   console.log(popupURL);
 }
 
@@ -64,19 +63,18 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
     var gettingPopup = browser.pageAction.getPopup({tabId: tab.id});
     gettingPopup.then(gotPopup);
   }
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/pageAction"><code>chrome.pageAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,5 +101,4 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

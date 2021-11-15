@@ -14,110 +14,102 @@ tags:
   - onChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>L'événement <code><strong>onChanged</strong></code><strong><code>()</code></strong> de l'API {{WebExtAPIRef("downloads")}} est déclenché lorsque l'une des propriétés de {{WebExtAPIRef('downloads.DownloadItem')}} change (à l'exception de <code>bytesReceived</code>).</p>
+L'événement **`onChanged`\*\***`()`\*\* de l'API {{WebExtAPIRef("downloads")}} est déclenché lorsque l'une des propriétés de {{WebExtAPIRef('downloads.DownloadItem')}} change (à l'exception de `bytesReceived`).
 
-<p>L'écouteur reçoit un fichier <code>downloadDelta</code> en tant que paramètre — un objet contenant le <code>downloadId</code> de l'objet {{WebExtAPIRef('downloads.DownloadItem')}} en question, plus le statut de toutes les propriétés qui ont changé.</p>
+L'écouteur reçoit un fichier `downloadDelta` en tant que paramètre — un objet contenant le `downloadId` de l'objet {{WebExtAPIRef('downloads.DownloadItem')}} en question, plus le statut de toutes les propriétés qui ont changé.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.downloads.onChanged.addListener(listener)
+```js
+browser.downloads.onChanged.addListener(listener)
 browser.downloads.onChanged.removeListener(listener)
 browser.downloads.onChanged.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si un <code>listener</code> donné est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si un `listener` donné est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>downloadDelta</code></dt>
-  <dd>Un <a href="#downloadDelta"><code>objet</code></a> représentant l'objet {{WebExtAPIRef('downloads.DownloadItem')}} qui a été modifié, ainsi que l'état de toutes les propriétés qui y ont été modifiées.</dd>
- </dl>
- </dd>
-</dl>
+  - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :
 
-<h2 id="Objets_supplémentaires">Objets supplémentaires</h2>
+    - `downloadDelta`
+      - : Un [`objet`](#downloadDelta) représentant l'objet {{WebExtAPIRef('downloads.DownloadItem')}} qui a été modifié, ainsi que l'état de toutes les propriétés qui y ont été modifiées.
 
-<h3 id="downloadDelta">downloadDelta</h3>
+## Objets supplémentaires
 
-<p>L'objet <code>downloadDelta</code> a les propriétés suivantes disponibles :</p>
+### downloadDelta
 
-<dl>
- <dt><code>id</code></dt>
- <dd>Un <code>integer</code> représentant l'identifiant de l'<code>id</code>  {{WebExtAPIRef('downloads.DownloadItem')}} qui a changé.</dd>
- <dt><code>url</code>{{optional_inline}}</dt>
- <dd>Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant une modification d'une  <code>url</code> {{WebExtAPIRef('downloads.DownloadItem')}}.</dd>
- <dt><code>filename</code>{{optional_inline}}</dt>
- <dd>Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un <code>filename</code> {{WebExtAPIRef('downloads.DownloadItem')}}</dd>
- <dt><code>danger</code>{{optional_inline}}</dt>
- <dd>Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un <code>danger</code> {{WebExtAPIRef('downloads.DownloadItem')}}.</dd>
- <dt><code>mime</code>{{optional_inline}}</dt>
- <dd>Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un <code>mime</code> {{WebExtAPIRef('downloads.DownloadItem')}}</dd>
- <dt><code>startTime</code>{{optional_inline}}</dt>
- <dd>Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un <code>startTime</code> {{WebExtAPIRef('downloads.DownloadItem')}}.</dd>
- <dt><code>endTime</code>{{optional_inline}}</dt>
- <dd>Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un  <code>endTime</code> {{WebExtAPIRef('downloads.DownloadItem')}}.</dd>
- <dt><code>state</code>{{optional_inline}}</dt>
- <dd>Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un <code>état</code> {{WebExtAPIRef('downloads.DownloadItem')}}</dd>
- <dt><code>canResume</code>{{optional_inline}}</dt>
- <dd>Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état {{WebExtAPIRef('downloads.DownloadItem')}} <code>canResume</code>.</dd>
- <dt><code>paused</code>{{optional_inline}}</dt>
- <dd>Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état en <code>pause</code> {{WebExtAPIRef('downloads.DownloadItem')}}.</dd>
- <dt><code>error</code>{{optional_inline}}</dt>
- <dd>Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un état d'<code>erreur</code> {{WebExtAPIRef('downloads.DownloadItem')}}.</dd>
- <dt><code>totalBytes</code>{{optional_inline}}</dt>
- <dd>Un objet {{WebExtAPIRef('downloads.DoubleDelta')}} décrivant un changement dans un <code>totalBytes</code> {{WebExtAPIRef('downloads.DownloadItem')}}.</dd>
- <dt><code>fileSize</code>{{optional_inline}}</dt>
- <dd>Un objet  {{WebExtAPIRef('downloads.DoubleDelta')}} décrivant une modification d'un  <code>fileSize</code> {{WebExtAPIRef('downloads.DownloadItem')}}.</dd>
- <dt><code>exists</code>{{optional_inline}}</dt>
- <dd>Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état {{WebExtAPIRef('downloads.DownloadItem')}}.</dd>
-</dl>
+L'objet `downloadDelta` a les propriétés suivantes disponibles :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- `id`
+  - : Un `integer` représentant l'identifiant de l'`id`  {{WebExtAPIRef('downloads.DownloadItem')}} qui a changé.
+- `url`{{optional_inline}}
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant une modification d'une  `url` {{WebExtAPIRef('downloads.DownloadItem')}}.
+- `filename`{{optional_inline}}
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `filename` {{WebExtAPIRef('downloads.DownloadItem')}}
+- `danger`{{optional_inline}}
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `danger` {{WebExtAPIRef('downloads.DownloadItem')}}.
+- `mime`{{optional_inline}}
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `mime` {{WebExtAPIRef('downloads.DownloadItem')}}
+- `startTime`{{optional_inline}}
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `startTime` {{WebExtAPIRef('downloads.DownloadItem')}}.
+- `endTime`{{optional_inline}}
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un  `endTime` {{WebExtAPIRef('downloads.DownloadItem')}}.
+- `state`{{optional_inline}}
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `état` {{WebExtAPIRef('downloads.DownloadItem')}}
+- `canResume`{{optional_inline}}
+  - : Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état {{WebExtAPIRef('downloads.DownloadItem')}} `canResume`.
+- `paused`{{optional_inline}}
+  - : Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état en `pause` {{WebExtAPIRef('downloads.DownloadItem')}}.
+- `error`{{optional_inline}}
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un état d'`erreur` {{WebExtAPIRef('downloads.DownloadItem')}}.
+- `totalBytes`{{optional_inline}}
+  - : Un objet {{WebExtAPIRef('downloads.DoubleDelta')}} décrivant un changement dans un `totalBytes` {{WebExtAPIRef('downloads.DownloadItem')}}.
+- `fileSize`{{optional_inline}}
+  - : Un objet  {{WebExtAPIRef('downloads.DoubleDelta')}} décrivant une modification d'un  `fileSize` {{WebExtAPIRef('downloads.DownloadItem')}}.
+- `exists`{{optional_inline}}
+  - : Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état {{WebExtAPIRef('downloads.DownloadItem')}}.
 
-<p>{{Compat("webextensions.api.downloads.onChanged")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.downloads.onChanged")}}
 
-<p>Enregistrez un message lorsque les téléchargements sont terminés :</p>
+## Exemples
 
-<pre class="brush: js">function handleChanged(delta) {
-  if (delta.state &amp;&amp; delta.state.current === "complete") {
+Enregistrez un message lorsque les téléchargements sont terminés :
+
+```js
+function handleChanged(delta) {
+  if (delta.state && delta.state.current === "complete") {
     console.log(`Download ${delta.id} has completed.`);
   }
 }
 
-browser.downloads.onChanged.addListener(handleChanged);</pre>
+browser.downloads.onChanged.addListener(handleChanged);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#event-onChanged) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#event-onChanged"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -144,5 +136,4 @@ browser.downloads.onChanged.addListener(handleChanged);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

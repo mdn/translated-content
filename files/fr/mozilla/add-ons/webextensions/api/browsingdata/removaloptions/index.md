@@ -12,53 +12,45 @@ tags:
   - browsingData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Le type <strong><code>browsingData.RemovalOptions</code></strong> contient des options permettant de contrôler certains aspects de la suppression des données de navigation.</p>
+Le type **`browsingData.RemovalOptions`** contient des options permettant de contrôler certains aspects de la suppression des données de navigation.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes:</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes:
 
-<dl>
- <dt><code>hostnames</code> {{optional_inline}}</dt>
- <dd>
- <p><code>Array</code> of <code>string</code>. Cette propriété s'applique uniquement aux cookies et aux éléments de stockage locaux. Ne supprimez que les cookies et les éléments de stockage locaux associés à ces noms d'hôte.</p>
+- `hostnames` {{optional_inline}}
 
- <p>Vous devez indiquer ici un nom d'hôte, sans protocole (par exemple : "google.com" et non https://google.com"). Vous pouvez utiliser l'interface  <code><a href="/fr/docs/Web/API/URL">URL</a></code> pour analyser une URL brute  et récupérer uniquement le nom d'hôte. Les sous-domaines d'un nom d'hôte donné ne seront pas supprimés: vous devez explicitement lister les sous-domaines.</p>
- </dd>
- <dt><code>originTypes</code> {{optional_inline}}</dt>
- <dd>
- <p><code>object</code>. Permet de contrôler si les données doivent être supprimées uniquement des pages Web normales ou des applications et extensions Web hébergées. Si cette option est omise, seules les données des pages Web normales ("<code>unprotectedWeb</code>") sont supprimées. Avant de supprimer des données d'applications ou d'extensions Web, veillez à ce que ce soit vraiment ce que l'utilisateur souhaite.</p>
+  - : `Array` of `string`. Cette propriété s'applique uniquement aux cookies et aux éléments de stockage locaux. Ne supprimez que les cookies et les éléments de stockage locaux associés à ces noms d'hôte.
 
- <p>Cet objet peut contenir l'une des propriétés suivantes :</p>
+    Vous devez indiquer ici un nom d'hôte, sans protocole (par exemple : "google.com" et non https\://google.com"). Vous pouvez utiliser l'interface  [`URL`](/fr/docs/Web/API/URL) pour analyser une URL brute  et récupérer uniquement le nom d'hôte. Les sous-domaines d'un nom d'hôte donné ne seront pas supprimés: vous devez explicitement lister les sous-domaines.
 
- <dl>
-  <dt><code>unprotectedWeb</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si présent et <code>true</code>, supprime les données de la pages Web normales.</dd>
-  <dt><code>protectedWeb</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si présent et <code>true</code>, supprime les données de site Web qui ont été installés en tant qu'applications hébergées.</dd>
-  <dt><code>extension</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si présent et <code>true</code>, supprime les données d'extensions.</dd>
- </dl>
- </dd>
- <dt><code>since</code> {{optional_inline}}</dt>
- <dd><code>number</code>. Jusqu'à quand remontent les données, données en <a href="https://en.wikipedia.org/wiki/Unix_time">millisecondes depuis l'époque UNIX</a>. Notez que lorsque vous supprimez le cache du navigateur, le cache entier est toujours supprimé et cette option est ignorée. Si la propriété <code>since</code> est omise, la valeur par défaut est 0, ce qui signifie "pour toujours".</dd>
-</dl>
+- `originTypes` {{optional_inline}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+  - : `object`. Permet de contrôler si les données doivent être supprimées uniquement des pages Web normales ou des applications et extensions Web hébergées. Si cette option est omise, seules les données des pages Web normales ("`unprotectedWeb`") sont supprimées. Avant de supprimer des données d'applications ou d'extensions Web, veillez à ce que ce soit vraiment ce que l'utilisateur souhaite.
 
+    Cet objet peut contenir l'une des propriétés suivantes :
 
+    - `unprotectedWeb` {{optional_inline}}
+      - : `boolean`. Si présent et `true`, supprime les données de la pages Web normales.
+    - `protectedWeb` {{optional_inline}}
+      - : `boolean`. Si présent et `true`, supprime les données de site Web qui ont été installés en tant qu'applications hébergées.
+    - `extension` {{optional_inline}}
+      - : `boolean`. Si présent et `true`, supprime les données d'extensions.
 
-<p>{{Compat("webextensions.api.browsingData.RemovalOptions", 2)}}</p>
+- `since` {{optional_inline}}
+  - : `number`. Jusqu'à quand remontent les données, données en [millisecondes depuis l'époque UNIX](https://en.wikipedia.org/wiki/Unix_time). Notez que lorsque vous supprimez le cache du navigateur, le cache entier est toujours supprimé et cette option est ignorée. Si la propriété `since` est omise, la valeur par défaut est 0, ce qui signifie "pour toujours".
 
-<div class="note"><p><strong>Note :</strong></p>
+## Compatibilité du navigateur
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a>.</p>
-</div>
+{{Compat("webextensions.api.browsingData.RemovalOptions", 2)}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -85,5 +77,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

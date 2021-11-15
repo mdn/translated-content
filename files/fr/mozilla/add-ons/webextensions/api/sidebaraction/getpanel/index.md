@@ -12,70 +12,68 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient une URL vers le document HTML qui définit le contenu de la barre latérale.</p>
+Obtient une URL vers le document HTML qui définit le contenu de la barre latérale.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingPanel = browser.sidebarAction.getPanel(
+```js
+var gettingPanel = browser.sidebarAction.getPanel(
   details               // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. Un objet avec les propriétés suivantes :</p>
- <dl>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>.  Obtenir le panneau pour la barre latérale spécifique à l'onglet donné.</dd>
-  <dt><code>windowId</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. Obtenir le panneau pour la barre latérale spécifique à la fenêtre donnée.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<ul>
- <li>Si <code>windowId</code> et <code>tabId</code>  sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.</li>
- <li>Si <code>windowId</code> et <code>tabId</code> sont tous les deux omis, le panneau global est renvoyé.</li>
-</ul>
+  - : `object`. Un objet avec les propriétés suivantes :
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+    - `tabId`{{optional_inline}}
+      - : `integer`.  Obtenir le panneau pour la barre latérale spécifique à l'onglet donné.
+    - `windowId` {{optional_inline}}
+      - : `integer`. Obtenir le panneau pour la barre latérale spécifique à la fenêtre donnée.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec une chaîne contenant l'URL du document du panel. Ce sera une URL entièrement qualifiée, telle que :</p>
+<!---->
 
-<pre>moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html</pre>
+- Si `windowId` et `tabId`  sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
+- Si `windowId` et `tabId` sont tous les deux omis, le panneau global est renvoyé.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.sidebarAction.getPanel",2)}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne contenant l'URL du document du panel. Ce sera une URL entièrement qualifiée, telle que :
 
-<h2 id="Exemples">Exemples</h2>
+    moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html
 
-<p>Obtenez l'URL du panneau :</p>
+## Compatibilité du navigateur
 
-<pre class="brush: js">function onGot(sidebarUrl) {
+{{Compat("webextensions.api.sidebarAction.getPanel",2)}}
+
+## Exemples
+
+Obtenez l'URL du panneau :
+
+```js
+function onGot(sidebarUrl) {
   console.log(sidebarUrl);
 }
 
 var gettingPanel = browser.sidebarAction.getPanel({});
-gettingPanel.then(onGot); </pre>
+gettingPanel.then(onGot);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Opera <a href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -102,5 +100,4 @@ gettingPanel.then(onGot); </pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

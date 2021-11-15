@@ -13,32 +13,29 @@ tags:
   - commands
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/Command
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Information sur une commande. Cela contient les informations spécifiées pour la commande dans la  <a href="/fr/Add-ons/WebExtensions/manifest.json/commands"><code>commande</code> clef manifest.json</a>.</p>
+Information sur une commande. Cela contient les informations spécifiées pour la commande dans la  [`commande` clef manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
 
-<p>Un tableau de ces objets est renvoyé par {{WebExtAPIRef('commands.getAll()')}}.</p>
+Un tableau de ces objets est renvoyé par {{WebExtAPIRef('commands.getAll()')}}.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type  sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type  sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>name</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Nom de la commande. Cela sera passé dans l'écouteur de l'événement  {{WebExtAPIRef('commands.onCommand')}}.</dd>
- <dt><code>description</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Description de cette commande. Ceci est principalement utilisé pour expliquer à l'utilisateur ce que cette commande fait.</dd>
- <dt><code>shortcut</code>{{optional_inline}}</dt>
- <dd><code>string</code>. clef(s) utilisée pour exécuter cette commande , spécifiée comme une chaîne comme "Ctrl+Shift+Y".</dd>
-</dl>
+- `name`{{optional_inline}}
+  - : `string`. Nom de la commande. Cela sera passé dans l'écouteur de l'événement  {{WebExtAPIRef('commands.onCommand')}}.
+- `description`{{optional_inline}}
+  - : `string`. Description de cette commande. Ceci est principalement utilisé pour expliquer à l'utilisateur ce que cette commande fait.
+- `shortcut`{{optional_inline}}
+  - : `string`. clef(s) utilisée pour exécuter cette commande , spécifiée comme une chaîne comme "Ctrl+Shift+Y".
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.commands.Command")}}</p>
+{{Compat("webextensions.api.commands.Command")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/commands"><code>chrome.commands</code></a>.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/extensions/commands).

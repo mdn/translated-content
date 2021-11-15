@@ -13,48 +13,44 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Mise en place lorsque une liste d'onglets fermes ou de fenêtre changes.</p>
+Mise en place lorsque une liste d'onglets fermes ou de fenêtre changes.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.sessions.onChanged.addListener(listener)
+```js
+browser.sessions.onChanged.addListener(listener)
 browser.sessions.onChanged.removeListener(listener)
 browser.sessions.onChanged.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un auditeur à un événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument de l'auditeur est un auditeur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si l'auditeur est enregistré pour cet événement. Renvoie Vrai s'il écoute. Sinon Faux.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un auditeur à un événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument de l'auditeur est un auditeur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si l'auditeur est enregistré pour cet événement. Renvoie Vrai s'il écoute. Sinon Faux.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lors de l'événement. Il ne passe aucun paramètre.</p>
- </dd>
-</dl>
+- `callback`
+  - : Fonction qui sera appelée lors de l'événement. Il ne passe aucun paramètre.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.sessions.onChanged")}}</p>
+{{Compat("webextensions.api.sessions.onChanged")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cette extension écoute <code>onChanged</code>, puis restaure  immédiatement la dernière session fermée, ce qui rend impossible de fermer les fenêtres ou les onglets :</p>
+Cette extension écoute `onChanged`, puis restaure  immédiatement la dernière session fermée, ce qui rend impossible de fermer les fenêtres ou les onglets :
 
-<pre class="brush: js">function restoreSession(sessionInfos) {
+```js
+function restoreSession(sessionInfos) {
   if (!sessionInfos.length) {
     console.log("No sessions found")
     return;
@@ -78,19 +74,18 @@ function restoreMostRecent() {
   gettingSessions.then(restoreSession, onError);
 }
 
-browser.sessions.onChanged.addListener(restoreMostRecent);</pre>
+browser.sessions.onChanged.addListener(restoreMostRecent);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/extensions/sessions).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/sessions"><code>chrome.sessions</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -117,5 +112,4 @@ browser.sessions.onChanged.addListener(restoreMostRecent);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

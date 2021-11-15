@@ -13,37 +13,37 @@ tags:
   - getSubTree
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La méthode <strong><code>bookmarks.getSubTree()</code></strong> récupère de façon asynchrone un {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}, étant donné son ID.</p>
+La méthode **`bookmarks.getSubTree()`** récupère de façon asynchrone un {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}, étant donné son ID.
 
-<p>Si l'élément est un dossier, vous pouvez accéder à tous ses descendants de manière récursive en utilisant sa propriété <code>children</code> et la propriété <code>children</code> de ses descendants, s'ils sont eux-mêmes des dossiers.</p>
+Si l'élément est un dossier, vous pouvez accéder à tous ses descendants de manière récursive en utilisant sa propriété `children` et la propriété `children` de ses descendants, s'ils sont eux-mêmes des dossiers.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingSubTree = browser.bookmarks.getSubTree(
+```js
+var gettingSubTree = browser.bookmarks.getSubTree(
   id                     // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>id</code></dt>
- <dd>Un {{jsxref("string")}} spécifiant l'ID de la racine du sous-arbre à récupérer.</dd>
-</dl>
+- `id`
+  - : Un {{jsxref("string")}} spécifiant l'ID de la racine du sous-arbre à récupérer.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un tableau contenant un objet unique, un objet {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}, représentant l'élément avec l'ID donné.Si un nœud correspondant à <code>id</code> n'a pas pu être trouvé, la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau contenant un objet unique, un objet {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}, représentant l'élément avec l'ID donné.Si un nœud correspondant à `id` n'a pas pu être trouvé, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple imprime récursivement le sous-arbre sous un noeud donné :</p>
+Cet exemple imprime récursivement le sous-arbre sous un noeud donné :
 
-<pre class="brush: js">function makeIndent(indentLength) {
+```js
+function makeIndent(indentLength) {
   return ".".repeat(indentLength);
 }
 
@@ -72,23 +72,22 @@ function onRejected(error) {
 var subTreeID = "root_____";
 
 var gettingSubTree = browser.bookmarks.getSubTree(subTreeID);
-gettingSubTree.then(logSubTree, onRejected);</pre>
+gettingSubTree.then(logSubTree, onRejected);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.bookmarks.getSubTree")}}</p>
+{{Compat("webextensions.api.bookmarks.getSubTree")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -115,5 +114,4 @@ gettingSubTree.then(logSubTree, onRejected);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

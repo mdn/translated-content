@@ -7,625 +7,727 @@ tags:
 translation_of: Mozilla/Firefox/Releases/4
 original_slug: Mozilla/Firefox/Versions/4
 ---
-<div>
-  <ol>
-    <li>
-        
-            <p>Notes de versions pour développeurs</p>
-            <ol>
-              <li><a href="/fr/docs/Mozilla/Firefox/Releases">Notes de versions pour développeurs</a></li>
-            </ol>
-        
-    </li>
-    <li>
-        
-            <p>Modules complémentaires</p>
-            <ol>
-              <li><a href="/fr/Add-ons/WebExtensions">WebExtensions</a></li>
-              <li><a href="/fr/Add-ons/Themes">Thèmes</a></li>
-            </ol>
-        
-    </li>
-    <li>
-        
-            <p>Fonctionnement interne de Firefox</p>
-            <ol>
-              <li><a href="/fr/docs/Mozilla/">Le projet Mozilla</a></li>
-              <li><a href="/fr/docs/Mozilla/Gecko">Gecko</a></li>
-              <li><a href="/fr/docs/Mozilla/Firefox/Headless_mode">Mode « headless »</a></li>
-              <li><a href="/fr/docs/Mozilla/JavaScript_code_modules">Modules de code Javascript</a></li>
-              <li><a href="/fr/docs/Mozilla/js-ctypes">JS-ctypes</a></li>
-              <li><a href="/fr/docs/Mozilla/MathML_Project">Le projet MathML</a></li>
-              <li><a href="/fr/docs/Mozilla/MFBT">MFBT</a></li>
-              <li><a href="/fr/docs/Mozilla/Projects">Les projets Mozilla</a></li>
-              <li><a href="/fr/docs/Mozilla/Preferences">Le système de préférences</a></li>
-              <li><a href="/fr/docs/Mozilla/WebIDL_bindings">Connexions WebIDL</a></li>
-              <li><a href="/fr/docs/Mozilla/Tech/XPCOM">XPCOM</a></li>
-              <li><a href="/fr/docs/Mozilla/Tech/XUL">XUL</a></li>
-            </ol>
-        
-    </li>
-    <li>
-        
-            <p>Développer et contribuer</p>
-            <ol>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Build_Instructions">Instructions de compilation</a></li>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">Configuration des options de compilation</a></li>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works">Fonctionnement de la compilation</a></li>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Code source de Mozilla</a></li>
-              <li><a href="/fr/docs/Mozilla/Localization">Localisation</a></li>
-              <li><a href="/fr/docs/Mozilla/Mercurial">Mercurial</a></li>
-              <li><a href="/fr/docs/Mozilla/QA">Assurance qualité</a></li>
-              <li><a href="/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects">Utilisation de code Mozilla dans d'autres projets</a></li>
-            </ol>
-        
-    </li>
-  </ol>
-</div>
+1.  Notes de versions pour développeurs
 
-<p>Firefox 4, est sorti le 22 mars 2011, améliore les performances, le support d'HTML5 et d'autres technologies du web et aussi la sécurité. Cet article fournit des informations sur cette version et sur les fonctionnalités qui sont disponibles pour les développeurs Web, les développeurs de modules complémentaires et les développeurs de la plate-forme Gecko.</p>
+    1.  [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
-<h2 id="Fonctionnalités_pour_les_développeurs_Web">Fonctionnalités pour les développeurs Web</h2>
+2.  Modules complémentaires
 
-<p>Gecko utilise maintenant le parseur <a href="/fr/HTML/HTML5">HTML5</a>, qui corrige des bugs, améliore l'interopérabilité et les performances. Il permet également d'intégrer du contenu <a href="/fr/SVG">SVG</a> et <a href="/fr/MathML">MathML</a> directement dans le code HTML.</p>
+    1.  [WebExtensions](/fr/Add-ons/WebExtensions)
+    2.  [Thèmes](/fr/Add-ons/Themes)
 
-<h3 id="HTML">HTML</h3>
+3.  Fonctionnement interne de Firefox
 
-<dl>
- <dt><a href="/fr/docs/HTML/HTML5/HTML5_Parser">Rencontrez le parseur HTML5</a></dt>
- <dd>Un aperçu sur ce que le parseur HTML5 représente pour vous et comment intégrer du contenu SVG et MathML dans votre code.</dd>
- <dt><a href="/fr/docs/HTML/Forms_in_HTML">Les formulaires en HTML5</a></dt>
- <dd>Un aperçu de l'amélioration de formulaires Web en HTML5. Parmi les changements on ajoute les types d'entrée dans l'élément <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>, la validation des données et d'autres modifications.</dd>
- <dt><a href="/fr/docs/Sections_and_Outlines_of_an_HTML5_document">Sections HTML5</a></dt>
- <dd>Gecko supporte à présent les nouveaux éléments HTML5 liés aux sections dans un document : <a href="/fr/docs/Web/HTML/Element/article"><code>&lt;article&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/section"><code>&lt;section&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/nav"><code>&lt;nav&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/aside"><code>&lt;aside&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/hgroup"><code>&lt;hgroup&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/header"><code>&lt;header&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/footer"><code>&lt;footer&gt;</code></a>.</dd>
- <dt><a href="/fr/HTML/Global_attributes#hidden">Attribut HTML5 hidden</a></dt>
- <dd>Cet attribut, commun à tous les éléments, est utilisé pour cacher le contenu d'une page Web qui n'est pas encore pertinent pour l'utilisateur.</dd>
- <dt>Autres éléments HTML5</dt>
- <dd>Gecko supporte les nouveaux éléments HTML5 suivants : <a href="/fr/docs/Web/HTML/Element/mark"><code>&lt;mark&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/figure"><code>&lt;figure&gt;</code></a>, et <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&lt;figcaption&gt;</code></a>.</dd>
- <dt><a href="/fr/docs/WebSockets">WebSockets</a></dt>
- <dd>Un guide pour utiliser la nouvelle API WebSockets pour la communication entre une application web et un serveur en temps réel. A noter que WebSockets tel qu'implémenté dans Firefox 4 n'est pas compatible avec la norme finale, et ne devrait pas être utilisé.</dd>
-</dl>
+    1.  [Le projet Mozilla](/fr/docs/Mozilla/)
+    2.  [Gecko](/fr/docs/Mozilla/Gecko)
+    3.  [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
+    4.  [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
+    5.  [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
+    6.  [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
+    7.  [MFBT](/fr/docs/Mozilla/MFBT)
+    8.  [Les projets Mozilla](/fr/docs/Mozilla/Projects)
+    9.  [Le système de préférences](/fr/docs/Mozilla/Preferences)
+    10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
+    11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
+    12. [XUL](/fr/docs/Mozilla/Tech/XUL)
 
-<h4 id="Améliorations_de_Canvas">Améliorations de Canvas</h4>
+4.  Développer et contribuer
 
-<p>Les modifications suivantes ont étés apportées à l'interface <a href="/fr/docs/Web/API/CanvasRenderingContext2D"><code>CanvasRenderingContext2D</code></a> pour permettre à l'implémentation de <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a> d'être en conformité avec la spécification :</p>
+    1.  [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
+    2.  [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
+    3.  [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
+    4.  [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
+    5.  [Localisation](/fr/docs/Mozilla/Localization)
+    6.  [Mercurial](/fr/docs/Mozilla/Mercurial)
+    7.  [Assurance qualité](/fr/docs/Mozilla/QA)
+    8.  [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
 
-<ul>
- <li>La spécification d'un rayon négatif lors de l'appel d'<code>arc()</code> lance désormais correctement l'exception <code>INDEX_SIZE_ERR</code>.</li>
- <li>La spécification de valeurs non finies lors de l'appel de <code>createLinearGradient()</code> et <code>createRadialGradient()</code> lance désormais <code>NOT_SUPPORTED_ERR</code> au lieu de <code>SYNTAX_ERR</code>.</li>
- <li>Le réglage de <code>miterLimit</code> pour une valeur négative ne lance plus une exception, mais ignore plutôt les valeurs non-positives.</li>
- <li>Le réglage de <code>lineWidth</code> pour une valeur négative ne lance plus une exception, mais ignore plutôt les valeurs non-positives.</li>
- <li>La méthode <code>putImageData()</code> supporte désormais les paramètres optionnels <code>dirtyX</code>, <code>dirtyY</code>, <code>dirtyWidth</code> et <code>dirtyHeight</code>.</li>
-</ul>
+Firefox 4, est sorti le 22 mars 2011, améliore les performances, le support d'HTML5 et d'autres technologies du web et aussi la sécurité. Cet article fournit des informations sur cette version et sur les fonctionnalités qui sont disponibles pour les développeurs Web, les développeurs de modules complémentaires et les développeurs de la plate-forme Gecko.
 
-<dl>
-</dl>
+## Fonctionnalités pour les développeurs Web
 
-<h4 id="Autres_changements_HTML">Autres changements HTML</h4>
+Gecko utilise maintenant le parseur [HTML5](/fr/HTML/HTML5), qui corrige des bugs, améliore l'interopérabilité et les performances. Il permet également d'intégrer du contenu [SVG](/fr/SVG) et [MathML](/fr/MathML) directement dans le code HTML.
 
-<ul>
- <li>L'élément <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> est maintenant redimensionnable par défaut ; pour le désactiver, vous pouvez utiliser la propriété CSS <a href="/fr/docs/Web/CSS/resize"><code>resize</code></a>.</li>
- <li><code>canvas.getContext</code> et <code>canvas.toDataURL</code> ne lancent plus d'exceptions lorsqu'ils sont appelés avec des arguments non reconnus.</li>
- <li>L'élément <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a> supporte maintenant la méthode spécifique à Mozilla, <code>mozGetAsFile()</code>, qui permet d'obtenir un fichier basé sur l'image d'un contenu canvas. Voir <a href="/fr/docs/Web/API/HTMLCanvasElement"><code>HTMLCanvasElement</code></a> pour les détails.</li>
- <li><code>canvas2dcontext.lineCap</code> et <code>canvas2dcontext.lineJoin</code> ne lancent plus d'exceptions lorsqu'ils sont réglés avec une valeur non reconnue.</li>
- <li><code>canvas2dcontext.globalCompositeOperation</code> ne lance plus d'exception lorsqu'il est réglé avec une valeur non reconnue et ne supporte plus la valeur <code>darker</code>, qui n'est pas un standard.</li>
- <li>Le support de l'élément obsolète <a href="/fr/docs/Web/HTML/Element/spacer"><code>&lt;spacer&gt;</code></a>, était absent de tous les autres navigateurs, a été enlevé.</li>
- <li>L'élément <a href="/fr/docs/Web/HTML/Element/isindex"><code>&lt;isindex&gt;</code></a>, qui était crée par <a href="/fr/docs/Web/API/Document/createElement"><code>document.createElement()</code></a>, est maintenant crée comme un simple élément sans propriétés ou méthodes.</li>
- <li>Gecko supporte maintenant l'appel <code>click()</code> sur l'élément <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> pour ouvrir le sélecteur de fichiers. Voir l'<a href="/fr/docs/Using_files_from_web_applications#Using_hidden_file_input_elements_using_the_click()_method">exemple</a> dans l'article <a href="/fr/docs/Using_files_from_web_applications">Using files from web applications</a>.</li>
- <li>L'élément <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> supporte un nouvel attribut <a href="/fr/docs/HTML/Element/Input#attr-mozactionhint"><code>mozactionhint</code></a>, qui permet de spécifier l'étiquette de la touche Entrée sur un clavier virtuel.</li>
- <li>L'élément <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a> à l'intérieur des éléments <a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/noembed" title="L'élément &lt;noembed> est une façon obsolète et non standardisée de fournir une alternative de contenu pour les navigateurs ne supportant pas l'élément &lt;embed> ou des catégories de contenu qu'un auteur aimerait utiliser.
- Cet élément a été rendu obsolète à partir de la version HTML 4.01 et a été remplacé par &lt;object>. Le contenu alternatif doit être inséré entre la balise d'ouverture et celle de fermeture de &lt;object>"><code>&lt;noembed&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/noframes"><code>&lt;noframes&gt;</code></a> sont maintenant exécutés, contrairement aux versions précédentes de Firefox. Ceci est conforme à la spécification et correspond au comportement des autres navigateurs.</li>
-</ul>
+### HTML
 
-<h3 id="CSS">CSS</h3>
+- [Rencontrez le parseur HTML5](/fr/docs/HTML/HTML5/HTML5_Parser)
+  - : Un aperçu sur ce que le parseur HTML5 représente pour vous et comment intégrer du contenu SVG et MathML dans votre code.
+- [Les formulaires en HTML5](/fr/docs/HTML/Forms_in_HTML)
+  - : Un aperçu de l'amélioration de formulaires Web en HTML5. Parmi les changements on ajoute les types d'entrée dans l'élément [`<input>`](/fr/docs/Web/HTML/Element/input), la validation des données et d'autres modifications.
+- [Sections HTML5](/fr/docs/Sections_and_Outlines_of_an_HTML5_document)
+  - : Gecko supporte à présent les nouveaux éléments HTML5 liés aux sections dans un document : [`<article>`](/fr/docs/Web/HTML/Element/article), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<hgroup>`](/fr/docs/Web/HTML/Element/hgroup), [`<header>`](/fr/docs/Web/HTML/Element/header) et [`<footer>`](/fr/docs/Web/HTML/Element/footer).
+- [Attribut HTML5 hidden](/fr/HTML/Global_attributes#hidden)
+  - : Cet attribut, commun à tous les éléments, est utilisé pour cacher le contenu d'une page Web qui n'est pas encore pertinent pour l'utilisateur.
+- Autres éléments HTML5
+  - : Gecko supporte les nouveaux éléments HTML5 suivants : [`<mark>`](/fr/docs/Web/HTML/Element/mark), [`<figure>`](/fr/docs/Web/HTML/Element/figure), et [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption).
+- [WebSockets](/fr/docs/WebSockets)
+  - : Un guide pour utiliser la nouvelle API WebSockets pour la communication entre une application web et un serveur en temps réel. A noter que WebSockets tel qu'implémenté dans Firefox 4 n'est pas compatible avec la norme finale, et ne devrait pas être utilisé.
 
-<dl>
- <dt><a href="/fr/docs/CSS/CSS_transitions">Transitions CSS</a></dt>
- <dd>Le support des transitions CSS est disponible dans Firefox 4.</dd>
- <dt>Les valeurs calculées en CSS</dt>
- <dd>Le support de <a href="/fr/docs/Web/CSS/-moz-calc"><code>-moz-calc</code></a> a été ajouté. Cela permet de spécifier des valeurs de <a href="/fr/docs/Web/CSS/length"><code>&lt;length&gt;</code></a> comme des expressions mathématiques.</dd>
- <dt>Groupement de sélecteurs</dt>
- <dd>Le support de <a href="/fr/docs/Web/CSS/:-moz-any"><code>:-moz-any</code></a> pour grouper les sélecteurs et factoriser des combinateurs.</dd>
- <dt>Support subrectangle pour background-image</dt>
- <dd>La propriété <a href="/fr/docs/Web/CSS/-moz-image-rect"><code>-moz-image-rect</code></a> permet d'utiliser des subrectangles en tant que <a href="/fr/docs/Web/CSS/background-image"><code>background-image</code></a>.</dd>
- <dt>Propriétés CSS tactile</dt>
- <dd>Le support des propriétés tactiles a été ajouté. Plus de détails plus tard.</dd>
- <dt><a href="/fr/docs/CSS/element">Utilisation arbitraires d'élements comme fond</a></dt>
- <dd>Vou pouvez utiliser la fonction CSS <a href="/fr/docs/Web/CSS/-moz-element"><code>-moz-element</code></a> et la fonction DOM <a href="/fr/docs/Web/API/Document/mozSetImageElement"><code>document.mozSetImageElement()</code></a> pour une utilisation arbitraire des éléments HTML comme fond.</dd>
- <dt><a href="/fr/docs/CSS/Privacy_and_the_:visited_selector">Sélecteur :visited et confidentialité</a></dt>
- <dd>Des modifications ont étés apportées sur les informations qui peuvent être obtenues sur le style des liens visités en utilisant les sélecteurs CSS. Certaines applications Web peuvent être affectées.</dd>
-</dl>
+#### Améliorations de Canvas
 
-<h4 id="Nouvelles_propriétés_CSS">Nouvelles propriétés CSS</h4>
+Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderingContext2D`](/fr/docs/Web/API/CanvasRenderingContext2D) pour permettre à l'implémentation de [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) d'être en conformité avec la spécification :
+
+- La spécification d'un rayon négatif lors de l'appel d'`arc()` lance désormais correctement l'exception `INDEX_SIZE_ERR`.
+- La spécification de valeurs non finies lors de l'appel de `createLinearGradient()` et `createRadialGradient()` lance désormais `NOT_SUPPORTED_ERR` au lieu de `SYNTAX_ERR`.
+- Le réglage de `miterLimit` pour une valeur négative ne lance plus une exception, mais ignore plutôt les valeurs non-positives.
+- Le réglage de `lineWidth` pour une valeur négative ne lance plus une exception, mais ignore plutôt les valeurs non-positives.
+- La méthode `putImageData()` supporte désormais les paramètres optionnels `dirtyX`, `dirtyY`, `dirtyWidth` et `dirtyHeight`.
+
+<!---->
+
+#### Autres changements HTML
+
+- L'élément [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) est maintenant redimensionnable par défaut ; pour le désactiver, vous pouvez utiliser la propriété CSS [`resize`](/fr/docs/Web/CSS/resize).
+- `canvas.getContext` et `canvas.toDataURL` ne lancent plus d'exceptions lorsqu'ils sont appelés avec des arguments non reconnus.
+- L'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) supporte maintenant la méthode spécifique à Mozilla, `mozGetAsFile()`, qui permet d'obtenir un fichier basé sur l'image d'un contenu canvas. Voir [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement) pour les détails.
+- `canvas2dcontext.lineCap` et `canvas2dcontext.lineJoin` ne lancent plus d'exceptions lorsqu'ils sont réglés avec une valeur non reconnue.
+- `canvas2dcontext.globalCompositeOperation` ne lance plus d'exception lorsqu'il est réglé avec une valeur non reconnue et ne supporte plus la valeur `darker`, qui n'est pas un standard.
+- Le support de l'élément obsolète [`<spacer>`](/fr/docs/Web/HTML/Element/spacer), était absent de tous les autres navigateurs, a été enlevé.
+- L'élément [`<isindex>`](/fr/docs/Web/HTML/Element/isindex), qui était crée par [`document.createElement()`](/fr/docs/Web/API/Document/createElement), est maintenant crée comme un simple élément sans propriétés ou méthodes.
+- Gecko supporte maintenant l'appel `click()` sur l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) pour ouvrir le sélecteur de fichiers. Voir l'[exemple](</fr/docs/Using_files_from_web_applications#Using_hidden_file_input_elements_using_the_click()_method>) dans l'article [Using files from web applications](/fr/docs/Using_files_from_web_applications).
+- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input) supporte un nouvel attribut [`mozactionhint`](/fr/docs/HTML/Element/Input#attr-mozactionhint), qui permet de spécifier l'étiquette de la touche Entrée sur un clavier virtuel.
+- L'élément [`<script>`](/fr/docs/Web/HTML/Element/script) à l'intérieur des éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<noembed>`](/fr/docs/Web/HTML/Element/noembed "L'élément <noembed> est une façon obsolète et non standardisée de fournir une alternative de contenu pour les navigateurs ne supportant pas l'élément <embed> ou des catégories de contenu qu'un auteur aimerait utiliser.
+ Cet élément a été rendu obsolète à partir de la version HTML 4.01 et a été remplacé par <object>. Le contenu alternatif doit être inséré entre la balise d'ouverture et celle de fermeture de <object>") et [`<noframes>`](/fr/docs/Web/HTML/Element/noframes) sont maintenant exécutés, contrairement aux versions précédentes de Firefox. Ceci est conforme à la spécification et correspond au comportement des autres navigateurs.
+
+### CSS
+
+- [Transitions CSS](/fr/docs/CSS/CSS_transitions)
+  - : Le support des transitions CSS est disponible dans Firefox 4.
+- Les valeurs calculées en CSS
+  - : Le support de [`-moz-calc`](/fr/docs/Web/CSS/-moz-calc) a été ajouté. Cela permet de spécifier des valeurs de [`<length>`](/fr/docs/Web/CSS/length) comme des expressions mathématiques.
+- Groupement de sélecteurs
+  - : Le support de [`:-moz-any`](/fr/docs/Web/CSS/:-moz-any) pour grouper les sélecteurs et factoriser des combinateurs.
+- Support subrectangle pour background-image
+  - : La propriété [`-moz-image-rect`](/fr/docs/Web/CSS/-moz-image-rect) permet d'utiliser des subrectangles en tant que [`background-image`](/fr/docs/Web/CSS/background-image).
+- Propriétés CSS tactile
+  - : Le support des propriétés tactiles a été ajouté. Plus de détails plus tard.
+- [Utilisation arbitraires d'élements comme fond](/fr/docs/CSS/element)
+  - : Vou pouvez utiliser la fonction CSS [`-moz-element`](/fr/docs/Web/CSS/-moz-element) et la fonction DOM [`document.mozSetImageElement()`](/fr/docs/Web/API/Document/mozSetImageElement) pour une utilisation arbitraire des éléments HTML comme fond.
+- [Sélecteur :visited et confidentialité](/fr/docs/CSS/Privacy_and_the_:visited_selector)
+  - : Des modifications ont étés apportées sur les informations qui peuvent être obtenues sur le style des liens visités en utilisant les sélecteurs CSS. Certaines applications Web peuvent être affectées.
+
+#### Nouvelles propriétés CSS
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Propriété</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/-moz-font-feature-settings"><code>-moz-font-feature-settings</code></a></td>
-   <td>Permet de personnaliser les fonctionnalités avancées des polices OpenType.</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/-moz-tab-size"><code>-moz-tab-size</code></a></td>
-   <td>Spécifie la largeur d'un espace de tabulation (U+0009) lors du rendu du texte.</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/resize"><code>resize</code></a></td>
-   <td>Permet de modifier les dimensions d'un élément.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td class="header">Propriété</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/-moz-font-feature-settings"
+          ><code>-moz-font-feature-settings</code></a
+        >
+      </td>
+      <td>
+        Permet de personnaliser les fonctionnalités avancées des polices
+        OpenType.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/-moz-tab-size"><code>-moz-tab-size</code></a>
+      </td>
+      <td>
+        Spécifie la largeur d'un espace de tabulation (U+0009) lors du rendu du
+        texte.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/resize"><code>resize</code></a>
+      </td>
+      <td>Permet de modifier les dimensions d'un élément.</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
-</dl>
-
-<h4 id="Nouvelles_pseudo-classes_CSS">Nouvelles pseudo-classes CSS</h4>
+#### Nouvelles pseudo-classes CSS
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Pseudo-class</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/:-moz-handler-crashed"><code>:-moz-handler-crashed</code></a></td>
-   <td>Utilisé pour le style d'un élément dont le plugin a planté.</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/:-moz-placeholder"><code>:-moz-placeholder</code></a></td>
-   <td>Appliquée à l'espace texte réservé dans les champs des formulaires.</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/:-moz-submit-invalid"><code>:-moz-submit-invalid</code></a></td>
-   <td>Appliquée au bouton d'envoi des formulaires quand un ou plusieurs des champs ne sont pas valides.</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/:-moz-window-inactive"><code>:-moz-window-inactive</code></a></td>
-   <td>Appliquée aux éléments d'une fenêtre inactive.</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/:invalid"><code>:invalid</code></a></td>
-   <td>Automatiquement appliquée aux champs <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> dont le contenu est invalide.</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/:optional"><code>:optional</code></a></td>
-   <td>Automatiquement appliquée aux champs <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> qui ne spécifient pas l'attribut <code>required</code>.</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/:required"><code>:required</code></a></td>
-   <td>Automatiquement appliquée aux champs <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> qui spécifient l'attribut <code>required</code>.</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/:valid"><code>:valid</code></a></td>
-   <td>Automatiquement appliquée aux champs <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> dont le contenu a été validé avec succès.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td class="header">Pseudo-class</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/:-moz-handler-crashed"
+          ><code>:-moz-handler-crashed</code></a
+        >
+      </td>
+      <td>Utilisé pour le style d'un élément dont le plugin a planté.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/:-moz-placeholder"
+          ><code>:-moz-placeholder</code></a
+        >
+      </td>
+      <td>
+        Appliquée à l'espace texte réservé dans les champs des formulaires.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/:-moz-submit-invalid"
+          ><code>:-moz-submit-invalid</code></a
+        >
+      </td>
+      <td>
+        Appliquée au bouton d'envoi des formulaires quand un ou plusieurs des
+        champs ne sont pas valides.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/:-moz-window-inactive"
+          ><code>:-moz-window-inactive</code></a
+        >
+      </td>
+      <td>Appliquée aux éléments d'une fenêtre inactive.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/:invalid"><code>:invalid</code></a>
+      </td>
+      <td>
+        Automatiquement appliquée aux champs
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&#x3C;input></code></a>
+        dont le contenu est invalide.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/:optional"><code>:optional</code></a>
+      </td>
+      <td>
+        Automatiquement appliquée aux champs
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&#x3C;input></code></a>
+        qui ne spécifient pas l'attribut <code>required</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/:required"><code>:required</code></a>
+      </td>
+      <td>
+        Automatiquement appliquée aux champs
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&#x3C;input></code></a>
+        qui spécifient l'attribut <code>required</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/:valid"><code>:valid</code></a>
+      </td>
+      <td>
+        Automatiquement appliquée aux champs
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&#x3C;input></code></a>
+        dont le contenu a été validé avec succès.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h4 id="Nouveaux_pseudo-selectors_CSS">Nouveaux pseudo-selectors CSS</h4>
+#### Nouveaux pseudo-selectors CSS
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Pseudo-selector</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/:-moz-focusring"><code>:-moz-focusring</code></a></td>
-   <td>Permet de spécifier l'apparence d'un élément lorsque Gecko estime que l'on doit se fixer dessus.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td class="header">Pseudo-selector</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/:-moz-focusring"
+          ><code>:-moz-focusring</code></a
+        >
+      </td>
+      <td>
+        Permet de spécifier l'apparence d'un élément lorsque Gecko estime que
+        l'on doit se fixer dessus.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h4 id="Nouvelles_fonctions_CSS">Nouvelles fonctions CSS</h4>
+#### Nouvelles fonctions CSS
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Fonction</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/:-moz-any"><code>:-moz-any</code></a></td>
-   <td>Permet de grouper les sélecteurs et de factoriser les combinateurs.</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/-moz-calc"><code>-moz-calc</code></a></td>
-   <td>Permet de spécifier des valeurs de <a href="/fr/docs/Web/CSS/length"><code>&lt;length&gt;</code></a> comme des expressions mathématiques.</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/-moz-element"><code>-moz-element</code></a></td>
-   <td>Permet d'utiliser un élément arbritaire de fond pour <a href="/fr/docs/Web/CSS/background-image"><code>background-image</code></a> and <a href="/fr/docs/Web/CSS/background"><code>background</code></a>.</td>
-  </tr>
-  <tr>
-   <td><a href="/fr/docs/Web/CSS/-moz-image-rect"><code>-moz-image-rect</code></a></td>
-   <td>Permet d'utiliser un subrectangle d'une image comme <a href="/fr/docs/Web/CSS/background-image"><code>background-image</code></a> or <a href="/fr/docs/Web/CSS/background"><code>background</code></a>.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td class="header">Fonction</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/:-moz-any"><code>:-moz-any</code></a>
+      </td>
+      <td>
+        Permet de grouper les sélecteurs et de factoriser les combinateurs.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/-moz-calc"><code>-moz-calc</code></a>
+      </td>
+      <td>
+        Permet de spécifier des valeurs de
+        <a href="/fr/docs/Web/CSS/length"><code>&#x3C;length></code></a> comme
+        des expressions mathématiques.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/-moz-element"><code>-moz-element</code></a>
+      </td>
+      <td>
+        Permet d'utiliser un élément arbritaire de fond pour
+        <a href="/fr/docs/Web/CSS/background-image"
+          ><code>background-image</code></a
+        >
+        and <a href="/fr/docs/Web/CSS/background"><code>background</code></a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/CSS/-moz-image-rect"
+          ><code>-moz-image-rect</code></a
+        >
+      </td>
+      <td>
+        Permet d'utiliser un subrectangle d'une image comme
+        <a href="/fr/docs/Web/CSS/background-image"
+          ><code>background-image</code></a
+        >
+        or <a href="/fr/docs/Web/CSS/background"><code>background</code></a
+        >.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h4 id="Propriétés_CSS_renommées">Propriétés CSS renommées</h4>
+#### Propriétés CSS renommées
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <td class="header">Ancien nom</td>
-   <td class="header">Nouveau nom</td>
-   <td class="header">Notes</td>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>-moz-background-size</code></td>
-   <td><a href="/fr/docs/Web/CSS/background-size"><code>background-size</code></a></td>
-   <td>Le nom <code>-moz-background-size</code> n'est plus supporté.</td>
-  </tr>
-  <tr>
-   <td><code>-moz-border-radius</code></td>
-   <td><a href="/fr/docs/Web/CSS/border-radius"><code>border-radius</code></a></td>
-   <td>L'ancien nom est encore pris en charge pour une durée limitée, le temps de mettre vos sites à jour. Le changement du rendu a été fait pour correspondre à la dernière version de la spécification.</td>
-  </tr>
-  <tr>
-   <td><code>-moz-box-shadow</code></td>
-   <td><a href="/fr/docs/Web/CSS/box-shadow"><code>box-shadow</code></a></td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <td class="header">Ancien nom</td>
+      <td class="header">Nouveau nom</td>
+      <td class="header">Notes</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>-moz-background-size</code></td>
+      <td>
+        <a href="/fr/docs/Web/CSS/background-size"
+          ><code>background-size</code></a
+        >
+      </td>
+      <td>Le nom <code>-moz-background-size</code> n'est plus supporté.</td>
+    </tr>
+    <tr>
+      <td><code>-moz-border-radius</code></td>
+      <td>
+        <a href="/fr/docs/Web/CSS/border-radius"><code>border-radius</code></a>
+      </td>
+      <td>
+        L'ancien nom est encore pris en charge pour une durée limitée, le temps
+        de mettre vos sites à jour. Le changement du rendu a été fait pour
+        correspondre à la dernière version de la spécification.
+      </td>
+    </tr>
+    <tr>
+      <td><code>-moz-box-shadow</code></td>
+      <td>
+        <a href="/fr/docs/Web/CSS/box-shadow"><code>box-shadow</code></a>
+      </td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h4 id="Divers_changements_CSS">Divers changements CSS</h4>
+#### Divers changements CSS
 
-<ul>
- <li>La propriété <a href="/fr/docs/Web/CSS/text-shadow"><code>text-shadow</code></a> plafonne désormais son rayon de flou à 300px, pour des raisons de bon sens et de performances.</li>
- <li>La propriété <a href="/fr/docs/Web/CSS/overflow"><code>overflow</code></a> ne s'applique plus au groupe d'éléments de tableaux (<code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>).</li>
- <li>La propriété <a href="/fr/docs/Web/CSS/-moz-appearance"><code>-moz-appearance</code></a> supporte désormais la valeur <code>-moz-win-borderless-glass</code>, qui s'applique à un élément Aero sans bordure.</li>
- <li>La fonctionnalité de média <code><a href="/fr/docs/CSS/Media_queries#-moz-device-pixel-ratio">-moz-device-pixel-ratio</a></code> a été ajoutée, permettant l'utilisation de pixels de l'appareil par ratio de pixels CSS qui sera utilisé dans les <a href="/fr/CSS/Media_queries">Media Queries</a>.</li>
- <li>La manipulation des <a href="/fr/docs/CSS-2_Quick_Reference/Units">unités CSS</a> dans Gecko a été révisé pour mieux correspondre à d'autres navigateurs, et plus précisément de traduire dans des longueurs absolues le nombre de pixels à l'écran basé sur le dispositif de la DPI.</li>
-</ul>
+- La propriété [`text-shadow`](/fr/docs/Web/CSS/text-shadow) plafonne désormais son rayon de flou à 300px, pour des raisons de bon sens et de performances.
+- La propriété [`overflow`](/fr/docs/Web/CSS/overflow) ne s'applique plus au groupe d'éléments de tableaux (`<thead>`, `<tbody>`, and `<tfoot>`).
+- La propriété [`-moz-appearance`](/fr/docs/Web/CSS/-moz-appearance) supporte désormais la valeur `-moz-win-borderless-glass`, qui s'applique à un élément Aero sans bordure.
+- La fonctionnalité de média [`-moz-device-pixel-ratio`](/fr/docs/CSS/Media_queries#-moz-device-pixel-ratio) a été ajoutée, permettant l'utilisation de pixels de l'appareil par ratio de pixels CSS qui sera utilisé dans les [Media Queries](/fr/CSS/Media_queries).
+- La manipulation des [unités CSS](/fr/docs/CSS-2_Quick_Reference/Units) dans Gecko a été révisé pour mieux correspondre à d'autres navigateurs, et plus précisément de traduire dans des longueurs absolues le nombre de pixels à l'écran basé sur le dispositif de la DPI.
 
-<h3 id="Graphisme_et_vidéo">Graphisme et vidéo</h3>
+### Graphisme et vidéo
 
-<dl>
- <dt></dt>
- <dt><a href="/fr/docs/WebGL">WebGL</a></dt>
- <dd>La norme WebGL (encore en développement) est maintenant supportée par Firefox.</dd>
- <dt><a href="/fr/docs/Optimizing_graphics_performance">Optimisation des performances graphique</a></dt>
- <dd>Trucs et astuces pour profiter le maximum des performances graphiques et vidéo dans Firefox 4.</dd>
- <dt><a href="/fr/docs/Media_formats_supported_by_the_audio_and_video_elements#WebM">Support de WebM</a></dt>
- <dd>Le nouveau format vidéo ouvert <a href="http://www.webmproject.org/">WebM</a> est supporté par Gecko 2.0.</dd>
- <dt><a href="/fr/docs/SVG/SVG_animation_with_SMIL">Animation SVG avec SMIL</a></dt>
- <dd>Les animations SVG avec SMIL sont désomais supportées.</dd>
- <dt>Utilisation de SVG comme image ou arrière-plan CSS</dt>
- <dd>Vous pouvez maintenant utilisez SVG avec l'élément <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a>, ainsi qu'avec CSS <a href="/fr/docs/Web/CSS/background-image"><code>background-image</code></a>.</dd>
- <dt>Attribut Media <code>buffered</code></dt>
- <dd>L'attribut <code>buffered</code> sur les éléments <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a> and <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> est maintenant supporté, vous permettant de déterminer quel fichier multimédia a été tamponné. L'interface DOM <a href="/fr/docs/Web/API/TimeRanges"><code>TimeRanges</code></a> a été mise en place pour ce support.</dd>
- <dt>Attribut Media <code>preload</code></dt>
- <dd>L'attribut <code>preload</code> de la spécification HTML5 a été implémenté, remplaçant l'attribut <code>autobuffer</code> précédemment mis en place (et qui n'est plus pris en charge). Cela affecte les éléments <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> ainsi que l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMHTMLMediaElement">nsIDOMHTMLMediaElement</a></code>.</dd>
- <dt>Amélioration du positionnement du texte SVG</dt>
- <dd>Vous pouvez maintenant spécifier des listes des valeurs pour les propriétés <code>x</code>, <code>y</code>, <code>dx</code>, and <code>dy</code> sur les éléments SVG <a href="/fr/docs/Web/SVG/Element/text"><code>&lt;text&gt;</code></a> et <a href="/fr/docs/Web/SVG/Element/tspan"><code>&lt;tspan&gt;</code></a>. Cela vous permet de contrôler le positionnement de chaque caractère d'une chaîne, individuellement.</dd>
-</dl>
+- [WebGL](/fr/docs/WebGL)
 
-<h3 id="DOM">DOM</h3>
+  - : La norme WebGL (encore en développement) est maintenant supportée par Firefox.
 
-<dl>
- <dt><a href="/fr/docs/JavaScript_typed_arrays">Tableaux JavaScript typés</a></dt>
- <dd>Ajout du support pour les tableaux JavaScript typés, cela vous permet de manipuler des tampons contenant des données brutes en utilisant des types de données natives. Plusieurs API utilisent ça, y compris <a href="/fr/docs/DOM/File">l'API File</a>, <a href="/fr/docs/WebGL">WebGL</a> et <a href="/fr/docs/WebSockets">WebSockets</a>.</dd>
- <dt>Obtention des limites des rectangles limites</dt>
- <dd>L'objet <a href="/fr/docs/Web/API/Range"><code>Range</code></a> a désormais les méthodes <a href="/fr/docs/Web/API/Range/getClientRects"><code>range.getClientRects()</code></a> et <a href="/fr/docs/Web/API/Range/getBoundingClientRect"><code>range.getBoundingClientRect()</code></a>.</dd>
- <dt>Capture des évènements de la souris sur des éléments quelconques</dt>
- <dd>Ajout du support des APIs <code>setCapture()</code> et <code>releaseCapture()</code> originaires d'Internet Explorer. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=503943">bug 503943</a>.</dd>
- <dt><a href="/fr/docs/DOM/Manipulating_the_browser_history">Manipulation de l'historique du navigateur</a></dt>
- <dd>L'objet de l'historique déjà existant et disponible via l'objet <a href="/fr/docs/Web/API/Window/history"><code>window.history</code></a>, supporte maintenant les nouvelles méthodes HTML5 <code>pushState()</code> et <code>replaceState()</code>.</dd>
- <dt><a href="/fr/docs/DOM/Animations_using_MozBeforePaint">Animations utilisant MozBeforePaint</a></dt>
- <dd>Un nouvel évènement a été ajouté, qui, avec l'aide de la méthode <a href="/fr/docs/Web/API/Window/mozRequestAnimationFrame"><code>window.mozRequestAnimationFrame()</code></a> et de la propriété <a href="/fr/docs/Web/API/Window/mozAnimationStartTime"><code>window.mozAnimationStartTime</code></a>, offre un moyen de créer des animations qui sont synchronisées avec les autres.</dd>
- <dt>Evènements touch et multi-touch</dt>
- <dd>Ajout du support des évènements touch et multi-touch.</dd>
-</dl>
+- [Optimisation des performances graphique](/fr/docs/Optimizing_graphics_performance)
+  - : Trucs et astuces pour profiter le maximum des performances graphiques et vidéo dans Firefox 4.
+- [Support de WebM](/fr/docs/Media_formats_supported_by_the_audio_and_video_elements#WebM)
+  - : Le nouveau format vidéo ouvert [WebM](http://www.webmproject.org/) est supporté par Gecko 2.0.
+- [Animation SVG avec SMIL](/fr/docs/SVG/SVG_animation_with_SMIL)
+  - : Les animations SVG avec SMIL sont désomais supportées.
+- Utilisation de SVG comme image ou arrière-plan CSS
+  - : Vous pouvez maintenant utilisez SVG avec l'élément [`<img>`](/fr/docs/Web/HTML/Element/img), ainsi qu'avec CSS [`background-image`](/fr/docs/Web/CSS/background-image).
+- Attribut Media `buffered`
+  - : L'attribut `buffered` sur les éléments [`<video>`](/fr/docs/Web/HTML/Element/video) and [`<audio>`](/fr/docs/Web/HTML/Element/audio) est maintenant supporté, vous permettant de déterminer quel fichier multimédia a été tamponné. L'interface DOM [`TimeRanges`](/fr/docs/Web/API/TimeRanges) a été mise en place pour ce support.
+- Attribut Media `preload`
+  - : L'attribut `preload` de la spécification HTML5 a été implémenté, remplaçant l'attribut `autobuffer` précédemment mis en place (et qui n'est plus pris en charge). Cela affecte les éléments [`<video>`](/fr/docs/Web/HTML/Element/video) et [`<audio>`](/fr/docs/Web/HTML/Element/audio) ainsi que l'interface [`nsIDOMHTMLMediaElement`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMHTMLMediaElement).
+- Amélioration du positionnement du texte SVG
+  - : Vous pouvez maintenant spécifier des listes des valeurs pour les propriétés `x`, `y`, `dx`, and `dy` sur les éléments SVG [`<text>`](/fr/docs/Web/SVG/Element/text) et [`<tspan>`](/fr/docs/Web/SVG/Element/tspan). Cela vous permet de contrôler le positionnement de chaque caractère d'une chaîne, individuellement.
 
-<h4 id="Changement_des_interfaces_DOM_déléments_HTML">Changement des interfaces DOM d'éléments HTML</h4>
+### DOM
 
-<p>Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à la spécification HTML5.</p>
+- [Tableaux JavaScript typés](/fr/docs/JavaScript_typed_arrays)
+  - : Ajout du support pour les tableaux JavaScript typés, cela vous permet de manipuler des tampons contenant des données brutes en utilisant des types de données natives. Plusieurs API utilisent ça, y compris [l'API File](/fr/docs/DOM/File), [WebGL](/fr/docs/WebGL) et [WebSockets](/fr/docs/WebSockets).
+- Obtention des limites des rectangles limites
+  - : L'objet [`Range`](/fr/docs/Web/API/Range) a désormais les méthodes [`range.getClientRects()`](/fr/docs/Web/API/Range/getClientRects) et [`range.getBoundingClientRect()`](/fr/docs/Web/API/Range/getBoundingClientRect).
+- Capture des évènements de la souris sur des éléments quelconques
+  - : Ajout du support des APIs `setCapture()` et `releaseCapture()` originaires d'Internet Explorer. Voir [bug 503943](https://bugzilla.mozilla.org/show_bug.cgi?id=503943).
+- [Manipulation de l'historique du navigateur](/fr/docs/DOM/Manipulating_the_browser_history)
+  - : L'objet de l'historique déjà existant et disponible via l'objet [`window.history`](/fr/docs/Web/API/Window/history), supporte maintenant les nouvelles méthodes HTML5 `pushState()` et `replaceState()`.
+- [Animations utilisant MozBeforePaint](/fr/docs/DOM/Animations_using_MozBeforePaint)
+  - : Un nouvel évènement a été ajouté, qui, avec l'aide de la méthode [`window.mozRequestAnimationFrame()`](/fr/docs/Web/API/Window/mozRequestAnimationFrame) et de la propriété [`window.mozAnimationStartTime`](/fr/docs/Web/API/Window/mozAnimationStartTime), offre un moyen de créer des animations qui sont synchronisées avec les autres.
+- Evènements touch et multi-touch
+  - : Ajout du support des évènements touch et multi-touch.
+
+#### Changement des interfaces DOM d'éléments HTML
+
+Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à la spécification HTML5.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <td class="header">Interface dans Firefox 3.6</td>
-   <td class="header">Interface dans Firefox 4</td>
-   <td class="header">Elements HTML</td>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="/fr/docs/DOM/HTMLSpanElement">HTMLSpanElement</a></code></td>
-   <td><code><a href="/fr/docs/DOM/HTMLElement">HTMLElement</a></code></td>
-   <td><a href="/fr/docs/Web/HTML/Element/abbr"><code>&lt;abbr&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/acronym"><code>&lt;acronym&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/address"><code>&lt;address&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/b"><code>&lt;b&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/bdo"><code>&lt;bdo&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/big"><code>&lt;big&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/blink"><code>&lt;blink&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/center"><code>&lt;center&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/cite"><code>&lt;cite&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/code"><code>&lt;code&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/dd"><code>&lt;dd&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/dfn"><code>&lt;dfn&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/dt"><code>&lt;dt&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/em"><code>&lt;em&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/i"><code>&lt;i&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/kbd"><code>&lt;kbd&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/listing"><code>&lt;listing&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/nobr"><code>&lt;nobr&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/plaintext"><code>&lt;plaintext&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/s"><code>&lt;s&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/samp"><code>&lt;samp&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/small"><code>&lt;small&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/strike"><code>&lt;strike&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/sub"><code>&lt;sub&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/sup"><code>&lt;sup&gt;</code></a>, , <a href="/fr/docs/Web/HTML/Element/tt"><code>&lt;tt&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/u"><code>&lt;u&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/var"><code>&lt;var&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/xmp"><code>&lt;xmp&gt;</code></a></td>
-  </tr>
-  <tr>
-   <td><code><a href="/fr/docs/DOM/HTMLDivElement">HTMLDivElement</a></code></td>
-   <td><code><a href="/fr/docs/DOM/HTMLElement">HTMLElement</a></code></td>
-   <td><a href="/fr/docs/Web/HTML/Element/noembed" title="L'élément &lt;noembed> est une façon obsolète et non standardisée de fournir une alternative de contenu pour les navigateurs ne supportant pas l'élément &lt;embed> ou des catégories de contenu qu'un auteur aimerait utiliser.
- Cet élément a été rendu obsolète à partir de la version HTML 4.01 et a été remplacé par &lt;object>. Le contenu alternatif doit être inséré entre la balise d'ouverture et celle de fermeture de &lt;object>"><code>&lt;noembed&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/noframes"><code>&lt;noframes&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a></td>
-  </tr>
-  <tr>
-   <td><code><a href="/fr/docs/DOM/HTMLWBRElement">HTMLWBRElement</a></code></td>
-   <td><code><a href="/fr/docs/DOM/HTMLElement">HTMLElement</a></code></td>
-   <td><a href="/fr/docs/Web/HTML/Element/wbr"><code>&lt;wbr&gt;</code></a></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <td class="header">Interface dans Firefox 3.6</td>
+      <td class="header">Interface dans Firefox 4</td>
+      <td class="header">Elements HTML</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code><a href="/fr/docs/DOM/HTMLSpanElement">HTMLSpanElement</a></code>
+      </td>
+      <td>
+        <code><a href="/fr/docs/DOM/HTMLElement">HTMLElement</a></code>
+      </td>
+      <td>
+        <a href="/fr/docs/Web/HTML/Element/abbr"><code>&#x3C;abbr></code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/acronym"
+          ><code>&#x3C;acronym></code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/address"
+          ><code>&#x3C;address></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/b"><code>&#x3C;b></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/bdo"><code>&#x3C;bdo></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/big"><code>&#x3C;big></code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/blink"><code>&#x3C;blink></code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/center"><code>&#x3C;center></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/cite"><code>&#x3C;cite></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/code"><code>&#x3C;code></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/dd"><code>&#x3C;dd></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/dfn"><code>&#x3C;dfn></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/dt"><code>&#x3C;dt></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/em"><code>&#x3C;em></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/i"><code>&#x3C;i></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/kbd"><code>&#x3C;kbd></code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/listing"
+          ><code>&#x3C;listing></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/nobr"><code>&#x3C;nobr></code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/plaintext"
+          ><code>&#x3C;plaintext></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/s"><code>&#x3C;s></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/samp"><code>&#x3C;samp></code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/small"><code>&#x3C;small></code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/strike"><code>&#x3C;strike></code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/strong"><code>&#x3C;strong></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/sub"><code>&#x3C;sub></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/sup"><code>&#x3C;sup></code></a
+        >, , <a href="/fr/docs/Web/HTML/Element/tt"><code>&#x3C;tt></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/u"><code>&#x3C;u></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/var"><code>&#x3C;var></code></a
+        >, <a href="/fr/docs/Web/HTML/Element/xmp"><code>&#x3C;xmp></code></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/fr/docs/DOM/HTMLDivElement">HTMLDivElement</a></code>
+      </td>
+      <td>
+        <code><a href="/fr/docs/DOM/HTMLElement">HTMLElement</a></code>
+      </td>
+      <td>
+        <a
+          href="/fr/docs/Web/HTML/Element/noembed"
+          title="L&#x27;élément <noembed> est une façon obsolète et non standardisée de fournir une alternative de contenu pour les navigateurs ne supportant pas l&#x27;élément <embed> ou des catégories de contenu qu&#x27;un auteur aimerait utiliser.
+ Cet élément a été rendu obsolète à partir de la version HTML 4.01 et a été remplacé par <object>. Le contenu alternatif doit être inséré entre la balise d&#x27;ouverture et celle de fermeture de <object>"
+          ><code>&#x3C;noembed></code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/noframes"
+          ><code>&#x3C;noframes></code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/noscript"
+          ><code>&#x3C;noscript></code></a
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/fr/docs/DOM/HTMLWBRElement">HTMLWBRElement</a></code>
+      </td>
+      <td>
+        <code><a href="/fr/docs/DOM/HTMLElement">HTMLElement</a></code>
+      </td>
+      <td>
+        <a href="/fr/docs/Web/HTML/Element/wbr"><code>&#x3C;wbr></code></a>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
-</dl>
+#### Divers changements DOM
 
-<h4 id="Divers_changements_DOM">Divers changements DOM</h4>
+- L'enveloppement d'un élément [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) peut maintenant être commandé via l'attribut DOM `wrap`. [bug 41464](https://bugzilla.mozilla.org/show_bug.cgi?id=41464)
+- Les éléments [`<script>`](/fr/docs/Web/HTML/Element/script) crées avec [`document.createElement()`](/fr/docs/Web/API/Document/createElement) et insérés dans un document, se comportent désormais conformément à la spécification HTML5. Les scripts avec l'attribut `src` s'exécute dès que possible (sasn maintenir la commande) et les scripts sans l'attribut `src` s'exécute de manière simultanée. Pour faire des scripts d'insertion de scripts qui ont l'attribut `src` qui exécute l'ensemble dans l'ordre d'insertion, pour eux `.async=false`.
+- Les objets DOM [`file`](/fr/docs/Web/API/File) proposent désormais la propriété `url`.
+- Support de [FormData](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Using_FormData_objects) pour XMLHttpRequest.
+- La propriété [`element.isContentEditable`](/fr/docs/Web/API/Element/isContentEditable) a été implémentée.
+- La propriété [`document.currentScript`](/fr/docs/Web/API/Document/currentScript) vous permet de déterminer quel script de l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) est en cours d'exécution. les nouveaux évènements [`element.onbeforescriptexecute`](/fr/docs/Web/API/Element/onbeforescriptexecute) et [`element.onafterscriptexecute`](/fr/docs/Web/API/Element/onafterscriptexecute) sont déclenchés avant et après l'éxécution d'un élément script.
+- Ajout de la propriété [`mozSourceNode`](/fr/docs/DragDrop/DataTransfer#mozSourceNode) à l'objet [`DragTransfer`](/fr/docs/DragDrop/DataTransfer).
+- Ajout de la méthode [`selection.modify()`](/fr/docs/DOM/Selection/modify) à l'objet [`Selection`](/fr/docs/Web/API/Selection), ce qui vous permet de facilement modifier la sélection de texte courant ou la position du curseur dans une fenêtre de navigateur.
+- Le support de l'objet `window.directories` et de la fonctionnalité `directories` pour [`window.open`](/fr/docs/Web/API/Window/open), qui ne sont plus supportés dans les autres navigateurs, ont été enlevés. Utiliser `personalbar` à la place. [bug 474058](https://bugzilla.mozilla.org/show_bug.cgi?id=474058)
+- La propriété [`event.mozInputSource`](/fr/docs/Web/API/Event/mozInputSource) a été ajoutée à l'interface utilisateur des évènements DOM, cette propriété non-standard vous permet de déterminer le type de l'appareil qui a généré un évènement.
+- L'évènement [`document.onreadystatechange`](/fr/docs/Web/API/Document/onreadystatechange) a été implémenté.
+- La méthode [`document.createElement`](/fr/docs/Web/API/Document/createElement) n'accepte plus `<` et `>` autour du nom de balise en mode quirks.
+- Les méthodes [`element.setCapture()`](/fr/docs/Web/API/Element/setCapture) et [`document.releaseCapture()`](/fr/docs/Web/API/Document/releaseCapture) ont été ajoutées, permettant à des éléments de poursuivre des évènements de la souris, même lorsqu'elle est en dehors de leur zone de suivi normal après que l'évènement `mousedown` soit survenu.
+- La propriété [`window.mozPaintCount`](/fr/docs/Web/API/Window/mozPaintCount) a été ajoutée, elle vous permet de déterminer le nombre de fois q'un document a été peint. Cela est particulièrement utile lors des tests de performance de votre application web.
+- Le signe de la langue a été supprimé de [`window.navigator.appVersion`](/fr/docs/Web/API/Window/navigator/appVersion) et [`window.navigator.userAgent`](/fr/docs/Web/API/Window/navigator/userAgent). Utilisez [`window.navigator.language`](/fr/docs/Web/API/Window/navigator/language) ou [l'en-tête Accept-Language](/fr/docs/HTTP/Content_negotiation) à la place. [bug 572656](https://bugzilla.mozilla.org/show_bug.cgi?id=572656)
+- L'objet [XMLHttpRequest](/fr/docs/XMLHttpRequest) expose maintenant la réponse comme un tableau JavaScript typé et aussi comme une chaîne, en utilisant la propriété, spécifique de Gecko, `mozResponseArrayBuffer`.
+- [Mouse events](/fr/docs/DOM/MouseEvent) inclut maintenant une propriété `mozPressure` indiquant le niveau de pression supporté sur les périphériques d'entrée sensibles à la pression.
+- Les méthodes [`window.URL.createObjectURL()`](/fr/docs/Web/API/Window/URL/createObjectURL) et [`window.URL.revokeObjectURL()`](/fr/docs/Web/API/Window/URL/revokeObjectURL) vous permettent de créer des URLs d'objet qui renvoient à des fichiers locaux.
+- La méthode [`DOMImplementation.createHTMLDocument()`](/fr/docs/Web/API/DOMImplementation/createHTMLDocument) vous permet de créer un nouveau document HTML.
+- [`Node.mozMatchesSelector()`](/fr/docs/Web/API/Node/mozMatchesSelector) retourne maintenant l'exception `SYNTAX_ERR`si la chaîne de sélection spécifiée est invalide, au lieu de retourner `false`.
+- Vous pouvez maintenant définir les valeurs des propriétés d'un élement SVG en utilisant une syntaxe abrégée même avec CSS. Par exemple : `element.style.fill = 'lime'`. Voir [`element.style`](/fr/docs/Web/API/Element/style) pour plus de détails.
+- Le document racine a maintenant un attribut [`privatebrowsingmode`](/fr/docs/Supporting_private_browsing_mode#Detecting_whether_private_browsing_mode_is_permanent) qui décrit l'état du mode de navigation privée, en indiquant notamment si la session de navigation privée est temporaire ou permanente.
+- Le second paramètre de la méthode [`window.getComputedStyle()`](/fr/docs/Web/API/Window/getComputedStyle) est maintenant optionnel, car elle l'est dans tous les autres navigateurs.
+- L'objet DOM [`StorageEvent`](/fr/docs/DOM/event/StorageEvent) est maintenant conforme à la dernière version de la spécification.
+- Le délais minimum autorisé pour la méthode [`window.setTimeout()`](/fr/docs/Web/API/Window/setTimeout) est maintenant la préférence `dom.min_timeout_value`.
+- L'évènement [`MozAfterPaint`](/fr/docs/Gecko-Specific_DOM_Events#MozAfterPaint) n'est plus envoyé par défaut, en raison d'un potentiel problème de sécurité. Il peut être réactivé en définissant une préférence.
 
-<ul>
- <li>L'enveloppement d'un élément <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> peut maintenant être commandé via l'attribut DOM <code>wrap</code>. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=41464">bug 41464</a></li>
- <li>Les éléments <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a> crées avec <a href="/fr/docs/Web/API/Document/createElement"><code>document.createElement()</code></a> et insérés dans un document, se comportent désormais conformément à la spécification HTML5. Les scripts avec l'attribut <code>src</code> s'exécute dès que possible (sasn maintenir la commande) et les scripts sans l'attribut <code>src</code> s'exécute de manière simultanée. Pour faire des scripts d'insertion de scripts qui ont l'attribut <code>src</code> qui exécute l'ensemble dans l'ordre d'insertion, pour eux <code>.async=false</code>.</li>
- <li>Les objets DOM <a href="/fr/docs/Web/API/File"><code>file</code></a> proposent désormais la propriété <code>url</code>.</li>
- <li>Support de <a href="/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Using_FormData_objects">FormData</a> pour XMLHttpRequest.</li>
- <li>La propriété <a href="/fr/docs/Web/API/Element/isContentEditable"><code>element.isContentEditable</code></a> a été implémentée.</li>
- <li>La propriété <a href="/fr/docs/Web/API/Document/currentScript"><code>document.currentScript</code></a> vous permet de déterminer quel script de l'élément <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a> est en cours d'exécution. les nouveaux évènements <a href="/fr/docs/Web/API/Element/onbeforescriptexecute"><code>element.onbeforescriptexecute</code></a> et <a href="/fr/docs/Web/API/Element/onafterscriptexecute"><code>element.onafterscriptexecute</code></a> sont déclenchés avant et après l'éxécution d'un élément script.</li>
- <li>Ajout de la propriété <a href="/fr/docs/DragDrop/DataTransfer#mozSourceNode"><code>mozSourceNode</code></a> à l'objet <a href="/fr/docs/DragDrop/DataTransfer"><code>DragTransfer</code></a>.</li>
- <li>Ajout de la méthode <a href="/fr/docs/DOM/Selection/modify"><code>selection.modify()</code></a> à l'objet <a href="/fr/docs/Web/API/Selection"><code>Selection</code></a>, ce qui vous permet de facilement modifier la sélection de texte courant ou la position du curseur dans une fenêtre de navigateur.</li>
- <li>Le support de l'objet <code>window.directories</code> et de la fonctionnalité <code>directories</code> pour <a href="/fr/docs/Web/API/Window/open"><code>window.open</code></a>, qui ne sont plus supportés dans les autres navigateurs, ont été enlevés. Utiliser <code>personalbar</code> à la place. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=474058">bug 474058</a></li>
- <li>La propriété <a href="/fr/docs/Web/API/Event/mozInputSource"><code>event.mozInputSource</code></a> a été ajoutée à l'interface utilisateur des évènements DOM, cette propriété non-standard vous permet de déterminer le type de l'appareil qui a généré un évènement.</li>
- <li>L'évènement <a href="/fr/docs/Web/API/Document/onreadystatechange"><code>document.onreadystatechange</code></a> a été implémenté.</li>
- <li>La méthode <a href="/fr/docs/Web/API/Document/createElement"><code>document.createElement</code></a> n'accepte plus <code>&lt;</code> et <code>&gt;</code> autour du nom de balise en mode quirks.</li>
- <li>Les méthodes <a href="/fr/docs/Web/API/Element/setCapture"><code>element.setCapture()</code></a> et <a href="/fr/docs/Web/API/Document/releaseCapture"><code>document.releaseCapture()</code></a> ont été ajoutées, permettant à des éléments de poursuivre des évènements de la souris, même lorsqu'elle est en dehors de leur zone de suivi normal après que l'évènement <code>mousedown</code> soit survenu.</li>
- <li>La propriété <a href="/fr/docs/Web/API/Window/mozPaintCount"><code>window.mozPaintCount</code></a> a été ajoutée, elle vous permet de déterminer le nombre de fois q'un document a été peint. Cela est particulièrement utile lors des tests de performance de votre application web.</li>
- <li>Le signe de la langue a été supprimé de <a href="/fr/docs/Web/API/Window/navigator/appVersion"><code>window.navigator.appVersion</code></a> et <a href="/fr/docs/Web/API/Window/navigator/userAgent"><code>window.navigator.userAgent</code></a>. Utilisez <a href="/fr/docs/Web/API/Window/navigator/language"><code>window.navigator.language</code></a> ou <a href="/fr/docs/HTTP/Content_negotiation">l'en-tête Accept-Language</a> à la place. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=572656">bug 572656</a></li>
- <li>L'objet <a href="/fr/docs/XMLHttpRequest">XMLHttpRequest</a> expose maintenant la réponse comme un tableau JavaScript typé et aussi comme une chaîne, en utilisant la propriété, spécifique de Gecko, <code>mozResponseArrayBuffer</code>.</li>
- <li><a href="/fr/docs/DOM/MouseEvent">Mouse events</a> inclut maintenant une propriété <code>mozPressure</code> indiquant le niveau de pression supporté sur les périphériques d'entrée sensibles à la pression.</li>
- <li>Les méthodes <a href="/fr/docs/Web/API/Window/URL/createObjectURL"><code>window.URL.createObjectURL()</code></a> et <a href="/fr/docs/Web/API/Window/URL/revokeObjectURL"><code>window.URL.revokeObjectURL()</code></a> vous permettent de créer des URLs d'objet qui renvoient à des fichiers locaux.</li>
- <li>La méthode <a href="/fr/docs/Web/API/DOMImplementation/createHTMLDocument"><code>DOMImplementation.createHTMLDocument()</code></a> vous permet de créer un nouveau document HTML.</li>
- <li><a href="/fr/docs/Web/API/Node/mozMatchesSelector"><code>Node.mozMatchesSelector()</code></a> retourne maintenant l'exception <code>SYNTAX_ERR</code>si la chaîne de sélection spécifiée est invalide, au lieu de retourner <code>false</code>.</li>
- <li>Vous pouvez maintenant définir les valeurs des propriétés d'un élement SVG en utilisant une syntaxe abrégée même avec CSS. Par exemple : <code>element.style.fill = 'lime'</code>. Voir <a href="/fr/docs/Web/API/Element/style"><code>element.style</code></a> pour plus de détails.</li>
- <li>Le document racine a maintenant un attribut <a href="/fr/docs/Supporting_private_browsing_mode#Detecting_whether_private_browsing_mode_is_permanent"><code>privatebrowsingmode</code></a> qui décrit l'état du mode de navigation privée, en indiquant notamment si la session de navigation privée est temporaire ou permanente.</li>
- <li>Le second paramètre de la méthode <a href="/fr/docs/Web/API/Window/getComputedStyle"><code>window.getComputedStyle()</code></a> est maintenant optionnel, car elle l'est dans tous les autres navigateurs.</li>
- <li>L'objet DOM <a href="/fr/docs/DOM/event/StorageEvent"><code>StorageEvent</code></a> est maintenant conforme à la dernière version de la spécification.</li>
- <li>Le délais minimum autorisé pour la méthode <a href="/fr/docs/Web/API/Window/setTimeout"><code>window.setTimeout()</code></a> est maintenant la préférence <code>dom.min_timeout_value</code>.</li>
- <li>L'évènement <a href="/fr/docs/Gecko-Specific_DOM_Events#MozAfterPaint"><code>MozAfterPaint</code></a> n'est plus envoyé par défaut, en raison d'un potentiel problème de sécurité. Il peut être réactivé en définissant une préférence.</li>
-</ul>
+### Securité
 
-<h3 id="Securité">Securité</h3>
+- [Content Security Policy (CSP)](/fr/docs/Security/CSP)
+  - : Content Security Policy (CSP) est une proposition de Mozilla, conçu pour aider les concepteurs de sites Web et les administrateurs de serveur en spécifiant comment le contenu sur leurs sites Web agit. L'objectif est d'aider à détecter et à atténuer les attaques incluant le cross-site scripting et des attaques par injection de données.
+- [HTTP Strict Transport Security](/fr/docs/Security/HTTP_Strict_Transport_Security)
+  - : HTTP Strict Transport Security est un dispositif de sécurité qui permet à un site web d'indiquer au navigateur d'utiliser une connexion sécurisée (HTTPS) à la place du protocole HTTP.
+- [L'en-tête de réponse X-FRAME-OPTIONS](/fr/docs/The_X-FRAME-OPTIONS_response_header)
+  - : L'en-tête de réponse X-FRAME-OPTIONS HTTP introduite dans Internet Explorer 8 est désormais supportée par Firefox. Cela permet aux sites d'indiquer si leurs pages peuvent être utilisées dans des frames ou si l'utilisation de la page doit être restreint.
+- Changement de la [chaîne de l'agent utilisateur](/fr/docs/Gecko_user_agent_string_reference)
+  - : C'est un moyen de réduire la quantité et l'entropie des données envoyées dans les requêts HTPP (voir [bug 572650](https://bugzilla.mozilla.org/show_bug.cgi?id=572650)), le niveau de cryptage et le signe de la langue ont été enlevés de la chaîne de l'agent utilisateur.
 
-<dl>
- <dt><a href="/fr/docs/Security/CSP">Content Security Policy (CSP)</a></dt>
- <dd>Content Security Policy (CSP) est une proposition de Mozilla, conçu pour aider les concepteurs de sites Web et les administrateurs de serveur en spécifiant comment le contenu sur leurs sites Web agit. L'objectif est d'aider à détecter et à atténuer les attaques incluant le cross-site scripting et des attaques par injection de données.</dd>
- <dt><a href="/fr/docs/Security/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a></dt>
- <dd>HTTP Strict Transport Security est un dispositif de sécurité qui permet à un site web d'indiquer au navigateur d'utiliser une connexion sécurisée (HTTPS) à la place du protocole HTTP.</dd>
- <dt><a href="/fr/docs/The_X-FRAME-OPTIONS_response_header">L'en-tête de réponse X-FRAME-OPTIONS</a></dt>
- <dd>L'en-tête de réponse X-FRAME-OPTIONS HTTP introduite dans Internet Explorer 8 est désormais supportée par Firefox. Cela permet aux sites d'indiquer si leurs pages peuvent être utilisées dans des frames ou si l'utilisation de la page doit être restreint.</dd>
- <dt>Changement de la <a href="/fr/docs/Gecko_user_agent_string_reference">chaîne de l'agent utilisateur</a></dt>
- <dd>C'est un moyen de réduire la quantité et l'entropie des données envoyées dans les requêts HTPP (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=572650">bug 572650</a>), le niveau de cryptage et le signe de la langue ont été enlevés de la chaîne de l'agent utilisateur.</dd>
-</dl>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
+Pour un aperçu des changements effectués dans JavaScript 1.8.5, voir [New in JavaScript 1.8.5](/fr/docs/JavaScript/New_in_JavaScript/1.8.5). Dans Firefox 4, JavaScript a un plus grand respect de la norme ECMAScript 5.
 
-<p>Pour un aperçu des changements effectués dans JavaScript 1.8.5, voir <a href="/fr/docs/JavaScript/New_in_JavaScript/1.8.5">New in JavaScript 1.8.5</a>. Dans Firefox 4, JavaScript a un plus grand respect de la norme ECMAScript 5.</p>
+### Outils pour les développeurs
 
-<h3 id="Outils_pour_les_développeurs">Outils pour les développeurs</h3>
+- [Utilisation de la Console Web](/fr/docs/Using_the_Web_Console)
+  - : La Console Web est un outil qui aide le débogage.
 
-<dl>
- <dt><a href="/fr/docs/Using_the_Web_Console">Utilisation de la Console Web</a></dt>
- <dd>La Console Web est un outil qui aide le débogage.</dd>
-</dl>
+A partir de Firefox 4, la Console d'erreurs est désactivée par défaut. Vous pouvez la ré-activer en modifiant la préférence `devtools.errorconsole.enabled` à `true` et en redémarrant le navigateur.
 
-<p>A partir de Firefox 4, la Console d'erreurs est désactivée par défaut. Vous pouvez la ré-activer en modifiant la préférence <code>devtools.errorconsole.enabled</code> à <code>true</code> et en redémarrant le navigateur.</p>
-</div>
+## Changements pour les développeurs de Mozilla et de modules complémentaires
 
-<h2 id="Changements_pour_les_développeurs_de_Mozilla_et_de_modules_complémentaires">Changements pour les développeurs de Mozilla et de modules complémentaires</h2>
+Pour des conseils utiles sur la mise à jour des extensions existantes pour Firefox 4, voir [Updating extensions for Firefox 4](/fr/docs/Extensions/Updating_extensions_for_Firefox_4). Il y a plusieurs changements importants qui cassent la compatibilité avec les add-ons, donc n'oubliez pas de lire cet article.
 
-<p>Pour des conseils utiles sur la mise à jour des extensions existantes pour Firefox 4, voir <a href="/fr/docs/Extensions/Updating_extensions_for_Firefox_4">Updating extensions for Firefox 4</a>. Il y a plusieurs changements importants qui cassent la compatibilité avec les add-ons, donc n'oubliez pas de lire cet article.</p>
+Si vous développez des thèmes, vous devez lire [Theme changes in Firefox 4](/fr/docs/Theme_changes_in_Firefox_4) afin de connaître certains changements importants.
 
-<p>Si vous développez des thèmes, vous devez lire <a href="/fr/docs/Theme_changes_in_Firefox_4">Theme changes in Firefox 4</a> afin de connaître certains changements importants.</p>
+### Modules de code JavaScript
 
-<h3 id="Modules_de_code_JavaScript">Modules de code JavaScript</h3>
+- [Services.jsm](/fr/docs/JavaScript_code_modules/Services.jsm)
+  - : Le module de code `Services.jsm` fournit des accesseurs qui font qu'il est facile d'obtenir des références sur les services couramment utilisés, tels que le service de préférences ou le médiateur fenêtre.
+- [API JS-ctypes](/fr/docs/js-ctypes)
+  - : L'API JS-ctypes permet d'appeler une bibliothèque de fonctions étrangère C-compatible sans utiliser XPCOM.
+- [Gestionnaire de modules complémentaires](/fr/docs/Addons/Add-on_Manager)
+  - : Le nouveau gestionnaire de modules complémentaires fournit des informations sur les modules, permet la modifications des options, l'installation et la suppression des modules.
+- [PopupNotifications.jsm](/fr/docs/JavaScript_code_modules/PopupNotifications.jsm)
+  - : Le nouveau module des notifications popup facilite la présentation des notifications non-modales. Vous pouvez voir comment utiliser cette API dans [Using popup notifications](/fr/docs/Using_popup_notifications).
+- [Chargement des modules de code à partir des URLs chrome:](/fr/docs/JavaScript_code_modules/Using#Locating_the_code_module)
+  - : Vous pouvez maintenant charger des modules de code à partir d'URLs **chrome:**, même à l'intérieur de fichiers JAR.
+- DownloadLastDir.jsm
+  - : Le module de code [`DownloadLastDir.jsm`](/fr/docs/JavaScript_code_modules/DownloadLastDir.jsm) fournit la variable `gDownloadLastDir` qui contient une chaîne qui permet de connaître le chemin du répertoire dans lequel le dernier téléchargement s'est produit. Ce module gère les questions liées à la navigation privée.
+- [Mesurer les performances en utilisant le module de code PerfMeasurement.jsm code module](/fr/docs/Performance/Measuring_performance_using_the_PerfMeasurement.jsm_code_module)
+  - : Le module de code [`PerfMeasurement.jsm`](/fr/docs/JavaScript_code_modules/PerfMeasurement.jsm) propose une API qui mesure les performances au niveau du CPU dans du code JavaScript.
 
-<dl>
- <dt><a href="/fr/docs/JavaScript_code_modules/Services.jsm">Services.jsm</a></dt>
- <dd>Le module de code <code>Services.jsm</code> fournit des accesseurs qui font qu'il est facile d'obtenir des références sur les services couramment utilisés, tels que le service de préférences ou le médiateur fenêtre.</dd>
- <dt><a href="/fr/docs/js-ctypes">API JS-ctypes</a></dt>
- <dd>L'API JS-ctypes permet d'appeler une bibliothèque de fonctions étrangère C-compatible sans utiliser XPCOM.</dd>
- <dt><a href="/fr/docs/Addons/Add-on_Manager">Gestionnaire de modules complémentaires</a></dt>
- <dd>Le nouveau gestionnaire de modules complémentaires fournit des informations sur les modules, permet la modifications des options, l'installation et la suppression des modules.</dd>
- <dt><a href="/fr/docs/JavaScript_code_modules/PopupNotifications.jsm">PopupNotifications.jsm</a></dt>
- <dd>Le nouveau module des notifications popup facilite la présentation des notifications non-modales. Vous pouvez voir comment utiliser cette API dans <a href="/fr/docs/Using_popup_notifications">Using popup notifications</a>.</dd>
- <dt><a href="/fr/docs/JavaScript_code_modules/Using#Locating_the_code_module">Chargement des modules de code à partir des URLs chrome:</a></dt>
- <dd>Vous pouvez maintenant charger des modules de code à partir d'URLs <strong>chrome:</strong>, même à l'intérieur de fichiers JAR.</dd>
- <dt>DownloadLastDir.jsm</dt>
- <dd>Le module de code <a href="/fr/docs/JavaScript_code_modules/DownloadLastDir.jsm"><code>DownloadLastDir.jsm</code></a> fournit la variable <code>gDownloadLastDir</code> qui contient une chaîne qui permet de connaître le chemin du répertoire dans lequel le dernier téléchargement s'est produit. Ce module gère les questions liées à la navigation privée.</dd>
- <dt><a href="/fr/docs/Performance/Measuring_performance_using_the_PerfMeasurement.jsm_code_module">Mesurer les performances en utilisant le module de code PerfMeasurement.jsm code module</a></dt>
- <dd>Le module de code <a href="/fr/docs/JavaScript_code_modules/PerfMeasurement.jsm"><code>PerfMeasurement.jsm</code></a> propose une API qui mesure les performances au niveau du CPU dans du code JavaScript.</dd>
-</dl>
+#### Divers changements dans les modules de code
 
-<h4 id="Divers_changements_dans_les_modules_de_code">Divers changements dans les modules de code</h4>
+- Le module de code `NetUtil.jsm` offre maintenant la méthode [`readInputStreamToString()`](</fr/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()>), qui permet de lire des octets arbitraires à partir d'un flux dans une chaîne, même si le flux inclut des zéros.
+- Vous pouvez maintenant [utiliser les travailleurs dans les modules de code JavaScript](/fr/docs/JavaScript_code_modules/Using_workers_in_JavaScript_code_modules).
 
-<ul>
- <li>Le module de code <code>NetUtil.jsm</code> offre maintenant la méthode <a href="/fr/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()"><code>readInputStreamToString()</code></a>, qui permet de lire des octets arbitraires à partir d'un flux dans une chaîne, même si le flux inclut des zéros.</li>
- <li>Vous pouvez maintenant <a href="/fr/docs/JavaScript_code_modules/Using_workers_in_JavaScript_code_modules">utiliser les travailleurs dans les modules de code JavaScript</a>.</li>
-</ul>
+### Changements DOM
 
-<h3 id="Changements_DOM">Changements DOM</h3>
+- [`ChromeWorker`](/fr/docs/Web/API/ChromeWorker)
+  - : Un nouveau type de travailleur pour du code privilégié, ce qui permet l'utilisation de choses comme [js-ctypes](/fr/docs/js-ctypes) à partir des travailleurs dans les extensions et le code d'une application.
+- [Evènements tactile](/fr/docs/DOM/Touch_events)
+  - : Ajout du support de l'évènement tactile (non-standard), cela permet de pouvoir suivre plusieurs doigts qui se déplacent en même temps sur un écran tactile.
 
-<dl>
- <dt><a href="/fr/docs/Web/API/ChromeWorker"><code>ChromeWorker</code></a></dt>
- <dd>Un nouveau type de travailleur pour du code privilégié, ce qui permet l'utilisation de choses comme <a href="/fr/docs/js-ctypes">js-ctypes</a> à partir des travailleurs dans les extensions et le code d'une application.</dd>
- <dt><a href="/fr/docs/DOM/Touch_events">Evènements tactile</a></dt>
- <dd>Ajout du support de l'évènement tactile (non-standard), cela permet de pouvoir suivre plusieurs doigts qui se déplacent en même temps sur un écran tactile.</dd>
-</dl>
+#### Autres changements DOM
 
-<h4 id="Autres_changements_DOM">Autres changements DOM</h4>
+- La nouvelle notification ["document-element-inserted"](/fr/docs/Observer_Notifications#Documents) est envoyée quand un élément racine d'un document est crée, mais tous les scripts sont exécutés avant.
 
-<ul>
- <li>La nouvelle notification <a href="/fr/docs/Observer_Notifications#Documents">"document-element-inserted"</a> est envoyée quand un élément racine d'un document est crée, mais tous les scripts sont exécutés avant.</li>
-</ul>
+<!---->
 
-<dl>
-</dl>
+### XUL
 
-<h3 id="XUL">XUL</h3>
+#### Changements pour l'élément tabbrowser
 
-<h4 id="Changements_pour_lélément_tabbrowser">Changements pour l'élément tabbrowser</h4>
+Plusieurs changements ont été apportés à l'élément [`<xul:tabbrowser>`](/fr/docs/Mozilla/Tech/XUL/tabbrowser) ce qui impacte les extensions qui interagissent avec les onglets. En plus du support de app tabs, ces changements on aussi modifiés la barre d'onglet en une barre d'outils standard, ce qui permet à l'utilisateur de faire glisser les boutons dans la barre d'outils.
 
-<p>Plusieurs changements ont été apportés à l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code> ce qui impacte les extensions qui interagissent avec les onglets. En plus du support de app tabs, ces changements on aussi modifiés la barre d'onglet en une barre d'outils standard, ce qui permet à l'utilisateur de faire glisser les boutons dans la barre d'outils.</p>
+- Les évènements `TabClose`, `TabSelect` et `TabOpen` non plus de bulle jusqu'à l'élément [`<xul:tabbrowser>`](/fr/docs/Mozilla/Tech/XUL/tabbrowser) (`gBrowser`). Les récepteurs d'évènements pour ces évènements doivent être ajoutés à `gBrowser.tabContainer` plutôt qu'à `gBrowser` directement.
+- Le menu contextuel d'un onglet n'est plus un enfant anonyme de [`<xul:tabbrowser>`](/fr/docs/Mozilla/Tech/XUL/tabbrowser). Il peut donc être surposé directement avec [overlays XUL](/fr/docs/Overlays_XUL). On peut également y accéder directement depuis JavaScript via `gBrowser.tabContextMenu`. Voir cet [article](http://www.gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/) pour plus de détails.
+- La nouvelle propriété [`visibleTabs`](/fr/docs/XUL/Propriétés/visibleTabs) a été ajoutée pour vous permettre de faire un tableau des onglets visibles, cela vous permet de déterminer quels onglets seront visibles dans l'ensemble de l'onglet courant. Par exemple, par Firefox Panorama l'utilise.
+- La nouvelle méthode [`showOnlyTheseTabs`](/fr/docs/Mozilla/Tech/XUL/Méthodes/showOnlyTheseTabs) a été ajoutée, elle est utilisée Firefox Panorama.
+- Ajout de la nouvelle méthode [`showOnlyTheseTabs`](/fr/docs/Mozilla/Tech/XUL/Méthodes/showOnlyTheseTabs), qui est utilisée par Firefox Panorama.
+- Ajout de la nouvelle méthode [`getIcon`](/fr/docs/Mozilla/Tech/XUL/Méthodes/getIcon), qui vous permet d'obtenir le favicon d'un onglet sans avoir besoin de le remonter de l'élément [`<xul:browser>`](/fr/docs/Mozilla/Tech/XUL/browser).
+- Ajout de la nouvelle propriété [`tabbrowser.tabs`](/fr/docs/XUL/Propriétés/tabbrowser.tabs), qui vous permet d'obtenir facilement une liste des onglets dans l'élement [`<xul:tabbrowser>`](/fr/docs/Mozilla/Tech/XUL/tabbrowser).
+- Les nouvelles méthodes [`pinTab`](/fr/docs/Mozilla/Tech/XUL/Méthodes/pinTab) et [`unpinTab`](/fr/docs/Mozilla/Tech/XUL/Méthodes/unpinTab) vous permettent d'épingler et de relâcher des onglets (pour faire la différence entre les onglets normaux et ceux utilisés régulièrement).
+- Ajout de la méthode [`getTabModalPromptBox`](/fr/docs/Mozilla/Tech/XUL/Méthodes/getTabModalPromptBox) et de l'attribut [`tabmodalPromptShowing`](/fr/docs/Mozilla/Tech/XUL/Attributs/tabmodalPromptShowing) à [`<xul:tabbrowser>`](/fr/docs/Mozilla/Tech/XUL/tabbrowser) pour le support des alertes majeures des onglets.
 
-<ul>
- <li>Les évènements <code>TabClose</code>, <code>TabSelect</code> et <code>TabOpen</code> non plus de bulle jusqu'à l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code> (<code>gBrowser</code>). Les récepteurs d'évènements pour ces évènements doivent être ajoutés à <code>gBrowser.tabContainer</code> plutôt qu'à <code>gBrowser</code> directement.</li>
- <li>Le menu contextuel d'un onglet n'est plus un enfant anonyme de <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code>. Il peut donc être surposé directement avec <a href="/fr/docs/Overlays_XUL">overlays XUL</a>. On peut également y accéder directement depuis JavaScript via <code>gBrowser.tabContextMenu</code>. Voir cet <a href="http://www.gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/">article</a> pour plus de détails.</li>
- <li>La nouvelle propriété <code><a href="/fr/docs/XUL/Propriétés/visibleTabs">visibleTabs</a></code> a été ajoutée pour vous permettre de faire un tableau des onglets visibles, cela vous permet de déterminer quels onglets seront visibles dans l'ensemble de l'onglet courant. Par exemple, par Firefox Panorama l'utilise.</li>
- <li>La nouvelle méthode <code><a href="/fr/docs/Mozilla/Tech/XUL/Méthodes/showOnlyTheseTabs">showOnlyTheseTabs</a></code> a été ajoutée, elle est utilisée Firefox Panorama.</li>
- <li>Ajout de la nouvelle méthode <code><a href="/fr/docs/Mozilla/Tech/XUL/Méthodes/showOnlyTheseTabs">showOnlyTheseTabs</a></code>, qui est utilisée par Firefox Panorama.</li>
- <li>Ajout de la nouvelle méthode <code><a href="/fr/docs/Mozilla/Tech/XUL/Méthodes/getIcon">getIcon</a></code>, qui vous permet d'obtenir le favicon d'un onglet sans avoir besoin de le remonter de l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/browser">&lt;xul:browser&gt;</a></code>.</li>
- <li>Ajout de la nouvelle propriété <code><a href="/fr/docs/XUL/Propriétés/tabbrowser.tabs">tabbrowser.tabs</a></code>, qui vous permet d'obtenir facilement une liste des onglets dans l'élement <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code>.</li>
- <li>Les nouvelles méthodes <code><a href="/fr/docs/Mozilla/Tech/XUL/Méthodes/pinTab">pinTab</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XUL/Méthodes/unpinTab">unpinTab</a></code> vous permettent d'épingler et de relâcher des onglets (pour faire la différence entre les onglets normaux et ceux utilisés régulièrement).</li>
- <li>Ajout de la méthode <code><a href="/fr/docs/Mozilla/Tech/XUL/Méthodes/getTabModalPromptBox">getTabModalPromptBox</a></code> et de l'attribut <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/tabmodalPromptShowing">tabmodalPromptShowing</a></code> à <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code> pour le support des alertes majeures des onglets.</li>
-</ul>
+#### Changements pour les popups
 
-<h4 id="Changements_pour_les_popups">Changements pour les popups</h4>
+- L'élément [`<xul:popup>`](/fr/docs/Mozilla/Tech/XUL/popup) n'est plus supporté, vous devez utilisez [`<xul:menupopup>`](/fr/docs/Mozilla/Tech/XUL/menupopup) à la place. (Si vous continuez à utiliser `popup`, vous allez rencontrer des problèmes, car l'élément n'a plus de signification particulière. par exemple, [`<xul:menuseparator>`](/fr/docs/Mozilla/Tech/XUL/menuseparator) peut apparaître transparent lorsqu'il est utilisé avec [`<xul:popup>`](/fr/docs/Mozilla/Tech/XUL/popup).)
+- L'élément XUL [`<xul:menupopup>`](/fr/docs/Mozilla/Tech/XUL/menupopup) a maintenant une propriété [`triggerNode`](/fr/docs/XUL/Propriétés/triggerNode), qui indique le noeud sur lequel l'évènement s'est produit et qui a causé l'ouverture de la popup. Cela a aussi nécessité l'ajout d'un paramètre de l'événement déclencheur de la méthode [`openPopup`](/fr/docs/Mozilla/Tech/XUL/Méthodes/openPopup). En plus de ça, la propriété [`anchorNode`](/fr/docs/XUL/Propriétés/anchorNode) a été ajoutée, elle renvoie l'ancre spécifiée lorsque la popup a été créé.
+- L'élément [`<xul:panel>`](/fr/docs/Mozilla/Tech/XUL/panel) propose maintenant les attributs [`panel.fade`](/fr/docs/Mozilla/Tech/XUL/Attributs/panel.fade) et [`panel.flip`](/fr/docs/Mozilla/Tech/XUL/Attributs/panel.flip), qui sont utilisés pour configurer le comportement de la nouvelle "flèche" des panneaux de notification de style.
 
-<ul>
- <li>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/popup">&lt;xul:popup&gt;</a></code> n'est plus supporté, vous devez utilisez <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup">&lt;xul:menupopup&gt;</a></code> à la place. (Si vous continuez à utiliser <code>popup</code>, vous allez rencontrer des problèmes, car l'élément n'a plus de signification particulière. par exemple, <code><a href="/fr/docs/Mozilla/Tech/XUL/menuseparator">&lt;xul:menuseparator&gt;</a></code> peut apparaître transparent lorsqu'il est utilisé avec <code><a href="/fr/docs/Mozilla/Tech/XUL/popup">&lt;xul:popup&gt;</a></code>.)</li>
- <li>L'élément XUL <code><a href="/fr/docs/Mozilla/Tech/XUL/menupopup">&lt;xul:menupopup&gt;</a></code> a maintenant une propriété <code><a href="/fr/docs/XUL/Propriétés/triggerNode">triggerNode</a></code>, qui indique le noeud sur lequel l'évènement s'est produit et qui a causé l'ouverture de la popup. Cela a aussi nécessité l'ajout d'un paramètre de l'événement déclencheur de la méthode <code><a href="/fr/docs/Mozilla/Tech/XUL/Méthodes/openPopup">openPopup</a></code>. En plus de ça, la propriété <code><a href="/fr/docs/XUL/Propriétés/anchorNode">anchorNode</a></code> a été ajoutée, elle renvoie l'ancre spécifiée lorsque la popup a été créé.</li>
- <li>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/panel">&lt;xul:panel&gt;</a></code> propose maintenant les attributs <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/panel.fade">panel.fade</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/panel.flip">panel.flip</a></code>, qui sont utilisés pour configurer le comportement de la nouvelle "flèche" des panneaux de notification de style.</li>
-</ul>
+#### Suppression du support à distance de XUL
 
-<h4 id="Suppression_du_support_à_distance_de_XUL">Suppression du support à distance de XUL</h4>
+Le support à distance de XUL n'est plus supporté, cela affecte les documents XUL qui étaient servis par HTTP, en outre, vous ne pouvez plus charger des documents XUL en utilisant l'URL `file://` sauf en créant une préférence `dom.allow_XUL_XBL_for_file` avec la valeur `true`. Cependant, il y a une fonctionnalité de liste blanche qui peut être utilisée pour permettre à des domaines spécifiques de charger XUL à distance. L'extension [Remote XUL Manager](https://addons.mozilla.org/en-US/firefox/addon/235281/) vous permet de gérer cette liste blanche.
 
-<p>Le support à distance de XUL n'est plus supporté, cela affecte les documents XUL qui étaient servis par HTTP, en outre, vous ne pouvez plus charger des documents XUL en utilisant l'URL <code>file://</code> sauf en créant une préférence <code>dom.allow_XUL_XBL_for_file</code> avec la valeur <code>true</code>. Cependant, il y a une fonctionnalité de liste blanche qui peut être utilisée pour permettre à des domaines spécifiques de charger XUL à distance. L'extension <a href="https://addons.mozilla.org/en-US/firefox/addon/235281/">Remote XUL Manager</a> vous permet de gérer cette liste blanche.</p>
+#### Divers changements XUL
 
-<h4 id="Divers_changements_XUL">Divers changements XUL</h4>
+- L'attribut `readonly` fonctionne désormais correctement pour les [champs XBL](/fr/docs/XBL/XBL_1.0_Reference/Elements#field).
+- L'élément [`<xul:resizer>`](/fr/docs/Mozilla/Tech/XUL/resizer) vous permet désormais d'utiliser l'attribut [`element`](/fr/docs/Mozilla/Tech/XUL/Attributs/element) pour spécifier l'élément à redimensionner, au lieu de redimensionner la fenêtre.
+- L'élément [`<xul:resizer>`](/fr/docs/Mozilla/Tech/XUL/resizer) a maintenant un attribut [`type`](/fr/docs/Mozilla/Tech/XUL/Attributs/resizer.type) qui vous permet de spécifier que le redimensionnement est pour la fenêtre au lieu d'un élément, pour également empêcher de redimensionner deux fois une fenêtre en cours de préparation.
+- L'attribut "active" n'est plus accessible sur les fenêtres XUL actives. A la place, vous pouvez utilisez la nouvelle pseudo-classe [`:-moz-window-inactive`](/fr/docs/Web/CSS/:-moz-window-inactive) afin d'attribuer différents styles aux fenêtres en arrière-plan.
+- L'attribut [`emptytext`](/fr/docs/Mozilla/Tech/XUL/Attributs/emptytext) est désormais obsolète, vous devez utiliez [`placeholder`](/fr/docs/Mozilla/Tech/XUL/Attributs/placeholder) à la place.
+- L'élément [`<xul:window>`](/fr/docs/Mozilla/Tech/XUL/window) propose maintenant un attribut [`accelerated`](/fr/docs/Mozilla/Tech/XUL/Attributs/accelerated) ; quand il est vrai, le gestionnaire de la couche matérielle est autorisé à accélérer la fenêtre.
+- L'élément [`<xul:stack>`](/fr/docs/Mozilla/Tech/XUL/stack) supporte maintenant les attributs [`bottom`](/fr/docs/Mozilla/Tech/XUL/Attributs/bottom) et [`right`](/fr/docs/Mozilla/Tech/XUL/Attributs/right).
+- Les évènements sont maintenant tirés lors de la personnalisation de [`<xul:toolbox>`](/fr/docs/Mozilla/Tech/XUL/toolbox), vous permettant de [détecter les changements sur les barres d'outils](/fr/docs/XUL/Toolbars/Toolbar_customization_events).
+- L'attribut [`alternatingbackground`](/fr/docs/Mozilla/Tech/XUL/Attributs/alternatingbackground) pour l'élément [`<xul:tree>`](/fr/docs/Mozilla/Tech/XUL/tree)n'est plus supporté, à la place, vous pouvez utiliser la pseudo-classe [`:-moz-tree-row`](/fr/docs/Web/CSS/:-moz-tree-row).
+- Le dépassement du bouton de la barre d'outils des Favoris avec anonid chevronPopup n'est plus anonyme, il a l'ID "PlacesChevron".
+- L'élément [`<xul:tabs>`](/fr/docs/Mozilla/Tech/XUL/tabs) a maintenant la propriété [`tabbox`](/fr/docs/XUL/Propriétés/tabbox), en remplacement de l'ancienne propriété `_tabbox`, qui a été abandonnée (et n'a jamais été documentée).
+- Les éléments XUL [`<xul:window>`](/fr/docs/Mozilla/Tech/XUL/window) ont maintenant l'attribut [`drawintitlebar`](/fr/docs/Mozilla/Tech/XUL/Attributs/drawintitlebar), si il a la valeur `true`, la zone de contenu de la fenêtre qui comprend la barre de titre, permet de dessiner dans la barre de titre.
+- De nouveaux évènements sont disponibles : `TabPinned` et `TabUnpinned`, vous permettant de détecter [quand des onglets sont épinglés ou relâchés](/fr/docs/Code_snippets/Tabbed_browser#Notification_when_a_tab_is_pinned_or_unpinned).
+- le nouvel évènement [`TabAttrModified` event](/fr/docs/Code_snippets/Tabbed_browser#Notification_when_a_tab%27s_attributes_change) est envoyé lorsque l'un des attributs ([`label`](/fr/docs/Mozilla/Tech/XUL/Attributs/label), [`crop`](/fr/docs/Mozilla/Tech/XUL/Attributs/crop), [`busy`](/fr/docs/Mozilla/Tech/XUL/Attributs/busy), [`image`](/fr/docs/Mozilla/Tech/XUL/Attributs/image), ou [`selected`](/fr/docs/Mozilla/Tech/XUL/Attributs/selected)) d'un onglet change.
+- Les éléments [`<xul:tab>`](/fr/docs/Mozilla/Tech/XUL/tab) ont maintenant l'attribut [`pinned`](/fr/docs/Mozilla/Tech/XUL/Attributs/pinned), qui vous permet de savoir si un onglet est actuellement épinglé.
+- La classe `setDirectionIndicator` sur les éléments [`<xul:tree>`](/fr/docs/Mozilla/Tech/XUL/tree) n'a rien fait depuis un certain temps et maintenant elle n'est plus du tout utilisée.
+- L'élément [`<xul:window>`](/fr/docs/Mozilla/Tech/XUL/window) possède maintenant l'attribut [`chromemargin`](/fr/docs/Mozilla/Tech/XUL/Attributs/chromemargin) qui vous permet de définir la marge entre le chrome et le contenu de chaque côté d'une fenêtre.
+- L'élément [`<xul:window>`](/fr/docs/Mozilla/Tech/XUL/window) possède maintenant l'attribut [`disablechrome`](/fr/docs/Mozilla/Tech/XUL/Attributs/disablechrome), il est utilisé pour cacher la plupart du chrome dans une fenêtre, comme pour `about:addons`.
+- L'élément [`<xul:window>`](/fr/docs/Mozilla/Tech/XUL/window) possède maintenant l'attribut [`disablefastfind`](/fr/docs/Mozilla/Tech/XUL/Attributs/disablefastfind), qui vous permet de désactiver la barre de recherche dans une fenêtre lorsque le contenu ne le supporte pas. Il est par exemple utilisé par le panneau de gestion des modules complémentaires.
+- Les barres d'outils peuvent maintenant être externe aux boîtes à outils, tout en restant considérée comme un membre de [`<xul:toolbox>`](/fr/docs/Mozilla/Tech/XUL/toolbox), en configurant la propriété [`toolboxid`](/fr/docs/XUL/Propriétés/toolboxid) de [`<xul:toolbar>`](/fr/docs/Mozilla/Tech/XUL/toolbar). De plus, l'élément [`<xul:toolbox>`](/fr/docs/Mozilla/Tech/XUL/toolbox) a maintenant une propriété [`externalToolbars`](/fr/docs/XUL/Propriétés/externalToolbars), qui liste toutes les barres d'outils qui sont considérées comme des membres de la boîte à outils.
+- Ajout du support pour [la connexion de templates XUL](/fr/docs/XUL/Template_Guide/Template_Logging) pour permettre un débogage .
 
-<ul>
- <li>L'attribut <code>readonly</code> fonctionne désormais correctement pour les <a href="/fr/docs/XBL/XBL_1.0_Reference/Elements#field">champs XBL</a>.</li>
- <li>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/resizer">&lt;xul:resizer&gt;</a></code> vous permet désormais d'utiliser l'attribut <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/element">element</a></code> pour spécifier l'élément à redimensionner, au lieu de redimensionner la fenêtre.</li>
- <li>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/resizer">&lt;xul:resizer&gt;</a></code> a maintenant un attribut <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/resizer.type">type</a></code> qui vous permet de spécifier que le redimensionnement est pour la fenêtre au lieu d'un élément, pour également empêcher de redimensionner deux fois une fenêtre en cours de préparation.</li>
- <li>L'attribut "active" n'est plus accessible sur les fenêtres XUL actives. A la place, vous pouvez utilisez la nouvelle pseudo-classe <a href="/fr/docs/Web/CSS/:-moz-window-inactive"><code>:-moz-window-inactive</code></a> afin d'attribuer différents styles aux fenêtres en arrière-plan.</li>
- <li>L'attribut <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/emptytext">emptytext</a></code> est désormais obsolète, vous devez utiliez <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/placeholder">placeholder</a></code> à la place.</li>
- <li>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/window">&lt;xul:window&gt;</a></code> propose maintenant un attribut <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/accelerated">accelerated</a></code> ; quand il est vrai, le gestionnaire de la couche matérielle est autorisé à accélérer la fenêtre.</li>
- <li>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/stack">&lt;xul:stack&gt;</a></code> supporte maintenant les attributs <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/bottom">bottom</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/right">right</a></code>.</li>
- <li>Les évènements sont maintenant tirés lors de la personnalisation de <code><a href="/fr/docs/Mozilla/Tech/XUL/toolbox">&lt;xul:toolbox&gt;</a></code>, vous permettant de <a href="/fr/docs/XUL/Toolbars/Toolbar_customization_events">détecter les changements sur les barres d'outils</a>.</li>
- <li>L'attribut <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/alternatingbackground">alternatingbackground</a></code> pour l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tree">&lt;xul:tree&gt;</a></code>n'est plus supporté, à la place, vous pouvez utiliser la pseudo-classe <a href="/fr/docs/Web/CSS/:-moz-tree-row"><code>:-moz-tree-row</code></a>.</li>
- <li>Le dépassement du bouton de la barre d'outils des Favoris avec anonid chevronPopup n'est plus anonyme, il a l'ID "PlacesChevron".</li>
- <li>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabs">&lt;xul:tabs&gt;</a></code> a maintenant la propriété <code><a href="/fr/docs/XUL/Propriétés/tabbox">tabbox</a></code>, en remplacement de l'ancienne propriété <code>_tabbox</code>, qui a été abandonnée (et n'a jamais été documentée).</li>
- <li>Les éléments XUL <code><a href="/fr/docs/Mozilla/Tech/XUL/window">&lt;xul:window&gt;</a></code> ont maintenant l'attribut <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/drawintitlebar">drawintitlebar</a></code>, si il a la valeur <code>true</code>, la zone de contenu de la fenêtre qui comprend la barre de titre, permet de dessiner dans la barre de titre.</li>
- <li>De nouveaux évènements sont disponibles : <code>TabPinned</code> et <code>TabUnpinned</code>, vous permettant de détecter <a href="/fr/docs/Code_snippets/Tabbed_browser#Notification_when_a_tab_is_pinned_or_unpinned">quand des onglets sont épinglés ou relâchés</a>.</li>
- <li>le nouvel évènement <a href="/fr/docs/Code_snippets/Tabbed_browser#Notification_when_a_tab%27s_attributes_change"><code>TabAttrModified</code> event</a> est envoyé lorsque l'un des attributs (<code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/label">label</a></code>, <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/crop">crop</a></code>, <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/busy">busy</a></code>, <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/image">image</a></code>, ou <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/selected">selected</a></code>) d'un onglet change.</li>
- <li>Les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/tab">&lt;xul:tab&gt;</a></code> ont maintenant l'attribut <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/pinned">pinned</a></code>, qui vous permet de savoir si un onglet est actuellement épinglé.</li>
- <li>La classe <code>setDirectionIndicator</code> sur les éléments <code><a href="/fr/docs/Mozilla/Tech/XUL/tree">&lt;xul:tree&gt;</a></code> n'a rien fait depuis un certain temps et maintenant elle n'est plus du tout utilisée.</li>
- <li>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/window">&lt;xul:window&gt;</a></code> possède maintenant l'attribut <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/chromemargin">chromemargin</a></code> qui vous permet de définir la marge entre le chrome et le contenu de chaque côté d'une fenêtre.</li>
- <li>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/window">&lt;xul:window&gt;</a></code> possède maintenant l'attribut <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/disablechrome">disablechrome</a></code>, il est utilisé pour cacher la plupart du chrome dans une fenêtre, comme pour <code>about:addons</code>.</li>
- <li>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/window">&lt;xul:window&gt;</a></code> possède maintenant l'attribut <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/disablefastfind">disablefastfind</a></code>, qui vous permet de désactiver la barre de recherche dans une fenêtre lorsque le contenu ne le supporte pas. Il est par exemple utilisé par le panneau de gestion des modules complémentaires.</li>
- <li>Les barres d'outils peuvent maintenant être externe aux boîtes à outils, tout en restant considérée comme un membre de <code><a href="/fr/docs/Mozilla/Tech/XUL/toolbox">&lt;xul:toolbox&gt;</a></code>, en configurant la propriété <code><a href="/fr/docs/XUL/Propriétés/toolboxid">toolboxid</a></code> de <code><a href="/fr/docs/Mozilla/Tech/XUL/toolbar">&lt;xul:toolbar&gt;</a></code>. De plus, l'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/toolbox">&lt;xul:toolbox&gt;</a></code> a maintenant une propriété <code><a href="/fr/docs/XUL/Propriétés/externalToolbars">externalToolbars</a></code>, qui liste toutes les barres d'outils qui sont considérées comme des membres de la boîte à outils.</li>
- <li>Ajout du support pour <a href="/fr/docs/XUL/Template_Guide/Template_Logging">la connexion de templates XUL</a> pour permettre un débogage .</li>
-</ul>
+### Changements dans l'UI affectant les développeurs
 
-<h3 id="Changements_dans_lUI_affectant_les_développeurs">Changements dans l'UI affectant les développeurs</h3>
+- [La barre d'add-on](/fr/docs/The_add-on_bar)
+  - : La barre d'état a été supprimée en faveur de la nouvelle barre d'add-on. Vous devrez mettre à jour votre extension l'utiliser cette option si vous aviez ajouté l'UI de la barre d'état avant.
+- [Cacher le chrome du navigateur](/fr/docs/Hiding_browser_chrome)
+  - : Vous pouvez désormais cacher le chrome du navigateur quand il est souhaitable de le faire, par exemple, `about:addons` le fait.
 
-<dl>
- <dt><a href="/fr/docs/The_add-on_bar">La barre d'add-on</a></dt>
- <dd>La barre d'état a été supprimée en faveur de la nouvelle barre d'add-on. Vous devrez mettre à jour votre extension l'utiliser cette option si vous aviez ajouté l'UI de la barre d'état avant.</dd>
- <dt><a href="/fr/docs/Hiding_browser_chrome">Cacher le chrome du navigateur</a></dt>
- <dd>Vous pouvez désormais cacher le chrome du navigateur quand il est souhaitable de le faire, par exemple, <code>about:addons</code> le fait.</dd>
-</dl>
+### Storage
 
-<h3 id="Storage">Storage</h3>
+#### Divers changement dans l'API Storage
 
-<h4 id="Divers_changement_dans_lAPI_Storage">Divers changement dans l'API Storage</h4>
+- L'interface [`mozIStorageBindingParamsArray`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParamsArray)a maintenant un attribut de longueur indiquant le nombre d'objets [`mozIStorageBindingParams`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParams) dans le tableau.
+- [`mozIStorageStatement.bindParameters()`](</fr/docs/XPCOM_Interface_Reference/mozIStorageStatement#bindParameters()>) retourne maintenant une erreur si l'interface [`mozIStorageBindingParamsArray`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParamsArray) spécifiée est vide.
+- Ajout de la méthode [`mozIStorageConnection.clone()`](</fr/docs/XPCOM_Interface_Reference/mozIStorageConnection#clone()>), qui vous permet de cloner une connexion à une base de données déjà existante.
+- Ajout de la méthode [`mozIStorageConnection.asyncClose()`](</fr/docs/XPCOM_Interface_Reference/mozIStorageConnection#asyncClose()>), qui vous permet de fermer une connexion à une base de données de manière asynchrone, vous spécifiez un rappel pour être averti quand l'opération est terminée.
+- Ajout de la méthode [`mozIStorageConnection.setGrowthIncrement()`](</fr/docs/XPCOM_Interface_Reference/mozIStorageConnection#setGrowthIncrement()>), qui vous permet de spécifier le nombre de fichiers ajoutés à la fois dans une base de données, pour aider à réduire la fragmentation de SQLite.
+- L'erreur `SQLITE_CONSTRAINT` est maintenant reportée comme `NS_ERROR_STORAGE_CONSTRAINT` au lieu de `NS_ERROR_FAILURE`.
 
-<ul>
- <li>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParamsArray">mozIStorageBindingParamsArray</a></code>a maintenant un attribut de longueur indiquant le nombre d'objets <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParams">mozIStorageBindingParams</a></code> dans le tableau.</li>
- <li><code><a href="/fr/docs/XPCOM_Interface_Reference/mozIStorageStatement#bindParameters()">mozIStorageStatement.bindParameters()</a></code> retourne maintenant une erreur si l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageBindingParamsArray">mozIStorageBindingParamsArray</a></code> spécifiée est vide.</li>
- <li>Ajout de la méthode <code><a href="/fr/docs/XPCOM_Interface_Reference/mozIStorageConnection#clone()">mozIStorageConnection.clone()</a></code>, qui vous permet de cloner une connexion à une base de données déjà existante.</li>
- <li>Ajout de la méthode <code><a href="/fr/docs/XPCOM_Interface_Reference/mozIStorageConnection#asyncClose()">mozIStorageConnection.asyncClose()</a></code>, qui vous permet de fermer une connexion à une base de données de manière asynchrone, vous spécifiez un rappel pour être averti quand l'opération est terminée.</li>
- <li>Ajout de la méthode <code><a href="/fr/docs/XPCOM_Interface_Reference/mozIStorageConnection#setGrowthIncrement()">mozIStorageConnection.setGrowthIncrement()</a></code>, qui vous permet de spécifier le nombre de fichiers ajoutés à la fois dans une base de données, pour aider à réduire la fragmentation de SQLite.</li>
- <li>L'erreur <code>SQLITE_CONSTRAINT</code> est maintenant reportée comme <code>NS_ERROR_STORAGE_CONSTRAINT</code> au lieu de <code>NS_ERROR_FAILURE</code>.</li>
-</ul>
+### XPCOM
 
-<h3 id="XPCOM">XPCOM</h3>
+En plus des changements spécifiques référencés ci-dessous, il est important de noter qu'il n'y a plus aucune interfaces gelées. Elles sont toutes dégelées maintenant, indépendamment de ce que peut indiquer la documentation. Nous mettrons à jour la documentation au fil du temps.
 
-<p>En plus des changements spécifiques référencés ci-dessous, il est important de noter qu'il n'y a plus aucune interfaces gelées. Elles sont toutes dégelées maintenant, indépendamment de ce que peut indiquer la documentation. Nous mettrons à jour la documentation au fil du temps.</p>
+- [Changements d'XPCOM dans Gecko 2.0](/fr/docs/XPCOM/XPCOM_changes_in_Gecko_2.0)
+  - : Détails sur les modifications d'XPCOM qui impactent la compatibilité dans Firefox 4.
+- [Components.utils.getGlobalForObject()](/fr/docs/Components.utils.getGlobalForObject)
+  - : Cette nouvelle méthode retourne l'objet global avec lequel un objet est associé, ce qui remplace un cas d'utilisation commun de `__parent__` qui est désormais retiré.
 
-<dl>
- <dt><a href="/fr/docs/XPCOM/XPCOM_changes_in_Gecko_2.0">Changements d'XPCOM dans Gecko 2.0</a></dt>
- <dd>Détails sur les modifications d'XPCOM qui impactent la compatibilité dans Firefox 4.</dd>
- <dt><a href="/fr/docs/Components.utils.getGlobalForObject">Components.utils.getGlobalForObject()</a></dt>
- <dd>Cette nouvelle méthode retourne l'objet global avec lequel un objet est associé, ce qui remplace un cas d'utilisation commun de <code>__parent__</code> qui est désormais retiré.</dd>
-</dl>
+### Places
 
-<h3 id="Places">Places</h3>
+- Les résultats de la requête peuvent maintenant être observés par plusieurs observateurs, et les requêtes peuvent être exécutées de manière asynchrone. Cela signifie qu'il y a eu des changements dans les interfaces [`nsINavHistoryResult`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResult), [`nsINavHistoryQueryOptions`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions) et [`nsINavHistoryContainerResultNode`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryContainerResultNode). De plus, l'interface [`nsINavHistoryResultViewer`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultViewer) a été renommée en [`nsINavHistoryResultObserver`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultObserver).
+- De [nouvelles notifications](/fr/docs/Observer_Notifications#Places) ont été ajoutées pour permettre au navigateur de suivre la procédure d'arrêt du service Places de manière plus fiable. Parmi celles-ci, la plupart sont pour un usage interne uniquement, mais la notification `places-connection-closed` est disponible pour savoir quand le service Places a terminé sont processus d'arrêt.
+- Le paramètre de sortie de la taille d'un tableau sur plusieurs méthodes Places est désormais optionnel.
+- Le support de `<menupopup type="places">` a été supprimé. A la place, vous devez créer et remplir un menu avec ds informations Places manuellement, plutôt que de l'avoir fait pour vous. Voir [Displaying Places information using views: Menu view](/fr/docs/Displaying_Places_information_using_views#Menu_view) pour plus de détails.
 
-<ul>
- <li>Les résultats de la requête peuvent maintenant être observés par plusieurs observateurs, et les requêtes peuvent être exécutées de manière asynchrone. Cela signifie qu'il y a eu des changements dans les interfaces <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResult">nsINavHistoryResult</a></code>, <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions">nsINavHistoryQueryOptions</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryContainerResultNode">nsINavHistoryContainerResultNode</a></code>. De plus, l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultViewer">nsINavHistoryResultViewer</a></code> a été renommée en <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultObserver">nsINavHistoryResultObserver</a></code>.</li>
- <li>De <a href="/fr/docs/Observer_Notifications#Places">nouvelles notifications</a> ont été ajoutées pour permettre au navigateur de suivre la procédure d'arrêt du service Places de manière plus fiable. Parmi celles-ci, la plupart sont pour un usage interne uniquement, mais la notification <code>places-connection-closed</code> est disponible pour savoir quand le service Places a terminé sont processus d'arrêt.</li>
- <li>Le paramètre de sortie de la taille d'un tableau sur plusieurs méthodes Places est désormais optionnel.</li>
- <li>Le support de <code>&lt;menupopup type="places"&gt;</code> a été supprimé. A la place, vous devez créer et remplir un menu avec ds informations Places manuellement, plutôt que de l'avoir fait pour vous. Voir <a href="/fr/docs/Displaying_Places_information_using_views#Menu_view">Displaying Places information using views: Menu view</a> pour plus de détails.</li>
-</ul>
+### Changements dans les interfaces
 
-<h3 id="Changements_dans_les_interfaces">Changements dans les interfaces</h3>
+- Les interfaces [`nsIDocShell`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocShell) et [`nsIWebBrowser`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebBrowser) ont maintenant un nouvel attribut `isActive`, qui est utilisé pour optimiser les chemins de code pour les documents qui ne sont pas visibles.
+- La méthode [`nsIMemory.isLowMemory()`](</fr/docs/XPCOM_Interface_Reference/nsIMemory#isLowMemory()>) est obsolète. A la place, vous devez utilisez [les notifications "memory-pressure"](/fr/docs/XPCOM_Interface_Reference/nsIMemory#Low_memory_notifications) pour surveiller les situations où la mémoire est insuffisante.
+- L'API pour la manipulation des redirections HTTP sur les canaux a changé pour qu'elles puissent être traitées de manière asynchrone. N'importe quel code qui implémente la manipulation des redirections à l'aide de [`nsIChannelEventSink.onChannelRedirect()`](</fr/docs/XPCOM_Interface_Reference/nsIChannelEventSink#onChannelRedirect()>) doit être mis à jour pour qu'il utilise [`nsIChannelEventSink.asyncOnChannelRedirect()`](</fr/docs/XPCOM_Interface_Reference/nsIChannelEventSink#asyncOnChannelRedirect()>) à la place. Cela accepte un gestionnaire de rappel qui doit être appelé quand une redirection est réussie.
+- La méthode [`nsINavHistoryResultObserver.batching()`](</fr/docs/XPCOM_Interface_Reference/nsINavHistoryResultObserver#batching()>) a été ajoutée, fournissant un moyen de grouper des opérations Places par lots, ce qui réduit le nombre de notifications de mise à jour délivrées, qui peut améliorer les performances quand les observateurs doivent effectuer certaines tâches (telles que des rafraîchissement de pages).
+- L'interface obsolète `nsIPref` a finalement été supprimée. Si vous n'êtes pas encore passé à [`nsIPrefService`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrefService), il est temps de le faire.
+- Les interfaces [`nsISessionStore`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISessionStore) et [`nsISessionStartup`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISessionStartup) ont reçues des changements pour la restauration des sessions. Voir la méthode [`nsISessionStore.restoreLastSession()`](</fr/docs/XPCOM_Interface_Reference/nsISessionStore#restoreLastSession()>).
+- Les méthodes [`nsIPrincipal.subsumes()`](</fr/docs/XPCOM_Interface_Reference/nsIPrincipal#subsumes()>) et [`nsIPrincipal.checkMayLoad()`](</fr/docs/XPCOM_Interface_Reference/nsIPrincipal#checkMayLoad()>), et les attributs `origin`, `csp` et `URI`, sont maintenant disponibles à partir d'un script ; avant ils n'étaient disponibles qu'à partir du code natif.
+- L'interface [`nsIPrompt`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrompt) supporte maintenant les alertes des onglets modaux, voir [Using tab-modal prompts](/fr/docs/Using_tab-modal_prompts) pour plus de détails.
+- La méthode [`nsIEffectiveTLDService.getPublicSuffixFromHost()`](</fr/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getPublicSuffixFromHost()>) rejette maintenant correctement le nom des hôtes qui commencent par un point (".").
+- La méthode [`mozIJSSubScriptLoader.loadSubScript()`](</fr/docs/XPCOM_Interface_Reference/mozIJSSubScriptLoader#loadSubScript()>) a maintenant un argument optionnel qui vous permet de définir le jeu de caractère du script, si il n'est pas fourni, on suppose que c'est le format ASCII (comme cela a toujours été précédemment).
+- L'interface `nsIAccessProxy` a été supprimée. C'était un élément qui n'avait plus d'utilité.
+- Les interfaces [`nsIContentView`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentView) et [`nsIContentViewManager`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentViewManager) ont été ajoutées pour Firefox Mobile. Ils représentent une vue déroulant le contenu dont le contenu est actuellement utilisé par un processus séparé.
+- L'interface [`nsIDiskCacheStreamInternal`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDiskCacheStreamInternal) a été ajoutée.
+- L'interface [`nsIExternalURLHandlerService`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIExternalURLHandlerService) a été ajoutée.
+- L'interface [`nsISyncJPAKE`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISyncJPAKE) a été ajoutée. Voir [bug 601645](https://bugzilla.mozilla.org/show_bug.cgi?id=601645).
 
-<ul>
- <li>Les interfaces <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocShell">nsIDocShell</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebBrowser">nsIWebBrowser</a></code> ont maintenant un nouvel attribut <code>isActive</code>, qui est utilisé pour optimiser les chemins de code pour les documents qui ne sont pas visibles.</li>
- <li>La méthode <code><a href="/fr/docs/XPCOM_Interface_Reference/nsIMemory#isLowMemory()">nsIMemory.isLowMemory()</a></code> est obsolète. A la place, vous devez utilisez <a href="/fr/docs/XPCOM_Interface_Reference/nsIMemory#Low_memory_notifications">les notifications "memory-pressure"</a> pour surveiller les situations où la mémoire est insuffisante.</li>
- <li>L'API pour la manipulation des redirections HTTP sur les canaux a changé pour qu'elles puissent être traitées de manière asynchrone. N'importe quel code qui implémente la manipulation des redirections à l'aide de <code><a href="/fr/docs/XPCOM_Interface_Reference/nsIChannelEventSink#onChannelRedirect()">nsIChannelEventSink.onChannelRedirect()</a></code> doit être mis à jour pour qu'il utilise <code><a href="/fr/docs/XPCOM_Interface_Reference/nsIChannelEventSink#asyncOnChannelRedirect()">nsIChannelEventSink.asyncOnChannelRedirect()</a></code> à la place. Cela accepte un gestionnaire de rappel qui doit être appelé quand une redirection est réussie.</li>
- <li>La méthode <code><a href="/fr/docs/XPCOM_Interface_Reference/nsINavHistoryResultObserver#batching()">nsINavHistoryResultObserver.batching()</a></code> a été ajoutée, fournissant un moyen de grouper des opérations Places par lots, ce qui réduit le nombre de notifications de mise à jour délivrées, qui peut améliorer les performances quand les observateurs doivent effectuer certaines tâches (telles que des rafraîchissement de pages).</li>
- <li>L'interface obsolète <code>nsIPref</code> a finalement été supprimée. Si vous n'êtes pas encore passé à <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrefService">nsIPrefService</a></code>, il est temps de le faire.</li>
- <li>Les interfaces <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISessionStore">nsISessionStore</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISessionStartup">nsISessionStartup</a></code> ont reçues des changements pour la restauration des sessions. Voir la méthode <code><a href="/fr/docs/XPCOM_Interface_Reference/nsISessionStore#restoreLastSession()">nsISessionStore.restoreLastSession()</a></code>.</li>
- <li>Les méthodes <code><a href="/fr/docs/XPCOM_Interface_Reference/nsIPrincipal#subsumes()">nsIPrincipal.subsumes()</a></code> et <code><a href="/fr/docs/XPCOM_Interface_Reference/nsIPrincipal#checkMayLoad()">nsIPrincipal.checkMayLoad()</a></code>, et les attributs <code>origin</code>, <code>csp</code> et <code>URI</code>, sont maintenant disponibles à partir d'un script ; avant ils n'étaient disponibles qu'à partir du code natif.</li>
- <li>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrompt">nsIPrompt</a></code> supporte maintenant les alertes des onglets modaux, voir <a href="/fr/docs/Using_tab-modal_prompts">Using tab-modal prompts</a> pour plus de détails.</li>
- <li>La méthode <code><a href="/fr/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getPublicSuffixFromHost()">nsIEffectiveTLDService.getPublicSuffixFromHost()</a></code> rejette maintenant correctement le nom des hôtes qui commencent par un point (".").</li>
- <li>La méthode <code><a href="/fr/docs/XPCOM_Interface_Reference/mozIJSSubScriptLoader#loadSubScript()">mozIJSSubScriptLoader.loadSubScript()</a></code> a maintenant un argument optionnel qui vous permet de définir le jeu de caractère du script, si il n'est pas fourni, on suppose que c'est le format ASCII (comme cela a toujours été précédemment).</li>
- <li>L'interface <code>nsIAccessProxy</code> a été supprimée. C'était un élément qui n'avait plus d'utilité.</li>
- <li>Les interfaces <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentView">nsIContentView</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentViewManager">nsIContentViewManager</a></code> ont été ajoutées pour Firefox Mobile. Ils représentent une vue déroulant le contenu dont le contenu est actuellement utilisé par un processus séparé.</li>
- <li>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDiskCacheStreamInternal">nsIDiskCacheStreamInternal</a></code> a été ajoutée.</li>
- <li>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIExternalURLHandlerService">nsIExternalURLHandlerService</a></code> a été ajoutée.</li>
- <li>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISyncJPAKE">nsISyncJPAKE</a></code> a été ajoutée. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=601645">bug 601645</a>.</li>
-</ul>
+### Gestion de la mémoire
 
-<h3 id="Gestion_de_la_mémoire">Gestion de la mémoire</h3>
+- [Allocation infaillible de la mémoire](/fr/docs/Infallible_memory_allocation)
+  - : Mozilla propose désormais des répartiteur de mémoire infaillible qui sont garantis de ne pas retouner null. Vous devriez lire cet article pour connaitre leur fonctionnement et savoir comment demander l'allocation de la mémoire.
 
-<dl>
- <dt><a href="/fr/docs/Infallible_memory_allocation">Allocation infaillible de la mémoire</a></dt>
- <dd>Mozilla propose désormais des répartiteur de mémoire infaillible qui sont garantis de ne pas retouner null. Vous devriez lire cet article pour connaitre leur fonctionnement et savoir comment demander l'allocation de la mémoire.</dd>
-</dl>
+### Autres changements
 
-<h3 id="Autres_changements">Autres changements</h3>
+- La plupart des ressources que Firefox contient ont été combinées dans une seule archive JAR (`omni.jar`), ce qui améliore les performances au démarrage en réduisant l'I/O. Pour plus de détails, lisez [About omni.jar](/fr/docs/About_omni.jar).
+- La préférence `accessibility.disablecache` n'est plus supportée, elle a seulement été utilisée à des fins de débogage et n'est plus employée.
+- Les extensions dont le GUID change d'une version à une autre peuvent maintenant être mise à jour correctement.
+- As a side effect of the removal of platform-specific directories in add-on bundles, you can no longer provide different default preferences for each platform.
+- Par défaut, [les extensions ne sont plus décompressées quand elles sont installées](http://blog.mozilla.com/mwu/2010/09/10/extensions-now-installed-packed/), mais sont plutôt exécutées directement à partir du fichier XPI. Les extensions peuvent utiliser la propriété [unpack](/fr/docs/Install_Manifests#unpack) dans le [manifeste d'installation](/fr/docs/Manifestes_d'installation) pour choisir l'ancien comportement. Les extensions qui utilisent des composants binaires, des DLLs chargées avec [js-ctypes](/fr/docs/js-ctypes), des [plugins de recherche](/fr/docs/Création_de_plugins_OpenSearch_pour_Firefox), des dictionnaires et une fenêtre d'icônes doivent préciser ce dont elles ont besoin pour être décompressées. Les extensions qui [créent des bases de données SQLite](/fr/docs/XUL_School/Local_Storage#SQLite), ou font des copies de fichiers du système relatifs au répertoire de l'extension, peuvent aussi avoir besoin de modifier leur code.
+- You may now include extensions that [automatically get installed at application startup](/fr/docs/Developer_Guide/Customizing_Firefox#Including_extensions_with_your_distribution_of_Firefox) within a customized Firefox.
 
-<ul>
- <li>La plupart des ressources que Firefox contient ont été combinées dans une seule archive JAR (<code>omni.jar</code>), ce qui améliore les performances au démarrage en réduisant l'I/O. Pour plus de détails, lisez <a href="/fr/docs/About_omni.jar">About omni.jar</a>.</li>
- <li>La préférence <code>accessibility.disablecache</code> n'est plus supportée, elle a seulement été utilisée à des fins de débogage et n'est plus employée.</li>
- <li>Les extensions dont le GUID change d'une version à une autre peuvent maintenant être mise à jour correctement.</li>
- <li>As a side effect of the removal of platform-specific directories in add-on bundles, you can no longer provide different default preferences for each platform.</li>
- <li>Par défaut, <a href="http://blog.mozilla.com/mwu/2010/09/10/extensions-now-installed-packed/">les extensions ne sont plus décompressées quand elles sont installées</a>, mais sont plutôt exécutées directement à partir du fichier XPI. Les extensions peuvent utiliser la propriété <a href="/fr/docs/Install_Manifests#unpack">unpack</a> dans le <a href="/fr/docs/Manifestes_d'installation">manifeste d'installation</a> pour choisir l'ancien comportement. Les extensions qui utilisent des composants binaires, des DLLs chargées avec <a href="/fr/docs/js-ctypes">js-ctypes</a>, des <a href="/fr/docs/Création_de_plugins_OpenSearch_pour_Firefox">plugins de recherche</a>, des dictionnaires et une fenêtre d'icônes doivent préciser ce dont elles ont besoin pour être décompressées. Les extensions qui <a href="/fr/docs/XUL_School/Local_Storage#SQLite">créent des bases de données SQLite</a>, ou font des copies de fichiers du système relatifs au répertoire de l'extension, peuvent aussi avoir besoin de modifier leur code.</li>
- <li>You may now include extensions that <a href="/fr/docs/Developer_Guide/Customizing_Firefox#Including_extensions_with_your_distribution_of_Firefox">automatically get installed at application startup</a> within a customized Firefox.</li>
-</ul>
+## Autres changements
 
-<h2 id="Autres_changements_2">Autres changements</h2>
+- Seul le fichier chrome.manifest racine est chargé
+  - : maintenant seul le fichier `chrome.manifest` racine est chargé ; si vous avez besoin de fichiers manifestes secondaires à charger, vous pouvez utilisez la commande [`manifest`](/fr/docs/Chrome_Registration#manifest) dans votre fichier `chrome.manifest` racine pour les charger.
+- Suppression du support de Gopher
+  - : Le protocole Gopher n'est plus supporté nativement. L'extension [OverbiteFF](https://addons.mozilla.org/addon/7685/) permet de continuer à le supporter.
+- [Gestion des évènement du processus Content](/fr/docs/The_message_manager)
+  - : Pour le support des plugins hors du processus et les multiples processus caractéristiques, une nouvelle API a été mise en place pour permettre l'envoi de messages dans les processus.
+- [Bootstrap des extensions](/fr/docs/Extensions/Bootstrapped_extensions)
+  - : Vous pouvez désormais créer des extensions qui peuvent être installées, désinstallées et mises à jour sans nécessiter le redémarrage du navigateur.
+- Suppression des plugins par défaut
+  - : The default plugin has been removed. The application plugins folder has also been removed by default, however support for installing plugins via this folder still exists. Voir [bug 533891](https://bugzilla.mozilla.org/show_bug.cgi?id=533891).
+- Extension Manager remplacé par Addon Manager
+  - : [`nsIExtensionManager`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIExtensionManager) a été remplacée par [AddonManager](/fr/docs/Addons/Add-on_Manager/AddonManager).
+- Child HWNDs n'est plus utilisé
+  - : Firefox ne créé plus de child HWNDs pour son usage interne sous Windows. Si vous avez codé une extension qui utilise du code natif pour manipuler ces HWNDs, votre extensions ne fonctionnera pas dans Firefox 4. Soit vous devez arrêter l'utilisation de HWND ou soit mettre votre code reposant sur HWND dans un plugin [NPAPI](/fr/docs/Gecko_Plugin_API_Reference). C'est un gros travail, alors si vous pouviez éviter d'utiliser HWND directement.
+- Changements dans les gestes
+  - : Les gestes par défaut ont été changés, en faisant glisser trois doigts de haut en bas sur le trackpad cela ouvrira ou fermera Firefox Panorama. Pour modifier les éléments précédents, afin d'avoir les commandes de défilement haut et défilement bas, ouvrez about:config et mettez `cmd_scrollBottom` pour `browser.gesture.swipe.down` et `cmd_scrollTop` pour `browser.gesture.swipe.up`.
 
-<dl>
- <dt>Seul le fichier chrome.manifest racine est chargé</dt>
- <dd>maintenant seul le fichier <code>chrome.manifest</code> racine est chargé ; si vous avez besoin de fichiers manifestes secondaires à charger, vous pouvez utilisez la commande <a href="/fr/docs/Chrome_Registration#manifest"><code>manifest</code></a> dans votre fichier <code>chrome.manifest</code> racine pour les charger.</dd>
- <dt>Suppression du support de Gopher</dt>
- <dd>Le protocole Gopher n'est plus supporté nativement. L'extension <a href="https://addons.mozilla.org/addon/7685/">OverbiteFF</a> permet de continuer à le supporter.</dd>
- <dt><a href="/fr/docs/The_message_manager">Gestion des évènement du processus Content</a></dt>
- <dd>Pour le support des plugins hors du processus et les multiples processus caractéristiques, une nouvelle API a été mise en place pour permettre l'envoi de messages dans les processus.</dd>
- <dt><a href="/fr/docs/Extensions/Bootstrapped_extensions">Bootstrap des extensions</a></dt>
- <dd>Vous pouvez désormais créer des extensions qui peuvent être installées, désinstallées et mises à jour sans nécessiter le redémarrage du navigateur.</dd>
- <dt>Suppression des plugins par défaut</dt>
- <dd>The default plugin has been removed. The application plugins folder has also been removed by default, however support for installing plugins via this folder still exists. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=533891">bug 533891</a>.</dd>
- <dt>Extension Manager remplacé par Addon Manager</dt>
- <dd><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIExtensionManager">nsIExtensionManager</a></code> a été remplacée par <a href="/fr/docs/Addons/Add-on_Manager/AddonManager">AddonManager</a>.</dd>
- <dt>Child HWNDs n'est plus utilisé</dt>
- <dd>Firefox ne créé plus de child HWNDs pour son usage interne sous Windows. Si vous avez codé une extension qui utilise du code natif pour manipuler ces HWNDs, votre extensions ne fonctionnera pas dans Firefox 4. Soit vous devez arrêter l'utilisation de HWND ou soit mettre votre code reposant sur HWND dans un plugin <a href="/fr/docs/Gecko_Plugin_API_Reference">NPAPI</a>. C'est un gros travail, alors si vous pouviez éviter d'utiliser HWND directement.</dd>
- <dt>Changements dans les gestes</dt>
- <dd>Les gestes par défaut ont été changés, en faisant glisser trois doigts de haut en bas sur le trackpad cela ouvrira ou fermera Firefox Panorama. Pour modifier les éléments précédents, afin d'avoir les commandes de défilement haut et défilement bas, ouvrez about:config et mettez <code>cmd_scrollBottom</code> pour <code>browser.gesture.swipe.down</code> et <code>cmd_scrollTop</code> pour <code>browser.gesture.swipe.up</code>.</dd>
-</dl>
+## Voir également
 
-<h2 id="Voir_également">Voir également</h2>
-
-<ul>
-<li><a href="/fr/docs/Mozilla/Firefox/Versions/3.6">Firefox 3.6 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/3.5">Firefox 3.5 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/3">Firefox 3 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/2">Firefox 2 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/1.5">Firefox 1.5 pour les développeurs</a></li></ul>
+- [Firefox 3.6 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.6)
+- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.5)
+- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3)
+- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/2)
+- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/1.5)

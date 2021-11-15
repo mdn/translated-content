@@ -12,63 +12,57 @@ tags:
   - browsingData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Le type <strong><code>browsingData.DataTypeSet</code></strong>  décrit un ensemble de types de données.</p>
+Le type **`browsingData.DataTypeSet`**  décrit un ensemble de types de données.
 
-<p>Il contient un certains nombres de propriétés booléennes. Le nom de chaque propriété est le nom d'un type particulier de données de navigations : "Téléchargements", "historique" et ainsi de suite. Toutes les propriétés sont facultatives.</p>
+Il contient un certains nombres de propriétés booléennes. Le nom de chaque propriété est le nom d'un type particulier de données de navigations : "Téléchargements", "historique" et ainsi de suite. Toutes les propriétés sont facultatives.
 
-<p>Ce type est utilisé :</p>
+Ce type est utilisé :
 
-<ul>
- <li>dans {{WebExtAPIRef("browsingData.remove()")}} pour décrire les types  de données à supprimer</li>
- <li>dans {{WebExtAPIRef("browsingData.settings()")}} pour décrire les types de données actuellement sélectionnés dans la fonction  "effacer l'historique" du navigateur.</li>
-</ul>
+- dans {{WebExtAPIRef("browsingData.remove()")}} pour décrire les types  de données à supprimer
+- dans {{WebExtAPIRef("browsingData.settings()")}} pour décrire les types de données actuellement sélectionnés dans la fonction  "effacer l'historique" du navigateur.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>cache</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Le cache du navigateur</dd>
- <dt><code>cookies</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Cookies acquis en cours de la navigation.</dd>
- <dt><code>downloads</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. L'historique de téléchargement de l'utilisateur.</dd>
- <dt><code>fileSystems</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Les systèmes de fichiers du site Web.</dd>
- <dt><code>formData</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Données de formulaire enregistrées, pour la saisie semi-automatique.</dd>
- <dt><code>history</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. L'histoire de navigation de l'utilisateur.</dd>
- <dt><code>indexedDB</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Données IndexedDB.</dd>
- <dt><code>localStorage</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Données de stockage local.</dd>
- <dt><code>passwords</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Mots de pass enregistrés, pour la saisie semi-automatique.</dd>
- <dt><code>pluginData</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Données stockées associées aux plugins.</dd>
- <dt><code>serverBoundCertificates</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Certificats liés au serveur stockés.</dd>
- <dt><code>serviceWorkers</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Données mises en cache par les travailleurs du service.</dd>
-</dl>
+- `cache` {{optional_inline}}
+  - : `boolean`. Le cache du navigateur
+- `cookies` {{optional_inline}}
+  - : `boolean`. Cookies acquis en cours de la navigation.
+- `downloads` {{optional_inline}}
+  - : `boolean`. L'historique de téléchargement de l'utilisateur.
+- `fileSystems` {{optional_inline}}
+  - : `boolean`. Les systèmes de fichiers du site Web.
+- `formData` {{optional_inline}}
+  - : `boolean`. Données de formulaire enregistrées, pour la saisie semi-automatique.
+- `history` {{optional_inline}}
+  - : `boolean`. L'histoire de navigation de l'utilisateur.
+- `indexedDB` {{optional_inline}}
+  - : `boolean`. Données IndexedDB.
+- `localStorage` {{optional_inline}}
+  - : `boolean`. Données de stockage local.
+- `passwords` {{optional_inline}}
+  - : `boolean`. Mots de pass enregistrés, pour la saisie semi-automatique.
+- `pluginData` {{optional_inline}}
+  - : `boolean`. Données stockées associées aux plugins.
+- `serverBoundCertificates` {{optional_inline}}
+  - : `boolean`. Certificats liés au serveur stockés.
+- `serviceWorkers` {{optional_inline}}
+  - : `boolean`. Données mises en cache par les travailleurs du service.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browsingData.DataTypeSet")}}</p>
+{{Compat("webextensions.api.browsingData.DataTypeSet")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,5 +89,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

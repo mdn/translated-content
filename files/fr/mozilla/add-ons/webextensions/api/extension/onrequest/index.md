@@ -12,79 +12,67 @@ tags:
   - onRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Ceci n'est pas implémenté dans Firefox car il est obsolète depuis Chrome 33. Veuillez utiliser <a href="/fr/Add-ons/WebExtensions/API/runtime/onMessageExternal">runtime.onMessageExternal</a> à la place.</p>
-</div>
+> **Attention :** Ceci n'est pas implémenté dans Firefox car il est obsolète depuis Chrome 33. Veuillez utiliser [runtime.onMessageExternal](/fr/Add-ons/WebExtensions/API/runtime/onMessageExternal) à la place.
 
-<p>Lancé lorsqu'une requête est envoyée par un processus d'extension ou un script de contenu.</p>
+Lancé lorsqu'une requête est envoyée par un processus d'extension ou un script de contenu.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">chrome.extension.onRequest.addListener(function(
+```js
+chrome.extension.onRequest.addListener(function(
   request,         // optional any
   sender,          // runtime.MessageSender
   function() {...} // function
 ) {...})
 chrome.extension.onRequest.removeListener(listener)
 chrome.extension.onRequest.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
+## Syntaxe addListener
 
+### Paramètres
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+- `callback`
 
-<h3 id="Paramètres">Paramètres</h3>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+    - `request`
+      - : `any`. La requête envoyée par le script appelant.
 
- <dl>
-  <dt><code>request</code></dt>
-  <dd><code>any</code>. La requête envoyée par le script appelant.</dd>
- </dl>
+    <!---->
 
- <dl>
-  <dt><code>sender</code></dt>
-  <dd>{{WebExtAPIRef('runtime.MessageSender')}}.</dd>
- </dl>
+    - `sender`
+      - : {{WebExtAPIRef('runtime.MessageSender')}}.
 
- <dl>
-  <dt><code>sendResponse</code></dt>
-  <dd><code>function</code>. Fonction à appeler (au plus une fois) lorsque vous avez une réponse. L'argument doit être n'importe quel objet JSON-ifiable, ou undefined s'il n'y a pas de réponse. Si vous avez plus d'un écouteur <code>onRequest</code> dans le même document, un seul peut envoyer une réponse.</dd>
- </dl>
- </dd>
-</dl>
+    <!---->
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `sendResponse`
+      - : `function`. Fonction à appeler (au plus une fois) lorsque vous avez une réponse. L'argument doit être n'importe quel objet JSON-ifiable, ou undefined s'il n'y a pas de réponse. Si vous avez plus d'un écouteur `onRequest` dans le même document, un seul peut envoyer une réponse.
 
-<p>{{Compat("webextensions.api.extension.onRequest")}}</p>
+## Compatibilité du navigateur
 
-<p>{{WebExtExamples}}</p>
+{{Compat("webextensions.api.extension.onRequest")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+{{WebExtExamples}}
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/extension"><code>chrome.extension</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> dans le code Chromium.</p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,5 +99,4 @@ chrome.extension.onRequest.hasListener(listener)
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,51 +13,52 @@ tags:
   - i18n
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient la chaîne localisée pour le message spécifié.</p>
+Obtient la chaîne localisée pour le message spécifié.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.i18n.getMessage(
+```js
+browser.i18n.getMessage(
   messageName,  // string
   substitutions // optional any
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>messageName</code></dt>
- <dd><p><code>string</code>. Le nom du message, tel que spécifié dans le fichier messages.json. Si le message ne peut pas être trouvé dans messages.json :</p>
- <ul>
-  <li>Firefox renvoie "" et enregistre une erreur.</li>
-  <li>Chrome renvoie "" et n'enregistre pas d'erreur.</li>
- </ul>
- </dd>
- <dt><code>substitutions</code>{{optional_inline}}</dt>
- <dd><code>string</code> ou <code>array</code> de <code>string</code>. Une chaîne de substitution unique ou un tableau de chaînes de substitution. Dans Chrome, si vous fournissez plus de 9 chaînes de substitution, <code>getMessage()</code> renvoie <code>undefined</code>.</dd>
-</dl>
+- `messageName`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `string`. Le nom du message, tel que spécifié dans le fichier messages.json. Si le message ne peut pas être trouvé dans messages.json :
 
-<p><code>string</code>. Message localisé pour les paramètres régionaux en cours.</p>
+    - Firefox renvoie "" et enregistre une erreur.
+    - Chrome renvoie "" et n'enregistre pas d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- `substitutions`{{optional_inline}}
+  - : `string` ou `array` de `string`. Une chaîne de substitution unique ou un tableau de chaînes de substitution. Dans Chrome, si vous fournissez plus de 9 chaînes de substitution, `getMessage()` renvoie `undefined`.
 
-<p>{{Compat("webextensions.api.i18n.getMessage")}}</p>
+### Valeur retournée
 
-<h2 id="Exemples">Exemples</h2>
+`string`. Message localisé pour les paramètres régionaux en cours.
 
-<p>Obtenez la chaîne localisée pour <code>"messageContent"</code>, avec <code>target.url</code> substitué :</p>
+## Compatibilité du navigateur
 
-<pre class="brush: js">var message = browser.i18n.getMessage("messageContent", target.url);
+{{Compat("webextensions.api.i18n.getMessage")}}
+
+## Exemples
+
+Obtenez la chaîne localisée pour `"messageContent"`, avec `target.url` substitué :
+
+```js
+var message = browser.i18n.getMessage("messageContent", target.url);
 console.log(message);
-</pre>
+```
 
-<p>Cela fonctionnerait avec un fichier _locales/en/messages.json contenant :</p>
+Cela fonctionnerait avec un fichier \_locales/en/messages.json contenant :
 
-<pre class="brush: json">{
+```json
+{
   "messageContent": {
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
@@ -68,23 +69,22 @@ console.log(message);
       }
     }
   }
-}</pre>
+}
+```
 
-<p>Si <code>target.url</code> est "https://developer.mozilla.org", alors la valeur de message, dans la locale "en", serait :</p>
+Si `target.url` est "https\://developer.mozilla.org", alors la valeur de message, dans la locale "en", serait :
 
-<pre>"You clicked https://developer.mozilla.org."</pre>
+    "You clicked https://developer.mozilla.org."
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.i18n`](https://developer.chrome.com/extensions/i18n). Cette documentation est dérivée de [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/i18n"><code>chrome.i18n</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,5 +111,4 @@ console.log(message);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

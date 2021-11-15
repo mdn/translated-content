@@ -13,44 +13,40 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet contenant des informations sur l'expéditeur d'un message ou d'une demande de connexion ; ceci est passé à l'écouteur {{WebExtAPIRef("runtime.onMessage()")}}.</p>
+Un objet contenant des informations sur l'expéditeur d'un message ou d'une demande de connexion ; ceci est passé à l'écouteur {{WebExtAPIRef("runtime.onMessage()")}}.
 
-<p>C'est aussi une propriété de {{WebExtAPIRef("runtime.Port")}}, mais seulement dans l'instance de <code>Port</code> passée dans les écouteurs {{WebExtAPIRef("runtime.onConnect()")}} ou {{WebExtAPIRef("runtime.onConnectExternal()")}}.</p>
+C'est aussi une propriété de {{WebExtAPIRef("runtime.Port")}}, mais seulement dans l'instance de `Port` passée dans les écouteurs {{WebExtAPIRef("runtime.onConnect()")}} ou {{WebExtAPIRef("runtime.onConnectExternal()")}}.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>tab</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('tabs.Tab')}}. Le {{WebExtAPIRef('tabs.Tab')}} qui a ouvert la connexion. Cette propriété ne sera présente que lorsque la connexion a été ouverte à partir d'un onglet (y compris les scripts de contenu).</dd>
- <dt><code>frameId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. Le cadre qui a ouvert la connexion. Zéro pour les cadres de haut niveau, positif pour les cadres enfants.  Cela ne sera défini que lorsque l'<code>onglet</code> est défini.</dd>
- <dt><code>id</code>{{optional_inline}}</dt>
- <dd><code>string</code>. L'ID de l'extension qui a envoyé le message, si le message a été envoyé par une extension. Si l'expéditeur définit explicitement un ID à l'aide de la clé des <a href="/fr/Add-ons/WebExtensions/manifest.json/applications">applications</a> dans manifest.json, then <code>id</code>  aura cette valeur. Sinon, il aura l'ID qui a été généré pour l'expéditeur. Notez que dans Firefox, avant la version 54, cette valeur était l'ID interne de l'extension (c'est-à-dire l'<a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a> qui apparaît dans l'URL de l'extension).</dd>
- <dt><code>url</code>{{optional_inline}}</dt>
- <dd><code>string</code>. L'URL de la page ou du cadre hébergeant le script qui a envoyé le message. Si l'expéditeur est un script s'exécutant dans une page d'extension (telle qu'une  <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">page d'arrière-plan</a>, une <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages">page d'options</a>, ou une <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">action de navigateur</a> ou une <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Page_actions">action contextuelle</a>), l'URL sera au format <code>"moz-extension://&lt;extension-internal-id&gt;/path/to/page.html"</code>. Si l'expéditeur est un script d'arrière-plan et que vous n'avez pas inclus une page d'arrière-plan, ce sera <code>"moz-extension://&lt;extension-internal-id&gt;/_generated_background_page.html"</code>. Si l'expéditeur est un script s'exécutant sur une page Web (y compris les scripts de contenu et les scripts de page normaux), alors l'<code>url</code> sera l'URL de la page web. Si le script s'exécute dans un iframe, <code>url</code> sera l'URL de l'iframe.</dd>
- <dt><code>tlsChannelId</code>{{optional_inline}}</dt>
- <dd><code>string</code>. L'ID de canal TLS de la page ou du cadre qui a ouvert la connexion, si demandé par l'extension, et si disponible.</dd>
-</dl>
+- `tab`{{optional_inline}}
+  - : {{WebExtAPIRef('tabs.Tab')}}. Le {{WebExtAPIRef('tabs.Tab')}} qui a ouvert la connexion. Cette propriété ne sera présente que lorsque la connexion a été ouverte à partir d'un onglet (y compris les scripts de contenu).
+- `frameId`{{optional_inline}}
+  - : `integer`. Le cadre qui a ouvert la connexion. Zéro pour les cadres de haut niveau, positif pour les cadres enfants.  Cela ne sera défini que lorsque l'`onglet` est défini.
+- `id`{{optional_inline}}
+  - : `string`. L'ID de l'extension qui a envoyé le message, si le message a été envoyé par une extension. Si l'expéditeur définit explicitement un ID à l'aide de la clé des [applications](/fr/Add-ons/WebExtensions/manifest.json/applications) dans manifest.json, then `id`  aura cette valeur. Sinon, il aura l'ID qui a été généré pour l'expéditeur. Notez que dans Firefox, avant la version 54, cette valeur était l'ID interne de l'extension (c'est-à-dire l'[UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) qui apparaît dans l'URL de l'extension).
+- `url`{{optional_inline}}
+  - : `string`. L'URL de la page ou du cadre hébergeant le script qui a envoyé le message. Si l'expéditeur est un script s'exécutant dans une page d'extension (telle qu'une  [page d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts), une [page d'options](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages), ou une [action de navigateur](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2) ou une [action contextuelle](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Page_actions)), l'URL sera au format `"moz-extension://<extension-internal-id>/path/to/page.html"`. Si l'expéditeur est un script d'arrière-plan et que vous n'avez pas inclus une page d'arrière-plan, ce sera `"moz-extension://<extension-internal-id>/_generated_background_page.html"`. Si l'expéditeur est un script s'exécutant sur une page Web (y compris les scripts de contenu et les scripts de page normaux), alors l'`url` sera l'URL de la page web. Si le script s'exécute dans un iframe, `url` sera l'URL de l'iframe.
+- `tlsChannelId`{{optional_inline}}
+  - : `string`. L'ID de canal TLS de la page ou du cadre qui a ouvert la connexion, si demandé par l'extension, et si disponible.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.runtime.MessageSender")}}</p>
+{{Compat("webextensions.api.runtime.MessageSender")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -77,5 +73,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

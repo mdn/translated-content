@@ -13,42 +13,38 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet décrivant les filtres à appliquer aux événements webRequest.</p>
+Un objet décrivant les filtres à appliquer aux événements webRequest.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>urls</code></dt>
- <dd><code>array</code> de <code><code>string</code></code>. Un tableau de <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">motifs (Match patterns)</a>. L'auditeur ne sera appelé que pour les demandes dont les cibles correspondent à l'un des modèles donnés. Seules les requêtes faites en utilisant HTTP ou HTTPS déclencheront des événements, même si les modèles de correspondance peuvent correspondre à d'autres protocoles.</dd>
- <dt><code>types</code>{{optional_inline}}</dt>
- <dd><code>array</code> de <code>{{WebExtAPIRef('webRequest.ResourceType')}}</code>. Une liste des types de ressources (par exemple, feuilles de style, images, scripts). L'auditeur ne sera appelé que pour les demandes de ressources qui sont de l'un des types donnés.</dd>
- <dt><code>tabId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. L'auditeur ne sera appelé que pour les requêtes provenant du {{WebExtAPIRef("tabs.Tab", "tab")}} identifié par cet ID.</dd>
- <dt><code>windowId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. L'auditeur ne sera appelé que pour les requêtes provenant du  {{WebExtAPIRef("windows.Window", "window")}} identifié par cet ID.</dd>
- <dt>incognito {{optional_inline}}</dt>
- <dd><code>boolean</code>. Si elles sont fournies, les demandes qui ne correspondent pas à l'état incognito (<code>true</code> ou <code>false</code>) seront filtrées.</dd>
-</dl>
+- `urls`
+  - : `array` de `string`. Un tableau de [motifs (Match patterns)](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). L'auditeur ne sera appelé que pour les demandes dont les cibles correspondent à l'un des modèles donnés. Seules les requêtes faites en utilisant HTTP ou HTTPS déclencheront des événements, même si les modèles de correspondance peuvent correspondre à d'autres protocoles.
+- `types`{{optional_inline}}
+  - : `array` de `{{WebExtAPIRef('webRequest.ResourceType')}}`. Une liste des types de ressources (par exemple, feuilles de style, images, scripts). L'auditeur ne sera appelé que pour les demandes de ressources qui sont de l'un des types donnés.
+- `tabId`{{optional_inline}}
+  - : `integer`. L'auditeur ne sera appelé que pour les requêtes provenant du {{WebExtAPIRef("tabs.Tab", "tab")}} identifié par cet ID.
+- `windowId`{{optional_inline}}
+  - : `integer`. L'auditeur ne sera appelé que pour les requêtes provenant du  {{WebExtAPIRef("windows.Window", "window")}} identifié par cet ID.
+- incognito {{optional_inline}}
+  - : `boolean`. Si elles sont fournies, les demandes qui ne correspondent pas à l'état incognito (`true` ou `false`) seront filtrées.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.webRequest.RequestFilter")}}</p>
+{{Compat("webextensions.api.webRequest.RequestFilter")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -75,5 +71,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

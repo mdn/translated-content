@@ -9,49 +9,46 @@ tags:
   - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<div class="note">
-<p><strong>Note :</strong> Cet article décrit manifest.json pour les extensions web. Si vous cherchez des informations sur le manifeste.json dans les PWAs, consultez l'article <a href="/fr/docs/Web/Manifest">Web App Manifest</a>.</p>
-</div>
+> **Note :** Cet article décrit manifest.json pour les extensions web. Si vous cherchez des informations sur le manifeste.json dans les PWAs, consultez l'article [Web App Manifest](/fr/docs/Web/Manifest).
 
-<p>Le fichier <code>manifest.json</code> est le seul fichier que chaque extension utilisant les API WebExtension doit contenir.</p>
+Le fichier `manifest.json` est le seul fichier que chaque extension utilisant les API WebExtension doit contenir.
 
-<p>En utilisant <code>manifest.json</code>, vous spécifiez les métadonnées basiques de votre extension comme son nom et sa version, et des fonctionnalités de votre extension comme les scripts en arrière-plan (les scripts de contenu et les actions du navigateur).</p>
+En utilisant `manifest.json`, vous spécifiez les métadonnées basiques de votre extension comme son nom et sa version, et des fonctionnalités de votre extension comme les scripts en arrière-plan (les scripts de contenu et les actions du navigateur).
 
-<p>C'est un fichier au format <a href="/fr/docs/Glossaire/JSON">JSON</a> à une exception près : il peut contenir des commentaires de type "<code>//</code>".</p>
+C'est un fichier au format [JSON](/fr/docs/Glossaire/JSON) à une exception près : il peut contenir des commentaires de type "`//`".
 
-<h2 id="List_of_manifest.json_keys">List of manifest.json keys</h2>
+## List of manifest.json keys
 
-<p>Les clés <code>manifest.json</code> sont listées ci-dessous:</p>
+Les clés `manifest.json` sont listées ci-dessous:
 
-<div>{{ListSubpages("/en-US/Add-ons/WebExtensions/manifest.json")}}</div>
+{{ListSubpages("/en-US/Add-ons/WebExtensions/manifest.json")}}
 
-<h3 id="Notes_about_manifest.json_keys">Notes about manifest.json keys</h3>
+### Notes about manifest.json keys
 
-<ul>
- <li><code>"manifest_version"</code>, <code>"version"</code>, and <code>"name"</code> sont les seules clés obligatoires.</li>
- <li><code>"default_locale"</code> doit être présent si le répertoire "<code>_locales</code>" est présent et sinon doit être absent.</li>
- <li><code>"browser_specific_settings"</code> n'est pas prise en charge dans Google Chrome</li>
-</ul>
+- `"manifest_version"`, `"version"`, and `"name"` sont les seules clés obligatoires.
+- `"default_locale"` doit être présent si le répertoire "`_locales`" est présent et sinon doit être absent.
+- `"browser_specific_settings"` n'est pas prise en charge dans Google Chrome
 
-<h3 id="Accessing_manifest.json_keys_at_runtime">Accessing manifest.json keys at runtime</h3>
+### Accessing manifest.json keys at runtime
 
-<p>Vous pouvez accéder au manifest de votre extension depuis le JavaScript de l'extension en utilisant la fonction {{WebExtAPIRef("runtime.getManifest()")}} :</p>
+Vous pouvez accéder au manifest de votre extension depuis le JavaScript de l'extension en utilisant la fonction {{WebExtAPIRef("runtime.getManifest()")}} :
 
-<pre class="brush: js;">browser.runtime.getManifest().version;</pre>
+```js
+browser.runtime.getManifest().version;
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Le bloc ci-dessous contient la syntaxe de base de certaines clés communes du manifest</p>
+Le bloc ci-dessous contient la syntaxe de base de certaines clés communes du manifest
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Il ne s'agit pas d'un exemple à copier-coller. Le choix des clés dont vous aurez besoin dépend de l'extension que vous développez.</p>
-</div>
+> **Note :** Il ne s'agit pas d'un exemple à copier-coller. Le choix des clés dont vous aurez besoin dépend de l'extension que vous développez.
 
-<p>Pour des exemples complets d'extensions, voir <a href="/fr/Add-ons/WebExtensions/Examples">Exemple d'extensions</a>.</p>
+Pour des exemples complets d'extensions, voir [Exemple d'extensions](/fr/Add-ons/WebExtensions/Examples).
 
-<pre class="brush: json;">{
+```json
+{
   "browser_specific_settings": {
     "gecko": {
       "id": "addon@example.com",
@@ -123,16 +120,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
   },
 
   "web_accessible_resources": ["images/my-image.png"]
-}</pre>
+}
+```
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>Pour un aperçu complet de toutes les clés de manifeste et de leurs sous-clés, <a href="/fr/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">voir le tableau complet de compatibilité du navigateur manifest.json</a>.</p>
+Pour un aperçu complet de toutes les clés de manifeste et de leurs sous-clés, [voir le tableau complet de compatibilité du navigateur manifest.json](/fr/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
 
+{{Compat("webextensions.manifest")}}
 
+## Voir aussi
 
-<p>{{Compat("webextensions.manifest")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<p>{{WebExtAPIRef("permissions")}} JavaScript API</p>
+{{WebExtAPIRef("permissions")}} JavaScript API

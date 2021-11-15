@@ -13,55 +13,46 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Ceci est une chaîne et représente le type de notification à créer. Il existe quatre types de notification : "basic", "image", "list", "progress".</p>
+Ceci est une chaîne et représente le type de notification à créer. Il existe quatre types de notification : "basic", "image", "list", "progress".
 
-<p>Ceci est passé dans {{WebExtAPIRef("notifications.create()")}} et {{WebExtAPIRef("notifications.update()")}} comme propriété de <code>type</code> {{WebExtAPIRef("notifications.NotificationOptions", "NotificationOptions")}}.</p>
+Ceci est passé dans {{WebExtAPIRef("notifications.create()")}} et {{WebExtAPIRef("notifications.update()")}} comme propriété de `type` {{WebExtAPIRef("notifications.NotificationOptions", "NotificationOptions")}}.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :</p>
+Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
-<ul>
- <li><code>"basic"</code>: la notification comprend :
+- `"basic"`: la notification comprend :
 
-  <ul>
-   <li>un titre (<code><a href="/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#title">NotificationOptions.title</a></code>)</li>
-   <li>un message (<code><a href="/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#message">NotificationOptions.message</a></code>)</li>
-   <li>une icône (<code><a href="/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#iconUrl">NotificationOptions.iconUrl</a></code>){{optional_inline}}</li>
-   <li>un message supplémentaire (<code><a href="/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#contextMessage">NotificationOptions.contextMessage</a></code>){{optional_inline}}</li>
-   <li>jusqu'à deux boutons (<code><a href="/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#buttons">NotificationOptions.buttons</a></code>){{optional_inline}}</li>
-  </ul>
- </li>
- <li><code>"image"</code>: tout dans <code>"basic"</code> et aussi :
-  <ul>
-   <li>Une image (<code><a href="/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#imageUrl">NotificationOptions.imageUrl</a></code>)</li>
-  </ul>
- </li>
- <li><code>"list"</code>: tout dans <code>"basic"</code> et aussi :
-  <ul>
-   <li>Une liste d'éléments (<code><a href="/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#items">NotificationOptions.items</a></code>)</li>
-  </ul>
- </li>
- <li><code>"progress"</code>: tout en <code>"basic"</code> et aussi :
-  <ul>
-   <li>Un indicator de progression (<code><a href="/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#progress">NotificationOptions.progress</a></code>)</li>
-  </ul>
- </li>
-</ul>
+  - un titre ([`NotificationOptions.title`](/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#title))
+  - un message ([`NotificationOptions.message`](/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#message))
+  - une icône ([`NotificationOptions.iconUrl`](/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#iconUrl)){{optional_inline}}
+  - un message supplémentaire ([`NotificationOptions.contextMessage`](/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#contextMessage)){{optional_inline}}
+  - jusqu'à deux boutons ([`NotificationOptions.buttons`](/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#buttons)){{optional_inline}}
 
-<p>Actuellement Firefox ne supporte que "basic" ici.</p>
+- `"image"`: tout dans `"basic"` et aussi :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+  - Une image ([`NotificationOptions.imageUrl`](/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#imageUrl))
 
-<p>{{Compat("webextensions.api.notifications.TemplateType")}}</p>
+- `"list"`: tout dans `"basic"` et aussi :
 
-<p>{{WebExtExamples}}</p>
+  - Une liste d'éléments ([`NotificationOptions.items`](/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#items))
 
-<div class="note"><p><strong>Note :</strong></p>
+- `"progress"`: tout en `"basic"` et aussi :
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a>.</p>
+  - Un indicator de progression ([`NotificationOptions.progress`](/fr/Add-ons/WebExtensions/API/notifications/NotificationOptions#progress))
 
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+Actuellement Firefox ne supporte que "basic" ici.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.notifications.TemplateType")}}
+
+{{WebExtExamples}}
+
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

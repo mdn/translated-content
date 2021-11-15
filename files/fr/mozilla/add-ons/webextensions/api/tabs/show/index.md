@@ -12,35 +12,35 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/show
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Affiche un ou plusieurs onglets précédemment masqués par un appel à {{WebExtAPIRef("tabs.hide")}}.</p>
+Affiche un ou plusieurs onglets précédemment masqués par un appel à {{WebExtAPIRef("tabs.hide")}}.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var showing = browser.tabs.show(
+```js
+var showing = browser.tabs.show(
   tabIds          // integer or integer array
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabIds</code></dt>
- <dd><code><code>integer</code></code> or <code><code>array</code></code> of <code><code>integer</code></code>. Les ID de l'onglet ou des onglets à afficher.</dd>
-</dl>
+- `tabIds`
+  - : `integer` or `array` of `integer`. Les ID de l'onglet ou des onglets à afficher.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera accomplie sans arguments. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera accomplie sans arguments. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Afficher un seul onglet :</p>
+Afficher un seul onglet :
 
-<pre class="brush: js">function onShown() {
+```js
+function onShown() {
   console.log(`Shown`);
 }
 
@@ -48,11 +48,13 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.tabs.show(2).then(onShown, onError);</pre>
+browser.tabs.show(2).then(onShown, onError);
+```
 
-<p>Afficher plusieurs onglets :</p>
+Afficher plusieurs onglets :
 
-<pre class="brush: js">function onShown() {
+```js
+function onShown() {
   console.log(`Shown`);
 }
 
@@ -60,10 +62,11 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.tabs.show([15, 14, 1]).then(onShown, onError);</pre>
+browser.tabs.show([15, 14, 1]).then(onShown, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.show")}}</p>
+{{Compat("webextensions.api.tabs.show")}}

@@ -12,44 +12,44 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Récupère une valeur précédemment stockée par un appel à  {{WebExtAPIRef("sessions.setTabValue")}}.</p>
+Récupère une valeur précédemment stockée par un appel à  {{WebExtAPIRef("sessions.setTabValue")}}.
 
-<p>Vous pouvez récupérer une valeur d'un onglet même au cours d'un cycle de fermeture / restauration: si vous définissez une valeur, l'utilisateur ferme l'onglet, puis restaure l'onglet à l'aide de la fonction "restaurer l'onglet" du navigateur (par exemple, en appuyant sur Control+Shift+T), then you will be able to retrieve the value from the restored tab. vous pourrez alors récupérer la valeur de l'onglet restauré. Notez cependant qu'un onglet restauré n'obtient pas le même ID que l'original, donc l'ID que vous passez dans <code>getTabValue()</code> sera différent de l'ID que vous avez passé dans <code>setTabValue()</code>, même s'ils font tous deux référence au même onglet.</p>
+Vous pouvez récupérer une valeur d'un onglet même au cours d'un cycle de fermeture / restauration: si vous définissez une valeur, l'utilisateur ferme l'onglet, puis restaure l'onglet à l'aide de la fonction "restaurer l'onglet" du navigateur (par exemple, en appuyant sur Control+Shift+T), then you will be able to retrieve the value from the restored tab. vous pourrez alors récupérer la valeur de l'onglet restauré. Notez cependant qu'un onglet restauré n'obtient pas le même ID que l'original, donc l'ID que vous passez dans `getTabValue()` sera différent de l'ID que vous avez passé dans `setTabValue()`, même s'ils font tous deux référence au même onglet.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var retrieving = browser.sessions.getTabValue(
+```js
+var retrieving = browser.sessions.getTabValue(
   tabId,    // integer
   key       // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. ID de l'onglet dont vous essayez de récupérer les données.</dd>
- <dt><code>key</code></dt>
- <dd><code>string</code>. Clé identifiant la valeur particulière à récupérer. Cela doit correspondre à la clé précédemment donnée dans {{WebExtAPIRef("sessions.setTabValue")}}.</dd>
-</dl>
+- `tabId`
+  - : `integer`. ID de l'onglet dont vous essayez de récupérer les données.
+- `key`
+  - : `string`. Clé identifiant la valeur particulière à récupérer. Cela doit correspondre à la clé précédemment donnée dans {{WebExtAPIRef("sessions.setTabValue")}}.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera résolue avec la valeur si elle existe, ou <code>undefined</code>.  Si elle n'existe pas. Si l'appel a échoué (par exemple, parce que l'ID de l'onglet n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera résolue avec la valeur si elle existe, ou `undefined`.  Si elle n'existe pas. Si l'appel a échoué (par exemple, parce que l'ID de l'onglet n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.sessions.getTabValue", 10)}}</p>
+{{Compat("webextensions.api.sessions.getTabValue", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Consignez la valeur de "my-key" pour tous les nouveaux onglets créés (cela inclura tous les onglets qui ont été restaurés) :</p>
+Consignez la valeur de "my-key" pour tous les nouveaux onglets créés (cela inclura tous les onglets qui ont été restaurés) :
 
-<pre class="brush: js">function onGetResolved(r) {
+```js
+function onGetResolved(r) {
   console.log(`success: ${r}`);
 }
 
@@ -57,8 +57,9 @@ function onGetRejected(e) {
   console.log(`error: ${e}`);
 }
 
-browser.tabs.onCreated.addListener((tab) =&gt; {
+browser.tabs.onCreated.addListener((tab) => {
   browser.sessions.getTabValue(tab.id, "my-key").then(onGetResolved, onGetRejected);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

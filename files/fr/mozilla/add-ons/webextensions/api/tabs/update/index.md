@@ -13,79 +13,83 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/update
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Parcourez l'onglet vers une nouvelle URL ou modifiez d'autres propriétés de l'onglet.</p>
+Parcourez l'onglet vers une nouvelle URL ou modifiez d'autres propriétés de l'onglet.
 
-<p>Pour utiliser cette fonction, transmettez l'ID de l'onglet à mettre à jour et un objet <code>updateProperties</code> contenant les propriétés que vous souhaitez mettre à jour. Les propriétés qui ne sont pas spécifiées dans  <code>updateProperties</code> ne sont pas modifiées.</p>
+Pour utiliser cette fonction, transmettez l'ID de l'onglet à mettre à jour et un objet `updateProperties` contenant les propriétés que vous souhaitez mettre à jour. Les propriétés qui ne sont pas spécifiées dans  `updateProperties` ne sont pas modifiées.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var updating = browser.tabs.update(
+```js
+var updating = browser.tabs.update(
   tabId,              // optional integer
   updateProperties    // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. Par défaut à l'onglet sélectionné de la fenêtre en cours.</dd>
- <dt><code>updateProperties</code></dt>
- <dd><p><code>object</code>. L'ensemble des propriétés à mettre à jour pour cet onglet. Pour en savoir plus sur ces propriétés, consultez la documentation  {{WebExtAPIRef("tabs.Tab")}}.</p>
- <dl>
-  <dt><code>active</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si l'onglet doit devenir actif. Ne modifie pas le focus de la fenêtre (voir {{WebExtAPIRef('windows.update')}}). Si <code>true</code>, les onglets surlignés non actifs cesseront d'être surlignés. Si <code>false</code>, ne fait rien.</dd>
-  <dt><code>autoDiscardable</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si l'onglet doit être supprimé automatiquement par le navigateur lorsque les ressources sont faibles.</dd>
-  <dt><code>highlighted</code>{{optional_inline}}</dt>
-  <dd><p><code>boolean</code>. Ajoute ou supprime l'onglet de la sélection courante. Si <code>true</code> et que l'onglet n'est pas surligné, il deviendra actif par défaut.</p>
-  <p>Si vous voulez seulement mettre en surbrillance l'onglet sans l'activer, Firefox accepte le réglage <code>highlighted</code> à <code>true</code> et <code>active</code> à <code>false</code>. D'autres navigateurs peuvent activer l'onglet même dans ce cas.</p>
-  </dd>
-  <dt><code>loadReplace</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code>boolean</code>. Si la nouvelle URL doit remplacer l'ancienne URL dans l'historique de navigation de l'onglet, accessible via le bouton "Retour".</p>
+- `tabId`{{optional_inline}}
+  - : `integer`. Par défaut à l'onglet sélectionné de la fenêtre en cours.
+- `updateProperties`
 
-  <p>Par exemple, supposons que l'utilisateur crée un nouvel onglet en utilisant Ctrl + T. Par défaut, dans Firefox, cela chargerait "about:newtab". Si votre extension met alors à jour cette page en utilisant {{WebExtAPIRef("tabs.update")}}, sans <code>loadReplace</code>, le bouton "retour" sera activé et ramènera l'utilisateur à "about:newtab". Si l'extension définit <code>loadReplace</code>, le bouton "retour" sera désactivé et ce sera comme si l'URL fournie par l'extension était la première page visitée dans cet onglet.</p>
+  - : `object`. L'ensemble des propriétés à mettre à jour pour cet onglet. Pour en savoir plus sur ces propriétés, consultez la documentation  {{WebExtAPIRef("tabs.Tab")}}.
 
-  <p>Notez cependant que l'URL d'origine apparaîtra toujours dans l'historique global du navigateur.</p>
-  </dd>
-  <dt><code>muted</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si l'onglet doit être coupé.</dd>
-  <dt><code>openerTabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. L'ID de l'onglet qui a ouvert cet onglet. Si spécifié, l'onglet d'ouverture doit être dans la même fenêtre que cet onglet.</dd>
-  <dt><code>pinned</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si l'onglet doit être épinglé.</dd>
-  <dt><code>selected</code> {{deprecated_inline}} {{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si l'onglet doit être sélectionné. Cette propriété a été remplacée par <code>active</code> et <code>highlighted</code>.</dd>
-  <dt><code>successorTabId</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. L'identifiant de l'ID du successeur de l'onglet.</dd>
-  <dt><code>url</code>{{optional_inline}}</dt>
-  <dd><p><code>string</code>. Une URL pour naviguer dans l'onglet.</p><p>Pour des raisons de sécurité, dans Firefox, il se peut que ce ne soit pas une URL privilégiée. Le passage de l'une des URL suivantes échouera, avec {{WebExtAPIRef("runtime.lastError")}} étant défini sur un message d'erreur :</p>
-  <ul>
-   <li>chrome: URLs</li>
-   <li>javascript: URLs</li>
-   <li>data: URLs</li>
-   <li>file: URLs (c'est-à-dire, fichiers sur le système de fichiers, cependant, pour utiliser un fichier empaqueté à l'intérieur de l'extension, voir ci-dessous)</li>
-   <li>confidentiel : URLs (par exemle, <code>about:config</code>, <code>about:addons</code>, <code>about:debugging</code>, <code>about:newtab</code>). Les URL non privilégiées (par exemple, <code>about:blank</code>) sont autorisées.</li>
-  </ul>
-  <p>Pour charger une page fournie avec votre extension, spécifiez une URL absolue à partir du fichier manifest.json de l'extension. Par exemple : '/path/to/my-page.html'. Si vous omettez le premier caractère '/', l'URL est traitée comme une URL relative et différents navigateurs peuvent construire différentes URL absolues.</p></dd>
- </dl>
- </dd>
-</dl>
+    - `active`{{optional_inline}}
+      - : `boolean`. Si l'onglet doit devenir actif. Ne modifie pas le focus de la fenêtre (voir {{WebExtAPIRef('windows.update')}}). Si `true`, les onglets surlignés non actifs cesseront d'être surlignés. Si `false`, ne fait rien.
+    - `autoDiscardable`{{optional_inline}}
+      - : `boolean`. Si l'onglet doit être supprimé automatiquement par le navigateur lorsque les ressources sont faibles.
+    - `highlighted`{{optional_inline}}
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+      - : `boolean`. Ajoute ou supprime l'onglet de la sélection courante. Si `true` et que l'onglet n'est pas surligné, il deviendra actif par défaut.
 
-<p>A <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet {{WebExtAPIRef('tabs.Tab')}} contenant des détails sur l'onglet mis à jour. L'objet {{WebExtAPIRef('tabs.Tab')}} ne contient pas d' <code>url</code>, <code>title</code> et <code>favIconUrl</code> sauf si la permission <code>"tabs"</code> a été demandée. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+        Si vous voulez seulement mettre en surbrillance l'onglet sans l'activer, Firefox accepte le réglage `highlighted` à `true` et `active` à `false`. D'autres navigateurs peuvent activer l'onglet même dans ce cas.
 
-<h2 id="Exemples">Exemples</h2>
+    - `loadReplace`{{optional_inline}}
 
-<p>Naviguez dans l'onglet actif de la fenêtre en cours pour https://developer.mozilla.org :</p>
+      - : `boolean`. Si la nouvelle URL doit remplacer l'ancienne URL dans l'historique de navigation de l'onglet, accessible via le bouton "Retour".
 
-<pre class="brush: js">function onUpdated(tab) {
+        Par exemple, supposons que l'utilisateur crée un nouvel onglet en utilisant Ctrl + T. Par défaut, dans Firefox, cela chargerait "about:newtab". Si votre extension met alors à jour cette page en utilisant {{WebExtAPIRef("tabs.update")}}, sans `loadReplace`, le bouton "retour" sera activé et ramènera l'utilisateur à "about:newtab". Si l'extension définit `loadReplace`, le bouton "retour" sera désactivé et ce sera comme si l'URL fournie par l'extension était la première page visitée dans cet onglet.
+
+        Notez cependant que l'URL d'origine apparaîtra toujours dans l'historique global du navigateur.
+
+    - `muted`{{optional_inline}}
+      - : `boolean`. Si l'onglet doit être coupé.
+    - `openerTabId`{{optional_inline}}
+      - : `integer`. L'ID de l'onglet qui a ouvert cet onglet. Si spécifié, l'onglet d'ouverture doit être dans la même fenêtre que cet onglet.
+    - `pinned`{{optional_inline}}
+      - : `boolean`. Si l'onglet doit être épinglé.
+    - `selected` {{deprecated_inline}} {{optional_inline}}
+      - : `boolean`. Si l'onglet doit être sélectionné. Cette propriété a été remplacée par `active` et `highlighted`.
+    - `successorTabId` {{optional_inline}}
+      - : `integer`. L'identifiant de l'ID du successeur de l'onglet.
+    - `url`{{optional_inline}}
+
+      - : `string`. Une URL pour naviguer dans l'onglet.
+
+        Pour des raisons de sécurité, dans Firefox, il se peut que ce ne soit pas une URL privilégiée. Le passage de l'une des URL suivantes échouera, avec {{WebExtAPIRef("runtime.lastError")}} étant défini sur un message d'erreur :
+
+        - chrome: URLs
+        - javascript: URLs
+        - data: URLs
+        - file: URLs (c'est-à-dire, fichiers sur le système de fichiers, cependant, pour utiliser un fichier empaqueté à l'intérieur de l'extension, voir ci-dessous)
+        - confidentiel : URLs (par exemle, `about:config`, `about:addons`, `about:debugging`, `about:newtab`). Les URL non privilégiées (par exemple, `about:blank`) sont autorisées.
+
+        Pour charger une page fournie avec votre extension, spécifiez une URL absolue à partir du fichier manifest.json de l'extension. Par exemple : '/path/to/my-page.html'. Si vous omettez le premier caractère '/', l'URL est traitée comme une URL relative et différents navigateurs peuvent construire différentes URL absolues.
+
+### Valeur retournée
+
+A [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('tabs.Tab')}} contenant des détails sur l'onglet mis à jour. L'objet {{WebExtAPIRef('tabs.Tab')}} ne contient pas d' `url`, `title` et `favIconUrl` sauf si la permission `"tabs"` a été demandée. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+
+## Exemples
+
+Naviguez dans l'onglet actif de la fenêtre en cours pour https\://developer.mozilla.org :
+
+```js
+function onUpdated(tab) {
   console.log(`Updated tab: ${tab.id}`);
 }
 
@@ -94,11 +98,13 @@ function onError(error) {
 }
 
 var updating = browser.tabs.update({url: "https://developer.mozilla.org"});
-updating.then(onUpdated, onError);</pre>
+updating.then(onUpdated, onError);
+```
 
-<p>Activez le premier onglet de la fenêtre actuelle et naviguez jusqu'à https://developer.mozilla.org:</p>
+Activez le premier onglet de la fenêtre actuelle et naviguez jusqu'à https\://developer.mozilla.org:
 
-<pre class="brush: js">function onUpdated(tab) {
+```js
+function onUpdated(tab) {
   console.log(`Updated tab: ${tab.id}`);
 }
 
@@ -115,23 +121,22 @@ function updateFirstTab(tabs) {
 }
 
 var querying = browser.tabs.query({currentWindow:true});
-querying.then(updateFirstTab, onError);</pre>
+querying.then(updateFirstTab, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.update", 10)}}</p>
+{{Compat("webextensions.api.tabs.update", 10)}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -158,5 +163,4 @@ querying.then(updateFirstTab, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

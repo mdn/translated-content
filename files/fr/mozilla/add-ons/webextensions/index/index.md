@@ -7,6 +7,4 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Index
 ---
-<div>{{AddonSidebar}}</div>
-
-<div>{{Index("/fr/Add-ons/WebExtensions")}}</div>
+{{AddonSidebar}}{{Index("/fr/Add-ons/WebExtensions")}}

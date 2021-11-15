@@ -11,59 +11,54 @@ tags:
   - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/search/get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient un tableau de tous les moteurs de recherche installés.</p>
+Obtient un tableau de tous les moteurs de recherche installés.
 
-<p>Chaque moteur de recherche renvoyé est identifié par un nom, que vous pouvez passer dans {{WebExtAPIRef("search.search()")}}} pour utiliser ce moteur particulier pour effectuer une recherche.</p>
+Chaque moteur de recherche renvoyé est identifié par un nom, que vous pouvez passer dans {{WebExtAPIRef("search.search()")}}} pour utiliser ce moteur particulier pour effectuer une recherche.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingEngines = browser.search.get()
-</pre>
+```js
+var gettingEngines = browser.search.get()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un <a href="Web/JavaScript/Reference/Global_Objects/array">tableau</a> d'objets  de moteur de recherche. Chaque objet de moteur de recherche peut contenir les propriétés suivantes :</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un [tableau](Web/JavaScript/Reference/Global_Objects/array) d'objets  de moteur de recherche. Chaque objet de moteur de recherche peut contenir les propriétés suivantes :
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>string</code>. Le nom du moteur de recherche.</dd>
- <dt><code>isDefault</code></dt>
- <dd>
- <p><code>boolean</code>. <code>true</code> si le moteur de recherche est le moteur par défaut. Un seul moteur de recherche peut être le moteur par défaut à un moment donné.</p>
- </dd>
- <dt><code>alias</code>{{optional_inline}}</dt>
- <dd>
- <p><code>string</code>. Si un moteur de recherche a un alias, l'utilisateur peut effectuer une recherche avec un moteur de recherche particulier en entrant l'alias dans la barre d'adresse avant le terme de recherche. Par exemple, si le moteur Wikipedia a un alias "wk", l'utilisateur peut rechercher des pandas dans Wikipedia en entrant "wk pandas" dans la barre d'adresse. L'alias est parfois aussi appelé "mot-clé".</p>
- </dd>
- <dt><code>favIconUrl</code>{{optional_inline}}</dt>
- <dd>
- <p><code>string</code>. L'icône du moteur de recherche, comme une donnée : URL.</p>
- </dd>
-</dl>
+- `name`
+  - : `string`. Le nom du moteur de recherche.
+- `isDefault`
+  - : `boolean`. `true` si le moteur de recherche est le moteur par défaut. Un seul moteur de recherche peut être le moteur par défaut à un moment donné.
+- `alias`{{optional_inline}}
+  - : `string`. Si un moteur de recherche a un alias, l'utilisateur peut effectuer une recherche avec un moteur de recherche particulier en entrant l'alias dans la barre d'adresse avant le terme de recherche. Par exemple, si le moteur Wikipedia a un alias "wk", l'utilisateur peut rechercher des pandas dans Wikipedia en entrant "wk pandas" dans la barre d'adresse. L'alias est parfois aussi appelé "mot-clé".
+- `favIconUrl`{{optional_inline}}
+  - : `string`. L'icône du moteur de recherche, comme une donnée : URL.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.search.search", 10)}}</p>
+{{Compat("webextensions.api.search.search", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Obtenir tous les moteurs de recherche installés :</p>
+Obtenir tous les moteurs de recherche installés :
 
-<pre class="brush: js">function retrieved(results) {
+```js
+function retrieved(results) {
   console.log(`There were: ${results.length} search engines retrieved.`);
   for (let searchEngine of results) {
     console.log(JSON.stringify(searchEngine.name));
   }
 }
 
-browser.search.get().then(retrieved);</pre>
+browser.search.get().then(retrieved);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

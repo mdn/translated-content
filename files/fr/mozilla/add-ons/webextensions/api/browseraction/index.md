@@ -12,91 +12,81 @@ tags:
   - browserAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Ajoute un bouton à la barre d'outils du navigateur.</p>
+Ajoute un bouton à la barre d'outils du navigateur.
 
-<p>Une <a href="/fr/Add-ons/WebExtensions/Browser_action">action du navigateur</a> est un bouton dans la barre d'outils du navigateur.</p>
+Une [action du navigateur](/fr/Add-ons/WebExtensions/Browser_action) est un bouton dans la barre d'outils du navigateur.
 
-<p>Vous pouvez associer une fenêtre contextuelle au bouton. La fenêtre contextuelle est spécifée en utilisant HTML, CSS et JavaScript, tout comme une page Web normale. JavaScript en cours d'exécution dans le popup accède à toutes les mêmes API WebExtension que vos scripts de fond, mais son contexte global est le popup, et non la page courrante affichée dans le navigateur. Pour effectuer les pages Web, vous devez communiquer avec eux par des <a href="/fr/Add-ons/WebExtensions/Modify_a_web_page#Messaging">messages</a>.</p>
+Vous pouvez associer une fenêtre contextuelle au bouton. La fenêtre contextuelle est spécifée en utilisant HTML, CSS et JavaScript, tout comme une page Web normale. JavaScript en cours d'exécution dans le popup accède à toutes les mêmes API WebExtension que vos scripts de fond, mais son contexte global est le popup, et non la page courrante affichée dans le navigateur. Pour effectuer les pages Web, vous devez communiquer avec eux par des [messages](/fr/Add-ons/WebExtensions/Modify_a_web_page#Messaging).
 
-<p>Si vous spécifiez une fenêtre contextuelle, elle sera affichée — et le contenu sera chargé — quand l'utilisateur clique sur l'icône. Si vous ne spécifiez pas de fenêtre contextuelle, alors lorsque l'utilisateur clique sur l'icône, un événement est envoyé à votre extension.</p>
+Si vous spécifiez une fenêtre contextuelle, elle sera affichée — et le contenu sera chargé — quand l'utilisateur clique sur l'icône. Si vous ne spécifiez pas de fenêtre contextuelle, alors lorsque l'utilisateur clique sur l'icône, un événement est envoyé à votre extension.
 
-<p>Vous pouvez définir la plupart des propriétés d'une action de navigateur en utilisant la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> dans le manifest.json.</p>
+Vous pouvez définir la plupart des propriétés d'une action de navigateur en utilisant la clé [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) dans le manifest.json.
 
-<p>Quand l'API <code>browserAction</code>, vous pouvez :</p>
+Quand l'API `browserAction`, vous pouvez :
 
-<ul>
- <li>Utiliser {{WebExtAPIRef("browserAction.onClicked")}} pour écouter les clics sur l'icône.</li>
- <li>Obtenir et définir les propriétés de l'icône — icône, titre, popup, etc. Vous pouvez les définir globalement dans tous les onglets ou pour un onglet spécifique en passant l'ID de l'onglet comme un argument supplémentaire.</li>
-</ul>
+- Utiliser {{WebExtAPIRef("browserAction.onClicked")}} pour écouter les clics sur l'icône.
+- Obtenir et définir les propriétés de l'icône — icône, titre, popup, etc. Vous pouvez les définir globalement dans tous les onglets ou pour un onglet spécifique en passant l'ID de l'onglet comme un argument supplémentaire.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("browserAction.ColorArray")}}</dt>
- <dd>Un tableau de quatre nombres entiers entre 0-255 définie une couleur RGBA.</dd>
- <dt>{{WebExtAPIRef("browserAction.ImageDataType")}}</dt>
- <dd>Données en pixels pour une image. Doit être un objet <code><a href="/fr/docs/Web/API/ImageData">ImageData</a></code> (par exemple, un élément {{htmlelement("canvas")}} ).</dd>
-</dl>
+- {{WebExtAPIRef("browserAction.ColorArray")}}
+  - : Un tableau de quatre nombres entiers entre 0-255 définie une couleur RGBA.
+- {{WebExtAPIRef("browserAction.ImageDataType")}}
+  - : Données en pixels pour une image. Doit être un objet [`ImageData`](/fr/docs/Web/API/ImageData) (par exemple, un élément {{htmlelement("canvas")}} ).
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt>{{WebExtAPIRef("browserAction.setTitle()")}}</dt>
- <dd>Définit le titre de l'action du navigateur. Cela sera affiché dans une info-bulle.</dd>
- <dt>{{WebExtAPIRef("browserAction.getTitle()")}}</dt>
- <dd>Obtient le titre de l'action du navigateur.</dd>
- <dt>{{WebExtAPIRef("browserAction.setIcon()")}}</dt>
- <dd>Définit l'icône de l'action du navigateur.</dd>
- <dt>{{WebExtAPIRef("browserAction.setPopup()")}}</dt>
- <dd>Définit le document HTML à ouvrir en popup lorsque l'utilisateur clique  sur l'icône de l'action du navigateur.</dd>
- <dt>{{WebExtAPIRef("browserAction.getPopup()")}}</dt>
- <dd>Permet de définir le document HTML en tant que popup de l'action du navigateur.</dd>
- <dt>{{WebExtAPIRef("browserAction.openPopup()")}}</dt>
- <dd>Ouvrez le popup de l'action du navigateur.</dd>
- <dt>{{WebExtAPIRef("browserAction.setBadgeText()")}}</dt>
- <dd>Définit le texte du badge de l'action du navigateur. Le badge est affiché en haut de l'icône.</dd>
- <dt>{{WebExtAPIRef("browserAction.getBadgeText()")}}</dt>
- <dd>Obtient le texte du badge de l'action du navigateur.</dd>
- <dt>{{WebExtAPIRef("browserAction.setBadgeBackgroundColor()")}}</dt>
- <dd>Définit la couleur de fond du badge.</dd>
- <dt>{{WebExtAPIRef("browserAction.getBadgeBackgroundColor()")}}</dt>
- <dd>Obtient la couleur de fond du badge.</dd>
- <dt>{{WebExtAPIRef("browserAction.setBadgeTextColor()")}}</dt>
- <dd>Définit la couleur du texte du badge.</dd>
- <dt>{{WebExtAPIRef("browserAction.getBadgeTextColor()")}}</dt>
- <dd>Obtient la couleur du texte du badge.</dd>
- <dt>{{WebExtAPIRef("browserAction.enable()")}}</dt>
- <dd>Active l'action du navigateur pour un onglet. Par défaut, les actions du navigateur sont activées pour tous les onglets.</dd>
- <dt>{{WebExtAPIRef("browserAction.disable()")}}</dt>
- <dd>Désactive l'action du navigateur pour un onglet, ce qui signifie  qu'il ne peut pas être cliqué lorsque cet onglet est actif.</dd>
- <dt>{{WebExtAPIRef("browserAction.isEnabled()")}}</dt>
- <dd>Vérifie si l'action du navigateur est activée ou non.</dd>
-</dl>
+- {{WebExtAPIRef("browserAction.setTitle()")}}
+  - : Définit le titre de l'action du navigateur. Cela sera affiché dans une info-bulle.
+- {{WebExtAPIRef("browserAction.getTitle()")}}
+  - : Obtient le titre de l'action du navigateur.
+- {{WebExtAPIRef("browserAction.setIcon()")}}
+  - : Définit l'icône de l'action du navigateur.
+- {{WebExtAPIRef("browserAction.setPopup()")}}
+  - : Définit le document HTML à ouvrir en popup lorsque l'utilisateur clique  sur l'icône de l'action du navigateur.
+- {{WebExtAPIRef("browserAction.getPopup()")}}
+  - : Permet de définir le document HTML en tant que popup de l'action du navigateur.
+- {{WebExtAPIRef("browserAction.openPopup()")}}
+  - : Ouvrez le popup de l'action du navigateur.
+- {{WebExtAPIRef("browserAction.setBadgeText()")}}
+  - : Définit le texte du badge de l'action du navigateur. Le badge est affiché en haut de l'icône.
+- {{WebExtAPIRef("browserAction.getBadgeText()")}}
+  - : Obtient le texte du badge de l'action du navigateur.
+- {{WebExtAPIRef("browserAction.setBadgeBackgroundColor()")}}
+  - : Définit la couleur de fond du badge.
+- {{WebExtAPIRef("browserAction.getBadgeBackgroundColor()")}}
+  - : Obtient la couleur de fond du badge.
+- {{WebExtAPIRef("browserAction.setBadgeTextColor()")}}
+  - : Définit la couleur du texte du badge.
+- {{WebExtAPIRef("browserAction.getBadgeTextColor()")}}
+  - : Obtient la couleur du texte du badge.
+- {{WebExtAPIRef("browserAction.enable()")}}
+  - : Active l'action du navigateur pour un onglet. Par défaut, les actions du navigateur sont activées pour tous les onglets.
+- {{WebExtAPIRef("browserAction.disable()")}}
+  - : Désactive l'action du navigateur pour un onglet, ce qui signifie  qu'il ne peut pas être cliqué lorsque cet onglet est actif.
+- {{WebExtAPIRef("browserAction.isEnabled()")}}
+  - : Vérifie si l'action du navigateur est activée ou non.
 
-<h2 id="Evénements">Evénements</h2>
+## Evénements
 
-<dl>
- <dt>{{WebExtAPIRef("browserAction.onClicked")}}</dt>
- <dd>Action quand l'icone d'action du navigateur est cliqué. Cet événement ne déclenchera pas si l'action du navigateur comporte une fenêtre contextuelle.</dd>
-</dl>
+- {{WebExtAPIRef("browserAction.onClicked")}}
+  - : Action quand l'icone d'action du navigateur est cliqué. Cet événement ne déclenchera pas si l'action du navigateur comporte une fenêtre contextuelle.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browserAction")}}</p>
+{{Compat("webextensions.api.browserAction")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -123,5 +113,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

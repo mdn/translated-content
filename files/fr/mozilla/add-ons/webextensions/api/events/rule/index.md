@@ -13,42 +13,38 @@ tags:
   - events
 translation_of: Mozilla/Add-ons/WebExtensions/API/events/Rule
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p>Description d'une règle déclarative pour la gestion des événements.</p>
+Description d'une règle déclarative pour la gestion des événements.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>id</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Identifiant facultatif permettant de référencer cette règle.</dd>
- <dt><code>tags</code>{{optional_inline}}</dt>
- <dd><code>array</code> of <code><code>string</code></code>. Les balises peuvent être utilisées pour annoter des règles et effectuer des opérations sur des ensembles de règles.</dd>
- <dt><code>conditions</code></dt>
- <dd><code>array</code> de <code><code>any</code></code>. Liste des conditions qui peuvent déclencher les actions.</dd>
- <dt><code>actions</code></dt>
- <dd><code>array</code> de <code><code>any</code></code>. Liste des actions qui sont déclenchées si l'une des conditions est remplie.</dd>
- <dt><code>priority</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. Priorité optionnelle de cette règle. Par défaut à 100.</dd>
-</dl>
+- `id`{{optional_inline}}
+  - : `string`. Identifiant facultatif permettant de référencer cette règle.
+- `tags`{{optional_inline}}
+  - : `array` of `string`. Les balises peuvent être utilisées pour annoter des règles et effectuer des opérations sur des ensembles de règles.
+- `conditions`
+  - : `array` de `any`. Liste des conditions qui peuvent déclencher les actions.
+- `actions`
+  - : `array` de `any`. Liste des actions qui sont déclenchées si l'une des conditions est remplie.
+- `priority`{{optional_inline}}
+  - : `integer`. Priorité optionnelle de cette règle. Par défaut à 100.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.events.Rule")}}</p>
+{{Compat("webextensions.api.events.Rule")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.events`](https://developer.chrome.com/extensions/events). Cette documentation est dérivée de [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/events"><code>chrome.events</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json"><code>events.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -75,5 +71,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/events/Rule
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

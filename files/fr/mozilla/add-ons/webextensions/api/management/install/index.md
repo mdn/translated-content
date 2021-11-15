@@ -12,41 +12,37 @@ tags:
   - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/install
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Installe et active une extension de thème à partir de l'URL donnée.
 
-<div>Installe et active une extension de thème à partir de l'URL donnée.</div>
+Cette API nécessite la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management" et ne fonctionnera qu'avec des thèmes signés.
 
-<div></div>
+C'est une fonction asynchrone qui renvoie une [Promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<p>Cette API nécessite la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission de l'API</a> "management" et ne fonctionnera qu'avec des thèmes signés.</p>
+## Syntaxe
 
-<p>C'est une fonction asynchrone qui renvoie une <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a>.</p>
+```js
+let {id} = await browser.management.install({url});
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+### Paramètres
 
-<pre class="brush: js">let {id} = await browser.management.install({url});
-</pre>
+- options
+  - : Un objet qui inclut l'URL du fichier XPI du thème à [addons.mozilla.org](https://addons.mozilla.org) et un hachage facultatif du fichier XPI, en utilisant sha256 ou plus.
 
-<h3 id="Paramètres">Paramètres</h3>
+### Valeur retournée
 
-<dl>
- <dt>options</dt>
- <dd>Un objet qui inclut l'URL du fichier XPI du thème à <a href="https://addons.mozilla.org">addons.mozilla.org</a> et un hachage facultatif du fichier XPI, en utilisant sha256 ou plus.</dd>
-</dl>
+Une [Promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet, contenant l'`ExtensionID` défini pour le thème dans manifest.json.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+## Compatibilité du navigateur
 
-<p>Une <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a> qui sera remplie avec un objet, contenant l'<code>ExtensionID</code> défini pour le thème dans manifest.json.</p>
+{{Compat("webextensions.api.management.install")}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Exemples
 
-<p>{{Compat("webextensions.api.management.install")}}</p>
+Parcourez une liste de thèmes :
 
-<h2 id="Exemples">Exemples</h2>
-
-<p>Parcourez une liste de thèmes :</p>
-
-<pre class="brush: js">"use strict";
+```js
+"use strict";
 
 let themes = [
     "https://addons.mozilla.org/firefox/downloads/file/1063216/insightscare-1.0-fx.xpi",
@@ -67,7 +63,7 @@ async function install(url) {
     }
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
     let id = themes.indexOf(current);
     install(themes[(id + 1) % themes.length]);
 });
@@ -75,9 +71,10 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 for (let url of themes) {
     browser.menus.create({
         title: url,
-        onclick: () =&gt; install(url),
+        onclick: () => install(url),
         contexts: ["browser_action"],
     });
-}</pre>
+}
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

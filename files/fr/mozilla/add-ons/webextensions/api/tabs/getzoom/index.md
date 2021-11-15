@@ -13,35 +13,35 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getZoom
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient le facteur de zoom actuel pour l'onglet spécifié.</p>
+Obtient le facteur de zoom actuel pour l'onglet spécifié.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingZoom = browser.tabs.getZoom(
+```js
+var gettingZoom = browser.tabs.getZoom(
   tabId                     // optional integer
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. L'ID de l'onglet pour obtenir le facteur de zoom actuel. Par défaut à l'onglet actif de la fenêtre en cours.</dd>
-</dl>
+- `tabId`{{optional_inline}}
+  - : `integer`. L'ID de l'onglet pour obtenir le facteur de zoom actuel. Par défaut à l'onglet actif de la fenêtre en cours.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera satisfaite avec le facteur de zoom actuel de l'onglet, sous la forme d'un nombre compris entre 0,3 et 3. Si l'onglet n'a pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera satisfaite avec le facteur de zoom actuel de l'onglet, sous la forme d'un nombre compris entre 0,3 et 3. Si l'onglet n'a pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Obtenez le facteur de zoom  pour l'onglet actuel :</p>
+Obtenez le facteur de zoom  pour l'onglet actuel :
 
-<pre class="brush: js">function onGot(zoom) {
+```js
+function onGot(zoom) {
   console.log(zoom);
 }
 
@@ -50,11 +50,13 @@ function onError(error) {
 }
 
 var gettingZoom = browser.tabs.getZoom();
-gettingZoom.then(onGot, onError);</pre>
+gettingZoom.then(onGot, onError);
+```
 
-<p>Obtenez le facteur zoom pour l'onglet dont l'ID est 2:</p>
+Obtenez le facteur zoom pour l'onglet dont l'ID est 2:
 
-<pre class="brush: js">function onGot(zoom) {
+```js
+function onGot(zoom) {
   console.log(zoom);
 }
 
@@ -63,23 +65,22 @@ function onError(error) {
 }
 
 var gettingZoom = browser.tabs.getZoom(2);
-gettingZoom.then(onGot, onError);</pre>
+gettingZoom.then(onGot, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.getZoom")}}</p>
+{{Compat("webextensions.api.tabs.getZoom")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,5 +107,4 @@ gettingZoom.then(onGot, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

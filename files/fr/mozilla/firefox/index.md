@@ -7,65 +7,64 @@ tags:
   - Mozilla
 translation_of: Mozilla/Firefox
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p><a href="https://www.mozilla.org/fr/firefox/new/">Firefox</a> est le navigateur populaire de Mozilla, disponible sur de nombreuses plates-formes dont Windows, Mac OS et Linux pour les ordinateurs de bureau, ainsi que Android et iOS pour les appareils mobiles. Grâce à une large compatibilité, les dernières nouveautés en technologie web et des outils puissants pour développer, Firefox est idéal pour les développeurs web et les utilisateurs.</p>
+[Firefox](https://www.mozilla.org/fr/firefox/new/) est le navigateur populaire de Mozilla, disponible sur de nombreuses plates-formes dont Windows, Mac OS et Linux pour les ordinateurs de bureau, ainsi que Android et iOS pour les appareils mobiles. Grâce à une large compatibilité, les dernières nouveautés en technologie web et des outils puissants pour développer, Firefox est idéal pour les développeurs web et les utilisateurs.
 
-<p>Firefox est un projet libre et ouvert. Une grande partie du code source provient des contributions de notre très grande communauté de volontaires. Découvrez ici comment contribuer au projet Firefox et vous trouverez également des liens vers de la documentation sur la création de modules complémentaires pour Firefox, l'utilisation d'outils de développement dans Firefox et bien plus encore.</p>
+Firefox est un projet libre et ouvert. Une grande partie du code source provient des contributions de notre très grande communauté de volontaires. Découvrez ici comment contribuer au projet Firefox et vous trouverez également des liens vers de la documentation sur la création de modules complémentaires pour Firefox, l'utilisation d'outils de développement dans Firefox et bien plus encore.
 
-<p>Découvrez comment créer des modules complémentaires pour <a href="https://www.mozilla.org/fr/firefox/new/">Firefox</a>, comment développer et créer Firefox même, ainsi que son fonctionnement interne et celui de ses sous-projets.</p>
+Découvrez comment créer des modules complémentaires pour [Firefox](https://www.mozilla.org/fr/firefox/new/), comment développer et créer Firefox même, ainsi que son fonctionnement interne et celui de ses sous-projets.
 
-<ul>
- <li>Notes de versions
+- Notes de versions
 
-  <p><a href="/fr/docs/Firefox/Versions">Les notes de versions pour les développeurs</a> vous permettent de garder un œil sur les nouvelles fonctionnalités pour les sites web et les modules complémentaires qu'apporte chaque nouvelle version de Firefox.</p>
- </li>
- <li>Documentation du projet
-  <p>Obtenez des informations détaillées concernant le <a href="/fr/docs/Mozilla">fonctionnement interne</a> et le développement de Firefox. Vous pourrez ainsi vous repérer plus facilement lorsque vous développez.</p>
- </li>
- <li>Guide du développeur
-  <p>Notre <a href="/fr/docs/Developer_Guide">guide du développeur</a> fournit les détails nécessaires pour récupérer et compiler le code source de Firefox. Il vous permet également de vous y retrouver facilement et de découvrir comment contribuer au projet.</p>
- </li>
-</ul>
+  [Les notes de versions pour les développeurs](/fr/docs/Firefox/Versions) vous permettent de garder un œil sur les nouvelles fonctionnalités pour les sites web et les modules complémentaires qu'apporte chaque nouvelle version de Firefox.
 
-<h2 id="Éditions_de_Firefox">Éditions de Firefox</h2>
+- Documentation du projet
 
-<p>Firefox est disponible sous cinq <strong>éditions</strong> différentes, l'une d’entre-elles est forcément adaptée pour vous !</p>
+  Obtenez des informations détaillées concernant le [fonctionnement interne](/fr/docs/Mozilla) et le développement de Firefox. Vous pourrez ainsi vous repérer plus facilement lorsque vous développez.
 
-<h3 id="Firefox_Nightly">Firefox Nightly</h3>
+- Guide du développeur
 
-<p>Chaque nuit, nous compilons Firefox à partir des dernières sources de <a href="/fr/docs/mozilla-central">mozilla-central</a>. Ces compilations sont pour les développeurs Firefox ou tous ceux qui veulent essayer les dernières fonctionnalités pendant qu'elles sont encore en développement.</p>
+  Notre [guide du développeur](/fr/docs/Developer_Guide) fournit les détails nécessaires pour récupérer et compiler le code source de Firefox. Il vous permet également de vous y retrouver facilement et de découvrir comment contribuer au projet.
 
-<p><a href="https://nightly.mozilla.org/">Télécharger Firefox Nightly</a></p>
+## Éditions de Firefox
 
-<h3 id="Firefox_Developer_Edition">Firefox Developer Edition</h3>
+Firefox est disponible sous cinq **éditions** différentes, l'une d’entre-elles est forcément adaptée pour vous !
 
-<p>Une version de Firefox créée spécialement pour les développeurs. Elle est mise à jour toutes les six semaines avec les fonctionnalités suffisamment stables de la version Firefox Nightly. Nous ajoutons également des fonctionnalités spéciales pour les développeurs, seulement disponibles dans cette version de Firefox.</p>
+### Firefox Nightly
 
-<p><a href="/fr/docs.Firefox/Developer_Edition">En savoir plus sur Firefox Developer Edition</a>.</p>
+Chaque nuit, nous compilons Firefox à partir des dernières sources de [mozilla-central](/fr/docs/mozilla-central). Ces compilations sont pour les développeurs Firefox ou tous ceux qui veulent essayer les dernières fonctionnalités pendant qu'elles sont encore en développement.
 
-<p><a href="https://www.mozilla.org/fr/firefox/developer/">Firefox Developer Edition</a></p>
+[Télécharger Firefox Nightly](https://nightly.mozilla.org/)
 
-<h3 id="Firefox_Beta">Firefox Beta</h3>
+### Firefox Developer Edition
 
-<p>Après six semaines passées dans la version Firefox Developer Edition, les fonctionnalités suffisamment stables rejoignent la nouvelle version de Firefox Beta. Les versions de Firefox Beta sont pour les passionnés souhaitant tester ce qui est destiné à devenir la prochaine version de Firefox.</p>
+Une version de Firefox créée spécialement pour les développeurs. Elle est mise à jour toutes les six semaines avec les fonctionnalités suffisamment stables de la version Firefox Nightly. Nous ajoutons également des fonctionnalités spéciales pour les développeurs, seulement disponibles dans cette version de Firefox.
 
-<p><a href="https://www.mozilla.org/firefox/channel/#beta">Télécharger Firefox Beta</a></p>
+[En savoir plus sur Firefox Developer Edition](/fr/docs.Firefox/Developer_Edition).
 
-<h3 id="Firefox">Firefox</h3>
+[Firefox Developer Edition](https://www.mozilla.org/fr/firefox/developer/)
 
-<p>Essayé, testé et adopté par des millions de personnes à travers le monde. Après six semaines de stabilisation dans la version Beta, la version finale est fin prête à être distribuée à tous.</p>
+### Firefox Beta
 
-<p><a href="https://www.mozilla.org/firefox/channel/#firefox">Télécharger Firefox</a></p>
+Après six semaines passées dans la version Firefox Developer Edition, les fonctionnalités suffisamment stables rejoignent la nouvelle version de Firefox Beta. Les versions de Firefox Beta sont pour les passionnés souhaitant tester ce qui est destiné à devenir la prochaine version de Firefox.
 
-<h3 id="Firefox_Extended_Support_Release_ESR">Firefox Extended Support Release (ESR)</h3>
+[Télécharger Firefox Beta](https://www.mozilla.org/firefox/channel/#beta)
 
-<p>Firefox ESR est une édition avec un support à long terme. Très utile pour des organisations telles que des écoles, des universités, des entreprises ou autres qui ont besoin d'un support étendu pour des déploiements importants.</p>
+### Firefox
 
-<p><a href="/fr/docs/Firefox/Firefox_ESR">En savoir plus sur Firefox Extended Support Release</a>.</p>
+Essayé, testé et adopté par des millions de personnes à travers le monde. Après six semaines de stabilisation dans la version Beta, la version finale est fin prête à être distribuée à tous.
 
-<p><a href="https://www.mozilla.org/firefox/organizations/all/">Télécharger Firefox ESR</a></p>
+[Télécharger Firefox](https://www.mozilla.org/firefox/channel/#firefox)
 
-<h2 id="Profils_Firefox">Profils Firefox</h2>
+### Firefox Extended Support Release (ESR)
 
-<p>Si vous utilisez régulièrement plusieurs éditions de Firefox — ou simplement plusieurs configurations — vous devriez vous renseigner sur <a href="/fr/docs/Mozilla/Firefox/Multiple_profiles">l'utilisation de plusieurs profils Firefox</a> en activant le gestionnaire de profils de Firefox et les autres outils de gestion de profils.</p>
+Firefox ESR est une édition avec un support à long terme. Très utile pour des organisations telles que des écoles, des universités, des entreprises ou autres qui ont besoin d'un support étendu pour des déploiements importants.
+
+[En savoir plus sur Firefox Extended Support Release](/fr/docs/Firefox/Firefox_ESR).
+
+[Télécharger Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
+
+## Profils Firefox
+
+Si vous utilisez régulièrement plusieurs éditions de Firefox — ou simplement plusieurs configurations — vous devriez vous renseigner sur [l'utilisation de plusieurs profils Firefox](/fr/docs/Mozilla/Firefox/Multiple_profiles) en activant le gestionnaire de profils de Firefox et les autres outils de gestion de profils.

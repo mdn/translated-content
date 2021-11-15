@@ -11,40 +11,42 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/suspend
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Suspend une demande. Après cet appel, plus aucune donnée ne sera livrée jusqu'à ce que la requête soit reprise avec un appel à {{WebExtAPIRef("webRequest.StreamFilter.resume()", "resume()")}}.</p>
+Suspend une demande. Après cet appel, plus aucune donnée ne sera livrée jusqu'à ce que la requête soit reprise avec un appel à {{WebExtAPIRef("webRequest.StreamFilter.resume()", "resume()")}}.
 
-<p>Vous ne pouvez pas appeler cette fonction avant que l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.</p>
+Vous ne pouvez pas appeler cette fonction avant que l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">filter.suspend()
-</pre>
+```js
+filter.suspend()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>None.</p>
+None.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>None.</p>
+None.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.webRequest.StreamFilter.suspend", 10)}}</p>
+{{Compat("webextensions.api.webRequest.StreamFilter.suspend", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple utilise la <em>suspend/resume</em> pour retarder une requête web.</p>
+Cet exemple utilise la _suspend/resume_ pour retarder une requête web.
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event =&gt; {
+  filter.onstart = event => {
     filter.suspend();
 
-    setTimeout(() =&gt; {
+    setTimeout(() => {
       filter.resume();
       filter.disconnect();
     }, 1000);
@@ -56,6 +58,7 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.org/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

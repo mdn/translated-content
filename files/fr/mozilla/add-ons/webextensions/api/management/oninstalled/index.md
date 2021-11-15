@@ -11,94 +11,87 @@ tags:
   - onInstalled
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Action quand une extension est installée.</p>
+Action quand une extension est installée.
 
-<p>Cette API requière l'<a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">API de permission </a>"management".</p>
+Cette API requière l'[API de permission ](/fr/Add-ons/WebExtensions/manifest.json/permissions)"management".
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.management.onInstalled.addListener(listener)
+```js
+browser.management.onInstalled.addListener(listener)
 browser.management.onInstalled.removeListener(listener)
 browser.management.onInstalled.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajout un auditeur à l'événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouvter l'événement. L'argument de l'auditeur est un auditeur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifie si un auditeur est enregistré pour cet événement. Renvoie <code>vrai</code> si elle est à l'écoute, sinon <code>faux</code> .</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajout un auditeur à l'événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouvter l'événement. L'argument de l'auditeur est un auditeur à supprimer.
+- `hasListener(listener)`
+  - : Vérifie si un auditeur est enregistré pour cet événement. Renvoie `vrai` si elle est à l'écoute, sinon `faux` .
 
-<h2 id="addListener_syntaxe">addListener syntaxe</h2>
+## addListener syntaxe
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>function</code></dt>
- <dd>
- <p>fonction de rappel qui sera appelée quand l'événement se produira. La fonction passera l'argument suivant :</p>
+- `function`
 
- <dl>
-  <dt><code>info</code></dt>
-  <dd><code><a href="/fr/Add-ons/WebExtensions/API/management/ExtensionInfo">ExtensionInfo</a></code>: informations sur l'extension qui a été installée.</dd>
- </dl>
- </dd>
-</dl>
+  - : fonction de rappel qui sera appelée quand l'événement se produira. La fonction passera l'argument suivant :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `info`
+      - : [`ExtensionInfo`](/fr/Add-ons/WebExtensions/API/management/ExtensionInfo): informations sur l'extension qui a été installée.
 
-<p>{{Compat("webextensions.api.management.onInstalled")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.management.onInstalled")}}
 
-<p>Enregistrez les noms des extensions lorsqu'ils sont installés :</p>
+## Exemples
 
-<pre class="brush: js">browser.management.onInstalled.addListener((info) =&gt; {
+Enregistrez les noms des extensions lorsqu'ils sont installés :
+
+```js
+browser.management.onInstalled.addListener((info) => {
   console.log(info.name + " was installed");
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/management"><code>chrome.management</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
-//
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
-//
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+>
+> <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+> //
+> // Redistribution and use in source and binary forms, with or without
+> // modification, are permitted provided that the following conditions are
+> // met:
+> //
+> //    * Redistributions of source code must retain the above copyright
+> // notice, this list of conditions and the following disclaimer.
+> //    * Redistributions in binary form must reproduce the above
+> // copyright notice, this list of conditions and the following disclaimer
+> // in the documentation and/or other materials provided with the
+> // distribution.
+> //    * Neither the name of Google Inc. nor the names of its
+> // contributors may be used to endorse or promote products derived from
+> // this software without specific prior written permission.
+> //
+> // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+> // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+> // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+> // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+> // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+> // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+> // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+> // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+> // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+> // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+> // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+> </pre></div>

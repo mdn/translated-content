@@ -12,62 +12,57 @@ tags:
   - set
 translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Utilisez <code>BrowserSetting.set()</code> pour modifier le paramètre du navigateur vers une nouvelle valeur.</p>
+Utilisez `BrowserSetting.set()` pour modifier le paramètre du navigateur vers une nouvelle valeur.
 
-<p>Certaines règles peuvent être restreintes lorsque les extensions sont capables de modifier les paramètres :</p>
+Certaines règles peuvent être restreintes lorsque les extensions sont capables de modifier les paramètres :
 
-<ul>
- <li>Certains paramètres sont verrouillés, de sorte qu'ils ne peuvent pas être modifiés par les extensions</li>
- <li>Si plusieurs extensions tentent de modifier le même paramètre, les extensions reçoivent un ordre de priorité en fonction de leur installation. Plus récemment, les extensions installées ont priorité sur l'extension installée récemment.</li>
-</ul>
+- Certains paramètres sont verrouillés, de sorte qu'ils ne peuvent pas être modifiés par les extensions
+- Si plusieurs extensions tentent de modifier le même paramètre, les extensions reçoivent un ordre de priorité en fonction de leur installation. Plus récemment, les extensions installées ont priorité sur l'extension installée récemment.
 
-<p>Cela signifie que si l'extension X essaie de modifier un paramètre :</p>
+Cela signifie que si l'extension X essaie de modifier un paramètre :
 
-<ol>
- <li>Si le réglage est verrouillé, le réglage n'est pas modifié. Cependant, le changement de X est rappelé, et il est stocké dans une file d'attente, commandé par la priorité de X par rapport à toutes les autres extensions qui ont essayé de modifier le paramètre. Si le réglage devient déverrouillé plus tard, la première extension de la file d'attente permet de modifier le réglage.</li>
- <li>Sinon, si aucune autre extension n'a déjà changé le paramètre, X réussit à modifier le réglage, puis on dit "contrôler" le réglage.</li>
- <li>Sinon, si une extension de priorité inférieure Y a déjà changé le paramètre, X réussit à modifier le réglage et maintenant le réglage.  However, Y's change is remembered, and is stored in a queue in precedence order. Cependant, le changement de Y est rappelé et est stocké dans une file d'attente dans l'ordre de priorité. Si X efface ensuite sa valeur, ou si X est désactivé ou désinstallé, la première extension de la file d'attente permet de modifier sa valeur.</li>
- <li>Sinon, si une extension de priorité supérieure Z a déjà changé le paramètre, X ne réussit pas à modifier le paramètre, mais sa modification est mise en file d'attente. Si Z efface ensuite sa valeur, ou si Z est désactivé ou désinstallé, la première extension de la file d'attente permet de modifier sa valeur.</li>
-</ol>
+1.  Si le réglage est verrouillé, le réglage n'est pas modifié. Cependant, le changement de X est rappelé, et il est stocké dans une file d'attente, commandé par la priorité de X par rapport à toutes les autres extensions qui ont essayé de modifier le paramètre. Si le réglage devient déverrouillé plus tard, la première extension de la file d'attente permet de modifier le réglage.
+2.  Sinon, si aucune autre extension n'a déjà changé le paramètre, X réussit à modifier le réglage, puis on dit "contrôler" le réglage.
+3.  Sinon, si une extension de priorité inférieure Y a déjà changé le paramètre, X réussit à modifier le réglage et maintenant le réglage.  However, Y's change is remembered, and is stored in a queue in precedence order. Cependant, le changement de Y est rappelé et est stocké dans une file d'attente dans l'ordre de priorité. Si X efface ensuite sa valeur, ou si X est désactivé ou désinstallé, la première extension de la file d'attente permet de modifier sa valeur.
+4.  Sinon, si une extension de priorité supérieure Z a déjà changé le paramètre, X ne réussit pas à modifier le paramètre, mais sa modification est mise en file d'attente. Si Z efface ensuite sa valeur, ou si Z est désactivé ou désinstallé, la première extension de la file d'attente permet de modifier sa valeur.
 
-<p>Une extension peut déterminer lequel de ces scénarios s'applique en examinant la propriété "<code>levelOfControl</code>" renvoyée d'un appel à <code><a href="/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/get">BrowserSetting.get()</a></code>.</p>
+Une extension peut déterminer lequel de ces scénarios s'applique en examinant la propriété "`levelOfControl`" renvoyée d'un appel à [`BrowserSetting.get()`](/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/get).
 
-<p>la méthode <code><a href="/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/set">BrowserSetting.set()</a></code> renvoie une promesse qui résout un booléen : Si une tentative de modification d'un paramètre aboutit à la modification du paramètre (scenarios 2 et 3 ci-dessus) le booléen est  <code>true</code>: sinon il est <code>false</code>.</p>
+la méthode [`BrowserSetting.set()`](/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) renvoie une promesse qui résout un booléen : Si une tentative de modification d'un paramètre aboutit à la modification du paramètre (scenarios 2 et 3 ci-dessus) le booléen est  `true`: sinon il est `false`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var setting = setting.set(
+```js
+var setting = setting.set(
   details     // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p>Un objet qui doit contenir la propriété suivante :</p>
- <dl>
-  <dt><code>value</code></dt>
-  <dd><code>any</code>. La valeur à laquelle vous souhaitez modifier le paramètre. Son type dépend du réglage particulier.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : Un objet qui doit contenir la propriété suivante :
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un <code>booléen</code>: <code>true</code> si le paramètre a été modifié, <code>false</code> sinon (par exemple, parce que l'extension n'a pas contrôlé le paramètre).</p>
+    - `value`
+      - : `any`. La valeur à laquelle vous souhaitez modifier le paramètre. Son type dépend du réglage particulier.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>Voir {{WebExtAPIRef("types.BrowserSetting")}}.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un `booléen`: `true` si le paramètre a été modifié, `false` sinon (par exemple, parce que l'extension n'a pas contrôlé le paramètre).
 
-<h2 id="Exemple">Exemple</h2>
+## Compatibilité du navigateur
 
-<p>Modifiez le paramètre <code>hyperlinkAuditingEnabled</code> (ceci nécessite la permission "privacy") :</p>
+Voir {{WebExtAPIRef("types.BrowserSetting")}}.
 
-<pre class="brush: js">function onSet(result) {
+## Exemple
+
+Modifiez le paramètre `hyperlinkAuditingEnabled` (ceci nécessite la permission "privacy") :
+
+```js
+function onSet(result) {
   if (result) {
     console.log("Value was updated");
   } else {
@@ -75,7 +70,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
   }
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
 
     var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
       value: false
@@ -83,19 +78,17 @@ browser.browserAction.onClicked.addListener(() =&gt; {
     setting.then(onSet);
 
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/extensions/types).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/types"><code>chrome.types</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -122,5 +115,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

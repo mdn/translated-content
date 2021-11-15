@@ -13,45 +13,44 @@ tags:
   - setDetectionInterval
 translation_of: Mozilla/Add-ons/WebExtensions/API/idle/setDetectionInterval
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Définit l'intervalle, en secondes, utilisé pour déterminer quand le système est  dans un état inactif pour les événements {{WebExtAPIRef("idle.onStateChanged")}} . L'intervalle par défaut est de 60 secondes.</p>
+Définit l'intervalle, en secondes, utilisé pour déterminer quand le système est  dans un état inactif pour les événements {{WebExtAPIRef("idle.onStateChanged")}} . L'intervalle par défaut est de 60 secondes.
 
-<p>L'intervalle de détection est spécifique à l'extension qui appelle la méthode. La modification de l'intervalle dans une extension n'affecte pas l'intervalle de détection dans une autre extension.</p>
+L'intervalle de détection est spécifique à l'extension qui appelle la méthode. La modification de l'intervalle dans une extension n'affecte pas l'intervalle de détection dans une autre extension.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.idle.setDetectionInterval(
+```js
+browser.idle.setDetectionInterval(
   intervalInSeconds // integer
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>intervalInSeconds</code></dt>
- <dd><code>integer</code>. Seuil, en secondes, utilisé pour déterminer quand le système est dans un état inactif. La valeur minimum que vous pouvez  fournir ici est 15.</dd>
-</dl>
+- `intervalInSeconds`
+  - : `integer`. Seuil, en secondes, utilisé pour déterminer quand le système est dans un état inactif. La valeur minimum que vous pouvez  fournir ici est 15.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.idle.setDetectionInterval")}}</p>
+{{Compat("webextensions.api.idle.setDetectionInterval")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">browser.idle.setDetectionInterval(15);</pre>
+```js
+browser.idle.setDetectionInterval(15);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/extensions/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/idle"><code>chrome.idle</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json"><code>idle.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -78,5 +77,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/idle/setDetectionInterval
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -14,50 +14,45 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getAllInWindow
 ---
-<div>{{AddonSidebar}}
-<div>
-<p><strong>Deprecated</strong><br>
- Cette méthode est dépréciée. Utilisez {{WebExtAPIRef("tabs.query", "tabs.query({currentWindow: true})")}} à la place.</p>
-</div>
-</div>
+{{AddonSidebar}}
 
-<p>Obtient des détails sur tous les onglets de la fenêtre spécifiée.</p>
+**Deprecated**
+Cette méthode est dépréciée. Utilisez {{WebExtAPIRef("tabs.query", "tabs.query({currentWindow: true})")}} à la place.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+Obtient des détails sur tous les onglets de la fenêtre spécifiée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<pre class="brush: js">var getting = browser.tabs.getAllInWindow(
+## Syntaxe
+
+```js
+var getting = browser.tabs.getAllInWindow(
   windowId            // optional integer
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>windowId</code>{{Optional_Inline}}</dt>
- <dd><code>integer</code>. Par défaut à la fenêtre actuelle.</dd>
-</dl>
+- `windowId`{{Optional_Inline}}
+  - : `integer`. Par défaut à la fenêtre actuelle.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> qui sera remplie avec un <code>tableau</code> d'ojets <code>{{WebExtAPIRef('tabs.Tab')}}</code> contenant des informations sur tous les onglets de la fenêtre. Si la fenêtre n'a pas pu être trouvée ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un `tableau` d'ojets `{{WebExtAPIRef('tabs.Tab')}}` contenant des informations sur tous les onglets de la fenêtre. Si la fenêtre n'a pas pu être trouvée ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.getAllInWindow")}}</p>
+{{Compat("webextensions.api.tabs.getAllInWindow")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -84,5 +79,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getAllInWindow
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

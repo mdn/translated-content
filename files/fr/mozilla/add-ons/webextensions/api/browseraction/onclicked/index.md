@@ -13,73 +13,66 @@ tags:
   - onClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Action quand l'icone d'action du navigateur est cliqué. Cet événement ne déclenchera pas si l'action du navigateur comporte une fenêtre contextuelle.</p>
+Action quand l'icone d'action du navigateur est cliqué. Cet événement ne déclenchera pas si l'action du navigateur comporte une fenêtre contextuelle.
 
-<p>Pour définir une action de clic droit, utilisez l'API <a href="/fr/Add-ons/WebExtensions/API/contextMenus"><code>contextMenus</code></a>  avec le <a href="/fr/Add-ons/WebExtensions/API/contextMenus/ContextType">type de contexte</a> "browser_action".</p>
+Pour définir une action de clic droit, utilisez l'API [`contextMenus`](/fr/Add-ons/WebExtensions/API/contextMenus)  avec le [type de contexte](/fr/Add-ons/WebExtensions/API/contextMenus/ContextType) "browser_action".
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener(<code>listener</code>)
+```js
+browser.browserAction.onClicked.addListener(listener)
 browser.browserAction.onClicked.removeListener(listener)
 browser.browserAction.onClicked.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Ajoutez un auditeur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arretez d'écouter cet événement. L'argument de l'auditeur est l'auditeur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifier si l'autditeur est enregistré pour cet événement. Renvoie <code>true</code> si elle est écouté, sinon  <code>false</code>.</dd>
-</dl>
+- `addListener(listener)`
+  - : Ajoutez un auditeur à cet événement.
+- `removeListener(listener)`
+  - : Arretez d'écouter cet événement. L'argument de l'auditeur est l'auditeur à supprimer.
+- `hasListener(listener)`
+  - : Vérifier si l'autditeur est enregistré pour cet événement. Renvoie `true` si elle est écouté, sinon  `false`.
 
-<h2 id="addListener_syntaxe">addListener syntaxe</h2>
+## addListener syntaxe
 
-<h3 id="Paramètre">Paramètre</h3>
+### Paramètre
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction passera par l'argument suivant :</p>
+- `callback`
 
- <dl>
-  <dt><code>tab</code></dt>
-  <dd>{{WebExtAPIRef('tabs.Tab')}}. L'onglet qui était actif lorsque l'icône a été cliquée .</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction passera par l'argument suivant :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `tab`
+      - : {{WebExtAPIRef('tabs.Tab')}}. L'onglet qui était actif lorsque l'icône a été cliquée .
 
-<p>{{Compat("webextensions.api.browserAction.onClicked")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.browserAction.onClicked")}}
 
-<p>Lorsque l'utilisateur clique sur l'icône, désactivez-la pour l'onglet actif et enregistrez l'URL de l'onglet</p>
+## Exemples
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener((tab) =&gt; {
+Lorsque l'utilisateur clique sur l'icône, désactivez-la pour l'onglet actif et enregistrez l'URL de l'onglet
+
+```js
+browser.browserAction.onClicked.addListener((tab) => {
   // disable the active tab
   browser.browserAction.disable(tab.id);
   // requires the "tabs" or "activeTab" permission
   console.log(tab.url);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,5 +99,4 @@ browser.browserAction.onClicked.hasListener(listener)
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -12,65 +12,61 @@ tags:
   - pkcs11
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/getModuleSlots
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Enumérer les emplacements d'un module. Cette fonction renvoie un tableau contenant une entrée pour chaque emplacement. Chaque entrée contient le nom de l'emplacement et, si l'emplacement contient un jeton, des informations sur le jeton.</p>
+Enumérer les emplacements d'un module. Cette fonction renvoie un tableau contenant une entrée pour chaque emplacement. Chaque entrée contient le nom de l'emplacement et, si l'emplacement contient un jeton, des informations sur le jeton.
 
-<p>Vous ne pouvez appeler cela que pour un module installé dans Firefox</p>
+Vous ne pouvez appeler cela que pour un module installé dans Firefox
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var getting = browser.pkcs11.getModuleSlots(
+```js
+var getting = browser.pkcs11.getModuleSlots(
   name              // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>string</code>. Nom du module. Cela doit correspondre à la propriété <code>name</code> dans le <a href="/fr/Add-ons/WebExtensions/Native_manifests#PKCS_11_manifests">manifest PKCS #11</a> pour le module.</dd>
-</dl>
+- `name`
+  - : `string`. Nom du module. Cela doit correspondre à la propriété `name` dans le [manifest PKCS #11](/fr/Add-ons/WebExtensions/Native_manifests#PKCS_11_manifests) pour le module.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un tableau d'objets, un pour chaque emplacement auquel le module donne accès. Chaque objet a deux propriétés :</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets, un pour chaque emplacement auquel le module donne accès. Chaque objet a deux propriétés :
 
-<ul>
- <li><code>name</code>: le nom de l'emplacement</li>
- <li><code>token</code>: si un jeton est présent dans cet emplacement, un objet <code>Token</code>. Si aucun le jeton n'est présent dans l'emplacement, la propriété est <code>null</code>.</li>
-</ul>
+- `name`: le nom de l'emplacement
+- `token`: si un jeton est présent dans cet emplacement, un objet `Token`. Si aucun le jeton n'est présent dans l'emplacement, la propriété est `null`.
 
-<p><code>Token</code> Les objets ont les propriétés suivantes :</p>
+`Token` Les objets ont les propriétés suivantes :
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>string</code>. Nom du jeton.</dd>
- <dt><code>manufacturer</code></dt>
- <dd><code>string</code>. Nom du jeton fabriqué.</dd>
- <dt><code>HWVersion</code></dt>
- <dd><code>string</code>. Version matérielle, en tant que numéro de version PKCS #11 (deux entiers  32-bit séparés par un point, comme "1.0".</dd>
- <dt><code>FWVersion</code></dt>
- <dd><code>string</code>. Version du micrologiciel, en tant que numéro de version PKCS #11 (deux 32-bit séparés par un point, comme "1.0".</dd>
- <dt><code>serial</code></dt>
- <dd><code>string</code>. Numéro de série, dont le format est défini par la spécification de jeton.</dd>
- <dt><code>isLoggedIn</code></dt>
- <dd><code>boolean</code>: <code>true</code> si le jeton est déjà connecté, <code>false</code> sinon.</dd>
-</dl>
+- `name`
+  - : `string`. Nom du jeton.
+- `manufacturer`
+  - : `string`. Nom du jeton fabriqué.
+- `HWVersion`
+  - : `string`. Version matérielle, en tant que numéro de version PKCS #11 (deux entiers  32-bit séparés par un point, comme "1.0".
+- `FWVersion`
+  - : `string`. Version du micrologiciel, en tant que numéro de version PKCS #11 (deux 32-bit séparés par un point, comme "1.0".
+- `serial`
+  - : `string`. Numéro de série, dont le format est défini par la spécification de jeton.
+- `isLoggedIn`
+  - : `boolean`: `true` si le jeton est déjà connecté, `false` sinon.
 
-<p>Si le module n'a pas pu être trouvé ou qu'une autre erreur se produit, la promise sera rejetée avec un message d'erreur.</p>
+Si le module n'a pas pu être trouvé ou qu'une autre erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.pkcs11.getModuleSlots")}}</p>
+{{Compat("webextensions.api.pkcs11.getModuleSlots")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Installe un module, puis dresse la liste de ses emplacements et liste des jetons qu'ils contiennent :</p>
+Installe un module, puis dresse la liste de ses emplacements et liste des jetons qu'ils contiennent :
 
-<pre class="brush: js">function onInstalled() {
+```js
+function onInstalled() {
   return browser.pkcs11.getModuleSlots("my_module");
 }
 
@@ -87,6 +83,7 @@ function onGotSlots(slots) {
 
 browser.pkcs11.installModule("my_module")
 .then(onInstalled)
-.then(onGotSlots);</pre>
+.then(onGotSlots);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

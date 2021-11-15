@@ -7,83 +7,73 @@ tags:
 translation_of: Mozilla/Firefox/Releases/16
 original_slug: Mozilla/Firefox/Versions/16
 ---
-<div>{{FirefoxSidebar}}</div><p>Firefox 16, basé sur Gecko 16.0, est sorti le 9 octobre 2012. Cette page résume les principaux changements dans Firefox 15 qui sont utiles aux développeurs.</p>
+{{FirefoxSidebar}}
 
-<h2 id="Changements_pour_les_développeurs_Web">Changements pour les développeurs Web</h2>
+Firefox 16, basé sur Gecko 16.0, est sorti le 9 octobre 2012. Cette page résume les principaux changements dans Firefox 15 qui sont utiles aux développeurs.
 
-<h3 id="HTML">HTML</h3>
+## Changements pour les développeurs Web
 
-<ul>
- <li>L'élément {{HTMLElement("meter")}} est à présent supporté.</li>
- <li>Le support pour l'API HTML Microdata a été ajouté. ({{bug(591467)}})</li>
- <li>{{HTMLElement("canvas")}} supporte à présent le mot-clé CSS <code>currentColor</code> dans tous les cas. ({{bug("629882")}})</li>
- <li>{{HTMLElement("input")}} permet désormais un filtrage basé sur les types MIME abitraires dans <code>accept</code>. ({{bug(565274)}})</li>
-</ul>
+### HTML
 
-<h3 id="CSS">CSS</h3>
+- L'élément {{HTMLElement("meter")}} est à présent supporté.
+- Le support pour l'API HTML Microdata a été ajouté. ({{bug(591467)}})
+- {{HTMLElement("canvas")}} supporte à présent le mot-clé CSS `currentColor` dans tous les cas. ({{bug("629882")}})
+- {{HTMLElement("input")}} permet désormais un filtrage basé sur les types MIME abitraires dans `accept`. ({{bug(565274)}})
 
-<ul>
- <li>Le support du standard des <a href="/fr/docs/CSS/Animations_CSS">Animations CSS</a> a été lancé sans préfixe. ({{bug(762302)}})</li>
- <li>Le support pour l'inversion de la direction de l'animation (mots-clés <code>reverse</code> et <code>alternate-reverse</code> sur la propriété {{cssxref("animation-direction")}}) a été ajouté. ({{bug(655920)}})</li>
- <li>Vous pouvez désormais animer les propriétés CSS {{cssxref("height")}} et {{cssxref("width")}}.</li>
- <li>Les propriétés CSS {{cssxref("animation-duration")}} et {{cssxref("transition-duration")}} rejettent désormais les valeurs négatives (et ne les traitent plus comme <code>0s</code>) ({{bug(773102)}})</li>
- <li>Le support du standard des <a href="/fr/docs/CSS/Utilisation_des_transformations_CSS">Transformations CSS</a> a été lancé sans préfixe. ({{bug(745523)}})</li>
- <li>Le support du standard des <a href="/fr/docs/CSS/Using_CSS_gradients">Dégradés CSS</a> a été lancé sans préfixe. Notez que la syntaxe a considérablement évoluée depuis la version préfixée. ({{bug(752187)}})</li>
- <li>L'implémentation de {{cssxref("box-sizing", "-moz-box-sizing")}} a été actualisée pour aussi s'appliquer aux cellules du tableau. ({{bug(338554)}})</li>
- <li>Le support du standard de {{cssxref("calc")}} a été lancé sans préfixe. ({{bug(771678)}})</li>
- <li>Le type de données de {{cssxref("&lt;resolution&gt;")}} a été étendu et supporte le <code>dppx</code>. ({{bug(741644)}})</li>
- <li>Sur l'écran, pour les <a href="/fr/docs/CSS/Media_queries">media queries</a>, <code>dppx</code>, <code>dpi</code> et <code>dpcm</code> représentent désormais des valeurs basés sur des pixels CSS et non plus avec les unités physiques. ({{bug(771390)}})</li>
- <li>Trois nouvelles pseudo-classes, <code>:-moz-meter-optimum</code>, <code>:-moz-meter-sub-optimum</code> et <code>:-moz-meter-sub-sub-optimum</code>, ont été ajoutées pour accéder à/styliser un élément {{HTMLElement("meter")}} dans un état particulier. ({{bug(660238)}})</li>
- <li>La propriété {{cssxref("-moz-appearance")}} gagnes deux nouvelles valeurs : <code>meterbar</code> et <code>meterchunk</code>. Elles représentent des composants dans l'élément {{HTMLElement("meter")}}. ({{bug(659999)}})</li>
- <li>{{cssxref("min-width")}} et {{cssxref("min-height")}} supportent désormais le mot-clé <code>auto</code> pour les articles flexibles (et règlent les autres articles à <code>0</code> ). ({{bug(763689)}})</li>
-</ul>
+### CSS
 
-<h3 id="DOM">DOM</h3>
+- Le support du standard des [Animations CSS](/fr/docs/CSS/Animations_CSS) a été lancé sans préfixe. ({{bug(762302)}})
+- Le support pour l'inversion de la direction de l'animation (mots-clés `reverse` et `alternate-reverse` sur la propriété {{cssxref("animation-direction")}}) a été ajouté. ({{bug(655920)}})
+- Vous pouvez désormais animer les propriétés CSS {{cssxref("height")}} et {{cssxref("width")}}.
+- Les propriétés CSS {{cssxref("animation-duration")}} et {{cssxref("transition-duration")}} rejettent désormais les valeurs négatives (et ne les traitent plus comme `0s`) ({{bug(773102)}})
+- Le support du standard des [Transformations CSS](/fr/docs/CSS/Utilisation_des_transformations_CSS) a été lancé sans préfixe. ({{bug(745523)}})
+- Le support du standard des [Dégradés CSS](/fr/docs/CSS/Using_CSS_gradients) a été lancé sans préfixe. Notez que la syntaxe a considérablement évoluée depuis la version préfixée. ({{bug(752187)}})
+- L'implémentation de {{cssxref("box-sizing", "-moz-box-sizing")}} a été actualisée pour aussi s'appliquer aux cellules du tableau. ({{bug(338554)}})
+- Le support du standard de {{cssxref("calc")}} a été lancé sans préfixe. ({{bug(771678)}})
+- Le type de données de {{cssxref("&lt;resolution&gt;")}} a été étendu et supporte le `dppx`. ({{bug(741644)}})
+- Sur l'écran, pour les [media queries](/fr/docs/CSS/Media_queries), `dppx`, `dpi` et `dpcm` représentent désormais des valeurs basés sur des pixels CSS et non plus avec les unités physiques. ({{bug(771390)}})
+- Trois nouvelles pseudo-classes, `:-moz-meter-optimum`, `:-moz-meter-sub-optimum` et `:-moz-meter-sub-sub-optimum`, ont été ajoutées pour accéder à/styliser un élément {{HTMLElement("meter")}} dans un état particulier. ({{bug(660238)}})
+- La propriété {{cssxref("-moz-appearance")}} gagnes deux nouvelles valeurs : `meterbar` et `meterchunk`. Elles représentent des composants dans l'élément {{HTMLElement("meter")}}. ({{bug(659999)}})
+- {{cssxref("min-width")}} et {{cssxref("min-height")}} supportent désormais le mot-clé `auto` pour les articles flexibles (et règlent les autres articles à `0` ). ({{bug(763689)}})
 
-<ul>
- <li>Deux nouvelles propriétés, <code>width</code> et <code>height</code>, ont été ajoutée à l'interface {{domxref("HTMLInputElement")}}. ({{bug(683855)}})</li>
- <li>Les propriétés et méthodes d'IndexedDB n'ont plus de préfixe, depuis que IndexedDB est passé au statut Candidate Recommendation. ({{bug(726378)}})</li>
- <li><a href="/fr/docs/DOM/window.navigator.battery">Battery API</a> n'a plus de préfixe.</li>
- <li>L'API Vibration n'a plus de préfixe.</li>
- <li>L'interface {{domxref("Keyboard")}}, qui est toujours préfixée (<code>mozKeyboard</code>), a désormais les méthodes {{domxref("Keyboard.setSelectedOption()")}} et {{domxref("Keyboard.setValue()")}}, ainsi que la propriété {{domxref("Keyboard.onfocuschange")}}.</li>
- <li>Les attributs <code>Window.java</code> et <code>Window.packages</code> ont été supprimés. Ils n'ont jamais été documentés, et nous espérons que vous ne les utilisiez pas !</li>
- <li><code>CSSRule.type</code> associé avec {{domxref("CSSNamespaceRule")}} a été mis à jour à partir de <code>UNKNOWN_RULE</code> (<code>0</code>) vers <code>NAMESPACE_RULE</code> (<code>10</code>). ({{bug(765590)}})</li>
- <li>API WebSMS : <a href="/fr/docs/DOM/SmsRequest">SmsRequest</a> a été remplacé par qui est plus général.</li>
-</ul>
+### DOM
 
-<h3 id="JavaScript">JavaScript</h3>
+- Deux nouvelles propriétés, `width` et `height`, ont été ajoutée à l'interface {{domxref("HTMLInputElement")}}. ({{bug(683855)}})
+- Les propriétés et méthodes d'IndexedDB n'ont plus de préfixe, depuis que IndexedDB est passé au statut Candidate Recommendation. ({{bug(726378)}})
+- [Battery API](/fr/docs/DOM/window.navigator.battery) n'a plus de préfixe.
+- L'API Vibration n'a plus de préfixe.
+- L'interface {{domxref("Keyboard")}}, qui est toujours préfixée (`mozKeyboard`), a désormais les méthodes {{domxref("Keyboard.setSelectedOption()")}} et {{domxref("Keyboard.setValue()")}}, ainsi que la propriété {{domxref("Keyboard.onfocuschange")}}.
+- Les attributs `Window.java` et `Window.packages` ont été supprimés. Ils n'ont jamais été documentés, et nous espérons que vous ne les utilisiez pas !
+- `CSSRule.type` associé avec {{domxref("CSSNamespaceRule")}} a été mis à jour à partir de `UNKNOWN_RULE` (`0`) vers `NAMESPACE_RULE` (`10`). ({{bug(765590)}})
+- API WebSMS : [SmsRequest](/fr/docs/DOM/SmsRequest) a été remplacé par qui est plus général.
 
-<ul>
- <li>L'objet <a href="/fr/docs/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a> offre désormais les méthodes <code>isFinite()</code>, <code>toInteger()</code> et <code>isInteger()</code>. ({{bug(761480)}}, {{bug(761495)}})</li>
- <li>L'<a href="http://wiki.ecmascript.org/doku.php?id=harmony:spread">opérateur de diffusion</a> d'Harmony a été ajouté à l'objet <a href="/fr/docs/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>. ({{bug(574130)}})</li>
-</ul>
+### JavaScript
 
-<h3 id="MathML">MathML</h3>
+- L'objet [`Number`](/fr/docs/JavaScript/Reference/Global_Objects/Number) offre désormais les méthodes `isFinite()`, `toInteger()` et `isInteger()`. ({{bug(761480)}}, {{bug(761495)}})
+- L'[opérateur de diffusion](http://wiki.ecmascript.org/doku.php?id=harmony:spread) d'Harmony a été ajouté à l'objet [`Array`](/fr/docs/JavaScript/Reference/Global_Objects/Array). ({{bug(574130)}})
 
-<ul>
- <li>Les attributs <code>lspace</code> et <code>rspace</code> de {{MathMLElement("mo")}} ont désormais la constante <code>thickmathspace</code> par défaut.</li>
-</ul>
+### MathML
 
-<h3 id="Outils_de_développement">Outils de développement</h3>
+- Les attributs `lspace` et `rspace` de {{MathMLElement("mo")}} ont désormais la constante `thickmathspace` par défaut.
 
-<ul>
- <li>Il existe à présent une barre de développement très pratique, vous pouvez y accéder en allant dans Outils &gt; Développeur Web &gt; Barre de Développement, ou en appuyant sur Maj+F2. Cette barre d'outils propose une interface en ligne de commande ainsi que des boutons pour accéder rapidement aux outils utiles. L'interface graphique de commande en ligne (<a href="/fr/docs/Tools/GCLI">GCLI</a>) est facile à étendre et d'autres commandes devraient dans le futur. Tapez "help" pour obtenir la liste des commandes disponibles.</li>
- <li>La console Web affiche désormais le nombre d'erreurs afin que vous voyez rapidement la quantité de travail que vous avez devant vous.</li>
- <li>L'Ardoise propose désormais la liste des fichiers récemments ouverts.</li>
-</ul>
+### Outils de développement
 
-<h2 id="Changements_pour_les_développeurs_de_Mozilla_et_de_modules_complémentaires">Changements pour les développeurs de Mozilla et de modules complémentaires</h2>
+- Il existe à présent une barre de développement très pratique, vous pouvez y accéder en allant dans Outils > Développeur Web > Barre de Développement, ou en appuyant sur Maj+F2. Cette barre d'outils propose une interface en ligne de commande ainsi que des boutons pour accéder rapidement aux outils utiles. L'interface graphique de commande en ligne ([GCLI](/fr/docs/Tools/GCLI)) est facile à étendre et d'autres commandes devraient dans le futur. Tapez "help" pour obtenir la liste des commandes disponibles.
+- La console Web affiche désormais le nombre d'erreurs afin que vous voyez rapidement la quantité de travail que vous avez devant vous.
+- L'Ardoise propose désormais la liste des fichiers récemments ouverts.
 
-<h3 id="Changements_dans_les_interfaces">Changements dans les interfaces</h3>
+## Changements pour les développeurs de Mozilla et de modules complémentaires
 
-<p>{{interface("nsIPrivateDOMEvent")}} a été fusionné dans {{interface("nsIDOMEvent")}}. ({{bug("761613")}})</p>
+### Changements dans les interfaces
 
-<h4 id="Nouvelles_interfaces">Nouvelles interfaces</h4>
+{{interface("nsIPrivateDOMEvent")}} a été fusionné dans {{interface("nsIDOMEvent")}}. ({{bug("761613")}})
 
-<h4 id="Interfaces_supprimées">Interfaces supprimées</h4>
+#### Nouvelles interfaces
 
-<p>Les interfaces suivantes ont été supprimées.</p>
+#### Interfaces supprimées
 
-<h2 id="Voir_également">Voir également</h2>
+Les interfaces suivantes ont été supprimées.
 
-<p>{{Firefox_for_developers('15')}}</p>
+## Voir également
+
+{{Firefox_for_developers('15')}}

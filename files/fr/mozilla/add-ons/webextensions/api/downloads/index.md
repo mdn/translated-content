@@ -12,96 +12,88 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Permet aux extensions d'interagir avec le gestionnaire de téléchargement du navigateur. Vous pouvez utiliser ce module API pour télécharger des fichiers, annuler, suspendre, reprendre des téléchargements et afficher les fichiers téléchargés dans le gestionnaire de fichiers.</p>
+Permet aux extensions d'interagir avec le gestionnaire de téléchargement du navigateur. Vous pouvez utiliser ce module API pour télécharger des fichiers, annuler, suspendre, reprendre des téléchargements et afficher les fichiers téléchargés dans le gestionnaire de fichiers.
 
-<p>Pour utiliser cette API, vous devez disposer de l' <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> "downloads" spécifiée dans votre fichier <a href="/fr/Add-ons/WebExtensions/manifest.json">manifest.json</a>.</p>
+Pour utiliser cette API, vous devez disposer de l' [API permission](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "downloads" spécifiée dans votre fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json).
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("downloads.FilenameConflictAction")}}</dt>
- <dd>Définit les options pour ce qu'il faut faire si le nom d'un fichier téléchargé est en conflit avec un fichier existant.</dd>
- <dt>{{WebExtAPIRef("downloads.InterruptReason")}}</dt>
- <dd>Définit un ensemble de raisons possibles pour lesquelles un téléchargement a été interrompu.</dd>
- <dt>{{WebExtAPIRef("downloads.DangerType")}}</dt>
- <dd>Définit un ensemble d'avertissements communs des dangers possibles associés aux fichiers téléchargeables.</dd>
- <dt>{{WebExtAPIRef("downloads.State")}}</dt>
- <dd>Définit différents états dans lesquels un téléchargement en cours peut être.</dd>
- <dt>{{WebExtAPIRef("downloads.DownloadItem")}}</dt>
- <dd>Représente un fichier téléchargé.</dd>
- <dt>{{WebExtAPIRef("downloads.StringDelta")}}</dt>
- <dd>Représente la différence entre deux chaînes.</dd>
- <dt>{{WebExtAPIRef("downloads.DoubleDelta")}}</dt>
- <dd>Représente la différence entre deux doubles.</dd>
- <dt>{{WebExtAPIRef("downloads.BooleanDelta")}}</dt>
- <dd>Représente la différence entre deux booléens.</dd>
- <dt>{{WebExtAPIRef("downloads.DownloadTime")}}</dt>
- <dd>Représente le temps nécessaire au téléchargement pour terminer.</dd>
- <dt>{{WebExtAPIRef("downloads.DownloadQuery")}}</dt>
- <dd>Définit un ensemble de paramètres pouvant être utilisés pour rechercher dans le gestionnaire de téléchargements un ensemble de téléchargements spécifique.</dd>
-</dl>
+- {{WebExtAPIRef("downloads.FilenameConflictAction")}}
+  - : Définit les options pour ce qu'il faut faire si le nom d'un fichier téléchargé est en conflit avec un fichier existant.
+- {{WebExtAPIRef("downloads.InterruptReason")}}
+  - : Définit un ensemble de raisons possibles pour lesquelles un téléchargement a été interrompu.
+- {{WebExtAPIRef("downloads.DangerType")}}
+  - : Définit un ensemble d'avertissements communs des dangers possibles associés aux fichiers téléchargeables.
+- {{WebExtAPIRef("downloads.State")}}
+  - : Définit différents états dans lesquels un téléchargement en cours peut être.
+- {{WebExtAPIRef("downloads.DownloadItem")}}
+  - : Représente un fichier téléchargé.
+- {{WebExtAPIRef("downloads.StringDelta")}}
+  - : Représente la différence entre deux chaînes.
+- {{WebExtAPIRef("downloads.DoubleDelta")}}
+  - : Représente la différence entre deux doubles.
+- {{WebExtAPIRef("downloads.BooleanDelta")}}
+  - : Représente la différence entre deux booléens.
+- {{WebExtAPIRef("downloads.DownloadTime")}}
+  - : Représente le temps nécessaire au téléchargement pour terminer.
+- {{WebExtAPIRef("downloads.DownloadQuery")}}
+  - : Définit un ensemble de paramètres pouvant être utilisés pour rechercher dans le gestionnaire de téléchargements un ensemble de téléchargements spécifique.
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt>{{WebExtAPIRef("downloads.download()")}}</dt>
- <dd>Télécharge un fichier, compte tenu de son URL et d'autres préférences optionnelles.</dd>
- <dt>{{WebExtAPIRef("downloads.search()")}}</dt>
- <dd>Interroge le {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} disponible dans le gestionnaire de téléchargements du navigateur et renvoie ceux qui correspondent aux critères de recherche spécifiés.</dd>
- <dt>{{WebExtAPIRef("downloads.pause()")}}</dt>
- <dd>Suspend un téléchargement.</dd>
- <dt>{{WebExtAPIRef("downloads.resume()")}}</dt>
- <dd>Reprend un téléchargement suspendu.</dd>
- <dt>{{WebExtAPIRef("downloads.cancel()")}}</dt>
- <dd>Annule un téléchargement.</dd>
- <dt>{{WebExtAPIRef("downloads.getFileIcon()")}}</dt>
- <dd>Récupère une icône pour le téléchargement spécifié.</dd>
- <dt>{{WebExtAPIRef("downloads.open()")}}</dt>
- <dd>Ouvre le fichier téléchargé avec son application associée.</dd>
- <dt>{{WebExtAPIRef("downloads.show()")}}</dt>
- <dd>Ouvre l'application du gestionnaire de fichiers de la plateforme pour afficher le fichier téléchargé dans son dossier conteneur.</dd>
- <dt>{{WebExtAPIRef("downloads.showDefaultFolder()")}}</dt>
- <dd>Ouvre l'application du gestionnaire de fichiers de la plateforme pour afficher le dossier de téléchargements par défaut.</dd>
- <dt>{{WebExtAPIRef("downloads.erase()")}}</dt>
- <dd>Efface la correspondance {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} de l'historique de téléchargement du navigateur, sans supprimer les fichiers téléchargés du disque.</dd>
- <dt>{{WebExtAPIRef("downloads.removeFile()")}}</dt>
- <dd>Supprime un fichier téléchargé du disque, mais pas de l'historique de téléchargement du navigateur.</dd>
- <dt>{{WebExtAPIRef("downloads.acceptDanger()")}}</dt>
- <dd>Invite l'utilisateur à accepter ou annuler un téléchargement dangereux.</dd>
- <dt>{{WebExtAPIRef("downloads.drag()")}}</dt>
- <dd>Lance le glissement du fichier téléchargé vers une autre application.</dd>
- <dt>{{WebExtAPIRef("downloads.setShelfEnabled()")}}</dt>
- <dd>Active ou désactive l'étagère grise en bas de chaque fenêtre associée au profil de navigateur actuel. L'étagère sera désactivée si au moins une extension l'a désactivée.</dd>
-</dl>
+- {{WebExtAPIRef("downloads.download()")}}
+  - : Télécharge un fichier, compte tenu de son URL et d'autres préférences optionnelles.
+- {{WebExtAPIRef("downloads.search()")}}
+  - : Interroge le {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} disponible dans le gestionnaire de téléchargements du navigateur et renvoie ceux qui correspondent aux critères de recherche spécifiés.
+- {{WebExtAPIRef("downloads.pause()")}}
+  - : Suspend un téléchargement.
+- {{WebExtAPIRef("downloads.resume()")}}
+  - : Reprend un téléchargement suspendu.
+- {{WebExtAPIRef("downloads.cancel()")}}
+  - : Annule un téléchargement.
+- {{WebExtAPIRef("downloads.getFileIcon()")}}
+  - : Récupère une icône pour le téléchargement spécifié.
+- {{WebExtAPIRef("downloads.open()")}}
+  - : Ouvre le fichier téléchargé avec son application associée.
+- {{WebExtAPIRef("downloads.show()")}}
+  - : Ouvre l'application du gestionnaire de fichiers de la plateforme pour afficher le fichier téléchargé dans son dossier conteneur.
+- {{WebExtAPIRef("downloads.showDefaultFolder()")}}
+  - : Ouvre l'application du gestionnaire de fichiers de la plateforme pour afficher le dossier de téléchargements par défaut.
+- {{WebExtAPIRef("downloads.erase()")}}
+  - : Efface la correspondance {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} de l'historique de téléchargement du navigateur, sans supprimer les fichiers téléchargés du disque.
+- {{WebExtAPIRef("downloads.removeFile()")}}
+  - : Supprime un fichier téléchargé du disque, mais pas de l'historique de téléchargement du navigateur.
+- {{WebExtAPIRef("downloads.acceptDanger()")}}
+  - : Invite l'utilisateur à accepter ou annuler un téléchargement dangereux.
+- {{WebExtAPIRef("downloads.drag()")}}
+  - : Lance le glissement du fichier téléchargé vers une autre application.
+- {{WebExtAPIRef("downloads.setShelfEnabled()")}}
+  - : Active ou désactive l'étagère grise en bas de chaque fenêtre associée au profil de navigateur actuel. L'étagère sera désactivée si au moins une extension l'a désactivée.
 
-<h2 id="Evénements">Evénements</h2>
+## Evénements
 
-<dl>
- <dt>{{WebExtAPIRef("downloads.onCreated")}}</dt>
- <dd>Se déclenche avec l'objet {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} lorsqu'un téléchargement commence.</dd>
- <dt>{{WebExtAPIRef("downloads.onErased")}}</dt>
- <dd>Se déclenche avec <code>downloadId</code> lorsqu'un téléchargement est effacé de l'historique.</dd>
- <dt>{{WebExtAPIRef("downloads.onChanged")}}</dt>
- <dd>Lorsque l'une des propriétés de {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} sauf les changements <code>bytesReceived</code>, cet événement se déclenche avec le <code>downloadId</code> et un objet contenant les propriétés qui ont changé.</dd>
-</dl>
+- {{WebExtAPIRef("downloads.onCreated")}}
+  - : Se déclenche avec l'objet {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} lorsqu'un téléchargement commence.
+- {{WebExtAPIRef("downloads.onErased")}}
+  - : Se déclenche avec `downloadId` lorsqu'un téléchargement est effacé de l'historique.
+- {{WebExtAPIRef("downloads.onChanged")}}
+  - : Lorsque l'une des propriétés de {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} sauf les changements `bytesReceived`, cet événement se déclenche avec le `downloadId` et un objet contenant les propriétés qui ont changé.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.downloads")}}</p>
+{{Compat("webextensions.api.downloads")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -128,5 +120,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -10,42 +10,37 @@ tags:
   - menus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Renvoie l'élément pour un <code>targetElementId</code> donné</p>
+Renvoie l'élément pour un `targetElementId` donné
 
-<p>Cette méthode est disponible pour tous les contextes de script d'extension (scripts de contenu, pages de fond et autres pages d'extension) et retourne l'élément pour un  <code>info.targetElementId</code> donnée, à condition que l'élément existe toujours dans le document où la méthode est appelée.</p>
+Cette méthode est disponible pour tous les contextes de script d'extension (scripts de contenu, pages de fond et autres pages d'extension) et retourne l'élément pour un  `info.targetElementId` donnée, à condition que l'élément existe toujours dans le document où la méthode est appelée.
 
-<p>La méthode ne fonctionne que dans le document qui inclut l'élément cliqué avec le bouton droit de la souris et la méthode <code>targetElementId</code> expire lorsque l'utilisateur ouvre un autre menu contextuel.</p>
+La méthode ne fonctionne que dans le document qui inclut l'élément cliqué avec le bouton droit de la souris et la méthode `targetElementId` expire lorsque l'utilisateur ouvre un autre menu contextuel.
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> <code>menus.getTargetElement</code> ne retourne l'élément demandé que s'il est appelé dans le même contexte que le document qui contient l'élément, par exemple en utilisant des scripts de contenu (comme dans l'exemple ci-dessous).</p>
-</div>
+> **Note :** `menus.getTargetElement` ne retourne l'élément demandé que s'il est appelé dans le même contexte que le document qui contient l'élément, par exemple en utilisant des scripts de contenu (comme dans l'exemple ci-dessous).
 
-<p><br>
- Une extension nécessite la permission "menus" pour utiliser cette API</p>
+Une extension nécessite la permission "menus" pour utiliser cette API
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">let elem = browser.menus.getTargetElement(targetElementId);
-</pre>
+    let elem = browser.menus.getTargetElement(targetElementId);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>targetElementId</code></dt>
- <dd>La propriété de l'objet <code>{{WebExtAPIRef("menus.OnClickData")}}</code> passé au gestionnaire <code>{{WebExtAPIRef("menus.onClicked")}}</code>ou à l'événement <code>{{WebExtAPIRef("menus.onShown")}}</code>.</dd>
-</dl>
+- `targetElementId`
+  - : La propriété de l'objet `{{WebExtAPIRef("menus.OnClickData")}}` passé au gestionnaire `{{WebExtAPIRef("menus.onClicked")}}`ou à l'événement `{{WebExtAPIRef("menus.onShown")}}`.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>L'élément auquel se réfère le paramètre <code>targetElementId</code>. Si le paramètre <code>targetElementId</code> n'est pas valide, La méthode retourne <code>null</code>.</p>
+L'élément auquel se réfère le paramètre `targetElementId`. Si le paramètre `targetElementId` n'est pas valide, La méthode retourne `null`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'exemple suivant utilise la méthode <code>getTargetElement</code> pour obtenir l'élément auquel se réfère la propriété <code>info.targetElementId</code> puis le supprime.</p>
+L'exemple suivant utilise la méthode `getTargetElement` pour obtenir l'élément auquel se réfère la propriété `info.targetElementId` puis le supprime.
 
-<pre class="brush: js">browser.menus.create({
+```js
+browser.menus.create({
   title: "Remove element",
   documentUrlPatterns: ["*://*/*"],
   contexts: ["audio", "editable", "frame", "image", "link", "page", "password", "video"],
@@ -56,19 +51,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
     });
   },
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
+{{Compat("webextensions.api.menus.getTargetElement")}}
 
+## voir aussi
 
-<p>{{Compat("webextensions.api.menus.getTargetElement")}}</p>
-
-<h2 id="voir_aussi">voir aussi</h2>
-
-<ul>
- <li>{{WebExtAPIRef("menus.create")}}</li>
- <li>{{WebExtAPIRef("menus.OnClickData")}}</li>
-</ul>
+- {{WebExtAPIRef("menus.create")}}
+- {{WebExtAPIRef("menus.OnClickData")}}

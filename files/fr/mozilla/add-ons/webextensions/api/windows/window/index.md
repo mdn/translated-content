@@ -5,61 +5,57 @@ tags:
   - Fenêtre
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/Window
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Informations sur une fenêtre du navigateur.</p>
+Informations sur une fenêtre du navigateur.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>alwaysOnTop</code></dt>
- <dd><code>boolean</code>. Que la fenêtre soit configurée pour toujours être sur le dessus.</dd>
- <dt><code>focused</code></dt>
- <dd><code>boolean</code>.  Que la fenêtre soit actuellement la fenêtre ciblée.</dd>
- <dt><code>height</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. La hauteur de la fenêtre, y compris le cadre, en pixels.</dd>
-</dl>
+- `alwaysOnTop`
+  - : `boolean`. Que la fenêtre soit configurée pour toujours être sur le dessus.
+- `focused`
+  - : `boolean`.  Que la fenêtre soit actuellement la fenêtre ciblée.
+- `height`{{optional_inline}}
+  - : `integer`. La hauteur de la fenêtre, y compris le cadre, en pixels.
 
-<dl>
- <dt><code>id</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. L'ID de la fenêtre. Les identifiants de fenêtre sont uniques dans une session de navigateur.</dd>
- <dt><code>incognito</code></dt>
- <dd><code>boolean</code>. Que la fenêtre soit incognito (privé).</dd>
- <dt><code>left</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. Le décalage de la fenêtre du bord gauche de l'écran en pixels.</dd>
- <dt><code>sessionId</code>{{optional_inline}}</dt>
- <dd><code>string</code>. L'ID de session utilisé pour identifier de manière unique une fenêtre obtenue à partir de l'API {{WebExtAPIRef ('sessions')}}.</dd>
- <dt><code>state</code>{{optional_inline}}</dt>
- <dd>Une valeur {{WebExtAPIRef('windows.WindowState')}} représentant l'état de cette fenêtre du navigateur - maximisé, minimisé, etc.</dd>
- <dt><code>tabs</code>{{optional_inline}}</dt>
- <dd>Tableau d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets courants dans la fenêtre.</dd>
- <dt><code>title</code> {{optional_inline}}</dt>
- <dd>Le titre de la fenêtre du navigateur. Nécessite la permission "tabs". Lecture seulement.</dd>
- <dt><code>top</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. Le décalage de la fenêtre du bord supérieur de l'écran en pixels.</dd>
- <dt><code>type</code>{{optional_inline}}</dt>
- <dd>Une valeur {{WebExtAPIRef('windows.WindowType')}} représentant le type de fenêtre du navigateur, c'est-à-dire — fenêtre normale du navigateur, fenêtre contextuelle, etc.</dd>
- <dt><code>width</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. La largeur de la fenêtre, y compris le cadre, en pixels.</dd>
-</dl>
+<!---->
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- `id`{{optional_inline}}
+  - : `integer`. L'ID de la fenêtre. Les identifiants de fenêtre sont uniques dans une session de navigateur.
+- `incognito`
+  - : `boolean`. Que la fenêtre soit incognito (privé).
+- `left`{{optional_inline}}
+  - : `integer`. Le décalage de la fenêtre du bord gauche de l'écran en pixels.
+- `sessionId`{{optional_inline}}
+  - : `string`. L'ID de session utilisé pour identifier de manière unique une fenêtre obtenue à partir de l'API {{WebExtAPIRef ('sessions')}}.
+- `state`{{optional_inline}}
+  - : Une valeur {{WebExtAPIRef('windows.WindowState')}} représentant l'état de cette fenêtre du navigateur - maximisé, minimisé, etc.
+- `tabs`{{optional_inline}}
+  - : Tableau d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets courants dans la fenêtre.
+- `title` {{optional_inline}}
+  - : Le titre de la fenêtre du navigateur. Nécessite la permission "tabs". Lecture seulement.
+- `top`{{optional_inline}}
+  - : `integer`. Le décalage de la fenêtre du bord supérieur de l'écran en pixels.
+- `type`{{optional_inline}}
+  - : Une valeur {{WebExtAPIRef('windows.WindowType')}} représentant le type de fenêtre du navigateur, c'est-à-dire — fenêtre normale du navigateur, fenêtre contextuelle, etc.
+- `width`{{optional_inline}}
+  - : `integer`. La largeur de la fenêtre, y compris le cadre, en pixels.
 
-<p>{{Compat("webextensions.api.windows.Window")}}</p>
+## Compatibilité du navigateur
 
-<p>{{WebExtExamples}}</p>
+{{Compat("webextensions.api.windows.Window")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+{{WebExtExamples}}
 
-<p>Cette API est basée sur l'API de Chromium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
+> **Note :**
+>
+> Cette API est basée sur l'API de Chromium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+>
+> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<p>Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -86,5 +82,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/Window
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

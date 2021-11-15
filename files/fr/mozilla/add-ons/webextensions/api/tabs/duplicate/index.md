@@ -4,52 +4,45 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 browser-compat: webextensions.api.tabs.duplicate
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Duplique un onglet dont l'identifiant est donné.</p>
+Duplique un onglet dont l'identifiant est donné.
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">promesse (<code>Promise</code>)</a>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:js">
+```js
 let duplicating = browser.tabs.duplicate(
   tabId,              // entier
   duplicateProperties // objet optionnel
 );
-</pre>
+```
 
-<h3 id="parameters">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. L'identifiant de l'onglet à dupliquer.</dd>
- <dt><code>duplicateProperties</code> Optionnel</dt>
- <dd><p><code>object</code>. Un objet décrivant la façon dont l'onglet est dupliqué. Il contient les propriétés suivantes :</p>
- <dl>
-  <dt><code><var>index</var></code> Optionnel</dt>
-  <dd><code>integer</code>. La position du nouvel onglet dans la fenêtre. La valeur est restreinte à l'intervalle entre zéro et le nombre d'onglets dans la fenêtre.</dd>
-  <dt><code><var>active</var></code> Optionnel</dt>
-  <dd>
-  <p><code>boolean</code>. Si l'onglet devient l'onglet actif dans la fenêtre. Cela ne change pas l'état du focus pour la fenêtre. <code>true</code> par défaut.</p>
-  </dd>
- </dl>
- </dd>
-</dl>
+- `tabId`
+  - : `integer`. L'identifiant de l'onglet à dupliquer.
+- `duplicateProperties` Optionnel
 
-<h3 id="return_value">Valeur de retour</h3>
+  - : `object`. Un objet décrivant la façon dont l'onglet est dupliqué. Il contient les propriétés suivantes :
 
-<p>Une <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">promesse (<code>Promise</code>)</a> dont la valeur de résolution sera un objet <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab"><code>tabs.Tab</code></a> contenant des détails sur l'onglet dupliqué. L'objet <code>Tab</code> contiendra les propriétés <code>url</code>, <code>title</code> et <code>favIconUrl</code> uniquement si l'extension dispose de la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"> permission <code>"tabs"</code></a> ou lorsque <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">l'hôte correspond à un hôte ciblé dans les permissions</a>. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+    - `index` Optionnel
+      - : `integer`. La position du nouvel onglet dans la fenêtre. La valeur est restreinte à l'intervalle entre zéro et le nombre d'onglets dans la fenêtre.
+    - `active` Optionnel
+      - : `boolean`. Si l'onglet devient l'onglet actif dans la fenêtre. Cela ne change pas l'état du focus pour la fenêtre. `true` par défaut.
 
-<div class="note">
-<p><strong>Note :</strong> À partir de Firefox 68, la promesse renvoyée par <code>browser.tabs.duplicate()</code> se résout dès que l'onglet a été dupliqué. Auparavant, la promesse n'était résolue qu'une fois l'onglet entièrement chargé.</p>
-</div>
+### Valeur de retour
 
-<h2 id="Exemples">Exemples</h2>
+Une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution sera un objet [`tabs.Tab`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) contenant des détails sur l'onglet dupliqué. L'objet `Tab` contiendra les propriétés `url`, `title` et `favIconUrl` uniquement si l'extension dispose de la [permission `"tabs"`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ou lorsque [l'hôte correspond à un hôte ciblé dans les permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-<p>Duplique le premier onglet, puis affiche l'identifiant de l'onglet nouvellement créé :</p>
+> **Note :** À partir de Firefox 68, la promesse renvoyée par `browser.tabs.duplicate()` se résout dès que l'onglet a été dupliqué. Auparavant, la promesse n'était résolue qu'une fois l'onglet entièrement chargé.
 
-<pre class="brush: js">
+## Exemples
+
+Duplique le premier onglet, puis affiche l'identifiant de l'onglet nouvellement créé :
+
+```js
 function onDuplicated(tabInfo) {
   console.log(tabInfo.id);
 }
@@ -61,7 +54,7 @@ function onError(error) {
 // Duplique le premier onglet du tableau
 function duplicateFirstTab(tabs) {
   console.log(tabs);
-  if (tabs.length &gt; 0) {
+  if (tabs.length > 0) {
     let duplicating = browser.tabs.duplicate(tabs[0].id);
     duplicating.then(onDuplicated, onError);
   }
@@ -69,27 +62,24 @@ function duplicateFirstTab(tabs) {
 
 // On récupère tous les onglets ouverts
 let querying = browser.tabs.query({});
-querying.then(duplicateFirstTab, onError);</pre>
+querying.then(duplicateFirstTab, onError);
+```
 
-<h3 id="example_extensions">Exemple d'extensions</h3>
+### Exemple d'extensions
 
-<ul>
-  <li><a href="https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs">tabs-tabs-tabs</a></li>
-</ul>
+- [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs)
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -116,5 +106,4 @@ querying.then(duplicateFirstTab, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

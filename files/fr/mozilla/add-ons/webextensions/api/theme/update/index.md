@@ -12,39 +12,39 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/update
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Met à jour le thème du navigateur en fonction du contenu de l'objet {{WebExtAPIRef("theme.Theme", "Theme")}} donné.</p>
+Met à jour le thème du navigateur en fonction du contenu de l'objet {{WebExtAPIRef("theme.Theme", "Theme")}} donné.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.theme.update(
+```js
+browser.theme.update(
   windowId,    // integer
   theme        // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>windowId</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. L'ID d'une fenêtre. Si cela est prévu, le thème est appliqué uniquement à cette fenêtre. S'il est omis, le thème est appliqué à toutes les fenêtres.</dd>
-</dl>
+- `windowId` {{optional_inline}}
+  - : `integer`. L'ID d'une fenêtre. Si cela est prévu, le thème est appliqué uniquement à cette fenêtre. S'il est omis, le thème est appliqué à toutes les fenêtres.
 
-<dl>
- <dt><code>theme</code></dt>
- <dd><code>object</code>. Un objet {{WebExtAPIRef("theme.Theme", "Theme")}} spécifiant des valeurs pour les éléments de l'interface utilisateur que vous voulez modifier</dd>
-</dl>
+<!---->
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- `theme`
+  - : `object`. Un objet {{WebExtAPIRef("theme.Theme", "Theme")}} spécifiant des valeurs pour les éléments de l'interface utilisateur que vous voulez modifier
 
-<p>{{Compat("webextensions.api.theme.update", 10)}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.theme.update", 10)}}
 
-<p>Définit le thème du navigateur pour utiliser un graphique solaire avec une couleur de fond complémentaire:</p>
+## Exemples
 
-<pre class="brush: js">const suntheme = {
+Définit le thème du navigateur pour utiliser un graphique solaire avec une couleur de fond complémentaire:
+
+```js
+const suntheme = {
  images: {
    headerURL: 'sun.jpg',
  },
@@ -54,11 +54,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/theme/update
  }
 };
 
-browser.theme.update(suntheme);</pre>
+browser.theme.update(suntheme);
+```
 
-<p>Définissez le thème uniquement pour la fenêtre actuellement ciblée:</p>
+Définissez le thème uniquement pour la fenêtre actuellement ciblée:
 
-<pre class="brush: js">const day = {
+```js
+const day = {
     images: {
       headerURL: 'sun.jpg',
     },
@@ -79,6 +81,7 @@ async function updateThemeForCurrentWindow() {
   browser.theme.update(currentWindow.id, day);
 }
 
-browser.menus.onClicked.addListener(updateThemeForCurrentWindow);</pre>
+browser.menus.onClicked.addListener(updateThemeForCurrentWindow);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

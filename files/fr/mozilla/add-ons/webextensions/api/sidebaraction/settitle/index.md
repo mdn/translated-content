@@ -12,85 +12,81 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Définit le titre de la barre latérale. Le titre est affiché n'importe où dans les barres latérales du navigateur. Par exemple, Firefox l'affichera dans le menu "Affichage &gt; Barre latérale". Il est également affiché en haut de la barre latérale lorsque la barre latérale est ouverte.</p>
+Définit le titre de la barre latérale. Le titre est affiché n'importe où dans les barres latérales du navigateur. Par exemple, Firefox l'affichera dans le menu "Affichage > Barre latérale". Il est également affiché en haut de la barre latérale lorsque la barre latérale est ouverte.
 
-<h2 id="Types_de_titres">Types de titres</h2>
+## Types de titres
 
-<p>Votre extension doit spécifier un titre pour la barre latérale dans la clé de manifest  <a href="/fr/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a>. C'est ce qu'on appelle le <em>"titre du manifest"</em>. Si vous ne spécifiez pas le titre du manifest, il sera par défaut le nom de l'extension</p>
+Votre extension doit spécifier un titre pour la barre latérale dans la clé de manifest  [sidebar_action](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action). C'est ce qu'on appelle le _"titre du manifest"_. Si vous ne spécifiez pas le titre du manifest, il sera par défaut le nom de l'extension
 
-<p>Si vous définissez un nouveau titre à l'aide de <code>setTitle()</code>, et incluez l'option <code>tabId</code> le titre est défini uniquement pour l'onglet donné. Ce titre est appelé <em>"titre spécifique à l'onglet"</em>.</p>
+Si vous définissez un nouveau titre à l'aide de `setTitle()`, et incluez l'option `tabId` le titre est défini uniquement pour l'onglet donné. Ce titre est appelé _"titre spécifique à l'onglet"_.
 
+Si vous définissez un nouveau titre à l'aide de `setTitle()`,  et incluez l'option `windowId`, alors le titre est défini uniquement pour la fenêtre donnée. Ce titre est appelé _"titre spécifique à la fenêtre"_, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas de titre spécifique à un onglet.
 
+Si vous définissez un nouveau titre à l'aide de `setTitle()`, et omettre les options `tabId` et `windowId`, alors ceci définit le _"titre global"_. Le titre global apparaîtra alors dans tous les onglets qui n'ont pas de titre spécifique à un onglet et dont la fenêtre n'a pas de titre spécifique à une fenêtre.
 
-<p>Si vous définissez un nouveau titre à l'aide de <code>setTitle()</code>,  et incluez l'option <code>windowId</code>, alors le titre est défini uniquement pour la fenêtre donnée. Ce titre est appelé <em>"titre spécifique à la fenêtre"</em>, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas de titre spécifique à un onglet.</p>
+## Syntaxe
 
-<p>Si vous définissez un nouveau titre à l'aide de <code>setTitle()</code>, et omettre les options <code>tabId</code> et <code>windowId</code>, alors ceci définit le <em>"titre global"</em>. Le titre global apparaîtra alors dans tous les onglets qui n'ont pas de titre spécifique à un onglet et dont la fenêtre n'a pas de titre spécifique à une fenêtre.</p>
-
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: js">browser.sidebarAction.setTitle(
+```js
+browser.sidebarAction.setTitle(
   details // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. Un objet avec les propriétés suivantes .</p>
- <dl>
-  <dt><code>title</code></dt>
-  <dd><p><code>string</code> ou <code>null</code>. Le nouveau titre de la barre latérale.</p>
-  <p>si le <code>titre</code>  est une chaîne vide, le titre utilisé sera le nom de l'extension, mais {{WebExtAPIRef("sidebarAction.getTitle")}} fournira toujours la chaîne vide.</p>
+- `details`
 
-  <p>Si le <code>titre</code> est <code>null</code>, alors un titre précédemment défini sera supprimé, de sorte que :</p>
+  - : `object`. Un objet avec les propriétés suivantes .
 
-  <ul>
-   <li>Si <code>tabId</code> est spécifié, et que l'onglet a un jeu de titres spécifiques aux onglets, alors l'onglet héritera du titre de la fenêtre à laquelle il appartient.</li>
-   <li>Si <code>windowId</code> est spécifié et que la fenêtre a un titre spécifique à la fenêtre, alors la fenêtre héritera du titre global.</li>
-   <li>Sinon, le titre global sera réinitialisé au titre du manifest.</li>
-  </ul>
-  </dd>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Définit le titre uniquement pour l'onglet donné.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Définit le titre uniquement pour la fenêtre donnée.</dd>
- </dl>
- </dd>
-</dl>
+    - `title`
 
-<ul>
- <li>Si <code>windowId</code> et <code>tabId</code> sont tous deux fournis, la fonction échoue et le titre n'est pas défini.</li>
- <li>SI <code>windowId</code> et <code>tabId</code> sont tous les deux omis, le titre global est définit.</li>
-</ul>
+      - : `string` ou `null`. Le nouveau titre de la barre latérale.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+        si le `titre`  est une chaîne vide, le titre utilisé sera le nom de l'extension, mais {{WebExtAPIRef("sidebarAction.getTitle")}} fournira toujours la chaîne vide.
 
-<p>{{Compat("webextensions.api.sidebarAction.setTitle",2)}}</p>
+        Si le `titre` est `null`, alors un titre précédemment défini sera supprimé, de sorte que :
 
-<h2 id="Exemples">Exemples</h2>
+        - Si `tabId` est spécifié, et que l'onglet a un jeu de titres spécifiques aux onglets, alors l'onglet héritera du titre de la fenêtre à laquelle il appartient.
+        - Si `windowId` est spécifié et que la fenêtre a un titre spécifique à la fenêtre, alors la fenêtre héritera du titre global.
+        - Sinon, le titre global sera réinitialisé au titre du manifest.
 
-<p>Ce code modifie le titre de la barre latérale lorsque l'utilisateur clique sur une action du navigateur, mais uniquement pour l'onglet en cours :</p>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Définit le titre uniquement pour l'onglet donné.
+    - `windowId`{{optional_inline}}
+      - : `integer`. Définit le titre uniquement pour la fenêtre donnée.
 
-<pre class="brush: js">var title = "A different title";
+<!---->
+
+- Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et le titre n'est pas défini.
+- SI `windowId` et `tabId` sont tous les deux omis, le titre global est définit.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.sidebarAction.setTitle",2)}}
+
+## Exemples
+
+Ce code modifie le titre de la barre latérale lorsque l'utilisateur clique sur une action du navigateur, mais uniquement pour l'onglet en cours :
+
+```js
+var title = "A different title";
 
 function setTitleForTab(tab) {
   browser.sidebarAction.setTitle({title, tabId: tab.id});
 }
 
-browser.browserAction.onClicked.addListener(setTitleForTab);</pre>
+browser.browserAction.onClicked.addListener(setTitleForTab);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
 
-<p>Cette API est basée sur l'API Opera <a href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a>.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -117,5 +113,4 @@ browser.browserAction.onClicked.addListener(setTitleForTab);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

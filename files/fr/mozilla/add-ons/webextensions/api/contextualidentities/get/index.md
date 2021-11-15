@@ -12,41 +12,39 @@ tags:
   - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient des informations sur une identité contextuelle, compte tenu de son ID de cookie.</p>
+Obtient des informations sur une identité contextuelle, compte tenu de son ID de cookie.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var getContext = browser.contextualIdentities.get(
+```js
+var getContext = browser.contextualIdentities.get(
   cookieStoreId                  // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>cookieStoreId</code></dt>
- <dd>
- <p><code>string</code>. L'identifiant du cookie store de cette identité contextuelle. Étant donné que les identités contextuelles ont chacune leur propre magasin de cookies, cela sert d'identifiant pour l'identité contextuelle elle-même.</p>
- </dd>
-</dl>
+- `cookieStoreId`
+  - : `string`. L'identifiant du cookie store de cette identité contextuelle. Étant donné que les identités contextuelles ont chacune leur propre magasin de cookies, cela sert d'identifiant pour l'identité contextuelle elle-même.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} qui décrit l'identité. Si l'identité n'a pas pu être trouvée ou si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} qui décrit l'identité. Si l'identité n'a pas pu être trouvée ou si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
 
-<h2 id="Comptatiblité_du_navigateur">Comptatiblité du navigateur</h2>
+## Comptatiblité du navigateur
 
-<p>{{Compat("webextensions.api.contextualIdentities.get")}}</p>
+{{Compat("webextensions.api.contextualIdentities.get")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple tente de récupérer l'identité contextuelle dont l'ID est "firefox-container-1":</p>
+Cet exemple tente de récupérer l'identité contextuelle dont l'ID est "firefox-container-1":
 
-<pre class="brush: js">function onGot(context) {
+```js
+function onGot(context) {
   if (!context) {
     console.error("Context not found");
   } else {
@@ -58,6 +56,7 @@ function onError(e) {
   console.error(e);
 }
 
-browser.contextualIdentities.get("firefox-container-1").then(onGot, onError);</pre>
+browser.contextualIdentities.get("firefox-container-1").then(onGot, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

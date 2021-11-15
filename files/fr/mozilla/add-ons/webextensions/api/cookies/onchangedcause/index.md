@@ -13,53 +13,51 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Le type <code>OnChangedCause</code> de l'API {{WebExtAPIRef("cookies")}} représente la raison pour laquelle un cookie a été modifié.</p>
+Le type `OnChangedCause` de l'API {{WebExtAPIRef("cookies")}} représente la raison pour laquelle un cookie a été modifié.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :</p>
+Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
-<dl>
- <dt><code>evicted</code></dt>
- <dd>Un cookie a été automatiquement supprimé en raison d'un nettoyage de mémoire.</dd>
- <dt><code>expired</code></dt>
- <dd>Un cookie a été automatiquement supprimé en raison de l'expiration.</dd>
- <dt><code>explicit</code></dt>
- <dd>Un cookie a été inséré ou supprimé via un appel explicite à {{WebExtAPIRef("cookies.remove()")}}.</dd>
- <dt><code>expired_overwrite</code></dt>
- <dd>Un cookie a été remplacé par un cookie dont la date d'expiration est déjà expirée.</dd>
- <dt><code>overwrite</code></dt>
- <dd>Un appel à {{WebExtAPIRef("cookies.set()")}} a remplacé ce cookie par un autre.</dd>
-</dl>
+- `evicted`
+  - : Un cookie a été automatiquement supprimé en raison d'un nettoyage de mémoire.
+- `expired`
+  - : Un cookie a été automatiquement supprimé en raison de l'expiration.
+- `explicit`
+  - : Un cookie a été inséré ou supprimé via un appel explicite à {{WebExtAPIRef("cookies.remove()")}}.
+- `expired_overwrite`
+  - : Un cookie a été remplacé par un cookie dont la date d'expiration est déjà expirée.
+- `overwrite`
+  - : Un appel à {{WebExtAPIRef("cookies.set()")}} a remplacé ce cookie par un autre.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.cookies.OnChangedCause")}}</p>
+{{Compat("webextensions.api.cookies.OnChangedCause")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Vous pouvez écouter l'événement {{WebExtAPIRef("cookies.onChanged")}} pour être averti lorsque les cookies changent. L'écouteur reçoit un objet  <code>changeInfo</code> qui contient une propriété <code>cause</code>, dont la valeur est une chaîne <code>OnChangeCaused</code> :</p>
+Vous pouvez écouter l'événement {{WebExtAPIRef("cookies.onChanged")}} pour être averti lorsque les cookies changent. L'écouteur reçoit un objet  `changeInfo` qui contient une propriété `cause`, dont la valeur est une chaîne `OnChangeCaused` :
 
-<pre class="brush: js">browser.cookies.onChanged.addListener(function(changeInfo) {
+```js
+browser.cookies.onChanged.addListener(function(changeInfo) {
   console.log('Cookie changed: ' +
               '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
               '\n * Cause: ' + changeInfo.cause +
               '\n * Removed: ' + changeInfo.removed);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/extensions/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -86,5 +84,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

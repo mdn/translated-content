@@ -10,45 +10,39 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/disconnect
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Déconnecte le filtre de la requête. Après cela, le navigateur continuera à traiter la réponse, mais plus aucun événement de filtrage ne se déclenchera, et plus aucun appel de fonction de filtrage n'aura d'effet.Notez la différence entre cette fonction et {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}. Avec  `disconnect()`, le navigateur continuera à traiter d'autres données de réponse, mais il ne sera pas accessible par le filtre. Avec `close()`, le navigateur ignorera toutes les données de réponse qui n'ont pas déjà été transmises au moteur de rendu.
 
-<div>Déconnecte le filtre de la requête. Après cela, le navigateur continuera à traiter la réponse, mais plus aucun événement de filtrage ne se déclenchera, et plus aucun appel de fonction de filtrage n'aura d'effet.</div>
+Vous devriez toujours appeler `disconnect()` ou `close()` une fois que vous n'avez plus besoin d'interagir avec la réponse.
 
-<div></div>
+Vous ne pouvez pas appeler cette fonction avant que l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.
 
-<div>Notez la différence entre cette fonction et {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}. Avec  <code>disconnect()</code>, le navigateur continuera à traiter d'autres données de réponse, mais il ne sera pas accessible par le filtre. Avec <code>close()</code>, le navigateur ignorera toutes les données de réponse qui n'ont pas déjà été transmises au moteur de rendu.</div>
+## Syntaxe
 
-<div></div>
+```js
+filter.disconnect()
+```
 
-<p>Vous devriez toujours appeler <code>disconnect()</code> ou <code>close()</code> une fois que vous n'avez plus besoin d'interagir avec la réponse.</p>
+### Paramètres
 
-<p>Vous ne pouvez pas appeler cette fonction avant que l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.</p>
+None.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+### Valeur retournée
 
-<pre class="brush: js">filter.disconnect()
-</pre>
+None.
 
-<h3 id="Paramètres">Paramètres</h3>
+## Compatibilité du navigateur
 
-<p>None.</p>
+{{Compat("webextensions.api.webRequest.StreamFilter.disconnect", 10)}}
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+## Exemples
 
-<p>None.</p>
+Cet exemple précèdera "preface text" au corps de la réponse. Il se déconnecte ensuite, de sorte que le corps de réponse d'origine se charge normalement :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
-
-<p>{{Compat("webextensions.api.webRequest.StreamFilter.disconnect", 10)}}</p>
-
-<h2 id="Exemples">Exemples</h2>
-
-<p>Cet exemple précèdera "preface text" au corps de la réponse. Il se déconnecte ensuite, de sorte que le corps de réponse d'origine se charge normalement :</p>
-
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event =&gt; {
+  filter.onstart = event => {
     console.log("started");
     let encoder = new TextEncoder();
     filter.write(encoder.encode("preface text"));
@@ -60,6 +54,7 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.org/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

@@ -12,40 +12,36 @@ tags:
   - extensionType
 translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Certains types communs utilisés dans d'autres APIs WebExtensions.</p>
+Certains types communs utilisés dans d'autres APIs WebExtensions.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("extensionTypes.ImageDetails")}}</dt>
- <dd>Détails sur le format et la qualité de l'image.</dd>
- <dt>{{WebExtAPIRef("extensionTypes.ImageFormat")}}</dt>
- <dd>Le format d'une image.</dd>
- <dt>{{WebExtAPIRef("extensionTypes.ImageDetails")}}</dt>
- <dd>Injecte des détails dans une page</dd>
- <dt>{{WebExtAPIRef("extensionTypes.RunAt")}}</dt>
- <dd>Le plus tot que le Javascript ou le CSS est injecté dans l'onglet.</dd>
- <dt><code>extensionTypes.CSSOrigin</code></dt>
- <dd>Indique si une feuille de style CSS injectée par <code><a href="/fr/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS</a></code> doit être traitée comme une feuille de style "auteur" ou "utilisateur".</dd>
-</dl>
+- {{WebExtAPIRef("extensionTypes.ImageDetails")}}
+  - : Détails sur le format et la qualité de l'image.
+- {{WebExtAPIRef("extensionTypes.ImageFormat")}}
+  - : Le format d'une image.
+- {{WebExtAPIRef("extensionTypes.ImageDetails")}}
+  - : Injecte des détails dans une page
+- {{WebExtAPIRef("extensionTypes.RunAt")}}
+  - : Le plus tot que le Javascript ou le CSS est injecté dans l'onglet.
+- `extensionTypes.CSSOrigin`
+  - : Indique si une feuille de style CSS injectée par [`tabs.insertCSS`](/fr/Add-ons/WebExtensions/API/tabs/insertCSS) doit être traitée comme une feuille de style "auteur" ou "utilisateur".
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.extensionTypes")}}</p>
+{{Compat("webextensions.api.extensionTypes")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basé sur l'API Chromium [`chrome.extensionTypes`](https://developer.chrome.com/extensions/extensionTypes) . Cette documentation provient de [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) dans le code de Chromium.
+>
+> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<p>Cette API est basé sur l'API Chromium <a href="https://developer.chrome.com/extensions/extensionTypes"><code>chrome.extensionTypes</code></a> . Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json"><code>extension_types.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -72,5 +68,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

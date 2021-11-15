@@ -13,101 +13,95 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsqu'une extension reçoit une demande de connexion d'une extension différente.</p>
+Lancé lorsqu'une extension reçoit une demande de connexion d'une extension différente.
 
-<p>Pour envoyer un message qui sera reçu par le programme d'écoute <code>onConnectExternal</code>, utilisez {{WebExtAPIRef("runtime.connect()")}}, en transmettant l'ID du destinataire dans le paramètre <code>extensionId</code>.</p>
+Pour envoyer un message qui sera reçu par le programme d'écoute `onConnectExternal`, utilisez {{WebExtAPIRef("runtime.connect()")}}, en transmettant l'ID du destinataire dans le paramètre `extensionId`.
 
-<p>L'écouteur reçoit un objet {{WebExtAPIRef('runtime.Port')}} qu'il peut ensuite utiliser pour envoyer et recevoir des messages. L'objet <code>Port</code> contient également une propriété<code>sender</code>, qui est un objet {{WebExtAPIRef("runtime.MessageSender")}},  et que le destinataire peut utiliser pour vérifier l'ID de l'expéditeur.</p>
+L'écouteur reçoit un objet {{WebExtAPIRef('runtime.Port')}} qu'il peut ensuite utiliser pour envoyer et recevoir des messages. L'objet `Port` contient également une propriété`sender`, qui est un objet {{WebExtAPIRef("runtime.MessageSender")}},  et que le destinataire peut utiliser pour vérifier l'ID de l'expéditeur.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.runtime.onConnectExternal.addListener(listener)
+```js
+browser.runtime.onConnectExternal.addListener(listener)
 browser.runtime.onConnectExternal.removeListener(listener)
 browser.runtime.onConnectExternal.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifie si un  <code>listener</code> est enregistré pour cet événement. Retourne <code>true</code> s'il écoute,  <code>false</code> sinon.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifie si un  `listener` est enregistré pour cet événement. Retourne `true` s'il écoute,  `false` sinon.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>fonction</code></dt>
- <dd>
- <p>Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :</p>
+- `fonction`
 
- <dl>
-  <dt><code>port</code></dt>
-  <dd>Un objet {{WebExtAPIRef('runtime.Port')}} connectant le script en cours à l'autre extension à laquelle il se connecte.</dd>
- </dl>
- </dd>
-</dl>
+  - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `port`
+      - : Un objet {{WebExtAPIRef('runtime.Port')}} connectant le script en cours à l'autre extension à laquelle il se connecte.
 
-<p>{{Compat("webextensions.api.runtime.onConnectExternal")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.runtime.onConnectExternal")}}
 
-<p>Dans cet exemple, l'extension Hansel se connecte à l'extension Gretel :</p>
+## Exemples
 
-<pre class="brush: js">console.log("connecting to Gretel");
+Dans cet exemple, l'extension Hansel se connecte à l'extension Gretel :
+
+```js
+console.log("connecting to Gretel");
 var myPort = browser.runtime.connect(
   "gretel@mozilla.org"
 );
 
-myPort.onMessage.addListener((message) =&gt; {
+myPort.onMessage.addListener((message) => {
   console.log(`From Gretel: ${message.content}`);
 });
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   myPort.postMessage({content: "Hello from Hansel"});
-});</pre>
+});
+```
 
-<p>Gretel écoute la connexion  et vérifie que l'expéditeur est vraiment Hansel:</p>
+Gretel écoute la connexion  et vérifie que l'expéditeur est vraiment Hansel:
 
-<pre class="brush: js">var portFromHansel;
+```js
+var portFromHansel;
 
-browser.runtime.onConnectExternal.addListener((port) =&gt; {
+browser.runtime.onConnectExternal.addListener((port) => {
   console.log(port);
   if (port.sender.id === "hansel@mozilla.org") {
     console.log("connection attempt from Hansel");
     portFromHansel = port;
-    portFromHansel.onMessage.addListener((message) =&gt; {
+    portFromHansel.onMessage.addListener((message) => {
       console.log(`From Hansel: ${message.content}`);
     });
   }
 });
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
    portFromHansel.postMessage({content: "Message from Gretel"});
 });
+```
 
-</pre>
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -134,5 +128,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

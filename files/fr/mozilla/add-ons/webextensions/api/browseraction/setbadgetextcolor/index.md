@@ -12,80 +12,80 @@ tags:
   - setBadgeTextColor
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeTextColor
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Définit la couleur du texte du badge de l'action du navigateur. Les onglets sans couleur de texte de badge spécifique hériteront de la couleur globale du texte de badge.</p>
+Définit la couleur du texte du badge de l'action du navigateur. Les onglets sans couleur de texte de badge spécifique hériteront de la couleur globale du texte de badge.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.browserAction.setBadgeTextColor(
+```js
+browser.browserAction.setBadgeTextColor(
   details // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code></p>
- <dl>
-  <dt><code>color</code></dt>
-  <dd><p>La couleur, spécifiée comme l'une des couleurs :</p>
-  <ul>
-   <li> une chaîne : toute valeur CSS <a href="/fr/docs/Web/CSS/color_value">&lt;color&gt;</a>, par exemple <code>"red"</code>, <code>"#FF0000"</code>, ou <code>"rgb(255,0,0)"</code>. Si la chaîne n'est pas une couleur valide, la promesse retournée sera rejetée et la couleur du texte ne sera pas modifiée.</li>
-   <li>Un objet <code>{{WebExtAPIRef('browserAction.ColorArray')}}</code>.</li>
-   <li><code>null</code>. Si un <code>tabId</code> est spécifié, il supprime la couleur du texte du badge spécifique à l'onglet afin que l'onglet hérite de la couleur globale du texte du badge. Dans le cas contraire, la couleur globale du texte du badge est ramenée à la valeur par défaut.</li>
-  </ul>
-  </dd>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Définit la couleur du texte du badge uniquement pour l'onglet donné. La couleur est réinitialisée lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Définit la couleur du texte du badge uniquement pour l'onglet donné.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<ul>
- <li>Si <code>windowId</code> et <code>tabId</code> sont tous deux fournis, la fonction échoue et la couleur n'est pas définie.</li>
- <li>Si <code>windowId</code> et <code>tabId</code> sont tous deux omis, la couleur globale du texte du badge est définie à la place.</li>
-</ul>
+  - : `object`
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `color`
 
-<p>{{Compat("webextensions.api.browserAction.setBadgeTextColor",2)}}</p>
+      - : La couleur, spécifiée comme l'une des couleurs :
 
-<h2 id="Exemples">Exemples</h2>
+        - une chaîne : toute valeur CSS [\<color>](/fr/docs/Web/CSS/color_value), par exemple `"red"`, `"#FF0000"`, ou `"rgb(255,0,0)"`. Si la chaîne n'est pas une couleur valide, la promesse retournée sera rejetée et la couleur du texte ne sera pas modifiée.
+        - Un objet `{{WebExtAPIRef('browserAction.ColorArray')}}`.
+        - `null`. Si un `tabId` est spécifié, il supprime la couleur du texte du badge spécifique à l'onglet afin que l'onglet hérite de la couleur globale du texte du badge. Dans le cas contraire, la couleur globale du texte du badge est ramenée à la valeur par défaut.
 
-<p>Une couleur de texte de badge qui commence par le rouge et passe au vert lorsque l'on clique sur l'action du navigateur :</p>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Définit la couleur du texte du badge uniquement pour l'onglet donné. La couleur est réinitialisée lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.
+    - `windowId`{{optional_inline}}
+      - : `integer`. Définit la couleur du texte du badge uniquement pour l'onglet donné.
 
-<pre class="brush: js">browser.browserAction.setBadgeText({text: "1234"});
+<!---->
+
+- Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la couleur n'est pas définie.
+- Si `windowId` et `tabId` sont tous deux omis, la couleur globale du texte du badge est définie à la place.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.browserAction.setBadgeTextColor",2)}}
+
+## Exemples
+
+Une couleur de texte de badge qui commence par le rouge et passe au vert lorsque l'on clique sur l'action du navigateur :
+
+```js
+browser.browserAction.setBadgeText({text: "1234"});
 browser.browserAction.setBadgeTextColor({color: "red"});
 
-browser.browserAction.onClicked.addListener(()=&gt; {
+browser.browserAction.onClicked.addListener(()=> {
   browser.browserAction.setBadgeTextColor({color: "green"});
-});</pre>
+});
+```
 
-<p>Définissez la couleur du texte du badge uniquement pour l'onglet actif :</p>
+Définissez la couleur du texte du badge uniquement pour l'onglet actif :
 
-<pre class="brush: js">browser.browserAction.setBadgeText({text: "1234"});
+```js
+browser.browserAction.setBadgeText({text: "1234"});
 browser.browserAction.setBadgeTextColor({color: "red"});
 
-browser.browserAction.onClicked.addListener((tab)=&gt; {
+browser.browserAction.onClicked.addListener((tab)=> {
   browser.browserAction.setBadgeTextColor({
     color: "green",
     tabId: tab.id
   });
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,5 +112,4 @@ browser.browserAction.onClicked.addListener((tab)=&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -12,53 +12,53 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/hide
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Masque un ou plusieurs onglets.</p>
+Masque un ou plusieurs onglets.
 
-<p>Les onglets cachés ne sont plus visibles dans l'onglet du navigateur. Les onglets cachés ne sont pas automatiquement <a href="/fr/Add-ons/WebExtensions/API/tabs/discard">supprimés</a> :  le code qui s'y trouve continue à s'exécuter. Vous pouvez explicitement supprimer les onglets à chaque fois que vous les masquez : bien que cela ne soit pas approprié dans toutes les situations, cela aidera à réduire les ressources utilisées par le navigateur.</p>
+Les onglets cachés ne sont plus visibles dans l'onglet du navigateur. Les onglets cachés ne sont pas automatiquement [supprimés](/fr/Add-ons/WebExtensions/API/tabs/discard) :  le code qui s'y trouve continue à s'exécuter. Vous pouvez explicitement supprimer les onglets à chaque fois que vous les masquez : bien que cela ne soit pas approprié dans toutes les situations, cela aidera à réduire les ressources utilisées par le navigateur.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<p>Tous les onglets ne peuvent pas être masqués :</p>
+Tous les onglets ne peuvent pas être masqués :
 
-<ul>
- <li>Les onglets épinglés ne peuvent pas être masqués.</li>
- <li>Les onglets qui partagent l'écran, le microphone ou l'appareil photo ne peuvent pas être masqués.</li>
- <li>L'onglet actif actuel ne peut pas être masqué.</li>
- <li>Les onglets en cours de fermeture ne peuvent pas être masqués.</li>
-</ul>
+- Les onglets épinglés ne peuvent pas être masqués.
+- Les onglets qui partagent l'écran, le microphone ou l'appareil photo ne peuvent pas être masqués.
+- L'onglet actif actuel ne peut pas être masqué.
+- Les onglets en cours de fermeture ne peuvent pas être masqués.
 
-<p>La première fois qu'une extension cache un onglet, le navigateur indiquera à l'utilisateur que l'onglet est caché, leur montrera comment ils peuvent accéder à l'onglet caché et leur donnera l'option de désactiver l'extension à la place.</p>
+La première fois qu'une extension cache un onglet, le navigateur indiquera à l'utilisateur que l'onglet est caché, leur montrera comment ils peuvent accéder à l'onglet caché et leur donnera l'option de désactiver l'extension à la place.
 
-<p>Pour utiliser cette API, vous devez disposer de  la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "tabHide".</p>
+Pour utiliser cette API, vous devez disposer de  la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabHide".
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var hiding = browser.tabs.hide(
+```js
+var hiding = browser.tabs.hide(
   tabIds          // integer or integer array
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabIds</code></dt>
- <dd><p><code>integer</code> or <code>array</code> of <code>integer</code>. Les ID de l'onglet ou des onglets à masquer.</p>
- <p>Si l'un de ces onglets ne peut pas être masqué, il ne sera pas masqué, mais l'appel sera toujours valide et les onglets éligibles seront toujours masqués. Par exemple, si vous passez <code>[1, 3]</code>, et <code>1</code> identifie l'onglet actif, alors seulement <code>3</code> seront cachés.</p>
- <p>Cependant, si l'un des ID d'onglet n'est pas valide, l'appel échouera et aucun onglet ne sera masqué.</p>
- </dd>
-</dl>
+- `tabIds`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `integer` or `array` of `integer`. Les ID de l'onglet ou des onglets à masquer.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un tableau contenant les ID des onglets qui ont été cachés. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+    Si l'un de ces onglets ne peut pas être masqué, il ne sera pas masqué, mais l'appel sera toujours valide et les onglets éligibles seront toujours masqués. Par exemple, si vous passez `[1, 3]`, et `1` identifie l'onglet actif, alors seulement `3` seront cachés.
 
-<h2 id="Exemples">Exemples</h2>
+    Cependant, si l'un des ID d'onglet n'est pas valide, l'appel échouera et aucun onglet ne sera masqué.
 
-<p>Masquer un seul onglet :</p>
+### Valeur retournée
 
-<pre class="brush: js">function onHidden() {
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau contenant les ID des onglets qui ont été cachés. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+
+## Exemples
+
+Masquer un seul onglet :
+
+```js
+function onHidden() {
   console.log(`Hidden`);
 }
 
@@ -66,11 +66,13 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.tabs.hide(2).then(onHidden, onError);</pre>
+browser.tabs.hide(2).then(onHidden, onError);
+```
 
-<p>Masquer plusieurs onglets :</p>
+Masquer plusieurs onglets :
 
-<pre class="brush: js">function onHidden() {
+```js
+function onHidden() {
   console.log(`Hidden`);
 }
 
@@ -78,10 +80,11 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.tabs.hide([15, 14, 1]).then(onHidden, onError);</pre>
+browser.tabs.hide([15, 14, 1]).then(onHidden, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.hide")}}</p>
+{{Compat("webextensions.api.tabs.hide")}}

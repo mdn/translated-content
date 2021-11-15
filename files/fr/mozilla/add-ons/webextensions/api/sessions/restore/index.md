@@ -12,39 +12,39 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/restore
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Restaure un onglet ou une fenêtre fermée. La restauration ne réouvre pas seulement l'onglet ou la fenêtre : elle rétablit également l'historique de navigation de l'onglet afin que les boutons arrière/avant fonctionnent. La restauration d'une fenêtre restaurera tous les onglets que la fenêtre contenait lors de sa fermeture.</p>
+Restaure un onglet ou une fenêtre fermée. La restauration ne réouvre pas seulement l'onglet ou la fenêtre : elle rétablit également l'historique de navigation de l'onglet afin que les boutons arrière/avant fonctionnent. La restauration d'une fenêtre restaurera tous les onglets que la fenêtre contenait lors de sa fermeture.
 
-<p>Il s'agit d'une fonction asynchrone que retourne une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone que retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var restoringSession = browser.sessions.restore(
+```js
+var restoringSession = browser.sessions.restore(
   sessionId             // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>sessionId</code></dt>
- <dd><code>string</code>. Une chaîne contenant l'ID de session pour la fenêtre ou l'onglet à restaurer. Cela se trouve dans la propriété <code>sessionId</code> de l'objet   {{WebExtAPIRef("tabs.Tab", "Tab")}} ou {{WebExtAPIRef("windows.Window", "Window")}} dans  {{WebExtAPIRef("sessions.Session", "Session")}} retourné de {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.</dd>
-</dl>
+- `sessionId`
+  - : `string`. Une chaîne contenant l'ID de session pour la fenêtre ou l'onglet à restaurer. Cela se trouve dans la propriété `sessionId` de l'objet   {{WebExtAPIRef("tabs.Tab", "Tab")}} ou {{WebExtAPIRef("windows.Window", "Window")}} dans  {{WebExtAPIRef("sessions.Session", "Session")}} retourné de {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.
 
-<h3 id="Valeur_renvoyée">Valeur renvoyée</h3>
+### Valeur renvoyée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. Cela sera rempli avec un objet  {{WebExtAPIRef("sessions.Session", "Session")}} représentant la session qui a été restaurée.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Cela sera rempli avec un objet  {{WebExtAPIRef("sessions.Session", "Session")}} représentant la session qui a été restaurée.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.sessions.restore")}}</p>
+{{Compat("webextensions.api.sessions.restore")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cela restaure la session fermée la plus récente, qu'il s'agisse d'une fenêtre ou d'un onglet :</p>
+Cela restaure la session fermée la plus récente, qu'il s'agisse d'une fenêtre ou d'un onglet :
 
-<pre class="brush: js">function restoreMostRecent(sessionInfos) {
+```js
+function restoreMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
     console.log("No sessions found")
     return;
@@ -67,19 +67,17 @@ browser.browserAction.onClicked.addListener(function() {
   });
   gettingSessions.then(restoreMostRecent, onError);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/extensions/sessions).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/sessions"><code>chrome.sessions</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,5 +104,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

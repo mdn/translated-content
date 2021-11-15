@@ -12,40 +12,43 @@ tags:
   - highlightResults
 translation_of: Mozilla/Add-ons/WebExtensions/API/find/highlightResults
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Souligne les résultats d'un précédent appel à {{WebExtAPIRef("find.find()")}}.</p>
+Souligne les résultats d'un précédent appel à {{WebExtAPIRef("find.find()")}}.
 
-<p>Lorsqu'une extension appelle <code>find()</code>, les correspondances ne sont pas automatiquement mises en surbrillance, mais elles sont stockées par le navigateur. Appelez <code>highlightResults()</code> pour les mettre en surbrillance.</p>
+Lorsqu'une extension appelle `find()`, les correspondances ne sont pas automatiquement mises en surbrillance, mais elles sont stockées par le navigateur. Appelez `highlightResults()` pour les mettre en surbrillance.
 
-<p>Notez que les résultats stockés sont globaux pour toutes les extensions, par exemple, si l'extension appelle <code>find("apple")</code>, alors si l'extensions B appelle <code>find("banana")</code>, alors si l'extensions A appelle  <code>highlightResults()</code>, le résultat pour "banana" sera mis en évidence.</p>
+Notez que les résultats stockés sont globaux pour toutes les extensions, par exemple, si l'extension appelle `find("apple")`, alors si l'extensions B appelle `find("banana")`, alors si l'extensions A appelle  `highlightResults()`, le résultat pour "banana" sera mis en évidence.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.find.highlightResults()
-</pre>
+```js
+browser.find.highlightResults()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Aucune.</p>
+Aucune.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.find.highlightResults", 10)}}</p>
+{{Compat("webextensions.api.find.highlightResults", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Recherchez "banana" dans l'onglet actif, notez le nombre de correspondances et mettez-les en surbrillance :</p>
+Recherchez "banana" dans l'onglet actif, notez le nombre de correspondances et mettez-les en surbrillance :
 
-<pre class="brush: js">function found(results) {
+```js
+function found(results) {
   console.log(`There were: ${results.count} matches.`);
-  if (results.count &gt; 0) {
+  if (results.count > 0) {
     browser.find.highlightResults();
   }
 }
 
-browser.find.find("banana").then(found);</pre>
+browser.find.find("banana").then(found);
+```

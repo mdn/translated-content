@@ -12,45 +12,37 @@ tags:
   - topSites
 translation_of: Mozilla/Add-ons/WebExtensions/API/topSites
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Utilisez l'API topSites pour obtenir un tableau contenant les pages que l'utilisateur a visitées  fréquemment.</p>
+Utilisez l'API topSites pour obtenir un tableau contenant les pages que l'utilisateur a visitées  fréquemment.
 
-<p>Les navigateurs maintiennent ceci pour aider l'utilisateur à retourner à ces endroits facilement. Par exemple, Firefox fournit par défaut une liste des pages les plus visitées dans la page "Nouvel onglet".</p>
+Les navigateurs maintiennent ceci pour aider l'utilisateur à retourner à ces endroits facilement. Par exemple, Firefox fournit par défaut une liste des pages les plus visitées dans la page "Nouvel onglet".
 
-<p>Pour utiliser l'API topSites, vous devez disposez de l' <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> "topSites".</p>
+Pour utiliser l'API topSites, vous devez disposez de l' [API permission](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "topSites".
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("topSites.MostVisitedURL")}}</dt>
- <dd>Un objet contenant le titre et l'URL d'un site web.</dd>
-</dl>
+- {{WebExtAPIRef("topSites.MostVisitedURL")}}
+  - : Un objet contenant le titre et l'URL d'un site web.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{WebExtAPIRef("topSites.get()")}}</dt>
- <dd>Obtient un tableau contenant tous les sites répertoriés dans la page "Nouvel onglet" du navigateur. Notez que le nombre de sites renvoyés ici est spécifique au navigateur, et les sites particuliers retournés seront probablement spécifiques à l'utilisateur, en fonction de leur historique de navigation.</dd>
-</dl>
+- {{WebExtAPIRef("topSites.get()")}}
+  - : Obtient un tableau contenant tous les sites répertoriés dans la page "Nouvel onglet" du navigateur. Notez que le nombre de sites renvoyés ici est spécifique au navigateur, et les sites particuliers retournés seront probablement spécifiques à l'utilisateur, en fonction de leur historique de navigation.
 
-<h2 id="Compatibilité_du_Navigateur">Compatibilité du Navigateur</h2>
+## Compatibilité du Navigateur
 
+{{Compat("webextensions.api.topSites")}}
 
+{{WebExtExamples("h2")}}
 
-<p>{{Compat("webextensions.api.topSites")}}</p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.topSites`](https://developer.chrome.com/extensions/topSites).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>{{WebExtExamples("h2")}}</p>
-
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/topSites"><code>chrome.topSites</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -77,5 +69,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/topSites
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

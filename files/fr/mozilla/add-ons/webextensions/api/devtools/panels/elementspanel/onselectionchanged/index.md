@@ -16,59 +16,55 @@ translation_of: >-
 original_slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/onSelectionChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Appelles lorsque l'utilisateur sélectionne un élément de page différent pour l'inspection avec les outils de développement du navigateur, par exemple en sélectionnant l'élément de menu contextuel "Inspect Element" dans Firefox.</p>
+Appelles lorsque l'utilisateur sélectionne un élément de page différent pour l'inspection avec les outils de développement du navigateur, par exemple en sélectionnant l'élément de menu contextuel "Inspect Element" dans Firefox.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.devtools.panels.elements.onSelectionChanged.addListener(listener)
+```js
+browser.devtools.panels.elements.onSelectionChanged.addListener(listener)
 browser.devtools.panels.elements.onSelectionChanged.removeListener(listener)
 browser.devtools.panels.elements.onSelectionChanged.hasListener(listener)
-</pre>
+```
 
-<p>L'événement a trois fonctions :</p>
+L'événement a trois fonctions :
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Ajoute une écoute à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrête une écoute à l'événement. L'argument de l'auditeur est un auditeur supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si l'auditeur est enregistré pour cet événement. Renvoie la valeur Vrai si elle l'écoute, sinon Faux.</dd>
-</dl>
+- `addListener(listener)`
+  - : Ajoute une écoute à cet événement.
+- `removeListener(listener)`
+  - : Arrête une écoute à l'événement. L'argument de l'auditeur est un auditeur supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si l'auditeur est enregistré pour cet événement. Renvoie la valeur Vrai si elle l'écoute, sinon Faux.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lors de l'événement. La fonction ne passera pas d'arguments.</p>
- </dd>
-</dl>
+- `callback`
+  - : Fonction qui sera appelée lors de l'événement. La fonction ne passera pas d'arguments.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.devtools.panels.ElementsPanel.onSelectionChanged", 10)}}</p>
+{{Compat("webextensions.api.devtools.panels.ElementsPanel.onSelectionChanged", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Ecoutez la sélection des événements modifiés, et enregistrez le contenu du texte de l'élément nouvellement sélectionné :</p>
+Ecoutez la sélection des événements modifiés, et enregistrez le contenu du texte de l'élément nouvellement sélectionné :
 
-<pre class="brush: js">function handleSelectedElement() {
+```js
+function handleSelectedElement() {
   browser.devtools.inspectedWindow.eval("$0.textContent")
-    .then((result) =&gt; {
+    .then((result) => {
       console.log(result[0]);
     });
 }
 
-browser.devtools.panels.elements.onSelectionChanged.addListener(handleSelectedElement);</pre>
+browser.devtools.panels.elements.onSelectionChanged.addListener(handleSelectedElement);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/devtools"><code>chrome.devtools</code></a>.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/extensions/devtools).

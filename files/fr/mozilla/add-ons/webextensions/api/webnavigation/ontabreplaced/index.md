@@ -13,89 +13,75 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onTabReplaced
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsque le contenu de l'onglet est remplacé par un onglet différent (généralement précédemment pré-rendu).</p>
+Lancé lorsque le contenu de l'onglet est remplacé par un onglet différent (généralement précédemment pré-rendu).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.webNavigation.onTabReplaced.addListener(
+```js
+browser.webNavigation.onTabReplaced.addListener(
   listener,                   // function
   filter                      // optional object
 );
 browser.webNavigation.onTabReplaced.removeListener(listener)
 browser.webNavigation.onTabReplaced.hasListener(listener)
-</pre>
+```
 
+Les événements ont trois fonctions :
 
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il est écouté, sinon `false`.
 
-<p>Les événements ont trois fonctions :</p>
+## Syntaxe addListener
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il est écouté, sinon <code>false</code>.</dd>
-</dl>
+### Paramètres
 
+- `callback`
 
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+    - `details`
+      - : [`object`](#details).
 
-<h3 id="Paramètres">Paramètres</h3>
+## Objets supplémentaires
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+### détails
 
- <dl>
-  <dt><code>details</code></dt>
-  <dd><a href="#details"><code>object</code></a>.</dd>
- </dl>
- </dd>
-</dl>
+- `replacedTabId`
+  - : `integer`. L'ID de l'onglet qui a été remplacé.
+- `tabId`
+  - : `integer`. L'ID de l'onglet qui a remplacé l'ancien onglet.
+- `timeStamp`
+  - : `number`. Le moment où le remplacement s'est produit, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 
-<h2 id="Objets_supplémentaires">Objets supplémentaires</h2>
+## Compatibilité du navigateur
 
-<h3 id="détails">détails</h3>
+{{Compat("webextensions.api.webNavigation.onTabReplaced")}}
 
-<dl>
- <dt><code>replacedTabId</code></dt>
- <dd><code>integer</code>. L'ID de l'onglet qui a été remplacé.</dd>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. L'ID de l'onglet qui a remplacé l'ancien onglet.</dd>
- <dt><code>timeStamp</code></dt>
- <dd><code>number</code>. Le moment où le remplacement s'est produit, en <a href="https://en.wikipedia.org/wiki/Unix_time">millisecondes depuis l'époque</a>.</dd>
-</dl>
+## Exemples
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
-
-
-
-<p>{{Compat("webextensions.api.webNavigation.onTabReplaced")}}</p>
-
-<h2 id="Exemples">Exemples</h2>
-
-<pre class="brush: js">function logOnTabReplaced(details) {
+```js
+function logOnTabReplaced(details) {
   console.log("onTabReplaced: " + details);
 }
 
-browser.webNavigation.onTabReplaced.addListener(logOnTabReplaced);</pre>
+browser.webNavigation.onTabReplaced.addListener(logOnTabReplaced);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#event-onTabReplaced) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webNavigation#event-onTabReplaced"><code>chrome.webNavigation</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -122,5 +108,4 @@ browser.webNavigation.onTabReplaced.addListener(logOnTabReplaced);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

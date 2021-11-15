@@ -12,48 +12,42 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/onError
 original_slug: Mozilla/Add-ons/WebExtensions/API/proxy/onProxyError
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé en cas d'erreur lors de l'évaluation du fichier PAC ou l'écouteur <code>onRequest</code>.</p>
+Lancé en cas d'erreur lors de l'évaluation du fichier PAC ou l'écouteur `onRequest`.
 
-<p>L'erreur peut être déclenchée en lançant ou renvoyant une valeur invalide dans le gestionnaire d'événements proxy.onRequest.</p>
+L'erreur peut être déclenchée en lançant ou renvoyant une valeur invalide dans le gestionnaire d'événements proxy.onRequest.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.proxy.onError.addListener(listener)
+```js
+browser.proxy.onError.addListener(listener)
 browser.proxy.onError.removeListener(listener)
 browser.proxy.onError.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si l'<code>écouteur</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(listener)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si l'`écouteur` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>newState</code></dt>
-  <dd><code>Object</code>. Un objet <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error">Error</a> représentant l'erreur.</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
-<p>{{WebExtExamples}}</p>
+    - `newState`
+      - : `Object`. Un objet [Error](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error) représentant l'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+{{WebExtExamples}}
 
-<p>{{Compat("webextensions.api.proxy.onError")}}</p>
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.proxy.onError")}}

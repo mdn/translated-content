@@ -13,42 +13,38 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Le type <code>CreateDetails</code> est utilisé pour décrire les propriétés d'un nouveau, d'un signet, d'un dossier de signets ou d'un séparateur lors de l'appel de la méthode {{WebExtAPIRef("bookmarks.create()")}}.</p>
+Le type `CreateDetails` est utilisé pour décrire les propriétés d'un nouveau, d'un signet, d'un dossier de signets ou d'un séparateur lors de l'appel de la méthode {{WebExtAPIRef("bookmarks.create()")}}.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Un {{jsxref("object")}} contenant une combinaison des champs suivants :</p>
+Un {{jsxref("object")}} contenant une combinaison des champs suivants :
 
-<dl>
- <dt><code>index</code> {{optional_inline}}</dt>
- <dd>Un entier {{jsxref("Number")}} qui spécifie la position à laquelle placer le nouveau signet sous son parent. Une valeur de 0 le placera en haut de la liste.</dd>
- <dt><code>parentId</code> {{optional_inline}}</dt>
- <dd>Un {{jsxref("string")}} qui indique l'ID du dossier parent dans lequel placer le nouveau signet ou dossier de signets. Sur Chrome et Firefox, la valeur par défaut est le dossier "Autres signets" du menu Signets.</dd>
- <dt><code>title</code> {{optional_inline}}</dt>
- <dd>Un {{jsxref("string")}} qui spécifie le titre du signet ou le nom du dossier à créer. Si ce n'est pas spécifié, le titre est <code>""</code>.</dd>
- <dt><code>type</code>{{optional_inline}}</dt>
- <dd>Un objet {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}indiquant s'il s'agit d'un signet, d'un dossier ou d'un séparateur. La valeur par défaut est <code>"bookmark"</code> sauf si l'<code>url</code> est omise, auquel cas elle est par défaut <code>"folder"</code>.</dd>
- <dt><code>url</code> {{optional_inline}}</dt>
- <dd><code>string</code>. Un {{jsxref("string")}} qui spécifie l'URL de la page à mettre en signet. Si ceci est omis ou est <code>null</code>, un dossier est créé à la place d'un signet.</dd>
-</dl>
+- `index` {{optional_inline}}
+  - : Un entier {{jsxref("Number")}} qui spécifie la position à laquelle placer le nouveau signet sous son parent. Une valeur de 0 le placera en haut de la liste.
+- `parentId` {{optional_inline}}
+  - : Un {{jsxref("string")}} qui indique l'ID du dossier parent dans lequel placer le nouveau signet ou dossier de signets. Sur Chrome et Firefox, la valeur par défaut est le dossier "Autres signets" du menu Signets.
+- `title` {{optional_inline}}
+  - : Un {{jsxref("string")}} qui spécifie le titre du signet ou le nom du dossier à créer. Si ce n'est pas spécifié, le titre est `""`.
+- `type`{{optional_inline}}
+  - : Un objet {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}indiquant s'il s'agit d'un signet, d'un dossier ou d'un séparateur. La valeur par défaut est `"bookmark"` sauf si l'`url` est omise, auquel cas elle est par défaut `"folder"`.
+- `url` {{optional_inline}}
+  - : `string`. Un {{jsxref("string")}} qui spécifie l'URL de la page à mettre en signet. Si ceci est omis ou est `null`, un dossier est créé à la place d'un signet.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.bookmarks.CreateDetails", 10)}}</p>
+{{Compat("webextensions.api.bookmarks.CreateDetails", 10)}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -75,5 +71,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -7,251 +7,201 @@ tags:
 translation_of: Mozilla/Firefox/Releases/8
 original_slug: Mozilla/Firefox/Versions/8
 ---
-<div>
-  <ol>
-    <li>
-        
-            <p>Notes de versions pour développeurs</p>
-            <ol>
-              <li><a href="/fr/docs/Mozilla/Firefox/Releases">Notes de versions pour développeurs</a></li>
-            </ol>
-        
-    </li>
-    <li>
-        
-            <p>Modules complémentaires</p>
-            <ol>
-              <li><a href="/fr/Add-ons/WebExtensions">WebExtensions</a></li>
-              <li><a href="/fr/Add-ons/Themes">Thèmes</a></li>
-            </ol>
-        
-    </li>
-    <li>
-        
-            <p>Fonctionnement interne de Firefox</p>
-            <ol>
-              <li><a href="/fr/docs/Mozilla/">Le projet Mozilla</a></li>
-              <li><a href="/fr/docs/Mozilla/Gecko">Gecko</a></li>
-              <li><a href="/fr/docs/Mozilla/Firefox/Headless_mode">Mode « headless »</a></li>
-              <li><a href="/fr/docs/Mozilla/JavaScript_code_modules">Modules de code Javascript</a></li>
-              <li><a href="/fr/docs/Mozilla/js-ctypes">JS-ctypes</a></li>
-              <li><a href="/fr/docs/Mozilla/MathML_Project">Le projet MathML</a></li>
-              <li><a href="/fr/docs/Mozilla/MFBT">MFBT</a></li>
-              <li><a href="/fr/docs/Mozilla/Projects">Les projets Mozilla</a></li>
-              <li><a href="/fr/docs/Mozilla/Preferences">Le système de préférences</a></li>
-              <li><a href="/fr/docs/Mozilla/WebIDL_bindings">Connexions WebIDL</a></li>
-              <li><a href="/fr/docs/Mozilla/Tech/XPCOM">XPCOM</a></li>
-              <li><a href="/fr/docs/Mozilla/Tech/XUL">XUL</a></li>
-            </ol>
-        
-    </li>
-    <li>
-        
-            <p>Développer et contribuer</p>
-            <ol>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Build_Instructions">Instructions de compilation</a></li>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">Configuration des options de compilation</a></li>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works">Fonctionnement de la compilation</a></li>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Code source de Mozilla</a></li>
-              <li><a href="/fr/docs/Mozilla/Localization">Localisation</a></li>
-              <li><a href="/fr/docs/Mozilla/Mercurial">Mercurial</a></li>
-              <li><a href="/fr/docs/Mozilla/QA">Assurance qualité</a></li>
-              <li><a href="/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects">Utilisation de code Mozilla dans d'autres projets</a></li>
-            </ol>
-        
-    </li>
-  </ol>
-</div>
-<p>Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fournit des informations à la fois pour les developpeurs Web et pour les développeurs d'extensions et de projets liés à Mozilla pour aider à tirer pleinement parti des fonctionnalités de cette version.</p>
+1.  Notes de versions pour développeurs
 
-<h2 id="Changements_pour_les_développeurs_Web">Changements pour les développeurs Web</h2>
+    1.  [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
-<h3 id="HTML">HTML</h3>
+2.  Modules complémentaires
 
-<ul>
- <li>La propriété <code>crossOrigin</code> a été ajouté à <a href="/fr/docs/Web/API/HTMLImageElement"><code>HTMLImageElement</code></a> et l'attribut <code><a href="/fr/docs/Web/HTML/Element/img#attr-crossorigin">crossorigin</a></code> a été ajouté à l'élément <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a> (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=664299">bug 664299</a>).</li>
- <li>La méthode <a href="/fr/docs/Web/API/HTMLSelectElement#add()"><code>HTMLSelectElement.add()</code></a> supporte désormais supporte désormais soit un élément ou soit l'index d'un élément auquel un nouvel élément doit être inséré avant. Auparavant, seulement un élément était supporté (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=666200">bug 666200</a>).</li>
- <li>Le constructeur <code>HTMLIsIndexElement</code> a été retiré. Aucun éléments n'a implémenté cette interface depuis Firefox 4.</li>
- <li>la fonctionnalité HTML5 "menu contextuel" (attribut <code>contextmenu</code>), qui vous permet d'ajouter des éléments personnalisés particuliers au menu contextuel d'origine, est désormais supportée (l'implémentation est encore expérimentale en attendant des changements dans la spécification (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=617528" title='FIXED: implement the HTML5 "context menu" feature (contextmenu attribute)'>bug 617528</a>).</li>
- <li>Le support de l'attribut <a href="/fr/docs/HTML/Global_attributes#accesskey"><code>accesskeylabel</code></a> a été ajouté à tous les éléments.</li>
- <li>les éléments <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> supportent désormais l'attribut <code>selectionDirection</code>, et leurs méthodes <code>setSelectionRange()</code> ont été mises à jour pour supporter éventuellement la spécification d'une direction.</li>
- <li>La plupart des éléments peuvent désormais obtenir une bague de focalisation établie autour d'eux s'ils ont été faits pouvant recevoir le focus via l'attribut <code>tabindex</code> et que l'utilisateur se concentre ensuite sur l'élément.</li>
- <li>Dans un ensemble d'éléments <a href="/fr/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a> imbriqués, cliquer sur les événements ne déclencheront plus plusieurs éléments, qui, avant, provoquaient un blocage de Firefox (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=646157">bug 646157</a>).</li>
-</ul>
+    1.  [WebExtensions](/fr/Add-ons/WebExtensions)
+    2.  [Thèmes](/fr/Add-ons/Themes)
 
-<h3 id="DOM">DOM</h3>
+3.  Fonctionnement interne de Firefox
 
-<ul>
- <li>La méthode <a href="/fr/docs/Web/API/Element/insertAdjacentHTML"><code>insertAdjacentHTML</code></a> a été implémentée.</li>
- <li><a href="/fr/docs/Web/API/BlobBuilder"><code>BlobBuilder</code></a> dispose désormais d'une méthode <code>getFile()</code> qui renvoie le contenu du blob dans un fichier.</li>
- <li>L'interface <a href="/fr/docs/Web/API/FileReaderSync"><code>FileReaderSync</code></a> (partie de FileAPI) a été implementée.</li>
- <li>La gestion des évènements par les <a href="/fr/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a> imbriqués a été fixée.</li>
- <li>Vous pouvez maintenant utiliser <a href="/fr/docs/Web/API/Window/postMessage"><code>window.postMessage()</code></a> pour passer les objets <a href="/fr/docs/Web/API/File"><code>File</code></a> et <a href="/fr/docs/Web/API/FileList"><code>FileList</code></a> entre les fenêtres.</li>
- <li>Lors de l'édition de zones <a href="/fr/docs/Web/API/Element/contenteditable"><code>element.contenteditable</code></a> la sortie d'une position en appuyant sur retour, ou à la sortie d'une liste en mode édition en appuyant sur retour à deux reprises, revient maintenant au mode d'entrée au paragraphe (c'est-à-dire les paragraphes à l'intérieur des blocs <a href="/fr/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a>) au lieu de lignes de séparation par les éléments <a href="/fr/docs/Web/HTML/Element/br"><code>&lt;br&gt;</code></a>.</li>
- <li>Correction d'un bug empêchant la justification de la prise d'effet correcte lorsqu'elle est appliquée à la première ligne dans une zone <a href="/fr/docs/Web/API/Element/contenteditable"><code>element.contenteditable</code></a>.</li>
- <li>Correction d'un bug qui faisait que en appuyant sur Suppr ou Retour arrière au début d'une zone <a href="/fr/docs/Web/API/Element/contenteditable"><code>element.contenteditable</code></a> affectait le bloc <code>contenteditable</code> précédent s'il était présent.</li>
- <li><a href="/fr/docs/Web/API/Document/getSelection"><code>document.getSelection()</code></a> renvoie désormais l'objet <code>Selection</code> identique à <a href="/fr/docs/Web/API/Window/getSelection"><code>window.getSelection()</code></a>, à la place de <em>stringifying</em>.</li>
- <li>La propriété HTML5 <code>selectionDirection</code> permet de définir la direction de la sélection dans un texte éditable.</li>
- <li><a href="/fr/docs/Web/API/HTMLMediaElement"><code>HTMLMediaElement</code></a> a maintenant une propriété <code>seekable</code> qui retourne l'objet <a href="/fr/docs/Web/API/TimeRanges"><code>TimeRanges</code></a>.</li>
- <li>L'attribut <code>.preload</code> de <a href="/fr/docs/Web/API/HTMLMediaElement"><code>HTMLMediaElement</code></a> se reflète désormais comme une <em>valeur énumérée</em>.</li>
- <li>Les <a href="/fr/docs/HTML/CORS_settings_attributes">propriétés <code>crossOrigin</code></a> sont par défaut defaults to "Anonyme" quand une valeur invalide est utilisée.</li>
- <li><a href="/fr/docs/Web/API/Window/navigator/cookieEnabled"><code>window.navigator.cookieEnabled</code></a> renvoie désormais correctement l'information quand le paramètre de cookie par défaut est écrasé sur la base de chaque site.</li>
-</ul>
+    1.  [Le projet Mozilla](/fr/docs/Mozilla/)
+    2.  [Gecko](/fr/docs/Mozilla/Gecko)
+    3.  [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
+    4.  [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
+    5.  [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
+    6.  [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
+    7.  [MFBT](/fr/docs/Mozilla/MFBT)
+    8.  [Les projets Mozilla](/fr/docs/Mozilla/Projects)
+    9.  [Le système de préférences](/fr/docs/Mozilla/Preferences)
+    10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
+    11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
+    12. [XUL](/fr/docs/Mozilla/Tech/XUL)
 
-<h3 id="JavaScript">JavaScript</h3>
+4.  Développer et contribuer
 
-<ul>
- <li><a href="/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/RegExp/exec"><code>RegExp.exec()</code></a> et <a href="/fr/docs/JavaScript/Reference/Global_Objects/RegExp/test"><code>RegExp.test()</code></a> appelés sans arguments correspondent maintenant à la chaîne "undefined".</li>
- <li><a href="/fr/docs/JavaScript/Reference/Global_Objects/String/search"><code>String.search()</code></a> et <a href="/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/String/Match"><code>String.match()</code></a> appelés sans arguments ou <code>undefined</code> correspondent désormais à une chaîne vide et correspondent donc à chaque chaîne.</li>
- <li>Le support des listes de surveillance a été implémenté avec les nouvelles mtéhodes (non standards) <a href="/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/Object/watch"><code>watch()</code></a> et <a href="/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/Object/unwatch"><code>unwatch()</code></a>.</li>
-</ul>
+    1.  [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
+    2.  [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
+    3.  [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
+    4.  [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
+    5.  [Localisation](/fr/docs/Mozilla/Localization)
+    6.  [Mercurial](/fr/docs/Mozilla/Mercurial)
+    7.  [Assurance qualité](/fr/docs/Mozilla/QA)
+    8.  [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
 
-<h3 id="CSS">CSS</h3>
+Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fournit des informations à la fois pour les developpeurs Web et pour les développeurs d'extensions et de projets liés à Mozilla pour aider à tirer pleinement parti des fonctionnalités de cette version.
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/resolution"><code>resolution</code></a> accepte désormais <a href="/fr/docs/Web/CSS/number"><code>&lt;number&gt;</code></a>, pas seulement des valeurs <a href="/fr/docs/Web/CSS/integer"><code>&lt;integer&gt;</code></a> comme avec la spécification.</li>
- <li>Les règles de césure ont été ajoutées pour de nombreuses nouvelles langues lors de l'utilisation de <a href="/fr/docs/Web/CSS/hyphens"><code>hyphens</code></a>.</li>
- <li>Le traitement de <a href="/fr/docs/Web/CSS/background-size"><code>background-size</code></a> a été revu pour mieux correspondre à la spécification.</li>
- <li>Dans le passé, <a href="/fr/docs/Web/CSS/text-decoration"><code>text-decoration</code></a> en mode quirks avait l'épaisseur de ligne et la position ajustée sur le texte descendant pour correspondre à la descendance. Désormais le mode standard et le mode quirks ont un rendu plus proche.</li>
- <li>Le positionnement horizontal des éléments est davantage conforme à la spécification dans beaucoup de cas. La documentation est à venir, mais pour l'instant, pour plus de détails voir le commentaire 23 du <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=682780">bug 682780</a>.</li>
- <li><a href="/fr/docs/CSS/Scaling_of_SVG_backgrounds">Les images SVG sont désormais correctement mise à l'échelle</a> lorsqu'elles sont utilisées comme images de fond.</li>
-</ul>
+## Changements pour les développeurs Web
 
-<h3 id="Réseau">Réseau</h3>
+### HTML
 
-<ul>
- <li>Les doubles guillemets ne sont plus acceptés en tant que délimiteur pour l'encodage <a href="https://tools.ietf.org/html/rfc2231">RFC 2231</a> ou <a href="https://tools.ietf.org/html/rfc5987">RFC 5987</a>, conformément à ces RFCs.</li>
- <li>Le parseur MIME du champ d'en-tête (<code>Content-Disposition</code>) exige désormais "=" dans les paramètres.</li>
- <li>Les scripts ne sont plus téléchargés lorsque JavaScript est désactivé.</li>
- <li>SSL 2.0 n'est plus supporté.</li>
-</ul>
+- La propriété `crossOrigin` a été ajouté à [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) et l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/img#attr-crossorigin) a été ajouté à l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) (voir [bug 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299)).
+- La méthode [`HTMLSelectElement.add()`](</fr/docs/Web/API/HTMLSelectElement#add()>) supporte désormais supporte désormais soit un élément ou soit l'index d'un élément auquel un nouvel élément doit être inséré avant. Auparavant, seulement un élément était supporté (voir [bug 666200](https://bugzilla.mozilla.org/show_bug.cgi?id=666200)).
+- Le constructeur `HTMLIsIndexElement` a été retiré. Aucun éléments n'a implémenté cette interface depuis Firefox 4.
+- la fonctionnalité HTML5 "menu contextuel" (attribut `contextmenu`), qui vous permet d'ajouter des éléments personnalisés particuliers au menu contextuel d'origine, est désormais supportée (l'implémentation est encore expérimentale en attendant des changements dans la spécification (voir [bug 617528](https://bugzilla.mozilla.org/show_bug.cgi?id=617528 'FIXED: implement the HTML5 "context menu" feature (contextmenu attribute)')).
+- Le support de l'attribut [`accesskeylabel`](/fr/docs/HTML/Global_attributes#accesskey) a été ajouté à tous les éléments.
+- les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) supportent désormais l'attribut `selectionDirection`, et leurs méthodes `setSelectionRange()` ont été mises à jour pour supporter éventuellement la spécification d'une direction.
+- La plupart des éléments peuvent désormais obtenir une bague de focalisation établie autour d'eux s'ils ont été faits pouvant recevoir le focus via l'attribut `tabindex` et que l'utilisateur se concentre ensuite sur l'élément.
+- Dans un ensemble d'éléments [`<label>`](/fr/docs/Web/HTML/Element/label) imbriqués, cliquer sur les événements ne déclencheront plus plusieurs éléments, qui, avant, provoquaient un blocage de Firefox (voir [bug 646157](https://bugzilla.mozilla.org/show_bug.cgi?id=646157)).
 
-<h3 id="WebSockets">WebSockets</h3>
+### DOM
 
-<ul>
- <li>La méthode <a href="/fr/docs/WebSockets/WebSockets_reference/WebSocket#send()"><code>send()</code></a> de l'objet <a href="/fr/docs/WebSockets/WebSockets_reference/WebSocket"><code>WebSocket</code></a> ne renvoie plus à tort une valeur booléenne.</li>
- <li>La méthode <a href="/fr/docs/WebSockets/WebSockets_reference/WebSocket#close()"><code>close()</code></a> de l'objet <a href="/fr/docs/WebSockets/WebSockets_reference/WebSocket"><code>WebSocket</code></a> correspond désormais à la version actuelle du standard, et les événements proches utilisent à présent correctement l'interface <a href="/fr/docs/WebSockets/WebSockets_reference/CloseEvent"><code>CloseEvent</code></a>.</li>
- <li>L'attribut <code>extensions</code> de l'objet <a href="/fr/docs/WebSockets/WebSockets_reference/WebSocket"><code>WebSocket</code></a> est à présent supporté.</li>
- <li>Le constructeur WebSocket supporte désormais un ensemble de protocoles ainsi que la chaîne d'un seul protocole.</li>
- <li>Le contenu mixte n'est pas autorisé avec WebSockets, vous ne pouvez plus établir une connexion vers un serveur WebSocket non sécurisé à partir d'un contenu sécurisé.</li>
- <li>Les erreurs de connexion avec WebSockets déclenchent à présent le gestionnaire <code>onerror</code>.</li>
- <li>L'API <a href="/fr/docs/WebSockets">WebSocket</a> a été mise à jour suivant la dernière version de la spécification (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674890">bug 674890</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674527">bug 674527</a> et <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674716">bug 674716</a>).</li>
- <li>L'extension deflate-stream pour WebSockets a été désactivée, elle est obsolète et a cassée la compatibilité avec quelques sites.</li>
-</ul>
+- La méthode [`insertAdjacentHTML`](/fr/docs/Web/API/Element/insertAdjacentHTML) a été implémentée.
+- [`BlobBuilder`](/fr/docs/Web/API/BlobBuilder) dispose désormais d'une méthode `getFile()` qui renvoie le contenu du blob dans un fichier.
+- L'interface [`FileReaderSync`](/fr/docs/Web/API/FileReaderSync) (partie de FileAPI) a été implementée.
+- La gestion des évènements par les [`<label>`](/fr/docs/Web/HTML/Element/label) imbriqués a été fixée.
+- Vous pouvez maintenant utiliser [`window.postMessage()`](/fr/docs/Web/API/Window/postMessage) pour passer les objets [`File`](/fr/docs/Web/API/File) et [`FileList`](/fr/docs/Web/API/FileList) entre les fenêtres.
+- Lors de l'édition de zones [`element.contenteditable`](/fr/docs/Web/API/Element/contenteditable) la sortie d'une position en appuyant sur retour, ou à la sortie d'une liste en mode édition en appuyant sur retour à deux reprises, revient maintenant au mode d'entrée au paragraphe (c'est-à-dire les paragraphes à l'intérieur des blocs [`<p>`](/fr/docs/Web/HTML/Element/p)) au lieu de lignes de séparation par les éléments [`<br>`](/fr/docs/Web/HTML/Element/br).
+- Correction d'un bug empêchant la justification de la prise d'effet correcte lorsqu'elle est appliquée à la première ligne dans une zone [`element.contenteditable`](/fr/docs/Web/API/Element/contenteditable).
+- Correction d'un bug qui faisait que en appuyant sur Suppr ou Retour arrière au début d'une zone [`element.contenteditable`](/fr/docs/Web/API/Element/contenteditable) affectait le bloc `contenteditable` précédent s'il était présent.
+- [`document.getSelection()`](/fr/docs/Web/API/Document/getSelection) renvoie désormais l'objet `Selection` identique à [`window.getSelection()`](/fr/docs/Web/API/Window/getSelection), à la place de _stringifying_.
+- La propriété HTML5 `selectionDirection` permet de définir la direction de la sélection dans un texte éditable.
+- [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) a maintenant une propriété `seekable` qui retourne l'objet [`TimeRanges`](/fr/docs/Web/API/TimeRanges).
+- L'attribut `.preload` de [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) se reflète désormais comme une _valeur énumérée_.
+- Les [propriétés `crossOrigin`](/fr/docs/HTML/CORS_settings_attributes) sont par défaut defaults to "Anonyme" quand une valeur invalide est utilisée.
+- [`window.navigator.cookieEnabled`](/fr/docs/Web/API/Window/navigator/cookieEnabled) renvoie désormais correctement l'information quand le paramètre de cookie par défaut est écrasé sur la base de chaque site.
 
-<h3 id="WebGL">WebGL</h3>
+### JavaScript
 
-<ul>
- <li><a href="/fr/docs/WebGL/Cross-Domain_Textures">Les textures Cross-domain</a> sont à présent autorisées avec l'accord de CORS.</li>
- <li>Le processus de rendu Cross avec Direct2D/Direct3D 10.</li>
-</ul>
+- [`RegExp.exec()`](/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/RegExp/exec) et [`RegExp.test()`](/fr/docs/JavaScript/Reference/Global_Objects/RegExp/test) appelés sans arguments correspondent maintenant à la chaîne "undefined".
+- [`String.search()`](/fr/docs/JavaScript/Reference/Global_Objects/String/search) et [`String.match()`](/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/String/Match) appelés sans arguments ou `undefined` correspondent désormais à une chaîne vide et correspondent donc à chaque chaîne.
+- Le support des listes de surveillance a été implémenté avec les nouvelles mtéhodes (non standards) [`watch()`](/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/Object/watch) et [`unwatch()`](/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/Object/unwatch).
 
-<h3 id="MathML">MathML</h3>
+### CSS
 
-<ul>
- <li>le support de l'attribut <code>displaystyle</code> sur l'élément de premier niveau <code><a href="/fr/docs/Web/MathML/Element/math">&lt;math&gt;</a></code> a été ajouté.</li>
- <li>L'interprétation de numéros de lignes négatifs pour l'attribut <code>align</code> de <code><a href="/fr/docs/Web/MathML/Element/mtable">&lt;mtable&gt;</a></code> a été corrigée.</li>
-</ul>
+- [`resolution`](/fr/docs/Web/CSS/resolution) accepte désormais [`<number>`](/fr/docs/Web/CSS/number), pas seulement des valeurs [`<integer>`](/fr/docs/Web/CSS/integer) comme avec la spécification.
+- Les règles de césure ont été ajoutées pour de nombreuses nouvelles langues lors de l'utilisation de [`hyphens`](/fr/docs/Web/CSS/hyphens).
+- Le traitement de [`background-size`](/fr/docs/Web/CSS/background-size) a été revu pour mieux correspondre à la spécification.
+- Dans le passé, [`text-decoration`](/fr/docs/Web/CSS/text-decoration) en mode quirks avait l'épaisseur de ligne et la position ajustée sur le texte descendant pour correspondre à la descendance. Désormais le mode standard et le mode quirks ont un rendu plus proche.
+- Le positionnement horizontal des éléments est davantage conforme à la spécification dans beaucoup de cas. La documentation est à venir, mais pour l'instant, pour plus de détails voir le commentaire 23 du [bug 682780](https://bugzilla.mozilla.org/show_bug.cgi?id=682780).
+- [Les images SVG sont désormais correctement mise à l'échelle](/fr/docs/CSS/Scaling_of_SVG_backgrounds) lorsqu'elles sont utilisées comme images de fond.
 
-<h3 id="Outils_de_développement">Outils de développement</h3>
+### Réseau
 
-<ul>
- <li>L'objet <a href="/fr/docs/Tools/Web_Console#The_console_object"><code>console</code></a> a une nouvelle méthode <code>dir()</code>, qui affiche une liste interactive des propriétés sur un objet spécifié.</li>
-</ul>
+- Les doubles guillemets ne sont plus acceptés en tant que délimiteur pour l'encodage [RFC 2231](https://tools.ietf.org/html/rfc2231) ou [RFC 5987](https://tools.ietf.org/html/rfc5987), conformément à ces RFCs.
+- Le parseur MIME du champ d'en-tête (`Content-Disposition`) exige désormais "=" dans les paramètres.
+- Les scripts ne sont plus téléchargés lorsque JavaScript est désactivé.
+- SSL 2.0 n'est plus supporté.
 
-<h2 id="Changements_pour_les_développeurs_de_Mozilla_et_de_modules_complémentaires">Changements pour les développeurs de Mozilla et de modules complémentaires</h2>
+### WebSockets
 
-<p>Voir <a href="/fr/docs/Firefox/Updating_add-ons_for_Firefox_8">Updating add-ons for Firefox 8</a> pour vous guidez dans les modifications que vous êtes susceptibles d'avoir à faire pour rendre vos extensions compatibles avec Firefox 8.</p>
+- La méthode [`send()`](</fr/docs/WebSockets/WebSockets_reference/WebSocket#send()>) de l'objet [`WebSocket`](/fr/docs/WebSockets/WebSockets_reference/WebSocket) ne renvoie plus à tort une valeur booléenne.
+- La méthode [`close()`](</fr/docs/WebSockets/WebSockets_reference/WebSocket#close()>) de l'objet [`WebSocket`](/fr/docs/WebSockets/WebSockets_reference/WebSocket) correspond désormais à la version actuelle du standard, et les événements proches utilisent à présent correctement l'interface [`CloseEvent`](/fr/docs/WebSockets/WebSockets_reference/CloseEvent).
+- L'attribut `extensions` de l'objet [`WebSocket`](/fr/docs/WebSockets/WebSockets_reference/WebSocket) est à présent supporté.
+- Le constructeur WebSocket supporte désormais un ensemble de protocoles ainsi que la chaîne d'un seul protocole.
+- Le contenu mixte n'est pas autorisé avec WebSockets, vous ne pouvez plus établir une connexion vers un serveur WebSocket non sécurisé à partir d'un contenu sécurisé.
+- Les erreurs de connexion avec WebSockets déclenchent à présent le gestionnaire `onerror`.
+- L'API [WebSocket](/fr/docs/WebSockets) a été mise à jour suivant la dernière version de la spécification (voir [bug 674890](https://bugzilla.mozilla.org/show_bug.cgi?id=674890), [bug 674527](https://bugzilla.mozilla.org/show_bug.cgi?id=674527) et [bug 674716](https://bugzilla.mozilla.org/show_bug.cgi?id=674716)).
+- L'extension deflate-stream pour WebSockets a été désactivée, elle est obsolète et a cassée la compatibilité avec quelques sites.
 
-<div class="note">
-  <p><strong>Note :</strong> Firefox 8 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir <a href="/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces">Interfaces Binaires</a>.</p>
-</div>
+### WebGL
 
-<h3 id="XPCOM">XPCOM</h3>
+- [Les textures Cross-domain](/fr/docs/WebGL/Cross-Domain_Textures) sont à présent autorisées avec l'accord de CORS.
+- Le processus de rendu Cross avec Direct2D/Direct3D 10.
 
-<dl>
- <dt><a href="/fr/docs/Components.utils"><code>Components.utils</code></a></dt>
- <dd>Les nouvelles méthodes <a href="/fr/docs/Components.utils.createObjectIn"><code>Components.utils.createObjectIn()</code></a> et <a href="/fr/docs/Components.utils.makeObjectPropsNormal"><code>Components.utils.makeObjectPropsNormal()</code></a> ont été créées pour faciliter la création d'objets dans des compartiments spécifiques.</dd>
-</dl>
+### MathML
 
-<h4 id="Autres_changements_relatifs_à_XPCOM">Autres changements relatifs à XPCOM</h4>
+- le support de l'attribut `displaystyle` sur l'élément de premier niveau [`<math>`](/fr/docs/Web/MathML/Element/math) a été ajouté.
+- L'interprétation de numéros de lignes négatifs pour l'attribut `align` de [`<mtable>`](/fr/docs/Web/MathML/Element/mtable) a été corrigée.
 
-<ul>
- <li>Vous pouvez à présent demander des objets DOM <a href="/fr/docs/Web/API/File"><code>File</code></a> à partir d'éléments du code en faisant simplement un nouveau fichier, au lieu de devoir demander directement à <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFile">nsIDOMFile</a></code>.</li>
- <li>Le type de tableau <code>nsTPtrArray</code> a été retiré. La fonctionnalité est désormais disponible sur tous les <code>nsTArray</code>, qui propose désormais la méthode <code>SafeElementAt()</code> lors d'une demande à l'aide d'un type de pointeur. Voir la section sur <a href="/fr/docs/XPCOM_array_guide#Bounds-safe_access_to_elements"><code>SafeElementAt()</code></a> dans le <a href="/fr/docs/XPCOM_array_guide">guide des tableaux XPCOM</a> pour plus de détails.</li>
-</ul>
+### Outils de développement
 
-<h3 id="Workers">Workers</h3>
+- L'objet [`console`](/fr/docs/Tools/Web_Console#The_console_object) a une nouvelle méthode `dir()`, qui affiche une liste interactive des propriétés sur un objet spécifié.
 
-<p>Il n'est plus possible d'accéder à des objets XPCOM depuis ChromeWorkers. XPConnect a été désactivé dans le contexte des travailleurs comme indiqué par le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649537">bug 649537</a>.</p>
+## Changements pour les développeurs de Mozilla et de modules complémentaires
 
-<h3 id="XUL">XUL</h3>
+Voir [Updating add-ons for Firefox 8](/fr/docs/Firefox/Updating_add-ons_for_Firefox_8) pour vous guidez dans les modifications que vous êtes susceptibles d'avoir à faire pour rendre vos extensions compatibles avec Firefox 8.
 
-<ul>
- <li>Un bug dans <a href="/fr/docs/Web/API/Document/execCommand"><code>document.execCommand()</code></a> a été fixé, il survenait lors de l'appel sur la valeur de <code><a href="http://api/fr/docs/XUL/Propriétés/contentDocument">contentDocument</a></code>. Depuis Firefox 3, cela a entraîné des erreurs au lieu d'un travail correct.</li>
- <li><a href="/fr/docs/Extensions/Bootstrapped_extensions">Les extensions amorcées</a> peuvent à présent charger le chrome l'aide du fichier <a href="/fr/docs/Enregistrement_chrome"><code>chrome.manifest</code></a>. Voir la section <a href="/fr/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest">Ajout de l'interface utilisateur avec chrome.manifest</a> pour plus de détails.</li>
- <li><a href="/fr/docs/XUL/image">Les images XUL</a> rétrécissent désormais avec le même ratio dans les deux sens lors de la spécification de dimensions maximales.</li>
-</ul>
+> **Note :** Firefox 8 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir [Interfaces Binaires](/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces).
 
-<h3 id="Changements_dans_le_système_de_compilation">Changements dans le système de compilation</h3>
+### XPCOM
 
-<ul>
- <li>Les options de configuration de compilation suivantes ont été retirées :
-  <ul>
-   <li><code>--enable-timeline</code></li>
-   <li><code>--disable-storage</code></li>
-   <li><code>--necko-disk-cache</code></li>
-  </ul>
- </li>
- <li>Lors de la compilation des fichiers IDL aux en-têtes, le fichier d'en-tête <code>jspubtd.h</code> est automatiquement inclus lorsque c'est nécessaire. L'inclusion manuelle de <code>jspubtd.h</code> et/ou <code>jsapi.h</code> dans des fichiers IDL qui utilisent jsval ou [implicit_jscontext] n'est plus nécessaire.</li>
-</ul>
+- [`Components.utils`](/fr/docs/Components.utils)
+  - : Les nouvelles méthodes [`Components.utils.createObjectIn()`](/fr/docs/Components.utils.createObjectIn) et [`Components.utils.makeObjectPropsNormal()`](/fr/docs/Components.utils.makeObjectPropsNormal) ont été créées pour faciliter la création d'objets dans des compartiments spécifiques.
 
-<h3 id="Enregistrement_du_chrome">Enregistrement du chrome</h3>
+#### Autres changements relatifs à XPCOM
 
-<ul>
- <li>L'indicateur <a href="/fr/docs/Chrome_Registration#platformversion"><code>platformversion</code></a> peut être utilisé dans le chrome.manifest pour spécifier la compatibilité entre les versions de Gecko.</li>
-</ul>
+- Vous pouvez à présent demander des objets DOM [`File`](/fr/docs/Web/API/File) à partir d'éléments du code en faisant simplement un nouveau fichier, au lieu de devoir demander directement à [`nsIDOMFile`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFile).
+- Le type de tableau `nsTPtrArray` a été retiré. La fonctionnalité est désormais disponible sur tous les `nsTArray`, qui propose désormais la méthode `SafeElementAt()` lors d'une demande à l'aide d'un type de pointeur. Voir la section sur [`SafeElementAt()`](/fr/docs/XPCOM_array_guide#Bounds-safe_access_to_elements) dans le [guide des tableaux XPCOM](/fr/docs/XPCOM_array_guide) pour plus de détails.
 
-<h3 id="Changements_dans_les_interfaces">Changements dans les interfaces</h3>
+### Workers
 
-<ul>
- <li>La méthode <code><a href="http://api/fr/docs/XPCOM_Interface_Reference/mozIJSSubScriptLoader#loadSubScript()">mozIJSSubScriptLoader.loadSubScript()</a></code> charge désormais scripts à partir du cache de démarrage lorsque c'est possible.</li>
- <li>L'attribut <code>ownerWindow</code> a été supprimé de l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessNode">nsIAccessNode</a></code>.</li>
- <li>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMStorageWindow">nsIDOMStorageWindow</a></code> a été fusionnée avec l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow">nsIDOMWindow</a></code>.</li>
- <li>Tous les membres de l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowInternal">nsIDOMWindowInternal</a></code> ont été déplacés dans l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow">nsIDOMWindow</a></code>. L'interface (sans les membres) reste disponible pour la compatibilité jusqu'à Firefox 9.</li>
- <li>Afin d'améliorer les performances, le rappel pour les mises à jour asynchrones des bases de données Places a été changé. Voir les nouvelles méthodes <code><a href="http://api/fr/docs/XPCOM_Interface_Reference/mozIVisitInfoCallback#handleResult()">mozIVisitInfoCallback.handleResult()</a></code> et <code><a href="http://api/fr/docs/XPCOM_Interface_Reference/mozIVisitInfoCallback#handleError()">mozIVisitInfoCallback.handleError()</a></code>, qui remplacent l'ancienne unique méthode pour les erreurs et les conditions de succès.</li>
- <li>L'attribut <code>KIND_MAPPED</code> de <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMemoryReporter">nsIMemoryReporter</a></code> a été désapprouvé au profit de <code>KIND_NONHEAP</code>, de nouveaux types d'unités ont été ajoutées : <code>UNITS_COUNT_CUMULATIVE</code> et <code>UNITS_PERCENTAGE</code>.</li>
- <li>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMemoryReporterManager">nsIMemoryReporterManager</a></code> a un nouvel attribut <code>explicit</code>, qui indique explicitement la taille totale des allocations de mémoire.</li>
- <li>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMemoryReporterManager">nsIMemoryReporterManager</a></code> a un nouvel attribut <code>resident</code>, qui relève la quantité de mémoire physique utilisée.</li>
- <li>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINetworkLinkService">nsINetworkLinkService</a></code> a un nouvel attribut, <code>linkType</code>. Cet attribut indique le type de connexion réseau en cours d'utilisation. Tous les systèmes d'exploitation retournent actuellement <code>LINK_TYPE_UNKNOWN</code>. Le support d'Android a été gardé pour des raisons de sécurité.</li>
- <li>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISelection2">nsISelection2</a></code> a été fusionnée avec l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISelectionPrivate">nsISelectionPrivate</a></code>.</li>
- <li>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISelection3">nsISelection3</a></code> a été fusionnée avec l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISelection">nsISelection</a></code>.</li>
- <li>L'attribut <code>state</code> de <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISessionStartup">nsISessionStartup</a></code> est désormais de type <a href="/fr/docs/SpiderMonkey/JSAPI_Reference/Jsval"><code>jsval</code></a> au lieu d'être une chaîne, pour des raisons de performance.</li>
- <li>L'état de l'attribut <code>isActive</code> de (<code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocShell">nsIDocShell</a></code>) est désormais <code>false</code> pour les fenêtres minimisées.</li>
- <li>La méthode <code><a href="http://api/fr/docs/XPCOM_Interface_Reference/nsIDownloadHistory#addDownload()">nsIDownloadHistory.addDownload()</a></code> enregistre désormais la cible de l'endroit où le téléchargement est sauvegardé, sur le système de fichiers local.</li>
-</ul>
+Il n'est plus possible d'accéder à des objets XPCOM depuis ChromeWorkers. XPConnect a été désactivé dans le contexte des travailleurs comme indiqué par le [bug 649537](https://bugzilla.mozilla.org/show_bug.cgi?id=649537).
 
-<h4 id="Interfaces_supprimées">Interfaces supprimées</h4>
+### XUL
 
-<p>Les interfaces suivantes ont été supprimées car elles n'étaient plus indispensables :</p>
+- Un bug dans [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) a été fixé, il survenait lors de l'appel sur la valeur de [`contentDocument`](http://api/fr/docs/XUL/Propriétés/contentDocument). Depuis Firefox 3, cela a entraîné des erreurs au lieu d'un travail correct.
+- [Les extensions amorcées](/fr/docs/Extensions/Bootstrapped_extensions) peuvent à présent charger le chrome l'aide du fichier [`chrome.manifest`](/fr/docs/Enregistrement_chrome). Voir la section [Ajout de l'interface utilisateur avec chrome.manifest](/fr/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) pour plus de détails.
+- [Les images XUL](/fr/docs/XUL/image) rétrécissent désormais avec le même ratio dans les deux sens lors de la spécification de dimensions maximales.
 
-<ul>
- <li><code>nsITimelineService</code></li>
- <li><code>nsIDOMHTMLIsIndexElement</code></li>
-</ul>
+### Changements dans le système de compilation
 
-<p>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWorkerFactory">nsIWorkerFactory</a></code> a également été retirée. WLes travailleurs peuvent encore être créés à l'aide des constructeurs <code>Worker</code> et <code>ChromeWorker</code>.</p>
+- Les options de configuration de compilation suivantes ont été retirées :
 
-<h3 id="Autres_changements">Autres changements</h3>
+  - `--enable-timeline`
+  - `--disable-storage`
+  - `--necko-disk-cache`
 
-<ul>
- <li>Quand une fenêtre est minimisée (non réduite), ou basculée entre le plein écran et le mode fenêtré, elle reçoit l'événement <code>sizemodechange</code>.</li>
- <li>You can now <a href="/fr/docs/Installing_extensions#Preventing_automatic_install_from_specific_locations">la préférence <code>extensions.autoDisableScopes</code></a> pour désactiver l'installation automatique d'extensions sur un emplacement d'installation.</li>
- <li>La nouvelle propriété <a href="/fr/docs/Web/API/Document/mozSyntheticDocument"><code>document.mozSyntheticDocument</code></a> des objets <a href="/fr/docs/Web/API/Document"><code>Document</code></a> vous permet de déterminer si un document est synthétique (comme une image, une vidéo ou un fichier audio) plutôt qu'un document DOM standard. Cela peut être utile, par exemple, si vous voulez présenter une interface utilisateur différente dans cette situation (comme l'ajout d'éléments contextuels différemment selon le cas présent).</li>
- <li>Vous pouvez désormais spécifier un filtre en ouvrant <code>about:config</code> ; par exemple, "about:config?filter=sessionstore" n'affichera que les préférences liées au stockage des sessions.</li>
-</ul>
+- Lors de la compilation des fichiers IDL aux en-têtes, le fichier d'en-tête `jspubtd.h` est automatiquement inclus lorsque c'est nécessaire. L'inclusion manuelle de `jspubtd.h` et/ou `jsapi.h` dans des fichiers IDL qui utilisent jsval ou \[implicit_jscontext] n'est plus nécessaire.
 
-<h2 id="Voir_également">Voir également</h2>
+### Enregistrement du chrome
 
-<ul>
-<li><a href="/fr/docs/Mozilla/Firefox/Versions/7">Firefox 7 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/6">Firefox 6 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/5">Firefox 5 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/4">Firefox 4 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/3.6">Firefox 3.6 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/3.5">Firefox 3.5 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/3">Firefox 3 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/2">Firefox 2 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/1.5">Firefox 1.5 pour les développeurs</a></li></ul>
+- L'indicateur [`platformversion`](/fr/docs/Chrome_Registration#platformversion) peut être utilisé dans le chrome.manifest pour spécifier la compatibilité entre les versions de Gecko.
+
+### Changements dans les interfaces
+
+- La méthode [`mozIJSSubScriptLoader.loadSubScript()`](<http://api/fr/docs/XPCOM_Interface_Reference/mozIJSSubScriptLoader#loadSubScript()>) charge désormais scripts à partir du cache de démarrage lorsque c'est possible.
+- L'attribut `ownerWindow` a été supprimé de l'interface [`nsIAccessNode`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessNode).
+- L'interface [`nsIDOMStorageWindow`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMStorageWindow) a été fusionnée avec l'interface [`nsIDOMWindow`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow).
+- Tous les membres de l'interface [`nsIDOMWindowInternal`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowInternal) ont été déplacés dans l'interface [`nsIDOMWindow`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindow). L'interface (sans les membres) reste disponible pour la compatibilité jusqu'à Firefox 9.
+- Afin d'améliorer les performances, le rappel pour les mises à jour asynchrones des bases de données Places a été changé. Voir les nouvelles méthodes [`mozIVisitInfoCallback.handleResult()`](<http://api/fr/docs/XPCOM_Interface_Reference/mozIVisitInfoCallback#handleResult()>) et [`mozIVisitInfoCallback.handleError()`](<http://api/fr/docs/XPCOM_Interface_Reference/mozIVisitInfoCallback#handleError()>), qui remplacent l'ancienne unique méthode pour les erreurs et les conditions de succès.
+- L'attribut `KIND_MAPPED` de [`nsIMemoryReporter`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMemoryReporter) a été désapprouvé au profit de `KIND_NONHEAP`, de nouveaux types d'unités ont été ajoutées : `UNITS_COUNT_CUMULATIVE` et `UNITS_PERCENTAGE`.
+- L'interface [`nsIMemoryReporterManager`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMemoryReporterManager) a un nouvel attribut `explicit`, qui indique explicitement la taille totale des allocations de mémoire.
+- L'interface [`nsIMemoryReporterManager`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMemoryReporterManager) a un nouvel attribut `resident`, qui relève la quantité de mémoire physique utilisée.
+- L'interface [`nsINetworkLinkService`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINetworkLinkService) a un nouvel attribut, `linkType`. Cet attribut indique le type de connexion réseau en cours d'utilisation. Tous les systèmes d'exploitation retournent actuellement `LINK_TYPE_UNKNOWN`. Le support d'Android a été gardé pour des raisons de sécurité.
+- L'interface [`nsISelection2`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISelection2) a été fusionnée avec l'interface [`nsISelectionPrivate`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISelectionPrivate).
+- L'interface [`nsISelection3`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISelection3) a été fusionnée avec l'interface [`nsISelection`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISelection).
+- L'attribut `state` de [`nsISessionStartup`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISessionStartup) est désormais de type [`jsval`](/fr/docs/SpiderMonkey/JSAPI_Reference/Jsval) au lieu d'être une chaîne, pour des raisons de performance.
+- L'état de l'attribut `isActive` de ([`nsIDocShell`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocShell)) est désormais `false` pour les fenêtres minimisées.
+- La méthode [`nsIDownloadHistory.addDownload()`](<http://api/fr/docs/XPCOM_Interface_Reference/nsIDownloadHistory#addDownload()>) enregistre désormais la cible de l'endroit où le téléchargement est sauvegardé, sur le système de fichiers local.
+
+#### Interfaces supprimées
+
+Les interfaces suivantes ont été supprimées car elles n'étaient plus indispensables :
+
+- `nsITimelineService`
+- `nsIDOMHTMLIsIndexElement`
+
+L'interface [`nsIWorkerFactory`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWorkerFactory) a également été retirée. WLes travailleurs peuvent encore être créés à l'aide des constructeurs `Worker` et `ChromeWorker`.
+
+### Autres changements
+
+- Quand une fenêtre est minimisée (non réduite), ou basculée entre le plein écran et le mode fenêtré, elle reçoit l'événement `sizemodechange`.
+- You can now [la préférence `extensions.autoDisableScopes`](/fr/docs/Installing_extensions#Preventing_automatic_install_from_specific_locations) pour désactiver l'installation automatique d'extensions sur un emplacement d'installation.
+- La nouvelle propriété [`document.mozSyntheticDocument`](/fr/docs/Web/API/Document/mozSyntheticDocument) des objets [`Document`](/fr/docs/Web/API/Document) vous permet de déterminer si un document est synthétique (comme une image, une vidéo ou un fichier audio) plutôt qu'un document DOM standard. Cela peut être utile, par exemple, si vous voulez présenter une interface utilisateur différente dans cette situation (comme l'ajout d'éléments contextuels différemment selon le cas présent).
+- Vous pouvez désormais spécifier un filtre en ouvrant `about:config` ; par exemple, "about:config?filter=sessionstore" n'affichera que les préférences liées au stockage des sessions.
+
+## Voir également
+
+- [Firefox 7 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/7)
+- [Firefox 6 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/6)
+- [Firefox 5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/5)
+- [Firefox 4 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/4)
+- [Firefox 3.6 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.6)
+- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.5)
+- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3)
+- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/2)
+- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/1.5)

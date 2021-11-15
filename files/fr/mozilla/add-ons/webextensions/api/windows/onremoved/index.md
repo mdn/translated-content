@@ -13,68 +13,61 @@ tags:
   - onRemoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancer quand une fenêtre est fermée.</p>
+Lancer quand une fenêtre est fermée.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">browser.windows.onRemoved.addListener(listener)
+```js
+browser.windows.onRemoved.addListener(listener)
 browser.windows.onRemoved.removeListener(listener)
 browser.windows.onRemoved.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un auditeur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêter d'écouter cet événement. L'argument de l'auditeur est l'auditeur supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifie si un auditeur est enregistré pour cet événement. Renvoie vrai si elle écoute, faux sinon.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un auditeur à cet événement.
+- `removeListener(listener)`
+  - : Arrêter d'écouter cet événement. L'argument de l'auditeur est l'auditeur supprimer.
+- `hasListener(listener)`
+  - : Vérifie si un auditeur est enregistré pour cet événement. Renvoie vrai si elle écoute, faux sinon.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>windowId</code></dt>
-  <dd><code>integer</code>. ID de la fenêtre fermée.</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `windowId`
+      - : `integer`. ID de la fenêtre fermée.
 
-<p>{{Compat("webextensions.api.windows.onRemoved")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.windows.onRemoved")}}
 
-<p>Enregistrer les identifiants de la fenêtre lorsqu'ils sont supprimés</p>
+## Exemples
 
-<pre class="brush: js">browser.windows.onRemoved.addListener((windowId) =&gt; {
+Enregistrer les identifiants de la fenêtre lorsqu'ils sont supprimés
+
+```js
+browser.windows.onRemoved.addListener((windowId) => {
   console.log("Closed window: " + windowId);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+>
+> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,5 +94,4 @@ browser.windows.onRemoved.hasListener(listener)
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

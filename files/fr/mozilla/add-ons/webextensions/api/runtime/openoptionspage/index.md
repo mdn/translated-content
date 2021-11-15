@@ -3,36 +3,34 @@ title: runtime.openOptionsPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Si votre extension a défini une [page d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages), cette méthode l'ouvre.
 
-<div>Si votre extension a défini une <a href="/fr/Add-ons/WebExtensions/user_interface/Options_pages">page d'options</a>, cette méthode l'ouvre.</div>
+C'est une fonction asynchrone  qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<div></div>
+## Syntaxe
 
-<p>C'est une fonction asynchrone  qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+```js
+var openingPage = browser.runtime.openOptionsPage()
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+### Paramètres
 
-<pre class="brush: js">var openingPage = browser.runtime.openOptionsPage()
-</pre>
+None.
 
-<h3 id="Paramètres">Paramètres</h3>
+### valeur retournée
 
-<p>None.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la page d'options a été créée avec succés, ou rejetée avec un message d'erreur si l'opération a échoué.
 
-<h3 id="valeur_retournée">valeur retournée</h3>
+## Compatibilité du navigateur
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans argument lorsque la page d'options a été créée avec succés, ou rejetée avec un message d'erreur si l'opération a échoué.</p>
+{{Compat("webextensions.api.runtime.openOptionsPage")}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Exemples
 
-<p>{{Compat("webextensions.api.runtime.openOptionsPage")}}</p>
+Ouvrez une page d'options lorsque l'utilisateur clique sur l'icône d'une action du navigateur :
 
-<h2 id="Exemples">Exemples</h2>
-
-<p>Ouvrez une page d'options lorsque l'utilisateur clique sur l'icône d'une action du navigateur :</p>
-
-<pre class="brush: js">function onOpened() {
+```js
+function onOpened() {
   console.log(`Options page opened`);
 }
 
@@ -41,19 +39,18 @@ function onError(error) {
 }
 
 var opening = browser.runtime.openOptionsPage();
-opening.then(onOpened, onError);</pre>
+opening.then(onOpened, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -80,5 +77,4 @@ opening.then(onOpened, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -12,42 +12,42 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Supprime une valeur précédemment stockée par un appel à {{WebExtAPIRef("sessions.setTabValue")}}.</p>
+Supprime une valeur précédemment stockée par un appel à {{WebExtAPIRef("sessions.setTabValue")}}.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var removing = browser.sessions.removeTabValue(
+```js
+var removing = browser.sessions.removeTabValue(
   tabId,    // integer
   key       // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. ID de l'onglet dont vous essayez de supprimer les données.</dd>
- <dt><code>key</code></dt>
- <dd><code>string</code>. Clé identifiant la valeur particulière à supprimer. Cela doit correspondre à la clé précédemment donnée dans {{WebExtAPIRef("sessions.setTabValue")}}.</dd>
-</dl>
+- `tabId`
+  - : `integer`. ID de l'onglet dont vous essayez de supprimer les données.
+- `key`
+  - : `string`. Clé identifiant la valeur particulière à supprimer. Cela doit correspondre à la clé précédemment donnée dans {{WebExtAPIRef("sessions.setTabValue")}}.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui ne sera résolue aucun argument si l'élément a été supprimé avec succès. Si l'appel a échoué (par exemple, parce que l'ID de l'onglet n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui ne sera résolue aucun argument si l'élément a été supprimé avec succès. Si l'appel a échoué (par exemple, parce que l'ID de l'onglet n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.sessions.removeTabValue", 10)}}</p>
+{{Compat("webextensions.api.sessions.removeTabValue", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Ce code ajoute deux éléments de menu contextuel: l'un stocke une valeur associée à l'onglet en cours, l'autre le supprime :</p>
+Ce code ajoute deux éléments de menu contextuel: l'un stocke une valeur associée à l'onglet en cours, l'autre le supprime :
 
-<pre class="brush: js">async function setOnActiveTab() {
+```js
+async function setOnActiveTab() {
   let tabArray = await browser.tabs.query({currentWindow: true, active: true});
   let tabId = tabArray[0].id;
   await browser.sessions.setTabValue(tabId, "my-key", "my-value");
@@ -71,12 +71,13 @@ browser.menus.create({
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener((info) =&gt; {
+browser.menus.onClicked.addListener((info) => {
   if (info.menuItemId === "add-my-item") {
     setOnActiveTab();
   } else {
     removeFromActiveTab();
   }
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

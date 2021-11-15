@@ -13,38 +13,33 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Cette valeur est utilisée pour signaler un message d'erreur provenant d'une API asynchrone, lorsque l'API asynchrone reçoit un rappel. Cela est utile pour les extensions qui utilisent la valeur basée sur le rappel des API WebExtension.Vpous n'avez pas besoin de vérifier cette propriété si vous utilisez la version basée sur la promesse des API : à la place, passez un gestionnaire d'erreurs à la promesse :
 
-<div>Cette valeur est utilisée pour signaler un message d'erreur provenant d'une API asynchrone, lorsque l'API asynchrone reçoit un rappel. Cela est utile pour les extensions qui utilisent la valeur basée sur le rappel des API WebExtension.</div>
+```js
+var gettingCookies = browser.cookies.getAll();
+gettingCookies.then(onGot, onError);
+```
 
-<div></div>
+La propriété `runtime.lastError` est définie lorsqu'une fonction asynchrone a une condition  d'erreur qu'elle doit signaler à son appelant.
 
-<div>Vpous n'avez pas besoin de vérifier cette propriété si vous utilisez la version basée sur la promesse des API : à la place, passez un gestionnaire d'erreurs à la promesse :</div>
+Si vous applez une fonction asynchrone qui veut définir `lastError`, vous devez vérifier l'erreur lorsque vous gérez le résultat de la fonction. Si  `lastError` a été défini et que vous ne cochez pas dans la fonction de rappel, une erreur sera générée.
 
-<div></div>
+## Syntaxe
 
-<pre class="brush: js">var gettingCookies = browser.cookies.getAll();
-gettingCookies.then(onGot, onError);</pre>
+```js
+var myError = browser.runtime.lastError;  // null or Error object
+```
 
-<p>La propriété <code>runtime.lastError</code> est définie lorsqu'une fonction asynchrone a une condition  d'erreur qu'elle doit signaler à son appelant.</p>
+### Valeur
 
-<div>Si vous applez une fonction asynchrone qui veut définir <code>lastError</code>, vous devez vérifier l'erreur lorsque vous gérez le résultat de la fonction. Si  <code>lastError</code> a été défini et que vous ne cochez pas dans la fonction de rappel, une erreur sera générée.</div>
+Un objet [Error](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error) représentant une erreur. La propriété [`message`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/message) est un `string` avec une description lisible par l'utilisateur de l'erreur. Si  `lastError` n'a pas été défini, la valeur est `null`.
 
-<div></div>
+## Examples
 
-<h2 id="Syntaxe">Syntaxe</h2>
+Définir un cookie, utiliser pour enregistrer le nouveau cookie ou signaler une erreur :
 
-<pre class="brush: js">var myError = browser.runtime.lastError;  // null or Error object</pre>
-
-<h3 id="Valeur">Valeur</h3>
-
-<p>Un objet <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error">Error</a> représentant une erreur. La propriété <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/message"><code>message</code></a> est un <code>string</code> avec une description lisible par l'utilisateur de l'erreur. Si  <code>lastError</code> n'a pas été défini, la valeur est <code>null</code>.</p>
-
-<h2 id="Examples">Examples</h2>
-
-<p>Définir un cookie, utiliser pour enregistrer le nouveau cookie ou signaler une erreur :</p>
-
-<pre class="brush: js">function logCookie(c) {
+```js
+function logCookie(c) {
   if (browser.runtime.lastError) {
     console.error(browser.runtime.lastError);
   } else {
@@ -55,11 +50,13 @@ gettingCookies.then(onGot, onError);</pre>
 browser.cookies.set(
   {url: "https://developer.mozilla.org/"},
   logCookie
-);</pre>
+);
+```
 
-<p>La même chose, mais en utilisant une promesse de gérer le résultat de <code>setCookie()</code>:</p>
+La même chose, mais en utilisant une promesse de gérer le résultat de `setCookie()`:
 
-<pre class="brush: js">function logCookie(c) {
+```js
+function logCookie(c) {
   console.log(c);
 }
 
@@ -71,27 +68,24 @@ var setCookie = browser.cookies.set(
   {url: "https://developer.mozilla.org/"}
 );
 
-setCookie.then(logCookie, logError);</pre>
+setCookie.then(logCookie, logError);
+```
 
-<div class="note">
-<p><strong>Note :</strong> <code>runtime.lastError</code> est un alias pour  {{WebExtAPIRef("extension.lastError")}}: Ils sont ensemble, et la vérification de l'un fonctionnera.</p>
-</div>
+> **Note :** `runtime.lastError` est un alias pour  {{WebExtAPIRef("extension.lastError")}}: Ils sont ensemble, et la vérification de l'un fonctionnera.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.runtime.lastError")}}</p>
+{{Compat("webextensions.api.runtime.lastError")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,5 +112,4 @@ setCookie.then(logCookie, logError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

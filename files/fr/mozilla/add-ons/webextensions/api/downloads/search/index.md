@@ -14,39 +14,39 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/search
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La fonction <strong><code>search()</code></strong> de l'API {{WebExtAPIRef("downloads")}} interroge les {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} disponibles dans le gestionnaire de téléchargements du navigateur, et renvoie celles qui correspondent aux spécifications critères de recherche.</p>
+La fonction **`search()`** de l'API {{WebExtAPIRef("downloads")}} interroge les {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} disponibles dans le gestionnaire de téléchargements du navigateur, et renvoie celles qui correspondent aux spécifications critères de recherche.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var searching = browser.downloads.search(query);
-</pre>
+```js
+var searching = browser.downloads.search(query);
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>query</code></dt>
- <dd>Un objet {{WebExtAPIRef('downloads.DownloadQuery')}}.</dd>
-</dl>
+- `query`
+  - : Un objet {{WebExtAPIRef('downloads.DownloadQuery')}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. La promise est remplie avec un <code>tableau d'objets</code> <code>{{WebExtAPIRef('downloads.DownloadItem')}}</code> qui correspondent aux critères donnés.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). La promise est remplie avec un `tableau d'objets` `{{WebExtAPIRef('downloads.DownloadItem')}}` qui correspondent aux critères donnés.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.downloads.search")}}</p>
+{{Compat("webextensions.api.downloads.search")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>En général, vous restreignez les éléments récupérés à l'aide du paramètre de <code>requête</code>.</p>
+En général, vous restreignez les éléments récupérés à l'aide du paramètre de `requête`.
 
-<h3 id="Obtenez_les_téléchargements_correspondant_à_query">Obtenez les téléchargements correspondant à "query"</h3>
+### Obtenez les téléchargements correspondant à "query"
 
-<pre class="brush: js">function logDownloads(downloads) {
+```js
+function logDownloads(downloads) {
   for (let download of downloads) {
     console.log(download.id);
     console.log(download.url);
@@ -61,13 +61,15 @@ var searching = browser.downloads.search({
   query:["imgur"]
 });
 
-searching.then(logDownloads, onError);</pre>
+searching.then(logDownloads, onError);
+```
 
-<h3 id="Obtenez_un_article_spécifique">Obtenez un article spécifique</h3>
+### Obtenez un article spécifique
 
-<p>Pour obtenir un {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, la méthode la plus simple consiste à définir uniquement le champ <code>id</code>, comme indiqué dans l'extrait ci-dessous :</p>
+Pour obtenir un {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, la méthode la plus simple consiste à définir uniquement le champ `id`, comme indiqué dans l'extrait ci-dessous :
 
-<pre class="brush: js">function logDownloads(downloads) {
+```js
+function logDownloads(downloads) {
   for (let download of downloads) {
     console.log(download.id);
     console.log(download.url);
@@ -82,13 +84,14 @@ var id = 13;
 
 var searching = browser.downloads.search({id});
 searching.then(logDownloads, onError);
-</pre>
+```
 
-<h3 id="Obtenez_tous_les_téléchargements">Obtenez tous les téléchargements</h3>
+### Obtenez tous les téléchargements
 
-<p>Si vous voulez renvoyer tout {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}, définissez la <code>query</code> sur un objet vide.</p>
+Si vous voulez renvoyer tout {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}, définissez la `query` sur un objet vide.
 
-<pre class="brush: js">function logDownloads(downloads) {
+```js
+function logDownloads(downloads) {
   for (let download of downloads) {
     console.log(download.id);
     console.log(download.url);
@@ -100,13 +103,15 @@ function onError(error) {
 }
 
 var searching = browser.downloads.search({});
-searching.then(logDownloads, onError);</pre>
+searching.then(logDownloads, onError);
+```
 
-<h3 id="Obtenez_le_téléchargement_le_plus_récent">Obtenez le téléchargement le plus récent</h3>
+### Obtenez le téléchargement le plus récent
 
-<p>Vous pouvez obtenir le téléchargement le plus récent en spécifiant les paramètres de recherche suivants :</p>
+Vous pouvez obtenir le téléchargement le plus récent en spécifiant les paramètres de recherche suivants :
 
-<pre class="brush: js">function logDownloads(downloads) {
+```js
+function logDownloads(downloads) {
   for (let download of downloads) {
     console.log(download.id);
     console.log(download.url);
@@ -121,21 +126,20 @@ var searching = browser.downloads.search({
    limit: 1,
    orderBy: ["-startTime"]
 });
-searching.then(logDownloads, onError);</pre>
+searching.then(logDownloads, onError);
+```
 
-<p>Vous pouvez voir ce code en action par exemple dans notre <a href="https://github.com/mdn/webextensions-examples/blob/master/latest-download/popup/latest_download.js">dernier téléchargement</a>.</p>
+Vous pouvez voir ce code en action par exemple dans notre [dernier téléchargement](https://github.com/mdn/webextensions-examples/blob/master/latest-download/popup/latest_download.js).
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -162,5 +166,4 @@ searching.then(logDownloads, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

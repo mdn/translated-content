@@ -12,64 +12,59 @@ tags:
   - onShown
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onShown
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé immédiatement après l'affichage d'une notification.</p>
+Lancé immédiatement après l'affichage d'une notification.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.notifications.onShown.addListener(listener)
+```js
+browser.notifications.onShown.addListener(listener)
 browser.notifications.onShown.removeListener(listener)
 browser.notifications.onShown.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code>s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true`s'il écoute, sinon `false`.
 
-<h2 id="syntaxe_addListener">syntaxe addListener</h2>
+## syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>notificationId</code></dt>
-  <dd><code>string</code>. ID de la notification qui a été affichée.</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `notificationId`
+      - : `string`. ID de la notification qui a été affichée.
 
-<p>{{Compat("webextensions.api.notifications.onShown")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.notifications.onShown")}}
 
-<p>Ajoutez un écouteur à l'événement {{WebExtAPIRef("notifications.onShown")}} et consignez ses détails :</p>
+## Exemples
 
-<pre class="brush: js">function logShown(itemId) {
+Ajoutez un écouteur à l'événement {{WebExtAPIRef("notifications.onShown")}} et consignez ses détails :
+
+```js
+function logShown(itemId) {
   console.log(`shown: ${itemId}`);
-  browser.notifications.getAll().then((all) =&gt; {
+  browser.notifications.getAll().then((all) => {
     console.log(all[itemId]);
   })
 }
 
-browser.notifications.onShown.addListener(logShown);</pre>
+browser.notifications.onShown.addListener(logShown);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a>.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).

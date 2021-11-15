@@ -13,35 +13,35 @@ tags:
   - getRecent
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La méthode <code>bookmarks.getRecent()</code> récupère un nombre spécifié de signets ajoutés le plus récemment en tant que tableau d'objets {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}}.</p>
+La méthode `bookmarks.getRecent()` récupère un nombre spécifié de signets ajoutés le plus récemment en tant que tableau d'objets {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}}.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingRecent = browser.bookmarks.getRecent(
+```js
+var gettingRecent = browser.bookmarks.getRecent(
   numberOfItems          // integer
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>numberOfItems</code></dt>
- <dd>Un nombre représentant le nombre maximum d'éléments à renvoyer. La liste renvoyée contiendra jusqu'à ce nombre des éléments les plus récemment ajoutés. La valeur minimale autorisée ici est 1. Si vous transmettez 0 ou moins, la fonction génère une erreur.</dd>
-</dl>
+- `numberOfItems`
+  - : Un nombre représentant le nombre maximum d'éléments à renvoyer. La liste renvoyée contiendra jusqu'à ce nombre des éléments les plus récemment ajoutés. La valeur minimale autorisée ici est 1. Si vous transmettez 0 ou moins, la fonction génère une erreur.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un tableau d'objets <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode"><code>BookmarkTreeNode</code></a>.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets [`BookmarkTreeNode`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple enregistre l'URL du dernier signet ajouté :</p>
+Cet exemple enregistre l'URL du dernier signet ajouté :
 
-<pre class="brush: js">function onFulfilled(bookmarks) {
+```js
+function onFulfilled(bookmarks) {
   for (bookmark of bookmarks) {
     console.log(bookmark.url);
   }
@@ -52,23 +52,22 @@ function onRejected(error) {
 }
 
 var gettingRecent = browser.bookmarks.getRecent(1);
-gettingRecent.then(onFulfilled, onRejected);</pre>
+gettingRecent.then(onFulfilled, onRejected);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.bookmarks.getRecent")}}</p>
+{{Compat("webextensions.api.bookmarks.getRecent")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,5 +94,4 @@ gettingRecent.then(onFulfilled, onRejected);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

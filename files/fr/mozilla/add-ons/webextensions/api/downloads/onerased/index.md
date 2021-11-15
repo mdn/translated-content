@@ -13,55 +13,50 @@ tags:
   - onErased
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>L'événement <code><strong>onErased</strong></code><strong><code>()</code></strong> de l'API {{WebExtAPIRef("downloads")}} se déclenche lorsqu'un téléchargement est effacé de l'historique du navigateur.</p>
+L'événement **`onErased`\*\***`()`\*\* de l'API {{WebExtAPIRef("downloads")}} se déclenche lorsqu'un téléchargement est effacé de l'historique du navigateur.
 
-<p>L'écouteur reçoit le paramètre <code>downloadId</code> de l'objet {{WebExtAPIRef('downloads.DownloadItem')}}  en question en tant que paramètre.</p>
+L'écouteur reçoit le paramètre `downloadId` de l'objet {{WebExtAPIRef('downloads.DownloadItem')}}  en question en tant que paramètre.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.downloads.onErased.addListener(listener)
+```js
+browser.downloads.onErased.addListener(listener)
 browser.downloads.onErased.removeListener(listener)
 browser.downloads.onErased.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer..</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifie si un <code>listener</code> donné est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer..
+- `hasListener(listener)`
+  - : Vérifie si un `listener` donné est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="syntaxe_addListener">syntaxe addListener</h2>
+## syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>downloadId</code></dt>
-  <dd>Un <code>integer</code> représentant l'<code>id</code> du {{WebExtAPIRef('downloads.DownloadItem')}} qui a été effacé.</dd>
- </dl>
- </dd>
-</dl>
+  - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `downloadId`
+      - : Un `integer` représentant l'`id` du {{WebExtAPIRef('downloads.DownloadItem')}} qui a été effacé.
 
-<p>{{Compat("webextensions.api.downloads.onErased")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.downloads.onErased")}}
 
-<p>Ajoute un écouteur pour les événements <code>onErased</code> , puis effacez le téléchargement le plus récent :</p>
+## Exemples
 
-<pre class="brush: js">function handleErased(item) {
+Ajoute un écouteur pour les événements `onErased` , puis effacez le téléchargement le plus récent :
+
+```js
+function handleErased(item) {
   console.log(`Erased: ${item}`);
 }
 
@@ -70,19 +65,18 @@ browser.downloads.onErased.addListener(handleErased);
 var erasing = browser.downloads.erase({
   limit: 1,
   orderBy: ["-startTime"]
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,5 +103,4 @@ var erasing = browser.downloads.erase({
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

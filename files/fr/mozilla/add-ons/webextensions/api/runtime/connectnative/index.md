@@ -13,53 +13,37 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Connecte l'extension à une appplication native sur l'ordinateur de l'utilisateur.Cela prend le nom d'une application native en tant que paramètre. Il démarre l'application native et retourne un objet  {{WebExtAPIRef("runtime.Port")}} à l'appelant.L'appelant peut utiliser le `Port` pour échanger des messages avec l'application native utilisant `Port.postMessage()` et `port.onMessage`.L'application native s'exécute jusqu'à ce qu'elle se termine, ou l'appelant appelle `Port.disconnect()`, ou la page qui a créé le `Port` est détruite. Une fois le `Port` est déconnecté, le navigateur mettra quelques secondes à se terminer pour quitter le processus, puis le désactiver s'il ne s'est pas arrêté.
 
-<div>Connecte l'extension à une appplication native sur l'ordinateur de l'utilisateur.</div>
+Pour plus d'informations, voir [messagerie native](/fr/Add-ons/WebExtensions/Native_messaging).
 
-<div></div>
+## Syntaxe
 
-<div>Cela prend le nom d'une application native en tant que paramètre. Il démarre l'application native et retourne un objet  {{WebExtAPIRef("runtime.Port")}} à l'appelant.</div>
-
-<div></div>
-
-<div>L'appelant peut utiliser le <code>Port</code> pour échanger des messages avec l'application native utilisant <code>Port.postMessage()</code> et <code>port.onMessage</code>.</div>
-
-<div></div>
-
-<div>L'application native s'exécute jusqu'à ce qu'elle se termine, ou l'appelant appelle <code>Port.disconnect()</code>, ou la page qui a créé le <code>Port</code> est détruite. Une fois le <code>Port</code> est déconnecté, le navigateur mettra quelques secondes à se terminer pour quitter le processus, puis le désactiver s'il ne s'est pas arrêté.</div>
-
-<div></div>
-
-<p>Pour plus d'informations, voir <a href="/fr/Add-ons/WebExtensions/Native_messaging">messagerie native</a>.</p>
-
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: js">var port = browser.runtime.connectNative(
+```js
+var port = browser.runtime.connectNative(
   application // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>application</code></dt>
- <dd><code>string</code>. Le nom de l'application native à laquelle se connecter. Cela doit correspondre à la propriété "name" dans le <a href="/fr/Add-ons/WebExtensions/Native_messaging#App_manifest">fichier manifest de l'application native</a>.</dd>
-</dl>
+- `application`
+  - : `string`. Le nom de l'application native à laquelle se connecter. Cela doit correspondre à la propriété "name" dans le [fichier manifest de l'application native](/fr/Add-ons/WebExtensions/Native_messaging#App_manifest).
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Un objet {{WebExtAPIRef('runtime.Port')}}. Le port que l'appelant peut utiliser pour échanger des messages avec l'application native.</p>
+Un objet {{WebExtAPIRef('runtime.Port')}}. Le port que l'appelant peut utiliser pour échanger des messages avec l'application native.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.runtime.connectNative")}}</p>
+{{Compat("webextensions.api.runtime.connectNative")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple se connecte à l'appplication native "ping_pong" et commence à en écouter les messages. Il envoie également un message à l'application native lorsque l'utilisateur clique sur l'icône d'une action du navigateur :</p>
+Cet exemple se connecte à l'appplication native "ping_pong" et commence à en écouter les messages. Il envoie également un message à l'application native lorsque l'utilisateur clique sur l'icône d'une action du navigateur :
 
-<pre class="brush: js">/*
+```js
+/*
 On startup, connect to the "ping_pong" app.
 */
 var port = browser.runtime.connectNative("ping_pong");
@@ -67,29 +51,28 @@ var port = browser.runtime.connectNative("ping_pong");
 /*
 Listen for messages from the app.
 */
-port.onMessage.addListener((response) =&gt; {
+port.onMessage.addListener((response) => {
   console.log("Received: " + response);
 });
 
 /*
 On a click on the browser action, send the app a message.
 */
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
   port.postMessage("ping");
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -116,5 +99,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

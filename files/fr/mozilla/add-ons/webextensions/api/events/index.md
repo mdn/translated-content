@@ -12,36 +12,32 @@ tags:
   - events
 translation_of: Mozilla/Add-ons/WebExtensions/API/events
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Types communs utilisés par les API qui distribuent les événements.</p>
+Types communs utilisés par les API qui distribuent les événements.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("events.Rule")}}</dt>
- <dd>Description d'une règle déclarative pour gérer les événements.</dd>
- <dt>{{WebExtAPIRef("events.Event")}}</dt>
- <dd>Un objet qui permet l'ajout et la suppression d'écouteurs pour un événement Chrome.</dd>
- <dt>{{WebExtAPIRef("events.UrlFilter")}}</dt>
- <dd>Filtre les URL pour différents critères. Si un critère donné correspond, alors tout le filtre correspond.</dd>
-</dl>
+- {{WebExtAPIRef("events.Rule")}}
+  - : Description d'une règle déclarative pour gérer les événements.
+- {{WebExtAPIRef("events.Event")}}
+  - : Un objet qui permet l'ajout et la suppression d'écouteurs pour un événement Chrome.
+- {{WebExtAPIRef("events.UrlFilter")}}
+  - : Filtre les URL pour différents critères. Si un critère donné correspond, alors tout le filtre correspond.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.events")}}</p>
+{{Compat("webextensions.api.events")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.events`](https://developer.chrome.com/extensions/events). Cette documentation est dérivée de [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/events"><code>chrome.events</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json"><code>events.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -68,5 +64,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/events
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

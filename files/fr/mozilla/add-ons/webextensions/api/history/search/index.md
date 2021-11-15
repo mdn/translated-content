@@ -13,55 +13,61 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/search
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Recherche dans l'historique du navigateur les objets {{WebExtAPIRef("history.HistoryItem")}} correspondant aux critères donnés.</p>
+Recherche dans l'historique du navigateur les objets {{WebExtAPIRef("history.HistoryItem")}} correspondant aux critères donnés.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var searching = browser.history.search(
+```js
+var searching = browser.history.search(
   query                  // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>query</code></dt>
- <dd><p>Un objet qui indique ce qu'il faut rechercher dans l'historique du navigateur. Cet objet a les champs suivants :</p>
- <dl>
-  <dt><code>text</code></dt>
-  <dd><p><code>string</code>. Rechercher des éléments d'historique par URL et titre. La chaîne est divisée en termes de recherche distincts aux limites de l'espace. Chaque terme de recherche est insensible à la casse par rapport à l'URL et au titre de l'élément d'historique. L'élément d'historique sera renvoyé si tous les termes de recherche correspondent.</p>
-  <p>Par exemple, considérez cet article :</p>
-  <p><p>URL: <code>"http://example.org"</code></p>
-  <p>Title: <code>"Example Domain"</code></p>
-  <pre>"http"              -&gt; matches
-"domain"            -&gt; matches
-"MAIN ample"        -&gt; matches
-"main tt"           -&gt; matches
-"main https"        -&gt; does not match</pre>
-  <p>Spécifiez une chaîne vide (<code>""</code>) pour récupérer tous les objets {{WebExtAPIRef("history.HistoryItem")}} qui répondent à tous les autres critères.</p></dd>
-  <dt><code>startTime</code> {{optional_inline}}</dt>
-  <dd><code>number</code> ou <code>string</code> ou <code>object</code>. Une valeur indiquant une date et une heure. Cela peut être représenté par :  un objet <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>, une <a href="http://www.iso.org/iso/home/standards/iso8601.htm">chaîne de date ISO 8601</a>, ou le nombre de millisecondes depuis l'époque. Si elle est fournie, cette option exclut les résultats dont <code>lastVisitTime</code> est antérieure à cette heure. Si elle est omise, la recherche est limitée aux dernières 24 heures.</dd>
-  <dt><code>endTime</code> {{optional_inline}}</dt>
-  <dd><code>number</code> ou <code>string</code> ou <code>object</code>. Une valeur indiquant une date et une heure. Cela peut être représenté par : un objet <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>, une <a href="http://www.iso.org/iso/home/standards/iso8601.htm">chaîne de date ISO 8601</a>, ou le nombre de millisecondes depuis l'époque. Si elle est fournie, cette option exclut les résultats dont <code>lastVisitTime</code> est postérieur à cette fois. Si elle est omise, toutes les entrées sont prises en compte à partir de l'heure de début.</dd>
-  <dt><code>maxResults</code> {{optional_inline}}</dt>
-  <dd><code>number</code>. Le nombre maximum de résultats à récupérer. La valeur par défaut est 100, avec une valeur minimale de 1. La fonction renvoie une erreur si vous lui transmettez une valeur <code>maxResults</code> inférieure à 1.</dd>
- </dl>
- </dd>
-</dl>
+- `query`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : Un objet qui indique ce qu'il faut rechercher dans l'historique du navigateur. Cet objet a les champs suivants :
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> sera remplie avec un tableau d'objets de type {{WebExtAPIRef("history.HistoryItem")}}, chacun décrivant un seul élément d'historique correspondant. Les articles sont triés dans l'ordre chronologique inverse.</p>
+    - `text`
 
-<h2 id="Exemples">Exemples</h2>
+      - : `string`. Rechercher des éléments d'historique par URL et titre. La chaîne est divisée en termes de recherche distincts aux limites de l'espace. Chaque terme de recherche est insensible à la casse par rapport à l'URL et au titre de l'élément d'historique. L'élément d'historique sera renvoyé si tous les termes de recherche correspondent.
 
-<p>Consigne l'URL et la dernière heure de visite pour tous les éléments d'historique visités au cours des dernières 24 heures :</p>
+        Par exemple, considérez cet article :
 
-<pre class="brush: js">function onGot(historyItems) {
+        URL: `"http://example.org"`
+
+        Title: `"Example Domain"`
+
+            "http"              -> matches
+            "domain"            -> matches
+            "MAIN ample"        -> matches
+            "main tt"           -> matches
+            "main https"        -> does not match
+
+        Spécifiez une chaîne vide (`""`) pour récupérer tous les objets {{WebExtAPIRef("history.HistoryItem")}} qui répondent à tous les autres critères.
+
+    - `startTime` {{optional_inline}}
+      - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par :  un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Si elle est fournie, cette option exclut les résultats dont `lastVisitTime` est antérieure à cette heure. Si elle est omise, la recherche est limitée aux dernières 24 heures.
+    - `endTime` {{optional_inline}}
+      - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par : un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Si elle est fournie, cette option exclut les résultats dont `lastVisitTime` est postérieur à cette fois. Si elle est omise, toutes les entrées sont prises en compte à partir de l'heure de début.
+    - `maxResults` {{optional_inline}}
+      - : `number`. Le nombre maximum de résultats à récupérer. La valeur par défaut est 100, avec une valeur minimale de 1. La fonction renvoie une erreur si vous lui transmettez une valeur `maxResults` inférieure à 1.
+
+### Valeur retournée
+
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie avec un tableau d'objets de type {{WebExtAPIRef("history.HistoryItem")}}, chacun décrivant un seul élément d'historique correspondant. Les articles sont triés dans l'ordre chronologique inverse.
+
+## Exemples
+
+Consigne l'URL et la dernière heure de visite pour tous les éléments d'historique visités au cours des dernières 24 heures :
+
+```js
+function onGot(historyItems) {
   for (item of historyItems) {
     console.log(item.url);
     console.log(new Date(item.lastVisitTime));
@@ -70,11 +76,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history/search
 
 var searching = browser.history.search({text: ""});
 
-searching.then(onGot);</pre>
+searching.then(onGot);
+```
 
-<p>Logs the URL and last visit time for all history items ever visited:</p>
+Logs the URL and last visit time for all history items ever visited:
 
-<pre class="brush: js">function onGot(historyItems) {
+```js
+function onGot(historyItems) {
   for (item of historyItems) {
     console.log(item.url);
     console.log(new Date(item.lastVisitTime));
@@ -86,11 +94,13 @@ var searching = browser.history.search({
    startTime: 0
 });
 
-searching.then(onGot);</pre>
+searching.then(onGot);
+```
 
-<p>Consigne l'URL et la dernière visite de la dernière visite sur une page contenant la chaîne "mozilla" :</p>
+Consigne l'URL et la dernière visite de la dernière visite sur une page contenant la chaîne "mozilla" :
 
-<pre class="brush: js">function onGot(historyItems) {
+```js
+function onGot(historyItems) {
   for (item of historyItems) {
     console.log(item.url);
     console.log(new Date(item.lastVisitTime));
@@ -103,23 +113,22 @@ var searching = browser.history.search({
  maxResults: 1
 });
 
-searching.then(onGot);</pre>
+searching.then(onGot);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.history.search")}}</p>
+{{Compat("webextensions.api.history.search")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -146,5 +155,4 @@ searching.then(onGot);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

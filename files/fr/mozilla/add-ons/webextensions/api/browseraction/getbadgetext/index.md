@@ -13,68 +13,66 @@ tags:
   - getBadgeText
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient le texte du badge de l'action du navigateur.</p>
+Obtient le texte du badge de l'action du navigateur.
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingText = browser.browserAction.getBadgeText (
+```js
+var gettingText = browser.browserAction.getBadgeText (
   details               // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code></p>
- <dl>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Spécifie l'onglet pour obtenir le texte du badge.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Spécifie la fenêtre à partir de laquelle obtenir le texte du badge.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<ul>
- <li>Si windowId et tabId sont tous les deux fournis, la fonction échoue.</li>
- <li>Si windowId et tabId sont tous les deux omis, le texte global du badge est renvoyé.</li>
-</ul>
+  - : `object`
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Spécifie l'onglet pour obtenir le texte du badge.
+    - `windowId`{{optional_inline}}
+      - : `integer`. Spécifie la fenêtre à partir de laquelle obtenir le texte du badge.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec une chaîne contenant le texte du badge.</p>
+<!---->
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- Si windowId et tabId sont tous les deux fournis, la fonction échoue.
+- Si windowId et tabId sont tous les deux omis, le texte global du badge est renvoyé.
 
-<p>{{Compat("webextensions.api.browserAction.getBadgeText",2)}}</p>
+### Valeur de retour
 
-<h2 id="Exemples">Exemples</h2>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne contenant le texte du badge.
 
-<p>Enregistrez le texte du badge : </p>
+## Compatibilité du navigateur
 
-<pre class="brush: js">function gotBadgeText(text) {
+{{Compat("webextensions.api.browserAction.getBadgeText",2)}}
+
+## Exemples
+
+Enregistrez le texte du badge :
+
+```js
+function gotBadgeText(text) {
   console.log(text);
 }
 
 var gettingBadgeText = browser.browserAction.getBadgeText({});
-gettingBadgeText.then(gotBadgeText);</pre>
+gettingBadgeText.then(gotBadgeText);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,5 +99,4 @@ gettingBadgeText.then(gotBadgeText);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

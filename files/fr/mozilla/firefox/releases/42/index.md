@@ -10,181 +10,148 @@ tags:
   - TopicStub
 translation_of: Mozilla/Firefox/Releases/42
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<h2 id="Changements_pour_les_développeurs_Web">Changements pour les développeurs Web</h2>
+## Changements pour les développeurs Web
 
-<h3 id="Outils_de_développement">Outils de développement</h3>
+### Outils de développement
 
-<p>Points forts:</p>
+Points forts:
 
-<ul>
- <li><a href="/fr/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi">Débogage de Firefox pour Android via Wifi</a></li>
- <li><a href="/fr/docs/Tools/WebIDE/Setting_up_runtimes#Configuring_Simulators">Configuration de Firefox OS Simulator dans WebIDE</a></li>
- <li><a href="/fr/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters#Saving_filter_presets">Préréglages de filtre CSS</a></li>
-</ul>
+- [Débogage de Firefox pour Android via Wifi](/fr/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi)
+- [Configuration de Firefox OS Simulator dans WebIDE](/fr/docs/Tools/WebIDE/Setting_up_runtimes#Configuring_Simulators)
+- [Préréglages de filtre CSS](/fr/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters#Saving_filter_presets)
 
-<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2015-08-10&amp;query_format=advanced&amp;chfield=resolution&amp;chfieldfrom=2015-06-29&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;product=Firefox&amp;list_id=12478437">Tous les bogues devtools corrigés entre Firefox 41 et Firefox 42</a>.</p>
+[Tous les bogues devtools corrigés entre Firefox 41 et Firefox 42](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-08-10&query_format=advanced&chfield=resolution&chfieldfrom=2015-06-29&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12478437).
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>Vertical {{cssxref('writing-mode')}} est maintenant pris en charge avec les scripts rtl ({{bug(1131451)}}).</li>
- <li>Les valeurs de {{cssxref("caption-side")}} sont désormais relatives à la table, et changent de signification réelle en fonction de sa valeur {{cssxref("writing-mode")}} {{bug(1202993)}}.</li>
- <li>Les propriétés non standard comme {{cssxref('-moz-margin-start')}} sont maintenant des alias de leur homologue standard ({{cssxref('margin-inline-start')}}, …). Auparavant, c'était le contraire. Cela affecte la valeur renvoyée par {{domxref('CSSStyleDeclaration.cssText')}} et l'itération des propriétés dans une règle de style et l'itération des propriétés dans une règle de style, qui utilisent toutes deux la forme canonical ({{bug(1118103)}}).</li>
- <li>La version préfixée ds dégradés CSS peut être désactivée en définissant la préférence <code>layout.css.prefixes.gradients</code> sur <code>false</code>.</li>
- <li>Plusieurs anciens bogues avec {{cssxref("float")}} et le comportement de réduction des marges ont été corrigés ({{bug(478834)}}, {{bug(538194)}}, et {{bug(451791)}}).</li>
-</ul>
+- Vertical {{cssxref('writing-mode')}} est maintenant pris en charge avec les scripts rtl ({{bug(1131451)}}).
+- Les valeurs de {{cssxref("caption-side")}} sont désormais relatives à la table, et changent de signification réelle en fonction de sa valeur {{cssxref("writing-mode")}} {{bug(1202993)}}.
+- Les propriétés non standard comme {{cssxref('-moz-margin-start')}} sont maintenant des alias de leur homologue standard ({{cssxref('margin-inline-start')}}, …). Auparavant, c'était le contraire. Cela affecte la valeur renvoyée par {{domxref('CSSStyleDeclaration.cssText')}} et l'itération des propriétés dans une règle de style et l'itération des propriétés dans une règle de style, qui utilisent toutes deux la forme canonical ({{bug(1118103)}}).
+- La version préfixée ds dégradés CSS peut être désactivée en définissant la préférence `layout.css.prefixes.gradients` sur `false`.
+- Plusieurs anciens bogues avec {{cssxref("float")}} et le comportement de réduction des marges ont été corrigés ({{bug(478834)}}, {{bug(538194)}}, et {{bug(451791)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>Prise en charge expérimentale de l'attribut {{htmlattrxref("referrer", "input")}} de {{HTMLElement("img")}} ({{bug(1166910)}}), {{htmlElement("iframe")}} ({{bug(1175736)}}), {{HTMLElement("a")}} et {{HTMLElement("area")}} ont été ajoutés ({{bug(1174913)}}). Il n'y a aucun effet par défaut, le <code>network.http.enablePerElementReferrer</code> étant <code>false</code> par défaut.</li>
-</ul>
+- Prise en charge expérimentale de l'attribut {{htmlattrxref("referrer", "input")}} de {{HTMLElement("img")}} ({{bug(1166910)}}), {{htmlElement("iframe")}} ({{bug(1175736)}}), {{HTMLElement("a")}} et {{HTMLElement("area")}} ont été ajoutés ({{bug(1174913)}}). Il n'y a aucun effet par défaut, le `network.http.enablePerElementReferrer` étant `false` par défaut.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li>L'objet {{jsxref("Reflect")}} a été implémenté ({{bug(987514)}}).</li>
- <li>La mise en œuvre de l'interruption {{jsxref("Proxy")}} {{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}} a été mise à jour pour correspondre à la spécification finale ES2015 ({{bug(1049662)}}).</li>
- <li>Appel de {{jsxref("Map")}}, {{jsxref("Set")}}, ou {{jsxref("WeakMap")}} sans {{jsxref('Operators', 'new')}}, va maintenant lancer un {{jsxref("TypeError")}} ({{bug(1083752)}}).</li>
-</ul>
+- L'objet {{jsxref("Reflect")}} a été implémenté ({{bug(987514)}}).
+- La mise en œuvre de l'interruption {{jsxref("Proxy")}} {{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}} a été mise à jour pour correspondre à la spécification finale ES2015 ({{bug(1049662)}}).
+- Appel de {{jsxref("Map")}}, {{jsxref("Set")}}, ou {{jsxref("WeakMap")}} sans {{jsxref('Operators', 'new')}}, va maintenant lancer un {{jsxref("TypeError")}} ({{bug(1083752)}}).
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+### Interfaces/APIs/DOM
 
-<h4 id="DOM_HTML_DOM">DOM &amp; HTML DOM</h4>
+#### DOM & HTML DOM
 
-<ul>
- <li>Les images avec une {{HTMLattrxref('id', 'img')}} ne sont plus répertoriées comme propriété de l'interface {{domxref("Window")}} : <code>&lt;img id="login"&gt;</code> n'est plus accessible en tant que <code>window.login</code>. Ce comportement a été introduit dans Firefox 26 et a été supprimé pour correspondre à une modification ultérieure de la spécification ({{bug(959992)}}).</li>
- <li>{{domxref('MouseEvent.offsetX')}} et {{domxref('MouseEvent.offsetY')}} ont été ajoutés ({{bug(69787)}}).</li>
- <li>L'interface {{domxref("HTMLInputElement")}} a été étendue expérimentalement pour gérer le téléchargement des répertoires ({{bug(1164310)}}). Ces quatre membres peuvent être exposés en définissant la préférence <code>dom.input.dirpicker</code> sur <code>true</code>:
-  <ul>
-   <li>{{domxref("HTMLInputElement.directory")}}</li>
-   <li>{{domxref("HTMLInputElement.isFilesAndDirectoriesSupported")}}</li>
-   <li>{{domxref("HTMLInputElement.getFilesAndDirectories()")}}</li>
-   <li>{{domxref("HTMLInputElement.chooseDirectory()")}}</li>
-  </ul>
- </li>
- <li>L'interface {{domxref("Directory")}} a été étendue expérimentalement ({{bug(1177688)}}). Les deux membres {{domxref("Directory.path")}} et {{domxref("Directory.getContents")}} peuvent être exposés en définissant la préférence <code>dom.input.dirpicker</code> sur <code>true</code>.</li>
- <li>Le <code>HTMLMediaElement.mozSrcObject</code> a été renommé dans {{domxref('HTMLMediaElement.srcObject')}} ({{bug(1175523)}}).</li>
-</ul>
+- Les images avec une {{HTMLattrxref('id', 'img')}} ne sont plus répertoriées comme propriété de l'interface {{domxref("Window")}} : `<img id="login">` n'est plus accessible en tant que `window.login`. Ce comportement a été introduit dans Firefox 26 et a été supprimé pour correspondre à une modification ultérieure de la spécification ({{bug(959992)}}).
+- {{domxref('MouseEvent.offsetX')}} et {{domxref('MouseEvent.offsetY')}} ont été ajoutés ({{bug(69787)}}).
+- L'interface {{domxref("HTMLInputElement")}} a été étendue expérimentalement pour gérer le téléchargement des répertoires ({{bug(1164310)}}). Ces quatre membres peuvent être exposés en définissant la préférence `dom.input.dirpicker` sur `true`:
 
-<h4 id="Service_Workers">Service Workers</h4>
+  - {{domxref("HTMLInputElement.directory")}}
+  - {{domxref("HTMLInputElement.isFilesAndDirectoriesSupported")}}
+  - {{domxref("HTMLInputElement.getFilesAndDirectories()")}}
+  - {{domxref("HTMLInputElement.chooseDirectory()")}}
 
-<ul>
- <li>{{domxref('Request.context')}} a été supprimé ({{bug(1188062)}}).</li>
- <li>L'<a href="/fr/docs/Web/API/Push_API">API Push</a> a été activée par défaut sur Firefox pour bureau ({{bug(1153499)}}), mais uniquement sur les canaux Nightly/Dev Edition/Beta. Elle est désactivée par défaut dans le canal Release jusqu'à ce que l'UX grand public et les fonctionnalit"s de débogage aient été correctement implémentées ({{bug(1207875)}}). Vous pouvez toujours l'activer en activant la préférence <code>dom.push.enabled</code> dans about:config.</li>
- <li>La méthode {{domxref("PushManager.hasPermission()")}} a été désapprouvée dans la spécification et remplacée par la méthode {{domxref("PushManager.permissionState()")}}. Firefox a mis à jour son implémentation pour refléter cela ({{bug("1183853")}}).</li>
- <li>Des ajouts liés au service worker de l'<a href="/fr/docs/Web/API/Notifications_API">API Notifications</a> ont été mis en œuvre ({{bug(1114554)}}), mais sont désactivés dans cette version.</li>
-</ul>
+- L'interface {{domxref("Directory")}} a été étendue expérimentalement ({{bug(1177688)}}). Les deux membres {{domxref("Directory.path")}} et {{domxref("Directory.getContents")}} peuvent être exposés en définissant la préférence `dom.input.dirpicker` sur `true`.
+- Le `HTMLMediaElement.mozSrcObject` a été renommé dans {{domxref('HTMLMediaElement.srcObject')}} ({{bug(1175523)}}).
 
-<h4 id="API_Web_Animations">API Web Animations</h4>
+#### Service Workers
 
-<p>Notre implémentation expérimentale de l'<a href="/fr/docs/Web/API/Web_Animations_API">API Web Animations</a> a été étendue pour prendre en charge:</p>
+- {{domxref('Request.context')}} a été supprimé ({{bug(1188062)}}).
+- L'[API Push](/fr/docs/Web/API/Push_API) a été activée par défaut sur Firefox pour bureau ({{bug(1153499)}}), mais uniquement sur les canaux Nightly/Dev Edition/Beta. Elle est désactivée par défaut dans le canal Release jusqu'à ce que l'UX grand public et les fonctionnalit"s de débogage aient été correctement implémentées ({{bug(1207875)}}). Vous pouvez toujours l'activer en activant la préférence `dom.push.enabled` dans about:config.
+- La méthode {{domxref("PushManager.hasPermission()")}} a été désapprouvée dans la spécification et remplacée par la méthode {{domxref("PushManager.permissionState()")}}. Firefox a mis à jour son implémentation pour refléter cela ({{bug("1183853")}}).
+- Des ajouts liés au service worker de l'[API Notifications](/fr/docs/Web/API/Notifications_API) ont été mis en œuvre ({{bug(1114554)}}), mais sont désactivés dans cette version.
 
-<ul>
- <li>La propriété {{domxref('AnimationPlayer.playbackRate')}} ({{bug(1127380)}}).</li>
- <li>Les interface {{domxref('CSSAnimation')}} et {{domxref('CSSTransition')}} ({{bug(1178186)}}).</li>
- <li>La méthode {{domxref('Animation.reverse()')}} ({{bug(1150808)}}).</li>
- <li>L'interface {{domxref('AnimationPlaybackEvent')}} a été ajoutée et {{event('cancel')}} et {{event('finish')}} sont maintenant déclenchés sur {{domxref('Animation')}} ({{bug(1178664)}}).</li>
-</ul>
+#### API Web Animations
 
-<h4 id="Composants_Web">Composants Web</h4>
+Notre implémentation expérimentale de l'[API Web Animations](/fr/docs/Web/API/Web_Animations_API) a été étendue pour prendre en charge:
 
-<p>Notre implémentation expérimentale du <a href="/fr/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a> a été modifiée:</p>
+- La propriété {{domxref('AnimationPlayer.playbackRate')}} ({{bug(1127380)}}).
+- Les interface {{domxref('CSSAnimation')}} et {{domxref('CSSTransition')}} ({{bug(1178186)}}).
+- La méthode {{domxref('Animation.reverse()')}} ({{bug(1150808)}}).
+- L'interface {{domxref('AnimationPlaybackEvent')}} a été ajoutée et {{event('cancel')}} et {{event('finish')}} sont maintenant déclenchés sur {{domxref('Animation')}} ({{bug(1178664)}}).
 
-<ul>
- <li>Lorsque vous essayez d'appeler {{domxref('Node.cloneNode()')}} sur un {{domxref('ShadowRoot')}}, lance une exception <code>DataCloneError</code> ({{bug(1176757)}}).</li>
- <li>En invoquant {{domxref('Document.importNode()')}} avec un {{domxref('ShadowRoot')}} comme argument, nous lançons maintenant une exception <code>NotSupportedError</code> ({{bug(1177914)}}).</li>
- <li>En invoquant {{domxref('Document.adoptNode()')}} avec un {{domxref('ShadowRoot')}} comme argument, nous lançons maintenant une exception <code>HierarchyRequestError</code> ({{bug(1177991)}}).</li>
-</ul>
+#### Composants Web
 
-<h4 id="WebGL">WebGL</h4>
+Notre implémentation expérimentale du [Shadow DOM](/fr/docs/Web/Web_Components/Shadow_DOM) a été modifiée:
 
-<ul>
- <li>WebGL2 {{domxref('WebGLTransformFeedback')}} a été implémenté ({{bug(1048724)}}).</li>
- <li>Pour obtenir un contexte WebGL2, {{domxref('HTMLCanvasElement.getContext()')}} prend maintenant <code>webgl2</code> au lieu de <code>experimental-webgl2</code> ({{bug(1187174)}}).</li>
-</ul>
+- Lorsque vous essayez d'appeler {{domxref('Node.cloneNode()')}} sur un {{domxref('ShadowRoot')}}, lance une exception `DataCloneError` ({{bug(1176757)}}).
+- En invoquant {{domxref('Document.importNode()')}} avec un {{domxref('ShadowRoot')}} comme argument, nous lançons maintenant une exception `NotSupportedError` ({{bug(1177914)}}).
+- En invoquant {{domxref('Document.adoptNode()')}} avec un {{domxref('ShadowRoot')}} comme argument, nous lançons maintenant une exception `HierarchyRequestError` ({{bug(1177991)}}).
 
-<h4 id="WebRTC">WebRTC</h4>
+#### WebGL
 
-<ul>
- <li>Le <code>RTCICECandidatePairStats.mozPriority</code> a été renommé {{domxref('RTCICECandidatePairStats.priority')}} ({{bug(1184426)}}).</li>
-</ul>
+- WebGL2 {{domxref('WebGLTransformFeedback')}} a été implémenté ({{bug(1048724)}}).
+- Pour obtenir un contexte WebGL2, {{domxref('HTMLCanvasElement.getContext()')}} prend maintenant `webgl2` au lieu de `experimental-webgl2` ({{bug(1187174)}}).
 
-<h4 id="Nouvelles_API">Nouvelles API</h4>
+#### WebRTC
 
-<ul>
- <li>L'interface {{domxref("ImageBitmap")}} et la méthode {{domxref("ImageBitmapFactories.createImageBitmap","createImageBitmap()")}} ont été implémentées. Ils sont disponibles sur les scripts de fenêtre standard et dans les Web workers et permettent un affichage efficace des images entre les contextes fenêtre et worker ({{bug(1044102)}}).</li>
-</ul>
+- Le `RTCICECandidatePairStats.mozPriority` a été renommé {{domxref('RTCICECandidatePairStats.priority')}} ({{bug(1184426)}}).
 
-<h4 id="Divers">Divers</h4>
+#### Nouvelles API
 
-<ul>
- <li>L'interface {{domxref('IDBCursorWithValue')}} est désormais disponible dans les <a href="/fr/docs/Web/API/Web_Workers_API">Web workers</a> ({{bug(1188115)}}).</li>
- <li>Les événements d'erreur envoyés dans les <a href="/fr/docs/Web/API/Web_Workers_API">Web workers</a> ne bouillonnent plus ({{bug(1188141)}}).</li>
- <li><a href="/fr/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions</a> (MSE) a été activé pour tous les sites Web, et pas plus pour une liste blanche de sites ({{bug(1185611)}}).</li>
- <li>Le {{domxref('Window.mozRequestAnimationFrame()')}} non standard et obsolète a été supprimé ({{bug(909154)}}). Utilisez plutôt le standard {{domxref('Window.requestAnimationFrame()')}}.</li>
- <li>La synthèse vocale (text-to-speech) a été implémentée dans Firefox Desktop pour Windows, cachée derrière l'indicateur <code>media.webspeech.synth.enabled</code> dans <code>about:config</code> ({{bug("1003457")}}). Voir <a href="/fr/docs/Web/API/Web_Speech_API">API Web Speech</a> pour plus d'informations.</li>
-</ul>
+- L'interface {{domxref("ImageBitmap")}} et la méthode {{domxref("ImageBitmapFactories.createImageBitmap","createImageBitmap()")}} ont été implémentées. Ils sont disponibles sur les scripts de fenêtre standard et dans les Web workers et permettent un affichage efficace des images entre les contextes fenêtre et worker ({{bug(1044102)}}).
 
-<h3 id="MathML">MathML</h3>
+#### Divers
 
-<p><em>Pas de changement.</em></p>
+- L'interface {{domxref('IDBCursorWithValue')}} est désormais disponible dans les [Web workers](/fr/docs/Web/API/Web_Workers_API) ({{bug(1188115)}}).
+- Les événements d'erreur envoyés dans les [Web workers](/fr/docs/Web/API/Web_Workers_API) ne bouillonnent plus ({{bug(1188141)}}).
+- [Media Source Extensions](/fr/docs/Web/API/Media_Source_Extensions_API) (MSE) a été activé pour tous les sites Web, et pas plus pour une liste blanche de sites ({{bug(1185611)}}).
+- Le {{domxref('Window.mozRequestAnimationFrame()')}} non standard et obsolète a été supprimé ({{bug(909154)}}). Utilisez plutôt le standard {{domxref('Window.requestAnimationFrame()')}}.
+- La synthèse vocale (text-to-speech) a été implémentée dans Firefox Desktop pour Windows, cachée derrière l'indicateur `media.webspeech.synth.enabled` dans `about:config` ({{bug("1003457")}}). Voir [API Web Speech](/fr/docs/Web/API/Web_Speech_API) pour plus d'informations.
 
-<h3 id="SVG">SVG</h3>
+### MathML
 
-<p><em>Pas de changement.</em></p>
+_Pas de changement._
 
-<h3 id="AudioVideo">Audio/Video</h3>
+### SVG
 
-<p><em>Pas de changement.</em></p>
+_Pas de changement._
 
-<h2 id="HTTP">HTTP</h2>
+### Audio/Video
 
-<ul>
- <li>Firefox 41 et les versions antérieures acceptaient à tord les champs de pseudo-en-tête non définis ou non valides dans les réponses HTTP/2 . Ceci est maintenant corrigé et le seul champ pseudo-en-tête accepté depuis Firefox 42 est le : <em>statut</em> selon la spécification. Les en-têtes de réponse contenant des champs arbitraires sont considérés comme mal formés. ({{bug(1136727)}})</li>
-</ul>
+_Pas de changement._
 
-<h2 id="La_mise_en_réseau">La mise en réseau</h2>
+## HTTP
 
-<ul>
- <li>La directive <code><a href="/Web/Security/CSP/CSP_policy_directives#upgrade-insecure-requests">upgrade-insecure-requests</a></code> du CSP a été implémentée ({{bug(1139297)}}).</li>
-</ul>
+- Firefox 41 et les versions antérieures acceptaient à tord les champs de pseudo-en-tête non définis ou non valides dans les réponses HTTP/2 . Ceci est maintenant corrigé et le seul champ pseudo-en-tête accepté depuis Firefox 42 est le : _statut_ selon la spécification. Les en-têtes de réponse contenant des champs arbitraires sont considérés comme mal formés. ({{bug(1136727)}})
 
-<h2 id="Sécurité">Sécurité</h2>
+## La mise en réseau
 
-<ul>
- <li>Les certificats EV d'une validité supérieure à 39 mois sont désormais considérés et traités comme des certificats DV ({{bug(1145679)}}).</li>
-</ul>
+- La directive [`upgrade-insecure-requests`](/Web/Security/CSP/CSP_policy_directives#upgrade-insecure-requests) du CSP a été implémentée ({{bug(1139297)}}).
 
-<h2 id="Changements_pour_les_développeurs_dadd-on_et_de_Mozilla">Changements pour les développeurs d'add-on et de Mozilla</h2>
+## Sécurité
 
-<h3 id="Interfaces">Interfaces</h3>
+- Les certificats EV d'une validité supérieure à 39 mois sont désormais considérés et traités comme des certificats DV ({{bug(1145679)}}).
 
-<h4 id="nsIContentPolicy">nsIContentPolicy</h4>
+## Changements pour les développeurs d'add-on et de Mozilla
 
-<ul>
- <li>La constante <code><strong>TYPE_EMBED</strong></code> a été ajoutée à <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPolicy">nsIContentPolicy</a></code> pour permettre aux internes de Gecko et au code add-on de mieux différencier les différents types de requêtes. Auparavant, <code><strong>TYPE_OBJECT</strong></code> était utilisé pour ces cas ({{bug(1148030)}}).</li>
- <li>De même, les constantes <strong><code>TYPE_SUBDOCUMENT</code></strong> ont été divisées en <code><strong>TYPE_FRAME</strong></code> et <strong><code>TYPE_IFRAME</code></strong> ({{bug(1148044)}}).</li>
-</ul>
+### Interfaces
 
-<h3 id="XUL">XUL</h3>
+#### nsIContentPolicy
 
-<p><em>Pas de changement.</em></p>
+- La constante **`TYPE_EMBED`** a été ajoutée à [`nsIContentPolicy`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPolicy) pour permettre aux internes de Gecko et au code add-on de mieux différencier les différents types de requêtes. Auparavant, **`TYPE_OBJECT`** était utilisé pour ces cas ({{bug(1148030)}}).
+- De même, les constantes **`TYPE_SUBDOCUMENT`** ont été divisées en **`TYPE_FRAME`** et **`TYPE_IFRAME`** ({{bug(1148044)}}).
 
-<h3 id="Modules_de_code_JavaScript">Modules de code JavaScript</h3>
+### XUL
 
-<p><em>Pas de changement.</em></p>
+_Pas de changement._
 
-<h3 id="XPCOM">XPCOM</h3>
+### Modules de code JavaScript
 
-<p><em>Pas de changement.</em></p>
+_Pas de changement._
 
-<h3 id="Autre">Autre</h3>
+### XPCOM
 
-<p><em>Pas de changement.</em></p>
+_Pas de changement._
 
-<h2 id="Anciennes_versions">Anciennes versions</h2>
+### Autre
 
-<p>{{Firefox_for_developers('41')}}</p>
+_Pas de changement._
+
+## Anciennes versions
+
+{{Firefox_for_developers('41')}}

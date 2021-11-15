@@ -10,36 +10,32 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/privacy
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Accédez et modifiez les différents paramètres du navigateur liés à la vie privée.</p>
+Accédez et modifiez les différents paramètres du navigateur liés à la vie privée.
 
-<p>Pour utiliser l'API de confidentialité, vous devez avoir <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">l'autorisation de l'API</a> "privacy".</p>
+Pour utiliser l'API de confidentialité, vous devez avoir [l'autorisation de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "privacy".
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{WebExtAPIRef("privacy.network")}}</dt>
- <dd>Accès et modification des paramètres de confidentialité relatifs au réseau.</dd>
- <dt>{{WebExtAPIRef("privacy.services")}}</dt>
- <dd>Accès et modification des paramètres de confidentialité relatifs aux services fournis par le navigateur ou les tiers.</dd>
- <dt>{{WebExtAPIRef("privacy.websites")}}</dt>
- <dd>Accès et modification des paramètres de confidentialité relatifs aux comportements des sites Web.</dd>
-</dl>
+- {{WebExtAPIRef("privacy.network")}}
+  - : Accès et modification des paramètres de confidentialité relatifs au réseau.
+- {{WebExtAPIRef("privacy.services")}}
+  - : Accès et modification des paramètres de confidentialité relatifs aux services fournis par le navigateur ou les tiers.
+- {{WebExtAPIRef("privacy.websites")}}
+  - : Accès et modification des paramètres de confidentialité relatifs aux comportements des sites Web.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.privacy", 10, 1)}}</p>
+{{Compat("webextensions.api.privacy", 10, 1)}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/extensions/privacy).
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/privacy"><code>chrome.privacy</code></a>.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -66,5 +62,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/privacy
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -12,60 +12,54 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Remplacement quand le thème de devtools change</p>
+Remplacement quand le thème de devtools change
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.devtools.panels.onThemeChanged.addListener(listener)
+```js
+browser.devtools.panels.onThemeChanged.addListener(listener)
 browser.devtools.panels.onThemeChanged.removeListener(listener)
 browser.devtools.panels.onThemeChanged.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un auditeur à cet événement</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument de l'auditeur est l'auditeur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si l'auditeur est enregistré pour cet événement. Renvoie Vrai si elle écoute, sinon Faux.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un auditeur à cet événement
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument de l'auditeur est l'auditeur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si l'auditeur est enregistré pour cet événement. Renvoie Vrai si elle écoute, sinon Faux.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function qui sera appelée lors de l'événement. La fonction passera les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>themeName</code></dt>
-  <dd><code>string</code>. Nom du nouveau thème : ce sera l'une des valeurs autorisées pour  <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName">devtools.panels.themeName</a></code>.</dd>
- </dl>
- </dd>
-</dl>
+  - : Function qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `themeName`
+      - : `string`. Nom du nouveau thème : ce sera l'une des valeurs autorisées pour  [`devtools.panels.themeName`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName).
 
-<p>{{Compat("webextensions.api.devtools.panels.onThemeChanged")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.devtools.panels.onThemeChanged")}}
 
-<pre class="brush: js">browser.devtools.panels.onThemeChanged.addListener((newThemeName) =&gt; {
+## Exemples
+
+```js
+browser.devtools.panels.onThemeChanged.addListener((newThemeName) => {
   console.log(`New theme: ${newThemeName}`);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

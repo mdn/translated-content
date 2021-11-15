@@ -11,28 +11,27 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onerror
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<div>
-<p>Un gestionnaire d'événements qui sera appelé lorsqu'une erreur se produit. C'est le plus souvent parce qu'un ID de requête invalide a été passé dans {{WebExtAPIRef("webRequest.filterResponseData()")}}.</p>
+Un gestionnaire d'événements qui sera appelé lorsqu'une erreur se produit. C'est le plus souvent parce qu'un ID de requête invalide a été passé dans {{WebExtAPIRef("webRequest.filterResponseData()")}}.
 
-<p>Après le déclenchement de cet événement, la propriété {{WebExtAPIRef("webRequest.StreamFilter.error")}} contiendra un message donnant plus d'informations sur l'erreur.</p>
+Après le déclenchement de cet événement, la propriété {{WebExtAPIRef("webRequest.StreamFilter.error")}} contiendra un message donnant plus d'informations sur l'erreur.
 
-<p>Notez que cet événement n'est <em>pas</em> déclenché pour les erreurs réseau.</p>
-</div>
+Notez que cet événement n'est _pas_ déclenché pour les erreurs réseau.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.webRequest.StreamFilter.onerror", 10)}}</p>
+{{Compat("webextensions.api.webRequest.StreamFilter.onerror", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple ajoute un écouteur <code>onerror</code> qui enregistre la valeur de  {{WebExtAPIRef("webRequest.StreamFilter.error")}}.</p>
+Cet exemple ajoute un écouteur `onerror` qui enregistre la valeur de  {{WebExtAPIRef("webRequest.StreamFilter.error")}}.
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData("12345");
 
-  filter.onerror = event =&gt; {
+  filter.onerror = event => {
     console.log(`Error: ${filter.error}`);
   }
 
@@ -41,9 +40,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onerro
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["&lt;all_urls&gt;"], types: ["main_frame"]},
+  {urls: ["<all_urls>"], types: ["main_frame"]},
   ["blocking"]
 );
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

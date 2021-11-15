@@ -13,50 +13,49 @@ tags:
   - addUrl
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/addUrl
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Ajoute un enregistrement à l'historique du navigateur d'une visite à l'URL donnée. L'heure de la visite est enregistrée comme l'heure de l'appel, et le {{WebExtAPIRef("history.TransitionType", "TransitionType")}} est enregistré comme "liens".</p>
+Ajoute un enregistrement à l'historique du navigateur d'une visite à l'URL donnée. L'heure de la visite est enregistrée comme l'heure de l'appel, et le {{WebExtAPIRef("history.TransitionType", "TransitionType")}} est enregistré comme "liens".
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var addingUrl = browser.history.addUrl(
+```js
+var addingUrl = browser.history.addUrl(
   details         // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. Objet contenant l'URL à ajouter.</p>
- <dl>
-  <dt><code>url</code></dt>
-  <dd><code>string</code>. L'URL à ajouter.</dd>
-  <dt><code>title</code>{{optional_inline}}</dt>
-  <dd>string: Le titre de la page. Si ce n'est pas fourni, le titre sera enregistré comme <code>null</code>.</dd>
-  <dt><code>transition</code>{{optional_inline}}</dt>
-  <dd>{{WebExtAPIRef("history.TransitionType")}}. Décrit comment le navigateur a navigué vers la page à cette occasion. Si ce n'est pas fourni, un type de transition de "lien" sera enregistré.</dd>
-  <dt><code>visitTime</code>{{optional_inline}}</dt>
-  <dd><code>number</code> ou <code>string</code> ou <code>object</code>. Cela peut être représenté par: un objet <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>, une  <a href="http://www.iso.org/iso/home/standards/iso8601.htm">chaîne de date ISO 8601</a>, ou le nombre de millisecondes depuis l'époque. Définit le temps de visite à cette valeur. Si ce n'est pas fourni, l'heure actuelle sera enregistrée.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`. Objet contenant l'URL à ajouter.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> sera rempli sans paramètres lorsque l'élément a été ajouté.</p>
+    - `url`
+      - : `string`. L'URL à ajouter.
+    - `title`{{optional_inline}}
+      - : string: Le titre de la page. Si ce n'est pas fourni, le titre sera enregistré comme `null`.
+    - `transition`{{optional_inline}}
+      - : {{WebExtAPIRef("history.TransitionType")}}. Décrit comment le navigateur a navigué vers la page à cette occasion. Si ce n'est pas fourni, un type de transition de "lien" sera enregistré.
+    - `visitTime`{{optional_inline}}
+      - : `number` ou `string` ou `object`. Cela peut être représenté par: un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une  [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Définit le temps de visite à cette valeur. Si ce n'est pas fourni, l'heure actuelle sera enregistrée.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.history.addUrl")}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera rempli sans paramètres lorsque l'élément a été ajouté.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Ajoutez un enregistrement d'une visite à "https://example.org/", puis vérifiez que la nouvelle visite a été enregistrée en recherchant l'historique de l'élément le plus récent et en l'enregistrant :</p>
+{{Compat("webextensions.api.history.addUrl")}}
 
-<pre class="brush: js">function onGot(results) {
+## Exemples
+
+Ajoutez un enregistrement d'une visite à "https\://example.org/", puis vérifiez que la nouvelle visite a été enregistrée en recherchant l'historique de l'élément le plus récent et en l'enregistrant :
+
+```js
+function onGot(results) {
   if (results.length) {
     console.log(results[0].url);
     console.log(new Date(results[0].lastVisitTime));
@@ -73,11 +72,13 @@ function onAdded() {
 }
 
 var addingUrl = browser.history.addUrl({url: "https://example.org/"});
-addingUrl.then(onAdded);</pre>
+addingUrl.then(onAdded);
+```
 
-<p>Ajouter un enregistrement d'une visite à "https://example.org", mais lui donner une <code>visitTime</code> de 24 heures dans le passé, et une <code>transition</code>  "typed":</p>
+Ajouter un enregistrement d'une visite à "https\://example.org", mais lui donner une `visitTime` de 24 heures dans le passé, et une `transition`  "typed":
 
-<pre class="brush: js">const DAY = 24 * 60* 60 * 1000;
+```js
+const DAY = 24 * 60* 60 * 1000;
 
 function oneDayAgo() {
   return Date.now() - DAY;
@@ -104,19 +105,18 @@ var addingUrl = browser.history.addUrl({
   transition: "typed"
 });
 
-addingUrl.then(onAdded);</pre>
+addingUrl.then(onAdded);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -143,5 +143,4 @@ addingUrl.then(onAdded);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

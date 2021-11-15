@@ -13,57 +13,54 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Récupère des informations sur un cadre particulier. Un cadre peut être l'image de niveau supérieur dans un onglet ou un <a href="/fr/docs/Web/HTML/Element/iframe">iframe</a> imbriqué, et est identifié de manière unique par un ID de tabulation et un ID de cadre.</p>
+Récupère des informations sur un cadre particulier. Un cadre peut être l'image de niveau supérieur dans un onglet ou un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué, et est identifié de manière unique par un ID de tabulation et un ID de cadre.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingFrame = browser.webNavigation.getFrame(
+```js
+var gettingFrame = browser.webNavigation.getFrame(
   details                // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. Informations sur le cadre pour récupérer des informations sur :</p>
- <dl>
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. L'ID de l'onglet dans lequel se trouve le cadre.</dd>
-  <dt><code>processId</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. L'ID du processus exécutant le moteur de rendu pour cet onglet.</dd>
-  <dt><code>frameId</code></dt>
-  <dd><code>integer</code>. L'ID du cadre dans l'onglet donné.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`. Informations sur le cadre pour récupérer des informations sur :
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> qui sera rempli avec un objet contenant les propriétés suivantes :</p>
+    - `tabId`
+      - : `integer`. L'ID de l'onglet dans lequel se trouve le cadre.
+    - `processId` {{optional_inline}}
+      - : `integer`. L'ID du processus exécutant le moteur de rendu pour cet onglet.
+    - `frameId`
+      - : `integer`. L'ID du cadre dans l'onglet donné.
 
-<dl>
- <dt><code>errorOccurred</code></dt>
- <dd><code>boolean</code>. Vrai si la dernière navigation dans cette trame a été interrompue par une erreur, c'est-à-dire l'événement {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} déclenché.</dd>
- <dt><code>url</code></dt>
- <dd><code>string</code>. L'URL actuellement associée à cette trame, si la trame identifiée par  <code>frameId</code> existait à un point de l'onglet identifié par <code>tabId</code>. Le fait qu'une URL soit associée à un <code>frameId</code> donné n'implique pas que la trame correspondante existe toujours.</dd>
- <dt><code>parentFrameId</code></dt>
- <dd><code>integer</code>. ID du parent de cette image. C'est -1 s'il n'y a pas de cadre parent: c'est-à-dire si ce cadre est le contexte de navigation de niveau supérieur dans l'onglet.</dd>
-</dl>
+### Valeur retournée
 
-<p>Si l'onglet ou l'ID de trame spécifié n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rempli avec un objet contenant les propriétés suivantes :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- `errorOccurred`
+  - : `boolean`. Vrai si la dernière navigation dans cette trame a été interrompue par une erreur, c'est-à-dire l'événement {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} déclenché.
+- `url`
+  - : `string`. L'URL actuellement associée à cette trame, si la trame identifiée par  `frameId` existait à un point de l'onglet identifié par `tabId`. Le fait qu'une URL soit associée à un `frameId` donné n'implique pas que la trame correspondante existe toujours.
+- `parentFrameId`
+  - : `integer`. ID du parent de cette image. C'est -1 s'il n'y a pas de cadre parent: c'est-à-dire si ce cadre est le contexte de navigation de niveau supérieur dans l'onglet.
 
-<p>{{Compat("webextensions.api.webNavigation.getFrame")}}</p>
+Si l'onglet ou l'ID de trame spécifié n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<pre class="brush: js">function onGot(frameInfo) {
+{{Compat("webextensions.api.webNavigation.getFrame")}}
+
+## Exemples
+
+```js
+function onGot(frameInfo) {
   console.log(frameInfo);
 }
 
@@ -80,19 +77,17 @@ var gettingFrame = browser.webNavigation.getFrame({
 //var gettingFrame = browser.webNavigation.getFrame({ tabId: 19, processId: 0, frameId: 1537 });
 
 gettingFrame.then(onGot, onError);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webNavigation"><code>chrome.webNavigation</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -119,5 +114,4 @@ gettingFrame.then(onGot, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

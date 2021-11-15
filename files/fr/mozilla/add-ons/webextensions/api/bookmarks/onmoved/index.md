@@ -13,71 +13,64 @@ tags:
   - onMoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsqu'un signet ou un dossier est déplacé vers un autre dossier parent et / ou position dans un dossier.</p>
+Lancé lorsqu'un signet ou un dossier est déplacé vers un autre dossier parent et / ou position dans un dossier.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.bookmarks.onMoved.addListener(listener)
+```js
+browser.bookmarks.onMoved.addListener(listener)
 browser.bookmarks.onMoved.removeListener(listener)
 browser.bookmarks.onMoved.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>id</code></dt>
-  <dd><code>string</code>. ID of the item that was moved.</dd>
- </dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
- <dl>
-  <dt><code>moveInfo</code></dt>
-  <dd><a href="#moveInfo"><code>object</code></a>. Object containing more details about the move.</dd>
- </dl>
- </dd>
-</dl>
+    - `id`
+      - : `string`. ID of the item that was moved.
 
-<h2 id="Objets_supplémentaires">Objets supplémentaires</h2>
+    <!---->
 
-<h3 id="moveInfo">moveInfo</h3>
+    - `moveInfo`
+      - : [`object`](#moveInfo). Object containing more details about the move.
 
-<dl>
- <dt><code>parentId</code></dt>
- <dd><code>string</code>. Le nouveau dossier parent.</dd>
- <dt><code>index</code></dt>
- <dd><code>integer</code>. Le nouvel index de cet élément dans son parent.</dd>
- <dt><code>oldParentId</code></dt>
- <dd><code>string</code>. L'ancien dossier parent.</dd>
- <dt><code>oldIndex</code></dt>
- <dd><code>integer</code>. L'ancien index de l'élément dans son parent.</dd>
-</dl>
+## Objets supplémentaires
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### moveInfo
 
-<p>{{Compat("webextensions.api.bookmarks.onMoved")}}</p>
+- `parentId`
+  - : `string`. Le nouveau dossier parent.
+- `index`
+  - : `integer`. Le nouvel index de cet élément dans son parent.
+- `oldParentId`
+  - : `string`. L'ancien dossier parent.
+- `oldIndex`
+  - : `integer`. L'ancien index de l'élément dans son parent.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<pre class="brush: js">function handleMoved(id, moveInfo) {
+{{Compat("webextensions.api.bookmarks.onMoved")}}
+
+## Exemples
+
+```js
+function handleMoved(id, moveInfo) {
   console.log("Item: " + id + " moved");
   console.log("Old index: " + moveInfo.oldIndex);
   console.log("New index: " + moveInfo.index);
@@ -90,19 +83,17 @@ function handleClick() {
 }
 
 browser.browserAction.onClicked.addListener(handleClick);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -129,5 +120,4 @@ browser.browserAction.onClicked.addListener(handleClick);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

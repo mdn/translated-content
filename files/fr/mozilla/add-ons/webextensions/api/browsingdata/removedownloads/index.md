@@ -12,46 +12,44 @@ tags:
   - removeDownloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeDownloads
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Efface l'historique de téléchargement du navigateur. Notez que cela ne supprime pas les objets téléchargés eux-mêmes, seulement les enregistrements de téléchargements dans l'historique du navigateur.</p>
+Efface l'historique de téléchargement du navigateur. Notez que cela ne supprime pas les objets téléchargés eux-mêmes, seulement les enregistrements de téléchargements dans l'historique du navigateur.
 
-<p>Vous pouvez utiliser le paramètre <code>removalOptions</code>, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :</p>
+Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
 
-<ul>
- <li>Efface les enregistrements des élements téléchargés après un temps donné</li>
- <li>contrôle si vous souhaitez effacer uniquement les enregistrements d'éléments téléchargés à partir de pages Web normales ou pour supprimer également les enregistrements des applications hébergées et des extensions.</li>
-</ul>
+- Efface les enregistrements des élements téléchargés après un temps donné
+- contrôle si vous souhaitez effacer uniquement les enregistrements d'éléments téléchargés à partir de pages Web normales ou pour supprimer également les enregistrements des applications hébergées et des extensions.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var removing = browser.browsingData.removeDownloads(
+```js
+var removing = browser.browsingData.removeDownloads(
   removalOptions            // RemovalOptions object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>removalOptions</code></dt>
- <dd><code>object</code>. Un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, qui peut-être utilisé pour effacer uniquement les enregistrements créés après une heure donnée, et pour effacer uniquement les enregistrements d'éléments téléchargés depuis les pages Web normales ou pour effacer des enregistrements d'applications hébergées et extensions aussi bien.</dd>
-</dl>
+- `removalOptions`
+  - : `object`. Un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, qui peut-être utilisé pour effacer uniquement les enregistrements créés après une heure donnée, et pour effacer uniquement les enregistrements d'éléments téléchargés depuis les pages Web normales ou pour effacer des enregistrements d'applications hébergées et extensions aussi bien.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browsingData.removeDownloads")}}</p>
+{{Compat("webextensions.api.browsingData.removeDownloads")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Supprime les enregistrements d'objets téléchargés la semaine dernière :</p>
+Supprime les enregistrements d'objets téléchargés la semaine dernière :
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("removed");
 }
 
@@ -67,11 +65,13 @@ var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
 
 browser.browsingData.removeDownloads(
   {since: oneWeekAgo}).
-then(onRemoved, onError);</pre>
+then(onRemoved, onError);
+```
 
-<p>Supprime tous les enregistrements d'objets téléchargés :</p>
+Supprime tous les enregistrements d'objets téléchargés :
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("removed");
 }
 
@@ -80,19 +80,18 @@ function onError(error) {
 }
 
 browser.browsingData.removeDownloads({}).
-then(onRemoved, onError);</pre>
+then(onRemoved, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -119,5 +118,4 @@ then(onRemoved, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

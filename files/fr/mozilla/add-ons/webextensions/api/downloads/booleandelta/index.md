@@ -13,36 +13,32 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/BooleanDelta
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Le type <code>BooleanDelta</code> de l'API {{WebExtAPIRef("downloads")}} représente la différence entre deux booléens.</p>
+Le type `BooleanDelta` de l'API {{WebExtAPIRef("downloads")}} représente la différence entre deux booléens.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>current</code>{{optional_inline}}</dt>
- <dd>Un <code>boolean</code> représentant la valeur booléenne actuelle.</dd>
- <dt><code>previous</code>{{optional_inline}}</dt>
- <dd>Un <code>boolean</code> représentant la valeur booléenne précédente.</dd>
-</dl>
+- `current`{{optional_inline}}
+  - : Un `boolean` représentant la valeur booléenne actuelle.
+- `previous`{{optional_inline}}
+  - : Un `boolean` représentant la valeur booléenne précédente.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.downloads.BooleanDelta")}}</p>
+{{Compat("webextensions.api.downloads.BooleanDelta")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre> // Copyright 2015 Les auteurs de chrome. Tous les droits sont réservés.
+<div class="hidden"><pre> // Copyright 2015 Les auteurs de chrome. Tous les droits sont réservés.
 //
 // Redistribution et utilisation sous forme source et binaire, avec ou sans
 // modification, sont autorisées à condition que les conditions suivantes soient
@@ -68,5 +64,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/BooleanDelta
 // THÉORIE DE LA RESPONSABILITÉ, QU'IL SOIT UN CONTRAT, UNE RESPONSABILITÉ STRICTE OU UN TORT
 // (INCLUANT LA NÉGLIGENCE OU AUTREMENT) SURVENANT DE TOUTE MANIÈRE DE L'UTILISER
 // DE CE LOGICIEL, MÊME SI AVISÉ DE LA POSSIBILITÉ D'UN TEL DOMMAGE.
-</pre>
-</div>
+</pre></div>

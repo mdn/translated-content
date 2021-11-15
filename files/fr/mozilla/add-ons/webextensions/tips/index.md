@@ -9,19 +9,20 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Tips
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>Cette page contient divers conseils et astuces qui devraient être utiles à beaucoup de personnes développant des extensions à l'aide des API WebExtension.</p>
+Cette page contient divers conseils et astuces qui devraient être utiles à beaucoup de personnes développant des extensions à l'aide des API WebExtension.
 
-<h2 id="Utilisation_des_fonctionnalités_JavaScript_avancées_d'ECMAScript_2015_et_2016">Utilisation des fonctionnalités JavaScript avancées d'ECMAScript 2015 et 2016</h2>
+## Utilisation des fonctionnalités JavaScript avancées d'ECMAScript 2015 et 2016
 
-<p>Firefox prend <a href="/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla">en charge de nombreuses fonctionnalités de ECMAScript 2015</a> hors de la boite. Cependant, plusieurs nouvelles fonctionnalités expérimentales ne sont pas disponibles sur le Web ou WebExtensions par défaut. Si vous souhaitez utiliser ces fonctionnalités, il est préférable de transférer votre code à l'aide d'un outil tel que <a href="https://babeljs.io/">Babel</a>.</p>
+Firefox prend [en charge de nombreuses fonctionnalités de ECMAScript 2015](/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) hors de la boite. Cependant, plusieurs nouvelles fonctionnalités expérimentales ne sont pas disponibles sur le Web ou WebExtensions par défaut. Si vous souhaitez utiliser ces fonctionnalités, il est préférable de transférer votre code à l'aide d'un outil tel que [Babel](https://babeljs.io/).
 
-<p>Attention, tout ce qui se trouve en dessous de cette ligne est obsolète et a été retiré de Babel 6.</p>
+Attention, tout ce qui se trouve en dessous de cette ligne est obsolète et a été retiré de Babel 6.
 
-<p>Babel fournit des transformations pour la grande majorité des fonctionnalités ES2015 et les active par défaut. Puisque Firefox supporte déjà la plupart d'entre eux, il est préférable de configurer Babel pour les ignorer. Nous vous suggérons de créer un fichier <code>.babelrc</code>, ou une section <code>babel</code> dans le fichier <code>package.json</code> de votre projet contenant les éléments suivants :</p>
+Babel fournit des transformations pour la grande majorité des fonctionnalités ES2015 et les active par défaut. Puisque Firefox supporte déjà la plupart d'entre eux, il est préférable de configurer Babel pour les ignorer. Nous vous suggérons de créer un fichier `.babelrc`, ou une section `babel` dans le fichier `package.json` de votre projet contenant les éléments suivants :
 
-<pre class="brush: js">{
+```js
+{
   "env": {
     "firefox": {
       "sourceMaps": "inline",
@@ -43,14 +44,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/Tips
     }
   }
 }
-</pre>
+```
 
-<p>Ensuite, pour compiler un script individuel, lancez simplement :</p>
+Ensuite, pour compiler un script individuel, lancez simplement :
 
-<pre>BABEL_ENV=firefox babel &lt;filename&gt;
-</pre>
+    BABEL_ENV=firefox babel <filename>
 
-<p>Ou, pour compiler chaque fichier JavaScript sous le répertoire <code>src</code> et placer les fichiers compilés dans la <code>compilation</code>, en copiant les fichiers non-JavaScript dans le processus, lancez:</p>
+Ou, pour compiler chaque fichier JavaScript sous le répertoire `src` et placer les fichiers compilés dans la `compilation`, en copiant les fichiers non-JavaScript dans le processus, lancez:
 
-<pre>BABEL_ENV=firefox babel -Dd compiled src
-</pre>
+    BABEL_ENV=firefox babel -Dd compiled src

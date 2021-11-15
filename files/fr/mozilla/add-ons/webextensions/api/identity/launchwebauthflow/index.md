@@ -12,82 +12,74 @@ tags:
   - launchWebAuthFlow
 translation_of: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Effectue la première partie d'un flux <a href="https://oauth.net/2/">OAuth2</a> y compris l'authentification de l'utilisateur et l'autorisation du client.</p>
+Effectue la première partie d'un flux [OAuth2](https://oauth.net/2/) y compris l'authentification de l'utilisateur et l'autorisation du client.
 
-<p>Le seul paramètre obligatoire de cette fonction est l'URL d'autorisation du fournisseur de services, qui doit contenir un certain nombre de paramètres d'URL, y compris l'<a href="/fr/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL">URL de redirection</a> et l'<a href="/fr/Add-ons/WebExtensions/API/identity#Registering_your_add-on">ID client</a> de l'extension. Le fournisseur de service alors :</p>
+Le seul paramètre obligatoire de cette fonction est l'URL d'autorisation du fournisseur de services, qui doit contenir un certain nombre de paramètres d'URL, y compris l'[URL de redirection](/fr/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL) et l'[ID client](/fr/Add-ons/WebExtensions/API/identity#Registering_your_add-on) de l'extension. Le fournisseur de service alors :
 
-<ul>
- <li>authentifie l'utilisateur auprès du fournisseur de services, si nécessaire (c'est-à-dire: s'ils ne sont pas déjà connectés)</li>
- <li>demande à l'utilisateur d'autoriser l'extension à accéder aux données demandées, si nécessaire (c'est-à-dire : si l'utilisateur n'a pas déjà autorisé l'extension)</li>
-</ul>
+- authentifie l'utilisateur auprès du fournisseur de services, si nécessaire (c'est-à-dire: s'ils ne sont pas déjà connectés)
+- demande à l'utilisateur d'autoriser l'extension à accéder aux données demandées, si nécessaire (c'est-à-dire : si l'utilisateur n'a pas déjà autorisé l'extension)
 
-<p>Notez que si aucune authentification ou autorisation n'est nécessaire, cette fonction se terminera silencieusement, sans interaction de l'utilisateur.</p>
+Notez que si aucune authentification ou autorisation n'est nécessaire, cette fonction se terminera silencieusement, sans interaction de l'utilisateur.
 
-<p>Cette fonction prend également un paramètre facultatif <code>interactif</code>: si cette valeur est omise ou définie sur false, le flux est forcé de se terminer en mode silencieux. Dans ce cas, si l'utilisateur doit s'authentifier ou autoriser, l'opération échouera tout simplement.</p>
+Cette fonction prend également un paramètre facultatif `interactif`: si cette valeur est omise ou définie sur false, le flux est forcé de se terminer en mode silencieux. Dans ce cas, si l'utilisateur doit s'authentifier ou autoriser, l'opération échouera tout simplement.
 
-<p>Cette fonction renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>: si l'authentification et l'autorisation ont abouti, la promesse est remplie avec une URL de redirection contenant un certain nombre de paramètres d'URL. En fonction du flux OAuth2 implémenté par le fournisseur de services en question, l'extension devra passer par d'autres étapes pour obtenir un code d'accès valide, qu'elle pourra ensuite utiliser pour accéder aux données de l'utilisateur.</p>
+Cette fonction renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise): si l'authentification et l'autorisation ont abouti, la promesse est remplie avec une URL de redirection contenant un certain nombre de paramètres d'URL. En fonction du flux OAuth2 implémenté par le fournisseur de services en question, l'extension devra passer par d'autres étapes pour obtenir un code d'accès valide, qu'elle pourra ensuite utiliser pour accéder aux données de l'utilisateur.
 
-<p>S'il y a une erreur, la promesse est rejetée avec un message d'erreur. Les conditions d'erreur peuvent inclure :</p>
+S'il y a une erreur, la promesse est rejetée avec un message d'erreur. Les conditions d'erreur peuvent inclure :
 
-<ul>
- <li>l'URL du fournisseur de services n'a pas pu être atteinte</li>
- <li>l'ID du client ne correspond pas à l'ID d'un client enregistré</li>
- <li>l'URL de redirection ne correspond à aucune URL de redirection enregistrée pour ce client</li>
- <li>l'utilisateur ne s'est pas authentifié avec succès</li>
- <li>l'utilisateur n'a pas autorisé l'extension</li>
- <li>Le paramètre <code>interactif</code> a été omis ou faux, mais l'interaction de l'utilisateur aurait été nécessaire pour autoriser l'extension.</li>
-</ul>
+- l'URL du fournisseur de services n'a pas pu être atteinte
+- l'ID du client ne correspond pas à l'ID d'un client enregistré
+- l'URL de redirection ne correspond à aucune URL de redirection enregistrée pour ce client
+- l'utilisateur ne s'est pas authentifié avec succès
+- l'utilisateur n'a pas autorisé l'extension
+- Le paramètre `interactif` a été omis ou faux, mais l'interaction de l'utilisateur aurait été nécessaire pour autoriser l'extension.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var authorizing = browser.identity.launchWebAuthFlow(
+```js
+var authorizing = browser.identity.launchWebAuthFlow(
   details   // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. Options pour le flux, contenant les propriétés suivantes :</p>
- <dl>
-  <dt><code>url</code></dt>
-  <dd>
-  <p><code>string</code>. URL fournie par le fournisseur de services OAuth2 pour obtenir un jeton d'accès. Les détails de cette URL doivent figurer dans la documentation du fournisseur de services en question, mais les paramètres d'URL doivent toujours inclure :</p>
+- `details`
 
-  <ul>
-   <li>redirect_uri: ceci représente l'URI que votre extension est redirigée lorsque le flux est terminé. Il n'est pas nécessaire pour que le flux fonctionne du côté navigateur s'il correspond à l'URL de redirection générée. Voir <a href="/fr/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL">Obtenir l'URL de redirection</a>.</li>
-  </ul>
-  </dd>
-  <dt><code>interactive</code> {{optional_inline}}</dt>
-  <dd>
-  <p><code>boolean</code>. Si omis ou <code>false</code>, force le flux à se terminer en silence, sans interaction de l'utilisateur.</p>
+  - : `object`. Options pour le flux, contenant les propriétés suivantes :
 
-  <p>Si l'utilisateur est déjà connecté et a déjà accordé l'accès pour l'extension, <code>launchWebAuthFlow()</code> peut se terminer en mode silencieux, sans interaction de l'utilisateur. Sinon (si le fournisseur de services a besoin que l'utilisateur se connecte ou autorise l'extension), <code>launchWebAuthFlow()</code> invite l'utilisateur, c'est-à-dire que le flux sera interactif.</p>
+    - `url`
 
-  <p>Les extensions ne doivent pas lancer de flux interactifs sauf en réponse à une action de l'utilisateur. Cependant, parfois les extensions veulent toujours accéder aux données de l'utilisateur sans une action directe de l'utilisateur (par exemple, imaginez une extension qui veut accéder aux données lorsque le navigateur se lance).</p>
+      - : `string`. URL fournie par le fournisseur de services OAuth2 pour obtenir un jeton d'accès. Les détails de cette URL doivent figurer dans la documentation du fournisseur de services en question, mais les paramètres d'URL doivent toujours inclure :
 
-  <p>TC'est le but de l'<code>interactif</code>: Si vous omettez <code>interactif</code> ou le définissez sur <code>false</code>, le flux est forcé de conclure en silence : si le fournisseur de services doit interagir avec l'utilisateur, le flux échouera tout simplement. Donc en règle générale: mettez <code>interactif</code> à <code>true</code> si vous lancez le flux en réponse à une action de l'utilisateur, et omettez le sinon.</p>
-  </dd>
- </dl>
- </dd>
-</dl>
+        - redirect_uri: ceci représente l'URI que votre extension est redirigée lorsque le flux est terminé. Il n'est pas nécessaire pour que le flux fonctionne du côté navigateur s'il correspond à l'URL de redirection générée. Voir [Obtenir l'URL de redirection](/fr/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL).
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+    - `interactive` {{optional_inline}}
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. Si l'extension est autorisée avec succès, elle sera remplie avec une chaîne contenant l'URL de redirection. L'URL inclura un paramètre qui est un jeton d'accès ou qui peut être échangé contre un jeton d'accès, en utilisant le flux documenté pour le fournisseur de services particulier. </p>
+      - : `boolean`. Si omis ou `false`, force le flux à se terminer en silence, sans interaction de l'utilisateur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+        Si l'utilisateur est déjà connecté et a déjà accordé l'accès pour l'extension, `launchWebAuthFlow()` peut se terminer en mode silencieux, sans interaction de l'utilisateur. Sinon (si le fournisseur de services a besoin que l'utilisateur se connecte ou autorise l'extension), `launchWebAuthFlow()` invite l'utilisateur, c'est-à-dire que le flux sera interactif.
 
-<p>{{Compat("webextensions.api.identity.launchWebAuthFlow")}}</p>
+        Les extensions ne doivent pas lancer de flux interactifs sauf en réponse à une action de l'utilisateur. Cependant, parfois les extensions veulent toujours accéder aux données de l'utilisateur sans une action directe de l'utilisateur (par exemple, imaginez une extension qui veut accéder aux données lorsque le navigateur se lance).
 
-<h2 id="Exemples">Exemples</h2>
+        TC'est le but de l'`interactif`: Si vous omettez `interactif` ou le définissez sur `false`, le flux est forcé de conclure en silence : si le fournisseur de services doit interagir avec l'utilisateur, le flux échouera tout simplement. Donc en règle générale: mettez `interactif` à `true` si vous lancez le flux en réponse à une action de l'utilisateur, et omettez le sinon.
 
-<p>Cette fonction autorise une extension des données Google d'un utilisateur, conformément à la documentation disponible à l'adresse  <a href="https://developers.google.com/identity/protocols/OAuth2UserAgent">https://developers.google.com/identity/protocols/OAuth2UserAgent</a>. La validation du jeton d'accès renvoyé n'est pas affichée ici :</p>
+### Valeur retournée
 
-<pre class="brush: js">function validate(redirectURL) {
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'extension est autorisée avec succès, elle sera remplie avec une chaîne contenant l'URL de redirection. L'URL inclura un paramètre qui est un jeton d'accès ou qui peut être échangé contre un jeton d'accès, en utilisant le flux documenté pour le fournisseur de services particulier.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.identity.launchWebAuthFlow")}}
+
+## Exemples
+
+Cette fonction autorise une extension des données Google d'un utilisateur, conformément à la documentation disponible à l'adresse  <https://developers.google.com/identity/protocols/OAuth2UserAgent>. La validation du jeton d'accès renvoyé n'est pas affichée ici :
+
+```js
+function validate(redirectURL) {
   // validate the access token
 }
 
@@ -97,9 +89,9 @@ function authorize() {
   const scopes = ["openid", "email", "profile"];
   let authURL = "https://accounts.google.com/o/oauth2/auth";
   authURL += `?client_id=${clientID}`;
-  authURL += `&amp;response_type=token`;
-  authURL += `&amp;redirect_uri=${encodeURIComponent(redirectURL)}`;
-  authURL += `&amp;scope=${encodeURIComponent(scopes.join(' '))}`;
+  authURL += `&response_type=token`;
+  authURL += `&redirect_uri=${encodeURIComponent(redirectURL)}`;
+  authURL += `&scope=${encodeURIComponent(scopes.join(' '))}`;
 
   return browser.identity.launchWebAuthFlow({
     interactive: true,
@@ -109,13 +101,13 @@ function authorize() {
 
 function getAccessToken() {
   return authorize().then(validate);
-}</pre>
+}
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/identity"><code>chrome.identity</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/extensions/identity).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

@@ -12,101 +12,104 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Définit l'icône de la barre latérale.</p>
+Définit l'icône de la barre latérale.
 
-<p>Vous pouvez spécifier une icône unique comme chemin d'accès à un fichier image ou un objet {{WebExtAPIRef('sidebarAction.ImageDataType')}}.</p>
+Vous pouvez spécifier une icône unique comme chemin d'accès à un fichier image ou un objet {{WebExtAPIRef('sidebarAction.ImageDataType')}}.
 
-<p>Vous pouvez spécifier plusieurs icônes de différentes tailles en fournissant un dictionnaire contenant plusieurs chemins ou objets <code>ImageData</code>. Cela signifie que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente.</p>
+Vous pouvez spécifier plusieurs icônes de différentes tailles en fournissant un dictionnaire contenant plusieurs chemins ou objets `ImageData`. Cela signifie que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Types_d'icônes">Types d'icônes</h2>
+## Types d'icônes
 
-<p>Votre extension doit spécifier une icône pour la barre latérale dans la clé de manifest <a href="/fr/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a>. C'est ce qu'on appelle <em>"manifest icon"</em>.</p>
+Votre extension doit spécifier une icône pour la barre latérale dans la clé de manifest [sidebar_action](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action). C'est ce qu'on appelle _"manifest icon"_.
 
-<p>Si vous ne spécifiez pas d'icône dans la clé sidebar_action, vous obtenez l'icône par défaut du navigateur. C'est ce qu'on appelle <em>"default icon"</em>.</p>
+Si vous ne spécifiez pas d'icône dans la clé sidebar_action, vous obtenez l'icône par défaut du navigateur. C'est ce qu'on appelle _"default icon"_.
 
-<p>Si vous définissez une nouvelle icône en utilisant <code>setIcon()</code>, et incluez l'option <code>tabId</code> , l'icône est définie uniquement pour l'onglet donné. C'est ce qu'on appelle <em>"tab-specific icon"</em>.</p>
+Si vous définissez une nouvelle icône en utilisant `setIcon()`, et incluez l'option `tabId` , l'icône est définie uniquement pour l'onglet donné. C'est ce qu'on appelle _"tab-specific icon"_.
 
-<p>Si vous définissez une nouvelle icône en utilisant <code>setIcon()</code>, et incluez l'option <code>windowId</code>, alors l'icône n'est définie que pour la fenêtre donnée. Cette icône est appelée <em>"icône spécifique à la fenêtre"</em>, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas de jeu d'icônes spécifiques aux onglets.</p>
+Si vous définissez une nouvelle icône en utilisant `setIcon()`, et incluez l'option `windowId`, alors l'icône n'est définie que pour la fenêtre donnée. Cette icône est appelée _"icône spécifique à la fenêtre"_, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas de jeu d'icônes spécifiques aux onglets.
 
-<p>Si vous définissez une nouvelle icône en utilisant <code>setIcon()</code>, et omettez l'option <code>tabId</code> and <code>windowId</code>, cela définit <em>"icône globale"</em>. L'icône globale apparaîtra alors dans tous les onglets qui n'ont pas de jeu d'icônes spécifiques aux onglets et dont la fenêtre n'a pas d'icône spécifique à la fenêtre.</p>
+Si vous définissez une nouvelle icône en utilisant `setIcon()`, et omettez l'option `tabId` and `windowId`, cela définit _"icône globale"_. L'icône globale apparaîtra alors dans tous les onglets qui n'ont pas de jeu d'icônes spécifiques aux onglets et dont la fenêtre n'a pas d'icône spécifique à la fenêtre.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var settingIcon = browser.sidebarAction.setIcon(
+```js
+var settingIcon = browser.sidebarAction.setIcon(
   details         // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. Un Objet contenant des propriétés <code>imageData</code> ou <code>path</code>, et éventuellement une propriété <code>tabId</code>.</p>
- <dl>
-  <dt><code>imageData</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code>{{WebExtAPIRef('sidebarAction.ImageDataType')}}</code> ou <code>object</code>. C'est un objet <code>ImageData</code> unique ou un objet dictionnaire.</p>
+- `details`
 
-  <p>Utilisez un objet dictionnaire pour spécifier plusieurs objets <code>ImageData</code> dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente. Si <code>imageData</code> est un dictionnaire, la valeur de chaque propriété est un objet <code>ImageData</code>, et son nom est sa taille, comme ceci :</p>
+  - : `object`. Un Objet contenant des propriétés `imageData` ou `path`, et éventuellement une propriété `tabId`.
 
-  <pre class="brush: json">{
-  16: image16,
-  32: image32
-}</pre>
+    - `imageData`{{optional_inline}}
 
-  <p>Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir <a href="/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes">Choisir les tailles d'icônes</a> pour plus d'informations à ce sujet.</p>
-  </dd>
-  <dt><code>path</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code>string</code> ou <code>object</code>. C'est soit un chemin relatif vers un fichier d'icône, soit un objet dictionnaire. </p>
+      - : `{{WebExtAPIRef('sidebarAction.ImageDataType')}}` ou `object`. C'est un objet `ImageData` unique ou un objet dictionnaire.
 
-  <p>Utilisez un objet de dictionnaire pour spécifier plusieurs fichiers d'icônes de différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente. Si <code>path</code> est un dictionnaire, la valeur de chaque propriété est un chemin relatif, et son nom est sa taille, comme ceci :</p>
+        Utilisez un objet dictionnaire pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente. Si `imageData` est un dictionnaire, la valeur de chaque propriété est un objet `ImageData`, et son nom est sa taille, comme ceci :
 
-  <pre class="brush: json">{
-  16: "path/to/image16.jpg",
-  32: "path/to/image32.jpg"
-}</pre>
+        ```json
+        {
+          16: image16,
+          32: image32
+        }
+        ```
 
-  <p>Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir <a href="/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes">Choosir les tailles d'icônes</a> pour plus d'informations à ce sujet.</p>
+        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choisir les tailles d'icônes](/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes) pour plus d'informations à ce sujet.
 
-  <p>si <code>path</code> est une chaîne vide, le navigateur utilisera l'icône par défaut.</p>
+    - `path`{{optional_inline}}
 
-  <p>si <code>path</code> n'est pas vide mais ne pointe pas vers un fichier d'icône, l'icône est masquée.</p>
+      - : `string` ou `object`. C'est soit un chemin relatif vers un fichier d'icône, soit un objet dictionnaire.
 
-  <p>si <code>path</code> est <code>null</code>, et <code>tabId</code>a été spécifié, et que l'onglet spécifié possède un jeu d'icônes spécifique à l'onglet: l'icône spécifique à l'onglet est réinitialisée à l'icône globale (si une icône globale est définie) ou à l'icône manifeste.</p>
+        Utilisez un objet de dictionnaire pour spécifier plusieurs fichiers d'icônes de différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente. Si `path` est un dictionnaire, la valeur de chaque propriété est un chemin relatif, et son nom est sa taille, comme ceci :
 
-  <p>si <code>path</code> est <code>null</code>, et <code>tabId</code> a été omis, et qu'il y avait un jeu d'icônes global, il sera réinitialisé à l'icône de manifest.</p>
-  </dd>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Définit l'icône uniquement pour l'onglet donné.</dd>
-  <dt><code>windowId</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. Définit l'icône uniquement pour la fenêtre donnée.</dd>
- </dl>
- </dd>
-</dl>
+        ```json
+        {
+          16: "path/to/image16.jpg",
+          32: "path/to/image32.jpg"
+        }
+        ```
 
-<ul>
- <li>Si <code>windowId</code>et <code>tabId</code> sont tous deux spécifiés, la fonction échoue et l'icône n'est pas définie.</li>
- <li>SI <code>windowId</code> et <code>tabId</code> sont tous deux omis, l'icône est définie globalement.</li>
-</ul>
+        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choosir les tailles d'icônes](/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes) pour plus d'informations à ce sujet.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+        si `path` est une chaîne vide, le navigateur utilisera l'icône par défaut.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans argument une fois l'icône définie.</p>
+        si `path` n'est pas vide mais ne pointe pas vers un fichier d'icône, l'icône est masquée.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+        si `path` est `null`, et `tabId`a été spécifié, et que l'onglet spécifié possède un jeu d'icônes spécifique à l'onglet: l'icône spécifique à l'onglet est réinitialisée à l'icône globale (si une icône globale est définie) ou à l'icône manifeste.
 
-<p>{{Compat("webextensions.api.sidebarAction.setIcon",2)}}</p>
+        si `path` est `null`, et `tabId` a été omis, et qu'il y avait un jeu d'icônes global, il sera réinitialisé à l'icône de manifest.
 
-<h2 id="Exemples">Exemples</h2>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Définit l'icône uniquement pour l'onglet donné.
+    - `windowId` {{optional_inline}}
+      - : `integer`. Définit l'icône uniquement pour la fenêtre donnée.
 
-<p>Le code ci-dessous bascule l'icône de la barre latérale de l'onglet actif lorsque l'utilisateur clique sur une action du navigateur :</p>
+<!---->
 
-<pre class="brush: js">var on = false;
+- Si `windowId`et `tabId` sont tous deux spécifiés, la fonction échoue et l'icône n'est pas définie.
+- SI `windowId` et `tabId` sont tous deux omis, l'icône est définie globalement.
+
+### Valeur retournée
+
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument une fois l'icône définie.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.sidebarAction.setIcon",2)}}
+
+## Exemples
+
+Le code ci-dessous bascule l'icône de la barre latérale de l'onglet actif lorsque l'utilisateur clique sur une action du navigateur :
+
+```js
+var on = false;
 
 function toggle(tab) {
   if (on) {
@@ -124,11 +127,11 @@ function toggle(tab) {
   }
 }
 
-browser.browserAction.onClicked.addListener(toggle);</pre>
+browser.browserAction.onClicked.addListener(toggle);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Opera <a href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a>.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).

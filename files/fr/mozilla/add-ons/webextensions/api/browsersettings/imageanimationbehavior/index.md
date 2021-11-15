@@ -11,26 +11,26 @@ tags:
   - imageAnimationBehavior
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour modifier la façon dont le navigateur traite les images animées, telles que les GIF.</p>
+Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour modifier la façon dont le navigateur traite les images animées, telles que les GIF.
 
-<p>La valeur sous-jacente est une chaîne qui peut prendre l'une des trois valeurs suivantes:</p>
+La valeur sous-jacente est une chaîne qui peut prendre l'une des trois valeurs suivantes:
 
-<ul>
- <li>"normal": la valeur par défaut Jouer des images animées comme d'habitude.</li>
- <li>"none": n'anime pas les images du tout.</li>
- <li>"once": joue une fois l'animation.</li>
-</ul>
+- "normal": la valeur par défaut Jouer des images animées comme d'habitude.
+- "none": n'anime pas les images du tout.
+- "once": joue une fois l'animation.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browserSettings.imageAnimationBehavior", 10)}}</p>
+{{Compat("webextensions.api.browserSettings.imageAnimationBehavior", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Désactiver les images animées :</p>
+Désactiver les images animées :
 
-<pre class="brush: js">  browser.browserSettings.imageAnimationBehavior.set({value: "none"});</pre>
+```js
+  browser.browserSettings.imageAnimationBehavior.set({value: "none"});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

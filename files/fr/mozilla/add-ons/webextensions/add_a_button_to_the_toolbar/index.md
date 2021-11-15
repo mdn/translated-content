@@ -6,29 +6,26 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 original_slug: Mozilla/Add-ons/WebExtensions/Ajouter_un_bouton_a_la_barre_d_outils
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Les boutons de la barre d’outils sont l’un des principaux composants UI disponibles aux WebExtensions. Les boutons de la barre d’outils sont présents dans la barre d’outils principale du navigateur et contiennent une icône. Lorsque l’utilisateur clique sur l’icône, une des deux choses peut arriver :</p>
+Les boutons de la barre d’outils sont l’un des principaux composants UI disponibles aux WebExtensions. Les boutons de la barre d’outils sont présents dans la barre d’outils principale du navigateur et contiennent une icône. Lorsque l’utilisateur clique sur l’icône, une des deux choses peut arriver :
 
-<ul>
- <li>Si vous avez spécifié une fenêtre contextuelle pour l’icône, la fenêtre contextuelle s’affiche. Les fenêtres contextuelles sont des boîtes de dialogue spécifiées à l’aide de HTML, CSS et JavaScript.</li>
- <li>Si vous n’avez pas spécifié une fenêtre contextuelle, un événement de clic est généré, que vous pouvez écouter dans votre code et effectuer un autre type d’action en réponse</li>
-</ul>
+- Si vous avez spécifié une fenêtre contextuelle pour l’icône, la fenêtre contextuelle s’affiche. Les fenêtres contextuelles sont des boîtes de dialogue spécifiées à l’aide de HTML, CSS et JavaScript.
+- Si vous n’avez pas spécifié une fenêtre contextuelle, un événement de clic est généré, que vous pouvez écouter dans votre code et effectuer un autre type d’action en réponse
 
-<p>Dans WebExtensions, ces types de boutons s’appellent « actions du navigateur » et sont configurés de la manière suivante :</p>
+Dans WebExtensions, ces types de boutons s’appellent « actions du navigateur » et sont configurés de la manière suivante :
 
-<ul>
- <li>La clé de manifest.json <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> permet de définir le bouton.</li>
- <li>L’API JavaScript <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> est utilisé pour écouter les clics modifier le bouton ou effectuer des actions via votre code.</li>
-</ul>
+- La clé de manifest.json [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) permet de définir le bouton.
+- L’API JavaScript [`browserAction`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) est utilisé pour écouter les clics modifier le bouton ou effectuer des actions via votre code.
 
-<h2 id="Un_bouton_simple">Un bouton simple</h2>
+## Un bouton simple
 
-<p>Dans cette section, nous créerons une WebExtension qui ajoute un bouton à la barre d’outils. Lorsque l’utilisateur clique sur le bouton, nous ouvrirons <a href="https://developer.mozilla.org">https ://developer.mozilla.org</a> dans un nouveau onglet.</p>
+Dans cette section, nous créerons une WebExtension qui ajoute un bouton à la barre d’outils. Lorsque l’utilisateur clique sur le bouton, nous ouvrirons [https ://developer.mozilla.org](https://developer.mozilla.org) dans un nouveau onglet.
 
-<p>Tout d’abord, créez un nouveau dossier, « bouton », et créez un fichier appelé « manifest.json » à l’intérieur avec le contenu suivant :</p>
+Tout d’abord, créez un nouveau dossier, « bouton », et créez un fichier appelé « manifest.json » à l’intérieur avec le contenu suivant :
 
-<pre class="brush: json">{
+```json
+{
 
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
@@ -46,54 +43,55 @@ original_slug: Mozilla/Add-ons/WebExtensions/Ajouter_un_bouton_a_la_barre_d_outi
     }
   }
 
-}</pre>
+}
+```
 
-<p>Cela spécifie que nous aurons un script en <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">arrière‐plan</a> nommé « background.js », et une action du navigateur (bouton) et une action du navigateur (bouton) dont les icônes vont vivre dans le répertoire « icônes ».</p>
+Cela spécifie que nous aurons un script en [arrière‐plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) nommé « background.js », et une action du navigateur (bouton) et une action du navigateur (bouton) dont les icônes vont vivre dans le répertoire « icônes ».
 
+Ces icônes proviennent des [bits !](https://www.iconfinder.com/iconsets/bitsies) icônes créées parRecep Kütük.
 
-<p>Ces icônes proviennent des <a href="https://www.iconfinder.com/iconsets/bitsies">bits !</a> icônes créées parRecep Kütük.</p>
+Ensuite, créez un dossier « icons » dans le dossier « buttons » et enregistrez les deux icônes ci‐dessous :
 
-<p>Ensuite, créez un dossier « icons » dans le dossier « buttons » et enregistrez les deux icônes ci‐dessous :</p>
+- « page‐16.png » (![](page-16.png))
+- « page‐32.png » (![](page-32.png)).
 
-<ul>
- <li>« page‐16.png » (<img alt="" src="page-16.png">)</li>
- <li>« page‐32.png » (<img alt="" src="page-32.png">).</li>
-</ul>
+Nous avons deux icônes que nous pouvons utiliser, la plus grande dans les écrans haute densité. Le navigateur prend en charge la sélection de la meilleure icône pour l’affichage courrant.
 
-<div></div>
+Ensuite, créez « background.js » dans le répertoire racine de l’add‐on, et donnez‐lui le contenu suivant :
 
-<p>Nous avons deux icônes que nous pouvons utiliser, la plus grande dans les écrans haute densité. Le navigateur prend en charge la sélection de la meilleure icône pour l’affichage courrant.</p>
-
-<p>Ensuite, créez « background.js » dans le répertoire racine de l’add‐on, et donnez‐lui le contenu suivant :</p>
-
-<pre class="brush: js">function openPage() {
+```js
+function openPage() {
   browser.tabs.create({
     url: "https://developer.mozilla.org"
   });
 }
 
-browser.browserAction.onClicked.addListener(openPage);</pre>
+browser.browserAction.onClicked.addListener(openPage);
+```
 
-<p>Cela écoute l’événement de clic de l’action du navigateur ; Lorsque l’événement se déclenche, la fonction <code>openPage()</code> est exécuté, ce qui ouvre la page spécifiée à l’aide de l’API des <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs">onglets</a></code>.</p>
+Cela écoute l’événement de clic de l’action du navigateur ; Lorsque l’événement se déclenche, la fonction `openPage()` est exécuté, ce qui ouvre la page spécifiée à l’aide de l’API des [`onglets`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs).
 
-<p>A ce point, l’extension complète devrait ressembler à ceci :</p>
+A ce point, l’extension complète devrait ressembler à ceci :
 
-<pre class="brush: html">button/
+```html
+button/
     icons/
         page-16.png
         page-32.png
     background.js
-    manifest.json</pre>
+    manifest.json
+```
 
-<p>Maintenant <a href="/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">installer la WebExtension</a> et cliquez sur le bouton :</p>
+Maintenant [installer la WebExtension](/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) et cliquez sur le bouton :
 
-<p>{{EmbedYouTube("kwwTowgT‐Ys")}}</p>
+{{EmbedYouTube("kwwTowgT‐Ys")}}
 
-<h2 id="Ajout_d’une_fenêtre_contextuelle">Ajout d’une fenêtre contextuelle</h2>
+## Ajout d’une fenêtre contextuelle
 
-<p>Essayons d’ajouter une fenêtre contextuelle au bouton. Remplacez manifest.json par ceci :</p>
+Essayons d’ajouter une fenêtre contextuelle au bouton. Remplacez manifest.json par ceci :
 
-<pre class="brush: json">{
+```json
+{
 
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
@@ -109,42 +107,42 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
     }
   }
 
-}</pre>
+}
+```
 
-<p>Nous avons fait trois changements par rapport à l’original :</p>
+Nous avons fait trois changements par rapport à l’original :
 
-<ul>
- <li>Nous ne parlons plus de « background.js », car maintenant nous allons gérer la logique de l’extension dans le script de la fenêtre contextuelle (vous êtes autorisé à utiliser background.js ainsi qu’un popup, c’est juste que nous n’en avons pas besoin dans ce cas).</li>
- <li>
-  <p>Nous avons ajouté <code>"browser_style":true</code>, ce qui aidera le style de notre popup à ressembler davantage à une partie du navigateur.</p>
- </li>
- <li>Enfin, nous avons ajouté <code>"default_popup": "popup/choose_page.html"</code>, qui indique au navigateur que l’action du navigateur va maintenant afficher une fenêtre contextuelle lorsqu’elle est cliquée, dont le document se trouve dans  « popup / choose_page.html ».</li>
-</ul>
+- Nous ne parlons plus de « background.js », car maintenant nous allons gérer la logique de l’extension dans le script de la fenêtre contextuelle (vous êtes autorisé à utiliser background.js ainsi qu’un popup, c’est juste que nous n’en avons pas besoin dans ce cas).
+- Nous avons ajouté `"browser_style":true`, ce qui aidera le style de notre popup à ressembler davantage à une partie du navigateur.
+- Enfin, nous avons ajouté `"default_popup": "popup/choose_page.html"`, qui indique au navigateur que l’action du navigateur va maintenant afficher une fenêtre contextuelle lorsqu’elle est cliquée, dont le document se trouve dans  « popup / choose_page.html ».
 
-<p>Donc maintenant nous devons créer cette fenêtre contextuelle. Créez un répertoire appelé « popup » puis créez un fichier appelé « choose_page.html » à l’intérieur. Donnez‐lui les contenus suivants :</p>
+Donc maintenant nous devons créer cette fenêtre contextuelle. Créez un répertoire appelé « popup » puis créez un fichier appelé « choose_page.html » à l’intérieur. Donnez‐lui les contenus suivants :
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+```html
+<!DOCTYPE html>
 
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;link rel="stylesheet" href="choose_page.css"/&gt;
-  &lt;/head&gt;
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="choose_page.css"/>
+  </head>
 
-&lt;body&gt;
-  &lt;div class="page-choice"&gt;developer.mozilla.org&lt;/div&gt;
-  &lt;div class="page-choice"&gt;support.mozilla.org&lt;/div&gt;
-  &lt;div class="page-choice"&gt;addons.mozilla.org&lt;/div&gt;
-  &lt;script src="choose_page.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
+<body>
+  <div class="page-choice">developer.mozilla.org</div>
+  <div class="page-choice">support.mozilla.org</div>
+  <div class="page-choice">addons.mozilla.org</div>
+  <script src="choose_page.js"></script>
+</body>
 
-&lt;/html&gt;</pre>
+</html>
+```
 
-<p>Vous pouvez voir qu’il s’agit d’une page HTML normale contenant trois éléments {{htmlelement ("div")}}, chacun avec le nom d’un site Mozilla à l’intérieur. Il comprend également un fichier CSS et un fichier JavaScript, que nous ajouterons ensuite.</p>
+Vous pouvez voir qu’il s’agit d’une page HTML normale contenant trois éléments {{htmlelement ("div")}}, chacun avec le nom d’un site Mozilla à l’intérieur. Il comprend également un fichier CSS et un fichier JavaScript, que nous ajouterons ensuite.
 
-<p>Créez un fichier appelé « choose_page.css » dans le répertoire « popup » et donnez‐lui ce contenu :</p>
+Créez un fichier appelé « choose_page.css » dans le répertoire « popup » et donnez‐lui ce contenu :
 
-<pre class="brush: css">html, body {
+```css
+html, body {
   width: 300px;
 }
 
@@ -158,13 +156,15 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
 
 .page-choice:hover {
   background-color: #CFF2F2;
-}</pre>
+}
+```
 
-<p>C'est juste un peu d’habillage pour notre popup.</p>
+C'est juste un peu d’habillage pour notre popup.
 
-<p>Ensuite, créez un fichier « choose_page.js » dans le répertoire « popup » et donnez‐le à ces contenus :</p>
+Ensuite, créez un fichier « choose_page.js » dans le répertoire « popup » et donnez‐le à ces contenus :
 
-<pre class="brush: js">document.addEventListener("click", function(e) {
+```js
+document.addEventListener("click", function(e) {
   if (!e.target.classList.contains("page-choice")) {
     return;
   }
@@ -174,51 +174,47 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
     url: chosenPage
   });
 
-});</pre>
+});
+```
 
-<p>Dans notre JavaScript, nous écoutons les clics sur les choix contextuels. Nous vérifions d’abord si le clic a atterri sur l’un des choix de la page ; Sinon, nous ne faisons rien d’autre. Si le clic atterrit sur un choix de page, nous construisons une URL à partir de celui‐ci, et ouvrons un nouvel onglet contenant la page correspondante. Notez que nous pouvons utiliser les API WebExtension dans les scripts contextuels, tout comme nous le pouvons dans les scripts en arrière‐plan.</p>
+Dans notre JavaScript, nous écoutons les clics sur les choix contextuels. Nous vérifions d’abord si le clic a atterri sur l’un des choix de la page ; Sinon, nous ne faisons rien d’autre. Si le clic atterrit sur un choix de page, nous construisons une URL à partir de celui‐ci, et ouvrons un nouvel onglet contenant la page correspondante. Notez que nous pouvons utiliser les API WebExtension dans les scripts contextuels, tout comme nous le pouvons dans les scripts en arrière‐plan.
 
-<p>La structure finale de l’add‐on devrait ressembler à ceci :</p>
+La structure finale de l’add‐on devrait ressembler à ceci :
 
-<pre>button/
-    icons/
-        page-16.png
-        page-32.png
-    popup/
-        choose_page.css
-        choose_page.html
-        choose_page.js
-    manifest.json</pre>
+    button/
+        icons/
+            page-16.png
+            page-32.png
+        popup/
+            choose_page.css
+            choose_page.html
+            choose_page.js
+        manifest.json
 
-<p>Maintenant, rechargez l’extension, cliquez de nouveau sur le bouton et essayez de cliquer sur les choix dans la fenêtre contextuelle :</p>
+Maintenant, rechargez l’extension, cliquez de nouveau sur le bouton et essayez de cliquer sur les choix dans la fenêtre contextuelle :
 
-<p>{{EmbedYouTube("QPEh1L1xq0Y")}}</p>
+{{EmbedYouTube("QPEh1L1xq0Y")}}
 
-<h2 id="Actions_de_page">Actions de page</h2>
+## Actions de page
 
-<p>Les <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Page_actions">actions de page</a> sont comme les actions du navigateur, mais qui ne sont pertinentes que pour les pages particulières, plutôt que sur le navigateur dans son ensemble.</p>
+Les [actions de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Page_actions) sont comme les actions du navigateur, mais qui ne sont pertinentes que pour les pages particulières, plutôt que sur le navigateur dans son ensemble.
 
-<p>Alors que les actions du navigateur sont toujours affichées, les actions de la page ne sont affichées que dans les onglets où elles sont pertinentes. Les boutons d’action de la page sont affichés dans la barre d’URL, plutôt que dans la barre d’outils du navigateur.</p>
+Alors que les actions du navigateur sont toujours affichées, les actions de la page ne sont affichées que dans les onglets où elles sont pertinentes. Les boutons d’action de la page sont affichés dans la barre d’URL, plutôt que dans la barre d’outils du navigateur.
 
-<h2 id="Pour_en_savoir_plus">Pour en savoir plus</h2>
+## Pour en savoir plus
 
-<ul>
- <li><code>Clé de manifest <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code></li>
- <li><code>API <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code></li>
- <li>Exemples d’actions du navigateur :
-  <ul>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">beastify</a></li>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/bookmark-it">Bookmark it !</a></li>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/favourite-colour">favourite‐colour</a></li>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui">inpage‐toolbar‐ui</a></li>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button">open‐my‐page‐button</a></li>
-  </ul>
- </li>
- <li><code>Clé de manifest <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code></li>
- <li><code>API <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a></code></li>
- <li>Exemple d’action de page
-  <ul>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/chill-out">chill‐out</a></li>
-  </ul>
- </li>
-</ul>
+- `Clé de manifest browser_action`
+- `API browserAction`
+- Exemples d’actions du navigateur :
+
+  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
+  - [Bookmark it !](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
+  - [favourite‐colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
+  - [inpage‐toolbar‐ui](https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui)
+  - [open‐my‐page‐button](https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button)
+
+- `Clé de manifest page_action`
+- `API pageAction`
+- Exemple d’action de page
+
+  - [chill‐out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)

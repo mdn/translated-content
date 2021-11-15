@@ -6,28 +6,28 @@ tags:
 translation_of: Mozilla/Firefox/Releases/2/Security_changes
 original_slug: La_sécurité_dans_Firefox_2
 ---
-<div>{{FirefoxSidebar}}</div><p>Cet article aborde les changements concernant la sécurité dans Firefox 2.</p>
+{{FirefoxSidebar}}
 
-<h3 id="Chiffrements_faibles_d.C3.A9sactiv.C3.A9s_par_d.C3.A9faut">Chiffrements faibles désactivés par défaut</h3>
+Cet article aborde les changements concernant la sécurité dans Firefox 2.
 
-<p><a href="fr/Firefox_2">Firefox 2</a> désactive par défaut le support de SSLv2 et les suites de chiffrement faible (celles ayant des longueurs de clefs inférieures à 64 bits) en faveur de SSLv3. Ce choix améliore la sécurité.</p>
+### Chiffrements faibles désactivés par défaut
 
-<p>Les méthodes privilégiées de chiffrage sont <code>TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA</code> et <code>TLS_RSA_WITH_3DES_EDE_CBC_SHA</code>. Certains serveurs y font référence en tant que <code>SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA</code> et <code>SSL_RSA_WITH_3DES_EDE_CBC_SHA</code>.</p>
+[Firefox 2](fr/Firefox_2) désactive par défaut le support de SSLv2 et les suites de chiffrement faible (celles ayant des longueurs de clefs inférieures à 64 bits) en faveur de SSLv3. Ce choix améliore la sécurité.
 
-<p>Si le support de SSLv2 doit être activé, vous devrez définir avec la valeur <code>true</code> la préférence utilisateur <code>security.ssl2.*</code> dans about:config.</p>
+Les méthodes privilégiées de chiffrage sont `TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA` et `TLS_RSA_WITH_3DES_EDE_CBC_SHA`. Certains serveurs y font référence en tant que `SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA` et `SSL_RSA_WITH_3DES_EDE_CBC_SHA`.
 
-<h3 id="Nouvelles_fonctionnalit.C3.A9s">Nouvelles fonctionnalités</h3>
+Si le support de SSLv2 doit être activé, vous devrez définir avec la valeur `true` la préférence utilisateur `security.ssl2.*` dans about:config.
 
-<ul>
- <li>Firefox 2 supporte la <a href="http://fr.wikipedia.org/wiki/Cryptographie_sur_les_courbes_elliptiques">cryptographie sur courbes elliptiques</a> (ECC) dans TLS. Le support est pour l'instant limité aux courbes de 256, 384 et 521 (oui, 521 !) bits.</li>
- <li>Firefox 2 supporte l'extension d'identification de nom de serveur TLS pour faciliter les connexions sécurisées sur des serveurs hébergeant plusieurs serveurs virtuels sous la même adresse réseau, suivant la <a href="http://tools.ietf.org/html/rfc3546">RFC 3546</a>.</li>
- <li>Lorsque Firefox 2 effectue une requête <a href="http://fr.wikipedia.org/wiki/OCSP">OSCP</a> pour valider un certificat d'un serveur Web, il utilise désormais le proxy configuré pour le trafic HTTP normal.</li>
-</ul>
+### Nouvelles fonctionnalités
 
-<h3 id="D.C3.A9termination_du_chiffrement_disponible">Détermination du chiffrement disponible</h3>
+- Firefox 2 supporte la [cryptographie sur courbes elliptiques](http://fr.wikipedia.org/wiki/Cryptographie_sur_les_courbes_elliptiques) (ECC) dans TLS. Le support est pour l'instant limité aux courbes de 256, 384 et 521 (oui, 521 !) bits.
+- Firefox 2 supporte l'extension d'identification de nom de serveur TLS pour faciliter les connexions sécurisées sur des serveurs hébergeant plusieurs serveurs virtuels sous la même adresse réseau, suivant la [RFC 3546](http://tools.ietf.org/html/rfc3546).
+- Lorsque Firefox 2 effectue une requête [OSCP](http://fr.wikipedia.org/wiki/OCSP) pour valider un certificat d'un serveur Web, il utilise désormais le proxy configuré pour le trafic HTTP normal.
 
-<p>Comme toujours, vous pouvez vérifier le chiffrement supporté — celui qui a été activé ou désactivé — en cherchant « ssl » ou « tls » dans about:config.</p>
+### Détermination du chiffrement disponible
 
-<div class="noinclude"> </div>
+Comme toujours, vous pouvez vérifier le chiffrement supporté — celui qui a été activé ou désactivé — en cherchant « ssl » ou « tls » dans about:config.
 
-<p>{{ languages( { "en": "en/Security_in_Firefox_2", "pl": "pl/Bezpiecze\u0144stwo_w_Firefoksie_2", "zh-tw": "zh_tw/Firefox_2_\u7684\u5b89\u5168\u529f\u80fd" } ) }}</p>
+
+
+{{ languages( { "en": "en/Security_in_Firefox\_2", "pl": "pl/Bezpiecze\u0144stwo_w_Firefoksie\_2", "zh-tw": "zh_tw/Firefox\_2\_\u7684\u5b89\u5168\u529f\u80fd" } ) }}

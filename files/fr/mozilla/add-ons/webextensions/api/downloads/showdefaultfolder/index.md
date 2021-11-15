@@ -14,43 +14,45 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La fonction <code><strong>showDefaultFolder</strong></code><strong><code>()</code></strong> de l'API {{WebExtAPIRef("downloads")}} ouvre le dossier de téléchargement par défaut dans le gestionnaire de fichiers de la plateforme.</p>
+La fonction **`showDefaultFolder`\*\***`()`\*\* de l'API {{WebExtAPIRef("downloads")}} ouvre le dossier de téléchargement par défaut dans le gestionnaire de fichiers de la plateforme.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.downloads.showDefaultFolder();
-</pre>
+```js
+browser.downloads.showDefaultFolder();
+```
 
-<h3 id="Paramètres">Paramètres</h3>
-<p>Aucun</p>
+### Paramètres
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+Aucun
 
-<p>{{Compat("webextensions.api.downloads.showDefaultFolder")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.downloads.showDefaultFolder")}}
 
-<p>L'extrait suivant contient un bouton d'affichage qui, lorsqu'il est cliqué, appelle <code>showDefaultFolder()</code> pour ouvrir le dossier de téléchargement par défaut dans le gestionnaire de fichiers de la plateforme :</p>
+## Exemples
 
-<pre class="brush: js">var showBtn = document.querySelector('.show');
+L'extrait suivant contient un bouton d'affichage qui, lorsqu'il est cliqué, appelle `showDefaultFolder()` pour ouvrir le dossier de téléchargement par défaut dans le gestionnaire de fichiers de la plateforme :
+
+```js
+var showBtn = document.querySelector('.show');
 
 showBtn.onclick = function() {
   browser.downloads.showDefaultFolder();
-}</pre>
+}
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -77,5 +79,4 @@ showBtn.onclick = function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

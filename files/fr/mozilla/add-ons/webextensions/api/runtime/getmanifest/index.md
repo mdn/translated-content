@@ -13,47 +13,44 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Obtenez le fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) complet, sérialisé à un objet JSON.
 
-<div>Obtenez le fichier <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> complet, sérialisé à un objet JSON.</div>
+## Syntaxe
 
-<div></div>
+```js
+browser.runtime.getManifest()
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+### Paramètres
 
-<pre class="brush: js">browser.runtime.getManifest()
-</pre>
+None.
 
-<h3 id="Paramètres">Paramètres</h3>
+### Valeur retournée
 
-<p>None.</p>
+Un `object` JSON représentant le manifest.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+## Compatibilité du navigateur
 
-<p>Un <code>object</code> JSON représentant le manifest.</p>
+{{Compat("webextensions.api.runtime.getManifest")}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Exemples
 
-<p>{{Compat("webextensions.api.runtime.getManifest")}}</p>
+Récupère le manifest et consignez la propriété "name" :
 
-<h2 id="Exemples">Exemples</h2>
+```js
+var manifest = browser.runtime.getManifest();
+console.log(manifest.name);
+```
 
-<p>Récupère le manifest et consignez la propriété "name" :</p>
+{{WebExtExamples}}
 
-<pre class="brush: js">var manifest = browser.runtime.getManifest();
-console.log(manifest.name);</pre>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>{{WebExtExamples}}</p>
-
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -80,5 +77,4 @@ console.log(manifest.name);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

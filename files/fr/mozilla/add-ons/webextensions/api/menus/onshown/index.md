@@ -12,23 +12,24 @@ tags:
   - onShown
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onShown
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsque le navigateur a montré un menu.</p>
+Lancé lorsque le navigateur a montré un menu.
 
-<p>Une extension peut utiliser cet événement pour mettre à jour ses éléments de menu en utilisant des informations qui ne sont disponibles qu'une fois le menu affiché. Généralement, une extension trouvera la mise à jour dans son gestionnaire <code>onShown</code> puis appellera {{WebExtAPIRef("menus.refresh()")}} pour mettre à jour le menu lui-même.</p>
+Une extension peut utiliser cet événement pour mettre à jour ses éléments de menu en utilisant des informations qui ne sont disponibles qu'une fois le menu affiché. Généralement, une extension trouvera la mise à jour dans son gestionnaire `onShown` puis appellera {{WebExtAPIRef("menus.refresh()")}} pour mettre à jour le menu lui-même.
 
-<p>Le gestionnaire peut ajouter, supprimer ou mettre à jour des éléments de menu.</p>
+Le gestionnaire peut ajouter, supprimer ou mettre à jour des éléments de menu.
 
-<p>Par exemple, l'extension d'exemple <a href="https://github.com/mdn/webextensions-examples/tree/master/menu-labelled-open">menu-labelled-open</a>  ajoute un élément de menu qui s'affiche lorsque l'utilisateur clique sur un lien et qui, lorsqu'il est cliqué, ouvre simplement le lien. Il utilise <code>onShown</code> et <code>refresh()</code> pour annoter l'élément de menu avec le nom d'hôte du lien, afin que l'utilisateur puisse facilement voir où il ira avant de cliquer.</p>
+Par exemple, l'extension d'exemple [menu-labelled-open](https://github.com/mdn/webextensions-examples/tree/master/menu-labelled-open)  ajoute un élément de menu qui s'affiche lorsque l'utilisateur clique sur un lien et qui, lorsqu'il est cliqué, ouvre simplement le lien. Il utilise `onShown` et `refresh()` pour annoter l'élément de menu avec le nom d'hôte du lien, afin que l'utilisateur puisse facilement voir où il ira avant de cliquer.
 
-<p>Notez qu'une extension ne devrait pas prendre trop de temps avant d'appeler <code>refresh()</code>, sinon la mise à jour sera visible par l'utilisateur.</p>
+Notez qu'une extension ne devrait pas prendre trop de temps avant d'appeler `refresh()`, sinon la mise à jour sera visible par l'utilisateur.
 
-<p>Le gestionnaire reçoit des informations sur le menu et son contenu, ainsi que des informations sur la page (telles que le lien et / ou le texte de sélection). Pour accéder aux informations de la page, votre extension doit avoir la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">permission de l'hôte</a>.</p>
+Le gestionnaire reçoit des informations sur le menu et son contenu, ainsi que des informations sur la page (telles que le lien et / ou le texte de sélection). Pour accéder aux informations de la page, votre extension doit avoir la [permission de l'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions).
 
-<p>Si le gestionnaire <code>onShown</code> appelle des API asynchrones, il est possible que le menu ait été fermé à nouveau avant que le gestionnaire ne reprenne l'exécution. Pour cette raison, si un gestionnaire appelle des API asynchrones, il doit vérifier que le menu est toujours affiché avant la mise à jour du menu. Par exemple :</p>
+Si le gestionnaire `onShown` appelle des API asynchrones, il est possible que le menu ait été fermé à nouveau avant que le gestionnaire ne reprenne l'exécution. Pour cette raison, si un gestionnaire appelle des API asynchrones, il doit vérifier que le menu est toujours affiché avant la mise à jour du menu. Par exemple :
 
-<pre class="brush: js">var lastMenuInstanceId = 0;
+```js
+var lastMenuInstanceId = 0;
 var nextMenuInstanceId = 1;
 
 browser.menus.onShown.addListener(async function(info, tab) {
@@ -47,19 +48,23 @@ browser.menus.onShown.addListener(async function(info, tab) {
 
 browser.menus.onHidden.addListener(function() {
   lastMenuInstanceId = 0;
-});</pre>
+});
+```
 
-<p>Notez qu'il est possible d'appeler les fonctions API des menus de manière synchrone, et dans ce cas vous n'avez pas à effectuer cette vérification :</p>
+Notez qu'il est possible d'appeler les fonctions API des menus de manière synchrone, et dans ce cas vous n'avez pas à effectuer cette vérification :
 
-<pre class="brush: js">browser.menus.onShown.addListener(async function(info, tab) {
+```js
+browser.menus.onShown.addListener(async function(info, tab) {
   browser.menus.update(menuId, ...);
    // Note: Not waiting for returned promise.
   browser.menus.refresh();
-});</pre>
+});
+```
 
-<p>Toutefois, si vous appelez ces API de manière asynchrone, vous devez effectuer la vérification suivante :</p>
+Toutefois, si vous appelez ces API de manière asynchrone, vous devez effectuer la vérification suivante :
 
-<pre class="brush: js">browser.menus.onShown.addListener(async function(info, tab) {
+```js
+browser.menus.onShown.addListener(async function(info, tab) {
   var menuInstanceId = nextMenuInstanceId++;
   lastMenuInstanceId = menuInstanceId;
 
@@ -69,76 +74,69 @@ browser.menus.onHidden.addListener(function() {
     return;
   }
   browser.menus.refresh();
-});</pre>
+});
+```
 
-<p>Firefox rend cet événement disponible via l'espace de noms <code>contextMenus</code> ainsi que l'espace de nom des <code>menus</code>.</p>
+Firefox rend cet événement disponible via l'espace de noms `contextMenus` ainsi que l'espace de nom des `menus`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.menus.onShown.addListener(listener)
+```js
+browser.menus.onShown.addListener(listener)
 browser.menus.onShown.removeListener(listener)
 browser.menus.onShown.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Ajoute un écouteur à cet événement</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si le <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(listener)`
+  - : Ajoute un écouteur à cet événement
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si le `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>info</code></dt>
-  <dd>
-  <p><code>Object</code>. Ceci est juste comme l'objet {{WebExtAPIRef('menus.OnClickData')}}, sauf qu'il contient deux propriétés supplémentaires:</p>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
-  <ul>
-   <li><code>contexts</code>: un tableau de tous les {{WebExtAPIRef("menus.ContextType", "contexts")}} applicables à ce menu.</li>
-   <li><code>menuIds</code>: un tableau d'ID de tous les éléments de menu appartenant à cette extension qui sont affichés dans ce menu.</li>
-  </ul>
+    - `info`
 
-  <p>En comparaison avec <code>menus.OnClickData</code>, l'objet <code>info</code> omet également les propriétés <code>menuItemId</code> et <code>modifiers</code>, car bien sûr, celles-ci ne sont pas disponibles tant qu'un élément de menu n'a pas été sélectionné.</p>
+      - : `Object`. Ceci est juste comme l'objet {{WebExtAPIRef('menus.OnClickData')}}, sauf qu'il contient deux propriétés supplémentaires:
 
-  <p>Les propriétés <code>contexts</code>, <code>menuIds</code>, <code>frameId</code>, et <code>editable</code> modifiables sont toujours fournis. Toutes les autres propriétés dans <code>info</code> sont uniquement fournies si l'extension a la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">permission d'hôte</a> pour la page.</p>
-  </dd>
- </dl>
+        - `contexts`: un tableau de tous les {{WebExtAPIRef("menus.ContextType", "contexts")}} applicables à ce menu.
+        - `menuIds`: un tableau d'ID de tous les éléments de menu appartenant à cette extension qui sont affichés dans ce menu.
 
- <dl>
-  <dt><code>tab</code></dt>
-  <dd>{{WebExtAPIRef('tabs.Tab')}}. Les détails de l'onglet où le clic a eu lieu. Si le clic n'a pas eu lieu dans ou sur un onglet, ce paramètre sera manquant.</dd>
- </dl>
- </dd>
-</dl>
+        En comparaison avec `menus.OnClickData`, l'objet `info` omet également les propriétés `menuItemId` et `modifiers`, car bien sûr, celles-ci ne sont pas disponibles tant qu'un élément de menu n'a pas été sélectionné.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+        Les propriétés `contexts`, `menuIds`, `frameId`, et `editable` modifiables sont toujours fournis. Toutes les autres propriétés dans `info` sont uniquement fournies si l'extension a la [permission d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour la page.
 
-<p>{{Compat("webextensions.api.menus.onShown", 10)}}</p>
+    <!---->
 
-<h2 id="Exemples">Exemples</h2>
+    - `tab`
+      - : {{WebExtAPIRef('tabs.Tab')}}. Les détails de l'onglet où le clic a eu lieu. Si le clic n'a pas eu lieu dans ou sur un onglet, ce paramètre sera manquant.
 
-<p>Cet exemple permet d'afficher le menu contextuel sur un lien, puis met à jour l'élément de menu <code>openLabelledId</code> avec le nom d'hôte du lien :</p>
+## Compatibilité du navigateur
 
-<pre class="brush: js">function updateMenuItem(linkHostname) {
+{{Compat("webextensions.api.menus.onShown", 10)}}
+
+## Exemples
+
+Cet exemple permet d'afficher le menu contextuel sur un lien, puis met à jour l'élément de menu `openLabelledId` avec le nom d'hôte du lien :
+
+```js
+function updateMenuItem(linkHostname) {
   browser.menus.update(openLabelledId, {
     title: `Open (${linkHostname})`
   });
   browser.menus.refresh();
 }
 
-browser.menus.onShown.addListener(info =&gt; {
+browser.menus.onShown.addListener(info => {
   if (!info.linkUrl) {
     return;
   }
@@ -146,6 +144,6 @@ browser.menus.onShown.addListener(info =&gt; {
   linkElement.href = info.linkUrl;
   updateMenuItem(linkElement.hostname);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

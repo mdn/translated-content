@@ -11,24 +11,23 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<div>
-<p>Une chaîne de caractères qui contiendra un message d'erreur après le déclenchement de l'événement {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}}.</p>
-</div>
+Une chaîne de caractères qui contiendra un message d'erreur après le déclenchement de l'événement {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}}.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.webRequest.StreamFilter.error", 10)}}</p>
+{{Compat("webextensions.api.webRequest.StreamFilter.error", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple ajoute un écouteur {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} qui enregistre la valeur de <code>error</code>.</p>
+Cet exemple ajoute un écouteur {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} qui enregistre la valeur de `error`.
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData("12345");
 
-  filter.onerror = event =&gt; {
+  filter.onerror = event => {
     console.log(`Error: ${filter.error}`);
   }
 
@@ -37,8 +36,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["&lt;all_urls&gt;"], types: ["main_frame"]},
+  {urls: ["<all_urls>"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

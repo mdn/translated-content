@@ -11,50 +11,49 @@ tags:
   - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Désinstalle l'appel de l'extension.</p>
+Désinstalle l'appel de l'extension.
 
-<p>Cette API <em>ne requiert pas</em> la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission API</a> "management"</p>
+Cette API _ne requiert pas_ la [permission API](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management"
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var uninstallingSelf = browser.management.uninstallSelf(
+```js
+var uninstallingSelf = browser.management.uninstallSelf(
   options              // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>options{{optional_inline}}</code></dt>
- <dd><p><code>object</code>. L'objet qui peut comporter deux propriétés, toutes deux facultatives :</p>
- <dl>
-  <dt><code>showConfirmDialog{{optional_inline}}</code></dt>
-  <dd>Boolean. Si <code>showConfirmDialog</code> est <code>true</code>, le navigateur  affiche la boite  de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé. Par défaut à <code>false</code>.</dd>
-  <dt><code>dialogMessage{{optional_inline}}</code></dt>
-  <dd>String. Un message supplémentaire qui sera affiché dans la boite de dialogue de confirmation.</dd>
- </dl>
- </dd>
-</dl>
+- `options{{optional_inline}}`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`. L'objet qui peut comporter deux propriétés, toutes deux facultatives :
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désinstallation.</p>
+    - `showConfirmDialog{{optional_inline}}`
+      - : Boolean. Si `showConfirmDialog` est `true`, le navigateur  affiche la boite  de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé. Par défaut à `false`.
+    - `dialogMessage{{optional_inline}}`
+      - : String. Un message supplémentaire qui sera affiché dans la boite de dialogue de confirmation.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.management.uninstallSelf")}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désinstallation.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Désinsallez l'extension, en demandant à l'utilisateur de confirmer. Dans le rappel, vérifiez si l'utilisateur a annulé la désinstallation.</p>
+{{Compat("webextensions.api.management.uninstallSelf")}}
 
-<p>Notez que n'avons pas passé un gestionnaire d'éxécution, car si la desinstallation  réussit, l'extension n'est plus disponible pour le gérer.</p>
+## Exemples
 
-<pre class="brush: js">function onCanceled(error) {
+Désinsallez l'extension, en demandant à l'utilisateur de confirmer. Dans le rappel, vérifiez si l'utilisateur a annulé la désinstallation.
+
+Notez que n'avons pas passé un gestionnaire d'éxécution, car si la desinstallation  réussit, l'extension n'est plus disponible pour le gérer.
+
+```js
+function onCanceled(error) {
   console.log(`Canceled: ${error}`);
 }
 
@@ -62,11 +61,13 @@ var uninstalling = browser.management.uninstallSelf({
   showConfirmDialog: true
 });
 
-uninstalling.then(null, onCanceled);</pre>
+uninstalling.then(null, onCanceled);
+```
 
-<p>Le même, mais aussi l'ajout d'un message personnalisé à la boite de dialogue :</p>
+Le même, mais aussi l'ajout d'un message personnalisé à la boite de dialogue :
 
-<pre class="brush: js">function onCanceled(error) {
+```js
+function onCanceled(error) {
   console.log(`Canceled: ${error}`);
 }
 
@@ -75,18 +76,18 @@ var uninstalling = browser.management.uninstallSelf({
   dialogMessage: "Testing self-uninstall"
 });
 
-uninstalling.then(null, onCanceled);</pre>
-<p>{{WebExtExamples}}</p>
+uninstalling.then(null, onCanceled);
+```
 
-<div class="note"><p><strong>Note :</strong></p>
+{{WebExtExamples}}
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/management"><code>chrome.management</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> dans le code de Chromium code.</p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
- <pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -113,5 +114,4 @@ uninstalling.then(null, onCanceled);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

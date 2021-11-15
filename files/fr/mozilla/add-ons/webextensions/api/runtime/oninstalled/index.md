@@ -13,85 +13,78 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsque l'extension est installée pour la première fois, lorsque l'extension est mise à jour vers une nouvelle version et lorsque le navigateur est mis à jour vers une nouvelle version.</p>
+Lancé lorsque l'extension est installée pour la première fois, lorsque l'extension est mise à jour vers une nouvelle version et lorsque le navigateur est mis à jour vers une nouvelle version.
 
-<p>Notez que <code>runtime.onInstalled</code> n'est pas la même chose  {{WebExtAPIRef("management.onInstalled")}}. L'événement  <code>runtime.onInstalled</code> est déclenché uniquement pour votre extension. L'événement <code>browser.management.onInstalled</code> est déclenché pour toutes les extensions.</p>
+Notez que `runtime.onInstalled` n'est pas la même chose  {{WebExtAPIRef("management.onInstalled")}}. L'événement  `runtime.onInstalled` est déclenché uniquement pour votre extension. L'événement `browser.management.onInstalled` est déclenché pour toutes les extensions.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.runtime.onInstalled.addListener(listener)
+```js
+browser.runtime.onInstalled.addListener(listener)
 browser.runtime.onInstalled.removeListener(listener)
 browser.runtime.onInstalled.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajouterun écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écoutercet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifie si un <code>écouteur</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, <code>false</code> sinon.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajouterun écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écoutercet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifie si un `écouteur` est enregistré pour cet événement. Renvoie `true` s'il écoute, `false` sinon.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>function</code></dt>
- <dd>
- <p>La fonction de rappel appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `function`
 
- <dl>
-  <dt><code>details</code></dt>
-  <dd><p>Un objet avec les propriétés suivantes :</p>
-  <dl>
-   <dt><code>id</code>{{optional_inline}}</dt>
-   <dd><code>string</code>. L'ID de l'extension  de module partagé importé mise à jour. Ceci n'est présent que si la valeur de <code>raison</code> est  <code>shared_module_update</code>.</dd>
-   <dt><code>previousVersion</code>{{optional_inline}}</dt>
-   <dd><code>string</code>. La version précédente de l'extension vient d'être mise à jour. Ceci n'est pas présent si la valeur de <code>raison</code> est <code>mise à jour</code>.</dd>
-   <dt><code>reason</code></dt>
-   <dd>Une valeur {{WebExtAPIRef('runtime.OnInstalledReason')}}, indiquant la raison pour laquelle cet événement est distribué.</dd>
-   <dt><code>temporary</code></dt>
-   <dd><code>boolean</code>. Vrai si le module complémentaire a été installé temporairement. Par exemple, en utilisant la page "about:debugging" dans Firefox ou en utilisant  <a href="/fr/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext run</a>. Sinon faux.</dd>
-  </dl>
-  </dd>
- </dl>
- </dd>
-</dl>
+  - : La fonction de rappel appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `details`
 
-<p>{{Compat("webextensions.api.runtime.onInstalled", 10)}}</p>
+      - : Un objet avec les propriétés suivantes :
 
-<h2 id="Exemples">Exemples</h2>
+        - `id`{{optional_inline}}
+          - : `string`. L'ID de l'extension  de module partagé importé mise à jour. Ceci n'est présent que si la valeur de `raison` est  `shared_module_update`.
+        - `previousVersion`{{optional_inline}}
+          - : `string`. La version précédente de l'extension vient d'être mise à jour. Ceci n'est pas présent si la valeur de `raison` est `mise à jour`.
+        - `reason`
+          - : Une valeur {{WebExtAPIRef('runtime.OnInstalledReason')}}, indiquant la raison pour laquelle cet événement est distribué.
+        - `temporary`
+          - : `boolean`. Vrai si le module complémentaire a été installé temporairement. Par exemple, en utilisant la page "about:debugging" dans Firefox ou en utilisant  [web-ext run](/fr/Add-ons/WebExtensions/Getting_started_with_web-ext). Sinon faux.
 
-<p>Lorsque l'extensin est installé, connectez-vous à la raison de l'installon et ouvrez <a href="https://www.reddit.com/r/CatGifs/">https://www.reddit.com/r/CatGifs/</a>:</p>
+## Compatibilité du navigateur
 
-<pre class="brush: js">function handleInstalled(details) {
+{{Compat("webextensions.api.runtime.onInstalled", 10)}}
+
+## Exemples
+
+Lorsque l'extensin est installé, connectez-vous à la raison de l'installon et ouvrez <https://www.reddit.com/r/CatGifs/>:
+
+```js
+function handleInstalled(details) {
   console.log(details.reason);
   browser.tabs.create({
     url: "http://chilloutandwatchsomecatgifs.com/"
   });
 }
 
-browser.runtime.onInstalled.addListener(handleInstalled);</pre>
+browser.runtime.onInstalled.addListener(handleInstalled);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,5 +111,4 @@ browser.runtime.onInstalled.addListener(handleInstalled);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

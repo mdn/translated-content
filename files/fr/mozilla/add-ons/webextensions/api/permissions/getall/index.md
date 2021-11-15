@@ -11,44 +11,46 @@ tags:
   - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/getAll
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Récupère un objet {{WebExtAPIRef("permissions.Permissions")}} contenant toutes les permissions actuellement acccordées à l'extension.</p>
+Récupère un objet {{WebExtAPIRef("permissions.Permissions")}} contenant toutes les permissions actuellement acccordées à l'extension.
 
-<p>Il s'agit d'une fonction asynchrone qui retourne une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingAll = browser.permissions.getAll()
-</pre>
+```js
+var gettingAll = browser.permissions.getAll()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>None.</p>
+None.
 
-<h3 id="Valeur_renvoyée">Valeur renvoyée</h3>
+### Valeur renvoyée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet {{WebExtAPIRef("permissions.Permissions")}} contenant toutes les permissions actuellement accordées à l'extensions. Cela inclut toutes les permissions que l'extension à répertoriées dans la clé de  <code><a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> , et toutes les permissions répertoriées dans  <code><a href="/fr/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></code> que l'extension a été accordée en appelant  {{WebExtAPIRef("permissions.request()")}}.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef("permissions.Permissions")}} contenant toutes les permissions actuellement accordées à l'extensions. Cela inclut toutes les permissions que l'extension à répertoriées dans la clé de  [`permissions`](/fr/Add-ons/WebExtensions/manifest.json/permissions) , et toutes les permissions répertoriées dans  [`optional_permissions`](/fr/Add-ons/WebExtensions/manifest.json/optional_permissions) que l'extension a été accordée en appelant  {{WebExtAPIRef("permissions.request()")}}.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.permissions.getAll")}}</p>
+{{Compat("webextensions.api.permissions.getAll")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">// Extension permissions are:
+```js
+// Extension permissions are:
 // "webRequest", "tabs", "*://*.mozilla.org/*"
 
-browser.permissions.getAll().then((result) =&gt; {
+browser.permissions.getAll().then((result) => {
   console.log(result.permissions); // [ "webRequest", "tabs" ]
   console.log(result.origins)      // [ "*://*.mozilla.org/*" ]
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/permissions"><code>chrome.permissions</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/extensions/permissions).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

@@ -13,38 +13,34 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Cet objet contient un booléen indiquant si l'onglet est muet et la raison du dernier changement d'état.</p>
+Cet objet contient un booléen indiquant si l'onglet est muet et la raison du dernier changement d'état.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>extensionId</code>{{optional_inline}}</dt>
- <dd><code>string</code>. L'ID de l'extension qui a modifié en dernier l'état muet. Non défini si une extension n'a pas été la raison pour laquelle l'état muet a été modifié pour la dernière fois.</dd>
- <dt><code>muted</code></dt>
- <dd><code>boolean</code>. Si l'onglet est actuellement coupé. Équivalent à l'affichage de l'indicateur audio coupé.</dd>
- <dt><code>reason</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('tabs.MutedInfoReason')}}. La raison pour laquelle l'onglet a été désactivé ou désactivé. Non défini si l'état muet de l'onglet n'a jamais été modifié.</dd>
-</dl>
+- `extensionId`{{optional_inline}}
+  - : `string`. L'ID de l'extension qui a modifié en dernier l'état muet. Non défini si une extension n'a pas été la raison pour laquelle l'état muet a été modifié pour la dernière fois.
+- `muted`
+  - : `boolean`. Si l'onglet est actuellement coupé. Équivalent à l'affichage de l'indicateur audio coupé.
+- `reason`{{optional_inline}}
+  - : {{WebExtAPIRef('tabs.MutedInfoReason')}}. La raison pour laquelle l'onglet a été désactivé ou désactivé. Non défini si l'état muet de l'onglet n'a jamais été modifié.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.MutedInfo")}}</p>
+{{Compat("webextensions.api.tabs.MutedInfo")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -71,5 +67,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

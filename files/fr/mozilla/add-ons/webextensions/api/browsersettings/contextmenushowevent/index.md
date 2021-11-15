@@ -12,27 +12,29 @@ tags:
   - contextMenuShowEvent
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui détermine si le menu contextuel du navigateur est affiché sur l'événement mouseup ou sur l'événement mousedown.</p>
+Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui détermine si le menu contextuel du navigateur est affiché sur l'événement mouseup ou sur l'événement mousedown.
 
-<p>Sa valeur sous-jacente est une chaîne qui peut être "mouseup" ou "mousedown".</p>
+Sa valeur sous-jacente est une chaîne qui peut être "mouseup" ou "mousedown".
 
-<p>La valeur par défaut est "mouseup" sur Windows, et "mousedown" sur macOS et Linux. 'affectation à Windows n'a aucun effet - le paramètre est uniquement conçu pour permettre l'ouverture du menu contextuel sur mouseup au lieu de mousedown, pas l'inverse.</p>
+La valeur par défaut est "mouseup" sur Windows, et "mousedown" sur macOS et Linux. 'affectation à Windows n'a aucun effet - le paramètre est uniquement conçu pour permettre l'ouverture du menu contextuel sur mouseup au lieu de mousedown, pas l'inverse.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browserSettings.contextMenuShowEvent")}}</p>
+{{Compat("webextensions.api.browserSettings.contextMenuShowEvent")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Réglez le paramètre sur "mouseup":</p>
+Réglez le paramètre sur "mouseup":
 
-<pre class="brush: js">function logResult(result) {
+```js
+function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
 browser.browserSettings.contextMenuShowEvent.set({value: "mouseup"}).
-  then(logResult);</pre>
+  then(logResult);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

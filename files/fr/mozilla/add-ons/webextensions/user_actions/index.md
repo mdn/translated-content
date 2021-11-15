@@ -7,41 +7,41 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/User_actions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Certaines API WebExtension exécutent des fonctions qui sont généralement exécutées à la suite d'une action utilisateur. Par exemple:</p>
+Certaines API WebExtension exécutent des fonctions qui sont généralement exécutées à la suite d'une action utilisateur. Par exemple:
 
-<ul>
- <li>une action du navigateur avec un popup affichera le popup lorsque l'utilisateur clique dessus, mais il y a aussi une API {{WebExtAPIRef("browserAction.openPopup")}} permettant à une extension d'ouvrir le popup en programmation.</li>
- <li>si une extension ajoute une barre latérale, elle est généralement ouverte par l'utilisateur via une partie de l'interface utilisateur intégrée du navigateur, comme le menu Affichage/Barre latérale. Mais il y a aussi une API  {{WebExtAPIRef("sidebarAction.open")}} permettant à une extension d'ouvrir leur barre latérale en programmation.</li>
-</ul>
+- une action du navigateur avec un popup affichera le popup lorsque l'utilisateur clique dessus, mais il y a aussi une API {{WebExtAPIRef("browserAction.openPopup")}} permettant à une extension d'ouvrir le popup en programmation.
+- si une extension ajoute une barre latérale, elle est généralement ouverte par l'utilisateur via une partie de l'interface utilisateur intégrée du navigateur, comme le menu Affichage/Barre latérale. Mais il y a aussi une API  {{WebExtAPIRef("sidebarAction.open")}} permettant à une extension d'ouvrir leur barre latérale en programmation.
 
-<p>Pour suivre le principe de "pas de  surprises", des APIs comme celle-ci ne peuvent être appelées que de l'intérieur du gestionnaire pour une action de l'utilisateur. Les actions de l'utilisateur comprennent ce qui suit :</p>
+Pour suivre le principe de "pas de  surprises", des APIs comme celle-ci ne peuvent être appelées que de l'intérieur du gestionnaire pour une action de l'utilisateur. Les actions de l'utilisateur comprennent ce qui suit :
 
-<ul>
- <li>Cliquez sur l'action du navigateur ou de la page de l'extension.</li>
- <li>Sélection d'un élément de menu contextuel défini par l'extension.</li>
- <li>Activation d'un raccourci clavier défini par l'extension (traité uniquement comme une action utilisateur à partir de Firefox 63).</li>
- <li>Cliquer sur un bouton dans une page fournie avec l'extension.</li>
-</ul>
+- Cliquez sur l'action du navigateur ou de la page de l'extension.
+- Sélection d'un élément de menu contextuel défini par l'extension.
+- Activation d'un raccourci clavier défini par l'extension (traité uniquement comme une action utilisateur à partir de Firefox 63).
+- Cliquer sur un bouton dans une page fournie avec l'extension.
 
-<p>Par exemple:</p>
+Par exemple:
 
-<pre class="brush: js">function handleClick() {
+```js
+function handleClick() {
   browser.sidebarAction.open();
 }
 
-browser.browserAction.onClicked.addListener(handleClick);</pre>
+browser.browserAction.onClicked.addListener(handleClick);
+```
 
-<p>Notez que les actions de l'utilisateur dans les pages Web normales ne sont pas traitées comme des actions de l'utilisateur à cette fin. Par exemple, si un utilisateur clique sur un bouton dans une page Web normale et qu'un script de contenu a ajouté un gestionnaire de clic pour ce bouton et que ce gestionnaire envoie un message à la page d'arrière-plan de l'extension, alors le gestionnaire de message de page d'arrière-plan n'est pas considéré comme traitant une action utilisateur.</p>
+Notez que les actions de l'utilisateur dans les pages Web normales ne sont pas traitées comme des actions de l'utilisateur à cette fin. Par exemple, si un utilisateur clique sur un bouton dans une page Web normale et qu'un script de contenu a ajouté un gestionnaire de clic pour ce bouton et que ce gestionnaire envoie un message à la page d'arrière-plan de l'extension, alors le gestionnaire de message de page d'arrière-plan n'est pas considéré comme traitant une action utilisateur.
 
-<p>De plus, si un gestionnaire d'entrée utilisateur attend une <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">promise</a>, alors son statut de gestionnaire d'entrée utilisateur est perdu. Par exemple :</p>
+De plus, si un gestionnaire d'entrée utilisateur attend une [promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise), alors son statut de gestionnaire d'entrée utilisateur est perdu. Par exemple :
 
-<pre class="brush: js">async function handleClick() {
+```js
+async function handleClick() {
   let result = await someAsyncFunction();
 
   // this will fail, because the handler lost its "user action handler" status
   browser.sidebarAction.open();
 }
 
-browser.browserAction.onClicked.addListener(handleClick);</pre>
+browser.browserAction.onClicked.addListener(handleClick);
+```

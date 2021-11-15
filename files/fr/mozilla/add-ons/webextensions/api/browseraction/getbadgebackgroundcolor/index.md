@@ -13,49 +13,50 @@ tags:
   - getBadgeBackgroundColor
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeBackgroundColor
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient la couleur d'arrière plan du badge de l'action du navigateur.</p>
+Obtient la couleur d'arrière plan du badge de l'action du navigateur.
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.browserAction.getBadgeBackgroundColor (
+```js
+browser.browserAction.getBadgeBackgroundColor (
   details // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p><code>details</code></p>
+`details`
 
-<p><code>object</code></p>
- <dl>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Specifie l'onglet pour obtenir la couleur d'arrière-plan du badge.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Spécifie la fenêtre à partir de laquelle obtenir la couleur de fond du badge.</dd>
- </dl>
+`object`
 
-<ul>
- <li>Si <code>windowId</code> et <code>tabId</code> sont tous les deux fournis, la fonction échoue..</li>
- <li>Si <code>windowId</code> et <code>tabId</code> sont tous les deux omis, la couleur de fond du badge global est retournée.</li>
-</ul>
+- `tabId`{{optional_inline}}
+  - : `integer`. Specifie l'onglet pour obtenir la couleur d'arrière-plan du badge.
+- `windowId`{{optional_inline}}
+  - : `integer`. Spécifie la fenêtre à partir de laquelle obtenir la couleur de fond du badge.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+<!---->
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec la couleur récupérée en tant que  {{WebExtAPIRef('browserAction.ColorArray')}}.</p>
+- Si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue..
+- Si `windowId` et `tabId` sont tous les deux omis, la couleur de fond du badge global est retournée.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.browserAction.getBadgeBackgroundColor",2)}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec la couleur récupérée en tant que  {{WebExtAPIRef('browserAction.ColorArray')}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Enregistrez la couleur de fond du badge :</p>
+{{Compat("webextensions.api.browserAction.getBadgeBackgroundColor",2)}}
 
-<pre class="brush: js">function onGot(color) {
+## Exemples
+
+Enregistrez la couleur de fond du badge :
+
+```js
+function onGot(color) {
   console.log(color);
 }
 
@@ -63,19 +64,18 @@ function onFailure(error) {
   console.log(error);
 }
 
-browser.browserAction.getBadgeBackgroundColor({}).then(onGot, onFailure);</pre>
+browser.browserAction.getBadgeBackgroundColor({}).then(onGot, onFailure);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -102,5 +102,4 @@ browser.browserAction.getBadgeBackgroundColor({}).then(onGot, onFailure);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

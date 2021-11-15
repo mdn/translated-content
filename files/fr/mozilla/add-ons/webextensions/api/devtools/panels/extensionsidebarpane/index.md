@@ -13,53 +13,41 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>L'objet <code>ExtensionSidebarPane</code> représente un volet qu'une extension a ajouté à la barre latérale dans l'inspecteur HTML/CSS du navigateur.</p>
+L'objet `ExtensionSidebarPane` représente un volet qu'une extension a ajouté à la barre latérale dans l'inspecteur HTML/CSS du navigateur.
 
-<p><img alt="" src="inspector-sidebar.png"></p>
+![](inspector-sidebar.png)
 
-<p>Pour créer un <code>ExtensionSidebarPane</code>, appelez la fonction <code><a href="/fr/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane">browser.devtools.panels.elements.createSidebarane()</a></code>.</p>
+Pour créer un `ExtensionSidebarPane`, appelez la fonction [`browser.devtools.panels.elements.createSidebarane()`](/fr/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane).
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt><code><a href="/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setExpression">devtools.panels.ExtensionSidebarPane.setExpression()</a></code></dt>
- <dd>
- <p>Évaluer une expression JavaScript dans la page Web inspectée par l'inspecteur. Le résultat est affiché dans le volet de la barre latérale.</p>
- </dd>
- <dt><code><a href="/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setObject">devtools.panels.ExtensionSidebarPane.setObject()</a></code></dt>
- <dd>
- <p>Définit un objet JSON qui sera affiché dans le volet de la barre latérale.</p>
- </dd>
- <dt><code><a href="/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setPage">devtools.panels.ExtensionSidebarPane.setPage()</a></code></dt>
- <dd>
- <p>Charge la page pointée par l'URL fournie.</p>
- </dd>
-</dl>
+- [`devtools.panels.ExtensionSidebarPane.setExpression()`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setExpression)
+  - : Évaluer une expression JavaScript dans la page Web inspectée par l'inspecteur. Le résultat est affiché dans le volet de la barre latérale.
+- [`devtools.panels.ExtensionSidebarPane.setObject()`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setObject)
+  - : Définit un objet JSON qui sera affiché dans le volet de la barre latérale.
+- [`devtools.panels.ExtensionSidebarPane.setPage()`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setPage)
+  - : Charge la page pointée par l'URL fournie.
 
-<h2 id="Evénements">Evénements</h2>
+## Evénements
 
-<dl>
- <dt><code><a href="/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onShown">devtools.panels.ExtensionSidebarPane.onShown</a></code></dt>
- <dd>Lancé lorsque le volet latéral est affiché.</dd>
- <dt><code><a href="/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onHidden">devtools.panels.ExtensionSidebarPane.onHidden</a></code></dt>
- <dd>Lancé lorsque le volet de la barre latérale est masqué.</dd>
-</dl>
+- [`devtools.panels.ExtensionSidebarPane.onShown`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onShown)
+  - : Lancé lorsque le volet latéral est affiché.
+- [`devtools.panels.ExtensionSidebarPane.onHidden`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onHidden)
+  - : Lancé lorsque le volet de la barre latérale est masqué.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane", 10)}}</p>
+{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane", 10)}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a>.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -86,5 +74,4 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSideba
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

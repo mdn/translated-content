@@ -13,115 +13,104 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 ---
-<p>C'est déclenché lorsqu'un onglet est mis à jour.</p>
+C'est déclenché lorsqu'un onglet est mis à jour.
 
-<p>Lorsque l'utilisateur navigue vers une nouvelle URL dans un onglet, cela génère généralement plusieurs événements <code>onUpdated</code> au fur et à mesure que diverses propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}} sont mises à jour. Ceci inclut l' <code>url</code>, mais aussi potentiellement le <code>title</code> et les propriétés <code>favIconUrl</code>. La propriété du  <code>status</code> passe par le <code>"loading"</code> et <code>"complete"</code>.</p>
+Lorsque l'utilisateur navigue vers une nouvelle URL dans un onglet, cela génère généralement plusieurs événements `onUpdated` au fur et à mesure que diverses propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}} sont mises à jour. Ceci inclut l' `url`, mais aussi potentiellement le `title` et les propriétés `favIconUrl`. La propriété du  `status` passe par le `"loading"` et `"complete"`.
 
-<p>Cet événement sera également déclenché pour les modifications des propriétés d'un onglet qui n'impliquent pas de navigation, comme le pinning et le débrochage (qui met à jour la propriété <code>pinned</code>) et le muting ou le unmuting (qui met à jour les propriétés  <code>audible</code> et <code>mutedInfo</code>).</p>
+Cet événement sera également déclenché pour les modifications des propriétés d'un onglet qui n'impliquent pas de navigation, comme le pinning et le débrochage (qui met à jour la propriété `pinned`) et le muting ou le unmuting (qui met à jour les propriétés  `audible` et `mutedInfo`).
 
-<p>Vous pouvez filtrer cet événement, en le rendant uniquement valable pour les onglets dont les urls correspondent à des <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">patterns</a> spécifiques, ou pour les modifications de propriétés spécifiques, ou pour les modifications d'un onglet ou d'une fenêtre spécifique, ou toute combinaison de ces restrictions.</p>
+Vous pouvez filtrer cet événement, en le rendant uniquement valable pour les onglets dont les urls correspondent à des [patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) spécifiques, ou pour les modifications de propriétés spécifiques, ou pour les modifications d'un onglet ou d'une fenêtre spécifique, ou toute combinaison de ces restrictions.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.tabs.onUpdated.addListener(listener[, extraParameters])
+```js
+browser.tabs.onUpdated.addListener(listener[, extraParameters])
 browser.tabs.onUpdated.removeListener(listener)
 browser.tabs.onUpdated.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback[, extraParameters])</code></dt>
- <dd>Ajoute un écouteur à cet événement</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback[, extraParameters])`
+  - : Ajoute un écouteur à cet événement
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. ID de l'onglet qui a été mis à jour.</dd>
-  <dt><code>changeInfo</code></dt>
-  <dd><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated$edit#changeInfo"><code>object</code></a>. ontient les propriétés des propriétés de l'onglet qui ont été modifiées. Voir <code><a href="/fr/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo">changeInfo</a></code> ci-dessous.</dd>
-  <dt><code>tab</code></dt>
-  <dd>{{WebExtAPIRef('tabs.Tab')}}. Le nouvel état de l'onglet.</dd>
- </dl>
- </dd>
- <dt><code>extraParameters</code>{{optional_inline}}</dt>
- <dd>
- <p><code>object</code>. Un ensemble de filtres qui restreint les événements qui seront envoyés à cet auditeur. C'est un objet qui peut avoir une ou plusieurs des propriétés suivantes. Les événements ne seront envoyés que s'ils satisfont à tous les filtres donnés.</p>
+  - : Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :
 
- <dl>
-  <dt><code>urls</code></dt>
-  <dd><code>Array</code>. Un tableau <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. Ne déclenchez l'événement que pour les onglets dont la propriété de l'<code>url</code> courante correspond à l'un des motifs.</dd>
-  <dt><code>properties</code></dt>
-  <dd>
-  <p><code>Array</code>. un tableau de chaîne de caractères,  qui sont les noms des propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}}. Ne déclenchez cet événement seulement pour les changement apportées à l'une des propriétés nommées dans ce tableau. Les propriétés suivantes peuvent être listées ici :</p>
+    - `tabId`
+      - : `integer`. ID de l'onglet qui a été mis à jour.
+    - `changeInfo`
+      - : [`object`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated$edit#changeInfo). ontient les propriétés des propriétés de l'onglet qui ont été modifiées. Voir [`changeInfo`](/fr/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo) ci-dessous.
+    - `tab`
+      - : {{WebExtAPIRef('tabs.Tab')}}. Le nouvel état de l'onglet.
 
-  <ul>
-   <li>"attention"</li>
-   <li>"audible"</li>
-   <li>"discarded"</li>
-   <li>"favIconUrl"</li>
-   <li>"hidden"</li>
-   <li>"isArticle"</li>
-   <li>"mutedInfo"</li>
-   <li>"pinned"</li>
-   <li>"sharingState"</li>
-   <li>"status"</li>
-   <li>"title"</li>
-  </ul>
-  </dd>
-  <dt><code>tabId</code></dt>
-  <dd><code>Integer</code>. Ne déclenchez cet événement que pour l'onglet identifié par cet ID.</dd>
-  <dt><code>windowId</code></dt>
-  <dd><code>Integer</code>. N'activez cet événement que pour les onglets qui se trouvent actuellement dans la fenêtre identifiée par cet ID.</dd>
- </dl>
- </dd>
-</dl>
+- `extraParameters`{{optional_inline}}
 
-<h2 id="Objets_supplémentaires">Objets supplémentaires</h2>
+  - : `object`. Un ensemble de filtres qui restreint les événements qui seront envoyés à cet auditeur. C'est un objet qui peut avoir une ou plusieurs des propriétés suivantes. Les événements ne seront envoyés que s'ils satisfont à tous les filtres donnés.
 
-<h3 id="changeInfo">changeInfo</h3>
+    - `urls`
+      - : `Array`. Un tableau [match patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Ne déclenchez l'événement que pour les onglets dont la propriété de l'`url` courante correspond à l'un des motifs.
+    - `properties`
 
-<p>Répertorie les modifications apportées à l'état de l'onglet mis à jour. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.</p>
+      - : `Array`. un tableau de chaîne de caractères,  qui sont les noms des propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}}. Ne déclenchez cet événement seulement pour les changement apportées à l'une des propriétés nommées dans ce tableau. Les propriétés suivantes peuvent être listées ici :
 
-<dl>
- <dt><code>attention</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Indique si l'onglet attire l'attention. Par exemple, lorsque l'onglet affiche un dialogue modal, <code>attention</code> sera <code>true</code>.</dd>
- <dt><code>audible</code>{{optional_inline}}</dt>
- <dd><code>boolean</code>. Nouvel état audible de l'onglet.</dd>
- <dt><code>discarded</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Si l'onglet est ignoré. Un onglet supprimé est celui dont le contenu a été déchargé de la mémoire, mais est toujours visible dans la bande d'onglets. Son contenu est rechargé la prochaine fois qu'il est activé.</dd>
- <dt><code>favIconUrl</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Nouvelle URL de favicon de l'onglet.</dd>
- <dt><code>mutedInfo</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('tabs.MutedInfo')}}. Le nouvel état muet de l'onglet et la raison du changement.</dd>
- <dt><code>pinned</code>{{optional_inline}}</dt>
- <dd><code>boolean</code>. Nouvel état épinglé de l'onglet.</dd>
- <dt><code>status</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Le statut de l'onglet. Peut être soit <em>chargé</em> ou <em>complet</em>.</dd>
- <dt><code>title</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Le nouveau titre de l'onglet.</dd>
- <dt><code>url</code>{{optional_inline}}</dt>
- <dd><code>string</code>. L'URL de l'onglet s'il a changé.</dd>
-</dl>
+        - "attention"
+        - "audible"
+        - "discarded"
+        - "favIconUrl"
+        - "hidden"
+        - "isArticle"
+        - "mutedInfo"
+        - "pinned"
+        - "sharingState"
+        - "status"
+        - "title"
 
-<h2 id="Exemples">Exemples</h2>
+    - `tabId`
+      - : `Integer`. Ne déclenchez cet événement que pour l'onglet identifié par cet ID.
+    - `windowId`
+      - : `Integer`. N'activez cet événement que pour les onglets qui se trouvent actuellement dans la fenêtre identifiée par cet ID.
 
-<p>Écoutez et connectez toutes les informations de changement et nouvel état:</p>
+## Objets supplémentaires
 
-<pre class="brush: js">function handleUpdated(tabId, changeInfo, tabInfo) {
+### changeInfo
+
+Répertorie les modifications apportées à l'état de l'onglet mis à jour. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.
+
+- `attention` {{optional_inline}}
+  - : `boolean`. Indique si l'onglet attire l'attention. Par exemple, lorsque l'onglet affiche un dialogue modal, `attention` sera `true`.
+- `audible`{{optional_inline}}
+  - : `boolean`. Nouvel état audible de l'onglet.
+- `discarded` {{optional_inline}}
+  - : `boolean`. Si l'onglet est ignoré. Un onglet supprimé est celui dont le contenu a été déchargé de la mémoire, mais est toujours visible dans la bande d'onglets. Son contenu est rechargé la prochaine fois qu'il est activé.
+- `favIconUrl`{{optional_inline}}
+  - : `string`. Nouvelle URL de favicon de l'onglet.
+- `mutedInfo`{{optional_inline}}
+  - : {{WebExtAPIRef('tabs.MutedInfo')}}. Le nouvel état muet de l'onglet et la raison du changement.
+- `pinned`{{optional_inline}}
+  - : `boolean`. Nouvel état épinglé de l'onglet.
+- `status`{{optional_inline}}
+  - : `string`. Le statut de l'onglet. Peut être soit _chargé_ ou _complet_.
+- `title`{{optional_inline}}
+  - : `string`. Le nouveau titre de l'onglet.
+- `url`{{optional_inline}}
+  - : `string`. L'URL de l'onglet s'il a changé.
+
+## Exemples
+
+Écoutez et connectez toutes les informations de changement et nouvel état:
+
+```js
+function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log("Updated tab: " + tabId);
   console.log("Changed attributes: ");
   console.log(changeInfo);
@@ -129,24 +118,28 @@ browser.tabs.onUpdated.hasListener(listener)
   console.log(tabInfo);
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated);</pre>
+browser.tabs.onUpdated.addListener(handleUpdated);
+```
 
-<p>Consigner les modifications dans les URL :</p>
+Consigner les modifications dans les URL :
 
-<pre class="brush: js">function handleUpdated(tabId, changeInfo, tabInfo) {
+```js
+function handleUpdated(tabId, changeInfo, tabInfo) {
   if (changeInfo.url) {
     console.log("Tab: " + tabId +
                 " URL changed to " + changeInfo.url);
   }
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated);</pre>
+browser.tabs.onUpdated.addListener(handleUpdated);
+```
 
-<h3 id="Filtering_examples">Filtering examples</h3>
+### Filtering examples
 
-<p>Le journal ne change que pour les onglets dont la propriété <code>url</code> est <a href="/fr/Add-ons/WebExtensions/Match_patterns">matched</a> par "https://developer.mozilla.org/*" ou "https://twitter.com/mozdevnet":</p>
+Le journal ne change que pour les onglets dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par "https\://developer.mozilla.org/\*" ou "https\://twitter.com/mozdevnet":
 
-<pre class="brush: js">const pattern1 = "https://developer.mozilla.org/*";
+```js
+const pattern1 = "https://developer.mozilla.org/*";
 const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {
@@ -159,11 +152,13 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log("New tab Info: ", tabInfo);
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated, filter);</pre>
+browser.tabs.onUpdated.addListener(handleUpdated, filter);
+```
 
-<p>Le journal ne change que la propriété <code>épinglée</code> des onglets (c'est-à-dire les actions d'épinglage et de déblocage) :</p>
+Le journal ne change que la propriété `épinglée` des onglets (c'est-à-dire les actions d'épinglage et de déblocage) :
 
-<pre class="brush: js">const filter = {
+```js
+const filter = {
   properties: ["pinned"]
 }
 
@@ -173,16 +168,16 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log("New tab Info: ", tabInfo);
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated, filter);</pre>
+browser.tabs.onUpdated.addListener(handleUpdated, filter);
+```
 
-<p>Combiner les deux filtres précédents : changements de journal seulement :</p>
+Combiner les deux filtres précédents : changements de journal seulement :
 
-<ul>
- <li>A la propriété <code>épinglée</code> des onglets</li>
- <li>Dont la propriété <code>url</code> est <a href="/fr/Add-ons/WebExtensions/Match_patterns">matched</a> par "https://developer.mozilla.org/*" ou "https://twitter.com/mozdevnet":</li>
-</ul>
+- A la propriété `épinglée` des onglets
+- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par "https\://developer.mozilla.org/\*" ou "https\://twitter.com/mozdevnet":
 
-<pre class="brush: js">const pattern1 = "https://developer.mozilla.org/*";
+```js
+const pattern1 = "https://developer.mozilla.org/*";
 const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {
@@ -198,17 +193,17 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 
 browser.tabs.onUpdated.addListener(
   handleUpdated,
-  filter);</pre>
+  filter);
+```
 
-<p>Changements dans le journal seulement :</p>
+Changements dans le journal seulement :
 
-<ul>
- <li>A la propriété <code>épinglée</code> des onglets</li>
- <li>Dont la propriété <code>url</code> est <a href="/fr/Add-ons/WebExtensions/Match_patterns">matched</a> par "https://developer.mozilla.org/*" ou "https://twitter.com/mozdevnet"</li>
- <li>et qui font partie de la fenêtre actuelle du navigateur au moment où l'événement de mise à jour est déclenché :</li>
-</ul>
+- A la propriété `épinglée` des onglets
+- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par "https\://developer.mozilla.org/\*" ou "https\://twitter.com/mozdevnet"
+- et qui font partie de la fenêtre actuelle du navigateur au moment où l'événement de mise à jour est déclenché :
 
-<pre class="brush: js">const pattern1 = "https://developer.mozilla.org/*";
+```js
+const pattern1 = "https://developer.mozilla.org/*";
 const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {
@@ -225,21 +220,20 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 
 browser.tabs.onUpdated.addListener(
   handleUpdated,
-  filter);</pre>
+  filter);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.onUpdated", 10)}}</p>
+{{Compat("webextensions.api.tabs.onUpdated", 10)}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -266,7 +260,6 @@ browser.tabs.onUpdated.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>
 
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}

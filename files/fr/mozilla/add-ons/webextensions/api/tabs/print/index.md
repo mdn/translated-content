@@ -13,34 +13,36 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/print
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Appelez cette fonction pour imprimer le contenu de l'onglet actif. Si cette fonction est appelée, l'utilisateur recevra la boîte de dialogue d'impression de la plate-forme sous-jacente et aura la possibilité de modifier les paramètres d'impression, puis d'imprimer l'onglet actuellement actif.</p>
+Appelez cette fonction pour imprimer le contenu de l'onglet actif. Si cette fonction est appelée, l'utilisateur recevra la boîte de dialogue d'impression de la plate-forme sous-jacente et aura la possibilité de modifier les paramètres d'impression, puis d'imprimer l'onglet actuellement actif.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.tabs.print()
-</pre>
+```js
+browser.tabs.print()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>None.</p>
+None.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>None.</p>
+None.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple, un script d'arrière-plan écoute un clic sur une <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">action navigateur</a>, puis tente d'imprimer l'onglet actuellement actif :</p>
+Dans cet exemple, un script d'arrière-plan écoute un clic sur une [action navigateur](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2), puis tente d'imprimer l'onglet actuellement actif :
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener(() =&gt; {
+```js
+browser.browserAction.onClicked.addListener(() => {
   browser.tabs.print();
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.print")}}</p>
+{{Compat("webextensions.api.tabs.print")}}

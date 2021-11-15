@@ -13,56 +13,52 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Cause de la navigation: par exemple, l'utilisateur a cliqué sur un lien, ou a tapé une adresse, ou a cliqué sur un signet.</p>
+Cause de la navigation: par exemple, l'utilisateur a cliqué sur un lien, ou a tapé une adresse, ou a cliqué sur un signet.
 
-<p>Notez que beaucoup de valeurs ne sont actuellement pas supportées dans Firefox : voir la <a href="/fr/Add-ons/WebExtensions/API/WebNavigation/TransitionType#Browser_compatibility">table de compatibilité du navigateur</a> pour plus de détails.</p>
+Notez que beaucoup de valeurs ne sont actuellement pas supportées dans Firefox : voir la [table de compatibilité du navigateur](/fr/Add-ons/WebExtensions/API/WebNavigation/TransitionType#Browser_compatibility) pour plus de détails.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :</p>
+Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
-<dl>
- <dt>"link"</dt>
- <dd>L'utilisateur a cliqué sur un lien dans une autre page.</dd>
- <dt>"typed"</dt>
- <dd>L'utilisateur a tapé l'URL dans la barre d'adresse. Ceci est également utilisé si l'utilisateur a commencé à taper dans la barre d'adresse, puis sélectionné une URL parmi les suggestions qu'il a proposées. Voir aussi " generated".</dd>
- <dt>"auto_bookmark"</dt>
- <dd>L'utilisateur a cliqué sur un signet ou un élément dans l'historique du navigateur.</dd>
- <dt>"auto_subframe"</dt>
- <dd>Les iframes imbriqués qui sont automatiquement chargés par leur parent.</dd>
- <dt>"manual_subframe"</dt>
- <dd>Les iframes imbriqués chargés en tant qu'action utilisateur explicite. Le chargement d'une telle iframe générera une entrée dans la liste de navigation avant/arrière.</dd>
- <dt>"generated"</dt>
- <dd>L'utilisateur a commencé à taper dans la barre d'adresse, puis a cliqué sur une entrée suggérée qui ne contenait pas d'URL.</dd>
- <dt>"start_page"</dt>
- <dd>La page a été passée à la ligne de commande ou est la page de démarrage.</dd>
- <dt>"form_submit"</dt>
- <dd>L'utilisateur a soumis un formulaire. Notez que dans certaines situations, par exemple lorsqu'un formulaire utilise un script pour soumettre son contenu, l'envoi d'un formulaire n'entraîne pas ce type de transition.</dd>
- <dt>"reload"</dt>
- <dd>L'utilisateur a rechargé la page en utilisant le bouton Recharger ou en appuyant sur Entrée dans la barre d'adresse. Ceci est également utilisé pour la restauration de session et la réouverture des onglets fermés.</dd>
- <dt>"keyword"</dt>
- <dd>L'URL a été générée à l'aide d'une <a href="https://support.mozilla.org/fr/kb/comment-rechercher-site-barre-adresse">rechercher par mot</a> configurée par l'utilisateur.</dd>
- <dt>"keyword_generated"</dt>
- <dd>Correspond à une visite générée pour un mot clé.</dd>
-</dl>
+- "link"
+  - : L'utilisateur a cliqué sur un lien dans une autre page.
+- "typed"
+  - : L'utilisateur a tapé l'URL dans la barre d'adresse. Ceci est également utilisé si l'utilisateur a commencé à taper dans la barre d'adresse, puis sélectionné une URL parmi les suggestions qu'il a proposées. Voir aussi " generated".
+- "auto_bookmark"
+  - : L'utilisateur a cliqué sur un signet ou un élément dans l'historique du navigateur.
+- "auto_subframe"
+  - : Les iframes imbriqués qui sont automatiquement chargés par leur parent.
+- "manual_subframe"
+  - : Les iframes imbriqués chargés en tant qu'action utilisateur explicite. Le chargement d'une telle iframe générera une entrée dans la liste de navigation avant/arrière.
+- "generated"
+  - : L'utilisateur a commencé à taper dans la barre d'adresse, puis a cliqué sur une entrée suggérée qui ne contenait pas d'URL.
+- "start_page"
+  - : La page a été passée à la ligne de commande ou est la page de démarrage.
+- "form_submit"
+  - : L'utilisateur a soumis un formulaire. Notez que dans certaines situations, par exemple lorsqu'un formulaire utilise un script pour soumettre son contenu, l'envoi d'un formulaire n'entraîne pas ce type de transition.
+- "reload"
+  - : L'utilisateur a rechargé la page en utilisant le bouton Recharger ou en appuyant sur Entrée dans la barre d'adresse. Ceci est également utilisé pour la restauration de session et la réouverture des onglets fermés.
+- "keyword"
+  - : L'URL a été générée à l'aide d'une [rechercher par mot](https://support.mozilla.org/fr/kb/comment-rechercher-site-barre-adresse) configurée par l'utilisateur.
+- "keyword_generated"
+  - : Correspond à une visite générée pour un mot clé.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.webNavigation.TransitionType")}}</p>
+{{Compat("webextensions.api.webNavigation.TransitionType")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webNavigation"><code>chrome.webNavigation</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -89,5 +85,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

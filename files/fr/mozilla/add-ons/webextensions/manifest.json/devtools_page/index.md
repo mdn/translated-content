@@ -11,38 +11,39 @@ tags:
   - devtools_page
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Type</th>
-   <td>chaîne</td>
-  </tr>
-  <tr>
-   <th scope="row">Obligatoire</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Exemple</th>
-   <td>
-    <pre class="brush: json">
-"devtools_page": "devtools/my-page.html"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Type</th>
+      <td>chaîne</td>
+    </tr>
+    <tr>
+      <th scope="row">Obligatoire</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Exemple</th>
+      <td>
+        <pre class="brush: json">"devtools_page": "devtools/my-page.html"</pre>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Utilisez cette clé pour activer votre extension et intégrer les outils de développement du navigateur.</p>
+Utilisez cette clé pour activer votre extension et intégrer les outils de développement du navigateur.
 
-<p>Cette clé est définie comme une URL d'un fichier HTML. Le fichier HTML doit être regroupé avec l'extension, et l'URL est relative à la racine de l'extension.</p>
+Cette clé est définie comme une URL d'un fichier HTML. Le fichier HTML doit être regroupé avec l'extension, et l'URL est relative à la racine de l'extension.
 
-<p>Voir <a href="/fr/Add-ons/WebExtensions/Extending_the_developer_tools">Extension des outils développeurs</a> pour plus d'informations.</p>
+Voir [Extension des outils développeurs](/fr/Add-ons/WebExtensions/Extending_the_developer_tools) pour plus d'informations.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: json">"devtools_page": "devtools/my-page.html"</pre>
+```json
+"devtools_page": "devtools/my-page.html"
+```
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.manifest.devtools_page")}}</p>
+{{Compat("webextensions.manifest.devtools_page")}}

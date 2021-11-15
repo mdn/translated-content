@@ -12,48 +12,47 @@ tags:
   - commands
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/update
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Changez la description ou le raccourci clavier pour la commande donnée.</p>
+Changez la description ou le raccourci clavier pour la commande donnée.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.commands.update(
+```js
+browser.commands.update(
   details // object
 );
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. Un objet avec les propriétés suivantes:</p>
- <dl>
-  <dt><code>name</code></dt>
-  <dd><code>string</code>. e nom de la commande à mettre à jour. Cela doit correspondre au nom d'une commande existante, comme indiqué par exemple dans la propriété <code>name</code> de l'objet {{WebExtAPIRef("commands.Command")}}.</dd>
-  <dt><code>description</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Une nouvelle description à définir pour la commande.</dd>
-  <dt><code>shortcut</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Un nouveau raccourci à définir pour la commande. Cela doit correspondre au format donné dans la documentation pour les <a href="/fr/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> de la clé manifest.json</a>. S'il ne correspond pas à ce format, la fonction va générer une erreur.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`. Un objet avec les propriétés suivantes:
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans arguments lorsque le raccourci a été réinitialisé. La promesse sera rejetée avec une erreur si la commande n'a pas pu être trouvée.</p>
+    - `name`
+      - : `string`. e nom de la commande à mettre à jour. Cela doit correspondre au nom d'une commande existante, comme indiqué par exemple dans la propriété `name` de l'objet {{WebExtAPIRef("commands.Command")}}.
+    - `description`{{optional_inline}}
+      - : `string`. Une nouvelle description à définir pour la commande.
+    - `shortcut`{{optional_inline}}
+      - : `string`. Un nouveau raccourci à définir pour la commande. Cela doit correspondre au format donné dans la documentation pour les [`commands` de la clé manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands). S'il ne correspond pas à ce format, la fonction va générer une erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.commands.update")}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque le raccourci a été réinitialisé. La promesse sera rejetée avec une erreur si la commande n'a pas pu être trouvée.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Met à jour la commande "my-command" avec la valeur de raccourci donnée, lorsque l'utilisateur clique sur "update" :</p>
+{{Compat("webextensions.api.commands.update")}}
 
-<pre class="brush: js">const commandName = 'my-command';
+## Exemples
+
+Met à jour la commande "my-command" avec la valeur de raccourci donnée, lorsque l'utilisateur clique sur "update" :
+
+```js
+const commandName = 'my-command';
 
 function updateShortcut() {
   browser.commands.update({
@@ -62,6 +61,7 @@ function updateShortcut() {
   });
 }
 
-document.querySelector('#update').addEventListener('click', updateShortcut);</pre>
+document.querySelector('#update').addEventListener('click', updateShortcut);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

@@ -15,98 +15,99 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
 original_slug: Mozilla/Add-ons/WebExtensions/partage_d_objets_avec_des_scripts_de_page
 ---
-<div>{{AddonSidebar}}
-<div class="note">
-<p><strong>Note :</strong> Les techniques décrites dans cette section sont uniquement disponibles dans Firefox, et seulement à partir de Firefox 49</p>
-</div>
+{{AddonSidebar}}
 
-<div class="warning">
-<p><strong>Attention :</strong> En tant que développeur d'extensions, vous devez considérer que les scripts s'exécutant sur des pages Web arbitraires sont des codes hostiles dont le but est de voler les informations personnelles de l'utilisateur, d'endommager leur ordinateur ou de les attaquer d'une autre manière.</p>
+> **Note :** Les techniques décrites dans cette section sont uniquement disponibles dans Firefox, et seulement à partir de Firefox 49
 
-<p>L'isolation entre les scripts de contenu et les scripts chargés par les pages Web a pour but de rendre plus difficile la tâche des pages Web hostiles.</p>
+> **Attention :** En tant que développeur d'extensions, vous devez considérer que les scripts s'exécutant sur des pages Web arbitraires sont des codes hostiles dont le but est de voler les informations personnelles de l'utilisateur, d'endommager leur ordinateur ou de les attaquer d'une autre manière.
+>
+> L'isolation entre les scripts de contenu et les scripts chargés par les pages Web a pour but de rendre plus difficile la tâche des pages Web hostiles.
+>
+> Puisque les techniques décrites dans cette section décompose cet isolement, elles sont intrinsèquement dangereuses et devraient être utilisées avec beaucoup de soin.
 
-<p>Puisque les techniques décrites dans cette section décompose cet isolement, elles sont intrinsèquement dangereuses et devraient être utilisées avec beaucoup de soin.</p>
-</div>
-</div>
+Comme les [notes du guide de scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts#DOM_access), les scripts de contenu ne voient pas les modifications apportées au DOM par des scripts chargés par des pages Web.Cela signifie que, par exemple, si une page Web charge une bibliothèque comme jQuery, les scripts de contenu ne pourront pas l'utiliser et devront charger leur propre copie. À l'inverse, les scripts chargés par les pages Web ne peuvent pas voir les modifications apportées par les scripts de contenu.
 
-<p>Comme les <a href="/fr/Add-ons/WebExtensions/Content_scripts#DOM_access">notes du guide de scripts de contenu</a>, les scripts de contenu ne voient pas les modifications apportées au DOM par des scripts chargés par des pages Web.Cela signifie que, par exemple, si une page Web charge une bibliothèque comme jQuery, les scripts de contenu ne pourront pas l'utiliser et devront charger leur propre copie. À l'inverse, les scripts chargés par les pages Web ne peuvent pas voir les modifications apportées par les scripts de contenu.</p>
+Cependant, Firefox fournit des API qui permettent aux scripts de contenu de :
 
-<p>Cependant, Firefox fournit des API qui permettent aux scripts de contenu de :</p>
+- accéder aux objets JavaScript créés par les scripts de page
+- exposer leurs propres objets JavaScript aux scripts de pages.
 
-<ul>
- <li>accéder aux objets JavaScript créés par les scripts de page</li>
- <li>exposer leurs propres objets JavaScript aux scripts de pages.</li>
-</ul>
+## Vision Xray dans Firefox
 
-<h2 id="Vision_Xray_dans_Firefox">Vision Xray dans Firefox</h2>
+Dans Firefox, une partie de l'isolation entre les scripts de contenu et les scripts de pages est implémentée en utilisant une fonction appelée "Vision Xray". Lorsqu'un script dans une portée plus privilégiée accède à un objet défini dans une portée moins privilégiée, il ne voit que la "version native" de l'objet. Toutes les propriétés [expando](/fr/docs/Glossary/Expando) sont invisibles et si des propriétés de l'objet ont été redéfinies, il voit l'implémentation d'origine et non la version redéfinie.
 
-<p>Dans Firefox, une partie de l'isolation entre les scripts de contenu et les scripts de pages est implémentée en utilisant une fonction appelée "Vision Xray". Lorsqu'un script dans une portée plus privilégiée accède à un objet défini dans une portée moins privilégiée, il ne voit que la "version native" de l'objet. Toutes les propriétés <a href="/fr/docs/Glossary/Expando">expando</a> sont invisibles et si des propriétés de l'objet ont été redéfinies, il voit l'implémentation d'origine et non la version redéfinie.</p>
+Le but de cette fonctionnalité est de rendre le script moins privilégié plus difficile à confondre le script plus privilégié en redéfinissant les propriétés natives des objets.
 
-<p>Le but de cette fonctionnalité est de rendre le script moins privilégié plus difficile à confondre le script plus privilégié en redéfinissant les propriétés natives des objets.</p>
+Par exemple, lorsqu'un script de contenu accède à la [fenêtre](/fr/docs/Web/API/Window) de la page, il ne voit aucune propriété ajoutée au script de la page, et si le script de la page a redéfini les propriétés de la fenêtre, le script de contenu verra la version originale .
 
-<p>Par exemple, lorsqu'un script de contenu accède à la <a href="/fr/docs/Web/API/Window">fenêtre</a> de la page, il ne voit aucune propriété ajoutée au script de la page, et si le script de la page a redéfini les propriétés de la fenêtre, le script de contenu verra la version originale .</p>
+Pour l'histoire complète sur la vision Xray, voir les articles sur [Vision Xray](en-US/docs/Mozilla/Tech/Xray_vision) et la [securité des Scripts](en-US/docs/Mozilla/Gecko/Script_security).
 
-<p>Pour l'histoire complète sur la vision Xray, voir les articles sur <a href="en-US/docs/Mozilla/Tech/Xray_vision">Vision Xray</a> et la <a href="en-US/docs/Mozilla/Gecko/Script_security">securité des Scripts</a>.</p>
+## Accès aux objets de script de page à partir de scripts de contenu
 
-<h2 id="Accès_aux_objets_de_script_de_page_à_partir_de_scripts_de_contenu">Accès aux objets de script de page à partir de scripts de contenu</h2>
+Dans Firefox, les objets DOM dans les scripts de contenu obtiennent une propriété supplémentaire `wrappedJSObject`. C'est une version "déballée" de l'objet, qui inclut toutes les modifications apportées à cet objet par les scripts de page.
 
-<p>Dans Firefox, les objets DOM dans les scripts de contenu obtiennent une propriété supplémentaire <code>wrappedJSObject</code>. C'est une version "déballée" de l'objet, qui inclut toutes les modifications apportées à cet objet par les scripts de page.</p>
+Prenons un exemple simple. Supposons qu'une page Web charge un script:
 
-<p>Prenons un exemple simple. Supposons qu'une page Web charge un script:</p>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
+```
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;script type="text/javascript" src="main.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+Le script ajoute une propriété expando à la `fenêtre` globale :
 
-<p>Le script ajoute une propriété expando à la <code>fenêtre</code> globale :</p>
+```js
+// main.js
 
-<pre class="brush: js">// main.js
+var foo = "I'm defined in a page script!";
+```
 
-var foo = "I'm defined in a page script!";</pre>
+La vision Xray signifie que si un script de contenu tente d'accéder à `foo`, il sera indéfini:
 
-<p>La vision Xray signifie que si un script de contenu tente d'accéder à <code>foo</code>, il sera indéfini:</p>
+```js
+// content-script.js
 
-<pre class="brush: js">// content-script.js
+console.log(window.foo); // undefined
+```
 
-console.log(window.foo); // undefined</pre>
+Dans Firefox, les scripts de contenu peuvent utiliser `window.wrappedJSObject` pour voir la propriété expando :
 
-<p>Dans Firefox, les scripts de contenu peuvent utiliser <code>window.wrappedJSObject</code> pour voir la propriété expando :</p>
+```js
+// content-script.js
 
-<pre class="brush: js">// content-script.js
+console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"
+```
 
-console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"</pre>
+Notez qu'une fois que vous faites cela, vous ne pouvez plus compter sur les propriétés ou les fonctions de cet objet qui sont, ou font, ce que vous attendez. N'importe lequel d'entre eux, même les setters et les getters, aurait pu être redéfini par un code non fiable.
 
-<p>Notez qu'une fois que vous faites cela, vous ne pouvez plus compter sur les propriétés ou les fonctions de cet objet qui sont, ou font, ce que vous attendez. N'importe lequel d'entre eux, même les setters et les getters, aurait pu être redéfini par un code non fiable.</p>
+Notez également que le déballage est transitif: lorsque vous utilisez `wrappedJSObject`, toutes les propriétés de l'objet déplié sont elles-mêmes dépliées (et donc peu fiables). C'est donc une bonne pratique, une fois que vous avez l'objet dont vous avez besoin, de le réemballer, ce que vous pouvez faire comme ceci:
 
-<p>Notez également que le déballage est transitif: lorsque vous utilisez <code>wrappedJSObject</code>, toutes les propriétés de l'objet déplié sont elles-mêmes dépliées (et donc peu fiables). C'est donc une bonne pratique, une fois que vous avez l'objet dont vous avez besoin, de le réemballer, ce que vous pouvez faire comme ceci:</p>
+    XPCNativeWrapper(window.wrappedJSObject.foo);
 
-<pre>XPCNativeWrapper(window.wrappedJSObject.foo);</pre>
+voir le document [vision Xray](/fr/Tech/Xray_vision) pour plus de détails à ce sujet.
 
-<p>voir le document <a href="/fr/Tech/Xray_vision">vision Xray</a> pour plus de détails à ce sujet.</p>
+## Partage d'objets de script de contenu avec des scripts de page
 
-<h2 id="Partage_dobjets_de_script_de_contenu_avec_des_scripts_de_page">Partage d'objets de script de contenu avec des scripts de page</h2>
+Firefox fournit également des API permettant aux scripts de contenu de rendre les objets disponibles pour les scripts de page. Il y a plusieurs approches ici:
 
-<p>Firefox fournit également des API permettant aux scripts de contenu de rendre les objets disponibles pour les scripts de page. Il y a plusieurs approches ici:</p>
+- [`exportFunction()`](#exportFunction): exporte une fonction vers des scripts de page
+- [`cloneInto()`](#cloneInto): exporte un objet vers des scripts de page.
+- constructeurs du contexte de la page
 
-<ul>
- <li><code><a href="#exportFunction">exportFunction()</a></code>: exporte une fonction vers des scripts de page</li>
- <li><code><a href="#cloneInto">cloneInto()</a></code>: exporte un objet vers des scripts de page.</li>
- <li>constructeurs du contexte de la page</li>
-</ul>
+### exportFunction
 
-<h3 id="exportFunction">exportFunction</h3>
+Étant donné une fonction définie dans le script de contenu, `exportFunction()` l'exporte vers la portée du script de page, afin que le script de page puisse l'appeler.
 
-<p>Étant donné une fonction définie dans le script de contenu, <code>exportFunction()</code> l'exporte vers la portée du script de page, afin que le script de page puisse l'appeler.</p>
+Par exemple, considérons une extension qui a un script d'arrière-plan comme ceci :
 
-<p>Par exemple, considérons une extension qui a un script d'arrière-plan comme ceci :</p>
-
-<pre class="brush: js">/*
+```js
+/*
 Execute content script in the active tab.
 */
 function loadContentScript() {
@@ -125,24 +126,24 @@ browser.browserAction.onClicked.addListener(loadContentScript);
 Show a notification when we get messages from
 the content script.
 */
-browser.runtime.onMessage.addListener((message) =&gt; {
+browser.runtime.onMessage.addListener((message) => {
   browser.notifications.create({
     type: "basic",
     title: "Message from the page",
     message: message.content
   });
-});</pre>
+});
+```
 
-<p>Cela fait deux choses :</p>
+Cela fait deux choses :
 
-<ul>
- <li>exécuter un script de contenu dans l'onglet en cours, lorsque l'utilisateur clique sur une action du navigateur</li>
- <li>écouter les messages du script de contenu et afficher une <a href="/fr/Add-ons/WebExtensions/API/notifications">notification</a>  lorsque le message arrive.</li>
-</ul>
+- exécuter un script de contenu dans l'onglet en cours, lorsque l'utilisateur clique sur une action du navigateur
+- écouter les messages du script de contenu et afficher une [notification](/fr/Add-ons/WebExtensions/API/notifications)  lorsque le message arrive.
 
-<p>Le script de contenu ressemble à ceci :</p>
+Le script de contenu ressemble à ceci :
 
-<pre class="brush: js">/*
+```js
+/*
 Define a function in the content script's scope, then export it
 into the page script's scope.
 */
@@ -150,21 +151,25 @@ function notify(message) {
   browser.runtime.sendMessage({content: "Function call: " + message});
 }
 
-exportFunction(notify, window, {defineAs:'notify'});</pre>
+exportFunction(notify, window, {defineAs:'notify'});
+```
 
-<p>Cela définit une fonction <code>notify()</code>, qui envoie simplement son argument au script d'arrière-plan. Il exporte ensuite la fonction vers la portée du script de page. Maintenant, le script de la page peut appeler cette fonction:</p>
+Cela définit une fonction `notify()`, qui envoie simplement son argument au script d'arrière-plan. Il exporte ensuite la fonction vers la portée du script de page. Maintenant, le script de la page peut appeler cette fonction:
 
-<pre class="brush: js">window.notify("Message from the page script!");</pre>
+```js
+window.notify("Message from the page script!");
+```
 
-<p>Pour l'histoire complète, voir <code><a href="/fr/Tech/XPCOM/Language_Bindings/Components.utils.exportFunction">Components.utils.exportFunction</a></code>.</p>
+Pour l'histoire complète, voir [`Components.utils.exportFunction`](/fr/Tech/XPCOM/Language_Bindings/Components.utils.exportFunction).
 
-<h3 id="cloneInto">cloneInto</h3>
+### cloneInto
 
-<p>Étant donné un objet défini dans le script de contenu, cela crée un clone de l'objet dans la portée du script de page, rendant ainsi le clone accessible aux scripts de page. Par défaut, cela utilise <a href="/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">l'agorithme clone structuré</a> pour cloner l'objet, ce qui signifie que les fonctions de l'objet ne sont pas incluses dans le clone. Pour inclure des fonctions, passez l'option <code>cloneFunctions</code>.</p>
+Étant donné un objet défini dans le script de contenu, cela crée un clone de l'objet dans la portée du script de page, rendant ainsi le clone accessible aux scripts de page. Par défaut, cela utilise [l'agorithme clone structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) pour cloner l'objet, ce qui signifie que les fonctions de l'objet ne sont pas incluses dans le clone. Pour inclure des fonctions, passez l'option `cloneFunctions`.
 
-<p>Par exemple, voici un script de contenu qui définit un objet contenant une fonction, puis le clone dans la portée du script de page :</p>
+Par exemple, voici un script de contenu qui définit un objet contenant une fonction, puis le clone dans la portée du script de page :
 
-<pre class="brush: js">/*
+```js
+/*
 Create an object that contains functions in
 the content script's scope, then clone it
 into the page script's scope.
@@ -184,21 +189,25 @@ var messenger = {
 window.wrappedJSObject.messenger = cloneInto(
   messenger,
   window,
-  {cloneFunctions: true});</pre>
+  {cloneFunctions: true});
+```
 
-<p>Maintenant les scripts de page vont voir une nouvelle propriété sur la fenêtre, <code>messenger</code>, qui a une fonction <code>notify()</code>:</p>
+Maintenant les scripts de page vont voir une nouvelle propriété sur la fenêtre, `messenger`, qui a une fonction `notify()`:
 
-<pre class="brush: js">window.messenger.notify("Message from the page script!");</pre>
+```js
+window.messenger.notify("Message from the page script!");
+```
 
-<p>Pour l'histoire complète, voir <code><a href="/fr/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto">Components.utils.cloneInto</a></code>.</p>
+Pour l'histoire complète, voir [`Components.utils.cloneInto`](/fr/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto).
 
-<h3 id="Constructeurs_du_contexte_de_la_page">Constructeurs du contexte de la page</h3>
+### Constructeurs du contexte de la page
 
-<p>Sur l'objet fenêtre de xrayed, des constructeurs immaculés pour certains objets javascript intégrés tels que <code>Object</code>, <code>Function</code> ou <code>Proxy</code> et différentes classe DOM sont disponibles. <code>XMLHttpRequest</code> ne se comporte pas de cette manière, voir la section <a href="/fr/Add-ons/WebExtensions/Content_scripts#XHR_and_Fetch">XHR and fetch</a> pour plus de détails. Ils créeront des instances appartenant à la hiérarchie d'objets de la page global, puis retourneront un wrapper xray.</p>
+Sur l'objet fenêtre de xrayed, des constructeurs immaculés pour certains objets javascript intégrés tels que `Object`, `Function` ou `Proxy` et différentes classe DOM sont disponibles. `XMLHttpRequest` ne se comporte pas de cette manière, voir la section [XHR and fetch](/fr/Add-ons/WebExtensions/Content_scripts#XHR_and_Fetch) pour plus de détails. Ils créeront des instances appartenant à la hiérarchie d'objets de la page global, puis retourneront un wrapper xray.
 
-<p>Puisque les objets créés de cette manière appartiennent déjà à la page et que le script de contenu ne les renvoie pas à la page, il ne nécessitera pas de clonage ou d'exportation supplémentaire.</p>
+Puisque les objets créés de cette manière appartiennent déjà à la page et que le script de contenu ne les renvoie pas à la page, il ne nécessitera pas de clonage ou d'exportation supplémentaire.
 
-<pre class="brush: js">/* javascript built-ins */
+```js
+/* javascript built-ins */
 
 const objA = new Object();
 const objB = new window.Object();
@@ -251,9 +260,10 @@ Reflect.defineProperty(ev.wrappedJSObject,        // privileged reflection can o
 );
 
 window.eval(`
-  document.addEventListener("click", (e) =&gt; {
+  document.addEventListener("click", (e) => {
     console.log(e instanceof Event, e.propA, e.propB, e.propC);
   });
 `);
 
-document.dispatchEvent(ev); // true, undefined, "unwrapped", "propC"</pre>
+document.dispatchEvent(ev); // true, undefined, "unwrapped", "propC"
+```

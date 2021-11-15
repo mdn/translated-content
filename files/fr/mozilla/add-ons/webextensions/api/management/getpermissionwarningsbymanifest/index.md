@@ -11,49 +11,45 @@ tags:
   - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Lorsque l'utilisateur installe ou met à jour une extension, la navigateur peut avertir l'utilisateur des [permissions](/fr/Add-ons/WebExtensions/manifest.json/permissions) obligatoires. Toutes les permissions ne donnent pas lieu à des avertissements, et cela n'est pas normalisé dans les navigateurs.
 
-<div>Lorsque l'utilisateur installe ou met à jour une extension, la navigateur peut avertir l'utilisateur des <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> obligatoires. Toutes les permissions ne donnent pas lieu à des avertissements, et cela n'est pas normalisé dans les navigateurs.</div>
+Compte tenu du texte du fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json), cette fonction retourne les avertisseurs de permissions qui seraient donnés pour l'extension comme un ensemble de chaines.
 
-<div></div>
+Cette API _ne requière pas_ l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management".
 
-<p>Compte tenu du texte du fichier <a href="/fr/Add-ons/WebExtensions/manifest.json">manifest.json</a>, cette fonction retourne les avertisseurs de permissions qui seraient donnés pour l'extension comme un ensemble de chaines.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<p>Cette API <em>ne requière pas</em> l'<a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">API de permission</a> "management".</p>
+## Syntaxe
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
-
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: js">var gettingWarnings = browser.management.getPermissionWarningsByManifest(
+```js
+var gettingWarnings = browser.management.getPermissionWarningsByManifest(
   manifestString      // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>manifestString</code></dt>
- <dd><code>string</code>. Chaîne contenant le fichier manifest. Cela doit être un manifest valide : par exemple, il doit contenir toutes les clés obligatoires du manifest..</dd>
-</dl>
+- `manifestString`
+  - : `string`. Chaîne contenant le fichier manifest. Cela doit être un manifest valide : par exemple, il doit contenir toutes les clés obligatoires du manifest..
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera rempli avec un ensemble de chaînes, chacune contenant le texte un avertisseur de permission.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rempli avec un ensemble de chaînes, chacune contenant le texte un avertisseur de permission.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.management.getPermissionWarningsByManifest")}}</p>
+{{Compat("webextensions.api.management.getPermissionWarningsByManifest")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Enregistrez les avertissements de permissions dans le fichier manifest donné :</p>
+Enregistrez les avertissements de permissions dans le fichier manifest donné :
 
-<pre class="brush: js">var manifest = {
+```js
+var manifest = {
   "manifest_version": 2,
   "name": "test",
   "version": "1.0",
-  "permissions": ["management", "&lt;all_urls&gt;"]
+  "permissions": ["management", "<all_urls>"]
 }
 
 var manifestString = JSON.stringify(manifest);
@@ -67,19 +63,18 @@ function gotError(error) {
 }
 
 var gettingWarnings = browser.management.getPermissionWarningsByManifest(manifestString);
-gettingWarnings.then(gotWarnings, gotError);</pre>
+gettingWarnings.then(gotWarnings, gotError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/management"><code>chrome.management</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,5 +101,4 @@ gettingWarnings.then(gotWarnings, gotError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

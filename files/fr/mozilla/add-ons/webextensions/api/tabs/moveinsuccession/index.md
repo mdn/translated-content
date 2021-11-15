@@ -12,40 +12,39 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p>Modifie la relation de succession pour un groupe d'onglets.</p>
+Modifie la relation de succession pour un groupe d'onglets.
 
-<p>Using the {{WebExtAPIRef('tabs')}} API, a tab can be assigned a <em>successor</em> tab in the same window. If tab B is the successor of tab A, and tab A is closed while it is the active tab, tab B will be activated next. If tab A doesn't have a successor, then the browser is free to determine which tab to activate next. If tab B is the successor of tab A, then tab A is called a <em>predecessor</em> of tab B. A tab can have at most one successor, but it can have any number of predecessors. A tab cannot take itself or a tab in a different window as a successor.</p>
+Using the {{WebExtAPIRef('tabs')}} API, a tab can be assigned a _successor_ tab in the same window. If tab B is the successor of tab A, and tab A is closed while it is the active tab, tab B will be activated next. If tab A doesn't have a successor, then the browser is free to determine which tab to activate next. If tab B is the successor of tab A, then tab A is called a _predecessor_ of tab B. A tab can have at most one successor, but it can have any number of predecessors. A tab cannot take itself or a tab in a different window as a successor.
 
-<p>All tabs start out with no successor; tabs only get a successor if assigned one by a WebExtension. However, the browser must not orphan a tab in a succession relationship with other tabs, if possible: if tab B is the successor of tab A, and tab C is the successor of tab B, and B is closed (or moved to another window), then tab A will take tab C as its successor. Preventing C from being orphaned in this way is called <em>moving a tab</em> (B) <em>from its line of succession</em>.</p>
+All tabs start out with no successor; tabs only get a successor if assigned one by a WebExtension. However, the browser must not orphan a tab in a succession relationship with other tabs, if possible: if tab B is the successor of tab A, and tab C is the successor of tab B, and B is closed (or moved to another window), then tab A will take tab C as its successor. Preventing C from being orphaned in this way is called _moving a tab_ (B) _from its line of succession_.
 
-<p><code>tabs.moveInSuccession()</code> takes an array of tab IDs, and moves all of those tabs from their lines of succession. It then makes each tab the successor of the previous tab in the array, forming a chain. It can optionally set the successor of the last tab in the chain to an anchor tab, which is <em>not</em> moved from its line of succession. Additional options can control whether the tab chain is "prepended" or "appended" to the anchor tab, and whether the operation acts like a linked-list insert.</p>
+`tabs.moveInSuccession()` takes an array of tab IDs, and moves all of those tabs from their lines of succession. It then makes each tab the successor of the previous tab in the array, forming a chain. It can optionally set the successor of the last tab in the chain to an anchor tab, which is _not_ moved from its line of succession. Additional options can control whether the tab chain is "prepended" or "appended" to the anchor tab, and whether the operation acts like a linked-list insert.
 
-<p>While the successor tab can be assigned with {{WebExtAPIRef('tabs.update()')}}, it is often desirable to use <code>tabs.moveInSuccession()</code> to change successors, even if only a single tab is having its successor assigned. The difference is that <code>browser.tabs.moveInSuccession([a], b)</code> moves tab <code>a</code> from its line of succession, so any predecessors of <code>a</code> will adopt <code>a</code>'s previous successor; whereas if <code>browser.tabs.update(a, {successorTabId: b})</code> is used instead, tab <code>a</code> may continue to be the successor of other tabs, which could be unexpected. Another advantage of <code>tabs.moveInSuccession()</code> is that all of the succession changes happen atomically, without having to worry about races between calls to {{WebExtAPIRef('tabs.update()')}} and {{WebExtAPIRef('tabs.get()')}} and other operations like the user closing a tab.</p>
+While the successor tab can be assigned with {{WebExtAPIRef('tabs.update()')}}, it is often desirable to use `tabs.moveInSuccession()` to change successors, even if only a single tab is having its successor assigned. The difference is that `browser.tabs.moveInSuccession([a], b)` moves tab `a` from its line of succession, so any predecessors of `a` will adopt `a`'s previous successor; whereas if `browser.tabs.update(a, {successorTabId: b})` is used instead, tab `a` may continue to be the successor of other tabs, which could be unexpected. Another advantage of `tabs.moveInSuccession()` is that all of the succession changes happen atomically, without having to worry about races between calls to {{WebExtAPIRef('tabs.update()')}} and {{WebExtAPIRef('tabs.get()')}} and other operations like the user closing a tab.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})</pre>
+```js
+browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabIds</code></dt>
- <dd><code>array</code> of <code>integer</code>. Un tableau  d'<code>ID</code>s. L'ordre des éléments dans le tableau définit la relation des onglets. Tout <code>ID</code> d'onglet invalide, ou l'<code>ID</code> d'onglet correspondant à des onglets qui ne sont pas dans la même fenêtre que <code>tabId</code> (ou le premier onglet du tableau, si  <code>tabId</code> est omis), sera ignoré - ils conserveront leurs successeurs et prédécesseurs actuels.</dd>
- <dt><code>tabId</code> {{optional_inline}}</dt>
- <dd><code>integer.</code> L'<code>ID</code> de l'onglet qui succédera au dernier onglet du tableau <code>tabIds</code>. Si cet <code>ID</code> est invalide ou {{WebExtAPIRef('tabs.TAB_ID_NONE')}}, le dernier onglet n'aura pas de successeur. Par défaut {{WebExtAPIRef('tabs.TAB_ID_NONE')}}.</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd><p><code>object</code>.</p>
- <dl>
-  <dt><code>append</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. Détermine s'il faut déplacer les onglets dans les <code>tabIds</code> avant ou après <code>tabId </code>dans la succession. Si <code>false</code>, les onglets sont déplacés avant <code>tabId</code>, si <code>true</code>, les onglets sont déplacés après <code>tabId</code>. Par défaut à <code>false</code>.</dd>
-  <dt><code>insert</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. Détermine s'il faut lier les prédécesseurs ou successeurs actuels (selon <code>options.append</code>) de <code>tabId</code>à l'autre côté de la chaîne après son ajout ou son ajout. Si true, l'un des événements suivants se produit : si <code>options.append</code> est <code>false</code>, le premier onglet du tableau est défini comme successeur de tout prédécesseur actuel de  <code>tabId</code>; Si <code>options.append</code> est <code>true</code>, le successeur actuel de tabId est défini comme le successeur du dernier onglet du tableau. La valeur par défaut est <code>false</code>.</dd>
- </dl>
- </dd>
-</dl>
+- `tabIds`
+  - : `array` of `integer`. Un tableau  d'`ID`s. L'ordre des éléments dans le tableau définit la relation des onglets. Tout `ID` d'onglet invalide, ou l'`ID` d'onglet correspondant à des onglets qui ne sont pas dans la même fenêtre que `tabId` (ou le premier onglet du tableau, si  `tabId` est omis), sera ignoré - ils conserveront leurs successeurs et prédécesseurs actuels.
+- `tabId` {{optional_inline}}
+  - : `integer.` L'`ID` de l'onglet qui succédera au dernier onglet du tableau `tabIds`. Si cet `ID` est invalide ou {{WebExtAPIRef('tabs.TAB_ID_NONE')}}, le dernier onglet n'aura pas de successeur. Par défaut {{WebExtAPIRef('tabs.TAB_ID_NONE')}}.
+- `options` {{optional_inline}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+  - : `object`.
 
-<p>{{Compat("webextensions.api.tabs.moveInSuccession", 10)}}</p>
+    - `append` {{optional_inline}}
+      - : `boolean`. Détermine s'il faut déplacer les onglets dans les `tabIds` avant ou après `tabId `dans la succession. Si `false`, les onglets sont déplacés avant `tabId`, si `true`, les onglets sont déplacés après `tabId`. Par défaut à `false`.
+    - `insert` {{optional_inline}}
+      - : `boolean`. Détermine s'il faut lier les prédécesseurs ou successeurs actuels (selon `options.append`) de `tabId`à l'autre côté de la chaîne après son ajout ou son ajout. Si true, l'un des événements suivants se produit : si `options.append` est `false`, le premier onglet du tableau est défini comme successeur de tout prédécesseur actuel de  `tabId`; Si `options.append` est `true`, le successeur actuel de tabId est défini comme le successeur du dernier onglet du tableau. La valeur par défaut est `false`.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.tabs.moveInSuccession", 10)}}

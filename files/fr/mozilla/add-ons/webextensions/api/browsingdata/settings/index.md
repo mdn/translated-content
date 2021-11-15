@@ -12,49 +12,49 @@ tags:
   - browsingData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Les navigateurs disposent d'une fonction "Effacer l'historique" intégrée, qui permet à l'utilisateur d'effacer différents types de données de navigation. Cela a une interface utilisateur qui permet à l'utilisateur de sélectionner le type de données à supprimer (par exemple l'historique, les téléchargements, ...) et à quelle distance remonter dans le temps pour supprimer des données.</p>
+Les navigateurs disposent d'une fonction "Effacer l'historique" intégrée, qui permet à l'utilisateur d'effacer différents types de données de navigation. Cela a une interface utilisateur qui permet à l'utilisateur de sélectionner le type de données à supprimer (par exemple l'historique, les téléchargements, ...) et à quelle distance remonter dans le temps pour supprimer des données.
 
-<p>Cette fonction renvoie la valeur actuelle de ces paramètres.</p>
+Cette fonction renvoie la valeur actuelle de ces paramètres.
 
-<p>Notez que tous les types de données ne peuvent pas toujours être supprimés via l'interface utilisateur et certaines options d'interface utilisateur peuvent correspondre à plusieurs types de données.</p>
+Notez que tous les types de données ne peuvent pas toujours être supprimés via l'interface utilisateur et certaines options d'interface utilisateur peuvent correspondre à plusieurs types de données.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var getSettings = browser.browsingData.settings()
-</pre>
+```js
+var getSettings = browser.browsingData.settings()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet contenant les informations sur les paramètres. Cet objet a trois propriétés :</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet contenant les informations sur les paramètres. Cet objet a trois propriétés :
 
-<dl>
- <dt><code>options</code></dt>
- <dd><code>{{WebExtAPIRef("browsingData.RemovalOptions")}}</code>. Un objet  <code>RemovalOptions</code> décrivant les options de suppression actuellement sélectionnées.</dd>
- <dt><code>dataToRemove</code></dt>
- <dd><code>{{WebExtAPIRef("browsingData.DataTypeSet")}}</code>. Cela contiendra une propriété pour chaque type de données pouvant être basculé dans l'interface utilisateur du navigateur. Chaque propriété aura une valeur <code>true</code> si ce type est sélectionné pour la suppression et <code>false</code> dans le cas contraire.</dd>
- <dt><code>dataRemovalPermitted</code></dt>
- <dd><code>{{WebExtAPIRef("browsingData.DataTypeSet")}}</code>. Cela contiendra une propriété pour chaque type de données pouvant être basculé dans l'interface utilisateur du navigateur. Chacune aura la valeur  <code>true</code> si l'administrateur du périphérique a autorisé l'utilisateur à supprimer ce type, et <code>false</code> dans le cas contraire.</dd>
-</dl>
+- `options`
+  - : `{{WebExtAPIRef("browsingData.RemovalOptions")}}`. Un objet  `RemovalOptions` décrivant les options de suppression actuellement sélectionnées.
+- `dataToRemove`
+  - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`. Cela contiendra une propriété pour chaque type de données pouvant être basculé dans l'interface utilisateur du navigateur. Chaque propriété aura une valeur `true` si ce type est sélectionné pour la suppression et `false` dans le cas contraire.
+- `dataRemovalPermitted`
+  - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`. Cela contiendra une propriété pour chaque type de données pouvant être basculé dans l'interface utilisateur du navigateur. Chacune aura la valeur  `true` si l'administrateur du périphérique a autorisé l'utilisateur à supprimer ce type, et `false` dans le cas contraire.
 
-<p>Si une erreur se produit, la  promise sera rejetée avec un message d'erreur.</p>
+Si une erreur se produit, la  promise sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browsingData.settings")}}</p>
+{{Compat("webextensions.api.browsingData.settings")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Paramètres des Logs courrants :</p>
+Paramètres des Logs courrants :
 
-<pre class="brush: js">function onGotSettings(settings) {
+```js
+function onGotSettings(settings) {
   console.log(settings.options);
   console.log(settings.dataToRemove);
   console.log(settings.dataRemovalPermitted);
@@ -64,19 +64,18 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.settings().then(onGotSettings, onError);</pre>
+browser.browsingData.settings().then(onGotSettings, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,5 +102,4 @@ browser.browsingData.settings().then(onGotSettings, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

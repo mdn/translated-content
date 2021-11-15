@@ -12,36 +12,38 @@ tags:
   - webNotificationsDisabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/webNotificationsDisabled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour empêcher les sites Web d'afficher des <code><a href="/fr/docs/Web/API/Notifications_API">Notifications</a></code> à l'aide de l'API Web de notifications.</p>
+Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour empêcher les sites Web d'afficher des [`Notifications`](/fr/docs/Web/API/Notifications_API) à l'aide de l'API Web de notifications.
 
-<p>L'API <code>Notifications</code> est utilisée pour afficher les notifications de bureau à l'utilisateur. Il existe trois niveaux d'autorisation pour les notifications :<em> allow</em>,<em> deny</em>, et <em>prompt</em>. Les utilisateurs peuvent définir cette autorisation pour chaque site. Si l'utilisateur n'a pas défini d'autorisation pour un site particulier, le navigateur reviendra à une autorisation globale, qui sera par défaut <em>invité</em>e.</p>
+L'API `Notifications` est utilisée pour afficher les notifications de bureau à l'utilisateur. Il existe trois niveaux d'autorisation pour les notifications : _allow_, _deny_, et _prompt_. Les utilisateurs peuvent définir cette autorisation pour chaque site. Si l'utilisateur n'a pas défini d'autorisation pour un site particulier, le navigateur reviendra à une autorisation globale, qui sera par défaut *invité*e.
 
-<p>Définir <code>browserSettings.webNotificationsDisabled</code> à <code>true</code> change l'autorisation globale à<em> refuser</em>.</p>
+Définir `browserSettings.webNotificationsDisabled` à `true` change l'autorisation globale à _refuser_.
 
-<p>Notez que cela n'affectera pas les sites pour lesquels l'utilisateur a défini une préférence par site. Par exemple, si l'utilisateur définit <a href="https://example.org">https://example.org</a> pour<em> autoriser</em>, et une extension place ensuite <code>browserSettings.webNotificationsDisabled</code> à <code>true</code>, alors les pages sous <a href="https://example.org">https://example.org </a>seront toujours autorisées à afficher des notifications..</p>
+Notez que cela n'affectera pas les sites pour lesquels l'utilisateur a défini une préférence par site. Par exemple, si l'utilisateur définit <https://example.org> pour _autoriser_, et une extension place ensuite `browserSettings.webNotificationsDisabled` à `true`, alors les pages sous [https://example.org ](https://example.org)seront toujours autorisées à afficher des notifications..
 
-<p>Si vous définissez <code>browserSettings.webNotificationsDisabled</code> à <code>false</code> la valeur par défaut globale est rétablie.</p>
+Si vous définissez `browserSettings.webNotificationsDisabled` à `false` la valeur par défaut globale est rétablie.
 
-<p>Notez que ce paramètre n'a aucun effet sur les notifications créées par des extensions à l'aide de l'API de <code><a href="/fr/Add-ons/WebExtensions/API/notifications">notifications</a></code>.</p>
+Notez que ce paramètre n'a aucun effet sur les notifications créées par des extensions à l'aide de l'API de [`notifications`](/fr/Add-ons/WebExtensions/API/notifications).
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browserSettings.webNotificationsDisabled")}}</p>
+{{Compat("webextensions.api.browserSettings.webNotificationsDisabled")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Basculer le paramètre :</p>
+Basculer le paramètre :
 
-<pre class="brush: js">async function toggleWebNotifications() {
+```js
+async function toggleWebNotifications() {
   let current = await browser.browserSettings.webNotificationsDisabled.get({});
   console.log(`Current value: ${current.value}`);
   browser.browserSettings.webNotificationsDisabled.set({value: !current.value});
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   toggleWebNotifications();
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

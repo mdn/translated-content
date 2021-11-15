@@ -12,52 +12,42 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Découvrez quand le système de l'utilisateur est inactif, vérouillé ou actif.</p>
+Découvrez quand le système de l'utilisateur est inactif, vérouillé ou actif.
 
-<p>Pour utiliser cette API, vous disposez de la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "idle" .</p>
+Pour utiliser cette API, vous disposez de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "idle" .
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("idle.IdleState")}}</dt>
- <dd>
- <p>Chaîne décrivant l'état d'inactivité du périphérique</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("idle.IdleState")}}
+  - : Chaîne décrivant l'état d'inactivité du périphérique
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt>{{WebExtAPIRef("idle.queryState()")}}</dt>
- <dd>Renvoie <code>"locked"</code> si le système est verrouillé, <code>"idle"</code> si l'utilisateur n'a généré aucune entrée pendant un nombre de secondes spécifié, ou sinon <code>"active"</code></dd>
- <dt>{{WebExtAPIRef("idle.setDetectionInterval()")}}</dt>
- <dd>Définit l'intervalle utilisé pour déterminer quand le système est inactif pour les événements  {{WebExtAPIRef("idle.onStateChanged")}}.</dd>
-</dl>
+- {{WebExtAPIRef("idle.queryState()")}}
+  - : Renvoie `"locked"` si le système est verrouillé, `"idle"` si l'utilisateur n'a généré aucune entrée pendant un nombre de secondes spécifié, ou sinon `"active"`
+- {{WebExtAPIRef("idle.setDetectionInterval()")}}
+  - : Définit l'intervalle utilisé pour déterminer quand le système est inactif pour les événements  {{WebExtAPIRef("idle.onStateChanged")}}.
 
-<h2 id="Evénements">Evénements</h2>
+## Evénements
 
-<dl>
- <dt>{{WebExtAPIRef("idle.onStateChanged")}}</dt>
- <dd>Définit quand le système change d'état.</dd>
-</dl>
+- {{WebExtAPIRef("idle.onStateChanged")}}
+  - : Définit quand le système change d'état.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.idle")}}</p>
+{{Compat("webextensions.api.idle")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/extensions/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/idle"><code>chrome.idle</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json"><code>idle.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -84,5 +74,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

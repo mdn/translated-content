@@ -11,66 +11,58 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Obtient et définit les propriétés de la barre latérale d'une extension.</p>
+Obtient et définit les propriétés de la barre latérale d'une extension.
 
-<p>Une <a href="/fr/Add-ons/WebExtensions/Sidebars">barre latérale</a> est un volet qui s'affiche à gauche ou à droite de la fenêtre du navigateur, à côté de la page Web. Le navigateur fournit une interface utilisateur qui permet à l'utilisateur de voir les barres latérales actuellement disponibles et de sélectionner une barre latérale à afficher. En utilisant la clé <code><a href="/fr/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code> manifest.json, une extension peut définir sa propre barre latérale.<br>
- En utilisant l'API <code>sidebarAction</code> décrite ici, une extension peut obtenir et définir les propriétés de la barre latérale.</p>
+Une [barre latérale](/fr/Add-ons/WebExtensions/Sidebars) est un volet qui s'affiche à gauche ou à droite de la fenêtre du navigateur, à côté de la page Web. Le navigateur fournit une interface utilisateur qui permet à l'utilisateur de voir les barres latérales actuellement disponibles et de sélectionner une barre latérale à afficher. En utilisant la clé [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json, une extension peut définir sa propre barre latérale.
+En utilisant l'API `sidebarAction` décrite ici, une extension peut obtenir et définir les propriétés de la barre latérale.
 
-<p>L'API <code>sidebarAction</code> est étroitement modélisée sur l'API  {{WebExtAPIRef("browserAction")}}.</p>
+L'API `sidebarAction` est étroitement modélisée sur l'API  {{WebExtAPIRef("browserAction")}}.
 
-<p>L'API sidebarAction est basée sur l'<a href="https://dev.opera.com/extensions/sidebar-action-api/">API sidebarAction</a> d'Opéra. Toutefois, notez que les éléments suivants ne sont pas encore pris en charge : <code>setBadgeText()</code>, <code>getBadgeText()</code>, <code>setBadgeBackgroundColor()</code>, <code>getBadgeBackgroundColor()</code>, <code>onFocus</code>, <code>onBlur</code>.</p>
+L'API sidebarAction est basée sur l'[API sidebarAction](https://dev.opera.com/extensions/sidebar-action-api/) d'Opéra. Toutefois, notez que les éléments suivants ne sont pas encore pris en charge : `setBadgeText()`, `getBadgeText()`, `setBadgeBackgroundColor()`, `getBadgeBackgroundColor()`, `onFocus`, `onBlur`.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("sidebarAction.ImageDataType")}}</dt>
- <dd>Données de pixel pour une image. Doit être un objet <code><a href="/fr/docs/Web/API/ImageData">ImageData</a></code> (par exemple, à partir d'un élément {{htmlelement("canvas")}}).</dd>
-</dl>
+- {{WebExtAPIRef("sidebarAction.ImageDataType")}}
+  - : Données de pixel pour une image. Doit être un objet [`ImageData`](/fr/docs/Web/API/ImageData) (par exemple, à partir d'un élément {{htmlelement("canvas")}}).
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt>{{WebExtAPIRef("sidebarAction.close()")}}</dt>
- <dd>Ferme la barre latérale</dd>
- <dt>{{WebExtAPIRef("sidebarAction.getPanel()")}}</dt>
- <dd>Obtient le panneau de la barre latérale.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.getTitle()")}}</dt>
- <dd>Obtient le titre de la barre latérale.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.isOpen()")}}</dt>
- <dd>Vérifie si la barre latérale est ouverte ou non.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.open()")}}</dt>
- <dd>Ouvre la barre latérale.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.setIcon()")}}</dt>
- <dd>Définit l'icône de la barre latérale.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.setPanel()")}}</dt>
- <dd>Définit le panneau de la barre latérale.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.setTitle()")}}</dt>
- <dd>Définit le titre de la barre latérale. Ceci sera affiché dans n'importe quelle interface utilisateur fournie par le navigateur pour lister les barres latérales, comme un menu.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.toggle()")}}</dt>
- <dd>Permet de basculer la visibilité de la barre latérale.</dd>
-</dl>
+- {{WebExtAPIRef("sidebarAction.close()")}}
+  - : Ferme la barre latérale
+- {{WebExtAPIRef("sidebarAction.getPanel()")}}
+  - : Obtient le panneau de la barre latérale.
+- {{WebExtAPIRef("sidebarAction.getTitle()")}}
+  - : Obtient le titre de la barre latérale.
+- {{WebExtAPIRef("sidebarAction.isOpen()")}}
+  - : Vérifie si la barre latérale est ouverte ou non.
+- {{WebExtAPIRef("sidebarAction.open()")}}
+  - : Ouvre la barre latérale.
+- {{WebExtAPIRef("sidebarAction.setIcon()")}}
+  - : Définit l'icône de la barre latérale.
+- {{WebExtAPIRef("sidebarAction.setPanel()")}}
+  - : Définit le panneau de la barre latérale.
+- {{WebExtAPIRef("sidebarAction.setTitle()")}}
+  - : Définit le titre de la barre latérale. Ceci sera affiché dans n'importe quelle interface utilisateur fournie par le navigateur pour lister les barres latérales, comme un menu.
+- {{WebExtAPIRef("sidebarAction.toggle()")}}
+  - : Permet de basculer la visibilité de la barre latérale.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.sidebarAction")}}</p>
+{{Compat("webextensions.api.sidebarAction")}}
 
-<h2 id="Exemple_extensions">Exemple extensions</h2>
+## Exemple extensions
 
-<ul>
- <li><a href="https://github.com/mdn/webextensions-examples/tree/master/annotate-page">annotate-page</a></li>
-</ul>
+- [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page)
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Opera <a href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -97,5 +89,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

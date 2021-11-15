@@ -13,12 +13,10 @@ tags:
   - extensionTypes
 translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/InjectDetails
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Ce type est donné en tant que paramètre aux méthodes <code>tabs.executeScript()</code>, <code>tabs.insertCSS()</code>, et <code>tabs.removeCSS()</code> . Pour plus de détails sur ses propriétés et leur utilisation, consultez les pages de documentation de ces méthodes :</p>
+Ce type est donné en tant que paramètre aux méthodes `tabs.executeScript()`, `tabs.insertCSS()`, et `tabs.removeCSS()` . Pour plus de détails sur ses propriétés et leur utilisation, consultez les pages de documentation de ces méthodes :
 
-<ul>
- <li>{{WebExtAPIRef("tabs.executeScript()")}}</li>
- <li>{{WebExtAPIRef("tabs.insertCSS()")}}</li>
- <li>{{WebExtAPIRef("tabs.removeCSS()")}}</li>
-</ul>
+- {{WebExtAPIRef("tabs.executeScript()")}}
+- {{WebExtAPIRef("tabs.insertCSS()")}}
+- {{WebExtAPIRef("tabs.removeCSS()")}}

@@ -12,59 +12,58 @@ tags:
   - isEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Renvoie <code>true</code> si l'action du navigateur est activée.</p>
+Renvoie `true` si l'action du navigateur est activée.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">let gettingIsEnabled = browser.browserAction.isEnabled(
+```js
+let gettingIsEnabled = browser.browserAction.isEnabled(
   details // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. Un objet contenant éventuellement le <code>tabId</code> ou <code>windowId</code> à vérifier.</p>
- <dl>
-  <dt><code>tabId</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. ID d'un onglet à vérifier</dd>
-  <dt><code>windowId</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. ID d'une fenêtre à vérifier.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
+  - : `object`. Un objet contenant éventuellement le `tabId` ou `windowId` à vérifier.
 
+    - `tabId` {{optional_inline}}
+      - : `integer`. ID d'un onglet à vérifier
+    - `windowId` {{optional_inline}}
+      - : `integer`. ID d'une fenêtre à vérifier.
 
-<ul>
- <li>Si windowId et tabId sont tous les deux fournis, la fonction échoue.</li>
- <li>Si windowId et tabId sont tous les deux omis, l'état global activé/désactivé est renvoyé.</li>
-</ul>
+<!---->
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+- Si windowId et tabId sont tous les deux fournis, la fonction échoue.
+- Si windowId et tabId sont tous les deux omis, l'état global activé/désactivé est renvoyé.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec <code>true</code> si l'action du navigateur de l'extension est activée, et <code>false</code> dans le cas contraire.</p>
+### Valeur retournée
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `true` si l'action du navigateur de l'extension est activée, et `false` dans le cas contraire.
 
-<p>{{Compat("webextensions.api.browserAction.isEnabled",2)}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.browserAction.isEnabled",2)}}
 
-<p>Vérifiez l'état global :</p>
+## Exemples
 
-<pre class="brush: js">browser.browserAction.isEnabled({}).then(result =&gt; {
+Vérifiez l'état global :
+
+```js
+browser.browserAction.isEnabled({}).then(result => {
   console.log(result);
-});</pre>
+});
+```
 
-<p>Vérifiez l'état de l'onglet actuellement actif :</p>
+Vérifiez l'état de l'onglet actuellement actif :
 
-<pre class="brush: js">async function enabledInActiveTab() {
+```js
+async function enabledInActiveTab() {
   let tabs = await browser.tabs.query({
     currentWindow:true,
     active: true
@@ -73,6 +72,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled
     tabId: tabs[0].id
   });
   console.log(enabled);
-}</pre>
+}
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

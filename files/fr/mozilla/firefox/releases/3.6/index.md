@@ -7,291 +7,239 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3.6
 original_slug: Mozilla/Firefox/Versions/3.6
 ---
-<div>
-  <ol>
-    <li>
-        
-            <p>Notes de versions pour développeurs</p>
-            <ol>
-              <li><a href="/fr/docs/Mozilla/Firefox/Releases">Notes de versions pour développeurs</a></li>
-            </ol>
-        
-    </li>
-    <li>
-        
-            <p>Modules complémentaires</p>
-            <ol>
-              <li><a href="/fr/Add-ons/WebExtensions">WebExtensions</a></li>
-              <li><a href="/fr/Add-ons/Themes">Thèmes</a></li>
-            </ol>
-        
-    </li>
-    <li>
-        
-            <p>Fonctionnement interne de Firefox</p>
-            <ol>
-              <li><a href="/fr/docs/Mozilla/">Le projet Mozilla</a></li>
-              <li><a href="/fr/docs/Mozilla/Gecko">Gecko</a></li>
-              <li><a href="/fr/docs/Mozilla/Firefox/Headless_mode">Mode « headless »</a></li>
-              <li><a href="/fr/docs/Mozilla/JavaScript_code_modules">Modules de code Javascript</a></li>
-              <li><a href="/fr/docs/Mozilla/js-ctypes">JS-ctypes</a></li>
-              <li><a href="/fr/docs/Mozilla/MathML_Project">Le projet MathML</a></li>
-              <li><a href="/fr/docs/Mozilla/MFBT">MFBT</a></li>
-              <li><a href="/fr/docs/Mozilla/Projects">Les projets Mozilla</a></li>
-              <li><a href="/fr/docs/Mozilla/Preferences">Le système de préférences</a></li>
-              <li><a href="/fr/docs/Mozilla/WebIDL_bindings">Connexions WebIDL</a></li>
-              <li><a href="/fr/docs/Mozilla/Tech/XPCOM">XPCOM</a></li>
-              <li><a href="/fr/docs/Mozilla/Tech/XUL">XUL</a></li>
-            </ol>
-        
-    </li>
-    <li>
-        
-            <p>Développer et contribuer</p>
-            <ol>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Build_Instructions">Instructions de compilation</a></li>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">Configuration des options de compilation</a></li>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works">Fonctionnement de la compilation</a></li>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Code source de Mozilla</a></li>
-              <li><a href="/fr/docs/Mozilla/Localization">Localisation</a></li>
-              <li><a href="/fr/docs/Mozilla/Mercurial">Mercurial</a></li>
-              <li><a href="/fr/docs/Mozilla/QA">Assurance qualité</a></li>
-              <li><a href="/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects">Utilisation de code Mozilla dans d'autres projets</a></li>
-            </ol>
-        
-    </li>
-  </ol>
-</div>
-<p>Firefox 3.6 (nom de code <a href="https://wiki.mozilla.org/Firefox/Namoroka">Namoroka</a>) est sorti le 21 janvier 2010 et est basé sur Gecko 1.9.2. Cette page fournit des liens vers des articles qui décrivent les nouvelles fonctionnalités de Firefox 3.6.</p>
+1.  Notes de versions pour développeurs
 
-<h2 id="Pour_les_développeurs_de_sites_et_dapplications_Web">Pour les développeurs de sites et d'applications Web</h2>
+    1.  [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
-<h3 id="CSS">CSS</h3>
+2.  Modules complémentaires
 
-<dl>
- <dt><a href="/fr/docs/CSS/Using_CSS_gradients">Utilisation de dégradés</a></dt>
- <dd>Firefox 3.6 ajoute le support de <a href="/fr/docs/Web/CSS/-moz-linear-gradient"><code>-moz-linear-gradient</code></a> et <a href="/fr/docs/Web/CSS/-moz-radial-gradient"><code>-moz-radial-gradient</code></a> pour la propriété <a href="/fr/docs/Web/CSS/background"><code>background</code></a>.</dd>
- <dt><a href="/fr/docs/CSS/Fonds_multiples">Fonds multiples</a></dt>
- <dd>La propriété <a href="/fr/docs/Web/CSS/background"><code>background</code></a> (ainsi que <a href="/fr/docs/Web/CSS/background-attachment"><code>background-attachment</code></a><a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a>, <a href="/fr/docs/Web/CSS/background-image"><code>background-image</code></a>, <a href="/fr/docs/Web/CSS/background-position"><code>background-position</code></a> et <a href="/fr/docs/Web/CSS/background-repeat"><code>background-repeat</code></a>) peuvent gérer des fonds multiples. Ceux-ci seront affichés par couches, les uns au dessus des autres.</dd>
- <dt><a href="/fr/docs/CSS/Media_queries#Fonctionnalit.C3.A9s_de_m.C3.A9dias_sp.C3.A9cifiques_.C3.A0_Mozilla">Fonctionnalités de médias spécifiques à Mozilla</a></dt>
- <dd>Des fonctionnalités de médias ont été ajoutées pour des mesures spécifiques à Mozilla, afin de pouvoir utiliser des <a href="/fr/docs/CSS/Media_queries">media queries</a> pour vérifier plus aisément la disponibilité de fonctionnalités comme un écran tactile.</dd>
- <dt><a href="/fr/docs/CSS/Scaling_background_images">Redimensionnement d'images de fond</a></dt>
- <dd>La propriété <code>background-size</code> du <a href="http://dev.w3.org/csswg/css3-background/">brouillon CSS 3 Backgrounds and Borders</a> est gérée sous le nom de <a href="/fr/docs/Web/CSS/-moz-background-size"><code>-moz-background-size</code></a>.</dd>
- <dt><a href="/fr/docs/WOFF">Support des polices WOFF</a></dt>
- <dd><a href="/fr/docs/Web/CSS/@font-face"><code>@font-face</code></a> supporte désormais le format de polices Web téléchargeables WOFF</dd>
- <dt><a href="/fr/docs/CSS/pointer-events">Evènements pointeurs</a></dt>
- <dd>La propriété <a href="/fr/docs/Web/CSS/pointer-events"><code>pointer-events</code></a> si le contenu d'un élément peut être ou non la cible d'évènements pointeur avec la souris.</dd>
-</dl>
+    1.  [WebExtensions](/fr/Add-ons/WebExtensions)
+    2.  [Thèmes](/fr/Add-ons/Themes)
 
-<h4 id="Autres_changements_CSS">Autres changements CSS</h4>
+3.  Fonctionnement interne de Firefox
 
-<ul>
- <li>L'unité de longueur <a href="/fr/docs/CSS/longueur"><code>rem</code></a> de <a href="http://www.w3.org/TR/css3-values/#lengths">CSS3 Values and Units</a> est maintenant supportée. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=472195">bug 472195</a>.</li>
- <li><a href="/fr/docs/Web/CSS/image-rendering"><code>image-rendering</code></a> est gérée pour les images, images de fond, vidéos et canvas. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=423756">bug 423756</a>.</li>
- <li><a href="/fr/docs/Web/CSS/text-align"><code>text-align</code></a>:end est maintenant supportée. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=299837">bug 299837</a>.</li>
- <li>Les changements DOM sur des éléments utilisant les types de <a href="/fr/docs/Web/CSS/display"><code>display</code></a> table fonctionnent beaucoup mieux.</li>
- <li>Ajout de <a href="/fr/docs/Web/CSS/:-moz-locale-dir(ltr)"><code>:-moz-locale-dir(ltr)</code></a> et <a href="/fr/docs/Web/CSS/:-moz-locale-dir(rtl)"><code>:-moz-locale-dir(rtl)</code></a> pour faciliter la personnalisation de mise en page selon l'orientation de l'interface dépendant de la locale (gauche à droite ou droite à gauche). Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=478416">bug 478416</a>.</li>
- <li>Ajout de la pseudo-classe <a href="/fr/docs/Web/CSS/:indeterminate"><code>:indeterminate</code></a> correspondant aux éléments <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> <code>checkbox</code> dont l'attribut <code>indeterminate</code> est <code>true</code>.</li>
- <li>Les plugins fenêtrés ne sont plus affichés par la propriété CSS tranforms, car ils ne peuvent pas être correctement tranformés par le compositeur.</li>
-</ul>
+    1.  [Le projet Mozilla](/fr/docs/Mozilla/)
+    2.  [Gecko](/fr/docs/Mozilla/Gecko)
+    3.  [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
+    4.  [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
+    5.  [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
+    6.  [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
+    7.  [MFBT](/fr/docs/Mozilla/MFBT)
+    8.  [Les projets Mozilla](/fr/docs/Mozilla/Projects)
+    9.  [Le système de préférences](/fr/docs/Mozilla/Preferences)
+    10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
+    11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
+    12. [XUL](/fr/docs/Mozilla/Tech/XUL)
 
-<h3 id="HTML">HTML</h3>
+4.  Développer et contribuer
 
-<dl>
- <dt><a href="/fr/docs/Using_files_from_web_applications">Utilisation de fichiers à partir d'applications Web</a></dt>
- <dd>Le support de la nouvelle API de fichier HTML5 a été ajouté à Gecko, ce qui permet à des applications Web d'accéder à des fichiers locaux sélectionnés par l'utilisateur.</dd>
- <dt>Support des affiches pour les vidéos HTML5</dt>
- <dd>L'attribut <code>poster</code> est pris en charge pour l'élément <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>, ce qui permet au contenu de choisir une image à afficher tant que la vidéo n'a pas commencée.</dd>
- <dt>Support de la propriété <code>indeterminate</code> pour les cases à cocher et boutons radio</dt>
- <dd>Les éléments HTML <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> des types <code>checkbox</code> et <code>radio</code> supportent désormais la propriété indeterminate qui permet d'avoir un troisième état « indéterminé ».</dd>
- <dt>Contrôle du lissage d'images dans canvas</dt>
- <dd>La nouvelle propriété <a href="/fr/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior"><code>mozImageSmoothingEnabled</code></a> peut être utilisée pour activer et désactiver le lissage lors d'un redimensionnement dans les éléments <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a>.</dd>
- <dt>Exécution d'un script asynchrone</dt>
- <dd>En définissant l'attribut <code>async</code> sur un élément <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a>, le <code>script</code> ne bloquera pas le chargement ou l'affichage du reste de la page. En revanche, le <code>script</code> s'exécutera dès qu'il sera téléchargé.</dd>
-</dl>
+    1.  [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
+    2.  [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
+    3.  [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
+    4.  [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
+    5.  [Localisation](/fr/docs/Mozilla/Localization)
+    6.  [Mercurial](/fr/docs/Mozilla/Mercurial)
+    7.  [Assurance qualité](/fr/docs/Mozilla/QA)
+    8.  [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
 
-<h3 id="JavaScript">JavaScript</h3>
+Firefox 3.6 (nom de code [Namoroka](https://wiki.mozilla.org/Firefox/Namoroka)) est sorti le 21 janvier 2010 et est basé sur Gecko 1.9.2. Cette page fournit des liens vers des articles qui décrivent les nouvelles fonctionnalités de Firefox 3.6.
 
-<p>Gecko 1.9.2 introduit JavaScript 1.8.2, qui ajoute un certain nombre de fonctionnalités de langage de la norme ECMAScript 5 :</p>
+## Pour les développeurs de sites et d'applications Web
 
-<ul>
- <li><code>Date.parse()</code> peut analyser des dates ISO 8601 au format YYYY-MM-DD (année-mois-jour).</li>
- <li>La propriété <code>prototype</code> d'instances de fonctions n'est plus énumérable.</li>
-</ul>
+### CSS
 
-<h3 id="DOM">DOM</h3>
+- [Utilisation de dégradés](/fr/docs/CSS/Using_CSS_gradients)
+  - : Firefox 3.6 ajoute le support de [`-moz-linear-gradient`](/fr/docs/Web/CSS/-moz-linear-gradient) et [`-moz-radial-gradient`](/fr/docs/Web/CSS/-moz-radial-gradient) pour la propriété [`background`](/fr/docs/Web/CSS/background).
+- [Fonds multiples](/fr/docs/CSS/Fonds_multiples)
+  - : La propriété [`background`](/fr/docs/Web/CSS/background) (ainsi que [`background-attachment`](/fr/docs/Web/CSS/background-attachment)[`background-color`](/fr/docs/Web/CSS/background-color), [`background-image`](/fr/docs/Web/CSS/background-image), [`background-position`](/fr/docs/Web/CSS/background-position) et [`background-repeat`](/fr/docs/Web/CSS/background-repeat)) peuvent gérer des fonds multiples. Ceux-ci seront affichés par couches, les uns au dessus des autres.
+- [Fonctionnalités de médias spécifiques à Mozilla](/fr/docs/CSS/Media_queries#Fonctionnalit.C3.A9s_de_m.C3.A9dias_sp.C3.A9cifiques_.C3.A0_Mozilla)
+  - : Des fonctionnalités de médias ont été ajoutées pour des mesures spécifiques à Mozilla, afin de pouvoir utiliser des [media queries](/fr/docs/CSS/Media_queries) pour vérifier plus aisément la disponibilité de fonctionnalités comme un écran tactile.
+- [Redimensionnement d'images de fond](/fr/docs/CSS/Scaling_background_images)
+  - : La propriété `background-size` du [brouillon CSS 3 Backgrounds and Borders](http://dev.w3.org/csswg/css3-background/) est gérée sous le nom de [`-moz-background-size`](/fr/docs/Web/CSS/-moz-background-size).
+- [Support des polices WOFF](/fr/docs/WOFF)
+  - : [`@font-face`](/fr/docs/Web/CSS/@font-face) supporte désormais le format de polices Web téléchargeables WOFF
+- [Evènements pointeurs](/fr/docs/CSS/pointer-events)
+  - : La propriété [`pointer-events`](/fr/docs/Web/CSS/pointer-events) si le contenu d'un élément peut être ou non la cible d'évènements pointeur avec la souris.
 
-<dl>
- <dt>Terminaison des web workers par eux-mêmes</dt>
- <dd>Les web <a href="/fr/docs/DOM/Using_web_workers">workers</a> prennent désormais en charge la méthode <code><a href="/fr/docs/XPCOM_Interface_Reference/nsIWorkerScope#close()">nsIWorkerScope.close()</a></code>, qui leur permet de se terminer d'eux-mêmes.</dd>
- <dt>Glisser-déposer de fichiers</dt>
- <dd>L'objet <a href="/fr/docs/DragDrop/DataTransfer"><code>DataTransfer</code></a> fournit à présent aux observateurs de glisser-déposer une liste des fichiers glissés.</dd>
- <dt>Vérification pour voir si un élément correspond à un sélecteur CSS</dt>
- <dd>La nouvelle méthode <code>element.mozMatchesSelector</code> permet de déterminer si un élément correspond bien à un sélecteur CSS. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=518003">bug 518003</a>.</dd>
- <dt><a href="/fr/docs/Detecting_device_orientation">Dispositf de détection de l'orientation</a></dt>
- <dd>Le contenu peut à présent détecter l'orientation de l'appareil s'il dispose d'un accéléromètre, à l'aide de l'évènement <code>MozOrientation</code>. Firefox 3.6 gère notamment l'accéléromètre des ordinateurs portables Mac.</dd>
- <dt><a href="/fr/docs/Mozilla_event_reference/MozScrolledAreaChanged">Détection des changements de largeur et hauteur d'un document</a></dt>
- <dd>Le nouvel évènement <code>MozScrollAreaChanged</code> est déclenché lorsqu'une des propriétés <code>scrollWidth</code> ou <code>scrollHeight</code> d'un document change.</dd>
-</dl>
+#### Autres changements CSS
 
-<ul>
- <li>La méthode <code>getBoxObjectFor()</code> a été <strong>supprimée</strong>, car elle n'était pas standard et exposait d'autres fonctionnalités non standard. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=340571">bug 340571</a>. La bibliothèque <a href="http://mootools.net/">MooTools</a> qui utilisait cet appel pour la détection de Gecko est affectée ; cela a été corrigé dans la dernière version de MooTools, assurez-vous donc d'être à jour.</li>
- <li>Les nouvelles propriétés <a href="/fr/docs/DOM/window.mozInnerScreenX"><code>mozInnerScreenX</code></a> et <a href="/fr/docs/DOM/window.mozInnerScreenY"><code>mozInnerScreenY</code></a> sur les objets DOM window on été ajoutés ; ils renvoient les coordonnées à l'écran du coin supérieur gauche de la zone de visualisation de la fenêtre.</li>
- <li>La nouvelle propriété <code>mozScreenPixelsPerCSSPixel</code> de <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils">nsIDOMWindowUtils</a></code> uniquement accessible depuis le chrome, fournit un facteur de conversion entre les pixels CSS et les pixels à l'écran ; cette valeur peut varier selon le niveau de zoom du contenu.</li>
- <li>Lorsque l'identifiant de fragment de document de l'URL de la page change (la partie après le caractère « # » (dièse)), un nouvel évènement <code>hashchange</code> est envoyé à la page. Consultez <a href="/fr/docs/DOM/window.onhashchange">window.onhashchange</a> pour plus d'informations. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=385434">bug 385434</a></li>
- <li>L'attribut <a href="/fr/docs/DOM/document.readyState"><code>document.readyState</code></a> est désormais supporté. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=347174" title='FIXED: Implement document.readystate == "complete"'>bug 347174</a></li>
- <li>Gestion de l'attribut HTML5 <a href="/fr/docs/DOM/element.classList"><code>element.classList</code></a> pour permettre une gestion plus aisée de l'attribut class. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=501257">bug 501257</a></li>
- <li><code>localName</code> et <code>namespaceURI</code> dans les documents HTML se comportent à présent comme dans les documents XHTML : <code>localName</code> est renvoyé en minuscules et la propriété <code>namespaceURI</code> pour les éléments HTML est <code>"<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>"</code>.</li>
- <li><a href="/fr/docs/DOM/element.getElementsByTagNameNS"><code>element.getElementsByTagNameNS</code></a> son argument n'est plus en minuscules, alors en lettres majuscules ASCII dans l'argument établit des chaînes contre des éléments HTML échouent. Cela est vrai aussi pour <a href="/fr/docs/DOM/document.getElementsByTagNameNS"><code>document.getElementsByTagNameNS</code></a>.</li>
- <li>Ajout de la gestion des adresses dans la géolocalisation via l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPositionAddress">nsIDOMGeoPositionAddress</a></code> et d'un nouveau champ dans <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPosition">nsIDOMGeoPosition</a></code>.</li>
- <li>La fonction <a href="/fr/docs/Web/API/Window/getComputedStyle"><code>window.getComputedStyle</code></a> renvoie à présent les guillemets autour des valeurs url().</li>
-</ul>
+- L'unité de longueur [`rem`](/fr/docs/CSS/longueur) de [CSS3 Values and Units](http://www.w3.org/TR/css3-values/#lengths) est maintenant supportée. Voir [bug 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195).
+- [`image-rendering`](/fr/docs/Web/CSS/image-rendering) est gérée pour les images, images de fond, vidéos et canvas. Voir [bug 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756).
+- [`text-align`](/fr/docs/Web/CSS/text-align):end est maintenant supportée. Voir [bug 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837).
+- Les changements DOM sur des éléments utilisant les types de [`display`](/fr/docs/Web/CSS/display) table fonctionnent beaucoup mieux.
+- Ajout de [`:-moz-locale-dir(ltr)`](</fr/docs/Web/CSS/:-moz-locale-dir(ltr)>) et [`:-moz-locale-dir(rtl)`](</fr/docs/Web/CSS/:-moz-locale-dir(rtl)>) pour faciliter la personnalisation de mise en page selon l'orientation de l'interface dépendant de la locale (gauche à droite ou droite à gauche). Voir [bug 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416).
+- Ajout de la pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) correspondant aux éléments [`<input>`](/fr/docs/Web/HTML/Element/input) `checkbox` dont l'attribut `indeterminate` est `true`.
+- Les plugins fenêtrés ne sont plus affichés par la propriété CSS tranforms, car ils ne peuvent pas être correctement tranformés par le compositeur.
 
-<h3 id="XPath">XPath</h3>
+### HTML
 
-<dl>
- <dt>Gestion de la méthode XPath choose()</dt>
- <dd>La méthode <a href="/fr/docs/XPath/Functions/choose"><code>choose()</code></a> est à présent gérée par notre implémentation de <a href="/fr/docs/XPath">XPath</a>.</dd>
-</dl>
+- [Utilisation de fichiers à partir d'applications Web](/fr/docs/Using_files_from_web_applications)
+  - : Le support de la nouvelle API de fichier HTML5 a été ajouté à Gecko, ce qui permet à des applications Web d'accéder à des fichiers locaux sélectionnés par l'utilisateur.
+- Support des affiches pour les vidéos HTML5
+  - : L'attribut `poster` est pris en charge pour l'élément [`<video>`](/fr/docs/Web/HTML/Element/video), ce qui permet au contenu de choisir une image à afficher tant que la vidéo n'a pas commencée.
+- Support de la propriété `indeterminate` pour les cases à cocher et boutons radio
+  - : Les éléments HTML [`<input>`](/fr/docs/Web/HTML/Element/input) des types `checkbox` et `radio` supportent désormais la propriété indeterminate qui permet d'avoir un troisième état « indéterminé ».
+- Contrôle du lissage d'images dans canvas
+  - : La nouvelle propriété [`mozImageSmoothingEnabled`](/fr/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior) peut être utilisée pour activer et désactiver le lissage lors d'un redimensionnement dans les éléments [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
+- Exécution d'un script asynchrone
+  - : En définissant l'attribut `async` sur un élément [`<script>`](/fr/docs/Web/HTML/Element/script), le `script` ne bloquera pas le chargement ou l'affichage du reste de la page. En revanche, le `script` s'exécutera dès qu'il sera téléchargé.
 
-<h2 id="Pour_les_développeurs_XUL_et_les_développeurs_dextensions">Pour les développeurs XUL et les développeurs d'extensions</h2>
+### JavaScript
 
-<p>Si vous êtes un développeur d'extensions, vous devriez commencer par lire <a href="/fr/docs/Updating_extensions_for_Firefox_3.6">Updating extensions for Firefox 3.6</a>, qui offre une vue d'ensemble sur les changements qui pourraient affecter vos extensions. Les développeurs de Plug-in devraient lire <a href="/fr/docs/Updating_plug-ins_for_Firefox_3.6">Updating plug-ins for Firefox 3.6</a>.</p>
+Gecko 1.9.2 introduit JavaScript 1.8.2, qui ajoute un certain nombre de fonctionnalités de langage de la norme ECMAScript 5 :
 
-<h3 id="Nouvelles_fonctionnalités">Nouvelles fonctionnalités</h3>
+- `Date.parse()` peut analyser des dates ISO 8601 au format YYYY-MM-DD (année-mois-jour).
+- La propriété `prototype` d'instances de fonctions n'est plus énumérable.
 
-<dl>
- <dt><a href="/fr/docs/Detecting_device_orientation">Détection de l'orientation de l'appareil</a></dt>
- <dd>Le contenu peut maintenant détecter l'orientation de l'appareil si il possède un accéléromètre, en utilisant l'évènement <a href="/fr/docs/DOM/MozOrientation"><code>MozOrientation</code></a>. Firefox 3.6 supporte l'accéléromètre des ordinateurs portables Mac.</dd>
- <dt><a href="/fr/docs/Monitoring_HTTP_activity">Surveillance de l'activité HTTP</a></dt>
- <dd>Vous pouvez maintenant surveiller en temps réel les données HTTP demandées et reçues.</dd>
- <dt>Intégration à la Barre des tâches de Windows</dt>
- <dd>Il est maintenant possible de personnaliser l'apparence des fenêtres dans la barre des tâches sous Windows 7 ou plus récent. <em>C'est désactivé par défaut dans Firefox 3.6.</em></dd>
-</dl>
+### DOM
 
-<h3 id="Places">Places</h3>
+- Terminaison des web workers par eux-mêmes
+  - : Les web [workers](/fr/docs/DOM/Using_web_workers) prennent désormais en charge la méthode [`nsIWorkerScope.close()`](</fr/docs/XPCOM_Interface_Reference/nsIWorkerScope#close()>), qui leur permet de se terminer d'eux-mêmes.
+- Glisser-déposer de fichiers
+  - : L'objet [`DataTransfer`](/fr/docs/DragDrop/DataTransfer) fournit à présent aux observateurs de glisser-déposer une liste des fichiers glissés.
+- Vérification pour voir si un élément correspond à un sélecteur CSS
+  - : La nouvelle méthode `element.mozMatchesSelector` permet de déterminer si un élément correspond bien à un sélecteur CSS. Voir [bug 518003](https://bugzilla.mozilla.org/show_bug.cgi?id=518003).
+- [Dispositf de détection de l'orientation](/fr/docs/Detecting_device_orientation)
+  - : Le contenu peut à présent détecter l'orientation de l'appareil s'il dispose d'un accéléromètre, à l'aide de l'évènement `MozOrientation`. Firefox 3.6 gère notamment l'accéléromètre des ordinateurs portables Mac.
+- [Détection des changements de largeur et hauteur d'un document](/fr/docs/Mozilla_event_reference/MozScrolledAreaChanged)
+  - : Le nouvel évènement `MozScrollAreaChanged` est déclenché lorsqu'une des propriétés `scrollWidth` ou `scrollHeight` d'un document change.
 
-<ul>
- <li>Les requêtes peuvent maintenant utiliser l'attribut <code>redirectsMode</code> de l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions">nsINavHistoryQueryOptions</a></code> pour spécifier si il faut inclure ou non les pages redirigées dans les résultats.</li>
- <li>Ajout de la nouvelle méthode <code><a href="/fr/docs/XPCOM_Interface_Reference/nsIFaviconService#expireAllFavicons()">nsIFaviconService.expireAllFavicons()</a></code> à l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFaviconService">nsIFaviconService</a></code>.</li>
-</ul>
+<!---->
 
-<h3 id="Storage">Storage</h3>
+- La méthode `getBoxObjectFor()` a été **supprimée**, car elle n'était pas standard et exposait d'autres fonctionnalités non standard. Voir [bug 340571](https://bugzilla.mozilla.org/show_bug.cgi?id=340571). La bibliothèque [MooTools](http://mootools.net/) qui utilisait cet appel pour la détection de Gecko est affectée ; cela a été corrigé dans la dernière version de MooTools, assurez-vous donc d'être à jour.
+- Les nouvelles propriétés [`mozInnerScreenX`](/fr/docs/DOM/window.mozInnerScreenX) et [`mozInnerScreenY`](/fr/docs/DOM/window.mozInnerScreenY) sur les objets DOM window on été ajoutés ; ils renvoient les coordonnées à l'écran du coin supérieur gauche de la zone de visualisation de la fenêtre.
+- La nouvelle propriété `mozScreenPixelsPerCSSPixel` de [`nsIDOMWindowUtils`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils) uniquement accessible depuis le chrome, fournit un facteur de conversion entre les pixels CSS et les pixels à l'écran ; cette valeur peut varier selon le niveau de zoom du contenu.
+- Lorsque l'identifiant de fragment de document de l'URL de la page change (la partie après le caractère « # » (dièse)), un nouvel évènement `hashchange` est envoyé à la page. Consultez [window.onhashchange](/fr/docs/DOM/window.onhashchange) pour plus d'informations. [bug 385434](https://bugzilla.mozilla.org/show_bug.cgi?id=385434)
+- L'attribut [`document.readyState`](/fr/docs/DOM/document.readyState) est désormais supporté. [bug 347174](https://bugzilla.mozilla.org/show_bug.cgi?id=347174 'FIXED: Implement document.readystate == "complete"')
+- Gestion de l'attribut HTML5 [`element.classList`](/fr/docs/DOM/element.classList) pour permettre une gestion plus aisée de l'attribut class. [bug 501257](https://bugzilla.mozilla.org/show_bug.cgi?id=501257)
+- `localName` et `namespaceURI` dans les documents HTML se comportent à présent comme dans les documents XHTML : `localName` est renvoyé en minuscules et la propriété `namespaceURI` pour les éléments HTML est `"http://www.w3.org/1999/xhtml"`.
+- [`element.getElementsByTagNameNS`](/fr/docs/DOM/element.getElementsByTagNameNS) son argument n'est plus en minuscules, alors en lettres majuscules ASCII dans l'argument établit des chaînes contre des éléments HTML échouent. Cela est vrai aussi pour [`document.getElementsByTagNameNS`](/fr/docs/DOM/document.getElementsByTagNameNS).
+- Ajout de la gestion des adresses dans la géolocalisation via l'interface [`nsIDOMGeoPositionAddress`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPositionAddress) et d'un nouveau champ dans [`nsIDOMGeoPosition`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPosition).
+- La fonction [`window.getComputedStyle`](/fr/docs/Web/API/Window/getComputedStyle) renvoie à présent les guillemets autour des valeurs url().
 
-<dl>
- <dt><a href="/fr/docs/Storage#Collation_(sorting)">Tri des données locales avec l'API Storage</a></dt>
- <dd>Gecko 1.9.2 ajoute plusieurs nouvelles méthodes pour offrir une collecte (tri) optimisée des résulats en utilisant les techniques de localisation.</dd>
- <dt><a href="/fr/docs/mozIStorageStatementParams#Enumeration_of_properties">Énumération des propriétés d'une requête</a></dt>
- <dd>Vous pouvez maintenant utiliser <a href="/fr/docs/Guide_JavaScript_1.5/Instructions_de_manipulation_d%27objets#L%27instruction_for...in"><code>for...in</code></a> pour énumérer toutes les propriétés d'une déclaration.</dd>
- <dt>mozIStorageStatement's getParameterIndex a changé de comportement entre Firefox 3.5 et 3.6.</dt>
- <dd>Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=528166">bug 528166</a> pour plus de détails.</dd>
- <dt>Liaison asynchrone de plusieurs ensembles de paramètres pour exécution d'une requête.</dt>
- <dd>Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=490085">bug 490085</a> pour plus de détails.</dd>
-</dl>
+### XPath
 
-<h3 id="Préférences">Préférences</h3>
+- Gestion de la méthode XPath choose()
+  - : La méthode [`choose()`](/fr/docs/XPath/Functions/choose) est à présent gérée par notre implémentation de [XPath](/fr/docs/XPath).
 
-<ul>
- <li>L'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPrefService">nsIContentPrefService</a></code> a deux nouvelles méthodes : <code><a href="/fr/docs/XPCOM_Interface_Reference/nsIContentPrefService#getPrefsByName()">nsIContentPrefService.getPrefsByName()</a></code> et <code><a href="/fr/docs/XPCOM_Interface_Reference/nsIContentPrefService#removePrefsByName()">nsIContentPrefService.removePrefsByName()</a></code>.</li>
-</ul>
+## Pour les développeurs XUL et les développeurs d'extensions
 
-<h3 id="Thèmes">Thèmes</h3>
+Si vous êtes un développeur d'extensions, vous devriez commencer par lire [Updating extensions for Firefox 3.6](/fr/docs/Updating_extensions_for_Firefox_3.6), qui offre une vue d'ensemble sur les changements qui pourraient affecter vos extensions. Les développeurs de Plug-in devraient lire [Updating plug-ins for Firefox 3.6](/fr/docs/Updating_plug-ins_for_Firefox_3.6).
 
-<p>Voir <a href="/fr/docs/Updating_themes_for_Firefox_3.6">Updating themes for Firefox 3.6</a> pour la liste des changements liés aux thèmes.</p>
+### Nouvelles fonctionnalités
 
-<dl>
- <dt><a href="/fr/docs/Themes/Lightweight_themes">Thèmes légers</a></dt>
- <dd>Firefox 3.6 supporte les thèmes légers ; ce sont des thèmes faciles à créer et qui sont simplement appliqué sur le fond de la fenêtre du navigateur, en haut (barre d'adresses et boutons) et en bas (barre d'état). Il s'agit d'une intégration de l'architecture de thèmes <a href="http://www.getpersonas.com/">Personas</a> dans Firefox.</dd>
-</dl>
+- [Détection de l'orientation de l'appareil](/fr/docs/Detecting_device_orientation)
+  - : Le contenu peut maintenant détecter l'orientation de l'appareil si il possède un accéléromètre, en utilisant l'évènement [`MozOrientation`](/fr/docs/DOM/MozOrientation). Firefox 3.6 supporte l'accéléromètre des ordinateurs portables Mac.
+- [Surveillance de l'activité HTTP](/fr/docs/Monitoring_HTTP_activity)
+  - : Vous pouvez maintenant surveiller en temps réel les données HTTP demandées et reçues.
+- Intégration à la Barre des tâches de Windows
+  - : Il est maintenant possible de personnaliser l'apparence des fenêtres dans la barre des tâches sous Windows 7 ou plus récent. _C'est désactivé par défaut dans Firefox 3.6._
 
-<h3 id="Divers">Divers</h3>
+### Places
 
-<ul>
- <li>Firefox n'a plus la charge des modules tiers installé dans son répertoire des modules internes. Cela contribue à assurer la stabilité en empêchant des composants tiers buggés d'être exécuté. Les développeurs qui installent des composants de cette façon doivent <a href="/fr/docs/Migrating_raw_components_to_add-ons">refaire leurs modules sous forme de paquets XPI</a> afin qu'ils puissent être installés normalement.</li>
- <li><code>contents.rdf</code> n'est plus pris en charge pour l'enregistrement chrome dans les extensions. Vous devez maintenant utiliser le fichier <a href="/fr/docs/Install_Manifests"><code>chrome.manifest</code></a>. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=492008">bug 492008</a>.</li>
- <li>La barre de menu peut être cachée automatiquement. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=477256">bug 477256</a>.</li>
- <li>Ajout du support de l'attribut <code>container-live-role</code> aux objets. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=391829">bug 391829</a>.</li>
- <li>Suppression de la liaison <code>tabs-closebutton</code>. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=500971">bug 500971</a>.</li>
- <li>Ajout du support de <code>nsISound</code> pour jouer des sons en fonction des évènements qui ont eu lieu. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=502799">bug 502799</a>.</li>
- <li>La syntaxe pour les méthodes de <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView">nsITreeView</a></code> : <code><a href="/fr/docs/XPCOM_Interface_Reference/nsITreeView#canDrop()">nsITreeView.canDrop()</a></code> et <code><a href="/fr/docs/XPCOM_Interface_Reference/nsITreeView#drop()">nsITreeView.drop()</a></code>, a changé pour supporter la nouvelle API glisser &amp; déposer introduite dans Gecko 1.9. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=455590">bug 455590</a>.</li>
- <li>Ajout du support pour aligner le curseur de la souris sur le bouton par défaut de la boîte de dialogue ou l'assistant de Windows, voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=76053" title='FIXED: Windows mouse integration: "Snap to default button in dialog boxes"'>bug 76053</a>. Cela est traitée automatiquement par la boîte de dialogue et l'assistant. Mais si une application XUL crée une fenêtre en utilisant l'élément <code>window</code> et qu'il a un bouton par défaut, il doit appeler <code><a href="/fr/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow#notifyDefaultButtonLoaded()">nsIDOMChromeWindow.notifyDefaultButtonLoaded()</a></code> dans le gestionnaire d'événements onload de la fenêtre.</li>
- <li>Pour l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFileMac">nsILocalFileMac</a></code>, deux méthodes ont étés retirées : <code>setFileTypeAndCreatorFromMIMEType()</code> and <code>setFileTypeAndCreatorFromExtension()</code>.</li>
- <li>Le nouveau module de code <a href="/fr/docs/JavaScript_code_modules/NetUtil.jsm"><code>NetUtils.jsm</code></a> apporte une méthode facile à utiliser pour copier les données de manière asynchrone à partir d'un flux d'entrée vers un flux de sortie.</li>
- <li>Le nouveau module de code <a href="/fr/docs/JavaScript_code_modules/openLocationLastURL.jsm"><code>openLocationLastURL.jsm</code></a>, facilite la lecture et la modification de la valeur de l'URL gardée en mémoire de la boîte de dialogue "Ouvrir le fichier", tout en prenant bien en compte le mode de navigation privée.</li>
- <li>Dans Windows, l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScreen">nsIScreen</a></code> reporte maintenant 24 bits par pixel pour la profondeur des couleurs lorsque le pilote graphique demande 32 bits, plus précisement 24 représente le nombre réel de pixels de couleurs en utilisation.</li>
- <li>Les barres de menu peuvent maintenant être cachées sous Windows, en utilisant le nouvel attribut <code><a href="/fr/docs/Mozilla/Tech/XUL/Attributs/autohide">autohide</a></code> sur l'élément XUL <code><a href="/fr/docs/Mozilla/Tech/XUL/toolbar">toolbar</a></code>.</li>
- <li>Les méthodes <code><a href="/fr/docs/Mozilla/Tech/XUL/Méthodes/loadOneTab">loadOneTab</a></code> et <code><a href="/fr/docs/Mozilla/Tech/XUL/Méthodes/addTab">addTab</a></code> acceptent maintenant le nouveau paramètre <code>relatedToCurrent</code> et, en outre, permet à des paramètres d'être définit par un nom, puisque presque tous les paramètres sont optionnels.</li>
- <li>La propriété "<a href="/fr/docs/Install_Manifests#hidden">hidden</a>" n'est plus supportée dans les manisfestes d'installation ; il n'est plus possible d'empêcher l'utilisateur de voir des modules complémentaires dans la fenêtre du gestionnaire de module.</li>
- <li>Le composant <code>@mozilla.org/webshell;1</code> n'existe plus ; vous devez utilisez <code>@mozilla.org/docshell;1</code> à la place.</li>
- <li>Vous pouvez désormais enregistrer avec la catégorie update-timer pour programmer la synchronisation des événements sans avoir à instancier l'objet que le minuteur va éventuellement remettre, il sera plutôt instancié lorsque c'est nécessaire. Voir <code><a href="/fr/docs/XPCOM_Interface_Reference/nsIUpdateTimerManager#registerTimer()">nsIUpdateTimerManager.registerTimer()</a></code> pour plus de détails.</li>
- <li>La fonction <a href="/fr/docs/NPN_GetValue"><code>NPN_GetValue</code></a> ne donne plus accès à travers XPCOM aux valeurs de variables <code>NPNVserviceManager</code>, <code>NPNVDOMelement</code>, et <code>NPNVDOMWindow</code>. Cela fait partie des travaux pour que les plugins s'exécutent dans des processus séparés dans une future version de Gecko.</li>
- <li>Les plugins ne sont plus scriptables à travers l'interface XPCOM (IDL), <a href="/fr/docs/Gecko_Plugin_API_Reference/Scripting_plugins">NPRuntime</a> est l'API à utiliser pour coder des plugins et <a href="/fr/docs/NPP_GetValue"><code>NPP_GetValue()</code></a> n'est plus appelé avec la valeur <code>NPPVpluginScriptableInstance</code> ou <code>NPPVpluginScriptableIID</code>. Cela fait partie des travaux pour que les plugins s'exécutent dans des processus séparés dans une future version de Gecko.</li>
-</ul>
+- Les requêtes peuvent maintenant utiliser l'attribut `redirectsMode` de l'interface [`nsINavHistoryQueryOptions`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions) pour spécifier si il faut inclure ou non les pages redirigées dans les résultats.
+- Ajout de la nouvelle méthode [`nsIFaviconService.expireAllFavicons()`](</fr/docs/XPCOM_Interface_Reference/nsIFaviconService#expireAllFavicons()>) à l'interface [`nsIFaviconService`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFaviconService).
 
-<h2 id="Pours_les_développeurs_de_FirefoxGecko">Pours les développeurs de Firefox/Gecko</h2>
+### Storage
 
-<p>Certains changements sont vraiment intéressant si vous travaillez sur le fonctionnement interne de Firefox.</p>
+- [Tri des données locales avec l'API Storage](</fr/docs/Storage#Collation_(sorting)>)
+  - : Gecko 1.9.2 ajoute plusieurs nouvelles méthodes pour offrir une collecte (tri) optimisée des résulats en utilisant les techniques de localisation.
+- [Énumération des propriétés d'une requête](/fr/docs/mozIStorageStatementParams#Enumeration_of_properties)
+  - : Vous pouvez maintenant utiliser [`for...in`](/fr/docs/Guide_JavaScript_1.5/Instructions_de_manipulation_d%27objets#L%27instruction_for...in) pour énumérer toutes les propriétés d'une déclaration.
+- mozIStorageStatement's getParameterIndex a changé de comportement entre Firefox 3.5 et 3.6.
+  - : Voir [bug 528166](https://bugzilla.mozilla.org/show_bug.cgi?id=528166) pour plus de détails.
+- Liaison asynchrone de plusieurs ensembles de paramètres pour exécution d'une requête.
+  - : Voir [bug 490085](https://bugzilla.mozilla.org/show_bug.cgi?id=490085) pour plus de détails.
 
-<h3 id="Interfaces_fusionnées">Interfaces fusionnées</h3>
+### Préférences
 
-<p>Les interfaces suivantes ont été fusionnées :</p>
+- L'interface [`nsIContentPrefService`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPrefService) a deux nouvelles méthodes : [`nsIContentPrefService.getPrefsByName()`](</fr/docs/XPCOM_Interface_Reference/nsIContentPrefService#getPrefsByName()>) et [`nsIContentPrefService.removePrefsByName()`](</fr/docs/XPCOM_Interface_Reference/nsIContentPrefService#removePrefsByName()>).
 
-<ul>
- <li><code>nsIPluginTagInfo2</code> a été fusionnée avec <code>nsIPluginTagInfo</code>.</li>
- <li><code>nsIPluginInstanceInternal</code>, <code>nsIPPluginInstancePeer</code>, <code>nsIPluginInstancePeer1</code>, <code>nsIPluginInstancePeer2</code> et <code>nsIPluginInstancePeer3</code> ont toutes été fusionnées avec <code>nsIPluginInstance</code>.</li>
- <li><code>nsIWindowlessPlugInstPeer</code> a été fusionnée avec <code>nsIPluginInstance</code>.</li>
- <li><code>nsIPluginManager</code> et <code>nsIPluginManager2</code> ont été fusionnées avec <code>nsIPluginHost</code></li>
-</ul>
+### Thèmes
 
-<h3 id="Interfaces_supprimées">Interfaces supprimées</h3>
+Voir [Updating themes for Firefox 3.6](/fr/docs/Updating_themes_for_Firefox_3.6) pour la liste des changements liés aux thèmes.
 
-<p>Les interfaces suivantes ont été entièrement supprimées car elles étaient inutilisées, non implémentées ou obsolètes :</p>
+- [Thèmes légers](/fr/docs/Themes/Lightweight_themes)
+  - : Firefox 3.6 supporte les thèmes légers ; ce sont des thèmes faciles à créer et qui sont simplement appliqué sur le fond de la fenêtre du navigateur, en haut (barre d'adresses et boutons) et en bas (barre d'état). Il s'agit d'une intégration de l'architecture de thèmes [Personas](http://www.getpersonas.com/) dans Firefox.
 
-<ul>
- <li><code>nsIFullScreen</code></li>
- <li><code>nsIDOMSVGListener</code></li>
- <li><code>nsIDOMSVGZoomListener</code></li>
- <li><code>nsIInternetConfigService</code></li>
- <li><code>nsIDKey</code></li>
- <li><code>nsIEventHandler</code></li>
- <li><code>nsIJRILiveConnectPIPeer</code></li>
- <li><code>nsIJRILiveConnectPlugin</code></li>
- <li><code>nsIScriptablePlugin</code></li>
- <li><code>nsIClassicPluginFactory</code></li>
- <li><code>nsIFileUtilities</code></li>
-</ul>
+### Divers
 
-<h3 id="Interfaces_déplacées">Interfaces déplacées</h3>
+- Firefox n'a plus la charge des modules tiers installé dans son répertoire des modules internes. Cela contribue à assurer la stabilité en empêchant des composants tiers buggés d'être exécuté. Les développeurs qui installent des composants de cette façon doivent [refaire leurs modules sous forme de paquets XPI](/fr/docs/Migrating_raw_components_to_add-ons) afin qu'ils puissent être installés normalement.
+- `contents.rdf` n'est plus pris en charge pour l'enregistrement chrome dans les extensions. Vous devez maintenant utiliser le fichier [`chrome.manifest`](/fr/docs/Install_Manifests). Voir [bug 492008](https://bugzilla.mozilla.org/show_bug.cgi?id=492008).
+- La barre de menu peut être cachée automatiquement. Voir [bug 477256](https://bugzilla.mozilla.org/show_bug.cgi?id=477256).
+- Ajout du support de l'attribut `container-live-role` aux objets. Voir [bug 391829](https://bugzilla.mozilla.org/show_bug.cgi?id=391829).
+- Suppression de la liaison `tabs-closebutton`. Voir [bug 500971](https://bugzilla.mozilla.org/show_bug.cgi?id=500971).
+- Ajout du support de `nsISound` pour jouer des sons en fonction des évènements qui ont eu lieu. Voir [bug 502799](https://bugzilla.mozilla.org/show_bug.cgi?id=502799).
+- La syntaxe pour les méthodes de [`nsITreeView`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView) : [`nsITreeView.canDrop()`](</fr/docs/XPCOM_Interface_Reference/nsITreeView#canDrop()>) et [`nsITreeView.drop()`](</fr/docs/XPCOM_Interface_Reference/nsITreeView#drop()>), a changé pour supporter la nouvelle API glisser & déposer introduite dans Gecko 1.9. Voir [bug 455590](https://bugzilla.mozilla.org/show_bug.cgi?id=455590).
+- Ajout du support pour aligner le curseur de la souris sur le bouton par défaut de la boîte de dialogue ou l'assistant de Windows, voir [bug 76053](https://bugzilla.mozilla.org/show_bug.cgi?id=76053 'FIXED: Windows mouse integration: "Snap to default button in dialog boxes"'). Cela est traitée automatiquement par la boîte de dialogue et l'assistant. Mais si une application XUL crée une fenêtre en utilisant l'élément `window` et qu'il a un bouton par défaut, il doit appeler [`nsIDOMChromeWindow.notifyDefaultButtonLoaded()`](</fr/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow#notifyDefaultButtonLoaded()>) dans le gestionnaire d'événements onload de la fenêtre.
+- Pour l'interface [`nsILocalFileMac`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFileMac), deux méthodes ont étés retirées : `setFileTypeAndCreatorFromMIMEType()` and `setFileTypeAndCreatorFromExtension()`.
+- Le nouveau module de code [`NetUtils.jsm`](/fr/docs/JavaScript_code_modules/NetUtil.jsm) apporte une méthode facile à utiliser pour copier les données de manière asynchrone à partir d'un flux d'entrée vers un flux de sortie.
+- Le nouveau module de code [`openLocationLastURL.jsm`](/fr/docs/JavaScript_code_modules/openLocationLastURL.jsm), facilite la lecture et la modification de la valeur de l'URL gardée en mémoire de la boîte de dialogue "Ouvrir le fichier", tout en prenant bien en compte le mode de navigation privée.
+- Dans Windows, l'interface [`nsIScreen`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScreen) reporte maintenant 24 bits par pixel pour la profondeur des couleurs lorsque le pilote graphique demande 32 bits, plus précisement 24 représente le nombre réel de pixels de couleurs en utilisation.
+- Les barres de menu peuvent maintenant être cachées sous Windows, en utilisant le nouvel attribut [`autohide`](/fr/docs/Mozilla/Tech/XUL/Attributs/autohide) sur l'élément XUL [`toolbar`](/fr/docs/Mozilla/Tech/XUL/toolbar).
+- Les méthodes [`loadOneTab`](/fr/docs/Mozilla/Tech/XUL/Méthodes/loadOneTab) et [`addTab`](/fr/docs/Mozilla/Tech/XUL/Méthodes/addTab) acceptent maintenant le nouveau paramètre `relatedToCurrent` et, en outre, permet à des paramètres d'être définit par un nom, puisque presque tous les paramètres sont optionnels.
+- La propriété "[hidden](/fr/docs/Install_Manifests#hidden)" n'est plus supportée dans les manisfestes d'installation ; il n'est plus possible d'empêcher l'utilisateur de voir des modules complémentaires dans la fenêtre du gestionnaire de module.
+- Le composant `@mozilla.org/webshell;1` n'existe plus ; vous devez utilisez `@mozilla.org/docshell;1` à la place.
+- Vous pouvez désormais enregistrer avec la catégorie update-timer pour programmer la synchronisation des événements sans avoir à instancier l'objet que le minuteur va éventuellement remettre, il sera plutôt instancié lorsque c'est nécessaire. Voir [`nsIUpdateTimerManager.registerTimer()`](</fr/docs/XPCOM_Interface_Reference/nsIUpdateTimerManager#registerTimer()>) pour plus de détails.
+- La fonction [`NPN_GetValue`](/fr/docs/NPN_GetValue) ne donne plus accès à travers XPCOM aux valeurs de variables `NPNVserviceManager`, `NPNVDOMelement`, et `NPNVDOMWindow`. Cela fait partie des travaux pour que les plugins s'exécutent dans des processus séparés dans une future version de Gecko.
+- Les plugins ne sont plus scriptables à travers l'interface XPCOM (IDL), [NPRuntime](/fr/docs/Gecko_Plugin_API_Reference/Scripting_plugins) est l'API à utiliser pour coder des plugins et [`NPP_GetValue()`](/fr/docs/NPP_GetValue) n'est plus appelé avec la valeur `NPPVpluginScriptableInstance` ou `NPPVpluginScriptableIID`. Cela fait partie des travaux pour que les plugins s'exécutent dans des processus séparés dans une future version de Gecko.
 
-<p>Les interfaces suivantes ont été déplacées de leurs précédents fichiers IDL vers leurs nouveaux :</p>
+## Pours les développeurs de Firefox/Gecko
 
-<ul>
- <li><code>nsIDOMNSCSS2Properties</code> est maintenant située dans son propre fichier IDL (<code>dom/interfaces/css/nsIDOMCSS2Properties.idl</code>).</li>
- <li><code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIUpdateTimerManager">nsIUpdateTimerManager</a></code> est maintenant située dans son propre fichier IDL.</li>
-</ul>
+Certains changements sont vraiment intéressant si vous travaillez sur le fonctionnement interne de Firefox.
 
-<p>Un grand nombre d'interfaces ont été déplacées. Voir <a href="/fr/docs/Interfaces_moved_in_Firefox_3.6">Interfaces moved in Firefox 3.6</a> pour la liste complète.</p>
+### Interfaces fusionnées
 
-<h3 id="Autres_changements_dans_les_interfaces">Autres changements dans les interfaces</h3>
+Les interfaces suivantes ont été fusionnées :
 
-<p>Les modifications suivantes ont été faites :</p>
+- `nsIPluginTagInfo2` a été fusionnée avec `nsIPluginTagInfo`.
+- `nsIPluginInstanceInternal`, `nsIPPluginInstancePeer`, `nsIPluginInstancePeer1`, `nsIPluginInstancePeer2` et `nsIPluginInstancePeer3` ont toutes été fusionnées avec `nsIPluginInstance`.
+- `nsIWindowlessPlugInstPeer` a été fusionnée avec `nsIPluginInstance`.
+- `nsIPluginManager` et `nsIPluginManager2` ont été fusionnées avec `nsIPluginHost`
 
-<ul>
- <li>L'interface <code>nsIPlugin</code> hérite maintenant de <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports">nsISupports</a></code> à la place de <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFactory">nsIFactory</a></code>.</li>
- <li>L'interface <code>nsIPluginHost</code> hérite maintenant de <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports">nsISupports</a></code> à la place de <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFactory">nsIFactory</a></code>.</li>
- <li>L'interface <code>nsIFrame</code> hérite maintenant de <code>nsQueryFrame</code> à la place de <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports">nsISupports</a></code>.</li>
- <li>La méthode <code>getPaletteInfo()</code> de <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDeviceContext">nsIDeviceContext</a></code> a été supprimée, car elle n'a jamais été appliquée.</li>
- <li>La méthode <code>reportPendingException()</code> de <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScriptContext">nsIScriptContext</a></code> a été supprimée, car elle n'été plus utilisée.</li>
-</ul>
+### Interfaces supprimées
 
-<h3 id="Changements_dans_laccessibilitée_du_code">Changements dans l'accessibilitée du code</h3>
+Les interfaces suivantes ont été entièrement supprimées car elles étaient inutilisées, non implémentées ou obsolètes :
 
-<ul>
- <li>L'<a href="/fr/docs/XPCOM_Interface_Reference/nsIAccessibleEvent">évènement d'accessibilité</a> <code>EVENT_REORDER</code> est maintenant envoyé quand les enfants de <code>frames</code> et d'<code>iframes</code> changent, ainsi que lors de la modification du document principal des enfants. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=420845">bug 420845</a>.</li>
- <li>Désormais toute sélection en cours est correctement supprimée avant de sélectionner une ligne spécifique.</li>
-</ul>
+- `nsIFullScreen`
+- `nsIDOMSVGListener`
+- `nsIDOMSVGZoomListener`
+- `nsIInternetConfigService`
+- `nsIDKey`
+- `nsIEventHandler`
+- `nsIJRILiveConnectPIPeer`
+- `nsIJRILiveConnectPlugin`
+- `nsIScriptablePlugin`
+- `nsIClassicPluginFactory`
+- `nsIFileUtilities`
 
-<h2 id="Voir_également">Voir également</h2>
+### Interfaces déplacées
 
-<ul>
-<li><a href="/fr/docs/Mozilla/Firefox/Versions/3.5">Firefox 3.5 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/3">Firefox 3 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/2">Firefox 2 pour les développeurs</a></li><li><a href="/fr/docs/Mozilla/Firefox/Versions/1.5">Firefox 1.5 pour les développeurs</a></li></ul>
+Les interfaces suivantes ont été déplacées de leurs précédents fichiers IDL vers leurs nouveaux :
+
+- `nsIDOMNSCSS2Properties` est maintenant située dans son propre fichier IDL (`dom/interfaces/css/nsIDOMCSS2Properties.idl`).
+- [`nsIUpdateTimerManager`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIUpdateTimerManager) est maintenant située dans son propre fichier IDL.
+
+Un grand nombre d'interfaces ont été déplacées. Voir [Interfaces moved in Firefox 3.6](/fr/docs/Interfaces_moved_in_Firefox_3.6) pour la liste complète.
+
+### Autres changements dans les interfaces
+
+Les modifications suivantes ont été faites :
+
+- L'interface `nsIPlugin` hérite maintenant de [`nsISupports`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports) à la place de [`nsIFactory`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFactory).
+- L'interface `nsIPluginHost` hérite maintenant de [`nsISupports`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports) à la place de [`nsIFactory`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFactory).
+- L'interface `nsIFrame` hérite maintenant de `nsQueryFrame` à la place de [`nsISupports`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports).
+- La méthode `getPaletteInfo()` de [`nsIDeviceContext`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDeviceContext) a été supprimée, car elle n'a jamais été appliquée.
+- La méthode `reportPendingException()` de [`nsIScriptContext`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScriptContext) a été supprimée, car elle n'été plus utilisée.
+
+### Changements dans l'accessibilitée du code
+
+- L'[évènement d'accessibilité](/fr/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) `EVENT_REORDER` est maintenant envoyé quand les enfants de `frames` et d'`iframes` changent, ainsi que lors de la modification du document principal des enfants. Voir [bug 420845](https://bugzilla.mozilla.org/show_bug.cgi?id=420845).
+- Désormais toute sélection en cours est correctement supprimée avant de sélectionner une ligne spécifique.
+
+## Voir également
+
+- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.5)
+- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3)
+- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/2)
+- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/1.5)

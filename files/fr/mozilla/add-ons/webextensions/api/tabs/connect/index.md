@@ -13,48 +13,47 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/connect
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Appelez cette fonction pour configurer une connexion entre les scripts d'arrière-plan de l'extension (ou d'autres scripts privilégiés, tels que les scripts d'arrière-plan de l'extrension (ou d'autres scripts privilégiés, tels que les scripts de pages d'options) et les <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">scripts de contenu</a> appartenant à cette extension et s'exécutant dans l'onglet spécifié. Cette fonction renvoie un objet {{WebExtAPIRef("runtime.Port")}}.</p>
+Appelez cette fonction pour configurer une connexion entre les scripts d'arrière-plan de l'extension (ou d'autres scripts privilégiés, tels que les scripts d'arrière-plan de l'extrension (ou d'autres scripts privilégiés, tels que les scripts de pages d'options) et les [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) appartenant à cette extension et s'exécutant dans l'onglet spécifié. Cette fonction renvoie un objet {{WebExtAPIRef("runtime.Port")}}.
 
-<p>Lorsque cela est appelée, l'événement {{WebExtAPIRef('runtime.onConnect')}} est déclenché dans tout script de contenu appartenant à cette extension qui s'exécute dans l'onglet spécifié. L'écouteur d'événement recevra un autre objet  {{WebExtAPIRef("runtime.Port")}}. Les deux parties peuvent ensuite utiliser les objets <code>Port</code> pour échanger des messages.</p>
+Lorsque cela est appelée, l'événement {{WebExtAPIRef('runtime.onConnect')}} est déclenché dans tout script de contenu appartenant à cette extension qui s'exécute dans l'onglet spécifié. L'écouteur d'événement recevra un autre objet  {{WebExtAPIRef("runtime.Port")}}. Les deux parties peuvent ensuite utiliser les objets `Port` pour échanger des messages.
 
-<p>Pour plus de détails, voir <a href="/fr/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based messaging</a>.</p>
+Pour plus de détails, voir [connection-based messaging](/fr/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">browser.tabs.connect(
+```js
+browser.tabs.connect(
   tabId,      // integer
   connectInfo // optional object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. ID of the tab whose content scripts we want to connect to.</dd>
- <dt><code>connectInfo</code>{{optional_inline}}</dt>
- <dd><p><code>object</code>.</p>
- <dl>
-  <dt><code>name</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} event listeners in content scripts belonging to this extension and running in the specified tab.</dd>
-  <dt><code>frameId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Open a port to a specific frame identified by <code>frameId</code> instead of all frames in the tab.</dd>
- </dl>
- </dd>
-</dl>
+- `tabId`
+  - : `integer`. ID of the tab whose content scripts we want to connect to.
+- `connectInfo`{{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : `object`.
 
-<p>{{WebExtAPIRef('runtime.Port')}}. A port that can be used to communicate with the content scripts running in the specified tab.</p>
+    - `name`{{optional_inline}}
+      - : `string`. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} event listeners in content scripts belonging to this extension and running in the specified tab.
+    - `frameId`{{optional_inline}}
+      - : `integer`. Open a port to a specific frame identified by `frameId` instead of all frames in the tab.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>In this example a background script listens for a click on a <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">browser action</a>, then connects to the currently active tab, then sends a message using the <code>Port</code> that's returned from <code>connect()</code>:</p>
+{{WebExtAPIRef('runtime.Port')}}. A port that can be used to communicate with the content scripts running in the specified tab.
 
-<pre class="brush: js">function connectToTab(tabs) {
-  if (tabs.length &gt; 0) {
+## Examples
+
+In this example a background script listens for a click on a [browser action](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2), then connects to the currently active tab, then sends a message using the `Port` that's returned from `connect()`:
+
+```js
+function connectToTab(tabs) {
+  if (tabs.length > 0) {
     var examplePort = browser.tabs.connect(
       tabs[0].id,
       {name: "tabs-connect-example"}
@@ -73,23 +72,21 @@ browser.browserAction.onClicked.addListener(function() {
   });
   gettingActive.then(connectToTab, onError);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.connect")}}</p>
+{{Compat("webextensions.api.tabs.connect")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -116,5 +113,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

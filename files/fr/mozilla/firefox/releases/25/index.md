@@ -9,82 +9,70 @@ tags:
   - TopicStub
 translation_of: Mozilla/Firefox/Releases/25
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<h2 id="Changements_pour_les_développeurs_Web">Changements pour les développeurs Web</h2>
+## Changements pour les développeurs Web
 
-<h3 id="Nouveau_dans_Firefox_DevTools">Nouveau dans Firefox DevTools</h3>
+### Nouveau dans Firefox DevTools
 
-<ul>
- <li>L'inspecteur propose désormais la saisie semi-automatique des noms et valeurs CSS.</li>
- <li>Le débogueur vous permet désormais de créer des fichiers de script "boîte noire", pour empêcher les points d'arrêt de s'arrêter dans le code de la bibliothèque que vous n'êtes pas intéressé par le débogage.</li>
- <li>Le profileur a désormais la possibilité d'enregistrer et d'importer les résultats du profilage. "Afficher les données de la plateforme Gecko" est désormais une option dans les options des outils de développement Firefox.</li>
- <li>Le panneau Réseau dispose d'un menu contextuel accessible par clic droit, avec des commandes de copie et de renvoi d'URL.</li>
- <li>De nombreux changements sous le capot peuvent rendre nécessaire une réécriture pour les addons qui modifient les DevTools.</li>
-</ul>
+- L'inspecteur propose désormais la saisie semi-automatique des noms et valeurs CSS.
+- Le débogueur vous permet désormais de créer des fichiers de script "boîte noire", pour empêcher les points d'arrêt de s'arrêter dans le code de la bibliothèque que vous n'êtes pas intéressé par le débogage.
+- Le profileur a désormais la possibilité d'enregistrer et d'importer les résultats du profilage. "Afficher les données de la plateforme Gecko" est désormais une option dans les options des outils de développement Firefox.
+- Le panneau Réseau dispose d'un menu contextuel accessible par clic droit, avec des commandes de copie et de renvoi d'URL.
+- De nombreux changements sous le capot peuvent rendre nécessaire une réécriture pour les addons qui modifient les DevTools.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>La prise en charge du mot clé <code>local</code> en tant que valeur de la propriété CSS {{cssxref("background-attachment")}} a été ajoutée ({{bug("483446")}}).</li>
- <li>La prise en charge d'une requête multimédia non standard de Mozilla uniquement pour déterminer la version du système d'exploitation a été ajoutée: <code><a href="/fr/docs/Web/Guide/CSS/Media_queries#-moz-os-version">-moz-os-version</a></code> ({{bug("810399")}}). La propriété n'est actuellement implémentée que sur Windows.</li>
- <li>La propriété CSS {{cssxref("-moz-osx-font-smoothing")}} a été ajoutée ({{bug("857142")}}).</li>
- <li>Notre support expérimental pour {{cssxref("filter")}} prend désormais en charge la notation fonctionnelle <code>hue-rotate()</code> ({{bug(897392)}}). Il est toujours désactivé par défaut.</li>
- <li>
-  <p><code>page-break-inside</code><code>: avoid</code> travaille maintenant avec la hauteur d'un bloc ({{bug(883676)}}).</p>
- </li>
-</ul>
+- La prise en charge du mot clé `local` en tant que valeur de la propriété CSS {{cssxref("background-attachment")}} a été ajoutée ({{bug("483446")}}).
+- La prise en charge d'une requête multimédia non standard de Mozilla uniquement pour déterminer la version du système d'exploitation a été ajoutée: [`-moz-os-version`](/fr/docs/Web/Guide/CSS/Media_queries#-moz-os-version) ({{bug("810399")}}). La propriété n'est actuellement implémentée que sur Windows.
+- La propriété CSS {{cssxref("-moz-osx-font-smoothing")}} a été ajoutée ({{bug("857142")}}).
+- Notre support expérimental pour {{cssxref("filter")}} prend désormais en charge la notation fonctionnelle `hue-rotate()` ({{bug(897392)}}). Il est toujours désactivé par défaut.
+- ` page-break-inside``: avoid ` travaille maintenant avec la hauteur d'un bloc ({{bug(883676)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>L'attribut {{htmlattrxref("srcdoc", "iframe")}}, permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}},  est maintenant pris en charge ({{bug("802895")}}).</li>
- <li>Lorsqu'elle est utilisée avec un type <code>"image/jpeg"</code>, la méthode <code>HTMLCanvasElement.toBlob</code> accepte désormais un troisième attribut définissant la qualité de l'image ({{bug("891884")}}).</li>
-</ul>
+- L'attribut {{htmlattrxref("srcdoc", "iframe")}}, permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}},  est maintenant pris en charge ({{bug("802895")}}).
+- Lorsqu'elle est utilisée avec un type `"image/jpeg"`, la méthode `HTMLCanvasElement.toBlob` accepte désormais un troisième attribut définissant la qualité de l'image ({{bug("891884")}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>L'implémentation d'<a href="/fr/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla">EcmaScript 6</a> (Harmony) continue!</p>
+L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) continue!
 
-<ul>
- <li>La méthode {{jsxref("Array.of()")}} est maintenant implémentée sur  <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> ({{bug("866849")}}).</li>
- <li>Le support des méthodes {{jsxref("Array.prototype.find()")}} et {{jsxref("Array.prototype.findIndex()")}} a été ajouté ({{bug("885553")}}).</li>
- <li>Les méthodes {{jsxref("Global_Objects/Number/parseInt", "Number.parseInt()")}} et {{jsxref("Global_Objects/Number/parseFloat", "Number.parseFloat()")}} ont été implémentées ({{bug("886949")}}).</li>
- <li>Les méthodes {{jsxref("Map.prototype.forEach()")}} et {{jsxref("Set.prototype.forEach()")}} sont maintenant implémentées ({{bug("866847")}}).</li>
- <li>De nouvelles méthodes mathématiques ont été implémentées sur <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Math"><code>Math</code></a>: <code>Math.log10()</code>, <code>Math.log2()</code>, <code>Math.log1p()</code>, <code>Math.expm1()</code>, <code>Math.cosh()</code>, <code>Math.sinh()</code>, <code>Math.tanh()</code>, <code>Math.acosh()</code>, <code>Math.asinh()</code>, <code>Math.atanh()</code>, <code>Math.trunc()</code>, <code>Math.sign()</code> et <code>Math.cbrt()</code> ({{bug("717379")}}).</li>
- <li>La prise en charge des littéraux d'entiers binaires et octaux a été ajoutée: <code>0b10101010</code>, <code>0B1010</code>, <code>0o777</code>, <code>0O237</code> sont désormais valides ({{bug("894026")}}).</li>
- <li>La constante epsilon de la machine, c'est-à-dire le plus petit nombre représentable qui ajouté à 1 ne sera pas 1, est désormais disponible sous la forme {{jsxref("Global_Objects/Number/EPSILON", "Number.EPSILON")}} ({{bug("885798")}}).</li>
- <li>Les <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">tableaux typés</a> ont été mis à jour pour <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Indexed_property_access">ne plus rechercher dans la chaîne de prototypes les propriétés indexées</a> ({{bug("829896")}}).</li>
-</ul>
+- La méthode {{jsxref("Array.of()")}} est maintenant implémentée sur  [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) ({{bug("866849")}}).
+- Le support des méthodes {{jsxref("Array.prototype.find()")}} et {{jsxref("Array.prototype.findIndex()")}} a été ajouté ({{bug("885553")}}).
+- Les méthodes {{jsxref("Global_Objects/Number/parseInt", "Number.parseInt()")}} et {{jsxref("Global_Objects/Number/parseFloat", "Number.parseFloat()")}} ont été implémentées ({{bug("886949")}}).
+- Les méthodes {{jsxref("Map.prototype.forEach()")}} et {{jsxref("Set.prototype.forEach()")}} sont maintenant implémentées ({{bug("866847")}}).
+- De nouvelles méthodes mathématiques ont été implémentées sur [`Math`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math): `Math.log10()`, `Math.log2()`, `Math.log1p()`, `Math.expm1()`, `Math.cosh()`, `Math.sinh()`, `Math.tanh()`, `Math.acosh()`, `Math.asinh()`, `Math.atanh()`, `Math.trunc()`, `Math.sign()` et `Math.cbrt()` ({{bug("717379")}}).
+- La prise en charge des littéraux d'entiers binaires et octaux a été ajoutée: `0b10101010`, `0B1010`, `0o777`, `0O237` sont désormais valides ({{bug("894026")}}).
+- La constante epsilon de la machine, c'est-à-dire le plus petit nombre représentable qui ajouté à 1 ne sera pas 1, est désormais disponible sous la forme {{jsxref("Global_Objects/Number/EPSILON", "Number.EPSILON")}} ({{bug("885798")}}).
+- Les [tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ont été mis à jour pour [ne plus rechercher dans la chaîne de prototypes les propriétés indexées](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Indexed_property_access) ({{bug("829896")}}).
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+### Interfaces/APIs/DOM
 
-<ul>
- <li>L'<a href="/fr/docs/Web_Audio_API">API Web Audio</a> est désormais prise en charge. Une implémentation incomplète était auparavant disponible derrière une péférence ({{bug("779297")}}).</li>
- <li>Certaines clés liées à IME sous Windows sont prises en charge par <code>KeyboardEvent.key</code> ({{bug("865565")}}), voir <a href="/fr/docs/Web/API/KeyboardEvent#keyname_table_win">le tableau des noms de clé</a> pour plus de détails.</li>
- <li>Firefox pour Metro distribue désormais les événements clés de la même manière que la version bureau ({{bug("843236")}}).</li>
- <li>L'événement <code>keypress</code> n'est plus distribué si <code>preventDefault()</code> de l'événement <code>keydown</code> précédnt est appelé ({{bug("501496")}}), voir <a href="/fr/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event">le document de l'événement <code>keydown</code></a> pour plus de détails.</li>
- <li>L'interface <code>Future</code> a été renommée <code>Promise</code> ({{bug("884279")}}).</li>
- <li>La propriété <code>srcDoc</code> sur l'interface {{domxref("HTMLIFrameElement")}}, permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}}, est désormais prise en charge ({{bug("802895")}}).</li>
- <li>La méthode <code>createTBody()</code> sur l'interface {{domxref("HTMLTableElement")}}, permettant d'obtenir son {{HTMLElement("tbody")}}, est désormais supportée ({{bug("813034")}}).</li>
- <li>Le paramètre <code>toStart</code> de la méthode {{domxref("Range.collapse()")}} est maintenant facultatif et par défaut à <code>false</code>, comme défini dans la spécification ({{bug("891340")}}).</li>
- <li>La prise en charge de l'interface {{domxref("ParentNode")}} sur {{domxref("Document")}} et {{domxref("DocumentFragment")}} a été ajoutée ({{bug("895974")}}).</li>
- <li>Le <code>previousElementSibling</code> et le <code>nextElementSibling</code> ont été déplacés vers {{domxref("ChildNode")}} leur permettant d'être appelés non seulement sur un objet {{domxref("Element")}} mais aussi sur un {{domxref("CharacterData")}} ou {{domxref("DocumentType")}}  ({{bug("895974")}}).</li>
- <li>La propriété <code>navigator.geolocation</code> a été mise à jour pour correspondre à la spécification. Il ne renvoie jamais <code>null</code>. Lorsque la préférence <code>geo.enabled</code> est définie sur <code>false</code>, elle renvoie désormais <code>undefined</code> ({{bug("884921")}}).</li>
- <li>L'attribut <code>videoPlaybackQuality</code> sur l'interface {{domxref("HTMLVideoElement")}} a été remplacé par la méthode <code>getVideoPlaybackQuality</code> ({{bug(889205)}}).</li>
- <li>L'interface non standard de <code>GlobalObjectConstructor</code> a été supprimée ({{bug(898136)}}). Cette interface a été utilisée pour ajouter des arguments aux constructeursd'APIs que les <a href="/fr/Add-ons">add-ons</a> de Firefox exposaient sur l'objet global. Cette capacité a été supprimée; Notez qu'à l'heure actuelle, il n'y a pas de remplacement pour cette fonctionnalité.</li>
-</ul>
+- L'[API Web Audio](/fr/docs/Web_Audio_API) est désormais prise en charge. Une implémentation incomplète était auparavant disponible derrière une péférence ({{bug("779297")}}).
+- Certaines clés liées à IME sous Windows sont prises en charge par `KeyboardEvent.key` ({{bug("865565")}}), voir [le tableau des noms de clé](/fr/docs/Web/API/KeyboardEvent#keyname_table_win) pour plus de détails.
+- Firefox pour Metro distribue désormais les événements clés de la même manière que la version bureau ({{bug("843236")}}).
+- L'événement `keypress` n'est plus distribué si `preventDefault()` de l'événement `keydown` précédnt est appelé ({{bug("501496")}}), voir [le document de l'événement `keydown`](</fr/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event>) pour plus de détails.
+- L'interface `Future` a été renommée `Promise` ({{bug("884279")}}).
+- La propriété `srcDoc` sur l'interface {{domxref("HTMLIFrameElement")}}, permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}}, est désormais prise en charge ({{bug("802895")}}).
+- La méthode `createTBody()` sur l'interface {{domxref("HTMLTableElement")}}, permettant d'obtenir son {{HTMLElement("tbody")}}, est désormais supportée ({{bug("813034")}}).
+- Le paramètre `toStart` de la méthode {{domxref("Range.collapse()")}} est maintenant facultatif et par défaut à `false`, comme défini dans la spécification ({{bug("891340")}}).
+- La prise en charge de l'interface {{domxref("ParentNode")}} sur {{domxref("Document")}} et {{domxref("DocumentFragment")}} a été ajoutée ({{bug("895974")}}).
+- Le `previousElementSibling` et le `nextElementSibling` ont été déplacés vers {{domxref("ChildNode")}} leur permettant d'être appelés non seulement sur un objet {{domxref("Element")}} mais aussi sur un {{domxref("CharacterData")}} ou {{domxref("DocumentType")}}  ({{bug("895974")}}).
+- La propriété `navigator.geolocation` a été mise à jour pour correspondre à la spécification. Il ne renvoie jamais `null`. Lorsque la préférence `geo.enabled` est définie sur `false`, elle renvoie désormais `undefined` ({{bug("884921")}}).
+- L'attribut `videoPlaybackQuality` sur l'interface {{domxref("HTMLVideoElement")}} a été remplacé par la méthode `getVideoPlaybackQuality` ({{bug(889205)}}).
+- L'interface non standard de `GlobalObjectConstructor` a été supprimée ({{bug(898136)}}). Cette interface a été utilisée pour ajouter des arguments aux constructeursd'APIs que les [add-ons](/fr/Add-ons) de Firefox exposaient sur l'objet global. Cette capacité a été supprimée; Notez qu'à l'heure actuelle, il n'y a pas de remplacement pour cette fonctionnalité.
 
-<h3 id="MathML">MathML</h3>
+### MathML
 
-<p><em>Pas de changement.</em></p>
+_Pas de changement._
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<p><em>Pas de changement.</em></p>
+_Pas de changement._
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<h3 id="Versions_plus_anciennes">Versions plus anciennes</h3>
+### Versions plus anciennes
 
-<p>{{Firefox_for_developers('24')}}</p>
+{{Firefox_for_developers('24')}}

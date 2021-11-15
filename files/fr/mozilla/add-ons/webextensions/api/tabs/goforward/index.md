@@ -12,44 +12,42 @@ tags:
   - goForward
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/goForward
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Passez à la page suivante dans l'historique de l'onglet, si disponible.</p>
+Passez à la page suivante dans l'historique de l'onglet, si disponible.
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var goingForward = browser.tabs.goForward(
+```js
+var goingForward = browser.tabs.goForward(
   tabId,                       // optional integer
   callback                     // optional function
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. L'ID de l'onglet à naviguer. Par défaut, l'onglet actif de la fenêtre en cours.</dd>
- <dt><code>callback</code>{{optional_inline}}</dt>
- <dd><code>function</code>. Lorsque la navigation sur la page se termine, cette fonction est appelée sans paramètres.</dd>
-</dl>
+- `tabId`{{optional_inline}}
+  - : `integer`. L'ID de l'onglet à naviguer. Par défaut, l'onglet actif de la fenêtre en cours.
+- `callback`{{optional_inline}}
+  - : `function`. Lorsque la navigation sur la page se termine, cette fonction est appelée sans paramètres.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui est tenue lorsque la navigation sur la page se termine.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est tenue lorsque la navigation sur la page se termine.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
+{{Compat("webextensions.api.tabs.goForward")}}
 
+## Exemples
 
-<p>{{Compat("webextensions.api.tabs.goForward")}}</p>
+Passez à la page suivante dans l'onglet en cours :
 
-<h2 id="Exemples">Exemples</h2>
-
-<p>Passez à la page suivante dans l'onglet en cours :</p>
-
-<pre class="brush: js">function onGoForward() {
+```js
+function onGoForward() {
   console.log("Gone forward");
 }
 
@@ -58,19 +56,18 @@ function onError(error) {
 }
 
 var goingForward = browser.tabs.goForward();
-goingForward.then(onGoForward, onError);</pre>
+goingForward.then(onGoForward, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-getZoomSettings) de Chromium.Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium.
+>
+> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence américaine Creative Commons Attribution 3.0.
 
-<p>Cette API est basée sur l'API <a href="https://developer.chrome.com/extensions/tabs#method-getZoomSettings"><code>chrome.tabs</code></a> de Chromium.Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence américaine Creative Commons Attribution 3.0.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -97,5 +94,4 @@ goingForward.then(onGoForward, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

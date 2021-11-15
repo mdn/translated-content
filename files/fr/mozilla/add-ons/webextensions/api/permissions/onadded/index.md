@@ -11,63 +11,57 @@ tags:
   - onAdded
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/onAdded
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Activé lorsque l'extension a accordé de nouvelles permissions.</p>
+Activé lorsque l'extension a accordé de nouvelles permissions.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.permissions.onAdded.addListener(listener)
+```js
+browser.permissions.onAdded.addListener(listener)
 browser.permissions.onAdded.removeListener(listener)
 browser.permissions.onAdded.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute une écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifier si le <code>listener</code> est enregistré pour cet événement. Retourne <code>true</code> s'il écoute, sinon  <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute une écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifier si le `listener` est enregistré pour cet événement. Retourne `true` s'il écoute, sinon  `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produira. La fonction passera les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>permissions</code></dt>
-  <dd>Objet {{WebExtAPIRef("permissions.Permissions")}} contenant les permissions qui ont été accordées.</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui sera appelée lorsque cet événement se produira. La fonction passera les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `permissions`
+      - : Objet {{WebExtAPIRef("permissions.Permissions")}} contenant les permissions qui ont été accordées.
 
-<div>{{Compat("webextensions.api.permissions.onAdded")}}</div>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.permissions.onAdded")}}
 
-<pre class="brush: js">function handleAdded(permissions) {
+## Exemples
+
+```js
+function handleAdded(permissions) {
   console.log(`New API permissions: ${permissions.permissions}`);
   console.log(`New host permissions: ${permissions.origins}`);
 }
 
 browser.permissions.onAdded.addListener(handleAdded);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/permissions"><code>chrome.permissions</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/extensions/permissions).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

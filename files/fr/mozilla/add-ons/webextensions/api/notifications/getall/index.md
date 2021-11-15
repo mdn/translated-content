@@ -13,36 +13,38 @@ tags:
   - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/getAll
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient toutes les notifications actuellement actives créées par l'extension.</p>
+Obtient toutes les notifications actuellement actives créées par l'extension.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingAll = browser.notifications.getAll()
-</pre>
+```js
+var gettingAll = browser.notifications.getAll()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>None.</p>
+None.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera accomplie avec un objet. Chaque notification actuellement active est une propriété de cet objet : le nom de la propriété est l'ID de la notification et la valeur de la propriété est un objet {{WebExtAPIRef("notifications.NotificationOptions")}} décrivant cette notification.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera accomplie avec un objet. Chaque notification actuellement active est une propriété de cet objet : le nom de la propriété est l'ID de la notification et la valeur de la propriété est un objet {{WebExtAPIRef("notifications.NotificationOptions")}} décrivant cette notification.
 
-<p>Notez que vous pouvez définir explicitement un ID pour une notification en le passant dans {{WebExtAPIRef("notifications.create()")}}. Si vous ne le faites pas, le navigateur en générera un. Les ID spécifiés explicitement sont des chaînes, mais les ID générés sont des nombres. </p>
+Notez que vous pouvez définir explicitement un ID pour une notification en le passant dans {{WebExtAPIRef("notifications.create()")}}. Si vous ne le faites pas, le navigateur en générera un. Les ID spécifiés explicitement sont des chaînes, mais les ID générés sont des nombres.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.notifications.getAll")}}</p>
+{{Compat("webextensions.api.notifications.getAll")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple affiche une notification lorsque l'utilisateur clique sur une action du navigateur, à moins que la notification ne soit déjà affichée, auquel cas il efface la notification. Il utilise getAll() pour déterminer si la notification est affichée :</p>
+Cet exemple affiche une notification lorsque l'utilisateur clique sur une action du navigateur, à moins que la notification ne soit déjà affichée, auquel cas il efface la notification. Il utilise getAll() pour déterminer si la notification est affichée :
 
-<pre class="brush: js">var myNotification = "my-notification";
+```js
+var myNotification = "my-notification";
 
 function toggleAlarm(all) {
   let ids = Object.keys(all);
@@ -64,23 +66,25 @@ function handleClick() {
   browser.notifications.getAll().then(toggleAlarm);
 }
 
-browser.browserAction.onClicked.addListener(handleClick);</pre>
+browser.browserAction.onClicked.addListener(handleClick);
+```
 
-<p>Cet exemple enregistre le titre de toutes les notifications actives :</p>
+Cet exemple enregistre le titre de toutes les notifications actives :
 
-<pre class="brush: js">function logNotifications(all) {
+```js
+function logNotifications(all) {
   for (let id in all) {
     console.log(`Title: ${all[id].title}`);
   }
 }
 
-browser.notifications.getAll().then(logNotifications);</pre>
+browser.notifications.getAll().then(logNotifications);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

@@ -13,57 +13,55 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet de ce type est renvoyé par les auditeurs d'événements qui ont défini le <code>"blocking"</code> dans leur argument <code>extraInfoSpec</code>.</p>
+Un objet de ce type est renvoyé par les auditeurs d'événements qui ont défini le `"blocking"` dans leur argument `extraInfoSpec`.
 
-<p>En définissant des propriétés particulières dans <code>BlockingResponse</code>, l'auditeur peut modifier les requêtes réseau.</p>
+En définissant des propriétés particulières dans `BlockingResponse`, l'auditeur peut modifier les requêtes réseau.
 
-<p>Notez que vous ne pouvez pas définir toutes les propriétés de cet objet dans chaque auditeur : les propriétés que vous pouvez définir dépendent de l'événement qui a déclenché cet auditeur, comme détaillé ci-dessous.</p>
+Notez que vous ne pouvez pas définir toutes les propriétés de cet objet dans chaque auditeur : les propriétés que vous pouvez définir dépendent de l'événement qui a déclenché cet auditeur, comme détaillé ci-dessous.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>authCredentials</code>{{optional_inline}}</dt>
- <dd><p><code>object</code>. Si elle est définie, la demande est faite en utilisant les informations d'identification données. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}. La propriété <code>authCredentials</code> est un objet avec les propriétés suivantes :</p>
- <dl>
-  <dt><code>username</code></dt>
-  <dd><code>string</code>. Nom d'utilisateur à fournir.</dd>
-  <dt><code>password</code></dt>
-  <dd><code>string</code>. Mot de passe à fournir.</dd>
- </dl>
- </dd>
- <dt><code>cancel</code>{{optional_inline}}</dt>
- <dd><code>boolean</code>. Si <code>true</code>, la demande est annulée. Vous ne pouvez définir cette propriété dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}, {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}, {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}, et  {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}.</dd>
- <dt><code>redirectUrl</code>{{optional_inline}}</dt>
- <dd><p><code>string</code>. Il s'agit d'une URL, et si elle est définie, la requête originale est redirigée vers cette URL. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} ou {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}.</p>
- <p>Les redirections vers des schémas non-HTTP tels que data : sont autorisées, mais elles ne sont pas prises en charge actuellement ({{bug("707624")}}). Les redirections utilisent la même méthode de requête que la requête originale à moins qu'elle ne soit initiée à partir de l'étape <code>onHeadersReceived</code>, auquel cas la redirection utilise la méthode GET.</p>
- <p>Si une extension veut rediriger une URL publique (par exemple HTTPS) vers une <a href="/fr/Add-ons/WebExtensions/user_interface/Extension_pages">page d'extension</a>, le fichier manifest.json de l'extension doit contenir une clé <a href="/fr/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a> qui liste l'URL de la page d'extension.</p></dd>
- <dt><code>requestHeaders</code>{{optional_inline}}</dt>
- <dd>
- <p>{{WebExtAPIRef('webRequest.HttpHeaders')}}. C'est un objet {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}}, un tableau dans lequel chaque objet représente un en-tête. Si elle est définie, la demande est faite avec ces en-têtes plutôt qu'avec les en-têtes d'origine. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} .</p>
- </dd>
- <dt><code>responseHeaders</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('webRequest.HttpHeaders')}}. C'est un objet {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}}, un tableau dans lequel chaque objet représente un en-tête. Si elle est définie, le serveur est supposé avoir répondu avec ces en-têtes de réponse au lieu des originaux. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}. Si plusieurs extensions tentent de définir le même en-tête (par exemple, <code>Content-Security-Policy</code>), une seule des modifications sera réussie.</dd>
- <dt><code>upgradeToSecure</code>{{optional_inline}}</dt>
- <dd><code>boolean</code>. Si la valeur <code>true</code> est est définie et que la requête originale est une requête HTTP, cela empêchera l'envoi de la requête originale et fera plutôt une requête sécurisée (HTTPS). Si une extension renvoie <code>redirectUrl</code> dans <code>onBeforeRequest</code>, alors <code>upgradeToSecure</code> sera ignoré pour cette requête. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}.</dd>
-</dl>
+- `authCredentials`{{optional_inline}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+  - : `object`. Si elle est définie, la demande est faite en utilisant les informations d'identification données. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}. La propriété `authCredentials` est un objet avec les propriétés suivantes :
 
-<p>{{Compat("webextensions.api.webRequest.BlockingResponse")}}</p>
+    - `username`
+      - : `string`. Nom d'utilisateur à fournir.
+    - `password`
+      - : `string`. Mot de passe à fournir.
 
-<p>{{WebExtExamples}}</p>
+- `cancel`{{optional_inline}}
+  - : `boolean`. Si `true`, la demande est annulée. Vous ne pouvez définir cette propriété dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}, {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}, {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}, et  {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}.
+- `redirectUrl`{{optional_inline}}
 
-<div class="note"><p><strong>Note :</strong></p>
+  - : `string`. Il s'agit d'une URL, et si elle est définie, la requête originale est redirigée vers cette URL. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} ou {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> dans le code Chromium.</p>
-</div>
+    Les redirections vers des schémas non-HTTP tels que data : sont autorisées, mais elles ne sont pas prises en charge actuellement ({{bug("707624")}}). Les redirections utilisent la même méthode de requête que la requête originale à moins qu'elle ne soit initiée à partir de l'étape `onHeadersReceived`, auquel cas la redirection utilise la méthode GET.
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+    Si une extension veut rediriger une URL publique (par exemple HTTPS) vers une [page d'extension](/fr/Add-ons/WebExtensions/user_interface/Extension_pages), le fichier manifest.json de l'extension doit contenir une clé [web_accessible_resources](/fr/Add-ons/WebExtensions/manifest.json/web_accessible_resources) qui liste l'URL de la page d'extension.
+
+- `requestHeaders`{{optional_inline}}
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. C'est un objet {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}}, un tableau dans lequel chaque objet représente un en-tête. Si elle est définie, la demande est faite avec ces en-têtes plutôt qu'avec les en-têtes d'origine. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} .
+- `responseHeaders`{{optional_inline}}
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. C'est un objet {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}}, un tableau dans lequel chaque objet représente un en-tête. Si elle est définie, le serveur est supposé avoir répondu avec ces en-têtes de réponse au lieu des originaux. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}. Si plusieurs extensions tentent de définir le même en-tête (par exemple, `Content-Security-Policy`), une seule des modifications sera réussie.
+- `upgradeToSecure`{{optional_inline}}
+  - : `boolean`. Si la valeur `true` est est définie et que la requête originale est une requête HTTP, cela empêchera l'envoi de la requête originale et fera plutôt une requête sécurisée (HTTPS). Si une extension renvoie `redirectUrl` dans `onBeforeRequest`, alors `upgradeToSecure` sera ignoré pour cette requête. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.webRequest.BlockingResponse")}}
+
+{{WebExtExamples}}
+
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,5 +88,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

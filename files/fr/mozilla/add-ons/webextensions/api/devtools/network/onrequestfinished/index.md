@@ -13,74 +13,68 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network/onRequestFinished
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network/onRequestFinished
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsqu'une requête réseau est terminée et que ses détails sont disponibles pour l'extension.</p>
+Lancé lorsqu'une requête réseau est terminée et que ses détails sont disponibles pour l'extension.
 
-<p>La requête est donnée en tant qu'<a href="http://www.softwareishard.com/blog/har-12-spec/#entries">objet d'entrée HAR</a>, qui est également doté d'une méthode <code>getContent()</code> asynchrone qui récupère le contenu du corps de la réponse.</p>
+La requête est donnée en tant qu'[objet d'entrée HAR](http://www.softwareishard.com/blog/har-12-spec/#entries), qui est également doté d'une méthode `getContent()` asynchrone qui récupère le contenu du corps de la réponse.
 
-<p>Notez que bien que votre extension puisse ajouter un écouteur à tout moment,elle commencera seulement à se déclencher après que l'utilisateur a activé le <a href="/fr/docs/Outils/Moniteur_réseau">moniteur réseau</a> du navigateur au moins une fois.</p>
+Notez que bien que votre extension puisse ajouter un écouteur à tout moment,elle commencera seulement à se déclencher après que l'utilisateur a activé le [moniteur réseau](/fr/docs/Outils/Moniteur_réseau) du navigateur au moins une fois.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.devtools.network.onRequestFinished.addListener(listener)
+```js
+browser.devtools.network.onRequestFinished.addListener(listener)
 browser.devtools.network.onRequestFinished.removeListener(listener)
 browser.devtools.network.onRequestFinished.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions</p>
+Les événements ont trois fonctions
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument de <code>listener</code>  est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code>s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(listener)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument de `listener`  est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true`s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>request</code></dt>
-  <dd><code>object</code>. Un objet représentant la requête. Cet objet est un seul objet d'<a href="http://www.softwareishard.com/blog/har-12-spec/#entries">entrée HAR</a>. Il définit également une méthode <code>getContent()</code> asynchrone, qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui se résout avec le corps de la réponse.</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `request`
+      - : `object`. Un objet représentant la requête. Cet objet est un seul objet d'[entrée HAR](http://www.softwareishard.com/blog/har-12-spec/#entries). Il définit également une méthode `getContent()` asynchrone, qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se résout avec le corps de la réponse.
 
-<p>{{Compat("webextensions.api.devtools.network.onRequestFinished")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Examples">Examples</h2>
+{{Compat("webextensions.api.devtools.network.onRequestFinished")}}
 
-<p>Ajoutez un écouteur qui consigne l'adresse IP du serveur et le corps de la réponse pour chaque requête réseau.</p>
+## Examples
 
-<pre class="brush: js">function handleRequestFinished(request) {
+Ajoutez un écouteur qui consigne l'adresse IP du serveur et le corps de la réponse pour chaque requête réseau.
+
+```js
+function handleRequestFinished(request) {
   console.log("Server IP: ", request.serverIPAddress);
-  request.getContent().then(content =&gt; {
+  request.getContent().then(content => {
     console.log("Content: ", content);
   });
 }
 
-browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);</pre>
+browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) de Chromium.
 
-<p>Cette API est basée sur l'API <a href="https://developer.chrome.com/extensions/devtools"><code>chrome.devtools</code></a> de Chromium.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -107,5 +101,4 @@ browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);</
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,37 +13,37 @@ tags:
   - resume
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/resume
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La fonction <code><strong>resume</strong></code><strong><code>()</code></strong> de l'API {{WebExtAPIRef("downloads")}} reprend un téléchargement suspendu. Si la demande a abouti, le téléchargement ne sera pas interrompu et la progression reprendra. L'appel <code>resume()</code> échouera si le téléchargement n'est pas actif: par exemple, parce qu'il a fini le téléchargement.</p>
+La fonction **`resume`\*\***`()`\*\* de l'API {{WebExtAPIRef("downloads")}} reprend un téléchargement suspendu. Si la demande a abouti, le téléchargement ne sera pas interrompu et la progression reprendra. L'appel `resume()` échouera si le téléchargement n'est pas actif: par exemple, parce qu'il a fini le téléchargement.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var resuming = browser.downloads.resume(
+```js
+var resuming = browser.downloads.resume(
   downloadId      // integer
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>downloadId</code></dt>
- <dd>Un <code>integer</code> représentant l'<code>id</code> du téléchargement à reprendre.</dd>
-</dl>
+- `downloadId`
+  - : Un `integer` représentant l'`id` du téléchargement à reprendre.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. Si la demande a été acceptée, la promesse sera remplie sans arguments. Si la demande a échoué, la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la demande a été acceptée, la promesse sera remplie sans arguments. Si la demande a échoué, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.downloads.resume")}}</p>
+{{Compat("webextensions.api.downloads.resume")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var downloadId = 2;
+```js
+var downloadId = 2;
 
 function onResumed() {
   console.log(`Resumed download`);
@@ -54,19 +54,18 @@ function onError(error) {
 }
 
 var resuming = browser.downloads.resume(downloadId);
-resuming.then(onResumed, onError);</pre>
+resuming.then(onResumed, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -93,5 +92,4 @@ resuming.then(onResumed, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

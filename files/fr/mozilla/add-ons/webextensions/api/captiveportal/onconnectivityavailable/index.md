@@ -11,63 +11,57 @@ tags:
   - captivePortal
 translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/onConnectivityAvailable
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>S'allume lorsque le service de portail captif détermine que l'utilisateur peut se connecter à l'internet.</p>
+S'allume lorsque le service de portail captif détermine que l'utilisateur peut se connecter à l'internet.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.captivePortal.onConnectivityAvailable.addListener(callback)
+```js
+browser.captivePortal.onConnectivityAvailable.addListener(callback)
 browser.captivePortal.onConnectivityAvailable.removeListener(listener)
 browser.captivePortal.onConnectivityAvailable.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un auditeur à cet événement</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'auditeur à retirer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est inscrit à cet événement. Renvoie <code>true</code> si c'est un auditeur, sinon <code>false</code> .</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un auditeur à cet événement
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'auditeur à retirer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est inscrit à cet événement. Renvoie `true` si c'est un auditeur, sinon `false` .
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramétres">Paramétres</h3>
+### Paramétres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui est appelée lorsque cet événement se produit. La fonction se voit transmettre les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>status</code></dt>
-  <dd><code>string</code> Le statut du service, étant celui de <code>captive</code> s'il y a un portail captif déverrouillé présent ou <code>clear</code> si aucun portail captif n'est détecté</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui est appelée lorsque cet événement se produit. La fonction se voit transmettre les arguments suivants :
 
-<h2 id="Exemples">Exemples</h2>
+    - `status`
+      - : `string` Le statut du service, étant celui de `captive` s'il y a un portail captif déverrouillé présent ou `clear` si aucun portail captif n'est détecté
 
-<p>Gérer la capacité d'un utilisateur de changement à se connecter à l'internet :</p>
+## Exemples
 
-<pre class="brush: js">function handleConnectivity(connectivityInfo) {
+Gérer la capacité d'un utilisateur de changement à se connecter à l'internet :
+
+```js
+function handleConnectivity(connectivityInfo) {
   console.log("The captive portal status: " + connectivityInfo.status);
 }
 
 browser.captivePortal.onConnectivityAvailable.addListener(handleConnectivity);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.captivePortal.onConnectivityAvailable")}}</p>
+{{Compat("webextensions.api.captivePortal.onConnectivityAvailable")}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -94,5 +88,4 @@ browser.captivePortal.onConnectivityAvailable.addListener(handleConnectivity);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

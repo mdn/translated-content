@@ -14,80 +14,65 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.</p>
-</div>
+> **Attention :** Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.
 
-<p>Se déclenche lorsque l'onglet sélectionné dans une fenêtre change. Notez que l'URL de l'onglet peut ne pas être définie au moment où cet événement a été déclenché, mais vous pouvez écouter les événements {{WebExtAPIRef('tabs.onUpdated')}} pour être averti lorsqu'une URL est définie.</p>
+Se déclenche lorsque l'onglet sélectionné dans une fenêtre change. Notez que l'URL de l'onglet peut ne pas être définie au moment où cet événement a été déclenché, mais vous pouvez écouter les événements {{WebExtAPIRef('tabs.onUpdated')}} pour être averti lorsqu'une URL est définie.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.tabs.onActiveChanged.addListener(listener)
+```js
+browser.tabs.onActiveChanged.addListener(listener)
 browser.tabs.onActiveChanged.removeListener(listener)
 browser.tabs.onActiveChanged.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement..</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie<code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement..
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie`true` s'il écoute, sinon `false`.
 
-<dl>
-</dl>
+<!---->
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. L'ID de l'onglet qui est devenu actif.</dd>
- </dl>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
- <dl>
-  <dt><code>selectInfo</code></dt>
-  <dd><a href="#selectInfo"><code>object</code></a>.</dd>
- </dl>
- </dd>
-</dl>
+    - `tabId`
+      - : `integer`. L'ID de l'onglet qui est devenu actif.
 
-<h2 id="Objets_supplémentaires">Objets supplémentaires</h2>
+    <!---->
 
-<h3 id="selectInfo">selectInfo</h3>
+    - `selectInfo`
+      - : [`object`](#selectInfo).
 
-<dl>
- <dt><code>windowId</code></dt>
- <dd><code>integer</code>. L'ID de la fenêtre contenant l'onglet sélectionné.</dd>
-</dl>
+## Objets supplémentaires
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### selectInfo
 
-<p>{{Compat("webextensions.api.tabs.onActiveChanged")}}</p>
+- `windowId`
+  - : `integer`. L'ID de la fenêtre contenant l'onglet sélectionné.
 
-<p>
- </p><div class="note"><p><strong>Note :</strong></p>
+## Compatibilité du navigateur
 
- <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
+{{Compat("webextensions.api.tabs.onActiveChanged")}}
 
- <p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
- </div>
-<p></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -114,5 +99,4 @@ browser.tabs.onActiveChanged.hasListener(listener)
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

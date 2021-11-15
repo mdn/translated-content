@@ -12,23 +12,24 @@ tags:
   - homepageOverride
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour obtenir une chaîne représentant l'URL actuellement définie comme page d'accueil du navigateur.</p>
+Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour obtenir une chaîne représentant l'URL actuellement définie comme page d'accueil du navigateur.
 
-<p>Notez qu'il s'agit d'un paramètre en lecture seule. Pour changer la page d'accueil, voir <a href="/fr/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides">chrome_settings_overrides</a>.</p>
+Notez qu'il s'agit d'un paramètre en lecture seule. Pour changer la page d'accueil, voir [chrome_settings_overrides](/fr/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides).
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browserSettings.homepageOverride", 10)}}</p>
+{{Compat("webextensions.api.browserSettings.homepageOverride", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Obtenez la valeur actuelle de l'URL de la page d'accueil :</p>
+Obtenez la valeur actuelle de l'URL de la page d'accueil :
 
-<pre class="brush: js">browser.browserSettings.homepageOverride.get({}).then(result =&gt; {
+```js
+browser.browserSettings.homepageOverride.get({}).then(result => {
   console.log(result.value);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

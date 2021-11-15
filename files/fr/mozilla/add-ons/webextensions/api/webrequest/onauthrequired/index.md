@@ -13,184 +13,167 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Mise en place quand le serveur envoie un code status 401 ou 407 : c'est-à-dire lorsque le serveur demande au client de fournir des informations d'authentification telles qu'un nom d'utilisateur et un mot de passe.</p>
+Mise en place quand le serveur envoie un code status 401 ou 407 : c'est-à-dire lorsque le serveur demande au client de fournir des informations d'authentification telles qu'un nom d'utilisateur et un mot de passe.
 
-<p>L'auditeur peut répondre de l'une des quatre façons suivantes :</p>
+L'auditeur peut répondre de l'une des quatre façons suivantes :
 
-<p><strong>Ne rien faire </strong>: l'auditeur ne peut rien faire, il suffit d'observer la demande. Si cela se produit, cela n'aura aucun effet sur le traitement de la demande, et le navigateur demandera probablement simplement à l'utilisateur de se connecter.</p>
+**Ne rien faire** : l'auditeur ne peut rien faire, il suffit d'observer la demande. Si cela se produit, cela n'aura aucun effet sur le traitement de la demande, et le navigateur demandera probablement simplement à l'utilisateur de se connecter.
 
-<p><strong>Annuler la demande </strong>: l'auditeur peut annuler la demande. S'ils le font, l'authentification échouera et l'utilisateur ne sera pas invité à se connecter. Les prolongations peuvent annuler les demandes comme suit :</p>
+**Annuler la demande** : l'auditeur peut annuler la demande. S'ils le font, l'authentification échouera et l'utilisateur ne sera pas invité à se connecter. Les prolongations peuvent annuler les demandes comme suit :
 
-<ul>
- <li>dans addListener, passez <code>"blocking"</code> dans le paramètre <code>extraInfoSpec </code></li>
- <li>dans l'écouteur lui-même, retourne un objet avec une propriété <code>cancel</code> définie à  <code>true</code></li>
-</ul>
+- dans addListener, passez `"blocking"` dans le paramètre `extraInfoSpec`
+- dans l'écouteur lui-même, retourne un objet avec une propriété `cancel` définie à  `true`
 
-<p><strong>Fournir des informations d'identification de manière synchrone </strong>: si les informations d'identification sont disponibles de manière synchrone, l'extension peut les fournir de manière synchrone. Si l'extension fait cela, le navigateur tentera de se connecter avec les informations d'identification données.<br>
- L'auditeur peut fournir des informations d'identification de manière synchrone comme suit :</p>
+**Fournir des informations d'identification de manière synchrone** : si les informations d'identification sont disponibles de manière synchrone, l'extension peut les fournir de manière synchrone. Si l'extension fait cela, le navigateur tentera de se connecter avec les informations d'identification données.
+L'auditeur peut fournir des informations d'identification de manière synchrone comme suit :
 
-<ul>
- <li>dans addListener, passez <code>"blocking"</code> dans le paramètre <code>extraInfoSpec</code></li>
- <li>dans l'auditeur, retourner un objet avec une propriété <code>authCredentials</code> définie sur les informations d'identification à fournir</li>
-</ul>
+- dans addListener, passez `"blocking"` dans le paramètre `extraInfoSpec`
+- dans l'auditeur, retourner un objet avec une propriété `authCredentials` définie sur les informations d'identification à fournir
 
-<p><strong>Fournir les informations d'identification de manière asynchrone </strong>: l'extension peut avoir besoin de récupérer les informations d'identification de manière asynchrone. Par exemple, l'extension peut avoir besoin d'extraire les informations d'identification du stockage ou de demander à l'utilisateur. Dans ce cas, l'auditeur peut fournir des informations d'identification de manière asynchrone comme suit :</p>
+**Fournir les informations d'identification de manière asynchrone** : l'extension peut avoir besoin de récupérer les informations d'identification de manière asynchrone. Par exemple, l'extension peut avoir besoin d'extraire les informations d'identification du stockage ou de demander à l'utilisateur. Dans ce cas, l'auditeur peut fournir des informations d'identification de manière asynchrone comme suit :
 
-<ul>
- <li>dans addListener, passez <code>"blocking"</code> dans le paramère <code>extraInfoSpec</code></li>
- <li>dans l'auditeur, retourner une <code>Promise</code> qui est résolue avec un objet contenant une propriété <code>authCredentials</code>, définie sur les credentials à fournir.</li>
-</ul>
+- dans addListener, passez `"blocking"` dans le paramère `extraInfoSpec`
+- dans l'auditeur, retourner une `Promise` qui est résolue avec un objet contenant une propriété `authCredentials`, définie sur les credentials à fournir.
 
-<p>Voir <a href="/fr/Add-ons/WebExtensions/API/webRequest/onAuthRequired#Examples">Exemples</a>.</p>
+Voir [Exemples](/fr/Add-ons/WebExtensions/API/webRequest/onAuthRequired#Examples).
 
-<p>Si vous utilisez le <code>"blockage"</code> vous devez avoir la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permission de l'API "webRequestBlocking"</a> dans votre manifest.json.</p>
+Si vous utilisez le `"blockage"` vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) dans votre manifest.json.
 
-<p>Si votre poste fournit de mauvaises informations d'identification, l'auditeur sera rappelé. Pour cette raison, veillez à ne pas entrer dans une boucle infinie en fournissant à plusieurs reprises de mauvaises informations d'identification.</p>
+Si votre poste fournit de mauvaises informations d'identification, l'auditeur sera rappelé. Pour cette raison, veillez à ne pas entrer dans une boucle infinie en fournissant à plusieurs reprises de mauvaises informations d'identification.
 
-<h2 id="Autorisation_de_proxy">Autorisation de proxy</h2>
+## Autorisation de proxy
 
-<p>En général, Firefox ne déclenche pas d'événements <code>webRequest</code> pour les requêtes système, telles que les mises à jour de navigateur ou d'extension, ou les requêtes des moteurs de recherche. Pour permettre à l'autorisation de proxy de fonctionner sans problème pour les requêtes système, à partir de la version 57 Firefox implémente une exception à cette règle.</p>
+En général, Firefox ne déclenche pas d'événements `webRequest` pour les requêtes système, telles que les mises à jour de navigateur ou d'extension, ou les requêtes des moteurs de recherche. Pour permettre à l'autorisation de proxy de fonctionner sans problème pour les requêtes système, à partir de la version 57 Firefox implémente une exception à cette règle.
 
-<p>Si une extension a les permissions "webRequest", "webRequestBlocking", "proxy", et "&lt;all_urls&gt;", alors elle pourra utiliser <code>onAuthRequired</code> pour fournir des informations d'identification pour l'autorisation de proxy (mais pas pour l'autorisation web normale).  L'auditeur ne sera pas en mesure d'annuler les demandes du système ou d'apporter d'autres modifications aux demandes du système.</p>
+Si une extension a les permissions "webRequest", "webRequestBlocking", "proxy", et "\<all_urls>", alors elle pourra utiliser `onAuthRequired` pour fournir des informations d'identification pour l'autorisation de proxy (mais pas pour l'autorisation web normale).  L'auditeur ne sera pas en mesure d'annuler les demandes du système ou d'apporter d'autres modifications aux demandes du système.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.webRequest.onAuthRequired.addListener(
+```js
+browser.webRequest.onAuthRequired.addListener(
   listener,                    // function
   filter,                      //  object
   extraInfoSpec                //  optional array of strings
 )
 browser.webRequest.onAuthRequired.removeListener(listener)
 browser.webRequest.onAuthRequired.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback, filter, extraInfoSpec)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>écouteur</code> est enregistré à cet événement. Retourne <code>true</code> s'il est à l'écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback, filter, extraInfoSpec)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `écouteur` est enregistré à cet événement. Retourne `true` s'il est à l'écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd><p>Une fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
- <dl>
-  <dt><code>details</code></dt>
-  <dd><a href="#details"><code>object</code></a>. Détails sur la demande. Voir les <code><a href="#details">détails</a></code> ci-dessous.</dd>
- </dl>
+- `callback`
 
- <p>Retourne : {{WebExtAPIRef('webRequest.BlockingResponse')}} ou une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+  - : Une fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :
 
- <ul>
-  <li>Pour traiter la requête de manière synchrone, inclure<code>"blocking"</code> dans le paramètre <code>extraInfoSpec</code> et retourner un objet <code>BlockingResponse</code>, avec son <code>cancel</code> ou ses propriétés <code>authCredentials</code>.</li>
-  <li>Pour traiter la requête de manière asynchrone, inclure <code>"blocking"</code> dans le paramètre <code>extraInfoSpec</code> et retourner une <code>Promise</code> qui est résolue avec un objet  <code>BlockingResponse</code>, avec son <code>cancel</code> ou ses propriétés <code>authCredentials</code>.</li>
- </ul>
- </dd>
- <dt><code>filter</code></dt>
- <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.</dd>
- <dt><code>extraInfoSpec</code>{{optional_inline}}</dt>
- <dd><p><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :</p>
- <ul>
-  <li><code>"blocking"</code>: faire le blocage de la demande, afin que vous puissiez annuler la demande ou fournir des informations d'authentification.</li>
-  <li><code>"</code><code>responseHeaders</code><code>"</code>: inclure <code>responseHeaders</code> dans l'objet <code>details</code> transmis à l'auditeur</li>
- </ul>
- </dd>
-</dl>
+    - `details`
+      - : [`object`](#details). Détails sur la demande. Voir les [`détails`](#details) ci-dessous.
 
-<h2 id="Objets_supplémentaires">Objets supplémentaires</h2>
+    Retourne : {{WebExtAPIRef('webRequest.BlockingResponse')}} ou une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h3 id="détails">détails</h3>
+    - Pour traiter la requête de manière synchrone, inclure`"blocking"` dans le paramètre `extraInfoSpec` et retourner un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
+    - Pour traiter la requête de manière asynchrone, inclure `"blocking"` dans le paramètre `extraInfoSpec` et retourner une `Promise` qui est résolue avec un objet  `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
 
-<dl>
- <dt><code>challenger</code></dt>
- <dd><p><code>object</code>. Le serveur demandant l'authentification. C'est un objet avec les propriétés suivantes :</p>
- <dl>
-  <dt><code>host</code></dt>
-  <dd><code>string</code>. Le <a href="https://en.wikipedia.org/wiki/Hostname#Internet_hostnames">nom d'hôte</a> du serveur.<br>
-  <strong>Warning</strong>: Contrairement à chrome, Firefox retournera l'hôte demandé au lieu du proxy demandant l'authentification, même si <code>isProxy</code> est <code>true</code>.</dd>
-  <dt><code>port</code></dt>
-  <dd><code>integer</code>. Le numéro de port du serveur.</dd>
- </dl>
- </dd>
- <dt><code>frameId</code></dt>
- <dd><code>integer</code>. Zéro si la requête se produit dans le cadre principal ; une valeur positive est l'ID d'une sous-trame dans laquelle la requête se produit. Si le document d'un (sous-)cadre est chargé (<code>type</code> is <code>main_frame</code> or <code>sub_frame</code>), <code>frameId</code> indique l'ID de ce cadre et non l'ID du cadre extérieur. Les ID de trame sont uniques dans un onglet.</dd>
- <dt><code>isProxy</code></dt>
- <dd><code>boolean</code>. <code>true</code> pour Proxy-Authenticate, <code>false</code> pour WWW-Authenticate. <strong>Note</strong>: <code>webRequest.onAuthRequired</code> n'est appelé que pour les serveurs proxy HTTP et HTTPS/SSL nécessitant une authentification, et non pour les serveurs proxy SOCKS nécessitant une authentification.</dd>
- <dt><code>method</code></dt>
- <dd><code>string</code>. Méthode HTTP standard : par exemple, "GET" ou "POST".</dd>
- <dt><code>parentFrameId</code></dt>
- <dd><code>integer</code>. de la trame qui contient la trame qui a envoyé la requête. Réglé à -1 s'il n'existe pas de l'iframe parent.</dd>
- <dt><code>proxyInfo</code></dt>
- <dd>
- <p><code>object</code>. Cette propriété n'est présente que si la demande est proxied. Il contient les propriétés suivantes :</p>
+- `filter`
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.
+- `extraInfoSpec`{{optional_inline}}
 
- <dl>
-  <dt><code>host</code></dt>
-  <dd><code>string</code>. Le nom d'hôte du serveur proxy.</dd>
-  <dt><code>port</code></dt>
-  <dd><code>integer</code>. Le numéro de port du serveur proxy.</dd>
-  <dt><code>type</code></dt>
-  <dd>
-  <p><code>string</code>. Le type de serveur proxy. L'un des :</p>
+  - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
 
-  <ul>
-   <li>"http": proxy HTTP (ou SSL CONNECT pour HTTPS)</li>
-   <li>"https": proxy HTTP sur connexion TLS vers proxy</li>
-   <li>"socks": SOCKS v5 proxy</li>
-   <li>"socks4": SOCKS v4 proxy</li>
-   <li>"direct": pas de proxy</li>
-   <li>"unknown": proxy inconnu</li>
-  </ul>
-  </dd>
-  <dt><code>username</code></dt>
-  <dd><code>string</code>. Nom d'utilisateur pour le service proxy.</dd>
-  <dt><code>proxyDNS</code></dt>
-  <dd><code>boolean</code>. Vrai si le proxy exécutera une résolution de nom de domaine basée sur le nom d'hôte fourni, ce qui signifie que le client ne doit pas faire sa propre recherche DNS.</dd>
-  <dt><code>failoverTimeout</code></dt>
-  <dd><code>integer</code>. Délai d'attente de basculement en secondes. Si la connexion ne parvient pas à connecter le serveur proxy après ce nombre de secondes, le serveur proxy suivant dans le tableau renvoyé par <a href="/fr/docs/Add-ons/WebExtensions/API/proxy#FindProxyForURL()_return_value">FindProxyForURL()</a> sera utilisé.</dd>
- </dl>
- </dd>
- <dt><code>realm</code>{{optional_inline}}</dt>
- <dd><code>string</code>. La zone d'authentification <a href="https://tools.ietf.org/html/rfc1945#section-11">realm</a> fournie par le serveur, s'il y en a un.</dd>
- <dt><code>requestId</code></dt>
- <dd><code>string</code>. L'ID de la demande. Les ID de requête sont uniques au sein d'une session de navigateur, de sorte que vous pouvez les utiliser pour relier différents événements associés à la même requête.</dd>
- <dt><code>responseHeaders</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('webRequest.HttpHeaders')}}. Les en-têtes de réponse HTTP qui ont été reçus avec cette réponse.</dd>
- <dt><code>scheme</code></dt>
- <dd><code>string</code>. Le schéma d'authentification : <code>"basic"</code> ou <code>"digest</code>".</dd>
- <dt><code>statusCode</code></dt>
- <dd><code>integer</code>. Code d'état HTTP standard renvoyé par le serveur.</dd>
- <dt><code>statusLine</code></dt>
- <dd><code>string</code>. Status d'état HTTP de la réponse ou la chaîne 'HTTP/0.9 200 OK' pour les réponses HTTP/0.9 (c'est-à-dire les réponses qui n'ont pas de ligne d'état) ou une chaîne vide s'il n'y a pas d'en-têtes</dd>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. ID de l'onglet dans lequel la demande a lieu. Définir à -1 si la requête n'est pas liée à un onglet.</dd>
- <dt><code>timeStamp</code></dt>
- <dd><code>number</code>. L'heure à laquelle cet événement s'est déclenché, en <a href="https://en.wikipedia.org/wiki/Unix_time">millisecondes depuis l'époque</a>.</dd>
- <dt><code>type</code></dt>
- <dd>{{WebExtAPIRef('webRequest.ResourceType')}}. Le type de ressource demandée : par exemple, "image", "script", "stylesheet".</dd>
- <dt><code>url</code></dt>
- <dd><code>string</code>. Cible de la demande.</dd>
-</dl>
+    - `"blocking"`: faire le blocage de la demande, afin que vous puissiez annuler la demande ou fournir des informations d'authentification.
+    - ` "``responseHeaders``" `: inclure `responseHeaders` dans l'objet `details` transmis à l'auditeur
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Objets supplémentaires
 
-<p>{{Compat("webextensions.api.webRequest.onAuthRequired", 10)}}</p>
+### détails
 
-<h2 id="Exemples">Exemples</h2>
+- `challenger`
 
-<p>Ce code n'observe que les demandes d'authentification pour l'URL cible :</p>
+  - : `object`. Le serveur demandant l'authentification. C'est un objet avec les propriétés suivantes :
 
-<pre class="brush: js">var target = "https://intranet.company.com/";
+    - `host`
+      - : `string`. Le [nom d'hôte](https://en.wikipedia.org/wiki/Hostname#Internet_hostnames) du serveur.
+        **Warning**: Contrairement à chrome, Firefox retournera l'hôte demandé au lieu du proxy demandant l'authentification, même si `isProxy` est `true`.
+    - `port`
+      - : `integer`. Le numéro de port du serveur.
+
+- `frameId`
+  - : `integer`. Zéro si la requête se produit dans le cadre principal ; une valeur positive est l'ID d'une sous-trame dans laquelle la requête se produit. Si le document d'un (sous-)cadre est chargé (`type` is `main_frame` or `sub_frame`), `frameId` indique l'ID de ce cadre et non l'ID du cadre extérieur. Les ID de trame sont uniques dans un onglet.
+- `isProxy`
+  - : `boolean`. `true` pour Proxy-Authenticate, `false` pour WWW-Authenticate. **Note**: `webRequest.onAuthRequired` n'est appelé que pour les serveurs proxy HTTP et HTTPS/SSL nécessitant une authentification, et non pour les serveurs proxy SOCKS nécessitant une authentification.
+- `method`
+  - : `string`. Méthode HTTP standard : par exemple, "GET" ou "POST".
+- `parentFrameId`
+  - : `integer`. de la trame qui contient la trame qui a envoyé la requête. Réglé à -1 s'il n'existe pas de l'iframe parent.
+- `proxyInfo`
+
+  - : `object`. Cette propriété n'est présente que si la demande est proxied. Il contient les propriétés suivantes :
+
+    - `host`
+      - : `string`. Le nom d'hôte du serveur proxy.
+    - `port`
+      - : `integer`. Le numéro de port du serveur proxy.
+    - `type`
+
+      - : `string`. Le type de serveur proxy. L'un des :
+
+        - "http": proxy HTTP (ou SSL CONNECT pour HTTPS)
+        - "https": proxy HTTP sur connexion TLS vers proxy
+        - "socks": SOCKS v5 proxy
+        - "socks4": SOCKS v4 proxy
+        - "direct": pas de proxy
+        - "unknown": proxy inconnu
+
+    - `username`
+      - : `string`. Nom d'utilisateur pour le service proxy.
+    - `proxyDNS`
+      - : `boolean`. Vrai si le proxy exécutera une résolution de nom de domaine basée sur le nom d'hôte fourni, ce qui signifie que le client ne doit pas faire sa propre recherche DNS.
+    - `failoverTimeout`
+      - : `integer`. Délai d'attente de basculement en secondes. Si la connexion ne parvient pas à connecter le serveur proxy après ce nombre de secondes, le serveur proxy suivant dans le tableau renvoyé par [FindProxyForURL()](</fr/docs/Add-ons/WebExtensions/API/proxy#FindProxyForURL()_return_value>) sera utilisé.
+
+- `realm`{{optional_inline}}
+  - : `string`. La zone d'authentification [realm](https://tools.ietf.org/html/rfc1945#section-11) fournie par le serveur, s'il y en a un.
+- `requestId`
+  - : `string`. L'ID de la demande. Les ID de requête sont uniques au sein d'une session de navigateur, de sorte que vous pouvez les utiliser pour relier différents événements associés à la même requête.
+- `responseHeaders`{{optional_inline}}
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. Les en-têtes de réponse HTTP qui ont été reçus avec cette réponse.
+- `scheme`
+  - : `string`. Le schéma d'authentification : `"basic"` ou `"digest`".
+- `statusCode`
+  - : `integer`. Code d'état HTTP standard renvoyé par le serveur.
+- `statusLine`
+  - : `string`. Status d'état HTTP de la réponse ou la chaîne 'HTTP/0.9 200 OK' pour les réponses HTTP/0.9 (c'est-à-dire les réponses qui n'ont pas de ligne d'état) ou une chaîne vide s'il n'y a pas d'en-têtes
+- `tabId`
+  - : `integer`. ID de l'onglet dans lequel la demande a lieu. Définir à -1 si la requête n'est pas liée à un onglet.
+- `timeStamp`
+  - : `number`. L'heure à laquelle cet événement s'est déclenché, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
+- `type`
+  - : {{WebExtAPIRef('webRequest.ResourceType')}}. Le type de ressource demandée : par exemple, "image", "script", "stylesheet".
+- `url`
+  - : `string`. Cible de la demande.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.webRequest.onAuthRequired", 10)}}
+
+## Exemples
+
+Ce code n'observe que les demandes d'authentification pour l'URL cible :
+
+```js
+var target = "https://intranet.company.com/";
 
 function observe(requestDetails) {
   console.log("observing: " + requestDetails.requestId);
@@ -199,11 +182,13 @@ function observe(requestDetails) {
 browser.webRequest.onAuthRequired.addListener(
   observe,
   {urls: [target]}
-);</pre>
+);
+```
 
-<p>Ce code annule les demandes d'authentification pour l'URL cible :</p>
+Ce code annule les demandes d'authentification pour l'URL cible :
 
-<pre class="brush: js">var target = "https://intranet.company.com/";
+```js
+var target = "https://intranet.company.com/";
 
 function cancel(requestDetails) {
   console.log("canceling: " + requestDetails.requestId);
@@ -214,11 +199,13 @@ browser.webRequest.onAuthRequired.addListener(
   cancel,
   {urls: [target]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>Ce code fournit les informations d'identification de manière synchrone. Il doit garder une trace des demandes en suspens, pour s'assurer qu'il n'essaie pas à plusieurs reprises de soumettre de mauvaises références :</p>
+Ce code fournit les informations d'identification de manière synchrone. Il doit garder une trace des demandes en suspens, pour s'assurer qu'il n'essaie pas à plusieurs reprises de soumettre de mauvaises références :
 
-<pre class="brush: js">var target = "https://intranet.company.com/";
+```js
+var target = "https://intranet.company.com/";
 
 var myCredentials = {
   username: "me@company.com",
@@ -232,7 +219,7 @@ var pendingRequests = [];
 function completed(requestDetails) {
   console.log("completed: " + requestDetails.requestId);
   var index = pendingRequests.indexOf(requestDetails.requestId);
-  if (index &gt; -1) {
+  if (index > -1) {
     pendingRequests.splice(index, 1);
   }
 }
@@ -263,11 +250,13 @@ browser.webRequest.onCompleted.addListener(
 browser.webRequest.onErrorOccurred.addListener(
   completed,
   {urls: [target]}
-);</pre>
+);
+```
 
-<p>Ce code fournit les informations d'identification de manière asynchrone, en les récupérant à partir du stockage. Il doit également assurer le suivi des demandes en suspens, afin de s'assurer qu'il n'essaie pas à plusieurs reprises de soumettre de mauvaises références :</p>
+Ce code fournit les informations d'identification de manière asynchrone, en les récupérant à partir du stockage. Il doit également assurer le suivi des demandes en suspens, afin de s'assurer qu'il n'essaie pas à plusieurs reprises de soumettre de mauvaises références :
 
-<pre class="brush: js">var target = "https://httpbin.org/basic-auth/*";
+```js
+var target = "https://httpbin.org/basic-auth/*";
 
 var pendingRequests = [];
 
@@ -277,7 +266,7 @@ A request has completed. We can stop worrying about it.
 function completed(requestDetails) {
   console.log("completed: " + requestDetails.requestId);
   var index = pendingRequests.indexOf(requestDetails.requestId);
-  if (index &gt; -1) {
+  if (index > -1) {
     pendingRequests.splice(index, 1);
   }
 }
@@ -314,19 +303,17 @@ browser.webRequest.onErrorOccurred.addListener(
   completed,
   {urls: [target]}
 );
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -353,5 +340,4 @@ browser.webRequest.onErrorOccurred.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

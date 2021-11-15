@@ -11,37 +11,35 @@ tags:
   - userScripts
 translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>La méthode <code>unregister()</code> de l'interface  {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} désenregistre le script utilisateur représenté par cette instance d'interface et précédemment enregistré via  {{WebExtAPIRef("userScripts.register","userScripts.register()")}}.</p>
+La méthode `unregister()` de l'interface  {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} désenregistre le script utilisateur représenté par cette instance d'interface et précédemment enregistré via  {{WebExtAPIRef("userScripts.register","userScripts.register()")}}.
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> Les scripts utilisateur sont automatiquement désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés..</p>
-</div>
+> **Note :** Les scripts utilisateur sont automatiquement désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés..
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">const registeredUserScript = await browser.userScripts.register(
+```js
+const registeredUserScript = await browser.userScripts.register(
   userScriptOptions       // object
 );
 …
-await registeredUserScript.unregister()</pre>
+await registeredUserScript.unregister()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun</p>
+Aucun
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une {{JSxRef("Promise")}} qui sera résolu une fois le script utilisateur désenregistré. La promesse ne rapporte rien.</p>
+Une {{JSxRef("Promise")}} qui sera résolu une fois le script utilisateur désenregistré. La promesse ne rapporte rien.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.userScripts.RegisteredUserScript.unregister")}}</p>
+{{Compat("webextensions.api.userScripts.RegisteredUserScript.unregister")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{WebExtAPIRef("userScripts.register","userScripts.register()")}}</li>
- <li>{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}</li>
-</ul>
+- {{WebExtAPIRef("userScripts.register","userScripts.register()")}}
+- {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}

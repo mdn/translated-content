@@ -13,46 +13,45 @@ tags:
   - deleteRange
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Supprime toutes les visites aux pages que l'utilisateur a effectuées pendant la période donnée. Si cela supprime toutes les visites effectuées sur une page donnée, alors la page n'apparaîtra plus dans l'historique du navigateur et {{WebExtAPIRef("history.onVisitRemoved")}} se déclenchera pour cela.</p>
+Supprime toutes les visites aux pages que l'utilisateur a effectuées pendant la période donnée. Si cela supprime toutes les visites effectuées sur une page donnée, alors la page n'apparaîtra plus dans l'historique du navigateur et {{WebExtAPIRef("history.onVisitRemoved")}} se déclenchera pour cela.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var deletingRange = browser.history.deleteRange(
+```js
+var deletingRange = browser.history.deleteRange(
   range           // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>range</code></dt>
- <dd><p><code>object</code>. Spécification de la plage de temps pour laquelle supprimer des visites.</p>
- <dl>
-  <dt><code>startTime</code></dt>
-  <dd><code>number</code> ou <code>string</code> ou <code>object</code>. Une valeur indiquant une date et une heure. Cela peut être représenté par: un objet <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>, une <a href="http://www.iso.org/iso/home/standards/iso8601.htm">chaîne de de date ISO 8601</a>, ou le nombre de <a href="https://en.wikipedia.org/wiki/Unix_time">millisecondes depuis l'époque</a>. Spécifie l'heure de début de la plage.</dd>
-  <dt><code>endTime</code></dt>
-  <dd><code>number</code> ou <code>string</code> ou <code>object</code>. Une valeur indiquant une date et une heure. Cela peut être représenté par: un objet <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>, une <a href="http://www.iso.org/iso/home/standards/iso8601.htm">chaîne de date ISO 8601</a>, ou le nombre de <a href="https://en.wikipedia.org/wiki/Unix_time">millisecondes depuis l'époque</a>. Spécifie l'heure de fin de la plage.</dd>
- </dl>
- </dd>
-</dl>
+- `range`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`. Spécification de la plage de temps pour laquelle supprimer des visites.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> sera remplie sans paramètre lorsque la plage a été supprimée.</p>
+    - `startTime`
+      - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par: un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time). Spécifie l'heure de début de la plage.
+    - `endTime`
+      - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par: un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time). Spécifie l'heure de fin de la plage.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.history.deleteRange")}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans paramètre lorsque la plage a été supprimée.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Supprimer toutes les visites effectuées à la dernière minute :</p>
+{{Compat("webextensions.api.history.deleteRange")}}
 
-<pre class="brush: js">const MINUTE = 60 * 1000;
+## Exemples
+
+Supprimer toutes les visites effectuées à la dernière minute :
+
+```js
+const MINUTE = 60 * 1000;
 
 function oneMinuteAgo() {
   return Date.now() - MINUTE;
@@ -61,19 +60,18 @@ function oneMinuteAgo() {
 browser.history.deleteRange({
   startTime: oneMinuteAgo(),
   endTime: Date.now()
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-deleteRange) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#method-deleteRange"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -100,5 +98,4 @@ browser.history.deleteRange({
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

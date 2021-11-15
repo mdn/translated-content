@@ -12,46 +12,44 @@ tags:
   - removePasswords
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removePasswords
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Efface les mots de passes enregistrés</p>
+Efface les mots de passes enregistrés
 
-<p>Vous pouvez utiliser le paremètre <code>removalOptions</code>, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :</p>
+Vous pouvez utiliser le paremètre `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
 
-<ul>
- <li>Effacer uniquement les mots de passe enregistrés après un certain temp</li>
- <li>Contrôlez si vous souhaitez supprimer les mots de passe enregistrés sur les pages Web normales ou effacer les mots de passe enregistrés sur les applications et les extensions hébergées.</li>
-</ul>
+- Effacer uniquement les mots de passe enregistrés après un certain temp
+- Contrôlez si vous souhaitez supprimer les mots de passe enregistrés sur les pages Web normales ou effacer les mots de passe enregistrés sur les applications et les extensions hébergées.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var removing = browser.browsingData.removePasswords(
+```js
+var removing = browser.browsingData.removePasswords(
   removalOptions            // RemovalOptions object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>removalOptions</code></dt>
- <dd><code>object</code>. Un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, qui peut être utilisé pour effacer uniquement les mots de passe enregistrés après un certain temps, et pour effacer les mots de passe enregistrés sur les pages Web normales ou pour effacer les mots de passe enregistrés sur les applications et les extensions hébergées.</dd>
-</dl>
+- `removalOptions`
+  - : `object`. Un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, qui peut être utilisé pour effacer uniquement les mots de passe enregistrés après un certain temps, et pour effacer les mots de passe enregistrés sur les pages Web normales ou pour effacer les mots de passe enregistrés sur les applications et les extensions hébergées.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans arguments lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browsingData.removePasswords")}}</p>
+{{Compat("webextensions.api.browsingData.removePasswords")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Supprimer les mots de passe enregistrés la semaine dernière :</p>
+Supprimer les mots de passe enregistrés la semaine dernière :
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("removed");
 }
 
@@ -66,11 +64,13 @@ function weekInMilliseconds() {
 var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
 
 browser.browsingData.removePasswords({since: oneWeekAgo}).
-then(onRemoved, onError);</pre>
+then(onRemoved, onError);
+```
 
-<p>Supprime tous les mots de passe enregistrés :</p>
+Supprime tous les mots de passe enregistrés :
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("removed");
 }
 
@@ -78,19 +78,18 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removePasswords({}).then(onRemoved, onError);</pre>
+browser.browsingData.removePasswords({}).then(onRemoved, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -117,5 +116,4 @@ browser.browsingData.removePasswords({}).then(onRemoved, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

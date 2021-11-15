@@ -13,41 +13,41 @@ tags:
   - show
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Affiche l'action de la page pour un onglet donné. L'action de la page est affichée chaque fois que l'onglet donné est l'onglet actif.</p>
+Affiche l'action de la page pour un onglet donné. L'action de la page est affichée chaque fois que l'onglet donné est l'onglet actif.
 
-<p><code>show()</code> remplace la correspondance de motifs, de sorte que l'action page sera affichée dans l'onglet spécifié même si <a href="/Add-ons/WebExtensions/manifest.json/page_action"><code>show_matches</code></a> e correspond pas à l'URL ou si <a href="/Add-ons/WebExtensions/manifest.json/page_action"><code>hide_matches</code></a> ne correspond pas.</p>
+`show()` remplace la correspondance de motifs, de sorte que l'action page sera affichée dans l'onglet spécifié même si [`show_matches`](/Add-ons/WebExtensions/manifest.json/page_action) e correspond pas à l'URL ou si [`hide_matches`](/Add-ons/WebExtensions/manifest.json/page_action) ne correspond pas.
 
-<p>Notez que l'appel à <code>show()</code> n'a aucun effet sur un onglet sans contenu chargé.</p>
+Notez que l'appel à `show()` n'a aucun effet sur un onglet sans contenu chargé.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.pageAction.show(
+```js
+browser.pageAction.show(
   tabId // integer
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. L'ID de l'onglet pour lequel vous souhaitez afficher l'action de la page.</dd>
-</dl>
+- `tabId`
+  - : `integer`. L'ID de l'onglet pour lequel vous souhaitez afficher l'action de la page.
 
-<h3 id="Valeur_renvoyée">Valeur renvoyée</h3>
+### Valeur renvoyée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec <code>undefined</code>.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `undefined`.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.pageAction.show")}}</p>
+{{Compat("webextensions.api.pageAction.show")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cette exemple montre l'action de la page pour l'onglet actif lorsque l'utilisateur sélectionne un élément de menu contextuel. Notez que vous aurez besoin de la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> <code>contextMenus</code>  dans votre <a href="/fr/Add-ons/WebExtensions/manifest.json">manifest</a> pour créer des éléments de menu contextuel.</p>
+Cette exemple montre l'action de la page pour l'onglet actif lorsque l'utilisateur sélectionne un élément de menu contextuel. Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus`  dans votre [manifest](/fr/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
 
-<pre class="brush: js">browser.contextMenus.create({
+```js
+browser.contextMenus.create({
   id: "show",
   title: "Show page action"
 });
@@ -57,19 +57,17 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
     browser.pageAction.show(tab.id);
   }
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/pageAction"><code>chrome.pageAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,5 +94,4 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

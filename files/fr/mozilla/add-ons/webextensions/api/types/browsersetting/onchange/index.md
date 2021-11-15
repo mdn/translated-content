@@ -13,91 +13,81 @@ tags:
   - onchange
 translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p>L'événement <code>BrowserSetting.onChanged</code> est déclenché lorsque le paramètre est modifié.</p>
+L'événement `BrowserSetting.onChanged` est déclenché lorsque le paramètre est modifié.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">BrowserSetting.onChanged.addListener(listener)
+```js
+BrowserSetting.onChanged.addListener(listener)
 BrowserSetting.onChanged.removeListener(listener)
 BrowserSetting.onChanged.hasListener(listener)
-</pre>
+```
 
-<p>Les événement ont trois fonctions :</p>
+Les événement ont trois fonctions :
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Ajout un auditeur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'auditeur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifier si l'auditeur est enregistré pour cet événement. Renvoie <code>true</code> si elle écoute, <code>false</code> sinon.</dd>
-</dl>
+- `addListener(listener)`
+  - : Ajout un auditeur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'auditeur à supprimer.
+- `hasListener(listener)`
+  - : Vérifier si l'auditeur est enregistré pour cet événement. Renvoie `true` si elle écoute, `false` sinon.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction passera les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>details</code></dt>
-  <dd>Un <code>object</code> contenant des détails sur le changement survenu. Ses propriété sont les suivantes :
-  <dl>
-   <dt><code>value</code></dt>
-   <dd>La nouvelle valeur du paramètre. Le type de cette propriété est déterminé par le paramètre particulier.</dd>
-   <dt><code>levelOfControl</code></dt>
-   <dd><code>string</code>. Cela représente la façon dont le paramètre est actuellement controlé. Vous pouvez l'utiliser pour vérifier si vous pouvez modifier le réglage. Voir <code><a href="/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/set">BrowserSetting.set()</a></code> pour plus détails. Sa valeur peut-être l'une des suivantes :
-   <table class="standard-table">
-    <tbody>
-     <tr>
-      <td><code>"not_controllable"</code></td>
-      <td>Les extensions ne sont pas autorisées à modifier ce paramètre.</td>
-     </tr>
-     <tr>
-      <td><code>"controlled_by_other_extensions"</code></td>
-      <td>Une autre extensions qui a été installée après celle-ci a modifié ce paramètre.</td>
-     </tr>
-     <tr>
-      <td><code>"controllable_by_this_extension"</code></td>
-      <td>Cette extensions est autorisée à modifier le paramètre.</td>
-     </tr>
-     <tr>
-      <td><code>controlled_by_this_extension"</code></td>
-      <td>Cette extensions a déjà modifié le paramètre.</td>
-     </tr>
-    </tbody>
-   </table>
-   </dd>
-  </dl>
-  </dd>
- </dl>
- </dd>
-</dl>
+  - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction passera les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `details`
 
+      - : Un `object` contenant des détails sur le changement survenu. Ses propriété sont les suivantes :
 
+        - `value`
+          - : La nouvelle valeur du paramètre. Le type de cette propriété est déterminé par le paramètre particulier.
+        - `levelOfControl`
+          - : `string`. Cela représente la façon dont le paramètre est actuellement controlé. Vous pouvez l'utiliser pour vérifier si vous pouvez modifier le réglage. Voir [`BrowserSetting.set()`](/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) pour plus détails. Sa valeur peut-être l'une des suivantes :<table class="standard-table">
+              <tbody>
+                <tr>
+                  <td><code>"not_controllable"</code></td>
+                  <td>Les extensions ne sont pas autorisées à modifier ce paramètre.</td>
+                </tr>
+                <tr>
+                  <td><code>"controlled_by_other_extensions"</code></td>
+                  <td>
+                    Une autre extensions qui a été installée après celle-ci a modifié ce
+                    paramètre.
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>"controllable_by_this_extension"</code></td>
+                  <td>Cette extensions est autorisée à modifier le paramètre.</td>
+                </tr>
+                <tr>
+                  <td><code>controlled_by_this_extension"</code></td>
+                  <td>Cette extensions a déjà modifié le paramètre.</td>
+                </tr>
+              </tbody>
+            </table>
 
-<p>{{Compat("webextensions.api.types.BrowserSetting.onChange")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.types.BrowserSetting.onChange")}}
 
-<p>{{WebExtExamples}}</p>
+## Exemples
 
-<div class="note"><p><strong>Note :</strong></p>
+{{WebExtExamples}}
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/types"><code>chrome.types</code></a>.</p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/extensions/types).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -124,5 +114,4 @@ BrowserSetting.onChanged.hasListener(listener)
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

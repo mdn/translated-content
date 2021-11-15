@@ -13,21 +13,22 @@ tags:
   - managed
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/managed
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet {{WebExtAPIRef("storage.StorageArea")}} qui représente la zone de stockage gérée. Les éléments de stockage <code>géré</code> sont définis par l'administrateur du domaine ou d'autres applications natives installées sur l'ordinateur de l'utilisateur et sont en lecture seule pour l'extension. Essayer de modifier cette zone de stockage entraîne une erreur.</p>
+Un objet {{WebExtAPIRef("storage.StorageArea")}} qui représente la zone de stockage gérée. Les éléments de stockage `géré` sont définis par l'administrateur du domaine ou d'autres applications natives installées sur l'ordinateur de l'utilisateur et sont en lecture seule pour l'extension. Essayer de modifier cette zone de stockage entraîne une erreur.
 
-<h2 id="Provisionnement_du_stockage_géré">Provisionnement du stockage géré</h2>
+## Provisionnement du stockage géré
 
-<p>La procédure de provisionnement du stockage géré est différente selon les navigateurs. Firefox a sa propre méthode mais (à partir de Firefox 67) peut aussi utiliser la fonction Storage.managed de Chrome qui supporte un fichier <code>.json</code>. ((Voir Stockage Chrome géré ci-dessous.)</p>
+La procédure de provisionnement du stockage géré est différente selon les navigateurs. Firefox a sa propre méthode mais (à partir de Firefox 67) peut aussi utiliser la fonction Storage.managed de Chrome qui supporte un fichier `.json`. ((Voir Stockage Chrome géré ci-dessous.)
 
-<h3 id="manifestes_natives">manifestes natives</h3>
+### manifestes natives
 
-<p>Pour Firefox, vous devez créer un fichier manifest JSON dans un format spécifique, dans un emplacement spécifique. Pour plus de détails sur la syntaxe et l'emplacement du manifeste, voir <a href="/fr/Add-ons/WebExtensions/Native_manifests">manifests natifs</a>.</p>
+Pour Firefox, vous devez créer un fichier manifest JSON dans un format spécifique, dans un emplacement spécifique. Pour plus de détails sur la syntaxe et l'emplacement du manifeste, voir [manifests natifs](/fr/Add-ons/WebExtensions/Native_manifests).
 
-<p>Voici un exemple de manifest :</p>
+Voici un exemple de manifest :
 
-<pre class="brush: json">{
+```json
+{
   "name": "favourite-color-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
@@ -35,38 +36,43 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/managed
   {
     "color": "management thinks it should be blue!"
   }
-}</pre>
+}
+```
 
-<p>Compte tenu de ce manifeste, l'extension "favourite-color-examples@mozilla.org" pourrait accéder aux données en utilisant un code comme celui-ci :</p>
+Compte tenu de ce manifeste, l'extension "favourite-color-examples\@mozilla.org" pourrait accéder aux données en utilisant un code comme celui-ci :
 
-<pre class="brush: js">var storageItem = browser.storage.managed.get('color');
-storageItem.then((res) =&gt; {
+```js
+var storageItem = browser.storage.managed.get('color');
+storageItem.then((res) => {
   console.log(`Managed colur is: ${res.color}`);
-});</pre>
+});
+```
 
-<h3 id="Gestion_de_stockage_dans_Chrome">Gestion de stockage dans Chrome</h3>
+### Gestion de stockage dans Chrome
 
-<p>Firefox et Chrome supportent tous deux l'utilisation d'un manifeste pour les zones de stockage.</p>
+Firefox et Chrome supportent tous deux l'utilisation d'un manifeste pour les zones de stockage.
 
-<p>La zone de stockage gérée est configurée à l'aide d'un schéma JSON, qui est strictement validé par Chrome et Firefox 67 ou supérieur. Stockez le schéma dans un fichier.json et pointez-le depuis la propriété "managed_schema" de la clé de manifeste "storage" de l'extension web. Le fichier json déclare les stratégies d'entreprise supportées par l'extension.</p>
+La zone de stockage gérée est configurée à l'aide d'un schéma JSON, qui est strictement validé par Chrome et Firefox 67 ou supérieur. Stockez le schéma dans un fichier.json et pointez-le depuis la propriété "managed_schema" de la clé de manifeste "storage" de l'extension web. Le fichier json déclare les stratégies d'entreprise supportées par l'extension.
 
-<p>Les stratégies définissent les options qui ont été configurées par un administrateur système au lieu de l'utilisateur. La gestion du stockage permet de préconfigurer une extension pour tous les utilisateurs d'une organisation.</p>
+Les stratégies définissent les options qui ont été configurées par un administrateur système au lieu de l'utilisateur. La gestion du stockage permet de préconfigurer une extension pour tous les utilisateurs d'une organisation.
 
-<p>C'est à l'extension d'appliquer les stratégies configurées par l'administrateur. L'extension peut lire les stratégies à l'aide de l'API storage.managed.</p>
+C'est à l'extension d'appliquer les stratégies configurées par l'administrateur. L'extension peut lire les stratégies à l'aide de l'API storage.managed.
 
-<h4 id="manifest.json">manifest.json</h4>
+#### manifest.json
 
-<pre class="brush: js">{
+```js
+{
   "name": "chrome-storage-managed-examples@mozilla.org",
   "storage": {
       "managed_schema": "schema.json"
   },
 }
-</pre>
+```
 
-<p>Le fichier json ressemblerait à ceci :</p>
+Le fichier json ressemblerait à ceci :
 
-<pre class="brush: json">{
+```json
+{
   "type": "object",
   // "properties" maps an optional key of this object to its schema. At the
   // top-level object, these keys are the policy names supported.
@@ -87,23 +93,22 @@ storageItem.then((res) =&gt; {
       }
     }
   }
-}</pre>
+}
+```
 
-<p>Pour plus d'informations, voir l'article de Chrome pour les zones de stockage <a href="https://developer.chrome.com/extensions/manifest/storage">Manifeste pour les zones de stockage</a>.</p>
+Pour plus d'informations, voir l'article de Chrome pour les zones de stockage [Manifeste pour les zones de stockage](https://developer.chrome.com/extensions/manifest/storage).
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.storage.managed")}}</p>
+{{Compat("webextensions.api.storage.managed")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> dans le code de Chromium.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -130,5 +135,4 @@ storageItem.then((res) =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

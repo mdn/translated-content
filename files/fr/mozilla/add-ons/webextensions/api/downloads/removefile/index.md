@@ -13,47 +13,45 @@ tags:
   - removeFile
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La fonction <code><strong>removeFile</strong></code><strong><code>()</code></strong> de l'API {{WebExtAPIRef("downloads")}} supprime un fichier téléchargé du disque.</p>
+La fonction **`removeFile`\*\***`()`\*\* de l'API {{WebExtAPIRef("downloads")}} supprime un fichier téléchargé du disque.
 
-<p>Cette API supprime le fichier du disque, mais ne le supprime pas de l'historique des téléchargements du navigateur, donc un appel  {{WebExtAPIRef("downloads.search()")}} renvoie toujours l'élément comme {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, mais son attribut <code>exists</code> sera <code>false</code>.</p>
+Cette API supprime le fichier du disque, mais ne le supprime pas de l'historique des téléchargements du navigateur, donc un appel  {{WebExtAPIRef("downloads.search()")}} renvoie toujours l'élément comme {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, mais son attribut `exists` sera `false`.
 
-<p>Pour supprimer un fichier de l'historique des téléchargements, vous devez utiliser  {{WebExtAPIRef("downloads.erase()")}}.</p>
+Pour supprimer un fichier de l'historique des téléchargements, vous devez utiliser  {{WebExtAPIRef("downloads.erase()")}}.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<div class="note">
-<p><strong>Note :</strong> Si vous souhaitez supprimer un fichier téléchargé du disque et l'effacer de l'historique, vous devez appeler <code>removeFile()</code> avant d'appeler {{WebExtAPIRef("downloads.erase()")}}. Si vous l'essayez dans l'autre sens, vous obtiendrez une erreur lors de l'appel de <code>removeFile()</code>, car le navigateur n'aura plus d'enregistrement du téléchargement.</p>
-</div>
+> **Note :** Si vous souhaitez supprimer un fichier téléchargé du disque et l'effacer de l'historique, vous devez appeler `removeFile()` avant d'appeler {{WebExtAPIRef("downloads.erase()")}}. Si vous l'essayez dans l'autre sens, vous obtiendrez une erreur lors de l'appel de `removeFile()`, car le navigateur n'aura plus d'enregistrement du téléchargement.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var removing = browser.downloads.removeFile(
+```js
+var removing = browser.downloads.removeFile(
   downloadId      // integer
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>downloadId</code></dt>
- <dd>Un <code>integer</code> représentant l'identifiant de  {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} que vous souhaitez supprimer du disque.</dd>
-</dl>
+- `downloadId`
+  - : Un `integer` représentant l'identifiant de  {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} que vous souhaitez supprimer du disque.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. Si la demande a été acceptée, la promesse sera remplie sans arguments. Si la demande a échoué, la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la demande a été acceptée, la promesse sera remplie sans arguments. Si la demande a échoué, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.downloads.removeFile")}}</p>
+{{Compat("webextensions.api.downloads.removeFile")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Supprimer le dernier fichier téléchargé :</p>
+Supprimer le dernier fichier téléchargé :
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log(`Removed item`);
 }
 
@@ -62,7 +60,7 @@ function onError(error) {
 }
 
 function remove(downloadItems) {
-  if (downloadItems.length &gt; 0) {
+  if (downloadItems.length > 0) {
     var removing = browser.downloads.removeFile(downloadItems[0].id);
     removing.then(onRemoved, onError);
   }
@@ -73,19 +71,18 @@ var searching = browser.downloads.search({
   orderBy: ["-startTime"]
 });
 
-searching.then(remove, onError);</pre>
+searching.then(remove, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,5 +109,4 @@ searching.then(remove, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

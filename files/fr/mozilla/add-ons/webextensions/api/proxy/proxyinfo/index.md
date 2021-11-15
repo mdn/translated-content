@@ -10,52 +10,50 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/ProxyInfo
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Contient des informations sur un proxy. Cet objet, ou un tableau de ces objets, est renvoyé par le programme d'écoute à {{WebExtAPIRef("proxy.onRequest")}}. Il indique au navigateur si la requête doit être mandatée et, dans l'affirmative, quel proxy utiliser.</p>
+Contient des informations sur un proxy. Cet objet, ou un tableau de ces objets, est renvoyé par le programme d'écoute à {{WebExtAPIRef("proxy.onRequest")}}. Il indique au navigateur si la requête doit être mandatée et, dans l'affirmative, quel proxy utiliser.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>type</code></dt>
- <dd>
- <p><code>string</code>. Cela indique s'il faut utiliser un proxy et, dans l'affirmative, quel type de proxy utiliser. Il peut prendre l'une des valeurs suivantes :</p>
+- `type`
 
- <ul>
-  <li><code>"direct"</code>: ne pas utiliser la requête par procuration. Si cette valeur est donnée, toutes les autres propriétés de cet objet sont ignorées.</li>
-  <li><code>"http"</code>: HTTP proxy (ou SSL CONNECT pour HTTPS)</li>
-  <li><code>"https"</code>: HTTP proxying via TLS connection au proxy</li>
-  <li><code>"socks"</code>: proxy SOCKS v5</li>
-  <li><code>"socks4"</code>: proxy SOCKS v4</li>
- </ul>
- </dd>
- <dt><code>host</code></dt>
- <dd><code>string</code>. Le nom d'hôte du serveur proxy. Obligatoire sauf si le <code>type</code> est <code>"direct"</code>.</dd>
- <dt><code>port</code></dt>
- <dd><code>string</code>. e numéro de port du serveur proxy. Obligatoire sauf si le <code>type</code> est  <code>"direct"</code>.</dd>
- <dt><code>username</code></dt>
- <dd><code>string</code>. Nom d'utilisateur pour le service proxy. Ceci est utilisable avec "socks".  Pour les autorisations de proxy HTTP, utilisez <a href="/fr/Add-ons/WebExtensions/API/webRequest/onAuthRequired"><code>webRequest.onAuthRequired</code></a>.</dd>
- <dt><code>password</code></dt>
- <dd><code>string</code>. Mot de passe pour le service proxy. Ceci est utilisable avec "socks". FPour les autorisations de proxy HTTP, utilisez <a href="/fr/Add-ons/WebExtensions/API/webRequest/onAuthRequired"><code>webRequest.onAuthRequired</code></a>.</dd>
- <dt><code>proxyDNS</code></dt>
- <dd><code>boolean</code>. Si vrai, le serveur proxy est utilisé pour résoudre certaines requêtes DNS (uniquement utilisable avec <code>"socks4"</code> et <code>"socks"</code>).  Par défaut à <code>false</code>.</dd>
- <dt><code>failoverTimeout</code></dt>
- <dd><code>number</code>:  Délais de basculement en secondes. Si la connexion ne parvient pas à connecter le serveur proxy après ce nombre de secondes, le serveur proxy suivant dans le tableau renvoyé par l'écouteur <code>proxy.onRequest</code> sera utilisé.</dd>
-</dl>
+  - : `string`. Cela indique s'il faut utiliser un proxy et, dans l'affirmative, quel type de proxy utiliser. Il peut prendre l'une des valeurs suivantes :
 
-<dl>
- <dt><code>proxyAuthorizationHeader</code></dt>
- <dd><code>string.</code> Cette chaîne, si elle est définie sur non-vide, est passée directement en valeur à l'en-tête de requête {{httpheader("Proxy-Authorization")}} envoyé aux proxies HTTP dans le cadre des requêtes HTTP ordinaires et des requêtes CONNECT. Simplement dit, ceci peut être utilisé pour s'authentifier directement sur les proxies HTTP nécessitant une authentification (non contestable).<br>
- <br>
- Par exemple, si vous voulez envoyer "nom d'utilisateur" et "mot de passe" pour l'authentification "basique", vous pouvez définir la propriété <code>proxyAuthorizationHeader</code> à <code>Basic dXNlcm5hbWU6cGFzc3dvcmQ=</code></dd>
- <dt><code>connectionIsolationKey </code> {{optional_inline}}</dt>
- <dd><code>string.</code> Une clé optionnelle utilisée pour l'isolation supplémentaire de cette connexion proxy.</dd>
-</dl>
+    - `"direct"`: ne pas utiliser la requête par procuration. Si cette valeur est donnée, toutes les autres propriétés de cet objet sont ignorées.
+    - `"http"`: HTTP proxy (ou SSL CONNECT pour HTTPS)
+    - `"https"`: HTTP proxying via TLS connection au proxy
+    - `"socks"`: proxy SOCKS v5
+    - `"socks4"`: proxy SOCKS v4
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- `host`
+  - : `string`. Le nom d'hôte du serveur proxy. Obligatoire sauf si le `type` est `"direct"`.
+- `port`
+  - : `string`. e numéro de port du serveur proxy. Obligatoire sauf si le `type` est  `"direct"`.
+- `username`
+  - : `string`. Nom d'utilisateur pour le service proxy. Ceci est utilisable avec "socks".  Pour les autorisations de proxy HTTP, utilisez [`webRequest.onAuthRequired`](/fr/Add-ons/WebExtensions/API/webRequest/onAuthRequired).
+- `password`
+  - : `string`. Mot de passe pour le service proxy. Ceci est utilisable avec "socks". FPour les autorisations de proxy HTTP, utilisez [`webRequest.onAuthRequired`](/fr/Add-ons/WebExtensions/API/webRequest/onAuthRequired).
+- `proxyDNS`
+  - : `boolean`. Si vrai, le serveur proxy est utilisé pour résoudre certaines requêtes DNS (uniquement utilisable avec `"socks4"` et `"socks"`).  Par défaut à `false`.
+- `failoverTimeout`
+  - : `number`:  Délais de basculement en secondes. Si la connexion ne parvient pas à connecter le serveur proxy après ce nombre de secondes, le serveur proxy suivant dans le tableau renvoyé par l'écouteur `proxy.onRequest` sera utilisé.
 
-<p>{{Compat("webextensions.api.proxy.ProxyInfo")}}</p>
+<!---->
 
-<p>{{WebExtExamples}}</p>
+- `proxyAuthorizationHeader`
+
+  - : `string.` Cette chaîne, si elle est définie sur non-vide, est passée directement en valeur à l'en-tête de requête {{httpheader("Proxy-Authorization")}} envoyé aux proxies HTTP dans le cadre des requêtes HTTP ordinaires et des requêtes CONNECT. Simplement dit, ceci peut être utilisé pour s'authentifier directement sur les proxies HTTP nécessitant une authentification (non contestable).
+
+    Par exemple, si vous voulez envoyer "nom d'utilisateur" et "mot de passe" pour l'authentification "basique", vous pouvez définir la propriété `proxyAuthorizationHeader` à `Basic dXNlcm5hbWU6cGFzc3dvcmQ=`
+
+- `connectionIsolationKey `{{optional_inline}}
+  - : `string.` Une clé optionnelle utilisée pour l'isolation supplémentaire de cette connexion proxy.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.proxy.ProxyInfo")}}
+
+{{WebExtExamples}}

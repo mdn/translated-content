@@ -12,42 +12,42 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Supprime une valeur précédemment stockée par un appel à {{WebExtAPIRef("sessions.setWindowValue")}}.</p>
+Supprime une valeur précédemment stockée par un appel à {{WebExtAPIRef("sessions.setWindowValue")}}.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var removing = browser.sessions.removeWindowValue(
+```js
+var removing = browser.sessions.removeWindowValue(
   windowId,    // integer
   key          // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>windowId</code></dt>
- <dd><code>integer</code>. ID de la fenêtre dont vous essayez de supprimer les données.</dd>
- <dt><code>key</code></dt>
- <dd><code>string</code>. lé identifiant la valeur particulière à supprimer. Cela doit correspondre à la clé précédemment donnée dans {{WebExtAPIRef("sessions.setWindowValue")}}.</dd>
-</dl>
+- `windowId`
+  - : `integer`. ID de la fenêtre dont vous essayez de supprimer les données.
+- `key`
+  - : `string`. lé identifiant la valeur particulière à supprimer. Cela doit correspondre à la clé précédemment donnée dans {{WebExtAPIRef("sessions.setWindowValue")}}.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui ne sera résolue aucun argument si l'élément a été supprimé avec succès. Si l'appel a échoué (par exemple, parce que l'ID de la fenêtre n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui ne sera résolue aucun argument si l'élément a été supprimé avec succès. Si l'appel a échoué (par exemple, parce que l'ID de la fenêtre n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.sessions.removeWindowValue", 10)}}</p>
+{{Compat("webextensions.api.sessions.removeWindowValue", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Ce code ajoute deux éléments de menu contextuel: l'un stocke une valeur associée à la fenêtre courante, l'autre la supprime :</p>
+Ce code ajoute deux éléments de menu contextuel: l'un stocke une valeur associée à la fenêtre courante, l'autre la supprime :
 
-<pre class="brush: js">async function setOnActiveWindow() {
+```js
+async function setOnActiveWindow() {
   let currentWindow = await browser.windows.getLastFocused();
   await browser.sessions.setWindowValue(currentWindow.id, "my-key", "my-value");
 }
@@ -69,12 +69,13 @@ browser.menus.create({
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener((info) =&gt; {
+browser.menus.onClicked.addListener((info) => {
   if (info.menuItemId === "add-my-item") {
     setOnActiveWindow();
   } else {
     removeFromActiveWindow();
   }
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

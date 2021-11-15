@@ -14,51 +14,49 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La fonction <strong><code>bookmarks.search()</code></strong> recherche les nœuds d'arborescence de signets correspondant à la requête donnée.</p>
+La fonction **`bookmarks.search()`** recherche les nœuds d'arborescence de signets correspondant à la requête donnée.
 
-<p>Cette fonction déclenche une exception si l'un des paramètres d'entrée n'est pas valide ou n'est pas d'un type approprié ; regardez dans la <a href="/fr/Add-ons/WebExtensions/Debugging">console</a> pour le message d'erreur. Les exceptions n'ont pas d'ID d'erreur et les messages eux-mêmes peuvent changer, donc n'écrivez pas de code qui essaie de les interpréter.</p>
+Cette fonction déclenche une exception si l'un des paramètres d'entrée n'est pas valide ou n'est pas d'un type approprié ; regardez dans la [console](/fr/Add-ons/WebExtensions/Debugging) pour le message d'erreur. Les exceptions n'ont pas d'ID d'erreur et les messages eux-mêmes peuvent changer, donc n'écrivez pas de code qui essaie de les interpréter.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var searching = browser.bookmarks.search(
+```js
+var searching = browser.bookmarks.search(
   query                  // string or object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>query</code></dt>
- <dd><p>Un {{jsxref("string")}} ou {{jsxref("object")}} décrivant la requête à effectuer.</p>
- <p>Si la <code>query</code> est une chaîne, elle comprend zéro ou plusieurs termes de recherche. Les termes de recherche sont délimités par des espaces et peuvent être placés entre guillemets pour permettre la recherche dans des expressions de plusieurs mots. Chaque terme de recherche correspond s'il correspond à une sous-chaîne dans l'URL ou le titre du signet. La correspondance est insensible à la casse. Pour qu'un signet corresponde à la requête, tous les termes de recherche de la requête doivent correspondre.</p>
+- `query`
 
- <p>Si la <code>query</code> un objet, elle possède zéro ou plus des trois propriétés suivantes : <code>query</code>, <code>title</code>, et <code>url</code>, qui sont décrites ci-dessous. Pour qu'un signet corresponde à la requête, tous les termes de propriétés fournis doivent correspondre aux valeurs spécifiées.</p>
+  - : Un {{jsxref("string")}} ou {{jsxref("object")}} décrivant la requête à effectuer.
 
- <dl>
-  <dt><code>query</code> {{optional_inline}}</dt>
-  <dd>Un {{jsxref("string")}} spécifiant un ou plusieurs termes à comparer; le format est identique à la forme de chaîne du paramètre du <code>query</code>. Si ce n'est pas une chaîne, une exception est levée.</dd>
-  <dt><code>url</code> {{optional_inline}}</dt>
-  <dd><p>Un {{jsxref("string")}} qui doit correspondre exactement à l'URL du signet. La correspondance est insensible à la casse et les barres obliques de fin sont ignorées.Si vous passez une URL invalide ici, la fonction lèvera une exception.</p>
-  </dd>
-  <dt><code>title</code> {{optional_inline}}</dt>
-  <dd>Un {{jsxref("string")}} Ceci doit correspondre exactement au titre du noeud de l'arbre du signet. La correspondance est sensible à la casse.</dd>
- </dl>
- </dd>
-</dl>
+    Si la `query` est une chaîne, elle comprend zéro ou plusieurs termes de recherche. Les termes de recherche sont délimités par des espaces et peuvent être placés entre guillemets pour permettre la recherche dans des expressions de plusieurs mots. Chaque terme de recherche correspond s'il correspond à une sous-chaîne dans l'URL ou le titre du signet. La correspondance est insensible à la casse. Pour qu'un signet corresponde à la requête, tous les termes de recherche de la requête doivent correspondre.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+    Si la `query` un objet, elle possède zéro ou plus des trois propriétés suivantes : `query`, `title`, et `url`, qui sont décrites ci-dessous. Pour qu'un signet corresponde à la requête, tous les termes de propriétés fournis doivent correspondre aux valeurs spécifiées.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> sera accompli avec un tableau d'objets {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}, chacun représentant un seul nœud d'arbre de signet correspondant. Les résultats sont renvoyés dans l'ordre de création des nœuds. Le tableau est vide si aucun résultat n'a été trouvé.Le <code><a href="/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode">BookmarkTreeNodes</a></code>—même du type <code>"folder"</code> — renvoyé par  <code>bookmarks.search()</code> ne contiennent pas la propriété children. Pour obtenir un  <code>BookmarkTreeNode</code> utilisez <code><a href="/fr/Add-ons/WebExtensions/API/bookmarks/getSubTree">bookmarks.getSubTree()</a></code>.</p>
+    - `query` {{optional_inline}}
+      - : Un {{jsxref("string")}} spécifiant un ou plusieurs termes à comparer; le format est identique à la forme de chaîne du paramètre du `query`. Si ce n'est pas une chaîne, une exception est levée.
+    - `url` {{optional_inline}}
+      - : Un {{jsxref("string")}} qui doit correspondre exactement à l'URL du signet. La correspondance est insensible à la casse et les barres obliques de fin sont ignorées.Si vous passez une URL invalide ici, la fonction lèvera une exception.
+    - `title` {{optional_inline}}
+      - : Un {{jsxref("string")}} Ceci doit correspondre exactement au titre du noeud de l'arbre du signet. La correspondance est sensible à la casse.
 
-<h2 id="Exemple">Exemple</h2>
+### Valeur retournée
 
-<p>Cet exemple enregistre les ID de tous les signets :</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera accompli avec un tableau d'objets {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}, chacun représentant un seul nœud d'arbre de signet correspondant. Les résultats sont renvoyés dans l'ordre de création des nœuds. Le tableau est vide si aucun résultat n'a été trouvé.Le [`BookmarkTreeNodes`](/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode)—même du type `"folder"` — renvoyé par  `bookmarks.search()` ne contiennent pas la propriété children. Pour obtenir un  `BookmarkTreeNode` utilisez [`bookmarks.getSubTree()`](/fr/Add-ons/WebExtensions/API/bookmarks/getSubTree).
 
-<pre class="brush: js">function onFulfilled(bookmarkItems) {
+## Exemple
+
+Cet exemple enregistre les ID de tous les signets :
+
+```js
+function onFulfilled(bookmarkItems) {
   for (item of bookmarkItems) {
     console.log(item.id);
   }
@@ -70,11 +68,13 @@ function onRejected(error) {
 
 var searching = browser.bookmarks.search({});
 
-searching.then(onFulfilled, onRejected);</pre>
+searching.then(onFulfilled, onRejected);
+```
 
-<p>Cet exemple cherche à voir si l'onglet actuellement actif est marqué d'un signet :</p>
+Cet exemple cherche à voir si l'onglet actuellement actif est marqué d'un signet :
 
-<pre class="brush: js">function onFulfilled(bookmarkItems) {
+```js
+function onFulfilled(bookmarkItems) {
   if (bookmarkItems.length) {
     console.log("active tab is bookmarked");
   } else {
@@ -92,23 +92,21 @@ function checkActiveTab(tab) {
 }
 
 browser.browserAction.onClicked.addListener(checkActiveTab);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.bookmarks.search")}}</p>
+{{Compat("webextensions.api.bookmarks.search")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -135,5 +133,4 @@ browser.browserAction.onClicked.addListener(checkActiveTab);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

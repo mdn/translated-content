@@ -13,40 +13,35 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadTime
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Le type <code>DownloadTime</code> de l'API {{WebExtAPIRef("downloads")}} représente le temps nécessaire au téléchargement.</p>
+Le type `DownloadTime` de l'API {{WebExtAPIRef("downloads")}} représente le temps nécessaire au téléchargement.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Un <code>DownloadTime</code> peut être l'un de trois types différents :</p>
+Un `DownloadTime` peut être l'un de trois types différents :
 
-<ul>
- <li>Un objet JavaScript <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>.</li>
- <li>a string:
-  <ul>
-   <li>Si cela ne contient que des chiffres, il est interprété comme le nombre de millisecondes écoulées depuis l'époque UNI.</li>
-   <li>inon, il est interprété comme une chaîne <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>.</li>
-  </ul>
- </li>
- <li>un nombre : ceci est interprété comme le nombre de millisecondes écoulées depuis l'époque UNIX.</li>
-</ul>
+- Un objet JavaScript [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date).
+- a string:
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+  - Si cela ne contient que des chiffres, il est interprété comme le nombre de millisecondes écoulées depuis l'époque UNI.
+  - inon, il est interprété comme une chaîne [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
 
-<p>{{Compat("webextensions.api.downloads.DownloadTime")}}</p>
+- un nombre : ceci est interprété comme le nombre de millisecondes écoulées depuis l'époque UNIX.
 
-<p>{{WebExtExamples}}</p>
+## Compatibilité du navigateur
 
-<div class="note"><p><strong>Note :</strong></p>
+{{Compat("webextensions.api.downloads.DownloadTime")}}
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
+{{WebExtExamples}}
 
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -73,5 +68,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadTime
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

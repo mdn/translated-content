@@ -4,45 +4,44 @@ slug: Mozilla/Firefox/Releases/2/Updating_extensions
 translation_of: Mozilla/Firefox/Releases/2/Updating_extensions
 original_slug: Mise_à_jour_des_extensions_pour_Firefox_2
 ---
-<div>{{FirefoxSidebar}}</div><p> </p>
+{{FirefoxSidebar}}
 
-<p>Cet article s'adresse aux développeurs qui souhaitent mettre à jour leur extension pour qu'elle fonctionne correctement avec Firefox 2.</p>
 
-<h2 id=".C3.89tape_1_:_Mise_.C3.A0_jour_du_manifeste_d.27installation">Étape 1 : Mise à jour du manifeste d'installation</h2>
 
-<p>La première étape - pour de nombreuses extensions, la seule nécessaire - est de mettre à jour le fichier du <a href="fr/Manifestes_d'installation">manifeste d'installation</a>, install.rdf, pour annoncer la compatibilité avec Firefox 2.</p>
+Cet article s'adresse aux développeurs qui souhaitent mettre à jour leur extension pour qu'elle fonctionne correctement avec Firefox 2.
 
-<p>Trouvez la ligne indiquant la plus récente version de Firefox compatible. Pour Firefox 1.5, elle serait :</p>
+## Étape 1 : Mise à jour du manifeste d'installation
 
-<pre class="eval"> &lt;em:maxVersion&gt;1.5.0.*&lt;/em:maxVersion&gt;
-</pre>
+La première étape - pour de nombreuses extensions, la seule nécessaire - est de mettre à jour le fichier du [manifeste d'installation](fr/Manifestes_d'installation), install.rdf, pour annoncer la compatibilité avec Firefox 2.
 
-<p>Et remplacez-la par celle-ci :</p>
+Trouvez la ligne indiquant la plus récente version de Firefox compatible. Pour Firefox 1.5, elle serait :
 
-<pre class="eval"> &lt;em:maxVersion&gt;2.0.0.*&lt;/em:maxVersion&gt;
-</pre>
+     <em:maxVersion>1.5.0.*</em:maxVersion>
 
-<p>Réinstallez ensuite votre extension.</p>
+Et remplacez-la par celle-ci :
 
-<h2 id=".C3.89tape_2_:_Mise_.C3.A0_jour_des_calques_XUL">Étape 2 : Mise à jour des calques XUL</h2>
+     <em:maxVersion>2.0.0.*</em:maxVersion>
 
-<p>Firefox 2 apporte des changements au thème par défaut, et certains éléments de l'interface utilisateur ont été modifiés ou déplacés. Cela peut affecter votre extension, selon les actions de vos calques XUL.</p>
+Réinstallez ensuite votre extension.
 
-<p>Référez-vous à l'article <a href="fr/Changements_dans_les_th%c3%a8mes_graphiques_pour_Firefox_2">Changements dans les thèmes graphiques pour Firefox 2</a> pour déterminer les modifications qui pourraient avoir un effet sur votre extension.</p>
+## Étape 2 : Mise à jour des calques XUL
 
-<h2 id=".C3.89tape_3_:_Test">Étape 3 : Test</h2>
+Firefox 2 apporte des changements au thème par défaut, et certains éléments de l'interface utilisateur ont été modifiés ou déplacés. Cela peut affecter votre extension, selon les actions de vos calques XUL.
 
-<p>Assurez-vous de tester en profondeur votre extension sous Firefox 2 avant de la publier. Vous ne désirez sûrement pas que votre extension soit la cause d'un déferlement de rapports de bogues avec la toute dernière version de Firefox...</p>
+Référez-vous à l'article [Changements dans les thèmes graphiques pour Firefox 2](fr/Changements_dans_les_th%c3%a8mes_graphiques_pour_Firefox_2) pour déterminer les modifications qui pourraient avoir un effet sur votre extension.
 
-<h2 id=".C3.89tape_4_:_Publication">Étape 4 : Publication</h2>
+## Étape 3 : Test
 
-<p>Mettez à jour la description de votre extension sur <a href="http://addons.mozilla.org">http://addons.mozilla.org</a>, pour vous assurez que les utilisateurs la retrouveront.</p>
+Assurez-vous de tester en profondeur votre extension sous Firefox 2 avant de la publier. Vous ne désirez sûrement pas que votre extension soit la cause d'un déferlement de rapports de bogues avec la toute dernière version de Firefox...
 
-<p>De plus, si le manifeste d'installation contient une <code><a href="fr/Manifestes_d'installation#updateURL">URL de mise à jour</a></code>, vérifiez qu'elle est valide pour que Firefox puisse automatiquement trouver les nouvelles versions de votre extension. De cette manière, Firefox proposera de l'installer automatiquement au premier lancement de l'extension après le passage à Firefox 2.</p>
+## Étape 4 : Publication
 
-<p><br>
- Lien Interwiki</p>
+Mettez à jour la description de votre extension sur <http://addons.mozilla.org>, pour vous assurez que les utilisateurs la retrouveront.
 
-<div class="noinclude"> </div>
+De plus, si le manifeste d'installation contient une [`URL de mise à jour`](fr/Manifestes_d'installation#updateURL), vérifiez qu'elle est valide pour que Firefox puisse automatiquement trouver les nouvelles versions de votre extension. De cette manière, Firefox proposera de l'installer automatiquement au premier lancement de l'extension après le passage à Firefox 2.
 
-<p>{{ languages( { "en": "en/Updating_extensions_for_Firefox_2", "ja": "ja/Updating_extensions_for_Firefox_2", "ko": "ko/Updating_extensions_for_Firefox_2", "pl": "pl/Aktualizacja_rozszerze\u0144_do_Firefoksa_2" } ) }}</p>
+Lien Interwiki
+
+
+
+{{ languages( { "en": "en/Updating_extensions_for_Firefox\_2", "ja": "ja/Updating_extensions_for_Firefox\_2", "ko": "ko/Updating_extensions_for_Firefox\_2", "pl": "pl/Aktualizacja_rozszerze\u0144\_do_Firefoksa\_2" } ) }}

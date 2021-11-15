@@ -14,56 +14,47 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Envoi un message unique depuis le script d'arrière plan d'extension (ou autre scripts accrédité, comme les scripts popup ou les scripts de page d'options) vers n'importe quel [script de contenu ](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)concerné par l'extension et qui s'execute dans l'onglet spécifié.Ce message sera reçu dans script de contenu par n'importe quel gestionnaire d'évènements à l'écoute de l'évènement
 
-<div>Envoi un message unique depuis le script d'arrière plan d'extension (ou autre scripts accrédité, comme les scripts popup ou les scripts de page d'options) vers n'importe quel <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">script de contenu </a>concerné par l'extension et qui s'execute dans l'onglet spécifié.</div>
+{{WebExtAPIRef("runtime.onMessage")}}. Les gestionnaires d'évènements peuvent optionellement envoyé une réponse en retour au script d'arrière plan en utilisant l'argument `sendResponse`.
 
-<div>Ce message sera reçu dans script de contenu par n'importe quel gestionnaire d'évènements à l'écoute de l'évènement</div>
+Il s'agit d'une fonction asynchrone qui renvoit un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<p>{{WebExtAPIRef("runtime.onMessage")}}. Les gestionnaires d'évènements peuvent optionellement envoyé une réponse en retour au script d'arrière plan en utilisant l'argument <code>sendResponse</code>.</p>
+> **Note :** Vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan).
 
-<p>Il s'agit d'une fonction asynchrone qui renvoit un objet <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+## Syntaxe
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">approche basée sur la connexion pour échanger des messages</a>.</p>
-</div>
-
-
-
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: js">var sending = browser.tabs.sendMessage(
+```js
+var sending = browser.tabs.sendMessage(
   tabId,                   // integer
   message,                 // any
   options                  // optional object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. ID de l'onglet qui contient le script de contenu auquel on veut envoyer un message.</dd>
- <dt><code>message</code></dt>
- <dd><code>any</code>. Un objet qui peut être sérialisé en JSON.</dd>
- <dt><code>options</code>{{optional_inline}}</dt>
- <dd><p><code>object</code>.</p>
- <dl>
-  <dt><code>frameId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>.  Envoie le message à un cadre (<em>iframe</em>) spécifique identifiée par <code>frameId</code> au lieu de tous les cadres de l'onglet. Le fait que le script de contenu soit exécuté dans tous les cadres dépend du paramètre <code>all_frames</code> dans la section  <a href="/fr/Add-ons/WebExtensions/manifest.json/content_scripts"><code>content_scripts</code></a> de manifest.json.</dd>
- </dl>
- </dd>
-</dl>
+- `tabId`
+  - : `integer`. ID de l'onglet qui contient le script de contenu auquel on veut envoyer un message.
+- `message`
+  - : `any`. Un objet qui peut être sérialisé en JSON.
+- `options`{{optional_inline}}
 
-<h3 id="Valeur_renvoyée">Valeur renvoyée</h3>
+  - : `object`.
 
-<p>Un objet <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera rempli avec une réponse objet au format JSON envoyé par le gestionnaire de message dans le script de contenu, ou sans arguments si le script de contenu n'a pas renvoyé de réponses. Si une erreur survient durant la connexion avec l'onglet spécifié, ou si n'importe quelle erreur survient, la promesse sera rejeté avec un message d'erreur. Si plusieurs trames répondent au message, la promesse est résolue en une des réponses</p>
+    - `frameId`{{optional_inline}}
+      - : `integer`.  Envoie le message à un cadre (_iframe_) spécifique identifiée par `frameId` au lieu de tous les cadres de l'onglet. Le fait que le script de contenu soit exécuté dans tous les cadres dépend du paramètre `all_frames` dans la section  [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts) de manifest.json.
 
-<h2 id="Exemples">Exemples</h2>
+### Valeur renvoyée
 
-<p>Voici un exemple de script d'arrière plan qui envoi un message au script de contenu qui s'execute dans l'onglet actif quand le client clique sur l'icone de l'extension. Le script d'arrière plan s'attend également que le script de contenu lui renvoit une réponse:</p>
+Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rempli avec une réponse objet au format JSON envoyé par le gestionnaire de message dans le script de contenu, ou sans arguments si le script de contenu n'a pas renvoyé de réponses. Si une erreur survient durant la connexion avec l'onglet spécifié, ou si n'importe quelle erreur survient, la promesse sera rejeté avec un message d'erreur. Si plusieurs trames répondent au message, la promesse est résolue en une des réponses
 
-<pre class="brush: js">// background-script.js
+## Exemples
+
+Voici un exemple de script d'arrière plan qui envoi un message au script de contenu qui s'execute dans l'onglet actif quand le client clique sur l'icone de l'extension. Le script d'arrière plan s'attend également que le script de contenu lui renvoit une réponse:
+
+```js
+// background-script.js
 "use strict";
 
 function onError(error) {
@@ -75,46 +66,47 @@ function sendMessageToTabs(tabs) {
     browser.tabs.sendMessage(
       tab.id,
       {greeting: "Hi from background script"}
-    ).then(response =&gt; {
+    ).then(response => {
       console.log("Message from the content script:");
       console.log(response.response);
     }).catch(onError);
   }
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   browser.tabs.query({
     currentWindow: true,
     active: true
   }).then(sendMessageToTabs).catch(onError);
-});</pre>
+});
+```
 
-<p>Voici le script de contenu associé:</p>
+Voici le script de contenu associé:
 
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 "use strict";
 
-browser.runtime.onMessage.addListener(request =&gt; {
+browser.runtime.onMessage.addListener(request => {
   console.log("Message from the background script:");
   console.log(request.greeting);
   return Promise.resolve({response: "Hi from content script"});
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatiblité_des_navigateurs">Compatiblité des navigateurs</h2>
+## Compatiblité des navigateurs
 
-<p>{{Compat("webextensions.api.tabs.sendMessage")}}</p>
+{{Compat("webextensions.api.tabs.sendMessage")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -141,5 +133,4 @@ browser.runtime.onMessage.addListener(request =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>
