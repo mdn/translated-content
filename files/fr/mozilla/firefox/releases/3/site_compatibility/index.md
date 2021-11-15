@@ -70,7 +70,3 @@ Consultez la documentation de [compareNode](fr/DOM/range.compareNode) pour savoi
 - Les éléments `object` et `embed` n'ont plus besoin d'attribut `type` pour être rendus.
 - La modification de l'attribut `src` (de `<embed>`) ou de l'attribut `data` (de `<object>`) via JavaScript fonctionne maintenant correctement.
 - L'en-tête `Content-Type` envoyé par le serveur (s'il existe) est maintenant prioritaire par rapport à l'attribut `type` d'une balise `<object>` comme défini dans la spécification HTML (ceci n'est pas le cas pour `embed`).
-
-
-
-{{ languages( { "en": "en/Gecko\_1.9\_Changes_affecting_websites", "ja": "ja/Gecko\_1.9\_Changes_affecting_websites", "ko": "ko/Gecko\_1.9\_Changes_affecting_websites", "pl": "pl/Zmiany_w_Gecko\_1.9\_wp\u0142ywaj\u0105ce_na_wy\u015bwietlanie_stron", "pt": "pt/Mudan\u00e7as_no_Gecko\_1.9\_que_afetam_websites" } ) }}

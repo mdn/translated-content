@@ -30,7 +30,3 @@ Firefox 3 offre un certain nombre d'améliorations dans sa gestion du [modèle o
 - [Firefox 3 pour les développeurs](fr/Firefox_3_pour_les_d%c3%a9veloppeurs)
 - [Améliorations CSS dans Firefox 3](fr/Am%c3%a9liorations_CSS_dans_Firefox_3)
 - [DOM](fr/DOM)
-
-
-
-{{ languages( { "en": "en/DOM_improvements_in_Firefox\_3", "es": "es/Mejoras_DOM_en_Firefox\_3", "ja": "ja/DOM_improvements_in_Firefox\_3", "pl": "pl/Poprawki_DOM_w_Firefoksie\_3" } ) }}
