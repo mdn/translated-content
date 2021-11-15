@@ -161,7 +161,7 @@ EDITOR=code
 | Conclusion | 결론 | |
 | Contact us | 문의하기 | |
 | Demo | 데모 | [링크](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders#demo)
-| Description | | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description)  
+| Description | 설명 | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description)  
 | Example | 예제 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
 | Examples | 예제들 | [링크](https://developer.mozilla.org/en-US/docs/Glossary/loop#examples) |
 | Guides | 가이드 | |
@@ -174,8 +174,9 @@ EDITOR=code
 | Specifications | 명세서 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
 | Summary | 요약 | |
 | Syntax | 구문 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
-| Tools & resources | | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript) |
+| Tools & resources | 도구 & 리소스 | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript) |
 | Tutorial | 자습서 | |
+| Usage notes | 사용 일람 | |
 | Web Technologies | 웹 기술들 | [링크](https://developer.mozilla.org/en-US/docs/Games/Introduction_to_HTML5_Game_Development) |
 
 ## Section Subtitle
@@ -186,7 +187,7 @@ EDITOR=code
 | --- | --- | --- |
 | Compatibility notes | 호환성 참고 사항 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
 | Parameters | 매개변수 | [링크](http://localhost:5000/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode#parameters) |
-| Value | - | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Value | 값 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
 
 ## 안내 문구
 
@@ -232,7 +233,6 @@ EDITOR=code
 | Rendering | 렌더링 | |
 | Section | 구획 | |
 | Statement | 명령문 또는 문 | |
-| Usage notes | 사용 일람 | Heading |
 | User agent | 사용자 에이전트 | |
 
 ### CSS
