@@ -12,25 +12,21 @@ tags:
 translation_of: Glossary/WebRTC
 original_slug: Glossaire/WebRTC
 ---
-<p><strong>WebRTC</strong> (<em>Web Real-Time Communication</em>) <em>(communication en temps réel web)</em> est une {{Glossary("API")}} appelée par les applications web de tchat vidéo, d'appels vocaux et de partage de fichiers P2P.</p>
+**WebRTC** (_Web Real-Time Communication_) _(communication en temps réel web)_ est une {{Glossary("API")}} appelée par les applications web de tchat vidéo, d'appels vocaux et de partage de fichiers P2P.
 
-<p>WebRTC est constitué principalement de ces éléments :</p>
+WebRTC est constitué principalement de ces éléments :
 
-<dl>
- <dt><a href="/fr/docs/NavigatorUserMedia.getUserMedia">getUserMedia</a></dt>
- <dd>accorde l'accès à la caméra et / ou au microphone d'un appareil, et peut brancher leurs signaux à une connexion RTC.</dd>
- <dt><a href="/fr/docs/Web/API/RTCPeerConnection">RTCPeerConnection</a></dt>
- <dd>configure les appels vocaux ou tchat vidéo</dd>
- <dt><a href="/fr/docs/Web/API/RTCDataChannel">RTCDataChannels</a></dt>
- <dd>fournit une méthode de définition des itinéraires de données {{Glossary("P2P","pair-à-pair")}} entre les navigateurs</dd>
-</dl>
+- [getUserMedia](/fr/docs/NavigatorUserMedia.getUserMedia)
+  - : accorde l'accès à la caméra et / ou au microphone d'un appareil, et peut brancher leurs signaux à une connexion RTC.
+- [RTCPeerConnection](/fr/docs/Web/API/RTCPeerConnection)
+  - : configure les appels vocaux ou tchat vidéo
+- [RTCDataChannels](/fr/docs/Web/API/RTCDataChannel)
+  - : fournit une méthode de définition des itinéraires de données {{Glossary("P2P","pair-à-pair")}} entre les navigateurs
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "WebRTC")}} sur Wikipédia</li>
- <li><a href="/fr/docs/Web/Guide/API/WebRTC">Guide WebRTC sur MDN</a></li>
- <li><a href="http://caniuse.com/#feat=rtcpeerconnection">Support WebRTC des navigateurs</a></li>
-</ul>
+- {{Interwiki("wikipedia", "WebRTC")}} sur Wikipédia
+- [Guide WebRTC sur MDN](/fr/docs/Web/Guide/API/WebRTC)
+- [Support WebRTC des navigateurs](http://caniuse.com/#feat=rtcpeerconnection)

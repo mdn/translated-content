@@ -8,17 +8,18 @@ tags:
 translation_of: Glossary/Grid_Areas
 original_slug: Glossaire/Zones_de_grille
 ---
-<p>Une <strong>zone de grille</strong> est une {{glossary("grid cell","cellule de grille")}}  ou plus, qui constitue une zone rectangulaire sur la grille. Les zones de grille sont créées lorsque vous placez un élément en utilisant le  <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Placer_les_%C3%A9l%C3%A9ments_sur_les_lignes_d_une_grille_CSS">placement de la ligne de base</a> ou lors de la définition des zones par l'utilisation de <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/D%C3%A9finir_des_zones_sur_une_grille">zones de grille nommées</a>.</p>
+Une **zone de grille** est une {{glossary("grid cell","cellule de grille")}}  ou plus, qui constitue une zone rectangulaire sur la grille. Les zones de grille sont créées lorsque vous placez un élément en utilisant le  [placement de la ligne de base](/fr/docs/Web/CSS/CSS_Grid_Layout/Placer_les_%C3%A9l%C3%A9ments_sur_les_lignes_d_une_grille_CSS) ou lors de la définition des zones par l'utilisation de [zones de grille nommées](/fr/docs/Web/CSS/CSS_Grid_Layout/D%C3%A9finir_des_zones_sur_une_grille).
 
-<p><img alt="Image showing a highlighted grid area" src="1_grid_area.png"></p>
+![Image showing a highlighted grid area](1_grid_area.png)
 
-<p>Les zones de grille doivent être de nature rectangulaire ; il n'est pas possible de créer, par exemple, une zone de grille en forme de T ou de L.</p>
+Les zones de grille doivent être de nature rectangulaire ; il n'est pas possible de créer, par exemple, une zone de grille en forme de T ou de L.
 
-<p>Dans l'exemple ci-dessous, nous avons un conteneur de grille avec deux éléments de grille nommés à l'aide de la propriété {{cssxref("grid-area")}}  et mis sur la grille en utilisant {{cssxref("grid-template-areas")}}. Cela crée deux zones de grille, l'une couvrant quatre cellules de la grille, et deux autres d'une seule cellule.</p>
+Dans l'exemple ci-dessous, nous avons un conteneur de grille avec deux éléments de grille nommés à l'aide de la propriété {{cssxref("grid-area")}}  et mis sur la grille en utilisant {{cssxref("grid-template-areas")}}. Cela crée deux zones de grille, l'une couvrant quatre cellules de la grille, et deux autres d'une seule cellule.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -26,16 +27,17 @@ original_slug: Glossaire/Zones_de_grille
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: 100px 100px;
@@ -49,34 +51,30 @@ original_slug: Glossaire/Zones_de_grille
 .item2 {
   grid-area: b;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="item1"&gt;Item&lt;/div&gt;
-   &lt;div class="item2"&gt;Item&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="item1">Item</div>
+   <div class="item2">Item</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Exemple', '300', '280') }}</p>
+{{ EmbedLiveSample('Exemple', '300', '280') }}
 
+## En apprendre plus
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+### Références de propriété
 
-<h3 id="Références_de_propriété">Références de propriété</h3>
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-area")}}
 
-<ul>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-auto-rows")}}</li>
- <li>{{cssxref("grid-auto-columns")}}</li>
- <li>{{cssxref("grid-template-areas")}}</li>
- <li>{{cssxref("grid-area")}}</li>
-</ul>
+### En lire plus
 
-<h3 id="En_lire_plus">En lire plus</h3>
-
-<ul>
- <li>Guide des grilles CSS : <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base">Les concepts de base des grilles CSS</a></em></li>
- <li>Guide des grilles CSS : <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/D%C3%A9finir_des_zones_sur_une_grille">Définir des zones sur une grille</a></em></li>
- <li><a href="https://drafts.csswg.org/css-grid/#grid-area-concept">Définition des zones de grille dans la spécification dans les grilles CSS</a> (en)</li>
-</ul>
+- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)_
+- Guide des grilles CSS : _[Définir des zones sur une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/D%C3%A9finir_des_zones_sur_une_grille)_
+- [Définition des zones de grille dans la spécification dans les grilles CSS](https://drafts.csswg.org/css-grid/#grid-area-concept) (en)

@@ -8,14 +8,12 @@ tags:
 translation_of: Glossary/Ligature
 original_slug: Glossaire/Ligature
 ---
-<p>Une <strong>ligature </strong>est une fusion de deux caractères en un seul nouveau caractère. Par exemple, en français, "œ" est une ligature de "oe".</p>
+Une **ligature** est une fusion de deux caractères en un seul nouveau caractère. Par exemple, en français, "œ" est une ligature de "oe".
 
-<p>Vous pouvez implémenter les ligatures dans vos pages web avec {{cssxref("font-variant-ligatures")}}.</p>
+Vous pouvez implémenter les ligatures dans vos pages web avec {{cssxref("font-variant-ligatures")}}.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{interwiki("wikipedia", "Ligature (écriture)", "Ligature")}} sur Wikipédia</li>
-</ul>
+- {{interwiki("wikipedia", "Ligature (écriture)", "Ligature")}} sur Wikipédia

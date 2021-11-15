@@ -9,19 +9,15 @@ tags:
 translation_of: Glossary/event
 original_slug: Glossaire/évènement
 ---
-<p>Les évèhements sont des éléments actifs générés par les éléments <a href="/fr/docs/Glossaire/DOM">DOM</a> qui peuvent être manipulés par un code Javascript.</p>
+Les évèhements sont des éléments actifs générés par les éléments [DOM](/fr/docs/Glossaire/DOM) qui peuvent être manipulés par un code Javascript.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="/fr/docs/Web/API/Event">documentation des évènements sur MDN</a></li>
-</ul>
+- [documentation des évènements sur MDN](/fr/docs/Web/API/Event)
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://www.w3.org/DOM/">Site web officiel</a> (en)</li>
- <li>{{Interwiki("wikipedia","Document_Object_Model#Événements")}} sur Wikipedia</li>
-</ul>
+- [Site web officiel](https://www.w3.org/DOM/) (en)
+- {{Interwiki("wikipedia","Document_Object_Model#Événements")}} sur Wikipedia

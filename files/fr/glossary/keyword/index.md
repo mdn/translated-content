@@ -9,14 +9,12 @@ tags:
 translation_of: Glossary/Keyword
 original_slug: Glossaire/Keyword
 ---
-<p>Un <strong>mot-clé</strong> est un mot ou une phrase décrivant un contenu. En ligne, les mots-clés sont utilisés comme requêtes pour les moteurs de recherche ou comme des termes identifiant le contenu de sites web.</p>
+Un **mot-clé** est un mot ou une phrase décrivant un contenu. En ligne, les mots-clés sont utilisés comme requêtes pour les moteurs de recherche ou comme des termes identifiant le contenu de sites web.
 
-<p>Lorsque vous utilisez un moteur de recherche, les mots-clés désignent ce que vous recherchez, et le moteur de recherche renvoie les pages web pertinentes. Pour des résultats plus précis, essayez des mots-clés plus spécifiques, comme "Mustang GTO Bleue" au lieu de simplement "Mustang". Les pages web emploient aussi les mots-clés dans les balises meta (dans la section {{htmlelement("head")}}) pour décrire le contenu des pages afin que les moteurs de recherche puissent mieux identifier et organiser les pages web.</p>
+Lorsque vous utilisez un moteur de recherche, les mots-clés désignent ce que vous recherchez, et le moteur de recherche renvoie les pages web pertinentes. Pour des résultats plus précis, essayez des mots-clés plus spécifiques, comme "Mustang GTO Bleue" au lieu de simplement "Mustang". Les pages web emploient aussi les mots-clés dans les balises meta (dans la section {{htmlelement("head")}}) pour décrire le contenu des pages afin que les moteurs de recherche puissent mieux identifier et organiser les pages web.
 
-<h2 id="Pour_approfondir"><strong>Pour approfondir</strong></h2>
+## **Pour approfondir**
 
-<h3 id="Culture_générale"><strong>Culture générale</strong></h3>
+### **Culture générale**
 
-<ul>
- <li>{{interwiki("wikipedia", "Mot_clef", "Mot-clé")}} sur Wikipédia</li>
-</ul>
+- {{interwiki("wikipedia", "Mot_clef", "Mot-clé")}} sur Wikipédia

@@ -9,12 +9,10 @@ tags:
 translation_of: Glossary/jpeg
 original_slug: Glossaire/jpeg
 ---
-<p><strong>JPEG</strong> (<em>Joint Photographic Experts Group</em>) est une méthode de compression avec pertes très utilisée pour les images numériques.</p>
+**JPEG** (_Joint Photographic Experts Group_) est une méthode de compression avec pertes très utilisée pour les images numériques.
 
-<h2 id="Pour_en_savoir_plus"><strong>Pour en savoir plus</strong></h2>
+## **Pour en savoir plus**
 
-<h3 id="Culture_générale"><strong>Culture générale</strong></h3>
+### **Culture générale**
 
-<ul>
- <li>{{Interwiki("wikipedia", "JPEG")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "JPEG")}} sur Wikipédia

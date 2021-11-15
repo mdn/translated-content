@@ -11,22 +11,18 @@ tags:
 translation_of: Glossary/WebKit
 original_slug: Glossaire/WebKit
 ---
-<p><em>WebKit</em> est un framework destiné à afficher des pages web correctement formatées en se basant sur leur balisage. {{Glossary("Apple Safari")}} dépend de WebKit tout comme de nombreux navigateurs pour mobiles (car WebKit est hautement portable et personnalisable).</p>
+_WebKit_ est un framework destiné à afficher des pages web correctement formatées en se basant sur leur balisage. {{Glossary("Apple Safari")}} dépend de WebKit tout comme de nombreux navigateurs pour mobiles (car WebKit est hautement portable et personnalisable).
 
-<p>WebKit a commencé son existence comme un fork du moteur KHTML de KDE et des bibliothèques KJS, mais beaucoup d'individus et d'entreprises y ont contribué depuis (dont KDE, Apple, Google, et Nokia).</p>
+WebKit a commencé son existence comme un fork du moteur KHTML de KDE et des bibliothèques KJS, mais beaucoup d'individus et d'entreprises y ont contribué depuis (dont KDE, Apple, Google, et Nokia).
 
-<p>WebKit est une marque déposée par Apple, et le framework est distribué sous une licence de type BSD. Cependant, deux éléments importants sont placés sous {{Glossary("LGPL")}}: la bibliothèque de rendu <strong>WebCore</strong> et le moteur <strong>JavaScriptCore</strong>.</p>
+WebKit est une marque déposée par Apple, et le framework est distribué sous une licence de type BSD. Cependant, deux éléments importants sont placés sous {{Glossary("LGPL")}}: la bibliothèque de rendu **WebCore** et le moteur **JavaScriptCore**.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "WebKit")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "WebKit")}} sur Wikipédia
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/Reference/Webkit_Extensions">Extensions CSS de WebKit</a></li>
-</ul>
+- [Extensions CSS de WebKit](/fr/docs/Web/CSS/Reference/Webkit_Extensions)

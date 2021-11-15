@@ -9,12 +9,10 @@ tags:
 translation_of: Glossary/IETF
 original_slug: Glossaire/IETF
 ---
-<p>L'Internet Engineering Task Force (<strong>IETF</strong>) est une organisation mondiale qui élabore les {{glossary('spécification','spécifications')}} gouvernant les mécanismes derrière le fonctionnement de l'{{glossary("Internet")}}, en particulier {{glossary("TCP")}}/{{glossary("IPv6","IP")}}, la suite de {{glossary("Protocol","protocoles")}} Internet. L'IETF est ouvert, composé de bénévoles et soutenu par l'<a href="http://www.isoc.org/">Internet Society</a>.</p>
+L'Internet Engineering Task Force (**IETF**) est une organisation mondiale qui élabore les {{glossary('spécification','spécifications')}} gouvernant les mécanismes derrière le fonctionnement de l'{{glossary("Internet")}}, en particulier {{glossary("TCP")}}/{{glossary("IPv6","IP")}}, la suite de {{glossary("Protocol","protocoles")}} Internet. L'IETF est ouvert, composé de bénévoles et soutenu par l'[Internet Society](http://www.isoc.org/).
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://www.ietf.org/">Site web officiel</a></li>
-</ul>
+- [Site web officiel](https://www.ietf.org/)

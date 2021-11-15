@@ -10,31 +10,25 @@ tags:
 translation_of: Glossary/QUIC
 original_slug: Glossaire/QUIC
 ---
-<p><strong>Quick UDP Internet Connection</strong>, ou <strong>QUIC</strong>,  est un protocole de transport multiplexé expérimental implémenté sur UDP.  Il a été développé par Google comme un moyen d'expérimenter des moyens d'améliorer TCP et la livraison d'applications Web. Comme TCP est intégré au noyau de nombreux systèmes d'exploitation, être capable d'expérimenter des changements, de les tester et d'implémenter des modifications est un processus extrêmement lent. La création de QUIC permet aux développeurs de mener des expériences et d'essayer de nouvelles choses plus rapidement.</p>
+**Quick UDP Internet Connection**, ou **QUIC**,  est un protocole de transport multiplexé expérimental implémenté sur UDP.  Il a été développé par Google comme un moyen d'expérimenter des moyens d'améliorer TCP et la livraison d'applications Web. Comme TCP est intégré au noyau de nombreux systèmes d'exploitation, être capable d'expérimenter des changements, de les tester et d'implémenter des modifications est un processus extrêmement lent. La création de QUIC permet aux développeurs de mener des expériences et d'essayer de nouvelles choses plus rapidement.
 
-<p>QUIC a été conçu pour prendre en charge la sémantique de HTTP / 2. Il fournit le multiplexage, le contrôle de flux, la sécurité et le contrôle de la congestion.</p>
+QUIC a été conçu pour prendre en charge la sémantique de HTTP / 2. Il fournit le multiplexage, le contrôle de flux, la sécurité et le contrôle de la congestion.
 
-<p>Les principales caractéristiques de QUIC comprennent:</p>
+Les principales caractéristiques de QUIC comprennent:
 
-<ul>
- <li>Réduction du temps d'établissement de la connexion.</li>
- <li>Meilleur contrôle de la congestion.</li>
- <li>Multiplexage sans blocage de tête de ligne.</li>
- <li>Correction d'erreur avant.</li>
- <li>Migration de connexion.</li>
-</ul>
+- Réduction du temps d'établissement de la connexion.
+- Meilleur contrôle de la congestion.
+- Multiplexage sans blocage de tête de ligne.
+- Correction d'erreur avant.
+- Migration de connexion.
 
-<p>La prise en charge du navigateur et du serveur pour QUIC est aujourd'hui limitée.</p>
+La prise en charge du navigateur et du serveur pour QUIC est aujourd'hui limitée.
 
-<h3 id="Ressources">Ressources</h3>
+### Ressources
 
-<ul>
- <li><a href="https://www.chromium.org/quic">Documentation des projets Chromium</a></li>
- <li><a href="https://tools.ietf.org/html/draft-tsvwg-quic-protocol-02">Projet IETF</a></li>
-</ul>
+- [Documentation des projets Chromium](https://www.chromium.org/quic)
+- [Projet IETF](https://tools.ietf.org/html/draft-tsvwg-quic-protocol-02)
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Glossaire/HTTP_2">HTTP/2</a></li>
-</ul>
+- [HTTP/2](/fr/docs/Glossaire/HTTP_2)

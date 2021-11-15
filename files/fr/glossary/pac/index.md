@@ -7,26 +7,24 @@ tags:
 translation_of: Glossary/PAC
 original_slug: Glossaire/PAC
 ---
-<p>Un fichier Proxy Auto-Configuration (PAC) est un fichier qui contient une fonction <code>FindProxyForURL()</code> laquelle est utilisée par le navigateur pour déterminer  si les requêtes (y compris HTTP, HTTPS et FTP) doivent être envoyées directement à la destination, ou si elles doivent être transmises via un serveur proxy Web.</p>
+Un fichier Proxy Auto-Configuration (PAC) est un fichier qui contient une fonction `FindProxyForURL()` laquelle est utilisée par le navigateur pour déterminer  si les requêtes (y compris HTTP, HTTPS et FTP) doivent être envoyées directement à la destination, ou si elles doivent être transmises via un serveur proxy Web.
 
-<pre class="brush: js">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   /* ... */
 }
 
-ret = FindProxyForURL(url, host)</pre>
+ret = FindProxyForURL(url, host)
+```
 
-<p>Voir <a href="/fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file">fichier Proxy Auto-Configuration (PAC)</a>  pour plus de détails sur la façon de les utiliser et d'en créer de nouveaux.</p>
+Voir [fichier Proxy Auto-Configuration (PAC)](</fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file>)  pour plus de détails sur la façon de les utiliser et d'en créer de nouveaux.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://fr.wikipedia.org/wiki/Fichier_.PAC">PAC</a> sur Wikipédia</li>
-</ul>
+- [PAC](https://fr.wikipedia.org/wiki/Fichier_.PAC) sur Wikipédia
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="/fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file">Fichier d'auto-configuration du Proxy</a> sur MDN</li>
-</ul>
+- [Fichier d'auto-configuration du Proxy](</fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file>) sur MDN

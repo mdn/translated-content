@@ -9,23 +9,17 @@ tags:
 translation_of: Glossary/Certified
 original_slug: Glossaire/Certifié
 ---
-<p><strong>Certifié</strong> signifie qu'un contenu, une application ou une transmission de données a passé avec succès une évaluation faite par des professionnels ayant une expertise dans le domaine concerné, indiquant ainsi l'exhaustivité, la sécurité et la fiabilité.</p>
+**Certifié** signifie qu'un contenu, une application ou une transmission de données a passé avec succès une évaluation faite par des professionnels ayant une expertise dans le domaine concerné, indiquant ainsi l'exhaustivité, la sécurité et la fiabilité.
 
-<p>Pour les détails sur la certification en {{glossary("Cryptography","Cryptographie")}}, veuillez vous référer aux {{glossary("Digital Certificate","certificats numériques")}}.</p>
+Pour les détails sur la certification en {{glossary("Cryptography","Cryptographie")}}, veuillez vous référer aux {{glossary("Digital Certificate","certificats numériques")}}.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="/fr/Apprendre/Tutoriels/Les_bases_de_la_s%C3%A9curit%C3%A9_informatique">Tutoriel sur la sécurité des informations</a></li>
- <li>{{Interwiki("wikipedia", "Autorité_de_certification#Utilisation dans le domaine des communications","Certification web")}} sur Wikipédia</li>
-</ul>
+- [Tutoriel sur la sécurité des informations](/fr/Apprendre/Tutoriels/Les_bases_de_la_s%C3%A9curit%C3%A9_informatique)
+- {{Interwiki("wikipedia", "Autorité_de_certification#Utilisation dans le domaine des communications","Certification web")}} sur Wikipédia
 
-<h3 id="Firefox_OS">Firefox OS</h3>
+### Firefox OS
 
-<ul>
- <li>Les applications internes de Firefox OS sont aussi parfois appelées applications certifiées : voir <a href="/fr/Apps/Build/App_permissions">Permissions des applications</a> pour plus d'informations.</li>
-</ul>
-
-<p> </p>
+- Les applications internes de Firefox OS sont aussi parfois appelées applications certifiées : voir [Permissions des applications](/fr/Apps/Build/App_permissions) pour plus d'informations.

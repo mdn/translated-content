@@ -8,22 +8,17 @@ tags:
 translation_of: Glossary/HTTP_3
 original_slug: Glossaire/HTTP_3
 ---
-<p><strong>HTTP/3</strong> est la prochaine révision majeure du <a href="/fr/docs/Web/HTTP/Basics_of_HTTP">protocole réseau HTTP</a>, succédant à {{glossary("HTTP 2", "HTTP/2")}}. Le point majeur de HTTP/3 est qu'il utilise un nouveau protocole {{glossary("UDP")}} nommé QUIC, au lieu de {{glossary("TCP")}}.</p>
+**HTTP/3** est la prochaine révision majeure du [protocole réseau HTTP](/fr/docs/Web/HTTP/Basics_of_HTTP), succédant à {{glossary("HTTP 2", "HTTP/2")}}. Le point majeur de HTTP/3 est qu'il utilise un nouveau protocole {{glossary("UDP")}} nommé QUIC, au lieu de {{glossary("TCP")}}.
 
-<h2>Voir aussi</h2>
+## Voir aussi
 
-<ol>
- <li>Culture générale
-  <ol>
-   <li><a href="/fr/docs/Web/HTTP">HTTP sur MDN</a></li>
-   <li>{{interwiki("wikipedia", "HTTP/3", "HTTP/3")}} sur Wikipédia</li>
-  </ol>
- </li>
- <li><a href="/fr/docs/Glossary">Glossaire</a>
-  <ol>
-   <li>{{glossary("HTTP")}}</li>
-   <li>{{glossary("HTTP 2")}}</li>
-   <li>{{glossary("Latency")}}</li>
-  </ol>
- </li>
-</ol>
+1.  Culture générale
+
+    1.  [HTTP sur MDN](/fr/docs/Web/HTTP)
+    2.  {{interwiki("wikipedia", "HTTP/3", "HTTP/3")}} sur Wikipédia
+
+2.  [Glossaire](/fr/docs/Glossary)
+
+    1.  {{glossary("HTTP")}}
+    2.  {{glossary("HTTP 2")}}
+    3.  {{glossary("Latency")}}

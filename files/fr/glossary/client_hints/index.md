@@ -9,33 +9,30 @@ tags:
   - Web Performance
 translation_of: Glossary/Client_hints
 ---
-<p>Les <strong>indications du client</strong> (<i>client hints</i> en anglais) sont un ensemble d'<a href="/fr/docs/Web/HTTP/Headers">en-têtes de requêtes HTTP</a> qu'un serveur peut demander de façon proactive à un client afin de connaître les caractéristiques spécifiques à l'appareil du client et aux préférences utilisées dans l'agent utilisateur. L'ensemble des en-têtes pour ces « indications » sont listées dans <a href="/fr/docs/Web/HTTP/Headers#client_hints">En-têtes HTTP > Indications du client</a>.</p>
+Les **indications du client** (_client hints_ en anglais) sont un ensemble d'[en-têtes de requêtes HTTP](/fr/docs/Web/HTTP/Headers) qu'un serveur peut demander de façon proactive à un client afin de connaître les caractéristiques spécifiques à l'appareil du client et aux préférences utilisées dans l'agent utilisateur. L'ensemble des en-têtes pour ces « indications » sont listées dans [En-têtes HTTP > Indications du client](/fr/docs/Web/HTTP/Headers#client_hints).
 
-<p>Un serveur doit annoncer sa prise en charge de telles indications via l'en-tête <a href="/fr/docs/Web/HTTP/Headers/Accept-CH"><code>Accept-CH</code></a> qui contiendra les indications du client qui l'intéressent. Lorsqu'un client qui prend en charge cette fonctionnalité reçoit cet en-tête <code>Accept-CH</code>, il ajoute les en-têtes d'indication correspondantes aux requêtes suivantes.</p>
+Un serveur doit annoncer sa prise en charge de telles indications via l'en-tête [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH) qui contiendra les indications du client qui l'intéressent. Lorsqu'un client qui prend en charge cette fonctionnalité reçoit cet en-tête `Accept-CH`, il ajoute les en-têtes d'indication correspondantes aux requêtes suivantes.
 
-<p>Ainsi, après avoir reçu l'en-tête <code>Accept-CH</code> suivant dans une réponse. Le client pourrait ajouter les en-têtes <a href="/fr/docs/Web/HTTP/Headers/Width"><code>Width</code></a>, <a href="/fr/docs/Web/HTTP/Headers/Viewport-Width"><code>Viewport-Width</code></a>, et <a href="/fr/docs/Web/HTTP/Headers/Downlink"><code>Downlink</code></a> aux requêtes suivantes.</p>
+Ainsi, après avoir reçu l'en-tête `Accept-CH` suivant dans une réponse. Le client pourrait ajouter les en-têtes [`Width`](/fr/docs/Web/HTTP/Headers/Width), [`Viewport-Width`](/fr/docs/Web/HTTP/Headers/Viewport-Width), et [`Downlink`](/fr/docs/Web/HTTP/Headers/Downlink) aux requêtes suivantes.
 
-<pre>Accept-CH: Width, Viewport-Width, Downlink</pre>
+    Accept-CH: Width, Viewport-Width, Downlink
 
-<p>Le serveur peut alors utiliser ces informations du client pour déterminer les ressources à lui envoyer.</p>
+Le serveur peut alors utiliser ces informations du client pour déterminer les ressources à lui envoyer.
 
-<div class="note">
-  <p><strong>Note :</strong> Les indications du client peuvent aussi être formulées en HTML à l'aide de l'élément <a href="/fr/docs/Web/HTML/Element/meta"><code>&lt;meta&gt;</code></a> avec l'attribut <code><a href="/fr/docs/Web/HTML/Element/meta#attr-http-equiv">http-equiv</a></code> :</p>
-  <pre>&lt;meta http-equiv="Accept-CH" content="Width, Viewport-Width, Downlink"&gt;</pre>
-</div>
+> **Note :** Les indications du client peuvent aussi être formulées en HTML à l'aide de l'élément [`<meta>`](/fr/docs/Web/HTML/Element/meta) avec l'attribut [`http-equiv`](/fr/docs/Web/HTML/Element/meta#attr-http-equiv) :
+>
+>     <meta http-equiv="Accept-CH" content="Width, Viewport-Width, Downlink">
 
-<h2>Client Hints Infrastructures variables</h2>
+## Client Hints Infrastructures variables
 
-<p>Afin d'indiquer à la gestion du cache que les <a href="/fr/docs/Web/HTTP/Headers#clients_hints">indications du client</a> peuvent modifier la teneur de la réponse, il faudra utiliser l'en-tête HTTP <code><a href="/fr/docs/Web/HTTP/Headers/Vary">Vary</a></code>.</p>
+Afin d'indiquer à la gestion du cache que les [indications du client](/fr/docs/Web/HTTP/Headers#clients_hints) peuvent modifier la teneur de la réponse, il faudra utiliser l'en-tête HTTP [`Vary`](/fr/docs/Web/HTTP/Headers/Vary).
 
-<p>Exemple de réponse variable :</p>
+Exemple de réponse variable :
 
-<pre>Vary: Accept, Width, Viewport-Width, Downlink</pre>
+    Vary: Accept, Width, Viewport-Width, Downlink
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/HTTP/Headers#clients_hints">En-têtes HTTP pour ces indications</a></li>
- <li><a href="/fr/docs/Web/HTTP/Headers/Vary">En-tête HTTP <code>Vary</code></a></li>
- <li><a href="https://wicg.github.io/client-hints-infrastructure/">Infrastructure générale pour les indications du client</a></li>
-</ul>
+- [En-têtes HTTP pour ces indications](/fr/docs/Web/HTTP/Headers#clients_hints)
+- [En-tête HTTP `Vary`](/fr/docs/Web/HTTP/Headers/Vary)
+- [Infrastructure générale pour les indications du client](https://wicg.github.io/client-hints-infrastructure/)

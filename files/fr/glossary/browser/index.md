@@ -7,22 +7,18 @@ tags:
 translation_of: Glossary/Browser
 original_slug: Glossaire/Navigateur
 ---
-<p>Un <em>navigateur internet </em>est un programme informatique qui reçoit et affiche les pages du {{Glossary("World Wide Web","Web")}}, et permet aux utilisateurs d'accéder à d'autres pages au travers d'{{Glossary("hyperlink","hyperliens")}}.</p>
+Un _navigateur internet_ est un programme informatique qui reçoit et affiche les pages du {{Glossary("World Wide Web","Web")}}, et permet aux utilisateurs d'accéder à d'autres pages au travers d'{{Glossary("hyperlink","hyperliens")}}.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Connaissances_générales">Connaissances générales</h3>
+### Connaissances générales
 
-<ul>
- <li>{{Interwiki("wikipedia", "Navigateur web")}} sur Wikipédia</li>
- <li><a href="http://www.evolutionoftheweb.com/">L'évolution du Web</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Navigateur web")}} sur Wikipédia
+- [L'évolution du Web](http://www.evolutionoftheweb.com/)
 
-<h3 id="Télécharger_un_navigateur">Télécharger un navigateur</h3>
+### Télécharger un navigateur
 
-<ul>
- <li><a href="https://www.mozilla.org/fr/firefox/desktop/">Mozilla Firefox</a></li>
- <li><a href="https://www.google.fr/intl/fr/chrome/browser/desktop/index.html">Google Chrome</a></li>
- <li><a href="http://windows.microsoft.com/fr-fr/internet-explorer/download-ie">Microsoft Internet Explorer</a></li>
- <li><a href="http://www.opera.com/fr">Navigateur Opera</a></li>
-</ul>
+- [Mozilla Firefox](https://www.mozilla.org/fr/firefox/desktop/)
+- [Google Chrome](https://www.google.fr/intl/fr/chrome/browser/desktop/index.html)
+- [Microsoft Internet Explorer](http://windows.microsoft.com/fr-fr/internet-explorer/download-ie)
+- [Navigateur Opera](http://www.opera.com/fr)

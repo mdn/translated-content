@@ -8,17 +8,18 @@ tags:
 translation_of: Glossary/Grid
 original_slug: Glossaire/Grid
 ---
-<p>Une grille <em>CSS </em>est définie en utilisant la valeur <code>grid</code> de la propriété <code>display</code> ; vous pouvez définir les colonnes et les lignes de votre grille en utilisant les propriétés {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}}.</p>
+Une grille _CSS_ est définie en utilisant la valeur `grid` de la propriété `display` ; vous pouvez définir les colonnes et les lignes de votre grille en utilisant les propriétés {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}}.
 
-<p>La grille que vous définissez avec ces propriétés est décrite comme une <em>grille explicite</em>.</p>
+La grille que vous définissez avec ces propriétés est décrite comme une _grille explicite_.
 
-<p>Si vous placez du contenu en dehors de cette grille explicite, ou si vous comptez sur le placement automatique, l'algorithme de grille doit créer une {{glossary("grid tracks", "piste")}} (<em>track</em>) de ligne ou de colonne supplémentaire pour contenir {{glossary("grid item", "éléments de grille")}} (<em>grid items</em>), des pistes supplémentaires seront alors créées dans la grille implicite. La grille implicite est la grille créée automatiquement en raison de l'ajout de contenu en dehors des pistes définies.</p>
+Si vous placez du contenu en dehors de cette grille explicite, ou si vous comptez sur le placement automatique, l'algorithme de grille doit créer une {{glossary("grid tracks", "piste")}} (_track_) de ligne ou de colonne supplémentaire pour contenir {{glossary("grid item", "éléments de grille")}} (_grid items_), des pistes supplémentaires seront alors créées dans la grille implicite. La grille implicite est la grille créée automatiquement en raison de l'ajout de contenu en dehors des pistes définies.
 
-<p>Dans l'exemple ci-dessous, nous avons créé une grille explicite de 3 colonnes et 2 lignes. La troisième ligne de la grille est une piste de ligne de grille implicite, formée en raison des 2 éléments en plus, par rapport aux 6 qui remplissent les pistes explicites.</p>
+Dans l'exemple ci-dessous, nous avons créé une grille explicite de 3 colonnes et 2 lignes. La troisième ligne de la grille est une piste de ligne de grille implicite, formée en raison des 2 éléments en plus, par rapport aux 6 qui remplissent les pistes explicites.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -26,49 +27,47 @@ original_slug: Glossaire/Grid
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 100px 100px;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div&gt;One&lt;/div&gt;
-   &lt;div&gt;Two&lt;/div&gt;
-   &lt;div&gt;Three&lt;/div&gt;
-   &lt;div&gt;Four&lt;/div&gt;
-   &lt;div&gt;Five&lt;/div&gt;
-   &lt;div&gt;Six&lt;/div&gt;
-   &lt;div&gt;Seven&lt;/div&gt;
-   &lt;div&gt;Eight&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+   <div>Six</div>
+   <div>Seven</div>
+   <div>Eight</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Exemple', '500', '330') }}</p>
+{{ EmbedLiveSample('Exemple', '500', '330') }}
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Références_de_la_propriété">Références de la propriété</h3>
+### Références de la propriété
 
-<ul>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid")}}</li>
- <li>{{cssxref("grid-template")}}</li>
-</ul>
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid")}}
+- {{cssxref("grid-template")}}
 
-<h3 id="En_lire_plus">En lire plus</h3>
+### En lire plus
 
-<ul>
- <li>Guide des grilles CSS : <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base">Les  concepts de base des grilles CSS</a></em></li>
-</ul>
+- Guide des grilles CSS : _[Les  concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)_

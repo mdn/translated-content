@@ -8,15 +8,13 @@ tags:
 translation_of: Glossary/Glyph
 original_slug: Glossaire/Glyphe
 ---
-<p>Un <strong>glyphe</strong> est un terme utilisé en typographie pour désigner la représentation visuelle d’un (ou plusieurs) {{Glossary("Character", "caractère")}}.</p>
+Un **glyphe** est un terme utilisé en typographie pour désigner la représentation visuelle d’un (ou plusieurs) {{Glossary("Character", "caractère")}}.
 
-<p>Les polices utilisées par un site web contiennent différents ensembles de glyphes qui représentent les caractères de la police.</p>
+Les polices utilisées par un site web contiennent différents ensembles de glyphes qui représentent les caractères de la police.
 
-<h2 id="En_apprendre_davantage">En apprendre davantage</h2>
+## En apprendre davantage
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://fr.wikipedia.org/wiki/Glyphe">Glyphe</a> sur Wikipédia</li>
- <li><a href="https://www.quora.com/Whats-the-difference-between-a-character-a-glyph-and-a-grapheme/answer/Thomas-Phinney">Glyph, character and grapheme</a> (Glyphe, caractère et graphème) sur Quora (en anglais)</li>
-</ul>
+- [Glyphe](https://fr.wikipedia.org/wiki/Glyphe) sur Wikipédia
+- [Glyph, character and grapheme](https://www.quora.com/Whats-the-difference-between-a-character-a-glyph-and-a-grapheme/answer/Thomas-Phinney) (Glyphe, caractère et graphème) sur Quora (en anglais)

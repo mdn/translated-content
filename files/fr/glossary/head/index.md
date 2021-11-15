@@ -10,13 +10,11 @@ tags:
 translation_of: Glossary/Head
 original_slug: Glossaire/En-tête
 ---
-<p>L'<strong>en-tête</strong><strong> </strong>est la partie d'un document {{glossary("HTML")}} qui contient les {{glossary("métadonnée","métadonnées")}} qui le concernent, comme son auteur, sa description et des liens vers des fichiers {{glossary("CSS")}} ou {{glossary("JavaScript")}} qui s'appliquent au HTML.</p>
+L'**en-tête\*\*** \*\*est la partie d'un document {{glossary("HTML")}} qui contient les {{glossary("métadonnée","métadonnées")}} qui le concernent, comme son auteur, sa description et des liens vers des fichiers {{glossary("CSS")}} ou {{glossary("JavaScript")}} qui s'appliquent au HTML.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="En-tête_HTML">En-tête HTML</h3>
+### En-tête HTML
 
-<ul>
- <li>Référence sur l'élément {{htmlelement("head")}} sur MDN</li>
- <li><a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/The_head_metadata_in_HTML">La balise HTML &lt;head&gt;</a> dans la zone d'apprentissage du MDN</li>
-</ul>
+- Référence sur l'élément {{htmlelement("head")}} sur MDN
+- [La balise HTML \<head>](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/The_head_metadata_in_HTML) dans la zone d'apprentissage du MDN

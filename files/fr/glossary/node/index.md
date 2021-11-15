@@ -6,8 +6,8 @@ tags:
   - Glossaire
 translation_of: Glossary/Node
 ---
-<p>Le terme <strong>nœud</strong> peut avoir plusieurs significations selon le contexte. Il peut correspondre à :</p>
+Le terme **nœud** peut avoir plusieurs significations selon le contexte. Il peut correspondre à :
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}
 
-<p>Ce mot est aussi employé à propos de {{Glossary("Node.js")}}</p>
+Ce mot est aussi employé à propos de {{Glossary("Node.js")}}

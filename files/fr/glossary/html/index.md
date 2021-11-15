@@ -9,44 +9,38 @@ tags:
 translation_of: Glossary/HTML
 original_slug: Glossaire/HTML
 ---
-<div>{{QuickLinksWithSubpages("/fr/docs/Glossaire")}}</div>
+{{QuickLinksWithSubpages("/fr/docs/Glossaire")}}
 
-<p><strong>HTML </strong>(HyperText Markup Language) est un langage descriptif qui définit la structure d'une page web.</p>
+**HTML** (HyperText Markup Language) est un langage descriptif qui définit la structure d'une page web.
 
-<h2 id="Bref_historique">Bref historique</h2>
+## Bref historique
 
-<p>En 1990, lorsqu'il présente sa vision du {{Glossary("World Wide Web","Web")}}, Tim Berners-Lee définit le concept d'{{Glossary("Hypertext","hypertexte")}}, qu'il formalise l'année suivante avec un langage de balisage essentiellement basé sur {{Glossary("SGML")}}. L'{{Glossary("IETF")}} commence officiellement à spécifier le HTML en 1993, et publie la version 2.0 en 1995, après plusieurs versions de travail. En 1994, Berners-Lee fonde le {{Glossary("W3C")}} pour développer le Web. En 1996, le W3C reprend le travail sur le HTML et publie un an plus tard la recommandation HTML 3.2. HTML 4.0 fut publié en 1999 et devient une norme {{Glossary("ISO")}} en 2000.</p>
+En 1990, lorsqu'il présente sa vision du {{Glossary("World Wide Web","Web")}}, Tim Berners-Lee définit le concept d'{{Glossary("Hypertext","hypertexte")}}, qu'il formalise l'année suivante avec un langage de balisage essentiellement basé sur {{Glossary("SGML")}}. L'{{Glossary("IETF")}} commence officiellement à spécifier le HTML en 1993, et publie la version 2.0 en 1995, après plusieurs versions de travail. En 1994, Berners-Lee fonde le {{Glossary("W3C")}} pour développer le Web. En 1996, le W3C reprend le travail sur le HTML et publie un an plus tard la recommandation HTML 3.2. HTML 4.0 fut publié en 1999 et devient une norme {{Glossary("ISO")}} en 2000.
 
-<p>À cette période, le W3C est sur le point d'abandonner le HTML au profit du {{Glossary("XHTML")}}, ce qui provoque la création d'un groupe indépendant appelé {{Glossary("WHATWG")}} en 2004.  Grâce au WHATWG, le travail sur le {{Glossary("HTML5")}} se poursuit : les deux organisations publient la première version de travail en 2008 puis la norme finale en 2014.</p>
+À cette période, le W3C est sur le point d'abandonner le HTML au profit du {{Glossary("XHTML")}}, ce qui provoque la création d'un groupe indépendant appelé {{Glossary("WHATWG")}} en 2004.  Grâce au WHATWG, le travail sur le {{Glossary("HTML5")}} se poursuit : les deux organisations publient la première version de travail en 2008 puis la norme finale en 2014.
 
-<h2 id="Concept_et_syntaxe">Concept et syntaxe</h2>
+## Concept et syntaxe
 
-<p>Un document HTML est un document texte brut structuré par des {{Glossary("Element","éléments")}}. Les éléments sont encadrés par des {{Glossary("Tag","balises")}} ouvrantes et fermantes associées. Chaque balise  commence et se termine par les caractères inférieur et supérieur (<code>&lt;&gt;</code>). Il existe quelques balises <em>vides</em> qui ne contiennent pas de texte, comme par exemple {{htmlelement("img")}}.</p>
+Un document HTML est un document texte brut structuré par des {{Glossary("Element","éléments")}}. Les éléments sont encadrés par des {{Glossary("Tag","balises")}} ouvrantes et fermantes associées. Chaque balise  commence et se termine par les caractères inférieur et supérieur (`<>`). Il existe quelques balises _vides_ qui ne contiennent pas de texte, comme par exemple {{htmlelement("img")}}.
 
-<p>On peut préciser les balises HTML avec des {{Glossary("Attribute","attributs")}} pour fournir des informations complémentaires qui vont modifier la façon dont le navigateur va interpréter l'élément :</p>
+On peut préciser les balises HTML avec des {{Glossary("Attribute","attributs")}} pour fournir des informations complémentaires qui vont modifier la façon dont le navigateur va interpréter l'élément :
 
-<p><img alt="Detail of the structure of an HTML element" src="anatomy-element-html.png"></p>
+![Detail of the structure of an HTML element](anatomy-element-html.png)
 
-<p>Un fichier HTML est généralement enregistré avec une extension <code>.htm</code> ou <code>.html</code>. Il est mis à disposition par un {{Glossary("Server","serveur web")}}, et le rendu est réalisé par un {{Glossary("Browser","navigateur Web")}}.</p>
+Un fichier HTML est généralement enregistré avec une extension `.htm` ou `.html`. Il est mis à disposition par un {{Glossary("Server","serveur web")}}, et le rendu est réalisé par un {{Glossary("Browser","navigateur Web")}}.
 
-<h2 id="Pour_en_savoir_plus">Pour en savoir plus</h2>
+## Pour en savoir plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{interwiki("wikipedia", "HTML", "Hypertext_Markup_Language")}} sur Wikipédia</li>
-</ul>
+- {{interwiki("wikipedia", "HTML", "Hypertext_Markup_Language")}} sur Wikipédia
 
-<h3 id="Apprendre_le_HTML">Apprendre le HTML</h3>
+### Apprendre le HTML
 
-<ul>
- <li><a href="/fr/docs/Apprendre/HTML">Notre tutoriel HTML</a></li>
- <li><a href="http://www.codecademy.com/en/tracks/web">Les cours web sur codecademy.com</a></li>
-</ul>
+- [Notre tutoriel HTML](/fr/docs/Apprendre/HTML)
+- [Les cours web sur codecademy.com](http://www.codecademy.com/en/tracks/web)
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="/fr/docs/Web/HTML">La documentation HTML sur MDN</a></li>
- <li><a href="http://www.w3.org/TR/html5/">La spécification HTML</a></li>
-</ul>
+- [La documentation HTML sur MDN](/fr/docs/Web/HTML)
+- [La spécification HTML](http://www.w3.org/TR/html5/)

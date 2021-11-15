@@ -7,12 +7,10 @@ tags:
 translation_of: Glossary/Validator
 original_slug: Glossaire/Validator
 ---
-<p>Un validateur est un programme qui vérifie les erreurs de syntaxe d'un code informatique. Ils peuvent être créés pour tous les formats et langages, mais dans notre contexte on parle d'outils vérifiant le {{Glossary("HTML")}}, {{Glossary("CSS")}}, et {{Glossary("XML")}}.</p>
+Un validateur est un programme qui vérifie les erreurs de syntaxe d'un code informatique. Ils peuvent être créés pour tous les formats et langages, mais dans notre contexte on parle d'outils vérifiant le {{Glossary("HTML")}}, {{Glossary("CSS")}}, et {{Glossary("XML")}}.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="/fr/docs/Outils/Validateurs">Petite liste de validateurs</a></li>
-</ul>
+- [Petite liste de validateurs](/fr/docs/Outils/Validateurs)

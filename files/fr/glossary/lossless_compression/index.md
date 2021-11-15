@@ -11,16 +11,15 @@ tags:
 translation_of: Glossary/Lossless_compression
 original_slug: Glossaire/Compression_sans_perte
 ---
-<p><strong>La compression</strong> <strong>sans perte </strong>est un type d'algorithme de compression qui permet aux données d'origine d'être parfaitement restituées à partir des données compressées. Les méthodes de compression sans perte sont réversibles. Parmi les exemples de compression sans perte on retrouve {{glossary("GZIP")}}, {{glossary("Brotli")}}, WebP, and {{glossary("PNG")}},</p>
+**La compression** **sans perte** est un type d'algorithme de compression qui permet aux données d'origine d'être parfaitement restituées à partir des données compressées. Les méthodes de compression sans perte sont réversibles. Parmi les exemples de compression sans perte on retrouve {{glossary("GZIP")}}, {{glossary("Brotli")}}, WebP, and {{glossary("PNG")}},
 
-<p>{{glossary("Lossy compression")}}, en revanche, résulte en une approximation inexacte, puisque certaines données du fichier d'origine ont été abandonnées, faisant de la compression avec perte une méthode irréversible.</p>
+{{glossary("Lossy compression")}}, en revanche, résulte en une approximation inexacte, puisque certaines données du fichier d'origine ont été abandonnées, faisant de la compression avec perte une méthode irréversible.
 
-<h2>Voir aussi</h2>
-<p><a href="/fr/docs/Glossary">Glossary</a></p>
+## Voir aussi
 
-<ol>
- <li>{{glossary("GZIP")}}</li>
- <li>{{glossary("Brotli")}}</li>
- <li>{{glossary("PNG")}}</li>
- <li>{{glossary("Lossy compression")}}</li>
-</ol>
+[Glossary](/fr/docs/Glossary)
+
+1.  {{glossary("GZIP")}}
+2.  {{glossary("Brotli")}}
+3.  {{glossary("PNG")}}
+4.  {{glossary("Lossy compression")}}

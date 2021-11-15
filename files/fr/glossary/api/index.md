@@ -8,30 +8,26 @@ tags:
 translation_of: Glossary/API
 original_slug: Glossaire/API
 ---
-<p>Une API (Application Programming Interface) est un ensemble de fonctionnalités et de règles existant dans un logiciel permettant d'intéragir avec celui-ci de manière automatisée (plutôt que de passer par une interface utilisateur). L'API peut être vue comme un contrat simple passé entre le logiciel qui la propose et d'autres entités, telles que des logiciels ou matériels tiers.</p>
+Une API (Application Programming Interface) est un ensemble de fonctionnalités et de règles existant dans un logiciel permettant d'intéragir avec celui-ci de manière automatisée (plutôt que de passer par une interface utilisateur). L'API peut être vue comme un contrat simple passé entre le logiciel qui la propose et d'autres entités, telles que des logiciels ou matériels tiers.
 
-<p>En développement web, une API est généralement un ensemble de fonctionnalités (par exemple : {{glossary("method","méthodes")}}, {{Glossary("property","propriétés")}}, évènements et {{Glossary("URL")}}) qu'un développeur peut utiliser dans son application pour les interactions avec les composants du navigateur de l'utilisateur, ou avec d'autres logiciels/matériels de l'ordinateur de l'utilisateur, ou avec des sites web et services tiers.</p>
+En développement web, une API est généralement un ensemble de fonctionnalités (par exemple : {{glossary("method","méthodes")}}, {{Glossary("property","propriétés")}}, évènements et {{Glossary("URL")}}) qu'un développeur peut utiliser dans son application pour les interactions avec les composants du navigateur de l'utilisateur, ou avec d'autres logiciels/matériels de l'ordinateur de l'utilisateur, ou avec des sites web et services tiers.
 
-<p>Par exemple :</p>
+Par exemple :
 
-<p>L'API <a href="/fr/docs/Web/API/MediaDevices/getUserMedia">getUserMedia</a> peut être utilisée pour capturer l'audio et la vidéo de la webcam d'un utilisateur, pour ensuite en faire ce que le développeur souhaite comme par exemple les enregistrer, les diffuser à un autre utilisateur lors d'une conférence téléphonique ou capturer des clichés à partir de la vidéo.</p>
+L'API [getUserMedia](/fr/docs/Web/API/MediaDevices/getUserMedia) peut être utilisée pour capturer l'audio et la vidéo de la webcam d'un utilisateur, pour ensuite en faire ce que le développeur souhaite comme par exemple les enregistrer, les diffuser à un autre utilisateur lors d'une conférence téléphonique ou capturer des clichés à partir de la vidéo.
 
-<p>L' <a href="/fr/docs/Web/API/Geolocation">API Geolocation </a> peut être utilisée pour récupérer des informations de localisation à partir de n'importe quel service disponible sur les appareils d'un utilisateur (GPS par exemple), qui peuvent ensuite être utilisées conjointement avec l'API  <a href="https://developers.google.com/maps/">Google Maps</a> pour par exemple tracer la position géographique de l'utilisateur sur une carte personnalisée et lui montrer les attractions touristiques proches de lui.</p>
+L' [API Geolocation ](/fr/docs/Web/API/Geolocation)peut être utilisée pour récupérer des informations de localisation à partir de n'importe quel service disponible sur les appareils d'un utilisateur (GPS par exemple), qui peuvent ensuite être utilisées conjointement avec l'API [Google Maps](https://developers.google.com/maps/) pour par exemple tracer la position géographique de l'utilisateur sur une carte personnalisée et lui montrer les attractions touristiques proches de lui.
 
-<p>L' <a href="https://dev.twitter.com/overview/api">API Twitter </a>peut être utilisée pour récupérer les données d'un compte utilisateur Twitter, par exemple pour afficher ses derniers tweets sur une page web.</p>
+L' [API Twitter ](https://dev.twitter.com/overview/api)peut être utilisée pour récupérer les données d'un compte utilisateur Twitter, par exemple pour afficher ses derniers tweets sur une page web.
 
-<p>L' <a href="/fr/docs/Web/API/Web_Animations_API">API Web Animations </a>peut être utilisée pour animer des parties d'une page web, par exemple pour faire bouger ou pivoter des images.</p>
+L' [API Web Animations ](/fr/docs/Web/API/Web_Animations_API)peut être utilisée pour animer des parties d'une page web, par exemple pour faire bouger ou pivoter des images.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Application_programming_interface", "API")}} sur Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Application_programming_interface", "API")}} sur Wikipedia
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="/fr/docs/Web/API">API</a> sur MDN</li>
-</ul>
+- [API](/fr/docs/Web/API) sur MDN

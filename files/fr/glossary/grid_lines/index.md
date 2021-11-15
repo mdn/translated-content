@@ -8,11 +8,12 @@ tags:
 translation_of: Glossary/Grid_Lines
 original_slug: Glossaire/Lignes_de_grille_(lines)
 ---
-<p>Les <strong>lignes de grille</strong> sont créées avec la définition  des {{glossary("Grid Tracks", "pistes")}} (<em>tracks</em>) dans la grille explicite pour <a href="/fr/docs/Web/CSS/CSS_Grid_Layout">une grille CSS</a>. Dans l'exemple suivant, est présentée une grille qui a 3 pistes de colonnes et 2 pistes de lignes. Cela nous donne 4 lignes de colonnes <em>(column lines</em>) et 3 lignes de lignes <em>(row lines)</em>.</p>
+Les **lignes de grille** sont créées avec la définition  des {{glossary("Grid Tracks", "pistes")}} (_tracks_) dans la grille explicite pour [une grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout). Dans l'exemple suivant, est présentée une grille qui a 3 pistes de colonnes et 2 pistes de lignes. Cela nous donne 4 lignes de colonnes _(column lines_) et 3 lignes de lignes _(row lines)_.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -23,45 +24,47 @@ original_slug: Glossaire/Lignes_de_grille_(lines)
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div&gt;One&lt;/div&gt;
-   &lt;div&gt;Two&lt;/div&gt;
-   &lt;div&gt;Three&lt;/div&gt;
-   &lt;div&gt;Four&lt;/div&gt;
-   &lt;div&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100px 100px;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Exemple', '500', '250') }}</p>
+{{ EmbedLiveSample('Exemple', '500', '250') }}
 
-<p>Les lignes peuvent être adressées en utilisant leur numéro de ligne. Dans une langue de gauche à droite telle que l'anglais, la ligne de colonne 1 sera sur la gauche de la grille, la ligne de ligne 1 en haut. Les chiffres des lignes respectent le <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_%C3%A9criture">mode d'écriture</a> du document et ainsi, dans une langue écrite de droite à gauche par exemple, la ligne de colonne 1 sera sur la droite de la grille. L'image ci-dessous montre les numéros de ligne de la grille, en supposant que la langue est écrite de gauche à droite.</p>
+Les lignes peuvent être adressées en utilisant leur numéro de ligne. Dans une langue de gauche à droite telle que l'anglais, la ligne de colonne 1 sera sur la gauche de la grille, la ligne de ligne 1 en haut. Les chiffres des lignes respectent le [mode d'écriture](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_%C3%A9criture) du document et ainsi, dans une langue écrite de droite à gauche par exemple, la ligne de colonne 1 sera sur la droite de la grille. L'image ci-dessous montre les numéros de ligne de la grille, en supposant que la langue est écrite de gauche à droite.
 
-<p><img alt="Diagram showing the grid with lines numbered." src="1_diagram_numbered_grid_lines.png"></p>
-</div>
+![Diagram showing the grid with lines numbered.](1_diagram_numbered_grid_lines.png)
 
-<p>Les lignes sont également créées dans la grille implicite lorsque des pistes implicites sont créées pour contenir les éléments placés en dehors de la grille explicite, mais ces lignes ne peuvent pas être adressées avec un nombre.</p>
+Les lignes sont également créées dans la grille implicite lorsque des pistes implicites sont créées pour contenir les éléments placés en dehors de la grille explicite, mais ces lignes ne peuvent pas être adressées avec un nombre.
 
-<h2 id="Placement_des_éléments_sur_la_grille_par_numéro_de_ligne">Placement des éléments sur la grille par numéro de ligne</h2>
+## Placement des éléments sur la grille par numéro de ligne
 
-<p>Après avoir créé une grille, vous pouvez placer des éléments sur la grille par numéro de ligne. Dans l'exemple suivant, l'élément est positionné de la ligne de colonne 1 à la ligne de colonne 3 et de la ligne de ligne 1 à la ligne de ligne 3.</p>
+Après avoir créé une grille, vous pouvez placer des éléments sur la grille par numéro de ligne. Dans l'exemple suivant, l'élément est positionné de la ligne de colonne 1 à la ligne de colonne 3 et de la ligne de ligne 1 à la ligne de ligne 3.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -72,21 +75,23 @@ original_slug: Glossaire/Lignes_de_grille_(lines)
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="item"&gt;Item&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="item">Item</div>
+</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100px 100px;
@@ -97,15 +102,16 @@ original_slug: Glossaire/Lignes_de_grille_(lines)
   grid-row-start: 1;
   grid-row-end: 3;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Placement_des_éléments_sur_la_grille_par_numéro_de_ligne', '500', '250') }}</p>
+{{ EmbedLiveSample('Placement_des_éléments_sur_la_grille_par_numéro_de_ligne', '500', '250') }}
 
-<h2 id="Nommage_des_lignes">Nommage des lignes</h2>
+## Nommage des lignes
 
-<p>Les lignes créées dans la grille explicite peuvent être nommées, en ajoutant le nom entre crochets avant ou après les informations de dimensionnement de la piste. Lorsque vous placez un objet, vous pouvez utiliser ces noms à la place du numéro de ligne, comme illustré ci-dessous.</p>
+Les lignes créées dans la grille explicite peuvent être nommées, en ajoutant le nom entre crochets avant ou après les informations de dimensionnement de la piste. Lorsque vous placez un objet, vous pouvez utiliser ces noms à la place du numéro de ligne, comme illustré ci-dessous.
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -116,21 +122,23 @@ original_slug: Glossaire/Lignes_de_grille_(lines)
      grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="item"&gt;Item&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div class="item">Item</div>
+</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: [col1-start] 1fr [col2-start] 1fr [col3-start] 1fr [cols-end];
   grid-template-rows: [row1-start] 100px [row2-start] 100px [rows-end];
@@ -141,31 +149,27 @@ original_slug: Glossaire/Lignes_de_grille_(lines)
   grid-row-start: row1-start;
   grid-row-end: rows-end;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Nommage_des_lignes', '500', '250') }}</p>
+{{ EmbedLiveSample('Nommage_des_lignes', '500', '250') }}
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Références_de_propriété">Références de propriété</h3>
+### Références de propriété
 
-<ul>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-column-start")}}</li>
- <li>{{cssxref("grid-column-end")}}</li>
- <li>{{cssxref("grid-column")}}</li>
- <li>{{cssxref("grid-row-start")}}</li>
- <li>{{cssxref("grid-row-end")}}</li>
- <li>{{cssxref("grid-row")}}</li>
-</ul>
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column-end")}}
+- {{cssxref("grid-column")}}
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-row")}}
 
-<h3 id="Further_reading">Further reading</h3>
+### Further reading
 
-<ul>
- <li>Guide des grilles CSS : <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Les concepts de base des grilles CSS</a></em></li>
- <li>Guide des grilles CSS : <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Placer_les_%C3%A9l%C3%A9ments_sur_les_lignes_d_une_grille_CSS">Places les éléments sur les lignes d'une grille CSS</a></em></li>
- <li>Guide des grilles CSS : <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nomm%C3%A9es_sur_une_grille">Utiliser des lignes nommées sur une grille</a></em></li>
- <li>Guide des grilles CSS : <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_%C3%A9criture">Les grilles CSS, valeurs logiques et modes d'écriture</a></em></li>
- <li><a href="https://drafts.csswg.org/css-grid/#grid-line-concept">Définition des lignes de grille dans la spécification des grilles CSS</a></li>
-</ul>
+- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- Guide des grilles CSS : _[Places les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Placer_les_%C3%A9l%C3%A9ments_sur_les_lignes_d_une_grille_CSS)_
+- Guide des grilles CSS : _[Utiliser des lignes nommées sur une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nomm%C3%A9es_sur_une_grille)_
+- Guide des grilles CSS : _[Les grilles CSS, valeurs logiques et modes d'écriture](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_%C3%A9criture)_
+- [Définition des lignes de grille dans la spécification des grilles CSS](https://drafts.csswg.org/css-grid/#grid-line-concept)

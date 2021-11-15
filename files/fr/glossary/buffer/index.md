@@ -7,12 +7,10 @@ tags:
 translation_of: Glossary/buffer
 original_slug: Glossaire/Tampon
 ---
-<p>Un tampon est un stockage dans la mémoire physique utilisé pour stocker temporairement des données pendant leur transfert d'un endroit à un autre.</p>
+Un tampon est un stockage dans la mémoire physique utilisé pour stocker temporairement des données pendant leur transfert d'un endroit à un autre.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://fr.wikipedia.org/wiki/M%C3%A9moire_tampon">Mémoire tampon</a> sur Wikipedia</li>
-</ul>
+- [Mémoire tampon](https://fr.wikipedia.org/wiki/M%C3%A9moire_tampon) sur Wikipedia

@@ -7,12 +7,10 @@ tags:
 translation_of: Glossary/Signature
 original_slug: Glossaire/Signature
 ---
-<p>Le terme <strong>signature</strong> peut avoir plusieurs significations selon le contexte. Il peut s'agir de :</p>
+Le terme **signature** peut avoir plusieurs significations selon le contexte. Il peut s'agir de :
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<ul>
- <li>{{Interwiki("wikipedia", "Signature_(homonymie)", "Signature")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Signature_(homonymie)", "Signature")}} sur Wikipédia

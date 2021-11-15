@@ -9,55 +9,45 @@ tags:
 translation_of: Glossary/Vendor_Prefix
 original_slug: Glossaire/Préfixe_Vendeur
 ---
-<p>Les vendeurs de navigateurs ajoutent parfois des préfixes aux propriétés CSS expérimentales ou non standards. Les développeurs peuvent ainsi les expérimenter sans que les changements de comportement du navigateur ne cassent le code pendant le processus de standardisation. Les développeurs sont supposés attendre que le comportement du navigateur soit standardisé pour inclure la propriété non préfixée.</p>
+Les vendeurs de navigateurs ajoutent parfois des préfixes aux propriétés CSS expérimentales ou non standards. Les développeurs peuvent ainsi les expérimenter sans que les changements de comportement du navigateur ne cassent le code pendant le processus de standardisation. Les développeurs sont supposés attendre que le comportement du navigateur soit standardisé pour inclure la propriété non préfixée.
 
-<div class="note">
-<p><strong>Note :</strong> Les fournisseurs de navigateurs s'efforcent d'arrêter l'utilisation des préfixes fournisseurs pour les fonctionnalités expérimentales. Les développeurs Web les utilisent sur des sites Web de production, malgré leur caractère expérimental. Cela a rendu plus difficile la compatibilité des fournisseurs de navigateurs et le travail sur de nouvelles fonctionnalités ; cela a également été nuisible aux petits navigateurs qui se sont retrouvés obligés d'ajouter des préfixes d'autres navigateurs afin de charger des sites web populaires.</p>
+> **Note :** Les fournisseurs de navigateurs s'efforcent d'arrêter l'utilisation des préfixes fournisseurs pour les fonctionnalités expérimentales. Les développeurs Web les utilisent sur des sites Web de production, malgré leur caractère expérimental. Cela a rendu plus difficile la compatibilité des fournisseurs de navigateurs et le travail sur de nouvelles fonctionnalités ; cela a également été nuisible aux petits navigateurs qui se sont retrouvés obligés d'ajouter des préfixes d'autres navigateurs afin de charger des sites web populaires.
+>
+> Dernièrement, la tendance consiste à ajouter des fonctionnalités expérimentales derrière des indications contrôlées par l'utilisateur, et de travailler sur des spécifications plus petites et dont la stabilité est atteinte plus rapidement.
 
-<p>Dernièrement, la tendance consiste à ajouter des fonctionnalités expérimentales derrière des indications contrôlées par l'utilisateur, et de travailler sur des spécifications plus petites et dont la stabilité est atteinte plus rapidement.</p>
-</div>
+## CSS préfixes
 
-<h2 id="CSS_préfixes">CSS préfixes</h2>
+En général, les principaux navigateurs utilisent ces préfixes :
 
-<p>En général, les principaux navigateurs utilisent ces préfixes :</p>
+- `-webkit- (`Chrome, nouvelles versions d'Opera.)
+- `-moz- `(Firefox)
+- `-o-` (Anciennes versions d'Opera)
+- `-ms-` (Internet Explorer et Edge)
 
-<ul>
- <li><code>-webkit- (</code>Chrome, nouvelles versions d'Opera.)</li>
- <li><code>-moz- </code>(Firefox)</li>
- <li><code>-o-</code> (Anciennes versions d'Opera)</li>
- <li><code>-ms-</code> (Internet Explorer et Edge)</li>
-</ul>
+## API préfixes
 
-<h2 id="API_préfixes">API préfixes</h2>
+Historiquement, les fournisseurs ont également utilisé des préfixes pour les API expérimentales. Si une interface entière est expérimentale, alors le nom de l'interface est préfixé (mais pas les propriétés ou méthodes à l'intérieur). Si une propriété ou une méthode expérimentale est ajoutée à une interface normalisée, la méthode ou la propriété individuelle est préfixée.
 
-<p>Historiquement, les fournisseurs ont également utilisé des préfixes pour les API expérimentales. Si une interface entière est expérimentale, alors le nom de l'interface est préfixé (mais pas les propriétés ou méthodes à l'intérieur). Si une propriété ou une méthode expérimentale est ajoutée à une interface normalisée, la méthode ou la propriété individuelle est préfixée.</p>
+### Interfaces préfixes
 
-<h3 id="Interfaces_préfixes">Interfaces préfixes</h3>
+Les préfixes pour les noms d'interface sont en majuscules:
 
-<p>Les préfixes pour les noms d'interface sont en majuscules:</p>
+- `Webkit `(Chrome, Safari, versions d'Opera récentes, presque tous les navigateurs iOS (y compris Firefox pour iOS) ; fondamentalement, tout navigateur basé sur WebKit).
+- `Moz `(Firefox)
+- `O` (anciennes versions d'Opera)
+- `MS` (Internet Explorer et Edge)
 
-<ul>
- <li><code>Webkit </code> (Chrome, Safari, versions d'Opera récentes, presque tous les navigateurs iOS (y compris Firefox pour iOS) ; fondamentalement, tout navigateur basé sur WebKit).</li>
- <li><code>Moz </code>(Firefox)</li>
- <li><code>O</code> (anciennes versions d'Opera)</li>
- <li><code>MS</code> (Internet Explorer et Edge)</li>
-</ul>
+### Propriétés et méthodes préfixes
 
-<h3 id="Propriétés_et_méthodes_préfixes">Propriétés et méthodes préfixes</h3>
+Quant aux propriétés et aux méthodes, sont généralement utilisés :
 
-<p>Quant aux propriétés et aux méthodes, sont généralement utilisés :</p>
+- `webkit (`Chrome, Safari, nouvelles versions d'Opera, presque tous les navigateurs IOS (y compris Firefox pour IOS), fondamentalement, tout navigateur basé sur WebKit).
+- `moz `(Firefox)
+- `o `(anciennes versions d'Opera)
+- `ms` (Internet Explorer et Edge)
 
-<ul>
- <li><code>webkit (</code>Chrome, Safari, nouvelles versions d'Opera, presque tous les navigateurs IOS (y compris Firefox pour IOS), fondamentalement, tout navigateur basé sur WebKit).</li>
- <li><code>moz </code>(Firefox)</li>
- <li><code>o </code>(anciennes versions d'Opera)</li>
- <li><code>ms</code> (Internet Explorer et Edge)</li>
-</ul>
+## Pour approfondir
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+### Culture générale
 
-<h3 id="Culture_générale">Culture générale</h3>
-
-<p>{{Interwiki("wikipedia", "Métadonnée#Services_Web", "Services web")}} sur Wikipédia</p>
-
-<p> </p>
+{{Interwiki("wikipedia", "Métadonnée#Services_Web", "Services web")}} sur Wikipédia

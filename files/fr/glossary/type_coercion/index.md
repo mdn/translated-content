@@ -8,35 +8,33 @@ tags:
 translation_of: Glossary/Type_coercion
 original_slug: Glossaire/Type_coercion
 ---
-<p>La <em>type coercion </em>(en français, coercition de type) est la conversion automatique ou implicite de valeurs d'un type de données à un autre (par exemple : de string à nombre). La <em>{{Glossary("type conversion")}}</em> est similaire à la <em>type coercion</em> puisque les deux convertissent des valeurs d'un type de données à un autre. La différence fondamentale entre elles est que la <em>type coercion</em> est implicite alors que la <em>type conversion</em> peut être implicite ou explicite.</p>
+La _type coercion_ (en français, coercition de type) est la conversion automatique ou implicite de valeurs d'un type de données à un autre (par exemple : de string à nombre). La *{{Glossary("type conversion")}}* est similaire à la *type coercion* puisque les deux convertissent des valeurs d'un type de données à un autre. La différence fondamentale entre elles est que la _type coercion_ est implicite alors que la _type conversion_ peut être implicite ou explicite.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">const valeur1 = '5';
+```js
+const valeur1 = '5';
 const valeur2 = 9;
 let somme = valeur1 + valeur2;
 
-console.log(somme);</pre>
+console.log(somme);
+```
 
-<p>Dans l'exemple ci-dessus, Javascript a <em>coercé</em> le nombre <code>9</code> en une string, et a concaténé les deux valeurs, ce qui donne comme résultat la string <code>59</code>. JavaScript avait le choix entre une string et un nombre et a décidé d'utiliser une string.</p>
+Dans l'exemple ci-dessus, Javascript a *coercé* le nombre `9` en une string, et a concaténé les deux valeurs, ce qui donne comme résultat la string `59`. JavaScript avait le choix entre une string et un nombre et a décidé d'utiliser une string.
 
-<p>Le compilateur aurait pu coercer le <code>5</code> en un nombre et retourner la somme de <code>14</code>, mais ce n'est pas ce qu'il a fait. Pour pouvoir retourner <code>14</code>, il aurait fallu explicitement convertir le 5 en un nombre grâce à la méthode {{jsxref("Global_Objects/Number", "Number()")}}:</p>
+Le compilateur aurait pu coercer le `5` en un nombre et retourner la somme de `14`, mais ce n'est pas ce qu'il a fait. Pour pouvoir retourner `14`, il aurait fallu explicitement convertir le 5 en un nombre grâce à la méthode {{jsxref("Global_Objects/Number", "Number()")}}:
 
-<pre class="brush: js">somme = Number(valeur1) + valeur2;</pre>
+```js
+somme = Number(valeur1) + valeur2;
+```
 
-<h2>Voir aussi</h2>
+## Voir aussi
 
-<ol>
- <li><a href="/fr/docs/Glossary">Glossary</a>
+1.  [Glossary](/fr/docs/Glossary)
 
-  <ol>
-   <li>{{Glossary("Type")}}</li>
-   <li>{{Glossary("Type conversion")}}</li>
-  </ol>
- </li>
- <li>Wikipedia article
-  <ol>
-   <li>{{Interwiki("wikipedia", "Type conversion")}}</li>
-  </ol>
- </li>
-</ol>
+    1.  {{Glossary("Type")}}
+    2.  {{Glossary("Type conversion")}}
+
+2.  Wikipedia article
+
+    1.  {{Interwiki("wikipedia", "Type conversion")}}

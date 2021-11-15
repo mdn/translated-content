@@ -9,12 +9,10 @@ tags:
 translation_of: Glossary/Pseudo-class
 original_slug: Glossaire/Pseudo-classe
 ---
-<p>En CSS, un sélecteur de <strong>pseudo-classe </strong>cible des éléments en fonction de leur état plutôt qu'en fonction de l'information issue de l'arbre du document. Par exemple, le sélecteur <code>a</code>{{ cssxref(":visited") }} applique un style uniquement aux liens que l'utilisateur a déjà visités.</p>
+En CSS, un sélecteur de **pseudo-classe** cible des éléments en fonction de leur état plutôt qu'en fonction de l'information issue de l'arbre du document. Par exemple, le sélecteur `a`{{ cssxref(":visited") }} applique un style uniquement aux liens que l'utilisateur a déjà visités.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/Pseudo-classes">Documentation sur les pseudo-classes</a></li>
-</ul>
+- [Documentation sur les pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)

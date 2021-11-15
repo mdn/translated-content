@@ -4,18 +4,15 @@ slug: Glossary/Same-origin_policy
 translation_of: Glossary/Same-origin_policy
 original_slug: Glossaire/Same-origin_policy
 ---
-<p>La <strong>same-origin policy</strong> (<em>politique de même origine</em>) est un mécanisme de sécurité critique qui restreint la manière dont un document ou un script chargé depuis une {{Glossary("origine")}} peut interagir avec une ressource d’une autre origine. Elle aide à isoler les documents potentiellement malicieux, ce qui réduit les vecteurs d’attaque possibles.</p>
+La **same-origin policy** (_politique de même origine_) est un mécanisme de sécurité critique qui restreint la manière dont un document ou un script chargé depuis une {{Glossary("origine")}} peut interagir avec une ressource d’une autre origine. Elle aide à isoler les documents potentiellement malicieux, ce qui réduit les vecteurs d’attaque possibles.
 
-<p>Voir <a href="/fr/docs/Web/Security/Same_origin_policy_for_JavaScript">Same origin policy</a> pour plus d’informations.</p>
+Voir [Same origin policy](/fr/docs/Web/Security/Same_origin_policy_for_JavaScript) pour plus d’informations.
 
-<h2>Voir aussi</h2>
-<ul>
- <li><a href="/fr/docs/Glossary">Glossaire MDN</a> :
+## Voir aussi
 
-  <ul>
-   <li>{{Glossary("CORS")}}</li>
-   <li>{{Glossary("origine")}}</li>
-  </ul>
- </li>
- <li><a href="/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript">Same-origin policy</a></li>
-</ul>
+- [Glossaire MDN](/fr/docs/Glossary) :
+
+  - {{Glossary("CORS")}}
+  - {{Glossary("origine")}}
+
+- [Same-origin policy](/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript)

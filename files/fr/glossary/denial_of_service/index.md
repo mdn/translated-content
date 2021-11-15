@@ -10,4 +10,4 @@ tags:
 translation_of: Glossary/Denial_of_Service
 original_slug: Glossaire/Déni_de_Service
 ---
-<p>{{page("/fr/docs/Glossaire/Attaque_DOS")}}</p>
+{{page("/fr/docs/Glossaire/Attaque_DOS")}}

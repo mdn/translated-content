@@ -11,12 +11,10 @@ tags:
 translation_of: Glossary/Abstraction
 original_slug: Glossaire/Abstraction
 ---
-<p>L'<em>Abstraction</em> dans le domaine de la {{Glossary("Computer programming","programmation informatique")}} permet de réduire la complexité et d'obtenir une conception et une implémentation plus efficaces dans les systèmes logiciels complexes. Elle dissimule les complexités techniques des systèmes derrière des {{Glossary("API")}} plus simples à manipuler.</p>
+L'_Abstraction_ dans le domaine de la {{Glossary("Computer programming","programmation informatique")}} permet de réduire la complexité et d'obtenir une conception et une implémentation plus efficaces dans les systèmes logiciels complexes. Elle dissimule les complexités techniques des systèmes derrière des {{Glossary("API")}} plus simples à manipuler.
 
-<h2 id="Pour_approfondir"><strong>Pour approfondir </strong></h2>
+## **Pour approfondir**
 
-<h3 id="Culture_générale"><strong>Culture générale</strong></h3>
+### **Culture générale**
 
-<ul>
- <li>{{interwiki("wikipedia", "Abstraction_(informatique)", "Abstraction")}} sur Wikipédia.</li>
-</ul>
+- {{interwiki("wikipedia", "Abstraction_(informatique)", "Abstraction")}} sur Wikipédia.

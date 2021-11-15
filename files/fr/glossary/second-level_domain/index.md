@@ -7,4 +7,4 @@ tags:
 translation_of: Glossary/Second-level_Domain
 original_slug: Glossaire/Domaine_deuxième-niveau
 ---
-<p>{{page("/fr/docs/Glossaire/SLD")}}</p>
+{{page("/fr/docs/Glossaire/SLD")}}

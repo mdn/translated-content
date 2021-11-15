@@ -9,32 +9,26 @@ tags:
 translation_of: Glossary/Simple_header
 original_slug: Glossaire/En-tête_simple
 ---
-<p>Un <em>en-tête simple</em> (ou en-tête de requête sécurisé CORS) est l'un des <a href="/fr/docs/HTTP/Headers">en-têtes HTTP</a> suivants :</p>
+Un _en-tête simple_ (ou en-tête de requête sécurisé CORS) est l'un des [en-têtes HTTP](/fr/docs/HTTP/Headers) suivants :
 
-<ul>
- <li>{{HTTPHeader("Accept")}},</li>
- <li>{{HTTPHeader("Accept-Language")}},</li>
- <li>{{HTTPHeader("Content-Language")}},</li>
- <li>{{HTTPHeader("Content-Type")}} avec un type MIME de sa valeur analysée (ignorant les paramètres) et l'un des <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code> ou <code>text/plain</code>.</li>
-</ul>
+- {{HTTPHeader("Accept")}},
+- {{HTTPHeader("Accept-Language")}},
+- {{HTTPHeader("Content-Language")}},
+- {{HTTPHeader("Content-Type")}} avec un type MIME de sa valeur analysée (ignorant les paramètres) et l'un des `application/x-www-form-urlencoded`, `multipart/form-data` ou `text/plain`.
 
-<p>Ou l'un de ces en-têtes d'indication de client :</p>
+Ou l'un de ces en-têtes d'indication de client :
 
-<ul>
- <li>{{HTTPHeader("DPR")}}</li>
- <li>{{HTTPHeader("Downlink")}}</li>
- <li>{{HTTPHeader("Save-Data")}}</li>
- <li>{{HTTPHeader("Viewport-Width")}}</li>
- <li>{{HTTPHeader("Width")}}</li>
-</ul>
+- {{HTTPHeader("DPR")}}
+- {{HTTPHeader("Downlink")}}
+- {{HTTPHeader("Save-Data")}}
+- {{HTTPHeader("Viewport-Width")}}
+- {{HTTPHeader("Width")}}
 
-<p>Lorsqu'elles ne contiennent que de simples en-têtes, les requêtes sont réputées simples et n'ont pas besoin d'envoyer une {{glossary("preflight request","requête de pré-vérification")}} dans le contexte de <a href="/fr/docs/Glossaire/CORS">CORS</a>.</p>
+Lorsqu'elles ne contiennent que de simples en-têtes, les requêtes sont réputées simples et n'ont pas besoin d'envoyer une {{glossary("preflight request","requête de pré-vérification")}} dans le contexte de [CORS](/fr/docs/Glossaire/CORS).
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<ul>
- <li><a href="/fr/docs/HTTP/Headers">En-têtes HTTP</a></li>
- <li>{{Glossary("Simple response header","En-tête de réponse simple")}}</li>
- <li>{{Glossary("Forbidden header name","Nom d'en-tête interdit")}}</li>
- <li>{{Glossary("Request header","En-tête de requête")}}</li>
-</ul>
+- [En-têtes HTTP](/fr/docs/HTTP/Headers)
+- {{Glossary("Simple response header","En-tête de réponse simple")}}
+- {{Glossary("Forbidden header name","Nom d'en-tête interdit")}}
+- {{Glossary("Request header","En-tête de requête")}}

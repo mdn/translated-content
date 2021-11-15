@@ -10,10 +10,8 @@ tags:
 translation_of: Glossary/Boot2Gecko
 original_slug: Glossaire/Boot2Gecko
 ---
-<p><em>Boot2Gecko</em> (<strong>B2G</strong>) est le nom de code pour {{glossary("Firefox OS")}} et fait référence aux éléments de construction  qui n'ont pas encore reçu la marque Firefox OS officielle. (Firefox OS était aussi souvent appelé Boot2Gecko avant que le projet ait un nom officiel.)</p>
+_Boot2Gecko_ (**B2G**) est le nom de code pour {{glossary("Firefox OS")}} et fait référence aux éléments de construction  qui n'ont pas encore reçu la marque Firefox OS officielle. (Firefox OS était aussi souvent appelé Boot2Gecko avant que le projet ait un nom officiel.)
 
-<h2 id="En_savoir_plus">En savoir plus</h2>
+## En savoir plus
 
-<ul>
- <li>Découvrez bien plus à propos de Boot2Gecko dans la <a href="/fr/docs/Archive/B2G_OS">zone Firefox OS</a> de la MDN.</li>
-</ul>
+- Découvrez bien plus à propos de Boot2Gecko dans la [zone Firefox OS](/fr/docs/Archive/B2G_OS) de la MDN.

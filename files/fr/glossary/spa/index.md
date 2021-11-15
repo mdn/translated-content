@@ -1,37 +1,32 @@
 ---
 title: Application monopage (SPA)
 slug: Glossary/SPA
-translation_of: 'Glossary/SPA'
+translation_of: Glossary/SPA
 ---
-<p>Une application monopage ou SPA (« <i>Single-page application</i> » en anglais) est une implémentation d'application web qui ne charge qu'un seul document web, puis met à jour le contenu du corps de ce document via des API JavaScript telles que <a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> et <a href="/fr/docs/Web/API/Fetch_API">Fetch</a> lorsqu'un contenu différent doit être affiché.</p>
+Une application monopage ou SPA (« _Single-page application_ » en anglais) est une implémentation d'application web qui ne charge qu'un seul document web, puis met à jour le contenu du corps de ce document via des API JavaScript telles que [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) et [Fetch](/fr/docs/Web/API/Fetch_API) lorsqu'un contenu différent doit être affiché.
 
-<p>Cela permet donc aux utilisateurs d'utiliser des sites web sans charger de nouvelles pages entières à partir du serveur, ce qui peut entraîner des gains de performances et une expérience plus dynamique, avec certains inconvénients tels que le référencement (SEO), plus d'efforts nécessaires pour maintenir l'état, mettre en œuvre la navigation et mesurer les performances.</p>
+Cela permet donc aux utilisateurs d'utiliser des sites web sans charger de nouvelles pages entières à partir du serveur, ce qui peut entraîner des gains de performances et une expérience plus dynamique, avec certains inconvénients tels que le référencement (SEO), plus d'efforts nécessaires pour maintenir l'état, mettre en œuvre la navigation et mesurer les performances.
 
-<h2 id="learn_more">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="general_knowledge">Connaissance générale</h3>
+### Connaissance générale
 
-<p>Certains des frameworks SPA les plus populaires incluent:</p>
+Certains des frameworks SPA les plus populaires incluent:
 
-<ul>
- <li><a href="https://reactjs.org/">React</a></li>
- <li><a href="https://angular.io/">Angular</a></li>
- <li><a href="https://vuejs.org/">Vue.JS</a></li>
-</ul>
+- [React](https://reactjs.org/)
+- [Angular](https://angular.io/)
+- [Vue.JS](https://vuejs.org/)
 
-<h2>Voir aussi</h2>
-<ol>
- <li>Articles wikipedia
-  <ol>
-   <li>{{Interwiki("wikipedia", "Application web monopage")}}</li>
-  </ol>
- </li>
- <li><a href="/fr/docs/Glossary">Glossaire</a>
-  <ol>
-   <li><a href="/fr/docs/Glossary/API">API</a></li>
-   <li><a href="/fr/docs/Glossary/AJAX">AJAX</a></li>
-   <li><a href="/fr/docs/Glossary/JavaScript">JavaScript</a></li>
-  </ol>
- </li>
- <li><a href="/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks">Comprendre les frameworks JavaScript côté client</a></li>
-</ol>
+## Voir aussi
+
+1.  Articles wikipedia
+
+    1.  {{Interwiki("wikipedia", "Application web monopage")}}
+
+2.  [Glossaire](/fr/docs/Glossary)
+
+    1.  [API](/fr/docs/Glossary/API)
+    2.  [AJAX](/fr/docs/Glossary/AJAX)
+    3.  [JavaScript](/fr/docs/Glossary/JavaScript)
+
+3.  [Comprendre les frameworks JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)

@@ -8,28 +8,30 @@ tags:
 translation_of: Glossary/Attribute
 original_slug: Glossaire/Attribut
 ---
-<p>Un <em>attribut</em> vient compléter un {{Glossary("tag")}}. Sa présence peut être requise ou facultative. Il peut fournir des méta-informations ou changer le comportement du tag. La syntaxe est <code>name=value</code> où <em>name</em> est l'identificateur de l'attribut et <em>value</em> sa valeur attribuée.</p>
+Un _attribut_ vient compléter un {{Glossary("tag")}}. Sa présence peut être requise ou facultative. Il peut fournir des méta-informations ou changer le comportement du tag. La syntaxe est `name=value` où _name_ est l'identificateur de l'attribut et _value_ sa valeur attribuée.
 
-<pre class="brush: html">&lt;!-- Voici un exemple de tag sans attribut --&gt;
-&lt;h2&gt;Titre&lt;/h2&gt;
+```html
+<!-- Voici un exemple de tag sans attribut -->
+<h2>Titre</h2>
 
-&lt;!-- Le même tag avec un attribut --&gt;
-&lt;!-- Le titre apparaît désormais sur un fond jaune --&gt;
-&lt;h2 style="background-color:yellow";&gt;Titre&lt;/h2&gt;</pre>
+<!-- Le même tag avec un attribut -->
+<!-- Le titre apparaît désormais sur un fond jaune -->
+<h2 style="background-color:yellow";>Titre</h2>
+```
 
-<p>On peut aussi trouver des attributs sans valeur quand elle n'est pas nécessaire.</p>
+On peut aussi trouver des attributs sans valeur quand elle n'est pas nécessaire.
 
-<pre class="brush: html">&lt;!-- Un tag avec un attribut indiquant que le champ est requis --&gt;
-&lt;input type="text" required&gt;
+```html
+<!-- Un tag avec un attribut indiquant que le champ est requis -->
+<input type="text" required>
 
-&lt;!-- Cette notation fonctionne aussi --&gt;
-&lt;input type="text" required="required"&gt;</pre>
+<!-- Cette notation fonctionne aussi -->
+<input type="text" required="required">
+```
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Informations_techniques">Informations techniques</h3>
+### Informations techniques
 
-<ul>
- <li><a href="/fr/docs/Web/HTML/Attributs">Liste des attributs HTML</a></li>
- <li>Informations concernant les <a href="/fr/docs/Web/HTML/Attributs_universels">attributs universels</a> en HTML.</li>
-</ul>
+- [Liste des attributs HTML](/fr/docs/Web/HTML/Attributs)
+- Informations concernant les [attributs universels](/fr/docs/Web/HTML/Attributs_universels) en HTML.

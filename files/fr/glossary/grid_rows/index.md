@@ -8,25 +8,21 @@ tags:
 translation_of: Glossary/Grid_Rows
 original_slug: Glossaire/Lignes_de_grille_(Row)
 ---
-<p>Une <strong>ligne de grille</strong> (row) est une piste horizontale dans une <a href="/fr/docs/Web/CSS/CSS_Grid_Layout">grille CSS</a>, qui se situe dans l'espace entre deux lignes (lines) horizontales de lignes (rows). Elle est définie par la propriété {{cssxref("grid-template-rows")}} ou les propriétés raccourcies {{cssxref("grid")}} ou {{cssxref("grid-template")}}.</p>
+Une **ligne de grille** (row) est une piste horizontale dans une [grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout), qui se situe dans l'espace entre deux lignes (lines) horizontales de lignes (rows). Elle est définie par la propriété {{cssxref("grid-template-rows")}} ou les propriétés raccourcies {{cssxref("grid")}} ou {{cssxref("grid-template")}}.
 
-<p>De plus, des lignes peuvent être créées dans la grille implicite lorsque les éléments sont placés en dehors des lignes créées dans la grille explicite. Ces lignes seront automatiquement dimensionnées par défaut, ou peuvent avoir une taille spécifiée avec la propriété {{cssxref("grid-auto-rows")}}.</p>
+De plus, des lignes peuvent être créées dans la grille implicite lorsque les éléments sont placés en dehors des lignes créées dans la grille explicite. Ces lignes seront automatiquement dimensionnées par défaut, ou peuvent avoir une taille spécifiée avec la propriété {{cssxref("grid-auto-rows")}}.
 
-<p>Lorsque vous travaillez avec l'alignement dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout">une grille</a>, l'axe le long duquel les lignes sont exécutées est appelé l'axe de ligne ou en ligne.</p>
+Lorsque vous travaillez avec l'alignement dans [une grille](/fr/docs/Web/CSS/CSS_Grid_Layout), l'axe le long duquel les lignes sont exécutées est appelé l'axe de ligne ou en ligne.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Références_de_propriété">Références de propriété</h3>
+### Références de propriété
 
-<ul>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-auto-rows")}}</li>
- <li>{{cssxref("grid")}}</li>
- <li>{{cssxref("grid-template")}}</li>
-</ul>
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid")}}
+- {{cssxref("grid-template")}}
 
-<h3 id="En_lire_plus">En lire plus</h3>
+### En lire plus
 
-<ul>
- <li>Guide des grilles CSS : <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base">Les concepts de base des grilles CSS</a></em></li>
-</ul>
+- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)_

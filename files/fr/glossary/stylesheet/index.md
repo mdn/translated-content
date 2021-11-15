@@ -6,15 +6,13 @@ tags:
   - StyleSheet
 translation_of: Glossary/Stylesheet
 ---
-<p>Une <strong>feuille de style</strong> est un ensemble de règles CSS utilisé pour contrôler la mise en page et le style d'une page web ou d'un document. Les feuilles de style <em>internes</em> sont disposées au sein d'une balise HTML <a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a> dans la section <a href="/fr/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a> du document web ; les feuilles de style <em>externes</em> sont quant à elles placées dans un fichier <code>.css</code> distinct : elles sont appliquées au document grâce à une référence au fichier dans un élément <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> dans l'en-tête du document, entre les balises <a href="/fr/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a></p>
+Une **feuille de style** est un ensemble de règles CSS utilisé pour contrôler la mise en page et le style d'une page web ou d'un document. Les feuilles de style _internes_ sont disposées au sein d'une balise HTML [`<style>`](/fr/docs/Web/HTML/Element/style) dans la section [`<head>`](/fr/docs/Web/HTML/Element/head) du document web ; les feuilles de style _externes_ sont quant à elles placées dans un fichier `.css` distinct : elles sont appliquées au document grâce à une référence au fichier dans un élément [`<link>`](/fr/docs/Web/HTML/Element/link) dans l'en-tête du document, entre les balises [`<head>`](/fr/docs/Web/HTML/Element/head)
 
-<p>On préfèrera utiliser des feuilles de style externes, car elles permettent de contrôler le style de plusieurs pages à partir d'un seul endroit, plutôt que d'avoir à répéter le même code CSS sur chaque page.</p>
+On préfèrera utiliser des feuilles de style externes, car elles permettent de contrôler le style de plusieurs pages à partir d'un seul endroit, plutôt que d'avoir à répéter le même code CSS sur chaque page.
 
-<h2 id="learn_more">En savoir plus</h2>
+## En savoir plus
 
-<h3 id="general_knowledge">Connaissances générales</h3>
+### Connaissances générales
 
-<ul>
- <li><a href="/fr/docs/Learn/CSS/First_steps">Premiers pas avec CSS</a></li>
- <li>Les feuilles de style sur <a href="https://fr.wikipedia.org/wiki/Feuille_de_style">Wikipédia</a></li>
-</ul>
+- [Premiers pas avec CSS](/fr/docs/Learn/CSS/First_steps)
+- Les feuilles de style sur [Wikipédia](https://fr.wikipedia.org/wiki/Feuille_de_style)

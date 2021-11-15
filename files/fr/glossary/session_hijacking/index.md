@@ -8,48 +8,40 @@ tags:
 translation_of: Glossary/Session_Hijacking
 original_slug: Glossaire/Détournement_de_session
 ---
-<p><strong>Le détournement de session </strong>se produit lorsqu'un attaquant prend le contrôle d'une session valide entre deux ordinateurs. L'attaquant vole un identifiant de session valide afin de pénétrer dans le système et de fouiller les données.</p>
+**Le détournement de session** se produit lorsqu'un attaquant prend le contrôle d'une session valide entre deux ordinateurs. L'attaquant vole un identifiant de session valide afin de pénétrer dans le système et de fouiller les données.
 
-<p>Le plus souvent, l'authentification se produit seulement au début d'une session {{glossary("TCP")}}. Dans un détournement de session TCP, un attaquant obtient l'accès en prenant en charge une session TCP entre deux machines en milieu de session.</p>
+Le plus souvent, l'authentification se produit seulement au début d'une session {{glossary("TCP")}}. Dans un détournement de session TCP, un attaquant obtient l'accès en prenant en charge une session TCP entre deux machines en milieu de session.
 
-<p><img alt="" src="session_hijacking_3.jpg"></p>
+![](session_hijacking_3.jpg)
 
-<h3 id="Le_piratage_de_session_se_produit_parce_que">Le piratage de session se produit parce que</h3>
+### Le piratage de session se produit parce que
 
-<ul>
- <li>pas de verrouillage de compte pour les ID de session non valides</li>
- <li>faible algorithme de génération d'ID de session</li>
- <li>manipulation insécurisée</li>
- <li>temps d'expiration de session indéfini</li>
- <li>ID de session courte</li>
- <li>transmission en texte clair</li>
-</ul>
+- pas de verrouillage de compte pour les ID de session non valides
+- faible algorithme de génération d'ID de session
+- manipulation insécurisée
+- temps d'expiration de session indéfini
+- ID de session courte
+- transmission en texte clair
 
-<h3 id="Le_processus_de_piratage_de_session">Le processus de piratage de session</h3>
+### Le processus de piratage de session
 
-<ol>
- <li><strong>Sniffez</strong>, c'est-à-dire effectuez une attaque d'homme-dans-le-milieu (MitM), placez-vous entre la victime et le serveur.</li>
- <li><strong>Surveillez</strong> les paquets circulant entre le serveur et l'utilisateur.</li>
- <li><strong>Brisez</strong> la connexion de la machine victime.</li>
- <li><strong>Prenez le contrôle</strong> de la session.</li>
- <li><strong>Injectez</strong> de nouveaux paquets au serveur en utilisant l'ID de session de la victime.</li>
-</ol>
+1.  **Sniffez**, c'est-à-dire effectuez une attaque d'homme-dans-le-milieu (MitM), placez-vous entre la victime et le serveur.
+2.  **Surveillez** les paquets circulant entre le serveur et l'utilisateur.
+3.  **Brisez** la connexion de la machine victime.
+4.  **Prenez le contrôle** de la session.
+5.  **Injectez** de nouveaux paquets au serveur en utilisant l'ID de session de la victime.
 
-<h3 id="Protection_contre_le_détournement_de_session">Protection contre le détournement de session</h3>
+### Protection contre le détournement de session
 
-<ul>
- <li>créer un canal de communication sécurisé avec SSH (shell sécurisé)</li>
- <li>passer les cookies d'authentification sur une connexion HTTPS</li>
- <li>implémenter la fonctionnalité de déconnexion afin que l'utilisateur puisse terminer la session</li>
- <li>générer l'ID de session après la réussire de la connexion</li>
- <li>transmettre des données chiffrées entre les utilisateurs et le serveur web</li>
- <li>utiliser une chaîne ou un long nombre aléatoire comme clé de session</li>
-</ul>
+- créer un canal de communication sécurisé avec SSH (shell sécurisé)
+- passer les cookies d'authentification sur une connexion HTTPS
+- implémenter la fonctionnalité de déconnexion afin que l'utilisateur puisse terminer la session
+- générer l'ID de session après la réussire de la connexion
+- transmettre des données chiffrées entre les utilisateurs et le serveur web
+- utiliser une chaîne ou un long nombre aléatoire comme clé de session
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Hijacking")}} sur Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Hijacking")}} sur Wikipedia

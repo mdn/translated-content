@@ -8,14 +8,12 @@ tags:
 translation_of: Glossary/Internationalization_and_localization
 original_slug: Glossaire/Internationalisation_et_localisation
 ---
-<p><strong>L'internationalisation</strong>, souvent abrégée en "<a href="/fr/docs/Glossary/I18N">i18n</a>", est l'adaptation d'un site web ou d'une application web à différentes langues, différences régionales et exigences techniques pour différentes régions et pays. L'internationalisation est le processus d'architecture de votre application web afin qu'elle puisse être rapidement et facilement adaptée à diverses langues et régions sans trop d'efforts d'ingénierie lorsque de nouvelles langues et régions sont prises en charge. Aussi pour qu'un utilisateur puisse parcourir les fonctionnalités pour traduire ou localiser l'application pour accéder à tout le contenu sans casser la mise en page.</p>
+**L'internationalisation**, souvent abrégée en "[i18n](/fr/docs/Glossary/I18N)", est l'adaptation d'un site web ou d'une application web à différentes langues, différences régionales et exigences techniques pour différentes régions et pays. L'internationalisation est le processus d'architecture de votre application web afin qu'elle puisse être rapidement et facilement adaptée à diverses langues et régions sans trop d'efforts d'ingénierie lorsque de nouvelles langues et régions sont prises en charge. Aussi pour qu'un utilisateur puisse parcourir les fonctionnalités pour traduire ou localiser l'application pour accéder à tout le contenu sans casser la mise en page.
 
-<p>L'internationalisation inclut la prise en charge de plusieurs jeux de caractères (généralement via <a href="http://searchcio-midmarket.techtarget.com/definition/Unicode" rel="noopener">Unicode</a>), des unités de mesure (<a href="/fr/docs/Web/API/PaymentCurrencyAmount">devise</a>, °C/°F, km/miles, etc.), <a href="/fr/docs/Mozilla/Projects/NSPR/Reference/Date_and_Time">formats de date et d'heure</a>, dispositions du clavier, et directions du texte.</p>
+L'internationalisation inclut la prise en charge de plusieurs jeux de caractères (généralement via [Unicode](http://searchcio-midmarket.techtarget.com/definition/Unicode)), des unités de mesure ([devise](/fr/docs/Web/API/PaymentCurrencyAmount), °C/°F, km/miles, etc.), [formats de date et d'heure](/fr/docs/Mozilla/Projects/NSPR/Reference/Date_and_Time), dispositions du clavier, et directions du texte.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization">Extension d'internationalisation</a></li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl">API d'internationalisation</a></li>
- <li><a href="/fr/docs/Learn/CSS/CSS_layout/Flexbox">Disposition Flexbox</a> et <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Grid</a></li>
-</ul>
+- [Extension d'internationalisation](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
+- [API d'internationalisation](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [Disposition Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox) et [Grid](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)

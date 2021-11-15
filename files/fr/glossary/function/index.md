@@ -11,58 +11,64 @@ tags:
 translation_of: Glossary/Function
 original_slug: Glossaire/Fonction
 ---
-<p>Une <strong>fonction</strong> est une portion de code qui peut être appelée par d'autres codes ou par elle-même ou par une {{Glossary("Variable","variable")}} qui se réfère à la fonction. Lorsqu'une fonction est appelée, des {{Glossary("Argument","arguments")}} lui sont généralement donnés en entrée. La fonction peut également retourner une valeur de sortie. En {{glossary("JavaScript")}}, une fonction est aussi un {{glossary("Object","objet")}}.</p>
+Une **fonction** est une portion de code qui peut être appelée par d'autres codes ou par elle-même ou par une {{Glossary("Variable","variable")}} qui se réfère à la fonction. Lorsqu'une fonction est appelée, des {{Glossary("Argument","arguments")}} lui sont généralement donnés en entrée. La fonction peut également retourner une valeur de sortie. En {{glossary("JavaScript")}}, une fonction est aussi un {{glossary("Object","objet")}}.
 
-<p>Un nom de fonction est un {{Glossary("identifier","identifiant")}} déclaré dans le cadre d'une déclaration de fonction ou de l'expression d'une fonction. Le fait que le nom de fonction soit déclaré ou exprimé impacte la {{Glossary("Scope","portée")}} du nom de fonction.</p>
+Un nom de fonction est un {{Glossary("identifier","identifiant")}} déclaré dans le cadre d'une déclaration de fonction ou de l'expression d'une fonction. Le fait que le nom de fonction soit déclaré ou exprimé impacte la {{Glossary("Scope","portée")}} du nom de fonction.
 
-<h3 id="Différents_types_de_fonctions">Différents types de fonctions</h3>
+### Différents types de fonctions
 
-<p>Une <strong>fonction anonyme</strong> est une fonction sans nom de fonction :</p>
+Une **fonction anonyme** est une fonction sans nom de fonction :
 
-<pre class="brush: js">function () {};
+```js
+function () {};
 // ou en utilisant la notation de flèche de ECMAScript 2015
-() =&gt; {};</pre>
+() => {};
+```
 
-<p>Une <strong>fonction nommée</strong> est une fonction avec un nom de fonction :</p>
+Une **fonction nommée** est une fonction avec un nom de fonction :
 
-<pre class="brush: js">function foo() {};
+```js
+function foo() {};
 // ou en utilisant la notation de flèche de ECMAScript 2015
-const foo = () =&gt; {};</pre>
+const foo = () => {};
+```
 
-<p>Une <strong>fonction imbriquée (ou fonction interne)</strong> est une fonction à l'intérieur d'une autre fonction (<em><code>square</code></em> dans l'exemple suivant). Une <strong>fonction externe</strong> est une fonction qui contient une fonction (<em><code>addSquares</code></em> dans l'exemple suivant) :</p>
+Une **fonction imbriquée (ou fonction interne)** est une fonction à l'intérieur d'une autre fonction (_`square`_ dans l'exemple suivant). Une **fonction externe** est une fonction qui contient une fonction (_`addSquares`_ dans l'exemple suivant) :
 
-<dl>
-</dl>
-
-<pre class="brush: js">function addSquares(a,b) {
+```js
+function addSquares(a,b) {
    function square(x) {
       return x * x;
    }
    return square(a) + square(b);
 };
 //En utilisant la notation de flèche de ECMAScript 2015
-const addSquares = (a,b) =&gt; {
-   const square = x =&gt; x*x;
+const addSquares = (a,b) => {
+   const square = x => x*x;
    return square(a) + square(b);
-};</pre>
+};
+```
 
-<p>Une <strong>fonction récursive</strong> est une fonction qui fait appel à elle-même. Voir {{Glossary("Recursion","récursion")}}.</p>
+Une **fonction récursive** est une fonction qui fait appel à elle-même. Voir {{Glossary("Recursion","récursion")}}.
 
-<pre class="brush: js">function loop(x) {
-   if (x &gt;= 10)
+```js
+function loop(x) {
+   if (x >= 10)
       return;
    loop(x + 1);
 };
 //En utilisant la notation de flèche de ECMAScript 2015
-const loop = x =&gt; {
-   if (x &gt;= 10)
+const loop = x => {
+   if (x >= 10)
       return;
    loop(x + 1);
-};</pre>
+};
+```
 
-<p>Une <strong>expression de fonction invoquée immédiatement</strong> (IIFE) est une fonction appelée directement après le chargement de la fonction dans le compilateur du navigateur. La façon d'identifier une IIFE est de localiser les parenthèses gauche et droite supplémentaires à la fin de la déclaration de la fonction.</p>
+Une **expression de fonction invoquée immédiatement** (IIFE) est une fonction appelée directement après le chargement de la fonction dans le compilateur du navigateur. La façon d'identifier une IIFE est de localiser les parenthèses gauche et droite supplémentaires à la fin de la déclaration de la fonction.
 
-<pre class="brush: js">// Erreur (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+```js
+// Erreur (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 /*
 ​function foo() {
     console.log('Hello Foo');
@@ -75,15 +81,14 @@ const loop = x =&gt; {
 
 (function food() {
     console.log("Hello Food");
-})();</pre>
+})();
+```
 
-<p>Si vous souhaitez en savoir plus sur les IIFE, consultez la page suivante sur Wikipedia : <a href="https://fr.wikipedia.org/wiki/JavaScript#Expressions_de_fonctions_imm%C3%A9diatement_invoqu%C3%A9es">Expression de la fonction immédiatement invoquée</a></p>
+Si vous souhaitez en savoir plus sur les IIFE, consultez la page suivante sur Wikipedia : [Expression de la fonction immédiatement invoquée](https://fr.wikipedia.org/wiki/JavaScript#Expressions_de_fonctions_imm%C3%A9diatement_invoqu%C3%A9es)
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Informations_Techniques">Informations Techniques</h3>
+### Informations Techniques
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Guide/Fonctions">Les Fonctions</a> en JavaScript sur MDN</li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es">Fonctions fléchées</a></li>
-</ul>
+- [Les Fonctions](/fr/docs/Web/JavaScript/Guide/Fonctions) en JavaScript sur MDN
+- [Fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)

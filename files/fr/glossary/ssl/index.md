@@ -7,17 +7,15 @@ tags:
 translation_of: Glossary/SSL
 original_slug: Glossaire/SSL_Glossary
 ---
-<p>SSL (Secure Sockets Layer) est un protocole standard qui garantit que la communication entre deux applications informatiques est privée et sécurisée (ne peut être ni lue ni modifiée par des observateurs extérieurs). C'est la base du protocole {{Glossary("TLS")}}.</p>
+SSL (Secure Sockets Layer) est un protocole standard qui garantit que la communication entre deux applications informatiques est privée et sécurisée (ne peut être ni lue ni modifiée par des observateurs extérieurs). C'est la base du protocole {{Glossary("TLS")}}.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<p>{{Interwiki("wikipedia","Transport_Layer_Security","Transport Layer Security")}} sur Wikipedia</p>
+{{Interwiki("wikipedia","Transport_Layer_Security","Transport Layer Security")}} sur Wikipedia
 
-<h3 id="Voir_aussi">Voir aussi</h3>
+### Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Mozilla/Projects/NSS/SSL_functions">SSL functions</a></li>
- <li>{{Glossary("HTTPS")}}</li>
-</ul>
+- [SSL functions](/fr/docs/Mozilla/Projects/NSS/SSL_functions)
+- {{Glossary("HTTPS")}}

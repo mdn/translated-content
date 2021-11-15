@@ -13,10 +13,10 @@ tags:
 translation_of: Glossary/Breadcrumb
 original_slug: Glossaire/Breadcrumb
 ---
-<p>Un <strong>breadcrumb</strong>, ou fil d'Ariane, est une aide à la navigation qui est généralement placée entre l'en-tête d'un site et le contenu principal, affichant soit une hiérarchie de la page actuelle par rapport à la structure du site, du niveau supérieur à la page actuelle, soit une liste des liens suivis par l'utilisateur pour accéder à la page en cours, dans l'ordre visité.</p>
+Un **breadcrumb**, ou fil d'Ariane, est une aide à la navigation qui est généralement placée entre l'en-tête d'un site et le contenu principal, affichant soit une hiérarchie de la page actuelle par rapport à la structure du site, du niveau supérieur à la page actuelle, soit une liste des liens suivis par l'utilisateur pour accéder à la page en cours, dans l'ordre visité.
 
-<p>Un breadcrumb d'emplacement pour ce document peut ressembler à ceci :</p>
+Un breadcrumb d'emplacement pour ce document peut ressembler à ceci :
 
-<p><a href="/">MDN</a> &gt; <a href="/fr/docs/Glossaire">Glossaire</a> &gt; Breadcrumb</p>
+[MDN](/) > [Glossaire](/fr/docs/Glossaire) > Breadcrumb
 
-<p>Les fils d'Ariane permettent aux utilisateurs de connaître leur emplacement sur un site Web. Ce type de navigation, s'il est effectué correctement, aide les utilisateurs à savoir où ils se trouvent sur un site et comment ils y sont arrivés. Ils peuvent également aider un utilisateur à revenir là où il était auparavant et réduire le nombre de clics nécessaires pour accéder à une page de niveau supérieur.</p>
+Les fils d'Ariane permettent aux utilisateurs de connaître leur emplacement sur un site Web. Ce type de navigation, s'il est effectué correctement, aide les utilisateurs à savoir où ils se trouvent sur un site et comment ils y sont arrivés. Ils peuvent également aider un utilisateur à revenir là où il était auparavant et réduire le nombre de clics nécessaires pour accéder à une page de niveau supérieur.

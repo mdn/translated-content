@@ -9,18 +9,14 @@ tags:
 translation_of: Glossary/IDL
 original_slug: Glossaire/IDL
 ---
-<p>Un <strong>IDL</strong> (<em>Interface Description Language</em>) est un langage générique utilisé pour définir les interfaces des objets en dehors de tout autre langage de programmation spécifique.</p>
+Un **IDL** (_Interface Description Language_) est un langage générique utilisé pour définir les interfaces des objets en dehors de tout autre langage de programmation spécifique.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{interwiki("wikipedia", "Interface description language", "IDL")}} sur Wikipédia</li>
-</ul>
+- {{interwiki("wikipedia", "Interface description language", "IDL")}} sur Wikipédia
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="http://www.eecs.berkeley.edu/~messer/netappc/Supplements/10-idl.pdf">Interface Definition Language</a></li>
-</ul>
+- [Interface Definition Language](http://www.eecs.berkeley.edu/~messer/netappc/Supplements/10-idl.pdf)

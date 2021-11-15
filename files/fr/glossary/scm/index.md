@@ -8,14 +8,12 @@ tags:
 translation_of: Glossary/SCM
 original_slug: Glossaire/SCM
 ---
-<p>SCM (Source Control Management) est un système de gestion de code source. Habituellement, il s'agit de l'utilisation de logiciels pour gérer les différentes versions des fichiers sources. Un programmeur peut modifier les fichiers de code source sans se préoccuper de l'édition de détails utiles car un SCM conserve la trace des modifications du code source et de qui a fait les modifications.</p>
+SCM (Source Control Management) est un système de gestion de code source. Habituellement, il s'agit de l'utilisation de logiciels pour gérer les différentes versions des fichiers sources. Un programmeur peut modifier les fichiers de code source sans se préoccuper de l'édition de détails utiles car un SCM conserve la trace des modifications du code source et de qui a fait les modifications.
 
-<p>Parmi les systèmes de SCM figurent CVS, SVN, GIT.</p>
+Parmi les systèmes de SCM figurent CVS, SVN, GIT.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Gestion de versions")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Gestion de versions")}} sur Wikipédia

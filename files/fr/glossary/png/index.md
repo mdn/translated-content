@@ -10,12 +10,10 @@ tags:
 translation_of: Glossary/PNG
 original_slug: Glossaire/PNG
 ---
-<p><strong>PNG </strong>(<em>Portable Network Graphics</em>) est un format de fichiers graphiques qui supporte la compression de données sans perte.</p>
+**PNG** (_Portable Network Graphics_) est un format de fichiers graphiques qui supporte la compression de données sans perte.
 
-<h2 id="Pour_en_savoir_plus">Pour en savoir plus</h2>
+## Pour en savoir plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://fr.wikipedia.org/wiki/Portable_Network_Graphics">PNG </a>sur Wikipédia</li>
-</ul>
+- [PNG ](https://fr.wikipedia.org/wiki/Portable_Network_Graphics)sur Wikipédia

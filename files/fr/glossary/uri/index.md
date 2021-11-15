@@ -10,13 +10,11 @@ tags:
 translation_of: Glossary/URI
 original_slug: Glossaire/URI
 ---
-<p>Un <strong>URI</strong><em> (Uniform Resource Identifier)</em> <em>(Identifiant de ressource uniforme )</em> est une chaîne qui fait référence à une ressource. Les plus courantes sont les {{Glossary("URL")}}, qui identifient une ressource en donnant son emplacement sur le Web. Au contraire, les {{Glossary("URN")}} font référence à une ressource grâce à son nom, dans un environnement donné, par exemple le code ISBN d'un livre.</p>
+Un **URI** _(Uniform Resource Identifier)_ _(Identifiant de ressource uniforme )_ est une chaîne qui fait référence à une ressource. Les plus courantes sont les {{Glossary("URL")}}, qui identifient une ressource en donnant son emplacement sur le Web. Au contraire, les {{Glossary("URN")}} font référence à une ressource grâce à son nom, dans un environnement donné, par exemple le code ISBN d'un livre.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{Interwiki("wikipedia","Uniform_Resource_Identifier","URI")}} sur Wikipedia</li>
- <li><a href="http://tools.ietf.org/html/rfc3986">RFC 3986 sur URI</a></li>
- <li><a href="/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data URIs</a></li>
- <li><a href="/fr/docs/URI/www_vs_non-www_URLs">www vs non-www</a></li>
-</ul>
+- {{Interwiki("wikipedia","Uniform_Resource_Identifier","URI")}} sur Wikipedia
+- [RFC 3986 sur URI](http://tools.ietf.org/html/rfc3986)
+- [data URIs](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- [www vs non-www](/fr/docs/URI/www_vs_non-www_URLs)

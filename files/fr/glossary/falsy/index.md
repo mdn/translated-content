@@ -10,30 +10,30 @@ tags:
 translation_of: Glossary/Falsy
 original_slug: Glossaire/Falsy
 ---
-<p>Les valeurs fausses (<strong>falsy</strong>) sont des valeurs évaluées comme fausses quand elles sont évaluées dans un contexte {{Glossary("Boolean","booléen")}}.</p>
+Les valeurs fausses (**falsy**) sont des valeurs évaluées comme fausses quand elles sont évaluées dans un contexte {{Glossary("Boolean","booléen")}}.
 
-<p>{{Glossary("JavaScript")}} utilise le type {{Glossary("Type_Conversion", "contrainte")}} dans les contextes Booléens comme les {{Glossary("Conditional", "conditions")}} et les {{Glossary("Loop", "boucles")}}.</p>
+{{Glossary("JavaScript")}} utilise le type {{Glossary("Type_Conversion", "contrainte")}} dans les contextes Booléens comme les {{Glossary("Conditional", "conditions")}} et les {{Glossary("Loop", "boucles")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Exemples de valeurs <em>fausses</em> en Javascript (qui sont traduites par false (<em>faux</em>) et, par ce fait, court-circuitent le bloc <strong>if</strong>) :</p>
+Exemples de valeurs _fausses_ en Javascript (qui sont traduites par false (_faux_) et, par ce fait, court-circuitent le bloc **if**) :
 
-<pre class="brush: js">if (false)
+```js
+if (false)
 if (null)
 if (undefined)
 if (0)
 if (NaN)
 if ('')
 if ("")
-if (document.all) [1]</pre>
+if (document.all) [1]
+```
 
-<p>[1] <code>document.all</code> a été utilisé par le passé pour détecter le navigateur et la <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#dom-document-all">spécification HTML définit une infraction délibérée</a> aux standards ECMAScript afin de garder une compatibilité ascendante (<code>if (document.all) { // Code Internet Explorer ici (Sauf IE11) }</code> ou en utilisant <code>document.all</code> sans vérifier s'il existe d'abord : <code>document.all.foo</code>).</p>
+\[1] `document.all` a été utilisé par le passé pour détecter le navigateur et la [spécification HTML définit une infraction délibérée](http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#dom-document-all) aux standards ECMAScript afin de garder une compatibilité ascendante (`if (document.all) { // Code Internet Explorer ici (Sauf IE11) }` ou en utilisant `document.all` sans vérifier s'il existe d'abord : `document.all.foo`).
 
-<p>Parfois écrit falsey, bien qu'en anglais, transformer un mot en adjectif avec un <em>-y</em> fait disparaître tout e final (noise =&gt; noisy, ice =&gt; icy, shine =&gt; shiny) .</p>
+Parfois écrit falsey, bien qu'en anglais, transformer un mot en adjectif avec un _-y_ fait disparaître tout e final (noise => noisy, ice => icy, shine => shiny) .
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<ul>
- <li>{{Glossary("Truthy")}}</li>
- <li>{{Glossary("Boolean")}}</li>
-</ul>
+- {{Glossary("Truthy")}}
+- {{Glossary("Boolean")}}

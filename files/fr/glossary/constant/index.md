@@ -8,14 +8,12 @@ tags:
 translation_of: Glossary/Constant
 original_slug: Glossaire/Constant
 ---
-<p>Une constante est une valeur que le programmeur ne peut pas modifier, des nombres par exemple (1, 2, 42). Par contre, avec des {{glossary("Variable","variables")}}, le programmeur peut affecter une nouvelle {{glossary("value","valeur")}} à un nom de variable déjà utilisé.</p>
+Une constante est une valeur que le programmeur ne peut pas modifier, des nombres par exemple (1, 2, 42). Par contre, avec des {{glossary("Variable","variables")}}, le programmeur peut affecter une nouvelle {{glossary("value","valeur")}} à un nom de variable déjà utilisé.
 
-<p>Comme les variables, certaines constantes sont désignées par des identificateurs. Par exemple, l'identificateur <code>pi</code> peut être associé à la valeur 3,14... .</p>
+Comme les variables, certaines constantes sont désignées par des identificateurs. Par exemple, l'identificateur `pi` peut être associé à la valeur 3,14... .
 
-<h2 id="Plus_d'informations">Plus d'informations</h2>
+## Plus d'informations
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Constante")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Constante")}} sur Wikipédia

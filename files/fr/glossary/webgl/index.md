@@ -10,26 +10,22 @@ tags:
 translation_of: Glossary/WebGL
 original_slug: Glossaire/WebGL
 ---
-<p><strong>WebGL</strong> (<em>Web Graphics Library</em>) est une {{Glossary("API")}} {{Glossary("JavaScript")}} pour produire des graphismes 2D et 3D interactifs.</p>
+**WebGL** (_Web Graphics Library_) est une {{Glossary("API")}} {{Glossary("JavaScript")}} pour produire des graphismes 2D et 3D interactifs.
 
-<p>Le <a href="https://www.khronos.org/">Groupe Khronos</a> maintient WebGL qui est basé sur {{Glossary("OpenGL")}} ES 2.0.</p>
+Le [Groupe Khronos](https://www.khronos.org/) maintient WebGL qui est basé sur {{Glossary("OpenGL")}} ES 2.0.
 
-<p>Vous pouvez faire appel à WebGL à partir de l'élément {{Glossary("HTML")}} {{HTMLElement("canvas")}} qui fournit une surface de rendu.</p>
+Vous pouvez faire appel à WebGL à partir de l'élément {{Glossary("HTML")}} {{HTMLElement("canvas")}} qui fournit une surface de rendu.
 
-<p>Tous les principaux {{Glossary("Navigateur","navigateurs")}} prennent maintenant en charge WebGL, mais sa disponibilité dépend également de facteurs externes (e.g. support par le GPU).</p>
+Tous les principaux {{Glossary("Navigateur","navigateurs")}} prennent maintenant en charge WebGL, mais sa disponibilité dépend également de facteurs externes (e.g. support par le GPU).
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "WebGL")}} sur Wikipédia</li>
- <li><a href="http://get.webgl.org/">Vérification du support WebGL</a></li>
-</ul>
+- {{Interwiki("wikipedia", "WebGL")}} sur Wikipédia
+- [Vérification du support WebGL](http://get.webgl.org/)
 
-<h3 id="Article_technique">Article technique</h3>
+### Article technique
 
-<ul>
- <li><a href="/fr/docs/Web/WebGL">WebGL sur MDN</a></li>
- <li><a href="http://caniuse.com/#feat=webgl">Tableau du support WebGL</a></li>
-</ul>
+- [WebGL sur MDN](/fr/docs/Web/WebGL)
+- [Tableau du support WebGL](http://caniuse.com/#feat=webgl)

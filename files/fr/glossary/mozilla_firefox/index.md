@@ -11,20 +11,16 @@ tags:
 translation_of: Glossary/Mozilla_Firefox
 original_slug: Glossaire/Mozilla_Firefox
 ---
-<p>Mozilla Firefox est un {{Glossary("navigateur")}} open source libre dont le développement est supervisé par Mozilla Corporation. Firefox fonctionne sur Windows, OS X, Linux, et Android.</p>
+Mozilla Firefox est un {{Glossary("navigateur")}} open source libre dont le développement est supervisé par Mozilla Corporation. Firefox fonctionne sur Windows, OS X, Linux, et Android.
 
-<p>Distribué pour la première fois en novembre 2004, Firefox est entièrement personnalisable grâce à des thèmes, plug-ins, et <a href="/fr/docs/Mozilla/Add-ons">modules</a>.  Firefox utilise {{glossary("Gecko")}} pour réaliser l'affichage des pages web, et implémente aussi bien les normes Web actuelles que celles à venir.</p>
+Distribué pour la première fois en novembre 2004, Firefox est entièrement personnalisable grâce à des thèmes, plug-ins, et [modules](/fr/docs/Mozilla/Add-ons).  Firefox utilise {{glossary("Gecko")}} pour réaliser l'affichage des pages web, et implémente aussi bien les normes Web actuelles que celles à venir.
 
-<h2 id="Pour_en_savoir_plus">Pour en savoir plus</h2>
+## Pour en savoir plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://www.firefox.com/">Site web officiel de Mozilla Firefox</a></li>
-</ul>
+- [Site web officiel de Mozilla Firefox](https://www.firefox.com/)
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="/fr/Firefox">Documentation/infos développeur sur MDN</a></li>
-</ul>
+- [Documentation/infos développeur sur MDN](/fr/Firefox)

@@ -7,18 +7,14 @@ tags:
 translation_of: Glossary/undefined
 original_slug: Glossaire/undefined
 ---
-<p>Une Valeur <strong>{{Glossary("primitive")}}</strong> affectée automatiquement aux <strong>{{Glossary("Variable","variables")}}</strong> qui viennent d'être déclarées ou aux <strong>{{Glossary("Argument","arguments")}}</strong><strong> formels</strong> pour lesquels il n'y a pas d'<strong>arguments réels</strong>.</p>
+Une Valeur **{{Glossary("primitive")}}** affectée automatiquement aux **{{Glossary("Variable","variables")}}** qui viennent d'être déclarées ou aux **{{Glossary("Argument","arguments")}}** **formels** pour lesquels il n'y a pas d'**arguments réels**.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Valeur#Sciences_exactes","Valeur")}} sur Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Valeur#Sciences_exactes","Valeur")}} sur Wikipedia
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Structures_de_donn%C3%A9es">Structures de données</a></li>
-</ul>
+- [Structures de données](/fr/docs/Web/JavaScript/Structures_de_donn%C3%A9es)

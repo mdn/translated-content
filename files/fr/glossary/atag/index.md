@@ -10,19 +10,15 @@ tags:
 translation_of: Glossary/ATAG
 original_slug: Glossaire/ATAG
 ---
-<p><em>Authoring Tool Accessibility Guidelines</em> (ATAG) est une recommandation {{Glossary("W3C")}} pour construire des outils de création-accessibilité qui produisent des contenus accessibles.</p>
+_Authoring Tool Accessibility Guidelines_ (ATAG) est une recommandation {{Glossary("W3C")}} pour construire des outils de création-accessibilité qui produisent des contenus accessibles.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://fr.wikipedia.org/wiki/Accessibilit%C3%A9_du_web#Recommandations_pour_les_outils_de_production_de_contenu">ATAG dans le cadre de la Web Accessibility Initiative</a> sur Wikipédia</li>
-</ul>
+- [ATAG dans le cadre de la Web Accessibility Initiative](https://fr.wikipedia.org/wiki/Accessibilit%C3%A9_du_web#Recommandations_pour_les_outils_de_production_de_contenu) sur Wikipédia
 
-<h3 id="Informations_techniques">Informations techniques</h3>
+### Informations techniques
 
-<ul>
- <li><a href="http://www.w3.org/WAI/intro/atag.php">Présentation d'ATAG</a> sur le site du W3C (en)</li>
- <li><a href="http://www.w3.org/TR/ATAG20/">La recommandation ATAG 2.0</a> sur le site du W3C (en)</li>
-</ul>
+- [Présentation d'ATAG](http://www.w3.org/WAI/intro/atag.php) sur le site du W3C (en)
+- [La recommandation ATAG 2.0](http://www.w3.org/TR/ATAG20/) sur le site du W3C (en)

@@ -9,20 +9,16 @@ tags:
 translation_of: Glossary/RGB
 original_slug: Glossaire/RGB
 ---
-<p>Rouge Vert Bleu (RVB) est un modèle de couleurs qui représente les couleurs comme étant une combinaison de trois composantes sous-jacentes (ou canaux), à savoir, rouge, verte et bleue. Chaque couleur est décrite par une suite de trois valeurs (en général comprises entre 0,0 et 1,0, ou entre 0 et 255) qui correspondent aux différentes intensités de rouge, vert et bleu contribuant à déterminer la couleur finale.</p>
+Rouge Vert Bleu (RVB) est un modèle de couleurs qui représente les couleurs comme étant une combinaison de trois composantes sous-jacentes (ou canaux), à savoir, rouge, verte et bleue. Chaque couleur est décrite par une suite de trois valeurs (en général comprises entre 0,0 et 1,0, ou entre 0 et 255) qui correspondent aux différentes intensités de rouge, vert et bleu contribuant à déterminer la couleur finale.
 
-<p>Il existe de nombreuses façons de décrire les composantes RVB d'une couleur. En {{Glossary("CSS")}}, elles peuvent être représentées sous la forme d'un unique entier de 24 bits en notation hexadécimale (par exemple, <code>#</code><code>add</code>8e6 pour du bleu clair), ou dans une notation fonctionnelle comme trois entiers 8 bits distincts (par exemple, rgb(46, 139, 87) est un vert océan). En {{Glossary("OpenGL")}}, {{Glossary("WebGL")}} et {{Glossary("GLSL")}}, les composantes rouge-vert-bleu sont des fractions (nombres à virgule flottante compris entre 0,0  et 1,0), bien qu'elles soient généralement stockées concrètement en mémoire vidéo comme des entiers 8 bits. Graphiquement, une couleur peut être représentée par un point dans un cube ou sur une grille tridimensionnelle, où chaque dimension (ou axe) correspond à un canal différent.</p>
+Il existe de nombreuses façons de décrire les composantes RVB d'une couleur. En {{Glossary("CSS")}}, elles peuvent être représentées sous la forme d'un unique entier de 24 bits en notation hexadécimale (par exemple, ` #``add `8e6 pour du bleu clair), ou dans une notation fonctionnelle comme trois entiers 8 bits distincts (par exemple, rgb(46, 139, 87) est un vert océan). En {{Glossary("OpenGL")}}, {{Glossary("WebGL")}} et {{Glossary("GLSL")}}, les composantes rouge-vert-bleu sont des fractions (nombres à virgule flottante compris entre 0,0  et 1,0), bien qu'elles soient généralement stockées concrètement en mémoire vidéo comme des entiers 8 bits. Graphiquement, une couleur peut être représentée par un point dans un cube ou sur une grille tridimensionnelle, où chaque dimension (ou axe) correspond à un canal différent.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://fr.wikipedia.org/wiki/Rouge_vert_bleu">Modèle de couleurs RVB sur Wikipédia</a></li>
-</ul>
+- [Modèle de couleurs RVB sur Wikipédia](https://fr.wikipedia.org/wiki/Rouge_vert_bleu)
 
-<h3 id="Apprendre">Apprendre</h3>
+### Apprendre
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/color_value">Type de donnée CSS : &lt;color&gt;</a></li>
-</ul>
+- [Type de donnée CSS : \<color>](/fr/docs/Web/CSS/color_value)

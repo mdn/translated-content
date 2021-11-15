@@ -8,20 +8,16 @@ tags:
 translation_of: Glossary/Apple_Safari
 original_slug: Glossaire/Apple_Safari
 ---
-<p><a href="http://www.apple.com/safari/"><em>Safari</em></a> est un {{Glossary("Browser","navigateur web")}} développé par la société Apple. Il est installé de base sur les systèmes d'exploitation OS X et iOS.</p>
+[_Safari_](http://www.apple.com/safari/) est un {{Glossary("Browser","navigateur web")}} développé par la société Apple. Il est installé de base sur les systèmes d'exploitation OS X et iOS.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Safari_(navigateur_web)", "Safari")}} sur Wikipédia</li>
- <li><a href="https://www.apple.com/fr/safari/">Safari</a> sur le site d'Apple</li>
-</ul>
+- {{Interwiki("wikipedia", "Safari_(navigateur_web)", "Safari")}} sur Wikipédia
+- [Safari](https://www.apple.com/fr/safari/) sur le site d'Apple
 
-<h3 id="Informations_techniques">Informations techniques</h3>
+### Informations techniques
 
-<ul>
- <li><a href="http://www.webkit.org/">Le projet WebKit</a></li>
- <li><a href="https://bugs.webkit.org/">Rapporter un bogue sur Safari</a>.</li>
-</ul>
+- [Le projet WebKit](http://www.webkit.org/)
+- [Rapporter un bogue sur Safari](https://bugs.webkit.org/).

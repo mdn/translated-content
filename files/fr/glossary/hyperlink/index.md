@@ -8,27 +8,21 @@ tags:
 translation_of: Glossary/Hyperlink
 original_slug: Glossaire/Hyperlien
 ---
-<p>Les hyperliens connectent des pages web ou des données à une autre. En HTML, l'élément {{HTMLElement("a")}} définit un hyperlien d'un endroit sur une page web (comme une chaîne de caractères ou une image) à un autre endroit sur une autre page web (ou même sur la même page).</p>
+Les hyperliens connectent des pages web ou des données à une autre. En HTML, l'élément {{HTMLElement("a")}} définit un hyperlien d'un endroit sur une page web (comme une chaîne de caractères ou une image) à un autre endroit sur une autre page web (ou même sur la même page).
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{interwiki("wikipedia", "Hyperlien","Hyperlien")}} sur Wikipedia</li>
- <li>Le guide <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks">Création d'hyperliens</a> sur MDN</li>
-</ul>
+- {{interwiki("wikipedia", "Hyperlien","Hyperlien")}} sur Wikipedia
+- Le guide [Création d'hyperliens](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks) sur MDN
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="https://www.w3.org/TR/1999/REC-html401-19991224/struct/links.html">Links in HTML Documents - W3C</a></li>
- <li><a href="https://w3c.github.io/html-reference/a.html">HTML5 a - hyperlink - W3C</a></li>
-</ul>
+- [Links in HTML Documents - W3C](https://www.w3.org/TR/1999/REC-html401-19991224/struct/links.html)
+- [HTML5 a - hyperlink - W3C](https://w3c.github.io/html-reference/a.html)
 
-<h3 id="Apprendre_sur_le_sujet">Apprendre sur le sujet</h3>
+### Apprendre sur le sujet
 
-<ul>
- <li><a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code> sur MDN</a></li>
- <li><a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code> sur MDN</a></li>
-</ul>
+- [`<a>` sur MDN](/fr/docs/Web/HTML/Element/a)
+- [`<link>` sur MDN](/fr/docs/Web/HTML/Element/link)

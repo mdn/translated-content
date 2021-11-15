@@ -7,10 +7,8 @@ tags:
 translation_of: Glossary/Parent_object
 original_slug: Glossaire/Objet_parent
 ---
-<p>L'{{glossary("object","objet")}} auquel appartient une {{glossary("property","propriété")}} ou une {{glossary("method","méthode")}} donnée.</p>
+L'{{glossary("object","objet")}} auquel appartient une {{glossary("property","propriété")}} ou une {{glossary("method","méthode")}} donnée.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Héritage_et_chaîne_de_prototypes">Discussion sur l'héritage et les prototypes en JavaScript</a></li>
-</ul>
+- [Discussion sur l'héritage et les prototypes en JavaScript](/fr/docs/Web/JavaScript/Héritage_et_chaîne_de_prototypes)

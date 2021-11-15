@@ -9,22 +9,18 @@ tags:
 translation_of: Glossary/TLS
 original_slug: Glossaire/TLS
 ---
-<p>Transport Layer Security (TLS), comme son prédécesseur Secure Sockets Layer (SSL), est un {{Glossary("Protocol", "protocole")}} utilisé par les applications pour communiquer de manière sécurisée à travers un réseau, tout en prévenant la falsification et l'interception des courriels, navigations web, messageries et autres protocoles.</p>
+Transport Layer Security (TLS), comme son prédécesseur Secure Sockets Layer (SSL), est un {{Glossary("Protocol", "protocole")}} utilisé par les applications pour communiquer de manière sécurisée à travers un réseau, tout en prévenant la falsification et l'interception des courriels, navigations web, messageries et autres protocoles.
 
-<p>Tous les navigateurs modernes supportent le protocole TLS, nécessitant l'envoi par le serveur d'un {{Glossary("Digital certificate", "certificat numérique")}} valide pour confirmer son identité afin de pouvoir établir une connexion sécurisée. Il est possible pour le client et le serveur de s'authentifier mutuellement, si chacune des deux parties fournit son propre certificat numérique individuel.</p>
+Tous les navigateurs modernes supportent le protocole TLS, nécessitant l'envoi par le serveur d'un {{Glossary("Digital certificate", "certificat numérique")}} valide pour confirmer son identité afin de pouvoir établir une connexion sécurisée. Il est possible pour le client et le serveur de s'authentifier mutuellement, si chacune des deux parties fournit son propre certificat numérique individuel.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="/fr/docs/Web/Security/Transport_Layer_Security">Transport Layer Security</a></li>
- <li><a href="https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet">OWASP: Transport Layer Protection Cheat Sheet</a></li>
- <li>{{Interwiki("wikipedia", "Transport_Layer_Security","Transport Layer Security")}} sur Wikipédia</li>
-</ul>
+- [Transport Layer Security](/fr/docs/Web/Security/Transport_Layer_Security)
+- [OWASP: Transport Layer Protection Cheat Sheet](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+- {{Interwiki("wikipedia", "Transport_Layer_Security","Transport Layer Security")}} sur Wikipédia
 
-<h3 id="Spécifications">Spécifications</h3>
+### Spécifications
 
-<ul>
- <li><a href="https://www.ietf.org/rfc/rfc5246.txt">RFC 5246</a> (The Transport Layer Security Protocol, Version 1.2)</li>
-</ul>
+- [RFC 5246](https://www.ietf.org/rfc/rfc5246.txt) (The Transport Layer Security Protocol, Version 1.2)

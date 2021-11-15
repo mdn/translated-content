@@ -8,4 +8,4 @@ tags:
 translation_of: Glossary/Index
 original_slug: Glossaire/Index
 ---
-<p>{{Index("/fr/docs/Glossaire")}}</p>
+{{Index("/fr/docs/Glossaire")}}
