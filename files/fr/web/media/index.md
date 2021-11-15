@@ -4,7 +4,6 @@ slug: Web/Media
 translation_of: Web/Media
 ---
 
-
 Over the years, the Web's ability to present, create, and manage audio, video, and other media has grown at an increasing pace. Today, there are a large number of APIs available, as well as HTML elements, DOM interfaces, and other features that make it possible to not only perform these tasks, but use media in tandem with other technologies to do truly remarkable things. This article lists the various APIs with links to documentation you may find helpful in mastering them.
 
 ## References

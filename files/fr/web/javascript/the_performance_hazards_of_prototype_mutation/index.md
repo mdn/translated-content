@@ -8,7 +8,6 @@ translation_of: Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutatio
 original_slug: Web/JavaScript/Performance_les_dangers_liés_à_la_modification_de_Prototype
 ---
 
-
 Chaque objet JavaScript possède un prototype (que nous désignerons par la suite par `[[Prototype]]`, la notation utilisée par la spécification et les implémentations). Lorsqu'on recherche des propriétés sur un objet, on consulte d'abord cet objet puis on analyse son prototype (on « remonte la chaîne ») et ensuite le prototype de ce dernier et ainsi de suite jusqu'à trouver la propriété en question ou jusqu'à ce que la chaîne soit terminée. Cette chaîne est particulièrement utile pour émuler [l'héritage entre objets](/fr/docs/Web/JavaScript/Héritage_et_chaîne_de_prototypes).
 
 ECMAScript 6 introduit certaines méthode pour _modifier_ `[[Prototype]]`. Cette flexibilité a un coût : la dégradation significative des performances. **Modifier** **`[[Prototype]]` impacte négativement les performances pour _tous_ les moteurs JavaScript modernes.** Dans cet article, nous expliquerons pourquoi et nous verrons les alternatives à privilégier.

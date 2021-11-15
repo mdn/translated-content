@@ -4,7 +4,6 @@ slug: Web/SVG/Attribute/Presentation
 translation_of: Web/SVG/Attribute/Presentation
 ---
 
-
 Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être utilisées comme attributs sur les éléments SVG
 
 - alignment-baseline
