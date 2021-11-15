@@ -10,41 +10,43 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/close
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Ferme la demande. Après cet appel, aucune autre donnée de réponse ne sera transmise au moteur de rendu du navigateur et aucun autre événement de filtrage ne sera donné à l'extension.</p>
+Ferme la demande. Après cet appel, aucune autre donnée de réponse ne sera transmise au moteur de rendu du navigateur et aucun autre événement de filtrage ne sera donné à l'extension.
 
-<p>Notez la différence entre cette fonction et  {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}. Avec  <code>disconnect()</code>, le navigateur continuera à traiter d'autres données de réponse, mais il ne sera pas accessible par le filtre. Avec <code>close()</code>, le navigateur ignorera toutes les données de réponse qui n'ont pas déjà été transmises au moteur de rendu.</p>
+Notez la différence entre cette fonction et  {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}. Avec  `disconnect()`, le navigateur continuera à traiter d'autres données de réponse, mais il ne sera pas accessible par le filtre. Avec `close()`, le navigateur ignorera toutes les données de réponse qui n'ont pas déjà été transmises au moteur de rendu.
 
-<p>Vous devriez toujours appeler <code>close()</code> ou <code>disconnect()</code> une fois que vous n'avez plus besoin d'interagir avec la réponse.</p>
+Vous devriez toujours appeler `close()` ou `disconnect()` une fois que vous n'avez plus besoin d'interagir avec la réponse.
 
-<p>Vous ne pouvez pas appeler cette fonction avant que l'événement  {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.</p>
+Vous ne pouvez pas appeler cette fonction avant que l'événement  {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">filter.close()
-</pre>
+```js
+filter.close()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>None.</p>
+None.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>None.</p>
+None.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.webRequest.StreamFilter.close", 10)}}</p>
+{{Compat("webextensions.api.webRequest.StreamFilter.close", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple remplacera le contenu de la page par "texte de remplacement"  :</p>
+Cet exemple remplacera le contenu de la page par "texte de remplacement"  :
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event =&gt; {
+  filter.onstart = event => {
     console.log("started");
     let encoder = new TextEncoder();
     filter.write(encoder.encode("replacement content"));
@@ -56,6 +58,7 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.org/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

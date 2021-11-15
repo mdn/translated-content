@@ -10,72 +10,64 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/identity
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Utilisez l'API d'identité pour obtenir un code d'autorisation ou un jeton d'accès <a href="https://oauth.net/2/">OAuth2</a>, qu'une extension peut ensuite utiliser pour accéder aux données utilisateur d'un service prenant en charge l'accès à OAuth2 (tel qu'un compte Google ou Facebook).</p>
+Utilisez l'API d'identité pour obtenir un code d'autorisation ou un jeton d'accès [OAuth2](https://oauth.net/2/), qu'une extension peut ensuite utiliser pour accéder aux données utilisateur d'un service prenant en charge l'accès à OAuth2 (tel qu'un compte Google ou Facebook).
 
-<p>Les détails du fonctionnement du flux OAuth2 diffèrent d'un fournisseur de services à l'autre. Pour utiliser cette API avec un fournisseur de services particulier, vous devez consulter leur documentation. Par exemple :</p>
+Les détails du fonctionnement du flux OAuth2 diffèrent d'un fournisseur de services à l'autre. Pour utiliser cette API avec un fournisseur de services particulier, vous devez consulter leur documentation. Par exemple :
 
-<ul>
- <li><a href="https://developers.google.com/identity/protocols/OAuth2UserAgent">https://developers.google.com/identity/protocols/OAuth2UserAgent</a></li>
- <li><a href="https://developer.github.com/v3/oauth/">https://developer.github.com/v3/oauth/</a></li>
-</ul>
+- <https://developers.google.com/identity/protocols/OAuth2UserAgent>
+- <https://developer.github.com/v3/oauth/>
 
-<p>L'API d'identité fournit la fonction {{WebExtAPIRef("identity.launchWebAuthFlow()")}}. Cela authentifie l'utilisateur avec le service, si nécessaire, et demande à l'utilisateur d'autoriser l'extension à accéder aux données, si nécessaire. La fonction se termine par un jeton d'accès ou un code d'autorisation, selon le fournisseur.</p>
+L'API d'identité fournit la fonction {{WebExtAPIRef("identity.launchWebAuthFlow()")}}. Cela authentifie l'utilisateur avec le service, si nécessaire, et demande à l'utilisateur d'autoriser l'extension à accéder aux données, si nécessaire. La fonction se termine par un jeton d'accès ou un code d'autorisation, selon le fournisseur.
 
-<p>L'extension termine alors le flux OAuth2 pour obtenir un jeton d'accès validé, et peut ensuite l'utiliser dans les requêtes HTTP pour accéder aux données de l'utilisateur en fonction de l'autorisation donnée par l'utilisateur.</p>
+L'extension termine alors le flux OAuth2 pour obtenir un jeton d'accès validé, et peut ensuite l'utiliser dans les requêtes HTTP pour accéder aux données de l'utilisateur en fonction de l'autorisation donnée par l'utilisateur.
 
-<p>Pour utiliser cette API, vous devez posséder la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permission de l'API </a>"identity"</p>
+Pour utiliser cette API, vous devez posséder la [permission de l'API ](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)"identity"
 
-<h2 id="Installer">Installer</h2>
+## Installer
 
-<p>Il y a une certaine configuration que vous devez faire avant de publier votre extension.</p>
+Il y a une certaine configuration que vous devez faire avant de publier votre extension.
 
-<h3 id="Obtenir_l'URL_de_redirection">Obtenir l'URL de redirection</h3>
+### Obtenir l'URL de redirection
 
-<p>L'<a href="https://www.oauth.com/oauth2-servers/redirect-uris/">URL de redirection</a> représente le point final de {{WebExtAPIRef("identity.launchWebAuthFlow()")}}, dans lequel le jeton d'accès ou le code d'autorisation est remis à l'extension..</p>
+L'[URL de redirection](https://www.oauth.com/oauth2-servers/redirect-uris/) représente le point final de {{WebExtAPIRef("identity.launchWebAuthFlow()")}}, dans lequel le jeton d'accès ou le code d'autorisation est remis à l'extension..
 
-<p>Vous pouvez obtenir une URL de redirection en appelant {{WebExtAPIRef("identity.getRedirectURL()")}}. Cette fonction dérive une URL de redirection à partir de l'ID du module, donc si vous voulez l'utiliser, vous devez probablement définir explicitement l'ID de votre module en utilisant la clé des <code><a href="/fr/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> (sinon, chaque fois que vous <a href="/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">installez temporairement le module complémentaire</a>, vous obtiendrez une URL de redirection différente).</p>
+Vous pouvez obtenir une URL de redirection en appelant {{WebExtAPIRef("identity.getRedirectURL()")}}. Cette fonction dérive une URL de redirection à partir de l'ID du module, donc si vous voulez l'utiliser, vous devez probablement définir explicitement l'ID de votre module en utilisant la clé des [`applications`](/fr/Add-ons/WebExtensions/manifest.json/applications) (sinon, chaque fois que vous [installez temporairement le module complémentaire](/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), vous obtiendrez une URL de redirection différente).
 
-<p>Vous n'avez pas besoin d'utiliser l'URL de redirection retournée par  <code>identity.getRedirectURL()</code>: vous pouvez fournir la vôtre, et cela peut être tout ce que le service redirigera. Cependant, il devrait utiliser un domaine que vous contrôlez.</p>
+Vous n'avez pas besoin d'utiliser l'URL de redirection retournée par  `identity.getRedirectURL()`: vous pouvez fournir la vôtre, et cela peut être tout ce que le service redirigera. Cependant, il devrait utiliser un domaine que vous contrôlez.
 
-<p>Vous utiliserez l'URL de redirection à deux endroits :</p>
+Vous utiliserez l'URL de redirection à deux endroits :
 
-<ul>
- <li>Fournissez-le lors de l'enregistrement de votre extension en tant que client OAuth2</li>
- <li>Transmettez-le dans <code>identity.launchWebAuthFlow()</code>, en tant que paramètre d'URL ajouté à l'argument <code>url</code> de cette fonction.</li>
-</ul>
+- Fournissez-le lors de l'enregistrement de votre extension en tant que client OAuth2
+- Transmettez-le dans `identity.launchWebAuthFlow()`, en tant que paramètre d'URL ajouté à l'argument `url` de cette fonction.
 
-<h3 id="Enregistrement_de_votre_extension">Enregistrement de votre extension</h3>
+### Enregistrement de votre extension
 
-<p>Avant de pouvoir utiliser OAuth2 avec un fournisseur de services, vous devez enregistrer l'extension auprès du fournisseur en tant que client OAuth2.</p>
+Avant de pouvoir utiliser OAuth2 avec un fournisseur de services, vous devez enregistrer l'extension auprès du fournisseur en tant que client OAuth2.
 
-<p>Cela aura tendance à être spécifique au fournisseur de services, mais en général cela signifie créer une entrée pour votre extension sur le site Web du fournisseur. Dans ce processus, vous fournirez votre URL de redirection, et recevrez un identifiant de client (et parfois aussi un secret). Vous devrez passer les deux dans  {{WebExtAPIRef("identity.launchWebAuthFlow()")}}.</p>
+Cela aura tendance à être spécifique au fournisseur de services, mais en général cela signifie créer une entrée pour votre extension sur le site Web du fournisseur. Dans ce processus, vous fournirez votre URL de redirection, et recevrez un identifiant de client (et parfois aussi un secret). Vous devrez passer les deux dans  {{WebExtAPIRef("identity.launchWebAuthFlow()")}}.
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt>{{WebExtAPIRef("identity.getRedirectURL()")}}</dt>
- <dd>Obtient l'URL de redirection.</dd>
- <dt>{{WebExtAPIRef("identity.launchWebAuthFlow()")}}</dt>
- <dd>Lancement WAF.</dd>
-</dl>
+- {{WebExtAPIRef("identity.getRedirectURL()")}}
+  - : Obtient l'URL de redirection.
+- {{WebExtAPIRef("identity.launchWebAuthFlow()")}}
+  - : Lancement WAF.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.identity")}}</p>
+{{Compat("webextensions.api.identity")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/extensions/identity).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/identity"><code>chrome.identity</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -102,5 +94,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/identity
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

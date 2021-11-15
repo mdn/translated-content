@@ -13,44 +13,43 @@ tags:
   - getVisits
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/getVisits
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Récupère des informations sur toutes les visites de l'URL donnée.</p>
+Récupère des informations sur toutes les visites de l'URL donnée.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var getting = browser.history.getVisits(
+```js
+var getting = browser.history.getVisits(
   details                // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>.</p>
- <dl>
-  <dt><code>url</code></dt>
-  <dd><code>string</code>. L'URL pour laquelle récupérer les informations de visite.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="valeur_retournée">valeur retournée</h3>
+  - : `object`.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> sera remplie avec un tableau d'objets <code>{{WebExtAPIRef('history.VisitItem')}}</code> représentant chacun une visite à l'URL donnée. Les visites sont triées dans l'ordre chronologique inverse.</p>
+    - `url`
+      - : `string`. L'URL pour laquelle récupérer les informations de visite.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### valeur retournée
 
-<p>{{Compat("webextensions.api.history.getVisits")}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie avec un tableau d'objets `{{WebExtAPIRef('history.VisitItem')}}` représentant chacun une visite à l'URL donnée. Les visites sont triées dans l'ordre chronologique inverse.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Liste toutes les visites de la page la plus récemment visitée :</p>
+{{Compat("webextensions.api.history.getVisits")}}
 
-<pre class="brush: js">function gotVisits(visits) {
+## Exemples
+
+Liste toutes les visites de la page la plus récemment visitée :
+
+```js
+function gotVisits(visits) {
   console.log("Visit count: " + visits.length);
   for (visit of visits) {
     console.log(visit.visitTime);
@@ -73,19 +72,18 @@ var searching = browser.history.search({
   maxResults: 1
 });
 
-searching.then(listVisits);</pre>
+searching.then(listVisits);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,5 +110,4 @@ searching.then(listVisits);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

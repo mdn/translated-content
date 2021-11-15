@@ -13,98 +13,99 @@ tags:
   - setIcon
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Définit l'icône pour l'action du navigateur.</p>
+Définit l'icône pour l'action du navigateur.
 
-<p>Vous pouvez spécifier une seule icône comme chemin d'accès à un fichier ou un objet {{WebExtAPIRef('browserAction.ImageDataType')}} .</p>
+Vous pouvez spécifier une seule icône comme chemin d'accès à un fichier ou un objet {{WebExtAPIRef('browserAction.ImageDataType')}} .
 
-<p>Vous pouvez spécifier plusieurs icônes dans différentes tailles en fournissant un dictionnaire contenant plusieurs chemins ou des objets  <code>ImageData</code>. Cela signifie que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente.</p>
+Vous pouvez spécifier plusieurs icônes dans différentes tailles en fournissant un dictionnaire contenant plusieurs chemins ou des objets  `ImageData`. Cela signifie que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente.
 
-<p>Les onglets sans icône spécifique hériteront de l'icône globale, qui par défaut est  <a href="/fr/Add-ons/WebExtensions/manifest.json/browser_action"><code>default_icon</code></a> specifié dans le manifest.</p>
+Les onglets sans icône spécifique hériteront de l'icône globale, qui par défaut est  [`default_icon`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) specifié dans le manifest.
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var settingIcon = browser.browserAction.setIcon(
+```js
+var settingIcon = browser.browserAction.setIcon(
   details         // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. Un objet contenant des propriétés <code>imageData</code> ou <code>path</code>, et éventuellement une propriété <code>tabId</code> .</p>
- <dl>
-  <dt><code>imageData</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code>{{WebExtAPIRef('browserAction.ImageDataType')}}</code> ou <code><code>object</code></code>. Il s'agit soit d'un seul objet <code>ImageData</code> ou un dictionnaire d'objet.</p>
+- `details`
 
-  <p>Utilisez un dictionnaire d'objet pour spécifier plusieurs objets <code>ImageData</code> dans différentes tailles, de sorte que l'icône ne doit pas  être mise à l'échelle pour un périphérique avec une densité de pixel différentes. Si <code>imageData</code> est un dictionnaire, la valeur de chaque propriété  est un objet<code>ImageData</code>, et son nom est sa taille, comme ceci :</p>
+  - : `object`. Un objet contenant des propriétés `imageData` ou `path`, et éventuellement une propriété `tabId` .
 
-  <pre class="brush: json">{
-  16: image16,
-  32: image32
-}</pre>
+    - `imageData`{{optional_inline}}
 
-  <p>Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir <a href="/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes">Choix de la tailles d'icônes</a> pour plus d'informations à ce sujet.</p>
-  </dd>
-  <dt><code>path</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code><code>string</code></code> or <code><code>object</code></code>. Il s'agit du chemin relatif d'un fichier d'icône ou d'un objet de dictionnaire. </p>
+      - : `{{WebExtAPIRef('browserAction.ImageDataType')}}` ou `object`. Il s'agit soit d'un seul objet `ImageData` ou un dictionnaire d'objet.
 
-  <p>Utilisez un dictionnaire d'objet pour spécifier plusieurs fichiers d'icônes dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différentes. Si <code>path</code> est un dictionnaire, la valeur de chaque propriété est un chemin relatif , et son nom est sa taille, comme ceci :</p>
+        Utilisez un dictionnaire d'objet pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas  être mise à l'échelle pour un périphérique avec une densité de pixel différentes. Si `imageData` est un dictionnaire, la valeur de chaque propriété  est un objet`ImageData`, et son nom est sa taille, comme ceci :
 
-  <pre class="brush: json">{
-  16: "path/to/image16.jpg",
-  32: "path/to/image32.jpg"
-}</pre>
+        ```json
+        {
+          16: image16,
+          32: image32
+        }
+        ```
 
-  <p>Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir <a href="/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes">Choix de la tailles d'icônes</a> pour plus d'informations à ce sujet.</p>
-  </dd>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Définit l'icône uniquement pour l'onglet donné. L'icône est réinitialisée lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Définit l'icône de la fenêtre donnée.</dd>
- </dl>
- </dd>
-</dl>
+        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choix de la tailles d'icônes](/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes) pour plus d'informations à ce sujet.
 
-<ul>
- <li>si <code>windowId</code> et <code>tabId</code> sont tous deux fournis, la fonction échoue et l'icône n'est pas définie.</li>
- <li>si <code>windowId</code> et <code>tabId</code> sont tous les deux omis, l'icône globale est définie.</li>
-</ul>
+    - `path`{{optional_inline}}
 
-<p>Si chaque <code>imageData</code> et <code>path</code> est un objet <code>undefined</code>, <code>null</code> ou vide :</p>
+      - : `string` or `object`. Il s'agit du chemin relatif d'un fichier d'icône ou d'un objet de dictionnaire.
 
-<ul>
- <li>si <code>tabId</code> est spécifié, et que l'onglet a un jeu d'icônes spécifique à l'onglet, alors l'onglet héritera de l'icône de la fenêtre à laquelle il appartient.</li>
- <li>si <code>windowId</code> est spécifié et que la fenêtre a un jeu d'icônes spécifiques à la fenêtre, alors la fenêtre héritera de l'icône globale.</li>
- <li>Sinon, l'icône globale sera réinitialisée à l'icône du manifest.</li>
-</ul>
+        Utilisez un dictionnaire d'objet pour spécifier plusieurs fichiers d'icônes dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différentes. Si `path` est un dictionnaire, la valeur de chaque propriété est un chemin relatif , et son nom est sa taille, comme ceci :
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+        ```json
+        {
+          16: "path/to/image16.jpg",
+          32: "path/to/image32.jpg"
+        }
+        ```
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans arguments une fois que l'icône a été définie.</p>
+        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choix de la tailles d'icônes](/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes) pour plus d'informations à ce sujet.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Définit l'icône uniquement pour l'onglet donné. L'icône est réinitialisée lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.
+    - `windowId`{{optional_inline}}
+      - : `integer`. Définit l'icône de la fenêtre donnée.
 
-<p>{{Compat("webextensions.api.browserAction.setIcon",2)}}</p>
+<!---->
 
-<h2 id="Exemples">Exemples</h2>
+- si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et l'icône n'est pas définie.
+- si `windowId` et `tabId` sont tous les deux omis, l'icône globale est définie.
 
-<p>Le code ci-dessous utilise une action du navigateur pour basculer un auditeur pour {{WebExtAPIRef("webRequest.onHeadersReceived")}}, et utilise <code>setIcon()</code> pour indiquer si l'écoute est activée ou désactivée :</p>
+Si chaque `imageData` et `path` est un objet `undefined`, `null` ou vide :
 
-<pre class="brush: js">function logResponseHeaders(requestDetails) {
+- si `tabId` est spécifié, et que l'onglet a un jeu d'icônes spécifique à l'onglet, alors l'onglet héritera de l'icône de la fenêtre à laquelle il appartient.
+- si `windowId` est spécifié et que la fenêtre a un jeu d'icônes spécifiques à la fenêtre, alors la fenêtre héritera de l'icône globale.
+- Sinon, l'icône globale sera réinitialisée à l'icône du manifest.
+
+### Valeur retournée
+
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments une fois que l'icône a été définie.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.browserAction.setIcon",2)}}
+
+## Exemples
+
+Le code ci-dessous utilise une action du navigateur pour basculer un auditeur pour {{WebExtAPIRef("webRequest.onHeadersReceived")}}, et utilise `setIcon()` pour indiquer si l'écoute est activée ou désactivée :
+
+```js
+function logResponseHeaders(requestDetails) {
   console.log(requestDetails);
 }
 
 function startListening() {
   browser.webRequest.onHeadersReceived.addListener(
     logResponseHeaders,
-    {urls: ["&lt;all_urls&gt;"]},
+    {urls: ["<all_urls>"]},
     ["responseHeaders"]
   );
   browser.browserAction.setIcon({path: "icons/listening-on.svg"});
@@ -123,11 +124,13 @@ function toggleListener() {
   }
 }
 
-browser.browserAction.onClicked.addListener(toggleListener);</pre>
+browser.browserAction.onClicked.addListener(toggleListener);
+```
 
-<p>Le code ci-dessous définit l'icône à l'aide d'un objet<code><a href="/fr/docs/Web/API/ImageData">ImageData</a></code> :</p>
+Le code ci-dessous définit l'icône à l'aide d'un objet[`ImageData`](/fr/docs/Web/API/ImageData) :
 
-<pre class="brush: js">function getImageData() {
+```js
+function getImageData() {
   var canvas = document.createElement("canvas");
   var ctx = canvas.getContext("2d");
 
@@ -137,30 +140,30 @@ browser.browserAction.onClicked.addListener(toggleListener);</pre>
   return ctx.getImageData(50, 50, 100, 100);
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   browser.browserAction.setIcon({imageData: getImageData()});
 });
-</pre>
+```
 
-<p>L'extrait suivant met à jour l'icône lorsque l'utilisateur clique, mais uniquement pour l'onglet actif :</p>
+L'extrait suivant met à jour l'icône lorsque l'utilisateur clique, mais uniquement pour l'onglet actif :
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener((tab) =&gt; {
+```js
+browser.browserAction.onClicked.addListener((tab) => {
   browser.browserAction.setIcon({
     tabId: tab.id, path: "icons/updated-48.png"
   });
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -187,5 +190,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

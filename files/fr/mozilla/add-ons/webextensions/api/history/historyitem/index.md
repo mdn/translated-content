@@ -13,44 +13,40 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p>Un objet <code>HistoryItem</code> fournit des informations sur une page dans l'historique du navigateur.</p>
+Un objet `HistoryItem` fournit des informations sur une page dans l'historique du navigateur.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>C'est un objet avec les propriétés suivantes :</p>
+C'est un objet avec les propriétés suivantes :
 
-<dl>
- <dt><code>id</code></dt>
- <dd><code>string</code>. Identifiant unique pour l'article.</dd>
- <dt><code>url</code> {{optional_inline}}</dt>
- <dd><code>string</code>. L'URL de la page.</dd>
- <dt><code>title</code> {{optional_inline}}</dt>
- <dd><code>string</code>. Le titre de la page.</dd>
- <dt><code>lastVisitTime</code> {{optional_inline}}</dt>
- <dd><code>number</code>. Date et heure du dernier chargement de la page, représentée en millisecondes depuis l'époque.</dd>
- <dt><code>visitCount</code> {{optional_inline}}</dt>
- <dd><code>number</code>. Le nombre de fois que l'utilisateur a visité la page.</dd>
- <dt><code>typedCount</code> {{optional_inline}}</dt>
- <dd><code>number</code>. Le nombre de fois que l'utilisateur a navigué sur cette page en tapant l'adresse.</dd>
-</dl>
+- `id`
+  - : `string`. Identifiant unique pour l'article.
+- `url` {{optional_inline}}
+  - : `string`. L'URL de la page.
+- `title` {{optional_inline}}
+  - : `string`. Le titre de la page.
+- `lastVisitTime` {{optional_inline}}
+  - : `number`. Date et heure du dernier chargement de la page, représentée en millisecondes depuis l'époque.
+- `visitCount` {{optional_inline}}
+  - : `number`. Le nombre de fois que l'utilisateur a visité la page.
+- `typedCount` {{optional_inline}}
+  - : `number`. Le nombre de fois que l'utilisateur a navigué sur cette page en tapant l'adresse.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.history.HistoryItem")}}</p>
+{{Compat("webextensions.api.history.HistoryItem")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -77,5 +73,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

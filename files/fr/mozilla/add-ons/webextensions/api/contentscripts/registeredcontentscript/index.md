@@ -12,39 +12,36 @@ tags:
   - contentScripts
 translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un <code>RegisteredContentScript</code> est renvoyé par un appel à  {{WebExtAPIRef("contentScripts.register()")}} et représente les scripts de contenu enregistrés dans cet appel.</p>
+Un `RegisteredContentScript` est renvoyé par un appel à  {{WebExtAPIRef("contentScripts.register()")}} et représente les scripts de contenu enregistrés dans cet appel.
 
-<p>Il définit une seule fonction {{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister()", "unregister()")}}, qui peut être utilisée pour annuler l'enregistrement des scripts de contenu.</p>
+Il définit une seule fonction {{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister()", "unregister()")}}, qui peut être utilisée pour annuler l'enregistrement des scripts de contenu.
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> Si cet objet est détruit (par exemple parce qu'il est hors de portée), les scripts de contenu seront automatiquement désinscrits. Vous devriez donc garder une référence à cet objet aussi longtemps que vous voulez que les scripts de contenu restent enregistrés.</p>
-</div>
+> **Note :** Si cet objet est détruit (par exemple parce qu'il est hors de portée), les scripts de contenu seront automatiquement désinscrits. Vous devriez donc garder une référence à cet objet aussi longtemps que vous voulez que les scripts de contenu restent enregistrés.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister","unregister()")}}</dt>
- <dd>Annule l'inscription des scripts de contenu représentés par cet objet.</dd>
-</dl>
+- {{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister","unregister()")}}
+  - : Annule l'inscription des scripts de contenu représentés par cet objet.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.contentScripts.RegisteredContentScript", 10)}}</p>
+{{Compat("webextensions.api.contentScripts.RegisteredContentScript", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Ce code permet de basculer un script de contenu enregistré sur un clic d'action du navigateur :</p>
+Ce code permet de basculer un script de contenu enregistré sur un clic d'action du navigateur :
 
-<pre class="brush: js">var registered = null;
+```js
+var registered = null;
 
 async function register() {
 
   registered = await browser.contentScripts.register({
     matches: ["*://*.org/*"],
     js: [{
-      code: "document.body.innerHTML = '&lt;h1&gt;This page has been eaten&lt;h1&gt;'"
+      code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'"
     }],
     runAt: "document_idle"
   });
@@ -61,7 +58,6 @@ function toggle() {
 }
 
 browser.browserAction.onClicked.addListener(toggle);
+```
 
-</pre>
-
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

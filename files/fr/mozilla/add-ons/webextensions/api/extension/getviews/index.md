@@ -13,77 +13,77 @@ tags:
   - getViews
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getViews
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Renvoie un tableau des objets <a href="/fr/docs/Web/API/Window">Window</a> pour chacune des pages exécutées dans l'extension en cours. Cela inclut, par exemple :</p>
+Renvoie un tableau des objets [Window](/fr/docs/Web/API/Window) pour chacune des pages exécutées dans l'extension en cours. Cela inclut, par exemple :
 
-<ul>
- <li>la page d'arrière-plan, si une est définie</li>
- <li>toutes les pages contextuelles, si définies et chargées</li>
- <li>toutes les pages d'options, si définies et chargées</li>
- <li>les onglets du navigateur hébergeant le contenu fourni avec l'extension</li>
-</ul>
+- la page d'arrière-plan, si une est définie
+- toutes les pages contextuelles, si définies et chargées
+- toutes les pages d'options, si définies et chargées
+- les onglets du navigateur hébergeant le contenu fourni avec l'extension
 
-<p>Dans Firefox, si cette méthode est appelée à partir d'une page faisant partie d'une fenêtre de navigation privée, telle qu'une barre latérale dans une fenêtre privée ou une fenêtre ouverte à partir d'une fenêtre privée, sa valeur de retour n'inclut pas la page d'arrière-plan de l'extension.</p>
+Dans Firefox, si cette méthode est appelée à partir d'une page faisant partie d'une fenêtre de navigation privée, telle qu'une barre latérale dans une fenêtre privée ou une fenêtre ouverte à partir d'une fenêtre privée, sa valeur de retour n'inclut pas la page d'arrière-plan de l'extension.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var windows = browser.extension.getViews(
+```js
+var windows = browser.extension.getViews(
   fetchProperties // optional object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>fetchProperties</code>{{optional_inline}}</dt>
- <dd><p><code>object</code>.</p>
- <dl>
-  <dt><code>type</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Un {{WebExtAPIRef('extension.ViewType')}} indiquant le type de vue à obtenir. Si omis, cette fonction renvoie toutes les vues.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. La fenêtre pour restreindre la recherche. Si omis, cette fonction renvoie toutes les vues.</dd>
- </dl>
- </dd>
-</dl>
+- `fetchProperties`{{optional_inline}}
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`.
 
-<p><code>array</code> of <code>object</code>. Un tableau d'objets <a href="/fr/docs/Web/API/Window">Window</a>.</p>
+    - `type`{{optional_inline}}
+      - : `string`. Un {{WebExtAPIRef('extension.ViewType')}} indiquant le type de vue à obtenir. Si omis, cette fonction renvoie toutes les vues.
+    - `windowId`{{optional_inline}}
+      - : `integer`. La fenêtre pour restreindre la recherche. Si omis, cette fonction renvoie toutes les vues.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.extension.getViews")}}</p>
+`array` of `object`. Un tableau d'objets [Window](/fr/docs/Web/API/Window).
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Obtenez toutes les fenêtres appartenant à cette extension et consignez leurs URL :</p>
+{{Compat("webextensions.api.extension.getViews")}}
 
-<pre class="brush: js">var windows = browser.extension.getViews();
+## Exemples
+
+Obtenez toutes les fenêtres appartenant à cette extension et consignez leurs URL :
+
+```js
+var windows = browser.extension.getViews();
 
 for (var extensionWindow of windows) {
   console.log(extensionWindow.location.href);
-}</pre>
+}
+```
 
-<p>Obtenez uniquement des fenêtres dans les onglets du navigateur hébergeant du contenu fourni avec l'extension :</p>
+Obtenez uniquement des fenêtres dans les onglets du navigateur hébergeant du contenu fourni avec l'extension :
 
-<pre class="brush: js">var windows = browser.extension.getViews({type: "tab"});</pre>
+```js
+var windows = browser.extension.getViews({type: "tab"});
+```
 
-<p>Obtenir seulement des fenêtres dans les popups :</p>
+Obtenir seulement des fenêtres dans les popups :
 
-<pre class="brush: js">var windows = browser.extension.getViews({type: "popup"});</pre>
+```js
+var windows = browser.extension.getViews({type: "popup"});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/extension"><code>chrome.extension</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -110,5 +110,4 @@ for (var extensionWindow of windows) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -12,35 +12,39 @@ tags:
   - cacheEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/cacheEnabled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour activer ou désactiver globalement le cache du navigateur.</p>
+Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour activer ou désactiver globalement le cache du navigateur.
 
-<p>La valeur sous-jacente est un booléen.</p>
+La valeur sous-jacente est un booléen.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browserSettings.cacheEnabled")}}</p>
+{{Compat("webextensions.api.browserSettings.cacheEnabled")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Obtenir une valeur actuelle de ce paramètre :</p>
+Obtenir une valeur actuelle de ce paramètre :
 
-<pre class="brush: js">function logResult(result) {
+```js
+function logResult(result) {
   console.log(`Current value: ${result.value}`);
   console.log(`Current level of control: ${result.levelOfControl}`);
 }
 
 browser.browserSettings.cacheEnabled.get({}).
-  then(logResult);</pre>
+  then(logResult);
+```
 
-<p>Désactivation du cache du navigateur :</p>
+Désactivation du cache du navigateur :
 
-<pre class="brush: js">function logResult(result) {
+```js
+function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
 browser.browserSettings.cacheEnabled.set({value: false}).
-  then(logResult);</pre>
+  then(logResult);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

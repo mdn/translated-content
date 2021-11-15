@@ -12,89 +12,85 @@ tags:
   - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet <code>ExtensionInfo</code> contenant les informations sur l'extension.</p>
+Un objet `ExtensionInfo` contenant les informations sur l'extension.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Il s'agit d'un objet avec les propriétés suivantes :</p>
+Il s'agit d'un objet avec les propriétés suivantes :
 
-<dl>
- <dt><code>description</code></dt>
- <dd><code>string</code>. La description de l'extension, prise à partir de la clé de <a href="/fr/Add-ons/WebExtensions/manifest.json/description">description</a> du manifest.json.</dd>
- <dt><code>disabledReason</code></dt>
- <dd><code>string</code>. Si l'extension est désactivée, la raison pour laquelle il a été désactivé. L'une des "inconnnues' or "permissions_increase".</dd>
- <dt><code>enabled</code></dt>
- <dd><code>boolean</code>. Que l'extension soit activée ou pas.</dd>
- <dt><code>homepageUrl</code></dt>
- <dd><code>string</code>. L'URL de la page d'accueil de l'extension, prise en compte de la clé  <a href="/fr/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a> du fichier manifest.json.</dd>
- <dt><code>hostPermissions</code></dt>
- <dd><code>ensemble</code> de <code>chaîne</code>. Les <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">permissions d'hôtes</a> de l'extension.</dd>
- <dt><code>icons</code></dt>
- <dd><p><code>array</code> of <code>object</code>. les informations sur les icônes des extensions. Un tableau d'objets, un par chaque icône. Chaque objet contient deux propriétés :</p>
- <ul>
-  <li><code>size</code>: un entier représentant la largeur et la hauteur de l'icônes en pixels.</li>
-  <li><code>url</code>: une chaîne contenant l'url relative de l'icône, en commençant par la racine de l'extensions.</li>
- </ul>
- </dd>
- <dt><code>id</code></dt>
- <dd><code>string</code>. l'ID de l'extension.</dd>
- <dt><code>installType</code></dt>
- <dd><p><code>string</code>. Une chaîne décriantn comme l'extension a été ajouté. Une des options suivantes :</p>
- <ul>
-  <li>"admin": l'extension a été installé en raison d'une politique administrative.</li>
-  <li>"development": l'extension a été installé décompressé sur le disque.</li>
-  <li>"normal": l'extension a été installé normalement à partir du package d'installation.</li>
-  <li>"sideload": l'extension a été installé par un autre logiciel sur l'ordinateur de l'utilisateur.</li>
-  <li>"other": l'extension a été installé d'une autre manière.</li>
- </ul>
- </dd>
- <dt><code>mayDisable</code></dt>
- <dd><code>boolean</code>. Que cette extensions a été désactivé ou désinstallé par l'utilisateur.</dd>
- <dt><code>name</code></dt>
- <dd><code>string</code>. Le nom de l'extension, pris à partir de la clé <a href="/fr/Add-ons/WebExtensions/manifest.json/name">name</a> du manifest.json.</dd>
- <dt><code>offlineEnabled</code></dt>
- <dd><code>boolean</code>. Que les demandes de l'extensions soient prises en charge hors connexion.</dd>
- <dt><code>optionsUrl</code></dt>
- <dd><code>string</code>. l'URL pour la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">page d'options</a> de l'élément, s'il y en a un. Il s'agit d'une URL relative, à partir de la racine de l'extension.</dd>
- <dt><code>permissions</code></dt>
- <dd><code>array</code> of <code>string</code>. les <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permissions de l'API</a> de l'extension.</dd>
- <dt><code>shortName</code></dt>
- <dd><code>string</code>. Une courte version du nom de l'extension, prise à partir de la clé  <a href="/fr/Add-ons/WebExtensions/manifest.json/short_name">short_name</a> du manifest.json.</dd>
- <dt><code>type</code></dt>
- <dd><p><code>string</code>. Chaîne décrivant le type d'extension. Ceci permet de distinguer les extensions des applications et des thèmes. Il peut prendre l'une des valeurs suivantes :</p>
- <ul>
-  <li>"extension": le type d'extension la plus courante.</li>
-  <li>"hosted_app"</li>
-  <li>"packaged_app"</li>
-  <li>"legacy_packaged_app"</li>
-  <li>"theme"</li>
- </ul>
- </dd>
- <dt><code>updateUrl</code></dt>
- <dd><code>string</code>. URL pour la mise à jour de l'extension, tiré de la clé <a href="/fr/Add-ons/WebExtensions/manifest.json/applications">applications</a> de manifest.json.</dd>
- <dt><code>version</code></dt>
- <dd><code>string</code>. La version de l'extension, tiré de la clé <a href="/fr/Add-ons/WebExtensions/manifest.json/version">version</a> du manifest.json</dd>
- <dt><code>versionName</code></dt>
- <dd><code>string</code>. Le nom descriptif pour la version de l'extension, tiré de la clé  <a href="/fr/Add-ons/WebExtensions/manifest.json/version_name">version_name</a> du manifest.json.</dd>
-</dl>
+- `description`
+  - : `string`. La description de l'extension, prise à partir de la clé de [description](/fr/Add-ons/WebExtensions/manifest.json/description) du manifest.json.
+- `disabledReason`
+  - : `string`. Si l'extension est désactivée, la raison pour laquelle il a été désactivé. L'une des "inconnnues' or "permissions_increase".
+- `enabled`
+  - : `boolean`. Que l'extension soit activée ou pas.
+- `homepageUrl`
+  - : `string`. L'URL de la page d'accueil de l'extension, prise en compte de la clé  [homepage_url](/fr/Add-ons/WebExtensions/manifest.json/homepage_url) du fichier manifest.json.
+- `hostPermissions`
+  - : `ensemble` de `chaîne`. Les [permissions d'hôtes](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) de l'extension.
+- `icons`
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+  - : `array` of `object`. les informations sur les icônes des extensions. Un tableau d'objets, un par chaque icône. Chaque objet contient deux propriétés :
 
-<p>{{Compat("webextensions.api.management.ExtensionInfo")}}</p>
+    - `size`: un entier représentant la largeur et la hauteur de l'icônes en pixels.
+    - `url`: une chaîne contenant l'url relative de l'icône, en commençant par la racine de l'extensions.
 
-<p>{{WebExtExamples}}</p>
+- `id`
+  - : `string`. l'ID de l'extension.
+- `installType`
 
-<div class="note"><p><strong>Note :</strong></p>
+  - : `string`. Une chaîne décriantn comme l'extension a été ajouté. Une des options suivantes :
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/management"><code>chrome.management</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> dans le code de Chromium code.</p>
+    - "admin": l'extension a été installé en raison d'une politique administrative.
+    - "development": l'extension a été installé décompressé sur le disque.
+    - "normal": l'extension a été installé normalement à partir du package d'installation.
+    - "sideload": l'extension a été installé par un autre logiciel sur l'ordinateur de l'utilisateur.
+    - "other": l'extension a été installé d'une autre manière.
 
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+- `mayDisable`
+  - : `boolean`. Que cette extensions a été désactivé ou désinstallé par l'utilisateur.
+- `name`
+  - : `string`. Le nom de l'extension, pris à partir de la clé [name](/fr/Add-ons/WebExtensions/manifest.json/name) du manifest.json.
+- `offlineEnabled`
+  - : `boolean`. Que les demandes de l'extensions soient prises en charge hors connexion.
+- `optionsUrl`
+  - : `string`. l'URL pour la [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) de l'élément, s'il y en a un. Il s'agit d'une URL relative, à partir de la racine de l'extension.
+- `permissions`
+  - : `array` of `string`. les [permissions de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) de l'extension.
+- `shortName`
+  - : `string`. Une courte version du nom de l'extension, prise à partir de la clé  [short_name](/fr/Add-ons/WebExtensions/manifest.json/short_name) du manifest.json.
+- `type`
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+  - : `string`. Chaîne décrivant le type d'extension. Ceci permet de distinguer les extensions des applications et des thèmes. Il peut prendre l'une des valeurs suivantes :
+
+    - "extension": le type d'extension la plus courante.
+    - "hosted_app"
+    - "packaged_app"
+    - "legacy_packaged_app"
+    - "theme"
+
+- `updateUrl`
+  - : `string`. URL pour la mise à jour de l'extension, tiré de la clé [applications](/fr/Add-ons/WebExtensions/manifest.json/applications) de manifest.json.
+- `version`
+  - : `string`. La version de l'extension, tiré de la clé [version](/fr/Add-ons/WebExtensions/manifest.json/version) du manifest.json
+- `versionName`
+  - : `string`. Le nom descriptif pour la version de l'extension, tiré de la clé  [version_name](/fr/Add-ons/WebExtensions/manifest.json/version_name) du manifest.json.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.management.ExtensionInfo")}}
+
+{{WebExtExamples}}
+
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -121,5 +117,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

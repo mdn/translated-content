@@ -14,39 +14,39 @@ tags:
   - queryState
 translation_of: Mozilla/Add-ons/WebExtensions/API/idle/queryState
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Renvoie <code>"locked"</code> si le système est vérouillé, <code>"inactif"</code> si l'utilisation n'a généré aucune entrée pendant un nombre de secondes spécifié, ou <code>"actif"</code> dans le cas contraire.</p>
+Renvoie `"locked"` si le système est vérouillé, `"inactif"` si l'utilisation n'a généré aucune entrée pendant un nombre de secondes spécifié, ou `"actif"` dans le cas contraire.
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var querying = browser.idle.queryState(
+```js
+var querying = browser.idle.queryState(
   detectionIntervalInSeconds // integer
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>detectionIntervalInSeconds</code></dt>
- <dd><code>integer</code>. Le système est considéré inactif si  <code>detectionIntervalInSeconds</code> secondes s'est écoulé depuis la dernière entrée utilisateur détectée.</dd>
-</dl>
+- `detectionIntervalInSeconds`
+  - : `integer`. Le système est considéré inactif si  `detectionIntervalInSeconds` secondes s'est écoulé depuis la dernière entrée utilisateur détectée.
 
-<h3 id="Valeur_renvoyée">Valeur renvoyée</h3>
+### Valeur renvoyée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec une chaîne {{WebExtAPIRef('idle.IdleState')}}, indiquant l'état actuel.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne {{WebExtAPIRef('idle.IdleState')}}, indiquant l'état actuel.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.idle.queryState")}}</p>
+{{Compat("webextensions.api.idle.queryState")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet extrait simple, nous appelons <code>queryState()</code> et vérifions si le <code>newState</code> est <code>inactif</code> ou <code>active</code>, en enregistrant un message selon le cas. Comme nous avons spécifié une valeur de  <code>detectionIntervalInSeconds</code> de 15, un état <code>inactif</code>  ne sera signalé que s'il n'y a pas eu d'activité de l'utilisateur depuis au moins 15 secondes</p>
+Dans cet extrait simple, nous appelons `queryState()` et vérifions si le `newState` est `inactif` ou `active`, en enregistrant un message selon le cas. Comme nous avons spécifié une valeur de  `detectionIntervalInSeconds` de 15, un état `inactif`  ne sera signalé que s'il n'y a pas eu d'activité de l'utilisateur depuis au moins 15 secondes
 
-<pre class="brush: js">function onGot(newState) {
+```js
+function onGot(newState) {
   if (newState === 'idle') {
     console.log('Please come back — we miss you!');
   } else if (newState === 'active') {
@@ -55,19 +55,18 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/idle/queryState
 }
 
 var querying = browser.idle.queryState(15);
-querying.then(onGot);</pre>
+querying.then(onGot);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/extensions/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/idle"><code>chrome.idle</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json"><code>idle.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -94,5 +93,4 @@ querying.then(onGot);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

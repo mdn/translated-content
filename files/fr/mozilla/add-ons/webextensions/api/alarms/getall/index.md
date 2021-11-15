@@ -13,45 +13,47 @@ tags:
   - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Obtient toutes les alarmes actives pour le poste.</p>
+Obtient toutes les alarmes actives pour le poste.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var getAlarms = browser.alarms.getAll()
-</pre>
+```js
+var getAlarms = browser.alarms.getAll()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun</p>
+Aucun
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise"><code>Promise</code></a> dont la valeur de résolution sera un tableau d'objets <a href="/fr/Add-ons/WebExtensions/API/alarms/Alarm"><code>Alarm</code></a>. Chaque élément de ce tableau représente une alarme active de l'extension. Si aucune alarme n'est active, le tableau sera vide.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) dont la valeur de résolution sera un tableau d'objets [`Alarm`](/fr/Add-ons/WebExtensions/API/alarms/Alarm). Chaque élément de ce tableau représente une alarme active de l'extension. Si aucune alarme n'est active, le tableau sera vide.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">function gotAll(alarms) {
+```js
+function gotAll(alarms) {
   for (var alarm of alarms) {
     console.log(alarm.name);
   }
 }
 
 var getAlarms = browser.alarms.getAll();
-getAlarms.then(gotAll);</pre>
+getAlarms.then(gotAll);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("webextensions.api.alarms.getAll")}}</p>
+{{Compat("webextensions.api.alarms.getAll")}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/extensions/alarms).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

@@ -11,21 +11,19 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/search
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Récupère les moteurs de recherche et lance une recherche avec un moteur de recherche spécifique</p>
+Récupère les moteurs de recherche et lance une recherche avec un moteur de recherche spécifique
 
-<p>Pour utiliser cette API, vous devez avoir la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "search".</p>
+Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "search".
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt>{{WebExtAPIRef("search.get()")}}</dt>
- <dd>Récupérer tous les moteurs de recherche</dd>
- <dt>{{WebExtAPIRef("search.search()")}}</dt>
- <dd>Recherche à l'aide du moteur de recherche spécifié.</dd>
-</dl>
+- {{WebExtAPIRef("search.get()")}}
+  - : Récupérer tous les moteurs de recherche
+- {{WebExtAPIRef("search.search()")}}
+  - : Recherche à l'aide du moteur de recherche spécifié.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.search", 1, 1)}} {{WebExtExamples("h2")}}</p>
+{{Compat("webextensions.api.search", 1, 1)}} {{WebExtExamples("h2")}}

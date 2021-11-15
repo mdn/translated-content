@@ -13,41 +13,41 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Renvoie un ensemble d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, représentant des fenêtres et des onglets qui ont été fermés dans la session du navigation actuelle (c'est à dire l'heure écoulée depuis le démarrage du navigateur).</p>
+Renvoie un ensemble d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, représentant des fenêtres et des onglets qui ont été fermés dans la session du navigation actuelle (c'est à dire l'heure écoulée depuis le démarrage du navigateur).
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingSessions = browser.sessions.getRecentlyClosed(
+```js
+var gettingSessions = browser.sessions.getRecentlyClosed(
   filter             // optional object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>filter</code>{{optional_inline}}</dt>
- <dd><code>object</code>. Un objet {{WebExtAPIRef("sessions.Filter")}} qui limite l'ensemble des sessions renvoyées.</dd>
-</dl>
+- `filter`{{optional_inline}}
+  - : `object`. Un objet {{WebExtAPIRef("sessions.Filter")}} qui limite l'ensemble des sessions renvoyées.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. Cela sera rempli avec un ensemble d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, un pour chacun des derniers onglets fermés ou des fenêtres dans la session de navigation actuelle, jusqu'à  {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}} ou le nombre inclus dans l'argument du filtre, le plus petit qui soit. Le tableau est donné à l'inverse de l'ordre dans lequel les onglets ou fenêtres ont été fermés, de sorte que le plus récemment fermé sera à l'index 0.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Cela sera rempli avec un ensemble d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, un pour chacun des derniers onglets fermés ou des fenêtres dans la session de navigation actuelle, jusqu'à  {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}} ou le nombre inclus dans l'argument du filtre, le plus petit qui soit. Le tableau est donné à l'inverse de l'ordre dans lequel les onglets ou fenêtres ont été fermés, de sorte que le plus récemment fermé sera à l'index 0.
 
-<p>Si une erreur survient, la promesse sera rejetée avec un message d'erreur.</p>
+Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.sessions.getRecentlyClosed")}}</p>
+{{Compat("webextensions.api.sessions.getRecentlyClosed")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Le code restaure la session la plus récemment fermée, qu'il s'agisse d'un onglet ou d'une fenêtre :</p>
+Le code restaure la session la plus récemment fermée, qu'il s'agisse d'un onglet ou d'une fenêtre :
 
-<pre class="brush: js">function restoreMostRecent(sessionInfos) {
+```js
+function restoreMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
     console.log("No sessions found")
     return;
@@ -70,19 +70,17 @@ browser.browserAction.onClicked.addListener(function() {
   });
   gettingSessions.then(restoreMostRecent, onError);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/extensions/sessions).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/sessions"><code>chrome.sessions</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,5 +107,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

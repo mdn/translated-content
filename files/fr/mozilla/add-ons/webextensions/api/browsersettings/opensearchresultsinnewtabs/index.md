@@ -12,27 +12,29 @@ tags:
   - openSearchResultsInNewTabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jacente est un booléen.</p>
+Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jacente est un booléen.
 
-<p>Si la valeur est définie à <code>true</code>, lorsque l'utilisateur sélectionne un terme dans la zone de recherche du navigateur, les résultats de la recherche s'affichent dans un nouvel onglet. Si la valeur est <code>false</code> (valeur par défaut), les résultats de la recherche apparaissent dans l'onglet en cours.</p>
+Si la valeur est définie à `true`, lorsque l'utilisateur sélectionne un terme dans la zone de recherche du navigateur, les résultats de la recherche s'affichent dans un nouvel onglet. Si la valeur est `false` (valeur par défaut), les résultats de la recherche apparaissent dans l'onglet en cours.
 
-<p>Notez que cela n'affecte pas le comportement lors de la sélection des éléments de omnibox/awesomebar, uniquement la zone de recherche dédiée..</p>
+Notez que cela n'affecte pas le comportement lors de la sélection des éléments de omnibox/awesomebar, uniquement la zone de recherche dédiée..
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browserSettings.openSearchResultsInNewTabs")}}</p>
+{{Compat("webextensions.api.browserSettings.openSearchResultsInNewTabs")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Définissez le paramètre sur <code>true</code>:</p>
+Définissez le paramètre sur `true`:
 
-<pre class="brush: js">function logResult(result) {
+```js
+function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
 browser.browserSettings.openSearchResultsInNewTabs.set({value: true}).
-  then(logResult);</pre>
+  then(logResult);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

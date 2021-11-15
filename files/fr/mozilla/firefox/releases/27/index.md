@@ -6,107 +6,89 @@ tags:
   - TopicStub
 translation_of: Mozilla/Firefox/Releases/27
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 27 est sorti le 4 Février 2014. Cet article répertorie les modofications clés qui sont utiles non seulement pour les développeurs Web, mais aussi pour les développeurs Firefox et Gecko ainsi que pour les développeurs d'add-on.</p>
+Firefox 27 est sorti le 4 Février 2014. Cet article répertorie les modofications clés qui sont utiles non seulement pour les développeurs Web, mais aussi pour les développeurs Firefox et Gecko ainsi que pour les développeurs d'add-on.
 
-<h2 id="Changements_pour_les_développeurs_Web">Changements pour les développeurs Web</h2>
+## Changements pour les développeurs Web
 
-<h3 id="Outils_de_développement">Outils de développement</h3>
+### Outils de développement
 
-<ul>
- <li>Les points d'arrêt peuvent désormais être définis sur les événements DOM.</li>
- <li>JavaScript dans le panneau du débogueur peut être supprimé à l'aide du bouton { }.</li>
- <li>L'inspecteur a maintenant une fonction "edit-element-html", sans avoir besoin d'un add-on.</li>
- <li>Les URL et les couleurs d'arrière-plan ont un aperçu dans l'inspecteur. Même le survol des éléments du canevas donnera une fenêtre contextuelle avec un aperçu de l'image.</li>
- <li>La journalisation de redistribution a été ajoutée.</li>
- <li>Les styles des éléments SVG sont désormais inspectables ({{Bug(921191)}}).</li>
- <li>Le fait de ne pas trouver l'image en cliquant sur le lien URL dans l'inspecteur CSS a été corrigé ({{Bug(921686)}}).</li>
-</ul>
+- Les points d'arrêt peuvent désormais être définis sur les événements DOM.
+- JavaScript dans le panneau du débogueur peut être supprimé à l'aide du bouton { }.
+- L'inspecteur a maintenant une fonction "edit-element-html", sans avoir besoin d'un add-on.
+- Les URL et les couleurs d'arrière-plan ont un aperçu dans l'inspecteur. Même le survol des éléments du canevas donnera une fenêtre contextuelle avec un aperçu de l'image.
+- La journalisation de redistribution a été ajoutée.
+- Les styles des éléments SVG sont désormais inspectables ({{Bug(921191)}}).
+- Le fait de ne pas trouver l'image en cliquant sur le lien URL dans l'inspecteur CSS a été corrigé ({{Bug(921686)}}).
 
-<p>Plus de détails dans <a href="https://hacks.mozilla.org/2013/11/firefox-developer-tools-episode-27-edit-as-html-codemirror-more/">cet article</a>.</p>
+Plus de détails dans [cet article](https://hacks.mozilla.org/2013/11/firefox-developer-tools-episode-27-edit-as-html-codemirror-more/).
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>Les mots-clés <code>-moz-grab</code> et <code>-moz-grabbing</code> de la propriété CSS {{cssxref("cursor")}} n'ont pas été préfixés pour <code>grab</code> et <code>grabbing</code> ({{bug("880672")}}).</li>
- <li>Le support des notations fonctionnelles <code>-moz-hsla()</code> et <code>-moz-rgba()</code> a été abandonné. Seules les versions sans préfixe, <code>hsla()</code> et <code>rgba()</code> sont désormais supportées ({{bug("893319")}}).</li>
- <li>La valeur "<code>true</code>" pour {{cssxref("text-align")}} a été ajoutée ({{bug(929991)}}).</li>
- <li>Support expérimental de la <code>position:sticky</code> est désormais actif par défaut sur les builds non-release ({{bug("902992")}}). Pour les versions builds, la préférence <code>layout.css.sticky.enabled</code> doit toujours être définie sur <code>true.</code></li>
- <li>La propriété abrégée {{cssxref("all")}} a été ajoutée ({{bug(842329)}}).</li>
- <li>La valeur globale {{cssxref("unset")}} a été ajoutée; il permet de réinitialiser n'importe quelle propriété CSS ({{bug(921731)}}).</li>
- <li>Les accolades ne sont plus autorisées dans les attributs de <code>style</code> HTML: faire <code>&lt;div style="{ display: none }"&gt;</code> fonctionnait en mode bizarreries, mais ne le sera plus {{bug(915053)}}.</li>
- <li>La propriété {{cssxref("overflow")}} fonctionne désormais sur {{HTMLElement("fieldset")}} ({{bug(261037)}}).</li>
-</ul>
+- Les mots-clés `-moz-grab` et `-moz-grabbing` de la propriété CSS {{cssxref("cursor")}} n'ont pas été préfixés pour `grab` et `grabbing` ({{bug("880672")}}).
+- Le support des notations fonctionnelles `-moz-hsla()` et `-moz-rgba()` a été abandonné. Seules les versions sans préfixe, `hsla()` et `rgba()` sont désormais supportées ({{bug("893319")}}).
+- La valeur "`true`" pour {{cssxref("text-align")}} a été ajoutée ({{bug(929991)}}).
+- Support expérimental de la `position:sticky` est désormais actif par défaut sur les builds non-release ({{bug("902992")}}). Pour les versions builds, la préférence `layout.css.sticky.enabled` doit toujours être définie sur `true.`
+- La propriété abrégée {{cssxref("all")}} a été ajoutée ({{bug(842329)}}).
+- La valeur globale {{cssxref("unset")}} a été ajoutée; il permet de réinitialiser n'importe quelle propriété CSS ({{bug(921731)}}).
+- Les accolades ne sont plus autorisées dans les attributs de `style` HTML: faire `<div style="{ display: none }">` fonctionnait en mode bizarreries, mais ne le sera plus {{bug(915053)}}.
+- La propriété {{cssxref("overflow")}} fonctionne désormais sur {{HTMLElement("fieldset")}} ({{bug(261037)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>La valeur <code>color</code> de l'attribut {{HTMLElement("input")}} {{htmlattrxref("type", "input")}} a été implémentée sur les plates-formes de bureau. Il était déjà disponible sur les mobiles.</li>
- <li>La directive <code>allow-popups</code> est désormais prise en charge avec l'attribut {{htmlattrxref("sandbox", "iframe")}} de l'élément {{HTMLElement("iframe")}} ({{bug(766282)}}).</li>
- <li>Le mélange d'éléments HTML à l'aide de la propriété {{cssxref("mix-blend-mode")}} a été implémenté. La préférence <code>layout.css.mix-blend-mode.enabled</code> doit être définie sur <code>true</code> ({{bug(902525)}}).</li>
- <li>L'attribut {{htmlattrxref("typemustmatch", "object")}} de l'élément {{HTMLElement("object")}} est désormais pris en charge ({{bug(827160)}}).</li>
-</ul>
+- La valeur `color` de l'attribut {{HTMLElement("input")}} {{htmlattrxref("type", "input")}} a été implémentée sur les plates-formes de bureau. Il était déjà disponible sur les mobiles.
+- La directive `allow-popups` est désormais prise en charge avec l'attribut {{htmlattrxref("sandbox", "iframe")}} de l'élément {{HTMLElement("iframe")}} ({{bug(766282)}}).
+- Le mélange d'éléments HTML à l'aide de la propriété {{cssxref("mix-blend-mode")}} a été implémenté. La préférence `layout.css.mix-blend-mode.enabled` doit être définie sur `true` ({{bug(902525)}}).
+- L'attribut {{htmlattrxref("typemustmatch", "object")}} de l'élément {{HTMLElement("object")}} est désormais pris en charge ({{bug(827160)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>L'implémentation d'<a href="/fr/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla">EcmaScript 6</a> (Harmony) se poursuit!</p>
+L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) se poursuit!
 
-<ul>
- <li>L'<a href="/fr/docs/Web/JavaScript/Reference/Operators/Spread_operator">opérateur de diffusion</a> est désormais pris en charge dans les appels de fonction ({{bug("762363")}}).</li>
- <li>La fonction mathématique {{jsxref("Global_Objects/Math/hypot", "Math.hypot()")}} a été implémentée ({{bug("896264")}}).</li>
- <li>L'expression {{jsxref("Operators/yield*", "yield*")}} est maintenant implémentée ({{bug(666396)}}).</li>
- <li>Les objets <code>MapIterator</code>, <code>SetIterator</code> et <code>ArrayIterator</code> correspondent désormais à la spécification ({{bug("881226")}}).</li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Statements/for...of">for..of</a> boucles s'attendent maintenant à ce que le <a href="/fr/docs/Web/JavaScript/Guide/The_Iterator_protocol">protocole d'itérateur</a> standard ES6 s'éloigne de l'ancien protocole d'itérateur de SpiderMonkey utilisant <code>StopIteration</code>.</li>
- <li>{{jsxref("String.match")}} et {{jsxref("String.replace")}} sont maintenant réinitialisés {{jsxref("RegExp.lastIndex")}} ({{bug(501739)}}).</li>
-</ul>
+- L'[opérateur de diffusion](/fr/docs/Web/JavaScript/Reference/Operators/Spread_operator) est désormais pris en charge dans les appels de fonction ({{bug("762363")}}).
+- La fonction mathématique {{jsxref("Global_Objects/Math/hypot", "Math.hypot()")}} a été implémentée ({{bug("896264")}}).
+- L'expression {{jsxref("Operators/yield*", "yield*")}} est maintenant implémentée ({{bug(666396)}}).
+- Les objets `MapIterator`, `SetIterator` et `ArrayIterator` correspondent désormais à la spécification ({{bug("881226")}}).
+- [for..of](/fr/docs/Web/JavaScript/Reference/Statements/for...of) boucles s'attendent maintenant à ce que le [protocole d'itérateur](/fr/docs/Web/JavaScript/Guide/The_Iterator_protocol) standard ES6 s'éloigne de l'ancien protocole d'itérateur de SpiderMonkey utilisant `StopIteration`.
+- {{jsxref("String.match")}} et {{jsxref("String.replace")}} sont maintenant réinitialisés {{jsxref("RegExp.lastIndex")}} ({{bug(501739)}}).
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+### Interfaces/APIs/DOM
 
-<ul>
- <li>Le support des deux méthodes <code>setRange()</code> sur l'interface {{domxref("HTMLInputElement")}} a été ajouté ({{bug(850364)}}).</li>
- <li>Le support des deux méthodes <code>setRange()</code> sur l'interface {{domxref("HTMLTextAreaElement")}} a été ajouté ({{bug(918940)}}).</li>
- <li>Les méthodes <code>getAllKeys()</code> et <code>openKeyCursor()</code> ont été ajoutées à {{domxref("IDBObjectStore")}} ({{bug(920633)}} et {{bug(920800)}}).</li>
- <li>L'interface {{domxref("HTMLFormControlsCollection")}} a été implémentée ({{bug(913920)}}).</li>
- <li>L'interface {{domxref("CanvasRenderingContext2D")}} prend désormais en charge les deux méthodes {{domxref("CanvasRenderingContext2D.getLineDash()", "getLineDash()")}} et {{domxref("CanvasRenderingContext2D.setLineDash()", "setLineDash()")}} et la propriété {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}} ({{bug(768067)}}).</li>
- <li>L'attribut <code>typeMustMatch</code> a été implémenté sur l'interface {{domxref("HTMLObjectElement")}} ({{bug(827160)}}).</li>
- <li>Les méthodes <code>copyFromChannel()</code> et <code>copyToChannel()</code> ont été ajoutées à {{domxref("AudioBuffer")}} ({{bug(915524)}}).</li>
- <li><code>Event.isTrusted()</code> est désormais infalsifiable ({{bug(637248)}}).</li>
- <li>La méthode {{domxref("Navigator.vibrate()")}} a été adaptée pour correspondre à la spécification finale: elle retourne désormais <code>false</code> lorsque la liste est trop longue ou contient des entrées trop volumineuses, au lieu de lancer ({{bug(884935)}}).</li>
- <li>Dans le cadre de l'effort continu de normalisation des objets globaux, les interfaces d'événment de changement de feuille de style non standard, notamment <code>StyleRuleChangeEvent</code>, <code>StyleSheetApplicableStateChangeEvent</code> et <code>StyleSheetChangeEvent</code>, ne sont plus disponibles à partir du contenu Web. L'interface <code>CSSGroupRuleRuleList</code>, le détail d'implémentation de {{domxref("CSSRuleList")}}, a également été supprimée ({{Bug("872934")}} et {{bug(916871)}}).</li>
- <li><code>atob</code> ignore désormais les espaces ({{bug(711180)}}).</li>
- <li><a href="/fr/docs/Web/WebGL">WebGL</a>: les chaînes d'extension avec préfixe <code>MOZ_</code> sont obsolètes. Le support pour eux sera supprimé à l'avenir. Utilisez uniquement une chaîne d'extension sans préfixe. Pour obtenir des brouillons d'extensions, définissez les préférences <code>webgl.enable-draft-extensions</code> ({{bug(924176)}}).</li>
-</ul>
+- Le support des deux méthodes `setRange()` sur l'interface {{domxref("HTMLInputElement")}} a été ajouté ({{bug(850364)}}).
+- Le support des deux méthodes `setRange()` sur l'interface {{domxref("HTMLTextAreaElement")}} a été ajouté ({{bug(918940)}}).
+- Les méthodes `getAllKeys()` et `openKeyCursor()` ont été ajoutées à {{domxref("IDBObjectStore")}} ({{bug(920633)}} et {{bug(920800)}}).
+- L'interface {{domxref("HTMLFormControlsCollection")}} a été implémentée ({{bug(913920)}}).
+- L'interface {{domxref("CanvasRenderingContext2D")}} prend désormais en charge les deux méthodes {{domxref("CanvasRenderingContext2D.getLineDash()", "getLineDash()")}} et {{domxref("CanvasRenderingContext2D.setLineDash()", "setLineDash()")}} et la propriété {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}} ({{bug(768067)}}).
+- L'attribut `typeMustMatch` a été implémenté sur l'interface {{domxref("HTMLObjectElement")}} ({{bug(827160)}}).
+- Les méthodes `copyFromChannel()` et `copyToChannel()` ont été ajoutées à {{domxref("AudioBuffer")}} ({{bug(915524)}}).
+- `Event.isTrusted()` est désormais infalsifiable ({{bug(637248)}}).
+- La méthode {{domxref("Navigator.vibrate()")}} a été adaptée pour correspondre à la spécification finale: elle retourne désormais `false` lorsque la liste est trop longue ou contient des entrées trop volumineuses, au lieu de lancer ({{bug(884935)}}).
+- Dans le cadre de l'effort continu de normalisation des objets globaux, les interfaces d'événment de changement de feuille de style non standard, notamment `StyleRuleChangeEvent`, `StyleSheetApplicableStateChangeEvent` et `StyleSheetChangeEvent`, ne sont plus disponibles à partir du contenu Web. L'interface `CSSGroupRuleRuleList`, le détail d'implémentation de {{domxref("CSSRuleList")}}, a également été supprimée ({{Bug("872934")}} et {{bug(916871)}}).
+- `atob` ignore désormais les espaces ({{bug(711180)}}).
+- [WebGL](/fr/docs/Web/WebGL): les chaînes d'extension avec préfixe `MOZ_` sont obsolètes. Le support pour eux sera supprimé à l'avenir. Utilisez uniquement une chaîne d'extension sans préfixe. Pour obtenir des brouillons d'extensions, définissez les préférences `webgl.enable-draft-extensions` ({{bug(924176)}}).
 
-<h3 id="MathML">MathML</h3>
+### MathML
 
-<p><em>Pas de changement.</em></p>
+_Pas de changement._
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<ul>
- <li>Le mélange d'éléments SVG à l'aide de la propriété {{cssxref("mix-blend-mode")}} a été implémenté. La préférence <code>layout.css.mix-blend-mode.enabled</code> doit être définie sur <code>true</code> ({{bug(902525)}}).</li>
-</ul>
+- Le mélange d'éléments SVG à l'aide de la propriété {{cssxref("mix-blend-mode")}} a été implémenté. La préférence `layout.css.mix-blend-mode.enabled` doit être définie sur `true` ({{bug(902525)}}).
 
-<h2 id="Changements_pour_les_développeurs_daddon_et_de_Mozilla">Changements pour les développeurs d'addon et de Mozilla</h2>
+## Changements pour les développeurs d'addon et de Mozilla
 
-<ul>
- <li>Le bouton <code>downloads-indicator</code> a disparu. Vous devez maintenant utiliser l'élément <code>downloads-button</code>. Si vous devez vérifier qu'il a chargé sa superposition, recherchez l'attribut <code>indicator</code> sur ce bouton.</li>
- <li>La feuille de style <code>chrome://browser/skin/downloads/indicator.css</code> n'est plus référencée dans Firefox.</li>
-</ul>
+- Le bouton `downloads-indicator` a disparu. Vous devez maintenant utiliser l'élément `downloads-button`. Si vous devez vérifier qu'il a chargé sa superposition, recherchez l'attribut `indicator` sur ce bouton.
+- La feuille de style `chrome://browser/skin/downloads/indicator.css` n'est plus référencée dans Firefox.
 
-<h2 id="Sécurité">Sécurité</h2>
+## Sécurité
 
-<ul>
- <li>TLS 1.2 a été implémenté pour une sécurité améliorée ({{Bug(861266)}}).</li>
-</ul>
+- TLS 1.2 a été implémenté pour une sécurité améliorée ({{Bug(861266)}}).
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;component=Marionette&amp;product=Testing&amp;target_milestone=mozilla27">Liste des changements</a> dans <a href="/fr/docs/Mozilla/QA/Marionette">Marionette</a> pour Firefox 27.</li>
-</ul>
+- [Liste des changements](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&component=Marionette&product=Testing&target_milestone=mozilla27) dans [Marionette](/fr/docs/Mozilla/QA/Marionette) pour Firefox 27.
 
-<h3 id="Anciennes_versions">Anciennes versions</h3>
+### Anciennes versions
 
-<p>{{Firefox_for_developers('26')}}</p>
+{{Firefox_for_developers('26')}}

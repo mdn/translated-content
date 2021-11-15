@@ -12,83 +12,77 @@ tags:
   - onRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Déclenché lorsqu'une requête Web est sur le point d'être effectuée, pour donner à l'extension la possibilité de l'utiliser comme proxy.</p>
+Déclenché lorsqu'une requête Web est sur le point d'être effectuée, pour donner à l'extension la possibilité de l'utiliser comme proxy.
 
-<p>Cet événement est étroitement modélisé sur les événements définis dans l'API  <code><a href="/fr/Add-ons/WebExtensions/API/webRequest">webRequest</a></code> Comme ces événements, sa fonction <code>addListener()</code> prend trois arguments :</p>
+Cet événement est étroitement modélisé sur les événements définis dans l'API  [`webRequest`](/fr/Add-ons/WebExtensions/API/webRequest) Comme ces événements, sa fonction `addListener()` prend trois arguments :
 
-<ul>
- <li>l'écouteur qui sera appelé lorsque l'événement est déclenché.</li>
- <li>Un objet <code><a href="/fr/Add-ons/WebExtensions/API/webRequest/RequestFilter">RequestFilter</a></code> contrôlant quelles requêtes provoquent le déclenchement de l'événement.</li>
- <li>un tableau de chaînes pour contrôler d'autres aspects du comportement de l'événement.</li>
-</ul>
+- l'écouteur qui sera appelé lorsque l'événement est déclenché.
+- Un objet [`RequestFilter`](/fr/Add-ons/WebExtensions/API/webRequest/RequestFilter) contrôlant quelles requêtes provoquent le déclenchement de l'événement.
+- un tableau de chaînes pour contrôler d'autres aspects du comportement de l'événement.
 
-<p>L'événement est déclenché avant l'un des événements <code>webRequest</code> pour la même demande.</p>
+L'événement est déclenché avant l'un des événements `webRequest` pour la même demande.
 
-<p>Lorsque l'événement est déclenché, l'écouteur est appelé avec un objet contenant des informations sur la requête. L'écouteur renvoie un objet {{WebExtAPIRef("proxy.ProxyInfo")}} représentant un proxy à utiliser (ou un tableau de tels objets, permettant au navigateur de basculer si un proxy est inaccessible).</p>
+Lorsque l'événement est déclenché, l'écouteur est appelé avec un objet contenant des informations sur la requête. L'écouteur renvoie un objet {{WebExtAPIRef("proxy.ProxyInfo")}} représentant un proxy à utiliser (ou un tableau de tels objets, permettant au navigateur de basculer si un proxy est inaccessible).
 
-<p>Pour utiliser <code>proxy.onRequest</code>, une extension doit avoir la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permission API</a> "proxy" , ainsi que la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">permission d'hôte</a> pour les URL des requêtes qu'elle intercepte - ela signifie essentiellement que les modèles de correspondance de l'argument <code>filter</code> doivent être un sous-ensemble de l'extension autorisations de l'hôte.</p>
+Pour utiliser `proxy.onRequest`, une extension doit avoir la [permission API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "proxy" , ainsi que la [permission d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour les URL des requêtes qu'elle intercepte - ela signifie essentiellement que les modèles de correspondance de l'argument `filter` doivent être un sous-ensemble de l'extension autorisations de l'hôte.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.proxy.onRequest.addListener(
+```js
+browser.proxy.onRequest.addListener(
   listener,             //  function
   filter,               //  object
   extraInfoSpec         //  optional array of strings
 )
 browser.proxy.onRequest.removeListener(listener)
 browser.proxy.onRequest.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(listener, filter, extraInfoSpec)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(listener, filter, extraInfoSpec)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>listener</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction passera un seul argument, qui est un objet {{WebExtAPIRef("proxy.RequestDetails")}} contenant les détails de la requête.</p>
+- `listener`
 
- <p>L'écouteur peut renvoyer l'un des éléments suivants:</p>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction passera un seul argument, qui est un objet {{WebExtAPIRef("proxy.RequestDetails")}} contenant les détails de la requête.
 
- <ul>
-  <li>un objet {{WebExtAPIRef("proxy.ProxyInfo")}}</li>
-  <li>un tableau d'objets <code>proxy.ProxyInfo</code></li>
-  <li>Une <code>Promise</code> qui se résout en un objet <code>ProxyInfo</code></li>
-  <li>Une <code>Promise</code> qui résout en un tableau d'objets <code>ProxyInfo</code>.</li>
- </ul>
+    L'écouteur peut renvoyer l'un des éléments suivants:
 
- <p>Si l'écouteur renvoie un tableau, ou une Promesse qui se résout en un tableau, alors tous les objets<code>ProxyInfo</code> après le premier représentent les basculements: si le proxy à la position N dans le tableau n'est pas accessible quand son <code>ProxyInfo.failoverTimeout</code> alors le navigateur essayez le proxy à la position N+1.</p>
+    - un objet {{WebExtAPIRef("proxy.ProxyInfo")}}
+    - un tableau d'objets `proxy.ProxyInfo`
+    - Une `Promise` qui se résout en un objet `ProxyInfo`
+    - Une `Promise` qui résout en un tableau d'objets `ProxyInfo`.
 
- <p>S'il y a une erreur spécifiant les objets <code>proxy.ProxyInfo</code> objects, alors {{WebExtAPIRef("proxy.onError")}} sera appelé.</p>
- </dd>
- <dt><code>filter</code></dt>
- <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. Un ensemble de filtres qui limite les événements qui seront envoyés à cet écouteur.</dd>
- <dt><code>extraInfoSpec</code> {{optional_inline}}</dt>
- <dd><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous pouvez passer une seule valeur, <code>"requestHeaders"</code>, pour inclure les en-têtes de demande dans l'objet de <code>details</code> transmis à l'écouteur.</dd>
-</dl>
+    Si l'écouteur renvoie un tableau, ou une Promesse qui se résout en un tableau, alors tous les objets`ProxyInfo` après le premier représentent les basculements: si le proxy à la position N dans le tableau n'est pas accessible quand son `ProxyInfo.failoverTimeout` alors le navigateur essayez le proxy à la position N+1.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    S'il y a une erreur spécifiant les objets `proxy.ProxyInfo` objects, alors {{WebExtAPIRef("proxy.onError")}} sera appelé.
 
-<p>{{Compat("webextensions.api.proxy.onRequest", 10)}}</p>
+- `filter`
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un ensemble de filtres qui limite les événements qui seront envoyés à cet écouteur.
+- `extraInfoSpec` {{optional_inline}}
+  - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer une seule valeur, `"requestHeaders"`, pour inclure les en-têtes de demande dans l'objet de `details` transmis à l'écouteur.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Ce code intercepte les requêtes à <code>&lt;all_urls&gt;</code>, et les envoie par procuration si elles ne sont pas destinées à un cadre de premier niveau.</p>
+{{Compat("webextensions.api.proxy.onRequest", 10)}}
 
-<pre class="brush: js">function shouldProxyRequest(requestInfo) {
+## Exemples
+
+Ce code intercepte les requêtes à `<all_urls>`, et les envoie par procuration si elles ne sont pas destinées à un cadre de premier niveau.
+
+```js
+function shouldProxyRequest(requestInfo) {
   return requestInfo.parentFrameId != -1;
 }
 
@@ -100,6 +94,7 @@ function handleProxyRequest(requestInfo) {
   return {type: "direct"};
 }
 
-browser.proxy.onRequest.addListener(handleProxyRequest, {urls: ["&lt;all_urls&gt;"]});</pre>
+browser.proxy.onRequest.addListener(handleProxyRequest, {urls: ["<all_urls>"]});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

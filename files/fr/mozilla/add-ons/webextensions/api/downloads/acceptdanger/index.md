@@ -13,47 +13,44 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/acceptDanger
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La fonction <code><strong>acceptDanger</strong></code><strong><code>()</code></strong> de l'API {{WebExtAPIRef("downloads")}} invite l'utilisateur à accepter ou à annuler un téléchargement potentiellement dangereux.</p>
+La fonction **`acceptDanger`\*\***`()`\*\* de l'API {{WebExtAPIRef("downloads")}} invite l'utilisateur à accepter ou à annuler un téléchargement potentiellement dangereux.
 
-<p>Cette fonction ne peut pas être appelée à partir de scripts d'arrière-plan, uniquement dans les scripts qui s'exécutent dans une fenêtre visible (par exemple un navigateur ou une fenêtre d'action de page).</p>
+Cette fonction ne peut pas être appelée à partir de scripts d'arrière-plan, uniquement dans les scripts qui s'exécutent dans une fenêtre visible (par exemple un navigateur ou une fenêtre d'action de page).
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var prompting = browser.downloads.acceptDanger(
+```js
+var prompting = browser.downloads.acceptDanger(
   downloadId      // integer
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>downloadId</code></dt>
- <dd>Un <code>integer</code> représentant l'<code>id</code> de {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} en question.</dd>
-</dl>
+- `downloadId`
+  - : Un `integer` représentant l'`id` de {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} en question.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. Lorsque la boîte de dialogue se ferme, la promesse sera remplie sans arguments.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Lorsque la boîte de dialogue se ferme, la promesse sera remplie sans arguments.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.downloads.acceptDanger")}}</p>
+{{Compat("webextensions.api.downloads.acceptDanger")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -80,5 +77,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/acceptDanger
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

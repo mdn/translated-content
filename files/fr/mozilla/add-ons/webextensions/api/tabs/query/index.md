@@ -13,74 +13,73 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient tous les onglets qui ont les propriétés spécifiées, ou tous les onglets si aucune propriété n'est spécifiée.</p>
+Obtient tous les onglets qui ont les propriétés spécifiées, ou tous les onglets si aucune propriété n'est spécifiée.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var querying = browser.tabs.query(
+```js
+var querying = browser.tabs.query(
   queryInfo             // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>queryInfo</code></dt>
- <dd><p><code>object</code>. La fonction <code>query()</code> obtiendra uniquement les onglets dont les propriétés correspondent aux propriétés incluses ici. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.</p>
- <dl>
-  <dt><code>active</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si les onglets sont actifs dans leurs fenêtres.</dd>
-  <dt><code>audible</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si les onglets sont audibles.</dd>
-  <dt><code>autoDiscardable</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si les onglets peuvent être supprimés automatiquement par le navigateur lorsque les ressources sont faibles.</dd>
-  <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
-  <dd><code>string</code>. Utilisez cette option pour renvoyer uniquement les onglets dont l'ID est <code>cookieStoreId</code>. Cette option n'est disponible que si l'extension à la  <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> <code>"cookies"</code></dd>
-  <dt><code>currentWindow</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si les onglets sont dans la fenêtre actuelle.</dd>
-  <dt><code>discarded</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si les onglets sont supprimés. Un onglet supprimé est celui dont le contenu a été déchargé de la mémoire, mais est toujours visible dans la bande d'onglets. Son contenu est rechargé la prochaine fois qu'il est activé.***</dd>
-  <dt><code>hidden</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si les onglets sont cachés.</dd>
-  <dt><code>highlighted</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si les onglets sont en surbrillance.</dd>
-  <dt><code>index</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. La position des onglets dans leurs fenêtres.</dd>
-  <dt><code>muted</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si les onglets sont en sourdine.</dd>
-  <dt><code>lastFocusedWindow</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si les onglets sont dans la dernière fenêtre focalisée.</dd>
-  <dt><code>openerTabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. L'ID de l'onglet qui a ouvert cet onglet.</dd>
-  <dt><code>pinned</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si les onglets sont épinglés.</dd>
-  <dt><code>status</code>{{optional_inline}}</dt>
-  <dd>{{WebExtAPIRef('tabs.TabStatus')}}. Si les onglets ont terminé le chargement.</dd>
-  <dt><code>title</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Faites correspondre les titres de page à un motif.</dd>
-  <dt><code>url</code>{{optional_inline}}</dt>
-  <dd><code><code>string</code></code> ou <code><code>array</code> de <code><code>string</code></code></code>. Faites correspondre les onglets avec un ou plusieurs <a href="/fr/Add-ons/WebExtensions/Match_patterns">modèle de correspondance</a>. Notez que les identificateurs de fragment ne sont pas appariés.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. L'ID de la fenêtre parente, ou  {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} pour la fenêtre en cours.</dd>
-  <dt><code>windowType</code>{{optional_inline}}</dt>
-  <dd>{{WebExtAPIRef('tabs.WindowType')}}. Le type de fenêtre dans lequel les onglets y  sont.</dd>
- </dl>
- </dd>
-</dl>
+- `queryInfo`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`. La fonction `query()` obtiendra uniquement les onglets dont les propriétés correspondent aux propriétés incluses ici. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un <code>tableau</code> d'objets <code>{{WebExtAPIRef('tabs.Tab')}}</code>, contenant des informations sur chaque onglet correspondant. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+    - `active`{{optional_inline}}
+      - : `boolean`. Si les onglets sont actifs dans leurs fenêtres.
+    - `audible`{{optional_inline}}
+      - : `boolean`. Si les onglets sont audibles.
+    - `autoDiscardable`{{optional_inline}}
+      - : `boolean`. Si les onglets peuvent être supprimés automatiquement par le navigateur lorsque les ressources sont faibles.
+    - `cookieStoreId` {{optional_inline}}
+      - : `string`. Utilisez cette option pour renvoyer uniquement les onglets dont l'ID est `cookieStoreId`. Cette option n'est disponible que si l'extension à la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"cookies"`
+    - `currentWindow`{{optional_inline}}
+      - : `boolean`. Si les onglets sont dans la fenêtre actuelle.
+    - `discarded`{{optional_inline}}
+      - : `boolean`. Si les onglets sont supprimés. Un onglet supprimé est celui dont le contenu a été déchargé de la mémoire, mais est toujours visible dans la bande d'onglets. Son contenu est rechargé la prochaine fois qu'il est activé.\*\*\*
+    - `hidden`{{optional_inline}}
+      - : `boolean`. Si les onglets sont cachés.
+    - `highlighted`{{optional_inline}}
+      - : `boolean`. Si les onglets sont en surbrillance.
+    - `index`{{optional_inline}}
+      - : `integer`. La position des onglets dans leurs fenêtres.
+    - `muted`{{optional_inline}}
+      - : `boolean`. Si les onglets sont en sourdine.
+    - `lastFocusedWindow`{{optional_inline}}
+      - : `boolean`. Si les onglets sont dans la dernière fenêtre focalisée.
+    - `openerTabId`{{optional_inline}}
+      - : `integer`. L'ID de l'onglet qui a ouvert cet onglet.
+    - `pinned`{{optional_inline}}
+      - : `boolean`. Si les onglets sont épinglés.
+    - `status`{{optional_inline}}
+      - : {{WebExtAPIRef('tabs.TabStatus')}}. Si les onglets ont terminé le chargement.
+    - `title`{{optional_inline}}
+      - : `string`. Faites correspondre les titres de page à un motif.
+    - `url`{{optional_inline}}
+      - : `string` ou `array de string`. Faites correspondre les onglets avec un ou plusieurs [modèle de correspondance](/fr/Add-ons/WebExtensions/Match_patterns). Notez que les identificateurs de fragment ne sont pas appariés.
+    - `windowId`{{optional_inline}}
+      - : `integer`. L'ID de la fenêtre parente, ou  {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} pour la fenêtre en cours.
+    - `windowType`{{optional_inline}}
+      - : {{WebExtAPIRef('tabs.WindowType')}}. Le type de fenêtre dans lequel les onglets y  sont.
 
-<h2 id="Exemples">Exemples</h2>
+### Valeur retournée
 
-<p>Obtenez tous les onglets : </p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un `tableau` d'objets `{{WebExtAPIRef('tabs.Tab')}}`, contenant des informations sur chaque onglet correspondant. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-<pre class="brush: js">function logTabs(tabs) {
+## Exemples
+
+Obtenez tous les onglets :
+
+```js
+function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
     console.log(tab.url);
@@ -92,11 +91,13 @@ function onError(error) {
 }
 
 var querying = browser.tabs.query({});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>Obtenez tous les onglets dans la fenêtre actuelle :</p>
+Obtenez tous les onglets dans la fenêtre actuelle :
 
-<pre class="brush: js">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
     console.log(tab.url);
@@ -108,11 +109,13 @@ function onError(error) {
 }
 
 var querying = browser.tabs.query({currentWindow: true});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>Obtenez l'onglet actif dans la fenêtre actuelle :</p>
+Obtenez l'onglet actif dans la fenêtre actuelle :
 
-<pre class="brush: js">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
     console.log(tab.url);
@@ -124,11 +127,13 @@ function onError(error) {
 }
 
 var querying = browser.tabs.query({currentWindow: true, active: true});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>Obtenez des onglets pour toutes les URL HTTP et HTTPS sous "mozilla.org" ou l'un de ses sous-domaines :</p>
+Obtenez des onglets pour toutes les URL HTTP et HTTPS sous "mozilla.org" ou l'un de ses sous-domaines :
 
-<pre class="brush: js">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
     console.log(tab.url);
@@ -140,23 +145,22 @@ function onError(error) {
 }
 
 var querying = browser.tabs.query({url: "*://*.mozilla.org/*"});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.query")}}</p>
+{{Compat("webextensions.api.tabs.query")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -183,5 +187,4 @@ querying.then(logTabs, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

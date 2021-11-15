@@ -13,58 +13,54 @@ tags:
   - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient les détails sur une fenêtre, compte tenu de son identifiant. Les détails sont transmis à un rappel.</p>
+Obtient les détails sur une fenêtre, compte tenu de son identifiant. Les détails sont transmis à un rappel.
 
-<p>Il s'agit d'une fonction asynchrone qui renvoit une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoit une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var getting = browser.windows.get(
+```js
+var getting = browser.windows.get(
   windowId,              // integer
   getInfo                // optional object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>windowId</code></dt>
- <dd><code>integer</code>. L'ID de l'objet de fenêtre souhaité est retourné.</dd>
- <dt><code>getInfo</code>{{optional_inline}}</dt>
- <dd><p><code>object</code>. Contient des options pour filtrer le type de fenêtre.</p>
- <dl>
-  <dt><code>populate</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre. Les objets Tab ne contiennent que les propriétés <code>url</code>, <code>title</code> et <code>favIconUrl</code>  i le fichier manifeste de l'extension comprend la permission <code>"tabs"</code>.</dd>
-  <dt><code>windowTypes</code>{{optional_inline}}</dt>
-  <dd><code>Ensemble d'objets</code> {{WebExtAPIRef('windows.WindowType')}}. Si défini, le retour de {{WebExtAPIRef('windows.Window')}} sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur <code>['normal', 'panel', 'popup']</code>, avec des types de fenêtres <code>'panel'</code> qui sont limités aux propres fenêtres de l'extension.</dd>
- </dl>
- </dd>
-</dl>
+- `windowId`
+  - : `integer`. L'ID de l'objet de fenêtre souhaité est retourné.
+- `getInfo`{{optional_inline}}
 
-<div class="note"><p><strong>Note :</strong></p>
+  - : `object`. Contient des options pour filtrer le type de fenêtre.
 
-<p>Si fourni, le composant <code>windowTypes</code> de <code>getInfo</code> est ignoré. L'utilisation de  <code>windowTypes</code> a été dépréciée à partir de Firefox 62.</p>
-</div>
+    - `populate`{{optional_inline}}
+      - : `boolean`. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre. Les objets Tab ne contiennent que les propriétés `url`, `title` et `favIconUrl`  i le fichier manifeste de l'extension comprend la permission `"tabs"`.
+    - `windowTypes`{{optional_inline}}
+      - : `Ensemble d'objets` {{WebExtAPIRef('windows.WindowType')}}. Si défini, le retour de {{WebExtAPIRef('windows.Window')}} sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec des types de fenêtres `'panel'` qui sont limités aux propres fenêtres de l'extension.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+> **Note :**
+>
+> Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de  `windowTypes` a été dépréciée à partir de Firefox 62.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.</p>
+### Valeur de retour
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-<p>{{Compat("webextensions.api.windows.get",2)}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.windows.get",2)}}
 
-<p>Cet exemple obtient la fenêtre actuelle et enregistre les URL des onglets qu'il contient. Notez que vous aurez besoin des <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "onglets" pour accéder aux URL des onglets.</p>
+## Exemples
 
-<div class="note">
-<p><strong>Note :</strong> Cet exemple est un peu irréaliste: dans cette situation, vous utiliserez probablement  {{WebExtAPIRef("windows.getCurrent()")}}.</p>
-</div>
+Cet exemple obtient la fenêtre actuelle et enregistre les URL des onglets qu'il contient. Notez que vous aurez besoin des [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "onglets" pour accéder aux URL des onglets.
 
-<pre class="brush: js">function logTabs(windowInfo) {
+> **Note :** Cet exemple est un peu irréaliste: dans cette situation, vous utiliserez probablement  {{WebExtAPIRef("windows.getCurrent()")}}.
+
+```js
+function logTabs(windowInfo) {
   for (tabInfo of windowInfo.tabs) {
     console.log(tabInfo.url);
   }
@@ -74,23 +70,21 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
   var getting = browser.windows.get(tab.windowId, {populate: true});
   getting.then(logTabs, onError);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+>
+> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -117,5 +111,4 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

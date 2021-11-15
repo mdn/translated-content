@@ -12,135 +12,111 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Ce module fournit des informations sur votre extension et l'environnement dans lequel elle fonctionne.</p>
+Ce module fournit des informations sur votre extension et l'environnement dans lequel elle fonctionne.
 
-<p>Il fournit également des API de messagerie vous permettant de:</p>
+Il fournit également des API de messagerie vous permettant de:
 
-<ul>
- <li>Communiquer entre les différentes parties de votre extension.</li>
- <li>Communiquer avec d'autres extensions.</li>
- <li>Communiquer avec les applications natives.</li>
-</ul>
+- Communiquer entre les différentes parties de votre extension.
+- Communiquer avec d'autres extensions.
+- Communiquer avec les applications natives.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("runtime.Port")}}</dt>
- <dd>Représente une extrémité d'une connexion entre deux contextes spécifiques, qui peut être utilisée pour échanger des messages.</dd>
- <dt>{{WebExtAPIRef("runtime.MessageSender")}}</dt>
- <dd>
- <p>Contient des informations sur l'expéditeur d'un message ou d'une demande de connexion.</p>
- </dd>
- <dt>{{WebExtAPIRef("runtime.PlatformOs")}}</dt>
- <dd>Identifie le système d'exploitation du navigateur.</dd>
- <dt>{{WebExtAPIRef("runtime.PlatformArch")}}</dt>
- <dd>Identifie l'architecture du processeur du navigateur.</dd>
- <dt>{{WebExtAPIRef("runtime.PlatformInfo")}}</dt>
- <dd>Contient des informations sur la plate-forme utilisée par le navigateur.</dd>
- <dt>{{WebExtAPIRef("runtime.RequestUpdateCheckStatus")}}</dt>
- <dd>Résultat d'un appel à {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.</dd>
- <dt>{{WebExtAPIRef("runtime.OnInstalledReason")}}</dt>
- <dd>La raison pour laquelle l'événement {{WebExtAPIRef("runtime.onInstalled")}} est en cours d'envoi.</dd>
- <dt>{{WebExtAPIRef("runtime.OnRestartRequiredReason")}}</dt>
- <dd>La raison pour laquelle l'événement {{WebExtAPIRef("runtime.onRestartRequired")}} est en cours d'expédition.</dd>
-</dl>
+- {{WebExtAPIRef("runtime.Port")}}
+  - : Représente une extrémité d'une connexion entre deux contextes spécifiques, qui peut être utilisée pour échanger des messages.
+- {{WebExtAPIRef("runtime.MessageSender")}}
+  - : Contient des informations sur l'expéditeur d'un message ou d'une demande de connexion.
+- {{WebExtAPIRef("runtime.PlatformOs")}}
+  - : Identifie le système d'exploitation du navigateur.
+- {{WebExtAPIRef("runtime.PlatformArch")}}
+  - : Identifie l'architecture du processeur du navigateur.
+- {{WebExtAPIRef("runtime.PlatformInfo")}}
+  - : Contient des informations sur la plate-forme utilisée par le navigateur.
+- {{WebExtAPIRef("runtime.RequestUpdateCheckStatus")}}
+  - : Résultat d'un appel à {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
+- {{WebExtAPIRef("runtime.OnInstalledReason")}}
+  - : La raison pour laquelle l'événement {{WebExtAPIRef("runtime.onInstalled")}} est en cours d'envoi.
+- {{WebExtAPIRef("runtime.OnRestartRequiredReason")}}
+  - : La raison pour laquelle l'événement {{WebExtAPIRef("runtime.onRestartRequired")}} est en cours d'expédition.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{WebExtAPIRef("runtime.lastError")}}</dt>
- <dd>Cette valeur est définie lorsqu'une fonction asynchrone a une condition d'erreur qu'elle doit signaler à son appelant</dd>
- <dt>{{WebExtAPIRef("runtime.id")}}</dt>
- <dd>L'ID de l'extension</dd>
-</dl>
+- {{WebExtAPIRef("runtime.lastError")}}
+  - : Cette valeur est définie lorsqu'une fonction asynchrone a une condition d'erreur qu'elle doit signaler à son appelant
+- {{WebExtAPIRef("runtime.id")}}
+  - : L'ID de l'extension
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt>{{WebExtAPIRef("runtime.getBackgroundPage()")}}</dt>
- <dd>Récupère l'objet <a href="/fr/docs/Web/API/Window">Window</a> pour la page d'arrière-plan qui s'exécute dans l'extension en cours.</dd>
- <dt>{{WebExtAPIRef("runtime.openOptionsPage()")}}</dt>
- <dd>
- <p>Ouvre une <a href="/fr/Add-ons/WebExtensions/user_interface/Options_pages">page d'options</a> de votre extension.</p>
- </dd>
- <dt>{{WebExtAPIRef("runtime.getManifest()")}}</dt>
- <dd>Obtient le fichier <a href="/fr/Add-ons/WebExtensions/manifest.json">manifest.json</a> complet,  sérialisé en tant qu'objet.</dd>
- <dt>{{WebExtAPIRef("runtime.getURL()")}}</dt>
- <dd>Etant donné un chemin relatif de <a href="/fr/Add-ons/WebExtensions/manifest.json">manifest.json</a> à une ressource empaquetée avec l'extension, renvoie une URL entièrement qualifiée.</dd>
- <dt>{{WebExtAPIRef("runtime.setUninstallURL()")}}</dt>
- <dd>Définit une URL à visiter lorsque l'extension est désinstallée.</dd>
- <dt>{{WebExtAPIRef("runtime.reload()")}}</dt>
- <dd>Recharge l'extension.</dd>
- <dt>{{WebExtAPIRef("runtime.requestUpdateCheck()")}}</dt>
- <dd>Vérifie les mises à jour de cette extension.</dd>
- <dt>{{WebExtAPIRef("runtime.connect()")}}</dt>
- <dd>Établit une connexion d'un script de contenu au processus d'extension principal ou d'une extension à une extension différente.</dd>
- <dt>{{WebExtAPIRef("runtime.connectNative()")}}</dt>
- <dd>
- <div>Connecte l'extension à une application native sur l'ordinateur de l'utilisateur.</div>
- </dd>
- <dt>{{WebExtAPIRef("runtime.sendMessage()")}}</dt>
- <dd>Envoie un seul message aux écouteurs d'événement dans votre extension ou une extension différente. Similaire à  {{WebExtAPIRef('runtime.connect')}} mais n'envoie qu'un seul message, avec une réponse facultative.</dd>
- <dt>{{WebExtAPIRef("runtime.sendNativeMessage()")}}</dt>
- <dd>Envoie un seul message d'une extension à une application native.</dd>
- <dt>{{WebExtAPIRef("runtime.getPlatformInfo()")}}</dt>
- <dd>Renvoie des informations sur la plate-forme actuelle.</dd>
- <dt>{{WebExtAPIRef("runtime.getBrowserInfo()")}}</dt>
- <dd>Renvoie des informations sur le navigateur dans lequel cette extension est installée.</dd>
- <dt>{{WebExtAPIRef("runtime.getPackageDirectoryEntry()")}}</dt>
- <dd>Renvoie un DirectoryEntry pour le répertoire du package.</dd>
-</dl>
+- {{WebExtAPIRef("runtime.getBackgroundPage()")}}
+  - : Récupère l'objet [Window](/fr/docs/Web/API/Window) pour la page d'arrière-plan qui s'exécute dans l'extension en cours.
+- {{WebExtAPIRef("runtime.openOptionsPage()")}}
+  - : Ouvre une [page d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages) de votre extension.
+- {{WebExtAPIRef("runtime.getManifest()")}}
+  - : Obtient le fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json) complet,  sérialisé en tant qu'objet.
+- {{WebExtAPIRef("runtime.getURL()")}}
+  - : Etant donné un chemin relatif de [manifest.json](/fr/Add-ons/WebExtensions/manifest.json) à une ressource empaquetée avec l'extension, renvoie une URL entièrement qualifiée.
+- {{WebExtAPIRef("runtime.setUninstallURL()")}}
+  - : Définit une URL à visiter lorsque l'extension est désinstallée.
+- {{WebExtAPIRef("runtime.reload()")}}
+  - : Recharge l'extension.
+- {{WebExtAPIRef("runtime.requestUpdateCheck()")}}
+  - : Vérifie les mises à jour de cette extension.
+- {{WebExtAPIRef("runtime.connect()")}}
+  - : Établit une connexion d'un script de contenu au processus d'extension principal ou d'une extension à une extension différente.
+- {{WebExtAPIRef("runtime.connectNative()")}}
+  - : Connecte l'extension à une application native sur l'ordinateur de l'utilisateur.
+- {{WebExtAPIRef("runtime.sendMessage()")}}
+  - : Envoie un seul message aux écouteurs d'événement dans votre extension ou une extension différente. Similaire à  {{WebExtAPIRef('runtime.connect')}} mais n'envoie qu'un seul message, avec une réponse facultative.
+- {{WebExtAPIRef("runtime.sendNativeMessage()")}}
+  - : Envoie un seul message d'une extension à une application native.
+- {{WebExtAPIRef("runtime.getPlatformInfo()")}}
+  - : Renvoie des informations sur la plate-forme actuelle.
+- {{WebExtAPIRef("runtime.getBrowserInfo()")}}
+  - : Renvoie des informations sur le navigateur dans lequel cette extension est installée.
+- {{WebExtAPIRef("runtime.getPackageDirectoryEntry()")}}
+  - : Renvoie un DirectoryEntry pour le répertoire du package.
 
-<h2 id="Evénements">Evénements</h2>
+## Evénements
 
-<dl>
- <dt>{{WebExtAPIRef("runtime.onStartup")}}</dt>
- <dd>Lancé lorsqu'un premier profil a cette extension installée. Cet événement n'est pas déclenché lorsqu'un profil de navigation privée est démarré.</dd>
- <dt>{{WebExtAPIRef("runtime.onInstalled")}}</dt>
- <dd>Lancé lorsque l'extension est installée pour la première fois, lorsque l'extension est mise à jour vers une nouvelle version et lorsque le navigateur est mis à jour vers une nouvelle version.</dd>
- <dt>{{WebExtAPIRef("runtime.onSuspend")}}</dt>
- <dd>Envoyé sur la page de l'événement juste avant le déchargement de l'extension. Cela donne à l'extension l'opportunité de faire un peu de nettoyage.</dd>
- <dt>{{WebExtAPIRef("runtime.onSuspendCanceled")}}</dt>
- <dd>Envoyé après {{WebExtAPIRef("runtime.onSuspend")}} pour indiquer que l'extension ne sera pas déchargée après tout.</dd>
- <dt>{{WebExtAPIRef("runtime.onUpdateAvailable")}}</dt>
- <dd>Lancé lorsqu'une mise à jour est disponible, mais n'est pas installé immédiatement car l'extension est en cours d'exécution.</dd>
- <dt>{{WebExtAPIRef("runtime.onBrowserUpdateAvailable")}} {{deprecated_inline}}</dt>
- <dd>Lancé lorsqu'une mise à jour pour le navigateur est disponible, mais n'est pas installée immédiatement car un redémarrage du navigateur est requis.</dd>
- <dt>{{WebExtAPIRef("runtime.onConnect")}}</dt>
- <dd>Lancé lorsqu'une connexion est établie avec un processus d'extension ou un script de contenu.</dd>
- <dt>{{WebExtAPIRef("runtime.onConnectExternal")}}</dt>
- <dd>Lancé lorsqu'une connexion est établie avec une autre extension.</dd>
- <dt>{{WebExtAPIRef("runtime.onMessage")}}</dt>
- <dd>Lancé lorsqu'un message est envoyé par un processus d'extension ou un script de contenu.</dd>
- <dt>{{WebExtAPIRef("runtime.onMessageExternal")}}</dt>
- <dd>Lancé lorsqu'un message est envoyé depuis un autre poste. Ne peut pas être utilisé dans un script de contenu.</dd>
- <dt>{{WebExtAPIRef("runtime.onRestartRequired")}}</dt>
- <dd>Lancé lorsque le périphérique doit être redémarré.</dd>
-</dl>
+- {{WebExtAPIRef("runtime.onStartup")}}
+  - : Lancé lorsqu'un premier profil a cette extension installée. Cet événement n'est pas déclenché lorsqu'un profil de navigation privée est démarré.
+- {{WebExtAPIRef("runtime.onInstalled")}}
+  - : Lancé lorsque l'extension est installée pour la première fois, lorsque l'extension est mise à jour vers une nouvelle version et lorsque le navigateur est mis à jour vers une nouvelle version.
+- {{WebExtAPIRef("runtime.onSuspend")}}
+  - : Envoyé sur la page de l'événement juste avant le déchargement de l'extension. Cela donne à l'extension l'opportunité de faire un peu de nettoyage.
+- {{WebExtAPIRef("runtime.onSuspendCanceled")}}
+  - : Envoyé après {{WebExtAPIRef("runtime.onSuspend")}} pour indiquer que l'extension ne sera pas déchargée après tout.
+- {{WebExtAPIRef("runtime.onUpdateAvailable")}}
+  - : Lancé lorsqu'une mise à jour est disponible, mais n'est pas installé immédiatement car l'extension est en cours d'exécution.
+- {{WebExtAPIRef("runtime.onBrowserUpdateAvailable")}} {{deprecated_inline}}
+  - : Lancé lorsqu'une mise à jour pour le navigateur est disponible, mais n'est pas installée immédiatement car un redémarrage du navigateur est requis.
+- {{WebExtAPIRef("runtime.onConnect")}}
+  - : Lancé lorsqu'une connexion est établie avec un processus d'extension ou un script de contenu.
+- {{WebExtAPIRef("runtime.onConnectExternal")}}
+  - : Lancé lorsqu'une connexion est établie avec une autre extension.
+- {{WebExtAPIRef("runtime.onMessage")}}
+  - : Lancé lorsqu'un message est envoyé par un processus d'extension ou un script de contenu.
+- {{WebExtAPIRef("runtime.onMessageExternal")}}
+  - : Lancé lorsqu'un message est envoyé depuis un autre poste. Ne peut pas être utilisé dans un script de contenu.
+- {{WebExtAPIRef("runtime.onRestartRequired")}}
+  - : Lancé lorsque le périphérique doit être redémarré.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<div>
+{{Compat("webextensions.api.runtime")}}
 
+{{WebExtExamples("h2")}}
 
-<p>{{Compat("webextensions.api.runtime")}}</p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div>{{WebExtExamples("h2")}}</div>
-
-<div></div>
-</div>
-
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -167,5 +143,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

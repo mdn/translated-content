@@ -12,41 +12,41 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Utilisez cette fonction pour créer un objet {{WebExtAPIRef("webRequest.StreamFilter")}} pour une requête particulière.<br>
- Vous pouvez ensuite utiliser le filtre de flux pour surveiller et modifier la réponse. Vous appelez typiquement cette fonction à partir d'un écouteur d'événements <code>webRequest</code>.</p>
+Utilisez cette fonction pour créer un objet {{WebExtAPIRef("webRequest.StreamFilter")}} pour une requête particulière.
+Vous pouvez ensuite utiliser le filtre de flux pour surveiller et modifier la réponse. Vous appelez typiquement cette fonction à partir d'un écouteur d'événements `webRequest`.
 
-<p>Pour utiliser cette API, vous devez avoir la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permission de l'API</a> "webRequestBlocking", ainsi que les permissions normales nécessaires à l'auditeur de l'événement (la permission "webRequest" et la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">permission hôte </a>pour l'hôte).</p>
+Pour utiliser cette API, vous devez avoir la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "webRequestBlocking", ainsi que les permissions normales nécessaires à l'auditeur de l'événement (la permission "webRequest" et la [permission hôte ](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)pour l'hôte).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var filter = browser.webRequest.filterResponseData(
+```js
+var filter = browser.webRequest.filterResponseData(
   requestId       // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>requestId</code></dt>
- <dd><code>string</code>. ID de la requête à filtrer. Vous pouvez l'obtenir à partir de l'objet de <code>details</code> qui est passé dans n'importe quel écouteur d'événement <code>webRequest</code>.</dd>
-</dl>
+- `requestId`
+  - : `string`. ID de la requête à filtrer. Vous pouvez l'obtenir à partir de l'objet de `details` qui est passé dans n'importe quel écouteur d'événement `webRequest`.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Un objet {{WebExtAPIRef("webRequest.StreamFilter")}} que vous pouvez utiliser pour surveiller et modifier la réponse.</p>
+Un objet {{WebExtAPIRef("webRequest.StreamFilter")}} que vous pouvez utiliser pour surveiller et modifier la réponse.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple, tiré de l'extension <a href="https://github.com/mdn/webextensions-examples/tree/master/http-response">http-response</a>, crée un filtre dans  {{WebExtAPIRef("webRequest.onBeforeRequest")}} et l'utilise pour modifier la réponse :</p>
+Cet exemple, tiré de l'extension [http-response](https://github.com/mdn/webextensions-examples/tree/master/http-response), crée un filtre dans  {{WebExtAPIRef("webRequest.onBeforeRequest")}} et l'utilise pour modifier la réponse :
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
 
-  filter.ondata = event =&gt; {
+  filter.ondata = event => {
     let str = decoder.decode(event.data, {stream: true});
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
@@ -63,10 +63,10 @@ browser.webRequest.onBeforeRequest.addListener(
   {urls: ["https://example.com/*"], types: ["main_frame"]},
   ["blocking"]
 );
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.webRequest.filterResponseData", 10)}}</p>
+{{Compat("webextensions.api.webRequest.filterResponseData", 10)}}

@@ -13,47 +13,38 @@ tags:
   - captivePortal
 translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Déterminer l'état du portail captif de la connexion de l'utilisateur. Un portail captif est une page web qui s'affiche lorsqu'un utilisateur se connecte pour la première fois à un réseau Wi-Fi. L'utilisateur fournit des informations ou agit sur la page web du portail captif afin d'obtenir un accès plus large aux ressources du réseau, par exemple en acceptant les conditions générales ou en effectuant un paiement.</p>
+Déterminer l'état du portail captif de la connexion de l'utilisateur. Un portail captif est une page web qui s'affiche lorsqu'un utilisateur se connecte pour la première fois à un réseau Wi-Fi. L'utilisateur fournit des informations ou agit sur la page web du portail captif afin d'obtenir un accès plus large aux ressources du réseau, par exemple en acceptant les conditions générales ou en effectuant un paiement.
 
-<p>Pour utiliser cette API, vous devez disposer de la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "captivePortal".</p>
+Pour utiliser cette API, vous devez disposer de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "captivePortal".
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{WebExtAPIRef("captivePortal.canonicalURL")}}</dt>
- <dd>Renvoyer l'URL canonique de la page de détection du portail des prisonniers. En lecture seule.</dd>
-</dl>
+- {{WebExtAPIRef("captivePortal.canonicalURL")}}
+  - : Renvoyer l'URL canonique de la page de détection du portail des prisonniers. En lecture seule.
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt>{{WebExtAPIRef("captivePortal.getLastChecked()")}}</dt>
- <dd>Retourne le temps, en millisecondes, depuis que la dernière demande a été complétée.</dd>
- <dt>{{WebExtAPIRef("captivePortal.getState()")}}</dt>
- <dd>Renvoie l'état du portail comme étant inconnu, <code>unknown</code>, <code>not_captive</code>, <code>unlocked_portal</code>, ou <code>locked_portal</code>.</dd>
-</dl>
+- {{WebExtAPIRef("captivePortal.getLastChecked()")}}
+  - : Retourne le temps, en millisecondes, depuis que la dernière demande a été complétée.
+- {{WebExtAPIRef("captivePortal.getState()")}}
+  - : Renvoie l'état du portail comme étant inconnu, `unknown`, `not_captive`, `unlocked_portal`, ou `locked_portal`.
 
-<h2 id="Evénements">Evénements</h2>
+## Evénements
 
-<dl>
- <dt>{{WebExtAPIRef("captivePortal.onConnectivityAvailable")}}</dt>
- <dd>S'allume lorsque le service de portail captif détermine que l'utilisateur peut se connecter à l'internet.</dd>
- <dt>{{WebExtAPIRef("captivePortal.onStateChanged")}}</dt>
- <dd>
- <p>S'allume lorsque l'état de portail captif change</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("captivePortal.onConnectivityAvailable")}}
+  - : S'allume lorsque le service de portail captif détermine que l'utilisateur peut se connecter à l'internet.
+- {{WebExtAPIRef("captivePortal.onStateChanged")}}
+  - : S'allume lorsque l'état de portail captif change
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.captivePortal")}}</p>
+{{Compat("webextensions.api.captivePortal")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -80,5 +71,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

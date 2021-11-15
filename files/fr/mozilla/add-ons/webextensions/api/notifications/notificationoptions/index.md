@@ -12,75 +12,72 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Ce type contient les données nécessaires pour :</p>
+Ce type contient les données nécessaires pour :
 
-<ul>
- <li>créer une notification avec {{WebExtAPIRef("notifications.create()")}},</li>
- <li>mettre à jour une notification avec {{WebExtAPIRef("notifications.update()")}}.</li>
-</ul>
+- créer une notification avec {{WebExtAPIRef("notifications.create()")}},
+- mettre à jour une notification avec {{WebExtAPIRef("notifications.update()")}}.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets qui contiennent les propriétés listées ci-dessous.</p>
+Les valeurs de ce type sont des objets qui contiennent les propriétés listées ci-dessous.
 
-<p>Les trois premières propriétés - <code>type</code>, <code>title</code>, <code>message</code> - sont obligatoires pour {{WebExtAPIRef("notifications.create()")}}, mais pas avec {{WebExtAPIRef("notifications.update()")}}. Firefox ne supporte que les propriétés <code>type</code>, <code>title</code>, <code>message</code>, et <code>iconUrl</code> pour le moment, et le seul <code>type</code> disponible est <code>'basic'</code>.</p>
+Les trois premières propriétés - `type`, `title`, `message` - sont obligatoires pour {{WebExtAPIRef("notifications.create()")}}, mais pas avec {{WebExtAPIRef("notifications.update()")}}. Firefox ne supporte que les propriétés `type`, `title`, `message`, et `iconUrl` pour le moment, et le seul `type` disponible est `'basic'`.
 
-<dl>
- <dt><code>type</code></dt>
- <dd>{{WebExtAPIRef("notifications.TemplateType")}}. Le type de notification que vous voulez. Selon votre choix ici, certaines propriétés seront soit nécéssaires, soit interdites.</dd>
- <dt><code>message</code></dt>
- <dd><code>string</code>. Le contenu de la notification</dd>
- <dt><code>title</code></dt>
- <dd><code>string</code>. Le titre de la notification</dd>
- <dt><code>iconUrl</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Une URL correspondant vers une icône à afficher dans la notification. Ça peut être une URL de donnée, une URL blob, une URL http ou https, ou une <a href="/fr/Add-ons/WebExtensions/Chrome_incompatibilities#Relative_URLs">l'URL relative</a> d'un fichier de l'extension.</dd>
- <dt><code>contextMessage</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Du texte supplémentaire à afficher.</dd>
- <dt><code>priority</code>{{optional_inline}}</dt>
- <dd><code>number</code>. La priorité de cette notification. Ça peut être 0, 1, or 2. La valeur par défaut est 0.</dd>
- <dt><code>eventTime</code>{{optional_inline}}</dt>
- <dd><code>number</code>. Un timestamp en millisecondes pour cette notification <a href="https://fr.wikipedia.org/wiki/Temps_Unix">depuis le timestamp 0</a>.</dd>
- <dt><code>buttons</code>{{optional_inline}}</dt>
- <dd><p><code>array</code> de <code>button</code>. Un tableau pouvant contenir jusqu'à deux boutons à afficher dans la notification. Vous pouvez réagir aux clics sur ces boutons grâce à {{WebExtAPIRef("notifications.onButtonClicked")}}. Chaque bouton est un objet avec ces propriétés :</p>
- <dl>
-  <dt><code>title</code></dt>
-  <dd><code>string</code>. Le texte du bouton.</dd>
-  <dt><code>iconUrl</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Une URL pointant vers l'icône de ce bouton.</dd>
- </dl>
- </dd>
- <dt><code>imageUrl</code></dt>
- <dd>
- <p><code>string</code>. Une URL pointant vers une image à utiliser dans la notification. Ça peut être une URL de donnée, une URL blob, une URL http ou https, ou une <a href="/fr/Add-ons/WebExtensions/Chrome_incompatibilities#Relative_URLs">l'URL relative</a> d'un fichier de l'extension.</p>
+- `type`
+  - : {{WebExtAPIRef("notifications.TemplateType")}}. Le type de notification que vous voulez. Selon votre choix ici, certaines propriétés seront soit nécéssaires, soit interdites.
+- `message`
+  - : `string`. Le contenu de la notification
+- `title`
+  - : `string`. Le titre de la notification
+- `iconUrl`{{optional_inline}}
+  - : `string`. Une URL correspondant vers une icône à afficher dans la notification. Ça peut être une URL de donnée, une URL blob, une URL http ou https, ou une [l'URL relative](/fr/Add-ons/WebExtensions/Chrome_incompatibilities#Relative_URLs) d'un fichier de l'extension.
+- `contextMessage`{{optional_inline}}
+  - : `string`. Du texte supplémentaire à afficher.
+- `priority`{{optional_inline}}
+  - : `number`. La priorité de cette notification. Ça peut être 0, 1, or 2. La valeur par défaut est 0.
+- `eventTime`{{optional_inline}}
+  - : `number`. Un timestamp en millisecondes pour cette notification [depuis le timestamp 0](https://fr.wikipedia.org/wiki/Temps_Unix).
+- `buttons`{{optional_inline}}
 
- <p><em>Cette propriété est utilisable seuleument si le <code>type</code> de la notification est <code>'image'</code>. Dans ce cas, cette propriété sera obligatoire si l'objet <code>NotificationOptions</code> est utilisé avec {{WebExtAPIRef("notifications.create()")}}, mais optionel avec </em><em>{{WebExtAPIRef("notifications.update()")}}.</em></p>
- </dd>
- <dt><code>items</code></dt>
- <dd><p><code>array</code> of <code>item</code>. Un tableau d'éléments à inclure dans la notification. Selon les paramètres de notification du système d'exploitation, certains éléments que vous souhaitez afficher pourraient ne pas l'être. Chaque élément est un objet avec les propriétés suivantes :</p>
- <dl>
-  <dt><code>title</code></dt>
-  <dd><code>string</code>. Le titre de cet élément.</dd>
-  <dt><code>message</code></dt>
-  <dd><code>string</code>. Le message à afficher pour cet élément.</dd>
- </dl>
- <p><em>Cette propriété est utilisable seuleument si le <code>type</code> de la notification est <code>'list'</code>. Dans ce cas, cette propriété sera obligatoire si l'objet <code>NotificationOptions</code> est utilisé avec {{WebExtAPIRef("notifications.create()")}}, mais optionel avec </em><em>{{WebExtAPIRef("notifications.update()")}}.</em></p></dd>
- <dt><code>progress</code></dt>
- <dd><code>integer</code>. Une valeur entre 0 et 100, qui représente l'avancée actuelle d'un indicateur de progression. <em>Cette propriété est utilisable seuleument si le <code>type</code> de la notification est <code>'progress'</code>. Dans ce cas, cette propriété sera obligatoire si l'objet <code>NotificationOptions</code> est utilisé avec {{WebExtAPIRef("notifications.create()")}}, mais optionel avec </em><em>{{WebExtAPIRef("notifications.update()")}}.</em></dd>
-</dl>
+  - : `array` de `button`. Un tableau pouvant contenir jusqu'à deux boutons à afficher dans la notification. Vous pouvez réagir aux clics sur ces boutons grâce à {{WebExtAPIRef("notifications.onButtonClicked")}}. Chaque bouton est un objet avec ces propriétés :
 
-<p>Notez que les propriétés <code>appIconMaskUrl</code> et <code>isClickable</code> ne sont pas supportées.</p>
+    - `title`
+      - : `string`. Le texte du bouton.
+    - `iconUrl`{{optional_inline}}
+      - : `string`. Une URL pointant vers l'icône de ce bouton.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- `imageUrl`
 
-<p>{{Compat("webextensions.api.notifications.NotificationOptions")}}</p>
+  - : `string`. Une URL pointant vers une image à utiliser dans la notification. Ça peut être une URL de donnée, une URL blob, une URL http ou https, ou une [l'URL relative](/fr/Add-ons/WebExtensions/Chrome_incompatibilities#Relative_URLs) d'un fichier de l'extension.
 
-<p>{{WebExtExamples}}</p>
+    _Cette propriété est utilisable seuleument si le `type` de la notification est `'image'`. Dans ce cas, cette propriété sera obligatoire si l'objet `NotificationOptions` est utilisé avec {{WebExtAPIRef("notifications.create()")}}, mais optionel avec_ _{{WebExtAPIRef("notifications.update()")}}._
 
-<div class="note"><p><strong>Note :</strong></p>
+- `items`
 
-<p>Cette API est basée sur l'API chromium <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a>.</p>
+  - : `array` of `item`. Un tableau d'éléments à inclure dans la notification. Selon les paramètres de notification du système d'exploitation, certains éléments que vous souhaitez afficher pourraient ne pas l'être. Chaque élément est un objet avec les propriétés suivantes :
 
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+    - `title`
+      - : `string`. Le titre de cet élément.
+    - `message`
+      - : `string`. Le message à afficher pour cet élément.
+
+    _Cette propriété est utilisable seuleument si le `type` de la notification est `'list'`. Dans ce cas, cette propriété sera obligatoire si l'objet `NotificationOptions` est utilisé avec {{WebExtAPIRef("notifications.create()")}}, mais optionel avec_ _{{WebExtAPIRef("notifications.update()")}}._
+
+- `progress`
+  - : `integer`. Une valeur entre 0 et 100, qui représente l'avancée actuelle d'un indicateur de progression. _Cette propriété est utilisable seuleument si le `type` de la notification est `'progress'`. Dans ce cas, cette propriété sera obligatoire si l'objet `NotificationOptions` est utilisé avec {{WebExtAPIRef("notifications.create()")}}, mais optionel avec_ _{{WebExtAPIRef("notifications.update()")}}._
+
+Notez que les propriétés `appIconMaskUrl` et `isClickable` ne sont pas supportées.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.notifications.NotificationOptions")}}
+
+{{WebExtExamples}}
+
+> **Note :**
+>
+> Cette API est basée sur l'API chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

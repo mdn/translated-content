@@ -13,48 +13,44 @@ tags:
   - events
 translation_of: Mozilla/Add-ons/WebExtensions/API/events/Event
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet qui permet l'ajout et la suppression d'écouteurs pour un événement de navigateur.</p>
+Un objet qui permet l'ajout et la suppression d'écouteurs pour un événement de navigateur.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets.</p>
+Les valeurs de ce type sont des objets.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{WebExtAPIRef("events.Event.addListener()")}}</dt>
- <dd>Enregistre un rappel d'écouteur d'événement sur un événement.</dd>
- <dt>{{WebExtAPIRef("events.Event.removeListener()")}}</dt>
- <dd>Désinscrit un rappel d'écouteur d'événement d'un événement.</dd>
- <dt>{{WebExtAPIRef("events.Event.hasListener()")}}</dt>
- <dd>Teste l'état d'enregistrement d'un écouteur.</dd>
- <dt>{{WebExtAPIRef("events.Event.hasListeners()")}}</dt>
- <dd>Teste si des écouteurs sont enregistrés pour l'événement.</dd>
- <dt>{{WebExtAPIRef("events.Event.addRules()")}}</dt>
- <dd>Enregistre les règles pour gérer les événements.</dd>
- <dt>{{WebExtAPIRef("events.Event.getRules()")}}</dt>
- <dd>Renvoie les règles actuellement enregistrées.</dd>
- <dt>{{WebExtAPIRef("events.Event.removeRules()")}}</dt>
- <dd>Annule l'inscription des règles actuellement enregistrées.</dd>
-</dl>
+- {{WebExtAPIRef("events.Event.addListener()")}}
+  - : Enregistre un rappel d'écouteur d'événement sur un événement.
+- {{WebExtAPIRef("events.Event.removeListener()")}}
+  - : Désinscrit un rappel d'écouteur d'événement d'un événement.
+- {{WebExtAPIRef("events.Event.hasListener()")}}
+  - : Teste l'état d'enregistrement d'un écouteur.
+- {{WebExtAPIRef("events.Event.hasListeners()")}}
+  - : Teste si des écouteurs sont enregistrés pour l'événement.
+- {{WebExtAPIRef("events.Event.addRules()")}}
+  - : Enregistre les règles pour gérer les événements.
+- {{WebExtAPIRef("events.Event.getRules()")}}
+  - : Renvoie les règles actuellement enregistrées.
+- {{WebExtAPIRef("events.Event.removeRules()")}}
+  - : Annule l'inscription des règles actuellement enregistrées.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.events.Event")}}</p>
+{{Compat("webextensions.api.events.Event")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.events`](https://developer.chrome.com/extensions/events). Cette documentation est dérivée de [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/events"><code>chrome.events</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json"><code>events.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -81,5 +77,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/events/Event
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

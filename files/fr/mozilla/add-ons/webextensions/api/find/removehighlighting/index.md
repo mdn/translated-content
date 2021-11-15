@@ -12,28 +12,30 @@ tags:
   - removeHighlighting
 translation_of: Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Supprimer toute mise en évidence d'une recherche précédente qui a été appliquée par un appel précédent à {{WebExtAPIRef("highlightResults()")}}, ou par l'interface utilisateur native du navigateur.</p>
+Supprimer toute mise en évidence d'une recherche précédente qui a été appliquée par un appel précédent à {{WebExtAPIRef("highlightResults()")}}, ou par l'interface utilisateur native du navigateur.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.find.removeHighlighting()
-</pre>
+```js
+browser.find.removeHighlighting()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun</p>
+Aucun
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Aucune.</p>
+Aucune.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.find.removeHighlighting", 10)}}</p>
+{{Compat("webextensions.api.find.removeHighlighting", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">browser.find.removeHighlighting();
-</pre>
+```js
+browser.find.removeHighlighting();
+```

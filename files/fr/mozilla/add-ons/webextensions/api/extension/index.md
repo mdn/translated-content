@@ -12,73 +12,61 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Utilitaires liés à votre extension. Obtenez des URL vers des packages de ressources avec votre extension, récupérez l'objet <code><a href="/fr/docs/Web/API/Window">Window</a></code> pour les pages de votre extension, récupérez les valeurs pour différents paramètres. Notez que les API de messagerie de ce module sont déconseillées au profit des API équivalentes dans le module <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></code>.</p>
+Utilitaires liés à votre extension. Obtenez des URL vers des packages de ressources avec votre extension, récupérez l'objet [`Window`](/fr/docs/Web/API/Window) pour les pages de votre extension, récupérez les valeurs pour différents paramètres. Notez que les API de messagerie de ce module sont déconseillées au profit des API équivalentes dans le module [`runtime`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime).
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("extension.ViewType")}}</dt>
- <dd>Le type de vue d'extension.</dd>
-</dl>
+- {{WebExtAPIRef("extension.ViewType")}}
+  - : Le type de vue d'extension.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{WebExtAPIRef("extension.lastError")}}</dt>
- <dd>Défini pour la durée de vie d'un rappel si une extension ansychronique a généré une erreur. Si aucune erreur n'est survenue, lastError sera <em>indéfini</em>.</dd>
- <dt>{{WebExtAPIRef("extension.inIncognitoContext")}}</dt>
- <dd>True pour les scripts de contenu s'exécutant dans les onglets de navigation privée et pour les pages d'extension exécutées dans un processus de navigation privée. Ce dernier ne s'applique qu'aux extensions avec 'incognito_behavior'.</dd>
-</dl>
+- {{WebExtAPIRef("extension.lastError")}}
+  - : Défini pour la durée de vie d'un rappel si une extension ansychronique a généré une erreur. Si aucune erreur n'est survenue, lastError sera _indéfini_.
+- {{WebExtAPIRef("extension.inIncognitoContext")}}
+  - : True pour les scripts de contenu s'exécutant dans les onglets de navigation privée et pour les pages d'extension exécutées dans un processus de navigation privée. Ce dernier ne s'applique qu'aux extensions avec 'incognito_behavior'.
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt>{{WebExtAPIRef("extension.getBackgroundPage()")}}</dt>
- <dd>Renvoie l'objet <code><a href="/fr/docs/Web/API/Window">Window</a></code> pour la page d'arrière-plan qui s'exécute dans l'extension en cours. Renvoie null si l'extension n'a pas de page d'arrière-plan.</dd>
- <dt>{{WebExtAPIRef("extension.getExtensionTabs()")}} {{deprecated_inline}}</dt>
- <dd>Renvoie un tableau des objets de la <a href="/fr/docs/Web/API/Window">Window</a> JavaScript pour chacun des onglets qui s'exécutent dans l'extension actuelle.</dd>
- <dt>{{WebExtAPIRef("extension.getURL()")}} {{deprecated_inline}}</dt>
- <dd>Convertit un chemin relatif dans un répertoire d'installation d'extension en une URL complète.</dd>
- <dt>{{WebExtAPIRef("extension.getViews()")}}</dt>
- <dd>Renvoie un tableau des objets <code><a href="/fr/docs/Web/API/Window">Window</a></code> pour chacune des pages exécutées dans l'extension en cours.</dd>
- <dt>{{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}}</dt>
- <dd>Récupère l'état de l'accès de l'extension en mode navigation privée (déterminé par la case à cocher "Autorisé dans navigation privée").</dd>
- <dt>{{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}}</dt>
- <dd>Récupère l'état de l'accès de l'extension au schéma 'file://' (déterminé par la case à cocher 'Autoriser l'accès aux URL des fichiers').***</dd>
- <dt>{{WebExtAPIRef("extension.sendRequest()")}} {{deprecated_inline}}</dt>
- <dd>Envoie une seule requête aux autres écouteurs de l'extension.</dd>
- <dt>{{WebExtAPIRef("extension.setUpdateUrlData()")}}</dt>
- <dd>Définit la valeur du paramètre CGI AP utilisé dans l'URL de mise à jour de l'extension. Cette valeur est ignorée pour les extensions hébergées dans le magasin du fournisseur du navigateur.</dd>
-</dl>
+- {{WebExtAPIRef("extension.getBackgroundPage()")}}
+  - : Renvoie l'objet [`Window`](/fr/docs/Web/API/Window) pour la page d'arrière-plan qui s'exécute dans l'extension en cours. Renvoie null si l'extension n'a pas de page d'arrière-plan.
+- {{WebExtAPIRef("extension.getExtensionTabs()")}} {{deprecated_inline}}
+  - : Renvoie un tableau des objets de la [Window](/fr/docs/Web/API/Window) JavaScript pour chacun des onglets qui s'exécutent dans l'extension actuelle.
+- {{WebExtAPIRef("extension.getURL()")}} {{deprecated_inline}}
+  - : Convertit un chemin relatif dans un répertoire d'installation d'extension en une URL complète.
+- {{WebExtAPIRef("extension.getViews()")}}
+  - : Renvoie un tableau des objets [`Window`](/fr/docs/Web/API/Window) pour chacune des pages exécutées dans l'extension en cours.
+- {{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}}
+  - : Récupère l'état de l'accès de l'extension en mode navigation privée (déterminé par la case à cocher "Autorisé dans navigation privée").
+- {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}}
+  - : Récupère l'état de l'accès de l'extension au schéma 'file://' (déterminé par la case à cocher 'Autoriser l'accès aux URL des fichiers').\*\*\*
+- {{WebExtAPIRef("extension.sendRequest()")}} {{deprecated_inline}}
+  - : Envoie une seule requête aux autres écouteurs de l'extension.
+- {{WebExtAPIRef("extension.setUpdateUrlData()")}}
+  - : Définit la valeur du paramètre CGI AP utilisé dans l'URL de mise à jour de l'extension. Cette valeur est ignorée pour les extensions hébergées dans le magasin du fournisseur du navigateur.
 
-<h2 id="Evénements">Evénements</h2>
+## Evénements
 
-<dl>
- <dt>{{WebExtAPIRef("extension.onRequest")}} {{deprecated_inline}}</dt>
- <dd>Lancé lorsqu'une requête est envoyée par un processus d'extension ou un script de contenu.</dd>
- <dt>{{WebExtAPIRef("extension.onRequestExternal")}} {{deprecated_inline}}</dt>
- <dd>Lancé lorsqu'une requête est envoyée depuis une autre extension.</dd>
-</dl>
+- {{WebExtAPIRef("extension.onRequest")}} {{deprecated_inline}}
+  - : Lancé lorsqu'une requête est envoyée par un processus d'extension ou un script de contenu.
+- {{WebExtAPIRef("extension.onRequestExternal")}} {{deprecated_inline}}
+  - : Lancé lorsqu'une requête est envoyée depuis une autre extension.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
+{{Compat("webextensions.api.extension")}}
 
+{{WebExtExamples("h2")}}
 
-<p>{{Compat("webextensions.api.extension")}}</p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>{{WebExtExamples("h2")}}</p>
-
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/extension"><code>chrome.extension</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -105,5 +93,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

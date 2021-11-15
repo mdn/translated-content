@@ -13,36 +13,30 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageChange
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}`StorageChange` est un objet représentant une modification d'une zone de stockage.
 
-<div><code>StorageChange</code> est un objet représentant une modification d'une zone de stockage.</div>
+## Type
 
-<h2 id="Type">Type</h2>
+Les objets `StorageChange` contiennent les propriétés suivantes :
 
-<p>Les objets <code>StorageChange</code> contiennent les propriétés suivantes :</p>
+- `oldValue`{{optional_inline}}
+  - : L'ancienne valeur de l'article, s'il y avait une ancienne valeur. Cela peut être n'importe quel type de données.
+- `newValue`{{optional_inline}}
+  - : La nouvelle valeur de l'article, s'il y a une nouvelle valeur. Cela peut être n'importe quel type de données.
 
-<dl>
- <dt><code>oldValue</code>{{optional_inline}}</dt>
- <dd>L'ancienne valeur de l'article, s'il y avait une ancienne valeur. Cela peut être n'importe quel type de données.</dd>
- <dt><code>newValue</code>{{optional_inline}}</dt>
- <dd>La nouvelle valeur de l'article, s'il y a une nouvelle valeur. Cela peut être n'importe quel type de données.</dd>
-</dl>
+## Compatibilité du navigateur
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+{{Compat("webextensions.api.storage.StorageChange")}}
 
-<p>{{Compat("webextensions.api.storage.StorageChange")}}</p>
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -69,5 +63,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageChange
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

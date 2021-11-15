@@ -13,42 +13,36 @@ tags:
   - topSites
 translation_of: Mozilla/Add-ons/WebExtensions/API/topSites/MostVisitedURL
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Le type <code>MostVisitedURL</code> contient deux propriétés : le titre de la page et son URL.</p>
+Le type `MostVisitedURL` contient deux propriétés : le titre de la page et son URL.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>favicon</code> {{optional_inline}}</dt>
- <dd><code>String</code>. Une donnée : URL contenant le favicon de la page, si <code>includeFavicon</code> était donné dans {{WebExtAPIRef("topSites.get()")}} et le favicon était disponible.</dd>
- <dt><code>title</code></dt>
- <dd><code>String</code>. Le titre de la page.</dd>
- <dt><code>url</code></dt>
- <dd><code>String</code>. L'URL de la page.</dd>
-</dl>
+- `favicon` {{optional_inline}}
+  - : `String`. Une donnée : URL contenant le favicon de la page, si `includeFavicon` était donné dans {{WebExtAPIRef("topSites.get()")}} et le favicon était disponible.
+- `title`
+  - : `String`. Le titre de la page.
+- `url`
+  - : `String`. L'URL de la page.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
+{{Compat("webextensions.api.topSites.MostVisitedURL")}}
 
+## Exemples
 
-<p>{{Compat("webextensions.api.topSites.MostVisitedURL")}}</p>
+{{WebExtExamples}}
 
-<h2 id="Exemples">Exemples</h2>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.topSites`](https://developer.chrome.com/extensions/topSites).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>{{WebExtExamples}}</p>
-
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/topSites"><code>chrome.topSites</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -75,5 +69,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/topSites/MostVisitedURL
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

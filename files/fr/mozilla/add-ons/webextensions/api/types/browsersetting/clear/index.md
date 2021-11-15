@@ -12,41 +12,41 @@ tags:
   - clear
 translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Utilisez <code>BrowserSetting.clear()</code> pour effacer toutes les modification apportées à l'extension du navigateur. Le paramètre du navigateur revient à sa valeur précédente.</p>
+Utilisez `BrowserSetting.clear()` pour effacer toutes les modification apportées à l'extension du navigateur. Le paramètre du navigateur revient à sa valeur précédente.
 
-<p>L'extensions annulera également le contrôle du paramètre, permettant une extension avec une ancienne précédente (c'est à dire, une extensions qui a été installée avant celle-ci) à modifier la paramètre. Voir <code><a href="/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/set">BrowserSetting.set()</a></code> pour en savoir plus sur le contrôle des paramètres.</p>
+L'extensions annulera également le contrôle du paramètre, permettant une extension avec une ancienne précédente (c'est à dire, une extensions qui a été installée avant celle-ci) à modifier la paramètre. Voir [`BrowserSetting.set()`](/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) pour en savoir plus sur le contrôle des paramètres.
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. Si la compensation a échoué, la promesse renvoie une valeur à <code>false</code>. Si l'effacement de la valeur a réussi, il se résout à <code>true</code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la compensation a échoué, la promesse renvoie une valeur à `false`. Si l'effacement de la valeur a réussi, il se résout à `true`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var clearing = setting.clear(
+```js
+var clearing = setting.clear(
   details     // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd>Un objet vide</dd>
-</dl>
+- `details`
+  - : Un objet vide
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera rempli avec un <code>booléen</code>: <code>true</code> Si le paramètre est effacé, <code>false</code> sinon.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rempli avec un `booléen`: `true` Si le paramètre est effacé, `false` sinon.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>Voir {{WebExtAPIRef("types.BrowserSetting")}}.</p>
+Voir {{WebExtAPIRef("types.BrowserSetting")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Effacer le paramètre <code>webRTCIPHandlingPolicy</code>  :</p>
+Effacer le paramètre `webRTCIPHandlingPolicy`  :
 
-<pre class="brush: js">function onCleared(result) {
+```js
+function onCleared(result) {
   if (result) {
     console.log("Setting was cleared");
   } else {
@@ -55,19 +55,18 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear
 }
 
 var clearing = browser.privacy.network.webRTCIPHandlingPolicy.clear({});
-clearing.then(onCleared);</pre>
+clearing.then(onCleared);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/extensions/types).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/types"><code>chrome.types</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -94,5 +93,4 @@ clearing.then(onCleared);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

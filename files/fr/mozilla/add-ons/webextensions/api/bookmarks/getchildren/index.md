@@ -13,35 +13,35 @@ tags:
   - getChildren
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p><strong><code>bookmarks.getChildren()</code></strong> récupère tous les enfants immédiats d'un dossier de signets donné, identifié comme {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} ID.</p>
+**`bookmarks.getChildren()`** récupère tous les enfants immédiats d'un dossier de signets donné, identifié comme {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} ID.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingChildren = browser.bookmarks.getChildren(
+```js
+var gettingChildren = browser.bookmarks.getChildren(
   id                     // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>id</code></dt>
- <dd>Un {{jsxref("string")}} qui spécifie l'ID du dossier dont les enfants doivent être récupérés.</dd>
-</dl>
+- `id`
+  - : Un {{jsxref("string")}} qui spécifie l'ID du dossier dont les enfants doivent être récupérés.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un tableau d'objets <a href="/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode"><code>BookmarkTreeNode</code></a>. Chaque entrée représente un seul noeud enfant. La liste est triée dans le même ordre dans lequel les signets apparaissent dans l'interface utilisateur. Les séparateurs ne sont actuellement pas inclus dans les résultats. La liste inclut les sous-dossiers, mais n'inclut aucun enfant contenu dans les sous-dossiers.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets [`BookmarkTreeNode`](/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode). Chaque entrée représente un seul noeud enfant. La liste est triée dans le même ordre dans lequel les signets apparaissent dans l'interface utilisateur. Les séparateurs ne sont actuellement pas inclus dans les résultats. La liste inclut les sous-dossiers, mais n'inclut aucun enfant contenu dans les sous-dossiers.
 
-<p>Si le noeud spécifié n'a pas d'enfants, le tableau est vide.Si le noeud identifié par <code>id</code> n'est pas trouvé, la promise est rejetée avec un message d'erreur.</p>
+Si le noeud spécifié n'a pas d'enfants, le tableau est vide.Si le noeud identifié par `id` n'est pas trouvé, la promise est rejetée avec un message d'erreur.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">function onFulfilled(children) {
+```js
+function onFulfilled(children) {
   for (child of children) {
     console.log(child.id);
   }
@@ -52,23 +52,22 @@ function onRejected(error) {
 }
 
 var gettingChildren = browser.bookmarks.getChildren("unfiled_____");
-gettingChildren.then(onFulfilled, onRejected);</pre>
+gettingChildren.then(onFulfilled, onRejected);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.bookmarks.getChildren")}}</p>
+{{Compat("webextensions.api.bookmarks.getChildren")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,5 +94,4 @@ gettingChildren.then(onFulfilled, onRejected);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

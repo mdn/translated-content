@@ -13,55 +13,49 @@ tags:
   - local
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Représente la zone de stockage <code>local</code>. Les éléments stockés <code>localement</code> sont locaux sur la machine sur laquelle l'extension a été installée.</p>
+Représente la zone de stockage `local`. Les éléments stockés `localement` sont locaux sur la machine sur laquelle l'extension a été installée.
 
-<p>Le navigateur peut limiter la quantité de données qu'une extension peut stocker dans la zone de stockage locale :</p>
+Le navigateur peut limiter la quantité de données qu'une extension peut stocker dans la zone de stockage locale :
 
-<ul>
- <li>Chrome limite l'extension à 5 Mo de données à l'aide de cette API à moins qu'elle ne dispose de <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage">permission "unlimitedStorage"</a>.</li>
- <li>Firefox vous permet de demander la permission "unlimitedStorage" à partir de la version 56. Il ne limite pas encore la quantité de données que votre extension peut stocker, mais commencera à le faire dans une future version : c'est donc une bonne idée de demander la permission "unlimitedStorage" maintenant, si vous avez l'intention de stocker une grande quantité de données.</li>
-</ul>
+- Chrome limite l'extension à 5 Mo de données à l'aide de cette API à moins qu'elle ne dispose de [permission "unlimitedStorage"](/fr/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage).
+- Firefox vous permet de demander la permission "unlimitedStorage" à partir de la version 56. Il ne limite pas encore la quantité de données que votre extension peut stocker, mais commencera à le faire dans une future version : c'est donc une bonne idée de demander la permission "unlimitedStorage" maintenant, si vous avez l'intention de stocker une grande quantité de données.
 
-<p>Lorsque l'extension est désinstallée, son stockage local associé est effacé.</p>
+Lorsque l'extension est désinstallée, son stockage local associé est effacé.
 
-<p>Toujours dans Firefox, vous pouvez empêcher le navigateur d'effacer le stockage local lors de la désinstallation en visitant "about:config" et en définissant les deux préférences de navigateur suivantes sur <code>true</code>: "keepUuidOnUninstall" et "keepStorageOnUninstall". Cette fonctionnalité est fournie pour aider les développeurs à tester leurs extensions. Les extensions elles-mêmes ne sont pas en mesure de modifier ces préférences.</p>
+Toujours dans Firefox, vous pouvez empêcher le navigateur d'effacer le stockage local lors de la désinstallation en visitant "about:config" et en définissant les deux préférences de navigateur suivantes sur `true`: "keepUuidOnUninstall" et "keepStorageOnUninstall". Cette fonctionnalité est fournie pour aider les développeurs à tester leurs extensions. Les extensions elles-mêmes ne sont pas en mesure de modifier ces préférences.
 
-<p>Bien que cette API soit similaire à {{domxref("Window.localStorage")}} il est recommandé de ne pas utiliser <code>Window.localStorage</code> dans le code d'extension. Firefox effacera les données stockées par les extensions à l'aide de l'API localStorage dans divers scénarios  où les utilisateurs effacent leur historique de navigation et leurs données pour des raisons de confidentialité, tandis que les données enregistrées avec l'API storage.local seront correctement conservées dans ces scénarios.</p>
+Bien que cette API soit similaire à {{domxref("Window.localStorage")}} il est recommandé de ne pas utiliser `Window.localStorage` dans le code d'extension. Firefox effacera les données stockées par les extensions à l'aide de l'API localStorage dans divers scénarios  où les utilisateurs effacent leur historique de navigation et leurs données pour des raisons de confidentialité, tandis que les données enregistrées avec l'API storage.local seront correctement conservées dans ces scénarios.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p>L'objet <code>local</code> local implémente les méthodes définies sur le type  {{WebExtAPIRef("storage.StorageArea")}} :</p>
+L'objet `local` local implémente les méthodes définies sur le type  {{WebExtAPIRef("storage.StorageArea")}} :
 
-<dl>
- <dt>{{WebExtAPIRef("storage.StorageArea.get()")}}</dt>
- <dd>Récupère un ou plusieurs éléments de la zone de stockage.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}</dt>
- <dd>Obtient la quantité d'espace de stockage (en octets) utilisée pour stocker un ou plusieurs éléments dans la zone de stockage.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.set()")}}</dt>
- <dd>Stocke un ou plusieurs éléments dans la zone de stockage. Si l'élément existe déjà, sa valeur sera mise à jour. Lorsque vous définissez une valeur, l'événement  {{WebExtAPIRef("storage.onChanged")}} se déclenche.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.remove()")}}</dt>
- <dd>Supprime un ou plusieurs éléments de la zone de stockage..</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.clear()")}}</dt>
- <dd>Supprime tous les éléments de la zone de stockage.</dd>
-</dl>
+- {{WebExtAPIRef("storage.StorageArea.get()")}}
+  - : Récupère un ou plusieurs éléments de la zone de stockage.
+- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
+  - : Obtient la quantité d'espace de stockage (en octets) utilisée pour stocker un ou plusieurs éléments dans la zone de stockage.
+- {{WebExtAPIRef("storage.StorageArea.set()")}}
+  - : Stocke un ou plusieurs éléments dans la zone de stockage. Si l'élément existe déjà, sa valeur sera mise à jour. Lorsque vous définissez une valeur, l'événement  {{WebExtAPIRef("storage.onChanged")}} se déclenche.
+- {{WebExtAPIRef("storage.StorageArea.remove()")}}
+  - : Supprime un ou plusieurs éléments de la zone de stockage..
+- {{WebExtAPIRef("storage.StorageArea.clear()")}}
+  - : Supprime tous les éléments de la zone de stockage.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.storage.local")}}</p>
+{{Compat("webextensions.api.storage.local")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -88,5 +82,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/local
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

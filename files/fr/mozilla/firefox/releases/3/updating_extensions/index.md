@@ -6,219 +6,178 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3/Updating_extensions
 original_slug: Mise_à_jour_des_extensions_pour_Firefox_3
 ---
-<div>
-  <ol>
-    <li>
-            <p>Notes de versions pour développeurs</p>
-            <ol>
-              <li><a href="/fr/docs/Mozilla/Firefox/Releases">Notes de versions pour développeurs</a></li>
-            </ol>
-    </li>
-    <li>
-       
-            <p>Modules complémentaires</p>
-            <ol>
-              <li><a href="/fr/Add-ons/WebExtensions">WebExtensions</a></li>
-              <li><a href="/fr/Add-ons/Themes">Thèmes</a></li>
-            </ol>
-        
-    </li>
-    <li>
-       
-            <p>Fonctionnement interne de Firefox</p>
-            <ol>
-              <li><a href="/fr/docs/Mozilla/">Le projet Mozilla</a></li>
-              <li><a href="/fr/docs/Mozilla/Gecko">Gecko</a></li>
-              <li><a href="/fr/docs/Mozilla/Firefox/Headless_mode">Mode « headless »</a></li>
-              <li><a href="/fr/docs/Mozilla/JavaScript_code_modules">Modules de code Javascript</a></li>
-              <li><a href="/fr/docs/Mozilla/js-ctypes">JS-ctypes</a></li>
-              <li><a href="/fr/docs/Mozilla/MathML_Project">Le projet MathML</a></li>
-              <li><a href="/fr/docs/Mozilla/MFBT">MFBT</a></li>
-              <li><a href="/fr/docs/Mozilla/Projects">Les projets Mozilla</a></li>
-              <li><a href="/fr/docs/Mozilla/Preferences">Le système de préférences</a></li>
-              <li><a href="/fr/docs/Mozilla/WebIDL_bindings">Connexions WebIDL</a></li>
-              <li><a href="/fr/docs/Mozilla/Tech/XPCOM">XPCOM</a></li>
-              <li><a href="/fr/docs/Mozilla/Tech/XUL">XUL</a></li>
-            </ol>
-        
-    </li>
-    <li>
-       
-            <p>Développer et contribuer</p>
-            <ol>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Build_Instructions">Instructions de compilation</a></li>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">Configuration des options de compilation</a></li>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works">Fonctionnement de la compilation</a></li>
-              <li><a href="/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Code source de Mozilla</a></li>
-              <li><a href="/fr/docs/Mozilla/Localization">Localisation</a></li>
-              <li><a href="/fr/docs/Mozilla/Mercurial">Mercurial</a></li>
-              <li><a href="/fr/docs/Mozilla/QA">Assurance qualité</a></li>
-              <li><a href="/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects">Utilisation de code Mozilla dans d'autres projets</a></li>
-            </ol>
-        
-    </li>
-  </ol>
-</div>
+1.  Notes de versions pour développeurs
 
-<p> Cet article fournit des informations qui seront utiles pour les développeurs désirant mettre à jour leurs extensions pour qu'elles fonctionnent correctement avec Firefox 3.</p>
+    1.  [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
-<p>Avant d'aller plus loin, voici une indication utile : si la seule modification dont votre extension a besoin est une mise à jour du champ <code>maxVersion</code> dans son manifeste d'installation, et que celle-ci est hébergée sur <a class="link-https" href="https://addons.mozilla.org">addons.mozilla.org</a>, il n'est pas vraiment nécessaire de renvoyer une nouvelle version de votre extension ! Utilisez simplement le Developer Control Panel sur AMO pour ajuster la valeur de <code>maxVersion</code>. Cela vous évitera également la revérification de votre extension.</p>
+2.  Modules complémentaires
 
-<h3 id="Premi.C3.A8re_.C3.A9tape__mise_.C3.A0_jour_du_manifeste_d.27installation">Première étape : mise à jour du manifeste d'installation</h3>
+    1.  [WebExtensions](/fr/Add-ons/WebExtensions)
+    2.  [Thèmes](/fr/Add-ons/Themes)
 
-<p>La première étape — et pour la plupart des extensions la seule qui sera nécessaire — est de mettre à jour le fichier de <a href="/fr/Manifestes_d'installation">manifeste d'installation</a>, <code>install.rdf</code>, pour indiquer sa compatibilité avec Firefox 3.</p>
+3.  Fonctionnement interne de Firefox
 
-<p>Trouvez simplement la ligne indiquant la version maximale compatible de Firefox (qui, pour Firefox 2, ressemblait probablement à ceci) :</p>
+    1.  [Le projet Mozilla](/fr/docs/Mozilla/)
+    2.  [Gecko](/fr/docs/Mozilla/Gecko)
+    3.  [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
+    4.  [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
+    5.  [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
+    6.  [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
+    7.  [MFBT](/fr/docs/Mozilla/MFBT)
+    8.  [Les projets Mozilla](/fr/docs/Mozilla/Projects)
+    9.  [Le système de préférences](/fr/docs/Mozilla/Preferences)
+    10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
+    11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
+    12. [XUL](/fr/docs/Mozilla/Tech/XUL)
 
-<pre class="eval"> &lt;em:maxVersion&gt;2.0.*&lt;/em:maxVersion&gt;
-</pre>
+4.  Développer et contribuer
 
-<p>Modifiez-la pour indiquer la compatibilité avec Firefox 3 :</p>
+    1.  [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
+    2.  [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
+    3.  [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
+    4.  [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
+    5.  [Localisation](/fr/docs/Mozilla/Localization)
+    6.  [Mercurial](/fr/docs/Mozilla/Mercurial)
+    7.  [Assurance qualité](/fr/docs/Mozilla/QA)
+    8.  [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
 
-<pre class="eval"> &lt;em:maxVersion&gt;3.0.*&lt;/em:maxVersion&gt;
-</pre>
+Cet article fournit des informations qui seront utiles pour les développeurs désirant mettre à jour leurs extensions pour qu'elles fonctionnent correctement avec Firefox 3.
 
-<p>Et réinstallez ensuite votre extension.</p>
+Avant d'aller plus loin, voici une indication utile : si la seule modification dont votre extension a besoin est une mise à jour du champ `maxVersion` dans son manifeste d'installation, et que celle-ci est hébergée sur [addons.mozilla.org](https://addons.mozilla.org), il n'est pas vraiment nécessaire de renvoyer une nouvelle version de votre extension ! Utilisez simplement le Developer Control Panel sur AMO pour ajuster la valeur de `maxVersion`. Cela vous évitera également la revérification de votre extension.
 
-<p>Notez que Firefox 3 n'a plus besoin d'un « .0 » supplémentaire dans son numéro de version, donc au lieu d'utiliser « 3.0.0.* », il ne faut plus indiquer que « 3.0.* ».</p>
+### Première étape : mise à jour du manifeste d'installation
 
-<div class="note">
-  <p><strong>Note :</strong> Notez qu'à ce point, il faut s'attendre à d'autres changements dans Firefox 3. Ceux-ci peuvent poser des problèmes à certaines extensions, il faut donc éviter de publier une extension avec la valeur <code>3.0.0.*</code> pour <code>maxVersion</code> avant que la RC de Firefox 3 soit disponible. Durant la pariode beta de Firefox 3, il convient d'utiliser <code>3.0b5</code> comme valeur de <code>maxVersion</code>.</p>
-</div>
+La première étape — et pour la plupart des extensions la seule qui sera nécessaire — est de mettre à jour le fichier de [manifeste d'installation](/fr/Manifestes_d'installation), `install.rdf`, pour indiquer sa compatibilité avec Firefox 3.
 
-<p>Il y a eu (et il y aura encore) un certain nombre de changements dans les API qui poseront probablement des problèmes à certaines. Nous sommes encore en train d'établir une liste complète de ces changements.</p>
+Trouvez simplement la ligne indiquant la version maximale compatible de Firefox (qui, pour Firefox 2, ressemblait probablement à ceci) :
 
-<div class="note">
-  <p><strong>Note :</strong> Si votre extension utilise toujours un script <code><a href='\"fr/Install.js\"'>Install.js</a></code> plutôt qu'un <a href="\&quot;fr/Manifestes_d\'installation\&quot;">manifeste d'installation</a>, il vous faudra faire la transition vers un manifeste d'installation maintenant. Firefox 3 ne gère plus les scripts <code>install.js</code> dans les fichiers XPI.</p>
-</div>
+     <em:maxVersion>2.0.*</em:maxVersion>
 
-<h4 id="Ajout_de_localisations_au_manifeste_d.27installation">Ajout de localisations au manifeste d'installation</h4>
+Modifiez-la pour indiquer la compatibilité avec Firefox 3 :
 
-<p>Firefox 3 permet d'utiliser de nouvelles propriétés dans le manifeste d'installation pour spécifier des descriptions localisées. Les anciennes méthodes continuent à fonctionner, mais la nouvelle permet à Firefox de charger les localisations même lorsque le module complémentaire est désactivé ou sur le point d'être installé. Consultez <a href="/fr/Localisation_des_descriptions_d'extensions">Localisation des descriptions d'extensions</a> pour plus de détails.</p>
+     <em:maxVersion>3.0.*</em:maxVersion>
 
-<h3 id="Deuxi.C3.A8me_.C3.A9tape__s.27assurer_de_fournir_des_mises_.C3.A0_jour_s.C3.A9curis.C3.A9es">Deuxième étape : s'assurer de fournir des mises à jour sécurisées</h3>
+Et réinstallez ensuite votre extension.
 
-<p>Si vous hébergez des modules complémentaires vous-mêmes et pas sur un fournisseur d'hébergement sécurisé comme <a class="link-https" href="https://addons.mozilla.org">addons.mozilla.org</a>, vous devrez fournir une méthode sécurisée de mise à jour pour vos modules. Pour ce faire, il faudrait soit héberger vos mises à jour sur un site SSL, ou utiliser des clés cryptographiques pour signer les informations de mise à jour. Consultez <a href="/fr/Versions_d'une_extension,_mise_à_jour_et_compatibilité#Mises_.C3.A0_jour_s.C3.A9curis.C3.A9es">Mises à jour sécurisées</a> pour plus d'informations.</p>
+Notez que Firefox 3 n'a plus besoin d'un « .0 » supplémentaire dans son numéro de version, donc au lieu d'utiliser « 3.0.0.\* », il ne faut plus indiquer que « 3.0.\* ».
 
-<h3 id="Troisi.C3.A8me_.C3.A9tape__s.27occuper_des_changements_d.27API">Troisième étape : s'occuper des changements d'API</h3>
+> **Note :** Notez qu'à ce point, il faut s'attendre à d'autres changements dans Firefox 3. Ceux-ci peuvent poser des problèmes à certaines extensions, il faut donc éviter de publier une extension avec la valeur `3.0.0.*` pour `maxVersion` avant que la RC de Firefox 3 soit disponible. Durant la pariode beta de Firefox 3, il convient d'utiliser `3.0b5` comme valeur de `maxVersion`.
 
-<p>Plusieurs API ont changé de manière significative. Les changements les plus importants, qui affecteront probablement un grand nombre d'extensions, sont les suivants :</p>
+Il y a eu (et il y aura encore) un certain nombre de changements dans les API qui poseront probablement des problèmes à certaines. Nous sommes encore en train d'établir une liste complète de ces changements.
 
-<h4 id="DOM">DOM</h4>
+> **Note :** Si votre extension utilise toujours un script [`Install.js`](\"fr/Install.js\") plutôt qu'un [manifeste d'installation](\"fr/Manifestes_d\'installation\"), il vous faudra faire la transition vers un manifeste d'installation maintenant. Firefox 3 ne gère plus les scripts `install.js` dans les fichiers XPI.
 
-<p>Les nœuds provenant de documents externes doivent être clonés à l'aide de <a href="/fr/docs/Web/API/Document/importNode"><code>document.importNode()</code></a> (ou adoptés avec
-    <a href="/fr/docs/Web/API/Document/adoptNode"><code>document.adoptNode()</code></a>) avant de pouvoir être insérés dans le document courant. Pour en savoir plus sur les problèmes
-    de <a href="/fr/docs/Web/API/Node/ownerDocument"><code>Node.ownerDocument</code></a>, consultez la <a href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">FAQ DOM du W3C</a> (en anglais).</p>
+#### Ajout de localisations au manifeste d'installation
 
-    <p>Gecko n'obligeait pas à utiliser <a href="/fr/docs/Web/API/Document/importNode"><code>document.importNode()</code></a> et <a href="/fr/docs/Web/API/Document/adoptNode"><code>document.adoptNode()</code></a> avant sa version 1.9. Depuis les versions 1.9
-    alphas, si un nœud n'est pas adopté ou importé avant d'être utilisé dans un autre document, l'exception
-    <code>WRONG_DOCUMENT_ERR</code> est déclenchée (<code>NS_ERROR_DOM_WRONG_DOCUMENT_ERR</code>). implémentation dans le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=47903" rel="noopener">bug 47903</a>.</p>
+Firefox 3 permet d'utiliser de nouvelles propriétés dans le manifeste d'installation pour spécifier des descriptions localisées. Les anciennes méthodes continuent à fonctionner, mais la nouvelle permet à Firefox de charger les localisations même lorsque le module complémentaire est désactivé ou sur le point d'être installé. Consultez [Localisation des descriptions d'extensions](/fr/Localisation_des_descriptions_d'extensions) pour plus de détails.
 
+### Deuxième étape : s'assurer de fournir des mises à jour sécurisées
 
-<h4 id="Marque-pages_et_historique">Marque-pages et historique</h4>
+Si vous hébergez des modules complémentaires vous-mêmes et pas sur un fournisseur d'hébergement sécurisé comme [addons.mozilla.org](https://addons.mozilla.org), vous devrez fournir une méthode sécurisée de mise à jour pour vos modules. Pour ce faire, il faudrait soit héberger vos mises à jour sur un site SSL, ou utiliser des clés cryptographiques pour signer les informations de mise à jour. Consultez [Mises à jour sécurisées](/fr/Versions_d'une_extension,_mise_à_jour_et_compatibilité#Mises_.C3.A0_jour_s.C3.A9curis.C3.A9es) pour plus d'informations.
 
-<p>Si votre extension accède aux marque-pages ou à des données de l'historique d'une manière ou d'une autre, elle devra être substantiellement modifiée pour être compatible avec Firefox 3. Les anciennes API pour accéder à ces informations ont été remplacées par la nouvelle architecture <a href="/fr/Places">Places</a>. Consultez le <a href="/fr/Guide_de_migration_vers_Places">Guide de migration vers Places</a> pour des détails sur la mise à jour de vos extensions existantes en utilisant l'API Places.</p>
+### Troisième étape : s'occuper des changements d'API
 
-<h4 id="Gestionnaire_de_t.C3.A9l.C3.A9chargement">Gestionnaire de téléchargement</h4>
+Plusieurs API ont changé de manière significative. Les changements les plus importants, qui affecteront probablement un grand nombre d'extensions, sont les suivants :
 
-<p>L'API du gestionnaire de téléchargement a légèrement changé suite à la transition d'un stockage de données RDF vers l'API <a href="/fr/Storage">Storage</a>. La transition devrait être très facile à faire. En outre, l'API permettant d'examiner la progression des téléchargements a été modifiée pour permettre l'existence de plusieurs écouteurs sur le gestionnaire de téléchargement. Consultez <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager">nsIDownloadManager</a></code>, <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener">nsIDownloadProgressListener</a></code> et <a href="/fr/Surveillance_de_téléchargements">Surveillance de téléchargements</a> pour plus d'informations.</p>
+#### DOM
 
-<h4 id="Gestionnaire_de_mots_de_passe">Gestionnaire de mots de passe</h4>
+Les nœuds provenant de documents externes doivent être clonés à l'aide de [`document.importNode()`](/fr/docs/Web/API/Document/importNode) (ou adoptés avec
+[`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode)) avant de pouvoir être insérés dans le document courant. Pour en savoir plus sur les problèmes
+de [`Node.ownerDocument`](/fr/docs/Web/API/Node/ownerDocument), consultez la [FAQ DOM du W3C](http://www.w3.org/DOM/faq.html#ownerdoc) (en anglais).
 
-<p>Si votre extension accède à des informations d'identification à l'aide du Gestionnaire de mots de passe, elle devra être adaptée pour utiliser la nouvelle API du gestionnaire d'identification.</p>
+Gecko n'obligeait pas à utiliser [`document.importNode()`](/fr/docs/Web/API/Document/importNode) et [`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode) avant sa version 1.9. Depuis les versions 1.9
+alphas, si un nœud n'est pas adopté ou importé avant d'être utilisé dans un autre document, l'exception
+`WRONG_DOCUMENT_ERR` est déclenchée (`NS_ERROR_DOM_WRONG_DOCUMENT_ERR`). implémentation dans le [bug 47903](https://bugzilla.mozilla.org/show_bug.cgi?id=47903).
 
-<ul>
- <li>L'article <a href="/fr/Utilisation_de_nsILoginManager">Utilisation de nsILoginManager</a> fournit des exemples, dont une démonstration d'écriture d'extension fonctionnant à la fois avec le Gestionnaire de mots de passe et le Gestionnaire d'identification, afin qu'elle fonctionne tant avec Firefox que dans les versions précédentes.</li>
- <li><code><a href="/fr/NsILoginInfo">nsILoginInfo</a></code></li>
- <li><code><a href="/fr/NsILoginManager">nsILoginManager</a></code></li>
-</ul>
+#### Marque-pages et historique
 
-<p>Il est également possible de ne pas utiliser le stockage du gestionnaire de mots de passe intégré si vous désirez fournir votre propre implémentation de stockage de mots de passe dans vos extensions. Consultez <a href="/fr/Création_d'un_module_de_stockage_du_gestionnaire_d'identification">Création d'un module de stockage du gestionnaire d'identification</a> pour plus de détails.</p>
+Si votre extension accède aux marque-pages ou à des données de l'historique d'une manière ou d'une autre, elle devra être substantiellement modifiée pour être compatible avec Firefox 3. Les anciennes API pour accéder à ces informations ont été remplacées par la nouvelle architecture [Places](/fr/Places). Consultez le [Guide de migration vers Places](/fr/Guide_de_migration_vers_Places) pour des détails sur la mise à jour de vos extensions existantes en utilisant l'API Places.
 
-<h4 id="Popups_.28menus.2C_menus_contextuels.2C_bulles_d.27information_et_panneaux.29">Popups (menus, menus contextuels, bulles d'information et panneaux)</h4>
+#### Gestionnaire de téléchargement
 
-<p>Le système de popups XUL a été modifié de manière importante dans Firefox 3. Celui-ci gère les menus principaux, les menus contextuels et les panneaux d'information. Un guide d'<a href="/fr/XUL/Guide_des_popups">utilisation des popups</a> a été créé pour expliquer en détail le fonctionnement du système. Une chose à noter est l'obsolescence de <code>popup.<code><a href="/fr/docs/Mozilla/Tech/XUL/Méthodes/showPopup">showPopup</a></code></code> en faveur des nouvelles méthodes <code>popup.<code><a href="/fr/docs/Mozilla/Tech/XUL/Méthodes/openPopup">openPopup</a></code></code> et <code>popup.<code><a href="/fr/docs/Mozilla/Tech/XUL/Méthodes/openPopupAtScreen">openPopupAtScreen</a></code></code>.</p>
+L'API du gestionnaire de téléchargement a légèrement changé suite à la transition d'un stockage de données RDF vers l'API [Storage](/fr/Storage). La transition devrait être très facile à faire. En outre, l'API permettant d'examiner la progression des téléchargements a été modifiée pour permettre l'existence de plusieurs écouteurs sur le gestionnaire de téléchargement. Consultez [`nsIDownloadManager`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager), [`nsIDownloadProgressListener`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener) et [Surveillance de téléchargements](/fr/Surveillance_de_téléchargements) pour plus d'informations.
 
-<h4 id="Compl.C3.A9ment_automatique">Complément automatique</h4>
+#### Gestionnaire de mots de passe
 
-<p>La méthode <code><a href="/fr/NsIAutoCompleteController#handleEnter.28.29">handleEnter()</a></code> de l'interface <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteController">nsIAutoCompleteController</a></code> a été modifiée pour accepter un paramètre indiquant si le texte a été sélectionné depuis le popup de complément automatique ou par l'appui sur la touche Entrée par l'utilisateur après avoir saisi le texte.</p>
+Si votre extension accède à des informations d'identification à l'aide du Gestionnaire de mots de passe, elle devra être adaptée pour utiliser la nouvelle API du gestionnaire d'identification.
 
-<h4 id="DOMParser">DOMParser</h4>
+- L'article [Utilisation de nsILoginManager](/fr/Utilisation_de_nsILoginManager) fournit des exemples, dont une démonstration d'écriture d'extension fonctionnant à la fois avec le Gestionnaire de mots de passe et le Gestionnaire d'identification, afin qu'elle fonctionne tant avec Firefox que dans les versions précédentes.
+- [`nsILoginInfo`](/fr/NsILoginInfo)
+- [`nsILoginManager`](/fr/NsILoginManager)
 
-<ul>
- <li>Lorsqu'un objet <code>DOMParser</code> est instancié, il hérite du principal du code appelant et des valeurs <code>documentURI</code> et <code>baseURI</code> de la fenêtre dont le constructeur venait.</li>
- <li>Si l'appelant a des privilèges UniversalXPConnect, il peut fournir des paramètres à <code>new DOMParser()</code>. Si moins de trois paramètres sont fournis, les paramètres restants prendront la valeur <code>null</code> par défaut.
-  <ul>
-   <li>Le premier paramètre est le principal à utiliser ; il remplace le principal par défaut normalement hérité.</li>
-   <li>Le second paramètre est la valeur <code>documentURI</code> à utiliser.</li>
-   <li>Le troisième paramètre est la valeur <code>baseURI</code> à utiliser.</li>
-  </ul>
- </li>
- <li>Si vous initialisez un <code>DOMParser</code> à l'aide d'un contrat, comme en appelant <code>createInstance()</code>, et que vous n'appelez pas la méthode <code>init()</code> de <code>DOMParser</code>, toute tentative de démarrer une opération d'analyse créera et initialisera automatiquement le <code>DOMParser</code> avec un principal à null et des pointeurs <code>null</code> pour <code>documentURI</code> et <code>baseURI</code>.</li>
-</ul>
+Il est également possible de ne pas utiliser le stockage du gestionnaire de mots de passe intégré si vous désirez fournir votre propre implémentation de stockage de mots de passe dans vos extensions. Consultez [Création d'un module de stockage du gestionnaire d'identification](/fr/Création_d'un_module_de_stockage_du_gestionnaire_d'identification) pour plus de détails.
 
-<h4 id="Interfaces_supprim.C3.A9es">Interfaces supprimées</h4>
+#### Popups (menus, menus contextuels, bulles d'information et panneaux)
 
-<p>Les interfaces suivantes ont été retirées de Gecko 1.9, sur lequel se base Firefox 3. Si votre extension utilise l'une ou l'autre d'entre-elles, vous devrez mettre à jour votre code :</p>
+Le système de popups XUL a été modifié de manière importante dans Firefox 3. Celui-ci gère les menus principaux, les menus contextuels et les panneaux d'information. Un guide d'[utilisation des popups](/fr/XUL/Guide_des_popups) a été créé pour expliquer en détail le fonctionnement du système. Une chose à noter est l'obsolescence de `popup.showPopup` en faveur des nouvelles méthodes `popup.openPopup` et `popup.openPopupAtScreen`.
 
-<ul>
- <li><code>nsIDOMPaintListener</code></li>
- <li><code>nsIDOMScrollListener</code></li>
- <li><code>nsIDOMMutationListener</code></li>
- <li><code>nsIDOMPageTransitionListener</code></li>
- <li><code>nsICloseAllWindows</code> (voir le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=386200" title='FIXED: SeaMonkey only: no "view cert button" in untrusted cert error dialog'>bug 386200</a>)</li>
-</ul>
+#### Complément automatique
 
-<h3 id="Quatri.C3.A8me_.C3.A9tape__v.C3.A9rifier_les_changements_chrome_appropri.C3.A9s">Quatrième étape : vérifier les changements chrome appropriés</h3>
+La méthode [`handleEnter()`](/fr/NsIAutoCompleteController#handleEnter.28.29) de l'interface [`nsIAutoCompleteController`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteController) a été modifiée pour accepter un paramètre indiquant si le texte a été sélectionné depuis le popup de complément automatique ou par l'appui sur la touche Entrée par l'utilisateur après avoir saisi le texte.
 
-<p>Un changement mineur dans le chrome pourrait nécessiter des changements dans votre code. Un nouveau <code>vbox</code> a été ajouté, appelé « browser-bottombox », qui comprend la Barre de recherche et la Barre d'état en bas de la fenêtre de navigation. Bien que ceci n'affecte pas l'apparence de l'affichage, votre extension peut être affectée si elle utilise des overlays chrome relatifs à ces éléments.</p>
+#### DOMParser
 
-<p>Par exemple, si vous faisiez précédemment un overlay chrome avant la Barre d'état, comme ceci :</p>
+- Lorsqu'un objet `DOMParser` est instancié, il hérite du principal du code appelant et des valeurs `documentURI` et `baseURI` de la fenêtre dont le constructeur venait.
+- Si l'appelant a des privilèges UniversalXPConnect, il peut fournir des paramètres à `new DOMParser()`. Si moins de trois paramètres sont fournis, les paramètres restants prendront la valeur `null` par défaut.
 
-<pre>&lt;window id="main-window"&gt;
-  &lt;something insertbefore="status-bar" /&gt;
-&lt;/window&gt;
-</pre>
+  - Le premier paramètre est le principal à utiliser ; il remplace le principal par défaut normalement hérité.
+  - Le second paramètre est la valeur `documentURI` à utiliser.
+  - Le troisième paramètre est la valeur `baseURI` à utiliser.
 
-<p>Vous devrez à présent le faire comme ceci :</p>
+- Si vous initialisez un `DOMParser` à l'aide d'un contrat, comme en appelant `createInstance()`, et que vous n'appelez pas la méthode `init()` de `DOMParser`, toute tentative de démarrer une opération d'analyse créera et initialisera automatiquement le `DOMParser` avec un principal à null et des pointeurs `null` pour `documentURI` et `baseURI`.
 
-<pre>&lt;vbox id="browser-bottombox"&gt;
-  &lt;something insertbefore="status-bar" /&gt;
-&lt;/vbox&gt;
-</pre>
+#### Interfaces supprimées
 
-<p>Ou utilisez la technique suivante pour que votre overlay fonctionne tant avec Firefox 2 que Firefox 3 :</p>
+Les interfaces suivantes ont été retirées de Gecko 1.9, sur lequel se base Firefox 3. Si votre extension utilise l'une ou l'autre d'entre-elles, vous devrez mettre à jour votre code :
 
-<pre>&lt;window id="main-window"&gt;
-  &lt;vbox id="browser-bottombox" insertbefore="status-bar"&gt;
-    &lt;something insertbefore="status-bar" /&gt;
-  &lt;vbox&gt;
-&lt;/window&gt;
-</pre>
+- `nsIDOMPaintListener`
+- `nsIDOMScrollListener`
+- `nsIDOMMutationListener`
+- `nsIDOMPageTransitionListener`
+- `nsICloseAllWindows` (voir le [bug 386200](https://bugzilla.mozilla.org/show_bug.cgi?id=386200 'FIXED: SeaMonkey only: no "view cert button" in untrusted cert error dialog'))
 
-<div class="note">
-  <p><strong>Note :</strong> Ce changement s'applique à partir de Firefox 3 beta 4 et des nightlies précédentes.</p>
-</div>
+### Quatrième étape : vérifier les changements chrome appropriés
 
-<h3 id="Autres_changements">Autres changements</h3>
+Un changement mineur dans le chrome pourrait nécessiter des changements dans votre code. Un nouveau `vbox` a été ajouté, appelé « browser-bottombox », qui comprend la Barre de recherche et la Barre d'état en bas de la fenêtre de navigation. Bien que ceci n'affecte pas l'apparence de l'affichage, votre extension peut être affectée si elle utilise des overlays chrome relatifs à ces éléments.
 
-<p><em>Ajoutez ici les changements simples que vous avez dû faire à vos extensions pour qu'elles fonctionnent avec Firefox 3.</em></p>
+Par exemple, si vous faisiez précédemment un overlay chrome avant la Barre d'état, comme ceci :
 
-<ul>
- <li><code>chrome://browser/base/utilityOverlay.js</code> n'est plus géré pour des raisons de sécurité. Si vous l'utilisiez auparavant, vous devriez passer à <code>chrome://browser/content/utilityOverlay.js</code>.</li>
- <li>Les implémentations de <code><a href="/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAboutModule">nsIAboutModule</a></code> doivent à présent supporter la méthode <code>getURIFlags</code>. Consultez <a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/public/nsIAboutModule.idl" rel="custom">nsIAboutModule.idl</a> pour la documentation. Ceci affecte les extensions qui fournissent de nouvelles URI <code>about:</code>. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=337746" title='FIXED: [FIX]Move "safe about" hardcoding out of security manager'>bug 337746</a>)</li>
- <li>L'élément <code><a href="/fr/docs/Mozilla/Tech/XUL/tabbrowser">tabbrowser</a></code> ne fait plus partie du « toolkit » (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=339964">bug 339964</a>). Cela signifie qu'il n'est plus disponible pour les applications XUL et extensions. Il continue cependant à être utilisé dans la fenêtre principale de Firefox (browser.xul).</li>
- <li>Les changements dans les <a href="/fr/Proxys_nsISupports">proxys nsISupports</a> et éventuellement aux interfaces liées aux threads doivent être documentés.</li>
- <li>Si vous utilisez des instructions de traitement XML comme <code>&lt;?xml-stylesheet ?&gt;</code> dans vos fichiers XUL, tenez compte des changements effectués dans le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=319654">bug 319654</a> :
-  <ol>
-   <li>Les instructions de traitement XML sont à présent ajoutées au DOM des documents XUL. Cela signifie que <a href="/fr/docs/Web/API/Document/firstChild"><code>document.firstChild</code></a> n'est plus forcément l'élément racine. Si vous avez besoin de l'élément racine dans votre script, utilisez plutôt <a href="/fr/docs/Web/API/Document/documentElement"><code>document.documentElement</code></a>.</li>
-   <li>Les instructions de traitement <code>&lt;?xml-stylesheet ?&gt;</code> et <code>&lt;?xul-overlay ?&gt;</code> n'ont plus d'effet en dehors du prologue du document.</li>
-  </ol>
- </li>
- <li><code>window.addEventListener("load", myFunc, true)</code> n'est pas déclenché au chargement de contenu web (chargement de page dans le navigateur). Ceci est causé par le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=296639">bug 296639</a> qui modifie la manière dont les fenêtres internes et externes communiquent. Une correction simple est d'utiliser <code>gBrowser.addEventListener("load", myFunc, true)</code> comme décrit dans <a href="/fr/Extraits_de_code/Onglets_de_navigation#D.C3.A9tection_du_chargement_d.27une_page">les exemples de code</a> et qui fonctionnera dans Firefox 2 également.</li>
- <li><code>content.window.getSelection()</code> fournit un objet (qui peut être converti en une chaîne avec <code>toString()</code>), contrairement à l'ancienne <code>content.document.getSelection()</code>, à présent dépréciée, qui renvoie une chaîne.</li>
- <li><code>event.preventBubble()</code> avait été dépréciée dans Firefox 2 et a été retirée de Firefox 3. Utilisez <a href="/fr/DOM/event.stopPropagation"><code>event.stopPropagation()</code></a>, qui fonctionne également dans Firefox 2.</li>
- <li>Les timers initialisés par<code>setTimeout()</code> sont à présent bloqués par les fenêtres modales suite à la correction du <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=52209">bug 52209</a>. Vous pouvez utiliser <code>nsITimer</code> à la place.</li>
- <li>Si votre extension doit permettre à une source non sûre (par exemple un site web) d'accéder au chrome de l'extension, vous devrez utiliser le nouveau paramètre <a href="/fr/Enregistrement_chrome#contentaccessible"><code>contentaccessible</code></a>.</li>
- <li>FireFox 3.6 est sensible aux accents dans les pages XUL ! Il faut donc soigneusement enlever toute ponctuation, même dans les commentaires.</li>
-</ul>
+    <window id="main-window">
+      <something insertbefore="status-bar" />
+    </window>
+
+Vous devrez à présent le faire comme ceci :
+
+    <vbox id="browser-bottombox">
+      <something insertbefore="status-bar" />
+    </vbox>
+
+Ou utilisez la technique suivante pour que votre overlay fonctionne tant avec Firefox 2 que Firefox 3 :
+
+    <window id="main-window">
+      <vbox id="browser-bottombox" insertbefore="status-bar">
+        <something insertbefore="status-bar" />
+      <vbox>
+    </window>
+
+> **Note :** Ce changement s'applique à partir de Firefox 3 beta 4 et des nightlies précédentes.
+
+### Autres changements
+
+_Ajoutez ici les changements simples que vous avez dû faire à vos extensions pour qu'elles fonctionnent avec Firefox 3._
+
+- `chrome://browser/base/utilityOverlay.js` n'est plus géré pour des raisons de sécurité. Si vous l'utilisiez auparavant, vous devriez passer à `chrome://browser/content/utilityOverlay.js`.
+- Les implémentations de [`nsIAboutModule`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAboutModule) doivent à présent supporter la méthode `getURIFlags`. Consultez [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/public/nsIAboutModule.idl) pour la documentation. Ceci affecte les extensions qui fournissent de nouvelles URI `about:`. ([bug 337746](https://bugzilla.mozilla.org/show_bug.cgi?id=337746 'FIXED: [FIX]Move "safe about" hardcoding out of security manager'))
+- L'élément [`tabbrowser`](/fr/docs/Mozilla/Tech/XUL/tabbrowser) ne fait plus partie du « toolkit » ([bug 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964)). Cela signifie qu'il n'est plus disponible pour les applications XUL et extensions. Il continue cependant à être utilisé dans la fenêtre principale de Firefox (browser.xul).
+- Les changements dans les [proxys nsISupports](/fr/Proxys_nsISupports) et éventuellement aux interfaces liées aux threads doivent être documentés.
+- Si vous utilisez des instructions de traitement XML comme `<?xml-stylesheet ?>` dans vos fichiers XUL, tenez compte des changements effectués dans le [bug 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654) :
+
+  1.  Les instructions de traitement XML sont à présent ajoutées au DOM des documents XUL. Cela signifie que [`document.firstChild`](/fr/docs/Web/API/Document/firstChild) n'est plus forcément l'élément racine. Si vous avez besoin de l'élément racine dans votre script, utilisez plutôt [`document.documentElement`](/fr/docs/Web/API/Document/documentElement).
+  2.  Les instructions de traitement `<?xml-stylesheet ?>` et `<?xul-overlay ?>` n'ont plus d'effet en dehors du prologue du document.
+
+- `window.addEventListener("load", myFunc, true)` n'est pas déclenché au chargement de contenu web (chargement de page dans le navigateur). Ceci est causé par le [bug 296639](https://bugzilla.mozilla.org/show_bug.cgi?id=296639) qui modifie la manière dont les fenêtres internes et externes communiquent. Une correction simple est d'utiliser `gBrowser.addEventListener("load", myFunc, true)` comme décrit dans [les exemples de code](/fr/Extraits_de_code/Onglets_de_navigation#D.C3.A9tection_du_chargement_d.27une_page) et qui fonctionnera dans Firefox 2 également.
+- `content.window.getSelection()` fournit un objet (qui peut être converti en une chaîne avec `toString()`), contrairement à l'ancienne `content.document.getSelection()`, à présent dépréciée, qui renvoie une chaîne.
+- `event.preventBubble()` avait été dépréciée dans Firefox 2 et a été retirée de Firefox 3. Utilisez [`event.stopPropagation()`](/fr/DOM/event.stopPropagation), qui fonctionne également dans Firefox 2.
+- Les timers initialisés par`setTimeout()` sont à présent bloqués par les fenêtres modales suite à la correction du [bug 52209](https://bugzilla.mozilla.org/show_bug.cgi?id=52209). Vous pouvez utiliser `nsITimer` à la place.
+- Si votre extension doit permettre à une source non sûre (par exemple un site web) d'accéder au chrome de l'extension, vous devrez utiliser le nouveau paramètre [`contentaccessible`](/fr/Enregistrement_chrome#contentaccessible).
+- FireFox 3.6 est sensible aux accents dans les pages XUL ! Il faut donc soigneusement enlever toute ponctuation, même dans les commentaires.

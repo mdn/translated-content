@@ -13,35 +13,35 @@ tags:
   - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Étant donné l'ID d'un {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} ou d'un tableau de ces ID, la méthode <strong><code>bookmarks.get()</code></strong> récupère les nœuds correspondants.</p>
+Étant donné l'ID d'un {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} ou d'un tableau de ces ID, la méthode **`bookmarks.get()`** récupère les nœuds correspondants.
 
-<p>C'est une fonction asynchrone qui renvoie une {{jsxref("promise")}}.</p>
+C'est une fonction asynchrone qui renvoie une {{jsxref("promise")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var getBookmarks = browser.bookmarks.get(
+```js
+var getBookmarks = browser.bookmarks.get(
   idOrIdList                // string or string array
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>idOrIdList</code></dt>
- <dd><code><code>string</code></code> Une {{jsxref("string")}} ou un {{jsxref("array")}} de chaînes spécifiant les ID d'un ou plusieurs objets {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à récupérer.</dd>
-</dl>
+- `idOrIdList`
+  - : `string` Une {{jsxref("string")}} ou un {{jsxref("array")}} de chaînes spécifiant les ID d'un ou plusieurs objets {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à récupérer.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une {{jsxref("promise")}} qui sera remplie avec un tableau de {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}, un pour chaque nœud correspondant. Les séparateurs ne sont pas inclus dans les résultats. Si aucun noeud n'a pu être trouvé, la promesse sera rejetée avec un message d'erreur.</p>
+Une {{jsxref("promise")}} qui sera remplie avec un tableau de {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}, un pour chaque nœud correspondant. Les séparateurs ne sont pas inclus dans les résultats. Si aucun noeud n'a pu être trouvé, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple essaie d'obtenir le signet dont l'ID est <code>bookmarkAAAA</code>. Si aucun signet avec cet ID n'existe, <code>onRejected</code> est appelé :</p>
+Cet exemple essaie d'obtenir le signet dont l'ID est `bookmarkAAAA`. Si aucun signet avec cet ID n'existe, `onRejected` est appelé :
 
-<pre class="brush: js">function onFulfilled(bookmarks) {
+```js
+function onFulfilled(bookmarks) {
   console.log(bookmarks);
 }
 
@@ -50,23 +50,22 @@ function onRejected(error) {
 }
 
 var gettingBookmarks = browser.bookmarks.get("bookmarkAAAA");
-gettingBookmarks.then(onFulfilled, onRejected);</pre>
+gettingBookmarks.then(onFulfilled, onRejected);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.bookmarks.get")}}</p>
+{{Compat("webextensions.api.bookmarks.get")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -93,5 +92,4 @@ gettingBookmarks.then(onFulfilled, onRejected);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,64 +13,63 @@ tags:
   - topSites
 translation_of: Mozilla/Add-ons/WebExtensions/API/topSites/get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient un tableau contenant des informations sur les pages que l'utilisateur a visitées souvent et récemment.</p>
+Obtient un tableau contenant des informations sur les pages que l'utilisateur a visitées souvent et récemment.
 
-<p>Les navigateurs gardent une liste des pages que l'utilisateur visite souvent et récemment. Ils utilisent cette liste pour aider l'utilisateur à retourner à ces endroits facilement. Par exemple, Firefox fournit par défaut une liste des pages les plus visitées dans la page "Nouvel onglet".</p>
+Les navigateurs gardent une liste des pages que l'utilisateur visite souvent et récemment. Ils utilisent cette liste pour aider l'utilisateur à retourner à ces endroits facilement. Par exemple, Firefox fournit par défaut une liste des pages les plus visitées dans la page "Nouvel onglet".
 
-<p>Pour déterminer quelles pages apparaissent dans la liste et dans quel ordre, le navigateur combine "fréquence" - combien de fois l'utilisateur a visité la page - et "récente" - combien de fois l'utilisateur a visité la page.</p>
+Pour déterminer quelles pages apparaissent dans la liste et dans quel ordre, le navigateur combine "fréquence" - combien de fois l'utilisateur a visité la page - et "récente" - combien de fois l'utilisateur a visité la page.
 
-<p>Le navigateur peut ensuite appliquer un filtrage supplémentaire à cette liste avant de la présenter à l'utilisateur. Par exemple, dans Firefox, la page "Nouvel onglet" ne liste qu'une page par domaine, et l'utilisateur peut bloquer l'apparition de pages dans la liste.</p>
+Le navigateur peut ensuite appliquer un filtrage supplémentaire à cette liste avant de la présenter à l'utilisateur. Par exemple, dans Firefox, la page "Nouvel onglet" ne liste qu'une page par domaine, et l'utilisateur peut bloquer l'apparition de pages dans la liste.
 
-<p>L'API <code>topSites.get()</code> permet à une extension d'accéder à cette liste. Appelé sans aucune option, il fournira la liste filtrée des pages, c'est-à-dire celle qui apparaît dans la page "Nouvel onglet". Cependant, en fournissant diverses options, il est possible pour une extension d'obtenir la liste non filtrée des pages.</p>
+L'API `topSites.get()` permet à une extension d'accéder à cette liste. Appelé sans aucune option, il fournira la liste filtrée des pages, c'est-à-dire celle qui apparaît dans la page "Nouvel onglet". Cependant, en fournissant diverses options, il est possible pour une extension d'obtenir la liste non filtrée des pages.
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<p>Pour utiliser l'API topSites, vous devez avoir la <a href="fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permission de l'API</a> "topSites"</p>
+Pour utiliser l'API topSites, vous devez avoir la [permission de l'API](fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "topSites"
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingTopSites = browser.topSites.get()
-</pre>
+```js
+var gettingTopSites = browser.topSites.get()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>options</code></dt>
- <dd><p><code>object</code>. Options pour modifier la liste des pages retournées. Il peut s'agir de l'une des propriétés suivantes :</p>
- <dl>
-  <dt><code>includeBlocked</code> {{optional_inline}}</dt>
-  <dd><code>Boolean</code>. Inclure les pages que l'utilisateur a supprimées de la page "Nouvel onglet". La valeur par défaut est <code>false</code>.</dd>
-  <dt><code>includeFavicon</code> {{optional_inline}}</dt>
-  <dd><code>Boolean</code>.  Inclure les favicons dans les résultats, pour les pages où ils sont disponibles. La valeur par défaut est <code>false</code>.</dd>
-  <dt><code>includePinned</code> {{optional_inline}}</dt>
-  <dd><code>Boolean</code>. inclure les sites que l'utilisateur a épinglés dans le nouvel onglet Firefox.<br>
-  Par défaut à <code>false</code>.</dd>
-  <dt><code>includeSearchShortcuts</code> {{optional_inline}}</dt>
-  <dd><code>Boolean</code>.  Inclut les raccourcis de recherche qui apparaissent dans le nouvel onglet Firefox.<br>
-  Par défaut à <code>false</code>.</dd>
-  <dt><code>limit</code> {{optional_inline}}</dt>
-  <dd><code>Integer</code>. Le nombre de pages à retourner. Ce chiffre doit être compris entre 1 et 100 inclusivement. La valeur par défaut est 12.</dd>
-  <dt><code>onePerDomain</code> {{optional_inline}}</dt>
-  <dd><code>Boolean</code>. N'incluez qu'une seule page par domaine. La valeur par défaut est <code>true</code>.</dd>
- </dl>
- </dd>
-</dl>
+- `options`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`. Options pour modifier la liste des pages retournées. Il peut s'agir de l'une des propriétés suivantes :
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. Ceci sera réalisé avec un tableau d'objets  {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}}, un pour chaque site listé dans la page "Nouvel onglet" du navigateur. Si une erreur se produit, la presse sera rejetée avec un message d'erreur.</p>
+    - `includeBlocked` {{optional_inline}}
+      - : `Boolean`. Inclure les pages que l'utilisateur a supprimées de la page "Nouvel onglet". La valeur par défaut est `false`.
+    - `includeFavicon` {{optional_inline}}
+      - : `Boolean`.  Inclure les favicons dans les résultats, pour les pages où ils sont disponibles. La valeur par défaut est `false`.
+    - `includePinned` {{optional_inline}}
+      - : `Boolean`. inclure les sites que l'utilisateur a épinglés dans le nouvel onglet Firefox.
+        Par défaut à `false`.
+    - `includeSearchShortcuts` {{optional_inline}}
+      - : `Boolean`.  Inclut les raccourcis de recherche qui apparaissent dans le nouvel onglet Firefox.
+        Par défaut à `false`.
+    - `limit` {{optional_inline}}
+      - : `Integer`. Le nombre de pages à retourner. Ce chiffre doit être compris entre 1 et 100 inclusivement. La valeur par défaut est 12.
+    - `onePerDomain` {{optional_inline}}
+      - : `Boolean`. N'incluez qu'une seule page par domaine. La valeur par défaut est `true`.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.topSites.get")}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Ceci sera réalisé avec un tableau d'objets  {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}}, un pour chaque site listé dans la page "Nouvel onglet" du navigateur. Si une erreur se produit, la presse sera rejetée avec un message d'erreur.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Ce code enregistre le titre et l'UL de tous les sites dans la page "Nouvel onglet" :</p>
+{{Compat("webextensions.api.topSites.get")}}
 
-<pre class="brush: js">function logTopSites(topSitesArray) {
+## Exemples
+
+Ce code enregistre le titre et l'UL de tous les sites dans la page "Nouvel onglet" :
+
+```js
+function logTopSites(topSitesArray) {
   for (topSite of topSitesArray) {
     console.log(`Title: ${topSite.title}, URL: ${topSite.url}`);
   }
@@ -82,11 +81,12 @@ function onError(error) {
 
 var gettingTopSites = browser.topSites.get();
 gettingTopSites.then(logTopSites, onError);
-</pre>
+```
 
-<p>Ce code enregistre le titre et l'URL de toutes les pages d'accueil, y compris celles que l'utilisateur a bloquées, et peut inclure plusieurs pages dans le même domaine :</p>
+Ce code enregistre le titre et l'URL de toutes les pages d'accueil, y compris celles que l'utilisateur a bloquées, et peut inclure plusieurs pages dans le même domaine :
 
-<pre class="brush: js">function logTopSites(topSitesArray) {
+```js
+function logTopSites(topSitesArray) {
   for (topSite of topSitesArray) {
     console.log(`Title: ${topSite.title}, URL: ${topSite.url}`);
   }
@@ -101,17 +101,16 @@ var gettingTopSites = browser.topSites.get({
   onePerDomain: false
 });
 
-gettingTopSites.then(logTopSites, onError);</pre>
+gettingTopSites.then(logTopSites, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.topSites`](https://developer.chrome.com/extensions/topSites).
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/topSites"><code>chrome.topSites</code></a>.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -138,5 +137,4 @@ gettingTopSites.then(logTopSites, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

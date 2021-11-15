@@ -12,43 +12,46 @@ tags:
   - toogle
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/toggle
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Permet de basculer la visibilité de la barre latérale dans la fenêtre active, si la barre latérale appartient à l'extension.</p>
+Permet de basculer la visibilité de la barre latérale dans la fenêtre active, si la barre latérale appartient à l'extension.
 
-<p>Vous ne pouvez appeler cette fonction que depuis l'intérieur du gestionnaire pour une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/User_actions">action utilisateur</a>.</p>
+Vous ne pouvez appeler cette fonction que depuis l'intérieur du gestionnaire pour une [action utilisateur](/fr/docs/Mozilla/Add-ons/WebExtensions/User_actions).
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.sidebarAction.toggle()
-</pre>
+```js
+browser.sidebarAction.toggle()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucune.</p>
+Aucune.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui est résolue sans discussion.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue sans discussion.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.sidebarAction.toggle", 10)}}</p>
+{{Compat("webextensions.api.sidebarAction.toggle", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Bascule la barre latérale lorsque l'utilisateur sélectionne un élément dans le menu contextuel :</p>
+Bascule la barre latérale lorsque l'utilisateur sélectionne un élément dans le menu contextuel :
 
-<pre class="brush: js">browser.menus.create({
+```js
+browser.menus.create({
   id: "toggle-sidebar",
   title: "Toggle sidebar",
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener(() =&gt; {
+browser.menus.onClicked.addListener(() => {
   browser.sidebarAction.toggle();
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

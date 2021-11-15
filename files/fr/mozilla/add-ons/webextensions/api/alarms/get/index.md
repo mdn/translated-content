@@ -13,48 +13,48 @@ tags:
   - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/get
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Cette méthode permet d'obtenir une alarme en fonction de son nom. Cette fonction est une fonction asynchrone qui renvoie une promesse ({{jsxref("Promise")}}).</p>
+Cette méthode permet d'obtenir une alarme en fonction de son nom. Cette fonction est une fonction asynchrone qui renvoie une promesse ({{jsxref("Promise")}}).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var getAlarm = browser.alarms.get(
+```js
+var getAlarm = browser.alarms.get(
   name  // optional string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>name</code>{{optional_inline}}</dt>
- <dd><code><code>string</code></code>. Le nom de l'alarme qu'on souhaite récupérer. La valeur par défaut, utilisée si aucun argument n'est fournie, sera la chaîne vide (<code>""</code>).</dd>
-</dl>
+- `name`{{optional_inline}}
+  - : `string`. Le nom de l'alarme qu'on souhaite récupérer. La valeur par défaut, utilisée si aucun argument n'est fournie, sera la chaîne vide (`""`).
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une promesse ({{jsxref("Promise")}}) qui sera tenue avec un objet {{WebExtAPIRef('alarms.Alarm', "Alarm")}}. Cette valeur correspond à l'alarme dont le nom correspond au paramètre <code>name</code>. Si aucune alarme ne correspond, la valeur renvoyée sera <code>undefined</code>.</p>
+Une promesse ({{jsxref("Promise")}}) qui sera tenue avec un objet {{WebExtAPIRef('alarms.Alarm', "Alarm")}}. Cette valeur correspond à l'alarme dont le nom correspond au paramètre `name`. Si aucune alarme ne correspond, la valeur renvoyée sera `undefined`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">function gotAlarm(alarm) {
+```js
+function gotAlarm(alarm) {
   if (alarm) {
     console.log(alarm.name);
   }
 }
 
 var getAlarm = browser.alarms.get("my-periodic-alarm");
-getAlarm.then(gotAlarm);</pre>
+getAlarm.then(gotAlarm);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.alarms.get")}}</p>
+{{Compat("webextensions.api.alarms.get")}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/extensions/alarms).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

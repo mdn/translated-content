@@ -13,41 +13,41 @@ tags:
   - open
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/open
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La fonction <code><strong>open()</strong></code> de l'API {{WebExtAPIRef("downloads")}} ouvre le fichier téléchargé avec son application associée. Un événement {{WebExtAPIRef("downloads.onChanged")}} se déclenche lorsque l'élément est ouvert pour la première fois.</p>
+La fonction **`open()`** de l'API {{WebExtAPIRef("downloads")}} ouvre le fichier téléchargé avec son application associée. Un événement {{WebExtAPIRef("downloads.onChanged")}} se déclenche lorsque l'élément est ouvert pour la première fois.
 
-<p>Pour utiliser cette fonction dans votre extension, vous devez demander la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission manifest</a> "downloads.open", ainsi que la permission "downloads". En outre, vous pouvez uniquement appeler cette fonction à l'intérieur du gestionnaire pour une <a href="/fr/Add-ons/WebExtensions/User_actions">action utilisateur</a>.</p>
+Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/Add-ons/WebExtensions/manifest.json/permissions) "downloads.open", ainsi que la permission "downloads". En outre, vous pouvez uniquement appeler cette fonction à l'intérieur du gestionnaire pour une [action utilisateur](/fr/Add-ons/WebExtensions/User_actions).
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var opening = browser.downloads.open(
+```js
+var opening = browser.downloads.open(
   downloadId      // integer
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>downloadId</code></dt>
- <dd>Un <code>integer</code> représentant l'<code>id</code> du {{WebExtAPIRef("downloads.DownloadItem")}} que vous voulez ouvrir.</dd>
-</dl>
+- `downloadId`
+  - : Un `integer` représentant l'`id` du {{WebExtAPIRef("downloads.DownloadItem")}} que vous voulez ouvrir.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. Si la demande a été acceptée, la promesse sera remplie sans arguments. Si la demande a échoué, la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la demande a été acceptée, la promesse sera remplie sans arguments. Si la demande a échoué, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.downloads.open")}}</p>
+{{Compat("webextensions.api.downloads.open")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple ouvre l'élément le plus récemment téléchargé :</p>
+Cet exemple ouvre l'élément le plus récemment téléchargé :
 
-<pre class="brush: js">function onOpened() {
+```js
+function onOpened() {
   console.log(`Opened download item`);
 }
 
@@ -56,7 +56,7 @@ function onError(error) {
 }
 
 function openDownload(downloadItems) {
-    if (downloadItems.length &gt; 0) {
+    if (downloadItems.length > 0) {
       var opening = browser.downloads.open(downloadItems[0].id);
       opening.then(onOpened, onError);
     }
@@ -67,19 +67,18 @@ var searching = browser.downloads.search({
   orderBy: ["-startTime"]
 });
 
-searching.then(openDownload, onError);</pre>
+searching.then(openDownload, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,5 +105,4 @@ searching.then(openDownload, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -10,49 +10,47 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Contient des informations sur une requête Web que le navigateur est sur le point de faire. Une instance de cet objet est passée dans l'écouteur  {{WebExtAPIRef("proxy.onRequest")}}.</p>
+Contient des informations sur une requête Web que le navigateur est sur le point de faire. Une instance de cet objet est passée dans l'écouteur  {{WebExtAPIRef("proxy.onRequest")}}.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>cookieStoreId</code></dt>
- <dd><code>string</code>. L'ID de magasin de cookies du contexte actuel.</dd>
- <dt><code>documentUrl</code></dt>
- <dd><code>string</code>. URL de la page dans laquelle la ressource demandée sera chargée.</dd>
- <dt><code>frameId</code></dt>
- <dd><code>integer</code>. Zéro si la requête se produit dans le cadre principal; une valeur positive est l'ID d'une sous-trame dans laquelle la requête se produit. Si le document d'une  (sous-)frame est chargé (<code>type</code> est <code>main_frame</code> ou <code>sub_frame</code>), <code>frameId</code> indique l'ID de cette trame, pas l'ID de la trame externe. Les ID de cadre sont uniques dans un onglet.</dd>
- <dt><code>fromCache</code></dt>
- <dd><code>boolean</code>. Indique si cette réponse sera récupérée du cache disque.</dd>
- <dt><code>incognito</code></dt>
- <dd><code>boolean</code> <code>true</code> pour les demandes de navigation privées</dd>
- <dt><code>ip</code></dt>
- <dd>L'adresse IP du serveur à laquelle la demande sera envoyée. Notez qu'il peut s'agir d'une adresse IPv6 littérale.</dd>
- <dt><code>method</code></dt>
- <dd><code>string</code>. Méthode HTTP standard: par exemple, "GET" ou "POST".</dd>
- <dt><code>originUrl</code></dt>
- <dd><code>string</code>. URL de la ressource qui a déclenché cette demande. Notez que ceci peut ne pas être le même que l'URL de la page dans laquelle la ressource demandée sera chargée. Par exemple, si un document déclenche un chargement dans une fenêtre différente l'<a href="/fr/docs/Web/HTML/Element/a#attr-target">attribut cible d'un lien</a>, ou d'un document CSS inclut une image utilisant la  <a href="/fr/docs/Web/CSS/url#The_url()_functional_notation"><code>notation fonctionnelle url()</code></a>, alors ce sera l'URL du document original ou du  document CSS, respectivement.</dd>
- <dt><code>parentFrameId</code></dt>
- <dd><code>integer</code>. ID de l'image qui contient l'image qui a envoyé la demande. Défini sur -1 si aucun cadre parent n'existe.</dd>
- <dt><code>requestId</code></dt>
- <dd><code>string</code>. L'ID de la demande Les ID de demande sont uniques dans une session de navigateur, vous pouvez donc les utiliser pour associer différents événements associés à la même demande.</dd>
- <dt><code>requestHeaders</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('webRequest.HttpHeaders')}}. Les en-têtes de requête HTTP qui vont être envoyés avec cette requête. Notez que ceci n'est inclus que si l'option  <code>"requestHeaders"</code> a été passée dans <code>addListener()</code>.</dd>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. ID de l'onglet dans lequel la requête a lieu. Défini sur -1 si la requête n'est pas liée à un onglet.</dd>
- <dt><code>timeStamp</code></dt>
- <dd><code>number</code>. L'heure à laquelle cet événement s'est déclenché, en <a href="https://en.wikipedia.org/wiki/Unix_time">millisecondes depuis l'époque</a>.</dd>
- <dt><code>type</code></dt>
- <dd>{{WebExtAPIRef('webRequest.ResourceType')}}. Le type de ressource demandé : par exemple, "image", "script", "stylesheet".</dd>
- <dt><code>url</code></dt>
- <dd><code>string</code>. Cible de la demande.</dd>
-</dl>
+- `cookieStoreId`
+  - : `string`. L'ID de magasin de cookies du contexte actuel.
+- `documentUrl`
+  - : `string`. URL de la page dans laquelle la ressource demandée sera chargée.
+- `frameId`
+  - : `integer`. Zéro si la requête se produit dans le cadre principal; une valeur positive est l'ID d'une sous-trame dans laquelle la requête se produit. Si le document d'une  (sous-)frame est chargé (`type` est `main_frame` ou `sub_frame`), `frameId` indique l'ID de cette trame, pas l'ID de la trame externe. Les ID de cadre sont uniques dans un onglet.
+- `fromCache`
+  - : `boolean`. Indique si cette réponse sera récupérée du cache disque.
+- `incognito`
+  - : `boolean` `true` pour les demandes de navigation privées
+- `ip`
+  - : L'adresse IP du serveur à laquelle la demande sera envoyée. Notez qu'il peut s'agir d'une adresse IPv6 littérale.
+- `method`
+  - : `string`. Méthode HTTP standard: par exemple, "GET" ou "POST".
+- `originUrl`
+  - : `string`. URL de la ressource qui a déclenché cette demande. Notez que ceci peut ne pas être le même que l'URL de la page dans laquelle la ressource demandée sera chargée. Par exemple, si un document déclenche un chargement dans une fenêtre différente l'[attribut cible d'un lien](/fr/docs/Web/HTML/Element/a#attr-target), ou d'un document CSS inclut une image utilisant la  [`notation fonctionnelle url()`](</fr/docs/Web/CSS/url#The_url()_functional_notation>), alors ce sera l'URL du document original ou du  document CSS, respectivement.
+- `parentFrameId`
+  - : `integer`. ID de l'image qui contient l'image qui a envoyé la demande. Défini sur -1 si aucun cadre parent n'existe.
+- `requestId`
+  - : `string`. L'ID de la demande Les ID de demande sont uniques dans une session de navigateur, vous pouvez donc les utiliser pour associer différents événements associés à la même demande.
+- `requestHeaders`{{optional_inline}}
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. Les en-têtes de requête HTTP qui vont être envoyés avec cette requête. Notez que ceci n'est inclus que si l'option  `"requestHeaders"` a été passée dans `addListener()`.
+- `tabId`
+  - : `integer`. ID de l'onglet dans lequel la requête a lieu. Défini sur -1 si la requête n'est pas liée à un onglet.
+- `timeStamp`
+  - : `number`. L'heure à laquelle cet événement s'est déclenché, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
+- `type`
+  - : {{WebExtAPIRef('webRequest.ResourceType')}}. Le type de ressource demandé : par exemple, "image", "script", "stylesheet".
+- `url`
+  - : `string`. Cible de la demande.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.proxy.RequestDetails")}}</p>
+{{Compat("webextensions.api.proxy.RequestDetails")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

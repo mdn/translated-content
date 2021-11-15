@@ -10,51 +10,52 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
 original_slug: Mozilla/Add-ons/WebExtensions/API/userScripts/travailler_avec_userScripts
 ---
-<p>{{draft}}</p>
+{{draft}}
 
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>En implémentant userScripts, les développeurs d'extension peuvent modifier l'apparence et/ou le fonctionnement des sites pour mieux répondre aux besoins des utilisateurs.</p>
+En implémentant userScripts, les développeurs d'extension peuvent modifier l'apparence et/ou le fonctionnement des sites pour mieux répondre aux besoins des utilisateurs.
 
-<p>Implémentez userScripts dans votre extension en suivant les étapes suivantes :</p>
+Implémentez userScripts dans votre extension en suivant les étapes suivantes :
 
-<ol>
- <li>Définissez le script dans le manifeste de l'extension à l'aide de la clé <code>"user_scripts"</code>.</li>
- <li>Enregistrer le userScript</li>
- <li>Implémenter les fonctions userScript</li>
-</ol>
+1.  Définissez le script dans le manifeste de l'extension à l'aide de la clé `"user_scripts"`.
+2.  Enregistrer le userScript
+3.  Implémenter les fonctions userScript
 
-<p>Passons en revue les processus à l'aide d'un petit exemple d'extension Web qui illustre le processus. L'exemple est disponible dans le dépôt <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> sur GitHub.</p>
+Passons en revue les processus à l'aide d'un petit exemple d'extension Web qui illustre le processus. L'exemple est disponible dans le dépôt [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub.
 
-<h2 id="Manifest_userScripts">Manifest userScripts</h2>
+## Manifest userScripts
 
-<p>Un script utilisateur est identifié par le contenu de la clé <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a> du manifeste des extensions. L'information minimale pour la clé <code>user_scripts</code> serait :</p>
+Un script utilisateur est identifié par le contenu de la clé [user_scripts](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) du manifeste des extensions. L'information minimale pour la clé `user_scripts` serait :
 
-<pre class="brush: json">  "user_scripts": {
+```json
+  "user_scripts": {
     "api_script": "customUserScriptAPIs.js"
-  }</pre>
+  }
+```
 
-<p>La propriété "api_script" indique le chemin d'accès au fichier JavaScript qui contient le code du <code>userScript</code>.</p>
+La propriété "api_script" indique le chemin d'accès au fichier JavaScript qui contient le code du `userScript`.
 
-<h2 id="Charge_lextension_dexemple">Charge l'extension d'exemple</h2>
+## Charge l'extension d'exemple
 
-<p>Une fois que vous avez téléchargé l'exemple  :</p>
+Une fois que vous avez téléchargé l'exemple  :
 
-<p>Naviguez jusqu'à about:debugging, cliquez sur <strong>Charger temporairement une extension... </strong>et double-cliquez sur le manifest des extensions.</p>
+Naviguez jusqu'à about:debugging, cliquez sur **Charger temporairement une extension...** et double-cliquez sur le manifest des extensions.
 
-<p>/Le code par défaut inclus dans l'exemple vous permet de charger un <code>userScript</code> qui va "manger" le contenu des pages correspondant à l'entrée Hosts. Effectuez tous les changements que vous voulez faire avant de cliquer sur le bouton <strong>Enregistrer le script</strong> au bas du panneau.</p>
+/Le code par défaut inclus dans l'exemple vous permet de charger un `userScript` qui va "manger" le contenu des pages correspondant à l'entrée Hosts. Effectuez tous les changements que vous voulez faire avant de cliquer sur le bouton **Enregistrer le script** au bas du panneau.
 
-<p>Dans l'image suivante, l'extension va "manger" le contenu des pages dont le nom de domaine se termine par.org. C'est le comportement par défaut pour cette extension.</p>
+Dans l'image suivante, l'extension va "manger" le contenu des pages dont le nom de domaine se termine par.org. C'est le comportement par défaut pour cette extension.
 
-<p><img alt="" src="userScriptExample.png"></p>
+![](userScriptExample.png)
 
-<p>Rien ne se passera tant que vous n'aurez pas cliqué sur le bouton <strong>Enregistrer le script</strong>. Le bouton implémente le script utilisateur en fonction des paramètres de cette boîte de dialogue. Cela signifie que vous pouvez expérimenter le comportement du script sans avoir à implémenter une extension vous-même.</p>
+Rien ne se passera tant que vous n'aurez pas cliqué sur le bouton **Enregistrer le script**. Le bouton implémente le script utilisateur en fonction des paramètres de cette boîte de dialogue. Cela signifie que vous pouvez expérimenter le comportement du script sans avoir à implémenter une extension vous-même.
 
-<h2 id="Register_the_userScript">Register the userScript</h2>
+## Register the userScript
 
-<p>Avant qu'un userScript puisse être exécuté, il doit être enregistré en utilisant la méthode  <code>userScripts.register()</code>. Voici le code pour enregistrer l'extension d'exemple :</p>
+Avant qu'un userScript puisse être exécuté, il doit être enregistré en utilisant la méthode  `userScripts.register()`. Voici le code pour enregistrer l'extension d'exemple :
 
-<pre class="brush: js">async function registerScript() {
+```js
+async function registerScript() {
   const params = {
     hosts: stringToArray(hostsInput.value),
     code: codeInput.value,
@@ -97,20 +98,19 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/userScripts/travailler_avec_use
     // Store the last error.
     await browser.storage.local.set({lastError});
   }
-}</pre>
+}
+```
 
-<p>Ce code initialise d'abord l'objet params pour passer les valeurs à la méthode  <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/register">userScripts.register</a>.</p>
+Ce code initialise d'abord l'objet params pour passer les valeurs à la méthode  [userScripts.register](/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/register).
 
-<h2 id="Implementer_les_fonctions_userScript">Implementer les fonctions userScript</h2>
+## Implementer les fonctions userScript
 
-<p>Une fois le script enregistré, naviguez vers une page dont le nom de domaine se termine par .org, et vous verrez quelque chose comme ceci :</p>
+Une fois le script enregistré, naviguez vers une page dont le nom de domaine se termine par .org, et vous verrez quelque chose comme ceci :
 
-<p><img alt="" src="user_script_in_action.png"></p>
+![](user_script_in_action.png)
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{WebExtAPIRef("userScripts")}}</li>
- <li>{{WebExtAPIRef("userScripts.register()", "userScripts.register()")}}</li>
- <li>{{WebExtAPIRef("userScripts.onBeforeScript")}}</li>
-</ul>
+- {{WebExtAPIRef("userScripts")}}
+- {{WebExtAPIRef("userScripts.register()", "userScripts.register()")}}
+- {{WebExtAPIRef("userScripts.onBeforeScript")}}

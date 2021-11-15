@@ -11,34 +11,33 @@ tags:
   - contextMenus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>Masquer tous les éléments de menu par défaut de Firefox en faveur d'un menu contextuel personnalisé.</p>
+Masquer tous les éléments de menu par défaut de Firefox en faveur d'un menu contextuel personnalisé.
 
-<p>La méthode overrideContext permet d'afficher les éléments de menu correspondants de cette extension à la place du menu par défaut. Cette méthode doit être appelée à partir d'un gestionnaire d'événements DOM 'contextmenu', et ne s'applique qu'au menu qui s'ouvre après cet événement.</p>
+La méthode overrideContext permet d'afficher les éléments de menu correspondants de cette extension à la place du menu par défaut. Cette méthode doit être appelée à partir d'un gestionnaire d'événements DOM 'contextmenu', et ne s'applique qu'au menu qui s'ouvre après cet événement.
 
-<p>Pour appeler cette méthode, votre extension doit avoir la permission <code>menus.overrideContext</code>.</p>
+Pour appeler cette méthode, votre extension doit avoir la permission `menus.overrideContext`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.menus.overrideContext(
+```js
+browser.menus.overrideContext(
   contextOptions // object
-)</pre>
+)
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>contextOptions</code></dt>
- <dd><p><code>object</code>. Options sur la façon dont les menus contextuels seront remplacés.</p>
- <dl>
-  <dt><code>showDefaults</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. S'il faut également inclure les éléments de menu par défaut dans le menu.</dd>
-  <dt><code>context </code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Le ContextType à surcharger, pour autoriser les éléments de menu d'autres extensions dans le menu. Actuellement, seuls <code>'bookmark'</code> et <code>'tab'</code> sont supportés. <code>showDefaults</code> ne peut pas être utilisé avec cette option.</dd>
-  <dt><code>bookmarkId </code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Requis lorsque le contexte est  <code>'bookmark'</code>. Nécessite la permission  'bookmark'.</dd>
-  <dt><code>tabId </code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Requis lorsque le contexte est <code>'tab'</code>. Nécessite la permission 'tabs'.</dd>
- </dl>
- </dd>
-</dl>
+- `contextOptions`
+
+  - : `object`. Options sur la façon dont les menus contextuels seront remplacés.
+
+    - `showDefaults` {{optional_inline}}
+      - : `boolean`. S'il faut également inclure les éléments de menu par défaut dans le menu.
+    - `context `{{optional_inline}}
+      - : `string`. Le ContextType à surcharger, pour autoriser les éléments de menu d'autres extensions dans le menu. Actuellement, seuls `'bookmark'` et `'tab'` sont supportés. `showDefaults` ne peut pas être utilisé avec cette option.
+    - `bookmarkId `{{optional_inline}}
+      - : `string`. Requis lorsque le contexte est  `'bookmark'`. Nécessite la permission  'bookmark'.
+    - `tabId `{{optional_inline}}
+      - : `integer`. Requis lorsque le contexte est `'tab'`. Nécessite la permission 'tabs'.

@@ -12,68 +12,66 @@ tags:
   - toogleReaderMode
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Bascule en mode Lecteur pour l'onglet donné.</p>
+Bascule en mode Lecteur pour l'onglet donné.
 
-<ul>
-</ul>
+Cette fonction permet de basculer en mode Lecteur pour l'onglet donné. Il prend un identifiant de tabulation en tant que paramètre: s'il est omis, l'onglet actuellement actif est basculé.
 
-<p>Cette fonction permet de basculer en mode Lecteur pour l'onglet donné. Il prend un identifiant de tabulation en tant que paramètre: s'il est omis, l'onglet actuellement actif est basculé.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Le mode Lecteur, également connu sous le nom de Reader View, est une fonction de navigateur qui permet à l'utilisateur de se concentrer plus facilement sur un article en :
 
-<p>Le mode Lecteur, également connu sous le nom de Reader View, est une fonction de navigateur qui permet à l'utilisateur de se concentrer plus facilement sur un article en :</p>
+- masquage d'éléments de page non essentiels, tels que des encadrés, des bas de page et des annonces
+- changer la taille du texte de la page, le contraste et la disposition pour une meilleure lisibilité.
 
-<ul>
- <li>masquage d'éléments de page non essentiels, tels que des encadrés, des bas de page et des annonces</li>
- <li>changer la taille du texte de la page, le contraste et la disposition pour une meilleure lisibilité.</li>
-</ul>
+Le mode Lecteur est utile spécifiquement pour les articles: c'est-à-dire, les pages qui ont un corps de texte comme caractéristique principale. Les pages qui n'ont pas d'article identifiable ne peuvent pas être affichées en mode Lecteur. Pour savoir si une page est un article, vérifiez la propriété `isArticle` de {{WebExtAPIRef("tabs.Tab")}}.
 
-<p>Le mode Lecteur est utile spécifiquement pour les articles: c'est-à-dire, les pages qui ont un corps de texte comme caractéristique principale. Les pages qui n'ont pas d'article identifiable ne peuvent pas être affichées en mode Lecteur. Pour savoir si une page est un article, vérifiez la propriété <code>isArticle</code> de {{WebExtAPIRef("tabs.Tab")}}.</p>
+Pour savoir si un onglet est déjà en mode Lecteur, vérifiez la propriété  `isInReaderMode` de {{WebExtAPIRef("tabs.Tab")}}. Pour suivre les onglets entrant ou sortant du mode Lecteur, vous devez suivre l'état actuel de tous les onglets et vérifier quand `isInReaderMode` change :
 
-<p>Pour savoir si un onglet est déjà en mode Lecteur, vérifiez la propriété  <code>isInReaderMode</code> de {{WebExtAPIRef("tabs.Tab")}}. Pour suivre les onglets entrant ou sortant du mode Lecteur, vous devez suivre l'état actuel de tous les onglets et vérifier quand <code>isInReaderMode</code> change :</p>
-
-<pre class="brush: js">function handleUpdated(tabId, changeInfo, tabInfo) {
+```js
+function handleUpdated(tabId, changeInfo, tabInfo) {
   if (changeInfo.status === "complete") {
     console.log(`Tab ${tabId} reader mode: ${tabInfo.isInReaderMode}`);
   }
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated);</pre>
+browser.tabs.onUpdated.addListener(handleUpdated);
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var toggling = browser.tabs.toggleReaderMode(
+```js
+var toggling = browser.tabs.toggleReaderMode(
   tabId            // optional integer
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. L'ID de l'onglet à afficher en mode Lecteur. Par défaut à l'onglet sélectionné de la fenêtre en cours.</dd>
-</dl>
+- `tabId`{{optional_inline}}
+  - : `integer`. L'ID de l'onglet à afficher en mode Lecteur. Par défaut à l'onglet sélectionné de la fenêtre en cours.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans argument lorsque l'onglet a été mis à jour. Si une erreur se produit (par exemple, parce que la page n'était pas un article), la promesse sera rejetée avec un message d'erreur..</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque l'onglet a été mis à jour. Si une erreur se produit (par exemple, parce que la page n'était pas un article), la promesse sera rejetée avec un message d'erreur..
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Ce code bascule chaque nouvelle page en mode lecteur, si cette page est éligible pour cela :</p>
+Ce code bascule chaque nouvelle page en mode lecteur, si cette page est éligible pour cela :
 
-<pre class="brush: js">function switchToReaderMode(tabId, changeInfo, tabInfo) {
+```js
+function switchToReaderMode(tabId, changeInfo, tabInfo) {
   if (changeInfo.isArticle) {
     browser.tabs.toggleReaderMode(tabId);
   }
 }
 
-browser.tabs.onUpdated.addListener(switchToReaderMode);</pre>
+browser.tabs.onUpdated.addListener(switchToReaderMode);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.toggleReaderMode")}}</p>
+{{Compat("webextensions.api.tabs.toggleReaderMode")}}

@@ -12,51 +12,41 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/printPreview
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Ouvre l'aperçu avant impression pour l'onglet actif.C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).Une extension peut détecter lorsque l'aperçu d'impression a été fermé en écoutant l'événement [afterprint](/fr/docs/Web/Events/afterprint) :
 
-<div>Ouvre l'aperçu avant impression pour l'onglet actif.</div>
+```js
+window.addEventListener("afterprint", resumeFunction, false);
+```
 
-<div></div>
+## Syntaxe
 
-<div>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</div>
+```js
+var openingPreview = browser.tabs.printPreview()
+```
 
-<div></div>
+### Paramètres
 
-<div>Une extension peut détecter lorsque l'aperçu d'impression a été fermé en écoutant l'événement <a href="/fr/docs/Web/Events/afterprint">afterprint</a> :</div>
+None.
 
-<div></div>
+### Valeur retournée
 
-<div>
-<pre class="brush: js">window.addEventListener("afterprint", resumeFunction, false);</pre>
-</div>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la page d'aperçu est ouverte.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Exemples
 
-<pre class="brush: js">var openingPreview = browser.tabs.printPreview()
-</pre>
+Dans cet exemple, un script d'arrière-plan écoute un clic sur une [action de navigateur](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2), puis ouvre l'aperçu avant impression pour l'onglet actuellement actif :
 
-<h3 id="Paramètres">Paramètres</h3>
-
-<p>None.</p>
-
-<h3 id="Valeur_retournée">Valeur retournée</h3>
-
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans argument lorsque la page d'aperçu est ouverte.</p>
-
-<h2 id="Exemples">Exemples</h2>
-
-<p>Dans cet exemple, un script d'arrière-plan écoute un clic sur une <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">action de navigateur</a>, puis ouvre l'aperçu avant impression pour l'onglet actuellement actif :</p>
-
-<pre class="brush: js">browser.browserAction.onClicked.addListener(() =&gt; {
+```js
+browser.browserAction.onClicked.addListener(() => {
   browser.tabs.printPreview()
-    .then(() =&gt; {
+    .then(() => {
       console.log("Entered print preview");
     });
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.printPreview")}}</p>
+{{Compat("webextensions.api.tabs.printPreview")}}

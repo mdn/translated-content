@@ -12,45 +12,42 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Ouvrez le menu contextuel de l'action de la page.
 
-<div>Ouvrez le menu contextuel de l'action de la page.</div>
+Vous pouvez uniquement appeler cette fonction à partir du gestionnaire pour une [action utilisateur](/fr/Add-ons/WebExtensions/User_actions).
 
-<div></div>
+## Syntaxe
 
-<div>
-<p>Vous pouvez uniquement appeler cette fonction à partir du gestionnaire pour une <a href="/fr/Add-ons/WebExtensions/User_actions">action utilisateur</a>.</p>
-</div>
+```js
+browser.pageAction.openPopup()
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+### Paramètres
 
-<pre class="brush: js">browser.pageAction.openPopup()
-</pre>
+None.
 
-<h3 id="Paramètres">Paramètres</h3>
+### Valeur retourné
 
-<p>None.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue sans arguments.
 
-<h3 id="Valeur_retourné">Valeur retourné</h3>
+## Compatibilité du navigateur
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui est résolue sans arguments.</p>
+{{Compat("webextensions.api.pageAction.openPopup", 10)}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Exemples
 
-<p>{{Compat("webextensions.api.pageAction.openPopup", 10)}}</p>
+Ouvrez la fenêtre contextuelle lorsque l'utilisateur sélectionne un élément de menu contextuel :
 
-<h2 id="Exemples">Exemples</h2>
-
-<p>Ouvrez la fenêtre contextuelle lorsque l'utilisateur sélectionne un élément de menu contextuel :</p>
-
-<pre class="brush: js">browser.menus.create({
+```js
+browser.menus.create({
   id: "open-popup",
   title: "open popup",
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener(() =&gt; {
+browser.menus.onClicked.addListener(() => {
   browser.pageAction.openPopup();
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

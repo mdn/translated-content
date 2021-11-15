@@ -10,79 +10,70 @@ tags:
   - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Obtenez les éléments sur les modules complémentaires installés.</p>
+Obtenez les éléments sur les modules complémentaires installés.
 
-<p>Avec l'API de <code>gestion</code> vous pouvez :</p>
+Avec l'API de `gestion` vous pouvez :
 
-<ul>
- <li>Obtenir des informations sur les modules complémentaires installés</li>
- <li>Activer / Désactiver les modules complémentaires</li>
- <li>Désinstaller les modules complémentaires</li>
- <li>Découvrez quels sont les alertes des permissions envoyés particulièrement par les modules complémentaires ou les manifest</li>
- <li>Obtenir les notifications sur l'ajout des modules complémentaires, désinstallé, activé ou désactivé.</li>
-</ul>
+- Obtenir des informations sur les modules complémentaires installés
+- Activer / Désactiver les modules complémentaires
+- Désinstaller les modules complémentaires
+- Découvrez quels sont les alertes des permissions envoyés particulièrement par les modules complémentaires ou les manifest
+- Obtenir les notifications sur l'ajout des modules complémentaires, désinstallé, activé ou désactivé.
 
-<p>La plupart de ces opérations requièrent les <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permissions d'APIs</a> de gestion. Les opérations qui ne fournissent pas d'accès à d'autres modules complémentaires ne nécessitent pas de permissions.</p>
+La plupart de ces opérations requièrent les [permissions d'APIs](/fr/Add-ons/WebExtensions/manifest.json/permissions) de gestion. Les opérations qui ne fournissent pas d'accès à d'autres modules complémentaires ne nécessitent pas de permissions.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("management.ExtensionInfo")}}</dt>
- <dd>Un objet contenant des informations sur un module complémentaire installé.</dd>
-</dl>
+- {{WebExtAPIRef("management.ExtensionInfo")}}
+  - : Un objet contenant des informations sur un module complémentaire installé.
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt>{{WebExtAPIRef("management.getAll()")}}</dt>
- <dd>Renvoie des informations sur tous les modules complémentaires installés</dd>
- <dt>{{WebExtAPIRef("management.get()")}}</dt>
- <dd>Renvoie des informations sur un module complémentaire particulier, compte tenu de son ID.</dd>
- <dt>{{WebExtAPIRef("management.getSelf()")}}</dt>
- <dd>Renvoie des informations sur l'appel du module complémentaire.</dd>
- <dt>{{WebExtAPIRef("management.install()")}}</dt>
- <dd>Installe un thème particulier, étant donné son URL à l'adresse  <a href="https://addons.mozilla.org">addons.mozilla.org</a>.</dd>
- <dt>{{WebExtAPIRef("management.uninstall()")}}</dt>
- <dd>Désinstalle un module complémenaire particulier, compte tenu de son ID.</dd>
- <dt>{{WebExtAPIRef("management.uninstallSelf()")}}</dt>
- <dd>Désinstalle l'appel d'un module complémentaire.</dd>
- <dt>{{WebExtAPIRef("management.getPermissionWarningsById()")}}</dt>
- <dd>Obtenez l'ensemble des alertes des permissions particulièrement pour un module complémentaire, compte tenu de son ID.</dd>
- <dt>{{WebExtAPIRef("management.getPermissionWarningsByManifest()")}}</dt>
- <dd>Obtenez l'ensemble des alertes de permission qui seraient affichés pour la chaîne de manifest donnée.</dd>
- <dt>{{WebExtAPIRef("management.setEnabled()")}}</dt>
- <dd>Activer / désactiver un module complémentaire, compte tenu de son ID.</dd>
-</dl>
+- {{WebExtAPIRef("management.getAll()")}}
+  - : Renvoie des informations sur tous les modules complémentaires installés
+- {{WebExtAPIRef("management.get()")}}
+  - : Renvoie des informations sur un module complémentaire particulier, compte tenu de son ID.
+- {{WebExtAPIRef("management.getSelf()")}}
+  - : Renvoie des informations sur l'appel du module complémentaire.
+- {{WebExtAPIRef("management.install()")}}
+  - : Installe un thème particulier, étant donné son URL à l'adresse  [addons.mozilla.org](https://addons.mozilla.org).
+- {{WebExtAPIRef("management.uninstall()")}}
+  - : Désinstalle un module complémenaire particulier, compte tenu de son ID.
+- {{WebExtAPIRef("management.uninstallSelf()")}}
+  - : Désinstalle l'appel d'un module complémentaire.
+- {{WebExtAPIRef("management.getPermissionWarningsById()")}}
+  - : Obtenez l'ensemble des alertes des permissions particulièrement pour un module complémentaire, compte tenu de son ID.
+- {{WebExtAPIRef("management.getPermissionWarningsByManifest()")}}
+  - : Obtenez l'ensemble des alertes de permission qui seraient affichés pour la chaîne de manifest donnée.
+- {{WebExtAPIRef("management.setEnabled()")}}
+  - : Activer / désactiver un module complémentaire, compte tenu de son ID.
 
-<h2 id="Evénements">Evénements</h2>
-<dl>
- <dt>{{WebExtAPIRef("management.onInstalled")}}</dt>
- <dd>Action quand un module complémentaire est installé.</dd>
- <dt>{{WebExtAPIRef("management.onUninstalled")}}</dt>
- <dd>Action quand un module complémentaire est désinstallé.</dd>
- <dt>{{WebExtAPIRef("management.onEnabled")}}</dt>
- <dd>Action quand un module complémentaire est activé.</dd>
- <dt>{{WebExtAPIRef("management.onDisabled")}}</dt>
- <dd>Action quand un module complémenaire est désactivé.</dd>
-</dl>
+## Evénements
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- {{WebExtAPIRef("management.onInstalled")}}
+  - : Action quand un module complémentaire est installé.
+- {{WebExtAPIRef("management.onUninstalled")}}
+  - : Action quand un module complémentaire est désinstallé.
+- {{WebExtAPIRef("management.onEnabled")}}
+  - : Action quand un module complémentaire est activé.
+- {{WebExtAPIRef("management.onDisabled")}}
+  - : Action quand un module complémenaire est désactivé.
 
-<p>{{Compat("webextensions.api.management")}}</p>
+## Compatibilité du navigateur
 
-<p>{{WebExtExamples("h2")}}</p>
+{{Compat("webextensions.api.management")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+{{WebExtExamples("h2")}}
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/management"><code>chrome.management</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> dans le code de Chromium code.</p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2012 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2012 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,5 +100,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/management
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

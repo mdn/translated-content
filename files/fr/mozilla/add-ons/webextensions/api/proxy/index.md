@@ -8,61 +8,50 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="warning">
-<p><strong>Attention :</strong></p>
- <p>Vous ne devez pas utiliser la fonction {{WebExtAPIRef("proxy.register()")}} ou la fonction {{WebExtAPIRef("proxy.unregister()")}} pour enregistrer et supprimer le fichier <a href="/fr/Add-ons/WebExtensions/API/proxy/register#PAC_file_specification">Proxy Auto-Configuration (PAC)</a>. Cette API était dépréciée dans Firefox 68 et sera supprimée de Firefox 71.</p>
-</div>
+> **Attention :**
+>
+> Vous ne devez pas utiliser la fonction {{WebExtAPIRef("proxy.register()")}} ou la fonction {{WebExtAPIRef("proxy.unregister()")}} pour enregistrer et supprimer le fichier [Proxy Auto-Configuration (PAC)](/fr/Add-ons/WebExtensions/API/proxy/register#PAC_file_specification). Cette API était dépréciée dans Firefox 68 et sera supprimée de Firefox 71.
 
-<p>Utilisez l'API proxy pour les requêtes Web proxy. Vous pouvez utiliser l'écouteur d'événement {{WebExtAPIRef("proxy.onRequest")}}} pour intercepter les requêtes web, et retourner un objet qui décrit si et comment les proxyer.</p>
+Utilisez l'API proxy pour les requêtes Web proxy. Vous pouvez utiliser l'écouteur d'événement {{WebExtAPIRef("proxy.onRequest")}}} pour intercepter les requêtes web, et retourner un objet qui décrit si et comment les proxyer.
 
-<p>L'avantage de l'approche <code>proxy.onRequest</code> est que le code qui implémente votre stratégie de proxy s'exécute dans le script d'arrière-plan de votre extension pour accéder aux API WebExtension disponibles pour votre extension (y compris, par exemple, l'accès au <code><a href="/fr/Add-ons/WebExtensions/API/storage">stockage</a></code> et au réseau de votre extension APIs comme <code><a href="/fr/Add-ons/WebExtensions/API/dns">dns</a></code>).</p>
+L'avantage de l'approche `proxy.onRequest` est que le code qui implémente votre stratégie de proxy s'exécute dans le script d'arrière-plan de votre extension pour accéder aux API WebExtension disponibles pour votre extension (y compris, par exemple, l'accès au [`stockage`](/fr/Add-ons/WebExtensions/API/storage) et au réseau de votre extension APIs comme [`dns`](/fr/Add-ons/WebExtensions/API/dns)).
 
-<p>En dehors de cette API, les extensions peuvent également utiliser la propriété  <code><a href="/fr/Add-ons/WebExtensions/API/browserSettings/proxyConfig">browserSettings.proxyConfig</a></code> pour configurer les paramètres proxy globaux.</p>
+En dehors de cette API, les extensions peuvent également utiliser la propriété  [`browserSettings.proxyConfig`](/fr/Add-ons/WebExtensions/API/browserSettings/proxyConfig) pour configurer les paramètres proxy globaux.
 
-<p>Google Chrome fournit <a href="https://developer.chrome.com/extensions/proxy">une API d'extension également appelée "proxy"</a> qui est fonctionnellement similaire à cette API, dans la mesure où les extensions peuvent l'utiliser pour implémenter une politique de proxy. Cependant, la conception de l'API Chrome est complètement différente de cette API. Étant donné que cette API est incompatible avec l'API de <code>proxy</code> Chrome, cette API est uniquement disponible via l'espace de noms du <code>navigateur</code>.</p>
+Google Chrome fournit [une API d'extension également appelée "proxy"](https://developer.chrome.com/extensions/proxy) qui est fonctionnellement similaire à cette API, dans la mesure où les extensions peuvent l'utiliser pour implémenter une politique de proxy. Cependant, la conception de l'API Chrome est complètement différente de cette API. Étant donné que cette API est incompatible avec l'API de `proxy` Chrome, cette API est uniquement disponible via l'espace de noms du `navigateur`.
 
-<p>Pour utiliser cette API, vous devez disposer de la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "proxy". De plus, lorsque vous voulez intercepter des requêtes, vous avez également besoin de la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">permission de l'hôte</a> pour les URL des requêtes interceptées</p>
+Pour utiliser cette API, vous devez disposer de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "proxy". De plus, lorsque vous voulez intercepter des requêtes, vous avez également besoin de la [permission de l'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour les URL des requêtes interceptées
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("proxy.ProxyInfo")}}</dt>
- <dd>Décrit un proxy.</dd>
- <dt>{{WebExtAPIRef("proxy.RequestDetails")}}</dt>
- <dd>
- <p>Contient des informations sur une requête Web que le navigateur est sur le point de faire.</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("proxy.ProxyInfo")}}
+  - : Décrit un proxy.
+- {{WebExtAPIRef("proxy.RequestDetails")}}
+  - : Contient des informations sur une requête Web que le navigateur est sur le point de faire.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{WebExtAPIRef("proxy.settings")}}</dt>
- <dd>Obtenir et définir les paramètres de proxy.</dd>
-</dl>
+- {{WebExtAPIRef("proxy.settings")}}
+  - : Obtenir et définir les paramètres de proxy.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("proxy.register()")}}</dt>
- <dd>Enregistre le script proxy donné.</dd>
- <dt>{{WebExtAPIRef("proxy.unregister()")}}</dt>
- <dd>Annule l'inscription du script proxy.</dd>
-</dl>
+- {{WebExtAPIRef("proxy.register()")}}
+  - : Enregistre le script proxy donné.
+- {{WebExtAPIRef("proxy.unregister()")}}
+  - : Annule l'inscription du script proxy.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("proxy.onError")}}</dt>
- <dd>Lancé lorsque le système rencontre une erreur lors de l'exécution du script PAC ou de l'écouteur <code>onRequest</code>.</dd>
- <dt>{{WebExtAPIRef("proxy.onRequest")}}</dt>
- <dd>Déclenché lorsqu'une requête Web est sur le point d'être effectuée, ce qui donne à l'extension l'opportunité de l'utiliser comme proxy.</dd>
-</dl>
+- {{WebExtAPIRef("proxy.onError")}}
+  - : Lancé lorsque le système rencontre une erreur lors de l'exécution du script PAC ou de l'écouteur `onRequest`.
+- {{WebExtAPIRef("proxy.onRequest")}}
+  - : Déclenché lorsqu'une requête Web est sur le point d'être effectuée, ce qui donne à l'extension l'opportunité de l'utiliser comme proxy.
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.proxy")}}</p>
+{{Compat("webextensions.api.proxy")}}

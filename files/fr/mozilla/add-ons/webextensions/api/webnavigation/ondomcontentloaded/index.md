@@ -13,77 +13,69 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsque l'événement <a href="/fr/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> est déclenché dans la page. À ce stade, le document est chargé et analysé, et le DOM est entièrement construit, mais les ressources liées telles que les images, les feuilles de style et les sous-trames peuvent ne pas encore être chargées.</p>
+Lancé lorsque l'événement [DOMContentLoaded](/fr/docs/Web/Events/DOMContentLoaded) est déclenché dans la page. À ce stade, le document est chargé et analysé, et le DOM est entièrement construit, mais les ressources liées telles que les images, les feuilles de style et les sous-trames peuvent ne pas encore être chargées.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.webNavigation.onDOMContentLoaded.addListener(
+```js
+browser.webNavigation.onDOMContentLoaded.addListener(
   listener,                   // function
   filter                      // optional object
 )
 browser.webNavigation.onDOMContentLoaded.removeListener(listener)
 browser.webNavigation.onDOMContentLoaded.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il est écouté, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il est écouté, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>details</code></dt>
-  <dd><a href="#details"><code>object</code></a>. Détails sur l'événement de navigation</dd>
- </dl>
- </dd>
- <dt><code>filter</code>{{optional_inline}}</dt>
- <dd>
- <p><code>object</code>. Un objet contenant une seule propriété <code>url</code>, qui est un <code>tableau</code> d'objets  {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un <code>UrlFilter</code> dans un tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.</p>
- </dd>
-</dl>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
-<h2 id="Objets_supplémentaires">Objets supplémentaires</h2>
+    - `details`
+      - : [`object`](#details). Détails sur l'événement de navigation
 
-<h3 id="détails">détails</h3>
+- `filter`{{optional_inline}}
+  - : `object`. Un objet contenant une seule propriété `url`, qui est un `tableau` d'objets  {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans un tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. L'ID de l'onglet dans lequel la navigation s'est produite.</dd>
- <dt><code>url</code></dt>
- <dd><code>string</code>. L'URL à laquelle le cadre donné a navigué.</dd>
- <dt><code>processId</code></dt>
- <dd><code>integer</code>.  L'ID du processus dans lequel cet onglet est rendu.</dd>
- <dt><code>frameId</code></dt>
- <dd><code>integer</code>. Frame dans lequel la navigation est en cours. 0 indique que la navigation se déroule dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un <a href="/fr/docs/Web/HTML/Element/iframe">iframe</a> imbriqué. Une valeur positive indique que la navigation se déroule dans un iframe imbriqué. Les ID <em>frames</em> sont uniques pour un onglet et un processus donnés.</dd>
- <dt><code>timeStamp</code></dt>
- <dd><code>number</code>. L'heure à laquelle <code>DOMContentLoaded</code> a été déclenchée, en <a href="https://en.wikipedia.org/wiki/Unix_time">millisecondes depuis l'époque</a>.</dd>
-</dl>
+## Objets supplémentaires
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### détails
 
-<p>{{Compat("webextensions.api.webNavigation.onDOMContentLoaded")}}</p>
+- `tabId`
+  - : `integer`. L'ID de l'onglet dans lequel la navigation s'est produite.
+- `url`
+  - : `string`. L'URL à laquelle le cadre donné a navigué.
+- `processId`
+  - : `integer`.  L'ID du processus dans lequel cet onglet est rendu.
+- `frameId`
+  - : `integer`. Frame dans lequel la navigation est en cours. 0 indique que la navigation se déroule dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué. Une valeur positive indique que la navigation se déroule dans un iframe imbriqué. Les ID _frames_ sont uniques pour un onglet et un processus donnés.
+- `timeStamp`
+  - : `number`. L'heure à laquelle `DOMContentLoaded` a été déclenchée, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Logs les URL cibles pour <code>onDOMContentLoaded</code>,si le nom d'hôte de l'URL cible contient "example.com" ou commence par "developer".</p>
+{{Compat("webextensions.api.webNavigation.onDOMContentLoaded")}}
 
-<pre class="brush: js">var filter = {
+## Exemples
+
+Logs les URL cibles pour `onDOMContentLoaded`,si le nom d'hôte de l'URL cible contient "example.com" ou commence par "developer".
+
+```js
+var filter = {
   url:
   [
     {hostContains: "example.com"},
@@ -95,21 +87,18 @@ function logOnDOMContentLoaded(details) {
   console.log("onDOMContentLoaded: " + details.url);
 }
 
-browser.webNavigation.<code>onDOMContentLoaded</code>.addListener(logOnDOMContentLoaded, filter);
+browser.webNavigation.onDOMContentLoaded.addListener(logOnDOMContentLoaded, filter);
+```
 
-</pre>
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webNavigation"><code>chrome.webNavigation</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -136,5 +125,4 @@ browser.webNavigation.<code>onDOMContentLoaded</code>.addListener(logOnDOMConten
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

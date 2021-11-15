@@ -13,49 +13,48 @@ tags:
   - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Masque l'action de page pour un onglet donné.</p>
+Masque l'action de page pour un onglet donné.
 
-<p><code>hide()</code> remplace la correspondance de motifs, de sorte que l'action page ne sera pas affichée dans l'onglet spécifié même si son URL est associée à <a href="/Add-ons/WebExtensions/manifest.json/page_action"><code>show_matches</code></a>.</p>
+`hide()` remplace la correspondance de motifs, de sorte que l'action page ne sera pas affichée dans l'onglet spécifié même si son URL est associée à [`show_matches`](/Add-ons/WebExtensions/manifest.json/page_action).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.pageAction.hide(
+```js
+browser.pageAction.hide(
   tabId // integer
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. L'ID de l'onglet pour lequel vous souhaitez masquer l'action de la page.</dd>
-</dl>
+- `tabId`
+  - : `integer`. L'ID de l'onglet pour lequel vous souhaitez masquer l'action de la page.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.pageAction.hide")}}</p>
+{{Compat("webextensions.api.pageAction.hide")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Masquez l'action de la page pour l'onglet en cours lorsque l'utilisateur clique dessus :</p>
+Masquez l'action de la page pour l'onglet en cours lorsque l'utilisateur clique dessus :
 
-<pre class="brush: js">browser.pageAction.onClicked.addListener((tab) =&gt; {
+```js
+browser.pageAction.onClicked.addListener((tab) => {
   browser.pageAction.hide(tab.id);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/pageAction"><code>chrome.pageAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -82,5 +81,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

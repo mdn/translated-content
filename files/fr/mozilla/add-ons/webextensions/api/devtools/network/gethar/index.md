@@ -10,34 +10,36 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtenez un <a href="http://www.softwareishard.com/blog/har-12-spec/#log">journal HAR</a> pour la page chargée dans l'onglet en cours.</p>
+Obtenez un [journal HAR](http://www.softwareishard.com/blog/har-12-spec/#log) pour la page chargée dans l'onglet en cours.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var getting = browser.devtools.network.getHAR()
-</pre>
+```js
+var getting = browser.devtools.network.getHAR()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>None.</p>
+None.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet contenant le journal HAR pour l'onglet en cours. Pour plus de détails sur ce que contient l'objet journal, reportez-vous à la <a href="http://www.softwareishard.com/blog/har-12-spec/#log">spécification HAR</a>.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet contenant le journal HAR pour l'onglet en cours. Pour plus de détails sur ce que contient l'objet journal, reportez-vous à la [spécification HAR](http://www.softwareishard.com/blog/har-12-spec/#log).
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.devtools.network.getHAR")}}</p>
+{{Compat("webextensions.api.devtools.network.getHAR")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Consignez les URL des demandes contenues dans le journal HAR :</p>
+Consignez les URL des demandes contenues dans le journal HAR :
 
-<pre class="brush: js">async function logRequests() {
+```js
+async function logRequests() {
   let harLog = await browser.devtools.network.getHAR();
   console.log(`HAR version: ${harLog.version}`);
   for (let entry of harLog.entries) {
@@ -46,17 +48,15 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR
 }
 
 logRequestsButton.addEventListener("click", logRequests);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.devtools.network`](https://developer.chrome.com/extensions/devtools_network).
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/devtools_network"><code>chrome.devtools.network</code></a>.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -83,5 +83,4 @@ logRequestsButton.addEventListener("click", logRequests);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

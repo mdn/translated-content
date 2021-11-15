@@ -9,70 +9,74 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 original_slug: Mozilla/Add-ons/WebExtensions/user_interface/pages_web_incluses
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Vous pouvez inclure des pages HTML dans votre extension sous la forme de formulaires, d’aide ou tout autre contenu dont votre extension a besoin.</p>
+Vous pouvez inclure des pages HTML dans votre extension sous la forme de formulaires, d’aide ou tout autre contenu dont votre extension a besoin.
 
-<p><img src="bundled_page_as_panel_small.png"></p>
+![](bundled_page_as_panel_small.png)
 
-<p>Ces pages ont également accès aux mêmes API JavaScript privilégiées qui sont disponibles pour les scripts d’arrière‐plan de votre extension, mais elles sont dans leur propre onglet, leur propre file d’attente d’événements JavaScript, leurs propres globales etc.</p>
+Ces pages ont également accès aux mêmes API JavaScript privilégiées qui sont disponibles pour les scripts d’arrière‐plan de votre extension, mais elles sont dans leur propre onglet, leur propre file d’attente d’événements JavaScript, leurs propres globales etc.
 
-<p>Pensez à la page d'arrière-plan comme une « page cachée d’extension ».</p>
+Pensez à la page d'arrière-plan comme une « page cachée d’extension ».
 
-<h2 id="Spécification_des_pages_d’extension">Spécification des pages d’extension</h2>
+## Spécification des pages d’extension
 
-<p>Vous pouvez inclure des fichiers HTML - et les fichiers CSS ou JavaScript associés - dans votre extension. Les fichiers peuvent être inclus à la racine ou organisés dans des sous‐dossiers.***</p>
+Vous pouvez inclure des fichiers HTML - et les fichiers CSS ou JavaScript associés - dans votre extension. Les fichiers peuvent être inclus à la racine ou organisés dans des sous‐dossiers.\*\*\*
 
-<pre>/my-extension
-    /manifest.json
-    /my-page.html
-    /my-page.js</pre>
+    /my-extension
+        /manifest.json
+        /my-page.html
+        /my-page.js
 
-<h2 id="Affichage_des_pages_d’extension">Affichage des pages d’extension</h2>
+## Affichage des pages d’extension
 
-<p>Il existe deux options pour afficher des pages d'extension :  {{WebExtAPIRef("windows.create()")}} et {{WebExtAPIRef("tabs.create()")}}.</p>
+Il existe deux options pour afficher des pages d'extension :  {{WebExtAPIRef("windows.create()")}} et {{WebExtAPIRef("tabs.create()")}}.
 
-<p>À l’aide de <code>windows.create()</code>, vous pouvez ouvrir une page HTML intégrée dans un panneau détaché (une fenêtre sans l’interface utilisateur de la barre d’la barre de signet et similaire) pour créer une expérience utilisateur semblable à une boîte de dialogue :</p>
+À l’aide de `windows.create()`, vous pouvez ouvrir une page HTML intégrée dans un panneau détaché (une fenêtre sans l’interface utilisateur de la barre d’la barre de signet et similaire) pour créer une expérience utilisateur semblable à une boîte de dialogue :
 
-<pre class="brush: js">var createData = {
+```js
+var createData = {
   type: "detached_panel",
   url: "panel.html",
   width: 250,
   height: 100
 };
-var creating = browser.windows.create(createData);</pre>
+var creating = browser.windows.create(createData);
+```
 
-<p>Lorsque la fenêtre n'est plus nécessaire, elle peut être fermée par programme.</p>
+Lorsque la fenêtre n'est plus nécessaire, elle peut être fermée par programme.
 
-<p>Par exemple, après que l’utilisateur a cliqué sur un bouton, en passant l’ID de la fenêtre actuelle à {{WebExtAPIRef("windows.remove()")}} :</p>
+Par exemple, après que l’utilisateur a cliqué sur un bouton, en passant l’ID de la fenêtre actuelle à {{WebExtAPIRef("windows.remove()")}} :
 
-<pre class="brush: js">document.getElementById("closeme").addEventListener("click", function(){
+```js
+document.getElementById("closeme").addEventListener("click", function(){
   let winId = browser.windows.WINDOW_ID_CURRENT;
   let removing = browser.windows.remove(winId);
-});</pre>
+});
+```
 
-<h2 id="Pages_d’extension_et_historique">Pages d’extension et historique</h2>
+## Pages d’extension et historique
 
-<p>Par défaut, les pages que vous ouvrez de cette manière seront stockées dans l’historique de l’utilisateur, comme les pages Web normales. Si vous ne voulez pas avoir ce comportement, utilisez {{WebExtAPIRef("history.deleteUrl()")}} pour supprimer l'enregistrement du navigateur :</p>
+Par défaut, les pages que vous ouvrez de cette manière seront stockées dans l’historique de l’utilisateur, comme les pages Web normales. Si vous ne voulez pas avoir ce comportement, utilisez {{WebExtAPIRef("history.deleteUrl()")}} pour supprimer l'enregistrement du navigateur :
 
-<pre class="brush: js">function onVisited(historyItem) {
+```js
+function onVisited(historyItem) {
   if (historyItem.url == browser.extension.getURL(myPage)) {
     browser.history.deleteUrl({url: historyItem.url});
   }
 }
 
-browser.history.onVisited.addListener(onVisited);</pre>
+browser.history.onVisited.addListener(onVisited);
+```
 
-<p>Pour utiliser l’API historique, vous devez demander la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> « <code>history</code> » dans votre fichier <code><a href="/fr/Add-ons/WebExtensions/manifest.json">manifest.json</a></code>.</p>
+Pour utiliser l’API historique, vous devez demander la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) « `history` » dans votre fichier [`manifest.json`](/fr/Add-ons/WebExtensions/manifest.json).
 
-<h2 id="Conception_des_pages_Web">Conception des pages Web</h2>
+## Conception des pages Web
 
-<p>Pour plus de détails sur la façon de concevoir votre page Web pour correspondre au style de Firefox, voir la documentation sur le <a href="https://design.firefox.com/photon/index.html">système de conception Photon</a> et les <a href="/fr/Add-ons/WebExtensions/user_interface/Browser_styles">styles de navigateur</a>.</p>
+Pour plus de détails sur la façon de concevoir votre page Web pour correspondre au style de Firefox, voir la documentation sur le [système de conception Photon](https://design.firefox.com/photon/index.html) et les [styles de navigateur](/fr/Add-ons/WebExtensions/user_interface/Browser_styles).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Le dépôt <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> sur GitHub contient plusieurs exemples de WebExtensions qui utilise une action de navigateur :</p>
+Le dépôt [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub contient plusieurs exemples de WebExtensions qui utilise une action de navigateur :
 
-<ul>
- <li><a href="https://github.com/mdn/webextensions-examples/tree/master/window-manipulator">window-manipulator</a> utilise les options pour créer une fenêtre</li>
-</ul>
+- [window-manipulator](https://github.com/mdn/webextensions-examples/tree/master/window-manipulator) utilise les options pour créer une fenêtre

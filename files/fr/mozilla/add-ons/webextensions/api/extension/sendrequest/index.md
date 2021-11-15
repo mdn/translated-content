@@ -13,56 +13,50 @@ tags:
   - sendRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
 ---
-<div>{{AddonSidebar}}{{Deprecated_Header}}
-<div class="warning">
-<p><strong>Attention :</strong> Cette méthode est dépréciée. utilisez {{WebExtAPIRef("runtime.sendMessage")}} à la place.</p>
-</div>
-</div>
+{{AddonSidebar}}{{Deprecated_Header}}
 
-<p>Envoie une seule requête aux autres écouteurs de l'extension. Similaire à {{WebExtAPIRef('runtime.connect')}},mais envoie seulement une seule requête avec une réponse optionnelle. L'événement {{WebExtAPIRef('extension.onRequest')}} est déclenché dans chaque page de l'extension</p>
+> **Attention :** Cette méthode est dépréciée. utilisez {{WebExtAPIRef("runtime.sendMessage")}} à la place.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+Envoie une seule requête aux autres écouteurs de l'extension. Similaire à {{WebExtAPIRef('runtime.connect')}},mais envoie seulement une seule requête avec une réponse optionnelle. L'événement {{WebExtAPIRef('extension.onRequest')}} est déclenché dans chaque page de l'extension
 
-<pre class="brush: js">chrome.extension.sendRequest(
+## Syntaxe
+
+```js
+chrome.extension.sendRequest(
   extensionId,             // optional string
   request,                 // any
   function(response) {...} // optional function
 )
-</pre>
+```
 
-<p>Cette API est également disponible en tant que <code>browser.extension.sendRequest()</code> dans une <a href="/fr/Add-ons/WebExtensions/API#Callbacks_and_promises">version qui renvoie une promise</a>.</p>
+Cette API est également disponible en tant que `browser.extension.sendRequest()` dans une [version qui renvoie une promise](/fr/Add-ons/WebExtensions/API#Callbacks_and_promises).
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>extensionId</code>{{Optional_Inline}}</dt>
- <dd><code>string</code>. L'ID d'extension de l'extension à laquelle vous souhaitez vous connecter. Si omis, la valeur par défaut est votre propre extension.</dd>
- <dt><code>request</code></dt>
- <dd><code>any</code>.</dd>
- <dt><code>responseCallback</code>{{Optional_Inline}}</dt>
- <dd><p><code>function</code>. La fonction est passée les arguments suivants :</p>
- <dl>
-  <dt><code>response</code></dt>
-  <dd><code>any</code>. Objet de réponse JSON envoyé par le gestionnaire de la requête. Si une erreur survient lors de la connexion à l'extension, le rappel sera appelé sans arguments et  {{WebExtAPIRef('runtime.lastError')}} sera défini sur le message d'erreur.</dd>
- </dl>
- </dd>
-</dl>
+- `extensionId`{{Optional_Inline}}
+  - : `string`. L'ID d'extension de l'extension à laquelle vous souhaitez vous connecter. Si omis, la valeur par défaut est votre propre extension.
+- `request`
+  - : `any`.
+- `responseCallback`{{Optional_Inline}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+  - : `function`. La fonction est passée les arguments suivants :
 
-<p>{{Compat("webextensions.api.extension.sendRequest")}}</p>
+    - `response`
+      - : `any`. Objet de réponse JSON envoyé par le gestionnaire de la requête. Si une erreur survient lors de la connexion à l'extension, le rappel sera appelé sans arguments et  {{WebExtAPIRef('runtime.lastError')}} sera défini sur le message d'erreur.
 
-<p>{{WebExtExamples}}</p>
+## Compatibilité du navigateur
 
-<div class="note"><p><strong>Note :</strong></p>
+{{Compat("webextensions.api.extension.sendRequest")}}
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/extension"><code>chrome.extension</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> dans le code Chromium.</p>
+{{WebExtExamples}}
 
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -89,5 +83,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

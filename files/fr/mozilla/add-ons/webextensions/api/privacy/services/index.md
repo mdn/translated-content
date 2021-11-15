@@ -11,25 +11,25 @@ tags:
   - Services
 translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/services
 ---
-<div>{{AddonSidebar}}
-<p>La propriété {{WebExtAPIRef("privacy.services")}} contient des paramètres liés à la vie privée contrôlant les services offerts par le navigateur ou par des tiers. Chaque propriété est un objet  {{WebExtAPIRef("types.BrowserSetting")}}.</p>
+{{AddonSidebar}}
 
-<h2 id="Propriétés">Propriétés</h2>
+La propriété {{WebExtAPIRef("privacy.services")}} contient des paramètres liés à la vie privée contrôlant les services offerts par le navigateur ou par des tiers. Chaque propriété est un objet  {{WebExtAPIRef("types.BrowserSetting")}}.
 
-<dl>
- <dt><code>passwordSavingEnabled</code></dt>
- <dd>Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur contenue est un booléen. Si il est défini à <code>true</code>, le gestionnaire de mot de passe du navigateur proposera de stocker des mots de passe lorsque l'utilisateur les entrera. La valeur par défaut est : <code>true</code>.</dd>
-</dl>
+## Propriétés
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- `passwordSavingEnabled`
+  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur contenue est un booléen. Si il est défini à `true`, le gestionnaire de mot de passe du navigateur proposera de stocker des mots de passe lorsque l'utilisateur les entrera. La valeur par défaut est : `true`.
 
-<p>{{Compat("webextensions.api.privacy.services", 10)}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.privacy.services", 10)}}
 
-<p>Désactivation, si possible, du gestionnaire de mot de passe.</p>
+## Exemples
 
-<pre class="brush: js">function onSet(result) {
+Désactivation, si possible, du gestionnaire de mot de passe.
+
+```js
+function onSet(result) {
   if (result) {
     console.log("success");
   } else {
@@ -38,7 +38,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/services
 }
 
   var getting = browser.privacy.services.passwordSavingEnabled.get({});
-  getting.then((got) =&gt; {
+  getting.then((got) => {
     console.log(got.value);
     if ((got.levelOfControl === "controlled_by_this_extension") ||
         (got.levelOfControl === "controllable_by_this_extension")) {
@@ -49,12 +49,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/services
     } else {
       console.log("Not able to set passwordSavingEnabled");
     }
-  });</pre>
+  });
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/privacy"><code>chrome.privacy</code></a>.</p>
-</div>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/extensions/privacy).

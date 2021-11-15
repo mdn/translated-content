@@ -13,82 +13,80 @@ tags:
   - getAllCookieStores
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/getAllCookieStores
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La méthode <strong><code>getAllCookieStores()</code></strong> de l'API {{WebExtAPIRef("cookies")}} retourne une liste de tous les cookies stores.</p>
+La méthode **`getAllCookieStores()`** de l'API {{WebExtAPIRef("cookies")}} retourne une liste de tous les cookies stores.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingStores = browser.cookies.getAllCookieStores()
-</pre>
+```js
+var gettingStores = browser.cookies.getAllCookieStores()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
+### Valeur renvoyée
 
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un `tableau` d'objets {{WebExtAPIRef('cookies.CookieStore')}} représentant tous les cookies stores existants.
 
-<h3 id="Valeur_renvoyée">Valeur renvoyée</h3>
+## Compatibibilité du navigateur
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un <code>tableau</code> d'objets {{WebExtAPIRef('cookies.CookieStore')}} représentant tous les cookies stores existants.</p>
+{{Compat("webextensions.api.cookies.getAllCookieStores")}}
 
-<h2 id="Compatibibilité_du_navigateur">Compatibibilité du navigateur</h2>
+## Exemples
 
-<p>{{Compat("webextensions.api.cookies.getAllCookieStores")}}</p>
+Dans l'extrait suivant, la méthode `getAllCookieStores()` permet de récupérer tous les cookies stores actuellement disponible dans le navigateur et d'afficher chaque ID de cookie et les onglets qui partagent actuellement chaque cookie store.
 
-<h2 id="Exemples">Exemples</h2>
-
-<p>Dans l'extrait suivant, la méthode <code>getAllCookieStores()</code> permet de récupérer tous les cookies stores actuellement disponible dans le navigateur et d'afficher chaque ID de cookie et les onglets qui partagent actuellement chaque cookie store.</p>
-
-<pre class="brush: js">function logStores(cookieStores) {
+```js
+function logStores(cookieStores) {
   for (let store of cookieStores) {
     console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
   }
 }
 
 var getting = browser.cookies.getAllCookieStores();
-getting.then(logStores);</pre>
+getting.then(logStores);
+```
 
-<p>Chaque membre du tableau <code>cookieStores</code> est un objet  {{WebExtAPIRef("cookies.CookieStore")}}.</p>
+Chaque membre du tableau `cookieStores` est un objet  {{WebExtAPIRef("cookies.CookieStore")}}.
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
-//
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
-//
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/extensions/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+>
+> <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+> //
+> // Redistribution and use in source and binary forms, with or without
+> // modification, are permitted provided that the following conditions are
+> // met:
+> //
+> //    * Redistributions of source code must retain the above copyright
+> // notice, this list of conditions and the following disclaimer.
+> //    * Redistributions in binary form must reproduce the above
+> // copyright notice, this list of conditions and the following disclaimer
+> // in the documentation and/or other materials provided with the
+> // distribution.
+> //    * Neither the name of Google Inc. nor the names of its
+> // contributors may be used to endorse or promote products derived from
+> // this software without specific prior written permission.
+> //
+> // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+> // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+> // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+> // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+> // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+> // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+> // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+> // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+> // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+> // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+> // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+> </pre></div>

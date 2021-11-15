@@ -5,142 +5,140 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Une extension se compose de plusieurs fichiers, packagés pour la distribution et l'installation. Dans cet article, nous allons rapidement passer par les fichiers qui pourraient être présents dans une extension.</p>
+Une extension se compose de plusieurs fichiers, packagés pour la distribution et l'installation. Dans cet article, nous allons rapidement passer par les fichiers qui pourraient être présents dans une extension.
 
-<h2 id="manifest.json">manifest.json</h2>
+## manifest.json
 
-<p>Il s'agit du seul fichier qui doit être présent dans chaque extension. Il contient des métadonnées de base sur l'extension telles que son nom, sa version et les autorisations requises. Il fournit également des pointeurs vers d'autres fichiers dans l'extension.</p>
+Il s'agit du seul fichier qui doit être présent dans chaque extension. Il contient des métadonnées de base sur l'extension telles que son nom, sa version et les autorisations requises. Il fournit également des pointeurs vers d'autres fichiers dans l'extension.
 
-<p>Ce manifeste peut également contenir des pointeurs vers plusieurs autres types de fichiers :</p>
+Ce manifeste peut également contenir des pointeurs vers plusieurs autres types de fichiers :
 
-<ul>
- <li><a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">page d'arrière-plan </a>: implémentez une logique à longue durée.</li>
- <li>Icônes pour l'extension et tous les boutons qu'elle peut définir.</li>
- <li><a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages">Sidebars, popups, et options pages</a>: Documents HTML qui fournissent du contenu pour divers composants de l'interface utilisateur.</li>
- <li><a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">Script de contenu</a> : interagissez avec les pages Web (Notez que ce n'est pas le même que javaScript dans un élément {{HTMLElement("script")}} au sein d'une page).</li>
- <li><a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Web_accessible_resources">Web-accessible resources</a> : Rendez le contenu packagé accessible aux pages Web et aux scripts de contenu.</li>
-</ul>
+- [page d'arrière-plan ](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts): implémentez une logique à longue durée.
+- Icônes pour l'extension et tous les boutons qu'elle peut définir.
+- [Sidebars, popups, et options pages](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages): Documents HTML qui fournissent du contenu pour divers composants de l'interface utilisateur.
+- [Script de contenu](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) : interagissez avec les pages Web (Notez que ce n'est pas le même que javaScript dans un élément {{HTMLElement("script")}} au sein d'une page).
+- [Web-accessible resources](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Web_accessible_resources) : Rendez le contenu packagé accessible aux pages Web et aux scripts de contenu.
 
-<p><img alt="" src="webextension-anatomy.png"></p>
+![](webextension-anatomy.png)
 
-<p>Voir la page référence <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> pour tous les détails.</p>
+Voir la page référence [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) pour tous les détails.
 
-<p>En plus de celles déjà listées dans le manifeste, une extension peut également inclure des pages d'extensions supplémentaires et des fichiers de support.</p>
+En plus de celles déjà listées dans le manifeste, une extension peut également inclure des pages d'extensions supplémentaires et des fichiers de support.
 
-<h2 id="Scripts_darrière-plan">Scripts d'arrière-plan</h2>
+## Scripts d'arrière-plan
 
-<p>Les extensions doivent souvent conserver un état à long terme ou effectuer des opérations à long terme indépendamment de la durée de vie d'une page Web ou d'une fenêtre de navigateur. C'est le rôle des scripts d'arrière-plan.</p>
+Les extensions doivent souvent conserver un état à long terme ou effectuer des opérations à long terme indépendamment de la durée de vie d'une page Web ou d'une fenêtre de navigateur. C'est le rôle des scripts d'arrière-plan.
 
-<p>Les scripts en arrière-plan sont chargés dès que l'extension est chargée et restent chargés jusqu'à ce que l'extension soit désactivée ou désinstallée. Vous pouvez utiliser n'importe laquelle des <a href="/fr/Add-ons/WebExtensions/API">WebExtension APIs</a> dans le script, tant que vous avez demandé les <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> nécessaires.</p>
+Les scripts en arrière-plan sont chargés dès que l'extension est chargée et restent chargés jusqu'à ce que l'extension soit désactivée ou désinstallée. Vous pouvez utiliser n'importe laquelle des [WebExtension APIs](/fr/Add-ons/WebExtensions/API) dans le script, tant que vous avez demandé les [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) nécessaires.
 
-<h3 id="Spécifier_les_scripts_darrière-plan">Spécifier les scripts d'arrière-plan</h3>
+### Spécifier les scripts d'arrière-plan
 
-<p>Vous pouvez inclure un script d'arrière-plan à l'aide de la clé <code>background</code> dans "manifest.json" :</p>
+Vous pouvez inclure un script d'arrière-plan à l'aide de la clé `background` dans "manifest.json" :
 
-<pre class="brush: json">// manifest.json
+```json
+// manifest.json
 
 "background": {
   "scripts": ["background-script.js"]
-}</pre>
+}
+```
 
-<p>Vous pouvez spécifier plusieurs scripts en arrière-plan : si vous le faites, ils s'exécutent dans le même contexte, tout comme plusieurs scripts chargés dans une seule page Web.</p>
+Vous pouvez spécifier plusieurs scripts en arrière-plan : si vous le faites, ils s'exécutent dans le même contexte, tout comme plusieurs scripts chargés dans une seule page Web.
 
-<p>Au lieu de spécifier des scripts d'arrière-plan, vous pouvez spécifier une page d'arrière-plan qui a l'avantage supplémentaire de supporter les modules ES6 :</p>
+Au lieu de spécifier des scripts d'arrière-plan, vous pouvez spécifier une page d'arrière-plan qui a l'avantage supplémentaire de supporter les modules ES6 :
 
-<p><strong>manifest.json</strong></p>
+**manifest.json**
 
-<pre class="brush: json">// manifest.json
+```json
+// manifest.json
 
 "background": {
   "page": "background-page.html"
-}</pre>
+}
+```
 
-<p><strong>background-page.html</strong></p>
+**background-page.html**
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;script type="module" src="background-script.js"&gt;&lt;/script&gt;
-  &lt;/head&gt;
-&lt;/html&gt;</pre>
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script type="module" src="background-script.js"></script>
+  </head>
+</html>
+```
 
-<h3 id="Environnement_des_scripts_darrière-plan">Environnement des scripts d'arrière-plan</h3>
+### Environnement des scripts d'arrière-plan
 
-<h4 id="APIs_DOM">APIs DOM</h4>
+#### APIs DOM
 
-<p>Les scripts d'arrière-plan s'exécutent dans le contexte de pages spéciales appelées pages d'arrière-plan. Cela leur donne une <code><a href="/fr/docs/Web/API/Window">fenêtre</a></code> globale, ainsi que toutes les API DOM standard fournies par cet objet.</p>
+Les scripts d'arrière-plan s'exécutent dans le contexte de pages spéciales appelées pages d'arrière-plan. Cela leur donne une [`fenêtre`](/fr/docs/Web/API/Window) globale, ainsi que toutes les API DOM standard fournies par cet objet.
 
-<div class="warning">
-<p><strong>Attention :</strong> Dans Firefox, les pages d'arrière-plan ne supportent pas l'utilisation de <code><a href="/fr/docs/Web/API/Window/alert">alert()</a></code>, <code><a href="/fr/docs/Web/API/Window/confirm">confirm()</a></code>, ou <code><a href="/fr/docs/Web/API/Window/prompt">prompt()</a></code>.</p>
-</div>
+> **Attention :** Dans Firefox, les pages d'arrière-plan ne supportent pas l'utilisation de [`alert()`](/fr/docs/Web/API/Window/alert), [`confirm()`](/fr/docs/Web/API/Window/confirm), ou [`prompt()`](/fr/docs/Web/API/Window/prompt).
 
-<h4 id="APIs_des_WebExtensions">APIs des WebExtensions</h4>
+#### APIs des WebExtensions
 
-<p>Les scripts d'arrière-plan peuvent utiliser l'une des <a href="/fr/Add-ons/WebExtensions/API">APIs des WebExtensions</a> dans le script, à condition que leur extension dispose des <a href="/fr-FR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> nécessaires.</p>
+Les scripts d'arrière-plan peuvent utiliser l'une des [APIs des WebExtensions](/fr/Add-ons/WebExtensions/API) dans le script, à condition que leur extension dispose des [permissions](/fr-FR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) nécessaires.
 
-<h4 id="Cross-origin_access">Cross-origin access</h4>
+#### Cross-origin access
 
-<p>Les scripts d'arrière-plan peuvent faire des requêtes XHR à tous les hôtes pour lesquels ils ont des <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions d'hôte</a>.</p>
+Les scripts d'arrière-plan peuvent faire des requêtes XHR à tous les hôtes pour lesquels ils ont des [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<h4 id="Contenu_Web">Contenu Web</h4>
+#### Contenu Web
 
-<p>Les scripts d'arrière-plan n'obtiennent pas un accès direct aux pages Web. Toutefois,  ils peuvent charger des <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">scripts de contenu</a> dans les pages Web et peuvent <a href="/fr/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">communiquer avec ces scripts de contenu à l'aide d'une API de communication</a>.</p>
+Les scripts d'arrière-plan n'obtiennent pas un accès direct aux pages Web. Toutefois,  ils peuvent charger des [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) dans les pages Web et peuvent [communiquer avec ces scripts de contenu à l'aide d'une API de communication](/fr/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts).
 
-<h4 id="Politique_de_sécurité_du_contenu">Politique de sécurité du contenu</h4>
+#### Politique de sécurité du contenu
 
-<p>Les scripts d'arrière-plan sont restreints à certaines opérations pour lutter contre d'autres potentiellement dangereuses, comme l'utilisation de la fonction <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>, par le biais d'une politique de sécurité du contenu. Pour plus de détails, consultez la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">politique de sécurité du contenu</a>.</p>
+Les scripts d'arrière-plan sont restreints à certaines opérations pour lutter contre d'autres potentiellement dangereuses, comme l'utilisation de la fonction [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval), par le biais d'une politique de sécurité du contenu. Pour plus de détails, consultez la [politique de sécurité du contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy).
 
-<h2 id="Sidebars_popups_pages_options">Sidebars, popups, pages options</h2>
+## Sidebars, popups, pages options
 
-<p>Votre extension peut inclure divers composants d'interface utilisateur dont le contenu est défini à l'aide d'un document HTML :</p>
+Votre extension peut inclure divers composants d'interface utilisateur dont le contenu est défini à l'aide d'un document HTML :
 
-<ul>
- <li>Une <a href="/fr/Add-ons/WebExtensions/user_interface/Sidebars">barre latérale</a> est un volet qui s'affiche dans la partie gauche de la fenêtre du navigateur, à côté de la page Web.</li>
- <li>Un <a href="/fr/Add-ons/WebExtensions/user_interface/Popups">popup</a> est une boîte de dialogue que vous pouvez afficher lorsque l'utilisateur clique sur un <a href="/fr/Add-ons/WebExtensions/user_interface/Browser_action">bouton de la barre d'outils</a> ou de la <a href="/fr/Add-ons/WebExtensions/user_interface/Page_actions">barre d'adresse</a></li>
- <li>Une <a href="/fr/Add-ons/WebExtensions/user_interface/Options_pages">page d'options</a>  est une page qui s'affiche lorsque l'utilisateur accède aux préférences de votre module complémentaire dans le gestionnaire d'add-ons natif du navigateur.</li>
-</ul>
+- Une [barre latérale](/fr/Add-ons/WebExtensions/user_interface/Sidebars) est un volet qui s'affiche dans la partie gauche de la fenêtre du navigateur, à côté de la page Web.
+- Un [popup](/fr/Add-ons/WebExtensions/user_interface/Popups) est une boîte de dialogue que vous pouvez afficher lorsque l'utilisateur clique sur un [bouton de la barre d'outils](/fr/Add-ons/WebExtensions/user_interface/Browser_action) ou de la [barre d'adresse](/fr/Add-ons/WebExtensions/user_interface/Page_actions)
+- Une [page d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages)  est une page qui s'affiche lorsque l'utilisateur accède aux préférences de votre module complémentaire dans le gestionnaire d'add-ons natif du navigateur.
 
-<p>Pour chacun de ces composants, vous créez un fichier HTML et pointez vers lui en utilisant une propriété spécifique dans <a href="/fr/Add-ons/WebExtensions/manifest.json">manifest.json</a>. Le fichier HTML peut inclure des fichiers CSS et JavaScript, tout comme une page Web normale.</p>
+Pour chacun de ces composants, vous créez un fichier HTML et pointez vers lui en utilisant une propriété spécifique dans [manifest.json](/fr/Add-ons/WebExtensions/manifest.json). Le fichier HTML peut inclure des fichiers CSS et JavaScript, tout comme une page Web normale.
 
-<p>Toutes ces pages sont un type de <a href="/fr/Add-ons/WebExtensions/user_interface/Extension_pages">pages d'extension</a>,et contrairement à une page Web normale, votre JavaScript peut utiliser les mêmes API d'extension Web privilégiées que votre script de fond. Ils peuvent même accéder directement aux variables de la page d'arrière-plan en utilisant  {{WebExtAPIRef("runtime.getBackgroundPage()")}}.</p>
+Toutes ces pages sont un type de [pages d'extension](/fr/Add-ons/WebExtensions/user_interface/Extension_pages),et contrairement à une page Web normale, votre JavaScript peut utiliser les mêmes API d'extension Web privilégiées que votre script de fond. Ils peuvent même accéder directement aux variables de la page d'arrière-plan en utilisant  {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
 
-<h2 id="Page_dextension">Page d'extension</h2>
+## Page d'extension
 
-<p>Vous pouvez également inclure dans votre extension des documents HTML qui ne sont pas attachés à un composant d'interface utilisateur prédéfini. Contrairement aux documents que vous pouvez fournir pour les sidebars, les popups ou les pages d'options, ceux-ci n'ont pas d'entrée dans manifest.json. Cependant, ils ont également accès aux mêmes API WebExtension privilégiées que votre script d'arrière-plan.</p>
+Vous pouvez également inclure dans votre extension des documents HTML qui ne sont pas attachés à un composant d'interface utilisateur prédéfini. Contrairement aux documents que vous pouvez fournir pour les sidebars, les popups ou les pages d'options, ceux-ci n'ont pas d'entrée dans manifest.json. Cependant, ils ont également accès aux mêmes API WebExtension privilégiées que votre script d'arrière-plan.
 
-<p>Vous chargerez typiquement une page comme celle-ci en utilisant  {{WebExtAPIRef("windows.create()")}} ou {{WebExtAPIRef("tabs.create()")}}.</p>
+Vous chargerez typiquement une page comme celle-ci en utilisant  {{WebExtAPIRef("windows.create()")}} ou {{WebExtAPIRef("tabs.create()")}}.
 
-<p>Voir les <a href="/fr/Add-ons/WebExtensions/user_interface/Extension_pages">pages d'extension</a> pour en savoir plus.</p>
+Voir les [pages d'extension](/fr/Add-ons/WebExtensions/user_interface/Extension_pages) pour en savoir plus.
 
-<h2 id="Scripts_de_contenu">Scripts de contenu</h2>
+## Scripts de contenu
 
-<p>Utilisez les scripts de contenu pour accéder et manipuler des pages Web. Les scripts de contenu sont chargés dans des pages Web et lancés dans le contexte de cette page particulière.</p>
+Utilisez les scripts de contenu pour accéder et manipuler des pages Web. Les scripts de contenu sont chargés dans des pages Web et lancés dans le contexte de cette page particulière.
 
-<p>Les scripts de contenu sont des scripts fournis par les extensions qui s'exécutent dans le contexte d'une page Web ; cela diffère des scripts qui sont chargés par la page elle-même, y compris ceux qui sont fournis dans les éléments {{HTMLElement ("script")}} dans la page.</p>
+Les scripts de contenu sont des scripts fournis par les extensions qui s'exécutent dans le contexte d'une page Web ; cela diffère des scripts qui sont chargés par la page elle-même, y compris ceux qui sont fournis dans les éléments {{HTMLElement ("script")}} dans la page.
 
-<p>Les scripts de contenu peuvent voir et manipuler le DOM de la page, tout comme les scripts normaux chargés par la page.</p>
+Les scripts de contenu peuvent voir et manipuler le DOM de la page, tout comme les scripts normaux chargés par la page.
 
-<p>Contrairement aux scripts de pages normales, ils peuvent :</p>
+Contrairement aux scripts de pages normales, ils peuvent :
 
-<ul>
- <li>Effectuer des requêtes XHR entre domaines.</li>
- <li>Utiliser un petit sous-ensemble de l'<a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API">APIs des WebExtensions</a>.</li>
- <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">Echanger des messages avec leurs scripts d'arrière-plan</a> et peuvent ainsi accéder indirectement à toutes les API des WebExtensions.</li>
-</ul>
+- Effectuer des requêtes XHR entre domaines.
+- Utiliser un petit sous-ensemble de l'[APIs des WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/API).
+- [Echanger des messages avec leurs scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan) et peuvent ainsi accéder indirectement à toutes les API des WebExtensions.
 
-<p>Les scripts de contenu ne peuvent pas directement accéder normalement aux scripts de page, mais peuvent échanger des messages avec eux à l'aide de l'API standard <code><a href="/fr-FR/docs/Web/API/Window/postMessage">window.postMessage()</a></code>.</p>
+Les scripts de contenu ne peuvent pas directement accéder normalement aux scripts de page, mais peuvent échanger des messages avec eux à l'aide de l'API standard [`window.postMessage()`](/fr-FR/docs/Web/API/Window/postMessage).
 
-<p>Habituellement, quand nous parlons de scripts de contenu, nous parlons de JavaScript, mais vous pouvez injecter du CSS dans des pages Web en utilisant le même mécanisme.</p>
+Habituellement, quand nous parlons de scripts de contenu, nous parlons de JavaScript, mais vous pouvez injecter du CSS dans des pages Web en utilisant le même mécanisme.
 
-<p>Voir l'article de <a href="/fr-FR/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">scripts de contenu</a> pour en savoir plus.</p>
+Voir l'article de [scripts de contenu](/fr-FR/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) pour en savoir plus.
 
-<h2 id="Rendre_accessible_des_ressources_web">Rendre accessible des ressources web</h2>
+## Rendre accessible des ressources web
 
-<p>Les ressources web sont des fichiers tels que des images, des fichiers HTML, CSS ou JavaScript qui sont inclus dans l'extension afin d'être utilisés par les scripts de contenu et les scripts d'arrière-plan. Les ressources web mises à disposition peuvent être référencées depuis les scripts grâce à un schéma d'URI spécifique.</p>
+Les ressources web sont des fichiers tels que des images, des fichiers HTML, CSS ou JavaScript qui sont inclus dans l'extension afin d'être utilisés par les scripts de contenu et les scripts d'arrière-plan. Les ressources web mises à disposition peuvent être référencées depuis les scripts grâce à un schéma d'URI spécifique.
 
-<p>Ainsi, si un script de contenu souhaite insérer des images sur une page web, on pourra insérer ces images dans l'extension et les rendre accessible. Ensuite, le script de contenu pourra créer et ajouter une balise {{HTMLElement("img")}} faisant référence à l'image via l'attribut <code>src</code> ciblant le fichier via le schéma spécifique.</p>
+Ainsi, si un script de contenu souhaite insérer des images sur une page web, on pourra insérer ces images dans l'extension et les rendre accessible. Ensuite, le script de contenu pourra créer et ajouter une balise {{HTMLElement("img")}} faisant référence à l'image via l'attribut `src` ciblant le fichier via le schéma spécifique.
 
-<p>Pour en savoir plus, se référer à la documentation de la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></code> du fichier <code>manifest.json</code>.</p>
+Pour en savoir plus, se référer à la documentation de la clé [`web_accessible_resources`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) du fichier `manifest.json`.

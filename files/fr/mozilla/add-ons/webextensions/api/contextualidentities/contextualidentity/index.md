@@ -12,63 +12,57 @@ tags:
   - contextalIdentities
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Le type <code><strong>contextualIdentities</strong></code><strong><code>.ContextualIdentity</code></strong> décrit une identité contextuelle unique.</p>
+Le type **`contextualIdentities`\*\***`.ContextualIdentity`\*\* décrit une identité contextuelle unique.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>cookieStoreId</code></dt>
- <dd><code>string</code>. L'ID du magasin de cookies pour l'identité. Puisque les identités contextuelles ne partagent pas les banques de cookies, elles servent d'identificateur unique.</dd>
- <dt><code>color</code></dt>
- <dd>
- <p><code>string</code>. La couleur pour l'identité. Cela sera montré dans les onglets appartenant à cette identité. Les valeurs suivantes sont valides :</p>
+- `cookieStoreId`
+  - : `string`. L'ID du magasin de cookies pour l'identité. Puisque les identités contextuelles ne partagent pas les banques de cookies, elles servent d'identificateur unique.
+- `color`
 
- <ul>
-  <li>"blue"</li>
-  <li>"turquoise"</li>
-  <li>"green"</li>
-  <li>"yellow"</li>
-  <li>"orange"</li>
-  <li>"red"</li>
-  <li>"pink"</li>
-  <li>"purple"</li>
-  <li>"toolbar"</li>
- </ul>
+  - : `string`. La couleur pour l'identité. Cela sera montré dans les onglets appartenant à cette identité. Les valeurs suivantes sont valides :
 
- <p>La valeur "toolbar" représente une couleur dépendant du thème. Les identités avec la couleur "toolbar" seront affichées dans la même couleur que le texte de la barre d'outils (correspondant à la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors">clé thème</a> <code>"toolbar_field_text"</code>).</p>
- </dd>
- <dt><code>colorCode</code></dt>
- <dd><code>string</code>. Un code hexadécimal représentant la couleur exacte utilisée pour l'identité. Par exemple : <code>"#37adff"</code>. Dans le cas particulier de la couleur "toolbar", <code>colorCode</code> est toujours <code>"#7c7c7d"</code>, quelle que soit la couleur affichée.</dd>
- <dt><code>icon</code></dt>
- <dd>
- <p><code>string</code>. Le nom d'une icône pour l'identité. Cela s'affichera dans la barre d'URL pour les onglets appartenant à cette identité. Les valeurs suivantes sont valides :</p>
+    - "blue"
+    - "turquoise"
+    - "green"
+    - "yellow"
+    - "orange"
+    - "red"
+    - "pink"
+    - "purple"
+    - "toolbar"
 
- <ul>
-  <li>"fingerprint"</li>
-  <li>"briefcase"</li>
-  <li>"dollar"</li>
-  <li>"cart"</li>
-  <li>"circle"</li>
-  <li>"gift"</li>
-  <li>"vacation"</li>
-  <li>"food"</li>
-  <li>"fruit"</li>
-  <li>"pet"</li>
-  <li>"tree"</li>
-  <li>"chill"</li>
-  <li>"fence"</li>
- </ul>
- </dd>
- <dt><code>iconUrl</code></dt>
- <dd><code>string</code>. Une URL complète resource:// pointant vers l'icône de l'identité. Par exemple : "resource://usercontext-content/fingerprint.svg".</dd>
- <dt><code>name</code></dt>
- <dd><code>string</code>. Nom de l'identité. Cela s'affichera dans la barre d'URL pour les onglets appartenant à cette identité. Notez que les noms ne doivent pas nécessairement être uniques .</dd>
-</dl>
+    La valeur "toolbar" représente une couleur dépendant du thème. Les identités avec la couleur "toolbar" seront affichées dans la même couleur que le texte de la barre d'outils (correspondant à la [clé thème](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors) `"toolbar_field_text"`).
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- `colorCode`
+  - : `string`. Un code hexadécimal représentant la couleur exacte utilisée pour l'identité. Par exemple : `"#37adff"`. Dans le cas particulier de la couleur "toolbar", `colorCode` est toujours `"#7c7c7d"`, quelle que soit la couleur affichée.
+- `icon`
 
-<p>{{Compat("webextensions.api.contextualIdentities.ContextualIdentity")}}</p>
+  - : `string`. Le nom d'une icône pour l'identité. Cela s'affichera dans la barre d'URL pour les onglets appartenant à cette identité. Les valeurs suivantes sont valides :
+
+    - "fingerprint"
+    - "briefcase"
+    - "dollar"
+    - "cart"
+    - "circle"
+    - "gift"
+    - "vacation"
+    - "food"
+    - "fruit"
+    - "pet"
+    - "tree"
+    - "chill"
+    - "fence"
+
+- `iconUrl`
+  - : `string`. Une URL complète resource:// pointant vers l'icône de l'identité. Par exemple : "resource://usercontext-content/fingerprint.svg".
+- `name`
+  - : `string`. Nom de l'identité. Cela s'affichera dans la barre d'URL pour les onglets appartenant à cette identité. Notez que les noms ne doivent pas nécessairement être uniques .
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.contextualIdentities.ContextualIdentity")}}

@@ -13,61 +13,56 @@ tags:
   - onClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onClicked
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsque l'utilisateur clique sur une notification, mais pas sur l'un des boutons de la notification (pour cela, voir {{WebExtAPIRef("notifications.onButtonClicked")}}).</p>
+Lancé lorsque l'utilisateur clique sur une notification, mais pas sur l'un des boutons de la notification (pour cela, voir {{WebExtAPIRef("notifications.onButtonClicked")}}).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.notifications.onClicked.addListener(listener)
+```js
+browser.notifications.onClicked.addListener(listener)
 browser.notifications.onClicked.removeListener(listener)
 browser.notifications.onClicked.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="syntaxe_addListener">syntaxe addListener</h2>
+## syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>notificationId</code></dt>
-  <dd><code>string</code>. ID de la notification sur laquelle l'utilisateur a cliqué.</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `notificationId`
+      - : `string`. ID de la notification sur laquelle l'utilisateur a cliqué.
 
-<p>{{Compat("webextensions.api.notifications.onClicked")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.notifications.onClicked")}}
 
-<p>Dans cet exemple simple, nous ajoutons un écouteur à l'événement {{WebExtAPIRef("notifications.onClicked")}} pour écouter les notifications système en cours de clic. Lorsque cela se produit, nous enregistrons un message approprié à la console.</p>
+## Exemples
 
-<pre class="brush: js">browser.notifications.onClicked.addListener(function(notificationId) {
+Dans cet exemple simple, nous ajoutons un écouteur à l'événement {{WebExtAPIRef("notifications.onClicked")}} pour écouter les notifications système en cours de clic. Lorsque cela se produit, nous enregistrons un message approprié à la console.
+
+```js
+browser.notifications.onClicked.addListener(function(notificationId) {
   console.log('Notification ' + notificationId + ' was clicked by the user');
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

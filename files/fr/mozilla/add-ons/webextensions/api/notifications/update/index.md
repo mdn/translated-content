@@ -13,44 +13,44 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/update
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Met à jour une notification, compte tenu de son identifiant</p>
+Met à jour une notification, compte tenu de son identifiant
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var updating = browser.notifications.update(
+```js
+var updating = browser.notifications.update(
   id,                            // string
   options                        // NotificationOptions
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>id</code></dt>
- <dd><code>string</code>. L'ID de la notification à mettre à jour. C'est la même chose que l'ID transmis dans le callback {{WebExtAPIRef('notifications.create()')}}.</dd>
- <dt><code>options</code></dt>
- <dd>{{WebExtAPIRef('notifications.NotificationOptions')}}. Définit le nouveau contenu et le nouveau comportement de la notification.</dd>
-</dl>
+- `id`
+  - : `string`. L'ID de la notification à mettre à jour. C'est la même chose que l'ID transmis dans le callback {{WebExtAPIRef('notifications.create()')}}.
+- `options`
+  - : {{WebExtAPIRef('notifications.NotificationOptions')}}. Définit le nouveau contenu et le nouveau comportement de la notification.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un booléen : <code>true</code> si la notification a été mise à jour, ou <code>false</code> si ce n'est pas le cas (par exemple, parce que la notification référencée par <code>id</code> n'existe pas).</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un booléen : `true` si la notification a été mise à jour, ou `false` si ce n'est pas le cas (par exemple, parce que la notification référencée par `id` n'existe pas).
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.notifications.update")}}</p>
+{{Compat("webextensions.api.notifications.update")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple utilise <code>update()</code> pour mettre à jour une notification de progression. Cliquez sur l'action du navigateur pour afficher la notification et lancer un  {{WebExtAPIRef("alarms", "alarm")}}, que nous utilisons pour mettre à jour l'indicateur de progression de la notification.</p>
+Cet exemple utilise `update()` pour mettre à jour une notification de progression. Cliquez sur l'action du navigateur pour afficher la notification et lancer un  {{WebExtAPIRef("alarms", "alarm")}}, que nous utilisons pour mettre à jour l'indicateur de progression de la notification.
 
-<p>Notez que vous aurez besoin de la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications). Notez également que Firefox ne prend pas en charge l'attribut de <code>progress</code>.</p>
+Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications). Notez également que Firefox ne prend pas en charge l'attribut de `progress`.
 
-<pre class="brush: js">var cakeNotification = "cake-notification";
+```js
+var cakeNotification = "cake-notification";
 
 /*
 
@@ -67,7 +67,7 @@ var progress = 0;
 
 browser.alarms.onAlarm.addListener(function(alarm) {
   progress = progress + 10;
-  if (progress &gt; 100) {
+  if (progress > 100) {
     browser.notifications.clear(cakeNotification);
     browser.alarms.clear("cake-progress");
   } else {
@@ -78,8 +78,8 @@ browser.alarms.onAlarm.addListener(function(alarm) {
 });
 
 browser.browserAction.onClicked.addListener(function () {
-  browser.notifications.getAll((all) =&gt; {
-    if (all.length &gt; 0) {
+  browser.notifications.getAll((all) => {
+    if (all.length > 0) {
       browser.notifications.clear(cakeNotification);
       return;
     }
@@ -96,13 +96,13 @@ browser.browserAction.onClicked.addListener(function () {
       {periodInMinutes: CAKE_PREP_INTERVAL}
     );
   });
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

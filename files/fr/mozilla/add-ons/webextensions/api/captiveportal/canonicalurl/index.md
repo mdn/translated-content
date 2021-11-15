@@ -9,27 +9,23 @@ tags:
   - captivePortal
 translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Renvoyer l'URL canonique de la page de détection du portail des prisonniers. En lecture seule.</p>
+Renvoyer l'URL canonique de la page de détection du portail des prisonniers. En lecture seule.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
+{{Compat("webextensions.api.captivePortal.canonicalURL")}}
 
+{{WebExtExamples}}
 
-<p>{{Compat("webextensions.api.captivePortal.canonicalURL")}}</p>
+> **Note :**
+>
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#property-TAB_ID_NONE) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code Chromium.
+>
+> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence américaine Creative Commons Attribution 3.0.
 
-<p>{{WebExtExamples}}</p>
-
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API <a href="https://developer.chrome.com/extensions/tabs#property-TAB_ID_NONE"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence américaine Creative Commons Attribution 3.0.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -56,5 +52,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -12,46 +12,43 @@ tags:
   - query
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/query
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient des informations sur toutes les identités contextuelles ou sur les identités contextuelles correspondant à un argument de filtre donné.</p>
+Obtient des informations sur toutes les identités contextuelles ou sur les identités contextuelles correspondant à un argument de filtre donné.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var getContext = browser.contextualIdentities.query(
+```js
+var getContext = browser.contextualIdentities.query(
   details                  // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
- <p><code>object</code>. Un objet qui peut être utilisé pour filtrer les identités contextuelles renvoyées. Cela peut contenir l'une des propriétés suivantes :</p>
+- `details`
 
- <dl>
-  <dt><code>name</code> {{optional_inline}}</dt>
-  <dd><code>string</code>. Renvoie uniquement les identités contextuelles avec ce nom.</dd>
- </dl>
- </dd>
-</dl>
+  - : `object`. Un objet qui peut être utilisé pour filtrer les identités contextuelles renvoyées. Cela peut contenir l'une des propriétés suivantes :
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+    - `name` {{optional_inline}}
+      - : `string`. Renvoie uniquement les identités contextuelles avec ce nom.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un tableau d'objets  {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} chacun décrivant une seule identité. Si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.</p>
+### Valeur retournée
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets  {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} chacun décrivant une seule identité. Si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
 
-<p>{{Compat("webextensions.api.contextualIdentities.query")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.contextualIdentities.query")}}
 
-<p>Retrieve all contextual identities, and log their names :</p>
+## Exemples
 
-<pre class="brush: js">function onGot(contexts) {
+Retrieve all contextual identities, and log their names :
+
+```js
+function onGot(contexts) {
   for (let context of contexts) {
     console.log(`Name: ${context.name}`);
   }
@@ -61,11 +58,13 @@ function onError(e) {
   console.error(e);
 }
 
-browser.contextualIdentities.query({}).then(onGot, onError);</pre>
+browser.contextualIdentities.query({}).then(onGot, onError);
+```
 
-<p>Récupérez toutes les identités contextuelles dont les noms sont "my-thing", et consignez leurs noms :</p>
+Récupérez toutes les identités contextuelles dont les noms sont "my-thing", et consignez leurs noms :
 
-<pre class="brush: js">function onGot(contexts) {
+```js
+function onGot(contexts) {
   for (let context of contexts) {
     console.log(`Name: ${context.name}`);
   }
@@ -78,6 +77,6 @@ function onError(e) {
 browser.contextualIdentities.query({
   name: "my-thing"
 }).then(onGot, onError);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

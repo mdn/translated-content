@@ -13,78 +13,62 @@ tags:
   - predefined
 translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>L'API <a href="/fr/Add-ons/WebExtensions">WebExtensions</a> dispose d'un module assez pratique pour l'internationalisation des extensions — <a href="/fr/Add-ons/WebExtensions/API/i18n">i18n</a>. Dans cet article, nous allons explorer ses fonctionnalités et fournir un exemple pratique de son fonctionnement. Le système i18n pour les extensions construites à l'aide des APIs WebExtension est similaire aux bibliothèques JavaScript courantes pour i18n telles que <a href="http://i18njs.com/">i18n.js</a>.</p>
+L'API [WebExtensions](/fr/Add-ons/WebExtensions) dispose d'un module assez pratique pour l'internationalisation des extensions — [i18n](/fr/Add-ons/WebExtensions/API/i18n). Dans cet article, nous allons explorer ses fonctionnalités et fournir un exemple pratique de son fonctionnement. Le système i18n pour les extensions construites à l'aide des APIs WebExtension est similaire aux bibliothèques JavaScript courantes pour i18n telles que [i18n.js](http://i18njs.com/).
 
-<div class="note">
-<p><strong>Note :</strong> L'exemple d'extension présenté dans cet article — <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> — est disponible sur GitHub. Suivez avec le code source que vous parcourez les sections ci-dessous.</p>
-</div>
+> **Note :** L'exemple d'extension présenté dans cet article — [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) — est disponible sur GitHub. Suivez avec le code source que vous parcourez les sections ci-dessous.
 
-<h2 id="Anatomie_dune_extension_internationnalisée">Anatomie d'une extension internationnalisée</h2>
+## Anatomie d'une extension internationnalisée
 
-<p>Une extension internationnalisée peut contenir les mêmes caractéristiques que n'importe quelle autre extension — <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">scripts d'arrière-plan</a>, <a href="/fr/Add-ons/WebExtensions/Content_scripts">scripts de contenu</a>, etc. — mais elle a également  des parties supplémentaires pour lui permettre de basculer entre différentes locales. Ceux-ci sont résumés dans l'arborescence suivante :</p>
+Une extension internationnalisée peut contenir les mêmes caractéristiques que n'importe quelle autre extension — [scripts d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts), [scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts), etc. — mais elle a également  des parties supplémentaires pour lui permettre de basculer entre différentes locales. Ceux-ci sont résumés dans l'arborescence suivante :
 
-<ul>
- <li>extension-root-directory/
-  <ul>
-   <li>_locales
-    <ul>
-     <li>en
-      <ul>
-       <li>messages.json
-        <ul>
-         <li>English messages (strings)</li>
-        </ul>
-       </li>
-      </ul>
-     </li>
-     <li>de
-      <ul>
-       <li>messages.json
-        <ul>
-         <li>German messages (strings)</li>
-        </ul>
-       </li>
-      </ul>
-     </li>
-     <li>etc.</li>
-    </ul>
-   </li>
-   <li>manifest.json
-    <ul>
-     <li>locale-dependent metadata</li>
-    </ul>
-   </li>
-   <li>myJavascript.js
-    <ul>
-     <li>JavaScript for retrieving browser locale, locale-specific messages, etc.</li>
-    </ul>
-   </li>
-   <li>myStyles.css
-    <ul>
-     <li>locale-dependent CSS</li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+- extension-root-directory/
 
-<p>Examinons chacune des nouvelles fonctionnalités à tour de rôle — chacune des sections ci-dessous représente une étape à suivre lors de l'internationalisation de votre extension.</p>
+  - \_locales
 
-<h2 id="Fourniture_de_chaînes_localisées_dans__locales">Fourniture de chaînes localisées dans _locales</h2>
+    - en
 
-<p>Vous pouvez rechercher des sous-étiquettes de langue à l'aide de l'outil de <em>Recherche</em>r de la <a href="http://r12a.github.io/apps/subtags/">page de recherche sous-étiquette de langue</a>. Notez que vous devez rechercher le nom anglais de la langue.</p>
+      - messages.json
 
-<p>Chaque système i18n nécessite la fourniture de chaînes traduites dans tous les différents environnements que vous souhaitez prendre en charge. Dans les extensions, elles sont contenues dans un répertoire appelé  <code>_locales</code>, placé dans la racine de l'extension. Chaque environnement local a ses chaînes (appelées messages) contenues dans un fichier appelé  <code>messages.json</code>, qui est placé dans un sous-répertoire de <code>_locales</code>, nommé en utilisant la sous-étiquette de langue pour la langue de ce local.</p>
+        - English messages (strings)
 
-<p>Notez que si la sous-étiquette inclut une langue de base plus une variante régionale, la langue et la variante sont classiquement séparées en utilisant un trait d'union: par exemple, "en-US". Cependant, dans les répertoires sous <code>_locales</code>, <strong>le séparateur doit être un trait de soulignement</strong> :  "en_US".</p>
+    - de
 
-<p><a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n/_locales">Par exemple, dans notre exemple d'application</a> nous avons des répertoires pour "en" (anglais), "de" (allemand), "nl" (néerlandais), et "ja" (Japonais). Chaque d'entre eux a un fichier <code>messages.json</code> à l'intérieur.</p>
+      - messages.json
 
-<p>Regardons maintenant la structure de l'un de ces fichiers (<a href="https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/_locales/en/messages.json">_locales/en/messages.json</a>):</p>
+        - German messages (strings)
 
-<pre class="brush: json">{
+    - etc.
+
+  - manifest.json
+
+    - locale-dependent metadata
+
+  - myJavascript.js
+
+    - JavaScript for retrieving browser locale, locale-specific messages, etc.
+
+  - myStyles.css
+
+    - locale-dependent CSS
+
+Examinons chacune des nouvelles fonctionnalités à tour de rôle — chacune des sections ci-dessous représente une étape à suivre lors de l'internationalisation de votre extension.
+
+## Fourniture de chaînes localisées dans \_locales
+
+Vous pouvez rechercher des sous-étiquettes de langue à l'aide de l'outil de *Recherche*r de la [page de recherche sous-étiquette de langue](http://r12a.github.io/apps/subtags/). Notez que vous devez rechercher le nom anglais de la langue.
+
+Chaque système i18n nécessite la fourniture de chaînes traduites dans tous les différents environnements que vous souhaitez prendre en charge. Dans les extensions, elles sont contenues dans un répertoire appelé  `_locales`, placé dans la racine de l'extension. Chaque environnement local a ses chaînes (appelées messages) contenues dans un fichier appelé  `messages.json`, qui est placé dans un sous-répertoire de `_locales`, nommé en utilisant la sous-étiquette de langue pour la langue de ce local.
+
+Notez que si la sous-étiquette inclut une langue de base plus une variante régionale, la langue et la variante sont classiquement séparées en utilisant un trait d'union: par exemple, "en-US". Cependant, dans les répertoires sous `_locales`, **le séparateur doit être un trait de soulignement** :  "en_US".
+
+[Par exemple, dans notre exemple d'application](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n/_locales) nous avons des répertoires pour "en" (anglais), "de" (allemand), "nl" (néerlandais), et "ja" (Japonais). Chaque d'entre eux a un fichier `messages.json` à l'intérieur.
+
+Regardons maintenant la structure de l'un de ces fichiers ([\_locales/en/messages.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/_locales/en/messages.json)):
+
+```json
+{
   "extensionName": {
     "message": "Notify link clicks i18n",
     "description": "Name of the extension."
@@ -110,77 +94,83 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
       }
     }
   }
-}</pre>
+}
+```
 
-<p>Ce fichier est un JSON standard — chacun de ses membres est un objet avec un nom, qui contient un <code>message</code>  et une <code>description</code>. Tous ces éléments sont des chaînes ; <code>$URL$</code> est un espace réservé, qui est remplacé par une sous-chaîne au moment où le membre <code>notificationContent</code> est appelé par l'extension. Vous apprendrez à le faire dans la section {{anch("Récupération des chaînes de messages de JavaScript")}}.</p>
+Ce fichier est un JSON standard — chacun de ses membres est un objet avec un nom, qui contient un `message`  et une `description`. Tous ces éléments sont des chaînes ; `$URL$` est un espace réservé, qui est remplacé par une sous-chaîne au moment où le membre `notificationContent` est appelé par l'extension. Vous apprendrez à le faire dans la section {{anch("Récupération des chaînes de messages de JavaScript")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez trouver beaucoup plus d'informations sur le contenu des fichiers  <code>messages.json</code> dans notre <a href="/fr/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference">référence spécifique aux paramètres régionaux</a>.</p>
-</div>
+> **Note :** Vous pouvez trouver beaucoup plus d'informations sur le contenu des fichiers  `messages.json` dans notre [référence spécifique aux paramètres régionaux](/fr/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference).
 
-<h2 id="Internationaliser_manifest.json">Internationaliser manifest.json</h2>
+## Internationaliser manifest.json
 
-<p>Il y a plusieurs tâches à accomplir pour internationaliser votre manifest.json.</p>
+Il y a plusieurs tâches à accomplir pour internationaliser votre manifest.json.
 
-<h3 id="Récupération_des_chaînes_localisées_dans_le_manifest">Récupération des chaînes localisées dans le manifest</h3>
+### Récupération des chaînes localisées dans le manifest
 
-<p>Votre <a href="https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/manifest.json">manifest.json</a> inclut des chaînes qui sont affichées à l'utilisateur, telles que le nom et la description de l'extension. Si vous internationalisez ces chaînes et en mettez les traductions appropriées dans messages.json, la traduction correcte de la chaine sera affichée à l'utilisateur, en fonction des paramètres régionaux actuels, comme cela.</p>
+Votre [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/manifest.json) inclut des chaînes qui sont affichées à l'utilisateur, telles que le nom et la description de l'extension. Si vous internationalisez ces chaînes et en mettez les traductions appropriées dans messages.json, la traduction correcte de la chaine sera affichée à l'utilisateur, en fonction des paramètres régionaux actuels, comme cela.
 
-<p>Pour internationaliser les chaînes, spécifiez-les comme ceci :</p>
+Pour internationaliser les chaînes, spécifiez-les comme ceci :
 
-<pre class="brush: json">"name": "__MSG_extensionName__",
-"description": "__MSG_extensionDescription__",</pre>
+```json
+"name": "__MSG_extensionName__",
+"description": "__MSG_extensionDescription__",
+```
 
-<p>Ici, nous récupérons des chaînes de message en fonction des paramètres régionaux du navigateur, plutôt que d'inclure uniquement des chaînes statiques.</p>
+Ici, nous récupérons des chaînes de message en fonction des paramètres régionaux du navigateur, plutôt que d'inclure uniquement des chaînes statiques.
 
-<p>Pour appeler une chaîne de message comme celle-ci, vous devez le spécifier comme ceci :</p>
+Pour appeler une chaîne de message comme celle-ci, vous devez le spécifier comme ceci :
 
-<ol>
- <li>Deux underscores, suivi de</li>
- <li>La chaîne "MSG", suivi de</li>
- <li>Un trait de soulignement, suivi de</li>
- <li>Le nom du message que vous souhaitez appeler tel que défini dans <code>messages.json</code>, suivi de</li>
- <li>Deux underscores</li>
-</ol>
+1.  Deux underscores, suivi de
+2.  La chaîne "MSG", suivi de
+3.  Un trait de soulignement, suivi de
+4.  Le nom du message que vous souhaitez appeler tel que défini dans `messages.json`, suivi de
+5.  Deux underscores
 
-<pre><strong>__MSG_</strong> + <em>messageName</em> + <strong>__</strong></pre>
+<!---->
 
-<h3 id="Spécification_dun_paramètre_régional_par_défaut">Spécification d'un paramètre régional par défaut</h3>
+    __MSG_ + messageName + __
 
-<p>Un autre champ que vous devez spécifier dans votre fichier manifest.json est <a href="/fr/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a>:</p>
+### Spécification d'un paramètre régional par défaut
 
-<pre class="brush: json">"default_locale": "en"</pre>
+Un autre champ que vous devez spécifier dans votre fichier manifest.json est [default_locale](/fr/Add-ons/WebExtensions/manifest.json/default_locale):
 
-<p>Cela spécifie un paramètre régional par défaut à utiliser si l'extension n'inclut pas de chaîne localisée pour les paramètres régionaux actuels du navigateur. Toutes les chaînes de message qui ne sont pas disponibles dans les paramètres régionaux du navigateur proviennent des paramètres régionaux par défaut. Il y a d'autres détails à connaître en termes de la façon dont le navigateur sélectionne les chaînes — voir {{anch("Localized string selection")}}.</p>
+```json
+"default_locale": "en"
+```
 
-<h2 id="CSS_dépendant_des_paramètres_régionaux">CSS dépendant des paramètres régionaux</h2>
+Cela spécifie un paramètre régional par défaut à utiliser si l'extension n'inclut pas de chaîne localisée pour les paramètres régionaux actuels du navigateur. Toutes les chaînes de message qui ne sont pas disponibles dans les paramètres régionaux du navigateur proviennent des paramètres régionaux par défaut. Il y a d'autres détails à connaître en termes de la façon dont le navigateur sélectionne les chaînes — voir {{anch("Localized string selection")}}.
 
-<p>Notez que vous pouvez également récupérer des chaînes localisées à partir de fichiers CSS dans l'extension. Par exemple, vous pouvez créer une règle CSS dépendante des paramètres régionaux, comme ceci :</p>
+## CSS dépendant des paramètres régionaux
 
-<pre class="brush: css">header {
+Notez que vous pouvez également récupérer des chaînes localisées à partir de fichiers CSS dans l'extension. Par exemple, vous pouvez créer une règle CSS dépendante des paramètres régionaux, comme ceci :
+
+```css
+header {
   background-image: url(../images/__MSG_extensionName__/header.png);
-}</pre>
+}
+```
 
-<p>Ceci est utile, bien que vous fassiez mieux de gérer une telle situation en utilisant {{anch("Predefined messages")}}.</p>
+Ceci est utile, bien que vous fassiez mieux de gérer une telle situation en utilisant {{anch("Predefined messages")}}.
 
-<h2 id="Récupération_des_chaînes_de_messages_de_JavaScript">Récupération des chaînes de messages de JavaScript</h2>
+## Récupération des chaînes de messages de JavaScript
 
-<p>Donc, vous avez configuré vos chaînes de message et votre manifest. Maintenant, Il vous suffit de commencer à appeler vos chaînes de message à partir de JavaScript pour que votre extension puisse parler le plus possible la bonne langue. L' <a href="/fr/Add-ons/WebExtensions/API/i18n">API i18n</a> est assez simple, contenant seulement quatre méthodes principales :</p>
+Donc, vous avez configuré vos chaînes de message et votre manifest. Maintenant, Il vous suffit de commencer à appeler vos chaînes de message à partir de JavaScript pour que votre extension puisse parler le plus possible la bonne langue. L' [API i18n](/fr/Add-ons/WebExtensions/API/i18n) est assez simple, contenant seulement quatre méthodes principales :
 
-<ul>
- <li>Vous utiliserez probablement {{WebExtAPIRef("i18n.getMessage()")}} le plus souvent — c'est la méthode que vous utilisez pour récupérer une chaîne de langue spécifique, comme mentionné ci-dessus. Nous verrons des exemples d'utilisation spécifiques ci-dessous.</li>
- <li>Les méthodes {{WebExtAPIRef("i18n.getAcceptLanguages()")}} et {{WebExtAPIRef("i18n.getUILanguage()")}} peuvent être utilisées si vous avez besoin de personnaliser l'interface utilisateur en fonction des paramètres régionaux — peut-être que vous souhaitez pour afficher les préférences spécifiques aux langues préférées des utilisateurs plus haut dans une liste de préférences, ou afficher des informations culturelles pertinentes uniquement pour une certaine langue, ou formater les dates affichées de manière appropriée selon les paramètres régionaux du navigateur.</li>
- <li>La méthode {{WebExtAPIRef("i18n.detectLanguage()")}} peut être utilisée pour détecter la langue du contenu soumis par l'utilisateur et la formater de manière appropriée.</li>
-</ul>
+- Vous utiliserez probablement {{WebExtAPIRef("i18n.getMessage()")}} le plus souvent — c'est la méthode que vous utilisez pour récupérer une chaîne de langue spécifique, comme mentionné ci-dessus. Nous verrons des exemples d'utilisation spécifiques ci-dessous.
+- Les méthodes {{WebExtAPIRef("i18n.getAcceptLanguages()")}} et {{WebExtAPIRef("i18n.getUILanguage()")}} peuvent être utilisées si vous avez besoin de personnaliser l'interface utilisateur en fonction des paramètres régionaux — peut-être que vous souhaitez pour afficher les préférences spécifiques aux langues préférées des utilisateurs plus haut dans une liste de préférences, ou afficher des informations culturelles pertinentes uniquement pour une certaine langue, ou formater les dates affichées de manière appropriée selon les paramètres régionaux du navigateur.
+- La méthode {{WebExtAPIRef("i18n.detectLanguage()")}} peut être utilisée pour détecter la langue du contenu soumis par l'utilisateur et la formater de manière appropriée.
 
-<p>Dans notre exemple <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a>, le<a href="https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js"> script d'arrière plan</a> contient les lignes suivantes :</p>
+Dans notre exemple [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n), le[ script d'arrière plan](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js) contient les lignes suivantes :
 
-<pre class="brush: js">var title = browser.i18n.getMessage("notificationTitle");
-var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
+```js
+var title = browser.i18n.getMessage("notificationTitle");
+var content = browser.i18n.getMessage("notificationContent", message.url);
+```
 
-<p>La première récupère juste le <code>message</code> du champ <code>notificationTitle </code>du fichier <code>messages.json</code> le plus approprié pour les paramètres régionaux actuels du navigateur. Le second est similaire, mais il est passé une URL en tant que deuxième paramètre. Ce qui donne? C'est ainsi que vous spécifiez le contenu pour remplacer l'espace réservé <code>$URL$</code>  que nous voyons dans le champ <code>message</code> du champ  <code>notificationContent</code> :</p>
+La première récupère juste le `message` du champ `notificationTitle `du fichier `messages.json` le plus approprié pour les paramètres régionaux actuels du navigateur. Le second est similaire, mais il est passé une URL en tant que deuxième paramètre. Ce qui donne? C'est ainsi que vous spécifiez le contenu pour remplacer l'espace réservé `$URL$`  que nous voyons dans le champ `message` du champ  `notificationContent` :
 
-<pre class="brush: json">"notificationContent": {
+```json
+"notificationContent": {
   "message": "You clicked $URL$.",
   "description": "Tells the user which link they clicked.",
   "placeholders": {
@@ -190,34 +180,37 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
     }
   }
 }
-</pre>
+```
 
-<p>Le membre <code>"placeholders"</code> définit tous les espaces réservés et d'où ils sont extraits. L'espace réservé <code>"url"</code> spécifie que son contenu est pris à partir de $1, qui est la première valeur donnée dans le second paramètre de  <code>getMessage()</code>. Puisque l'espace réservé est appelé <code>"url"</code>, nous utilisons <code>$URL$</code> pour l'appeler dans la chaîne de message (pour <code>"name"</code> vous utiliserez <code>$NAME$</code>, etc.) Si vous avez plusieurs espaces réservés, vous pouvez les fournir à l'intérieur un tableau qui est donné à {{WebExtAPIRef("i18n.getMessage()")}} en tant que deuxième paramètre — <code>[a, b, c]</code> sera disponible en <code>$1</code>, <code>$2</code>, et <code>$3</code>, et ainsi de suite, à l'intérieur des  <code>messages.json</code>.</p>
+Le membre `"placeholders"` définit tous les espaces réservés et d'où ils sont extraits. L'espace réservé `"url"` spécifie que son contenu est pris à partir de $1, qui est la première valeur donnée dans le second paramètre de  `getMessage()`. Puisque l'espace réservé est appelé `"url"`, nous utilisons `$URL$` pour l'appeler dans la chaîne de message (pour `"name"` vous utiliserez `$NAME$`, etc.) Si vous avez plusieurs espaces réservés, vous pouvez les fournir à l'intérieur un tableau qui est donné à {{WebExtAPIRef("i18n.getMessage()")}} en tant que deuxième paramètre — `[a, b, c]`sera disponible en`$1`, `$2`, et `$3`, et ainsi de suite, à l'intérieur des `messages.json`.
 
-<p>Parcourons un exemple: la chaîne originale du message  <code>notificationContent</code> dans le fichier  <code>en/messages.json</code> est</p>
+Parcourons un exemple: la chaîne originale du message  `notificationContent` dans le fichier  `en/messages.json` est
 
-<pre>You clicked $URL$.</pre>
+    You clicked $URL$.
 
-<p>Disons que le lien a été cliqué sur <code>https://developer.mozilla.org</code>. Après l'appel  {{WebExtAPIRef("i18n.getMessage()")}} , le contenu du deuxième paramètre est mis à disposition dans messages.json sous la forme <code>$1</code>, qui remplace l'espace réservé <code>$URL$</code> tel qu'il est défini dans l'espace réservé  <code>"url"</code>. Donc, la chaîne de message final est</p>
+Disons que le lien a été cliqué sur `https://developer.mozilla.org`. Après l'appel  {{WebExtAPIRef("i18n.getMessage()")}} , le contenu du deuxième paramètre est mis à disposition dans messages.json sous la forme `$1`, qui remplace l'espace réservé `$URL$` tel qu'il est défini dans l'espace réservé  `"url"`. Donc, la chaîne de message final est
 
-<pre>You clicked https://developer.mozilla.org.</pre>
+    You clicked https://developer.mozilla.org.
 
-<h3 id="Utilisation_de_lespace_réservé_direct">Utilisation  de l'espace réservé direct</h3>
+### Utilisation  de l'espace réservé direct
 
-<p>Il est possible d'insérer vos variables (<code>$1</code>, <code>$2</code>, <code>$3</code>, etc.) directement dans les chaînes de message, par exemple nous pourrions réécrire le membre <code>"notificationContent"</code> comme ceci :</p>
+Il est possible d'insérer vos variables (`$1`, `$2`, `$3`, etc.) directement dans les chaînes de message, par exemple nous pourrions réécrire le membre `"notificationContent"` comme ceci :
 
-<pre class="brush: json">"notificationContent": {
+```json
+"notificationContent": {
   "message": "You clicked $1.",
   "description": "Tells the user which link they clicked."
-}</pre>
+}
+```
 
-<p>Cela peut sembler plus rapide et moins complexe, mais l'inverse (en utilisant <code>"placeholders"</code>) est considéré comme la meilleure pratique. En effet, avoir le nom de l'espace réservé (par exemple <code>"url"</code>) et l'exemple vous aide à vous souvenir de l'espace réservé pour l'espace réservé — une semaine après avoir écrit votre code, vous oublierez probablement ce que <code>$1</code>–<code>$8</code> , plus susceptibles de savoir à quoi correspondent les noms de vos espaces réservés.</p>
+Cela peut sembler plus rapide et moins complexe, mais l'inverse (en utilisant `"placeholders"`) est considéré comme la meilleure pratique. En effet, avoir le nom de l'espace réservé (par exemple `"url"`) et l'exemple vous aide à vous souvenir de l'espace réservé pour l'espace réservé — une semaine après avoir écrit votre code, vous oublierez probablement ce que `$1`–`$8` , plus susceptibles de savoir à quoi correspondent les noms de vos espaces réservés.
 
-<h3 id="Substitution_codée_en_dur">Substitution codée en dur</h3>
+### Substitution codée en dur
 
-<p>Il est également possible d'inclure des chaînes codées en dur dans des espaces réservés, de sorte que la même valeur soit utilisée à chaque fois, au lieu d'obtenir la valeur d'une variable dans votre code. Par exemple :</p>
+Il est également possible d'inclure des chaînes codées en dur dans des espaces réservés, de sorte que la même valeur soit utilisée à chaque fois, au lieu d'obtenir la valeur d'une variable dans votre code. Par exemple :
 
-<pre class="brush: json">"mdn_banner": {
+```json
+"mdn_banner": {
   "message": "For more information on web technologies, go to $MDN$.",
   "description": "Tell the user about MDN",
   "placeholders": {
@@ -225,134 +218,150 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
       "content": "https://developer.mozilla.org/"
     }
   }
-}</pre>
+}
+```
 
-<p>Dans ce cas, nous ne faisons que coder en dur le contenu de l'espace réservé, plutôt que de l'obtenir à partir d'une valeur de variable comme <code>$1</code>. Cela peut parfois être utile lorsque votre fichier de message est très complexe et que vous souhaitez séparer différentes valeurs pour rendre les chaînes plus lisibles dans le fichier. De plus, ces valeurs peuvent être accédées par programmation.</p>
+Dans ce cas, nous ne faisons que coder en dur le contenu de l'espace réservé, plutôt que de l'obtenir à partir d'une valeur de variable comme `$1`. Cela peut parfois être utile lorsque votre fichier de message est très complexe et que vous souhaitez séparer différentes valeurs pour rendre les chaînes plus lisibles dans le fichier. De plus, ces valeurs peuvent être accédées par programmation.
 
-<p>En outre, vous pouvez utiliser ces substitutions pour spécifier les parties de la chaîne que vous ne souhaitez pas traduire, telles que les noms de personne ou d'entreprise.</p>
+En outre, vous pouvez utiliser ces substitutions pour spécifier les parties de la chaîne que vous ne souhaitez pas traduire, telles que les noms de personne ou d'entreprise.
 
-<h2 id="Sélection_de_chaîne_localisée">Sélection de chaîne localisée</h2>
+## Sélection de chaîne localisée
 
-<p>Les paramètres régionaux peuvent être spécifiés en utilisant uniquement un code de langue, comme <code>fr</code> ou <code>en</code>, ou ils peuvent être qualifiés avec un code de région, comme <code>en_US</code> ou <code>en_GB</code>, qui décrit une variante régionale du même langage de base. Lorsque vous demandez au système i18n une chaîne, il sélectionne une chaîne en utilisant l'algorithme suivant:</p>
+Les paramètres régionaux peuvent être spécifiés en utilisant uniquement un code de langue, comme `fr` ou `en`, ou ils peuvent être qualifiés avec un code de région, comme `en_US` ou `en_GB`, qui décrit une variante régionale du même langage de base. Lorsque vous demandez au système i18n une chaîne, il sélectionne une chaîne en utilisant l'algorithme suivant:
 
-<ol>
- <li>S'il existe un fichier <code>messages.json</code> pour l'environnement local actuel exact et qu'il contient la chaîne, renvoyez-le.</li>
- <li>Sinon, si l'environnement local actuel est qualifié avec une région (par exemple <code>en_US</code>) et qu'il existe un fichier <code>messages.json</code> pour la version sans région de cet environnement local (par exemple <code>en</code>), et que ce fichier contient la chaîne, renvoyez-le.</li>
- <li>Sinon, s'il existe un fichier <code>messages.json</code> pour l'argument <code>default_locale</code> défini dans <code>manifest.json</code>, et qu'il contient la chaîne, renvoyez-le.</li>
- <li>Sinon, renvoyez une chaîne vide.</li>
-</ol>
+1.  S'il existe un fichier `messages.json` pour l'environnement local actuel exact et qu'il contient la chaîne, renvoyez-le.
+2.  Sinon, si l'environnement local actuel est qualifié avec une région (par exemple `en_US`) et qu'il existe un fichier `messages.json` pour la version sans région de cet environnement local (par exemple `en`), et que ce fichier contient la chaîne, renvoyez-le.
+3.  Sinon, s'il existe un fichier `messages.json` pour l'argument `default_locale` défini dans `manifest.json`, et qu'il contient la chaîne, renvoyez-le.
+4.  Sinon, renvoyez une chaîne vide.
 
-<p>Prenons l'exemple suivant :</p>
+Prenons l'exemple suivant :
 
-<ul>
- <li>extension-root-directory/
-  <ul>
-   <li>_locales
-    <ul>
-     <li>en_GB
-      <ul>
-       <li>messages.json
-        <ul>
-         <li><code>{ "colorLocalised": { "message": "colour", "description": "Color." }, ... }</code></li>
-        </ul>
-       </li>
-      </ul>
+- extension-root-directory/
+
+  - \_locales
+
+    - en_GB
+
+      - messages.json
+
+        - `{ "colorLocalised": { "message": "colour", "description": "Color." }, ... }`
+
       en
 
-      <ul>
-       <li>messages.json
-        <ul>
-         <li><code>{ "colorLocalised": { "message": "color", "description": "Color." }, ... }</code></li>
-        </ul>
-       </li>
-      </ul>
-     </li>
-     <li>fr
-      <ul>
-       <li>messages.json
-        <ul>
-         <li><code>{ "colorLocalised": { "message": "couleur", "description": "Color." }, ...}</code></li>
-        </ul>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+      - messages.json
 
-<p>Supposons que <code>default_locale</code> soit défini sur <code>fr</code>, et que les paramètres régionaux actuels du navigateur soient <code>en_GB</code> :</p>
+        - `{ "colorLocalised": { "message": "color", "description": "Color." }, ... }`
 
-<ul>
- <li>Si l'extension appelle <code>getMessage("colorLocalised")</code>, elle retournera "couleur".</li>
- <li>Si "colorLocalised" n'était pas présent dans <code>en_GB</code>, alors <code>getMessage("colorLocalised")</code>, retournerait "color", pas "couleur".</li>
-</ul>
+    - fr
 
-<h2 id="Messages_prédéfinis">Messages prédéfinis</h2>
+      - messages.json
 
-<p>Le module i18n nous fournit des messages prédéfinis, que nous pouvons appeler de la manière que nous l'avons vu précédemment dans {{anch("Calling message strings from manifests and extension CSS")}}. Par exemple :</p>
+        - `{ "colorLocalised": { "message": "couleur", "description": "Color." }, ...}`
 
-<pre>__MSG_extensionName__</pre>
+Supposons que `default_locale` soit défini sur `fr`, et que les paramètres régionaux actuels du navigateur soient `en_GB` :
 
-<p>Les messages prédéfinis utilisent exactement la même syntaxe, sauf avec <code>@@</code> avant le nom du message, par exemple</p>
+- Si l'extension appelle `getMessage("colorLocalised")`, elle retournera "couleur".
+- Si "colorLocalised" n'était pas présent dans `en_GB`, alors `getMessage("colorLocalised")`, retournerait "color", pas "couleur".
 
-<pre>__MSG_@@ui_locale__</pre>
+## Messages prédéfinis
 
-<p>Le tableau suivant montre les différents messages prédéfinis disponibles :</p>
+Le module i18n nous fournit des messages prédéfinis, que nous pouvons appeler de la manière que nous l'avons vu précédemment dans {{anch("Calling message strings from manifests and extension CSS")}}. Par exemple :
+
+    __MSG_extensionName__
+
+Les messages prédéfinis utilisent exactement la même syntaxe, sauf avec `@@` avant le nom du message, par exemple
+
+    __MSG_@@ui_locale__
+
+Le tableau suivant montre les différents messages prédéfinis disponibles :
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Nom du message</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>@@extension_id</code></td>
-   <td>
-    <p>L'UUID généré en interne de l'extension. Vous pouvez utiliser cette chaîne pour créer des URL pour les ressources à l'intérieur de l'extension. Même les extensions non localisées peuvent utiliser ce message.</p>
-
-    <p>Vous ne pouvez pas utiliser ce message dans un fichier manifest.</p>
-
-    <p>Notez également que cet ID n'est pas l'ID de module complémentaire renvoyé par {{WebExtAPIRef("runtime.id")}}. Il peut être défini à l'aide de la clé <a href="/fr/Add-ons/WebExtensions/manifest.json/applications">applications</a> dans le fichier manifest.json. C'est l'UUID généré qui apparaît dans l'URL de l'add-on. Cela signifie que vous ne pouvez pas utiliser cette valeur comme paramètre  <code>extensionId</code> pour {{WebExtAPIRef("runtime.sendMessage()")}}, et que vous ne pouvez pas l'utiliser pour vérifier la propriété id d'un objet  {{WebExtAPIRef("runtime.MessageSender")}}.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>@@ui_locale</code></td>
-   <td>Les paramètres régionaux actuels vous pouvez utiliser cette chaîne pour créer des URL spécifiques aux paramètres régionaux.</td>
-  </tr>
-  <tr>
-   <td><code>@@bidi_dir</code></td>
-   <td>La direction du texte pour les paramètres régionaux actuels, soit "ltr" pour les langues de gauche à droite telles que l'anglais ou "rtl" pour les langues de droite à gauche telles que l'arabe.</td>
-  </tr>
-  <tr>
-   <td><code>@@bidi_reversed_dir</code></td>
-   <td>Si le <code>@@bidi_dir</code> est "ltr", alors il s'agit de "rtl"; sinon, c'est "ltr".</td>
-  </tr>
-  <tr>
-   <td><code>@@bidi_start_edge</code></td>
-   <td>Si le <code>@@bidi_dir</code> est "ltr", alors c'est "gauche"; sinon, c'est "droite".</td>
-  </tr>
-  <tr>
-   <td><code>@@bidi_end_edge</code></td>
-   <td>Si le <code>@@bidi_dir</code> est "ltr", alors c'est "droite"; sinon, c'est "gauche".</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Nom du message</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>@@extension_id</code></td>
+      <td>
+        <p>
+          L'UUID généré en interne de l'extension. Vous pouvez utiliser cette
+          chaîne pour créer des URL pour les ressources à l'intérieur de
+          l'extension. Même les extensions non localisées peuvent utiliser ce
+          message.
+        </p>
+        <p>Vous ne pouvez pas utiliser ce message dans un fichier manifest.</p>
+        <p>
+          Notez également que cet ID n'est pas l'ID de module complémentaire
+          renvoyé par {{WebExtAPIRef("runtime.id")}}. Il peut être
+          défini à l'aide de la clé
+          <a href="/fr/Add-ons/WebExtensions/manifest.json/applications"
+            >applications</a
+          >
+          dans le fichier manifest.json. C'est l'UUID généré qui apparaît dans
+          l'URL de l'add-on. Cela signifie que vous ne pouvez pas utiliser cette
+          valeur comme paramètre  <code>extensionId</code> pour
+          {{WebExtAPIRef("runtime.sendMessage()")}}, et que vous
+          ne pouvez pas l'utiliser pour vérifier la propriété id d'un objet 
+          {{WebExtAPIRef("runtime.MessageSender")}}.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>@@ui_locale</code></td>
+      <td>
+        Les paramètres régionaux actuels vous pouvez utiliser cette chaîne pour
+        créer des URL spécifiques aux paramètres régionaux.
+      </td>
+    </tr>
+    <tr>
+      <td><code>@@bidi_dir</code></td>
+      <td>
+        La direction du texte pour les paramètres régionaux actuels, soit "ltr"
+        pour les langues de gauche à droite telles que l'anglais ou "rtl" pour
+        les langues de droite à gauche telles que l'arabe.
+      </td>
+    </tr>
+    <tr>
+      <td><code>@@bidi_reversed_dir</code></td>
+      <td>
+        Si le <code>@@bidi_dir</code> est "ltr", alors il s'agit de "rtl";
+        sinon, c'est "ltr".
+      </td>
+    </tr>
+    <tr>
+      <td><code>@@bidi_start_edge</code></td>
+      <td>
+        Si le <code>@@bidi_dir</code> est "ltr", alors c'est "gauche"; sinon,
+        c'est "droite".
+      </td>
+    </tr>
+    <tr>
+      <td><code>@@bidi_end_edge</code></td>
+      <td>
+        Si le <code>@@bidi_dir</code> est "ltr", alors c'est "droite"; sinon,
+        c'est "gauche".
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Pour en revenir à notre exemple, il serait plus logique de l'écrire comme ceci :</p>
+Pour en revenir à notre exemple, il serait plus logique de l'écrire comme ceci :
 
-<pre class="brush: css">header {
+```css
+header {
   background-image: url(../images/__MSG_@@ui_locale__/header.png);
-}</pre>
+}
+```
 
-<p>Maintenant, nous pouvons simplement stocker nos images locales spécifiques dans des répertoires qui correspondent aux différentes locales que nous soutenons — en, de, etc. — ce qui est beaucoup plus logique.</p>
+Maintenant, nous pouvons simplement stocker nos images locales spécifiques dans des répertoires qui correspondent aux différentes locales que nous soutenons — en, de, etc. — ce qui est beaucoup plus logique.
 
-<p>Regardons un exemple d'utilisation des messages <code>@@bidi_*</code> dans un fichier CSS :</p>
+Regardons un exemple d'utilisation des messages `@@bidi_*` dans un fichier CSS :
 
-<pre class="brush: css">body {
+```css
+body {
   direction: __MSG_@@bidi_dir__;
 }
 
@@ -363,46 +372,41 @@ div#header {
   padding-__MSG_@@bidi_start_edge__: 0;
   padding-__MSG_@@bidi_end_edge__: 1.5em;
   position: relative;
-}</pre>
+}
+```
 
-<p>Pour les langues de gauche à droite telles que l'anglais, les déclarations CSS impliquant les messages prédéfinis ci-dessus se traduiraient par les lignes de code définitives suivantes :</p>
+Pour les langues de gauche à droite telles que l'anglais, les déclarations CSS impliquant les messages prédéfinis ci-dessus se traduiraient par les lignes de code définitives suivantes :
 
-<pre class="brush: css">direction: ltr;
+```css
+direction: ltr;
 padding-left: 0;
 padding-right: 1.5em;
-</pre>
+```
 
-<p>Pour une langue de droite à gauche comme l'arabe, vous obtiendrez :</p>
+Pour une langue de droite à gauche comme l'arabe, vous obtiendrez :
 
-<pre class="brush: css">direction: rtl;
+```css
+direction: rtl;
 padding-right: 0;
-padding-left: 1.5em;</pre>
+padding-left: 1.5em;
+```
 
-<h2 id="Tester_votre_extension">Tester votre extension</h2>
+## Tester votre extension
 
-<p>Depuis Firefox 45, vous pouvez installer temporairement des extensions à partir du disque — voir <a href="/fr/Add-ons/WebExtensions/Packaging_and_installation#Loading_from_disk">Chargement depuis le disque</a>. Pour ce faire, puis essayez de tester notre extension <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a>. Accédez à l'un de vos sites Web préférés et cliquez sur un lien pour voir si une notification s'affiche indiquant l'URL du lien cliqué.</p>
+Depuis Firefox 45, vous pouvez installer temporairement des extensions à partir du disque — voir [Chargement depuis le disque](/fr/Add-ons/WebExtensions/Packaging_and_installation#Loading_from_disk). Pour ce faire, puis essayez de tester notre extension [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n). Accédez à l'un de vos sites Web préférés et cliquez sur un lien pour voir si une notification s'affiche indiquant l'URL du lien cliqué.
 
-<p>Ensuite, changez les paramètres régionaux de Firefox en un supporté dans l'extension que vous voulez tester.</p>
+Ensuite, changez les paramètres régionaux de Firefox en un supporté dans l'extension que vous voulez tester.
 
-<ol>
- <li>Ouvrez "about:config" dans Firefox, et recherchez la préférence  <code>intl.locale.requested</code>  (gardez à l'esprit qu'avant Firefox 59, cette préférence s'appellait <code>general.useragent.locale</code>).</li>
- <li>Double-cliquez sur la préférence (ou appuyez sur Retour/Entrée) pour le sélectionner, entrez le code de langue pour les paramètres régionaux que vous voulez tester, puis cliquez sur "OK" (ou appuyez sur Retour/Entrée). Par exemple, dans notre exemple d'extension, "en" (anglais), "de" (allemand), "nl" (néérlandais), et "ja" (Japonais) sont pris en charge.</li>
- <li>Recherchez <code>intl.locale.matchOS</code> et double-cliquez sur la préférence pour qu'elle soit définie sur <code>false</code>.</li>
- <li>Redémarrez votre navigateur pour terminer la modification.</li>
-</ol>
+1.  Ouvrez "about:config" dans Firefox, et recherchez la préférence  `intl.locale.requested`  (gardez à l'esprit qu'avant Firefox 59, cette préférence s'appellait `general.useragent.locale`).
+2.  Double-cliquez sur la préférence (ou appuyez sur Retour/Entrée) pour le sélectionner, entrez le code de langue pour les paramètres régionaux que vous voulez tester, puis cliquez sur "OK" (ou appuyez sur Retour/Entrée). Par exemple, dans notre exemple d'extension, "en" (anglais), "de" (allemand), "nl" (néérlandais), et "ja" (Japonais) sont pris en charge.
+3.  Recherchez `intl.locale.matchOS` et double-cliquez sur la préférence pour qu'elle soit définie sur `false`.
+4.  Redémarrez votre navigateur pour terminer la modification.
 
-<div class="note">
-<p><strong>Note :</strong> Cela fonctionne pour modifier les paramètres régionaux du navigateur, même si vous n'avez pas installé le <a href="/fr/firefox/language-tools/">pack de language</a> pour cette langue. Vous obtiendrez simplement l'interface du navigateur dans votre langue par défaut si c'est le cas.</p>
-</div>
+> **Note :** Cela fonctionne pour modifier les paramètres régionaux du navigateur, même si vous n'avez pas installé le [pack de language](/fr/firefox/language-tools/) pour cette langue. Vous obtiendrez simplement l'interface du navigateur dans votre langue par défaut si c'est le cas.
 
-<ol>
-</ol>
+Chargez l'extension temporairement à partir du disque, puis testez vos nouveaux paramètres régionaux:
 
-<p>Chargez l'extension temporairement à partir du disque, puis testez vos nouveaux paramètres régionaux:</p>
+- Visitez à nouveau "about:addons" — vous devriez maintenant voir l'extension listée, avec son icône, plus son nom et sa description dans la langue choisie.
+- Testez votre extension à nouveau. Dans notre exemple, vous allez sur un autre site Web et cliquez sur un lien, pour voir si la notification apparaît maintenant dans la langue choisie.
 
-<ul>
- <li>Visitez à nouveau "about:addons" — vous devriez maintenant voir l'extension listée, avec son icône, plus son nom et sa description dans la langue choisie.</li>
- <li>Testez votre extension à nouveau. Dans notre exemple, vous allez sur un autre site Web et cliquez sur un lien, pour voir si la notification apparaît maintenant dans la langue choisie.</li>
-</ul>
-
-<p>{{EmbedYouTube("R7--fp5pPGg")}}</p>
+{{EmbedYouTube("R7--fp5pPGg")}}

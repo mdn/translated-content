@@ -7,55 +7,55 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Type</th>
-   <td><code>Chaîne</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Obligatoire</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">Exemple</th>
-   <td>
-    <pre class="brush: json">
-"version": "0.1"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Type</th>
+      <td><code>Chaîne</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Obligatoire</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">Exemple</th>
+      <td><pre class="brush: json">"version": "0.1"</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Version de l'extension, sous forme de nombres et de caractères ASCII séparés par des points. Pour connaître les détails du format de version, consultez la page <a href="/fr/docs/Toolkit_version_format">Format de la version</a>.</p>
+Version de l'extension, sous forme de nombres et de caractères ASCII séparés par des points. Pour connaître les détails du format de version, consultez la page [Format de la version](/fr/docs/Toolkit_version_format).
 
-<p>Vous pouvez inspecter le <a href="https://github.com/mozilla/addons-linter/blob/master/src/schema/formats.js#L10">code de linter des modules complémentaires </a>pour voir comment les versions d'extension pour Firefox sont validées.</p>
+Vous pouvez inspecter le [code de linter des modules complémentaires ](https://github.com/mozilla/addons-linter/blob/master/src/schema/formats.js#L10)pour voir comment les versions d'extension pour Firefox sont validées.
 
-<p>Notez que <a href="https://developer.chrome.com/extensions/manifest/version">la syntaxe définie pour la version de Chrome</a> est plus restrictive que celle utilisée par Firefox :</p>
+Notez que [la syntaxe définie pour la version de Chrome](https://developer.chrome.com/extensions/manifest/version) est plus restrictive que celle utilisée par Firefox :
 
-<ul>
- <li>Les valeurs d'une <code>version</code> valide pour Chrome seront toujours valables pour Firefox</li>
- <li>Les valeurs d'une <code>version</code> valide pour Firefox peuvent ne pas être valides pour Chrome</li>
-</ul>
+- Les valeurs d'une `version` valide pour Chrome seront toujours valables pour Firefox
+- Les valeurs d'une `version` valide pour Firefox peuvent ne pas être valides pour Chrome
 
-<p>Pour obtenir votre version d'extension dans votre code JavaScript, utilisez :</p>
+Pour obtenir votre version d'extension dans votre code JavaScript, utilisez :
 
-<pre class="brush: js">console.log(browser.runtime.getManifest().version);</pre>
+```js
+console.log(browser.runtime.getManifest().version);
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Si le manifest contient :</p>
+Si le manifest contient :
 
-<pre class="brush: js">"version": "0.1"</pre>
+```js
+"version": "0.1"
+```
 
-<p>Pour obtenir votre version d'extension dans votre code JavaScript, utilisez :</p>
+Pour obtenir votre version d'extension dans votre code JavaScript, utilisez :
 
-<pre class="brush: js">console.log(browser.runtime.getManifest().version);
+```js
+console.log(browser.runtime.getManifest().version);
 // expected output: "0.1"
-</pre>
+```
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("webextensions.manifest.version")}}</p>
+{{Compat("webextensions.manifest.version")}}

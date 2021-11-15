@@ -13,44 +13,43 @@ tags:
   - deleteUrl
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteUrl
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Supprime toutes les visites à l'URL donnée de l'historique du navigateur.</p>
+Supprime toutes les visites à l'URL donnée de l'historique du navigateur.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var deletingUrl = browser.history.deleteUrl(
+```js
+var deletingUrl = browser.history.deleteUrl(
   details         // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. Objet contenant l'URL dont les visites doivent être supprimées.</p>
- <dl>
-  <dt><code>url</code></dt>
-  <dd><code>string</code>. L'URL dont les visites doivent être supprimées.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`. Objet contenant l'URL dont les visites doivent être supprimées.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> sera remplie sans paramètres lorsque les visites auront été supprimées.</p>
+    - `url`
+      - : `string`. L'URL dont les visites doivent être supprimées.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.history.deleteUrl")}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans paramètres lorsque les visites auront été supprimées.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Supprimez toutes les visites de "https://example.org/" de l'historique, puis vérifiez que cette URL n'est plus renvoyée par {{WebExtAPIRef("history.search()")}}:</p>
+{{Compat("webextensions.api.history.deleteUrl")}}
 
-<pre class="brush: js">var urlToRemove = "https://example.org/";
+## Exemples
+
+Supprimez toutes les visites de "https\://example.org/" de l'historique, puis vérifiez que cette URL n'est plus renvoyée par {{WebExtAPIRef("history.search()")}}:
+
+```js
+var urlToRemove = "https://example.org/";
 
 function onGot(results) {
   if (!results.length) {
@@ -71,11 +70,13 @@ function onRemoved() {
 
 var deletingUrl = browser.history.deleteUrl({url: urlToRemove});
 
-deletingUrl.then(onRemoved);</pre>
+deletingUrl.then(onRemoved);
+```
 
-<p>Supprimez la dernière page visitée de l'historique, avec un écouteur à {{WebExtAPIRef("history.onVisitRemoved")}} pour consigner l'URL de la page supprimée :</p>
+Supprimez la dernière page visitée de l'historique, avec un écouteur à {{WebExtAPIRef("history.onVisitRemoved")}} pour consigner l'URL de la page supprimée :
 
-<pre class="brush: js">function onRemoved(removeInfo) {
+```js
+function onRemoved(removeInfo) {
   if (removeInfo.urls.length) {
     console.log("Removed: " + removeInfo.urls[0]);
   }
@@ -96,19 +97,18 @@ var searching = browser.history.search({
   maxResults: 1
 });
 
-searching.then(onGot);</pre>
+searching.then(onGot);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -135,5 +135,4 @@ searching.then(onGot);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

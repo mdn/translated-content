@@ -12,50 +12,42 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/forgetClosedTab
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Supprime un onglet fermé de la liste des onglets récemment fermés du navigateur.Notez que les sites visités par cet onglet ne sont pas supprimés de l'historique du navigateur. Utilisez les API {{WebExtAPIRef("browsingData")}} oo {{WebExtAPIRef("history")}} pour supprimer l'historique.
 
-<div>Supprime un onglet fermé de la liste des onglets récemment fermés du navigateur.</div>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<div></div>
+## Syntaxe
 
-<div>Notez que les sites visités par cet onglet ne sont pas supprimés de l'historique du navigateur. Utilisez les API {{WebExtAPIRef("browsingData")}} oo {{WebExtAPIRef("history")}} pour supprimer l'historique.</div>
-
-<div></div>
-
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
-
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: js">var forgettingTab = browser.sessions.forgetClosedTab(
+```js
+var forgettingTab = browser.sessions.forgetClosedTab(
   windowId,            // integer
   sessionId            // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>windowId</code></dt>
- <dd><code>Integer</code>. L'ID de la fenêtre qui héberge l'onglet que vous voulez oublier.</dd>
- <dt><code>sessionId</code></dt>
- <dd><code>String</code>. L'identifiant de la session que vous voulez oublier.</dd>
-</dl>
+- `windowId`
+  - : `Integer`. L'ID de la fenêtre qui héberge l'onglet que vous voulez oublier.
+- `sessionId`
+  - : `String`. L'identifiant de la session que vous voulez oublier.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. Cela sera accompli sans arguments lorsque la session a été supprimée.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Cela sera accompli sans arguments lorsque la session a été supprimée.
 
-<p>Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.sessions.forgetClosedTab")}}</p>
+{{Compat("webextensions.api.sessions.forgetClosedTab")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Ce code oublie la dernière session fermée, qu'il s'agisse d'un onglet ou d'une fenêtre :</p>
+Ce code oublie la dernière session fermée, qu'il s'agisse d'un onglet ou d'une fenêtre :
 
-<pre class="brush: js">function forgetMostRecent(sessionInfos) {
+```js
+function forgetMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
     console.log("No sessions found")
     return;
@@ -73,6 +65,7 @@ function onError(error) {
 }
 
 browser.sessions.getRecentlyClosed({maxResults: 1})
-.then(forgetMostRecent, onError);</pre>
+.then(forgetMostRecent, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

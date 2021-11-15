@@ -13,59 +13,52 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé quand une connexion est établie avec un processus d'extension ou un script de contenu.</p>
+Lancé quand une connexion est établie avec un processus d'extension ou un script de contenu.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.runtime.onConnect.addListener(listener)
+```js
+browser.runtime.onConnect.addListener(listener)
 browser.runtime.onConnect.removeListener(listener)
 browser.runtime.onConnect.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument de l'<code>écouteur</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifie si un <code>écouteur</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument de l'`écouteur` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifie si un `écouteur` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>fonction</code></dt>
- <dd>
- <p>Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants:</p>
+- `fonction`
 
- <dl>
-  <dt><code>port</code></dt>
-  <dd>Un objet {{WebExtAPIRef('runtime.Port')}} connectant le script courant à l'autre contexte auquel il se connecte.</dd>
- </dl>
- </dd>
-</dl>
+  - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants:
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `port`
+      - : Un objet {{WebExtAPIRef('runtime.Port')}} connectant le script courant à l'autre contexte auquel il se connecte.
 
-<p>{{Compat("webextensions.api.runtime.onConnect")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.runtime.onConnect")}}
 
-<p>Ce script de contenu :</p>
+## Exemples
 
-<ul>
- <li>Se connecte au script d'arrière-plan et stocke le <code>Port</code> dans une variable <code>myPort</code></li>
- <li>Ecoute les messages sur <code>myPort</code>, et les enregistre</li>
- <li>Envoie des messages au script d'arrière-plan, en utilisant <code>myPort</code>, lorsque l'utilisateur clique sur le document</li>
-</ul>
+Ce script de contenu :
 
-<pre class="brush: js">// content-script.js
+- Se connecte au script d'arrière-plan et stocke le `Port` dans une variable `myPort`
+- Ecoute les messages sur `myPort`, et les enregistre
+- Envoie des messages au script d'arrière-plan, en utilisant `myPort`, lorsque l'utilisateur clique sur le document
+
+```js
+// content-script.js
 
 var myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -77,23 +70,22 @@ myPort.onMessage.addListener(function(m) {
 
 document.body.addEventListener("click", function() {
   myPort.postMessage({greeting: "they clicked the page!"});
-});</pre>
+});
+```
 
-<p>Le script d'arrière-plan correspondant :</p>
+Le script d'arrière-plan correspondant :
 
-<ul>
- <li>Ecoute les tentatives de connexion de script de contenu</li>
- <li>Quand il reçoit une tentative de connexion :
-  <ul>
-   <li>Stocke le port dans une variable nommée <code>portFromCS</code></li>
-   <li>Envoie un message au script de contenu en utilisant le port</li>
-   <li>Commence à écouter les messages reçus sur le port et les enregistre</li>
-  </ul>
- </li>
- <li>Envoie des messages au script de contenu, en utilisant <code>portFromCS</code>, quand l'utilisateur clique sur l'action du navigateur de l'extension</li>
-</ul>
+- Ecoute les tentatives de connexion de script de contenu
+- Quand il reçoit une tentative de connexion :
 
-<pre class="brush: js">// background-script.js
+  - Stocke le port dans une variable nommée `portFromCS`
+  - Envoie un message au script de contenu en utilisant le port
+  - Commence à écouter les messages reçus sur le port et les enregistre
+
+- Envoie des messages au script de contenu, en utilisant `portFromCS`, quand l'utilisateur clique sur l'action du navigateur de l'extension
+
+```js
+// background-script.js
 
 var portFromCS;
 
@@ -110,19 +102,18 @@ browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(function() {
   portFromCS.postMessage({greeting: "they clicked the button!"});
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -149,5 +140,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,87 +13,80 @@ tags:
   - sendMessage
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Envoie un simple message aux écouteurs d'événement dans votre extension ou une extension différente.</p>
+Envoie un simple message aux écouteurs d'événement dans votre extension ou une extension différente.
 
-<p>Si vous envoyez à votre extension, omettez l'argument <code>extensionId</code>. L'événement {{WebExtAPIRef('runtime.onMessage')}} sera déclenché dans chaque page de votre extension, à l'exception du cadre appelé <code>runtime.sendMessage</code>.</p>
+Si vous envoyez à votre extension, omettez l'argument `extensionId`. L'événement {{WebExtAPIRef('runtime.onMessage')}} sera déclenché dans chaque page de votre extension, à l'exception du cadre appelé `runtime.sendMessage`.
 
-<p>Si vous envoyez une extension différente, ajouter l'argument <code>extensionId</code> à l'ID de l'autre extension. {{WebExtAPIRef('runtime.onMessageExternal')}} sera déclenché dans l'autre extension.</p>
+Si vous envoyez une extension différente, ajouter l'argument `extensionId` à l'ID de l'autre extension. {{WebExtAPIRef('runtime.onMessageExternal')}} sera déclenché dans l'autre extension.
 
-<p>Les extensions ne peuvent pas envoyer de messages aux scripts de contenu en utilisant cette méthode. Pour envoyer des messages aux scripts de contenu, utilisez {{WebExtAPIRef('tabs.sendMessage')}}.</p>
+Les extensions ne peuvent pas envoyer de messages aux scripts de contenu en utilisant cette méthode. Pour envoyer des messages aux scripts de contenu, utilisez {{WebExtAPIRef('tabs.sendMessage')}}.
 
-<ul>
-</ul>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+> **Note :** Vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan).
 
-<div class="note">
-<p><strong>Note :</strong> Vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">approche basée sur la connexion pour échanger des messages</a>.</p>
-</div>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: js">var sending = browser.runtime.sendMessage(
+```js
+var sending = browser.runtime.sendMessage(
   extensionId,             // optional string
   message,                 // any
   options                  // optional object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>extensionId</code>{{optional_inline}}</dt>
- <dd><p><code>string</code>. L'ID de l'extension à envoyer le message. Incluez ceci pour envoyer le message à une extension différente..Si le destinataire prévu a défini un ID explicitement en utilisant la clé d' <a href="/fr/Add-ons/WebExtensions/manifest.json/applications">applications</a> dans  manifest.json, <code>extensionId</code> doit avoir une valeur. Sinon, il devrait avoir l'ID qui a été généré pour le destinataire prévu.</p>
-  <p>Si <code>extensionId</code> est omis, le message sera envoyé à votre propre extension.</p></dd>
- <dt><code>message</code></dt>
- <dd><code>any</code>. Un objet qui peut être structuré clone sérialisé.</dd>
- <dt><code>options</code>{{optional_inline}}</dt>
- <dd><p><code>object</code>.</p>
- <dl>
-  <dt><code>includeTlsChannelId</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Indique si l'ID de canal TLS sera transmis à {{WebExtAPIRef('runtime.onMessageExternal')}} pour les processus qui écoutent l'événement de connexion.</dd>
-  <dt><code>toProxyScript{{optional_inline}}</code></dt>
-  <dd><code>boolean</code>. Doit être True si le message est destiné à un fichier PAC chargé à l'aide de l'API {{WebExtAPIRef("proxy")}}.</dd>
- </dl>
- </dd>
-</dl>
+- `extensionId`{{optional_inline}}
 
-<p>En fonction des arguments qui lui sont donnés, cette API est parfois ambiguë. Les règles suivantes sont utilisées :</p>
+  - : `string`. L'ID de l'extension à envoyer le message. Incluez ceci pour envoyer le message à une extension différente..Si le destinataire prévu a défini un ID explicitement en utilisant la clé d' [applications](/fr/Add-ons/WebExtensions/manifest.json/applications) dans  manifest.json, `extensionId` doit avoir une valeur. Sinon, il devrait avoir l'ID qui a été généré pour le destinataire prévu.
 
-<ul>
- <li><strong>Si un argument est donné</strong>, c'est le message à envoyer, et le message sera envoyé en interne.</li>
- <li><strong>Si deux arguments sont donnés :</strong>
-  <ul>
-   <li>Les arguments sont interprétés comme (message, options) et le message est envoyé en interne si le second argument est l'un des suivants :
-    <ol>
-     <li>Un objet d'options valide (c'est-à-dire un objet qui ne contient que les propriétés des options supportés par le navigateur)</li>
-     <li>null</li>
-     <li>indéfini</li>
-    </ol>
-   </li>
-   <li>Sinon, les arguments sont interprétés comme <code>(extensionId, message)</code>. Le message sera envoyé à l'extension identifiée par <code>extensionId</code>.</li>
-  </ul>
- </li>
- <li><strong>Si trois arguments sont donnés</strong>, les arguments sont interprétés comme <code>(extensionId, message, options)</code>. Le message sera envoyé à l'extension identifiée par <code>extensionId</code>.</li>
-</ul>
+    Si `extensionId` est omis, le message sera envoyé à votre propre extension.
 
-<p>Notez qu'avant Firefox 55, le règles étaient différentes dans le cas des 2 arguments. Sous les anciennes règles, si le premier argument était une chaîne, il était traité comme <code>extensionId</code>, avec le message comme deuxième argument. Cel signifiait que si vous appelez <code>sendMessage()</code> avec des arguments comme <code>("my-message", {})</code>, il enverrait un message vide à l'extension identifiée par "my-message". Sous les nouvelles règles, avec ces arguments, vous enverriez le message "my-message" en interne, avec un objet options vide.</p>
+- `message`
+  - : `any`. Un objet qui peut être structuré clone sérialisé.
+- `options`{{optional_inline}}
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. Si le destinataire a envoyé une réponse, celle-ci sera remplie avec la réponse en tant qu'objet JSON. Sinon, il sera rempli sans arguments. si une erreur survient lors de la connexion à l'extension, la promessage sera rejetée avec un message d'erreur.</p>
+    - `includeTlsChannelId`{{optional_inline}}
+      - : `boolean`. Indique si l'ID de canal TLS sera transmis à {{WebExtAPIRef('runtime.onMessageExternal')}} pour les processus qui écoutent l'événement de connexion.
+    - `toProxyScript{{optional_inline}}`
+      - : `boolean`. Doit être True si le message est destiné à un fichier PAC chargé à l'aide de l'API {{WebExtAPIRef("proxy")}}.
 
-<h2 id="Compatibilité_du_navitageur">Compatibilité du navitageur</h2>
+En fonction des arguments qui lui sont donnés, cette API est parfois ambiguë. Les règles suivantes sont utilisées :
 
-<p>{{Compat("webextensions.api.runtime.sendMessage")}}</p>
+- **Si un argument est donné**, c'est le message à envoyer, et le message sera envoyé en interne.
+- **Si deux arguments sont donnés :**
 
-<h2 id="Exemples">Exemples</h2>
+  - Les arguments sont interprétés comme (message, options) et le message est envoyé en interne si le second argument est l'un des suivants :
 
-<p>Voici un script de contenu qui envoie un message au script d'arrière-plan lorsque l'utilisateur clique sur la fenêtre de contenu. La charge utile du message est <code>{greeting: "Greeting from the content script"}</code>, et l'expéditeur s'attend également à recevoir une réponse, qui est gérée dans la fonction <code>handleResponse</code> :</p>
+    1.  Un objet d'options valide (c'est-à-dire un objet qui ne contient que les propriétés des options supportés par le navigateur)
+    2.  null
+    3.  indéfini
 
-<pre class="brush: js">// content-script.js
+  - Sinon, les arguments sont interprétés comme `(extensionId, message)`. Le message sera envoyé à l'extension identifiée par `extensionId`.
+
+- **Si trois arguments sont donnés**, les arguments sont interprétés comme `(extensionId, message, options)`. Le message sera envoyé à l'extension identifiée par `extensionId`.
+
+Notez qu'avant Firefox 55, le règles étaient différentes dans le cas des 2 arguments. Sous les anciennes règles, si le premier argument était une chaîne, il était traité comme `extensionId`, avec le message comme deuxième argument. Cel signifiait que si vous appelez `sendMessage()` avec des arguments comme `("my-message", {})`, il enverrait un message vide à l'extension identifiée par "my-message". Sous les nouvelles règles, avec ces arguments, vous enverriez le message "my-message" en interne, avec un objet options vide.
+
+### Valeur retournée
+
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si le destinataire a envoyé une réponse, celle-ci sera remplie avec la réponse en tant qu'objet JSON. Sinon, il sera rempli sans arguments. si une erreur survient lors de la connexion à l'extension, la promessage sera rejetée avec un message d'erreur.
+
+## Compatibilité du navitageur
+
+{{Compat("webextensions.api.runtime.sendMessage")}}
+
+## Exemples
+
+Voici un script de contenu qui envoie un message au script d'arrière-plan lorsque l'utilisateur clique sur la fenêtre de contenu. La charge utile du message est `{greeting: "Greeting from the content script"}`, et l'expéditeur s'attend également à recevoir une réponse, qui est gérée dans la fonction `handleResponse` :
+
+```js
+// content-script.js
 
 function handleResponse(message) {
   console.log(`Message from the background script:  ${message.response}`);
@@ -110,11 +103,13 @@ function notifyBackgroundPage(e) {
   sending.then(handleResponse, handleError);
 }
 
-window.addEventListener("click", notifyBackgroundPage);</pre>
+window.addEventListener("click", notifyBackgroundPage);
+```
 
-<p>Le script d'arrière-plan correspondant ressemble à ceci :</p>
+Le script d'arrière-plan correspondant ressemble à ceci :
 
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 function handleMessage(request, sender, sendResponse) {
   console.log("Message from the content script: " +
@@ -122,19 +117,18 @@ function handleMessage(request, sender, sendResponse) {
   sendResponse({response: "Response from background script"});
 }
 
-browser.runtime.onMessage.addListener(handleMessage);</pre>
+browser.runtime.onMessage.addListener(handleMessage);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -161,5 +155,4 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

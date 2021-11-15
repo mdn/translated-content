@@ -13,97 +13,83 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Utilisez cet événement pour écouter les messages d'une autre extension.
 
-<div>
-<div>Utilisez cet événement pour écouter les messages d'une autre extension.</div>
+Pour envoyer un message qui sera reçu par le module d'écoute `onMessageExternal`, utilisez {{WebExtAPIRef("runtime.sendMessage()")}}, en transmettant l'ID du destinataire dans le paramètre `extensionId`.
 
-<div></div>
+Avec le message lui-même, l'écouteur est transmis :
 
-<p>Pour envoyer un message qui sera reçu par le module d'écoute <code>onMessageExternal</code>, utilisez {{WebExtAPIRef("runtime.sendMessage()")}}, en transmettant l'ID du destinataire dans le paramètre <code>extensionId</code>.</p>
+- un objet `sender` donnant des détails sur l'expéditeur du message
+- une fonction `sendResponse` qu'elle peut utiliser pour renvoyer une réponse à l'expéditeur.
 
-<p>Avec le message lui-même, l'écouteur est transmis :</p>
+Cette API ne peut pas être utilisée dans un script de contenu.
 
-<ul>
- <li>un objet <code>sender</code> donnant des détails sur l'expéditeur du message</li>
- <li>une fonction <code>sendResponse</code> qu'elle peut utiliser pour renvoyer une réponse à l'expéditeur.</li>
-</ul>
-</div>
+## Syntax
 
-<p>Cette API ne peut pas être utilisée dans un script de contenu.</p>
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">browser.runtime.onMessageExternal.addListener()
+```js
+browser.runtime.onMessageExternal.addListener()
 browser.runtime.onMessageExternal.removeListener(listener)
 browser.runtime.onMessageExternal.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions:</p>
+Les événements ont trois fonctions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifie si un <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, <code>false</code> sinon.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifie si un `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, `false` sinon.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>function</code></dt>
- <dd>
- <p>Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :</p>
+- `function`
 
- <dl>
-  <dt><code>message</code></dt>
-  <dd><code>object</code>. Le message lui-même. C'est un objet JSON-ifiable.</dd>
- </dl>
+  - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :
 
- <dl>
-  <dt><code>sender</code></dt>
-  <dd>Un objet {{WebExtAPIRef('runtime.MessageSender')}} représentant l'expéditeur du message.</dd>
- </dl>
+    - `message`
+      - : `object`. Le message lui-même. C'est un objet JSON-ifiable.
 
- <dl>
-  <dt><code>sendResponse</code></dt>
-  <dd>
-  <p>Une fonction à appeler, au plus une fois, pour envoyer une réponse au message. La fonction prend un seul argument, qui peut être n'importe quel objet JSON-ifiable. Cet argument est renvoyé à l'expéditeur du message.</p>
+    <!---->
 
-  <p>Si vous avez plus d'un écouteur <code>onMessageExternal</code> dans le même document, un seul peut envoyer une réponse.</p>
+    - `sender`
+      - : Un objet {{WebExtAPIRef('runtime.MessageSender')}} représentant l'expéditeur du message.
 
-  <p>To send a response synchronously, call <code>sendResponse</code> before the listener function returns. To send a response asynchronously:</p>
+    <!---->
 
-  <ul>
-   <li>Soit garder une référence à l'argumen <code>sendResponse</code> et retourne <code>true</code> à partir de la fonction d'écouteur. Vous pourrez ensuite appeler <code>sendResponse</code> après le retour de la fonction d'écouteur..</li>
-   <li>ou retourne une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> de la fonction d'écouteur et résoudre la promesse lorsque la réponse est prête.</li>
-  </ul>
-  </dd>
- </dl>
- </dd>
-</dl>
+    - `sendResponse`
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+      - : Une fonction à appeler, au plus une fois, pour envoyer une réponse au message. La fonction prend un seul argument, qui peut être n'importe quel objet JSON-ifiable. Cet argument est renvoyé à l'expéditeur du message.
 
-<p>{{Compat("webextensions.api.runtime.onMessageExternal")}}</p>
+        Si vous avez plus d'un écouteur `onMessageExternal` dans le même document, un seul peut envoyer une réponse.
 
-<h2 id="Exemples">Exemples</h2>
+        To send a response synchronously, call `sendResponse` before the listener function returns. To send a response asynchronously:
 
-<p>Dans cet exemple, l'extension "blue@mozilla.org" envoie un message  à l'extension "red@mozilla.org":</p>
+        - Soit garder une référence à l'argumen `sendResponse` et retourne `true` à partir de la fonction d'écouteur. Vous pourrez ensuite appeler `sendResponse` après le retour de la fonction d'écouteur..
+        - ou retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) de la fonction d'écouteur et résoudre la promesse lorsque la réponse est prête.
 
-<pre class="brush: js">// sender: browser.runtime.id == "blue@mozilla.org"
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.runtime.onMessageExternal")}}
+
+## Exemples
+
+Dans cet exemple, l'extension "blue\@mozilla.org" envoie un message  à l'extension "red\@mozilla.org":
+
+```js
+// sender: browser.runtime.id == "blue@mozilla.org"
 
 // Send a message to the extension whose ID is "red@mozilla.org"
 browser.runtime.sendMessage(
     "red@mozilla.org",
     "my message"
-  );</pre>
+  );
+```
 
-<pre class="brush: js">// recipient: browser.runtime.id == "red@mozilla.org"
+```js
+// recipient: browser.runtime.id == "red@mozilla.org"
 
 function handleMessage(message, sender) {
   // check that the message is from "blue@mozilla.org"
@@ -112,19 +98,18 @@ function handleMessage(message, sender) {
   }
 }
 
-browser.runtime.onMessageExternal.addListener(handleMessage);</pre>
+browser.runtime.onMessageExternal.addListener(handleMessage);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -151,5 +136,4 @@ browser.runtime.onMessageExternal.addListener(handleMessage);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

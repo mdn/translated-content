@@ -11,80 +11,64 @@ tags:
   - onTitleChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Lancé lorsque le titre d'une page visitée par l'utilisateur est enregistré.Pour écouter les visites d'une page, vous pouvez utiliser {{WebExtAPIRef("history.onVisited")}}. Cependant, le {{WebExtAPIRef("history.HistoryItem")}} que cet événement passe à son écouteur n'inclut pas le titre de la page, car le titre de la page n'est généralement pas connu au moment où `history.onVisited` est envoyé.Au lieu de cela, {{WebExtAPIRef("history.HistoryItem")}} stocké est mis à jour avec le titre de la page après le chargement de la page, une fois le titre connu. L'événement history.onTitleChanged est déclenché à ce moment-là. Donc, si vous avez besoin de connaître les titres des pages telles qu'elles sont visitées, écoutez `history.onTitleChanged`.
 
-<div>Lancé lorsque le titre d'une page visitée par l'utilisateur est enregistré.</div>
+## Syntaxe
 
-<div></div>
-
-<div>Pour écouter les visites d'une page, vous pouvez utiliser {{WebExtAPIRef("history.onVisited")}}. Cependant, le {{WebExtAPIRef("history.HistoryItem")}} que cet événement passe à son écouteur n'inclut pas le titre de la page, car le titre de la page n'est généralement pas connu au moment où <code>history.onVisited</code> est envoyé.</div>
-
-<div></div>
-
-<div>Au lieu de cela, {{WebExtAPIRef("history.HistoryItem")}} stocké est mis à jour avec le titre de la page après le chargement de la page, une fois le titre connu. L'événement history.onTitleChanged est déclenché à ce moment-là. Donc, si vous avez besoin de connaître les titres des pages telles qu'elles sont visitées, écoutez <code>history.onTitleChanged</code>.</div>
-
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: js">browser.history.onTitleChanged.addListener(listener)
+```js
+browser.history.onTitleChanged.addListener(listener)
 browser.history.onTitleChanged.removeListener(listener)
 browser.history.onTitleChanged.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> argument est l'écouteur à supprimer</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(listener)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` argument est l'écouteur à supprimer
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed an object with the following properties:</p>
+- `callback`
 
- <dl>
-  <dt><code>url</code></dt>
-  <dd><code>String</code>. URL of the page visited.</dd>
-  <dt><code>title</code></dt>
-  <dd><code>String</code>. Title of the page visited.</dd>
- </dl>
- </dd>
-</dl>
+  - : Function that will be called when this event occurs. The function will be passed an object with the following properties:
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `url`
+      - : `String`. URL of the page visited.
+    - `title`
+      - : `String`. Title of the page visited.
 
-<p>{{Compat("webextensions.api.history.onTitleChanged")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.history.onTitleChanged")}}
 
-<p>Écoutez les événements de changement de titre et consignez l'URL et le titre des pages visitées</p>
+## Exemples
 
-<pre class="brush: js">function handleTitleChanged(item) {
+Écoutez les événements de changement de titre et consignez l'URL et le titre des pages visitées
+
+```js
+function handleTitleChanged(item) {
   console.log(item.title);
   console.log(item.url);
 }
 
-browser.history.onTitleChanged.addListener(handleTitleChanged);</pre>
+browser.history.onTitleChanged.addListener(handleTitleChanged);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,5 +95,4 @@ browser.history.onTitleChanged.addListener(handleTitleChanged);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

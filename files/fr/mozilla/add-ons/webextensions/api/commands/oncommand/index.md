@@ -13,74 +13,67 @@ tags:
   - onCommand
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Lancer quand une commande est exécutée à l'aide de son raccourci clavier associé.L'écouteur reçoit  le nom de la commande. Cela correspond au nom donnée à la commande dans une  [entrée manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
 
-<div>Lancer quand une commande est exécutée à l'aide de son raccourci clavier associé.</div>
+## Syntaxe
 
-<div>L'écouteur reçoit  le nom de la commande. Cela correspond au nom donnée à la commande dans une  <a href="/fr/Add-ons/WebExtensions/manifest.json/commands">entrée manifest.json</a>.</div>
-
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: js">browser.commands.onCommand.addListener(listener)
+```js
+browser.commands.onCommand.addListener(listener)
 browser.commands.onCommand.removeListener(listener)
 browser.commands.onCommand.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à un événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêter d'écouter un événement. L'arguement <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement . Renvoie <code>true</code> s'il écoute, <code>false</code> sinon.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à un événement.
+- `removeListener(listener)`
+  - : Arrêter d'écouter un événement. L'arguement `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement . Renvoie `true` s'il écoute, `false` sinon.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètre">Paramètre</h3>
+### Paramètre
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsqu'un utilisateur entre dans le raccourci de la commande. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>name</code></dt>
-  <dd><code>string</code>. Nom de la commande. Cela correspond au nom donné à la commande dans son <a href="/fr/Add-ons/WebExtensions/manifest.json/commands">entrée manifest.json</a>.</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui sera appelée lorsqu'un utilisateur entre dans le raccourci de la commande. La fonction recevra les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `name`
+      - : `string`. Nom de la commande. Cela correspond au nom donné à la commande dans son [entrée manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
 
-<p>{{Compat("webextensions.api.commands.onCommand")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.commands.onCommand")}}
 
-<div>Etant donnée une entrée manifest.json comme ceci :</div>
+## Exemples
 
-<pre class="brush: json">"commands": {
+Etant donnée une entrée manifest.json comme ceci :
+
+```json
+"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y"
     },
     "description": "Send a 'toggle-feature' event"
   }
-}</pre>
+}
+```
 
-<div>Vous pouvez écouter cette commande particulière comme ceci :</div>
+Vous pouvez écouter cette commande particulière comme ceci :
 
-<pre class="brush: js">browser.commands.onCommand.addListener(function(command) {
+```js
+browser.commands.onCommand.addListener(function(command) {
   if (command == "toggle-feature") {
     console.log("toggling the feature!");
   }
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/commands"><code>chrome.commands</code></a>.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/extensions/commands).

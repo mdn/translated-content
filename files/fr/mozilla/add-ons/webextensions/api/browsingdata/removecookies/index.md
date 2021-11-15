@@ -12,46 +12,44 @@ tags:
   - removeCookies
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Efface les cookies du navigateur</p>
+Efface les cookies du navigateur
 
-<p>Vous pouvez utiliser le paramètre <code>removalOptions</code>, qui est un objet  {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :</p>
+Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet  {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
 
-<ul>
- <li>Efface seulement les cookies créés après un temps donné</li>
- <li>Contrôlez si les cookies doivent être supprimés uniquement à partir des pages Webnormales ou si vous souhaitez supprimer les cookies des applications et des extensions hébergées.</li>
-</ul>
+- Efface seulement les cookies créés après un temps donné
+- Contrôlez si les cookies doivent être supprimés uniquement à partir des pages Webnormales ou si vous souhaitez supprimer les cookies des applications et des extensions hébergées.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var removing = browser.browsingData.removeCookies(
+```js
+var removing = browser.browsingData.removeCookies(
   removalOptions            // RemovalOptions object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>removalOptions</code></dt>
- <dd><code>object</code>. Un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, qui peut être utilisé pour effacer uniquement les cookies créés après un délais donné, et pour supprimer les cookies uniquement des pages Web normales ou pour supprimer les cookies des applications et extensions hébergées.</dd>
-</dl>
+- `removalOptions`
+  - : `object`. Un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, qui peut être utilisé pour effacer uniquement les cookies créés après un délais donné, et pour supprimer les cookies uniquement des pages Web normales ou pour supprimer les cookies des applications et extensions hébergées.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browsingData.removeCookies")}}</p>
+{{Compat("webextensions.api.browsingData.removeCookies")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Supprime les cookies créés la semaine dernière :</p>
+Supprime les cookies créés la semaine dernière :
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("removed");
 }
 
@@ -67,17 +65,19 @@ var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
 
 browser.browsingData.removeCookies(
   {since: oneWeekAgo}).
-then(onRemoved, onError);</pre>
+then(onRemoved, onError);
+```
 
-<p>Supprime tous les cookies :</p>
+Supprime tous les cookies :
 
-<div class="warning">
-<p><strong>Attention :</strong></p>
-<p>L'utilisation de l'API pour supprimer tous les cookies effacera simultanément tous les objets de stockage locaux (y compris ceux des autres extensions).</p>
-<p>Si vous souhaitez simplement effacer tous les cookies sans perturber les installations de stockage locales, utilisez <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies">browser.cookies</a> pour faire une boucle et supprimer le contenu de tous les magasins de cookies.</p>
-</div>
+> **Attention :**
+>
+> L'utilisation de l'API pour supprimer tous les cookies effacera simultanément tous les objets de stockage locaux (y compris ceux des autres extensions).
+>
+> Si vous souhaitez simplement effacer tous les cookies sans perturber les installations de stockage locales, utilisez [browser.cookies](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies) pour faire une boucle et supprimer le contenu de tous les magasins de cookies.
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("removed");
 }
 
@@ -86,19 +86,18 @@ function onError(error) {
 }
 
 browser.browsingData.removeCookies({}).
-then(onRemoved, onError);</pre>
+then(onRemoved, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -125,5 +124,4 @@ then(onRemoved, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

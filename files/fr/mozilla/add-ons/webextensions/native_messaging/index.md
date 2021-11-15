@@ -5,41 +5,38 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Native messaging permet à une extension d'échanger des messages avec une application native installée sur l'ordinateur de l'utilisateur. Ceci permet que des applications natives puissent fournir un service à des extensions sans avoir besoin d'être atteignables via internet. Un exemple typique est le gestionnaire de mots de passe : l'application native s'occupe du stockage et du chiffrement des mots de passe et communique avec l'extension afin de remplir les formulaires web. Native messaging permet aussi aux extensions d'accéder à des ressources qui ne sont pas accessibles via les API WebExtension, par exemple le matériel hardware particulier.</p>
+Native messaging permet à une extension d'échanger des messages avec une application native installée sur l'ordinateur de l'utilisateur. Ceci permet que des applications natives puissent fournir un service à des extensions sans avoir besoin d'être atteignables via internet. Un exemple typique est le gestionnaire de mots de passe : l'application native s'occupe du stockage et du chiffrement des mots de passe et communique avec l'extension afin de remplir les formulaires web. Native messaging permet aussi aux extensions d'accéder à des ressources qui ne sont pas accessibles via les API WebExtension, par exemple le matériel hardware particulier.
 
-<p>L'application native n'est pas installée ou gérée par le navigateur : elle est installée à l'aide du système d'installation du système d'exploitation sous‐jacent. En plus de l'application native elle‐même, vous devrez fournir un fichier JSON appelé « manifest hôte » (host manifest) ou « manifest d'application » (app manifest) et l'installer dans un emplacement défini sur l'ordinateur de l'utilisateur. Le fichier manifest de l'application décrit comment le navigateur peut se connecter à l'application native.</p>
+L'application native n'est pas installée ou gérée par le navigateur : elle est installée à l'aide du système d'installation du système d'exploitation sous‐jacent. En plus de l'application native elle‐même, vous devrez fournir un fichier JSON appelé « manifest hôte » (host manifest) ou « manifest d'application » (app manifest) et l'installer dans un emplacement défini sur l'ordinateur de l'utilisateur. Le fichier manifest de l'application décrit comment le navigateur peut se connecter à l'application native.
 
-<p>L'extension doit demander l'<a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">autorisation</a> « nativeMessaging » dans son fichier manifest.json. À l'inverse, l'application native doit accorder l'autorisation à l'extension en incluant son ID dans le champ « allowed_extensions » (extensions autorisées) du manifest de l'application.</p>
+L'extension doit demander l'[autorisation](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) « nativeMessaging » dans son fichier manifest.json. À l'inverse, l'application native doit accorder l'autorisation à l'extension en incluant son ID dans le champ « allowed_extensions » (extensions autorisées) du manifest de l'application.
 
-<p>Par la suite, l'extension pourra échanger des messages en JSON avec l'application native en utilisant une série de fonctions de l'API {{WebExtAPIRef("runtime")}}. Du côté de l'application native, les messages seront reçus en utilisant l'entrée standard (stdin, standard input) et envoyés en utilisant la sortie standard (stdout, standard output).</p>
+Par la suite, l'extension pourra échanger des messages en JSON avec l'application native en utilisant une série de fonctions de l'API {{WebExtAPIRef("runtime")}}. Du côté de l'application native, les messages seront reçus en utilisant l'entrée standard (stdin, standard input) et envoyés en utilisant la sortie standard (stdout, standard output).
 
-<p><img alt="" src="native-messaging.png"></p>
+![](native-messaging.png)
 
-<p>Le support de native messaging dans les extensions est généralement compatible avec Chrome, avec deux grandes différences :</p>
+Le support de native messaging dans les extensions est généralement compatible avec Chrome, avec deux grandes différences :
 
-<ul>
- <li>La liste <code>allowed_extensions</code> du manifest de l'application est un tableau d'ID d'applications, tandis que Chrome liste <code>allowed_origins</code>, sous la forme d'un tableau d'URL "chrome-extension".</li>
- <li>Le manifeste de l'application est stocké dans un emplacement différent <a href="https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location">comparé à Chrome</a>.</li>
-</ul>
+- La liste `allowed_extensions` du manifest de l'application est un tableau d'ID d'applications, tandis que Chrome liste `allowed_origins`, sous la forme d'un tableau d'URL "chrome-extension".
+- Le manifeste de l'application est stocké dans un emplacement différent [comparé à Chrome](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location).
 
-<p>Il y a un exemple complet (en anglais) dans le répertoire « <a href="https://github.com/mdn/webextensions-examples/tree/master/native-messaging">native‐messaging</a> » du dépôt « webextensions‐examples » sur GitHub. La plus grande partie du code de cet article est repris de cet exemple.</p>
+Il y a un exemple complet (en anglais) dans le répertoire « [native‐messaging](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) » du dépôt « webextensions‐examples » sur GitHub. La plus grande partie du code de cet article est repris de cet exemple.
 
-<h2 id="Mise_en_œuvre">Mise en œuvre</h2>
+## Mise en œuvre
 
-<h3 id="Le_manifest_de_l'extension_Extension_manifest">Le manifest de l'extension (Extension manifest)</h3>
+### Le manifest de l'extension (Extension manifest)
 
-<p>Si vous souhaitez que votre extension puisse communiquer avec une application native, alors :</p>
+Si vous souhaitez que votre extension puisse communiquer avec une application native, alors :
 
-<ul>
- <li>Vous devez ajouter la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> dans son fichier <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>.</li>
- <li>Vous devriez probablement spécifier explicitement l'id de votre add‐on, en utilisant la clé de manifest des <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a> ( Parce que le manifest de l'application identifiera le jeu d'extensions qui sont autorisées à se connecter à celle-ci via la liste de leur ID).</li>
-</ul>
+- Vous devez ajouter la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) dans son fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+- Vous devriez probablement spécifier explicitement l'id de votre add‐on, en utilisant la clé de manifest des [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) ( Parce que le manifest de l'application identifiera le jeu d'extensions qui sont autorisées à se connecter à celle-ci via la liste de leur ID).
 
-<p>Voici un exemple de fichier « manifest.json » :</p>
+Voici un exemple de fichier « manifest.json » :
 
-<pre class="brush: json">{
+```json
+{
 
   "description": "Native messaging example extension",
   "manifest_version": 2,
@@ -66,84 +63,83 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 
   "permissions": ["nativeMessaging"]
 
-}</pre>
+}
+```
 
-<h3 id="Le_manifest_de_l'application_App_manifest">Le manifest de l'application (App manifest)</h3>
+### Le manifest de l'application (App manifest)
 
-<p>Le manifest de l'application décrit au navigateur la manière avec laquelle il peut se connecter à l'application native.</p>
+Le manifest de l'application décrit au navigateur la manière avec laquelle il peut se connecter à l'application native.
 
-<p>Le fichier manifest de l'application doit être installé avec l'application native. C'est-à-dire que le navigateur lit et valide les fichiers de manifeste des applications mais ne les installe ni ne les gère. Ainsi, le modèle de sécurité pour savoir quand et comment ces fichiers sont installés et mis à jour ressemble beaucoup plus à celui des applications natives que celui des extensions utilisant les API WebExtension.</p>
+Le fichier manifest de l'application doit être installé avec l'application native. C'est-à-dire que le navigateur lit et valide les fichiers de manifeste des applications mais ne les installe ni ne les gère. Ainsi, le modèle de sécurité pour savoir quand et comment ces fichiers sont installés et mis à jour ressemble beaucoup plus à celui des applications natives que celui des extensions utilisant les API WebExtension.
 
-<p>Pour plus de détails sur la syntaxe et l'emplacement du manifeste des applications natives, voir <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests">manifest natifs</a>.</p>
+Pour plus de détails sur la syntaxe et l'emplacement du manifeste des applications natives, voir [manifest natifs](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
 
-<p>Par exemple, voici un manifeste pour l'application native "ping_pong" :</p>
+Par exemple, voici un manifeste pour l'application native "ping_pong" :
 
-<pre class="brush: json">{
+```json
+{
   "name": "ping_pong",
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
   "allowed_extensions": [ "ping_pong@example.org" ]
-}</pre>
+}
+```
 
-<p>Ceci autorise l'application dont l'ID est « ping_pong@example.org » à se connecter, en passant le nom « ping_pong » comme paramètre à la fonction de l'API {{WebExtAPIRef("runtime")}} concernée. L'application, elle‐même se trouve dans le fichier « /path/to/native‐messaging/app/ping_pong.py ».</p>
+Ceci autorise l'application dont l'ID est « ping_pong\@example.org » à se connecter, en passant le nom « ping_pong » comme paramètre à la fonction de l'API {{WebExtAPIRef("runtime")}} concernée. L'application, elle‐même se trouve dans le fichier « /path/to/native‐messaging/app/ping_pong.py ».
 
-<div class="note">
-<p><strong>Note :</strong> Pour Windows dans l'exemple ci‐dessus, l'application native est un script Python. Il peut être compliqué d'amener Windows à faire fonctionner correctement des scripts Python, une méthode alternative est de fournir un fichier .bat, et de l'indiquer dans le manifest :</p>
+> **Note :** Pour Windows dans l'exemple ci‐dessus, l'application native est un script Python. Il peut être compliqué d'amener Windows à faire fonctionner correctement des scripts Python, une méthode alternative est de fournir un fichier .bat, et de l'indiquer dans le manifest :
+>
+> ```json
+> {
+>   "name": "ping_pong",
+>   "description": "Example host for native messaging",
+>   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
+>   "type": "stdio",
+>   "allowed_extensions": [ "ping_pong@example.org" ]
+> }
+> ```
+>
+> Le fichier batch invoquera alors le script Python :
+>
+> ```bash
+> @echo off
+>
+> python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
+> ```
 
-<pre class="brush: json">{
-  "name": "ping_pong",
-  "description": "Example host for native messaging",
-  "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
-  "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
-}</pre>
+## Opérations d'échange des messages
 
-<p>Le fichier batch invoquera alors le script Python :</p>
+Ayant appliqué la configuration de ci‐dessus, une extension peut échanger des messages JSON avec une application native.
 
-<pre class="brush: bash">@echo off
+### Du côté de l'extension
 
-python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</pre>
-</div>
+La messagerie native ne peut pas être utilisée directement dans les scripts de contenu ; vous devrez le [faire indirect via des scripts d'arrière plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
 
-<h2 id="Opérations_d'échange_des_messages">Opérations d'échange des messages</h2>
+Il y a deux modèles à utiliser ici : la messagerie basée sur la connexion et la messagerie sans connexion.
 
-<p>Ayant appliqué la configuration de ci‐dessus, une extension peut échanger des messages JSON avec une application native.</p>
+#### Messagerie basée sur une connexion
 
-<h3 id="Du_côté_de_l'extension">Du côté de l'extension</h3>
+Avec cette manière de faire, vous appelez la fonction {{WebExtAPIRef("runtime.connectNative()")}}, en lui passant comme paramètre le nom de l'application (la valeur de la propriété "name" du manifest de l'application). Ceci lance l'application si elle n'est pas encore démarrée et renverra un objet {{WebExtAPIRef("runtime.Port")}} à l'extension.
 
-<p>La messagerie native ne peut pas être utilisée directement dans les scripts de contenu ; vous devrez le <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts">faire indirect via des scripts d'arrière plan</a>.</p>
+L'application native passe deux arguments lorsqu'elle démarre :
 
-<p>Il y a deux modèles à utiliser ici : la messagerie basée sur la connexion et la messagerie sans connexion.</p>
+- le chemin complet du manifest de l'application
+- (nouveau dans Firefox 55) l'ID (tel qu'indiqué dans la clé du manifest.json de [browser_specific_settings](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)) of the add-on that started it.
 
-<h4 id="Messagerie_basée_sur_une_connexion">Messagerie basée sur une connexion</h4>
+> **Note :** Chrome gère différemment les arguments passés :
+>
+> - Sous Linux et Mac, Chrome passe un argument, l'origine de l'extension qui l'a lancé sous la forme : `chrome-extension://[extensionID]`. Ceci permet à l'application d'identifier l'extension.
+> - Sous Windows, Chrome passe deux arguments : le premier est l'origine de l'extension, et le second est une poignée à la fenêtre native Chrome qui a lancé l'application.
 
-<p>Avec cette manière de faire, vous appelez la fonction {{WebExtAPIRef("runtime.connectNative()")}}, en lui passant comme paramètre le nom de l'application (la valeur de la propriété "name" du manifest de l'application). Ceci lance l'application si elle n'est pas encore démarrée et renverra un objet {{WebExtAPIRef("runtime.Port")}} à l'extension.</p>
+L'aplication continue de fonctionner jusqu'à ce que l'extension invoque `Port.disconnect()` ou jusqu'à ce que la page connectée soit fermée.
 
-<p>L'application native passe deux arguments lorsqu'elle démarre :</p>
+Pour envoyer des messages en utilisant `Port`, utilisez sa fonction `postMessage()`, en passant le message JSON à envoyer. Pour écouter les messages en utilisant `Port`, ajouter un écouteur (_listener_) en utilisant sa fonction `onMessage.addListener()`.
 
-<ul>
- <li>le chemin complet du manifest de l'application</li>
- <li>(nouveau dans Firefox 55) l'ID (tel qu'indiqué dans la clé du manifest.json de <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a>) of the add-on that started it.</li>
-</ul>
+Voici un exemple de script « _background_ » qui établit une connection avec l'application « ping_pong », qui écoute à l'attente de messages de celle‐ci et qui lui envoie un message « ping » à chaque fois que l'utilisateur clique sur l'action du navigateur (_browser action_) :
 
-<div class="note">
-  
-<p><strong>Note :</strong> Chrome gère différemment les arguments passés :</p>
-
-<ul>
- <li>Sous Linux et Mac, Chrome passe un argument, l'origine de l'extension qui l'a lancé sous la forme : <code>chrome-extension://[extensionID]</code>. Ceci permet à l'application d'identifier l'extension.</li>
- <li>Sous Windows, Chrome passe deux arguments : le premier est l'origine de l'extension, et le second est une poignée à la fenêtre native Chrome qui a lancé l'application.</li>
-</ul>
-</div>
-
-<p>L'aplication continue de fonctionner jusqu'à ce que l'extension invoque <code>Port.disconnect()</code> ou jusqu'à ce que la page connectée soit fermée.</p>
-
-<p>Pour envoyer des messages en utilisant <code>Port</code>, utilisez sa fonction <code>postMessage()</code>, en passant le message JSON à envoyer. Pour écouter les messages en utilisant <code>Port</code>, ajouter un écouteur (<em>listener</em>) en utilisant sa fonction <code>onMessage.addListener()</code>.</p>
-
-<p>Voici un exemple de script « <em>background</em> » qui établit une connection avec l'application « ping_pong », qui écoute à l'attente de messages de celle‐ci et qui lui envoie un message « ping » à chaque fois que l'utilisateur clique sur l'action du navigateur (<em>browser action</em>) :</p>
-
-<pre class="brush: js">/*
+```js
+/*
 On startup, connect to the "ping_pong" app.
 */
 var port = browser.runtime.connectNative("ping_pong");
@@ -151,40 +147,38 @@ var port = browser.runtime.connectNative("ping_pong");
 /*
 Listen for messages from the app.
 */
-port.onMessage.addListener((response) =&gt; {
+port.onMessage.addListener((response) => {
   console.log("Received: " + response);
 });
 
 /*
 On a click on the browser action, send the app a message.
 */
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
   port.postMessage("ping");
-});</pre>
+});
+```
 
-<h4 id="Messagerie_sans_connexion">Messagerie sans connexion</h4>
+#### Messagerie sans connexion
 
-<p>Avec cette manière de faire, vous invoquez la fonction {{WebExtAPIRef("runtime.sendNativeMessage()")}}, en lui passant comme arguments :</p>
+Avec cette manière de faire, vous invoquez la fonction {{WebExtAPIRef("runtime.sendNativeMessage()")}}, en lui passant comme arguments :
 
-<ul>
- <li>le nom de l'application,</li>
- <li>le message JSON à envoyer,</li>
- <li>et optionnellement un callback.</li>
-</ul>
+- le nom de l'application,
+- le message JSON à envoyer,
+- et optionnellement un callback.
 
-<p>Une nouvelle instance de l'application sera créée pour chaque message. L'application native passe deux arguments lorsqu'elle démarre :</p>
+Une nouvelle instance de l'application sera créée pour chaque message. L'application native passe deux arguments lorsqu'elle démarre :
 
-<ul>
- <li>le chemin complet du manifest de l'application</li>
- <li>(nouveau dans Firefox 55), l'ID (tel qu'indiqué dans la clé du manifest.json de <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a>) de l'add‐on qui l'a démarré.</li>
-</ul>
+- le chemin complet du manifest de l'application
+- (nouveau dans Firefox 55), l'ID (tel qu'indiqué dans la clé du manifest.json de [browser_specific_settings](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)) de l'add‐on qui l'a démarré.
 
-<p>Le premier message envoyé par l'application est traité comme une réponse à l'invocation de la fonction <code>sendNativeMessage()</code>, et sera passé dans le callback.</p>
+Le premier message envoyé par l'application est traité comme une réponse à l'invocation de la fonction `sendNativeMessage()`, et sera passé dans le callback.
 
-<p>Voici l'exemple précédent réécrit en utilisant <code>runtime.sendNativeMessage()</code>:</p>
+Voici l'exemple précédent réécrit en utilisant `runtime.sendNativeMessage()`:
 
-<pre class="brush: js">function onResponse(response) {
+```js
+function onResponse(response) {
   console.log("Received " + response);
 }
 
@@ -195,26 +189,27 @@ function onError(error) {
 /*
 On a click on the browser action, send the app a message.
 */
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
   var sending = browser.runtime.sendNativeMessage(
     "ping_pong",
     "ping");
   sending.then(onResponse, onError);
 });
-</pre>
+```
 
-<h3 id="Du_côté_de_l'application">Du côté de l'application</h3>
+### Du côté de l'application
 
-<p>Du côté de l'application, vous utilisez l'entrée standard (standard input) pour recevoir les messages, et la sortie standard (standard output) pour les envoyer.</p>
+Du côté de l'application, vous utilisez l'entrée standard (standard input) pour recevoir les messages, et la sortie standard (standard output) pour les envoyer.
 
-<p>Chaque message est sérialisé sous forme de JSON, est encodé en UTF‐8 et est précédé d'une valeur 32 bits qui contient la longueur du message dans l'ordre des octets natifs.</p>
+Chaque message est sérialisé sous forme de JSON, est encodé en UTF‐8 et est précédé d'une valeur 32 bits qui contient la longueur du message dans l'ordre des octets natifs.
 
-<p>La taille maximum d'un seul message envoyé par l'application est de 1MB. La taille maximum d'un message envoyé vers l'application est de 4GB.</p>
+La taille maximum d'un seul message envoyé par l'application est de 1MB. La taille maximum d'un message envoyé vers l'application est de 4GB.
 
-<p>Voici un exemple écrit en Python. Il écoute les messages de l'extension. Notez que le fichier doit être exécutable sous Linux. Si le message est "ping", il répond par un message "pong". C'est la version Python 2 :</p>
+Voici un exemple écrit en Python. Il écoute les messages de l'extension. Notez que le fichier doit être exécutable sous Linux. Si le message est "ping", il répond par un message "pong". C'est la version Python 2 :
 
-<pre class="brush: python">#!/usr/bin/python -u
+```python
+#!/usr/bin/python -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
@@ -252,11 +247,13 @@ def send_message(encoded_message):
 while True:
     message = get_message()
     if message == "ping":
-        send_message(encode_message("pong"))</pre>
+        send_message(encode_message("pong"))
+```
 
-<p>En Python 3, les données binaires reçues doivent être décodées en une chaîne. Le contenu à renvoyer à l'addon doit être encodé en données binaires à l'aide d'une structure :</p>
+En Python 3, les données binaires reçues doivent être décodées en une chaîne. Le contenu à renvoyer à l'addon doit être encodé en données binaires à l'aide d'une structure :
 
-<pre class="brush: python line-numbers">#!/usr/bin/python -u
+```python
+#!/usr/bin/python -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
@@ -296,74 +293,71 @@ def send_message(encoded_message):
 while True:
     message = get_message()
     if message == "ping":
-        send_message(encode_message("pong"))</pre>
+        send_message(encode_message("pong"))
+```
 
-<h2 id="Fermeture_de_l'application_native">Fermeture de l'application native</h2>
+## Fermeture de l'application native
 
-<p>Si vous vous êtes connecté à l'application native en utilisant <code>runtime.connectNative()</code>, alors elle continuera de fonctionner jusqu'à ce que l'extension appelle <code>Port.disconnect()</code> ou que la page qui s'y est connectée soit fermée. Si vous avez démarré l'application native en utilisant <code>runtime.sendNativeMessage()</code>, alors elle sera fermée après qu'elle aura reçu le message et envoyé une réponse.</p>
+Si vous vous êtes connecté à l'application native en utilisant `runtime.connectNative()`, alors elle continuera de fonctionner jusqu'à ce que l'extension appelle `Port.disconnect()` ou que la page qui s'y est connectée soit fermée. Si vous avez démarré l'application native en utilisant `runtime.sendNativeMessage()`, alors elle sera fermée après qu'elle aura reçu le message et envoyé une réponse.
 
-<p>Pour fermer l'application native :</p>
+Pour fermer l'application native :
 
-<ul>
- <li>Sur les système d'exploitation *.nix comme Linux ou OS X, le navigateur envoie un SIGTERM à l'application native, puis un SIGKILL après que l'application ait eût l'occasion de finir de manière normale. Ces signaux sont propagés à tout sous‐processus sauf pour ceux qui se trouvent dans de nouveaux groupes de processus.</li>
- <li>Sous windows, le navigateur met le processus de l'application native dans un <a href="https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms684161(v=vs.85).aspx">Job object</a> et tue le processus. Si l'application native lance un autre processus et désire qu'il reste ouvert après que l'application native elle même soit fermée alors l'application native doit démarrer un autre processus avec le paramètre <code><a href="https://msdn.microsoft.com/fr/library/windows/desktop/ms684863(v=vs.85).aspx">CREATE_BREAKAWAY_FROM_JOB</a></code>.</li>
-</ul>
+- Sur les système d'exploitation \*.nix comme Linux ou OS X, le navigateur envoie un SIGTERM à l'application native, puis un SIGKILL après que l'application ait eût l'occasion de finir de manière normale. Ces signaux sont propagés à tout sous‐processus sauf pour ceux qui se trouvent dans de nouveaux groupes de processus.
+- Sous windows, le navigateur met le processus de l'application native dans un [Job object](<https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms684161(v=vs.85).aspx>) et tue le processus. Si l'application native lance un autre processus et désire qu'il reste ouvert après que l'application native elle même soit fermée alors l'application native doit démarrer un autre processus avec le paramètre [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/fr/library/windows/desktop/ms684863(v=vs.85).aspx>).
 
-<h2 id="Dépannage">Dépannage</h2>
+## Dépannage
 
-<p>Si quelque chose se passe mal, vérifier dans la <a href="https://extensionworkshop.com/documentation/develop/debugging/#viewing_log_output">console du navigateur</a>. Si l'application native renvoit quelque‐chose vers stderr (strandard error), le navigateur le renverra vers la console du navigateur. Donc si vous avez réussi à lancer l'application native, vous verrez toutes les messages d'erreurs qu'elle émet.</p>
+Si quelque chose se passe mal, vérifier dans la [console du navigateur](https://extensionworkshop.com/documentation/develop/debugging/#viewing_log_output). Si l'application native renvoit quelque‐chose vers stderr (strandard error), le navigateur le renverra vers la console du navigateur. Donc si vous avez réussi à lancer l'application native, vous verrez toutes les messages d'erreurs qu'elle émet.
 
-<p>Si vous n'avez pas réussi à démarrer l'application, vous devriez voir un message d'erreur vous donnant un indice sur le problème.</p>
+Si vous n'avez pas réussi à démarrer l'application, vous devriez voir un message d'erreur vous donnant un indice sur le problème.
 
-<pre>"No such native application &lt;name&gt;"</pre>
+    "No such native application <name>"
 
-<ul>
- <li>Vérifiez que le nom passé comme argument à la fonction <code>runtime.connectNative()</code> correspond au nom dans le manifest de l'application</li>
- <li>OS X / Linux : vérifiez que le nom du fichier de manifest de l'application est &lt;name&gt;.json.</li>
- <li>Windows : vérifiez que la clé de registre est dans l'endroit correcte, et que son nom correspond au « name » dans le manifest de l'application.</li>
- <li>Windows : vérifiez que le chemin donné dans la clé de registre pointe vers le manifest de l'application.</li>
-</ul>
+- Vérifiez que le nom passé comme argument à la fonction `runtime.connectNative()` correspond au nom dans le manifest de l'application
+- OS X / Linux : vérifiez que le nom du fichier de manifest de l'application est \<name>.json.
+- Windows : vérifiez que la clé de registre est dans l'endroit correcte, et que son nom correspond au « name » dans le manifest de l'application.
+- Windows : vérifiez que le chemin donné dans la clé de registre pointe vers le manifest de l'application.
 
-<pre>"Error: Invalid application &lt;name&gt;"</pre>
+<!---->
 
-<ul>
- <li>Vérifier que le nom de l'application ne contient pas de caractères invalides.</li>
-</ul>
+    "Error: Invalid application <name>"
 
-<pre>"'python' is not recognized as an internal or external command, ..."</pre>
+- Vérifier que le nom de l'application ne contient pas de caractères invalides.
 
-<ul>
- <li>Windows : Si votre application est un script écrit en Python, vérifiez que Python est installé et que vous avez un chemin définit pour lui.</li>
-</ul>
+<!---->
 
-<pre>"File at path &lt;path&gt; does not exist, or is not executable"</pre>
+    "'python' is not recognized as an internal or external command, ..."
 
-<ul>
- <li>Si vous voyez ce message, alors le fichier de manifest de l'application a été trouvé.</li>
- <li>Vérifier que le « chemin » dans le manifest de l'application est correct.</li>
- <li>Windows : vérifiez que vous avez « échappé » les séparateurs du chemin ("c:\\path\\to\\file").</li>
- <li>Vérifiez que l'application se trouve bien à l'endroit indiqué par la propriété « path » dans le manifest de l'application.</li>
- <li>Vérifiez que l'application est exécutable.</li>
-</ul>
+- Windows : Si votre application est un script écrit en Python, vérifiez que Python est installé et que vous avez un chemin définit pour lui.
 
-<pre>"This extension does not have permission to use native application &lt;name&gt;"</pre>
+<!---->
 
-<ul>
- <li>Vérifier que le tableau « allowed_extensions » dans le manifest de l'application contient l'ID de l'add‐on.</li>
-</ul>
+    "File at path <path> does not exist, or is not executable"
 
-<pre>"TypeError: browser.runtime.connectNative is not a function"</pre>
+- Si vous voyez ce message, alors le fichier de manifest de l'application a été trouvé.
+- Vérifier que le « chemin » dans le manifest de l'application est correct.
+- Windows : vérifiez que vous avez « échappé » les séparateurs du chemin ("c:\\\path\\\to\\\file").
+- Vérifiez que l'application se trouve bien à l'endroit indiqué par la propriété « path » dans le manifest de l'application.
+- Vérifiez que l'application est exécutable.
 
-<ul>
- <li>Vérifiez que l'extension à la permission « nativeMessaging »</li>
-</ul>
+<!---->
 
-<pre>"[object Object] NativeMessaging.jsm:218"</pre>
+    "This extension does not have permission to use native application <name>"
 
-<ul>
- <li>Il y a eu un problème lors du démarrage de l'application.</li>
-</ul>
+- Vérifier que le tableau « allowed_extensions » dans le manifest de l'application contient l'ID de l'add‐on.
 
-<h2 id="chrome_incompatibilities">Incompatibilités avec Chrome</h2>
+<!---->
 
-<p>Il existe un certain nombre de différences entre les navigateurs qui affectent la messagerie native dans les extensions web, notamment les arguments transmis à l'app native, l'emplacement du fichier manifeste, etc. Ces différences sont abordées dans <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#native_messaging">Incompatibilités Chrome > Messagerie native</a>.</p>
+    "TypeError: browser.runtime.connectNative is not a function"
+
+- Vérifiez que l'extension à la permission « nativeMessaging »
+
+<!---->
+
+    "[object Object] NativeMessaging.jsm:218"
+
+- Il y a eu un problème lors du démarrage de l'application.
+
+## Incompatibilités avec Chrome
+
+Il existe un certain nombre de différences entre les navigateurs qui affectent la messagerie native dans les extensions web, notamment les arguments transmis à l'app native, l'emplacement du fichier manifeste, etc. Ces différences sont abordées dans [Incompatibilités Chrome > Messagerie native](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#native_messaging).

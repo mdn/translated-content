@@ -13,45 +13,40 @@ tags:
   - setShelfEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/setShelfEnabled
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p>La fonction  <code><strong>setShelfEnabled</strong></code><strong><code>()</code></strong> de l'API {{WebExtAPIRef("downloads")}} active ou désactive l'étagère grise située en bas de chaque fenêtre associée au profil de navigateur actuel. L'étagère sera désactivée si au moins une extension l'a désactivée.</p>
+La fonction  **`setShelfEnabled`\*\***`()`\*\* de l'API {{WebExtAPIRef("downloads")}} active ou désactive l'étagère grise située en bas de chaque fenêtre associée au profil de navigateur actuel. L'étagère sera désactivée si au moins une extension l'a désactivée.
 
-<p>Si vous essayez d'activer l'étagère lorsqu'au moins une autre extension l'a déjà désactivé, l'appel échouera et {{WebExtAPIRef("runtime.lastError")}} sera défini avec un message d'erreur approprié.</p>
+Si vous essayez d'activer l'étagère lorsqu'au moins une autre extension l'a déjà désactivé, l'appel échouera et {{WebExtAPIRef("runtime.lastError")}} sera défini avec un message d'erreur approprié.
 
-<div class="note">
-<p><strong>Note :</strong> Pour utiliser cette fonction dans votre extension, vous devez demander la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission manifest</a>, <code>"downloads.shelf"</code>, ainsi que la permission <code>"downloads"</code>.</p>
-</div>
+> **Note :** Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), `"downloads.shelf"`, ainsi que la permission `"downloads"`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">chrome.downloads.setShelfEnabled(enabled);
-</pre>
+```js
+chrome.downloads.setShelfEnabled(enabled);
+```
 
-<p>Cette API est également disponible en tant que  <code>browser.downloads.setShelfEnabled()</code>.</p>
+Cette API est également disponible en tant que  `browser.downloads.setShelfEnabled()`.
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>enabled</code></dt>
- <dd>Un <code>boolean</code> l'état que vous souhaitez définir <code>setShelfEnabled()</code> à — <code>true</code> pour activer et <code>false</code> pour désactiver.</dd>
-</dl>
+- `enabled`
+  - : Un `boolean` l'état que vous souhaitez définir `setShelfEnabled()` à — `true` pour activer et `false` pour désactiver.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.downloads.setShelfEnabled")}}</p>
+{{Compat("webextensions.api.downloads.setShelfEnabled")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -78,5 +73,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/setShelfEnabled
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

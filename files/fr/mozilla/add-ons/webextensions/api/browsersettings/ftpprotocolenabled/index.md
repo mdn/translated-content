@@ -13,21 +13,22 @@ tags:
   - ftpProtocolEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui détermine si le protocole FTP est activé dans le navigateur.</p>
+Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui détermine si le protocole FTP est activé dans le navigateur.
 
-<p>La valeur sous-jaccente est un booléen.</p>
+La valeur sous-jaccente est un booléen.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browserSettings.ftpProtocolEnabled")}}</p>
+{{Compat("webextensions.api.browserSettings.ftpProtocolEnabled")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Changer le réglage:</p>
+Changer le réglage:
 
-<pre class="brush: js">function toggleAllowFtp() {
+```js
+function toggleAllowFtp() {
 
   function toggle(current) {
     console.log(`Valeur actuelle: ${current.value}`);
@@ -37,9 +38,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEna
   browser.browserSettings.ftpProtocolEnabled.get({}).then(toggle);
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   toggleAllowFtp();
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

@@ -13,46 +13,34 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Informations supplémentaires sur une transition.Notez que beaucoup de valeurs ne sont actuellement pas supportées dans Firefox : voir la [table de compatibilité](/fr/Add-ons/WebExtensions/API/WebNavigation/TransitionQualifier#Browser_compatibility) pour plus de détails.
 
-<div>Informations supplémentaires sur une transition.</div>
+## Type
 
-<div></div>
+Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
-<div>Notez que beaucoup de valeurs ne sont actuellement pas supportées dans Firefox : voir la <a href="/fr/Add-ons/WebExtensions/API/WebNavigation/TransitionQualifier#Browser_compatibility">table de compatibilité</a> pour plus de détails.</div>
+- "client_redirect"
+  - : Redirection(s) provoquée par le JavaScript en cours d'exécution dans la page ou un pragma "actualiser" dans la balise [meta](/fr/docs/Web/HTML/Element/meta) de la page.
+- "server_redirect"
+  - : Redirection(s) provoquée par un [code status HTTP 3XX](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) envoyé par le serveur.
+- "forward_back"
+  - : L'utilisateur a utilisé le bouton avant ou arrière pour déclencher la navigation..
+- "from_address_bar"
+  - : L'utilisateur a déclenché la navigation depuis la barre d'adresse.
 
-<div></div>
+## Compatibilité du navigateur
 
-<h2 id="Type">Type</h2>
+{{Compat("webextensions.api.webNavigation.TransitionQualifier")}}
 
-<p>Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :</p>
+{{WebExtExamples}}
 
-<dl>
- <dt>"client_redirect"</dt>
- <dd>Redirection(s) provoquée par le JavaScript en cours d'exécution dans la page ou un pragma "actualiser" dans la balise <a href="/fr/docs/Web/HTML/Element/meta">meta</a> de la page.</dd>
- <dt>"server_redirect"</dt>
- <dd>Redirection(s) provoquée par un <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection">code status HTTP 3XX</a> envoyé par le serveur.</dd>
- <dt>"forward_back"</dt>
- <dd>L'utilisateur a utilisé le bouton avant ou arrière pour déclencher la navigation..</dd>
- <dt>"from_address_bar"</dt>
- <dd>L'utilisateur a déclenché la navigation depuis la barre d'adresse.</dd>
-</dl>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
-
-<p>{{Compat("webextensions.api.webNavigation.TransitionQualifier")}}</p>
-
-<p>{{WebExtExamples}}</p>
-
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webNavigation"><code>chrome.webNavigation</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -79,5 +67,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualif
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

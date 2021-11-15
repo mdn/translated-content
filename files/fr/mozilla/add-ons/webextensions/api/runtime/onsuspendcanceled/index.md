@@ -13,64 +13,59 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspendCanceled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Envoyé après {{WebExtAPIRef("runtime.onSuspend")}} pour indiquer que l'application  ne sera pas déchargée après tout.</p>
+Envoyé après {{WebExtAPIRef("runtime.onSuspend")}} pour indiquer que l'application  ne sera pas déchargée après tout.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.runtime.onSuspendCanceled.addListener(listener)
+```js
+browser.runtime.onSuspendCanceled.addListener(listener)
 browser.runtime.onSuspendCanceled.removeListener(listener)
 browser.runtime.onSuspendCanceled.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajouter un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est un écouteur à suppriimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifie si un <code>écouteur</code> est enregistré pour cet événement. Retourne <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajouter un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est un écouteur à suppriimer.
+- `hasListener(listener)`
+  - : Vérifie si un `écouteur` est enregistré pour cet événement. Retourne `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit.</p>
- </dd>
-</dl>
+- `callback`
+  - : Fonction qui sera appelée lorsque cet événement se produit.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.runtime.onSuspendCanceled")}}</p>
+{{Compat("webextensions.api.runtime.onSuspendCanceled")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Ecoutez les événements <code>SuspendCanceled</code> :</p>
+Ecoutez les événements `SuspendCanceled` :
 
-<pre class="brush: js">function handleSuspendCanceled() {
+```js
+function handleSuspendCanceled() {
   console.log("Suspend canceled");
 }
 
-browser.runtime.onSuspendCanceled.addListener(handleSuspendCanceled);</pre>
+browser.runtime.onSuspendCanceled.addListener(handleSuspendCanceled);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -97,5 +92,4 @@ browser.runtime.onSuspendCanceled.addListener(handleSuspendCanceled);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

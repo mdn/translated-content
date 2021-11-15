@@ -12,53 +12,56 @@ tags:
   - refresh
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/refresh
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Actualise un menu affiché.</p>
+Actualise un menu affiché.
 
-<p>Met à jour les éléments de menu de l'extension dans le menu affiché par le navigateur, y compris les modifications effectuées depuis l'affichage du menu. N'a aucun effet si le menu n'est pas affiché. La reconstruction d'un menu affiché est une opération coûteuse. N'utilisez cette méthode que lorsque cela est nécessaire.</p>
+Met à jour les éléments de menu de l'extension dans le menu affiché par le navigateur, y compris les modifications effectuées depuis l'affichage du menu. N'a aucun effet si le menu n'est pas affiché. La reconstruction d'un menu affiché est une opération coûteuse. N'utilisez cette méthode que lorsque cela est nécessaire.
 
-<p>Cela est généralement appelé depuis l'intérieur d'un gestionnaire d'événements {{WebExtAPIRef("menus.onShown")}} après que le gestionnaire a effectué des mises à jour dans le menu.</p>
+Cela est généralement appelé depuis l'intérieur d'un gestionnaire d'événements {{WebExtAPIRef("menus.onShown")}} après que le gestionnaire a effectué des mises à jour dans le menu.
 
-<p>Firefox rend cette fonction disponible via l'espace de noms <code>contextMenus</code> ainsi que l'espace de noms des <code>menus</code>.</p>
+Firefox rend cette fonction disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.menus.refresh()
-</pre>
+```js
+browser.menus.refresh()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui se réalise sans arguments.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se réalise sans arguments.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.menus.refresh", 10)}}</p>
+{{Compat("webextensions.api.menus.refresh", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple permet d'afficher le menu contextuel sur un lien, puis met à jour l'élément de menu <code>openLabelledId</code> menu item avec le nom d'hôte du lien :</p>
+Cet exemple permet d'afficher le menu contextuel sur un lien, puis met à jour l'élément de menu `openLabelledId` menu item avec le nom d'hôte du lien :
 
-<pre class="brush: js">function updateMenuItem(linkHostname) {
+```js
+function updateMenuItem(linkHostname) {
   browser.menus.update(openLabelledId, {
     title: `Open (${linkHostname})`
   });
   browser.menus.refresh();
 }
 
-browser.menus.onShown.addListener(info =&gt; {
+browser.menus.onShown.addListener(info => {
   if (!info.linkUrl) {
     return;
   }
   let linkElement = document.createElement("a");
   linkElement.href = info.linkUrl;
   updateMenuItem(linkElement.hostname);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

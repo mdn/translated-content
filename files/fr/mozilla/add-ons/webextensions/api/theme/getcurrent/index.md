@@ -12,39 +12,39 @@ tags:
   - getCurrent
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/getCurrent
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Retourne le theme utilisé actuellement sous la forme d'un objet {{WebExtAPIRef("theme.Theme", "Theme")}}. Les arguments disponible dans l'objet couleur sont listés dans les <a href="/fr/Add-ons/WebExtensions/manifest.json/theme#colors">propriétés de la couleur</a>.</p>
+Retourne le theme utilisé actuellement sous la forme d'un objet {{WebExtAPIRef("theme.Theme", "Theme")}}. Les arguments disponible dans l'objet couleur sont listés dans les [propriétés de la couleur](/fr/Add-ons/WebExtensions/manifest.json/theme#colors).
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie un objet <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var getting = browser.theme.getCurrent(
-  <em>windowId</em>    // integer
+```js
+var getting = browser.theme.getCurrent(
+  windowId    // integer
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>windowId</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. L'ID d'une fenêtre. Si cela est indiqué, le thème appliqué sur cette fenêtre sera retourné. Sinon le thème appliqué sur la dernière fenêtre active sera retourné.</dd>
-</dl>
+- `windowId` {{optional_inline}}
+  - : `integer`. L'ID d'une fenêtre. Si cela est indiqué, le thème appliqué sur cette fenêtre sera retourné. Sinon le thème appliqué sur la dernière fenêtre active sera retourné.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Un objet <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. L'objet Promise sera résolu avec un objet {{WebExtAPIRef("theme.Theme")}} représentant le thème appliqué à la fenêtre spécifiée. Si aucun thème provenant d'une extension a été appliqué, l'objet Promise sera résolu avec un objet vide.</p>
+Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). L'objet Promise sera résolu avec un objet {{WebExtAPIRef("theme.Theme")}} représentant le thème appliqué à la fenêtre spécifiée. Si aucun thème provenant d'une extension a été appliqué, l'objet Promise sera résolu avec un objet vide.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.theme.getCurrent", 10)}}</p>
+{{Compat("webextensions.api.theme.getCurrent", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Obtient les propriétés des couleurs <code>accentcolor</code> et <code>toolbar</code> dans le thème actuel.</p>
+Obtient les propriétés des couleurs `accentcolor` et `toolbar` dans le thème actuel.
 
-<pre class="brush: js">function getStyle(themeInfo)
+```js
+function getStyle(themeInfo)
 {
   if (themeInfo.colors)
   {
@@ -59,6 +59,7 @@ async function getCurrentThemeInfo()
   getStyle(themeInfo);
 }
 
-getCurrentThemeInfo();</pre>
+getCurrentThemeInfo();
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

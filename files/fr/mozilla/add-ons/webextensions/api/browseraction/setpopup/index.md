@@ -13,61 +13,59 @@ tags:
   - setPopup
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Définit le document HTML qui sera ouvert en tant que popup lorsque l'utilisateur clique sur l'icône de l'action du navigateur. Les onglets sans popup spécifique hériteront de la popup globale, qui par défaut est la <a href="/fr/Add-ons/WebExtensions/manifest.json/browser_action"><code>default_popup</code></a> spécifiée dans le manifest.</p>
+Définit le document HTML qui sera ouvert en tant que popup lorsque l'utilisateur clique sur l'icône de l'action du navigateur. Les onglets sans popup spécifique hériteront de la popup globale, qui par défaut est la [`default_popup`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) spécifiée dans le manifest.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.browserAction.setPopup(
+```js
+browser.browserAction.setPopup(
   details // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>.</p>
- <dl>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Définit la fenêtre contextuelle uniquement pour un onglet spécifique. La fenêtre contextuelle est réinitialisée lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Définit le popup uniquement pour la fenêtre spécifiée.</dd>
-  <dt><code>popup</code></dt>
-  <dd>
-  <p><code>string</code> ou <code>null</code>. Le fichier HTML à afficher dans un popup, spécifié comme URL.</p>
+- `details`
 
-  <p>Ceci peut pointer vers un fichier empaqueté dans l'extension (par exemple, créé à l'aide de {{WebExtAPIRef("extension.getURL")}}), ou un document distant (par exemple <code>https://example.org/</code>).</p>
+  - : `object`.
 
-  <p>Si une chaîne vide (<code>""</code>) est passée ici, le popup est désactivé, et l'extension recevra les événements {{WebExtAPIRef("browserAction.onClicked")}}.</p>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Définit la fenêtre contextuelle uniquement pour un onglet spécifique. La fenêtre contextuelle est réinitialisée lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.
+    - `windowId`{{optional_inline}}
+      - : `integer`. Définit le popup uniquement pour la fenêtre spécifiée.
+    - `popup`
 
-  <p>Si le <code>popup</code> est <code>null</code>:</p>
+      - : `string` ou `null`. Le fichier HTML à afficher dans un popup, spécifié comme URL.
 
-  <p>Si <code>tabId</code> est spécifié, supprime la fenêtre popup spécifique à l'onglet afin que l'onglet hérite de la fenêtre popup globale..</p>
+        Ceci peut pointer vers un fichier empaqueté dans l'extension (par exemple, créé à l'aide de {{WebExtAPIRef("extension.getURL")}}), ou un document distant (par exemple `https://example.org/`).
 
-  <p>Si <code>windowId</code> est spécifié, supprime le popup spécifique à la fenêtre afin que la fenêtre hérite du popup global.</p>
+        Si une chaîne vide (`""`) est passée ici, le popup est désactivé, et l'extension recevra les événements {{WebExtAPIRef("browserAction.onClicked")}}.
 
-  <p>Sinon, la fenêtre contextuelle globale revient à la valeur par défaut.</p>
-  </dd>
- </dl>
- </dd>
-</dl>
+        Si le `popup` est `null`:
 
-<ul>
- <li>Si <code>windowId</code> et <code>tabId</code> sont tous les deux fournis, la fonction échoue et le popup n'est pas défini.</li>
- <li>Si <code>windowId</code> et <code>tabId</code> sont tous les deux omis, la fenêtre contextuelle globale est définie.</li>
-</ul>
+        Si `tabId` est spécifié, supprime la fenêtre popup spécifique à l'onglet afin que l'onglet hérite de la fenêtre popup globale..
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+        Si `windowId` est spécifié, supprime le popup spécifique à la fenêtre afin que la fenêtre hérite du popup global.
 
-<p>{{Compat("webextensions.api.browserAction.setPopup",2)}}</p>
+        Sinon, la fenêtre contextuelle globale revient à la valeur par défaut.
 
-<h2 id="Exemples">Exemples</h2>
+<!---->
 
-<p>Ce code ajoute une paire d'éléments de menu contextuel que vous pouvez utiliser pour basculer entre deux fenêtres contextuelles. Notez que vous aurez besoin de la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "contextMenus" définie dans le manifest de l'extension pour créer des éléments du menu contextuel.</p>
+- Si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue et le popup n'est pas défini.
+- Si `windowId` et `tabId` sont tous les deux omis, la fenêtre contextuelle globale est définie.
 
-<pre class="brush: js">function onCreated() {
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.browserAction.setPopup",2)}}
+
+## Exemples
+
+Ce code ajoute une paire d'éléments de menu contextuel que vous pouvez utiliser pour basculer entre deux fenêtres contextuelles. Notez que vous aurez besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "contextMenus" définie dans le manifest de l'extension pour créer des éléments du menu contextuel.
+
+```js
+function onCreated() {
   if (browser.runtime.lastError) {
     console.log("error creating item:" + browser.runtime.lastError);
   } else {
@@ -97,19 +95,18 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
   } else if (info.menuItemId == "popup-2") {
     browser.browserAction.setPopup({popup: "/popup/popup2.html"})
   }
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -136,5 +133,4 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

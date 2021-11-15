@@ -12,43 +12,43 @@ tags:
   - removeDownloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Efface les données que le navigateur a enregistré pour les formulaires de remplissage automatique.</p>
+Efface les données que le navigateur a enregistré pour les formulaires de remplissage automatique.
 
-<p>Vous pouvez utiliser le paramètre <code>removalOptions</code>, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, pour :</p>
+Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, pour :
 
-<ul>
- <li>Efface uniquement les données de formulaire entrées après une heure donnée</li>
- <li>Contrôle si vous souhaitez supprimer uniquement les données saisies dans les pages Web normales ou effacer les données saisies dans les applications et extensions hébergées.</li>
-</ul>
+- Efface uniquement les données de formulaire entrées après une heure donnée
+- Contrôle si vous souhaitez supprimer uniquement les données saisies dans les pages Web normales ou effacer les données saisies dans les applications et extensions hébergées.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var removing = browser.browsingData.removeFormData(
+```js
+var removing = browser.browsingData.removeFormData(
   removalOptions            // RemovalOptions object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p><code>object</code>. Un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, qui peut être utilisé pour effacer uniquement les données de formulaire saisies après une heure donnée, et pour effacer uniquement les données saisies dans les pages Web normales ou pour effacer les données saisies dans les applications hébergées et des extensions aussi.</p>
+`object`. Un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, qui peut être utilisé pour effacer uniquement les données de formulaire saisies après une heure donnée, et pour effacer uniquement les données saisies dans les pages Web normales ou pour effacer les données saisies dans les applications hébergées et des extensions aussi.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browsingData.removeFormData")}}</p>
+{{Compat("webextensions.api.browsingData.removeFormData")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Supprimer les données de formulaire enregistrées la semaine dernière :</p>
+Supprimer les données de formulaire enregistrées la semaine dernière :
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("removed");
 }
 
@@ -64,11 +64,13 @@ var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
 
 browser.browsingData.removeFormData(
   {since: oneWeekAgo}).
-then(onRemoved, onError);</pre>
+then(onRemoved, onError);
+```
 
-<p>Supprimer tous les données de formulaire enregistrées :</p>
+Supprimer tous les données de formulaire enregistrées :
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("removed");
 }
 
@@ -77,19 +79,18 @@ function onError(error) {
 }
 
 browser.browsingData.removeFormData({}).
-then(onRemoved, onError);</pre>
+then(onRemoved, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -116,5 +117,4 @@ then(onRemoved, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

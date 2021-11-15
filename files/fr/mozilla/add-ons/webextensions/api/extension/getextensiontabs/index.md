@@ -13,49 +13,44 @@ tags:
   - getExtensionTabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getExtensionTabs
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("extension.getViews()")}} à la place.</p>
-</div>
+> **Attention :** Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("extension.getViews()")}} à la place.
 
-<p>Renvoie un tableau des objets de la <a href="/fr/docs/Web/API/Window">Window</a> JavaScriptpour chacun des onglets qui s'exécutent dans l'extension actuelle. Si <code>windowId</code> est spécifié, renvoie uniquement les objets Window des onglets attachés à la fenêtre spécifiée.</p>
+Renvoie un tableau des objets de la [Window](/fr/docs/Web/API/Window) JavaScriptpour chacun des onglets qui s'exécutent dans l'extension actuelle. Si `windowId` est spécifié, renvoie uniquement les objets Window des onglets attachés à la fenêtre spécifiée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">chrome.extension.getExtensionTabs(
+```js
+chrome.extension.getExtensionTabs(
   windowId // optional integer
 )
-</pre>
+```
 
-<p>Cette API est également disponible en tant que <code>browser.extension.getExtensionTabs()</code>.</p>
+Cette API est également disponible en tant que `browser.extension.getExtensionTabs()`.
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>windowId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>.</dd>
-</dl>
+- `windowId`{{optional_inline}}
+  - : `integer`.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p><code>array</code> of <code>object</code>. Tableau d'objets de fenêtre globaux</p>
+`array` of `object`. Tableau d'objets de fenêtre globaux
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.extension.getExtensionTabs")}}</p>
+{{Compat("webextensions.api.extension.getExtensionTabs")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/extension"><code>chrome.extension</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -82,5 +77,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getExtensionTabs
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

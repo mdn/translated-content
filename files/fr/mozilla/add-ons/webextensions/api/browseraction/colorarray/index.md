@@ -13,36 +13,32 @@ tags:
   - browserAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Un tableau de quatre nombres entiers entre 0-255 définie une couleur RGBA. Les quatres couleurs spécifient les canaux suivants :</p>
+Un tableau de quatre nombres entiers entre 0-255 définie une couleur RGBA. Les quatres couleurs spécifient les canaux suivants :
 
-<ol>
- <li>Rouge</li>
- <li>Vert</li>
- <li>Bleu</li>
- <li>Alpha (opacité).</li>
-</ol>
+1.  Rouge
+2.  Vert
+3.  Bleu
+4.  Alpha (opacité).
 
-<p>Par exemple , le rouge opaque est  <code>[255, 0, 0, 255]</code>.</p>
+Par exemple , le rouge opaque est  `[255, 0, 0, 255]`.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browserAction.ColorArray")}}</p>
+{{Compat("webextensions.api.browserAction.ColorArray")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -69,5 +65,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

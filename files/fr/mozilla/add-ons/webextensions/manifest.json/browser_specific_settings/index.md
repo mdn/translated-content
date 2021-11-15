@@ -8,97 +8,99 @@ tags:
   - browser_specific_settings
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Type</th>
-   <td><code>Object</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Obligatoire</th>
-   <td>
-    <p>Habituellement, non (mais voir aussi <a href="/fr/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID">Quand avec-vous besoin d'une ID Complémentaire</a><a href="/fr/Add-ons/WebExtensions/manifest.json/applications#When_do_I_need_the_applications_key">?</a>). Obligatoire avant Firefox 48 (desktop) et Firefox pour Android.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json;">
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Type</th>
+      <td><code>Object</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Obligatoire</th>
+      <td>
+        <p>
+          Habituellement, non (mais voir aussi
+          <a
+            href="/fr/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID"
+            >Quand avec-vous besoin d'une ID Complémentaire</a
+          ><a
+            href="/fr/Add-ons/WebExtensions/manifest.json/applications#When_do_I_need_the_applications_key"
+            >?</a
+          >). Obligatoire avant Firefox 48 (desktop) et Firefox pour Android.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json;">
 "browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
     "strict_min_version": "42.0"
   }
 }
-</pre>
-   </td>
-  </tr>
- </tbody>
+</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La clé <code>browser_specific_settings</code> contient des clés qui sont spécifiques à certaines applications hôtes.</p>
+La clé `browser_specific_settings` contient des clés qui sont spécifiques à certaines applications hôtes.
 
-<h3 id="Propriétés_Gecko_Firefox">Propriétés (Gecko) Firefox</h3>
+### Propriétés (Gecko) Firefox
 
-<p>Actuellement, elle contient uniquement une clé, <code>gecko</code>, qui est structurée ainsi :</p>
+Actuellement, elle contient uniquement une clé, `gecko`, qui est structurée ainsi :
 
-<ul>
- <li><code>id</code> est l'ID de l'extension. Facultatif à partir de Firefox 48, obligatoire avant Firefox 48. Voir les <a href="/fr/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">WebExtensions et l'ID des extensions</a> pour voir quand vous devez spécifier un identifiant complémentaire.</li>
- <li><code>strict_min_version </code>: la version minimum de Gecko supportée. Les versions contenant un "*" ne sont pas valides dans ce domaine. Par défaut, c'est "42a1".</li>
- <li><code>strict_max_version</code> : la version maximum de Gecko supportée. Si la version de Firefox sur laquelle l'extension est en cours d'installation ou d'exécution est au-dessus de cette version, l'extension sera désactivée ou ne sera pas autorisée à être installée. Par défaut, c'est "*", qui désactive la vérification d'une version maximale.</li>
- <li>
-  <p><code>update_url</code> est lien vers un <a href="/fr-FR/Add-ons/Install_Manifests#updateURL">manifeste de mise à jour personnalisé</a>. Notez que le lien doit commencer par "https". Cette clé consiste à gérer vous-même les mises à jour d'extension (c'est-à-dire pas via AMO).</p>
- </li>
-</ul>
+- `id` est l'ID de l'extension. Facultatif à partir de Firefox 48, obligatoire avant Firefox 48. Voir les [WebExtensions et l'ID des extensions](/fr/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) pour voir quand vous devez spécifier un identifiant complémentaire.
+- `strict_min_version `: la version minimum de Gecko supportée. Les versions contenant un "\*" ne sont pas valides dans ce domaine. Par défaut, c'est "42a1".
+- `strict_max_version` : la version maximum de Gecko supportée. Si la version de Firefox sur laquelle l'extension est en cours d'installation ou d'exécution est au-dessus de cette version, l'extension sera désactivée ou ne sera pas autorisée à être installée. Par défaut, c'est "\*", qui désactive la vérification d'une version maximale.
+- `update_url` est lien vers un [manifeste de mise à jour personnalisé](/fr-FR/Add-ons/Install_Manifests#updateURL). Notez que le lien doit commencer par "https". Cette clé consiste à gérer vous-même les mises à jour d'extension (c'est-à-dire pas via AMO).
 
-<p>Vois la liste des <a href="https://addons.mozilla.org/en-US/firefox/pages/appversions/">versions Gecko valides</a>.</p>
+Vois la liste des [versions Gecko valides](https://addons.mozilla.org/en-US/firefox/pages/appversions/).
 
-<h4 id="Format_dID_dextension">Format d'ID d'extension</h4>
+#### Format d'ID d'extension
 
-<p>L'ID d'extension doit être l'un des suivants :</p>
+L'ID d'extension doit être l'un des suivants :
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">GUID</a></li>
- <li>Une chaîne formatée comme une adresse e-mail : <code>extensionname@example.org</code></li>
-</ul>
+- [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+- Une chaîne formatée comme une adresse e-mail : `extensionname@example.org`
 
-<p>Ce dernier format est plus facile à générer et à manipuler. Sachez que l'utilisation d'une véritable adresse e-mail ici peut attirer des spams.</p>
+Ce dernier format est plus facile à générer et à manipuler. Sachez que l'utilisation d'une véritable adresse e-mail ici peut attirer des spams.
 
-<p>Par exemple :</p>
+Par exemple :
 
-<pre class="brush: json">"id": "extensionname@example.org"</pre>
+```json
+"id": "extensionname@example.org"
+```
 
-<pre class="brush: json">"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"</pre>
+```json
+"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"
+```
 
-<h3 id="Propriétés_Microsoft_Edge">Propriétés Microsoft Edge</h3>
+### Propriétés Microsoft Edge
 
-<div class="warning">
-<p><strong>Attention :</strong> L'ajout de propriétés spécifiques à Edge au manifeste a causé une erreur avant Firefox 69 qui peut empêcher l'extension de s'installer.</p>
-</div>
+> **Attention :** L'ajout de propriétés spécifiques à Edge au manifeste a causé une erreur avant Firefox 69 qui peut empêcher l'extension de s'installer.
 
-<p>Microsoft Edge stocke les paramètres spécifiques à son navigateur dans la sous-clé <code>edge</code>, qui possède les propriétés suivantes :</p>
+Microsoft Edge stocke les paramètres spécifiques à son navigateur dans la sous-clé `edge`, qui possède les propriétés suivantes :
 
-<dl>
- <dt><code>browser_action_next_to_addressbar</code></dt>
- <dd>
- <p>Propriété booléenne qui contrôle le placement de l'<a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_actions">action du navigateur</a>.</p>
+- `browser_action_next_to_addressbar`
 
- <ul>
-  <li><code>true</code> est équivalent à la définition <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#Syntax">browser_action.default_area</a></code> à <code>navbar</code>.</li>
-  <li><code>false</code> is équivalent à la définition <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#Syntax">browser_action.default_area</a></code> à <code>menupanel</code>.</li>
- </ul>
- </dd>
-</dl>
+  - : Propriété booléenne qui contrôle le placement de l'[action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_actions).
 
-<h2 id="Exemples">Exemples</h2>
+    - `true` est équivalent à la définition [`browser_action.default_area`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#Syntax) à `navbar`.
+    - `false` is équivalent à la définition [`browser_action.default_area`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#Syntax) à `menupanel`.
 
-<p>Exemple avec toutes les clés possibles. Notez que vous n'incluez normalement ni une version <code>strict_max_version</code> ni une clé <code>update_url</code>.</p>
+## Exemples
 
-<pre class="brush: json">"browser_specific_settings": {
+Exemple avec toutes les clés possibles. Notez que vous n'incluez normalement ni une version `strict_max_version` ni une clé `update_url`.
+
+```json
+"browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
     "strict_min_version": "42.0",
@@ -108,10 +110,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
   "edge": {
     "browser_action_next_to_addressbar": true
   }
-}</pre>
+}
+```
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("webextensions.manifest.browser_specific_settings")}}</p>
+{{Compat("webextensions.manifest.browser_specific_settings")}}

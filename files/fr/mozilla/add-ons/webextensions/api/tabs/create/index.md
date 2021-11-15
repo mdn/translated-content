@@ -13,71 +13,74 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/create
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Crée un nouvel onglet</p>
+Crée un nouvel onglet
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var creating = browser.tabs.create(
+```js
+var creating = browser.tabs.create(
   createProperties   // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>createProperties</code></dt>
- <dd><p><code>object</code>.Propriétés pour donner le nouvel onglet. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.</p>
- <dl>
-  <dt><code>active</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si l'onglet doit devenir l'onglet actif dans la fenêtre. Si elle est <code>false</code>, elle n'a aucun effet. N'affecte pas si la fenêtre est mise au point (voir {{WebExtAPIRef('windows.update')}}). Par défaut à  <code>true</code>.</dd>
-  <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
-  <dd><code>string</code>. Utilisez-le pour créer un onglet dont l'ID de cookie estCette option n'est disponible que si l'extension a  la  <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> <code>"cookies".</code></dd>
-  <dt><code>index</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. La position que l'onglet devrait prendre dans la fenêtre. La valeur fournie sera comprise entre zéro et le nombre d'onglets dans la fenêtre.</dd>
-  <dt><code>openerTabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. L'ID de l'onglet qui a ouvert cet onglet. Si spécifié, l'onglet d'ouverture doit être dans la même fenêtre que l'onglet nouvellement créé.</dd>
-  <dt><code>openInReaderMode</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. si <code>true</code>, ouvrez cet onglet en <a href="/fr/Add-ons/WebExtensions/API/tabs/toggleReaderMode">mode lecture</a>. Par défaut à  <code>false</code>.</dd>
-  <dt><code>pinned</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si l'onglet doit être épinglé. Par défaut à <code>false</code>.</dd>
-  <dt><code>selected</code>{{optional_inline}}</dt>
-  <dd><p><code>boolean</code>. Si l'onglet doit devenir l'onglet sélectionné dans la fenêtre. Par défaut à <code>true</code>.</p>
-  <div class="warning"><p><strong>Attention :</strong> Cette propriété est obsolète et n'est pas prise en charge dans Firefox. Utilisez  <code>actif</code> à la place.</p></div>
-  </dd>
-  <dt><code>url</code>{{optional_inline}}</dt>
-  <dd><p><code>string</code>. 'URL permettant de naviguer dans l'onglet initialement. Par défaut à la page Nouvel onglet.</p>
-  <p>Les URL complètes doivent inclure un schéma (i.e. 'http://www.google.com', par 'www.google.com').</p>
-  <p>Pour des raisons de sécurité, dans Firefox, il se peut que ce ne soit pas une URL privilégiée. Le passage de l'une des URL suivantes échouera :</p>
-  <ul>
-   <li>chrome: URLs</li>
-   <li>javascript: URLs</li>
-   <li>data: URLs</li>
-   <li>file: URLs (c'est-à-dire, fichiers sur le système de fichiers, cependant, pour utiliser un fichier empaqueté à l'intérieur de l'extension, voir ci-dessous)</li>
-   <li>privileged about: URLs (par exemple, <code>about:config</code>, <code>about:addons</code>, <code>about:debugging</code>). Les URL non privilégiées (e.g., <code>about:blank</code>) sont autorisés.</li>
-   <li>La page Nouvel onglet (<code>about:newtab</code>) peut être ouverte si aucune valeur n'est fournie pour l'URL.</li>
-  </ul>
+- `createProperties`
 
-  <p>Pour charger une page fournie avec votre extension, spécifiez une URL absolue à partir du fichier manifest.json de l'extension. Par exemple :  '/path/to/my-page.html'. Si vous omettez le premier caractère '/', l'URL est traitée comme une URL relative et différents navigateurs peuvent construire différentes URL absolues.</p>
-  </dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. La fenêtre pour créer le nouvel onglet. Par défaut à la fenêtre actuelle.</dd>
- </dl>
- </dd>
-</dl>
+  - : `object`.Propriétés pour donner le nouvel onglet. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+    - `active`{{optional_inline}}
+      - : `boolean`. Si l'onglet doit devenir l'onglet actif dans la fenêtre. Si elle est `false`, elle n'a aucun effet. N'affecte pas si la fenêtre est mise au point (voir {{WebExtAPIRef('windows.update')}}). Par défaut à  `true`.
+    - `cookieStoreId` {{optional_inline}}
+      - : `string`. Utilisez-le pour créer un onglet dont l'ID de cookie estCette option n'est disponible que si l'extension a  la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"cookies".`
+    - `index`{{optional_inline}}
+      - : `integer`. La position que l'onglet devrait prendre dans la fenêtre. La valeur fournie sera comprise entre zéro et le nombre d'onglets dans la fenêtre.
+    - `openerTabId`{{optional_inline}}
+      - : `integer`. L'ID de l'onglet qui a ouvert cet onglet. Si spécifié, l'onglet d'ouverture doit être dans la même fenêtre que l'onglet nouvellement créé.
+    - `openInReaderMode`{{optional_inline}}
+      - : `boolean`. si `true`, ouvrez cet onglet en [mode lecture](/fr/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Par défaut à  `false`.
+    - `pinned`{{optional_inline}}
+      - : `boolean`. Si l'onglet doit être épinglé. Par défaut à `false`.
+    - `selected`{{optional_inline}}
 
-<p>A <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the created tab. If the tab could not be created (for example, because <code>url</code> used a privileged scheme) the promise will be rejected with an error message.</p>
+      - : `boolean`. Si l'onglet doit devenir l'onglet sélectionné dans la fenêtre. Par défaut à `true`.
 
-<h2 id="Exemples">Exemples</h2>
+        > **Attention :** Cette propriété est obsolète et n'est pas prise en charge dans Firefox. Utilisez  `actif` à la place.
 
-<p>Ouvre "https://example.org" dans un nouvel onglet :</p>
+    - `url`{{optional_inline}}
 
-<pre class="brush: js">function onCreated(tab) {
+      - : `string`. 'URL permettant de naviguer dans l'onglet initialement. Par défaut à la page Nouvel onglet.
+
+        Les URL complètes doivent inclure un schéma (i.e. 'http\://www\.google.com', par 'www\.google.com').
+
+        Pour des raisons de sécurité, dans Firefox, il se peut que ce ne soit pas une URL privilégiée. Le passage de l'une des URL suivantes échouera :
+
+        - chrome: URLs
+        - javascript: URLs
+        - data: URLs
+        - file: URLs (c'est-à-dire, fichiers sur le système de fichiers, cependant, pour utiliser un fichier empaqueté à l'intérieur de l'extension, voir ci-dessous)
+        - privileged about: URLs (par exemple, `about:config`, `about:addons`, `about:debugging`). Les URL non privilégiées (e.g., `about:blank`) sont autorisés.
+        - La page Nouvel onglet (`about:newtab`) peut être ouverte si aucune valeur n'est fournie pour l'URL.
+
+        Pour charger une page fournie avec votre extension, spécifiez une URL absolue à partir du fichier manifest.json de l'extension. Par exemple :  '/path/to/my-page.html'. Si vous omettez le premier caractère '/', l'URL est traitée comme une URL relative et différents navigateurs peuvent construire différentes URL absolues.
+
+    - `windowId`{{optional_inline}}
+      - : `integer`. La fenêtre pour créer le nouvel onglet. Par défaut à la fenêtre actuelle.
+
+### Valeur retournée
+
+A [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the created tab. If the tab could not be created (for example, because `url` used a privileged scheme) the promise will be rejected with an error message.
+
+## Exemples
+
+Ouvre "https\://example.org" dans un nouvel onglet :
+
+```js
+function onCreated(tab) {
   console.log(`Created new tab: ${tab.id}`)
 }
 
@@ -90,23 +93,22 @@ browser.browserAction.onClicked.addListener(function() {
     url:"https://example.org"
   });
   creating.then(onCreated, onError);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.create", 10)}}</p>
+{{Compat("webextensions.api.tabs.create", 10)}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -133,5 +135,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

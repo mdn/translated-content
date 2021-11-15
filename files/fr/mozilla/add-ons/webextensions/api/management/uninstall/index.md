@@ -11,70 +11,68 @@ tags:
   - uninstall
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstall
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Désinstalle une extension, compte tenu de son ID.</p>
+Désinstalle une extension, compte tenu de son ID.
 
-<p>Cette API requiert l'<a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">API de permission</a>. "management"</p>
+Cette API requiert l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions). "management"
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var uninstalling = browser.management.uninstall(
+```js
+var uninstalling = browser.management.uninstall(
   id,                  // string
   options              // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>id</code></dt>
- <dd><code>string</code>. ID de l'extensions à désinstaller.</dd>
- <dt><code>options{{optional_inline}}</code></dt>
- <dd><p><code>object</code>. l'objet qui peut contenir une propriété unique, <code>showConfirmDialog</code>. Si <code>showConfirmDialog</code> est <code>true</code>, le navigateur affiche une boie de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé.</p>
- <ul>
-  <li>Si <code>id</code> est l'ID de l'extension appelant, <code>showConfirmDialog</code> est par défaut à <code>false</code>.</li>
-  <li>Si <code>id</code> est l'ID d'une extension différente, cette option est ignorée et la boite de dialogue de confirmation s'affche toujours.</li>
- </ul>
- </dd>
-</dl>
+- `id`
+  - : `string`. ID de l'extensions à désinstaller.
+- `options{{optional_inline}}`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`. l'objet qui peut contenir une propriété unique, `showConfirmDialog`. Si `showConfirmDialog` est `true`, le navigateur affiche une boie de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désintallatiion.</p>
+    - Si `id` est l'ID de l'extension appelant, `showConfirmDialog` est par défaut à `false`.
+    - Si `id` est l'ID d'une extension différente, cette option est ignorée et la boite de dialogue de confirmation s'affche toujours.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.management.uninstall")}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désintallatiion.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Désinstallez l'extension dont l'ID est "my-addon-id", en demandant à l'utilisateur de confirmer. Dans le rappel, vérifiez si l'utilisateur a annué la désinstallation.</p>
+{{Compat("webextensions.api.management.uninstall")}}
 
-<p>Notez que nous n'avons réussi un gestionnaire d'exécution, car si la désinstallation  réussit, l'extension n'est plus disponible pour le gérer.</p>
+## Exemples
 
-<pre class="brush: js">var id = "my-addon-id";
+Désinstallez l'extension dont l'ID est "my-addon-id", en demandant à l'utilisateur de confirmer. Dans le rappel, vérifiez si l'utilisateur a annué la désinstallation.
+
+Notez que nous n'avons réussi un gestionnaire d'exécution, car si la désinstallation  réussit, l'extension n'est plus disponible pour le gérer.
+
+```js
+var id = "my-addon-id";
 
 function onCanceled(error) {
   console.log(`Uninstall canceled: ${error}`);
 }
 
 var uninstalling = browser.management.uninstall(id);
-uninstalling.then(null, onCanceled);</pre>
+uninstalling.then(null, onCanceled);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/management"><code>chrome.management</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,5 +99,4 @@ uninstalling.then(null, onCanceled);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -12,29 +12,27 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/ImageDataType
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Données de pixel pour une image. Doit être un objet <code><a href="/fr/docs/Web/API/ImageData">ImageData</a></code> (par exemple, à partir d'un élément {{htmlelement("canvas")}}).</p>
+Données de pixel pour une image. Doit être un objet [`ImageData`](/fr/docs/Web/API/ImageData) (par exemple, à partir d'un élément {{htmlelement("canvas")}}).
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Un objet <code><a href="/fr/docs/Web/API/ImageData">ImageData</a></code>.</p>
+Un objet [`ImageData`](/fr/docs/Web/API/ImageData).
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.sidebarAction.ImageDataType")}}</p>
+{{Compat("webextensions.api.sidebarAction.ImageDataType")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Opera <a href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -61,5 +59,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/ImageDataType
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -11,39 +11,39 @@ tags:
 translation_of: >-
   Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Annule l'inscription des scripts de contenu représentés par cet objet `RegisteredContentScript`.
 
-<div>Annule l'inscription des scripts de contenu représentés par cet objet <code>RegisteredContentScript</code>.</div>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
+```js
+registered.unregister()
+```
 
-<pre class="brush: js">registered.unregister()
-</pre>
+### Paramètres
 
-<h3 id="Paramètres">Paramètres</h3>
+None.
 
-<p>None.</p>
+### Valeur retournée
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+None.
 
-<p>None.</p>
+## Compatibilité du navigateur
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+{{Compat("webextensions.api.contentScripts.RegisteredContentScript.unregister", 10)}}
 
-<p>{{Compat("webextensions.api.contentScripts.RegisteredContentScript.unregister", 10)}}</p>
+## Exemples
 
-<h2 id="Exemples">Exemples</h2>
+Ce code permet de basculer un script de contenu enregistré sur un clic d'action du navigateur :
 
-<p>Ce code permet de basculer un script de contenu enregistré sur un clic d'action du navigateur :</p>
-
-<pre class="brush: js">var registered = null;
+```js
+var registered = null;
 
 async function register() {
 
   registered = await browser.contentScripts.register({
     matches: ["*://*.org/*"],
     js: [{
-      code: "document.body.innerHTML = '&lt;h1&gt;This page has been eaten&lt;h1&gt;'"
+      code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'"
     }],
     runAt: "document_idle"
   });
@@ -60,6 +60,6 @@ function toggle() {
 }
 
 browser.browserAction.onClicked.addListener(toggle);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

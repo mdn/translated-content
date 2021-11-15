@@ -11,43 +11,41 @@ tags:
   - zoomSiteSpecific
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomSiteSpecific
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jaccente est un booléen.</p>
+Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jaccente est un booléen.
 
-<p>Cette propriété contrôle le <a href="https://support.mozilla.org/fr/kb/editeur-configuration-firefox">réglage de configuration</a><code> browser.zoom.siteSpecific</code>, qui règle comment le zoom est appliqué aux sites et onglets.</p>
+Cette propriété contrôle le [réglage de configuration](https://support.mozilla.org/fr/kb/editeur-configuration-firefox)` browser.zoom.siteSpecific`, qui règle comment le zoom est appliqué aux sites et onglets.
 
-<p>Si <code>browser.zoom.siteSpecific</code> est à vrai, les opérations de zoom s'appliquent à toutes les pages du même site selon les règles :</p>
+Si `browser.zoom.siteSpecific` est à vrai, les opérations de zoom s'appliquent à toutes les pages du même site selon les règles :
 
-<ul>
- <li>quand une page charge, si il existe un niveau de zoom pour ce site alors il est appliqué par le navigateur sinon le niveau de zoom par défaut "global" est appliqué.</li>
- <li>quand le niveau de zoom change pour une page, le niveau des autres pages (dans d'autres onglets) de ce site sont mises à jour.</li>
-</ul>
+- quand une page charge, si il existe un niveau de zoom pour ce site alors il est appliqué par le navigateur sinon le niveau de zoom par défaut "global" est appliqué.
+- quand le niveau de zoom change pour une page, le niveau des autres pages (dans d'autres onglets) de ce site sont mises à jour.
 
-<p>Si la préférence <code>browser.zoom.siteSpecific</code> est à faux, les opérations de zoom s'appliquent uniquement à l'onglet actif selon les règles :</p>
+Si la préférence `browser.zoom.siteSpecific` est à faux, les opérations de zoom s'appliquent uniquement à l'onglet actif selon les règles :
 
-<ul>
- <li>quand un nouvel onglet s'ouvre, le niveau de zoom par défaut "global" est appliqué.</li>
- <li>quand le niveau de zoom change dans un onglet, il sera appliqué durant toute la navigation dans cet onglet et n'affectera pas le niveau de zoom des autres onglets.</li>
-</ul>
+- quand un nouvel onglet s'ouvre, le niveau de zoom par défaut "global" est appliqué.
+- quand le niveau de zoom change dans un onglet, il sera appliqué durant toute la navigation dans cet onglet et n'affectera pas le niveau de zoom des autres onglets.
 
-<p>Lors de l'installation de Firefox, <code>browser.zoom.siteSpecific</code> est à vrai.</p>
+Lors de l'installation de Firefox, `browser.zoom.siteSpecific` est à vrai.
 
-<p>Si <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites"><code>privacy.websites</code></a><code>.resistFingerprinting</code> est à vrai, ce réglage ne peut pas être changé et le niveau de zoom est appliqué sur le schéma par-onglet.</p>
+Si [`privacy.websites`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)`.resistFingerprinting` est à vrai, ce réglage ne peut pas être changé et le niveau de zoom est appliqué sur le schéma par-onglet.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browserSettings.zoomSiteSpecific")}}</p>
+{{Compat("webextensions.api.browserSettings.zoomSiteSpecific")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Mettre le réglage à <code>false</code>:</p>
+Mettre le réglage à `false`:
 
-<pre class="brush: js">function logResult(result) {
+```js
+function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
 browser.browserSettings.zoomSiteSpecific.set({value: false}).
-  then(logResult);</pre>
+  then(logResult);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

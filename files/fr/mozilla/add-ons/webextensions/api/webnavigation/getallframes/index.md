@@ -13,59 +13,56 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Étant donné un ID d'onglet, récupère des informations sur toutes les images qu'il contient.</p>
+Étant donné un ID d'onglet, récupère des informations sur toutes les images qu'il contient.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingFrames = browser.webNavigation.getAllFrames(
+```js
+var gettingFrames = browser.webNavigation.getAllFrames(
   details                // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. Informations sur l'onglet pour récupérer toutes les images.</p>
- <dl>
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. L'identifiant de l'onglet</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`. Informations sur l'onglet pour récupérer toutes les images.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> sera accompli avec un tableau d'objets, dont chacun a les propriétés suivantes :</p>
+    - `tabId`
+      - : `integer`. L'identifiant de l'onglet
 
-<dl>
- <dt><code>errorOccurred</code></dt>
- <dd><code>boolean</code>. Vrai si la dernière navigation dans cette trame a été interrompue par une erreur, c'est-à-dire l'événement {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} déclenché.</dd>
- <dt><code>processId</code></dt>
- <dd><code>integer</code>. L'ID du processus exécutant le moteur de rendu pour cet onglet.</dd>
- <dt><code>frameId</code></dt>
- <dd><code>integer</code>. L'identifiant de l'image Si c'est l'image principale, alors <code>frameId</code> est nul.</dd>
- <dt><code>parentFrameId</code></dt>
- <dd><code>integer</code>. ID du parent de cette image. C'est -1 s'il n'y a pas de cadre parent: c'est-à-dire si ce cadre est le contexte de navigation de niveau supérieur dans l'onglet.</dd>
- <dt><code>url</code></dt>
- <dd><code>string</code>. L'URL actuellement associée à ce cadre.</dd>
-</dl>
+### Valeur retournée
 
-<p>Si l'onglet spécifié n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera accompli avec un tableau d'objets, dont chacun a les propriétés suivantes :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- `errorOccurred`
+  - : `boolean`. Vrai si la dernière navigation dans cette trame a été interrompue par une erreur, c'est-à-dire l'événement {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} déclenché.
+- `processId`
+  - : `integer`. L'ID du processus exécutant le moteur de rendu pour cet onglet.
+- `frameId`
+  - : `integer`. L'identifiant de l'image Si c'est l'image principale, alors `frameId` est nul.
+- `parentFrameId`
+  - : `integer`. ID du parent de cette image. C'est -1 s'il n'y a pas de cadre parent: c'est-à-dire si ce cadre est le contexte de navigation de niveau supérieur dans l'onglet.
+- `url`
+  - : `string`. L'URL actuellement associée à ce cadre.
 
-<p>{{Compat("webextensions.api.webNavigation.getAllFrames")}}</p>
+Si l'onglet spécifié n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Ce code enregistre les URL de toutes les images dans l'onglet actif, lorsque l'utilisateur clique sur une action du navigateur :</p>
+{{Compat("webextensions.api.webNavigation.getAllFrames")}}
 
-<pre class="brush: js">function logFrameInfo(framesInfo) {
+## Exemples
+
+Ce code enregistre les URL de toutes les images dans l'onglet actif, lorsque l'utilisateur clique sur une action du navigateur :
+
+```js
+function logFrameInfo(framesInfo) {
   for (frameInfo of framesInfo) {
     console.log(frameInfo);
   }
@@ -89,19 +86,18 @@ browser.browserAction.onClicked.addListener(function() {
 
   querying.then(logAllFrames, onError);
 
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webNavigation"><code>chrome.webNavigation</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -128,5 +124,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

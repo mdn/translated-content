@@ -13,80 +13,68 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/InterruptReason
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Le type <code>InteruptReason</code> de l'API {{WebExtAPIRef("downloads")}} définit un ensemble de raisons possibles pour lesquelles un téléchargement a été interrompu.</p>
+Le type `InteruptReason` de l'API {{WebExtAPIRef("downloads")}} définit un ensemble de raisons possibles pour lesquelles un téléchargement a été interrompu.
 
-<p>Une propriété {{WebExtAPIRef('downloads.DownloadItem')}} d'<code>erreur</code> contiendra une chaîne tirée des valeurs définies dans ce type.</p>
+Une propriété {{WebExtAPIRef('downloads.DownloadItem')}} d'`erreur` contiendra une chaîne tirée des valeurs définies dans ce type.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des chaînes. Les valeurs possibles sont divisées en catégories, chaque ensemble ayant la même sous-chaîne au début:</p>
+Les valeurs de ce type sont des chaînes. Les valeurs possibles sont divisées en catégories, chaque ensemble ayant la même sous-chaîne au début:
 
-<p>Erreurs liées au fichier :</p>
+Erreurs liées au fichier :
 
-<ul>
- <li><code>"FILE_FAILED"</code></li>
- <li><code>"FILE_ACCESS_DENIED"</code></li>
- <li><code>"FILE_NO_SPACE"</code></li>
- <li><code>"FILE_NAME_TOO_LONG"</code></li>
- <li><code>"FILE_TOO_LARGE"</code></li>
- <li><code>"FILE_VIRUS_INFECTED"</code></li>
- <li><code>"FILE_TRANSIENT_ERROR"</code></li>
- <li><code>"FILE_BLOCKED"</code></li>
- <li><code>"FILE_SECURITY_CHECK_FAILED"</code></li>
- <li><code>"FILE_TOO_SHORT"</code></li>
-</ul>
+- `"FILE_FAILED"`
+- `"FILE_ACCESS_DENIED"`
+- `"FILE_NO_SPACE"`
+- `"FILE_NAME_TOO_LONG"`
+- `"FILE_TOO_LARGE"`
+- `"FILE_VIRUS_INFECTED"`
+- `"FILE_TRANSIENT_ERROR"`
+- `"FILE_BLOCKED"`
+- `"FILE_SECURITY_CHECK_FAILED"`
+- `"FILE_TOO_SHORT"`
 
-<p>Erreurs liées au réseau :</p>
+Erreurs liées au réseau :
 
-<ul>
- <li><code>"NETWORK_FAILED"</code></li>
- <li><code>"NETWORK_TIMEOUT"</code></li>
- <li><code>"NETWORK_DISCONNECTED"</code></li>
- <li><code>"NETWORK_SERVER_DOWN"</code></li>
- <li><code>"NETWORK_INVALID_REQUEST"</code></li>
-</ul>
+- `"NETWORK_FAILED"`
+- `"NETWORK_TIMEOUT"`
+- `"NETWORK_DISCONNECTED"`
+- `"NETWORK_SERVER_DOWN"`
+- `"NETWORK_INVALID_REQUEST"`
 
-<p>Erreurs liées au serveur :</p>
+Erreurs liées au serveur :
 
-<ul>
- <li><code>"SERVER_FAILED"</code></li>
- <li><code>"SERVER_NO_RANGE"</code></li>
- <li><code>"SERVER_BAD_CONTENT"</code></li>
- <li><code>"SERVER_UNAUTHORIZED"</code></li>
- <li><code>"SERVER_CERT_PROBLEM"</code></li>
- <li><code>"SERVER_FORBIDDEN"</code></li>
-</ul>
+- `"SERVER_FAILED"`
+- `"SERVER_NO_RANGE"`
+- `"SERVER_BAD_CONTENT"`
+- `"SERVER_UNAUTHORIZED"`
+- `"SERVER_CERT_PROBLEM"`
+- `"SERVER_FORBIDDEN"`
 
-<p>Erreurs liées à l'utilisateur :</p>
+Erreurs liées à l'utilisateur :
 
-<ul>
- <li><code>"USER_CANCELED"</code></li>
- <li><code>"USER_SHUTDOWN"</code></li>
-</ul>
+- `"USER_CANCELED"`
+- `"USER_SHUTDOWN"`
 
-<p>Divers :</p>
+Divers :
 
-<ul>
- <li><code>"CRASH"</code></li>
-</ul>
+- `"CRASH"`
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.downloads.InterruptReason")}}</p>
+{{Compat("webextensions.api.downloads.InterruptReason")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -113,5 +101,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/InterruptReason
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

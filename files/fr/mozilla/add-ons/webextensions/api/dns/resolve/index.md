@@ -12,70 +12,68 @@ tags:
   - resolve
 translation_of: Mozilla/Add-ons/WebExtensions/API/dns/resolve
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Résout le nom d'hôte donné en un enregistrement DNS.</p>
+Résout le nom d'hôte donné en un enregistrement DNS.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var resolving = browser.dns.resolve(
+```js
+var resolving = browser.dns.resolve(
   hostname,    // string
   flags        // array of string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>hostname</code></dt>
- <dd><code><code>string</code></code>. Le nom d'hôte à résoudre.</dd>
- <dt><code>flags</code> {{optional_inline}}</dt>
- <dd><p><code>array</code> de <code>string</code>. Drapeaux pour modifier la façon dont le nom d'hôte est résolu. Tous les indicateurs omis sont par défaut à <code>false</code>. Vous pouvez passer zéro ou plusieurs des indicateurs suivants :</p>
- <ul>
-  <li><code>"allow_name_collisions"</code>: autorise les résultats de collision de noms qui sont normalement filtrés.</li>
-  <li><code>"bypass_cache"</code>: Supprime le cache de recherche DNS interne.</li>
-  <li><code>"canonical_name"</code>: Le nom canonique de l'hôte spécifié sera interrogé.</li>
-  <li><code>"disable_ipv4"</code>: Seules les adresses IPv6 seront renvoyées.</li>
-  <li><code>"disable_ipv6"</code>: Seules les adresses IPv4 seront renvoyées.</li>
-  <li><code>"disable_trr"</code>: n'utilisez pas le TRR (Trusted Recursive Resolver) pour résoudre le nom d'hôte. Un TRR permet la résolution des noms d'hôtes à l'aide d'un serveur <a href="https://tools.ietf.org/html/draft-ietf-doh-dns-over-https-02">DNS-over-HTTPS</a> dédié.</li>
-  <li><code>"offline"</code>: seuls les littéraux et les entrées mises en cache seront renvoyés.</li>
-  <li><code>"priority_low"</code>: La priorité est donnée à la requête. Si "priority_medium" est également donné, la requête est prioritaire.</li>
-  <li><code>"priority_medium"</code>: La priorité est donnée à la requête. Si "priority_low" est également donné, la requête est prioritaire</li>
-  <li><code>"speculate"</code>: Indique que la requête est spéculative. Les demandes spéculatives renvoient des erreurs si la prélecture est désactivée par la configuration du navigateur.</li>
- </ul>
- </dd>
-</dl>
+- `hostname`
+  - : `string`. Le nom d'hôte à résoudre.
+- `flags` {{optional_inline}}
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `array` de `string`. Drapeaux pour modifier la façon dont le nom d'hôte est résolu. Tous les indicateurs omis sont par défaut à `false`. Vous pouvez passer zéro ou plusieurs des indicateurs suivants :
 
-<p>A <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promisee">Promise</a></code> qui sera remplie avec un objet <code>DNSRecord</code> object. Cet objet peut contenir les propriétés suivantes :</p>
+    - `"allow_name_collisions"`: autorise les résultats de collision de noms qui sont normalement filtrés.
+    - `"bypass_cache"`: Supprime le cache de recherche DNS interne.
+    - `"canonical_name"`: Le nom canonique de l'hôte spécifié sera interrogé.
+    - `"disable_ipv4"`: Seules les adresses IPv6 seront renvoyées.
+    - `"disable_ipv6"`: Seules les adresses IPv4 seront renvoyées.
+    - `"disable_trr"`: n'utilisez pas le TRR (Trusted Recursive Resolver) pour résoudre le nom d'hôte. Un TRR permet la résolution des noms d'hôtes à l'aide d'un serveur [DNS-over-HTTPS](https://tools.ietf.org/html/draft-ietf-doh-dns-over-https-02) dédié.
+    - `"offline"`: seuls les littéraux et les entrées mises en cache seront renvoyés.
+    - `"priority_low"`: La priorité est donnée à la requête. Si "priority_medium" est également donné, la requête est prioritaire.
+    - `"priority_medium"`: La priorité est donnée à la requête. Si "priority_low" est également donné, la requête est prioritaire
+    - `"speculate"`: Indique que la requête est spéculative. Les demandes spéculatives renvoient des erreurs si la prélecture est désactivée par la configuration du navigateur.
 
-<dl>
- <dt><code>addresses</code></dt>
- <dd><code>array</code> of <code>string</code>. Les adresses IP associées à cet enregistrement DNS.</dd>
- <dt><code>canonicalName</code></dt>
- <dd><code>string</code>. Le nom canonique de cet enregistrement. Ceci n'est inclus dans la réponse que si le drapeau <code>"canonical_name"</code>a été passé à  <code>resolve()</code>.</dd>
- <dt><code>isTRR</code></dt>
- <dd><code>boolean</code>: <code>true</code> si l'enregistrement a été récupéré à l'aide d'un TRR (Trusted Recursive Resolver).</dd>
-</dl>
+### Valeur retournée
 
-<h2 id="Exemples">Exemples</h2>
+A [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promisee) qui sera remplie avec un objet `DNSRecord` object. Cet objet peut contenir les propriétés suivantes :
 
-<pre class="brush: js">function resolved(record) {
+- `addresses`
+  - : `array` of `string`. Les adresses IP associées à cet enregistrement DNS.
+- `canonicalName`
+  - : `string`. Le nom canonique de cet enregistrement. Ceci n'est inclus dans la réponse que si le drapeau `"canonical_name"`a été passé à  `resolve()`.
+- `isTRR`
+  - : `boolean`: `true` si l'enregistrement a été récupéré à l'aide d'un TRR (Trusted Recursive Resolver).
+
+## Exemples
+
+```js
+function resolved(record) {
   console.log(record.addresses);
 }
 
 let resolving = browser.dns.resolve("example.com");
 resolving.then(resolved);
 
-// &gt; e.g. Array [ "73.284.240.12" ]
-</pre>
+// > e.g. Array [ "73.284.240.12" ]
+```
 
-<p>Contournez le cache et demandez le nom canonique:</p>
+Contournez le cache et demandez le nom canonique:
 
-<pre class="brush: js">function resolved(record) {
+```js
+function resolved(record) {
   console.log(record.canonicalName);
   console.log(record.addresses);
 }
@@ -84,11 +82,12 @@ let resolving = browser.dns.resolve("developer.mozilla.org",
                                    ["bypass_cache", "canonical_name"]);
 resolving.then(resolved);
 
-// &gt; e.g. xyz.us-west-2.elb.amazonaws.com
-// &gt; e.g. Array [ "78.18.187.134", "34.79.135.234" ]</pre>
+// > e.g. xyz.us-west-2.elb.amazonaws.com
+// > e.g. Array [ "78.18.187.134", "34.79.135.234" ]
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.dns.resolve")}}</p>
+{{Compat("webextensions.api.dns.resolve")}}

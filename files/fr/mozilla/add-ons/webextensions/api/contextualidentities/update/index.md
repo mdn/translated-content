@@ -12,89 +12,77 @@ tags:
   - contextualIdentities
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/update
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Met à jour les propriétés d'une identité contextuelle, compte tenu de son ID de cookie.</p>
+Met à jour les propriétés d'une identité contextuelle, compte tenu de son ID de cookie.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var createContext = browser.contextualIdentities.update(
+```js
+var createContext = browser.contextualIdentities.update(
   cookieStoreId,           // string
   details                  // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>cookieStoreId</code></dt>
- <dd>
- <p><code>string</code>. L'identifiant du cookie store de cette identité contextuelle. Étant donné que les identités contextuelles ont chacune leur propre magasin de cookies, cela sert d'identifiant pour l'identité contextuelle elle-même.</p>
- </dd>
- <dt><code>details</code></dt>
- <dd>
- <p><code>object</code>. Un objet contenant de nouvelles valeurs pour les propriétés que vous souhaitez modifier. Cela peut contenir l'une des propriétés suivantes :</p>
+- `cookieStoreId`
+  - : `string`. L'identifiant du cookie store de cette identité contextuelle. Étant donné que les identités contextuelles ont chacune leur propre magasin de cookies, cela sert d'identifiant pour l'identité contextuelle elle-même.
+- `details`
 
- <dl>
-  <dt><code>name</code> {{optional_inline}}</dt>
-  <dd>
-  <p><code>string</code>. Un nouveau nom pour l'identité. Cela sera affiché dans l'interface utilisateur du navigateur, leur permettant d'ouvrir un nouvel onglet dans l'identité. Il sera également affiché dans la barre d'URL pour les onglets appartenant à cette identité.</p>
-  </dd>
-  <dt><code>color</code> {{optional_inline}}</dt>
-  <dd>
-  <p><code><code>string</code></code>. Une nouvelle couleur pour l'identité. Cela sera utilisé pour mettre en évidence les onglets appartenant à cette identité. Vous pouvez fournir l'une des valeurs suivantes ici :</p>
+  - : `object`. Un objet contenant de nouvelles valeurs pour les propriétés que vous souhaitez modifier. Cela peut contenir l'une des propriétés suivantes :
 
-  <ul>
-   <li>"blue"</li>
-   <li>"turquoise"</li>
-   <li>"green"</li>
-   <li>"yellow"</li>
-   <li>"orange"</li>
-   <li>"red"</li>
-   <li>"pink"</li>
-   <li>"purple"</li>
-   <li>"toolbar"</li>
-  </ul>
-  </dd>
-  <dt><code>icon</code> {{optional_inline}}</dt>
-  <dd>
-  <p><code>string</code>. Une nouvelle icône pour l'identité. Vous pouvez fournir l'une des valeurs suivantes ici :</p>
+    - `name` {{optional_inline}}
+      - : `string`. Un nouveau nom pour l'identité. Cela sera affiché dans l'interface utilisateur du navigateur, leur permettant d'ouvrir un nouvel onglet dans l'identité. Il sera également affiché dans la barre d'URL pour les onglets appartenant à cette identité.
+    - `color` {{optional_inline}}
 
-  <ul>
-   <li>"fingerprint"</li>
-   <li>"briefcase"</li>
-   <li>"dollar"</li>
-   <li>"cart"</li>
-   <li>"circle"</li>
-   <li>"gift"</li>
-   <li>"vacation"</li>
-   <li>"food"</li>
-   <li>"fruit"</li>
-   <li>"pet"</li>
-   <li>"tree"</li>
-   <li>"chill"</li>
-   <li>"fence"</li>
-  </ul>
-  </dd>
- </dl>
- </dd>
-</dl>
+      - : `string`. Une nouvelle couleur pour l'identité. Cela sera utilisé pour mettre en évidence les onglets appartenant à cette identité. Vous pouvez fournir l'une des valeurs suivantes ici :
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+        - "blue"
+        - "turquoise"
+        - "green"
+        - "yellow"
+        - "orange"
+        - "red"
+        - "pink"
+        - "purple"
+        - "toolbar"
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} qui décrit l'identité mise à jour. Si l'identité n'a pas pu être trouvée ou si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.</p>
+    - `icon` {{optional_inline}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+      - : `string`. Une nouvelle icône pour l'identité. Vous pouvez fournir l'une des valeurs suivantes ici :
 
-<p>{{Compat("webextensions.api.contextualIdentities.update")}}</p>
+        - "fingerprint"
+        - "briefcase"
+        - "dollar"
+        - "cart"
+        - "circle"
+        - "gift"
+        - "vacation"
+        - "food"
+        - "fruit"
+        - "pet"
+        - "tree"
+        - "chill"
+        - "fence"
 
-<h2 id="Exemples">Exemples</h2>
+### Valeur retournée
 
-<p>Cet exemple met à jour l'identité contextuelle dont l'ID est "firefox-container-1" pour avoir un nouveau nom, une nouvelle couleur et une nouvelle icône :</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} qui décrit l'identité mise à jour. Si l'identité n'a pas pu être trouvée ou si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
 
-<pre class="brush: js">function onUpdated(context) {
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.contextualIdentities.update")}}
+
+## Exemples
+
+Cet exemple met à jour l'identité contextuelle dont l'ID est "firefox-container-1" pour avoir un nouveau nom, une nouvelle couleur et une nouvelle icône :
+
+```js
+function onUpdated(context) {
   console.log(`New identity's name: ${context.name}.`);
 }
 
@@ -107,6 +95,7 @@ browser.contextualIdentities.update(
     name: "my-thing",
     color: "purple",
     icon: "briefcase"
-  }).then(onUpdated, onError);</pre>
+  }).then(onUpdated, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

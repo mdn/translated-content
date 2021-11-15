@@ -12,76 +12,64 @@ tags:
   - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Une <a href="/fr/Add-ons/WebExtensions/Page_actions">action de page</a> est une icône cliquable dans la barre d'adresse du navigateur.</p>
+Une [action de page](/fr/Add-ons/WebExtensions/Page_actions) est une icône cliquable dans la barre d'adresse du navigateur.
 
-<p><img alt="" src="page-action.png"></p>
+![](page-action.png)
 
-<p>Vous pouvez écouter les clics sur l'icône, ou spécifié une <a href="/fr/Add-ons/WebExtensions/Popups">fenêtre contextuelle </a>qui s'ouvre  lorsque l'icone est cliquée.</p>
+Vous pouvez écouter les clics sur l'icône, ou spécifié une [fenêtre contextuelle ](/fr/Add-ons/WebExtensions/Popups)qui s'ouvre  lorsque l'icone est cliquée.
 
-<p>Si vous spécifiez une fenêtre contextuelle, vous pouvez définir son contenu et son comportement en utilisant HTML, CSS et JavaScript, tout comme une page Web normale. Le JavaScript s'exécutant dans la fenêtre contextuelle accède à toutes les mêmes API WebExtension que vos scripts d'arrière-plan.</p>
+Si vous spécifiez une fenêtre contextuelle, vous pouvez définir son contenu et son comportement en utilisant HTML, CSS et JavaScript, tout comme une page Web normale. Le JavaScript s'exécutant dans la fenêtre contextuelle accède à toutes les mêmes API WebExtension que vos scripts d'arrière-plan.
 
-<p>Vous pouvez définir la plupart des propriétés d'une action de page de manière déclarative à l'aide de la  <a href="/fr/Add-ons/WebExtensions/manifest.json/page_action">clef page_action</a> dans votre <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>, mais également les redéfinir par programmation en utilisant cette API.</p>
+Vous pouvez définir la plupart des propriétés d'une action de page de manière déclarative à l'aide de la  [clef page_action](/fr/Add-ons/WebExtensions/manifest.json/page_action) dans votre [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), mais également les redéfinir par programmation en utilisant cette API.
 
-<p>Les actions de page sont pour des actions qui ne sont pertinentes que pour des pages particulières (comme "favoris dans l'onglet courrant"). S'ils sont pertinents pour le navigateur dans son ensemble (par exemple, "Afficher tous les favoris"), utilisez plutôt une action du navigateur.</p>
+Les actions de page sont pour des actions qui ne sont pertinentes que pour des pages particulières (comme "favoris dans l'onglet courrant"). S'ils sont pertinents pour le navigateur dans son ensemble (par exemple, "Afficher tous les favoris"), utilisez plutôt une action du navigateur.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("pageAction.ImageDataType")}}</dt>
- <dd>Données en pixel pour une image.</dd>
-</dl>
+- {{WebExtAPIRef("pageAction.ImageDataType")}}
+  - : Données en pixel pour une image.
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt>{{WebExtAPIRef("pageAction.show()")}}</dt>
- <dd>Affiche l'action de la page pour un onglet donné.</dd>
- <dt>{{WebExtAPIRef("pageAction.hide()")}}</dt>
- <dd>Caches l'action de la page pour un onglet donné.</dd>
- <dt>{{WebExtAPIRef("pageAction.isShown()")}}</dt>
- <dd>Vérifie si l'action de la page est affichée ou non.</dd>
- <dt>{{WebExtAPIRef("pageAction.setTitle()")}}</dt>
- <dd>Définit le titre de l'action de la page. Ceci est affiché dans une info-bulle sur l'action de la page.</dd>
- <dt>{{WebExtAPIRef("pageAction.getTitle()")}}</dt>
- <dd>Obtient le titre de l'action de la page</dd>
- <dt>{{WebExtAPIRef("pageAction.setIcon()")}}</dt>
- <dd>Définit l'icône de l'action de la page.</dd>
- <dt>{{WebExtAPIRef("pageAction.setPopup()")}}</dt>
- <dd>Définit l'URL de la fenêtre contextuelle de l'action de la page.</dd>
- <dt>{{WebExtAPIRef("pageAction.getPopup()")}}</dt>
- <dd>Obtient l'URL de la fenêtre d'action de la page.</dd>
- <dt>{{WebExtAPIRef("pageAction.openPopup()")}}</dt>
- <dd>Ouvre la fenêtre contextuelle de l'action de la page.</dd>
-</dl>
+- {{WebExtAPIRef("pageAction.show()")}}
+  - : Affiche l'action de la page pour un onglet donné.
+- {{WebExtAPIRef("pageAction.hide()")}}
+  - : Caches l'action de la page pour un onglet donné.
+- {{WebExtAPIRef("pageAction.isShown()")}}
+  - : Vérifie si l'action de la page est affichée ou non.
+- {{WebExtAPIRef("pageAction.setTitle()")}}
+  - : Définit le titre de l'action de la page. Ceci est affiché dans une info-bulle sur l'action de la page.
+- {{WebExtAPIRef("pageAction.getTitle()")}}
+  - : Obtient le titre de l'action de la page
+- {{WebExtAPIRef("pageAction.setIcon()")}}
+  - : Définit l'icône de l'action de la page.
+- {{WebExtAPIRef("pageAction.setPopup()")}}
+  - : Définit l'URL de la fenêtre contextuelle de l'action de la page.
+- {{WebExtAPIRef("pageAction.getPopup()")}}
+  - : Obtient l'URL de la fenêtre d'action de la page.
+- {{WebExtAPIRef("pageAction.openPopup()")}}
+  - : Ouvre la fenêtre contextuelle de l'action de la page.
 
-<h2 id="Evénements">Evénements</h2>
+## Evénements
 
-<dl>
- <dt>{{WebExtAPIRef("pageAction.onClicked")}}</dt>
- <dd>Activé lorsqu'une icône d'action de page est cliquée. Cet événement ne se déclenchera pas si l'action de la page comporte une fenêtre contextuelle.</dd>
-</dl>
+- {{WebExtAPIRef("pageAction.onClicked")}}
+  - : Activé lorsqu'une icône d'action de page est cliquée. Cet événement ne se déclenchera pas si l'action de la page comporte une fenêtre contextuelle.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
+{{Compat("webextensions.api.pageAction")}}
 
+{{WebExtExamples("h2")}}
 
-<p>{{Compat("webextensions.api.pageAction")}}</p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-
-
-<p>{{WebExtExamples("h2")}}</p>
-
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/pageAction"><code>chrome.pageAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,5 +96,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

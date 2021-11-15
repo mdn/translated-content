@@ -12,44 +12,45 @@ tags:
   - pkcs11
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/isModuleInstalled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Vérifie si le module PKCS #11 nommé est actuellement installé dans Firefox.</p>
+Vérifie si le module PKCS #11 nommé est actuellement installé dans Firefox.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var checking = browser.pkcs11.isModuleInstalled(
+```js
+var checking = browser.pkcs11.isModuleInstalled(
   name              // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>string</code>. Nom du module à vérifier.</dd>
-</dl>
+- `name`
+  - : `string`. Nom du module à vérifier.
 
-<h3 id="valeur_retournée">valeur retournée</h3>
+### valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec <code>true</code> si le module est installé, <code>false</code> sinon.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `true` si le module est installé, `false` sinon.
 
-<p>Si une erreur se produit dans le module, la promise sera rejetée avec un message d'erreur.</p>
+Si une erreur se produit dans le module, la promise sera rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.pkcs11.isModuleInstalled", 10)}}</p>
+{{Compat("webextensions.api.pkcs11.isModuleInstalled", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Vérifie sir le module nommée "pkcs11_module" est installé :</p>
+Vérifie sir le module nommée "pkcs11_module" est installé :
 
-<pre class="brush: js">function logIsInstalled(isInstalled) {
+```js
+function logIsInstalled(isInstalled) {
   console.log(`Module is installed: ${isInstalled}`);
 }
 
-browser.pkcs11.isModuleInstalled("pkcs11_module").then(logIsInstalled);</pre>
+browser.pkcs11.isModuleInstalled("pkcs11_module").then(logIsInstalled);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

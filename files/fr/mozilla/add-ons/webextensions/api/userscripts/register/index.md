@@ -11,66 +11,62 @@ tags:
   - userScripts
 translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/register
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>Dans les pages d'une extension (comme la page d'arrière plan), l'API userScripts fournit une méthode API  {{WebExtAPIRef("userScripts.register","register()")}}. Cette méthode est très similaire à la méthode API  {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} (par exemple, ils retournent tous les deux une promise qui est résolue à un objet API qui fournit un   {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","unregister()")}} pour la désinscription du script enregistré de tous les processus enfants), avec quelques différences dans les options prises en charge.</p>
+Dans les pages d'une extension (comme la page d'arrière plan), l'API userScripts fournit une méthode API  {{WebExtAPIRef("userScripts.register","register()")}}. Cette méthode est très similaire à la méthode API  {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} (par exemple, ils retournent tous les deux une promise qui est résolue à un objet API qui fournit un   {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","unregister()")}} pour la désinscription du script enregistré de tous les processus enfants), avec quelques différences dans les options prises en charge.
 
-<p>C'est une méthode asynchrone qui retourne un {{JSxRef("Promise")}}.</p>
+C'est une méthode asynchrone qui retourne un {{JSxRef("Promise")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">const registeredUserScript = await browser.userScripts.register(
+```js
+const registeredUserScript = await browser.userScripts.register(
   userScriptOptions       // object
 );
 ….
-await registeredUserScript.unregister();</pre>
+await registeredUserScript.unregister();
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>userScriptOptions</code></dt>
- <dd><p><code>object</code>. Un objet <code>UserScriptOptions</code> représentant les scripts de contenu à enregistrer. Il a une syntaxe similaire aux options supportées par {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}}.</p>
- <p>L'objet <code>UserScriptOptions</code> possède les propriétés suivantes :</p>
- <dl>
-  <dt>scriptMetadata <code>{{Optional_Inline}}</code></dt>
-  <dd>Un objet <code>JSON</code> qui contient certaines propriétés de métadonnées associées aux <code>userScripts</code> enregistrés</dd>
-  <dt><code>allFrames {{Optional_Inline}}</code></dt>
-  <dd>Identiques à <code>all_frames</code> dans la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a></code>.</dd>
-  <dt><code>excludeGlobs</code> {{Optional_Inline}}</dt>
-  <dd>Identique à <code>exclude_globs</code> dans la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a></code>.</dd>
-  <dt><code>excludeMatches</code> {{Optional_Inline}}</dt>
-  <dd>Identique à <code>exclude_matches</code> dans la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a></code>.</dd>
-  <dt><code>includeGlobs</code> {{Optional_Inline}}</dt>
-  <dd>Identique à <code>include_globs</code> dans la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a></code>.</dd>
-  <dt><code>js</code> {{Optional_Inline}}</dt>
-  <dd>Un tableau d'objets. Chaque objet a soit une propriété nommée <code>file</code>, qui est une URL commençant par le fichier manifest.json de l'extension et pointant vers un fichier JavaScript à enregistrer, soit une propriété nommée <code>code</code>, qui est un code JavaScript à enregistrer.</dd>
-  <dt><code>matchAboutBlank</code> {{Optional_Inline}}</dt>
-  <dd>Identique à <code>match_about_blank</code> dans la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a></code>.</dd>
-  <dt><code>matches</code></dt>
-  <dd>Identique à <code>matches</code> dans la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a></code>.</dd>
-  <dt><code>runAt</code> {{Optional_Inline}}</dt>
-  <dd>Identique à<code>run_at</code> dans la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a></code>.</dd>
- </dl>
- </dd>
-</dl>
+- `userScriptOptions`
 
-<p>Contrairement aux options de script de contenu, l'objet userScriptOptions n'a pas de propriété css. Utilisez {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} pour enregistrer/désenregistrer dynamiquement les feuilles de style).</p>
+  - : `object`. Un objet `UserScriptOptions` représentant les scripts de contenu à enregistrer. Il a une syntaxe similaire aux options supportées par {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}}.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+    L'objet `UserScriptOptions` possède les propriétés suivantes :
 
-<p>Une {{JSxRef("Promise")}} qui sera rempli avec un objet  {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} que vous pouvez utiliser pour désinscrire ce script utilisateur particulier.</p>
+    - scriptMetadata `{{Optional_Inline}}`
+      - : Un objet `JSON` qui contient certaines propriétés de métadonnées associées aux `userScripts` enregistrés
+    - `allFrames {{Optional_Inline}}`
+      - : Identiques à `all_frames` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
+    - `excludeGlobs` {{Optional_Inline}}
+      - : Identique à `exclude_globs` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
+    - `excludeMatches` {{Optional_Inline}}
+      - : Identique à `exclude_matches` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
+    - `includeGlobs` {{Optional_Inline}}
+      - : Identique à `include_globs` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
+    - `js` {{Optional_Inline}}
+      - : Un tableau d'objets. Chaque objet a soit une propriété nommée `file`, qui est une URL commençant par le fichier manifest.json de l'extension et pointant vers un fichier JavaScript à enregistrer, soit une propriété nommée `code`, qui est un code JavaScript à enregistrer.
+    - `matchAboutBlank` {{Optional_Inline}}
+      - : Identique à `match_about_blank` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
+    - `matches`
+      - : Identique à `matches` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
+    - `runAt` {{Optional_Inline}}
+      - : Identique à`run_at` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
 
-<div class="note">
-<p><strong>Note :</strong> Actuellement, les scripts utilisateur sont désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés.</p>
-</div>
+Contrairement aux options de script de contenu, l'objet userScriptOptions n'a pas de propriété css. Utilisez {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} pour enregistrer/désenregistrer dynamiquement les feuilles de style).
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.userScripts.register", 10)}}</p>
+Une {{JSxRef("Promise")}} qui sera rempli avec un objet  {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} que vous pouvez utiliser pour désinscrire ce script utilisateur particulier.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+> **Note :** Actuellement, les scripts utilisateur sont désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés.
 
-<ul>
- <li>{{WebExtAPIRef("contentScripts.register","contentScripts.register()")}}</li>
- <li>{{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","RegisteredUserScript.unregister()")}}</li>
-</ul>
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.userScripts.register", 10)}}
+
+## Voir aussi
+
+- {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}}
+- {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","RegisteredUserScript.unregister()")}}

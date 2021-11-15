@@ -6,31 +6,35 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>En utilisant l'API {{WebExtAPIRef("omnibox")}}, WebExtensions peut personnaliser les suggestions proposées dans la liste déroulante de la barre d'adresse du navigateur lorsque l'utilisateur entre un mot-clé.</p>
+En utilisant l'API {{WebExtAPIRef("omnibox")}}, WebExtensions peut personnaliser les suggestions proposées dans la liste déroulante de la barre d'adresse du navigateur lorsque l'utilisateur entre un mot-clé.
 
-<p><img src="omnibox_example_small.png"></p>
+![](omnibox_example_small.png)
 
-<p>Cela permet à votre extension, par exemple, de rechercher une bibliothèque d'ebooks gratuits ou comme dans l'exemple ci-dessus, un dépôt d'exemples de code.</p>
+Cela permet à votre extension, par exemple, de rechercher une bibliothèque d'ebooks gratuits ou comme dans l'exemple ci-dessus, un dépôt d'exemples de code.
 
-<h2 id="Spécification_de_la_personnalisation_Omnibox">Spécification de la personnalisation Omnibox</h2>
+## Spécification de la personnalisation Omnibox
 
-<p>Vous dites à votre extension qu'il va personnaliser les suggestions de la barre d'adresse en incluant la clé <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox">omnibox</a> et la définition du mot-clé de déclenchement dans son fichier <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> :</p>
+Vous dites à votre extension qu'il va personnaliser les suggestions de la barre d'adresse en incluant la clé [omnibox](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox) et la définition du mot-clé de déclenchement dans son fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) :
 
-<pre class="brush: json">  "omnibox": { "keyword" : "cs" }</pre>
+```json
+  "omnibox": { "keyword" : "cs" }
+```
 
-<p>Dans le fichier JavaScript d'arrière-plan extension, en utilisant {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, vous pouvez éventuellement définir la première suggestion à afficher dans la liste déroulante de la barre d'adresse. Utilisez ceci pour donner un indice sur l'utilisation de la fonction :</p>
+Dans le fichier JavaScript d'arrière-plan extension, en utilisant {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, vous pouvez éventuellement définir la première suggestion à afficher dans la liste déroulante de la barre d'adresse. Utilisez ceci pour donner un indice sur l'utilisation de la fonction :
 
-<pre class="brush: js">browser.omnibox.setDefaultSuggestion({
+```js
+browser.omnibox.setDefaultSuggestion({
   description: `Search the firefox codebase
     (e.g. "hello world" | "path:omnibox.js onInputChanged")`
-});</pre>
+});
+```
 
+Vous pouvez ensuite ajouter le code pour fournir le contenu personnalisé en écoutant  {{WebExtAPIRef("omnibox.onInputStarted")}}, qui est envoyé lorsque l'utilisateur a tapé le mot-clé et un espace, et  {{WebExtAPIRef("omnibox.onInputChanged")}}, qui est expédié chaque fois que l'utilisateur met à jour l'entrée de la barre d'adresse. Vous pouvez ensuite remplir les suggestions, dans ce cas, créer une recherche de https\://searchfox.org/mozilla-central utilisant le terme entré par l'utilisateur :
 
-<p>Vous pouvez ensuite ajouter le code pour fournir le contenu personnalisé en écoutant  {{WebExtAPIRef("omnibox.onInputStarted")}}, qui est envoyé lorsque l'utilisateur a tapé le mot-clé et un espace, et  {{WebExtAPIRef("omnibox.onInputChanged")}}, qui est expédié chaque fois que l'utilisateur met à jour l'entrée de la barre d'adresse. Vous pouvez ensuite remplir les suggestions, dans ce cas, créer une recherche de https://searchfox.org/mozilla-central utilisant le terme entré par l'utilisateur :</p>
-
-<pre class="brush: js">browser.omnibox.onInputChanged.addListener((text, addSuggestions) =&gt; {
+```js
+browser.omnibox.onInputChanged.addListener((text, addSuggestions) => {
   let headers = new Headers({"Accept": "application/json"});
   let init = {method: 'GET', headers};
   let url = buildSearchURL(text);
@@ -39,14 +43,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
   fetch(request)
     .then(createSuggestionsFromResponse)
     .then(addSuggestions);
-});</pre>
+});
+```
 
-<p>Si la WebExtension définit une suggestion par défaut en utilisant {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, alors cela apparaîtra en premier dans la liste déroulante.</p>
+Si la WebExtension définit une suggestion par défaut en utilisant {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, alors cela apparaîtra en premier dans la liste déroulante.
 
+L'extension peut ensuite écouter l'utilisateur en cliquant sur l'une des suggestions, en utilisant {{WebExtAPIRef("omnibox.onInputEntered")}}. Si la suggestion par défaut est cliquée, le terme personnalisé de l'utilisateur est renvoyé, sinon la chaîne de la suggestion est renvoyée. En outre, les informations sur les préférences du navigateur de l'utilisateur pour la gestion des nouveaux liens sont transmises. Dans le code ci-dessous, le terme personnalisé de l'utilisateur est employé pour créer une recherche différente, l'URL suggérée est ouverte:
 
-<p>L'extension peut ensuite écouter l'utilisateur en cliquant sur l'une des suggestions, en utilisant {{WebExtAPIRef("omnibox.onInputEntered")}}. Si la suggestion par défaut est cliquée, le terme personnalisé de l'utilisateur est renvoyé, sinon la chaîne de la suggestion est renvoyée. En outre, les informations sur les préférences du navigateur de l'utilisateur pour la gestion des nouveaux liens sont transmises. Dans le code ci-dessous, le terme personnalisé de l'utilisateur est employé pour créer une recherche différente, l'URL suggérée est ouverte:</p>
-
-<pre class="brush: js">browser.omnibox.onInputEntered.addListener((text, disposition) =&gt; {
+```js
+browser.omnibox.onInputEntered.addListener((text, disposition) => {
   let url = text;
   if (!text.startsWith(SOURCE_URL)) {
     // Update the url if the user clicks on the default suggestion.
@@ -63,13 +68,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
       browser.tabs.create({url, active: false});
       break;
   }
-});</pre>
+});
+```
 
+## Exemples
 
-<h2 id="Exemples">Exemples</h2>
+Le depot [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub contient plusieurs exemples de WebExtensions qui utilise la personnalisation de omnibox
 
-<p>Le depot <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> sur GitHub contient plusieurs exemples de WebExtensions qui utilise la personnalisation de omnibox</p>
-
-<ul>
- <li><a href="https://github.com/mdn/webextensions-examples/tree/master/firefox-code-search">firefox-code-search</a> utilise la personnalisation de omnibox</li>
-</ul>
+- [firefox-code-search](https://github.com/mdn/webextensions-examples/tree/master/firefox-code-search) utilise la personnalisation de omnibox

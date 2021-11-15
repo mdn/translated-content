@@ -13,38 +13,34 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Spécifie la raison pour laquelle un onglet a été désactivé ou désactivé.</p>
+Spécifie la raison pour laquelle un onglet a été désactivé ou désactivé.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :</p>
+Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
-<dl>
- <dt>"capture"</dt>
- <dd>La capture d'onglets a commencé, forçant un changement d'état muet.</dd>
- <dt>"extension"</dt>
- <dd>Une extension définit l'état muet. Si c'est la raison, <code>extensionId</code> dans {{WebExtAPIRef("tabs.mutedInfo")}} contiendra l'ID de l'extension responsable.</dd>
- <dt>"user"</dt>
- <dd>L'utilisateur définit l'état muet.</dd>
-</dl>
+- "capture"
+  - : La capture d'onglets a commencé, forçant un changement d'état muet.
+- "extension"
+  - : Une extension définit l'état muet. Si c'est la raison, `extensionId` dans {{WebExtAPIRef("tabs.mutedInfo")}} contiendra l'ID de l'extension responsable.
+- "user"
+  - : L'utilisateur définit l'état muet.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.MutedInfoReason")}}</p>
+{{Compat("webextensions.api.tabs.MutedInfoReason")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -71,5 +67,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

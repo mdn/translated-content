@@ -13,54 +13,53 @@ tags:
   - menus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Ajoutez des éléments au système de menus du navigateur.</p>
+Ajoutez des éléments au système de menus du navigateur.
 
-<p>Cette API est modélisée dans l'API <a href="https://developer.chrome.com/extensions/contextMenus">"contextMenus"</a> de Chrome, qui permet aux extensions Chrome d'ajouter des éléments au menu contextuel du navigateur. L'API <code>browser.menus</code> ajoute quelques fonctionnalités à l'API de Chrome.</p>
+Cette API est modélisée dans l'API ["contextMenus"](https://developer.chrome.com/extensions/contextMenus) de Chrome, qui permet aux extensions Chrome d'ajouter des éléments au menu contextuel du navigateur. L'API `browser.menus` ajoute quelques fonctionnalités à l'API de Chrome.
 
-<p>Avant Firefox 55, cette API s'appelait à l'origine <code>contextMenus</code>, et ce nom a été retenu comme alias. Vous pouvez donc utiliser <code>contextMenus</code> pour écrire du code qui fonctionne dans Firefox et dans d'autres navigateurs.</p>
+Avant Firefox 55, cette API s'appelait à l'origine `contextMenus`, et ce nom a été retenu comme alias. Vous pouvez donc utiliser `contextMenus` pour écrire du code qui fonctionne dans Firefox et dans d'autres navigateurs.
 
-<p>Pour utiliser cette API, vous devez avoir la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> des  <code>menus.</code> vous pouvez également utiliser l'alias <code>contextMenus</code> à la place des <code>menus</code>, mais si vous le faites, vous devez accéder aux API sous le nom <code>browser.contextMenus</code> à la place.</p>
+Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) des  `menus.` vous pouvez également utiliser l'alias `contextMenus` à la place des `menus`, mais si vous le faites, vous devez accéder aux API sous le nom `browser.contextMenus` à la place.
 
-<p>Excepté que <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement">menus.getTargetElement()</a></code>, cette API ne peut pas être utilisée à partir de scripts de contenu.</p>
+Excepté que [`menus.getTargetElement()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement), cette API ne peut pas être utilisée à partir de scripts de contenu.
 
-<h2 id="Créer_des_éléments_de_menu">Créer des éléments de menu</h2>
+## Créer des éléments de menu
 
-<p>Pour créer un élément de menu, appelez la méthode {{WebExtAPIRef("menus.create()")}}. Vous transmettez à cette méthode un objet contenant des options pour l'élément, y compris l'ID d'élément, le type d'élément et les contextes dans lesquels il doit être affiché.</p>
+Pour créer un élément de menu, appelez la méthode {{WebExtAPIRef("menus.create()")}}. Vous transmettez à cette méthode un objet contenant des options pour l'élément, y compris l'ID d'élément, le type d'élément et les contextes dans lesquels il doit être affiché.
 
-<p>Écoutez les clics sur votre élément de menu en ajoutant un écouteur à l'événement {{WebExtAPIRef("menus.onClicked")}}. Cet écouteur recevra un objet  {{WebExtAPIRef("menus.OnClickData")}} contenant les détails de l'événement.</p>
+Écoutez les clics sur votre élément de menu en ajoutant un écouteur à l'événement {{WebExtAPIRef("menus.onClicked")}}. Cet écouteur recevra un objet  {{WebExtAPIRef("menus.OnClickData")}} contenant les détails de l'événement.
 
-<p>Vous pouvez créer quatre types différents d'élément de menu, en fonction de la valeur de la propriété <code>type</code> que vous fournissez dans les options de <code>create()</code>:</p>
+Vous pouvez créer quatre types différents d'élément de menu, en fonction de la valeur de la propriété `type` que vous fournissez dans les options de `create()`:
 
-<ul>
- <li>"normal": un élément de menu qui affiche simplement une étiquette</li>
- <li>"checkbox": un élément de menu qui représente un état binaire. Il affiche une coche à côté de l'étiquette. Cliquez sur l'élément pour activer la case. L'écouteur de clic recevra deux propriétés supplémentaires : "checked",indiquant si l'élément est vérifié maintenant, et "wasChecked", indiquant si l'élément a été vérifié avant l'événement click.</li>
- <li>"radio": un élément de menu qui représente l'un des groupes de choix. Tout comme une case à cocher, cela affiche également une coche à côté de l'étiquette, et son écouteur de clic est passé "checked" et "wasChecked". Cependant, si vous créez plus d'un élément radio, les éléments fonctionnent comme un groupe d'éléments radio: un seul élément du groupe peut être vérifié, et cliquer sur un élément en fait l'élément sélectionné.</li>
- <li>"separateur": une ligne séparant un groupe d'éléments.</li>
-</ul>
+- "normal": un élément de menu qui affiche simplement une étiquette
+- "checkbox": un élément de menu qui représente un état binaire. Il affiche une coche à côté de l'étiquette. Cliquez sur l'élément pour activer la case. L'écouteur de clic recevra deux propriétés supplémentaires : "checked",indiquant si l'élément est vérifié maintenant, et "wasChecked", indiquant si l'élément a été vérifié avant l'événement click.
+- "radio": un élément de menu qui représente l'un des groupes de choix. Tout comme une case à cocher, cela affiche également une coche à côté de l'étiquette, et son écouteur de clic est passé "checked" et "wasChecked". Cependant, si vous créez plus d'un élément radio, les éléments fonctionnent comme un groupe d'éléments radio: un seul élément du groupe peut être vérifié, et cliquer sur un élément en fait l'élément sélectionné.
+- "separateur": une ligne séparant un groupe d'éléments.
 
-<p>Si vous avez créé plus d'un élément de menu contextuel ou plus d'un élément de menu d'outils, les éléments seront placés dans un sous-menu. Le parent du sous-menu sera étiqueté avec le nom de l'extension. Par exemple, voici une extension appelée "Menu démo" qui ajoute deux éléments de menu contextuel:</p>
+Si vous avez créé plus d'un élément de menu contextuel ou plus d'un élément de menu d'outils, les éléments seront placés dans un sous-menu. Le parent du sous-menu sera étiqueté avec le nom de l'extension. Par exemple, voici une extension appelée "Menu démo" qui ajoute deux éléments de menu contextuel:
 
-<p><img alt="" src="menus-1.png"></p>
+![](menus-1.png)
 
-<h2 id="Icônes">Icônes</h2>
+## Icônes
 
-<p>Si vous avez spécifié des icônes pour votre extension à l'aide de la <a href="/fr/Add-ons/WebExtensions/manifest.json/icons">clé de manifest "icons"</a>, votre élément de menu affichera l'icône spécifiée à côté de son libellé. Le navigateur va essayer de choisir une icône de 16x16 pixels pour un affichage normal ou une icône de 32x32 pixels pour un affichage haute définition :</p>
+Si vous avez spécifié des icônes pour votre extension à l'aide de la [clé de manifest "icons"](/fr/Add-ons/WebExtensions/manifest.json/icons), votre élément de menu affichera l'icône spécifiée à côté de son libellé. Le navigateur va essayer de choisir une icône de 16x16 pixels pour un affichage normal ou une icône de 32x32 pixels pour un affichage haute définition :
 
-<p><img alt="" src="menus-2.png"></p>
+![](menus-2.png)
 
-<p>Uniquement pour les éléments d'un sous-menu, vous pouvez spécifier des icônes personnalisées en passant l'option <code>icons</code> à {{WebExtAPIRef("menus.create()")}} :</p>
+Uniquement pour les éléments d'un sous-menu, vous pouvez spécifier des icônes personnalisées en passant l'option `icons` à {{WebExtAPIRef("menus.create()")}} :
 
-<p><img alt="" src="menus-3.png"></p>
+![](menus-3.png)
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Voici un menu contextuel contenant 4 éléments: un élément normal, deux éléments radio avec des séparateurs de chaque côté et une case à cocher. Les éléments radio sont dotés d'icônes personnalisées.</p>
+Voici un menu contextuel contenant 4 éléments: un élément normal, deux éléments radio avec des séparateurs de chaque côté et une case à cocher. Les éléments radio sont dotés d'icônes personnalisées.
 
-<p><img alt="" src="menus-4.png">Vous pouvez créer un sous-menu comme celui-ci en utilisant du code comme :</p>
+![](menus-4.png)Vous pouvez créer un sous-menu comme celui-ci en utilisant du code comme :
 
-<pre class="brush: js">browser.menus.create({
+```js
+browser.menus.create({
   id: "remove-me",
   title: browser.i18n.getMessage("menuItemRemoveMe"),
   contexts: ["all"]
@@ -110,69 +109,60 @@ browser.menus.create({
   title: browser.i18n.getMessage("menuItemUncheckMe"),
   contexts: ["all"],
   checked: checkedState
-}, onCreated);</pre>
+}, onCreated);
+```
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("menus.ContextType")}}</dt>
- <dd>Les différents contextes dans lesquels un menu peut apparaître.</dd>
- <dt>{{WebExtAPIRef("menus.ItemType")}}</dt>
- <dd>Le type d'élément de menu : "normal", "checkbox", "radio", "separator".</dd>
- <dt>{{WebExtAPIRef("menus.OnClickData")}}</dt>
- <dd>Informations envoyées lorsqu'un élément de menu est cliqué.</dd>
-</dl>
+- {{WebExtAPIRef("menus.ContextType")}}
+  - : Les différents contextes dans lesquels un menu peut apparaître.
+- {{WebExtAPIRef("menus.ItemType")}}
+  - : Le type d'élément de menu : "normal", "checkbox", "radio", "separator".
+- {{WebExtAPIRef("menus.OnClickData")}}
+  - : Informations envoyées lorsqu'un élément de menu est cliqué.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}</dt>
- <dd>Le nombre maximal d'éléments d'extension de niveau supérieur pouvant être ajoutés à un élément de menu dont le type de contexte est "browser_action" ou "page_action".</dd>
-</dl>
+- {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}
+  - : Le nombre maximal d'éléments d'extension de niveau supérieur pouvant être ajoutés à un élément de menu dont le type de contexte est "browser_action" ou "page_action".
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("menus.create()")}}</dt>
- <dd>Crée un nouvel élément de menu.</dd>
- <dt>{{WebExtApiRef("menus.getTargetElement()")}}</dt>
- <dd>Retourne l'élément pour un <code>info.targetElementId</code> donné</dd>
- <dt>{{WebExtApiRef("menus.overrideContext()")}}</dt>
- <dd>Masquer tous les éléments de menu par défaut de Firefox en faveur d'une interface utilisateur de menu contextuel personnalisé.</dd>
- <dt>{{WebExtAPIRef("menus.refresh()")}}</dt>
- <dd>Mettre à jour un menu actuellement affiché.</dd>
- <dt>{{WebExtAPIRef("menus.remove()")}}</dt>
- <dd>Supprime un élément de menu.</dd>
- <dt>{{WebExtAPIRef("menus.removeAll()")}}</dt>
- <dd>Supprime tous les éléments de menu ajoutés par cette extension.</dd>
- <dt>{{WebExtAPIRef("menus.update()")}}</dt>
- <dd>Met à jour un élément de menu précédemment créé.</dd>
-</dl>
+- {{WebExtAPIRef("menus.create()")}}
+  - : Crée un nouvel élément de menu.
+- {{WebExtApiRef("menus.getTargetElement()")}}
+  - : Retourne l'élément pour un `info.targetElementId` donné
+- {{WebExtApiRef("menus.overrideContext()")}}
+  - : Masquer tous les éléments de menu par défaut de Firefox en faveur d'une interface utilisateur de menu contextuel personnalisé.
+- {{WebExtAPIRef("menus.refresh()")}}
+  - : Mettre à jour un menu actuellement affiché.
+- {{WebExtAPIRef("menus.remove()")}}
+  - : Supprime un élément de menu.
+- {{WebExtAPIRef("menus.removeAll()")}}
+  - : Supprime tous les éléments de menu ajoutés par cette extension.
+- {{WebExtAPIRef("menus.update()")}}
+  - : Met à jour un élément de menu précédemment créé.
 
-<h2 id="Evénements">Evénements</h2>
+## Evénements
 
-<dl>
- <dt>{{WebExtAPIRef("menus.onClicked")}}</dt>
- <dd>Lancé lorsqu'un élément de menu est cliqué.</dd>
- <dt>{{WebExtAPIRef("menus.onHidden")}}</dt>
- <dd>Lancé lorsque le navigateur cache un menu.</dd>
- <dt>{{WebExtAPIRef("menus.onShown")}}</dt>
- <dd>Lancé lorsque le navigateur affiche un menu.</dd>
-</dl>
+- {{WebExtAPIRef("menus.onClicked")}}
+  - : Lancé lorsqu'un élément de menu est cliqué.
+- {{WebExtAPIRef("menus.onHidden")}}
+  - : Lancé lorsque le navigateur cache un menu.
+- {{WebExtAPIRef("menus.onShown")}}
+  - : Lancé lorsque le navigateur affiche un menu.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{ Compat("webextensions.api.menus", 1, "true") }}</p>
+{{ Compat("webextensions.api.menus", 1, "true") }}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
 
-<p>Cette API est basée sur l'API <a href="https://developer.chrome.com/extensions/contextMenus"><code>chrome.contextMenus</code></a> de chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> dans le code Chromium.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -199,5 +189,4 @@ browser.menus.create({
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

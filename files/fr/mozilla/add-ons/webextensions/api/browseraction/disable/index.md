@@ -13,56 +13,56 @@ tags:
   - disable
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Désactive l'action du navigateur pour un onglet, ce qui signifie qu'il ne peut pas être cliqué lorsque cet onglet est actif.</p>
+Désactive l'action du navigateur pour un onglet, ce qui signifie qu'il ne peut pas être cliqué lorsque cet onglet est actif.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.browserAction.disable(
+```js
+browser.browserAction.disable(
   tabId // optional integer
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. L'identifiant (ID) de l'onglet pour lequel vous souhaitez désactiver l'action du navigateur.</dd>
-</dl>
+- `tabId`{{optional_inline}}
+  - : `integer`. L'identifiant (ID) de l'onglet pour lequel vous souhaitez désactiver l'action du navigateur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browserAction.disable")}}</p>
+{{Compat("webextensions.api.browserAction.disable")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Désactive l'action du navigateur lorsque vous cliquez et réactivez-le chaque fois qu'un nouveau onglet est ouvert :</p>
+Désactive l'action du navigateur lorsque vous cliquez et réactivez-le chaque fois qu'un nouveau onglet est ouvert :
 
-<pre class="brush: js">browser.tabs.onCreated.addListener(() =&gt; {
+```js
+browser.tabs.onCreated.addListener(() => {
   browser.browserAction.enable();
 });
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   browser.browserAction.disable();
 });
-</pre>
+```
 
-<p>Désactivez l'action du navigateur uniquement pour l'onglet actif :</p>
+Désactivez l'action du navigateur uniquement pour l'onglet actif :
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener((tab) =&gt; {
+```js
+browser.browserAction.onClicked.addListener((tab) => {
   browser.browserAction.disable(tab.id);
-});</pre>
+});
+```
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -89,5 +89,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

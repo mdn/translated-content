@@ -13,54 +13,48 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DangerType
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p>Le type <code>DangerType</code> de l'API {{WebExtAPIRef("downloads")}} définit un ensemble de raisons possibles pour lesquelles un fichier téléchargeable peut être considéré comme dangereux..</p>
+Le type `DangerType` de l'API {{WebExtAPIRef("downloads")}} définit un ensemble de raisons possibles pour lesquelles un fichier téléchargeable peut être considéré comme dangereux..
 
-<p>Une propriété de <code>danger</code> {{WebExtAPIRef('downloads.DownloadItem')}} contiendra une chaîne tirée des valeurs définies dans ce type.</p>
+Une propriété de `danger` {{WebExtAPIRef('downloads.DownloadItem')}} contiendra une chaîne tirée des valeurs définies dans ce type.
 
-<div class="note">
-<p><strong>Note :</strong> Ces constantes de chaîne ne changeront jamais, mais l'ensemble de DangerTypes peut changer.</p>
-</div>
+> **Note :** Ces constantes de chaîne ne changeront jamais, mais l'ensemble de DangerTypes peut changer.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :</p>
+Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
-<dl>
- <dt><code>file</code></dt>
- <dd>Le nom de fichier du téléchargement est suspect.</dd>
- <dt><code>url</code></dt>
- <dd>L'URL du téléchargement est connue pour être malveillante.</dd>
- <dt><code>content</code></dt>
- <dd>Le fichier téléchargé est connu pour être malveillant.</dd>
- <dt><code>uncommon</code></dt>
- <dd>L'URL du téléchargement n'est pas généralement téléchargée.</dd>
- <dt><code>host</code></dt>
- <dd>Le téléchargement provenait d'un hôte connu pour distribuer des binaires malveillants.</dd>
- <dt><code>unwanted</code></dt>
- <dd>Le téléchargement est potentiellement indésirable ou dangereux..</dd>
- <dt><code>safe</code></dt>
- <dd>Le téléchargement ne présente aucun danger connu pour l'ordinateur de l'utilisateur.</dd>
- <dt><code>accepted</code></dt>
- <dd>L'utilisateur a accepté le téléchargement dangereux.</dd>
-</dl>
+- `file`
+  - : Le nom de fichier du téléchargement est suspect.
+- `url`
+  - : L'URL du téléchargement est connue pour être malveillante.
+- `content`
+  - : Le fichier téléchargé est connu pour être malveillant.
+- `uncommon`
+  - : L'URL du téléchargement n'est pas généralement téléchargée.
+- `host`
+  - : Le téléchargement provenait d'un hôte connu pour distribuer des binaires malveillants.
+- `unwanted`
+  - : Le téléchargement est potentiellement indésirable ou dangereux..
+- `safe`
+  - : Le téléchargement ne présente aucun danger connu pour l'ordinateur de l'utilisateur.
+- `accepted`
+  - : L'utilisateur a accepté le téléchargement dangereux.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.downloads.DangerType")}}</p>
+{{Compat("webextensions.api.downloads.DangerType")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -87,5 +81,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DangerType
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

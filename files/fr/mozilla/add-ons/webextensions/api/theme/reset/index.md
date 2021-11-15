@@ -12,42 +12,42 @@ tags:
   - reset
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/reset
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Réinitialise tout thème appliqué à l'aide de la méthode {{WebExtAPIRef("theme.update()")}}</p>
+Réinitialise tout thème appliqué à l'aide de la méthode {{WebExtAPIRef("theme.update()")}}
 
-<p>Notez que cela réinitialisera toujours le thème au thème par défaut d'origine, même si l'utilisateur a sélectionné un thème différent avant que le thème de cette extension ait été appliqué (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1415267">bug 1415267</a>).</p>
+Notez que cela réinitialisera toujours le thème au thème par défaut d'origine, même si l'utilisateur a sélectionné un thème différent avant que le thème de cette extension ait été appliqué (voir [bug 1415267](https://bugzilla.mozilla.org/show_bug.cgi?id=1415267)).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.theme.reset( windowsId // integer )
-</pre>
+```js
+browser.theme.reset( windowsId // integer )
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>windowId</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. L'ID d'une fenêtre. Si cela est indiqué, le thème appliqué sur cette fenêtre sera réinitialisé. Sinon le thème sera réinitialisé sur toutes les fenêtres.</dd>
-</dl>
+- `windowId` {{optional_inline}}
+  - : `integer`. L'ID d'une fenêtre. Si cela est indiqué, le thème appliqué sur cette fenêtre sera réinitialisé. Sinon le thème sera réinitialisé sur toutes les fenêtres.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.theme.reset")}}</p>
+{{Compat("webextensions.api.theme.reset")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Ce code applique un thème, puis le supprime lorsque l'utilisateur clique sur une action du navigateur:</p>
+Ce code applique un thème, puis le supprime lorsque l'utilisateur clique sur une action du navigateur:
 
-<pre class="brush: js">browser.theme.update(themes.night);
+```js
+browser.theme.update(themes.night);
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   browser.theme.reset();
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -74,5 +74,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

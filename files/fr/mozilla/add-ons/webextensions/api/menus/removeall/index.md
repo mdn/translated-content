@@ -14,36 +14,38 @@ tags:
   - removeAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/removeAll
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Supprime tous les éléments de menu ajoutés par l'extension.</p>
+Supprime tous les éléments de menu ajoutés par l'extension.
 
-<p>Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms <code>contextMenus</code> ainsi que l'espace de noms des <code>menus</code>.</p>
+Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var removing = browser.menus.removeAll()
-</pre>
+```js
+var removing = browser.menus.removeAll()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>None.</p>
+None.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans argument lorsque tous les éléments ont été supprimés.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque tous les éléments ont été supprimés.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.menus.removeAll", 10)}}</p>
+{{Compat("webextensions.api.menus.removeAll", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple ajoute deux éléments de menu. Lorsque l'utilisateur clique sur l'élément "Supprimer tout !", L'extension supprime les deux éléments en utilisant <code>removeAll()</code>.</p>
+Cet exemple ajoute deux éléments de menu. Lorsque l'utilisateur clique sur l'élément "Supprimer tout !", L'extension supprime les deux éléments en utilisant `removeAll()`.
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("items removed successfully");
 }
 
@@ -64,17 +66,16 @@ browser.menus.onClicked.addListener(function(info, tab) {
     var removing = browser.menus.removeAll();
     removing.then(onRemoved);
   }
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
 
-<p>Cette API est basée sur l'API <a href="https://developer.chrome.com/extensions/contextMenus"><code>chrome.contextMenus</code></a> de chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> dans le code Chromium.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,5 +102,4 @@ browser.menus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

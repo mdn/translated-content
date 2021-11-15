@@ -7,36 +7,39 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/description
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Type</th>
-   <td>chaîne</td>
-  </tr>
-  <tr>
-   <th scope="row">Obligatoire</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Exemple</th>
-   <td>
-    <pre class="brush: json">
-"description": "Remplace des images par des portraits de chats."</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Type</th>
+      <td>chaîne</td>
+    </tr>
+    <tr>
+      <th scope="row">Obligatoire</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Exemple</th>
+      <td>
+        <pre class="brush: json">
+"description": "Remplace des images par des portraits de chats."</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Une brève description de l'extension, destinée à être affichée dans l'interface utilisateur du navigateur.</p>
+Une brève description de l'extension, destinée à être affichée dans l'interface utilisateur du navigateur.
 
-<p>Ceci est une <a href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">propriété localisable</a>.</p>
+Ceci est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: json">"description": "Remplace des images par des portraits de chats."</pre>
+```json
+"description": "Remplace des images par des portraits de chats."
+```
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.manifest.description")}}</p>
+{{Compat("webextensions.manifest.description")}}

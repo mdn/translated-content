@@ -14,100 +14,95 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un <code>StreamFilter</code> est un objet que vous pouvez utiliser pour surveiller et modifier les réponses HTTP.</p>
+Un `StreamFilter` est un objet que vous pouvez utiliser pour surveiller et modifier les réponses HTTP.
 
-<p>Pour créer un <code>StreamFilter</code>, appelez {{WebExtAPIRef("webRequest.filterResponseData()")}}, en lui passant l'ID de la requête web que vous voulez filtrer.</p>
+Pour créer un `StreamFilter`, appelez {{WebExtAPIRef("webRequest.filterResponseData()")}}, en lui passant l'ID de la requête web que vous voulez filtrer.
 
-<p>Vous pouvez imaginer le filtre de flux entre la pile réseau et le moteur de rendu du navigateur. Le filtre passe les données de réponse HTTP au fur et à mesure qu'il est reçu du réseau, et peut examiner et modifier les données avant de les transmettre au moteur de rendu, où elles seront analysées et rendues.</p>
+Vous pouvez imaginer le filtre de flux entre la pile réseau et le moteur de rendu du navigateur. Le filtre passe les données de réponse HTTP au fur et à mesure qu'il est reçu du réseau, et peut examiner et modifier les données avant de les transmettre au moteur de rendu, où elles seront analysées et rendues.
 
-<p>Le filtre génère quatre événements différents :</p>
+Le filtre génère quatre événements différents :
 
-<ul>
- <li>{{WebEXTAPIRef("webRequest.StreamFilter.onstart", "onstart")}} lorsque le filtre est sur le point de commencer à recevoir les données de réponse.</li>
- <li>{{WebEXTAPIRef("webRequest.StreamFilter.ondata", "ondata")}} lorsque des données de réponse ont été reçues par le filtre et sont disponibles pour être examinées ou modifiées.</li>
- <li>{{WebEXTAPIRef("webRequest.StreamFilter.onstop", "onstop")}} lorsque le filtre a fini de recevoir les données de réponse.</li>
- <li>{{WebEXTAPIRef("webRequest.StreamFilter.onerror", "onerror")}} si une erreur s'est produite lors de l'initialisation et de l'utilisation du filtre.</li>
-</ul>
+- {{WebEXTAPIRef("webRequest.StreamFilter.onstart", "onstart")}} lorsque le filtre est sur le point de commencer à recevoir les données de réponse.
+- {{WebEXTAPIRef("webRequest.StreamFilter.ondata", "ondata")}} lorsque des données de réponse ont été reçues par le filtre et sont disponibles pour être examinées ou modifiées.
+- {{WebEXTAPIRef("webRequest.StreamFilter.onstop", "onstop")}} lorsque le filtre a fini de recevoir les données de réponse.
+- {{WebEXTAPIRef("webRequest.StreamFilter.onerror", "onerror")}} si une erreur s'est produite lors de l'initialisation et de l'utilisation du filtre.
 
-<p>Vous pouvez écouter chaque événement en assignant une fonction d'écoute à son attribut :</p>
+Vous pouvez écouter chaque événement en assignant une fonction d'écoute à son attribut :
 
-<pre class="brush: js">filter.onstart = event =&gt; {
+```js
+filter.onstart = event => {
   console.log("started");
-}</pre>
+}
+```
 
-<p>Notez que la demande est bloquée pendant l'exécution de n'importe quel auditeur d'événement.</p>
+Notez que la demande est bloquée pendant l'exécution de n'importe quel auditeur d'événement.
 
-<p>Le filtre fournit une fonction {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}. A tout moment à partir de l'événement <code>onstart</code>, vous pouvez utiliser cette fonction pour écrire des données dans le flux de sortie.</p>
+Le filtre fournit une fonction {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}. A tout moment à partir de l'événement `onstart`, vous pouvez utiliser cette fonction pour écrire des données dans le flux de sortie.
 
-<p>Si vous assignez des auditeurs à l'un des événements du filtre, alors toutes les données de réponse transmises au moteur de rendu seront fournies par les appels que vous faites pour <code>write()</code>: donc si vous ajoutez un auditeur mais n'appelez pas <code>write()</code>, alors la page rendue sera vide.</p>
+Si vous assignez des auditeurs à l'un des événements du filtre, alors toutes les données de réponse transmises au moteur de rendu seront fournies par les appels que vous faites pour `write()`: donc si vous ajoutez un auditeur mais n'appelez pas `write()`, alors la page rendue sera vide.
 
-<p>Une fois que vous avez terminé d'interagir avec la réponse, vous appelez l'un ou l'autre des éléments suivants :</p>
+Une fois que vous avez terminé d'interagir avec la réponse, vous appelez l'un ou l'autre des éléments suivants :
 
-<ul>
- <li>{{WebEXTAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}} : Cela déconnecte le filtre de la requête, de sorte que le reste de la réponse est traité normalement.</li>
- <li>{{WebEXTAPIRef("webRequest.StreamFilter.close()", "close()")}}: Cela met fin à la demande, de sorte qu'aucune donnée de réponse supplémentaire ne sera traitée.</li>
-</ul>
+- {{WebEXTAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}} : Cela déconnecte le filtre de la requête, de sorte que le reste de la réponse est traité normalement.
+- {{WebEXTAPIRef("webRequest.StreamFilter.close()", "close()")}}: Cela met fin à la demande, de sorte qu'aucune donnée de réponse supplémentaire ne sera traitée.
 
-<p>Le filtre fournit également des fonctions à {{WebEXTAPIRef("webRequest.StreamFilter.suspend()", "suspend()")}} et {{WebEXTAPIRef("webRequest.StreamFilter.resume()", "resume()")}} la requête.</p>
+Le filtre fournit également des fonctions à {{WebEXTAPIRef("webRequest.StreamFilter.suspend()", "suspend()")}} et {{WebEXTAPIRef("webRequest.StreamFilter.resume()", "resume()")}} la requête.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{WebExtAPIRef("webRequest.StreamFilter.close()")}}</dt>
- <dd>Ferme la demande.</dd>
- <dt>{{WebExtAPIRef("webRequest.StreamFilter.disconnect()")}}</dt>
- <dd>Déconnecte le filtre de la requête.</dd>
- <dt>{{WebExtAPIRef("webRequest.StreamFilter.resume()")}}</dt>
- <dd>Reprend le traitement de la demande.</dd>
-</dl>
+- {{WebExtAPIRef("webRequest.StreamFilter.close()")}}
+  - : Ferme la demande.
+- {{WebExtAPIRef("webRequest.StreamFilter.disconnect()")}}
+  - : Déconnecte le filtre de la requête.
+- {{WebExtAPIRef("webRequest.StreamFilter.resume()")}}
+  - : Reprend le traitement de la demande.
 
-<dl>
- <dt>{{WebExtAPIRef("webRequest.StreamFilter.suspend()")}}</dt>
- <dd>Suspend le traitement de la demande.</dd>
- <dt>{{WebExtAPIRef("webRequest.StreamFilter.write()")}}</dt>
- <dd>Écrit quelques données dans le flux de sortie.</dd>
-</dl>
+<!---->
 
-<h2 id="Propriétés">Propriétés</h2>
+- {{WebExtAPIRef("webRequest.StreamFilter.suspend()")}}
+  - : Suspend le traitement de la demande.
+- {{WebExtAPIRef("webRequest.StreamFilter.write()")}}
+  - : Écrit quelques données dans le flux de sortie.
 
-<dl>
- <dt>{{WebExtAPIRef("webRequest.StreamFilter.ondata")}}</dt>
- <dd>Gestionnaire d'événements qui est appelé lorsque les données entrantes sont disponibles.</dd>
- <dt>{{WebExtAPIRef("webRequest.StreamFilter.onerror")}}</dt>
- <dd>Gestionnaire d'événements qui est appelé lorsqu'une erreur s'est produite.</dd>
- <dt>{{WebExtAPIRef("webRequest.StreamFilter.onstart")}}</dt>
- <dd>Gestionnaire d'événements qui est appelé lorsque le flux est sur le point de commencer à recevoir des données.</dd>
- <dt>{{WebExtAPIRef("webRequest.StreamFilter.onstop")}}</dt>
- <dd>Gestionnaire d'événements qui est appelé lorsque le flux n'a plus de données à livrer et qu'il s'est fermé.</dd>
- <dt>{{WebExtAPIRef("webRequest.StreamFilter.error")}}</dt>
- <dd>Quand {{WebExtAPIRef("webRequest.StreamFilter.onerror")}} est appelé, cela décrira l'erreur.</dd>
- <dt>{{WebExtAPIRef("webRequest.StreamFilter.status")}}</dt>
- <dd>Décrit l'état actuel du flux.</dd>
-</dl>
+## Propriétés
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- {{WebExtAPIRef("webRequest.StreamFilter.ondata")}}
+  - : Gestionnaire d'événements qui est appelé lorsque les données entrantes sont disponibles.
+- {{WebExtAPIRef("webRequest.StreamFilter.onerror")}}
+  - : Gestionnaire d'événements qui est appelé lorsqu'une erreur s'est produite.
+- {{WebExtAPIRef("webRequest.StreamFilter.onstart")}}
+  - : Gestionnaire d'événements qui est appelé lorsque le flux est sur le point de commencer à recevoir des données.
+- {{WebExtAPIRef("webRequest.StreamFilter.onstop")}}
+  - : Gestionnaire d'événements qui est appelé lorsque le flux n'a plus de données à livrer et qu'il s'est fermé.
+- {{WebExtAPIRef("webRequest.StreamFilter.error")}}
+  - : Quand {{WebExtAPIRef("webRequest.StreamFilter.onerror")}} est appelé, cela décrira l'erreur.
+- {{WebExtAPIRef("webRequest.StreamFilter.status")}}
+  - : Décrit l'état actuel du flux.
 
-<p>{{Compat("webextensions.api.webRequest.StreamFilter", 10)}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.webRequest.StreamFilter", 10)}}
 
-<p>Ce code écoute pour <code>onstart</code>, <code>ondata</code> et <code>onstop</code>. Il enregistre simplement ces événements et les données de réponse elles-mêmes :</p>
+## Exemples
 
-<pre class="brush: js">function listener(details) {
+Ce code écoute pour `onstart`, `ondata` et `onstop`. Il enregistre simplement ces événements et les données de réponse elles-mêmes :
+
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event =&gt; {
+  filter.onstart = event => {
     console.log("started");
   }
 
-  filter.ondata = event =&gt; {
+  filter.ondata = event => {
     console.log(event.data);
     filter.write(event.data);
   }
 
-  filter.onstop = event =&gt; {
+  filter.onstop = event => {
     console.log("finished");
     filter.disconnect();
   }
@@ -119,6 +114,7 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.org/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

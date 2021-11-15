@@ -13,58 +13,57 @@ tags:
   - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/getAll
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La méthode <strong><code>getAll()</code></strong> de l'API {{WebExtAPIRef("cookies")}} récupère tous les cookies d'un seul cookie store qui correspondent aux informations fournies.</p>
+La méthode **`getAll()`** de l'API {{WebExtAPIRef("cookies")}} récupère tous les cookies d'un seul cookie store qui correspondent aux informations fournies.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var getting = browser.cookies.getAll(
+```js
+var getting = browser.cookies.getAll(
   details                // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p>Un <code>object</code> contenant des détails pouvant être utilisés pour faire correspondre les cookies à extraire. Les propriétés incluses sont les suivantes (voir <a href="/fr/Add-ons/WebExtensions/API/cookies/Cookie#Type">type de cookie</a> pour plus d'informations sur celles-ci ) :</p>
- <dl>
-  <dt><code>domain</code>{{optional_inline}}</dt>
-  <dd>Une <code>chaîne</code> représentant un domaine auquel les cookies doivent être associés (ils peuvent être associés soit à ce domaine exact, soit à l'un de ses sous-domaines).</dd>
-  <dt><code>firstPartyDomain</code>{{optional_inline}}</dt>
-  <dd>Une <code>chaîne</code> représentant le domaine de première partie avec lequel le cookie à récupérer est associé. Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Vous pouvez cependant passer <code>null</code> dans cette situation. Si vous faites cela, alors les cookies avec n'importe quelle valeur pour <code>firstPartyDomain</code>, ainsi que les cookies qui n'ont pas de set <code>firstPartyDomain</code> , seront inclus dans les résultats. Voir <a href="/fr/Add-ons/WebExtensions/API/cookies#Isolement_de_la_première_partie">Isolement de la première partie</a>.</dd>
-  <dt><code>name</code>{{optional_inline}}</dt>
-  <dd>Une <code>chaîne</code> représentant un nom que les cookies devraient avoir.</dd>
-  <dt><code>path</code>{{optional_inline}}</dt>
-  <dd>Une <code>chaîne</code> représentant un chemin - le chemin des cookies doit être identique à celui-ci.</dd>
-  <dt><code>secure</code>{{optional_inline}}</dt>
-  <dd>Un <code>booléen</code> — filtre les cookies par leur propriété <code>sécurisée</code>, vous permettant de filtrer les cookies sécurisés contre les cookies non sécurisés.</dd>
-  <dt><code>session</code>{{optional_inline}}</dt>
-  <dd>Un <code>booléen</code>— filtre les cookies en fonction de leur propriété de <code>session</code>, ce qui vous permet de filtrer les cookies de session par rapport aux cookies persistants.</dd>
-  <dt><code>storeId</code>{{optional_inline}}</dt>
-  <dd>Une <code>chaîne</code> représentant le magasin de cookies pour récupérer les cookies. S'il est omi, le cookie store du contexte d'exécution actuel sera utilisé.</dd>
-  <dt><code>url</code>{{optional_inline}}</dt>
-  <dd>Une <code>chaîne</code> représentant une URL à laquelle les cookies récupérés doivent être associés.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : Un `object` contenant des détails pouvant être utilisés pour faire correspondre les cookies à extraire. Les propriétés incluses sont les suivantes (voir [type de cookie](/fr/Add-ons/WebExtensions/API/cookies/Cookie#Type) pour plus d'informations sur celles-ci ) :
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un tableau d'objets   <code>{{WebExtAPIRef('cookies.Cookie')}}</code> correspondant aux propriétés données dans le paramètre <code>details</code>. Seuls les cookies non expirés sont renvoyés. Les cookies retournés seront triés par longueur de chemin, du plus long au plus court. Si plusieurs cookies ont la même longueur de chemin, ceux dont l'heure de création est la plus proche seront les premiers.</p>
+    - `domain`{{optional_inline}}
+      - : Une `chaîne` représentant un domaine auquel les cookies doivent être associés (ils peuvent être associés soit à ce domaine exact, soit à l'un de ses sous-domaines).
+    - `firstPartyDomain`{{optional_inline}}
+      - : Une `chaîne` représentant le domaine de première partie avec lequel le cookie à récupérer est associé. Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Vous pouvez cependant passer `null` dans cette situation. Si vous faites cela, alors les cookies avec n'importe quelle valeur pour `firstPartyDomain`, ainsi que les cookies qui n'ont pas de set `firstPartyDomain` , seront inclus dans les résultats. Voir [Isolement de la première partie](/fr/Add-ons/WebExtensions/API/cookies#Isolement_de_la_première_partie).
+    - `name`{{optional_inline}}
+      - : Une `chaîne` représentant un nom que les cookies devraient avoir.
+    - `path`{{optional_inline}}
+      - : Une `chaîne` représentant un chemin - le chemin des cookies doit être identique à celui-ci.
+    - `secure`{{optional_inline}}
+      - : Un `booléen` — filtre les cookies par leur propriété `sécurisée`, vous permettant de filtrer les cookies sécurisés contre les cookies non sécurisés.
+    - `session`{{optional_inline}}
+      - : Un `booléen`— filtre les cookies en fonction de leur propriété de `session`, ce qui vous permet de filtrer les cookies de session par rapport aux cookies persistants.
+    - `storeId`{{optional_inline}}
+      - : Une `chaîne` représentant le magasin de cookies pour récupérer les cookies. S'il est omi, le cookie store du contexte d'exécution actuel sera utilisé.
+    - `url`{{optional_inline}}
+      - : Une `chaîne` représentant une URL à laquelle les cookies récupérés doivent être associés.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.cookies.getAll")}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets   `{{WebExtAPIRef('cookies.Cookie')}}` correspondant aux propriétés données dans le paramètre `details`. Seuls les cookies non expirés sont renvoyés. Les cookies retournés seront triés par longueur de chemin, du plus long au plus court. Si plusieurs cookies ont la même longueur de chemin, ceux dont l'heure de création est la plus proche seront les premiers.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Dans l'extrait suivant, nous appelons pour obtenir tous les cookies que le navigateur a actuellement stockés qui ont un nom de "favourite-colour". Lorsque le résultat est renvoyé, nous imprimons la valeur de chaque résultat à la console.</p>
+{{Compat("webextensions.api.cookies.getAll")}}
 
-<pre class="brush: js">function logCookies(cookies) {
+## Exemples
+
+Dans l'extrait suivant, nous appelons pour obtenir tous les cookies que le navigateur a actuellement stockés qui ont un nom de "favourite-colour". Lorsque le résultat est renvoyé, nous imprimons la valeur de chaque résultat à la console.
+
+```js
+function logCookies(cookies) {
   for (let cookie of cookies) {
     console.log(cookie.value);
   }
@@ -73,19 +72,18 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/getAll
 var gettingAll = browser.cookies.getAll({
   name: "favourite-colour"
 });
-gettingAll.then(logCookies);</pre>
+gettingAll.then(logCookies);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/extensions/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,5 +110,4 @@ gettingAll.then(logCookies);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

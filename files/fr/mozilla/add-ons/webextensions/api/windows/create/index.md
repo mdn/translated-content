@@ -13,81 +13,76 @@ tags:
   - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/create
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Crée une nouvelle fenêtre.</p>
+Crée une nouvelle fenêtre.
 
-<p>Lorsque vous créez la fenêtre, vous pouvez :</p>
+Lorsque vous créez la fenêtre, vous pouvez :
 
-<ul>
- <li>Chargez un ou plusieurs nouveaux onglets dans la fenêtre.</li>
- <li>Déplacez un onglet d'une fenêtre existante dans la nouvelle fenêtre.</li>
- <li>Réglez la taille et la position de la fenêtre.</li>
- <li>Créez une fenêtre de style "panneau" qui, dans ce contexte, désigne une fenêtre sans l'interface utilisateur UI (barre d'adresse, barre d'outils, etc.).</li>
- <li>Définissez différentes propriétés de la fenêtre, par exemple, qu'elle soit concentrée ou privée.</li>
-</ul>
+- Chargez un ou plusieurs nouveaux onglets dans la fenêtre.
+- Déplacez un onglet d'une fenêtre existante dans la nouvelle fenêtre.
+- Réglez la taille et la position de la fenêtre.
+- Créez une fenêtre de style "panneau" qui, dans ce contexte, désigne une fenêtre sans l'interface utilisateur UI (barre d'adresse, barre d'outils, etc.).
+- Définissez différentes propriétés de la fenêtre, par exemple, qu'elle soit concentrée ou privée.
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var creating = browser.windows.create(
+```js
+var creating = browser.windows.create(
   createData            // optional object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>createData</code>{{optional_inline}}</dt>
- <dd><p><code>object</code>.</p>
- <dl>
-  <dt><code>allowScriptsToClose</code> {{optional_inline}}</dt>
-  <dd>
-  <p><code>boolean</code>. Lorsque la fenêtre est ouverte, elle contiendra un seul onglet, ou plus d'un onglet si <code>url</code> est donnée et comprendra un tableau contenant plus d'une URL. Par défaut, les scripts s'exécutant dans ces pages ne sont pas autorisés à fermer leur onglet en utilisant <code><a href="/fr/docs/Web/API/Window/close">window.close()</a></code>. Si vous incluez <code>allowScriptsToClose</code> et le mettez à <code>true</code> ,  alors ce comportement par défaut est modifié, de sorte que les scripts peuvent fermer leurs onglets. Notez cela :</p>
+- `createData`{{optional_inline}}
 
-  <ul>
-   <li>Ceci ne s'applique qu'aux onglets qui ont été ouverts lors de la création de la fenêtre. Si l'utilisateur ouvre plus d'onglets dans cette fenêtre, les scripts ne pourront pas fermer ces nouveaux onglets.</li>
-   <li>Si la ou les url(s) donnée(s) dans <code>url</code> pointent vers les <a href="/fr/Add-ons/WebExtensions/user_interface/Bundled_web_pages">pages d'extension</a> (c'est-à-dire qu'il s'agit de pages incluses avec cette extension et chargées avec le protocole "moz-extension:") alors les scripts <em>sont</em> par défaut autorisés à fermer ces onglets.</li>
-  </ul>
-  </dd>
-  <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. S'il est présent, spécifie le <code>CookieStoreId</code> pour tous les onglets qui seront créés lorsque la fenêtre sera ouverte.</dd>
-  <dt><code>focused</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si c'est vrai, la nouvelle fenêtre sera concentrée. Si c'est <code>false</code>, la nouvelle fenêtre sera ouverte en arrière-plan et la fenêtre actuellement concentrée restera concentrée. Le paramètre par défaut est <code>true</code>.</dd>
-  <dt><code>height</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. Hauteur en pixels de la nouvelle fenêtre, y compris dans une frame. Si elle n'est pas spécifiée, par défaut une hauteur naturel.</dd>
-  <dt><code>incognito</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. Que la nouvelle fenêtre soit une fenêtre privée. Notez que si vous spécifiez <code>incognito</code> et <code>tabId</code>, c'est-à-dire, vous ne pouvez pas déplacer un onglet privé dans une fenêtre privée.</dd>
-  <dt><code>left</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. Nombre de pixels pour positionner la nouvelle fenêtre à partir du bord gauche de l'écran. Si elle n'est pas spécifiée, la nouvelle fenêtre est décalée naturellement à partir de la dernière fenêtre ciblée. Cette valeur est ignorée pour les panneaux. (Dans Firefox, cette valeur est actuellement ignorée pour les popups  (bug 1271047) mais peut être définie en utilisant browser.windows.update().)</dd>
-  <dt><code>state</code> {{optional_inline}}</dt>
-  <dd>Une valeur {{WebExtAPIRef('windows.WindowState')}}. L'état initial de la fenêtre. Les états minimisés, maximisés et plein écran ne peuvent pas être combinés avec la gauche, le haut, la largeur ou la hauteur.</dd>
-  <dt><code>tabId</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. Si inclus, déplace un onglet de l'ID spécifié d'une fenêtre existante dans la nouvelle fenêtre.</dd>
-  <dt><code>titlePreface</code> {{optional_inline}}</dt>
-  <dd><code>string</code>. Utilisez ceci pour ajouter une chaîne au début du titre de la fenêtre du navigateur. Selon le système d'exploitation sous-jacent, cela pourrait ne pas fonctionner sur les fenêtres du navigateur qui n'ont pas de titre (comme  about:blank dans Firefox).</dd>
-  <dt><code>top</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. Le nombre de pixels pour positionner la nouvelle fenêtre à partir du bord supérieur de l'écran. Si elle n'est pas spécifiée, la nouvelle fenêtre est naturellement décalée à partir de la dernière fenêtre ciblée. Cette valeur est ignorée pour les panneaux. (Dans Firefox, cette valeur est actuellement ignorée pour les popups  (bug 1271047) mais peut être définie en utilisant browser.windows.update().)</dd>
-  <dt><code>type</code> {{optional_inline}}</dt>
-  <dd>Une valeur {{WebExtAPIRef('windows.CreateType')}} spécifie le type de fenêtre du navigateur à créer. Spécifié le <code>panneau</code> ou la <code>fenêtre contextuelle</code> ici pour ouvrir une fenêtre sans l'interface utilisateur (barre d'adresse, barre d'outils, etc).</dd>
-  <dt><code>url</code> {{optional_inline}}</dt>
-  <dd><code><code>string</code></code> ou <code><code>array</code></code> of <code><code><code>string</code></code></code>s. Une URL ou un tableau d'URL à ouvrir comme onglets dans une fenêtre. Les URL hautement qualifiées doivent inclure un schéma (c'est à dire <code>http://www.google.com</code>, et non <code>www.google.com</code>). Les URL relatives seront relatives à la page actuelle dans l'extension. Par défaut, la nouvelle page d'onglet.</dd>
-  <dt><code>width</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. La largeur en pixels de la nouvelle fenêtre, y compris le cadre. Si elle n'est pas spécifiée par défaut, vous avez une largeur naturelle.</dd>
- </dl>
- </dd>
-</dl>
+  - : `object`.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+    - `allowScriptsToClose` {{optional_inline}}
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la nouvelle fenêtre. Cet objet de fenêtre aura toujours son ensemble de propriétés d'onglets, contrairement aux objets de fenêtre retournés à partir de {{WebExtAPIRef("windows.get()")}} et d'API similaires, qui contiennent uniquement des onglets si l'option de remplissage est passée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.</p>
+      - : `boolean`. Lorsque la fenêtre est ouverte, elle contiendra un seul onglet, ou plus d'un onglet si `url` est donnée et comprendra un tableau contenant plus d'une URL. Par défaut, les scripts s'exécutant dans ces pages ne sont pas autorisés à fermer leur onglet en utilisant [`window.close()`](/fr/docs/Web/API/Window/close). Si vous incluez `allowScriptsToClose` et le mettez à `true` ,  alors ce comportement par défaut est modifié, de sorte que les scripts peuvent fermer leurs onglets. Notez cela :
 
-<h2 id="Exemples">Exemples</h2>
+        - Ceci ne s'applique qu'aux onglets qui ont été ouverts lors de la création de la fenêtre. Si l'utilisateur ouvre plus d'onglets dans cette fenêtre, les scripts ne pourront pas fermer ces nouveaux onglets.
+        - Si la ou les url(s) donnée(s) dans `url` pointent vers les [pages d'extension](/fr/Add-ons/WebExtensions/user_interface/Bundled_web_pages) (c'est-à-dire qu'il s'agit de pages incluses avec cette extension et chargées avec le protocole "moz-extension:") alors les scripts _sont_ par défaut autorisés à fermer ces onglets.
 
-<p>Ouvrir une fenêtre contenant deux onglets :</p>
+    - `cookieStoreId` {{optional_inline}}
+      - : `integer`. S'il est présent, spécifie le `CookieStoreId` pour tous les onglets qui seront créés lorsque la fenêtre sera ouverte.
+    - `focused` {{optional_inline}}
+      - : `boolean`. Si c'est vrai, la nouvelle fenêtre sera concentrée. Si c'est `false`, la nouvelle fenêtre sera ouverte en arrière-plan et la fenêtre actuellement concentrée restera concentrée. Le paramètre par défaut est `true`.
+    - `height` {{optional_inline}}
+      - : `integer`. Hauteur en pixels de la nouvelle fenêtre, y compris dans une frame. Si elle n'est pas spécifiée, par défaut une hauteur naturel.
+    - `incognito` {{optional_inline}}
+      - : `boolean`. Que la nouvelle fenêtre soit une fenêtre privée. Notez que si vous spécifiez `incognito` et `tabId`, c'est-à-dire, vous ne pouvez pas déplacer un onglet privé dans une fenêtre privée.
+    - `left` {{optional_inline}}
+      - : `integer`. Nombre de pixels pour positionner la nouvelle fenêtre à partir du bord gauche de l'écran. Si elle n'est pas spécifiée, la nouvelle fenêtre est décalée naturellement à partir de la dernière fenêtre ciblée. Cette valeur est ignorée pour les panneaux. (Dans Firefox, cette valeur est actuellement ignorée pour les popups  (bug 1271047) mais peut être définie en utilisant browser.windows.update().)
+    - `state` {{optional_inline}}
+      - : Une valeur {{WebExtAPIRef('windows.WindowState')}}. L'état initial de la fenêtre. Les états minimisés, maximisés et plein écran ne peuvent pas être combinés avec la gauche, le haut, la largeur ou la hauteur.
+    - `tabId` {{optional_inline}}
+      - : `integer`. Si inclus, déplace un onglet de l'ID spécifié d'une fenêtre existante dans la nouvelle fenêtre.
+    - `titlePreface` {{optional_inline}}
+      - : `string`. Utilisez ceci pour ajouter une chaîne au début du titre de la fenêtre du navigateur. Selon le système d'exploitation sous-jacent, cela pourrait ne pas fonctionner sur les fenêtres du navigateur qui n'ont pas de titre (comme  about:blank dans Firefox).
+    - `top` {{optional_inline}}
+      - : `integer`. Le nombre de pixels pour positionner la nouvelle fenêtre à partir du bord supérieur de l'écran. Si elle n'est pas spécifiée, la nouvelle fenêtre est naturellement décalée à partir de la dernière fenêtre ciblée. Cette valeur est ignorée pour les panneaux. (Dans Firefox, cette valeur est actuellement ignorée pour les popups  (bug 1271047) mais peut être définie en utilisant browser.windows.update().)
+    - `type` {{optional_inline}}
+      - : Une valeur {{WebExtAPIRef('windows.CreateType')}} spécifie le type de fenêtre du navigateur à créer. Spécifié le `panneau` ou la `fenêtre contextuelle` ici pour ouvrir une fenêtre sans l'interface utilisateur (barre d'adresse, barre d'outils, etc).
+    - `url` {{optional_inline}}
+      - : `string` ou `array` of `string`s. Une URL ou un tableau d'URL à ouvrir comme onglets dans une fenêtre. Les URL hautement qualifiées doivent inclure un schéma (c'est à dire `http://www.google.com`, et non `www.google.com`). Les URL relatives seront relatives à la page actuelle dans l'extension. Par défaut, la nouvelle page d'onglet.
+    - `width` {{optional_inline}}
+      - : `integer`. La largeur en pixels de la nouvelle fenêtre, y compris le cadre. Si elle n'est pas spécifiée par défaut, vous avez une largeur naturelle.
 
-<pre class="brush: js">function onCreated(windowInfo) {
+### Valeur retournée
+
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la nouvelle fenêtre. Cet objet de fenêtre aura toujours son ensemble de propriétés d'onglets, contrairement aux objets de fenêtre retournés à partir de {{WebExtAPIRef("windows.get()")}} et d'API similaires, qui contiennent uniquement des onglets si l'option de remplissage est passée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+
+## Exemples
+
+Ouvrir une fenêtre contenant deux onglets :
+
+```js
+function onCreated(windowInfo) {
   console.log(`Created window: ${windowInfo.id}`);
 }
 
@@ -95,17 +90,19 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
   var creating = browser.windows.create({
     url: ["https://developer.mozilla.org",
           "https://addons.mozilla.org"]
   });
   creating.then(onCreated, onError);
-});</pre>
+});
+```
 
-<p>Ouvrez une fenêtre lorsque l'utilisateur clique sur une action du navigateur et déplacez l'onglet actif actuellement :</p>
+Ouvrez une fenêtre lorsque l'utilisateur clique sur une action du navigateur et déplacez l'onglet actif actuellement :
 
-<pre class="brush: js">function onCreated(windowInfo) {
+```js
+function onCreated(windowInfo) {
   console.log(`Created window: ${windowInfo.id}`);
 }
 
@@ -113,16 +110,18 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
   var creating = browser.windows.create({
     tabId: tab.id
   });
   creating.then(onCreated, onError);
-});</pre>
+});
+```
 
-<p>Ouvrez une petite fenêtre de style panneau et chargez-en un fichier local:</p>
+Ouvrez une petite fenêtre de style panneau et chargez-en un fichier local:
 
-<pre class="brush: js">function onCreated(windowInfo) {
+```js
+function onCreated(windowInfo) {
   console.log(`Created window: ${windowInfo.id}`);
 }
 
@@ -130,7 +129,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
 
   var popupURL = browser.extension.getURL("popup/popup.html");
 
@@ -142,23 +141,22 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
   });
   creating.then(onCreated, onError);
 
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.windows.create", 10)}}</p>
+{{Compat("webextensions.api.windows.create", 10)}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+>
+> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -185,5 +183,4 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

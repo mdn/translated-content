@@ -13,54 +13,52 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Supprime d'une page CSS précédemment injectée par un appel à {{WebExtAPIRef("tabs.insertCSS()")}}.</p>
+Supprime d'une page CSS précédemment injectée par un appel à {{WebExtAPIRef("tabs.insertCSS()")}}.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var removing = browser.tabs.removeCSS(
-  tabId,           // optional integer
-  details          // object
-)
-</pre>
+    var removing = browser.tabs.removeCSS(
+      tabId,           // optional integer
+      details          // object
+    )
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. L'ID de l'onglet à partir duquel supprimer le CSS. Par défaut à l'onglet actif de la fenêtre en cours.</dd>
- <dt><code>details</code></dt>
- <dd>Un objet décrivant le CSS à retirer de la page. Il contient les propriétés suivantes :
- <dl>
-  <dt></dt>
-  <dt><code>allFrames</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. si <code>true</code>, le code sera supprimé de toutes les images de la page en cours. si c'est <code>false</code>, le code est seulement retiré du cadre supérieur. Par défaut à <code>false</code>.</dd>
-  <dt><code>code</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. CSS à supprimer, en tant que chaîne de texte. Cela doit correspondre exactement à une chaîne CSS précédemment insérée dans la page en utilisant {{WebExtAPIRef("tabs.insertCSS()")}}.</dd>
-  <dt><code>cssOrigin</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Cela peut prendre l'une des deux valeurs suivantes : "user", pour CSS ajouté en tant que feuille de style utilisateur, ou "author" pour CSS ajouté en tant que feuille de style auteur. Si cette option a été définie précédemment par  {{WebExtAPIRef("tabs.insertCSS()")}}, elle doit correspondre exactement.</dd>
-  <dt><code>file</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Chemin d'accès à un fichier contenant le CSS à supprimer. Cela doit correspondre exactement à un fichier CSS préalablement inséré dans la page en utilisant {{WebExtAPIRef("tabs.insertCSS()")}}.</dd>
-  <dt><code>frameId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Le cadre à partir duquel supprimer le CSS. La valeur par défaut est <code>0</code> (l'image de niveau supérieur).</dd>
-  <dt><code>matchAboutBlank</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. si <code>true</code>, le CSS sera supprimé des cadres "about:blank" et "about:srcdoc" intégrés si votre extension a accès à leur document parent. Par défaut à <code>false</code>.</dd>
- </dl>
- </dd>
-</dl>
+- `tabId` {{optional_inline}}
+  - : `integer`. L'ID de l'onglet à partir duquel supprimer le CSS. Par défaut à l'onglet actif de la fenêtre en cours.
+- `details`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : Un objet décrivant le CSS à retirer de la page. Il contient les propriétés suivantes :
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans arguments lorsque tous les CSS ont été supprimés. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+    - `allFrames`{{optional_inline}}
 
-<h2 id="Exemples">Exemples</h2>
+      - : `boolean`. si `true`, le code sera supprimé de toutes les images de la page en cours. si c'est `false`, le code est seulement retiré du cadre supérieur. Par défaut à `false`.
 
-<p>Cet exemple ajoute du code CSS en utilisant {{WebExtAPIRef("tabs.insertCSS")}}, puis le supprime à nouveau lorsque l'utilisateur clique sur une action du navigateur :</p>
+    - `code`{{optional_inline}}
+      - : `string`. CSS à supprimer, en tant que chaîne de texte. Cela doit correspondre exactement à une chaîne CSS précédemment insérée dans la page en utilisant {{WebExtAPIRef("tabs.insertCSS()")}}.
+    - `cssOrigin`{{optional_inline}}
+      - : `string`. Cela peut prendre l'une des deux valeurs suivantes : "user", pour CSS ajouté en tant que feuille de style utilisateur, ou "author" pour CSS ajouté en tant que feuille de style auteur. Si cette option a été définie précédemment par  {{WebExtAPIRef("tabs.insertCSS()")}}, elle doit correspondre exactement.
+    - `file`{{optional_inline}}
+      - : `string`. Chemin d'accès à un fichier contenant le CSS à supprimer. Cela doit correspondre exactement à un fichier CSS préalablement inséré dans la page en utilisant {{WebExtAPIRef("tabs.insertCSS()")}}.
+    - `frameId`{{optional_inline}}
+      - : `integer`. Le cadre à partir duquel supprimer le CSS. La valeur par défaut est `0` (l'image de niveau supérieur).
+    - `matchAboutBlank`{{optional_inline}}
+      - : `boolean`. si `true`, le CSS sera supprimé des cadres "about:blank" et "about:srcdoc" intégrés si votre extension a accès à leur document parent. Par défaut à `false`.
 
-<pre class="brush: js">var css = "body { border: 20px dotted pink; }";
+### Valeur retournée
+
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque tous les CSS ont été supprimés. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+
+## Exemples
+
+Cet exemple ajoute du code CSS en utilisant {{WebExtAPIRef("tabs.insertCSS")}}, puis le supprime à nouveau lorsque l'utilisateur clique sur une action du navigateur :
+
+```js
+var css = "body { border: 20px dotted pink; }";
 
 function onError(error) {
   console.log(`Error: ${error}`);
@@ -69,26 +67,25 @@ function onError(error) {
 var insertingCSS = browser.tabs.insertCSS(2, {code: css});
 insertingCSS.then(null, onError);
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   var removing = browser.tabs.removeCSS(2, {code: css});
   removing.then(null, onError);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.removeCSS")}}</p>
+{{Compat("webextensions.api.tabs.removeCSS")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -115,5 +112,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -7,44 +7,47 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/developer
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Type</th>
-   <td><code>Objet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Obligatoire</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Exemple</th>
-   <td>
-    <pre class="brush: json">
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Type</th>
+      <td><code>Objet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Obligatoire</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Exemple</th>
+      <td>
+        <pre class="brush: json">
 "developer": {
   "name": "Walt Whitman",
   "url": "https://en.wikipedia.org/wiki/Walt_Whitman"
-}</pre>
-   </td>
-  </tr>
- </tbody>
+}</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Le nom du développeur de l'extension et l'URL de sa page d'accueil, destinés à être affichés dans l'interface utilisateur du navigateur.</p>
+Le nom du développeur de l'extension et l'URL de sa page d'accueil, destinés à être affichés dans l'interface utilisateur du navigateur.
 
-<p>L'objet et ses deux propriétés sont facultatifs. Les propriétés "nom" et "url", si présentes, remplacent respectivement les clés <a href="/fr/Add-ons/WebExtensions/manifest.json/author">author</a> et <a href="/fr/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a>. Cet objet ne permet qu'un seul nom de développeur et une URL à spécifier.</p>
+L'objet et ses deux propriétés sont facultatifs. Les propriétés "nom" et "url", si présentes, remplacent respectivement les clés [author](/fr/Add-ons/WebExtensions/manifest.json/author) et [homepage_url](/fr/Add-ons/WebExtensions/manifest.json/homepage_url). Cet objet ne permet qu'un seul nom de développeur et une URL à spécifier.
 
-<p>Ceci est une <a href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">propriété localisable</a>.</p>
+Ceci est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: json">"developer": {
+```json
+"developer": {
   "name": "Walt Whitman",
   "url": "https://en.wikipedia.org/wiki/Walt_Whitman"
-}</pre>
+}
+```
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.manifest.developer")}}</p>
+{{Compat("webextensions.manifest.developer")}}

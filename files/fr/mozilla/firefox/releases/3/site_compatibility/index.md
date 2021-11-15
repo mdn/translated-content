@@ -7,75 +7,70 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3/Site_compatibility
 original_slug: Changements_dans_Gecko_1.9_affectant_les_sites_Web
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Cette page essaie de donner un aperçu des changements entre <a href="fr/Gecko">Gecko</a> 1.8 et Gecko 1.9 qui pourraient éventuellement affecter le comportement ou le rendu des sites Web.</p>
+Cette page essaie de donner un aperçu des changements entre [Gecko](fr/Gecko) 1.8 et Gecko 1.9 qui pourraient éventuellement affecter le comportement ou le rendu des sites Web.
 
-<p>Consultez également <a href="fr/Firefox_3_pour_les_d%c3%a9veloppeurs">Firefox 3 pour les développeurs</a>.</p>
+Consultez également [Firefox 3 pour les développeurs](fr/Firefox_3_pour_les_d%c3%a9veloppeurs).
 
-<h2 id=".C3.89v.C3.A8nements">Évènements</h2>
+## Évènements
 
-<h3 id="Gestionnaires_d.27.C3.A9v.C3.A8nements_capturants_load">Gestionnaires d'évènements capturants <code>load</code></h3>
+### Gestionnaires d'évènements capturants `load`
 
-<p>Dans Gecko 1.8, il n'était pas possible de définir des gestionnaires d'évènements <code>load</code> capturants sur les images. Dans Gecko 1.9, cela devient possible avec la résolution du {{ Bug(234455) }}. Cela peut cependant causer des problèmes sur les sites Web qui ont incorrectement défini leurs gestionnaires d'évènements sur l'évènement <code>load</code>. Consultez la discussion dans le {{ Bug(335251) }}. Pour résoudre ce problème, les pages en question ne doivent pas définir de gestionnaires d'évènements capturants pour l'évènement <code>load</code>.</p>
+Dans Gecko 1.8, il n'était pas possible de définir des gestionnaires d'évènements `load` capturants sur les images. Dans Gecko 1.9, cela devient possible avec la résolution du {{ Bug(234455) }}. Cela peut cependant causer des problèmes sur les sites Web qui ont incorrectement défini leurs gestionnaires d'évènements sur l'évènement `load`. Consultez la discussion dans le {{ Bug(335251) }}. Pour résoudre ce problème, les pages en question ne doivent pas définir de gestionnaires d'évènements capturants pour l'évènement `load`.
 
-<p>Par exemple, ceci :</p>
+Par exemple, ceci :
 
-<pre class="eval">window.addEventListener('load', votreFonction, true);
-</pre>
+    window.addEventListener('load', votreFonction, true);
 
-<p>devrait être remplacé par ceci :</p>
+devrait être remplacé par ceci :
 
-<pre class="eval">window.addEventListener('load', votreFonction, false);
-</pre>
+    window.addEventListener('load', votreFonction, false);
 
-<p>Pour une explication du fonctionnement de la capture des évènements, consultez <a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture">DOM Level 2 Event capture</a> (en)</p>
+Pour une explication du fonctionnement de la capture des évènements, consultez [DOM Level 2 Event capture](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) (en)
 
-<h3 id="preventBubble_a_.C3.A9t.C3.A9_supprim.C3.A9e"><code>preventBubble</code> a été supprimée</h3>
+### `preventBubble` a été supprimée
 
-<p>Dans Gecko 1.8, la méthode <code>preventBubble</code> existait sur les évènements pour les empêcher de se propager plus haut. Dans Gecko 1.9, cette méthode a été supprimée. À la place, utilisez la méthode standard <a href="fr/DOM/event.stopPropagation">stopPropagation()</a>, qui fonctionne également dans Gecko 1.8. Ce changement a été produit par le patch pour le {{ Bug(330494) }}. Consultez également le {{ Bug(105280) }}.</p>
+Dans Gecko 1.8, la méthode `preventBubble` existait sur les évènements pour les empêcher de se propager plus haut. Dans Gecko 1.9, cette méthode a été supprimée. À la place, utilisez la méthode standard [stopPropagation()](fr/DOM/event.stopPropagation), qui fonctionne également dans Gecko 1.8. Ce changement a été produit par le patch pour le {{ Bug(330494) }}. Consultez également le {{ Bug(105280) }}.
 
-<h3 id="Quelques_autres_anciennes_API_d.27.C3.A9v.C3.A8nements_ne_sont_plus_support.C3.A9es">Quelques autres anciennes API d'évènements ne sont plus supportées</h3>
+### Quelques autres anciennes API d'évènements ne sont plus supportées
 
-<p><a href="fr/DOM/window.captureEvents">window.captureEvents</a>, <a href="fr/DOM/window.releaseEvents">window.releaseEvents</a> et <code>window.routeEvent</code> ne sont plus supportées ({{ Obsolete_inline() }}) dans Gecko 1.9.</p>
+[window.captureEvents](fr/DOM/window.captureEvents), [window.releaseEvents](fr/DOM/window.releaseEvents) et `window.routeEvent` ne sont plus supportées ({{ Obsolete_inline() }}) dans Gecko 1.9.
 
-<h2 id="DOM">DOM</h2>
+## DOM
 
-<h3 id="L.27exception_WRONG_DOCUMENT_ERR_se_d.C3.A9clenche_lorsque_l.27on_essaie_d.27utiliser_un_n.C5.93ud_d.27un_document_diff.C3.A9rent">L'exception <code>WRONG_DOCUMENT_ERR</code> se déclenche lorsque l'on essaie d'utiliser un nœud d'un document différent</h3>
+### L'exception `WRONG_DOCUMENT_ERR` se déclenche lorsque l'on essaie d'utiliser un nœud d'un document différent
 
-<p></p><p>Les nœuds provenant de documents externes doivent être clonés à l'aide de <a href="/fr/docs/Web/API/Document/importNode"><code>document.importNode()</code></a> (ou adoptés avec
-    <a href="/fr/docs/Web/API/Document/adoptNode"><code>document.adoptNode()</code></a>) avant de pouvoir être insérés dans le document courant. Pour en savoir plus sur les problèmes
-    de <a href="/fr/docs/Web/API/Node/ownerDocument"><code>Node.ownerDocument</code></a>, consultez la <a href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">FAQ DOM du W3C</a> (en anglais).</p>
+Les nœuds provenant de documents externes doivent être clonés à l'aide de [`document.importNode()`](/fr/docs/Web/API/Document/importNode) (ou adoptés avec
+[`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode)) avant de pouvoir être insérés dans le document courant. Pour en savoir plus sur les problèmes
+de [`Node.ownerDocument`](/fr/docs/Web/API/Node/ownerDocument), consultez la [FAQ DOM du W3C](http://www.w3.org/DOM/faq.html#ownerdoc) (en anglais).
 
-    <p>Gecko n'obligeait pas à utiliser <a href="/fr/docs/Web/API/Document/importNode"><code>document.importNode()</code></a> et <a href="/fr/docs/Web/API/Document/adoptNode"><code>document.adoptNode()</code></a> avant sa version 1.9. Depuis les versions 1.9
-    alphas, si un nœud n'est pas adopté ou importé avant d'être utilisé dans un autre document, l'exception
-    <code>WRONG_DOCUMENT_ERR</code> est déclenchée (<code>NS_ERROR_DOM_WRONG_DOCUMENT_ERR</code>). implémentation dans le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=47903" rel="noopener">bug 47903</a>.</p><p></p>
+Gecko n'obligeait pas à utiliser [`document.importNode()`](/fr/docs/Web/API/Document/importNode) et [`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode) avant sa version 1.9. Depuis les versions 1.9
+alphas, si un nœud n'est pas adopté ou importé avant d'être utilisé dans un autre document, l'exception
+`WRONG_DOCUMENT_ERR` est déclenchée (`NS_ERROR_DOM_WRONG_DOCUMENT_ERR`). implémentation dans le [bug 47903](https://bugzilla.mozilla.org/show_bug.cgi?id=47903).
+
+## Ranges
+
+### `intersectsNode` a été supprimée
+
+Dans Gecko 1.8, la fonction `intersectsNode` pouvait être utilisée pour vérifier si un nœud faisait partie d'un range. Cependant, les valeurs renvoyées par cette fonction étaient trompeuses et rarement utiles. Elle a donc été retirée de Gecko 1.9. Utilisez à la place la fonction standard et plus précise [compareBoundaryPoints](fr/DOM/range.compareBoundaryPoints). Cette fonction a été retirée par le patch du {{ Bug(358073) }}.
+
+Consultez la documentation de [intersectsNode](fr/DOM/range.intersectsNode) pour savoir comment utiliser `compareBoundaryPoints` à la place.
+
+### `compareNode` a été supprimée
+
+Dans Gecko 1.8, la fonction `compareNode` pouvait être utilisée pour tester l'intersection d'un nœud avec un range. Cependant, les valeurs renvoyées par cette fonction étaient trompeuses et rarement utiles. Elle a donc été retirée de Gecko 1.9. Utilisez à la place la fonction standard et plus précise [compareBoundaryPoints](fr/DOM/range.compareBoundaryPoints). Cette fonction a été retirée par le patch du {{ Bug(358073) }}.
+
+Consultez la documentation de [compareNode](fr/DOM/range.compareNode) pour savoir comment utiliser `compareBoundaryPoints` à la place.
+
+## HTML
+
+### Correction de nombreux bogues dans le code de `<object>`
+
+- Les éléments `object` et `embed` n'ont plus besoin d'attribut `type` pour être rendus.
+- La modification de l'attribut `src` (de `<embed>`) ou de l'attribut `data` (de `<object>`) via JavaScript fonctionne maintenant correctement.
+- L'en-tête `Content-Type` envoyé par le serveur (s'il existe) est maintenant prioritaire par rapport à l'attribut `type` d'une balise `<object>` comme défini dans la spécification HTML (ceci n'est pas le cas pour `embed`).
 
 
-<h2 id="Ranges">Ranges</h2>
 
-<h3 id="intersectsNode_a_.C3.A9t.C3.A9_supprim.C3.A9e"><code>intersectsNode</code> a été supprimée</h3>
-
-<p>Dans Gecko 1.8, la fonction <code>intersectsNode</code> pouvait être utilisée pour vérifier si un nœud faisait partie d'un range. Cependant, les valeurs renvoyées par cette fonction étaient trompeuses et rarement utiles. Elle a donc été retirée de Gecko 1.9. Utilisez à la place la fonction standard et plus précise <a href="fr/DOM/range.compareBoundaryPoints">compareBoundaryPoints</a>. Cette fonction a été retirée par le patch du {{ Bug(358073) }}.</p>
-
-<p>Consultez la documentation de <a href="fr/DOM/range.intersectsNode">intersectsNode</a> pour savoir comment utiliser <code>compareBoundaryPoints</code> à la place.</p>
-
-<h3 id="compareNode_a_.C3.A9t.C3.A9_supprim.C3.A9e"><code>compareNode</code> a été supprimée</h3>
-
-<p>Dans Gecko 1.8, la fonction <code>compareNode</code> pouvait être utilisée pour tester l'intersection d'un nœud avec un range. Cependant, les valeurs renvoyées par cette fonction étaient trompeuses et rarement utiles. Elle a donc été retirée de Gecko 1.9. Utilisez à la place la fonction standard et plus précise <a href="fr/DOM/range.compareBoundaryPoints">compareBoundaryPoints</a>. Cette fonction a été retirée par le patch du {{ Bug(358073) }}.</p>
-
-<p>Consultez la documentation de <a href="fr/DOM/range.compareNode">compareNode</a> pour savoir comment utiliser <code>compareBoundaryPoints</code> à la place.</p>
-
-<h2 id="HTML">HTML</h2>
-
-<h3 id="Correction_de_nombreux_bogues_dans_le_code_de_.3Cobject.3E">Correction de nombreux bogues dans le code de <code>&lt;object&gt;</code></h3>
-
-<ul>
- <li>Les éléments <code>object</code> et <code>embed</code> n'ont plus besoin d'attribut <code>type</code> pour être rendus.</li>
- <li>La modification de l'attribut <code>src</code> (de <code>&lt;embed&gt;</code>) ou de l'attribut <code>data</code> (de <code>&lt;object&gt;</code>) via JavaScript fonctionne maintenant correctement.</li>
- <li>L'en-tête <code>Content-Type</code> envoyé par le serveur (s'il existe) est maintenant prioritaire par rapport à l'attribut <code>type</code> d'une balise <code>&lt;object&gt;</code> comme défini dans la spécification HTML (ceci n'est pas le cas pour <code>embed</code>).</li>
-</ul>
-
-<div class="noinclude"> </div>
-
-<p>{{ languages( { "en": "en/Gecko_1.9_Changes_affecting_websites", "ja": "ja/Gecko_1.9_Changes_affecting_websites", "ko": "ko/Gecko_1.9_Changes_affecting_websites", "pl": "pl/Zmiany_w_Gecko_1.9_wp\u0142ywaj\u0105ce_na_wy\u015bwietlanie_stron", "pt": "pt/Mudan\u00e7as_no_Gecko_1.9_que_afetam_websites" } ) }}</p>
+{{ languages( { "en": "en/Gecko\_1.9\_Changes_affecting_websites", "ja": "ja/Gecko\_1.9\_Changes_affecting_websites", "ko": "ko/Gecko\_1.9\_Changes_affecting_websites", "pl": "pl/Zmiany_w_Gecko\_1.9\_wp\u0142ywaj\u0105ce_na_wy\u015bwietlanie_stron", "pt": "pt/Mudan\u00e7as_no_Gecko\_1.9\_que_afetam_websites" } ) }}

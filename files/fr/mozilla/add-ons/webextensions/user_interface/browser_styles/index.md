@@ -3,267 +3,286 @@ title: Styles des navigateurs
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Certains composants de l'interface utilisateur - les <a href="/fr/Add-ons/WebExtensions/user_interface/Popups">fenêtres contextuelles</a>, <a href="/fr/Add-ons/WebExtensions/user_interface/Sidebars">fenêtres latérales</a>, et les <a href="/fr/Add-ons/WebExtensions/user_interface/Options_pages">pages d'options</a> du navigateur et de la page - sont spécifiés par votre extension de la même manière  :</p>
+Certains composants de l'interface utilisateur - les [fenêtres contextuelles](/fr/Add-ons/WebExtensions/user_interface/Popups), [fenêtres latérales](/fr/Add-ons/WebExtensions/user_interface/Sidebars), et les [pages d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages) du navigateur et de la page - sont spécifiés par votre extension de la même manière  :
 
-<ol>
- <li>créer un fichier HTML définissant la structure de l'élément d'interface utilisateur</li>
- <li>ajoutez une clé manifest.json (<code><a href="/fr/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code>, <code><a href="/fr/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code>, <code><a href="/fr/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code>, ou <code><a href="/fr/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code>) pointant vers ce fichier HTML.</li>
-</ol>
+1.  créer un fichier HTML définissant la structure de l'élément d'interface utilisateur
+2.  ajoutez une clé manifest.json ([`browser_action`](/fr/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/fr/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action), ou [`options_ui`](/fr/Add-ons/WebExtensions/manifest.json/options_ui)) pointant vers ce fichier HTML.
 
-<p>L'un des défis de cette approche est de styliser l'élément de telle sorte qu'il s'intègre au style du navigateur.<br>
- Pour aider à cela, les clés manifest.json keys incluent une propriété optionnelle supplémentaire : <code>browser_style</code>.<br>
- Si cela est inclus et défini sur <code>true</code>, votre document obtiendra une ou plusieurs feuilles de style supplémentaires qui le rendront cohérent avec l'interface utilisateur du navigateur et avec d'autres extensions utilisant la propriété <code>browser_style</code>.</p>
+L'un des défis de cette approche est de styliser l'élément de telle sorte qu'il s'intègre au style du navigateur.
+Pour aider à cela, les clés manifest.json keys incluent une propriété optionnelle supplémentaire : `browser_style`.
+Si cela est inclus et défini sur `true`, votre document obtiendra une ou plusieurs feuilles de style supplémentaires qui le rendront cohérent avec l'interface utilisateur du navigateur et avec d'autres extensions utilisant la propriété `browser_style`.
 
-<p>Lorsque vous envisagez d'utiliser le <code>browser_style: true</code>, vous devez tester votre extension avec différents thèmes (intégrés ou AMO) pour vous assurer que l'interface d'extension se comporte comme vous l'attendez..</p>
+Lorsque vous envisagez d'utiliser le `browser_style: true`, vous devez tester votre extension avec différents thèmes (intégrés ou AMO) pour vous assurer que l'interface d'extension se comporte comme vous l'attendez..
 
-<div class="warning">
-<p><strong>Attention :</strong> Quand <code>browser_style: true</code> est inclus dans le manifest de votre extension web, la sélection de texte dans l'interface utilisateur de votre extension est désactivée sauf dans les contrôles de saisie. Si cela pose un problème, incluez plutôt browser_style:false.</p>
-</div>
+> **Attention :** Quand `browser_style: true` est inclus dans le manifest de votre extension web, la sélection de texte dans l'interface utilisateur de votre extension est désactivée sauf dans les contrôles de saisie. Si cela pose un problème, incluez plutôt browser_style:false.
 
-<div class="note">
-<p><strong>Note :</strong> <strong>Google Chrome</strong> et <strong>Opera</strong> utilisent <code>chrome_style</code> au lieu de <code>browser_style</code>, donc si vous souhaitez les prendre en charge, vous devez ajouter les deux clés.</p>
-</div>
+> **Note :** **Google Chrome** et **Opera** utilisent `chrome_style` au lieu de `browser_style`, donc si vous souhaitez les prendre en charge, vous devez ajouter les deux clés.
 
-<p>Dans Firefox, la feuille de style peut être vue sur <code>chrome://browser/content/extension.css</code>. La feuille de style peut être vue sur <code>chrome://browser/content/extension-mac.css</code> est également incluse sur OS X.</p>
+Dans Firefox, la feuille de style peut être vue sur `chrome://browser/content/extension.css`. La feuille de style peut être vue sur `chrome://browser/content/extension-mac.css` est également incluse sur OS X.
 
-<p>La plupart des styles sont automatiquement appliqués, mais certains éléments nécessitent que vous ajoutiez la classe  <code>browser-style</code> non standard pour obtenir leur style, comme indiqué dans le tableau ci-dessous :</p>
+La plupart des styles sont automatiquement appliqués, mais certains éléments nécessitent que vous ajoutiez la classe  `browser-style` non standard pour obtenir leur style, comme indiqué dans le tableau ci-dessous :
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Element</th>
-   <th scope="col">Exemple</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="/fr/docs/Web/HTML/Element/button">&lt;button&gt;</a></code></td>
-   <td>
-    <pre class="brush: html">
-&lt;button class="browser-style"&gt;Click me&lt;/button&gt;{{non-standard_inline}}</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code><a href="/fr/docs/Web/HTML/Element/select">&lt;select&gt;</a></code></p>
-   </td>
-   <td>
-    <pre class="brush: html">
-&lt;select class="browser-style" name="select"&gt;
-  &lt;option value="value1"&gt;Value 1&lt;/option&gt;
-  &lt;option value="value2" selected&gt;Value 2&lt;/option&gt;
-  &lt;option value="value3"&gt;Value 3&lt;/option&gt;
-&lt;/select&gt;</pre>
-   </td>
-  </tr>
-  <tr>
-   <td><code><a href="/fr/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code></td>
-   <td>
-    <pre class="brush: html">
-&lt;textarea class="browser-style"&gt;Write here&lt;/textarea&gt;</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>Parent d'un <code><a href="/fr/docs/Web/HTML/Element/input">&lt;input&gt;</a></code></td>
-   <td>
-    <pre class="brush: html">
-&lt;div class="browser-style"&gt;
-  &lt;input type="radio" id="op1" name="choices" value="op1"&gt;
-  &lt;label for="op1"&gt;Option 1&lt;/label&gt;
+  <thead>
+    <tr>
+      <th scope="col">Element</th>
+      <th scope="col">Exemple</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/HTML/Element/button">&#x3C;button></a></code
+        >
+      </td>
+      <td>
+        <pre class="brush: html">
+&#x3C;button class="browser-style">Click me&#x3C;/button>{{non-standard_inline}}</pre
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <code
+            ><a href="/fr/docs/Web/HTML/Element/select">&#x3C;select></a></code
+          >
+        </p>
+      </td>
+      <td>
+        <pre class="brush: html">
+&#x3C;select class="browser-style" name="select">
+  &#x3C;option value="value1">Value 1&#x3C;/option>
+  &#x3C;option value="value2" selected>Value 2&#x3C;/option>
+  &#x3C;option value="value3">Value 3&#x3C;/option>
+&#x3C;/select></pre
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/HTML/Element/textarea"
+            >&#x3C;textarea></a
+          ></code
+        >
+      </td>
+      <td>
+        <pre class="brush: html">
+&#x3C;textarea class="browser-style">Write here&#x3C;/textarea></pre
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Parent d'un
+        <code><a href="/fr/docs/Web/HTML/Element/input">&#x3C;input></a></code>
+      </td>
+      <td>
+        <pre class="brush: html">
+&#x3C;div class="browser-style">
+  &#x3C;input type="radio" id="op1" name="choices" value="op1">
+  &#x3C;label for="op1">Option 1&#x3C;/label>
 
-  &lt;input type="radio" id="op2" name="choices" value="op2"&gt;
-  &lt;label for="op2"&gt;Option 2&lt;/label&gt;
-&lt;/div&gt;</pre>
-   </td>
-  </tr>
- </tbody>
+&#x3C;input type="radio" id="op2" name="choices" value="op2">
+&#x3C;label for="op2">Option 2&#x3C;/label>
+&#x3C;/div></pre
+        >
+</td>
+</tr>
+
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note :</strong> Voir le {{bug(1465256)}} pour la suppression de cette exigence inutile.</p>
-</div>
+> **Note :** Voir le {{bug(1465256)}} pour la suppression de cette exigence inutile.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
+{{Compat("webextensions.browser_style")}}
 
+## Composants du panneau Firefox
 
-<p>{{Compat("webextensions.browser_style")}}</p>
+> **Attention :** Cette fonctionnalité est non standard et ne fonctionne que dans Firefox.
 
-<h2 id="Composants_du_panneau_Firefox">Composants du panneau Firefox</h2>
+La feuille de style `chrome://browser/content/extension.css` contient également les styles des composants du panneau Firefox.
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette fonctionnalité est non standard et ne fonctionne que dans Firefox.</p>
-</div>
-
-<p>La feuille de style <code>chrome://browser/content/extension.css</code> contient également les styles des composants du panneau Firefox.</p>
-
-<p>L'<a href="https://firefoxux.github.io/StyleGuide/#/navigation">ancien guide de style de Firefox</a> documente l'utilisation appropriée.</p>
+L'[ancien guide de style de Firefox](https://firefoxux.github.io/StyleGuide/#/navigation) documente l'utilisation appropriée.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Element</th>
-   <th scope="col">Exemple</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Header</td>
-   <td>
-    <pre class="brush: html">
-&lt;header class="panel-section panel-section-header"&gt;
-  &lt;div class="icon-section-header"&gt;&lt;img src="image.svg"/&gt;&lt;/div&gt;
-  &lt;div class="text-section-header"&gt;Header&lt;/div&gt;
-&lt;/header&gt;</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>Footer</td>
-   <td>
-    <pre class="brush: html">
-&lt;footer class="panel-section panel-section-footer"&gt;
-  &lt;button class="panel-section-footer-button"&gt;Cancel&lt;/button&gt;
-  &lt;div class="panel-section-footer-separator"&gt;&lt;/div&gt;
-  &lt;button class="panel-section-footer-button default"&gt;Confirm&lt;/button&gt;
-&lt;/footer&gt;</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>Tabs</td>
-   <td>
-    <pre class="brush: html">
-&lt;div class="panel-section panel-section-tabs"&gt;
-  &lt;button class="panel-section-tabs-button selected"&gt;Tab&lt;/button&gt;
-  &lt;div class="panel-section-tabs-separator"&gt;&lt;/div&gt;
-  &lt;button class="panel-section-tabs-button"&gt;Tab&lt;/button&gt;
-  &lt;div class="panel-section-tabs-separator"&gt;&lt;/div&gt;
-  &lt;button class="panel-section-tabs-button"&gt;Tab&lt;/button&gt;
-&lt;/div&gt;</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>Form</td>
-   <td>
-    <pre class="brush: html">
-&lt;div class="panel-section panel-section-formElements"&gt;
-  &lt;div class="panel-formElements-item"&gt;
-    &lt;label for="name01"&gt;Label:&lt;/label&gt;
-    &lt;input type="text" value="Name" id="name01" /&gt;
-  &lt;/div&gt;
-  &lt;div class="panel-formElements-item"&gt;
-    &lt;label for="picker01"&gt;Label:&lt;/label&gt;
-    &lt;select id="picker01"&gt;
-      &lt;option value="value1" selected="true"&gt;Dropdown&lt;/option&gt;
-      &lt;option value="value2"&gt;List Item&lt;/option&gt;
-      &lt;option value="value3"&gt;List Item&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/div&gt;
-  &lt;div class="panel-formElements-item"&gt;
-    &lt;label for="placeholder01"&gt;Label:&lt;/label&gt;
-    &lt;input type="text" placeholder="Placeholder" id="placeholder01" /&gt;
-    &lt;button name="expander" class="expander"&gt;&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-   </td>
-  </tr>
-  <tr>
-   <td>Menu</td>
-   <td>
-    <pre class="brush: html">
-&lt;div class="panel-section panel-section-list"&gt;
-  &lt;div class="panel-list-item"&gt;
-    &lt;div class="icon"&gt;&lt;/div&gt;
-    &lt;div class="text"&gt;List Item&lt;/div&gt;
-    &lt;div class="text-shortcut"&gt;Ctrl-L&lt;/div&gt;
-  &lt;/div&gt;
+  <thead>
+    <tr>
+      <th scope="col">Element</th>
+      <th scope="col">Exemple</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Header</td>
+      <td>
+        <pre class="brush: html">
+&#x3C;header class="panel-section panel-section-header">
+  &#x3C;div class="icon-section-header">&#x3C;img src="image.svg"/>&#x3C;/div>
+  &#x3C;div class="text-section-header">Header&#x3C;/div>
+&#x3C;/header></pre
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>Footer</td>
+      <td>
+        <pre class="brush: html">
+&#x3C;footer class="panel-section panel-section-footer">
+  &#x3C;button class="panel-section-footer-button">Cancel&#x3C;/button>
+  &#x3C;div class="panel-section-footer-separator">&#x3C;/div>
+  &#x3C;button class="panel-section-footer-button default">Confirm&#x3C;/button>
+&#x3C;/footer></pre
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>Tabs</td>
+      <td>
+        <pre class="brush: html">
+&#x3C;div class="panel-section panel-section-tabs">
+  &#x3C;button class="panel-section-tabs-button selected">Tab&#x3C;/button>
+  &#x3C;div class="panel-section-tabs-separator">&#x3C;/div>
+  &#x3C;button class="panel-section-tabs-button">Tab&#x3C;/button>
+  &#x3C;div class="panel-section-tabs-separator">&#x3C;/div>
+  &#x3C;button class="panel-section-tabs-button">Tab&#x3C;/button>
+&#x3C;/div></pre
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>Form</td>
+      <td>
+        <pre class="brush: html">
+&#x3C;div class="panel-section panel-section-formElements">
+  &#x3C;div class="panel-formElements-item">
+    &#x3C;label for="name01">Label:&#x3C;/label>
+    &#x3C;input type="text" value="Name" id="name01" />
+  &#x3C;/div>
+  &#x3C;div class="panel-formElements-item">
+    &#x3C;label for="picker01">Label:&#x3C;/label>
+    &#x3C;select id="picker01">
+      &#x3C;option value="value1" selected="true">Dropdown&#x3C;/option>
+      &#x3C;option value="value2">List Item&#x3C;/option>
+      &#x3C;option value="value3">List Item&#x3C;/option>
+    &#x3C;/select>
+  &#x3C;/div>
+  &#x3C;div class="panel-formElements-item">
+    &#x3C;label for="placeholder01">Label:&#x3C;/label>
+    &#x3C;input type="text" placeholder="Placeholder" id="placeholder01" />
+    &#x3C;button name="expander" class="expander">&#x3C;/button>
+  &#x3C;/div>
+&#x3C;/div></pre
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>Menu</td>
+      <td>
+        <pre class="brush: html">
+&#x3C;div class="panel-section panel-section-list">
+  &#x3C;div class="panel-list-item">
+    &#x3C;div class="icon">&#x3C;/div>
+    &#x3C;div class="text">List Item&#x3C;/div>
+    &#x3C;div class="text-shortcut">Ctrl-L&#x3C;/div>
+  &#x3C;/div>
 
-  &lt;div class="panel-list-item"&gt;
-    &lt;div class="icon"&gt;&lt;/div&gt;
-    &lt;div class="text"&gt;List Item&lt;/div&gt;
-    &lt;div class="text-shortcut"&gt;&lt;/div&gt;
-  &lt;/div&gt;
+&#x3C;div class="panel-list-item">
+&#x3C;div class="icon">&#x3C;/div>
+&#x3C;div class="text">List Item&#x3C;/div>
+&#x3C;div class="text-shortcut">&#x3C;/div>
+&#x3C;/div>
 
-  &lt;div class="panel-section-separator"&gt;&lt;/div&gt;
+&#x3C;div class="panel-section-separator">&#x3C;/div>
 
-  &lt;div class="panel-list-item disabled"&gt;
-    &lt;div class="icon"&gt;&lt;/div&gt;
-    &lt;div class="text"&gt;Disabled List Item&lt;/div&gt;
-    &lt;div class="text-shortcut"&gt;&lt;/div&gt;
-  &lt;/div&gt;
+&#x3C;div class="panel-list-item disabled">
+&#x3C;div class="icon">&#x3C;/div>
+&#x3C;div class="text">Disabled List Item&#x3C;/div>
+&#x3C;div class="text-shortcut">&#x3C;/div>
+&#x3C;/div>
 
-  &lt;div class="panel-section-separator"&gt;&lt;/div&gt;
+&#x3C;div class="panel-section-separator">&#x3C;/div>
 
-  &lt;div class="panel-list-item"&gt;
-    &lt;div class="icon"&gt;&lt;/div&gt;
-    &lt;div class="text"&gt;List Item&lt;/div&gt;
-    &lt;div class="text-shortcut"&gt;&lt;/div&gt;
-  &lt;/div&gt;
+&#x3C;div class="panel-list-item">
+&#x3C;div class="icon">&#x3C;/div>
+&#x3C;div class="text">List Item&#x3C;/div>
+&#x3C;div class="text-shortcut">&#x3C;/div>
+&#x3C;/div>
 
-  &lt;div class="panel-list-item"&gt;
-    &lt;div class="icon"&gt;&lt;/div&gt;
-    &lt;div class="text"&gt;List Item&lt;/div&gt;
-    &lt;div class="text-shortcut"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-   </td>
-  </tr>
- </tbody>
+&#x3C;div class="panel-list-item">
+&#x3C;div class="icon">&#x3C;/div>
+&#x3C;div class="text">List Item&#x3C;/div>
+&#x3C;div class="text-shortcut">&#x3C;/div>
+&#x3C;/div>
+&#x3C;/div></pre
+        >
+</td>
+</tr>
+
+  </tbody>
 </table>
 
-<h3 id="Exemple">Exemple</h3>
+### Exemple
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;header class="panel-section panel-section-header"&gt;
-  &lt;div class="icon-section-header"&gt;&lt;!-- An image goes here. --&gt;&lt;/div&gt;
-  &lt;div class="text-section-header"&gt;Header&lt;/div&gt;
-&lt;/header&gt;
+```html
+<header class="panel-section panel-section-header">
+  <div class="icon-section-header"><!-- An image goes here. --></div>
+  <div class="text-section-header">Header</div>
+</header>
 
-&lt;div class="panel-section panel-section-list"&gt;
-  &lt;div class="panel-list-item"&gt;
-    &lt;div class="icon"&gt;&lt;/div&gt;
-    &lt;div class="text"&gt;List Item&lt;/div&gt;
-    &lt;div class="text-shortcut"&gt;Ctrl-L&lt;/div&gt;
-  &lt;/div&gt;
+<div class="panel-section panel-section-list">
+  <div class="panel-list-item">
+    <div class="icon"></div>
+    <div class="text">List Item</div>
+    <div class="text-shortcut">Ctrl-L</div>
+  </div>
 
-  &lt;div class="panel-list-item"&gt;
-    &lt;div class="icon"&gt;&lt;/div&gt;
-    &lt;div class="text"&gt;List Item&lt;/div&gt;
-    &lt;div class="text-shortcut"&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  <div class="panel-list-item">
+    <div class="icon"></div>
+    <div class="text">List Item</div>
+    <div class="text-shortcut"></div>
+  </div>
 
-  &lt;div class="panel-section-separator"&gt;&lt;/div&gt;
+  <div class="panel-section-separator"></div>
 
-  &lt;div class="panel-list-item disabled"&gt;
-    &lt;div class="icon"&gt;&lt;/div&gt;
-    &lt;div class="text"&gt;Disabled List Item&lt;/div&gt;
-    &lt;div class="text-shortcut"&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  <div class="panel-list-item disabled">
+    <div class="icon"></div>
+    <div class="text">Disabled List Item</div>
+    <div class="text-shortcut"></div>
+  </div>
 
-  &lt;div class="panel-section-separator"&gt;&lt;/div&gt;
+  <div class="panel-section-separator"></div>
 
-  &lt;div class="panel-list-item"&gt;
-    &lt;div class="icon"&gt;&lt;/div&gt;
-    &lt;div class="text"&gt;List Item&lt;/div&gt;
-    &lt;div class="text-shortcut"&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  <div class="panel-list-item">
+    <div class="icon"></div>
+    <div class="text">List Item</div>
+    <div class="text-shortcut"></div>
+  </div>
 
-  &lt;div class="panel-list-item"&gt;
-    &lt;div class="icon"&gt;&lt;/div&gt;
-    &lt;div class="text"&gt;List Item&lt;/div&gt;
-    &lt;div class="text-shortcut"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+  <div class="panel-list-item">
+    <div class="icon"></div>
+    <div class="text">List Item</div>
+    <div class="text-shortcut"></div>
+  </div>
+</div>
 
-&lt;footer class="panel-section panel-section-footer"&gt;
-  &lt;button class="panel-section-footer-button"&gt;Cancel&lt;/button&gt;
-  &lt;div class="panel-section-footer-separator"&gt;&lt;/div&gt;
-  &lt;button class="panel-section-footer-button default"&gt;Confirm&lt;/button&gt;
-&lt;/footer&gt;</pre>
+<footer class="panel-section panel-section-footer">
+  <button class="panel-section-footer-button">Cancel</button>
+  <div class="panel-section-footer-separator"></div>
+  <button class="panel-section-footer-button default">Confirm</button>
+</footer>
+```
 
-<pre class="brush: css hidden">/* Global */
+```css hidden
+/* Global */
 html,
 body {
   background: white;
@@ -312,7 +331,7 @@ button.panel-section-tabs-button {
   padding: 16px;
 }
 
-.panel-section-header &gt; .icon-section-header {
+.panel-section-header > .icon-section-header {
   background-position: center center;
   background-repeat: no-repeat;
   height: 32px;
@@ -321,7 +340,7 @@ button.panel-section-tabs-button {
   width: 32px;
 }
 
-.panel-section-header &gt; .text-section-header {
+.panel-section-header > .text-section-header {
   align-self: center;
   font-size: 1.385em;
   font-weight: lighter;
@@ -355,16 +374,16 @@ button.panel-section-tabs-button {
   color: #999;
 }
 
-.panel-list-item &gt; .icon {
+.panel-list-item > .icon {
   flex-grow: 0;
   flex-shrink: 0;
 }
 
-.panel-list-item &gt; .text {
+.panel-list-item > .text {
   flex-grow: 10;
 }
 
-.panel-list-item &gt; .text-shortcut {
+.panel-list-item > .text-shortcut {
   color: #808080;
   font-family: "Lucida Grande", caption;
   font-size: .847em;
@@ -395,7 +414,7 @@ button.panel-section-tabs-button {
   text-align: center;
 }
 
-.panel-section-footer-button &gt; .text-shortcut {
+.panel-section-footer-button > .text-shortcut {
   color: #808080;
   font-family: "Lucida Grande", caption;
   font-size: .847em;
@@ -429,9 +448,11 @@ button.panel-section-tabs-button {
   background-color: rgba(0, 0, 0, 0.1);
   width: 1px;
   z-index: 99;
-}</pre>
+}
+```
 
-<pre class="brush: css">/* Example specific – not part of chrome://browser/content/extension.css */
+```css
+/* Example specific – not part of chrome://browser/content/extension.css */
 body {
   background: #fcfcfc;
   background-clip: padding-box;
@@ -446,14 +467,15 @@ html {
   min-height: 100vh;
 }
 
-html &gt; body {
+html > body {
   margin: auto;
 }
 
 .icon-section-header {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48Y2lyY2xlIGZpbGw9IiMzNjM5NTkiIGN4PSIxNSIgY3k9IjE1IiByPSIxNSIvPjwvc3ZnPg==");
-}</pre>
+}
+```
 
-<h4 id="Resultat">Resultat</h4>
+#### Resultat
 
-<p>{{EmbedLiveSample("Exemple","640","360")}}</p>
+{{EmbedLiveSample("Exemple","640","360")}}

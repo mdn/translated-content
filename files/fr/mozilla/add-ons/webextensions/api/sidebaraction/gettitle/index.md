@@ -12,53 +12,52 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient le titre de la barre latérale.</p>
+Obtient le titre de la barre latérale.
 
-<p>Tout comme vous pouvez définir le titre par tabulation à l'aide de {{WebExtAPIRef("sidebarAction.setTitle()")}},vous pouvez ainsi récupérer un titre spécifique à un onglet en lui transmettant l'ID de l'onglet.</p>
+Tout comme vous pouvez définir le titre par tabulation à l'aide de {{WebExtAPIRef("sidebarAction.setTitle()")}},vous pouvez ainsi récupérer un titre spécifique à un onglet en lui transmettant l'ID de l'onglet.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingTitle = browser.sidebarAction.getTitle(
+```js
+var gettingTitle = browser.sidebarAction.getTitle(
   details               // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. Un objet avec les propriétés suivantes :</p>
- <dl>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Obtenir le titre de la barre latérale spécifique à l'onglet donné.</dd>
-  <dt><code>windowId</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. Obtenir le titre de la barre latérale spécifique à la fenêtre donnée.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<ul>
- <li>Si <code>windowId</code> et <code>tabId</code> sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.</li>
- <li>SI <code>windowId</code> et <code>tabId</code> sont tous les deux omis, le titre global est renvoyé.</li>
-</ul>
+  - : `object`. Un objet avec les propriétés suivantes :
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Obtenir le titre de la barre latérale spécifique à l'onglet donné.
+    - `windowId` {{optional_inline}}
+      - : `integer`. Obtenir le titre de la barre latérale spécifique à la fenêtre donnée.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec une chaîne contenant le titre de la barre latérale.</p>
+<!---->
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
+- SI `windowId` et `tabId` sont tous les deux omis, le titre global est renvoyé.
 
-<p>{{Compat("webextensions.api.sidebarAction.getTitle",2)}}</p>
+### Valeur retournée
 
-<h2 id="Exemples">Exemples</h2>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne contenant le titre de la barre latérale.
 
-<p>Ce code bascule le titre entre "this" et "that" chaque fois que l'utilisateur clique sur l'action du navigateur</p>
+## Compatibilité du navigateur
 
-<pre class="brush: js">function toggleTitle(title) {
+{{Compat("webextensions.api.sidebarAction.getTitle",2)}}
+
+## Exemples
+
+Ce code bascule le titre entre "this" et "that" chaque fois que l'utilisateur clique sur l'action du navigateur
+
+```js
+function toggleTitle(title) {
   if (title == "this") {
     browser.sidebarAction.setTitle({title: "that"});
   } else {
@@ -66,23 +65,21 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
   }
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   var gettingTitle = browser.sidebarAction.getTitle({});
   gettingTitle.then(toggleTitle);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Opera <a href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,5 +106,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

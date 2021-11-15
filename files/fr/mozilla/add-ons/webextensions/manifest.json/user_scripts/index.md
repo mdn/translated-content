@@ -9,39 +9,39 @@ tags:
   - user_scripts key
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Type</th>
-   <td><code>Array</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Obligatoire</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Exemple</th>
-   <td>
-    <pre class="brush: json">  "user_scripts": {
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Type</th>
+      <td><code>Array</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Obligatoire</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Exemple</th>
+      <td>
+        <pre class="brush: json">
+  "user_scripts": {
     "api_script": "apiscript.js",
   }
-</pre>
-   </td>
-  </tr>
- </tbody>
+</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Charge le navigateur de charger le script utilisateur nommé dans la propriété <code>"api_script"</code> .</p>
+Charge le navigateur de charger le script utilisateur nommé dans la propriété `"api_script"` .
 
-<p>La propriété <code>"api_script"</code> nomme le script utilisateur qui sera associé à cette extension.</p>
+La propriété `"api_script"` nomme le script utilisateur qui sera associé à cette extension.
 
-<p>Une fois chargé, le script sera appelé après l'exécution du gestionnaire d'événement affecté à la propriété {{WebExtAPIRef("userScripts.onBeforeScript")}}. Ceci permet au gestionnaire d'exporter un ensemble de méthodes API personnalisées qui seront mises à la disposition des scripts de contenu représentés par {{WebExtAPIRef("contentScripts")}}.</p>
+Une fois chargé, le script sera appelé après l'exécution du gestionnaire d'événement affecté à la propriété {{WebExtAPIRef("userScripts.onBeforeScript")}}. Ceci permet au gestionnaire d'exporter un ensemble de méthodes API personnalisées qui seront mises à la disposition des scripts de contenu représentés par {{WebExtAPIRef("contentScripts")}}.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{WebExtAPIRef("userScripts")}}</li>
- <li>{{WebExtAPIRef("contentScripts")}}</li>
-</ul>
+- {{WebExtAPIRef("userScripts")}}
+- {{WebExtAPIRef("contentScripts")}}

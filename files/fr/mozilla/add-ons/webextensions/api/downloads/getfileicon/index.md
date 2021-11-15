@@ -13,51 +13,50 @@ tags:
   - getFileIcon
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La fonction <code><strong>getFileIcon</strong></code><strong><code>()</code></strong> de l'API {{WebExtAPIRef("downloads")}} récupère une icône pour le téléchargement spécifié.</p>
+La fonction **`getFileIcon`\*\***`()`\*\* de l'API {{WebExtAPIRef("downloads")}} récupère une icône pour le téléchargement spécifié.
 
-<p>Pour les nouveaux téléchargements, les icônes de fichiers sont disponibles après la réception de l'événement {{WebExtAPIRef("downloads.onCreated")}}. L'image renvoyée par cette fonction pendant le téléchargement peut être différente de l'image renvoyée une fois le téléchargement terminé.</p>
+Pour les nouveaux téléchargements, les icônes de fichiers sont disponibles après la réception de l'événement {{WebExtAPIRef("downloads.onCreated")}}. L'image renvoyée par cette fonction pendant le téléchargement peut être différente de l'image renvoyée une fois le téléchargement terminé.
 
-<p>La récupération d'icônes s'effectue en interrogeant la plateforme sous-jacente. L'icône renvoyée dépendra donc d'un certain nombre de facteurs, notamment l'état du téléchargement, la plate-forme, les types de fichiers enregistrés et le thème visuel.</p>
+La récupération d'icônes s'effectue en interrogeant la plateforme sous-jacente. L'icône renvoyée dépendra donc d'un certain nombre de facteurs, notamment l'état du téléchargement, la plate-forme, les types de fichiers enregistrés et le thème visuel.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingIcon = browser.downloads.getFileIcon(
+```js
+var gettingIcon = browser.downloads.getFileIcon(
   downloadId,           // integer
   options               // optional object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>downloadId</code></dt>
- <dd>Un <code>integer</code> eprésentant l'ID du téléchargement.</dd>
- <dt><code>options</code>{{optional_inline}}</dt>
- <dd><p>Un <code>object</code> d'options représentant les préférences pour l'icône à extraire. Il peut prendre les propriétés suivantes :</p>
- <dl>
-  <dt><code>size</code>{{optional_inline}}</dt>
-  <dd>Un <code>integer</code> représentant la taille de l'icône. La taille de l'icône retournée sera la taille fournie au carré (en pixels). Si elle est omise, la taille par défaut de l'icône est 32x32 pixels.</dd>
- </dl>
- </dd>
-</dl>
+- `downloadId`
+  - : Un `integer` eprésentant l'ID du téléchargement.
+- `options`{{optional_inline}}
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : Un `object` d'options représentant les préférences pour l'icône à extraire. Il peut prendre les propriétés suivantes :
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>. Si la requête réussit, la promesse sera remplie avec une chaîne représentant l'URL absolue de l'icône. Si la requête échoue, la promesse sera rejetée avec un message d'erreur.</p>
+    - `size`{{optional_inline}}
+      - : Un `integer` représentant la taille de l'icône. La taille de l'icône retournée sera la taille fournie au carré (en pixels). Si elle est omise, la taille par défaut de l'icône est 32x32 pixels.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.downloads.getFileIcon")}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la requête réussit, la promesse sera remplie avec une chaîne représentant l'URL absolue de l'icône. Si la requête échoue, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Cet exemple enregistre l'URL de l'icône pour le téléchargement le plus récent :</p>
+{{Compat("webextensions.api.downloads.getFileIcon")}}
 
-<pre class="brush: js">function gotIcon(iconUrl) {
+## Exemples
+
+Cet exemple enregistre l'URL de l'icône pour le téléchargement le plus récent :
+
+```js
+function gotIcon(iconUrl) {
   console.log(iconUrl);
 }
 
@@ -66,7 +65,7 @@ function onError(error) {
 }
 
 function getIcon(downloadItems) {
-    if (downloadItems.length &gt; 0) {
+    if (downloadItems.length > 0) {
       latestDownloadId = downloadItems[0].id;
       var gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
       gettingIcon.then(gotIcon, onError);
@@ -78,19 +77,18 @@ var searching = browser.downloads.search({
   orderBy: ["-startTime"]
 });
 
-searching.then(getIcon, onError);</pre>
+searching.then(getIcon, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -117,5 +115,4 @@ searching.then(getIcon, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

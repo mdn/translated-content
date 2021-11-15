@@ -13,61 +13,60 @@ tags:
   - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/update
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Mises à jour des propriétés d'une fenêtre. Utilisez ceci pour déplacer, redimensionner, et (un) se concentrer sur une fenêtre, etc.</p>
+Mises à jour des propriétés d'une fenêtre. Utilisez ceci pour déplacer, redimensionner, et (un) se concentrer sur une fenêtre, etc.
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var updating = browser.windows.update(
+```js
+var updating = browser.windows.update(
   windowId,              // integer
   updateInfo             // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>windowId</code></dt>
- <dd><code>integer</code>. ID de la fenêtre à mettre à jour.</dd>
- <dt><code>updateInfo</code></dt>
- <dd><p><code>object</code>. Objet contenant les propriétés de mise à jour.</p>
- <dl>
-  <dt><code>drawAttention</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. si cela est vrai, la fenêtre doit être affichée de manière à attirer l'attention de l'utilisateur sur la fenêtre, sans changer la fenêtre ciblée. L'effet dure jusqu'à ce que l'utilisateur change de focus sur la fenêtre. Cette option n'a aucun effet si la fenêtre a déjà un focus. Si cela est faux pour annuler la requête précéndete <code>drawAttention</code>.</dd>
-  <dt><code>focused</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si c'est vrai, apporte la fenêtre à l'avant. Si c'est faux, apporte la fenêtre suivante dans le z-order de l'avant.</dd>
-  <dt><code>height</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. Hauteur pour redimensionner la fenêtre en pixels. Cette valeur est ignorée pour les panneaux.</dd>
-  <dt><code>left</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. Le décalage du bord gauche de l'écran pour déplacer la fenêtre en pixels. Cette valeur est ignorée pour les panneaux.</dd>
-  <dt><code>state</code>{{optional_inline}}</dt>
-  <dd>{{WebExtAPIRef('windows.WindowState')}}. Le nouvel état de la fenêtre. Les états minimisés, maximisés et en plein écran ne peuvent pas être combinés avec gauche, haut, largeur ou hauteur.</dd>
-  <dt><code>titlePreface</code> {{optional_inline}}</dt>
-  <dd><code>string</code>. Utilisez ceci pour ajouter une chaîne au début du titre de la fenêtre du navigateur. Selon le système d'exploitation sous-jacent, cela pourrait ne pas fonctionner sur les fenêtres du navigateur qui n'ont pas de titre (comme about:blank dans Firefox).</dd>
-  <dt><code>top</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. Le décallage du bord supérieur de l'écran pour déplacer la fenêtre en pixels. Cette valeur est ignorée pour les panneaux.</dd>
-  <dt><code>width</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. La largeur pour redimensionner la fenêtre en pixels. Cette valeur est ignorée pour les panneaux.</dd>
- </dl>
- </dd>
-</dl>
+- `windowId`
+  - : `integer`. ID de la fenêtre à mettre à jour.
+- `updateInfo`
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+  - : `object`. Objet contenant les propriétés de mise à jour.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}}  contenant les détails de la fenêtre mise à jour. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.</p>
+    - `drawAttention` {{optional_inline}}
+      - : `boolean`. si cela est vrai, la fenêtre doit être affichée de manière à attirer l'attention de l'utilisateur sur la fenêtre, sans changer la fenêtre ciblée. L'effet dure jusqu'à ce que l'utilisateur change de focus sur la fenêtre. Cette option n'a aucun effet si la fenêtre a déjà un focus. Si cela est faux pour annuler la requête précéndete `drawAttention`.
+    - `focused` {{optional_inline}}
+      - : `boolean`. Si c'est vrai, apporte la fenêtre à l'avant. Si c'est faux, apporte la fenêtre suivante dans le z-order de l'avant.
+    - `height` {{optional_inline}}
+      - : `integer`. Hauteur pour redimensionner la fenêtre en pixels. Cette valeur est ignorée pour les panneaux.
+    - `left` {{optional_inline}}
+      - : `integer`. Le décalage du bord gauche de l'écran pour déplacer la fenêtre en pixels. Cette valeur est ignorée pour les panneaux.
+    - `state`{{optional_inline}}
+      - : {{WebExtAPIRef('windows.WindowState')}}. Le nouvel état de la fenêtre. Les états minimisés, maximisés et en plein écran ne peuvent pas être combinés avec gauche, haut, largeur ou hauteur.
+    - `titlePreface` {{optional_inline}}
+      - : `string`. Utilisez ceci pour ajouter une chaîne au début du titre de la fenêtre du navigateur. Selon le système d'exploitation sous-jacent, cela pourrait ne pas fonctionner sur les fenêtres du navigateur qui n'ont pas de titre (comme about:blank dans Firefox).
+    - `top` {{optional_inline}}
+      - : `integer`. Le décallage du bord supérieur de l'écran pour déplacer la fenêtre en pixels. Cette valeur est ignorée pour les panneaux.
+    - `width` {{optional_inline}}
+      - : `integer`. La largeur pour redimensionner la fenêtre en pixels. Cette valeur est ignorée pour les panneaux.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur de retour
 
-<p>{{Compat("webextensions.api.windows.update")}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}}  contenant les détails de la fenêtre mise à jour. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Lorsque l'utilisateur clique sur l'icône d'une action du navigateur, déplacez la fenêtre vers le coin supérieur gauche:</p>
+{{Compat("webextensions.api.windows.update")}}
 
-<pre class="brush: js">function onUpdated(windowInfo) {
+## Exemples
+
+Lorsque l'utilisateur clique sur l'icône d'une action du navigateur, déplacez la fenêtre vers le coin supérieur gauche:
+
+```js
+function onUpdated(windowInfo) {
   console.log(`Updated window: ${windowInfo.id}`);
 }
 
@@ -75,7 +74,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
 
   var updating = browser.windows.update(tab.windowId, {
     left: 0,
@@ -84,19 +83,17 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
   updating.then(onUpdated, onError);
 
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+>
+> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -123,5 +120,4 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

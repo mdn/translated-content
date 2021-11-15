@@ -13,146 +13,136 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsque les en-têtes de réponse HTTP associés à une requête ont été reçus. Vous pouvez utiliser cet événement pour modifier les en-têtes de réponse HTTP.</p>
+Lancé lorsque les en-têtes de réponse HTTP associés à une requête ont été reçus. Vous pouvez utiliser cet événement pour modifier les en-têtes de réponse HTTP.
 
-<p>Pour que les en-têtes de réponse soient passés dans l'écouteur avec le reste des données de la requête, passez <code>"responseHeaders"</code> dans le tableau <code>extraInfoSpec</code>.</p>
+Pour que les en-têtes de réponse soient passés dans l'écouteur avec le reste des données de la requête, passez `"responseHeaders"` dans le tableau `extraInfoSpec`.
 
-<p>Pour modifier les en-têtes, passez <code>"blocking"</code> dans <code>extraInfoSpec</code>. Ensuite, dans votre écouteur d'événements, retournez un objet avec une propriété nommée <code>responseHeaders</code>, dont la valeur est l'ensemble des en-têtes de réponse à utiliser. Le navigateur se comportera comme si le serveur avait envoyé les en-têtes modifiées.</p>
+Pour modifier les en-têtes, passez `"blocking"` dans `extraInfoSpec`. Ensuite, dans votre écouteur d'événements, retournez un objet avec une propriété nommée `responseHeaders`, dont la valeur est l'ensemble des en-têtes de réponse à utiliser. Le navigateur se comportera comme si le serveur avait envoyé les en-têtes modifiées.
 
-<p>A partir de Firefox 52, au lieu de renvoyer <code>BlockingResponse</code>, l'auditeur peut renvoyer une Promesse qui est résolue avec un <code>BlockingResponse</code>. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.</p>
+A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`, l'auditeur peut renvoyer une Promesse qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
 
-<p>Si vous utilisez le <code>"blocking"</code>, vous devez avoir la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permission de l'API "webRequestBlocking" </a>dans votre manifest.json.</p>
+Si vous utilisez le `"blocking"`, vous devez avoir la [permission de l'API "webRequestBlocking" ](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)dans votre manifest.json.
 
-<p>Notez qu'il est possible que des extensions entrent en conflit ici. Si deux extensions écoutent <code>onHeadersReceived</code> pour la même requête et retournent <code>responseHeaders</code> essayant de définir le même en-tête (par exemple, <code>Content-Security-Policy</code>), seule une des modifications sera réussie. Si vous voulez voir les en-têtes qui sont effectivement traités par le système, sans risque qu'une autre extension les modifie par la suite, utilisez {{WebExtAPIRef("webRequest.onResponseStarted", "onResponseStarted", "onResponseStarted")}}, mais vous ne pouvez pas modifier les entêtes sur cet événement<br>
-  </p>
+Notez qu'il est possible que des extensions entrent en conflit ici. Si deux extensions écoutent `onHeadersReceived` pour la même requête et retournent `responseHeaders` essayant de définir le même en-tête (par exemple, `Content-Security-Policy`), seule une des modifications sera réussie. Si vous voulez voir les en-têtes qui sont effectivement traités par le système, sans risque qu'une autre extension les modifie par la suite, utilisez {{WebExtAPIRef("webRequest.onResponseStarted", "onResponseStarted", "onResponseStarted")}}, mais vous ne pouvez pas modifier les entêtes sur cet événement
 
-<h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="brush: js">browser.webRequest.onHeadersReceived.addListener(
+
+## Syntaxe
+
+```js
+browser.webRequest.onHeadersReceived.addListener(
   listener,             // function
   filter,               //  object
   extraInfoSpec         //  optional array of strings
 )
 browser.webRequest.onHeadersReceived.removeListener(listener)
 browser.webRequest.onHeadersReceived.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback, filter, extraInfoSpec)</code></dt>
- <dd>Ajouter un auditeur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'auditeur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré à cet événement. Retourne <code>true</code> s'il est écouté, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback, filter, extraInfoSpec)`
+  - : Ajouter un auditeur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'auditeur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré à cet événement. Retourne `true` s'il est écouté, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>details</code></dt>
-  <dd><a href="#details"><code>object</code></a>. Détails de la demande. Ceci inclura les en-têtes de réponse si vous avez inclus <code>"responseHeaders"</code> dans <code>extraInfoSpec</code>.</dd>
- </dl>
+  - : Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :
 
- <p>Retourne : {{WebExtAPIRef('webRequest.BlockingResponse')}}. Si <code>"blocking"</code> est spécifié dans le paramètre <code>extraInfoSpec</code>, l'auditeur d'événement doit retourner un objet <code>BlockingResponse</code>, et peut définir sa propriété <code>responseHeaders</code>.</p>
- </dd>
- <dt><code>filter</code></dt>
- <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. Un ensemble de filtres qui restreint les événements qui seront envoyés à cet auditeur.</dd>
- <dt><code>extraInfoSpec</code>{{optional_inline}}</dt>
- <dd><p><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :</p>
- <ul>
-  <li><code>"blocking"</code> pour rendre la requête synchrone, de sorte que vous pouvez modifier les en-têtes de requête et réponse.</li>
-  <li><code>"responseHeaders"</code> pour inclure les en-têtes de réponse dans l'objet  <code>détails</code> transmis à l'auditeur</li>
- </ul>
- </dd>
-</dl>
+    - `details`
+      - : [`object`](#details). Détails de la demande. Ceci inclura les en-têtes de réponse si vous avez inclus `"responseHeaders"` dans `extraInfoSpec`.
 
-<h2 id="objets_supplémentaires">objets supplémentaires</h2>
+    Retourne : {{WebExtAPIRef('webRequest.BlockingResponse')}}. Si `"blocking"` est spécifié dans le paramètre `extraInfoSpec`, l'auditeur d'événement doit retourner un objet `BlockingResponse`, et peut définir sa propriété `responseHeaders`.
 
-<h3 id="détails">détails</h3>
+- `filter`
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un ensemble de filtres qui restreint les événements qui seront envoyés à cet auditeur.
+- `extraInfoSpec`{{optional_inline}}
 
-<dl>
- <dt><code>documentUrl</code></dt>
- <dd><code>string</code>. URL du document dans lequel la ressource sera chargée. Par exemple, si la page web "https://example.com" contient une image ou un iframe, alors le <code>documentUrl</code> pour l'image ou l'iframe sera "https://example.com". Pour un document de niveau supérieur, <code>documentUrl</code> n'est pas défini.</dd>
- <dt><code>frameId</code></dt>
- <dd><code>integer</code>. Zéro si la requête se produit dans le cadre principal ; une valeur positive est l'ID d'une sous-trame dans laquelle la requête se produit. Si le document d'un (sous-)cadre est chargé (<code>type</code> is <code>main_frame</code> or <code>sub_frame</code>), <code>frameId</code> indique l'ID de ce cadre et non l'ID du cadre extérieur. Les ID de trame sont uniques dans un onglet.</dd>
- <dt><code>method</code></dt>
- <dd><code>string</code>. Méthode HTTP standard : par exemple, "GET" ou "POST".</dd>
- <dt><code>originUrl</code></dt>
- <dd>
- <p><code>string</code>. URL de la ressource qui a déclenché la requête. Par exemple, si "https://example.com" contient un lien, et que l'utilisateur clique sur le lien, alors <code>originUrl</code> de la requête résultante est "https://example.com".</p>
+  - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
 
- <p>L'<code>originUrl</code> est souvent mais pas toujours la même chose que <code>documentUrl</code>.Par exemple, si une page contient une iframe, et que l'iframe contient un lien qui charge un nouveau document dans l'iframe, alors le <code>documentUrl</code> pour la requête résultante sera le document parent de l'iframe, mais l'<code>originUrl</code> sera l'URL du document dans l'iframe qui contenait le lien.</p>
- </dd>
- <dt><code>parentFrameId</code></dt>
- <dd><code>integer</code>. de la trame qui contient la trame qui a envoyé la requête. Réglé à -1 s'il n'existe pas de l'iframe parent.</dd>
- <dt><code>proxyInfo</code></dt>
- <dd>
- <p><code>object</code>. Cette propriété n'est présente que si la demande est proxied. Il contient les propriétés suivantes :</p>
+    - `"blocking"` pour rendre la requête synchrone, de sorte que vous pouvez modifier les en-têtes de requête et réponse.
+    - `"responseHeaders"` pour inclure les en-têtes de réponse dans l'objet  `détails` transmis à l'auditeur
 
- <dl>
-  <dt><code>host</code></dt>
-  <dd><code>string</code>. Le nom d'hôte du serveur proxy.</dd>
-  <dt><code>port</code></dt>
-  <dd><code>integer</code>. Le numéro de port du serveur proxy.</dd>
-  <dt><code>type</code></dt>
-  <dd>
-  <p><code>string</code>. Le type de serveur proxy. L'un des :</p>
+## objets supplémentaires
 
-  <ul>
-   <li>"http": proxy HTTP (ou SSL CONNECT pour HTTPS)</li>
-   <li>"https": proxy HTTP sur connexion TLS vers proxy</li>
-   <li>"socks": SOCKS v5 proxy</li>
-   <li>"socks4": SOCKS v4 proxy</li>
-   <li>"direct": pas de proxy</li>
-   <li>"unknown": proxy inconnu</li>
-  </ul>
-  </dd>
-  <dt><code>username</code></dt>
-  <dd><code>string</code>. Nom d'utilisateur pour le service proxy.</dd>
-  <dt><code>proxyDNS</code></dt>
-  <dd><code>boolean</code>. Vrai si le proxy exécutera une résolution de nom de domaine basée sur le nom d'hôte fourni, ce qui signifie que le client ne doit pas faire sa propre recherche DNS.</dd>
-  <dt><code>failoverTimeout</code></dt>
-  <dd><code>integer</code>. Délai d'attente de basculement en secondes. Si la connexion par proxy échoue, le proxy ne sera pas utilisé à nouveau pendant cette période.</dd>
- </dl>
- </dd>
- <dt><code>requestId</code></dt>
- <dd><code>string</code>. L'ID de la demande. Les ID de requête sont uniques au sein d'une session de navigateur, de sorte que vous pouvez les utiliser pour relier différents événements associés à la même requête.</dd>
- <dt><code>responseHeaders</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('webRequest.HttpHeaders')}}. Les en-têtes de réponse HTTP qui ont été reçus avec cette réponse.</dd>
- <dt><code>statusCode</code></dt>
- <dd><code>integer</code>. Code d'état HTTP standard renvoyé par le serveur.</dd>
- <dt><code>statusLine</code></dt>
- <dd><code>string</code>. Status d'état HTTP de la réponse ou la chaîne 'HTTP/0.9 200 OK' pour les réponses HTTP/0.9 (c'est-à-dire les réponses qui n'ont pas de ligne d'état) ou une chaîne vide s'il n'y a pas d'en-têtes</dd>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. ID de l'onglet dans lequel la demande a lieu. Définir à -1 si la requête n'est pas liée à un onglet.</dd>
- <dt><code>timeStamp</code></dt>
- <dd><code>number</code>. L'heure à laquelle cet événement s'est déclenché, en <a href="https://en.wikipedia.org/wiki/Unix_time">millisecondes depuis l'époque</a>.</dd>
- <dt><code>type</code></dt>
- <dd>{{WebExtAPIRef('webRequest.ResourceType')}}. Le type de ressource demandée : par exemple, "image", "script", "stylesheet".</dd>
- <dt><code>url</code></dt>
- <dd><code>string</code>. Cible de la demande.</dd>
-</dl>
+### détails
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+- `documentUrl`
+  - : `string`. URL du document dans lequel la ressource sera chargée. Par exemple, si la page web "https\://example.com" contient une image ou un iframe, alors le `documentUrl` pour l'image ou l'iframe sera "https\://example.com". Pour un document de niveau supérieur, `documentUrl` n'est pas défini.
+- `frameId`
+  - : `integer`. Zéro si la requête se produit dans le cadre principal ; une valeur positive est l'ID d'une sous-trame dans laquelle la requête se produit. Si le document d'un (sous-)cadre est chargé (`type` is `main_frame` or `sub_frame`), `frameId` indique l'ID de ce cadre et non l'ID du cadre extérieur. Les ID de trame sont uniques dans un onglet.
+- `method`
+  - : `string`. Méthode HTTP standard : par exemple, "GET" ou "POST".
+- `originUrl`
 
-<p>{{Compat("webextensions.api.webRequest.onHeadersReceived", 10)}}</p>
+  - : `string`. URL de la ressource qui a déclenché la requête. Par exemple, si "https\://example.com" contient un lien, et que l'utilisateur clique sur le lien, alors `originUrl` de la requête résultante est "https\://example.com".
 
-<h2 id="Exemples">Exemples</h2>
+    L'`originUrl` est souvent mais pas toujours la même chose que `documentUrl`.Par exemple, si une page contient une iframe, et que l'iframe contient un lien qui charge un nouveau document dans l'iframe, alors le `documentUrl` pour la requête résultante sera le document parent de l'iframe, mais l'`originUrl` sera l'URL du document dans l'iframe qui contenait le lien.
 
-<p>Ce code définit un cookie supplémentaire lors de la demande d'une ressource à partir de l'URL cible :</p>
+- `parentFrameId`
+  - : `integer`. de la trame qui contient la trame qui a envoyé la requête. Réglé à -1 s'il n'existe pas de l'iframe parent.
+- `proxyInfo`
 
-<pre class="brush: js">var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+  - : `object`. Cette propriété n'est présente que si la demande est proxied. Il contient les propriétés suivantes :
+
+    - `host`
+      - : `string`. Le nom d'hôte du serveur proxy.
+    - `port`
+      - : `integer`. Le numéro de port du serveur proxy.
+    - `type`
+
+      - : `string`. Le type de serveur proxy. L'un des :
+
+        - "http": proxy HTTP (ou SSL CONNECT pour HTTPS)
+        - "https": proxy HTTP sur connexion TLS vers proxy
+        - "socks": SOCKS v5 proxy
+        - "socks4": SOCKS v4 proxy
+        - "direct": pas de proxy
+        - "unknown": proxy inconnu
+
+    - `username`
+      - : `string`. Nom d'utilisateur pour le service proxy.
+    - `proxyDNS`
+      - : `boolean`. Vrai si le proxy exécutera une résolution de nom de domaine basée sur le nom d'hôte fourni, ce qui signifie que le client ne doit pas faire sa propre recherche DNS.
+    - `failoverTimeout`
+      - : `integer`. Délai d'attente de basculement en secondes. Si la connexion par proxy échoue, le proxy ne sera pas utilisé à nouveau pendant cette période.
+
+- `requestId`
+  - : `string`. L'ID de la demande. Les ID de requête sont uniques au sein d'une session de navigateur, de sorte que vous pouvez les utiliser pour relier différents événements associés à la même requête.
+- `responseHeaders`{{optional_inline}}
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. Les en-têtes de réponse HTTP qui ont été reçus avec cette réponse.
+- `statusCode`
+  - : `integer`. Code d'état HTTP standard renvoyé par le serveur.
+- `statusLine`
+  - : `string`. Status d'état HTTP de la réponse ou la chaîne 'HTTP/0.9 200 OK' pour les réponses HTTP/0.9 (c'est-à-dire les réponses qui n'ont pas de ligne d'état) ou une chaîne vide s'il n'y a pas d'en-têtes
+- `tabId`
+  - : `integer`. ID de l'onglet dans lequel la demande a lieu. Définir à -1 si la requête n'est pas liée à un onglet.
+- `timeStamp`
+  - : `number`. L'heure à laquelle cet événement s'est déclenché, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
+- `type`
+  - : {{WebExtAPIRef('webRequest.ResourceType')}}. Le type de ressource demandée : par exemple, "image", "script", "stylesheet".
+- `url`
+  - : `string`. Cible de la demande.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.webRequest.onHeadersReceived", 10)}}
+
+## Exemples
+
+Ce code définit un cookie supplémentaire lors de la demande d'une ressource à partir de l'URL cible :
+
+```js
+var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Add the new header to the original array,
 // and return it.
@@ -171,18 +161,20 @@ browser.webRequest.onHeadersReceived.addListener(
   setCookie,
   {urls: [targetPage]},
   ["blocking", "responseHeaders"]
-);</pre>
+);
+```
 
-<p>Ce code fait la même chose que l'exemple précédent, sauf que l'auditeur est asynchrone, retournant une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui est résolue avec les nouveaux en-têtes :</p>
+Ce code fait la même chose que l'exemple précédent, sauf que l'auditeur est asynchrone, retournant une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec les nouveaux en-têtes :
 
-<pre class="brush: js">var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+```js
+var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Return a Promise that sets a timer.
 // When the timer fires, resolve the promise with
 // modified set of response headers.
 function setCookieAsync(e) {
-  var asyncSetCookie = new Promise((resolve, reject) =&gt; {
-    window.setTimeout(() =&gt; {
+  var asyncSetCookie = new Promise((resolve, reject) => {
+    window.setTimeout(() => {
       var setMyCookie = {
         name: "Set-Cookie",
         value: "my-cookie1=my-cookie-value1"
@@ -202,19 +194,17 @@ browser.webRequest.onHeadersReceived.addListener(
   {urls: [targetPage]},
   ["blocking", "responseHeaders"]
 );
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -241,5 +231,4 @@ browser.webRequest.onHeadersReceived.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

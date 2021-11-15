@@ -11,71 +11,65 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 original_slug: Mozilla/Add-ons/WebExtensions/Travailler_avec_l_API_Tabs
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>Les onglets permettent à un utilisateur d'ouvrir plusieurs pages Web dans la fenêtre de son navigateur, puis de basculer entre ces pages Web. Grâce à l'API Tabs, vous pouvez utiliser et manipuler ces onglets pour créer des utilitaires qui offrent aux utilisateurs de nouvelles façons de travailler avec des onglets ou de fournir les fonctionnalités de votre extension.</p>
+Les onglets permettent à un utilisateur d'ouvrir plusieurs pages Web dans la fenêtre de son navigateur, puis de basculer entre ces pages Web. Grâce à l'API Tabs, vous pouvez utiliser et manipuler ces onglets pour créer des utilitaires qui offrent aux utilisateurs de nouvelles façons de travailler avec des onglets ou de fournir les fonctionnalités de votre extension.
 
-<p>Dans cet article, nous allons regarder :</p>
+Dans cet article, nous allons regarder :
 
-<ul>
- <li>Permissions nécessaires pour utiliser l'API Tabs.</li>
- <li>En savoir plus sur les onglets et leurs propriétés en utilisant {{WebExtAPIRef("tabs.query")}}.</li>
- <li>Création, duplication, déplacement, mise à jour, rechargement et suppression des onglets.</li>
- <li>Manipuler le niveau de zoom d'un onglet.</li>
- <li>Manipuler le CSS d'un onglet.</li>
-</ul>
+- Permissions nécessaires pour utiliser l'API Tabs.
+- En savoir plus sur les onglets et leurs propriétés en utilisant {{WebExtAPIRef("tabs.query")}}.
+- Création, duplication, déplacement, mise à jour, rechargement et suppression des onglets.
+- Manipuler le niveau de zoom d'un onglet.
+- Manipuler le CSS d'un onglet.
 
-<p>Nous concluons ensuite en examinant d'autres fonctionnalités diverses offertes par l'API.</p>
+Nous concluons ensuite en examinant d'autres fonctionnalités diverses offertes par l'API.
 
-<div class="note">
-<p><strong>Note :</strong> Certaines fonctionnalités de l'API d'onglet sont couvert ailleurs. Voici les méthodes que vous pouvez utiliser pour manipuler le contenu de l'onglet avec des scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, et  {{WebExtAPIRef("tabs.executeScript")}}). Si vous voulez plus d'informations sur ces méthodes, reportez-vous à l'article <a href="/fr/Add-ons/WebExtensions/Content_scripts">scripts de contenu</a> et le guide pratique <a href="/fr/Add-ons/WebExtensions/Modify_a_web_page">modifier une page web</a>.</p>
-</div>
+> **Note :** Certaines fonctionnalités de l'API d'onglet sont couvert ailleurs. Voici les méthodes que vous pouvez utiliser pour manipuler le contenu de l'onglet avec des scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, et  {{WebExtAPIRef("tabs.executeScript")}}). Si vous voulez plus d'informations sur ces méthodes, reportez-vous à l'article [scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts) et le guide pratique [modifier une page web](/fr/Add-ons/WebExtensions/Modify_a_web_page).
 
-<h2 id="Permissions_et_lAPI_Tabs">Permissions et l'API Tabs</h2>
+## Permissions et l'API Tabs
 
-<p>Pour la majorité des fonctions de l'API Tabs, vous n'avez besoin d'aucune autorisation. Cependant, il y a certaines exceptions :</p>
+Pour la majorité des fonctions de l'API Tabs, vous n'avez besoin d'aucune autorisation. Cependant, il y a certaines exceptions :
 
-<ul>
- <li>permission <code>"tabs</code>" est nécessaire pour accéder aux propriétés de  <code>Tab.url</code>, <code>Tab.title</code>, et <code>Tab.favIconUrl</code> de l'objet Tab. Dans Firefox, vous avez également besoin de <code>"tabs"</code> pour effectuer une  <a href="/fr/Add-ons/WebExtensions/API/tabs/query">requête</a> par URL.</li>
- <li><a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">persmission de l'hote</a> est nécessaire pour  {{WebExtAPIRef("tabs.executeScript")}} ou {{WebExtAPIRef("tabs.insertCSS")}}.</li>
-</ul>
+- permission `"tabs`" est nécessaire pour accéder aux propriétés de  `Tab.url`, `Tab.title`, et `Tab.favIconUrl` de l'objet Tab. Dans Firefox, vous avez également besoin de `"tabs"` pour effectuer une  [requête](/fr/Add-ons/WebExtensions/API/tabs/query) par URL.
+- [persmission de l'hote](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) est nécessaire pour  {{WebExtAPIRef("tabs.executeScript")}} ou {{WebExtAPIRef("tabs.insertCSS")}}.
 
-<p>Vous pouvez demander la permission <code>"tabs"</code> dans le fichier manifest.json de votre extension :</p>
+Vous pouvez demander la permission `"tabs"` dans le fichier manifest.json de votre extension :
 
-<pre class="brush: json">"permissions": [
-  "&lt;all_urls&gt;",
+```json
+"permissions": [
+  "<all_urls>",
   "tabs"
 ],
-</pre>
+```
 
-<p>Cette requête vous permet d'utiliser toutes les fonctionnalités de l'API Tabs sur tous les sites Web que vos utilisateurs visitent. Il existe également une autre méthode pour demander la permission d'utiliser {{WebExtAPIRef("tabs.executeScript")}} ou {{WebExtAPIRef("tabs.insertCSS")}} où vous n'avez pas besoin de la permission de l'hôte, sous la forme <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>"activeTab"</code></a>. Cette permission fournit les mêmes droits que les  <code>"onglets"</code> avec <code>&lt;all_urls&gt;</code>, mais avec deux restrictions:</p>
+Cette requête vous permet d'utiliser toutes les fonctionnalités de l'API Tabs sur tous les sites Web que vos utilisateurs visitent. Il existe également une autre méthode pour demander la permission d'utiliser {{WebExtAPIRef("tabs.executeScript")}} ou {{WebExtAPIRef("tabs.insertCSS")}} où vous n'avez pas besoin de la permission de l'hôte, sous la forme [`"activeTab"`](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission). Cette permission fournit les mêmes droits que les  `"onglets"` avec `<all_urls>`, mais avec deux restrictions:
 
-<ul>
- <li>l'utilisateur doit interagir avec l'extension via son navigateur ou l'action de la page, le menu contextuel ou la touche de raccourci.</li>
- <li>il accorde uniquement la permission dans l'onglet actif..</li>
-</ul>
+- l'utilisateur doit interagir avec l'extension via son navigateur ou l'action de la page, le menu contextuel ou la touche de raccourci.
+- il accorde uniquement la permission dans l'onglet actif..
 
-<p>L'avantage de cette approche est que l'utilisateur ne recevra pas d'avertissement d'autorisation indiquant que votre extension peut “Accéder à vos données pour tous les sites Web”. En effet, la permission <code>&lt;all_urls&gt;</code> permet à une extension d'exécuter des scripts dans n'importe quel onglet, à tout moment, alors que <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>"activeTab"</code></a> se limite à autoriser l'extension à effectuer une action demandée par l'utilisateur dans l'onglet en cours.</p>
+L'avantage de cette approche est que l'utilisateur ne recevra pas d'avertissement d'autorisation indiquant que votre extension peut “Accéder à vos données pour tous les sites Web”. En effet, la permission `<all_urls>` permet à une extension d'exécuter des scripts dans n'importe quel onglet, à tout moment, alors que [`"activeTab"`](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) se limite à autoriser l'extension à effectuer une action demandée par l'utilisateur dans l'onglet en cours.
 
-<h2 id="En_savoir_plus_sur_les_onglets_et_leurs_propriétés">En savoir plus sur les onglets et leurs propriétés</h2>
+## En savoir plus sur les onglets et leurs propriétés
 
-<p>Il y aura des occasions où vous voulez obtenir une liste de tous les onglets dans toutes les fenêtres du navigateur. D'autres fois, vous pourriez vouloir trouver un sous-ensemble d'onglets qui correspondent à certains critères spécifiques, tels que ceux ouverts à partir d'un onglet spécifique ou l'affichage des pages d'un domaine particulier. Et une fois que vous avez votre liste d'onglets, vous voudrez probablement en savoir plus sur leurs propriétés.</p>
+Il y aura des occasions où vous voulez obtenir une liste de tous les onglets dans toutes les fenêtres du navigateur. D'autres fois, vous pourriez vouloir trouver un sous-ensemble d'onglets qui correspondent à certains critères spécifiques, tels que ceux ouverts à partir d'un onglet spécifique ou l'affichage des pages d'un domaine particulier. Et une fois que vous avez votre liste d'onglets, vous voudrez probablement en savoir plus sur leurs propriétés.
 
-<p>C'est ici qu'intervient {{WebExtAPIRef("tabs.query")}}. Utilisé seul pour obtenir tous les onglets ou prendre l'objet <code>queryInfo</code> — pour spécifier des critères de requête tels que l'activation de l'onglet, dans la fenêtre en cours ou plus de 17 critères — {{WebExtAPIRef("tabs.query")}} renvoie un tableau d'objets {{WebExtAPIRef("tabs.Tab")}} objects contenant des informations sur les onglets.</p>
+C'est ici qu'intervient {{WebExtAPIRef("tabs.query")}}. Utilisé seul pour obtenir tous les onglets ou prendre l'objet `queryInfo` — pour spécifier des critères de requête tels que l'activation de l'onglet, dans la fenêtre en cours ou plus de 17 critères — {{WebExtAPIRef("tabs.query")}} renvoie un tableau d'objets {{WebExtAPIRef("tabs.Tab")}} objects contenant des informations sur les onglets.
 
-<p>Lorsque vous souhaitez uniquement obtenir des informations sur l'onglet en cours, vous pouvez obtenir un objet {{WebExtAPIRef("tabs.Tab")}} pour cet onglet à l'aide de  {{WebExtAPIRef("tabs.getCurrent")}}. Si vous avez un ID d'onglet, vous pouvez obtenir son objet {{WebExtAPIRef("tabs.Tab")}} en utilisant {{WebExtAPIRef("tabs.get")}}.</p>
+Lorsque vous souhaitez uniquement obtenir des informations sur l'onglet en cours, vous pouvez obtenir un objet {{WebExtAPIRef("tabs.Tab")}} pour cet onglet à l'aide de  {{WebExtAPIRef("tabs.getCurrent")}}. Si vous avez un ID d'onglet, vous pouvez obtenir son objet {{WebExtAPIRef("tabs.Tab")}} en utilisant {{WebExtAPIRef("tabs.get")}}.
 
-<h3 id="Par_exemple">Par exemple</h3>
+### Par exemple
 
-<p>Pour voir comment {{WebExtAPIRef("tabs.query")}} et {{WebExtAPIRef("tabs.Tab")}} sont utilisés, voyons comment l'exemple <a href="https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs">tabs-tabs-tabs</a> ajoute la liste de  “passer aux onglets” à son popup bouton de barre d'outils.</p>
+Pour voir comment {{WebExtAPIRef("tabs.query")}} et {{WebExtAPIRef("tabs.Tab")}} sont utilisés, voyons comment l'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) ajoute la liste de  “passer aux onglets” à son popup bouton de barre d'outils.
 
-<p><img src="switch_to_tab.png"></p>
+![](switch_to_tab.png)
 
-<h3 id="manifest.json">manifest.json</h3>
+### manifest.json
 
-<p>Voici le <a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json">manifest.json</a>:</p>
+Voici le [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json):
 
-<pre class="brush: json">{
+```json
+{
   "browser_action": {
     "browser_style": true,
     "default_title": "Tabs, tabs, tabs",
@@ -90,42 +84,35 @@ original_slug: Mozilla/Add-ons/WebExtensions/Travailler_avec_l_API_Tabs
   ],
   "version": "1.0"
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong></p>
+> **Note :**
+>
+> - **tabs.html est défini comme `default_popup` dans `browser_action`**. C'est affiché chaque fois que l'utilisateur clique sur l'icône de la barre d'outils de l'extension.
+> - **Les permissions incluent des onglets.** Ceci est nécessaire pour prendre en charge la fonction de liste d'onglets, car l'extension lit le titre des onglets à afficher dans la fenêtre contextuelle.
 
-<ul>
- <li>
-  <p><strong>tabs.html est défini comme <code>default_popup</code> dans <code>browser_action</code></strong>. C'est affiché chaque fois que l'utilisateur clique sur l'icône de la barre d'outils de l'extension.</p>
- </li>
- <li>
-  <p><strong>Les permissions incluent des onglets.</strong> Ceci est nécessaire pour prendre en charge la fonction de liste d'onglets, car l'extension lit le titre des onglets à afficher dans la fenêtre contextuelle.</p>
- </li>
-</ul>
-</div>
+### tabs.html
 
-<h3 id="tabs.html">tabs.html</h3>
+tabs.html définit le contenu du popup de l'extension :
 
-<p>tabs.html définit le contenu du popup de l'extension :</p>
+```html
+<!DOCTYPE html>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<html>
 
-&lt;html&gt;
+ <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="tabs.css"/>
+ </head>
 
- &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;link rel="stylesheet" href="tabs.css"/&gt;
- &lt;/head&gt;
+<body>
 
-&lt;body&gt;
+ <div class="panel">
+    <div class="panel-section panel-section-header">
+     <div class="text-section-header">Tabs-tabs-tabs</div>
+    </div>
 
- &lt;div class="panel"&gt;
-    &lt;div class="panel-section panel-section-header"&gt;
-     &lt;div class="text-section-header"&gt;Tabs-tabs-tabs&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;a href="#" id="tabs-move-beginning"&gt;Move active tab to the beginning of the window&lt;/a&gt;&lt;br&gt;
+    <a href="#" id="tabs-move-beginning">Move active tab to the beginning of the window</a><br>
 
 
 …
@@ -133,86 +120,83 @@ original_slug: Mozilla/Add-ons/WebExtensions/Travailler_avec_l_API_Tabs
 Define the other menu items
 …
 
-    &lt;div class="switch-tabs"&gt;
+    <div class="switch-tabs">
 
-     &lt;p&gt;Switch to tab&lt;/p&gt;
+     <p>Switch to tab</p>
 
-     &lt;div id="tabs-list"&gt;&lt;/div&gt;
+     <div id="tabs-list"></div>
 
-    &lt;/div&gt;
- &lt;/div&gt;
+    </div>
+ </div>
 
- &lt;script src="tabs.js"&gt;&lt;/script&gt;
+ <script src="tabs.js"></script>
 
-&lt;/body&gt;
+</body>
 
-&lt;/html&gt;
-</pre>
+</html>
+```
 
-<p>Ici, vous pouvez voir que, après la création des éléments de menu, un div vide avec la liste des onglets ID est configuré pour contenir la liste des onglets. Ensuite, tabs.js est appelée.</p>
+Ici, vous pouvez voir que, après la création des éléments de menu, un div vide avec la liste des onglets ID est configuré pour contenir la liste des onglets. Ensuite, tabs.js est appelée.
 
-<p>Voici un résumé de ce qui précède :</p>
+Voici un résumé de ce qui précède :
 
-<ol>
- <li>Les éléments de menu sont déclarés.  </li>
- <li>Une <code>div</code> vide avec <code>tabs-list</code> est déclaré comme contenant la liste des onglets.</li>
- <li>tabs.js est appelé.</li>
-</ol>
+1.  Les éléments de menu sont déclarés.
+2.  Une `div` vide avec `tabs-list` est déclaré comme contenant la liste des onglets.
+3.  tabs.js est appelé.
 
-<h3 id="tabs.js">tabs.js</h3>
+### tabs.js
 
-<p>Dans <a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js">tabs.js</a> nous pouvons voir comment la liste des onglets est construite et ajoutée à la popup.</p>
+Dans [tabs.js](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js) nous pouvons voir comment la liste des onglets est construite et ajoutée à la popup.
 
-<p>Tout d'abord, un gestionnaire d'événements est ajouté pour exécuter <code>listTabs()</code> quand tabs.html est chargé :</p>
+Tout d'abord, un gestionnaire d'événements est ajouté pour exécuter `listTabs()` quand tabs.html est chargé :
 
-<h4 id="Création_de_la_fenêtre_contextuelle">Création de la fenêtre contextuelle</h4>
+#### Création de la fenêtre contextuelle
 
-<p>Tout d'abord, un gestionnaire d'événements est ajouté pour exécuter <code>listTabs()</code> quand tabs.html est chargé :</p>
+Tout d'abord, un gestionnaire d'événements est ajouté pour exécuter `listTabs()` quand tabs.html est chargé :
 
-<pre class="brush: js">document.addEventListener("DOMContentLoaded", listTabs);</pre>
+```js
+document.addEventListener("DOMContentLoaded", listTabs);
+```
 
-<p>La première chose que fait <code>listTabs()</code> est d'appeler <code>getCurrentWindowTabs()</code>, où {{WebExtAPIRef("tabs.query")}} est utilisé pour obtenur un objet  {{WebExtAPIRef("tabs.Tab")}} pour le onglets dans la fenêtre courante :</p>
+La première chose que fait `listTabs()` est d'appeler `getCurrentWindowTabs()`, où {{WebExtAPIRef("tabs.query")}} est utilisé pour obtenur un objet  {{WebExtAPIRef("tabs.Tab")}} pour le onglets dans la fenêtre courante :
 
-<pre class="brush: js">function getCurrentWindowTabs() {
+```js
+function getCurrentWindowTabs() {
   return browser.tabs.query({currentWindow: true});
 }
-</pre>
+```
 
-<p>Maintenant, <code>listTabs()</code> est prêt à créer le contenu de la popup.</p>
+Maintenant, `listTabs()` est prêt à créer le contenu de la popup.
 
-<p>Pour commencer :</p>
+Pour commencer :
 
-<ol>
- <li>Récupérer les <code>tabs-list</code> <code>div</code>.</li>
- <li>Créer un fragment de document (dans lequel la liste sera construite).</li>
- <li>Mettre les compteurs.</li>
- <li>Effacer le contenu de <code>tabs-list</code> <code>div</code>.</li>
-</ol>
+1.  Récupérer les `tabs-list` `div`.
+2.  Créer un fragment de document (dans lequel la liste sera construite).
+3.  Mettre les compteurs.
+4.  Effacer le contenu de `tabs-list` `div`.
 
-<pre class="brush: js">function listTabs() {
- getCurrentWindowTabs().then((tabs) =&gt; {
+```js
+function listTabs() {
+ getCurrentWindowTabs().then((tabs) => {
     let tabsList = document.getElementById('tabs-list');
     let currentTabs = document.createDocumentFragment();
     let limit = 5;
     let counter = 0;
 
     tabsList.textContent = '';
-</pre>
+```
 
-<p>Ensuite, nous allons créer les liens pour chaque onglet :</p>
+Ensuite, nous allons créer les liens pour chaque onglet :
 
-<ol>
- <li>Boucle les 5 premiers éléments de l'objet {{WebExtAPIRef("tabs.Tab")}}.</li>
- <li>Pour chaque poste, ajoutez un hyperlien vers le fragment de document.
-  <ul>
-   <li>L'étiquette du lien, c'est-à-dire son texte, est définie à l'aide du titre de l'onglet (ou de l'ID, s'il n'a pas de titre).</li>
-   <li>L'adresse du lien est définie à l'aide de l'ID de l'onglet.</li>
-  </ul>
- </li>
-</ol>
+1.  Boucle les 5 premiers éléments de l'objet {{WebExtAPIRef("tabs.Tab")}}.
+2.  Pour chaque poste, ajoutez un hyperlien vers le fragment de document.
 
-<pre class="brush: js">    for (let tab of tabs) {
-     if (!tab.active &amp;&amp; counter &lt;= limit) {
+    - L'étiquette du lien, c'est-à-dire son texte, est définie à l'aide du titre de l'onglet (ou de l'ID, s'il n'a pas de titre).
+    - L'adresse du lien est définie à l'aide de l'ID de l'onglet.
+
+```js
+    for (let tab of tabs) {
+     if (!tab.active && counter <= limit) {
         let tabLink = document.createElement('a');
 
         tabLink.textContent = tab.title || tab.id;
@@ -225,21 +209,23 @@ Define the other menu items
      counter += 1;
 
     }
-</pre>
+```
 
-<p>Enfin, le fragment du document est écrit dans la div <code>tabs-list</code> :</p>
+Enfin, le fragment du document est écrit dans la div `tabs-list` :
 
-<pre class="brush: js">    tabsList.appendChild(currentTabs);
+```js
+    tabsList.appendChild(currentTabs);
   });
 }
-</pre>
+```
 
-<h4 id="Travailler_avec_longlet_actif">Travailler avec l'onglet actif</h4>
+#### Travailler avec l'onglet actif
 
-<p>Un autre exemple connexe est l'option d'information “Alert active tab”qui décharge toutes les propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}} de l'onglet actif dans une alerte :</p>
+Un autre exemple connexe est l'option d'information “Alert active tab”qui décharge toutes les propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}} de l'onglet actif dans une alerte :
 
-<pre class="brush: js"> else if (e.target.id === "tabs-alertinfo") {
-   callOnActiveTab((tab) =&gt; {
+```js
+ else if (e.target.id === "tabs-alertinfo") {
+   callOnActiveTab((tab) => {
      let props = "";
      for (let item in tab) {
        props += `${ item } = ${ tab[item] } \n`;
@@ -247,13 +233,14 @@ Define the other menu items
      alert(props);
    });
  }
-</pre>
+```
 
-<p>Où <code>callOnActiveTab()</code> ftrouve l'objet de tabulation active en faisant une boucle sur les objets {{WebExtAPIRef("tabs.Tab")}} qui recherchent l'objet avec l'ensemble actif :</p>
+Où `callOnActiveTab()` ftrouve l'objet de tabulation active en faisant une boucle sur les objets {{WebExtAPIRef("tabs.Tab")}} qui recherchent l'objet avec l'ensemble actif :
 
-<pre class="brush: js">document.addEventListener("click", function(e) {
+```js
+document.addEventListener("click", function(e) {
  function callOnActiveTab(callback) {
-   getCurrentWindowTabs().then((tabs) =&gt; {
+   getCurrentWindowTabs().then((tabs) => {
      for (var tab of tabs) {
        if (tab.active) {
          callback(tab, tabs);
@@ -262,74 +249,68 @@ Define the other menu items
    });
  }
 }
+```
 
-</pre>
+## Création, duplication, déplacement, mise à jour, rechargement et suppression des onglets
 
-<h2 id="Création_duplication_déplacement_mise_à_jour_rechargement_et_suppression_des_onglets">Création, duplication, déplacement, mise à jour, rechargement et suppression des onglets</h2>
+Après avoir recueilli des informations sur les onglets, vous voudrez probablement faire quelque chose avec eux — soit pour offrir aux utilisateurs des fonctionnalités de manipulation et de gestion des onglets — soit pour implémenter des fonctionnalités dans votre extension. Les fonctions suivantes sont disponibles :
 
-<p>Après avoir recueilli des informations sur les onglets, vous voudrez probablement faire quelque chose avec eux — soit pour offrir aux utilisateurs des fonctionnalités de manipulation et de gestion des onglets — soit pour implémenter des fonctionnalités dans votre extension. Les fonctions suivantes sont disponibles :</p>
+- Créer un nouvel onglet ({{WebExtAPIRef("tabs.create")}}).
+- Dupliquer un onglet ({{WebExtAPIRef("tabs.duplicate")}}).
+- Supprimer un onglet ({{WebExtAPIRef("tabs.remove")}}).
+- Déplacer un onglet ({{WebExtAPIRef("tabs.move")}}).
+- Mettre à jour l'URL d'un onglet — accéderefficacement à une nouvelle page — ({{WebExtAPIRef("tabs.update")}}).
+- Rechargez la page de l'onglet ({{WebExtAPIRef("tabs.reload")}}).
 
-<ul>
- <li>Créer un nouvel onglet ({{WebExtAPIRef("tabs.create")}}).</li>
- <li>Dupliquer un onglet ({{WebExtAPIRef("tabs.duplicate")}}).</li>
- <li>Supprimer un onglet ({{WebExtAPIRef("tabs.remove")}}).</li>
- <li>Déplacer un onglet ({{WebExtAPIRef("tabs.move")}}).</li>
- <li>Mettre à jour l'URL d'un onglet — accéderefficacement à une nouvelle page — ({{WebExtAPIRef("tabs.update")}}).</li>
- <li>Rechargez la page de l'onglet ({{WebExtAPIRef("tabs.reload")}}).</li>
-</ul>
+> **Note :**
+>
+> Ces fonctions nécessitent toutes l'ID (ou les ID) de l'onglet qu'elles manipulent :
+>
+> - {{WebExtAPIRef("tabs.duplicate")}}
+> - {{WebExtAPIRef("tabs.remove")}}
+> - {{WebExtAPIRef("tabs.move")}}
+>
+> Alors que les fonctions suivantes agissent sur l'onglet actif (si aucun ID d'onglet n'est fourni) :
+>
+> - {{WebExtAPIRef("tabs.update")}}
+> - {{WebExtAPIRef("tabs.reload")}}
 
-<div class="note">
-<p><strong>Note :</strong></p>
+### Par exemple
 
-<p>Ces fonctions nécessitent toutes l'ID (ou les ID) de l'onglet qu'elles manipulent :</p>
+L'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) utilise toutes ces fonctionnalités sauf la mise à jour de l'URL d'un onglet. La façon dont ces API sont utilisées est similaire, nous allons donc regarder l'une des implémentations les plus impliquées, celle de l'option “Deplacer l'onglet actif vers le début de la liste des fenêtres”. Mais d'abord, voici une démonstration de la fonctionnalité en action :
 
-<ul>
- <li>{{WebExtAPIRef("tabs.duplicate")}}</li>
- <li>{{WebExtAPIRef("tabs.remove")}}</li>
- <li>{{WebExtAPIRef("tabs.move")}}</li>
-</ul>
+{{EmbedYouTube("-lJRzTIvhxo")}}
 
-<p>Alors que les fonctions suivantes agissent sur l'onglet actif (si aucun ID d'onglet n'est fourni) :</p>
+#### [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json)
 
-<ul>
- <li>{{WebExtAPIRef("tabs.update")}}</li>
- <li>{{WebExtAPIRef("tabs.reload")}}</li>
-</ul>
-</div>
+Aucune de ces fonctions ne nécessite de permission pour fonctionner, donc il n'y a aucune fonctionnalité dans le fichier manifest.json qui doit être mise en surbrillance.
 
-<h3 id="Par_exemple_2">Par exemple</h3>
+#### [tabs.html](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html)
 
-<p>L'exemple <a href="https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs">tabs-tabs-tabs</a> utilise toutes ces fonctionnalités sauf la mise à jour de l'URL d'un onglet. La façon dont ces API sont utilisées est similaire, nous allons donc regarder l'une des implémentations les plus impliquées, celle de l'option “Deplacer l'onglet actif vers le début de la liste des fenêtres”. Mais d'abord, voici une démonstration de la fonctionnalité en action :</p>
+tabs.html définit le “menu” affiché dans la fenêtre contextuelle, qui inclut l'option “Déplacer l'onglet actif au début de la liste des fenêtres”, wavec une série de balises `<a>` groupées par un séparateur visuel. Chaque élément de menu reçoit un ID, qui est utilisé dans tabs.js pour déterminer quel élément de menu est demandé.
 
-<p>{{EmbedYouTube("-lJRzTIvhxo")}}</p>
+```html
+    <a href="#" id="tabs-move-beginning">Move active tab to the beginning of the window</a><br>
+    <a href="#" id="tabs-move-end">Move active tab to the end of the window</a><br>
 
-<h4 id="manifest.json_2"><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json">manifest.json</a></h4>
-
-<p>Aucune de ces fonctions ne nécessite de permission pour fonctionner, donc il n'y a aucune fonctionnalité dans le fichier manifest.json qui doit être mise en surbrillance.</p>
-
-<h4 id="tabs.html_2"><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html">tabs.html</a></h4>
-
-<p>tabs.html définit le “menu” affiché dans la fenêtre contextuelle, qui inclut l'option “Déplacer l'onglet actif au début de la liste des fenêtres”, wavec une série de balises <code>&lt;a&gt;</code> groupées par un séparateur visuel. Chaque élément de menu reçoit un ID, qui est utilisé dans tabs.js pour déterminer quel élément de menu est demandé.</p>
-
-<pre class="brush: html">    &lt;a href="#" id="tabs-move-beginning"&gt;Move active tab to the beginning of the window&lt;/a&gt;&lt;br&gt;
-    &lt;a href="#" id="tabs-move-end"&gt;Move active tab to the end of the window&lt;/a&gt;&lt;br&gt;
-
-    &lt;div class="panel-section-separator"&gt;&lt;/div&gt;
+    <div class="panel-section-separator"></div>
 
 
-    &lt;a href="#" id="tabs-duplicate"&gt;Duplicate active tab&lt;/a&gt;&lt;br&gt;
+    <a href="#" id="tabs-duplicate">Duplicate active tab</a><br>
 
-    &lt;a href="#" id="tabs-reload"&gt;Reload active tab&lt;/a&gt;&lt;br&gt;
-    &lt;a href="#" id="tabs-alertinfo"&gt;Alert active tab info&lt;/a&gt;&lt;br&gt;</pre>
+    <a href="#" id="tabs-reload">Reload active tab</a><br>
+    <a href="#" id="tabs-alertinfo">Alert active tab info</a><br>
+```
 
-<h4 id="tabs.js_2"><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js">tabs.js</a></h4>
+#### [tabs.js](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js)
 
-<p>Pour implémenter le "menu" défini dans tabs.html, tabs.js inclut un écouteur pour les clics dans tabs.html</p>
+Pour implémenter le "menu" défini dans tabs.html, tabs.js inclut un écouteur pour les clics dans tabs.html
 
-<pre class="brush: js">document.addEventListener("click", function(e) {
+```js
+document.addEventListener("click", function(e) {
  function callOnActiveTab(callback) {
 
-   getCurrentWindowTabs().then((tabs) =&gt; {
+   getCurrentWindowTabs().then((tabs) => {
      for (var tab of tabs) {
        if (tab.active) {
          callback(tab, tabs);
@@ -338,12 +319,13 @@ Define the other menu items
    });
 }
 }
-</pre>
+```
 
-<p>Une série d'instructions <code>if</code> cherche alors à faire correspondre l'identifiant de l'élément cliqué. Cet extrait de code est pour l'option “Déplacer l'onglet actif au début de la liste des fenêtres” :</p>
+Une série d'instructions `if` cherche alors à faire correspondre l'identifiant de l'élément cliqué. Cet extrait de code est pour l'option “Déplacer l'onglet actif au début de la liste des fenêtres” :
 
-<pre class="brush: js"> if (e.target.id === "tabs-move-beginning") {
-   callOnActiveTab((tab, tabs) =&gt; {
+```js
+ if (e.target.id === "tabs-move-beginning") {
+   callOnActiveTab((tab, tabs) => {
      var index = 0;
      if (!tab.pinned) {
        index = firstUnpinnedTab(tabs);
@@ -352,16 +334,17 @@ Define the other menu items
      browser.tabs.move([tab.id], {index});
    });
  }
-</pre>
+```
 
-<p>Il est intéressant de noter l'utilisation de console.log. Cela vous permet de générer des informations sur la console du <a href="/fr/Add-ons/WebExtensions/Debugging">debugger</a>, ce qui peut être utile lors de la résolution des problèmes rencontrés lors du développement.</p>
+Il est intéressant de noter l'utilisation de console.log. Cela vous permet de générer des informations sur la console du [debugger](/fr/Add-ons/WebExtensions/Debugging), ce qui peut être utile lors de la résolution des problèmes rencontrés lors du développement.
 
-<p><img src="console.png"></p>
+![](console.png)
 
-<p>Le code de déplacement appelle d'abord <code>callOnActiveTab()</code> qui à son tour appelle  <code>getCurrentWindowTabs()</code> pour obtenir un objet {{WebExtAPIRef("tabs.Tab")}} contenant les onglets de la fenêtre active. Il parcourt ensuite l'objet pour rechercher et renvoyer l'objet onglet actif :</p>
+Le code de déplacement appelle d'abord `callOnActiveTab()` qui à son tour appelle  `getCurrentWindowTabs()` pour obtenir un objet {{WebExtAPIRef("tabs.Tab")}} contenant les onglets de la fenêtre active. Il parcourt ensuite l'objet pour rechercher et renvoyer l'objet onglet actif :
 
-<pre class="brush: js"> function callOnActiveTab(callback) {
-   getCurrentWindowTabs().then((tabs) =&gt; {
+```js
+ function callOnActiveTab(callback) {
+   getCurrentWindowTabs().then((tabs) => {
      for (var tab of tabs) {
        if (tab.active) {
          callback(tab, tabs);
@@ -369,118 +352,120 @@ Define the other menu items
      }
    });
  }
-</pre>
+```
 
-<h5 id="Onglets_épinglés">Onglets épinglés</h5>
+##### Onglets épinglés
 
-<p>Une caractéristique des onglets est que l'utilisateur peut épingler des onglets dans une fenêtre. Les onglets épinglés sont placés au début de la liste des onglets et ne peuvent pas être déplacés. Cela signifie que la première position vers laquelle un onglet peut se déplacer est la première position après les onglets épinglés. Ainsi, <code>firstUnpinnedTab()</code> est appelé pour trouver la position du premier onglet non goupillé en faisant une boucle dans l'objet <code>tabs</code> :</p>
+Une caractéristique des onglets est que l'utilisateur peut épingler des onglets dans une fenêtre. Les onglets épinglés sont placés au début de la liste des onglets et ne peuvent pas être déplacés. Cela signifie que la première position vers laquelle un onglet peut se déplacer est la première position après les onglets épinglés. Ainsi, `firstUnpinnedTab()` est appelé pour trouver la position du premier onglet non goupillé en faisant une boucle dans l'objet `tabs` :
 
-<pre class="brush: js">function firstUnpinnedTab(tabs) {
+```js
+function firstUnpinnedTab(tabs) {
  for (var tab of tabs) {
    if (!tab.pinned) {
      return tab.index;
    }
  }
 }
-</pre>
+```
 
-<p>Nous avons maintenant tout ce qu'il faut pour déplacer l'onglet : l'objet onglet actif à partir duquel nous pouvons obtenir l'ID de l'onglet et la position à laquelle l'onglet doit être déplacé. Ainsi, nous pouvons mettre en œuvre le mouvement :</p>
+Nous avons maintenant tout ce qu'il faut pour déplacer l'onglet : l'objet onglet actif à partir duquel nous pouvons obtenir l'ID de l'onglet et la position à laquelle l'onglet doit être déplacé. Ainsi, nous pouvons mettre en œuvre le mouvement :
 
-<pre class="brush: js">     browser.tabs.move([tab.id], {index});</pre>
+```js
+     browser.tabs.move([tab.id], {index});
+```
 
-<p>Les fonctions restantes à dupliquer, recharger, créer et supprimer des onglets sont implémentées de manière similaire.</p>
+Les fonctions restantes à dupliquer, recharger, créer et supprimer des onglets sont implémentées de manière similaire.
 
-<h2 id="Manipulation_du_niveau_du_zoom_dun_onglet">Manipulation du niveau du zoom d'un onglet</h2>
+## Manipulation du niveau du zoom d'un onglet
 
-<p>Le prochain ensemble de fonctions vous permet d'obtenir  ({{WebExtAPIRef("tabs.getZoom")}}) et de définir ({{WebExtAPIRef("tabs.setZoom")}}) le niveau de zoom dans un onglet. Vous pouvez également récupérer les paramètres de zoom  ({{WebExtAPIRef("tabs.getZoomSettings")}}) mais, au moment de l'écriture, la possibilité de définir les paramètres ({{WebExtAPIRef("tabs.setZoomSettings")}}) n'était pas disponible dans Firefox.</p>
+Le prochain ensemble de fonctions vous permet d'obtenir  ({{WebExtAPIRef("tabs.getZoom")}}) et de définir ({{WebExtAPIRef("tabs.setZoom")}}) le niveau de zoom dans un onglet. Vous pouvez également récupérer les paramètres de zoom  ({{WebExtAPIRef("tabs.getZoomSettings")}}) mais, au moment de l'écriture, la possibilité de définir les paramètres ({{WebExtAPIRef("tabs.setZoomSettings")}}) n'était pas disponible dans Firefox.
 
-<p>Le niveau de zoom peut être compris entre 30% et 300% (représenté par des décimales de 0.3 à 3).</p>
+Le niveau de zoom peut être compris entre 30% et 300% (représenté par des décimales de 0.3 à 3).
 
-<p>Dans Firefox les paramètres de zoom par défaut sont :</p>
+Dans Firefox les paramètres de zoom par défaut sont :
 
-<ul>
- <li><strong>niveau de zoom par défaut</strong> : 100%.</li>
- <li><strong>mode zoom</strong>: automatique (le navigateur gère donc le réglage des niveaux de zoom).</li>
- <li><strong>portée des changements de zoom</strong> : <code>"per-origin"</code>, ce qui signifie que lorsque vous visitez à nouveau un site, il prend le niveau de zoom défini lors de votre dernière visite.</li>
-</ul>
+- **niveau de zoom par défaut** : 100%.
+- **mode zoom**: automatique (le navigateur gère donc le réglage des niveaux de zoom).
+- **portée des changements de zoom** : `"per-origin"`, ce qui signifie que lorsque vous visitez à nouveau un site, il prend le niveau de zoom défini lors de votre dernière visite.
 
-<h3 id="Par_exemple_3">Par exemple</h3>
+### Par exemple
 
-<p>L'exemple <a href="https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs">tabs-tabs-tabs</a> comprend trois démonstrations de la fonction de zoom : zoom avant, zoom arrière, et réinitialisation du zoom. Voici la fonctionnalité en action :</p>
+L'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) comprend trois démonstrations de la fonction de zoom : zoom avant, zoom arrière, et réinitialisation du zoom. Voici la fonctionnalité en action :
 
-<p>{{EmbedYouTube("RFr3oYBCg28")}}</p>
+{{EmbedYouTube("RFr3oYBCg28")}}
 
-<p>Jetons un coup d'oeil à la façon dont le zoom est implémenté.</p>
+Jetons un coup d'oeil à la façon dont le zoom est implémenté.
 
-<h4 id="manifest.json_3"><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json">manifest.json</a></h4>
+#### [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json)
 
-<p>Aucune des fonctions de zoom n'a besoin d'autorisations. Par conséquent, aucune fonction du fichier manifest.json ne doit être mise en surbrillance.</p>
+Aucune des fonctions de zoom n'a besoin d'autorisations. Par conséquent, aucune fonction du fichier manifest.json ne doit être mise en surbrillance.
 
-<h4 id="tabs.html_3"><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html">tabs.html</a></h4>
+#### [tabs.html](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html)
 
-<p>Nous avons déjà discuté comment le tabs.html définit les options pour cette extension, rien de nouveau ou unique n'est fait pour fournir les options de zoom.</p>
+Nous avons déjà discuté comment le tabs.html définit les options pour cette extension, rien de nouveau ou unique n'est fait pour fournir les options de zoom.
 
-<h4 id="tabs.js_3"><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js">tabs.js</a></h4>
+#### [tabs.js](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js)
 
-<p>tabs.js commence par définir plusieurs constantes utilisées dans le code du zoom :</p>
+tabs.js commence par définir plusieurs constantes utilisées dans le code du zoom :
 
-<pre class="brush: js">const ZOOM_INCREMENT = 0.2;
+```js
+const ZOOM_INCREMENT = 0.2;
 const MAX_ZOOM = 3;
 const MIN_ZOOM = 0.3;
 const DEFAULT_ZOOM = 1;
-</pre>
+```
 
-<p>Il utilise ensuite le même écouteur que nous avons discuté précédemment afin qu'il puisse agir sur les clics dans tabs.html.</p>
+Il utilise ensuite le même écouteur que nous avons discuté précédemment afin qu'il puisse agir sur les clics dans tabs.html.
 
-<p>Pour la fonction zoom, ceci s'exécute :</p>
+Pour la fonction zoom, ceci s'exécute :
 
-<pre class="brush: js"> else if (e.target.id === "tabs-add-zoom") {
-   callOnActiveTab((tab) =&gt; {
+```js
+ else if (e.target.id === "tabs-add-zoom") {
+   callOnActiveTab((tab) => {
      var gettingZoom = browser.tabs.getZoom(tab.id);
-     gettingZoom.then((zoomFactor) =&gt; {
+     gettingZoom.then((zoomFactor) => {
        //the maximum zoomFactor is 3, it can't go higher
-       if (zoomFactor &gt;= MAX_ZOOM) {
+       if (zoomFactor >= MAX_ZOOM) {
          alert("Tab zoom factor is already at max!");
        } else {
          var newZoomFactor = zoomFactor + ZOOM_INCREMENT;
          //if the newZoomFactor is set to higher than the max accepted
          //it won't change, and will never alert that it's at maximum
-         newZoomFactor = newZoomFactor &gt; MAX_ZOOM ? MAX_ZOOM : newZoomFactor;
+         newZoomFactor = newZoomFactor > MAX_ZOOM ? MAX_ZOOM : newZoomFactor;
          browser.tabs.setZoom(tab.id, newZoomFactor);
        }
      });
    });
  }
-</pre>
+```
 
-<p>Ce code utilise <code>callOnActiveTab()</code> pour obtenir les détails de l'onglet actif, puis  {{WebExtAPIRef("tabs.getZoom")}} obtient le facteur de zoom actuel de l'onglet. Le zoom actuel est comparé au maximum défini (<code>MAX_ZOOM</code>) et une alerte est émise si l'onglet est déjà au zoom maximum. Sinon, le niveau de zoom est incrémenté mais limité au zoom maximum, puis le zoom est défini avec {{WebExtAPIRef("tabs.getZoom")}}.</p>
+Ce code utilise `callOnActiveTab()` pour obtenir les détails de l'onglet actif, puis  {{WebExtAPIRef("tabs.getZoom")}} obtient le facteur de zoom actuel de l'onglet. Le zoom actuel est comparé au maximum défini (`MAX_ZOOM`) et une alerte est émise si l'onglet est déjà au zoom maximum. Sinon, le niveau de zoom est incrémenté mais limité au zoom maximum, puis le zoom est défini avec {{WebExtAPIRef("tabs.getZoom")}}.
 
-<h2 id="Manipuler_le_CSS_dun_onglet">Manipuler le CSS d'un onglet</h2>
+## Manipuler le CSS d'un onglet
 
-<p>Une autre fonctionnalité importante offerte par l'API Tabs est la possibilité de manipuler le CSS dans un onglet — ajouter un nouveau CSS dans un onglet ({{WebExtAPIRef("tabs.insertCSS")}}) ou supprimer CSS d'un onglet  ({{WebExtAPIRef("tabs.removeCSS")}}).</p>
+Une autre fonctionnalité importante offerte par l'API Tabs est la possibilité de manipuler le CSS dans un onglet — ajouter un nouveau CSS dans un onglet ({{WebExtAPIRef("tabs.insertCSS")}}) ou supprimer CSS d'un onglet  ({{WebExtAPIRef("tabs.removeCSS")}}).
 
-<p>Cela peut être utile si vous voulez, par exemple, mettre en évidence certains éléments de la page ou modifier la disposition par défaut de la page (liste courte des cas d'utilisation).</p>
+Cela peut être utile si vous voulez, par exemple, mettre en évidence certains éléments de la page ou modifier la disposition par défaut de la page (liste courte des cas d'utilisation).
 
-<h3 id="Par_exemple_4">Par exemple</h3>
+### Par exemple
 
-<p>L'exemple <a href="https://github.com/mdn/webextensions-examples/tree/master/apply-css">apply-css</a> utilise ces fonctionnalités pour ajouter une bordure rouge à la page Web dans l'onglet actif. Voici la fonctionnalité en action:</p>
+L'exemple [apply-css](https://github.com/mdn/webextensions-examples/tree/master/apply-css) utilise ces fonctionnalités pour ajouter une bordure rouge à la page Web dans l'onglet actif. Voici la fonctionnalité en action:
 
-<p>{{EmbedYouTube("bcK-GT2Dyhs")}}</p>
+{{EmbedYouTube("bcK-GT2Dyhs")}}
 
-<p>Voyons comment cela se passe.</p>
+Voyons comment cela se passe.
 
-<h4 id="manifest.json_4"><a href="https://github.com/mdn/webextensions-examples/blob/master/apply-css/manifest.json">manifest.json</a></h4>
+#### [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/apply-css/manifest.json)
 
-<p>Pour utiliser les fonctionnalités CSS dont vous avez besoin :</p>
+Pour utiliser les fonctionnalités CSS dont vous avez besoin :
 
-<ul>
- <li>Permission <code>"tabs"</code>  et <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">permission hôte</a> ou</li>
- <li>Permission <code>"activeTab"</code>.</li>
-</ul>
+- Permission `"tabs"`  et [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) ou
+- Permission `"activeTab"`.
 
-<p>Ce dernier est le plus utile, car il permet à une extension d'utiliser  {{WebExtAPIRef("tabs.insertCSS")}} et {{WebExtAPIRef("tabs.removeCSS")}} dans l'onglet actif lorsqu'il est exécuté depuis le navigateur de l'extension ou action de la page, menu contextuel ou un raccourci.</p>
+Ce dernier est le plus utile, car il permet à une extension d'utiliser  {{WebExtAPIRef("tabs.insertCSS")}} et {{WebExtAPIRef("tabs.removeCSS")}} dans l'onglet actif lorsqu'il est exécuté depuis le navigateur de l'extension ou action de la page, menu contextuel ou un raccourci.
 
-<pre class="brush: json">{
+```json
+{
   "description": "Adds a page action to toggle applying CSS to pages.",
 
  "manifest_version": 2,
@@ -505,50 +490,52 @@ const DEFAULT_ZOOM = 1;
  ]
 
 }
-</pre>
+```
 
-<p>Vous noterez que la permission <code>"tabs"</code> est ajoutée en plus de <code>"activeTab"</code>. Cette permission supplémentaire est nécessaire pour permettre au script de l'extension d'accéder à l'URL de l'onglet, dont nous verrons l'importance dans un instant.</p>
+Vous noterez que la permission `"tabs"` est ajoutée en plus de `"activeTab"`. Cette permission supplémentaire est nécessaire pour permettre au script de l'extension d'accéder à l'URL de l'onglet, dont nous verrons l'importance dans un instant.
 
-<p>Les autres caractéristiques principales du fichier manifeste sont la définition de:</p>
+Les autres caractéristiques principales du fichier manifeste sont la définition de:
 
-<ul>
- <li><strong>un script d'arrière-plan</strong>, qui commence à s'exécuter dès que l'extension est chargée.</li>
- <li><strong>une “action de page”</strong>, qui définit une icône à ajouter à la barre d'adresse du navigateur.</li>
-</ul>
+- **un script d'arrière-plan**, qui commence à s'exécuter dès que l'extension est chargée.
+- **une “action de page”**, qui définit une icône à ajouter à la barre d'adresse du navigateur.
 
-<h4 id="background.js"><a href="https://github.com/mdn/webextensions-examples/blob/master/apply-css/background.js">background.js</a></h4>
+#### [background.js](https://github.com/mdn/webextensions-examples/blob/master/apply-css/background.js)
 
-<p>Au démarrage, background.js définit un certain nombre de constantes à utiliser dans l'extension qui définissent le CSS à appliquer, des titres pour les “actions de page”, et une liste de protocoles dans lesquels l'extension fonctionnera :</p>
+Au démarrage, background.js définit un certain nombre de constantes à utiliser dans l'extension qui définissent le CSS à appliquer, des titres pour les “actions de page”, et une liste de protocoles dans lesquels l'extension fonctionnera :
 
-<pre class="brush: js">const CSS = "body { border: 20px solid red; }";
+```js
+const CSS = "body { border: 20px solid red; }";
 const TITLE_APPLY = "Apply CSS";
 const TITLE_REMOVE = "Remove CSS";
 const APPLICABLE_PROTOCOLS = ["http:", "https:"];
-</pre>
+```
 
-<p>Lors du premier chargement, l'extension utilise {{WebExtAPIRef("tabs.query")}} pour obtenir une liste de tous les onglets de la fenêtre du navigateur en cours. Il parcourt ensuite les onglets appelant <code>initializePageAction()</code>.</p>
+Lors du premier chargement, l'extension utilise {{WebExtAPIRef("tabs.query")}} pour obtenir une liste de tous les onglets de la fenêtre du navigateur en cours. Il parcourt ensuite les onglets appelant `initializePageAction()`.
 
-<pre class="brush: js">var gettingAllTabs = browser.tabs.query({});
+```js
+var gettingAllTabs = browser.tabs.query({});
 
-gettingAllTabs.then((tabs) =&gt; {
+gettingAllTabs.then((tabs) => {
  for (let tab of tabs) {
    initializePageAction(tab);
  }
 });
-</pre>
+```
 
-<p><code>initializePageAction</code> utilise <code>protocolIsApplicable()</code> pour déterminer si l'URL de l'onglet actif est celle à laquelle le CSS peut être appliqué :</p>
+`initializePageAction` utilise `protocolIsApplicable()` pour déterminer si l'URL de l'onglet actif est celle à laquelle le CSS peut être appliqué :
 
-<pre class="brush: js">function protocolIsApplicable(url) {
+```js
+function protocolIsApplicable(url) {
  var anchor =  document.createElement('a');
  anchor.href = url;
  return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
 }
-</pre>
+```
 
-<p>Ensuite, si l'exemple peut agir sur l'onglet, <code>initializePageAction()</code> définit l'icône  <code>pageAction</code> (barre de navigation) et le titre de l'onglet pour utiliser les versions ‘off’ avant de rendre la <code>pageAction</code> visible :</p>
+Ensuite, si l'exemple peut agir sur l'onglet, `initializePageAction()` définit l'icône  `pageAction` (barre de navigation) et le titre de l'onglet pour utiliser les versions ‘off’ avant de rendre la `pageAction` visible :
 
-<pre class="brush: js">function initializePageAction(tab) {
+```js
+function initializePageAction(tab) {
 
  if (protocolIsApplicable(tab.url)) {
    browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
@@ -556,31 +543,28 @@ gettingAllTabs.then((tabs) =&gt; {
    browser.pageAction.show(tab.id);
  }
 }
-</pre>
+```
 
-<p>Maintenant, un écouteur sur <code>geAction.onClicked</code> attend que l'icône pageAction soit cliqué et appelle <code>toggleCSS</code> quand il l'est.</p>
+Maintenant, un écouteur sur `geAction.onClicked` attend que l'icône pageAction soit cliqué et appelle `toggleCSS` quand il l'est.
 
-<pre class="brush: js">browser.pageAction.onClicked.addListener(toggleCSS);</pre>
+```js
+browser.pageAction.onClicked.addListener(toggleCSS);
+```
 
-<p><code>toggleCSS()</code> obtient le titre de la <code>pageAction</code>  puis prend l'action décrite :</p>
+`toggleCSS()` obtient le titre de la `pageAction`  puis prend l'action décrite :
 
-<ul>
- <li><strong>Pour "Appliquer CSS”:</strong>
+- **Pour "Appliquer CSS”:**
 
-  <ul>
-   <li>Basculer l'icône <code>pageAction</code> et le titre dans les versions “supprimer”.</li>
-   <li>Applique le CSS en utilisant {{WebExtAPIRef("tabs.insertCSS")}}.</li>
-  </ul>
- </li>
- <li><strong>Pour “Supprimer CSS”:</strong>
-  <ul>
-   <li>Basculer l'icône <code>pageAction</code> et le titre dans les versions “apply”.</li>
-   <li>Supprime le CSS en utilisant {{WebExtAPIRef("tabs.removeCSS")}}.</li>
-  </ul>
- </li>
-</ul>
+  - Basculer l'icône `pageAction` et le titre dans les versions “supprimer”.
+  - Applique le CSS en utilisant {{WebExtAPIRef("tabs.insertCSS")}}.
 
-<pre class="brush: js">function toggleCSS(tab) {
+- **Pour “Supprimer CSS”:**
+
+  - Basculer l'icône `pageAction` et le titre dans les versions “apply”.
+  - Supprime le CSS en utilisant {{WebExtAPIRef("tabs.removeCSS")}}.
+
+```js
+function toggleCSS(tab) {
 
 
  function gotTitle(title) {
@@ -600,30 +584,27 @@ gettingAllTabs.then((tabs) =&gt; {
 
  gettingTitle.then(gotTitle);
 }
-</pre>
+```
 
-<p>Enfin, pour s'assurer que <code>pageAction</code> est valide après chaque mise à jour de l'onglet, un écouteur sur {{WebExtAPIRef("tabs.onUpdated")}} appelle  <code>initializePageAction()</code> chaque fois que l'onglet est mis à jour pour vérifier que l'onglet utilise toujours un protocole auquel le CSS peut être appliqué.</p>
+Enfin, pour s'assurer que `pageAction` est valide après chaque mise à jour de l'onglet, un écouteur sur {{WebExtAPIRef("tabs.onUpdated")}} appelle  `initializePageAction()` chaque fois que l'onglet est mis à jour pour vérifier que l'onglet utilise toujours un protocole auquel le CSS peut être appliqué.
 
-<pre class="brush: js">browser.tabs.onUpdated.addListener((id, changeInfo, tab) =&gt; {
+```js
+browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
 
  initializePageAction(tab);
 });
-</pre>
+```
 
-<h2 id="Quelques_autres_capacités_intéressantes">Quelques autres capacités intéressantes</h2>
+## Quelques autres capacités intéressantes
 
-<p>Il existe deux autres fonctionnalités de l'API Tabs qui ne rentrent pas dans l'une des sections précédentes :</p>
+Il existe deux autres fonctionnalités de l'API Tabs qui ne rentrent pas dans l'une des sections précédentes :
 
-<ul>
- <li>capturez le contenu de l'onglet visible avec {{WebExtAPIRef("tabs.captureVisibleTab")}}.</li>
- <li>détecter la langue principale du contenu dans un onglet en utilisant  {{WebExtAPIRef("tabs.detectLanguage")}}, que vous pourriez utiliser, par exemple, pour faire correspondre la langue de l'interface utilisateur de votre extension avec celle de la page dans laquelle elle s'exécute.</li>
-</ul>
+- capturez le contenu de l'onglet visible avec {{WebExtAPIRef("tabs.captureVisibleTab")}}.
+- détecter la langue principale du contenu dans un onglet en utilisant  {{WebExtAPIRef("tabs.detectLanguage")}}, que vous pourriez utiliser, par exemple, pour faire correspondre la langue de l'interface utilisateur de votre extension avec celle de la page dans laquelle elle s'exécute.
 
-<h2 id="Apprendre_encore_plus">Apprendre encore plus</h2>
+## Apprendre encore plus
 
-<p>Si vous voulez en savoir plus sur l'API Tabs, consultez le :</p>
+Si vous voulez en savoir plus sur l'API Tabs, consultez le :
 
-<ul>
- <li><a href="/fr/Add-ons/WebExtensions/API/tabs">Tabs API reference.</a></li>
- <li><a href="/fr/Add-ons/WebExtensions/Examples">example extensions</a>, car beaucoup d'entre eux utilisent l'API Tabs.</li>
-</ul>
+- [Tabs API reference.](/fr/Add-ons/WebExtensions/API/tabs)
+- [example extensions](/fr/Add-ons/WebExtensions/Examples), car beaucoup d'entre eux utilisent l'API Tabs.

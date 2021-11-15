@@ -13,62 +13,52 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Met en évidence (sélectionné) un ou plusieurs onglets. Les onglets sont spécifiés à l'aide d'un identifiant de fenêtre et d'une plage d'indices de tabulation.
 
-<div>Met en évidence (sélectionné) un ou plusieurs onglets. Les onglets sont spécifiés à l'aide d'un identifiant de fenêtre et d'une plage d'indices de tabulation.</div>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<div></div>
+## Syntaxe
 
-<div>
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
-</div>
-
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: js">var highlighting = browser.tabs.highlight(
+```js
+var highlighting = browser.tabs.highlight(
   highlightInfo         // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>highlightInfo</code></dt>
- <dd><p><code>object</code>.</p>
- <dl>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. ID de la fenêtre contenant les onglets.</dd>
-  <dt><code>populate</code>{{optional_inline}}</dt>
-  <dd><p><code>boolean</code>. Par défaut la valeur est <code>true</code>. S'il est défini sur <code>false</code>, l'objet {{WebExtAPIRef('windows.Window')}} n'aura pas de propriété <code>tabs</code> contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre.</p>
-  <div class="note">
-  <p><strong>Note :</strong> Remplir la fenêtre (le comportement par défaut) peut être une opération coûteuse s'il y a beaucoup d'onglets. Pour de meilleures performances, il est recommandé de définir manuellement configuré <code>populate</code> à <code>false</code> si vous n'avez pas besoin des détails de l'onglet.</p>
-  </div>
-  </dd>
-  <dt><code>tabs</code></dt>
-  <dd><code>array</code> de valeurs entières spécifiant un ou plusieurs onglets à mettre en évidence. Les onglets surlignés précédemment qui ne sont pas inclus dans les <code>onglets</code> cesseront d'être surlignés. Le premier onglet des <code>onglets</code> devient actif.</dd>
- </dl>
- </dd>
-</dl>
+- `highlightInfo`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>  qui sera remplie avec un objet  {{WebExtAPIRef('windows.Window')}} contenant des détails sur la fenêtre dont les onglets ont été mis en surbrillance. Si la fenêtre n'a pas pu être trouvée ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+    - `windowId`{{optional_inline}}
+      - : `integer`. ID de la fenêtre contenant les onglets.
+    - `populate`{{optional_inline}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+      - : `boolean`. Par défaut la valeur est `true`. S'il est défini sur `false`, l'objet {{WebExtAPIRef('windows.Window')}} n'aura pas de propriété `tabs` contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre.
 
-<p>{{Compat("webextensions.api.tabs.highlight",2)}}</p>
+        > **Note :** Remplir la fenêtre (le comportement par défaut) peut être une opération coûteuse s'il y a beaucoup d'onglets. Pour de meilleures performances, il est recommandé de définir manuellement configuré `populate` à `false` si vous n'avez pas besoin des détails de l'onglet.
 
-<p>{{WebExtExamples}}</p>
+    - `tabs`
+      - : `array` de valeurs entières spécifiant un ou plusieurs onglets à mettre en évidence. Les onglets surlignés précédemment qui ne sont pas inclus dans les `onglets` cesseront d'être surlignés. Le premier onglet des `onglets` devient actif.
 
-<div class="note"><p><strong>Note :</strong></p>
+### Valeur retournée
 
-<p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)  qui sera remplie avec un objet  {{WebExtAPIRef('windows.Window')}} contenant des détails sur la fenêtre dont les onglets ont été mis en surbrillance. Si la fenêtre n'a pas pu être trouvée ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+## Compatibilité du navigateur
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+{{Compat("webextensions.api.tabs.highlight",2)}}
+
+{{WebExtExamples}}
+
+> **Note :**
+>
+> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,5 +85,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -12,32 +12,32 @@ tags:
   - zoomFullPage
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomFullPage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jaccente est un booléen.</p>
+Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jaccente est un booléen.
 
-<p>Par défaut, le zoom s'applique à la page web entière. En utilisant le <a href="https://support.mozilla.org/fr/kb/taille-police-zoom-augmenter-taille-pages#w_daefinir-un-niveau-de-zoom-par-daefaut-pour-tous-les-sites-web">Zoom Text Only setting</a> les utilisateurs/utilisatrices peuvent choisir de zoomer uniquement le texte de la page. Ce réglage permet à une web extension de modifier et de déterminer la valeur du paramètre, le zoom est appliqué à la page entière ou bien au texte seulement.</p>
+Par défaut, le zoom s'applique à la page web entière. En utilisant le [Zoom Text Only setting](https://support.mozilla.org/fr/kb/taille-police-zoom-augmenter-taille-pages#w_daefinir-un-niveau-de-zoom-par-daefaut-pour-tous-les-sites-web) les utilisateurs/utilisatrices peuvent choisir de zoomer uniquement le texte de la page. Ce réglage permet à une web extension de modifier et de déterminer la valeur du paramètre, le zoom est appliqué à la page entière ou bien au texte seulement.
 
-<p>Valeurs du paramètre:</p>
+Valeurs du paramètre:
 
-<ul>
- <li><code>true</code>: le zoom s'applique à la page web en entier (par défaut).</li>
- <li><code>false</code>: le zoom s'applique au texte de la page web seulement.</li>
-</ul>
+- `true`: le zoom s'applique à la page web en entier (par défaut).
+- `false`: le zoom s'applique au texte de la page web seulement.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browserSettings.zoomFullPage")}}</p>
+{{Compat("webextensions.api.browserSettings.zoomFullPage")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Mettre le réglage à <code>false</code>:</p>
+Mettre le réglage à `false`:
 
-<pre class="brush: js">function afficherResultat(resultat) {
+```js
+function afficherResultat(resultat) {
   console.log(`Le paramètre a été modifié: ${resultat}`);
 }
 
 browser.browserSettings.zoomFullPage.set({value: false}).
-  then(afficherResultat);</pre>
+  then(afficherResultat);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

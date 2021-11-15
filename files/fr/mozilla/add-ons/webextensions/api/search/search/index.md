@@ -12,69 +12,63 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/search/search
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Effectuer une recherche en utilisant le moteur de recherche spécifié, ou le moteur de recherche par défaut si aucun moteur de recherche n'est spécifié.</p>
+Effectuer une recherche en utilisant le moteur de recherche spécifié, ou le moteur de recherche par défaut si aucun moteur de recherche n'est spécifié.
 
-<p>Les résultats seront affichés dans un nouvel onglet, ou si l'argument tabId est donné, dans l'onglet identifié par ceci.</p>
+Les résultats seront affichés dans un nouvel onglet, ou si l'argument tabId est donné, dans l'onglet identifié par ceci.
 
-<p>Pour utiliser cette fonction dans votre extension, vous devez demander la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission manifest</a> "search".</p>
+Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/Add-ons/WebExtensions/manifest.json/permissions) "search".
 
-<p>Pour obtenir les moteurs de recherche installés, utilisez  {{WebExtAPIRef("search.get()")}}.</p>
+Pour obtenir les moteurs de recherche installés, utilisez  {{WebExtAPIRef("search.get()")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.search.search(
+```js
+browser.search.search(
   searchProperties       // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>searchProperties</code></dt>
- <dd>
- <p><code>object</code>. Un objet avec les propriétés suivantes :</p>
+- `searchProperties`
 
- <dl>
-  <dt><code>query</code></dt>
-  <dd><code>string</code>. La requête de recherche.</dd>
-  <dt><code>engine</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code>string</code>. Le nom du moteur de recherche. Si le nom du moteur de recherche que vous spécifiez n'existe pas, la fonction lance une erreur. Si cette propriété est omise, le moteur de recherche par défaut sera utilisé.</p>
-  </dd>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code>integer</code>.  Un identificateur facultatif pour l'onglet dans lequel vous voulez exécuter la recherche. Si cette propriété est omise, les résultats de la recherche seront affichés dans un nouvel onglet.</p>
-  </dd>
- </dl>
- </dd>
-</dl>
+  - : `object`. Un objet avec les propriétés suivantes :
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+    - `query`
+      - : `string`. La requête de recherche.
+    - `engine`{{optional_inline}}
+      - : `string`. Le nom du moteur de recherche. Si le nom du moteur de recherche que vous spécifiez n'existe pas, la fonction lance une erreur. Si cette propriété est omise, le moteur de recherche par défaut sera utilisé.
+    - `tabId`{{optional_inline}}
+      - : `integer`.  Un identificateur facultatif pour l'onglet dans lequel vous voulez exécuter la recherche. Si cette propriété est omise, les résultats de la recherche seront affichés dans un nouvel onglet.
 
-<p>Aucune</p>
+### Valeur retournée
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+Aucune
 
-<p>{{Compat("webextensions.api.search.search", 10)}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.search.search", 10)}}
 
-<p>Recherche à l'aide du moteur de recherche par défaut. Les résultats seront affichés dans un nouvel onglet :</p>
+## Exemples
 
-<pre class="brush: js">function search() {
+Recherche à l'aide du moteur de recherche par défaut. Les résultats seront affichés dans un nouvel onglet :
+
+```js
+function search() {
   browser.search.search({
     query: "styracosaurus"
   });
 }
 
 browser.browserAction.onClicked.addListener(search);
-</pre>
+```
 
-<p>Recherche à l'aide de Wikipedia. Les résultats seront affichés dans un nouvel onglet :</p>
+Recherche à l'aide de Wikipedia. Les résultats seront affichés dans un nouvel onglet :
 
-<pre class="brush: js">function search() {
+```js
+function search() {
   browser.search.search({
     query: "styracosaurus",
     engine: "Wikipedia (en)"
@@ -82,11 +76,12 @@ browser.browserAction.onClicked.addListener(search);
 }
 
 browser.browserAction.onClicked.addListener(search);
-</pre>
+```
 
-<p>Recherche à l'aide de Wikipedia. Les résultats seront affichés dans un nouvel onglet</p>
+Recherche à l'aide de Wikipedia. Les résultats seront affichés dans un nouvel onglet
 
-<pre class="brush: js">function search(tab) {
+```js
+function search(tab) {
   browser.search.search({
     query: "styracosaurus",
     engine: "Wikipedia (en)",
@@ -95,6 +90,6 @@ browser.browserAction.onClicked.addListener(search);
 }
 
 browser.browserAction.onClicked.addListener(search);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

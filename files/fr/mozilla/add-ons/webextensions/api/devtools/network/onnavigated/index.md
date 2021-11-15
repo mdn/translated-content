@@ -11,67 +11,61 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network/onNavigated
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network/onNavigated
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Mise en place lorsque l'utilisateur navigue dans la fenêtre inspectée vers une nouvelle page</p>
+Mise en place lorsque l'utilisateur navigue dans la fenêtre inspectée vers une nouvelle page
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.devtools.network.onNavigated.addListener(listener)
+```js
+browser.devtools.network.onNavigated.addListener(listener)
 browser.devtools.network.onNavigated.removeListener(listener)
 browser.devtools.network.onNavigated.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Ajouter un auditeur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêter d'écouter un événement. L'argument de l'auditeur est l'auditeur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si l'auditeur est enregistré pour cet événement. Renvoie <strong>vrai</strong> si elle écoute, sinon <strong>faux</strong>.</dd>
-</dl>
+- `addListener(listener)`
+  - : Ajouter un auditeur à cet événement.
+- `removeListener(listener)`
+  - : Arrêter d'écouter un événement. L'argument de l'auditeur est l'auditeur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si l'auditeur est enregistré pour cet événement. Renvoie **vrai** si elle écoute, sinon **faux**.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>url</code></dt>
-  <dd><code>string</code>. La nouvelle URL pour la fenêtre.</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `url`
+      - : `string`. La nouvelle URL pour la fenêtre.
 
-<p>{{Compat("webextensions.api.devtools.network.onNavigated")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.devtools.network.onNavigated")}}
 
-<pre class="brush: js">function handleNavigated(url) {
+## Exemples
+
+```js
+function handleNavigated(url) {
   console.log(url);
 }
 
-browser.devtools.network.onNavigated.addListener(handleNavigated);</pre>
+browser.devtools.network.onNavigated.addListener(handleNavigated);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) de Chromium.
+>
+> Les données de compatibilité de  Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<p>Cette API est basée sur l'API <a href="https://developer.chrome.com/extensions/devtools"><code>chrome.devtools</code></a> de Chromium.</p>
-
-<p>Les données de compatibilité de  Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -98,5 +92,4 @@ browser.devtools.network.onNavigated.addListener(handleNavigated);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

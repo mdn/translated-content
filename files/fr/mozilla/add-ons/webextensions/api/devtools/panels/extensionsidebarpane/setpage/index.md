@@ -11,52 +11,50 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setPage
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setPage
 ---
-<p>Définit une page HTML à afficher dans le volet latéral.</p>
+Définit une page HTML à afficher dans le volet latéral.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.devtools.panels.setPage(
+```js
+browser.devtools.panels.setPage(
   path // string containing relative path to page
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>extensionPageURL</dt>
- <dd><code>string</code>. Le chemin relatif d'une page HTML à afficher dans la barre latérale.</dd>
-</dl>
+- extensionPageURL
+  - : `string`. Le chemin relatif d'une page HTML à afficher dans la barre latérale.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera tenue sans arguments, une fois l'URL définie.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera tenue sans arguments, une fois l'URL définie.
 
-<p>La page sélectionnée ne sera pas chargée tant que l'utilisateur n'aura pas sélectionné la barre latérale devtools.</p>
+La page sélectionnée ne sera pas chargée tant que l'utilisateur n'aura pas sélectionné la barre latérale devtools.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Créez un nouveau volet et remplissez-le d'une page HTML. Vous pouvez exécuter ce code dans un script chargé par la <a href="/fr/Add-ons/WebExtensions/manifest.json/devtools_page">page devtools</a> de votre extension.</p>
+Créez un nouveau volet et remplissez-le d'une page HTML. Vous pouvez exécuter ce code dans un script chargé par la [page devtools](/fr/Add-ons/WebExtensions/manifest.json/devtools_page) de votre extension.
 
-<pre class="brush: js">function onCreated(sidebarPane) {
+```js
+function onCreated(sidebarPane) {
   sidebarPane.setPage('sidebar/sidebar.html');
 }
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.setPage", 10)}}</p>
+{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.setPage", 10)}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a>.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -82,5 +80,4 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSideba
 // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
-</div>
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre></div>

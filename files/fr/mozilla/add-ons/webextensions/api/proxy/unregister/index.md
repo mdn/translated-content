@@ -12,42 +12,42 @@ tags:
   - unregister
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/unregister
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}{{deprecated_header}}
 
-<div>{{deprecated_header}}</div>
+Cette méthode était obsolète dans Firefox 68 et sera supprimée de Firefox 71. Dans Firefox 68 ou une version ultérieure, l'appel de cette méthode enregistre un message d'erreur sur la console:
 
-<p>Cette méthode était obsolète dans Firefox 68 et sera supprimée de Firefox 71. Dans Firefox 68 ou une version ultérieure, l'appel de cette méthode enregistre un message d'erreur sur la console:</p>
+![](proxy_unregister_warning.png)
 
-<p><img alt="" src="proxy_unregister_warning.png"></p>
+Annule l'inscription d'un [fichier Proxy Auto-Configuration (PAC)](/fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file). Cela a été enregistré par un appel précédent à {{WebExtAPIRef("proxy.register()")}}.
 
-<p>Annule l'inscription d'un <a href="/fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file">fichier Proxy Auto-Configuration (PAC)</a>. Cela a été enregistré par un appel précédent à {{WebExtAPIRef("proxy.register()")}}.</p>
+C'est une fonction asynchrome qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<p>C'est une fonction asynchrome qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
+```js
+var unregistering = browser.proxy.unregister()
+```
 
-<pre class="brush: js">var unregistering = browser.proxy.unregister()
-</pre>
+### Paramètres
 
-<h3 id="Paramètres">Paramètres</h3>
+None.
 
-<p>None.</p>
+### Valeur retournée
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie  sans arguments lorsque le fichier PAC a été désinscrit.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie  sans arguments lorsque le fichier PAC a été désinscrit.</p>
+## Exemples
 
-<h2 id="Exemples">Exemples</h2>
+```js
+browser.proxy.unregister();
+```
 
-<pre class="brush: js">browser.proxy.unregister();</pre>
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+{{Compat("webextensions.api.proxy.unregister")}}
 
-<p>{{Compat("webextensions.api.proxy.unregister")}}</p>
-
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

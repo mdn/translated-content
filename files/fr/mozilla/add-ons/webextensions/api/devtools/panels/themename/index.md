@@ -12,27 +12,24 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Le nom du thème de <strong>devtools</strong> actuellement sélectionné.</p>
+Le nom du thème de **devtools** actuellement sélectionné.
 
-<p>Il s'agit d'une chaîne dont les valeurs possibles sont :</p>
+Il s'agit d'une chaîne dont les valeurs possibles sont :
 
-<ul>
- <li>"lumière"</li>
- <li>"foncé"</li>
- <li>"firebug"</li>
-</ul>
+- "lumière"
+- "foncé"
+- "firebug"
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.devtools.panels.themeName")}}</p>
+{{Compat("webextensions.api.devtools.panels.themeName")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

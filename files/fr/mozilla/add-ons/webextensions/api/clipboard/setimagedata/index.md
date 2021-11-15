@@ -12,68 +12,68 @@ tags:
   - setImageData
 translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Copie une image dans le presse-papiers. L'image est recodée avant d'être écrite dans le presse-papiers. Si l'image n'est pas valide, le presse-papiers n'est pas modifié.</p>
+Copie une image dans le presse-papiers. L'image est recodée avant d'être écrite dans le presse-papiers. Si l'image n'est pas valide, le presse-papiers n'est pas modifié.
 
-<p>L'image est fournie en tant que <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer">ArrayBuffer</a></code> contenant l'image codée. Les formats JPEG et PNG sont pris en charge.</p>
+L'image est fournie en tant que [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer) contenant l'image codée. Les formats JPEG et PNG sont pris en charge.
 
-<p>Bien que cette API soit basée sur l'API <code><a href="https://developer.chrome.com/apps/clipboard">clipboard.setImageData()</a></code> de Chrome, il existe certaines différentes :</p>
+Bien que cette API soit basée sur l'API [`clipboard.setImageData()`](https://developer.chrome.com/apps/clipboard) de Chrome, il existe certaines différentes :
 
-<ul>
- <li>L'API Chrome est réservée aux applications et non aux extensions.</li>
- <li>Cette API nécessite uniquement la permission <code>"clipboardWrite"</code>, tandis que la version Chrome nécessite également la permission <code>"clipboard"</code>.</li>
- <li>L'API de Chrome utilise des rappels et cette API ne prend en charge que les promises.</li>
- <li>Cette API ne prend pas en charge le paramètre <code>additionalItems</code>.</li>
-</ul>
+- L'API Chrome est réservée aux applications et non aux extensions.
+- Cette API nécessite uniquement la permission `"clipboardWrite"`, tandis que la version Chrome nécessite également la permission `"clipboard"`.
+- L'API de Chrome utilise des rappels et cette API ne prend en charge que les promises.
+- Cette API ne prend pas en charge le paramètre `additionalItems`.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.clipboard.setImageData(<em>imageData</em>, <em>imageType</em>)
-</pre>
+```js
+browser.clipboard.setImageData(imageData, imageType)
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>imageData</code></dt>
- <dd><code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer">ArrayBuffer</a></code>. Les données de l'image codées.</dd>
- <dt><code>imageType</code></dt>
- <dd>Un {{domxref("DOMString")}} indiquant le type d'image contenue dans le fichier <code>imageData</code>: <code>"png"</code> ou <code>"jpeg"</code>.</dd>
-</dl>
+- `imageData`
+  - : [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer). Les données de l'image codées.
+- `imageType`
+  - : Un {{domxref("DOMString")}} indiquant le type d'image contenue dans le fichier `imageData`: `"png"` ou `"jpeg"`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans arguments si l'opération a réussi, ou rejetée, s'il y a une erreur (par exemple parce que les données ne représentaient pas une image valide).</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments si l'opération a réussi, ou rejetée, s'il y a une erreur (par exemple parce que les données ne représentaient pas une image valide).
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.clipboard.setImageData", 10)}}</p>
+{{Compat("webextensions.api.clipboard.setImageData", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Copiez une image distante :</p>
+Copiez une image distante :
 
-<pre class="brush: js">// requires:
+```js
+// requires:
 // * the host permission for "https://cdn.mdn.mozilla.net/*"
 // * the API permission "clipboardWrite"
 
 fetch('https://cdn.mdn.mozilla.net/static/img/favicon144.png')
-.then(response =&gt; response.arrayBuffer())
-.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</pre>
+.then(response => response.arrayBuffer())
+.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+```
 
-<p>Copiez une image fournie avec l'extension :</p>
+Copiez une image fournie avec l'extension :
 
-<pre class="brush: js">// requires the API permission "clipboardWrite"
+```js
+// requires the API permission "clipboardWrite"
 
 fetch(browser.runtime.getURL('image.png'))
-.then(response =&gt; response.arrayBuffer())
-.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</pre>
+.then(response => response.arrayBuffer())
+.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/apps/clipboard"><code>chrome.clipboard</code></a>.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard).

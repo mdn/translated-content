@@ -13,31 +13,31 @@ tags:
   - §ID
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/id
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>L'ID de l'extension</p>
+L'ID de l'extension
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var myAddonId = browser.runtime.id;</pre>
+```js
+var myAddonId = browser.runtime.id;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Une <code>chaîne</code> représentant l'ID du module complémentaire. Si l'extension a spécifié un ID dans la clé manifest.json de ses <a href="/fr/Add-ons/WebExtensions/manifest.json/applications">applications</a>, <code>runtime.id</code> contiendra la valeur. SInon <code>runtime.id</code> contiendra l'ID généré pour l'extension.</p>
+Une `chaîne` représentant l'ID du module complémentaire. Si l'extension a spécifié un ID dans la clé manifest.json de ses [applications](/fr/Add-ons/WebExtensions/manifest.json/applications), `runtime.id` contiendra la valeur. SInon `runtime.id` contiendra l'ID généré pour l'extension.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.runtime.id")}}</p>
+{{Compat("webextensions.api.runtime.id")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -64,5 +64,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/id
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -7,90 +7,72 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3/XUL_improvements_in_Firefox_3
 original_slug: Améliorations_XUL_dans_Firefox_3
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 3 fournit un certain nombre de nouveaux éléments <a href="/fr/XUL">XUL</a>, ainsi que des améliorations sur des éléments existants. Bien que ces éléments soient documentés ailleurs, cet article offre une liste pratique des améliorations ainsi que des liens vers la documentation détaillée.</p>
+Firefox 3 fournit un certain nombre de nouveaux éléments [XUL](/fr/XUL), ainsi que des améliorations sur des éléments existants. Bien que ces éléments soient documentés ailleurs, cet article offre une liste pratique des améliorations ainsi que des liens vers la documentation détaillée.
 
-<h3 id="Nouveaux_.C3.A9l.C3.A9ments">Nouveaux éléments</h3>
+### Nouveaux éléments
 
-<ul>
- <li><a href="/fr/Tutoriel_XUL/Les_contrôles_numériques">Contrôles numériques</a> :
+- [Contrôles numériques](/fr/Tutoriel_XUL/Les_contrôles_numériques) :
 
-  <ul>
-   <li>Le nouvel élément <code><a href="/fr/XUL/scale">&lt;scale&gt;</a></code> permet de créer des échelles glissantes permettant à l'utilisateur de sélectionner une valeur dans un intervalle donné. Ce contrôle serait typiquement utilisé, par exemple, pour créer un contrôle de volume. {{ interwiki('wikimo', 'XUL:Slider_Tag', 'Plus d\'informations sur scale') }} <a href="/fr/XUL/scale">Référence de <code>scale</code></a> ({{ Bug(290255) }})</li>
-   <li>Une nouvelle valeur <code>'number'</code> pour l'attribut <code>type</code> des élément <code>textbox</code> crée une boîte de texte dans laquelle seuls des nombres peuvent être entrés. De plus, des boutons fléchés apparaissent sur le côté permettant de se déplacer parmi les valeurs. {{ interwiki('wikimo', 'XUL:Specs:NumberBox', 'Plus d\'informations sur les boîtes de texte numériques') }} ({{ Bug(345510) }})</li>
-   <li>Un élément <code><a href="/fr/XUL/spinbuttons">&lt;spinbuttons&gt;</a></code> a été ajouté, qui peut être utilisé pour créer des contrôles à l'aide de liaisons XBL. ({{ Bug(155053) }})</li>
-   <li>Deux contrôles, <code><a href="/fr/XUL/datepicker">&lt;datepicker&gt;</a></code> et <code><a href="/fr/XUL/timepicker">&lt;timepicker&gt;</a></code>, peuvent être utilisés pour permettre l'entrée de dates et d'heures. Le sélecteur de tdate est disponible en plusieurs styles selon l'attribut <code>type</code>, et permet des entrées via des boîtes de texte ou un calendrier. {{ interwiki('wikimo', 'XUL:Specs:DateTimePickers', 'Plus d\'informations sur les sélecteurs de date') }} <a href="/fr/XUL/datepicker">Référence sur <code>datepicker</code></a></li>
-  </ul>
- </li>
- <li>Un <a href="/fr/XUL/Guide_des_popups">guide</a> a été créé pour décrire les nouvelles fonctionnalités disponibles pour les menus et les popups.
-  <ul>
-   <li>Un élément <code><a href="/fr/XUL/dropmarker">&lt;dropmarker&gt;</a></code> a été ajouté, qui peut être utile pour créer des contrôles semblables à des menus à l'aide de liaisons XBL. ({{ Bug(348614) }})</li>
-   <li>Le nouvel élément <code><a href="/fr/XUL/panel">&lt;panel&gt;</a></code> est destiné aux popups qui ne sont pas des menus. Il peut supporter n'importe quel type de contenu. L'élément &lt;menupopup&gt; devrait être utilisé pour des menus. Les menus fournissent la navigation par le clavier et l'ouverture/fermeture des sous-menus.</li>
-  </ul>
- </li>
-</ul>
+  - Le nouvel élément [`<scale>`](/fr/XUL/scale) permet de créer des échelles glissantes permettant à l'utilisateur de sélectionner une valeur dans un intervalle donné. Ce contrôle serait typiquement utilisé, par exemple, pour créer un contrôle de volume. {{ interwiki('wikimo', 'XUL:Slider_Tag', 'Plus d\'informations sur scale') }} [Référence de `scale`](/fr/XUL/scale) ({{ Bug(290255) }})
+  - Une nouvelle valeur `'number'` pour l'attribut `type` des élément `textbox` crée une boîte de texte dans laquelle seuls des nombres peuvent être entrés. De plus, des boutons fléchés apparaissent sur le côté permettant de se déplacer parmi les valeurs. {{ interwiki('wikimo', 'XUL:Specs:NumberBox', 'Plus d\'informations sur les boîtes de texte numériques') }} ({{ Bug(345510) }})
+  - Un élément [`<spinbuttons>`](/fr/XUL/spinbuttons) a été ajouté, qui peut être utilisé pour créer des contrôles à l'aide de liaisons XBL. ({{ Bug(155053) }})
+  - Deux contrôles, [`<datepicker>`](/fr/XUL/datepicker) et [`<timepicker>`](/fr/XUL/timepicker), peuvent être utilisés pour permettre l'entrée de dates et d'heures. Le sélecteur de tdate est disponible en plusieurs styles selon l'attribut `type`, et permet des entrées via des boîtes de texte ou un calendrier. {{ interwiki('wikimo', 'XUL:Specs:DateTimePickers', 'Plus d\'informations sur les sélecteurs de date') }} [Référence sur `datepicker`](/fr/XUL/datepicker)
 
-<h3 id="Am.C3.A9liorations_des_arbres">Améliorations des arbres</h3>
+- Un [guide](/fr/XUL/Guide_des_popups) a été créé pour décrire les nouvelles fonctionnalités disponibles pour les menus et les popups.
 
-<ul>
- <li>Il est possible à présent faire défiler des arbres horizontalement. Une barre de défilement horizontal apparaitra si toutes les colonnes n'entrent pas dans la largeur disponible. Cela se produira si la somme des largeurs de colonnes spécifiées est plus grande que l'espace disponible. ({{ Bug(212789) }})</li>
- <li>Un nouveau style de sélection permet de sélectionner les cellules individuellement plutôt que des lignes entières. On peut l'utiliser en définissant l'attribut <code>seltype</code> d'un arbre à la valeur <code>'cell'</code>. ({{ Bug(296040) }})</li>
- <li>Des cellules individuelles d'un arbre peuvent être modifiées. Un double-clic sur une cellule éditable affichera un champ texte dans lequel l'utilisateur pourra modifier le contenu de la cellule. {{ interwiki('wikimo', 'XUL:Tree', 'Plus de détails') }} ({{ Bug(201499) }})</li>
- <li>Les éléments &lt;treecol&gt; supportent maintenant un attribut <code>overflow</code> qui peut être défini à <code>true</code> pour permettre au texte des cellules d'un colonne de déborder dans les cellules vides voisines si le texte est trop grand pour s'afficher dans une seule cellule.</li>
-</ul>
+  - Un élément [`<dropmarker>`](/fr/XUL/dropmarker) a été ajouté, qui peut être utile pour créer des contrôles semblables à des menus à l'aide de liaisons XBL. ({{ Bug(348614) }})
+  - Le nouvel élément [`<panel>`](/fr/XUL/panel) est destiné aux popups qui ne sont pas des menus. Il peut supporter n'importe quel type de contenu. L'élément \<menupopup> devrait être utilisé pour des menus. Les menus fournissent la navigation par le clavier et l'ouverture/fermeture des sous-menus.
 
-<h3 id="Am.C3.A9liorations_des_menus">Améliorations des menus</h3>
+### Améliorations des arbres
 
-<ul>
- <li>L'attribut <code>image</code> est utilisé de manière consistante pour définir des images</li>
- <li>Les <code>menulist</code> déclenchent l'évènement <code>select</code> lorsqu'un élément est sélectionné</li>
- <li>Les propriétés <code>inputField</code> et <code>editable</code> ont été ajoutées à l'élément <code>menulist</code></li>
- <li>Les éléments <code>&lt;menu&gt;</code>, <code>&lt;menuitem&gt;</code> et <code>&lt;menuseparator&gt;</code> disposent d'une propriété en lecture seule <code>selected</code> indiquant si l'élément est sélectionné dans une &lt;menulist&gt;</li>
- <li>Les éléments <code>&lt;menu&gt;</code>, <code>&lt;menuitem&gt;</code> et <code>&lt;menuseparator&gt;</code> disposent d'une propriété en lecture seule <code>control</code> qui renvoie l'élément &lt;menulist&gt; parent</li>
- <li>Les éléments <code>&lt;menu&gt;</code>, <code>&lt;menuitem&gt;</code> et <code>&lt;menuseparator&gt;</code> disposent de propriétés <code>accessKey</code>, <code>disabled</code>, <code>crop</code>, <code>image</code> et <code>label</code> permettant de modifier l'attribut correspondant</li>
- <li>L'élément &lt;menu&gt; dispose à présent de méthodes pour ajouter, insérer et supprimer des éléments de menu (menuitems). ({{ Bug(372552) }})</li>
- <li>Une propriété <code>editor</code> permet d'obtenir le <a href="/fr/NsIEditor">nsIEditor</a> interne pour le champ texte d'un élément <code>menulist</code> modifiable.({{ Bug(312867) }})</li>
- <li>Les menus peuvent être rendus translucides sur les plateformes qui le permettent. ({{ Bug(70798) }})</li>
-</ul>
+- Il est possible à présent faire défiler des arbres horizontalement. Une barre de défilement horizontal apparaitra si toutes les colonnes n'entrent pas dans la largeur disponible. Cela se produira si la somme des largeurs de colonnes spécifiées est plus grande que l'espace disponible. ({{ Bug(212789) }})
+- Un nouveau style de sélection permet de sélectionner les cellules individuellement plutôt que des lignes entières. On peut l'utiliser en définissant l'attribut `seltype` d'un arbre à la valeur `'cell'`. ({{ Bug(296040) }})
+- Des cellules individuelles d'un arbre peuvent être modifiées. Un double-clic sur une cellule éditable affichera un champ texte dans lequel l'utilisateur pourra modifier le contenu de la cellule. {{ interwiki('wikimo', 'XUL:Tree', 'Plus de détails') }} ({{ Bug(201499) }})
+- Les éléments \<treecol> supportent maintenant un attribut `overflow` qui peut être défini à `true` pour permettre au texte des cellules d'un colonne de déborder dans les cellules vides voisines si le texte est trop grand pour s'afficher dans une seule cellule.
 
-<h3 id="Am.C3.A9liorations_des_bo.C3.AEtes_de_texte">Améliorations des boîtes de texte</h3>
+### Améliorations des menus
 
-<ul>
- <li>En définissant l'attribut <code>spellcheck</code> d'une boîte de texte à <code>'true'</code>, la correction orthographique sera activée pour cette boîte de texte. ({{ Bug(346787) }})</li>
- <li>L'élément <code>&lt;textbox&gt;</code> dispose d'une méthode <code>reset()</code> pour réinitialiser la valeur de la boîte de texte à sa valeur par défaut. La propriété <code>defaultValue</code> peut être utilisée pour retrouver et modifier cette valeur par défaut. ({{ Bug(312867) }})</li>
- <li>Une propriété <code>editor</code> permet d'obtenir le <a href="/fr/NsIEditor">nsIEditor</a> internet pour le champ texte. ({{ Bug(312867) }})</li>
- <li>textbox dispose d'un attribut <code>newlines</code> spécifiant comment les retours à la ligne dans les textes collés seront traités. ({{ Bug(253481) }}) Les valeurs possibles sont :
-  <ul>
-   <li><code>pasteintact</code> — tout coller tel quel</li>
-   <li><code>pastetofirst</code> — (valeur par défaut) coller uniquement ce qui précède le premier retour à la ligne</li>
-   <li><code>replacewithspaces</code> — remplacer les retours à la ligne par des espaces</li>
-   <li><code>replacewithcommas</code> — remplacer les retours à la ligne par des virgules</li>
-   <li><code>strip</code> — retirer tous les retours à la ligne</li>
-   <li><code>stripsurroundingwhitespace</code> — retirer tous les retours à la ligne et les blancs qui les entourent</li>
-  </ul>
- </li>
-</ul>
+- L'attribut `image` est utilisé de manière consistante pour définir des images
+- Les `menulist` déclenchent l'évènement `select` lorsqu'un élément est sélectionné
+- Les propriétés `inputField` et `editable` ont été ajoutées à l'élément `menulist`
+- Les éléments `<menu>`, `<menuitem>` et `<menuseparator>` disposent d'une propriété en lecture seule `selected` indiquant si l'élément est sélectionné dans une \<menulist>
+- Les éléments `<menu>`, `<menuitem>` et `<menuseparator>` disposent d'une propriété en lecture seule `control` qui renvoie l'élément \<menulist> parent
+- Les éléments `<menu>`, `<menuitem>` et `<menuseparator>` disposent de propriétés `accessKey`, `disabled`, `crop`, `image` et `label` permettant de modifier l'attribut correspondant
+- L'élément \<menu> dispose à présent de méthodes pour ajouter, insérer et supprimer des éléments de menu (menuitems). ({{ Bug(372552) }})
+- Une propriété `editor` permet d'obtenir le [nsIEditor](/fr/NsIEditor) interne pour le champ texte d'un élément `menulist` modifiable.({{ Bug(312867) }})
+- Les menus peuvent être rendus translucides sur les plateformes qui le permettent. ({{ Bug(70798) }})
 
-<h3 id="Autres_am.C3.A9liorations">Autres améliorations</h3>
+### Améliorations des boîtes de texte
 
-<ul>
- <li>L'attribut <code>type</code> d'un élément <code>&lt;button&gt;</code> peut être défini à <code>'repeat'</code> pour créer des boutons qui se déclenchent régulièrement tant que le bouton est enfoncé. ({{ Bug(331055) }})</li>
- <li>L'attribut <code><a href="/fr/XUL/Attributs/buttondisabledaccept">buttondisabledaccept</a></code> peut être utilisé sur l'élément <code>&lt;dialog&gt;</code> pour que le bouton OK soit initialement désactivé. ({{ Bug(247849) }})</li>
- <li>L'élément <code>&lt;titlebar&gt;</code> dispose d'un attribut <code>allowevents</code> permettant de passer des évènements aux enfants de la barre de titre. ({{ Bug(361425) }})</li>
- <li>L'élément <code>&lt;splitter&gt;</code> dispose d'une valeur supplémentaire <code>'both'</code> pour l'attribut <code>collapse</code> indiquant que le séparateur peut coller les éléments sur les deux côtés lorsqu'il est déplacé. L'attribut <code>substate</code> sera défini soit à <code>before</code>, soit à <code>after</code> lorsque l'un des deux est collé. ({{ Bug(337955) }})</li>
- <li>L'élément <code>&lt;richlistbox&gt;</code> permet les sélections multiples. Définissez l'attribut <code>seltype</code> à <code>'multiple'</code> pour activer cette fonctionnalité.</li>
- <li>L'élément <code>&lt;radio&gt;</code> dispose d'un attribut <code>group</code> permettant de définir l'id de l'élément <code>&lt;radiogroup&gt;</code> auquel appartient le bouton radio. Cela permet aux boutons radio d'être placés d'une autre manière que de les inclure tous à l'intérieur d'un radiogroup.</li>
- <li>Menus, panels et tooltips supportent deux nouvelles méthodes, <code><a href="/fr/XUL/Méthodes/openPopup">openPopup()</a></code> et <code><a href="/fr/XUL/Méthodes/openPopupAtScreen">openPopupAtScreen()</a></code>. Ces méthodes devraient être utilisées à la place de <code>showPopup</code> qui était source de confusion à l'utilisation.</li>
- <li>La gestion de l'élément <code>&lt;key&gt;</code> a été améliorée pour les utilisateurs de claviers non-Latins. Voir <a href="/fr/Évènement_keypress_dans_Gecko">Évènement keypress dans Gecko</a>.</li>
- <li>Sous Mac OS X, les attributs <a href="/fr/XUL/Attributs/activetitlebarcolor">activetitlebarcolor</a> et <a href="/fr/XUL/Attributs/inactivetitlebarcolor">inactivetitlebarcolor</a> des éléments racine (<code>&lt;window&gt;</code>, <code>&lt;dialog&gt;</code>, <code>&lt;prefwindow&gt;</code> et <code>&lt;wizard&gt;</code>) sont disponibles pour personnaliser la couleur de la barre de titre des fenêtres.</li>
-</ul>
+- En définissant l'attribut `spellcheck` d'une boîte de texte à `'true'`, la correction orthographique sera activée pour cette boîte de texte. ({{ Bug(346787) }})
+- L'élément `<textbox>` dispose d'une méthode `reset()` pour réinitialiser la valeur de la boîte de texte à sa valeur par défaut. La propriété `defaultValue` peut être utilisée pour retrouver et modifier cette valeur par défaut. ({{ Bug(312867) }})
+- Une propriété `editor` permet d'obtenir le [nsIEditor](/fr/NsIEditor) internet pour le champ texte. ({{ Bug(312867) }})
+- textbox dispose d'un attribut `newlines` spécifiant comment les retours à la ligne dans les textes collés seront traités. ({{ Bug(253481) }}) Les valeurs possibles sont :
 
-<h3 id="Voir_.C3.A9galement">Voir également</h3>
+  - `pasteintact` — tout coller tel quel
+  - `pastetofirst` — (valeur par défaut) coller uniquement ce qui précède le premier retour à la ligne
+  - `replacewithspaces` — remplacer les retours à la ligne par des espaces
+  - `replacewithcommas` — remplacer les retours à la ligne par des virgules
+  - `strip` — retirer tous les retours à la ligne
+  - `stripsurroundingwhitespace` — retirer tous les retours à la ligne et les blancs qui les entourent
 
-<ul>
- <li><a href="/fr/XUL">XUL</a></li>
- <li><a href="/fr/Firefox_3_pour_les_développeurs">Firefox 3 pour les développeurs</a></li>
-</ul>
+### Autres améliorations
 
-<p>{{ languages( { "en": "en/XUL_improvements_in_Firefox_3", "es": "es/Mejoras_XUL_en_Firefox_3", "ja": "ja/XUL_improvements_in_Firefox_3", "pl": "pl/Poprawki_XUL_w_Firefoksie_3" } ) }}</p>
+- L'attribut `type` d'un élément `<button>` peut être défini à `'repeat'` pour créer des boutons qui se déclenchent régulièrement tant que le bouton est enfoncé. ({{ Bug(331055) }})
+- L'attribut [`buttondisabledaccept`](/fr/XUL/Attributs/buttondisabledaccept) peut être utilisé sur l'élément `<dialog>` pour que le bouton OK soit initialement désactivé. ({{ Bug(247849) }})
+- L'élément `<titlebar>` dispose d'un attribut `allowevents` permettant de passer des évènements aux enfants de la barre de titre. ({{ Bug(361425) }})
+- L'élément `<splitter>` dispose d'une valeur supplémentaire `'both'` pour l'attribut `collapse` indiquant que le séparateur peut coller les éléments sur les deux côtés lorsqu'il est déplacé. L'attribut `substate` sera défini soit à `before`, soit à `after` lorsque l'un des deux est collé. ({{ Bug(337955) }})
+- L'élément `<richlistbox>` permet les sélections multiples. Définissez l'attribut `seltype` à `'multiple'` pour activer cette fonctionnalité.
+- L'élément `<radio>` dispose d'un attribut `group` permettant de définir l'id de l'élément `<radiogroup>` auquel appartient le bouton radio. Cela permet aux boutons radio d'être placés d'une autre manière que de les inclure tous à l'intérieur d'un radiogroup.
+- Menus, panels et tooltips supportent deux nouvelles méthodes, [`openPopup()`](/fr/XUL/Méthodes/openPopup) et [`openPopupAtScreen()`](/fr/XUL/Méthodes/openPopupAtScreen). Ces méthodes devraient être utilisées à la place de `showPopup` qui était source de confusion à l'utilisation.
+- La gestion de l'élément `<key>` a été améliorée pour les utilisateurs de claviers non-Latins. Voir [Évènement keypress dans Gecko](/fr/Évènement_keypress_dans_Gecko).
+- Sous Mac OS X, les attributs [activetitlebarcolor](/fr/XUL/Attributs/activetitlebarcolor) et [inactivetitlebarcolor](/fr/XUL/Attributs/inactivetitlebarcolor) des éléments racine (`<window>`, `<dialog>`, `<prefwindow>` et `<wizard>`) sont disponibles pour personnaliser la couleur de la barre de titre des fenêtres.
+
+### Voir également
+
+- [XUL](/fr/XUL)
+- [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_développeurs)
+
+{{ languages( { "en": "en/XUL_improvements_in_Firefox\_3", "es": "es/Mejoras_XUL_en_Firefox\_3", "ja": "ja/XUL_improvements_in_Firefox\_3", "pl": "pl/Poprawki_XUL_w_Firefoksie\_3" } ) }}

@@ -13,90 +13,80 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsqu'une nouvelle fenêtre ou un nouvel onglet dans une fenêtre existante est créé pour héberger la cible d'une navigation. Par exemple, cet événement est envoyé lorsque :</p>
+Lancé lorsqu'une nouvelle fenêtre ou un nouvel onglet dans une fenêtre existante est créé pour héberger la cible d'une navigation. Par exemple, cet événement est envoyé lorsque :
 
-<ul>
- <li>l'utilisateur ouvre un lien dans un nouvel onglet ou une nouvelle fenêtre</li>
- <li>une page Web charge une ressource dans un nouvel onglet ou une nouvelle fenêtre en utilisant <code><a href="/fr/docs/Web/API/Window/open">window.open()</a></code> (mais notez que l'événement n'est pas envoyé si le bloqueur de popup du navigateur bloque le chargement).</li>
-</ul>
+- l'utilisateur ouvre un lien dans un nouvel onglet ou une nouvelle fenêtre
+- une page Web charge une ressource dans un nouvel onglet ou une nouvelle fenêtre en utilisant [`window.open()`](/fr/docs/Web/API/Window/open) (mais notez que l'événement n'est pas envoyé si le bloqueur de popup du navigateur bloque le chargement).
 
-<p>L'événement n'est pas envoyé si un onglet ou une fenêtre est créé sans cible de navigation (par exemple, si l'utilisateur ouvre un nouvel onglet en appuyant sur Ctrl+T).</p>
+L'événement n'est pas envoyé si un onglet ou une fenêtre est créé sans cible de navigation (par exemple, si l'utilisateur ouvre un nouvel onglet en appuyant sur Ctrl+T).
 
-<p>Si cet événement est déclenché, il sera déclenché avant  {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}.</p>
+Si cet événement est déclenché, il sera déclenché avant  {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.webNavigation.onCreatedNavigationTarget.addListener(
+```js
+browser.webNavigation.onCreatedNavigationTarget.addListener(
   listener,                   // function
   filter                      // optional object
 )
 browser.webNavigation.onCreatedNavigationTarget.removeListener(listener)
 browser.webNavigation.onCreatedNavigationTarget.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il est écouté, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il est écouté, sinon `false`.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>details</code></dt>
-  <dd><a href="#details"><code>object</code></a>. Détails sur l'événement de navigation Voir les <a href="#details">détails</a> ci-dessous.</dd>
- </dl>
- </dd>
- <dt><code>filter</code>{{optional_inline}}</dt>
- <dd>
- <p><code>object</code>. Un objet contenant une seule propriété <code>url</code>, qui est un <code>Array</code> d'objets {{WebExtAPIRef("events.UrlFilter")}}.  Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un <code>UrlFilter</code> dans le tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions. Notez que le <code>filtre</code>n'est pas supporté dans Firefox.</p>
- </dd>
-</dl>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
-<h2 id="Objets_supplémentaires">Objets supplémentaires</h2>
+    - `details`
+      - : [`object`](#details). Détails sur l'événement de navigation Voir les [détails](#details) ci-dessous.
 
-<h3 id="détails">détails</h3>
+- `filter`{{optional_inline}}
+  - : `object`. Un objet contenant une seule propriété `url`, qui est un `Array` d'objets {{WebExtAPIRef("events.UrlFilter")}}.  Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans le tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions. Notez que le `filtre`n'est pas supporté dans Firefox.
 
-<dl>
- <dt><code>sourceFrameId</code></dt>
- <dd><code>integer</code>. ID de l'image à partir de laquelle la navigation est initiée. 0 indique que le cadre est le contexte de navigation de niveau supérieur de l'onglet, et non un <a href="/fr/docs/Web/HTML/Element/iframe">iframe</a> imbriqué. Une valeur positive indique que la navigation est initiée à partir d'un iframe imbriqué. Les ID de cadre sont uniques pour un onglet et un processus donnés.</dd>
- <dt><code>sourceProcessId</code></dt>
- <dd><code>integer</code>. L'ID du processus à partir duquel la navigation est initiée.</dd>
- <dt><code>sourceTabId</code></dt>
- <dd><code>integer</code>. L'ID de l'onglet à partir duquel la navigation est initiée. Par exemple, si l'utilisateur ouvre un lien dans un nouvel onglet, ce sera l'identifiant de l'onglet contenant le lien.</dd>
- <dt><code>tabId</code></dt>
- <dd>integer: L'ID de l'onglet nouvellement créé.</dd>
- <dt><code>timeStamp</code></dt>
- <dd><code>number</code>. L'heure à laquelle le navigateur a créé la cible de navigation, en <a href="https://en.wikipedia.org/wiki/Unix_time">millisecondes depuis l'époque</a>.</dd>
- <dt><code>url</code></dt>
- <dd><code>string</code>. L'URL qui sera chargée dans le nouvel onglet.</dd>
- <dt><code>windowId</code></dt>
- <dd>number. L'ID de la fenêtre dans laquelle le nouvel onglet est créé.</dd>
-</dl>
+## Objets supplémentaires
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### détails
 
-<p>{{Compat("webextensions.api.webNavigation.onCreatedNavigationTarget")}}</p>
+- `sourceFrameId`
+  - : `integer`. ID de l'image à partir de laquelle la navigation est initiée. 0 indique que le cadre est le contexte de navigation de niveau supérieur de l'onglet, et non un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué. Une valeur positive indique que la navigation est initiée à partir d'un iframe imbriqué. Les ID de cadre sont uniques pour un onglet et un processus donnés.
+- `sourceProcessId`
+  - : `integer`. L'ID du processus à partir duquel la navigation est initiée.
+- `sourceTabId`
+  - : `integer`. L'ID de l'onglet à partir duquel la navigation est initiée. Par exemple, si l'utilisateur ouvre un lien dans un nouvel onglet, ce sera l'identifiant de l'onglet contenant le lien.
+- `tabId`
+  - : integer: L'ID de l'onglet nouvellement créé.
+- `timeStamp`
+  - : `number`. L'heure à laquelle le navigateur a créé la cible de navigation, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
+- `url`
+  - : `string`. L'URL qui sera chargée dans le nouvel onglet.
+- `windowId`
+  - : number. L'ID de la fenêtre dans laquelle le nouvel onglet est créé.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Logs l'URL cible, l'ID de la table source et l'ID de la trame source pour <code>onCreatedNavigationTarget</code>, si le nom d'hôte de la cible contient "example.com" ou commence par "developer".</p>
+{{Compat("webextensions.api.webNavigation.onCreatedNavigationTarget")}}
 
-<pre class="brush: js">var filter = {
+## Exemples
+
+Logs l'URL cible, l'ID de la table source et l'ID de la trame source pour `onCreatedNavigationTarget`, si le nom d'hôte de la cible contient "example.com" ou commence par "developer".
+
+```js
+var filter = {
   url:
   [
     {hostContains: "example.com"},
@@ -111,19 +101,17 @@ function logOnCreatedNavigationTarget(details) {
 }
 
 browser.webNavigation.onCreatedNavigationTarget.addListener(logOnCreatedNavigationTarget, filter);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webNavigation"><code>chrome.webNavigation</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -150,5 +138,4 @@ browser.webNavigation.onCreatedNavigationTarget.addListener(logOnCreatedNavigati
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

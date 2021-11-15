@@ -9,23 +9,15 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/dns
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}Active une extension pour résoudre les noms de domaine.Pour utiliser cette API, une extension doit demander la permission "dns" [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) dans son fichier [`manifest.json`](/fr/Add-ons/WebExtensions/manifest.json) .
 
-<div>Active une extension pour résoudre les noms de domaine.</div>
+## Fonctions
 
-<div></div>
+- {{WebExtAPIRef("dns.resolve()")}}
+  - : Résout le nom d'hôte donné en un enregistrement DNS
 
-<div>Pour utiliser cette API, une extension doit demander la permission "dns" <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> dans son fichier <code><a href="/fr/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> .</div>
+## Compatibilité du navigateur
 
-<h2 id="Fonctions">Fonctions</h2>
+{{Compat("webextensions.api.dns")}}
 
-<dl>
- <dt>{{WebExtAPIRef("dns.resolve()")}}</dt>
- <dd>Résout le nom d'hôte donné en un enregistrement DNS</dd>
-</dl>
-
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
-
-<p>{{Compat("webextensions.api.dns")}}</p>
-
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}

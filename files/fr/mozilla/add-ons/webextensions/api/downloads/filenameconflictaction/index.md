@@ -13,40 +13,36 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Le type <code>FilenameConflictAction</code> de l'API {{WebExtAPIRef("downloads")}} spécifie que faire si le nom d'un fichier téléchargé est en conflit avec un fichier existant.</p>
+Le type `FilenameConflictAction` de l'API {{WebExtAPIRef("downloads")}} spécifie que faire si le nom d'un fichier téléchargé est en conflit avec un fichier existant.
 
-<p>Ce type définit les valeurs pouvant être utilisées pour la propriété <code>conflictAction</code> du paramètre d'<code>options</code> {{WebExtAPIRef("downloads.download")}}.</p>
+Ce type définit les valeurs pouvant être utilisées pour la propriété `conflictAction` du paramètre d'`options` {{WebExtAPIRef("downloads.download")}}.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :</p>
+Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
-<dl>
- <dt><code>"uniquify"</code></dt>
- <dd>Le navigateur modifiera le nom de fichier pour le rendre unique.</dd>
- <dt><code>"overwrite"</code></dt>
- <dd>Le navigateur écrase l'ancien fichier avec le fichier nouvellement téléchargé.</dd>
- <dt><code>"prompt"</code></dt>
- <dd>Le navigateur invitera l'utilisateur, lui demandant de choisir s'il souhaite l'uniquifier ou l'écraser.</dd>
-</dl>
+- `"uniquify"`
+  - : Le navigateur modifiera le nom de fichier pour le rendre unique.
+- `"overwrite"`
+  - : Le navigateur écrase l'ancien fichier avec le fichier nouvellement téléchargé.
+- `"prompt"`
+  - : Le navigateur invitera l'utilisateur, lui demandant de choisir s'il souhaite l'uniquifier ou l'écraser.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.downloads.FilenameConflictAction")}}</p>
+{{Compat("webextensions.api.downloads.FilenameConflictAction")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -73,5 +69,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictActi
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

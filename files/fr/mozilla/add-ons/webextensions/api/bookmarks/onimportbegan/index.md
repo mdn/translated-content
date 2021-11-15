@@ -13,48 +13,44 @@ tags:
   - onImportBegan
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsque le navigateur a commencé à importer un ensemble de signet.</p>
+Lancé lorsque le navigateur a commencé à importer un ensemble de signet.
 
-<p>Pendant l'importation d'un ensemble de signets, {{WebExtAPIRef("bookmarks.onCreated", "onCreated")}} peut déclencher plusieurs fois. Si votre extension écoute <code>onCreated</code>, et que l'écouteur est cher, vous devez également écouter <code>onImportBegan</code> et {{WebExtAPIRef("bookmarks.onImportEnded", "onImportEnded")}}. Lorsque vous recevez <code>onImportBegan</code>, ignorez <code>onCreated</code> jusqu'à ce que vous receviez <code>onImportEnded</code>. Vous pouvez gérer toutes les autres notifications comme d'habitude.</p>
+Pendant l'importation d'un ensemble de signets, {{WebExtAPIRef("bookmarks.onCreated", "onCreated")}} peut déclencher plusieurs fois. Si votre extension écoute `onCreated`, et que l'écouteur est cher, vous devez également écouter `onImportBegan` et {{WebExtAPIRef("bookmarks.onImportEnded", "onImportEnded")}}. Lorsque vous recevez `onImportBegan`, ignorez `onCreated` jusqu'à ce que vous receviez `onImportEnded`. Vous pouvez gérer toutes les autres notifications comme d'habitude.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.bookmarks.onImportBegan.addListener(listener)
+```js
+browser.bookmarks.onImportBegan.addListener(listener)
 browser.bookmarks.onImportBegan.removeListener(listener)
 browser.bookmarks.onImportBegan.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. Il n'y a pas de paramètres.</p>
- </dd>
-</dl>
+- `callback`
+  - : Fonction qui sera appelée lorsque cet événement se produit. Il n'y a pas de paramètres.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.bookmarks.onImportBegan")}}</p>
+{{Compat("webextensions.api.bookmarks.onImportBegan")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">function handleImportBegan() {
+```js
+function handleImportBegan() {
   console.log("Importing...");
 }
 
@@ -68,19 +64,17 @@ function handleClick() {
 }
 
 browser.browserAction.onClicked.addListener(handleClick);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -107,5 +101,4 @@ browser.browserAction.onClicked.addListener(handleClick);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

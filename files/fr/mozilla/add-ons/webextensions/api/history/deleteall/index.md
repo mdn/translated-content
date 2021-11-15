@@ -13,36 +13,38 @@ tags:
   - deleteAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteAll
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Supprime toutes les visites de l'historique du navigateur.</p>
+Supprime toutes les visites de l'historique du navigateur.
 
-<p>Cette fonction déclenche {{WebExtAPIRef("history.onVisitRemoved")}} une seule fois, avec  <code>allHistory</code> défini sur <code>true</code> et un argument <code>urls</code> vide.</p>
+Cette fonction déclenche {{WebExtAPIRef("history.onVisitRemoved")}} une seule fois, avec  `allHistory` défini sur `true` et un argument `urls` vide.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var deletingAll = browser.history.deleteAll()
-</pre>
+```js
+var deletingAll = browser.history.deleteAll()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>None.</p>
+None.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> sera remplie sans paramètre lorsque tout l'historique a été supprimé.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans paramètre lorsque tout l'historique a été supprimé.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.history.deleteAll")}}</p>
+{{Compat("webextensions.api.history.deleteAll")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Supprimer tout l'historique lorsque l'utilisateur clique sur une action du navigateur :</p>
+Supprimer tout l'historique lorsque l'utilisateur clique sur une action du navigateur :
 
-<pre class="brush: js">function onDeleteAll() {
+```js
+function onDeleteAll() {
   console.log("Deleted all history");
 }
 
@@ -51,19 +53,18 @@ function deleteAllHistory() {
   deletingAll.then(onDeleteAll);
 }
 
-deleteAllHistory();</pre>
+deleteAllHistory();
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,5 +91,4 @@ deleteAllHistory();</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

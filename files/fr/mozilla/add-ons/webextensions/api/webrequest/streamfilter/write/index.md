@@ -11,48 +11,40 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/write
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Écrit quelques données de réponse dans le flux de sortie..Vous ne pouvez appeler cette fonction qu'après le déclenchement de l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}}.
 
-<div>Écrit quelques données de réponse dans le flux de sortie..</div>
+## Syntaxe
 
-<div></div>
-
-<div>Vous ne pouvez appeler cette fonction qu'après le déclenchement de l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}}.</div>
-
-<div></div>
-
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: js">filter.write(
+```js
+filter.write(
   data    // ArrayBuffer or Uint8Array
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>data</code></dt>
- <dd><code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Uint8Array">Uint8Array</a></code> ou <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer">ArrayBuffer</a></code>: tableau d'octets contenant les données à transmettre au moteur de rendu du navigateur.</dd>
-</dl>
+- `data`
+  - : [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Uint8Array) ou [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer): tableau d'octets contenant les données à transmettre au moteur de rendu du navigateur.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>None.</p>
+None.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.webRequest.StreamFilter.write", 10)}}</p>
+{{Compat("webextensions.api.webRequest.StreamFilter.write", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple utilise <code>write()</code> pour remplacer "Example" dans la réponse par  "WebExtension Example".</p>
+Cet exemple utilise `write()` pour remplacer "Example" dans la réponse par  "WebExtension Example".
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
 
-  filter.ondata = event =&gt; {
+  filter.ondata = event => {
     let str = decoder.decode(event.data, {stream: true});
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
@@ -69,6 +61,6 @@ browser.webRequest.onBeforeRequest.addListener(
   {urls: ["https://example.com/*"], types: ["main_frame"]},
   ["blocking"]
 );
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

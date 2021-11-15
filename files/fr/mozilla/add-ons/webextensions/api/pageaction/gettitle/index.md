@@ -13,65 +13,63 @@ tags:
   - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/getTitle
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient le titre de la page action.</p>
+Obtient le titre de la page action.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingTitle = browser.pageAction.getTitle(
+```js
+var gettingTitle = browser.pageAction.getTitle(
   details // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>.</p>
- <dl>
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. L'ID de l'onglet contenant l'action page dont vous voulez obtenir le titre.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`.
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera accomplie  avec une chaîne contenant le titre de l'action de la page.</p>
+    - `tabId`
+      - : `integer`. L'ID de l'onglet contenant l'action page dont vous voulez obtenir le titre.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.pageAction.getTitle")}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera accomplie  avec une chaîne contenant le titre de l'action de la page.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Cet exemple enregistre le titre de l'action de la page lorsque l'utilisateur clique sur son icône :</p>
+{{Compat("webextensions.api.pageAction.getTitle")}}
 
-<pre class="brush: js">function gotTitle(title) {
+## Exemples
+
+Cet exemple enregistre le titre de l'action de la page lorsque l'utilisateur clique sur son icône :
+
+```js
+function gotTitle(title) {
   console.log(`Title ${title}`);
 }
 
-browser.pageAction.onClicked.addListener((tab) =&gt; {
+browser.pageAction.onClicked.addListener((tab) => {
   var gettingTitle = browser.pageAction.getTitle({
     tabId: tab.id
   });
   gettingTitle.then(gotTitle);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/pageAction"><code>chrome.pageAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -98,5 +96,4 @@ browser.pageAction.onClicked.addListener((tab) =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

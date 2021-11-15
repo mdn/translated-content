@@ -13,71 +13,63 @@ tags:
   - onFocusChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Attiré lorsque la fenêtre actuellement change. Sera {{WebExtAPIRef('windows.WINDOW_ID_NONE')}} si toutes les fenêtres du navigateur ont perdu le focus.</p>
+Attiré lorsque la fenêtre actuellement change. Sera {{WebExtAPIRef('windows.WINDOW_ID_NONE')}} si toutes les fenêtres du navigateur ont perdu le focus.
 
-<div class="note">
-<p><strong>Note :</strong> Sur certains gestionnaires de fenêtres Linux, WINDOW_ID_NONE sera toujours envoyé immédiatement avant un passage d'une fenêtre de navigateur à l'autre.</p>
-</div>
+> **Note :** Sur certains gestionnaires de fenêtres Linux, WINDOW_ID_NONE sera toujours envoyé immédiatement avant un passage d'une fenêtre de navigateur à l'autre.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.windows.onFocusChanged.addListener(listener)
+```js
+browser.windows.onFocusChanged.addListener(listener)
 browser.windows.onFocusChanged.removeListener(listener)
 browser.windows.onFocusChanged.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois événements :</p>
+Les événements ont trois événements :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un auditeur à cet événement</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument de l'auditeur est l'auditeur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si un auditeur est enregistré pour cet événement. Renvoie <strong>vrai</strong> si elle écoute, <strong>faux</strong> sinon..</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un auditeur à cet événement
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument de l'auditeur est l'auditeur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si un auditeur est enregistré pour cet événement. Renvoie **vrai** si elle écoute, **faux** sinon..
 
-<h2 id="syntaxe_addListener">syntaxe addListener</h2>
+## syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>windowId</code></dt>
-  <dd><code>integer</code>. ID de la fenêtre nouvellement localisée.</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `windowId`
+      - : `integer`. ID de la fenêtre nouvellement localisée.
 
-<p>{{Compat("webextensions.api.windows.onFocusChanged")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.windows.onFocusChanged")}}
 
-<p>Changements de mise au point du journal :</p>
+## Exemples
 
-<pre class="brush: js">browser.windows.onFocusChanged.addListener((windowId) =&gt; {
+Changements de mise au point du journal :
+
+```js
+browser.windows.onFocusChanged.addListener((windowId) => {
   console.log("Newly focused window: " + windowId);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+>
+> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -104,5 +96,4 @@ browser.windows.onFocusChanged.hasListener(listener)
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,23 +13,19 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/SameSiteStatus
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<div></div>
+Le type `SameSiteStatus` de l'API {{WebExtAPIRef("cookies")}} représente des informations sur l'état `SameSite` d'un cookie.
 
-<p>Le type <code>SameSiteStatus</code> de l'API {{WebExtAPIRef("cookies")}} représente des informations sur l'état <code>SameSite</code> d'un cookie.</p>
+## Type
 
-<h2 id="Type">Type</h2>
+Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles sont :
 
-<p>Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles sont :</p>
+- `no_restriction`
+  - : Représente un ensemble de cookies sans attribut `SameSite`.
+- `lax`
+  - : Correspond au `SameSite=Lax`
+- `strict`
+  - : Correspond à un ensemble de témoins avec `SameSite=Strict`
 
-<dl>
- <dt><code>no_restriction</code></dt>
- <dd>Représente un ensemble de cookies sans attribut <code>SameSite</code>.</dd>
- <dt><code>lax</code></dt>
- <dd>Correspond au <code>SameSite=Lax</code></dd>
- <dt><code>strict</code></dt>
- <dd>Correspond à un ensemble de témoins avec <code>SameSite=Strict</code></dd>
-</dl>
-
-<p>Voir les <a href="/fr/docs/Web/HTTP/Cookies">cookies HTTP</a> pour plus d'informations.</p>
+Voir les [cookies HTTP](/fr/docs/Web/HTTP/Cookies) pour plus d'informations.

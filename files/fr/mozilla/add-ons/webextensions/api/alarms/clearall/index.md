@@ -13,41 +13,43 @@ tags:
   - clearAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Cette méthode supprime toutes les alarmes actives. C'est une fonction asynchrone qui renvoie une promesse {{jsxref("Promise")}}.</p>
+Cette méthode supprime toutes les alarmes actives. C'est une fonction asynchrone qui renvoie une promesse {{jsxref("Promise")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var clearAlarms = browser.alarms.clearAll()
-</pre>
+```js
+var clearAlarms = browser.alarms.clearAll()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun.</p>
+Aucun.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une promesse ({{jsxref("Promise")}}) qui sera tenue avec une valeur booléenne. Ce dernier vaudra <code>true</code> si certaines alarmes ont bien été effacées et <code>false</code> sinon. On notera que Chrome renvoie toujours <code>true</code>.</p>
+Une promesse ({{jsxref("Promise")}}) qui sera tenue avec une valeur booléenne. Ce dernier vaudra `true` si certaines alarmes ont bien été effacées et `false` sinon. On notera que Chrome renvoie toujours `true`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">function onClearedAll(wasCleared) {
+```js
+function onClearedAll(wasCleared) {
   console.log(wasCleared);  // true/false
 }
 
 var clearAlarms = browser.alarms.clearAll();
-clearAlarms.then(onClearedAll);</pre>
+clearAlarms.then(onClearedAll);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("webextensions.api.alarms.clearAll")}}</p>
+{{Compat("webextensions.api.alarms.clearAll")}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/extensions/alarms).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

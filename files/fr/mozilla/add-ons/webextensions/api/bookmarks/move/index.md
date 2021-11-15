@@ -13,50 +13,46 @@ tags:
   - move
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La méthode <strong><code>bookmarks.move()</code></strong> déplace le  {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à la destination spécifiée dans l'arborescence des signets. Cela vous permet de déplacer un signet vers un nouveau dossier et / ou une position dans le dossier.</p>
+La méthode **`bookmarks.move()`** déplace le  {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à la destination spécifiée dans l'arborescence des signets. Cela vous permet de déplacer un signet vers un nouveau dossier et / ou une position dans le dossier.
 
-<div class="warning">
-<p><strong>Attention :</strong> Si votre extension tente de déplacer un signet dans le nœud racine de l’arborescence de signets, l’appel déclenche une erreur avec le message suivant: "<em>La racine du signet ne peut pas être modifiée</em>" et le déplacement ne sera pas terminé.</p>
-</div>
+> **Attention :** Si votre extension tente de déplacer un signet dans le nœud racine de l’arborescence de signets, l’appel déclenche une erreur avec le message suivant: "_La racine du signet ne peut pas être modifiée_" et le déplacement ne sera pas terminé.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var movingBookmark = browser.bookmarks.move(
+```js
+var movingBookmark = browser.bookmarks.move(
   id,                    // string
   destination           // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres :</h3>
+### Paramètres :
 
-<dl>
- <dt><code>id</code></dt>
- <dd>Un {{jsxref("string")}} contenant l'ID du signet ou du dossier à déplacer.</dd>
- <dt><code>destination</code></dt>
- <dd><p>Un {{jsxref("object")}} qui spécifie la destination du signet. Cet objet doit contenir un ou les deux champs suivants :</p>
- 
- <dl>
-  <dt><code>parentId</code> {{optional_inline}}</dt>
-  <dd>Un {{jsxref("string")}} qui spécifie l'ID du dossier de destination. Si cette valeur est omise, le signet est déplacé vers un nouvel emplacement dans son dossier actuel.</dd>
-  <dt><code>index</code> {{optional_inline}}</dt>
-  <dd>Un index basé sur 0 spécifiant la position dans le dossier vers lequel déplacer le signet. La valeur 0 déplace le signet vers le haut du dossier. Si cette valeur est omise, le signet est placé à la fin du nouveau dossier parent..</dd>
- </dl>
- </dd>
-</dl>
+- `id`
+  - : Un {{jsxref("string")}} contenant l'ID du signet ou du dossier à déplacer.
+- `destination`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : Un {{jsxref("object")}} qui spécifie la destination du signet. Cet objet doit contenir un ou les deux champs suivants :
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un seul objet <a href="/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode"><code>bookmarks.BookmarkTreeNode</code></a>  décrivant le noeud déplacé.Si le noeud correspondant au paramètre <code>id</code> ne peut pas être trouvé, la promesse est rejetée avec un message d'erreur.</p>
+    - `parentId` {{optional_inline}}
+      - : Un {{jsxref("string")}} qui spécifie l'ID du dossier de destination. Si cette valeur est omise, le signet est déplacé vers un nouvel emplacement dans son dossier actuel.
+    - `index` {{optional_inline}}
+      - : Un index basé sur 0 spécifiant la position dans le dossier vers lequel déplacer le signet. La valeur 0 déplace le signet vers le haut du dossier. Si cette valeur est omise, le signet est placé à la fin du nouveau dossier parent..
 
-<h2 id="Exemples">Exemples</h2>
+### Valeur retournée
 
-<p>Cet exemple déplace un signet afin qu'il soit le premier signet dans son dossier actuel.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un seul objet [`bookmarks.BookmarkTreeNode`](/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode)  décrivant le noeud déplacé.Si le noeud correspondant au paramètre `id` ne peut pas être trouvé, la promesse est rejetée avec un message d'erreur.
 
-<pre class="brush: js">function onMoved(bookmarkItem) {
+## Exemples
+
+Cet exemple déplace un signet afin qu'il soit le premier signet dans son dossier actuel.
+
+```js
+function onMoved(bookmarkItem) {
   console.log(bookmarkItem.index);
 }
 
@@ -67,25 +63,22 @@ function onRejected(error) {
 var bookmarkId = "abcdefghilkl";
 
 var movingBookmark = browser.bookmarks.move(bookmarkId, {index: 0});
-movingBookmark.then(onMoved, onRejected);</pre>
+movingBookmark.then(onMoved, onRejected);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+## Compatibilité du navigateur
 
+{{Compat("webextensions.api.bookmarks.move")}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>{{Compat("webextensions.api.bookmarks.move")}}</p>
-
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,5 +105,4 @@ movingBookmark.then(onMoved, onRejected);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

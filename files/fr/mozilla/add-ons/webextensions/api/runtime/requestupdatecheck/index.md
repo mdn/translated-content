@@ -13,46 +13,45 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/requestUpdateCheck
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Vérifie de voir si un mise à jour de l'extension est disponible.</p>
+Vérifie de voir si un mise à jour de l'extension est disponible.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var requestingCheck = browser.runtime.requestUpdateCheck()
-</pre>
+```js
+var requestingCheck = browser.runtime.requestUpdateCheck()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>None.</p>
+None.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec deux arguments :</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec deux arguments :
 
-<dl>
- <dt><code>status</code></dt>
- <dd>Une valeur {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}}  — Le résultat de la vérification de mise à jour.</dd>
- <dt><code>details</code>{{optional_inline}}</dt>
- <dd><p><code>object</code>. Si le <code>status</code> est <code>update_available</code>, cela contient plus d'informations sur la mise à jour. C'est un objet contenant une simple propriété :</p>
- <dl>
-  <dt><code>version</code></dt>
-  <dd><code>string</code>. La version de la mise à jour.</dd>
- </dl>
- </dd>
-</dl>
+- `status`
+  - : Une valeur {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}}  — Le résultat de la vérification de mise à jour.
+- `details`{{optional_inline}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+  - : `object`. Si le `status` est `update_available`, cela contient plus d'informations sur la mise à jour. C'est un objet contenant une simple propriété :
 
-<p>{{Compat("webextensions.api.runtime.requestUpdateCheck")}}</p>
+    - `version`
+      - : `string`. La version de la mise à jour.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Demander une mise à jour, etenregistrer la nouvelle version si elle est disponible :</p>
+{{Compat("webextensions.api.runtime.requestUpdateCheck")}}
 
-<pre class="brush: js">function onRequested(status, details) {
+## Exemples
+
+Demander une mise à jour, etenregistrer la nouvelle version si elle est disponible :
+
+```js
+function onRequested(status, details) {
   console.log(status);
   if (status === "update_available") {
     console.log(details.version);
@@ -64,19 +63,18 @@ function onError(error) {
 }
 
 var requestingCheck = browser.runtime.requestUpdateCheck(onRequested);
-requestingCheck.then(onRequested, onError);</pre>
+requestingCheck.then(onRequested, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,5 +101,4 @@ requestingCheck.then(onRequested, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

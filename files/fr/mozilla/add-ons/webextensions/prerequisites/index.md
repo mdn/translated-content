@@ -6,6 +6,6 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Prerequisites
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Tout ce dont vous avez besoin pour Firefox 45 ou supérieur. Voir <a href="/fr/Add-ons/WebExtensions/Your_first_WebExtension">votre première extension</a> pour commencer.</p>
+Tout ce dont vous avez besoin pour Firefox 45 ou supérieur. Voir [votre première extension](/fr/Add-ons/WebExtensions/Your_first_WebExtension) pour commencer.

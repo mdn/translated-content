@@ -11,50 +11,43 @@ tags:
   - alarms
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Programmer le code pour qu'il soit exécuté à un moment précis dans le futur. C'est comme <code><a href="/fr/docs/Web/API/WindowTimers/setTimeout">setTimeout()</a></code> and <code><a href="/fr/docs/Web/API/WindowTimers/setInterval">setInterval()</a></code> sauf que ces fonctions ne fonctionnent pas avec les pages d'arrière-plan qui sont chargées à la demande. Les alarmes ne persistent pas d'une session à l'autre du navigateur</p>
+Programmer le code pour qu'il soit exécuté à un moment précis dans le futur. C'est comme [`setTimeout()`](/fr/docs/Web/API/WindowTimers/setTimeout) and [`setInterval()`](/fr/docs/Web/API/WindowTimers/setInterval) sauf que ces fonctions ne fonctionnent pas avec les pages d'arrière-plan qui sont chargées à la demande. Les alarmes ne persistent pas d'une session à l'autre du navigateur
 
-<p>Pour pouvoir utiliser cette API, vous devez disposer de la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> <code>"alarms"</code>.</p>
+Pour pouvoir utiliser cette API, vous devez disposer de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"alarms"`.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("alarms.Alarm")}}</dt>
- <dd>Ce type permet d'obtenir des informations à propos d'une alarme donnée.</dd>
-</dl>
+- {{WebExtAPIRef("alarms.Alarm")}}
+  - : Ce type permet d'obtenir des informations à propos d'une alarme donnée.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{WebExtAPIRef("alarms.create()")}}</dt>
- <dd>Cette fonction permet de créer une nouvelle alarme.</dd>
- <dt>{{WebExtAPIRef("alarms.get()")}}</dt>
- <dd>Cette fonction permet de récupérer une alarme donnée en fonction de son nom.</dd>
- <dt>{{WebExtAPIRef("alarms.getAll()")}}</dt>
- <dd>Cette fonction permet de récupérer l'ensemble des alarmes qui sont planifiées.</dd>
- <dt>{{WebExtAPIRef("alarms.clear()")}}</dt>
- <dd>Cette fonction permet de supprimer une alarme donnée en fonction de son nom.</dd>
- <dt>{{WebExtAPIRef("alarms.clearAll()")}}</dt>
- <dd>Cette fonction permet de supprimer l'ensemble des alarmes qui sont planifiées.</dd>
-</dl>
+- {{WebExtAPIRef("alarms.create()")}}
+  - : Cette fonction permet de créer une nouvelle alarme.
+- {{WebExtAPIRef("alarms.get()")}}
+  - : Cette fonction permet de récupérer une alarme donnée en fonction de son nom.
+- {{WebExtAPIRef("alarms.getAll()")}}
+  - : Cette fonction permet de récupérer l'ensemble des alarmes qui sont planifiées.
+- {{WebExtAPIRef("alarms.clear()")}}
+  - : Cette fonction permet de supprimer une alarme donnée en fonction de son nom.
+- {{WebExtAPIRef("alarms.clearAll()")}}
+  - : Cette fonction permet de supprimer l'ensemble des alarmes qui sont planifiées.
 
-<h2 id="Évènements">Évènements</h2>
+## Évènements
 
-<dl>
- <dt>{{WebExtAPIRef("alarms.onAlarm")}}</dt>
- <dd>Cet évènement est déclenché lorsque l'alarme s'éteint.</dd>
-</dl>
+- {{WebExtAPIRef("alarms.onAlarm")}}
+  - : Cet évènement est déclenché lorsque l'alarme s'éteint.
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("webextensions.api.alarms")}}</p>
+{{Compat("webextensions.api.alarms")}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/extensions/alarms).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

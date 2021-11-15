@@ -12,63 +12,55 @@ tags:
   - onInputChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé chaque fois que l'utilisateur modifie sa saisie, après avoir commencé à interagir avec votre extension en saisissant son mot-clé dans la barre d'adresse, puis en appuyant sur la touche espace.</p>
+Lancé chaque fois que l'utilisateur modifie sa saisie, après avoir commencé à interagir avec votre extension en saisissant son mot-clé dans la barre d'adresse, puis en appuyant sur la touche espace.
 
-<p>C'est l'événement que vous utiliserez pour remplir la liste déroulante de la barre d'adresse avec des suggestions. L'écouteur d'événement est transmis :</p>
+C'est l'événement que vous utiliserez pour remplir la liste déroulante de la barre d'adresse avec des suggestions. L'écouteur d'événement est transmis :
 
-<ul>
- <li>l'entrée actuelle de l'utilisateur (n'incluant pas le mot-clé lui-même ou l'espace après)</li>
- <li>une fonction de rappel que l'écouteur peut appeler avec un tableau d'objets {{WebExtAPIRef("omnibox.SuggestResult")}}, un pour chaque suggestion. Seules les six premières suggestions seront affichées..</li>
-</ul>
+- l'entrée actuelle de l'utilisateur (n'incluant pas le mot-clé lui-même ou l'espace après)
+- une fonction de rappel que l'écouteur peut appeler avec un tableau d'objets {{WebExtAPIRef("omnibox.SuggestResult")}}, un pour chaque suggestion. Seules les six premières suggestions seront affichées..
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.omnibox.onInputChanged.addListener(listener)
+```js
+browser.omnibox.onInputChanged.addListener(listener)
 browser.omnibox.onInputChanged.removeListener(listener)
 browser.omnibox.onInputChanged.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code>s'il écoute, sinon  <code>false</code>.</dd>
-</dl>
+- `addListener(listener)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true`s'il écoute, sinon  `false`.
 
-<h2 id="syntaxe_addListener">syntaxe addListener</h2>
+## syntaxe addListener
 
-<p>The listener function will be passed two parameters: a string <code>text</code>, and a callback function <code>suggest</code>.</p>
+The listener function will be passed two parameters: a string `text`, and a callback function `suggest`.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>text</code></dt>
- <dd>
- <p><code>String</code>. L'entrée actuelle de l'utilisateur dans la barre d'adresse, n'incluant pas le mot-clé de l'extension lui-même ou l'espace après le mot-clé. Utilisez-le pour décider quelles suggestions afficher dans la liste déroulante.</p>
- </dd>
- <dt><code>suggest</code></dt>
- <dd>
- <p><code>Function</code>. Une fonction de rappel que l'écouteur d'événement peut appeler pour fournir des suggestions pour la liste déroulante de la barre d'adresse. La fonction de rappel s'attend à recevoir un tableau d'objets  {{WebExtAPIRef("omnibox.SuggestResult")}} un pour chaque suggestion. Seules les six premières suggestions seront affichées.</p>
- </dd>
-</dl>
+- `text`
+  - : `String`. L'entrée actuelle de l'utilisateur dans la barre d'adresse, n'incluant pas le mot-clé de l'extension lui-même ou l'espace après le mot-clé. Utilisez-le pour décider quelles suggestions afficher dans la liste déroulante.
+- `suggest`
+  - : `Function`. Une fonction de rappel que l'écouteur d'événement peut appeler pour fournir des suggestions pour la liste déroulante de la barre d'adresse. La fonction de rappel s'attend à recevoir un tableau d'objets  {{WebExtAPIRef("omnibox.SuggestResult")}} un pour chaque suggestion. Seules les six premières suggestions seront affichées.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.omnibox.onInputStarted")}}</p>
+{{Compat("webextensions.api.omnibox.onInputStarted")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple interprète l'entrée de l'utilisateur en tant que nom de propriété CSS et remplit la liste déroulante avec un objet {{WebExtAPIRef("omnibox.SuggestResult")}} pour chaque propriété CSS correspondant à l'entrée. La <code>description SuggestResult</code> est le nom complet de la propriété et le <code>contenu</code> est la page MDN de cette propriété.</p>
+Cet exemple interprète l'entrée de l'utilisateur en tant que nom de propriété CSS et remplit la liste déroulante avec un objet {{WebExtAPIRef("omnibox.SuggestResult")}} pour chaque propriété CSS correspondant à l'entrée. La `description SuggestResult` est le nom complet de la propriété et le `contenu` est la page MDN de cette propriété.
 
-<p>L'exemple écoute également {{WebExtAPIRef("omnibox.onInputEntered")}}, et ouvre la page MDN correspondant à la sélection, conformément à l'argument   {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.</p>
+L'exemple écoute également {{WebExtAPIRef("omnibox.onInputEntered")}}, et ouvre la page MDN correspondant à la sélection, conformément à l'argument   {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
 
-<pre class="brush: js">browser.omnibox.setDefaultSuggestion({
+```js
+browser.omnibox.setDefaultSuggestion({
   description: "Type the name of a CSS property"
 });
 
@@ -121,11 +113,11 @@ function getMatchingProperties(input) {
   return result;
 }
 
-browser.omnibox.onInputChanged.addListener((input, suggest) =&gt; {
+browser.omnibox.onInputChanged.addListener((input, suggest) => {
   suggest(getMatchingProperties(input));
 });
 
-browser.omnibox.onInputEntered.addListener((url, disposition) =&gt; {
+browser.omnibox.onInputEntered.addListener((url, disposition) => {
   switch (disposition) {
     case "currentTab":
       browser.tabs.update({url});
@@ -138,14 +130,12 @@ browser.omnibox.onInputEntered.addListener((url, disposition) =&gt; {
       break;
   }
 });
+```
 
-</pre>
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
-
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/omnibox"><code>chrome.omnibox</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

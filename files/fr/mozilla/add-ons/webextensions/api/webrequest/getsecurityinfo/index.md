@@ -12,54 +12,53 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Utilisez cette fonction pour obtenir des informations détaillées sur la connexion <a href="/fr/docs/Glossaire/TLS">TLS</a> associée à une demande particulière..</p>
+Utilisez cette fonction pour obtenir des informations détaillées sur la connexion [TLS](/fr/docs/Glossaire/TLS) associée à une demande particulière..
 
-<p>Vous passez à cette fonction la <code>requestId</code> pour la requête en question, et quelques paramètres supplémentaires optionnels. Il retourne une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera résolue à un objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}}.</p>
+Vous passez à cette fonction la `requestId` pour la requête en question, et quelques paramètres supplémentaires optionnels. Il retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera résolue à un objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}}.
 
-<p>Vous ne pouvez appeler cette fonction qu'à partir de l'écouteur  {{WebExtAPIRef("webRequest.onHeadersReceived")}}. La <code>requestId</code> peut être trouvée dans l'objet <code>details</code> object qui est passé dans l'écouteur.</p>
+Vous ne pouvez appeler cette fonction qu'à partir de l'écouteur  {{WebExtAPIRef("webRequest.onHeadersReceived")}}. La `requestId` peut être trouvée dans l'objet `details` object qui est passé dans l'écouteur.
 
-<p>Vous devez également passer l'option "blocking" à  <code>webRequest.onHeadersReceived.addListener()</code>. Ainsi, pour utiliser cette API, vous devez avoir la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permission de l'API</a> "webRequestBlocking", ainsi que les permissions normales nécessaires pour utiliser les écouteurs <code>webRequest</code>  (la permission "webRequest" et la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">permission hôte</a> pour le hôte).</p>
+Vous devez également passer l'option "blocking" à  `webRequest.onHeadersReceived.addListener()`. Ainsi, pour utiliser cette API, vous devez avoir la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "webRequestBlocking", ainsi que les permissions normales nécessaires pour utiliser les écouteurs `webRequest`  (la permission "webRequest" et la [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour le hôte).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingInfo = browser.webRequest.getSecurityInfo(
+```js
+var gettingInfo = browser.webRequest.getSecurityInfo(
   requestId,       // string
   options          // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>requestId</code></dt>
- <dd><code>string</code>. ID de la requête pour laquelle vous souhaitez obtenir des informations de sécurité. Vous pouvez l'obtenir à partir de l'objet de <code>details</code> qui est passé dans n'importe quel écouteur d'événement <code>webRequest</code>.</dd>
- <dt><code>options</code></dt>
- <dd><p><code>object</code>. Un objet qui peut contenir l'une des propriétés suivantes, toutes facultatives :</p>
- <dl>
-  <dt><code>certificateChain</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si <code>true</code>, l'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné inclura toute la chaîne de certificats jusqu'à et y compris la racine de confiance. Si <code>false</code>, <br>
-  il n'inclura que le certificat du serveur. La valeur par défaut est <code>false</code>.</dd>
-  <dt><code>rawDER</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si true, chaque propriété {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}} dans le {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo.certificates")}} contiendra une propriété <code>rawDER</code>. Il contient le DER-encoded ASN.1 qui comprend les données du certificat.</dd>
- </dl>
- </dd>
-</dl>
+- `requestId`
+  - : `string`. ID de la requête pour laquelle vous souhaitez obtenir des informations de sécurité. Vous pouvez l'obtenir à partir de l'objet de `details` qui est passé dans n'importe quel écouteur d'événement `webRequest`.
+- `options`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : `object`. Un objet qui peut contenir l'une des propriétés suivantes, toutes facultatives :
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui se résout en un objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}}.</p>
+    - `certificateChain` {{optional_inline}}
+      - : `boolean`. Si `true`, l'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné inclura toute la chaîne de certificats jusqu'à et y compris la racine de confiance. Si `false`, 
+        il n'inclura que le certificat du serveur. La valeur par défaut est `false`.
+    - `rawDER` {{optional_inline}}
+      - : `boolean`. Si true, chaque propriété {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}} dans le {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo.certificates")}} contiendra une propriété `rawDER`. Il contient le DER-encoded ASN.1 qui comprend les données du certificat.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+### Valeur retournée
 
-<p>{{Compat("webextensions.api.webRequest.getSecurityInfo", 10)}}</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se résout en un objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Compatibilité du navigateur
 
-<p>Cet exemple écoute toutes les requêtes HTTPS à "mozilla.org" ou ses sous-domaines, et enregistre le nom de l'objet dans le certificat du serveur :</p>
+{{Compat("webextensions.api.webRequest.getSecurityInfo", 10)}}
 
-<pre class="brush: js">async function logSubject(details) {
+## Exemples
+
+Cet exemple écoute toutes les requêtes HTTPS à "mozilla.org" ou ses sous-domaines, et enregistre le nom de l'objet dans le certificat du serveur :
+
+```js
+async function logSubject(details) {
   try {
     let securityInfo = await browser.webRequest.getSecurityInfo(details.requestId, {});
     console.log(details.url);
@@ -75,11 +74,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
 browser.webRequest.onHeadersReceived.addListener(logSubject,
   {urls: ["https://*.mozilla.org/*"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>Cet exemple écoute toutes les requêtes HTTPS à "mozilla.org" ou ses sous-domaines, et enregistre le nom dans le certificat racine de confiance :</p>
+Cet exemple écoute toutes les requêtes HTTPS à "mozilla.org" ou ses sous-domaines, et enregistre le nom dans le certificat racine de confiance :
 
-<pre class="brush: js">async function logRoot(details) {
+```js
+async function logRoot(details) {
   try {
     let securityInfo = await browser.webRequest.getSecurityInfo(
       details.requestId,
@@ -98,6 +99,7 @@ browser.webRequest.onHeadersReceived.addListener(logSubject,
 browser.webRequest.onHeadersReceived.addListener(logRoot,
   {urls: ["https://*.mozilla.org/*"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

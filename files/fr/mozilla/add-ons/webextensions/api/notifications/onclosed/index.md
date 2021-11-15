@@ -13,63 +13,58 @@ tags:
   - onClosed
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onClosed
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsqu'une notification est fermée, soit par le système, soit par l'utilisateur.</p>
+Lancé lorsqu'une notification est fermée, soit par le système, soit par l'utilisateur.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.notifications.onClosed.addListener(listener)
+```js
+browser.notifications.onClosed.addListener(listener)
 browser.notifications.onClosed.removeListener(listener)
 browser.notifications.onClosed.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> st l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> st enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` st l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` st enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>notificationId</code></dt>
-  <dd><code>string</code>. ID de la notification fermée.</dd>
-  <dt><code>byUser</code></dt>
-  <dd><code>boolean</code>. <code>true</code> si la notification a été fermée par l'utilisateur, ou <code>false</code>si elle a été fermée par le système. Cet argument n'est pas supporté dans Firefox.</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `notificationId`
+      - : `string`. ID de la notification fermée.
+    - `byUser`
+      - : `boolean`. `true` si la notification a été fermée par l'utilisateur, ou `false`si elle a été fermée par le système. Cet argument n'est pas supporté dans Firefox.
 
-<p>{{Compat("webextensions.api.notifications.onClosed")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.notifications.onClosed")}}
 
-<p>Dans cet exemple simple, nous ajoutons un écouteur à l'événement  {{WebExtAPIRef("notifications.onClosed")}} pour écouter les notifications système fermées. Lorsque cela se produit, nous enregistrons un message approprié à la console.</p>
+## Exemples
 
-<pre class="brush: js">browser.notifications.onClosed.addListener(function(notificationId) {
+Dans cet exemple simple, nous ajoutons un écouteur à l'événement  {{WebExtAPIRef("notifications.onClosed")}} pour écouter les notifications système fermées. Lorsque cela se produit, nous enregistrons un message approprié à la console.
+
+```js
+browser.notifications.onClosed.addListener(function(notificationId) {
   console.log('Notification ' + notificationId + ' has closed.');
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

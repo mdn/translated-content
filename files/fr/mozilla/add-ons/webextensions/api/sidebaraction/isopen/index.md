@@ -12,67 +12,65 @@ tags:
   - slidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Renvoie <code>true</code> si la barre latérale de l'extension est ouverte dans une fenêtre donnée.</p>
+Renvoie `true` si la barre latérale de l'extension est ouverte dans une fenêtre donnée.
 
-<p>Cette fonction accepte un <code>windowId</code> en paramètre :</p>
+Cette fonction accepte un `windowId` en paramètre :
 
-<ul>
- <li>Si vous fournissez <code>windowId</code>, la fonction vérifie la fenêtre du navigateur.</li>
- <li>Si vous omettez <code>windowId</code>, la fonction vérifie la fenêtre du navigateur la plus haute.</li>
-</ul>
+- Si vous fournissez `windowId`, la fonction vérifie la fenêtre du navigateur.
+- Si vous omettez `windowId`, la fonction vérifie la fenêtre du navigateur la plus haute.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">let gettingIsOpen = browser.sidebarAction.isOpen(
+```js
+let gettingIsOpen = browser.sidebarAction.isOpen(
   details // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. Un objet contenant éventuellement le <code>windowId</code> à vérifier.</p>
- <dl>
-  <dt><code>windowId</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. ID d'une fenêtre de navigateur à vérifier. Si omis par défaut, il s'agit de  {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}, qui fait référence à la fenêtre du navigateur la plus haute.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
+  - : `object`. Un objet contenant éventuellement le `windowId` à vérifier.
 
+    - `windowId` {{optional_inline}}
+      - : `integer`. ID d'une fenêtre de navigateur à vérifier. Si omis par défaut, il s'agit de  {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}, qui fait référence à la fenêtre du navigateur la plus haute.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec <code>true</code> si la barre latérale de l'extension est ouverte dans la fenêtre donnée, ou <code>false</code> dans le cas contraire.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `true` si la barre latérale de l'extension est ouverte dans la fenêtre donnée, ou `false` dans le cas contraire.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.sidebarAction.isOpen",2)}}</p>
+{{Compat("webextensions.api.sidebarAction.isOpen",2)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Vérifiez la fenêtre la plus haute :</p>
+Vérifiez la fenêtre la plus haute :
 
-<pre class="brush: js">browser.sidebarAction.isOpen({}).then(result =&gt; {
+```js
+browser.sidebarAction.isOpen({}).then(result => {
   console.log(result);
-});</pre>
+});
+```
 
-<p>  Vérifiez toutes les fenêtres ouvertes :</p>
+Vérifiez toutes les fenêtres ouvertes :
 
-<pre class="brush: js">async function checkWindow(windowId) {
+```js
+async function checkWindow(windowId) {
   let result = await browser.sidebarAction.isOpen({windowId});
   console.log(`window: ${windowId} status: ${result}`);
 }
 
-browser.windows.getAll().then(all =&gt; {
+browser.windows.getAll().then(all => {
   for (let {id} of all) {
     checkWindow(id);
   }
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

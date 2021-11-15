@@ -12,79 +12,67 @@ tags:
   - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Intéragissez avec les fenêtres du navigateur. Vous pouvez utiliser cette API pour obtenir des informations sur les fenêtres ouvertes et à ouvrir, modifiée et fermée les fenêtres. Vous pouvez également écouter la fenêtre ouverte, fermée, et activée les événements.</p>
+Intéragissez avec les fenêtres du navigateur. Vous pouvez utiliser cette API pour obtenir des informations sur les fenêtres ouvertes et à ouvrir, modifiée et fermée les fenêtres. Vous pouvez également écouter la fenêtre ouverte, fermée, et activée les événements.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("windows.WindowType")}}</dt>
- <dd>Le type de fenêtre du navigateur ici.</dd>
- <dt>{{WebExtAPIRef("windows.WindowState")}}</dt>
- <dd>L'état de cette fenêtre du navigateur.</dd>
- <dt>{{WebExtAPIRef("windows.Window")}}</dt>
- <dd>Contient des informations sur une fenêtre de navigateur.</dd>
- <dt>{{WebExtAPIRef("windows.CreateType")}}</dt>
- <dd>Spécifie le type de fenêtre du navigateur à créer.</dd>
-</dl>
+- {{WebExtAPIRef("windows.WindowType")}}
+  - : Le type de fenêtre du navigateur ici.
+- {{WebExtAPIRef("windows.WindowState")}}
+  - : L'état de cette fenêtre du navigateur.
+- {{WebExtAPIRef("windows.Window")}}
+  - : Contient des informations sur une fenêtre de navigateur.
+- {{WebExtAPIRef("windows.CreateType")}}
+  - : Spécifie le type de fenêtre du navigateur à créer.
 
-<h2 id="Constantes">Constantes</h2>
+## Constantes
 
-<dl>
- <dt>{{WebExtAPIRef("windows.WINDOW_ID_NONE")}}</dt>
- <dd>La valeur <code>windowId</code> qui représente l'absence d'une fenêtre de navigateur.</dd>
- <dt>{{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}</dt>
- <dd>Une valeur qui peut être utilisée à la place d'un <code>windowId</code> dans certaines APIs pour représenter la fenêtre courante.</dd>
-</dl>
+- {{WebExtAPIRef("windows.WINDOW_ID_NONE")}}
+  - : La valeur `windowId` qui représente l'absence d'une fenêtre de navigateur.
+- {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}
+  - : Une valeur qui peut être utilisée à la place d'un `windowId` dans certaines APIs pour représenter la fenêtre courante.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{WebExtAPIRef("windows.get()")}}</dt>
- <dd>Obtient les détails sur une fenêtre, compte tenu de son identifiant.</dd>
- <dt>{{WebExtAPIRef("windows.getCurrent()")}}</dt>
- <dd>Obtient les informations de la fenêtre courante.</dd>
- <dt>{{WebExtAPIRef("windows.getLastFocused()")}}</dt>
- <dd>Obtient la fenêtre qui a été recentrée plus récemment — généralement la fenêtre « en haut ».</dd>
- <dt>{{WebExtAPIRef("windows.getAll()")}}</dt>
- <dd>Obtient les informations de toutes les fenêtres</dd>
- <dt>{{WebExtAPIRef("windows.create()")}}</dt>
- <dd>
- <p>Crée une nouvelle fenêtre.</p>
- </dd>
- <dt>{{WebExtAPIRef("windows.update()")}}</dt>
- <dd>Mises à jour des propriétés d'une fenêtre. Utilisez ceci pour déplacer, redimensionner, et (un) se concentrer sur une fenêtre, etc.</dd>
- <dt>{{WebExtAPIRef("windows.remove()")}}</dt>
- <dd>Ferme une fenêtre et tous ses onglets.</dd>
-</dl>
+- {{WebExtAPIRef("windows.get()")}}
+  - : Obtient les détails sur une fenêtre, compte tenu de son identifiant.
+- {{WebExtAPIRef("windows.getCurrent()")}}
+  - : Obtient les informations de la fenêtre courante.
+- {{WebExtAPIRef("windows.getLastFocused()")}}
+  - : Obtient la fenêtre qui a été recentrée plus récemment — généralement la fenêtre « en haut ».
+- {{WebExtAPIRef("windows.getAll()")}}
+  - : Obtient les informations de toutes les fenêtres
+- {{WebExtAPIRef("windows.create()")}}
+  - : Crée une nouvelle fenêtre.
+- {{WebExtAPIRef("windows.update()")}}
+  - : Mises à jour des propriétés d'une fenêtre. Utilisez ceci pour déplacer, redimensionner, et (un) se concentrer sur une fenêtre, etc.
+- {{WebExtAPIRef("windows.remove()")}}
+  - : Ferme une fenêtre et tous ses onglets.
 
-<h2 id="Evénements">Evénements</h2>
+## Evénements
 
-<dl>
- <dt>{{WebExtAPIRef("windows.onCreated")}}</dt>
- <dd>Lancé quand une fenêtre est créée.</dd>
- <dt>{{WebExtAPIRef("windows.onRemoved")}}</dt>
- <dd>Lancé quand une fenêtre est fermée.</dd>
- <dt>{{WebExtAPIRef("windows.onFocusChanged")}}</dt>
- <dd>Lancé quand la fenêtre courante change.</dd>
-</dl>
+- {{WebExtAPIRef("windows.onCreated")}}
+  - : Lancé quand une fenêtre est créée.
+- {{WebExtAPIRef("windows.onRemoved")}}
+  - : Lancé quand une fenêtre est fermée.
+- {{WebExtAPIRef("windows.onFocusChanged")}}
+  - : Lancé quand la fenêtre courante change.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.windows")}}</p>
+{{Compat("webextensions.api.windows")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+>
+> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,5 +99,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

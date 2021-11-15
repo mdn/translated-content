@@ -13,52 +13,49 @@ tags:
   - getLastFocused
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient la fenêtre qui a été recentrée récemment — généralement la fenêtre 'en haut'.</p>
+Obtient la fenêtre qui a été recentrée récemment — généralement la fenêtre 'en haut'.
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingWindow = browser.windows.getLastFocused(
+```js
+var gettingWindow = browser.windows.getLastFocused(
   getInfo               // optional object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>getInfo</code>{{optional_inline}}</dt>
- <dd><p><code>object</code>.</p>
- <dl>
-  <dt><code>populate</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets de la fenêtre. Les objets d'onglets ne contiennent que les propriétés <code>url</code>, <code>title</code> et <code>favIconUrl</code> si le fichier manifest de l'extension comprend la permission <code>"tabs"</code>.</dd>
-  <dt><code>windowTypes</code>{{optional_inline}}</dt>
-  <dd>Un ensemble d'objets {{WebExtAPIRef('windows.WindowType')}}. Si défini, le  {{WebExtAPIRef('windows.Window')}} retourné sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur <code>['normal', 'panel', 'popup']</code>, avec le type de fenêtre <code>'panel'</code> qui sont limités aux propres fenêtres de l'extension.</dd>
- </dl>
- </dd>
-</dl>
+- `getInfo`{{optional_inline}}
 
-<div class="note">
-  <p><strong>Note :</strong></p>
+  - : `object`.
 
-<p>Si fourni, le composant <code>windowTypes</code> de <code>getInfo</code> est ignoré. L'utilisation de <code>windowTypes</code> a été dépréciée à partir de Firefox 62.</p>
-</div>
+    - `populate`{{optional_inline}}
+      - : `boolean`. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets de la fenêtre. Les objets d'onglets ne contiennent que les propriétés `url`, `title` et `favIconUrl` si le fichier manifest de l'extension comprend la permission `"tabs"`.
+    - `windowTypes`{{optional_inline}}
+      - : Un ensemble d'objets {{WebExtAPIRef('windows.WindowType')}}. Si défini, le  {{WebExtAPIRef('windows.Window')}} retourné sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec le type de fenêtre `'panel'` qui sont limités aux propres fenêtres de l'extension.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+> **Note :**
+>
+> Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de `windowTypes` a été dépréciée à partir de Firefox 62.
 
-<p><code>Une <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la dernière fenêtre ciblée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.</p>
+### Valeur retournée
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+`Une Promise` qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la dernière fenêtre ciblée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-<p>{{Compat("webextensions.api.windows.getLastFocused",2)}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.windows.getLastFocused",2)}}
 
-<p>Obtenez la dernière fenêtre ciblée et enregistrez les onglets qu'elle contient. Notez que vous aurez besoin de la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "tabs" pour accéder aux URL des onglets.</p>
+## Exemples
 
-<pre class="brush: js">function logTabs(windowInfo) {
+Obtenez la dernière fenêtre ciblée et enregistrez les onglets qu'elle contient. Notez que vous aurez besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "tabs" pour accéder aux URL des onglets.
+
+```js
+function logTabs(windowInfo) {
   for (tabInfo of windowInfo.tabs) {
     console.log(tabInfo.url);
   }
@@ -68,23 +65,21 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
   var getting = browser.windows.getLastFocused({populate: true});
   getting.then(logTabs, onError);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/extensions/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+>
+> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,5 +106,4 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

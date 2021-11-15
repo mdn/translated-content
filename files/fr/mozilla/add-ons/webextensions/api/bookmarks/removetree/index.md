@@ -13,39 +13,37 @@ tags:
   - removeTree
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>La méthode <strong><code>bookmarks.removeTree()</code></strong> supprime récursivement un dossier de signets et tout son contenu.</p>
+La méthode **`bookmarks.removeTree()`** supprime récursivement un dossier de signets et tout son contenu.
 
-<div class="warning">
-<p><strong>Attention :</strong> Si votre extension tente de supprimer une arborescence de signets du nœud racine de cette dernière, l'appel déclenche une erreur avec le message suivant: "La racine de signet ne peut pas être modifiée" et le signet ne sera pas supprimé.</p>
-</div>
+> **Attention :** Si votre extension tente de supprimer une arborescence de signets du nœud racine de cette dernière, l'appel déclenche une erreur avec le message suivant: "La racine de signet ne peut pas être modifiée" et le signet ne sera pas supprimé.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var removingTree = browser.bookmarks.removeTree(
+```js
+var removingTree = browser.bookmarks.removeTree(
   id                // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>id</code></dt>
- <dd>Un {{jsxref("string")}} spécifiant l'ID du noeud de dossier à supprimer avec ses descendants.</dd>
-</dl>
+- `id`
+  - : Un {{jsxref("string")}} spécifiant l'ID du noeud de dossier à supprimer avec ses descendants.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans arguments lorsque l'arbre a été retiré.Si le noeud correspondant au paramètre <code>id</code> ne peut pas être trouvé, la promesse est rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque l'arbre a été retiré.Si le noeud correspondant au paramètre `id` ne peut pas être trouvé, la promesse est rejetée avec un message d'erreur.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple localise un dossier de signets nommé "MDN" et le supprime avec tout son contenu.</p>
+Cet exemple localise un dossier de signets nommé "MDN" et le supprime avec tout son contenu.
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("bookmark item removed!");
 }
 
@@ -61,25 +59,22 @@ function removeMDN(searchResults) {
 }
 
 var searchingBookmarks = browser.bookmarks.search({ title: "MDN" });
-searchingBookmarks.then(removeMDN, onRejected);</pre>
+searchingBookmarks.then(removeMDN, onRejected);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+## Compatibilité du navigateur
 
+{{Compat("webextensions.api.bookmarks.removeTree")}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>{{Compat("webextensions.api.bookmarks.removeTree")}}</p>
-
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,5 +101,4 @@ searchingBookmarks.then(removeMDN, onRejected);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

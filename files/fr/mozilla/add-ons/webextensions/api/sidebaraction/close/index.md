@@ -12,43 +12,46 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/close
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Ferme la barre latérale dans la fenêtre active, s'il s'agit de la barre latérale de l'extension.</p>
+Ferme la barre latérale dans la fenêtre active, s'il s'agit de la barre latérale de l'extension.
 
-<p>Vous pouvez uniquement appeler cette fonction à l'intérieur du gestionnaire pour une <a href="/fr/Add-ons/WebExtensions/User_actions">action utilisateur</a>.</p>
+Vous pouvez uniquement appeler cette fonction à l'intérieur du gestionnaire pour une [action utilisateur](/fr/Add-ons/WebExtensions/User_actions).
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.sidebarAction.close()
-</pre>
+```js
+browser.sidebarAction.close()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>None.</p>
+None.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui est résolue sans arguments.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue sans arguments.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.sidebarAction.close", 10)}}</p>
+{{Compat("webextensions.api.sidebarAction.close", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Fermez la barre latérale lorsque l'utilisateur sélectionne un élément de menu contextuel :</p>
+Fermez la barre latérale lorsque l'utilisateur sélectionne un élément de menu contextuel :
 
-<pre class="brush: js">browser.menus.create({
+```js
+browser.menus.create({
   id: "close-sidebar",
   title: "close sidebar",
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener(() =&gt; {
+browser.menus.onClicked.addListener(() => {
   browser.sidebarAction.close();
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

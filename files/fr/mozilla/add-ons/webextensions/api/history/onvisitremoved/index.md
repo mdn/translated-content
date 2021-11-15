@@ -13,60 +13,54 @@ tags:
   - onVisitRemoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsqu'une page est complètement supprimée de l'historique du navigateur.</p>
+Lancé lorsqu'une page est complètement supprimée de l'historique du navigateur.
 
-<ul>
- <li>Si toutes les visites d'une seule page sont supprimées (par exemple, en utilisant {{WebExtAPIRef("history.deleteUrl")}}), cet événement est déclenché une fois.</li>
- <li>Si une série de visites est supprimée (par exemple, en utilisant {{WebExtAPIRef("history.deleteRange")}} ou une fonctionnalité de navigateur telle que "Effacer l'historique récent"), alors il est tiré une fois pour chaque page <em>dont les visites tombent toutes dans la plage autorisée</em>.</li>
- <li>Si l'historique complet du navigateur est effacé (par exemple, en utilisant {{WebExtAPIRef("history.deleteAll")}}), il est déclenché une seule fois.</li>
-</ul>
+- Si toutes les visites d'une seule page sont supprimées (par exemple, en utilisant {{WebExtAPIRef("history.deleteUrl")}}), cet événement est déclenché une fois.
+- Si une série de visites est supprimée (par exemple, en utilisant {{WebExtAPIRef("history.deleteRange")}} ou une fonctionnalité de navigateur telle que "Effacer l'historique récent"), alors il est tiré une fois pour chaque page _dont les visites tombent toutes dans la plage autorisée_.
+- Si l'historique complet du navigateur est effacé (par exemple, en utilisant {{WebExtAPIRef("history.deleteAll")}}), il est déclenché une seule fois.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.history.onVisitRemoved.addListener(listener)
+```js
+browser.history.onVisitRemoved.addListener(listener)
 browser.history.onVisitRemoved.removeListener(listener)
 browser.history.onVisitRemoved.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions:</p>
+Les événements ont trois fonctions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd><p>Fonction qui sera appelée lorsque cet événement se produit. La fonction sera passée l'argument suivant :</p>
- <dl>
-  <dt><code>removed</code></dt>
-  <dd><p><code>object</code>. Détails de l'enlèvement. C'est un objet contenant deux propriétés: un booléen <code>allHistory</code> et un tableau <code>urls</code>.</p>
-  <ul>
-   <li>Si cet événement se déclenche parce qu'il est clair, <code>allHistory</code> sera <code>true</code> et <code>urls</code> sera un tableau vide.</li>
-   <li>Dans le cas contraire,  <code>allHistory</code> sera <code>false</code> et <code>urls</code> contiendront un qui est l'URL de la page supprimée.</li>
-  </ul>
-  </dd>
- </dl>
- </dd>
-</dl>
+- `callback`
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction sera passée l'argument suivant :
 
-<p>{{Compat("webextensions.api.history.onVisitRemoved")}}</p>
+    - `removed`
 
-<h2 id="Exemples">Exemples</h2>
+      - : `object`. Détails de l'enlèvement. C'est un objet contenant deux propriétés: un booléen `allHistory` et un tableau `urls`.
 
-<pre class="brush: js">function onRemoved(removed) {
+        - Si cet événement se déclenche parce qu'il est clair, `allHistory` sera `true` et `urls` sera un tableau vide.
+        - Dans le cas contraire,  `allHistory` sera `false` et `urls` contiendront un qui est l'URL de la page supprimée.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.history.onVisitRemoved")}}
+
+## Exemples
+
+```js
+function onRemoved(removed) {
   if (removed.allHistory) {
     console.log("All history removed");
   } else if (removed.urls.length) {
@@ -74,19 +68,18 @@ browser.history.onVisitRemoved.hasListener(listener)
   }
 }
 
-browser.history.onVisitRemoved.addListener(onRemoved);</pre>
+browser.history.onVisitRemoved.addListener(onRemoved);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -113,5 +106,4 @@ browser.history.onVisitRemoved.addListener(onRemoved);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

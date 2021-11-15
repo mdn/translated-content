@@ -12,88 +12,80 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>L’API de la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> {{WebExtAPIRef("bookmarks")}} permet à une extension d’interagir et de manipuler le système de Bookmarking du navigateur. Vous pouvez l’utiliser pour enregistrer des marque-pages, récupérer des marque-pages existants et éditer, supprimer ou organiser des marque-pages.</p>
+L’API de la [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} permet à une extension d’interagir et de manipuler le système de Bookmarking du navigateur. Vous pouvez l’utiliser pour enregistrer des marque-pages, récupérer des marque-pages existants et éditer, supprimer ou organiser des marque-pages.
 
-<p>Pour utiliser cette API, une extension doit demander la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> « bookmarks » dans son fichier <code><a href="/fr/Add-ons/WebExtensions/manifest.json">manifest.json</a></code>.</p>
+Pour utiliser cette API, une extension doit demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) « bookmarks » dans son fichier [`manifest.json`](/fr/Add-ons/WebExtensions/manifest.json).
 
-<p>Les extensions ne peuvent pas créer, modifier ou supprimer des signets dans le nœud racine de l'arborescence de signets. Cela provoquerait une erreur avec le message: <em>"La racine du signet ne peut pas être modifiée"</em></p>
+Les extensions ne peuvent pas créer, modifier ou supprimer des signets dans le nœud racine de l'arborescence de signets. Cela provoquerait une erreur avec le message: _"La racine du signet ne peut pas être modifiée"_
 
-<h2 id="Les_Types">Les Types</h2>
+## Les Types
 
-<dl>
- <dt>{{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}</dt>
- <dd>Représente un marque-page ou un dossier dans l'arborescence des marque-pages.</dd>
- <dt>{{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}</dt>
- <dd>Un énumérateur {{jsxref("String")}} qui décrit si un nœud de l’arbre est un marque-page, un dossier ou un séparateur.</dd>
- <dt>{{WebExtAPIRef("bookmarks.BookmarkTreeNodeUnmodifiable")}}</dt>
- <dd>Un {{jsxref("String")}} énumère ce qui spécifie pourquoi un marque-page ou un dossier n’est pas possible.</dd>
- <dt>{{WebExtAPIRef("bookmarks.CreateDetails")}}</dt>
- <dd>Contient des informations passées à la fonction {{WebExtAPIRef("bookmarks.create()")}} lors de la création d’un nouveau marque-page.</dd>
-</dl>
+- {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}
+  - : Représente un marque-page ou un dossier dans l'arborescence des marque-pages.
+- {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}
+  - : Un énumérateur {{jsxref("String")}} qui décrit si un nœud de l’arbre est un marque-page, un dossier ou un séparateur.
+- {{WebExtAPIRef("bookmarks.BookmarkTreeNodeUnmodifiable")}}
+  - : Un {{jsxref("String")}} énumère ce qui spécifie pourquoi un marque-page ou un dossier n’est pas possible.
+- {{WebExtAPIRef("bookmarks.CreateDetails")}}
+  - : Contient des informations passées à la fonction {{WebExtAPIRef("bookmarks.create()")}} lors de la création d’un nouveau marque-page.
 
-<h2 id="Les_fonctions">Les fonctions</h2>
+## Les fonctions
 
-<dl>
- <dt>{{WebExtAPIRef("bookmarks.create()")}}</dt>
- <dd>Créer un marque-page ou un dossier.</dd>
- <dt>{{WebExtAPIRef("bookmarks.get()")}}</dt>
- <dd>Récupère un ou plusieurs {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}s, compte tenu d’un identifiant de marque-page ou d’un ensemble d’identifiants de marque-pages.</dd>
- <dt>{{WebExtAPIRef("bookmarks.getChildren()")}}</dt>
- <dd>Récupère les enfants spécifiés {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.</dd>
- <dt>{{WebExtAPIRef("bookmarks.getRecent()")}}</dt>
- <dd>Récupère un nombre demandé de marque-page récemment ajoutés.</dd>
- <dt>{{WebExtAPIRef("bookmarks.getSubTree()")}}</dt>
- <dd>Récupère un nombre demandé de favoris récemment ajoutés.</dd>
- <dt>{{WebExtAPIRef("bookmarks.getTree()")}}</dt>
- <dd>Récupère l’intégralité de l’arborescence des marques pages dans un tableau d’objets  {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.</dd>
- <dt>{{WebExtAPIRef("bookmarks.move()")}}</dt>
- <dd>Déplace le {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} vers un nouvel emplacement dans l’arborescence de marque-pages.</dd>
- <dt>{{WebExtAPIRef("bookmarks.remove()")}}</dt>
- <dd>Supprime un marque page ou un dossier de marque-pages vide, en fonction de l’ID du noeud.</dd>
- <dt>{{WebExtAPIRef("bookmarks.removeTree()")}}</dt>
- <dd>Supprime de manière récursive un dossier de marque-pages ; c’est-à-dire, étant donné l’ID d’un noeud de dossier, supprime ce noeud et tous ses descendants.</dd>
- <dt>{{WebExtAPIRef("bookmarks.search()")}}</dt>
- <dd>Recherche {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} une correspondant à un ensemble de critères spécifié.</dd>
- <dt>{{WebExtAPIRef("bookmarks.update()")}}</dt>
- <dd>Met à jour le titre et/ou l’URL d’un marque-page, ou un nom de dossier de marque-pages, en fonction de l’ID d’un marque-page.</dd>
-</dl>
+- {{WebExtAPIRef("bookmarks.create()")}}
+  - : Créer un marque-page ou un dossier.
+- {{WebExtAPIRef("bookmarks.get()")}}
+  - : Récupère un ou plusieurs {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}s, compte tenu d’un identifiant de marque-page ou d’un ensemble d’identifiants de marque-pages.
+- {{WebExtAPIRef("bookmarks.getChildren()")}}
+  - : Récupère les enfants spécifiés {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.
+- {{WebExtAPIRef("bookmarks.getRecent()")}}
+  - : Récupère un nombre demandé de marque-page récemment ajoutés.
+- {{WebExtAPIRef("bookmarks.getSubTree()")}}
+  - : Récupère un nombre demandé de favoris récemment ajoutés.
+- {{WebExtAPIRef("bookmarks.getTree()")}}
+  - : Récupère l’intégralité de l’arborescence des marques pages dans un tableau d’objets  {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.
+- {{WebExtAPIRef("bookmarks.move()")}}
+  - : Déplace le {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} vers un nouvel emplacement dans l’arborescence de marque-pages.
+- {{WebExtAPIRef("bookmarks.remove()")}}
+  - : Supprime un marque page ou un dossier de marque-pages vide, en fonction de l’ID du noeud.
+- {{WebExtAPIRef("bookmarks.removeTree()")}}
+  - : Supprime de manière récursive un dossier de marque-pages ; c’est-à-dire, étant donné l’ID d’un noeud de dossier, supprime ce noeud et tous ses descendants.
+- {{WebExtAPIRef("bookmarks.search()")}}
+  - : Recherche {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} une correspondant à un ensemble de critères spécifié.
+- {{WebExtAPIRef("bookmarks.update()")}}
+  - : Met à jour le titre et/ou l’URL d’un marque-page, ou un nom de dossier de marque-pages, en fonction de l’ID d’un marque-page.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("bookmarks.onCreated")}}</dt>
- <dd>Déclenché lorsqu’un marque-page ou un dossier est créé.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onRemoved")}}</dt>
- <dd>Déclenché lorsqu’un marque-page ou un dossier est supprimé. Lorsqu’un dossier est supprimé de manière récursive, une seule notification est envoyée pour le dossier et aucune pour son contenu.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onChanged")}}</dt>
- <dd>Déclenché lorsqu’un marque-page ou un dossier change. Actuellement, seuls les changements de titre et d’URL déclenchent ce type d’événement.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onMoved")}}</dt>
- <dd>Déclenché lorsqu’un marque-page ou un dossier est déplacé vers un dossier parent différent ou vers un nouveau décalage dans son dossier.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onChildrenReordered")}}</dt>
- <dd>Déclenché lorsque l’utilisateur a trié les enfants d’un dossier dans l’interface utilisateur du navigateur. Ceci n’est pas déclenché par un appel {{WebExtAPIRef("bookmarks.move", "move()")}}.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onImportBegan")}}</dt>
- <dd>Déclenché lorsqu’une session d’importation de marque-pages est commencée. Les observateurs coûteux doivent ignorer les {{WebExtAPIRef("bookmarks.onCreated")}} mises à jour jusqu’à ce que {{WebExtAPIRef("bookmarks.onImportEnded")}} soit déclenché. Les observateurs doivent toujours gérer d’autres notifications immédiatement.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onImportEnded")}}</dt>
- <dd>Déclenché lorsqu’une session d’importation de marque-pages est terminée.</dd>
-</dl>
+- {{WebExtAPIRef("bookmarks.onCreated")}}
+  - : Déclenché lorsqu’un marque-page ou un dossier est créé.
+- {{WebExtAPIRef("bookmarks.onRemoved")}}
+  - : Déclenché lorsqu’un marque-page ou un dossier est supprimé. Lorsqu’un dossier est supprimé de manière récursive, une seule notification est envoyée pour le dossier et aucune pour son contenu.
+- {{WebExtAPIRef("bookmarks.onChanged")}}
+  - : Déclenché lorsqu’un marque-page ou un dossier change. Actuellement, seuls les changements de titre et d’URL déclenchent ce type d’événement.
+- {{WebExtAPIRef("bookmarks.onMoved")}}
+  - : Déclenché lorsqu’un marque-page ou un dossier est déplacé vers un dossier parent différent ou vers un nouveau décalage dans son dossier.
+- {{WebExtAPIRef("bookmarks.onChildrenReordered")}}
+  - : Déclenché lorsque l’utilisateur a trié les enfants d’un dossier dans l’interface utilisateur du navigateur. Ceci n’est pas déclenché par un appel {{WebExtAPIRef("bookmarks.move", "move()")}}.
+- {{WebExtAPIRef("bookmarks.onImportBegan")}}
+  - : Déclenché lorsqu’une session d’importation de marque-pages est commencée. Les observateurs coûteux doivent ignorer les {{WebExtAPIRef("bookmarks.onCreated")}} mises à jour jusqu’à ce que {{WebExtAPIRef("bookmarks.onImportEnded")}} soit déclenché. Les observateurs doivent toujours gérer d’autres notifications immédiatement.
+- {{WebExtAPIRef("bookmarks.onImportEnded")}}
+  - : Déclenché lorsqu’une session d’importation de marque-pages est terminée.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("webextensions.api.bookmarks")}}</p>
+{{Compat("webextensions.api.bookmarks")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l’API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l’API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -120,5 +112,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

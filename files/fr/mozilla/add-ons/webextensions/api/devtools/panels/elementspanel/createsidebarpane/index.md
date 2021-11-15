@@ -16,45 +16,45 @@ translation_of: >-
 original_slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Ajoute un nouveau volet à la barre latérale dans l'inspecteur HTML / CSS.</p>
+Ajoute un nouveau volet à la barre latérale dans l'inspecteur HTML / CSS.
 
-<p>L'inspecteur HTML / CSS, appelé l'<a href="/fr/docs/Outils/Inspecteur">inspecteur de page</a> dans Firefox et le <a href="https://developers.google.com/web/tools/chrome-devtools/inspect-styles/">panneau éléments</a> dans Chrome, affiche la page DOM dans la partie principale de sa fenêtre et possède une barre latérale qui affiche divers autres aspects de la page HTML / CSS dans une interface à onglets. Par exemple, dans Firefox, la barre latérale peut afficher les règles CSS pour l'élément sélectionné, ou ses polices, ou son modèle de boîte.</p>
+L'inspecteur HTML / CSS, appelé l'[inspecteur de page](/fr/docs/Outils/Inspecteur) dans Firefox et le [panneau éléments](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/) dans Chrome, affiche la page DOM dans la partie principale de sa fenêtre et possède une barre latérale qui affiche divers autres aspects de la page HTML / CSS dans une interface à onglets. Par exemple, dans Firefox, la barre latérale peut afficher les règles CSS pour l'élément sélectionné, ou ses polices, ou son modèle de boîte.
 
-<p>La fonction <code>createSidebarPane()</code> ajoute un nouveau volet à la barre latérale. ar exemple, la capture d'écran ci-dessous montre un nouveau volet intitulé "My pane", qui affiche un objet JSON :</p>
+La fonction `createSidebarPane()` ajoute un nouveau volet à la barre latérale. ar exemple, la capture d'écran ci-dessous montre un nouveau volet intitulé "My pane", qui affiche un objet JSON :
 
-<p><img alt="" src="inspector-sidebar.png"></p>
+![](inspector-sidebar.png)
 
-<p>Cette fonction prend un argument, qui est une chaîne représentant le titre du volet. Il renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui se résout en un objet <code><a href="/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane">ExtensionSidebarPane</a></code> représentant le nouveau volet. Vous pouvez utiliser cet objet pour définir le contenu et le comportement du volet.</p>
+Cette fonction prend un argument, qui est une chaîne représentant le titre du volet. Il renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se résout en un objet [`ExtensionSidebarPane`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane) représentant le nouveau volet. Vous pouvez utiliser cet objet pour définir le contenu et le comportement du volet.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var creating = browser.devtools.panels.elements.createSidebarPane(
+```js
+var creating = browser.devtools.panels.elements.createSidebarPane(
   title       // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>title</code></dt>
- <dd><code>string</code>. Cela apparaîtra dans la rangée d'onglets en haut de la barre latérale, et c'est la principale façon pour l'utilisateur d'identifier votre panneau.</dd>
-</dl>
+- `title`
+  - : `string`. Cela apparaîtra dans la rangée d'onglets en haut de la barre latérale, et c'est la principale façon pour l'utilisateur d'identifier votre panneau.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet <code><a href="/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane">ExtensionSidebarPane</a></code> représentant le nouveau volet.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet [`ExtensionSidebarPane`](/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane) représentant le nouveau volet.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.devtools.panels.ElementsPanel.createSidebarPane", 10)}}</p>
+{{Compat("webextensions.api.devtools.panels.ElementsPanel.createSidebarPane", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Créez un nouveau volet et remplissez-le avec un objet JSON. Vous pouvez exécuter ce code dans un script chargé par la <a href="/fr/Add-ons/WebExtensions/manifest.json/devtools_page">page devtools</a>.</p>
+Créez un nouveau volet et remplissez-le avec un objet JSON. Vous pouvez exécuter ce code dans un script chargé par la [page devtools](/fr/Add-ons/WebExtensions/manifest.json/devtools_page).
 
-<pre class="brush: js">function onCreated(sidebarPane) {
+```js
+function onCreated(sidebarPane) {
   sidebarPane.setObject({
     someBool: true,
     someString: "hello there",
@@ -66,17 +66,15 @@ original_slug: >-
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a>.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,5 +101,4 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

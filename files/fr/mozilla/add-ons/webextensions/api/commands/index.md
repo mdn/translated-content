@@ -11,56 +11,40 @@ tags:
   - commands
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Écoutez l'utilisateur exécutant les commandes que vous avez enregistrées à l'aide des <a href="/fr/Add-ons/WebExtensions/manifest.json/commands">clés <code>commandes</code> du fichier manifest.json</a>.</p>
+Écoutez l'utilisateur exécutant les commandes que vous avez enregistrées à l'aide des [clés `commandes` du fichier manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("commands.Command")}}</dt>
- <dd>Objet représentant une commande. Il contient les informations spécifiées pour la commande dans les <a href="/fr/Add-ons/WebExtensions/manifest.json/commands">clés <code>commands</code> du fichier manifest.json</a>.</dd>
-</dl>
+- {{WebExtAPIRef("commands.Command")}}
+  - : Objet représentant une commande. Il contient les informations spécifiées pour la commande dans les [clés `commands` du fichier manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt>{{WebExtAPIRef("commands.getAll")}}</dt>
- <dd>
- <p>Obtient toutes les commandes enregistrées pour cette extension.</p>
- </dd>
- <dt>{{WebExtAPIRef("commands.reset")}}</dt>
- <dd>
- <p>Réinitialiser la description de la commande donnée et le raccourci vers les valeurs données dans la clé “manifest”.</p>
- </dd>
- <dt>{{WebExtAPIRef("commands.update")}}</dt>
- <dd>
- <p>Modifiez la description ou le raccourci de la commande donnée.</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("commands.getAll")}}
+  - : Obtient toutes les commandes enregistrées pour cette extension.
+- {{WebExtAPIRef("commands.reset")}}
+  - : Réinitialiser la description de la commande donnée et le raccourci vers les valeurs données dans la clé “manifest”.
+- {{WebExtAPIRef("commands.update")}}
+  - : Modifiez la description ou le raccourci de la commande donnée.
 
-<h2 id="Événements">Événements</h2>
+## Événements
 
-<dl>
- <dt>{{WebExtAPIRef("commands.onCommand")}}</dt>
- <dd>
- <div>Activé lorsqu'une commande est exécutée à l'aide du raccourci clavier associé.</div>
- </dd>
-</dl>
+- {{WebExtAPIRef("commands.onCommand")}}
+  - : Activé lorsqu'une commande est exécutée à l'aide du raccourci clavier associé.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("webextensions.api.commands")}} {{WebExtExamples("h2")}}</p>
+{{Compat("webextensions.api.commands")}} {{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/extensions/commands).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/commands"><code>chrome.commands</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -87,5 +71,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

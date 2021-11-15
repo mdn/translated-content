@@ -11,99 +11,71 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Utilisez l'API de sessions pour lister et restaurer, les onglets et les fenêtres qui ont été fermés pendant que le navigateur fonctionne.</p>
+Utilisez l'API de sessions pour lister et restaurer, les onglets et les fenêtres qui ont été fermés pendant que le navigateur fonctionne.
 
-<p>La fonction {{WebExtAPIRef("sessions.getRecentlyClosed()")}} renvoie un tableau de {{WebExtAPIRef("tabs.Tab")}} et les objets {{WebExtAPIRef("windows.Window")}}, représente les onglets et les fenêtres qui ont été fermées depuis le fonctionnement du navigateur, jusqu'au maximum défini dans {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}.</p>
+La fonction {{WebExtAPIRef("sessions.getRecentlyClosed()")}} renvoie un tableau de {{WebExtAPIRef("tabs.Tab")}} et les objets {{WebExtAPIRef("windows.Window")}}, représente les onglets et les fenêtres qui ont été fermées depuis le fonctionnement du navigateur, jusqu'au maximum défini dans {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}.
 
-<p>Vous pouvez ensuite restaurer une fenêtre ou un onglet en utilisant la fonction  {{WebExtAPIRef("sessions.restore()")}}. il restaure également l'historique de navigation de l'onglet, de sorte que les boutons arrière / avant fonctionnent.</p>
+Vous pouvez ensuite restaurer une fenêtre ou un onglet en utilisant la fonction  {{WebExtAPIRef("sessions.restore()")}}. il restaure également l'historique de navigation de l'onglet, de sorte que les boutons arrière / avant fonctionnent.
 
-<p>Cette API fournit également un groupe de fonctions permettant à une extension de stocker un état supplémentaire associé à un onglet ou une fenêtre. Ensuite, si l'onglet ou la fenêtre est fermé et restauré ultérieurement, l'extension peut récupérer l'état. Par exemple, une extension de groupe d'onglets peut l'utiliser pour se souvenir du groupe dans lequel se trouve un onglet, afin de le restaurer dans le bon groupe si l'utilisateur restaure l'onglet.</p>
+Cette API fournit également un groupe de fonctions permettant à une extension de stocker un état supplémentaire associé à un onglet ou une fenêtre. Ensuite, si l'onglet ou la fenêtre est fermé et restauré ultérieurement, l'extension peut récupérer l'état. Par exemple, une extension de groupe d'onglets peut l'utiliser pour se souvenir du groupe dans lequel se trouve un onglet, afin de le restaurer dans le bon groupe si l'utilisateur restaure l'onglet.
 
-<p>Pour utiliser l'API des sessions, vous devez avoir la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">permission API</a> de "sessions".</p>
+Pour utiliser l'API des sessions, vous devez avoir la [permission API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) de "sessions".
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("sessions.Filter")}}</dt>
- <dd>Permet de restreindre le nombre de {{WebExtAPIRef("sessions.Session", "Session")}} objets retournés par un appel à {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.</dd>
- <dt>{{WebExtAPIRef("sessions.Session")}}</dt>
- <dd>
- <p>Représente un onglet ou une fenêtre que l'utilisateur a fermé dans la session de navigation actuelle.</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("sessions.Filter")}}
+  - : Permet de restreindre le nombre de {{WebExtAPIRef("sessions.Session", "Session")}} objets retournés par un appel à {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.
+- {{WebExtAPIRef("sessions.Session")}}
+  - : Représente un onglet ou une fenêtre que l'utilisateur a fermé dans la session de navigation actuelle.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}</dt>
- <dd>Le nombre maximum de sessions qui seront retournées par un appel à <a href="/fr/Add-ons/WebExtensions/API/sessions/getRecentlyClosed"><code>sessions.getRecentlyClosed()</code></a>.</dd>
-</dl>
+- {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}
+  - : Le nombre maximum de sessions qui seront retournées par un appel à [`sessions.getRecentlyClosed()`](/fr/Add-ons/WebExtensions/API/sessions/getRecentlyClosed).
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt>{{WebExtAPIRef("sessions.forgetClosedTab()")}}</dt>
- <dd>Supprime un onglet fermé de la liste des onglets récemment fermés du navigateur.</dd>
- <dt>{{WebExtAPIRef("sessions.forgetClosedWindow()")}}</dt>
- <dd>Supprime une fenêtre  fermée  de la liste des fenêtres  récemment fermées du navigateur.</dd>
- <dt>{{WebExtAPIRef("sessions.getRecentlyClosed()")}}</dt>
- <dd>Renvoie un tableau d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, représentant des fenêtres et des onglets qui ont été fermés dans la session de navigation actuelle (c'est-à-dire l'heure écoulée depuis le démarrage du navigateur).</dd>
- <dt>{{WebExtAPIRef("sessions.restore()")}}</dt>
- <dd>
- <p>Restaure un onglet ou une fenêtre fermée.</p>
- </dd>
- <dt>{{WebExtAPIRef("sessions.setTabValue()")}}</dt>
- <dd>
- <p>Stocke une paire clé/valeur associée à un onglet donné.</p>
- </dd>
- <dt>{{WebExtAPIRef("sessions.getTabValue()")}}</dt>
- <dd>
- <p>Récupérer une valeur précédemment enregistrée pour un onglet donné, compte tenu de sa clé.</p>
- </dd>
- <dt>{{WebExtAPIRef("sessions.removeTabValue()")}}</dt>
- <dd>
- <p>Supprimer une paire clé/valeur d'un onglet donné.</p>
- </dd>
- <dt>{{WebExtAPIRef("sessions.setWindowValue()")}}</dt>
- <dd>
- <p>Stocke une paire clé/valeur associée à une fenêtre donnée.</p>
- </dd>
- <dt>{{WebExtAPIRef("sessions.getWindowValue()")}}</dt>
- <dd>
- <p>Récupérer une valeur précédemment enregistrée pour une fenêtre donnée, compte tenu de sa clé.</p>
- </dd>
- <dt>{{WebExtAPIRef("sessions.removeWindowValue()")}}</dt>
- <dd>
- <p>Supprime une paire clé/valeur d'une fenêtre données.</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("sessions.forgetClosedTab()")}}
+  - : Supprime un onglet fermé de la liste des onglets récemment fermés du navigateur.
+- {{WebExtAPIRef("sessions.forgetClosedWindow()")}}
+  - : Supprime une fenêtre  fermée  de la liste des fenêtres  récemment fermées du navigateur.
+- {{WebExtAPIRef("sessions.getRecentlyClosed()")}}
+  - : Renvoie un tableau d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, représentant des fenêtres et des onglets qui ont été fermés dans la session de navigation actuelle (c'est-à-dire l'heure écoulée depuis le démarrage du navigateur).
+- {{WebExtAPIRef("sessions.restore()")}}
+  - : Restaure un onglet ou une fenêtre fermée.
+- {{WebExtAPIRef("sessions.setTabValue()")}}
+  - : Stocke une paire clé/valeur associée à un onglet donné.
+- {{WebExtAPIRef("sessions.getTabValue()")}}
+  - : Récupérer une valeur précédemment enregistrée pour un onglet donné, compte tenu de sa clé.
+- {{WebExtAPIRef("sessions.removeTabValue()")}}
+  - : Supprimer une paire clé/valeur d'un onglet donné.
+- {{WebExtAPIRef("sessions.setWindowValue()")}}
+  - : Stocke une paire clé/valeur associée à une fenêtre donnée.
+- {{WebExtAPIRef("sessions.getWindowValue()")}}
+  - : Récupérer une valeur précédemment enregistrée pour une fenêtre donnée, compte tenu de sa clé.
+- {{WebExtAPIRef("sessions.removeWindowValue()")}}
+  - : Supprime une paire clé/valeur d'une fenêtre données.
 
-<h2 id="Evénements">Evénements</h2>
+## Evénements
 
-<dl>
- <dt>{{WebExtAPIRef("sessions.onChanged")}}</dt>
- <dd>
- <p>Mise en place lorsqu'un onglet ou une fenêtre est fermée.</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("sessions.onChanged")}}
+  - : Mise en place lorsqu'un onglet ou une fenêtre est fermée.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.sessions")}}</p>
+{{Compat("webextensions.api.sessions")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/extensions/sessions).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/sessions"><code>chrome.sessions</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -130,5 +102,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sessions
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,49 +13,46 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p><strong><code>bookmarks.update()</code></strong> met à jour le titre et / ou l'URL d'un signet ou le nom d'un dossier de signets.</p>
+**`bookmarks.update()`** met à jour le titre et / ou l'URL d'un signet ou le nom d'un dossier de signets.
 
-<div class="warning">
-<p><strong>Attention :</strong> Si votre extension tente de mettre à jour un signet dans le nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "La racine du signet ne peut pas être modifiée" et le signet ne sera pas mis à jour.</p>
-</div>
+> **Attention :** Si votre extension tente de mettre à jour un signet dans le nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "La racine du signet ne peut pas être modifiée" et le signet ne sera pas mis à jour.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var updating = browser.bookmarks.update(
+```js
+var updating = browser.bookmarks.update(
   id,                    // string
   changes                // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>id</code></dt>
- <dd>Un {{jsxref("string")}} spécifiant l'ID du dossier de signet ou de dossier de signets à mettre à jour.</dd>
- <dt><code>changes</code></dt>
- <dd><p>Un {{jsxref("object")}} spécifiant les changements à appliquer, avec une combinaison des champs suivants. Tous les éléments non spécifiés ne sont pas modifiés dans le signet ou le dossier référencé :</p>
- <dl>
-  <dt><code>title</code> {{optional_inline}}</dt>
-  <dd>Un {{jsxref("string")}} contenant le nouveau titre du signet, ou le nouveau nom du dossier si l'<code>id</code> fait référence à un dossier.</dd>
-  <dt><code>url</code> {{optional_inline}}</dt>
-  <dd>Un {{jsxref("string")}} fournissant une nouvelle URL pour le signet.</dd>
- </dl>
- </dd>
-</dl>
+- `id`
+  - : Un {{jsxref("string")}} spécifiant l'ID du dossier de signet ou de dossier de signets à mettre à jour.
+- `changes`
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+  - : Un {{jsxref("object")}} spécifiant les changements à appliquer, avec une combinaison des champs suivants. Tous les éléments non spécifiés ne sont pas modifiés dans le signet ou le dossier référencé :
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera satisfaite avec un seul objet <a href="/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode"><code>bookmarks.BookmarkTreeNode</code></a> représentant le signet mis à jour. Si l'élément de signet correspondant au paramètre <code>id</code> ne peut pas être trouvé, la promesse est rejetée.</p>
+    - `title` {{optional_inline}}
+      - : Un {{jsxref("string")}} contenant le nouveau titre du signet, ou le nouveau nom du dossier si l'`id` fait référence à un dossier.
+    - `url` {{optional_inline}}
+      - : Un {{jsxref("string")}} fournissant une nouvelle URL pour le signet.
 
-<h2 id="Exemples">Exemples</h2>
+### Valeur retournée
 
-<p>Cet exemple renomme tous les dossiers nommés "MDN" en "Mozilla Developer Network (MDN)".</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera satisfaite avec un seul objet [`bookmarks.BookmarkTreeNode`](/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) représentant le signet mis à jour. Si l'élément de signet correspondant au paramètre `id` ne peut pas être trouvé, la promesse est rejetée.
 
-<pre class="brush: js">function onFulfilled(bookmarkItem) {
+## Exemples
+
+Cet exemple renomme tous les dossiers nommés "MDN" en "Mozilla Developer Network (MDN)".
+
+```js
+function onFulfilled(bookmarkItem) {
   console.log(bookmarkItem.title);
 }
 
@@ -76,23 +73,22 @@ function updateFolders(items) {
 }
 
 var searching = browser.bookmarks.search({ title: "MDN" });
-searching.then(updateFolders, onRejected);</pre>
+searching.then(updateFolders, onRejected);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.bookmarks.update")}}</p>
+{{Compat("webextensions.api.bookmarks.update")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -119,5 +115,4 @@ searching.then(updateFolders, onRejected);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

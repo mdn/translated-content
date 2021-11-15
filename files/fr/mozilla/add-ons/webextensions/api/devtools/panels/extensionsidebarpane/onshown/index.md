@@ -13,65 +13,60 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onShown
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onShown
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsque le volet latéral devient visible suite à un changement d'utilisateur.</p>
+Lancé lorsque le volet latéral devient visible suite à un changement d'utilisateur.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.devtools.panels.onShown.addListener(listener)
+```js
+browser.devtools.panels.onShown.addListener(listener)
 browser.devtools.panels.onShown.removeListener(listener)
 browser.devtools.panels.onShown.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument de <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument de `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction sera passée sans arguments.</p>
- </dd>
-</dl>
+- `callback`
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction sera passée sans arguments.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.onShown", 10)}}</p>
+{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.onShown", 10)}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Créez un volet de barre latérale et journal afficher et masquer les événements.</p>
+Créez un volet de barre latérale et journal afficher et masquer les événements.
 
-<pre class="brush: js">function onCreated(sidebarPane) {
+```js
+function onCreated(sidebarPane) {
 
-  sidebarPane.onShown.addListener(() =&gt; {
+  sidebarPane.onShown.addListener(() => {
     console.log("Shown");
   });
 
-  sidebarPane.onHidden.addListener(() =&gt; {
+  sidebarPane.onHidden.addListener(() => {
     console.log("Hidden");
   });
 
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a>.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).

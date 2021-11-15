@@ -13,57 +13,55 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onStartup
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé quand un profil ayant cette extension installée démarre une session. Cet événement n'est pas déclenché lorsqu'une navigation privée / profil privé est démarré, même si cette extension fonctionne en mode de navigation privée 'split'.</p>
+Lancé quand un profil ayant cette extension installée démarre une session. Cet événement n'est pas déclenché lorsqu'une navigation privée / profil privé est démarré, même si cette extension fonctionne en mode de navigation privée 'split'.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.runtime.onStartup.addListener(listener)
+```js
+browser.runtime.onStartup.addListener(listener)
 browser.runtime.onStartup.removeListener(listener)
 browser.runtime.onStartup.hasListener(listener)
-</pre>
+```
 
-<h3 id="event_functions">Fonctions des événements</h3>
+### Fonctions des événements
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
-  <dt><code>addListener(callback)</code></dt>
-  <dd>Ajoute un écouteur à écouteur.</dd>
-  <dt><code>removeListener(listener)</code></dt>
-  <dd>Arrête d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
-  <dt><code>hasListener(listener)</code></dt>
-  <dd>Vérifie si un <code>écouteur</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à écouteur.
+- `removeListener(listener)`
+  - : Arrête d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifie si un `écouteur` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h3 id="parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>callback</code></dt>
-  <dd>Une fonction qui sera appelée lorsque cet événement se produit.</dd>
-</dl>
+- `callback`
+  - : Une fonction qui sera appelée lorsque cet événement se produit.
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<p>Ouvre <a href="http://chilloutandwatchsomecatgifs.com/">http://chilloutandwatchsomecatgifs.com/</a> quand le navigateur démarre :</p>
+Ouvre <http://chilloutandwatchsomecatgifs.com/> quand le navigateur démarre :
 
-<pre class="brush: js">function handleStartup() {
+```js
+function handleStartup() {
   browser.tabs.create({
     url: "http://chilloutandwatchsomecatgifs.com/"
   });
 }
 
-browser.runtime.onStartup.addListener(handleStartup);</pre>
+browser.runtime.onStartup.addListener(handleStartup);
+```
 
-<div class="note">
-  <p><strong>Note :</strong></p>
-  <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-  <p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,9 +88,8 @@ browser.runtime.onStartup.addListener(handleStartup);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>
 
-<h2 id="browser_compatibility">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.runtime.onStartup")}}</p>
+{{Compat("webextensions.api.runtime.onStartup")}}

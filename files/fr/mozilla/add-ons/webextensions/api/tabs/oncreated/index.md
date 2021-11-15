@@ -13,71 +13,65 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsqu'un onglet est créé.</p>
+Lancé lorsqu'un onglet est créé.
 
-<p>Notez que l'URL de l'onglet peut ne pas avoir sa valeur finale au moment où cet événement a été déclenché. En particulier, Firefox ouvre un nouvel onglet avec l'URL  "about:blank" avant de charger la nouvelle page. Vous pouvez écouter les événements  {{WebExtAPIRef("tabs.onUpdated")}} pour être averti lorsqu'une URL est définie.</p>
+Notez que l'URL de l'onglet peut ne pas avoir sa valeur finale au moment où cet événement a été déclenché. En particulier, Firefox ouvre un nouvel onglet avec l'URL  "about:blank" avant de charger la nouvelle page. Vous pouvez écouter les événements  {{WebExtAPIRef("tabs.onUpdated")}} pour être averti lorsqu'une URL est définie.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.tabs.onCreated.addListener(callback)
+```js
+browser.tabs.onCreated.addListener(callback)
 browser.tabs.onCreated.removeListener(listener)
 browser.tabs.onCreated.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument de <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si le <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument de `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si le `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>tab</code></dt>
-  <dd>{{WebExtAPIRef('tabs.Tab')}}. Détails de l'onglet qui a été créé.</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
-<h2 id="Examples">Examples</h2>
+    - `tab`
+      - : {{WebExtAPIRef('tabs.Tab')}}. Détails de l'onglet qui a été créé.
 
-<p>Consignez les ID des nouveaux onglets créés :</p>
+## Examples
 
-<pre class="brush: js">function handleCreated(tab) {
+Consignez les ID des nouveaux onglets créés :
+
+```js
+function handleCreated(tab) {
   console.log(tab.id);
 }
 
-browser.tabs.onCreated.addListener(handleCreated);</pre>
+browser.tabs.onCreated.addListener(handleCreated);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.onCreated")}}</p>
+{{Compat("webextensions.api.tabs.onCreated")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -104,5 +98,4 @@ browser.tabs.onCreated.addListener(handleCreated);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -14,94 +14,102 @@ tags:
   - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Récupère un ou plusieurs éléments de la zone de stockage.</p>
+Récupère un ou plusieurs éléments de la zone de stockage.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">let gettingItem = browser.storage.&lt;storageType&gt;.get(
-  keys    // null, string, object or array of strings
-)
-</pre>
+    let gettingItem = browser.storage.<storageType>.get(
+      keys    // null, string, object or array of strings
+    )
 
-<p><code>&lt;storageType&gt;</code> sera l'un des types de stockage accessibles en écriture — {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, ou {{WebExtAPIRef("storage.managed", "managed")}}.</p>
+`<storageType>` sera l'un des types de stockage accessibles en écriture — {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, ou {{WebExtAPIRef("storage.managed", "managed")}}.
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>keys</code></dt>
- <dd>Une clé (chaîne) ou des clés (un tableau de chaînes ou un objet spécifiant des valeurs par défaut) pour identifier le ou les articles à extraire du stockage. Si vous passez une chaîne vide, un objet ou un tableau ici, un objet vide sera récupéré. Si vous passez <code>null</code>,  ou une valeur indéfinie, le contenu entier du stockage sera récupéré.</dd>
-</dl>
+- `keys`
+  - : Une clé (chaîne) ou des clés (un tableau de chaînes ou un objet spécifiant des valeurs par défaut) pour identifier le ou les articles à extraire du stockage. Si vous passez une chaîne vide, un objet ou un tableau ici, un objet vide sera récupéré. Si vous passez `null`,  ou une valeur indéfinie, le contenu entier du stockage sera récupéré.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet de <code>resultat</code> contenant tous les objets dans les <code>clefs</code> trouvées dans la zone de stockage. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur. Si le stockage géré n'est pas défini, les données  <code>non définies</code> seront retournées.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet de `resultat` contenant tous les objets dans les `clefs` trouvées dans la zone de stockage. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur. Si le stockage géré n'est pas défini, les données  `non définies` seront retournées.
 
-<div class="warning">
-<p><strong>Attention :</strong> Lorsqu'elle est utilisée dans un script de contenu dans les versions de Firefox antérieures à 52, la promesse retournée par <code>browser.storage.local.get()</code> est remplie avec un tableau contenant un objet. L'objet dans le tableau contient les <code>clefs</code> trouvées dans la zone de stockage, comme décrit ci-dessus. La promesse est correctement remplie avec un objet lorsqu'il est utilisé dans le contexte d'arrière-plan<br>
- (scripts d'arrière-plan, popups, pages d'options, etc.). Lorsque cette API est utilisée en tant que <code>chrome.storage.local.get()</code>, elle transmet correctement un objet à la fonction de rappel.</p>
-</div>
+> **Attention :** Lorsqu'elle est utilisée dans un script de contenu dans les versions de Firefox antérieures à 52, la promesse retournée par `browser.storage.local.get()` est remplie avec un tableau contenant un objet. L'objet dans le tableau contient les `clefs` trouvées dans la zone de stockage, comme décrit ci-dessus. La promesse est correctement remplie avec un objet lorsqu'il est utilisé dans le contexte d'arrière-plan
+> (scripts d'arrière-plan, popups, pages d'options, etc.). Lorsque cette API est utilisée en tant que `chrome.storage.local.get()`, elle transmet correctement un objet à la fonction de rappel.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.storage.StorageArea.get")}}</p>
+{{Compat("webextensions.api.storage.StorageArea.get")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Supposons que le stockage contienne deux éléments :</p>
+Supposons que le stockage contienne deux éléments :
 
-<pre class="brush: js">// storage contains two items,
+```js
+// storage contains two items,
 // "kitten" and "monster"
 browser.storage.local.set({
   kitten:  {name:"Mog", eats:"mice"},
   monster: {name:"Kraken", eats:"people"}
-});</pre>
+});
+```
 
-<p>Définissez les gestionnaires de réussite et d'échec pour la promesse:</p>
+Définissez les gestionnaires de réussite et d'échec pour la promesse:
 
-<pre class="brush: js">function onGot(item) {
+```js
+function onGot(item) {
   console.log(item);
 }
 
 function onError(error) {
   console.log(`Error: ${error}`);
-}</pre>
+}
+```
 
-<p>Sans arguments <code>clefs</code>, tout récupérez :</p>
+Sans arguments `clefs`, tout récupérez :
 
-<pre class="brush: js">let gettingItem = browser.storage.local.get();
+```js
+let gettingItem = browser.storage.local.get();
 gettingItem.then(onGot, onError);
 
-// -&gt; Object { kitten: Object, monster: Object }</pre>
+// -> Object { kitten: Object, monster: Object }
+```
 
-<p>Avec un argument de clefs vide, ne retourne rien:</p>
+Avec un argument de clefs vide, ne retourne rien:
 
-<pre class="brush: js">// with an empty array, retrieve nothing
+```js
+// with an empty array, retrieve nothing
 let gettingItem = browser.storage.local.get([]);
 gettingItem.then(onGot, onError);
 
-// -&gt; Object { }</pre>
+// -> Object { }
+```
 
-<p>Avec le nom d'un objet, récupérez la correspondance :</p>
+Avec le nom d'un objet, récupérez la correspondance :
 
-<pre class="brush: js">let gettingItem = browser.storage.local.get("kitten");
+```js
+let gettingItem = browser.storage.local.get("kitten");
 gettingItem.then(onGot, onError);
 
-// -&gt; Object { kitten: Object }</pre>
+// -> Object { kitten: Object }
+```
 
-<p>Avec un tableau de noms d'objets, récupérez toutes les correspondances :</p>
+Avec un tableau de noms d'objets, récupérez toutes les correspondances :
 
-<pre class="brush: js">let gettingItem = browser.storage.local.get(["kitten", "monster", "grapefruit"]);
+```js
+let gettingItem = browser.storage.local.get(["kitten", "monster", "grapefruit"]);
 gettingItem.then(onGot, onError);
 
-// -&gt; Object { kitten: Object, monster: Object } </pre>
+// -> Object { kitten: Object, monster: Object }
+```
 
-<p>Avec un objet avec des noms d'objets en tant que clefs et la valeur par défaut en tant que valeur :</p>
+Avec un objet avec des noms d'objets en tant que clefs et la valeur par défaut en tant que valeur :
 
-<pre class="brush: js">let gettingItem = browser.storage.local.get({
+```js
+let gettingItem = browser.storage.local.get({
   kitten: "no kitten",
   monster: "no monster",
   grapefruit: {
@@ -110,26 +118,29 @@ gettingItem.then(onGot, onError);
   }
 });
 
-// -&gt; Object { kitten: Object, monster: Object, grapefruit: Object }
-</pre>
+// -> Object { kitten: Object, monster: Object, grapefruit: Object }
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h3 id="Chrome_exemples">Chrome exemples</h3>
+### Chrome exemples
 
-<pre class="brush: js">chrome.storage.local.get("kitten", function(items){
-  console.log(items.kitten);  // -&gt; {name:"Mog", eats:"mice"}
-});</pre>
+```js
+chrome.storage.local.get("kitten", function(items){
+  console.log(items.kitten);  // -> {name:"Mog", eats:"mice"}
+});
+```
 
-<p class="brush: js">Ou avec une fonction de flèche</p>
+Ou avec une fonction de flèche
 
-<pre class="brush: js">chrome.storage.local.get("kitten", items=&gt;{
-  console.log(items.kitten); // -&gt; {name:"Mog", eats:"mice"}
-});</pre>
+```js
+chrome.storage.local.get("kitten", items=>{
+  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
+});
+```
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

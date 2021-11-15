@@ -12,60 +12,55 @@ tags:
   - onCreated
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsqu'une nouvelle identité contextuelle est créée. Les identités contextuelles peuvent être créées par des extensions en utilisant l'API <code>contextualIdentities</code>, ou directement par l'utilisateur, en utilisant l'interface utilisateur du navigateur.</p>
+Lancé lorsqu'une nouvelle identité contextuelle est créée. Les identités contextuelles peuvent être créées par des extensions en utilisant l'API `contextualIdentities`, ou directement par l'utilisateur, en utilisant l'interface utilisateur du navigateur.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.contextualIdentities.onCreated.addListener(listener)
+```js
+browser.contextualIdentities.onCreated.addListener(listener)
 browser.contextualIdentities.onCreated.removeListener(listener)
 browser.contextualIdentities.onCreated.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Ajoute un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, sinon <code>false</code>.</dd>
-</dl>
+- `addListener(listener)`
+  - : Ajoute un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>changeInfo</code></dt>
-  <dd><code>object</code>. Un objet contenant une seule propriété, <code>contextualIdentity</code>, qui est un objet {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} représentant l'identité créée.</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `changeInfo`
+      - : `object`. Un objet contenant une seule propriété, `contextualIdentity`, qui est un objet {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} représentant l'identité créée.
 
-<p>{{Compat("webextensions.api.contextualIdentities.onCreated")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Examples">Examples</h2>
+{{Compat("webextensions.api.contextualIdentities.onCreated")}}
 
-<pre class="brush: js">function handleCreated(changeInfo) {
+## Examples
+
+```js
+function handleCreated(changeInfo) {
   console.log(`Created: ${changeInfo.contextualIdentity.name}`);
 }
 
-browser.contextualIdentities.onCreated.addListener(handleCreated);</pre>
+browser.contextualIdentities.onCreated.addListener(handleCreated);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -92,5 +87,4 @@ browser.contextualIdentities.onCreated.addListener(handleCreated);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

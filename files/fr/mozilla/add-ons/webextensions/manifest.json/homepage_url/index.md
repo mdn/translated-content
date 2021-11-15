@@ -7,38 +7,41 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Type</th>
-   <td>chaîne</td>
-  </tr>
-  <tr>
-   <th scope="row">Obligatoire</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Exemple</th>
-   <td>
-    <pre class="brush: json">
-"homepage_url": "https://example.org/my-addon"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Type</th>
+      <td>chaîne</td>
+    </tr>
+    <tr>
+      <th scope="row">Obligatoire</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Exemple</th>
+      <td>
+        <pre class="brush: json">
+"homepage_url": "https://example.org/my-addon"</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>URL pour la page d'accueil de l'extension.</p>
+URL pour la page d'accueil de l'extension.
 
-<p>Si la clé <a href="/fr/Add-ons/WebExtensions/manifest.json/developer">dévelopeur</a> est fournie et qu'elle contient la propriété "url", cela remplacera la clé "homepage_url".</p>
+Si la clé [dévelopeur](/fr/Add-ons/WebExtensions/manifest.json/developer) est fournie et qu'elle contient la propriété "url", cela remplacera la clé "homepage_url".
 
-<p>c'est une <a href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">proriété localisable</a>.</p>
+c'est une [proriété localisable](/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: json">"homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"</pre>
+```json
+"homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"
+```
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.manifest.homepage_url")}}</p>
+{{Compat("webextensions.manifest.homepage_url")}}

@@ -13,45 +13,46 @@ tags:
   - i18n
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Obtient la langue de l'interface utilisateur du navigateur. Ceci est différent de {{WebExtAPIRef('i18n.getAcceptLanguages')}} qui renvoie les langues utilisateur préférées.</p>
+Obtient la langue de l'interface utilisateur du navigateur. Ceci est différent de {{WebExtAPIRef('i18n.getAcceptLanguages')}} qui renvoie les langues utilisateur préférées.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.i18n.getUILanguage()
-</pre>
+```js
+browser.i18n.getUILanguage()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Aucun</p>
+Aucun
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p><code>string</code>. Le code de langue de l'interface utilisateur du navigateur en tant que  {{WebExtAPIRef("i18n.LanguageCode")}}.</p>
+`string`. Le code de langue de l'interface utilisateur du navigateur en tant que  {{WebExtAPIRef("i18n.LanguageCode")}}.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.i18n.getUILanguage")}}</p>
+{{Compat("webextensions.api.i18n.getUILanguage")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var uiLanguage = browser.i18n.getUILanguage();
+```js
+var uiLanguage = browser.i18n.getUILanguage();
 console.log(uiLanguage);
 
-//e.g. "fr"</pre>
+//e.g. "fr"
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.i18n`](https://developer.chrome.com/extensions/i18n). Cette documentation est dérivée de [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/i18n"><code>chrome.i18n</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -78,5 +79,4 @@ console.log(uiLanguage);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

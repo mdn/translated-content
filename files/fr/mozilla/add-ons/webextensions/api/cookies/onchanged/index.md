@@ -13,88 +13,79 @@ tags:
   - onChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>L'événement <code>onChanged</code> de l'API {{WebExtAPIRef("cookies")}} est déclenché lorsqu'un cookie est défini ou supprimé.</p>
+L'événement `onChanged` de l'API {{WebExtAPIRef("cookies")}} est déclenché lorsqu'un cookie est défini ou supprimé.
 
-<p>Notez que la mise à jour des propriétés d'un cookie est implémentée en deux étapes :</p>
+Notez que la mise à jour des propriétés d'un cookie est implémentée en deux étapes :
 
-<ol>
- <li>Tout d'abord, le cookie à mettre à jour est tout d'abord entiérement supprimé, généralement une notification avec un  {{WebExtAPIRef("cookies.OnChangedCause")}} d'écrasement.</li>
- <li>Ensuite, un nouveau cookie est écrit avec les valeurs mises à jour, généralement une seconde notification avec un {{WebExtAPIRef("cookies.OnChangedCause")}} <code>explicite</code>.</li>
-</ol>
+1.  Tout d'abord, le cookie à mettre à jour est tout d'abord entiérement supprimé, généralement une notification avec un  {{WebExtAPIRef("cookies.OnChangedCause")}} d'écrasement.
+2.  Ensuite, un nouveau cookie est écrit avec les valeurs mises à jour, généralement une seconde notification avec un {{WebExtAPIRef("cookies.OnChangedCause")}} `explicite`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.cookies.onChanged.addListener(listener)
+```js
+browser.cookies.onChanged.addListener(listener)
 browser.cookies.onChanged.removeListener(listener)
 browser.cookies.onChanged.hasListener(listener)
-</pre>
+```
 
-<p>Cet API est également disponible en tant que  <code>browser.cookies.onChanged.*</code>.</p>
+Cet API est également disponible en tant que  `browser.cookies.onChanged.*`.
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoute un écouteur à l'événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument de l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifiez si l'écouteur est enregistré pour cet événement. Retourne <code>true</code> s'il écoute, <code>false</code> sinon.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoute un écouteur à l'événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument de l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifiez si l'écouteur est enregistré pour cet événement. Retourne `true` s'il écoute, `false` sinon.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Une fonction de rappel qui sera appelée lorsque l'événement se produira. La fonction recevra les arguments suivants :</p>
+- `callback`
 
- <dl>
-  <dt><code>changeInfo</code></dt>
-  <dd><p>Un <code>objet</code> contenant les détails de la modification survenue. Ses propriétés sont les suivantes :</p>
-  <dl>
-   <dt><code>removed</code></dt>
-   <dd>Un <code>booléen</code> défini sur <code>true</code> si un cookie a été supprimé et sinon  false.</dd>
-   <dt><code>cookie</code></dt>
-   <dd>Un objet {{WebExtAPIRef('cookies.Cookie')}} contenant les informations sur le cookie qui a été défini ou supprimé.</dd>
-   <dt><code>cause</code></dt>
-   <dd>Une valeur {{WebExtAPIRef('cookies.OnChangedCause')}} représentant la raison sous-jacente de la modification du cookie.</dd>
-  </dl>
-  </dd>
- </dl>
- </dd>
-</dl>
+  - : Une fonction de rappel qui sera appelée lorsque l'événement se produira. La fonction recevra les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `changeInfo`
 
-<p>{{Compat("webextensions.api.cookies.onChanged")}}</p>
+      - : Un `objet` contenant les détails de la modification survenue. Ses propriétés sont les suivantes :
 
-<h2 id="Exemples">Exemples</h2>
+        - `removed`
+          - : Un `booléen` défini sur `true` si un cookie a été supprimé et sinon  false.
+        - `cookie`
+          - : Un objet {{WebExtAPIRef('cookies.Cookie')}} contenant les informations sur le cookie qui a été défini ou supprimé.
+        - `cause`
+          - : Une valeur {{WebExtAPIRef('cookies.OnChangedCause')}} représentant la raison sous-jacente de la modification du cookie.
 
-<p>Cet exemple écoute les événements <code>onChanged</code> et enregistre les détails de l'argument  <code>changeInfo</code> :</p>
+## Compatibilité du navigateur
 
-<pre class="brush: js">browser.cookies.onChanged.addListener(function(changeInfo) {
+{{Compat("webextensions.api.cookies.onChanged")}}
+
+## Exemples
+
+Cet exemple écoute les événements `onChanged` et enregistre les détails de l'argument  `changeInfo` :
+
+```js
+browser.cookies.onChanged.addListener(function(changeInfo) {
   console.log('Cookie changed: ' +
               '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
               '\n * Cause: ' + changeInfo.cause +
               '\n * Removed: ' + changeInfo.removed);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/extensions/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> dans le code Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -121,5 +112,4 @@ browser.cookies.onChanged.hasListener(listener)
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -12,14 +12,14 @@ tags:
   - closeTabsByDoubleClick
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/closeTabsByDoubleClick
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour activer ou désactiver la possibilité pour l'utilisateur de fermer un onglet en double-cliquant.</p>
+Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour activer ou désactiver la possibilité pour l'utilisateur de fermer un onglet en double-cliquant.
 
-<p>La valeur sous-jacente est un booléen.</p>
+La valeur sous-jacente est un booléen.
 
-<p>Par défaut, closeTabsByDoubleClick est faux. Le réglage peut être modifié par l'utilisateur dans about:config.</p>
+Par défaut, closeTabsByDoubleClick est faux. Le réglage peut être modifié par l'utilisateur dans about:config.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.browserSettings.closeTabsByDoubleClick")}}</p>
+{{Compat("webextensions.api.browserSettings.closeTabsByDoubleClick")}}

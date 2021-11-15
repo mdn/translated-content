@@ -13,72 +13,68 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Le type <code>DownloadItem</code> de l'API {{WebExtAPIRef("downloads")}} représente un fichier téléchargé.</p>
+Le type `DownloadItem` de l'API {{WebExtAPIRef("downloads")}} représente un fichier téléchargé.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>byExtensionId</code>{{optional_inline}}</dt>
- <dd>Un <code>string</code> représentant l'ID de l'extension qui a déclenché le téléchargement (si elle a été déclenchée par une extension). Cela ne change pas une fois réglé. Si le téléchargement n'a pas été déclenché par une extension, ceci n'est pas défini.</dd>
- <dt><code>byExtensionName</code>{{optional_inline}}</dt>
- <dd>Un <code>string</code> représentant le nom de l'extension qui a déclenché le téléchargement (si elle a été déclenchée par une extension). Cela peut changer si l'extension change de nom ou si l'utilisateur change ses paramètres régionaux. Si le téléchargement n'a pas été déclenché par une extension, ceci n'est pas défini.</dd>
- <dt><code>bytesReceived</code></dt>
- <dd>Un <code>number</code> représentant le nombre d'octets reçus jusqu'ici de l'hôte pendant le téléchargement ; cela ne prend pas en compte la compression de fichier.</dd>
- <dt><code>canResume</code></dt>
- <dd>Un <code>boolean</code> indiquant si un téléchargement actuellement interrompu (par exemple en pause) peut être repris à partir du point où il a été interrompu (<code>true</code>), ou non (<code>false</code>).</dd>
- <dt><code>danger</code></dt>
- <dd>Une chaîne indiquant si ce téléchargement est considéré comme sûr ou suspect. Ses valeurs possibles sont définies dans le type  {{WebExtAPIRef('downloads.DangerType')}}.</dd>
- <dt><code>endTime</code>{{optional_inline}}</dt>
- <dd>Un <code>string</code> (au format <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>) représentant le nombre de millisecondes entre l'époque UNIX et la fin de ce téléchargement. Ceci n'est pas défini si le téléchargement n'est pas encore terminé.</dd>
- <dt><code>error</code>{{optional_inline}}</dt>
- <dd>Une chaîne indiquant pourquoi un téléchargement a été interrompu. Les valeurs possibles sont définies dans le type {{WebExtAPIRef('downloads.InterruptReason')}}. Ceci n'est pas défini si une erreur ne s'est pas produite.</dd>
- <dt><code>estimatedEndTime</code>{{optional_inline}}</dt>
- <dd>Un <code>string</code> (au format <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>) représentant le nombre estimé de millisecondes entre l'époque UNIX et la date à laquelle ce téléchargement est estimé terminé. Ceci est indéfini s'il n'est pas connu (en particulier, il n'est pas défini dans le  <code>DownloadItem</code> qui est passé dans {{WebExtAPIRef("downloads.onCreated")}}).</dd>
- <dt><code>exists</code></dt>
- <dd>Un <code>boolean</code> indiquant si un fichier téléchargé existe toujours (<code>true</code>) ou non (<code>false</code>). Ces informations peuvent être périmées, car les navigateurs ne surveillent pas automatiquement la suppression des fichiers. Pour vérifier si un fichier existe, appelez la méthode {{WebExtAPIRef('downloads.search()')}}, en filtrant le fichier question.</dd>
- <dt><code>filename</code></dt>
- <dd>Un <code>string</code> représentant le chemin local absolu du fichier.</dd>
- <dt><code>fileSize</code></dt>
- <dd>Un <code>number</code> indiquant le nombre total d'octets dans le fichier entier, après décompression. La valeur -1 signifie que la taille totale du fichier est inconnue.</dd>
- <dt><code>id</code></dt>
- <dd>Un <code>integer</code> représentant un identifiant unique pour le fichier téléchargé qui est persistant entre les sessions du navigateur.</dd>
- <dt><code>incognito</code></dt>
- <dd>Un <code>boolean</code> qui indique si le téléchargement est enregistré dans l'historique du navigateur (<code>false</code>), ou non (<code>true</code>).</dd>
- <dt><code>mime</code></dt>
- <dd>Un <code>string</code> représentant le type MIME du fichier téléchargé.</dd>
- <dt><code>paused</code></dt>
- <dd>Un <code>boolean</code> indiquant si le téléchargement est en pause, c'est-à-dire si le téléchargement a cessé de lire les données de l'hôte mais a maintenu la connexion ouverte. Si c'est le cas, la valeur est <code>true</code>, sinon <code>false</code>.</dd>
- <dt><code>referrer</code></dt>
- <dd>Un <code>string</code> représentant le référent du fichier téléchargé.</dd>
- <dt><code>startTime</code></dt>
- <dd>Un <code>string</code> (au format <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>) représentant le nombre de millisecondes entre l'époque UNIX et le début du téléchargement.</dd>
- <dt><code>state</code></dt>
- <dd>Un <code>string</code> Indique si le téléchargement progresse, est interrompu ou terminé. Les valeurs possibles sont définies dans le type {{WebExtAPIRef('downloads.State')}}.</dd>
- <dt><code>totalBytes</code></dt>
- <dd>Un <code>number</code> indiquant le nombre total d'octets dans le fichier en cours de téléchargement. Cela ne prend pas en compte la compression de fichier. Une valeur de -1 signifie que le nombre total d'octets est inconnu..</dd>
- <dt><code>url</code></dt>
- <dd>Un <code>string</code> représentant l'URL absolue à partir de laquelle le fichier a été téléchargé.</dd>
-</dl>
+- `byExtensionId`{{optional_inline}}
+  - : Un `string` représentant l'ID de l'extension qui a déclenché le téléchargement (si elle a été déclenchée par une extension). Cela ne change pas une fois réglé. Si le téléchargement n'a pas été déclenché par une extension, ceci n'est pas défini.
+- `byExtensionName`{{optional_inline}}
+  - : Un `string` représentant le nom de l'extension qui a déclenché le téléchargement (si elle a été déclenchée par une extension). Cela peut changer si l'extension change de nom ou si l'utilisateur change ses paramètres régionaux. Si le téléchargement n'a pas été déclenché par une extension, ceci n'est pas défini.
+- `bytesReceived`
+  - : Un `number` représentant le nombre d'octets reçus jusqu'ici de l'hôte pendant le téléchargement ; cela ne prend pas en compte la compression de fichier.
+- `canResume`
+  - : Un `boolean` indiquant si un téléchargement actuellement interrompu (par exemple en pause) peut être repris à partir du point où il a été interrompu (`true`), ou non (`false`).
+- `danger`
+  - : Une chaîne indiquant si ce téléchargement est considéré comme sûr ou suspect. Ses valeurs possibles sont définies dans le type  {{WebExtAPIRef('downloads.DangerType')}}.
+- `endTime`{{optional_inline}}
+  - : Un `string` (au format [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)) représentant le nombre de millisecondes entre l'époque UNIX et la fin de ce téléchargement. Ceci n'est pas défini si le téléchargement n'est pas encore terminé.
+- `error`{{optional_inline}}
+  - : Une chaîne indiquant pourquoi un téléchargement a été interrompu. Les valeurs possibles sont définies dans le type {{WebExtAPIRef('downloads.InterruptReason')}}. Ceci n'est pas défini si une erreur ne s'est pas produite.
+- `estimatedEndTime`{{optional_inline}}
+  - : Un `string` (au format [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)) représentant le nombre estimé de millisecondes entre l'époque UNIX et la date à laquelle ce téléchargement est estimé terminé. Ceci est indéfini s'il n'est pas connu (en particulier, il n'est pas défini dans le  `DownloadItem` qui est passé dans {{WebExtAPIRef("downloads.onCreated")}}).
+- `exists`
+  - : Un `boolean` indiquant si un fichier téléchargé existe toujours (`true`) ou non (`false`). Ces informations peuvent être périmées, car les navigateurs ne surveillent pas automatiquement la suppression des fichiers. Pour vérifier si un fichier existe, appelez la méthode {{WebExtAPIRef('downloads.search()')}}, en filtrant le fichier question.
+- `filename`
+  - : Un `string` représentant le chemin local absolu du fichier.
+- `fileSize`
+  - : Un `number` indiquant le nombre total d'octets dans le fichier entier, après décompression. La valeur -1 signifie que la taille totale du fichier est inconnue.
+- `id`
+  - : Un `integer` représentant un identifiant unique pour le fichier téléchargé qui est persistant entre les sessions du navigateur.
+- `incognito`
+  - : Un `boolean` qui indique si le téléchargement est enregistré dans l'historique du navigateur (`false`), ou non (`true`).
+- `mime`
+  - : Un `string` représentant le type MIME du fichier téléchargé.
+- `paused`
+  - : Un `boolean` indiquant si le téléchargement est en pause, c'est-à-dire si le téléchargement a cessé de lire les données de l'hôte mais a maintenu la connexion ouverte. Si c'est le cas, la valeur est `true`, sinon `false`.
+- `referrer`
+  - : Un `string` représentant le référent du fichier téléchargé.
+- `startTime`
+  - : Un `string` (au format [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)) représentant le nombre de millisecondes entre l'époque UNIX et le début du téléchargement.
+- `state`
+  - : Un `string` Indique si le téléchargement progresse, est interrompu ou terminé. Les valeurs possibles sont définies dans le type {{WebExtAPIRef('downloads.State')}}.
+- `totalBytes`
+  - : Un `number` indiquant le nombre total d'octets dans le fichier en cours de téléchargement. Cela ne prend pas en compte la compression de fichier. Une valeur de -1 signifie que le nombre total d'octets est inconnu..
+- `url`
+  - : Un `string` représentant l'URL absolue à partir de laquelle le fichier a été téléchargé.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.downloads.DownloadItem")}}</p>
+{{Compat("webextensions.api.downloads.DownloadItem")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -105,5 +101,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

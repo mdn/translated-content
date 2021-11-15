@@ -12,45 +12,45 @@ tags:
   - setDefaultSuggestion
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Définissez la suggestion par défaut à afficher dans la liste déroulante de la barre d'adresse lorsque l'utilisateur commence à interagir avec votre extension.</p>
+Définissez la suggestion par défaut à afficher dans la liste déroulante de la barre d'adresse lorsque l'utilisateur commence à interagir avec votre extension.
 
-<p>Une fois que l'utilisateur a entré votre mot clé et a commencé à interagir avec votre extension, la suggestion par défaut apparaît toujours en premier dans la liste déroulante. Contrairement aux suggestions que vous fournissez dans  {{WebExtAPIRef("omnibox.onInputChanged")}}, cet élément ne peut pas être sélectionné. Utilisez-le pour fournir à l'utilisateur des conseils sur ce qu'il doit taper et sur ce qu'il peut s'attendre à voir quand il le fait.</p>
+Une fois que l'utilisateur a entré votre mot clé et a commencé à interagir avec votre extension, la suggestion par défaut apparaît toujours en premier dans la liste déroulante. Contrairement aux suggestions que vous fournissez dans  {{WebExtAPIRef("omnibox.onInputChanged")}}, cet élément ne peut pas être sélectionné. Utilisez-le pour fournir à l'utilisateur des conseils sur ce qu'il doit taper et sur ce qu'il peut s'attendre à voir quand il le fait.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.omnibox.setDefaultSuggestion(
+```js
+browser.omnibox.setDefaultSuggestion(
   suggestion            // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>suggestion</code></dt>
- <dd><code>object</code>. Un objet contenant une <code>description</code> de propriété de chaîne unique, qui sera affichée en tant que premier élément dans la liste déroulante lorsque l'utilisateur commence à interagir avec votre extension.</dd>
-</dl>
+- `suggestion`
+  - : `object`. Un objet contenant une `description` de propriété de chaîne unique, qui sera affichée en tant que premier élément dans la liste déroulante lorsque l'utilisateur commence à interagir avec votre extension.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>None.</p>
+None.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.omnibox.setDefaultSuggestion")}}</p>
+{{Compat("webextensions.api.omnibox.setDefaultSuggestion")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">browser.omnibox.setDefaultSuggestion({
+```js
+browser.omnibox.setDefaultSuggestion({
   description: "Type the name of a CSS property"
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/omnibox"><code>chrome.omnibox</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

@@ -13,38 +13,38 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Détecte la langue principale du contenu dans un onglet, en utilisant le <a href="https://github.com/CLD2Owners/cld2">détecteur de langue compact</a> (CLD).</p>
+Détecte la langue principale du contenu dans un onglet, en utilisant le [détecteur de langue compact](https://github.com/CLD2Owners/cld2) (CLD).
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var detecting = browser.tabs.detectLanguage(
+```js
+var detecting = browser.tabs.detectLanguage(
   tabId,                  // optional integer
   callback                // optional function
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabId </code>{{optional_inline}}</dt>
- <dd><code>integer</code>. Par défaut à l'onglet actif de la fenêtre en cours.</dd>
- <dt><code>callback </code>{{optional_inline}}</dt>
- <dd><code>function</code>. Actuellement, si un <code>tabId</code> est spécifié, cette méthode utilise ce rappel pour renvoyer les résultats au lieu de renvoyer une promesse. Le rappel reçoit comme seul paramètre d'entrée une chaîne de caractères contenant le code de langue détecté <code>en</code> ou <code>fr</code>.</dd>
-</dl>
+- `tabId `{{optional_inline}}
+  - : `integer`. Par défaut à l'onglet actif de la fenêtre en cours.
+- `callback `{{optional_inline}}
+  - : `function`. Actuellement, si un `tabId` est spécifié, cette méthode utilise ce rappel pour renvoyer les résultats au lieu de renvoyer une promesse. Le rappel reçoit comme seul paramètre d'entrée une chaîne de caractères contenant le code de langue détecté `en` ou `fr`.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>qui sera remplie avec une chaîne représentant un code de langue ISO tel que <code>en</code> ou <code>fr</code>. Pour une liste complète des langues prises en charge par cette méthode, see <a href="https://src.chromium.org/viewvc/chrome/trunk/src/third_party/cld/languages/internal/languages.cc#l23">kLanguageInfoTable</a>. Pour une langue inconnue, <code>"und"</code> sera retourné (mais voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1288263">bug 1288263</a>). Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise)qui sera remplie avec une chaîne représentant un code de langue ISO tel que `en` ou `fr`. Pour une liste complète des langues prises en charge par cette méthode, see [kLanguageInfoTable](https://src.chromium.org/viewvc/chrome/trunk/src/third_party/cld/languages/internal/languages.cc#l23). Pour une langue inconnue, `"und"` sera retourné (mais voir [bug 1288263](https://bugzilla.mozilla.org/show_bug.cgi?id=1288263)). Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Détecter et enregistrer la langue de l'onglet actif lorsque l'utilisateur clique sur une action du navigateur :</p>
+Détecter et enregistrer la langue de l'onglet actif lorsque l'utilisateur clique sur une action du navigateur :
 
-<pre class="brush: js">function onLanguageDetected(lang) {
+```js
+function onLanguageDetected(lang) {
   console.log(`Language is: ${lang}`);
 }
 
@@ -55,11 +55,13 @@ function onError(error) {
 browser.browserAction.onClicked.addListener(function() {
   var detecting = browser.tabs.detectLanguage();
   detecting.then(onLanguageDetected, onError);
-});</pre>
+});
+```
 
-<p>Détecter et enregistrer la langue de chaque onglet ouvert lorsque l'utilisateur clique sur une action du navigateur (notez que cet exemple nécessite  la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "tabs") :</p>
+Détecter et enregistrer la langue de chaque onglet ouvert lorsque l'utilisateur clique sur une action du navigateur (notez que cet exemple nécessite  la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabs") :
 
-<pre class="brush: js">function onLanguageDetected(url, lang) {
+```js
+function onLanguageDetected(url, lang) {
   console.log(`Language in ${url} is: ${lang}`);
 }
 
@@ -78,25 +80,22 @@ function detectLanguages(tabs) {
 browser.browserAction.onClicked.addListener(function() {
   var querying = browser.tabs.query({});
   querying.then(detectLanguages, onError);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
+{{Compat("webextensions.api.tabs.detectLanguage")}}
 
+> **Note :**
+>
+> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>{{Compat("webextensions.api.tabs.detectLanguage")}}</p>
-
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -123,5 +122,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

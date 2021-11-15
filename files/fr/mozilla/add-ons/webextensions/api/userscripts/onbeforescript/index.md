@@ -14,38 +14,29 @@ tags:
   - userScripts
 translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}La propriété **`onBeforeScript`** de l'événement {{WebExtAPIRef("userScripts","browser.userScripts")}} est un {{event("Event_handlers", "event handler")}} qui traite {{event("beforeScript")}}.
 
-<div>La propriété <strong><code>onBeforeScript</code></strong> de l'événement {{WebExtAPIRef("userScripts","browser.userScripts")}} est un {{event("Event_handlers", "event handler")}} qui traite {{event("beforeScript")}}.</div>
+L'événement `beforeScript` se déclenche juste avant l'exécution d'un script utilisateur correspondant, permettant à APIScript d'exporter des méthodes API personnalisées vers le script utilisateur.
 
-<p>L'événement <code>beforeScript</code> se déclenche juste avant l'exécution d'un script utilisateur correspondant, permettant à APIScript d'exporter des méthodes API personnalisées vers le script utilisateur.</p>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
+    browser.userScripts.onBeforeScript = functionRef
+    browser.userScripts.onBeforeScript.addListener(functionRef)
+    browser.userScripts.onBeforeScript.removeListener(functionRef)
+    browser.userScripts.onBeforeScript.hasListener(functionRef)
 
-<pre class="syntaxbox"><code>browser.userScripts.onBeforeScript = </code>functionRef
-<code>browser.userScripts.onBeforeScript.addListener(</code>functionRef<code>)
-browser.userScripts.onBeforeScript.removeListener(</code>functionRef<code>)
-browser.userScripts.onBeforeScript.hasListener(</code>functionRef<code>)</code>
-</pre>
+### Value
 
-<h3 id="Value">Value</h3>
+`functionRef` est la function de gestionnaire à appeler lorsque l'événement `beforeScript`  du script utilisateur se déclenche.
 
-<p><code>functionRef</code> est la function de gestionnaire à appeler lorsque l'événement <code>beforeScript</code>  du script utilisateur se déclenche.</p>
+## Exemples
 
-<h2 id="Exemples">Exemples</h2>
+Voir [ce billet de blog](https://blog.mozilla.org/addons/2019/03/26/extensions-in-firefox-67/#userscripts) pour des exemples détaillés
 
-<p>Voir <a href="https://blog.mozilla.org/addons/2019/03/26/extensions-in-firefox-67/#userscripts">ce billet de blog</a> pour des exemples détaillés</p>
+## Compatibilité du navigateur
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+{{Compat("webextensions.api.userScripts.onBeforeScript")}}
 
-<div>
+## Voir aussi
 
-
-<p>{{Compat("webextensions.api.userScripts.onBeforeScript")}}</p>
-</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{WebExtAPIRef("contentScripts")}}</li>
-</ul>
+- {{WebExtAPIRef("contentScripts")}}

@@ -11,69 +11,63 @@ tags:
   - onDisabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/onDisabled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Action quand l'extension est désactivée.</p>
+Action quand l'extension est désactivée.
 
-<p>L'API requière l'<a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">API de permission</a> "management".</p>
+L'API requière l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management".
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.management.onDisabled.addListener(listener)
+```js
+browser.management.onDisabled.addListener(listener)
 browser.management.onDisabled.removeListener(listener)
 browser.management.onDisabled.hasListener(listener)
-</pre>
+```
 
-<p>Les événement ont trois fonctions :</p>
+Les événement ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajoutez un auditeur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>L'argument de l'auditeur est l'auditeur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifie si l'auditeur est enregistré à l'événement. Renvoie <code>true</code> s'il est à l'écoute, sinon <code>false</code> .</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajoutez un auditeur à cet événement.
+- `removeListener(listener)`
+  - : L'argument de l'auditeur est l'auditeur à supprimer.
+- `hasListener(listener)`
+  - : Vérifie si l'auditeur est enregistré à l'événement. Renvoie `true` s'il est à l'écoute, sinon `false` .
 
-<h2 id="addListener_syntaxe">addListener syntaxe</h2>
+## addListener syntaxe
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>function</code></dt>
- <dd>
- <p>Fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction passera par l'argument suivant :</p>
+- `function`
 
- <dl>
-  <dt><code>info</code></dt>
-  <dd><code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo">ExtensionInfo</a></code>: informations de l'extension qui a été désactivé</dd>
- </dl>
- </dd>
-</dl>
+  - : Fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction passera par l'argument suivant :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `info`
+      - : [`ExtensionInfo`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): informations de l'extension qui a été désactivé
 
-<p>{{Compat("webextensions.api.management.onDisabled")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.management.onDisabled")}}
 
-<p>Enregistrez les noms des extensions lorsqu'ils sont désactivés.</p>
+## Exemples
 
-<pre class="brush: js">browser.management.onDisabled.addListener((info) =&gt; {
+Enregistrez les noms des extensions lorsqu'ils sont désactivés.
+
+```js
+browser.management.onDisabled.addListener((info) => {
   console.log(info.name + " was disabled");
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/management"><code>chrome.management</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -100,5 +94,4 @@ browser.management.onDisabled.hasListener(listener)
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

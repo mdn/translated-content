@@ -12,22 +12,20 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Le type <strong><code>bookmarks.BookmarkTreeNodeType</code></strong> est utilisé pour décrire si un nœud de l'arborescence de signets est un signet, un dossier ou un séparateur.</p>
+Le type **`bookmarks.BookmarkTreeNodeType`** est utilisé pour décrire si un nœud de l'arborescence de signets est un signet, un dossier ou un séparateur.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p><code>bookmarks.BookmarkTreeNodeType</code> est un {{jsxref("string")}}qui peut avoir l'une des trois valeurs suivantes :</p>
+`bookmarks.BookmarkTreeNodeType` est un {{jsxref("string")}}qui peut avoir l'une des trois valeurs suivantes :
 
-<ul>
- <li><code>"bookmark"</code>: le noeud est un signet.</li>
- <li><code>"folder"</code>: le noeud est un dossier.</li>
- <li><code>"separator"</code>: le noeud est un séparateur.</li>
-</ul>
+- `"bookmark"`: le noeud est un signet.
+- `"folder"`: le noeud est un dossier.
+- `"separator"`: le noeud est un séparateur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.bookmarks.BookmarkTreeNodeType", 10)}}</p>
+{{Compat("webextensions.api.bookmarks.BookmarkTreeNodeType", 10)}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

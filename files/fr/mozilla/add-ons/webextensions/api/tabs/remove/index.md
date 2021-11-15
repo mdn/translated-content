@@ -13,35 +13,35 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/remove
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Ferme un ou plusieurs onglets.</p>
+Ferme un ou plusieurs onglets.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var removing = browser.tabs.remove(
+```js
+var removing = browser.tabs.remove(
   tabIds          // integer or integer array
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>tabIds</code></dt>
- <dd><code><code>integer</code></code> or <code><code>array</code> of <code><code>integer</code></code></code>. Les identifiants de l'onglet ou des onglets à fermer.</dd>
-</dl>
+- `tabIds`
+  - : `integer` or `array of integer`. Les identifiants de l'onglet ou des onglets à fermer.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans arguments lorsque tous les onglets spécifiés ont été supprimés ou que leurs invites <code>beforeunload</code> ont été traitées. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque tous les onglets spécifiés ont été supprimés ou que leurs invites `beforeunload` ont été traitées. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Fermer un seul onglet :</p>
+Fermer un seul onglet :
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log(`Removed`);
 }
 
@@ -50,11 +50,13 @@ function onError(error) {
 }
 
 var removing = browser.tabs.remove(2);
-removing.then(onRemoved, onError);</pre>
+removing.then(onRemoved, onError);
+```
 
-<p>Fermer plusieurs onglets :</p>
+Fermer plusieurs onglets :
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log(`Removed`);
 }
 
@@ -63,23 +65,22 @@ function onError(error) {
 }
 
 var removing = browser.tabs.remove([15, 14, 1]);
-removing.then(onRemoved, onError);</pre>
+removing.then(onRemoved, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.tabs.remove")}}</p>
+{{Compat("webextensions.api.tabs.remove")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,5 +107,4 @@ removing.then(onRemoved, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,39 +13,39 @@ tags:
   - clear
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/clear
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Efface une notification, compte tenu de son identifiant.</p>
+Efface une notification, compte tenu de son identifiant.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var clearing = browser.notifications.clear(
+```js
+var clearing = browser.notifications.clear(
   id                            // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>id</code></dt>
- <dd><code>string</code>. L'ID de la notification à effacer. C'est la même chose que l'ID transmis dans le callback {{WebExtAPIRef('notifications.create()')}}.</dd>
-</dl>
+- `id`
+  - : `string`. L'ID de la notification à effacer. C'est la même chose que l'ID transmis dans le callback {{WebExtAPIRef('notifications.create()')}}.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un booléen : <code>true</code> la notification a été effacée, ou <code>false</code> si ce n'est pas le cas (par exemple, parce que la notification référencée par <code>id </code> n'existe pas).</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un booléen : `true` la notification a été effacée, ou `false` si ce n'est pas le cas (par exemple, parce que la notification référencée par `id ` n'existe pas).
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.notifications.clear")}}</p>
+{{Compat("webextensions.api.notifications.clear")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple affiche une notification lorsque l'utilisateur clique sur une action du navigateur, à moins que la notification ne soit déjà affichée, auquel cas il efface la notification :</p>
+Cet exemple affiche une notification lorsque l'utilisateur clique sur une action du navigateur, à moins que la notification ne soit déjà affichée, auquel cas il efface la notification :
 
-<pre class="brush: js">var myNotification = "my-notification";
+```js
+var myNotification = "my-notification";
 
 function toggleAlarm(all) {
   if (myNotification in all) {
@@ -66,13 +66,12 @@ function handleClick() {
 }
 
 browser.browserAction.onClicked.addListener(handleClick);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

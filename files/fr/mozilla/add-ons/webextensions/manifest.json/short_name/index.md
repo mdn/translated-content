@@ -7,36 +7,35 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Type</th>
-   <td><code>Chaîne</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Obligatoire</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Exemple</th>
-   <td>
-    <pre class="brush: json">
-"short_name": "MonExtension"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Type</th>
+      <td><code>Chaîne</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Obligatoire</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Exemple</th>
+      <td><pre class="brush: json">"short_name": "MonExtension"</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Nom abrégé de l'extension. S'il est donné, il sera utilisé dans des contextes où le champ <a href="/fr/Add-ons/WebExtensions/manifest.json/name">name</a> est trop long. Il est recommandé que le nom court ne dépasse pas 12 caractères. Si le champ du nom court n'est pas inclus dans manifest.json, le nom sera utilisé à la place et peut être tronqué. </p>
+Nom abrégé de l'extension. S'il est donné, il sera utilisé dans des contextes où le champ [name](/fr/Add-ons/WebExtensions/manifest.json/name) est trop long. Il est recommandé que le nom court ne dépasse pas 12 caractères. Si le champ du nom court n'est pas inclus dans manifest.json, le nom sera utilisé à la place et peut être tronqué.
 
-<p>C'est une <a href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">propriété localisable</a>.</p>
+C'est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: json">"short_name": "MonExtension"</pre>
+```json
+"short_name": "MonExtension"
+```
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.manifest.short_name")}}</p>
+{{Compat("webextensions.manifest.short_name")}}

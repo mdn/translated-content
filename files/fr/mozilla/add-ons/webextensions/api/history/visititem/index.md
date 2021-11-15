@@ -13,42 +13,38 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/VisitItem
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Un objet décrivant une seule visite sur une page.</p>
+Un objet décrivant une seule visite sur une page.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-<dl>
- <dt><code>id</code></dt>
- <dd><code>string</code>. L'identifiant unique du {{WebExtAPIRef("history.HistoryItem")}} associé à cette visite.</dd>
- <dt><code>visitId</code></dt>
- <dd><code>string</code>. L'identifiant unique pour cette visite.</dd>
- <dt><code>visitTime</code>{{optional_inline}}</dt>
- <dd><code>number</code>. Lorsque cette visite s'est produite, représentée en millisecondes depuis l'époque.</dd>
- <dt><code>referringVisitId</code></dt>
- <dd><code>string</code>. L'ID de visite du référent.</dd>
- <dt><code>transition</code></dt>
- <dd>{{WebExtAPIRef('history.TransitionType')}}. Décrit comment le navigateur a navigué vers la page à cette occasion.</dd>
-</dl>
+- `id`
+  - : `string`. L'identifiant unique du {{WebExtAPIRef("history.HistoryItem")}} associé à cette visite.
+- `visitId`
+  - : `string`. L'identifiant unique pour cette visite.
+- `visitTime`{{optional_inline}}
+  - : `number`. Lorsque cette visite s'est produite, représentée en millisecondes depuis l'époque.
+- `referringVisitId`
+  - : `string`. L'ID de visite du référent.
+- `transition`
+  - : {{WebExtAPIRef('history.TransitionType')}}. Décrit comment le navigateur a navigué vers la page à cette occasion.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.history.VisitItem")}}</p>
+{{Compat("webextensions.api.history.VisitItem")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> dans le code de Chromium.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -75,5 +71,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history/VisitItem
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

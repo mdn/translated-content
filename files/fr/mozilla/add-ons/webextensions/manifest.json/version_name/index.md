@@ -7,32 +7,29 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version_name
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Obligatoire</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Exemple</th>
-   <td>
-    <pre class="brush: json">
-"version_name": "0.1 beta"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Obligatoire</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Exemple</th>
+      <td><pre class="brush: json">"version_name": "0.1 beta"</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>En plus du champ <a href="/fr/Add-ons/WebExtensions/manifest.json/version">version</a>, qui est utilisé à des fins de mise à jour, <a href="https://developer.chrome.com/extensions/manifest/version">version_name</a> peut être défini sur une chaîne de version descriptive et sera utilisé à des fins d'affichage s'il est présent.</p>
+En plus du champ [version](/fr/Add-ons/WebExtensions/manifest.json/version), qui est utilisé à des fins de mise à jour, [version_name](https://developer.chrome.com/extensions/manifest/version) peut être défini sur une chaîne de version descriptive et sera utilisé à des fins d'affichage s'il est présent.
 
-<p>Si aucun <strong>version_name</strong> n'est présent, le champ de <strong>version</strong> sera également utilisé à des fins d'affichage.</p>
+Si aucun **version_name** n'est présent, le champ de **version** sera également utilisé à des fins d'affichage.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.manifest.version_name")}}</p>
+{{Compat("webextensions.manifest.version_name")}}

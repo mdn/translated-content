@@ -11,28 +11,27 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Une <code>ExtensionPanel</code> représente un panneau ajouté aux devtools. C'est la résolution de la <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> renvoyé par <code><a href="/fr/Add-ons/WebExtensions/API/devtools.panels/create">browser.devtools.panels.create()</a></code>.</p>
+Une `ExtensionPanel` représente un panneau ajouté aux devtools. C'est la résolution de la [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) renvoyé par [`browser.devtools.panels.create()`](/fr/Add-ons/WebExtensions/API/devtools.panels/create).
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Les valeurs de ce type sont des objets. Définissez deux événements, <code>onShown</code> et <code>onHidden</code>.</p>
+Les valeurs de ce type sont des objets. Définissez deux événements, `onShown` et `onHidden`.
 
-<ul>
- <li><code>onShown</code> est émis lorsque le panneau est affiché dans les devtools (par exemple, quand l'utilisateur a cliqué sur le panneau dans la fenêtre des  devtools).</li>
- <li><code>onHidden</code> est émis lorsque le panneau est caché (par exemple, quand l'utilisateur a basculé sur un onglet différent dans la fenêtre devtools).</li>
-</ul>
+- `onShown` est émis lorsque le panneau est affiché dans les devtools (par exemple, quand l'utilisateur a cliqué sur le panneau dans la fenêtre des  devtools).
+- `onHidden` est émis lorsque le panneau est caché (par exemple, quand l'utilisateur a basculé sur un onglet différent dans la fenêtre devtools).
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.devtools.panels.ExtensionPanel")}}</p>
+{{Compat("webextensions.api.devtools.panels.ExtensionPanel")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Ce code crée un nouveau panneau, puis ajoute des gestionnaires pour ces événements <code>onShown</code> et <code>onHidden</code>.</p>
+Ce code crée un nouveau panneau, puis ajoute des gestionnaires pour ces événements `onShown` et `onHidden`.
 
-<pre class="brush: js">function handleShown(e) {
+```js
+function handleShown(e) {
   console.log(e);
   console.log("panel is being shown");
 }
@@ -46,22 +45,21 @@ browser.devtools.panels.create(
   "My Panel",                 // title
   "icons/star.png",           // icon
   "devtools/panel/panel.html" // content
-).then((newPanel) =&gt; {
+).then((newPanel) => {
   newPanel.onShown.addListener(handleShown);
   newPanel.onHidden.addListener(handleHidden);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -88,5 +86,4 @@ browser.devtools.panels.create(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -9,59 +9,59 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/storage
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Type</th>
-   <td><code>Object</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Obligatoire</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Exemple</th>
-   <td>
-    <pre class="brush: json">
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Type</th>
+      <td><code>Object</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Obligatoire</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Exemple</th>
+      <td>
+        <pre class="brush: json">
 "storage": {
   "managed_schema": "schema.json"
-}</pre>
-   </td>
-  </tr>
- </tbody>
+}</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Utilisez la clé <code>storage</code> pour spécifier le nom du fichier de schéma qui définit la structure des données dans le stockage géré.</p>
+Utilisez la clé `storage` pour spécifier le nom du fichier de schéma qui définit la structure des données dans le stockage géré.
 
-<p>Les données gérées déclarent les politiques d'entreprise soutenues par l'application. Les politiques sont analogues aux options mais sont configurées par un administrateur système au lieu de l'utilisateur, ce qui permet à l'application d'être configurée pour tous les utilisateurs d'une organisation.</p>
+Les données gérées déclarent les politiques d'entreprise soutenues par l'application. Les politiques sont analogues aux options mais sont configurées par un administrateur système au lieu de l'utilisateur, ce qui permet à l'application d'être configurée pour tous les utilisateurs d'une organisation.
 
-<p>Après avoir déclaré les politiques, elles sont lues à partir de l'API  {{WebExtAPIRef("storage.managed")}}. Cependant, si une valeur de politique n'est pas conforme au schéma, elle n'est pas publiée par l'API <code>storage.managed</code>. Il appartient à l'application d'appliquer les politiques configurées par l'administrateur.</p>
+Après avoir déclaré les politiques, elles sont lues à partir de l'API  {{WebExtAPIRef("storage.managed")}}. Cependant, si une valeur de politique n'est pas conforme au schéma, elle n'est pas publiée par l'API `storage.managed`. Il appartient à l'application d'appliquer les politiques configurées par l'administrateur.
 
-<div class="note">
-<p><strong>Note :</strong> Firefox ne définit pas de schéma pour le stockage géré, soir {{WebExtAPIRef("storage.managed")}} pour plus de détails.</p>
-</div>
+> **Note :** Firefox ne définit pas de schéma pour le stockage géré, soir {{WebExtAPIRef("storage.managed")}} pour plus de détails.
 
-<p>La clé de <code>storage</code> est un objet qui possède les propriétés requises suivantes:</p>
+La clé de `storage` est un objet qui possède les propriétés requises suivantes:
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>managed_schema</code></td>
-   <td>
-    <p>Un <code>String</code> spécifiant le chemin complet du fichier dans l'extension qui définit le schéma de gestion du stockage..</p>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><code>managed_schema</code></td>
+      <td>
+        <p>
+          Un <code>String</code> spécifiant le chemin complet du fichier dans
+          l'extension qui définit le schéma de gestion du stockage..
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.manifest.storage", 10)}}</p>
+{{Compat("webextensions.manifest.storage", 10)}}
 
-<div class="note">
-<p><strong>Note :</strong></p>
-
-<p>Cette page comprend les détails de la page du site web des développeurs de Chrome <a href="https://developer.chrome.com/apps/manifest/storage">Manifeste pour les zones de stockage</a> incluses ici sous la licence Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note :**
+>
+> Cette page comprend les détails de la page du site web des développeurs de Chrome [Manifeste pour les zones de stockage](https://developer.chrome.com/apps/manifest/storage) incluses ici sous la licence Creative Commons Attribution 3.0 United States License.

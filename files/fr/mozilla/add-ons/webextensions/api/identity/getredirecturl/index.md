@@ -12,42 +12,44 @@ tags:
   - getRedirectURL
 translation_of: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Génère une URL que vous pouvez utiliser comme URL de redirection.</p>
+Génère une URL que vous pouvez utiliser comme URL de redirection.
 
-<p>L'URL est dérivée de l'ID de votre extension. Si vous utilisez cette fonction, vous devrez probablement définir explicitement l'ID de votre extension à l'aide de la clé des <code><a href="/fr/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> (sinon, chaque fois que vous installerez <a href="/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">temporairement l'extension</a>, vous obtiendrez une URL de redirection différente).</p>
+L'URL est dérivée de l'ID de votre extension. Si vous utilisez cette fonction, vous devrez probablement définir explicitement l'ID de votre extension à l'aide de la clé des [`applications`](/fr/Add-ons/WebExtensions/manifest.json/applications) (sinon, chaque fois que vous installerez [temporairement l'extension](/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), vous obtiendrez une URL de redirection différente).
 
-<p>Voir <a href="/fr/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL">Obtenir une URL de redirection</a> pour plus d'informations sur les URL de redirection.</p>
+Voir [Obtenir une URL de redirection](/fr/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL) pour plus d'informations sur les URL de redirection.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var redirectURL = browser.identity.getRedirectURL()
-</pre>
+```js
+var redirectURL = browser.identity.getRedirectURL()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>None.</p>
+None.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une chaîne contenant une valeur d'URL de redirection.</p>
+Une chaîne contenant une valeur d'URL de redirection.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.identity.getRedirectURL")}}</p>
+{{Compat("webextensions.api.identity.getRedirectURL")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Obtenez l'URL de redirection :</p>
+Obtenez l'URL de redirection :
 
-<pre class="brush: js">var redirectURL = browser.identity.getRedirectURL();</pre>
+```js
+var redirectURL = browser.identity.getRedirectURL();
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/identity"><code>chrome.identity</code></a>.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/extensions/identity).
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

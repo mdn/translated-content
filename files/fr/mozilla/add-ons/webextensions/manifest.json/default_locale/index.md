@@ -7,38 +7,40 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Type</th>
-   <td>chaîne</td>
-  </tr>
-  <tr>
-   <th scope="row">Obligatoire</th>
-   <td>
-    <p>Il doit être présent si le sous-répertoire _locales est présent, sinon il doit être absent.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Exemple</th>
-   <td>
-    <pre class="brush: json">
-"default_locale": "fr"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Type</th>
+      <td>chaîne</td>
+    </tr>
+    <tr>
+      <th scope="row">Obligatoire</th>
+      <td>
+        <p>
+          Il doit être présent si le sous-répertoire _locales est présent, sinon
+          il doit être absent.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Exemple</th>
+      <td><pre class="brush: json">"default_locale": "fr"</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Cette clé doit être présente si l'extension contient le répertoire _locales, et doit être absente sinon. Il identifie un sous-répertoire de _locales, et ce sous-répertoire sera utilisé pour trouver les chaînes par défaut pour votre extension.</p>
+Cette clé doit être présente si l'extension contient le répertoire \_locales, et doit être absente sinon. Il identifie un sous-répertoire de \_locales, et ce sous-répertoire sera utilisé pour trouver les chaînes par défaut pour votre extension.
 
-<p>Voir <a href="/fr/Add-ons/WebExtensions/Internationalization">Internationalisation</a>.</p>
+Voir [Internationalisation](/fr/Add-ons/WebExtensions/Internationalization).
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: json">"default_locale": "fr"</pre>
+```json
+"default_locale": "fr"
+```
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.manifest.default_locale")}}</p>
+{{Compat("webextensions.manifest.default_locale")}}

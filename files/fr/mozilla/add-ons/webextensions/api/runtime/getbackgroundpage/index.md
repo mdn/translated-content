@@ -13,50 +13,54 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Récupère l'objet <code><a href="/fr/docs/Web/API/Window">Window</a></code> pour la page d'arrière-plan qui s'exécute dans l'extension en cours.</p>
+Récupère l'objet [`Window`](/fr/docs/Web/API/Window) pour la page d'arrière-plan qui s'exécute dans l'extension en cours.
 
-<p>Cela consiste un moyen pratique pour d'autres scripts d'extension privilégiés d'accéder directement à la portée du script d'arrière plan. Cela leur permet d'accéder aux variables ou aux fonctions d'appel définies dans cette portée. Le "script privilégié" inclut ici les scripts s'exécutant dans les  <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages">pages d'options</a>, ou les scripts s'exécutant dans les fenêtres d'<a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">action du navigateur</a> ou d'<a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Page_actions">action page</a>, mais n'inclut pas les <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">scripts de contenu</a>.</p>
+Cela consiste un moyen pratique pour d'autres scripts d'extension privilégiés d'accéder directement à la portée du script d'arrière plan. Cela leur permet d'accéder aux variables ou aux fonctions d'appel définies dans cette portée. Le "script privilégié" inclut ici les scripts s'exécutant dans les  [pages d'options](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages), ou les scripts s'exécutant dans les fenêtres d'[action du navigateur](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2) ou d'[action page](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Page_actions), mais n'inclut pas les [scripts de contenu](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts).
 
-<p>Notez que les variables déclarées à l'aide de <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/const">const</a></code> ou <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/let">let</a></code> n'apparaissaient pas dans l'objet window retourné par cette fonction.</p>
+Notez que les variables déclarées à l'aide de [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const) ou [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let) n'apparaissaient pas dans l'objet window retourné par cette fonction.
 
-<p><strong>Notez également que cette méthode ne peut pas être utilisée dans une fenêtre privée dans Firefox</strong>—Elle renvoie toujours <code>null</code>. Pour plus d'informations voir le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1329304">bug lié à bugzilla</a>.</p>
+**Notez également que cette méthode ne peut pas être utilisée dans une fenêtre privée dans Firefox**—Elle renvoie toujours `null`. Pour plus d'informations voir le [bug lié à bugzilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1329304).
 
-<p>Si la page d'arrière plan est une page événement, le système s'assuera qu'il est chargé avant de résoudre la promise.</p>
+Si la page d'arrière plan est une page événement, le système s'assuera qu'il est chargé avant de résoudre la promise.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingPage = browser.runtime.getBackgroundPage()
-</pre>
+```js
+var gettingPage = browser.runtime.getBackgroundPage()
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>None.</p>
+None.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec l'objet <a href="/fr/docs/User%3Amaybe/webidl_mdn/Window">Window</a> pour la page d'arrière plan, s'il y en a une. Si l'extension n'inclut pas de page d'arrière-plan, la promise est rejetée avec un message d'erreur.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec l'objet [Window](/fr/docs/User%3Amaybe/webidl_mdn/Window) pour la page d'arrière plan, s'il y en a une. Si l'extension n'inclut pas de page d'arrière-plan, la promise est rejetée avec un message d'erreur.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.runtime.getBackgroundPage")}}</p>
+{{Compat("webextensions.api.runtime.getBackgroundPage")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Supposons un <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">script d'arrière-plan</a> définisse une fonction <code>foo()</code>:</p>
+Supposons un [script d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) définisse une fonction `foo()`:
 
-<pre class="brush: js">// background.js
+```js
+// background.js
 
 function foo() {
   console.log("I'm defined in background.js");
-}</pre>
+}
+```
 
-<p>Un script exécuté dans un <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popup</a> peut appeler cette fonction directement comme ceci :</p>
+Un script exécuté dans un [popup](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2) peut appeler cette fonction directement comme ceci :
 
-<pre class="brush: js">// popup.js
+```js
+// popup.js
 
 function onGot(page) {
   page.foo();
@@ -67,44 +71,42 @@ function onError(error) {
 }
 
 var getting = browser.runtime.getBackgroundPage();
-getting.then(onGot, onError);</pre>
+getting.then(onGot, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
-
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
-//
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
-//
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
-</div>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+>
+> <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+> //
+> // Redistribution and use in source and binary forms, with or without
+> // modification, are permitted provided that the following conditions are
+> // met:
+> //
+> //    * Redistributions of source code must retain the above copyright
+> // notice, this list of conditions and the following disclaimer.
+> //    * Redistributions in binary form must reproduce the above
+> // copyright notice, this list of conditions and the following disclaimer
+> // in the documentation and/or other materials provided with the
+> // distribution.
+> //    * Neither the name of Google Inc. nor the names of its
+> // contributors may be used to endorse or promote products derived from
+> // this software without specific prior written permission.
+> //
+> // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+> // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+> // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+> // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+> // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+> // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+> // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+> // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+> // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+> // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+> // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+> </pre></div>

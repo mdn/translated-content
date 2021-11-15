@@ -8,22 +8,22 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">Type</th>
-   <td><code>Objet</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Obligatoire</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Exemple</th>
-   <td>
-    <pre class="brush: json">
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">Type</th>
+      <td><code>Objet</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Obligatoire</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Exemple</th>
+      <td>
+        <pre class="brush: json">
 "commands": {
   "toggle-feature": {
     "suggested_key": {
@@ -32,44 +32,42 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
     },
     "description": "Send a 'toggle-feature' event"
   }
-}</pre>
-   </td>
-  </tr>
- </tbody>
+}</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Utilisez la clé <strong><code>commands</code></strong> pour définir un ou plusieurs raccourcis clavier pour votre extension.</p>
+Utilisez la clé **`commands`** pour définir un ou plusieurs raccourcis clavier pour votre extension.
 
-<p>Chaque raccourci clavier est défini avec un <strong>nom</strong>, une <strong>combination de clé</strong>, et un <strong>description</strong>. Une fois que vous avez défini des commandes dans le fichier <code>manifest.json</code>, de votre extension, vous pouvez écouter leurs combinaisons de touches associées avec l'API JavaScript  {{WebExtAPIRef("commands")}}.</p>
+Chaque raccourci clavier est défini avec un **nom**, une **combination de clé**, et un **description**. Une fois que vous avez défini des commandes dans le fichier `manifest.json`, de votre extension, vous pouvez écouter leurs combinaisons de touches associées avec l'API JavaScript  {{WebExtAPIRef("commands")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La clé <code>commands</code> est un objet et chaque raccourci est une propriété de celui-ci. <strong>Le nom de la propriété est le nom du raccourci</strong>.</p>
+La clé `commands` est un objet et chaque raccourci est une propriété de celui-ci. **Le nom de la propriété est le nom du raccourci**.
 
-<p>Chaque raccourci est lui-même un objet, qui possède jusqu'à deux propriétés :</p>
+Chaque raccourci est lui-même un objet, qui possède jusqu'à deux propriétés :
 
-<ul>
- <li><code>suggested_key</code> : définit la combinaison de touches</li>
- <li><code>description</code> : une chaîne qui décrit ce raccourci</li>
-</ul>
+- `suggested_key` : définit la combinaison de touches
+- `description` : une chaîne qui décrit ce raccourci
 
-<p>La propriété <code>suggested_key</code> est elle-même un objet pouvant avoir l'une des propriétés suivantes et qui sont toutes des chaînes :</p>
+La propriété `suggested_key` est elle-même un objet pouvant avoir l'une des propriétés suivantes et qui sont toutes des chaînes :
 
-<ul>
- <li><code>"default"</code></li>
- <li><code>"mac"</code></li>
- <li><code>"linux"</code></li>
- <li><code>"windows"</code></li>
- <li><code>"chromeos"</code></li>
- <li><code>"android"</code></li>
- <li><code>"ios"</code></li>
-</ul>
+- `"default"`
+- `"mac"`
+- `"linux"`
+- `"windows"`
+- `"chromeos"`
+- `"android"`
+- `"ios"`
 
-<p>La valeur de chaque propriété est le raccourci clavier pour la commande sur la plateforme donnée, sous la forme d'une chaîne contenant les touches séparées par "<code>+</code>". La valeur de <code>"default"</code> est utilisée sur toutes les plateformes qui ne sont pas listées explicitement.</p>
+La valeur de chaque propriété est le raccourci clavier pour la commande sur la plateforme donnée, sous la forme d'une chaîne contenant les touches séparées par "`+`". La valeur de `"default"` est utilisée sur toutes les plateformes qui ne sont pas listées explicitement.
 
-<p>Par exemple :</p>
+Par exemple :
 
-<pre class="brush: json">"commands": {
+```json
+"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Alt+Shift+U",
@@ -82,101 +80,136 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
       "default": "Ctrl+Shift+Y"
     }
   }
-}</pre>
+}
+```
 
-<p>Cela définit deux raccourcis :</p>
+Cela définit deux raccourcis :
 
-<ul>
- <li>une nommée <code>"toggle-feature"</code>, accessible à l'aide de <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> sur Linux et <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> sur toutes les autres plateformes</li>
- <li>une nommée <code>"do-another-thing"</code>, accessible à l'aide de <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd> sur toutes les plateformes.</li>
-</ul>
+- une nommée `"toggle-feature"`, accessible à l'aide de
 
-<p>Vous pouvez alors écouter la commande <code>"toggle-feature"</code> avec un code comme celui-ci :</p>
+  <kbd>Ctrl</kbd>
 
-<pre class="brush: js">browser.commands.onCommand.addListener(function(command) {
+  \+
+
+  <kbd>Shift</kbd>
+
+  \+
+
+  <kbd>U</kbd>
+
+  sur Linux et
+
+  <kbd>Alt</kbd>
+
+  \+
+
+  <kbd>Shift</kbd>
+
+  \+
+
+  <kbd>U</kbd>
+
+  sur toutes les autres plateformes
+
+- une nommée `"do-another-thing"`, accessible à l'aide de
+
+  <kbd>Ctrl</kbd>
+
+  \+
+
+  <kbd>Shift</kbd>
+
+  \+
+
+  <kbd>Y</kbd>
+
+  sur toutes les plateformes.
+
+Vous pouvez alors écouter la commande `"toggle-feature"` avec un code comme celui-ci :
+
+```js
+browser.commands.onCommand.addListener(function(command) {
   if (command == "toggle-feature") {
     console.log("toggling the feature!");
   }
-});</pre>
+});
+```
 
-<h3 id="Raccourcis_spéciaux">Raccourcis spéciaux</h3>
+### Raccourcis spéciaux
 
-<p>Il existe 3 <strong>raccourci spéciaux avec des actions par défaut</strong>, pour lesquels l'événement  {{WebExtAPIRef("commands.onCommand")}} n'est pas déclenché :</p>
+Il existe 3 **raccourci spéciaux avec des actions par défaut**, pour lesquels l'événement  {{WebExtAPIRef("commands.onCommand")}} n'est pas déclenché :
 
-<ul>
- <li><code>_execute_browser_action</code>: fonctionne comme un clic sur une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_action">action de navigateur</a> de l'extension.</li>
- <li><code>_execute_page_action</code>: fonctionne comme un clic sur une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Page_actions">action de page</a> de l'extension.</li>
- <li><code>_execute_sidebar_action</code>: ouvre le <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Sidebars">panneau latéral</a> de l'extension. Uniquement pris en charge par Firefox et uniquement à partir de Firefox version 54.</li>
-</ul>
+- `_execute_browser_action`: fonctionne comme un clic sur une [action de navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_action) de l'extension.
+- `_execute_page_action`: fonctionne comme un clic sur une [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Page_actions) de l'extension.
+- `_execute_sidebar_action`: ouvre le [panneau latéral](/fr/docs/Mozilla/Add-ons/WebExtensions/Sidebars) de l'extension. Uniquement pris en charge par Firefox et uniquement à partir de Firefox version 54.
 
-<p>Par exemple, ce JSON définit une combinaison de touches qui clique sur l'action du navigateur de l'extension :</p>
+Par exemple, ce JSON définit une combinaison de touches qui clique sur l'action du navigateur de l'extension :
 
-<pre class="brush: js">"commands": {
+```js
+"commands": {
   "_execute_browser_action": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y"
     }
   }
-}</pre>
+}
+```
 
-<h2 id="Les_valeurs_de_raccourci">Les valeurs de raccourci</h2>
+## Les valeurs de raccourci
 
-<p>Il existe deux formats valides pour les touches de raccourci : comme une combinaison de touches ou comme une clé multimédia.</p>
+Il existe deux formats valides pour les touches de raccourci : comme une combinaison de touches ou comme une clé multimédia.
 
-<h3 id="Combinaisons_de_touches">Combinaisons de touches</h3>
+### Combinaisons de touches
 
-<p>Sur Mac, <code>"Ctrl"</code> est interprété comme <code>"Command"</code>, donc si vous avez réellement besoin de <code>"Ctrl"</code>, spécifiez <code>"MacCtrl"</code>.</p>
+Sur Mac, `"Ctrl"` est interprété comme `"Command"`, donc si vous avez réellement besoin de `"Ctrl"`, spécifiez `"MacCtrl"`.
 
-<p>Les combinaisons de touches doivent être composées de deux ou trois touches :</p>
+Les combinaisons de touches doivent être composées de deux ou trois touches :
 
-<ol>
- <li><strong>modificateur</strong> (obligatoire, à l'exception des touches de fonction). Il peut s'agir de <code>"Ctrl"</code>, <code>"Alt"</code>, <code>"Command"</code>, ou <code>"MacCtrl"</code>.</li>
- <li><strong>second modificateur</strong> (facultatif). S'il est fourni, il doit être <code>"Shift"</code> ou (pour Firefox ≥ 63) l'un quelconque des <code>"Ctrl"</code>, <code>"Alt"</code>, <code>"Command"</code>, ou <code>"MacCtrl"</code>. Ne doit pas être le modificateur déjà utilisé comme modificateur principal.</li>
- <li><strong>touche </strong>(obligatoire). Ce peut être l'une des touches :
-  <ul>
-   <li>lettres <code>A</code>–<code>Z</code></li>
-   <li>chiffres <code>0</code>–<code>9</code></li>
-   <li>fonctions <code>F1</code>–<code>F12</code></li>
-   <li><code>Comma</code>(virgule), <code>Period</code>(point), <code>Home</code> (début), <code>End</code> (Fin), <code>PageUp</code>(page précédente), <code>PageDown</code> (page suivante), <code>Space</code> (espace), <code>Insert</code>(inser), <code>Delete</code>(Suppr), <code>Up</code> (haut), <code>Down</code> (bas), <code>Left</code>(gauche), <code>Right</code> (droite)</li>
-  </ul>
- </li>
-</ol>
+1.  **modificateur** (obligatoire, à l'exception des touches de fonction). Il peut s'agir de `"Ctrl"`, `"Alt"`, `"Command"`, ou `"MacCtrl"`.
+2.  **second modificateur** (facultatif). S'il est fourni, il doit être `"Shift"` ou (pour Firefox ≥ 63) l'un quelconque des `"Ctrl"`, `"Alt"`, `"Command"`, ou `"MacCtrl"`. Ne doit pas être le modificateur déjà utilisé comme modificateur principal.
+3.  **touche** (obligatoire). Ce peut être l'une des touches :
 
-<p>La clé est ensuite donnée sous la forme d'une chaîne contenant l'ensemble des valeurs de clé, dans l'ordre indiqué ci-dessus, séparées "<code>+</code>". Par exemple, <code>"Ctrl+Shift+Z"</code>.</p>
+    - lettres `A`–`Z`
+    - chiffres `0`–`9`
+    - fonctions `F1`–`F12`
+    - `Comma`(virgule), `Period`(point), `Home` (début), `End` (Fin), `PageUp`(page précédente), `PageDown` (page suivante), `Space` (espace), `Insert`(inser), `Delete`(Suppr), `Up` (haut), `Down` (bas), `Left`(gauche), `Right` (droite)
 
-<p>Si une combinaison de touches est déjà utilisée par le navigateur (comme <code>"Ctrl+P"</code>) ou par un complément existant, vous ne pouvez pas la remplacer. Vous pouvez le définir, mais votre gestionnaire d'événements ne sera pas appelé lorsque l'utilisateur appuiera sur la combinaison de touches.</p>
+La clé est ensuite donnée sous la forme d'une chaîne contenant l'ensemble des valeurs de clé, dans l'ordre indiqué ci-dessus, séparées "`+`". Par exemple, `"Ctrl+Shift+Z"`.
 
-<h3 id="Touches_médias">Touches médias</h3>
+Si une combinaison de touches est déjà utilisée par le navigateur (comme `"Ctrl+P"`) ou par un complément existant, vous ne pouvez pas la remplacer. Vous pouvez le définir, mais votre gestionnaire d'événements ne sera pas appelé lorsque l'utilisateur appuiera sur la combinaison de touches.
 
-<p>Une alternative est de spécifier le raccourci comme l'une des touches de média suivantes :</p>
+### Touches médias
 
-<ul>
- <li><code>"MediaNextTrack"</code></li>
- <li><code>"MediaPlayPause"</code></li>
- <li><code>"MediaPrevTrack"</code></li>
- <li><code>"MediaStop"</code></li>
-</ul>
+Une alternative est de spécifier le raccourci comme l'une des touches de média suivantes :
 
-<h2 id="Mise_à_jour_des_raccourcis">Mise à jour des raccourcis</h2>
+- `"MediaNextTrack"`
+- `"MediaPlayPause"`
+- `"MediaPrevTrack"`
+- `"MediaStop"`
 
-<p>Les raccourcis peuvent être mis à jour via {{WebExtAPIRef("commands.update()")}}. Les utilisateurs peuvent également mettre à jour les raccourcis via l'option "Gérer les raccourcis d'extension" sur <code>about:addons</code> dans Firefox, comme montré dans <a href="https://bug1303384.bmoattachments.org/attachment.cgi?id=9051647">cette video</a>. Dans Chrome, les utilisateurs peuvent modifier les raccourcis sur <code>chrome://extensions/shortcuts</code>.</p>
+## Mise à jour des raccourcis
 
-<h2 id="Exemple">Exemple</h2>
+Les raccourcis peuvent être mis à jour via {{WebExtAPIRef("commands.update()")}}. Les utilisateurs peuvent également mettre à jour les raccourcis via l'option "Gérer les raccourcis d'extension" sur `about:addons` dans Firefox, comme montré dans [cette video](https://bug1303384.bmoattachments.org/attachment.cgi?id=9051647). Dans Chrome, les utilisateurs peuvent modifier les raccourcis sur `chrome://extensions/shortcuts`.
 
-<p>Définissez un seul raccourci clavier en utilisant uniquement la combinaison de touches par défaut :</p>
+## Exemple
 
-<pre class="brush: json">"commands": {
+Définissez un seul raccourci clavier en utilisant uniquement la combinaison de touches par défaut :
+
+```json
+"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y"
     },
     "description": "Send a 'toggle-feature' event"
   }
-}</pre>
+}
+```
 
-<p>Définissez deux raccourcis clavier, l'un avec une combinaison de touches spécifique à la plate-forme :</p>
+Définissez deux raccourcis clavier, l'un avec une combinaison de touches spécifique à la plate-forme :
 
-<pre class="brush: json">"commands": {
+```json
+"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Alt+Shift+U",
@@ -189,8 +222,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
       "default": "Ctrl+Shift+Y"
     }
   }
-}</pre>
+}
+```
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.manifest.commands")}}</p>
+{{Compat("webextensions.manifest.commands")}}

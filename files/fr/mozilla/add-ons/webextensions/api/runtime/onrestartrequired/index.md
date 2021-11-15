@@ -13,61 +13,53 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onRestartRequired
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Lancé lorsqu'une application ou le périphérique sur lequel elle s'exécute doit être redémarré. L'application devrait fermer toutes ses fenêtres dans les meilleurs délais pour permettre le redémarrage. Si l'application ne fait rien, un redémarrage sera appliqué après une période de grâce de 24 heures. Actuellement, cet événement est uniquement déclenché pour les applications de kiosque Chrome OS.</p>
+Lancé lorsqu'une application ou le périphérique sur lequel elle s'exécute doit être redémarré. L'application devrait fermer toutes ses fenêtres dans les meilleurs délais pour permettre le redémarrage. Si l'application ne fait rien, un redémarrage sera appliqué après une période de grâce de 24 heures. Actuellement, cet événement est uniquement déclenché pour les applications de kiosque Chrome OS.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.runtime.onRestartRequired.addListener(listener)
+```js
+browser.runtime.onRestartRequired.addListener(listener)
 browser.runtime.onRestartRequired.removeListener(listener)
 browser.runtime.onRestartRequired.hasListener(listener)
-</pre>
+```
 
-<p>Les événements ont trois fonctions :</p>
+Les événements ont trois fonctions :
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Ajouter un écouteur à cet événement.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Arrêtez d'écouter cet événement. L'argument <code>listener</code> est l'écouteur à supprimer.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Vérifie si un <code>listener</code> est enregistré pour cet événement. Renvoie <code>true</code> s'il écoute, <code>false</code> sinon.</dd>
-</dl>
+- `addListener(callback)`
+  - : Ajouter un écouteur à cet événement.
+- `removeListener(listener)`
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+- `hasListener(listener)`
+  - : Vérifie si un `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, `false` sinon.
 
-<h2 id="Syntaxe_addListener">Syntaxe addListener</h2>
+## Syntaxe addListener
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>fonction </code></dt>
- <dd>
- <p>Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :</p>
+- `fonction`
 
- <dl>
-  <dt><code>raison</code></dt>
-  <dd>Une valeur {{WebExtAPIRef('runtime.OnRestartRequiredReason')}} — La raison pour laquelle l'événemtn est envoyé.</dd>
- </dl>
- </dd>
-</dl>
+  - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+    - `raison`
+      - : Une valeur {{WebExtAPIRef('runtime.OnRestartRequiredReason')}} — La raison pour laquelle l'événemtn est envoyé.
 
-<p>{{Compat("webextensions.api.runtime.onRestartRequired")}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.runtime.onRestartRequired")}}
 
-<p>{{WebExtExamples}}</p>
+## Exemples
 
-<div class="note"><p><strong>Note :</strong></p>
+{{WebExtExamples}}
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -94,5 +86,4 @@ browser.runtime.onRestartRequired.hasListener(listener)
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

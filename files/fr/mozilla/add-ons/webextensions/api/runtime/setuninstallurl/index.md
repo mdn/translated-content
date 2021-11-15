@@ -13,37 +13,37 @@ tags:
   - setUninstallURL
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/setUninstallURL
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Définit l'URL à visiter lorsque l'extension est déinstallée. Cela peut être utilisé pour nettoyer les données côté serveur, effectuer des analyses ou implémenter des enquêtes. L'URL peut contenir au maximum 255 caractères.</p>
+Définit l'URL à visiter lorsque l'extension est déinstallée. Cela peut être utilisé pour nettoyer les données côté serveur, effectuer des analyses ou implémenter des enquêtes. L'URL peut contenir au maximum 255 caractères.
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var settingUrl = browser.runtime.setUninstallURL(
+```js
+var settingUrl = browser.runtime.setUninstallURL(
   url             // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>url</code></dt>
- <dd><code>string</code>. L'URL à ouvrir après la désinstallation de l'extension. Cette URL doit avoir un schéma <code>http</code> ou <code>https</code>.  Définissez-le sur une chaîne vide pour ne pas ouvrir un nouvel onglet lors de la désinstallation.</dd>
-</dl>
+- `url`
+  - : `string`. L'URL à ouvrir après la désinstallation de l'extension. Cette URL doit avoir un schéma `http` ou `https`.  Définissez-le sur une chaîne vide pour ne pas ouvrir un nouvel onglet lors de la désinstallation.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie sans argument lorsque l'URL a été définie ou rejetée avec un message d'erreur si l'opération a échoué.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque l'URL a été définie ou rejetée avec un message d'erreur si l'opération a échoué.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.runtime.setUninstallURL")}}</p>
+{{Compat("webextensions.api.runtime.setUninstallURL")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">function onSetURL() {
+```js
+function onSetURL() {
   console.log("set uninstall URL");
 }
 
@@ -52,19 +52,18 @@ function onError(error) {
 }
 
 var settingUrl = browser.runtime.setUninstallURL("https://example.org");
-settingUrl.then(onSetURL, onError);</pre>
+settingUrl.then(onSetURL, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -91,5 +90,4 @@ settingUrl.then(onSetURL, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

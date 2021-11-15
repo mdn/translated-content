@@ -10,74 +10,69 @@ tags:
   - register
 translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Utilisez cette fonction pour enregistrer un ou plusieurs scripts de contenu.</p>
+Utilisez cette fonction pour enregistrer un ou plusieurs scripts de contenu.
 
-<p>Il accepte un paramètre, qui est un objet avec des propriétés similaires aux objets donnés dans la clé du manifest <code><a href="/fr/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> (mais notez que <code>content_scripts</code> est un tableau d'objets, tandis que l'argument de <code>register()</code> est un simple objet).</p>
+Il accepte un paramètre, qui est un objet avec des propriétés similaires aux objets donnés dans la clé du manifest [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts) (mais notez que `content_scripts` est un tableau d'objets, tandis que l'argument de `register()` est un simple objet).
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var registering = browser.contentScripts.register(
+```js
+var registering = browser.contentScripts.register(
   contentScriptOptions       // object
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>contentScriptOptions</code></dt>
- <dd>
- <p><code>object</code>. Un objet <code>RegisteredContentScriptOptions</code> représentant les scripts de contenu à enregistrer. Sa syntaxe est similaire à celle des objets du tableau de clés de manifest <code><a href="/fr/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>.  Les différences sont :</p>
+- `contentScriptOptions`
 
- <ul>
-  <li>les noms de propriété utilisent camelCase plutôt que des traits de soulignement (par exemple, <code>excludeMatches</code>, pas <code>exclude_matches</code></li>
-  <li>les propriétés <code>js</code> et <code>css</code> vous permettent d'enregistrer des chaînes ainsi que des URL, leur syntaxe doit donc distinguer ces types.</li>
- </ul>
+  - : `object`. Un objet `RegisteredContentScriptOptions` représentant les scripts de contenu à enregistrer. Sa syntaxe est similaire à celle des objets du tableau de clés de manifest [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts).  Les différences sont :
 
- <p>L'objet <code>RegisteredContentScriptOptions</code> a les propriétés suivantes :</p>
+    - les noms de propriété utilisent camelCase plutôt que des traits de soulignement (par exemple, `excludeMatches`, pas `exclude_matches`
+    - les propriétés `js` et `css` vous permettent d'enregistrer des chaînes ainsi que des URL, leur syntaxe doit donc distinguer ces types.
 
- <dl>
-  <dt><code>allFrames</code>{{optional_inline}}</dt>
-  <dd>Identique à <code>all_frames</code> dans la clé <code><a href="/fr/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>.</dd>
-  <dt><code>css</code>{{optional_inline}}</dt>
-  <dd>Un tableau d'objets. Chaque objet possède soit une propriété nommée <code>file</code>, qui est une URL commençant par manifest.json de l'extension et pointant vers un fichier CSS à enregistrer, soit une propriété nommée <code>code</code>, qui est un code CSS à enregistrer.</dd>
-  <dt><code>excludeGlobs</code>{{optional_inline}}</dt>
-  <dd>Identique à <code>exclude_globs</code> dans la clé <code><a href="/fr/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>.</dd>
-  <dt><code>excludeMatches</code>{{optional_inline}}</dt>
-  <dd>Identique à <code>exclude_matches</code> dans la clé <code><a href="/fr/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>.</dd>
-  <dt><code>includeGlobs</code>{{optional_inline}}</dt>
-  <dd>Identique à <code>include_globs</code> dans la clé <code><a href="/fr/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>.</dd>
-  <dt><code>js</code>{{optional_inline}}</dt>
-  <dd>Un tableau d'objets. Chaque objet possède soit une propriété nommée <code>file</code>, qui est une URL commençant par manifest.json de l'extension et pointant vers un fichier JavaScript à enregistrer, soit une propriété nommée <code>code</code>, qui est du code JavaScript à enregistrer.</dd>
-  <dt><code>matchAboutBlank</code>{{optional_inline}}</dt>
-  <dd>Identique à <code>match_about_blank</code> dans la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>.</dd>
-  <dt><code>matches</code></dt>
-  <dd>Identique à <code>matches</code> dans la clé <code><a href="/fr/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>.</dd>
-  <dt><code>runAt</code>{{optional_inline}}</dt>
-  <dd>Identique à <code>run_at</code> dans la clé <code><a href="/fr/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>.</dd>
- </dl>
- </dd>
-</dl>
+    L'objet `RegisteredContentScriptOptions` a les propriétés suivantes :
 
-<h3 id="Return_value">Return value</h3>
+    - `allFrames`{{optional_inline}}
+      - : Identique à `all_frames` dans la clé [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts).
+    - `css`{{optional_inline}}
+      - : Un tableau d'objets. Chaque objet possède soit une propriété nommée `file`, qui est une URL commençant par manifest.json de l'extension et pointant vers un fichier CSS à enregistrer, soit une propriété nommée `code`, qui est un code CSS à enregistrer.
+    - `excludeGlobs`{{optional_inline}}
+      - : Identique à `exclude_globs` dans la clé [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts).
+    - `excludeMatches`{{optional_inline}}
+      - : Identique à `exclude_matches` dans la clé [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts).
+    - `includeGlobs`{{optional_inline}}
+      - : Identique à `include_globs` dans la clé [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts).
+    - `js`{{optional_inline}}
+      - : Un tableau d'objets. Chaque objet possède soit une propriété nommée `file`, qui est une URL commençant par manifest.json de l'extension et pointant vers un fichier JavaScript à enregistrer, soit une propriété nommée `code`, qui est du code JavaScript à enregistrer.
+    - `matchAboutBlank`{{optional_inline}}
+      - : Identique à `match_about_blank` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
+    - `matches`
+      - : Identique à `matches` dans la clé [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts).
+    - `runAt`{{optional_inline}}
+      - : Identique à `run_at` dans la clé [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts).
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet {{WebExtAPIRef("contentScripts.RegisteredContentScript")}} que vous pouvez utiliser pour annuler l'enregistrement des scripts de contenu.</p>
+### Return value
 
-<p>Actuellement, les scripts de contenu ne sont pas enregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts de contenu ont été enregistrés) est déchargée, vous devez donc enregistrer un script de contenu depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts de contenu restent enregistrés.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef("contentScripts.RegisteredContentScript")}} que vous pouvez utiliser pour annuler l'enregistrement des scripts de contenu.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+Actuellement, les scripts de contenu ne sont pas enregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts de contenu ont été enregistrés) est déchargée, vous devez donc enregistrer un script de contenu depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts de contenu restent enregistrés.
 
-<p>{{Compat("webextensions.api.contentScripts.register", 10)}}</p>
+## Compatibilité du navigateur
 
-<h2 id="Exemples">Exemples</h2>
+{{Compat("webextensions.api.contentScripts.register", 10)}}
 
-<p>Cet exemple enregistre le script de contenu <code>defaultCode</code>  pour toutes les URL <code>.org</code> :</p>
+## Exemples
 
-<pre class="brush: js">const defaultHosts = "*://*.org/*";
-const defaultCode = "document.body.innerHTML = '&lt;h1&gt;This page has been eaten&lt;h1&gt;'";
+Cet exemple enregistre le script de contenu `defaultCode`  pour toutes les URL `.org` :
+
+```js
+const defaultHosts = "*://*.org/*";
+const defaultCode = "document.body.innerHTML = '<h1>This page has been eaten<h1>'";
 
 async function register(hosts, code) {
 
@@ -89,16 +84,18 @@ async function register(hosts, code) {
 
 }
 
-var registered = register(defaultHosts, defaultCode);</pre>
+var registered = register(defaultHosts, defaultCode);
+```
 
-<p>Ce code enregistre le fichier JS à l'adresse content_scripts/example.js:</p>
+Ce code enregistre le fichier JS à l'adresse content_scripts/example.js:
 
-<pre class="brush: js">const scriptObj = await browser.contentScripts.register({
+```js
+const scriptObj = await browser.contentScripts.register({
   "js": [{file: "/content_scripts/example.js"}],
-  "matches": ["&lt;all_urls&gt;"],
+  "matches": ["<all_urls>"],
   "allFrames": true,
   "runAt": "document_start"
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

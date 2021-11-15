@@ -11,41 +11,41 @@ tags:
   - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Récupère un objet {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} contenant des informations sur l'extension spécifiée.</p>
+Récupère un objet {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} contenant des informations sur l'extension spécifiée.
 
-<p>Cette API requière la <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permission API</a> "management"</p>
+Cette API requière la [permission API](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management"
 
-<p>Il s'agit d'une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var gettingInfo = browser.management.get(
+```js
+var gettingInfo = browser.management.get(
   id                  // string
 )
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>id</code></dt>
- <dd><code>string</code>. l'ID de l'extension dont vous souhaitez récupérer les informations.</dd>
-</dl>
+- `id`
+  - : `string`. l'ID de l'extension dont vous souhaitez récupérer les informations.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet  {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} , contenant les informations sur l'extension. La promise sera rejetée si aucune extension avec l'ID donné n'est installée ou si l'appelant ne peut pas accéder à l'extension.</p>
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet  {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} , contenant les informations sur l'extension. La promise sera rejetée si aucune extension avec l'ID donné n'est installée ou si l'appelant ne peut pas accéder à l'extension.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.management.get")}}</p>
+{{Compat("webextensions.api.management.get")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Enregistrez le nom de l'extension dont l'ID est "my-add-on":</p>
+Enregistrez le nom de l'extension dont l'ID est "my-add-on":
 
-<pre class="brush: js">var id = "my-add-on";
+```js
+var id = "my-add-on";
 
 function got(info) {
   console.log(info.name);
@@ -53,19 +53,17 @@ function got(info) {
 
 var getting = browser.management.get(id);
 getting.then(got);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/extensions/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/management"><code>chrome.management</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -92,5 +90,4 @@ getting.then(got);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

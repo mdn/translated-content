@@ -13,77 +13,75 @@ tags:
   - setBadgeText
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Définit le texte du badge pour l'action du navigateur. Le badge est affiché en haut de l'icône.</p>
+Définit le texte du badge pour l'action du navigateur. Le badge est affiché en haut de l'icône.
 
-<p>Les onglets sans texte de badge spécifique hériteront du texte global du badge, qui est <code>""</code> par défaut.</p>
+Les onglets sans texte de badge spécifique hériteront du texte global du badge, qui est `""` par défaut.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">browser.browserAction.setBadgeText(
+```js
+browser.browserAction.setBadgeText(
   details // object
 )
-</pre>
+```
 
-<p>Cette API est également disponible sous <code>chrome.browserAction.setBadgeText()</code>.</p>
+Cette API est également disponible sous `chrome.browserAction.setBadgeText()`.
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code></p>
- <dl>
-  <dt><code>text</code></dt>
-  <dd>
-  <p><code>string</code> or <code>null</code>. N'importe quel nombre de caractères peut être passé, mais seulement quatre environ peuvent tenir dans l'espace.</p>
+- `details`
 
-  <p>Utilisez une chaîne vide - <code>""</code> - si vous ne voulez pas de badge.</p>
+  - : `object`
 
-  <p>Si un <code>tabId</code> est spécifié, <code>null</code> supprime le texte du badge spécifique à l'onglet afin que l'onglet hérite du texte global du badge. Dans le cas contraire, le texte du badge global devient <code>""</code>.</p>
+    - `text`
 
-  <p>Si un <code>windowId</code> est spécifié, <code>null</code> supprime le texte du badge spécifique à la fenêtre afin que l'onglet hérite du texte global du badge. Dans le cas contraire, le texte du badge global devient <code>""</code>.</p>
-  </dd>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Définir le texte du badge uniquement pour l'onglet donné. Le texte est réinitialisé lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Définir le texte du badge pour la fenêtre donnée.</dd>
- </dl>
- </dd>
-</dl>
+      - : `string` or `null`. N'importe quel nombre de caractères peut être passé, mais seulement quatre environ peuvent tenir dans l'espace.
 
-<ul>
- <li>si <code>windowId</code> et <code>tabId</code> sont tous les deux fournis, la fonction échoue.</li>
- <li>si <code>windowId</code> et <code>tabId</code> sont tous les deux omis, le badge global est défini.</li>
-</ul>
+        Utilisez une chaîne vide - `""` - si vous ne voulez pas de badge.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+        Si un `tabId` est spécifié, `null` supprime le texte du badge spécifique à l'onglet afin que l'onglet hérite du texte global du badge. Dans le cas contraire, le texte du badge global devient `""`.
 
-<p>{{Compat("webextensions.api.browserAction.setBadgeText",2)}}</p>
+        Si un `windowId` est spécifié, `null` supprime le texte du badge spécifique à la fenêtre afin que l'onglet hérite du texte global du badge. Dans le cas contraire, le texte du badge global devient `""`.
 
-<h2 id="Exemples">Exemples</h2>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Définir le texte du badge uniquement pour l'onglet donné. Le texte est réinitialisé lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.
+    - `windowId`{{optional_inline}}
+      - : `integer`. Définir le texte du badge pour la fenêtre donnée.
 
-<p>Ajouter un badge indiquant combien de fois l'utilisateur a cliqué sur le bouton : </p>
+<!---->
 
-<pre class="brush: js">var clicks = 0;
+- si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue.
+- si `windowId` et `tabId` sont tous les deux omis, le badge global est défini.
+
+## Compatibilité du navigateur
+
+{{Compat("webextensions.api.browserAction.setBadgeText",2)}}
+
+## Exemples
+
+Ajouter un badge indiquant combien de fois l'utilisateur a cliqué sur le bouton :
+
+```js
+var clicks = 0;
 
 function increment() {
   browser.browserAction.setBadgeText({text: (++clicks).toString()});
 }
 
-browser.browserAction.onClicked.addListener(increment);</pre>
+browser.browserAction.onClicked.addListener(increment);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+>
+> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
-
-<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -110,5 +108,4 @@ browser.browserAction.onClicked.addListener(increment);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

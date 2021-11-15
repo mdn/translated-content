@@ -11,41 +11,35 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>L'API <code>devtools.network</code> permet à une extension devtools d'obtenir des informations sur les demandes de réseau associées à la fenêtre à laquelle les devtools sont attachés (la fenêtre inspectée).</p>
+L'API `devtools.network` permet à une extension devtools d'obtenir des informations sur les demandes de réseau associées à la fenêtre à laquelle les devtools sont attachés (la fenêtre inspectée).
 
-<p>Comme toutes les APIs de devtools, cette API est uniquement disponible pour le code exécuté dans le document défini dans la clé <a href="/fr/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a> du manifest.json, ou dans d'autres documents de devtools créés par l'extension (tel que le document du panneau). Voir <a href="/fr/Add-ons/WebExtensions/Extending_the_developer_tools">Extension des outils de développement</a> pour plus d'informations.</p>
+Comme toutes les APIs de devtools, cette API est uniquement disponible pour le code exécuté dans le document défini dans la clé [devtools_page](/fr/Add-ons/WebExtensions/manifest.json/devtools_page) du manifest.json, ou dans d'autres documents de devtools créés par l'extension (tel que le document du panneau). Voir [Extension des outils de développement](/fr/Add-ons/WebExtensions/Extending_the_developer_tools) pour plus d'informations.
 
-<h2 id="Fonctions">Fonctions</h2>
+## Fonctions
 
-<dl>
- <dt><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR">devtools.network.getHAR()</a></dt>
- <dd>Obtenez le  <a href="http://www.softwareishard.com/blog/har-12-spec/#log" rel="noopener">journal HAR</a> pour la page chargée dans l'onglet en cours..</dd>
-</dl>
+- [devtools.network.getHAR()](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR)
+  - : Obtenez le  [journal HAR](http://www.softwareishard.com/blog/har-12-spec/#log) pour la page chargée dans l'onglet en cours..
 
-<h2 id="Evénements">Evénements</h2>
+## Evénements
 
-<dl>
- <dt><code><a href="/fr/Add-ons/WebExtensions/API/devtools.network/onNavigated">devtools.network.onNavigated</a></code></dt>
- <dd>Attiré lorsque l'utilisateur navigue dans la fenêtre inspectée vers une nouvelle page.</dd>
- <dt><code><a href="/fr/Add-ons/WebExtensions/API/devtools.network/onRequestFinished">devtools.network.onRequestFinished</a></code></dt>
- <dd>Lancé lorsque la demande réseau est terminée et que ses détails sont disponibles pour l'extension.</dd>
-</dl>
+- [`devtools.network.onNavigated`](/fr/Add-ons/WebExtensions/API/devtools.network/onNavigated)
+  - : Attiré lorsque l'utilisateur navigue dans la fenêtre inspectée vers une nouvelle page.
+- [`devtools.network.onRequestFinished`](/fr/Add-ons/WebExtensions/API/devtools.network/onRequestFinished)
+  - : Lancé lorsque la demande réseau est terminée et que ses détails sont disponibles pour l'extension.
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("webextensions.api.devtools.network")}}</p>
+{{Compat("webextensions.api.devtools.network")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note :</strong></p>
+> **Note :**
+>
+> Cette API est basée sur l'API Chromium [`chrome.devtools.network`](https://developer.chrome.com/extensions/devtools_network).
 
-<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/devtools_network"><code>chrome.devtools.network</code></a>.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -72,5 +66,4 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>
