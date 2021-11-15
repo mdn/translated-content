@@ -28,5 +28,3 @@ Cette page contient une liste des modifications de [Firefox 1.5](fr/Firefox_1.5)
 
 - [Comment tester la version d'une application en utilisant nsIXULAppInfo](fr/Utilisation_de_nsIXULAppInfo)
 - [MozillaZine](http://kb.mozillazine.org/Dev_:_Extensions_:_Cross-Version_Compatibility_Techniques)
-
-{{ languages( { "en": "en/Adapting_XUL_Applications_for_Firefox\_1.5", "it": "it/Adattare_le_applicazioni_XUL_a_Firefox\_1.5", "ja": "ja/Adapting_XUL_Applications_for_Firefox\_1.5", "pl": "pl/Dostosowanie_aplikacji_XUL_do_Firefoksa\_1.5" } ) }}

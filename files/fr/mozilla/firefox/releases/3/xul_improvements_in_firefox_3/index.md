@@ -74,5 +74,3 @@ Firefox 3 fournit un certain nombre de nouveaux éléments [XUL](/fr/XUL), ainsi
 
 - [XUL](/fr/XUL)
 - [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_développeurs)
-
-{{ languages( { "en": "en/XUL_improvements_in_Firefox\_3", "es": "es/Mejoras_XUL_en_Firefox\_3", "ja": "ja/XUL_improvements_in_Firefox\_3", "pl": "pl/Poprawki_XUL_w_Firefoksie\_3" } ) }}

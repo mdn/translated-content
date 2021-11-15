@@ -27,7 +27,3 @@ Si le support de SSLv2 doit être activé, vous devrez définir avec la valeur `
 ### Détermination du chiffrement disponible
 
 Comme toujours, vous pouvez vérifier le chiffrement supporté — celui qui a été activé ou désactivé — en cherchant « ssl » ou « tls » dans about:config.
-
-
-
-{{ languages( { "en": "en/Security_in_Firefox\_2", "pl": "pl/Bezpiecze\u0144stwo_w_Firefoksie\_2", "zh-tw": "zh_tw/Firefox\_2\_\u7684\u5b89\u5168\u529f\u80fd" } ) }}

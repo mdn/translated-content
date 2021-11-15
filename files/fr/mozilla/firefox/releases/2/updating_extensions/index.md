@@ -39,9 +39,3 @@ Assurez-vous de tester en profondeur votre extension sous Firefox 2 avant de la 
 Mettez à jour la description de votre extension sur <http://addons.mozilla.org>, pour vous assurez que les utilisateurs la retrouveront.
 
 De plus, si le manifeste d'installation contient une [`URL de mise à jour`](fr/Manifestes_d'installation#updateURL), vérifiez qu'elle est valide pour que Firefox puisse automatiquement trouver les nouvelles versions de votre extension. De cette manière, Firefox proposera de l'installer automatiquement au premier lancement de l'extension après le passage à Firefox 2.
-
-Lien Interwiki
-
-
-
-{{ languages( { "en": "en/Updating_extensions_for_Firefox\_2", "ja": "ja/Updating_extensions_for_Firefox\_2", "ko": "ko/Updating_extensions_for_Firefox\_2", "pl": "pl/Aktualizacja_rozszerze\u0144\_do_Firefoksa\_2" } ) }}
