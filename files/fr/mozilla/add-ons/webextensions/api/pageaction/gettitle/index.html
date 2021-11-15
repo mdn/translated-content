@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/getTitle
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var gettingTitle = browser.pageAction.getTitle(
+<pre class="brush: js">var gettingTitle = browser.pageAction.getTitle(
   details // object
 )
 </pre>
@@ -30,9 +30,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/getTitle
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>.</p>
+ <dl>
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. L'ID de l'onglet contenant l'action page dont vous voulez obtenir le titre.</dd>
  </dl>
@@ -64,7 +63,7 @@ browser.pageAction.onClicked.addListener((tab) =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/pageAction"><code>chrome.pageAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> dans le code de Chromium code.</p>
 

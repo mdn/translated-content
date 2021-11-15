@@ -23,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/create
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.menus.create(
+<pre class="brush: js">browser.menus.create(
   createProperties, // object
   function() {...}  // optional function
 )
@@ -33,9 +33,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/create
 
 <dl>
  <dt><code>createProperties</code></dt>
- <dd><code>object</code>. Propriétés pour le nouvel élément de menu.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. Propriétés pour le nouvel élément de menu.</p>
+ <dl>
   <dt><code>checked</code> {{optional_inline}}</dt>
   <dd><code>boolean</code>. L'état initial d'une case à cocher ou d'un élément radio : <code>true</code> pour selected et <code>false</code> pour non sélectionné. Un seul élément radio peut être sélectionné à la fois dans un groupe donné d'éléments radio.</dd>
   <dt><code>command</code> {{optional_inline}}</dt>
@@ -67,19 +66,19 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/create
   <dd>
   <p><code>object</code>. Une ou plusieurs icônes personnalisées à afficher en regard de l'élément. Les icônes personnalisées ne peuvent être définies que pour les éléments apparaissant dans les sous-menus. Cette propriété est un objet avec une propriété pour chaque icône fournie: le nom de la propriété est la taille de l'icône en pixels et sa valeur est un chemin vers l'icône à partir du répertoire racine de l'extension. Le navigateur va essayer de choisir une icône de 16x16 pixels pour un affichage normal ou une icône de 32x32 pixels pour un affichage haute densité. Donc, pour éviter toute mise à l'échelle, vous pouvez spécifier des icônes comme ceci :</p>
 
-  <pre class="brush: json no-line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
-      <span class="key token">"16":</span> <span class="string token">"path/to/geo-16.png"</span><span class="punctuation token">,</span>
-      <span class="key token">"32":</span> <span class="string token">"path/to/geo-32.png"</span>
-    <span class="punctuation token">}</span></code></pre>
+  <pre class="brush: json">"icons": {
+      "16": "path/to/geo-16.png",
+      "32": "path/to/geo-32.png"
+    }</pre>
 
   <p>Vous pouvez également spécifier une seule icône SVG, qui sera mise à l'échelle de manière appropriée :</p>
 
-  <pre class="brush: json no-line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
-      <span class="key token">"16":</span> <span class="string token">"path/to/geo.svg"</span>
-    <span class="punctuation token">}</span></code></pre>
+  <pre class="brush: json">"icons": {
+      "16": "path/to/geo.svg"
+    }</pre>
 
-  <div class="blockIndicator note">
-  <p><strong>Note</strong>: L'élément de menu de niveau supérieur utilise les <a href="/fr/Add-ons/WebExtensions/manifest.json/icons">icônes</a> spécifiées dans le manifest plutôt que ce qui est spécifié avec cette touche.</p>
+  <div class="note">
+  <p><strong>Note :</strong> L'élément de menu de niveau supérieur utilise les <a href="/fr/Add-ons/WebExtensions/manifest.json/icons">icônes</a> spécifiées dans le manifest plutôt que ce qui est spécifié avec cette touche.</p>
   </div>
   </dd>
   <dt><code>id</code> {{optional_inline}}</dt>
@@ -185,7 +184,7 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 <p>{{Compat("webextensions.api.menus.create", 10)}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API <a href="https://developer.chrome.com/extensions/contextMenus"><code>chrome.contextMenus</code></a> de chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> dans le code Chromium.</p>
 </div>

@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_pol
 ---
 <div>{{AddonSidebar}}</div>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row" style="width: 30%;">Type</th>
@@ -22,7 +22,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_pol
   <tr>
    <th scope="row">Exemple</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "content_security_policy": "default-src 'self'"</pre>
    </td>
   </tr>
@@ -39,7 +39,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_pol
  <li>permettre à l’extension de charger des scripts et des objets hors de son paquet, en fournissant leurs URL dans les directives {{CSP("script-src")}} or {{CSP("object-src")}} ;</li>
  <li>permettre à l’extension d’exécuter des scripts en ligne, en <a href="/fr/docs/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script">fournissant le hash du script dans la directive <code>"script-src"</code></a> ;</li>
  <li>permettre à l’extension d’utiliser <code>eval()</code> et des fonctionnalités similaires, en incluant <code>'unsafe-eval'</code> dans la directive {{CSP("script-src")}} ;</li>
- <li>limiter les sources autorisées pour d’autres types de contenu, tels que les images et les feuilles de style, en utilisant la <a href="https://publicsuffix.org/list/" lang="en">directive de politique</a> appropriée.</li>
+ <li>limiter les sources autorisées pour d’autres types de contenu, tels que les images et les feuilles de style, en utilisant la <a href="https://publicsuffix.org/list/">directive de politique</a> appropriée.</li>
 </ul>
 
 <p>Il existe des restrictions sur la politique que vous pouvez spécifier ici :</p>
@@ -57,58 +57,58 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_pol
 
 <h3 id="Examples_valides">Examples valides</h3>
 
-<p>Autoriser les scripts distants de "https://example.com" : <sup>(<em>voir note</em> <a href="https://developer.mozilla.org/fr/Add-ons/WebExtensions/manifest.json/content_security_policy$edit#exampleNote_1">1</a>)</sup></p>
+<p>Autoriser les scripts distants de "https://example.com" : <sup>(<em>voir note</em> <a href="/fr/Add-ons/WebExtensions/manifest.json/content_security_policy$edit#exampleNote_1">1</a>)</sup></p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://example.com; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' https://example.com; object-src 'self'"</pre>
 
 <p>Autoriser les scripts distants depuis n’importe quel sous-domaine de « jquery.com » :</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"</pre>
 
 <p>Autoriser <a href="/fr/Add-ons/WebExtensions/Content_Security_Policy#eval()_et_amis"><code>eval()</code> et ses amis </a>:</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"</pre>
 
 <p>Autoriser le script en ligne : <code>"&lt;script&gt;alert('Hello, world.');&lt;/script&gt;"</code> :</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"</pre>
 
 <p>Conserver le reste de la politique, mais exiger également que les images soient empaquetées avec l’extension :</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"</pre>
 
 <p>Exiger que tous les types de contenu soient empaquetés avec l’extension :</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "default-src 'self'"
+<pre class="brush: json">"content_security_policy": "default-src 'self'"
 </pre>
 
 <h3 id="Exemples_non_valides">Exemples non valides</h3>
 
 <p>Politique qui omet la directive <code>"object-src"</code> :</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://*.jquery.com;"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' https://*.jquery.com;"</pre>
 
 <p>Politique qui omet le mot-clé <code>"self"</code> dans la directive <code>"script-src"</code> :</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src https://*.jquery.com; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src https://*.jquery.com; object-src 'self'"</pre>
 
 <p>Le schéma pour une source distante n’est pas <code>https:</code> :</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' http://code.jquery.com; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' http://code.jquery.com; object-src 'self'"</pre>
 
 <p>Le caractère générique est utilisé avec un domaine générique :</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https://*.blogspot.com; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' https://*.blogspot.com; object-src 'self'"</pre>
 
 <p>La source spécifie un schéma mais aucun hôte :</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' https:; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' https:; object-src 'self'"</pre>
 
 <p>La directive inclut le mot-clé non pris en charge <code>'unsafe-inline'</code> :</p>
 
-<pre class="brush: json no-line-numbers">"content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self'"</pre>
+<pre class="brush: json">"content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self'"</pre>
 
-<p><span id="exampleNote_1">1. <em>Note : l</em></span><em>es exemples valides montrent l’utilisation correcte des clés dans CSP.<span> </span>Toutefois, les extensions avec </em><span><em><code>'unsafe-eval'</code>, <code>'unsafe-inline'</code>, des blobs, des scripts ou des sources distantes dans leur CSP ne sont pas autorisées à être répertoriées sur addons.mozilla.org en raison de problèmes de sécurité majeurs.</em></span></p>
+<p>1. <em>Note : l</em><em>es exemples valides montrent l’utilisation correcte des clés dans CSP. Toutefois, les extensions avec </em><em><code>'unsafe-eval'</code>, <code>'unsafe-inline'</code>, des blobs, des scripts ou des sources distantes dans leur CSP ne sont pas autorisées à être répertoriées sur addons.mozilla.org en raison de problèmes de sécurité majeurs.</em></p>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 

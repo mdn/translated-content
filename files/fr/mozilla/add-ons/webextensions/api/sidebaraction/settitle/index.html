@@ -30,7 +30,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.sidebarAction.setTitle(
+<pre class="brush: js">browser.sidebarAction.setTitle(
   details // object
 )
 </pre>
@@ -39,12 +39,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. Un objet avec les propriétés suivantes .</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. Un objet avec les propriétés suivantes .</p>
+ <dl>
   <dt><code>title</code></dt>
-  <dd><code>string</code> ou <code>null</code>. Le nouveau titre de la barre latérale.</dd>
-  <dd>
+  <dd><p><code>string</code> ou <code>null</code>. Le nouveau titre de la barre latérale.</p>
   <p>si le <code>titre</code>  est une chaîne vide, le titre utilisé sera le nom de l'extension, mais {{WebExtAPIRef("sidebarAction.getTitle")}} fournira toujours la chaîne vide.</p>
 
   <p>Si le <code>titre</code> est <code>null</code>, alors un titre précédemment défini sera supprimé, de sorte que :</p>
@@ -86,7 +84,7 @@ browser.browserAction.onClicked.addListener(setTitleForTab);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Opera <a href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a>.</p>
 </div>

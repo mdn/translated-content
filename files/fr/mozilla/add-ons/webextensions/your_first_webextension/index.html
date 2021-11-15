@@ -10,8 +10,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 <div>{{AddonSidebar}}</div>
 
-<div class="blockIndicator note">
-<p>Si vous connaissez déjà les concepts de base des extensions de navigateur, vous pouvez directement consulter <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension"> afin de voir comment les fichiers d'extension sont assemblés</a>. Ensuite, utilisez la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions#reference">documentation de référence</a> pour commencer la construction de votre extension. Visitez l'<a href="https://extensionworkshop.com/?utm_source=developer.mozilla.org&amp;utm_medium=documentation&amp;utm_campaign=your-first-extension">atelier sur les extensions de Firefox</a> pour en savoir plus sur le processus de test et de publication des WebExtensions pour Firefox.</p>
+<div class="note">
+<p><strong>Note :</strong> Si vous connaissez déjà les concepts de base des extensions de navigateur, vous pouvez directement consulter <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension"> afin de voir comment les fichiers d'extension sont assemblés</a>. Ensuite, utilisez la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions#reference">documentation de référence</a> pour commencer la construction de votre extension. Visitez l'<a href="https://extensionworkshop.com/?utm_source=developer.mozilla.org&amp;utm_medium=documentation&amp;utm_campaign=your-first-extension">atelier sur les extensions de Firefox</a> pour en savoir plus sur le processus de test et de publication des WebExtensions pour Firefox.</p>
 </div>
 
 <p>Cet article vous montre comment créer une extension Firefox, du début à la fin. L'extension ajoute une bordure de couleur rouge sur toutes les pages chargées depuis le site "mozilla.org" ou n'importe lequel de ses sous-domaines.</p>
@@ -66,7 +66,7 @@ cd borderify</pre>
 </ul>
 
 <div class="warning">
-<p><a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id">Dans certaines situations, vous devez établir un identifiant pour votre extension</a>. Si vous avez besoin d'établir un identifiant pour votre extension, incluez la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> dans <code>manifest.json</code> et définissez sa propriété <code>gecko.id</code> :</p>
+<p><strong>Attention :</strong> <a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id">Dans certaines situations, vous devez établir un identifiant pour votre extension</a>. Si vous avez besoin d'établir un identifiant pour votre extension, incluez la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> dans <code>manifest.json</code> et définissez sa propriété <code>gecko.id</code> :</p>
 
 <pre class="brush: json ">"browser_specific_settings": {
   "gecko": {
@@ -133,7 +133,7 @@ cd borderify</pre>
 <p>{{EmbedYouTube("rxBQl2Z9IBQ")}}</p>
 
 <div class="note">
-<p>Toutefois, n'essayez pas ce module sur addons.mozilla.org ! Les scripts de contenu sont bloqués sur ce domaine.</p>
+<p><strong>Note :</strong> Toutefois, n'essayez pas ce module sur addons.mozilla.org ! Les scripts de contenu sont bloqués sur ce domaine.</p>
 </div>
 
 <p>Expérimentez un peu en modifiant le contenu du script, en changeant par exemple la couleur de la bordure ou en altérant le contenu de la page. Puis sauvegardez le content script, rechargez les fichiers du module en cliquant sur le bouton « Recharger » dans about:debugging. Les changements sont immédiats :</p>

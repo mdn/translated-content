@@ -20,12 +20,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
 <div></div>
 
 <div>
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var highlighting = browser.tabs.highlight(
+<pre class="brush: js">var highlighting = browser.tabs.highlight(
   highlightInfo         // object
 )
 </pre>
@@ -34,15 +34,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
 
 <dl>
  <dt><code>highlightInfo</code></dt>
- <dd><code>object</code>.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>.</p>
+ <dl>
   <dt><code>windowId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. ID de la fenêtre contenant les onglets.</dd>
   <dt><code>populate</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Par défaut la valeur est <code>true</code>. S'il est défini sur <code>false</code>, l'objet {{WebExtAPIRef('windows.Window')}} n'aura pas de propriété <code>tabs</code> contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre.
+  <dd><p><code>boolean</code>. Par défaut la valeur est <code>true</code>. S'il est défini sur <code>false</code>, l'objet {{WebExtAPIRef('windows.Window')}} n'aura pas de propriété <code>tabs</code> contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre.</p>
   <div class="note">
-  <p><strong>Note</strong>: Remplir la fenêtre (le comportement par défaut) peut être une opération coûteuse s'il y a beaucoup d'onglets. Pour de meilleures performances, il est recommandé de définir manuellement configuré <code>populate</code> à <code>false</code> si vous n'avez pas besoin des détails de l'onglet.</p>
+  <p><strong>Note :</strong> Remplir la fenêtre (le comportement par défaut) peut être une opération coûteuse s'il y a beaucoup d'onglets. Pour de meilleures performances, il est recommandé de définir manuellement configuré <code>populate</code> à <code>false</code> si vous n'avez pas besoin des détails de l'onglet.</p>
   </div>
   </dd>
   <dt><code>tabs</code></dt>
@@ -53,7 +52,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
 
 <h3 id="Valeur_retournée">Valeur retournée</h3>
 
-<p>Une <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>  qui sera remplie avec un objet  {{WebExtAPIRef('windows.Window')}} contenant des détails sur la fenêtre dont les onglets ont été mis en surbrillance. Si la fenêtre n'a pas pu être trouvée ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>  qui sera remplie avec un objet  {{WebExtAPIRef('windows.Window')}} contenant des détails sur la fenêtre dont les onglets ont été mis en surbrillance. Si la fenêtre n'a pas pu être trouvée ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
 
 <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
 
@@ -61,7 +60,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

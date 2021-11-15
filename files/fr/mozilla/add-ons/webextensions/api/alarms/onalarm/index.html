@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.alarms.onAlarm.addListener(listener)
+<pre class="brush: js">browser.alarms.onAlarm.addListener(listener)
 browser.alarms.onAlarm.removeListener(listener)
 browser.alarms.onAlarm.hasListener(listener)
 </pre>
@@ -44,7 +44,7 @@ browser.alarms.onAlarm.hasListener(listener)
  <dd>
  <p>La fonction qui sera appelée lorsque l'événement se produira. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>alarm</code></dt>
   <dd>{{WebExtAPIRef('alarms.Alarm')}}. L'alarme qui s'est déclenchée. La propriété <code>Alarm.name</code> pourra être utilisée afin de déterminer l'alarme qui s'est déclenchée.</dd>
  </dl>
@@ -63,18 +63,13 @@ browser.alarms.onAlarm.addListener(handleAlarm);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<dl>
- <dd>
- <dl class="reference-values">
- </dl>
- </dd>
-</dl>
+
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
 <p>{{Compat("webextensions.api.alarms.onAlarm")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a>.</p>
 

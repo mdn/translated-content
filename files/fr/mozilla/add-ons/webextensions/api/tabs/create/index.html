@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/create
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var creating = browser.tabs.create(
+<pre class="brush: js">var creating = browser.tabs.create(
   createProperties   // object
 )
 </pre>
@@ -30,9 +30,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/create
 
 <dl>
  <dt><code>createProperties</code></dt>
- <dd><code>object</code>.Propriétés pour donner le nouvel onglet. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>.Propriétés pour donner le nouvel onglet. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.</p>
+ <dl>
   <dt><code>active</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Si l'onglet doit devenir l'onglet actif dans la fenêtre. Si elle est <code>false</code>, elle n'a aucun effet. N'affecte pas si la fenêtre est mise au point (voir {{WebExtAPIRef('windows.update')}}). Par défaut à  <code>true</code>.</dd>
   <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
@@ -46,20 +45,19 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/create
   <dt><code>pinned</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Si l'onglet doit être épinglé. Par défaut à <code>false</code>.</dd>
   <dt><code>selected</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si l'onglet doit devenir l'onglet sélectionné dans la fenêtre. Par défaut à <code>true</code>.
-  <div class="warning">Cette propriété est obsolète et n'est pas prise en charge dans Firefox. Utilisez  <code>actif</code> à la place.</div>
+  <dd><p><code>boolean</code>. Si l'onglet doit devenir l'onglet sélectionné dans la fenêtre. Par défaut à <code>true</code>.</p>
+  <div class="warning"><p><strong>Attention :</strong> Cette propriété est obsolète et n'est pas prise en charge dans Firefox. Utilisez  <code>actif</code> à la place.</p></div>
   </dd>
   <dt><code>url</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. 'URL permettant de naviguer dans l'onglet initialement. Par défaut à la page Nouvel onglet.</dd>
-  <dd>Les URL complètes doivent inclure un schéma (i.e. 'http://www.google.com', par 'www.google.com').</dd>
-  <dd>Pour des raisons de sécurité, dans Firefox, il se peut que ce ne soit pas une URL privilégiée. Le passage de l'une des URL suivantes échouera :</dd>
-  <dd>
+  <dd><p><code>string</code>. 'URL permettant de naviguer dans l'onglet initialement. Par défaut à la page Nouvel onglet.</p>
+  <p>Les URL complètes doivent inclure un schéma (i.e. 'http://www.google.com', par 'www.google.com').</p>
+  <p>Pour des raisons de sécurité, dans Firefox, il se peut que ce ne soit pas une URL privilégiée. Le passage de l'une des URL suivantes échouera :</p>
   <ul>
    <li>chrome: URLs</li>
    <li>javascript: URLs</li>
    <li>data: URLs</li>
    <li>file: URLs (c'est-à-dire, fichiers sur le système de fichiers, cependant, pour utiliser un fichier empaqueté à l'intérieur de l'extension, voir ci-dessous)</li>
-   <li>privileged about: URLs (par exemple, <code>about:config</code>, <code>about:addons</code>, <code>about:debugging</code>)<span class="hidden"> </span>. Les URL non privilégiées (e.g., <code>about:blank</code>) sont autorisés.</li>
+   <li>privileged about: URLs (par exemple, <code>about:config</code>, <code>about:addons</code>, <code>about:debugging</code>). Les URL non privilégiées (e.g., <code>about:blank</code>) sont autorisés.</li>
    <li>La page Nouvel onglet (<code>about:newtab</code>) peut être ouverte si aucune valeur n'est fournie pour l'URL.</li>
   </ul>
 
@@ -100,7 +98,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>{{Compat("webextensions.api.tabs.create", 10)}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

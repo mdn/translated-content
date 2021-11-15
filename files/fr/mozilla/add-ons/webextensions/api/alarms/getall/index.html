@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var getAlarms = browser.alarms.getAll()
+<pre class="brush: js">var getAlarms = browser.alarms.getAll()
 </pre>
 
 <h3 id="Paramètres">Paramètres</h3>
@@ -30,7 +30,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
 
 <h3 id="Valeur_de_retour">Valeur de retour</h3>
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> dont la valeur de résolution sera un tableau d'objets <code><a href="/fr/Add-ons/WebExtensions/API/alarms/Alarm" title="Information about a single alarm. This object is returned from alarms.get() and alarms.getAll(), and is passed into the alarms.onAlarm listener."><code>Alarm</code></a></code>. Chaque élément de ce tableau représente une alarme active de l'extension. Si aucune alarme n'est active, le tableau sera vide.</p>
+<p>Une <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise"><code>Promise</code></a> dont la valeur de résolution sera un tableau d'objets <a href="/fr/Add-ons/WebExtensions/API/alarms/Alarm"><code>Alarm</code></a>. Chaque élément de ce tableau représente une alarme active de l'extension. Si aucune alarme n'est active, le tableau sera vide.</p>
 
 <h2 id="Exemples">Exemples</h2>
 
@@ -49,7 +49,7 @@ getAlarms.then(gotAll);</pre>
 
 <p>{{Compat("webextensions.api.alarms.getAll")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a>.</p>
 

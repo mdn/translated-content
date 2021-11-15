@@ -28,7 +28,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigat
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.webNavigation.onCreatedNavigationTarget.addListener(
+<pre class="brush: js">browser.webNavigation.onCreatedNavigationTarget.addListener(
   listener,                   // function
   filter                      // optional object
 )
@@ -56,7 +56,7 @@ browser.webNavigation.onCreatedNavigationTarget.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Détails sur l'événement de navigation Voir les <a href="#details">détails</a> ci-dessous.</dd>
  </dl>
@@ -71,7 +71,7 @@ browser.webNavigation.onCreatedNavigationTarget.hasListener(listener)
 
 <h3 id="détails">détails</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>sourceFrameId</code></dt>
  <dd><code>integer</code>. ID de l'image à partir de laquelle la navigation est initiée. 0 indique que le cadre est le contexte de navigation de niveau supérieur de l'onglet, et non un <a href="/fr/docs/Web/HTML/Element/iframe">iframe</a> imbriqué. Une valeur positive indique que la navigation est initiée à partir d'un iframe imbriqué. Les ID de cadre sont uniques pour un onglet et un processus donnés.</dd>
  <dt><code>sourceProcessId</code></dt>
@@ -115,7 +115,7 @@ browser.webNavigation.onCreatedNavigationTarget.addListener(logOnCreatedNavigati
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webNavigation"><code>chrome.webNavigation</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> dans le code de Chromium code.</p>
 

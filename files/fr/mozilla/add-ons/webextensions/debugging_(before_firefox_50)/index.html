@@ -13,8 +13,8 @@ original_slug: Mozilla/Add-ons/WebExtensions/Debogage_(avant_Firefox_50)
 ---
 <div>{{AddonSidebar}}</div>
 
-<div class="blockIndicator note">
-<p>Cet article explique comment vous pouvez déboguer des extensions à l'aide des API WebExtension sur des versions de Firefox antérieures à la version 50.</p>
+<div class="note">
+<p><strong>Note :</strong> Cet article explique comment vous pouvez déboguer des extensions à l'aide des API WebExtension sur des versions de Firefox antérieures à la version 50.</p>
 
 <p>Si vous utilisez Firefox 50 ou version ultérieure, consultez l'<a href="/fr/Add-ons/WebExtensions/Debugging">article principal sur les extensions de débogage</a>.</p>
 </div>
@@ -126,7 +126,7 @@ chrome.runtime.onMessage.addListener(notify);
 
 <p>Dans Firefox, une "Toolbox" est le nom d'une fenêtre séparée contenant un ensemble d'outils dans une interface à onglets, comme ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11873/browser-toolbox.png" style="display: block; height: 458px; margin-left: auto; margin-right: auto; width: 900px;">La boîte à outils ci-dessus contient cinq outils, que vous pouvez commuter entre les onglets en haut de la fenêtre : "Inspecteur", "Console", "Debugger", "Style Editor" et "Scratchpad". Nous n'utiliserons que deux de ces outils : "Console" et "Debugger".</p>
+<p><img alt="" src="browser-toolbox.png">La boîte à outils ci-dessus contient cinq outils, que vous pouvez commuter entre les onglets en haut de la fenêtre : "Inspecteur", "Console", "Debugger", "Style Editor" et "Scratchpad". Nous n'utiliserons que deux de ces outils : "Console" et "Debugger".</p>
 
 <h3 id="Affichage_de_la_sortie_du_journal">Affichage de la sortie du journal</h3>
 
@@ -178,19 +178,17 @@ chrome.runtime.onMessage.addListener(notify);
 
 <p>Notez que les scripts de contenu n'apparaîtront pas dans la liste des sources jusqu'à ce qu'ils soient chargés. Si vous avez besoin d'y accéder dès qu'ils se chargent, essayez d'ajouter un <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/debugger">debuggueur</a></code> ; instruction au début de votre script.</p>
 
-<div class="blockIndicator note">
-<p>Note : vous n'avez besoin et ne pouvez accéder à la Browser Content Toolbox que si vous développez contre Firefox multiprocessus.</p>
+<div class="note">
+<p><strong>Note :</strong> vous n'avez besoin et ne pouvez accéder à la Browser Content Toolbox que si vous développez contre Firefox multiprocessus.</p>
 </div>
 
-<div class="blockIndicator warning">
-<p>L'activation du débogage des travailleurs dans les Options de la boîte à outils désactivera le débogage de la boîte à outils du contenu du navigateur, le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1236892">Bug 1236892</a> devrait régler ce problème..</p>
+<div class="warning">
+<p><strong>Attention :</strong> L'activation du débogage des travailleurs dans les Options de la boîte à outils désactivera le débogage de la boîte à outils du contenu du navigateur, le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1236892">Bug 1236892</a> devrait régler ce problème..</p>
 </div>
 
 <p>{{EmbedYouTube("xAt3Q0PgJP4")}}</p>
 
 <h3 id="Débogage_des_fenêtres_contextuelles">Débogage des fenêtres contextuelles</h3>
-
-<div class="blockIndicator geckoVersionNote">Nouveau dans Firefox 47</div>
 
 <p>A partir de Firefox 47, vous pouvez utiliser la Browser Toolbox pour déboguer le contenu des popups. Il s'agit d'un processus en trois étapes :</p>
 
@@ -206,10 +204,10 @@ chrome.runtime.onMessage.addListener(notify);
 
 <p>Le problème avec les panneaux de débogage en général est qu'ils sont cachés lorsque vous cliquez en dehors d'eux. La première étape consiste donc à désactiver ce comportement. Dans la boîte à outils du navigateur, cliquez sur l'icône qui ressemble à quatre petits carrés :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12622/disable-autohide.png" style="display: block; height: 417px; margin-left: auto; margin-right: auto; width: 877px;">Maintenant, lorsque vous ouvrez un panneau dans Firefox, il restera ouvert jusqu'à ce que vous appuyiez sur Escape.</p>
+<p><img alt="" src="disable-autohide.png">Maintenant, lorsque vous ouvrez un panneau dans Firefox, il restera ouvert jusqu'à ce que vous appuyiez sur Escape.</p>
 
-<div class="blockIndicator note">
-<p>Notez que ce changement s'applique aux <a href="/fr/docs/Tools/Browser_Toolbox#Debugging_popups">fenêtre contextuelles intégrés au navigateur</a>, cpùùe le menu Hamburger (<img alt="" src="https://mdn.mozillademos.org/files/12712/hamburger.png" style="height: 20px; width: 22px;">), ainsi qu'aux fenêtres contextuelles d'extension.</p>
+<div class="note">
+<p><strong>Note :</strong> Que ce changement s'applique aux <a href="/fr/docs/Tools/Browser_Toolbox#Debugging_popups">fenêtre contextuelles intégrés au navigateur</a>, comme le menu Hamburger, ainsi qu'aux fenêtres contextuelles d'extension.</p>
 
 <p>Notez également que le changement est persistant, même si le navigateur redémarre. Nous travaillons à résoudre ce problème dans le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1251658">bug 1251658</a>, mais d'ici là, vous préférerez peut-être réactiver la fonction Autohide en cliquant à nouveau sur le bouton avant de fermer la boîte à outils du navigateur.</p>
 
@@ -222,7 +220,7 @@ chrome.runtime.onMessage.addListener(notify);
 
 <h4 id="Sélectionner_le_cadre_de_la_fenêtre_popup">Sélectionner le cadre de la fenêtre popup</h4>
 
-<p>Le popup est chargé dans son propre cadre. Ensuite, sélectionnez le document de votre popup à l'aide du <a href="/fr/docs/Tools/Browser_Toolbox#Targeting_a_document">bouton sélection de cadre </a>boîte à outils du navigateur :<img alt="" src="https://mdn.mozillademos.org/files/12624/frame-selection.png" style="display: block; height: 417px; margin-left: auto; margin-right: auto; width: 877px;">Le document s'appellera quelque chose comme</p>
+<p>Le popup est chargé dans son propre cadre. Ensuite, sélectionnez le document de votre popup à l'aide du <a href="/fr/docs/Tools/Browser_Toolbox#Targeting_a_document">bouton sélection de cadre </a>boîte à outils du navigateur :<img alt="" src="frame-selection.png">Le document s'appellera quelque chose comme</p>
 
 <pre>moz-extension://&lt;some-uuid&gt;/path/to/your-popup.html</pre>
 

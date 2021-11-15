@@ -28,13 +28,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
 
-<div class="blockIndicator note">
-<p>Vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">approche basée sur la connexion pour échanger des messages</a>.</p>
+<div class="note">
+<p><strong>Note :</strong> Vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">approche basée sur la connexion pour échanger des messages</a>.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var sending = browser.runtime.sendMessage(
+<pre class="brush: js">var sending = browser.runtime.sendMessage(
   extensionId,             // optional string
   message,                 // any
   options                  // optional object
@@ -45,13 +45,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 
 <dl>
  <dt><code>extensionId</code>{{optional_inline}}</dt>
- <dd><code>string</code>. L'ID de l'extension à envoyer le message. Incluez ceci pour envoyer le message à une extension différente..Si le destinataire prévu a défini un ID explicitement en utilisant la clé d' <a href="/fr/Add-ons/WebExtensions/manifest.json/applications">applications</a> dans  manifest.json, <code>extensionId</code> doit avoir une valeur. Sinon, il devrait avoir l'ID qui a été généré pour le destinataire prévu.</dd>
- <dd>Si <code>extensionId</code> est omis, le message sera envoyé à votre propre extension.</dd>
+ <dd><p><code>string</code>. L'ID de l'extension à envoyer le message. Incluez ceci pour envoyer le message à une extension différente..Si le destinataire prévu a défini un ID explicitement en utilisant la clé d' <a href="/fr/Add-ons/WebExtensions/manifest.json/applications">applications</a> dans  manifest.json, <code>extensionId</code> doit avoir une valeur. Sinon, il devrait avoir l'ID qui a été généré pour le destinataire prévu.</p>
+  <p>Si <code>extensionId</code> est omis, le message sera envoyé à votre propre extension.</p></dd>
  <dt><code>message</code></dt>
  <dd><code>any</code>. Un objet qui peut être structuré clone sérialisé.</dd>
  <dt><code>options</code>{{optional_inline}}</dt>
- <dd><code>object</code>.
- <dl class="reference-values">
+ <dd><p><code>object</code>.</p>
+ <dl>
   <dt><code>includeTlsChannelId</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Indique si l'ID de canal TLS sera transmis à {{WebExtAPIRef('runtime.onMessageExternal')}} pour les processus qui écoutent l'événement de connexion.</dd>
   <dt><code>toProxyScript{{optional_inline}}</code></dt>
@@ -126,7 +126,7 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
 

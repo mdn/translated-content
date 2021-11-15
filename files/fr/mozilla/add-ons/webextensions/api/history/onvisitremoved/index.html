@@ -25,7 +25,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.history.onVisitRemoved.addListener(listener)
+<pre class="brush: js">browser.history.onVisitRemoved.addListener(listener)
 browser.history.onVisitRemoved.removeListener(listener)
 browser.history.onVisitRemoved.hasListener(listener)
 </pre>
@@ -47,13 +47,10 @@ browser.history.onVisitRemoved.hasListener(listener)
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>
- <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction sera passée l'argument suivant :</p>
-
- <dl class="reference-values">
+ <dd><p>Fonction qui sera appelée lorsque cet événement se produit. La fonction sera passée l'argument suivant :</p>
+ <dl>
   <dt><code>removed</code></dt>
-  <dd><code>object</code>. Détails de l'enlèvement. C'est un objet contenant deux propriétés: un booléen <code>allHistory</code> et un tableau <code>urls</code>.</dd>
-  <dd>
+  <dd><p><code>object</code>. Détails de l'enlèvement. C'est un objet contenant deux propriétés: un booléen <code>allHistory</code> et un tableau <code>urls</code>.</p>
   <ul>
    <li>Si cet événement se déclenche parce qu'il est clair, <code>allHistory</code> sera <code>true</code> et <code>urls</code> sera un tableau vide.</li>
    <li>Dans le cas contraire,  <code>allHistory</code> sera <code>false</code> et <code>urls</code> contiendront un qui est l'URL de la page supprimée.</li>
@@ -81,7 +78,7 @@ browser.history.onVisitRemoved.addListener(onRemoved);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> dans le code de Chromium.</p>
 

@@ -33,14 +33,14 @@ translation_of: Mozilla/Firefox/Releases/26
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>L'implémentation d'<a href="/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla" title="/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla">EcmaScript 6</a> se poursuit!</p>
+<p>L'implémentation d'<a href="/fr/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla">EcmaScript 6</a> se poursuit!</p>
 
 <ul>
  <li>La syntaxe conforme à ECMAScript 6 pour les <a href="http://wiki.ecmascript.org/doku.php?id=harmony:generators">Générateurs (yield)</a> a été implémentée ({{bug("666399")}}).</li>
  <li>Les résultats du générateur / itérateur sont maintenant encadrés comme <code>{ value: foo, done: bool }</code> ({{bug(907744)}}).</li>
- <li>De nouvelles méthodes mathématiques ont été implémentées sur <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"><code>Math</code></a>: <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Math/fround" title="/en-US/docs/JavaScript/Reference/Global_Objects/Math/fround"><code>Math.fround()</code></a> ({{bug("900125")}}).</li>
- <li>Les <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Reserved_Words">mots réservés</a> ne peuvent pas être utilisés pour les noms de fonctions: une telle utilisation lève désormis une <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a> ({{bug("907958")}}).</li>
- <li>La syntaxe des <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">paramètres par défaut</a> a été mise à jour pour autoriser les paramètres sans valeurs par défaut après les paramètres par défaut, tels que la <span id="summary_alias_container"><span id="short_desc_nonedit_display"><code><span id="summary_alias_container"><span id="short_desc_nonedit_display">function f(x=1, y)</span></span></code></span></span>. See {{bug(777060)}}.</li>
+ <li>De nouvelles méthodes mathématiques ont été implémentées sur <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Math"><code>Math</code></a>: <a href="/fr/docs/JavaScript/Reference/Global_Objects/Math/fround"><code>Math.fround()</code></a> ({{bug("900125")}}).</li>
+ <li>Les <a href="/fr/docs/Web/JavaScript/Reference/Reserved_Words">mots réservés</a> ne peuvent pas être utilisés pour les noms de fonctions: une telle utilisation lève désormis une <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a> ({{bug("907958")}}).</li>
+ <li>La syntaxe des <a href="/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters">paramètres par défaut</a> a été mise à jour pour autoriser les paramètres sans valeurs par défaut après les paramètres par défaut, tels que la <code>function f(x=1, y)</code>. See {{bug(777060)}}.</li>
  <li>{{jsxref("Global_Objects/GeneratorFunction", "GeneratorFunction")}} est implémenté ({{bug(904701)}}).</li>
 </ul>
 
@@ -73,7 +73,7 @@ translation_of: Mozilla/Firefox/Releases/26
 
 <ul>
  <li>L'inclusion de glyphes SVG dans OpenType, <em>SVG-in-OpenType</em>, a été mise à jour pour correspondre à la version actuelle de la spécification ({{bug("906521")}}).</li>
- <li>La méthode <span id="summary_alias_container"><span id="short_desc_nonedit_display"><code>SVGElement.ownerSVGElement()</code> ne lance plus ({{bug("835048")}}).</span></span></li>
+ <li>La méthode <code>SVGElement.ownerSVGElement()</code> ne lance plus ({{bug("835048")}}).</li>
 </ul>
 
 <h2 id="Outils_de_développement">Outils de développement</h2>

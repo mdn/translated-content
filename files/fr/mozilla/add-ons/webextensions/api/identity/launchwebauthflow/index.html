@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 
 <p>Effectue la première partie d'un flux <a href="https://oauth.net/2/">OAuth2</a> y compris l'authentification de l'utilisateur et l'autorisation du client.</p>
 
-<p>Le seul paramètre obligatoire de cette fonction est l'URL d'autorisation du fournisseur de services, qui doit contenir un certain nombre de paramètres d'URL, y compris l'<span class="im"><a href="/fr/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL">URL de redirection</a> et l'<a href="/fr/Add-ons/WebExtensions/API/identity#Registering_your_add-on">ID client</a> de l'extension. </span>Le fournisseur de service alors :</p>
+<p>Le seul paramètre obligatoire de cette fonction est l'URL d'autorisation du fournisseur de services, qui doit contenir un certain nombre de paramètres d'URL, y compris l'<a href="/fr/Add-ons/WebExtensions/API/identity#Getting_the_redirect_URL">URL de redirection</a> et l'<a href="/fr/Add-ons/WebExtensions/API/identity#Registering_your_add-on">ID client</a> de l'extension. Le fournisseur de service alors :</p>
 
 <ul>
  <li>authentifie l'utilisateur auprès du fournisseur de services, si nécessaire (c'est-à-dire: s'ils ne sont pas déjà connectés)</li>
@@ -42,7 +42,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var authorizing = browser.identity.launchWebAuthFlow(
+<pre class="brush: js">var authorizing = browser.identity.launchWebAuthFlow(
   details   // object
 )
 </pre>
@@ -51,9 +51,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. Options pour le flux, contenant les propriétés suivantes :</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. Options pour le flux, contenant les propriétés suivantes :</p>
+ <dl>
   <dt><code>url</code></dt>
   <dd>
   <p><code>string</code>. URL fournie par le fournisseur de services OAuth2 pour obtenir un jeton d'accès. Les détails de cette URL doivent figurer dans la documentation du fournisseur de services en question, mais les paramètres d'URL doivent toujours inclure :</p>
@@ -114,7 +113,7 @@ function getAccessToken() {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/identity"><code>chrome.identity</code></a>.</p>
 

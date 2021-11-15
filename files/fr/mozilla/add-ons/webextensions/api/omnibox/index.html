@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox
 <p>L'API omnibox fournit à l'extension un moyen de personnaliser les suggestions affichées dans la liste déroulante, lorsque l'utilisateur saisit un mot clé défini par l'extension. Cela fonctionne comme suit:...</p>
 
 <ol>
- <li>Tout d'abord, l'extension doit inclure une clé "<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox">omnibox</a>" dans le fichier <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> qui définit un mot-clé.</li>
+ <li>Tout d'abord, l'extension doit inclure une clé "<a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox">omnibox</a>" dans le fichier <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> qui définit un mot-clé.</li>
  <li>Lorsque l'utilisateur met la barre d'adresse en surbrillance et tape le mot-clé, suivi d'un espace, l'extension recevra un événement  {{WebExtAPIRef("omnibox.onInputStarted")}}.</li>
  <li>Facultativement, l'extension peut appeler  {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} pour définir la première suggestion qui sera affichée dans la liste déroulante de la barre d'adresse.</li>
  <li>Comme l'utilisateur continue à taper des caractères après cela, l'extension recevra {{WebExtAPIRef("omnibox.onInputChanged")}} événements. L'écouteur d'événement recevra la valeur actuelle que l'utilisateur a saisie et pourra remplir la liste déroulante de la barre d'adresse avec des suggestions. Si l'extension définit une suggestion par défaut en utilisant {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, elle apparaît en premier dans la liste déroulante.</li>
@@ -62,7 +62,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox
 
 <p>{{WebExtExamples("h2")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/omnibox"><code>chrome.omnibox</code></a>.</p>
 

@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var uninstallingSelf = browser.management.uninstallSelf(
+<pre class="brush: js">var uninstallingSelf = browser.management.uninstallSelf(
   options              // object
 )
 </pre>
@@ -30,9 +30,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 
 <dl>
  <dt><code>options{{optional_inline}}</code></dt>
- <dd><code>object</code>. L'objet qui peut comporter deux propriétés, toutes deux facultatives :</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. L'objet qui peut comporter deux propriétés, toutes deux facultatives :</p>
+ <dl>
   <dt><code>showConfirmDialog{{optional_inline}}</code></dt>
   <dd>Boolean. Si <code>showConfirmDialog</code> est <code>true</code>, le navigateur  affiche la boite  de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé. Par défaut à <code>false</code>.</dd>
   <dt><code>dialogMessage{{optional_inline}}</code></dt>
@@ -79,7 +78,7 @@ var uninstalling = browser.management.uninstallSelf({
 uninstalling.then(null, onCanceled);</pre>
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/management"><code>chrome.management</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> dans le code de Chromium code.</p>
 

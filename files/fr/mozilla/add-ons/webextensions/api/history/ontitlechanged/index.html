@@ -25,7 +25,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.history.onTitleChanged.addListener(listener)
+<pre class="brush: js">browser.history.onTitleChanged.addListener(listener)
 browser.history.onTitleChanged.removeListener(listener)
 browser.history.onTitleChanged.hasListener(listener)
 </pre>
@@ -50,7 +50,7 @@ browser.history.onTitleChanged.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed an object with the following properties:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>url</code></dt>
   <dd><code>String</code>. URL of the page visited.</dd>
   <dt><code>title</code></dt>
@@ -76,7 +76,7 @@ browser.history.onTitleChanged.addListener(handleTitleChanged);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> dans le code de Chromium.</p>
 

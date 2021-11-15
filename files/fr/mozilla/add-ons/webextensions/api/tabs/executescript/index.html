@@ -38,7 +38,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var executing = browser.tabs.executeScript(
+<pre class="brush: js">var executing = browser.tabs.executeScript(
   tabId,                 // optional integer
   details                // object
 )
@@ -50,9 +50,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
  <dt><code>tabId</code> {{optional_inline}}</dt>
  <dd><code>integer</code>. L’ID de l’onglet dans lequel exécuter le script. Par défaut, l’onglet actif de la fenêtre en cours.</dd>
  <dt><code>details</code></dt>
- <dd>Un objet décrivant le script à exécuter. Il contient les propriétés suivantes :</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p>Un objet décrivant le script à exécuter. Il contient les propriétés suivantes :</p>
+ <dl>
   <dt><code>allFrames</code> {{optional_inline}}</dt>
   <dd><code>boolean</code>. Si <code>true</code>, le code sera injecté dans toutes les cadres de la page courante. Si <code>true</code> et <code>frameId</code> est défini, alors il y aura une erreur, frameId et allFrames sont mutuellement exclusifs. Si c'est <code>false</code>, le code n'est injecté que dans le cadre supérieur. La valeur par défaut est <code>false</code>.</dd>
   <dt><code>code </code>{{optional_inline}}</dt>
@@ -77,7 +76,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 
 <pre class="brush: js">var foo='my result';foo;</pre>
 
-<p>Ici, le tableau des résultats contiendra la chaîne <code>"my result"</code> en tant qu’élément. Les valeurs de résultat doivent être <a href="/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure">clonables tructurées</a>. La dernière déclaration peut également être une <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>, mais cette fonctionnalité n'est pas supportée par la bibliothèque <a href="https://github.com/mozilla/webextension-polyfill#tabsexecutescript">webextension-polyfill</a>.<br>
+<p>Ici, le tableau des résultats contiendra la chaîne <code>"my result"</code> en tant qu’élément. Les valeurs de résultat doivent être <a href="/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure">clonables tructurées</a>. La dernière déclaration peut également être une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>, mais cette fonctionnalité n'est pas supportée par la bibliothèque <a href="https://github.com/mozilla/webextension-polyfill#tabsexecutescript">webextension-polyfill</a>.<br>
  Si une erreur se produit, la promesse sera rejetée avec un message d’erreur.</p>
 
 <h2 id="Exemples">Exemples</h2>
@@ -137,7 +136,7 @@ executing.then(onExecuted, onError);</pre>
 
 <p>{{Compat("webextensions.api.tabs.executeScript")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 </div>

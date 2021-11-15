@@ -16,14 +16,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getExtensionTabs
 <div>{{AddonSidebar()}}</div>
 
 <div class="warning">
-<p>Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("extension.getViews()")}} à la place.</p>
+<p><strong>Attention :</strong> Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("extension.getViews()")}} à la place.</p>
 </div>
 
-<p>Renvoie un tableau des objets de la <a href="/en-US/docs/Web/API/Window">Window</a> JavaScriptpour chacun des onglets qui s'exécutent dans l'extension actuelle. Si <code>windowId</code> est spécifié, renvoie uniquement les objets Window des onglets attachés à la fenêtre spécifiée.</p>
+<p>Renvoie un tableau des objets de la <a href="/fr/docs/Web/API/Window">Window</a> JavaScriptpour chacun des onglets qui s'exécutent dans l'extension actuelle. Si <code>windowId</code> est spécifié, renvoie uniquement les objets Window des onglets attachés à la fenêtre spécifiée.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">chrome.extension.getExtensionTabs(
+<pre class="brush: js">chrome.extension.getExtensionTabs(
   windowId // optional integer
 )
 </pre>
@@ -47,7 +47,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getExtensionTabs
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/extension"><code>chrome.extension</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> dans le code Chromium.</p>
 

@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.runtime.onInstalled.addListener(listener)
+<pre class="brush: js">browser.runtime.onInstalled.addListener(listener)
 browser.runtime.onInstalled.removeListener(listener)
 browser.runtime.onInstalled.hasListener(listener)
 </pre>
@@ -46,11 +46,10 @@ browser.runtime.onInstalled.hasListener(listener)
  <dd>
  <p>La fonction de rappel appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
-  <dd>Un objet avec les propriétés suivantes :</dd>
-  <dd>
-  <dl class="reference-values">
+  <dd><p>Un objet avec les propriétés suivantes :</p>
+  <dl>
    <dt><code>id</code>{{optional_inline}}</dt>
    <dd><code>string</code>. L'ID de l'extension  de module partagé importé mise à jour. Ceci n'est présent que si la valeur de <code>raison</code> est  <code>shared_module_update</code>.</dd>
    <dt><code>previousVersion</code>{{optional_inline}}</dt>
@@ -71,7 +70,7 @@ browser.runtime.onInstalled.hasListener(listener)
 
 <h2 id="Exemples">Exemples</h2>
 
-<p>Lorsque l'extensin est installé, connectez-vous à la raison de l'installon et ouvrez <a class="external external-icon" href="https://www.reddit.com/r/CatGifs/">https://www.reddit.com/r/CatGifs/</a>:</p>
+<p>Lorsque l'extensin est installé, connectez-vous à la raison de l'installon et ouvrez <a href="https://www.reddit.com/r/CatGifs/">https://www.reddit.com/r/CatGifs/</a>:</p>
 
 <pre class="brush: js">function handleInstalled(details) {
   console.log(details.reason);
@@ -84,7 +83,7 @@ browser.runtime.onInstalled.addListener(handleInstalled);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
 

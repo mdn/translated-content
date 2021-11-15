@@ -20,7 +20,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var gettingPanel = browser.sidebarAction.getPanel(
+<pre class="brush: js">var gettingPanel = browser.sidebarAction.getPanel(
   details               // object
 )
 </pre>
@@ -29,9 +29,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. Un objet avec les propriétés suivantes :</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. Un objet avec les propriétés suivantes :</p>
+ <dl>
   <dt><code>tabId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>.  Obtenir le panneau pour la barre latérale spécifique à l'onglet donné.</dd>
   <dt><code>windowId</code> {{optional_inline}}</dt>
@@ -49,7 +48,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
 
 <p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec une chaîne contenant l'URL du document du panel. Ce sera une URL entièrement qualifiée, telle que :</p>
 
-<pre><code>moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html</code></pre>
+<pre>moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html</pre>
 
 <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
 
@@ -68,7 +67,7 @@ gettingPanel.then(onGot); </pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Opera <a href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a>.</p>
 

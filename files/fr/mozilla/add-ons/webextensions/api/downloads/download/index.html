@@ -26,7 +26,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var downloading = browser.downloads.download(
+<pre class="brush: js">var downloading = browser.downloads.download(
   options                   // object
 )
 </pre>
@@ -35,11 +35,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 
 <dl>
  <dt><code>options</code></dt>
- <dd>Un <code>object</code> spécifiant le fichier que vous souhaitez télécharger et toutes les autres préférences que vous souhaitez définir concernant le téléchargement. Il peut contenir les propriétés suivantes :</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p>Un <code>object</code> spécifiant le fichier que vous souhaitez télécharger et toutes les autres préférences que vous souhaitez définir concernant le téléchargement. Il peut contenir les propriétés suivantes :</p>
+ <dl>
   <dt><code>allowHttpErrors</code>{{optional_inline}}</dt>
-  <dd>Un tag <code>booléen</code> qui permet de poursuivre les téléchargements même s'ils rencontrent des erreurs HTTP. L'utilisation de ce drapeau, par exemple, permet le téléchargement des pages d'erreur du serveur. La valeur par défaut est <code>false</code>. Lorsqu'il est défini à :
+  <dd><p>Un tag <code>booléen</code> qui permet de poursuivre les téléchargements même s'ils rencontrent des erreurs HTTP. L'utilisation de ce drapeau, par exemple, permet le téléchargement des pages d'erreur du serveur. La valeur par défaut est <code>false</code>. Lorsqu'il est défini à :</p>
   <ul>
    <li><code>false</code>, le téléchargement est annulé lorsqu'il rencontre une erreur HTTP.</li>
    <li><code>true</code>, le téléchargement se poursuit lorsqu'une erreur HTTP est rencontrée et que l'erreur du serveur HTTP n'est pas signalée. Toutefois, si le téléchargement échoue en raison d'une erreur liée au fichier, au réseau, à l'utilisateur ou autre, cette erreur est signalée.</li>
@@ -64,7 +63,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
   <p>Si cette option est omise, le navigateur affichera le sélecteur de fichier ou non en fonction de la préférence générale de l'utilisateur pour ce comportement (dans Firefox cette préférence est intitulée "Toujours vous demander où enregistrer les fichiers" dans about:preferences, ou <code>browser.download.useDownloadDir</code> dans about:config).</p>
 
   <div class="note">
-  <p><strong>Note</strong>: Firefox pour Android provoque une erreur si <code>saveAs</code> est à  <code>true</code>. Le paramètre est ignoré lorsque <code>saveAs</code> est <code>false</code> ou non inclus.</p>
+  <p><strong>Note :</strong> Firefox pour Android provoque une erreur si <code>saveAs</code> est à  <code>true</code>. Le paramètre est ignoré lorsque <code>saveAs</code> est <code>false</code> ou non inclus.</p>
   </div>
   </dd>
   <dt><code>url</code></dt>
@@ -107,13 +106,13 @@ downloading.then(onStartedDownload, onFailed);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
 </div>
 
 <div class="hidden">
-<pre> <span class="tlid-translation translation">// Copyright 2015 Les auteurs de chrome. Tous les droits sont réservés.
+<pre> // Copyright 2015 Les auteurs de chrome. Tous les droits sont réservés.
 //
 // Redistribution et utilisation sous forme source et binaire, avec ou sans
 // modification, sont autorisées à condition que les conditions suivantes soient
@@ -138,6 +137,6 @@ downloading.then(onStartedDownload, onFailed);</pre>
 // DATA, OR PROFITS; OU INTERRUPTION COMMERCIALE) TOUTEFOIS CAUSÉE ET SUR TOUTE
 // THÉORIE DE LA RESPONSABILITÉ, QU'IL SOIT UN CONTRAT, UNE RESPONSABILITÉ STRICTE OU UN TORT
 // (INCLUANT LA NÉGLIGENCE OU AUTREMENT) SURVENANT DE TOUTE MANIÈRE DE L'UTILISER
-// DE CE LOGICIEL, MÊME SI AVISÉ DE LA POSSIBILITÉ D'UN TEL DOMMAGE.</span>
+// DE CE LOGICIEL, MÊME SI AVISÉ DE LA POSSIBILITÉ D'UN TEL DOMMAGE.
 </pre>
 </div>

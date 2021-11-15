@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getSelected
 <div>{{AddonSidebar()}}</div>
 
 <div class="warning">
-<p>Cette méthode est dépréciée. utilisez {{WebExtAPIRef("tabs.query", "tabs.query({active: true})")}} à la place.</p>
+<p><strong>Attention :</strong> Cette méthode est dépréciée. utilisez {{WebExtAPIRef("tabs.query", "tabs.query({active: true})")}} à la place.</p>
 </div>
 
 <p>Obtient l'onglet sélectionné dans la fenêtre spécifiée</p>
@@ -26,7 +26,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getSelected
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var gettingSelected = browser.tabs.getSelected(
+<pre class="brush: js">var gettingSelected = browser.tabs.getSelected(
   windowId           // optional integer
 )
 </pre>
@@ -40,7 +40,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getSelected
 
 <h3 id="Valeur_retournée">Valeur retournée</h3>
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet <a href="/fr/Add-ons/WebExtensions/API/tabs/Tab" title="The type tabs.Tab contains information about a tab. This provides access to information about what content is in the tab, how large the content is, what special states or restrictions are in effect, and so forth."><code>tabs.Tab</code></a> contenant des informations sur l'onglet sélectionné. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet <a href="/fr/Add-ons/WebExtensions/API/tabs/Tab"><code>tabs.Tab</code></a> contenant des informations sur l'onglet sélectionné. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
 
 <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
 
@@ -48,7 +48,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getSelected
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

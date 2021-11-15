@@ -23,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/get
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var getting = browser.cookies.get(
+<pre class="brush: js">var getting = browser.cookies.get(
   details                // object
 )
 </pre>
@@ -32,9 +32,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/get
 
 <dl>
  <dt><code>details</code></dt>
- <dd>Un <code>objet</code> contenant les informations pouvant être utilisées pour récupérer un cookie. Il peut inclure les propriétés suivantes :</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p>Un <code>objet</code> contenant les informations pouvant être utilisées pour récupérer un cookie. Il peut inclure les propriétés suivantes :</p>
+ <dl>
   <dt><code>firstPartyDomain</code>{{optional_inline}}</dt>
   <dd>Une <code>chaîne</code> représentant le domaine de première partie avec lequel le cookie à récupérer est associé. Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Voir <a href="/fr/Add-ons/WebExtensions/API/cookies#Isolement_de_la_première_partie">Isolement de la première partie</a>.</dd>
   <dt><code>name</code></dt>
@@ -81,7 +80,7 @@ getActive.then(getCookie);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> dans le code Chromium.</p>
 

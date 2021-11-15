@@ -24,7 +24,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/move
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var moving = browser.tabs.move(
+<pre class="brush: js">var moving = browser.tabs.move(
   tabIds,              // integer or integer array
   moveProperties       // object
 )
@@ -36,15 +36,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/move
  <dt><code>tabIds</code></dt>
  <dd><code><code>integer</code></code> ou <code><code>array</code></code> d'<code><code>integer</code></code>. ID du {{WebExtAPIRef('tabs.Tab', 'tab')}}à déplacer, ou un tableau d'ID d'onglet.</dd>
  <dt><code>moveProperties</code></dt>
- <dd><code>object</code>. Un objet qui spécifie où déplacer le(s) onglet(s).</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. Un objet qui spécifie où déplacer le(s) onglet(s).</p>
+ <dl>
   <dt><code>windowId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. 'ID de la fenêtre dans laquelle vous souhaitez déplacer les onglet(s). Si vous omettez cela, chaque onglet de <code>tabIds</code> sera déplacé vers l' <code>index</code> dans sa fenêtre actuelle. Si vous incluez ceci, et <code>tabIds</code> contient plus d'un onglet, alors le premier onglet de <code>tabIds</code> sera déplacé vers l'<code>index</code>, et les autres onglets le suivront dans l'ordre donné dans <code>tabIds</code>.</dd>
   <dt><code>index</code></dt>
-  <dd><code>integer</code>. La position de l'index pour déplacer la tabulation à, en commençant à 0. Une valeur de -1 placera la tabulation à la fin de la fenêtre.</dd>
-  <dd>Si vous passez une valeur inférieure à -1, la fonction renvoie une erreur.</dd>
-  <dd>Notez que vous ne pouvez pas déplacer les onglets épinglés sur une position après les onglets non épinglés d'une fenêtre, ou déplacer les onglets non épinglés à une position avant les onglets épinglés. Par exemple, si vous avez un ou plusieurs onglets épinglés dans la fenêtre cible et si tabIds fait référence à un onglet non épinglé, vous ne pouvez pas passer 0 ici. Si vous essayez de le faire, la fonction échouera silencieusement (elle ne produira pas d'erreur).</dd>
+  <dd><p><code>integer</code>. La position de l'index pour déplacer la tabulation à, en commençant à 0. Une valeur de -1 placera la tabulation à la fin de la fenêtre.</p>
+  <p>Si vous passez une valeur inférieure à -1, la fonction renvoie une erreur.</p>
+  <p>Notez que vous ne pouvez pas déplacer les onglets épinglés sur une position après les onglets non épinglés d'une fenêtre, ou déplacer les onglets non épinglés à une position avant les onglets épinglés. Par exemple, si vous avez un ou plusieurs onglets épinglés dans la fenêtre cible et si tabIds fait référence à un onglet non épinglé, vous ne pouvez pas passer 0 ici. Si vous essayez de le faire, la fonction échouera silencieusement (elle ne produira pas d'erreur).</p>
+  </dd>
  </dl>
  </dd>
 </dl>
@@ -78,7 +78,7 @@ browser.browserAction.onClicked.addListener(function() {
   gettingCurrent.then(firstToLast, onError);
 });</pre>
 
-<p><span id="result_box" lang="fr"><span>Déplacer tous les onglets servis via HTTP ou HTTPS depuis * .mozilla.org jusqu'à la fin de leur fenêtre :</span></span></p>
+<p>Déplacer tous les onglets servis via HTTP ou HTTPS depuis * .mozilla.org jusqu'à la fin de leur fenêtre :</p>
 
 <pre class="brush: js">function onMoved(tab) {
   console.log(`Moved: ${tab}`);
@@ -99,7 +99,7 @@ browser.browserAction.onClicked.addListener(function() {
   gettingMozTabs.then(moveMoz, onError);
 });</pre>
 
-<p><span id="result_box" lang="fr"><span>Déplacer tous les onglets servis via HTTP ou HTTPS de * .mozilla.org vers la fenêtre qui héberge le premier onglet de ce type, en commençant à la position 0 :</span></span></p>
+<p>Déplacer tous les onglets servis via HTTP ou HTTPS de * .mozilla.org vers la fenêtre qui héberge le premier onglet de ce type, en commençant à la position 0 :</p>
 
 <pre class="brush: js">function onMoved(tab) {
   console.log(`Moved: ${tab}`);
@@ -127,7 +127,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>{{Compat("webextensions.api.tabs.move")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

@@ -17,15 +17,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
 
 <p>La méthode <strong><code>bookmarks.removeTree()</code></strong> supprime récursivement un dossier de signets et tout son contenu.</p>
 
-<div class="blockIndicator warning">
-<p>Si votre extension tente de supprimer une arborescence de signets du nœud racine de cette dernière, l'appel déclenche une erreur avec le message suivant: "La racine de signet ne peut pas être modifiée" et le signet ne sera pas supprimé.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Si votre extension tente de supprimer une arborescence de signets du nœud racine de cette dernière, l'appel déclenche une erreur avec le message suivant: "La racine de signet ne peut pas être modifiée" et le signet ne sera pas supprimé.</p>
 </div>
 
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var removingTree = browser.bookmarks.removeTree(
+<pre class="brush: js">var removingTree = browser.bookmarks.removeTree(
   id                // string
 )
 </pre>
@@ -71,7 +71,7 @@ searchingBookmarks.then(removeMDN, onRejected);</pre>
 
 <p>{{Compat("webextensions.api.bookmarks.removeTree")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
 

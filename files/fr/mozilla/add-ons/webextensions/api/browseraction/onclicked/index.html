@@ -17,11 +17,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 
 <p>Action quand l'icone d'action du navigateur est cliqué. Cet événement ne déclenchera pas si l'action du navigateur comporte une fenêtre contextuelle.</p>
 
-<p>Pour définir une action de clic droit, utilisez l'API <a href="/fr/Add-ons/WebExtensions/API/contextMenus"><code>contextMenus</code></a>  avec le <a href="/fr/Add-ons/WebExtensions/API/contextMenus/ContextType" title="The different contexts a menu can appear in.">type de contexte</a> "browser_action".</p>
+<p>Pour définir une action de clic droit, utilisez l'API <a href="/fr/Add-ons/WebExtensions/API/contextMenus"><code>contextMenus</code></a>  avec le <a href="/fr/Add-ons/WebExtensions/API/contextMenus/ContextType">type de contexte</a> "browser_action".</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.browserAction.onClicked.addListener(<code>listener</code>)
+<pre class="brush: js">browser.browserAction.onClicked.addListener(<code>listener</code>)
 browser.browserAction.onClicked.removeListener(listener)
 browser.browserAction.onClicked.hasListener(listener)
 </pre>
@@ -46,7 +46,7 @@ browser.browserAction.onClicked.hasListener(listener)
  <dd>
  <p>Fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction passera par l'argument suivant :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>tab</code></dt>
   <dd>{{WebExtAPIRef('tabs.Tab')}}. L'onglet qui était actif lorsque l'icône a été cliquée .</dd>
  </dl>
@@ -71,7 +71,7 @@ browser.browserAction.onClicked.hasListener(listener)
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
 

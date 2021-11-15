@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/query
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var querying = browser.tabs.query(
+<pre class="brush: js">var querying = browser.tabs.query(
   queryInfo             // object
 )
 </pre>
@@ -30,9 +30,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/query
 
 <dl>
  <dt><code>queryInfo</code></dt>
- <dd><code>object</code>. La fonction <code>query()</code> obtiendra uniquement les onglets dont les propriétés correspondent aux propriétés incluses ici. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. La fonction <code>query()</code> obtiendra uniquement les onglets dont les propriétés correspondent aux propriétés incluses ici. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.</p>
+ <dl>
   <dt><code>active</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Si les onglets sont actifs dans leurs fenêtres.</dd>
   <dt><code>audible</code>{{optional_inline}}</dt>
@@ -79,7 +78,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/query
 
 <h2 id="Exemples">Exemples</h2>
 
-<p><span class="short_text" id="result_box" lang="fr"><span>Obtenez tous les onglets : </span></span></p>
+<p>Obtenez tous les onglets : </p>
 
 <pre class="brush: js">function logTabs(tabs) {
   for (let tab of tabs) {
@@ -149,7 +148,7 @@ querying.then(logTabs, onError);</pre>
 
 <p>{{Compat("webextensions.api.tabs.query")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

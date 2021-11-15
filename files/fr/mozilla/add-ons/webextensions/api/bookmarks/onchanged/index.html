@@ -24,7 +24,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.bookmarks.onChanged.addListener(listener)
+<pre class="brush: js">browser.bookmarks.onChanged.addListener(listener)
 browser.bookmarks.onChanged.removeListener(listener)
 browser.bookmarks.onChanged.hasListener(listener)
 </pre>
@@ -49,20 +49,20 @@ browser.bookmarks.onChanged.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>id</code></dt>
   <dd><code>string</code>. ID de l'article qui a changé.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>changeInfo</code></dt>
   <dd><a href="#changeInfo"><code>object</code></a>. Objet contenant deux propriétés : <code>title</code>, une chaîne contenant le titre de l'élément et <code>url</code>, une chaîne contenant l'URL de l'élément. Si l'élément est un dossier, l'<code>url</code> est omise.</dd>
  </dl>
  </dd>
 </dl>
 
-<div class="blockIndicator note">
-<p>Plusieurs événements peuvent se produire lorsqu'un signet change, et cet objet changeInfo peut contenir uniquement les données qui ont changé, plutôt que toutes les données du signet. En d'autres termes, si l'<code>url</code> d'un signet change, le changeInfo ne peut contenir que les nouvelles informations de l'<code>url</code>.</p>
+<div class="note">
+<p><strong>Note :</strong> Plusieurs événements peuvent se produire lorsqu'un signet change, et cet objet changeInfo peut contenir uniquement les données qui ont changé, plutôt que toutes les données du signet. En d'autres termes, si l'<code>url</code> d'un signet change, le changeInfo ne peut contenir que les nouvelles informations de l'<code>url</code>.</p>
 </div>
 
 <h2 id="Exemples">Exemples</h2>
@@ -84,18 +84,13 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 
 
-<dl>
- <dd>
- <dl class="reference-values">
- </dl>
- </dd>
-</dl>
+
 
 <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
 
 <p>{{Compat("webextensions.api.bookmarks.onChanged")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
 

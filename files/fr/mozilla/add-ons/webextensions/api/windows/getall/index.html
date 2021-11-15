@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getAll
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var gettingAll = browser.windows.getAll(
+<pre class="brush: js">var gettingAll = browser.windows.getAll(
   getInfo                // optional object
 )
 </pre>
@@ -30,9 +30,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getAll
 
 <dl>
  <dt><code>getInfo</code>{{optional_inline}}</dt>
- <dd><code>object</code>. Cela contrôle ce que les objets {{WebExtAPIRef('windows.Window')}} sont récupérés.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. Cela contrôle ce que les objets {{WebExtAPIRef('windows.Window')}} sont récupérés.</p>
+ <dl>
   <dt><code>populate</code>{{optional_inline}}</dt>
   <dd><code>boolean</code> Par défaut à <code>false</code>.  S'il est défini sur <code>true</code>, chaque objet {{WebExtAPIRef('windows.Window')}} aura une propriété <code>tabs</code> qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les tabs de cette fenêtre. Les objets <code>Tab</code> contiendront les propriétés <code>url</code>, <code>title</code> et <code>favIconUrl</code> uniquement si le fichier manifest de l'extension contient les permissions <code>"tabs"</code>.</dd>
   <dt><code>windowTypes</code>{{optional_inline}}</dt>
@@ -75,7 +74,7 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
 

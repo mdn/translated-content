@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.i18n.getMessage(
+<pre class="brush: js">browser.i18n.getMessage(
   messageName,  // string
   substitutions // optional any
 )
@@ -29,16 +29,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 
 <dl>
  <dt><code>messageName</code></dt>
- <dd><code>string</code>. Le nom du message, tel que spécifié dans le fichier messages.json. Si le message ne peut pas être trouvé dans messages.json :</dd>
- <dd>
+ <dd><p><code>string</code>. Le nom du message, tel que spécifié dans le fichier messages.json. Si le message ne peut pas être trouvé dans messages.json :</p>
  <ul>
   <li>Firefox renvoie "" et enregistre une erreur.</li>
   <li>Chrome renvoie "" et n'enregistre pas d'erreur.</li>
  </ul>
  </dd>
  <dt><code>substitutions</code>{{optional_inline}}</dt>
- <dd><code>string</code> ou <code>array</code> de <code>string</code>. Une chaîne de substitution unique ou un tableau de chaînes de substitution.</dd>
- <dd>Dans Chrome, si vous fournissez plus de 9 chaînes de substitution, <code>getMessage()</code> renvoie <code>undefined</code>.</dd>
+ <dd><code>string</code> ou <code>array</code> de <code>string</code>. Une chaîne de substitution unique ou un tableau de chaînes de substitution. Dans Chrome, si vous fournissez plus de 9 chaînes de substitution, <code>getMessage()</code> renvoie <code>undefined</code>.</dd>
 </dl>
 
 <h3 id="Valeur_retournée">Valeur retournée</h3>
@@ -78,7 +76,7 @@ console.log(message);
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/i18n"><code>chrome.i18n</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> dans le code de Chromium code.</p>
 

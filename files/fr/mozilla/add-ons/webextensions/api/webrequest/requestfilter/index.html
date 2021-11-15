@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
 
 <p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>urls</code></dt>
  <dd><code>array</code> de <code><code>string</code></code>. Un tableau de <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">motifs (Match patterns)</a>. L'auditeur ne sera appelé que pour les demandes dont les cibles correspondent à l'un des modèles donnés. Seules les requêtes faites en utilisant HTTP ou HTTPS déclencheront des événements, même si les modèles de correspondance peuvent correspondre à d'autres protocoles.</dd>
  <dt><code>types</code>{{optional_inline}}</dt>
@@ -40,7 +40,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> dans le code Chromium.</p>
 

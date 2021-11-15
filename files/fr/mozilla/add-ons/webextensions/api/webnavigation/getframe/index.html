@@ -15,13 +15,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>Récupère des informations sur un cadre particulier. Un cadre peut être l'image de niveau supérieur dans un onglet ou un <a href="/en-US/docs/Web/HTML/Element/iframe">iframe</a> imbriqué, et est identifié de manière unique par un ID de tabulation et un ID de cadre.</p>
+<p>Récupère des informations sur un cadre particulier. Un cadre peut être l'image de niveau supérieur dans un onglet ou un <a href="/fr/docs/Web/HTML/Element/iframe">iframe</a> imbriqué, et est identifié de manière unique par un ID de tabulation et un ID de cadre.</p>
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var gettingFrame = browser.webNavigation.getFrame(
+<pre class="brush: js">var gettingFrame = browser.webNavigation.getFrame(
   details                // object
 )
 </pre>
@@ -30,9 +30,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. Informations sur le cadre pour récupérer des informations sur :</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. Informations sur le cadre pour récupérer des informations sur :</p>
+ <dl>
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. L'ID de l'onglet dans lequel se trouve le cadre.</dd>
   <dt><code>processId</code> {{optional_inline}}</dt>
@@ -45,9 +44,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame
 
 <h3 id="Valeur_retournée">Valeur retournée</h3>
 
-<p>Une <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> qui sera rempli avec un objet contenant les propriétés suivantes :</p>
+<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> qui sera rempli avec un objet contenant les propriétés suivantes :</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>errorOccurred</code></dt>
  <dd><code>boolean</code>. Vrai si la dernière navigation dans cette trame a été interrompue par une erreur, c'est-à-dire l'événement {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} déclenché.</dd>
  <dt><code>url</code></dt>
@@ -85,7 +84,7 @@ gettingFrame.then(onGot, onError);
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webNavigation"><code>chrome.webNavigation</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> dans le code de Chromium code.</p>
 

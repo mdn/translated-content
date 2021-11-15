@@ -25,9 +25,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/events/UrlFilter
 
 <p>Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier composant du nom d'hôte, car aucun point implicite n'est ajouté à la fin du nom d'hôte. Ainsi, par exemple, <code>"org."</code> correspondra à "https://borg.com" mais pas "https://example.org". Pour faire correspondre ces modèles, utilisez <code>hostSuffix</code>.</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>hostContains</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Correspond si le <a href="/fr/docs/Web/API/HTMLHyperlinkElementUtils/hostname">hostname</a> de l'URL contient la chaîne donnée.
+ <dd><p><code>string</code>. Correspond si le <a href="/fr/docs/Web/API/HTMLHyperlinkElementUtils/hostname">hostname</a> de l'URL contient la chaîne donnée.</p>
  <ul>
   <li>Pour tester si un composant de nom d'hôte commence par "foo", utilisez  <code>".foo"</code>. Cela correspond à "www.foobar.com" et "foo.com", car un point implicite est ajouté au début du nom d'hôte.</li>
   <li>Pour tester si un composant de nom d'hôte se termine par "foo", utilisez <code>"foo."</code>.</li>
@@ -39,7 +39,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/events/UrlFilter
  <dt><code>hostPrefix</code>{{optional_inline}}</dt>
  <dd><code>string</code>. Correspond si le nom d'hôte de l'URL commence par une chaîne spécifiée.</dd>
  <dt><code>hostSuffix</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Correspond si le nom d'hôte de l'URL se termine par une chaîne spécifiée.
+ <dd><p><code>string</code>. Correspond si le nom d'hôte de l'URL se termine par une chaîne spécifiée.</p>
  <ul>
   <li>Exemple: <code>".example.com"</code> correspond à "http://www.example.com/", mais pas à "http://example.com/".</li>
   <li>Exemple: <code>"example.com"</code> correspond à "http://www.example.com/", et  "http://fakeexample.com/".</li>
@@ -66,7 +66,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/events/UrlFilter
  <dt><code>urlEquals</code>{{optional_inline}}</dt>
  <dd><code>string</code>. Correspond si l'URL (sans l'identificateur de fragment) est égale à une chaîne spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.</dd>
  <dt><code>urlMatches</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Correspond si l'URL (sans l'identificateur de fragment) correspond à une  <a href="/fr/docs/Web/JavaScript/Guide/Regular_Expressions">expression régulière</a>. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.
+ <dd><p><code>string</code>. Correspond si l'URL (sans l'identificateur de fragment) correspond à une  <a href="/fr/docs/Web/JavaScript/Guide/Regular_Expressions">expression régulière</a>. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.</p>
  <ul>
   <li>Par exemple : <code>urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"</code> correspond "http://mozilla.org/", "https://developer.mozilla.org/", "ftp://foo.mozilla.org/", mais pas "https://developer.fakemozilla.org/".</li>
  </ul>
@@ -74,7 +74,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/events/UrlFilter
  <dt><code>originAndPathMatches</code>{{optional_inline}}</dt>
  <dd><code>string</code>. Correspond si l'URL sans segment de requête et l'identificateur de fragment correspondent à une <a href="/fr/docs/Web/JavaScript/Guide/Regular_Expressions">expression régulière</a> spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.</dd>
  <dt><code>urlPrefix</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Correspond si l'URL (sans l'identificateur de fragment) commence par une chaîne spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.
+ <dd><p><code>string</code>. Correspond si l'URL (sans l'identificateur de fragment) commence par une chaîne spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.</p>
  <ul>
   <li>Exemple: <code>"https://developer"</code> correspond "https://developer.mozilla.org/" et  "https://developers.facebook.com/".</li>
  </ul>
@@ -82,13 +82,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/events/UrlFilter
  <dt><code>urlSuffix</code>{{optional_inline}}</dt>
  <dd><code>string</code>. Correspond si l'URL (sans l'identificateur de fragment) se termine par une chaîne spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut. Notez qu'un slash "/" implicite est ajoutée après l'hôte, donc <code>"com/"</code> correspond "https://example.com", mais pas <code>"com"</code>.</dd>
  <dt><code>schemas</code>{{optional_inline}}</dt>
- <dd><code>array</code> of <code><code>string</code></code>. Correspond si le schéma de l'URL est identique à l'un des schémas spécifiés dans le tableau. Comme les schémas sont toujours convertis en minuscules, ils doivent toujours être en minuscules ou ne correspondent jamais.
+ <dd><p><code>array</code> of <code><code>string</code></code>. Correspond si le schéma de l'URL est identique à l'un des schémas spécifiés dans le tableau. Comme les schémas sont toujours convertis en minuscules, ils doivent toujours être en minuscules ou ne correspondent jamais.</p>
  <ul>
   <li>Exemple: <code>["https"]</code> correspond uniquement aux URL HTTPS.</li>
  </ul>
  </dd>
  <dt><code>ports</code>{{optional_inline}}</dt>
- <dd><code>array</code> de <code><code><code>(integer</code></code> </code>ou<code> <code><code>array</code> of <code><code>integer</code></code></code></code>). Un tableau qui peut contenir des entiers et des tableaux d'entiers. Les entiers sont interprétés comme des numéros de port, tandis que les tableaux d'entiers sont interprétés comme des plages de ports. Correspond si le port de l'URL correspond à un numéro de port ou est contenu dans des plages.
+ <dd><p><code>array</code> de <code><code><code>(integer</code></code> </code>ou<code> <code><code>array</code> of <code><code>integer</code></code></code></code>). Un tableau qui peut contenir des entiers et des tableaux d'entiers. Les entiers sont interprétés comme des numéros de port, tandis que les tableaux d'entiers sont interprétés comme des plages de ports. Correspond si le port de l'URL correspond à un numéro de port ou est contenu dans des plages.</p>
  <ul>
   <li>Par exemple: <code>[80, 443, [1000, 1200]]</code> correspond à toutes les demandes sur les ports 80, 443, et dans la plage 1000-1200.</li>
  </ul>
@@ -101,7 +101,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/events/UrlFilter
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/events"><code>chrome.events</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json"><code>events.json</code></a> dans le code Chromium.</p>
 

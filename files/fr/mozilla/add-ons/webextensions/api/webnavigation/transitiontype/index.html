@@ -24,27 +24,27 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
 <p>Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :</p>
 
 <dl>
- <dt><a id="value-link" name="value-link"></a>"link"</dt>
+ <dt>"link"</dt>
  <dd>L'utilisateur a cliqué sur un lien dans une autre page.</dd>
- <dt><a id="value-typed" name="value-typed"></a>"typed"</dt>
+ <dt>"typed"</dt>
  <dd>L'utilisateur a tapé l'URL dans la barre d'adresse. Ceci est également utilisé si l'utilisateur a commencé à taper dans la barre d'adresse, puis sélectionné une URL parmi les suggestions qu'il a proposées. Voir aussi " generated".</dd>
- <dt><a id="value-auto_bookmark" name="value-auto_bookmark"></a>"auto_bookmark"</dt>
+ <dt>"auto_bookmark"</dt>
  <dd>L'utilisateur a cliqué sur un signet ou un élément dans l'historique du navigateur.</dd>
- <dt><a id="value-auto_subframe" name="value-auto_subframe"></a>"auto_subframe"</dt>
+ <dt>"auto_subframe"</dt>
  <dd>Les iframes imbriqués qui sont automatiquement chargés par leur parent.</dd>
- <dt><a id="value-manual_subframe" name="value-manual_subframe"></a>"manual_subframe"</dt>
+ <dt>"manual_subframe"</dt>
  <dd>Les iframes imbriqués chargés en tant qu'action utilisateur explicite. Le chargement d'une telle iframe générera une entrée dans la liste de navigation avant/arrière.</dd>
- <dt><a id="value-generated" name="value-generated"></a>"generated"</dt>
+ <dt>"generated"</dt>
  <dd>L'utilisateur a commencé à taper dans la barre d'adresse, puis a cliqué sur une entrée suggérée qui ne contenait pas d'URL.</dd>
- <dt><a id="value-start_page" name="value-start_page"></a>"start_page"</dt>
+ <dt>"start_page"</dt>
  <dd>La page a été passée à la ligne de commande ou est la page de démarrage.</dd>
- <dt><a id="value-form_submit" name="value-form_submit"></a>"form_submit"</dt>
+ <dt>"form_submit"</dt>
  <dd>L'utilisateur a soumis un formulaire. Notez que dans certaines situations, par exemple lorsqu'un formulaire utilise un script pour soumettre son contenu, l'envoi d'un formulaire n'entraîne pas ce type de transition.</dd>
- <dt><a id="value-reload" name="value-reload"></a>"reload"</dt>
+ <dt>"reload"</dt>
  <dd>L'utilisateur a rechargé la page en utilisant le bouton Recharger ou en appuyant sur Entrée dans la barre d'adresse. Ceci est également utilisé pour la restauration de session et la réouverture des onglets fermés.</dd>
- <dt><a id="value-keyword" name="value-keyword"></a>"keyword"</dt>
+ <dt>"keyword"</dt>
  <dd>L'URL a été générée à l'aide d'une <a href="https://support.mozilla.org/fr/kb/comment-rechercher-site-barre-adresse">rechercher par mot</a> configurée par l'utilisateur.</dd>
- <dt><a id="value-keyword_generated" name="value-keyword_generated"></a>"keyword_generated"</dt>
+ <dt>"keyword_generated"</dt>
  <dd>Correspond à une visite générée pour un mot clé.</dd>
 </dl>
 
@@ -54,7 +54,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webNavigation"><code>chrome.webNavigation</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> dans le code de Chromium code.</p>
 

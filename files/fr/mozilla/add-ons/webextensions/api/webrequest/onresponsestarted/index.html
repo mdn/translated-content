@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onResponseStarted
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.webRequest.onResponseStarted.addListener(
+<pre class="brush: js">browser.webRequest.onResponseStarted.addListener(
   listener,             // function
   filter,               //  object
   extraInfoSpec         //  optional array of strings
@@ -47,10 +47,8 @@ browser.webRequest.onResponseStarted.hasListener(listener)
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>
- <p>Une fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
-
- <dl class="reference-values">
+ <dd><p>Une fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
+ <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Détails sur la demande. Voir les <code><a href="#details">details</a></code> ci-dessous.</dd>
  </dl>
@@ -58,10 +56,9 @@ browser.webRequest.onResponseStarted.hasListener(listener)
  <dt><code>filter</code></dt>
  <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.</dd>
  <dt><code>extraInfoSpec</code>{{optional_inline}}</dt>
- <dd><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous ne pouvez passer qu'une seule valeur <span class="im">:</span></dd>
- <dd>
+ <dd><p><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous ne pouvez passer qu'une seule valeur :</p>
  <ul>
-  <li><span class="im"><code>"</code></span><code>responseHeaders</code><span class="im"><code>"</code>: inclure <code>responseHeaders</code> dans l'objet <code>détails</code> </span>transmis à l'auditeur</li>
+  <li><code>"</code><code>responseHeaders</code><code>"</code>: inclure <code>responseHeaders</code> dans l'objet <code>détails</code> transmis à l'auditeur</li>
  </ul>
  </dd>
 </dl>
@@ -70,7 +67,7 @@ browser.webRequest.onResponseStarted.hasListener(listener)
 
 <h3 id="détails">détails</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>documentUrl</code></dt>
  <dd><code>string</code>. URL du document dans lequel la ressource sera chargée. Par exemple, si la page web "https://example.com" contient une image ou un iframe, alors le <code>documentUrl</code> pour l'image ou l'iframe sera "https://example.com". Pour un document de niveau supérieur, <code>documentUrl</code> n'est pas défini.</dd>
  <dt><code>frameId</code></dt>
@@ -164,7 +161,7 @@ browser.webRequest.onResponseStarted.addListener(
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> dans le code Chromium.</p>
 

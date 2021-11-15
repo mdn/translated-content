@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/get
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var getting = browser.windows.get(
+<pre class="brush: js">var getting = browser.windows.get(
   windowId,              // integer
   getInfo                // optional object
 )
@@ -33,8 +33,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/get
  <dt><code>windowId</code></dt>
  <dd><code>integer</code>. L'ID de l'objet de fenêtre souhaité est retourné.</dd>
  <dt><code>getInfo</code>{{optional_inline}}</dt>
- <dd><code>object</code>. Contient des options pour filtrer le type de fenêtre.
- <dl class="reference-values">
+ <dd><p><code>object</code>. Contient des options pour filtrer le type de fenêtre.</p>
+ <dl>
   <dt><code>populate</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre. Les objets Tab ne contiennent que les propriétés <code>url</code>, <code>title</code> et <code>favIconUrl</code>  i le fichier manifeste de l'extension comprend la permission <code>"tabs"</code>.</dd>
   <dt><code>windowTypes</code>{{optional_inline}}</dt>
@@ -43,7 +43,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/get
  </dd>
 </dl>
 
-<div class="note"><strong>Note:</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Si fourni, le composant <code>windowTypes</code> de <code>getInfo</code> est ignoré. L'utilisation de  <code>windowTypes</code> a été dépréciée à partir de Firefox 62.</p>
 </div>
@@ -61,7 +61,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/get
 <p>Cet exemple obtient la fenêtre actuelle et enregistre les URL des onglets qu'il contient. Notez que vous aurez besoin des <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "onglets" pour accéder aux URL des onglets.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Cet exemple est un peu irréaliste: dans cette situation, vous utiliserez probablement  {{WebExtAPIRef("windows.getCurrent()")}}.</p>
+<p><strong>Note :</strong> Cet exemple est un peu irréaliste: dans cette situation, vous utiliserez probablement  {{WebExtAPIRef("windows.getCurrent()")}}.</p>
 </div>
 
 <pre class="brush: js">function logTabs(windowInfo) {
@@ -82,7 +82,7 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
 

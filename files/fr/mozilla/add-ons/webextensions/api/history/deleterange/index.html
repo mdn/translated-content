@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var deletingRange = browser.history.deleteRange(
+<pre class="brush: js">var deletingRange = browser.history.deleteRange(
   range           // object
 )
 </pre>
@@ -30,9 +30,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
 
 <dl>
  <dt><code>range</code></dt>
- <dd><code>object</code>. Spécification de la plage de temps pour laquelle supprimer des visites.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. Spécification de la plage de temps pour laquelle supprimer des visites.</p>
+ <dl>
   <dt><code>startTime</code></dt>
   <dd><code>number</code> ou <code>string</code> ou <code>object</code>. Une valeur indiquant une date et une heure. Cela peut être représenté par: un objet <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>, une <a href="http://www.iso.org/iso/home/standards/iso8601.htm">chaîne de de date ISO 8601</a>, ou le nombre de <a href="https://en.wikipedia.org/wiki/Unix_time">millisecondes depuis l'époque</a>. Spécifie l'heure de début de la plage.</dd>
   <dt><code>endTime</code></dt>
@@ -66,7 +65,7 @@ browser.history.deleteRange({
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#method-deleteRange"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
 

@@ -17,7 +17,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network/onNavigated
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.devtools.network.onNavigated.addListener(listener)
+<pre class="brush: js">browser.devtools.network.onNavigated.addListener(listener)
 browser.devtools.network.onNavigated.removeListener(listener)
 browser.devtools.network.onNavigated.hasListener(listener)
 </pre>
@@ -42,7 +42,7 @@ browser.devtools.network.onNavigated.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>url</code></dt>
   <dd><code>string</code>. La nouvelle URL pour la fenêtre.</dd>
  </dl>
@@ -63,7 +63,7 @@ browser.devtools.network.onNavigated.addListener(handleNavigated);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API <a href="https://developer.chrome.com/extensions/devtools"><code>chrome.devtools</code></a> de Chromium.</p>
 

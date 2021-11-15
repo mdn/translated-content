@@ -12,9 +12,9 @@ original_slug: Utilisation_du_cache_de_Firefox_1.5
 ---
 <div>{{FirefoxSidebar}}</div><p> </p>
 
-<h3 id="Introduction" name="Introduction">Introduction</h3>
+<h3 id="Introduction">Introduction</h3>
 
-<p><a href="/fr/Firefox_1.5_pour_les_développeurs" title="fr/Firefox_1.5_pour_les_développeurs">Firefox 1.5</a> met en mémoire cache des pages Web entières, avec leurs états JavaScript, pour une même session de navigation. Revenir ou avancer entre des pages déjà visitées ne nécessite aucun chargement de page et les états JavaScript sont préservés. Cette fonctionnalité parfois appelée <strong>bfcache</strong> (pour « Back-Forward Cache ») rend la navigation très rapide. Ce cache est préservé en mémoire jusqu'à ce que l'utilisateur ferme le navigateur.</p>
+<p><a href="/fr/Firefox_1.5_pour_les_développeurs">Firefox 1.5</a> met en mémoire cache des pages Web entières, avec leurs états JavaScript, pour une même session de navigation. Revenir ou avancer entre des pages déjà visitées ne nécessite aucun chargement de page et les états JavaScript sont préservés. Cette fonctionnalité parfois appelée <strong>bfcache</strong> (pour « Back-Forward Cache ») rend la navigation très rapide. Ce cache est préservé en mémoire jusqu'à ce que l'utilisateur ferme le navigateur.</p>
 
 <p>Il existe des cas où Firefox ne met pas en cache les pages. Vous trouverez ci-dessous certaines raisons classiques de programmation faisant qu'une page n'est pas mise en cache :</p>
 
@@ -36,7 +36,7 @@ original_slug: Utilisation_du_cache_de_Firefox_1.5
 
 <p>Le navigateur offre aux webmestres deux nouveaux évènements pour cela.</p>
 
-<h3 id="Nouveaux_.C3.A9v.C3.A8nements_du_navigateur" name="Nouveaux_.C3.A9v.C3.A8nements_du_navigateur">Nouveaux évènements du navigateur</h3>
+<h3 id="Nouveaux_.C3.A9v.C3.A8nements_du_navigateur">Nouveaux évènements du navigateur</h3>
 
 <p>Si vous utilisez ces nouveaux évènements, vos pages continueront à s'afficher correctement dans les autres navigateurs (nous avons testé des versions antérieures de Firefox, Internet Explorer, Opera et Safari), et elles utiliseront ces nouvelles fonctionnalités de mise en cache lors de leur chargement dans Firefox 1.5.</p>
 
@@ -56,7 +56,7 @@ original_slug: Utilisation_du_cache_de_Firefox_1.5
 
 <p>Si vous avez des actions devant s'exécuter lorsque l'utilisateur quitte une page, mais désirez profiter de la nouvelle fonctionnalité de mise en cache, donc sans pouvoir employer le gestionnaire <code>unload</code>, utilisez le nouvel évènement <code>pagehide</code>.</p>
 
-<h4 id="L.27.C3.A9v.C3.A8nement_pageshow" name="L.27.C3.A9v.C3.A8nement_pageshow">L'évènement pageshow</h4>
+<h4 id="L.27.C3.A9v.C3.A8nement_pageshow">L'évènement pageshow</h4>
 
 <p>Cet évènement fonctionne comme l'évènement <code>load</code>, sauf qu'il se déclenche à chaque fois que la page est chargée (tandis que l'évènement <code>load</code> ne se déclenche pas avec Firefox 1.5 pour une page chargée depuis le cache). La première fois qu'une page se charge, l'évènement <code>pageshow</code> se déclenche juste après l'évènement <code>load</code>. L'évènement <code>pageshow</code> utilise une propriété booléenne <code>persisted</code> définie à <code>false</code> lors du chargement initial. Elle est définie à <code>true</code> s'il ne s'agit pas du chargement initial de la page (en d'autres termes, elle est définie à <code>true</code> pour une page chargée depuis le cache).</p>
 
@@ -64,7 +64,7 @@ original_slug: Utilisation_du_cache_de_Firefox_1.5
 
 <p>Si vous appelez des fonctions JavaScript comme faisant partie de l'évènement <code>pageshow</code>, vous pouvez vous assurer qu'elles soient appelées lorsque la page est chargée dans d'autres navigateurs que Firefox 1.5 en appelant l'évènement <code>pageshow</code> depuis l'évènement <code>load</code>, comme indiqué dans l'exemple plus bas dans cet article.</p>
 
-<h4 id="L.27.C3.A9v.C3.A8nement_pagehide" name="L.27.C3.A9v.C3.A8nement_pagehide">L'évènement pagehide</h4>
+<h4 id="L.27.C3.A9v.C3.A8nement_pagehide">L'évènement pagehide</h4>
 
 <p>Si vous désirez définir un comportement se produisant lorsque l'utilisateur quitte la page, mais ne voulez pas utiliser l'évènement <code>unload</code> (ce qui empêcherait la page d'être mise en cache), vous pouvez utiliser le nouvel évènement <code>pagehide</code>. Comme <code>pageshow</code>, l'évènement <code>pagehide</code> utilise une propriété booléenne appelée <code>persisted</code>. Cette propriété est définie à <code>true</code> si la page est mise en cache par le navigateur. Lorsque cette propriété est définie à <code>false</code>, le gestionnaire <code>unload</code>, s'il existe, se déclenche immédiatement après l'évènement <code>pagehide</code>.</p>
 
@@ -76,7 +76,7 @@ original_slug: Utilisation_du_cache_de_Firefox_1.5
  <li>pour la navigation se déroulant à l'intérieur d'un seul cadre, les évènements se déclenchent uniquement dans le cadre affecté.</li>
 </ul>
 
-<h3 id="Exemple_de_code" name="Exemple_de_code">Exemple de code</h3>
+<h3 id="Exemple_de_code">Exemple de code</h3>
 
 <p>L'exemple ci-dessous illustre une page utilisant à la fois les évènements <code>load</code> et <code>pageshow</code>. La page se comporte de la façon suivante :</p>
 
@@ -183,8 +183,8 @@ function loadOnlyFirst() {
 &lt;body onload="onLoad();"&gt;
 </pre>
 
-<h3 id="D.C3.A9veloppement_d.27extensions_pour_Firefox" name="D.C3.A9veloppement_d.27extensions_pour_Firefox">Développement d'extensions pour Firefox</h3>
+<h3 id="D.C3.A9veloppement_d.27extensions_pour_Firefox">Développement d'extensions pour Firefox</h3>
 
-<p>Les <a href="/fr/Construire_une_extension" title="fr/Construire_une_extension">extensions</a> pour Firefox 1.5 doivent prendre en compte cette fonctionnalité de mise en cache. Si vous développez une extension pour Firefox et que vous désirez qu'elle soit compatible à la fois avec la 1.5 et les versions antérieures, assurez-vous qu'elle écoute l'évènement <code>load</code> pour les déclencheurs qui peuvent être mis en cache et écoute l'évènement <code>pageshow</code> pour les déclencheurs qui ne doivent pas être mis en cache.</p>
+<p>Les <a href="/fr/Construire_une_extension">extensions</a> pour Firefox 1.5 doivent prendre en compte cette fonctionnalité de mise en cache. Si vous développez une extension pour Firefox et que vous désirez qu'elle soit compatible à la fois avec la 1.5 et les versions antérieures, assurez-vous qu'elle écoute l'évènement <code>load</code> pour les déclencheurs qui peuvent être mis en cache et écoute l'évènement <code>pageshow</code> pour les déclencheurs qui ne doivent pas être mis en cache.</p>
 
 <p>Par exemple, la Barre d'outils Google pour Firefox doit écouter l'évènement <code>load</code> pour la fonction de liens automatiques et l'évènement <code>pageshow</code> pour la fonction PageRank afin d'être compatible à la fois avec la version 1.5 et les versions antérieures.</p>

@@ -96,7 +96,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
  <dt>{{WebExtAPIRef("tabs.getCurrent()")}}</dt>
  <dd>Obtient des informations sur l'onglet dans lequel ce script s'exécute, en tant qu'objet {{WebExtAPIRef("tabs.Tab")}}.</dd>
  <dt>{{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}</dt>
- <dd>Obtient l'onglet sélectionné dans la fenêtre spécifiée. <strong>Deprecated: utilisez plutôt <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query" title="Gets all tabs that have the specified properties, or all tabs if no properties are specified."><code>tabs.query({active: true})</code></a>.</strong></dd>
+ <dd>Obtient l'onglet sélectionné dans la fenêtre spécifiée. <strong>Deprecated: utilisez plutôt <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query"><code>tabs.query({active: true})</code></a>.</strong></dd>
  <dt>{{WebExtAPIRef("tabs.getZoom()")}}</dt>
  <dd>Obtient le facteur de zoom actuel de l'onglet spécifié.</dd>
  <dt>{{WebExtAPIRef("tabs.getZoomSettings()")}}</dt>
@@ -169,7 +169,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
  <dt>{{WebExtAPIRef("tabs.onRemoved")}}</dt>
  <dd>Est émis lorsqu'un onglet est fermé.</dd>
  <dt>{{WebExtAPIRef("tabs.onReplaced")}}</dt>
- <dd>Est émis lorsqu'un onglet est remplacé par un autre onglet en raison d'un <em lang="en-US">prerendering</em>.</dd>
+ <dd>Est émis lorsqu'un onglet est remplacé par un autre onglet en raison d'un <i lang="en">prerendering</i>.</dd>
  <dt>{{WebExtAPIRef("tabs.onSelectionChanged")}} {{deprecated_inline}}</dt>
  <dd>Est émis lorsque l'onglet sélectionné dans une fenêtre change. <strong>Déprécié :</strong> utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.</dd>
  <dt>{{WebExtAPIRef("tabs.onUpdated")}}</dt>
@@ -184,9 +184,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 
 <p>{{WebExtExamples("h2")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
-<p>Cette API est basée sur l'API Chromium <a class="external" href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a class="external" href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
+<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 
 <p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
 </div>

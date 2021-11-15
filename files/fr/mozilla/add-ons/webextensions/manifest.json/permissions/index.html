@@ -12,7 +12,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 ---
 <p>{{AddonSidebar}}</p>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row" style="width: 30%;">Type</th>
@@ -25,7 +25,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
   <tr>
    <th scope="row">Exemple</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "permissions": [
   "*://developer.mozilla.org/*",
   "webRequest"
@@ -65,7 +65,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 
 <p>Dans Firefox, à partir de la version 56, les extensions reçoivent automatiquement les permissions d'hôte pour leur propre origine, qui se présentent sous la forme :</p>
 
-<pre><code>moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/</code></pre>
+<pre>moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/</pre>
 
 <p>Où <code>60a20a9b-1ad4-af49-9b6c-c64c98c37920</code> est l'ID interne de l'extension. L'extension peut obtenir cette URL par programmation en appelant <a href="/fr/Add-ons/WebExtensions/API/extension/getURL">extension.getURL() </a>:</p>
 
@@ -179,15 +179,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: json; no-line-numbers">"permissions": ["*://developer.mozilla.org/*"]</pre>
+<pre class="brush: json;">"permissions": ["*://developer.mozilla.org/*"]</pre>
 
 <p>Demande d'accès privilégié aux pages sous developer.mozilla.org.</p>
 
-<pre class="brush: json no-line-numbers">"permissions": ["tabs"]</pre>
+<pre class="brush: json">"permissions": ["tabs"]</pre>
 
 <p>Demande d'accès aux éléments privilégiés de l'API <code>tabs.</code></p>
 
-<pre class="brush: json no-line-numbers">"permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
+<pre class="brush: json">"permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
 
 <p>Demande des deux permissions ci-dessus.</p>
 

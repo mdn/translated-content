@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 
 <p>Par la suite, l'extension pourra échanger des messages en JSON avec l'application native en utilisant une série de fonctions de l'API {{WebExtAPIRef("runtime")}}. Du côté de l'application native, les messages seront reçus en utilisant l'entrée standard (stdin, standard input) et envoyés en utilisant la sortie standard (stdout, standard output).</p>
 
-<p><img alt="" src="native-messaging.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="native-messaging.png"></p>
 
 <p>Le support de native messaging dans les extensions est généralement compatible avec Chrome, avec deux grandes différences :</p>
 
@@ -89,7 +89,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 <p>Ceci autorise l'application dont l'ID est « ping_pong@example.org » à se connecter, en passant le nom « ping_pong » comme paramètre à la fonction de l'API {{WebExtAPIRef("runtime")}} concernée. L'application, elle‐même se trouve dans le fichier « /path/to/native‐messaging/app/ping_pong.py ».</p>
 
 <div class="note">
-<p><strong>Remarque pour Windows</strong>: dans l'exemple ci‐dessus, l'application native est un script Python. Il peut être compliqué d'amener Windows à faire fonctionner correctement des scripts Python, une méthode alternative est de fournir un fichier .bat, et de l'indiquer dans le manifest :</p>
+<p><strong>Note :</strong> Pour Windows dans l'exemple ci‐dessus, l'application native est un script Python. Il peut être compliqué d'amener Windows à faire fonctionner correctement des scripts Python, une méthode alternative est de fournir un fichier .bat, et de l'indiquer dans le manifest :</p>
 
 <pre class="brush: json">{
   "name": "ping_pong",
@@ -128,7 +128,8 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</pre>
 </ul>
 
 <div class="note">
-<p>Chrome gère différemment les arguments passés :</p>
+  
+<p><strong>Note :</strong> Chrome gère différemment les arguments passés :</p>
 
 <ul>
  <li>Sous Linux et Mac, Chrome passe un argument, l'origine de l'extension qui l'a lancé sous la forme : <code>chrome-extension://[extensionID]</code>. Ceci permet à l'application d'identifier l'extension.</li>

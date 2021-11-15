@@ -24,16 +24,16 @@ original_slug: Mozilla/Firefox/Versions/7
 <h4 id="Canvas">Canvas</h4>
 
 <ul>
- <li>Dans le cadre du <a class="external" href="http://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/">projet Azure</a>, le Backend Azure Direct2D <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=651858">a été implémenté</a> et améliore considérablement les performances des canvas 2D.</li>
+ <li>Dans le cadre du <a href="http://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/">projet Azure</a>, le Backend Azure Direct2D <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=651858">a été implémenté</a> et améliore considérablement les performances des canvas 2D.</li>
  <li>La spécification de valeurs invalides lors de l'appel de <code>setTransform()</code>, <code>bezierCurveTo()</code> ou <code>arcTo()</code> ne renvoie plus d'exception, ces appels sont à présent ignorés silencieusement.</li>
- <li>La méthode <a class="internal" href="https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#isPointInPath()" title="en/DOM/CanvasRenderingContext2D#isPointInPath()"><code>isPointInPath()</code></a> considère maintenant correctement la matrice de transformation lors de la comparaison du point spécifié au tracé en cours.</li>
+ <li>La méthode <a href="/fr/docs/DOM/CanvasRenderingContext2D#isPointInPath()"><code>isPointInPath()</code></a> considère maintenant correctement la matrice de transformation lors de la comparaison du point spécifié au tracé en cours.</li>
  <li>L'appel de <code>strokeRect()</code> avec une largeur et une hauteur de zéro n'a désormais plus aucun effet.</li>
- <li>L'appel de <a class="internal" href="https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#drawImage()" title="en/DOM/CanvasRenderingContext2D#drawImage()"><code>drawImage()</code></a> avec une largeur ou hauteur {{HTMLElement("canvas")}} de zéro lance désormais <code>INVALID_STATE_ERR</code>.</li>
- <li>L'appel de <a class="internal" href="https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#drawImage()" title="en/DOM/CanvasRenderingContext2D#drawImage()"><code>drawImage()</code></a> avec des coordonnées non-finies ne renvoie plus d'exception.</li>
+ <li>L'appel de <a href="/fr/docs/DOM/CanvasRenderingContext2D#drawImage()"><code>drawImage()</code></a> avec une largeur ou hauteur {{HTMLElement("canvas")}} de zéro lance désormais <code>INVALID_STATE_ERR</code>.</li>
+ <li>L'appel de <a href="/fr/docs/DOM/CanvasRenderingContext2D#drawImage()"><code>drawImage()</code></a> avec des coordonnées non-finies ne renvoie plus d'exception.</li>
  <li>La méthode <code>toDataURL()</code> accepte désormais un second paramètre pour contrôler la qualité JPEG.</li>
  <li>Le support des opérations non-standards <code>clear</code> et <code>over</code> de <code>globalCompositeOperation</code> a été enlevé.</li>
- <li><a class="internal" href="https://developer.mozilla.org/en-US/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows" title="en/Canvas_tutorial/Applying_styles_and_colors#Shadows">Les ombres</a> sont désormais uniquement dessinées pour les opérations de composition de <code>source-over</code>.</li>
- <li>Vous pouvez désormais configurer la règle de remplissage utilisé par la toile en définissant l'<a class="internal" href="https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#Attributes" title="en/DOM/CanvasRenderingContext2D#Attributes">attribute</a> <code>mozFillRule</code> au contexte.</li>
+ <li><a href="/fr/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows">Les ombres</a> sont désormais uniquement dessinées pour les opérations de composition de <code>source-over</code>.</li>
+ <li>Vous pouvez désormais configurer la règle de remplissage utilisé par la toile en définissant l'<a href="/fr/docs/DOM/CanvasRenderingContext2D#Attributes">attribute</a> <code>mozFillRule</code> au contexte.</li>
  <li>Le support des attributs expérimentaux <code>mozDash</code>, <code>mozDashOffset</code>, <code>mozCurrentTransform</code> et <code>mozCurrentTransformInverse</code> a été ajouté.</li>
  <li>Le support des méthodes non-standards <code>mozDrawText()</code>, <code>mozMeasureText()</code>, <code>mozPathText()</code> et <code>mozTextAlongPath()</code> a été retiré.</li>
 </ul>
@@ -51,9 +51,9 @@ original_slug: Mozilla/Firefox/Versions/7
  <li>XLink href a été rétabli et l'attribut <code>href</code> de MathML3 est maintenant supporté. Les développeurs sont encouragés à passer à la dernière syntaxe.</li>
  <li>Le support de l'attribut <code>voffset</code> sur les éléments {{MathMLElement("mpadded")}} a été ajouté et le comportement de l'attribut <code>lspace</code> a été fixé.</li>
  <li>L'élément de premier niveau {{MathMLElement("math")}} accepte maintenant tous les atributs de l'élément {{MathMLElement("mstyle")}}.</li>
- <li>Le support des polices <a class="external" href="http://www.ctan.org/tex-archive/fonts/Asana-Math/">Asana Math</a> a été ajouté.</li>
+ <li>Le support des polices <a href="http://www.ctan.org/tex-archive/fonts/Asana-Math/">Asana Math</a> a été ajouté.</li>
  <li>L'épaisseur des lignes <code>medium</code> des barres de fraction des éléments {{MathMLElement("mfrac")}} a été corrigé pour correspondre à l'épaisseur par défaut.</li>
- <li><a class="internal" href="https://developer.mozilla.org/en-US/docs/MathML/Attributes/Values#Constants_(namedspaces)" title="en/MathML/Attributes/Values#Constants_(namedspaces)">Les noms des espaces négatifs</a> sont maintenant supportés.</li>
+ <li><a href="/fr/docs/MathML/Attributes/Values#Constants_(namedspaces)">Les noms des espaces négatifs</a> sont maintenant supportés.</li>
 </ul>
 
 <h3 id="DOM">DOM</h3>
@@ -68,7 +68,7 @@ original_slug: Mozilla/Firefox/Versions/7
  <li>{{domxref("DOMTokenList.item")}} renvoie désormais <code>undefined</code> si <code>index</code> est en dehors des limites, auparavant il renvoyé <code>null</code>.</li>
  <li><code>Node.getFeature</code> a été supprimé.</li>
  <li>Les interfaces <code>HTMLInsElement</code> et <code>HTMLDelElement</code> ont été retirées, depuis que les éléments {{HTMLElement("ins")}} et {{HTMLElement("del")}} utilisent l'interface {{domxref("HTMLModElement")}}.</li>
- <li>Dans le but d'être conforme à la prochaine spécification <a class="external" href="http://www.w3.org/TR/dom/">DOM4</a> où {{domxref("Attr")}} n'hérite plus de {{domxref("Node")}} (il l'a fait dans les DOM Core 1, 2 and 3), beaucoup de propriétés et méthodes de {{domxref("Node")}} sur l'interface {{domxref("Attr")}} sont maintenant des <a class="internal" href="https://developer.mozilla.org/en-US/docs/DOM/Attr#Deprecated_properties_and_methods" title="en/DOM/Attr#Deprecated_properties_and_methods">rapports d'alertes</a> que nous nous efforçons de retirer dans une version ultérieure.</li>
+ <li>Dans le but d'être conforme à la prochaine spécification <a href="http://www.w3.org/TR/dom/">DOM4</a> où {{domxref("Attr")}} n'hérite plus de {{domxref("Node")}} (il l'a fait dans les DOM Core 1, 2 and 3), beaucoup de propriétés et méthodes de {{domxref("Node")}} sur l'interface {{domxref("Attr")}} sont maintenant des <a href="/fr/docs/DOM/Attr#Deprecated_properties_and_methods">rapports d'alertes</a> que nous nous efforçons de retirer dans une version ultérieure.</li>
  <li>Ajout du support des propriétés {{domxref("window.ondeviceorientation")}} et {{domxref("window.ondevicemotion")}} sur les objets {{domxref("window")}}.</li>
  <li>{{domxref("window.resizeTo")}}, {{domxref("window.resizeBy")}}, {{domxref("window.moveTo")}} et {{domxref("window.moveBy")}} ne s'appliquent plus à la fenêtre principale.</li>
 </ul>
@@ -76,42 +76,43 @@ original_slug: Mozilla/Firefox/Versions/7
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>La propriété <code><a class="internal" href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/arity" title="en/JavaScript/Reference/Global_Objects/Function/arity">Function.arity</a></code> a été enlevée, utilisez <code><a class="internal" href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/length" title="en/JavaScript/Reference/Global_Objects/Function/length">Function.length</a></code> à la place.</li>
+ <li>La propriété <code><a href="/fr/docs/JavaScript/Reference/Global_Objects/Function/arity">Function.arity</a></code> a été enlevée, utilisez <code><a href="/fr/docs/JavaScript/Reference/Global_Objects/Function/length">Function.length</a></code> à la place.</li>
 </ul>
 
 <h3 id="WebSockets">WebSockets</h3>
 
 <ul>
  <li>la préférence <code>network.websocket.max-connections</code> est utilisée pour déterminer le nombre maximum de connexions à WebSocket qui peuvent être ouvertes en même temps. La valeur par défaut est 200.</li>
- <li>La version 8 du protocole WebSocket (comme spécifié par <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-10">IETF draft 10</a>) est maintenant utilisé à la place de la version 7 du protocole utilisé par Firefox 6.</li>
+ <li>La version 8 du protocole WebSocket (comme spécifié par <a href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-10">IETF draft 10</a>) est maintenant utilisé à la place de la version 7 du protocole utilisé par Firefox 6.</li>
  <li>L'API WebSocket est maintenant disponible sur Firefox Mobile.</li>
 </ul>
 
 <h3 id="Console_API">Console API</h3>
 
 <ul>
- <li>Les messages enregistrés avec <code>console.log</code> alors que la <a class="internal" href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console" title="Using the Web Console">console web</a> n'est pas ouverte sont toujours enregistrés, bien qu'ils ne s'affichent pas lorsque la console web est ouverte.</li>
+ <li>Les messages enregistrés avec <code>console.log</code> alors que la <a href="/fr/docs/Tools/Web_Console">console web</a> n'est pas ouverte sont toujours enregistrés, bien qu'ils ne s'affichent pas lorsque la console web est ouverte.</li>
 </ul>
 
-<div class="changelog">
+
 <h3 id="Web_timing">Web timing</h3>
 
 <ul>
- <li>Première implémentation de la spécification <a class="external" href="http://www.w3.org/TR/navigation-timing/">Navigation Timing</a> qui fournit des données pouvant être utilisées pour mesurer les performances d'un site.</li>
+ <li>Première implémentation de la spécification <a href="http://www.w3.org/TR/navigation-timing/">Navigation Timing</a> qui fournit des données pouvant être utilisées pour mesurer les performances d'un site.</li>
 </ul>
 
 <h3 id="XML">XML</h3>
 
 <ul>
- <li>En plus de la précédente prise en charge de <code>text/xsl</code>, les feuilles de style XSLT peuvent désormais utiliser les médias Internet officiels (MIME) de type <code>application/xslt+xml</code> (dans la <a class="external" href="http://www.w3.org/TR/xml-stylesheet/">feuille de style d'instruction de traitement</a> ou le <a class="external" href="http://tools.ietf.org/html/rfc5988">champ d'en-tête HTTP Link</a>).</li>
+ <li>En plus de la précédente prise en charge de <code>text/xsl</code>, les feuilles de style XSLT peuvent désormais utiliser les médias Internet officiels (MIME) de type <code>application/xslt+xml</code> (dans la <a href="http://www.w3.org/TR/xml-stylesheet/">feuille de style d'instruction de traitement</a> ou le <a href="http://tools.ietf.org/html/rfc5988">champ d'en-tête HTTP Link</a>).</li>
 </ul>
-</div>
 
 <h2 id="Changements_pour_les_développeurs_de_Mozilla_et_de_modules_complémentaires">Changements pour les développeurs de Mozilla et de modules complémentaires</h2>
 
-<p>Ces changements affectent les développeurs d'extensions ainsi que les développeurs qui travaillent sur ​​ou avec le code de Mozilla lui-même. Les developpeurs d'extensions doivent voir <a class="internal" href="https://developer.mozilla.org/en-US/docs/Firefox/Updating_extensions_for_Firefox_7" title="en/Firefox/Updating extensions for Firefox 7">Updating extensions for Firefox 7</a> pour plus d'informations.</p>
+<p>Ces changements affectent les développeurs d'extensions ainsi que les développeurs qui travaillent sur ​​ou avec le code de Mozilla lui-même. Les developpeurs d'extensions doivent voir <a href="/fr/docs/Firefox/Updating_extensions_for_Firefox_7">Updating extensions for Firefox 7</a> pour plus d'informations.</p>
 
-<div class="note"><strong>Note:</strong> Firefox 7 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir <a class="internal" href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces" title="En/Developer Guide/Interface Compatibility#Binary Interfaces">Interfaces Binaires</a>.</div>
+<div class="note">
+  <p><strong>Note :</strong> Firefox 7 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir <a href="/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces">Interfaces Binaires</a>.</p>
+</div>
 
 <h3 id="Modules_de_code_JavaScript">Modules de code JavaScript</h3>
 
@@ -132,14 +133,14 @@ original_slug: Mozilla/Firefox/Versions/7
 
 <ul>
  <li>Les éléments {{xulelem("tree")}} peuvent désormais conserver l'état des triangles d'affichage si les nœuds référencés par les {{XULAttr("datasources")}} ont tous des ID uniques spécifiés par les attributs "id".</li>
- <li>Les éléments {{xulelem("panel")}} peuvent désormais être configurés pour <a class="internal" href="https://developer.mozilla.org/en-US/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background" title="en/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background">permettre à l'utilisateur de les faire glisser en cliquant n'importe où sur leur arrière-plan</a> avec le nouvel attribut {{XULAttr("backdrag")}}.</li>
+ <li>Les éléments {{xulelem("panel")}} peuvent désormais être configurés pour <a href="/fr/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background">permettre à l'utilisateur de les faire glisser en cliquant n'importe où sur leur arrière-plan</a> avec le nouvel attribut {{XULAttr("backdrag")}}.</li>
 </ul>
 
 <h3 id="XPCOM">XPCOM</h3>
 
 <ul>
- <li>La nouvelle méthode <a class="internal" href="https://developer.mozilla.org/fr/docs/Components.utils.schedulePreciseGC" title="Components.utils.schedulePreciseGC"><code>Components.utils.schedulePreciseGC()</code></a> vous permet de programmer un cycle approfondi de collection de garbage de se produire à un moment donné lorsqu'aucun code JavaScript n'est exécuté, un rappel est exécuté une fois la collecte terminée.</li>
- <li>La méthode <a class="internal" href="https://developer.mozilla.org/fr/docs/Components.utils.unload" title="Components.utils.unload"><code>Components.utils.unload()</code></a> vous permet de décharger les modules de code JavaScript déjà chargés en appelant <code>Components.utils.load()</code>.</li>
+ <li>La nouvelle méthode <a href="/fr/docs/Components.utils.schedulePreciseGC"><code>Components.utils.schedulePreciseGC()</code></a> vous permet de programmer un cycle approfondi de collection de garbage de se produire à un moment donné lorsqu'aucun code JavaScript n'est exécuté, un rappel est exécuté une fois la collecte terminée.</li>
+ <li>La méthode <a href="/fr/docs/Components.utils.unload"><code>Components.utils.unload()</code></a> vous permet de décharger les modules de code JavaScript déjà chargés en appelant <code>Components.utils.load()</code>.</li>
 </ul>
 
 <h3 id="Rapporteur_de_mémoire">Rapporteur de mémoire</h3>
@@ -149,21 +150,21 @@ original_slug: Mozilla/Firefox/Versions/7
 <h3 id="Changements_de_l'expérience_utilisateur">Changements de l'expérience utilisateur</h3>
 
 <ul>
- <li>Les options des extensions peuvent désormais être <a class="internal" href="https://developer.mozilla.org/en-US/docs/Extensions/Inline_Options" title="en/Extensions/Inline_Options">être affichées à l'intérieur du gestionnaire de modules complémentaires</a>.</li>
- <li>La destination des téléchargements est désormais gardée en mémoire sur une base site par site. Ces données peuvent être accessibles par <a class="internal" href="https://developer.mozilla.org/en-US/docs/JavaScript_code_modules/DownloadLastDir.jsm" title="en/JavaScript_code_modules/DownloadLastDir.jsm">DownloadLastDir.jsm</a>.</li>
+ <li>Les options des extensions peuvent désormais être <a href="/fr/docs/Extensions/Inline_Options">être affichées à l'intérieur du gestionnaire de modules complémentaires</a>.</li>
+ <li>La destination des téléchargements est désormais gardée en mémoire sur une base site par site. Ces données peuvent être accessibles par <a href="/fr/docs/JavaScript_code_modules/DownloadLastDir.jsm">DownloadLastDir.jsm</a>.</li>
 </ul>
 
 <h3 id="Changements_dans_le_système_de_compilation">Changements dans le système de compilation</h3>
 
 <ul>
  <li>L'API d'intégration d'ActiveX n'est plus compilée et son support a été retiré du système de compilation. Des interfaces ont également été supprimées, voir {{anch("Interfaces supprimées")}}.</li>
- <li>Vous n'avez plus besoin de préciser <code>-Zc:wchar_t-</code> lors de la compilation sous Windows. Pour plus de détails, voir <a class="internal" href="https://developer.mozilla.org/en-US/docs/Developer_Guide/Build_Instructions#Build_and_install" title="en/Developer_Guide/Build_Instructions#Build_and_install">la documentation sur la compilation</a>.</li>
+ <li>Vous n'avez plus besoin de préciser <code>-Zc:wchar_t-</code> lors de la compilation sous Windows. Pour plus de détails, voir <a href="/fr/docs/Developer_Guide/Build_Instructions#Build_and_install">la documentation sur la compilation</a>.</li>
 </ul>
 
 <h3 id="Changements_dans_les_interfaces">Changements dans les interfaces</h3>
 
 <ul>
- <li>{{interface("nsISocketTransport")}} offre désormais un nouveau drapeau de connexion : <code>DISABLE_IPV6</code>, cela entraîne des tentatives de connexion uniquement aux adresses IPv4, en ignorant toutes les adresses IPv6 disponibles. De plus, {{interface("nsIDNSService")}} offre désormais un nouveau drapeau de résolution : <code>RESOLVE_DISABLE_IPV6</code>, ce qui entraîne un résolution des noms de domaine en ne tenant compte que des hôtes IPv4 et en ignorant toutes les adresses IPv6 disponibles. Ces changements permettent d'implémenter la <a class="external" href="http://tools.ietf.org/html/draft-wing-http-new-tech-00">stratégie "happy eyeballs"</a> pour améliorer le temps de réponse lors d'une tentative de connexion sur les hôtes qui supportent à la fois IPv4 et IPv6 (en particulier ceux qui ont brisé la connectivité IPv6).</li>
+ <li>{{interface("nsISocketTransport")}} offre désormais un nouveau drapeau de connexion : <code>DISABLE_IPV6</code>, cela entraîne des tentatives de connexion uniquement aux adresses IPv4, en ignorant toutes les adresses IPv6 disponibles. De plus, {{interface("nsIDNSService")}} offre désormais un nouveau drapeau de résolution : <code>RESOLVE_DISABLE_IPV6</code>, ce qui entraîne un résolution des noms de domaine en ne tenant compte que des hôtes IPv4 et en ignorant toutes les adresses IPv6 disponibles. Ces changements permettent d'implémenter la <a href="http://tools.ietf.org/html/draft-wing-http-new-tech-00">stratégie "happy eyeballs"</a> pour améliorer le temps de réponse lors d'une tentative de connexion sur les hôtes qui supportent à la fois IPv4 et IPv6 (en particulier ceux qui ont brisé la connectivité IPv6).</li>
  <li>{{interface("inIDOMUtils")}} a deux nouvelles méthodes, {{ifmethod("inIDOMUtils","getChildrenForNode")}} qui renvoie une liste des nœuds enfants d'un noeud et {{ifmethod("inIDOMUtils","getUsedFontFaces")}} qui renvoie la liste des police de caractères utilisées dans une gamme.</li>
  <li>L'interface <code>nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH</code> a été intégrée dans l'interface {{interface("nsIMarkupDocumentViewer")}}.</li>
  <li>L'interface <code>nsIDOMWindow2</code> a été intégrée dans l'interface {{interface("nsIDOMWindow")}}.</li>
@@ -231,8 +232,8 @@ original_slug: Mozilla/Firefox/Versions/7
 <h3 id="Autres_changements">Autres changements</h3>
 
 <ul>
- <li>La structure de la fenêtre de la bibliothèque (<code>places.xul</code>) <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=588027">a été nettoyée</a>. Cela <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=677417">pourrait casser les extensions</a> et les thèmes</li>
- <li>L'apparence de la fenêtre d'aperçu avant impression <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=663028">a été modernisé</a> et les auteurs de thèmes sont invités à avoir le même style en utilisant les pseudo-éléments CSS {{cssxref("::-moz-page")}}, {{cssxref("::-moz-page-sequence")}} et {{cssxref("::-moz-scrolled-page-sequence")}}</li>
+ <li>La structure de la fenêtre de la bibliothèque (<code>places.xul</code>) <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=588027">a été nettoyée</a>. Cela <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=677417">pourrait casser les extensions</a> et les thèmes</li>
+ <li>L'apparence de la fenêtre d'aperçu avant impression <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=663028">a été modernisé</a> et les auteurs de thèmes sont invités à avoir le même style en utilisant les pseudo-éléments CSS {{cssxref("::-moz-page")}}, {{cssxref("::-moz-page-sequence")}} et {{cssxref("::-moz-scrolled-page-sequence")}}</li>
 </ul>
 
 <h2 id="Voir_également">Voir également</h2>

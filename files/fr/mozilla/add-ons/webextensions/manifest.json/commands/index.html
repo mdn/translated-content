@@ -10,7 +10,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 ---
 <div>{{AddonSidebar}}</div>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row" style="width: 30%;">Type</th>
@@ -23,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
   <tr>
    <th scope="row">Exemple</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "commands": {
   "toggle-feature": {
     "suggested_key": {
@@ -38,7 +38,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
  </tbody>
 </table>
 
-<p><span class="seoSummary">Utilisez la clé <strong><code>commands</code></strong> pour définir un ou plusieurs raccourcis clavier pour votre extension.</span></p>
+<p>Utilisez la clé <strong><code>commands</code></strong> pour définir un ou plusieurs raccourcis clavier pour votre extension.</p>
 
 <p>Chaque raccourci clavier est défini avec un <strong>nom</strong>, une <strong>combination de clé</strong>, et un <strong>description</strong>. Une fois que vous avez défini des commandes dans le fichier <code>manifest.json</code>, de votre extension, vous pouvez écouter leurs combinaisons de touches associées avec l'API JavaScript  {{WebExtAPIRef("commands")}}.</p>
 
@@ -69,7 +69,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 
 <p>Par exemple :</p>
 
-<pre class="brush: json no-line-numbers">"commands": {
+<pre class="brush: json">"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Alt+Shift+U",
@@ -93,7 +93,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 
 <p>Vous pouvez alors écouter la commande <code>"toggle-feature"</code> avec un code comme celui-ci :</p>
 
-<pre class="brush: js no-line-numbers">browser.commands.onCommand.addListener(function(command) {
+<pre class="brush: js">browser.commands.onCommand.addListener(function(command) {
   if (command == "toggle-feature") {
     console.log("toggling the feature!");
   }
@@ -111,7 +111,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 
 <p>Par exemple, ce JSON définit une combinaison de touches qui clique sur l'action du navigateur de l'extension :</p>
 
-<pre class="brush: js no-line-numbers">"commands": {
+<pre class="brush: js">"commands": {
   "_execute_browser_action": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y"
@@ -125,9 +125,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 
 <h3 id="Combinaisons_de_touches">Combinaisons de touches</h3>
 
-<div class="pull-aside">
-<div class="moreinfo">Sur Mac, <code>"Ctrl"</code> est interprété comme <code>"Command"</code>, donc si vous avez réellement besoin de <code>"Ctrl"</code>, spécifiez <code>"MacCtrl"</code>.</div>
-</div>
+<p>Sur Mac, <code>"Ctrl"</code> est interprété comme <code>"Command"</code>, donc si vous avez réellement besoin de <code>"Ctrl"</code>, spécifiez <code>"MacCtrl"</code>.</p>
 
 <p>Les combinaisons de touches doivent être composées de deux ou trois touches :</p>
 
@@ -167,7 +165,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 
 <p>Définissez un seul raccourci clavier en utilisant uniquement la combinaison de touches par défaut :</p>
 
-<pre class="brush: json no-line-numbers">"commands": {
+<pre class="brush: json">"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y"
@@ -178,7 +176,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 
 <p>Définissez deux raccourcis clavier, l'un avec une combinaison de touches spécifique à la plate-forme :</p>
 
-<pre class="brush: json no-line-numbers">"commands": {
+<pre class="brush: json">"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Alt+Shift+U",

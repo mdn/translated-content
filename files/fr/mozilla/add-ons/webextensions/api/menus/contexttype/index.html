@@ -48,8 +48,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
  <dt>selection</dt>
  <dd>S'applique lorsqu'une partie de la page est sélectionnée.</dd>
  <dt>tab</dt>
- <dd>S'applique lorsque l'utilisateur clique en contexte sur un onglet (en particulier, il s'agit de l'onglet ou d'un autre élément de l'interface utilisateur permettant à l'utilisateur de passer d'un onglet de navigateur à un autre, et non à la page elle-même).</dd>
- <dd>Depuis Firefox 63, cliquer sur l'élément du menu d'un onglet accorde la permission <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab</a> pour l'onglet cliqué, même si ce n'est pas l'onglet actuellement actif.</dd>
+ <dd>S'applique lorsque l'utilisateur clique en contexte sur un onglet (en particulier, il s'agit de l'onglet ou d'un autre élément de l'interface utilisateur permettant à l'utilisateur de passer d'un onglet de navigateur à un autre, et non à la page elle-même). Depuis Firefox 63, cliquer sur l'élément du menu d'un onglet accorde la permission <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">activeTab</a> pour l'onglet cliqué, même si ce n'est pas l'onglet actuellement actif.</dd>
  <dt>tools_menu</dt>
  <dd>L'élément sera ajouté au menu des outils du navigateur. Notez que ceci n'est disponible que si vous accédez à <code>ContextType</code> via l'espace de nom des <code>menus</code>. Il n'est pas disponible si vous y accédez via l'espace de noms <code>contextMenus</code>.</dd>
  <dt>video</dt>
@@ -64,7 +63,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API <a href="https://developer.chrome.com/extensions/contextMenus"><code>chrome.contextMenus</code></a> de chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> dans le code Chromium.</p>
 </div>

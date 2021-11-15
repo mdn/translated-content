@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstall
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var uninstalling = browser.management.uninstall(
+<pre class="brush: js">var uninstalling = browser.management.uninstall(
   id,                  // string
   options              // object
 )
@@ -33,7 +33,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstall
  <dt><code>id</code></dt>
  <dd><code>string</code>. ID de l'extensions à désinstaller.</dd>
  <dt><code>options{{optional_inline}}</code></dt>
- <dd><code>object</code>. l'objet qui peut contenir une propriété unique, <code>showConfirmDialog</code>. Si <code>showConfirmDialog</code> est <code>true</code>, le navigateur affiche une boie de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé.
+ <dd><p><code>object</code>. l'objet qui peut contenir une propriété unique, <code>showConfirmDialog</code>. Si <code>showConfirmDialog</code> est <code>true</code>, le navigateur affiche une boie de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé.</p>
  <ul>
   <li>Si <code>id</code> est l'ID de l'extension appelant, <code>showConfirmDialog</code> est par défaut à <code>false</code>.</li>
   <li>Si <code>id</code> est l'ID d'une extension différente, cette option est ignorée et la boite de dialogue de confirmation s'affche toujours.</li>
@@ -66,7 +66,7 @@ uninstalling.then(null, onCanceled);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/management"><code>chrome.management</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> dans le code de Chromium code.</p>
 

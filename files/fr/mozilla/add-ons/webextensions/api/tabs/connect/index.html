@@ -15,15 +15,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/connect
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>Appelez cette fonction pour configurer une connexion entre les scripts d'arrière-plan de l'extension (ou d'autres scripts privilégiés, tels que les scripts d'arrière-plan de l'extrension (ou d'autres scripts privilégiés, tels que les scripts de pages d'options) et les <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">scripts de contenu</a> appartenant à cette extension et s'exécutant dans l'onglet spécifié. Cette fonction renvoie un objet {{WebExtAPIRef("runtime.Port")}}.</p>
+<p>Appelez cette fonction pour configurer une connexion entre les scripts d'arrière-plan de l'extension (ou d'autres scripts privilégiés, tels que les scripts d'arrière-plan de l'extrension (ou d'autres scripts privilégiés, tels que les scripts de pages d'options) et les <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">scripts de contenu</a> appartenant à cette extension et s'exécutant dans l'onglet spécifié. Cette fonction renvoie un objet {{WebExtAPIRef("runtime.Port")}}.</p>
 
 <p>Lorsque cela est appelée, l'événement {{WebExtAPIRef('runtime.onConnect')}} est déclenché dans tout script de contenu appartenant à cette extension qui s'exécute dans l'onglet spécifié. L'écouteur d'événement recevra un autre objet  {{WebExtAPIRef("runtime.Port")}}. Les deux parties peuvent ensuite utiliser les objets <code>Port</code> pour échanger des messages.</p>
 
-<p>Pour plus de détails, voir <a href="/en-US/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based messaging</a>.</p>
+<p>Pour plus de détails, voir <a href="/fr/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based messaging</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.tabs.connect(
+<pre class="brush: js">browser.tabs.connect(
   tabId,      // integer
   connectInfo // optional object
 )
@@ -35,8 +35,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/connect
  <dt><code>tabId</code></dt>
  <dd><code>integer</code>. ID of the tab whose content scripts we want to connect to.</dd>
  <dt><code>connectInfo</code>{{optional_inline}}</dt>
- <dd><code>object</code>.
- <dl class="reference-values">
+ <dd><p><code>object</code>.</p>
+ <dl>
   <dt><code>name</code>{{optional_inline}}</dt>
   <dd><code>string</code>. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} event listeners in content scripts belonging to this extension and running in the specified tab.</dd>
   <dt><code>frameId</code>{{optional_inline}}</dt>
@@ -51,7 +51,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/connect
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example a background script listens for a click on a <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">browser action</a>, then connects to the currently active tab, then sends a message using the <code>Port</code> that's returned from <code>connect()</code>:</p>
+<p>In this example a background script listens for a click on a <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">browser action</a>, then connects to the currently active tab, then sends a message using the <code>Port</code> that's returned from <code>connect()</code>:</p>
 
 <pre class="brush: js">function connectToTab(tabs) {
   if (tabs.length &gt; 0) {
@@ -81,7 +81,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>{{Compat("webextensions.api.tabs.connect")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

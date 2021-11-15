@@ -81,7 +81,7 @@ setCookie.then(logCookie, logError);
 
 <p>Le reste de cette section décrit les problèmes de compatibilité qui ne sont pas encore pris en compte dans ces tableaux.</p>
 
-<h4 id="notifications"><a href="/fr/Add-ons/WebExtensions/API/notifications" id="notifications_incompatibilities" name="notifications_incompatibilities">notifications</a></h4>
+<h4 id="notifications">notifications</h4>
 
 <ul>
  <li>Pour <code>notifications.create()</code>, lorsqu'on utilise le <a href="/fr/Add-ons/WebExtensions/API/notifications/TemplateType">type</a> <code>"basic"</code>, l'icône <code>iconUrl</code> est optionnelle dans Firefox mais obligatoire dans Chrome.</li>
@@ -91,13 +91,13 @@ setCookie.then(logCookie, logError);
  </li>
 </ul>
 
-<h4 id="proxy"><a href="/fr/Add-ons/WebExtensions/API/proxy" id="proxy_incompatibilities" name="proxy_incompatibilities">proxy</a></h4>
+<h4 id="proxy">proxy</h4>
 
 <ul>
- <li><a href="/fr/Add-ons/WebExtensions/API/proxy" id="proxy_incompatibilities" name="proxy_incompatibilities">Cette API est complètement différente de celle conçue par Chrome. Avec l'API de Chrome, une extension peut enregistrer un fichier PAC, mais peut également définir des règles de proxy explicites. Comme cela est également possible en utilisant les fichiers PAC étendus, cette API ne prend en charge que l'approche de fichier PAC. Étant donné que cette API est incompatible avec l'API <code>proxy</code> de Chrome, cette API est uniquement disponible via l'espace de nom <code>browser</code>.</a></li>
+ <li><a href="/fr/Add-ons/WebExtensions/API/proxy">Cette API est complètement différente de celle conçue par Chrome. Avec l'API de Chrome, une extension peut enregistrer un fichier PAC, mais peut également définir des règles de proxy explicites. Comme cela est également possible en utilisant les fichiers PAC étendus, cette API ne prend en charge que l'approche de fichier PAC. Étant donné que cette API est incompatible avec l'API <code>proxy</code> de Chrome, cette API est uniquement disponible via l'espace de nom <code>browser</code>.</a></li>
 </ul>
 
-<h4 id="tabs"><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs" id="tabs_incompatibilities" name="tabs_incompatibilities">tabs</a></h4>
+<h4 id="tabs">tabs</h4>
 
 <ul>
  <li>
@@ -110,7 +110,7 @@ setCookie.then(logCookie, logError);
  <li>Dans Firefox, la promesse <code>tabs.remove()</code> est tenue après l'évènement <code>beforeunload</code> alors que pour Chrome, le <em>callback</em> n'attend pas <code>beforeunload</code>.</li>
 </ul>
 
-<h4 id="webRequest"><a href="/en-US/Add-ons/WebExtensions/API/webRequest" id="webRequest_incompatibilities" name="webRequest_incompatibilities">webRequest</a></h4>
+<h4 id="webRequest">webRequest</h4>
 
 <ul>
  <li>Dans Firefox, les requêtes ne peuvent être redirigées que si l'URL originale utilise le schéma <code>http:</code> ou <code>https:</code>.</li>
@@ -119,7 +119,7 @@ setCookie.then(logCookie, logError);
  <li>Dans Firefox, à partir de Firefox 52, certaines API <code>browser.webRequest.*</code> renvoient des promesses qui résolvent <code>webRequest.BlockingResponse</code> de façon asynchrone. Pour Chrome, seule <code>webRequest.onAuthRequired</code> prend en charge une gestion asynchrone de <code>webRequest.BlockingResponse</code> avec <code>'asyncBlocking'</code>.</li>
 </ul>
 
-<h4 id="windows"><a href="/fr/Add-ons/WebExtensions/API/windows" id="windows_incompatibilities" name="windows_incompatibilities">windows</a></h4>
+<h4 id="windows">windows</h4>
 
 <ul>
  <li>Dans Firefox, <code>onFocusChanged</code> sera déclenché plusieurs fois pour un changement de focus donné.</li>
@@ -127,7 +127,7 @@ setCookie.then(logCookie, logError);
 
 <h3 id="API_non_prises_en_charge">API non prises en charge</h3>
 
-<h4 id="declarativeContent"><a href="https://developer.chrome.com/extensions/declarativeContent" id="declarativeContent_incompatibilities" name="dec">declarativeContent</a></h4>
+<h4 id="declarativeContent">declarativeContent</h4>
 
 <p>l'API <code>declarativeContent</code> de Chrome <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1435864">n'a pas encore été implémentée</a> in Firefox.</p>
 

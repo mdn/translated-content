@@ -24,12 +24,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
 
 <div class="note">
-<p><strong>Remarque </strong>: Si vous souhaitez supprimer un fichier téléchargé du disque et l'effacer de l'historique, vous devez appeler <code>removeFile()</code> avant d'appeler {{WebExtAPIRef("downloads.erase()")}}. Si vous l'essayez dans l'autre sens, vous obtiendrez une erreur lors de l'appel de <code>removeFile()</code>, car le navigateur n'aura plus d'enregistrement du téléchargement.</p>
+<p><strong>Note :</strong> Si vous souhaitez supprimer un fichier téléchargé du disque et l'effacer de l'historique, vous devez appeler <code>removeFile()</code> avant d'appeler {{WebExtAPIRef("downloads.erase()")}}. Si vous l'essayez dans l'autre sens, vous obtiendrez une erreur lors de l'appel de <code>removeFile()</code>, car le navigateur n'aura plus d'enregistrement du téléchargement.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var removing = browser.downloads.removeFile(
+<pre class="brush: js">var removing = browser.downloads.removeFile(
   downloadId      // integer
 )
 </pre>
@@ -51,7 +51,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
 
 <h2 id="Exemples">Exemples</h2>
 
-<p><span class="short_text" id="result_box" lang="fr"><span>Supprimer le dernier fichier téléchargé :</span></span></p>
+<p>Supprimer le dernier fichier téléchargé :</p>
 
 <pre class="brush: js">function onRemoved() {
   console.log(`Removed item`);
@@ -77,7 +77,7 @@ searching.then(remove, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
 

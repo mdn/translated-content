@@ -18,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <p>Chaque événement est déclenché à un stade particulier de la demande. La séquence typique des événements est la suivante :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13376/webRequest-flow.png" style="display: block; height: 680px; margin-left: auto; margin-right: auto; width: 624px;"></p>
+<p><img alt="" src="webRequest-flow.png"></p>
 
 <p>{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} peut être tiré à tout moment pendant la requête. Notez également que parfois la séquence des événements peut différer de ceci : par exemple, dans Firefox, lors d'une mise à niveau <a href="/fr/docs/Sécurité/HTTP_Strict_Transport_Security">HSTS</a>, l'événement <code>onBeforeRedirect</code> sera déclenché immédiatement après <code>onBeforeRequest</code>.</p>
 
@@ -73,8 +73,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <p>Pour ce faire, vous devez transmettre une option avec la valeur "blocking" dans l'argument <code>extraInfoSpec</code> à la fonction <code>addListener()</code> de l'événement. Cela rend l'auditeur synchrone. Dans l'écouteur, vous pouvez alors renvoyer un objet {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}, qui indique la modification à apporter : par exemple, l'en-tête de requête modifié que vous souhaitez envoyer.</p>
 
-<div class="blockIndicator warning">
-<p><strong>Avertissement </strong>: Les protocoles non-HTTP(S) ne supportent pas actuellement la fonctionnalité de "<code>blockage</code>", donc la modification de ces requêtes n'est pas disponible pour le moment. Voir {{bug(1475832)}} pour plus de détails.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Les protocoles non-HTTP(S) ne supportent pas actuellement la fonctionnalité de "<code>blockage</code>", donc la modification de ces requêtes n'est pas disponible pour le moment. Voir {{bug(1475832)}} pour plus de détails.</p>
 </div>
 
 <h2 id="Accéder_aux_informations_de_sécurité">Accéder aux informations de sécurité</h2>
@@ -116,7 +116,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <dl>
  <dt>{{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "webRequest.MAX_​HANDLER_​BEHAVIOR_​CHANGED_​CALLS_​PER_​10_​MINUTES")}}</dt>
- <dd>Le nombre de fois que <code><a href="/fr/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged" title="Suppose an add-on's job is to block web requests against a pattern, and the following scenario happens:"><code>handlerBehaviorChanged()</code></a></code> peut être appelé dans une période de 10 minutes.</dd>
+ <dd>Le nombre de fois que <a href="/fr/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged"><code>handlerBehaviorChanged()</code></a> peut être appelé dans une période de 10 minutes.</dd>
 </dl>
 
 <h2 id="Méthodes">Méthodes</h2>
@@ -161,7 +161,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <p>{{WebExtExamples("h2")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> dans le code Chromium.</p>
 

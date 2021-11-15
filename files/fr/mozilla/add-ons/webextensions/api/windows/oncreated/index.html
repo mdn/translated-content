@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onCreated
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.windows.onCreated.addListener(listener)
+<pre class="brush: js">browser.windows.onCreated.addListener(listener)
 browser.windows.onCreated.removeListener(listener)
 browser.windows.onCreated.hasListener(listener)
 </pre>
@@ -44,7 +44,7 @@ browser.windows.onCreated.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>window</code></dt>
   <dd>Un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la fenêtre qui a été créée.</dd>
  </dl>
@@ -65,7 +65,7 @@ browser.windows.onCreated.hasListener(listener)
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
 

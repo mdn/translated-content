@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 <h2 id="Structure_du_modèle_de_correspondance">Structure du modèle de correspondance</h2>
 
 <div class="note">
-<p><strong>Note:</strong> Certains navigateurs ne prennent pas en charge certains schémas.<br>
+<p><strong>Note :</strong> Certains navigateurs ne prennent pas en charge certains schémas.<br>
  Consultez le <a href="#Browser_compatibility">tableau de compatibilité du navigateur</a> pour plus de détails.</p>
 </div>
 
@@ -28,7 +28,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 <p>Le composant du <em>schéma</em> peut prendre l’une des deux formes suivantes :</p>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col" style="width: 50%;">Valeur</th>
@@ -38,7 +38,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
  <tbody>
   <tr>
    <td><code>*</code></td>
-   <td>Seulement "http" et "https" et dans certains navigateurs <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">"ws" et "wss"</a> aussi.</td>
+   <td>Seulement "http" et "https" et dans certains navigateurs <a href="/fr/docs/Web/API/WebSockets_API">"ws" et "wss"</a> aussi.</td>
   </tr>
   <tr>
    <td>Une parmi <code>http</code>, <code>https</code>, <code>ws</code>, <code>wss</code>, <code>ftp</code>, <code>ftps</code>, <code>data</code> ou <code>file</code>.</td>
@@ -51,7 +51,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 <p>Le composant <em>hôte</em> peut prendre l'une des trois formes suivantes :</p>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col" style="width: 50%;">Valeur</th>
@@ -92,8 +92,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 <p>Ni l'<a href="https://en.wikipedia.org/wiki/Fragment_identifier">identificateur de fragment d'URL</a>, ni le <code>#</code> qui le précède, ne sont considérés comme faisant partie du <em>chemin</em>.</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: La chaîne de modèle de chemin d'accès ne doit pas inclure de numéro de port. Ajout d'un port, comme dans : <em>"http://localhost:1234/*" </em>fait que le motif de match est ignoré. Cependant, "<em>http://localhost:1234</em>" correspondra avec "<em>http://localhost/*</em>"</p>
+<div class="note">
+<p><strong>Note :</strong> La chaîne de modèle de chemin d'accès ne doit pas inclure de numéro de port. Ajout d'un port, comme dans : <em>"http://localhost:1234/*" </em>fait que le motif de match est ignoré. Cependant, "<em>http://localhost:1234</em>" correspondra avec "<em>http://localhost/*</em>"</p>
 </div>
 
 <h3 id="&lt;all_urls>">&lt;all_urls&gt;</h3>
@@ -102,7 +102,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 <h2 id="Exemples">Exemples</h2>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col" style="width: 33%;">Modèle</th>
@@ -384,7 +384,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 <h3 id="Modèles_de_correspondance_invalides">Modèles de correspondance invalides</h3>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Modèle invalide</th>

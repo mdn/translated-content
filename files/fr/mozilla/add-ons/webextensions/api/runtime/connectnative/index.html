@@ -35,7 +35,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var port = browser.runtime.connectNative(
+<pre class="brush: js">var port = browser.runtime.connectNative(
   application // string
 )
 </pre>
@@ -62,7 +62,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 <pre class="brush: js">/*
 On startup, connect to the "ping_pong" app.
 */
-var port = <code class="language-js">browser</code>.runtime.connectNative("ping_pong");
+var port = browser.runtime.connectNative("ping_pong");
 
 /*
 Listen for messages from the app.
@@ -74,14 +74,14 @@ port.onMessage.addListener((response) =&gt; {
 /*
 On a click on the browser action, send the app a message.
 */
-<code class="language-js">browser</code>.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() =&gt; {
   console.log("Sending:  ping");
   port.postMessage("ping");
 });</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
 

@@ -27,7 +27,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/find/find
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.find.find(
+<pre class="brush: js">browser.find.find(
   queryphrase,       // string
   options            // optional object
 )
@@ -35,14 +35,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/find/find
 
 <h3 id="Paramètres">Paramètres</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>queryphrase</code></dt>
  <dd><code>string</code>. Le texte à rechercher</dd>
  <dt><code>options</code>{{optional_inline}}</dt>
  <dd>
  <p><code>object</code>. Un objet spécifiant des options supplémentaires. Il peut prendre l'une des propriétés suivantes, toutes facultatives :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. ID de l'onglet à rechercher. Par défaut à l'onglet actif</dd>
   <dt><code>caseSensitive</code></dt>
@@ -61,7 +61,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/find/find
 
 <p>  Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet contenant jusqu'à trois propriétés :</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>count</code></dt>
  <dd><code>integer</code>. Le nombre de résultat trouvés.</dd>
  <dt><code>rangeData</code>{{optional_inline}}</dt>
@@ -72,7 +72,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/find/find
 
  <p>Chaque <code>RangeData</code> contient les propriétés suivantes :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>framePos</code></dt>
   <dd>L'index de l'image contenant la correspondance. 0 correspond à une fenêtre parente. Notez que l'ordre des objets dans un tableau  <code>rangeData</code> s'alignera séquentiellement avec l'ordre des index d'images : par exemple, <code>framePos</code> pour la première séquence d'objets <code>rangeData</code> sera 0, <code>framePos</code> pour la séquence suivante sera 1, et ainsi de suite.</dd>
   <dt><code>startTextNodePos</code></dt>
@@ -91,7 +91,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/find/find
 
  <p>Chaque objet <code>RectData</code> contient des données rectangle pour une seule correspondance. Il a deux propriétés :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>rectsAndTexts</code></dt>
   <dd>Un objet contenant deux propriétés, les deux tableaux :
   <ul>
@@ -101,9 +101,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/find/find
 
   <p>Par exemple, considérons une partie d'une page Web qui ressemble à ceci :</p>
 
-  <p><img alt="" src="https://mdn.mozillademos.org/files/15582/rects-1.png" style="display: block; height: 227px; margin-left: auto; margin-right: auto; width: 488px;">Si vous recherchez "You may", la comparaison doit être décrit par deux rectangles :</p>
+  <p><img alt="" src="rects-1.png">Si vous recherchez "You may", la comparaison doit être décrit par deux rectangles :</p>
 
-  <p><img alt="" src="https://mdn.mozillademos.org/files/15583/rects-2.png" style="display: block; height: 227px; margin-left: auto; margin-right: auto; width: 488px;">Dans le cas, dans le <code>RectData</code> qui décrit cette correspondance, <code>rectsAndTexts.rectList</code> et <code>rectsAndTexts.textList</code> auront chacun 2 éléments.</p>
+  <p><img alt="" src="rects-2.png">Dans le cas, dans le <code>RectData</code> qui décrit cette correspondance, <code>rectsAndTexts.rectList</code> et <code>rectsAndTexts.textList</code> auront chacun 2 éléments.</p>
 
   <ul>
    <li><code>textList[0]</code> contiendra "You ", et <code>rectList[0]</code> contiendra son rectangle de délimitation.</li>
@@ -228,7 +228,7 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) =&gt; {
 
 <p>Dans cet exemple, l'extensions utilise <code>rectData</code> pour comparer "redact", en ajoutant des DIVs noires au dessus de leurs rectangles de délimitation :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15584/redacted.png" style="display: block; height: 416px; margin-left: auto; margin-right: auto; width: 625px;">Notez qu'il y a plusieurs façons, c'est une mauvaise façon d'atteindre les pages.</p>
+<p><img alt="" src="redacted.png">Notez qu'il y a plusieurs façons, c'est une mauvaise façon d'atteindre les pages.</p>
 
 <p>Le script d'arrière-plan :</p>
 

@@ -18,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.contextualIdentities.onUpdated.addListener(listener)
+<pre class="brush: js">browser.contextualIdentities.onUpdated.addListener(listener)
 browser.contextualIdentities.onUpdated.removeListener(listener)
 browser.contextualIdentities.onUpdated.hasListener(listener)
 </pre>
@@ -43,7 +43,7 @@ browser.contextualIdentities.onUpdated.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>changeInfo</code></dt>
   <dd><code>object</code>. Un objet qui contient une seule propriété, <code>contextualIdentity</code>, qui est un objet {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} représentant l'identité dont les propriétés ont été mises à jour.</dd>
  </dl>

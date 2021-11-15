@@ -22,7 +22,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
 
 <p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>query</code>{{optional_inline}}</dt>
  <dd>Un <code>tableau</code> de<code><code>chaines</code></code>. Inclure uniquement {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} dont le <code>nom de fichier</code> ou l'<code>URL</code> contient toutes les chaînes données. Vous pouvez également inclure des termes commençant par un titet (-) — ces termes <strong>ne doivent pas</strong> figurer dans le <code>nom du fichier</code> ou l'<code>url</code> de l'élément à inclure.</dd>
  <dt><code>startedBefore</code>{{optional_inline}}</dt>
@@ -56,9 +56,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
  <dt><code>mime</code>{{optional_inline}}</dt>
  <dd>Un <code>string</code> représentant un type MIME. Incluez uniquement  {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} avec cette valeur <code>mime</code>.</dd>
  <dt><code>startTime</code>{{optional_inline}}</dt>
- <dd>Un <code>string</code> représentant une heure au format <a class="external external-icon" href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>. Incluez seulement  {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} avec cette valeur  <code>startTime</code>.</dd>
+ <dd>Un <code>string</code> représentant une heure au format <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>. Incluez seulement  {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} avec cette valeur  <code>startTime</code>.</dd>
  <dt><code>endTime</code>{{optional_inline}}</dt>
- <dd>Un <code>string</code> représentant une heure au format <a class="external external-icon" href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>. Inclure uniquement sera limité à {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} avec cette valeur <code>endTime</code>.</dd>
+ <dd>Un <code>string</code> représentant une heure au format <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>. Inclure uniquement sera limité à {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} avec cette valeur <code>endTime</code>.</dd>
  <dt><code>state</code>{{optional_inline}}</dt>
  <dd>Un <code>string</code> représentant un téléchargement {{WebExtAPIRef('downloads.State')}} (<code>in_progress</code>, <code>interrupted</code>, or <code>complete</code>). Inclure uniquement {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} avec cette valeur d' <code>état</code>.</dd>
  <dt><code>paused</code>{{optional_inline}}</dt>
@@ -81,7 +81,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
 

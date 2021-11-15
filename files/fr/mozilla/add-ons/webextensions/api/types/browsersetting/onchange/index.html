@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">BrowserSetting.onChanged.addListener(listener)
+<pre class="brush: js">BrowserSetting.onChanged.addListener(listener)
 BrowserSetting.onChanged.removeListener(listener)
 BrowserSetting.onChanged.hasListener(listener)
 </pre>
@@ -44,15 +44,15 @@ BrowserSetting.onChanged.hasListener(listener)
  <dd>
  <p>Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction passera les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd>Un <code>object</code> contenant des détails sur le changement survenu. Ses propriété sont les suivantes :
-  <dl class="reference-values">
+  <dl>
    <dt><code>value</code></dt>
    <dd>La nouvelle valeur du paramètre. Le type de cette propriété est déterminé par le paramètre particulier.</dd>
    <dt><code>levelOfControl</code></dt>
    <dd><code>string</code>. Cela représente la façon dont le paramètre est actuellement controlé. Vous pouvez l'utiliser pour vérifier si vous pouvez modifier le réglage. Voir <code><a href="/fr/Add-ons/WebExtensions/API/privacy/BrowserSetting/set">BrowserSetting.set()</a></code> pour plus détails. Sa valeur peut-être l'une des suivantes :
-   <table class="fullwidth-table standard-table">
+   <table class="standard-table">
     <tbody>
      <tr>
       <td><code>"not_controllable"</code></td>
@@ -89,7 +89,7 @@ BrowserSetting.onChanged.hasListener(listener)
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/types"><code>chrome.types</code></a>.</p>
 

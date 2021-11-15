@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/reload
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var reloading = browser.tabs.reload(
+<pre class="brush: js">var reloading = browser.tabs.reload(
   tabId,            // optional integer
   reloadProperties  // optional object
 )
@@ -33,8 +33,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/reload
  <dt><code>tabId</code>{{optional_inline}}</dt>
  <dd><code>integer</code>. L'ID de l'onglet à recharger. Par défaut à l'onglet sélectionné de la fenêtre en cours.</dd>
  <dt><code>reloadProperties</code>{{optional_inline}}</dt>
- <dd><code>object</code>.
- <dl class="reference-values">
+ <dd><p><code>object</code>.</p>
+ <dl>
   <dt><code>bypassCache</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Contourner le cache web local. La valeur par défaut est <code>false</code>.</dd>
  </dl>
@@ -74,7 +74,7 @@ reloading.then(onReloaded, onError);</pre>
 
 <p>{{Compat("webextensions.api.tabs.reload")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

@@ -24,18 +24,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts
  <li>aucun accès aux API de WebExtension ou aux autorisations associées accordées à l'extension : le script API, qui hérite des autorisations de l'extension, peut fournir des API de WebExtension packagées aux scripts utilisateur enregistrés. Un script API est déclaré dans le fichier manifeste de l'extension en utilisant la clé du manifeste "user_scripts".</li>
 </ul>
 
-<div class="blockIndicator warning">
-<p>Cette API requiert la présence de la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a></code> dans le manifest.json, même si aucun script API n'est spécifié. Par exemple, <code>user_scripts: {}</code>.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Cette API requiert la présence de la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a></code> dans le manifest.json, même si aucun script API n'est spécifié. Par exemple, <code>user_scripts: {}</code>.</p>
 </div>
 
 <p>Pour utiliser l'API, appelez <code>{{WebExtAPIRef("userScripts.register","register()")}}</code> en passant un objet définissant les scripts à enregistrer. La méthode renvoie une promesse qui est résolue par un objet  <code>{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}</code>.</p>
 
-<div class="blockIndicator note">
-<p>Les scripts utilisateur sont désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés</p>
+<div class="note">
+<p><strong>Note :</strong> Les scripts utilisateur sont désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés</p>
 </div>
 
-<dl>
-</dl>
 
 <h2 id="Types">Types</h2>
 

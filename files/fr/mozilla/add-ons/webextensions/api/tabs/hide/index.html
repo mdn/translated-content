@@ -35,7 +35,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/hide
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var hiding = browser.tabs.hide(
+<pre class="brush: js">var hiding = browser.tabs.hide(
   tabIds          // integer or integer array
 )
 </pre>
@@ -44,9 +44,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/hide
 
 <dl>
  <dt><code>tabIds</code></dt>
- <dd><code><code>integer</code></code> or <code><code>array</code></code> of <code><code>integer</code></code>. Les ID de l'onglet ou des onglets à masquer.</dd>
- <dd>Si l'un de ces onglets ne peut pas être masqué, il ne sera pas masqué, mais l'appel sera toujours valide et les onglets éligibles seront toujours masqués. Par exemple, si vous passez <code>[1, 3]</code>, et <code>1</code> identifie l'onglet actif, alors seulement <code>3</code> seront cachés.</dd>
- <dd>Cependant, si l'un des ID d'onglet n'est pas valide, l'appel échouera et aucun onglet ne sera masqué.</dd>
+ <dd><p><code>integer</code> or <code>array</code> of <code>integer</code>. Les ID de l'onglet ou des onglets à masquer.</p>
+ <p>Si l'un de ces onglets ne peut pas être masqué, il ne sera pas masqué, mais l'appel sera toujours valide et les onglets éligibles seront toujours masqués. Par exemple, si vous passez <code>[1, 3]</code>, et <code>1</code> identifie l'onglet actif, alors seulement <code>3</code> seront cachés.</p>
+ <p>Cependant, si l'un des ID d'onglet n'est pas valide, l'appel échouera et aucun onglet ne sera masqué.</p>
+ </dd>
 </dl>
 
 <h3 id="Valeur_retournée">Valeur retournée</h3>

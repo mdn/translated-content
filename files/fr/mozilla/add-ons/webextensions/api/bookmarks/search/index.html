@@ -24,7 +24,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var searching = browser.bookmarks.search(
+<pre class="brush: js">var searching = browser.bookmarks.search(
   query                  // string or object
 )
 </pre>
@@ -33,24 +33,17 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 
 <dl>
  <dt><code>query</code></dt>
- <dd>Un {{jsxref("string")}} ou {{jsxref("object")}} décrivant la requête à effectuer.</dd>
- <dd>
+ <dd><p>Un {{jsxref("string")}} ou {{jsxref("object")}} décrivant la requête à effectuer.</p>
  <p>Si la <code>query</code> est une chaîne, elle comprend zéro ou plusieurs termes de recherche. Les termes de recherche sont délimités par des espaces et peuvent être placés entre guillemets pour permettre la recherche dans des expressions de plusieurs mots. Chaque terme de recherche correspond s'il correspond à une sous-chaîne dans l'URL ou le titre du signet. La correspondance est insensible à la casse. Pour qu'un signet corresponde à la requête, tous les termes de recherche de la requête doivent correspondre.</p>
 
  <p>Si la <code>query</code> un objet, elle possède zéro ou plus des trois propriétés suivantes : <code>query</code>, <code>title</code>, et <code>url</code>, qui sont décrites ci-dessous. Pour qu'un signet corresponde à la requête, tous les termes de propriétés fournis doivent correspondre aux valeurs spécifiées.</p>
- </dd>
- <dd>
- <dl class="reference-values">
+
+ <dl>
   <dt><code>query</code> {{optional_inline}}</dt>
   <dd>Un {{jsxref("string")}} spécifiant un ou plusieurs termes à comparer; le format est identique à la forme de chaîne du paramètre du <code>query</code>. Si ce n'est pas une chaîne, une exception est levée.</dd>
   <dt><code>url</code> {{optional_inline}}</dt>
-  <dd>Un {{jsxref("string")}} qui doit correspondre exactement à l'URL du signet. La correspondance est insensible à la casse et les barres obliques de fin sont ignorées.</dd>
-  <dd>
-  <p>Si vous passez une URL invalide ici, la fonction lèvera une exception.</p>
+  <dd><p>Un {{jsxref("string")}} qui doit correspondre exactement à l'URL du signet. La correspondance est insensible à la casse et les barres obliques de fin sont ignorées.Si vous passez une URL invalide ici, la fonction lèvera une exception.</p>
   </dd>
- </dl>
-
- <dl class="reference-values">
   <dt><code>title</code> {{optional_inline}}</dt>
   <dd>Un {{jsxref("string")}} Ceci doit correspondre exactement au titre du noeud de l'arbre du signet. La correspondance est sensible à la casse.</dd>
  </dl>
@@ -107,7 +100,7 @@ browser.browserAction.onClicked.addListener(checkActiveTab);
 
 <p>{{Compat("webextensions.api.bookmarks.search")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
 

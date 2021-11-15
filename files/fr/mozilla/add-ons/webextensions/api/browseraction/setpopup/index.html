@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.browserAction.setPopup(
+<pre class="brush: js">browser.browserAction.setPopup(
   details // object
 )
 </pre>
@@ -28,16 +28,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>.</p>
+ <dl>
   <dt><code>tabId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. Définit la fenêtre contextuelle uniquement pour un onglet spécifique. La fenêtre contextuelle est réinitialisée lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.</dd>
   <dt><code>windowId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. Définit le popup uniquement pour la fenêtre spécifiée.</dd>
- </dl>
-
- <dl class="reference-values">
   <dt><code>popup</code></dt>
   <dd>
   <p><code>string</code> ou <code>null</code>. Le fichier HTML à afficher dans un popup, spécifié comme URL.</p>
@@ -69,7 +65,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
 
 <h2 id="Exemples">Exemples</h2>
 
-<p>Ce code ajoute une paire d'éléments de menu contextuel que vous pouvez utiliser pour basculer entre deux fenêtres contextuelles. Notez que vous aurez besoin de la <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "contextMenus" définie dans le manifest de l'extension pour créer des éléments du menu contextuel.</p>
+<p>Ce code ajoute une paire d'éléments de menu contextuel que vous pouvez utiliser pour basculer entre deux fenêtres contextuelles. Notez que vous aurez besoin de la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> "contextMenus" définie dans le manifest de l'extension pour créer des éléments du menu contextuel.</p>
 
 <pre class="brush: js">function onCreated() {
   if (browser.runtime.lastError) {
@@ -105,7 +101,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
 

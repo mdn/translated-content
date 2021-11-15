@@ -50,15 +50,14 @@ original_slug: Mozilla/Add-ons/WebExtensions/Ajouter_un_bouton_a_la_barre_d_outi
 
 <p>Cela spécifie que nous aurons un script en <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">arrière‐plan</a> nommé « background.js », et une action du navigateur (bouton) et une action du navigateur (bouton) dont les icônes vont vivre dans le répertoire « icônes ».</p>
 
-<div class="pull-aside">
-<div class="moreinfo">Ces icônes proviennent des <a href="https://www.iconfinder.com/iconsets/bitsies">bits !</a> icônes créées parRecep Kütük.</div>
-</div>
 
-<p><span id="result_box" lang="fr"><span>Ensuite, créez un dossier « icons » dans le dossier « buttons » et enregistrez les deux icônes ci‐dessous :</span></span></p>
+<p>Ces icônes proviennent des <a href="https://www.iconfinder.com/iconsets/bitsies">bits !</a> icônes créées parRecep Kütük.</p>
+
+<p>Ensuite, créez un dossier « icons » dans le dossier « buttons » et enregistrez les deux icônes ci‐dessous :</p>
 
 <ul>
- <li>« page‐16.png » (<img alt="" src="https://mdn.mozillademos.org/files/13476/page-16.png" style="height: 16px; width: 16px;">)</li>
- <li>« page‐32.png » (<img alt="" src="https://mdn.mozillademos.org/files/13478/page-32.png" style="height: 32px; width: 32px;">).</li>
+ <li>« page‐16.png » (<img alt="" src="page-16.png">)</li>
+ <li>« page‐32.png » (<img alt="" src="page-32.png">).</li>
 </ul>
 
 <div></div>
@@ -79,14 +78,14 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
 
 <p>A ce point, l’extension complète devrait ressembler à ceci :</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">button/
+<pre class="brush: html">button/
     icons/
         page-16.png
         page-32.png
     background.js
-    manifest.json</code></pre>
+    manifest.json</pre>
 
-<p>Maintenant <a href="https://developer.mozilla.org/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">installer la WebExtension</a> et cliquez sur le bouton :</p>
+<p>Maintenant <a href="/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">installer la WebExtension</a> et cliquez sur le bouton :</p>
 
 <p>{{EmbedYouTube("kwwTowgT‐Ys")}}</p>
 
@@ -209,10 +208,10 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
  <li>Exemples d’actions du navigateur :
   <ul>
    <li><a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">beastify</a></li>
-   <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/bookmark-it">Bookmark it !</a></li>
-   <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/favourite-colour">favourite‐colour</a></li>
-   <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui">inpage‐toolbar‐ui</a></li>
-   <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button">open‐my‐page‐button</a></li>
+   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/bookmark-it">Bookmark it !</a></li>
+   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/favourite-colour">favourite‐colour</a></li>
+   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui">inpage‐toolbar‐ui</a></li>
+   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button">open‐my‐page‐button</a></li>
   </ul>
  </li>
  <li><code>Clé de manifest <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code></li>

@@ -31,7 +31,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.clipboard.setImageData(<em>imageData</em>, <em>imageType</em>)
+<pre class="brush: js">browser.clipboard.setImageData(<em>imageData</em>, <em>imageType</em>)
 </pre>
 
 <h3 id="Paramètres">Paramètres</h3>
@@ -55,17 +55,17 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 
 <p>Copiez une image distante :</p>
 
-<pre class="brush: js" id="ct-71"><span class="quote">// requires:
-// * the host permission for "<a href="https://cdn.mdn.mozilla.net/" rel="nofollow">https://cdn.mdn.mozilla.net/</a>*"
+<pre class="brush: js">// requires:
+// * the host permission for "https://cdn.mdn.mozilla.net/*"
 // * the API permission "clipboardWrite"
 
-fetch('<a class="hoverZoomLink" href="https://cdn.mdn.mozilla.net/static/img/favicon144.png" rel="nofollow">https://cdn.mdn.mozilla.net/static/img/favicon144.png</a>')
+fetch('https://cdn.mdn.mozilla.net/static/img/favicon144.png')
 .then(response =&gt; response.arrayBuffer())
-.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</span></pre>
+.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</pre>
 
 <p>Copiez une image fournie avec l'extension :</p>
 
-<pre class="brush: js" id="ct-70">// requires <span class="quote">the API permission </span>"clipboardWrite"
+<pre class="brush: js">// requires the API permission "clipboardWrite"
 
 fetch(browser.runtime.getURL('image.png'))
 .then(response =&gt; response.arrayBuffer())
@@ -73,7 +73,7 @@ fetch(browser.runtime.getURL('image.png'))
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/apps/clipboard"><code>chrome.clipboard</code></a>.</p>
 </div>

@@ -18,7 +18,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.devtools.panels.onThemeChanged.addListener(listener)
+<pre class="brush: js">browser.devtools.panels.onThemeChanged.addListener(listener)
 browser.devtools.panels.onThemeChanged.removeListener(listener)
 browser.devtools.panels.onThemeChanged.hasListener(listener)
 </pre>
@@ -43,7 +43,7 @@ browser.devtools.panels.onThemeChanged.hasListener(listener)
  <dd>
  <p>Function qui sera appelée lors de l'événement. La fonction passera les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>themeName</code></dt>
   <dd><code>string</code>. Nom du nouveau thème : ce sera l'une des valeurs autorisées pour  <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName">devtools.panels.themeName</a></code>.</dd>
  </dl>
@@ -63,7 +63,7 @@ browser.devtools.panels.onThemeChanged.hasListener(listener)
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a>.</p>
 

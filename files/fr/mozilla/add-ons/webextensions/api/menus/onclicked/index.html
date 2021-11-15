@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.menus.onClicked.addListener(listener)
+<pre class="brush: js">browser.menus.onClicked.addListener(listener)
 browser.menus.onClicked.removeListener(listener)
 browser.menus.onClicked.hasListener(listener)
 </pre>
@@ -46,12 +46,12 @@ browser.menus.onClicked.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>info</code></dt>
   <dd>{{WebExtAPIRef('menus.OnClickData')}}. Informations sur l'élément cliqué et le contexte dans lequel le clic s'est produit.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>tab</code></dt>
   <dd>{{WebExtAPIRef('tabs.Tab')}}. Les détails de l'onglet où le clic a eu lieu. Si le clic n'a pas eu lieu dans ou sur un onglet, ce paramètre sera manquant.</dd>
  </dl>
@@ -79,7 +79,7 @@ browser.menus.onClicked.addListener((info, tab) =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API <a href="https://developer.chrome.com/extensions/contextMenus"><code>chrome.contextMenus</code></a> de chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> dans le code Chromium.</p>
 </div>

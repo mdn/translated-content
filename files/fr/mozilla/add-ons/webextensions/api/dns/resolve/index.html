@@ -20,7 +20,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/dns/resolve
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var resolving = browser.dns.resolve(
+<pre class="brush: js">var resolving = browser.dns.resolve(
   hostname,    // string
   flags        // array of string
 )
@@ -32,8 +32,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/dns/resolve
  <dt><code>hostname</code></dt>
  <dd><code><code>string</code></code>. Le nom d'hôte à résoudre.</dd>
  <dt><code>flags</code> {{optional_inline}}</dt>
- <dd><code>array</code> de <code>string</code>. Drapeaux pour modifier la façon dont le nom d'hôte est résolu. Tous les indicateurs omis sont par défaut à <code>false</code>. Vous pouvez passer zéro ou plusieurs des indicateurs suivants :</dd>
- <dd>
+ <dd><p><code>array</code> de <code>string</code>. Drapeaux pour modifier la façon dont le nom d'hôte est résolu. Tous les indicateurs omis sont par défaut à <code>false</code>. Vous pouvez passer zéro ou plusieurs des indicateurs suivants :</p>
  <ul>
   <li><code>"allow_name_collisions"</code>: autorise les résultats de collision de noms qui sont normalement filtrés.</li>
   <li><code>"bypass_cache"</code>: Supprime le cache de recherche DNS interne.</li>

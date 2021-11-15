@@ -26,7 +26,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/idle/onStateChanged
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.idle.onStateChanged.addListener(listener)
+<pre class="brush: js">browser.idle.onStateChanged.addListener(listener)
 browser.idle.onStateChanged.removeListener(listener)
 browser.idle.onStateChanged.hasListener(listener)
 </pre>
@@ -51,7 +51,7 @@ browser.idle.onStateChanged.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>newState</code></dt>
   <dd>{{WebExtAPIRef('idle.IdleState')}}. Le nouvel état est inactif.</dd>
  </dl>
@@ -72,7 +72,7 @@ browser.idle.onStateChanged.addListener(newState);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/idle"><code>chrome.idle</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json"><code>idle.json</code></a> dans le code Chromium.</p>
 

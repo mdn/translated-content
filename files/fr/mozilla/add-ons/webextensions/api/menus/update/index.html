@@ -23,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/update
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var updating = browser.menus.update(
+<pre class="brush: js">var updating = browser.menus.update(
   id,               // integer or string
   updateProperties // object
 )
@@ -35,8 +35,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/update
  <dt><code>id</code></dt>
  <dd><code><code>integer</code></code> ou <code><code>string</code></code>. L'ID de l'article à mettre à jour.</dd>
  <dt><code>updateProperties</code></dt>
- <dd><code>object</code>. Les propriétés à mettre à jour. Identique à l'objet <code>createProperties</code> passé à  {{WebExtAPIRef("menus.create()", "menus.create()")}}, sauf que l'<code>id</code> ne peut être défini. En outre, les <code>icônes</code> ne peuvent être modifiées que dans les commandes de menu, et non dans le menu contextuel de niveau supérieur. L'icône de niveau supérieur correspond à l'icône principale de l'extension telle que déclarée dans le fichier manifeste de l'extension.
- <dl class="reference-values">
+ <dd><p><code>object</code>. Les propriétés à mettre à jour. Identique à l'objet <code>createProperties</code> passé à  {{WebExtAPIRef("menus.create()", "menus.create()")}}, sauf que l'<code>id</code> ne peut être défini. En outre, les <code>icônes</code> ne peuvent être modifiées que dans les commandes de menu, et non dans le menu contextuel de niveau supérieur. L'icône de niveau supérieur correspond à l'icône principale de l'extension telle que déclarée dans le fichier manifeste de l'extension.</p>
+ <dl>
   <dt><code>checked</code> {{optional_inline}}</dt>
   <dd><code>boolean</code>. L'état initial d'une case à cocher ou d'un élément radio : <code>true</code> fpour sélectionné et <code>false</code> pour non sélectionné. Un seul élément radio peut être sélectionné à la fois dans un groupe donné d'éléments radio.</dd>
   <dt><code>command</code> {{optional_inline}}</dt>
@@ -61,26 +61,26 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/update
   </ul>
   </dd>
   <dt><code>documentUrlPatterns</code> {{optional_inline}}</dt>
-  <dd><code>array</code> de <code><code>string</code></code>. Vous permet de limiter l'élément à s'appliquer uniquement aux documents dont l'URL correspond à l'un des éléments <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">motifs</a> de données. Ceci s'applique également aux cadres.</dd>
+  <dd><code>array</code> de <code><code>string</code></code>. Vous permet de limiter l'élément à s'appliquer uniquement aux documents dont l'URL correspond à l'un des éléments <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">motifs</a> de données. Ceci s'applique également aux cadres.</dd>
   <dt><code>enabled</code> {{optional_inline}}</dt>
   <dd><code>boolean</code>. Si cet élément de menu est activé ou désactivé. La valeur par défaut est <code>true</code>.</dd>
   <dt><code>icons</code> {{optional_inline}}</dt>
   <dd>
   <p><code>object</code>. Une ou plusieurs icônes personnalisées à afficher à côté de l'élément. Les icônes personnalisées ne peuvent être définies que pour les éléments apparaissant dans les sous-menus. Cette propriété est un objet avec une propriété pour chaque icône fournie : le nom de la propriété doit inclure la taille de l'icône en pixels, et le chemin est relatif à l'icône du répertoire racine de l'extension. Le navigateur essaie de choisir une icône 16x16 pixels pour un affichage normal ou une icône 32x32 pixels pour un affichage haute densité. Pour éviter toute mise à l'échelle, vous pouvez spécifier des icônes comme celle-ci :</p>
 
-  <pre class="brush: json no-line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
-      <span class="key token">"16":</span> <span class="string token">"path/to/geo-16.png"</span><span class="punctuation token">,</span>
-      <span class="key token">"32":</span> <span class="string token">"path/to/geo-32.png"</span>
-    <span class="punctuation token">}</span></code></pre>
+  <pre class="brush: json">"icons": {
+      "16": "path/to/geo-16.png",
+      "32": "path/to/geo-32.png"
+    }</pre>
 
   <p>Alternativement, vous pouvez spécifier une seule icône SVG, et elle sera mise à l'échelle de manière appropriée :</p>
 
-  <pre class="brush: json no-line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
-      <span class="key token">"16":</span> <span class="string token">"path/to/geo.svg"</span>
-    <span class="punctuation token">}</span></code></pre>
+  <pre class="brush: json">"icons": {
+      "16": "path/to/geo.svg"
+    }</pre>
 
-  <div class="blockIndicator note">
-  <p><strong>Note</strong>: The top-level menu item uses the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a> specified in the manifest rather than what is specified with this key.</p>
+  <div class="note">
+  <p><strong>Note :</strong> The top-level menu item uses the <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a> specified in the manifest rather than what is specified with this key.</p>
   </div>
   </dd>
   <dt><code>id</code> {{optional_inline}}</dt>
@@ -154,7 +154,7 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 <p>{{Compat("webextensions.api.menus.update", 10)}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API <a href="https://developer.chrome.com/extensions/contextMenus"><code>chrome.contextMenus</code></a> de chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> dans le code Chromium.</p>
 </div>

@@ -23,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/update
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var updating = browser.tabs.update(
+<pre class="brush: js">var updating = browser.tabs.update(
   tabId,              // optional integer
   updateProperties    // object
 )
@@ -35,16 +35,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/update
  <dt><code>tabId</code>{{optional_inline}}</dt>
  <dd><code>integer</code>. Par défaut à l'onglet sélectionné de la fenêtre en cours.</dd>
  <dt><code>updateProperties</code></dt>
- <dd><code>object</code>. L'ensemble des propriétés à mettre à jour pour cet onglet. Pour en savoir plus sur ces propriétés, consultez la documentation  {{WebExtAPIRef("tabs.Tab")}}.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. L'ensemble des propriétés à mettre à jour pour cet onglet. Pour en savoir plus sur ces propriétés, consultez la documentation  {{WebExtAPIRef("tabs.Tab")}}.</p>
+ <dl>
   <dt><code>active</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Si l'onglet doit devenir actif. Ne modifie pas le focus de la fenêtre (voir {{WebExtAPIRef('windows.update')}}). Si <code>true</code>, les onglets surlignés non actifs cesseront d'être surlignés. Si <code>false</code>, ne fait rien.</dd>
   <dt><code>autoDiscardable</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Si l'onglet doit être supprimé automatiquement par le navigateur lorsque les ressources sont faibles.</dd>
   <dt><code>highlighted</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Ajoute ou supprime l'onglet de la sélection courante. Si <code>true</code> et que l'onglet n'est pas surligné, il deviendra actif par défaut.</dd>
-  <dd>
+  <dd><p><code>boolean</code>. Ajoute ou supprime l'onglet de la sélection courante. Si <code>true</code> et que l'onglet n'est pas surligné, il deviendra actif par défaut.</p>
   <p>Si vous voulez seulement mettre en surbrillance l'onglet sans l'activer, Firefox accepte le réglage <code>highlighted</code> à <code>true</code> et <code>active</code> à <code>false</code>. D'autres navigateurs peuvent activer l'onglet même dans ce cas.</p>
   </dd>
   <dt><code>loadReplace</code>{{optional_inline}}</dt>
@@ -66,17 +64,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/update
   <dt><code>successorTabId</code> {{optional_inline}}</dt>
   <dd><code>integer</code>. L'identifiant de l'ID du successeur de l'onglet.</dd>
   <dt><code>url</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Une URL pour naviguer dans l'onglet. </dd>
-  <dd>Pour des raisons de sécurité, dans Firefox, il se peut que ce ne soit pas une URL privilégiée. Le passage de l'une des URL suivantes échouera, avec {{WebExtAPIRef("runtime.lastError")}} étant défini sur un message d'erreur :</dd>
-  <dd>
+  <dd><p><code>string</code>. Une URL pour naviguer dans l'onglet.</p><p>Pour des raisons de sécurité, dans Firefox, il se peut que ce ne soit pas une URL privilégiée. Le passage de l'une des URL suivantes échouera, avec {{WebExtAPIRef("runtime.lastError")}} étant défini sur un message d'erreur :</p>
   <ul>
    <li>chrome: URLs</li>
    <li>javascript: URLs</li>
    <li>data: URLs</li>
    <li>file: URLs (c'est-à-dire, fichiers sur le système de fichiers, cependant, pour utiliser un fichier empaqueté à l'intérieur de l'extension, voir ci-dessous)</li>
-   <li>confidentiel : URLs (par exemle, <code>about:config</code>, <code>about:addons</code>, <code>about:debugging</code>, <code>about:newtab</code>)<span class="hidden"> </span>. Les URL non privilégiées (par exemple, <code>about:blank</code>) sont autorisées.</li>
+   <li>confidentiel : URLs (par exemle, <code>about:config</code>, <code>about:addons</code>, <code>about:debugging</code>, <code>about:newtab</code>). Les URL non privilégiées (par exemple, <code>about:blank</code>) sont autorisées.</li>
   </ul>
-  Pour charger une page fournie avec votre extension, spécifiez une URL absolue à partir du fichier manifest.json de l'extension. Par exemple : '/path/to/my-page.html'. Si vous omettez le premier caractère '/', l'URL est traitée comme une URL relative et différents navigateurs peuvent construire différentes URL absolues.</dd>
+  <p>Pour charger une page fournie avec votre extension, spécifiez une URL absolue à partir du fichier manifest.json de l'extension. Par exemple : '/path/to/my-page.html'. Si vous omettez le premier caractère '/', l'URL est traitée comme une URL relative et différents navigateurs peuvent construire différentes URL absolues.</p></dd>
  </dl>
  </dd>
 </dl>
@@ -127,7 +123,7 @@ querying.then(updateFirstTab, onError);</pre>
 
 <p>{{Compat("webextensions.api.tabs.update", 10)}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

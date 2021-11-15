@@ -18,9 +18,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 <p>Les scripts de contenu ne peuvent accéder qu'à <a href="#API WebExtensions">un sous-ensemble des API WebExtension</a>, mais ils peuvent <a href="#communication_background">communiquer avec les scripts d'arrière-plan</a> grâce à un système de messages et ainsi accéder indirectement aux API WebExtension.</p>
 
 <div class="note">
-<p>Notez que les scripts de contenu sont bloqués sur les domaines suivants :</p>
+<p><strong>Note :</strong> que les scripts de contenu sont bloqués sur les domaines suivants :</p>
 
-<ul style="display: grid;">
+<ul>
  <li>accounts-static.cdn.mozilla.net</li>
  <li>accounts.firefox.com</li>
  <li>addons.cdn.mozilla.net</li>
@@ -38,13 +38,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
  <li>testpilot.firefox.com</li>
 </ul>
 
-<p>If you try to inject a content script into a page in these domains, it will fail and the page will log a <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> error.</p>
+<p>If you try to inject a content script into a page in these domains, it will fail and the page will log a <a href="/fr/docs/Web/HTTP/CSP">CSP</a> error.</p>
 
-<p>Because these restrictions include addons.mozilla.org, users may attempt to use your extension immediately after installation—only to find that it doesn't work! You may want to add an appropriate warning, or an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices">onboarding page</a> to move users away from addons.mozilla.org.</p>
+<p>Because these restrictions include addons.mozilla.org, users may attempt to use your extension immediately after installation—only to find that it doesn't work! You may want to add an appropriate warning, or an <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices">onboarding page</a> to move users away from addons.mozilla.org.</p>
 </div>
 
 <div class="note">
-<p>Les valeurs ajoutées à la portée globale d'un script de contenu avec <code>var foo</code> ou <code>window.foo = "bar"</code> peuvent disparaître à cause du bogue <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1408996">1408996</a>.</p>
+<p><strong>Note :</strong> Les valeurs ajoutées à la portée globale d'un script de contenu avec <code>var foo</code> ou <code>window.foo = "bar"</code> peuvent disparaître à cause du bogue <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1408996">1408996</a>.</p>
 </div>
 
 <h2 id="Charger_des_scripts_de_contenu">Charger des scripts de contenu</h2>
@@ -59,7 +59,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 <p>Il n'y a qu'une seule portée globale pour chaque <em>frame</em> et pour chaque extension. Cela signifie que les variables d'un script de contenu peuvent être accédées directement par un autre script de contenu, indépendamment de la manière dont le script de contenu a été chargé.</p>
 
-<p>À l'aide des méthodes (1) et (2), vous ne pouvez charger des scripts que dans des pages dont les URL peuvent être représentées par un <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">motif de correspondance</a>.</p>
+<p>À l'aide des méthodes (1) et (2), vous ne pouvez charger des scripts que dans des pages dont les URL peuvent être représentées par un <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">motif de correspondance</a>.</p>
 
 <p>En utilisant la méthode (3), vous pouvez également charger des scripts dans des pages packagées avec votre extension, mais vous ne pouvez pas charger des scripts dans des pages privilégiées du navigateur (comme <code><a>about:debugging</a></code> ou <code><a>about:addons</a></code>).</p>
 
@@ -141,10 +141,10 @@ window.confirm("Êtes-vous sûr ?"); // appelle la méthode window.confirm() ori
 <div class="blockIndicator note">
 <p><strong>Note:</strong> Firefox <em>fournis</em> certaines API qui permettent aux scripts de contenu d'accéder aux objets JavaScript créés par les scripts de page et d'exposer leurs propres objets JavaScript aux scripts de page.</p>
 
-<p>Voir <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts">Partage d'objets avec des scripts de page</a> pour plus de détails.***</p>
+<p>Voir <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts">Partage d'objets avec des scripts de page</a> pour plus de détails.***</p>
 </div>
 
-<h3 id="Les_API_WebExtension_accessibles"><a id="API WebExtensions" name="API WebExtensions">Les API WebExtension accessibles</a></h3>
+<h3 id="Les_API_WebExtension_accessibles">Les API WebExtension accessibles</h3>
 
 <p>En plus des API standard du DOM, les scripts de contenu peuvent utiliser les API WebExtension suivantes :</p>
 
@@ -191,7 +191,7 @@ window.confirm("Êtes-vous sûr ?"); // appelle la méthode window.confirm() ori
 
 <p>Ceci est accompli en exposant des instances XHR et <em>fetch</em> privilégiées dans le script de contenu. Cela a pour effet secondaire de ne pas définir les en-têtes <code><a href="/fr/docs/Web/HTTP/Headers/Origin">Origin</a></code> et <code><a href="/fr/docs/Web/HTTP/Headers/Referer">Referer</a></code> tels que la page elle-même l'aurait fait. Cela est souvent préférable afin d'éviter que la requête révèle la différence d'origine. À partir de Firefox 58, les extensions qui doivent exécuter des requêtes se comportant comme si elles étaient envoyées par le contenu lui-même peuvent utiliser <code>content.XMLHttpRequest</code> et <code>content.fetch()</code>. Pour les extensions visant une compatibilité entre les navigateurs, il est nécessaire de vérifier la présence de ces API avant de les utiliser.</p>
 
-<h2 id="Communication_avec_les_scripts_darrière-plan"><a id="communication_background" name="communication_background">Communication avec les scripts d'arrière-plan</a></h2>
+<h2 id="Communication_avec_les_scripts_darrière-plan">Communication avec les scripts d'arrière-plan</h2>
 
 <p>Bien que les scripts de contenu ne puissent pas utiliser la totalité des API WebExtension, ils peuvent communiquer avec les scripts d'arrière-plan de l'extension via l'API de messagerie et ont donc indirectement accès aux mêmes API que ces derniers.</p>
 
@@ -201,7 +201,7 @@ window.confirm("Êtes-vous sûr ?"); // appelle la méthode window.confirm() ori
 
 <p>Pour envoyer un message à la fois, vous pouvez utiliser les API suivantes :</p>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="row"></th>
@@ -386,7 +386,7 @@ window.addEventListener("message", function(event) {
 <p>Pour un exemple complet et fonctionnel, <a href="https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html">visitez la page de démo sur Github</a> et suivez les instructions.</p>
 
 <div class="warning">
-<p>Notez que vous devez être très prudent lorsque vous interagissez avec du contenu Web non fiable de cette manière. Les extensions sont du code privilégié qui peut avoir de puissantes capacités et les pages Web hostiles peuvent facilement les amener à accéder à ces capacités.</p>
+<p><strong>Attention :</strong> Notez que vous devez être très prudent lorsque vous interagissez avec du contenu Web non fiable de cette manière. Les extensions sont du code privilégié qui peut avoir de puissantes capacités et les pages Web hostiles peuvent facilement les amener à accéder à ces capacités.</p>
 
 <p>Pour donner un exemple trivial, supposons que le code du script de contenu qui reçoit le message ressemble à ceci :</p>
 
@@ -455,8 +455,8 @@ Dans le script de la page, window.y: undefined</pre>
 
 <p>La même chose s'applique pour <code><a href="/fr/docs/Web/API/WindowTimers/setTimeout">setTimeout()</a></code>, <code><a href="/fr/docs/Web/API/WindowTimers/setInterval">setInterval()</a></code>, et <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function">Function()</a></code>.</p>
 
-<div class="blockIndicator warning">
-<p><span id="result_box" lang="fr"><span>Lorsque vous exécutez du code dans le contexte de la page, l'avertissement précédent reste nécessaire </span></span>: <span id="result_box" lang="fr"><span>l'environnement de la page est contrôlé par des pages web potentiellement malveillantes qui peuvent redéfinir les objets avec lesquels vous interagissez</span> </span>:</p>
+<div class="warning">
+<p><strong>Attention :</strong> Lorsque vous exécutez du code dans le contexte de la page, l'avertissement précédent reste nécessaire : l'environnement de la page est contrôlé par des pages web potentiellement malveillantes qui peuvent redéfinir les objets avec lesquels vous interagissez :</p>
 
 <pre class="brush: js">// page.js redéfinit console.log
 

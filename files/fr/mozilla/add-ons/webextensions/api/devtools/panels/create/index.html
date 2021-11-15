@@ -16,11 +16,11 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/create
 
 <p>Ajoute un nouveau panneau aux devtools.</p>
 
-<p><span id="result_box" lang="fr"><span>Cette fonction prend </span></span>: un titre, une URL vers un fichier d'icône et une URL vers un fichier HTML. <span id="result_box" lang="fr"><span>Il crée un nouveau panneau dans les </span></span>devtools, dont le contenu est spécifié par le fichier HTML. Il renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui résout un objet <code><a href="/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel">ExtensionPanel</a></code> représentant le nouveau panneau.</p>
+<p>Cette fonction prend : un titre, une URL vers un fichier d'icône et une URL vers un fichier HTML. Il crée un nouveau panneau dans les devtools, dont le contenu est spécifié par le fichier HTML. Il renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui résout un objet <code><a href="/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel">ExtensionPanel</a></code> représentant le nouveau panneau.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var creating = browser.devtools.panels.create(
+<pre class="brush: js">var creating = browser.devtools.panels.create(
   title,       // string
   iconPath,    // string
   pagePath     // string
@@ -70,7 +70,7 @@ browser.devtools.panels.create(
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a>.</p>
 

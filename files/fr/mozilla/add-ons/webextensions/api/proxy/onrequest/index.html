@@ -32,7 +32,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.proxy.onRequest.addListener(
+<pre class="brush: js">browser.proxy.onRequest.addListener(
   listener,             //  function
   filter,               //  object
   extraInfoSpec         //  optional array of strings
@@ -77,7 +77,7 @@ browser.proxy.onRequest.hasListener(listener)
  <dt><code>filter</code></dt>
  <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. Un ensemble de filtres qui limite les événements qui seront envoyés à cet écouteur.</dd>
  <dt><code>extraInfoSpec</code> {{optional_inline}}</dt>
- <dd><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous pouvez passer une seule valeur<span class="im">, <code>"requestHeaders"</code>, </span>pour inclure les en-têtes de demande dans l'objet de<span class="im"> <code>details</code> </span>transmis à l'écouteur<span class="im">.</span></dd>
+ <dd><code>array</code> de <code>string</code>. Options supplémentaires pour l'événement. Vous pouvez passer une seule valeur, <code>"requestHeaders"</code>, pour inclure les en-têtes de demande dans l'objet de <code>details</code> transmis à l'écouteur.</dd>
 </dl>
 
 <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>

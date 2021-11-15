@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.permissions.onRemoved.addListener(listener)
+<pre class="brush: js">browser.permissions.onRemoved.addListener(listener)
 browser.permissions.onRemoved.removeListener(listener)
 browser.permissions.onRemoved.hasListener(listener)
 </pre>
@@ -42,7 +42,7 @@ browser.permissions.onRemoved.hasListener(listener)
  <dd>
  <p>Fonction qui ne sera appelée lorsque cet événement se produira. La fonction sera passée avec les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>permissions</code></dt>
   <dd>L'objet {{WebExtAPIRef("permissions.Permissions")}} contenant les permissions qui ont été supprimées.</dd>
  </dl>
@@ -65,7 +65,7 @@ browser.permissions.onRemoved.addListener(handleRemoved);
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/permissions"><code>chrome.permissions</code></a>.</p>
 

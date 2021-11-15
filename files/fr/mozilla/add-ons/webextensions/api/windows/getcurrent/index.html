@@ -23,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var gettingCurrent = browser.windows.getCurrent(
+<pre class="brush: js">var gettingCurrent = browser.windows.getCurrent(
   getInfo               // optional object
 )
 </pre>
@@ -32,9 +32,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
 
 <dl>
  <dt><code>getInfo</code>{{optional_inline}}</dt>
- <dd><code>object</code>.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>.</p>
+ <dl>
   <dt><code>populate</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets de la fenêtre. Les objets Tab ne contiennent que les propriétés <code>url</code>, <code>title</code> et <code>favIconUrl</code> si le fichier manifest de l'extension comprend la permission <code>"tabs"</code>.</dd>
   <dt><code>windowTypes</code>{{optional_inline}}</dt>
@@ -43,14 +42,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
  </dd>
 </dl>
 
-<div class="note"><strong>Note:</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Si fourni, le composant <code>windowTypes</code> de <code>getInfo</code> est ignoré. L'utilisation de  <code>windowTypes</code> a été dépréciée à partir de Firefox 62.</p>
 </div>
 
 <h3 id="Valeur_retournée">Valeur retournée</h3>
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window" title="Information about a browser window."><code>windows.Window</code></a> object contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.</p>
+<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window"><code>windows.Window</code></a> object contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.</p>
 
 <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
 
@@ -78,7 +77,7 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
 

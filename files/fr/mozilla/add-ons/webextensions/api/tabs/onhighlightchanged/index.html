@@ -16,13 +16,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged
 ---
 <div>{{AddonSidebar()}}</div>
 
-<div class="warning">Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onHighlighted")}} à la place.</div>
+<div class="warning">
+  <p><strong>Attention :</strong> Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onHighlighted")}} à la place.</p></div>
 
 <p>Lancé lorsque les onglets en surbrillance ou sélectionnés dans une fenêtre changent.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.tabs.onHighlightChanged.addListener(listener)
+<pre class="brush: js">browser.tabs.onHighlightChanged.addListener(listener)
 browser.tabs.onHighlightChanged.removeListener(listener)
 browser.tabs.onHighlightChanged.hasListener(listener)
 </pre>
@@ -47,7 +48,7 @@ browser.tabs.onHighlightChanged.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>selectInfo</code></dt>
   <dd><a href="#selectInfo"><code>object</code></a>.</dd>
  </dl>
@@ -58,7 +59,7 @@ browser.tabs.onHighlightChanged.hasListener(listener)
 
 <h3 id="selectInfo">selectInfo</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>windowId</code></dt>
  <dd><code>integer</code>. La fenêtre dont les onglets ont changé.</dd>
  <dt><code>tabIds</code></dt>
@@ -70,7 +71,7 @@ browser.tabs.onHighlightChanged.hasListener(listener)
 <p>{{Compat("webextensions.api.tabs.onHighlightChanged")}}</p>
 
 <p>
- </p><div class="note"><strong>Remerciements :</strong>
+ </p><div class="note"><p><strong>Note :</strong></p>
 
  <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

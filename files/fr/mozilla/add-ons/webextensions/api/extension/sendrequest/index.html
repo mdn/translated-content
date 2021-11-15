@@ -14,8 +14,8 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
 ---
 <div>{{AddonSidebar}}{{Deprecated_Header}}
-<div class="blockIndicator warning">
-<p>Cette méthode est dépréciée. utilisez {{WebExtAPIRef("runtime.sendMessage")}} à la place.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Cette méthode est dépréciée. utilisez {{WebExtAPIRef("runtime.sendMessage")}} à la place.</p>
 </div>
 </div>
 
@@ -23,14 +23,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">chrome.extension.sendRequest(
+<pre class="brush: js">chrome.extension.sendRequest(
   extensionId,             // optional string
   request,                 // any
   function(response) {...} // optional function
 )
 </pre>
 
-<p>Cette API est également disponible en tant que <code>browser.extension.sendRequest()</code> dans une <a href="/en-US/Add-ons/WebExtensions/API#Callbacks_and_promises">version qui renvoie une promise</a>.</p>
+<p>Cette API est également disponible en tant que <code>browser.extension.sendRequest()</code> dans une <a href="/fr/Add-ons/WebExtensions/API#Callbacks_and_promises">version qui renvoie une promise</a>.</p>
 
 <h3 id="Paramètres">Paramètres</h3>
 
@@ -40,10 +40,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
  <dt><code>request</code></dt>
  <dd><code>any</code>.</dd>
  <dt><code>responseCallback</code>{{Optional_Inline}}</dt>
- <dd><code>function</code>. La fonction est passée les arguments suivants :
-
-
- <dl class="api-reference-values">
+ <dd><p><code>function</code>. La fonction est passée les arguments suivants :</p>
+ <dl>
   <dt><code>response</code></dt>
   <dd><code>any</code>. Objet de réponse JSON envoyé par le gestionnaire de la requête. Si une erreur survient lors de la connexion à l'extension, le rappel sera appelé sans arguments et  {{WebExtAPIRef('runtime.lastError')}} sera défini sur le message d'erreur.</dd>
  </dl>
@@ -56,7 +54,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
 
 <p>{{WebExtExamples}}</p>
 
-<div class="blockIndicator note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/extension"><code>chrome.extension</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> dans le code Chromium.</p>
 

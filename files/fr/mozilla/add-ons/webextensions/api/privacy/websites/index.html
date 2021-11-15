@@ -53,7 +53,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/websites
  <dt><code>protectedContentEnabled</code></dt>
  <dd>Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Disponible uniquement sur Windows. Si<code>true</code>, le navigateur fournit un ID unique aux plugins afin d'exécuter le contenu protégé.</dd>
  <dt><code>referrersEnabled</code></dt>
- <dd>Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur  sous-jacente est un booléen. Si activé, le navigateur envoie les en-têtes de <a href="/en-US/docs/Web/HTTP/Headers/Referer">référence</a> avec vos demandes.</dd>
+ <dd>Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur  sous-jacente est un booléen. Si activé, le navigateur envoie les en-têtes de <a href="/fr/docs/Web/HTTP/Headers/Referer">référence</a> avec vos demandes.</dd>
  <dt><code>resistFingerprinting</code></dt>
  <dd>
  <p>Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen.</p>
@@ -65,7 +65,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/websites
  <p>Par défaut à <code>false</code>.</p>
  </dd>
  <dt><code>thirdPartyCookiesAllowed</code></dt>
- <dd>Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si <code>false</code>, le navigateur bloque les <a href="/en-US/docs/Web/HTTP/Cookies#Third-party_cookies">cookies tiers</a>.</dd>
+ <dd>Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si <code>false</code>, le navigateur bloque les <a href="/fr/docs/Web/HTTP/Cookies#Third-party_cookies">cookies tiers</a>.</dd>
  <dt><code>trackingProtectionMode</code></dt>
  <dd>
  <p>La "protection de suivi" est une fonctionnalité de navigateur qui bloque les requêtes faites sur des domaines qui sont connus pour s'engager dans le suivi multi-sites des utilisateurs. Les sites qui suivent les utilisateurs sont généralement des sites publicitaires et analytiques tiers. Ce paramètre est un objet {{WebExtAPIRef("types.BrowserSetting")}} qui détermine si le navigateur doit activer  la protection de suivi. Sa valeur sous-jacente est une chaîne qui peut prendre l'une des trois valeurs :</p>
@@ -81,12 +81,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/websites
 <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
 
 <p>{{Compat("webextensions.api.privacy.websites")}}</p>
-
-<div class="hidden note">
-<p>The "Chrome incompatibilities" section is included from <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
-
-<p>If you need to update this content, edit <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, then shift-refresh this page to see your changes.</p>
-</div>
 
 <h2 id="Exemples">Exemples</h2>
 
@@ -120,7 +114,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/privacy"><code>chrome.privacy</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json"><code>privacy.json</code></a> dans le code de Chromium.</p>
 

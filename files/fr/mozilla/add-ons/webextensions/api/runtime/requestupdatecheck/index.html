@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/requestUpdateCheck
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var requestingCheck = browser.runtime.requestUpdateCheck()
+<pre class="brush: js">var requestingCheck = browser.runtime.requestUpdateCheck()
 </pre>
 
 <h3 id="Paramètres">Paramètres</h3>
@@ -32,12 +32,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/requestUpdateCheck
 
 <p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec deux arguments :</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>status</code></dt>
  <dd>Une valeur {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}}  — Le résultat de la vérification de mise à jour.</dd>
  <dt><code>details</code>{{optional_inline}}</dt>
- <dd><code>object</code>. Si le <code>status</code> est <code>update_available</code>, cela contient plus d'informations sur la mise à jour. C'est un objet contenant une simple propriété :</dd>
- <dd>
+ <dd><p><code>object</code>. Si le <code>status</code> est <code>update_available</code>, cela contient plus d'informations sur la mise à jour. C'est un objet contenant une simple propriété :</p>
  <dl>
   <dt><code>version</code></dt>
   <dd><code>string</code>. La version de la mise à jour.</dd>
@@ -69,7 +68,7 @@ requestingCheck.then(onRequested, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
 

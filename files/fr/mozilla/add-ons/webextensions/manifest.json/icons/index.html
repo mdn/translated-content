@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 ---
 <div>{{AddonSidebar}}</div>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row" style="width: 30%;">Type</th>
@@ -22,7 +22,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
   <tr>
    <th scope="row">Exemple</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "icons": {
   "48": "icon.png",
   "96": "icon@2x.png"
@@ -32,11 +32,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
  </tbody>
 </table>
 
-<p>La clé <font face="Consolas">icons</font> spécifie des icônes pour votre extension. Ces icônes seront utilisées pour représenter l'extension dans des composants tels que le gestionnaire des modules d'extensions.</p>
+<p>La clé icons spécifie des icônes pour votre extension. Ces icônes seront utilisées pour représenter l'extension dans des composants tels que le gestionnaire des modules d'extensions.</p>
 
 <p>Elle se compose d'une paire de valeurs-clés de taille d'image et le chemin d'accès au fichier image par rapport au répertoire racine de l'extension.</p>
 
-<p>Si la clé <font face="Consolas">icons</font> n'est pas fournie, une icône d'extension standard sera utilisée par défaut.</p>
+<p>Si la clé icons n'est pas fournie, une icône d'extension standard sera utilisée par défaut.</p>
 
 <p>Vous devez fournir au moins une icône d'extension principale, idéalement d'une taille de 48x48 pixels. C'est l'icône par défaut qui sera utilisée dans le Gestionnaire des extensions. Vous pouvez, cependant, fournir des icônes de n'importe quelle taille, et Firefox tentera de trouver la meilleure icône à afficher dans les différents composants.</p>
 
@@ -44,9 +44,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 
 <h2 id="Exemple">Exemple</h2>
 
-<p>Les clés dans l'objet <font face="Consolas">icons</font> spécifient la taille de l'icône en pixels et la valeur spécifie le chemin relatif de l'icône. Cet exemple contient une icône d'extension 48px et une version plus grande pour les écrans haute résolution.</p>
+<p>Les clés dans l'objet icons spécifient la taille de l'icône en pixels et la valeur spécifie le chemin relatif de l'icône. Cet exemple contient une icône d'extension 48px et une version plus grande pour les écrans haute résolution.</p>
 
-<pre class="brush: json no-line-numbers">"icons": {
+<pre class="brush: json">"icons": {
   "48": "icon.png",
   "96": "icon@2x.png"
 }</pre>
@@ -57,10 +57,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 
 <ol>
  <li>Vous devez spécifier un "viewBox" dans l'image. Par exemple :
-  <pre class="brush: html"><code>&lt;svg viewBox="0 0 48 48" width="48" height="48" ...</code></pre>
+  <pre class="brush: html">&lt;svg viewBox="0 0 48 48" width="48" height="48" ...</pre>
  </li>
  <li>Même si vous pouvez utiliser un fichier, vous devez toujours spécifier différentes tailles de l'icône dans votre<code> manifest. </code>Par exemple :
-  <pre class="brush: json no-line-numbers">"icons": {
+  <pre class="brush: json">"icons": {
   "48": "icon.svg",
   "96": "icon.svg"
 }</pre>
@@ -68,7 +68,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 </ol>
 
 <div class="note">
-<p><strong>Note</strong> : si vous utilisez un programme comme Inkscape pour créer un SVG, vous voudrez peut-être l'enregistrer en tant que "SVG simple". Firefox peut être gêné par des espaces de noms spéciaux, et ne pas afficher votre icône.</p>
+<p><strong>Note :</strong> si vous utilisez un programme comme Inkscape pour créer un SVG, vous voudrez peut-être l'enregistrer en tant que "SVG simple". Firefox peut être gêné par des espaces de noms spéciaux, et ne pas afficher votre icône.</p>
 </div>
 
 <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>

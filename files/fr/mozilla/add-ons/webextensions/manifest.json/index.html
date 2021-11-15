@@ -11,8 +11,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
 <p>{{AddonSidebar}}</p>
 
-<div class="blockIndicator note">
-<p>Cet article décrit manifest.json pour les extensions web. Si vous cherchez des informations sur le manifeste.json dans les PWAs, consultez l'article <a href="/fr/docs/Web/Manifest">Web App Manifest</a>.</p>
+<div class="note">
+<p><strong>Note :</strong> Cet article décrit manifest.json pour les extensions web. Si vous cherchez des informations sur le manifeste.json dans les PWAs, consultez l'article <a href="/fr/docs/Web/Manifest">Web App Manifest</a>.</p>
 </div>
 
 <p>Le fichier <code>manifest.json</code> est le seul fichier que chaque extension utilisant les API WebExtension doit contenir.</p>
@@ -25,9 +25,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 
 <p>Les clés <code>manifest.json</code> sont listées ci-dessous:</p>
 
-<div class="index">{{ListSubpages("/en-US/Add-ons/WebExtensions/manifest.json")}}</div>
+<div>{{ListSubpages("/en-US/Add-ons/WebExtensions/manifest.json")}}</div>
 
-<h3 class="index" id="Notes_about_manifest.json_keys">Notes about manifest.json keys</h3>
+<h3 id="Notes_about_manifest.json_keys">Notes about manifest.json keys</h3>
 
 <ul>
  <li><code>"manifest_version"</code>, <code>"version"</code>, and <code>"name"</code> sont les seules clés obligatoires.</li>
@@ -39,7 +39,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 
 <p>Vous pouvez accéder au manifest de votre extension depuis le JavaScript de l'extension en utilisant la fonction {{WebExtAPIRef("runtime.getManifest()")}} :</p>
 
-<pre class="brush: js; no-line-numbers">browser.runtime.getManifest().version;</pre>
+<pre class="brush: js;">browser.runtime.getManifest().version;</pre>
 
 <h2 id="Exemple">Exemple</h2>
 

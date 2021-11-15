@@ -31,7 +31,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/create
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var creating = browser.windows.create(
+<pre class="brush: js">var creating = browser.windows.create(
   createData            // optional object
 )
 </pre>
@@ -40,9 +40,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/create
 
 <dl>
  <dt><code>createData</code>{{optional_inline}}</dt>
- <dd><code>object</code>.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>.</p>
+ <dl>
   <dt><code>allowScriptsToClose</code> {{optional_inline}}</dt>
   <dd>
   <p><code>boolean</code>. Lorsque la fenêtre est ouverte, elle contiendra un seul onglet, ou plus d'un onglet si <code>url</code> est donnée et comprendra un tableau contenant plus d'une URL. Par défaut, les scripts s'exécutant dans ces pages ne sont pas autorisés à fermer leur onglet en utilisant <code><a href="/fr/docs/Web/API/Window/close">window.close()</a></code>. Si vous incluez <code>allowScriptsToClose</code> et le mettez à <code>true</code> ,  alors ce comportement par défaut est modifié, de sorte que les scripts peuvent fermer leurs onglets. Notez cela :</p>
@@ -151,7 +150,7 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 
 <p>{{Compat("webextensions.api.windows.create", 10)}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
 

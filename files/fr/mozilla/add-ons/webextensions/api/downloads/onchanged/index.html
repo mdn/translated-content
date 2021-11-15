@@ -22,7 +22,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.downloads.onChanged.addListener(listener)
+<pre class="brush: js">browser.downloads.onChanged.addListener(listener)
 browser.downloads.onChanged.removeListener(listener)
 browser.downloads.onChanged.hasListener(listener)
 </pre>
@@ -47,7 +47,7 @@ browser.downloads.onChanged.hasListener(listener)
  <dd>
  <p>Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>downloadDelta</code></dt>
   <dd>Un <a href="#downloadDelta"><code>objet</code></a> représentant l'objet {{WebExtAPIRef('downloads.DownloadItem')}} qui a été modifié, ainsi que l'état de toutes les propriétés qui y ont été modifiées.</dd>
  </dl>
@@ -60,7 +60,7 @@ browser.downloads.onChanged.hasListener(listener)
 
 <p>L'objet <code>downloadDelta</code> a les propriétés suivantes disponibles :</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>id</code></dt>
  <dd>Un <code>integer</code> représentant l'identifiant de l'<code>id</code>  {{WebExtAPIRef('downloads.DownloadItem')}} qui a changé.</dd>
  <dt><code>url</code>{{optional_inline}}</dt>
@@ -109,7 +109,7 @@ browser.downloads.onChanged.addListener(handleChanged);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#event-onChanged"><code>chrome.downloads</code></a> API.</p>
 

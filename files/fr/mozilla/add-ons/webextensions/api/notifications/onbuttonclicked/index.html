@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.notifications.onButtonClicked.addListener(listener)
+<pre class="brush: js">browser.notifications.onButtonClicked.addListener(listener)
 browser.notifications.onButtonClicked.removeListener(listener)
 browser.notifications.onButtonClicked.hasListener(listener)
 </pre>
@@ -44,7 +44,7 @@ browser.notifications.onButtonClicked.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>notificationId</code></dt>
   <dd><code>string</code>. ID de la notification sur laquelle le bouton a été cliqué.</dd>
   <dt><code>buttonIndex</code></dt>
@@ -59,7 +59,7 @@ browser.notifications.onButtonClicked.hasListener(listener)
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a>.</p>
 

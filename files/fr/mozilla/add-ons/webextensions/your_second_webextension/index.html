@@ -7,7 +7,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>Si vous avez lu l'article <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">votre première extension</a>, vous avez déjà une idée de la manière d'écrire une extension. <span class="seoSummary">Dans cet article, nous allons écrire une extension légèrement plus complexe qui illustre un peu plus les API.</span></p>
+<p>Si vous avez lu l'article <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">votre première extension</a>, vous avez déjà une idée de la manière d'écrire une extension. Dans cet article, nous allons écrire une extension légèrement plus complexe qui illustre un peu plus les API.</p>
 
 <p>L'extension ajoute un nouveau bouton à la barre d'outils Firefox. Lorsque l'utilisateur clique sur le bouton, nous affichons une fenêtre contextuelle qui leur permet de choisir un animal. Une fois l'animal choisi, l'extension remplace le contenu de la page actuelle par une image de l'animal choisi.</p>
 
@@ -27,7 +27,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 <p>Voici une visualisation globale possible de la structure du module :</p>
 
-<p><img alt="Un diagramme où les différents fichiers de l'extension sont représentés avec des liens entre eux : le fichier manifeste pointe vers trois groupes : l'icône, les fichiers pour l'action navigateur et les ressources accessibles par le Web. On voit également un lien entre le fichier choose_beast.js qui appartient au groupe pour les actions navigateur avec un lien qui pointe vers le script de contenu : beastify.js." src="untitled-1.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="untitled-1.png"></p>
 
 <p>Il s'agit d'une extension simple mais qui démontre plusieurs concepts élémentaires de l'API des WebExtensions :</p>
 
@@ -420,7 +420,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 <p>Créez un nouveau répertoire nommé "beasts", et ajoutez-y les trois images, nommées de façon appropriée. Vous pouvez récupérer les images du <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts">dépôt GitHub</a>, ou bien ci-après :</p>
 
-<p><img alt="" src="frog.jpg" style="display: inline-block; margin: 20px;"><img alt="" src="snake.jpg" style="display: inline-block; margin: 20px;"><img alt="" src="turtle.jpg" style="display: inline-block; margin: 20px;"></p>
+<p><img alt="" src="frog.jpg"><img alt="" src="snake.jpg"><img alt="" src="turtle.jpg"></p>
 
 <h2 id="testing_it_out">Test</h2>
 

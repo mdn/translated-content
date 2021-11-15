@@ -26,7 +26,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.cookies.onChanged.addListener(listener)
+<pre class="brush: js">browser.cookies.onChanged.addListener(listener)
 browser.cookies.onChanged.removeListener(listener)
 browser.cookies.onChanged.hasListener(listener)
 </pre>
@@ -53,11 +53,10 @@ browser.cookies.onChanged.hasListener(listener)
  <dd>
  <p>Une fonction de rappel qui sera appelée lorsque l'événement se produira. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>changeInfo</code></dt>
-  <dd>Un <code>objet</code> contenant les détails de la modification survenue. Ses propriétés sont les suivantes :</dd>
-  <dd>
-  <dl class="reference-values">
+  <dd><p>Un <code>objet</code> contenant les détails de la modification survenue. Ses propriétés sont les suivantes :</p>
+  <dl>
    <dt><code>removed</code></dt>
    <dd>Un <code>booléen</code> défini sur <code>true</code> si un cookie a été supprimé et sinon  false.</dd>
    <dt><code>cookie</code></dt>
@@ -78,7 +77,7 @@ browser.cookies.onChanged.hasListener(listener)
 
 <p>Cet exemple écoute les événements <code>onChanged</code> et enregistre les détails de l'argument  <code>changeInfo</code> :</p>
 
-<pre class="brush: js line-numbers  language-js">browser.cookies.onChanged.addListener(function(changeInfo) {
+<pre class="brush: js">browser.cookies.onChanged.addListener(function(changeInfo) {
   console.log('Cookie changed: ' +
               '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
               '\n * Cause: ' + changeInfo.cause +
@@ -87,7 +86,7 @@ browser.cookies.onChanged.hasListener(listener)
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> dans le code Chromium.</p>
 

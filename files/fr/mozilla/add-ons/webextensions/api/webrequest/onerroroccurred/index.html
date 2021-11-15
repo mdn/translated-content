@@ -25,7 +25,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.webRequest.onErrorOccurred.addListener(
+<pre class="brush: js">browser.webRequest.onErrorOccurred.addListener(
   listener,             // function
   filter                //  object
 )
@@ -53,7 +53,7 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
  <dd>
  <p>Une fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Détails sur la demande. Voir les <code><a href="#details">details</a></code> ci-dessous.</dd>
  </dl>
@@ -66,7 +66,7 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
 
 <h3 id="détails">détails</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>documentUrl</code></dt>
  <dd><code>string</code>. URL du document dans lequel la ressource sera chargée. Par exemple, si la page web "https://example.com" contient une image ou un iframe, alors le <code>documentUrl</code> pour l'image ou l'iframe sera "https://example.com". Pour un document de niveau supérieur, <code>documentUrl</code> n'est pas défini.</dd>
  <dt><code>error</code></dt>
@@ -155,7 +155,7 @@ browser.webRequest.onErrorOccurred.addListener(
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> dans le code Chromium.</p>
 

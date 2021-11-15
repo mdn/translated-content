@@ -24,7 +24,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var gettingInfo = browser.webRequest.getSecurityInfo(
+<pre class="brush: js">var gettingInfo = browser.webRequest.getSecurityInfo(
   requestId,       // string
   options          // object
 )
@@ -36,9 +36,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
  <dt><code>requestId</code></dt>
  <dd><code>string</code>. ID de la requête pour laquelle vous souhaitez obtenir des informations de sécurité. Vous pouvez l'obtenir à partir de l'objet de <code>details</code> qui est passé dans n'importe quel écouteur d'événement <code>webRequest</code>.</dd>
  <dt><code>options</code></dt>
- <dd><code>object</code>. Un objet qui peut contenir l'une des propriétés suivantes, toutes facultatives :</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. Un objet qui peut contenir l'une des propriétés suivantes, toutes facultatives :</p>
+ <dl>
   <dt><code>certificateChain</code> {{optional_inline}}</dt>
   <dd><code>boolean</code>. Si <code>true</code>, l'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné inclura toute la chaîne de certificats jusqu'à et y compris la racine de confiance. Si <code>false</code>, <br>
   il n'inclura que le certificat du serveur. La valeur par défaut est <code>false</code>.</dd>

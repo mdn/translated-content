@@ -23,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 
 <p>Les valeurs de ce type sont des objets, qui peuvent contenir les propriétés suivantes :</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>id</code></dt>
  <dd>Une <code>chaîne</code> représentant l'identification unique pour le cookie store.***</dd>
  <dt><code>incognito</code></dt>
@@ -40,14 +40,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 
 <p>Dans l'extrait suivant, la méthode {{WebExtAPIRef("cookies.getAllCookieStores()")}} permet de récupérer tous les magasins de cookies actuellement disponibles dans le navigateur et d'afficher chaque ID de cookie, ainsi que les onglets qui se partagent le cookie store.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">logStores</span><span class="punctuation token">(</span>cookieStores<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">for</span><span class="punctuation token">(</span>store <span class="keyword token">of</span> cookieStores<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Cookie store: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>store<span class="punctuation token">.</span>id<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">\n Tab IDs: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>store<span class="punctuation token">.</span>tabIds<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js">function logStores(cookieStores) {
+  for(store of cookieStores) {
+    console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
+  }
+}
 
-<span class="keyword token">var</span> getting <span class="operator token">=</span> browser<span class="punctuation token">.</span>cookies<span class="punctuation token">.</span><span class="function token">getAllCookieStores</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-getting<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>logStores<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+var getting = browser.cookies.getAllCookieStores();
+getting.then(logStores);</pre>
 
 <p>L'extrait de code suivant obtient tous les cookies stockés et enregistre ensuite le nombre total stocké et combien de ces cookies sont incognito.</p>
 
@@ -58,7 +58,7 @@ getting<span class="punctuation token">.</span><span class="function token">then
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> dans le code Chromium.</p>
 

@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.windows.onRemoved.addListener(listener)
+<pre class="brush: js">browser.windows.onRemoved.addListener(listener)
 browser.windows.onRemoved.removeListener(listener)
 browser.windows.onRemoved.hasListener(listener)
 </pre>
@@ -44,7 +44,7 @@ browser.windows.onRemoved.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>windowId</code></dt>
   <dd><code>integer</code>. ID de la fenêtre fermée.</dd>
  </dl>
@@ -66,7 +66,7 @@ browser.windows.onRemoved.hasListener(listener)
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
 

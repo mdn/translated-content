@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onAttached
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.tabs.onAttached.addListener(listener)
+<pre class="brush: js">browser.tabs.onAttached.addListener(listener)
 browser.tabs.onAttached.removeListener(listener)
 browser.tabs.onAttached.hasListener(listener)
 </pre>
@@ -44,12 +44,12 @@ browser.tabs.onAttached.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. ID de l'onglet qui a été attaché à une nouvelle fenêtre..</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>attachInfo</code></dt>
   <dd><a href="#attachInfo"><code>object</code></a>. ID de la nouvelle fenêtre, et index de l'onglet à l'intérieur.</dd>
  </dl>
@@ -60,7 +60,7 @@ browser.tabs.onAttached.hasListener(listener)
 
 <h3 id="attachInfo">attachInfo</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>newWindowId</code></dt>
  <dd><code>integer</code>. ID de la nouvelle fenêtre.</dd>
  <dt><code>newPosition</code></dt>
@@ -85,7 +85,7 @@ browser.tabs.onAttached.addListener(handleAttached);</pre>
 
 <p>{{Compat("webextensions.api.tabs.onAttached")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

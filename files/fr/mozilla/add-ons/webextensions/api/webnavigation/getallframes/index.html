@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var gettingFrames = browser.webNavigation.getAllFrames(
+<pre class="brush: js">var gettingFrames = browser.webNavigation.getAllFrames(
   details                // object
 )
 </pre>
@@ -30,9 +30,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. Informations sur l'onglet pour récupérer toutes les images.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. Informations sur l'onglet pour récupérer toutes les images.</p>
+ <dl>
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. L'identifiant de l'onglet</dd>
  </dl>
@@ -43,7 +42,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
 
 <p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> sera accompli avec un tableau d'objets, dont chacun a les propriétés suivantes :</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>errorOccurred</code></dt>
  <dd><code>boolean</code>. Vrai si la dernière navigation dans cette trame a été interrompue par une erreur, c'est-à-dire l'événement {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} déclenché.</dd>
  <dt><code>processId</code></dt>
@@ -94,7 +93,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webNavigation"><code>chrome.webNavigation</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> dans le code de Chromium code.</p>
 

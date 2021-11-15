@@ -11,11 +11,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 <div>
 <p>Une fenêtre contextuelle est une boîte de dialogue associée à un <a href="/fr/Add-ons/WebExtensions/Browser_action">bouton de la barre d'outils</a> ou à un <a href="/fr/Add-ons/WebExtensions/Page_actions">bouton de la barre d'adresse</a>. Cette page décrit les popups en général, leur spécification, leur débogage, leur redimensionnement et leur conception, ainsi que des exemples d'utilisation..</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15747/page_action_popup.png" style="display: block; height: 282px; margin-left: auto; margin-right: auto; width: 350px;"></p>
+<p><img alt="" src="page_action_popup.png"></p>
 
-<p>Lorsque l'utilisateur clique sur le bouton, la fenêtre contextuelle s'affiche. Lorsque l'utilisateur clique n'importe où en dehors de la fenêtre contextuelle, la fenêtre contextuelle est fermée. La fenêtre contextuelle peut être fermée par programmation en appelant <code><a href="https://developer.mozilla.org/fr/docs/Web/API/Window/close">window.close()</a></code> à partir d'un script exécuté dans la fenêtre contextuelle. Cependant, vous ne pouvez pas ouvrir le menu contextuel à partir d'un JavaScript de le l'extension : il ne peut être ouvert qu'en réponse à une action de l'utilisateur.</p>
+<p>Lorsque l'utilisateur clique sur le bouton, la fenêtre contextuelle s'affiche. Lorsque l'utilisateur clique n'importe où en dehors de la fenêtre contextuelle, la fenêtre contextuelle est fermée. La fenêtre contextuelle peut être fermée par programmation en appelant <code><a href="/fr/docs/Web/API/Window/close">window.close()</a></code> à partir d'un script exécuté dans la fenêtre contextuelle. Cependant, vous ne pouvez pas ouvrir le menu contextuel à partir d'un JavaScript de le l'extension : il ne peut être ouvert qu'en réponse à une action de l'utilisateur.</p>
 
-<p>Vous pouvez définir un raccourci clavier qui ouvre la fenêtre contextuelle en utilisant les raccourcis <code>"_execute_browser_action"</code> et <code>"_execute_page_action"</code>. Consultez la clé de <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">commande</a></code><span class="hidden"> </span> de la documentation du manifest.json.</p>
+<p>Vous pouvez définir un raccourci clavier qui ouvre la fenêtre contextuelle en utilisant les raccourcis <code>"_execute_browser_action"</code> et <code>"_execute_page_action"</code>. Consultez la clé de <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">commande</a></code> de la documentation du manifest.json.</p>
 
 <h2 id="Spécification_dune_fenêtre_contextuelle">Spécification d'une fenêtre contextuelle</h2>
 
@@ -35,7 +35,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 
 <h2 id="Déboguer_des_fenêtres_pop-up">Déboguer des fenêtres pop-up</h2>
 
-<p>Vous pouvez déboguer la balisage et le javaScript d'un popup en utilisant le débogueur de l'extension, mais vous devrez activer la fonction désactiver de la fonction d'occlusion automatique contextuelle pour éviter que les fenêtres contextuelles ne se cache lorsque vous cliquez à l'extérieur. <a href="https://developer.mozilla.org/fr/Add-ons/WebExtensions/Debugging#Debugging_popups">En savoir plus sur le débogage des fenêtres pop-up</a>.</p>
+<p>Vous pouvez déboguer la balisage et le javaScript d'un popup en utilisant le débogueur de l'extension, mais vous devrez activer la fonction désactiver de la fonction d'occlusion automatique contextuelle pour éviter que les fenêtres contextuelles ne se cache lorsque vous cliquez à l'extérieur. <a href="/fr/Add-ons/WebExtensions/Debugging#Debugging_popups">En savoir plus sur le débogage des fenêtres pop-up</a>.</p>
 
 <h2 id="Redimensionnement_contextuel">Redimensionnement contextuel</h2>
 
@@ -50,7 +50,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 
 <h2 id="Design_de_la_popup">Design de la popup</h2>
 
-<p>Pour plus de détails sur la façon de concevoir la page Web de votre popup pour qu'elle corresponde au style de Firefox, voir la documentation de <a class="grey-90 no-underline hover-no-underline" href="https://design.firefox.com/photon/index.html">Photon Design System</a>.</p>
+<p>Pour plus de détails sur la façon de concevoir la page Web de votre popup pour qu'elle corresponde au style de Firefox, voir la documentation de <a href="https://design.firefox.com/photon/index.html">Photon Design System</a>.</p>
 
 <h2 id="Exemples">Exemples</h2>
 

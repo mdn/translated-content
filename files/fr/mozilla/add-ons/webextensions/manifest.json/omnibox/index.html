@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/omnibox
 ---
 <div>{{AddonSidebar}}</div>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row" style="width: 30%;">Type</th>
@@ -22,7 +22,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/omnibox
   <tr>
    <th scope="row">Exemple</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "omnibox": {
   "keyword": "mdn"
 }</pre>
@@ -33,13 +33,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/omnibox
 
 <p>Utilisez la clé <code>omnibox</code> pour définir un mot-clé omnibox pour votre extension.</p>
 
-<p>Lorsque l'utilisateur tape ce mot-clé dans la barre d'adresse du navigateur, suivi d'un espace, les caractères suivants seront envoyés à l'extension à l'aide de l'API <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox">omnibox</a></code>. L'extension pourra ensuite remplir la liste de suggestions de la liste déroulante de la barre d'adresse avec ses propres suggestions.</p>
+<p>Lorsque l'utilisateur tape ce mot-clé dans la barre d'adresse du navigateur, suivi d'un espace, les caractères suivants seront envoyés à l'extension à l'aide de l'API <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/omnibox">omnibox</a></code>. L'extension pourra ensuite remplir la liste de suggestions de la liste déroulante de la barre d'adresse avec ses propres suggestions.</p>
 
 <p>Si deux ou plusieurs extensions définissent le même mot-clé, l'extension qui a été installée la dernière permet de contrôler le mot-clé. Toute extension précédemment installée qui définit le même mot-clé ne pourra plus utiliser l'API omnibox.</p>
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: json no-line-numbers">"omnibox": {
+<pre class="brush: json">"omnibox": {
   "keyword": "mdn"
 }</pre>
 

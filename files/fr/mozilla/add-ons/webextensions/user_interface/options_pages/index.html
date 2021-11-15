@@ -14,7 +14,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 
 <p>La façon dont les utilisateurs accèdent à la page et la manière dont elle est intégrée à l'interface utilisateur du navigateur varient d'un navigateur à l'autre.</p>
 
-<p>Vous pouvez ouvrir la page en programmant en appelant  <a href="/fr/Add-ons/WebExtensions/API/Runtime/openOptionsPage" title="If your add-on does not have an options page, or the browser failed to create one for some other reason, runtime.lastError will be set."><code>runtime.openOptionsPage()</code></a>.</p>
+<p>Vous pouvez ouvrir la page en programmant en appelant  <a href="/fr/Add-ons/WebExtensions/API/Runtime/openOptionsPage"><code>runtime.openOptionsPage()</code></a>.</p>
 
 <p>Les pages d'options ont une politique de sécurité de contenu qui restreint les sources à partir de laquelle elles peuvent charger des ressources et interdit certaines pratiques dangereuses telles que l'utilisation <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>. Voir la <a href="/fr/Add-ons/WebExtensions/Content_Security_Policy">politique de sécurité de contenu</a> pour plus de détails.</p>
 
@@ -40,7 +40,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 
 &lt;/html&gt;</pre>
 
-<p>JavaScript en cours d'exécution dans la page peut utiliser toutes les <a href="/fr/Add-ons/WebExtensions/API">APIs des WebExtension</a> auxquelles l'extension a des <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>. En particulier, vous pouvez utiliser l'API <a href="/fr/Add-ons/WebExtensions/API/Storage" title="Enables WebExtensions to store and retrieve data, and listen for changes to stored items."><code>storage</code></a> pour conserver les préférences.</p>
+<p>JavaScript en cours d'exécution dans la page peut utiliser toutes les <a href="/fr/Add-ons/WebExtensions/API">APIs des WebExtension</a> auxquelles l'extension a des <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>. En particulier, vous pouvez utiliser l'API <a href="/fr/Add-ons/WebExtensions/API/Storage"><code>storage</code></a> pour conserver les préférences.</p>
 
 <p>Insérez les fichiers de la page dans votre extension.</p>
 

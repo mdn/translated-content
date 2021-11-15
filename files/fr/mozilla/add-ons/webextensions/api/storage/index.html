@@ -25,13 +25,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage
  <li>Plusieurs paires clef/valeur peuvent être récupérées par un même appel à l'API.</li>
 </ul>
 
-<p>Pour utiliser cette API vous devez inclure la <a href="https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> « storage » dans votre fichier <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>.</p>
+<p>Pour utiliser cette API vous devez inclure la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> « storage » dans votre fichier <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>.</p>
 
 <p>Chaque extension a sa propre zone de stockage, qui peut être divisée entre plusieurs types de stockage.</p>
 
 <p>Bien que cette API soit semblable à {{domxref("Window.localStorage")}} il est conseillé de ne pas utiliser <code>Window.localStorage</code> dans le code de l'extension pour stocker ses données. Firefox effacera les données stockées via l'API localStorage par les extensions dans plusieurs scénarios où les utilisateurs effacent leur historique de navigation ou des données pour des raisons de confidentialité, alors que les données sauvées en utilisant l'API <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a></code> seront correctement conservées dans ces scénarios.</p>
 
-<div class="note">La zone de stockage n'est pas chiffrée et ne doit pas être utilisée pour stocker des informations confidentielles sur les utilisateurs.</div>
+<div class="note">
+  <p><strong>Note :</strong> La zone de stockage n'est pas chiffrée et ne doit pas être utilisée pour stocker des informations confidentielles sur les utilisateurs.</p>
+</div>
 
 <h2 id="Types">Types</h2>
 
@@ -68,7 +70,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 
 <p>{{WebExtExamples("h2")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> dans le code de Chromium.</p>
 

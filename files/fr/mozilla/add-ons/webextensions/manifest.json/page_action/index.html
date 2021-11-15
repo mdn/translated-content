@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
 ---
 <div>{{AddonSidebar}}</div>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row" style="width: 30%;">Type</th>
@@ -22,7 +22,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
   <tr>
    <th scope="row">Exemple</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "page_action": {
   "browser_style": true,
   "default_icon": {
@@ -53,7 +53,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
 
 <p>La clé <code>page_action</code> est un objet qui peut avoir l'une des trois propriétés, toutes optionnelles:</p>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Name</th>
@@ -85,7 +85,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
 
     <p>Il est recommandé de fournir deux icônes ici, une 19x19 pixels et une 38x38 pixels, et de les spécifier dans un objet avec les noms de propriété "19" et "38", comme ceci:</p>
 
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
     "default_icon": {
       "19": "geo-19.png",
       "38": "geo-38.png"
@@ -95,7 +95,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
 
     <p>Vous pouvez simplement fournir une chaîne ici :</p>
 
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "default_icon": "geo.png"</pre>
 
     <p>Si vous faites cela, l'icône sera mise à l'échelle pour correspondre à la barre d'outils et peut sembler floue.</p>
@@ -107,7 +107,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
    <td>
     <p>Le chemin d'accès à un fichier HTML contenant la spécification de la fenêtre contextuelle.</p>
 
-    <p>Le fichier HTML peut inclure des fichiers CSS et JavaScript utilisant des éléments <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> et <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code>, tout comme une page Web normale. Cependant, n'utilisez pas <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> avec du code intégré, car vous obtiendrez une erreur de politique de violation de contenu. Au lieu de cela, <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> doit utiliser l'attribut <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">src</a></code> pour charger un fichier script séparé.</p>
+    <p>Le fichier HTML peut inclure des fichiers CSS et JavaScript utilisant des éléments <code><a href="/fr/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> et <code><a href="/fr/docs/Web/HTML/Element/script">&lt;script&gt;</a></code>, tout comme une page Web normale. Cependant, n'utilisez pas <code><a href="/fr/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> avec du code intégré, car vous obtiendrez une erreur de politique de violation de contenu. Au lieu de cela, <code><a href="/fr/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> doit utiliser l'attribut <code><a href="/fr/docs/Web/HTML/Element/script">src</a></code> pour charger un fichier script séparé.</p>
 
     <p>Contrairement à une page Web normale, JavaScript en cours d'exécution dans la fenêtre contextuelle peut accéder à toutes les <a href="/fr/Add-ons/WebExtensions/API">APIs WebExtension</a> (à condition, bien sûr, que l'extension ait les <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> appropriées).</p>
 
@@ -163,7 +163,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: json no-line-numbers">"page_action": {
+<pre class="brush: json">"page_action": {
   "default_icon": {
     "19": "button/geo-19.png",
     "38": "button/geo-38.png"
@@ -172,9 +172,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
 
 <p>Une action de page avec juste une icône spécifiée en 2 tailles différentes. Les scripts d'arrière-plan de l'extension peuvent recevoir des événements de clic lorsque l'utilisateur clique sur l'icône en utilisant un code comme celui-ci :</p>
 
-<pre class="brush: js no-line-numbers"> browser.pageAction.onClicked.addListener(handleClick);</pre>
+<pre class="brush: js"> browser.pageAction.onClicked.addListener(handleClick);</pre>
 
-<pre class="brush: json no-line-numbers">"page_action": {
+<pre class="brush: json">"page_action": {
   "default_icon": {
     "19": "button/geo-19.png",
     "38": "button/geo-38.png"

@@ -21,10 +21,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 
 <p>Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>active</code></dt>
- <dd><code>boolean</code>. Si l'onglet est actif dans sa fenêtre. Ceci peut être vrai même si la fenêtre de l'onglet n'est pas actuellement focalisée.</dd>
- <dd>L'onglet actif est généralement l'onglet sélectionné. Cependant, sur Firefox pour Android, les popups d'extension s'ouvrent dans un nouvel onglet. Lorsque cet onglet popup est sélectionné, l'onglet actif sera plutôt celui dans lequel le popup s'est ouvert.</dd>
+ <dd><p><code>boolean</code>. Si l'onglet est actif dans sa fenêtre. Ceci peut être vrai même si la fenêtre de l'onglet n'est pas actuellement focalisée.</p>
+ <p>L'onglet actif est généralement l'onglet sélectionné. Cependant, sur Firefox pour Android, les popups d'extension s'ouvrent dans un nouvel onglet. Lorsque cet onglet popup est sélectionné, l'onglet actif sera plutôt celui dans lequel le popup s'est ouvert.</p></dd>
  <dt><code>attention</code> {{optional_inline}}</dt>
  <dd><code>boolean</code>. Indique si l'onglet attire l'attention. Par exemple, lorsque l'onglet affiche un dialogue modal, <code>attention</code> sera à <code>true</code>.</dd>
  <dt><code>audible</code> {{optional_inline}}</dt>
@@ -42,8 +42,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
  <dt><code>hidden</code></dt>
  <dd><code>boolean</code>. Si l'onglet est caché.</dd>
  <dt><code>highlighted</code></dt>
- <dd><code>boolean</code>. Si l'onglet est en surbrillance, c'est-à-dire une partie de la sélection de l'onglet en cours. Un onglet actif est toujours mis en surbrillance, mais certains navigateurs peuvent permettre de mettre en surbrillance des onglets supplémentaires, par exemple en cliquant dessus tout en maintenant les touches <kbd>Ctrl</kbd>, <kbd>Shift</kbd> ou <kbd>⌘ Command</kbd> .</dd>
- <dd>Firefox pour Android ne prend pas en charge la mise en surbrillance de plusieurs onglets, et le bureau Firefox nécessite la préférence  <code>browser.tabs.multiselect</code> (activé par défaut).</dd>
+ <dd><p><code>boolean</code>. Si l'onglet est en surbrillance, c'est-à-dire une partie de la sélection de l'onglet en cours. Un onglet actif est toujours mis en surbrillance, mais certains navigateurs peuvent permettre de mettre en surbrillance des onglets supplémentaires, par exemple en cliquant dessus tout en maintenant les touches <kbd>Ctrl</kbd>, <kbd>Shift</kbd> ou <kbd>⌘ Command</kbd> .</p>
+ <p>Firefox pour Android ne prend pas en charge la mise en surbrillance de plusieurs onglets, et le bureau Firefox nécessite la préférence  <code>browser.tabs.multiselect</code> (activé par défaut).</p></dd>
  <dt><code>id</code> {{optional_inline}}</dt>
  <dd><code>integer</code>. L'ID de l'onglet. Les ID d'onglet sont uniques dans une session de navigateur. L'ID d'onglet peut également être défini sur  {{WebExtAPIRef('tabs.TAB_ID_NONE')}} pour les fenêtres de navigateur qui n'hébergent pas d'onglets de contenu (par exemple, les fenêtres devtools).</dd>
  <dt><code>incognito</code></dt>
@@ -55,7 +55,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
  <dt><code>isInReaderMode</code></dt>
  <dd><code>boolean</code>. Vrai si l'onglet en cours de <a href="/fr/Add-ons/WebExtensions/API/tabs/toggleReaderMode">rendu en mode lecteur</a>, sinon faux.</dd>
  <dt><code>lastAccessed</code></dt>
- <dd><code>double</code>. Heure à laquelle l'onglet a été accédé pour la dernière fois, en <a class="external external-icon" href="https://en.wikipedia.org/wiki/Unix_time">millisecondes depuis l'époque</a>.</dd>
+ <dd><code>double</code>. Heure à laquelle l'onglet a été accédé pour la dernière fois, en <a href="https://en.wikipedia.org/wiki/Unix_time">millisecondes depuis l'époque</a>.</dd>
  <dt><code>mutedInfo</code> {{optional_inline}}</dt>
  <dd>{{WebExtAPIRef('tabs.MutedInfo')}}. L'état en sourdine actuel pour l'onglet et la raison du dernier changement d'état.</dd>
  <dt><code>openerTabId</code> {{optional_inline}}</dt>
@@ -86,7 +86,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

@@ -7,7 +7,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
 ---
 <div>{{AddonSidebar}}</div>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row" style="width: 30%;">Type</th>
@@ -20,7 +20,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
   <tr>
    <th scope="row">Exemple</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "sidebar_action": {
   "default_icon": {
     "16": "button/geo-16.png",
@@ -43,7 +43,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
 
 <p>La clé <code>sidebar_action</code> est un objet qui peut avoir l'une des propriétés listées ci-dessous. La seule propriété obligatoire est <code>default_panel</code>.</p>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Nom</th>
@@ -53,16 +53,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
  </thead>
  <tbody>
   <tr>
-   <td><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">browser_style</a></code></td>
+   <td><code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">browser_style</a></code></td>
    <td><code>Booléen</code></td>
    <td>
     <p>Facultatif, par défaut : <code>true</code> .</p>
 
     <p>Utilisez cette option pour inclure une feuille de style dans votre fenêtre contextuelle qui permettra la correspondance avec l'interface utilisateur du navigateur et les autres extensions qui utilisent la propriété <code>browser_style</code>.</p>
 
-    <p>Dans Firefox, la feuille de style peut être vue sur  chrome://browser/content/extension.css, ou chrome://browser/content/extension-mac.css sur OS X. Lors de la définition des dimensions, savez que cette feiulle de style est actuellement définit <code>box-sizing: border-box</code> (see <a href="https://developer.mozilla.org/docs/Web/CSS/box-sizing">box-sizing</a>).</p>
+    <p>Dans Firefox, la feuille de style peut être vue sur  chrome://browser/content/extension.css, ou chrome://browser/content/extension-mac.css sur OS X. Lors de la définition des dimensions, savez que cette feiulle de style est actuellement définit <code>box-sizing: border-box</code> (see <a href="/docs/Web/CSS/box-sizing">box-sizing</a>).</p>
 
-    <p>Le <a class="external external-icon" href="https://firefoxux.github.io/StyleGuide/#/controls">guide de style de Firefox</a> décrit les classes que vous pouvez appliquer aux éléments de la barre latérale afin d'obtenir des styles particuliers.</p>
+    <p>Le <a href="https://firefoxux.github.io/StyleGuide/#/controls">guide de style de Firefox</a> décrit les classes que vous pouvez appliquer aux éléments de la barre latérale afin d'obtenir des styles particuliers.</p>
    </td>
   </tr>
   <tr>
@@ -75,12 +75,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
 
     <p>Vous pouvez spécifier un seul fichier d'icône en fournissant une chaîne ici :</p>
 
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "default_icon": "path/to/geo.svg"</pre>
 
     <p>Pour spécifier plusieurs icônes dans différentes tailles, spécifiez ici un objet. Le nom de chaque propriété est la hauteur de l'icône en pixels convertie en un nombre entier. La valeur est l'URL. Par exemple:</p>
 
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
     "default_icon": {
       "16": "path/to/geo-16.png",
       "32": "path/to/geo-32.png"
@@ -103,7 +103,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
 
     <p>Cette propriété est obligatoire.</p>
 
-    <p>C'est une <a href="https://developer.mozilla.org/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">propriété localisable</a>.</p>
+    <p>C'est une <a href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">propriété localisable</a>.</p>
    </td>
   </tr>
   <tr>
@@ -127,7 +127,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: json no-line-numbers">"sidebar_action": {
+<pre class="brush: json">"sidebar_action": {
   "default_icon": "sidebar.svg",
   "default_title": "Ma barre latérale !",
   "default_panel": "sidebar.html",
@@ -145,7 +145,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code></li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code></li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">Browser styles</a></li>
+ <li><code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code></li>
+ <li><code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code></li>
+ <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">Browser styles</a></li>
 </ul>

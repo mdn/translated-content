@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setTitle
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.browserAction.setTitle(
+<pre class="brush: js">browser.browserAction.setTitle(
   details // object
 )
 </pre>
@@ -28,8 +28,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setTitle
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. Le nouveau titre et éventuellement l'ID de l'onglet ou de la fenêtre à cibler.
- <dl class="reference-values">
+ <dd><p><code>object</code>. Le nouveau titre et éventuellement l'ID de l'onglet ou de la fenêtre à cibler.</p>
+ <dl>
   <dt><code>title</code></dt>
   <dd>
   <p><code>string</code> ou <code>null</code>. La chaîne de caractères que l'action du navigateur doit afficher lorsqu'il y a une souris.</p>
@@ -87,7 +87,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
 

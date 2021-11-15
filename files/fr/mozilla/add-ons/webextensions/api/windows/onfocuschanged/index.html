@@ -18,12 +18,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
 <p>Attiré lorsque la fenêtre actuellement change. Sera {{WebExtAPIRef('windows.WINDOW_ID_NONE')}} si toutes les fenêtres du navigateur ont perdu le focus.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Sur certains gestionnaires de fenêtres Linux, WINDOW_ID_NONE sera toujours envoyé immédiatement avant un passage d'une fenêtre de navigateur à l'autre.</p>
+<p><strong>Note :</strong> Sur certains gestionnaires de fenêtres Linux, WINDOW_ID_NONE sera toujours envoyé immédiatement avant un passage d'une fenêtre de navigateur à l'autre.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.windows.onFocusChanged.addListener(listener)
+<pre class="brush: js">browser.windows.onFocusChanged.addListener(listener)
 browser.windows.onFocusChanged.removeListener(listener)
 browser.windows.onFocusChanged.hasListener(listener)
 </pre>
@@ -48,7 +48,7 @@ browser.windows.onFocusChanged.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>windowId</code></dt>
   <dd><code>integer</code>. ID de la fenêtre nouvellement localisée.</dd>
  </dl>
@@ -69,7 +69,7 @@ browser.windows.onFocusChanged.hasListener(listener)
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
 

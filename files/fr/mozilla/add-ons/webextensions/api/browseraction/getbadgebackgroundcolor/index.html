@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeBackgrou
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.browserAction.getBadgeBackgroundColor (
+<pre class="brush: js">browser.browserAction.getBadgeBackgroundColor (
   details // object
 )
 </pre>
@@ -30,17 +30,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeBackgrou
 
 <p><code>details</code></p>
 
-<dl>
- <dd><code>object</code>.
-
- <dl class="reference-values">
+<p><code>object</code></p>
+ <dl>
   <dt><code>tabId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. Specifie l'onglet pour obtenir la couleur d'arrière-plan du badge.</dd>
   <dt><code>windowId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. Spécifie la fenêtre à partir de laquelle obtenir la couleur de fond du badge.</dd>
  </dl>
- </dd>
-</dl>
 
 <ul>
  <li>Si <code>windowId</code> et <code>tabId</code> sont tous les deux fournis, la fonction échoue..</li>
@@ -71,7 +67,7 @@ browser.browserAction.getBadgeBackgroundColor({}).then(onGot, onFailure);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
 

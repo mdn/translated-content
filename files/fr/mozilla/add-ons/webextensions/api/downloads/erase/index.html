@@ -23,12 +23,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/erase
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
 
 <div class="note">
-<p><strong>Remarque </strong>: Si vous souhaitez supprimer un fichier téléchargé du disque et l'effacer de l'historique, vous devez appeler {{WebExtAPIRef("downloads.removeFile()")}} before you call <code>erase()</code>. Si vous l'essayez dans l'autre sens, vous obtiendrez une erreur lors de l'appel de {{WebExtAPIRef("downloads.removeFile()")}}, car il n'existe plus selon le navigateur.</p>
+<p><strong>Note :</strong> Si vous souhaitez supprimer un fichier téléchargé du disque et l'effacer de l'historique, vous devez appeler {{WebExtAPIRef("downloads.removeFile()")}} before you call <code>erase()</code>. Si vous l'essayez dans l'autre sens, vous obtiendrez une erreur lors de l'appel de {{WebExtAPIRef("downloads.removeFile()")}}, car il n'existe plus selon le navigateur.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var erasing = browser.downloads.erase(
+<pre class="brush: js">var erasing = browser.downloads.erase(
   query                    // DownloadQuery
 )
 </pre>
@@ -82,7 +82,7 @@ erasing.then(onErased, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a>.</p>
 

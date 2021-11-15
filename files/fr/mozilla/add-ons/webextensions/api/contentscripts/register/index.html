@@ -20,7 +20,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var registering = browser.contentScripts.register(
+<pre class="brush: js">var registering = browser.contentScripts.register(
   contentScriptOptions       // object
 )
 </pre>
@@ -39,7 +39,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 
  <p>L'objet <code>RegisteredContentScriptOptions</code> a les propriétés suivantes :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>allFrames</code>{{optional_inline}}</dt>
   <dd>Identique à <code>all_frames</code> dans la clé <code><a href="/fr/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>.</dd>
   <dt><code>css</code>{{optional_inline}}</dt>
@@ -93,7 +93,7 @@ var registered = register(defaultHosts, defaultCode);</pre>
 
 <p>Ce code enregistre le fichier JS à l'adresse content_scripts/example.js:</p>
 
-<pre class="brush: js" id="ct-3">const scriptObj = await browser.contentScripts.register({
+<pre class="brush: js">const scriptObj = await browser.contentScripts.register({
   "js": [{file: "/content_scripts/example.js"}],
   "matches": ["&lt;all_urls&gt;"],
   "allFrames": true,

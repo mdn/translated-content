@@ -24,12 +24,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/create
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
 
 <div class="warning">
-<p>Si vous appelez <code>notifications.create()</code> plus d'une fois de suite, Firefox peut ne pas afficher de notification pour tout.</p>
+<p><strong>Attention :</strong> Si vous appelez <code>notifications.create()</code> plus d'une fois de suite, Firefox peut ne pas afficher de notification pour tout.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var creating = browser.notifications.create(
+<pre class="brush: js">var creating = browser.notifications.create(
   id,                   // optional string
   options               // NotificationOptions
 )
@@ -139,7 +139,7 @@ browser.notifications.onButtonClicked.addListener((id, index) =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a>.</p>
 

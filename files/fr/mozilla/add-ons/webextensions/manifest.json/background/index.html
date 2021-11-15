@@ -10,7 +10,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/arriere-plan
 ---
 <div>{{AddonSidebar}}</div>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row" style="width: 30%;">Type</th>
@@ -23,7 +23,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/arriere-plan
   <tr>
    <th scope="row">Exemple</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "background": {
   "scripts": ["background.js"]
 }</pre>
@@ -32,7 +32,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/arriere-plan
  </tbody>
 </table>
 
-<p>Utilisez la clé <font face="Consolas">background</font> pour inclure un ou plusieurs scripts d'arrière-plan, et éventuellement une page d'arrière-plan dans votre extension.</p>
+<p>Utilisez la clé background pour inclure un ou plusieurs scripts d'arrière-plan, et éventuellement une page d'arrière-plan dans votre extension.</p>
 
 <p>Les scripts d'arrière-plan sont l'endroit pour placer le code qui doit maintenir l'état à long terme, ou effectuer des opérations à long terme, indépendamment de la durée de vie de toutes les pages Web ou les fenêtres du navigateur.</p>
 
@@ -40,7 +40,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/arriere-plan
 
 <p>Voir la section "Pages arrière-plan" dans <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages">l'anatomie d'une WebExtension</a> pour plus de détails.</p>
 
-<p>La clé <font face="Consolas">background</font> est un objet qui peut avoir l'une des deux propriétés suivantes, toutes deux facultatives :</p>
+<p>La clé background est un objet qui peut avoir l'une des deux propriétés suivantes, toutes deux facultatives :</p>
 
 <table class="standard-table">
  <tbody>
@@ -60,7 +60,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/arriere-plan
    <td><code>"page"</code></td>
    <td>
     <div class="note">
-    <p><strong>Note </strong>: Si vous souhaitez récupérer un script à partir d'un emplacement distant avec la balise &lt;script&gt; (par exemple : &lt;script src = "https://code.jquery.com/jquery-1.7.1.min.js"&gt; ), vous devrez également modifier la clé <code><a href="https://developer.mozilla.org/fr/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></code> dans le fichier manifest.json de votre extension.</p>
+    <p><strong>Note :</strong> Si vous souhaitez récupérer un script à partir d'un emplacement distant avec la balise &lt;script&gt; (par exemple : &lt;script src = "https://code.jquery.com/jquery-1.7.1.min.js"&gt; ), vous devrez également modifier la clé <code><a href="/fr/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></code> dans le fichier manifest.json de votre extension.</p>
     </div>
 
     <p>Si vous spécifiez des "scripts", une page vide sera créée pour que vos scripts s'exécutent.</p>
@@ -73,9 +73,9 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/arriere-plan
  </tbody>
 </table>
 
-<h2 class="brush: json no-line-numbers" id="Exemple">Exemple</h2>
+<h2>Exemple</h2>
 
-<pre class="brush: json no-line-numbers"> "background": {
+<pre class="brush: json"> "background": {
     "scripts": ["jquery.js", "my-background.js"]
   }</pre>
 
@@ -85,7 +85,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/arriere-plan
     "page": "my-background.html"
   }</pre>
 
-<p><span class="short_text" id="result_box" lang="fr"><span>Chargez une page d'arrière-plan personnalisée.</span></span></p>
+<p>Chargez une page d'arrière-plan personnalisée.</p>
 
 <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
 

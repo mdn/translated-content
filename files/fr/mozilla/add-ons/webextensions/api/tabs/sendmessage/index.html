@@ -24,15 +24,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
 
 <p>Il s'agit d'une fonction asynchrone qui renvoit un objet <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
 
-<div class="blockIndicator note">
-<p>Vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">approche basée sur la connexion pour échanger des messages</a>.</p>
+<div class="note">
+<p><strong>Note :</strong> Vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">approche basée sur la connexion pour échanger des messages</a>.</p>
 </div>
 
 
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var sending = browser.tabs.sendMessage(
+<pre class="brush: js">var sending = browser.tabs.sendMessage(
   tabId,                   // integer
   message,                 // any
   options                  // optional object
@@ -47,9 +47,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
  <dt><code>message</code></dt>
  <dd><code>any</code>. Un objet qui peut être sérialisé en JSON.</dd>
  <dt><code>options</code>{{optional_inline}}</dt>
- <dd><code>object</code>.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>.</p>
+ <dl>
   <dt><code>frameId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>.  Envoie le message à un cadre (<em>iframe</em>) spécifique identifiée par <code>frameId</code> au lieu de tous les cadres de l'onglet. Le fait que le script de contenu soit exécuté dans tous les cadres dépend du paramètre <code>all_frames</code> dans la section  <a href="/fr/Add-ons/WebExtensions/manifest.json/content_scripts"><code>content_scripts</code></a> de manifest.json.</dd>
  </dl>
@@ -107,7 +106,7 @@ browser.runtime.onMessage.addListener(request =&gt; {
 
 <p>{{Compat("webextensions.api.tabs.sendMessage")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

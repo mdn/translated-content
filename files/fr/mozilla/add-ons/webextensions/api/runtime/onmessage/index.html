@@ -13,7 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 ---
-<nav>{{AddonSidebar()}}</nav>
+<div>{{AddonSidebar()}}</div>
 
 <p>Utilisez cet événement pour écouter les messages d’une autre partie de votre extension.</p>
 
@@ -28,8 +28,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 
 <p>Pour envoyer un message reçu par l'écouteur <code>onMessage</code>, utilisez {{WebExtAPIRef("runtime.sendMessage()")}} ou (pour envoyer un message à un script de contenu) {{WebExtAPIRef("tabs.sendMessage()")}}.</p>
 
-<div class="blockIndicator note">
-<p>Évitez de créer plusieurs écouteurs <code>onMessage</code> pour le même type de message, car l'ordre de déclenchement des différents écouteurs ne sera pas garanti.</p>
+<div class="note">
+<p><strong>Note :</strong> Évitez de créer plusieurs écouteurs <code>onMessage</code> pour le même type de message, car l'ordre de déclenchement des différents écouteurs ne sera pas garanti.</p>
 
 <p>Lorsque vous voulez garantir la livraison d'un message à une terminaison spécifique, utilisez l'<a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#les_messages_en_flux_continu">approche basée sur la connexion pour échanger des messages</a>.</p>
 </div>
@@ -51,13 +51,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 </ul>
 
 <div class="warning">
-<p>Retourner une promesse (<a href="fr/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>) est désormais la méthode à privilégier car <code>sendResponse()</code> <a class="external" href="https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219">sera retirée de la spécification W3C</a>.</p>
+<p><strong>Attention :</strong> Retourner une promesse (<a href="fr/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>) est désormais la méthode à privilégier car <code>sendResponse()</code> <a href="https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219">sera retirée de la spécification W3C</a>.</p>
 
-<p>La bibliothèque populaire <a class="external" href="https://github.com/mozilla/webextension-polyfill">webextension-polyfill</a> a déjà supprimé cette fonction de son implémentation.</p>
+<p>La bibliothèque populaire <a href="https://github.com/mozilla/webextension-polyfill">webextension-polyfill</a> a déjà supprimé cette fonction de son implémentation.</p>
 </div>
 
-<div class="blockIndicator note">
-<p>Vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging">approche basée sur la connexion pour échanger des messages</a>.</p>
+<div class="note">
+<p><strong>Note :</strong> Vous pouvez également utiliser une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging">approche basée sur la connexion pour échanger des messages</a>.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
@@ -87,17 +87,17 @@ browser.runtime.onMessage.hasListener(<var>listener</var>)
  <dd>
  <p>Une fonction d’écoute qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><em><code>message</code></em></dt>
   <dd>Un objet qui est le message lui-même. C’est un objet sérialisable (voir <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">l'algorithme de clonage de données</a>).</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><em><code>sender</code></em></dt>
   <dd>Un objet {{WebExtAPIRef("runtime.MessageSender")}} représentant l’expéditeur du message.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>s<em>endResponse</em></code></dt>
   <dd>
   <p>Une fonction à appeler, au plus une fois, pour envoyer une réponse au <code><var>message</var></code>. La fonction prend un seul argument, qui peut être n'importe quel objet sérialisable (voir <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">l'algorithme de clonage de données</a>). Cet argument est renvoyé à l'expéditeur du message.</p>
@@ -117,8 +117,8 @@ browser.runtime.onMessage.hasListener(<var>listener</var>)
 
  <p>La fonction <code><var>listener</var></code> peut renvoyer un booléen ou une {{jsxref("Promise")}}.</p>
 
- <div class="blockIndicator note">
- <p><strong>Important:</strong> N'appelez pas <code>addListener()</code> en utilisant une fonction <code>async</code> :</p>
+ <div class="note">
+ <p><strong>Note :</strong> N'appelez pas <code>addListener()</code> en utilisant une fonction <code>async</code> :</p>
 
  <pre class="brush: js example-bad">// ne faites pas ça
 browser.runtime.onMessage.addListener(
@@ -165,7 +165,7 @@ function notifyExtension(e) {
   browser.runtime.sendMessage({"url": e.target.href});
 }</pre>
 
-<p>Le script d’arrière-plan écoute ces messages et affiche une notification à l’aide de l’API <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code>.</p>
+<p>Le script d’arrière-plan écoute ces messages et affiche une notification à l’aide de l’API <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code>.</p>
 
 <pre class="brush: js">// background-script.js
 
@@ -287,7 +287,7 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements </strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l’API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
 

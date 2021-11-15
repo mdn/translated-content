@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/update
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var updating = browser.windows.update(
+<pre class="brush: js">var updating = browser.windows.update(
   windowId,              // integer
   updateInfo             // object
 )
@@ -33,9 +33,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/update
  <dt><code>windowId</code></dt>
  <dd><code>integer</code>. ID de la fenêtre à mettre à jour.</dd>
  <dt><code>updateInfo</code></dt>
- <dd><code>object</code>. Objet contenant les propriétés de mise à jour.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. Objet contenant les propriétés de mise à jour.</p>
+ <dl>
   <dt><code>drawAttention</code> {{optional_inline}}</dt>
   <dd><code>boolean</code>. si cela est vrai, la fenêtre doit être affichée de manière à attirer l'attention de l'utilisateur sur la fenêtre, sans changer la fenêtre ciblée. L'effet dure jusqu'à ce que l'utilisateur change de focus sur la fenêtre. Cette option n'a aucun effet si la fenêtre a déjà un focus. Si cela est faux pour annuler la requête précéndete <code>drawAttention</code>.</dd>
   <dt><code>focused</code> {{optional_inline}}</dt>
@@ -89,7 +88,7 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API de Chromnium <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a>. Cette documentation provient de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> dans le code de Chromium.</p>
 

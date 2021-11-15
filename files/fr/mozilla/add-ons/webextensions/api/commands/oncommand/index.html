@@ -17,13 +17,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
 
 <div>Lancer quand une commande est exécutée à l'aide de son raccourci clavier associé.</div>
 
-<div></div>
-
 <div>L'écouteur reçoit  le nom de la commande. Cela correspond au nom donnée à la commande dans une  <a href="/fr/Add-ons/WebExtensions/manifest.json/commands">entrée manifest.json</a>.</div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.commands.onCommand.addListener(listener)
+<pre class="brush: js">browser.commands.onCommand.addListener(listener)
 browser.commands.onCommand.removeListener(listener)
 browser.commands.onCommand.hasListener(listener)
 </pre>
@@ -48,7 +46,7 @@ browser.commands.onCommand.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsqu'un utilisateur entre dans le raccourci de la commande. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>name</code></dt>
   <dd><code>string</code>. Nom de la commande. Cela correspond au nom donné à la commande dans son <a href="/fr/Add-ons/WebExtensions/manifest.json/commands">entrée manifest.json</a>.</dd>
  </dl>
@@ -63,34 +61,26 @@ browser.commands.onCommand.hasListener(listener)
 
 <div>Etant donnée une entrée manifest.json comme ceci :</div>
 
-<div></div>
-
-<div>
-<pre class="brush: json line-numbers language-json"><code class="language-json"><span class="key token">"commands":</span> <span class="punctuation token">{</span>
-  <span class="key token">"toggle-feature":</span> <span class="punctuation token">{</span>
-    <span class="key token">"suggested_key":</span> <span class="punctuation token">{</span>
-      <span class="key token">"default":</span> <span class="string token">"Ctrl+Shift+Y"</span>
-    <span class="punctuation token">}</span><span class="punctuation token">,</span>
-    <span class="key token">"description":</span> <span class="string token">"Send a 'toggle-feature' event"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
-</div>
+<pre class="brush: json">"commands": {
+  "toggle-feature": {
+    "suggested_key": {
+      "default": "Ctrl+Shift+Y"
+    },
+    "description": "Send a 'toggle-feature' event"
+  }
+}</pre>
 
 <div>Vous pouvez écouter cette commande particulière comme ceci :</div>
 
-<div></div>
-
-<div>
-<pre class="brush: js line-numbers language-js"><code class="language-js">browser<span class="punctuation token">.</span>commands<span class="punctuation token">.</span>onCommand<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>command<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>command <span class="operator token">==</span> <span class="string token">"toggle-feature"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"toggling the feature!"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
-</div>
+<pre class="brush: js">browser.commands.onCommand.addListener(function(command) {
+  if (command == "toggle-feature") {
+    console.log("toggling the feature!");
+  }
+});</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/commands"><code>chrome.commands</code></a>.</p>
 </div>

@@ -16,14 +16,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension/onRequestExternal
 <div>{{AddonSidebar()}}</div>
 
 <div class="warning">
-<p><strong>Not implémenté : </strong>Ceci n'est pas implémenté dans Firefox car il est obsolète depuis Chrome 33. Veuillez utiliser <a href="/fr/Add-ons/WebExtensions/API/runtime/onMessageExternal">runtime.onMessageExternal</a> à la place.</p>
+<p><strong>Attention :</strong> Ceci n'est pas implémenté dans Firefox car il est obsolète depuis Chrome 33. Veuillez utiliser <a href="/fr/Add-ons/WebExtensions/API/runtime/onMessageExternal">runtime.onMessageExternal</a> à la place.</p>
 </div>
 
 <p>Lancé lorsqu'une requête est envoyée depuis une autre extension.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">chrome.extension.onRequestExternal.addListener(function(
+<pre class="brush: js">chrome.extension.onRequestExternal.addListener(function(
   request,         // optional any
   sender,          // runtime.MessageSender
   function() {...} // function
@@ -52,17 +52,17 @@ chrome.extension.onRequestExternal.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>request</code></dt>
   <dd><code>any</code>. La requête envoyée par le script appelant.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>sender</code></dt>
   <dd>{{WebExtAPIRef('runtime.MessageSender')}}.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>sendResponse</code></dt>
   <dd><code>function</code>. Fonction à appeler lorsque vous avez une réponse. L'argument doit être n'importe quel objet JSON-ifiable, ou undefined s'il n'y a pas de réponse.</dd>
  </dl>
@@ -75,7 +75,7 @@ chrome.extension.onRequestExternal.hasListener(listener)
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/extension"><code>chrome.extension</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> dans le code Chromium.</p>
 

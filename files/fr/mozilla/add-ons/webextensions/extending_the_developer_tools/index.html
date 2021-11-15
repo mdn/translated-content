@@ -14,10 +14,10 @@ original_slug: Mozilla/Add-ons/WebExtensions/extension_des_outils_de_developpeme
 <div>{{AddonSidebar}}</div>
 
 <div class="note">
-<p>Cette page décrit les API  de devtools telles qu'elles existent dans Firefox 55. Bien que les API soient basées sur les  <a href="https://developer.chrome.com/extensions/devtools">API devtools de chrome</a>, il existe encore de nombreuses fonctionnalités qui ne sont pas encore implémentées dans Firefox et ne sont donc pas documentées ici. Pour voir quelles fonctionnalités sont actuellement manquantes, voir les <a href="/fr/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs">Limitations des APIs devtools</a>.</p>
+<p><strong>Note :</strong> Cette page décrit les API  de devtools telles qu'elles existent dans Firefox 55. Bien que les API soient basées sur les  <a href="https://developer.chrome.com/extensions/devtools">API devtools de chrome</a>, il existe encore de nombreuses fonctionnalités qui ne sont pas encore implémentées dans Firefox et ne sont donc pas documentées ici. Pour voir quelles fonctionnalités sont actuellement manquantes, voir les <a href="/fr/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs">Limitations des APIs devtools</a>.</p>
 </div>
 
-<p><span class="seoSummary">Vous pouvez utiliser les API WebExtensions pour étendre les outils de développement intégrés du navigateur.</span> Pour créer une extension devtools, incluez la clé "<a href="/fr/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a>" dans <a href="/fr/Add-ons/WebExtensions/manifest.json">manifest.json</a>:</p>
+<p>Vous pouvez utiliser les API WebExtensions pour étendre les outils de développement intégrés du navigateur. Pour créer une extension devtools, incluez la clé "<a href="/fr/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a>" dans <a href="/fr/Add-ons/WebExtensions/manifest.json">manifest.json</a>:</p>
 
 <pre class="brush: json">"devtools_page": "devtools/devtools-page.html"</pre>
 
@@ -89,7 +89,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/extension_des_outils_de_developpeme
 </ul>
 
 <div class="note">
-<p>Notez qu'une vue propre du DOM est une fonction de sécurité destinée à empêcher les pages hostiles de tromper WebExtensions en redéfinissant le comportement des fonctions DOM natives. Cela signifie que vous devez être très prudent en utilisant eval () et utiliser un script de contenu normal si vous le pouvez.</p>
+<p><strong>Note :</strong> Une vue propre du DOM est une fonction de sécurité destinée à empêcher les pages hostiles de tromper WebExtensions en redéfinissant le comportement des fonctions DOM natives. Cela signifie que vous devez être très prudent en utilisant eval () et utiliser un script de contenu normal si vous le pouvez.</p>
 </div>
 
 <p>Les scripts chargés à l'aide de <code>devtools.inspectedWindow.eval()</code> ne voient pas non plus de variables JavaScript définies par les scripts de contenu.</p>
@@ -121,7 +121,7 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 
 <p>Si vous avez besoin d'échanger des messages entre les scripts de contenu exécutés dans la fenêtre cible et un document de developpement, il est judicieux d'utiliser {{WebExtAPIRef("runtime.connect()")}} et {{WebExtAPIRef("runtime.onConnect")}} pour configurer une connexion entre la page d'arrière-plan et le document devtools. La page d'arrière-plan peut alors maintenir un mappage entre les ID de l'onglet et les objets {{WebExtAPIRef("runtime.Port")}}, et utilisez-le pour acheminer les messages entre les deux champs.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14923/devtools-content-scripts.png" style="display: block; height: 416px; margin-left: auto; margin-right: auto; width: 600px;"></p>
+<p><img alt="" src="devtools-content-scripts.png"></p>
 
 <h2 id="Limitations_des_API_des_devtools">Limitations des API des devtools</h2>
 

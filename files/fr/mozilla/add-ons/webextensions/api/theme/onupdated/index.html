@@ -23,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.theme.onUpdated.addListener(listener)
+<pre class="brush: js">browser.theme.onUpdated.addListener(listener)
 browser.theme.onUpdated.removeListener(listener)
 browser.theme.onUpdated.hasListener(listener)
 </pre>
@@ -48,12 +48,12 @@ browser.theme.onUpdated.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les paramètres suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>updateInfo</code></dt>
   <dd>
   <p><code>object</code>. Un objet contenant deux propriétés :</p>
 
-  <dl class="reference-values">
+  <dl>
    <dt><code>theme</code></dt>
    <dd><code>object</code>. Si l'événement a été déclenché parce qu'un thème fourni par une extension a été supprimé, il s'agira d'un objet vide. Si il a été déclenché parce qu'un thème fourni par une extension a été appliqué, ce sera un objet {{WebExtAPIRef("theme.Theme")}} représentant le thème qui a été appliqué.</dd>
    <dt><code>windowId</code>{{optional_inline}}</dt>

@@ -15,13 +15,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>Détecte la langue principale du contenu dans un onglet, en utilisant le <a class="external external-icon" href="https://github.com/CLD2Owners/cld2">détecteur de langue compact</a> (CLD).</p>
+<p>Détecte la langue principale du contenu dans un onglet, en utilisant le <a href="https://github.com/CLD2Owners/cld2">détecteur de langue compact</a> (CLD).</p>
 
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var detecting = browser.tabs.detectLanguage(
+<pre class="brush: js">var detecting = browser.tabs.detectLanguage(
   tabId,                  // optional integer
   callback                // optional function
 )
@@ -88,7 +88,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>{{Compat("webextensions.api.tabs.detectLanguage")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

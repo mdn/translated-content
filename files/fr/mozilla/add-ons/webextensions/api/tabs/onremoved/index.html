@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onRemoved
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.tabs.onRemoved.addListener(callback)
+<pre class="brush: js">browser.tabs.onRemoved.addListener(callback)
 browser.tabs.onRemoved.removeListener(listener)
 browser.tabs.onRemoved.hasListener(listener)
 </pre>
@@ -44,12 +44,12 @@ browser.tabs.onRemoved.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. ID de l'onglet qui s'est fermé.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>removeInfo</code></dt>
   <dd><a href="#removeInfo"><code>object</code></a>. L'ID de la fenêtre de l'onglet et un booléen indiquant si la fenêtre est également fermée.</dd>
  </dl>
@@ -60,7 +60,7 @@ browser.tabs.onRemoved.hasListener(listener)
 
 <h3 id="removeInfo">removeInfo</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>windowId</code></dt>
  <dd><code>integer</code>. La fenêtre dont l'onglet est fermé.</dd>
  <dt><code>isWindowClosing</code></dt>
@@ -81,14 +81,14 @@ browser.tabs.onRemoved.addListener(handleRemoved);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<dl class="reference-values">
+<dl>
 </dl>
 
 <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
 
 <p>{{Compat("webextensions.api.tabs.onRemoved")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

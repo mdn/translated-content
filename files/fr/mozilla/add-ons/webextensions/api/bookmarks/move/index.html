@@ -17,15 +17,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 
 <p>La méthode <strong><code>bookmarks.move()</code></strong> déplace le  {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à la destination spécifiée dans l'arborescence des signets. Cela vous permet de déplacer un signet vers un nouveau dossier et / ou une position dans le dossier.</p>
 
-<div class="blockIndicator warning">
-<p>Si votre extension tente de déplacer un signet dans le nœud racine de l’arborescence de signets, l’appel déclenche une erreur avec le message suivant: "<em>La racine du signet ne peut pas être modifiée</em>" et le déplacement ne sera pas terminé.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Si votre extension tente de déplacer un signet dans le nœud racine de l’arborescence de signets, l’appel déclenche une erreur avec le message suivant: "<em>La racine du signet ne peut pas être modifiée</em>" et le déplacement ne sera pas terminé.</p>
 </div>
 
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var movingBookmark = browser.bookmarks.move(
+<pre class="brush: js">var movingBookmark = browser.bookmarks.move(
   id,                    // string
   destination           // object
 )
@@ -37,9 +37,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
  <dt><code>id</code></dt>
  <dd>Un {{jsxref("string")}} contenant l'ID du signet ou du dossier à déplacer.</dd>
  <dt><code>destination</code></dt>
- <dd>Un {{jsxref("object")}} qui spécifie la destination du signet. Cet objet doit contenir un ou les deux champs suivants :</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p>Un {{jsxref("object")}} qui spécifie la destination du signet. Cet objet doit contenir un ou les deux champs suivants :</p>
+ 
+ <dl>
   <dt><code>parentId</code> {{optional_inline}}</dt>
   <dd>Un {{jsxref("string")}} qui spécifie l'ID du dossier de destination. Si cette valeur est omise, le signet est déplacé vers un nouvel emplacement dans son dossier actuel.</dd>
   <dt><code>index</code> {{optional_inline}}</dt>
@@ -50,7 +50,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 
 <h3 id="Valeur_retournée">Valeur retournée</h3>
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un seul objet <a href="/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode" title="An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders."><code>bookmarks.BookmarkTreeNode</code></a>  décrivant le noeud déplacé.Si le noeud correspondant au paramètre <code>id</code> ne peut pas être trouvé, la promesse est rejetée avec un message d'erreur.</p>
+<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un seul objet <a href="/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode"><code>bookmarks.BookmarkTreeNode</code></a>  décrivant le noeud déplacé.Si le noeud correspondant au paramètre <code>id</code> ne peut pas être trouvé, la promesse est rejetée avec un message d'erreur.</p>
 
 <h2 id="Exemples">Exemples</h2>
 
@@ -77,7 +77,7 @@ movingBookmark.then(onMoved, onRejected);</pre>
 
 <p>{{Compat("webextensions.api.bookmarks.move")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
 

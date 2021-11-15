@@ -23,11 +23,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
  <li><a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Web_accessible_resources">Web-accessible resources</a> : Rendez le contenu packagé accessible aux pages Web et aux scripts de contenu.</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13669/webextension-anatomy.png" style="display: block; height: 581px; margin-left: auto; margin-right: auto; width: 600px;"></p>
+<p><img alt="" src="webextension-anatomy.png"></p>
 
 <p>Voir la page référence <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> pour tous les détails.</p>
 
-<p>En plus de celles déjà listées dans le manifeste, une extension peut également inclure des <a dir="ltr" href="https://mdn.mozillademos.org/files/11553/browser-action.png">pages d'extensions</a> supplémentaires et des fichiers de support.</p>
+<p>En plus de celles déjà listées dans le manifeste, une extension peut également inclure des pages d'extensions supplémentaires et des fichiers de support.</p>
 
 <h2 id="Scripts_darrière-plan">Scripts d'arrière-plan</h2>
 
@@ -49,7 +49,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>Au lieu de spécifier des scripts d'arrière-plan, vous pouvez spécifier une page d'arrière-plan qui a l'avantage supplémentaire de supporter les modules ES6 :</p>
 
-<p style="margin-bottom: 0em;"><strong>manifest.json</strong></p>
+<p><strong>manifest.json</strong></p>
 
 <pre class="brush: json">// manifest.json
 
@@ -57,7 +57,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
   "page": "background-page.html"
 }</pre>
 
-<p style="margin-bottom: 0em;"><strong>background-page.html</strong></p>
+<p><strong>background-page.html</strong></p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -73,8 +73,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>Les scripts d'arrière-plan s'exécutent dans le contexte de pages spéciales appelées pages d'arrière-plan. Cela leur donne une <code><a href="/fr/docs/Web/API/Window">fenêtre</a></code> globale, ainsi que toutes les API DOM standard fournies par cet objet.</p>
 
-<div class="blockIndicator warning">
-<p> Dans Firefox, les pages d'arrière-plan ne supportent pas l'utilisation de <code><a href="/fr/docs/Web/API/Window/alert">alert()</a></code>, <code><a href="/fr/docs/Web/API/Window/confirm">confirm()</a></code>, ou <code><a href="/fr/docs/Web/API/Window/prompt">prompt()</a></code>.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Dans Firefox, les pages d'arrière-plan ne supportent pas l'utilisation de <code><a href="/fr/docs/Web/API/Window/alert">alert()</a></code>, <code><a href="/fr/docs/Web/API/Window/confirm">confirm()</a></code>, ou <code><a href="/fr/docs/Web/API/Window/prompt">prompt()</a></code>.</p>
 </div>
 
 <h4 id="APIs_des_WebExtensions">APIs des WebExtensions</h4>
@@ -121,14 +121,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>Les scripts de contenu sont des scripts fournis par les extensions qui s'exécutent dans le contexte d'une page Web ; cela diffère des scripts qui sont chargés par la page elle-même, y compris ceux qui sont fournis dans les éléments {{HTMLElement ("script")}} dans la page.</p>
 
-<p><span id="result_box" lang="fr"><span>Les scripts de contenu peuvent voir et manipuler le DOM de la page, tout comme les scripts normaux chargés par la page.</span></span></p>
+<p>Les scripts de contenu peuvent voir et manipuler le DOM de la page, tout comme les scripts normaux chargés par la page.</p>
 
 <p>Contrairement aux scripts de pages normales, ils peuvent :</p>
 
 <ul>
- <li><span id="result_box" lang="fr"><span>Effectuer des requêtes XHR entre domaines</span></span>.</li>
+ <li>Effectuer des requêtes XHR entre domaines.</li>
  <li>Utiliser un petit sous-ensemble de l'<a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API">APIs des WebExtensions</a>.</li>
- <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">Echanger des messages avec leurs scripts d'arrière-plan</a> <span lang="fr"><span>et peuvent ainsi accéder indirectement à toutes les API des WebExtensions.</span></span></li>
+ <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan">Echanger des messages avec leurs scripts d'arrière-plan</a> et peuvent ainsi accéder indirectement à toutes les API des WebExtensions.</li>
 </ul>
 
 <p>Les scripts de contenu ne peuvent pas directement accéder normalement aux scripts de page, mais peuvent échanger des messages avec eux à l'aide de l'API standard <code><a href="/fr-FR/docs/Web/API/Window/postMessage">window.postMessage()</a></code>.</p>

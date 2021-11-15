@@ -17,15 +17,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 
 <p><strong><code>bookmarks.update()</code></strong> met à jour le titre et / ou l'URL d'un signet ou le nom d'un dossier de signets.</p>
 
-<div class="blockIndicator warning">
-<p>Si votre extension tente de mettre à jour un signet dans le nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "La racine du signet ne peut pas être modifiée" et le signet ne sera pas mis à jour.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Si votre extension tente de mettre à jour un signet dans le nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "La racine du signet ne peut pas être modifiée" et le signet ne sera pas mis à jour.</p>
 </div>
 
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var updating = browser.bookmarks.update(
+<pre class="brush: js">var updating = browser.bookmarks.update(
   id,                    // string
   changes                // object
 )
@@ -37,9 +37,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
  <dt><code>id</code></dt>
  <dd>Un {{jsxref("string")}} spécifiant l'ID du dossier de signet ou de dossier de signets à mettre à jour.</dd>
  <dt><code>changes</code></dt>
- <dd>Un {{jsxref("object")}} spécifiant les changements à appliquer, avec une combinaison des champs suivants. Tous les éléments non spécifiés ne sont pas modifiés dans le signet ou le dossier référencé :</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p>Un {{jsxref("object")}} spécifiant les changements à appliquer, avec une combinaison des champs suivants. Tous les éléments non spécifiés ne sont pas modifiés dans le signet ou le dossier référencé :</p>
+ <dl>
   <dt><code>title</code> {{optional_inline}}</dt>
   <dd>Un {{jsxref("string")}} contenant le nouveau titre du signet, ou le nouveau nom du dossier si l'<code>id</code> fait référence à un dossier.</dd>
   <dt><code>url</code> {{optional_inline}}</dt>
@@ -50,7 +49,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 
 <h3 id="Valeur_retournée">Valeur retournée</h3>
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera satisfaite avec un seul objet <a href="/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode" title="An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders."><code>bookmarks.BookmarkTreeNode</code></a> représentant le signet mis à jour. Si l'élément de signet correspondant au paramètre <code>id</code> ne peut pas être trouvé, la promesse est rejetée.</p>
+<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera satisfaite avec un seul objet <a href="/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode"><code>bookmarks.BookmarkTreeNode</code></a> représentant le signet mis à jour. Si l'élément de signet correspondant au paramètre <code>id</code> ne peut pas être trouvé, la promesse est rejetée.</p>
 
 <h2 id="Exemples">Exemples</h2>
 
@@ -85,7 +84,7 @@ searching.then(updateFolders, onRejected);</pre>
 
 <p>{{Compat("webextensions.api.bookmarks.update")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
 

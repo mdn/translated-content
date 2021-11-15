@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.menus.overrideContext(
+<pre class="brush: js">browser.menus.overrideContext(
   contextOptions // object
 )</pre>
 
@@ -29,8 +29,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 
 <dl>
  <dt><code>contextOptions</code></dt>
- <dd><code>object</code>. Options sur la façon dont les menus contextuels seront remplacés.</dd>
- <dd>
+ <dd><p><code>object</code>. Options sur la façon dont les menus contextuels seront remplacés.</p>
  <dl>
   <dt><code>showDefaults</code> {{optional_inline}}</dt>
   <dd><code>boolean</code>. S'il faut également inclure les éléments de menu par défaut dans le menu.</dd>
@@ -40,7 +39,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
   <dd><code>string</code>. Requis lorsque le contexte est  <code>'bookmark'</code>. Nécessite la permission  'bookmark'.</dd>
   <dt><code>tabId </code>{{optional_inline}}</dt>
   <dd><code>integer</code>. Requis lorsque le contexte est <code>'tab'</code>. Nécessite la permission 'tabs'.</dd>
-  <dt></dt>
  </dl>
  </dd>
 </dl>

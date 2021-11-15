@@ -42,13 +42,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
  <dt><code>media</code></dt>
  <dd>Ressources chargées par un élément  {{HTMLElement("video")}} ou  {{HTMLElement("audio")}}.</dd>
  <dt><code>object</code></dt>
- <dd>Ressources chargées par un élément {{HTMLElement("object")}} ou {{HTMLElement("embed")}}.</dd>
- <dd>Les navigateurs qui n'ont pas de type <code>object_subrequest</code> dédié (voir compatibilité des navigateurs ci-dessous), étiquettent également les requêtes ultérieures envoyées par le plugin en tant <code>object</code>.</dd>
+ <dd><p>Ressources chargées par un élément {{HTMLElement("object")}} ou {{HTMLElement("embed")}}.</p>
+ <p>Les navigateurs qui n'ont pas de type <code>object_subrequest</code> dédié (voir compatibilité des navigateurs ci-dessous), étiquettent également les requêtes ultérieures envoyées par le plugin en tant <code>object</code>.</p></dd>
  <dt><code>object_subrequest</code></dt>
  <dd>Requêtes envoyées par plugins.</dd>
  <dt><code>ping</code></dt>
- <dd>Demandes envoyées à l'URL donnée dans l'attribut {{htmlattrxref("ping", "a")}} d'un hyperlien, lorsque l'hyperlien est suivi..</dd>
- <dd><span class="hidden"> </span>Les navigateurs qui n'ont pas de type de <code>balise</code> dédié (voir la compatibilité des navigateurs ci-dessous), étiquettent également les requêtes envoyées par l'API Beacon en tant que <code>ping</code>.</dd>
+ <dd><p>Demandes envoyées à l'URL donnée dans l'attribut {{htmlattrxref("ping", "a")}} d'un hyperlien, lorsque l'hyperlien est suivi.</p>
+ <p>Les navigateurs qui n'ont pas de type de <code>balise</code> dédié (voir la compatibilité des navigateurs ci-dessous), étiquettent également les requêtes envoyées par l'API Beacon en tant que <code>ping</code>.</p></dd>
  <dt><code>script</code></dt>
  <dd>Code chargé pour être exécuté par un élément {{HTMLElement("script")}} ou exécuté dans un <a href="/fr/docs/Web/API/Web_Workers_API">Worker</a>.</dd>
  <dt><code>speculative</code></dt>
@@ -79,7 +79,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> dans le code Chromium.</p>
 

@@ -17,13 +17,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 
 <p>Affiche l'action de la page pour un onglet donné. L'action de la page est affichée chaque fois que l'onglet donné est l'onglet actif.</p>
 
-<p><code>show()</code> remplace la correspondance de motifs, de sorte que l'action page sera affichée dans l'onglet spécifié même si <a href="https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/page_action"><code>show_matches</code></a> e correspond pas à l'URL ou si <a href="https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/page_action"><code>hide_matches</code></a> ne correspond pas.</p>
+<p><code>show()</code> remplace la correspondance de motifs, de sorte que l'action page sera affichée dans l'onglet spécifié même si <a href="/Add-ons/WebExtensions/manifest.json/page_action"><code>show_matches</code></a> e correspond pas à l'URL ou si <a href="/Add-ons/WebExtensions/manifest.json/page_action"><code>hide_matches</code></a> ne correspond pas.</p>
 
 <p>Notez que l'appel à <code>show()</code> n'a aucun effet sur un onglet sans contenu chargé.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.pageAction.show(
+<pre class="brush: js">browser.pageAction.show(
   tabId // integer
 )
 </pre>
@@ -61,7 +61,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/pageAction"><code>chrome.pageAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> dans le code de Chromium code.</p>
 

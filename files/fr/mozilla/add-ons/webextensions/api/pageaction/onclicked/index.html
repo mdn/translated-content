@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.pageAction.onClicked.addListener(listener)
+<pre class="brush: js">browser.pageAction.onClicked.addListener(listener)
 browser.pageAction.onClicked.removeListener(listener)
 browser.pageAction.onClicked.hasListener(listener)
 </pre>
@@ -46,7 +46,7 @@ browser.pageAction.onClicked.hasListener(listener)
  <dd>
  <p>Une fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>tab</code></dt>
   <dd>Un objet {{WebExtAPIRef('tabs.Tab')}} représentant l'onglet dont l'action de la page a été cliquée.</dd>
  </dl>
@@ -73,7 +73,7 @@ browser.pageAction.onClicked.addListener(function () {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/pageAction"><code>chrome.pageAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> dans le code de Chromium code.</p>
 

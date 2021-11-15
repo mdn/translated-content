@@ -27,7 +27,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">let gettingIsOpen = browser.sidebarAction.isOpen(
+<pre class="brush: js">let gettingIsOpen = browser.sidebarAction.isOpen(
   details // object
 )
 </pre>
@@ -36,21 +36,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. Un objet contenant éventuellement le <code>windowId</code> à vérifier.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. Un objet contenant éventuellement le <code>windowId</code> à vérifier.</p>
+ <dl>
   <dt><code>windowId</code> {{optional_inline}}</dt>
   <dd><code>integer</code>. ID d'une fenêtre de navigateur à vérifier. Si omis par défaut, il s'agit de  {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}, qui fait référence à la fenêtre du navigateur la plus haute.</dd>
  </dl>
  </dd>
 </dl>
 
-<dl>
- <dd>
- <dl class="reference-values">
- </dl>
- </dd>
-</dl>
+
 
 <h3 id="Valeur_retournée">Valeur retournée</h3>
 

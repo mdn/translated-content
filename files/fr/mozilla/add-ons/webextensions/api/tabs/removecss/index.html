@@ -34,7 +34,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS
  <dd><code>integer</code>. L'ID de l'onglet à partir duquel supprimer le CSS. Par défaut à l'onglet actif de la fenêtre en cours.</dd>
  <dt><code>details</code></dt>
  <dd>Un objet décrivant le CSS à retirer de la page. Il contient les propriétés suivantes :
- <dl class="reference-values">
+ <dl>
   <dt></dt>
   <dt><code>allFrames</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. si <code>true</code>, le code sera supprimé de toutes les images de la page en cours. si c'est <code>false</code>, le code est seulement retiré du cadre supérieur. Par défaut à <code>false</code>.</dd>
@@ -80,7 +80,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>{{Compat("webextensions.api.tabs.removeCSS")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l’API <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> de Chromium. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

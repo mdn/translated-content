@@ -23,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgrou
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.browserAction.setBadgeBackgroundColor(
+<pre class="brush: js">browser.browserAction.setBadgeBackgroundColor(
   details // object
 )
 </pre>
@@ -32,13 +32,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgrou
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>.
- <dl class="reference-values">
+ <dd><p><code>object</code></p>
+ <dl>
   <dt><code>color</code></dt>
-  <dd>La couleur, spécifiée comme l'un des suivants :</dd>
-  <dd>
+  <dd><p>La couleur, spécifiée comme l'un des suivants :</p>
   <ul>
-   <li>une chaîne : toute valeur CSS <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> , par exemple <code>"red"</code>, <code>"#FF0000"</code>, ou <code>"rgb(255,0,0)"</code>. Si la chaîne n'est pas une couleur valide, la promesse renvoyée sera rejetée et la couleur d'arrière-plan ne sera pas modifiée.</li>
+   <li>une chaîne : toute valeur CSS <a href="/fr/docs/Web/CSS/color_value">&lt;color&gt;</a> , par exemple <code>"red"</code>, <code>"#FF0000"</code>, ou <code>"rgb(255,0,0)"</code>. Si la chaîne n'est pas une couleur valide, la promesse renvoyée sera rejetée et la couleur d'arrière-plan ne sera pas modifiée.</li>
    <li>Un objet <code>{{WebExtAPIRef('browserAction.ColorArray')}}</code>.</li>
    <li><code>null</code>. Si un <code>tabId</code> est spécifié, il supprime la couleur d'arrière-plan du badge spécifique à l'onglet pour que l'onglet hérite de la couleur d'arrière-plan du badge global. Sinon, la couleur d'arrière-plan du badge global revient à la valeur par défaut.</li>
   </ul>
@@ -87,7 +86,7 @@ browser.browserAction.onClicked.addListener((tab)=&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> dans le code de Chromium code.</p>
 

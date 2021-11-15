@@ -16,13 +16,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 
 <p>Effacer le cache du navigateur.</p>
 
-<p>Notez que cette fonction puisse prendre un objet  {{WebExtAPIRef("browsingData.RemovalOptions")}}, elle sera ignorée. <span id="result_box" lang="fr"><span>Le cache entier est toujours effacé lors de l'utilisation de cette fonction</span></span>.</p>
+<p>Notez que cette fonction puisse prendre un objet  {{WebExtAPIRef("browsingData.RemovalOptions")}}, elle sera ignorée. Le cache entier est toujours effacé lors de l'utilisation de cette fonction.</p>
 
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var removing = browser.browsingData.removeCache(
+<pre class="brush: js">var removing = browser.browsingData.removeCache(
   removalOptions            // RemovalOptions object
 )
 </pre>
@@ -36,7 +36,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 
 <h3 id="Valeur_retournée">Valeur retournée</h3>
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera rempli sans arguments lorsque la suppression est terminée.<span id="result_box" lang="fr"><span> Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</span></span></p>
+<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera rempli sans arguments lorsque la suppression est terminée. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
 
 <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
 
@@ -59,7 +59,7 @@ then(onRemoved, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a>.</p>
 

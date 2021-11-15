@@ -17,11 +17,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
 
 <p>Masque l'action de page pour un onglet donné.</p>
 
-<p><code>hide()</code> remplace la correspondance de motifs, de sorte que l'action page ne sera pas affichée dans l'onglet spécifié même si son URL est associée à <a href="https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/page_action"><code>show_matches</code></a>.</p>
+<p><code>hide()</code> remplace la correspondance de motifs, de sorte que l'action page ne sera pas affichée dans l'onglet spécifié même si son URL est associée à <a href="/Add-ons/WebExtensions/manifest.json/page_action"><code>show_matches</code></a>.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.pageAction.hide(
+<pre class="brush: js">browser.pageAction.hide(
   tabId // integer
 )
 </pre>
@@ -47,7 +47,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/pageAction"><code>chrome.pageAction</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> dans le code de Chromium code.</p>
 

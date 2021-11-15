@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.tabs.onActivated.addListener(listener)
+<pre class="brush: js">browser.tabs.onActivated.addListener(listener)
 browser.tabs.onActivated.removeListener(listener)
 browser.tabs.onActivated.hasListener(listener)
 </pre>
@@ -44,7 +44,7 @@ browser.tabs.onActivated.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>activeInfo</code></dt>
   <dd><a href="#activeInfo"><code>object</code></a>. ID de l'onglet qui a été activé, et ID de sa fenêtre.</dd>
  </dl>
@@ -55,7 +55,7 @@ browser.tabs.onActivated.hasListener(listener)
 
 <h3 id="activeInfo">activeInfo</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>previousTabId</code></dt>
  <dd><code>integer</code>. L'ID de l'onglet activé précédent, si cet onglet est encore ouvert.</dd>
  <dt><code>tabId</code></dt>
@@ -81,7 +81,7 @@ browser.tabs.onActivated.addListener(handleActivated);</pre>
 
 <p>{{Compat("webextensions.api.tabs.onActivated")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 </div>

@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onCreated
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.bookmarks.onCreated.addListener()
+<pre class="brush: js">browser.bookmarks.onCreated.addListener()
 browser.bookmarks.onCreated.removeListener(listener)
 browser.bookmarks.onCreated.hasListener(listener)
 </pre>
@@ -44,12 +44,12 @@ browser.bookmarks.onCreated.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>id</code></dt>
   <dd><code>string</code>. L'ID du nouvel élément de favori.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>bookmark</code></dt>
   <dd>{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}. Informations sur le nouvel élément de favori.</dd>
  </dl>
@@ -71,7 +71,7 @@ browser.bookmarks.onCreated.addListener(handleCreated);</pre>
 
 <p>{{Compat("webextensions.api.bookmarks.onCreated")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
 

@@ -23,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var gettingTree = browser.bookmarks.getTree()
+<pre class="brush: js">var gettingTree = browser.bookmarks.getTree()
 </pre>
 
 <h3 id="Paramètres">Paramètres</h3>
@@ -32,11 +32,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 
 <h3 id="Valeur_retournée">Valeur retournée</h3>
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un tableau contenant un objet, un objet  <a href="/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode" title="An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders."><code>bookmarks.BookmarkTreeNode</code></a> le noeud racine.</p>
+<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un tableau contenant un objet, un objet  <a href="/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode"><code>bookmarks.BookmarkTreeNode</code></a> le noeud racine.</p>
 
 <h2 id="Exemples">Exemples</h2>
 
-<p><span class="short_text" id="result_box" lang="fr"><span>Cet exemple imprime l'intégralité de l'arborescence des signets :</span></span></p>
+<p>Cet exemple imprime l'intégralité de l'arborescence des signets :</p>
 
 <pre class="brush: js">function makeIndent(indentLength) {
   return ".".repeat(indentLength);
@@ -75,7 +75,7 @@ gettingTree.then(logTree, onRejected);
 
 <p>{{Compat("webextensions.api.bookmarks.getTree")}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a>. Cette documentation provient de  <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> dans le code Chromium.</p>
 

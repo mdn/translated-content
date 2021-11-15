@@ -22,7 +22,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var gettingTitle = browser.sidebarAction.getTitle(
+<pre class="brush: js">var gettingTitle = browser.sidebarAction.getTitle(
   details               // object
 )
 </pre>
@@ -31,9 +31,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. Un objet avec les propriétés suivantes :</dd>
- <dd>
- <dl class="reference-values">
+ <dd><p><code>object</code>. Un objet avec les propriétés suivantes :</p>
+ <dl>
   <dt><code>tabId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. Obtenir le titre de la barre latérale spécifique à l'onglet donné.</dd>
   <dt><code>windowId</code> {{optional_inline}}</dt>
@@ -75,7 +74,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Opera <a href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a>.</p>
 

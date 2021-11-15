@@ -18,14 +18,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 <p>L'API <a href="/fr/Add-ons/WebExtensions">WebExtensions</a> dispose d'un module assez pratique pour l'internationalisation des extensions — <a href="/fr/Add-ons/WebExtensions/API/i18n">i18n</a>. Dans cet article, nous allons explorer ses fonctionnalités et fournir un exemple pratique de son fonctionnement. Le système i18n pour les extensions construites à l'aide des APIs WebExtension est similaire aux bibliothèques JavaScript courantes pour i18n telles que <a href="http://i18njs.com/">i18n.js</a>.</p>
 
 <div class="note">
-<p>L'exemple d'extension présenté dans cet article — <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> — est disponible sur GitHub. Suivez avec le code source que vous parcourez les sections ci-dessous.</p>
+<p><strong>Note :</strong> L'exemple d'extension présenté dans cet article — <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> — est disponible sur GitHub. Suivez avec le code source que vous parcourez les sections ci-dessous.</p>
 </div>
 
 <h2 id="Anatomie_dune_extension_internationnalisée">Anatomie d'une extension internationnalisée</h2>
 
 <p>Une extension internationnalisée peut contenir les mêmes caractéristiques que n'importe quelle autre extension — <a href="/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">scripts d'arrière-plan</a>, <a href="/fr/Add-ons/WebExtensions/Content_scripts">scripts de contenu</a>, etc. — mais elle a également  des parties supplémentaires pour lui permettre de basculer entre différentes locales. Ceux-ci sont résumés dans l'arborescence suivante :</p>
 
-<ul class="directory-tree">
+<ul>
  <li>extension-root-directory/
   <ul>
    <li>_locales
@@ -74,9 +74,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 
 <h2 id="Fourniture_de_chaînes_localisées_dans__locales">Fourniture de chaînes localisées dans _locales</h2>
 
-<div class="pull-aside">
-<div class="moreinfo">Vous pouvez rechercher des sous-étiquettes de langue à l'aide de l'outil de <em>Recherche</em>r de la <a href="http://r12a.github.io/apps/subtags/">page de recherche sous-étiquette de langue</a>. Notez que vous devez rechercher le nom anglais de la langue.</div>
-</div>
+<p>Vous pouvez rechercher des sous-étiquettes de langue à l'aide de l'outil de <em>Recherche</em>r de la <a href="http://r12a.github.io/apps/subtags/">page de recherche sous-étiquette de langue</a>. Notez que vous devez rechercher le nom anglais de la langue.</p>
 
 <p>Chaque système i18n nécessite la fourniture de chaînes traduites dans tous les différents environnements que vous souhaitez prendre en charge. Dans les extensions, elles sont contenues dans un répertoire appelé  <code>_locales</code>, placé dans la racine de l'extension. Chaque environnement local a ses chaînes (appelées messages) contenues dans un fichier appelé  <code>messages.json</code>, qui est placé dans un sous-répertoire de <code>_locales</code>, nommé en utilisant la sous-étiquette de langue pour la langue de ce local.</p>
 
@@ -117,7 +115,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 <p>Ce fichier est un JSON standard — chacun de ses membres est un objet avec un nom, qui contient un <code>message</code>  et une <code>description</code>. Tous ces éléments sont des chaînes ; <code>$URL$</code> est un espace réservé, qui est remplacé par une sous-chaîne au moment où le membre <code>notificationContent</code> est appelé par l'extension. Vous apprendrez à le faire dans la section {{anch("Récupération des chaînes de messages de JavaScript")}}.</p>
 
 <div class="note">
-<p><strong>Remarque </strong>: Vous pouvez trouver beaucoup plus d'informations sur le contenu des fichiers  <code>messages.json</code> dans notre <a href="/fr/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference">référence spécifique aux paramètres régionaux</a>.</p>
+<p><strong>Note :</strong> Vous pouvez trouver beaucoup plus d'informations sur le contenu des fichiers  <code>messages.json</code> dans notre <a href="/fr/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference">référence spécifique aux paramètres régionaux</a>.</p>
 </div>
 
 <h2 id="Internationaliser_manifest.json">Internationaliser manifest.json</h2>
@@ -246,7 +244,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p>Prenons l'exemple suivant :</p>
 
-<ul class="directory-tree">
+<ul>
  <li>extension-root-directory/
   <ul>
    <li>_locales
@@ -273,7 +271,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
       <ul>
        <li>messages.json
         <ul>
-         <li><code>{ "colorLocalised": { "message": "<span lang="fr">couleur</span>", "description": "Color." }, ...}</code></li>
+         <li><code>{ "colorLocalised": { "message": "couleur", "description": "Color." }, ...}</code></li>
         </ul>
        </li>
       </ul>
@@ -394,7 +392,7 @@ padding-left: 1.5em;</pre>
 </ol>
 
 <div class="note">
-<p><strong>Remarque </strong>: Cela fonctionne pour modifier les paramètres régionaux du navigateur, même si vous n'avez pas installé le <a href="/fr/firefox/language-tools/">pack de language</a> pour cette langue. Vous obtiendrez simplement l'interface du navigateur dans votre langue par défaut si c'est le cas.</p>
+<p><strong>Note :</strong> Cela fonctionne pour modifier les paramètres régionaux du navigateur, même si vous n'avez pas installé le <a href="/fr/firefox/language-tools/">pack de language</a> pour cette langue. Vous obtiendrez simplement l'interface du navigateur dans votre langue par défaut si c'est le cas.</p>
 </div>
 
 <ol>

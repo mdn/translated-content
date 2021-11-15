@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onBeforeNavigate
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.webNavigation.onBeforeNavigate.addListener(
+<pre class="brush: js">browser.webNavigation.onBeforeNavigate.addListener(
   listener,                   // function
   filter                      // optional object
 )
@@ -47,7 +47,7 @@ browser.webNavigation.onBeforeNavigate.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Détails sur l'événement de navigation.</dd>
  </dl>
@@ -62,7 +62,7 @@ browser.webNavigation.onBeforeNavigate.hasListener(listener)
 
 <h3 id="détails">détails</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>tabId</code></dt>
  <dd><code>integer</code>. L'ID de l'onglet dans lequel la navigation est sur le point de se produire.</dd>
  <dt><code>url</code></dt>
@@ -101,7 +101,7 @@ browser.webNavigation.onBeforeNavigate.addListener(logOnBefore, filter);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webNavigation"><code>chrome.webNavigation</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> dans le code de Chromium code.</p>
 

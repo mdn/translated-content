@@ -36,7 +36,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifests_native
 
 <p>Le manifest de messagerie natif contient un seul objet JSON avec les propriétés suivantes :</p>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Name</th>
@@ -111,7 +111,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifests_native
 
 <p>Le manifest de stockage géré contient un seul objet JSON avec les propriétés suivantes :</p>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Name</th>
@@ -151,28 +151,28 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifests_native
 
 <p>Par exemple :</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="punctuation token">{</span>
-  <span class="key token">"name":</span> <span class="string token">"favourite-colour-examples@mozilla.org"</span><span class="punctuation token">,</span>
-  <span class="key token">"description":</span> <span class="string token">"ignored"</span><span class="punctuation token">,</span>
-  <span class="key token">"type":</span> <span class="string token">"storage"</span><span class="punctuation token">,</span>
-  <span class="key token">"data":</span>
-  <span class="punctuation token">{</span>
-    <span class="key token">"colour":</span> <span class="string token">"management thinks it should be blue!"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json">{
+  "name": "favourite-colour-examples@mozilla.org",
+  "description": "ignored",
+  "type": "storage",
+  "data":
+  {
+    "colour": "management thinks it should be blue!"
+  }
+}</pre>
 
 <p>Etant donné ce manifest JSON, l'extension "favourite-colour-examples@mozilla.org" pourrait accéder aux données en utilisant un code comme celui-ci:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> storageItem <span class="operator token">=</span> browser<span class="punctuation token">.</span>storage<span class="punctuation token">.</span>managed<span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">(</span><span class="string token">'colour'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-storageItem<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="punctuation token">(</span>res<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Managed colour is: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>res<span class="punctuation token">.</span>colour<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">var storageItem = browser.storage.managed.get('colour');
+storageItem.then((res) =&gt; {
+  console.log(`Managed colour is: ${res.colour}`);
+});</pre>
 
 <h2 id="PKCS_11_manifests">PKCS #11 manifests</h2>
 
 <p>Le manifest PKCS #11 est un fichier contenant un objet JSON avec les propriétés suivantes :</p>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Name</th>
@@ -233,7 +233,7 @@ storageItem<span class="punctuation token">.</span><span class="function token">
 
 <p>Par exemple :</p>
 
-<pre class="brush: json line-numbers  language-json">{
+<pre class="brush: json">{
   "name": "my_module",
   "description": "My test module",
   "type": "pkcs11",
@@ -243,7 +243,7 @@ storageItem<span class="punctuation token">.</span><span class="function token">
 
 <p>Compte tenu de ce manifest JSON, enregistré sous le nom ""my_module.json", l'extension "my-extension@mozilla.org" pourrait installer le module de sécurité dans "/path/to/libpkcs11testmodule.dylib" en utilisant le code suivant :</p>
 
-<pre class="brush: js line-numbers  language-js">browser.pkcs11.installModule("my_module");</pre>
+<pre class="brush: js">browser.pkcs11.installModule("my_module");</pre>
 
 <h2 id="Emplacement_du_manifest">Emplacement du manifest</h2>
 
@@ -256,7 +256,7 @@ storageItem<span class="punctuation token">.</span><span class="function token">
 <p>Pour une visibilité globale, créez une clé de registre avec le nom suivant :</p>
 
 <pre>HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\&lt;name&gt;
-HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\<code class="language-html">ManagedStorage</code>\&lt;name&gt;
+HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\ManagedStorage\&lt;name&gt;
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
 
 <p>La clé doit avoir une seule valeur par défaut, qui est le chemin d'accès au manifest.</p>
@@ -268,23 +268,23 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
 <p>Pour une visibilité par utilisateur, créez une clé de registre avec le nom suivant :</p>
 
 <pre>HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\&lt;name&gt;
-HKEY_CURRENT_USER\SOFTWARE\Mozilla\<code class="language-html">ManagedStorage</code>\&lt;name&gt;
+HKEY_CURRENT_USER\SOFTWARE\Mozilla\ManagedStorage\&lt;name&gt;
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
 
 <p>La clé doit avoir une seule valeur par défaut, qui est le chemin d'accès au manifest.</p>
 
 <h3 id="Mac_OS_X">Mac OS X</h3>
 
-<p><span class="short_text" id="result_box" lang="fr"><span>Pour une visibilité globale, stockez le manifest dans :</span></span></p>
+<p>Pour une visibilité globale, stockez le manifest dans :</p>
 
 <pre>/Library/Application Support/Mozilla/NativeMessagingHosts/&lt;name&gt;.json
-/Library/Application Support/Mozilla/<code class="language-html">ManagedStorage</code>/&lt;name&gt;.json
+/Library/Application Support/Mozilla/ManagedStorage/&lt;name&gt;.json
 /Library/Application Support/Mozilla/PKCS11Modules/&lt;name&gt;.json</pre>
 
 <p>Pour la visibilité par utilisateur, stockez le manifest dans :</p>
 
 <pre>~/Library/Application Support/Mozilla/NativeMessagingHosts/&lt;name&gt;.json
-~/Library/Application Support/Mozilla/<code class="language-html">ManagedStorage</code>/&lt;name&gt;.json
+~/Library/Application Support/Mozilla/ManagedStorage/&lt;name&gt;.json
 ~/Library/Application Support/Mozilla/PKCS11Modules/&lt;name&gt;.json
 </pre>
 
@@ -293,18 +293,18 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
 <p>Pour une visibilité globale, stockez le manifest dans :</p>
 
 <pre>/usr/lib/mozilla/native-messaging-hosts/&lt;name&gt;.json
-/usr/lib/mozilla/<code class="language-html">managed-storage</code>/&lt;name&gt;.json
+/usr/lib/mozilla/managed-storage/&lt;name&gt;.json
 /usr/lib/mozilla/pkcs11-modules/&lt;name&gt;.json
 </pre>
 
 <p>ou :</p>
 
 <pre>/usr/lib64/mozilla/native-messaging-hosts/&lt;name&gt;.json
-/usr/lib64/mozilla/<code class="language-html">managed-storage</code>/&lt;name&gt;.json
+/usr/lib64/mozilla/managed-storage/&lt;name&gt;.json
 /usr/lib64/mozilla/pkcs11-modules/&lt;name&gt;.json</pre>
 
 <p>Pour la visibilité par utilisateur, stockez le manifest dans :</p>
 
 <pre>~/.mozilla/native-messaging-hosts/&lt;name&gt;.json
-~/.mozilla/<code class="language-html">managed-storage</code>/&lt;name&gt;.json
+~/.mozilla/managed-storage/&lt;name&gt;.json
 ~/.mozilla/pkcs11-modules/&lt;name&gt;.json</pre>

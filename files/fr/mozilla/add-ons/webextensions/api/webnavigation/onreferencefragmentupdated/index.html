@@ -15,13 +15,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragm
 ---
 <div>{{AddonSidebar()}}</div>
 
-<div>Lancé si <a class="external external-icon" href="https://en.wikipedia.org/wiki/Fragment_identifier">identificateur dee fragment</a> d'une page est modifié. Par exemple, si une page implémente une table des matières à l'aide de fragments et que l'utilisateur clique sur une entrée dans la table des matières, cet événement se déclenche. Tous les événements futurs de ce cadre utiliseront l'URL mise à jour.</div>
+<div>Lancé si <a href="https://en.wikipedia.org/wiki/Fragment_identifier">identificateur dee fragment</a> d'une page est modifié. Par exemple, si une page implémente une table des matières à l'aide de fragments et que l'utilisateur clique sur une entrée dans la table des matières, cet événement se déclenche. Tous les événements futurs de ce cadre utiliseront l'URL mise à jour.</div>
 
 <div></div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.webNavigation.onReferenceFragmentUpdated.addListener(
+<pre class="brush: js">browser.webNavigation.onReferenceFragmentUpdated.addListener(
   listener,                   // function
   filter                      // optional object
 )
@@ -49,7 +49,7 @@ browser.webNavigation.onReferenceFragmentUpdated.hasListener(listener)
  <dd>
  <p>Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Détails sur l'événement de navigation.</dd>
  </dl>
@@ -64,7 +64,7 @@ browser.webNavigation.onReferenceFragmentUpdated.hasListener(listener)
 
 <h3 id="détails">détails</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>tabId</code></dt>
  <dd><code>integer</code>. L'ID de l'onglet dans lequel la navigation est sur le point de se produire.</dd>
  <dt><code>url</code></dt>
@@ -110,7 +110,7 @@ browser.webNavigation.onReferenceFragmentUpdated.addListener(logOnReferenceFragm
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/webNavigation"><code>chrome.webNavigation</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> dans le code de Chromium code.</p>
 

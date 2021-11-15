@@ -18,12 +18,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspend
 <p>Envoyé sur la page de l'événement juste avant son déchargement. Cela donne à l'extension l'opportunité de faire un peu de nettoyage. Notez que, comme la page est en cours de déchargement, les opérations asynchrones démarrées lors de la gestion de cet événement ne sont pas garanties.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Si quelque chose empêche le déchargement de la page d'événement, l'événement {{WebExtAPIRef("runtime.onSuspendCanceled")}} sera envoyé et la page ne sera pas déchargée.</p>
+<p><strong>Note :</strong> Si quelque chose empêche le déchargement de la page d'événement, l'événement {{WebExtAPIRef("runtime.onSuspendCanceled")}} sera envoyé et la page ne sera pas déchargée.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">browser.runtime.onSuspend.addListener(listener)
+<pre class="brush: js">browser.runtime.onSuspend.addListener(listener)
 browser.runtime.onSuspend.removeListener(listener)
 browser.runtime.onSuspend.hasListener(listener)
 </pre>
@@ -67,7 +67,7 @@ browser.runtime.onSuspend.addListener(handleSuspend);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> dans le code de Chromium code.</p>
 

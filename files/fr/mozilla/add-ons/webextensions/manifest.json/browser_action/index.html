@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 ---
 <div>{{AddonSidebar}}</div>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="row" style="width: 30%;">Type</th>
@@ -22,7 +22,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "browser_action": {
   "browser_style": true,
   "default_icon": {
@@ -56,7 +56,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
 <p>La clé <code>browser_action</code> est un objet qui peut avoir l'une des propriétés suivantes, toutes optionnelles :</p>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Name</th>
@@ -73,7 +73,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
     <p>Utilisez-le pour inclure une feuille de style dans votre popup qui le rendra cohérent avec l'interface utilisateur du navigateur et avec d'autres extensions qui utilisent la propriété <code>browser_style</code>. Bien que cette touche par défaut soit <code>false</code>, il est recommandé de l'inclure et de la mettre à <code>true</code> afin de rendre vos fenêtres contextuelles cohérentes avec l'apparence du reste de l'interface utilisateur du navigateur.</p>
 
-    <p>Dans Firefox, la feuille de style peut être vue à chrome://browser/content/extension.css, ou chrome://browser/content/extension-mac.css sur OS X. Lorsque vous définissez les dimensions, sachez que cette feuille de style définit actuellement  <code>box-sizing: border-box</code> (voir <a href="https://developer.mozilla.org/docs/Web/CSS/box-sizing">box-sizing</a>).</p>
+    <p>Dans Firefox, la feuille de style peut être vue à chrome://browser/content/extension.css, ou chrome://browser/content/extension-mac.css sur OS X. Lorsque vous définissez les dimensions, sachez que cette feuille de style définit actuellement  <code>box-sizing: border-box</code> (voir <a href="/docs/Web/CSS/box-sizing">box-sizing</a>).</p>
 
     <p>Les <a href="/fr/Add-ons/WebExtensions/user_interface/Browser_styles">Browser styles</a> décrivent les classes que vous pouvez appliquer aux éléments dans le popup afin d'obtenir des styles particuliers.</p>
 
@@ -82,9 +82,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
   </tr>
   <tr>
    <td><code>default_area</code></td>
-   <td><font face="Consolas">Chaîne de caractères</font></td>
+   <td>Chaîne de caractères</td>
    <td>
-    <div class="blockIndicator  geckoVersionNote">Nouveau dans Firefox 54</div>
 
     <p>Définit la partie du navigateur dans laquelle le bouton est initialement placé. Il s'agit d'une chaîne qui peut prendre l'une des quatre valeurs suivantes:</p>
 
@@ -106,7 +105,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
   </tr>
   <tr>
    <td><code>default_icon</code></td>
-   <td><code>Objet</code> ou <font face="Consolas">chaîne de caractères</font></td>
+   <td><code>Objet</code> ou chaîne de caractères</td>
    <td>
     <p>Utilisez cette option pour spécifier une ou plusieurs icônes pour le bouton d'action du navigateur. L'icône est affichée dans la barre d'outils du navigateur par défaut.</p>
 
@@ -114,12 +113,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
     <p>Vous pouvez spécifier un seul fichier d'icône en fournissant une chaîne ici:</p>
 
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "default_icon": "path/to/geo.svg"</pre>
 
     <p>Pour spécifier plusieurs icônes dans différentes tailles, spécifiez ici un objet. Le nom de chaque propriété est la hauteur de l'icône en pixels et doit être converti en un nombre entier. La valeur est l'URL. Par exemple:</p>
 
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
     "default_icon": {
       "16": "path/to/geo-16.png",
       "32": "path/to/geo-32.png"
@@ -132,11 +131,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
   </tr>
   <tr>
    <td><code>default_popup</code></td>
-   <td><font face="Consolas">chaîne de caractères</font></td>
+   <td>chaîne de caractères</td>
    <td>
     <p>Le chemin d'accès à un fichier HTML contenant la spécification de la fenêtre contextuelle.</p>
 
-    <p>Le fichier HTML peut inclure des fichiers CSS et JavaScript en utilisant des éléments <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> et <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code>, tout comme une page Web normale. Cependant, <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> doit avoir l'attribut <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">src</a></code> pour charger un fichier. N'utilisez pas <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> avec du code intégré, car vous obtiendrez une erreur de politique de violation de contenu confuse.</p>
+    <p>Le fichier HTML peut inclure des fichiers CSS et JavaScript en utilisant des éléments <code><a href="/fr/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> et <code><a href="/fr/docs/Web/HTML/Element/script">&lt;script&gt;</a></code>, tout comme une page Web normale. Cependant, <code><a href="/fr/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> doit avoir l'attribut <code><a href="/fr/docs/Web/HTML/Element/script">src</a></code> pour charger un fichier. N'utilisez pas <code><a href="/fr/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> avec du code intégré, car vous obtiendrez une erreur de politique de violation de contenu confuse.</p>
 
     <p>Contrairement à une page Web normale, JavaScript en cours d'exécution dans la fenêtre contextuelle peut accéder à toutes les <a href="/fr/Add-ons/WebExtensions/API">APIs WebExtension</a> (soumis, bien sûr, à l'extension possédant les <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> appropriées).</p>
 
@@ -145,7 +144,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
   </tr>
   <tr>
    <td><code>default_title</code></td>
-   <td><font face="Consolas">chaîne de caractères</font></td>
+   <td>chaîne de caractères</td>
    <td>
     <p>Info-bulle pour le bouton, affichée lorsque l'utilisateur passe sa souris dessus.</p>
 
@@ -190,7 +189,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
 <p>Il y a deux approches principales pour cela. Vous pouvez fournir une seule icône en tant que fichier SVG, et elle sera mise à l'échelle correctement :</p>
 
-<pre class="brush: json no-line-numbers">"default_icon": "path/to/geo.svg"</pre>
+<pre class="brush: json">"default_icon": "path/to/geo.svg"</pre>
 
 <p>Ou vous pouvez fournir plusieurs icônes dans différentes tailles, et le navigateur choisira la meilleure.</p>
 
@@ -203,7 +202,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
 <p>Vous pouvez donc spécifier des icônes qui correspondent exactement, à la fois aux affichages normaux et à Retina, en fournissant trois fichiers d'icônes et en les spécifiant comme suit:</p>
 
-<pre class="brush: json no-line-numbers">    "default_icon": {
+<pre class="brush: json">    "default_icon": {
       "16": "path/to/geo-16.png",
       "32": "path/to/geo-32.png",
       "64": "path/to/geo-64.png"
@@ -213,7 +212,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: json no-line-numbers">"browser_action": {
+<pre class="brush: json">"browser_action": {
   "default_icon": {
     "16": "button/geo-16.png",
     "32": "button/geo-32.png"
@@ -222,7 +221,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
 <p>Une action de navigateur avec juste une icône, spécifiée en 2 tailles différentes. Les scripts d'arrière-plan de l'extension peuvent recevoir des événements de clic lorsque l'utilisateur clique sur l'icône en utilisant un code comme celui-ci :</p>
 
-<pre class="brush: js no-line-numbers"> browser.browserAction.onClicked.addListener(handleClick);</pre>
+<pre class="brush: js"> browser.browserAction.onClicked.addListener(handleClick);</pre>
 
 <pre class="brush: json">"browser_action": {
   "default_icon": {

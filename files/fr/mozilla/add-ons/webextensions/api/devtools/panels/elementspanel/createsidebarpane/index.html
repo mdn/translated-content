@@ -24,13 +24,13 @@ original_slug: >-
 
 <p>La fonction <code>createSidebarPane()</code> ajoute un nouveau volet à la barre latérale. ar exemple, la capture d'écran ci-dessous montre un nouveau volet intitulé "My pane", qui affiche un objet JSON :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15607/inspector-sidebar.png" style="display: block; height: 276px; margin-left: auto; margin-right: auto; width: 836px;"></p>
+<p><img alt="" src="inspector-sidebar.png"></p>
 
 <p>Cette fonction prend un argument, qui est une chaîne représentant le titre du volet. Il renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui se résout en un objet <code><a href="/fr/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane">ExtensionSidebarPane</a></code> représentant le nouveau volet. Vous pouvez utiliser cet objet pour définir le contenu et le comportement du volet.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var creating = browser.devtools.panels.elements.createSidebarPane(
+<pre class="brush: js">var creating = browser.devtools.panels.elements.createSidebarPane(
   title       // string
 )
 </pre>
@@ -70,7 +70,7 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Remerciements</strong>
+<div class="note"><p><strong>Note :</strong></p>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a>.</p>
 </div>
