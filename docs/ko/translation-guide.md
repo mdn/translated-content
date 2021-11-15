@@ -116,6 +116,53 @@ EDITOR=code
 
 다만 진짜 강조를 해야하는 상황에는, 따옴표로 강조하고 PR로 소명합니다.
 
+### `:` 쌍점,  `;` 쌍반점 지침
+
+뒤의 문장 예시를 강조하기 위해 쌍점을 사용하는 경우에 `: 쌍점`은 한글 문법에 적합하지 않습니다.  
+
+`한글맞춤법-부록-문장 부호` 부분의 `: 쌍점`에 대한 규정만 존재하고, `; 쌍반점`에 대한 규정은 존재하지 않습니다. 따라서, 해당 경우가 아니면 `: 쌍점`을 `. 온점`으로 치환하는 것을 권장합니다. `; 쌍반점`의 경우는 `. 온점`으로 치환하는 것을 권장합니다.[(참고: 국립 국어원)](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=70177)
+
+```
+<한글맞춤법-부록-문장부호>
+
+쌍점( : )
+
+(1) 내포되는 종류를 들 적에 쓴다.
+
+문장 부호: 마침표, 쉼표, 따옴표, 묶음표 등 문방사우: 붓, 먹, 벼루, 종이
+
+(2) 소표제 뒤에 간단한 설명이 붙을 때에 쓴다.
+
+일시: 1984 년 10 월 15 일 10 시
+마침표: 문장이 끝남을 나타낸다.
+
+(3) 저자명 다음에 저서명을 적을 때에 쓴다.
+
+정약용: 목민심서, 경세유표
+주시경: 국어 문법, 서울 박문 서관, 1910.
+
+(4) 시(時)와 분(分), 장(章)과 절(節) 따위를 구별할 때나, 둘 이상을 대비할 때에 쓴다.
+
+오전 10:20 (오전 10 시 20 분)
+요한 3:16 (요한복음 3 장 16 절)
+대비 65:60 (65 대 60)
+```
+
+- 원문 [(참고 링크)](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor/parameterDescriptors)
+```
+The properties of these objects are as follows:
+```
+
+- 변경 전
+```
+이 객체들의 속성은 다음과 같습니다:
+```
+
+- 변경 후
+```
+이 객체들의 속성은 다음과 같습니다.
+```
+
 ## 용어 지침
 
 새로운 용어를 추가할 때, 기존 문서의 레거시와 [국립 국어원 한국어 어문 규범](https://kornorms.korean.go.kr/main/main.do)을 고려해 추가할 것을 권장합니다.
@@ -288,7 +335,7 @@ EDITOR=code
 | Prototype | 프로토타입 | | |
 | Reject | 거부 | | | 
 | Resolve | 이행 | | |
-| Rest parameters | 나머지 매개변수 | | [참고 링크](https://github.com/mdn/translated-content/pull/2549/files) | 
+| Rest parameters | 나머지 매개변수 | | [참고 링크](https://github.com/mdn/translated-content/pull/2549/files) | 
 | Settled | 처리 | | | 
 | Scope | 스코프 | | | 
 | Temporal Dead Zone, TDZ | 시간상 사각지대 | | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files) | 
