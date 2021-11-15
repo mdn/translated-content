@@ -87,7 +87,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
 - Gecko supporte maintenant l'appel `click()` sur l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) pour ouvrir le sélecteur de fichiers. Voir l'[exemple](</fr/docs/Using_files_from_web_applications#Using_hidden_file_input_elements_using_the_click()_method>) dans l'article [Using files from web applications](/fr/docs/Using_files_from_web_applications).
 - L'élément [`<input>`](/fr/docs/Web/HTML/Element/input) supporte un nouvel attribut [`mozactionhint`](/fr/docs/HTML/Element/Input#attr-mozactionhint), qui permet de spécifier l'étiquette de la touche Entrée sur un clavier virtuel.
 - L'élément [`<script>`](/fr/docs/Web/HTML/Element/script) à l'intérieur des éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<noembed>`](/fr/docs/Web/HTML/Element/noembed "L'élément <noembed> est une façon obsolète et non standardisée de fournir une alternative de contenu pour les navigateurs ne supportant pas l'élément <embed> ou des catégories de contenu qu'un auteur aimerait utiliser.
- Cet élément a été rendu obsolète à partir de la version HTML 4.01 et a été remplacé par <object>. Le contenu alternatif doit être inséré entre la balise d'ouverture et celle de fermeture de <object>") et [`<noframes>`](/fr/docs/Web/HTML/Element/noframes) sont maintenant exécutés, contrairement aux versions précédentes de Firefox. Ceci est conforme à la spécification et correspond au comportement des autres navigateurs.
+ Cet élément a été rendu obsolète à partir de la version HTML 4.01 et a été remplacé par `<object>`. Le contenu alternatif doit être inséré entre la balise d'ouverture et celle de fermeture de `<object>`) et [`<noframes>`](/fr/docs/Web/HTML/Element/noframes) sont maintenant exécutés, contrairement aux versions précédentes de Firefox. Ceci est conforme à la spécification et correspond au comportement des autres navigateurs.
 
 ### CSS
 
@@ -472,7 +472,7 @@ Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à l
         <a
           href="/fr/docs/Web/HTML/Element/noembed"
           title="L&#x27;élément <noembed> est une façon obsolète et non standardisée de fournir une alternative de contenu pour les navigateurs ne supportant pas l&#x27;élément <embed> ou des catégories de contenu qu&#x27;un auteur aimerait utiliser.
- Cet élément a été rendu obsolète à partir de la version HTML 4.01 et a été remplacé par <object>. Le contenu alternatif doit être inséré entre la balise d&#x27;ouverture et celle de fermeture de <object>"
+ Cet élément a été rendu obsolète à partir de la version HTML 4.01 et a été remplacé par &lt;object&gt;. Le contenu alternatif doit être inséré entre la balise d&#x27;ouverture et celle de fermeture de &lt;object&gt;"
           ><code>&#x3C;noembed></code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/noframes"
