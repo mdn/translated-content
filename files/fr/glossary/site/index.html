@@ -8,38 +8,29 @@ tags:
 translation_of: Glossary/Site
 original_slug: Glossaire/Site
 ---
-<p>Le <em>site</em> d'un élément de contenu Web est déterminé par le <em>domaine enregistrable</em> de l'hôte au sein de l'origine. Ceci est calculé en consultant une <em>liste de suffixes publics</em> pour trouver la partie de l'hôte qui est comptée comme <em>suffixe public</em> (par exemple, <samp>com</samp>, <samp>org</samp> ou <samp>co.uk</samp>).</p>
+<p>Le <em>site</em> d'un élément de contenu Web est déterminé par le <em>domaine enregistrable</em> de l'hôte au sein de l'origine. Ceci est calculé en consultant une <em>liste de suffixes publics</em> pour trouver la partie de l'hôte qui est comptée comme <em>suffixe public</em> (par exemple, <code>com</code>, <code>org</code> ou <code>co.uk</code>).</p>
 
-<p>Le concept de <em>site</em> est utilisé dans les <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#Directives">cookies SameSite</a>, ainsi que dans la <a href="/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)">politique de ressources inter-origines</a> d'une application Web.</p>
+<p>Le concept de <em>site</em> est utilisé dans les <a href="/fr/docs/Web/HTTP/Headers/Set-Cookie#Directives">cookies SameSite</a>, ainsi que dans la <a href="/fr/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)">politique de ressources inter-origines</a> d'une application Web.</p>
 
-<h2 id="Exemple_du_même_site">Exemple du même site</h2>
+<h2 id="Exemples">Exemples</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td style="width: 50%;"><code>https://developer.mozilla.org/en-US/docs/</code><br>
-    <code>https://support.mozilla.org/en-US/</code></td>
-   <td style="width: 50%;">même site car le domaine enregistrable de <em>mozilla.org</em> est le même</td>
-  </tr>
-  <tr>
-   <td style="width: 50%;"><code>http://example.com:8080</code><br>
-    <code>https://example.com</code></td>
-   <td style="width: 50%;">même site car le schéma et le port ne sont pas pertinents</td>
-  </tr>
- </tbody>
-</table>
+<p>Pour les deux URL qui suivent, on a le même site car le domaine enregistrable est le même <em>mozilla.org</em> (les noms d'hôte et chemins de fichier différents n'ont pas d'importance)&nbsp;:</p>
+  <ul>
+    <li><code>https://developer.mozilla.org/fr/docs/</code></li>
+    <li><code>https://support.mozilla.org/fr/</code></li>
+  </ul>
 
-<h2 id="Exemples_de_sites_différents">Exemples de sites différents</h2>
+<p>Là encore, ce sont les mêmes sites, car le schéma et le port ne sont pas pertinents&nbsp;:</p>
+    <ul>
+      <li><code>http://example.com:8080</code></li>
+      <li><code>https://example.com</code></li>
+    </ul>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td style="width: 50%;"><code>https://developer.mozilla.org/en-US/docs/</code><br>
-    <code>https://example.com</code></td>
-   <td style="width: 50%;">pas le même site car le domaine enregistrable des deux URL diffère</td>
-  </tr>
- </tbody>
-</table>
+<p>Ici, ce ne sont pas les mêmes sites car les domaines enregistrables des deux URL sont différents&nbsp;:</p>
+    <ul>
+      <li><code>https://developer.mozilla.org/fr/docs/</code></li>
+      <li><code>https://example.com</code></li>
+    </ul>
 
 <h2 id="Spécifications">Spécifications</h2>
 

@@ -13,21 +13,19 @@ original_slug: Glossaire/Injection_SQL
 
 <p>L'injection SQL peut obtenir un accès non autorisé à une base de données ou récupérer des informations directement à partir de la base de données. De nombreuses violations de données sont dues à l'injection SQL.</p>
 
-<p><a href="http://www.acunetix.com/wp-content/uploads/2010/09/sql_inj_xss.gif"><img alt="" src="http://www.acunetix.com/wp-content/uploads/2010/09/sql_inj_xss.gif"></a></p>
+<p><a href="https://www.acunetix.com/wp-content/uploads/2010/09/sql_inj_xss.gif"><img alt="" src="sql_inj_xss.gif"></a></p>
 
 <h2 id="Comment_ça_marche">Comment ça marche ?</h2>
 
-<p><img alt="" src="http://www.infosemantics.com.au/sites/default/files/image/widget_tutorials/Updates_LoginScreen.png" style="height: 309px; width: 293px;"></p>
+<p><img alt="" src="updates_loginscreen.png"></p>
 
 <p>Après l'entrée du nom d'utilisateur et du mot de passe, derrière l'interface graphique, les requêtes SQL fonctionnent comme suit :</p>
 
-<pre style="margin-left: 0px;"><strong><span style="color: #0000cd;">"SELECT Count(*) FROM Users WHERE Username=' " + txt.User.Text+" ' AND Password=' "+ txt.Password.Text+" ' ";</span></strong></pre>
+<pre>"SELECT Count(*) FROM Users WHERE Username=' " + txt.User.Text+" ' AND Password=' "+ txt.Password.Text+" ' ";</pre>
 
 <p>Supposons maintenant que l'utilisateur entre le nom d'utilisateur : admin et le mot de passe : mdp123, puis après avoir cliqué sur le bouton Connexion, la requête SQL s'exécutera comme suit:</p>
 
-<pre><strong><span style="color: #0000cd;">"SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' mdp123 ' ";</span>
-
-</strong></pre>
+<pre>"SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' mdp123 ' ";</pre>
 
 <p>Si les informations d'identification sont correctes, l'utilisateur est autorisé à se connecter, c'est donc un mécanisme très simple (et non sécurisé). Les pirates utilisent cette insécurité pour obtenir un accès non autorisé.</p>
 
@@ -39,7 +37,7 @@ original_slug: Glossaire/Injection_SQL
 
 <p>Après avoir cliqué sur le bouton de connexion, la requête SQL fonctionnera comme suit :</p>
 
-<pre><strong><span style="color: #0000cd;">"SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' anything 'or'1'='1 ' ";</span>
+<pre><strong>"SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' anything 'or'1'='1 ' ";
 </strong></pre>
 
 <p>Regardez de plus près la section mot de passe de la requête ci-dessus.</p>
@@ -54,13 +52,13 @@ original_slug: Glossaire/Injection_SQL
 
 <h2 id="Comment_l'empêcher">Comment l'empêcher ?</h2>
 
-<p style="margin-left: 40px;">Avant d'exécuter les requêtes pour les informations d'identification de l'utilisateur, apportez les modifications suivantes :</p>
+<p>Avant d'exécuter les requêtes pour les informations d'identification de l'utilisateur, apportez les modifications suivantes :</p>
 
-<pre><span style="color: #0000ff;">$id = $_GET['id'] </span>
+<pre>$id = $_GET['id'] 
 
-<span style="color: #0000ff;">(1) $id = Stripslashes($id)</span>
+(1) $id = Stripslashes($id)
 
-<span style="color: #0000ff;">(2) $id = mysql_real_escape_String($id)</span></pre>
+(2) $id = mysql_real_escape_String($id)</pre>
 
 <p>Ainsi, en raison de (1) chaque guillemet simple (') dans la chaîne d'entrée est remplacé par des guillemets ("), et en raison de (2) avant chaque (') est ajouté un (/). La chaîne magique contrôlée échoue à contourner l'authentification et votre base de données reste sécurisée.</p>
 
