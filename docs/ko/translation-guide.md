@@ -118,7 +118,7 @@ EDITOR=code
 
 ### `:` 쌍점,  `;` 쌍반점 지침
 
-뒤의 문장 예시를 강조하기 위해 쌍점을 사용하는 경우에 `: 쌍점`은 한글 문법에 적합하지 않습니다.  
+뒤의 문장 예시를 강조하기 위해 쌍점을 사용하는 경우에 `: 쌍점`은 한글 문법에 적합하지 않습니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-964241518)
 
 `한글맞춤법-부록-문장 부호` 부분의 `: 쌍점`에 대한 규정만 존재하고, `; 쌍반점`에 대한 규정은 존재하지 않습니다. 따라서, 해당 경우가 아니면 `: 쌍점`을 `. 온점`으로 치환하는 것을 권장합니다. `; 쌍반점`의 경우는 `. 온점`으로 치환하는 것을 권장합니다.[(참고: 국립 국어원)](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=70177)
 
@@ -161,6 +161,25 @@ The properties of these objects are as follows:
 - 변경 후
 ```
 이 객체들의 속성은 다음과 같습니다.
+```
+
+### `—` 대시 지침
+
+`: 쌍점,  ; 쌍반점 지침`과 같은 맥락에서 `. 온점`으로 치환하는 것을 권장합니다.. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-965500282)
+
+- 원문
+```
+A value of 0.01 was used for the value to ramp down to in the last function rather than 0, as an invalid or illegal string error is thrown if 0 is used — the value needs to be positive.
+```
+
+- 변경 전
+```
+오류가 발생되기 때문입니다 — 이 값은 양수일 필요가 있습니다.
+```
+
+- 변경 후
+```
+오류가 발생되기 때문입니다. 이 값은 양수일 필요가 있습니다.
 ```
 
 ## 용어 지침
