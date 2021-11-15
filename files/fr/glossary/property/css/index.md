@@ -7,11 +7,12 @@ tags:
 translation_of: Glossary/property/CSS
 original_slug: Glossaire/Propriete_CSS
 ---
-<p>Une <strong>propriété CSS</strong> est une caractéristique (telle que <code>color</code>) dont la valeur associée définit un aspect de la manière dont le navigateur doit afficher l'élément.</p>
+Une **propriété CSS** est une caractéristique (telle que `color`) dont la valeur associée définit un aspect de la manière dont le navigateur doit afficher l'élément.
 
-<p>Exemple de règle CSS:</p>
+Exemple de règle CSS:
 
-<pre class="brush: css">/* "div" est un sélecteur qui indique que tous les éléments "<code>div"</code> */
+```css
+/* "div" est un sélecteur qui indique que tous les éléments "div" */
 /* auront le style spécifié par cette règle */
 div {
   /* La propriété "color" avec la valeur "black" indique */
@@ -21,21 +22,16 @@ div {
   /* La propriété "background-color" avec la valeur "white" indique */
   /* que l'arrière-plan des éléments sera coloré en blanc */
   background-color: white;
-}</pre>
+}
+```
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="/fr/Apprendre/CSS">Apprendre CSS</a></li>
-</ul>
+- [Apprendre CSS](/fr/Apprendre/CSS)
 
-<h3 id="Références_techniques">Références techniques</h3>
+### Références techniques
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/Reference">Référence CSS</a> sur MDN</li>
- <li><a href="http://www.w3.org/Style/CSS/current-work">The CSS Working Group current work</a> (en)</li>
-</ul>
-
-<p> </p>
+- [Référence CSS](/fr/docs/Web/CSS/Reference) sur MDN
+- [The CSS Working Group current work](http://www.w3.org/Style/CSS/current-work) (en)

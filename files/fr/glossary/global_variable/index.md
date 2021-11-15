@@ -7,14 +7,12 @@ tags:
 translation_of: Glossary/Global_variable
 original_slug: Glossaire/Variable_globale
 ---
-<p>Une variable globale est une {{glossary("Variable")}} déclarée dans une {{glossary("Global scope","portée globale")}} en d'autres termes, une variable visible depuis toutes les autres portées.</p>
+Une variable globale est une {{glossary("Variable")}} déclarée dans une {{glossary("Global scope","portée globale")}} en d'autres termes, une variable visible depuis toutes les autres portées.
 
-<p>En JavaScript, c'est une {{glossary("Property","propriété")}} de l'{{glossary("Global object","objet global")}}.</p>
+En JavaScript, c'est une {{glossary("Property","propriété")}} de l'{{glossary("Global object","objet global")}}.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Variable globale")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Variable globale")}} sur Wikipédia

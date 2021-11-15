@@ -9,12 +9,10 @@ tags:
 translation_of: Glossary/webm
 original_slug: Glossaire/webm
 ---
-<p><strong>WebM </strong>est un format vidéo ouvert, destiné au web et libre de redevance. Il est supporté de manière native par Mozilla Firefox.</p>
+**WebM** est un format vidéo ouvert, destiné au web et libre de redevance. Il est supporté de manière native par Mozilla Firefox.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://fr.wikipedia.org/wiki/WebM">WebM </a>sur Wikipédia</li>
-</ul>
+- [WebM ](https://fr.wikipedia.org/wiki/WebM)sur Wikipédia

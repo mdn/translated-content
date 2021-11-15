@@ -8,19 +8,20 @@ tags:
 translation_of: Glossary/Grid_Tracks
 original_slug: Glossaire/Pistes_de_grille
 ---
-<p>Une <strong>piste de grille</strong> est l'espace entre deux {{glossary("grid lines","lignes de grille (lines)")}}. Elle est définie dans la <em>grille explicite</em> avec les propriétés {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}} ou les propriétés raccourcies {{cssxref("grid")}} ou {{cssxref("grid-template")}}. Les pistes sont aussi créées dans une <em>grille implicite</em> en positionnant un élément de grille en dehors des pistes créées dans la grille explicite.</p>
+Une **piste de grille** est l'espace entre deux {{glossary("grid lines","lignes de grille (lines)")}}. Elle est définie dans la _grille explicite_ avec les propriétés {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}} ou les propriétés raccourcies {{cssxref("grid")}} ou {{cssxref("grid-template")}}. Les pistes sont aussi créées dans une _grille implicite_ en positionnant un élément de grille en dehors des pistes créées dans la grille explicite.
 
-<p>L'image ci-dessous montre la première piste de ligne de la grille.</p>
+L'image ci-dessous montre la première piste de ligne de la grille.
 
-<p><img alt="Diagram showing a grid track." src="1_grid_track.png"></p>
+![Diagram showing a grid track.](1_grid_track.png)
 
-<h2 id="Taille_de_piste_sur_une_grille_explicite">Taille de piste sur une grille explicite</h2>
+## Taille de piste sur une grille explicite
 
-<p>Lors de la définition de pistes de grille avec {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}}, vous pouvez utiliser n'importe quelle unité de longueur, ainsi que l'unité flexible, qui indique une partie de l'espace disponible dans le conteneur de la grille. L'exemple ci-dessous montre une grille avec trois pistes de colonnes, l'une de 200 pixels, la seconde de 1fr, la troisième de 3fr. Une fois que les 200 pixels ont été soustraits de l'espace disponible dans le conteneur de la grille, l'espace restant est divisé en 4. Une partie est donnée à la colonne 2, 3 parties à la colonne 3.</p>
+Lors de la définition de pistes de grille avec {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}}, vous pouvez utiliser n'importe quelle unité de longueur, ainsi que l'unité flexible, qui indique une partie de l'espace disponible dans le conteneur de la grille. L'exemple ci-dessous montre une grille avec trois pistes de colonnes, l'une de 200 pixels, la seconde de 1fr, la troisième de 3fr. Une fois que les 200 pixels ont été soustraits de l'espace disponible dans le conteneur de la grille, l'espace restant est divisé en 4. Une partie est donnée à la colonne 2, 3 parties à la colonne 3.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -28,51 +29,48 @@ original_slug: Glossaire/Pistes_de_grille
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: 200px 1fr 3fr;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div&gt;One&lt;/div&gt;
-   &lt;div&gt;Two&lt;/div&gt;
-   &lt;div&gt;Three&lt;/div&gt;
-   &lt;div&gt;Four&lt;/div&gt;
-   &lt;div&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Exemple', '500', '230') }}</p>
+{{ EmbedLiveSample('Exemple', '500', '230') }}
 
+## Taille de piste dans la grille implicite
 
-<h2 id="Taille_de_piste_dans_la_grille_implicite">Taille de piste dans la grille implicite</h2>
+Les pistes créées dans la grille implicite ont une taille définie automatiquement par défaut, cependant, vous pouvez définir la taille de ces pistes en utilisant les propriétés {{cssxref("grid-auto-rows")}} et {{cssxref("grid-auto-columns")}}.
 
-<p>Les pistes créées dans la grille implicite ont une taille définie automatiquement par défaut, cependant, vous pouvez définir la taille de ces pistes en utilisant les propriétés {{cssxref("grid-auto-rows")}} et {{cssxref("grid-auto-columns")}}.</p>
+## En apprendre plus
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+### Références de propriété
 
-<h3 id="Références_de_propriété">Références de propriété</h3>
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-columns")}}
 
-<ul>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-auto-rows")}}</li>
- <li>{{cssxref("grid-auto-columns")}}</li>
-</ul>
+### En lire plus
 
-<h3 id="En_lire_plus">En lire plus</h3>
-
-<ul>
- <li>Guide des grilles CSS : <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base">Les concepts de base des grilles CSS</a></li>
- <li><a href="https://drafts.csswg.org/css-grid/#grid-track-concept">Définition des pistes de grille dans la spécification CSS Grid Layout</a></li>
-</ul>
+- Guide des grilles CSS : [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)
+- [Définition des pistes de grille dans la spécification CSS Grid Layout](https://drafts.csswg.org/css-grid/#grid-track-concept)

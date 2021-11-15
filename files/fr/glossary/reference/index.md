@@ -7,14 +7,12 @@ tags:
 translation_of: Glossary/Reference
 original_slug: Glossaire/Référence
 ---
-<p>Dans le contexte des <strong>{{glossary("object","objets")}}</strong>, une <strong>{{glossary("Object reference","référence d'objet")}}</strong>. Sur MDN, nous pourrions parler de la référence {{glossary ("JavaScript")}} elle-même.</p>
+Dans le contexte des **{{glossary("object","objets")}}**, une **{{glossary("Object reference","référence d'objet")}}**. Sur MDN, nous pourrions parler de la référence {{glossary ("JavaScript")}} elle-même.
 
-<p>En informatique, une référence est une valeur permettant d'accéder indirectement à une donnée dans le but de récupérer une variable ou un enregistrement, soit dans la mémoire de l'ordinateur, soit sur un périphérique de stockage quelconque.</p>
+En informatique, une référence est une valeur permettant d'accéder indirectement à une donnée dans le but de récupérer une variable ou un enregistrement, soit dans la mémoire de l'ordinateur, soit sur un périphérique de stockage quelconque.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Référence (programmation)")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Référence (programmation)")}} sur Wikipédia

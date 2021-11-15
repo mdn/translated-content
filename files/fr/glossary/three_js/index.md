@@ -10,13 +10,11 @@ tags:
 translation_of: Glossary/Three_js
 original_slug: Glossaire/Three_js
 ---
-<p>three.js est un moteur {{Glossary("WebGL")}} en {{Glossary("JavaScript")}} capable d'exécuter directement dans le {{Glossary("Browser","navigateur")}} des jeux exploitant le GPU ainsi que d'autres applications graphiques. La bibliothèque three.js fournit de nombreuses fonctionnalités et {{Glossary("API")}} pour dessiner des scènes 3D dans votre navigateur. </p>
+three.js est un moteur {{Glossary("WebGL")}} en {{Glossary("JavaScript")}} capable d'exécuter directement dans le {{Glossary("Browser","navigateur")}} des jeux exploitant le GPU ainsi que d'autres applications graphiques. La bibliothèque three.js fournit de nombreuses fonctionnalités et {{Glossary("API")}} pour dessiner des scènes 3D dans votre navigateur.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Three.js")}} sur Wikipédia</li>
- <li><a href="http://threejs.org/">Site web officiel de three.js</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Three.js")}} sur Wikipédia
+- [Site web officiel de three.js](http://threejs.org/)

@@ -10,13 +10,14 @@ tags:
 translation_of: Glossary/CSS
 original_slug: Glossaire/CSS
 ---
-<p><strong>CSS</strong> (<em>Cascading Style Sheets </em>ou<em> Feuilles de style en cascade</em> en français) est un langage déclaratif utilisé pour décrire la présentation de pages web dans le {{glossary("Browser","navigateur")}}. Le navigateur applique les déclarations de style CSS aux éléments concernés pour les mettre en forme. Une déclaration de style contient des propriétés et leurs valeurs et détermine l'apparence d'un ou plusieurs éléments de la page.</p>
+**CSS** (_Cascading Style Sheets_ ou _Feuilles de style en cascade_ en français) est un langage déclaratif utilisé pour décrire la présentation de pages web dans le {{glossary("Browser","navigateur")}}. Le navigateur applique les déclarations de style CSS aux éléments concernés pour les mettre en forme. Une déclaration de style contient des propriétés et leurs valeurs et détermine l'apparence d'un ou plusieurs éléments de la page.
 
-<p>CSS est l'une des trois technologies qui constituent le noyau du web, avec {{Glossary("HTML")}} et {{Glossary("JavaScript")}}. Ce langage est principalement utilisé pour appliquer un style aux {{Glossary("Element","éléments HTML")}}, mais peut aussi être utilisé avec d'autres langages de balisage tels que {{Glossary("SVG")}} ou encore {{Glossary("XML")}}.</p>
+CSS est l'une des trois technologies qui constituent le noyau du web, avec {{Glossary("HTML")}} et {{Glossary("JavaScript")}}. Ce langage est principalement utilisé pour appliquer un style aux {{Glossary("Element","éléments HTML")}}, mais peut aussi être utilisé avec d'autres langages de balisage tels que {{Glossary("SVG")}} ou encore {{Glossary("XML")}}.
 
-<p>Une règle CSS est un ensemble de {{Glossary("CSS Property","propriétés")}} associé à un {{Glossary("CSS selector" ,"sélecteur")}}. Voici un exemple dans lequel chaque paragraphe HTML apparaîtra en jaune sur fond noir :</p>
+Une règle CSS est un ensemble de {{Glossary("CSS Property","propriétés")}} associé à un {{Glossary("CSS selector" ,"sélecteur")}}. Voici un exemple dans lequel chaque paragraphe HTML apparaîtra en jaune sur fond noir :
 
-<pre class="brush: css">/* Le sélecteur "p" indique que tous les paragraphes dans le document seront affectés par la règle */
+```css
+/* Le sélecteur "p" indique que tous les paragraphes dans le document seront affectés par la règle */
 p {
   /* La propriété "color" (couleur) définit la couleur du texte. */
   /* Ici, cette couleur sera le jaune (yellow en anglais) */
@@ -25,28 +26,23 @@ p {
   /* La propriété "background-color" (couleur d'arrière-plan) définit la couleur d'arrière-plan */
   /* Ici, cette couleur sera le noir (black) */
   background-color: black;
-}</pre>
+}
+```
 
-<p>Le principe de « cascade » fait référence aux règles de préséance dans l'application des divers {{Glossary("CSS Selector","sélecteurs")}} pointant le même élément de la page. C'est une fonctionnalité particulièrement importante dans la mesure où un site web complexe peut contenir des milliers de règles CSS.</p>
+Le principe de « cascade » fait référence aux règles de préséance dans l'application des divers {{Glossary("CSS Selector","sélecteurs")}} pointant le même élément de la page. C'est une fonctionnalité particulièrement importante dans la mesure où un site web complexe peut contenir des milliers de règles CSS.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="/fr/Apprendre/CSS">Apprendre CSS</a></li>
- <li>{{interwiki("wikipedia","Feuilles_de_style_en_cascade", "Feuilles de style en cascade")}} sur Wikipédia</li>
-</ul>
+- [Apprendre CSS](/fr/Apprendre/CSS)
+- {{interwiki("wikipedia","Feuilles_de_style_en_cascade", "Feuilles de style en cascade")}} sur Wikipédia
 
-<h3 id="Références_techniques">Références techniques</h3>
+### Références techniques
 
-<ul>
- <li><a href="/fr/docs/Web/CSS">Documentation CSS sur MDN</a></li>
- <li><a href="http://www.w3.org/Style/CSS/current-work">Les travaux en cours du Groupe de travail CSS</a> (en)</li>
-</ul>
+- [Documentation CSS sur MDN](/fr/docs/Web/CSS)
+- [Les travaux en cours du Groupe de travail CSS](http://www.w3.org/Style/CSS/current-work) (en)
 
-<h3 id="En_apprendre_plus_sur_CSS">En apprendre plus sur CSS</h3>
+### En apprendre plus sur CSS
 
-<ul>
- <li><a href="http://www.codecademy.com/fr/tracks/web">Cours en ligne sur codecademy.com</a></li>
-</ul>
+- [Cours en ligne sur codecademy.com](http://www.codecademy.com/fr/tracks/web)

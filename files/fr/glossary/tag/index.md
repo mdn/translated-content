@@ -8,19 +8,15 @@ tags:
 translation_of: Glossary/Tag
 original_slug: Glossaire/Balise
 ---
-<p>En {{Glossary("HTML")}} une balise est utilisée pour créer un {{Glossary("element")}}.  Le <strong>nom</strong> d'un élément HTML est le <strong>nom</strong> utilisé dans des chevrons comme par exemple &lt;p&gt; pour un paragraphe.  Notez que le <strong>nom</strong> de la balise fermante est précédé par un caractère barre oblique, "&lt;/p&gt;", et que pour les éléments vides la balise de fin n'est pas nécessaire ni permise. Si les attributs ne sont pas mentionnés, les valeurs par défaut s'appliquent pour chaque cas.</p>
+En {{Glossary("HTML")}} une balise est utilisée pour créer un {{Glossary("element")}}.  Le **nom** d'un élément HTML est le **nom** utilisé dans des chevrons comme par exemple \<p> pour un paragraphe.  Notez que le **nom** de la balise fermante est précédé par un caractère barre oblique, "\</p>", et que pour les éléments vides la balise de fin n'est pas nécessaire ni permise. Si les attributs ne sont pas mentionnés, les valeurs par défaut s'appliquent pour chaque cas.
 
-<h2 id="En_savoir_plus"><strong>En savoir plus</strong></h2>
+## **En savoir plus**
 
-<h3 id="Culture_générale"><strong>Culture générale</strong></h3>
+### **Culture générale**
 
-<ul>
- <li>{{Interwiki("wikipedia", "Élément HTML")}} sur Wikipedia</li>
- <li><a href="http://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html">Balises HTML sur W3 </a></li>
-</ul>
+- {{Interwiki("wikipedia", "Élément HTML")}} sur Wikipedia
+- [Balises HTML sur W3](http://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML">Introduction au HTML</a></li>
-</ul>
+- [Introduction au HTML](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML)

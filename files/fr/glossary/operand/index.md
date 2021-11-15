@@ -7,10 +7,8 @@ tags:
 translation_of: Glossary/Operand
 original_slug: Glossaire/Operand
 ---
-<p>Un <strong>opérande</strong> est la partie d'une instruction qui représente la donnée manipulée par l'{{glossary("Operator","opérateur")}}. Par exemple, lors de l'ajout de deux nombres, les nombres sont les opérandes et "+" est l'opérateur.</p>
+Un **opérande** est la partie d'une instruction qui représente la donnée manipulée par l'{{glossary("Operator","opérateur")}}. Par exemple, lors de l'ajout de deux nombres, les nombres sont les opérandes et "+" est l'opérateur.
 
-<h2 id="Pour_en_savoir_plus">Pour en savoir plus</h2>
+## Pour en savoir plus
 
-<ul>
- <li>{{Interwiki("wikipedia", "Opérande")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Opérande")}} sur Wikipédia

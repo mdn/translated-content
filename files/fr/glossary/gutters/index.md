@@ -8,13 +8,14 @@ tags:
 translation_of: Glossary/Gutters
 original_slug: Glossaire/Gutters
 ---
-<p><strong>Les gouttières (</strong>ou ruelles) sont l'espace entre les pistes de contenu. Elles peuvent être créées en CSS Grid Layout en utilisant les propriétés {{cssxref ("grid-column-gap")}}, {{cssxref ("grid-row-gap")}} ou {{cssxref ("grid-gap" )}}.</p>
+**Les gouttières (**ou ruelles) sont l'espace entre les pistes de contenu. Elles peuvent être créées en CSS Grid Layout en utilisant les propriétés {{cssxref ("grid-column-gap")}}, {{cssxref ("grid-row-gap")}} ou {{cssxref ("grid-gap" )}}.
 
-<p>Dans l'exemple ci-dessous  nous avons une grille de pistes de 3 colonnes et 2 rangées, avec 20 pixels d'écart entre les pistes de colonnes et <code>20 px</code> entre les pistes de lignes.</p>
+Dans l'exemple ci-dessous  nous avons une grille de pistes de 3 colonnes et 2 rangées, avec 20 pixels d'écart entre les pistes de colonnes et `20 px` entre les pistes de lignes.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -22,52 +23,50 @@ original_slug: Glossaire/Gutters
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #fff8f8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3,1.2fr);
   grid-auto-rows: 45%;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div&gt;One&lt;/div&gt;
-   &lt;div&gt;Two&lt;/div&gt;
-   &lt;div&gt;Three&lt;/div&gt;
-   &lt;div&gt;Four&lt;/div&gt;
-   &lt;div&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+</div>
+```
 
-<p>{{ EmbedLiveSample('Exemple', '300', '280') }}</p>
+{{ EmbedLiveSample('Exemple', '300', '280') }}
 
-<p>En terme de dimensionnement de la grille, l'écart agit comme une grille régulière, mais rien ne peut y être placé. L'écart agit comme si la ligne de grille à cet endroit avait gagné une taille supplémentaire, de sorte que tout élément de grille placé après cette ligne commence à la fin de l'écart.</p>
+En terme de dimensionnement de la grille, l'écart agit comme une grille régulière, mais rien ne peut y être placé. L'écart agit comme si la ligne de grille à cet endroit avait gagné une taille supplémentaire, de sorte que tout élément de grille placé après cette ligne commence à la fin de l'écart.
 
-<p>Les propriétés de l'écart de grille ne sont pas la seule chose qui peut provoquer l'espacement des pistes. Les marges, le remplissage ou l'utilisation des propriétés de distribution d'espace pour <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_bo%C3%AEtes_avec_les_grilles_CSS">l'alignement des boîtes</a> peuvent tous contribuer à l'écart visible - donc les propriétés de l'écart de grille ne doivent pas être considérées comme égales à la taille de la gouttière, sauf si vous savez que votre conception n'a pas introduit d'espace supplémentaire avec l'une de ces méthodes.</p>
+Les propriétés de l'écart de grille ne sont pas la seule chose qui peut provoquer l'espacement des pistes. Les marges, le remplissage ou l'utilisation des propriétés de distribution d'espace pour [l'alignement des boîtes](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_bo%C3%AEtes_avec_les_grilles_CSS) peuvent tous contribuer à l'écart visible - donc les propriétés de l'écart de grille ne doivent pas être considérées comme égales à la taille de la gouttière, sauf si vous savez que votre conception n'a pas introduit d'espace supplémentaire avec l'une de ces méthodes.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Références_de_la_propriété">Références de la propriété</h3>
+### Références de la propriété
 
-<ul>
- <li>{{cssxref("grid-column-gap")}}</li>
- <li>{{cssxref("grid-row-gap")}}</li>
- <li>{{cssxref("grid-gap")}}</li>
-</ul>
+- {{cssxref("grid-column-gap")}}
+- {{cssxref("grid-row-gap")}}
+- {{cssxref("grid-gap")}}
 
-<h3 id="En_lire_plus">En lire plus</h3>
+### En lire plus
 
-<ul>
- <li>Guide des grilles CSS : <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base">Les concepts de base des grilles CSS</a></em></li>
- <li><a href="https://drafts.csswg.org/css-grid/#gutters">Définition des gouttières <em>(gutters)</em> dans la spécification des grilles CSS</a> (en)</li>
-</ul>
+- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)_
+- [Définition des gouttières _(gutters)_ dans la spécification des grilles CSS](https://drafts.csswg.org/css-grid/#gutters) (en)

@@ -10,20 +10,18 @@ tags:
 translation_of: Glossary/lossy_compression
 original_slug: Glossaire/compression_avec_perte
 ---
-<p>La<strong> compression</strong> <strong>avec perte</strong>, ou compression irréversible, est une méthode de compression des données qui réalise des approximations inexactes et abandonne une partie des données pour représenter un contenu.</p>
+La **compression** **avec perte**, ou compression irréversible, est une méthode de compression des données qui réalise des approximations inexactes et abandonne une partie des données pour représenter un contenu.
 
-<p>Pour le dire simplement : la compression avec perte entraîne une perte de données du fichier d'origine, entraînant une possible dégradation de sa qualité.</p>
+Pour le dire simplement : la compression avec perte entraîne une perte de données du fichier d'origine, entraînant une possible dégradation de sa qualité.
 
-<p>Le processus de compression est ici irréversible; une fois la compression avec perte réalisée, le contenu ne peut pas retrouver son état initial. C'est pourquoi le contenu ainsi compressé ne devrait plus, en principe, être à nouveau édité.</p>
+Le processus de compression est ici irréversible; une fois la compression avec perte réalisée, le contenu ne peut pas retrouver son état initial. C'est pourquoi le contenu ainsi compressé ne devrait plus, en principe, être à nouveau édité.
 
-<p>La compression avec perte est largement utilisée pour les formats d'image.</p>
+La compression avec perte est largement utilisée pour les formats d'image.
 
-<p><img alt="Lossy compression image" src="2019-11-18.png"></p>
+![Lossy compression image](2019-11-18.png)
 
-<p>Même s'il n'y a pas de différence flagrante de qualité entre les deux images ci-dessus, la taille de la seconde a été considérablement réduite grâce à une compression avec perte.</p>
+Même s'il n'y a pas de différence flagrante de qualité entre les deux images ci-dessus, la taille de la seconde a été considérablement réduite grâce à une compression avec perte.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Glossaire/Compression_sans_perte">Compression sans perte</a></li>
-</ul>
+- [Compression sans perte](/fr/docs/Glossaire/Compression_sans_perte)

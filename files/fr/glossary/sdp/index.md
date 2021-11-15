@@ -11,29 +11,27 @@ tags:
 translation_of: Glossary/SDP
 original_slug: Glossaire/SDP
 ---
-<p><strong>SDP </strong>(Session Description {{glossary("Protocol")}}) est le standard décrivant une connexion {{Glossary("P2P","pair-à-pair")}}. SDP contient le {{Glossary("codec")}}, l'adresse source, et des informations temporelles pour l'audio et la vidéo.</p>
+**SDP** (Session Description {{glossary("Protocol")}}) est le standard décrivant une connexion {{Glossary("P2P","pair-à-pair")}}. SDP contient le {{Glossary("codec")}}, l'adresse source, et des informations temporelles pour l'audio et la vidéo.
 
-<p>Voici un message SDP typique :</p>
+Voici un message SDP typique :
 
-<pre>   v=0
-   o=alice 2890844526 2890844526 IN IP4 host.anywhere.com
-   s=
-   c=IN IP4 host.anywhere.com
-   t=0 0
-   m=audio 49170 RTP/AVP 0
-   a=rtpmap:0 PCMU/8000
-   m=video 51372 RTP/AVP 31
-   a=rtpmap:31 H261/90000
-   m=video 53000 RTP/AVP 32
-   a=rtpmap:32 MPV/90000</pre>
+       v=0
+       o=alice 2890844526 2890844526 IN IP4 host.anywhere.com
+       s=
+       c=IN IP4 host.anywhere.com
+       t=0 0
+       m=audio 49170 RTP/AVP 0
+       a=rtpmap:0 PCMU/8000
+       m=video 51372 RTP/AVP 31
+       a=rtpmap:31 H261/90000
+       m=video 53000 RTP/AVP 32
+       a=rtpmap:32 MPV/90000
 
-<p>SDP n'est jamais employé seul, mais des protocoles comme {{Glossary("RTP")}} et {{Glossary("RTSP")}} l'utilisent. SDP est également un composant de {{Glossary("WebRTC")}}, ce dernier se servant de SDP pour décrire une session.</p>
+SDP n'est jamais employé seul, mais des protocoles comme {{Glossary("RTP")}} et {{Glossary("RTSP")}} l'utilisent. SDP est également un composant de {{Glossary("WebRTC")}}, ce dernier se servant de SDP pour décrire une session.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="/fr/docs/Web/API/WebRTC_API/Protocols">Protocoles WebRTC</a></li>
- <li>{{Interwiki("wikipedia", "Session Description Protocol")}} sur Wikipédia</li>
-</ul>
+- [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
+- {{Interwiki("wikipedia", "Session Description Protocol")}} sur Wikipédia

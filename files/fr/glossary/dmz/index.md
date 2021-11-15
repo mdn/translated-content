@@ -8,20 +8,14 @@ tags:
 translation_of: Glossary/DMZ
 original_slug: Glossaire/DMZ
 ---
-<p>Une DMZ est un moyen de fournir une interface isolée et sécurisée entre un réseau interne (d'entreprise ou privé) et le monde extérieur non fiable, généralement l'Internet. Elle expose uniquement certains points de terminaison définis, tout en refusant l'accès au réseau interne aux {{Glossary('node/networking','noeuds externes')}}.</p>
+Une DMZ est un moyen de fournir une interface isolée et sécurisée entre un réseau interne (d'entreprise ou privé) et le monde extérieur non fiable, généralement l'Internet. Elle expose uniquement certains points de terminaison définis, tout en refusant l'accès au réseau interne aux {{Glossary('node/networking','noeuds externes')}}.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia","Zone_démilitarisée_(informatique)","Zone démilitarisée (informatique)")}} sur Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia","Zone_démilitarisée_(informatique)","Zone démilitarisée (informatique)")}} sur Wikipedia
 
-<h3 id="Apprendre_à_ce_propos">Apprendre à ce propos</h3>
+### Apprendre à ce propos
 
-<ul>
- <li>
-  <p><a href="/fr/Apprendre/website">Serveurs web et pare-feu - Sécurité maximum contre les attaques</a> sur MDN</p>
- </li>
-</ul>
+- [Serveurs web et pare-feu - Sécurité maximum contre les attaques](/fr/Apprendre/website) sur MDN

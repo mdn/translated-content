@@ -9,26 +9,22 @@ tags:
 translation_of: Glossary/User_agent
 original_slug: Glossaire/User_agent
 ---
-<p>Un agent utilisateur est un programme informatique qui représente une personne, par exemple, un {{Glossary("Navigateur","navigateur")}} dans le cadre d'une utilisation sur le {{Glossary("World Wide Web", "Web")}}.</p>
+Un agent utilisateur est un programme informatique qui représente une personne, par exemple, un {{Glossary("Navigateur","navigateur")}} dans le cadre d'une utilisation sur le {{Glossary("World Wide Web", "Web")}}.
 
-<p>En dehors des navigateurs, un agent utilisateur peut être un aspirateur de sites, un gestionnaire de téléchargements ou toute autre application accédant au Web. Les navigateurs, lorsqu'ils effectuent des requêtes vers un serveur, y intègrent un en-tête {{Glossary("HTTP")}} auto-identifiant <code>User-Agent</code> appelé chaîne de caractères user agent (UA). Souvent, cette chaîne identifie le navigateur, son numéro de version ainsi que le système d'exploitation de l'hôte.</p>
+En dehors des navigateurs, un agent utilisateur peut être un aspirateur de sites, un gestionnaire de téléchargements ou toute autre application accédant au Web. Les navigateurs, lorsqu'ils effectuent des requêtes vers un serveur, y intègrent un en-tête {{Glossary("HTTP")}} auto-identifiant `User-Agent` appelé chaîne de caractères user agent (UA). Souvent, cette chaîne identifie le navigateur, son numéro de version ainsi que le système d'exploitation de l'hôte.
 
-<p>Les spambots, gestionnaires de téléchargements et certains navigateurs envoient souvent des chaînes UA falsifiées pour se présenter eux-mêmes comme un client différent. Cette action est nommée <em>user agent spoofing</em>.</p>
+Les spambots, gestionnaires de téléchargements et certains navigateurs envoient souvent des chaînes UA falsifiées pour se présenter eux-mêmes comme un client différent. Cette action est nommée _user agent spoofing_.
 
-<p>Côté client, la chaîne de l'agent utilisateur est accessible en {{Glossary("JavaScript")}} avec <code>navigator.userAgent.</code></p>
+Côté client, la chaîne de l'agent utilisateur est accessible en {{Glossary("JavaScript")}} avec `navigator.userAgent.`
 
-<p>Une chaîne classique d'agent utilisateur ressemble à ceci : <code>"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"</code>. </p>
+Une chaîne classique d'agent utilisateur ressemble à ceci : `"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"`.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://fr.wikipedia.org/wiki/User-agent">Agent utilisateur</a> sur Wikipédia</li>
-</ul>
+- [Agent utilisateur](https://fr.wikipedia.org/wiki/User-agent) sur Wikipédia
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li>En-tête <a href="http://tools.ietf.org/html/rfc2616#section-14.43">User agent</a> dans la RFC 2616</li>
-</ul>
+- En-tête [User agent](http://tools.ietf.org/html/rfc2616#section-14.43) dans la RFC 2616

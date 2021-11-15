@@ -8,11 +8,9 @@ tags:
 translation_of: Glossary/GZip_compression
 original_slug: Glossaire/GZip_compression
 ---
-<p>gzip est un algorithme de compression qui permet de réduire la taille des fichiers, ce qui permet des transferts réseau plus rapides. Il est généralement pris en charge par les serveurs Web et les navigateurs modernes, ce qui signifie que les serveurs peuvent compresser automatiquement les fichiers avec gzip avant de les envoyer, et les navigateurs peuvent décompresser les fichiers lors de leur réception.</p>
+gzip est un algorithme de compression qui permet de réduire la taille des fichiers, ce qui permet des transferts réseau plus rapides. Il est généralement pris en charge par les serveurs Web et les navigateurs modernes, ce qui signifie que les serveurs peuvent compresser automatiquement les fichiers avec gzip avant de les envoyer, et les navigateurs peuvent décompresser les fichiers lors de leur réception.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<ul>
- <li><a href="https://varvy.com/pagespeed/enable-compression.html">Enable gzip compression?</a></li>
- <li><a href="https://fr.wikipedia.org/wiki/Gzip">Gzip sur Wikipedia</a></li>
-</ul>
+- [Enable gzip compression?](https://varvy.com/pagespeed/enable-compression.html)
+- [Gzip sur Wikipedia](https://fr.wikipedia.org/wiki/Gzip)

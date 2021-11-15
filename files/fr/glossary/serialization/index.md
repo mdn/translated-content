@@ -10,16 +10,14 @@ tags:
 translation_of: Glossary/Serialization
 original_slug: Glossaire/Sérialisation
 ---
-<p>Le processus par lequel un objet ou une structure de données est traduit dans un format approprié pour un transfert sur un réseau, ou un stockage (par exemple dans un tampon de tableau ou un format de fichier).</p>
+Le processus par lequel un objet ou une structure de données est traduit dans un format approprié pour un transfert sur un réseau, ou un stockage (par exemple dans un tampon de tableau ou un format de fichier).
 
-<p>Dans {{Glossary("JavaScript")}}, par exemple, vous pouvez sérialiser un objet d'une {{Glossary("string","chaîne de caractères")}} {{Glossary("JSON")}} par appel de la {{Glossary("function","fonction")}} {{jsxref("JSON.stringify()")}}.</p>
+Dans {{Glossary("JavaScript")}}, par exemple, vous pouvez sérialiser un objet d'une {{Glossary("string","chaîne de caractères")}} {{Glossary("JSON")}} par appel de la {{Glossary("function","fonction")}} {{jsxref("JSON.stringify()")}}.
 
-<p>Les valeurs de {{Glossary("CSS")}} sont sérialisées par appel de la fonction {{domxref("CSSStyleDeclaration.getPropertyValue()")}}.</p>
+Les valeurs de {{Glossary("CSS")}} sont sérialisées par appel de la fonction {{domxref("CSSStyleDeclaration.getPropertyValue()")}}.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://fr.wikipedia.org/wiki/S%C3%A9rialisation">Sérialisation</a> sur Wikipedia</li>
-</ul>
+- [Sérialisation](https://fr.wikipedia.org/wiki/S%C3%A9rialisation) sur Wikipedia

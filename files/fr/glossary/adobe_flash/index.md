@@ -8,14 +8,12 @@ tags:
 translation_of: Glossary/Adobe_Flash
 original_slug: Glossaire/Adobe_Flash
 ---
-<p><em>Adobe Flash</em> est une technologie obsolescente, développée par Adobe Systems, qui permet de créer des applications internet riches, des graphiques vectoriels et des applications multimédias. Pour utiliser Flash au sein d'un {{Glossary("Browser","navigateur web")}}, vous devez installer le plugin adéquat.</p>
+_Adobe Flash_ est une technologie obsolescente, développée par Adobe Systems, qui permet de créer des applications internet riches, des graphiques vectoriels et des applications multimédias. Pour utiliser Flash au sein d'un {{Glossary("Browser","navigateur web")}}, vous devez installer le plugin adéquat.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="http://www.adobe.com/fr">Site officiel d'Adobe</a></li>
- <li><a href="https://mozilla.github.io/shumway/">Shumway</a>, une implémentation libre par Mozilla</li>
- <li><a href="http://gnashdev.org/">Présentation du projet Gnash </a>sur Sourceforge, une implémentation libre par GNU.</li>
-</ul>
+- [Site officiel d'Adobe](http://www.adobe.com/fr)
+- [Shumway](https://mozilla.github.io/shumway/), une implémentation libre par Mozilla
+- [Présentation du projet Gnash ](http://gnashdev.org/)sur Sourceforge, une implémentation libre par GNU.

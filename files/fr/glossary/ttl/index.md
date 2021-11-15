@@ -7,36 +7,26 @@ tags:
 translation_of: Glossary/TTL
 original_slug: Glossaire/TTL
 ---
-<p>TTL peut se référer soit à :</p>
+TTL peut se référer soit à :
 
-<ul>
- <li>la durée de vie d'un paquet dans un réseau (avant de pouvoir être libéré)</li>
- <li>l'heure d'expiration des données mises en cache</li>
-</ul>
+- la durée de vie d'un paquet dans un réseau (avant de pouvoir être libéré)
+- l'heure d'expiration des données mises en cache
 
-<h2 id="Dans_le_réseau">Dans le réseau</h2>
+## Dans le réseau
 
-<p>Le TTL, intégré dans le paquet, est généralement défini comme un nombre de sauts ou comme un horodatage d'expiration au-delà duquel le paquet est abandonné. Il offre un moyen d'éviter la congestion du réseau et de libérer des paquets après qu'ils ont parcouru le réseau trop longtemps.</p>
+Le TTL, intégré dans le paquet, est généralement défini comme un nombre de sauts ou comme un horodatage d'expiration au-delà duquel le paquet est abandonné. Il offre un moyen d'éviter la congestion du réseau et de libérer des paquets après qu'ils ont parcouru le réseau trop longtemps.
 
-<h2 id="Mise_en_cache">Mise en cache</h2>
+## Mise en cache
 
-<p>Dans le contexte du cache, TTL (en tant qu'entier non signé de 32 bits) fait partie de l'{{Glossary("Response header","en-tête de réponse HTTP")}} ou de la requête {{Glossary("DNS")}}, indique la durée en secondes pendant laquelle la ressource peut être mise en cache par le demandeur.</p>
+Dans le contexte du cache, TTL (en tant qu'entier non signé de 32 bits) fait partie de l'{{Glossary("Response header","en-tête de réponse HTTP")}} ou de la requête {{Glossary("DNS")}}, indique la durée en secondes pendant laquelle la ressource peut être mise en cache par le demandeur.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia","Time_to_Live", "Time to Live")}} sur Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia","Time_to_Live", "Time to Live")}} sur Wikipedia
 
-<h3 id="Références_techniques">Références techniques</h3>
+### Références techniques
 
-<ul>
- <li>
-  <p><a href="https://tools.ietf.org/html/rfc2181#section-8">RFC 2181</a> sur IETF (en)</p>
- </li>
- <li>
-  <p><a href="https://tools.ietf.org/html/rfc1035">RFC1035</a> sur IETF (en)</p>
- </li>
-</ul>
+- [RFC 2181](https://tools.ietf.org/html/rfc2181#section-8) sur IETF (en)
+- [RFC1035](https://tools.ietf.org/html/rfc1035) sur IETF (en)

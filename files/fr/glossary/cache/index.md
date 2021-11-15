@@ -7,12 +7,10 @@ tags:
 translation_of: Glossary/Cache
 original_slug: Glossaire/Cache
 ---
-<p>Un <strong>cache </strong>(cache web ou cache HTTP) est un composant stockant temporairement les réponses HTTP dans le but de les réutiliser lors de requêtes HTTP ultérieures, tant qu'elles remplissent certaines conditions.</p>
+Un **cache** (cache web ou cache HTTP) est un composant stockant temporairement les réponses HTTP dans le but de les réutiliser lors de requêtes HTTP ultérieures, tant qu'elles remplissent certaines conditions.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{interwiki("wikipedia", "Cache web")}} sur Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Cache web")}} sur Wikipedia

@@ -7,12 +7,10 @@ tags:
 translation_of: Glossary/Shim
 original_slug: Glossaire/Shim
 ---
-<p>Un <strong>shim</strong> est un morceau de code utilisé pour corriger le comportement du code qui existe déjà, généralement en ajoutant une nouvelle API qui contourne le problème. Cela diffère d'un {{Glossary("polyfill")}} qui implémente une nouvelle API non supportée par le navigateur de stock tel qu'il est livré.</p>
+Un **shim** est un morceau de code utilisé pour corriger le comportement du code qui existe déjà, généralement en ajoutant une nouvelle API qui contourne le problème. Cela diffère d'un {{Glossary("polyfill")}} qui implémente une nouvelle API non supportée par le navigateur de stock tel qu'il est livré.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Shim (computing)", "Shim")}} sur Wikipedia (en)</li>
-</ul>
+- {{Interwiki("wikipedia", "Shim (computing)", "Shim")}} sur Wikipedia (en)

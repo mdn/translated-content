@@ -7,21 +7,17 @@ tags:
 translation_of: Glossary/Null
 original_slug: Glossaire/Null
 ---
-<p>En informatique, une valeur <strong><code>null</code></strong> représente une référence qui pointe, en général de manière volontaire, vers un {{glossary("objet")}} ou une adresse invalide ou inexistant. La signification d'une référence nulle varie selon les implémentations des langages.</p>
+En informatique, une valeur **`null`** représente une référence qui pointe, en général de manière volontaire, vers un {{glossary("objet")}} ou une adresse invalide ou inexistant. La signification d'une référence nulle varie selon les implémentations des langages.
 
-<p>En {{Glossary("JavaScript")}}, null est l'une des {{Glossary("Primitive", "valeurs primitives")}}.</p>
+En {{Glossary("JavaScript")}}, null est l'une des {{Glossary("Primitive", "valeurs primitives")}}.
 
-<h2 id="Pour_en_savoir_plus">Pour en savoir plus</h2>
+## Pour en savoir plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Null")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Null")}} sur Wikipédia
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Structures_de_données">Types et structures de données en JavaScript</a></li>
- <li>L'objet JavaScript global : {{jsxref("null")}}</li>
-</ul>
+- [Types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Structures_de_données)
+- L'objet JavaScript global : {{jsxref("null")}}

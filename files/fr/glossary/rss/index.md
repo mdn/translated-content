@@ -10,18 +10,14 @@ tags:
 translation_of: Glossary/RSS
 original_slug: Glossaire/RSS
 ---
-<p><strong>RSS</strong> (Really Simple Syndication) désigne plusieurs formats de documents XML conçus pour annoncer des mises à jour de sites. Lorsque vous vous inscrivez au flux RSS d'un site web, ce dernier envoie des informations et annonces de mises à jour à votre lecteur RSS dans un document RSS appelé un <em>flux</em>, la consultation manuelle de tous vos sites préférés n'est donc plus nécessaire.</p>
+**RSS** (Really Simple Syndication) désigne plusieurs formats de documents XML conçus pour annoncer des mises à jour de sites. Lorsque vous vous inscrivez au flux RSS d'un site web, ce dernier envoie des informations et annonces de mises à jour à votre lecteur RSS dans un document RSS appelé un _flux_, la consultation manuelle de tous vos sites préférés n'est donc plus nécessaire.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "RSS")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "RSS")}} sur Wikipédia
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="http://www.rssboard.org/rss-specification">La spécification la plus récente</a></li>
-</ul>
+- [La spécification la plus récente](http://www.rssboard.org/rss-specification)

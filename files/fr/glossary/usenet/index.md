@@ -7,14 +7,12 @@ tags:
 translation_of: Glossary/Usenet
 original_slug: Glossaire/Usenet
 ---
-<p>Usenet est un système de discussion sur internet où chaque message est dupliqué sur plusieurs serveurs. Équivalent aux forums Internet actuels, Usenet fonctionnait comme un bulletin board system.</p>
+Usenet est un système de discussion sur internet où chaque message est dupliqué sur plusieurs serveurs. Équivalent aux forums Internet actuels, Usenet fonctionnait comme un bulletin board system.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale"><strong>Culture générale</strong></h3>
+### **Culture générale**
 
-<div> </div>
 
-<ul>
- <li>{{Interwiki("wikipedia", "Usenet")}} sur Wikipédia</li>
-</ul>
+
+- {{Interwiki("wikipedia", "Usenet")}} sur Wikipédia

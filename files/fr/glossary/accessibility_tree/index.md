@@ -9,33 +9,26 @@ tags:
   - Reference
 translation_of: Glossary/Accessibility_tree
 ---
-<p>L'<strong>arbre d'accessibilité</strong>, ou <strong>modèle d'objets d'accessibilité</strong> (<strong>MOA</strong>), contient des informations concernant l'{{Glossary("accessibility")}} pour la plupart des éléments HTML.</p>
+L'**arbre d'accessibilité**, ou **modèle d'objets d'accessibilité** (**MOA**), contient des informations concernant l'{{Glossary("accessibility")}} pour la plupart des éléments HTML.
 
-<p>Les navigateurs convertissent le balisage en une représentation interne appelée <a href="/fr/docs/Comment_créer_un_arbre_DOM">arbre DOM</a>. Le DOM contient un objet pour chaque balise, attribut et noeud de texte. Les navigateurs créent ensuite un arbre d'accessibilité basé sur l'arbre DOM, celui-ci est utilisé par les technologies d'assistance telles que les lecteurs d'écran via des APIs spécifiques à une plateforme.</p>
+Les navigateurs convertissent le balisage en une représentation interne appelée [arbre DOM](/fr/docs/Comment_créer_un_arbre_DOM). Le DOM contient un objet pour chaque balise, attribut et noeud de texte. Les navigateurs créent ensuite un arbre d'accessibilité basé sur l'arbre DOM, celui-ci est utilisé par les technologies d'assistance telles que les lecteurs d'écran via des APIs spécifiques à une plateforme.
 
-<p>Un objet de l'arbre d'accessibilité contient quatre éléments :</p>
+Un objet de l'arbre d'accessibilité contient quatre éléments :
 
-<dl>
- <dt><strong>name</strong></dt>
- <dd>Comment peut-on faire référence à cet élément ? Par exemple, pour un lien contenant le texte "Lire la suite" name contiendra 'Lire la suite' (pour en savoir plus sur la façon dont la valeur de name est déterminée voir la spécification suivante : <a href="https://www.w3.org/TR/accname-1.1/">Accessible Name and Description Computation</a>).</dd>
- <dt><strong>description</strong></dt>
- <dd>Comment peut-on décrire cet élément si l'on veut apporter une information en plus de son nom ? La description d'un tableau pourrait expliquer quel genre d'information ce tableau apporte.</dd>
- <dt><strong>role</strong></dt>
- <dd>Quel genre de chose est cet élément ? Par exemple est-ce un bouton, une barre de navigation ou une liste d'éléments ?</dd>
- <dt><strong>state</strong></dt>
- <dd>A-t-il un état ? Pensez à coché/décoché pour les checkboxes, ou plié/déplié pour l'élément <code><a href="/fr/docs/Web/HTML/Element/summary">&lt;summary&gt;</a></code>.</dd>
-</dl>
+- **name**
+  - : Comment peut-on faire référence à cet élément ? Par exemple, pour un lien contenant le texte "Lire la suite" name contiendra 'Lire la suite' (pour en savoir plus sur la façon dont la valeur de name est déterminée voir la spécification suivante : [Accessible Name and Description Computation](https://www.w3.org/TR/accname-1.1/)).
+- **description**
+  - : Comment peut-on décrire cet élément si l'on veut apporter une information en plus de son nom ? La description d'un tableau pourrait expliquer quel genre d'information ce tableau apporte.
+- **role**
+  - : Quel genre de chose est cet élément ? Par exemple est-ce un bouton, une barre de navigation ou une liste d'éléments ?
+- **state**
+  - : A-t-il un état ? Pensez à coché/décoché pour les checkboxes, ou plié/déplié pour l'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary).
 
-<p>De plus, l'arbre d'accessibilité contient souvent des informations concernant ce qui peut être fait avec un élément : un lien peut être <em>suivi,</em> on peut <em>écrire dans</em> un champ texte etc.</p>
+De plus, l'arbre d'accessibilité contient souvent des informations concernant ce qui peut être fait avec un élément : un lien peut être _suivi,_ on peut _écrire dans_ un champ texte etc.
 
-<h2>Voir aussi</h2>
+## Voir aussi
 
-<ol>
- <li><a href="/fr/docs/Glossaire">Glossaire</a>
+1.  [Glossaire](/fr/docs/Glossaire)
 
-  <ol>
-   <li>{{Glossary("Accessibility")}}</li>
-   <li>{{Glossary("ARIA")}}</li>
-  </ol>
- </li>
-</ol>
+    1.  {{Glossary("Accessibility")}}
+    2.  {{Glossary("ARIA")}}

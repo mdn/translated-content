@@ -9,11 +9,12 @@ tags:
 translation_of: Glossary/Callback_function
 original_slug: Glossaire/Fonction_de_rappel
 ---
-<p>Une fonction de rappel (aussi appelée <em>callback</em> en anglais) est une fonction passée dans une autre fonction en tant qu'argument, qui est ensuite invoquée à l'intérieur de la fonction externe pour accomplir une sorte de routine ou d'action.</p>
+Une fonction de rappel (aussi appelée _callback_ en anglais) est une fonction passée dans une autre fonction en tant qu'argument, qui est ensuite invoquée à l'intérieur de la fonction externe pour accomplir une sorte de routine ou d'action.
 
-<p>Voici un rapide exemple :</p>
+Voici un rapide exemple :
 
-<pre class="brush: js">function salutation(name) {
+```js
+function salutation(name) {
   alert('Bonjour ' + name);
 }
 
@@ -22,21 +23,18 @@ function processUserInput(callback) {
   callback(name);
 }
 
-processUserInput(salutation);</pre>
+processUserInput(salutation);
+```
 
-<p>L' exemple ci-dessus est un rappel {{glossary("synchronous","synchrone")}} et il est exécuté immédiatement.</p>
+L' exemple ci-dessus est un rappel {{glossary("synchronous","synchrone")}} et il est exécuté immédiatement.
 
-<p>Notez cependant que les rappels sont souvent utilisés pour continuer l'exécution de code après l'achèvement d'une opération {{glossary("asynchronous","asynchrone")}} — ceux-ci sont appelés les rappels asynchrones. Dans l'exemple <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html">xhr-async-callback</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html">voir aussi en direct</a>), on utilise la fonction <code>displayImage</code> comme une fonction de rappel pour la fonction <code>loadAsset</code> (cette dernière récupère l'image via une requête <a href="/fr/docs/Glossaire/XHR_(XMLHttpRequest)">XHR</a>).</p>
+Notez cependant que les rappels sont souvent utilisés pour continuer l'exécution de code après l'achèvement d'une opération {{glossary("asynchronous","asynchrone")}} — ceux-ci sont appelés les rappels asynchrones. Dans l'exemple [xhr-async-callback](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html) ([voir aussi en direct](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html)), on utilise la fonction `displayImage` comme une fonction de rappel pour la fonction `loadAsset` (cette dernière récupère l'image via une requête [XHR](</fr/docs/Glossaire/XHR_(XMLHttpRequest)>)).
 
-<p>Exécuté de cette façon, asynchrone via l'API Web <code><a href="/fr/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code>, le chargement de l'image ne bloque pas le reste du contenu.</p>
+Exécuté de cette façon, asynchrone via l'API Web [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), le chargement de l'image ne bloque pas le reste du contenu.
 
-<h2 id="En_apprendre_plus"><strong>En apprendre plus</strong></h2>
+## **En apprendre plus**
 
-<h3 id="Culture_générale"><strong>Culture générale</strong></h3>
+### **Culture générale**
 
-<ul>
- <li>{{interwiki("wikipedia","Fonction_de_rappel","Fonction de rappel")}} sur Wikipedia</li>
- <li>
-  <p><a href="https://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/">Comprendre les fonctions de rappel JavaScript et les utiliser</a> (en anglais).</p>
- </li>
-</ul>
+- {{interwiki("wikipedia","Fonction_de_rappel","Fonction de rappel")}} sur Wikipedia
+- [Comprendre les fonctions de rappel JavaScript et les utiliser](https://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/) (en anglais).

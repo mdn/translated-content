@@ -7,22 +7,18 @@ tags:
 translation_of: Glossary/MIME_type
 original_slug: Glossaire/Type_MIME
 ---
-<p>Un <strong>type MIME </strong>(désormais correctement appelé "media type", mais aussi parfois "content type") est une chaîne de caractères envoyée avec un fichier pour en indiquer le type (par exemple, un fichier sonore sera étiqueté <code>audio/ogg</code> ou un fichier graphique <code>image/png</code>).</p>
+Un **type MIME** (désormais correctement appelé "media type", mais aussi parfois "content type") est une chaîne de caractères envoyée avec un fichier pour en indiquer le type (par exemple, un fichier sonore sera étiqueté `audio/ogg` ou un fichier graphique `image/png`).
 
-<p>Il répond au même objectif que les extensions de fichiers traditionnellement utilisées sous Windows. Le nom vient de la norme MIME initialement utilisée dans E-Mail.</p>
+Il répond au même objectif que les extensions de fichiers traditionnellement utilisées sous Windows. Le nom vient de la norme MIME initialement utilisée dans E-Mail.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{interwiki("wikipedia", "Type MIME", "Internet media type")}} sur Wikipédia</li>
-</ul>
+- {{interwiki("wikipedia", "Type MIME", "Internet media type")}} sur Wikipédia
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">Liste des types MIME</a></li>
- <li><a href="/fr/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types">Configurer correctement les types MIME sur un serveur</a></li>
- <li>Détails sur l'utilisation des <a href="/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types">types MIME</a> dans un contexte Web.</li>
-</ul>
+- [Liste des types MIME](http://www.iana.org/assignments/media-types/media-types.xhtml)
+- [Configurer correctement les types MIME sur un serveur](/fr/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types)
+- Détails sur l'utilisation des [types MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types) dans un contexte Web.

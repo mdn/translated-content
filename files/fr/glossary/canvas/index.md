@@ -10,27 +10,21 @@ tags:
 translation_of: Glossary/Canvas
 original_slug: Glossaire/Canvas
 ---
-<p>L'élément {{Glossary("HTML")}} <em>{{HTMLElement("canvas")}}</em> fournit une zone graphique vide sur laquelle des {{Glossary("API","API")}} {{Glossary("JavaScript")}} spécifiques peuvent dessiner (telles que des Canvas 2D ou du {{Glossary("WebGL")}}) .</p>
+L'élément {{Glossary("HTML")}} _{{HTMLElement("canvas")}}_ fournit une zone graphique vide sur laquelle des {{Glossary("API","API")}} {{Glossary("JavaScript")}} spécifiques peuvent dessiner (telles que des Canvas 2D ou du {{Glossary("WebGL")}}) .
 
-<h2 id="En_savoir_plus">En savoir plus</h2>
+## En savoir plus
 
-<h3 id="Culture_Générale">Culture Générale</h3>
+### Culture Générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Canvas element", "Canvas")}} sur Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Canvas element", "Canvas")}} sur Wikipedia
 
-<h3 id="Apprentissage">Apprentissage</h3>
+### Apprentissage
 
-<ul>
- <li><a href="/fr/docs/Tutoriel_canvas">Tutoriel Canvas</a> sur MDN</li>
-</ul>
+- [Tutoriel Canvas](/fr/docs/Tutoriel_canvas) sur MDN
 
-<h3 id="Informations_techniques">Informations techniques</h3>
+### Informations techniques
 
-<ul>
- <li>L'élément {{HTMLElement("canvas")}} sur MDN</li>
- <li><a href="/fr/docs/Web/HTML/Canvas">La documentation générale des Canvas</a> sur MDN</li>
- <li>{{domxref("CanvasRenderingContext2D")}}: l'API pour dessiner des canvas 2D</li>
- <li><a href="http://www.w3.org/TR/2dcontext/">Spécification API Canvas 2D</a></li>
-</ul>
+- L'élément {{HTMLElement("canvas")}} sur MDN
+- [La documentation générale des Canvas](/fr/docs/Web/HTML/Canvas) sur MDN
+- {{domxref("CanvasRenderingContext2D")}}: l'API pour dessiner des canvas 2D
+- [Spécification API Canvas 2D](http://www.w3.org/TR/2dcontext/)

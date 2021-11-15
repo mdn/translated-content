@@ -10,19 +10,15 @@ tags:
 translation_of: Glossary/Variable
 original_slug: Glossaire/Variable
 ---
-<p>Une variable est un emplacement nommé pour conserver une {{Glossary("Value", "valeur")}}. Ainsi, il est possible d'accéder à une valeur quelconque par l'intermédiaire d'un nom prédéterminé.</p>
+Une variable est un emplacement nommé pour conserver une {{Glossary("Value", "valeur")}}. Ainsi, il est possible d'accéder à une valeur quelconque par l'intermédiaire d'un nom prédéterminé.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Variable (informatique)")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Variable (informatique)")}} sur Wikipédia
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Déclarations">Déclaration de variables en JavaScript</a></li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Instructions/var"><code>Instruction var</code> en JavaScript</a></li>
-</ul>
+- [Déclaration de variables en JavaScript](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Déclarations)
+- [`Instruction var` en JavaScript](/fr/docs/Web/JavaScript/Reference/Instructions/var)

@@ -8,13 +8,11 @@ tags:
 translation_of: Glossary/Compile_time
 original_slug: Glossaire/Moment_de_compilation
 ---
-<p>Le <em>moment de compilation</em> est le moment allant du premier chargement du programme jusqu'à la fin de son {{Glossary("parse","analyse syntaxique")}}.</p>
+Le _moment de compilation_ est le moment allant du premier chargement du programme jusqu'à la fin de son {{Glossary("parse","analyse syntaxique")}}.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Compile time")}} sur Wikipédia (anglais)</li>
- <li><a href="https://en.wikipedia.org/wiki/Compile_time">Compile Time</a> sur Wikipédia(anglais)</li>
-</ul>
+- {{Interwiki("wikipedia", "Compile time")}} sur Wikipédia (anglais)
+- [Compile Time](https://en.wikipedia.org/wiki/Compile_time) sur Wikipédia(anglais)

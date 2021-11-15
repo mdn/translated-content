@@ -7,12 +7,10 @@ tags:
 translation_of: Glossary/Media
 original_slug: Glossaire/Media
 ---
-<p>Le terme <strong>média</strong> est surchargé quand on parle du Web ; il prend des significations différentes selon le contexte.</p>
+Le terme **média** est surchargé quand on parle du Web ; il prend des significations différentes selon le contexte.
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}
 
-<h2 id="Apprendre_plus">Apprendre plus</h2>
+## Apprendre plus
 
-<ul>
- <li>{{interwiki("wikipedia", "Media")}} on Wikipedia</li>
-</ul>
+- {{interwiki("wikipedia", "Media")}} on Wikipedia

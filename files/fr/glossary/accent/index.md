@@ -1,22 +1,20 @@
 ---
 title: Accentuation
 slug: Glossary/accent
-translation_of: 'Glossary/accent'
+translation_of: Glossary/accent
 ---
-<p>Une <strong>accentuation</strong> est une couleur généralement vive qui contraste avec les couleurs d'arrière-plan et de premier plan plus utilitaires d'un jeu de couleurs. Celles-ci sont présentes dans le style visuel de nombreuses plates-formes (mais pas toutes).</p>
+Une **accentuation** est une couleur généralement vive qui contraste avec les couleurs d'arrière-plan et de premier plan plus utilitaires d'un jeu de couleurs. Celles-ci sont présentes dans le style visuel de nombreuses plates-formes (mais pas toutes).
 
-<p>Sur le Web, une accentuation est parfois utilisée dans les éléments <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> pour la partie active du contrôle, par exemple l'arrière-plan d'une <a href="/fr/docs/Web/HTML/Element/Input/checkbox">case cochée</a> (« <i>checkbox</i> » en anglais).</p>
+Sur le Web, une accentuation est parfois utilisée dans les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) pour la partie active du contrôle, par exemple l'arrière-plan d'une [case cochée](/fr/docs/Web/HTML/Element/Input/checkbox) (« _checkbox_ » en anglais).
 
-<h2 id="Learn_more">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="CSS_related_to_the_accent">CSS lié à l'accentuation</h3>
+### CSS lié à l'accentuation
 
-<p>Vous pouvez définir la couleur d'accentuation pour un élément donné en définissant la propriété CSS <a href="/fr/docs/Web/CSS/accent-color"><code>accent-color</code></a> de l'élément sur la valeur <a href="/fr/docs/Web/CSS/color_value"><code>&lt;color&gt</code></a> appropriée.</p>
+Vous pouvez définir la couleur d'accentuation pour un élément donné en définissant la propriété CSS [`accent-color`](/fr/docs/Web/CSS/accent-color) de l'élément sur la valeur [`<color>`](/fr/docs/Web/CSS/color_value) appropriée.
 
-<h3 id="HTML_elements_that_may_present_an_accent">Éléments HTML pouvant avoir une accentuation</h3>
+### Éléments HTML pouvant avoir une accentuation
 
-<ul>
-  <li><code><a href="/fr/docs/Web/HTML/Element/Input/checkbox">&lt;input type="checkbox"&gt;</a></code></li>
-  <li><code><a href="/fr/docs/Web/HTML/Element/Input/radio">&lt;input type="radio"&gt;</a></code></li>
-  <li><code><a href="/fr/docs/Web/HTML/Element/Input/range">&lt;input type="range"&gt;</a></code></li>
-</ul>
+- [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/Input/checkbox)
+- [`<input type="radio">`](/fr/docs/Web/HTML/Element/Input/radio)
+- [`<input type="range">`](/fr/docs/Web/HTML/Element/Input/range)

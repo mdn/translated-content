@@ -9,14 +9,12 @@ tags:
 translation_of: Glossary/firewall
 original_slug: Glossaire/pare-feu
 ---
-<p>Un <strong>pare-feu </strong>est un système qui filtre les connexions réseaux. Il peut aussi bien les autoriser à passer que les bloquer en fonction de certaines règles spécifiques. Par exemple, il peut bloquer une connexion entrante sur un certain port ou des connexions sortantes vers une certaine adresse IP.</p>
+Un **pare-feu** est un système qui filtre les connexions réseaux. Il peut aussi bien les autoriser à passer que les bloquer en fonction de certaines règles spécifiques. Par exemple, il peut bloquer une connexion entrante sur un certain port ou des connexions sortantes vers une certaine adresse IP.
 
-<p>Les pare-feu peuvent être un simple composant logiciel ou se présenter sous la forme d'une machine dédiée dont la seule fonction est d'agir en tant que pare-feu.</p>
+Les pare-feu peuvent être un simple composant logiciel ou se présenter sous la forme d'une machine dédiée dont la seule fonction est d'agir en tant que pare-feu.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Pare-feu (informatique)")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Pare-feu (informatique)")}} sur Wikipédia

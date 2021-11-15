@@ -7,14 +7,12 @@ tags:
 translation_of: Glossary/Parser
 original_slug: Glossaire/Parser
 ---
-<p>Le module d'un compilateur ou d'un interprête qui effectue<strong> l'</strong>{{glossary("parse","analyse syntaxique")}} d'un fichier de code source.</p>
+Le module d'un compilateur ou d'un interprête qui effectue **l'**{{glossary("parse","analyse syntaxique")}} d'un fichier de code source.
 
-<p>Plus généralement, c'est une partie de logiciel qui analyse des textes et transforme leur contenu en une autre représentation.</p>
+Plus généralement, c'est une partie de logiciel qui analyse des textes et transforme leur contenu en une autre représentation.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="http://fr.wikipedia.org/wiki/Analyse_syntaxique">Analyse syntaxique</a> sur Wikipédia</li>
-</ul>
+- [Analyse syntaxique](http://fr.wikipedia.org/wiki/Analyse_syntaxique) sur Wikipédia

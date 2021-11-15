@@ -10,12 +10,10 @@ tags:
 translation_of: Glossary/Instance
 original_slug: Glossaire/Instance
 ---
-<p>Un {{glossary("objet")}} créé par un {{glossary("constructeur")}} est une instance de ce constructeur.</p>
+Un {{glossary("objet")}} créé par un {{glossary("constructeur")}} est une instance de ce constructeur.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{interwiki("wikipedia", "Instance (programmation)", "Instance")}} sur Wikipédia</li>
-</ul>
+- {{interwiki("wikipedia", "Instance (programmation)", "Instance")}} sur Wikipédia

@@ -7,13 +7,11 @@ tags:
 translation_of: Glossary/OpenSSL
 original_slug: Glossaire/OpenSSL
 ---
-<p>OpenSSL est une implémentation open source de {{glossary("SSL")}} et de {{glossary("TLS")}}.</p>
+OpenSSL est une implémentation open source de {{glossary("SSL")}} et de {{glossary("TLS")}}.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "OpenSSL")}} sur Wikipédia</li>
- <li><a href="http://www.openssl.org/">Site web officiel</a></li>
-</ul>
+- {{Interwiki("wikipedia", "OpenSSL")}} sur Wikipédia
+- [Site web officiel](http://www.openssl.org/)

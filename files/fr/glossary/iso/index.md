@@ -10,12 +10,10 @@ tags:
 translation_of: Glossary/ISO
 original_slug: Glossaire/ISO
 ---
-<p><strong>ISO </strong>(International Organization for Standardization) est une organisation internationale qui développe des critères uniformisés coordonnant les entreprises de chaque principal secteur.</p>
+**ISO** (International Organization for Standardization) est une organisation internationale qui développe des critères uniformisés coordonnant les entreprises de chaque principal secteur.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="http://www.iso.org/iso/fr/home.html">Site web officiel</a></li>
-</ul>
+- [Site web officiel](http://www.iso.org/iso/fr/home.html)

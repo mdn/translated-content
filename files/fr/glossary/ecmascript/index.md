@@ -7,18 +7,14 @@ tags:
 translation_of: Glossary/ECMAScript
 original_slug: Glossaire/ECMAScript
 ---
-<p><strong>ECMAScript</strong> est le langage de script sur lequel {{glossary("JavaScript")}} est basé. <a href="http://www.ecma-international.org">Ecma International</a> a pour tâche la standardisation d'ECMAScript.</p>
+**ECMAScript** est le langage de script sur lequel {{glossary("JavaScript")}} est basé. [Ecma International](http://www.ecma-international.org) a pour tâche la standardisation d'ECMAScript.
 
-<h2 id="Pour_en_savoir_plus">Pour en savoir plus</h2>
+## Pour en savoir plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "ECMAScript")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "ECMAScript")}} sur Wikipédia
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="http://www.ecmascript.org/">ECMAScript</a></li>
-</ul>
+- [ECMAScript](http://www.ecmascript.org/)

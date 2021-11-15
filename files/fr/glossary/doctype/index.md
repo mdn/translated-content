@@ -11,17 +11,15 @@ tags:
 translation_of: Glossary/Doctype
 original_slug: Glossaire/Doctype
 ---
-<p>En {{Glossary("HTML")}}, le doctype est le préambule "<code>&lt;! DOCTYPE html&gt;</code>" requis en haut de tous les documents. Son seul but est d'empêcher un {{Glossary("Browser","navigateur")}} de passer en soi-disant  <a href="/fr/docs/Mode_quirks_de_Mozilla">“quirks mode”</a>  lors du rendu d'un document ;  c'est-à-dire que le doctype "<code>&lt;!DOCTYPE html&gt;</code>" garantit que le navigateur fait de son mieux pour suivre les spécifications pertinentes, plutôt que d'utiliser un mode de rendu différent incompatible avec certaines spécifications.</p>
+En {{Glossary("HTML")}}, le doctype est le préambule "`<! DOCTYPE html>`" requis en haut de tous les documents. Son seul but est d'empêcher un {{Glossary("Browser","navigateur")}} de passer en soi-disant [“quirks mode”](/fr/docs/Mode_quirks_de_Mozilla) lors du rendu d'un document ;  c'est-à-dire que le doctype "`<!DOCTYPE html>`" garantit que le navigateur fait de son mieux pour suivre les spécifications pertinentes, plutôt que d'utiliser un mode de rendu différent incompatible avec certaines spécifications.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://html.spec.whatwg.org/multipage/syntax.html#the-doctype">Définition du DOCTYPE dans la spécification HTML</a> (en)</li>
- <li><a href="/fr/docs/Mode_quirks_de_Mozilla">Mode quirks dans Mozilla</a></li>
-</ul>
+- [Définition du DOCTYPE dans la spécification HTML](https://html.spec.whatwg.org/multipage/syntax.html#the-doctype) (en)
+- [Mode quirks dans Mozilla](/fr/docs/Mode_quirks_de_Mozilla)
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<p><a href="/fr/docs/Web/API/Document/doctype">Document.doctype</a>, une méthode JavaScript qui retourne le doctype</p>
+[Document.doctype](/fr/docs/Web/API/Document/doctype), une méthode JavaScript qui retourne le doctype

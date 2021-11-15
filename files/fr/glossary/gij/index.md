@@ -10,4 +10,4 @@ tags:
 translation_of: Glossary/GIJ
 original_slug: Glossaire/GIJ
 ---
-<p>Tests d'intégration Gaia. Basés sur Marionette et JavaScript. Voir <a href="/fr/docs/Mozilla/QA/Automated_testing">GIJ</a>.</p>
+Tests d'intégration Gaia. Basés sur Marionette et JavaScript. Voir [GIJ](/fr/docs/Mozilla/QA/Automated_testing).

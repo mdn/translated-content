@@ -7,28 +7,24 @@ tags:
 translation_of: Glossary/DOS_attack
 original_slug: Glossaire/Attaque_DOS
 ---
-<p>Le déni de service ou DoS (Denial of Service) est une attaque réseau qui empêche l'utilisation légitime des ressources d'un {{glossary("serveur")}} en surchargeant celui-ci de requêtes.</p>
+Le déni de service ou DoS (Denial of Service) est une attaque réseau qui empêche l'utilisation légitime des ressources d'un {{glossary("serveur")}} en surchargeant celui-ci de requêtes.
 
-<p>Les ordinateurs disposent de ressources limitées, puissance de calcul ou mémoire par exemple. Lorsqu'elles atteignent leurs limites, le programme peut se bloquer ou planter, ce qui le rend indisponible. Une attaque DoS consiste en diverses techniques pour saturer ces ressources et faire en sorte qu'un serveur ou un réseau ne soit plus disponible pour ses utilisateurs légitimes, ou au moins pour faire fonctionner le serveur plus lentement.</p>
+Les ordinateurs disposent de ressources limitées, puissance de calcul ou mémoire par exemple. Lorsqu'elles atteignent leurs limites, le programme peut se bloquer ou planter, ce qui le rend indisponible. Une attaque DoS consiste en diverses techniques pour saturer ces ressources et faire en sorte qu'un serveur ou un réseau ne soit plus disponible pour ses utilisateurs légitimes, ou au moins pour faire fonctionner le serveur plus lentement.
 
-<h3 id="Types_d'attaques_DoS">Types d'attaques DoS</h3>
+### Types d'attaques DoS
 
-<p>Les attaques DoS sont plus une catégorie d'attaques qu'un type particulier d'attaque. Voici une liste non exhaustive de types d'attaques DoS :</p>
+Les attaques DoS sont plus une catégorie d'attaques qu'un type particulier d'attaque. Voici une liste non exhaustive de types d'attaques DoS :
 
-<ul>
- <li>attaque sur la bande passante</li>
- <li>saturation par des requêtes sur des services</li>
- <li>attaque SYN flooding</li>
- <li>attaque ICMP flood</li>
- <li>attaque pair-à-pair</li>
- <li>attaque DoS permanente</li>
- <li>attaque par saturation au niveau application</li>
-</ul>
+- attaque sur la bande passante
+- saturation par des requêtes sur des services
+- attaque SYN flooding
+- attaque ICMP flood
+- attaque pair-à-pair
+- attaque DoS permanente
+- attaque par saturation au niveau application
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<ul>
- <li>{{interwiki("wikipedia", "Attaque par déni de service", "Attaque par déni de service")}} sur Wikipédia</li>
- <li><a href="https://www.owasp.org/index.php/Denial_of_Service">Déni de service sur OWASP</a></li>
- <li>{{Glossary("Distributed Denial of Service","DDoS")}}</li>
-</ul>
+- {{interwiki("wikipedia", "Attaque par déni de service", "Attaque par déni de service")}} sur Wikipédia
+- [Déni de service sur OWASP](https://www.owasp.org/index.php/Denial_of_Service)
+- {{Glossary("Distributed Denial of Service","DDoS")}}

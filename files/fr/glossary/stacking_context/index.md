@@ -8,12 +8,10 @@ tags:
 translation_of: Glossary/Stacking_context
 original_slug: Glossaire/Contexte_d_empilement
 ---
-<p><strong>Le contexte d'empilement</strong> renvoie à la façon dont les éléments d'une page web semblent se superposer à d'autres éléments, tout comme vous pouvez placer les fiches sur votre bureau côte à côte ou se chevauchant.</p>
+**Le contexte d'empilement** renvoie à la façon dont les éléments d'une page web semblent se superposer à d'autres éléments, tout comme vous pouvez placer les fiches sur votre bureau côte à côte ou se chevauchant.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/Comprendre_z-index/Empilement_de_couches">L'empilement de couches</a></li>
-</ul>
+- [L'empilement de couches](/fr/docs/Web/CSS/Comprendre_z-index/Empilement_de_couches)

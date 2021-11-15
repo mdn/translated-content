@@ -8,29 +8,21 @@ tags:
 translation_of: Glossary/Navigation_directive
 original_slug: Glossaire/Directive_de_navigation
 ---
-<p><strong>Les directives de navigation</strong> <strong>{{Glossary("CSP")}} </strong>sont utilisées dans un en-tête de {{HTTPHeader("Content-Security-Policy","politique de sécurité de contenu")}} et  régissent l'emplacement sur lequel un utilisateur peut naviguer ou envoyer un formulaire, par exemple.</p>
+**Les directives de navigation** **{{Glossary("CSP")}}** sont utilisées dans un en-tête de {{HTTPHeader("Content-Security-Policy","politique de sécurité de contenu")}} et régissent l'emplacement sur lequel un utilisateur peut naviguer ou envoyer un formulaire, par exemple.
 
-<p>Les directives de navigation ne reviennent pas à la directive {{CSP("default-src")}}.</p>
+Les directives de navigation ne reviennent pas à la directive {{CSP("default-src")}}.
 
-<p>Ces directives CSP sont :</p>
+Ces directives CSP sont :
 
-<ul>
- <li>{{CSP("form-action")}}</li>
- <li>{{CSP("frame-ancestors")}}</li>
- <li>{{CSP("navigation-to")}}</li>
-</ul>
+- {{CSP("form-action")}}
+- {{CSP("frame-ancestors")}}
+- {{CSP("navigation-to")}}
 
-<div>
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy","politique de sécurité de contenu")}}</li>
- <li>Autres types de directives:
-  <ul>
-   <li>{{Glossary("Fetch directive" ,"Directive de récupération")}}</li>
-   <li>{{Glossary("Document directive","Directive de document")}}</li>
-   <li>{{Glossary("Reporting directive" ,"Directive de rapport")}}</li>
-  </ul>
- </li>
-</ul>
-</div>
+- {{HTTPHeader("Content-Security-Policy","politique de sécurité de contenu")}}
+- Autres types de directives:
+
+  - {{Glossary("Fetch directive" ,"Directive de récupération")}}
+  - {{Glossary("Document directive","Directive de document")}}
+  - {{Glossary("Reporting directive" ,"Directive de rapport")}}

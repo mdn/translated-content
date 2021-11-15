@@ -7,12 +7,10 @@ tags:
 translation_of: Glossary/Engine
 original_slug: Glossaire/Engine
 ---
-<p>Le moteur {{glossary("JavaScript")}} est un interpréteur qui analyse et exécute un programme JavaScript.</p>
+Le moteur {{glossary("JavaScript")}} est un interpréteur qui analyse et exécute un programme JavaScript.
 
-<h2 id="Plus_d'informations">Plus d'informations</h2>
+## Plus d'informations
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Moteur JavaScript")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Moteur JavaScript")}} sur Wikipédia

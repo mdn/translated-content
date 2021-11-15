@@ -9,15 +9,11 @@ tags:
 translation_of: Glossary/FTP
 original_slug: Glossaire/FTP
 ---
-<p><strong>FTP </strong>(file transfer protocol) est un {{glossary("Protocol","protocole")}} réseau standard utilisé pour transférer des fichiers d'un {{glossary("Host","hôte")}} à un autre par Internet. De plus en plus, cependant, les équipes et les comptes d'hébergement n'autorisent pas le FTP et s'appuient plutôt sur un système de contrôle de version comme Git. Vous le trouverez toujours utilisé sur les anciens comptes d'hébergement, mais il est sûr de dire que FTP n'est plus considéré comme la meilleure pratique.</p>
+**FTP** (file transfer protocol) est un {{glossary("Protocol","protocole")}} réseau standard utilisé pour transférer des fichiers d'un {{glossary("Host","hôte")}} à un autre par Internet. De plus en plus, cependant, les équipes et les comptes d'hébergement n'autorisent pas le FTP et s'appuient plutôt sur un système de contrôle de version comme Git. Vous le trouverez toujours utilisé sur les anciens comptes d'hébergement, mais il est sûr de dire que FTP n'est plus considéré comme la meilleure pratique.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Connaissances_générales">Connaissances générales</h3>
+### Connaissances générales
 
-<ul>
- <li><a href="/fr/Apprendre/Transf%C3%A9rer_des_fichiers_vers_un_serveur_web">Guide du débutant pour mettre en ligne des fichiers via FTP</a></li>
- <li>{{interwiki("wikipedia", "File_Transfer_Protocol","FTP")}} on Wikipedia</li>
-</ul>
-
-<p> </p>
+- [Guide du débutant pour mettre en ligne des fichiers via FTP](/fr/Apprendre/Transf%C3%A9rer_des_fichiers_vers_un_serveur_web)
+- {{interwiki("wikipedia", "File_Transfer_Protocol","FTP")}} on Wikipedia

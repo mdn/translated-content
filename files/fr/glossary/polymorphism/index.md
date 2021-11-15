@@ -7,16 +7,14 @@ tags:
 translation_of: Glossary/Polymorphism
 original_slug: Glossaire/Polymorphisme
 ---
-<p>Le polymorphisme est la présentation d'une unique interface pour plusieurs types de données.<br>
- <br>
- Par exemple, les entiers, flottants et doubles sont implicitement polymorphiques : il est possible de les ajouter, soustraire, multiplier etc. sans se préoccuper de leurs différents types.</p>
+Le polymorphisme est la présentation d'une unique interface pour plusieurs types de données.
 
-<p>Dans le cas de la {{glossary("POO","programmation orientée objet")}}, en donnant à la {{glossary("Class","classe")}} la gestion aussi bien de son code que de ses propres données, le polymorphisme peut être mis en œuvre en faisant que chaque classe ait sa propre {{glossary("Function","fonction")}} qui (une fois appelée) agit en fonction d'un {{glossary("Object","objet")}} quel que soit son type.</p>
+Par exemple, les entiers, flottants et doubles sont implicitement polymorphiques : il est possible de les ajouter, soustraire, multiplier etc. sans se préoccuper de leurs différents types.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+Dans le cas de la {{glossary("POO","programmation orientée objet")}}, en donnant à la {{glossary("Class","classe")}} la gestion aussi bien de son code que de ses propres données, le polymorphisme peut être mis en œuvre en faisant que chaque classe ait sa propre {{glossary("Function","fonction")}} qui (une fois appelée) agit en fonction d'un {{glossary("Object","objet")}} quel que soit son type.
 
-<h3 id="Culture_générale">Culture générale</h3>
+## Pour approfondir
 
-<ul>
- <li><a href="https://fr.wikipedia.org/wiki/Polymorphisme_(informatique)">Polymorphisme</a> sur Wikipédia</li>
-</ul>
+### Culture générale
+
+- [Polymorphisme](<https://fr.wikipedia.org/wiki/Polymorphisme_(informatique)>) sur Wikipédia

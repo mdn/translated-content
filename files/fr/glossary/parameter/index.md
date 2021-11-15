@@ -8,35 +8,27 @@ tags:
 translation_of: Glossary/Parameter
 original_slug: Glossaire/Parameter
 ---
-<p>Un paramètre est une variable nommée passée à une {{Glossary("fonction")}}. Les paramètres servent à importer des {{Glossary("argument","arguments")}} à l'intérieur des fonctions.</p>
+Un paramètre est une variable nommée passée à une {{Glossary("fonction")}}. Les paramètres servent à importer des {{Glossary("argument","arguments")}} à l'intérieur des fonctions.
 
-<p>Remarquez la différence entre <em>paramètres</em> et <em>arguments</em> :</p>
+Remarquez la différence entre _paramètres_ et _arguments_ :
 
-<ul>
- <li>Les paramètres d'une fonction sont les noms listés dans la définition de la fonction.</li>
- <li>Les {{Glossary("argument","arguments")}} d'une fonction sont les valeurs réelles passées à la fonction.</li>
- <li>Les paramètres sont initialisés avec les valeurs des arguments fournis.</li>
-</ul>
+- Les paramètres d'une fonction sont les noms listés dans la définition de la fonction.
+- Les {{Glossary("argument","arguments")}} d'une fonction sont les valeurs réelles passées à la fonction.
+- Les paramètres sont initialisés avec les valeurs des arguments fournis.
 
-<p>Deux sortes de paramètres :</p>
+Deux sortes de paramètres :
 
-<dl>
- <dt>paramètres d'entrée</dt>
- <dd>le type le plus fréquent ; ils passent des valeurs aux fonctions. En fonction du langage de programmation, les paramètres d'entrée peuvent être passés de plusieurs manières (e.g., appel par valeur, appel par adresse, appel par référence).</dd>
- <dt>paramètres de retour/sortie</dt>
- <dd>retournent principalement plusieurs valeurs depuis une fonction, mais ce n'est pas recommandé car cela peut prêter à confusion</dd>
-</dl>
+- paramètres d'entrée
+  - : le type le plus fréquent ; ils passent des valeurs aux fonctions. En fonction du langage de programmation, les paramètres d'entrée peuvent être passés de plusieurs manières (e.g., appel par valeur, appel par adresse, appel par référence).
+- paramètres de retour/sortie
+  - : retournent principalement plusieurs valeurs depuis une fonction, mais ce n'est pas recommandé car cela peut prêter à confusion
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="http://en.wikipedia.org/wiki/Parameter_%28computer_programming%29#Parameters_and_arguments">Difference between <em>parameter</em> and <em>argument</em></a> sur Wikipédia</li>
-</ul>
+- [Difference between _parameter_ and _argument_](http://en.wikipedia.org/wiki/Parameter_%28computer_programming%29#Parameters_and_arguments) sur Wikipédia
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="http://pages.cs.wisc.edu/~hasti/cs368/CppTutorial/NOTES/PARAMS.html">Parameter-Passing Modes</a></li>
-</ul>
+- [Parameter-Passing Modes](http://pages.cs.wisc.edu/~hasti/cs368/CppTutorial/NOTES/PARAMS.html)

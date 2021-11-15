@@ -9,12 +9,10 @@ tags:
 translation_of: Glossary/Type_Conversion
 original_slug: Glossaire/Conversion_de_type
 ---
-<p>La conversion de type (ou transtypage) est le transfert d'une donnée d'un type de donnée vers un autre. Une <em>conversion implicite </em>se produit quand le compilateur affecte les types de donnée automatiquement, mais le code source peut aussi demander à ce qu'une conversion ait lieu de manière <em>explicite</em>.  Exemples simples : étant donnée l'instruction <code>5+2.0</code>, l'entier <code>5</code> est converti implicitement en nombre à virgule flottante, mais avec l'instruction <code>Number("0x11")</code>, la chaîne "0x11" est explicitement convertie en valeur numérique 17.</p>
+La conversion de type (ou transtypage) est le transfert d'une donnée d'un type de donnée vers un autre. Une _conversion implicite_ se produit quand le compilateur affecte les types de donnée automatiquement, mais le code source peut aussi demander à ce qu'une conversion ait lieu de manière _explicite_.  Exemples simples : étant donnée l'instruction `5+2.0`, l'entier `5` est converti implicitement en nombre à virgule flottante, mais avec l'instruction `Number("0x11")`, la chaîne "0x11" est explicitement convertie en valeur numérique 17.
 
-<h2 id="Pour_en_savoir_plus">Pour en savoir plus</h2>
+## Pour en savoir plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Conversion de type")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Conversion de type")}} sur Wikipédia

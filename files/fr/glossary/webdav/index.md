@@ -7,32 +7,26 @@ tags:
 translation_of: Glossary/WebDAV
 original_slug: Glossaire/WebDAV
 ---
-<p><strong>WebDAV </strong> (<em>Web Distributed Authoring and Versioning</em>) est une extension {{Glossary("HTTP")}} qui permet aux développeurs web de faire des mises à jour de contenu à distance depuis un client.</p>
+**WebDAV** (_Web Distributed Authoring and Versioning_) est une extension {{Glossary("HTTP")}} qui permet aux développeurs web de faire des mises à jour de contenu à distance depuis un client.
 
-<p>WebDav est rarement utilisé seul, mais deux extensions sont très répandues : {{Glossary("CalDAV")}} (accès distant aux données d'agenda) et {{Glossary("CardDAV")}} (accès distant au carnet d'adresses).</p>
+WebDav est rarement utilisé seul, mais deux extensions sont très répandues : {{Glossary("CalDAV")}} (accès distant aux données d'agenda) et {{Glossary("CardDAV")}} (accès distant au carnet d'adresses).
 
-<p>WebDAV donne aux clients les possibilités suivantes</p>
+WebDAV donne aux clients les possibilités suivantes
 
-<ul>
- <li>ajout, suppression et récupération des métadonnées de pages web (e.g. auteur ou date de création)</li>
- <li>création de liens dans des pages de tout type de média vers des pages qui y sont associées</li>
- <li>création d'ensembles de documents et récupération de listes hiérarchiques</li>
- <li>copie et déplacement de pages web</li>
- <li>verrouillage d'un document pour restreindre son édition à une seule personne à la fois</li>
-</ul>
+- ajout, suppression et récupération des métadonnées de pages web (e.g. auteur ou date de création)
+- création de liens dans des pages de tout type de média vers des pages qui y sont associées
+- création d'ensembles de documents et récupération de listes hiérarchiques
+- copie et déplacement de pages web
+- verrouillage d'un document pour restreindre son édition à une seule personne à la fois
 
-<h2 id="See_also">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "WebDAV")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "WebDAV")}} sur Wikipédia
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li>{{rfc(2518)}}</li>
- <li>{{rfc(3253)}}</li>
- <li>{{rfc(3744)}}</li>
-</ul>
+- {{rfc(2518)}}
+- {{rfc(3253)}}
+- {{rfc(3744)}}

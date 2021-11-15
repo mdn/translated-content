@@ -8,12 +8,10 @@ tags:
 translation_of: Glossary/CMS
 original_slug: Glossaire/CMS
 ---
-<p>Un CMS (<em>Content Management System</em> ou Système de gestion de contenu) est un logiciel permettant à un utilisateur de publier, organiser, modifier et supprimer différents types de contenus. Il peut s'agir de textes, d'images, de vidéos, de son ou encore, de code interactif.</p>
+Un CMS (_Content Management System_ ou Système de gestion de contenu) est un logiciel permettant à un utilisateur de publier, organiser, modifier et supprimer différents types de contenus. Il peut s'agir de textes, d'images, de vidéos, de son ou encore, de code interactif.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Système de gestion de contenu")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Système de gestion de contenu")}} sur Wikipédia

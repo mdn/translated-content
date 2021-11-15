@@ -9,14 +9,12 @@ tags:
 translation_of: Glossary/mime
 original_slug: Glossaire/mime
 ---
-<p><strong>MIME</strong> "Multipurpose internet mail extensions" est un standard pour décrire des documents sous d'autres formes que du texte ASCII, par exemple audio, vidéo et images. Initialement utilisé pour les pièces jointes aux courriers électroniques, il est devenu le standard pour définir n'importe où  les types de documents.</p>
+**MIME** "Multipurpose internet mail extensions" est un standard pour décrire des documents sous d'autres formes que du texte ASCII, par exemple audio, vidéo et images. Initialement utilisé pour les pièces jointes aux courriers électroniques, il est devenu le standard pour définir n'importe où les types de documents.
 
-<p>Voir aussi <a href="/fr/docs/Glossary/MIME_type">Type Mime</a></p>
+Voir aussi [Type Mime](/fr/docs/Glossary/MIME_type)
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://fr.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions">MIME </a>sur Wikipédia</li>
-</ul>
+- [MIME ](https://fr.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions)sur Wikipédia

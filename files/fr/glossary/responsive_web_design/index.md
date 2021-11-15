@@ -7,13 +7,11 @@ tags:
 translation_of: Glossary/Responsive_web_design
 original_slug: Glossaire/Responsive_web_design
 ---
-<p><strong>Conception web adaptative</strong><em> (Responsive Web Design </em>(<strong>RWD</strong>)) est un concept de développement web concentré sur l'aspect et le comportement optimaux des sites sur tous les appareils informatiques personnels, du bureau au mobile.</p>
+**Conception web adaptative** _(Responsive Web Design_ (**RWD**)) est un concept de développement web concentré sur l'aspect et le comportement optimaux des sites sur tous les appareils informatiques personnels, du bureau au mobile.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="/fr/Apps/Progressive/Adaptative">Guide MDN sur la conception adaptative</a></li>
- <li><a href="http://msdn.microsoft.com/en-us/magazine/hh653584.aspx">Responsive Web Design HTML5</a> (en)</li>
-</ul>
+- [Guide MDN sur la conception adaptative](/fr/Apps/Progressive/Adaptative)
+- [Responsive Web Design HTML5](http://msdn.microsoft.com/en-us/magazine/hh653584.aspx) (en)

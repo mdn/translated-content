@@ -6,20 +6,16 @@ tags:
 translation_of: Glossary/XHR_(XMLHttpRequest)
 original_slug: Glossaire/XHR_(XMLHttpRequest)
 ---
-<p>{{domxref("XMLHttpRequest")}} (XHR) est une {{Glossary("API")}} {{Glossary("JavaScript")}} pour créer des requêtes {{Glossary("AJAX")}}. Ses méthodes permettent d'envoyer des requêtes réseau entre le {{Glossary("Browser","navigateur")}} et un {{Glossary("Server","serveur")}}.</p>
+{{domxref("XMLHttpRequest")}} (XHR) est une {{Glossary("API")}} {{Glossary("JavaScript")}} pour créer des requêtes {{Glossary("AJAX")}}. Ses méthodes permettent d'envoyer des requêtes réseau entre le {{Glossary("Browser","navigateur")}} et un {{Glossary("Server","serveur")}}.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{interwiki("wikipedia", "XMLHttpRequest")}} sur Wikipedia</li>
- <li><a href="http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/">Synchronous vs. Asynchronous Communications</a> (en)</li>
-</ul>
+- {{interwiki("wikipedia", "XMLHttpRequest")}} sur Wikipedia
+- [Synchronous vs. Asynchronous Communications](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/) (en)
 
-<h3 id="Informations_techniques">Informations techniques</h3>
+### Informations techniques
 
-<ul>
- <li>L'objet {{domxref("XMLHttpRequest")}}.</li>
- <li>La <a href="/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest">documentation sur MDN à propos de l'utilisation de XMLHttpRequest</a>.</li>
-</ul>
+- L'objet {{domxref("XMLHttpRequest")}}.
+- La [documentation sur MDN à propos de l'utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest).

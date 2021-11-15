@@ -6,25 +6,18 @@ tags:
 translation_of: Glossary/Input_method_editor
 original_slug: Glossaire/Input_method_editor
 ---
-<p>Une méthode de saisie (IME pour Input Method Editor) est un programme qui permet de saisir du texte via une interface utilisateur spécialisé. Les méthodes de saisie peuvent être utilisées dans de nombreuses situations dont : </p>
+Une méthode de saisie (IME pour Input Method Editor) est un programme qui permet de saisir du texte via une interface utilisateur spécialisé. Les méthodes de saisie peuvent être utilisées dans de nombreuses situations dont :
 
-<ul>
- <li>la saisie de caractères chinois, japonnais ou encore coréen à partir d'un clavier latin ;</li>
- <li>la saisie de caractères latin à partir d'un clavier numérique ;</li>
- <li>la saisie de texte à partir d'un écran tactile avec reconnaisance d'écriture manuscrite.</li>
-</ul>
+- la saisie de caractères chinois, japonnais ou encore coréen à partir d'un clavier latin ;
+- la saisie de caractères latin à partir d'un clavier numérique ;
+- la saisie de texte à partir d'un écran tactile avec reconnaisance d'écriture manuscrite.
 
-<h2>Voir aussi</h2>
+## Voir aussi
 
-<ol>
- <li>Wikipedia articles
-  <ol>
-   <li><a href="https://fr.wikipedia.org/wiki/M%C3%A9thode_d%27entr%C3%A9e">Méthode d'entrée</a></li>
-  </ol>
- </li>
- <li><a href="/fr/docs/Glossary">Glossary</a>
-  <ol>
-   <li>{{Glossary("I18N")}}</li>
-  </ol>
- </li>
-</ol>
+1.  Wikipedia articles
+
+    1.  [Méthode d'entrée](https://fr.wikipedia.org/wiki/M%C3%A9thode_d%27entr%C3%A9e)
+
+2.  [Glossary](/fr/docs/Glossary)
+
+    1.  {{Glossary("I18N")}}

@@ -9,20 +9,16 @@ tags:
 translation_of: Glossary/XPath
 original_slug: Glossaire/XPath
 ---
-<p><strong>XPath</strong> est un langage de requêtes permettant d'accéder aux sections et contenus d'un document {{glossary("XML")}}.</p>
+**XPath** est un langage de requêtes permettant d'accéder aux sections et contenus d'un document {{glossary("XML")}}.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="/fr/docs/XPath">Documentation XPath sur MDN</a></li>
- <li><a href="http://www.w3.org/TR/xpath-30/">Spécification XPath</a></li>
-</ul>
+- [Documentation XPath sur MDN](/fr/docs/XPath)
+- [Spécification XPath](http://www.w3.org/TR/xpath-30/)
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="http://www.w3.org/standards/techs/xpath#w3c_all">Site web officiel</a></li>
- <li>{{Interwiki("wikipedia", "XPath")}} sur Wikipédia</li>
-</ul>
+- [Site web officiel](http://www.w3.org/standards/techs/xpath#w3c_all)
+- {{Interwiki("wikipedia", "XPath")}} sur Wikipédia

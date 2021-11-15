@@ -8,19 +8,15 @@ tags:
 translation_of: Glossary/SVN
 original_slug: Glossaire/SVN
 ---
-<p><strong>SVN </strong>(pour Apache Subversion) est un logiciel libre de gestion du contrôle de système  ({{Glossary("SCM")}}). Il permet aux développeurs de conserver un historique des modifications de texte et de code. Bien que SVN puisse également gérer les fichiers binaires, nous ne vous recommandons pas de l'utiliser pour de tels fichiers.</p>
+**SVN** (pour Apache Subversion) est un logiciel libre de gestion du contrôle de système  ({{Glossary("SCM")}}). Il permet aux développeurs de conserver un historique des modifications de texte et de code. Bien que SVN puisse également gérer les fichiers binaires, nous ne vous recommandons pas de l'utiliser pour de tels fichiers.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="https://subversion.apache.org/">Official website</a></li>
- <li>{{Interwiki("wikipedia", "Apache_Subversion")}} on Wikipedia</li>
-</ul>
+- [Official website](https://subversion.apache.org/)
+- {{Interwiki("wikipedia", "Apache_Subversion")}} on Wikipedia
 
-<h3 id="Apprendre_sur_ce_sujet">Apprendre sur ce sujet</h3>
+### Apprendre sur ce sujet
 
-<ul>
- <li><a href="/fr/docs/Mozilla/Localization/SVN_guide_for_localizers">Guide SVN pour localiseurs sur MDN</a></li>
-</ul>
+- [Guide SVN pour localiseurs sur MDN](/fr/docs/Mozilla/Localization/SVN_guide_for_localizers)

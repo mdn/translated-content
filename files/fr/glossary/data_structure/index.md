@@ -6,12 +6,10 @@ tags:
 translation_of: Glossary/Data_structure
 original_slug: Glossaire/Structure_de_données
 ---
-<p>Une <strong>structure de données</strong> est une façon particulière d'organiser des <em>données</em> afin de pouvoir les utiliser efficacement.</p>
+Une **structure de données** est une façon particulière d'organiser des _données_ afin de pouvoir les utiliser efficacement.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="En_général"><strong>En général</strong></h3>
+### **En général**
 
-<ul>
- <li>{{interwiki("wikipedia", "Structure_de_données", "Structure de données")}} sur Wikipédia</li>
-</ul>
+- {{interwiki("wikipedia", "Structure_de_données", "Structure de données")}} sur Wikipédia

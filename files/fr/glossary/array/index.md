@@ -11,29 +11,24 @@ tags:
 translation_of: Glossary/array
 original_slug: Glossaire/array
 ---
-<p>En anglais, un <em><strong>array</strong></em>, parfois appelé en français « tableau » ou « liste », est une collection de données ({{Glossary("Primitive","primitives")}} ou {{Glossary("Object","objets")}} selon le langage). Ils sont utilisés pour stocker plusieurs valeurs dans une seule variable. Ceci est comparé à une variable qui ne peut stocker qu'une seule valeur.</p>
+En anglais, un **_array_**, parfois appelé en français « tableau » ou « liste », est une collection de données ({{Glossary("Primitive","primitives")}} ou {{Glossary("Object","objets")}} selon le langage). Ils sont utilisés pour stocker plusieurs valeurs dans une seule variable. Ceci est comparé à une variable qui ne peut stocker qu'une seule valeur.
 
-<p>Chaque élément d'un <em>array</em> a un numéro qui lui est associé, appelé index numérique, qui permet d'y accéder. En JavaScript, ils commencent à l'index zéro et peuvent être manipulés avec différentes {{Glossary ("Method","méthodes")}}.</p>
+Chaque élément d'un _array_ a un numéro qui lui est associé, appelé index numérique, qui permet d'y accéder. En JavaScript, ils commencent à l'index zéro et peuvent être manipulés avec différentes {{Glossary ("Method","méthodes")}}.
 
-<p>À quoi ressemble-t-il en JavaScript ?</p>
+À quoi ressemble-t-il en JavaScript ?
 
-<pre><code>var myArray = [1, 2, 3, 4];
+    var myArray = [1, 2, 3, 4];
 
-var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
+    var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
-//Des <em>arrays</em> en JavaScript peuvent contenir différents types de données, comme indiqué ci-dessus.
-</code></pre>
+    //Des arrays en JavaScript peuvent contenir différents types de données, comme indiqué ci-dessus.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia","Tableau_(structure_de_données)","Array")}} on Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia","Tableau_(structure_de_données)","Array")}} on Wikipedia
 
-<h3 id="Informations_techniques">Informations techniques</h3>
+### Informations techniques
 
-<ul>
- <li><em>{{jsxref("Array")}}</em> en JavaScript sur MDN</li>
-</ul>
+- _{{jsxref("Array")}}_ en JavaScript sur MDN

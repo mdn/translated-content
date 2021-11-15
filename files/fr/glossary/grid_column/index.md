@@ -8,25 +8,21 @@ tags:
 translation_of: Glossary/Grid_Column
 original_slug: Glossaire/Colonne_de_grille
 ---
-<p>Une <strong>colonne de grille</strong> est une piste verticale dans une <a href="/fr/docs/Web/CSS/CSS_Grid_Layout">grille CSS</a>, et est l'espace entre deux lignes de grille verticales. Elle est définie par la propriété {{cssxref("grid-template-columns")}} ou les propriétés raccourcies {{cssxref("grid")}} ou {{cssxref("grid-template")}}.</p>
+Une **colonne de grille** est une piste verticale dans une [grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout), et est l'espace entre deux lignes de grille verticales. Elle est définie par la propriété {{cssxref("grid-template-columns")}} ou les propriétés raccourcies {{cssxref("grid")}} ou {{cssxref("grid-template")}}.
 
-<p>De plus, des colonnes peuvent être créées dans la grille implicite lorsque les éléments sont placés en dehors des colonnes créées dans la grille explicite. Ces colonnes seront automatiquement redimensionnées ou peuvent avoir une taille spécifiée avec la propriété {{cssxref("grid-auto-columns")}}.</p>
+De plus, des colonnes peuvent être créées dans la grille implicite lorsque les éléments sont placés en dehors des colonnes créées dans la grille explicite. Ces colonnes seront automatiquement redimensionnées ou peuvent avoir une taille spécifiée avec la propriété {{cssxref("grid-auto-columns")}}.
 
-<p>Lorsque vous travaillez avec l'alignement dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout">les grilles CSS</a>, l'axe vers le bas duquel les colonnes s'exécutent est connu comme l'axe de<em> colonne (ou bloc)</em>.</p>
+Lorsque vous travaillez avec l'alignement dans [les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout), l'axe vers le bas duquel les colonnes s'exécutent est connu comme l'axe de _colonne (ou bloc)_.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Références_de_propriété">Références de propriété</h3>
+### Références de propriété
 
-<ul>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li>{{cssxref("grid-auto-columns")}}</li>
- <li>{{cssxref("grid")}}</li>
- <li>{{cssxref("grid-template")}}</li>
-</ul>
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid")}}
+- {{cssxref("grid-template")}}
 
-<h3 id="En_lire_plus">En lire plus</h3>
+### En lire plus
 
-<ul>
- <li>Guide des grilles CSS : <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base">Les concepts de base des grilles CSS</a></em></li>
-</ul>
+- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)_

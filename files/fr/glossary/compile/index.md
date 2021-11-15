@@ -8,18 +8,14 @@ tags:
 translation_of: Glossary/Compile
 original_slug: Glossaire/Compile
 ---
-<p>La compilation est un processus consistant à transformer un programme informatique, écrit dans un langage donné, en un programme dans un autre langage (généralement en assembleur qui pourra être exécuté par l'ordinateur).</p>
+La compilation est un processus consistant à transformer un programme informatique, écrit dans un langage donné, en un programme dans un autre langage (généralement en assembleur qui pourra être exécuté par l'ordinateur).
 
-<h2 id="En_savoir_plus">En savoir plus</h2>
+## En savoir plus
 
-<h3 id="Connaissances_générales">Connaissances générales</h3>
+### Connaissances générales
 
-<ul>
- <li>{{Interwiki("wikipedia", "Compilateur")}} sur Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Compilateur")}} sur Wikipedia
 
-<h3 id="Pour_approfondir"><strong>Pour approfondir</strong></h3>
+### **Pour approfondir**
 
-<ul>
- <li><a href="http://stackoverflow.com/a/1672/133203">A big list of learning material on StackOverflow</a></li>
-</ul>
+- [A big list of learning material on StackOverflow](http://stackoverflow.com/a/1672/133203)

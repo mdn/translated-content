@@ -6,6 +6,6 @@ tags:
   - Glossaire
 translation_of: Glossary/property
 ---
-<p>Le terme <strong>propriété</strong> peut avoir plusieurs significations selon le contexte. Il peut s'agir de :</p>
+Le terme **propriété** peut avoir plusieurs significations selon le contexte. Il peut s'agir de :
 
-<p>{{GlossaryDisambiguation}}</p>
+{{GlossaryDisambiguation}}

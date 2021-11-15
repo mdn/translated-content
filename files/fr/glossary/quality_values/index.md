@@ -7,75 +7,40 @@ tags:
 translation_of: Glossary/Quality_values
 original_slug: Glossaire/Quality_values
 ---
-<p><em><strong>Quality values</strong></em> (<em>valeurs de qualité</em>), ou <em>q-values</em> et <em>q-factors</em>, sont utilisés pour décrire l'ordre de priorité des valeurs séparées par une virgule dans une liste. C'est une syntaxe spéciale autorisée dans quelques <a href="/fr/docs/HTTP/Headers">en-têtes HTTP</a> et en HTML. L'importance d'une valeur est marquée par le suffixe  <code>';q='</code> immédiatement suivi par une valeur comprise entre <code>0</code> et <code>1</code> inclus, avec jusqu'à trois décimales, la valeur la plus élevée indiquant la priorité la plus haute. Quand le paramètre n'est pas déclaré, la valeur par défaut est <code>1</code>.</p>
+**_Quality values_** (_valeurs de qualité_), ou _q-values_ et _q-factors_, sont utilisés pour décrire l'ordre de priorité des valeurs séparées par une virgule dans une liste. C'est une syntaxe spéciale autorisée dans quelques [en-têtes HTTP](/fr/docs/HTTP/Headers) et en HTML. L'importance d'une valeur est marquée par le suffixe  `';q='` immédiatement suivi par une valeur comprise entre `0` et `1` inclus, avec jusqu'à trois décimales, la valeur la plus élevée indiquant la priorité la plus haute. Quand le paramètre n'est pas déclaré, la valeur par défaut est `1`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>La syntaxe suivante :</p>
+La syntaxe suivante :
 
-<pre><code>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</code></pre>
+    text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 
-<p>indique l'ordre de priorité :</p>
+indique l'ordre de priorité :
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Valeur</th>
-   <th scope="col">Priorité</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>text/html</code> et <code>application/xhtml+xml</code></td>
-   <td><code>1.0</code></td>
-  </tr>
-  <tr>
-   <td><code>application/xml</code></td>
-   <td><code>0.9</code></td>
-  </tr>
-  <tr>
-   <td><code>*/*</code></td>
-   <td><code>0.8</code></td>
-  </tr>
- </tbody>
-</table>
+| Valeur                                 | Priorité |
+| -------------------------------------- | -------- |
+| `text/html` et `application/xhtml+xml` | `1.0`    |
+| `application/xml`                      | `0.9`    |
+| `*/*`                                  | `0.8`    |
 
-<p>S'il n'y a pas de priorité définie pour les deux premières valeurs, l'ordre dans la liste est sans importance. Néanmoins, avec la même qualité, des valeurs plus spécifiques ont la priorité sur celles qui le sont moins :</p>
+S'il n'y a pas de priorité définie pour les deux premières valeurs, l'ordre dans la liste est sans importance. Néanmoins, avec la même qualité, des valeurs plus spécifiques ont la priorité sur celles qui le sont moins :
 
-<pre><code>text/html;q=0.8,text/*;q=0.8,*/*;q=0.8</code>
-</pre>
+    text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Valeur</th>
-   <th scope="col">Priorité</th>
-  </tr>
-  <tr>
-   <td><code>text/html</code></td>
-   <td><code>0.8</code> (totalement spécifié)</td>
-  </tr>
-  <tr>
-   <td><code>text/*</code></td>
-   <td><code>0.8</code> (partiellement spécifié)</td>
-  </tr>
-  <tr>
-   <td><code>*/*</code></td>
-   <td><code>0.8</code> (non spécifié)</td>
-  </tr>
- </thead>
-</table>
+| Valeur      | Priorité                       |
+| ----------- | ------------------------------ |
+| `text/html` | `0.8` (totalement spécifié)    |
+| `text/*`    | `0.8` (partiellement spécifié) |
+| `*/*`       | `0.8` (non spécifié)           |
 
-<p>Quelques syntaxes, comme celle de {{HTTPHeader("Accept")}}, autorisent des spécificateurs supplémentaires comme <code>text/html;level=1</code>. Ceux-ci augmentent la spécificité de la valeur. Leur utilisation est extrêmement rare.</p>
+Quelques syntaxes, comme celle de {{HTTPHeader("Accept")}}, autorisent des spécificateurs supplémentaires comme `text/html;level=1`. Ceux-ci augmentent la spécificité de la valeur. Leur utilisation est extrêmement rare.
 
-<h2 id="Information_propre_aux_navigateurs">Information propre aux navigateurs</h2>
+## Information propre aux navigateurs
 
-<h3 id="Firefox">Firefox</h3>
+### Firefox
 
-<p>À partir de Firefox 18, les valeurs du facteur de qualité sont fixées à 2 décimales. Elles étaient limitées à 1 décimale dans les versions antérieures ({{bug(672448)}}).</p>
+À partir de Firefox 18, les valeurs du facteur de qualité sont fixées à 2 décimales. Elles étaient limitées à 1 décimale dans les versions antérieures ({{bug(672448)}}).
 
-<h2 id="Plus_d'informations">Plus d'informations</h2>
+## Plus d'informations
 
-<ul>
- <li><a href="/fr/docs/HTTP/Headers">En-têtes HTTP</a> utilisant des <em>q-values</em> dans leur syntaxe : {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("TE")}}.</li>
-</ul>
+- [En-têtes HTTP](/fr/docs/HTTP/Headers) utilisant des _q-values_ dans leur syntaxe : {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("TE")}}.

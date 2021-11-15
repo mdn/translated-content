@@ -9,12 +9,10 @@ tags:
 translation_of: Glossary/document_environment
 original_slug: Glossaire/Environnement_de_document
 ---
-<p>Lorsque l'environnement global JavaScript est une fenêtre ou un cadre <em>iframe</em>, il s'appelle un <em>environnement de document</em>. Un environnement global est un environnement qui n'a pas d'environnement extérieur.</p>
+Lorsque l'environnement global JavaScript est une fenêtre ou un cadre _iframe_, il s'appelle un _environnement de document_. Un environnement global est un environnement qui n'a pas d'environnement extérieur.
 
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#document-environment">document environment</a> dans la spécification HTML (en)</li>
-</ul>
+- [document environment](https://html.spec.whatwg.org/multipage/webappapis.html#document-environment) dans la spécification HTML (en)

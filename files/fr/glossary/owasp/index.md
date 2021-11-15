@@ -7,12 +7,10 @@ tags:
 translation_of: Glossary/OWASP
 original_slug: Glossaire/OWASP
 ---
-<p><strong>OWASP</strong> (Open Web Application Security Project) est une organisation à but non lucratif et un réseau mondial qui travaille sur la sécurité des logiciels libres, en particulier sur le Web.</p>
+**OWASP** (Open Web Application Security Project) est une organisation à but non lucratif et un réseau mondial qui travaille sur la sécurité des logiciels libres, en particulier sur le Web.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li><a href="http://www.owasp.org">Site web officiel</a></li>
-</ul>
+- [Site web officiel](http://www.owasp.org)

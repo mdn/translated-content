@@ -9,15 +9,13 @@ tags:
 translation_of: Glossary/String
 original_slug: Glossaire/String
 ---
-<p>Dans les langages de programmation, le terme chaîne de {{Glossary("character","caractères")}} <em>(String</em>) est utilisé pour représenter du texte.</p>
+Dans les langages de programmation, le terme chaîne de {{Glossary("character","caractères")}} _(String_) est utilisé pour représenter du texte.
 
-<p>En {{Glossary("JavaScript")}}, une chaîne de caractères est l'une des {{Glossary("Primitive", "valeurs primitives")}} et l'objet {{jsxref("String")}} est un {{Glossary("wrapper")}} enveloppant une primitive String.</p>
+En {{Glossary("JavaScript")}}, une chaîne de caractères est l'une des {{Glossary("Primitive", "valeurs primitives")}} et l'objet {{jsxref("String")}} est un {{Glossary("wrapper")}} enveloppant une primitive String.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Chaîne de caractères")}} sur Wikipédia</li>
- <li><a href="/fr/docs/Web/JavaScript/Structures_de_données#Le_type_chaîne_de_caractères_(String)">Structures et types de données en JavaScript</a></li>
-</ul>
+- {{Interwiki("wikipedia", "Chaîne de caractères")}} sur Wikipédia
+- [Structures et types de données en JavaScript](</fr/docs/Web/JavaScript/Structures_de_données#Le_type_chaîne_de_caractères_(String)>)

@@ -4,12 +4,10 @@ slug: Glossary/TCP
 translation_of: Glossary/TCP
 original_slug: Glossaire/TCP
 ---
-<p>TCP (transmission control protocol) est un protocole réseau qui permet à deux hôtes de se connecter et d'échanger des données. Le protocole TCP garantit la distribution des données et paquets dans l'ordre où ils ont été envoyés. Vint Cerf et Bob Kahn, scientifiques du DARPA, ont imaginé TCP dans les années 70.</p>
+TCP (transmission control protocol) est un protocole réseau qui permet à deux hôtes de se connecter et d'échanger des données. Le protocole TCP garantit la distribution des données et paquets dans l'ordre où ils ont été envoyés. Vint Cerf et Bob Kahn, scientifiques du DARPA, ont imaginé TCP dans les années 70.
 
-<h2 id="Pour_en_savoir_plus">Pour en savoir plus</h2>
+## Pour en savoir plus
 
-<h3 id="Connaissances_générales">Connaissances générales</h3>
+### Connaissances générales
 
-<ul>
- <li>{{Interwiki("wikipedia", "Transmission Control Protocol")}} sur Wikipedia</li>
-</ul>
+- {{Interwiki("wikipedia", "Transmission Control Protocol")}} sur Wikipedia

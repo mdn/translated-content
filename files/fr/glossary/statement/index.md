@@ -8,21 +8,16 @@ tags:
 translation_of: Glossary/Statement
 original_slug: Glossaire/Statement
 ---
-<p>Dans un langage de programmation informatique, une <strong>instructio</strong><strong>n</strong> est une ligne de code dictant une tâche. Tout programme consiste en une séquence d'instructions.</p>
+Dans un langage de programmation informatique, une **instructio\*\***n\*\* est une ligne de code dictant une tâche. Tout programme consiste en une séquence d'instructions.
 
-<h2 id="Pour_en_savoir_plus">Pour en savoir plus</h2>
+## Pour en savoir plus
 
-<h3 id="Culture_générale">Culture générale</h3>
+### Culture générale
 
-<ul>
- <li>{{Interwiki("wikipedia", "Instruction informatique")}} sur Wikipédia</li>
-</ul>
+- {{Interwiki("wikipedia", "Instruction informatique")}} sur Wikipédia
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Instructions">Instructions et déclarations JavaScript</a></li>
-</ul>
+- [Instructions et déclarations JavaScript](/fr/docs/Web/JavaScript/Reference/Instructions)
 
-<ul>
-</ul>
+<!---->

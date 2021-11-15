@@ -9,12 +9,10 @@ tags:
 translation_of: Glossary/XForms
 original_slug: Glossaire/XForm
 ---
-<p><strong>XForms </strong>est une convention pour la construction de formulaires Web et pour le traitement de leurs données dans un format {{glossary("XML")}}. Plus aucun navigateur majeur ne supporte XForms—nous suggérons d'utiliser les <a href="/fr/docs/Web/Guide/HTML/Formulaires">formulaires HTML5</a> à la place.</p>
+**XForms** est une convention pour la construction de formulaires Web et pour le traitement de leurs données dans un format {{glossary("XML")}}. Plus aucun navigateur majeur ne supporte XForms—nous suggérons d'utiliser les [formulaires HTML5](/fr/docs/Web/Guide/HTML/Formulaires) à la place.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<h3 id="Référence_technique">Référence technique</h3>
+### Référence technique
 
-<ul>
- <li><a href="/fr/docs/XForms">Documentation XForms sur MDN</a></li>
-</ul>
+- [Documentation XForms sur MDN](/fr/docs/XForms)

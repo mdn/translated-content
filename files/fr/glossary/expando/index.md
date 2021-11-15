@@ -10,8 +10,10 @@ tags:
 translation_of: Glossary/Expando
 original_slug: Glossaire/Expando
 ---
-<p>Les propriétés expando sont des propriétés ajoutées aux nœuds {{glossary("DOM")}} en {{glossary("JavaScript")}} mais qui ne figurent pas dans la spécification DOM des {{glossary("Object","objets")}} :</p>
+Les propriétés expando sont des propriétés ajoutées aux nœuds {{glossary("DOM")}} en {{glossary("JavaScript")}} mais qui ne figurent pas dans la spécification DOM des {{glossary("Object","objets")}} :
 
-<pre class="brush: js">document.foo = 5; // foo est une propriété expando</pre>
+```js
+document.foo = 5; // foo est une propriété expando
+```
 
-<p>Le terme peut également être appliqué aux propriétés ajoutées à des objets sans respecter l'objectif original de l'objet, comme ajouter des propriétés nommées non numériques pour un {{glossary("Array","tableau")}}.</p>
+Le terme peut également être appliqué aux propriétés ajoutées à des objets sans respecter l'objectif original de l'objet, comme ajouter des propriétés nommées non numériques pour un {{glossary("Array","tableau")}}.

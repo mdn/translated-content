@@ -8,26 +8,18 @@ tags:
 translation_of: Glossary/Reporting_directive
 original_slug: Glossaire/Directive_de_rapport
 ---
-<p>Les <strong>directives de rapports</strong> <strong>{{Glossary("CSP")}} </strong>sont utilisées dans un en-tête {{HTTPHeader("Content-Security-Policy","Politique de sécurité de contenu")}} et contrôlent le processus de génération de rapports sur les violations CSP.</p>
+Les **directives de rapports** **{{Glossary("CSP")}}** sont utilisées dans un en-tête {{HTTPHeader("Content-Security-Policy","Politique de sécurité de contenu")}} et contrôlent le processus de génération de rapports sur les violations CSP.
 
-<p>Ces directives CSP sont :</p>
+Ces directives CSP sont :
 
-<ul>
- <li>{{CSP("report-uri")}}</li>
- <li>{{CSP("report-to")}}</li>
-</ul>
+- {{CSP("report-uri")}}
+- {{CSP("report-to")}}
 
-<div>
-<h2 id="En_apprendre_plus">En apprendre plus</h2>
+## En apprendre plus
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy","Politique de sécurité de contenu")}}</li>
- <li>Autres types de directives:
-  <ul>
-   <li>{{Glossary("Fetch directive","Directive de récupération")}}</li>
-   <li>{{Glossary("Document directive","Directive de document")}}</li>
-   <li>{{Glossary("Navigation directive","Directive de navigation")}}</li>
-  </ul>
- </li>
-</ul>
-</div>
+- {{HTTPHeader("Content-Security-Policy","Politique de sécurité de contenu")}}
+- Autres types de directives:
+
+  - {{Glossary("Fetch directive","Directive de récupération")}}
+  - {{Glossary("Document directive","Directive de document")}}
+  - {{Glossary("Navigation directive","Directive de navigation")}}

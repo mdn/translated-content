@@ -8,10 +8,8 @@ tags:
 translation_of: Glossary/Digital_certificate
 original_slug: Glossaire/Certificat_numérique
 ---
-<p>Un certificat numérique est un fichier de données qui associe une {{Glossary("Key","clé cryptographique")}} publiquement connue à une organisation. Il contient des informations concernant celle-ci, telles que le nom usuel (par exemple mozilla.org), l'unité d'organisation (par exemple Mozilla Corporation) et sa situation géographique (par exemple Mountain View). Les certificats numériques sont le plus souvent signés par une {{Glossary("certificate authority","autorité de certification")}}, attestant leur authenticité.</p>
+Un certificat numérique est un fichier de données qui associe une {{Glossary("Key","clé cryptographique")}} publiquement connue à une organisation. Il contient des informations concernant celle-ci, telles que le nom usuel (par exemple mozilla.org), l'unité d'organisation (par exemple Mozilla Corporation) et sa situation géographique (par exemple Mountain View). Les certificats numériques sont le plus souvent signés par une {{Glossary("certificate authority","autorité de certification")}}, attestant leur authenticité.
 
-<h2 id="Pour_approfondir">Pour approfondir</h2>
+## Pour approfondir
 
-<ul>
- <li>{{interwiki("wikipedia", "Public_key_certificate" ,"Certificat électronique")}} sur Wikipédia</li>
-</ul>
+- {{interwiki("wikipedia", "Public_key_certificate" ,"Certificat électronique")}} sur Wikipédia
