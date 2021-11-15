@@ -8,11 +8,11 @@ original_slug: Web/Progressive_web_apps/Relancer_Via_Notifications_Push
 ---
 <div>{{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}</div>
 
-<p class="summary">Avoir la possibilité de mettre en cache le contenu d'une application pour travailler en mode déconnecté est une formidable fonctionnalité. Donner la possibilité à l'utilisateur d'installer l'application web sur son écran d'accueil est encore mieux. Mais plutôt que de s'en remettre seulement aux actions de l'utilisateur, nous pouvons faire plus, en utilisant des messages poussés et des notifications pour le relancer automatiquement et fournir des nouveaux contenus à chaque fois qu'ils sont disponibles.</p>
+<p>Avoir la possibilité de mettre en cache le contenu d'une application pour travailler en mode déconnecté est une formidable fonctionnalité. Donner la possibilité à l'utilisateur d'installer l'application web sur son écran d'accueil est encore mieux. Mais plutôt que de s'en remettre seulement aux actions de l'utilisateur, nous pouvons faire plus, en utilisant des messages poussés et des notifications pour le relancer automatiquement et fournir des nouveaux contenus à chaque fois qu'ils sont disponibles.</p>
 
 <h2 id="Deux_APIs_un_seul_but">Deux APIs, un seul but</h2>
 
-<p>L'<a href="/en-US/docs/Web/API/Push_API">API Push</a> et l'<a href="/en-US/docs/Web/API/Notifications_API">API Notifications</a> sont deux APIs distinctes mais elles fonctionnent bien ensemble quand vous souhaitez fournir une fonction de relance dans votre application. Push est utilisée pour délivrer un nouveau contenu à votre application depuis le serveur sans aucune intervention côté client et cette opération est gérée par le service worker de l'application. Les notifications peuvent être utilisées par le service worker pour afficher les nouvelles informations à l'utilisateur, ou, au moins, le prévenir que quelque chose a été mis à jour.</p>
+<p>L'<a href="/fr/docs/Web/API/Push_API">API Push</a> et l'<a href="/fr/docs/Web/API/Notifications_API">API Notifications</a> sont deux APIs distinctes mais elles fonctionnent bien ensemble quand vous souhaitez fournir une fonction de relance dans votre application. Push est utilisée pour délivrer un nouveau contenu à votre application depuis le serveur sans aucune intervention côté client et cette opération est gérée par le service worker de l'application. Les notifications peuvent être utilisées par le service worker pour afficher les nouvelles informations à l'utilisateur, ou, au moins, le prévenir que quelque chose a été mis à jour.</p>
 
 <p>Cela s'exécute hors de la fenêtre du navigateur, juste comme les service workers, si bien que des mises à jour peuvent être poussées et des notifications peuvent être affichées quand la page de l'application n'a pas le focus voire fermée.</p>
 
@@ -35,7 +35,7 @@ button.addEventListener('click', function(e) {
 
 <p>Ceci affiche une popup en utilisant le propre service de notification du système d'exploitation:</p>
 
-<p><img alt="Notification of js13kPWA." src="https://mdn.mozillademos.org/files/15930/js13kpwa-notification.png" style="display: block; height: 640px; margin: 0px auto; width: 360px;"></p>
+<p><img alt="Notification of js13kPWA." src="js13kpwa-notification.png"></p>
 
 <p>Une fois que l'utilisateur a confirmé qu'il veut recevoir des notifications, l'application peut alors lui afficher. Le résultat de l'action de l'utilisateur peut être default (défault), granted (autorisé) ou denied (interdit). L'option default est choisi quand l'utilisateur n'a pas fait de choix et les deux autres sont sélectionnées selon que l'utilisateur a respectivement cliqué sur oui ou non.</p>
 
@@ -66,7 +66,7 @@ button.addEventListener('click', function(e) {
 
 <p>La technologie en est toujours à ses tous débuts — certains exemples fonctionnels utilisent la plateforme Cloud de messagerie de Google, mais elles sont en cours de réécriture pour prendre en charge <a href="https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/">VAPID</a> (Voluntary Application Identification) qui offre une couche de sécurité supplémentaire pour votre application. Vous pouvez étudier les <a href="https://serviceworke.rs/push-payload.html">exemples du Cookbook des Service Workers</a>, essayer de mettre en place un serveur d'émission de messages utilisant <a href="https://firebase.google.com/">Firebase</a> ou construire votre propre serveur (en utilisant Node.js par exemple).</p>
 
-<p>Comme mentionné précédemment, pour être capable de recevoir des messages poussés, vous devez avoir un service worker dont les fondamentaux ont déjà été expliqué dans l'article  <a href="/en-US/docs/Web/Apps/Progressive/Offline_Service_workers">Permettre aux PWAs de fonctionner en mode déconnecté grâce aux Service workers</a>. A l'intérieur du service worker, un mécanisme de souscription à un service d'émission est créé.</p>
+<p>Comme mentionné précédemment, pour être capable de recevoir des messages poussés, vous devez avoir un service worker dont les fondamentaux ont déjà été expliqué dans l'article  <a href="/fr/docs/Web/Apps/Progressive/Offline_Service_workers">Permettre aux PWAs de fonctionner en mode déconnecté grâce aux Service workers</a>. A l'intérieur du service worker, un mécanisme de souscription à un service d'émission est créé.</p>
 
 <pre class="brush: js">registration.pushManager.getSubscription() .then( /* ... */ );</pre>
 

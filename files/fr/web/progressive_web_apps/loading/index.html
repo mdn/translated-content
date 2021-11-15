@@ -8,7 +8,7 @@ original_slug: Web/Progressive_web_apps/Chargement
 ---
 <div>{{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}</div>
 
-<p class="summary">Dans les articles précédents, nous avons abordé les APIs qui nous aident à faire de notre exemple <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> une Progressive Web App: <a href="en-US/docs/Web/Progressive_web_apps/Offline_Service_workers">Service Workers</a>, <a href="/en-US/docs/Web/Progressive_web_apps/Installable_PWAs">Manifestes Web</a>, <a href="/en-US/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push">Notifications et Push</a>. Dans cet article, nous irons encore plus loin et améliorerons la performance de l'application en téléchargeant progessivement ses ressources.</p>
+<p>Dans les articles précédents, nous avons abordé les APIs qui nous aident à faire de notre exemple <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> une Progressive Web App: <a href="en-US/docs/Web/Progressive_web_apps/Offline_Service_workers">Service Workers</a>, <a href="/fr/docs/Web/Progressive_web_apps/Installable_PWAs">Manifestes Web</a>, <a href="/fr/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push">Notifications et Push</a>. Dans cet article, nous irons encore plus loin et améliorerons la performance de l'application en téléchargeant progessivement ses ressources.</p>
 
 <h2 id="Première_visualisation_signifiante">Première visualisation signifiante</h2>
 
@@ -78,7 +78,7 @@ const loadImages = (image) =&gt; {
 
 <p>Pour rendre le processus visuellement plus attractif, le conteneur est flouté via CSS.</p>
 
-<p><img alt="Screenshot of placeholder images in the js13kPWA app." src="https://mdn.mozillademos.org/files/15992/js13kpwa-placeholders.png" style="height: 684px; width: 675px;"></p>
+<p><img alt="Screenshot of placeholder images in the js13kPWA app." src="js13kpwa-placeholders.png"></p>
 
 <p>Nous générons les images avec un flou au début si bien qu'une transition vers la version précise peut être réalkisée:</p>
 
@@ -97,11 +97,11 @@ article img {
 
 <p>Le mécanisme de chargement des images présenté dans la section précédente fonctionne correctement — il charge les imges après que la structure HTML a été générée et applique un joli effet de transition au processus. Le problème est qu'il télécharge toujours<em> toutes</em> les images en une fois, même si l'utilisateur ne verra que les deux ou trois premières au chargement de la page.</p>
 
-<p>Ce problème peut être résolu avec la nouvelle <a href="/en-US/docs/Web/API/Intersection_Observer_API">API Intersection Observer</a> — en l'utilisant, nous pouvons nous assurer que les images ne seront téléchargées que lorsqu'elles apparaissent dans le viewport.</p>
+<p>Ce problème peut être résolu avec la nouvelle <a href="/fr/docs/Web/API/Intersection_Observer_API">API Intersection Observer</a> — en l'utilisant, nous pouvons nous assurer que les images ne seront téléchargées que lorsqu'elles apparaissent dans le viewport.</p>
 
 <h3 id="Intersection_Observer">Intersection Observer</h3>
 
-<p>Ceci est une amélioration progressive à l'exemple fonctionnel précédent — <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer</a> téléchargera les images cibles seulement quand l'utilisateur fait défiler la page vers le bas, provoquant leur affichage dans le viewport.</p>
+<p>Ceci est une amélioration progressive à l'exemple fonctionnel précédent — <a href="/fr/docs/Web/API/Intersection_Observer_API">Intersection Observer</a> téléchargera les images cibles seulement quand l'utilisateur fait défiler la page vers le bas, provoquant leur affichage dans le viewport.</p>
 
 <p>Voici à quoi le code correspondant ressemble:</p>
 
@@ -143,7 +143,7 @@ article img {
 
 <h2 id="Dernières_réflexions">Dernières réflexions</h2>
 
-<p>C'est fini pour ces séries de tutoriels — nous avons examiné le <a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa">code source code de l'exemple d'application js13kPWA</a> et nous avons appris à utiliser les fonctionnalités progressives des applications web en commençant par une <a href="/en-US/docs/Web/Progressive_web_apps/Introduction">Introduction</a>, <a href="/en-US/docs/Web/Progressive_web_apps/App_structure">la structure des PWA, </a><a href="/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers">la disponibilité en mode déconnectégrâce aux Service Workers</a>, <a href="/en-US/docs/Web/Progressive_web_apps/Installable_PWAs">les PWAs installable</a> et finalement les notifications. Nous avons également expliqué le mode push avec l'aide du <a href="https://serviceworke.rs/">Service Worker Cookbook</a>. Et dans cet article, nous avons abordé le concept de chargement progressif incluant un exemple intéressant utilisant l'<a href="/en-US/docs/Web/API/Intersection_Observer_API">API ntersection Observer</a>.</p>
+<p>C'est fini pour ces séries de tutoriels — nous avons examiné le <a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa">code source code de l'exemple d'application js13kPWA</a> et nous avons appris à utiliser les fonctionnalités progressives des applications web en commençant par une <a href="/fr/docs/Web/Progressive_web_apps/Introduction">Introduction</a>, <a href="/fr/docs/Web/Progressive_web_apps/App_structure">la structure des PWA, </a><a href="/fr/docs/Web/Progressive_web_apps/Offline_Service_workers">la disponibilité en mode déconnectégrâce aux Service Workers</a>, <a href="/fr/docs/Web/Progressive_web_apps/Installable_PWAs">les PWAs installable</a> et finalement les notifications. Nous avons également expliqué le mode push avec l'aide du <a href="https://serviceworke.rs/">Service Worker Cookbook</a>. Et dans cet article, nous avons abordé le concept de chargement progressif incluant un exemple intéressant utilisant l'<a href="/fr/docs/Web/API/Intersection_Observer_API">API ntersection Observer</a>.</p>
 
 <p>N'hésitez pas à faire des essais avec le code, à améliorer votre application existante avec des des fonctionnalités PWA ou à bâtir quelque chose d'entièrement nouveau de vous même. Les PWAs amènent un énorme avantage sur les applications web classiques.</p>
 
