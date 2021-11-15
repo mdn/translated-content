@@ -217,6 +217,8 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 
 각 페이지의 Section Title에 대한 단어 정의입니다. 
 
+**사전 순으로 용어집을 편집해주세요.**
+
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
 | Accessibility concerns | 접근성 고려사항 | |
@@ -251,6 +253,8 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 
 각 페이지의 Section Subtitle에 대한 단어 정의입니다. 
 
+**사전 순으로 용어집을 편집해주세요.**
+
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
 | Compatibility notes | 호환성 참고 사항 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
@@ -261,11 +265,15 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 
 각 페이지의 안내 문구에 대한 단어 정의입니다.
 
+**사전 순으로 용어집을 편집해주세요.**
+
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
 | Note | 참고 | | 
 | Objective | 목표 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) |
 | Prerequisites | 필요한 사전 지식 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) | 
+
+## 공통 용어
 
 **사전 순으로 용어집을 편집해주세요.**
 
