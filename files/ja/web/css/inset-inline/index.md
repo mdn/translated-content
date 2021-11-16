@@ -3,23 +3,25 @@ title: inset-inline
 slug: Web/CSS/inset-inline
 tags:
   - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Reference
-  - 'recipe:css-shorthand-property'
+  - CSS 論理的プロパティ
+  - CSS プロパティ
+  - 実験的
+  - リファレンス
+  - recipe:css-shorthand-property
+browser-compat: css.properties.inset-inline
 translation_of: Web/CSS/inset-inline
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>inset-inline</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、要素におけるインライン方向の先頭および末尾からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}} と {{cssxref("bottom")}}、または {{cssxref("right")}} と {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。</p>
+**`inset-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素におけるインライン方向の先頭および末尾からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}} と {{cssxref("bottom")}}、または {{cssxref("right")}} と {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
 
-<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; 値 */
+```css
+/* <length> 値 */
 inset-inline: 3px 10px;
 inset-inline: 2.4em 3em;
 inset-inline: 10px; /* 値が先頭と末尾の両方に適用される */
 
-/* 包含ブロックの幅または高さに対する &lt;percentage&gt; 値 */
+/* 包含ブロックの幅または高さに対する <percentage> 値 */
 inset-inline: 10% 5%;
 
 /* キーワード値 */
@@ -28,46 +30,49 @@ inset-inline: auto;
 /* グローバル値 */
 inset-inline: inherit;
 inset-inline: initial;
+inset-inline: revert;
 inset-inline: unset;
-</pre>
+```
 
-<h2 id="Constituent_properties" name="Constituent_properties">構成要素のプロパティ</h2>
+## 構成要素のプロパティ
 
-<p>このプロパティは以下の CSS プロパティの一括指定です。</p>
+このプロパティは以下の CSS プロパティの一括指定です。
 
-<ul>
- <li>{{cssxref("inset-inline-end")}}</li>
- <li>{{cssxref("inset-inline-start")}}</li>
-</ul>
+- {{cssxref("inset-inline-end")}}
+- {{cssxref("inset-inline-start")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<p><code>inset-inline</code> プロパティは {{cssxref("left")}} プロパティと同じ値を取ります。</p>
+`inset-inline` プロパティは {{cssxref("left")}} プロパティと同じ値を取ります。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Setting_inline_start_and_end_offsets" name="Setting_inline_start_and_end_offsets">インライン方向の先頭と末尾のオフセットの設定</h3>
+<h3 id="Setting_inline_start_and_end_offsets">インライン方向の先頭と末尾のオフセットの設定</h3>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;
-  &lt;p class="exampleText"&gt;テキストの例&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+#### HTML
 
-<h4 id="CSS">CSS</h4>
+```html
+<div>
+  <p class="exampleText">テキストの例</p>
+</div>
+```
 
-<pre class="brush: css notranslate">div {
+#### CSS
+
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -78,40 +83,24 @@ inset-inline: unset;
   position: relative;
   inset-inline: 20px 50px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Setting_inline_start_and_end_offsets", 140, 140)}}</p>
+{{EmbedLiveSample("Setting_inline_start_and_end_offsets", 140, 140)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-inset-inline", "inset-inline")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.inset-inline")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>対応する物理的プロパティ: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}</li>
- <li>対応する物理的な一括指定: {{cssxref("inset")}}</li>
- <li>対応するブロック方向の一括指定: {{cssxref("inset-block")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- 対応する物理的プロパティ: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}
+- 対応する物理的な一括指定: {{cssxref("inset")}}
+- 対応するブロック方向の一括指定: {{cssxref("inset-block")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
