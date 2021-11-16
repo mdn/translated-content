@@ -21470,12 +21470,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/ServiceWorkerGlobalScope/caches": {
-    "modified": "2020-10-15T22:29:46.631Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/API/ServiceWorkerGlobalScope/clients": {
     "modified": "2019-03-23T22:21:03.744Z",
     "contributors": [
@@ -48601,6 +48595,12 @@
   },
   "conflicting/Web/API/XRInputSource/targetRayMode": {
     "modified": "2020-12-08T09:23:22.538Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/caches": {
+    "modified": "2020-10-15T22:29:46.631Z",
     "contributors": [
       "Wind1808"
     ]

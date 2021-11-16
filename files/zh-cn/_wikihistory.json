@@ -19903,12 +19903,6 @@
       "TimLuo465"
     ]
   },
-  "Web/API/ServiceWorkerGlobalScope/caches": {
-    "modified": "2020-10-28T03:25:10.149Z",
-    "contributors": [
-      "peter006qi"
-    ]
-  },
   "Web/API/ServiceWorkerRegistration": {
     "modified": "2019-03-23T22:12:58.327Z",
     "contributors": [
@@ -47331,6 +47325,12 @@
     "modified": "2020-10-15T22:21:27.337Z",
     "contributors": [
       "AlexChao"
+    ]
+  },
+  "conflicting/Web/API/caches": {
+    "modified": "2020-10-28T03:25:10.149Z",
+    "contributors": [
+      "peter006qi"
     ]
   },
   "conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3": {

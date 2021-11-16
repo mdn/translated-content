@@ -472,6 +472,7 @@
 /ko/docs/Web/API/Node/innerText	/ko/docs/Web/API/HTMLElement/innerText
 /ko/docs/Web/API/Notification.permission	/ko/docs/Web/API/Notification/permission
 /ko/docs/Web/API/ParentNode/childElementCount	/ko/docs/Web/API/Element/childElementCount
+/ko/docs/Web/API/PhotoCapabilities	/ko/docs/conflicting/Web/API/ImageCapture/getPhotoCapabilities
 /ko/docs/Web/API/Position	/ko/docs/Web/API/GeolocationPosition
 /ko/docs/Web/API/PositionOptions	/ko/docs/conflicting/Web/API/Geolocation/getCurrentPosition
 /ko/docs/Web/API/RTCConfiguration	/ko/docs/conflicting/Web/API/RTCPeerConnection/RTCPeerConnection
