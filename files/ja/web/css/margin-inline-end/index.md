@@ -3,28 +3,27 @@ title: margin-inline-end
 slug: Web/CSS/margin-inline-end
 tags:
   - CSS
-  - CSS Logical Property
-  - CSS Property
-  - CSS プロパティ
   - CSS 論理的プロパティ
-  - Experimental
+  - CSS プロパティ
+  - 実験的
   - NeedsContent
-  - Reference
+  - リファレンス
   - margin-inline
   - margin-inline-end
+  - recipe:css-property
+browser-compat: css.properties.margin-inline-end
 translation_of: Web/CSS/margin-inline-end
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}
 
-<p><strong><code>margin-inline-end</code></strong> は <a href="/ja/docs/Web/CSS" title="CSS">CSS</a> のプロパティで、要素のインライン方向の論理的な末尾側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応付けられます。これは {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。</p>
+**`margin-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な末尾側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。これは {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
 
-<div>{{EmbedInteractiveExample("pages/css/margin-inline-end.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin-inline-end.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; 値 */
+```css
+/* <length> 値 */
 margin-inline-end: 10px;   /* 絶対的な長さ */
 margin-inline-end: 1em;    /* テキストの大きさに対する相対値 */
 margin-inline-end: 5%;     /* 直近のブロックコンテナーの大きさに対する相対値 */
@@ -35,33 +34,40 @@ margin-inline-end: auto;
 /* グローバル値 */
 margin-inline-end: inherit;
 margin-inline-end: initial;
+margin-inline-end: revert;
 margin-inline-end: unset;
-</pre>
+```
 
-<p>関連プロパティとして、要素の他のマージンを定義する {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}} があります。</p>
+関連プロパティとして、要素の他のマージンを定義する {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}} があります。
 
-<p>{{cssinfo}}</p>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+`margin-inline-end` プロパティは {{cssxref("margin-left")}} プロパティと同じ値を取ります。
 
-<p><code>margin-inline-end</code> プロパティは {{cssxref("margin-left")}} プロパティと同じ値を取ります。</p>
+## 公式定義
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+<h3 id="Setting_inline_end_margin">インライン方向の末尾側のマージンの設定</h3>
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+#### HTML
 
-<h3 id="CSS">CSS</h3>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<pre class="brush: css">div {
+#### CSS
+
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -71,37 +77,23 @@ margin-inline-end: unset;
   writing-mode: vertical-lr;
   margin-inline-end: 20px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", 140, 140)}}</p>
+#### 結果
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+{{EmbedLiveSample("Setting_inline_end_margin", 140, 140)}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-margin-inline-end", "margin-inline-end")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("css.properties.margin-inline-end")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li>{{cssxref("margin-inline-start")}}</li>
- <li>対応付け先の物理的なプロパティ: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+## 関連情報
+
+- {{cssxref("margin-inline-start")}}
+- 対応づけ先の物理的なプロパティ: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

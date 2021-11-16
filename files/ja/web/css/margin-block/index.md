@@ -3,23 +3,21 @@ title: margin-block
 slug: Web/CSS/margin-block
 tags:
   - CSS
-  - CSS Logical Property
-  - CSS Property
-  - CSS プロパティ
   - CSS 論理的プロパティ
-  - Experimental
-  - Reference
+  - CSS プロパティ
+  - 実験的
+  - リファレンス
   - margin-block
-  - margin-block-end
-  - margin-block-start
-  - 一括指定プロパティ
+  - recipe:css-shorthand-property
+browser-compat: css.properties.margin-block
 translation_of: Web/CSS/margin-block
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>margin-block</code></strong> は <a href="/ja/docs/Web/CSS" title="CSS">CSS</a> のプロパティで、論理的なブロックの先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。</p>
+The **`margin-block`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、論理的なブロックの先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; 値 */
+```css
+/* <length> 値 */
 margin-block: 10px 20px;  /* 絶対的な長さ */
 margin-block: 1em 2em;   /* テキストの大きさに対する相対値 */
 margin-block: 5% 2%;    /* 直近のブロックコンテナーの大きさに対する相対値 */
@@ -31,76 +29,82 @@ margin-block: auto;
 /* グローバル値 */
 margin-block: inherit;
 margin-block: initial;
+margin-block: revert;
 margin-block: unset;
-</pre>
+```
 
-<p>これらの値は、 {{CSSxRef("margin-top")}} と {{CSSxRef("margin-bottom")}}、または {{CSSxRef("margin-right")}} と {{CSSxRef("margin-left")}} プロパティに、 {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}} で定義された値にしたがって対応します。</p>
+このプロパティは、 {{CSSxRef("margin-top")}} と {{CSSxRef("margin-bottom")}}、または {{CSSxRef("margin-right")}} と {{CSSxRef("margin-left")}} プロパティに、 {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}} で定義された値にしたがって対応します。
 
-<p>値は {{CSSxRef("margin-block-start")}} と {{CSSxRef("margin-block-end")}} で個別に設定することができます。インライン方向のプロパティは {{CSSxRef("margin-inline")}} で、 {{CSSxRef("margin-inline-start")}} と {{CSSxRef("margin-inline-end")}} を設定します。</p>
+## 構成要素のプロパティ
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+このプロパティは以下の CSS プロパティの一括指定です。
 
-<h3 id="Values" name="Values">値</h3>
+- [`margin-block-end`](/ja/docs/Web/CSS/margin-block-end)
+- [`margin-block-start`](/ja/docs/Web/CSS/margin-block-start)
 
-<p><code>margin-block</code> プロパティは、 {{CSSxRef("margin-left")}} プロパティと同じ値を取ります。</p>
+## 構文
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+### 値
+
+`margin-block` プロパティは、 {{CSSxRef("margin-left")}} プロパティと同じ値を取ります。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{CSSSyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+<h3 id="Setting_block_start_and_end_margins">ブロック方向の先頭と末尾のマージンを設定</h3>
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+#### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
-  height: 120px;
+  height: auto;
+  border: 1px solid green;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
+p {
+  margin: 0;
   margin-block: 20px 40px;
-  background-color: #c8c800;
-}</pre>
+  background-color: tan;
+}
 
-<p>{{EmbedLiveSample("Example", 140, 140)}}</p>
+.verticalExample {
+  writing-mode: vertical-rl;
+}
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+#### HTML
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-margin-block", "margin-block")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+```html
+<div>
+  <p>Example text</p>
+</div>
+<div class="verticalExample">
+  <p>Example text</p>
+</div>
+```
 
-<p>{{CSSInfo}}</p>
+#### 結果
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{EmbedLiveSample("Setting_block_start_and_end_margins", 140, 200)}}
 
-<p>{{Compat("css.properties.margin-block")}}</p>
+## 仕様書
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Specifications}}
 
-<ul>
- <li>対応する物理的プロパティ: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, {{CSSxRef("margin-left")}}</li>
- <li>{{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}</li>
-</ul>
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- 対応する物理的プロパティ: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, {{CSSxRef("margin-left")}}
+- {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}
