@@ -3,7 +3,7 @@ title: overflow-inline
 slug: Web/CSS/overflow-inline
 tags:
   - CSS
-  - CSS Box Model
+  - CSS ボックスモデル
   - CSS Property
   - Reference
   - 'recipe:css-property'
