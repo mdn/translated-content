@@ -163,7 +163,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("scaling_the_x_and_y_dimensions_together", "200", "200")}}
+{{EmbedLiveSample("Déformation_horizontale_et_verticale", "200", "200")}}
 
 ### Déformer horizontalement et verticalement avec origine déplacée
 
@@ -192,7 +192,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("scaling_x_and_y_dimensions_separately_and_translating_the_origin", "200", "200")}}
+{{EmbedLiveSample("Déformer_horizontalement_et_verticalement_avec origine_déplacée", "200", "200")}}
 
 ## Spécifications
 

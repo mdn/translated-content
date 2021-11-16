@@ -240,7 +240,7 @@ body { margin-top: 47px }
 
 Assemblons l'ensemble des fragments pour voir le résultat final.
 
-{{ EmbedLiveSample('exemple_complet', '300','400','element-details.png','') }}
+{{ EmbedLiveSample('Un_exemple_plus_complexe', '300','400','element-details.png','') }}
 
 Quelques notes à propos du résultat affiché :
 

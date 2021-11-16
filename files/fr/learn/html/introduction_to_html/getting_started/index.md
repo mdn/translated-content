@@ -680,7 +680,7 @@ Dans l'exemple ci-dessous, voici deux paragraphes parlant de techniques Web :
 
 Dans la zone de rendu en direct ci-dessous, vous pouvez voir que le premier paragraphe n'est pas correctement affiché : le navigateur interprète le second \<p> comme le début d'un nouveau paragraphe ! Le deuxième paragraphe est bien affiché, car nous avons remplacé les signes inférieur(<) et supérieur(>) par leurs références de caractère.
 
-{{ EmbedLiveSample("Références_dentités", 700, 200, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample("Références_d\'entités_inclure_les_caractères_spéciaux_en_HTML", 700, 200, "", "", "hide-codepen-jsfiddle") }}
 
 > **Note :** Un graphique de toutes les références d'entité de caractères HTML est disponible sur Wikipedia : [Liste des entités caractère de XML et HTML](https://fr.wikipedia.org/wiki/Liste_des_entit%C3%A9s_caract%C3%A8re_de_XML_et_HTML).
 

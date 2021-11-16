@@ -166,7 +166,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Associer_une_rotation_avec_une_autre_transformation", "auto", 320)}}
+{{EmbedLiveSample("Associer_une_rotation_à_une_autre_transformation", "auto", 320)}}
 
 ## Spécifications
 
