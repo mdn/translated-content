@@ -3,70 +3,76 @@ title: padding-block-start
 slug: Web/CSS/padding-block-start
 tags:
   - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Reference
+  - CSS 論理的プロパティ
+  - CSS プロパティ
+  - 実験的
+  - リファレンス
   - padding-block
   - padding-block-start
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.padding-block-start
 translation_of: Web/CSS/padding-block-start
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>padding-block-start</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、要素のブロック方向の論理的な先頭側のパディングを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応付けられます。</p>
+**`padding-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のブロック方向の論理的な先頭側のパディングを定義し、それが要素の書字方向やテキストの方向に応じて物理的なパディングに対応づけられます。
 
-<div>{{EmbedInteractiveExample("pages/css/padding-block-start.html")}}</div>
+{{EmbedInteractiveExample("pages/css/padding-block-start.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; 値 */
+```css
+/* <length> 値 */
 padding-block-start: 10px;      /* 絶対的な長さ */
 padding-block-start: 1em;       /* テキストの大きさに対する相対値 */
 
-/* パーセント値 */
+/* <percentage> 値 */
 padding-block-start: 5%;        /* ブロックコンテナーの幅に対する割合のパディング */
 
 /* グローバル値 */
 padding-block-start: inherit;
 padding-block-start: initial;
+padding-block-start: revert;
 padding-block-start: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<p><code>padding-block-start</code> プロパティは {{cssxref("padding-left")}} プロパティと同じ値を取ります。</p>
+- {{cssxref("&lt;length&gt;")}}
+  - : パディングの寸法を固定値で指定します。負の値は指定できません。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : パディングの寸法をパーセント値で表したもので、含まれるブロックの _inline-size_ に対する相対値です。負の値は指定できません。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p>これは {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。</p>
+`padding-block-start` プロパティは、{{cssxref("padding-top")}} プロパティと同じ値を取ると仕様で定義されています。しかし、このプロパティが対応づけられる物理的なプロパティは、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に設定された値に依存します。したがって、{{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-left")}} の何れかに対応づけられる可能性があります。
 
-<p>関連プロパティとして、要素の他のマージンを定義する {{cssxref("padding-block-start")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} があります。</p>
+関連プロパティとして、要素の他のマージンを定義する {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} があります。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="Setting_block_start_padding_for_vertical_text" name="Setting_block_start_padding_for_vertical_text">縦書きテキストにおけるブロック方向の先頭のパディングの設定</h3>
+<h3 id="Setting_block_start_padding_for_vertical_text">縦書きテキストにおけるブロック方向の先頭のパディングの設定</h3>
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -76,38 +82,22 @@ padding-block-start: unset;
   writing-mode: vertical-lr;
   padding-block-start: 20px;
   background-color: #C8C800;
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Setting_block_start_padding_for_vertical_text", 140, 140)}}</p>
+{{EmbedLiveSample("Setting_block_start_padding_for_vertical_text", 140, 140)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-padding-block-start", "padding-block-start")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.padding-block-start")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>対応付け先の物理的なプロパティ: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- 対応づけ先の物理的なプロパティ: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
