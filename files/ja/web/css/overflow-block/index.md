@@ -3,7 +3,7 @@ title: overflow-block
 slug: Web/CSS/overflow-block
 tags:
   - CSS
-  - CSS Box Model
+  - CSS ボックスモデル
   - CSS Property
   - Reference
   - 'recipe:css-property'

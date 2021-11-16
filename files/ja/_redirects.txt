@@ -3750,6 +3750,10 @@
 /ja/docs/Web/CSS/min	/ja/docs/Web/CSS/min()
 /ja/docs/Web/CSS/minmax	/ja/docs/Web/CSS/minmax()
 /ja/docs/Web/CSS/normal	/ja/docs/Web/CSS/font-variant
+/ja/docs/Web/CSS/offset-block-end	/ja/docs/Web/CSS/inset-block-end
+/ja/docs/Web/CSS/offset-block-start	/ja/docs/Web/CSS/inset-block-start
+/ja/docs/Web/CSS/offset-inline-end	/ja/docs/Web/CSS/inset-inline-end
+/ja/docs/Web/CSS/offset-inline-start	/ja/docs/Web/CSS/inset-inline-start
 /ja/docs/Web/CSS/paint	/ja/docs/Web/CSS/image/paint()
 /ja/docs/Web/CSS/paint()	/ja/docs/Web/CSS/image/paint()
 /ja/docs/Web/CSS/radial-gradient	/ja/docs/Web/CSS/gradient/radial-gradient()

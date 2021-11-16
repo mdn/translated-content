@@ -3,7 +3,7 @@ title: overscroll-behavior-inline
 slug: Web/CSS/overscroll-behavior-inline
 tags:
   - CSS
-  - CSS Box Model
+  - CSS ボックスモデル
   - CSS Logical Properties
   - CSS Property
   - NeedsExample
