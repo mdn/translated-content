@@ -3,33 +3,32 @@ title: width
 slug: Web/CSS/width
 tags:
   - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - dimensions
+  - CSS プロパティ
+  - レイアウト
+  - リファレンス
+  - 寸法
   - recipe:css-property
   - size
   - width
 browser-compat: css.properties.width
 translation_of: Web/CSS/width
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><strong><code>width</code></strong> は CSS のプロパティで、要素の幅を設定します。既定では、このプロパティは<a href="/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">コンテンツ領域</a>の幅を設定しますが、 {{cssxref("box-sizing")}} を <code>border-box</code> に設定すると、<a href="/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area">境界領域</a>の幅を設定します。</p>
+**`width`** は CSS のプロパティで、要素の幅を設定します。既定では、このプロパティは[コンテンツ領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)の幅を設定しますが、 {{cssxref("box-sizing")}} を `border-box` に設定すると、[境界領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area)の幅を設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/width.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{cssxref("min-width")}} および {{cssxref("max-width")}} プロパティは `width` を上書きします。
 
-<p>{{cssxref("min-width")}} および {{cssxref("max-width")}} プロパティは <code>width</code> を上書きします。</p>
+## 構文
 
-<h2 id="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; 値 */
+```css
+/* <length> 値 */
 width: 300px;
 width: 25em;
 
-/* &lt;percentage&gt; 値 */
+/* <percentage> 値 */
 width: 75%;
 
 /* キーワード値 */
@@ -43,57 +42,58 @@ width: inherit;
 width: initial;
 width: revert;
 width: unset;
-</pre>
+```
 
-<h3 id="Values">値</h3>
+### 値
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>絶対的な値で幅を定義します。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>親となる包含ブロックの幅に対するパーセント値で定義します。</dd>
- <dt><code>auto</code></dt>
- <dd>指定された要素の幅をブラウザーが計算して決めます。</dd>
- <dt><code>max-content</code></dt>
- <dd>望ましい固有の幅です。</dd>
- <dt><code>min-content</code></dt>
- <dd>最小の固有の幅です。</dd>
- <dt><code>fit-content({{cssxref("&lt;length-percentage&gt;")}})</code></dt>
- <dd>利用可能な空間に対して fit-content 式を使用し、指定された引数に置き換えられます。すなわち <code>min(max-content, max(min-content, &lt;length-percentage&gt;))</code> です。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : 絶対的な値で幅を定義します。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 親となる包含ブロックの幅に対するパーセント値で定義します。
+- `auto`
+  - : 指定された要素の幅をブラウザーが計算して決めます。
+- `max-content`
+  - : 望ましい固有の幅です。
+- `min-content`
+  - : 最小の固有の幅です。
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+  - : 利用可能な空間に対して fit-content 式を使用し、指定された引数に置き換えられます。すなわち `min(max-content, max(min-content, <length-percentage>))` です。
 
-<h2 id="Accessibility_concerns">アクセシビリティの考慮</h2>
+## アクセシビリティの考慮
 
-<p>ページを拡大してテキストサイズを大きくしたときに、 <code>width</code> を設定した要素が切り捨てられたり、他のコンテンツが見えなくなったりしないようにしてください。</p>
+ページを拡大してテキストサイズを大きくしたときに、 `width` を設定した要素が切り捨てられたり、他のコンテンツが見えなくなったりしないようにしてください。
 
-<ul>
- <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN WCAG の理解、 ガイドライン 1.4 の説明</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN WCAG の理解、 ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 <h3 id="Default_width">既定の幅</h3>
 
-<pre class="brush:css">p.goldie {
+```css
+p.goldie {
   background: gold;
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="goldie"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+```html
+<p class="goldie">The Mozilla community produces a lot of great software.</p>
+```
 
-<p>{{EmbedLiveSample('Default_width', '500px', '64px')}}</p>
+{{EmbedLiveSample('Default_width', '500px', '64px')}}
 
 <h3 id="Pixels_and_ems">ピクセル数と em 単位</h3>
 
-<pre class="brush: css">.px_length {
+```css
+.px_length {
   width: 200px;
   background-color: red;
   color: white;
@@ -106,96 +106,78 @@ width: unset;
   color: red;
   border: 1px solid black;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="px_length"&gt;Width measured in px&lt;/div&gt;
-&lt;div class="em_length"&gt;Width measured in em&lt;/div&gt;</pre>
+```html
+<div class="px_length">Width measured in px</div>
+<div class="em_length">Width measured in em</div>
+```
 
-<p>{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}</p>
+{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}
 
 <h3 id="Percentage">パーセント値</h3>
 
-<pre class="brush: css">.percent {
+```css
+.percent {
   width: 20%;
   background-color: silver;
   border: 1px solid red;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;div class="percent"&gt;Width in percentage&lt;/div&gt;</pre>
+```html
+<div class="percent">Width in percentage</div>
+```
 
-<p>{{EmbedLiveSample('Percentage', '500px', '64px')}}</p>
+{{EmbedLiveSample('Percentage', '500px', '64px')}}
 
-<h3 id="max-content">max-content</h3>
+### max-content
 
-<pre class="brush:css;">p.maxgreen {
+```css
+p.maxgreen {
   background: lightgreen;
   width: intrinsic;           /* Safari/WebKit uses a non-standard name */
   width: -moz-max-content;    /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
   width: max-content;
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="maxgreen"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+```html
+<p class="maxgreen">The Mozilla community produces a lot of great software.</p>
+```
 
-<p>{{EmbedLiveSample('max-content', '500px', '64px')}}</p>
+{{EmbedLiveSample('max-content', '500px', '64px')}}
 
-<h3 id="min-content">min-content</h3>
+### min-content
 
-<pre class="brush:css">p.minblue {
+```css
+p.minblue {
   background: lightblue;
   width: -moz-min-content;    /* Firefox */
   width: -webkit-min-content; /* Chrome */
   width: min-content;
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="minblue"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+```html
+<p class="minblue">The Mozilla community produces a lot of great software.</p>
+```
 
-<p>{{EmbedLiveSample('min-content', '500px', '155px')}}</p>
+{{EmbedLiveSample('min-content', '500px', '155px')}}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Sizing', '#width-height-keywords', 'width')}}</td>
-   <td>{{Spec2('CSS4 Sizing')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Sizing', '#width-height-keywords', 'width')}}</td>
-   <td>{{Spec2('CSS3 Sizing')}}</td>
-   <td>キーワード <code>max-content</code>, <code>min-content</code>, <code>fit-content</code> を追加</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visudet.html#the-width-property', 'width')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>適用対象の要素を詳しく記載</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#width', 'width')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">ボックスモデル</a></li>
- <li>{{cssxref("height")}}</li>
- <li>{{cssxref("box-sizing")}}</li>
- <li>{{cssxref("min-width")}}, {{cssxref("max-width")}}</li>
- <li>対応する論理的プロパティ: {{cssxref("block-size")}}, {{cssxref("inline-size")}}</li>
-</ul>
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- {{cssxref("height")}}
+- {{cssxref("box-sizing")}}
+- {{cssxref("min-width")}}, {{cssxref("max-width")}}
+- 対応する論理的プロパティ: {{cssxref("block-size")}}, {{cssxref("inline-size")}}
