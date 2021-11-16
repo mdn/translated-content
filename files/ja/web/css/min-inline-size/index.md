@@ -3,31 +3,29 @@ title: min-inline-size
 slug: Web/CSS/min-inline-size
 tags:
   - CSS
-  - CSS Logical Property
-  - CSS Property
+  - CSS 論理的プロパティ
+  - CSS プロパティ
   - Experimental
-  - Reference
+  - リファレンス
   - min-inline-size
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.min-inline-size
 translation_of: Web/CSS/min-inline-size
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>min-inline-size</code></strong> は <a href="/ja/docs/Web/CSS" title="CSS">CSS</a> のプロパティで、書字方向に応じて要素ブロックの水平または垂直方向の最小の寸法を定義します。これは {{cssxref("min-width")}} または {{cssxref("min-height")}} のどちらかのプロパティと、 {{cssxref("writing-mode")}} の値に応じて対応します。</span></p>
+**`min-inline-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じて要素ブロックの水平または垂直方向の最小の寸法を定義します。これは {{cssxref("min-width")}} または {{cssxref("min-height")}} のどちらかのプロパティと、 {{cssxref("writing-mode")}} の値に応じて対応します。
 
-<p>書字方向が垂直方向であった場合、 <code>min-inline-size</code> の値は要素の最小の高さに対応します。そうでなければ、要素の最小幅に対応します。関連プロパティの {{cssxref("min-block-size")}} が要素のもう一方の寸法を定義します。</p>
+{{EmbedInteractiveExample("pages/css/min-inline-size.html")}}
 
-<div>{{EmbedInteractiveExample("pages/css/min-inline-size.html")}}</div>
+## 構文
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; 値 */
+```css
+/* <length> 値 */
 min-inline-size: 100px;
 min-inline-size: 5em;
 
-/* &lt;percentage&gt; 値 */
+/* <percentage> 値 */
 min-inline-size: 10%;
 
 /* キーワード値 */
@@ -38,69 +36,58 @@ min-inline-size: fit-content(20em);
 /* グローバル値 */
 min-inline-size: inherit;
 min-inline-size: initial;
+min-inline-size: revert;
 min-inline-size: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+書字方向が垂直方向であった場合、 `min-inline-size` の値は要素の最小の高さに対応します。そうでなければ、要素の最小幅に対応します。関連プロパティの {{cssxref("min-block-size")}} が要素のもう一方の寸法を定義します。
 
-<p><code>min-inline-size</code> プロパティは {{cssxref("min-width")}} および {{cssxref("min-height")}} の各プロパティと同じ値を取ります。</p>
+### 値
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+`min-inline-size` プロパティは {{cssxref("min-width")}} および {{cssxref("min-height")}} の各プロパティと同じ値を取ります。
 
-<p>{{cssinfo}}</p>
+## 公式定義
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Setting_minimum_inline_size_for_vertical_text" name="Setting_minimum_inline_size_for_vertical_text">縦書きでインライン方向の最小寸法を設定</h3>
+<h3 id="Setting_minimum_inline_size_for_vertical_text">縦書きでインライン方向の最小寸法を設定</h3>
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-</pre>
+```html
+<p class="exampleText">Example text</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">.exampleText {
+```css
+.exampleText {
   writing-mode: vertical-rl;
   background-color: yellow;
   block-size: 5%;
   min-inline-size: 200px;
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Setting_minimum_inline_size_for_vertical_text")}}</p>
+{{EmbedLiveSample("Setting_minimum_inline_size_for_vertical_text")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-min-inline-size", "min-inline-size")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.min-inline-size")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>対応付けされる物理的プロパティ: {{cssxref("min-width")}} および {{cssxref("min-height")}}</li>
- <li>{{cssxref("writing-mode")}}</li>
-</ul>
+- 対応付けされる物理的プロパティ: {{cssxref("min-width")}} および {{cssxref("min-height")}}
+- {{cssxref("writing-mode")}}
