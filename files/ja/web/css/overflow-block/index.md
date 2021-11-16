@@ -4,22 +4,22 @@ slug: Web/CSS/overflow-block
 tags:
   - CSS
   - CSS ボックスモデル
-  - CSS Property
-  - Reference
-  - 'recipe:css-property'
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.overflow-block
 translation_of: Web/CSS/overflow-block
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><strong><code>overflow-block</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> プロパティで、内容がブロックの先頭およびブロックの末尾の端をあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、内容をはみ出させる、のいずれかになります。</p>
+**`overflow-block`** は [CSS](/ja/docs/Web/CSS) プロパティで、内容がブロックの先頭およびブロックの末尾の端をあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、内容をはみ出させる、のいずれかになります。
 
-<div class="note">
-<p><code>overflow-block</code> プロパティは、文書の書字方向に応じて、 {{Cssxref("overflow-y")}} または {{Cssxref("overflow-x")}} に対応します。</p>
-</div>
+> **Note:** `overflow-block` プロパティは、文書の書字方向に応じて、 {{Cssxref("overflow-y")}} または {{Cssxref("overflow-x")}} に対応します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush:css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 overflow-block: visible;
 overflow-block: hidden;
 overflow-block: scroll;
@@ -28,67 +28,67 @@ overflow-block: auto;
 /* グローバル値 */
 overflow-block: inherit;
 overflow-block: initial;
+overflow-block: revert;
 overflow-block: unset;
-</pre>
+```
 
-<p><code>overflow-block</code> プロパティは、以下の値の一覧のうち一つのキーワードで指定します。</p>
+`overflow-block` プロパティは、以下の値の一覧のうち一つのキーワードで指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>内容は切り取られず、パディングボックスのブロックの先頭とブロックの末尾の辺よりも外側に表示される可能性があります。</dd>
- <dt><code>hidden</code></dt>
- <dd>ブロック方向にパディングボックスに合わせる必要がある場合は、内容を切り取ります。スクロールバーは表示されません。</dd>
- <dt><code>scroll</code></dt>
- <dd>ブロック方向にパディングボックスに合わせる必要がある場合は、内容を切り取ります。ブラウザーは内容が実際に切り取られるかどうかにかかわらず、スクロールバーを表示します。 (これは内容が変化したときにスクロールバーが表示されたり非表示になったりすることを防ぎます。) プリンターははみ出す内容を印刷するかもしれません。</dd>
- <dt><code>auto</code></dt>
- <dd>ユーザーエージェントに依存します。内容がパディングボックス内に収まる場合は <code>visible</code> と同じように表示されますが、新しいブロック整形コンテキストを生成します。内容があふれる場合、デスクトップブラウザーはスクロールバーを表示します。</dd>
-</dl>
+- `visible`
+  - : 内容は切り取られず、パディングボックスのブロックの先頭とブロックの末尾の辺よりも外側に表示される可能性があります。
+- `hidden`
+  - : ブロック方向にパディングボックスに合わせる必要がある場合は、内容を切り取ります。スクロールバーは表示されません。
+- `scroll`
+  - : ブロック方向にパディングボックスに合わせる必要がある場合は、内容を切り取ります。ブラウザーは内容が実際に切り取られるかどうかにかかわらず、スクロールバーを表示します。 (これは内容が変化したときにスクロールバーが表示されたり非表示になったりすることを防ぎます。) プリンターははみ出す内容を印刷するかもしれません。
+- `auto`
+  - : ユーザーエージェントに依存します。内容がパディングボックス内に収まる場合は `visible` と同じように表示されますが、新しいブロック整形コンテキストを生成します。内容があふれる場合、デスクトップブラウザーはスクロールバーを表示します。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;overflow-block:hidden&lt;/code&gt; — ボックスの外側のテキストを隠す
-  &lt;div id="div1"&gt;
+```html
+<ul>
+  <li><code>overflow-block:hidden</code> — ボックスの外側のテキストを隠す
+  <div id="div1">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-block:scroll&lt;/code&gt; — 常にスクロールバーを表示
-  &lt;div id="div2"&gt;
+  <li><code>overflow-block:scroll</code> — 常にスクロールバーを表示
+  <div id="div2">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-block:visible&lt;/code&gt; — 必要に応じてテキストをボックスの外に表示
-  &lt;div id="div3"&gt;
+  <li><code>overflow-block:visible</code> — 必要に応じてテキストをボックスの外に表示
+  <div id="div3">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-block:auto&lt;/code&gt; — 多くのブラウザーでは &lt;code&gt;scroll&lt;/code&gt; と同じ
-  &lt;div id="div4"&gt;
+  <li><code>overflow-block:auto</code> — 多くのブラウザーでは <code>scroll</code> と同じ
+  <div id="div4">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+    </div>
+  </li>
+</ul>
+```
 
-</pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css notranslate">#div1,
+```css
+#div1,
 #div2,
 #div3,
 #div4 {
@@ -101,43 +101,22 @@ overflow-block: unset;
 #div2 { overflow-block: scroll; margin-bottom: 120px;}
 #div3 { overflow-block: visible; margin-bottom: 120px;}
 #div4 { overflow-block: auto; margin-bottom: 120px;}
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<figure>
-<p>{{EmbedLiveSample("Examples", "100%", "780")}}</p>
-</figure>
+{{EmbedLiveSample("Examples", "100%", "780")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Overflow', '#propdef-overflow-block', 'overflow-block') }}</td>
-   <td>{{ Spec2('CSS3 Overflow') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<div>{{cssinfo}}</div>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.overflow-block")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>関連する CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}</li>
- <li><a href="/ja/docs/Web/CSS/CSS_Logical_Properties">CSS 論理プロパティ</a></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Writing_Modes">書字方向</a></li>
-</ul>
+- 関連する CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
+- [CSS 論理プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties)
+- [書字方向](/ja/docs/Web/CSS/CSS_Writing_Modes)
