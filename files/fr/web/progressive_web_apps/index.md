@@ -12,7 +12,6 @@ tags:
   - Web app
 translation_of: Web/Progressive_web_apps
 ---
-
 Les **applications Web progressives** utilisent des API Web modernes ainsi qu'une stratégie d'amélioration progressive traditionnelle pour créer des applications Web multiplateformes. Ces applications fonctionnent partout et fournissent quelques fonctionnalités qui donnent à l'expérience utilisateur les mêmes avantages que les applications natives. Cet ensemble de documents explique tout ce qu'il faut savoir sur ces applications.
 
 Pour qu'une application Web soit considérée comme un PWA, techniquement parlant, il devrait présenter les caractéristiques suivantes : [Secure contexts](/fr/docs/Web/Security/Secure_Contexts) (**{{Glossary("HTTPS")}}**), un ou plusieurs [Service Workers](/fr/docs/Web/API/Service_Worker_API) et un [fichier manifest](/fr/docs/Web/Manifest).
