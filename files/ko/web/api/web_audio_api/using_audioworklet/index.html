@@ -32,7 +32,7 @@ tags:
  <li>하나 이상의 들어오는 소스에서 오디오를 취하고, 데이터에 대해 작업을 수행하고, 결과로 오디오 데이터를 출력하는 {{domxref("AudioWorkletProcessor")}}를 상속받는 오디오 worklet 프로세서 클래스를 정의하는 모듈을 만듭니다.</li>
  <li>오디오 컨텍스트의 {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} 속성을 통해 오디오 컨텍스트의 {{domxref("AudioWorklet")}}에 접근하고, 오디오 worklet의 {{domxref("Worklet.addModule", "addModule()")}} 메서드를 호출하여 오디오 worklet 프로세서 모듈을 설치합니다.</li>
  <li>필요한 대로, (모듈에 의해 정의된) 프로세서의 이름을 {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} 생성자에 전달함으로써 오디오 프로세싱 노드를 생성합니다.</li>
- <li>{{domxref("AudioWorkletNode")}}가 필요로 하는, 또는 여러분이 설정하기를 원하는 오디오 매개변수들을 설정합니다. 이 매개변수들은 오디오 worklet 프로세서 모듈 내에 정의되어 있습니다.</li>
+ <li>{{domxref("AudioWorkletNode")}}가 필요로 하는, 또는 여러분이 설정하기를 원하는 오디오 파라미터들을 설정합니다. 이 파라미터들은 오디오 worklet 프로세서 모듈 내에 정의되어 있습니다.</li>
  <li>다른 노드처럼, 생성된 <code>AudioWorkletNode</code>를 오디오 프로세싱 파이프라인에 연결하고, 오디오 파이프라인을 평상시처럼 사용합니다.</li>
 </ol>
 
@@ -230,15 +230,15 @@ async function createMyAudioProcessor() {
 
 <p>만약 반환된 값 <code>newProcessorNode</code>가 <code>null</code>이 아니라면, 우리는 작동하고 사용될 준비가 된 백색소음 프로세서 노드와 함께 유효한 오디오 컨텍스트를 가지고 있는 것입니다.</p>
 
-<h2 id="Supporting_audio_parameters">오디오 매개변수 지원하기</h2>
+<h2 id="Supporting_audio_parameters">오디오 파라미터 지원하기</h2>
 
-<p>다른 Web Audio 노드들처럼, {{domxref("AudioWorkletNode")}}은 매개변수를 지원하는데, 이는 실제 작업을 하는 {{domxref("AudioWorkletProcessor")}}와 공유됩니다.</p>
+<p>다른 Web Audio 노드들처럼, {{domxref("AudioWorkletNode")}}은 파라미터를 지원하는데, 이는 실제 작업을 하는 {{domxref("AudioWorkletProcessor")}}와 공유됩니다.</p>
 
-<h3 id="Adding_parameter_support_to_the_processor">프로세서에 매개변수 지원 추가하기</h3>
+<h3 id="Adding_parameter_support_to_the_processor">프로세서에 파라미터 지원 추가하기</h3>
 
-<p>{{domxref("AudioWorkletNode")}}에 매개변수를 추가하기 위해서, 여러분은 모듈 내의 {{domxref("AudioWorkletProcessor")}} 기반의 프로세서 클래스 내에서 매개변수들을 정의할 필요가 있습니다. 이 작업은 static getter {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}}를 클래스에 추가함으로써 이루어질 수 있습니다. 이 함수는 {{domxref("AudioParam")}} 객체들의 배열을 반환해야 하는데, 이 객체는 프로세서에 의해 지원되는 각 매개변수에 대해 하나씩입니다.</p>
+<p>{{domxref("AudioWorkletNode")}}에 파라미터를 추가하기 위해서, 여러분은 모듈 내의 {{domxref("AudioWorkletProcessor")}} 기반의 프로세서 클래스 내에서 파라미터들을 정의할 필요가 있습니다. 이 작업은 static getter {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}}를 클래스에 추가함으로써 이루어질 수 있습니다. 이 함수는 {{domxref("AudioParam")}} 객체들의 배열을 반환해야 하는데, 이 객체는 프로세서에 의해 지원되는 각 파라미터에 대해 하나씩입니다.</p>
 
-<p>다음의 <code>parameterDescriptors()</code> 구현에서, 반환된 배열은 두 개의 <code>AudioParam</code> 객체를 가지고 있습니다. 첫번째 매개변수는 <code>gain</code>을 기본값이 0.5인 0과 1 사이의 값으로 정의했습니다. 두번째 매개변수의 이름은 <code>frequency</code>이고 기본값은 440.0인데, 그 범위는 전부 통틀어 27.5에서 4186.009까지입니다.</p>
+<p>다음의 <code>parameterDescriptors()</code> 구현에서, 반환된 배열은 두 개의 <code>AudioParam</code> 객체를 가지고 있습니다. 첫번째 파라미터는 <code>gain</code>을 기본값이 0.5인 0과 1 사이의 값으로 정의했습니다. 두번째 파라미터의 이름은 <code>frequency</code>이고 기본값은 440.0인데, 그 범위는 전부 통틀어 27.5에서 4186.009까지입니다.</p>
 
 <pre class="brush: js">static get parameterDescriptors() {
   return [
@@ -257,16 +257,16 @@ async function createMyAudioProcessor() {
   ];
 }</pre>
 
-<p>프로세서 노드의 매개변수들에 접근하는 것은 그것들을 {{domxref("AudioWorkletProcessor.process", "process()")}}의 구현에 전달된 <code>parameters</code> 객체에서 찾는 것만큼이나 간단합니다. <code>parameters</code> 객체 내부에 있는 것은 배열들인데, 각 매개변수 당 하나이고, 매개변수로서 같은 이름을 공유합니다.</p>
+<p>프로세서 노드의 파라미터들에 접근하는 것은 그것들을 {{domxref("AudioWorkletProcessor.process", "process()")}}의 구현에 전달된 <code>parameters</code> 객체에서 찾는 것만큼이나 간단합니다. <code>parameters</code> 객체 내부에 있는 것은 배열들인데, 각 파라미터 당 하나이고, 파라미터로서 같은 이름을 공유합니다.</p>
 
 <dl>
- <dt>A-rate 매개변수</dt>
- <dd>a-rate 매개변수에 대해서—시간에 따라 값이 자동적으로 변하는 매개변수—<code>parameters</code> 객체에서 매개변수의 엔트리는 {{domxref("AudioParam")}} 객체들의 배열인데, 처리되고 있는 블록의 각 프레임 당 하나입니다. 이 값들은 해당하는 프레임들에 적용될 것입니다.</dd>
- <dt>K-rate 매개변수</dt>
- <dd>반면에 K-rate 매개변수는, 블럭당 한 번만 변할 수 있어서, 매개변수의 배열은 오직 하나의 엔트리를 가집니다. 블럭의 모든 프레임에 대해 이 값을 사용하십시오.</dd>
+ <dt>A-rate 파라미터</dt>
+ <dd>a-rate 파라미터에 대해서—시간에 따라 값이 자동적으로 변하는 파라미터—<code>parameters</code> 객체에서 파라미터의 엔트리는 {{domxref("AudioParam")}} 객체들의 배열인데, 처리되고 있는 블록의 각 프레임 당 하나입니다. 이 값들은 해당하는 프레임들에 적용될 것입니다.</dd>
+ <dt>K-rate 파라미터</dt>
+ <dd>반면에 K-rate 파라미터는, 블럭당 한 번만 변할 수 있어서, 파라미터의 배열은 오직 하나의 엔트리를 가집니다. 블럭의 모든 프레임에 대해 이 값을 사용하십시오.</dd>
 </dl>
 
-<p>아래의 코드에서, 우리는 a-rate 또는 k-rate 매개변수로 쓰일 수 있는 <code>gain</code> 매개변수를 다루는 <code>process()</code> 함수를 볼 수 있습니다. 우리의 노드는 오직 하나의 입력만을 지원하므로, 이 노드는 단지 리스트의 첫번째 입력만을 취하고, gain을 이 입력에 적용하고, 결과로 생성된 데이터를 첫번째 출력의 버퍼에 작성합니다.</p>
+<p>아래의 코드에서, 우리는 a-rate 또는 k-rate 파라미터로 쓰일 수 있는 <code>gain</code> 파라미터를 다루는 <code>process()</code> 함수를 볼 수 있습니다. 우리의 노드는 오직 하나의 입력만을 지원하므로, 이 노드는 단지 리스트의 첫번째 입력만을 취하고, gain을 이 입력에 적용하고, 결과로 생성된 데이터를 첫번째 출력의 버퍼에 작성합니다.</p>
 
 <pre class="brush: js">process(inputList, outputList, parameters) {
   const input = inputList[0];
@@ -277,7 +277,7 @@ async function createMyAudioProcessor() {
     const inputChannel = input[channel];
     const outputChannel = output[channel];
 
-    // 만약 gain.length가 1이면, 이것은 k-rate 매개변수이므로,
+    // 만약 gain.length가 1이면, 이것은 k-rate 파라미터이므로,
     // 첫번째 엔트리를 모든 프레임에 적용합니다.
     // 그렇지 않으면, 각 엔트리를 해당하는 프레임에 적용합니다.
 
@@ -296,16 +296,16 @@ async function createMyAudioProcessor() {
 }
 </pre>
 
-<p>여기서, 만약 <code>gain.length</code>가 <code>gain</code> 매개변수의 값들의 배열에 오직 하나의 값만이 있다는 것을 나타내면, 배열에 있는 첫번째 엔트리가 블럭의 모든 프레임에 적용됩니다. 그렇지 않으면, 블럭의 각 프레임에 대해, <code>gain[]</code>에 있는 해당하는 엔트리가 적용됩니다.</p>
+<p>여기서, 만약 <code>gain.length</code>가 <code>gain</code> 파라미터의 값들의 배열에 오직 하나의 값만이 있다는 것을 나타내면, 배열에 있는 첫번째 엔트리가 블럭의 모든 프레임에 적용됩니다. 그렇지 않으면, 블럭의 각 프레임에 대해, <code>gain[]</code>에 있는 해당하는 엔트리가 적용됩니다.</p>
 
-<h3 id="Accessing_parameters_from_the_main_thread_script">메인 스레드 스크립트에서 매개변수 접근하기</h3>
+<h3 id="Accessing_parameters_from_the_main_thread_script">메인 스레드 스크립트에서 파라미터 접근하기</h3>
 
-<p>여러분의 메인 스레드 스크립트는 다른 노드들이 할 수 있는 것과 마찬가지로 매개변수에 접근할 수 있습니다. 이렇게 하기 위해서는, 첫째로 여러분은 {{domxref("AudioWorkletNode")}}의 {{domxref("AudioWorkletNode.parameters", "parameters")}} 속성의 {{domxref("AudioParamMap.get", "get()")}} 메서드를 호출함으로써 매개변수에 대한 참조를 얻을 필요가 있습니다.</p>
+<p>여러분의 메인 스레드 스크립트는 다른 노드들이 할 수 있는 것과 마찬가지로 파라미터에 접근할 수 있습니다. 이렇게 하기 위해서는, 첫째로 여러분은 {{domxref("AudioWorkletNode")}}의 {{domxref("AudioWorkletNode.parameters", "parameters")}} 속성의 {{domxref("AudioParamMap.get", "get()")}} 메서드를 호출함으로써 파라미터에 대한 참조를 얻을 필요가 있습니다.</p>
 
 <pre class="brush: js">let gainParam = myAudioWorkletNode.parameters.get("gain");
 </pre>
 
-<p><code>gainParam</code>에 반환되고 저장된 값은 <code>gain</code> 매개변수를 저장하기 위해 사용된 {{domxref("AudioParam")}}입니다. 여러분은 그리고 나서 {{domxref("AudioParam")}} 메서드 {{domxref("AudioParam.setValueAtTime", "setValueAtTime()")}}을 사용하여 주어진 시간의 값을 효과적으로 바꿀 수 있습니다.</p>
+<p><code>gainParam</code>에 반환되고 저장된 값은 <code>gain</code> 파라미터를 저장하기 위해 사용된 {{domxref("AudioParam")}}입니다. 여러분은 그리고 나서 {{domxref("AudioParam")}} 메서드 {{domxref("AudioParam.setValueAtTime", "setValueAtTime()")}}을 사용하여 주어진 시간의 값을 효과적으로 바꿀 수 있습니다.</p>
 
 <p>예를 들어, 여기서, 우리는 값을 <code>newValue</code>로, 효과적으로 즉시 설정했습니다.</p>
 
@@ -313,7 +313,7 @@ async function createMyAudioProcessor() {
 
 <p>여러분은 유사하게 {{domxref("AudioParam")}} 인터페이스에 있는 다른 모든 메서드를 시간에 따른 변화를 적용하기 위해, 예정된 변화를 취소하기 위해, 그리고 등등을 위해 사용할 수 있습니다.</p>
 
-<p>매개변수의 값을 읽는 것은 {{domxref("AudioParam.value", "value")}} 속성을 보는 것 만큼이나 간단합니다:</p>
+<p>파라미터의 값을 읽는 것은 {{domxref("AudioParam.value", "value")}} 속성을 보는 것 만큼이나 간단합니다:</p>
 
 <pre class="brush: js">let currentGain = gainParam.value;</pre>
 
