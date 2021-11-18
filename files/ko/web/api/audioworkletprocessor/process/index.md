@@ -82,7 +82,7 @@ var isActivelyProcessing = audioWorkletProcessor.process(inputs, outputs, parame
 
 ## 예제
 
-이 예제에서 우리는 프로세서의 첫번째 출력에 백색소음을 출력하는 `AudioWorkletProcessor` 를 생성할 것입니다. gain은 `customGain` 매개변수에 의해 제어될 수 있습니다.
+이 예제에서 우리는 프로세서의 첫번째 출력에 백색소음을 출력하는 `AudioWorkletProcessor` 를 생성할 것입니다. gain은 `customGain` 파라미터에 의해 제어될 수 있습니다.
 
 ```js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
@@ -109,7 +109,7 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
     // 이것이 뜻하지 않게 garbage-collected되지 않도록 우리는 true를 반환할 것입니다
     return true
   }
-  // process 메서드에서 사용되는 customGain 매개변수를 정의합니다
+  // process 메서드에서 사용되는 customGain 파라미터를 정의합니다
   static get parameterDescriptors () {
     return [{
       name: 'customGain',
