@@ -13,15 +13,15 @@ browser-compat: api.AudioParam.maxValue
 ---
 {{APIRef("Web Audio API")}}
 
-{{domxref("AudioParam")}} 인터페이스의 읽기 전용 **`maxValue`** 속성은 매개변수의 명목상의 (효과적인) 범위에 대해 최대로 가능한 값을 나타냅니다.
+{{domxref("AudioParam")}} 인터페이스의 읽기 전용 **`maxValue`** 속성은 파라미터의 명목상의 (효과적인) 범위에 대해 최대로 가능한 값을 나타냅니다.
 
-## Syntax
+## 구문
 
 ```js
 var maxVal = audioParam.maxValue;
 ```
 
-### Value
+### 값
 
 매개변수의 명목상의 범위에 대해 허용되는 최대 값을 나타내는 부동점 {{jsxref("Number")}}.
 
