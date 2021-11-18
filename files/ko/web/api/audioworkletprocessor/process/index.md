@@ -122,7 +122,7 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 }
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
