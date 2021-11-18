@@ -1,5 +1,5 @@
 ---
-title: ConstantSourceNode로 다수의 매개변수 제어하기
+title: ConstantSourceNode로 다수의 파라미터 제어하기
 slug: Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode
 tags:
   - Audio
@@ -13,17 +13,17 @@ tags:
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p><span class="seoSummary">이 글은 다수의 매개변수가 같은 값을 공유하도록 매개변수들을 함께 연결하기 위해 어떻게 {{domxref("ConstantSourceNode")}}를 사용하는지를 설명합니다. 이 값은 {{domxref("ConstantSourceNode.offset")}} 매개변수의 값을 설정함으로써 변경될 수 있습니다.</span></p>
+<p><span class="seoSummary">이 글은 다수의 파라미터가 같은 값을 공유하도록 파라미터들을 함께 연결하기 위해 어떻게 {{domxref("ConstantSourceNode")}}를 사용하는지를 설명합니다. 이 값은 {{domxref("ConstantSourceNode.offset")}} 파라미터의 값을 설정함으로써 변경될 수 있습니다.</span></p>
 
-<p>간혹 다수의 오디오 매개변수들이 같은 값을 공유할 수 있도록, 심지어 값이 어떤 방법으로 변경되는 동안일지라도, 연결시켜두고 싶을 때가 있습니다. 예를 들자면, 한 세트의 오실레이터들이 있고, 이 두 개가 하나의 설정 가능한 볼륨을 공유할 필요가 있거나, 특정한 입력에 적용되나 모든 입력에는 적용되지 않는 필터가 있을 수도 있습니다. 반복문을 사용하여 각각의 영향받는 {{domxref("AudioParam")}}의 값을 한번에 하나씩 변경할 수도 있겠지만, 여기에는 두 가지 문제점이 있습니다. 첫째는, 곧 보게 되겠지만, 작성할 필요가 없는 추가적인 코드의 작성입니다. 그리고 둘째는, 그 반복은 스레드 (메인 스레드일 가능성이 높음) 의 소중한 CPU 시간을 사용합니다. 이런 작업을 이에 최적화되어 있으며 여러분의 코드보다 더욱 적합한 우선도에서 실행할 수 있는 오디오 렌더링 스레드에 넘길 수 있는 방법이 있습니다.</p>
+<p>간혹 다수의 오디오 파라미터들이 같은 값을 공유할 수 있도록, 심지어 값이 어떤 방법으로 변경되는 동안일지라도, 연결시켜두고 싶을 때가 있습니다. 예를 들자면, 한 세트의 오실레이터들이 있고, 이 두 개가 하나의 설정 가능한 볼륨을 공유할 필요가 있거나, 특정한 입력에 적용되나 모든 입력에는 적용되지 않는 필터가 있을 수도 있습니다. 반복문을 사용하여 각각의 영향받는 {{domxref("AudioParam")}}의 값을 한번에 하나씩 변경할 수도 있겠지만, 여기에는 두 가지 문제점이 있습니다. 첫째는, 곧 보게 되겠지만, 작성할 필요가 없는 추가적인 코드의 작성입니다. 그리고 둘째는, 그 반복은 스레드 (메인 스레드일 가능성이 높음) 의 소중한 CPU 시간을 사용합니다. 이런 작업을 이에 최적화되어 있으며 여러분의 코드보다 더욱 적합한 우선도에서 실행할 수 있는 오디오 렌더링 스레드에 넘길 수 있는 방법이 있습니다.</p>
 
 <p>그 해결책이란 간단한데, 바로 첫눈에는 그다지 유용해 보이지 않는 오디오 노드 유형 {{domxref("ConstantSourceNode")}}을 사용하는 것입니다.</p>
 
 <h2 id="The_technique">기법</h2>
 
-<p>이 방법은 듣기엔 어려워 보이지만 사실은 굉장히 쉽습니다. {{domxref("ConstantSourceNode")}}를 생성하고 항상 일치하는 값을 갖도록 연결된 모든 {{domxref("AudioParam")}}에 이 노드를 연결합니다. <code>ConstantSourceNode</code>의 {{domxref("ConstantSourceNode.offset", "offset")}} 값은 모든 출력으로 바로 전달되므로, 이 노드는 그 값을 각각의 연결된 매개변수에 보내는 스플리터 역할을 합니다.</p>
+<p>이 방법은 듣기엔 어려워 보이지만 사실은 굉장히 쉽습니다. {{domxref("ConstantSourceNode")}}를 생성하고 항상 일치하는 값을 갖도록 연결된 모든 {{domxref("AudioParam")}}에 이 노드를 연결합니다. <code>ConstantSourceNode</code>의 {{domxref("ConstantSourceNode.offset", "offset")}} 값은 모든 출력으로 바로 전달되므로, 이 노드는 그 값을 각각의 연결된 파라미터에 보내는 스플리터 역할을 합니다.</p>
 
-<p>아래의 그림은 이 과정이 어떻게 작동하는지 보여줍니다. 입력값 <code>N</code>은 {{domxref("ConstantSourceNode.offset")}} 속성의 값으로 설정됩니다. <code>ConstantSourceNode</code>는 필요한 만큼 많은 출력을 가질 수 있습니다. 아래 그림의 경우, <code>ConstantSourceNode</code>를 세 개의 노드에 연결했습니다. 두 개의 {{domxref("GainNode")}}와 {{domxref("StereoPannerNode")}}입니다. 그래서 <code>N</code>은 명시된 매개변수의 값이 됩니다 ({{domxref("GainNode")}}의 {{domxref("GainNode.gain", "gain")}}, {{domxref("StereoPannerNode")}}의 pan).</p>
+<p>아래의 그림은 이 과정이 어떻게 작동하는지 보여줍니다. 입력값 <code>N</code>은 {{domxref("ConstantSourceNode.offset")}} 속성의 값으로 설정됩니다. <code>ConstantSourceNode</code>는 필요한 만큼 많은 출력을 가질 수 있습니다. 아래 그림의 경우, <code>ConstantSourceNode</code>를 세 개의 노드에 연결했습니다. 두 개의 {{domxref("GainNode")}}와 {{domxref("StereoPannerNode")}}입니다. 그래서 <code>N</code>은 명시된 파라미터의 값이 됩니다 ({{domxref("GainNode")}}의 {{domxref("GainNode.gain", "gain")}}, {{domxref("StereoPannerNode")}}의 pan).</p>
 
 <p><img alt="어떻게 ConstantSourceNode가 입력 매개변수를 다수의 노드에 공유하기 위해 사용될 수 있는지를 보여주는 SVG 그림." src="customsourcenode-as-splitter.svg"></p>
 
@@ -214,9 +214,9 @@ window.addEventListener("load", setup, false);
   constantNode.offset.value = volumeControl.value;
 }</pre>
 
-<p>이 간단한 함수는 두 노드의 gain을 제어합니다. 우리가 해야 하는 것은 {{domxref("ConstantSourceNode")}}의 {{domxref("ConstantSourceNode.offset", "offset")}} 매개변수의 값을 설정하는 것 뿐입니다. 이 값은 노드의 상수 출력 값이 되는데, 이는 노드의 모든 출력에 전달되고, 이 출력이라 함은, 위에서 설정되었다시피 <code>gainNode2</code>와 <code>gainNode3</code>입니다.</p>
+<p>이 간단한 함수는 두 노드의 gain을 제어합니다. 우리가 해야 하는 것은 {{domxref("ConstantSourceNode")}}의 {{domxref("ConstantSourceNode.offset", "offset")}} 파라미터의 값을 설정하는 것 뿐입니다. 이 값은 노드의 상수 출력 값이 되는데, 이는 노드의 모든 출력에 전달되고, 이 출력이라 함은, 위에서 설정되었다시피 <code>gainNode2</code>와 <code>gainNode3</code>입니다.</p>
 
-<p>이것이 아주 간단한 예제이긴 하지만, 다수의 연결된 노드에서 재생되는 다수의 연결된 매개변수를 가진 32개의 오실레이터 신시사이저를 상상해 보십시오. 그것들 모두를 조정하기 위해 연산의 수를 줄일 수 있음은 코드의 크기와 성능 양 쪽 모두에 대해 매우 유용함을 증명할 것입니다.</p>
+<p>이것이 아주 간단한 예제이긴 하지만, 다수의 연결된 노드에서 재생되는 다수의 연결된 파라미터를 가진 32개의 오실레이터 신시사이저를 상상해 보십시오. 그것들 모두를 조정하기 위해 연산의 수를 줄일 수 있음은 코드의 크기와 성능 양 쪽 모두에 대해 매우 유용함을 증명할 것입니다.</p>
 
 <h4 id="오실레이터_재생하기">오실레이터 재생하기</h4>
 
