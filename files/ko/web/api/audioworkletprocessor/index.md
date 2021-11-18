@@ -92,7 +92,7 @@ const whiteNoiseNode = new AudioWorkletNode(audioContext, 'white-noise-processor
 whiteNoiseNode.connect(audioContext.destination)
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
