@@ -35,7 +35,7 @@ const gainNode = audioCtx.createGain();
 console.log(gainNode.gain.maxValue); // 3.4028234663852886e38
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
