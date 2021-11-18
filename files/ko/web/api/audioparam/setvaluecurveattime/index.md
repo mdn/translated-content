@@ -15,7 +15,7 @@ browser-compat: api.AudioParam.setValueCurveAtTime
 ---
 {{APIRef("Web Audio API")}}
 
-{{domxref("AudioParam")}} 인터페이스의 **`setValueCurveAtTime()`** 메서드는 매개변수의 값이 값들의 리스트에 의해 정의되는 커브를 따라 변화하도록 예정합니다.
+{{domxref("AudioParam")}} 인터페이스의 **`setValueCurveAtTime()`** 메서드는 파라미터의 값이 값들의 리스트에 의해 정의되는 커브를 따라 변화하도록 예정합니다.
 
 이 커브는 부동점 값들의 배열에서 정의되는 연속되는 값들 사이의 선형 보간인데, 이는 `startTime` 에 시작하는 주어진 구간과 특정한 기간에 맞도록 조정됩니다.
 
@@ -32,7 +32,7 @@ var paramRef = param.setValueCurveAtTime(values, startTime, duration);
 - `startTime`
   - : {{ domxref("AudioContext") }}가 처음 생성된 이후 값의 변화가 일어날 시간 (초 단위로 표현됨) 을 나타내는 double. 만약 이 값이 {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}보다 작다면, 이 값은 `currentTime` 으로 맞춰집니다.
 - `duration`
-  - : 매개변수의 `value` 가 명시된 커브를 따라 변화하는 총 시간 (초 단위로 표현됨) 을 나타내는 double. 명시된 값들은 이 기간을 따라 동일하게 간격이 맞춰집니다.
+  - : 파라미터의 `value` 가 명시된 커브를 따라 변화하는 총 시간 (초 단위로 표현됨) 을 나타내는 double. 명시된 값들은 이 기간을 따라 동일하게 간격이 맞춰집니다.
 
 ### 반환 값
 
@@ -49,7 +49,7 @@ var paramRef = param.setValueCurveAtTime(values, startTime, duration);
 
 ## 사용 일람
 
-매개변수의 값이 커브를 따라서 종료되었을 때, 매개변수의 값은 `values` 매개변수에서 명시된 값들의 집합의 마지막 값과 일치하도록 보장됩니다.
+파라미터의 값이 커브를 따라서 종료되었을 때, 파라미터의 값은 `values` 매개변수에서 명시된 값들의 집합의 마지막 값과 일치하도록 보장됩니다.
 
 > **참고:** Web Audio API의 몇몇 이른 구현은 이것이 사실임을
 > 보장하지 않는데, 이는 예기치 않은 결과를 유발합니다.
