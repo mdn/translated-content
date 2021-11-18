@@ -29,7 +29,7 @@ audioWorkletNode.onprocessorerror = function() { ... };
 
 // 예제 코드 추가하기
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
