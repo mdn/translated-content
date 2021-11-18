@@ -83,7 +83,7 @@ compressor.attack.setValueAtTime(0, audioCtx.currentTime);
 compressor.release.setValueAtTime(0.25, audioCtx.currentTime);
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
