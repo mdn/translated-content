@@ -36,11 +36,11 @@ _`AudioWorkletProcessor` 인터페이스는 이것이 소유하는 어떠한 메
 
 _`AudioWorkletProcessor` 인터페이스는 어떠한 이벤트에도 응답하지 않습니다._
 
-## 사용상의 참고
+## 사용 일람
 
 ### 클래스 파생
 
-사용자 정의 오디오 프로세싱 코드를 정의하려면, 여러분은 `AudioWorkletProcessor` 인터페이스로부터 클래스를 파생시켜야 합니다. 비록 인터페이스에 정의되어 있지 않기는 하나, 파생 클래스는 반드시 {{domxref("AudioWorkletProcessor.process", "process")}} 메서드를 가지고 있어야만 합니다. 이 메서드는 128 샘플 프레임의 각 블럭마다 호출되고 입력과 출력 배열과 사용자 정의 {{domxref("AudioParam")}}들의 (만약 이것들이 정의되었다면) 계산된 값들을 매개변수로 받습니다. 여러분은 입력과 오디오 매개변수 값들을 기본적으로는 무음을 가지는 출력 배열을 채우기 위해 사용할 수 있습니다.
+사용자 정의 오디오 프로세싱 코드를 정의하려면, 여러분은 `AudioWorkletProcessor` 인터페이스로부터 클래스를 파생시켜야 합니다. 비록 인터페이스에 정의되어 있지 않기는 하나, 파생 클래스는 반드시 {{domxref("AudioWorkletProcessor.process", "process")}} 메서드를 가지고 있어야만 합니다. 이 메서드는 128 샘플 프레임의 각 블럭마다 호출되고 입력과 출력 배열과 사용자 정의 {{domxref("AudioParam")}}들의 (만약 이것들이 정의되었다면) 계산된 값들을 매개변수로 받습니다. 여러분은 입력과 오디오 파라미터 값들을 기본적으로는 무음을 가지는 출력 배열을 채우기 위해 사용할 수 있습니다.
 
 선택적으로, 만약 여러분이 사용자 정의 {{domxref("AudioParam")}}들을 여러분의 노드에서 원한다면, 여러분은 프로세서의 _static getter_ 로서 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} 속성을 제공할 수 있습니다. 반환되는 {{domxref("AudioParamDescriptor")}} 기반 객체의 배열은 `AudioWorkletNode`의 초기화 동안 {{domxref("AudioParam")}}들을 생성하기 위해 내부적으로 사용됩니다 .
 
