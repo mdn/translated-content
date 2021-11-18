@@ -81,7 +81,7 @@ const node = new AudioWorkletNode(audioContext, 'test-processor')
 node.connect(audioContext.destination)
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
