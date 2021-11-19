@@ -2264,6 +2264,13 @@
       "xdelatour"
     ]
   },
+  "Glossary/Plugin": {
+    "modified": "2019-03-24T00:03:23.228Z",
+    "contributors": [
+      "Delapouite",
+      "Demos"
+    ]
+  },
   "Glossary/Polyfill": {
     "modified": "2019-03-18T20:40:41.785Z",
     "contributors": [
@@ -10370,13 +10377,6 @@
       "tregagnon",
       "FredB",
       "ThePrisoner"
-    ]
-  },
-  "Plugins/Guide/Constants": {
-    "modified": "2019-03-24T00:03:23.228Z",
-    "contributors": [
-      "Delapouite",
-      "Demos"
     ]
   },
   "Tools": {
