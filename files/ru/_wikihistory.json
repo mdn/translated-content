@@ -1272,6 +1272,12 @@
       "boxa6"
     ]
   },
+  "Glossary/Plugin": {
+    "modified": "2019-08-01T03:21:45.901Z",
+    "contributors": [
+      "art-gur"
+    ]
+  },
   "Glossary/Polymorphism": {
     "modified": "2019-10-14T05:46:10.620Z",
     "contributors": [
@@ -4942,12 +4948,6 @@
   },
   "Mozilla/Firefox/Releases/68": {
     "modified": "2019-07-19T06:10:13.061Z",
-    "contributors": [
-      "art-gur"
-    ]
-  },
-  "Plugins/Roadmap": {
-    "modified": "2019-08-01T03:21:45.901Z",
     "contributors": [
       "art-gur"
     ]

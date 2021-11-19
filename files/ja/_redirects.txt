@@ -2791,8 +2791,8 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/前提条件	/ja/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
 /ja/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/ja/docs/Mozilla/Firefox/Releases/47
 /ja/docs/Mozilla_Addons_FAQ_(external)	https://addons.mozilla.org/faq.php
-/ja/docs/NPAPI/Constants	/ja/docs/Plugins/Guide/Constants
-/ja/docs/NPAPI:Constants	/ja/docs/Plugins/Guide/Constants
+/ja/docs/NPAPI/Constants	/ja/docs/Glossary/Plugin
+/ja/docs/NPAPI:Constants	/ja/docs/Glossary/Plugin
 /ja/docs/Namespace	/ja/docs/Glossary/Namespace
 /ja/docs/New_in_JavaScript_1.8	/ja/docs/orphaned/New_in_JavaScript_1.8
 /ja/docs/Node.isSupported	/ja/docs/Web/API/Node/isSupported
@@ -2813,6 +2813,8 @@
 /ja/docs/Online_and_offline_events	/ja/docs/Web/API/Navigator/Online_and_offline_events
 /ja/docs/Other_JavaScript_tools	/ja/docs/Tools
 /ja/docs/Parsing_and_serializing_XML	/ja/docs/Web/Guide/Parsing_and_serializing_XML
+/ja/docs/Plugins/Guide/Constants	/ja/docs/Glossary/Plugin
+/ja/docs/Plugins/Roadmap	/ja/docs/conflicting/Glossary/Plugin
 /ja/docs/Property_compatibility_table_for_form_widgets	/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls
 /ja/docs/Quirks_Mode_and_Standards_Mode	/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /ja/docs/Rich-Text_Editing_in_Mozilla	/ja/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
