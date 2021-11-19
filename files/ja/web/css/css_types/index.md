@@ -3,169 +3,137 @@ title: CSS データ型
 slug: Web/CSS/CSS_Types
 tags:
   - CSS
-  - CSS Data Type
-  - Guide
+  - CSS データ型
+  - ガイド
   - Index
-  - Overview
-  - Reference
-  - Syntax
-  - Types
-  - data types
+  - 概要
+  - リファレンス
+  - 構文
+  - 型
+  - データ型
   - list
 translation_of: Web/CSS/CSS_Types
 ---
-<div>{{CssRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong>CSS データ型</strong>は、 CSS のプロパティや関数で使用される具体的な値 (キーワードや単位を含む) を定義します。これは<a href="https://www.w3.org/TR/css3-values/#component-types">コンポーネント値型</a>の特殊な種類です。</span></p>
+**CSS データ型**は、 CSS のプロパティや関数で使用される具体的な値 (キーワードや単位を含む) を定義しています。これは[コンポーネント値型](https://www.w3.org/TR/css3-values/#component-types)の特殊な種類です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+よく使われるデータ型は、 [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)仕様書で定義されています。この仕様書は[関数表記](/ja/docs/Web/CSS/CSS_Functions)も定義しており、これはより複雑な型や処理を指定することができます。その他の型は、該当する型で仕様書で定義されています。
 
-<p>CSS の形式文法では、データ型は "<code>&lt;</code>" と "<code>&gt;</code>" の不等号で囲まれたキーワードで表記されます。</p>
+以下に、最もよく目にする型のリファレンスを掲載していますが、すべての CSS 仕様書で定義されている型を網羅しているわけではありません。
 
-<h2 id="Index" name="Index">索引</h2>
+## 構文
 
-<p>一連の CSS 仕様書で定義されているデータ型には、以下のようなものがあります。</p>
+CSS の形式文法では、データ型は "`<`" と "`>`" の不等号で囲まれたキーワードで表記されます。
 
-<div class="index"><span>A</span>
+## テキストのデータ型
 
-<ul>
- <li>{{cssxref("&lt;angle&gt;")}}</li>
- <li>{{cssxref("&lt;angle-percentage&gt;")}}</li>
- <li>{{cssxref("&lt;angular-color-hint&gt;")}}</li>
- <li>{{cssxref("&lt;angular-color-stop&gt;")}}</li>
- <li>{{cssxref("&lt;attr-fallback&gt;")}}</li>
- <li>{{cssxref("&lt;attr-name&gt;")}}</li>
-</ul>
-<span>B</span>
+これらの型には、キーワード、識別子、文字列、URL などがあります。
 
-<ul>
- <li>{{cssxref("&lt;basic-shape&gt;")}}</li>
- <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
-</ul>
-<span>C</span>
+- 定義済みのキーワード
+  - : あらかじめ意味が定義されたキーワード、例えば `collapse` の値は {{cssxref("border-collapse")}} プロパティの値のためのものです。
+- CSS 全体のキーワード: `initial`
+  - : プロパティの初期値として指定された値です。
+- CSS 全体のキーワード: `inherit`
+  - : 要素の親に対するプロパティの計算された値。
+- CSS 全体のキーワード: `unset`
+  - : 継承されるプロパティであるかどうかに応じて、`inherit` または `initial` として動作します。
+- `<custom-ident>`
+  - : ユーザー定義の識別子です。例えば、{{cssxref("grid-area")}} プロパティを使って割り当てる名前などです。詳細は {{cssxref("&lt;custom-ident&gt;")}} のページを参照してください。
+- `<dashed-ident>`
+  - : `<custom-ident>` に 2 つのダッシュで始めなければならないという制限を追加したものです。例えば、[CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties)などです。詳しくは {{cssxref("&lt;dashed-ident&gt;")}} のページを参照してください。
+- `<string>`
+  - : 引用符で囲まれた文字列で、{{cssxref("content")}} プロパティの値など使用されます。詳しくは {{cssxref("&lt;string&gt;")}} のページを参照してください。
+- `<url>`
+  - : リソースへのポインターで、例えば {{cssxref("background-image")}} プロパティの値などです。詳しくは {{cssxref("url()")}} のページを参照してください。
 
-<ul>
- <li>{{cssxref("&lt;calc-product&gt;")}}</li>
- <li>{{cssxref("&lt;calc-sum&gt;")}}</li>
- <li>{{cssxref("&lt;calc-value&gt;")}}</li>
- <li>{{cssxref("&lt;color&gt;")}}</li>
- <li>{{cssxref("&lt;color-stop&gt;")}}</li>
- <li>{{cssxref("&lt;color-stop-angle&gt;")}}</li>
- <li>{{cssxref("&lt;counter-style&gt;")}}</li>
- <li>{{cssxref("&lt;custom-ident&gt;")}}</li>
-</ul>
-<span>D</span>
+## 数値データ型
 
-<ul>
- <li>{{cssxref("&lt;dimension&gt;")}}</li>
-</ul>
-<span>F</span>
+これらのデータ型は、数量、インデックス、位置などを示すために使用されます。これらのデータ型のほとんどは、Values and Units 仕様書で定義されていますが、それ以外の仕様書にもその仕様書固有のデータ型が記述されています。例えば、[CSS Grid Layout](https://www.w3.org/TR/css-grid-1/#fr-unit)では、`fr` という単位が定義されています。
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>{{cssxref("&lt;flex&gt;")}}</li>
- <li>{{cssxref("&lt;frequency&gt;")}}</li>
- <li>{{cssxref("&lt;frequency-percentage&gt;")}}</li>
-</ul>
-<span>G</span>
+- `<integer>` (整数)
+  - : 1 桁以上の 0 から 9 までの 10 進数の値です。詳しくは {{cssxref("&lt;integer&gt;")}} のページを参照してください。
+- `<number>` (数値)
+  - : 小数部分を持つこともある実数で、例えば 1 や 1.34 などです。詳しくは {{cssxref("&lt;number&gt;")}} のページを参照してください。
+- `<dimension>` (大きさ)
+  - : 単位を付けた数値で、 23px や 15em などです。詳しくは {{cssxref("&lt;dimension&gt;")}} のページを参照してください。
+- `<percentage>` (パーセント値)
+  - : パーセント記号の付いた数値で、例えば 10% などです。詳しくは {{cssxref("&lt;percentage&gt;")}} のページを参照してください。
+- `<ratio>` (比率)
+  - : `<number> / <number>` という構文で表される比率です。詳細は {{cssxref("&lt;ratio&gt;")}} のページを参照してください。
+- `<flex>`
+  - : [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)に導入された柔軟な長さで、`fr` の単位が付加された `<dimension>` として記述され、グリッドトラックのサイズ調整に使用されます。詳しくは{{cssxref("&lt;flex&gt;")}}のページを参照してください。
 
-<ul>
- <li>{{cssxref("&lt;gradient&gt;")}}</li>
-</ul>
-<span>I</span>
+## 数量
 
-<ul>
- <li>{{cssxref("&lt;ident&gt;")}}</li>
- <li>{{cssxref("&lt;image&gt;")}}</li>
- <li>{{cssxref("&lt;integer&gt;")}}</li>
-</ul>
-<span>L</span>
+これらの型は、寸法やその他の数量を指定するために使用されます。
 
-<ul>
- <li>{{cssxref("&lt;length&gt;")}}</li>
- <li>{{cssxref("&lt;length-percentage&gt;")}}</li>
-</ul>
-<span>N</span>
+- `<length>` (長さ)
+  - : 長さは `<dimension>` の一種で、寸法を表します。詳しくは {{cssxref("&lt;length&gt;")}} のページを参照してください。
+- `<angle>` (角度)
+  - : 角度は {{cssxref("gradient/linear-gradient()", "linear-gradient()")}} などのプロパティで使用されるもので、 `<dimension>` のうち `deg`、`grad`、`rad`、`turn` のいずれかの単位が付いたものです。詳しくは {{cssxref("&lt;angle&gt;")}} のページを参照してください。
+- `<time>` (時間)
+  - : 時間の単位は `<dimension>` に `s` や `ms` の単位を付けたものです。詳しくは {{cssxref("&lt;time&gt;")}} のページを参照してください。
+- `<frequency>` (周波数)
+  - : 周波数は `<dimension>` に `Hz` や `kHz` という単位を付けたものです。詳しくは{{cssxref("&lt;frequency&gt;")}} のページを参照してください。
+- `<resolution>` (解像度)
+  - : `<dimension>` の一種で、 `dpi`, `dpcm`, `dppx`, `x` のいずれか単位を付けたものです。詳しくは {{cssxref("&lt;resolution&gt;")}} のページを参照してください。
 
-<ul>
- <li>{{cssxref("&lt;number&gt;")}}</li>
- <li>{{cssxref("&lt;number-percentage&gt;")}}</li>
-</ul>
-<span>P</span>
+## 型の組み合わせ
 
-<ul>
- <li>{{cssxref("&lt;percentage&gt;")}}</li>
- <li>{{cssxref("&lt;position&gt;")}}</li>
-</ul>
-<span>Q</span>
+CSS プロパティの中には、大きさとパーセント値のどちらかを取ることができるものがあります。この場合、パーセント値は、許容される大きさに一致する大きさに解決されます。大きさに加えてパーセント値を取ることができるプロパティは、以下に示す型のいずれかを使用します。
 
-<ul>
- <li>{{cssxref("&lt;quote&gt;")}}</li>
-</ul>
-<span>R</span>
+- `<length-percentage>`
+  - : 値として長さまたはパーセント値を受け取ることができる型です。詳しくは {{cssxref("&lt;length-percentage&gt;")}} のページを参照してください。
+- `<frequency-percentage>`
+  - : 値として周波数またはパーセント値を受け取ることができる型です。詳しくは {{cssxref("&lt;frequency-percentage&gt;")}} のページを参照してください。
+- `<angle-percentage>`
+  - : 値として角度またはパーセント値を受け取ることができる型です。詳しくは {{cssxref("&lt;angle-percentage&gt;")}} のページを参照してください。
+- `<time-percentage>`
+  - : 値として時間またはパーセント値を受け取ることができる型です。詳しくは {{cssxref("&lt;time-percentage&gt;")}} のページを参照してください。
 
-<ul>
- <li>{{cssxref("&lt;ratio&gt;")}}</li>
- <li>{{cssxref("&lt;resolution&gt;")}}</li>
-</ul>
-<span>S</span>
+## 色
 
-<ul>
- <li>{{cssxref("&lt;shape&gt;")}}</li>
- <li>{{cssxref("&lt;shape-box&gt;")}}</li>
- <li>{{cssxref("&lt;shape-radius&gt;")}}</li>
- <li>{{cssxref("&lt;string&gt;")}}</li>
-</ul>
-<span>T</span>
+[CSS 色仕様書](https://www.w3.org/TR/css-color-3/)は、CSS における {{cssxref("&lt;color&gt;")}} データ型と、色に関するその他の型を定義しています。
 
-<ul>
- <li>{{cssxref("&lt;time&gt;")}}</li>
- <li>{{cssxref("&lt;time-percentage&gt;")}}</li>
- <li>{{cssxref("&lt;timing-function&gt;")}}</li>
- <li>{{cssxref("&lt;toggle-value&gt;")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
- <li>{{cssxref("&lt;type-or-unit&gt;")}}</li>
-</ul>
-<span>U</span>
+- `<color>`
+  - : キーワードまたは色の数値で指定します。詳しくは {{cssxref("&lt;color&gt;")}} ページを参照してください。
+- `<alpha-value>`
+  - : 色の透明度を指定します。 `<number>` の場合は 0 が完全な透明、1 が完全な不透明となり、`<percentage>` の場合は 0% が完全な透明、100% が完全な不透明となります。
 
-<ul>
- <li>{{cssxref("&lt;url&gt;")}}</li>
- <li>{{cssxref("&lt;url-modifier&gt;")}}</li>
-</ul>
-<span>Z</span>
+## 画像
 
-<ul>
- <li>{{cssxref("&lt;zero&gt;")}}</li>
-</ul>
-</div>
+[CSS 画像仕様書](https://www.w3.org/TR/css-images-3/)は、グラデーションを含む画像を扱うデータ型を定義しています。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+- `<image>`
+  - : 画像への URL 参照や色のグラデーションです。詳しくは {{cssxref("&lt;image&gt;")}} のページを参照してください。
+- `<color-stop-list>`
+  - : 2 つ以上の色停止点のリストで、オプションで色ヒントを使ったトランジション情報があります。
+- `<linear-color-stop>`
+  - : グラデーションのこの部分の色停止点を示すための `<color>` と `<length-percentage>` です。
+- `<linear-color-hint>`
+  - : 色がどのように補間されるかを示すための `<length-percentage>` です。
+- `<ending-shape>`
+  - : 放射グラデーションで使用されます。`circle` または `ellipse` のキーワード値を指定することができます。
+- `<size>`
+  - : 放射グラデーションの末端のの大きさを決定します。キーワードまたは `<length>` を指定できますが、パーセント値は指定できません。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Values') }}</td>
-   <td>{{ Spec2('CSS4 Values') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Values') }}</td>
-   <td>{{ Spec2('CSS3 Values') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 二次元の位置指定
 
-<h2 id="See_Also" name="See_Also">関連情報</h2>
+{{cssxref("&lt;position&gt;")}} データ型は {{cssxref("&lt;background-position&gt;")}} プロパティで定義されたものと同様に解釈されます。
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Values_and_Units">CSS 単位と値</a></li>
- <li><a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS 入門: 値と単位</a></li>
-</ul>
+- {{cssxref("&lt;position&gt;")}}
+  - : オブジェクト領域の位置を定義します。`top` や `left` などのキーワードや、`<length-percentage>` の値を指定します。
+
+## 仕様書
+
+| 仕様書                        | 状態                       | 備考                |
+| ----------------------------- | -------------------------- | ------------------- |
+| {{ SpecName('CSS4 Values') }} | {{ Spec2('CSS4 Values') }} |                     |
+| {{ SpecName('CSS3 Values') }} | {{ Spec2('CSS3 Values') }} | 初回定義            |
+
+## 関連情報
+
+- [CSS 単位と値](/ja/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS 入門: 値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 関数表記](/ja/docs/Web/CSS/CSS_Functions)
