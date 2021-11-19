@@ -85,11 +85,11 @@ Referrer-Policy: unsafe-url
 
 <p>他に、 <code>noreferrer</code> <a href="/ja/docs/Web/HTML/Link_types">link 関係</a>を <code>a</code>, <code>area</code>, <code>link</code> の各要素に設定することもできます。</p>
 
- <div class="blockIndicator warning">
- <p>As seen above, the `noreferrer` link relation is written without a dash. When you specify the referrer policy for the entire document with a {{HTMLElement("meta")}} element, it should be written _with_ a dash: `<meta name="referrer" content="no-referrer">`.</p>
- </div>
-
 <pre class="brush: html notranslate">&lt;a href="http://example.com" rel="noreferrer"&gt;</pre>
+
+<div class="blockIndicator warning">
+ <p>上記のように、 <code>noreferrer</code> link 関係はダッシュ記号を用いずに記述されます。 {{HTMLElement("meta")}} 要素で文書全体のリファラーポリシーを指定するときはダッシュを<em>つけて</em>次のように記述します:  <code>&lt;meta name="referrer" content="no-referrer"&gt;</code></p>
+</div>
 
 <h2 id="Integration_with_CSS" name="Integration_with_CSS">CSS との統合</h2>
 
@@ -210,16 +210,16 @@ Referrer-Policy: unsafe-url
 
 <p class="note">複数の値を設定する方法は、 HTTP の <code>Referrer-Policy</code> ヘッダーのみが対応しており、 <code>referrerpolicy</code> 属性では対応していません。</p>
 
-<h2 id="browser-specific_preferencessettings"><a href="#browser-specific_preferencessettings" title="Permalink to Browser-specific preferences/settings">Browser-specific preferences/settings</a></h2>
+<h2 id="browser-specific_preferencessettings" name="browser-specific_preferencessettings">ブラウザ固有の設定</h2>
 
-<h3 id="firefox_preferences"><a href="#firefox_preferences" title="Permalink to Firefox preferences">Firefox preferences</a></h3>
+<h3 id="firefox_preferences" name="firefox_preferences">Firefox の設定</h3>
 
-<div><p>You can configure the <em>default</em> referrer policy in Firefox preferences. The preference names are version specific:</p>
+<div><p>Firefox のユーザー設定では<em>既定の</em>リファラーポリシーを構成できます。設定名はバージョンにより異なります:</p>
 <ul>
-  <li>Firefox version 59 and later: <code>network.http.referer.defaultPolicy</code> (and <code>network.http.referer.defaultPolicy.pbmode</code> for private networks)</li>
-  <li>Firefox versions 53 to 58: <code>network.http.referer.userControlPolicy</code></li>
+  <li>Firefox バージョン 59以降: <code>network.http.referer.defaultPolicy</code> (プライベートネットワークでは <code>network.http.referer.defaultPolicy.pbmode</code>)</li>
+  <li>Firefox バージョン 53 から 58: <code>network.http.referer.userControlPolicy</code></li>
 </ul>
-<p>All of these settings take the same set of values: <code>0 = no-referrer</code>, <code>1 = same-origin</code>, <code>2 = strict-origin-when-cross-origin</code>, <code>3 = no-referrer-when-downgrade</code>.</p></div>
+<p>どちらも同じ設定値をとります: <code>0 = no-referrer</code>, <code>1 = same-origin</code>, <code>2 = strict-origin-when-cross-origin</code>, <code>3 = no-referrer-when-downgrade</code></p></div>
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 
@@ -241,22 +241,6 @@ Referrer-Policy: unsafe-url
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("http.headers.Referrer-Policy")}}</p>
-
-<div class="note">
-<ul>
- <li>バージョン 53 以降では、 Gecko は <code>about:config</code> の中でユーザーが <code>Referrer-Policy</code> の既定値を設定できる設定項目 (<span class="quote"> <code>network.http.referer.userControlPolicy</code>) があります。</span></li>
- <li>バージョン 59 以降では (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=587523">#587523</a> を参照)、これは <code>network.http.referer.defaultPolicy</code> および <code>network.http.referer.defaultPolicy.pbmode</code> で置き換えられました。</li>
-</ul>
-
-<p>指定可能な値は以下の通りです。</p>
-
-<ul>
- <li>0 — <code>no-referrer</code></li>
- <li>1 — <code>same-origin</code></li>
- <li>2 — <code>strict-origin-when-cross-origin</code></li>
- <li>3 — <code>no-referrer-when-downgrade</code> (既定値)</li>
-</ul>
-</div>
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 
