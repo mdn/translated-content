@@ -14,7 +14,7 @@ translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">HTTP の <strong><code>Referrer-Policy</code></strong> {{glossary("HTTP header", "ヘッダー")}}は、 ({{HTTPHeader("Referer")}} ヘッダーで送られる) <a href="/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns">リファラー情報</a>をリクエストにどれだけ含めるかを制御します。</span></p>
+<p><span class="seoSummary">HTTP の <strong><code>Referrer-Policy</code></strong> {{glossary("HTTP header", "ヘッダー")}}は、 ({{HTTPHeader("Referer")}} ヘッダーで送られる) <a href="/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns">リファラー情報</a>をリクエストにどれだけ含めるかを制御します。ヘッダーに加えて、<a href="#integration_with_html">HTMLでもこのポリシーを設定する</a>ことができます。</span></p>
 
 <table class="properties">
  <tbody>
@@ -31,10 +31,6 @@ translation_of: Web/HTTP/Headers/Referrer-Policy
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<div class="blockIndicator note">
-<p>元のヘッダー名である {{HTTPHeader("Referer")}} は "referrer" という語のスペルミスです。 <code>Referrer-Policy</code> ヘッダーはこのスペルミスをしていません。</p>
-</div>
-
 <pre class="syntaxbox notranslate">Referrer-Policy: no-referrer
 Referrer-Policy: no-referrer-when-downgrade
 Referrer-Policy: origin
@@ -44,6 +40,10 @@ Referrer-Policy: strict-origin
 Referrer-Policy: strict-origin-when-cross-origin
 Referrer-Policy: unsafe-url
 </pre>
+
+<div class="blockIndicator note">
+<p>元のヘッダー名である {{HTTPHeader("Referer")}} は "referrer" という語のスペルミスです。 <code>Referrer-Policy</code> ヘッダーはこのスペルミスをしていません。</p>
+</div>
 
 <h2 id="Directives" name="Directives">ディレクティブ</h2>
 
