@@ -3,12 +3,12 @@ title: mask-border-width
 slug: Web/CSS/mask-border-width
 tags:
   - CSS
-  - CSS Masking
+  - CSS マスク
   - CSS プロパティ
   - 実験的
   - NeedsCompatTable
   - NeedsExample
-  - Reference
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.mask-border-width
 translation_of: Web/CSS/mask-border-width
