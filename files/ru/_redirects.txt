@@ -278,7 +278,8 @@
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-/ru/docs/Plugins/План	/ru/docs/Plugins/Roadmap
+/ru/docs/Plugins/Roadmap	/ru/docs/Glossary/Plugin
+/ru/docs/Plugins/План	/ru/docs/Glossary/Plugin
 /ru/docs/Quirks_Mode_and_Standards_Mode	/ru/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /ru/docs/SVG_In_HTML_Introduction	/ru/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /ru/docs/Sample_.htaccess_file	/ru/docs/Learn/Server-side/Apache_Configuration_htaccess

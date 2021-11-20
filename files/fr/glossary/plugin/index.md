@@ -1,13 +1,13 @@
 ---
 title: Constantes
-slug: Plugins/Guide/Constants
+slug: Glossary/Plugin
 tags:
   - Code
   - Erreur
   - Plugin
 translation_of: Plugins/Guide/Constants
 translation_of_original: NPAPI/Constants
-original_slug: NPAPI/Constantes
+original_slug: Plugins/Guide/Constants
 ---
 Cette section est une référence au définitions utilisées par l'API Plug-in. Toutes les définitions proviennent de npapi.h.
 
