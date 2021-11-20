@@ -16,7 +16,7 @@ tags:
   - レイアウト
   - 計算
   - 関数
-translation_of: Web/CSS/clamp()
+translation_of: Web/CSS/clamp()ｓ
 ---
 <div>{{CSSRef}}</div>
 
