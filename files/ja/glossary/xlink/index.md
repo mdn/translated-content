@@ -6,16 +6,20 @@ tags:
     - Glossary
 ---
 
-XLink is a W3C standard which is used to describe links between XML and XML or
-other documents. Some its behaviors are left to the implementation to determine
-how to handle. Simple XLinks are "supported" in Firefox (at least in SVG and
-MathML), though they do not work as links if one loads a plain XML document with
-XLinks and attempts to click on the relevant points in the XML tree. For those
-who may have found XLink 1.0 cumbersome for regular links, XLink 1.1 drops the
-need to specify `xlink:type="simple"` for simple links. XLink is used in
-[SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML), and other
-important standards. ### Specifications - [XLink
-1.0](https://www.w3.org/TR/xlink/) - [XLink 1.1](https://www.w3.org/TR/xlink11/)
-(currently a Working Draft) ### See also - [XML](/en-US/docs/Web/XML) - [Code
-snippets:getAttributeNS](/en-US/docs/Web/API/Element/getAttributeNS) - a wrapper
-for dealing with some browsers not supporting this DOM method
+XLink は、XML と XML、または他の文書との間のリンクを記述するために使用される W3C の標準規格です。その動作の一部は、どのように処理するかを実装に委ねられています。
+
+単純な XLinks は Firefox で一応サポートされていますが（少なくとも SVG と MathML では）、プレーンな XML ドキュメントを XLinks で読み込んで、XML ツリーの関連ポイントをクリックしようとしても、リンクとしては機能しません。
+
+XLink 1.0 で通常のリンクとしては面倒だと感じていた人のために、XLink 1.1 では、シンプルなリンクには`xlink:type="simple"`を指定する必要がなくなりました。
+
+XLink は [SVG](/ja/docs/Web/SVG)や, [MathML](/ja/docs/Web/MathML)、及びその他の重要な標準で使用されています。
+
+### 仕様
+
+-   [XLink 1.0](https://www.w3.org/TR/xlink/)
+-   [XLink 1.1](https://www.w3.org/TR/xlink11/) (現在進行中の草案)
+
+### 関連項目
+
+-   [XML](/ja/docs/Web/XML)
+-   [Code snippets:getAttributeNS](/ja/docs/Web/API/Element/getAttributeNS) - この DOM メソッドをサポートしていないブラウザに対応するためのラッパー
