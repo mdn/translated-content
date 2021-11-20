@@ -7,7 +7,7 @@ Les couleurs sont représentées sous forme numérique comme un ensemble de nomb
 
 Par exemple, la couleur `#8921F2` (également décrite comme `rgb(137, 33, 242)` ou `hsl(270, 89%, 54)`) est une jolie nuance de violet. Ci-dessous, vous voyez une petite case de cette couleur dans le coin supérieur gauche et une case de la _même_ couleur mais avec un canal alpha défini à 0,5 (50% d'opacité). Les deux cases sont dessinées au-dessus d'un paragraphe de texte.
 
-
+![Image montrant l'effet d'un canal alpha sur une couleur.](alpha-channel-example.png)
 
 Comme vous pouvez le voir, la couleur sans canal alpha bloque complètement le texte de fond, tandis que la boîte avec le canal alpha le laisse visible à travers la couleur de fond violet.
 
