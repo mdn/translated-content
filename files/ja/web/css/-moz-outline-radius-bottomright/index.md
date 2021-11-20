@@ -35,7 +35,7 @@ Mozilla アプリケーションにおいて、 **`-moz-outline-radius-bottomrig
 
 {{CSSSyntax}}
 
-## 例
+<h2 id="Examples">例</h2>
 
 ### HTML
 
