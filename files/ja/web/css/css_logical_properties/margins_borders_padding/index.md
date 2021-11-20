@@ -11,7 +11,7 @@ translation_of: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 ---
 {{CSSRef}}
 
-[論理的プロパティと値仕様書](https://drafts.csswg.org/css-logical/) (Logical Properties and Values specification<) では、それぞれのマージン、境界、パディングのプロパティおよびその一括指定について、フローに関連する対応付けを定義します。
+[論理的プロパティと値仕様書](https://drafts.csswg.org/css-logical/) (Logical Properties and Values specification) では、それぞれのマージン、境界、パディングのプロパティおよびその一括指定について、フローに関連する対応付けを定義します。
 
 [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_Logical_Properties)のメインページを見ると、たくさんのプロパティが並んでいます。これは多くがマージン、境界、パディングのそれぞれの辺について 4 つの個別指定値と、一括指定値のすべてがあるためです。
 
