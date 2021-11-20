@@ -2445,6 +2445,12 @@
       "Wind1808"
     ]
   },
+  "Glossary/Plugin": {
+    "modified": "2019-01-16T16:09:13.641Z",
+    "contributors": [
+      "Nog"
+    ]
+  },
   "Glossary/Polyfill": {
     "modified": "2019-03-23T22:33:11.433Z",
     "contributors": [
@@ -8963,18 +8969,6 @@
       "Potappo",
       "myakura",
       "Kohei"
-    ]
-  },
-  "Plugins/Guide/Constants": {
-    "modified": "2019-01-16T16:09:13.641Z",
-    "contributors": [
-      "Nog"
-    ]
-  },
-  "Plugins/Roadmap": {
-    "modified": "2019-03-18T21:35:38.258Z",
-    "contributors": [
-      "momdo"
     ]
   },
   "Tools": {
@@ -48511,6 +48505,12 @@
     "contributors": [
       "papparapa",
       "silverskyvicto"
+    ]
+  },
+  "conflicting/Glossary/Plugin": {
+    "modified": "2019-03-18T21:35:38.258Z",
+    "contributors": [
+      "momdo"
     ]
   },
   "conflicting/MDN/Contribute/Markdown_in_MDN": {

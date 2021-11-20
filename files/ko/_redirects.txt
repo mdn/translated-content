@@ -406,13 +406,14 @@
 /ko/docs/Node_server_without_framework	/ko/docs/Learn/Server-side/Node_server_without_framework
 /ko/docs/Notable_bugs_fixed_in_Firefox_3	/ko/docs/Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 /ko/docs/Online_and_offline_events	/ko/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
+/ko/docs/Plugins/Guide/Scripting_plugins	/ko/docs/Glossary/Plugin
 /ko/docs/SVG	/ko/docs/Web/SVG
 /ko/docs/SVG/Tutorial	/ko/docs/Web/SVG/Tutorial
 /ko/docs/SVG:Tutorial	/ko/docs/Web/SVG/Tutorial
 /ko/docs/SVG_In_HTML_Introduction	/ko/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /ko/docs/SVG_improvements_in_Firefox_3	/ko/docs/Mozilla/Firefox/Releases/3/SVG_improvements
 /ko/docs/SVG_in_Firefox	/ko/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/ko/docs/Scripting_Plugins	/ko/docs/Plugins/Guide/Scripting_plugins
+/ko/docs/Scripting_Plugins	/ko/docs/Glossary/Plugin
 /ko/docs/The_Importance_of_Correct_HTML_Commenting	/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments
 /ko/docs/The_XSLT_JavaScript_Interface_in_Gecko	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
 /ko/docs/The_XSLT_JavaScript_Interface_in_Gecko/Introduction	/ko/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction

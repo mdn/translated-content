@@ -31,7 +31,7 @@ tags:
 
 <p>재생될 수 있는 네 가지의 다른 음, 또는 소리가 있습니다. 각 소리는 네 개의 버튼을 가지고 있는데, 이는 음악의 한 마디에 있는 네 개의 비트를 나타냅니다. 이것들이 활성화되었을 때 노트는 소리를 낼 것입니다. 악기가 재생될 때, 이것은 이 비트들의 세트를 가로질러 이동하고 마디를 반복할 것입니다.</p>
 
-<p>각 소리들은 또한 해당 소리를 수정할 수 있는 슬라이더를 가지고 있는데, 이는 이펙트나 우리가 이 소리들을 만들기 위해 사용한 각 기법의 특정한 매개변수를 조작할 수 있게 해 줍니다. 우리가 사용하는 이 기법들은:</p>
+<p>각 소리들은 또한 해당 소리를 수정할 수 있는 슬라이더를 가지고 있는데, 이는 이펙트나 우리가 이 소리들을 만들기 위해 사용한 각 기법의 특정한 파라미터를 조작할 수 있게 해 줍니다. 우리가 사용하는 이 기법들은:</p>
 
 <table class="standard-table">
  <thead>
@@ -141,7 +141,7 @@ releaseControl.addEventListener('input', function() {
 
 <p>이것은 정말로 유용합니다 — 이제 우리는 gain 값에 audio param 메서드의 힘을 사용할 수 있습니다. 우리는 특정한 시간에 값을 설정할 수 있거나, {{domxref("AudioParam.linearRampToValueAtTime")}}과 같은 메서드로 시간에 <strong>따라</strong> 이것을 변화시킬 수 있습니다.</p>
 
-<p>우리의 attack과 release에 대해, 우리는 위에서 언급된 <code>linearRampToValueAtTime</code> 메서드를 사용할 것입니다. 이것은 두 개의 매개변수를 취합니다 — 변화시키고 있는 매개변수에 설정하기 원하는 값 (이 경우 gain) 그리고 언제 이것을 하고 싶은지. 우리의 경우 <strong>언제</strong>는 우리의 입력에 의해 제어됩니다. 그래서 아래의 예제에서 gain은 attack 범위 입력이 설정된 시간에 따라 선형 비율로 1까지 증가됩니다. 비슷하게 release의 경우, release 입력이 설정된 시간에 걸쳐 선형 비율로 gain은 0으로 설정됩니다.</p>
+<p>우리의 attack과 release에 대해, 우리는 위에서 언급된 <code>linearRampToValueAtTime</code> 메서드를 사용할 것입니다. 이것은 두 개의 매개변수를 취합니다 — 변화시키고 있는 파라미터에 설정하기 원하는 값 (이 경우 gain) 그리고 언제 이것을 하고 싶은지. 우리의 경우 <strong>언제</strong>는 우리의 입력에 의해 제어됩니다. 그래서 아래의 예제에서 gain은 attack 범위 입력이 설정된 시간에 따라 선형 비율로 1까지 증가됩니다. 비슷하게 release의 경우, release 입력이 설정된 시간에 걸쳐 선형 비율로 gain은 0으로 설정됩니다.</p>
 
 <pre class="brush: js">let sweepLength = 2;
 function playSweep(time) {
@@ -210,7 +210,7 @@ osc.stop(time + pulseTime);</pre>
 &lt;label for="lfo"&gt;LFO&lt;/label&gt;
 &lt;input name="lfo" id="lfo" type="range" min="20" max="40" value="30" step="1" /&gt;</pre>
 
-<p>이전처럼, 우리는 range 입력 값이 사용자에 의해 변화되었을 때 매개변수에 변화를 줄 것입니다.</p>
+<p>이전처럼, 우리는 range 입력 값이 사용자에 의해 변화되었을 때 파라미터에 변화를 줄 것입니다.</p>
 
 <pre class="brush: js">let pulseHz = 880;
 const hzControl = document.querySelector('#hz');
