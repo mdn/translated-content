@@ -3,52 +3,67 @@ title: <time-percentage>
 slug: Web/CSS/time-percentage
 tags:
   - CSS
-  - CSS Data Type
   - CSS データ型
-  - Reference
+  - データ型
+  - リファレンス
   - time-percentage
-  - units
-  - values
-  - 値
   - 単位
+  - 値
 translation_of: Web/CSS/time-percentage
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>&lt;time-percentage&gt;</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/CSS_Types">データ型</a>で、 {{Cssxref("time")}} または {{Cssxref("percentage")}} が取りうる値を表します。</p>
+**`<time-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{Cssxref("time")}} または {{Cssxref("percentage")}} が取りうる値を表します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p>この型に利用できる個々の構文の詳細は、 {{Cssxref("time")}} および {{Cssxref("percentage")}} の文書を参照してください。</p>
+この型に利用できる個々の構文の詳細は、 {{Cssxref("time")}} および {{Cssxref("percentage")}} の文書を参照してください。
 
-<h2 id="Use_in_calc()" name="Use_in_calc()">calc() での使用</h2>
+## 例
 
-<p>許可されている型として <code>&lt;time-percentage&gt;</code> が指定されているところでは、これはパーセント値が時間として解決されるので、 {{Cssxref("calc()")}} の式で利用することができます。</p>
+### calc() での使用
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+許可されている型として `<time-percentage>` が指定されているところでは、これはパーセント値が時間として解決されるので、 {{Cssxref("calc()")}} の式で利用することができます。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Values', '#mixed-percentages', '&lt;time-percentage&gt;')}}</td>
-   <td>{{Spec2('CSS4 Values')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Values', '#mixed-percentages', '&lt;time-percentage&gt;')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td><code>&lt;time-percentage&gt;</code> を定義。 <code>calc()</code> を追加</td>
-  </tr>
- </tbody>
-</table>
+### 有効なパーセント値
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+    50%
+    +50%        + 記号は任意
+    -50%        負号はパーセント値を受け入れるすべてのプロパティで有効とは限らない
 
-<p>{{Compat("css.types.time-percentage")}}</p>
+### 無効なパーセント値
+
+```plain example-bad
+50 %        数値とパーセント記号の間に空白は許可されない
+```
+
+### 有効な時間
+
+    12s         正の整数
+    -456ms      負の整数
+    4.3ms       非整数
+    14mS        単位には大文字・小文字の区別がないが、大文字は推奨されない。
+    +0s         先頭に + がついたゼロと単位
+    -0ms        先頭に - がついたゼロと単位
+
+### 無効な時間
+
+```plain example-bad
+0           単位のない <length> は有効だが、 <time> では無効。
+12.0        これは単位がないので <number> であって <time> ではない。
+7 ms        数値と単位の間に空白は許可されない。
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxref("&lt;time&gt;")}}
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)

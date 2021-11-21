@@ -4,96 +4,68 @@ slug: Web/CSS/resolution
 tags:
   - CSS
   - CSS データ型
-  - Reference
+  - データ型
+  - リファレンス
   - ウェブ
   - レイアウト
+browser-compat: css.types.resolution
 translation_of: Web/CSS/resolution
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>&lt;resolution&gt;</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の <a href="/ja/docs/Web/CSS/CSS_Types">データ型</a> で、<a href="/ja/docs/Web/CSS/Media_Queries">メディアクエリ</a>の <a href="/ja/docs/Web/CSS/@media/resolution">resolution</a> で使われ、出力端末のピクセル密度である、解像度を表します。</p>
+**`<resolution>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/CSS_Types) で、[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)の [resolution](/ja/docs/Web/CSS/@media/resolution) で使われ、出力端末のピクセル密度である、解像度を表します。
 
-<p>画面では、長さは物理的な値ではなく、 <em>CSS</em> のインチ、センチメートル、またはピクセルと関連づけられます。</p>
+画面では、長さは物理的な値ではなく、 <em>CSS</em> のインチ、センチメートル、またはピクセルと関連づけられます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>&lt;resolution&gt;</code> データ型は、厳密に正の {{cssxref("&lt;number&gt;")}} のすぐ後ろに解像度の単位を続けます。他の CSS の寸法と同じく、単位のリテラルと数字の間に空白はありません。</p>
+`<resolution>` データ型は、厳密に正の {{cssxref("&lt;number&gt;")}} のすぐ後ろに解像度の単位を続けます。他の CSS の寸法と同じく、単位のリテラルと数字の間に空白はありません。
 
-<h3 id="Units" name="Units">単位</h3>
+### 単位
 
-<dl>
- <dt><a id="dpi" name="dpi"><code>dpi</code></a></dt>
- <dd><a href="https://en.wikipedia.org/wiki/Dots_per_inch">1 インチあたりのドット数</a> を表します。画面でよく使われるのは 72 または 96 dpi です。印刷物の dpi は通常、これより大きくなります。1 インチは 2.54 cm なので、<code>1dpi ≈ 0.39dpcm</code> です。</dd>
- <dt><a id="dpcm" name="dpcm"><code>dpcm</code></a></dt>
- <dd><a href="https://en.wikipedia.org/wiki/Dots_per_inch">センチメートルあたりのドット数</a> を表します。1 インチは 2.54 cm なので、<code>1dpcm ≈ 2.54dpi</code> です。</dd>
- <dt><a id="dppx" name="dppx"><code>dppx</code></a></dt>
- <dd>ピクセル (<code><a href="/ja/docs/Web/CSS/length#px">px</a></code>) あたりのドット数を表します。CSS の <code>in</code> と CSS の <code>px</code> の比率は 1:96 で固定なので、<code>1dppx</code> は <code>96dpi</code> と同じです。これは {{cssxref("image-resolution")}} で定義される、CSS の画像の既定の解像度に一致します。</dd>
- <dt><a id="x" name="x"><code>x</code></a></dt>
- <dd><code>dppx</code> の別名です。</dd>
-</dl>
+- `dpi`
+  - : [1 インチあたりのドット数](https://en.wikipedia.org/wiki/Dots_per_inch) を表します。画面でよく使われるのは 72 または 96 dpi です。印刷物の dpi は通常、これより大きくなります。1 インチは 2.54 cm なので、`1dpi ≈ 0.39dpcm` です。
+- `dpcm`
+  - : [センチメートルあたりのドット数](https://en.wikipedia.org/wiki/Dots_per_inch) を表します。1 インチは 2.54 cm なので、`1dpcm ≈ 2.54dpi` です。
+- `dppx`
+  - : ピクセル (`[px](/ja/docs/Web/CSS/length#px)`) あたりのドット数を表します。CSS の `in` と CSS の `px` の比率は 1:96 で固定なので、`1dppx` は `96dpi` と同じです。これは {{cssxref("image-resolution")}} で定義される、CSS の画像の既定の解像度に一致します。
+- `x`
+  - : `dppx` の別名です。
 
-<div class="note">
-<p><strong>注記:</strong> 仮に値 <code>0</code> に対しすべての単位が同じ解像度を表すとしても、単位を省略してはいけません。言い換えると <code>0</code> は無効で、<code>0dpi</code>、<code>0dpcm</code>、<code>0dppx</code> のどれも表しません。</p>
-</div>
+> **Note:** 仮に値 `0` に対しすべての単位が同じ解像度を表すとしても、単位を省略してはいけません。言い換えると `0` は無効で、`0dpi`、`0dpcm`、`0dppx` のどれも表しません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Use_in_a_media_query" name="Use_in_a_media_query">メディアクエリで使用する</h3>
+### メディアクエリーで使用する
 
-<pre class="brush: css">@media print and (min-resolution: 300dpi) { ... }</pre>
+```css
+@media print and (min-resolution: 300dpi) { ... }
+```
 
-<h3 id="Valid_resolutions" name="Valid_resolutions">有効な解像度</h3>
+### 有効な解像度
 
-<pre>96dpi
-50.82dpcm
-3dppx
-</pre>
+    96dpi
+    50.82dpcm
+    3dppx
 
-<h3 id="Invalid_resolutions" name="Invalid_resolutions">無効な解像度</h3>
+### 無効な解像度
 
-<pre class="example-bad">72 dpi     数値と単位の間に空白は許可されていません。
+```plain example-bad
+72 dpi     数値と単位の間に空白は許可されていません。
 ten dpi    数値は10進数しか使えません。
 0          単位は必須です。
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Values', '#resolution', '&lt;resolution&gt;')}}</td>
-   <td>{{Spec2('CSS4 Values')}}</td>
-   <td><code>x</code> 単位を追加</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Values', '#resolution', '&lt;resolution&gt;')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td><code>dppx</code> 単位を追加</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#resolution', '&lt;resolution&gt;')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("css.types.resolution")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/@media/resolution">resolution</a> メディア特性</li>
- <li><a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries">メディアクエリの使用</a></li>
-</ul>
+- [resolution](/ja/docs/Web/CSS/@media/resolution) メディア特性
+- {{cssxref("image-resolution")}} プロパティ
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
