@@ -15,25 +15,25 @@ Le type de donnée **`<filter-function>`** représente un effet graphique qui pe
 
 Une valeur de type `<filter-function>` se construit avec l'une des fonctions listées ci-après. Chaque fonction utilise un argument et si celui-ci est invalide, aucun filtre n'est appliqué.
 
-- [`blur()`](/fr/docs/Web/CSS/filter-function/blur)
+- [`blur()`](/fr/docs/Web/CSS/filter-function/blur())
   - : Ajoute un flou sur l'image.
-- [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
+- [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness())
   - : Rend l'image plus claire ou plus sombre.
-- [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
+- [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast())
   - : Augmente ou diminue le contraste de l'image.
-- [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
+- [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow())
   - : Applique une ombre portée derrière l'image.
-- [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale)
+- [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale())
   - : Convertit l'image en niveaux de gris.
-- [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate)
+- [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate())
   - : Modifie la teinte globale de l'image.
-- [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
+- [`invert()`](/fr/docs/Web/CSS/filter-function/invert())
   - : Inverse les couleurs de l'image.
-- [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity)
+- [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity())
   - : Rend l'image transparente.
-- [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
+- [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate())
   - : Sursature ou désature l'image.
-- [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)
+- [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia())
   - : Convertit l'image en sépia.
 
 ## Exemples
