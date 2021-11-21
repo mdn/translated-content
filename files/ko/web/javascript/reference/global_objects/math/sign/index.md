@@ -4,42 +4,49 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/sign
 tags:
   - JavaScript
   - Math
-  - 메소드
-  - 참조
+  - Method
+  - Reference
+  - Polyfill
+browser-compat: javascript.builtins.Math.sign
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.sign()</code></strong> 함수는 어떤 수의 부호를 반환합니다. 이것은 그 수가 양수, 음수 또는 0인지를 나나냅니다.</p>
+**`Math.sign()`** 함수는 주어진 수의 부호를 나타내는 +/-1을 반환합니다. 단, `Math.sign()`에 제공한 수가 0일 경우 부호에 따라 +/-0을 반환합니다.
 
-<h2 id="문법">문법</h2>
+{{EmbedInteractiveExample("pages/js/math-sign.html")}}
 
-<pre class="syntaxbox"><code>Math.sign(<var>x</var>)</code></pre>
+## 구문
 
-<h3 id="매개변수">매개변수</h3>
+```js
+Math.sign(x)
+```
 
-<dl>
- <dt><code>x</code></dt>
- <dd>수치.</dd>
-</dl>
+### 매개변수
 
-<h3 id="반환_값">반환 값</h3>
+- `x`
+  - : 숫자. `number` 자료형이 아닐 경우 자동으로 변환합니다.
 
-<p>주어진 인수의 부호를 나타내는 수치. 인수가 양수, 음수, 양수인 영 또는 음수인 영이면, 이 함수는 <code>1</code>, <code>-1</code>, <code>0,</code> <code>-0</code>을 각각 반환합니다. 그렇지 않으면, {{jsxref("NaN")}} 이 반환됩니다.</p>
+### 반환 값
 
-<h2 id="설명">설명</h2>
+주어진 값의 부호를 나타내는 수.
 
-<p><code>sign()</code> 이<code>Math</code>의 정적 메소드이기 때문에 항상 <code>Math.sign()</code>으로 사용합니다. 사용자가 만든  <code>Math</code> 개체의 메소드로 가 아닙니다.   (<code>Math</code> 는 생성자가 아닙니다).</p>
+- 값이 양의 수일 경우 `1`을 반환합니다.
+- 값이 음의 수일 경우 `-1`을 반환합니다.
+- 값이 양의 0일 경우 `0`을 반환합니다.
+- 값이 음의 0일 경우 `-0`을 반환합니다.
+- 이외의 경우 {{jsxref("NaN")}}을 반환합니다.
 
-<p>이 함수는 반환 값이 5 가지이며, <code>1</code>, <code>-1</code>, <code>0</code>, <code>-0</code>, <code>NaN 입니다.</code> 각각 "양수", "음수", "양의 영", "음의 영", {{jsxref("NaN")}} 입니다.</p>
+## 설명
 
-<p>이 함수에 전달된 인수는 묵시적으로 <code>수치</code> 로 변환됩니다.</p>
+`sign()`은 `Math`의 정적 메서드이므로, 사용자가 생성한 `Math` 객체의 메서드가 아니라 `Math.sign()`으로 호출해야 합니다. (`Math`는 생성자가 아닙니다)
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="Math.sign()을_사용하기"> <code>Math.sign()</code>을 사용하기</h3>
+###  `Math.sign()` 사용하기
 
-<pre class="brush: js">Math.sign(3);     //  1
+```js
+Math.sign(3);     //  1
 Math.sign(-3);    // -1
 Math.sign('-3');  // -1
 Math.sign(0);     //  0
@@ -47,64 +54,21 @@ Math.sign(-0);    // -0
 Math.sign(NaN);   // NaN
 Math.sign('foo'); // NaN
 Math.sign();      // NaN
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## 명세
 
-<pre class="brush: js">if (!Math.sign) {
-  Math.sign = function(x) {
-    // x 가 NaN 이면, 결과는 NaN 입니다.
-    // x 가 -0 이면, 결과는 -0 입니다.
-    // x 가 +0 이면, 결과는 +0 입니다.
-    // x 가 음수이면서 -0 이 아니면, 결과는 -1 입니다.
-    // x 가 양수이면서 +0 이 아니면, 결과는 +1 입니다.
-    return ((x &gt; 0) - (x &lt; 0)) || +x;
-    // A more aesthetical persuado-representation is shown below
-    //
-    // ( (x &gt; 0) ? 0 : 1 )  // if x is negative then negative one
-    //          +           // else (because you cant be both - and +)
-    // ( (x &lt; 0) ? 0 : -1 ) // if x is positive then positive one
-    //         ||           // if x is 0, -0, or NaN, or not a number,
-    //         +x           // Then the result will be x, (or) if x is
-    //                      // not a number, then x converts to number
-  };
-}
-</pre>
+{{Specifications}}
 
-<p>위의 polyfill에서는, <code>(x &gt; 0) 또는 (x &lt; 0)</code> 인 수치들을 만드는 데에 어떤 추가의 타입-강제하기도 필요하지 않은 것은  그 수치들을 서로에게서 빼는 것이 불린형에서 수치로의 형 변환을 강요하기 때문입니다.</p>
+## 브라우저 호환성
 
-<h2 id="규격명세">규격명세</h2>
+{{Compat}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">규격명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">코멘트</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.sign', 'Math.sign')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>최초의 정의.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.sign', 'Math.sign')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## 같이 보기
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-<p>{{Compat("javascript.builtins.Math.sign")}}</p>
-
-<h2 id="같이_보기">같이 보기</h2>
-
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- `core-js`의 [`Math.sign` 폴리필](https://github.com/zloirock/core-js#ecmascript-math)
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.trunc()")}}
