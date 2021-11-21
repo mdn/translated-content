@@ -6,72 +6,55 @@ tags:
   - JavaScript
   - Method
   - Number
+  - Polyfill
+browser-compat: javascript.builtins.Number.parseFloat
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number.parseFloat()</code></strong> 메서드는 문자열을 분석해 부동소수점 실수로 반환합니다.</p>
+**`Number.parseFloat()`** 메서드는 주어진 값을 필요한 경우 문자열로 변환한 후 부동소수점 실수로 파싱해 반환합니다. 숫자를 파싱할 수 없는 경우 {{jsxref("NaN")}}을 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/number-parsefloat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-parsefloat.html")}}
 
+## 구문
 
+```js
+Number.parseFloat(string)
+```
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox">Number.parseFloat(<var>string</var>)</pre>
+- `string`
+  - : 파싱할 값입니다. 문자열이 아닐 경우 [`ToString`](https://tc39.es/ecma262/#sec-tostring) 추상 연산을 사용해 문자열로 변환합니다. 문자열의 선행 공백은 무시합니다.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<p>{{page("ko/docs/Web/JavaScript/Reference/Global_Objects/parseFloat", "매개변수")}}</p>
+주어진 문자열에서 파싱한 부동소수점 실수입니다.
 
-<h3 id="반환_값">반환 값</h3>
+공백이 아닌 첫 글자를 숫자로 변환할 수 없는 경우 {{jsxref("NaN")}}을 반환합니다.
 
-<p>{{page("ko/docs/Web/JavaScript/Reference/Global_Objects/parseFloat", "반환 값")}}</p>
+## 설명
 
-<h2 id="설명">설명</h2>
+### Number.parseFloat vs parseFloat
 
-<p><code>Number.parseFloat()</code> 메서드는 전역 {{jsxref("parseFloat", "parseFloat()")}} 함수와 같은 기능을 가지고 있습니다.</p>
+`Number.parseFloat()`은 전역 {{jsxref("parseFloat", "parseFloat()")}} 함수와 같은 기능을 가지고 있습니다.
 
-<pre>Number.parseFloat === parseFloat; // true</pre>
+```js
+Number.parseFloat === parseFloat; // true
+```
 
-<p><code>Number.parseFloat()는</code> ECMAScript 2015에서 전역 범위의 모듈화를 위해 추가됐습니다. 상세한 정보와 예제는 {{jsxref("parseFloat", "parseFloat()")}}를 참고하세요.</p>
+`Number.parseFloat()`은 ECMAScript 2015에서 전역 객체의 모듈화를 위해 추가됐습니다. 상세한 정보와 예제는 {{jsxref("parseFloat", "parseFloat()")}}를 참고하세요.
 
-<h2 id="폴리필">폴리필</h2>
+## 명세
 
-<pre class="brush: js">if (Number.parseFloat === undefined) {
-    Number.parseFloat = parseFloat;
-}
-</pre>
+{{Specifications}}
 
-<h2 id="명세">명세</h2>
+## 브라우저 호환성
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-number.parsefloat', 'Number.parseFloat')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.parsefloat', 'Number.parseFloat')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 같이 보기
 
-<div>{{Compat("javascript.builtins.Number.parseFloat")}}</div>
-
-<h2 id="같이_보기">같이 보기</h2>
-
-<ul>
- <li>메서드가 속한 {{jsxref("Number")}} 객체.</li>
- <li>전역 {{jsxref("parseFloat", "parseFloat()")}} 메서드.</li>
-</ul>
+- `core-js`의 [`Number.parseFloat` 폴리필](https://github.com/zloirock/core-js#ecmascript-number)
+- 이 메서드가 속한 {{jsxref("Number")}} 객체
+- 전역 {{jsxref("parseFloat", "parseFloat()")}} 메서드
