@@ -4,19 +4,22 @@ slug: Web/CSS/attr()
 tags:
   - CSS
   - CSS 関数
-  - Reference
-  - Web
-  - attr
+  - 関数
   - レイアウト
+  - リファレンス
+  - ウェブ
+  - attr
+browser-compat: css.types.attr
 translation_of: Web/CSS/attr()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<div class="blockIndicator note"><strong>メモ:</strong> <code>attr()</code> 関数はどの CSS プロパティでも使用することができますが、 {{CSSxRef("content")}} 以外のプロパティでの対応は実験的であり、型や単位の引数の対応はまちまちです。</div>
+> **Note:** `attr()` 関数はどの CSS プロパティでも使用することができますが、 {{CSSxRef("content")}} 以外のプロパティでの対応は実験的であり、型や単位の引数の対応はまちまちです。
 
-<p><strong><code>attr()</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の関数で、選択された要素の属性の値を受け取り、スタイルシートの中で使うために使用されます。<a href="/ja/docs/Web/CSS/Pseudo-elements">擬似要素</a>で使用することもでき、その場合は擬似要素を作る元になった要素の属性値が返されます。</p>
+**`attr()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、選択された要素の属性の値を受け取り、スタイルシートの中で使うために使用されます。[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で使用することもでき、その場合は擬似要素を作る元になった要素の属性値が返されます。
 
-<pre class="brush: css no-line-numbers notranslate">/* Simple usage */
+```css
+/* 単純な使用法 */
 attr(data-count);
 attr(title);
 
@@ -30,226 +33,188 @@ attr(data-count number, 0);
 attr(src url, "");
 attr(data-width px, inherit);
 attr(data-something, "default");
-</pre>
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>attribute-name</code></dt>
- <dd>CSS で参照する、 HTML 要素の属性名です。</dd>
- <dt><code style="white-space: nowrap;">&lt;type-or-unit&gt;</code> {{Experimental_Inline}}</dt>
- <dd>属性値の型またはその単位を示すキーワードです。 HTML では暗黙に単位を持つ属性があります。属性に対して無効な値を <code>&lt;type-or-unit&gt;</code> で与えると、 <code>attr()</code> 式も無効になります。省略すると既定値の <code>string</code> になります。有効な値は以下の通りです。
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">キーワード</th>
-    <th scope="col">関係する型</th>
-    <th scope="col">コメント</th>
-    <th scope="col">既定値</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>string</code></td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;string&gt;")}}</td>
-    <td>属性値は CSS {{CSSxRef("&lt;string&gt;")}} として扱われます。再解析はされず、特に文字は CSS エスケープで他の文字に変換されることなく、そのまま使用されます。</td>
-    <td>空文字列</td>
-   </tr>
-   <tr>
-    <td><code>color</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;color&gt;")}}</td>
-    <td>属性値はハッシュ (3値または6値のハッシュ) またはキーワードとして解析されます。妥当な CSS の {{CSSxRef("&lt;string&gt;")}} 値でなければなりません。<br>
-     前後の空白は除去されます。</td>
-    <td><code>currentcolor</code></td>
-   </tr>
-   <tr>
-    <td><code>url</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;url&gt;")}}</td>
-    <td>属性値は、 CSS の <code>url()</code> 関数の中で使用される文字列として解析されます。<br>
-     相対 URL は、スタイルシートからの相対ではなく、元の文書からの相対で解決されます。<br>
-     前後の空白は除去されます。</td>
-    <td>一般的なエラーの状況で存在しない文書を指す <code>about:invalid</code> の URL。</td>
-   </tr>
-   <tr>
-    <td><code>integer</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;integer&gt;")}}</td>
-    <td>属性値は CSS の {{CSSxRef("&lt;integer&gt;")}} として解析されます。妥当ではない場合、つまり整数ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。<br>
-     前後の空白は除去されます。</td>
-    <td><code>0</code>、または <code>0</code> が妥当な値ではないプロパティでは、プロパティの最小値。</td>
-   </tr>
-   <tr>
-    <td><code>number</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;number&gt;")}}</td>
-    <td>属性値は CSS の {{CSSxRef("&lt;number&gt;")}} として解析されます。妥当ではない場合、つまり数値ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。<br>
-     前後の空白は除去されます。</td>
-    <td><code>0</code>、または <code>0</code> が妥当な値ではないプロパティでは、プロパティの最小値。</td>
-   </tr>
-   <tr>
-    <td><code>length</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;length&gt;")}}</td>
-    <td>属性値は CSS の {{CSSxRef("&lt;length&gt;")}} の距離として単位を含んで (<code>12.5em</code> など) 解釈されます。妥当ではない場合、つまり長さではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。<br>
-     指定された値が相対的な長さの場合は、 <code>attr()</code> は絶対的な値に変換して計算します。<br>
-     前後の空白は除去されます。</td>
-    <td><code>0</code>、または <code>0</code> が妥当な値ではないプロパティでは、プロパティの最小値。</td>
-   </tr>
-   <tr>
-    <td><code>em</code>, <code>ex</code>, <code>px</code>, <code>rem</code>, <code>vw</code>, <code>vh</code>, <code>vmin</code>, <code>vmax</code>, <code>mm</code>, <code>cm</code>, <code>in</code>, <code>pt</code>, or <code>pc</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;length&gt;")}}</td>
-    <td>属性値は CSS の {{CSSxRef("&lt;number&gt;")}}、つまり単位なし (<code>12.5</code> など) で解析され、特定の単位を付けた {{CSSxRef("&lt;length&gt;")}} として解釈されます。妥当ではない場合、つまり数値ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。<br>
-     指定された値が相対的な長さの場合は、 <code>attr()</code> は絶対的な値に変換して計算します。<br>
-     前後の空白は除去されます。</td>
-    <td><code>0</code>、または <code>0</code> が妥当な値ではないプロパティでは、プロパティの最小値。</td>
-   </tr>
-   <tr>
-    <td><code>angle</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;angle&gt;")}}</td>
-    <td>属性値は CSS の {{CSSxRef("&lt;angle&gt;")}} の大きさとして単位を含んで (<code>30.5deg</code> など) 解釈されます。妥当ではない場合、つまり角度ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。<br>
-     前後の空白は除去されます。</td>
-    <td><code>0deg</code>、または <code>0deg</code> が妥当な値ではないプロパティでは、プロパティの最小値。</td>
-   </tr>
-   <tr>
-    <td><code>deg</code>, <code>grad</code>, <code>rad</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;angle&gt;")}}</td>
-    <td>属性値は CSS の {{CSSxRef("&lt;number&gt;")}}、つまり単位なし (<code>12.5</code> など) で解析され、特定の単位を付けた {{CSSxRef("&lt;angle&gt;")}} として解釈されます。妥当ではない場合、つまり数値ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。<br>
-     前後の空白は除去されます。</td>
-    <td><code>0deg</code>、または <code>0deg</code> が妥当な値ではないプロパティでは、プロパティの最小値。</td>
-   </tr>
-   <tr>
-    <td><code>time</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;time&gt;")}}</td>
-    <td>属性値は CSS の {{CSSxRef("&lt;time&gt;")}} の大きさとして単位を含んで (<code>30.5ms</code> など) 解釈されます。妥当ではない場合、つまり時間ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。<br>
-     前後の空白は除去されます。</td>
-    <td><code>0s</code>、または <code>0s</code> が妥当な値ではないプロパティでは、プロパティの最小値。</td>
-   </tr>
-   <tr>
-    <td><code>s</code>, <code>ms</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;time&gt;")}}</td>
-    <td>属性値は CSS の {{CSSxRef("&lt;number&gt;")}}、つまり単位なし (<code>12.5</code> など) で解析され、特定の単位を付けた {{CSSxRef("&lt;time&gt;")}} として解釈されます。妥当ではない場合、つまり数値ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。<br>
-     前後の空白は除去されます。</td>
-    <td><code>0s</code>、または <code>0s</code> が妥当な値ではないプロパティでは、プロパティの最小値。</td>
-   </tr>
-   <tr>
-    <td><code>frequency</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;frequency&gt;")}}</td>
-    <td>属性値は CSS の {{CSSxRef("&lt;frequency&gt;")}} の大きさとして単位を含んで (<code>30.5ms</code> など) 解釈されます。妥当ではない場合、つまり周波数ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。</td>
-    <td><code>0Hz</code>、または <code>0Hz</code> が妥当な値ではないプロパティでは、プロパティの最小値。</td>
-   </tr>
-   <tr>
-    <td><code>Hz</code>, <code>kHz</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;frequency&gt;")}}</td>
-    <td>属性値は CSS の {{CSSxRef("&lt;number&gt;")}}、つまり単位なし (<code>12.5</code> など) で解析され、特定の単位を付けた {{CSSxRef("&lt;frequency&gt;")}} として解釈されます。妥当ではない場合、つまり数値ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。<br>
-     前後の空白は除去されます。</td>
-    <td><code>0Hz</code>、または <code>0Hz</code> が妥当な値ではないプロパティでは、プロパティの最小値。</td>
-   </tr>
-   <tr>
-    <td><code>%</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;percentage&gt;")}}</td>
-    <td>属性値は CSS の {{CSSxRef("&lt;number&gt;")}}、つまり単位なし (<code>12.5</code> など) で解析され、 {{CSSxRef("&lt;percentage&gt;")}} として解釈されます。妥当ではない場合、つまり数値ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。<br>
-     指定された値が長さの場合は、 <code>attr()</code> は絶対的な値に変換して計算します。<br>
-     前後の空白は除去されます。</td>
-    <td><code>0%</code>、または <code>0%</code> が妥当な値ではないプロパティでは、プロパティの最小値。</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>&lt;fallback&gt;</code> {{Experimental_Inline}}</dt>
- <dd>関連する属性が見つからないか、無効値を含むときに使われる値です。設定されていない場合は、 CSS は各 <code>&lt;type-or-unit&gt;</code> で定義された既定値を使います。</dd>
-</dl>
+- `attribute-name`
+  - : CSS で参照する、 HTML 要素の属性名です。
+- `<type-or-unit>` {{Experimental_Inline}}
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+  - : 属性値の型またはその単位を示すキーワードです。 HTML では暗黙に単位を持つ属性があります。属性に対して無効な値を `<type-or-unit>` で与えると、 `attr()` 式も無効になります。省略すると既定値の `string` になります。有効な値は以下の通りです。
+
+    - `string`
+
+      - : 属性値は CSS {{CSSxRef("&lt;string&gt;")}} として扱われます。再解析はされず、特に文字は CSS エスケープで他の文字に変換されることなく、そのまま使用されます。
+
+        既定値は空文字列です。
+
+    - `color` {{Experimental_Inline}}
+
+      - : 属性値はハッシュ (3 値または 6 値のハッシュ) またはキーワードとして解析されます。妥当な CSS の {{CSSxRef("&lt;string&gt;")}} 値でなければなりません。前後の空白は除去されます。
+
+        既定値は `currentcolor` です。
+
+    - `url` {{Experimental_Inline}}
+
+      - : 属性値は、 CSS の `url()` 関数の中で使用される文字列として解析されます。
+        相対 URL は、スタイルシートからの相対ではなく、元の文書からの相対で解決されます。
+        前後の空白は除去されます。
+
+        既定値は、一般的なエラーの状況で存在しない文書を指す `about:invalid` の URL です。
+
+    - `integer` {{Experimental_Inline}}
+
+      - : 属性値は CSS の {{CSSxRef("&lt;integer&gt;")}} として解析されます。妥当ではない場合、つまり整数ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。
+        前後の空白は除去されます。
+
+        既定値は `0`、または `0` が妥当な値ではないプロパティでは、プロパティの最小値です。
+
+    - `number` {{Experimental_Inline}}
+
+      - : 属性値は CSS の {{CSSxRef("&lt;number&gt;")}} として解析されます。妥当ではない場合、つまり数値ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。
+        前後の空白は除去されます。
+
+        既定値は `0`、または `0` が妥当な値ではないプロパティでは、プロパティの最小値です。
+
+    - `length` {{Experimental_Inline}}
+
+      - : 属性値は CSS の {{CSSxRef("&lt;length&gt;")}} の距離として単位を含んで (`12.5em` など) 解釈されます。妥当ではない場合、つまり長さではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。
+        指定された値が相対的な長さの場合は、 `attr()` は絶対的な値に変換して計算します。<br>
+        前後の空白は除去されます。
+
+        既定値は `0`、または `0` が妥当な値ではないプロパティでは、プロパティの最小値です。
+
+    - `em`, `ex`, `px`, `rem`, `vw`, `vh`, `vmin`, `vmax`, `mm`, `cm`, `in`, `pt`, or `pc` {{Experimental_Inline}}
+
+      - : 属性値は CSS の {{CSSxRef("&lt;number&gt;")}}、つまり単位なし (`12.5` など) で解析され、特定の単位を付けた {{CSSxRef("&lt;length&gt;")}} として解釈されます。妥当ではない場合、つまり数値ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。
+        指定された値が相対的な長さの場合は、 `attr()` は絶対的な値に変換して計算します。<br>
+        前後の空白は除去されます。
+
+        既定値は `0`、または `0` が妥当な値ではないプロパティでは、プロパティの最小値です。
+
+    - `angle` {{Experimental_Inline}}
+
+      - : 属性値は CSS の {{CSSxRef("&lt;angle&gt;")}} の大きさとして単位を含んで (`30.5deg` など) 解釈されます。妥当ではない場合、つまり角度ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。
+        前後の空白は除去されます。
+
+        既定値は `0deg`、または `0deg` が妥当な値ではないプロパティでは、プロパティの最小値です。
+
+    - `deg`, `grad`, `rad` {{Experimental_Inline}}
+
+      - : 属性値は CSS の {{CSSxRef("&lt;number&gt;")}}、つまり単位なし (`12.5` など) で解析され、特定の単位を付けた {{CSSxRef("&lt;angle&gt;")}} として解釈されます。妥当ではない場合、つまり数値ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。
+        前後の空白は除去されます。
+
+        既定値は `0deg`、または `0deg` が妥当な値ではないプロパティでは、プロパティの最小値です。
+
+    - `time` {{Experimental_Inline}}
+
+      - : 属性値は CSS の {{CSSxRef("&lt;time&gt;")}} の大きさとして単位を含んで (`30.5ms` など) 解釈されます。妥当ではない場合、つまり時間ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。
+        前後の空白は除去されます。
+
+        既定値は `0s`、または `0s` が妥当な値ではないプロパティでは、プロパティの最小値です。
+
+    - `s`, `ms` {{Experimental_Inline}}
+
+      - : 属性値は CSS の {{CSSxRef("&lt;number&gt;")}}、つまり単位なし (`12.5` など) で解析され、特定の単位を付けた {{CSSxRef("&lt;time&gt;")}} として解釈されます。妥当ではない場合、つまり数値ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。
+        前後の空白は除去されます。
+
+        既定値は `0s`、または `0s` が妥当な値ではないプロパティでは、プロパティの最小値です。
+
+    - `frequency` {{Experimental_Inline}}
+
+      - : 属性値は CSS の {{CSSxRef("&lt;frequency&gt;")}} の大きさとして単位を含んで (`30.5ms` など) 解釈されます。妥当ではない場合、つまり周波数ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。
+
+        既定値は `0Hz`、または `0Hz` が妥当な値ではないプロパティでは、プロパティの最小値です。
+
+    - `Hz`, `kHz` {{Experimental_Inline}}
+
+      - : 属性値は CSS の {{CSSxRef("&lt;number&gt;")}}、つまり単位なし (`12.5` など) で解析され、特定の単位を付けた {{CSSxRef("&lt;frequency&gt;")}} として解釈されます。妥当ではない場合、つまり数値ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。
+        前後の空白は除去されます。
+
+        既定値は `0Hz`、または `0Hz` が妥当な値ではないプロパティでは、プロパティの最小値です。
+
+    - `%` {{Experimental_Inline}}
+
+      - : 属性値は CSS の {{CSSxRef("&lt;number&gt;")}}、つまり単位なし (`12.5` など) で解析され、 {{CSSxRef("&lt;percentage&gt;")}} として解釈されます。妥当ではない場合、つまり数値ではない場合や CSS プロパティが受け入れ可能な範囲を超えていた場合は、既定値が使用されます。
+        指定された値が長さの場合は、 `attr()` は絶対的な値に変換して計算します。
+        前後の空白は除去されます。
+
+        既定値は `0%`、または `0%` が妥当な値ではないプロパティでは、プロパティの最小値です。
+
+- `<fallback>` {{Experimental_Inline}}
+  - : 関連する属性が見つからないか、無効値を含むときに使われる値です。設定されていない場合は、 CSS は各 `<type-or-unit>` で定義された既定値を使います。
+
+### 形式文法
 
 {{CSSSyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="content_property" name="content_property">content プロパティ</h3>
+<h3 id="content_property">content プロパティ</h3>
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p data-foo="hello"&gt;world&lt;/p&gt;</pre>
+```html
+<p data-foo="hello">world</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css highlight[2] notranslate">[data-foo]::before {
-  content: attr(data-foo) " ";
-}</pre>
+```css
+[data-foo]::before {
+  content: attr(data-foo) " ";
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("content_property", "100%", 50)}}</p>
+{{EmbedLiveSample("content_property", "100%", 50)}}
 
-<h3 id="&lt;color>_value" name="&lt;color>_value">&lt;color&gt; 値</h3>
+<h3 id="color_value">&lt;color&gt; 値</h3>
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<div id="color-value">
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div class="background" data-background="lime"&gt;background expected to be red if your browser does not support advanced usage of attr()&lt;/div&gt;</pre>
+```html
+<div class="background" data-background="lime">background expected to be red if your browser does not support advanced usage of attr()</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<div class="hidden">
-<pre class="brush: css notranslate">.background {
-  height: 100vh;
-}</pre>
-</div>
+```css hidden
+.background {
+  height: 100vh;
+}
+```
 
-<pre class="brush: css highlight[6] notranslate">.background {
-  background-color: red;
+```css
+.background {
+  background-color: red;
 }
 
 .background[data-background] {
-  background-color: attr(data-background color, red);
-}</pre>
-</div>
+  background-color: attr(data-background color, red);
+}
+```
 
-<p>{{EmbedLiveSample("color-value", "100%", 50)}}</p>
+#### 結果
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{EmbedLiveSample("color_value", "100%", 50)}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Values", "#attr-notation", "attr()")}}</td>
-   <td>{{Spec2("CSS4 Values")}}</td>
-   <td>{{CSSxRef("var()")}} のように動作するように変更。 <code>attr()</code> を含むプロパティ値は解析時に有効となり、属性値の検証は計算値になるまで延期されます。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Values", "#attr-notation", "attr()")}}</td>
-   <td>{{Spec2("CSS3 Values")}}</td>
-   <td>
-    <p>2 つのオプション引数を追加<br>
-     全プロパティで使用可能<br>
-     {{CSSxRef("&lt;string&gt;")}} 以外の値が返せるようになった。</p>
-    これらの変更は実験的であり、ブラウザーの互換性が少なすぎると CR 段階で外される可能性がある</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "generate.html#x18", "attr()")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>{{CSSxRef("content")}} プロパティに限定<br>
-    常に {{CSSxRef("&lt;string&gt;")}} を返す</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("css.types.attr")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/Attribute_selectors">属性セレクター</a></li>
- <li><a href="/ja/docs/Web/HTML/Global_attributes/data-*">HTML <code>data-*</code> 属性</a></li>
- <li><a href="/ja/docs/Web/SVG/Attribute/data-*">SVG <code>data-*</code> 属性</a></li>
-</ul>
+## 関連情報
+
+- [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
+- [HTML `data-*` 属性](/ja/docs/Web/HTML/Global_attributes/data-*)
+- [SVG `data-*` 属性](/ja/docs/Web/SVG/Attribute/data-*)

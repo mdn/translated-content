@@ -4,71 +4,60 @@ slug: Web/CSS/frequency
 tags:
   - CSS
   - CSS データ型
-  - CSS 値と単位
-  - Layout
-  - Reference
+  - データ型
+  - リファレンス
+  - ウェブ
+browser-compat: css.types.frequency
 translation_of: Web/CSS/frequency
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS" title="CSS">CSS</a> の <strong><code>&lt;frequency&gt;</code></strong> <a href="/ja/docs/Web/CSS/CSS_Types">データ型</a>は、話し声の高さなどの周波数の値を表します。今のところ、どの CSS プロパティでも使われていません。</p>
+**`<frequency>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、話し声の高さなどの周波数の値を表します。今のところ、どの CSS プロパティでも使われていません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>&lt;frequency&gt;</code> データ型は、 {{cssxref("&lt;number&gt;")}} とその後に以下に挙げる単位のうちの一つから成ります。他の CSS の数値と同様、単位と数値の間には空白を置きません。</p>
+`<frequency>` データ型は、 {{cssxref("&lt;number&gt;")}} とその後に以下に挙げる単位のうちの一つから成ります。他の CSS の数値と同様、単位と数値の間には空白を置きません。
 
-<h3 id="Units" name="Units">単位</h3>
+### 単位
 
-<dl>
- <dt><code><a id="Hz" name="Hz">Hz</a></code></dt>
- <dd>ヘルツ単位の周波数を表します。例： <code>0Hz</code>、 <code>1500Hz</code>、 <code>10000Hz</code></dd>
- <dt><code><a id="kHz" name="kHz">kHz</a></code></dt>
- <dd>キロヘルツ単位の周波数を表します。例： <code>0kHz</code>、 <code>1.5kHz</code>、 <code>10kHz</code></dd>
-</dl>
+- `Hz`
+  - : 周波数をヘルツで表します。例： `0Hz`、 `1500Hz`、 `10000Hz`
+- `kHz`
+  - : 周波数をキロヘルツで表します。例： `0kHz`、 `1.5kHz`、 `10kHz`
 
-<div class="note">
-<p><strong>メモ:</strong> <code>0</code> の数値は単位に関わらず常に同じですが、単位は省略できません。言い換えれば、 <code>0</code> は無効で <code>0Hz</code> や <code>0kHz</code> を表すものではありません。単位の大文字と小文字は区別されませんが、<a href="http://ja.wikipedia.org/wiki/%E5%9B%BD%E9%9A%9B%E5%8D%98%E4%BD%8D%E7%B3%BB">国際単位系</a>の表記に従って、 <code>Hz</code> や <code>kHz</code> の H を大文字にするのが良い習慣です。</p>
-</div>
+> **Note:** `0` の数値は単位に関わらず常に同じですが、単位は省略できません。言い換えれば、 `0` は無効で `0Hz` や `0kHz` を表すものではありません。単位の大文字と小文字は区別されませんが、[国際単位系](http://ja.wikipedia.org/wiki/%E5%9B%BD%E9%9A%9B%E5%8D%98%E4%BD%8D%E7%B3%BB)の表記に従って、 `Hz` や `kHz` の H を大文字にするのが良い習慣です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Valid_frequency_values" name="Valid_frequency_values">有効な周波数の値</h3>
+### 有効な周波数の値
 
-<pre>12Hz     正の整数
+```plain example-good
+12Hz     正の整数
 4.3Hz    非整数
 14KhZ    単位は大文字小文字を区別しません（ただ、国際単位系の表記が推奨されます）
 +0Hz     先行する + のあるゼロと単位
--0kHz    先行する - のあるゼロと単位</pre>
+-0kHz    先行する - のあるゼロと単位
+```
 
-<h3 id="Invalid_frequency_values" name="Invalid_frequency_values">無効な周波数の値</h3>
+### 無効な周波数の値
 
-<pre class="example-bad">12.0     これは {{cssxref("&lt;number&gt;")}} で、&lt;frequency&gt; ではありません。単位が必須です。
-7 Hz     {{cssxref("&lt;number&gt;")}} と単位の間に空白を置いてはいけません
-0        単位のないゼロは {{cssxref("&lt;length&gt;")}} では利用できますが、 &lt;frequency&gt; では無効です。</pre>
+```plain example-bad
+12.0     これは <number> であり、<frequency> ではありません。単位が必須です。
+7 Hz     数値と単位の間に空白を置いてはいけません
+0        単位のないゼロは <length> では利用できますが、<frequency> では無効です。
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Values', '#frequency', '&lt;frequency&gt;')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<div class="note">
-<p><strong>メモ:</strong> このデータ型は初め、 <a href="https://www.w3.org/TR/CSS2/">CSS Level 2</a> の現在は廃止された <a href="/ja/docs/Web/CSS/@media/aural" title="aural">aural</a> <a href="/ja/docs/Web/CSS/@media#Media_types">メディアタイプ</a>で、音声の高さを定義するために導入されました。現時点ではこのデータ型を使う CSS プロパティはありませんが、 CSS 3 で <code>&lt;frequency&gt;</code> データ型が再導入されました。</p>
-</div>
+> **Note:** このデータ型は初め、 [CSS Level 2](https://www.w3.org/TR/CSS2/) の現在は廃止された [aural](/ja/docs/Web/CSS/@media/aural) [メディアタイプ](/ja/docs/Web/CSS/@media#media_types)で、音声の高さを定義するために導入されました。現時点ではこのデータ型を使う CSS プロパティはありませんが、 CSS 3 で `<frequency>` データ型が再導入されました。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.types.frequency")}}</p>
+{{Compat}}
+
+## 関連情報
+
+- {{cssxref("&lt;frequency-percentage&gt;")}}
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)

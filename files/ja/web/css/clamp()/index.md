@@ -3,119 +3,109 @@ title: clamp()
 slug: Web/CSS/clamp()
 tags:
   - CSS
-  - CSS Function
   - CSS 関数
-  - Calculate
-  - Compute
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - clamp
-  - ウェブ
-  - レイアウト
   - 計算
+  - 演算
   - 関数
-translation_of: Web/CSS/clamp()ｓ
+  - レイアウト
+  - リファレンス
+  - ウェブ
+  - clamp
+browser-compat: css.types.clamp
+translation_of: Web/CSS/clamp()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>clamp()</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の関数で、値を上限と下限の間に制限します。 <code>clamp()</code> によって、定義された最大値と最小値の間の値を選択することができます。最小値、推奨値、最大値の3つの引数を取ります。 <code>clamp()</code> 関数は {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;integer&gt;")}} のいずれでも使用することができます。</p>
+**`clamp()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、値を上限と下限の間に制限します。 `clamp()` によって、定義された最大値と最小値の間の値を選択することができます。最小値、推奨値、最大値の3つの引数を取ります。 `clamp()` 関数は {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;integer&gt;")}} のいずれでも使用することができます。
 
-<p><code>clamp(MIN, VAL, MAX)</code> は <code>{{CSSxRef("max", "max")}}(MIN, {{CSSxRef("min", "min")}}(VAL, MAX))</code> と同等です。</p>
+`clamp(MIN, VAL, MAX)` は `{{CSSxRef("max()")}}(MIN, {{CSSxRef("min()")}}(VAL, MAX))` と同等です。
 
-<pre class="brush: css; no-line-numbers">/* property: clamp(expression{3}) */
-width: clamp(10px, 4em, 80px);</pre>
+{{EmbedInteractiveExample("pages/css/function-clamp.html")}}
 
-<p>上記の例では、幅が最大 80px、最小 10px ですが、 em が 2.5px から 20px の間であれば、 4em になります。</p>
+これらの例のように、フォントの大きさに `clamp()` を使用すると、ビューポートの大きさに合わせてフォントの大きさを設定することができますが、最小フォントサイズを下回ったり、最大フォントサイズを上回ったりすることはありません。これは [Fluid Typography](https://css-tricks.com/snippets/css/fluid-typography/) のコードと同じ効果がありますが、1 行で済み、メディアクエリーも使用しません。
 
-<p>上記の場合で em が 16px の幅であると仮定しましょう。</p>
+## 構文
 
-<pre class="brush: css; no-line-numbers">width: clamp(10px, 4em, 80px);
-/* 1em = 16px, 4em = 16px * 4 = 64px */
-width: clamp(10px, 64px, 80px);
-/* clamp(MIN, VAL, MAX) は max(MIN, min(VAL, MAX))) と同等 */
-width: max(10px, min(64px, 80px))
-width: max(10px, 64px);
-width: 64px;</pre>
+`clamp()` 関数は、3 つの式を最小値、推奨値、最大値の順で引数としてカンマ区切りで受け取ります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+最小値は最も小さい (最も負側の) 値です。これは許される値の範囲の下限です。推奨値がこの値よりも小さい場合、最小値が使用されます。
 
-<p><code>clamp()</code> 関数は、3つの式を最小値、推奨値、最大値の順で引数としてカンマ区切りで受け取ります。</p>
+推奨値は、結果が最小値と最大値の間である限り使用される値の式です。
 
-<p>最小値は最も小さい (最も負側の) 値です。これは許される値の範囲の下限です。推奨値がこの値よりも小さい場合、最小値が使用されます。</p>
+最大値は最も大きな (最も正側の) 値で、推奨値がこの上限値よりも大きい場合にプロパティの値に代入されます。
 
-<p>推奨値は、結果が最小値と最大値の間である限り使用される値の式です。</p>
+式は計算関数 (詳しくは {{CSSxRef("calc()")}} を参照)、リテラル値、 {{CSSxRef("attr()")}} のように正しい引数の型 ({{CSSxRef("&lt;length&gt;")}} など) として評価されるその他の式、重複した {{CSSxRef("min()")}} および {{CSSxRef("max()")}} 関数などです。数式としては、 `calc()` 関数自体を使用せずに加算、減算、乗算、除算を使用することができます。計算順を指定するために括弧を使用することもできます。
 
-<p>最大値は最も大きな (最も正側の) 値で、推奨値がこの上限値よりも大きい場合にプロパティの値に代入されます。</p>
+式の中でそれぞれの値に異なる単位を使用し、いずれかの引数を構成する計算関数の中で異なる単位を使用することもできます。
 
-<p>式は計算関数 (詳しくは {{CSSxRef("calc")}} を参照)、リテラル値、 {{CSSxRef("attr", "attr()")}} のように正しい引数の型 ({{CSSxRef("&lt;length&gt;")}} など) として評価されるその他の式、重複した {{CSSxRef("min")}} および {{CSSxRef("max")}} 関数などです。数式としては、 <code>calc()</code> 関数自体を使用せずに加算、減算、乗算、除算を使用することができます。計算順を指定するために括弧を使用することもできます。</p>
+### メモ
 
-<p>式の中でそれぞれの値に異なる単位を使用し、いずれかの引数を構成する計算関数の中で異なる単位を使用することもできます。</p>
+- 自動レイアウト、固定レイアウトを問わず、表の列、列グループ、行、行グループ、セルの幅や高さのパーセント値を出力する数式は、 `auto` が指定されたものとして扱われる*ことが*あります。
+- 式の値として `max()` および `min()` 関数を重ねることは許可されており、内側のものは単純な括弧として扱われます。式は完全な数式であるため、 `calc()` 関数自体を使用せずに加算、減算、乗算、除算を使用することができます。
+- 式は加算 ( + )、減算 ( - )、乗算 ( \* )、除算 ( / ) 演算子で組み合わせた値にすることがができ、標準の演算子の優先順位を使用します。 + および - 演算子の両側に空白を入れることを忘れないでください。式の中の値には {{CSSxRef("&lt;length&gt;")}} の構文の値にすることができます。式の中のそれぞれの値に異なる単位を使用することができます。必要に応じて、計算順を指定するために括弧を使用することもできます。
+- {{CSSxRef("min()")}} および {{CSSxRef("max()")}} を `clamp()` 関数の中で使用したくなるでしょう。
 
-<h3 id="Notes" name="Notes">メモ</h3>
-
-<ul>
- <li>自動レイアウト、固定レイアウトを問わず、表の列、列グループ、行、行グループ、セルの幅や高さのパーセント値を出力する数式は、 <code>auto</code> がして甥されたものとして扱われる<em>ことが</em>あります。</li>
- <li>式の値として <code>max()</code> および <code>min()</code> 関数を重ねることは許可されており、内側のものは単純な括弧として扱われます。式は完全な数式であるため、 <code>calc()</code> 関数自体を使用せずに加算、減算、乗算、除算を使用することができます。</li>
- <li>式は加算 ( + )、減算 ( - )、乗算 ( * )、除算 ( / ) 演算子で組み合わせた値にすることがができ、標準の演算子の優先順位を使用します。 + および - 演算子の両側に空白を入れることを忘れないでください。式の中の値には {{CSSxRef("&lt;length&gt;")}} の構文の値にすることができます。式の中のそれぞれの値に異なる単位を使用することができます。必要に応じて、計算順を指定するために括弧を使用することもできます。</li>
- <li>{{CSSxRef("min")}} および {{CSSxRef("max")}} を <code>clamp()</code> 関数の中で使用したくなるでしょう。</li>
-</ul>
-
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+### 形式文法
 
 {{CSSSyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Setting_a_minimum_and_max_size_for_a_font" name="Setting_a_minimum_and_max_size_for_a_font">フォントへの最小値と最大値の設定</h3>
+### min, max, clamp の比較
 
-<p><code>clamp()</code> によって、ビューポートの大きさに合わせ、かつ最小フォントサイズを下回ったり最大フォントサイズを上回ったりすることなく、フォントの大きさを設定することができます。1行でメディアクエリを使用することなく、 <a href="https://css-tricks.com/snippets/css/fluid-typography/">Fluid Typography</a> の中のコードと同じ効果を持ちます。</p>
+この例では、いくつかの大きさに対して {{CSSxRef("min()")}}、{{CSSxRef("max()")}}、{{CSSxRef("clamp()")}} を利用した単純なレスポンシブの例を紹介します。
 
-<pre class="brush: css">p { font-size: clamp(1rem, 2.5vw, 1.5rem); }
-</pre>
+[`<body>`](/ja/docs/Web/HTML/Element/body) 要素の [`width`](/ja/docs/Web/CSS/width) には、`min(1000px, calc(70% + 100px))` が設定されています。これは、`calc(70% + 100px)` の結果が `1000px` よりも小さい場合には、その値に設定されることを意味しています。`min()` では最大値を設定することができます。
 
-<pre class="brush: html;">&lt;p&gt;
-If 2.5vw is less than 1rem, the font-size will be 1rem.
-If 2.5vw is greater than 1.5rem, the font-size will be 1.5rem.
-Otherwise, it will be 2.5vw.
-&lt;/p&gt;
-</pre>
+[`<p>`](/ja/docs/Web/HTML/Element/p) 要素の [`font-size`](/ja/docs/Web/CSS/font-size) には、`max(1.2rem, 1.2vw)` が設定されています。すなわち、計算された `1.2vw` の値が `1.2rem` の値よりも大きい場合には、代わりにその値が設定されます。`max()` では、最小値を設定することができ、このような場合にはアクセシビリティの観点からも便利です。
 
-<p>{{EmbedLiveSample("Setting_a_minimum_and_max_size_for_a_font", "100%", "300")}}</p>
+[`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素の `font-size` は、`clamp(1.8rem, 2.5vw, 2.8rem)` と設定されています。これは、`2.5vw` の計算値が `1.8rem` の値よりも大きくなるまで、`font-size` が `1.8rem` に設定されることを意味します。この時点では、`2.5vw` の計算値が `2.8rem` の計算値よりも大きくなるまで、`font-size` は `2.5vw` に設定されます。この時点で、`font-size` は `2.8rem` に設定されます。`clamp()` では、最小値と最大値を設定することができます。
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
+操作してみたい場合は、[GitHub で公開されている例](https://mdn.github.io/css-examples/min-max-clamp/)を参照してください。
 
-<p>TBD</p>
+#### HTML
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+```html
+<h1>Simple responsive test</h1>
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In orci orci, eleifend id risus nec, mattis rutrum velit. Suspendisse fringilla egestas erat eu convallis. Phasellus eu velit ut magna dapibus elementum cursus at ligula. Ut tempus varius nibh, nec auctor sapien iaculis sit amet. Fusce iaculis, libero quis elementum viverra, nulla ante accumsan lectus, sit amet convallis lacus ipsum vel est. Curabitur et urna non est consectetur pulvinar vel id risus. Ut vestibulum, sem in semper aliquet, felis arcu euismod sapien, ac imperdiet massa nisl quis sem. Vestibulum ac elementum felis, in tempor velit. Pellentesque purus ex, mattis at ornare quis, porta condimentum mi. Donec vestibulum ligula vel nulla blandit, quis euismod nulla vestibulum. Suspendisse potenti. Nunc neque mauris, tempor sed facilisis at, ultrices eget nulla. Pellentesque convallis ante nec augue porttitor, id tempus ante luctus.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Values", "#calc-notation", "clamp()")}}</td>
-   <td>{{Spec2('CSS4 Values')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+<p>Integer rutrum sollicitudin tellus, quis cursus nulla scelerisque nec. Nunc eu facilisis lorem. Maecenas faucibus sapien eleifend, semper tellus at, pharetra quam. Cras feugiat vulputate tortor at rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non felis quis sem lobortis sodales vel id libero. Phasellus sit amet placerat lorem. </p>
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+#### CSS
 
-<p>{{Compat("css.types.clamp")}}</p>
+```css
+html {
+  font-family: sans-serif;
+}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+body {
+  margin: 0 auto;
+  width: min(1000px, calc(70% + 100px));
+}
 
-<ul>
- <li>{{CSSxRef("calc")}}</li>
- <li>{{CSSxRef("max")}}</li>
- <li>{{CSSxRef("min")}}</li>
- <li><a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS Values</a></li>
-</ul>
+h1 {
+  letter-spacing: 2px;
+  font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+}
+
+p {
+  line-height: 1.5;
+  font-size: max(1.2rem, 1.2vw);
+}
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{CSSxRef("calc()")}}
+- {{CSSxRef("max()")}}
+- {{CSSxRef("min()")}}
+- [CSS 値](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
