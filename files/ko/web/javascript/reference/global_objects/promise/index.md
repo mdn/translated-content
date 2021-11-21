@@ -2,123 +2,130 @@
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 tags:
+  - Class
   - ECMAScript 2015
   - JavaScript
   - Promise
   - Reference
-  - 프로미스
+  - promise.all
+  - Polyfill
+browser-compat: javascript.builtins.Promise
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Promise</code></strong> 객체는 비동기 작업이 맞이할 미래의 완료 또는 실패와 그 결과 값을 나타냅니다.</p>
+**`Promise`** 객체는 비동기 작업이 맞이할 미래의 완료 또는 실패와 그 결과 값을 나타냅니다.
 
-<p>Promise의 작동 방식과 Promise 사용 방법에 대해 알아보려면 먼저 <a href="/ko/docs/Web/JavaScript/Guide/Using_promises">Promise 사용 방법</a>을 읽어 보십시오.</p>
+{{AvailableInWorkers}}
 
-<h2 id="설명">설명</h2>
+프로미스의 작동 방식과 프로미스 사용 방법에 대해 알아보려면 먼저 [프로미스 사용하기](/ko/docs/Web/JavaScript/Guide/Using_promises)을 읽어보세요.
 
-<p><code>Promise</code>는 프로미스가 생성될 때 꼭 알 수 있지는 않은 값을 위한 대리자로, 비동기 연산이 종료된 이후의 결과값이나 실패 이유를 처리하기 위한 처리기를 연결할 수 있도록 합니다. 프로미스를 사용하면 비동기 메서드에서 마치 동기 메서드처럼 값을 반환할 수 있습니다. 다만 최종 결과를 반환하지는 않고, 대신 프로미스를 반환해서 미래의 어떤 시점에 결과를 제공합니다.</p>
+## 설명
 
-<p><code>Promise</code>는 다음 중 하나의 상태를 가집니다.</p>
+`Promise`는 프로미스가 생성된 시점에는 알려지지 않았을 수도 있는 값을 위한 대리자로, 비동기 연산이 종료된 이후에 결과 값과 실패 사유를 처리하기 위한 처리기를 연결할 수 있습니다. 프로미스를 사용하면 비동기 메서드에서 마치 동기 메서드처럼 값을 반환할 수 있습니다. 다만 최종 결과를 반환하는 것이 아니고, 미래의 어떤 시점에 결과를 제공하겠다는 '약속'(프로미스)을 반환합니다.
 
-<ul>
- <li>대기(<em>pending)</em>: 이행하거나 거부되지 않은 초기 상태.</li>
- <li>이행(<em>fulfilled)</em>: 연산이 성공적으로 완료됨.</li>
- <li>거부(<em>rejected)</em>: 연산이 실패함.</li>
-</ul>
+`Promise`는 다음 중 하나의 상태를 가집니다.
 
-<p>대기 중인 프로미스는 값과 함께 <em>이행할</em> 수도, 어떤 이유(오류)로 인해 <em>거부</em>될 수 있습니다. 이행이나 거부될 때, 프로미스에 연결한 처리기는 그 프로미스의 <code>then</code> 메서드에 의해 대기열에 오릅니다. 이미 이행했거나 거부된 프로미스에 연결한 처리기도 호출하므로, 비동기 연산과 처리기 연결 사이에 경합 조건은 없습니다.</p>
+- 대기(_pending)_: 이행하지도, 거부하지도 않은 초기 상태.
+- 이행(_fulfilled)_: 연산이 성공적으로 완료됨.
+- 거부(_rejected)_: 연산이 실패함.
 
-<p>{{jsxref("Promise.prototype.then()")}} 및 {{jsxref("Promise.prototype.catch()")}} 메서드의 반환 값은 다른 프로미스이므로, 서로 연결할 수 있습니다.</p>
+대기 중인 프로미스는 값과 함께 이행할 수도, 어떤 이유(오류)로 인해 거부될 수도 있습니다. 이행이나 거부될 때, 프로미스의 `then` 메서드에 의해 대기열(큐)에 추가된 처리기들이 호출됩니다. 이미 이행했거나 거부된 프로미스에 처리기를 연결해도 호출되므로, 비동기 연산과 처리기 연결 사이에 경합 조건은 없습니다.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8633/promises.png"></p>
+{{jsxref("Promise.prototype.then()")}} 및 {{jsxref("Promise.prototype.catch()")}} 메서드의 반환 값은 새로운 프로미스이므로 서로 연결할 수 있습니다.
 
-<div class="note">
-<p><strong>혼동 주의:</strong> 느긋한 계산법 및 연산 연기를 위한 방법을 프로미스라고 부르는 다른 언어(예: Scheme)가 여럿 있습니다. 반면 JavaScript에서 프로미스는 콜백 함수를 연결할 수 있는 이미 진행 중인 프로세스를 나타냅니다. 표현식을 느긋하게 평가하려면 인수 없는 <a href="/ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션">화살표 함수</a> <code>f = () =&gt; <em>expression</em></code>를 사용하고, <code>f()</code>를 사용해 평가하세요.</p>
-</div>
+![](promises.png)
 
-<div class="note">
-<p><strong>참고</strong>: 프로미스는 대기 중이지 않으며 이행 또는 거부됐을 때 처리(settled)됐다고 말합니다. 프로미스와 함께 쓰이는 단어 resolved는 프로미스가 다른 프로미스의 상태에 맞춰 처리됨, 또는 상태가 "잠김"되었다는 의미입니다. 용어에 관한 더 자세한 설명은 Domenic Denicola의 글 <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md">States and fates</a>에서 볼 수 있습니다.</p>
-</div>
+> **참고:** 느긋한 평가와 연산 연기를 위한 방법을 프로미스라고 부르는 언어도 여럿 존재합니다(Scheme 등). JavaScript에서의 프로미스는 콜백 함수를 연결할 수 있는, 이미 진행 중인 프로세스를 나타냅니다. 표현식을 느긋하게 평가하려면 `f = () => expression`처럼 매개변수 없는 함수를 사용해 느긋한 표현식을 생성하고, `f()`를 호출해 평가하세요.
 
-<h2 id="생성자">생성자</h2>
+> **참고:** 프로미스가 대기에서 벗어나 이행 또는 거부된다면 프로미스가 처리(_settled_)됐다고 말합니다. 프로미스와 함께 쓰이는 다른 단어인 '리졸브'(_resolved_)는 프로미스가 처리됐거나, 다른 프로미스의 상태에 맞춰 상태가 '잠김'됐다는 의미입니다. [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md)에서 프로미스 용어에 대한 보다 자세한 설명을 읽을 수 있습니다.
 
-<dl>
- <dt>{{jsxref("Promise.Promise", "Promise()")}}</dt>
- <dd>이미 프로미스를 지원하지 않는 함수를 감쌀 때 주로 사용합니다.</dd>
-</dl>
+<!-- [todo] Chained Promises -->
+<!-- [todo] Incumbent settings object tracking -->
 
-<h2 id="속성">속성</h2>
+## 생성자
 
-<dl>
- <dt><code>Promise.length</code></dt>
- <dd>값이 언제나 1인 길이 속성입니다. (생성자 인수의 수)</dd>
- <dt>{{jsxref("Promise.prototype")}}</dt>
- <dd><code>Promise</code> 생성자의 프로토타입을 나타냅니다.</dd>
-</dl>
+- {{jsxref("Promise.Promise", "Promise()")}}
+  - : 새로운 `Promise` 객체를 생성합니다. 주로 프로미스를 지원하지 않는 함수를 감쌀 때 사용합니다.
 
-<h2 id="메서드">메서드</h2>
+## 정적 메서드
 
-<dl>
- <dt>{{jsxref("Promise.all", "Promise.all(iterable)")}}</dt>
- <dd><code>iterable</code> 내의 모든 프로미스가 이행한 뒤 이행하고, 어떤 프로미스가 거부하면 즉시 거부하는 프로미스를 반환합니다. 반환된 프로미스가 이행하는 경우 <code>iterable</code> 내의 프로미스가 결정한 값을 모은 배열이 이행 값입니다. 반환된 프로미스가 거부하는 경우 <code>iterable</code> 내의 거부한 프로미스의 이유를 그대로 사용합니다. 이 메서드는 여러 프로미스의 결과를 모을 때 유용합니다.</dd>
- <dt>{{jsxref("Promise.race", "Promise.race(iterable)")}}</dt>
- <dd><code>iterable</code> 내의 어떤 프로미스가 이행하거나 거부하는 즉시 스스로 이행하거나 거부하는 프로미스를 반환합니다. 이행 값이나 거부 이유는 원 프로미스의 값이나 이유를 그대로 사용합니다.</dd>
-</dl>
+- {{jsxref("Promise.all", "Promise.all(iterable)")}}
+  - : 주어진 모든 프로미스가 이행하거나, 한 프로미스가 거부될 때까지 대기하는 새로운 프로미스를 반환합니다.
 
-<dl>
- <dt>{{jsxref("Promise.reject()")}}</dt>
- <dd>주어진 이유로 거부하는 <code>Promise</code> 객체를 반환합니다.</dd>
-</dl>
+    반환하는 프로미스가 이행한다면, 매개변수로 제공한 프로미스 각각의 이행 값을 모두 모아놓은 배열로 이행합니다. 배열 요소의 순서는 매개변수에 지정한 프로미스의 순서를 유지합니다.
 
-<dl>
- <dt>{{jsxref("Promise.resolve()")}}</dt>
- <dd>주어진 값으로 이행하는 <code>Promise</code> 객체를 반환합니다. 값이 <code>then</code> 가능한 (즉, <code>then</code> 메서드가 있는) 경우, 반환된 프로미스는 <code>then</code> 메서드를 따라가고 마지막 상태를 취합니다. 그렇지 않은 경우 반환된 프로미스는 주어진 값으로 이행합니다. 어떤 값이 프로미스인지 아닌지 알 수 없는 경우, {{jsxref("Promise.resolve", "Promise.resolve(value)")}} 후 반환값을 프로미스로 처리할 수 있습니다.</dd>
-</dl>
+    반환하는 프로미스가 거부된다면, 매개변수의 프로미스 중 거부된 첫 프로미스의 사유를 그대로 사용합니다.
+- {{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}
+  - : 주어진 모든 프로미스가 처리(이행 또는 거부)될 때까지 대기하는 새로운 프로미스를 반환합니다.
 
-<h2 id="Promise_프로토타입"><code>Promise</code> 프로토타입</h2>
+    `Promise.allSettled()`가 반환하는 프로미스는 매개변수로 제공한 모든 프로미스 각각의 상태와 값(또는 거부 사유)을 모아놓은 배열로 이행합니다.
+- {{JSxRef("Promise.any", "Promise.any(iterable)")}}
+  - : 주어진 모든 프로미스 중 하나라도 이행하는 순간, 즉시 그 프로미스의 값으로 이행하는 새로운 프로미스를 반환합니다.
+- {{jsxref("Promise.race", "Promise.race(iterable)")}}
+  - : 주어진 모든 프로미스 중 하나라도 처리될 때까지 대기하는 프로미스를 반환합니다.
 
-<h3 id="속성_2">속성</h3>
+    반환하는 프로미스가 이행한다면, 매개변수의 프로미스 중 첫 번째로 이행한 프로미스의 값으로 이행합니다.
 
-<p>{{page('ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/prototype','속성')}}</p>
+    반환하는 프로미스가 거부된다면, 매개변수의 프로미스 중 거부된 첫 프로미스의 사유를 그대로 사용합니다.
+- {{JSxRef("Promise.reject", "Promise.reject(reason)")}}
+  - : 주어진 사유로 거부하는 `Promise` 객체를 반환합니다.
+- {{jsxref("Promise.resolve()")}}
+  - : 주어진 값으로 이행하는 `Promise` 객체를 반환합니다. 이때 지정한 값이 `then` 가능한(`then` 메서드를 가지는) 값인 경우, `Promise.resolve()`가 반환하는 프로미스는 `then` 메서드를 "따라가서" 자신의 최종 상태를 결정합니다. 그 외의 경우, 반환된 프로미스는 주어진 값으로 이행합니다.
+  
+    어떤 값이 프로미스인지 아닌지 알 수 없는 경우, 보통 일일히 두 경우를 나눠서 처리하는 대신 `Promise.resolve()`로 값을 감싸서 항상 프로미스가 되도록 만든 후 작업하는 것이 좋습니다.
 
-<h3 id="메서드_2">메서드</h3>
+## 인스턴스 메서드
 
-<p>{{page('ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/prototype','메서드')}}</p>
+[마이크로태스크 안내서](/ko/docs/Web/API/HTML_DOM_API/Microtask_guide)를 방문해 프로미스 인스턴스 메서드가 마이크로태스크 큐와 서비스를 이용하는 방법을 알아보세요.
 
-<h2 id="예제">예제</h2>
+- {{jsxref("Promise.prototype.catch()")}}
+  - : 프로미스에 거부 처리기 콜백을 추가하고, 콜백이 호출될 경우 그 반환값으로 이행하며 호출되지 않을 경우, 즉 이전 프로미스가 이행하는 경우 이행한 값을 그대로 사용해 이행하는 새로운 프로미스를 반환합니다.
+- {{jsxref("Promise.prototype.then()")}}
+  - : 프로미스에 이행과 거부 처리기 콜백을 추가하고, 콜백이 호출될 경우 그 반환값으로 이행하며 호출되지 않을 경우(`onFulfilled`, `onRejected` 중 상태에 맞는 콜백이 함수가 아닐 경우) 처리된 값과 상태 그대로 처리되는 새로운 프로미스를 반환합니다.
+- {{jsxref("Promise.prototype.finally()")}}
+  - : 프로미스의 이행과 거부 여부에 상관없이 처리될 경우 항상 호출되는 처리기 콜백을 추가하고, 이행한 값 그대로 이행하는 새로운 프로미스를 반환합니다.
 
-<h3 id="기본_예제">기본 예제</h3>
+## 예제
 
-<pre class="brush: js notranslate">let myFirstPromise = new Promise((resolve, reject) =&gt; {
-  // We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.
-  // In this example, we use setTimeout(...) to simulate async code.
-  // In reality, you will probably be using something like XHR or an HTML5 API.
-  setTimeout(function(){
-    resolve("Success!"); // Yay! Everything went well!
-  }, 250);
+### 기본 예제
+
+```js
+let myFirstPromise = new Promise((resolve, reject) => {
+  // 우리가 수행한 비동기 작업이 성공한 경우 resolve(...)를 호출하고, 실패한 경우 reject(...)를 호출합니다.
+  // 이 예제에서는 setTimeout()을 사용해 비동기 코드를 흉내냅니다.
+  // 실제로는 여기서 XHR이나 HTML5 API를 사용할 것입니다.
+  setTimeout( function() {
+    resolve("성공!")  // 와! 문제 없음!
+  }, 250)
+})
+
+myFirstPromise.then((successMessage) => {
+  // successMessage는 위에서 resolve(...) 호출에 제공한 값입니다.
+  // 문자열이어야 하는 법은 없지만, 위에서 문자열을 줬으니 아마 문자열일 것입니다.
+  console.log("와! " + successMessage)
 });
+```
 
-myFirstPromise.then((successMessage) =&gt; {
-  // successMessage is whatever we passed in the resolve(...) function above.
-  // It doesn't have to be a string, but if it is only a succeed message, it probably will be.
-  console.log("Yay! " + successMessage);
-});</pre>
+<!-- [todo] Example with diverse situations -->
 
-<h3 id="고급_예제">고급 예제</h3>
+### 고급 예제
 
-<p>다음의 작은 예제는 <code>Promise</code>의 동작 방식을 보여줍니다. <code>testPromise()</code> 함수는 {{HTMLElement("button")}}을 클릭할 때마다 호출되며, {{domxref("window.setTimeout()")}}을 사용해 1~3초의 무작위 간격 이후 프로미스 횟수(1부터 시작하는 숫자)로 이행하는 프로미스를 생성합니다. <code>Promise()</code> 생성자는 프로미스를 만드는 데 쓰입니다.</p>
+다음의 작은 예제는 `Promise`의 동작 방식을 보여줍니다. `testPromise()` 함수는 {{HTMLElement("button")}}을 클릭할 때마다 호출되며, {{domxref("window.setTimeout()")}}을 사용해 1\~3초의 무작위 간격 이후 프로미스 횟수(1부터 시작하는 숫자)로 이행하는 프로미스를 생성합니다. `Promise()` 생성자는 프로미스를 만드는 데 쓰입니다.
 
-<p>프로미스 이행은 {{jsxref("Promise.prototype.then()","p1.then()")}}을 사용하는 이행 콜백 세트를 통해 단순히 로그에 남습니다. 약간의 로그를 통해, 함수의 동기 부분이 비동기적 프로미스의 완료와 어떻게 분리되어 있는지 확인할 수 있습니다.</p>
+프로미스 이행은 {{jsxref("Promise.prototype.then()","p1.then()")}}을 사용하는 이행 콜백 세트를 통해 단순히 로그에 남습니다. 약간의 로그를 통해, 함수의 동기 부분이 비동기적 프로미스의 완료와 어떻게 분리되어 있는지 확인할 수 있습니다.
 
-<h4>HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;button id="btn"&gt;프로미스 만들기!&lt;/button&gt;
-&lt;div id="log"&gt;&lt;/div&gt;</pre>
+```html
+<button id="btn">프로미스 만들기!</button>
+<div id="log"></div>
+```
 
-<h4>JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">'use strict';
+```js
+'use strict';
 var promiseCount = 0;
 
 function testPromise() {
@@ -126,7 +133,7 @@ function testPromise() {
 
     var log = document.getElementById('log');
     log.insertAdjacentHTML('beforeend', thisPromiseCount +
-        ') 시작 (&lt;small&gt;동기적 코드 시작&lt;/small&gt;)&lt;br/&gt;');
+        ') 시작 (<small>동기적 코드 시작</small>)<br/>');
 
     // 새 프로미스 생성 - 프로미스의 생성 순서를 전달하겠다는 약속을 함 (3초 기다린 후)
     var p1 = new Promise(
@@ -134,7 +141,7 @@ function testPromise() {
         // 거부(reject)할 수 있음
         function(resolve, reject) {
             log.insertAdjacentHTML('beforeend', thisPromiseCount +
-                ') 프로미스 시작 (&lt;small&gt;비동기적 코드 시작&lt;/small&gt;)&lt;br/&gt;');
+                ') 프로미스 시작 (<small>비동기적 코드 시작</small>)<br/>');
             // setTimeout은 비동기적 코드를 만드는 예제에 불과
             window.setTimeout(
                 function() {
@@ -150,7 +157,7 @@ function testPromise() {
         // 이행 값 기록
         function(val) {
             log.insertAdjacentHTML('beforeend', val +
-                ') 프로미스 이행 (&lt;small&gt;비동기적 코드 종료&lt;/small&gt;)&lt;br/&gt;');
+                ') 프로미스 이행 (<small>비동기적 코드 종료</small>)<br/>');
         })
     .catch(
         // 거부 이유 기록
@@ -159,7 +166,7 @@ function testPromise() {
         });
 
     log.insertAdjacentHTML('beforeend', thisPromiseCount +
-        ') 프로미스 생성 (&lt;small&gt;동기적 코드 종료&lt;/small&gt;)&lt;br/&gt;');
+        ') 프로미스 생성 (<small>동기적 코드 종료</small>)<br/>');
 }
 
 if ("Promise" in window) {
@@ -167,60 +174,30 @@ if ("Promise" in window) {
   btn.addEventListener("click", testPromise);
 } else {
   log = document.getElementById('log');
-  log.innerHTML = "Live example not available as your browser doesn't support the &lt;code&gt;Promise&lt;code&gt; interface.";
+  log.innerHTML = "Live example not available as your browser doesn't support the <code>Promise<code> interface.";
 }
-</pre>
+```
 
-<p>이 예제는 버튼을 클릭하면 실행됩니다. <code>Promise</code>를 지원하는 브라우저가 필요합니다. 짧은 시간 안에 버튼을 여러 번 클릭하여, 서로 다른 프로미스가 번갈아 이행되는 것을 볼 수도 있습니다.</p>
+이 예제는 버튼을 클릭하면 실행됩니다. `Promise`를 지원하는 브라우저가 필요합니다. 짧은 시간 안에 버튼을 여러 번 클릭하여, 서로 다른 프로미스가 번갈아 이행되는 것을 볼 수도 있습니다.
 
-<p>{{EmbedLiveSample("고급_예제", "500", "200")}}</p>
+{{EmbedLiveSample("고급_예제", "500", "200")}}
 
-<h2 id="XHR로_이미지_불러오기">XHR로 이미지 불러오기</h2>
+## XHR로 이미지 불러오기
 
-<p>이미지를 로드하기 위해 <code>Promise</code> 및 {{domxref("XMLHttpRequest")}}를 사용하는 또 다른 간단한 예는 MDN GitHub <a href="https://github.com/mdn/js-examples/tree/master/promises-test">js-examples</a> 저장소에서 이용할 수 있습니다. <a href="http://mdn.github.io/promises-test/">실제 예</a>를 볼 수도 있습니다. 각 단계에 주석이 붙어있어, 프로미스 및 XHR 구조를 차근차근 따라갈 수 있습니다.</p>
+이미지를 로드하기 위해 `Promise` 및 {{domxref("XMLHttpRequest")}}를 사용하는 또 다른 간단한 예는 MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/master/promises-test) 저장소에서 이용할 수 있습니다. [실제 예](https://mdn.github.io/js-examples/promises-test/)를 볼 수도 있습니다. 각 단계에 주석이 붙어있어, 프로미스 및 XHR 구조를 차근차근 따라갈 수 있습니다.
 
-<h2 id="명세">명세</h2>
+## 명세
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-promise-objects', 'Promise')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>ECMA 표준에서 초기 정의.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise-objects', 'Promise')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<div>
+{{Compat}}
 
+## 같이 보기
 
-<p>{{Compat("javascript.builtins.Promise")}}</p>
-</div>
-
-<h2 id="같이_보기">같이 보기</h2>
-
-<ul>
- <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Using_promises">프로미스 사용하기</a></li>
- <li><a href="http://promisesaplus.com/">Promises/A+ 스펙</a></li>
- <li><a href="https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53">Venkatraman.R - JS Promise (Part 1, Basics)</a></li>
- <li><a href="https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski">Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)</a></li>
- <li><a href="https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction">Venkatraman.R - Tools for Promises Unit Testing</a></li>
- <li><a href="http://www.html5rocks.com/en/tutorials/es6/promises/">Jake Archibald: JavaScript Promises: There and Back Again</a></li>
- <li><a href="http://de.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript">Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript</a></li>
- <li><a href="http://www.mattgreer.org/articles/promises-in-wicked-detail/">Matt Greer: JavaScript Promises ... In Wicked Detail</a></li>
- <li><a href="https://www.promisejs.org/">Forbes Lindesay: promisejs.org</a></li>
- <li><a href="https://github.com/jakearchibald/es6-promise/">Promise polyfill</a></li>
- <li><a href="https://www.udacity.com/course/javascript-promises--ud898">Udacity: JavaScript Promises</a></li>
-</ul>
+- `core-js`의 [`Promise` 폴리필](https://github.com/zloirock/core-js#ecmascript-promise)
+- [프로미스 사용하기](/ko/docs/Web/JavaScript/Guide/Using_promises)
+- [Promises/A+ 명세](https://promisesaplus.com/)
+- [JavaScript Promises: an introduction](https://web.dev/promises/)
+- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
