@@ -22,9 +22,9 @@ translation_of: Web/API/HTML_DOM_API/Microtask_guide
 
 **마이크로태스크**는 자신을 생성한 함수 또는 프로그램이 종료됐고 [JavaScript 실행 스택](/ko/docs/Web/JavaScript/EventLoop#스택)이 빈 후에, 그러나 {{glossary("user agent", "사용자 에이전트")}}가 스크립트 실행 환경을 운용하기 위해 사용하는 이벤트 루프로 통제권을 넘기기는 전에 실행되는 짧은 함수입니다.
 
-이때, 이벤트 루프는 브라우저의 주 이벤트 루프 또는 [웹 워커](/ko/docs/Web/API/Web_Workers_API)를 구동하는 이벤트 루프입니다. 따라서 마이크로태스크를 이용하면 다른 스크립트의 실행을 방해할 위험을 감수하지 않으면서도, 사용자 에이전트가 마이크로태스크의 동작에 반응하기 전에 주어진 함수를 실행할 수 있습니다.
+이때의 이벤트 루프는 브라우저의 주 이벤트 루프 또는 [웹 워커](/ko/docs/Web/API/Web_Workers_API)를 구동하는 이벤트 루프입니다. 따라서 마이크로태스크를 이용하면 다른 스크립트의 실행을 방해할 위험을 감수하지 않으면서도, 사용자 에이전트가 반응하기 전에 주어진 함수를 실행할 수 있습니다.
 
-JavaScript [프로미스](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)와 [Mutation Observer API](/ko/docs/Web/API/MutationObserver) 둘 다 마이크로태스크 큐를 사용해 콜백을 호출하지만, 때로는 현재 이벤트 루프가 정리될 때까지 작업을 미루는 것이 필요할 때가 있습니다. 그래서 서드파티 라이브러리, 프레임워크, 폴리필에서 마이크로태스크를 사용할 수 있도록, {{domxref("Window")}}와 {{domxref("Worker")}} 인터페이스는 {{domxref("queueMicrotask()")}} 메서드를 노출하고 있습니다.
+JavaScript [프로미스](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)와 [Mutation Observer API](/ko/docs/Web/API/MutationObserver) 둘 다 마이크로태스크 큐를 사용해 콜백을 호출하지만, 때로는 현재 이벤트 루프가 정리될 때까지 작업을 미루는 기능이 직접 필요할 때가 있습니다. 그래서 서드파티 라이브러리, 프레임워크, 폴리필에서 마이크로태스크를 사용할 수 있도록, {{domxref("Window")}}와 {{domxref("Worker")}} 인터페이스는 {{domxref("queueMicrotask()")}} 메서드를 노출하고 있습니다.
 
 ## 태스크 vs 마이크로태스크
 
@@ -60,9 +60,9 @@ JavaScript [프로미스](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promi
 
 ### 마이크로태스크 큐에 넣기
 
-따라서, 대개 마이크로태스크의 사용은 다른 해결책이 전혀 없거나, 프레임워크 또는 라이브러리에서 구현하고자 하는 기능에 필요한 경우에만 사용해야 합니다. 과거에도 마이크로태스크를 큐에 추가하는 우회 방법이 (즉시 이행하는 프로미스 생성처럼) 없지는 않았으나, {{domxref("queueMicrotask()")}} 메서드의 추가 덕분에 마이크로태스크를 안전하고 우회 없이 추가할 수 있는 표준 방법이 생겼습니다.
+따라서, 마이크로태스크의 사용은 다른 해결책이 전혀 없거나, 프레임워크 또는 라이브러리에서 구현하고자 하는 기능에 필요한 경우에만 사용해야 합니다. 과거에도 마이크로태스크를 큐에 추가하는 우회 방법이 (즉시 이행하는 프로미스 생성처럼) 없지는 않았으나, {{domxref("queueMicrotask()")}} 메서드의 추가 덕분에 마이크로태스크를 안전하고 우회 없이 추가할 수 있는 표준 방법이 생겼습니다.
 
-`queueMicrotask()`를 사용하면 프로미스로 마이크로태스크를 생성할 때 발생하는 문제에서 벗어날 수 있습니다. 예컨대 프로미스 방법에서는 콜백에서 예외가 발생할 경우 표준 예외가 아니라 거부된 프로미스로 나타나곤 했습니다. 또한 프로미스의 생성과 파괴는 시간과 메모리 양쪽에 추가 부하를 줬습니다.
+`queueMicrotask()`를 사용하면 프로미스를 사용해 마이크로태스크를 생성할 때 마주치는 문제에서 벗어날 수 있습니다. 예컨대 프로미스 방법에서는 콜백에서 예외가 발생할 경우 표준 예외가 아니라 거부된 프로미스로 나타나곤 했습니다. 또한 프로미스의 생성과 파괴는 시간과 메모리 양쪽에 추가 부하를 줬습니다.
 
 현재 맥락이 마이크로태스크를 처리하는 시점에 호출할 JavaScript {{jsxref("Function")}}을 `queueMicrotask()` 메서드의 매개변수로 제공하세요. `queueMicrotask()`는 현재 실행 맥락에 따라 {{domxref("Window")}} 또는 {{domxref("Worker")}} 전역 맥락에 노출되어 있습니다.
 
