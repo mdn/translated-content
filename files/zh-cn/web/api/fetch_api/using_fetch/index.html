@@ -12,16 +12,16 @@ tags:
   - 指南
 translation_of: Web/API/Fetch_API/Using_Fetch
 ---
-<p><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 提供了一个 JavaScript 接口，用于访问和操纵 HTTP 管道的一些具体部分，例如请求和响应。它还提供了一个全局 {{domxref("GlobalFetch.fetch","fetch()")}} 方法，该方法提供了一种简单，合理的方式来跨网络异步获取资源。</p>
+<p><a href="/zh-CN/docs/Web/API/Fetch_API">Fetch API</a> 提供了一个 JavaScript 接口，用于访问和操纵 HTTP 管道的一些具体部分，例如请求和响应。它还提供了一个全局 {{domxref("GlobalFetch.fetch","fetch()")}} 方法，该方法提供了一种简单，合理的方式来跨网络异步获取资源。</p>
 
-<p>这种功能以前是使用 {{domxref("XMLHttpRequest")}} 实现的。Fetch 提供了一个更理想的替代方案，可以很容易地被其他技术使用，例如  {{domxref("ServiceWorker_API", "Service Workers")}}。Fetch 还提供了专门的逻辑空间来定义其他与 HTTP 相关的概念，例如 CORS 和 HTTP 的扩展。</p>
+<p>这种功能以前是使用 {{domxref("XMLHttpRequest")}} 实现的。Fetch 提供了一个更理想的替代方案，可以很容易地被其他技术使用，例如  {{domxref("Service_Worker_API", "Service Workers")}}。Fetch 还提供了专门的逻辑空间来定义其他与 HTTP 相关的概念，例如 CORS 和 HTTP 的扩展。</p>
 
 <p>请注意，<code>fetch</code> 规范与 <code>jQuery.ajax()</code> 主要有三种方式的不同：</p>
 
 <ul>
  <li>当接收到一个代表错误的 HTTP 状态码时，从 <code>fetch()</code> 返回的 Promise <strong>不会被标记为 reject，</strong> 即使响应的 HTTP 状态码是 404 或 500。相反，它会将 Promise 状态标记为 resolve （但是会将 resolve 的返回值的 <code>ok</code> 属性设置为 false ），仅当网络故障时或请求被阻止时，才会标记为 reject。</li>
  <li><code>fetch()</code><strong> 可以<s>不会</s>接受跨域 cookies；</strong>你也可以<s>不能</s>使用 <code>fetch()</code> 建立起跨域会话。<s>其他网站的 <code><a href="/zh-CN/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</a></code> 头部字段将会被无视。</s></li>
- <li><code>fetch</code> <strong>不会发送 cookies</strong>。除非你使用了<em>credentials</em> 的<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters">初始化选项</a>。（自 2017 年 8 月 25 日以后，默认的 credentials 政策变更为 <code>same-origin</code>。Firefox 也在 61.0b13 版本中进行了修改）</li>
+ <li><code>fetch</code> <strong>不会发送 cookies</strong>。除非你使用了<em>credentials</em> 的<a href="/zh-CN/docs/Web/API/fetch#参数">初始化选项</a>。（自 2017 年 8 月 25 日以后，默认的 credentials 政策变更为 <code>same-origin</code>。Firefox 也在 61.0b13 版本中进行了修改）</li>
 </ul>
 
 <p>一个基本的 fetch 请求设置起来很简单。看看下面的代码：</p>
@@ -42,7 +42,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 <p><strong>注意</strong>：Body mixin 还有其他相似的方法，用于获取其他类型的内容。参考 {{anch("Body")}}。</p>
 </div>
 
-<p>最好使用符合<a href="/zh-CN/docs/Web/Security/CSP/CSP_policy_directives">内容安全策略 (CSP)</a>的链接而不是使用直接指向资源地址的方式来进行Fetch的请求。</p>
+<p>最好使用符合<a href="/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy">内容安全策略 (CSP)</a>的链接而不是使用直接指向资源地址的方式来进行Fetch的请求。</p>
 
 <h3 id="支持的请求参数">支持的请求参数</h3>
 
@@ -381,9 +381,9 @@ fetch("/login", {
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+ <li>{{domxref("Service_Worker_API", "ServiceWorker API")}}</li>
+ <li><a href="/zh-CN/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/zh-CN/docs/Web/HTTP">HTTP</a></li>
  <li><a href="https://github.com/github/fetch">Fetch polyfill</a></li>
  <li><a href="https://github.com/mdn/fetch-examples/">Fetch examples on Github</a></li>
 </ul>
