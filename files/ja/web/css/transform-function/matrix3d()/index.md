@@ -3,72 +3,99 @@ title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d()
 tags:
   - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
+  - CSS 関数
+  - CSS 座標変換
+  - 関数
+  - リファレンス
+browser-compat: css.types.transform-function.matrix3d
 translation_of: Web/CSS/transform-function/matrix3d()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>matrix3d()</code></strong> 関数は、 4x4 の三次元同次変換行列を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。</p>
+**`matrix3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 4x4 の三次元同次変換行列を定義します。
+結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>matrix3d()</code> 関数は16の値で指定します。列優先の順で記述します。</p>
+`matrix3d()` 関数は 16 個の値で指定します。列優先の順で記述します。
 
-<pre class="syntaxbox notranslate">matrix3d(<var>a1</var>, <var>b1</var>, <var>c1</var>, <var>d1</var>, <var>a2</var>, <var>b2</var>, <var>c2</var>, <var>d2</var>, <var>a3</var>, <var>b3</var>, <var>c3</var>, <var>d3</var>, <var>a4</var>, <var>b4</var>, <var>c4</var>, <var>d4</var>)</pre>
+```css
+matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><var>a1</var> <var>b1</var> <var>c1</var> <var>d1</var> <var>a2</var> <var>b2</var> <var>c2</var> <var>d2</var> <var>a3</var> <var>b3</var> <var>c3</var> <var>d3</var></dt>
- <dd>{{cssxref("&lt;number&gt;")}} で、線形変換を記述します。</dd>
- <dt><var>a4</var> <var>b4</var> <var>c4 d4</var></dt>
- <dd>{{cssxref("&lt;number&gt;")}} で、適用する変換を記述します。</dd>
-</dl>
-
-<div class="note"><strong>注:</strong> Firefox 16 までは、 Gecko は {{cssxref("&lt;length&gt;")}} 値を <var>a4</var>, <var>b4</var>, <var>c4</var> で受け付けていました。</div>
+- _a1_ _b1_ _c1_ _d1_ _a2_ _b2_ _c2_ _d2_
+  _a3_ _b3_ _c3_ _d3_
+  - : {{cssxref("&lt;number&gt;")}} で、線形変換を記述します。
+- _a4_ _b4_ _c4 d4_
+  - : {{cssxref("&lt;number&gt;")}} で、適用する変換を記述します。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">ℝ<sup>2</sup> のデカルト座標</th>
-   <th scope="col">ℝℙ<sup>2</sup> の同次座標</th>
-   <th scope="col">ℝ<sup>3</sup> のデカルト座標</th>
-   <th scope="col">ℝℙ<sup>3</sup> の同次座標</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="2" rowspan="2">この変換は三次元空間に適用され、平面で表現することはできません。</td>
-   <td colspan="1" rowspan="2">一般的な三次元<a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%95%E3%82%A3%E3%83%B3%E5%86%99%E5%83%8F">アファイン変換</a>は、変換が線形変換ではないので、デカルト座標行列を使用して表現することはできません。</td>
-   <td colspan="1" rowspan="2"><math><mfenced><mtable><mtr><mtd>a1</mtd><mtd>a2</mtd><mtd>a3</mtd><mtd>a4</mtd></mtr><mtr><mtd>b1</mtd><mtd>b2</mtd><mtd>b3</mtd><mtd>b4</mtd></mtr><mtr><mtd>c1</mtd><mtd>c2</mtd><mtd>c3</mtd><mtd>c4</mtd></mtr><mtr><mtd>d1</mtd><mtd>d2</mtd><mtd>d3</mtd><mtd>d4</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">ℝ^2 のデカルト座標</th>
+      <th scope="col">ℝℙ^2 の同次座標</th>
+      <th scope="col">ℝ^3 のデカルト座標</th>
+      <th scope="col">ℝℙ^3 の同次座標</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2">
+        この変換は三次元空間に適用され、平面で表現することはできません。
+      </td>
+      <td>
+        一般的な三次元[アファイン変換](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%95%E3%82%A3%E3%83%B3%E5%86%99%E5%83%8F)は、変換が線形変換ではないので、デカルト座標行列を使用して表現することはできません。
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>a1</mi> </mtd><mtd><mi>a2</mi> </mtd
+                ><mtd><mi>a3</mi> </mtd><mtd><mi>a4</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mi>b1</mi> </mtd><mtd><mi>b2</mi> </mtd
+                ><mtd><mi>b3</mi> </mtd><mtd><mi>b4</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mi>c1</mi> </mtd><mtd><mi>c2</mi> </mtd
+                ><mtd><mi>c3</mi> </mtd><mtd><mi>c4</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mi>d1</mi> </mtd><mtd><mi>d2</mi> </mtd
+                ><mtd><mi>d3</mi> </mtd><mtd><mi>d4</mi></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="つぶれる立方体の例">つぶれる立方体の例</h3>
+### つぶれる立方体の例
 
-<p>次の例は、DOM 要素と変換から作成された立方体を示しており、ポインターを置いたりフォーカスしたりすることで <code>matrix3d()</code> 変換を適用することができます。</p>
+次の例は、DOM 要素と変換から作成された立方体を示しており、ポインターを置いたりフォーカスしたりすることで `matrix3d()` 変換を適用することができます。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;section id="example-element" tabindex="0"&gt;
-  &lt;div class="face front"&gt;1&lt;/div&gt;
-  &lt;div class="face back"&gt;2&lt;/div&gt;
-  &lt;div class="face right"&gt;3&lt;/div&gt;
-  &lt;div class="face left"&gt;4&lt;/div&gt;
-  &lt;div class="face top"&gt;5&lt;/div&gt;
-  &lt;div class="face bottom"&gt;6&lt;/div&gt;
-&lt;/section&gt;
-</pre>
+```html
+<section id="example-element" tabindex="0">
+  <div class="face front">1</div>
+  <div class="face back">2</div>
+  <div class="face right">3</div>
+  <div class="face left">4</div>
+  <div class="face top">5</div>
+  <div class="face bottom">6</div>
+</section>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">#example-element {
+```css
+#example-element {
   width: 100px;
   height: 100px;
   transform-style: preserve-3d;
@@ -121,28 +148,31 @@ translation_of: Web/CSS/transform-function/matrix3d()
 .bottom {
   background: rgba(210,0,210,.7);
   transform: rotateX(-90deg) translateZ(50px);
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<div>{{EmbedLiveSample('Cube_squashing_example', '100%', '300px')}}</div>
+{{EmbedLiveSample('Cube_squashing_example', '100%', '300px')}}
 
-<h3 id="行列変換と拡大縮小の例">行列変換と拡大縮小の例</h3>
+### 行列変換と拡大縮小の例
 
-<p>もう一つの <code>transform3d()</code> の例は、変換と拡大縮小をアニメーションと組み合わせて実装したものです。</p>
+もう一つの `transform3d()` の例は、変換と拡大縮小をアニメーションと組み合わせて実装したものです。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div class="foo"&gt;
+```html
+<div class="foo">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 Quos quaerat sit soluta, quisquam exercitationem delectus qui unde in facere
 necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">html {
+```css
+html {
   width: 100%;
 }
 body {
@@ -202,39 +232,23 @@ body {
       50,100,0,1.1
     )
   }
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<div>{{EmbedLiveSample('Matrix_translation_and_scale_example', '100%', '400px')}}</div>
+{{EmbedLiveSample('Matrix_translation_and_scale_example', '100%', '400px')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Transforms 2", "#funcdef-matrix3d", "matrix3d()")}}</td>
-   <td>{{Spec2("CSS Transforms 2")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p><code><a href="/ja/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> データ型の互換性情報をご覧ください。</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
- <li><a href="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/">Understanding the CSS Transforms Matrix</a></li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}
+- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

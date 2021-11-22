@@ -3,69 +3,137 @@ title: scaleY()
 slug: Web/CSS/transform-function/scaleY()
 tags:
   - CSS
-  - CSS 変形
   - CSS 関数
+  - CSS 座標変換
+  - 関数
   - リファレンス
+browser-compat: css.types.transform-function.scaleY
 translation_of: Web/CSS/transform-function/scaleY()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>scaleY()</code></strong> 関数は、要素を Y 軸に沿って (垂直に) 拡縮する変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。</p>
+**`scaleY()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を Y 軸に沿って (垂直に) 変倍する変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-<p><img src="https://mdn.mozillademos.org/files/12119/scaleY.png" style="height: 381px; width: 365px;"></p>
+![](scaley.png)
 
-<p>係数が 1 である場合を除いて、各要素点の縦座標を一定の係数で修正し、この場合、関数は恒等変換です。拡大縮小は等方性ではなく、要素の角度は保存されません。 <code>scaleY(-1)</code> は<a class="external" href="http://en.wikipedia.org/wiki/Axial_symmetry">軸の線対称</a>を定義し、水平軸は原点を通過します ({{cssxref("transform-origin")}} プロパティで指定)。</p>
+これは要素のそれぞれの点の横座標を一定の係数で修正しますが、係数が 1 である場合はこの関数が恒等変換になるので例外です。変倍は等方性ではなく、要素の角度は保存されません。 `scaleY(-1)` は[軸の線対称](https://en.wikipedia.org/wiki/Axial_symmetry)を定義し、水平軸は ({{cssxref("transform-origin")}} プロパティの指定通りに) 原点を通過します。
 
-<div class="note">
-<p><strong>メモ:</strong> <code>scaleY(sy)</code> は <code><a href="/ja/docs/Web/CSS/transform-function/scale">scale</a>(1, sy)</code> または <code><a href="/ja/docs/Web/CSS/transform-function/scale3d">scale3d</a>(1, sy, 1)</code> と等価です。</p>
+> **Note:** `scaleY(sy)` は `scale(1, sy)` または `scale3d(1, sy, 1)` と等価です。
+>
+> `transform: rotateX(180deg);`  === `transform: scaleY(-1);`
 
-<p><code>transform: rotateX(180deg);</code>  === <code>transform: scaleY(-1);</code></p>
-</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```css
+scaleY(s)
+```
 
-<pre class="syntaxbox notranslate">scaleY(s)
-</pre>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
-
-<dl>
- <dt><code>s</code></dt>
- <dd>{{cssxref("&lt;number&gt;")}} で、要素のそれぞれの点を規則的に適用する拡大縮小係数を表します。</dd>
-</dl>
+- `s`
+  - : {{cssxref("&lt;number&gt;")}} で、要素のそれぞれの点の縦座標に適用する変倍係数を表します。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
-   <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd></mtr> <mtr><mtd>0</mtd><mtd>s</mtd></mtr> </mtable> </mfenced> </math></td>
-   <td><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>s</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>s</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>s</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
-  <tr>
-   <td><code>[1 0 0 s 0 0]</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">ℝ^2 上のデカルト座標</th>
+      <th scope="col">ℝℙ^2 上の同次座標</th>
+      <th scope="col">ℝ^3 上のデカルト座標</th>
+      <th scope="col">ℝℙ^3 上の同次座標</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>s</mi></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>s</mi> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>s</mi> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>s</mi> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>[1 0 0 s 0 0]</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="scaled"&gt;Scaled&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="scaled">Scaled</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -75,19 +143,24 @@ translation_of: Web/CSS/transform-function/scaleY()
   transform: scaleY(0.6);
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+### 結果
 
-<p>{{EmbedLiveSample("Examples", 200, 200)}}</p>
+{{EmbedLiveSample("Examples", 200, 200)}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## 仕様書
 
-<p><code><a href="/ja/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> データ型の互換性情報をご覧ください。</p>
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## ブラウザーの互換性
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- [`scaleX()`](</ja/docs/Web/CSS/transform-function/scaleX()>)
+- [`scaleZ()`](</ja/docs/Web/CSS/transform-function/scaleZ()>)
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("transform-origin")}}
