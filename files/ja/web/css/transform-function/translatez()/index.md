@@ -4,70 +4,93 @@ slug: Web/CSS/transform-function/translateZ()
 tags:
   - 3D
   - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
+  - CSS 関数
+  - CSS 座標変換
+  - 関数
+  - リファレンス
+browser-compat: css.types.transform-function.translateZ
 translation_of: Web/CSS/transform-function/translateZ()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>translateZ()</code></strong> <a href="/ja/docs/Web/CSS">CSS</a> <a href="/ja/docs/Web/CSS/CSS_Functions">関数</a>は、3 次元空間の z 軸に沿って、すなわちビューアーに近づくまたは遠ざかって、要素を移動させます。その結果は {{cssxref("&lt;transform-function&gt;")}} データ型となります。</p>
+**`translateZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、三次元空間の z 軸に沿って、すなわち閲覧者に近づいたり遠ざかったりするように要素を移動させます。その結果は {{cssxref("&lt;transform-function&gt;")}} データ型となります。
 
-<div>{{EmbedInteractiveExample("pages/css/function-translateZ.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-translateZ.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+この変換は、 {{cssxref("&lt;length&gt;")}} によって定義され、要素または要素がどれだけ内側または外側に移動するかを指定します。
 
-<p>この変換は、 {{cssxref("&lt;length&gt;")}} によって定義され、要素または要素がどれだけ内側または外側に移動するかを指定します。</p>
+上記のデモでは、[`perspective: 550px;`](/ja/docs/Web/CSS/perspective) (三次元空間を作るため) と [`transform-style: preserve-3d;`](/ja/docs/Web/CSS/transform-style) (立方体の 6 つの面である子を三次元空間に配置) を立方体に設定しました。
 
-<p>上記のデモでは、 <code><a href="/ja/docs/Web/CSS/perspective">perspective: 550px;</a></code> (3D空間を作成するため) と <code><a href="/ja/docs/Web/CSS/transform-style">transform-style. preserve-3d;</a></code> (従って、子つまり立方体の6辺も3D空間に配置されています) が、立方体に設定されています。</p>
+> **Note:** `translateZ(tz)` は、`translate3d(0, 0, tz)` と等価です。
 
-<div class="note">
-<p><strong>注:</strong> <code>translateZ(tz)</code> は、<code><a href="/ja/docs/Web/CSS/transform-function/translate3d">translate3d</a>(0, 0, tz)</code> と等価です。</p>
-</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```css
+translateZ(tz)
+```
 
-<pre class="syntaxbox notranslate">translateZ(<var>tz</var>)
-</pre>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
-
-<dl>
- <dt><code><var>tz</var></code></dt>
- <dd>変換ベクトルの z 成分を表す{{cssxref("&lt;length&gt;")}}。正の値では要素がビューアーに向かって移動し、負の値で移動すると遠ざかります。</dd>
-</dl>
+- `tz`
+  - : 変換ベクトルの z 成分を表す{{cssxref("&lt;length&gt;")}}。正の値では要素が閲覧者に向かって移動し、負の値で移動すると遠ざかります。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">ℝ<sup>2</sup> のデカルト座標</th>
-   <th scope="col">ℝℙ<sup>2</sup> の同次座標</th>
-   <th scope="col">ℝ<sup>3</sup> のデカルト座標</th>
-   <th scope="col">ℝℙ<sup>3</sup> の同次座標</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="2" rowspan="2">この変換は 3 次元空間に適用されます。平面上では表現できません。</td>
-   <td colspan="1" rowspan="2">この変換は ℝ<sup>3</sup> の線形変換ではなく、デカルト座標系の行列では表現できません。</td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>t</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">ℝ^2 のデカルト座標</th>
+      <th scope="col">ℝℙ^2 の同次座標</th>
+      <th scope="col">ℝ^3 のデカルト座標</th>
+      <th scope="col">ℝℙ^3 の同次座標</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2">
+        この変換は 3 次元空間に適用されます。平面上では表現できません。
+      </td>
+      <td>
+        この変換は ℝ^3 の線形変換ではなく、デカルト座標系の行列では表現できません。
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn> </mtd><mtd><mi>t</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<p>この例では、2 つのボックスが作成されます。 1 つは通常変換されずにページ上に配置されます。 2 番目の方法は、3D 空間を作成するためのパースペクティブを適用して変更し、ユーザーに向かって移動します。</p>
+この例では、2 つのボックスが作成されます。1 つはページ上で通常の位置に配置され、座標変換されることはありません。もう一つは、遠近法を適用して三次元空間を作り、ユーザーの方に移動させます。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;Static&lt;/div&gt;
-&lt;div class="moved"&gt;Moved&lt;/div&gt;</pre>
+```html
+<div>Static</div>
+<div class="moved">Moved</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   position: relative;
   width: 60px;
   height: 60px;
@@ -79,44 +102,28 @@ translation_of: Web/CSS/transform-function/translateZ()
   transform: perspective(500px) translateZ(200px);
   background-color: pink;
 }
-</pre>
+```
 
-<p>本当にここで重要なのは、class "moved" です。それが何をするかを見てみましょう。 まず、<code><a href="/ja/docs/Web/CSS/transform-function/perspective">perspective()</a></code> 関数は、ビューアーを、z=0 (本質的にスクリーンの表面) にある平面に対してビューアーを配置します。<code>500px</code> の値は、ユーザーが z=0 にある画像の「正面」に 500 ピクセルあることを意味します。</p>
+ここで重要なのは "moved" というクラスで、その機能を見てみましょう。まず、 
+[`perspective()`](/ja/docs/Web/CSS/transform-function/perspective()) 関数は、 z=0 の位置にある平面 (要するに画面の表面) の相対位置に閲覧者を位置付けます。 `500px` という値は、ユーザーが z=0 にある画像の 500 ピクセル「前」にいることを意味します。
 
-<p>次に、<code>translateZ()</code> 関数は、要素を画面からユーザーの方に「外向きに」200 ピクセル移動します。 これは、2D ディスプレイ上で見たときに要素を大きく見せる、または VR ヘッドセットや他の 3D ディスプレイデバイスを使用して見たときに要素をより近く見せるという効果があります。</p>
+次に、`translateZ()` 関数は、要素を画面からユーザーの方に「外向きに」200 ピクセル移動します。 これは、二次元のディスプレイ上で見たときに要素を大きく見せる、または VR ヘッドセットや他の三次元ディスプレイ機器を使用して見たときに要素をより近く見せるという効果があります。
 
-<p>なお、 <code>perspective()</code> の値が <code>translateZ()</code> の値よりも小さい場合、例えば <code>transform: perspective(200px) translateZ(300px);</code> の場合、変換された要素はユーザーのビューポートよりも手前にあるため、表示されません。 perspective と translateZ の値の差が小さければ小さいほど、ユーザーは要素に近づき、変換された要素は大きく見えます。</p>
+なお、 `perspective()` の値が `translateZ()` の値よりも小さい場合、例えば `transform: perspective(200px) translateZ(300px);` の場合、変換された要素はユーザーのビューポートよりも手前にあるため、表示されません。 perspective と translateZ の値の差が小さければ小さいほど、ユーザーは要素に近づき、変換された要素は大きく見えます。
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Examples", 250, 250)}}</p>
+{{EmbedLiveSample("Examples", 250, 250)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Transforms 2', '#transform-functions', 'transform')}}</td>
-   <td>{{Spec2('CSS Transforms 2')}}</td>
-   <td>3D 変換関数を CSS Transforms 標準に追加。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p><code><a href="/ja/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> データ型の互換性情報をご覧ください。</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

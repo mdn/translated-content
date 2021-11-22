@@ -3779,7 +3779,7 @@
 /ja/docs/Web/CSS/transform-function/skewY	/ja/docs/Web/CSS/transform-function/skewY()
 /ja/docs/Web/CSS/transform-function/translate	/ja/docs/Web/CSS/transform-function/translate()
 /ja/docs/Web/CSS/transform-function/translate3d	/ja/docs/Web/CSS/transform-function/translate3d()
-/ja/docs/Web/CSS/transform-function/translateX	/ja/docs/orphaned/Web/CSS/transform-function/translateX
+/ja/docs/Web/CSS/transform-function/translateX	/ja/docs/Web/CSS/transform-function/translateX()
 /ja/docs/Web/CSS/transform-function/translateY	/ja/docs/Web/CSS/transform-function/translateY()
 /ja/docs/Web/CSS/transform-function/translateZ	/ja/docs/Web/CSS/transform-function/translateZ()
 /ja/docs/Web/CSS/uri	/ja/docs/Web/CSS/url()

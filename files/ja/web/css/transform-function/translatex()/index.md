@@ -1,79 +1,137 @@
 ---
 title: translateX()
-slug: orphaned/Web/CSS/transform-function/translateX
+slug: Web/CSS/transform-function/translateX()
 tags:
   - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
-translation_of: Web/CSS/transform-function/translateX
+  - CSS 関数
+  - CSS 座標変換
+  - 関数
+  - リファレンス
+browser-compat: css.types.transform-function.translateX
+translation_of: Web/CSS/transform-function/translateX()
 original_slug: Web/CSS/transform-function/translateX
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>translateX()</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/en-US/docs/Web/CSS/CSS_Functions">function</a>で、要素を二次元平面上の水平方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。</p>
+**`translateX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上の水平方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/3544/transform-functions-translateX_2.png" style="height: 146px; width: 243px;"></p>
+![](transform-functions-translatex_2.png)
 
-<div class="note">
-<p><strong>注:</strong> <code>translateX(tx)</code> は <code><a href="/en-US/docs/Web/CSS/transform-function/translate">translate</a>(tx, 0)</code> または <code><a href="/en-US/docs/Web/CSS/transform-function/translate3d">translate3d</a>(tx, 0, 0)</code> と等価です。</p>
-</div>
+> **Note:** `translateX(tx)` は `translate(tx, 0)` または `translate3d(tx, 0, 0)` と等価です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: css notranslate">/* &lt;length-percentage&gt; values */
+```css
+/* <length-percentage> values */
 transform: translateX(200px);
 transform: translateX(50%);
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>変換ベクトルの横座標を表す {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。パーセント値は {{cssxref("transform-box")}} プロパティで定義される参照ボックスの幅からの相対値です。</dd>
-</dl>
+- `<length-percentage>`
+  - : 変換ベクトルの横座標を表す {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。パーセント値は {{cssxref("transform-box")}} プロパティで定義される参照ボックスの幅からの相対値です。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">ℝ<sup>2</sup> のデカルト座標</th>
-   <th scope="col">ℝℙ<sup>2</sup> の同次座標</th>
-   <th scope="col">ℝ<sup>3</sup> のデカルト座標</th>
-   <th scope="col">ℝℙ<sup>3</sup> の同次座標</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2">
-    <p>ℝ<sup>2</sup> では線形変換ではないので、デカルト座標の行列で表すことはできない。</p>
-   </td>
-   <td><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>t</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>t</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>t</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
-  <tr>
-   <td><code>[1 0 0 1 t 0]</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">ℝ^2 のデカルト座標</th>
+      <th scope="col">ℝℙ^2 の同次座標</th>
+      <th scope="col">ℝ^3 のデカルト座標</th>
+      <th scope="col">ℝℙ^3 の同次座標</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">
+        <p>
+          ℝ^2 では線形変換ではないので、デカルト座標の行列で表すことはできない。
+        </p>
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mi>t</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mi>t</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mi>t</mi> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>[1 0 0 1 t 0]</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+### 形式文法
 
-<pre class="syntaxbox notranslate">translateX({{cssxref("&lt;length-percentage&gt;")}})
-</pre>
+```css
+translateX({{cssxref("&lt;length-percentage&gt;")}})
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;Static&lt;/div&gt;
-&lt;div class="moved"&gt;Moved&lt;/div&gt;
-&lt;div&gt;Static&lt;/div&gt;</pre>
+```html
+<div>Static</div>
+<div class="moved">Moved</div>
+<div>Static</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   width: 60px;
   height: 60px;
   background-color: skyblue;
@@ -83,38 +141,23 @@ transform: translateX(50%);
   transform: translateX(10px); /* translate(10px) と等価 */
   background-color: pink;
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Examples", 250, 250)}}</p>
+{{EmbedLiveSample("Examples", 250, 250)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Transforms", "#funcdef-transform-translatex", "translateX()")}}</td>
-   <td>{{Spec2("CSS3 Transforms")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p><code><a href="/ja/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> データ型の互換性情報をご覧ください。</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- [`translate()`](/ja/docs/Web/CSS/transform-function/translate())
+- [`translateY()`](/ja/docs/Web/CSS/transform-function/translateY())
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}
