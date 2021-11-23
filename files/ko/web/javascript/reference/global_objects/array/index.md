@@ -3,94 +3,105 @@ title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 tags:
   - Array
+  - Class
   - Example
   - Global Objects
   - JavaScript
   - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
 browser-compat: javascript.builtins.Array
+translation_of: Web/JavaScript/Reference/Global_Objects/Array
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>JavaScript <strong><code>Array</code></strong> 전역 객체는 배열을 생성할 때 사용하는 리스트 형태의 고수준 객체입니다.</p>
+JavaScript **`Array`** 클래스는 리스트 형태의 고수준 객체인 배열을 생성할 때 사용하는 전역 객체입니다.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>배열은 프로토타입으로 탐색과 변형 작업을 수행하는 메서드를 갖는, 리스트와 비슷한 객체입니다. JavaScript에서 배열의 길이와 요소의 자료형은 고정되어 있지 않습니다. 배열의 길이가 언제든지 늘어나거나 줄어들 수 있기 때문에 JavaScript 배열들은 밀집도가 보장되지 않습니다. 보통 이 성질은 편리하지만, 목적에 맞지 않는다면 형식화 배열(typed array)을 사용하는 것을 고려해보세요.</p>
+배열은 리스트와 비슷한 객체로서 순회와 변형 작업을 수행하는 메서드를 갖습니다. JavaScript 배열은 길이도, 각 요소의 자료형도 고정되어 있지 않습니다. 배열의 길이가 언제든지 늘어나거나 줄어들 수 있고 데이터를 연속적이지 않은 곳에 저장할 수 있으므로, JavaScript 배열은 밀집성을 보장하지 않습니다. 보통 이런 성질들은 편리하지만, 사용하려는 목적에 맞지 않으면 형식화 배열(typed array)을 사용하는 것을 고려해보세요.
 
-<p>배열은 요소 인덱스로 문자열(<a href="https://ko.wikipedia.org/wiki/%EC%97%B0%EA%B4%80_%EB%B0%B0%EC%97%B4">연관 배열</a>)을 사용할 수 없으며 무조건 정수만 허용합니다. <a href="/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors">속성 접근자</a>를 사용해 정수 외 키에 접근할 경우 배열 리스트의 요소가 아니라 배열 객체의 속성 변수를 설정하거나 회수합니다. 배열 객체의 속성과 배열 요소의 리스트의 요소는 서로 다른 별개의 항목으로, <a href="/ko/docs/Web/JavaScript/Guide/Indexed_collections#배열_객체의_메서드">순회 및 변형 작업</a>은 객체 속성에 적용되지 않습니다.</p>
+배열은 ([연관 배열](https://ko.wikipedia.org/wiki/연관_배열)과 달리) 요소 인덱스로 문자열을 사용할 수 없으며 무조건 정수만 허용합니다. [대괄호 구문](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#객체와_속성) 또는 [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)를 사용해 정수가 아닌 키에 접근할 경우 배열의 요소가 아니라 배열의 [객체 속성 컬렉션](/ko/docs/Web/JavaScript/Data_structures#속성)에 연결된 변수를 바라보게 됩니다. [순회 및 변형 작업](/ko/docs/Web/JavaScript/Guide/Indexed_collections#배열_객체의_메서드) 또한 이런 속성에 적용할 수 없습니다.
 
-<h3 id="자주_사용하는_연산">자주 사용하는 연산</h3>
+### 자주 사용하는 연산
 
-<h4 id="배열_만들기">배열 만들기</h4>
+**배열 만들기**
 
-<pre class="brush: js">let fruits = ['사과', '바나나']
+```js
+let fruits = ['사과', '바나나']
 
 console.log(fruits.length)
 // 2
-</pre>
+```
 
-<h4 id="인덱스로_배열의_항목에_접근하기">인덱스로 배열의 항목에 접근하기</h4>
+**인덱스로 배열의 항목에 접근하기**
 
-<pre class="brush: js">let first = fruits[0]
+```js
+let first = fruits[0]
 // 사과
 
 let last = fruits[fruits.length - 1]
 // 바나나
-</pre>
+```
 
-<h4 id="배열의_항목들을_순환하며_처리하기">배열의 항목들을 순환하며 처리하기</h4>
+**배열의 항목들을 순환하며 처리하기**
 
-<pre class="brush: js">fruits.forEach(function (item, index, array) {
+```js
+fruits.forEach(function (item, index, array) {
   console.log(item, index)
 })
 // 사과 0
 // 바나나 1
-</pre>
+```
 
-<h4 id="배열_끝에_항목_추가하기">배열 끝에 항목 추가하기</h4>
+**배열 끝에 항목 추가하기**
 
-<pre class="brush: js">let newLength = fruits.push('오렌지')
+```js
+let newLength = fruits.push('오렌지')
 // ["사과", "바나나", "오렌지"]
-</pre>
+```
 
-<h4 id="배열_끝에서부터_항목_제거하기">배열 끝에서부터 항목 제거하기</h4>
+**배열 끝에서부터 항목 제거하기**
 
-<pre class="brush: js">let last = fruits.pop() // 끝에있던 '오렌지'를 제거
+```js
+let last = fruits.pop() // 끝에있던 '오렌지'를 제거
 // ["사과", "바나나"]
-</pre>
+```
 
-<h4 id="배열_앞에서부터_항목_제거하기">배열 앞에서부터 항목 제거하기</h4>
+**배열 앞에서부터 항목 제거하기**
 
-<pre class="brush: js">let first = fruits.shift() // 제일 앞의 '사과'를 제거
+```js
+let first = fruits.shift() // 제일 앞의 '사과'를 제거
 // ["바나나"]
-</pre>
+```
 
-<h4 id="배열_앞에_항목_추가하기">배열 앞에 항목 추가하기</h4>
+**배열 앞에 항목 추가하기**
 
-<pre class="brush: js">let newLength = fruits.unshift('딸기') // 앞에 추가
+```js
+let newLength = fruits.unshift('딸기') // 앞에 추가
 // ["딸기", "바나나"]
-</pre>
+```
 
-<h4 id="배열_안_항목의_인덱스_찾기">배열 안 항목의 인덱스 찾기</h4>
+**배열 안 항목의 인덱스 찾기**
 
-<pre class="brush: js">fruits.push('망고')
+```js
+fruits.push('망고')
 // ["딸기", "바나나", "망고"]
 
 let pos = fruits.indexOf("바나나")
 // 1
-</pre>
+```
 
-<h4 id="인덱스_위치에_있는_항목_제거하기">인덱스 위치에 있는 항목 제거하기</h4>
+**인덱스 위치에 있는 항목 제거하기**
 
-<pre class="brush: js">let removedItem = fruits.splice(pos, 1) // 항목을 제거하는 방법
+```js
+let removedItem = fruits.splice(pos, 1) // 항목을 제거하는 방법
 
 // ["딸기", "망고"]
-</pre>
+```
 
-<h4 id="인덱스_위치에서부터_여러개의_항목_제거하기">인덱스 위치에서부터 여러개의 항목 제거하기</h4>
+**인덱스 위치에서부터 여러개의 항목 제거하기**
 
-<pre class="brush: js">let vegetables = ['양배추', '순무', '무', '당근']
+```js
+let vegetables = ['양배추', '순무', '무', '당근']
 console.log(vegetables)
 // ["양배추", "순무", "무", "당근"]
 
@@ -106,300 +117,315 @@ console.log(vegetables)
 
 console.log(removedItems)
 // ["순무", "무"]
-</pre>
+```
 
-<h4 id="배열_복사하기">배열 복사하기</h4>
+**배열 복사하기**
 
-<pre class="brush: js">let shallowCopy = fruits.slice() // 사본을 만드는 방법
+```js
+let shallowCopySpread = [...fruits]
 // ["딸기", "망고"]
-</pre>
+```
 
-<h3 id="배열_요소에_접근하기">배열 요소에 접근하기</h3>
+위 코드는 [전개 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)을 사용해 배열의 얕은 복사를 만드는 방법입니다. 배열을 복사하는 다른 방법은 아래의 [배열 복사하기](#배열_복사하기)에서 논의합니다.
 
-<p>JavaScript 배열의 인덱스는 0부터 시작합니다. 즉, 배열 첫 번째 요소의 인덱스는 0이고, 마지막 요소의 인덱스는 배열의 {{jsxref("Array.length", "length")}} 속성에서 1을 뺀 것과 같습니다.</p>
+### 배열 요소에 접근하기
 
-<p>잘못된 인덱스를 사용하면 <code>undefined</code>를 반환합니다.</p>
+JavaScript 배열의 인덱스는 0부터 시작합니다. 즉, 배열 첫 번째 요소의 인덱스는 0이고, 마지막 요소의 인덱스는 배열의 {{jsxref("Array.length", "length")}} 속성에서 1을 뺀 것과 같습니다.
 
-<pre class="brush: js">let arr = ['첫 번재 요소입니다', '두 번째 요소입니다', '마지막 요소입니다']
+잘못된 인덱스를 사용하면 `undefined`를 반환합니다.
+
+```js
+let arr = ['첫 번재 요소입니다', '두 번째 요소입니다', '마지막 요소입니다']
 console.log(arr[0])              // '첫 번재 요소입니다'를 기록
 console.log(arr[1])              // '두 번재 요소입니다'를 기록
 console.log(arr[arr.length - 1]) // '마지막 요소입니다'를 기록
-</pre>
+```
 
-<p><code>toString</code>이 속성인 것과 마찬가지로(정확히 하자면, <code>toString()</code>은 메서드입니다) 배열의 요소도 속성입니다. 하지만 아래의 예시처럼 배열 요소에 접근하려 하면, 속성 이름이 유효하지 않기 때문에 구문 오류가 발생합니다.</p>
+`toString`이 속성인 것과 마찬가지로 (정확히 하자면, `toString()`은 메서드입니다) 배열의 요소도 속성입니다. 하지만 배열 요소에 아래 코드처럼 접근하려고 하면, 속성 이름이 유효하지 않기 때문에 구문 오류가 발생합니다.
 
-<pre class="brush: js">console.log(arr.0) // 구문 오류
-</pre>
+```js
+console.log(arr.0) // 구문 오류
+```
 
-<p>이 점에는 JavaScript 배열과 속성에 특별한 점이 없습니다. 숫자로 시작하는 JavaScript 속성은 마침표 구문으로 접근할 수 없으며, 반드시 괄호 표기법으로 접근해야 합니다.</p>
+이 현상은 JavaScript 배열과 그 속성에 어떤 특별한 점이 있어서 그런 것이 아닙니다. 모든 JavaScript 속성은 이름이 숫자로 시작할 경우 마침표 표기법으로 접근할 수 없고, 대괄호 표기법을 사용해야 합니다.
 
-<p>예를 들어 <code>'3d'</code>라는 이름의 속성을 가진 객체에서 해당 속성에 접근할 땐 괄호 표기법을 사용해야만 합니다.</p>
+예를 들면, 어떤 객체에 `'3d'`라는 이름의 속성이 있다면, 이 속성에 접근할 땐 대괄호 표기법을 사용해야만 합니다.
 
-<pre class="brush: js">let years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
+```js
+let years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
 console.log(years.0)   // 구문 오류
 console.log(years[0])  // 정상 작동
-</pre>
+```
 
-<pre class="brush: js">renderer.3d.setTexture(model, 'character.png')     // 구문 오류
+```js
+renderer.3d.setTexture(model, 'character.png')     // 구문 오류
 renderer['3d'].setTexture(model, 'character.png')  // 정상 작동
-</pre>
+```
 
-<p><code>3d</code> 예시에서 <code>'3d'</code>를 따옴표로 감싸야 함에 유의하세요. JavaScript 배열 인덱스도 따옴표로 둘러쌀 수는 있지만(<code>years[2]</code> 대신에 <code>years['2']</code>처럼), 굳이 필요하지는 않습니다.</p>
+`3d` 예시에서 `'3d'`를 따옴표로 감싸야 함에 유의하세요. JavaScript 배열 인덱스도 `years[2]` 대신에 `years['2']`를 사용하듯 따옴표로 둘러쌀 수 있습니다. 그러나 굳이 그럴 필요는 없습니다.
 
-<p><code>years[2]</code>의 2는 JavaScript 엔진이 암시적인 <code>toString</code> 변환을 사용해 문자열로 변환합니다. 그 결과로서 <code>'2'</code>와 <code>'02'</code>는 <code>years</code> 객체에서 서로 다른 칸을 가리키며, 다음 코드는 <code>true</code>가 될 수 있습니다.</p>
+`years[2]`의 `2`는 JavaScript 엔진이 암시적인 `toString` 변환을 사용해 문자열로 변환합니다. 그 결과로서 `'2'`와 `'02'`는 `years` 객체에서 서로 다른 칸을 가리키며, 다음 코드는 `true`가 될 수 있습니다.
 
-<pre class="brush: js">console.log(years['2'] != years['02']);
-</pre>
+```js
+console.log(years['2'] != years['02']);
+```
 
-<h3 id="length_와_숫자형_속성의_관계"><code>length</code> 와 숫자형 속성의 관계</h3>
+### 배열 길이와 숫자형 속성의 관계
 
-<p>JavaScript 배열의 {{jsxref("Array.length", "length")}} 속성과 숫자형 속성은 연결되어 있습니다.</p>
+JavaScript 배열의 {{jsxref("Array.length", "length")}} 속성과 숫자형 속성은 연결되어 있습니다.
 
-<p>몇몇 배열 내장 메서드({{jsxref("Array.join", "join")}}, {{jsxref("Array.slice", "slice")}}, {{jsxref("Array.indexOf", "indexOf")}} 등)은 호출했을 때 배열의 {{jsxref("Array.length", "length")}} 속성의 값을 참조합니다.</p>
+몇몇 배열 내장 메서드({{jsxref("Array.join", "join")}}, {{jsxref("Array.slice", "slice")}}, {{jsxref("Array.indexOf", "indexOf")}} 등)은 호출했을 때 배열의 {{jsxref("Array.length", "length")}} 속성의 값을 참고합니다.
 
-<p>다른 메서드({{jsxref("Array.push", "push")}}, {{jsxref("Array.splice", "splice")}} 등) 또한 배열의 {{jsxref("Array.length", "length")}} 속성의 업데이트를 유발합니다.</p>
+다른 메서드({{jsxref("Array.push", "push")}}, {{jsxref("Array.splice", "splice")}} 등) 또한 배열의 {{jsxref("Array.length", "length")}} 속성을 바꾸는 결과를 낳습니다.
 
-<pre class="brush: js">const fruits = []
-fruits.push('banana', 'apple', 'peach')
+```js
+const fruits = []
+fruits.push('바나나', '사과', '복숭아')
 
 console.log(fruits.length) // 3
-</pre>
+```
 
-<p>JavaScript 배열의 속성을 설정할 때 그 속성이 유효한 배열 인덱스이고 그 인덱스가 현재 배열의 경계를 넘어간다면, JavaScript 엔진은 배열의 {{jsxref("Array.length", "length")}} 속성을 그에 맞춰 업데이트 합니다.</p>
+배열 인덱스로 유효한 속성을 JavaScript 배열에 설정할 때, 그 인덱스가 현재 배열의 경계 바깥에 있는 경우, JavaScript 엔진은 배열의 {{jsxref("Array.length", "length")}} 속성을 그에 맞춰 업데이트 합니다.
 
-<pre class="brush: js">fruits[5] = 'mango'
-console.log(fruits[5])           // 'mango'
+```js
+fruits[5] = 'mango'
+console.log(fruits[5])           // '망고'
 console.log(Object.keys(fruits)) // ['0', '1', '2', '5']
 console.log(fruits.length)       // 6
-</pre>
+```
 
-<p>{{jsxref("Array.length", "length")}}를 직접 늘릴 수 있습니다.</p>
+{{jsxref("Array.length", "length")}}를 직접 늘려도 요소에 변화는 없습니다.
 
-<pre class="brush: js">fruits.length = 10;
-console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
-console.log(fruits.length); // 10
-</pre>
+```js
+fruits.length = 10
+console.log(fruits)              // ['바나나', '사과', '복숭아', 비어 있음 x 2, '망고', 비어 있음 x 4]
+console.log(Object.keys(fruits)) // ['0', '1', '2', '5']
+console.log(fruits.length)       // 10
+console.log(fruits[8])           // undefined
+```
 
-<p>하지만, {{jsxref("Array.length", "length")}} 속성을 감소시키면 요소를 지웁니다.</p>
+하지만, {{jsxref("Array.length", "length")}} 속성을 감소시키면 요소가 지워집니다.
 
-<pre class="brush: js">fruits.length = 2
+```js
+fruits.length = 2
 console.log(Object.keys(fruits)) // ['0', '1']
 console.log(fruits.length)       // 2
-</pre>
+```
 
-<p>{{jsxref("Array.length")}} 문서에 더 자세한 설명이 있습니다.</p>
+{{jsxref("Array.length")}} 문서에 더 자세한 설명이 있습니다.
 
-<h3 id="매치_결과를_이용한_배열_생성">매치 결과를 이용한 배열 생성</h3>
+### 정규표현식 일치 결과를 이용한 배열 생성
 
-<p>정규표현식과 문자열 사이의 매치 결과로 JavaScript 배열을 만들 수 있습니다. 이 배열은 매치에 대한 정보를 제공하는 속성들과 요소들을 가집니다. 이러한 배열은 {{jsxref("RegExp.exec")}}, {{jsxref("String.match")}}, {{jsxref("String.replace")}}로부터 반환됩니다. 이 속성들과 요소들에 대한 설명을 돕기위해, 다음 예제를 보고 아래 테이블을 참조해주세요.</p>
+{{jsxref("RegExp")}}와 문자열 사이의 일치 결과는 JavaScript 배열을 반환합니다. 이 배열은 일치 결과에 대한 정보를 포함하는 속성과 요소가 담겨있습니다. {{jsxref("RegExp.exec()")}}, {{jsxref("String.match()")}}의 반환 값에서 이런 배열을 볼 수 있습니다.
 
-<pre class="brush: js">// 하나의 d와 하나 이상의 b에 하나의 d가 뒤따라 일치해야 합니다.
-// 일치한 b와 다음 d를 기억하십시오.
-// 대소문자 구분은 무시됩니다.
+다음 예제와 표에서 배열의 속성과 요소에 대한 설명을 확인하세요.
 
-var myRe = /d(b+)(d)/i;
-var myArray = myRe.exec('cdbBdbsbz');
-</pre>
+```js
+// 하나의 d와 하나 이상의 b에 하나의 d가 뒤따라 일치해야 함
+// 일치한 b와 다음 d를 기억할 것
+// 대소문자 구분 없음
 
-<p>매치로부터 반환되는 속성들과 요소들은 다음과 같습니다:</p>
+const myRe = /d(b+)(d)/i
+const myArray = myRe.exec('cdbBdbsbz')
+```
+
+반환된 `myArray` 배열의 속성과 요소는 다음과 같습니다.
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <td class="header">속성/요소</td>
-   <td class="header">설명</td>
-   <td class="header">예시</td>
-  </tr>
-  <tr>
-   <td><code>input </code> {{ReadOnlyInline}}</td>
-   <td>정규 표현식과 일치시키는 원본 문자열을 나타내는 읽기 전용 속성입니다.</td>
-   <td><code>"cdbBdbsbz"</code></td>
-  </tr>
-  <tr>
-   <td><code>index </code> {{ReadOnlyInline}}</td>
-   <td>원본 문자열에서 정규 표현식이 처음 일치하는 문자열의 위치(원본 문자열의 첫 문자 위치를 0으로 하는)를 나타내는 읽기 전용 속성입니다.</td>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <td><code>[0]</code> {{ReadOnlyInline}}</td>
-   <td>원본 문자열에서 정규 표현식이 처음 일치하는 문자열을 지정하는 읽기 전용 요소입니다.</td>
-   <td><code>"dbBd"</code></td>
-  </tr>
-  <tr>
-   <td><code>[1], ...[n] </code> {{ReadOnlyInline}}</td>
-   <td>만약 정규 표현식에 괄호가 포함돼 있다면 괄호에 일치하는 부분 문자열을 나타내는 읽기 전용 요소들입니다. 가능한 괄호 안의 부분 문자열의 수는 무제한입니다.</td>
-   <td><code>[1]: bB</code><br>
-    <code>[2]: d</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th class="header" scope="col">속성/요소</th>
+      <th class="header" scope="col">설명</th>
+      <th class="header" scope="col">예시</th>
+    </tr>
+    <tr>
+      <td><code>input</code><br />{{ReadOnlyInline}}</td>
+      <td>정규표현식 일치 대상이 된 원본 문자열입니다.</td>
+      <td><code>"cdbBdbsbz"</code></td>
+    </tr>
+    <tr>
+      <td><code>index</code><br />{{ReadOnlyInline}}</td>
+      <td>일치가 위치한 원본 문자열에서의 인덱스입니다.</td>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <td><code>[0]</code><br />{{ReadOnlyInline}}</td>
+      <td>마지막으로 일치한 텍스트입니다.</td>
+      <td><code>"dbBd"</code></td>
+    </tr>
+    <tr>
+      <td><code>[1], ...[n]</code><br />{{ReadOnlyInline}}</td>
+      <td>
+        존재할 경우, 정규표현식에서 괄호로 지정한 부분문자열 일치에 대응하는 요소입니다. 가능한 수의 제한은 없습니다.
+      </td>
+      <td>
+        <code>[1]: "bB"<br />[2]: "d"</code>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="생성자">생성자</h2>
+### 배열 복사하기
 
-<dl>
- <dt>{{jsxref("Array.Array", "Array()")}}</dt>
- <dd><code>Array</code> 객체를 생성합니다.</dd>
-</dl>
+배열을 새로운 변수에 할당해도 배열이 복사되지는 않습니다. 새로운 변수에는 원본 배열을 가리키는 참조만 할당되며, 원본 배열의 값을 바꾸면 새 변수에서도 그 변경점이 반영됩니다.
 
-<h2 id="정적_속성">정적 속성</h2>
+```js
+let array1 = [1,2,3]
+let array1Reference = array1;
+array1[1] = 9;
+console.log(array1Reference);
+// Array [1,9,3] - array1의 변화가 array1Reference에도 나타남 - 복사본이 아님
+```
 
-<dl>
- <dt><code>Array.length</code></dt>
- <dd>값이 1인 <code>Array</code> 생성자의 길이 속성입니다.</dd>
- <dt>{{jsxref("Array.@@species", "get Array[@@species]")}}</dt>
- <dd>파생 객체를 생성하는데 사용하는 생성자 함수입니다.</dd>
-</dl>
+배열의 복사본을 만들기 위해서는 새 배열을 위한 변수를 생성하고, 원본 배열 각각의 원시 요소에 대해서도 새로운 변수를 생성해야 합니다. (변수를 원시 값으로 초기화하면 참조를 할당하지 않고 값을 복사합니다.) JavaScript에서는 이를 위해 다음과 같은 방법을 사용할 수 있습니다.
 
-<h2 id="정적_메서드">정적 메서드</h2>
+[전개 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax):
 
-<dl>
- <dt>{{jsxref("Array.from()")}}</dt>
- <dd>유사 배열 또는 반복 가능한 객체로부터 새로운 <code>Array</code> 인스턴스를 생성합니다.</dd>
- <dt>{{jsxref("Array.isArray()")}}</dt>
- <dd>만약 변수가 배열이면 참을, 아니면 거짓을 반환합니다.</dd>
- <dt>{{jsxref("Array.of()")}}</dt>
- <dd>전달인자의 개수나 데이터 타입에 관계없이 새 <code>Array</code> 인스턴스를 생성합니다.</dd>
-</dl>
+```js
+let shallowCopySpread = [...fruits]
+// ["Strawberry", "Mango"]
+```
 
-<h2 id="Array_인스턴스"><code>Array</code> 인스턴스</h2>
+{{jsxref("Array.slice()")}}:
 
-<p>모든 <code>Array</code> 인스턴스는 <code>Array.prototype</code>을 상속합니다. 다른 생성자와 마찬가지로, <code>Array()</code> 생성자의 프로토타입을 수정하면 모든 <code>Array</code> 인스턴스도 수정의 영향을 받습니다. 예를 들면, 새로운 메서드와 속성을 추가해 모든 <code>Array</code>를 확장할 수 있으므로, {{glossary("polyfill", "폴리필")}}에 쓰입니다.</p>
+```js
+let shallowCopySlice = fruits.slice()
+// ["Strawberry", "Mango"]
+```
 
-<p>그러나 배열 객체에 비표준 메서드를 추가하면 나중에 스스로, 혹은 <a href="https://developers.google.com/web/updates/2018/03/smooshgate">JavaScript에 기능이 추가</a>될 경우 문제가 될 수 있습니다.</p>
+{{jsxref("Array.from()")}}:
 
-<p>잘 모를 법한 사실: <code>Array.prototype</code>은 그 스스로 <code>Array</code>입니다.</p>
+```js
+let shallowCopyFrom = Array.from(fruits)
+// ["Strawberry", "Mango"]
+```
 
-<pre class="brush: js">Array.isArray(Array.prototype) // true</pre>
+위의 세 코드는 모두 '얕은 복사'를 생성합니다. 얕은 복사란 배열의 최상위 요소가 원시 값일 경우 복사하지만, 중첩 배열이나 객체 요소일 경우에는 원본 배열의 요소를 참조하는 것입니다게 됩니다.
 
-<h2 id="인스턴스_속성">인스턴스 속성</h2>
+모든 요소의 '깊은 복사', 즉 중첩 배열과 객체 요소 또한 동일한 형태로 복사하는 방법 중 하나는 {{jsxref("JSON.stringify()")}}를 사용해 배열을 JSON 문자열로 변환한 후, {{jsxref("JSON.parse()")}}로 다시 배열을 구성하는 것입니다.
 
-<div>
-<dl>
- <dt><code>Array.prototype.constructor</code></dt>
- <dd>객체의 프로토타입을 생성하는 함수를 지정합니다.</dd>
- <dt>{{jsxref("Array.prototype.length")}}</dt>
- <dd>배열의 원소 수를 나타냅니다.</dd>
- <dt>{{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}</dt>
- <dd>{{jsxref("Statements/with", "with")}} 결속 범위로부터 제외하려는 속성 이름이 들어있는 기호입니다.</dd>
-</dl>
-</div>
+```js
+let deepCopy = JSON.parse(JSON.stringify(fruits));
+// ["Strawberry", "Mango"]
+```
 
-<h2 id="인스턴스_메서드">인스턴스 메서드</h2>
+## 생성자
 
-<h4 id="변경자_메서드">변경자 메서드</h4>
+- {{jsxref("Array.Array", "Array()")}}
+  - : `Array` 객체를 생성합니다.
 
-<div>
-<p>변경자 메서드는 배열을 수정합니다.</p>
+## 정적 속성
 
-<dl>
- <dt>{{jsxref("Array.prototype.copyWithin()")}}</dt>
- <dd>배열 내의 지정된 요소들을 동일한 배열 내에서 복사합니다.</dd>
- <dt>{{jsxref("Array.prototype.fill()")}}</dt>
- <dd>배열 안의 시작 인덱스부터 끝 인덱스까지의 요소값을 지정된 정적 값으로 채웁니다.</dd>
- <dt>{{jsxref("Array.prototype.pop()")}}</dt>
- <dd>배열에서 마지막 요소를 뽑아내고, 그 요소를 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.push()")}}</dt>
- <dd>배열의 끝에 하나 이상의 요소를 추가하고, 변경된 배열의 길이를 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.reverse()")}}</dt>
- <dd>배열의 요소 순서를 반전시킵니다. 첫 번째가 마지막이 되고 마지막이 첫 번째가 됩니다.</dd>
- <dt>{{jsxref("Array.prototype.shift()")}}</dt>
- <dd>배열에서 첫 번째 요소를 삭제하고 그 요소를 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.sort()")}}</dt>
- <dd>배열의 요소를 정렬하고 그 배열을 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.splice()")}}</dt>
- <dd>배열에서 요소를 추가/삭제합니다.</dd>
- <dt>{{jsxref("Array.prototype.unshift()")}}</dt>
- <dd>배열의 앞에 하나 이상의 요소를 추가하고 새로운 길이를 반환합니다.</dd>
-</dl>
-</div>
+- {{jsxref("Array.@@species", "get Array[@@species]")}}
+  - : 파생 객체를 생성하는데 사용하는 생성자 함수입니다.
 
-<h4 id="접근자_메서드">접근자 메서드</h4>
+## 정적 메서드
 
-<div>
-<p>접근자 메서드는 배열을 수정하지 않고, 기존 배열의 일부에 기반한 새로운 배열 또는 값을 반환합니다.</p>
+- {{jsxref("Array.from()")}}
+  - : 유사 배열 또는 반복 가능한 객체로부터 새로운 `Array` 인스턴스를 생성합니다.
+- {{jsxref("Array.isArray()")}}
+  - : 만약 매개변수가 배열이면 참을, 아니면 거짓을 반환합니다.
+- {{jsxref("Array.of()")}}
+  - : 매개변수의 수와 자료형에 제한 없이, 지정한 값을 사용해 새 `Array` 인스턴스를 생성합니다.
 
-<dl>
- <dt>{{jsxref("Array.prototype.at()")}}</dt>
- <dd>주어진 인덱스의 요소를 반환합니다. 음수 값을 지정할 경우 인덱스를 배열의 끝부터 셉니다.</dd>
- <dt>{{jsxref("Array.prototype.concat()")}}</dt>
- <dd>배열을 매개변수로 주어진 배열/값과 이어붙인 새로운 배열을 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.filter()")}}</dt>
- <dd>지정한 콜백의 반환 결과가 <code>true</code>인 요소만 모은 새로운 배열을 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.includes()")}}</dt>
- <dd>배열이 주어진 값을 포함하는지 판별해 <code>true</code> 또는 <code>false</code>를 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.indexOf()")}}</dt>
- <dd>배열에서 주어진 값과 일치하는 제일 앞의 인덱스를 반환합니다. 없으면 <code>-1</code>을 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.join()")}}</dt>
- <dd>배열의 모든 요소를 문자열로 합칩니다.</dd>
- <dt>{{jsxref("Array.prototype.lastIndexOf()")}}</dt>
- <dd>배열에서 주어진 값과 일치하는 제일 뒤의 인덱스를 반환합니다. 없으면 <code>-1</code>을 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.slice()")}}</dt>
- <dd>배열의 일부를 추출한 새 배열을 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.toSource()")}} {{non-standard_inline}}</dt>
- <dd>지정한 배열을 나타내는 배열 리터럴을 반환합니다. 새로운 배열을 만들기 위해 이 값을 사용할 수 있습니다. {{jsxref("Object.prototype.toSource()")}} 메서드를 재정의합니다.</dd>
- <dt>{{jsxref("Array.prototype.toString()")}}</dt>
- <dd>배열과 그 요소를 나타내는 문자열을 반환합니다. {{jsxref("Object.prototype.toString()")}} 메서드를 재정의합니다.</dd>
- <dt>{{jsxref("Array.prototype.toLocaleString()")}}</dt>
- <dd>배열과 그 요소를 나타내는 지역화된 문자열을 반환합니다. {{jsxref("Object.prototype.toLocaleString()")}} 메서드를 재정의합니다.</dd>
-</dl>
-</div>
+## 인스턴스 속성
 
-<h4 id="순회_메서드">순회 메서드</h4>
+- {{jsxref("Array.prototype.length")}}
+  - : 배열의 원소 수를 나타냅니다.
+- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+  - : {{jsxref("Statements/with", "with")}} 결속 범위로부터 제외하려는 속성 이름이 들어있는 기호입니다.
 
-<p>배열을 처리하면서 호출할 콜백 함수를 받는 메서드 여럿이 존재합니다. 이런 메서드를 호출하면 배열의 <code>length</code>를 기억하므로, 아직 순회를 끝내지 않았을 때 요소를 더 추가하면 콜백이 방문하지 않습니다.</p>
+## 인스턴스 메서드
 
-<p>요소의 값을 바꾸거나, 요소를 제거하는 등 다른 변경점은 콜백 방문 시점에 따라 최종 값에 영향을 줄 수 있습니다. 비록 이런 동작 방식은 잘 정의되어 있으나, 여러분의 코드를 다른 사람이 읽을 때 헷갈리지 않도록 여기에 의존하면 안됩니다.</p>
+- {{jsxref("Array.prototype.at()")}} {{Experimental_Inline}}
+  - : 주어진 인덱스의 요소를 반환합니다. 음수 값을 지정할 경우 인덱스를 배열의 끝부터 셉니다.
+- {{jsxref("Array.prototype.concat()")}}
+  - : 배열과 배열/값 매개변수를 이어붙인 새로운 배열을 반환합니다.
+- {{jsxref("Array.prototype.copyWithin()")}}
+  - : 배열 내의 지정된 요소들을 동일한 배열 내에서 복사합니다.
+- {{jsxref("Array.prototype.entries()")}}
+  - : 배열의 각 인덱스에 대한 키/값 쌍을 가지는 새로운 배열 반복자 객체를 반환합니다.
+- {{jsxref("Array.prototype.every()")}}
+  - : 배열의 모든 요소가 주어진 판별 함수를 만족할 경우 `true`를 반환합니다.
+- {{jsxref("Array.prototype.fill()")}}
+  - : 배열을 시작 인덱스부터 끝 인덱스까지의 지정한 값으로 채웁니다.
+- {{jsxref("Array.prototype.filter()")}}
+  - : 지정한 필터 함수의 반환 결과가 `true`인 요소만 모아서 새로운 배열을 반환합니다.
+- {{jsxref("Array.prototype.find()")}}
+  - : 주어진 판별 함수를 만족하는 첫 번째 요소를 반환합니다. 만족하는 요소가 없으면 `undefined`를 반환합니다.
+- {{jsxref("Array.prototype.findIndex()")}}
+  - : 주어진 판별 함수를 만족하는 첫 번째 요소의 인덱스를 반환합니다. 만족하는 요소가 없으면 `-1`를 반환합니다.
+- {{jsxref("Array.prototype.flat()")}}
+  - : 배열 내의 모든 중첩 배열을 지정한 깊이까지 재귀적으로 이어붙인 새로운 배열을 반환합니다.
+- {{jsxref("Array.prototype.flatMap()")}}
+  - : 배열의 모든 요소 각각에 대해 주어진 콜백 함수를 호출하고, 그 반환 값을 모아 새로운 배열을 생성한 후, 모든 중첩 배열을 이어붙여 평탄화해 반환합니다.
+- {{jsxref("Array.prototype.forEach()")}}
+  - : 배열의 각각의 요소에 대해 함수를 호출합니다.
+- {{jsxref("Array.prototype.includes()")}}
+  - : 배열이 주어진 값을 포함하는지 판별해 `true` 또는 `false`를 반환합니다.
+- {{jsxref("Array.prototype.indexOf()")}}
+  - : 배열에서 주어진 값과 일치하는 제일 앞의 인덱스를 반환합니다. 없으면 `-1`을 반환합니다.
+- {{jsxref("Array.prototype.join()")}}
+  - : 배열의 모든 요소를 문자열로 합칩니다.
+- {{jsxref("Array.prototype.keys()")}}
+  - : 배열의 각 인덱스에 대한 키를 가지는 새로운 배열 반복자 객체를 반환합니다.
+- {{jsxref("Array.prototype.lastIndexOf()")}}
+  - : 배열에서 주어진 값과 일치하는 제일 뒤의 인덱스를 반환합니다. 없으면 `-1`을 반환합니다.
+- {{jsxref("Array.prototype.map()")}}
+  - : 배열의 모든 요소 각각에 대하여 주어진 콜백 함수를 호출하고, 그 반환 값을 모은 새로운 배열을 반환합니다.
+- {{jsxref("Array.prototype.pop()")}}
+  - : 배열에서 마지막 요소를 뽑아내고, 그 요소를 반환합니다.
+- {{jsxref("Array.prototype.push()")}}
+  - : 배열의 끝에 하나 이상의 요소를 추가하고, 배열의 변경된 `length`를 반환합니다.
+- {{jsxref("Array.prototype.reduce()")}}
+  - : 주어진 콜백 함수를 가산기와 요소 각각에 대해 (왼쪽에서 오른쪽으로) 호출하여 하나의 값으로 줄인 결과를 반환합니다.
+- {{jsxref("Array.prototype.reduceRight()")}}
+  - : 주어진 콜백 함수를 가산기와 요소 각각에 대해 (오른쪽에서 왼쪽으로) 호출하여 하나의 값으로 줄인 결과를 반환합니다.
+- {{jsxref("Array.prototype.reverse()")}}
+  - : 배열의 요소 순서를 뒤집습니다. 즉 첫 번째 요소가 마지막이 되고 마지막이 첫 번째가 됩니다.
+- {{jsxref("Array.prototype.shift()")}}
+  - : 배열에서 첫 번째 요소를 삭제하고, 그 요소를 반환합니다.
+- {{jsxref("Array.prototype.slice()")}}
+  - : 배열의 일부를 추출한 새 배열을 반환합니다.
+- {{jsxref("Array.prototype.some()")}}
+  - : 배열의 어떤 요소가 주어진 판별 함수를 만족할 경우 `true`를 반환합니다.
+- {{jsxref("Array.prototype.sort()")}}
+  - : 배열의 요소를 정렬하고 그 배열을 반환합니다.
+- {{jsxref("Array.prototype.splice()")}}
+  - : 배열에서 요소를 추가하거나 삭제합니다.
+- {{jsxref("Array.prototype.toLocaleString()")}}
+  - : 배열과 그 요소를 나타내는 지역화된 문자열을 반환합니다. {{jsxref("Object.prototype.toLocaleString()")}} 메서드를 재정의합니다.
+- {{jsxref("Array.prototype.toString()")}}
+  - : 배열과 그 요소를 나타내는 문자열을 반환합니다. {{jsxref("Object.prototype.toString()")}} 메서드를 재정의합니다.
+- {{jsxref("Array.prototype.unshift()")}}
+  - : 배열의 앞에 하나 이상의 요소를 추가하고, 배열의 변경된 `length`를 반환합니다.
+- {{jsxref("Array.prototype.values()")}}
+  - : 배열의 각 인덱스에 대한 값을 가지는 새로운 배열 반복자 객체를 반환합니다.
+- {{jsxref("Array.prototype.@@iterator()", "Array.prototype[@@iterator]()")}}
+  - : 배열의 각 인덱스에 대한 값을 가지는 새로운 배열 반복자 객체를 반환합니다.
 
-<p>반드시 배열을 변형해야 한다면, 새로운 배열로 복사하세요.</p>
+## 예제
 
-<div>
-<dl>
- <dt>{{jsxref("Array.prototype.entries()")}}</dt>
- <dd>배열의 각 인덱스에 대한 키/값 쌍을 포함하는 새로운 배열 반복자 객체를 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.every()")}}</dt>
- <dd>배열의 모든 요소가 주어진 판별 콜백을 만족할 경우 <code>true</code>를 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.find()")}}</dt>
- <dd>주어진 판별 콜백을 만족하는 첫 번째 요소를 반환합니다. 만족하는 요소가 없으면 <code>undefined</code>를 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.findIndex()")}}</dt>
- <dd>주어진 판별 콜백을 만족하는 첫 번째 요소의 인덱스를 반환합니다. 만족하는 요소가 없으면 <code>-1</code>를 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.forEach()")}}</dt>
- <dd>배열의 각각의 요소에 대해 콜백을 호출합니다.</dd>
- <dt>{{jsxref("Array.prototype.keys()")}}</dt>
- <dd>배열의 각 인덱스에 대한 키를 가지는 새로운 배열 반복자 객체를 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.map()")}}</dt>
- <dd>배열의 모든 요소 각각에 대하여 주어진 콜백 함수를 호출하고, 그 반환값을 모은 새로운 배열을 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.reduce()")}}</dt>
- <dd><span class="short_text" id="result_box" lang="ko"><span>주어진 콜백 함수를 가산기와 요소 각각에 대해 왼쪽에서 오른쪽으로 호출하여 하나의 값으로 줄인(reduce) 결과를 반환합니다.</span></span></dd>
- <dt>{{jsxref("Array.prototype.reduceRight()")}}</dt>
- <dd><span class="short_text" id="result_box" lang="ko"><span>주어진 콜백 함수를 가산기와 요소 각각에 대해 오른쪽에서 왼쪽으로 호출하여 하나의 값으로 줄인(reduce) 결과를 반환합니다.</span></span></dd>
- <dt>{{jsxref("Array.prototype.some()")}}</dt>
- <dd>배열의 어떤 요소가 주어진 판별 콜백을 만족할 경우 <code>true</code>를 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.values()")}}</dt>
- <dd>배열의 각 인덱스에 대한 값을 가지는 새로운 배열 반복자 객체를 반환합니다.</dd>
- <dt>{{jsxref("Array.prototype.@@iterator()", "Array.prototype[@@iterator]()")}}</dt>
- <dd>배열의 각 인덱스에 대한 값을 가지는 새로운 배열 반복자 객체를 반환합니다.</dd>
-</dl>
-</div>
+### 배열 생성
 
-<h2 id="예제">예제</h2>
+아래 예제에서는 길이 0의 배열 `msgArray` 을 생성하고, `msgArray[0]` 와 `msgArray[99]` 에 값을 할당하여 배열의 길이를 100으로 변경합니다.
 
-<h3 id="배열_생성">배열 생성</h3>
-
-<p>아래 예제는 길이 0의 배열 <code>msgArray</code> 을 생성하고, <code>msgArray[0]</code> 와 <code>msgArray[99]</code> 에 값을 할당하여, 배열의 길이를 100으로 변경합니다.</p>
-
-<pre class="brush: js">let msgArray = []
+```js
+let msgArray = []
 msgArray[0] = 'Hello'
 msgArray[99] = 'world'
 
 if (msgArray.length === 100) {
-  console.log('The length is 100.')
-}</pre>
+  console.log('길이가 100입니다.')
+}
+```
 
-<h3 id="2차원_배열_생성">2차원 배열 생성</h3>
+### 2차원 배열 생성
 
-<p>아래의 예제는 2차원 문자열 배열로 체스보드를 생성합니다. 첫번째 이동은 (6,4)의 'p'를 (4,4)로 복사하여 이루어집니다. 이전 위치 (6,4)는 빈공간으로 만듭니다.</p>
+아래의 예제는 2차원 문자열 배열로 체스판을 생성합니다. 첫 번째 이동은 `board[6][4]`의 `'p'`를 `board[4][4]`로 복사하여 이루어집니다. 그 후 이전 위치 `[6][4]`는 빈 공간으로 만듭니다.
 
-<pre class="brush: js">let board = [
+```js
+let board = [
   ['R','N','B','Q','K','B','N','R'],
   ['P','P','P','P','P','P','P','P'],
   [' ',' ',' ',' ',' ',' ',' ',' '],
@@ -411,14 +437,16 @@ if (msgArray.length === 100) {
 
 console.log(board.join('\n') + '\n\n')
 
-// Move King's Pawn forward 2
+// 폰을 앞으로 두 칸 전진
 board[4][4] = board[6][4]
 board[6][4] = ' '
-console.log(board.join('\n'))</pre>
+console.log(board.join('\n'))
+```
 
-<p>결과는 다음과 같습니다.</p>
+결과는 다음과 같습니다.
 
-<pre class="eval">R,N,B,Q,K,B,N,R
+```
+R,N,B,Q,K,B,N,R
 P,P,P,P,P,P,P,P
  , , , , , , ,
  , , , , , , ,
@@ -435,49 +463,49 @@ P,P,P,P,P,P,P,P
  , , , , , , ,
 p,p,p,p, ,p,p,p
 r,n,b,q,k,b,n,r
-</pre>
+```
 
-<h3 id="배열을_사용하여_일련의_값을_테이블처럼_표시하기">배열을 사용하여 일련의 값을 테이블처럼 표시하기</h3>
+### 배열을 사용하여 일련의 값을 테이블처럼 표시하기
 
-<pre class="brush: js">const values = []
-for (let x = 0; x &lt; 10; x++){
+```js
+const values = []
+for (let x = 0; x < 10; x++){
  values.push([
   2 ** x,
   2 * x ** 2
  ])
 }
-console.table(values)</pre>
+console.table(values)
+```
 
-<p>결과는 다음과 같습니다.</p>
+결과는 다음과 같습니다.
 
-<pre class="eval line-numbers  language-html">0    1    0
-1    2    2
-2    4    8
-3    8    18
-4    16    32
-5    32    50
-6    64    72
-7    128    98
-8    256    128
-9    512    162
-</pre>
+```
+// 첫 번째 열은 인덱스
+0	1	0
+1	2	2
+2	4	8
+3	8	18
+4	16	32
+5	32	50
+6	64	72
+7	128	98
+8	256	128
+9	512	162
+```
 
-<p>(첫번째 열은 (인덱스))</p>
-
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Indexing_object_properties">JavaScript Guide: “Indexing object properties”</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_Object">JavaScript Guide: “Predefined Core Objects: <code>Array</code> Object”</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions">Array comprehensions</a></li>
- <li><a href="https://github.com/plusdude/array-generics">Polyfill for JavaScript 1.8.5 Array Generics and ECMAScript 5 Array Extras</a></li>
- <li><a href="/en-US/docs/JavaScript_typed_arrays">Typed Arrays</a></li>
-</ul>
+- JavaScript 안내서:
+  - [객체 속성 인덱싱](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#객체_속성_인덱싱)
+  - [인덱스 컬렉션: `Array` 객체](/ko/docs/Web/JavaScript/Guide/Indexed_collections#array_객체)
+- [형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [RangeError: invalid array length](/ko/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
