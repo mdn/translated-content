@@ -15,7 +15,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 ---
 {{DefaultAPISidebar("Fetch API")}}
 
-[Fetch API](/zh-CN/docs/Web/API/Fetch_API) 提供了一个 JavaScript 接口，用于访问和操纵 HTTP 管道的一些具体部分，例如请求和响应。它还提供了一个全局 {{domxref("GlobalFetch.fetch","fetch()")}} 方法，该方法提供了一种简单，合理的方式来跨网络异步获取资源。
+[Fetch API](/zh-CN/docs/Web/API/Fetch_API) 提供了一个 JavaScript 接口，用于访问和操纵 HTTP 管道的一些具体部分，例如请求和响应。它还提供了一个全局 {{domxref("fetch()")}} 方法，该方法提供了一种简单，合理的方式来跨网络异步获取资源。
 
 这种功能以前是使用 {{domxref("XMLHttpRequest")}} 实现的。Fetch 提供了一个更理想的替代方案，可以很容易地被其他技术使用，例如  {{domxref("Service_Worker_API", "Service Workers")}}。Fetch 还提供了专门的逻辑空间来定义其他与 HTTP 相关的概念，例如 [CORS](/zh-CN/docs/Web/HTTP/CORS) 和 HTTP 的扩展。
 
@@ -44,7 +44,7 @@ fetch('http://example.com/movies.json')
 
  `fetch()` 接受第二个可选参数，一个可以控制不同配置的 `init` 对象：
 
-参考 {{domxref("GlobalFetch.fetch","fetch()")}}，查看所有可选的配置和更多描述。
+参考 {{domxref("fetch()")}}，查看所有可选的配置和更多描述。
 
 ```js
 // Example POST method implementation:
@@ -113,7 +113,7 @@ fetch('https://example.com', {
 
 ### 上传 JSON 数据
 
-使用 {{domxref("GlobalFetch.fetch","fetch()")}} POST JSON数据
+使用 {{domxref("fetch()")}} POST JSON数据
 
 ```js
 const data = { username: 'example' };
@@ -136,7 +136,7 @@ fetch('https://example.com/profile', {
 
 ### 上传文件
 
-可以通过 HTML `<input type="file" />` 元素，{{domxref("FormData.FormData","FormData()")}} 和 {{domxref("GlobalFetch.fetch","fetch()")}} 上传文件。
+可以通过 HTML `<input type="file" />` 元素，{{domxref("FormData.FormData","FormData()")}} 和 {{domxref("fetch()")}} 上传文件。
 
 ```js
 const formData = new FormData();
@@ -160,7 +160,7 @@ fetch('https://example.com/profile/avatar', {
 
 ### 上传多个文件
 
-可以通过 HTML `<input type="file" multiple />` 元素，{{domxref("FormData.FormData","FormData()")}} 和 {{domxref("GlobalFetch.fetch","fetch()")}} 上传文件。
+可以通过 HTML `<input type="file" multiple />` 元素，{{domxref("FormData.FormData","FormData()")}} 和 {{domxref("fetch()")}} 上传文件。
 
 ```js
 const formData = new FormData();
@@ -232,7 +232,7 @@ run();
 
 ### 检测请求是否成功
 
-如果遇到网络故障或服务端的 CORS 配置错误时，{{domxref("GlobalFetch.fetch","fetch()")}} promise 将会 reject，带上一个 {{jsxref("TypeError")}} 对象。虽然这个情况经常是遇到了权限问题或类似问题——比如 404 不是一个网络故障。想要精确的判断 `fetch()` 是否成功，需要包含 promise resolved 的情况，此时再判断 {{domxref("Response.ok")}} 是否为 true。类似以下代码：
+如果遇到网络故障或服务端的 CORS 配置错误时，{{domxref("fetch()")}} promise 将会 reject，带上一个 {{jsxref("TypeError")}} 对象。虽然这个情况经常是遇到了权限问题或类似问题——比如 404 不是一个网络故障。想要精确的判断 `fetch()` 是否成功，需要包含 promise resolved 的情况，此时再判断 {{domxref("Response.ok")}} 是否为 true。类似以下代码：
 
 ```js
 fetch('flowers.jpg')
@@ -318,7 +318,7 @@ myHeaders.delete('X-Custom-Header');
 console.log(myHeaders.get('X-Custom-Header')); // null
 ```
 
-虽然一些操作只能在 {{domxref("ServiceWorker_API","ServiceWorkers")}} 中使用，但是它提供了更方便的操作 Headers 的 API。
+虽然一些操作只能在 {{domxref("Service_Worker_API","ServiceWorkers")}} 中使用，但是它提供了更方便的操作 Headers 的 API。
 
 如果使用了一个不合法的 HTTP Header 属性名，那么 Headers 的方法通常都抛出 TypeError 异常。如果不小心写入了一个不可写的属性（{{anch("Guard", "见下方")}}），也会抛出一个 TypeError 异常。除此以外的情况，失败了并不抛出异常。例如：
 
@@ -370,10 +370,10 @@ fetch(myRequest)
 
 - {{domxref("Response.status")}} — 整数（默认值为 200）为response的状态码。
 - {{domxref("Response.statusText")}} — 字符串（默认值为 ""），该值与 HTTP 状态码消息对应。 注意：HTTP/2 [不支持](https://fetch.spec.whatwg.org/#concept-response-status-message)状态消息
-- {{domxref("Response.ok")}} — 如上所示，该属性是来检查 response 的状态是否在 200 - 299（包括200 和 299）这个范围内。该属性返回一个 {{domxref("Boolean", "布尔值")}}。
+- {{domxref("Response.ok")}} — 如上所示，该属性是来检查 response 的状态是否在 200 - 299（包括200 和 299）这个范围内。该属性返回一个布尔值。
 
 
-它的实例也可用通过 JavaScript 来创建，但只有在 {{domxref("ServiceWorker_API", "ServiceWorkers")}} 中使用 {{domxref("FetchEvent.respondWith","respondWith()")}} 方法并提供了一个自定义的 response 来接受 request 时才真正有用：
+它的实例也可用通过 JavaScript 来创建，但只有在 {{domxref("Service_Worker_API", "ServiceWorkers")}} 中使用 {{domxref("FetchEvent.respondWith","respondWith()")}} 方法并提供了一个自定义的 response 来接受 request 时才真正有用：
 
 
 ```js
@@ -397,14 +397,14 @@ addEventListener('fetch', event => {
 
 不管是请求还是响应都能够包含 body 对象。body 也可以是以下任意类型的实例。
 
-- {{domxref("ArrayBuffer")}}
+- {{jsxref("ArrayBuffer")}}
 - {{domxref("ArrayBufferView")}} (Uint8Array等)
-- {{domxref("Blob")}} / {{domxref("File")}}
+- {{domxref("Blob")}}/File
 - string
 - {{domxref("URLSearchParams")}}
 - {{domxref("FormData")}}
 
-Body 类定义了以下方法（这些方法都被 {{domxref("Request")}} 和 {{domxref("Response")}}所实现）以获取 body 内容。这些方法都会返回一个被解析后的 {{domxref("Promise")}} 对象和数据。
+Body 类定义了以下方法（这些方法都被 {{domxref("Request")}} 和 {{domxref("Response")}}所实现）以获取 body 内容。这些方法都会返回一个被解析后的 Promise 对象和数据。
 
 - {{domxref("Request.arrayBuffer()")}} / {{domxref("Response.arrayBuffer()")}}
 - {{domxref("Request.blob()")}} / {{domxref("Response.blob()")}}
@@ -428,7 +428,7 @@ request 和 response（包括 `fetch()` 方法）都会试着自动设置 `Conte
 
 ## 特性检测
 
-Fetch API 的支持情况，可以通过检测 {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} 或 {{domxref("GlobalFetch.fetch","fetch()")}} 是否在 {{domxref("Window")}} 或 {{domxref("Worker")}} 域中来判断。例如：
+Fetch API 的支持情况，可以通过检测 {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} 或 {{domxref("fetch()")}} 是否在 {{domxref("Window")}} 或 {{domxref("Worker")}} 域中来判断。例如：
 
 ```js
 if (window.fetch) {
