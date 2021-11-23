@@ -3,79 +3,68 @@ title: <shape>
 slug: Web/CSS/shape
 tags:
   - CSS
-  - CSS Reference
+  - CSS データ型
+  - CSS 関数
+  - データ型
+  - 非推奨
+  - レイアウト
+  - リファレンス
+  - ウェブ
+browser-compat: css.types.shape
 translation_of: Web/CSS/shape
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<p><code>&lt;shape&gt;</code> <a href="/ja/docs/CSS" title="CSS">CSS</a> データ型は、ある領域の具体的な形状を表します。この領域は、要素のどの部分で {{Cssxref("clip")}} のようなプロパティが用いられるのか、定義するのに使われます。</p>
+**`<shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、ある領域の具体的な形状を表します。この領域は、{{cssxref("clip")}} プロパティが適用される要素の一部を表します。
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong>  <code>&lt;shape&gt;</code> and <code>rect()</code> <span class="tlid-translation translation" lang="ja"><span title="">は廃止された</span></span>{{cssxref("clip")}}<span class="tlid-translation translation" lang="ja"><span title="">と連動しますが、</span></span> {{cssxref("clip-path")}}が支持されました<span class="tlid-translation translation" lang="ja"><span title="">。</span> <span title="">可能であれば、代わりに</span></span><code>clip-path</code><span class="tlid-translation translation" lang="ja"><span title="">と</span></span>{{cssxref("&lt;basic-shape&gt;")}}<span class="tlid-translation translation" lang="ja"><span title="">データ型を使用してください。</span></span></p>
-</div>
+> **Note:** `<shape>` と `rect()` は {{cssxref("clip")}} と連携して動作しますが、これは {{cssxref("clip-path")}} に置き換えらえて非推奨となりました。可能であれば、代わりに `clip-path` と {{cssxref("&lt;basic-shape&gt;")}} データ型を使用してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>rect()</code> 関数記法は、矩形の領域を作ります。</p>
+`<shape>` データ型は `rect()` 関数を使って指定し、長方形の形で領域を生成します。
 
-<h3 id="Syntax" name="Syntax"><code>rect()</code> 関数</h3>
+`rect()`
 
-<pre class="syntaxbox">rect(<em>top</em>, <em>right</em>, <em>bottom</em>, <em>left</em>)
-</pre>
+```css
+rect(top, right, bottom, left)
+```
 
-<p>引数は次の長さを表します: <img class="internal rwrap" src="/@api/deki/files/5730/=rect.png" style="float: right; height: 334px; width: 336px;"></p>
+### 値
 
-<dl style="margin-left: 40px;">
- <dt><em>top</em></dt>
- <dd>要素のボックスのボーダーの top と、矩形の top との差を表す {{cssxref("&lt;length&gt;")}}</dd>
- <dt><em>right</em></dt>
- <dd>要素のボックスのボーダーの left と、矩形の right との差を表す {{cssxref("&lt;length&gt;")}}</dd>
- <dt><em>bottom</em></dt>
- <dd>要素のボックスのボーダーの top と、矩形の bottom との差を表す {{cssxref("&lt;length&gt;")}}。</dd>
- <dt><em>left</em></dt>
- <dd>要素のボックスのボーダーの left と、矩形の left との差を表す {{cssxref("&lt;length&gt;")}}</dd>
-</dl>
+![](rect.png)
 
-<h2 id="Interpolation" name="Interpolation">補間</h2>
+- _top_
+  - : {{cssxref("&lt;length&gt;")}} で、この要素のボックスの上の境界から、矩形の上端までのオフセットを表します。
+- _right_
+  - : {{cssxref("&lt;length&gt;")}} で、この要素のボックスの左の境界から、矩形の右端までのオフセットを表します。
+- _bottom_
+  - : {{cssxref("&lt;length&gt;")}} で、この要素のボックスの上の境界から、矩形の下端までのオフセットを表します。
+- _left_
+  - : {{cssxref("&lt;length&gt;")}} で、この要素のボックスの左の境界から、矩形の左端までのオフセットを表します。
 
-<p>矩形の <code>&lt;shape&gt;</code> CSS データ型の値は、アニメーション用に補間可能です。<code>top</code>、<code>right</code>、<code>bottom</code> 、<code>left</code> のそれぞれが実数（浮動小数点数）として扱われ、補間されます。補間速度は、アニメーションに結びつけられた <a href="/ja/docs/CSS/timing-function" title="timing-function">timing function</a> で決められます。</p>
+## 補間
 
-<h2 id="Examples" name="Examples">例</h2>
+アニメーションの際には、`<shape>` データ型の値は、`top`、`right`、`bottom`、`left` の各要素に補間され、それぞれが実数の浮動小数点数として扱われます。補間の速度は、アニメーションに関連する[タイミング関数](/ja/docs/Web/CSS/easing-function)によって決定されます。
 
-<pre class="brush:css">img.clip04 {
+## 例
+
+### 正しい rect() 関数の使い方の例
+
+```css
+img.clip04 {
   clip: rect(10px, 20px, 20px, 10px);
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visufx.html#value-def-shape', '&lt;shape&gt;')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>{{cssxref("clip")}} プロパティと同時に定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("css.types.shape")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>関連 CSS プロパティ: {{Cssxref("clip")}}</li>
- <li><a href="/ja/CSS/-moz-image-rect" title="CSS/-moz-image-rect"><code>-moz-image-rect()</code></a> 関数は <code>rect()</code>と似た座標を使います</li>
-</ul>
+- 関連する CSS プロパティ: {{Cssxref("clip")}}
+- [`-moz-image-rect()`](/ja/docs/Web/CSS/-moz-image-rect) 関数は `rect()` と同様の座標を使います
