@@ -4,62 +4,201 @@ slug: Web/CSS/filter-function
 tags:
   - CSS
   - CSS データ型
-  - Reference
+  - データ型
   - フィルター効果
+  - NeedsCompatTable
+  - リファレンス
+browser-compat: css.types.filter-function
 translation_of: Web/CSS/filter-function
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <code><strong>&lt;filter-function&gt;</strong></code> <a href="/ja/docs/Web/CSS/CSS_Types">データ型</a>は、入力された画像の表示方法を変更することができるグラフィカル効果を表します。これは {{cssxref("filter")}} 及び {{cssxref("backdrop-filter")}} プロパティで使用します。</p>
+**`<filter-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、入力された画像の表示方法を変更することができるグラフィカル効果を表します。これは {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティで使用します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>&lt;filter-function&gt;</code> データ型は以下の一覧にあるフィルター関数を使用して指定されます。それぞれの関数には引数が必要であり、無効な場合は、フィルターが適用されません。</p>
+`<filter-function>` データ型は以下の一覧にあるフィルター関数を使用して指定されます。それぞれの関数には引数が必要であり、無効な場合は、フィルターが適用されません。
 
-<dl>
- <dt>{{cssxref("filter-function/blur", "blur()")}}</dt>
- <dd>画像をぼかします。</dd>
- <dt>{{cssxref("filter-function/brightness", "brightness()")}}</dt>
- <dd>画像を明るくしたり暗くしたりします。</dd>
- <dt>{{cssxref("filter-function/contrast", "contrast()")}}</dt>
- <dd>画像のコントラストを上げたり下げたりします。</dd>
- <dt>{{cssxref("filter-function/drop-shadow", "drop-shadow()")}}</dt>
- <dd>画像の背後にドロップシャドウを適用します。</dd>
- <dt>{{cssxref("filter-function/grayscale", "grayscale()")}}</dt>
- <dd>画像をグレイスケールに変換します。</dd>
- <dt>{{cssxref("filter-function/hue-rotate", "hue-rotate()")}}​​​​​​​</dt>
- <dd>画像の色相を全体的に変更します。</dd>
- <dt>{{cssxref("filter-function/invert", "invert()")}}</dt>
- <dd>画像の色を反転させます。</dd>
- <dt>{{cssxref("filter-function/opacity", "opacity()")}}</dt>
- <dd>画像を半透明にします。</dd>
- <dt>{{cssxref("filter-function/saturate", "saturate()")}}</dt>
- <dd>入力画像の彩度を上げたり下げたりします。</dd>
- <dt>{{cssxref("filter-function/sepia", "sepia()")}}</dt>
- <dd>画像をセピア調に変換します。</dd>
-</dl>
+- {{cssxref("filter-function/blur()", "blur()")}}
+  - : 画像をぼかします。
+- {{cssxref("filter-function/brightness()", "brightness()")}}
+  - : 画像を明るくしたり暗くしたりします。
+- {{cssxref("filter-function/contrast()", "contrast()")}}
+  - : 画像のコントラストを上げたり下げたりします。
+- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
+  - : 画像の背後にドロップシャドウを適用します。
+- {{cssxref("filter-function/grayscale()", "grayscale()")}}
+  - : 画像をグレイスケールに変換します。
+- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
+  - : 画像の色相を全体的に変更します。
+- {{cssxref("filter-function/invert()", "invert()")}}
+  - : 画像の色を反転させます。
+- {{cssxref("filter-function/opacity()", "opacity()")}}
+  - : 画像を半透明にします。
+- {{cssxref("filter-function/saturate()", "saturate()")}}
+  - : 入力画像の彩度を上げたり下げたりします。
+- {{cssxref("filter-function/sepia()", "sepia()")}}
+  - : 画像をセピア調に変換します。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 例
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }}</td>
-   <td>{{ Spec2('Filters 1.0') }}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+<h3 id="Filter_function_comparison">フィルター関数の比較</h3>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+この例では、シンプルなグラフィックに加えて、さまざまな種類のフィルター機能を選択するための選択メニューと、フィルター機能内で使用される値を変化させるためのスライダーが用意されています。コントロールを更新すると、フィルター効果がリアルタイムで更新されるので、さまざまなフィルターの効果を調べることができます。
 
+#### HTML
+
+```html
+<div></div>
 <ul>
- <li>このデータ型を使用するプロパティ: {{cssxref("filter")}} 及び {{cssxref("backdrop-filter")}}</li>
+  <li>
+    <label for="filter-select">フィルター関数を選択:</label>
+    <select id="filter-select">
+      <option selected>blur</option>
+      <option>brightness</option>
+      <option>contrast</option>
+      <option>drop-shadow</option>
+      <option>grayscale</option>
+      <option>hue-rotate</option>
+      <option>invert</option>
+      <option>opacity</option>
+      <option>saturate</option>
+      <option>sepia</option>
+    </select>
+  </li>
+  <li>
+    <input type="range"><output></output>
+  </li>
+  <li>
+    <p>現在の値: <code></code></p>
+  </li>
 </ul>
+```
+
+#### CSS
+
+```css
+div {
+  width: 300px;
+  height: 300px;
+  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 60%
+}
+
+output {
+  width: 5%;
+  text-align: center;
+}
+
+select {
+  width: 40%;
+  margin-left: 2px;
+}
+```
+
+#### JavaScript
+
+```js
+const selectElem = document.querySelector('select');
+const divElem = document.querySelector('div');
+const slider = document.querySelector('input');
+const output = document.querySelector('output');
+const curValue = document.querySelector('p code');
+
+selectElem.addEventListener('change', () => {
+  setSlider(selectElem.value);
+  setDiv(selectElem.value);
+});
+
+slider.addEventListener('input', () => {
+  setDiv(selectElem.value);
+});
+
+function setSlider(filter) {
+  if(filter === 'blur') {
+    slider.value = 0;
+    slider.min = 0;
+    slider.max = 30;
+    slider.step = 1;
+    slider.setAttribute('data-unit', 'px');
+  } else if(filter === 'brightness' || filter === 'contrast' || filter === 'saturate') {
+    slider.value = 1;
+    slider.min = 0;
+    slider.max = 4;
+    slider.step = 0.05;
+    slider.setAttribute('data-unit', '');
+  } else if(filter === 'drop-shadow') {
+    slider.value = 0;
+    slider.min = -20;
+    slider.max = 40;
+    slider.step = 1;
+    slider.setAttribute('data-unit', 'px');
+  } else if(filter === 'opacity') {
+    slider.value = 1;
+    slider.min = 0;
+    slider.max = 1;
+    slider.step = 0.01;
+    slider.setAttribute('data-unit', '');
+  } else if(filter === 'grayscale' || filter === 'invert' || filter === 'sepia') {
+    slider.value = 0;
+    slider.min = 0;
+    slider.max = 1;
+    slider.step = 0.01;
+    slider.setAttribute('data-unit', '');
+  } else if(filter === 'hue-rotate') {
+    slider.value = 0;
+    slider.min = 0;
+    slider.max = 360;
+    slider.step = 1;
+    slider.setAttribute('data-unit', 'deg');
+  }
+}
+
+function setDiv(filter) {
+  if(filter === 'drop-shadow') {
+    divElem.style.filter = `${selectElem.value}(${Math.round(slider.value)}${slider.getAttribute('data-unit')} ${Math.round(slider.value)}${slider.getAttribute('data-unit')} ${Math.round(Math.abs(slider.value/2))}${slider.getAttribute('data-unit')})`;
+  } else {
+    divElem.style.filter = `${selectElem.value}(${slider.value}${slider.getAttribute('data-unit')}`;
+  }
+
+  updateOutput();
+  updateCurValue();
+}
+
+function updateOutput() {
+  output.textContent = slider.value;
+}
+
+function updateCurValue() {
+  curValue.textContent = `filter: ${divElem.style.filter}`;
+}
+
+setSlider(selectElem.value);
+setDiv(selectElem.value);
+```
+
+#### 結果
+
+{{EmbedLiveSample('Filter_function_comparison', '100%', 500)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- このデータ型を使用するプロパティ: {{cssxref("filter")}} および {{cssxref("backdrop-filter")}}
