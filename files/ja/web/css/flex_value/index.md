@@ -3,55 +3,47 @@ title: <flex>
 slug: Web/CSS/flex_value
 tags:
   - CSS
-  - CSS Data Type
   - CSS データ型
-  - Layout
-  - Reference
-  - Web
-  - ウェブ
-  - リファレンス
+  - データ型
   - レイアウト
+  - リファレンス
+  - ウェブ
 translation_of: Web/CSS/flex_value
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>&lt;flex&gt;</code></strong> <a href="/ja/docs/Web/CSS/CSS_Types">データ型</a> は、グリッドコンテナー内部における可変の長さです。 {{cssxref("grid-template-columns")}} や {{cssxref("grid-template-rows")}} 及びほかの関連プロパティで使われます。</p>
+**`<flex>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、グリッドコンテナー内部における可変の長さを記述します。 {{cssxref("grid-template-columns")}} や {{cssxref("grid-template-rows")}} およびほかの関連プロパティで使われます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>&lt;flex&gt;</code> データ型は {{cssxref("&lt;number&gt;")}} のあとに単位 <code id="fr">fr</code> が付きます。すべての CSS dimensions と同様に、数値と単位の間に空白は入れません。</p>
+`<flex>` データ型は {{cssxref("&lt;number&gt;")}} のあとに単位 `fr` が付きます。他の CSS の数量と同様に、数値と単位の間に空白は入れません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: css">1fr    /* 整数値の使用 */
+### fr データ型の正しい値の例
+
+```css
+1fr    /* 整数値の使用 */
 2.5fr  /* 浮動小数点値の使用 */
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+### CSS グリッドレイアウトのトラックリストでの使用例
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Grid", "#typedef-flex", "&lt;flex&gt;")}}</td>
-   <td>{{Spec2("CSS Grid")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+```css
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2.5fr 1.5fr;
+}
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## 仕様書
 
-<p>{{Compat("css.types.flex")}}</p>
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## ブラウザーの互換性
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout">CSS グリッドレイアウト</a></li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+ - [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)
