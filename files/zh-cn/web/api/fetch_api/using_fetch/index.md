@@ -89,7 +89,7 @@ fetch('https://example.com', {
 });
 ```
 
-> **注意**：当请求使用 `credentials: 'include'` 时，响应的 `Access-Control-Allow-Origin` 使用不能通配符 "`*`"。在这种情况下，`Access-Control-Allow-Origin` 必须是当前请求的源，在使用 CORS Unblock 插件的情况下请求仍会失败。
+> **注意**：当请求使用 `credentials: 'include'` 时，响应的 `Access-Control-Allow-Origin` 不能使用通配符 "`*`"。在这种情况下，`Access-Control-Allow-Origin` 必须是当前请求的源，在使用 CORS Unblock 插件的情况下请求仍会失败。
 
 > **注意**：无论怎么设置，浏览器都不应在 _预检请求_ 中发送凭据。了解更多：[跨域资源共享 > 附带身份凭证的请求](/zh-CN/docs/Web/HTTP/CORS#附带身份凭证的请求)
 
@@ -424,7 +424,7 @@ fetch('/login', {
 });
 ```
 
-request 和 response（包括 `fetch()` 方法）都会试着自动设置 `Content-Type`。如果没有设置 `Content-Type` 值，发送的请求也会自动设值。</p>
+request 和 response（包括 `fetch()` 方法）都会试着自动设置 `Content-Type`。如果没有设置 `Content-Type` 值，发送的请求也会自动设值。
 
 ## 特性检测
 
