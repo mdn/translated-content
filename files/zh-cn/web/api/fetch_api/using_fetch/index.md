@@ -36,7 +36,7 @@ fetch('http://example.com/movies.json')
 
 当然它只是一个 HTTP 响应，而不是真的 JSON。为了获取JSON的内容，我们需要使用 {{domxref("Response.json()", "json()")}} 方法（该方法返回一个将响应 body 解析成 JSON 的 promise）。
 
-> **注意**：{{anch("Body")}} 还有其他相似的方法，用于获取其他类型的内容。
+> **备注：** {{anch("Body")}} 还有其他相似的方法，用于获取其他类型的内容。
 
 最好使用符合[内容安全策略 (CSP)](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)的链接而不是使用直接指向资源地址的方式来进行 fetch 的请求。
 
@@ -89,9 +89,9 @@ fetch('https://example.com', {
 });
 ```
 
-> **注意**：当请求使用 `credentials: 'include'` 时，响应的 `Access-Control-Allow-Origin` 不能使用通配符 "`*`"。在这种情况下，`Access-Control-Allow-Origin` 必须是当前请求的源，在使用 CORS Unblock 插件的情况下请求仍会失败。
+> **备注：** 当请求使用 `credentials: 'include'` 时，响应的 `Access-Control-Allow-Origin` 不能使用通配符 "`*`"。在这种情况下，`Access-Control-Allow-Origin` 必须是当前请求的源，在使用 CORS Unblock 插件的情况下请求仍会失败。
 
-> **注意**：无论怎么设置，浏览器都不应在 _预检请求_ 中发送凭据。了解更多：[跨域资源共享 > 附带身份凭证的请求](/zh-CN/docs/Web/HTTP/CORS#附带身份凭证的请求)
+> **备注：** 无论怎么设置，浏览器都不应在 _预检请求_ 中发送凭据。了解更多：[跨域资源共享 > 附带身份凭证的请求](/zh-CN/docs/Web/HTTP/CORS#附带身份凭证的请求)
 
 如果你只想在请求URL与调用脚本位于同一起源处时发送凭据，请添加 `credentials: 'same-origin'`。
 
@@ -279,7 +279,7 @@ const anotherRequest = new Request(myRequest, myInit);
 
 这个很有用，因为 request 和 response bodies 只能被使用一次（译者注：这里的意思是因为设计成了 stream 的方式，所以它们只能被读取一次）。创建一个拷贝就可以再次使用 request/response 了，当然也可以使用不同的 `init` 参数。创建拷贝必须在读取 body 之前进行，而且读取拷贝的 body 也会将原始请求的 body 标记为已读。
 
-> **注意**：{{domxref("Request.clone","clone()")}} 方法也可以用于创建一个拷贝。它和上述方法一样，如果 request 或 response 的 body 已经被读取过，那么将执行失败。区别在于， `clone()` 出的 body 被读取不会导致原 body 被标记为已读取。
+> **备注：** {{domxref("Request.clone","clone()")}} 方法也可以用于创建一个拷贝。它和上述方法一样，如果 request 或 response 的 body 已经被读取过，那么将执行失败。区别在于， `clone()` 出的 body 被读取不会导致原 body 被标记为已读取。
 
 ## Headers
 
@@ -360,7 +360,7 @@ fetch(myRequest)
 - `response`：从 response 中获得的 headers（{{domxref("Response.headers")}}）只读。
 - `immutable`：在 ServiceWorkers 中最常用的，所有的 headers 都只读。
 
-> **注意**：你不可以添加或者修改一个 guard 属性是 `request` 的 Request Header 的 `Content-Length` 属性。同样地，插入 `Set-Cookie` 属性到一个 response header 是不允许的，因此，Service Worker 中，不能给合成的 Response 设置 cookie。
+> **备注：** 你不可以添加或者修改一个 guard 属性是 `request` 的 Request Header 的 `Content-Length` 属性。同样地，插入 `Set-Cookie` 属性到一个 response header 是不允许的，因此，Service Worker 中，不能给合成的 Response 设置 cookie。
 
 ## Response 对象
 
@@ -391,7 +391,7 @@ addEventListener('fetch', event => {
 
 {{domxref("Response.Response","Response()")}} 构造方法接受两个可选参数—— response 的 body 和一个初始化对象（与{{domxref("Request.Request","Request()")}} 所接受的 init 参数类似）。
 
-> **注意**: 静态方法 {{domxref("Response.error","error()")}} 只是返回了错误的 response。与此类似地，{{domxref("Response.redirect","redirect()")}} 只是返回了一个可以重定向至某 URL 的 response。这些也只与 Service Worker 有关。
+> **备注：** 静态方法 {{domxref("Response.error","error()")}} 只是返回了错误的 response。与此类似地，{{domxref("Response.redirect","redirect()")}} 只是返回了一个可以重定向至某 URL 的 response。这些也只与 Service Worker 有关。
 
 ## Body
 
