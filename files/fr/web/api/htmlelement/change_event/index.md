@@ -1,14 +1,6 @@
 ---
 title: change
 slug: Web/API/HTMLElement/change_event
-tags:
-  - Change
-  - DOM
-  - Event
-  - HTML
-  - Reference
-  - Web
-  - Élément HTML
 translation_of: Web/API/HTMLElement/change_event
 ---
 {{APIRef}}
@@ -97,7 +89,7 @@ selectElement.addEventListener('change', (event) => {
 
 #### Résultat
 
-{{ EmbedLiveSample('Lélément_&lt;select&gt;', '100%', '75px') }}
+{{ EmbedLiveSample('Lélément_select', '100%', '75px') }}
 
 ### L'élément d'entrée de texte
 

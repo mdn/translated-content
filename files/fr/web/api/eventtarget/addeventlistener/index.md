@@ -1,31 +1,6 @@
 ---
 title: EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
-tags:
-  - API
-  - Cible
-  - DOM
-  - Evènement
-  - Gestionnaires d'évènements
-  - JavaScript
-  - Méthode
-  - Méthodes
-  - Reference
-  - Réception d'Évènements
-  - attachEvent
-  - Écouteurs
-  - Écouteurs d'Évènements
-  - AccessOuterData
-  - Detecting Events
-  - Event Handlers
-  - Event Listener
-  - EventTarget
-  - Method
-  - PassingData
-  - Receiving Events
-  - addEventListener
-  - events
-  - mselementresize
 translation_of: Web/API/EventTarget/addEventListener
 ---
 {{APIRef("DOM Events")}}
@@ -179,7 +154,7 @@ Dans ce code, `modifyText()` est un écouteur pour les évènements `click` enre
 
 #### Résultat
 
-{{EmbedLiveSample('Add_a_simple_listener')}}
+{{EmbedLiveSample('Ajouter_un_écouteur_simple')}}
 
 ### Écouteur d'évènement avec une fonction anonyme
 
@@ -212,7 +187,7 @@ Notez que l'écouteur est une fonction anonyme encapsulant le code qui peut à s
 
 #### Résultat
 
-{{EmbedLiveSample('Event_listener_with_anonymous_function')}}
+{{EmbedLiveSample('Écouteur_d\'évènement_avec_une_fonction_anonyme')}}
 
 ### Écouteur d'évènement avec une fonction fléchée
 
@@ -245,7 +220,7 @@ el.addEventListener("click", () => {
 
 #### Résultat
 
-{{EmbedLiveSample('Event_listener_with_an_arrow_function')}}
+{{EmbedLiveSample('Écouteur_d\'évènement_avec_une_fonction_fléchée')}}
 
 Notez que si les fonctions anonymes et fléchées sont similaires, elles ont des liaisons `this` différentes. Alors que les fonctions anonymes (et toutes les fonctions JavaScript traditionnelles) créent leurs propres liaisons `this`, les fonctions fléchées héritent la liaison `this` de la fonction contenante. [Voir la page sur l'opérateur `this` pour plus d'informations.](fr/docs/Web/JavaScript/Reference/Operators/this#avec_les_fonctions_fléchées)
 
@@ -363,7 +338,7 @@ function nonePassiveHandler(event) {
 
 Cliquez les conteneurs _extérieur_, _milieu_, _intérieurs_ respectivement pour voir comment les options fonctionnent. Vous pouvez ouvrir la console pour observer les différents messages émis.
 
-{{EmbedLiveSample('Example_of_options_usage', '', '320')}}
+{{EmbedLiveSample('Exemple_d\'utilisation_des_options', '', '320')}}
 
 Avant d'utiliser une valeur particulière dans l'objet `options`, c'est une bonne idée que de s'assurer que le navigateur de l'utilisateur la prend en charge, du fait qu'elles sont un ajout que tous les navigateurs n'ont pas pris en charge historiquement. Voir {{anch("Safely_detecting_option_support", "Détection sûre du support des options")}} pour les détails.
 
@@ -404,7 +379,7 @@ Dans l'exemple ci-dessus, nous modifions le code de l'exemple {{anch('Add_a_simp
 
 #### Résultat
 
-{{EmbedLiveSample('Add_a_abortable_listener')}}
+{{EmbedLiveSample('Ajout_d\'un_écouteur_annulable')}}
 
 ## Autres notes
 

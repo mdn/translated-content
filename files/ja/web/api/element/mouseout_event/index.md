@@ -49,9 +49,9 @@ translation_of: Web/API/Element/mouseout_event
 
 <h3 id="mouseout_and_mouseleave">mouseout と mouseleave</h3>
 
-以下の例は、`mouseout` と {{domxref("Element/mouseleave_event", "mouseleave")}} の各イベントの違いを説明しています。`mouseleave` イベントを {{HTMLElement("ul")}} に追加し、マウスが `&lt;ul&gt;` を出るたびにリストを紫色に着色するようにします。`mouseout` をリストに追加し、マウスがそこを出ると対象の要素をオレンジ色に着色するようにします。
+以下の例は、`mouseout` と {{domxref("Element/mouseleave_event", "mouseleave")}} の各イベントの違いを説明しています。`mouseleave` イベントを {{HTMLElement("ul")}} に追加し、マウスが `<ul>` を出るたびにリストを紫色に着色するようにします。`mouseout` をリストに追加し、マウスがそこを出ると対象の要素をオレンジ色に着色するようにします。
 
-これを試してみると、`mouseout` はそれぞれのリスト項目に配信されるのに対し、 `mouseleave` は項目の階層構造のおかげでリスト全体に行き、リストの項目は、その下にある `&lt;ul&gt;` を不明瞭にします。
+これを試してみると、`mouseout` はそれぞれのリスト項目に配信されるのに対し、 `mouseleave` は項目の階層構造のおかげでリスト全体に行き、リストの項目は、その下にある `<ul>` を不明瞭にします。
 
 #### HTML
 
@@ -80,7 +80,7 @@ test.addEventListener("mouseleave", function( event ) {
   }, 1000);
 }, false);
 
-// マウスが出ると-  を一時的にオレンジ色にします
+// マウスが出ると <li> を一時的にオレンジ色にします
 test.addEventListener("mouseout", function( event ) {
   // mouseout の対象を強調
   event.target.style.color = "orange";

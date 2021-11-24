@@ -1,13 +1,6 @@
 ---
 title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
-tags:
-  - API
-  - Code
-  - DOM Events
-  - KeyboardEvent
-  - Propriété
-  - Reference
 translation_of: Web/API/KeyboardEvent/code
 ---
 {{APIRef("DOM Events")}}
@@ -200,7 +193,7 @@ window.addEventListener("keydown", function(event) {
 
 Pour essayer le code ci-dessus, cliquez sur le bouton ci-dessous:
 
-{{EmbedLiveSample("Handle_keyboard_events_in_a_game", 420, 460)}}
+{{EmbedLiveSample("Gérer_les_événements_de_clavier_dans_un_jeu", 420, 460)}}
 
 Ce code peut être amélioré de plusieurs manières. La plupart des jeux réels surveillent les événements {{event("keydown")}}, démarrent le mouvement lorsque cela se produit et stoppent le mouvement lorsque l'événement {{event("keyup")}} se produit, au lieu de compter sur des répétitions de touches. Cela permettrait des mouvements plus fluides et plus rapides, mais permettrait également au joueur de bouger et de diriger en même temps. Des transitions ou des animations peuvent également être utilisées pour rendre le mouvement du navire plus fluide. Pour permettre cela, il ne faudrait pas utiliser de `switch`, ni de `else if`.ff
 

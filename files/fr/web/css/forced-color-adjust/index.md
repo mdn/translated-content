@@ -84,7 +84,7 @@ En utilisant la fonctionnalité média [`forced-colors`](/fr/docs/Web/CSS/@media
 
 #### Résultat
 
-{{EmbedLiveSample("preserving_colors", 640, 260)}}
+{{EmbedLiveSample("Exemples", 640, 260)}}
 
 ![L'exemple présenté ci-dessus affiche la première boîte avec un arrière-plan noir et la seconde avec un arrière-plan gris définit en CSS.](windows-high-contrast.jpg)
 

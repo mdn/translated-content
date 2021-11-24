@@ -1,10 +1,6 @@
 ---
 title: min()
 slug: Web/CSS/min()
-tags:
-  - CSS
-  - Fonction
-  - Reference
 translation_of: Web/CSS/min()
 ---
 {{CSSRef}}
@@ -36,28 +32,6 @@ Il est tout à fait possible de combiner des valeurs avec différentes unités d
 {{csssyntax}}
 
 ## Exemples
-
-### Garantir une taille maximale pour des images
-
-`min()` permet de simplifier la définition d'une taille **maximale**, par exemple la largeur d'une image. Dans cet exemple, la règle CSS permet d'obtenir un logo qui s'étire sur la moitié de la fenêtre pour les fenêtres les moins larges, sans dépasser 300 pixels et sans avoir à utiliser des requêtes média.
-
-#### CSS
-
-```css
-.logo {
-  width: min(50vw, 300px);
-}
-```
-
-#### HTML
-
-```html
-<img src="https://developer.mozilla.org/static/img/web-docs-sprite.svg" alt="MDN Web Docs" class="logo">
-```
-
-#### Résultat
-
-{{EmbedLiveSample('Garantir_une_taille_minimale_pour_des_images', '100%', '110')}}
 
 ### Définir une taille maximale pour un champ de saisie et son libellé
 

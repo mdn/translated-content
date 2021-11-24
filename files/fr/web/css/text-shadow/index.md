@@ -1,10 +1,6 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/text-shadow
 ---
 {{CSSRef}}
@@ -75,9 +71,9 @@ Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Pseud
     totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
 ```
 
-{{EmbedLiveSample('ombre_simple', '660px', '90px')}}
+{{EmbedLiveSample('Ombre_simple', '660px', '90px')}}
 
-### Ombres multiples
+### Ombres multiples
 
 ```css
 .white-text-with-blue-shadow {
@@ -93,7 +89,7 @@ Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Pseud
     totam rem aperiam, eaque ipsaquae ab illo inventore.</p>
 ```
 
-{{EmbedLiveSample('ombres_multiples', '660px', '170px')}}
+{{EmbedLiveSample('Ombres_multiples', '660px', '170px')}}
 
 ## Spécifications
 

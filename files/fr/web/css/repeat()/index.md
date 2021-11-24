@@ -1,12 +1,6 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat()
-tags:
-  - CSS
-  - Fonction
-  - Grille CSS
-  - Reference
-  - Web
 translation_of: Web/CSS/repeat()
 ---
 {{CSSRef}}
@@ -122,7 +116,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ### Résultat
 
-{{EmbedLiveSample("Example", "100%", 200)}}
+{{EmbedLiveSample("Exemples", "100%", 200)}}
 
 ## Spécifications
 

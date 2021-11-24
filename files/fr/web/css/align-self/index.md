@@ -1,10 +1,6 @@
 ---
 title: align-self
 slug: Web/CSS/align-self
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/align-self
 ---
 {{CSSRef}}
@@ -89,6 +85,8 @@ align-self: unset;
 ### Syntaxe formelle
 
 {{csssyntax}}
+
+## Exemples
 
 ### CSS
 
