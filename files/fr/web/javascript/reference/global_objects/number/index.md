@@ -140,7 +140,7 @@ Number("0b11");      // 3
 Number("0o11");      // 9
 Number("toto");      // NaN
 Number("100a");      // NaN
-Number("-Infinity";) // -Infinity
+Number("-Infinity"); // -Infinity
 ```
 
 > **Note :** On pourra également convertir `null` en `0` grâce à `Number` : `Number(null)` donnera `0`.
