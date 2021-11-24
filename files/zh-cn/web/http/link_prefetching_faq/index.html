@@ -94,15 +94,15 @@ translation_of: Web/HTTP/Link_prefetching_FAQ
 <pre class="eval">user_pref("network.prefetch-next", false);
 </pre>
 
-<p>但是，从理论上讲，如果需要禁用链接预取，则实现一定存在问题。 如果它不能正确运行，我们宁愿改进实现，也不希望用户找到并调整一些晦涩的偏好。</p>
+<p>但是，从理论上讲，如果需要禁用链接预取，实现就一定会存在问题。 如果它不能正确运行，我们宁愿改进实现，也不希望用户找到并调整一些隐藏的偏好。</p>
 
-<h3 id="What_about_folks_who_pay-per-byte_for_network_bandwidth.3F" name="What_about_folks_who_pay-per-byte_for_network_bandwidth.3F">那些按字节支付网络带宽的人呢？</h3>
+<h3 id="What_about_folks_who_pay-per-byte_for_network_bandwidth.3F" name="What_about_folks_who_pay-per-byte_for_network_bandwidth.3F">那些按网络流量付费的人呢？</h3>
 
 <p>Basically, there are two ways of looking at this issue: websites can already cause things to be silently downloaded using JS/DOM hacks. prefetching is a browser feature; users should be able to disable it easily.</p>
 
 <p>It is important that websites adopt <code>&lt;link&gt;</code> tag based prefetching instead of trying to roll-in silent downloading using various JS/DOM hacks. The <code>&lt;link&gt;</code> tag gives the browser the ability to know what sites are up to, and we can use this information to better prioritize document prefetching. The user preference to disable <code>&lt;link&gt;</code> tag prefetching may simply encourage websites to stick with JS/DOM hacks, and that would not be good for users. This is one reason why prefetching is enabled by default.</p>
 
-<p>基本上，有两种方法可以解决此问题：网站已经可以使用JS / DOM之类的hacks方式静默下载内容。 预取是浏览器功能； 用户应该能够轻松禁用它。</p>
+<p>基本上，有两种方法可以解决此问题：网站可以使用JS / DOM之类的hacks方式静默下载内容。 预取是浏览器功能； 用户应该能够轻松禁用它。</p>
 
 <p>网站采用基于<code>&lt;link&gt;</code>标记的预取非常重要，而不是尝试使用各种JS / DOM之类的hacks方式进行静默下载。 <code>&lt;link&gt;</code>标记使浏览器能够知道正在访问哪些站点，我们可以使用此信息更好地确定文档预取的优先级。 用户偏好禁用<code>&lt;link&gt;</code>标记预取可能只是鼓励网站坚持使用JS / DOM之类的hacks方式，这对用户不利。 这是默认情况下启用预取的原因之一。</p>
 
