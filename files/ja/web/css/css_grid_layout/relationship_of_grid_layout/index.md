@@ -7,23 +7,24 @@ tags:
   - Guide
 translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
-<p>CSS グリッドレイアウトはレイアウトを行うための完全なシステムの一部として、 CSS の他の機能と一緒に動作するよう設計されました。このガイドでは、既に使われている他の技術と、どうのようにグリッドが適合するかを説明します。</p>
+{{CSSRef}}
 
-<h2 id="Grid_and_flexbox" name="Grid_and_flexbox">グリッドとフレックスボックス</h2>
+CSS グリッドレイアウトはレイアウトを行うための完全なシステムの一部として、 CSS の他の機能と一緒に動作するよう設計されました。このガイドでは、既に使われている他の技術と、どうのようにグリッドが適合するかを説明します。
 
-<p>CSS グリッドレイアウトと<a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS フレックスボックスレイアウト</a>の基本的な違いは、フレックスボックスは一次元 - 一列<em>又は</em>一行 - のレイアウトのために設計されたという点です。グリッドは二次元 - 行と列が同時 - のレイアウトのために設計されました。しかし、２つの仕様書はいくつかの共通の機能を共有しており、すでにフレックスボックスの使い方を学んでいるのであれば、類似性がグリッドの手がかりを助けるでしょう。</p>
+## グリッドとフレックスボックス
 
-<h3 id="One-dimensional_vs._two-dimensional_layout" name="One-dimensional_vs._two-dimensional_layout">一次元 vs. ニ次元レイアウト</h3>
+CSS グリッドレイアウトと[CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)の基本的な違いは、フレックスボックスは一次元 - 一列*または*一行 - のレイアウトのために設計されたという点です。一方、グリッドは、行と列を同時に扱う二次元のレイアウト用に設計されています。しかし、この 2 つの仕様には共通の機能がいくつかあり、フレックスボックスの使い方をすでに学んでいる場合は、その共通点を参考にしてグリッドを使いこなすことができます。
 
-<p>一次元と二次元のレイアウトの違いを示すことができる単純な例です。</p>
+<h3 id="One-dimensional_vs._two-dimensional_layout">一次元 vs. 二次元レイアウト</h3>
 
-<p>最初の例では、一連のボックスを配置するためにフレックスボックスを使用しています。コンテナーの中には五つの子項目があり、 flex プロパティ値を与えて150ピクセルの flex-basis から伸縮できるようにしています。</p>
+一次元と二次元のレイアウトの違いを示すことができる単純な例です。
 
-<p>{{cssxref("flex-wrap")}} プロパティを <code>wrap</code> に設定して、コンテナーの大きさが細くなりすぎて flex basis を維持することができなくなったら、項目が次の行へ折り返されるようにしています。</p>
+最初の例では、一連のボックスを配置するためにフレックスボックスを使用しています。コンテナーの中には 5 つの子項目があり、 flex プロパティ値を与えて 150 ピクセルの flex-basis から伸縮できるようにしています。
 
-<div id="onedtwod">
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+{{cssxref("flex-wrap")}} プロパティを `wrap` に設定し、コンテナーの大きさが狭くなりすぎて flex basis を維持することができなくなったら、項目が次の行へ折り返されるようにしています。
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -31,49 +32,48 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-  &lt;div&gt;One&lt;/div&gt;
-  &lt;div&gt;Two&lt;/div&gt;
-  &lt;div&gt;Three&lt;/div&gt;
-  &lt;div&gt;Four&lt;/div&gt;
-  &lt;div&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   width: 500px;
   display: flex;
   flex-wrap: wrap;
 }
-.wrapper &gt; div {
+.wrapper > div {
   flex: 1 1 150px;
 }
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('onedtwod', '500', '230') }}</p>
+{{ EmbedLiveSample('One-dimensional_versus_two-dimensional_layout', '500', '230') }}
 
-<p>図では、2つの項目が新しい行へ折り返されているのがわかると思います。これらの項目は利用可能なスペースを共有していますが、上記の項目の下には整列してはいません。フレックスアイテムが折り返しをした時、新しい行（もしくは列として機能している時は列）のそれぞれがフレックスコンテナーになるからです。スペースの配分は行をまたがって起こります。</p>
+図では、2 つのアイテムが新しい行へ折り返されているのがわかると思います。これらのアイテムは利用可能な空間を共有していますが、上のアイテムの下に整列されているわけではありません。フレックスアイテムが折り返しをした時、新しい行（もしくは列として機能している時は列）のそれぞれがフレックスコンテナーになるからです。空間の配分は行をまたがって起こります。
 
-<p>よくある質問はそれらのアイテムをどのようにして並べるかです。2次元レイアウトメソッドが必要な場所では、行またはカラムによるアラインメントのコントロールが必要で、グリッドが得意な場面です。</p>
+そこでよく聞かれるのが、それらのアイテムをどうやって並べるかということです。そこで、二次元のレイアウト方式が必要になります。配置を行と列で制御したい、ここでグリッドの出番です。
 
-<h3 id="The_same_layout_with_CSS_grids" name="The_same_layout_with_CSS_grids">CSS グリッドによる同様のレイアウト</h3>
+<h3 id="The_same_layout_with_CSS_grids">CSS グリッドによる同様のレイアウト</h3>
 
-<p>次の例では、グリッドを使って同様のレイアウトを構築します。今回は3つの <code>1fr</code> 列トラックを持ちます。項目自体には何もセットする必要はりません。構築されたグリッドのセルそれぞれに項目を一つずつ配置していきます。厳格なグリッドに項目が配置されているため、行と列は整列しています。5つの項目があるので、二つ目の行にある終わりには隙間があります。</p>
+次の例では、グリッドを使って同様のレイアウトを構築します。今回は 3 つの `1fr` の列トラックがあります。アイテム自体には何も設定する必要はりません。構築されたグリッドのセルそれぞれにアイテムを一つずつ配置していきます。厳格なグリッドにアイテムが配置されているため、行と列は整列しています。アイテムは 5 つなので、2 行目の最後は空間になります。
 
-<div id="Two_Dimensional_With_Grid">
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -81,61 +81,59 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-  &lt;div&gt;One&lt;/div&gt;
-  &lt;div&gt;Two&lt;/div&gt;
-  &lt;div&gt;Three&lt;/div&gt;
-  &lt;div&gt;Four&lt;/div&gt;
-  &lt;div&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Two_Dimensional_With_Grid', '300', '170') }}</p>
-</div>
+{{ EmbedLiveSample('The_same_layout_with_CSS_grids', '300', '170') }}
 
-<p>グリッドとフレックスボックスのどちらを使うかを決めるシンプルな質問です。</p>
+グリッドとフレックスボックスのどちらを使うかを決めるシンプルな質問です。
 
-<ul>
- <li>行<u>又は</u>列のみによってレイアウトを制御する必要がありますか。 – フレックスボックスを使いましょう</li>
- <li>行<u>及び</u>列によりレイアウトを制御する必要がありますか。 - グリッドを使いましょう</li>
-</ul>
+- 行*または*列のみによってレイアウトを制御する必要がありますか。 – フレックスボックスを使いましょう
+- 行*および*列によりレイアウトを制御する必要がありますか。 - グリッドを使いましょう
 
-<h3 id="Content_out_or_layout_in" name="Content_out_or_layout_in">コンテンツ外かレイアウト内か？</h3>
+### 内容物の外か、レイアウトの中か
 
-<p>1次元 vs 2次元の区別に加えて、レイアウトのためにフレックスボックス又はグリッドを使わなければならないかどうかを決める別の方法があります。フレックスボックスはコンテンツ外から機能します。フレックスボックスの理想的な使用例は、コンテナー内で項目に等しくスペースを設定したいような場合です。コンテンツのサイズはそれぞれの項目がどのくらい個々のスペースを占めるかにより決定されます。もし項目が新しい行へ折り返されたら、行のサイズと利用可能なスペースをもとに項目の間隔が算出されます。</p>
+一次元と二次元の区別に加えて、レイアウトにフレックスボックスとグリッドのどちらを使うべきかを決めるには、もうひとつの方法があります。フレックスボックスは内容物の外側から動作します。フレックスボックスの理想的な使用例は、複数のアイテムをコンテナー内で均等に配置したい場合です。内容物の大きさに合わせて、それぞれのアイテムがどれだけの空間を占めるかを決定します。アイテムが新しい行に折り返された場合、そのサイズとその行で利用可能な空間に基づいて、空間が調整されます。
 
-<p>グリッドはレイアウトの外から機能します。 CSS グリッドレイアウトを使ってレイアウトを作った際、自動配置ルールでアイテムを厳格なグリッドによるセルへ配置させることができます。それらはコンテンツのサイズに応じたトラックを作ることができます。しかしながら、全体のトラックも変わるでしょう。</p>
+グリッドはレイアウトの中で機能します。CSS グリッドレイアウトを使用する場合、レイアウトを作成し、そこにアイテムを配置するか、自動配置ルールによって厳密なグリッドに沿ってグリッドセルにアイテムを配置していきます。コンテンツのサイズに対応したトラックを作成することは可能ですが、トラック全体が変化してしまいます。
 
-<p>もしフレックスボックスを使っていていくつかの柔軟性が欠けていたら、おそらく CSS グリッドレイアウトを使う必要性を感じるでしょう。例えばフレックスアイテムの幅をパーセンテージで設定し、ある行へその他の項目とともに整列させていたら、その場合にはグリッドはより良い選択肢になるでしょう。</p>
+もしフレックスボックスを使っていていくつかの柔軟性が欠けていたら、おそらく CSS グリッドレイアウトを使う必要があるでしょう。例えばフレックスアイテムの幅をパーセント値で設定し、ある行へその他のアイテムとともに整列させていた場合は、グリッドがより良い選択肢になるでしょう。
 
-<h3 id="Box_alignment" name="Box_alignment">ボックス配置</h3>
+<h3 id="Box_alignment">ボックス配置</h3>
 
-<p>フレックスボックスの最も素晴らしい特徴は、我々に適切な配置制御を与えてくれる最初のものということでした。これによりページの真ん中にボックスを置くことが簡単になりました。フレックス要素はフレックスコンテナーの高さに引き伸ばすことができ、これはつまり、同じ高さの列が可能ということです。これらは私たちが長い間求めてきたもので、少なくとも視覚効果を実現するためのさまざまな種類のハックが考え出されてきました。</p>
+フレックスボックスの最も素晴らしい特徴は、我々に適切な配置制御を与えてくれる最初のものということでした。これによりページの真ん中にボックスを置くことが簡単になりました。フレックス要素はフレックスコンテナーの高さに引き伸ばすことができ、これはつまり、同じ高さの列が可能ということです。これらは私たちが長い間求めてきたもので、少なくとも視覚効果を実現するためのさまざまな種類のハックが考え出されてきました。
 
-<p>フレックスボックスの仕様による配置プロパティは <a href="https://drafts.csswg.org/css-align/">Box Alignment Level 3</a> と呼ばれる新しい仕様に追加されました。これはつまり、グリッドレイアウトを含む他の仕様でも使用できるということです。将来的には、他のレイアウト手法にも適用できるようになるでしょう。</p>
+フレックスボックスの仕様による配置プロパティは [Box Alignment Level 3](https://drafts.csswg.org/css-align/) と呼ばれる新しい仕様に追加されました。これはつまり、グリッドレイアウトを含む他の仕様でも使用できるということです。将来的には、他のレイアウト手法にも適用できるようになるでしょう。
 
-<p>この一連のガイドの後、ボックス配置と、それがグリッドレイアウトの中でどのように動作するのかを見ていきます。今回の場合、フレックスボックスと grid の簡単な比較例を挙げます。</p>
+この一連のガイドの後、ボックス配置と、それがグリッドレイアウトの中でどのように動作するのかを見ていきます。今回の場合、フレックスボックスと grid の簡単な比較例を挙げます。
 
-<p>一つ目のフレックスボックスを利用する例では、３つの要素を持つコンテナがあります。コンテナである<code>wrapper</code>には{{cssxref("min-height")}}が設定され、これはフレックスコンテナーの高さを決めています。コンテナには {{cssxref("align-items")}} を <code>flex-end</code> に設定してコンテナの終端に要素が並ぶようにしました。また、<code>box1</code>の{{cssxref("align-self")}}プロパティをcontainerの高さに合わせるよう<code>streach</code>へ上書きし、<code>box2</code>もコンテナの始まりから整列するにように上書きしています。</p>
+最初の例では、フレックスボックスを使用しており、3 つの要素を持つコンテナーがあります。コンテナーである `wrapper` には {{cssxref("min-height")}} が設定され、フレックスコンテナーの高さを決めています。コンテナーには {{cssxref("align-items")}} を `flex-end` に設定してコンテナーの末尾に要素が並ぶようにしています。また、`box1` の {{cssxref("align-self")}} プロパティをコンテナーの高さに合わせるよう `streach` へ上書きし、`box2` もコンテナーの始まりから整列するにように上書きしています。
 
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -143,24 +141,25 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-  &lt;div class="box1"&gt;One&lt;/div&gt;
-  &lt;div class="box2"&gt;Two&lt;/div&gt;
-  &lt;div class="box3"&gt;Three&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: flex;
   align-items: flex-end;
   min-height: 200px;
@@ -171,16 +170,16 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 .box2 {
   align-self: flex-start;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Box_alignment', '300', '230') }}</p>
+{{ EmbedLiveSample('Box_alignment', '300', '230') }}
 
-<h3 id="CSSグリッド上でのアラインメント">CSSグリッド上でのアラインメント</h3>
+<h3 id="Alignment_in_CSS_Grids">CSS グリッド上での配置</h3>
 
-<p>二つ目の例ではグリッドを使って同じレイアウトを作りましょう。今回はグリッドレイアウトを使うため、ボックスアラインメントプロパティを使います。従って、<code>flex-start</code>と<code>flex-end</code>ではなく<code>start</code>と<code>end</code>を使ってアラインメントします。グリッドレイアウトのケースでは、グリッド領域の中にアイテムをアラインメントしていきます。今回のケースでは単一のグリッドセルを作成していますが、これは複数のグリッドセルで構成された領域にもなることが可能です。</p>
+2 つ目の例ではグリッドを使って同じレイアウトを作りましょう。今回はグリッドレイアウトを使うため、ボックス配置プロパティを使います。従って、 `start` と `end` を `flex-start` と `flex-end` の代わりに使って配置します。グリッドレイアウトの場合は、グリッド領域の中にアイテムを配置していきます。今回のケースでは単一のグリッドセルを作成していますが、これは複数のグリッドセルで構成された領域にもなることが可能です。
 
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -188,24 +187,25 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-  &lt;div class="box1"&gt;One&lt;/div&gt;
-  &lt;div class="box2"&gt;Two&lt;/div&gt;
-  &lt;div class="box3"&gt;Three&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   align-items: end;
@@ -217,26 +217,26 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 .box2 {
   align-self: start;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Alignment_in_CSS_Grids', '200', '310') }}</p>
+{{ EmbedLiveSample('Alignment_in_CSS_Grids', '200', '310') }}
 
-<h3 id="The_fr_unit_and_flex-basis" name="The_fr_unit_and_flex-basis"><code>fr</code> 単位と <code>flex-basis</code></h3>
+### `fr` 単位と `flex-basis`
 
-<p>We have already seen how the <code>fr</code> unit works to assign a proportion of available space in the grid container to our grid tracks. The <code>fr</code> unit, when combined with the {{cssxref("minmax", "minmax()")}} function can give us very similar behavior to the <code>flex</code> properties in flexbox while still enabling the creation of a layout in two dimensions.</p>
+すでに、`fr` の単位がグリッドコンテナー内の利用可能な空間の割合をグリッドトラックに割り当てる仕組みを見てきました。この `fr` の単位と {{cssxref("minmax()", "minmax()")}} 関数を組み合わせると、フレックスボックスの `flex` プロパティと非常によく似た動作をしながら、二次元のレイアウトを作成することができます。
 
-<p>If we look back at the example where I demonstrated the difference between one and two-dimensional layouts, you can see there is a difference between the way of the two layouts work responsively. With the flex layout, if we drag our window wider and smaller, the flexbox does a nice job of adjusting the number of items in each row according to the available space. If we have a lot of space all five items can fit on one row. If we have a very narrow container we may only have space for one.</p>
+一次元と二次元のレイアウトの違いを示した例を振り返ると、この 2 つのレイアウトがレスポンシブに動作する方法に違いがあることがわかります。フレックスレイアウトでは、ウィンドウをドラッグして大きくしたり小さくしたりすると、フレックスボックスが利用可能な空間に応じて各行のアイテム数をうまく調整してくれます。空間に余裕がある場合は、 5 つのアイテムが 1 列に収まります。しかし、コンテナーが非常に狭い場合は、 1 つのアイテムしか置けないかもしれません。
 
-<p>In comparison, the grid version always has three column tracks. The tracks themselves will grow and shrink, but there are always three since we asked for three when defining our grid.</p>
+それに比べてグリッド版では、常に 3 列のトラックがあります。トラック自体は大きくなったり小さくなったりしますが、グリッドを定義するときに 3 つとしたので、常に 3 つあります。
 
-<h4 id="Auto-filling_grid_tracks">Auto-filling grid tracks</h4>
+<h4 id="Auto-filling_grid_tracks">グリッドトラックの自動入力</h4>
 
-<p>We can create a similar effect to flexbox, while still keeping the content arranged in strict rows and columns, by creating our track listing using repeat notation and the <code>auto-fill</code> and <code>auto-fit</code> properties.</p>
+反復記法と `auto-fill` および `auto-fit` プロパティを使用してトラックリストを作成することで、コンテンツを厳密な行と列に配置しながら、フレックスボックスと同様の効果を得ることができます。
 
-<p>In this next example, I have used the <code>auto-fill</code> keyword in place of an integer in the repeat notation and set the track listing to 200 pixels. This means that grid will create as many 200 pixels column tracks as will fit in the container.</p>
+次の例では、反復記法で整数の代わりに `auto-fill` キーワードを使用し、トラックリストを 200 ピクセルに設定しています。これにより、 grid はコンテナーに収まるだけの 200 ピクセルの列トラックを作成します。
 
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -244,37 +244,38 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-  &lt;div&gt;One&lt;/div&gt;
-  &lt;div&gt;Two&lt;/div&gt;
-  &lt;div&gt;Three&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Auto-filling_grid_tracks', '500', '170') }}</p>
+{{ EmbedLiveSample('Auto-filling_grid_tracks', '500', '170') }}
 
-<h3 id="A_flexible_number_of_tracks" name="A_flexible_number_of_tracks">柔軟なトラック数</h3>
+<h3 id="A_flexible_number_of_tracks">柔軟なトラック数</h3>
 
-<p>This isn’t quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining <code>auto-fit</code> and the {{cssxref("minmax", "minmax()")}} function. In this next example, I create auto filled tracks with <code>minmax</code>. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be <code>1fr</code>. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the <code>1fr</code> maximum as an instruction to share out the remaining space between the items.</p>
+これはフレックスボックスとは全く同じではありません。フレックスボックスの例では、アイテムは折り返す前では 200 ピクセルの基準よりも大きくなっています。グリッドでも `auto-fit` と {{cssxref("minmax()", "minmax()")}} 関数を組み合わせることで、同じことが実現できます。次の例では、 `minmax` を使って自動フィットトラックを作成します。トラックの大きさは最低でも 200 ピクセルにしたいので、最大値を `1fr` に設定しています。ブラウザーは、 200 ピクセルがコンテナーにいくつ収まるかを計算し、グリッドの隙間も考慮した上で、最大値の `1fr` を、アイテム間の残りの空間を共有する指示として扱います。
 
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -282,45 +283,46 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-  &lt;div&gt;One&lt;/div&gt;
-  &lt;div&gt;Two&lt;/div&gt;
-  &lt;div&gt;Three&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('A_flexible_number_of_tracks', '500', '170') }}</p>
+{{ EmbedLiveSample('A_flexible_number_of_tracks', '500', '170') }}
 
-<p>We now have the ability to create a grid with a flexible number of flexible tracks, but see items laid out on the grid aligned by rows and columns at the same time.</p>
+自由度の高いトラック数のグリッドを作成しながら、グリッド上に並べられたアイテムを行と列で同時に確認することができるようになりました。
 
-<h2 id="Grid_and_absolutely_positioned_elements" name="Grid_and_absolutely_positioned_elements">グリッドと絶対位置指定された要素</h2>
+## グリッドと絶対位置指定された要素
 
-<p>Grid interacts with absolutely positioned elements, which can be useful if you want to position an item inside a grid or grid area. The specification defines the behavior when a grid container is a containing block and a parent of the absolutely positioned item.</p>
+グリッドは絶対位置指定要素と相互作用するので、グリッドやグリッド領域内にアイテムを配置したい場合に便利です。仕様では、グリッドコンテナーが包含ブロックであり、絶対配置されたアイテムの親である場合の動作を定義しています。
 
-<h3 id="A_grid_container_as_containing_block" name="A_grid_container_as_containing_block">含有ブロックとしてのグリッドコンテナ</h3>
+<h3 id="A_grid_container_as_containing_block">包含ブロックとしてのグリッドコンテナー</h3>
 
-<p>To make the grid container a containing block you need to add the position property to the container with a value of relative, just as you would make a containing block for any other absolutely positioned items. Once you have done this, if you give a grid item <code>position: absolute</code> it will take as its containing block the grid container or, if the item also has a grid position, the area of the grid it is placed into.</p>
+グリッドコンテナーを包含ブロックにするには、他の絶対位置指定アイテムの包含ブロックを作るのと同じように、コンテナーに position プロパティを relative の値で追加する必要があります。こうすると、グリッドアイテムに `position: absolute` を与えると、グリッドコンテナーを包含ブロックとし、アイテムにグリッド位置がある場合には、アイテムが配置されたグリッドの領域を包含ブロックとします。
 
-<p>In the below example I have a wrapper containing four child items. Item three is absolutely positioned and also placed on the grid using line-based placement. The grid container has <code>position: relative</code> and so becomes the positioning context of this item.</p>
+以下の例では、4 つの子アイテムを含むラッパーがあります。アイテム 3 は絶対的な位置が指定されており、線ベースの配置を用いてグリッドに配置されています。グリッドコンテナーには `position: relative` が設定されているので、このアイテムの位置指定コンテキストになります。
 
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -328,31 +330,32 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">
+   このブロックは絶対位置指定されます。この例では、グリッドコンテナーが包含ブロックとなっているため、絶対位置指定のオフセット値は、配置された領域の外縁から計算されます。
+  </div>
+  <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-  &lt;div class="box1"&gt;One&lt;/div&gt;
-  &lt;div class="box2"&gt;Two&lt;/div&gt;
-  &lt;div class="box3"&gt;
-   This block is absolutely positioned. In this example the grid container is the containing block and so the absolute positioning offset values are calculated in from the outer edges of the area it has been placed into.
-  &lt;/div&gt;
-  &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-auto-rows: 200px;
-  grid-gap: 20px;
+  gap: 20px;
   position: relative;
 }
 .box3 {
@@ -364,30 +367,30 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
   top: 40px;
   left: 40px;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('A_grid_container_as_containing_block', '500', '330') }}</p>
+{{ EmbedLiveSample('A_grid_container_as_containing_block', '500', '330') }}
 
-<p>You can see that the item is taking the area from grid column line 2 to 4, and starting after line 1. Then it is offset in that area using the top and left properties. However, it has been taken out of flow as is usual for absolutely positioned items and so the auto-placement rules now place items into the same space. The item also doesn’t cause the additional row to be created to span to row line 3.</p>
+アイテムがグリッド列の 2 本目から 4 本目までの領域を取り、1 本目の後に始まっているのがわかります。そして、 top と left のプロパティを使用して、その領域内に配置されています。しかし、絶対的に位置指定されたアイテムでは、通常のようにフローから外されているため、自動配置ルールによってアイテムが同じスペースに配置されています。また、このアイテムは、 3 本目にまたがるように追加の線を作成する原因にもなりません。
 
-<p>If we remove <code>position:</code> <code>absolute</code> from the rules for <code>.box3</code> you can see how it would display without the positioning.</p>
+`.box3` のルールから `position:` `absolute` を削除すると、位置指定なしでどのように表示されるかがわかります。
 
-<h3 id="A_grid_container_as_parent" name="A_grid_container_as_parent">親としてのグリッドコンテナ</h3>
+## 親としてのグリッドコンテナー
 
-<p>If the absolutely positioned child has a grid container as a parent but that container does not create a new positioning context, then it is taken out of flow as in the previous example. The positioning context will be whatever element creates a positioning context as is common to other layout methods. In our case, if we remove <code>position:</code> <code>relative</code> from the wrapper above, positioning context is from the viewport, as shown in this image.</p>
+絶対位置指定された子がグリッドコンテナーを親に持つが、そのコンテナーが新たな位置指定コンテキストを作成しない場合は、前述の例のようにフローから外されます。位置指定コンテキストは、他のレイアウト方式と共通するように、位置指定コンテキストを作成する要素であれば何でも構いません。今回の例では、上記のラッパーから `position:` `relative` を削除すると、この画像のように、ビューポートからの位置指定コンテキストになります。
 
-<p><img alt="Image of grid container as parent" src="https://mdn.mozillademos.org/files/14661/2_abspos_example.png" style="height: 408px; width: 1702px;"></p>
+![Image of grid container as parent](2_abspos_example.png)
 
-<p>Once again the item no longer participates in the grid layout in terms of sizing or when other items are auto-placed.</p>
+この場合も、サイズ調整や他のアイテムが自動配置される際に、アイテムはグリッドレイアウトに参加しなくなります。
 
-<h3 id="With_a_grid_area_as_the_parent">With a grid area as the parent</h3>
+<h3 id="With_a_grid_area_as_the_parent">グリッド領域を親にする</h3>
 
-<p>If the absolutely positioned item is nested inside a grid area then you can create a positioning context on that area. In the below example we have our grid as before but this time I have nested an item inside <code>.box3</code> of the grid.</p>
+絶対的に位置指定されたアイテムがグリッド領域内で入れ子になっている場合、その領域に位置指定コンテキストを作成することができます。以下の例では、先ほどと同じようにグリッドを作成していますが、今回はグリッドの `.box3` 内にアイテムを入れ子にしています。
 
-<p>I have given <code>.box3</code> position relative and then positioned the sub-item with the offset properties. In this case, the positioning context is the grid area.</p>
+`.box3` に相対位置を与え、オフセットプロパティを使ってサブアイテムを配置しています。この場合、位置指定コンテキストはグリッド領域です。
 
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -395,33 +398,34 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
   padding: 1em;
   color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three
+    <div class="abspos">
+     このブロックは絶対的に位置指定されます。この例では、グリッド領域が包含ブロックとなっているため、絶対位置指定のオフセット値はグリッド領域の外縁から計算されます。
+    </div>
+  </div>
+  <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-  &lt;div class="box1"&gt;One&lt;/div&gt;
-  &lt;div class="box2"&gt;Two&lt;/div&gt;
-  &lt;div class="box3"&gt;Three
-    &lt;div class="abspos"&gt;
-     This block is absolutely positioned. In this example the grid area is the containing block and so the absolute positioning offset values are calculated in from the outer edges of the grid area.
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-auto-rows: 200px;
-  grid-gap: 20px;
+  gap: 20px;
 }
 .box3 {
   grid-column-start: 2;
@@ -439,23 +443,24 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
   color: #000;
   padding: 10px;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('With_a_grid_area_as_the_parent', '500', '420') }}</p>
+{{ EmbedLiveSample('With_a_grid_area_as_the_parent', '500', '460') }}
 
-<h2 id="Grid_and_display_contents" name="Grid_and_display_contents">グリッドと <code>display: contents</code></h2>
+## グリッドと `display: contents`
 
-<p>A final interaction with another layout specification that is worth noting is the interaction between CSS Grid Layout and <code>display: contents</code>. The <code>contents</code> value of the display property is a new value that is described in the <a href="https://drafts.csswg.org/css-display/#box-generation">Display specification</a> as follows:</p>
+最後に、他のレイアウト仕様との相互作用として、CSS グリッドレイアウトと `display: contents` との相互作用をご紹介します。 display プロパティの `contents` の値は、[Display 仕様書](https://drafts.csswg.org/css-display/#box-generation)に以下のように記述されている新しい値です。
 
-<blockquote>
-<p>“The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree.”</p>
-</blockquote>
+> 「その要素自体はボックスを生成しませんが、その子や擬似要素は通常通りボックスを生成します。ボックスの生成とレイアウトのために、その要素は文書ツリー内でその子や擬似要素と置き換えられたかのように扱われなければなりません。」
 
-<p>If you set an item to <code>display:</code> <code>contents</code> the box it would normally create disappears, and the boxes of the child elements appear as if they have risen up a level. This means that children of a grid item can become grid items. Sound odd? Here is a simple example. In the following markup, I have a grid and the first item on the grid is set to span all three column tracks. It contains three nested items. As these items are not direct children, they don’t become part of the grid layout and so display using regular block layout.</p>
+アイテムを `display:` `contents` にすると、通常は作成されるはずのボックスが消え、子要素のボックスが一段上がったように見えます。つまり、グリッドアイテムの子がグリッドアイテムになることができるのです。変だと思いませんか？簡単な例を見てみよう。
 
-<div id="Display_Contents_Before">
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<h3 id="Grid_layout_with_nested_child_elements">子要素を入れ子にしたグリッドレイアウト</h3>
+
+次のマークアップでは、グリッドがあり、グリッド上の最初のアイテムが 3 つの列トラックすべてにまたがるように設定されています。その中には 3 つの入れ子になったアイテムが含まれています。これらのアイテムは直接の子ではないので、グリッドレイアウトの一部にはならず、通常のブロックレイアウトで表示されます。
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -476,23 +481,24 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
   background-color: #fff9db;
   padding: 1em;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+  <div class="box box1">
+    <div class="nested">a</div>
+    <div class="nested">b</div>
+    <div class="nested">c</div>
+  </div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-  &lt;div class="box box1"&gt;
-    &lt;div class="nested"&gt;a&lt;/div&gt;
-    &lt;div class="nested"&gt;b&lt;/div&gt;
-    &lt;div class="nested"&gt;c&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="box box2"&gt;Two&lt;/div&gt;
-  &lt;div class="box box3"&gt;Three&lt;/div&gt;
-  &lt;div class="box box4"&gt;Four&lt;/div&gt;
-  &lt;div class="box box5"&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -501,17 +507,16 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
   grid-column-start: 1;
   grid-column-end: 4;
 }
+```
 
-</pre>
+{{ EmbedLiveSample('Grid_layout_with_nested_child_elements', '400', '440') }}
 
-<p>{{ EmbedLiveSample('Display_Contents_Before', '400', '420') }}</p>
-</div>
+<h3 id="Using_display_contents">display: contents の使用</h3>
 
-<p>If I now add <code>display:</code> <code>contents</code> to the rules for <code>box1</code>, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rules.</p>
+次に、`box1` のルールに `display:` `contents` を追加すると、そのアイテムのボックスは消え、サブアイテムはグリッドアイテムとなり、自動配置ルールを使ってレイアウトされるようになりました。
 
-<div id="Display_Contents_After">
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -532,23 +537,24 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
   background-color: #fff9db;
   padding: 1em;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+  <div class="box box1">
+    <div class="nested">a</div>
+    <div class="nested">b</div>
+    <div class="nested">c</div>
+  </div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-  &lt;div class="box box1"&gt;
-    &lt;div class="nested"&gt;a&lt;/div&gt;
-    &lt;div class="nested"&gt;b&lt;/div&gt;
-    &lt;div class="nested"&gt;c&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="box box2"&gt;Two&lt;/div&gt;
-  &lt;div class="box box3"&gt;Three&lt;/div&gt;
-  &lt;div class="box box4"&gt;Four&lt;/div&gt;
-  &lt;div class="box box5"&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -558,76 +564,15 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
   grid-column-end: 4;
   display: contents;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Display_Contents_After', '400', '330') }}</p>
-</div>
+{{ EmbedLiveSample('Using_display_contents', '400', '350') }}
 
-<p>This can be a way to get items nested into the grid to act as if they are part of the grid, and is a way around some of the issues that would be solved by subgrids once they are implemented. You can also use <code>display:</code> <code>contents</code> in a similar way with flexbox to enable nested items to become flex items.</p>
+これは、グリッドに入れ子になったアイテムをグリッドの一部のように動作させる方法で、サブグリッドが実装された場合に解決されるであろう問題のいくつかを回避する方法でもあります。また、フレックスボックスと同様の方法で、 `display:` `contents` を使用して、入れ子になったアイテムをフレックスアイテムにすることもできます。
 
-<p>As you can see from this guide, CSS Grid Layout is just one part of your toolkit. Don’t be afraid to mix it with other methods of doing layout to get the different effects you need.</p>
+このガイドからわかるように、CSS グリッドレイアウトはツールキットの一部に過ぎません。必要な効果を得るために、他のレイアウト方法と組み合わせることを恐れないでください。
 
-<h2 id="See_Also">See Also</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Flexbox">フレックスボックスガイド</a></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Columns">段組みレイアウトガイド</a></li>
-</ul>
-
-<section id="Quick_links">
-<ol>
- <li><a href="/ja/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/ja/docs/Web/CSS/Reference"><strong>CSS リファレンス</strong></a></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout">CSS グリッドレイアウト</a></li>
- <li data-default-state="open"><a href="#"><strong>ガイド</strong></a>
-  <ol>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">グリッドレイアウトの基本概念</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">他のレイアウト方法との関係</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">線ベースの配置</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">グリッドテンプレート領域</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">名前付きグリッド線を使用したレイアウト</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">CSS グリッドレイアウトにおける自動配置</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">CSS グリッドレイアウトにおけるボックス配置</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">CSS グリッド、論理値、書字方向</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS グリッドレイアウトとアクセシビリティ</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS グリッド及び進歩的な拡張</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">CSS グリッドを利用したよくあるレイアウトの実現</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>プロパティ</strong></a>
-  <ol>
-   <li><a href="/ja/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>用語集</strong></a>
-  <ol>
-   <li><a href="/ja/docs/Glossary/Grid">グリッド</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_lines">グリッド線</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_tracks">グリッドトラック</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_cell">グリッドセル</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_areas">グリッド領域</a></li>
-   <li><a href="/ja/docs/Glossary/Gutters">溝</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_Axis">グリッド軸</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_rows">グリッド行</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_column">グリッド列</a></li>
-  </ol>
- </li>
-</ol>
-</section>
+- [フレックスボックスガイド](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
+- [段組みレイアウトガイド](/ja/docs/Web/CSS/CSS_Columns)
