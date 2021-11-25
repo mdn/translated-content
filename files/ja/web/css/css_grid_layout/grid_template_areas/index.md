@@ -1,18 +1,19 @@
 ---
-title: Grid template areas
+title: グリッドテンプレート領域
 slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 tags:
   - CSS
-  - CSS Grids
-  - Guide
+  - CSS グリッド
+  - ガイド
+translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 ---
 {{CSSRef}}
 
-In the [previous guide](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) we looked at grid lines, and how to position items against those lines. When you use CSS Grid Layout you always have lines, and this can be a straightforward way to place items on your grid. However, there is an alternate method to use for positioning items on the grid which you can use alone or in combination with line-based placement. This method involves placing our items using named template areas, and we will find out exactly how this method works. You will see very quickly why we sometimes call this the ascii-art method of grid layout!
+[前回のガイド](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)では、グリッド線と、その線に対してアイテムを位置指定する方法をご紹介しました。CSS グリッドレイアウトでは、常に線が存在しており、グリッド上にアイテムを位置指定することを簡単にしています。しかし、グリッド上のアイテムを位置指定する別の方法があります。この方法は、単独で使用することも、線を使った位置指定と組み合わせて使用することもできます。この方法では、名前の付いたテンプレート領域を使ってアイテムを位置指定しますが、その方法を具体的に説明します。この方法を「アスキーアート方式のグリッドレイアウト」と呼んでいるのも、すぐにお分かりいただけるでしょう。
 
-## Naming a grid area
+## グリッド領域に名前を付ける
 
-You have already encountered the {{cssxref("grid-area")}} property. This is the property that can take as a value all four of the lines used to position a grid area.
+すでに {{cssxref("grid-area")}} プロパティをご覧になったことがあると思います。これは、グリッド領域を配置するための 4 本の線をすべて値として取ることができるプロパティです。
 
 ```css
 .box1 {
@@ -20,20 +21,20 @@ You have already encountered the {{cssxref("grid-area")}} property. This is the 
 }
 ```
 
-What we are doing here when defining all four lines, is defining the area by specifying the lines that enclose that area.
+ここで 4 本の線を定義する際に行っているのは、領域を定義し、その領域を囲む線を指定することです。
 
-![The Grid Area defined by lines](4_area.png)
+![線で定義されたグリッド領域](4_area.png)
 
-We can also define an area by giving it a name and then specify the location of that area in the value of the {{cssxref("grid-template-areas")}} property. You can choose what you would like to name your area. For example, if I wish to create the layout shown below I can identify four main areas.
+領域を名前を付けて定義し、{{cssxref("grid-template-areas")}} プロパティの値でその領域の位置を指定することもできます。領域の名前は自由に決めることができます。例えば、以下のようなレイアウトを作りたい場合、 4 つの主要な領域を特定することができます。
 
-- a header
-- a footer
-- a sidebar
-- the main content
+- ヘッダー
+- フッター
+- サイドバー
+- メインコンテンツ
 
-![An image showing a simple two column layout with header and footer](4_layout.png)
+![ヘッダーとフッターの付いた単純な 2 列のレイアウトを表す図](4_layout.png)
 
-With the {{cssxref("grid-area")}} property I can assign each of these areas a name. This will not yet create any layout, but we now have named areas to use in a layout.
+{{cssxref("grid-area")}} プロパティにより、これらの領域にそれぞれ名前を付けることができます。これはまだレイアウトを生成していませんが、レイアウトで使用する名前付き領域になりました。
 
 ```css
 .header {
@@ -50,7 +51,7 @@ With the {{cssxref("grid-area")}} property I can assign each of these areas a na
 }
 ```
 
-Having defined these names I then create my layout. This time, instead of placing my items using line numbers specified on the items themselves, I create the whole layout on the grid container.
+これらの名前を定義した後で、レイアウトを作成します。今回は、アイテム自体に指定された線番号を使ってアイテムを配置するのではなく、グリッドコンテナー上にレイアウト全体を作成します。
 
 ```css
 .wrapper {
@@ -95,11 +96,11 @@ Having defined these names I then create my layout. This time, instead of placin
 
 {{ EmbedLiveSample('Naming_a_grid_area', '300', '330') }}
 
-Using this method we do not need to specify anything at all on the individual grid items, everything happens on our grid container. We can see the layout described as the value of the {{cssxref("grid-template-areas")}} property.
+この方法を使えば、個々のグリッドアイテムには何も指定する必要がなく、すべてはグリッドコンテナー上で行えます。レイアウトは {{cssxref("grid-template-areas")}} プロパティの値で表示されます。
 
-## Leaving a grid cell empty
+## グリッドセルを空欄のままにする
 
-We have completely filled our grid with areas in this example, leaving no white space. However you can leave grid cells empty with this method of layout. To leave a cell empty use the full stop character, '`.`'. If I want to only display the footer directly under the main content I would need to leave the three cells underneath the sidebar empty.
+この例では、グリッドを完全に領域で埋め尽くし、空欄をなくしています。しかし、このレイアウト方法では、グリッドのセルを空欄にすることができます。セルを空欄にするには、フルストップ文字「`.`」を使用します。メインコンテンツの直下にフッターのみを表示したい場合は、サイドバーの下にある 3 つのセルを空にする必要があります。
 
 ```css
 .header {
@@ -159,13 +160,13 @@ We have completely filled our grid with areas in this example, leaving no white 
 
 {{ EmbedLiveSample('Leaving_a_grid_cell_empty', '300', '330') }}
 
-In order to make the layout neater I can use multiple `.` characters. As long as there is no white space between the full stops it will be counted as one cell. For a complex layout there is a benefit to having the rows and columns neatly aligned. It means that you can actually see, right there in the CSS, what this layout looks like.
+レイアウトをきれいにするために、複数の `.` 文字を使うことができます。ピリオドの間に空白がない限り、1 つのセルとしてカウントされます。複雑なレイアウトの場合、行と列をきれいに整列させることにはメリットがあります。つまり、このレイアウトがどのようなものであるかを、CSS の中で実際に確認することができるのです。
 
-## Spanning multiple cells
+## 複数のセルにまたがらせる
 
-In our example each of the areas spans multiple grid cells and we achieve this by repeating the name of that grid area multiple times with white space between. You can add extra white space in order to keep your columns neatly lined up in the value of `grid-template-areas`. You can see that I have done this in order that the `hd` and `ft` line up with `main`.
+この例では、それぞれの領域が複数のグリッドセルにまたがっており、グリッド領域の名前を空白を挟んで複数回繰り返すことでこれを実現しています。`grid-template-areas` の値には、列をきれいに並べるための空白を追加することができます。ここでは、`hd` と `ft` が `main` と並ぶようにしていることがわかります。
 
-The area that you create by chaining the area names must be rectangular, at this point there is no way to create an L-shaped area. The specification does note that a future level might provide this functionality. You can however span rows just as easily as columns. For example we could make our sidebar span down to the end of the footer by replacing the `.` with `sd`.
+領域名を連結して作成する領域は長方形でなければならず、現時点では L 字型の領域を作成する方法はありません。仕様書には、将来のレベルでこの機能が提供されるかもしれないと書かれています。しかし、列と同じように簡単に行にまたがらせることができます。例えば、`.` を `sd` に置き換えることで、サイドバーがフッターの端まで広がるようにすることができます。
 
 ```css
 .header {
@@ -225,15 +226,15 @@ The area that you create by chaining the area names must be rectangular, at this
 
 {{ EmbedLiveSample('Spanning_multiple_cells', '300', '330') }}
 
-The value of {{cssxref("grid-template-areas")}} must show a complete grid, otherwise it is invalid (and the property is ignored). This means that you must have the same number of cells for each row, if empty with a full stop character demonstrating that the cell is to be left empty. You will also create an invalid grid if your areas are not rectangular.
+{{cssxref("grid-template-areas")}} の値は、完全なグリッドを示すものでなければならず、そうでない場合は無効となります（また、このプロパティは無視されます）。つまり、各行に同じ数のセルを用意し、空の場合はピリオド文字でそのセルを空欄にすることを示す必要があります。また、領域が長方形でない場合は、無効なグリッドが作成されます。
 
-## Redefining the grid using media queries
+## メディアクエリーによるグリッドの再定義
 
-As our layout is now contained in one part of the CSS, this makes it very easy to make changes at different breakpoints. You can do this by redefining the grid, the position of items on the grid, or both at once.
+レイアウトが CSS の一部分に収まったことで、さまざまなブレークポイントでの変更がとても容易になりました。これは、グリッドの再定義、グリッド上のアイテムの位置の再定義、またはその両方を一度に行うことができます。
 
-When doing this, define the names for your areas outside of any media queries. That way the content area would always be called `main` no matter where on the grid it is placed.
+その際、メディアクエリーの外側で領域の名前を定義します。これにより、コンテンツ領域は、グリッド上のどの位置に配置されても、常に `main` と呼ばれることになります。
 
-For our layout above, we might like to have a very simple layout at narrow widths, defining a single column grid and stacking up our items.
+上のレイアウトでは、狭い幅で 1 列のグリッドを定義し、アイテムを積み重ねていくというとてもシンプルなレイアウトにしたいと考えています。
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -281,7 +282,7 @@ For our layout above, we might like to have a very simple layout at narrow width
 }
 ```
 
-We can then redefine that layout inside media queries to go to our two columns layout, and perhaps take it to a three column layout if the available space is even wider. Note that for the wide layout I keep my nine column track grid, I redefine where items are placed using `grid-template-areas`.
+その後、メディアクエリーの中でレイアウトを再定義して、2 列のレイアウトにしたり、さらに広い空間が必要な場合は 3 列のレイアウトにすることもできます。広いレイアウトでは、9 列のトラックグリッドを維持し、`grid-template-areas` を使用してアイテムを配置する場所を再定義します。
 
 ```css
 @media (min-width: 500px) {
@@ -313,19 +314,19 @@ We can then redefine that layout inside media queries to go to our two columns l
 
 {{ EmbedLiveSample('Redefining_the_grid_using_media_queries', '550', '330') }}
 
-## Using `grid-template-areas` for UI elements
+## UI 要素への `grid-template-areas` の使用
 
-Many of the grid examples you will find online make the assumption that you will use grid for main page layout, however grid can be just as useful for small elements as those larger ones. Using {{cssxref("grid-template-areas")}} can be especially nice as it is easy to see in the code what your element looks like.
+ネット上にあるグリッドの例の多くは、ページのメインレイアウトにグリッドを使うことを前提としていますが、グリッドは小さな要素にも大きな要素と同じように使うことができます。特に {{cssxref("grid-template-areas")}} を使うと、コード上で要素がどのように見えるかを簡単に確認することができます。
 
-### Media object example
+### メディアオブジェクトの例
 
-As a very simple example we can create a “media object”. This is a component with space for an image or other media on one side and content on the other. The image might be displayed on the right or left of the box.
+とても簡単な例として、「メディアオブジェクト」を作成することができます。これは、片側に画像などのメディアを置く空間があり、もう片側にコンテンツを置く空間がある部品です。画像は、ボックスの右または左に表示されます。
 
-![Images showing an example media object design](4_media_objects.png)
+![メディアオブジェクトのデザインを表す図](4_media_objects.png)
 
-Our grid is a two-column track grid, with the column for the image sized at `1fr` and the text `3fr`. If you wanted a fixed width image area, then you could set the image column as a pixel width, and assign the text area `1fr`. A single column track of `1fr` would then take up the rest of the space.
+今回のグリッドは、2 列のトラックグリッドで、画像の列は `1fr` 、テキストは `3fr` の大きさになっています。固定幅の画像領域が必要な場合は、画像の列をピクセル幅に設定して、テキスト領域を `1fr` に割り当てることができます。そうすると、`1fr` の 1 列のトラックが残りの空間を占めることになります。
 
-We give the image area a grid area name of `img` and the text area `content`, then we can lay those out using the `grid-template-areas` property.
+画像領域にはグリッド領域名として `img` を、テキスト領域には `content` を与え、`grid-template-areas` プロパティを使って、これらをレイアウトします。
 
 ```css
 * {box-sizing: border-box;}
@@ -358,17 +359,17 @@ We give the image area a grid area name of `img` and the text area `content`, th
 ```html
 <div class="media">
     <div class="image"></div>
-    <div class="text">This is a media object example.
-      We can use grid-template-areas to switch around the image and text part of the media object.
+    <div class="text">これはメディアオブジェクトの例です。
+      grid-template-areas を使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
     </div>
 </div>
 ```
 
 {{ EmbedLiveSample('Media_object_example', '300', '200') }}
 
-### Displaying the image on the other side of the box
+### ボックスの反対側に画像を表示する
 
-We might want to be able to display our box with the image the other way around. To do this, we redefine the grid to put the `1fr` track last, and flip the values in {{cssxref("grid-template-areas")}}.
+画像付きのボックスを逆に表示させたい場合もあるでしょう。そのためには、グリッドを再定義して `1fr` トラックを最後に置き、{{cssxref("grid-template-areas")}} の値を反転させます。
 
 ```css
 * {box-sizing: border-box;}
@@ -406,35 +407,35 @@ We might want to be able to display our box with the image the other way around.
 ```html
 <div class="media flipped">
     <div class="image"></div>
-    <div class="text">This is a media object example.
-      We can use grid-template-areas to switch around the image and text part of the media object.
+    <div class="text">これはメディアオブジェクトの例です。
+      grid-template-areasを使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
     </div>
 </div>
 ```
 
 {{ EmbedLiveSample('Displaying_the_image_on_the_other_side_of_the_box', '300', '200') }}
 
-## Grid definition shorthands
+## グリッド定義の一括指定
 
-Having looked at various ways of placing items on our grids and many of the properties used to define grid, this is a good time to take a look at a couple of shorthands that are available for defining the grid and many things about it all in one line of CSS.
+グリッドにアイテムを配置するさまざまな方法や、グリッドを定義するための多くのプロパティを見てきましたが、今回は、グリッドを定義するためのいくつかの一括指定と、それに関するさまざまなことを 1 行の CSS で定義する方法を見てみましょう。
 
-These can quickly become difficult to read for other developers, or even your future self. However they are part of the specification and it is likely you will come across them in examples or in use by other developers, even if you choose not to use them.
+これらは、他の開発者や将来の自分にとって、すぐに読みにくいものになってしまうかもしれません。しかし、これらは仕様の一部であり、たとえあなたが使用しなくても、サンプルや他の開発者が使用しているのを目にすることになるでしょう。
 
-Before using any shorthand it is worth remembering that shorthands not only enable the setting of many properties in one go, they also act to **reset things** to their initial values that you do not, or cannot set in the shorthand. Therefore if you use a shorthand, be aware that it may reset things you have applied elsewhere.
+一括指定を使用する前に、一括指定は多くのプロパティを一度に設定できるだけでなく、一括指定で設定しなかった、または設定できなかったものを初期値に**リセット**する働きがあることを覚えておくとよいでしょう。したがって、一括指定を使用する場合は、他の場所で適用したものがリセットされる可能性があることに注意してください。
 
-The two shorthands for the grid container are the Explicit Grid Shorthand `grid-template` and the Grid Definition Shorthand `grid`.
+グリッドコンテナーの 2 つの一括指定は、明示的グリッド一括指定 `grid-template` と、グリッド定義一括指定 `grid` です。
 
 ### `grid-template`
 
-The {{cssxref("grid-template")}} property sets the following properties:
+{{cssxref("grid-template")}} プロパティは次のプロパティを設定します。
 
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-template-columns")}}
 - {{cssxref("grid-template-areas")}}
 
-The property is referred to as the Explicit Grid Shorthand because it is setting those things that you control when you define an explicit grid, and not those which impact any implicit row or column tracks that might be created.
+このプロパティは、明示的なグリッドを定義する際に制御するものであり、作成される暗黙的な行や列のトラックに影響を与えるものではないことから、明示的なグリッドの一括指定と呼ばれています。
 
-The following code creates a layout using {{cssxref("grid-template")}} that is the same as the layout created earlier in this guide.
+次のコードでは、{{cssxref("grid-template")}}を使用して、このガイドで以前に作成したレイアウトと同じレイアウトを作成しています。
 
 ```css
 .wrapper {
@@ -447,13 +448,13 @@ The following code creates a layout using {{cssxref("grid-template")}} that is 
 }
 ```
 
-The first value is our `grid-template-areas` value but we also declare the size of the row at the end of each row. This is what the `minmax(100px, auto)` is doing.
+最初の値は `grid-template-areas` の値ですが、各行の最後に行のサイズも宣言しています。これを行っているのは `minmax(100px, auto)` の部分です。
 
-Then after `grid-template-areas` we have a forward slash, after that is an explicit track listing of column tracks.
+そして、 `grid-template-areas` の後にはスラッシュがあり、その後には列トラックの明示的なトラックリストがあります。
 
 ### `grid`
 
-The {{cssxref("grid")}} shorthand goes a step further and also sets properties used by the implicit grid. So you will be setting:
+{{cssxref("grid")}} 一括指定は、さらに一歩進んで、暗黙のグリッドが使用するプロパティも設定します。つまり、設定するのは次のものです。
 
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-template-columns")}}
@@ -462,7 +463,7 @@ The {{cssxref("grid")}} shorthand goes a step further and also sets properties u
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid-auto-flow")}}
 
-You can use this syntax in the exact same way as the {{cssxref("grid-template")}} shorthand, just be aware than when doing so you will reset the other values set by the property.
+この構文は、{{cssxref("grid-template")}} の一括指定とまったく同じ方法で使用できますが、プロパティで設定されている他の値がリセットされることに注意してください。
 
 ```css
 .wrapper {
@@ -474,6 +475,6 @@ You can use this syntax in the exact same way as the {{cssxref("grid-template")}
 }
 ```
 
-We will revisit the other functionality offered by this shorthand later in these guides when we take a look at auto placement and the grid-auto-flow property.
+この一括指定が提供する他の機能については、後ほど自動配置と grid-auto-flow プロパティを見てみることにします。
 
-If you have worked through these initial guides you now should be in a position to create grid layouts using line-based placement or named areas. Take some time to build some common layout patterns using grid, while there are lots of new terms to learn, the syntax is relatively straightforward. As you develop examples, you are likely to come up with some questions and use cases for things we haven't covered yet. In the rest of these guides we will be looking at some more of the detail included in the specification – in order that you can begin to create advanced layouts with it.
+ここまでの説明で、線ベースの配置や名前の付いた領域を使ったグリッドレイアウトを作成できるようになったと思います。時間をかけて、グリッドを使った一般的なレイアウトパターンを作ってみましょう。新しい用語がたくさん出てきますが、構文は比較的簡単です。例題を作成していくうちに、まだ説明していない疑問や使用例が出てくるかもしれません。このガイドの残りの部分では、グリッドを使って高度なレイアウトを作成できるように、仕様に含まれる詳細な情報を見ていきます。
