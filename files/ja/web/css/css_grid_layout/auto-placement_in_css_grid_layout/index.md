@@ -3,64 +3,20 @@ title: CSS グリッドレイアウトでの自動配置
 slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 tags:
   - CSS
-  - CSS Grids
-  - Guide
+  - CSS グリッド
+  - ガイド
 translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 ---
-<p>CSS グリッドレイアウト仕様書には、作成したグリッド上にアイテムを正確に配置する機能に加えて、グリッドを作成したときに子アイテムの一部またはすべてを配置しなかった場合の動作を制御するルールが含まれています。一連のアイテムでグリッドを作成することで、最も簡単な方法で自動配置を確認することができます。アイテムに配置情報を与えない場合、アイテムはグリッド上の各セルに1つずつ配置されます。</p>
+{{CSSRef}}
 
-<div id="placement_1">
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+CSS グリッドレイアウト仕様書には、作成したグリッド上にアイテムを正確に配置する機能に加えて、グリッドを作成したときに子アイテムの一部またはすべてを配置しなかった場合の動作を制御するルールが含まれています。一連のアイテムでグリッドを作成することで、最も簡単な方法で自動配置を確認することができます。アイテムに配置情報を与えない場合、アイテムはグリッド上の各セルに 1 つずつ配置されます。
 
-.wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-}
+## 既定の配置
 
-.wrapper &gt; div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
-}
-</pre>
-</div>
+アイテムに配置情報を与えない場合は、アイテムはグリッド上に配置され、各グリッドセルに 1 つずつ配置されます。
 
-<pre class="brush: css notranslate">.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-}
-</pre>
-
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-  &lt;div&gt;One&lt;/div&gt;
-  &lt;div&gt;Two&lt;/div&gt;
-  &lt;div&gt;Three&lt;/div&gt;
-  &lt;div&gt;Four&lt;/div&gt;
-  &lt;div&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('placement_1', '500', '230') }}</p>
-</div>
-
-<h2 id="Default_rules_for_auto-placement" name="Default_rules_for_auto-placement">自動配置の既定のルール</h2>
-
-<p>上記の例でわかるように、グリッドを作成すると、すべての子アイテムが各グリッドセルに1つずつ配置されます。既定のフローでは、行ごとにアイテムを配置します。グリッドは、それぞれのアイテムを1行目のそれぞれのセルに配置します。 <code>grid-template-rows</code> プロパティを使用して追加の行を作成した場合は、グリッドはこれらの行にアイテムを配置し続けます。明示的なグリッドにすべてのアイテムを配置するのに十分な行がない場合は、新たに<em>暗黙の</em>行が作成されます。</p>
-
-<h3 id="Sizing_rows_in_the_implicit_grid" name="Sizing_rows_in_the_implicit_grid">暗黙のグリッド内での行の大きさ</h3>
-
-<p>暗黙のグリッドで自動的に作成される行の既定値は、大きさが自動になっています。これは、あふれることなく、それらに追加されたコンテンツを含むことを意味します。</p>
-
-<p>しかし、<code>grid-auto-rows</code>プロパティを使用することで、これらの行の大きさを制御することができます。例えば、全ての作成された行を100ピクセルの高さにするには、次のように使います:</p>
-
-<div id="placement_2">
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -68,41 +24,90 @@ translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-    &lt;div&gt;One&lt;/div&gt;
-    &lt;div&gt;Two&lt;/div&gt;
-    &lt;div&gt;Three&lt;/div&gt;
-    &lt;div&gt;Four&lt;/div&gt;
-    &lt;div&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
+}
+```
+
+```html
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+</div>
+```
+
+{{ EmbedLiveSample('Default_placement', '500', '230') }}
+
+## 自動配置の既定のルール
+
+上記の例でわかるように、グリッドを作成すると、すべての子アイテムが各グリッドセルに 1 つずつ配置されます。既定のフローでは、行ごとにアイテムを配置します。グリッドは、それぞれのアイテムを 1 行目のそれぞれのセルに配置します。 `grid-template-rows` プロパティを使用して追加の行を作成した場合は、グリッドはこれらの行にアイテムを配置し続けます。明示的なグリッドにすべてのアイテムを配置するのに十分な行がない場合は、新たに*暗黙の*行が作成されます。
+
+<h3 id="Sizing_rows_in_the_implicit_grid">暗黙のグリッド内での行の大きさ</h3>
+
+暗黙のグリッドで自動的に作成される行の既定値は、大きさが自動になっています。これは、あふれることなく、それらに追加されたコンテンツを含むことを意味します。
+
+しかし、`grid-auto-rows` プロパティを使用することで、これらの行の大きさを制御することができます。例えば、すべての作成された行を 100 ピクセルの高さにするには、次のように使います。
+
+```css hidden
+* {box-sizing: border-box;}
+
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+
+.wrapper > div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+```
+
+```html
+<div class="wrapper">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+    <div>Four</div>
+    <div>Five</div>
+</div>
+```
+
+```css
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
   grid-auto-rows: 100px;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('placement_2', '500', '330') }}</p>
-</div>
+{{ EmbedLiveSample('Sizing_rows_in_the_implicit_grid', '500', '330') }}
 
-<p>You can use {{cssxref("minmax","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size but then grow to fit content if it is taller.</p>
+<h3 id="Sizing_rows_using_minmax">minmax() を使用した行の大きさの指定</h3>
 
-<div id="placement_3">
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+{{cssxref("minmax()")}} を {{cssxref("grid-auto-rows")}} の値に使用すると、最小サイズでありながら、コンテンツの高さに合わせて成長する行を作成することができます。
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -110,47 +115,48 @@ translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+     <div>One</div>
+     <div>Two</div>
+     <div>Three</div>
+     <div>Four
+     <br>This cell
+     <br>Has extra
+     <br>content.
+     <br>Max is auto
+     <br>so the row expands.
+     </div>
+     <div>Five</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-     &lt;div&gt;One&lt;/div&gt;
-     &lt;div&gt;Two&lt;/div&gt;
-     &lt;div&gt;Three&lt;/div&gt;
-     &lt;div&gt;Four
-     &lt;br&gt;This cell
-     &lt;br&gt;Has extra
-     &lt;br&gt;content.
-     &lt;br&gt;Max is auto
-     &lt;br&gt;so the row expands.
-     &lt;/div&gt;
-     &lt;div&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('placement_3', '500', '330') }}</p>
-</div>
+{{ EmbedLiveSample('Sizing_rows_using_minmax', '500', '330') }}
 
-<p>You can also pass in a track listing, this will repeat. The following track listing will create an initial implicit row track as 100 pixels and a second as <code>200px</code>. This will continue for as long as content is added to the implicit grid.</p>
+<h3 id="Sizing_rows_using_a_track_listing">トラックリストを使用した行の高さの指定</h3>
 
-<div id="placement_4">
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+また、トラックリストを渡すこともでき、これは繰り返されます。次のトラックリストでは、最初の暗黙の行トラックを 100 ピクセル、2 番目を `200px` として作成します。これは、暗黙のグリッドに内容物が追加される限り、継続されます。
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -158,104 +164,57 @@ translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+   <div>Six</div>
+   <div>Seven</div>
+   <div>Eight</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-   &lt;div&gt;One&lt;/div&gt;
-   &lt;div&gt;Two&lt;/div&gt;
-   &lt;div&gt;Three&lt;/div&gt;
-   &lt;div&gt;Four&lt;/div&gt;
-   &lt;div&gt;Five&lt;/div&gt;
-   &lt;div&gt;Six&lt;/div&gt;
-   &lt;div&gt;Seven&lt;/div&gt;
-   &lt;div&gt;Eight&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-rows: 100px 200px;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('placement_4', '500', '330') }}</p>
-</div>
+{{ EmbedLiveSample('Sizing_rows_using_a_track_listing', '500', '450') }}
 
-<h3 id="Auto-placement_by_column" name="Auto-placement_by_column">Auto-placement by column</h3>
+<h3 id="Auto-placement_by_column">列ごとの自動配置</h3>
 
-<p>You can also ask grid to auto-place items by column. Using the property {{cssxref("grid-auto-flow")}} with a value of <code>column</code>. In this case grid will add items in rows that you have defined using {{cssxref("grid-template-rows")}}. When it fills up a column it will move onto the next explicit column, or create a new column track in the implicit grid. As with implicit row tracks, these column tracks will be auto sized. You can control the size of implicit column tracks with {{cssxref("grid-auto-columns")}}, this works in the same way as {{cssxref("grid-auto-rows")}}.</p>
+グリッドにアイテムを列ごとに自動配置させることもできます。 {{cssxref("grid-auto-flow")}} プロパティに `column` という値を指定します。この場合、グリッドは {{cssxref("grid-template-rows")}} を使って定義した行にアイテムを追加します。列が一杯になると、次の明示的な列に移動するか、暗黙的なグリッドに新しい列トラックを作成します。暗黙の行トラックと同様に、これらの列トラックのサイズは自動的に調整されます。暗黙の列トラックのサイズは {{cssxref("grid-auto-columns")}} で制御できますが、これは {{cssxref("grid-auto-rows")}} と同様に動作します。
 
-<p>In this next example I have created a grid with three row tracks of 200 pixels height. I am auto-placing by column and the columns created will be a column width of 300 pixels, then a column width of 100 pixels until there are enough column tracks to hold all of the items.</p>
+次の例では、高さ 200 ピクセルの 3 列のトラックを持つグリッドを作成しています。列ごとに自動配置していますが、作成される列は、 300 ピクセルの列幅、 100 ピクセルの列幅となり、すべてのアイテムを配置するのに十分な列トラックができるまで続きます。
 
-<div id="placement_5">
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
     display: grid;
     grid-template-rows: repeat(3, 200px);
-    grid-gap: 10px;
+    gap: 10px;
     grid-auto-flow: column;
     grid-auto-columns: 300px 100px;
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
-
-.wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-}
-
-.wrapper &gt; div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
-}
-</pre>
-</div>
-
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-   &lt;div&gt;One&lt;/div&gt;
-   &lt;div&gt;Two&lt;/div&gt;
-   &lt;div&gt;Three&lt;/div&gt;
-   &lt;div&gt;Four&lt;/div&gt;
-   &lt;div&gt;Five&lt;/div&gt;
-   &lt;div&gt;Six&lt;/div&gt;
-   &lt;div&gt;Seven&lt;/div&gt;
-   &lt;div&gt;Eight&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('placement_5', '500', '640') }}</p>
-</div>
-
-<h2 id="The_order_of_auto_placed_items" name="The_order_of_auto_placed_items">The order of auto placed items</h2>
-
-<p>A grid can contain a mixture of items. Some of the items may have a position on the grid, but others may be auto-placed. This can be helpful, if you have a document order that reflects the order in which items sit on the grid you may not need to write CSS rules to place absolutely everything. The specification contains a long section detailing the <a href="https://drafts.csswg.org/css-grid/#auto-placement-algo">Grid item placement algorithm</a>, however for most of us we just need to remember a few simple rules for our items.</p>
-
-<h3 id="Order_modified_document_order" name="Order_modified_document_order">Order modified document order</h3>
-
-<p>Grid places items that have not been given a grid position in what is described in the specification as “order modified document order”. This means that if you have used the <code>order</code> property at all, the items will be placed by that order, not their DOM order. Otherwise they will stay by default in the order that they are entered in the document source.</p>
-
-<h3 id="Items_with_placement_properties" name="Items_with_placement_properties">Items with placement properties</h3>
-
-<p>The first thing grid will do is place any items that have a position. In the example below I have 12 grid items. Item 2 and item 5 have been placed using line based placement on the grid. You can see how those items are placed and the other items then auto-place in the spaces. The auto-placed items will place themselves before the placed items in DOM order, they don’t start after the position of a placed item that comes before them.</p>
-
-<div id="placement_6">
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -263,37 +222,83 @@ translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+   <div>Six</div>
+   <div>Seven</div>
+   <div>Eight</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-   &lt;div&gt;One&lt;/div&gt;
-   &lt;div&gt;Two&lt;/div&gt;
-   &lt;div&gt;Three&lt;/div&gt;
-   &lt;div&gt;Four&lt;/div&gt;
-   &lt;div&gt;Five&lt;/div&gt;
-   &lt;div&gt;Six&lt;/div&gt;
-   &lt;div&gt;Seven&lt;/div&gt;
-   &lt;div&gt;Eight&lt;/div&gt;
-   &lt;div&gt;Nine&lt;/div&gt;
-   &lt;div&gt;Ten&lt;/div&gt;
-   &lt;div&gt;Eleven&lt;/div&gt;
-   &lt;div&gt;Twelve&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+{{ EmbedLiveSample('Auto-placement_by_column', '500', '700') }}
 
-<pre class="brush: css notranslate">.wrapper {
+## 自動配置アイテムの順序
+
+グリッドには複数のアイテムを混在させることができます。グリッド上の位置を指定できるアイテムもあれば、自動配置されるアイテムもあります。これは便利なことで、グリッド上のアイテムの配置順を文書の順序に反映させれば、すべてのアイテムを配置するために CSS ルールを記述する必要がなくなるかもしれません。仕様書には、[グリッドアイテム配置アルゴリズム](https://drafts.csswg.org/css-grid/#auto-placement-algo)という長い節がありますが、ほとんどの場合、アイテムのためのいくつかの簡単なルールを覚えておくだけで十分です。
+
+### order が文書順を変更
+
+Gridは、グリッド位置が与えられていないアイテムを、仕様書では "order modified document order" と表現されている通りに配置します。これは、`order` プロパティを使用している場合、DOM の順序ではなく、その順序でアイテムが配置されることを意味します。それ以外の場合は、既定では文書のソースに入力された順に配置されます。
+
+<h3 id="Items_with_placement_properties">配置プロパティのあるアイテム</h3>
+
+グリッドはまず、位置を指定したアイテムを配置します。以下の例では、 12 個のグリッドアイテムがあります。アイテム 2 とアイテム 5 は、グリッド上にラインベースで配置されています。これらのアイテムが配置されると、他のアイテムが自動的にスペースに配置されるのがわかります。自動配置されたアイテムは、 DOM順に配置されたアイテムの前に配置され、前に配置されたアイテムの位置より後に開始されることはありません。
+
+```css hidden
+* {box-sizing: border-box;}
+
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+
+.wrapper > div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+```
+
+```html
+<div class="wrapper">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+   <div>Six</div>
+   <div>Seven</div>
+   <div>Eight</div>
+   <div>Nine</div>
+   <div>Ten</div>
+   <div>Eleven</div>
+   <div>Twelve</div>
+</div>
+```
+
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
-  grid-gap: 10px;
+  gap: 10px;
 }
  .wrapper div:nth-child(2) {
    grid-column: 3;
@@ -303,57 +308,56 @@ translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
    grid-column: 1 / 3;
    grid-row: 1 / 3;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('placement_6', '500', '450') }}</p>
-</div>
+{{ EmbedLiveSample('Items_with_placement_properties', '500', '500') }}
 
-<h3 id="Deal_with_items_that_span_tracks" name="Deal_with_items_that_span_tracks">Deal with items that span tracks</h3>
+<h3 id="Deal_with_items_that_span_tracks">複数のトラックにまたがるアイテムの扱い</h3>
 
-<p>You can use placement properties while still taking advantage of auto-placement. In this next example I have added to the layout by setting odd items to span two tracks both for rows and columns. I do this with the {{cssxref("grid-column-end")}} and {{cssxref("grid-row-end")}} properties and setting the value of this to <code>span 2</code>. What this means is that the start line of the item will be set by auto-placement, and the end line will span two tracks.</p>
+自動配置を利用しながら、配置プロパティを使用することができます。次の例では、奇数のアイテムが行と列の両方で 2 つのトラックにまたがるように設定することで、レイアウトを追加しています。これには {{cssxref("grid-column-end")}} と {{cssxref("grid-row-end")}} プロパティを使用し、その値を `span 2` に設定しています。これにより、アイテムの先頭の線は自動配置で設定され、末尾の線は 2 つのトラックにまたがることになります。
 
-<p>You can see how this then leaves gaps in the grid, as for the auto-placed items if grid comes across an item that doesn’t fit into a track, it will move to the next row until it finds a space the item can fit in.</p>
+自動配置されたアイテムの場合、トラックに収まらないアイテムに遭遇すると、アイテムが収まる空間を見つけるまで次々と行を移動するため、グリッドに隙間ができてしまいます。
 
-<div id="placement_7">
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+   <div>Six</div>
+   <div>Seven</div>
+   <div>Eight</div>
+   <div>Nine</div>
+   <div>Ten</div>
+   <div>Eleven</div>
+   <div>Twelve</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-   &lt;div&gt;One&lt;/div&gt;
-   &lt;div&gt;Two&lt;/div&gt;
-   &lt;div&gt;Three&lt;/div&gt;
-   &lt;div&gt;Four&lt;/div&gt;
-   &lt;div&gt;Five&lt;/div&gt;
-   &lt;div&gt;Six&lt;/div&gt;
-   &lt;div&gt;Seven&lt;/div&gt;
-   &lt;div&gt;Eight&lt;/div&gt;
-   &lt;div&gt;Nine&lt;/div&gt;
-   &lt;div&gt;Ten&lt;/div&gt;
-   &lt;div&gt;Eleven&lt;/div&gt;
-   &lt;div&gt;Twelve&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
-  grid-gap: 10px;
+  gap: 10px;
 }
 .wrapper div:nth-child(4n+1) {
   grid-column-end: span 2;
@@ -368,55 +372,54 @@ translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
    grid-column: 1 / 3;
    grid-row: 1 / 3;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('placement_7', '500', '770') }}</p>
-</div>
+{{ EmbedLiveSample('Deal_with_items_that_span_tracks', '500', '800') }}
 
-<h3 id="Filling_in_the_gaps" name="Filling_in_the_gaps">Filling in the gaps</h3>
+<h3 id="Filling_in_the_gaps">溝を埋める</h3>
 
-<p>So far, other than items we have specifically placed, grid is always progressing forward and keeping items in DOM order. This is generally what you want, if you are laying out a form for example you wouldn’t want the labels and fields to become jumbled up in order to fill in some gap. However sometimes, we are laying things out that don’t have a logical order and we would like to create a layout that doesn’t have gaps in it.</p>
+これまでのところ、特別に配置したアイテムを除いて、グリッドは常に前進し、アイテムを DOM 順に並べています。これは一般的には望ましいことです。例えば、フォームをレイアウトする場合、隙間を埋めるためにラベルやフィールドがごちゃごちゃになってしまうのは避けたいものです。しかし、時には、論理的な順序ではないものをレイアウトすることがあり、隙間のないレイアウトを作成したいことがあります。
 
-<p>To do this, add the property {{cssxref("grid-auto-flow")}} with a value of <code>dense</code> to the container. This is the same property you use to change the flow order to <code>column</code>, so if you were working in columns you would add both values <code>grid-auto-flow: column dense</code>.</p>
+そのためには、コンテナーにプロパティ {{cssxref("grid-auto-flow")}} を `dense` の値で追加します。これは、フローの順番を `column` に変更するときに使用するプロパティと同じなので、列で作業する場合は、両方の値 `grid-auto-flow: column dense` を追加します。
 
-<p>Having done this, grid will now backfill the gaps, as it moves through the grid it leaves gaps as before, but then if it finds an item that will fit in a previous gap it will pick it up and take it out of DOM order to place it in the gap. As with any other reordering in grid this does not change the logical order. Tab order for example, will still follow the document order. We will take a look at the potential accessibility issues of Grid Layout in a later guide, but you should take care when creating this disconnect between the visual order and display order.</p>
+グリッドの中を移動すると、以前のように隙間ができますが、以前の隙間に収まるアイテムを見つけると、それを拾って DOM 順から外し、隙間に配置します。グリッド内の他の順序変更と同様に、これは論理的な順序を変更するものではありません。例えば、タブの順序は文書の順序に従います。グリッドレイアウトの潜在的なアクセシビリティの問題については、後のガイドで見ていきますが、視覚的な順序と表示の順序の間に断絶を設ける場合には注意が必要です。
 
-<div id="placement_8">
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div>One</div>
+   <div>Two</div>
+   <div>Three</div>
+   <div>Four</div>
+   <div>Five</div>
+   <div>Six</div>
+   <div>Seven</div>
+   <div>Eight</div>
+   <div>Nine</div>
+   <div>Ten</div>
+   <div>Eleven</div>
+   <div>Twelve</div>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-   &lt;div&gt;One&lt;/div&gt;
-   &lt;div&gt;Two&lt;/div&gt;
-   &lt;div&gt;Three&lt;/div&gt;
-   &lt;div&gt;Four&lt;/div&gt;
-   &lt;div&gt;Five&lt;/div&gt;
-   &lt;div&gt;Six&lt;/div&gt;
-   &lt;div&gt;Seven&lt;/div&gt;
-   &lt;div&gt;Eight&lt;/div&gt;
-   &lt;div&gt;Nine&lt;/div&gt;
-   &lt;div&gt;Ten&lt;/div&gt;
-   &lt;div&gt;Eleven&lt;/div&gt;
-   &lt;div&gt;Twelve&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">.wrapper div:nth-child(4n+1) {
+```css
+.wrapper div:nth-child(4n+1) {
   grid-column-end: span 2;
   grid-row-end: span 2;
   background-color: #ffa94d;
@@ -433,103 +436,65 @@ translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
-  grid-gap: 10px;
+  gap: 10px;
   grid-auto-flow: dense;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('placement_8', '500', '730') }}</p>
+{{ EmbedLiveSample('Filling_in_the_gaps', '500', '730') }}
+
+<h3 id="Anonymous_grid_items">無名のグリッドアイテム</h3>
+
+仕様書には、無名のグリッドアイテムについての記述があります。これは、グリッドコンテナーの中に、他の要素に包まれていない文字列がある場合に作成されます。下の例では、クラスが `grid` の親を `display: grid` に設定したと仮定して、 3 つのグリッドアイテムがあります。最初のアイテムは無名のアイテムで、周囲にマークアップがないため、常に自動配置のルールで処理されます。他の 2 つは、 div で囲まれたグリッドアイテムで、自動配置されるか、配置メソッドを使ってグリッドに配置することができます。
+
+```css
+<div class="grid">
+  この文字列は無名のアイテムになります。
+  <div>グリッドアイテムです</div>
+  <div>グリッドアイテムです</div>
 </div>
+```
 
-<h3 id="Anonymous_grid_items" name="Anonymous_grid_items">Anonymous grid items</h3>
+無名のアイテムは、ターゲットにする方法がないため、常に自動配置されます。そのため、何らかの理由で囲まれていないされていないテキストがグリッド内にある場合、自動配置ルールに従って自動配置されるため、予期せぬ場所に表示される可能性があります。
 
-<p>There is a mention in the specification of anonymous grid items. These are created if you have a string of text inside your grid container, that is not wrapped in any other element. In the example below we have three grid items, assuming you had set the parent with a class of <code>grid</code> to <code>display: grid</code>. The first is an anonymous item as it has no enclosing markup, this item will always be dealt with via the auto-placement rules. The other two are grid items enclosed in a div, they might be auto-placed or you could place these with a positioning method onto your grid.</p>
+<h3 id="Use_cases_for_auto-placement">auto-placement の用途</h3>
 
-<pre class="brush: css notranslate">&lt;div class="grid"&gt;
-  I am a string and will become an anonymous item
-  &lt;div&gt;A grid item&lt;/div&gt;
-  &lt;div&gt;A grid item&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+自動配置は、アイテムのコレクションがある場合に便利です。例えば、写真のギャラリーや製品リストなど、論理的な順序になっていないアイテムがあるかもしれません。そのような場合には、高密度パッキングモードを使ってグリッドの穴を埋めることができます。画像ギャラリーの例では、横向きの画像と縦向きの画像があります。横長の画像は、クラスを `landscape` に設定して、2 列のトラックにまたがるようにしています。そして、 `grid-auto-flow: dense` を使用して、密集したグリッドを作成しています。
 
-<p>Anonymous items are always auto-placed because there is no way to target them. Therefore if you have some unwrapped text for some reason in your grid, be aware that it might show up somewhere unexpected as it will be auto-placed according to the auto-placement rules.</p>
+この `grid-auto-flow: dense` の行を削除してみると、内容が並べなおされてレイアウトに隙間ができるのがわかります。
 
-<h3 id="Use_cases_for_auto-placement" name="Use_cases_for_auto-placement">Use cases for auto-placement</h3>
+{{EmbedGHLiveSample("css-examples/grid/docs/autoplacement.html", '100%', 1200)}}
 
-<p>Auto-placement is useful whenever you have a collection of items. That could be items that do not have a logical order such as a gallery of photos, or product listing. In that case you might choose to use the dense packing mode to fill in any holes in your grid. In my image gallery example I have some landscape and some portrait images. I have set landscape images – with a class of <code>landscape</code> to span two column tracks. I then use <code>grid-auto-flow: dense</code> to create a densely packed grid.</p>
+自動配置は、論理的な順序を持つインターフェイスアイテムを配置する際にも役立ちます。その例が次の例の定義リストです。定義リストはスタイル付けするのに興味深い課題です。平坦であり、 `dt` と `dd` のアイテムのグループを包むものが何もないためです。この例では、自動配置でアイテムを配置していますが、列 1 では `dt`、列 2 では `dd` で始まるクラスを用意しています。これにより、用語がいくつあっても、片方に用語、片方に定義を配置することができます。
 
-<div id="placement_9">
-<pre class="brush: css notranslate">.wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    grid-gap: 10px;
-    grid-auto-flow: dense;
-    list-style: none;
-    margin: 1em auto;
-    padding: 0;
-    max-width: 800px;
-}
-.wrapper li {
-    border: 1px solid #ccc;
-}
-.wrapper li.landscape {
-    grid-column-end: span 2;
-}
-.wrapper li img {
-   display: block;
-   object-fit: cover;
-   width: 100%;
-   height: 100%;
-}
-</pre>
-
-<pre class="brush: html notranslate">&lt;ul class="wrapper"&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li class="landscape"&gt;&lt;img src="https://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li class="landscape"&gt;&lt;img src="https://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li class="landscape"&gt;&lt;img src="https://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li class="landscape"&gt;&lt;img src="https://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('placement_9', '500', '1300') }}</p>
-</div>
-
-<p>Auto-placement can also help you lay out interface items which do have logical order. An example is the definition list in this next example. Definition lists are an interesting challenge to style as they are flat, there is nothing wrapping the groups of <code>dt</code> and <code>dd</code> items. In my example I am allowing auto-placement to place the items, however I have classes that start a <code>dt</code> in column 1, and <code>dd</code> in column 2, this ensure that terms go on one side and definitions on the other - no matter how many of each we have.</p>
-
-<div id="placement_10">
-<div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <dl>
+       <dt>哺乳類</dt>
+       <dd>猫</dd>
+       <dd>犬</dd>
+       <dd>鼠</dd>
+       <dt>魚類</dt>
+       <dd>グッピー</dd>
+       <dt>鳥類</dt>
+       <dd>ハクセキレイ</dd>
+       <dd>フクロウ</dd>
+   </dl>
 </div>
+```
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-   &lt;dl&gt;
-       &lt;dt&gt;Mammals&lt;/dt&gt;
-       &lt;dd&gt;Cat&lt;/dd&gt;
-       &lt;dd&gt;Dog&lt;/dd&gt;
-       &lt;dd&gt;Mouse&lt;/dd&gt;
-       &lt;dt&gt;Fish&lt;/dt&gt;
-       &lt;dd&gt;Guppy&lt;/dd&gt;
-       &lt;dt&gt;Birds&lt;/dt&gt;
-       &lt;dd&gt;Pied Wagtail&lt;/dd&gt;
-       &lt;dd&gt;Owl&lt;/dd&gt;
-   &lt;/dl&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css notranslate">dl {
+```css
+dl {
   display: grid;
   grid-template-columns: auto 1fr;
   max-width: 300px;
@@ -543,71 +508,12 @@ dt {
 dd {
    grid-column: 2;
  }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('placement_10', '500', '230') }}</p>
-</div>
+{{ EmbedLiveSample('Use_cases_for_auto-placement', '500', '230') }}
 
-<h2 id="What_can’t_we_do_with_auto-placement_yet">What can’t we do with auto-placement (yet)?</h2>
+<h2 id="What_can’t_we_do_with_auto-placement_yet">auto-placement では（まだ）できないこと</h2>
 
-<p>There are a couple of things that often come up as questions. Currently we can’t do things like target every other cell of the grid with our items. A related issue may have already come to mind if you followed the last guide about named lines on the grid. It would be to define a rule that said “auto-place items against the next line named “n”, and grid would then skip other lines.There is <a href="https://github.com/w3c/csswg-drafts/issues/796">an issue raised about this</a> on the CSSWG GitHub repository, and you would be welcome to add your own use cases to this.</p>
+よく疑問に思うことがいくつかあります。現在のところ、グリッドのすべてのセルにアイテムを配置するようなことはできません。前回の「グリッド上の名前付きライン」のガイドをご覧になった方は、関連する問題をすでに思い浮かべているかもしれません。 CSSWG の GitHub リポジトリに[これに関する問題提起](https://github.com/w3c/csswg-drafts/issues/796)がありますので、自分の用途を追加してみてはいかがでしょうか。
 
-<p>It may be that you come up with your own use cases for auto-placement or any other part of grid layout. If you do, raise them as issues or add to an existing issue that could solve your use case. This will help to make future versions of the specification better.</p>
-
-<section id="Quick_links">
-<ol>
- <li><a href="/ja/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/ja/docs/Web/CSS/Reference"><strong>CSS リファレンス</strong></a></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout">CSS グリッドレイアウト</a></li>
- <li data-default-state="open"><a href="#"><strong>ガイド</strong></a>
-  <ol>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">グリッドレイアウトの基本概念</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">他のレイアウト方法との関連</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">行ベースの配置</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">グリッドテンプレート領域</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">名前付きグリッド線を使用したレイアウト</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">グリッドレイアウトの自動配置</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">グリッドレイアウトのボックス配置</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">グリッド、論理値、書字方向</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS グリッドレイアウトとアクセシビリティ</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS グリッドレイアウトと進歩的な拡張</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">グリッドを使ったよくあるレイアウトの実現</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>プロパティ</strong></a>
-  <ol>
-   <li><a href="/ja/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>用語集</strong></a>
-  <ol>
-   <li><a href="/ja/docs/Glossary/Grid">グリッド</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_lines">グリッド線</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_tracks">グリッドトラック</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_cell">グリッドセル</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_areas">グリッド領域</a></li>
-   <li><a href="/ja/docs/Glossary/Gutters">溝</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_Axis">グリッド軸</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_rows">グリッド行</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_column">グリッド列</a></li>
-  </ol>
- </li>
-</ol>
-</section>
+自動配置やグリッドレイアウトの他の部分について、独自の用途を思いつくかもしれません。そのような場合には、用途を解決するための課題として提起するか、既存の課題に追加してください。これにより、将来のバージョンの仕様をより良いものにすることができます。
