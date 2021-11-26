@@ -1,842 +1,492 @@
 ---
-title: MDN样式指南
+title: MDN 的 Markdown
 slug: MDN/Contribute/Markdown_in_MDN
-translation_of: MDN/Guidelines/CSS_style_guide
-original_slug: MDN/Guidelines/CSS_style_guide
+tags:
+  - MDN
+translation_of: MDN/Contribute/Markdown_in_MDN
 ---
-<p>MDN有许多内置的全局样式，可以在设置文章样式和布局文章时使用，本文是可用类以及何时使用它们的指南。其中一些样式可以通过MDN编辑器的工具栏访问。在这种情况下，我们将在样式标题下包含短语“编辑工具栏”，以及相关工具栏按钮的图像。</p>
+{{MDNSidebar}}
 
-<p>请注意，这些样式的开发是为了涵盖在设置文章内容样式时出现的最常见情况，并且只要可能，您就应该尝试使用可用的类；与标准内容的外观相差太大不利于一致性和可读性。如果你觉得你的页面绝对需要某种特殊的定制样式，你应该首先在MDN讨论论坛中提出这个主题。</p>
+本文介绍了如何使用 Markdown 来编写 MDN 上的文档。我们以 GitHub 风格的 Markdown（GFM）为基础，并添加了一些扩展来支持一些我们在 MDN 上需要而 GFM 仍不支持的东西。
 
-<div class="blockIndicator note">
-<p><strong>注意：如果要搜索MDN上使用给定类的位置，可以</strong>使用表单的URL执行此操作</p>
+## 基础：Github风格的Markdown
 
-<p><code>https://developer.mozilla.org/en-US/search?locale=en-US&amp;css_classnames=<var>desired-css-class</var></code>.   例如，要查找使用卡片网格布局的页面，请尝试URL<a href="/zh-CN/search?locale=*&amp;css_classnames=card-grid">/zh-CN/search?locale=*&amp;css_classnames=card-grid</a>.</p>
+MDN Markdown 的基础是 Github 风格的 Markdown（GFM）：<https://github.github.com/gfm/>。这意味着，对于本文中未指定的内容，你可以参考 GFM 规范。而 GFM 又是 CommonMark（[https://spec.commonmark.org/](https://spec.commonmark.org/)）的超集。
+
+## 示例代码块
+
+在 GFM 和 CommonMark 中，你可以使用“围栏代码块”来标示 `<pre>` 块。围栏代码块的起始位置后可以添加“信息字符串”。规范中写道：
+
+> 信息字符串的第一个单词常用于指定示例代码的语言，并在代码标签的 class 属性中渲染出来。
+
+信息字符串可包含多个单词，例如：
+
+````plain
+```fee fi fo fum
+// some example code
+```
+````
+
+在 MDN，你可以使用围栏代码块展现示例代码块。且必须使用信息字符串的第一个单词指定示例代码的语言，这将用于提供代码块的语法高亮。MDN 支持以下的语言词：
+
+- `bash`
+- `cpp`（对于 C/C++）
+- `css`
+- `html`
+- `java`
+- `js`（对于 JavaScript）
+- `json`
+- `php`
+- `python`
+- `sql`
+- `svg`
+- `xml`
+- `wasm`（对于 WebAssembly 文本格式）
+
+例如：
+
+````plain
+```js
+const greeting = "I will get syntax highlighting";
+```
+````
+
+你可以使用以下提供的任意一个附加词，但它必须跟在语言词之后：
+
+- `example-good`：将其标注为一个好的例子（可被参考）
+- `example-bad`：将其标注为一个不好的例子（应避免使用）
+- `hidden`：不在网页中展示此代码块，用于 Live Sample。
+
+例如：
+
+````plain
+```js example-good
+const greeting = "I'm a good example";
+```
+
+```js example-bad
+const greeting = "I'm a bad example";
+```
+````
+
+它们将被渲染为：
+
+```js example-good
+const greeting = "I'm a good example";
+```
+
+```js example-bad
+const greeting = "I'm a bad example";
+```
+
+### 讨论参考
+
+此议题已被解决：<https://github.com/mdn/content/issues/3512>。
+
+## 备注、警告和标注
+
+如果你需要特别声明一些内容。那么，可以使用一个带有特殊起始段落的 GFM 块引用。一共有三种类型：备注、警告和标注。
+
+- 要添加备注，请创建一个 GFM 块引用，起始段落以 `**备注：**` 开头。
+- 要添加警告，请创建一个 GFM 块引用，起始段落以 `**警告：**` 开头。
+- 要添加标注，请创建一个 GFM 块引用，起始段落以 `**标注：**` 开头。
+
+备注和警告将在输出中渲染为 **注释：** 或 **警告：** 文本，而标注不会。当你想要提供自定义标题时，标注会是一个不错的选择。
+
+标记的处理是是基于生成的 AST，而不是指定的确切字符。这意味着，使用 `<strong>备注：</strong>` 也会生成注释。但是，请以 Markdown 语法为主要风格。
+
+块引用中的多行由空的块引用生成，就像普通的段落一样。此外，没有空格的多行会像常规 Markdown 行一样被处理和连接。
+
+块引用可以包含代码块和其他块级元素。
+
+因为文本 **备注：** 或 **警告：** 也会出现在渲染输出中，因此必须考虑到翻译问题。实际上，这意味这 MDN 支持的每一种语言环境都必须提供这些字符串的翻译，平台必须认识到它们表明了这些结构需要特殊处理。
+
+#### 例子
+
+##### 备注
+
+```plain
+> **备注：** This is how you write a note.
+>
+> It can have multiple lines.
+```
+
+这将会产生以下 HTML：
+
+```html
+<div class="notecard note">
+  <p><strong>备注：</strong> This is how you write a note.</p>
+  <p>It can have multiple lines.</p>
 </div>
+```
 
-<div class="blockIndicator warning">
-<p><strong>重要提示</strong>: 本指南不完整。有关如何帮助我们完成此指南的信息，请参阅“更新此指南”。</p>
+此 HTML 将渲染为高亮显示的框，例如：
+
+> **备注：** This is how you write a note.
+>
+> It can have multiple lines.
+
+##### 警告
+
+```plain
+> **警告：** This is how you write a warning.
+>
+> It can have multiple paragraphs.
+```
+
+这将会产生以下 HTML：
+
+```html
+<div class="notecard warning">
+  <p><strong>警告：</strong> This is how you write a warning.</p>
+  <p>It can have multiple paragraphs.</p>
 </div>
+```
 
-<h2 id="内联样式">内联样式</h2>
+此 HTML 将渲染为高亮显示的框，例如：
 
-<p>本节列出MDN上样式内容块可用的内联样式。</p>
+> **警告：** This is how you write a warning.
+>
+> It can have multiple paragraphs.
 
-<h3 id=".button"><code>.button</code></h3>
+##### 标注
 
-<p>MDN提供任何button样式。通常用于设置链接样式（出于安全原因，HTMLElement（“button”）元素从文章源代码中剥离。）</p>
+```plain
+> **标注：** **This is how you write a callout**.
+>
+> It can have multiple paragaphs.
+```
 
-<p><a class="button" href="https://github.com/mdn/simple-web-worker/archive/gh-pages.zip">下载源代码</a></p>
+这将会产生以下 HTML：
 
-<details>
-<h4 id="Example_syntax">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;a href="https://github.com/mdn/simple-web-worker/archive/gh-pages.zip" class="button"&gt;Download source code&lt;/a&gt;</pre>
-</details>
-
-<h3 id=".external-icon_and_.ignore-external"><code style="white-space: nowrap;">.external-icon</code> and <code style="white-space: nowrap;">.ignore-external</code></h3>
-
-<p>指向MDN外部内容的链接会自动设置格式，以便将类外部图标添加到这些链接中，从而创建一个图标，指示它们离开站点。但是，在某些情况下，此图标是不需要的，并且会干扰其他样式。可以通过将忽略外部类添加到链接中来删除它。</p>
-
-<div class="blockIndicator note">
-<p><strong>注意:</strong> 大多数时候，我们不想用这些。外部图标将自动添加，以帮助防止用户在不知不觉中离开MDN。唯一通常可以接受的用例是指向特定于MDN的域或子域的链接，例如我们用于示例代码或其他服务的那些域或子域。</p>
+```html
+<div class="callout">
+  <p><strong>This is how you write a callout.</strong></p>
+  <p>It can have multiple paragraphs.</p>
 </div>
+```
 
-<p><a href="/">Link to MDN</a><br>
- <a href="http://wikipedia.org">Link away from MDN</a><br>
- <a class="ignore-external" href="http://wikipedia.org">Link away from MDN with <code style="white-space: nowrap;">ignore-external</code></a></p>
+此 HTML 将渲染为高亮显示的框，例如：
 
-<details>
-<h4 id="Example_syntax_2">Example syntax</h4>
+> **标注：**
+>
+> **This is how you write a callout.**
+>
+> It can have multiple paragraphs.
 
-<pre class="brush: html notranslate">&lt;a href="/"&gt;Link to MDN&lt;/a&gt;
-&lt;a href="http://wikipedia.org"&gt;Link away from MDN&lt;/a&gt;
-&lt;a href="http://wikipedia.org" class="ignore-external"&gt;Link away from MDN with &lt;code&gt;ignore-external&lt;/code&gt;&lt;/a&gt;</pre>
-</details>
+##### 警告的翻译
 
-<h3 id=".glossaryLink"><code>.glossaryLink</code></h3>
+例如，如果我们想在德语中使用“Warnung”来表示“警告”，那么我们在德语页面应该写：
 
-<p>这是一个类，用于设置词汇表链接的样式，以使它们在页面上不那么显眼。这个类是使用KumaScript宏添加的，如常用宏中所述，因此不会手动插入。</p>
+```plain
+> Warnung: So schreibt man eine Warnung.
+```
 
-<details>
-<h4 id="Example_macro_syntax">Example macro syntax</h4>
+...这会产生：
 
-<p>\{{Glossary("HTML")}}</p>
-</details>
-
-<h3 id=".hidden"><code>.hidden</code></h3>
-
-<p>允许您隐藏wiki文章中的内容，但可以在编辑器中查看。通常，这用于向创建实时代码示例的脚本提供HTML、CSS和JavaScript，而只向读者显示相关语言。</p>
-
-<details>
-<h4 id="Example_syntax_3">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;h4 id="Hidden_Code_Sample" name="Hidden_Code_Sample"&gt;Hidden code Sample&lt;/h4&gt;
-
-&lt;div class="hidden"&gt;
-&lt;h5 id="HTML"&gt;HTML&lt;/h5&gt;
-
-&lt;pre class="brush: html;"&gt;
-&amp;lt;button id="test"&amp;gt; Click me &amp;lt;/button&amp;gt;
-
-&lt;h5 id="CSS"&gt;CSS&lt;/h5&gt;
-
-&lt;pre class="brush: css;"&gt;
-button {
-    background-color: #a00;
-    color:#fff;
-    font-size: 20px;
-}
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h5 id="JavaScript_Content"&gt;JavaScript Content&lt;/h5&gt;
-
-&lt;pre class="brush: js;"&gt;
-document.getElementById("test").addEventListener("click", works);
-function works() {
-    window.alert("you clicked it!");
-}
-&lt;/pre&gt;
-
-&lt;p&gt;\{{EmbedLiveSample("Hidden_Code_Sample")}}&lt;/p&gt;
-</pre>
-
-<h4 id="Hidden_Code_Sample" name="Hidden_Code_Sample">Hidden code Sample</h4>
-
-<div class="hidden">
-<h5 id="HTML">HTML</h5>
-
-<pre class="brush: html notranslate">&lt;button id="test"&gt;Click Me&lt;/button&gt;
-</pre>
-
-<h5 id="CSS">CSS</h5>
-
-<pre class="brush: css notranslate">button{
-    background-color: #a00;
-    color:#fff;
-    font-size: 20px;
-}
-</pre>
+```html
+<div class="notecard warning">
+  <p><strong>Warnung:</strong> So schreibt man eine Warnung.</p>
 </div>
+```
 
-<h5 id="JavaScript">JavaScript</h5>
+#### 包含代码块的备注
 
-<pre class="brush: js notranslate">document.getElementById("test").addEventListener("click", works);
-function works(){
-    window.alert("you clicked it!");
-}
-</pre>
+这是一个包含代码块的例子。
 
-<p>{{EmbedLiveSample("Hidden_Code_Sample", "100%", 150)}}</p>
-</details>
+````plain
+> **备注：** This is how you write a note.
+>
+> It can contain code blocks.
+>
+> ```js
+> const s = "I'm in a code block";
+> ```
+> Like that.
+````
 
-<h3 id=".seoSummary"><code>.seoSummary</code></h3>
+这将会产生以下 HTML：
 
-<p>这是一个对页面内容没有可见影响的类，但是，如果该类应用于元素（通常是span），KumaScript将使用元素的内容创建描述meta标记。它们提供了一个简短的描述，可用于搜索引擎和分享网站，如Facebook和Twitter。这个类可以通过MDN编辑器WYSIWYG样式下拉列表中的“SEO摘要”选项获得。</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/11859/seosummary-menu-option.png" style="border: 1px solid black; display: block; height: 58px; margin: 0px auto; width: 235px;"></p>
-
-<details>
-<div class="blockIndicator note">
-<p><strong>Note</strong>: If <code>.seoSummary</code> is not explicitly specified on a page, the first paragraph is automatically set as the SEO summary: there is no need to use this on most pages.</p>
+```html
+<div class="notecard note">
+  <p><strong>备注：</strong> This is how you write a note.</p>
+  <p>It can contain code blocks.</p>
+  <pre class="brush: js">const s = "I'm in a code block";</pre>
+  <p>Like that.</p>
 </div>
+```
 
-<p>The final page display won't show any styling change, but in the editor the text that is set as the SEO summary will be marked with a dotted outline and a "SEO Summary" label", as shown below:</p>
+此 HTML 将渲染为包含代码块的框，例如：
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11861/seosummary-editor-representation.png" style="display: block; margin: 0 auto;"></p>
+> **备注：** This is how you write a note.
+>
+> It can contain code blocks.
+>
+> ```js
+> const s = "I'm in a code block";
+> ```
+>
+> Like that.
 
-<p>The below examples are taken from the <a href="/en-US/docs/Mozilla/Add-ons">Mozilla Add-ons</a> page.</p>
+### 讨论参考
 
-<h3 id="Example_syntax_4">Example syntax</h3>
+此议题已被解决：<https://github.com/mdn/content/issues/3483>。
 
-<pre class="brush: html notranslate">&lt;p&gt;
-  &lt;span class="seoSummary"&gt;Add-ons add new functionality to &lt;a href="/en-US/docs/Mozilla/Gecko"&gt;Gecko&lt;/a&gt;-based applications such as Firefox, SeaMonkey, and Thunderbird.&lt;/span&gt;
-  There are two main types of add-on: &lt;a href="#Extensions"&gt;Extensions&lt;/a&gt; add new features to the application, while &lt;a href="#Themes"&gt;Themes&lt;/a&gt; modify the application's user interface.
-&lt;/p&gt;</pre>
+## 定义列表
 
-<h4 id="Example_of_the_generated_HTMLElementmeta_elements">Example of the generated {{HTMLElement("meta")}} elements</h4>
+为了在 MDN 中创建定义列表，你需要编写一个 GFM 无序列表（{{HTMLElement("ul")}}）的修改形式。在这种形式中：
 
-<pre class="brush: html; notranslate">&lt;meta property="og:description" content="Add-ons add new functionality to Gecko -based applications such as Firefox, SeaMonkey, and Thunderbird."&gt;
-&lt;meta name="description" content="Add-ons add new functionality to Gecko -based applications such as Firefox, SeaMonkey, and Thunderbird."&gt;
-&lt;meta name="twitter:description" content="Add-ons add new functionality to Gecko -based applications such as Firefox, SeaMonkey, and Thunderbird."&gt;</pre>
+- GFM `<ul>` 包含任意数量的顶级 GFM `<li>` 元素。
+- 每一个顶级 GFM `<li>` 元素必须包含一个 GFM `<ul>` 元素作为其最后一个元素。
+- 最内层的 `<ul>` 必须包含一个单独的 GFM `<li>` 元素，其文本内容必须以 `: `（冒号后跟空格）为开头。这个元素可能包含块级元素：包括段落、代码块、嵌套的列表和备注。
 
-<h4 id="Example_of_how_Facebook_uses_it">Example of how Facebook uses it</h4>
+每个顶级的 GFM `<li>` 元素会被转换为 `<dt>`/`<dd>` 对，如下：
 
-<p><img alt="SEOSummary as it is used by Facebook" src="https://mdn.mozillademos.org/files/11857/seosummary.jpg" style="display: block; height: 338px; margin: 0px auto; width: 500px;"></p>
-</details>
+- 顶级的 GFM `<li>` 元素会被解析成一个 GFM `<li>` 元素，其内部的内容会组成 `<dt>` 中的内容，除了最内层的 `<ul>` 元素，它将不被包含在 `<dt>` 中。
+- 最内层 `<ui>` 中包含的 `<li>` 元素会被解析成一个 GFM `<li>` 元素，其内部的内容会组成 `<dd>` 中的内容，除了开头的 `: `，它将被丢弃。
 
-<div class="blockIndicator note">
-<p><strong>注意:</strong> 这与“.summary”类不同，后者创建了一个特殊的“关于此页”样式的模糊框。该类不设置搜索引擎使用的SEO摘要或MDN用于生成工具提示和自动生成列出子页面的菜单的宏。</p>
-</div>
+例如，这是一个 `<dl>`：
 
-<h2 id="块级样式">块级样式</h2>
+````plain
+* term1
+    * : My description of term1
 
-<p>本节列出MDN上样式内容块可用的块级样式。</p>
+* `term2`
+    * : My description of term2
 
-<h3 id=".callout-box"><code style="white-space: nowrap;">.callout-box</code></h3>
+      It can have multiple paragraphs, and code blocks too:
 
-<p>允许您创建一个右浮动框，用于包含要突出显示的标注或相关信息。这是一个示例内容</p>
+      ```js
+      const thing = 1;
+      ```
+````
 
-<p>Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.</p>
+在 GFM/CommonMark 中，这将会产生以下 HTML：
 
-<details>
-<h4 id="Example_syntax_5">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;div class="callout-box"&gt;
-  &lt;p&gt;This is an exciting callout&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Example content to float around&lt;/p&gt;
-&lt;p&gt;Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.&lt;/p&gt;
-</pre>
-</details>
-
-<h3 id=".card-grid"><code style="white-space: nowrap;">.card-grid</code></h3>
-
-<p>允许您将多张卡片相邻放置，以调出特定内容或映射出多步行动要求。卡片在可用的水平空间中均匀分布；大约2-3张效果最好。</p>
-
-<ul class="card-grid">
- <li><span>CSS Reference</span>
-
-  <p>An <a href="/en-US/docs/Web/CSS/Reference" title="en-US/docs/CSS/CSS_Reference">exhaustive reference</a> for <u>seasoned Web developers</u> describing every property and concept of CSS.</p>
- </li>
- <li><span>CSS Tutorial</span>
-  <p>A <a href="/en-US/docs/CSS/Getting_Started" title="en-US/docs/CSS/Getting_Started">step-by-step introduction</a> to help <u>complete beginners</u> get started. It presents all the needed fundamentals.</p>
- </li>
- <li><span>CSS3 Demos</span>
-  <p>A <a href="/en-US/demos/tag/tech:css3" title="https://developer.mozilla.org/en-US/demos/tag/tech:css3">collection of demos</a> showing the <u>latest CSS technologies</u> in action: a boost for the creativity.</p>
- </li>
-</ul>
-
-<details>
-<h4 id="Example_syntax_6">Example syntax</h4>
-
-<pre class="brush: html; notranslate">&lt;ul class="card-grid"&gt;
-  &lt;li&gt;My card content&lt;/li&gt;
-  &lt;li&gt;My second card content&lt;/li&gt;
-  &lt;li&gt;My third card content&lt;/li&gt;
-&lt;/ul&gt;</pre>
-</details>
-
-<h3 id=".column-container"><code style="white-space: nowrap;">.column-container</code></h3>
-
-<p><span style=""> 表示特定宽度列的容器。通常与其他类一起使用，如下所示。</span></p>
-
-<p><span class="column-4" style="">My first equal width column.</span></p>
-
-<div class="column-container">
-<div class="column-4">
-<p>My second equal width column.</p>
-</div>
-
-<div class="column-4">
-<p>My third equal width column.</p>
-</div>
-</div>
-
-<details>
-<h4 id="Example_syntax_7">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;div class="column-container"&gt;
-  &lt;div class="column-4"&gt;
-    &lt;p&gt;My first equal width column.&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class="column-4"&gt;
-    &lt;p&gt;My second equal width column.&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class="column-4"&gt;
-    &lt;p&gt;My third equal width column.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-</details>
-
-<h3 id=".column-1_.column-2_.column-3_..._all_the_way_up_to_.column-11"><code style="white-space: nowrap;">.column-1</code>, <code style="white-space: nowrap;">.column-2</code>, <code style="white-space: nowrap;">.column-3</code> ... all the way up to <code style="white-space: nowrap;">.column-11</code></h3>
-
-<p>指定要由.column container包含的特定宽度的列，即列容器宽度（基于12列网格布局）的一定数量的二分之一。每对列之间都留有一个檐沟。</p>
-
-<div class="column-container">
-<div class="column-1" style="background-color: yellow;">1/12</div>
-
-<div class="column-11" style="background-color: lime;">11/12</div>
-</div>
-
-<div class="column-container">
-<div class="column-5" style="background-color: yellow;">5/12</div>
-
-<div class="column-7" style="background-color: lime;">7/12</div>
-</div>
-
-<div class="column-container">
-<div class="column-6" style="background-color: yellow;">6/12</div>
-
-<div class="column-4" style="background-color: lime;">4/12</div>
-
-<div class="column-2" style="background-color: pink;">2/12</div>
-</div>
-
-<details>
-<h4 id="Example_syntax_8">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;div class="column-container"&gt;
-  &lt;div class="column-1" style="background-color: yellow;"&gt;1/12&lt;/div&gt;
-  &lt;div class="column-11" style="background-color: lime;"&gt;11/12&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="column-container"&gt;
-  &lt;div class="column-5" style="background-color: yellow;"&gt;5/12&lt;/div&gt;
-  &lt;div class="column-7" style="background-color: lime;"&gt;7/12&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="column-container"&gt;
-  &lt;div class="column-6" style="background-color: yellow;"&gt;6/12&lt;/div&gt;
-  &lt;div class="column-4" style="background-color: lime;"&gt;4/12&lt;/div&gt;
-  &lt;div class="column-2" style="background-color: pink;"&gt;2/12&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-</details>
-
-<h3 id=".column-quarter_.column-third_.column-half"><code style="white-space: nowrap;">.column-quarter</code>, <code style="white-space: nowrap;">.column-third</code>, <code style="white-space: nowrap;">.column-half</code></h3>
-
-<p>指定要由.column container包含的特定宽度的列，该列是列容器宽度的特定部分。每对列之间都留有一条边沟。</p>
-
-<div class="column-container">
-<div class="column-half" style="background-color: yellow;">Half</div>
-
-<div class="column-half" style="background-color: lime;">Half</div>
-</div>
-
-<div class="column-container">
-<div class="column-third" style="background-color: yellow;">Third</div>
-
-<div class="column-third" style="background-color: lime;">Third</div>
-
-<div class="column-third" style="background-color: pink;">Third</div>
-</div>
-
-<div class="column-container">
-<div class="column-quarter" style="background-color: yellow;">Quarter</div>
-
-<div class="column-quarter" style="background-color: lime;">Quarter</div>
-
-<div class="column-quarter" style="background-color: pink;">Quarter</div>
-
-<div class="column-quarter" style="background-color: cyan;">Quarter</div>
-</div>
-
-<details>
-<p>These classes are equivalents of commonly-used numerical width classes, as follows:</p>
-
+```html
 <ul>
- <li><code style="white-space: nowrap;">.column-quarter</code> — equivalent to <code style="white-space: nowrap;">.column-3</code></li>
- <li><code style="white-space: nowrap;">.column-third</code> — equivalent to <code style="white-space: nowrap;">.column-4</code></li>
- <li><code style="white-space: nowrap;">.column-half</code> — equivalent to <code style="white-space: nowrap;">.column-6</code></li>
+  <li>
+    <p>term1</p>
+    <ul>
+      <li>: My description of term1</li>
+    </ul>
+  </li>
+  <li>
+    <p><code>term2</code></p>
+    <ul>
+      <li>
+        <p>: My description of term2</p>
+        <p>It can have multiple paragraphs, and code blocks too:</p>
+        <pre>
+          <code class="brush: js">const thing = 1;</code>
+        </pre>
+      </li>
+    </ul>
+  </li>
 </ul>
+```
 
-<h4 id="Example_syntax_9">Example syntax</h4>
+在 MDN，这将会产生以下 HTML：
 
-<pre class="brush: html notranslate">&lt;div class="column-container"&gt;
-  &lt;div class="column-half" style="background-color: yellow;"&gt;Half&lt;/div&gt;
-  &lt;div class="column-half" style="background-color: lime;"&gt;Half&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="column-container"&gt;
-  &lt;div class="column-third" style="background-color: yellow;"&gt;Third&lt;/div&gt;
-  &lt;div class="column-third" style="background-color: lime;"&gt;Third&lt;/div&gt;
-  &lt;div class="column-third" style="background-color: pink;"&gt;Third&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="column-container"&gt;
-  &lt;div class="column-quarter" style="background-color: yellow;"&gt;Quarter&lt;/div&gt;
-  &lt;div class="column-quarter" style="background-color: lime;"&gt;Quarter&lt;/div&gt;
-  &lt;div class="column-quarter" style="background-color: pink;"&gt;Quarter&lt;/div&gt;
-  &lt;div class="column-quarter" style="background-color: cyan;"&gt;Quarter&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-</details>
-
-<h3 id="&lt;details>"><code>&lt;details&gt;</code></h3>
-
-<p>可以包装在一个内容块周围以隐藏该内容，而不是显示一个“详细信息”链接，单击该链接可展开/折叠其中包含的内容。您可以在本文中看到它的用法。</p>
-
-<details>
-<h4 id="Example_syntax_10">Example syntax</h4>
-
-<p>This is an example syntax section for {{HTMLElement("details")}} that was hidden with {{HTMLElement("details")}}. Ooooooh, how meta.</p>
-
-<pre class="brush: html; notranslate">&lt;details&gt;
-&lt;h4&gt;Example syntax&lt;/h4&gt;
-&lt;p&gt;This is an example syntax section for &lt;code&gt;.detail&lt;/code&gt; that was hidden with &lt;code&gt;.detail&lt;/code&gt;. Ooooooh, how meta.&lt;/p&gt;
-&lt;/details&gt;</pre>
-</details>
-
-<h3 id=".example-bad_and_.example-good"><code style="white-space: nowrap;">.example-bad</code> and <code style="white-space: nowrap;">.example-good</code></h3>
-
-<p>可以使用.example Good和.example bad类突出显示好的和坏的示例。它们通常用于表示示例代码段的&lt;pre&gt;块，但也可以用于其他块。</p>
-
-<h5 id="Good_code_example">Good code example</h5>
-
-<pre class="brush: html example-good notranslate">&lt;label for="test"&gt;Form label:&lt;/label&gt;
-&lt;input type="text" id="test"&gt;
-</pre>
-
-<h5 id="Bad_code_example">Bad code example</h5>
-
-<pre class="brush: html example-bad notranslate">&lt;input type="text"&gt;
-</pre>
-
-<details>
-<p><strong>You should always use headings with these classes, as shown below</strong> — CSS is unable to add localized language to the page identifying whether they're good or bad so this is important for people who rely on screen readers, and people with different cultural backgrounds (green and red are not universally good and bad.)</p>
-
-<h4 id="Example_syntax_11">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;h5 id="Good_code_example"&gt;Good code example&lt;/h5&gt;
-
-&lt;pre class="brush: html example-good"&gt;
-  &amp;lt;label for="test"&amp;gt;Form label:&amp;lt;/label&amp;gt;
-  &amp;lt;input type="text" id="test"&amp;gt;
-&lt;/pre&gt;
-
-&lt;h5 id="Bad_code_example"&gt;Bad code example&lt;/h5&gt;
-
-&lt;pre class="brush: html example-bad"&gt;
-  &amp;lt;input type="text"&amp;gt;
-&lt;/pre&gt;</pre>
-</details>
-
-<h3 id=".moreinfo"><code>.moreinfo</code></h3>
-
-<p>这个类最初被设计为提供一个链接列表以供进一步阅读，但它可以用于任何远离当前页面的信息。</p>
-
-<div class="moreinfo">
-<h4 id="基于JavaScript知识构建的工具">基于JavaScript知识构建的工具</h4>
-
+```html
 <dl>
- <dt>JavaScript frameworks</dt>
- <dd>Developed by Google <a href="https://angularjs.org/">Angular.js</a> is one of the best known frameworks.</dd>
- <dd><a href="http://emberjs.com/">Ember.js</a> is open source and community driven.</dd>
- <dt>JavaScript Compilers</dt>
- <dd><a href="https://babeljs.io/">Babel</a> lets you write ES2015 and compiles to more backwards compatible code.</dd>
+  <dt>
+    <p>term1</p>
+  </dt>
+  <dd>My description of term1</dd>
+  <dt>
+    <p><code>term2</code></p>
+  </dt>
+  <dd>
+    <p>My description of term2</p>
+    <p>It can have multiple paragraphs, and code blocks too:</p>
+    <pre>
+       <code class="brush: js">const thing = 1;</code>
+    </pre>
+  </dd>
 </dl>
-</div>
+```
 
-<details>
-<h4 id="Example_syntax_12">Example syntax</h4>
+使用此语法编写的定义列表必须由成对的 `<dt>`/`<dd>` 元素组成。且不能编写包含多个连续 `<dt>` 元素或多个连续 `<dd>` 元素的列表：解析器将其视为错误。我们希望这个限制适用于 MDN 上几乎所有的定义列表，而对于那些不被希望受此限制的，你可以回退到原生的 HTML。
 
-<pre class="brush: html notranslate">&lt;div class="moreinfo"&gt;
-  &lt;!-- content goes here --&gt;
-&lt;/div&gt;</pre>
-</details>
+如果你需要将多个 `<dt>` 元素关联到同一个 `<dd>` 上，可以考虑将它们以逗号分隔后提供给同一个 `<dt>` 元素，如下：
 
-<h3 id=".blockIndicator.note"><code>.blockIndicator.note</code></h3>
+```plain
+* `param1`, `param2`, `param3`
+    * : My description of params 1, 2, and 3
+```
 
-<p>将内容的一部分转换为便签框，这通常是一个有用的便签，与当前主题相切，但不直接适合信息流。</p>
+这样设计语法的原因是：在使用 CommonMark（如 Prettier 或 Github 预览）工具的情况下，它相当容易编写和解析。
 
-<div class="blockIndicator note">
-<p><strong>注意</strong>: 这就是我们通常在MDN文章中呈现注释的方式。</p>
-</div>
+### 讨论参考
 
-<details>
-<p>This is available via the "Note box" option in the MDN editor WYSIWYG styles dropdown.</p>
+此议题已被解决：<https://github.com/mdn/content/issues/4367>。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11677/Screen%20Shot%202015-10-05%20at%2006.56.01.png" style="border: 1px solid black; display: block; margin: 0px auto;"><span style="">Example syntax</span></p>
+## 表格
 
-<pre class="brush: html; notranslate">&lt;div class="blockIndicator note" role="complementary"&gt;
-  &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: This is how we usually present a note in an MDN article.&lt;/p&gt;
-&lt;/div&gt;</pre>
-</details>
+在 GFM（而不是 CommonMark）中，有一个关于表格的语法：<https://github.github.com/gfm/#tables-extension->。我们将会使用它，但是：
 
-<h3 id=".pull-aside"><code>.pull-aside</code></h3>
+- GFM 语法仅支持 HTML 中部分可用的功能，如果你需要使用 GFM 不支持的表格功能，请使用 HTML。
+- 如果表格超过了150个字符宽度，请使用 HTML。
+- 我们支持一种称为“属性表”的特殊表格，它有自己的 CSS 类，因此它只能是 HTML。
 
-<p>将内容拉到一边。</p>
+所以，一般原则是：你应该在能使用 GFM Markdown 语法时使用它，而在 HTML 的可读性更强时才回退到原生的 HTML。参见下方的“何时使用 HTML 表格”。
 
-<p>有些内容会偏离主题。</p>
+### GFM 表格语法风格
 
-<p>有些内容不太靠边站。</p>
+为了可读性，必须保留表格每一行开头和末尾的竖线符号，而不是像 GFM 表格那样可以省略它们。
 
-<details>
-<h4 id="Example_Syntax">Example Syntax</h4>
+也就是说，必须使用以下风格：
 
-<pre class="brush: html notranslate">&lt;div class="pull-right"&gt;Some content that goes off to the side.&lt;/div&gt;
-&lt;p&gt;Some content that does not go off to the side.&lt;/p&gt;</pre>
+```plain
+| Heading 1 | Heading 2 | Heading 3 |
+|-----------|-----------|-----------|
+| cell 1    | cell 2    | cell 3    |
+| cell 4    | cell 5    | cell 6    |
+```
 
-<h4 id="Other_uses">Other uses</h4>
+而不是这种风格：
 
-<div class="pull-aside">
-<div class="moreinfo">Combined with the <code>.moreinfo</code> class.</div>
-</div>
+```plain
+Heading 1 | Heading 2 | Heading 3
+ --- | --- | ---
+cell 1    | cell 2    | cell 3
+cell 4    | cell 5    | cell 6
+```
 
-<p>Some content that does not go off to the side.</p>
+### 何时使用 HTML 表格
 
-<p>Some content that does not go off to the side.</p>
+在以下三种主要情况下应该使用 HTML 表格而不是 GFM 语法：表格使用了 GFM 不支持的功能、GFM 表格太宽而难以阅读、使用了“属性表”这一特殊类型的表格。
 
-<pre class="brush: html notranslate">&lt;div class="pull-aside"&gt;&lt;div class="moreinfo"&gt;Some content that goes off to the side.&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Some content that does not go off to the side.&lt;/p&gt;
-&lt;p&gt;Some content that does not go off to the side.&lt;/p&gt;
-</pre>
-</details>
+#### GFM 不支持的表格功能
 
-<h3 id=".summary" name=".summary"><code>.summary</code> {{Obsolete_Inline}}</h3>
+GFM 表格语法的主要限制是：
 
-<p>为页面创建摘要框，在视觉上显示为带有额外填充的灰色框-应用于文章的开头段落（但不用于参考文章），以使其在页面上具有额外的重要性。</p>
+- GFM 表格必须有一个标题行。
+- GFM 表格可能没有标题列。
+- GFM 不会解析单元格中的 GFM 块元素。例如，你不能在单元格中使用列表。
+- GFM 不支持除 `<table>`、`<tr>`、`<th>`、`<td>` 以外的任何表格元素。
+- GFM 不支持诸如 `colspan`、`rowspan`、`scope` 等表格元素属性。
 
-<div class="blockIndicator warning">
-<p><strong>重要提示:</strong> 这与anch“.seoSummary”类不同，该类建立文本部分，搜索引擎使用该文本部分在结果列表中汇总页面，MDN使用该文本部分创建页面标题及其摘要的工具提示和菜单。这门课完全是一种视觉效果。如果希望同时使用这两个类，可以为页面建立可见和有效的摘要。</p>
-</div>
+如果你需要使用任何不受支持的功能，那么应该使用 HTML 编写表格。
 
-<p class="summary">这是本文的开头。下面我们将讨论 puppies, giraffes, 和 dugongs.</p>
+请注意，我们不建议在表格中经常使用 `<caption>` 元素，因为这不是 GFM 的语法。
 
-<details>
-<p>This is available via the "Article Summary" option in the MDN editor WYSIWYG styles dropdown.</p>
+#### GFM 表格最大宽度
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11863/article-summary-menu-option.png" style="display: block; height: 238px; margin: 0px auto; width: 254px;"></p>
+有时，即使可以使用 GFM 编写表格，也应该使用 HTML。因为 GFM 使用“ASCII art”来实现表格，当表格的一行变得过长时，将变得难以阅读。例如，考虑以下表格：
 
-<h4 id="Example_syntax_13">Example syntax</h4>
+```html
+  <table>
+    <tr>
+      <th>A heading 1</th>
+      <th>A heading 2</th>
+      <th>A heading 3</th>
+      <th>A heading 4</th>
+      <th>A heading 5</th>
+      <th>A heading 6</th>
+    </tr>
+    <tr>
+      <td>Something shortish</td>
+      <td>Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.</td>
+      <td>Something shortish</td>
+      <td>Another cell  with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.</td>
+      <td>Something shortish</td>
+      <td>Something shortish</td>
+    </tr>
+</table>
+```
 
-<pre class="brush: html notranslate">&lt;p class="summary"&gt;This is the start of this article. Below we will talk about puppies, giraffes, and dugongs.&lt;/p&gt;</pre>
-</details>
+在 GFM 中，它会是这样：
 
-<h3 id=".topicpage-table"><code>.topicpage-table</code></h3>
+```plain
+  | A heading 1        | A heading 2                                                                                                                                         | A heading 3        | A heading 4                                                                                                                                                              | A heading 5        | A heading 6        |
+  | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ | ------------------ |
+  | Something shortish | Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Another cell with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format. | Something shortish | Something shortish |
+```
 
-<p>创建用粗灰色边框分隔的两列。常用于登录页。这通常最适合嵌套（“div”）。注意，这两个子元素必须被赋予.section类。</p>
-
-<div class="topicpage-table">
-<div class="section">Column 1</div>
-
-<div class="section">Column 2</div>
-</div>
-
-<details open>
-<h4 id="Example_syntax_14">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;div class="topicpage-table"&gt;
-  &lt;div class="section"&gt;Column 1&lt;/div&gt;
-  &lt;div class="section"&gt;Column 2&lt;/div&gt;
-&lt;/div&gt;</pre>
-</details>
-
-<h3 id=".threecolumns"><code>.threecolumns</code></h3>
-
-<div class="threecolumns">
-<p>使内容块显示在三个等宽列中。</p>
-
-<p>Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.</p>
-
-<p>Street art PBR YOLO pug, before they sold out fixie artisan blog bicycle rights beard direct trade chillwave. Fanny pack cornhole whatever, Austin single-origin coffee ethical church-key distillery fashion axe tofu farm-to-table irony tattooed Tumblr. Craft beer Thundercats Austin gentrify, wolf Echo Park asymmetrical hella sartorial.</p>
-</div>
-
-<details>
-<p>This is available via the "Three columns" option in the MDN editor WYSIWYG styles dropdown.</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/11779/twocolumn-threecolumn.png" style="border: 1px solid black; display: block; height: 167px; margin: 0px auto; width: 253px;"></p>
-
-<div class="blockIndicator note">
-<p><strong>Note</strong>: If you want to apply this to a list, then you should apply it to an outer wrapper {{HTMLElement("div")}} — if not, it gets applied to the {{HTMLElement("ul")}} element, which causes the list bullets to not display in Chrome.</p>
-</div>
-
-<h4 id="Example_syntax_15">Example syntax</h4>
-
-<pre class="notranslate">&lt;div class="threecolumns"&gt;
-  &lt;p&gt;Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.&lt;/p&gt;
-
-  &lt;p&gt;Street art PBR YOLO pug, before they sold out fixie artisan blog bicycle rights beard direct trade chillwave. Fanny pack cornhole whatever, Austin single-origin coffee ethical church-key distillery fashion axe tofu farm-to-table irony tattooed Tumblr. Craft beer Thundercats Austin gentrify, wolf Echo Park asymmetrical hella sartorial.&lt;/p&gt;
-&lt;/div&gt;</pre>
-</details>
-
-<h3 id=".twocolumns"><code>.twocolumns</code></h3>
-
-<p>使内容块显示在两个等宽列中。 </p>
-
-<div class="twocolumns">
-<p>Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.</p>
-
-<p>Street art PBR YOLO pug, before they sold out fixie artisan blog bicycle rights beard direct trade chillwave. Fanny pack cornhole whatever, Austin single-origin coffee ethical church-key distillery fashion axe tofu farm-to-table irony tattooed Tumblr. Craft beer Thundercats Austin gentrify, wolf Echo Park asymmetrical hella sartorial.</p>
-</div>
-
-<details>
-<p>This is available via the "Two columns" option in the MDN editor WYSIWYG styles dropdown.</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/11779/twocolumn-threecolumn.png" style="border: 1px solid black; display: block; height: 167px; margin: 0px auto; width: 253px;"></p>
-
-<div class="blockIndicator note">
-<p><strong>Note</strong>: If you want to apply this to a list, then you should apply it to an outer wrapper {{HTMLElement("div")}} — if not, it gets applied to the {{HTMLElement("ul")}} element, which causes the list bullets to not display in Chrome.</p>
-</div>
-
-<h4 id="Example_syntax_16">Example syntax</h4>
-
-<pre class="notranslate">&lt;div class="twocolumns"&gt;
-  &lt;p&gt;Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.&lt;/p&gt;
-
-  &lt;p&gt;Street art PBR YOLO pug, before they sold out fixie artisan blog bicycle rights beard direct trade chillwave. Fanny pack cornhole whatever, Austin single-origin coffee ethical church-key distillery fashion axe tofu farm-to-table irony tattooed Tumblr. Craft beer Thundercats Austin gentrify, wolf Echo Park asymmetrical hella sartorial.&lt;/p&gt;
-&lt;/div&gt;</pre>
-</details>
-
-<h3 id=".blockIndicator.warning"><code>.blockIndicator.warning</code></h3>
-
-<p>将内容的一部分转换为警告框，警告框通常传达读者需要非常小心的一个重要事实（例如，他们需要做一些事情，或避免一些事情来避免严重问题）</p>
-
-<div class="blockIndicator warning">
-<p><strong>Warning</strong>: Here be dragons!</p>
-</div>
-
-<details>
-<p>This is available via the "Warning box" option in the MDN editor WYSIWYG styles dropdown.</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/11779/twocolumn-threecolumn.png" style="border: 1px solid black; display: block; height: 167px; margin: 0px auto; width: 253px;"></p>
-
-<h4 id="Example_syntax_17">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;div class="blockIndicator warning"&gt;
-  &lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;:Here be dragons!&lt;/p&gt;
-&lt;/div&gt;</pre>
-</details>
-
-<h2 id="表格样式">表格样式</h2>
-
-<p>MDN为HTML“table”元素提供了特定的样式。这一节包括这些。</p>
-
-<p>没有添加类：</p>
-
-<table>
- <caption>Favorite teas, December 2015</caption>
- <thead>
-  <tr>
-   <th scope="row">Variety</th>
-   <th scope="col">Caffeine</th>
-   <th scope="col">Steeping Time</th>
-   <th scope="col">Water Temperature</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Black</th>
-   <td>High</td>
-   <td>2-3 minutes</td>
-   <td>99 °C</td>
-  </tr>
-  <tr>
-   <th scope="row">Green</th>
-   <td>Low to Medium</td>
-   <td>1-2 minutes</td>
-   <td>75 to 80 °C</td>
-  </tr>
-  <tr>
-   <th colspan="4">Caffeine free</th>
-  </tr>
-  <tr>
-   <th scope="row">Herbal</th>
-   <td>None</td>
-   <td>3-6 minutes</td>
-   <td>99 °C</td>
-  </tr>
- </tbody>
+在这种情况下，最好使用 HTML。
+
+所以我们遵循以下原则：_如果表格的 Markdown 表示将超过150个字符宽度，请使用 HTML 编写_。
+
+#### 属性表
+
+属性表是一类特殊的表格，用于在一组特定类型的页面中显示结构化的属性值。例如，所有的 Event 页面都有一个属性表，列出了关于事件的常见信息：是否冒泡、是否可取消等等。
+
+这类表格有两列：第一列是标题列，其列出了属性名；第二列则列出了这些特定属性的值。例如，以下是一个 {{domxref("XMLHttpRequest")}} 接口的 {{domxref("XMLHttpRequest/progress_event", "progress")}} 事件的属性表。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("ProgressEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("XMLHttpRequestEventTarget/onprogress", "onprogress")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id=".standard-table"><code style="white-space: nowrap;">.standard-table</code></h3>
+因为它们有一个标题列，GFM 无法实现这些页面。因此，应该使用 HTML。为了获得特殊的样式，还需要将`"properties"`类应用于表格：
 
-<table class="standard-table">
- <caption>Favorite teas, December 2015</caption>
- <thead>
-  <tr>
-   <th scope="row">Variety</th>
-   <th scope="col">Caffeine</th>
-   <th scope="col">Steeping Time</th>
-   <th scope="col">Water Temperature</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Black</th>
-   <td>High</td>
-   <td>2-3 minutes</td>
-   <td>99 °C</td>
-  </tr>
-  <tr>
-   <th scope="row">Green</th>
-   <td>Low to Medium</td>
-   <td>1-2 minutes</td>
-   <td>75 to 80 °C</td>
-  </tr>
-  <tr>
-   <th colspan="4">Caffeine free</th>
-  </tr>
-  <tr>
-   <th scope="row">Herbal</th>
-   <td>None</td>
-   <td>3-6 minutes</td>
-   <td>99 °C</td>
-  </tr>
- </tbody>
-</table>
+```html
+<table class="properties">
+```
 
-<details>
-<p>A standard table can be created using the <em>Table</em> button in the MDN editor WYSIWYG toolbar. Pressing this brings up the Table Properties dialog box, which contains a number of functions. Generally you'll just want to use it to set the number of rows and columns, which cells are table headers ({{HTMLElement("th")}}), and a visible {{HTMLElement("caption")}} and {{HTMLAttrxRef("summary", "table")}} attribute to provide more information for screenreaders, if desired.</p>
+### 讨论参考
 
-<p><img alt="A diagram showing the Table button in the MDN edit interface, which has a picture of a table on it, and the dialog box that it brings up, which has options on it to set row number, column number, which cells are headings, and more." src="https://mdn.mozillademos.org/files/11997/table-styles-interface-flat.png" style="display: block; margin: 0 auto;"></p>
+此议题已被解决：<https://github.com/mdn/content/issues/4325>、<https://github.com/mdn/content/issues/7342> 以及 <https://github.com/mdn/content/issues/7898#issuecomment-913265900>。
 
-<h4 id="Style_notes">Style notes</h4>
+## 上标和下标
 
-<ul>
- <li>Note the different styling applied to the headers ({{HTMLElement("th")}}), and the fact that they have {{HTMLAttrxRef("scope", "th")}} attributes applied for accessibility purposes.</li>
- <li>By default, alternating rows have zebra stripes applied, but these can be removed by adding the <code>.no-stripe</code> class to them.</li>
- <li>You can force a table to span the full width of the content area (or other immediate containing box, if it is not the content area) by adding the <code>.fullwidth</code> class to the {{HTMLElement("table")}} element.</li>
-</ul>
+如果有必要，你可以使用 HTML {{HTMLElement("sup")}} 和 {{HTMLElement("sub")}} 元素，但应尽可能使用替代品。特别是：
 
-<h4 id="Example_syntax_18">Example syntax</h4>
+- 对于求幂，请使用脱字符：`2^53`。
+- 对于像 1
 
-<pre class="brush: html notranslate">&lt;table class="standard-table" summary="This table details what tea we liked to drink back in the heady month of December 2015"&gt;
- &lt;caption&gt;Favorite teas, December 2015&lt;/caption&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th scope="row"&gt;Variety&lt;/th&gt;
-   &lt;th scope="col"&gt;Caffeine&lt;/th&gt;
-   &lt;th scope="col"&gt;Steeping Time&lt;/th&gt;
-   &lt;th scope="col"&gt;Water Temperature&lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;th scope="row"&gt;Black&lt;/th&gt;
-   &lt;td&gt;High&lt;/td&gt;
-   &lt;td&gt;2-3 minutes&lt;/td&gt;
-   &lt;td&gt;99&amp;nbsp;°C&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;th scope="row"&gt;Green&lt;/th&gt;
-   &lt;td&gt;Low to Medium&lt;/td&gt;
-   &lt;td&gt;1-2 minutes&lt;/td&gt;
-   &lt;td&gt;75 to 80&amp;nbsp;°C&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;th scope="row"&gt;Herbal&lt;/th&gt;
-   &lt;td&gt;None&lt;/td&gt;
-   &lt;td&gt;3-6 minutes&lt;/td&gt;
-   &lt;td&gt;99&amp;nbsp;°C&lt;/td&gt;
-  &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;</pre>
-</details>
+  <sup>st</sup>
 
-<h3 id=".standard-table.nostripe"><code><span style="white-space: nowrap;">.standard-table</span>.nostripe</code></h3>
+  这样的表达式，推荐使用单词，如：“第一”。
 
-<table class="nostripe standard-table">
- <caption>Favorite teas, December 2015</caption>
- <thead>
-  <tr>
-   <th scope="row">Variety</th>
-   <th scope="col">Caffeine</th>
-   <th scope="col">Steeping Time</th>
-   <th scope="col">Water Temperature</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Black</th>
-   <td>High</td>
-   <td>2-3 minutes</td>
-   <td>99 °C</td>
-  </tr>
-  <tr>
-   <th scope="row">Green</th>
-   <td>Low to Medium</td>
-   <td>1-2 minutes</td>
-   <td>75 to 80 °C</td>
-  </tr>
-  <tr>
-   <th colspan="4">Caffeine free</th>
-  </tr>
-  <tr>
-   <th scope="row">Herbal</th>
-   <td>None</td>
-   <td>3-6 minutes</td>
-   <td>99 °C</td>
-  </tr>
- </tbody>
-</table>
+- 对于脚注，请不要在脚注的参考文献上使用类似 `<sup>[1]</sup>` 的标注，这是没有必要的。
 
-<h3 id=".standard-table.fullwidth"><code>.<span style="white-space: nowrap;">standard-table</span>.fullwidth</code></h3>
+### 讨论参考
 
-<table class="fullwidth standard-table">
- <caption>Favorite teas, December 2015</caption>
- <thead>
-  <tr>
-   <th scope="row">Variety</th>
-   <th scope="col">Caffeine</th>
-   <th scope="col">Steeping Time</th>
-   <th scope="col">Water Temperature</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Black</th>
-   <td>High</td>
-   <td>2-3 minutes</td>
-   <td>99 °C</td>
-  </tr>
-  <tr>
-   <th scope="row">Green</th>
-   <td>Low to Medium</td>
-   <td>1-2 minutes</td>
-   <td>75 to 80 °C</td>
-  </tr>
-  <tr>
-   <th colspan="4">Caffeine free</th>
-  </tr>
-  <tr>
-   <th scope="row">Herbal</th>
-   <td>None</td>
-   <td>3-6 minutes</td>
-   <td>99 °C</td>
-  </tr>
- </tbody>
-</table>
+此议题已被解决：<https://github.com/mdn/content/issues/4578>。
 
-<h3 id=".fullwidth-table"><code style="white-space: nowrap;">.fullwidth-table</code></h3>
+## 网页摘要
 
-<table class="fullwidth-table">
- <caption>Favorite teas, December 2015</caption>
- <thead>
-  <tr>
-   <th scope="row">Variety</th>
-   <th scope="col">Caffeine</th>
-   <th scope="col">Steeping Time</th>
-   <th scope="col">Water Temperature</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Black</th>
-   <td>High</td>
-   <td>2-3 minutes</td>
-   <td>99 °C</td>
-  </tr>
-  <tr>
-   <th scope="row">Green</th>
-   <td>Low to Medium</td>
-   <td>1-2 minutes</td>
-   <td>75 to 80 °C</td>
-  </tr>
-  <tr>
-   <th colspan="4">Caffeine free</th>
-  </tr>
-  <tr>
-   <th scope="row">Herbal</th>
-   <td>None</td>
-   <td>3-6 minutes</td>
-   <td>99 °C</td>
-  </tr>
- </tbody>
-</table>
+_网页摘要_ 是应用于文章的开头段落——出现在网页 front matter 以及任何 [侧边栏和网页横幅宏](#kumascript) 之后的第一个文本内容。
 
-<h2 id="更新本指南">更新本指南</h2>
+此摘要用于搜索引擎优化（SEO），也被一些宏自动包含在网页列表旁。因此，第一段应即简洁又翔实。
 
-<p><span style="">本指南不完整，正在逐步更新。如果您想帮助更新或添加到本指南中，请随时更新或添加！如果您有问题或想讨论并提出改进本文的想法，或者对我们如何改进MDN Web文档的样式或布局有建议，您可以有以下几种选择：</span></p>
+### 讨论参考
 
-<p><span style="">如果你想帮助完成它，或者想报告一个丢失或错误的文档样式，请联系Chris Mills（以chrisdavidmills的身份发言，在Mozil </span><a href="https://wiki.mozilla.org/IRC" style="">Mozilla IRC</a><span style=""> as chrismills)</span></p>
+此议题已被解决：<https://github.com/mdn/content/issues/3923>。
 
-<dl>
- <dt><a href="https://discourse.mozilla.org/c/mdn">开始讨论MDN Web文档讨论论坛</a><a href="https://discourse.mozilla.org/c/mdn"> forum</a></dt>
- <dd>如果您有什么想法想与MDN Web Docs社区或工作人员讨论，请随时在Mozilla讨论站点的MDN Web Docs论坛上开始一个主题。</dd>
- <dt><a href="https://github.com/mdn/sprints/issues/new?template=issue-template.md">在GitHub中提交您的建议</a></dt>
- <dd>如果您想在我们的官方问题跟踪系统中记录您的建议，我们鼓励您这样做。先用上面的一个频道讨论是个好主意，但这不是必需的。</dd>
- <dt><a href="irc://irc.mozilla.org/mdn">在IRC频道提问</a></dt>
- <dd>我们的写作人员和贡献者社区使用 <a href="https://wiki.mozilla.org/IRC">Mozilla's IRC 服务器</a> 进行讨论和分享想法。欢迎您加入我们，提出您的问题或建议！（请注意，IRC的参与度很低，可能会在2020年停办；对话是获得答案的最佳选择。）</dd>
-</dl>
+## Kumascript
+
+文本内容可以包括对 KumaScript 宏的调用：
+
+```plain
+The **`margin`** [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) property
+sets the margin area on all four sides of an element. It is a shorthand for
+\{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}},
+and \{{cssxref("margin-left")}}.
+
+\{{EmbedInteractiveExample("pages/css/margin.html")}}
+
+The top and bottom margins have no effect on replaced inline elements, such as
+\{{HTMLElement("span")}} or \{{HTMLElement("code")}}.
+```
