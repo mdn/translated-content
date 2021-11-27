@@ -276,7 +276,7 @@
 /ja/docs/CSS/Length	/ja/docs/Web/CSS/Length
 /ja/docs/CSS/Media	/ja/docs/Web/CSS/@media
 /ja/docs/CSS/Media/Visual	/ja/docs/Web/CSS/@media
-/ja/docs/CSS/Media_queries	/ja/docs/Web/CSS/Media_queries
+/ja/docs/CSS/Media_queries	/ja/docs/Web/CSS/Media_Queries
 /ja/docs/CSS/Multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/CSS/Other_Resources	/ja/docs/Web/CSS
 /ja/docs/CSS/Privacy_and_the_:visited_selector	/ja/docs/Web/CSS/Privacy_and_the_:visited_selector
