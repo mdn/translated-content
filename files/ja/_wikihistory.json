@@ -28684,13 +28684,6 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/CSS_Scroll_Snap/Browser_compat": {
-    "modified": "2020-02-21T23:37:52.316Z",
-    "contributors": [
-      "yuheiy",
-      "mfuji09"
-    ]
-  },
   "Web/CSS/CSS_Scroll_Snap_Points": {
     "modified": "2020-10-15T21:58:12.862Z",
     "contributors": [
@@ -48603,6 +48596,13 @@
     "modified": "2020-10-15T22:29:46.631Z",
     "contributors": [
       "Wind1808"
+    ]
+  },
+  "conflicting/Web/CSS/CSS_Scroll_Snap": {
+    "modified": "2020-02-21T23:37:52.316Z",
+    "contributors": [
+      "yuheiy",
+      "mfuji09"
     ]
   },
   "conflicting/Web/CSS/Media_Queries/Using_media_queries": {

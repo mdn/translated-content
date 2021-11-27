@@ -4014,7 +4014,8 @@
 /fr/docs/Web/CSS/CSS_Logical_Properties/Propriétés_logiques_flottements_positionnement	/fr/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 /fr/docs/Web/CSS/CSS_Logical_Properties/Propriétés_logiques_marges_bordures_remplissages	/fr/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 /fr/docs/Web/CSS/CSS_Masks	/fr/docs/Web/CSS/CSS_Masking
-/fr/docs/Web/CSS/CSS_Scroll_Snap/Compatibilité_navigateurs	/fr/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat
+/fr/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat	/fr/docs/conflicting/Web/CSS/CSS_Scroll_Snap
+/fr/docs/Web/CSS/CSS_Scroll_Snap/Compatibilité_navigateurs	/fr/docs/conflicting/Web/CSS/CSS_Scroll_Snap
 /fr/docs/Web/CSS/CSS_Scroll_Snap/Concepts_de_base	/fr/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts
 /fr/docs/Web/CSS/CSS_Selectors/Utiliser_la_pseudo-classe_:target_dans_un_selecteur	/fr/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 /fr/docs/Web/CSS/CSS_Shapes/Aperçu_formes_CSS	/fr/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes

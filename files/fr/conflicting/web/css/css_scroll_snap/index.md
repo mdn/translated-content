@@ -1,13 +1,13 @@
 ---
 title: Compatibilité des navigateurs et CSS Scroll Snap
-slug: Web/CSS/CSS_Scroll_Snap/Browser_compat
+slug: conflicting/Web/CSS/CSS_Scroll_Snap
 tags:
   - CSS
   - CSS Scroll Snap
   - Compatibilité
   - Guide
 translation_of: Web/CSS/CSS_Scroll_Snap/Browser_compat
-original_slug: Web/CSS/CSS_Scroll_Snap/Compatibilité_navigateurs
+original_slug: Web/CSS/CSS_Scroll_Snap/Browser_compat
 ---
 {{CSSRef}}
 

@@ -3656,6 +3656,7 @@
 /ja/docs/Web/CSS/CSS_Masks	/ja/docs/Web/CSS/CSS_Masking
 /ja/docs/Web/CSS/CSS_Reference	/ja/docs/Web/CSS/Reference
 /ja/docs/Web/CSS/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
+/ja/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat	/ja/docs/conflicting/Web/CSS/CSS_Scroll_Snap
 /ja/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/ja/docs/Web/XPath/Comparison_with_CSS_selectors
 /ja/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values	/ja/docs/Web/CSS/CSS_Shapes/From_box_values
 /ja/docs/Web/CSS/CSS_User_Interface	/ja/docs/Web/CSS/CSS_Basic_User_Interface

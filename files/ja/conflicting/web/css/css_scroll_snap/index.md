@@ -1,6 +1,6 @@
 ---
 title: ブラウザーの互換性とスクロールスナップ
-slug: Web/CSS/CSS_Scroll_Snap/Browser_compat
+slug: conflicting/Web/CSS/CSS_Scroll_Snap
 tags:
   - CSS
   - CSS スクロールスナップ
@@ -11,6 +11,7 @@ tags:
   - browser compat
   - compat
 translation_of: Web/CSS/CSS_Scroll_Snap/Browser_compat
+original_slug: Web/CSS/CSS_Scroll_Snap/Browser_compat
 ---
 {{CSSRef}}
 

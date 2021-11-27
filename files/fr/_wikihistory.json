@@ -25048,12 +25048,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/CSS_Scroll_Snap/Browser_compat": {
-    "modified": "2019-07-21T13:28:24.043Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/CSS/CSS_Scroll_Snap_Points": {
     "modified": "2019-04-26T04:18:54.788Z",
     "contributors": [
@@ -43308,6 +43302,12 @@
   },
   "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox": {
     "modified": "2019-03-23T22:29:57.804Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "conflicting/Web/CSS/CSS_Scroll_Snap": {
+    "modified": "2019-07-21T13:28:24.043Z",
     "contributors": [
       "SphinxKnight"
     ]
