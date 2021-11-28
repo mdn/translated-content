@@ -31,7 +31,7 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 
 <h3 id="CSS_バージョン">CSS バージョン</h3>
 
-<p>アリスがうさぎの穴からオチてワンダーランドに導かれる様子を示した CSS で書かれている転がり落ちるアニメーションです。(完全な <a href="http://codepen.io/rachelnabors/pen/QyOqqW">Codepen のコード</a> を参照してください)</p>
+<p>アリスがうさぎの穴から落ちてワンダーランドに導かれる様子を示した CSS で書かれている転がり落ちるアニメーションです。(完全な <a href="http://codepen.io/rachelnabors/pen/QyOqqW">Codepen のコード</a> を参照してください)</p>
 
 <p><a href="http://codepen.io/rachelnabors/pen/rxpmJL"><img alt="Alice Tumbling down the rabbit's hole." src="https://mdn.mozillademos.org/files/13843/tumbling-alice_optimized.gif" style="display: block; height: 374px; margin-left: auto; margin-right: auto; width: 700px;"></a></p>
 
@@ -137,7 +137,7 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 <p>Web Animation API を使用して CSS アニメーションを作成することが可能ですが、API が本当に役立つ時はアニメーションの再生を制御するときです。Web Animation API は、再生を制御するための便利ないくつかのメソッドを提供しています。アリスが拡大/縮小するゲームでのアニメーションの一時停止と再生を見てみましょう( <a href="http://codepen.io/rachelnabors/pen/PNYGZQ">Codepen の完全なコード</a>をご覧ください。)<br>
  <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010"><img alt="Playing the growing and shrinking game with Alice." src="https://mdn.mozillademos.org/files/13845/growing-shrinking_article_optimized.gif" style="display: block; height: 374px; margin-left: auto; margin-right: auto; width: 700px;"></a></p>
 
-<p>このゲームでは、アリスはちさなボトルから大きなボトルに移動するアニメーションを使用しており、ボトルとカップケーキを使い制御します。どちらにも独自のアニメーションがあります。</p>
+<p>このゲームでは、アリスは小さなボトルから大きなボトルに移動するアニメーションを使用しており、ボトルとカップケーキを使い制御します。どちらにも独自のアニメーションがあります。</p>
 
 <h3 id="アニメーションの一時停止と再生">アニメーションの一時停止と再生</h3>
 
@@ -188,7 +188,7 @@ cake.addEventListener("touchstart", growAlice, false);</pre>
  <li>{{domxref("Animation.reverse()")}} を実行すると ({{domxref("Animation.playbackRate")}} に負数を設定し、アニメーションの再生方向を逆方向にします。</li>
 </ul>
 
-<p>最初に <code>playbackRate</code> を見てみましょう。負数の playbackRate はアニメーションを逆に実行させます。アリスがボトルから飲むと彼女は地位sかうなります。これは、ボトルが彼女のアニメーションの playbackRate を 1 から -1 に変更するためです。</p>
+<p>最初に <code>playbackRate</code> を見てみましょう。負数の playbackRate はアニメーションを逆に実行させます。アリスがボトルから飲むと彼女は小さくうなります。これは、ボトルが彼女のアニメーションの playbackRate を 1 から -1 に変更するためです。</p>
 
 <pre class="brush: js notranslate">var shrinkAlice = function() {
   aliceChange.playbackRate = -1;
@@ -224,7 +224,7 @@ bottle.addEventListener("touchstart", shrinkAlice, false);</pre>
 document.addEventListener("click", goFaster);
 document.addEventListener("touchstart", goFaster);</pre>
 
-<p>また、背景要素にはクリックまたｈタップしたときに影響を受ける<code>playbackRate</code> を設定しています。アリスとレッドクイーンを 2 倍早く走らせたらどうなると思いますか？速度を落とすとどうなると思いますか？</p>
+<p>また、背景要素にはクリックまたはタップしたときに影響を受ける<code>playbackRate</code> を設定しています。アリスとレッドクイーンを 2 倍早く走らせたらどうなると思いますか？速度を落とすとどうなると思いますか？</p>
 
 <h2 id="アニメーションから情報を取得する">アニメーションから情報を取得する</h2>
 
