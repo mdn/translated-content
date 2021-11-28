@@ -5,55 +5,63 @@ tags:
   - '@media'
   - Blink
   - CSS
-  - Deprecated
-  - Non-standard
-  - Reference
+  - 非推奨
+  - 標準外
+  - リファレンス
   - WebKit
-  - WebKit 拡張
   - メディア特性
+browser-compat: css.at-rules.media.-webkit-transition
 translation_of: Web/CSS/@media/-webkit-transition
 ---
-<div>{{ CSSRef }} {{deprecated_header}} {{ Non-standard_header }}</div>
+{{ CSSRef }} {{deprecated_header}} {{ Non-standard_header }}
 
-<p><a href="/ja/docs/CSS">CSS</a> の <strong><code>-webkit-transition</code></strong> <a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">メディア特性</a> は <a href="/ja/docs/Web/CSS/Webkit_Extensions">Chrome 拡張</a>で、真偽値型であり、閲覧コンテキストが <a href="/ja/docs/Web/CSS/CSS_Transitions">CSS トランジション</a>に対応していれば値が <code>true</code> になります。 WebKit または Blink 以外を使用したブラウザーでは対応していません。</p>
+**`-webkit-transition`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、閲覧コンテキストが [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)に対応していれば値が `true` になります。 WebKit または Blink 以外を使用したブラウザーでは対応していません。
 
-<div class="note">
-<p><strong>メモ:</strong> このメディア特性は使用しないでください。これは仕様化されておらず、広く実装されておらず、すべてのブラウザーから削除されています。代わりに {{cssxref("@supports")}} 特性クエリを使用してください。</p>
-</div>
+Apple には [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。ここでは `transition` と呼ばれるようになりました。
 
-<h2 id="Examples" name="Examples">例</h2>
+> **Note:** このメディア特性は使用しないでください。これは仕様化されておらず、広く実装されておらず、すべてのブラウザーから削除されています。代わりに {{cssxref("@supports")}} 特性クエリーを使用してください。
 
-<h3 id="Use_supports_instead" name="Use_supports_instead">代わりに @supports を使用してください</h3>
+## 構文
 
-<p><code>-webkit-transition</code> メディア特性を使用しないでください。代わりに、 CSS の {{cssxref("@supports")}} <a href="/ja/docs/Web/CSS/At-rule">@-規則</a>を用いてトランジションの有無を判定してください。</p>
+```css
+@media (-webkit-transition) {
+  /* トランジションに対応している場合に使用される CSS */
+}
+```
 
-<pre class="brush: css">@supports (transition: initial) {
+## 例
+
+## 代わりに @supports を使用してください
+
+`-webkit-transition` メディア特性を使用しないでください。代わりに、次のように CSS の {{cssxref("@supports")}} [アットルール](/ja/docs/Web/CSS/At-rule)を用いてトランジションの対応を検査してください。
+
+```css
+@supports (transition: initial) {
   /* トランジションに対応している場合に使われる CSS */
 }
-</pre>
+```
 
-<h3 id="Obsolete_example" name="Obsolete_example">廃止された例</h3>
+### 廃止された例
 
-<p>廃止される以前、次のように <code>-webkit-transition</code> を使用することができました。</p>
+廃止される以前、次のように `-webkit-transition` を使用することができました。
 
-<pre class="brush: css">@media (-webkit-transition) {
+```css
+@media (-webkit-transition) {
   /* トランジションに対応している場合に使われる CSS */
 }
-</pre>
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<p>仕様書では定義されていません。 Apple には <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3">Safari CSS Reference に説明</a>があります。</p>
+どの標準でも定義されていません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.at-rules.media.-webkit-transition")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries">メディア特性の利用</a></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS トランジションの利用</a></li>
- <li>{{cssxref("@supports")}}</li>
- <li>{{cssxref("transition")}}</li>
-</ul>
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- {{cssxref("@supports")}}
+- {{cssxref("transition")}}
