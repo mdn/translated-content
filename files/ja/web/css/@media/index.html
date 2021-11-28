@@ -56,7 +56,7 @@ translation_of: Web/CSS/@media
 - `speech`
   - : 音声合成向けのものです。
 
-> **Note:** CSS2.1 および [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) では、その他のメディアタイプ (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`) が定義されていましたが、これらは [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) で非推奨となったため、使用すべきではありません。
+> **Note:** CSS2.1 および [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) では、その他のメディア種別 (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`) が定義されていましたが、これらは [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) で非推奨となったため、使用すべきではありません。
 > `aural` タイプは `speech` に置き換えられましたが、これも同様です。
 
 ### メディア特性
@@ -144,10 +144,10 @@ translation_of: Web/CSS/@media
 
 - `and`
   - : 複数のメディア特性を 1 つのメディアクエリーに結合する際に使用されます。クエリーが `true` になるためには、結合させた各機能が `true` を返すことが必要です。
-    また、メディア機能とメディアタイプを結合する際にも使用されます。
+    また、メディア特性とメディア種別を結合する際にも使用されます。
 - `not`
   - : メディアクエリーを反転するために使用され、クエリーが `false` を返す場合に `true` を返します。
-    カンマで区切られたクエリのリストの中にある場合は、適用された特定のクエリのみを反転します。
+    カンマで区切られたクエリーのリストの中にある場合は、適用された特定のクエリーのみを反転します。
     `not` 演算子を使用する場合は、メディア種別*も*指定しなければなりません。
 
     > **Note:** レベル 3 では、個々のメディア特性式を否定するために `not` キーワードを使用することはできず、メディアクエリー全体のみを否定することしかできません。
