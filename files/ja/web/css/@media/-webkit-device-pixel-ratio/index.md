@@ -19,7 +19,7 @@ translation_of: Web/CSS/@media/-webkit-device-pixel-ratio
 
 ## 構文
 
-`-webkit-device-pixel-ratio` 特性は {{cssxref("&lt;number&gt;")}} 値で指定されます。これは範囲特性であり、つまり接頭辞が付いた **`-webkit-min-device-pixel-ratio`** 及び **`-webkit-max-device-pixel-ratio`** の変化形を使用して、それぞれ最低値と最高値をクエリーすることもできます。
+`-webkit-device-pixel-ratio` 特性は {{cssxref("&lt;number&gt;")}} 値で指定されます。これは範囲特性であり、つまり接頭辞が付いた **`-webkit-min-device-pixel-ratio`** および **`-webkit-max-device-pixel-ratio`** の変化形を使用して、それぞれ最低値と最高値をクエリーすることもできます。
 
 ### 値
 
