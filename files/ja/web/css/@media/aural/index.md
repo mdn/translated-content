@@ -3,40 +3,51 @@ title: aural
 slug: Web/CSS/@media/aural
 tags:
   - CSS
-  - リファレンス
   - 非推奨
+  - リファレンス
+  - aural
+  - メディア特性
+  - speech
 translation_of: Web/CSS/@media/aural
 original_slug: Web/CSS/aural
 ---
-<div>{{CSSRef}} {{deprecated_header}} {{obsolete_header("6.0")}}</div>
+{{CSSRef}} {{deprecated_header}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <code>aural</code> <a href="/ja/docs/CSS/@media#Media_types">メディア種別</a>は、音声出力の能力を持った機器に使用されます。</p>
+`aural` は [CSS](/ja/docs/Web/CSS) の[メディア種別](/ja/docs/Web/CSS/@media#メディア種別)で、音声出力の能力を持った機器に使用されます。
 
-<div class="note">
-<p><strong>メモ:</strong> このメディア種別は <code><a href="/ja/docs/Web/CSS/@media#speech">speech</a></code> に置き換えられ、非推奨になりました。</p>
-</div>
+> **Note:** このメディア種別は [`speech`](/ja/docs/Web/CSS/@media#speech) に置き換えられ、非推奨になりました。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 構文
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://www.w3.org/TR/CSS2/aural.html#q19.0">CSS Level 2</a></td>
-   <td>非推奨</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+CSS の `aural` メディア種別は — [`speech`](/ja/docs/Web/CSS/@media#speech) メディア種別に置き換えられて非推奨になりましたが — 音声合成装置を使ってコンテンツを表示する場合にのみ適用される CSS のブロックを指定するために使用されていました。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+```css
+@media aural {
+  /* ここで音声に関するスタイルを定義 */
+}
+```
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/@media">@media</a></li>
-</ul>
+既存の CSS を `speech` メディアタイプを使用するように更新するのは、`aural` を `speech` に置き換えるだけの簡単な作業です。
+
+## 例
+
+### 基本的な例
+
+```css
+@media aural {
+  body { voice-family: Paul }
+}
+```
+
+## 仕様書
+
+| 仕様書                                    | 状態     | 備考             |
+| ------------------------------------------------ | ---------- | ------------------- |
+| {{SpecName('CSS2.2', '', 'aural')}} | 非推奨 | 初回定義 |
+
+## 関連情報
+
+- [メディアクエリー](/ja/docs/Web/CSS/Media_Queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [`@media`](/ja/docs/Web/CSS/@media)
+- [`speech`](/ja/docs/Web/CSS/@media#speech)
