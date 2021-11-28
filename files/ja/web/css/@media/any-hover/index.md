@@ -4,69 +4,57 @@ slug: Web/CSS/@media/any-hover
 tags:
   - '@media'
   - CSS
-  - メディアクエリ
+  - メディアクエリー
   - メディア特性
   - リファレンス
+browser-compat: css.at-rules.media.any-hover
 translation_of: Web/CSS/@media/any-hover
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/CSS">CSS</a> の <strong><code>any-hover</code></strong> <a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">メディア特性</a>は、要素の上でホバーすることができる入力メカニズムが<em>何らか</em>利用できるかどうかをテストするために使用することができます。</p>
+**`any-hover`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、要素の上で停止することができる入力メカニズムが*何らか*利用できるかどうかを検査するために使用することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>any-hover</code> 特性は、以下の一覧のうち一つのキーワード値で指定します。</p>
+`any-hover` 特性は、以下の一覧のうち一つのキーワード値で指定します。
 
-<dl>
- <dt><code>none</code></dt>
- <dd>差支えなくホバーができる入力メカニズムがないか、又はポインティング入力メカニズムがない。</dd>
- <dt><code>hover</code></dt>
- <dd>一つ以上の入力メカニズムが、要素の上で差支えなくホバーすることができる。</dd>
-</dl>
+- `none`
+  - : 差支えなく停止することができる入力メカニズムがないか、またはポインティング入力メカニズムがない。
+- `hover`
+  - : 一つ以上の入力メカニズムが、要素の上で差支えなく停止することができる。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### 入力手段が停止をすることができるかどうかを検査
 
-<pre class="brush: html">&lt;a href="#"&gt;Try hovering over me!&lt;/a&gt;</pre>
+#### HTML
 
-<h3 id="CSS">CSS</h3>
+```html
+<a href="#">Try hovering over me!</a>
+```
 
-<pre class="brush: css">@media (any-hover: hover) {
+#### CSS
+
+```css
+@media (any-hover: hover) {
   a:hover {
     background: yellow;
   }
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Testing_whether_input_methods_can_hover")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#descdef-media-any-hover', 'any-hover')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.at-rules.media.any-hover")}}</p>
+{{Compat}}
 
-<h2 id="See_Also" name="See_Also">関連項目</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/@media/hover"><code>hover</code> メディア特性</a></li>
-</ul>
+- [`hover` メディア特性](/ja/docs/Web/CSS/@media/hover)
