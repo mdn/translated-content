@@ -4,35 +4,65 @@ slug: Web/CSS/@media/-webkit-transform-2d
 tags:
   - '@media'
   - CSS
-  - WebKit 拡張
-  - メディア特性
-  - リファレンス
   - 標準外
+  - リファレンス
+  - WebKit
+  - メディア特性
+browser-compat: css.at-rules.media.-webkit-transform-2d
 translation_of: Web/CSS/@media/-webkit-transform-2d
 ---
-<div>{{ Non-standard_header }}</div>
+{{ Non-standard_header }}
 
-<p><a href="/ja/docs/CSS">CSS</a> の <strong><code>-webkit-transform-2d</code></strong> <a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">メディア特性</a> は <a href="/ja/docs/Web/CSS/Webkit_Extensions">Chrome 拡張</a>で、真偽値型であり、ベンダー接頭辞付きの CSS 2D {{cssxref("transform")}} に対応していれば値が <code>true</code> になります。</p>
+**`-webkit-transform-2d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性) で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS の二次元 {{cssxref("transform")}} に対応していれば値が `true` になります。
 
-<div class="note">
-<p><strong>メモ:</strong> このメディア特性は WebKit でのみ対応しています。可能であれば、 {{cssxref("@supports")}} 特性クエリを代わりに使用してください。</p>
-</div>
+Apple には [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 構文
 
-<p>仕様書では定義されていません。 Apple には <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3">Safari CSS Reference に説明</a>があります。</p>
+`-webkit-transform-2d` は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性) で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、 `-webkit` 接頭辞付きの CSS の二次元 {{cssxref("transform")}} に対応していれば値が `true` になります。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+### 値
 
-<p>{{Compat("css.at-rules.media.-webkit-transform-2d")}}</p>
+- `true`
+  - : ブラウザーは二次元の CSS 座標変換に `-webkit` の接頭辞つきで対応しています。
+- `false`
+  - : 二次元の CSS 座標変換で `-webkit` の接頭辞が付いたものはブラウザーが対応していません。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 例
 
-<ul>
- <li>{{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}</li>
- <li>{{cssxref("@media/-webkit-transition", "-webkit-transition")}}</li>
- <li>{{cssxref("@media/-webkit-animation", "-webkit-animation")}}</li>
- <li><a href="http://www.quirksmode.org/css/tests/mediaqueries/animation.html">Test page at quirksmode.org</a></li>
-</ul>
+### 基本的な例
 
-<div>{{ CSSRef }}</div>
+```css
+@media (-webkit-transform-2d) {
+  div {
+    -webkit-transform: translate(100px, 100px);
+  }
+}
+```
+
+このメディア機能は WebKit でのみ対応しています。可能であれば、代わりに {{cssxref("@supports")}} 機能クエリを使用してください。
+
+```css
+@supports (-webkit-transform: translate(100px, 100px)) {
+  div {
+    -webkit-transform: translate(100px, 100px);
+  }
+}
+```
+
+## 仕様書
+
+どの標準でも定義されていません。
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
+- {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
+- {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
+- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+
+{{ CSSRef }}
