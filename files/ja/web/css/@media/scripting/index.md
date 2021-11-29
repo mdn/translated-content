@@ -4,42 +4,41 @@ slug: Web/CSS/@media/scripting
 tags:
   - '@media'
   - CSS
-  - Media Queries
-  - Reference
-  - media feature
-  - メディアクエリ
+  - メディアクエリー
+  - リファレンス
   - メディア特性
+browser-compat: css.at-rules.media.scripting
 translation_of: Web/CSS/@media/scripting
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p><strong><code>scripting</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">メディア特性</a>で、 (JavaScript などの) スクリプトが利用できるかどうかを調べるために使用することができます。</p>
+**`scripting`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 (JavaScript などの) スクリプトが利用できるかどうかを調べるために使用することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>scripting</code> 特性は、以下の一覧のうち一つのキーワード値で指定します。</p>
+`scripting` 特性は、以下の一覧のうち一つのキーワード値で指定します。
 
-<dl>
- <dt><code>none</code></dt>
- <dd>スクリプトは現在の文書で全く利用できません。</dd>
- <dt><code>initial-only</code></dt>
- <dd>スクリプトはページを読み込んでいる間は利用できますが、その後は利用できません。</dd>
- <dt><code>enabled</code></dt>
- <dd>現在の文書がスクリプトに対応しており、有効です。</dd>
-</dl>
+- `none`
+  - : スクリプトは現在の文書で全く利用できません。
+- `initial-only`
+  - : スクリプトはページを読み込んでいる間は利用できますが、その後は利用できません。
+- `enabled`
+  - : 現在の文書がスクリプトに対応しており、有効です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p class="script-none"&gt;スクリプトは利用できません。 :-(&lt;/p&gt;
-&lt;p class="script-initial-only"&gt;スクリプトはページを読み込んでいる間だけ有効です。残念。&lt;/p&gt;
-&lt;p class="script-enabled"&gt;スクリプトは有効です。 :-)&lt;/p&gt;
-</pre>
+```html
+<p class="script-none">スクリプトは利用できません。 :-(</p>
+<p class="script-initial-only">スクリプトはページを読み込んでいる間だけ有効です。残念。</p>
+<p class="script-enabled">スクリプトは有効です。 :-)</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   color: lightgray;
 }
 
@@ -59,31 +58,22 @@ translation_of: Web/CSS/@media/scripting
   .script-enabled {
     color: red;
   }
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS5 Media Queries', '#scripting', 'scripting')}}</td>
-   <td>{{Spec2('CSS5 Media Queries')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.at-rules.media.scripting")}}</p>
+{{Compat}}
+
+## 関連情報
+
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [@media](/ja/docs/Web/CSS/@media)
