@@ -4,28 +4,32 @@ slug: Web/CSS/@media/height
 tags:
   - '@media'
   - CSS
-  - メディアクエリ
-  - メディア特性
+  - メディアクエリー
   - リファレンス
+  - メディア特性
+browser-compat: css.at-rules.media.height
 translation_of: Web/CSS/@media/height
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/CSS">CSS</a> の <strong><code>height</code></strong> <a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">メディア特性</a>は、{{glossary("viewport", "ビューポート")}}の高さ (又は<a href="/ja/docs/Web/CSS/Paged_media">ページ付きメディア</a>のページボックスの高さ) に基づいてスタイルを適用するために使用することができます。</p>
+**`height`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の高さ (または[ページ付きメディア](/ja/docs/Web/CSS/Paged_Media)のページボックスの高さ) に基づいてスタイルを適用するために使用することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>height</code> 特性は、ビューポートの高さを表す {{cssxref("&lt;length&gt;")}} 値として指定します。これは範囲の特性であり、つまり接頭辞の付いた <strong><code>min-height</code></strong> 及び <code><strong>max-height</strong></code> の変化形を使用して、それぞれ最小値と最大値をクエリすることができます。</p>
+`height` 特性は、ビューポートの高さを表す {{cssxref("&lt;length&gt;")}} 値として指定します。これは範囲の特性であり、つまり接頭辞の付いた **`min-height`** および **`max-height`** の変化形を使用して、それぞれ最小値と最大値をクエリーすることができます。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;ビューポートの高さを変更しながら、この要素を見ていてください。&lt;/div&gt;</pre>
+```html
+<div>ビューポートの高さを変更しながら、この要素を見ていてください。</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* 正確な高さ */
+```css
+/* 正確な高さ */
 @media (height: 360px) {
   div {
     color: red;
@@ -45,36 +49,21 @@ translation_of: Web/CSS/@media/height
     border: 2px solid blue;
   }
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Example','90%')}}</p>
+{{EmbedLiveSample('Examples','90%')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#height', 'height')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>値に負の数を取ることができるようになり、この場合は false と計算されます。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#height', 'height')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>初回定義。値は非負でなければなりませんでした。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.at-rules.media.height")}}</p>
+{{Compat}}
+
+## 関連情報
+
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [@media](/ja/docs/Web/CSS/@media)
