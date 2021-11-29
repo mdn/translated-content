@@ -4,38 +4,37 @@ slug: Web/CSS/@media/overflow-inline
 tags:
   - '@media'
   - CSS
-  - Media Queries
-  - Reference
-  - メディアクエリ
-  - メディア特性
+  - メディアクエリー
   - リファレンス
+  - メディア特性
+browser-compat: css.at-rules.media.overflow-inline
 translation_of: Web/CSS/@media/overflow-inline
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p><strong><code>overflow-inline</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">メディア特性</a>で、初期<a href="/ja/docs/Web/CSS/Containing_block">包含ブロック</a>をインライン軸方向にあふれたコンテンツを端末がどのように扱うかを調べるために使用します。</p>
+**`overflow-inline`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、初期[包含ブロック](/ja/docs/Web/CSS/Containing_block)をインライン軸方向にあふれたコンテンツを端末がどのように扱うかを調べるために使用します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>overflow-inline</code> 特性は以下の一覧のうち一つのキーワード値で指定します。</p>
+`overflow-inline` 特性は以下の一覧のうち一つのキーワード値で指定します。
 
-<dl>
- <dt><code>none</code></dt>
- <dd>インライン軸方向にあふれたコンテンツは表示されません。</dd>
- <dt><code>scroll</code></dt>
- <dd>インライン軸方向にあふれたコンテンツは、スクロールすることで見ることができます。</dd>
-</dl>
+- `none`
+  - : インライン軸方向にあふれたコンテンツは表示されません。
+- `scroll`
+  - : インライン軸方向にあふれたコンテンツは、スクロールすることで見ることができます。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat, tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend. Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt sed eget ex.&lt;/p&gt;
-</pre>
+```html
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat, tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend. Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt sed eget ex.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   white-space: nowrap;
 }
 
@@ -43,31 +42,17 @@ translation_of: Web/CSS/@media/overflow-inline
   p {
     color: red;
   }
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#mf-overflow-inline', 'overflow-inline')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>{{Compat("css.at-rules.media.overflow-inline")}}</div>
+{{Compat}}
