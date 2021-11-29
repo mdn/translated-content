@@ -3,34 +3,35 @@ title: forced-colors
 slug: Web/CSS/@media/forced-colors
 tags:
   - CSS
-  - Reference
-  - color
+  - リファレンス
+  - 色
   - forced-colors
-  - media feature
+  - メディア特性
 browser-compat: css.at-rules.media.forced-colors
+translation_of: Web/CSS/@media/forced-colors
 ---
 {{CSSRef}}
 
-The **`forced-colors`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the {{Glossary("user agent")}} has enabled a forced colors mode where it enforces a user-chosen limited color palette on the page. An example of a forced colors mode is Windows High Contrast mode.
+**`forced-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#media_features)で、{{Glossary("user agent", "ユーザーエージェント")}}が強制カラーモードを有効にしているかどうかを検出するために使用されます。強制カラーモードの例としては、 Windows のハイコントラストモードがあります。
 
-## Syntax
+## 構文
 
-The `forced-colors` media feature indicates whether or not the browser is currently in forced-colors mode.
+`forced-colors` メディア特性は、ブラウザーが現在強制カラーモードになっているかどうかを示します。
 
 ### Values
 
 - `none`
-  - : Forced colors mode is not active; the page’s colors are not being forced into a limited palette.
+  - : 強制カラーモードは有効ではありません。ページの色が限られたパレットに強制されていません。
 - `active`
-  - : Indicates that forced colors mode is active. The browser provides the color palette to authors through the [CSS system color](/en-US/docs/Web/CSS/color_value#system_colors) keywords and, if appropriate, triggers the appropriate value of [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) so that authors can adapt the page. The browser selects the value for `prefers-color-scheme` based on the lightness of the `Canvas` system color (see the [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) for more details).
+  - : 強制カラーモードが有効であることを示します。ブラウザーは、[CSS システム色](/ja/docs/Web/CSS/color_value#system_colors)キーワードを通じてカラーパレットを提供し、必要に応じて [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) の適切な値をトリガーして、ページを適応できるようにします。ブラウザーは `prefers-color-scheme` の値を `Canvas` のシステム色の明度に基づいて選択します (詳細は [color adjust spec](https://www.w3.org/TR/css-color-adjust-1/#forced) を参照してください)。
 
-## Usage notes
+## 使用上の注意
 
-### Properties affected by forced-color mode
+### 強制カラーモードの影響を受けるプロパティ
 
-In forced colors mode, the values of the following properties are treated as if they have no author-level values specified. That is, browser-specified values are used instead. The browser-specified values do not affect the style cascade; the values are instead forced by the browser at paint time.
+強制カラーモードでは、以下のプロパティの値は、作者レベルの値が指定されていないかのように扱われます。つまり、ブラウザーで指定された値が代わりに使用されます。ブラウザー指定の値は、スタイルのカスケードには影響せず、描画時にブラウザーによって強制的に設定されます。
 
-These browser-specified values are selected from the set of system colors — this ensures a consistent contrast for common UI elements for users that have forced colors enabled.
+ブラウザーで指定された値は、システム色のセットから選択されます。これにより、強制カラーを有効にしているユーザーに対して、共通の UI 要素の一貫したコントラストが保証されます。
 
 - {{cssxref("color")}}
 - {{cssxref("background-color")}}
@@ -40,47 +41,47 @@ These browser-specified values are selected from the set of system colors — th
 - {{cssxref("outline-color")}}
 - {{cssxref("column-rule-color")}}
 - {{cssxref("-webkit-tap-highlight-color")}}
-- [SVG fill attribute](/en-US/docs/Web/SVG/Attribute/fill)
-- [SVG stroke attribute](/en-US/docs/Web/SVG/Attribute/stroke)
+- [SVG fill 属性](/ja/docs/Web/SVG/Attribute/fill)
+- [SVG stroke 属性](/ja/docs/Web/SVG/Attribute/stroke)
 
-Additionally the following properties have special behavior in forced colors mode:
+また、以下のプロパティは、強制カラーモードでは特別な動作をします。
 
-- {{cssxref("box-shadow")}} is forced to 'none'
-- {{cssxref("text-shadow")}} is forced to 'none'
-- {{cssxref("background-image")}} is forced to 'none' for values that are not url-based
-- {{cssxref("color-scheme")}} is forced to 'light dark'
-- {{cssxref("scrollbar-color")}} is forced to 'auto'
+- {{cssxref("box-shadow")}} は 'none' に強制されます
+- {{cssxref("text-shadow")}} は 'none' に強制されます
+- {{cssxref("background-image")}} は URL ベースでない値では 'none' に強制されます
+- {{cssxref("color-scheme")}} は 'light dark' に強制されます
+- {{cssxref("scrollbar-color")}} は 'auto' に強制されます
 
-The system colors that are forced for the above properties depend on the context of the element. For example the {{cssxref("color")}} property on button element will be forced to `ButtonText`. On normal text it will be forced to `CanvasText`. See the [list of system colors](/en-US/docs/Web/CSS/color_value#system_colors) for additional details of when each might be appropriate in various UI contexts.
+The system colors that are forced for the above properties depend on the context of the element. For example the {{cssxref("color")}} property on button element will be forced to `ButtonText`. On normal text it will be forced to `CanvasText`. See the [list of system colors](/ja/docs/Web/CSS/color_value#system_colors) for additional details of when each might be appropriate in various UI contexts.
 
-> **Note:** user agents choose system colors based on native element semantics, _not_ on added ARIA roles.
-> As an example, adding `role="button"` to a `div` will **not** cause an element's color to be forced to `ButtonText`
+> **Note:** ユーザーエージェントは、追加された ARIA ロールではなく、本来の要素の意味に基づいてシステム色を選択します。
+> 例えば、`div` に `role="button"` を追加しても、要素の色が `ButtonText` に強制されることは**ありません**。
 
-In addition to these adjustments, browsers will help ensure text legibility by drawing “backplates” behind text. This is particularly important for preserving contrast when text is placed on top of images.
+これらの調整に加えて、ブラウザーはテキストの後ろに「バックプレート」を描くことで、テキストの読みやすさを確保します。これは、テキストが画像の上に配置されている場合にコントラストを保つために特に重要です。
 
-There are two cases where the user agent does not force the values for the above properties — when a {{cssxref("forced-color-adjust")}} value of `none` is applied to an element, or when a system color is specified by the author.
+ユーザーエージェントが上記のプロパティの値を強制的に変更しないケースが 2 つあります。{{cssxref("forced-color-adjust")}} 値が `none` の要素に適用されている場合と、作者がシステム色を指定している場合です。
 
-When forced-color-adjust is set to `none` on an element, none of the forced color values will apply, and author styles will be applied as normal. Additionally, the backplate for text will be disabled.
+要素で forced-color-adjust が `none` に設定されている場合は、強制カラーの値は適用されず、作者の指定したスタイルが通常どおり適用されます。また、テキストのバックプレートは無効になります。
 
-When a system color is specified, it will be used instead of the value that would otherwise have been forced.
+システム色が指定された場合は、強制的に設定された値の代わりにシステム色が使用されます。
 
-You can also use system colors with any property _other_ than those listed above, to ensure that the rest of the page integrates with the restricted color palette available in forced colors mode.
+また、強制カラーモードで利用できる制限されたカラーパレットとページの他の部分が統合されるように、上記以外のプロパティでシステム色を使用することもできます。
 
-### Accessibility concerns
+### アクセシビリティの考慮
 
-In general, web authors should **not** be using the `forced-colors` media feature to create a separate design for users with this feature enabled. Instead, its intended usage is to make small tweaks to improve usability or legibility when the default application of forced colors does not work well for a given portion of a page.
+一般的に、ウェブ制作者は `forced-colors` メディア特性を使用して、この機能が有効になっているユーザー向けに個別のデザインを作成することは**すべきではありません**。この機能は、既定の強制カラーの適用ではページの一部がうまく機能しない場合に、使いやすさや読みやすさを向上させるための細かい調整を行うことを目的としています。
 
-The high contrast provided by forced colors mode's reduced palette and text backplates is often essential for some users to be able to read or use a given website, so adjustments that affect content should be chosen carefully and targeted to content that is otherwise not legible.
+強制カラーモードの縮小されたパレットとテキストバックプレートによる高いコントラストは、一部のユーザーがウェブサイトを読んだり利用したりするのに不可欠な場合が多いため、コンテンツに影響を与える調整は慎重に行い、他の方法では読み取れないコンテンツを対象とする必要があります。
 
-### User preferences
+### ユーザー設定
 
-This media feature is active only if the user has enabled color scheme preferences in their operating system. One example of such a feature is High Contrast mode on Windows.
+このメディア特性は、ユーザーがオペレーティングシステムで配色設定を有効にしている場合にのみ有効です。このような機能の例として、 Windows のハイコントラストモードがあります。
 
-## Examples
+## 例
 
-> **Note:** The below example will only work when using a browser that supports this media feature, and with a preference such as High Contrast mode enabled in your OS.
+> **Note:** 以下の例は、このメディア特性に対応したブラウザーを使用し、 OS のハイコントラストモードなどの環境設定を有効にしている場合にのみ動作します。
 
-This example is a button that normally gets its contrast via {{cssxref("box-shadow")}}. Under forced colors mode, box-shadow is forced to none, so the example uses the forced-colors media feature to ensure there is a border of the appropriate color (ButtonText in this case)
+この例は、通常 {{cssxref("box-shadow")}} によってコントラストを得るボタンです。強制カラーモードでは、 box-shadow は強制的に none になります。そのため、この例では強制カラーメディア機能を使用して、適切な色（この場合は ButtonText）の境界線を確保しています。
 
 ### HTML
 
@@ -99,26 +100,26 @@ This example is a button that normally gets its contrast via {{cssxref("box-shad
 
 @media (forced-colors: active) {
   .button {
-    /* Use a border instead, since box-shadow is forced to 'none' in forced-colors mode */
+    /* 強制カラーモードでは box-shadow が 'none' に強制されるため、代わりに border を使用します。 */
     border: 2px ButtonText solid;
   }
 }
 ```
 
-### Result
+### 結果
 
 {{EmbedLiveSample("Examples")}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [@media](/en-US/docs/Web/CSS/@media)
+- [@media](/ja/docs/Web/CSS/@media)
 - [Styling for Windows high contrast with standards for forced colors.](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
 - {{cssxref("forced-color-adjust")}}
