@@ -4,68 +4,60 @@ slug: Web/CSS/@media/overflow-block
 tags:
   - '@media'
   - CSS
-  - メディアクエリ
-  - メディア特性
+  - メディアクエリー
   - リファレンス
+  - メディア特性
+browser-compat: css.at-rules.media.overflow-block
 translation_of: Web/CSS/@media/overflow-block
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/CSS">CSS</a> の <strong><code>overflow-block</code></strong> <a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">メディア特性</a>は、初期<a href="/ja/docs/Web/CSS/All_about_the_containing_block">包含ブロック</a>をブロック軸方向にあふれたコンテンツを機器がどのように扱うかを調べるために使用します。</p>
+**`overflow-block`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、初期[包含ブロック](/ja/docs/Web/CSS/Containing_block)をブロック軸方向にあふれたコンテンツを機器がどのように扱うかを調べるために使用します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>overflow-block</code> 特性は以下の一覧のうち一つのキーワード値で指定します。</p>
+`overflow-block` 特性は以下の一覧のうち一つのキーワード値で指定します。
 
-<dl>
- <dt><code>none</code></dt>
- <dd>ブロック軸方向にあふれたコンテンツは表示されません。</dd>
- <dt><code>scroll</code></dt>
- <dd>ブロック軸方向にあふれたコンテンツは、スクロールすることで見ることができます。</dd>
- <dt><code>optional-paged</code></dt>
- <dd>ブロック軸方向にあふれたコンテンツは、スクロールすることで見ることができますが、ページ区切りを手動で ({{cssxref("break-inside")}} などによって) 入れることができ、その後のコンテンツを次のページに表示させることができます。</dd>
- <dt><code>paged</code></dt>
- <dd>コンテンツは不連続のページに分割されます。１ページをブロック方向にあふれるコンテンツは、次のページに表示されます。</dd>
-</dl>
+- `none`
+  - : ブロック軸方向にあふれたコンテンツは表示されません。
+- `scroll`
+  - : ブロック軸方向にあふれたコンテンツは、スクロールすることで見ることができます。
+- `optional-paged`
+  - : ブロック軸方向にあふれたコンテンツは、スクロールすることで見ることができますが、ページ区切りを手動で ({{cssxref("break-inside")}} などによって) 入れることができ、その後のコンテンツを次のページに表示させることができます。
+- `paged`
+  - : コンテンツは不連続のページに分割されます。１ページをブロック方向にあふれるコンテンツは、次のページに表示されます。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat, tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend. Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt sed eget ex.&lt;/p&gt;
-</pre>
+```html
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat, tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend. Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt sed eget ex.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@media (overflow-block: scroll) {
-  p {
-    color: red;
-  }
-}</pre>
+```css
+@media (overflow-block: scroll) {
+  p {
+    color: red;
+  }
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#mf-overflow-block', 'overflow-block')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.at-rules.media.overflow-block")}}</p>
+{{Compat}}
+
+## 関連情報
+
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [@media](/ja/docs/Web/CSS/@media)
