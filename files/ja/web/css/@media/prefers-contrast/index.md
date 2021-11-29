@@ -3,42 +3,42 @@ title: prefers-contrast
 slug: Web/CSS/@media/prefers-contrast
 tags:
   - CSS
-  - Reference
-  - media feature
+  - リファレンス
   - メディア特性
+browser-compat: css.at-rules.media.prefers-contrast
 translation_of: Web/CSS/@media/prefers-contrast
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong><code>prefers-contrast</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">メディア特性</a>で、ユーザーがウェブコンテンツをより高い (またはより低い) コントラストで表示するように要求したかどうかを検出するために使用します。</p>
+**`prefers-contrast`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーがウェブコンテンツをより高い (またはより低い) コントラストで表示するように要求したかどうかを検出するために使用します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<dl>
- <dt><code><dfn>no-preference</dfn></code></dt>
- <dd>ユーザーが設定をシステムに通知していないことを示します。このキーワード値は、boolean のコンテキストでは false と評価されます。</dd>
- <dt><code>more</code></dt>
- <dd>ユーザーが、より高いコントラストをもつインターフェイスを好むことをシステムに通知したことを示します。</dd>
- <dt><code><dfn>less</dfn></code></dt>
- <dd>ユーザーが、より低いコントラストを持つインタフェース好むことをシステムに通知したことを示します。</dd>
-</dl>
+- `no-preference`
+  - : ユーザーが設定をシステムに通知していないことを示します。このキーワード値は、boolean のコンテキストでは false と評価されます。
+- `more`
+  - : ユーザーが、より高いコントラストをもつインターフェイスを好むことをシステムに通知したことを示します。
+- `less`
+  - : ユーザーが、より低いコントラストを持つインタフェース好むことをシステムに通知したことを示します。
 
-<h2 id="User_preferences" name="User_preferences">ユーザー設定</h2>
+## ユーザー設定
 
-<p>様々なオペレーティングシステムがこのような設定をサポートしており、ユーザエージェントはオペレーティングシステムによって提供される設定に依存することになるでしょう。</p>
+様々なオペレーティングシステムがこのような設定をサポートしており、ユーザエージェントはオペレーティングシステムによって提供される設定に依存することになるでしょう。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>この例では、既定でいまいましい低いコントラストが与えられています。</p>
+この例では、既定でいまいましい低いコントラストが与えられています。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div class="contrast"&gt;low contrast box&lt;/div&gt;
-</pre>
+```html
+<div class="contrast">low contrast box</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">.contrast {
+```css
+.contrast {
   width: 100px;
   height: 100px;
   outline: 2px dashed black;
@@ -49,40 +49,23 @@ translation_of: Web/CSS/@media/prefers-contrast
     outline: 2px solid black;
   }
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS5 Media Queries', '#descdef-media-prefers-contrast', 'prefers-contrast')}}</td>
-   <td>{{Spec2('CSS5 Media Queries')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.at-rules.media.prefers-contrast")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>Microsoft <a href="https://msdn.microsoft.com/library/Hh771830">-ms-high-contrast</a> media feature</li>
- <li>CSS <a href="/en-US/docs/Web/CSS/@media/forced-colors">forced-colors</a> media query
-</ul>
+- Microsoft [-ms-high-contrast](https://msdn.microsoft.com/library/Hh771830) メディア特性
+- CSS の [forced-colors](/ja/docs/Web/CSS/@media/forced-colors) メディアクエリー
 
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}</p>
+{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
