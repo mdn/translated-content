@@ -4,31 +4,32 @@ slug: Web/CSS/@media/resolution
 tags:
   - '@media'
   - CSS
-  - Media Queries
-  - Reference
-  - media feature
-  - メディアクエリ
+  - メディアクエリー
+  - リファレンス
   - メディア特性
+browser-compat: css.at-rules.media.resolution
 translation_of: Web/CSS/@media/resolution
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p><strong><code>resolution</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">メディア特性</a>で、出力端末のピクセル解像度をテストするために使用することができます。</p>
+**`resolution`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力端末のピクセル解像度をテストするために使用することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>resolution</code> 特性は、出力端末のピクセル解像度を表す {{cssxref("&lt;resolution&gt;")}} 値として指定します。これは範囲の特性であり、つまり接頭辞の付いた <strong><code>min-resolution</code></strong> および <code><strong>max-resolution</strong></code> の変化形を使用して、それぞれ最小値と最大値をクエリすることができます。</p>
+`resolution` 特性は、出力端末のピクセル解像度を表す {{cssxref("&lt;resolution&gt;")}} 値として指定します。これは範囲の特性であり、つまり接頭辞の付いた **`min-resolution`** および **`max-resolution`** の変化形を使用して、それぞれ最小値と最大値をクエリーすることができます。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;This is a test of your device's pixel density.&lt;/p&gt;
-</pre>
+```html
+<p>This is a test of your device's pixel density.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">/* 正確な解像度 */
+```css
+/* 正確な解像度 */
 @media (resolution: 150dpi) {
   p {
     color: red;
@@ -47,37 +48,22 @@ translation_of: Web/CSS/@media/resolution
   p {
     background: yellow;
   }
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#resolution', 'resolution')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.at-rules.media.resolution")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("window.devicePixelRatio")}}</li>
-</ul>
+- {{domxref("window.devicePixelRatio")}}
+- {{cssxref("image-resolution")}} プロパティ
