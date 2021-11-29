@@ -4,36 +4,38 @@ slug: Web/CSS/@media/inverted-colors
 tags:
   - '@media'
   - CSS
-  - メディアクエリ
-  - メディア特性
+  - メディアクエリー
   - リファレンス
+  - メディア特性
+browser-compat: css.at-rules.media.inverted-colors
 translation_of: Web/CSS/@media/inverted-colors
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p><strong><code>inverted-colors</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">メディア特性</a>で、{{glossary("user agent", "ユーザーエージェント")}}またはその下の OS が色を反転しているかどうかを調べるために使用することができます。</p>
+**`inverted-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}またはその下の OS が色を反転しているかどうかを調べるために使用することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>inverted-colors</code> 特性は以下の一覧のうち一つのキーワード値で指定します。</p>
+`inverted-colors` 特性は以下の一覧のうち一つのキーワード値で指定します。
 
-<dl>
- <dt><code>none</code></dt>
- <dd>色が通常通り表示されます。</dd>
- <dt><code>inverted</code></dt>
- <dd>表示領域内のすべてのピクセルが反転されています。</dd>
-</dl>
+- `none`
+  - : 色が通常通り表示されます。
+- `inverted`
+  - : 表示領域内のすべてのピクセルが反転されています。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;If you're using inverted colors, this text should be blue on white (the inverse of yellow on black). If you're not, it should be red on light gray.&lt;/p&gt;
-&lt;p&gt;If the text is gray, your browser doesn't support the `inverted-colors` media feature.&lt;/p&gt;</pre>
+```html
+<p>If you're using inverted colors, this text should be blue on white (the inverse of yellow on black). If you're not, it should be red on light gray.</p>
+<p>If the text is gray, your browser doesn't support the `inverted-colors` media feature.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   color: gray;
 }
 
@@ -49,31 +51,22 @@ translation_of: Web/CSS/@media/inverted-colors
     background: #eee;
     color: red;
   }
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS5 Media Queries', '#inverted', 'inverted-colors')}}</td>
-   <td>{{Spec2('CSS5 Media Queries')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.at-rules.media.inverted-colors")}}</p>
+{{Compat}}
+
+## 関連情報
+
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [@media](/ja/docs/Web/CSS/@media)
