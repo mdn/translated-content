@@ -11,18 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 <p><strong><code>WeakMap</code></strong> 对象是一组键/值对的集合，其中的键是弱引用的。其键必须是对象，而值可以是任意的。</p>
 
-<p>你可以从这里了解更多关于<code>WeakMap</code>的内容:{{SectionOnPage("/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections", "WeakMap对象")}}.</p>
-
-<h2 id="语法">语法</h2>
-
-<pre>new WeakMap([iterable])</pre>
-
-<h3 id="参数">参数</h3>
-
-<dl>
- <dt><code>iterable</code></dt>
- <dd>Iterable 是一个数组（二元数组）或者其他可迭代的且其元素是键值对的对象。每个键值对会被加到新的 WeakMap 里。null 会被当做 undefined。</dd>
-</dl>
+<p>你可以从这里了解更多关于<code>WeakMap</code>的内容：{{SectionOnPage("/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections", "WeakMap对象")}}.</p>
 
 <h2 id="描述">描述</h2>
 
@@ -40,26 +29,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 <p>基本上，如果你要往对象上添加数据，又不想干扰垃圾回收机制，就可以使用 WeakMap。</p>
 
-<h2 id="属性">属性</h2>
+<h2 id="构造函数">构造函数</h2>
 
 <dl>
- <dt><code>WeakMap.length</code></dt>
- <dd><code>length</code>  属性的值为 0。</dd>
- <dt>{{jsxref("WeakMap.prototype")}}</dt>
- <dd><code>WeakMap</code> 构造器的原型。 允许添加属性到所有的 WeakMap 对象。</dd>
+  <dt>{{jsxref("WeakMap.prototype.weakMap", "WeakMap()")}}</dt>
+  <dd>创建一个新的 <code>WeakMap</code> 对象。</dd>
 </dl>
 
-<h2 id="WeakMap_实例"><code>WeakMap</code> 实例</h2>
+<h2 id="WeakMap_实例">实例方法</h2>
 
-<p>所有 <code>WeakMap</code> 实例继承自 {{jsxref("WeakMap.prototype")}}.</p>
-
-<h3 id="属性_2">属性</h3>
-
-<p>{{page('zh-CN/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype','属性')}}</p>
-
-<h3 id="方法">方法</h3>
-
-<p>{{page('zh-CN/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype','方法')}}</p>
+<dl>
+  <dt>{{jsxref("WeakMap.prototype.delete", "WeakMap.prototype.delete(key)")}}</dt>
+  <dd>删除 WeakMap 中与 <code>key</code> 相关联的值。删除之后，<code>WeakMap.prototype.has(key)</code> 将会返回 <code>false</code>。</dd>
+  <dt>{{jsxref("WeakMap.prototype.get", "WeakMap.prototype.get(key)")}}</dt>
+  <dd>返回 WeakMap 中与 <code>key</code> 相关联的值，如果 <code>key</code> 不存在则返回 <code>undefined</code>。</dd>
+  <dt>{{jsxref("WeakMap.prototype.has", "WeakMap.prototype.has(key)")}}</dt>
+  <dd>返回一个布尔值，断言一个值是否已经与 <code>WeakMap</code> 对象中的 <code>key</code> 关联。</dd>
+  <dt>{{jsxref("WeakMap.prototype.set", "WeakMap.prototype.set(key, value)")}}</dt>
+  <dd>给 <code>WeakMap</code> 中的 <code>key</code> 设置一个 <code>value</code>。该方法返回一个 <code> WeakMap </code> 对象。</dd>
+</dl>
 
 <h2 id="示例">示例</h2>
 
