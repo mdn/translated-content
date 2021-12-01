@@ -1,53 +1,45 @@
 ---
-title: grid-column-start
-slug: Web/CSS/grid-column-start
+title: grid-column-end
+slug: Web/CSS/grid-column-end
 tags:
   - CSS
   - CSS グリッド
   - CSS プロパティ
   - リファレンス
   - recipe:css-property
-browser-compat: css.properties.grid-column-start
-translation_of: Web/CSS/grid-column-start
+browser-compat: css.properties.grid-column-end
+translation_of: Web/CSS/grid-column-end
 ---
 {{CSSRef}}
 
-**`grid-column-start`** は CSS のプロパティで、グリッドの配置に線または区間を使用したり、使用しなかったりして (自動)、グリッド列内のグリッドアイテムの先頭位置を指定します。この開始位置は、{{Glossary("grid areas", "グリッド領域")}}のブロックの開始側の端を指定します。
+**`grid-column-end`** は CSS のプロパティで、グリッドの配置に線または区間を使用したり、使用しなかったりして (自動)、グリッド列内のグリッドアイテムの末尾位置、すなわち{{Glossary("grid areas", "グリッド領域")}}のブロックの末尾側の端を指定します。
 
-{{EmbedInteractiveExample("pages/css/grid-column-start.html")}}
+{{EmbedInteractiveExample("pages/css/grid-column-end.html")}}
 
 ## 構文
 
 ```css
 /* キーワード値 */
-grid-column-start: auto;
+grid-column-end: auto;
 
 /* <custom-ident> 値 */
-grid-column-start: somegridarea;
+grid-column-end: somegridarea;
 
 /* <integer> + <custom-ident> 値 */
-grid-column-start: 2;
-grid-column-start: somegridarea 4;
+grid-column-end: 2;
+grid-column-end: somegridarea 4;
 
 /* span + <integer> + <custom-ident> 値 */
-grid-column-start: span 3;
-grid-column-start: span somegridarea;
-grid-column-start: span somegridarea 5;
+grid-column-end: span 3;
+grid-column-end: span somegridarea;
+grid-column-end: 5 somegridarea span;
 
 /* グローバル値 */
-grid-column-start: inherit;
-grid-column-start: initial;
-grid-column-start: revert;
-grid-column-start: unset;
+grid-column-end: inherit;
+grid-column-end: initial;
+grid-column-end: revert;
+grid-column-end: unset;
 ```
-
-このプロパティは単一の `<grid-line>` 値で指定します。 `<grid-line>` 値は次のように指定します。
-
-- `auto` キーワード
-- `<custom-ident>` 値
-- `<integer>` 値
-- `<custom-ident>` および `<integer>` を空白で区切ったもの
-- `span` キーワードと `<custom-ident>` または `<integer>` またはその両方。
 
 ### 値
 
@@ -55,9 +47,9 @@ grid-column-start: unset;
   - : プロパティをグリッドアイテムの配置に影響させず、自動的に配置し、間隔を自動的に取るか、既定の `1` とするためのキーワードです。
 - `<custom-ident>`
 
-  - : `<custom-ident>-start` という名前の付いた線がある場合、これはそのような線の先頭がグリッドアイテムの配置に関わります。
+  - : `<custom-ident>-end` という名前の付いた線がある場合、これはそのような線の先頭がグリッドアイテムの配置に関わります。
 
-    > **Note:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-column-start: foo;` と指定すると名前付きグリッド領域の先頭側の端を選択します (その前に `foo-start` という名前の線が明示的に存在しない限り)。
+    > **Note:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-column-end: foo;` と指定すると名前付きグリッド領域の末尾側の端を選択します (その前に `foo-end` という名前の線が明示的に存在しない限り)。
 
     そうでなければ、これは `<custom-ident>` に沿って整数の `1` が指定されたものとして扱われます。
 
@@ -71,7 +63,7 @@ grid-column-start: unset;
 
 - `span && [ <integer> || <custom-ident> ]`
 
-  - : グリッドアイテムのグリッド領域の列の先頭の端が末尾の端から n 本になるように、グリッドアイテムの配置にグリッドスパンを設定します。
+  - : グリッドアイテムのグリッド領域の列の末尾の端が先頭の端から n 本になるように、グリッドアイテムの配置にグリッドスパンを設定します。
 
     名前が `<custom-ident>` として与えられた場合、その名前の付いた線のみがカウントされます。その名前を持つ線の数が十分おにない場合は、検索方向に対応する明示的グリッドの側にあるすべての暗黙的グリッド線が、この区間をカウントする目的でその名前を持つと仮定されます。
 
@@ -89,7 +81,7 @@ grid-column-start: unset;
 
 ## 例
 
-### グリッドアイテムの列の開始位置の設定
+### グリッドアイテムの列の末尾位置の設定
 
 #### HTML
 
@@ -153,7 +145,7 @@ grid-column-start: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_column_start_for_a_grid_item', '230', '420') }}
+{{ EmbedLiveSample('Setting_column_end_for_a_grid_item', '230', '420') }}
 
 ## 仕様書
 
@@ -165,6 +157,6 @@ grid-column-start: unset;
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-column-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}
+- 関連する CSS プロパティ: {{cssxref("grid-column-start")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}
 - グリッドレイアウトガイド: [CSS グリッドでの線ベースの配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
 - 動画チュートリアル: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_
