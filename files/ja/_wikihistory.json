@@ -18340,12 +18340,6 @@
       "e53e04ac"
     ]
   },
-  "Web/API/MediaStreamConstraints": {
-    "modified": "2019-03-18T21:40:37.855Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
   "Web/API/MediaStreamTrack": {
     "modified": "2020-10-15T21:58:36.727Z",
     "contributors": [
@@ -48551,6 +48545,12 @@
     "contributors": [
       "Uemmra3",
       "unarist"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/getUserMedia": {
+    "modified": "2019-03-18T21:40:37.855Z",
+    "contributors": [
+      "e53e04ac"
     ]
   },
   "conflicting/Web/API/StorageManager/estimate": {
