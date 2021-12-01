@@ -3,24 +3,26 @@ title: minmax()
 slug: Web/CSS/minmax()
 tags:
   - CSS
-  - CSS Function
-  - CSS グリッドレイアウト
   - CSS 関数
+  - CSS グリッド
   - Experimental
-  - Reference
+  - 関数
+  - リファレンス
   - ウェブ
   - レイアウト
+browser-compat: css.properties.grid-template-columns.minmax
 translation_of: Web/CSS/minmax()
 ---
-<p><strong><code>minmax()</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の関数で、寸法の範囲を <var>min</var> 以上、 <var>max</var> 以下で定義します。 <a href="/ja/docs/Web/CSS/CSS_Grid_Layout">CSS グリッド</a>で使用されます。</p>
+{{CSSRef}}
 
-<div>{{EmbedInteractiveExample("pages/css/function-minmax.html")}}</div>
+**`minmax()`** は [CSS](/ja/docs/Web/CSS) の関数で、寸法の範囲を _min_ 以上、 _max_ 以下で定義します。 [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)で使用されます。
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{EmbedInteractiveExample("pages/css/function-minmax.html")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: css no-line-numbers notranslate">/* &lt;inflexible-breadth&gt;, &lt;track-breadth&gt; 値 */
+```css
+/* <inflexible-breadth>, <track-breadth> 値 */
 minmax(200px, 1fr)
 minmax(400px, 50%)
 minmax(30%, 300px)
@@ -30,7 +32,7 @@ minmax(max-content, auto)
 minmax(auto, 300px)
 minmax(min-content, auto)
 
-/* &lt;fixed-breadth&gt;, &lt;track-breadth&gt; 値 */
+/* <fixed-breadth>, <track-breadth> 値 */
 minmax(200px, 1fr)
 minmax(30%, 300px)
 minmax(400px, 50%)
@@ -38,36 +40,34 @@ minmax(50%, min-content)
 minmax(300px, max-content)
 minmax(200px, auto)
 
-/* &lt;inflexible-breadth&gt;, &lt;fixed-breadth&gt; 値 */
+/* <fixed-breadth>, <track-breadth> 値 */
 minmax(400px, 50%)
 minmax(30%, 300px)
 minmax(min-content, 200px)
 minmax(max-content, 200px)
 minmax(auto, 300px)
-</pre>
+```
 
-<p><em>min</em> および <em>max</em> の2つの引数を取る関数です。</p>
+_min_ および _max_ の 2 つの引数を取る関数です。
 
-<p>どちらの引数も <code>&lt;length&gt;</code>, <code>&lt;percentage&gt;</code>, <code>&lt;flex&gt;</code>, またはキーワード値 <code>max-content</code>, <code>min-content</code>, <code>auto</code> のうちの一つを取ります。</p>
+どちらの引数も `<length>`, `<percentage>`, `<flex>`, またはキーワード値 `max-content`, `min-content`, `auto` のうちの一つを取ります。
 
-<p>もし <var>min</var> が <var>max</var> より大きい場合は無視され、 <code>minmax(min,max)</code> は <var>min</var> として扱われます。最大値として、 {{cssxref("flex_value","&lt;flex&gt;")}} 値はグリッドトラックのフレックス係数を設定します。それは <var>min</var> としては無効です。</p>
+もし _min_ が _max_ より大きい場合は無視され、 `minmax(min,max)` は _min_ として扱われます。最大値として、 {{cssxref("flex_value","&lt;flex&gt;")}} 値はグリッドトラックのフレックス係数を設定します。それは _min_ としては無効です。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>負ではない寸法。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>負ではないパーセント値で、列グリッドトラックのグリッドコンテナーのインライン寸法、および行グリッドトラックのグリッドコンテナーのブロック寸法からの相対値。グリッドコンテナーの寸法がトラックの寸法に依存する場合、 <code>&lt;percentage&gt;</code> は <code>auto</code> として扱う必要があります。{{glossary("user agent", "ユーザーエージェント")}}は、グリッドコンテナーの寸法に対するトラックの固有の寸法の貢献度を調整し、パーセント値を尊重して最小限の量だけトラックの最終的な寸法を増加させることがあります。</dd>
- <dt>{{cssxref("&lt;flex&gt;")}}</dt>
- <dd>単位 <code>fr</code> がついた負ではない寸法で、トラックのフレックス係数を指定します。それぞれの <code>&lt;flex&gt;</code> による寸法のトラックは、フレックス係数の割合に従って残りの空間を配分します。</dd>
- <dt><code>max-content</code></dt>
- <dd>グリッドトラックを占めるグリッドアイテムの max-content の貢献度の最大値を表します。</dd>
- <dt><code>min-content</code></dt>
- <dd>グリッドトラックを占めるグリッドアイテムの min-content の貢献度の最大値を表します。</dd>
- <dt><code>auto</code></dt>
- <dd>最大値としては、 <code>max-content</code> と同じです。最小値としては、グリッドトラックを占めるグリッドアイテムの ({{cssxref("min-width")}}/{{cssxref("min-height")}} で決定する) 最大の最小値を表します。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : 負ではない寸法。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 負ではないパーセント値で、列グリッドトラックのグリッドコンテナーのインライン寸法、および行グリッドトラックのグリッドコンテナーのブロック寸法からの相対値。グリッドコンテナーの寸法がトラックの寸法に依存する場合、 `<percentage>` は `auto` として扱う必要があります。{{glossary("user agent", "ユーザーエージェント")}}は、グリッドコンテナーの寸法に対するトラックの固有の寸法の貢献度を調整し、パーセント値を尊重して最小限の量だけトラックの最終的な寸法を増加させることがあります。
+- {{cssxref("&lt;flex&gt;")}}
+  - : 単位 `fr` がついた負ではない寸法で、トラックのフレックス係数を指定します。それぞれの `&lt;flex&gt;` による寸法のトラックは、フレックス係数の割合に従って残りの空間を配分します。
+- `max-content`
+  - : グリッドトラックを占めるグリッドアイテムの max-content の貢献度の最大値を表します。
+- `min-content`
+  - : グリッドトラックを占めるグリッドアイテムの min-content の貢献度の最大値を表します。
+- `auto`
+  - : 最大値としては、 `max-content` と同じです。最小値としては、グリッドトラックを占めるグリッドアイテムの ({{cssxref("min-width")}}/{{cssxref("min-height")}} で決定する) 最大の最小値を表します。
 
 <h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
 
@@ -75,20 +75,19 @@ minmax(auto, 300px)
 
 <h3 id="CSS_properties" name="CSS_properties">CSS プロパティ</h3>
 
-<p><code>minmax()</code> 関数は次の中で使用することができます。</p>
+`minmax()` 関数は次の中で使用することができます。
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
- <li><a href="/ja/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
- <li><a href="/ja/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
- <li><a href="/ja/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-</ul>
+- [grid-template-columns](/ja/docs/Web/CSS/grid-template-columns)
+- [grid-template-rows](/ja/docs/Web/CSS/grid-template-rows)
+- [grid-auto-columns](/ja/docs/Web/CSS/grid-auto-columns)
+- [grid-auto-rows](/ja/docs/Web/CSS/grid-auto-rows)
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[3] notranslate">#container {
+```css
+#container {
   display: grid;
   grid-template-columns: minmax(min-content, 300px) minmax(200px, 1fr) 150px;
   grid-gap: 5px;
@@ -99,117 +98,42 @@ minmax(auto, 300px)
   padding: 10px;
 }
 
-#container &gt; div {
+#container > div {
   background-color: #8ca0ff;
   padding: 5px;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div id="container"&gt;
-  &lt;div&gt;
+```html
+<div id="container">
+  <div>
     Item as wide as the content, but at most 300 pixels.
-  &lt;/div&gt;
-  &lt;div&gt;
+  </div>
+  <div>
     Item with flexible width but a minimum of 200 pixels.
-  &lt;/div&gt;
-  &lt;div&gt;
+  </div>
+  <div>
     Inflexible item of 150 pixels width.
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+  </div>
+</div>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example", "100%", 200)}}</p>
+{{EmbedLiveSample("Examples", "100%", 200)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Grid", "#valdef-grid-template-columns-minmax", "minmax()")}}</td>
-   <td>{{Spec2("CSS Grid")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.grid-template-columns.minmax")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>グリッドレイアウトガイド: <em><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Track_sizing_and_minmax()">グリッドレイアウトの基本概念 - minmax() によるトラックの寸法制御</a></em></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">CSS グリッド、論理値、書字方向</a></li>
- <li>
-  <p>Video tutorial: <em><a href="http://gridbyexample.com/video/series-minmax/">Introducing minmax()</a></em></p>
- </li>
-</ul>
-
-<section id="Quick_links">
-<ol>
- <li><a href="/ja/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/ja/docs/Web/CSS/Reference"><strong>CSS リファレンス</strong></a></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout">CSS グリッドレイアウト</a></li>
- <li data-default-state="open"><a href="#"><strong>ガイド</strong></a>
-  <ol>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">グリッドレイアウトの基本概念</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">他のレイアウト方法との関係</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">線ベースの配置</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">グリッドテンプレート領域</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">名前付きグリッド線を使用したレイアウト</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">CSS グリッドレイアウトにおける自動配置</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">CSS グリッドレイアウトにおけるボックス配置</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">CSS グリッド、論理値、書字方向</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS グリッドレイアウトとアクセシビリティ</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS グリッド及び進歩的な拡張</a></li>
-   <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_">CSS グリッドを利用したよくあるレイアウトの実現</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>プロパティ</strong></a>
-  <ol>
-   <li><a href="/ja/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/ja/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>用語集</strong></a>
-  <ol>
-   <li><a href="/ja/docs/Glossary/Grid">グリッド</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_lines">グリッド線</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_tracks">グリッドトラック</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_cell">グリッドセル</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_areas">グリッド領域</a></li>
-   <li><a href="/ja/docs/Glossary/Gutters">溝</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_Axis">グリッド軸</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_rows">グリッド行</a></li>
-   <li><a href="/ja/docs/Glossary/Grid_column">グリッド列</a></li>
-  </ol>
- </li>
-</ol>
-</section>
+- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - minmax() によるトラックの寸法制御](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#トラックのサイズ指定と_minmax())
+- [CSS グリッドと論理的な値と書字方向](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
+- 動画チュートリアル: _[Introducing minmax()](https://gridbyexample.com/video/series-minmax/)_
