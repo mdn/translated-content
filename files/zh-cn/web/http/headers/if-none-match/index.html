@@ -8,7 +8,7 @@ translation_of: Web/HTTP/Headers/If-None-Match
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong><code>If-None-Match</code></strong> 是一个条件式请求首部。对于 GET{{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}} 请求方法来说，当且仅当服务器上没有任何资源的 {{HTTPHeader("ETag")}} 属性值与这个首部中列出的相匹配的时候，服务器端会才返回所请求的资源，响应码为  {{HTTPStatus("200")}}  。对于其他方法来说，当且仅当最终确认没有已存在的资源的  {{HTTPHeader("ETag")}} 属性值与这个首部中所列出的相匹配的时候，才会对请求进行相应的处理。</p>
+<p><strong><code>If-None-Match</code></strong> 是一个条件式请求首部。对于 GET{{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}} 请求方法来说，当且仅当服务器上没有任何资源的 {{HTTPHeader("ETag")}} 属性值与这个首部中列出的相匹配的时候，服务器端才会返回所请求的资源，响应码为  {{HTTPStatus("200")}}  。对于其他方法来说，当且仅当最终确认没有已存在的资源的  {{HTTPHeader("ETag")}} 属性值与这个首部中所列出的相匹配的时候，才会对请求进行相应的处理。</p>
 
 <p>对于  {{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}} 方法来说，当验证失败的时候，服务器端必须返回响应码 304 （Not Modified，未改变）。对于能够引发服务器状态改变的方法，则返回 412 （Precondition Failed，前置条件失败）。需要注意的是，服务器端在生成状态码为 304 的响应的时候，必须同时生成以下会存在于对应的 200 响应中的首部：Cache-Control、Content-Location、Date、ETag、Expires 和 Vary 。</p>
 
