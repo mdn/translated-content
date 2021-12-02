@@ -475,7 +475,7 @@ _网页摘要_ 是应用于文章的开头段落——出现在网页 front matt
 
 此议题已被解决：<https://github.com/mdn/content/issues/3923>。
 
-## Kumascript
+## KumaScript
 
 文本内容可以包括对 KumaScript 宏的调用：
 
