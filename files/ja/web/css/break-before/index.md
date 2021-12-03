@@ -6,14 +6,17 @@ tags:
   - CSS プロパティ
   - CSS 断片化
   - CSS 段組みレイアウト
-  - Reference
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.break-before
 translation_of: Web/CSS/break-before
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>break-before</code></strong> プロパティは、生成されたボックスの前で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。</p>
+[CSS](/ja/docs/Web/CSS) の **`break-before`** プロパティは、生成されたボックスの前で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。
 
-<pre class="brush:css no-line-numbers">/* 一般の区切り値 */
+```css
+/* 一般の区切り値 */
 break-before: auto;
 break-before: avoid;
 break-before: always;
@@ -38,154 +41,162 @@ break-before: region;
 /* グローバル値 */
 break-before: inherit;
 break-before: initial;
+break-before: revert;
 break-before: unset;
-</pre>
+```
 
-<p>区切り位置になる可能性のある場所 (言い換えれば、要素の境界) は、三つのプロパティに影響されます。前の要素の {{cssxref("break-after")}} の値、次の要素の <code>break-before</code> の値、包含要素の {{cssxref("break-inside")}} の値です。</p>
+区切り位置になる可能性のある場所 (言い換えれば、要素の境界) は、3 つのプロパティに影響されます。前の要素の {{cssxref("break-after")}} の値、次の要素の `break-before` の値、包含要素の {{cssxref("break-inside")}} の値です。
 
-<p>区切られるかどうかを判断するために、以下の規則が適用されます。</p>
+区切られるかどうかを判断するために、以下の規則が適用されます。
 
-<ol>
- <li>考慮される三つの値の中の何れかに<em>区切りを強制する値</em> (<code>always</code>, <code>left</code>, <code>right</code>, <code>page</code>, <code>column</code>, <code>region</code> の何れか) がある場合、それが優先されます。そのような区切りが複数ある場合は、フローの中で最も後に現れる要素のものが使用されます (つまり、 <code>break-before</code> の値は <code>break-after</code> の値より優先し、それは更に <code>break-inside</code> よりも優先します)。</li>
- <li>考慮される三つの値の中に<em>区切りを防止する値</em> (<code>avoid</code>, <code>avoid-page</code>, <code>avoid-region</code>, <code>avoid-column</code> の何れか) が含まれていた場合は、その場所で区切りは適用されません。</li>
-</ol>
+- 考慮される 3 つの値の中の何れかに*区切りを強制する値* (`always`, `left`, `right`, `page`, `column`, `region` の何れか) がある場合、それが優先されます。そのような区切りが複数ある場合は、フローの中で最も後に現れる要素のものが使用されます (つまり、 `break-before` の値は `break-after` の値より優先し、それは更に `break-inside` よりも優先します)。
+- 考慮される 3 つの値の中に*区切りを防止する値* (`avoid`, `avoid-page`, `avoid-region`, `avoid-column` の何れか) が含まれていた場合は、その場所で区切りは適用されません。
 
-<p>強制的な区切りが適用されると、必要に応じてソフトな区切りが追加される場合がありますが、 <code>avoid</code> に関する値に解決される要素の境界には追加されません。</p>
+強制的な区切りが適用されると、必要に応じてソフトな区切りが追加される場合がありますが、 `avoid` に関する値に解決される要素の境界には追加されません。
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+`break-before` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
 
-<p><code>break-before</code> プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。</p>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+#### 一般の区切り値
 
-<h4 id="Generic_break_values" name="Generic_break_values">一般の区切り値</h4>
+- `auto`
+  - : 該当するボックスの直前に何らかの (ページ、段、領域の) 区切りを挿入することを許可しますが、強制はしません。
+- `avoid`
+  - : 該当するボックスの直前に何らかの (ページ、段、領域の) 区切りを挿入することを禁止します。
+- `always` {{experimental_inline}}
+  - : 該当するボックスの直前で強制的に改ページを行います。この区切りの種類は断片化のコンテキストを直接含むものです。段組みコンテナーの中であれば強制的な段区切りとなり、ページ付きメディアの (ただし段組みコンテナーの中ではない) 場合はページ区切りになります。
+- `all` {{experimental_inline}}
+  - : 該当するボックスの直前で強制的に改ページを行います。すべての分断しうるコンテキストを通して区切ります。よって、段組みコンテナーの中での区切りは、ページコンテナーの中であれば強制的に段組みとページを区切ります。
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>該当するボックスの直前に何らかの (ページ、段、領域の) 区切りを挿入することを許可しますが、強制はしません。</dd>
- <dt><code>avoid</code></dt>
- <dd>該当するボックスの直前に何らかの (ページ、段、領域の) 区切りを挿入することを禁止します。</dd>
- <dt><code>always</code> {{experimental_inline}}</dt>
- <dd>該当するボックスの直前で強制的に改ページを行います。この区切りの種類は断片化のコンテキストを直接含むものです。段組みコンテナーの中であれば強制的な段区切りとなり、ページ付きメディアの (ただし段組みコンテナーの中ではない) 場合はページ区切りになります。</dd>
- <dt><code>all</code> {{experimental_inline}}</dt>
- <dd>該当するボックスの直前で強制的に改ページを行います。すべての分断しうるコンテキストを通して区切ります。よって、段組みコンテナーの中での区切りは、ページコンテナーの中であれば強制的に段組みとページを区切ります。</dd>
-</dl>
+#### 改ページ値
 
-<h4 id="Page_break_values" name="Page_break_values">改ページ値</h4>
+- `avoid-page`
+  - : 該当するボックスの直前の改ページを禁止します。
+- `page`
+  - : 該当するボックスの直前で改ページを行います。
+- `left`
+  - : 該当するボックスの直前で一つまたは二つの改ページを行い、次のページが左ページになるようにします。
+- `right`
+  - : 該当するボックスの直前で一つまたは二つの改ページを行い、次のページが右ページになるようにします。
+- `recto` {{experimental_inline}}
+  - : 該当するボックスの直前で一つまたは二つの改ページを行い、次のページが奇数ページになるようにします。 (奇数ページは左から右に開く場合は右ページになり、右から左に開く場合は左ページになります。)
+- `verso` {{experimental_inline}}
+  - : 該当するボックスの直前で一つまたは二つの改ページを行い、次のページが偶数ページになるようにします。 (奇数ページは左から右に開く場合は左ページになり、右から左に開く場合は右ページになります。)
 
-<dl>
- <dt><code>avoid-page</code></dt>
- <dd>該当するボックスの直前の改ページを禁止します。</dd>
- <dt><code>page</code></dt>
- <dd>該当するボックスの直前で改ページを行います。</dd>
- <dt><code>left</code></dt>
- <dd>該当するボックスの直前で一つまたは二つの改ページを行い、次のページが左ページになるようにします。</dd>
- <dt><code>right</code></dt>
- <dd>該当するボックスの直前で一つまたは二つの改ページを行い、次のページが右ページになるようにします。</dd>
- <dt><code>recto</code> {{experimental_inline}}</dt>
- <dd>該当するボックスの直前で一つまたは二つの改ページを行い、次のページが奇数ページになるようにします。 (奇数ページは左から右に開く場合は右ページになり、右から左に開く場合は左ページになります。)</dd>
- <dt><code>verso</code> {{experimental_inline}}</dt>
- <dd>該当するボックスの直前で一つまたは二つの改ページを行い、次のページが偶数ページになるようにします。 (奇数ページは左から右に開く場合は左ページになり、右から左に開く場合は右ページになります。)</dd>
-</dl>
+#### 段区切り値
 
-<h4 id="Column_break_values" name="Column_break_values">段区切り値</h4>
+- `avoid-column`
+  - : 該当するボックスの直前の段区切りを禁止します。
+- `column`
+  - : 該当するボックスの直前で段区切りを行います。
 
-<dl>
- <dt><code>avoid-column</code></dt>
- <dd>該当するボックスの直前の段区切りを禁止します。</dd>
- <dt><code>column</code></dt>
- <dd>該当するボックスの直前で段区切りを行います。</dd>
-</dl>
+#### 領域区切り値
 
-<h4 id="領域区切り値">領域区切り値</h4>
+- `avoid-region` {{experimental_inline}}
+  - : 該当するボックスの直前の領域区切りを禁止します。
+- `region` {{experimental_inline}}
+  - : 該当するボックスの直前で領域区切りを行います。
 
-<dl>
- <dt><code>avoid-region</code> {{experimental_inline}}</dt>
- <dd>該当するボックスの直前の領域区切りを禁止します。</dd>
- <dt><code>region</code> {{experimental_inline}}</dt>
- <dd>該当するボックスの直前で領域区切りを行います。</dd>
-</dl>
+## 改ページの別名
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+互換性のため、古い {{cssxref("page-break-before")}} はブラウザーから `break-before` の別名として扱われます。これにより、 `page-break-before` を使用しているサイトが引き続き設計通りに動作することを保証します。値のサブセットは次のような別名になります。
+
+| page-break-before | break-before |
+| ----------------- | ------------ |
+| `auto`            | `auto`       |
+| `left`            | `left`       |
+| `right`           | `right`      |
+| `avoid`           | `avoid`      |
+| `always`          | `page`       |
+
+> **Note:** ブラウザーにおいては `always` の値は `page-break-*` において、段区切りではなくページ区切りとして実装されています。したがって、 Level 4 の仕様書では `always` の値ではなく `page` の別名となっています。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Page_break_aliases" name="Page_break_aliases">改ページの別名</h2>
+## 例
 
-<p>互換性のため、古い {{cssxref("page-break-before")}} はブラウザーから <code>break-before</code> の別名として扱われます。これにより、 <code>page-break-before</code> を使用しているサイトが引き続き設計通りに動作することを保証します。値のサブセットは次のような別名になります。</p>
+### きれいに段を分割
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">page-break-before</th>
-   <th scope="col">break-before</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>auto</code></td>
-   <td><code>auto</code></td>
-  </tr>
-  <tr>
-   <td><code>left</code></td>
-   <td><code>left</code></td>
-  </tr>
-  <tr>
-   <td><code>right</code></td>
-   <td><code>right</code></td>
-  </tr>
-  <tr>
-   <td><code>avoid</code></td>
-   <td><code>avoid</code></td>
-  </tr>
-  <tr>
-   <td><code>always</code></td>
-   <td><code>page</code></td>
-  </tr>
- </tbody>
-</table>
+次の例では、すべての段にまたがる `<h1>` (`column-span: all` を使用して実現) と、一連の `<h2>` と段落を `column-width: 200px` を使用して段組みレイアウトしたコンテナーを用意しています。
 
-<div class="blockIndicator note">
-<p>ブラウザーにおいては <code>always</code> の値は <code>page-break-*</code> において、段区切りではなくページ区切りとして実装されています。したがって、 Level 4 の仕様書では <code>always</code> の値ではなく <code>page</code> の別名となっています。</p>
-</div>
+既定では、小見出しと段落は、見出しの位置が統一されていないため、かなり乱雑にレイアウトされていました。しかし、 `break-before: column` を `<h2>` 要素に使うことで、それぞれの要素の後に強制的に改行するようにしたので、各段の先頭に `<h2>` がきちんと配置されます。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+#### HTML
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fragmentation', '#break-between', 'break-before')}}</td>
-   <td>{{Spec2('CSS3 Fragmentation')}}</td>
-   <td><code>recto</code> および <code>verso</code> キーワードを追加。このプロパティのメディア種別を <code>paged</code> から {{xref_cssvisual}} に変更。異なる種類の区切りを持つ区切りアルゴリズムを定義した。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Regions', '#region-flow-break', 'break-before')}}</td>
-   <td>{{Spec2('CSS3 Regions')}}</td>
-   <td>領域区切りを扱うようにプロパティを拡張した。 <code>avoid-region</code> および <code>region</code> キーワードを追加した。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#break-before-break-after-break-inside', 'break-before')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>初回定義。 CSS 2.1 の {{cssxref("page-break-before")}} プロパティを拡張し、ページ区切りと段区切りの両方を扱うようにした。</td>
-  </tr>
- </tbody>
-</table>
+```html
+<article>
+  <h1>大見出し</h1>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+  <h2>小見出し</h2>
 
-<h3 id="Support_in_multi-column_layout" name="Support_in_multi-column_layout">段組みレイアウトでの対応</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus. Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque dapibus, eu lacinia lectus dictum.</p>
 
-<p>{{Compat("css.properties.break-before.multicol_context")}}</p>
+  <h2>小見出し</h2>
 
-<h3 id="Support_in_paged_media" name="Support_in_paged_media">ページ化メディアでの対応</h3>
+  <p>Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie nec nisi.</p>
 
-<p>{{Compat("css.properties.break-before.paged_context")}}</p>
+  <h2>小見出し</h2>
+
+  <p>Vivamus eleifend metus vitae neque placerat, eget interdum elit mattis. Donec eu vulputate nibh. Ut turpis leo, malesuada quis nisl nec, volutpat egestas tellus.
+
+  <h2>小見出し</h2>
+
+  <p>In finibus viverra enim vel suscipit. Quisque consequat velit eu orci malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl, sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.</p>
+</article>
+```
+
+#### CSS
+
+```css
+html {
+  font-family: helvetica, arial, sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  column-span: all;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: red;
+  letter-spacing: 1px;
+  break-before: column;
+}
+
+p {
+  line-height: 1.5;
+}
+
+article {
+  column-width: 200px;
+  gap: 20px;
+}
+```
+
+### 結果
+
+{{EmbedLiveSample('Breaking_into_neat_columns', '100%', 600)}}
+
+## 仕様書
+
+{{Specifications("css.properties.break-before.multicol_context")}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Breaking Boxes With CSS Fragmentation](https://www.smashingmagazine.com/2019/02/css-fragmentation/)

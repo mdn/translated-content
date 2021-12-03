@@ -5,57 +5,61 @@ tags:
   - CSS
   - CSS プロパティ
   - CSS 断片化
-  - Reference
+  - リファレンス
   - Web
 translation_of: Web/CSS/orphans
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>orphans</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、<a href="/ja/docs/Web/CSS/Paged_Media">ページ</a>、領域、<a href="/ja/docs/Web/CSS/CSS_Columns">段</a>の<em>最下部</em>に表示されるブロックコンテナーの最小行数を設定します。</p>
+**`orphans`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/Paged_Media)、領域、[段](/ja/docs/Web/CSS/CSS_Columns)の*最下部*に表示されるブロックコンテナーの最小行数を設定します。
 
-<pre class="brush:css no-line-numbers">/* &lt;integer&gt; 値 */
+```css
+/* <integer> 値 */
 orphans: 2;
 orphans: 3;
 
 /* Global values */
 orphans: inherit;
 orphans: initial;
+orphans: revert;
 orphans: unset;
-</pre>
+```
 
-<div class="note">
-<p>組版において、 <em>orphan</em> とは段落の最初の行がページの末尾に単独で現れることです。 (段落は次のページへ続きます。)</p>
-</div>
+組版において、オルファン (_orphan_) とは段落の最初の行がページの末尾に単独で現れることです。 (段落は次のページへ続きます。)
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+- {{cssxref("&lt;integer&gt;")}}
+  - : 区切りの前の新しい断片の末尾に残すことができる最小行数です。値は正の数である必要があります。
 
-<dl>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>区切りの前の新しい断片の末尾に残すことができる最小行数です。値は正の数である必要があります。</dd>
-</dl>
+## 公式定義
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### オルファンを 3 行の大きさに設定
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p&gt;これは幾らかのテキストを含む最初の段落です。&lt;/p&gt;
-  &lt;p&gt;これは最初の段落よりも多くのテキストを含む第二の段落です。これは widow がどの様に動作するのかを示すために用います。&lt;/p&gt;
-  &lt;p&gt;これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+#### HTML
 
-<h3 id="CSS">CSS</h3>
+```html
+<div>
+  <p>これは幾らかのテキストを含む最初の段落です。</p>
+  <p>これは最初の段落よりも多くのテキストを含む第二の段落です。これは orphans がどの様に動作するのかを示すために用います。</p>
+  <p>これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。</p>
+</div>
+```
 
-<pre class="brush: css; highlight[5]">div {
+#### CSS
+
+```css
+div {
   background-color: #8cffa0;
   height: 150px;
   columns: 3;
@@ -69,45 +73,21 @@ p {
 p:first-child {
   margin-top: 0;
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
-<p>{{EmbedLiveSample("Example", 380, 150)}}</p>
+{{EmbedLiveSample("Setting_a_minimum_orphan_size_of_three_lines", 380, 150)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fragmentation', '#widows-orphans', 'orphans')}}</td>
-   <td>{{Spec2('CSS3 Fragmentation')}}</td>
-   <td><code>orphans</code> をページ、領域、段など、断片の種類によらず適用するように拡張</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'page.html#break-inside', 'orphans')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("css.properties.orphans")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("widows")}}</li>
- <li><a href="/ja/docs/Web/CSS/Paged_Media">ページ化メディア</a></li>
-</ul>
+- {{cssxref("widows")}}
+- [ページ化メディア](/ja/docs/Web/CSS/Paged_Media)
