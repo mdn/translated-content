@@ -5,8 +5,8 @@ tags:
   - CSS
   - CSS 関数
   - 関数
-  - Layout
-  - Reference
+  - レイアウト
+  - リファレンス
   - ウェブ
   - url()
 browser-compat: css.types.url
