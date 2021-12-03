@@ -26352,12 +26352,6 @@
       "Wind1808"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute": {
-    "modified": "2019-03-18T20:45:37.166Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute": {
     "modified": "2019-03-18T21:23:20.561Z",
     "contributors": [
@@ -49645,6 +49639,12 @@
     "contributors": [
       "Taken",
       "Mgjbot"
+    ]
+  },
+  "web/Accessibility/ARIA/Attributes/aria-activedescendant": {
+    "modified": "2019-03-18T20:45:37.166Z",
+    "contributors": [
+      "Wind1808"
     ]
   }
 }

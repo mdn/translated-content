@@ -3580,6 +3580,7 @@
 /ja/docs/Web/API/window.unescape	/ja/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /ja/docs/Web/API/window.updateCommands	/ja/docs/Web/API/Window/updateCommands
 /ja/docs/Web/API/window.window	/ja/docs/Web/API/Window/window
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/ja/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/ja/docs/Web/Accessibility/ARIA/Roles/button_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role	/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role
 /ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/Web/Accessibility/ARIA/widgets
