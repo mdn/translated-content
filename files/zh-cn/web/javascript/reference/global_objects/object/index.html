@@ -16,12 +16,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object
 <h2 id="描述">描述</h2>
 
 <p>
-  在JavaScript中，几乎所有的对象都是<code>Object</code>类型的实例，它们都会从<code>Object.prototype</code>继承属性和方法，虽然大部分属性都会被覆盖（shadowed a.k.a overridden）。
+  在JavaScript中，几乎所有的对象都是<code>Object</code>类型的实例，它们都会从<code>Object.prototype</code>继承属性和方法，虽然大部分属性都会被覆盖（shadowed）或者说被重写了（overridden）。
   除此之外，<code>Object</code> 还可以被故意的创建，但是这个对象并不是一个“真正的对象”（例如：通过 <code>{{jsxref("Object.create()", "Object.create(null)")}}</code>），或者通过一些手段改变对象，使其不再是一个“真正的对象”（比如说: <code>{{jsxref("Object.setPrototypeOf")}}</code>）。
 </p>
 
+<p>通过原型链，所有的 <code>object</code> 都能观察到 Object 原型对象（Object prototype object）的改变，除非这些受到改变影响的属性和方法沿着原型链被进一步的重写。尽管有潜在的危险，但这为覆盖或扩展对象的行为提供了一个非常强大的机制。</p>
 <p>
-  <code>Object</code> 构造函数为给定值创建一个对象包装器。<code>Object</code>构造函数，会根据给定的参数创建对象，具体有以下情况：
+  <code>Object</code> 构造函数为给定的参数创建一个包装类对象（object wrapper），具体有以下情况：
 </p>
 
 <ul>
@@ -103,9 +104,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object
 
 <dl>
   <dt>{{jsxref("Object.prototype.__defineGetter__", "Object.prototype.__defineGetter__()")}}</dt>
-  <dd>一个属性值为函数的属性，当该属性被访问时，执行该函数，并且返回函数的返回值。</dd>
+  <dd>将一个属性与一个函数相关联，当该属性被访问时，执行该函数，并且返回函数的返回值。</dd>
   <dt>{{jsxref("Object.prototype.__defineSetter__", "Object.prototype.__defineSetter__()")}}</dt>
-  <dd>一个属性值为函数的属性，当该属性被设置时，执行该函数，执行该函数去修改某个属性。</dd>
+  <dd>将一个属性与一个函数相关联，当该属性被设置时，执行该函数，执行该函数去修改某个属性。</dd>
   <dt>{{jsxref("Object.prototype.__lookupGetter__", "Object.prototype.__lookupGetter__()")}}</dt>
   <dd>返回一个函数，该函数通过给定属性的 <code>{{jsxref("Object.prototype.__defineGetter__", "Object.prototype.__defineGetter__()")}}</code> 得出。</dd>
   <dt>{{jsxref("Object.prototype.__lookupSetter__", "Object.prototype.__lookupSetter__()")}}</dt>
