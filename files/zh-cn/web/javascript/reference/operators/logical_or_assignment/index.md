@@ -1,87 +1,80 @@
 ---
 title: Logical OR assignment (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
+tags:
+  - JavaScript
+  - Language feature
+  - Logical Operator
+  - Operator
+  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The logical OR assignment (<code>x ||= y</code>) operator only assigns if <code>x</code> is {{Glossary("falsy")}}.</p>
+逻辑或赋值（`x ||= y`）运算仅在 `x` 为{{Glossary("falsy", "虚")}}值时赋值。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-logical-or-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-logical-or-assignment.html")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+## 语法
 
-<h2 id="语法"> 语法</h2>
+```js
+expr1 ||= expr2
+```
 
-<pre class="syntaxbox notranslate"><em>expr1</em> ||= <em>expr2</em>
-</pre>
+## 描述
 
-<h2 id="描述">描述</h2>
+### 短路运算
 
-<h3 id="Short-circuit_evaluation">Short-circuit evaluation</h3>
+[逻辑或](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)的运算方法如下所示：
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR">logical OR</a> operator works like this:</p>
+```js
+x || y;
+// 当 x 为真值时，返回 x
+// 当 y 为真值时，返回 y
+```
 
-<pre class="brush: js notranslate">x || y;
-// returns x when x is truthy
-// returns y when x is not truthy</pre>
+逻辑或运算的短路逻辑：当且仅当第一个操作数尚未确定结果（不是真值）时，才会评估第二个操作数。
 
-<p>The logical OR operator short-circuits: the second operand is only evaluated if the first operand doesn’t already determine the result.</p>
+逻辑或赋值运算有短路逻辑，这意味着，它仅在左侧为虚值时执行赋值。换句话说，`x ||= y` 等同于：
 
-<p>Logical OR assignment short-circuits as well, meaning it only performs an assignment if the logical operation would evaluate the right-hand side. In other words, <code>x ||= y</code> is equivalent to:</p>
+```js
+x || (x = y);
+```
 
-<pre class="brush: js notranslate">x || (x = y);
-</pre>
+但不等同于以下总是执行赋值的语句：
 
-<p>And not equivalent to the following which would always perform an assignment:</p>
+```js example-bad
+x = x || y;
+```
 
-<pre class="brush: js notranslate example-bad">x = x || y;
-</pre>
+请注意，这与数学逻辑和按位赋值运算不同。
 
-<p>Note that this behavior is different to mathematical and bitwise assignment operators.</p>
+## 示例
 
-<h2 id="例子">例子</h2>
+### 设定默认值
 
-<h3 id="Setting_default_content">Setting default content</h3>
+当“lyrics”元素为空时，则显示默认值：
 
-<p>If the "lyrics" element is empty, set the <code><a href="/en-US/docs/Web/API/Element/innerHTML">innerHTML</a></code> to a default value:</p>
+```js
+document.getElementById('lyrics').textContent ||= 'No lyrics.'
+```
 
-<pre class="brush: js notranslate">document.getElementById('lyrics').innerHTML ||= '&lt;i&gt;No lyrics.&lt;/i&gt;'</pre>
+在这里，短路运算特别有用，因为元素不会产生不必要的更新，也不会引起诸如额外的解析、渲染、失去焦点等副作用。
 
-<p>Here the short-circuit is especially beneficial, since the element will not be updated unnecessarily and won't cause unwanted side-effects such as additional parsing or rendering work, or loss of focus, etc.</p>
+注意：请注意检查 API 返回的值。如果返回的是空字符串（是{{Glossary("falsy", "虚")}}值），则必须使用 `||=`。在其他情况下（返回值是 {{jsxref("null")}} 或 {{jsxref("undefined")}}），你可以使用 `??=` 运算符。
 
-<p>Note: Pay attention to the value returned by the API you're checking against. If an empty string is returned (a {{Glossary("falsy")}} value), <code>||=</code> must be used, otherwise you want to use the <code>??=</code> operator (for {{jsxref("null")}} or {{jsxref("undefined")}} return values).</p>
+## 规范
 
-<h2 id="规范">规范</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-  </tr>
-  <tr>
-   <td>{{SpecName('Logical Assignment', '#sec-assignment-operators', 'Assignment operators')}}</td>
-  </tr>
- </tbody>
-</table>
+## 浏览器兼容性
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+{{Compat}}
 
+## 参见
 
-
-<p>{{Compat("javascript.operators.logical_or_assignment")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR">Logical OR (||)</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">The nullish coalescing operator (<code>??</code>)</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment">Bitwise OR assignment (<code>|=</code>)</a></li>
- <li>{{jsxref("Boolean")}}</li>
- <li>{{Glossary("Truthy")}}</li>
- <li>{{Glossary("Falsy")}}</li>
-</ul>
+- [逻辑或（||）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [按位或赋值（`|=`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
+- {{Glossary("Truthy")}}
+- {{Glossary("Falsy")}}
