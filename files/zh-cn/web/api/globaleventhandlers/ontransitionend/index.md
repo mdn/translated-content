@@ -1,120 +1,114 @@
 ---
 title: GlobalEventHandlers.ontransitionend
 slug: Web/API/GlobalEventHandlers/ontransitionend
+tags:
+  - API
+  - CSS Transitions
+  - CSS3 Transitions
+  - Document
+  - Element
+  - Event Handler
+  - GlobalEventHandlers
+  - Property
+  - Reference
+  - Window
+  - ontransitionend
 translation_of: Web/API/GlobalEventHandlers/ontransitionend
 ---
-<div>{{APIRef("CSS3 Transitions")}}</div>
+{{APIRef("CSS3 Transitions")}}
 
-<p>{{event("transitionend")}} 事件的事件处理函数，在某个 <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> 完成时触发。</p>
+{{domxref("GlobalEventHandlers")}} 混入对象的 **`ontransitionend`** 属性是一个处理 {{event("transitionend")}} 事件的 [事件处理函数](/en-US/docs/Web/Events/Event_handlers)。
 
-<div class="note">
-<p>如果在 transition 完成前，该 transition 已从目标节点上移除，那么 {{event("transitionend")}} 将不会被触发。一种可能的情况是修改了目标节点的 {{cssxref("transition-property")}} 属性，另一种可能的情况是 {{cssxref("display")}} 属性被设为 <code>"none"</code>。</p>
-</div>
+`transitionend` 事件的事件处理函数，在某个 [CSS transition](/zh-CN/docs/Web/CSS/CSS_Transitions) 完成时触发。
 
-<h2 id="语法">语法</h2>
+> **备注：** 如果在 transition 完成前，该 transition 已从目标节点上移除，那么 {{event("transitionend")}} 将不会被触发。一种可能的情况是修改了目标节点的 {{cssxref("transition-property")}} 属性，另一种可能的情况是 {{cssxref("display")}} 属性被设为 `"none"`。
 
-<pre class="syntaxbox">var <em>transitionEndHandler</em> = <em>target</em>.ontransitionend;
+## 语法
 
-<em>target</em>.ontransitionend = <em>{{jsxref("Function")}}</em>
-</pre>
+```js
+var transitionEndHandler = target.ontransitionend;
 
-<h3 id="值">值</h3>
+target.ontransitionend = {{jsxref("Global_Objects/Function", "Function")}}
+```
 
-<p>一个 {{jsxref("Function")}}，该函数会在 {{event("transitionend")}} 事件发生时被触发，表示目标节点的 CSS transition 已经完成。目标节点可能是一个 HTML 元素 ({{domxref("HTMLElement")}})，document ({{domxref("Document")}})，或者 window ({{domxref("Window")}})。该函数接受一个参数：一个描述该事件的 {{domxref("TransitionEvent")}} 对象；其 {{domxref("TransitionEvent.elapsedTime")}} 属性值与 {{cssxref("transition-duration")}} 的值一致。</p>
+### 值
 
-<div class="note">
-<p><code>elapsedTime</code> 并不包括 transition 效果开始前的时间，也就是说，{{cssxref("transition-delay")}} 属性并不会影响 <code>elapsedTime</code>的值，其在延迟结束、动画开始之时，值为零。</p>
-</div>
+一个 {{jsxref("Global_Objects/Function")}} 会在 {{event("transitionend")}} 事件发生时被触发，表示目标节点的 CSS transition 已经完成。目标节点可能是一个 HTML 元素 ({{domxref("HTMLElement")}})，document ({{domxref("Document")}})，或者 window ({{domxref("Window")}})。该函数接受一个参数：一个描述该事件的 {{domxref("TransitionEvent")}} 对象；其 {{domxref("TransitionEvent.elapsedTime")}} 属性值与 {{cssxref("transition-duration")}} 的值一致。
 
-<h2 id="示例">示例</h2>
+> **备注：** `elapsedTime` 并不包括 transition 效果开始前的时间，也就是说，{{cssxref("transition-delay")}} 属性并不会影响 `elapsedTime` 的值，其在延迟结束、动画开始之时，值为零。
 
-<p>本例中，我们使用了 {{event("transitionrun")}} 和 {{event("transitionend")}} 事件来监测 transition 的开始和结束，从而在 transition 的过程中更新文本。这也可以被用来触发动画或者其它效果来实现连锁反应。</p>
+## 示例
 
-<h3 id="HTML_内容">HTML 内容</h3>
+本例中，我们使用了 {{event("transitionrun")}} 和 {{event("transitionend")}} 事件来监测 transition 的开始和结束，从而在 transition 的过程中更新文本。这也可以被用来触发动画或者其它效果来实现连锁反应。
 
-<p>这里简单地创建了一个 {{HTMLElement("div")}}，我们将使用 CSS 来改变其大小和颜色。</p>
+### HTML
 
-<pre class="brush: html;">&lt;div class="box"&gt;&lt;/div&gt;
-</pre>
+这里简单地创建了一个 {{HTMLElement("div")}}，我们将使用 CSS 来改变其大小和颜色。
 
-<h3 id="CSS_内容">CSS 内容</h3>
+```html
+<div class="box"></div>
+```
 
-<p>以下为 CSS 样式，并添加了 transition 属性。当鼠标悬浮时，盒子大小和颜色会发生变化，而且还会转动。</p>
+### CSS
 
-<pre class="brush: css; highlight:[13,14]">.box {
+以下为 CSS 样式，并添加了 transition 属性。当鼠标悬浮时，盒子大小和颜色会发生变化，而且还会转动。
+
+```css
+.box {
   margin-left: 70px;
   margin-top: 30px;
-  border-style: solid;
-  border-width: 1px;
-  display: block;
-  width: 100px;
-  height: 100px;
-  background-color: #0000FF;
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000FF;
   color: #FFFFFF;
   padding: 20px;
   font: bold 1.6em "Helvetica", "Arial", sans-serif;
-  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s, color 2s;
-  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
 }
 
 .box:hover {
-  background-color: #FFCCCC;
+  background-color: #FFCCCC;
   color: #000000;
-  width: 200px;
-  height: 200px;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+  width: 200px;
+  height: 200px;
+  transform: rotate(180deg);
 }
-</pre>
+```
 
-<h3 id="JavaScript_内容">JavaScript 内容</h3>
+### JavaScript
 
-<p>接下来，我们需要事件处理函数以在 transition 发生和结束时修改文本内容。</p>
+接下来，我们需要事件处理函数以在 transition 发生和结束时修改文本内容。
 
-<pre class="brush: js">let box = document.querySelector(".box");
+```js
+let box = document.querySelector(".box");
 box.ontransitionrun = function(event) {
-  box.innerHTML = "Zooming...";
+  box.textContent = "Zooming...";
 }
 box.ontransitionend = function(event) {
-  box.innerHTML = "Done!";
+  box.textContent = "Done!";
 }
-</pre>
+```
 
-<h3 id="效果">效果</h3>
+### 效果
 
-<p>最后的效果如下：</p>
+最后的效果如下：
 
-<p>{{EmbedLiveSample('Example', 600, 280)}}</p>
+{{EmbedLiveSample('Example', 600, 280)}}
 
-<p>注意观察当鼠标悬浮在元素上以及移出时发生的变化。</p>
+注意观察当鼠标悬浮在元素上以及移出时发生的变化。
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions','#ontransitionend','ontransitionend')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
+## 参见
 
-
-<p>{{Compat("api.GlobalEventHandlers.ontransitionend")}}</p>
-
-<h2 id="另见">另见</h2>
-
-<ul>
- <li>触发此事件处理函数的 {{event("transitionend")}} 事件。</li>
- <li>{{domxref("TransitionEvent")}}</li>
- <li>在transition 开始时触发的 {{event("transitionrun")}} 事件。</li>
-</ul>
+- 触发此事件处理函数的 {{event("transitionend")}} 事件。
+- {{domxref("TransitionEvent")}}
+- 在 transition 开始时触发的 {{event("transitionrun")}} 事件。
