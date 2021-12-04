@@ -4,17 +4,21 @@ slug: Web/CSS/box-align
 tags:
   - CSS
   - CSS プロパティ
-  - Non-standard
-  - Reference
+  - NeedsUpdate
+  - 標準外
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.box-align
 translation_of: Web/CSS/box-align
 ---
-<div>{{CSSRef}}{{Non-standard_header}}{{warning("このプロパティは、当初の CSS Flexible Box Layout Module の草案段階のものでしたが、既により新しい標準のものが取って変わっています。")}}</div>
+{{CSSRef}}{{Non-standard_header}}{{warning("このプロパティは、当初の CSS Flexible Box Layout Module の草案段階のものでしたが、より新しい標準で置き換えられました。")}}
 
-<p><strong><code>box-align</code></strong> は、交差軸方向に子要素をどう整列させるかを定義するCSSプロパティです。ボックス内に余分なスペースがある場合にかぎり、その効果を確認することができます。</p>
+**`box-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、交差軸方向に子要素をどう整列させるかを定義します。ボックス内に余分な空間がある場合にかぎり、その効果を確認することができます。
 
-<p>現在の標準仕様に関する情報については、<a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">フレックスボックス</a>を確認してください。</p>
+現在の標準仕様に関する情報については、[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を確認してください。
 
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 box-align: start;
 box-align: center;
 box-align: end;
@@ -25,42 +29,56 @@ box-align: stretch;
 box-lines: inherit;
 box-lines: initial;
 box-lines: unset;
-</pre>
+```
 
-<p>配置する方向は、その要素の向き (水平か垂直か) に依存します。</p>
+配置する方向は、その要素の向き (水平か垂直か) に依存します。
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+`box-align` プロパティは、 以下に記載する値で定義されます。
 
-<p><code>box-align</code> プロパティは、 以下に記載する値で定義されます。</p>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+- `start`
+  - : ボックス内のコンテンツを先頭に寄せて、末尾に余分な空間を残します。
+- `center`
+  - : ボックス内のコンテンツを中央に寄せて、余分な空間を等分に分割し先頭と末尾に残します。
+- `end`
+  - : ボックス内のコンテンツを末尾に寄せて、先頭に余分な空間を残します。
+- `baseline`
+  - : ボックス内のコンテンツが持つテキストのベースラインに整列させます。これはボックス内のコンテンツの向きが水平である場合にのみ適用されます。
+- `stretch`
+  - : ボックス内に余分な空間がなくなるようコンテンツを引き伸ばします。
 
-<dl>
- <dt><code>start</code></dt>
- <dd>ボックス内のコンテンツを先頭に寄せて、末尾に余分なスペースを残します。</dd>
- <dt><code>center</code></dt>
- <dd>ボックス内のコンテンツを中央に寄せて、余分なスペースを等分に分割し始端と終端に残します。</dd>
- <dt><code>end</code></dt>
- <dd>ボックス内のコンテンツを末尾に寄せて、先頭に余分なスペースを残します。</dd>
- <dt><code>baseline</code></dt>
- <dd>ボックス内のコンテンツが持つテキストのベースラインに整列させます。これはボックス内のコンテンツの向きが水平である場合にのみ適用されます。</dd>
- <dt><code>stretch</code></dt>
- <dd>ボックス内に余分なスペースがなくなるようコンテンツを引き伸ばします。</dd>
-</dl>
+## メモ
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+整列のために _start_ と指定されたボックスの辺は、ボックスの方向によって異なります。
+
+- 水平方向の要素の場合、 _start_ は上端になります。
+- 垂直方向の要素の場合、 _start_ は左端になります。
+
+start の反対側の端は _end_ となります。
+
+要素の `align` 属性で配置が設定されている場合、このスタイルは無視されます。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;CSS box-align example&lt;/title&gt;
-&lt;style&gt;
+### ボックス配置の設定
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS box-align example</title>
+<style>
 div.example {
   display: box;                   /* 仕様書通り */
   display: -moz-box;              /* Mozilla */
@@ -84,61 +102,36 @@ div.example {
   -moz-box-align: center;         /* Mozilla */
   -webkit-box-align: center;      /* WebKit */
 
-  /* 子要素をボックス内の終端に寄せる */
+  /* 子要素をボックス内の末尾に寄せる */
   box-pack: end;                  /* 仕様書通り */
   -moz-box-pack: end;             /* Mozilla */
   -webkit-box-pack: end;          /* WebKit */
 }
 
-div.example &gt; p {
+div.example > p {
   /* 子要素を親要素の幅より狭くし、
   box-align のためのスペースを確保する */
   width: 200px;
 }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div class="example"&gt;
-    &lt;p&gt;I will be second from the bottom of div.example, centered horizontally.&lt;/p&gt;
-    &lt;p&gt;I will be on the bottom of div.example, centered horizontally.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</style>
+</head>
+<body>
+  <div class="example">
+    <p>I will be second from the bottom of div.example, centered horizontally.</p>
+    <p>I will be on the bottom of div.example, centered horizontally.</p>
+  </div>
+</body>
+</html>
+```
 
-<h2 id="Notes" name="Notes">メモ</h2>
+## 仕様書
 
-<p>配置の用途で <em>start</em> と定義されるボックスの辺は、ボックスの向きに依存します。</p>
+標準仕様には含まれていません。
 
-<table class="standard-table" style="text-align: center;">
- <tbody>
-  <tr>
-   <th style="text-align: right;"><strong>Horizontal</strong></th>
-   <td>top</td>
-  </tr>
-  <tr>
-   <th style="text-align: right;"><strong>Vertical</strong></th>
-   <td>left</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<p>start と反対方向の辺が <em>end</em> と定義されます。</p>
+{{Compat}}
 
-<p>その要素の <code>align</code> 属性を使って整列する方向を指定した場合、スタイルで指定した値は無視されます。</p>
+## 関連情報
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/css3-flexbox/">Flexible Box Layout Module (W3C Working Draft)</a> {{note("この仕様書の現在の状態は、 Mozilla や WebKit の古い実装を反映しているものではありません。")}}</li>
- <li><a class="external" href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">Old Flexible Box Layout Module</a> {{note("Mozilla および WebKit の実装は、こちらの版の仕様を反映していました。")}}</li>
-</ul>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
-
-<p>{{Compat("css.properties.box-align")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{cssxref("align-items")}}, {{cssxref("box-orient")}}, {{cssxref("box-direction")}}, {{cssxref("box-pack")}}</li>
-</ul>
+- {{cssxref("align-items")}}, {{cssxref("box-orient")}}, {{cssxref("box-direction")}}, {{cssxref("box-pack")}}

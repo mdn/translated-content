@@ -4,20 +4,21 @@ slug: Web/CSS/box-pack
 tags:
   - CSS
   - CSS プロパティ
-  - Non-standard
-  - Reference
+  - 標準外
+  - リファレンス
   - box-pack
+  - recipe:css-property
+browser-compat: css.properties.box-pack
 translation_of: Web/CSS/box-pack
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<div class="blockIndicator warning">
-<p>これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は<a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">フレックスボックス</a>を参照してください。</p>
-</div>
+> **Warning:** これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>-moz-box-pack</code></strong> および <strong><code>-webkit-box-pack</code></strong> プロパティは、 <code>-moz-box</code> または <code>-webkit-box</code> がどのようにレイアウトの方向に内容をまとめるかを指定します。この効果はボックス内に余白がある場合のみ見ることができます。</p>
+**`-moz-box-pack`** および **`-webkit-box-pack`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 `-moz-box` または `-webkit-box` がどのようにレイアウトの方向に内容をまとめるかを指定します。この効果はボックス内に空間がある場合のみ見ることができます。
 
-<pre class="brush: css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 box-pack: start;
 box-pack: center;
 box-pack: end;
@@ -27,36 +28,70 @@ box-pack: justify;
 box-pack: inherit;
 box-pack: initial;
 box-pack: unset;
-</pre>
+```
 
-<p>レイアウトの方向は要素の方向、 horizontal または vertical に依存します。</p>
+レイアウトの方向は要素の方向、 horizontal または vertical に依存します。
 
-<div>{{CSSInfo}}</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+`box-pack` プロパティは、以下に列挙されたキーワード値のうちの一つで指定します。
 
-<p><code>box-pack</code> プロパティは、以下に列挙されたキーワード値のうちの一つで指定します。</p>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+- `start`
+  - : ボックスは内容を先頭にまとめ、残りの空間を末尾に残します。
+- `center`
+  - : ボックスは内容を中央にまとめ、残りの空間を先頭と末尾に均等に分配します。
+- `end`
+  - : ボックスは内容を末尾にまとめ、残りの空間を先頭に残します。
+- `justify`
+  - : 空間はそれぞれの子の間に均等に配分され、最初の子の前と最後の子の後には空間が配置されません。子が一つだけであれば、値が `start` であるのと同様に扱われます。
 
-<dl>
- <dt><code>start</code></dt>
- <dd>ボックスは内容を先頭にまとめ、残りの余白を末尾に残します。</dd>
- <dt><code>center</code></dt>
- <dd>ボックスは内容を中央にまとめ、残りの余白を先頭と末尾に均等に分配します。</dd>
- <dt><code>end</code></dt>
- <dd>ボックスは内容を末尾にまとめ、残りの余白を先頭に残します。</dd>
- <dt><code>justify</code></dt>
- <dd>余白はそれぞれの子の間に均等に配分され、最初の子の前と最後の子の後には余白が配置されません。子が一つだけであれば、値が <code>start</code> であるのと同様に扱われます。</dd>
-</dl>
+## メモ
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+ボックスの向きや方向によって、まとめる際に指定するボックスの端は異なります。
+
+- 水平方向の要素の場合、_start_ は上端になります。
+- 垂直方向の要素の場合、_start_ は左端になります。
+
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th></th>
+      <th><strong>Normal</strong></th>
+      <th><strong>Reverse</strong></th>
+    </tr>
+    <tr>
+      <th><strong>Horizontal</strong></th>
+      <td>left</td>
+      <td>right</td>
+    </tr>
+    <tr>
+      <th><strong>Vertical</strong></th>
+      <td>top</td>
+      <td>bottom</td>
+    </tr>
+  </tbody>
+</table>
+
+start と反対の端は _end_ で表されます。
+
+まとめ方が要素の `pack` 属性を使用して設定されていた場合は、スタイルは無視されます。
+
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{CSSSyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: css">div.example {
+## box-pack の例
+
+```css
+div.example {
   border-style: solid;
 
   display: -moz-box; /* Mozilla */
@@ -87,56 +122,27 @@ div.example p {
      box-align のための余裕を作る */
   width: 200px;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="example"&gt;
-  &lt;p&gt;I will be second from the bottom of div.example, centered horizontally.&lt;/p&gt;
-  &lt;p&gt;I will be on the bottom of div.example, centered horizontally.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="example">
+  <p>I will be second from the bottom of div.example, centered horizontally.</p>
+  <p>I will be on the bottom of div.example, centered horizontally.</p>
+</div>
+```
 
-<div>{{EmbedLiveSample('Examples', 310, 310)}}</div>
+{{EmbedLiveSample('Examples', 310, 310)}}
 
-<h2 id="メモ">メモ</h2>
+## 仕様書
 
-<p>まとめる目的で <em>start</em> で示されるボックスの端は、ボックスの向きと方向に依存します。</p>
+標準仕様には含まれていません。
 
-<table class="standard-table" style="text-align: center;">
- <tbody>
-  <tr>
-   <th> </th>
-   <th><strong>Normal</strong></th>
-   <th><strong>Reverse</strong></th>
-  </tr>
-  <tr>
-   <th style="text-align: right;"><strong>Horizontal</strong></th>
-   <td>左</td>
-   <td>右</td>
-  </tr>
-  <tr>
-   <th style="text-align: right;"><strong>Vertical</strong></th>
-   <td>上</td>
-   <td>下</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<p>start と反対の端は <em>end</em> で表されます。</p>
+{{Compat}}
 
-<p>まとめ方が要素の <code>pack</code> 属性を使用して設定されていた場合は、スタイルは無視されます。</p>
+## 関連情報
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<p>このプロパティは標準外ですが、 <a class="external" href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">CSS3 Flexbox の早期の草稿</a>に似たプロパティが現れ、仕様書のより新しい版で置き換えられました。</p>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
-
-<div>{{Compat("css.properties.box-pack")}}</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{CSSxRef("box-orient")}}</li>
- <li>{{CSSxRef("box-direction")}}</li>
- <li>{{CSSxRef("box-align")}}</li>
-</ul>
+- {{CSSxRef("box-orient")}}
+- {{CSSxRef("box-direction")}}
+- {{CSSxRef("box-align")}}
