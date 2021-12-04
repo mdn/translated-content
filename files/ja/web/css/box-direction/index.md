@@ -3,95 +3,84 @@ title: box-direction
 slug: Web/CSS/box-direction
 tags:
   - CSS
-  - Non-standard
-  - Reference
-  - box-direction
+  - 標準外
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.box-direction
 translation_of: Web/CSS/box-direction
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<div class="warning">
-<p>これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。以前の標準であった <code>box-direction</code> は <code>flex-direction</code> に置き換えられたので、 <code>-moz-box-direction</code> は XUL でのみ使用されます。現在の標準についての情報は<a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">フレックスボックス</a>を参照してください。</p>
-</div>
+> **Warning:** これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。以前の標準であった `box-direction` は `flex-direction` に置き換えられたので、 `-moz-box-direction` は XUL でのみ使用されます。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>box-direction</code></strong> プロパティは、ボックスが内容を通常通りに (上または左から) 配置するか、逆方向に (下または右から) 配置するかを指定します。</p>
+**`box-direction`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスが内容を通常通りに (上または左から) 配置するか、逆方向に (下または右から) 配置するかを指定します。
 
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 box-direction: normal;
 box-direction: reverse;
 
 /* グローバル値 */
 box-direction: inherit;
 box-direction: initial;
+box-direction: revert;
 box-direction: unset;
-</pre>
+```
 
-<p>{{CSSInfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+`box-direction` プロパティは以下に挙げたキーワード値のうちの一つで指定します。
 
-<p><code>box-direction</code> プロパティは以下の列挙されたキーワード値のうちの一つで指定します。</p>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+- `normal`
+  - : ボックスが内容を先頭 (左または上の端) から配置します。
+- `reverse`
+  - : ボックスが内容を末尾 (右または下の端) から配置します。
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>ボックスが内容を先頭 (左または上の端) から配置します。</dd>
- <dt><code>reverse</code></dt>
- <dd>ボックスが内容を末尾 (右または下の端) から配置します。</dd>
-</dl>
+## メモ
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+整列のために _start_ と指定されたボックスの辺は、ボックスの方向によって異なります。
 
-{{CSSSyntax}}
+- 水平方向の要素の場合、 _start_ は上端になります。
+- 垂直方向の要素の場合、 _start_ は左端になります。
 
-<h2 id="Examples" name="Examples">例</h2>
+start の反対側の端は _end_ となります。
 
-<pre class="brush:css">.example {
+要素の `dir` 属性を使用して書字方向を設定した場合は、このスタイルは無視されます。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
+
+{{csssyntax}}
+
+## 例
+
+### ボックスの方向を設定
+
+```css
+.example {
   /* bottom-to-top layout */
   -moz-box-direction: reverse;      /* Mozilla */
   -webkit-box-direction: reverse;   /* WebKit */
   box-direction: reverse;           /* 仕様書通り */
 }
-</pre>
+```
 
-<h2 id="Notes" name="Notes">メモ</h2>
+## 仕様書
 
-<p>配置目的で <em>start</em> で示されるボックスの端は、ボックスの方向に依存します。</p>
+標準仕様には含まれていません。
 
-<table class="standard-table" style="text-align: center;">
- <tbody>
-  <tr>
-   <th style="text-align: right;"><strong>Horizontal</strong></th>
-   <td>left</td>
-  </tr>
-  <tr>
-   <th style="text-align: right;"><strong>Vertical</strong></th>
-   <td>top</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<p>start と反対側の辺は <em>end</em> で示します。</p>
+{{Compat}}
 
-<p>書字方向が要素の <code>dir</code> 属性を使用して設定されている場合は、このスタイルは無視されます。</p>
+## 関連情報
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/css3-flexbox/">Flexible Box Layout Module (W3C Working Draft)</a> {{note("この仕様書の現在の状態は、 Mozilla や WebKit の古い実装を反映しているものではありません。")}}</li>
- <li><a class="external" href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">Old Flexible Box Layout Module</a> {{note("Mozilla および WebKit の実装は、こちらの版の仕様を反映していました。")}}</li>
-</ul>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
-
-<p>{{Compat("css.properties.box-direction")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{CSSxRef("box-orient")}}</li>
- <li>{{CSSxRef("box-pack")}}</li>
- <li>{{CSSxRef("box-align")}}</li>
- <li>{{CSSxRef("flex-direction")}}</li>
-</ul>
+- {{CSSxRef("box-orient")}}
+- {{CSSxRef("box-pack")}}
+- {{CSSxRef("box-align")}}
+- {{CSSxRef("flex-direction")}}
