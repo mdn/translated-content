@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 
 {{JSxRef("Object.prototype")}}의 `__proto__` 속성은 접근하고자 하는 객체의 내부 속성인 `[[Prototype]]`(객체 또는 {{JSxRef("Global_Objects/null", "null")}})를 노출하는 접근자 속성(getter 및 setter 함수)입니다.
 
-`__proto__`의 사용은 논란의 여지가 있으며 권장하지 않습니다. 원래는 ECMAScript 언어 사양에 포함되지 않았음에도 불구하고 최신 브라우저에서는 이를 구현했습니다. 최근에서야 ECMAScript 2015 사양에서 웹 브라우저와의 호환성을 위해 표준화되었으므로 향후에도 지원은 될 것입니다. 그러나 `__proto__`는 더 이상 사용하지 않을 것을 권장하며 대신 {{JSxRef("Object.getPrototypeOf")}} / {{JSxRef("Reflect.getPrototypeOf")}} 및 {{JSxRef("Object.setPrototypeOf")}} / {{JSxRef("Reflect.setPrototypeOf")}}를 권장합니다(객체의 `[[Prototype]]` 설정은 성능을 고려해야 하는 경우 피해야 하는 느린 작업입니다).
+`__proto__`의 사용은 논란의 여지가 있으며 권장하지 않습니다. 원래는 ECMAScript 언어 사양에 포함되지 않았음에도 불구하고 최신 브라우저에서는 이를 구현했습니다. 최근에서야 ECMAScript 2015 사양에서 웹 브라우저와의 호환성을 위해 표준화되었으므로 향후에도 지원은 될 것입니다. 그러나 `__proto__`는 더이상 사용하지 않길 바라며, 대신 {{JSxRef("Object.getPrototypeOf")}} / {{JSxRef("Reflect.getPrototypeOf")}} 및 {{JSxRef("Object.setPrototypeOf")}} / {{JSxRef("Reflect.setPrototypeOf")}}를 권장합니다(객체의 `[[Prototype]]` 설정은 성능을 고려할 경우 피해야 하는 느린 작업입니다).
 
 객체 리터럴을 정의할 때 {{JSxRef("Object.create()")}} 대신 `__proto__` 속성을 사용함으로써 객체의 `[[Prototype]]`을 설정할 수도 있습니다. 참고: [object initializer / literal syntax](/ko-KR/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 
 프로토타입이 상속에 사용되는 방식을 이해하려면 가이드 문서 [상속과 프로토타입 체인](/ko-KR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)를 참조하세요.
 
-`__proto__` 속성은 getter 및 setter 함수로 구성된 {{JSxRef("Object.prototype")}}의 간단한 접근자 속성입니다. {{JSxRef("Object.prototype")}}를 참조하는 경우 `__proto__`에 접근하면 {{JSxRef("Object.prototype")}}를 찾지만, {{JSxRef("Object.prototype")}}를 참조하지 않는 경우에는 찾을 수 없습니다. {{JSxRef("Object.prototype")}}보다 먼저 다른 `__proto__` 속성이 발견되는 경우 {{JSxRef("Object.prototype")}}는 이 속성에 의해 숨겨집니다.
+`__proto__` 속성은 getter 및 setter 함수로 구성된 {{JSxRef("Object.prototype")}}의 간단한 접근자 속성입니다. {{JSxRef("Object.prototype")}}를 참조하는 경우 `__proto__`에 접근하면 {{JSxRef("Object.prototype")}}를 찾지만, {{JSxRef("Object.prototype")}}를 참조하지 않는 경우에는 찾을 수 없습니다. {{JSxRef("Object.prototype")}}보다 먼저 다른 `__proto__` 속성이 발견되는 경우 이 속성에 의해 {{JSxRef("Object.prototype")}}는 숨겨집니다.
 
 ## 예제
 
