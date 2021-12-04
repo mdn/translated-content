@@ -1,11 +1,18 @@
 ---
 title: 'HTMLMediaElement: progress event'
 slug: Web/API/HTMLMediaElement/progress_event
+tags:
+  - API
+  - Event
+  - HTMLMediaElement
+  - Reference
+  - Web
+  - progress
 translation_of: Web/API/HTMLMediaElement/progress_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>progress</code></strong> 事件在浏览器加载一个资源的时候周期性触发</p>
+**`progress`** 事件在浏览器加载一个资源的时候周期性触发。
 
 <table class="properties">
  <tbody>
@@ -28,28 +35,28 @@ translation_of: Web/API/HTMLMediaElement/progress_event
  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="在线示例">在线示例</h3>
+### 在线示例
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="example"&gt;
+```html
+<div class="example">
 
-    &lt;button type="button"&gt;Load video&lt;/button&gt;
-    &lt;video controls width="250"&gt;&lt;/video&gt;
+    <button type="button">Load video</button>
+    <video controls width="250"></video>
 
-    &lt;div class="event-log"&gt;
-        &lt;label&gt;Event log:&lt;/label&gt;
-        &lt;textarea readonly class="event-log-contents"&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
+    <div class="event-log">
+        <label>Event log:</label>
+        <textarea readonly class="event-log-contents"></textarea>
+    </div>
 
-&lt;/div&gt;</pre>
+</div>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">.event-log-contents {
+```css hidden
+.event-log-contents {
   width: 18rem;
   height: 5rem;
   border: 1px solid black;
@@ -78,15 +85,15 @@ video {
   grid-area: log;
 }
 
-.event-log&gt;label {
+.event-log>label {
   display: block;
 }
-</pre>
-</div>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const loadVideo = document.querySelector('button');
+```js
+const loadVideo = document.querySelector('button');
 const video = document.querySelector('video');
 const eventLog = document.querySelector('.event-log-contents');
 let source = null;
@@ -100,54 +107,36 @@ video.addEventListener('progress', handleEvent);
 video.addEventListener('canplay', handleEvent);
 video.addEventListener('canplaythrough', handleEvent);
 
-loadVideo.addEventListener('click', () =&gt; {
+loadVideo.addEventListener('click', () => {
 
     if (source) {
         document.location.reload();
     } else {
         loadVideo.textContent = "Reset example";
         source = document.createElement('source');
-        source.setAttribute('src', 'https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm');
-        source.setAttribute('type', 'video/webm');
+        source.setAttribute('src', 'https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.mp4');
+        source.setAttribute('type', 'video/mp4');
 
         video.appendChild(source);
     }
-});</pre>
+});
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '200px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '250px') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-progress", "progress media event")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-progress", "progress media event")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat("api.HTMLMediaElement.progress_event")}}</p>
-
-<h2 id="也可以看看">也可以看看</h2>
-
-<ul>
- <li>{{domxref("HTMLAudioElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{HTMLElement("audio")}}</li>
- <li>{{HTMLElement("video")}}</li>
-</ul>
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}
