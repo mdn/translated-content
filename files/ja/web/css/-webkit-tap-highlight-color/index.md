@@ -4,37 +4,51 @@ slug: Web/CSS/-webkit-tap-highlight-color
 tags:
   - CSS
   - CSS プロパティ
-  - Reference
-  - WebKit 拡張
+  - リファレンス
   - 標準外
+  - WebKit
+  - recipe:css-property
+browser-compat: css.properties.-webkit-tap-highlight-color
 translation_of: Web/CSS/-webkit-tap-highlight-color
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<p><strong><code>-webkit-tap-highlight-color</code></strong> は CSS の標準外のプロパティで、リンクがタップされている間に表示される強調色を設定します。強調は、ユーザーがタップしたことが正常に認識されていることを示し、またどの要素がタップされているかを示します。</p>
+**`-webkit-tap-highlight-color`** は CSS の標準外のプロパティで、リンクがタップされている間に表示される強調色を設定します。強調は、ユーザーがタップしたことが正常に認識されていることを示し、またどの要素がタップされているかを示します。
 
-<pre class="brush: css no-line-numbers">-webkit-tap-highlight-color: red;
+```css
+-webkit-tap-highlight-color: red;
 -webkit-tap-highlight-color: transparent; /* 強調をなくす */
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+{{Cssxref("&lt;color&gt;")}} です。
 
-<p>A {{Cssxref("color value")}}.</p>
+## 公式定義
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<p><em>何れかの仕様書の一部ではありません。</em> Apple では <a href="https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5">Safari Web Content Guide での説明</a>があります。</p>
+標準には含まれていません。 Apple では [Safari Web Content Guide での説明](https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5)があります。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>WebKit/Safari, Blink/Chrome, 一部のバージョンの Internet Explorer と Microsoft Edge が対応しています。</p>
+{{Compat}}
+
+## 関連情報
+
+- [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions)
+- 関連する CSS 擬似クラス:
+
+  - [`:hover`](/ja/docs/Web/CSS/:hover)
+  - [`:active`](/ja/docs/Web/CSS/:active)
+  - [`:visited`](/ja/docs/Web/CSS/:visited)
