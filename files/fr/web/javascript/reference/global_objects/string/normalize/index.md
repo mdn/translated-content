@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/String/normalize
 ---
 {{JSRef}}
 
-La méthode **`normalize()`** permet de renvoyer la forme normalisée Unicode d'une chaîne de caractères (si la valeur n'est pas une chaîne de caractères, elle sera convertie).
+La méthode **`normalize()`** permet de renvoyer la forme normalisée Unicode d'une chaîne de caractères.
 
 {{EmbedInteractiveExample("pages/js/string-normalize.html")}}
 
