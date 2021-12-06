@@ -21,14 +21,12 @@ processUserInput(greeting);</pre>
 
 <p>O exemplo acima é de uma {{glossary("synchronous")}} callback, uma vez que é executada imediatamente.</p>
 
-<p>Note, no entanto, que callbacks são normalmente utilizados para continuar a execução do código após uma operação {{glossary("asynchronous")}} ser terminada — essas são chamadas asynchronous callbacks. Por exemplo, nosso simples exemplo <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html">maps-example.html</a> (veja uma versão "live" aqui) usa o Google Maps API e a API de geolocalização para mostrar em um mapa a localização atual do nosso dispositivo.</p>
-
-<p>Como obter as coordenadas atuais do nosso GPS é uma ação assíncrona (nós não sabemos exatamente quando os dados serão retornados), o método {{domxref("Geolocation.getCurrentPosition()")}} pega um função callback anônima como um parametro, que pega os dados retornados da coordenada como parâmetro. Essa função só é executada quando os dados da coordenada são retornados.</p>
+<p>Note, no entanto, que callbacks são normalmente utilizados para continuar a execução do código após uma operação {{glossary("asynchronous")}} ser terminada — essas são chamadas asynchronous callbacks. Um bom exemplo são as funções callback executadas dentro de um bloco <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">.then()</a></code> encadeado ao final de uma promessa após essa promessa ser cumprida ou rejeitada. Essa estrutura é usada em muitas APIs da web modernas, como a {{domxref("fetch","fetch()")}}.</p>
 
 <h2 id="Aprenda_mais">Aprenda mais</h2>
 
 <h3 id="Conhecimento_geral"><strong>Conhecimento geral</strong></h3>
 
 <ul>
- <li>{{interwiki("wikipedia", "Callback_(computer_programming)", "Callback")}} no Wikipedia</li>
+ <li>{{interwiki("wikipedia", "Callback", "Callback")}} no Wikipedia</li>
 </ul>
