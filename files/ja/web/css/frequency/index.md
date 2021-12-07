@@ -51,7 +51,7 @@ translation_of: Web/CSS/frequency
 
 {{Specifications}}
 
-> **Note:** このデータ型は初め、 [CSS Level 2](https://www.w3.org/TR/CSS2/) の現在は廃止された [aural](/ja/docs/Web/CSS/@media/aural) [メディアタイプ](/ja/docs/Web/CSS/@media#media_types)で、音声の高さを定義するために導入されました。現時点ではこのデータ型を使う CSS プロパティはありませんが、 CSS 3 で `<frequency>` データ型が再導入されました。
+> **Note:** このデータ型は初め、 [CSS Level 2](https://www.w3.org/TR/CSS2/) の現在は廃止された [aural](/ja/docs/Web/CSS/@media/aural) [メディア種別](/docs/Web/CSS/@media#メディア種別)で、音声の高さを定義するために導入されました。現時点ではこのデータ型を使う CSS プロパティはありませんが、 CSS 3 で `<frequency>` データ型が再導入されました。
 
 ## ブラウザーの互換性
 
