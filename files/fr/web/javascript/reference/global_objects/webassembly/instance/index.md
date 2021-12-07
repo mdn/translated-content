@@ -19,7 +19,7 @@ Le constructeur `WebAssembly.Instance()` peut être appelé afin de créer, de f
 
 ## Syntaxe
 
-> **Attention :**L'instanciation de modules volumineux peut être coûteuse en temps/ressource. `Instance()` ne doit être utilisée que lorsqu'une instanciation synchrone est nécessaire. Pour tous les autres cas, c'est la méthode {{jsxref("WebAssembly.instantiateStreaming()")}} qui devrait être utilisée.
+> **Attention :** L'instanciation de modules volumineux peut être coûteuse en temps/ressource. `Instance()` ne doit être utilisée que lorsqu'une instanciation synchrone est nécessaire. Pour tous les autres cas, c'est la méthode {{jsxref("WebAssembly.instantiateStreaming()")}} qui devrait être utilisée.
 
     var monInstance = new WebAssembly.Instance(module, importObject);
 

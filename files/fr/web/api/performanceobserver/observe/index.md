@@ -33,7 +33,7 @@ observer.observe(options);
     - `type` : Une [`DOMString`](/fr/docs/Web/API/DOMString) unique spécifiant exactement un type d'entrée de performance à observer. Ne peut pas être utilisé avec l'option `entryTypes`.
     - `buffered` : Un indicateur booléen pour indiquer si les entrées en mémoire tampon doivent être mises en file d'attente dans la mémoire tampon de l'observateur. Ne doit être utilisé qu'avec l'option « `type` ».
 
-    > **Note :**Voir [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) pour une liste des noms de types d'entrées de performance valides. Les types non reconnus sont ignorés, bien que le navigateur puisse afficher un message d'avertissement sur la console pour aider les développeurs à déboguer leur code. Si aucun type valide n'est trouvé, `observe()` n'a aucun effet.
+    > **Note :** Voir [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) pour une liste des noms de types d'entrées de performance valides. Les types non reconnus sont ignorés, bien que le navigateur puisse afficher un message d'avertissement sur la console pour aider les développeurs à déboguer leur code. Si aucun type valide n'est trouvé, `observe()` n'a aucun effet.
 
 ## Exemple
 

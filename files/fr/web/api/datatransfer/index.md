@@ -261,13 +261,13 @@ Le nombre d'éléments glissés.
 
 le {{ domxref("Node") }} au dessus duquel le curseur de la souris se trouvait lorsque le bouton a été pressé pour initialiser le glisser. Cette valeur est nulle pour un glisser externe, ou si l'appelant ne peut pas accéder au nœud.
 
-> **Note :** Cette propriété est  spécifique a Gecko.
+> **Note :** Cette propriété est  spécifique a Gecko.
 
 ### mozUserCancelled
 
 Cette propriété s'applique uniquement à l'événement `dragend`, et est positionnée à `true` si l'utilisateur a annulé le glisser en appuyant sur la touche échappe. Elle est positionnée à `false` dans les autres cas, y compris si le glisser a échoué pour toute autre raison, par exemple en raison d'un déposer sur un emplacement non valide. Cette propriété n'est pas encore implémenté sous Linux.
 
-> **Note :** Cette propriété est  spécifique a Gecko.
+> **Note :** Cette propriété est  spécifique a Gecko.
 
 ## Methods
 
@@ -379,7 +379,7 @@ Si la liste `format` est vide, alors les données associées à tous les format
 
 Récupère les données associées au format donné pour un élément à l'index spécifié, ou null si elle n'existe pas. L'indice devrait être compris entre zéro et le nombre d'éléments moins un.
 
-> **Note :** Cette méthode est spécifique à Gecko.
+> **Note :** Cette méthode est spécifique à Gecko.
 
      nsIVariant mozGetDataAt(
        [optional] in String type,

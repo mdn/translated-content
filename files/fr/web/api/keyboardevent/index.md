@@ -74,7 +74,7 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
 
   - : Renvoie une {{domxref("DOMString")}} représentant la valeur de caractère de la touche. Si la touche correspond à un caractère imprimable, cette valeur est une chaîne Unicode non vide contenant ce caractère. Si la touche n'a pas de représentation imprimable, il s'agit d'une chaîne vide.
 
-    > **Note :** si la touche est utilisée comme une macro insérant plusieurs caractères, la valeur de cet attribut est la chaîne entière, pas seulement le premier caractère.
+    > **Note :** si la touche est utilisée comme une macro insérant plusieurs caractères, la valeur de cet attribut est la chaîne entière, pas seulement le premier caractère.
 
     > **Attention :** cela a été supprimé des DOM Level 3 Events. C'est pris en charge uniquement sur IE9 + et Microsoft Edge.
 
@@ -146,7 +146,7 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
 
   - : Retourne un {{jsxref("Number")}} représentant un code numérique dépendant du système et de l'implémentation, identifiant la valeur non modifiée de la touche pressée ; c'est généralement le même que `keyCode`.
 
-    > **Attention :** cet attribut est obsolète ; vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.
+    > **Attention :** cet attribut est obsolète ; vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.
 
 ## Notes
 

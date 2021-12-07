@@ -23,7 +23,7 @@ Avant de commencer ce cours, nous vous recommandons :
 3.  D'être suffisamment à votre aise avec HTML (voir le cours [introduction au HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML)).
 4.  D'avoir compris les bases du CSS telles qu'exposées dans le cours [premiers pas avec CSS.](/fr/docs/Learn/CSS/First_steps)
 
-> **Note :** Si vous travaillez sur un ordinateur, une tablette ou tout autre appareil sur lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous pourrez tester (la plupart) des exemples de code dans un site de programmation en ligne comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/fr/).
+> **Note :** Si vous travaillez sur un ordinateur, une tablette ou tout autre appareil sur lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous pourrez tester (la plupart) des exemples de code dans un site de programmation en ligne comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/fr/).
 
 ## Guides
 

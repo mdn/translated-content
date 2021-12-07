@@ -34,7 +34,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/options_page
 
 {{Deprecated_Header}}
 
-> **Attention :**Cette clé du manifest a été dépréciée. Utilisez [`options_ui`](/fr/Add-ons/WebExtensions/manifest.json/options_ui)à la place.
+> **Attention :** Cette clé du manifest a été dépréciée. Utilisez [`options_ui`](/fr/Add-ons/WebExtensions/manifest.json/options_ui)à la place.
 
 Utilisez la clé d'`options_page` pour définir une [page d'options](/fr/Add-ons/WebExtensions/Options_pages) pour votre extension.
 

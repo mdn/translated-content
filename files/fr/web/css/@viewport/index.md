@@ -57,7 +57,7 @@ Les navigateurs sont supposés ignorer les descripteurs non reconnus.
 - {{cssxref("@viewport/ viewport-fit", "viewport-fit")}}
   - : Ce descripteur contrôle l'affichage du document pour les affichages non-rectangulaires.
 
-> **Note :**Un facteur de zoom de `1.0` ou `100%` correspond à une absence de zoom. Les valeurs supérieures traduiront une augmentation du niveau de zoom (agrandissement des images et du texte) et les valeurs inférieures correspondront à une réduction du niveau de zoom.
+> **Note :** Un facteur de zoom de `1.0` ou `100%` correspond à une absence de zoom. Les valeurs supérieures traduiront une augmentation du niveau de zoom (agrandissement des images et du texte) et les valeurs inférieures correspondront à une réduction du niveau de zoom.
 
 ### Syntaxe formelle
 

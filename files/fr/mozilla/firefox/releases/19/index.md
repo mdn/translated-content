@@ -49,7 +49,7 @@ Le support des [XForms](/fr/docs/XForms) a été [**retiré**](http://www.philip
 
 ## Changements pour les développeurs d'add-ons et les développeurs Mozilla
 
-> **Note :**  [`nsresult`](/fr/docs/XPCOM_API_Reference/nsresult) est maintenant fortement typé, c'est un changement majeur dans Firefox 19. Cela permet de détecter plus facilement les bugs causés par la mauvaise gestion des valeurs retournées mais peut empêcher des codes actuels de fonctionner si [`nsresult`](/fr/docs/XPCOM_API_Reference/nsresult) fait de mauvaises suppositions concernant ces valeurs.
+> **Note :** [`nsresult`](/fr/docs/XPCOM_API_Reference/nsresult) est maintenant fortement typé, c'est un changement majeur dans Firefox 19. Cela permet de détecter plus facilement les bugs causés par la mauvaise gestion des valeurs retournées mais peut empêcher des codes actuels de fonctionner si [`nsresult`](/fr/docs/XPCOM_API_Reference/nsresult) fait de mauvaises suppositions concernant ces valeurs.
 
 - `getBrowserSelection()` retourne dorénavant le texte sélectionné dans un input de type `text`. Ainsi, `gContextMenu.isTextSelected` vaudra `true` quand l'utilisateur sélectionne du texte depuis un champ texte qui n'est pas de type `password`. ({{bug("565717")}})
 - [Dict.jsm](/en/Mozilla/JavaScript_code_modules/Dict.jsm): [`Dict()`](/en/Mozilla/JavaScript_code_modules/Dict.jsm#Creating_a_dictionary) accepte maintenant les String JSON. [`Dict.toJSON()`](</en/Mozilla/JavaScript_code_modules/Dict.jsm#toJSON()>) a été ajouté et retourne un String JSON. ({{bug("727967")}})

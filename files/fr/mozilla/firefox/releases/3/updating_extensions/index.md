@@ -160,7 +160,7 @@ Ou utilisez la technique suivante pour que votre overlay fonctionne tant avec Fi
       <vbox>
     </window>
 
-> **Note :** Ce changement s'applique à partir de Firefox 3 beta 4 et des nightlies précédentes.
+> **Note :** Ce changement s'applique à partir de Firefox 3 beta 4 et des nightlies précédentes.
 
 ### Autres changements
 

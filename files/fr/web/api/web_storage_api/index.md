@@ -27,7 +27,7 @@ Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionS
 
 > **Note :** L'accès au Web Storage à partir d'iframes externes est interdit si l'utilisateur a [désactivé les cookies tierce-partie](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox a adopté ce comportement à partir de la [version 43](/en-US/docs/Mozilla/Firefox/Releases/43) et suivantes.)
 
-> **Note :** Le Web Storage n'est pas identique au [mozStorage](/en-US/docs/Storage) (interfaces XPCOM de Mozilla vers SQLite) ou l'[API Session store ](/en-US/docs/Session_store_API)(un utilitaire de stockage [XPCOM](/en-US/docs/XPCOM) utilisable par des extensions).
+> **Note :** Le Web Storage n'est pas identique au [mozStorage](/en-US/docs/Storage) (interfaces XPCOM de Mozilla vers SQLite) ou l'[API Session store ](/en-US/docs/Session_store_API)(un utilitaire de stockage [XPCOM](/en-US/docs/XPCOM) utilisable par des extensions).
 
 ## Web Storage interfaces
 

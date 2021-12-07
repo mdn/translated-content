@@ -330,7 +330,7 @@ Line 7 calls React’s `ReactDOM.render()` function with two arguments:
 
 All of this tells React that we want to render our React application with the `App` component as the root, or first component.
 
-> **Note :**: In JSX, React components and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
+> **Note :** In JSX, React components and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
 
 [Service workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers) are interesting pieces of code that help application performance and allow features of your web applications to work offline, but they’re not in scope for this article. You can delete line 5, as well as lines 9 through 12.
 

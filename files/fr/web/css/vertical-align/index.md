@@ -52,7 +52,7 @@ vertical-align: unset;
 
 #### Pour les éléments _inline_
 
-> **Note :**  La plupart des valeurs alignent l'élément verticalement, relativement à son élément parent.
+> **Note :** La plupart des valeurs alignent l'élément verticalement, relativement à son élément parent.
 
 - `baseline`
   - : Aligne la ligne de base de l'élément avec celle de son parent. La ligne de base de certains [éléments remplacés](/fr/docs/Web/CSS/Élément_remplacé), comme {{HTMLElement("textarea")}}, n'est pas définie par la spécification HTML et le comportement de ce mot-clé peut donc changer d'un navigateur à un autre.

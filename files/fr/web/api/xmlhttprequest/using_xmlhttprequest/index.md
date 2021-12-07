@@ -31,7 +31,7 @@ oReq.send();
 
 Une demande faite via XMLHttpRequest peut récupérer les données dans l'une des deux façons, de manière asynchrone ou synchrone. Le type de demande est dictée par l'argument optionnel async (le troisième argument) qui est mis sur la méthode [open()](</en-US/docs/DOM/XMLHttpRequest#open()>) XMLHttpRequest (). Si cet argument est true ou non spécifié, l'objet XMLHttpRequest est traitée de manière asynchrone, sinon le processus est effectué de façon synchrone. Une discussion détaillée et des démonstrations de ces deux types de demandes peuvent être trouvés sur la page des [requêtes synchrones et asynchrones](/en-US/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). En général, vous devriez rarement, voire jamais, utiliser requêtes synchrones.
 
-> **Note :** A partir de Gecko 30.0 {{ geckoRelease("30.0") }}, les requêtes synchrones sur le processus principal ont été dépréciées en raison de l'effet négatif sur l'expérience utilisateur.
+> **Note :** A partir de Gecko 30.0 {{ geckoRelease("30.0") }}, les requêtes synchrones sur le processus principal ont été dépréciées en raison de l'effet négatif sur l'expérience utilisateur.
 
 ## Gérer les réponses
 

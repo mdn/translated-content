@@ -78,7 +78,7 @@ Le gestionnaire d'événement **`oncomplete`**, rattaché à l'interface {{domxr
 >  };
 > ```
 >
-> > **Note :**Pour un exemple de travail complet, voir notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([exemple _live_ disponible](https://mdn.github.io/to-do-notifications/)).
+> > **Note :** Pour un exemple de travail complet, voir notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([exemple _live_ disponible](https://mdn.github.io/to-do-notifications/)).
 >
 > ## Spécifications
 >

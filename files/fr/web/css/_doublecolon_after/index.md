@@ -20,13 +20,13 @@ a:after {
 }
 ```
 
-> **Note :** les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, `::before` et `::after` ne s'appliquent pas aux *[éléments remplacés](/fr/docs/Web/CSS/Élément_remplacé)* tels que les éléments {{HTMLElement("img")}} ou {{HTMLElement("br")}}.
+> **Note :** les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, `::before` et `::after` ne s'appliquent pas aux *[éléments remplacés](/fr/docs/Web/CSS/Élément_remplacé)* tels que les éléments {{HTMLElement("img")}} ou {{HTMLElement("br")}}.
 
 ## Syntaxe
 
 {{csssyntax}}
 
-> **Note :** CSS3 a introduit la notation `::after`  (avec deux deux-points) pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments). Les navigateurs acceptent aussi`:after`, introduite dans CSS2.
+> **Note :** CSS3 a introduit la notation `::after`  (avec deux deux-points) pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments). Les navigateurs acceptent aussi`:after`, introduite dans CSS2.
 
 ## Exemples
 

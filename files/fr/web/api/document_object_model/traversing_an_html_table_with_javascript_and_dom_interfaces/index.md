@@ -10,7 +10,7 @@ original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 
 Cet article propose une vue d'ensemble de certaines méthodes DOM Level 1 fondamentales et la façon de les utiliser depuis JavaScript. Vous y apprendrez à créer, accéder, contrôler et supprimer dynamiquement des éléments HTML. Les méthodes DOM décrites ne sont pas spécifiques au HTML et s'appliquent également au XML. Les exemples fonctionneront dans tous les navigateurs offrant le support complet du DOM niveau 1, ce qui est le cas de tous les navigateurs basés sur Mozilla comme Firefox ou Netscape. Les morceaux de code de ce document fonctionneront également dans Internet Explorer 5.
 
-> **Note :**Les méthodes décrites ici font partie de la spécification Document Object Model level 1 (Core). DOM level 1 comprend des méthodes destinées à l'accès et à la manipulation des documents (DOM 1 core) ainsi que des méthodes spécifiques aux documents HTML (DOM 1 HTML).
+> **Note :** Les méthodes décrites ici font partie de la spécification Document Object Model level 1 (Core). DOM level 1 comprend des méthodes destinées à l'accès et à la manipulation des documents (DOM 1 core) ainsi que des méthodes spécifiques aux documents HTML (DOM 1 HTML).
 
 ## Création d'un tableau HTML dynamiquement
 
@@ -190,7 +190,7 @@ En exécutant cet exemple, vous pouvez remarquer que les mots « hello » et �
 
 ![](sample2b2.jpg)
 
-> **Note :**L'utilisation de `createTextNode` et de `appendChild` permet aisément d'ajouter un espace entre ces deux mots. Notez cependant que la méthode `appendChild` ajoute le nouvel enfant à la suite de ceux déjà présents, à la manière de « world » placé après « hello ». Pour ajouter un nœud texte entre « hello » et « world » (par exemple un espace), utilisez `insertBefore` à la place de `appendChild`.
+> **Note :** L'utilisation de `createTextNode` et de `appendChild` permet aisément d'ajouter un espace entre ces deux mots. Notez cependant que la méthode `appendChild` ajoute le nouvel enfant à la suite de ceux déjà présents, à la manière de « world » placé après « hello ». Pour ajouter un nœud texte entre « hello » et « world » (par exemple un espace), utilisez `insertBefore` à la place de `appendChild`.
 
 ### Création de nouveaux éléments avec l'objet document et la méthode `createElement(...)`
 

@@ -87,7 +87,7 @@ _Hérite des propriétés de son parent,_ _{{domxref("AudioNode")}}_.
 
 ## Exemples
 
-> **Note :**: Voir [Visualisations avec la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) pour plus d'informations.
+> **Note :** Voir [Visualisations avec la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) pour plus d'informations.
 
 L'exemple suivant montre comment créer simplement un  `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser  {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)  (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 

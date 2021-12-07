@@ -114,7 +114,7 @@ En se basant sur la lecture du diagramme ci-dessus, les tâches principales dont
 
 Django fournit une multitude d'outils et de méthodes pour vous assister dans les tâches mentionnées ci-dessus. Parmi eux la plus importante, la classe `Form`, qui simplifie à la fois la production de formulaire HTML mais aussi la validation de donnée. In the next section we describe how forms work using the practical example of a page to allow librarians to renew books.
 
-> **Note :** Comprendre l'utilisation de `Form` vous aidera quand nous parlerons des classes de formulaires de Django plus complexes.
+> **Note :** Comprendre l'utilisation de `Form` vous aidera quand nous parlerons des classes de formulaires de Django plus complexes.
 
 ## Formulaire de renouvellement de livre par l'utilisation de vue Form
 

@@ -34,7 +34,7 @@ Un **élément flottant** est un élément pour lequel [la valeur calculée](/fr
 | `inline-grid`                                        | `grid`                                             |
 | _autre_                                              | _inchangée_                                        |
 
-> **Note :**Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet {{domxref("HTMLElement.style")}}, la plupart des navigateurs récents permettra d'utiliser `float` mais il faudra utiliser `cssFloat` (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée `styleFloat`. Le terme `float` étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version [CamelCase](https://fr.wikipedia.org/wiki/CamelCase) de la propriété CSS construite avec des tirets. De même, `class` sera échappée en `className` et le `for` des éléments \<label> sera converti en `htmlFor`).
+> **Note :** Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet {{domxref("HTMLElement.style")}}, la plupart des navigateurs récents permettra d'utiliser `float` mais il faudra utiliser `cssFloat` (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée `styleFloat`. Le terme `float` étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version [CamelCase](https://fr.wikipedia.org/wiki/CamelCase) de la propriété CSS construite avec des tirets. De même, `class` sera échappée en `className` et le `for` des éléments \<label> sera converti en `htmlFor`).
 
 ## Syntaxe
 

@@ -146,7 +146,7 @@ L'argument `remplaçant` est une fonction ou un tableau. Si c'est une fonction, 
 - Si la valeur renvoyée est un autre objet, cet objet sera, de façon récursive, transformé en une chaîne JSON en appelant la fonction `remplaçant` sur chaque propriété sauf si l'objet est une fonction auquel cas, rien n'est ajouté à la chaîne JSON.
 - Si la valeur renvoyée est {{jsxref("undefined")}}, la propriété ne sera pas incluse dans la chaîne JSON.
 
-> **Note :** la fonction `remplaçant` ne peut pas être utilisée pour retirer des valeurs d'un tableau. Si on renvoie `undefined` ou une fonction, ce sera la valeur `null` qui sera utilisée.
+> **Note :** la fonction `remplaçant` ne peut pas être utilisée pour retirer des valeurs d'un tableau. Si on renvoie `undefined` ou une fonction, ce sera la valeur `null` qui sera utilisée.
 
 > **Note :** Si on souhaite que la fonction `remplaçant` distingue un objet dont une propriété a un clé qui est « réellement » une chaîne vide, il faudra avoir un compteur pour le nombre d'itération. Si le compteur indique que la première itération est passée, alors il s'agit bien d'un clé avec une chaîne vide.
 

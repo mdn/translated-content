@@ -27,7 +27,7 @@ La fonction **`parseInt()`** analyse une chaîne de caractère fournie en argume
 
   - : Un entier compris entre 2 et 36 qui représente la [base](https://fr.wikipedia.org/wiki/Base_%28arithm%C3%A9tique%29) utilisée pour la valeur représentée dans la chaîne. La base communément utilisée est la base décimale et on utilisera donc `10` dans ce cas pour ce paramètre.
 
-    > **Attention :**La base par défaut n'est pas 10. Ce paramètre doit toujours être utilisé, en effet s'il n'est pas spécifié, le comportement de la fonction n'est pas garanti et peut varier d'une plate-forme à une autre.
+    > **Attention :** La base par défaut n'est pas 10. Ce paramètre doit toujours être utilisé, en effet s'il n'est pas spécifié, le comportement de la fonction n'est pas garanti et peut varier d'une plate-forme à une autre.
 
     Voir cependant la description ci-après qui explicite le comportement par défaut attendu.
 

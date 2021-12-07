@@ -17,7 +17,7 @@ translation_of: Web/API/Cache/addAll
 
 La méthode **`addAll()`** de l'interface {{domxref("Cache")}} accepte un tableau d'URLS, les récupères, et ajoute les objets réponse qui en résultent au cache en question. Les objets requêtes crées pendant la phase de récupération deviennent des clés vers les opérations de réponse stockées.
 
-> **Note :** `addAll()` écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à une requête, mais échouera si l'opération `put() `ainsi créée devrait engendrer l'éffacement d'une entrée cache créée par la même méthode `addAll()`.
+> **Note :** `addAll()` écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à une requête, mais échouera si l'opération `put() `ainsi créée devrait engendrer l'éffacement d'une entrée cache créée par la même méthode `addAll()`.
 
 ## Syntaxe
 

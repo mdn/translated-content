@@ -118,7 +118,7 @@ Si la valeur dépasse la valeur maximale autorisée, l'attribut JavaScript [`val
   </tbody>
 </table>
 
-> **Note :**Lorsque les données saisies par l'utilisateur ne respectent pas la valeur maximale fixée, la valeur est considérée comme invalide dans la validation des contraintes et correspondra aux pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
+> **Note :** Lorsque les données saisies par l'utilisateur ne respectent pas la valeur maximale fixée, la valeur est considérée comme invalide dans la validation des contraintes et correspondra aux pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
 
 Voir la [validation côté client](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) et [`rangeOverflow`](/fr/docs/Web/API/ValidityState/rangeOverflow) pour plus d'informations.
 

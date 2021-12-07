@@ -242,7 +242,7 @@ Normalement, une fonctionnalité simple doit marcher uniquement avec le HTML en 
 - Fournir une validation de formulaire côté client, qui informe rapidement les utilisateurs des problèmes avec leurs entrées dans le formulaire, sans qu'ils aient à attendre que le serveur vérifie les données. Si ça n'est pas disponible, le formulaire marchera toujours, mais la validation sera peut-être plus lente.
 - Fournir des contrôles personnalisés pour les `<video>`s HTML5 qui sont accessibles pour les utilisateurs uniquement au clavier (comme nous l'avons dit auparavant, les contrôles par défaut de navigateur ne sont pas accessibles au clavier dans la plupart des navigateurs).
 
-> **Note :** [Accessible JavaScript](http://webaim.org/techniques/javascript/) de WebAIM fourni des renseignements approfondis à propos des considérations pour du JavaScript accessible.
+> **Note :** [Accessible JavaScript](http://webaim.org/techniques/javascript/) de WebAIM fourni des renseignements approfondis à propos des considérations pour du JavaScript accessible.
 
 Les implémentations JavaScript plus complexes peuvent mener à des problèmes avec l'accessibilité — vous devez faire ce que vous pouvez. par exemple, cela ne serait pas raisonnable d'attendre de vous que vous fassiez un jeu complexe 3D écrit avec [WebGL](/fr/Apprendre/WebGL) accessible à 100% pour une personne aveugle, mais vous pouvez implémenter des [contrôles clavier](/fr/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) pour qu'il soit utilisable pour un utilisateur sans souris, et réaliser une palette de couleurs suffisamment contrastée pour être utilisable par les personnes avec des lacunes pour percevoir les couleurs.
 
