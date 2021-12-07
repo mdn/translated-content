@@ -18340,12 +18340,6 @@
       "e53e04ac"
     ]
   },
-  "Web/API/MediaStreamConstraints": {
-    "modified": "2019-03-18T21:40:37.855Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
   "Web/API/MediaStreamTrack": {
     "modified": "2020-10-15T21:58:36.727Z",
     "contributors": [
@@ -26354,12 +26348,6 @@
   },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role": {
     "modified": "2019-03-18T21:10:44.737Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute": {
-    "modified": "2019-03-18T20:45:37.166Z",
     "contributors": [
       "Wind1808"
     ]
@@ -48553,6 +48541,12 @@
       "unarist"
     ]
   },
+  "conflicting/Web/API/MediaDevices/getUserMedia": {
+    "modified": "2019-03-18T21:40:37.855Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
   "conflicting/Web/API/StorageManager/estimate": {
     "modified": "2020-10-15T22:20:05.823Z",
     "contributors": [
@@ -49645,6 +49639,12 @@
     "contributors": [
       "Taken",
       "Mgjbot"
+    ]
+  },
+  "web/Accessibility/ARIA/Attributes/aria-activedescendant": {
+    "modified": "2019-03-18T20:45:37.166Z",
+    "contributors": [
+      "Wind1808"
     ]
   }
 }
