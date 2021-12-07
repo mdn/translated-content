@@ -113,7 +113,7 @@ init();
 <canvas id="canvas" width="300" height="300"></canvas>
 ```
 
-{{EmbedLiveSample("Un_système_terrestre_animé", "310", "310", "canvas_animation1.png")}}
+{{EmbedLiveSample("Un_système_terrestre_animé", "310", "310")}}
 
 ## Une horloge animée
 
@@ -224,7 +224,7 @@ window.requestAnimationFrame(clock);
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
-{{EmbedLiveSample("Une_horloge_animée", "180", "180", "canvas_animation2.png")}}
+{{EmbedLiveSample("Une_horloge_animée", "180", "180")}}
 
 ## Un panorama défilant en boucle
 
