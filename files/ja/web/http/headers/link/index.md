@@ -4,77 +4,60 @@ slug: Web/HTTP/Headers/Link
 tags:
   - Draft
   - HTTP
-  - HTTP Header
   - HTTP ヘッダー
   - Link
   - NeedsCompatTable
   - NeedsContent
   - NeedsSyntax
-  - Reference
-  - エンティティヘッダー
+  - リファレンス
+browser-compat: http.headers.Link
 translation_of: Web/HTTP/Headers/Link
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP の <strong><code>Link</code></strong> エンティティヘッダーフィールドは、 HTTP ヘッダー内の1つ以上のリンクをシリアル化する手段を提供します。意味的には、 HTML の &lt;link&gt; 要素と同等です。</p>
+HTTP の **`Link`** エンティティヘッダーフィールドは、 HTTP ヘッダー内の 1 つ以上のリンクをシリアル化する手段を提供します。意味的には、 HTML の {{HTMLElement("link")}} 要素と同等です。</p>
 
-<h2 id="Syntax">Syntax</h2>
+## 構文
 
-<pre class="syntaxbox">Link: &lt; <var>uri-reference</var> &gt;; <var>param1</var>=<var>value1</var>; <var>param2</var>="<var>value2</var>"</pre>
+```
+Link: <uri-reference>; param1=value1; param2="value2"
+```
 
-<dl>
- <dt><code>&lt;uri-reference&gt;</code></dt>
- <dd>URI 参照。 <code>&lt;</code> と <code>&gt;</code> で囲む必要があります。</dd>
-</dl>
+- `<uri-reference>`
+  - : URI 参照。 `<` と `>` で囲む必要があります。
 
-<h3 id="Parameters">Parameters</h3>
+### 引数
 
-<p>リンクヘッダーには <code>;</code> で区切られたパラメーターが含まれており、 {{HTMLElement("link")}} 要素の属性に相当します。</p>
+リンクヘッダーには `;` で区切られた引数が含まれており、 {{HTMLElement("link")}} 要素の属性に相当します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>URI は <code>&lt;</code> と <code>&gt;</code> で囲む必要があります。</p>
+URI （絶対または相対）は `<` と `>` で囲む必要があります。
 
-<pre class="brush: http; no-line-numbers example-good">Link: &lt;https://example.com&gt;; rel="preconnect"</pre>
+```example-good
+Link: <https://example.com>; rel="preconnect"
+```
 
-<pre class="brush: http; no-line-numbers example-bad">Link: https://bad.example; rel="preconnect"</pre>
+```example-bad
+Link: https://bad.example; rel="preconnect"
+```
 
-<h3 id="Specifying_multiple_links" name="Specifying_multiple_links">複数リンクを指定</h3>
+### 複数リンクを指定
 
-<p>カンマで区切られた複数のリンクを指定できます。次に例を示します。</p>
+カンマで区切られた複数のリンクを指定できます。次に例を示します。
 
-<pre>Link: &lt;https://one.example.com&gt;; rel="preconnect", &lt;https://two.example.com&gt;; rel="preconnect", &lt;https://three.example.com&gt;; rel="preconnect"</pre>
+```
+Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; rel="preconnect", <https://three.example.com>; rel="preconnect"
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">題名</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC(8288, "Link Serialisation in HTTP Headers", 3)}}</td>
-   <td><span class="spec-RFC">IETF RFC</span></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{RFC(5988, "The Link Header Field", 5)}}</td>
-   <td><span class="spec-RFC">IETF RFC</span></td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("http.headers.Link")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPStatus(103, "103 Early Hints")}}</li>
-</ul>
+- {{HTTPStatus(103, "103 Early Hints")}}
