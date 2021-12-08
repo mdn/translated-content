@@ -39,7 +39,7 @@ Prenons un exemple afin de rendre cela un peu plus clair.
 
 ## Comprendre les prototypes objet
 
-Reprenons notre exemple dans lequel nous avions écrit notre constructeur `Personne()`. Chargez cet exemple dans votre navigateur, si vous ne l'avez plus, vous pouvez utiliser notre exemple [oojs-class-further-exercises.html](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)).
+Reprenons notre exemple dans lequel nous avions écrit notre constructeur `Personne()`. Chargez cet exemple dans votre navigateur, si vous ne l'avez plus, vous pouvez utiliser notre exemple [oojs-class-further-exercises.html](https://sphinxknight.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises) (voir aussi le [code source](https://github.com/SphinxKnight/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)).
 
 Dans cet exemple, nous avons défini un constructeur comme suit&nbsp;:
 
