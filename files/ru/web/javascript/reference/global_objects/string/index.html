@@ -73,11 +73,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
   </tr>
   <tr>
    <td><code>\uXXXX</code></td>
-   <td>кодовая точка Юникода</td>
+   <td>Юникод-символ</td>
   </tr>
   <tr>
    <td><code>\xXX</code></td>
-   <td>символ из кодировки Latin-1</td>
+   <td>символ в кодировке Latin-1</td>
   </tr>
  </tbody>
 </table>
@@ -97,7 +97,7 @@ new String(thing)
 
 <h2 id="Description">Описание</h2>
 
-<p>Строки полезны для хранения данных, которые можно представить в текстовой форме. Некоторые из наиболее частых операций со строками — это проверка их {{jsxref("String.length", "длины", "", 1)}}, построение строки с помощью <a href="/ru/docs/Web/JavaScript/Reference/Operators/String_Operators">операций строковой конкатенации + и +=</a>, проверка на существование или местоположение подстрок с помощью метода {{jsxref("String.prototype.indexOf()", "indexOf()")}}, либо извлечение подстрок с помощью метода {{jsxref("String.prototype.substring()", "substring()")}}.</p>
+<p>Строки полезны для хранения данных, которые можно представить в текстовой форме. Некоторые из наиболее частых операций со строками — это проверка их {{jsxref("String.length", "длины", "", 1)}}, построение строки с помощью <a href="/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B">операций строковой конкатенации + и +=</a>, проверка на существование или местоположение подстрок с помощью метода {{jsxref("String.prototype.indexOf()", "indexOf()")}}, либо извлечение подстрок с помощью метода {{jsxref("String.prototype.substring()", "substring()")}}.</p>
 
 <h3 id="Character_access">Доступ к символам</h3>
 
@@ -158,14 +158,7 @@ console.log(eval(s2));        // выведет строку '2 + 2'
 <pre class="brush: js">console.log(eval(s2.valueOf())); // выведет число 4
 </pre>
 
-<div class="note"><strong>Примечание:</strong> для того, чтобы узнать больше о другом возможном подходе к строкам в JavaScript, прочитайте статью о <a href="/ru/Add-ons/Code_snippets/StringView"><code>StringView</code> — C-подобном представлении строк на основе типизированных массивов</a>.</div>
-
 <h2 id="Properties">Свойства</h2>
-
-<dl>
- <dt>{{jsxref("String.prototype")}}</dt>
- <dd>Позволяет добавлять свойства к объекту <code>String</code>.</dd>
-</dl>
 
 <div>{{jsOverrides("Function", "Properties", "prototype")}}</div>
 
@@ -227,22 +220,6 @@ console.log(String.replace(num, /5/, '2'));
 }());
 </pre>
 
-<h2 id="String_instances">Экземпляры объекта <code>String</code></h2>
-
-<h3 id="Properties_of_String_instance">Свойства</h3>
-
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Properties')}}</div>
-
-<h3 id="Methods_of_String_instance">Методы</h3>
-
-<h4 id="Methods_unrelated_to_HTML">Методы, не относящиеся к HTML</h4>
-
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Methods_unrelated_to_HTML')}}</div>
-
-<h4 id="HTML_wrapper_methods">Методы-обёртки HTML</h4>
-
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'HTML_wrapper_methods')}}</div>
-
 <h2 id="Examples">Примеры</h2>
 
 <h3 id="Example_String_conversion">Пример: преобразование в строку</h3>
@@ -269,6 +246,5 @@ for (var i = 0, n = inputValues.length; i &lt; n; ++i) {
 
 <ul>
  <li>{{domxref("DOMString")}}</li>
- <li><a href="/ru/Add-ons/Code_snippets/StringView"><code>StringView</code> — C-подобное представление строк на основе типизированных массивов</a></li>
- <li><a href="/ru/docs/Web/API/DOMString/Binary">Двоичные строки</a></li>
+ <li><a href="/en-US/docs/Web/API/DOMString/Binary">Двоичные строки</a></li>
 </ul>
