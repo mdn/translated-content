@@ -43,7 +43,7 @@ var node = new AudioWorkletNode(context, name, options);
     - `outputChannelCount` {{optional_inline}}
       - : 각 출력에 대한 채널의 숫자를 정의하는 **배열**. 예를 들자면, _outputChannelCount: \[n, m]_ 은 첫번째 출력의 채널 숫자를 _n_ 으로 그리고 두번째 출력을 _m_ 으로 명시합니다. 배열의 길이는 반드시 `numberOfOutputs`과 일치해야 합니다.
     - `parameterData` {{optional_inline}}
-      - : `key`가 사용자 정의 매개변수의 이름이고 `value`가 이것의 초기 값인 채로, (노드의 {{domxref("AudioWorkletNode.parameters", "parameters")}} 속성에 있는) 이 노드에 있는 사용자 정의 {{domxref("AudioParam")}} 객체의 초기 값을 포함하는 객체.
+      - : `key`가 사용자 정의 파라미터의 이름이고 `value`가 이것의 초기 값인 채로, (노드의 {{domxref("AudioWorkletNode.parameters", "parameters")}} 속성에 있는) 이 노드에 있는 사용자 정의 {{domxref("AudioParam")}} 객체의 초기 값을 포함하는 객체.
     - `processorOptions` {{optional_inline}}
       - : 근본적인 {{domxref("AudioWorkletProcessor")}}의 사용자 정의 초기화를 위해 사용될 수 있는 모든 추가적인 데이터.
 
@@ -60,7 +60,7 @@ var node = new AudioWorkletNode(context, name, options);
 - `IndexSizeError` {{domxref("DOMException")}}
   - : `options.outputChannelCount` 배열의 길이가 `options.numberOfOutputs`와 일치하지 않습니다.
 
-## 사용 시 참고할 점
+## 사용 일람
 
 각기 다른 `options` 매개변수 값들은 다음의 영향을 가질 수 있습니다.
 

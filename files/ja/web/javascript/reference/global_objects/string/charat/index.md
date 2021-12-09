@@ -103,10 +103,10 @@ function getWholeChar(str, i) {
       throw 'High surrogate without following low surrogate';
     }
     var next = str.charCodeAt(i + 1);
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'High surrogate without following low surrogate';
-      }
-      return str.charAt(i) + str.charAt(i + 1);
+    if (0xDC00 > next || next > 0xDFFF) {
+      throw 'High surrogate without following low surrogate';
+    }
+    return str.charAt(i) + str.charAt(i + 1);
   }
   // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
@@ -156,10 +156,10 @@ function getWholeCharAndI(str, i) {
       throw 'High surrogate without following low surrogate'
     }
     let next = str.charCodeAt(i + 1)
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'High surrogate without following low surrogate'
-      }
-      return [str.charAt(i) + str.charAt(i + 1), i + 1]
+    if (0xDC00 > next || next > 0xDFFF) {
+      throw 'High surrogate without following low surrogate'
+    }
+    return [str.charAt(i) + str.charAt(i + 1), i + 1]
   }
 
   // Low surrogate (0xDC00 <= code && code <= 0xDFFF)

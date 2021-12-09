@@ -1,12 +1,8 @@
 ---
 title: translate3d()
 slug: Web/CSS/transform-function/translate3d()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/translate3d()
+browser-compat: css.types.transform-function.translate3d
 ---
 {{CSSRef}}
 
@@ -14,20 +10,22 @@ La fonction CSS **`translate3d()`** permet de déplacer un élément dans l'espa
 
 {{EmbedInteractiveExample("pages/css/function-translate3d.html")}}
 
-La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.
+La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
 ## Syntaxe
 
-    translate3d(tx, ty, tz)
+```css
+translate3d(tx, ty, tz)
+```
 
 ### Valeurs
 
 - `tx`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui représente l'abscisse du vecteur de translation (équivalente au déplacement horizontal).
+  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) qui représente l'abscisse du vecteur de translation (équivalente au déplacement horizontal).
 - `ty`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui représente l'ordonnée du vecteur de translation (équivalente au déplacement vertical).
+  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) qui représente l'ordonnée du vecteur de translation (équivalente au déplacement vertical).
 - `tz`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente la composante en profondeur du vecteur de translation (équivalente au déplacement en profondeur). La valeur ne peut pas être de type {{cssxref("&lt;percentage&gt;")}}, si c'est le cas, la règle décrivant la transformation sera considérée comme invalide.
+  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) qui représente la composante en profondeur du vecteur de translation (équivalente au déplacement en profondeur). La valeur ne peut pas être de type [`<percentage>`](/fr/docs/Web/CSS/percentage), si c'est le cas, la règle décrivant la transformation sera considérée comme invalide.
 
 <table class="standard-table">
   <thead>
@@ -40,18 +38,18 @@ La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-functi
   </thead>
   <tbody>
     <tr>
-      <td colspan="2" rowspan="2">
+      <td colspan="2">
         <p>
           Cette transformation s'applique en trois dimensions et ne peut donc
           être représentée sur le plan.
         </p>
       </td>
-      <td colspan="1" rowspan="2">
+      <td>
         Une translation n'est pas une transformation linéaire de ℝ<sup>3</sup>
         et ne peut donc pas être représentée par une matrice dans le système
         cartésien.
       </td>
-      <td colspan="1" rowspan="2">
+      <td>
         <math
           ><mfenced
             ><mtable
@@ -76,23 +74,23 @@ La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-functi
 #### HTML
 
 ```html
-<p>Statique</p>
-<p class="transformation">Bougé</p>
-<p>Statique</p>
+<div>Statique</div>
+<div class="moved">Déplacé</div>
+<div>Statique</div>
 ```
 
 #### CSS
 
 ```css
-p {
+div {
   width: 60px;
   height: 60px;
   background-color: skyblue;
 }
 
-.transformation {
+.moved {
   transform: perspective(500px) translate3d(10px,0px,0px);
-  /* equivalent to perspective(500px) translateX(10px)*/
+  /* Équivalent à perspective(500px) translateX(10px)*/
   background-color: pink;
 }
 ```
@@ -106,22 +104,22 @@ p {
 #### HTML
 
 ```html
-<p>Statique</p>
-<p class="transformation">Bougé</p>
-<p>Statique</p>
+<div>Statique</div>
+<div class="moved">Déplacé</div>
+<div>Statique</div>
 ```
 
 #### CSS
 
 ```css
-p {
+div {
   width: 60px;
   height: 60px;
   background-color: skyblue;
 }
 
-.transformation {
-  transform: perspective(500px) translate3d(10px,0px,100px);
+.moved {
+  transform: perspective(500px) translate3d(10px, 0, 100px);
   background-color: pink;
 }
 ```
@@ -132,15 +130,13 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS Transforms 2", "#funcdef-translate3d", "translate3d()")}} | {{Spec2("CSS Transforms 2")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)

@@ -1,18 +1,12 @@
 ---
 title: scale()
 slug: Web/CSS/transform-function/scale()
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
 translation_of: Web/CSS/transform-function/scale()
-browser-compat: css.types.transform-function
+browser-compat: css.types.transform-function.scale
 ---
 {{CSSRef}}
 
-La fonction **`scale()`** permet de modifier la taille d'un élément avec un facteur d'échelle sur deux dimensions. Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
+La fonction CSS **`scale()`** permet de modifier la taille d'un élément avec un facteur d'échelle sur deux dimensions. Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
 ![](scale.png)
 
@@ -24,8 +18,12 @@ Lorsque les coordonnées du vecteur sont en dehors de l'intervalle \[`-1, 1]`, l
 
 ## Syntaxe
 
+La fonction `scale()` s'utilise avec une ou deux valeurs qui indiquent l'échelle à utiliser selon chaque direction.
+
+
 ```css
 scale(sx)
+
 scale(sx, sy)
 ```
 
@@ -132,7 +130,7 @@ Vous pouvez également tirer parti de la caractéristique média [`prefers-reduc
 
 Pour en savoir plus :
 
-- [Comprendres les règles WCAG 2.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_%e2%80%94_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [Comprendre les règles WCAG 2.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_%e2%80%94_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
 - [Comprendre les critères de succès WCAG 2.1 / 2.3.3 (W3C)](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## Exemples
@@ -192,7 +190,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Déformer_horizontalement_et_verticalement_avec origine_déplacée", "200", "200")}}
+{{EmbedLiveSample("Déformer_horizontalement_et_verticalement_avec_origine_déplacée", "200", "200")}}
 
 ## Spécifications
 

@@ -3127,7 +3127,7 @@
 /fr/docs/Mozilla/Firefox/Versions/9	/fr/docs/Mozilla/Firefox/Releases/9
 /fr/docs/Mozilla/Firefox/Versions/Firefox_19_pour_les_developpeurs	/fr/docs/Mozilla/Firefox/Releases/19
 /fr/docs/Mozilla/Firefox/Versions/Firefox_20_pour_developeurs	/fr/docs/Mozilla/Firefox/Releases/20
-/fr/docs/NPAPI/Constantes	/fr/docs/Plugins/Guide/Constants
+/fr/docs/NPAPI/Constantes	/fr/docs/Glossary/Plugin
 /fr/docs/NavigatorUserMedia.getUserMedia	/fr/docs/Web/API/Navigator/getUserMedia
 /fr/docs/Outils	/fr/docs/Tools
 /fr/docs/Outils/Accessing_the_Developer_Tools	/fr/docs/Tools/Accessing_the_Developer_Tools
@@ -3315,6 +3315,7 @@
 /fr/docs/Outils/inspecteur/Raccourcis_clavier	/fr/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
 /fr/docs/Outils/Éditeur_de_style	/fr/docs/Tools/Style_Editor
 /fr/docs/Outils:Validateurs	/fr/docs/Tools/Validators
+/fr/docs/Plugins/Guide/Constants	/fr/docs/Glossary/Plugin
 /fr/docs/Précis_CSS_2	/fr/docs/Web/CSS
 /fr/docs/Précis_CSS_2/Tout_en_un	/fr/docs/Web/CSS/Reference
 /fr/docs/Précis_CSS_2:Tout_en_un	/fr/docs/Web/CSS/Reference
@@ -4013,7 +4014,8 @@
 /fr/docs/Web/CSS/CSS_Logical_Properties/Propriétés_logiques_flottements_positionnement	/fr/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 /fr/docs/Web/CSS/CSS_Logical_Properties/Propriétés_logiques_marges_bordures_remplissages	/fr/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 /fr/docs/Web/CSS/CSS_Masks	/fr/docs/Web/CSS/CSS_Masking
-/fr/docs/Web/CSS/CSS_Scroll_Snap/Compatibilité_navigateurs	/fr/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat
+/fr/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat	/fr/docs/conflicting/Web/CSS/CSS_Scroll_Snap
+/fr/docs/Web/CSS/CSS_Scroll_Snap/Compatibilité_navigateurs	/fr/docs/conflicting/Web/CSS/CSS_Scroll_Snap
 /fr/docs/Web/CSS/CSS_Scroll_Snap/Concepts_de_base	/fr/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts
 /fr/docs/Web/CSS/CSS_Selectors/Utiliser_la_pseudo-classe_:target_dans_un_selecteur	/fr/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 /fr/docs/Web/CSS/CSS_Shapes/Aperçu_formes_CSS	/fr/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes

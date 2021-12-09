@@ -3,12 +3,12 @@ title: mask-border-source
 slug: Web/CSS/mask-border-source
 tags:
   - CSS
-  - CSS Masking
+  - CSS マスク
   - CSS プロパティ
   - 実験的
   - NeedsCompatTable
   - NeedsExample
-  - Reference
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.mask-border-source
 translation_of: Web/CSS/mask-border-source
@@ -22,7 +22,7 @@ translation_of: Web/CSS/mask-border-source
 ## 構文
 
 ```css
-/* Keyword 値 */
+/* キーワード値 */
 mask-border-source: none;
 
 /* <image> 値 */

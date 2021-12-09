@@ -276,7 +276,7 @@
 /ja/docs/CSS/Length	/ja/docs/Web/CSS/Length
 /ja/docs/CSS/Media	/ja/docs/Web/CSS/@media
 /ja/docs/CSS/Media/Visual	/ja/docs/Web/CSS/@media
-/ja/docs/CSS/Media_queries	/ja/docs/Web/CSS/Media_queries
+/ja/docs/CSS/Media_queries	/ja/docs/Web/CSS/Media_Queries
 /ja/docs/CSS/Multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/CSS/Other_Resources	/ja/docs/Web/CSS
 /ja/docs/CSS/Privacy_and_the_:visited_selector	/ja/docs/Web/CSS/Privacy_and_the_:visited_selector
@@ -2791,8 +2791,8 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/前提条件	/ja/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
 /ja/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/ja/docs/Mozilla/Firefox/Releases/47
 /ja/docs/Mozilla_Addons_FAQ_(external)	https://addons.mozilla.org/faq.php
-/ja/docs/NPAPI/Constants	/ja/docs/Plugins/Guide/Constants
-/ja/docs/NPAPI:Constants	/ja/docs/Plugins/Guide/Constants
+/ja/docs/NPAPI/Constants	/ja/docs/Glossary/Plugin
+/ja/docs/NPAPI:Constants	/ja/docs/Glossary/Plugin
 /ja/docs/Namespace	/ja/docs/Glossary/Namespace
 /ja/docs/New_in_JavaScript_1.8	/ja/docs/orphaned/New_in_JavaScript_1.8
 /ja/docs/Node.isSupported	/ja/docs/Web/API/Node/isSupported
@@ -2813,6 +2813,8 @@
 /ja/docs/Online_and_offline_events	/ja/docs/Web/API/Navigator/Online_and_offline_events
 /ja/docs/Other_JavaScript_tools	/ja/docs/Tools
 /ja/docs/Parsing_and_serializing_XML	/ja/docs/Web/Guide/Parsing_and_serializing_XML
+/ja/docs/Plugins/Guide/Constants	/ja/docs/Glossary/Plugin
+/ja/docs/Plugins/Roadmap	/ja/docs/conflicting/Glossary/Plugin
 /ja/docs/Property_compatibility_table_for_form_widgets	/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls
 /ja/docs/Quirks_Mode_and_Standards_Mode	/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /ja/docs/Rich-Text_Editing_in_Mozilla	/ja/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
@@ -3162,6 +3164,7 @@
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
 /ja/docs/Web/API/MediaCapabilitiesInfo	/ja/docs/Web/API/MediaCapabilities/encodingInfo
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
+/ja/docs/Web/API/MediaStreamConstraints	/ja/docs/conflicting/Web/API/MediaDevices/getUserMedia
 /ja/docs/Web/API/MouseEvent/which	/ja/docs/Web/API/UIEvent/which
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/NavigatorID	/ja/docs/Web/API/Navigator
@@ -3577,6 +3580,7 @@
 /ja/docs/Web/API/window.unescape	/ja/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /ja/docs/Web/API/window.updateCommands	/ja/docs/Web/API/Window/updateCommands
 /ja/docs/Web/API/window.window	/ja/docs/Web/API/Window/window
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/ja/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/ja/docs/Web/Accessibility/ARIA/Roles/button_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role	/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role
 /ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/Web/Accessibility/ARIA/widgets
@@ -3654,6 +3658,7 @@
 /ja/docs/Web/CSS/CSS_Masks	/ja/docs/Web/CSS/CSS_Masking
 /ja/docs/Web/CSS/CSS_Reference	/ja/docs/Web/CSS/Reference
 /ja/docs/Web/CSS/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
+/ja/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat	/ja/docs/conflicting/Web/CSS/CSS_Scroll_Snap
 /ja/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/ja/docs/Web/XPath/Comparison_with_CSS_selectors
 /ja/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values	/ja/docs/Web/CSS/CSS_Shapes/From_box_values
 /ja/docs/Web/CSS/CSS_User_Interface	/ja/docs/Web/CSS/CSS_Basic_User_Interface
@@ -3750,6 +3755,10 @@
 /ja/docs/Web/CSS/min	/ja/docs/Web/CSS/min()
 /ja/docs/Web/CSS/minmax	/ja/docs/Web/CSS/minmax()
 /ja/docs/Web/CSS/normal	/ja/docs/Web/CSS/font-variant
+/ja/docs/Web/CSS/offset-block-end	/ja/docs/Web/CSS/inset-block-end
+/ja/docs/Web/CSS/offset-block-start	/ja/docs/Web/CSS/inset-block-start
+/ja/docs/Web/CSS/offset-inline-end	/ja/docs/Web/CSS/inset-inline-end
+/ja/docs/Web/CSS/offset-inline-start	/ja/docs/Web/CSS/inset-inline-start
 /ja/docs/Web/CSS/paint	/ja/docs/Web/CSS/image/paint()
 /ja/docs/Web/CSS/paint()	/ja/docs/Web/CSS/image/paint()
 /ja/docs/Web/CSS/radial-gradient	/ja/docs/Web/CSS/gradient/radial-gradient()
@@ -3777,7 +3786,7 @@
 /ja/docs/Web/CSS/transform-function/skewY	/ja/docs/Web/CSS/transform-function/skewY()
 /ja/docs/Web/CSS/transform-function/translate	/ja/docs/Web/CSS/transform-function/translate()
 /ja/docs/Web/CSS/transform-function/translate3d	/ja/docs/Web/CSS/transform-function/translate3d()
-/ja/docs/Web/CSS/transform-function/translateX	/ja/docs/orphaned/Web/CSS/transform-function/translateX
+/ja/docs/Web/CSS/transform-function/translateX	/ja/docs/Web/CSS/transform-function/translateX()
 /ja/docs/Web/CSS/transform-function/translateY	/ja/docs/Web/CSS/transform-function/translateY()
 /ja/docs/Web/CSS/transform-function/translateZ	/ja/docs/Web/CSS/transform-function/translateZ()
 /ja/docs/Web/CSS/uri	/ja/docs/Web/CSS/url()

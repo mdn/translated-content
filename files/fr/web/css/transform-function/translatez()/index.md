@@ -1,16 +1,12 @@
 ---
 title: translateZ()
 slug: Web/CSS/transform-function/translateZ()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/translateZ()
+browser-compat: css.types.transform-function.translateZ
 ---
 {{CSSRef}}
 
-La fonction **`translateZ()`** permet de déplacer un élément selon l'axe z de l'espace tridimensionnel. Cette transformation est caractérisée par une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) qui définit l'amplitude du mouvement. La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.
+La fonction **`translateZ()`** permet de déplacer un élément selon l'axe z de l'espace tridimensionnel. Cette transformation est caractérisée par une valeur de longueur (type [`<length>`](/fr/docs/Web/CSS/length)) qui définit l'amplitude du mouvement. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
 {{EmbedInteractiveExample("pages/css/function-translateZ.html")}}
 
@@ -20,12 +16,14 @@ Dans les exemples interactifs ci-avant, `perspective: 500px;` a été utilisée 
 
 ## Syntaxe
 
-    translateZ(t)
+```css
+translateZ(tz)
+```
 
 ### Valeurs
 
 - `t`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente la composante en Z du vecteur de translation appliqué. Cet argument ne peut pas être de type {{cssxref("&lt;percentage&gt;")}}, si c'est le cas, la propriété qui contient la transformation est considérée comme invalide.
+  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) qui représente la composante en Z du vecteur de translation appliqué. Cet argument ne peut pas être de type [`<percentage>`](/fr/docs/Web/CSS/percentage), si c'est le cas, la propriété qui contient la transformation est considérée comme invalide.
 
 <table class="standard-table">
   <thead>
@@ -70,25 +68,28 @@ Dans les exemples interactifs ci-avant, `perspective: 500px;` a été utilisée 
 ### HTML
 
 ```html
-<p>toto</p>
-<p class="transformation">truc</p>
+<div>Statique</div>
+<div class="moved">Déplacé</div>
 ```
 
 ### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+div {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  left: 100px;
+  background-color: skyblue;
 }
 
-.transformation {
+.moved {
   /* On ajoute une perspective pour créer un */
   /* espace 3D. L'utilisateur regarde « depuis »*/
   /* 500px et on avance l'élément vers l'utili- */
   /* sateur de 200px */
   transform: perspective(500px) translateZ(200px);
+  background-color: pink;
 }
 ```
 
@@ -96,21 +97,19 @@ p {
 
 {{EmbedLiveSample("Exemples")}}
 
-Si la valeur fournie à `perspective()` est inférieure à l'argument de `translateZ()` (ex. `transform: perspective(200px) translateZ(300px);`), l'élément transformé ne sera pas visible car il sera situé au-delà de l'espace projeté sur l'écran. Plus l'écart entre ces deux arguments est faible, plus l'élément paraîtra proche de l'utilisateur.
+Si la valeur fournie à `perspective()` est inférieure à l'argument de `translateZ()` (ex. `transform: perspective(200px) translateZ(300px);`), l'élément transformé ne sera pas visible, car il sera situé au-delà de l'espace projeté sur l'écran. Plus l'écart entre ces deux arguments est faible, plus l'élément paraîtra proche de l'utilisateur.
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires                                                                  |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------- |
-| {{SpecName('CSS Transforms 2', '#transform-functions', 'transform')}} | {{Spec2('CSS Transforms 2')}} | Ajout des fonctions de transformations 3D au module standard _CSS Transforms_ |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("&lt;transform-function&gt;")}}
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
 - [Les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
-- {{cssxref("transform")}}
-- {{cssxref("transform-function/translateX", "translateX()")}} et {{cssxref("transform-function/translateY()", "translateY()")}}
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`translateX()`](/fr/docs/Web/CSS/transform-function/translateX()) et [`translateY()`](/fr/docs/Web/CSS/transform-function/translateY())

@@ -2445,6 +2445,12 @@
       "Wind1808"
     ]
   },
+  "Glossary/Plugin": {
+    "modified": "2019-01-16T16:09:13.641Z",
+    "contributors": [
+      "Nog"
+    ]
+  },
   "Glossary/Polyfill": {
     "modified": "2019-03-23T22:33:11.433Z",
     "contributors": [
@@ -8963,18 +8969,6 @@
       "Potappo",
       "myakura",
       "Kohei"
-    ]
-  },
-  "Plugins/Guide/Constants": {
-    "modified": "2019-01-16T16:09:13.641Z",
-    "contributors": [
-      "Nog"
-    ]
-  },
-  "Plugins/Roadmap": {
-    "modified": "2019-03-18T21:35:38.258Z",
-    "contributors": [
-      "momdo"
     ]
   },
   "Tools": {
@@ -18346,12 +18340,6 @@
       "e53e04ac"
     ]
   },
-  "Web/API/MediaStreamConstraints": {
-    "modified": "2019-03-18T21:40:37.855Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
   "Web/API/MediaStreamTrack": {
     "modified": "2020-10-15T21:58:36.727Z",
     "contributors": [
@@ -26364,12 +26352,6 @@
       "Wind1808"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute": {
-    "modified": "2019-03-18T20:45:37.166Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute": {
     "modified": "2019-03-18T21:23:20.561Z",
     "contributors": [
@@ -28687,13 +28669,6 @@
   "Web/CSS/CSS_Scroll_Snap": {
     "modified": "2019-03-18T21:30:31.785Z",
     "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_Scroll_Snap/Browser_compat": {
-    "modified": "2020-02-21T23:37:52.316Z",
-    "contributors": [
-      "yuheiy",
       "mfuji09"
     ]
   },
@@ -48513,6 +48488,12 @@
       "silverskyvicto"
     ]
   },
+  "conflicting/Glossary/Plugin": {
+    "modified": "2019-03-18T21:35:38.258Z",
+    "contributors": [
+      "momdo"
+    ]
+  },
   "conflicting/MDN/Contribute/Markdown_in_MDN": {
     "modified": "2020-09-30T15:30:25.061Z",
     "contributors": [
@@ -48560,6 +48541,12 @@
       "unarist"
     ]
   },
+  "conflicting/Web/API/MediaDevices/getUserMedia": {
+    "modified": "2019-03-18T21:40:37.855Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
   "conflicting/Web/API/StorageManager/estimate": {
     "modified": "2020-10-15T22:20:05.823Z",
     "contributors": [
@@ -48603,6 +48590,13 @@
     "modified": "2020-10-15T22:29:46.631Z",
     "contributors": [
       "Wind1808"
+    ]
+  },
+  "conflicting/Web/CSS/CSS_Scroll_Snap": {
+    "modified": "2020-02-21T23:37:52.316Z",
+    "contributors": [
+      "yuheiy",
+      "mfuji09"
     ]
   },
   "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
@@ -49645,6 +49639,12 @@
     "contributors": [
       "Taken",
       "Mgjbot"
+    ]
+  },
+  "web/Accessibility/ARIA/Attributes/aria-activedescendant": {
+    "modified": "2019-03-18T20:45:37.166Z",
+    "contributors": [
+      "Wind1808"
     ]
   }
 }
