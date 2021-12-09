@@ -6,68 +6,58 @@ tags:
   - HTTPS
   - Security
   - header
+browser-compat: http.headers.Upgrade-Insecure-Requests
 translation_of: Web/HTTP/Headers/Upgrade-Insecure-Requests
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP の <strong><code>Upgrade-Insecure-Requests</code></strong> リクエストヘッダーは、暗号化および認証されたレスポンスに対するクライアントの設定を表す信号をサーバーに送信し 、{{CSP("upgrade-insecure-requests")}} <a href="/ja/docs/Web/Security/CSP">CSP</a> ディレクティブを正常に処理できることを示します。</p>
+HTTP の **`Upgrade-Insecure-Requests`** リクエストヘッダーは、暗号化および認証されたレスポンスに対するクライアントの設定を表す信号をサーバーに送信し、 [CSP](/ja/docs/Web/HTTP/CSP) の {{CSP("upgrade-insecure-requests")}} ディレクティブが正常に処理できることを示します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">ヘッダー種別</th>
-   <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
-   <td>いいえ</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">ヘッダー種別</th>
+      <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <td>いいえ</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">Upgrade-Insecure-Requests: 1</pre>
+```
+Upgrade-Insecure-Requests: 1
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>クライアントは、次のように {{CSP("upgrade-insecure-requests")}} のアップグレードメカニズムをサポートしていることをサーバーに通知します。</p>
+クライアントは、次のように {{CSP("upgrade-insecure-requests")}} のアップグレードメカニズムをサポートしていることをサーバーに通知します。
 
-<pre class="notranslate">GET / HTTP/1.1
+```
+GET / HTTP/1.1
 Host: example.com
-Upgrade-Insecure-Requests: 1</pre>
+Upgrade-Insecure-Requests: 1
+```
 
-<p>これで、サーバーは安全なバージョンのサイトにリダイレクトできます。 {{HTTPHeader("Vary")}} ヘッダーを使用することで、アップグレードメカニズムをサポートしていないクライアントにキャッシュからサイトが提供されなくなります。</p>
+これで、サーバーは安全なバージョンのサイトにリダイレクトできます。 {{HTTPHeader("Vary")}} ヘッダーを使用することで、アップグレードメカニズムに対応していないクライアントにキャッシュからサイトが提供されなくなります。
 
-<pre class="notranslate">Location: https://example.com/
-Vary: Upgrade-Insecure-Requests</pre>
+```
+Location: https://example.com/
+Vary: Upgrade-Insecure-Requests
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("Upgrade Insecure Requests", "#preference", "upgrade-insecure-requests")}}</td>
-   <td>{{Spec2('Upgrade Insecure Requests')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("http.headers.Upgrade-Insecure-Requests")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>CSP の {{CSP("upgrade-insecure-requests")}} ディレクティブ</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- CSP {{CSP("upgrade-insecure-requests")}} ディレクティブ
