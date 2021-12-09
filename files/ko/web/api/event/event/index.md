@@ -2,76 +2,57 @@
 title: Event()
 slug: Web/API/Event/Event
 tags:
-  - API
   - Constructor
-  - DOM
-  - Event
   - Reference
+browser-compat: api.Event.Event
 translation_of: Web/API/Event/Event
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code><strong>Event()</strong></code> constructor는 새로운 {{domxref("Event")}} 객체를 생성합니다.</p>
+**`Event()`** 생성자는 새로운 {{domxref("Event")}} 객체를 생성합니다. 생성자로 생성한 이벤트는 브라우저가 생성하는 이벤트와 구분해서 합성 이벤트(synthetic event)라고 부르며, [스크립트에서 발송할 수 있습니다](/ko/docs/Web/Events/Creating_and_triggering_events).
 
-<h2 id="Syntax">Syntax</h2>
+## 구문
 
-<pre class="syntaxbox">new Event(<var>typeArg</var>[, <var>eventInit</var>]);</pre>
+```js
+new Event(typeArg)
+new Event(typeArg, eventInit);
+```
 
-<h3 id="Values">Values</h3>
+### 매개변수
 
-<dl>
- <dt><code>typeArg</code></dt>
- <dd>이 인자는 {{domxref("DOMString")}} 입니다. event의 이름을 나타냅니다.</dd>
- <dt><code>eventInit</code> {{optional_inline}}</dt>
- <dd>이 인자는 <code>EventInit</code> dictionary, 입니다. 아래의 추가 옵션 필드가 있습니다.
- <ul>
-  <li><code>bubbles</code>:  {{jsxref("Boolean")}} 값을 받습니다. 해당 event가 bubble인지 아닌지 결정합니다. 기본값은 <code>false</code> 입니다.</li>
-  <li><code>cancelable</code>: {{jsxref("Boolean")}} 값을 받습니다.event가 캔슬 될 수 있는지 없는지 결정합니다. 기본값은<code>false</code> 입니다.</li>
-  <li><code>composed</code>: {{jsxref("Boolean")}} 값을 받습니다. event가 shadow root 바깥의 eventListener 들도 trigger 할 것인지 결정합니다. (더 자세한 내용은 이곳에서 {{domxref("Event.composed")}} ). 기본값은 <code>false</code> 입니다.</li>
- </ul>
- </dd>
-</dl>
+- `typeArg`
+  - : 이벤트의 이름을 나타내는 문자열입니다.
+- `eventInit` {{optional_inline}}
+  - : 다음 속성을 포함하는 객체입니다.
+    - `bubbles` {{optional_inline}}
+      - : 이벤트의 버블링 여부를 나타내는 불리언 값입니다. 기본 값은 `false`입니다.
+    - `cancelable` {{optional_inline}}
+      - : 이벤트를 취소할 수 있는지 나타내는 불리언 값입니다. 기본 값은 `false`입니다.
+    - `composed` {{optional_inline}}
+      - : 이벤트가 섀도 루트(shadow root) 바깥의 이벤트 수신기로도 전달될지 나타내는 불리언 값입니다. {{domxref("Event.composed")}}에서 자세한 정보를 확인하세요. 기본 값은 `false`입니다.
 
-<h2 id="Example">Example</h2>
+## 예제
 
-<pre class="brush: js">// create a look event that bubbles up and cannot be canceled
+```js
+// 버블링 가능하고 취소 불가능한 look 이벤트 생성
 
-var evt = new Event("look", {"bubbles":true, "cancelable":false});
+const evt = new Event("look", {"bubbles":true, "cancelable":false});
 document.dispatchEvent(evt);
 
-// event can be dispatched from any element, not only the document
+// document 외의 다른 요소에서도 이벤트 발송 가능
 myDiv.dispatchEvent(evt);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## 명세
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-event-event','Event()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## 브라우저 호환성
 
+{{Compat}}
 
+## 같이 보기
 
-<p>{{Compat("api.Event.Event")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("Event")}}</li>
- <li>{{domxref("EventTarget.dispatchEvent()")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
-</ul>
+- {{domxref("Event")}}
+- {{domxref("EventTarget.dispatchEvent()")}}
+- [이벤트 생성 및 발동](/en-US/docs/Web/Events/Creating_and_triggering_events)

@@ -1,93 +1,151 @@
 ---
-title: event.preventDefault
+title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
+tags:
+  - Method
+  - Reference
+browser-compat: api.Event.preventDefault
 translation_of: Web/API/Event/preventDefault
 ---
-<p>{{ ApiRef() }}</p>
+{{apiref("DOM")}}
 
-<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">개요</h3>
+{{domxref("Event")}} 인터페이스의 **`preventDefault()`** 메서드는 어떤 이벤트를 명시적으로 처리하지 않은 경우, 해당 이벤트에 대한 {{Glossary("user agent", "사용자 에이전트")}}의 기본 동작을 실행하지 않도록 지정합니다.
 
-<p>이벤트를 취소할 수 있는 경우, 이벤트의 전파를 막지않고 그 이벤트를 취소합니다.</p>
+`preventDefault()`를 호출한 이벤트도 수신기 중 하나에서 {{domxref("Event.stopPropagation", "stopPropagation()")}} 또는 {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}을 호출하기 전까지는 다른 이벤트와 마찬가지로 전파됩니다.
 
-<h3 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">구문</h3>
+아래에도 적혀있지만, `cancelable: true` 없이 {{domxref("EventTarget.dispatchEvent()")}}로 발송한 이벤트처럼 취소 불가능한 이벤트의 경우, `preventDefault()`를 호출해도 아무 효과도 나타나지 않습니다.
 
-<pre class="eval"><em>event</em>.preventDefault()
-</pre>
+## 구문
 
-<h3 id=".E4.BE.8B" name=".E4.BE.8B">예제</h3>
+```
+event.preventDefault();
+```
 
-<p>다음의 예제에서는 체크박스를 클릭했을 때 발생하는 동작을 멈추는 방법을 살펴보겠습니다. </p>
+### 기본 클릭 동작 방지하기
 
-<pre>&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;preventDefault 예제&lt;/title&gt;
+체크박스의 클릭 기본 동작은 체크박스를 체크하거나 체크 해제하는 것입니다. 이 예제는 체크박스의 클릭 기본 동작을 방지하는 모습을 보입니다.
 
-&lt;script type="text/javascript"&gt;
+#### JavaScript
 
-function stopDefAction(evt) {
-  evt.preventDefault();
+```js
+document.querySelector("#id-checkbox").addEventListener("click", function(event) {
+         document.getElementById("output-box").innerHTML += "죄송합니다! <code>preventDefault()</code> 때문에 체크할 수 없어요!<br>";
+         event.preventDefault();
+}, false);
+```
+
+#### HTML
+
+```html
+<p>체크박스를 클릭해주세요.</p>
+
+<form>
+  <label for="id-checkbox">체크박스:</label>
+  <input type="checkbox" id="id-checkbox"/>
+</form>
+
+<div id="output-box"></div>
+```
+
+#### 결과
+
+{{EmbedLiveSample("기본_클릭_동작_방지하기")}}
+
+### 키 입력이 입력 칸을 채우는 것을 방지하기
+
+이 예제에서는 `preventDefault()`를 사용해서 사용자가 입력 칸에 원하지 않는 문자를 입력하지 못하도록 합니다. 실제로 이런 기능이 필요할 땐 [내장 HTML 양식 검증](/ko/docs/Learn/Forms/Form_validation)을 사용하세요.
+
+#### HTML
+
+```html
+<div class="container">
+  <p>이름을 입력하세요. 영문 소문자만 사용할 수 있습니다.</p>
+
+  <form>
+    <input type="text" id="my-textbox">
+  </form>
+</div>
+```
+
+#### CSS
+
+사용자가 잘못된 키를 누를 때 보여줄 경고창을 그리기 위한 CSS입니다.
+
+```css
+.warning {
+  border: 2px solid #f39389;
+  border-radius: 2px;
+  padding: 10px;
+  position: absolute;
+  background-color: #fbd8d4;
+  color: #3b3c40;
 }
-&lt;/script&gt;
-&lt;/head&gt;
+```
 
-&lt;body&gt;
+#### JavaScript
 
-&lt;p&gt;체크박스 컨트롤을 클릭해 주세요&lt;/p&gt;
+이제 실제 작업을 수행할 JavaScript 코드입니다. 우선 {{event("keypress")}} 이벤트를 수신합니다.
 
-&lt;form&gt;
-&lt;input type="checkbox" onclick="stopDefAction(event);"/&gt;
-&lt;label for="checkbox"&gt;체크박스&lt;/label&gt;
-&lt;/form&gt;
+```js
+var myTextbox = document.getElementById('my-textbox');
+myTextbox.addEventListener('keypress', checkName, false);
+```
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+`checkName()` 함수는 사용자가 누른 키를 관찰해서 허용할지, 허용하지 않을지 결정합니다.
 
-<p><code>preventDefault의 예제를 </code><a class="external" href="http://developer.mozilla.org/samples/domref/dispatchEvent.html" style="text-decoration: none; color: rgb(51, 102, 153) !important; cursor: default;">여기</a><code>에서 확인할 수 있습니다.</code></p>
-
-<p>아래의 예제에서는, preventDefault() 를 사용해서 올바르지 않은 텍스트가 입력란에 입력되는것을 막는 방법을 설명하고 있습니다.</p>
-
-<pre>&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;preventDefault 예제&lt;/title&gt;
-
-&lt;script type="text/javascript"&gt;
-
+```js
 function checkName(evt) {
-var charCode = evt.charCode;
-
-  if (charCode != 0) {
-    if (charCode &lt; 97 || charCode &gt; 122) {
+  var charCode = evt.charCode;
+  if (charCode != 0) {
+    if (charCode < 97 || charCode > 122) {
       evt.preventDefault();
-      alert("소문자만 입력할 수 있습니다." + "\n"
-            + "charCode: " + charCode + "\n"
+      displayWarning(
+        "영문 소문자만 입력하세요."
+        + "\n" + "charCode: " + charCode + "\n"
       );
     }
   }
 }
+```
 
-&lt;/script&gt;
-&lt;/head&gt;
+`displayWarning()` 함수는 경고창을 띄웁니다. 완벽한 모습은 아니지만 예제로는 충분합니다.
 
-&lt;body&gt;
+```js
+var warningTimeout;
+var warningBox = document.createElement("div");
+warningBox.className = "warning";
 
-&lt;p&gt;당신의 이름을 소문자만으로 입력해주세요.&lt;/p&gt;
-&lt;form&gt;
-&lt;input type="text" onkeypress="checkName(event);"/&gt;
-&lt;/form&gt;
+function displayWarning(msg) {
+  warningBox.innerHTML = msg;
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  if (document.body.contains(warningBox)) {
+    window.clearTimeout(warningTimeout);
+  } else {
+    // insert warningBox after myTextbox
+    myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
+  }
 
-<h3 id=".E6.B3.A8.E6.84.8F.E7.82.B9" name=".E6.B3.A8.E6.84.8F.E7.82.B9">주의</h3>
+  warningTimeout = window.setTimeout(function() {
+      warningBox.parentNode.removeChild(warningBox);
+      warningTimeout = -1;
+    }, 2000);
+}
+```
 
-<p>이벤트를 취소하는 도중에 preventDefault를 호출하게되면, 일반적으로는 브라우저의 구현에 의해 처리되는 기존의 액션이 동작하지 않게되고, 그 결과 이벤트가 발생하지 않게됩니다.</p>
+#### 결과
 
-<p>이벤트의 취소가능 여부는 <a href="/ko/DOM/event.cancelable" style="text-decoration: none; color: rgb(51, 102, 153) !important; cursor: default;" title="ko/DOM/event.cancelable">event.cancelable</a>를 사용해서 확인할 수 있습니다. 취소불가능한 이벤트에 대해서 preventDefault를 호출해도 결과는 없습니다.</p>
+{{ EmbedLiveSample('키_입력이_입력_칸을_채우는_것을_방지하기', 600, 200) }}
 
-<p>preventDefault는 DOM을 통한 이벤트의 전파를 막지않습니다. 전파를 막을때는 <a href="/ko/docs/Web/API/Event/stopPropagation" style="text-decoration: none; color: rgb(51, 102, 153) !important; cursor: default;" title="ko/DOM/event.stopPropagation">event.stopPropagation</a>를 사용해주세요.</p>
+## 참고
 
-<h3 id=".E4.BB.95.E6.A7.98.E6.9B.B8" name=".E4.BB.95.E6.A7.98.E6.9B.B8">사양</h3>
+이벤트 흐름의 어떤 단계에서라도 `preventDefault()`를 호출하면 이벤트를 취소합니다. 즉, 이벤트에 대한 구현체의 기본 동작을 실행하지 않습니다.
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-preventDefault">DOM Level 2 Events: preventDefault</a></p>
+{{domxref("Event.cancelable")}}을 사용해서 이벤트의 취소 가능 여부를 알아낼 수 있습니다. 취소 불가능한 이벤트에 대해 `preventDefault()`를 호출해도 아무 효과가 없습니다.
+
+## 명세
+
+{{Specifications}}
+
+## 브라우저 호환성
+
+{{Compat}}

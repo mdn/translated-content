@@ -2,100 +2,53 @@
 title: Event.target
 slug: Web/API/Event/target
 tags:
-  - 돔
-  - 레퍼런스
-  - 속성
-  - 이벤트
-  - 타겟
+  - Property
+  - Reference
+  - Read-only
+browser-compat: api.Event.target
 translation_of: Web/API/Event/target
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>{{domxref("Event")}} interface의 <code><strong>target</strong></code> 속성은 event가 전달한 객체에 대한 참조입니다. 이는 이벤트의 버블링 또는 캡처 단계에서 이벤트 핸들러를 호출하는 {{domxref("Event.currentTarget")}}와 다릅니다.</p>
+{{domxref("Event")}} 인터페이스의 **`target`** 속성은 이벤트가 발생한 대상 객체를 가리킵니다. 버블링과 캡처링 단계에서는 {{domxref("Event.currentTarget")}}과 다를 수 있습니다.
 
-<h2 id="Syntax">구문</h2>
+### 값
 
-<pre class="brush: js">const theTarget = someEvent.target</pre>
+연관된 {{domxref("EventTarget")}}.
 
-<h3 id="Value">Value</h3>
+## 예제
 
-<p>{{domxref("EventTarget")}}</p>
+`event.target` 속성을 사용하여 **이벤트 위임**을 구현할 수 있습니다.
 
-<h2 id="Example">예제</h2>
-
-<p><code>event.target</code> 속성을 사용하여 <strong>event delegation</strong>을 구현할 수 있습니다.</p>
-
-<pre class="brush: js notranslate">// Make a list
-var ul = document.createElement('ul');
+```js
+// 목록 생성
+const ul = document.createElement('ul');
 document.body.appendChild(ul);
 
-var li1 = document.createElement('li');
-var li2 = document.createElement('li');
+const li1 = document.createElement('li');
+const li2 = document.createElement('li');
 ul.appendChild(li1);
 ul.appendChild(li2);
 
-function hide(e){
-  // e.target refers to the clicked &lt;li&gt; element
-  // This is different than e.currentTarget which would refer to the parent &lt;ul&gt; in this context
-  e.target.style.visibility = 'hidden';
+function hide(evt) {
+  // e.target은 사용자가 클릭한 <li> 요소를 가리킴
+  // 여기서 e.currentTarget은 부모인 <ul>을 가리킬 것
+  evt.target.style.visibility = 'hidden';
 }
 
-// Attach the listener to the list
-// It will fire when each &lt;li&gt; is clicked
+// 목록에 수신기 부착
+// 각각의 <li>를 클릭할 때 호출됨
 ul.addEventListener('click', hide, false);
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("DOM WHATWG", "#dom-event-target", "Event.target")}}</td>
-      <td>{{Spec2("DOM WHATWG")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM4", "#dom-event-target", "Event.target")}}</td>
-      <td>{{Spec2("DOM4")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM2 Events", "#Events-Event-target", "Event.target")}}</td>
-      <td>{{Spec2("DOM2 Events")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Event.target")}}</p>
+{{Compat}}
 
-<h3 id="Compatibility_notes">호환성 참고</h3>
+## 같이 보기
 
-<p>IE 6–8에서는 이벤트 모델이 다릅니다. 이벤트 리스너는 비표준 
-  {{domxref('EventTarget.attachEvent()')}} 메서드로 연결됩니다.</p>
-
-<p>이 모델에서 이벤트 객체는 {{domxref('Event.srcElement')}} 속성 
-  (<code>target</code> 속성 대신)을 가지며 <code>Event.target</code>과 
-  동일한 의미를 갖습니다.</p>
-
-<pre class="brush: js">function hide(evt) {
-  // Support IE6-8
-  var target = evt.target || evt.srcElement;
-  target.style.visibility = 'hidden';
-}
-</pre>
-
-<h2 id="See_also">같이 보기</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</a></li>
-</ul>
+- [이벤트 대상의 비교](/ko/docs/Web/API/Event/Comparison_of_Event_Targets)

@@ -1,53 +1,30 @@
 ---
 title: Event.stopPropagation()
 slug: Web/API/Event/stopPropagation
+tags:
+  - Method
+  - Reference
+browser-compat: api.Event.stopPropagation
 translation_of: Web/API/Event/stopPropagation
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>이벤트 캡쳐링과 버블링에 있어 현재 이벤트 이후의 전파를 막습니다.</p>
+{{domxref("Event")}} 인터페이스의 **`stopPropagation()`** 메서드는 현재 이벤트가 캡처링/버블링 단계에서 더 이상 전파되지 않도록 방지합니다. 전파를 방지해도 이벤트의 기본 동작은 실행되므로, `stopPropagation()`이 링크나 버튼의 클릭을 막는 것은 아닙니다. 이런 기본 동작을 방지하려면 {{domxref("Event.preventDefault()", "preventDefault()")}} 메서드를 사용하세요. 또한, `stopPropagation()`은 같은 이벤트 대상에 부착한 다른 수신기까지 막지는 않습니다. 이것까지 막으려면 {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}를 사용하세요.
 
-<h2 id="문법">문법</h2>
+## 구문
 
-<pre class="syntaxbox"><em>event</em>.stopPropagation();</pre>
+```js
+event.stopPropagation();
+```
 
-<h2 id="예시">예시</h2>
+## 예제
 
-<p>DOM에서 이 방법과 이벤트 전파의 더욱 상세한 예시를 위한 예제 5:  <a href="https://developer.mozilla.org/en-US/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation">Event Propagation</a> 를 보세요.</p>
+[이벤트 전파](/ko/docs/Web/API/Document_Object_Model/Examples#example_5_event_propagation)를 확인하세요.
 
-<h2 id="주석">주석</h2>
+## 명세
 
-<p>이벤트 흐름의 설명을 위한 <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture">DOM 명세</a> 를 보세요. ( <a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">DOM 레벨 3 이벤트 초안</a>에는 삽화가 들어가 있습니다.)</p>
+{{Specifications}}
 
-<p><a href="/en-US/docs/Web/API/event.preventDefault">preventDefault</a>는 이벤트의 기본적인 동작(캡쳐링과 버블링)이 일어나는 것을 막기위해 보완적으로 사용되는 방법입니다.</p>
+## 브라우저 호환성
 
-<h2 id="명세">명세</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-event-stoppropagation", "Event.stopPropagation()")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-event-stoppropagation", "Event.stopPropagation()")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Events", "#Events-Event-stopPropagation", "Event.stopPropagation()")}}</td>
-   <td>{{Spec2("DOM2 Events")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-<p>{{Compat("api.Event.stopPropagation")}}</p>
+{{Compat}}
