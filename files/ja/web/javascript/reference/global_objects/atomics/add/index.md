@@ -4,80 +4,62 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
 tags:
   - Atomics
   - JavaScript
-  - Method
-  - Shared Memory
   - メソッド
-  - 共有メモリ
+  - 共有メモリー
+browser-compat: javascript.builtins.Atomics.add
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>静的な <code><strong>Atomics</strong></code><strong><code>.add()</code></strong> メソッドは、配列内の指定した位置の値に加算して、その場所の古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。</p>
+静的な **`Atomics.add()`** メソッドは、配列内の指定した位置の値に加算して、その位置の古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。
 
-<div>{{EmbedInteractiveExample("pages/js/atomics-add.html")}}</div>
+{{EmbedInteractiveExample("pages/js/atomics-add.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+Atomics.add(typedArray, index, value)
+```
 
-<pre class="syntaxbox">Atomics.add(<var>typedArray</var>, <var>index</var>, <var>value</var>)
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `typedArray`
+  - : 共有整数の型付き配列です。 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}} の何れかです。
+- `index`
+  - : `typedArray` で `value` を加算する位置です。
+- `value`
+  - : 加算する数値です。
 
-<dl>
- <dt><code><var>typedArray</var></code></dt>
- <dd>共有整数型付き配列です。 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}} の何れかです。</dd>
- <dt><code><var>index</var></code></dt>
- <dd><code><var>typedArray</var></code> で <code><var>value</var></code> を加算する位置です。</dd>
- <dt><code><var>value</var></code></dt>
- <dd>加算する数値です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+指定された位置 (`typedArray[index]`) にあった古い値です。
 
-<p>指定された位置にあった古い値です (<code><var>typedArray</var>[<var>index</var>]</code>)。</p>
+### 例外
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+- `typedArray` が許可された整数型の何れでもない場合、{{jsxref("TypeError")}} が発生します。
+- `index` が `typedArray` の範囲を超えている場合、 {{jsxref("RangeError")}} が発生します。
 
-<ul>
- <li><code><var>typedArray</var></code> が許可された整数型の何れでもない場合、{{jsxref("TypeError")}} が発生します。</li>
- <li><code><var>typedArray</var></code> が共有型付き配列型ではない場合、 {{jsxref("TypeError")}} が発生します。</li>
- <li><code><var>index</var></code> が <code><var>typedArray</var></code> の範囲を超えている場合、 {{jsxref("RangeError")}} が発生します。</li>
-</ul>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### add() の使用
 
-<h3 id="Using_add" name="Using_add">add() の使用</h3>
-
-<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
+```js
+const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 
 Atomics.add(ta, 0, 12); // 古い値である 0 を返す。
-Atomics.load(ta, 0); // 12</pre>
+Atomics.load(ta, 0); // 12
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-atomics.exchange', 'Atomics.exchange')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Atomics.add")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Atomics")}}</li>
- <li>{{jsxref("Atomics.sub()")}}</li>
-</ul>
+- {{jsxref("Atomics")}}
+- {{jsxref("Atomics.sub()")}}

@@ -6,33 +6,33 @@ tags:
   - JavaScript
   - メソッド
   - 共有メモリー
+browser-compat: javascript.builtins.Atomics.sub
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 ---
 {{JSRef}}
 
-静的な <strong>Atomics.sub()</strong> メソッドは、配列内の指定した位置の値から減算して、その場所にあった古い値を返します。この atomic 操作は、修正された値が書き戻されるまで、ほかの書き込みが発生しないことを保証します。
+静的な **`Atomics.sub()`** メソッドは、配列内の指定した位置の値から減算して、その場所にあった古い値を返します。この不可分操作は、修正された値が書き戻されるまで、ほかの書き込みが発生しないことを保証します。
 
 {{EmbedInteractiveExample("pages/js/atomics-sub.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
-
 ## 構文
 
-<pre class="syntaxbox notranslate">Atomics.sub(typedArray, index, value)
-</pre>
+```js
+Atomics.sub(typedArray, index, value)
+```
 
 ### 引数
 
-- typedArray
- <dd>整数の型付き配列です。 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, {{jsxref("BigUint64Array")}} のいずれかです。</dd>
-- index
- <dd>typedArray で value を減算する位置です。</dd>
-- value
- <dd>減算する数値です。</dd>
+- `typedArray`
+  - : 整数の型付き配列です。 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, {{jsxref("BigUint64Array")}} のいずれかです。
+- `index`
+  - : `typedArray` で `value` を減算する位置です。
+- `value`
+  - : 減算する数値です。
 
 ### 返値
 
-指定された位置にあった古い値です (typedArray[index])。
+指定された位置 (`typedArray[index]`) にあった古い値です。
 
 ### 例外
 
@@ -41,36 +41,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 
 ## 例
 
-<h3 id="Using_sub" name="Using_sub">sub の使用</h3>
+### sub の使用
 
-<pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
+```js
+const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 48;
 
-Atomics.sub(ta, 0, 12); // returns 48, the old value
+Atomics.sub(ta, 0, 12); // 古い値である 48 を返す
 Atomics.load(ta, 0); // 36
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-atomics.sub', 'Atomics.sub')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Atomics.sub")}}
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
 - {{jsxref("Atomics")}}
 - {{jsxref("Atomics.add()")}}
