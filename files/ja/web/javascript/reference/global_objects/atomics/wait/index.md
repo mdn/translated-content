@@ -6,84 +6,77 @@ tags:
   - JavaScript
   - メソッド
   - 共有メモリー
-  - メソッド
-  - 共有メモリ
+browser-compat: javascript.builtins.Atomics.wait
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 ---
 {{JSRef}}
 
-<strong>Atomics</strong><strong>.wait()</strong> は静的なメソッドで、 {{jsxref("Int32Array")}} 中の指定された位置に指定された値が保存されているかどうかを検証し、検証できるまでスリープ、もしくはタイムアウトします。返値は "ok", "not-equal", "timed-out" のいずれかです。
+**`Atomics.wait()`** は静的なメソッドで、 {{jsxref("Int32Array")}} 中の指定された位置に指定された値が保存されているかどうかを検証し、検証できるまでスリープ、もしくはタイムアウトします。返値は "`ok`", "`not-equal`", "`timed-out`" のいずれかです。
 
-<div class="note">
-<strong>注:</strong> この操作は共有された {{jsxref("Int32Array")}} に対してのみ可能で、またメインスレッドでは実行できません。
-</div>
+> **Note:** この操作は共有された {{jsxref("Int32Array")}} に対してのみ可能で、またメインスレッドでは実行できません。
 
 ## 構文
 
-<pre class="syntaxbox">Atomics.wait(typedArray, index, value[, timeout])
-</pre>
+```js
+Atomics.wait(typedArray, index, value)
+Atomics.wait(typedArray, index, value, timeout)
+```
 
 ### 引数
 
-- typedArray
- <dd>共有された {{jsxref("Int32Array")}}。</dd>
-- index
- <dd>待つ対象となる typedArray の中の位置。</dd>
-- value
- <dd>期待される値。</dd>
-- timeout {{optional_inline}}
- <dd>ミリ秒で表した待ち時間。時間が指定されなかった場合は {{jsxref("Infinity")}}。</dd>
+- `typedArray`
+  - : 共有された {{jsxref("Int32Array")}}。
+- `index`
+  - : 待つ対象となる `typedArray` の中の位置。
+- `value`
+  - : 期待される値。
+- `timeout` {{optional_inline}}
+  - : ミリ秒で表した待ち時間。時間が指定されなかった場合は {{jsxref("Infinity")}}。
 
 ### 返値
 
-{{jsxref("String")}} で、 "ok", "not-equal", or "timed-out" のいずれか。
+文字列で、 "ok", "not-equal", or "timed-out" のいずれか。
 
 ### 例外
 
-- typedArray が共有された {{jsxref("Int32Array")}} でない場合、 {{jsxref("TypeError")}} が発生します。
-- index が typedArray の範囲を超えている場合は {{jsxref("RangeError")}} が発生します。
+- typedArray が許可された整数型の何れでもない場合、{{jsxref("TypeError")}} が発生します。
+- index が typedArray の範囲を超えている場合、 {{jsxref("RangeError")}} が発生します。
 
 ## 例
 
-<h3 id="Using_wait" name="Using_wait">wait() の使用</h3>
+### wait() の使用
 
-次のような共有 Int32Array があったとします。
+次のような共有された `Int32Array` があったとします。
 
-<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
+```js
+const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
-</pre>
+```
 
 読み手のスレッドはスリープし、 0 番目の値が 0 であることを期待して待ちます。これが成立している間、処理は進みません。しかし、書き手のスレッドが新しい値を格納した場合、書き手のスレッドによって通知され、新しい値 (123) が返ります。
 
-<pre class="brush: js">Atomics.wait(int32, 0, 0);
-console.log(int32[0]); // 123</pre>
+```js
+Atomics.wait(int32, 0, 0);
+console.log(int32[0]); // 123
+```
 
 書き手のスレッドは新しい値を格納し、待っているスレッドに書き込みが完了したことを知らせます。
 
-<pre class="brush: js">console.log(int32[0]); // 0;
+```js
+console.log(int32[0]); // 0;
 Atomics.store(int32, 0, 123);
-Atomics.notify(int32, 0, 1);</pre>
+Atomics.notify(int32, 0, 1);
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-atomics.wait', 'Atomics.wait')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Atomics.wait")}}
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
 - {{jsxref("Atomics")}}
 - {{jsxref("Atomics.notify()")}}
