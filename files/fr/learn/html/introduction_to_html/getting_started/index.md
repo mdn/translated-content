@@ -705,7 +705,7 @@ Dans la zone de rendu en direct ci-dessous, vous pouvez voir que le premier para
 
 {{ EmbedLiveSample("Références_dentités", 700, 200, "", "") }}
 
-> **Note :** Vous n'avez pas besoin d'utiliser des références d'entité de caractères pour d'autres symboles — les navigateurs modernes s'en occuperont à condition que [vous définissiez votre encodage de caractères en UTF-8](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#définition_de_lencodage_des_caractères_du_document).
+> **Note :** Vous n'avez pas besoin d'utiliser des références d'entité de caractères pour d'autres symboles — les navigateurs modernes les restitueront sans problème à condition que [vous définissiez votre encodage de caractères en UTF-8](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#définition_de_lencodage_des_caractères_du_document).
 
 ## Commentaires en HTML
 
