@@ -1,7 +1,14 @@
 ---
 title: CSS
 slug: Glossary/CSS
+tags:
+  - CSS
+  - Encodage
+  - Glossaire
+  - Web
+  - l10n:priority
 translation_of: Glossary/CSS
+original_slug: Glossaire/CSS
 ---
 **CSS** (_Cascading Style Sheets_ ou _Feuilles de style en cascade_ en français) est un langage déclaratif utilisé pour décrire la présentation de pages web dans le {{glossary("Browser","navigateur")}}. Le navigateur applique les déclarations de style CSS aux éléments concernés pour les mettre en forme. Une déclaration de style contient des propriétés et leurs valeurs et détermine l'apparence d'un ou plusieurs éléments de la page.
 
