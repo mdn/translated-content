@@ -46,7 +46,7 @@ Cet article porte sur les fondements du HTML, pour prendre un bon départ — no
 
 ## Qu'est ce que le HTML ?
 
-{{Glossary("HTML")}} (**H**yper**T**ext **M**arkup **L**anguage) n'est pas un langage de programmation : c'est un _langage de balisage_ qui sert à indiquer au navigateur comment structurer les pages web visitées. Il peut être aussi compliqué ou aussi simple que le développeur web souhaite qu'il soit. Le HTML se compose d'une série d'{{glossary("Element", "éléments")}} avec lesquels vous pouvez encadrer, envelopper ou _baliser_ différentes parties du contenu pour les faire apparaître ou agir d'une certaine manière. Des {{glossary("Tag", "balises")}} encadrantes peuvent transformer une petite partie de contenu en un lien vers une autre page sur le Web, mettre des mots en italique, etc. Par exemple, prenons la phrase suivante :
+{{Glossary("HTML")}} (**H**yper**T**ext **M**arkup **L**anguage) n'est pas un langage de programmation : c'est un _langage de balisage_ qui sert à indiquer au navigateur comment structurer les pages web visitées. Il peut être aussi compliqué ou aussi simple que le développeur web souhaite qu'il soit. Le HTML se compose d'une série d'{{Glossary("Element", "éléments")}} avec lesquels vous pouvez encadrer, envelopper ou _baliser_ différentes parties du contenu pour les faire apparaître ou agir d'une certaine manière. Des {{Glossary("Tag", "balises")}} encadrantes peuvent transformer une petite partie de contenu en un lien vers une autre page sur le Web, mettre des mots en italique, etc. Par exemple, prenons la phrase suivante :
 
     Mon chat est très grincheux
 
