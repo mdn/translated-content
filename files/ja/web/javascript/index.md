@@ -17,7 +17,7 @@ translation_of: Web/JavaScript
 
 JavaScript の標準仕様は [ECMAScript Language Specification](https://tc39.es/ecma262/) および [ECMAScript Internationalization API specification](https://tc39.es/ecma402/) (ECMA-402) です。 MDN 至る所にある JavaScript のドキュメントは ECMA-262 と ECMA-402 の最新の草稿に基づいています。また、 [ECMAScript の新機能の提案](https://github.com/tc39/proposals) の一部がすでにブラウザーに実装されている場合、 MDN の記事のドキュメントや例には、その新機能の一部が使用されることがあります。
 
-JavaScript を[プログラミング言語 Java] (https://ja.wikipedia.org/wiki/Java) と混同しないでください。 Java と JavaScript は両方ともアメリカやその他の国においてオラクルの商標または登録商標です。しかし、この 2 つのプログラミング言語は構文、セマンティック、利用形態が大きく異なります。
+JavaScript を[プログラミング言語 Java](https://ja.wikipedia.org/wiki/Java) と混同しないでください。 Java と JavaScript は両方ともアメリカやその他の国においてオラクルの商標または登録商標です。しかし、この 2 つのプログラミング言語は構文、セマンティック、利用形態が大きく異なります。
 
 > **Callout:** **フロントエンドのウェブ開発者を目指している方へ**
 >
