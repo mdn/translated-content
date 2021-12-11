@@ -44,6 +44,8 @@ translation_of: Learn
   - : 如果你具备了一定的开发知识，下一步就是深入学习 {{glossary("HTML")}} 和 {{glossary("CSS")}}。先学习 [HTML入门](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)，再学习 [CSS 初步](/zh-CN/docs/Learn/CSS/First_steps)。
 - 学习脚本
   - : 在完成 HTML 和 CSS 入门课程之后，或者你只关心编写代码，可以继续学习 {{glossary("JavaScript")}} 或服务器端开发。可通过[JavaScript 初步](/zh-CN/docs/Learn/JavaScript/First_steps) 和 [服务器端初步](/zh-CN/docs/Learn/Server-side/First_steps) 开始学习。
+- Frameworks and tooling
+  - : 在掌握了 HTML、CSS、JavaScript 的主要技能后，可以继续学习 [前端开发工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools)，并考虑开始研究 [ JavaScript 前端框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)，以及 [网站服务器端编程](/zh-CN/docs/Learn/Server-side)。
 
 > **备注：** 可在 [词汇表](/zh-CN/docs/Glossary) 中查询术语。另外对于日常开发遇到的疑问，可以尝试在 [常见问题](/zh-CN/docs/Learn/Common_questions) 寻找答案。
 
@@ -74,7 +76,7 @@ translation_of: Learn
 
 ## 获取代码示例
 
-学习区的所有代码示例都可以在 <a href="https://github.com/roy-tian/learning-area/">GitHub</a> 上面找到。如果你想把它们复制到自己的电脑上，最简单的方式是 <a href="https://github.com/roy-tian/learning-area/archive/master.zip">下载最新的 master 分支</a>。
+学习区的所有代码示例都可以在 [Github](https://github.com/roy-tian/learning-area/) 上面找到。如果你想把它们复制到自己的电脑上，最简单的方式是 [下载最新的 master 分支](https://github.com/roy-tian/learning-area/archive/master.zip)。
 
 如果希望使用自动更新等更灵活的功能，可以按以下步骤进行：
 
@@ -117,7 +119,7 @@ translation_of: Learn
 - [Learn JavaScript](https://learnjavascript.online/)
   - : 有追求的程序员的绝佳选择：提供一个交互环境，通过自动评估来实施简短的教程和交互测试。前40节免费，一次小额投入即可获取全套教程。
 - [揭开 Web 的面纱（英文）](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
-  - : 由 [Jérémie Patonnier](https://twitter.com/JeremiePat) 创作的面向 Web 开发的零基础系列教学视频。Created by [Jérémie Patonnier](https://twitter.com/JeremiePat).
+  - : 由 [Jérémie Patonnier](https://twitter.com/JeremiePat) 创作的面向 Web 开发的零基础系列教学视频。
 - [Codecademy](https://www.codecademy.com/)
   - : 很棒的交互式学习网站，帮你从头开始学习编程语言。
 - [BitDegree](https://www.bitdegree.org/learn/)
