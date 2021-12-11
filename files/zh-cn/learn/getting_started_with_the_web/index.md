@@ -12,7 +12,7 @@ tags:
   - 超文本标记语言
 translation_of: Learn/Getting_started_with_the_web
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
 **Web 入门** 是一系列介绍 Web 开发实用性的简洁系列课程。这里你将学会如何设置构建简单网页所需的工具并发布你自己的简易代码。
 
