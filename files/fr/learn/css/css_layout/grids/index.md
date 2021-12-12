@@ -1,20 +1,6 @@
 ---
 title: Grilles
 slug: Learn/CSS/CSS_layout/Grids
-tags:
-  - Apprendre
-  - Article
-  - CSS
-  - Codage
-  - Didacticiel
-  - Débutant
-  - Guide
-  - Mise en page
-  - Trames
-  - Trames CSS
-  - quadrillage du design
-  - structure du quadrillage
-  - système de trames
 translation_of: Learn/CSS/CSS_layout/Grids
 original_slug: Apprendre/CSS/CSS_layout/Grids
 ---
@@ -51,7 +37,7 @@ Une trame est simplement un ensemble de lignes horizontales et verticales créan
 
 La trame est constituée généralement de **rangées** (**colonnes** ou **lignes)**. L'espace entre chaque ligne ou colonne est communément appelé **gouttière**.
 
-![Schéma du quadrillage](grille.png)
+![Schéma du quadrillage](grid.png)
 
 ## Création d'une trame CSS
 
@@ -689,7 +675,7 @@ aside {
 
 Si vous utilisez [Firefox Grid Inspector](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) (Inspecteur > Mise en page > Grilles) pour superposer les lignes du quadrillage sur le design, vous verrez comment le quadrillage à 12 colonnes fonctionne.
 
-![A 12 column grid overlaid on our design.](trames.png)
+![A 12 column grid overlaid on our design.](learn-grids-inspector.png)
 
 ## Résumé
 
@@ -697,7 +683,7 @@ Dans cet aperçu, nous avons parcouru les principales caractéristiques de la mi
 
 ## Voir également
 
-- [CSS Grid guides](/fr/docs/Web/CSS/CSS_Grid_Layout#Guides)
+- [CSS Grid guides](/fr/docs/Web/CSS/CSS_Grid_Layout#guides)
 - [CSS Grid Inspector: Examine grid layouts](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}

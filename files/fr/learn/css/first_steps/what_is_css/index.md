@@ -1,13 +1,6 @@
 ---
 title: Qu'est ce que CSS ?
 slug: Learn/CSS/First_steps/What_is_CSS
-tags:
-  - Apprendre
-  - CSS
-  - Débutant
-  - Modules
-  - Specifications
-  - Syntaxe
 translation_of: Learn/CSS/First_steps/What_is_CSS
 original_slug: Learn/CSS/First_steps/Qu_est_ce_que_CSS
 ---
@@ -28,7 +21,7 @@ original_slug: Learn/CSS/First_steps/Qu_est_ce_que_CSS
         <a href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >savoir manipuler des fichiers</a
         >, connaissance de base de HTML (cf. <a
-          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
+          href="/fr/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction à HTML</a
         >.)
       </td>
@@ -40,9 +33,9 @@ original_slug: Learn/CSS/First_steps/Qu_est_ce_que_CSS
   </tbody>
 </table>
 
-Dans le cours [Introduction à HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML), nous avons présenté le langage HTML et comment l'utiliser afin de rédiger des documents structurés. Ces documents seront consultables dans un navigateur. Les titres apparaîtront dans une police plus grande que le corps de texte, la rupture entre deux paragraphes sera marquée par un saut de ligne. Les liens seront soulignés et colorés pour les distinguer du reste du texte. L'image ci-dessous montre comment un navigateur affiche un document HTML — la mise en forme par défaut garantit un minimum de lisibilité, même si l'auteur de la page n'a spécifié aucune règle de style.
+Dans le cours [Introduction à HTML](/fr/docs/Learn/HTML/Introduction_to_HTML), nous avons présenté le langage HTML et comment l'utiliser afin de rédiger des documents structurés. Ces documents seront consultables dans un navigateur. Les titres apparaîtront dans une police plus grande que le corps de texte, la rupture entre deux paragraphes sera marquée par un saut de ligne. Les liens seront soulignés et colorés pour les distinguer du reste du texte. L'image ci-dessous montre comment un navigateur affiche un document HTML — la mise en forme par défaut garantit un minimum de lisibilité, même si l'auteur de la page n'a spécifié aucune règle de style.
 
-![La mise en forme par défaut appliquée par un navigateur.](basic_styling_fr.png)
+![La mise en forme par défaut appliquée par un navigateur.](html-example.png)
 
 Le Web serait d'un ennui terrible si tous les sites ressemblaient à la page ci-dessus. Grâce à CSS, vous pouvez contrôler exactement l'affichage de chaque élément HTML dans le navigateur et ainsi présenter vos documents avec la mise en forme de votre choix.
 
@@ -56,11 +49,11 @@ Comme mentionné plus haut, CSS est un langage de mise en forme des documents.
 
 Les **documents** en question sont des fichiers texte structurés avec un langage de balises — {{Glossary("HTML")}} est le plus connu de ces langages, d'autres exemples sont {{Glossary("SVG")}} ou {{Glossary("XML")}}.
 
-**"Présenter** un document à l'utilisateur" signifie convertir ce document dans une forme utilisable par le public visé. Les {{Glossary("browser","navigateurs")}}, tels {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}}, {{Glossary("Safari","Safari")}} ou {{Glossary("Microsoft Edge","Edge")}} sont conçus pour présenter visuellement des documents, que ce soit sur l'écran d'un ordinateur, un vidéo-projecteur ou une imprimante.
+**"Présenter** un document à l'utilisateur" signifie convertir ce document dans une forme utilisable par le public visé. Les {{Glossary("browser","navigateurs")}}, tels {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}}, {{Glossary("Apple Safari","Safari")}} ou {{Glossary("Microsoft Edge","Edge")}} sont conçus pour présenter visuellement des documents, que ce soit sur l'écran d'un ordinateur, un vidéo-projecteur ou une imprimante.
 
 > **Note :** Un navigateur est parfois appelé {{Glossary("User agent","agent utilisateur")}}. On entend par là un programme informatique qui agit pour un utilisateur au sein d'un système informatique. Pour CSS, les premiers agents utilisateur qui nous viennent à l'esprit sont les navigateurs. Ce ne sont pourtant pas les seuls. Il existe d'autres "agents utilisateurs" comme les programmes qui convertissent des documents  HTML et CSS en documents PDF imprimables.
 
-CSS peut être utilisé pour une mise en forme élémentaire des documents — par exemple changer [la couleur](/fr/docs/Web/CSS/Type_color) et [la taille](/fr/docs/Web/CSS/font-size) des titres et des liens. Il peut être utilisé pour concevoir une maquette — par exemple transformer [un texte affiché sur une colonne](/fr/docs/Web/CSS/Layout_cookbook/Disposition_en_colonnes) en une composition avec un cadre principal et une barre latérale pour les informations reliées. Avec CSS, on peut aussi produire des [animations](/fr/docs/Web/CSS/Animations_CSS). N'hésitez pas à cliquer sur les liens de ce paragraphe pour observer différents exemples.
+CSS peut être utilisé pour une mise en forme élémentaire des documents — par exemple changer [la couleur](/fr/docs/Web/CSS/color_value) et [la taille](/fr/docs/Web/CSS/font-size) des titres et des liens. Il peut être utilisé pour concevoir une maquette — par exemple transformer [un texte affiché sur une colonne](/fr/docs/Web/CSS/Layout_cookbook/Column_layouts) en une composition avec un cadre principal et une barre latérale pour les informations reliées. Avec CSS, on peut aussi produire des [animations](/fr/docs/Web/CSS/CSS_Animations). N'hésitez pas à cliquer sur les liens de ce paragraphe pour observer différents exemples.
 
 ## Syntaxe de CSS
 
@@ -79,7 +72,7 @@ h1 {
 
 La règle commence par un {{Glossary("CSS Selector", "sélecteur")}}, l'élément HTML mis en forme. Ici le style s'applique aux titres de niveau 1 ({{htmlelement("h1")}}).
 
-Suivent une paire d'accolades `{ }` à l'intérieur desquelles on trouve une ou plusieurs **déclarations**, sous la forme d'une paire **propriété** : **valeur**. Chaque paire précise une propriété de l'élément sélectionné, suivie de la valeur choisie pour cette propriété ; la propriété et la valeur sont séparées par deux points. Chaque déclaration se termine par un point-virgule. À chaque {{Glossary("property/CSS","propriété")}} définie par CSS correspondent différentes valeurs possibles. Dans l'exemple, la propriété `color` peut prendre différentes [valeurs de type `<color>`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#Color). La propriété `font-size` accepte différentes [tailles](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#Numbers_lengths_and_percentages) comme valeurs.
+Suivent une paire d'accolades `{ }` à l'intérieur desquelles on trouve une ou plusieurs **déclarations**, sous la forme d'une paire **propriété** : **valeur**. Chaque paire précise une propriété de l'élément sélectionné, suivie de la valeur choisie pour cette propriété ; la propriété et la valeur sont séparées par deux points. Chaque déclaration se termine par un point-virgule. À chaque {{Glossary("property/CSS","propriété")}} définie par CSS correspondent différentes valeurs possibles. Dans l'exemple, la propriété `color` peut prendre différentes [valeurs de type `<color>`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#color). La propriété `font-size` accepte différentes [tailles](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#numbers_lengths_and_percentages) comme valeurs.
 
 Une feuille de style CSS est constituée d'une succession de telles règles :
 
@@ -134,7 +127,7 @@ Maintenant que vous avez compris ce qu'est CSS, vous pourrez commencer à écrir
 
 ## Dans ce cours
 
-1.  [Qu'est-ce que CSS ?](/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS)
+1.  [Qu'est-ce que CSS ?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
 2.  [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
 3.  [La façon dont CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
 4.  [Le fonctionnement de CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_works)

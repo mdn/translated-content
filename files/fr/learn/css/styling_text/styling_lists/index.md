@@ -1,20 +1,11 @@
 ---
 title: Style de listes
 slug: Learn/CSS/Styling_text/Styling_lists
-tags:
-  - CSS
-  - Débutant
-  - Guide
-  - Listes
-  - Numeros
-  - Puces
-  - Styles
-  - Texte
 translation_of: Learn/CSS/Styling_text/Styling_lists
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-Les [listes](/fr/Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals#Listes) se comportent comme la plupart des autres textes, mais il existe des propriétés CSS propres aux listes que vous devez connaître, et quelques bonnes pratiques à prendre en compte. Cet article explique tout.
+Les [listes](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#listes) se comportent comme la plupart des autres textes, mais il existe des propriétés CSS propres aux listes que vous devez connaître, et quelques bonnes pratiques à prendre en compte. Cet article explique tout.
 
 <table class="standard-table">
   <tbody>
@@ -46,7 +37,7 @@ Les [listes](/fr/Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals#List
 
 ## Un exemple de liste simple
 
-Pour commencer, regardons un exemple de liste simple. Au long de cet article nous verrons les listes non ordonnées, ordonnées et des listes descriptives — tous les styles ont des fonctionnalités similaires, mais il existe quelques particularités en fonction du type de liste. Un exemple sans style est [disponible sur Github](http://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) (voyez aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html)).
+Pour commencer, regardons un exemple de liste simple. Au long de cet article nous verrons les listes non ordonnées, ordonnées et des listes descriptives — tous les styles ont des fonctionnalités similaires, mais il existe quelques particularités en fonction du type de liste. Un exemple sans style est [disponible sur Github](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) (voyez aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html)).
 
 Le code HTML pour nos exemples de liste ressemble à ceci :
 
@@ -102,7 +93,7 @@ Si vous allez à l'exemple réel maintenant, et examinez les éléments de la li
 
 ## Gestion d'espacement des listes
 
-Si vous modifiez le style des listes, vous devez ajuster l'espacement vertical et horizontal de manière à le rendre identique à celui des éléments environnants (tels que paragraphes ou images : ce principe est parfois appelé « rythme vertical » — vous pouvez voir l'[exemple de style terminé](http://mdn.github.io/learning-area/css/styling-text/styling-lists/) sur Github et trouver[ le code source](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html) aussi.)
+Si vous modifiez le style des listes, vous devez ajuster l'espacement vertical et horizontal de manière à le rendre identique à celui des éléments environnants (tels que paragraphes ou images : ce principe est parfois appelé « rythme vertical » — vous pouvez voir l'[exemple de style terminé](https://mdn.github.io/learning-area/css/styling-text/styling-lists/) sur Github et trouver[ le code source](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html) aussi.)
 
 Le CSS utilisé pour le style et l'espacement du texte est le suivant :
 
@@ -165,7 +156,7 @@ ol {
 
 Cela donne l'apparence suivante :
 
-![une liste ordonnée avec les puces placées à l'extérieur du texte de l'élément de la liste.](ex_1.png)
+![une liste ordonnée avec les puces placées à l'extérieur du texte de l'élément de la liste.](outer-bullets.png)
 
 Vous pouvez trouver beaucoup plus d'options en consultant la page de référence {{cssxref("list-style-type")}}.
 
@@ -182,7 +173,7 @@ ol {
 }
 ```
 
-![une liste ordonnée avec les puces intégrées au texte des éléments de la liste.](ex_2.png)
+![une liste ordonnée avec les puces intégrées au texte des éléments de la liste.](inner-bullets.png)
 
 ### Utilisation d'une puce image personnalisée
 
@@ -194,7 +185,7 @@ ul {
 }
 ```
 
-Cependant, cette propriété est un peu limitée en terme de contrôle de la position, de la taille, etc. des puces. Il vaut mieux utiliser la famille de propriétés de {{cssxref ("background")}}, dont vous apprendrez beaucoup plus dans le module [Styliser les boîtes](/fr/Apprendre/CSS/styliser_boites). Pour l'instant, voici un avant-goût !
+Cependant, cette propriété est un peu limitée en terme de contrôle de la position, de la taille, etc. des puces. Il vaut mieux utiliser la famille de propriétés de {{cssxref ("background")}}, dont vous apprendrez beaucoup plus dans le module [Styliser les boîtes](/fr/docs/Learn/CSS/Building_blocks). Pour l'instant, voici un avant-goût !
 
 Dans notre exemple achevé, nous avons appliqué un style à la liste non ordonnée (en plus de ce que vous avez déjà vu ci-dessus) comme ceci :
 
@@ -226,7 +217,7 @@ Voici ce que nous avons fait :
 
 Ceci nous donne le résultat suivant :
 
-![une liste non ordonnée avec les puces définies comme de petites images d'étoiles.](ex_3.png)
+![une liste non ordonnée avec les puces définies comme de petites images d'étoiles.](list_formatting.png)
 
 ### Raccourci de style de liste
 
@@ -400,8 +391,8 @@ Les listes sont relativement faciles à saisir lorsque vous connaissez les quelq
 
 
 
-- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte)
+- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
 - [Style de listes](/fr/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens)
+- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Styling_links)
 - [Polices de caractères web](/fr/docs/Learn/CSS/Styling_text/Web_fonts)
 - [Composition d'une page d'accueil d'une école communale](/fr/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
