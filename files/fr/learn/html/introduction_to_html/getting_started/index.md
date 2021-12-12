@@ -44,7 +44,7 @@ Cet article porte sur les fondements du HTML, pour prendre un bon départ — no
   </tbody>
 </table>
 
-## Qu'est ce que le HTML ?
+## Qu'est-ce que le HTML ?
 
 {{Glossary("HTML")}} (**H**yper**T**ext **M**arkup **L**anguage) n'est pas un langage de programmation : c'est un _langage de balisage_ qui sert à indiquer au navigateur comment structurer les pages web visitées. Il peut être aussi compliqué ou aussi simple que le développeur web souhaite qu'il soit. Le HTML se compose d'une série d'{{Glossary("Element", "éléments")}} avec lesquels vous pouvez encadrer, envelopper ou _baliser_ différentes parties du contenu pour les faire apparaître ou agir d'une certaine manière. Des {{Glossary("Tag", "balises")}} encadrantes peuvent transformer une petite partie de contenu en un lien vers une autre page sur le Web, mettre des mots en italique, etc. Par exemple, prenons la phrase suivante :
 
@@ -200,7 +200,7 @@ textarea.onkeyup = function(){
 
 {{ EmbedLiveSample('Apprentissage_actif_créer_votre_premier_élément_HTML', 700, 400, "", "")}}
 
-### Eléments imbriqués
+### Éléments imbriqués
 
 Vous pouvez mettre des éléments à l'intérieur d'autres éléments — cela s'appelle l'**imbrication**. Si vous voulez affirmer que votre chat est **très** grincheux, vous pouvez mettre le mot « très » dans l'élément {{htmlelement("strong")}}, pour qu'il soit fortement mis en valeur :
 
@@ -251,7 +251,7 @@ Tous les éléments ne suivent pas le modèle ci-dessus d'ouverture de balise, p
 
 Cela affichera l'élément suivant sur votre page :
 
-{{ EmbedLiveSample('Éléments_vides', 700, 300, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Éléments_vides', 700, 300, "", "") }}
 
 ## Attributs
 
@@ -448,7 +448,7 @@ Nous vous recommandons de toujours inclure les guillemets afin d'éviter ce type
 
 ### Guillemets simples ou doubles ?
 
-Dans cet article, vous remarquerez que les valeurs des attributs sont toutes entre des guillemets doubles (" "). Vous pouvez cependant voir des guillemets simples (' ') dans le code HTML de certaines personnes. C'est purement une question de style, et vous êtes libre de choisir la solution que vous préférez. Les deux lignes suivantes sont équivalentes :
+Dans cet article, vous remarquerez que les valeurs des attributs sont toutes entre des guillemets doubles ("&nbsp;"). Vous pouvez cependant voir des guillemets simples ('&nbsp;') dans le code HTML de certaines personnes. C'est purement une question de style, et vous êtes libre de choisir la solution que vous préférez. Les deux lignes suivantes sont équivalentes :
 
 ```html
 <a href="http://www.exemple.com">Un lien vers mon exemple.</a>
@@ -677,13 +677,13 @@ Peu importe la quantité d'espace que vous utilisez (cela peut inclure des espac
 
 Dans notre HTML, nous avons chaque élément imbriqué indenté par deux espaces plus que celui qui le contient. C'est à vous de choisir le style de formatage que vous utilisez (combien d'espaces pour chaque niveau d'indentation, par exemple), mais vous devriez envisager d'utiliser une sorte de formatage.
 
-## Références d'entités : inclure les caractères spéciaux en HTML
+## Références d'entités : inclure les caractères spéciaux en HTML
 
 En HTML, les caractères `<`, `>`,`"`,`'` et `&` sont des caractères spéciaux. Ils font partie de la syntaxe HTML elle-même, alors comment inclure un de ces caractères dans du texte, par exemple si vous voulez vraiment utiliser une esperluette (&) ou un signe inférieur (<), qui ne soit pas interprété en tant que code comme les navigateurs pourraient le faire ?
 
 Nous devons utiliser les références des caractères — des codes spéciaux qui représentent des caractères et peuvent être utilisés dans ces circonstances exactes. Chaque référence de caractère est démarrée avec une esperluette (&), et se termine par un point-virgule (;).
 
-| Le caractère | Réference équivalent |
+| Le caractère | Référence équivalent |
 | ------------ | -------------------- |
 | <            | `&lt;`               |
 | >            | `&gt;`               |
@@ -740,7 +740,7 @@ Vous avez atteint la fin de l'article — nous espérons que vous avez appréci�
 ## Dans ce module
 
 - [Commencer avec le HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [Qu'y a-t-il dans l'en-tête ? Métadonnées en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 - [Fondamentaux du texte HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
 - [Création d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 - [Formatage avancé du texte](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
