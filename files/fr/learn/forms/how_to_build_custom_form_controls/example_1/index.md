@@ -149,7 +149,7 @@ C'est le premier exemple de code qui explique [comment construire un widget de f
 
 ### Resultat pour l'état initial
 
-{{ EmbedLiveSample("Basic_state", 120, 130) }}
+{{ EmbedLiveSample("État_initial", 120, 130) }}
 
 ## État actif
 
@@ -289,7 +289,7 @@ C'est le premier exemple de code qui explique [comment construire un widget de f
 
 ### Résultat pour état actif
 
-{{ EmbedLiveSample("Active_state", 120, 130) }}
+{{ EmbedLiveSample("État_actif", 120, 130) }}
 
 ## État ouvert
 
@@ -429,4 +429,4 @@ C'est le premier exemple de code qui explique [comment construire un widget de f
 
 ### Resultat pour état ouvert
 
-{{ EmbedLiveSample("Open_state", 120, 130) }}
+{{ EmbedLiveSample("État_ouvert", 120, 130) }}

@@ -249,9 +249,11 @@ rendaient de ses marquages la lecture inélégante.
 
 ### Exemple avec hr
 
+```html
     <p>Ron était acculé dans un angle par des Netherbeasts en maraude. Effrayé, mais déterminé à protéger ses amis, il a levé sa baguette et s'est préparé à se battre, espérant que son appel de détresse serait entendu.</p>
     <hr>
     <p>Pendant ce temps, Harry était assis à la maison, regardant sa déclaration de redevances et réfléchissant à la sortie du prochaine épisode de la fiction, quand une lettre de détresse enchantée passa par sa fenêtre et atterrit sur ses genoux. Il la lut à la hâte et, se dressant brusquement, « mieux vaut retourner au travail alors » se dit-il.</p>
+```
 
 sera rendu ainsi :
 

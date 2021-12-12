@@ -157,7 +157,7 @@ Comme précédemment, initions‑nous aux bases pratiques des tableaux en entran
 </html>
 ```
 
-{{ EmbedLiveSample('Quest‑ce_quun_tableau', '100%', 300) }}
+{{ EmbedLiveSample('Qu\'est‑ce_qu\'un_tableau_?', '100%', 300) }}
 
 ### Créer un tableau
 
