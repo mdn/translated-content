@@ -56,7 +56,7 @@ Si nous voulons que cette ligne reste en l'état, nous pouvons dire qu'il s'agit
 <p>Mon chat est très grincheux</p>
 ```
 
-> **Note :** Les éléments en HTML ne sont pas sensibles à la casse, c'est-à-dire qu'ils peuvent être écrits en majuscules ou en minuscules. Par exemple, un élément {{htmlelement("title")}} peut être écrit \<title>, \<TITLE>, \<Title>, \<TiTlE>, etc. et il fonctionnera parfaitement. La meilleure pratique, cependant, est d'écrire tous les éléments en minuscules pour des raisons de cohérence, de lisibilité et autres.
+> **Note :** Les éléments en HTML ne sont pas sensibles à la casse, c'est-à-dire qu'ils peuvent être écrits en majuscules ou en minuscules. Par exemple, un élément {{htmlelement("title")}} peut être écrit `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc. et il fonctionnera parfaitement. La meilleure pratique, cependant, est d'écrire tous les éléments en minuscules pour des raisons de cohérence, de lisibilité et autres.
 
 ## Anatomie d'un élément HTML
 
@@ -237,7 +237,7 @@ Prenez l'exemple suivant :
 
 > **Note :** HTML5 a redéfini les catégories d'éléments dans HTML5 : voir [catégories de contenu d'éléments](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories). Bien que ces définitions soient plus précises et moins ambiguës que celles qui précèdent, elles sont beaucoup plus compliquées à comprendre que « block » et « inline ». Nous nous en tiendrons donc à ces dernières tout au long de ce sujet.
 
-> **Note :** les termes « block » et « inline », tels qu'utilisés dans cet article, ne doivent pas être confondus avec [les types de boîtes des CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model) portant les mêmes noms. Alors qu'ils sont corrélés par défaut, modifier le type d'affichage des CSS ne modifie pas la catégorie d'un élément et n'affecte pas les éléments qu'il pourrait contenir ni ceux dans lequel il pourrait être contenu. Une des raisons pour lesquelles HTML5 a abandonné ces termes était d'éviter cette confusion assez courante.
+> **Note :** Les termes « block » et « inline », tels qu'utilisés dans cet article, ne doivent pas être confondus avec [les types de boîtes des CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model) portant les mêmes noms. Alors qu'ils sont corrélés par défaut, modifier le type d'affichage des CSS ne modifie pas la catégorie d'un élément et n'affecte pas les éléments qu'il pourrait contenir ni ceux dans lequel il pourrait être contenu. Une des raisons pour lesquelles HTML5 a abandonné ces termes était d'éviter cette confusion assez courante.
 
 > **Note :** Vous trouverez des pages de référence utiles incluant des listes d'[éléments de niveau bloc](/fr/docs/Web/HTML/Block-level_elements) et d'[éléments en ligne](/fr/docs/Web/HTML/Inline_elements).
 
@@ -263,9 +263,9 @@ Les attributs contiennent des informations supplémentaires sur l'élément sans
 
 Pour créer un attribut, il faut :
 
-- insérer un espace entre cet attribut et le nom de l'élément (ou l'attribut précédent, si l'élément possède déjà un ou plusieurs attributs) ;
-- donner un nom à l'attribut, puis ajouter un signe égal ;
-- donner une valeur à l'attribut, entourée par des guillemets d'ouverture et de fermeture.
+- Insérer un espace entre cet attribut et le nom de l'élément (ou l'attribut précédent, si l'élément possède déjà un ou plusieurs attributs) ;
+- Donner un nom à l'attribut, puis ajouter un signe égal ;
+- Donner une valeur à l'attribut, entourée par des guillemets d'ouverture et de fermeture.
 
 ### Apprentissage actif : ajouter des attributs à un élément
 
@@ -679,7 +679,7 @@ Dans notre HTML, nous avons chaque élément imbriqué indenté par deux espaces
 
 ## Références d'entités : inclure les caractères spéciaux en HTML
 
-En HTML, les caractères `<`, `>`,`"`,`'` et `&` sont des caractères spéciaux. Ils font partie de la syntaxe HTML elle-même, alors comment inclure un de ces caractères dans du texte, par exemple si vous voulez vraiment utiliser une esperluette (&) ou un signe inférieur (<), qui ne soit pas interpré en tant que code comme les navigateurs pourraient le faire ?
+En HTML, les caractères `<`, `>`,`"`,`'` et `&` sont des caractères spéciaux. Ils font partie de la syntaxe HTML elle-même, alors comment inclure un de ces caractères dans du texte, par exemple si vous voulez vraiment utiliser une esperluette (&) ou un signe inférieur (<), qui ne soit pas interprété en tant que code comme les navigateurs pourraient le faire ?
 
 Nous devons utiliser les références des caractères — des codes spéciaux qui représentent des caractères et peuvent être utilisés dans ces circonstances exactes. Chaque référence de caractère est démarrée avec une esperluette (&), et se termine par un point-virgule (;).
 
@@ -691,7 +691,7 @@ Nous devons utiliser les références des caractères — des codes spéciaux qu
 | '            | `&apos;`             |
 | &            | `&amp;`              |
 
-> **Note :** Un graphique de toutes les références d'entité de caractères HTML est disponible sur Wikipedia : [Liste des entités caractère de XML et HTML](https://fr.wikipedia.org/wiki/Liste_des_entit%C3%A9s_caract%C3%A8re_de_XML_et_HTML).
+> **Note :** Un graphique de toutes les références d'entité de caractères HTML est disponible sur Wikipédia : [Liste des entités caractère de XML et HTML](https://fr.wikipedia.org/wiki/Liste_des_entit%C3%A9s_caract%C3%A8re_de_XML_et_HTML).
 
 Dans l'exemple ci-dessous, voici deux paragraphes parlant de techniques Web :
 
