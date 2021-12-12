@@ -11,38 +11,38 @@ original_slug: Web/API/FetchController
 ---
 <div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
 
-<p><strong><code>AbortController</code></strong>接口表示一个控制器对象，允许你根据需要中止一个或多个 Web请求。</p>
+<p><strong><code>AbortController</code></strong> 接口表示一个控制器对象，允许你根据需要中止一个或多个 Web 请求。</p>
 
-<p>你可以使用 {{domxref("AbortController.AbortController()")}} 构造函数创建一个新的 <code>AbortController</code> 。使用{{domxref("AbortSignal")}} 对象可以完成与与DOM请求的通信。</p>
+<p>你可以使用 {{domxref("AbortController.AbortController()")}} 构造函数创建一个新的 <code>AbortController</code>。使用 {{domxref("AbortSignal")}} 对象可以完成与 DOM 请求的通信。</p>
 
 <h2 id="构造函数">构造函数</h2>
 
 <dl>
  <dt>{{domxref("AbortController.AbortController()")}}</dt>
- <dd><font><font>创建一个新的</font></font><code>AbortController</code> <font><font>对象实例。</font></font></dd>
+ <dd><font>创建一个新的</font> <code>AbortController</code> <font>对象实例。</font></dd>
 </dl>
 
 <h2 id="属性">属性</h2>
 
 <dl>
  <dt>{{domxref("AbortController.signal")}} {{readonlyInline}}</dt>
- <dd><font><font>返回一个</font></font>{{domxref("AbortSignal")}}<font><font>对象实例，</font></font>它可以用来 with/abort 一个Web(网络)请求。</dd>
+ <dd><font>返回一个</font> {{domxref("AbortSignal")}} <font>对象实例，</font>它可以用来 with/abort 一个 Web(网络)请求。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
 <dl>
  <dt>{{domxref("AbortController.abort()")}}</dt>
- <dd>中止一个尚未完成的Web(网络)请求。这能够中止<a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch </a>请求，任何响应{{domxref("Body")}}的消费者和流。</dd>
+ <dd>中止一个尚未完成的 Web(网络)请求。这能够中止 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch</a> 请求及任何响应体的消费和流。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<p><font><font>在下面的代码片段中，我们想通过</font></font> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a> 下载一段视频。</p>
+<p><font>在下面的代码片段中，我们想通过</font> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a> 下载一段视频。</p>
 
-<p><font><font>我们先使用</font></font>{{domxref("AbortController.AbortController","AbortController()")}}构造函数<font><font>创建一个控制器，然后使用</font></font>{{domxref("AbortController.signal")}}属性<font><font>获取其关联</font></font> {{domxref("AbortSignal")}}对象<font><font>的引用。</font></font></p>
+<p><font>我们先使用</font> {{domxref("AbortController.AbortController","AbortController()")}} 构造函数<font>创建一个控制器，然后使用</font> {{domxref("AbortController.signal")}} 属性<font>获取其关联</font> {{domxref("AbortSignal")}} 对象的引用。</p>
 
-<p>当一个 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> 初始化，我们把 <code>AbortSignal</code> 作为一个选项传递到到请求对象（如下 <code>{signal}</code>）。这将信号和控制器与获取请求相关联然后允许我们通过调用{{domxref("AbortController.abort()")}}中止请求，如下第二个事件监听函数。</p>
+<p>当一个 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> 初始化，我们把 <code>AbortSignal</code> 作为一个选项传递到到请求对象（如下 <code>{ signal }</code>）。这将 <code>signal<code> 和 <code>controller<code> 与这个 <code>fetch request</code> 相关联，然后允许我们通过调用 {{domxref("AbortController.abort()")}} 中止请求，如下第二个事件监听函数。</p>
 
 <pre class="brush: js notranslate">const controller = new AbortController();
 let signal = controller.signal;
@@ -67,10 +67,10 @@ function fetchVideo() {
 }</pre>
 
 <div class="note">
-<p><strong>注意：</strong>当<code>abort()</code> 被调用时，<code>fetch()</code> promise 拒绝一个名为 <code>AbortError</code> 的<code>DOMException </code>。</p>
+<p><strong>注意：</strong>当 <code>abort()</code> 被调用时，这个 <code>fetch()</code> promise 将 <code>reject</code> 一个名为 <code>AbortError</code> 的 <code>DOMException</code>。</p>
 </div>
 
-<p>可以在GitHub上找到完整的工作示例 — 请参见 <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a>（<a href="https://mdn.github.io/dom-examples/abort-api/">另请参见实时运行</a>）。</p>
+<p>您可以在 <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">GitHub</a> 上找到这个示例的完整源代码(也可以<a href="https://mdn.github.io/dom-examples/abort-api/">在线运行</a>)。</p>
 
 <h2 id="规范">规范</h2>
 

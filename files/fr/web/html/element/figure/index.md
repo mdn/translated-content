@@ -22,76 +22,41 @@ L'élément HTML **`<figure>`** représente un contenu autonome, éventuellement
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
-        >
+        <a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a>
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a
-          href="/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots"
-          >racine de sectionnement</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">Contenu de flux</a>,
+        <a href="/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots">racine de sectionnement</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content">contenu tangible</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        Un élément
-        <a href="/fr/docs/Web/HTML/Element/figcaption"
-          ><code>&#x3C;figcaption></code></a
-        >
-        suivi d'un
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >contenu de flux</a
-        >
-        ou du contenu de flux suivi d'un élément
-        <a href="/fr/docs/Web/HTML/Element/figcaption"
-          ><code>&#x3C;figcaption></code></a
-        >
-        ou du contenu de flux.
+        Un élément <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&#x3C;figcaption></code></a> suivi d'un <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">contenu de flux</a> ou du contenu de flux suivi d'un élément <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&#x3C;figcaption></code></a> ou du contenu de flux.
       </td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
       <td>
-        Aucune, la balise ouvrante et la balise fermante sont toutes les deux
-        obligatoires.
+        Aucune, la balise ouvrante et la balise fermante sont toutes les deux obligatoires.
       </td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >contenu de flux</a
-        >.
+        Tout élément qui accepte du <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">contenu de flux</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
       <td>
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/Figure_Role"
-          ><code>figure</code></a
-        >
+        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/Figure_Role"><code>figure</code></a>
       </td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>
-        Sans descendant
-        <a href="/fr/docs/Web/HTML/Element/figcaption"
-          ><code>&#x3C;figcaption></code></a
-        >
-        descendant :
-        <a href="https://www.w3.org/TR/html-aria/#dfn-any-role"
-          >n'importe quel rôle</a
-        >, sinon aucun rôle autorisé.
+        Sans descendant <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&#x3C;figcaption></code></a> descendant : <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">n'importe quel rôle</a>, sinon aucun rôle autorisé.
       </td>
     </tr>
     <tr>
@@ -121,14 +86,14 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 <!-- Une simple image -->
 <figure>
   <img
-  src="https://developer.mozilla.org/static/img/favicon144.png"
+  src="favicon-192x192.png"
   alt="Le logo de MDN.">
 </figure>
 
 <!-- Une image avec une légende -->
 <figure>
   <img
-  src="https://developer.mozilla.org/static/img/favicon144.png"
+  src="favicon-192x192.png"
   alt="Le logo de MDN.">
   <figcaption>Logo MDN</figcaption>
 </figure>

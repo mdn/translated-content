@@ -3750,6 +3750,10 @@
 /fr/docs/Web/API/WebGL_API/Tutorial/Creer_des_objets_3D_avec_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /fr/docs/Web/API/WebGL_API/Tutorial/Eclairage_en_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 /fr/docs/Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/fr/docs/Web/API/WebSocket/onclose	/fr/docs/conflicting/Web/API/WebSocket/close_event
+/fr/docs/Web/API/WebSocket/onerror	/fr/docs/conflicting/Web/API/WebSocket/error_event
+/fr/docs/Web/API/WebSocket/onmessage	/fr/docs/conflicting/Web/API/WebSocket/message_event
+/fr/docs/Web/API/WebSocket/onopen	/fr/docs/conflicting/Web/API/WebSocket/open_event
 /fr/docs/Web/API/WebVR_API/Utiliser_des_contrôleurs_de_realite_virtuelle_pour_du_WebVR	/fr/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 /fr/docs/Web/API/Web_Workers_API/Advanced_concepts_and_examples	/fr/docs/conflicting/Web/API/Web_Workers_API/Using_web_workers
 /fr/docs/Web/API/Web_Workers_API/Utilisation_des_web_workers	/fr/docs/Web/API/Web_Workers_API/Using_web_workers

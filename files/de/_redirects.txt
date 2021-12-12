@@ -448,6 +448,7 @@
 /de/docs/Web/API/WebGL_API/Tutorial/Hinzufügen_von_2D_Inhalten_in_einen_WebGL-Kontext	/de/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /de/docs/Web/API/WebGL_API/Tutorial/Objekte_mit_WebGL_animieren	/de/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /de/docs/Web/API/WebGL_API/Tutorial/Texturen_in_WebGL_verwenden	/de/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/de/docs/Web/API/WebSocket/onclose	/de/docs/Web/API/WebSocket/close_event
 /de/docs/Web/API/Window.alert	/de/docs/Web/API/Window/alert
 /de/docs/Web/API/Window/performance	/de/docs/Web/API/performance_property
 /de/docs/Web/API/Window/setTimeout	/de/docs/Web/API/setTimeout
