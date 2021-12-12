@@ -5,58 +5,45 @@ tags:
   - JavaScript
   - Number
   - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NaN
+browser-compat: javascript.builtins.Number.NaN
 ---
-<div>{{JSRef}}</div>
 
-<p><strong><code>Number.NaN</code></strong> 속성은 Not-A-Number(숫자가 아님)를 나타냅니다. {{jsxref("NaN")}}과 같습니다.</p>
+{{JSRef}}
 
-<p>{{EmbedInteractiveExample("pages/js/number-nan.html")}}<br>
- 정적 속성이므로 접근하기 위해 {{jsxref("Number")}} 객체를 생성할 필요는 없습니다. (<code>Number.NaN</code> 사용)</p>
+**`Number.NaN`** 속성은 Not-A-Number(숫자가 아님)를 나타냅니다. {{jsxref("NaN")}}과 같습니다.
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+{{EmbedInteractiveExample("pages/js/number-nan.html")}}
 
-<h2 id="명세">명세</h2>
+정적 속성이므로 접근하기 위해 {{jsxref("Number")}} 객체를 생성할 필요는 없습니다. (`Number.NaN` 사용)
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">스펙</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>초기 정의. JavaScript 1.1에서 구현됨.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.3.4', 'Number.NaN')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.nan', 'Number.NaN')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.nan', 'Number.NaN')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{js_property_attributes(0, 0, 0)}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 예제
 
-<div>{{Compat("javascript.builtins.Number.NaN")}}</div>
+### 값이 숫자형인지 확인하기
 
-<div id="compat-desktop"> </div>
+```js
+function sanitise(x) {
+  if (isNaN(x)) {
+    return Number.NaN;
+  }
+  return x;
+}
+```
 
-<h2 id="같이_보기">같이 보기</h2>
+### NaN에 대한 테스트
 
-<ul>
- <li>전역 {{jsxref("NaN")}} 객체.</li>
- <li>본 속성이 속한 {{jsxref("Number")}} 객체.</li>
-</ul>
+`NaN` 페이지에서 [NaN에 대한 테스트](/ko/docs/Web/JavaScript/Reference/Global_Objects/NaN#testing_against_nan) 를 참고하세요.
+
+## 명세
+
+{{Specifications}}
+
+## 브라우저 호환성
+
+{{Compat}}
+
+## 같이보기
+
+- 전역 {{jsxref("NaN")}} 객체.
+- 본 속성이 속한 {{jsxref("Number")}} 객체.
