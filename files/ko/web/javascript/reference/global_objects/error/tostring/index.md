@@ -2,29 +2,32 @@
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
 tags:
-- JavaScript
-- Method
-- Prototype
+  - JavaScript
+  - Method
+  - Prototype
 browser-compat: javascript.builtins.Error.toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>toString()</strong></code> 메서드는 명시된 {{jsxref("Error")}} 객체를 표현하는 문자열을 반환합니다.</p>
+**`toString()`** 메서드는 명시된 {{jsxref("Error")}} 객체를 표현하는 문자열을 반환합니다.
 
-<h2 id="Syntax">구문</h2>
+## 구문
 
-<pre class="brush: js">toString()</pre>
+```js
+toString()
+```
 
-<h3 id="Return_value">반환값</h3>
+### 반환값
 
-<p>명시된 {{jsxref("Error")}} 객체를 표현하는 문자열.</p>
+명시된 {{jsxref("Error")}} 객체를 표현하는 문자열.
 
-<h2 id="Description">설명</h2>
+## 설명
 
-<p>{{jsxref("Error")}} 객체는 모든 객체가 상속받는 {{jsxref("Object.prototype.toString()")}} 메서드를 재정의합니다. 
-  이 의미는 다음과 같습니다({{jsxref("Object")}}과 {{jsxref("String")}}는 그들 만의 원본 값이 있다고 가정합니다):</p>
+{{jsxref("Error")}} 객체는 모든 객체가 상속받는 {{jsxref("Object.prototype.toString()")}} 메서드를 재정의합니다.
+이 의미는 다음과 같습니다({{jsxref("Object")}}과 {{jsxref("String")}}는 그들 만의 원본 값이 있다고 가정합니다):
 
-<pre class="brush: js">Error.prototype.toString = function() {
+```js
+Error.prototype.toString = function() {
   'use strict';
 
   var obj = Object(this);
@@ -47,13 +50,14 @@ browser-compat: javascript.builtins.Error.toString
 
   return name + ': ' + msg;
 };
-</pre>
+```
 
-<h2 id="Examples">예제</h2>
+## 예제
 
-<h3 id="Using_toString">toString() 사용하기</h3>
+### toString() 사용하기
 
-<pre class="brush: js">var e1 = new Error('fatal error');
+```js
+var e1 = new Error('fatal error');
 console.log(e1.toString()); // 'Error: fatal error'
 
 var e2 = new Error('fatal error');
@@ -73,18 +77,16 @@ var e5 = new Error('fatal error');
 e5.name = 'hello';
 e5.message = undefined;
 console.log(e5.toString()); // 'hello'
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
-  <li>{{jsxref("Error.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Error.prototype.toSource()")}}
