@@ -112,7 +112,7 @@ Dans l'exemple ci-dessous, nous avons fait flotter trois `<div>` pour les affich
 </div>
 ```
 
-{{EmbedLiveSample('Example_1', '', '150')}}
+{{EmbedLiveSample('Exemple', '', '150')}}
 
 > **Note :** La propriété {{cssxref("clear")}} n'a également aucun effet une fois que l'élément dégagé devient un élément de grille. Vous pouvez donc avoir une mise en page avec un pied de page dégagé, qui est ensuite transformée en une mise en page sur une grille CSS.
 
@@ -171,7 +171,7 @@ Dans la disposition flottante, le pourcentage est calculé à partir du conteneu
 </div>
 ```
 
-{{EmbedLiveSample('Example_2', '', '150')}}
+{{EmbedLiveSample('Exemple_2', '', '150')}}
 
 Pour résoudre ce problème, nous devons trouver un moyen de détecter si la grille est prise en charge et donc si elle remplacera la largeur. CSS a une solution pour nous ici.
 
@@ -223,7 +223,7 @@ Si nous ajoutons une requête de fonctionnalité à l'exemple ci-dessus, nous po
 </div>
 ```
 
-{{EmbedLiveSample('Example_3', '', '150')}}
+{{EmbedLiveSample('Exemple_3', '', '150')}}
 
 La prise en charge des requêtes de caractéristiques est très bonne dans les navigateurs modernes. Toutefois, vous devez noter que ce sont les navigateurs qui ne prennent pas en charge la grille CSS, qui ne prennent pas non plus en charge les requêtes de fonctionnalités. Cela signifie qu'une approche telle que celle décrite ci-dessus fonctionnera pour ces navigateurs. Ce que nous faisons, c'est écrire notre ancien CSS en premier, en dehors de toute requête de fonctionnalité. Les navigateurs qui ne prennent pas en charge la grille et la requête de fonctionnalité utiliseront les informations de mise en page qu'ils peuvent comprendre et ignoreront complètement tout le reste. Les navigateurs qui prennent en charge la requête de fonctionnalité prennent également en charge CSS Grid et exécuteront donc le code de la grille et le code contenu dans la requête de fonctionnalité.
 

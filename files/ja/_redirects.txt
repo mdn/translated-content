@@ -276,7 +276,7 @@
 /ja/docs/CSS/Length	/ja/docs/Web/CSS/Length
 /ja/docs/CSS/Media	/ja/docs/Web/CSS/@media
 /ja/docs/CSS/Media/Visual	/ja/docs/Web/CSS/@media
-/ja/docs/CSS/Media_queries	/ja/docs/Web/CSS/Media_queries
+/ja/docs/CSS/Media_queries	/ja/docs/Web/CSS/Media_Queries
 /ja/docs/CSS/Multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/CSS/Other_Resources	/ja/docs/Web/CSS
 /ja/docs/CSS/Privacy_and_the_:visited_selector	/ja/docs/Web/CSS/Privacy_and_the_:visited_selector
@@ -3164,6 +3164,7 @@
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
 /ja/docs/Web/API/MediaCapabilitiesInfo	/ja/docs/Web/API/MediaCapabilities/encodingInfo
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
+/ja/docs/Web/API/MediaStreamConstraints	/ja/docs/conflicting/Web/API/MediaDevices/getUserMedia
 /ja/docs/Web/API/MouseEvent/which	/ja/docs/Web/API/UIEvent/which
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/NavigatorID	/ja/docs/Web/API/Navigator
@@ -3579,6 +3580,7 @@
 /ja/docs/Web/API/window.unescape	/ja/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /ja/docs/Web/API/window.updateCommands	/ja/docs/Web/API/Window/updateCommands
 /ja/docs/Web/API/window.window	/ja/docs/Web/API/Window/window
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/ja/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/ja/docs/Web/Accessibility/ARIA/Roles/button_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role	/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role
 /ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/Web/Accessibility/ARIA/widgets
@@ -3784,7 +3786,7 @@
 /ja/docs/Web/CSS/transform-function/skewY	/ja/docs/Web/CSS/transform-function/skewY()
 /ja/docs/Web/CSS/transform-function/translate	/ja/docs/Web/CSS/transform-function/translate()
 /ja/docs/Web/CSS/transform-function/translate3d	/ja/docs/Web/CSS/transform-function/translate3d()
-/ja/docs/Web/CSS/transform-function/translateX	/ja/docs/orphaned/Web/CSS/transform-function/translateX
+/ja/docs/Web/CSS/transform-function/translateX	/ja/docs/Web/CSS/transform-function/translateX()
 /ja/docs/Web/CSS/transform-function/translateY	/ja/docs/Web/CSS/transform-function/translateY()
 /ja/docs/Web/CSS/transform-function/translateZ	/ja/docs/Web/CSS/transform-function/translateZ()
 /ja/docs/Web/CSS/uri	/ja/docs/Web/CSS/url()

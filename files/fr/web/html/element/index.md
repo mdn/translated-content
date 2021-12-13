@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element
 
 Cette page répertorie tous les [éléments](/fr/docs/Glossary/Element) [HTML](/fr/docs/Glossary/HTML), qui sont créés à l'aide de [balises](/fr/docs/Glossary/Tag). Ils sont regroupés par fonction pour vous aider à trouver facilement ce que vous avez en tête. Une liste alphabétique de tous les éléments est fournie dans la barre latérale de la page de chaque élément ainsi que de celle-ci.
 
-> **Note :**Pour plus d'informations sur les bases des éléments et attributs HTML, voir [la section sur les éléments dans l'article Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML#elements_%e2%80%94_the_basic_building_blocks).
+> **Note :** Pour plus d'informations sur les bases des éléments et attributs HTML, voir [la section sur les éléments dans l'article Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML#elements_%e2%80%94_the_basic_building_blocks).
 
 ## Racine principale
 
