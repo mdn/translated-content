@@ -1,5 +1,5 @@
 ---
-title: '合作异步JavaScript: 超时和间隔'
+title: '异步JavaScript合集: 超时和间隔'
 slug: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 translation_of: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 original_slug: learn/JavaScript/异步/超时和间隔
@@ -12,7 +12,7 @@ original_slug: learn/JavaScript/异步/超时和间隔
 
 <div></div>
 
-<p class="summary">在这里，我们将讨论传统的JavaScript方法，这些方法可以在一段时间或一段规则间隔(例如，每秒固定的次数)之后，以异步方式运行代码，并讨论它们的用处，以及它们的固有问题。</p>
+<p class="summary">在这里，我们将讨论传统的JavaScript方法，这些方法可以在一段时间或一段规则间隔（例如，每秒固定的次数）之后，以异步方式运行代码，并讨论它们的用处，以及它们的固有问题。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -29,15 +29,15 @@ original_slug: learn/JavaScript/异步/超时和间隔
 
 <h2 id="介绍">介绍</h2>
 
-<p>很长一段时间以来，web平台为JavaScript程序员提供了许多函数，这些函数允许您在一段时间间隔过后异步执行代码，或者重复异步执行代码块，直到您告诉它停止为止。这些都是:</p>
+<p>很长一段时间以来，web平台为JavaScript程序员提供了许多函数，这些函数使得在特定时间间隔后能异步执行代码，或者重复异步执行代码块直到停止。这些函数是:</p>
 
 <dl>
- <dt><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code></dt>
- <dd>在指定的时间后执行一段代码.</dd>
- <dt><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code></dt>
- <dd>以固定的时间间隔，重复运行一段代码.</dd>
+ <dt><code><a href="/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code></dt>
+ <dd>在指定的时间后执行一段代码。</dd>
+ <dt><code><a href="/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code></dt>
+ <dd>以固定的时间间隔，重复运行一段代码。</dd>
  <dt><code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code></dt>
- <dd>setInterval()的现代版本;在浏览器下一次重新绘制显示之前执行指定的代码块，从而允许动画在适当的帧率下运行，而不管它在什么环境中运行.</dd>
+ <dd>setInterval()的现代版本;在浏览器下一次重新绘制显示之前执行指定的代码块，从而允许动画在适当的帧率下运行，而不管它在什么环境中运行。</dd>
 </dl>
 
 <p>这些函数设置的异步代码实际上在主线程上运行（在其指定的计时器过去之后）。</p>
@@ -48,7 +48,7 @@ original_slug: learn/JavaScript/异步/超时和间隔
 
 <h2 id="setTimeout">setTimeout()</h2>
 
-<p>正如前述， <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> 在指定的时间后执行一段特定代码. 它需要如下参数:</p>
+<p>正如前述， <code><a href="/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> 在指定的时间后执行一段特定代码. 它需要如下参数:</p>
 
 <ul>
  <li>要运行的函数，或者函数引用。</li>
@@ -116,9 +116,7 @@ let myGreeting = setTimeout(sayHi, 2000);</pre>
 
 <p>这就是<code>setInterval()</code>的作用所在。这与<code>setTimeout()</code>的工作方式非常相似，只是作为第一个参数传递给它的函数，<strong>重复</strong>执行的时间不少于第二个参数给出的毫秒数，<strong>而不是一次执行</strong>。您还可以将正在执行的函数所需的任何参数作为 <code>setInterval()</code> 调用的后续参数传递。</p>
 
-<p>让我们看一个例子。下面的函数创建一个新的<code>Date()</code>对象，使用<code>toLocaleTimeString()</code>从中提取一个时间字符串，然后在UI中显示它。然后，我们使用<code>setInterval()</code>每秒运行该函数一次，创建一个每秒更新一次的数字时钟的效果。</p>
-
-<p>(<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see this live</a>, and also <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see the source</a>):</p>
+<p>让我们看一个例子。下面的函数创建一个新的<code>Date()</code>对象，使用<code>toLocaleTimeString()</code>从中提取一个时间字符串，然后在UI中显示它。然后，我们使用<code>setInterval()</code>每秒运行该函数一次，创建一个每秒更新一次的数字时钟的效果。</p><p>(<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see this live</a>, and also <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see the source</a>):</p>
 
 <pre class="brush: js notranslate">function displayTime() {
    let date = new Date();
@@ -140,7 +138,7 @@ clearInterval(myInterval);</pre>
 
 <h4 id="主动学习：创建秒表!">主动学习：创建秒表!</h4>
 
-<p>话虽如此，我们还是要给你一个挑战。以我们的<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">setInterval-clock.html</a>为例，修改它以创建您自己的简单秒表。</p>
+<p>说到这里，我们为你准备了一个挑战。以我们的<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">setInterval-clock.html</a>为例，修改它以创建您自己的简单秒表。</p>
 
 <p>你要像前面一样显示时间，但是在这里，你需要：</p>
 
@@ -226,7 +224,7 @@ alert('Hello');</pre>
 
 <p><font><font>如果您希望设置一个代码块以便在所有主线程完成运行后立即运行，这将很有用。将其放在异步事件循环中，这样它将随后直接运行。</font></font></p>
 
-<h3 id="使用_clearTimeout_or_clearInterval清除">使用 clearTimeout() or clearInterval()清除</h3>
+<h3 id="使用_clearTimeout_or_clearInterval清除">使用 clearTimeout() 或 clearInterval()清除</h3>
 
 <p><code>clearTimeout()</code> 和<code>clearInterval()</code> 都使用相同的条目列表进行清除。有趣的是，这意味着你可以使用任一一种方法来清除 <code>setTimeout()</code> 和 <code>setInterval()。</code></p>
 
@@ -234,14 +232,14 @@ alert('Hello');</pre>
 
 <h2 id="requestAnimationFrame">requestAnimationFrame()</h2>
 
-<p><code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code> 是一个专门的循环函数，旨在浏览器中高效运行动画。它基本上是现代版本的<code>setInterval()</code> —— 它在浏览器重新加载显示内容之前执行指定的代码块，从而允许动画以适当的帧速率运行，不管其运行的环境如何。</p>
+<p><code><a href="/zh-CN/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code> 是一个专门的循环函数，旨在浏览器中高效运行动画。它基本上是现代版本的<code>setInterval()</code> —— 它在浏览器重新加载显示内容之前执行指定的代码块，从而允许动画以适当的帧速率运行，不管其运行的环境如何。</p>
 
 <p>它是针对<code>setInterval()</code> 遇到的问题创建的，比如 <code>setInterval()</code>并不是针对设备优化的帧率运行，有时会丢帧。还有即使该选项卡不是活动的选项卡或动画滚出页面等问题 。</p>
 
 <p>（在<a href="http://creativejs.com/resources/requestanimationframe/index.html">CreativeJS</a>上了解有关此内容的更多信息）.</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong> 你可以在课程中其他地方找到<code>requestAnimationFrame()</code> 的使用范例—参见 <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a>, 和 <a href="/en-US/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a>。</p>
+<p><strong>注意：</strong> 你可以在课程中其他地方找到<code>requestAnimationFrame()</code> 的使用范例—参见 <a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a>, 和 <a href="/zh-CN/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a>。</p>
 </div>
 
 <p><font>该方法将重新加载页面之前要调用的回调函数作为参数。</font><font>这是您将看到的常见表达：</font></p>
@@ -256,7 +254,7 @@ draw();</pre>
 <p>这个想法是要定义一个函数，在其中更新动画 (例如，移动精灵，更新乐谱，刷新数据等)，然后调用它来开始这个过程。在函数的末尾，以 <code>requestAnimationFrame()</code> 传递的函数作为参数进行调用，这指示浏览器在下一次显示重新绘制时再次调用该函数。然后这个操作连续运行， 因为<code>requestAnimationFrame()</code> 是递归调用的。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>: 如果要执行某种简单的常规DOM动画, <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS 动画</a> 可能更快，因为它们是由浏览器的内部代码计算而不是JavaScript直接计算的。但是，如果您正在做一些更复杂的事情，并且涉及到在DOM中不能直接访问的对象(such as <a href="/en-US/docs/Web/API/Canvas_API">2D Canvas API</a> or <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> objects), <code>requestAnimationFrame()</code> 在大多数情况下是更好的选择。</p>
+<p><strong>注意</strong>: 如果要执行某种简单的常规DOM动画, <a href="/zh-CN/docs/Web/CSS/CSS_Animations">CSS 动画</a> 可能更快，因为它们是由浏览器的内部代码计算而不是JavaScript直接计算的。但是，如果您正在做一些更复杂的事情，并且涉及到在DOM中不能直接访问的对象(such as <a href="/zh-CM/docs/Web/API/Canvas_API">2D Canvas API</a> or <a href="/zh-CN/docs/Web/API/WebGL_API">WebGL</a> objects), <code>requestAnimationFrame()</code> 在大多数情况下是更好的选择。</p>
 </div>
 
 <h3 id="你的动画跑得有多快？">你的动画跑得有多快？</h3>
@@ -314,9 +312,7 @@ draw();</pre>
 
 <h3 id="浏览器支持">浏览器支持</h3>
 
-<p> 与<code>setInterval()<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">或</span></font></code><code>setTimeout()</code> 相比最近的浏览器支持<code>requestAnimationFrame()</code></p>
-
-<p>— <code>requestAnimationFrame()</code>.在Internet Explorer 10及更高版本中可用。因此，除非您的代码需要支持旧版本的IE，否则没有什么理由不使用<code>requestAnimationFrame()</code> 。</p>
+<p>与<code>setInterval()<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">或</span></font></code><code>setTimeout()</code> 相比，更多的新版浏览器支持<code>requestAnimationFrame()</code></p><code>requestAnimationFrame()</code>在Internet Explorer 10及更高版本中可用。因此，除非您的代码需要支持旧版本的IE，否则没有什么理由不使用<code>requestAnimationFrame()</code> 的。</p>
 
 <h3 id="一个简单的例子">一个简单的例子</h3>
 
@@ -439,7 +435,7 @@ let startTime = null;</pre>
 
 <p>requestAnimationFrame() 的限制之一是无法选择帧率。在大多数情况下，这不是问题，因为通常希望动画尽可能流畅地运行。但是，当要创建老式的8位类型的动画时，怎么办？</p>
 
-<p>例如，在我们的 <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing Graphics</a> 文章中的猴子岛行走动画中的一个问题：</p>
+<p>例如，在我们的 <a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing Graphics</a> 文章中的猴子岛行走动画中的一个问题：</p>
 
 <p>{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html", '100%', 260)}}</p>
 
@@ -586,33 +582,33 @@ function start() {
 <ol>
  <li>首先通过 {{domxref("window.cancelAnimationFrame", "cancelAnimationFrame()")}}  取消 旋转器 动画（清理不必要的流程总是一件好事），隐藏 旋转器 容器。</li>
  <li>接下来，显示结果段落并将其文本内容设置为“ PLAYERS GO !!”。向玩家发出信号，表示他们现在可以按下按钮来取胜。</li>
- <li>将 <code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code> 事件侦听器附加到 document。当按下任何按钮时，<code>keyHandler()</code> 函数将运行。</li>
+ <li>将 <code><a href="/zh-CN/docs/Web/API/Document/keydown_event">keydown</a></code> 事件侦听器附加到 document。当按下任何按钮时，<code>keyHandler()</code> 函数将运行。</li>
  <li>在 <code>keyHandler()</code> 里，在 <code>keyHandler()</code> 内部，代码包括作为参数的事件对象作为参数（用 <code>e</code> 表示）- 其 {{domxref("KeyboardEvent.key", "key")}} 属性包含刚刚按下的键，可以通过这个对象来对特定的操作和特定的按键做出响应。</li>
  <li>将变量 <code>isOver</code> 设置为 <code>false</code> ，这样我们就可以跟踪是否按下了正确的按键以使玩家1或2获胜。我们不希望游戏在按下错误的键后结束。</li>
  <li>将 <code>e.key</code> 输出到控制台，这是找出所按的不同键的键值的有用方法。</li>
- <li>当 <code>e.key</code> 为“ a”时，显示一条消息说玩家1获胜；当 <code>e.key</code> 为“ l”时，显示消息说玩家2获胜。 （注意：这仅适用于小写的a和l - 如果提交了大写的 A 或 L（键加上 <kbd>Shift</kbd>），则将其视为另一个键！）如果按下了其中一个键，请将 <code>isOver</code> 设置为 <code>true</code> 。</li>
+ <li>当 <code>e.key</code> 为“a”时，显示一条消息说玩家1获胜；当 <code>e.key</code> 为“l”时，显示消息说玩家2获胜。 （注意：这仅适用于小写的a和l - 如果提交了大写的 A 或 L（键加上 <kbd>Shift</kbd>），则将其视为另一个键！）如果按下了其中一个键，请将 <code>isOver</code> 设置为 <code>true</code> 。</li>
  <li>仅当 <code>isOver</code> 为 <code>true</code> 时，才使用 {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} 删除 <code>keydown</code> 事件侦听器，以便一旦产生获胜的按键，就不再有键盘输入可以弄乱最终游戏结果。您还可以使用 <code>setTimeout()</code> 在5秒钟后调用 <code>reset()</code>－如前所述，此函数将游戏重置为原始状态，以便可以开始新游戏。</li>
 </ol>
 
 <p>就这样-一切都完成了！</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: 如果卡住了， check out <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/reaction-game.html">our version of the reaction game</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/reaction-game.html">source code</a> also).</p>
+<p><strong>Note</strong>: 如果您在练习的过程中卡住了，请查阅<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/reaction-game.html">our version of the reaction game</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/reaction-game.html">source code</a> also).</p>
 </div>
 
 <h2 id="结论">结论</h2>
 
-<p>就是这样-异步循环和间隔的所有要点在一篇文章中介绍了。您会发现这些方法在许多情况下都很有用，但请注意不要过度使用它们！因为它们仍然在主线程上运行，所以繁重的回调（尤其是那些操纵DOM的回调）会在不注意的情况下降低页面的速度。</p>
+<p>综上所述，这就是一篇文章阐明异步循环和间隔的所有要点。您会发现这些方法在许多情况下都很有用，但请注意不要过度使用它们！因为它们仍然在主线程上运行，所以繁重的回调（尤其是那些操纵DOM的回调）会在不经意间降低页面的速度。</p>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}</p>
 
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">General asynchronous programming concepts</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Making asynchronous programming easier with async and await</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Choosing the right approach</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Concepts">General asynchronous programming concepts</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Async_await">Making asynchronous programming easier with async and await</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Choosing the right approach</a></li>
 </ul>
