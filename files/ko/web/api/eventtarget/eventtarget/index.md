@@ -3,23 +3,23 @@ title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
 translation_of: Web/API/EventTarget/EventTarget
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p><code><strong>EventTarget()</strong></code> 생성자는 새로운 {{domxref("EventTarget")}} 객체 인스턴스를 만듭니다.</p>
+**`EventTarget()`** 생성자는 새로운 {{domxref("EventTarget")}} 객체 인스턴스를 만듭니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>myEventTarget</var> = new EventTarget();</pre>
+    var myEventTarget = new EventTarget();
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{domxref("EventTarget")}} 객체의 인스턴스를 반환합니다.</p>
+{{domxref("EventTarget")}} 객체의 인스턴스를 반환합니다.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
 <pre class="brush: js" id="ct-20">class MyEventTarget extends EventTarget {
   constructor(mySecret) {
@@ -40,31 +40,16 @@ let event = new CustomEvent("foo", { detail: 7 });
 myEventTarget.dispatchEvent(event);
 let newValue = myEventTarget.secret; // == 7</pre>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-eventtarget-eventtarget', 'EventTarget() constructor')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                        | Status                           | Comment |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('DOM WHATWG', '#dom-eventtarget-eventtarget', 'EventTarget() constructor')}} | {{Spec2('DOM WHATWG')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.EventTarget.EventTarget")}}
 
+## See also
 
-<p>{{Compat("api.EventTarget.EventTarget")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("EventTarget")}}</li>
-</ul>
+- {{domxref("EventTarget")}}
