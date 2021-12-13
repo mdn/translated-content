@@ -68,7 +68,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 
 <h3 id="객체가_특정_속성을_가지고_있는지_검사하기">객체가 특정 속성을 가지고 있는지 검사하기</h3>
 
-<pre class="brush: js notranslate">const duck = {
+<pre class="brush: js">const duck = {
   name: 'Maurice',
   color: 'white',
   greeting: function() {
@@ -83,12 +83,12 @@ Reflect.has(duck, 'haircut');
 
 <h3 id="객체_자체_키를_반환하기">객체 자체 키를 반환하기</h3>
 
-<pre class="brush: js notranslate">Reflect.ownKeys(duck);
+<pre class="brush: js">Reflect.ownKeys(duck);
 // [ "name", "color", "greeting" ]</pre>
 
 <h3 id="객체에_새로운_속성_추가하기">객체에 새로운 속성 추가하기</h3>
 
-<pre class="brush: js notranslate">Reflect.set(duck, 'eyes', 'black');
+<pre class="brush: js">Reflect.set(duck, 'eyes', 'black');
 // returns "true" if successful
 // "duck" now contains the property "eyes: 'black'"</pre>
 
