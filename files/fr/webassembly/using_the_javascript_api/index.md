@@ -51,9 +51,9 @@ Ajoutez le code suivant à votre script, en dessous du premier bloc:
     WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
     .then(obj => obj.instance.exports.exported_func());
 
-Le résultat net de l'ensemble du code est que l'appel à `exported_func`, notre fonction exportée Webassembly, entraîne à son tour l'appel à `imported_func` notre fonction importée Javscript, qui logue la valeur 42 fournie à l'instance WebAssembly dans la console. Si vous sauvegardez l'exemple et chargez le code dans un navigateur qui supporte WebAssembly, vous pourrez le voir en action.
+Le résultat net de l'ensemble du code est que l'appel à `exported_func`, notre fonction exportée Webassembly, entraîne à son tour l'appel à `imported_func` notre fonction importée javascript, qui logue la valeur 42 fournie à l'instance WebAssembly dans la console. Si vous sauvegardez l'exemple et chargez le code dans un navigateur qui supporte WebAssembly, vous pourrez le voir en action.
 
-**Note**: Cet exemple interminable et tarabiscoté semble aboutir à un résultat de faible importance, il permet néanmoins d'illustrer les possibilités offertes par l'utilisation conjointe d'un code WebAssembly et d'un code Javscript dans une application web. Comme il est précisé ailleurs, l'objectif de WebAssembly n'est pas de remplacer Javascript; à vrai dire les deux sont conçus pour fonctionner de concert, chacun tirant parti des forces de l'autre.
+**Note**: Cet exemple interminable et tarabiscoté semble aboutir à un résultat de faible importance, il permet néanmoins d'illustrer les possibilités offertes par l'utilisation conjointe d'un code WebAssembly et d'un code javascript dans une application web. Comme il est précisé ailleurs, l'objectif de WebAssembly n'est pas de remplacer Javascript; à vrai dire les deux sont conçus pour fonctionner de concert, chacun tirant parti des forces de l'autre.
 
 ### Chargement de notre module wasm sans streaming
 
@@ -104,7 +104,7 @@ Explorons ces concepts à travers un exemple rapide.
 
         new Uint32Array(memory.buffer)[0]
 
-3.  À vous d'essayer — Enregistrez ce que vous avez rédigé jusqu'à maintenant, chargez-le dans votre navigateur, puis essayez d'entrer les deux lignes ci-dessus dans votre Javscript console.
+3.  À vous d'essayer — Enregistrez ce que vous avez rédigé jusqu'à maintenant, chargez-le dans votre navigateur, puis essayez d'entrer les deux lignes ci-dessus dans votre javascript console.
 
 ### Redimensionner la mémoire
 
@@ -112,7 +112,7 @@ Une instance de mémoire peut être agrandie par appel à la méthode {{jsxref(
 
     memory.grow(1);
 
-Si une valeur maximum a été fournie à la création de l'instance mémoire, les tentatives d'augmenter l'espace mémoire au delà de cette valeur maximum aboutiront à une exception de type  {{jsxref("WebAssembly.RangeError")}}. Le moteur Javsacript utilise cette valeur limite supérieure pour réserver d'avance un espace mémoire suffisant, ce qui permet de rendre les redimensionnements mémoires plus efficaces.
+Si une valeur maximum a été fournie à la création de l'instance mémoire, les tentatives d'augmenter l'espace mémoire au delà de cette valeur maximum aboutiront à une exception de type  {{jsxref("WebAssembly.RangeError")}}. Le moteur javasacript utilise cette valeur limite supérieure pour réserver d'avance un espace mémoire suffisant, ce qui permet de rendre les redimensionnements mémoires plus efficaces.
 
 Note: En raison du caractère immuable de la longueur de byte d'un {{domxref("ArrayBuffer")}}, après une opération {{jsxref("Memory.prototype.grow()")}} réussie, le buffer getter retourne un nouvel objet ArrayBuffer (avec la nouvelle longeur de byte du buffer) et tous les objets ArrayBuffer précédents se retrouve en état "dissocié", ou déconnectés de l'espace mémoire dont ils étaient issus initialement.
 
@@ -146,7 +146,7 @@ Essayons de clarifier les affirmations ci-dessus à l'aide d'un exemple plus ab
 
 Note: vous pouvez remarquer que nous avons créé la vue {{domxref("Uint32Array")}} sur le champ buffer de l'objet Memory ([`Memory.prototype.buffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)), et pas sur l'objet Memory lui même.
 
-Les imports Memory fonctionnent de la même manière que les imports fonctions, à la différence prés que les objets Memory véhiculent des valeurs au lieu de fonctions Javscripts. Les imports Memory sont utiles pour deux raisons:
+Les imports Memory fonctionnent de la même manière que les imports fonctions, à la différence prés que les objets Memory véhiculent des valeurs au lieu de fonctions javascripts. Les imports Memory sont utiles pour deux raisons:
 
 - Ils permettent de récupérer et créer le contenu mémoire initial avant ou en parrallèle de la compilation du module.
 - Ils permettent qu'un objet mémoire unique soit importé par des instances de modules multiples, ce qui est une fonctionnalité clef dans l'objectif d'une implémentation d'une connexion dynamique dans WebAssembly.
@@ -155,7 +155,7 @@ Les imports Memory fonctionnent de la même manière que les imports fonctions,
 
 ## Tables
 
-Une Table WebAssembly est un tableau de [références](<https://en.wikipedia.org/wiki/Reference_(computer_science)>) typées redimensionnable qui peut être accédé à la fois par du code Javscript et par du code WebAssembly. Memory fournit un tableau de bytes bruts redimensionnable, mais il n'est pas prudent d'y stocker des références, car une référence est une valeur considérée comme sûre par le moteur Javascript, valeur dont les bytes ne doivent être accessibles ni en lecture, ni en écriture par le contenu pour des raisons de sécurité, de portabilité, et de stabilité.
+Une Table WebAssembly est un tableau de [références](<https://en.wikipedia.org/wiki/Reference_(computer_science)>) typées redimensionnable qui peut être accédé à la fois par du code javascript et par du code WebAssembly. Memory fournit un tableau de bytes bruts redimensionnable, mais il n'est pas prudent d'y stocker des références, car une référence est une valeur considérée comme sûre par le moteur Javascript, valeur dont les bytes ne doivent être accessibles ni en lecture, ni en écriture par le contenu pour des raisons de sécurité, de portabilité, et de stabilité.
 
 Les Tables possèdent un type, qui limite les types de références qui peuvent être contenues dans la table. Dans la version actuelle de WebAssembly, il n'existe qu'un seul type de références — functions — et de fait seul ce type de références est donc valide. Dans de prochaines versions, d'autres types de références seront ajoutés.
 
