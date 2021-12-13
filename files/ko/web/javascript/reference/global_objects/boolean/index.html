@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 
 <p>값이 {{jsxref("undefined")}}, {{jsxref("null")}}이 아닌 <strong>모든</strong> 객체는 조건문에서 <code>true</code>로 계산됩니다. 이는 값이 <code>false</code>인 <code>Boolean</code> 객체도 포함합니다. 즉 아래 {{jsxref("Statements/if...else", "if")}} 문의 조건은 참입니다.</p>
 
-<pre class="brush: js notranslate">var x = new Boolean(false);
+<pre class="brush: js">var x = new Boolean(false);
 if (x) {
   // 이 코드는 실행됨
 }
@@ -28,7 +28,7 @@ if (x) {
 
 <p>그러나 원시 <code>Boolean</code> 값에는 적용되지 않습니다. 따라서 아래 {{jsxref("Statements/if...else", "if")}} 문의 조건은 거짓입니다.</p>
 
-<pre class="brush: js notranslate">var x = false;
+<pre class="brush: js">var x = false;
 if (x) {
   // 이 코드는 실행되지 않음
 }
@@ -36,12 +36,12 @@ if (x) {
 
 <p>불리언이 아닌 값을 변환할 때 <code>Boolean</code> 객체를 사용해선 안됩니다. 대신 <code>Boolean</code> 함수를 사용하세요.</p>
 
-<pre class="brush: js notranslate">var x = Boolean(expression);     // 추천
+<pre class="brush: js">var x = Boolean(expression);     // 추천
 var x = new Boolean(expression); // 사용하지 말것</pre>
 
 <p>값이 <code>false</code>인 <code>Boolean</code> 객체를 포함한 어떠한 객체를 <code>Boolean</code> 객체의 초기값으로 넘겨주더라도 새로운 <code>Boolean</code> 객체는 <code>true</code>를 가집니다.</p>
 
-<pre class="brush: js notranslate">var myFalse = new Boolean(false);   // 초기값 거짓
+<pre class="brush: js">var myFalse = new Boolean(false);   // 초기값 거짓
 var g = Boolean(myFalse);           // 초기값 참
 var myString = new String('Hello'); // 문자열 객체
 var s = Boolean(myString);          // 초기값 참</pre>
@@ -68,7 +68,7 @@ var s = Boolean(myString);          // 초기값 참</pre>
 
 <h3 id="false_값으로_초기화한_Boolean_객체_만들기"><code>false</code> 값으로 초기화한 <code>Boolean</code> 객체 만들기</h3>
 
-<pre class="brush: js notranslate">var bNoParam = new Boolean();
+<pre class="brush: js">var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
 var bEmptyString = new Boolean('');
@@ -76,7 +76,7 @@ var bfalse = new Boolean(false);</pre>
 
 <h3 id="true_값으로_초기화한_Boolean_객체_만들기"><code>true</code> 값으로 초기화한 <code>Boolean</code> 객체 만들기</h3>
 
-<pre class="brush: js notranslate">var btrue = new Boolean(true);
+<pre class="brush: js">var btrue = new Boolean(true);
 var btrueString = new Boolean('true');
 var bfalseString = new Boolean('false');
 var bSuLin = new Boolean('Su Lin');
