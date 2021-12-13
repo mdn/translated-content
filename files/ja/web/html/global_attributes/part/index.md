@@ -2,43 +2,28 @@
 title: part
 slug: Web/HTML/Global_attributes/part
 tags:
-  - Global attributes
+  - グローバル属性
   - HTML
-  - Reference
+  - リファレンス
   - part
+browser-compat: html.global_attributes.part
 translation_of: Web/HTML/Global_attributes/part
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<p><strong><code>part</code></strong> は <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>で、要素のパート名のスペース区切りのリストが含まれています。 CSS はパート名を使用して、 {{CSSxRef("::part")}} 擬似要素を介してシャドウツリー内の特定の要素の選択およびスタイルの設定を行うことができます。</p>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>使用例については <a href="https://mdn.github.io/web-components-examples/shadow-part/">Shadow part example</a> をご覧ください。</p>
+**`part`** は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、要素のパート名の空白区切りのリストを指定します。 CSS はパート名を使用して、 {{CSSxRef("::part")}} 擬似要素を介してシャドウツリー内の特定の要素の選択およびスタイルの設定を行うことができます。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+使用例については [Shadow part example](https://mdn.github.io/web-components-examples/shadow-part/) をご覧ください。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Shadow Parts", "#part-attr", "part")}}</td>
-   <td>{{Spec2('CSS Shadow Parts')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("html.global_attributes.part")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li>すべての<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a></li>
-</ul>
+## 関連情報
+
+- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
