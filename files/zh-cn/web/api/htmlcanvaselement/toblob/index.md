@@ -1,27 +1,35 @@
 ---
 title: HTMLCanvasElement.toBlob()
 slug: Web/API/HTMLCanvasElement/toBlob
+tags:
+  - API
+  - Canvas
+  - HTMLCanvasElement
+  - Method
+  - Reference
 translation_of: Web/API/HTMLCanvasElement/toBlob
 ---
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toBlob()`** 方法创造 {{domxref("Blob")}} 对象，用以展示 canvas 上的图片；这个图片文件可以被缓存或保存到本地，由用户代理端自行决定。如不特别指明，图片的类型默认为 image/png，分辨率为96dpi。
+**`HTMLCanvasElement.toBlob()`** 方法创造 {{domxref("Blob")}} 对象，用以展示 canvas 上的图片；这个图片文件可以被缓存或保存到本地（由用户代理自行决定）。
 
-第三个参数用于针对 image/jpeg 格式的图片进行输出图片的质量设置。
+可以在调用时指定所需的文件格式和图像质量，若未指定文件格式（或不支持指定的文件格式），则默认导出 `image/png` 类型。浏览器需要支持 `image/png`，大多数浏览器还支持额外的图片格式，包括 `image/jpg` 和 `image/webp`。
+
+对于支持以指定分辨率编码的图片格式，如不特别指明，图片的默认分辨率为 96dpi。
 
 ## 语法
 
 ```js
-canvas.toBlob(callback, type, encoderOptions);
+toBlob(callback, type, quality)
 ```
 
 ### 参数
 
 - `callback`
-  - : 回调函数，可获得一个单独的 {{domxref("Blob")}} 对象参数。
+  - : 回调函数，可获得一个单独的 {{domxref("Blob")}} 对象参数。如果图像未被成功创建，可能会获得 `null` 值。
 - `type` {{optional_inline}}
-   - : {{domxref("DOMString")}} 类型，指定图片格式，默认格式为 `image/png`。
-- `encoderOptions` {{optional_inline}}
+   - : {{domxref("DOMString")}} 类型，指定图片格式，默认格式（未指定或不支持）为 `image/png`。
+- `quality` {{optional_inline}}
    - : {{jsxref("Number")}} 类型，值在 0 与 1 之间，当请求图片格式为 `image/jpeg` 或者 `image/webp` 时用来指定图片展示质量。如果这个参数的值不在指定类型与范围之内，则使用默认值，其余参数将被忽略。
 
 ### 返回值
@@ -31,7 +39,7 @@ canvas.toBlob(callback, type, encoderOptions);
 ### 异常
 
 - `SecurityError`
-   - : canvas“[被污染](/zh-CN/docs/Web/HTML/CORS_enabled_image)”的情况下不能使用此方法
+   - : canvas“[被污染](/zh-CN/docs/Web/HTML/CORS_enabled_image)”的情况下不能使用此方法。
 
 ## 示例
 
@@ -92,31 +100,31 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
               '-moz-parse-options:format=bmp;bpp=32');
 ```
 
-### Save toBlob to disk with OS.File (chrome/add-on context only)
+### 使用 OS.File 保存图像到本地（chrome/add-on context only）
 
-> **备注：** This technique saves it to the desktop and is only useful in Firefox chrome context or add-on code as OS APIs are not present on web sites.
+> **备注：** 此方法可将 toBlob 生成的图片保存到本地，但仅在 Firefox、 Chrome 上下文或带有相关插件的情况下可用，因为 Web 并不存在 OS API。
 
 ```js
-var canvas = document.getElementById("canvas");
-var d = canvas.width;
-ctx = canvas.getContext("2d");
+const canvas = document.getElementById('canvas');
+const d = canvas.width;
+ctx = canvas.getContext('2d');
 ctx.beginPath();
 ctx.moveTo(d / 2, 0);
 ctx.lineTo(d, d);
 ctx.lineTo(0, d);
 ctx.closePath();
-ctx.fillStyle = "yellow";
+ctx.fillStyle = 'yellow';
 ctx.fill();
 
 function blobCallback(iconName) {
   return function(b) {
-    var r = new FileReader();
+    const r = new FileReader();
     r.onloadend = function () {
     // r.result contains the ArrayBuffer.
     Cu.import('resource://gre/modules/osfile.jsm');
-    var writePath = OS.Path.join(OS.Constants.Path.desktopDir,
+    const writePath = OS.Path.join(OS.Constants.Path.desktopDir,
                                  iconName + '.ico');
-    var promise = OS.File.writeAtomic(writePath, new Uint8Array(r.result),
+    const promise = OS.File.writeAtomic(writePath, new Uint8Array(r.result),
                                       {tmpPath:writePath + '.tmp'});
     promise.then(
       function() {
@@ -135,29 +143,6 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
               '-moz-parse-options:format=bmp;bpp=32');
 ```
 
-## Polyfill
-
-A low performance polyfill based on toDataURL.
-
-```js
-if (!HTMLCanvasElement.prototype.toBlob) {
- Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
-  value: function (callback, type, quality) {
-
-    var binStr = atob( this.toDataURL(type, quality).split(',')[1] ),
-        len = binStr.length,
-        arr = new Uint8Array(len);
-
-    for (var i=0; i&lt;len; i++ ) {
-     arr[i] = binStr.charCodeAt(i);
-    }
-
-    callback( new Blob( [arr], {type: type || 'image/png'} ) );
-  }
- });
-}
-```
-
 ## 规范
 
 {{Specifications}}
@@ -168,5 +153,4 @@ if (!HTMLCanvasElement.prototype.toBlob) {
 
 ## 参见
 
-- The interface defining it, {{domxref("HTMLCanvasElement")}}.
 - {{domxref("Blob")}}
