@@ -1,0 +1,101 @@
+---
+title: AbortController
+slug: Web/API/AbortController
+tags:
+  - API
+  - AbortController
+  - 実験的
+  - インターフェース
+  - リファレンス
+translation_of: Web/API/AbortController
+---
+<p>{{APIRef("DOM")}}{{SeeCompatTable}}</p>
+
+<p><strong><code>AbortController</code></strong> インターフェースは一つ以上のリクエストをいつでも中断することを可能にするコントローラーオブジェクトを表します。</p>
+
+<p>{{domxref("AbortController.AbortController()")}}コンストラクタを使うことで <code>AbortController</code> オブジェクトを新しく作ることができます。DOMリクエストとの送信は、AbortSignalオブジェクトを使って行われます。</p>
+
+<h2 id="constructor">コンストラクタ</h2>
+
+<dl>
+ <dt>{{domxref("AbortController()")}}</dt>
+ <dd>新しい<code>AbortController</code>オブジェクトインスタンスを生成します。</dd>
+</dl>
+
+<h2 id="properties">プロパティ</h2>
+
+<dl>
+ <dt>{{domxref("AbortController.signal")}} {{readonlyInline}}</dt>
+ <dd>{{domxref("AbortSignal")}}AbortSignalオブジェクトのインスタンスを返します。 このオブジェクトは、DOMリクエストの送信や中断に使用します。</dd>
+</dl>
+
+<h2 id="methods">メソッド</h2>
+
+<dl>
+ <dt>{{domxref("AbortController.abort()")}}</dt>
+ <dd><p>DOMリクエストが完了する前に中断します。 これは、<a href="/ja/docs/Web/API/fetch">fetchリクエスト</a>、あらゆるレスポンスボディの消費、およびストリームを中断できます。</p></dd>
+</dl>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<p>この後の短いコードで、<a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> を使用してビデオをダウンロードします。</p>
+
+<p>まず {{domxref("AbortController.AbortController","AbortController()")}} コンストラクターを使ってコントローラーを生成し、{{domxref("AbortController.signal")}} プロパティを使用して関連する {{domxref("AbortSignal")}} オブジェクトへの参照を取得します。</p>
+
+<p><a href="/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch">読み込みリクエスト</a> が初期化すると、リクエストのオプションオブジェクト (下記 <code>{signal}</code> を参照) の内部のオプションとして <code>AbortSignal</code> を渡します。これによりシグナルと読み込みリクエストのコントローラーは関連付き、{{domxref("AbortController.abort()")}} を呼び出すことで下記の 2 つ目のイベントリスナーに見られるように中断が許可されます。</p>
+
+<pre class="brush: js">var controller = new AbortController();
+var signal = controller.signal;
+
+var downloadBtn = document.querySelector('.download');
+var abortBtn = document.querySelector('.abort');
+
+downloadBtn.addEventListener('click', fetchVideo);
+
+abortBtn.addEventListener('click', function() {
+  controller.abort();
+  console.log('Download aborted');
+});
+
+function fetchVideo() {
+  ...
+  fetch(url, {signal}).then(function(response) {
+    ...
+  }).catch(function(e) {
+    reports.textContent = 'Download error: ' + e.message;
+  })
+}</pre>
+
+<div class="note">
+<p><strong>注記</strong>: <code>abort()</code> が呼ばれると、<code>fetch()</code> promise は <code>AbortError</code> と呼ばれる <code>DOMException</code> で失敗します。</p>
+</div>
+
+<p>GitHub で完全に動作する例を見ることができます — <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a> (または <a href="https://mdn.github.io/dom-examples/abort-api/">実際に動作する様子</a> を参照) を参照してください。</p>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#interface-AbortController', 'AbortController')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザの実装状況</h2>
+
+<p>{{Compat("api.AbortController")}}</p>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Fetch_API">Fetch API</a></li>
+ <li>Jake Archibald による <a href="https://developers.google.com/web/updates/2017/09/abortable-fetch">Abortable Fetch</a></li>
+</ul>
