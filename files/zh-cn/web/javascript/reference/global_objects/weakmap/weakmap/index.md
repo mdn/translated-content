@@ -10,37 +10,28 @@ tags:
 browser-compat: javascript.builtins.WeakMap.WeakMap
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 ---
+
 {{JSRef}}
 
 **`WeakMap()`** 会创建一个 `WeakMap` 对象，该对象是一组键/值对的集合，其中的键是弱引用的。其键必须是对象，而值可以是任意的。
 
-
-
 你可以从这里了解更多关于 `WeakMap` 的内容 [WeakMap 对象](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections)
-
-
 
 ## 语法
 
 ```js
-  new WeakMap()
-  new WeakMap([iterable])
+new WeakMap();
+new WeakMap([iterable]);
 ```
 
-
-
 ## 参数
-
-
 
 - `iterable`
   - Iterable 是一个数组（二元数组）或者其他可迭代的且其元素是键值对的对象。每个键值对会被加到新的 WeakMap 里。null 会被当做 undefined。
 
-
-
 ## 示例
 
-### 使用 `WeakMap` 
+### 使用 `WeakMap`
 
 ```JavaScript
 const wm1 = new WeakMap(),
@@ -72,8 +63,6 @@ wm1.delete(o1);
 wm1.has(o1);   // false
 ```
 
-
-
 ## 规范
 
 {{Specifications}}
@@ -89,4 +78,4 @@ wm1.has(o1);   // false
 - [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/weblog/53/)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
--  {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet")}}
