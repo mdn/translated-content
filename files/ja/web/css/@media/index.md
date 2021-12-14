@@ -3,7 +3,7 @@ title: '@media'
 slug: Web/CSS/@media
 tags:
   - '@media'
-  - アット規則
+  - アットルール
   - CSS
   - 条件付き
   - リファレンス
