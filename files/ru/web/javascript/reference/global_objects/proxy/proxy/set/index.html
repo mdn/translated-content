@@ -18,7 +18,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="brush: js notranslate">var p = new Proxy(target, {
+<pre class="brush: js">var p = new Proxy(target, {
   set: function(target, property, value, receiver) {
   }
 });
@@ -82,7 +82,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 
 <p><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Следующий код перехватывает установку значения свойству</span></span></span><span lang="ru"><span>.</span></span></p>
 
-<pre class="brush: js notranslate">var p = new Proxy({}, {
+<pre class="brush: js">var p = new Proxy({}, {
   set: function(target, prop, value, receiver) {
     target[prop] = value
     console.log('property set: ' + prop + ' = ' + value)

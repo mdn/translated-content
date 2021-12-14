@@ -2,11 +2,6 @@
 title: Explorer un tableau HTML avec des interfaces DOM et JavaScript
 slug: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-tags:
-  - DOM
-  - Guide
-  - HTML
-  - JavaScript
 translation_of: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
@@ -17,7 +12,7 @@ Cet article propose une vue d'ensemble de certaines méthodes DOM Level 1 fondam
 
 > **Note :**Les méthodes décrites ici font partie de la spécification Document Object Model level 1 (Core). DOM level 1 comprend des méthodes destinées à l'accès et à la manipulation des documents (DOM 1 core) ainsi que des méthodes spécifiques aux documents HTML (DOM 1 HTML).
 
-## Exemple: Création d'un tableau HTML dynamiquement (`Sample1.html`)
+## Création d'un tableau HTML dynamiquement
 
 ### Contenu HTML
 
@@ -64,7 +59,7 @@ function generate_table() {
 }
 ```
 
-{{ EmbedLiveSample('Overview_of_Sample1.html') }}
+{{ EmbedLiveSample('Création_d\'un_tableau_HTML_dynamiquement') }}
 
 Remarquez l'ordre dans lequel les éléments et le nœud texte sont créés :
 
@@ -113,7 +108,7 @@ Voici l'arborescence objet DOM créée par le code, pour l'élément TABLE et se
 
 Vous pouvez construire ce tableau ainsi que ses éléments enfants internes en utilisant juste quelques méthodes DOM. Conservez à l'esprit le modèle en arbre des structures que vous comptez créer, cela rendra plus facile l'écriture du code nécessaire. Dans l'arbre \<table> de la figure 1, l'élément \<table> a un enfant, l'élément \<tbody>, qui lui-même a deux enfants \<tr>, qui à leur tour ont chacun un enfant \<td>. Enfin, chacun de ces éléments \<td> a un enfant, un nœud texte.
 
-## Exemple : Définition de la couleur d'arrière-plan d'un paragraphe
+## Définition de la couleur d'arrière-plan d'un paragraphe
 
 `getElementsByTagName` est à la fois une méthode de l'interface Document et de l'interface Element. Lorsqu'il est appelé, il renvoie un tableau avec tous les descendants de l'élément correspondant au nom de l'étiquette. Le premier élément de la liste se trouve à la position \[0] dans le tableau.
 
@@ -144,13 +139,13 @@ function set_background() {
 }
 ```
 
-{{ EmbedLiveSample('Setting_background_of_a_paragraph') }}
+{{ EmbedLiveSample('Définition_de_la_couleur_d\'arrière-plan_d\'un_paragraphe') }}
 
 Dans cet exemple, on assigne à la variable `myP` l'objet DOM du second élément `p` du corps (body).
 
 1.  On récupère d'abord une liste de tous les éléments body avec
 
-    ```html
+    ```js
     myBody = document.getElementsByTagName("body")[0]
     ```
 
@@ -158,13 +153,13 @@ Dans cet exemple, on assigne à la variable `myP` l'objet DOM du second élémen
 
 2.  Ensuite, on récupère tous les éléments p qui sont des enfants de body en utilisant
 
-    ```html
+    ```js
     myBodyElements = myBody.getElementsByTagName("p");
     ```
 
 3.  Pour finir on prend le deuxième élément de la liste des éléments p avec
 
-    ```html
+    ```js
     myP = myBodyElements[1];
     ```
 

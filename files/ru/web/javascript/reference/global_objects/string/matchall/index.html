@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><var>str</var>.matchAll(<var>regexp</var>)</pre>
+<pre class="syntaxbox"><var>str</var>.matchAll(<var>regexp</var>)</pre>
 
 <h3 id="Параметры">Параметры</h3>
 
@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 
 <p>До добавления метода <code>matchAll</code> в JavaScript, можно было использовать метод <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">regexp.exec</a> (и регулярные выражения с флагом <code>/g</code> ) в цикле для получения доступа к совпадениям:</p>
 
-<pre class="brush: js notranslate">const regexp = RegExp('foo*','g');
+<pre class="brush: js">const regexp = RegExp('foo*','g');
 const str = 'table football, foosball';
 
 while ((matches = regexp.exec(str)) !== null) {
@@ -52,7 +52,7 @@ while ((matches = regexp.exec(str)) !== null) {
 <p>С появлением <code>matchAll</code>, нет необходимости использовать цикл <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a></code> и метод <code>exec</code> с флагом <code>/g</code>.<br>
  Используя вместо этого метод <code>matchAll</code>, вы получаете итератор, который вы можете использовать более удобно с конструкциями <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code>, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">array spread</a>, или {{jsxref("Array.from()")}} :</p>
 
-<pre class="brush: js notranslate">const regexp = RegExp('foo*','g');
+<pre class="brush: js">const regexp = RegExp('foo*','g');
 const str = 'table football, foosball';
 let matches = str.matchAll(regexp);
 
@@ -74,7 +74,7 @@ Array.from(matches, m =&gt; m[0]);
 
 <p>Ещё одна веская причина использовать <code>matchAll</code> это улучшенный доступ к группам захвата. Группы захвата игнорируются при использовании <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match">match()</a></code> с глобальным флагом <code>/g</code>:</p>
 
-<pre class="brush: js notranslate">var regexp = /t(e)(st(\d?))/g;
+<pre class="brush: js">var regexp = /t(e)(st(\d?))/g;
 var str = 'test1test2';
 
 str.match(regexp);
@@ -82,7 +82,7 @@ str.match(regexp);
 
 <p>С <code>matchAll</code> у вас появляется к ним доступ:</p>
 
-<pre class="brush: js notranslate">let array = [...str.matchAll(regexp)];
+<pre class="brush: js">let array = [...str.matchAll(regexp)];
 
 array[0];
 // ['test1', 'e', 'st1', '1', index: 0, input: 'test1test2', length: 4]
@@ -92,21 +92,10 @@ array[1];
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-  </tr>
-  <tr>
-   <td><a href="https://tc39.github.io/proposal-string-matchall/#sec-string-prototype-matchall">String.prototype.matchAll</a></td>
-   <td>Stage 3</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
-<p>{{Compat("javascript.builtins.String.matchAll")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

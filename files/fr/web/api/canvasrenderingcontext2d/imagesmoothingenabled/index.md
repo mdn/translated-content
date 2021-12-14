@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.imageSmoothingEnabled
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
-tags:
-  - API
-  - Canevas
-  - Canvas
-  - CanvasRenderingContext2D
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 ---
 {{APIRef}} {{SeeCompatTable}}
@@ -26,7 +18,7 @@ Cette propriété est utile pour les jeux à thème pixel-art, lors d'une mise 
 - `valeur`
   - : Un {{jsxref("Boolean")}} indiquant de lisser les images ou non.
 
-## exemples
+## Exemples
 
 ### Désactiver le lissage d'image
 
@@ -68,7 +60,7 @@ img.onload = function() {
 
 #### Résultat
 
-{{ EmbedLiveSample('désactiver_le_lissage_d_image', 700, 240) }}
+{{ EmbedLiveSample('Exemples', 700, 240) }}
 
 ## Spécifications
 

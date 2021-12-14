@@ -1,12 +1,6 @@
 ---
 title: CanvasRenderingContext2D.scale()
 slug: Web/API/CanvasRenderingContext2D/scale
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Méthode
-  - Référence(2)
 translation_of: Web/API/CanvasRenderingContext2D/scale
 ---
 {{APIRef}}
@@ -93,7 +87,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ### Utilisation de `scale` pour un retournement horizontal ou vertical
 
@@ -140,7 +134,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable_2', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable_2', 700, 360) }}
 
 ## Spécifications
 

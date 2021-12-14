@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 
 <p><strong>空值合并操作符</strong>（<strong><code>??</code></strong>）是一个逻辑操作符，当左侧的操作数为 {{jsxref("null")}} 或者 {{jsxref("undefined")}} 时，返回其右侧操作数，否则返回左侧操作数。</p>
 
-<p>与<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2">逻辑或操作符（<code>||</code>）</a>不同，逻辑或操作符会在左侧操作数为{{Glossary("Falsy", "假值")}}时返回右侧操作数。也就是说，如果使用 <code>||</code> 来为某些变量设置默认值，可能会遇到意料之外的行为。比如为假值（例如，<code>''</code> 或 <code>0</code>）时。见下面的例子。</p>
+<p>与<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR">逻辑或操作符（<code>||</code>）</a>不同，逻辑或操作符会在左侧操作数为{{Glossary("Falsy", "假值")}}时返回右侧操作数。也就是说，如果使用 <code>||</code> 来为某些变量设置默认值，可能会遇到意料之外的行为。比如为假值（例如，<code>''</code> 或 <code>0</code>）时。见下面的例子。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}</div>
 
@@ -46,7 +46,7 @@ console.log(valC); // 42</pre>
 
 <h3 id="为变量赋默认值">为变量赋默认值</h3>
 
-<p>以前，如果想为一个变量赋默认值，通常的做法是使用逻辑或操作符（<code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2">||</a></code>）：</p>
+<p>以前，如果想为一个变量赋默认值，通常的做法是使用逻辑或操作符（<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR">||</a></code>）：</p>
 
 <pre class="brush: js notranslate">let foo;
 
@@ -94,7 +94,7 @@ console.log( B() ?? C() );
 
 <h3 id="不能与_AND_或_OR_操作符共用">不能与 AND 或 OR 操作符共用</h3>
 
-<p>将 <code>??</code> 直接与 AND（<code>&amp;&amp;</code>）和 OR（<code>||</code>）操作符组合使用是不可取的。（译者注：应当是因为空值合并操作符和其他逻辑操作符之间的运算优先级/运算顺序是未定义的）这种情况下会抛出 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code> 。</p>
+<p>将 <code>??</code> 直接与 AND（<code>&amp;&amp;</code>）和 OR（<code>||</code>）操作符组合使用是不可取的。（译者注：应当是因为空值合并操作符和其他逻辑操作符之间的运算优先级/运算顺序是未定义的）这种情况下会抛出 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code> 。</p>
 
 <pre class="brush: js example-bad notranslate">null || undefined ?? "foo"; // 抛出 SyntaxError
 true || undefined ?? "foo"; // 抛出 SyntaxError</pre>
@@ -106,7 +106,7 @@ true || undefined ?? "foo"; // 抛出 SyntaxError</pre>
 
 <h3 id="与可选链式操作符（.）的关系">与可选链式操作符（<code>?.</code>）的关系</h3>
 
-<p>空值合并操作符针对 <code>undefined</code> 与 <code>null</code> 这两个值，<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">可选链式操作符（<code>?.</code>）</a> 也是如此。在这访问属性可能为 <code>undefined</code> 与 <code>null</code> 的对象时，可选链式操作符非常有用。</p>
+<p>空值合并操作符针对 <code>undefined</code> 与 <code>null</code> 这两个值，<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining">可选链式操作符（<code>?.</code>）</a> 也是如此。在这访问属性可能为 <code>undefined</code> 与 <code>null</code> 的对象时，可选链式操作符非常有用。</p>
 
 <pre class="brush: js notranslate">let foo = { someFooProp: "hi" };
 
@@ -143,7 +143,7 @@ console.log(foo.someBarProp?.toUpperCase()); // undefined
 
 <ul>
  <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining">可选链操作符</a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2">逻辑或操作符（<code>||</code>）</a></li>
+ <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR">逻辑或操作符（<code>||</code>）</a></li>
  <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters">函数中的默认参数值</a></li>
 </ul>
 

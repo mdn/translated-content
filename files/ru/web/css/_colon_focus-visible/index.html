@@ -19,14 +19,14 @@ translation_of: 'Web/CSS/:focus-visible'
 
 <p>В этом примере селектор <code>:focus-visible</code> использует поведение UA, чтобы определить, когда соответствовать. Сравните, что происходит, когда вы щёлкаете мышью по разным элементам управления, и что происходит при переходе по ним с помощью клавиатуры. Обратите внимание на разницу в поведении элементов, оформленных с помощью <code>:focus</code>.</p>
 
-<pre class="brush: html notranslate">&lt;input value="Default styles"&gt;&lt;br&gt;
+<pre class="brush: html">&lt;input value="Default styles"&gt;&lt;br&gt;
 &lt;button&gt;Default styles&lt;/button&gt;&lt;br&gt;
 &lt;input class="focus-only" value=":focus only"&gt;&lt;br&gt;
 &lt;button class="focus-only"&gt;:focus only&lt;/button&gt;&lt;br&gt;
 &lt;input class="focus-visible-only" value=":focus-visible only"&gt;&lt;br&gt;
 &lt;button class="focus-visible-only"&gt;:focus-visible only&lt;/button&gt;</pre>
 
-<pre class="brush: css highlight[9] notranslate">input, button {
+<pre class="brush: css highlight[9]">input, button {
   margin: 10px;
 }
 
@@ -39,15 +39,15 @@ translation_of: 'Web/CSS/:focus-visible'
 }
 </pre>
 
-<p>{{EmbedLiveSample("Basic_example", "100%", 300)}}</p>
+<p>{{EmbedLiveSample("Базовый_пример", "100%", 300)}}</p>
 
 <h3 id="Выборочное_отображение_индикатора_фокусировки">Выборочное отображение индикатора фокусировки</h3>
 
 <p>Пользовательский элемент управления, такой как кнопка <a href="/en-US/docs/User:Andreas_Wuest/Custom_Elements">настраиваемого элемента</a>, может использовать: focus-visible для выборочного применения индикатора фокуса только к фокусу клавиатуры. Это соответствует собственному поведению фокуса для таких элементов управления, как {{htmlelement ("button")}}.</p>
 
-<pre class="brush: html notranslate">&lt;custom-button tabindex="0" role="button"&gt;Click Me&lt;/custom-button&gt;</pre>
+<pre class="brush: html">&lt;custom-button tabindex="0" role="button"&gt;Click Me&lt;/custom-button&gt;</pre>
 
-<pre class="brush: css highlight[13, 19] notranslate">custom-button {
+<pre class="brush: css highlight[13, 19]">custom-button {
   display: inline-block;
   margin: 10px;
 }
@@ -73,7 +73,7 @@ custom-button:focus-visible {
   background: transparent;
 }</pre>
 
-<p>{{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 300)}}</p>
+<p>{{EmbedLiveSample("Выборочное_отображение_индикатора_фокусировки", "100%", 300)}}</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -116,7 +116,7 @@ custom-button:focus-visible {
 
 
 
-<p>{{Compat("css.selectors.focus-visible")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

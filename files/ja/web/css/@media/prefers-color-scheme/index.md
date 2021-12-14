@@ -4,14 +4,14 @@ slug: Web/CSS/@media/prefers-color-scheme
 tags:
   - '@media'
   - CSS
-  - Reference
-  - Web
+  - リファレンス
+  - ウェブ
   - メディア特性
   - prefers-color-scheme
 browser-compat: css.at-rules.media.prefers-color-scheme
 translation_of: Web/CSS/@media/prefers-color-scheme
 ---
-**`prefers-color-scheme`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#media_features)で、ユーザーがシステムに要求したカラーテーマが明色か暗色かを検出するために使用します。
+**`prefers-color-scheme`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーがシステムに要求したカラーテーマが明色か暗色かを検出するために使用します。
 
 ユーザーはオペレーティングシステムの設定 (ライトまたはダークモードなど) やユーザーエージェントの設定で、この設定を示す場合があります。
 
@@ -21,9 +21,8 @@ translation_of: Web/CSS/@media/prefers-color-scheme
   - : ユーザーがシステムに、明色のテーマを持つインターフェイスにしたいと通知したか、アクティブな設定を示さなかったことを示します。
 - `dark`
   - : ユーザーがシステムに、暗色のテーマを持つインターフェイスにしたいと通知したことを示します。
-</dl>
 
-<h2 id="Examples">例</h3>
+## 例
 
 以下の要素は初期の色のテーマを持っています。これらの要素は、ユーザーの配色の好みに応じて、さらにテーマを設定することができます。
 

@@ -3,12 +3,12 @@ title: mask-border-slice
 slug: Web/CSS/mask-border-slice
 tags:
   - CSS
-  - CSS Masking
+  - CSS マスク
   - CSS プロパティ
   - 実験的
   - NeedsCompatTable
   - NeedsExample
-  - Reference
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.mask-border-slice
 translation_of: Web/CSS/mask-border-slice
@@ -64,7 +64,7 @@ mask-border-slice: unset;
 
 分割する過程で、4 つの角、4 つの辺、それに中央領域の計 9 つの領域を作成します。それぞれの辺からの距離で設定される 4 本の分割線が、領域の寸法を制御します。
 
-[![The nine regions defined by the border-image or border-image-slice properties](border-image-slice.png)](border-image-slice.png)
+[![border-image または border-image-slice プロパティで定義された 9 つの領域](border-image-slice.png)](border-image-slice.png)
 
 上の図は、それぞれの領域の位置を説明しています。
 
@@ -118,4 +118,4 @@ Chromium ベースのブラウザーは、このプロパティの古い版 — 
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
-- [Illustrated description of the 1-to-4-value syntax](/ja/docs/Web/CSS/Shorthand_properties#tricky_edge_cases)
+- [値 1 ～ 4 つの構文の説明](/ja/docs/Web/CSS/Shorthand_properties#tricky_edge_cases)

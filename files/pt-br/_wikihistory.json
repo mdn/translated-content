@@ -7654,6 +7654,14 @@
       "Sebastianz"
     ]
   },
+  "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
+    "modified": "2020-08-20T10:01:26.706Z",
+    "contributors": [
+      "felipecesr",
+      "cris-luz-07",
+      "jorgeclesio"
+    ]
+  },
   "Web/CSS/CSS_Display": {
     "modified": "2020-10-15T22:22:39.686Z",
     "contributors": [
@@ -7749,14 +7757,6 @@
     "modified": "2019-03-23T22:45:37.305Z",
     "contributors": [
       "teoli"
-    ]
-  },
-  "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
-    "modified": "2020-08-20T10:01:26.706Z",
-    "contributors": [
-      "felipecesr",
-      "cris-luz-07",
-      "jorgeclesio"
     ]
   },
   "Web/CSS/CSS_Positioning": {

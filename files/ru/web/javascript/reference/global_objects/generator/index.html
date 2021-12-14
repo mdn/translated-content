@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 
 <p>Этот объект не может быть инстанциирован напрямую. Вместо этого, экземпляр <code>Generator</code> может быть возвращён из <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction">функции-генератора</a>:</p>
 
-<pre class="notranslate line-numbers language-html">function* generator() {
+<pre class="line-numbers language-html">function* generator() {
   yield 1;
   yield 2;
   yield 3;
@@ -47,7 +47,7 @@ console.log(generator().next().value); // 1</pre>
 
 <h3 id="Бесконечный_Итератор">Бесконечный Итератор</h3>
 
-<pre class="brush: js notranslate">function* idMaker() {
+<pre class="brush: js">function* idMaker() {
     var index = 0;
     while(true)
         yield index++;
@@ -62,31 +62,13 @@ console.log(gen.next().value); // 2
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-generator-objects', 'Generator objects')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-generator-objects', 'Generator objects')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость">Совместимость</h2>
 
 
 
-<p>{{Compat("javascript.builtins.Generator")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

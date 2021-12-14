@@ -1,11 +1,6 @@
 ---
 title: '::-moz-list-number'
 slug: Web/CSS/:-moz-list-number
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/:-moz-list-number
 original_slug: Web/CSS/::-moz-list-number
 ---
@@ -40,7 +35,7 @@ li::-moz-list-number {
 
 ### Résultat
 
-{{EmbedLiveSample("Exemple")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 

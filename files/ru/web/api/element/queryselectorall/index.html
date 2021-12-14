@@ -9,7 +9,7 @@ translation_of: Web/API/Element/querySelectorAll
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><em>elementList</em> = baseElement.querySelectorAll(<em>selectors</em>);
+<pre class="syntaxbox"><em>elementList</em> = baseElement.querySelectorAll(<em>selectors</em>);
 </pre>
 
 <p>где</p>
@@ -24,18 +24,18 @@ translation_of: Web/API/Element/querySelectorAll
 
 <p>Этот пример возвращает список всех элементов с тегом p, которые находятся в теле документа:</p>
 
-<pre class="brush: js notranslate">var matches = document.body.querySelectorAll('p');
+<pre class="brush: js">var matches = document.body.querySelectorAll('p');
 </pre>
 
 <p>Этот пример возвращает список всех элементов с тегом p, которые находятся непосредственно в элементах-контейнерах с тегом div, имеющих класс 'highlighted', которые в свою очередь находятся внутри элемента с идентификатором 'test':</p>
 
-<pre class="brush:js notranslate">var el = document.querySelector('#test');
+<pre class="brush:js">var el = document.querySelector('#test');
 var matches = el.querySelectorAll('div.highlighted &gt; p');
 </pre>
 
 <p>Этот пример возвращает список всех элементов iframe, которые имеют атрибут "data-src":</p>
 
-<pre class="brush: js notranslate">var matches = el.querySelectorAll('iframe[data-src]');
+<pre class="brush: js">var matches = el.querySelectorAll('iframe[data-src]');
 </pre>
 
 <h2 id="Notes">Примечания</h2>
@@ -52,7 +52,7 @@ var matches = el.querySelectorAll('div.highlighted &gt; p');
 
 <div></div>
 
-<p>{{Compat("api.Element.querySelectorAll")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Specification">Ссылки на спецификации</h2>
 

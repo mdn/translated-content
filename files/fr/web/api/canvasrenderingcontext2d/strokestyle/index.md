@@ -87,7 +87,7 @@ textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ### Un exemple `strokeStyle`
 
@@ -113,7 +113,7 @@ for (var i = 0; i < 6; i++) {
 
 Le résultat devrait ressembler à ça:
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
+{{EmbedLiveSample("Un_exemple_strokeStyle", "180", "180", "canvas_strokestyle.png")}}
 
 ## Spécifications
 

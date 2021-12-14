@@ -278,7 +278,8 @@
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-/ru/docs/Plugins/План	/ru/docs/Plugins/Roadmap
+/ru/docs/Plugins/Roadmap	/ru/docs/Glossary/Plugin
+/ru/docs/Plugins/План	/ru/docs/Glossary/Plugin
 /ru/docs/Quirks_Mode_and_Standards_Mode	/ru/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /ru/docs/SVG_In_HTML_Introduction	/ru/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /ru/docs/Sample_.htaccess_file	/ru/docs/Learn/Server-side/Apache_Configuration_htaccess
@@ -363,6 +364,8 @@
 /ru/docs/Web/API/PositionError	/ru/docs/Web/API/GeolocationPositionError
 /ru/docs/Web/API/PositionOptions	/ru/docs/conflicting/Web/API/Geolocation/getCurrentPosition
 /ru/docs/Web/API/RandomSource/getRandomValues	/ru/docs/Web/API/Crypto/getRandomValues
+/ru/docs/Web/API/USB/onconnect	/ru/docs/Web/API/USB/connect_event
+/ru/docs/Web/API/USB/ondisconnect	/ru/docs/Web/API/USB/disconnect_event
 /ru/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ru/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ru/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
@@ -404,7 +407,8 @@
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_генератор	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Множественные_фоны	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-/ru/docs/Web/CSS/CSS_Basic_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ru/docs/conflicting/Web/CSS/cursor
+/ru/docs/Web/CSS/CSS_Basic_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /ru/docs/Web/CSS/CSS_Colors	/ru/docs/Web/CSS/CSS_Color
 /ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере	/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
@@ -413,7 +417,8 @@
 /ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 /ru/docs/Web/CSS/CSS_Grid_Layout/Грид-области	/ru/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 /ru/docs/Web/CSS/CSS_Grid_Layout/Расположение_элементов_по_грид-линиям_с_помощью_CSS_Grid	/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
-/ru/docs/Web/CSS/CSS_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/ru/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
+/ru/docs/Web/CSS/CSS_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_animated_properties	/ru/docs/Web/CSS
 /ru/docs/Web/CSS/CSS_Селекторы	/ru/docs/Web/CSS/CSS_Selectors
 /ru/docs/Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_selectors	/ru/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors

@@ -580,6 +580,7 @@
 /pt-BR/docs/Web/CSS/CSS_Colors/seletor_de_cores	/pt-BR/docs/Web/CSS/CSS_Colors/Color_picker_tool
 /pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceitos_Basicos_do_Flexbox	/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /pt-BR/docs/Web/CSS/CSS_Images/Implementando_sprites_de_imagens_em_CSS	/pt-BR/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
+/pt-BR/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/pt-BR/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /pt-BR/docs/Web/CSS/CSS_Reference	/pt-BR/docs/Web/CSS/Reference
 /pt-BR/docs/Web/CSS/CSS_Reference/mix-blend-mode	/pt-BR/docs/Web/CSS/mix-blend-mode
 /pt-BR/docs/Web/CSS/CSS_Tipos	/pt-BR/docs/Web/CSS/CSS_Types

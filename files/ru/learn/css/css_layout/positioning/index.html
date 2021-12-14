@@ -38,11 +38,11 @@ translation_of: Learn/CSS/CSS_layout/Positioning
 
 <p>Чтобы продемонстрировать это и настроить ваш образец для будущих разделов, сначала добавьте <code>class</code> <code>positioned</code> ко второму {{htmlelement("p")}} в HTML:</p>
 
-<pre class="brush: html   notranslate">&lt;p class="positioned"&gt; ... &lt;/p&gt;</pre>
+<pre class="brush: html  ">&lt;p class="positioned"&gt; ... &lt;/p&gt;</pre>
 
 <p>А теперь добавьте следующее правило в конец вашего CSS:</p>
 
-<pre class="brush: css   notranslate">.positioned {
+<pre class="brush: css  ">.positioned {
   position: static;
   background: yellow;
 }</pre>
@@ -57,7 +57,7 @@ translation_of: Learn/CSS/CSS_layout/Positioning
 
 <p>Относительное позиционирование первый тип позиции, который мы рассмотрим. Оно очень похоже на статическое позиционирование, за исключением того что вы можете модифицировать окончательное положение позиционируемого объекта занявшего своё место в макете нормального потока, в том числе заставлять его перекрывать другие элементы на странице. Двигайтесь далее и обновите объявление <code>position</code> в вашем коде:</p>
 
-<pre class="brush: css   notranslate">position: relative;</pre>
+<pre class="brush: css  ">position: relative;</pre>
 
 <p>Если вы сохраните и обновите на данном этапе, в результате вы совсем не увидите изменений. Так как же вам модифицировать положение? Вам необходимо использовать свойства {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, и {{cssxref("right")}} которые мы объясним в следующем разделе.</p>
 
@@ -65,7 +65,7 @@ translation_of: Learn/CSS/CSS_layout/Positioning
 
 <p>{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, и {{cssxref("right")}} используются вместе с {{cssxref("position")}} чтобы указать куда именно перемещать позиционируемый элемент. Для того чтобы попробовать, добавьте следующее объявление к правилу <code>.positioned</code> в вашем CSS:</p>
 
-<pre class="brush: css   notranslate">top: 30px;
+<pre class="brush: css  ">top: 30px;
 left: 30px;</pre>
 
 <div class="note">
@@ -75,7 +75,7 @@ left: 30px;</pre>
 <p>Если вы сейчас сохраните и обновите, вы получите примерно такой результат:</p>
 
 <div class="hidden">
-<pre class="brush: html   notranslate">&lt;h1&gt;Relative positioning&lt;/h1&gt;
+<pre class="brush: html  ">&lt;h1&gt;Relative positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -85,7 +85,7 @@ left: 30px;</pre>
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css  ">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -122,12 +122,12 @@ span {
 
 <p>Абсолютное позиционирование даёт совершенно другие результаты. Давайте попробуем изменить объявление позиции в вашем коде как показано ниже:</p>
 
-<pre class="brush: css   notranslate">position: absolute;</pre>
+<pre class="brush: css  ">position: absolute;</pre>
 
 <p>Если вы сохраните и обновите, то вы должны увидеть нечто подобное:</p>
 
 <div class="hidden">
-<pre class="brush: html   notranslate">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
+<pre class="brush: html  ">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -137,7 +137,7 @@ span {
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css  ">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -188,12 +188,12 @@ span {
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Позиционируемый элемент вложен в {{htmlelement ("body")}} в исходном HTML, но в конечном макете он расположен на </span></span>30px от верхнего и левого края страницы. Мы можем изменить <strong>контекст </strong> <strong>позиционирования </strong>— относительно какого элемента позиционируется позиционируемый элемент. <span class="tlid-translation translation" lang="ru"><span title="">Это делается путём установки позиционирования на одном из предков элемента </span></span>— <span class="tlid-translation translation" lang="ru"><span title="">на один из элементов, внутри которого он вложен (вы не можете позиционировать его относительно элемента, внутри которого он НЕ вложен).</span> <span title="">Чтобы продемонстрировать это, добавьте следующее объявление в правило вашего </span></span><code>body</code><span class="tlid-translation translation" lang="ru"><span title="">:</span></span></p>
 
-<pre class="brush: css   notranslate">position: relative;</pre>
+<pre class="brush: css  ">position: relative;</pre>
 
 <p>Это должно дать следующий результат:</p>
 
 <div class="hidden">
-<pre class="brush: html   notranslate">&lt;h1&gt;Positioning context&lt;/h1&gt;
+<pre class="brush: html  ">&lt;h1&gt;Positioning context&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -203,7 +203,7 @@ span {
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css  ">body {
   width: 500px;
   margin: 0 auto;
   position: relative;
@@ -243,7 +243,7 @@ span {
 
 <p>Попробуйте добавить следующий CSS, чтобы сделать первый параграф так же абсолютно позиционированным:</p>
 
-<pre class="brush: css   notranslate">p:nth-of-type(1) {
+<pre class="brush: css  ">p:nth-of-type(1) {
   position: absolute;
   background: lime;
   top: 10px;
@@ -258,12 +258,12 @@ span {
 
 <p>Для того чтобы изменить порядок наложения, попробуйте объявить для вашего <code>p:nth-of-type(1)</code> правила:</p>
 
-<pre class="brush: css   notranslate">z-index: 1;</pre>
+<pre class="brush: css  ">z-index: 1;</pre>
 
 <p>Теперь вы должны видеть законченный пример, с параграфом лаймового цвета сверху:</p>
 
 <div class="hidden">
-<pre class="brush: html   notranslate">&lt;h1&gt;z-index&lt;/h1&gt;
+<pre class="brush: html  ">&lt;h1&gt;z-index&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -273,7 +273,7 @@ span {
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css  ">body {
   width: 500px;
   margin: 0 auto;
   position: relative;
@@ -324,7 +324,7 @@ p:nth-of-type(1) {
 
 <p>А теперь, обновите правило <code>body</code> удалив объявление <code>position: relative;</code> и добавьте фиксированную высоту как тут:</p>
 
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css  ">body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -332,7 +332,7 @@ p:nth-of-type(1) {
 
 <p>Теперь мы собираемся дать элементу {{htmlelement("h1")}} <code>position: fixed;</code>, а также заставить его располагаться на верху окна просмотра. Добавьте следующее правило в ваш CSS:</p>
 
-<pre class="brush: css   notranslate">h1 {
+<pre class="brush: css  ">h1 {
   position: fixed;
   top: 0;
   width: 500px;
@@ -345,14 +345,14 @@ p:nth-of-type(1) {
 
 <p>Если вы сохраните и обновите сейчас, вы увидите маленький забавный эффект, <span class="tlid-translation translation" lang="ru"><span title="">при котором заголовок останется неизменным, а содержимое будет прокручиваться вверх и исчезать под ним.</span></span> Но мы можем улучшить это — в данный момент некоторый контент начинается под заголовком. Это из-за того, что позиционируемый заголовок больше не появляется в потоке документа, поэтому остальное содержимое поднимается наверх. Нам надо сдвинуть все это немного вниз; мы можем сделать это установив немного верхнего margin к первому параграфу. Добавьте его сейчас:</p>
 
-<pre class="brush: css   notranslate">p:nth-of-type(1) {
+<pre class="brush: css  ">p:nth-of-type(1) {
   margin-top: 60px;
 }</pre>
 
 <p>Теперь вы должны видеть законченный пример:</p>
 
 <div class="hidden">
-<pre class="brush: html   notranslate">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
+<pre class="brush: html  ">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -362,7 +362,7 @@ p:nth-of-type(1) {
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css  ">body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -407,7 +407,7 @@ p:nth-of-type(1) {
 <div class="hidden">
 <h6 id="Sticky_positioning_example">Sticky positioning example</h6>
 
-<pre class="brush: html   notranslate">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+<pre class="brush: html  ">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
 
@@ -417,7 +417,7 @@ p:nth-of-type(1) {
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;       </pre>
 
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css  ">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -431,7 +431,7 @@ p:nth-of-type(1) {
 }</pre>
 </div>
 
-<pre class="brush: css   notranslate">.positioned {
+<pre class="brush: css  ">.positioned {
   position: sticky;
   top: 30px;
   left: 30px;
@@ -442,7 +442,7 @@ p:nth-of-type(1) {
 
 <p>Интересное и общее использование <code>position: sticky</code> <span class="tlid-translation translation" lang="ru"><span title="">заключается </span></span>в создании индексных страниц <span class="tlid-translation translation" lang="ru"><span title="">с прокруткой, где разные заголовки липнут к верху страницы</span></span>, когда они достигают его. Разметка такого примера может выглядеть так:</p>
 
-<pre class="brush: html   notranslate">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+<pre class="brush: html  ">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
 
 &lt;dl&gt;
     &lt;dt&gt;A&lt;/dt&gt;
@@ -475,7 +475,7 @@ p:nth-of-type(1) {
 
 <p>CSS может выглядеть как показано ниже. В нормальном потоке элементы {{htmlelement("dt")}} будут прокручиваться вместе с контентом. Когда мы добавляем <code>position: sticky</code> к элементу {{htmlelement("dt")}}, вместе со значением {{cssxref("top")}} 0, поддерживающие браузеры будут приклеивать заголовки к вершине окна просмотра когда они будут достигать той позиции. каждый последующий заголовок будет затем заменять предыдущий при его прокрутке вверх к той позиции.</p>
 
-<pre class="brush: css   notranslate">dt {
+<pre class="brush: css  ">dt {
   background-color: black;
   color: white;
   padding: 10px;
@@ -488,7 +488,7 @@ p:nth-of-type(1) {
 
 <div id="Sticky_2">
 <div class="hidden">
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css  ">body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -505,7 +505,7 @@ dt {
 }
 </pre>
 
-<pre class="brush: html   notranslate">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+<pre class="brush: html  ">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
 
 &lt;dl&gt;
     &lt;dt&gt;A&lt;/dt&gt;

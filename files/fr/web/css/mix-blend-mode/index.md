@@ -1,10 +1,6 @@
 ---
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/mix-blend-mode
 ---
 {{CSSRef}}
@@ -559,7 +555,7 @@ html,body {
 .luminosity .item  { mix-blend-mode: luminosity; }
 ```
 
-{{EmbedLiveSample("exemples", "100%", 1600, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Exemples", "100%", 1600, "", "", "example-outcome-frame")}}
 
 ### Exemple avec SVG
 

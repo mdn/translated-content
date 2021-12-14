@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">let <var>new_array</var> = <var>arr</var>.map(function <var>callback</var>( <var>currentValue</var>[, <var>index</var>[, <var>array</var>]]) {
+<pre class="syntaxbox">let <var>new_array</var> = <var>arr</var>.map(function <var>callback</var>( <var>currentValue</var>[, <var>index</var>[, <var>array</var>]]) {
     // Возвращает элемент для new_array
 }[, <var>thisArg</var>])</pre>
 
@@ -69,7 +69,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <p>Следующий код берёт массив чисел и создаёт новый массив, содержащий квадратные корни чисел из первого массива.</p>
 
-<pre class="brush: js notranslate">var numbers = [1, 4, 9];
+<pre class="brush: js">var numbers = [1, 4, 9];
 var roots = numbers.map(Math.sqrt);
 // теперь roots равен [1, 2, 3], а numbers всё ещё равен [1, 4, 9]
 </pre>
@@ -78,7 +78,7 @@ var roots = numbers.map(Math.sqrt);
 
 <p>Следующий код показывает, как работает отображение, когда функция требует один аргумент. Аргумент будет автоматически присваиваться каждому элементу массива, когда <code>map</code> проходит по оригинальному массиву.</p>
 
-<pre class="brush: js notranslate">var numbers = [1, 4, 9];
+<pre class="brush: js">var numbers = [1, 4, 9];
 var doubles = numbers.map(function(num) {
   return num * 2;
 });
@@ -89,7 +89,7 @@ var doubles = numbers.map(function(num) {
 
 <p>Этот пример показывает, как использовать <code>map</code> на объекте строки {{jsxref("Global_Objects/String", "String")}} для получения массива байт в кодировке ASCII, представляющего значения символов:</p>
 
-<pre class="brush: js notranslate">var map = Array.prototype.map;
+<pre class="brush: js">var map = Array.prototype.map;
 var a = map.call('Hello World', function(x) { return x.charCodeAt(0); });
 // теперь a равен [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 </pre>
@@ -98,7 +98,7 @@ var a = map.call('Hello World', function(x) { return x.charCodeAt(0); });
 
 <p>Этот пример показывает, как пройтись по коллекции объектов, собранных с помощью <code>querySelectorAll</code>. В данном случае мы получаем все выбранные опции на экране и печатаем их в консоль:</p>
 
-<pre class="brush: js notranslate">var elems = document.querySelectorAll('select option:checked');
+<pre class="brush: js">var elems = document.querySelectorAll('select option:checked');
 var values = [].map.call(elems, function(obj) {
   return obj.value;
 });
@@ -108,7 +108,7 @@ var values = [].map.call(elems, function(obj) {
 
 <h3 id="Example_Using_map_to_reverse_a_string">Пример: использование <code>map</code> для переворачивания строки</h3>
 
-<pre class="brush: js notranslate">var str = '12345';
+<pre class="brush: js">var str = '12345';
 [].map.call(str, function(x) {
   return x;
 }).reverse().join('');
@@ -125,7 +125,7 @@ var values = [].map.call(elems, function(obj) {
 
 <p>Распространённой практикой является использование колбэк-функции с одним аргументом (элемент, над которым производится операция). Некоторые функции также широко используется с одним аргументом, хотя они принимают дополнительные необязательные аргументы. Эти привычки могут привести к неожиданному поведению программы.</p>
 
-<pre class="brush: js notranslate">// Рассмотрим пример:
+<pre class="brush: js">// Рассмотрим пример:
 ['1', '2', '3'].map(parseInt);
 // Хотя ожидаемый результат вызова равен [1, 2, 3],
 // в действительности получаем [1, NaN, NaN]
@@ -152,7 +152,7 @@ function returnInt(element) {
 
 <p>Метод <code>map</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>map</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; он предполагает, что {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}} и {{jsxref("Global_Objects/Array", "Array")}} имеют свои первоначальные значения и что <code>callback.call</code> вычисляется в оригинальное значение {{jsxref("Function.prototype.call")}}.</p>
 
-<pre class="brush: js notranslate">// Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.19
+<pre class="brush: js">// Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.19
 // Ссылка (en): http://es5.github.com/#x15.4.4.19
 // Ссылка (ru): http://es5.javascript.ru/x15.4.html#x15.4.4.19
 if (!Array.prototype.map) {
@@ -247,30 +247,12 @@ if (!Array.prototype.map) {
 
 <h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.19', 'Array.prototype.map')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.map', 'Array.prototype.map')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 <div>
-<p>{{Compat("javascript.builtins.Array.map")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="See_also">Смотрите также</h2>

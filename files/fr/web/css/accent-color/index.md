@@ -70,7 +70,7 @@ input.custom {
 
 #### Résultat
 
-{{EmbedLiveSample('Setting_a_custom_accent_color', 500, 200)}}
+{{EmbedLiveSample('Exemples', 500, 200)}}
 
 ## Spécifications
 

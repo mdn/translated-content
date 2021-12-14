@@ -15,7 +15,7 @@ translation_of: Web/API/WindowEventHandlers/onpopstate
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">window.onpopstate = <var>funcRef</var>;
+<pre class="syntaxbox">window.onpopstate = <var>funcRef</var>;
 </pre>
 
 <ul>
@@ -26,7 +26,7 @@ translation_of: Web/API/WindowEventHandlers/onpopstate
 
 <p>В качестве примера, страница <code>http://example.com/example.html</code>, исполняя нижеследующий код, сгенерирует всплывающие сообщения, как показано в комментариях:</p>
 
-<pre class="brush:js notranslate">window.onpopstate = function(event) {
+<pre class="brush:js">window.onpopstate = function(event) {
   alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
 };
 
@@ -48,7 +48,7 @@ history.go(2);  // alerts "location: http://example.com/example.html?page=3, sta
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowEventHandlers.onpopstate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">Смотрите также</h2>
 

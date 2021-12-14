@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">new Proxy(<var>target</var>, <var>handler</var>)</pre>
+<pre class="syntaxbox">new Proxy(<var>target</var>, <var>handler</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -77,7 +77,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 
 <p>In this example the target has two properties, <code>notProxied</code> and <code>proxied</code>. We define a handler that returns a different value for <code>proxied</code>, and lets any other accesses through to the target.</p>
 
-<pre class="brush: js notranslate">const target = {
+<pre class="brush: js">const target = {
   notProxied: "original value",
   proxied: "original value"
 };
@@ -115,7 +115,7 @@ console.log(proxy.proxied);    // "replaced value"</pre>
 
 
 
-<p>{{Compat("javascript.builtins.Proxy.Proxy")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

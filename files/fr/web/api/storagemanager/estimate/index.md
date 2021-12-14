@@ -45,7 +45,7 @@ navigator.storage.estimate().then(function(estimate) {
 
 ### Résultat
 
-{{ EmbedLiveSample('Example', 600, 40) }}
+{{ EmbedLiveSample('Exemple', 600, 40) }}
 
 ## Spécifications
 

@@ -505,8 +505,9 @@
 /de/docs/Web/CSS/CSS_Compositing_and_Blending	/de/docs/Web/CSS/Compositing_and_Blending
 /de/docs/Web/CSS/CSS_Flexible_Box_Layout/Flex_Elemente_Sortieren	/de/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 /de/docs/Web/CSS/CSS_Flexible_Box_Layout/Grundlegende_Konzepte_der_Flexbox	/de/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-/de/docs/Web/CSS/CSS_Lists_and_Counters/CSS_Zähler_verwenden	/de/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/de/docs/Web/CSS/CSS_Lists_and_Counters/CSS_Zähler_verwenden	/de/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /de/docs/Web/CSS/CSS_Lists_and_Counters/Konsistente_Listeneinrückung	/de/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
+/de/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/de/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /de/docs/Web/CSS/CSS_Masken	/de/docs/Web/CSS/CSS_Masking
 /de/docs/Web/CSS/CSS_Namensräume	/de/docs/Web/CSS/CSS_Namespaces
 /de/docs/Web/CSS/CSS_Referenz	/de/docs/Web/CSS/Reference

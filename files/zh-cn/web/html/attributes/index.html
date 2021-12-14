@@ -663,7 +663,7 @@ translation_of: Web/HTML/Attributes
 
 <p>在 HTML 中，大多数属性都有两副面孔：<strong>内容属性</strong>和 <strong>IDL（接口描述语言）属性</strong>。</p>
 
-<p>内容属性需要你在内容（HTML 代码）中设置，而且可以通过 {{domxref("element.setAttribute()")}} 或 {{domxref("element.getAttribute()")}}来设置。内容属性常常是一个字符串，即使里面的值是一个证书。例如，要将 {{HTMLElement("input")}} 元素的 <code>maxlength</code> 设置为 42，你需要在元素中调用 <code>setAttribute("maxlength", "42")</code> 。</p>
+<p>内容属性需要你在内容（HTML 代码）中设置，而且可以通过 {{domxref("element.setAttribute()")}} 或 {{domxref("element.getAttribute()")}}来设置。内容属性常常是一个字符串，即使里面的值是一个整数。例如，要将 {{HTMLElement("input")}} 元素的 <code>maxlength</code> 设置为 42，你需要在元素中调用 <code>setAttribute("maxlength", "42")</code> 。</p>
 
 <p>IDL 属性（attribute）也就是一个 JavaScript 属性（property）。你可以使用 JavaScript 属性如 <code>element.foo</code> 来设置这些属性。当你需要获取 IDL 属性的值时，IDL 属性总会使用隐含的内容属性的值（可能先经过转换）来返回一个值。同样地，当你设置这个值时，这个值会保存在内容属性中。换句话说，IDL 属性本质上反映了内容属性。</p>
 

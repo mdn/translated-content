@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Data_structures
 
 <p>JavaScript является <em>слабо типизированным</em> или <em>динамическим</em> языком. Это значит, что вам не нужно определять тип переменной заранее. Тип определится автоматически во время выполнения программы. Также это значит, что вы можете использовать одну переменную для хранения данных различных типов:</p>
 
-<pre class="brush: js notranslate">var foo = 42; // сейчас foo типа Number
+<pre class="brush: js">var foo = 42; // сейчас foo типа Number
 foo = "bar"; // а теперь foo типа String
 foo = true;  // foo становится типа Boolean
 </pre>
@@ -66,7 +66,7 @@ foo = true;  // foo становится типа Boolean
 
 <p>Ноль в JavaScript имеет два представления: -0 и +0. («0» это синоним +0). На практике это имеет малозаметный эффект. Например, выражение <code>+0 === -0</code> является истинным. Однако, это может проявиться при делении на ноль:</p>
 
-<pre class="brush: js notranslate"><code>&gt; 42 / +0
+<pre class="brush: js"><code>&gt; 42 / +0
 Infinity
 &gt; 42 / -0
 -Infinity</code></pre>
@@ -106,7 +106,7 @@ Infinity
 
 <p><code>BigInt</code><font><font> является встроенным объектом, который предоставляет способ представления целых чисел, которые больше 2 </font></font><sup><font><font>53</font></font></sup><font><font>, что является наибольшим числом, которое JavaScript может надёжно представить с помощью </font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" title="JavaScript-объект Number - это объект-оболочка, позволяющий работать с числовыми значениями.  Объект Number создаётся с помощью конструктора Number ().  Номер объекта типа примитива создаётся с помощью функции Number ().">Number</a></code><font><font> примитива.</font></font></p>
 
-<pre class="brush: js notranslate"><code>&gt; let bigInt = 19241924124n;
+<pre class="brush: js"><code>&gt; let bigInt = 19241924124n;
 &gt; console.log(bigInt);
 19241924124n
 &gt; console.log(typeof bigInt);
@@ -269,38 +269,6 @@ Infinity
 <h2 id="Определение_типов_оператором_typeof">Определение типов оператором <code>typeof</code></h2>
 
 <p>Оператор <code>typeof</code> может помочь определить тип вашей переменной. Смотрите <a href="/ru/docs/Web/JavaScript/Reference/Operators/typeof">страницу документации</a>, где приведены его детали и случаи использования.</p>
-
-<h2 id="Спецификации">Спецификации</h2>
-
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Начальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-8', 'Типы')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-ecmascript-data-types-and-values', 'Типы данных и значения ECMAScript')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-ecmascript-data-types-and-values', 'Типы данных и значения ECMAScript')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

@@ -15,7 +15,7 @@ translation_of: Web/API/RTCPeerConnection/currentLocalDescription
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><em>sessionDescription</em> = <em>RTCPeerConnection</em>.currentLocalDescription;</pre>
+<pre class="syntaxbox"><em>sessionDescription</em> = <em>RTCPeerConnection</em>.currentLocalDescription;</pre>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/RTCPeerConnection/currentLocalDescription
 
 <p>В этом примере рассматривается свойство <code>currentLocalDescription</code>  и отображается предупреждение, содержащее свойства объекта {{domxref("RTCSessionDescription")}}  <code>type</code> и <code>sdp</code> .</p>
 
-<pre class="brush: js notranslate">var pc = new RTCPeerConnection();
+<pre class="brush: js">var pc = new RTCPeerConnection();
 …
 var sd = pc.currentLocalDescription;
 if (sd) {
@@ -40,28 +40,13 @@ else {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#dom-peerconnection-currentlocaldesc', 'RTCPeerConnection.currentLocalDescription') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 
 
-<p>{{Compat("api.RTCPeerConnection.currentLocalDescription")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note">
 <p>The addition of <code>currentLocalDescription</code> and {{domxref("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} to the WebRTC spec is relatively recent. In browsers which don't support them, just use {{domxref("RTCPeerConnection.localDescription", "localDescription")}}.</p>

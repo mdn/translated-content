@@ -3,12 +3,12 @@ title: mask-border-outset
 slug: Web/CSS/mask-border-outset
 tags:
   - CSS
-  - CSS Masking
+  - CSS マスク
   - CSS プロパティ
   - 実験的
   - NeedsCompatTable
   - NeedsExample
-  - Reference
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.mask-border-outset
 translation_of: Web/CSS/mask-border-outset
@@ -26,10 +26,10 @@ mask-border-outset: 1rem;
 /* <number> 値 */
 mask-border-outset: 1.5;
 
-/* 垂直 | 水平 */
+/* 上下 | 左右 */
 mask-border-outset: 1 1.2;
 
-/* 上 | 水平 | 下 */
+/* 上 | 左右 | 下 */
 mask-border-outset: 30px 2 45px;
 
 /* 上 | 右 | 下 | 左 */
