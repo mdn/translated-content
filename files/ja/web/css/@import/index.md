@@ -2,97 +2,73 @@
 title: '@import'
 slug: Web/CSS/@import
 tags:
-  - '@-規則'
+  - アットルール
   - CSS
   - CSS カスケードと継承
-  - CSS 条件付き規則
-  - メディアクエリ
+  - CSS 条件付きルール
   - リファレンス
+browser-compat: css.at-rules.import
 translation_of: Web/CSS/@import
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>@import</code></strong> <a href="/ja/docs/Web/CSS/At-rule">@-規則</a> は、他のスタイルシートから {{CSSxRef("@charset")}} を除いたスタイル規則をインポートするために使用します。これは<a href="/ja/docs/Web/CSS/Syntax#nested_statements">入れ子になるステートメント</a>ではないので、 <code>@import</code> は<a href="/ja/docs/Web/CSS/At-rule#条件付きグループルール">条件付き @-規則グループ</a>の中で使うことはできません。</p>
+**`@import`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、他のスタイルシートから {{CSSxRef("@charset")}} を除いたスタイルルールをインポートするために使用します。
 
-<pre class="brush: css no-line-numbers">@import url("fineprint.css") print;
-@import url("bluish.css") speech;
+## 構文
+
+```css
+@import url;
+@import url list-of-media-queries;
+@import url supports( supports-query );
+@import url supports( supports-query ) list-of-media-queries;
+```
+
+内容は次の通りです。
+
+- _url_
+  - : インポートするリソースの位置を表す {{CSSxRef("&lt;string&gt;")}} または {{CSSxRef("url()")}} です。 URL は絶対パス相対パスでも構いません。
+- _list-of-media-queries_
+  - : リンクした URL で定義された CSS ルールの適用の条件を示す、[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)のカンマ区切りのリストです。ブラウザーがメディアクエリに対応していない場合、リンクされたリソースは読み込まれません。
+- _supports-query_
+  - : {{CSSxRef("@supports", "&lt;supports-condition&gt;", "#Syntax")}} または {{CSSxRef("Syntax", "&lt;declaration&gt;", "#CSS_declarations")}} のどちらかです。
+
+## 解説
+
+インポートされたルールは、 {{CSSxRef("@charset")}} を除く他の種類のルールよりも優先されます。これは[入れ子になるステートメント](/ja/docs/Web/CSS/Syntax#nested_statements)ではないので、 `@import` は[条件付きアットルールグループ](/ja/docs/Web/CSS/At-rule#条件付きグループルール)の中で使うことはできません。
+
+{{glossary("user agent", "ユーザーエージェント")}}は未知のメディアタイプのリソースを受け取ることを拒否することができるので、特定のメディアに依存した `@import` ルールを指定することができます。これらの条件付きインポートは、 URL の後でカンマ区切りの[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)で指定します。メディアクエリーがないと、インポートは無条件で行われます。メディアに `all` を指定しても同じ効果になります。
+
+## 形式文法
+
+{{csssyntax}}
+
+## 例
+
+### CSS ルールをインポート
+
+```css
 @import 'custom.css';
 @import url("chrome://communicator/skin/");
+```
+
+### 条件付きで CSS ルールをインポート
+
+```css
+@import url("fineprint.css") print;
+@import url("bluish.css") speech;
 @import "common.css" screen;
-@import url('landscape.css') screen and (orientation:landscape);</pre>
+@import url('landscape.css') screen and (orientation:landscape);
+```
 
-<p>{{glossary("user agent", "ユーザーエージェント")}}は未知のメディアタイプのリソースを受け取ることを拒否することができるので、特定のメディアに依存した <code>@import</code> 規則を指定することができます。これらの条件付きインポートは、 URL の後でカンマ区切りの<a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries">メディアクエリ</a>で指定します。メディアクエリがないと、インポートは無条件で行われます。メディアに <code>all</code> を指定しても同じ効果になります。</p>
+## 仕様書
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+{{Specifications}}
 
-<pre class="syntaxbox">@import <var>url</var>;
-@import <var>url</var> <var>list-of-media-queries</var>;
-@import <var>url</var> supports( <var>supports-query</var> );
-@import <var>url</var> supports( <var>supports-query</var> ) <var>list-of-media-queries</var>;
-</pre>
+## ブラウザーの互換性
 
-<p>内容は次の通りです。</p>
+{{Compat}}
 
-<dl>
- <dt><em>url</em></dt>
- <dd>インポートするリソースの位置を表す {{CSSxRef("&lt;string&gt;")}} または {{CSSxRef("&lt;url&gt;")}} です。 URL は絶対パス相対パスでも構いません。なお、 Mozilla パッケージでは URL はファイルを指定する必要はありません。パッケージ名やその一部で指定すると、自動的に適切なファイルが選択されます (例 <code>chrome://communicator/skin/</code>)。詳しくは<a href="/ja/docs/Mozilla/Tech/XUL/Tutorial/The_Chrome_URL">こちらをご覧ください</a>。</dd>
- <dt><em>list-of-media-queries</em></dt>
- <dd>リンクした URL で定義された CSS 規則の適用の条件を示す、<a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries">メディアクエリ</a>のカンマ区切りのリストです。ブラウザーがメディアクエリに対応していない場合、リンクされたリソースは読み込まれません。</dd>
- <dt><em>supports-query</em></dt>
- <dd>{{CSSxRef("@supports", "&lt;supports-condition&gt;", "#Syntax")}} または {{CSSxRef("Syntax", "&lt;declaration&gt;", "#CSS_declarations")}} のどちらかです。</dd>
-</dl>
+## 関連情報
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
-
-{{CSSSyntax}}
-
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Cascade", "#at-import", 'the <code>@import</code> rule')}}</td>
-   <td>{{Spec2("CSS4 Cascade")}}</td>
-   <td>{{CSSxRef("@supports")}} 構文に対応するよう構文を拡張</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Cascade', '#at-ruledef-import', '@import')}}</td>
-   <td>{{Spec2('CSS3 Cascade')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#media0', '@import')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>単純な <a href="/ja/docs/Web/CSS/@media#メディア種別" title="CSS/@media#Media_types">メディア種別</a> だけでなく、いかなるメディアクエリもサポートするよう構文拡張</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'cascade.html#at-import', '@import')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>スタイルシートの URL の記述する {{CSSxRef("&lt;string&gt;")}} のサポートを追加し、<br>
-    <code>@import</code> ルールを CSS 文書の最初に入れることを条件化</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#the-cascade', '@import')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("css.at-rules.import")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{CSSxRef("@media")}}</li>
- <li>{{CSSxRef("@supports")}}</li>
-</ul>
+- {{CSSxRef("@media")}}
+- {{CSSxRef("@supports")}}
