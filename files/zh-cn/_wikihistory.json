@@ -21062,7 +21062,7 @@
       "aimaoll"
     ]
   },
-  "Web/API/VisualViewport/onscroll": {
+  "Web/API/VisualViewport/scroll_event": {
     "modified": "2020-10-15T22:34:23.403Z",
     "contributors": [
       "penneix"

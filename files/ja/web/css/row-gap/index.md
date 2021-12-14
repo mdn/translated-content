@@ -30,7 +30,7 @@ row-gap: 0.5cm;
 /* <percentage> 値 */
 row-gap: 10%;
 
-/* Global values */
+/* グローバル値 */
 row-gap: inherit;
 row-gap: initial;
 row-gap: revert;
@@ -52,7 +52,7 @@ row-gap: unset;
 
 ## 例
 
-<h3 id="Flex_layout">フレックスレイアウト</h3>
+### Flex layout
 
 #### HTML
 
@@ -90,7 +90,7 @@ row-gap: unset;
 
 {{EmbedLiveSample('Flex_layout', "auto", "120px")}}
 
-<h3 id="Grid_layout">グリッドレイアウト</h3>
+### Grid layout
 
 #### HTML
 
@@ -134,4 +134,4 @@ row-gap: unset;
 ## 関連情報
 
 - 関連する CSS プロパティ: {{CSSxRef("column-gap")}}, {{CSSxRef("gap")}}
-- グリッドレイアウトガイド: _[グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)_
+- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)

@@ -73,7 +73,7 @@ Ainsi, dans l'exemple ci-dessus, après avoir cliqué sur le bouton, le paragrap
 <button>Cliquez sur moi</button>
 ```
 
-{{EmbedLiveSample('synchronous_javascript', '100%', '110px')}}
+{{EmbedLiveSample('JavaScript_synchrone', '100%', '110px')}}
 
 > **Note :** Il est important de se rappeler que [`alert()`](/fr/docs/Web/API/Window/alert), tout en étant très utile pour démontrer une opération de blocage synchrone, est horrible à utiliser dans des applications du monde réel.
 
