@@ -60,8 +60,8 @@ elements that aren't strictly necessary, for example:
 
 ```html
 <p>The
-  <code><strong>HTMLCanvasElement</strong></code><strong><code>.transferControlToOffscreen()</code></strong>
-  method transfers control to an {{domxref("OffscreenCanvas")}} object, either on the main
+  <code><strong>HTMLCanvasElement.transferControlToOffscreen()</code></strong> method 
+  transfers control to an {{domxref("OffscreenCanvas")}} object, either on the main
   thread or on a worker.</p>
 
 <pre
