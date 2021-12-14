@@ -4,48 +4,29 @@ slug: Web/CSS/CSS_Charsets
 tags:
   - CSS
   - CSS 文字セット
-  - CSS 構文
-  - Reference
+  - ガイド
   - 概要
+  - リファレンス
 translation_of: Web/CSS/CSS_Charsets
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><ruby><strong>CSS 文字セット</strong><rp> (</rp><rt>CSS Charsets</rt><rp>) </rp></ruby>は CSS のモジュールの一つで、スタイルシート内で使用される文字セットを指定します。</p>
+**CSS 文字セット** (CSS Charsets) は CSS のモジュールの一つで、スタイルシート内で使用される文字セットを指定します。
 
-<h2 id="Reference" name="Reference">リファレンス</h2>
+## リファレンス
 
-<h3 id="At-rules" name="At-rules">@-規則</h3>
+### アットルール
 
-<div class="index">
-<ul>
- <li>{{cssxref("@charset")}}</li>
-</ul>
-</div>
+- {{cssxref("@charset")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'syndata.html#x57', '@charset')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                 | 状態                | 備考     |
+| ------------------------------------------------------ | ------------------- | -------- |
+| {{SpecName('CSS2.1', 'syndata.html#x57', '@charset')}} | {{Spec2('CSS2.1')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<h3 id="charset_規則"><code>@charset</code> 規則</h3>
+### `@charset` ルール
 
-<div>
-<p>{{Compat("css.at-rules.charset")}}</p>
-</div>
+{{Compat("css.at-rules.charset")}}
