@@ -4,68 +4,44 @@ slug: Web/CSS/CSS_Conditional_Rules
 tags:
   - CSS
   - CSS 条件付き規則
-  - Reference
+  - ガイド
   - 概要
+  - リファレンス
 translation_of: Web/CSS/CSS_Conditional_Rules
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><ruby><strong>CSS 条件付き規則</strong><rp> (</rp><rt>CSS Conditional Rules</rt><rp>) </rp></ruby>は CSS のモジュールの一つで、プロセッサーの能力やスタイルシートが適用される文書の条件に基づいて一連の規則を定義することができます。</p>
+**CSS 条件付き規則** (CSS Conditional Rules) は CSS のモジュールの一つで、プロセッサーの能力やスタイルシートが適用される文書の条件などに基づいて一連の規則を定義することができます。
 
-<h2 id="Reference" name="Reference">リファレンス</h2>
+## リファレンス
 
-<h3 id="At-rules" name="At-rules">@-規則</h3>
+### アットルール
 
-<div class="index">
-<ul>
- <li>{{cssxref("@document")}}</li>
- <li>{{cssxref("@media")}}</li>
- <li>{{cssxref("@supports")}}</li>
- <li>{{cssxref("@import")}}</li>
-</ul>
-</div>
+- {{cssxref("@document")}}
+- {{cssxref("@media")}}
+- {{cssxref("@supports")}}
+- {{cssxref("@import")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Conditional')}}</td>
-   <td>{{Spec2('CSS3 Conditional')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                           | 状態                          | 備考     |
+| -------------------------------- | ----------------------------- | -------- |
+| {{SpecName('CSS3 Conditional')}} | {{Spec2('CSS3 Conditional')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<h3 id="document_規則"><code>@document</code> 規則</h3>
+### `@document` ルール
 
-<div>
-<p>{{Compat("css.at-rules.document")}}</p>
-</div>
+{{Compat("css.at-rules.document")}}
 
-<h3 id="import_規則"><code>@import</code> 規則</h3>
+### `@import` ルール
 
-<div>
-<p>{{Compat("css.at-rules.import")}}</p>
-</div>
+{{Compat("css.at-rules.import")}}
 
-<h3 id="media_規則"><code>@media</code> 規則</h3>
+### `@media` ルール
 
-<div>
-<p>{{Compat("css.at-rules.media")}}</p>
-</div>
+{{Compat("css.at-rules.media")}}
 
-<h3 id="supports_規則"><code>@supports</code> 規則</h3>
+### `@supports` ルール
 
-<div>
-<p>{{Compat("css.at-rules.supports")}}</p>
-</div>
+{{Compat("css.at-rules.supports")}}
