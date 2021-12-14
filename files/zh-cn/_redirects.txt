@@ -1512,6 +1512,7 @@
 /zh-CN/docs/Web/API/URLUtils/search	/zh-CN/docs/Web/API/HTMLAnchorElement/search
 /zh-CN/docs/Web/API/URLUtils/toString	/zh-CN/docs/Web/API/HTMLAnchorElement/toString
 /zh-CN/docs/Web/API/URLUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
+/zh-CN/docs/Web/API/VisualViewport/onscroll	/zh-CN/docs/Web/API/VisualViewport/scroll_event
 /zh-CN/docs/Web/API/WebGLRenderingContext/多边形偏移(polygonOffset)	/zh-CN/docs/Web/API/WebGLRenderingContext/polygonOffset
 /zh-CN/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /zh-CN/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
