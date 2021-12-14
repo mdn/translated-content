@@ -189,7 +189,7 @@ function Clear() {
 }
 ```
 
-{{ EmbedLiveSample('Example', '', '700', '', 'Web/API/Event/eventPhase') }}
+{{ EmbedLiveSample('Exemple', '', '700', '', 'Web/API/Event/eventPhase') }}
 
 ## Spécifications
 

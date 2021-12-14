@@ -1,13 +1,6 @@
 ---
 title: document.getElementById
 slug: Web/API/Document/getElementById
-tags:
-  - API
-  - DOM
-  - Document
-  - Elements
-  - Identifiant
-  - Méthodes
 translation_of: Web/API/Document/getElementById
 ---
 {{ ApiRef("DOM") }}
@@ -59,7 +52,7 @@ function changeColor(newColor) {
 
 ### Résultat
 
-{{ EmbedLiveSample('Example1', 250, 100) }}
+{{ EmbedLiveSample('Exemple', 250, 100) }}
 
 ## Notes d'utilisation
 
@@ -67,7 +60,7 @@ L'écriture de la lettre capitale de « Id » dans le nom de cette méthode _d
 
 Contrairement à d'autres méthodes de recherche d'éléments, comme  {{domxref("Document.querySelector()")}} et {{domxref("Document.querySelectorAll()")}}, `getElementById` est uniquement disponible comme méthode de l'objet global `document` et _n'est pas_ disponible sur tous les objets du DOM. Parce que les valeurs d'ID doivent être uniques dans l'ensemble du document, il n'y pas besoin d'avoir une version "locale" de la fonction.
 
-## Exemple
+## Autre exemple
 
 ```html
 <!doctype html>

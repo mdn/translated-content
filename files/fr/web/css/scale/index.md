@@ -1,10 +1,6 @@
 ---
 title: scale
 slug: Web/CSS/scale
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/scale
 ---
 {{CSSRef}}{{seecompattable}}
@@ -91,7 +87,7 @@ div:hover .scale {
 
 ### Résultat
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Exemples')}}
 
 ## Spécifications
 

@@ -1,12 +1,8 @@
 ---
 title: matrix()
 slug: Web/CSS/transform-function/matrix()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/matrix()
+browser-compat: css.types.transform-function.matrix
 ---
 {{CSSRef}}
 
@@ -16,16 +12,20 @@ La fonction **`matrix()`** définit une matrice homogène de transformation, dé
 
 ## Syntaxe
 
-    matrix(a, b, c, d, tx, ty)
+La fonction `matrix()` s'utilise avec 6 valeurs. Les valeurs constantes sont implicites et ne sont pas passées comme paramètres. Les autres paramètres sont décrits dans l'ordre suivant d'abord les colonnes.
+
+```css
+matrix(a, b, c, d, tx, ty)
+```
 
 ### Valeurs
 
 - `a` `b` `c` `d`
-  - : Les coefficients de la matrice, de type {{cssxref("&lt;number&gt;")}}, qui définissent la transformation linéaire.
+  - : Les coefficients de la matrice, de type [`<number>`](/fr/docs/Web/CSS/number), qui définissent la transformation linéaire.
 - `tx` `ty`
-  - : Les coefficients de la matrice, de type {{cssxref("&lt;number&gt;")}}, qui définissent la translation à appliquer.
+  - : Les coefficients de la matrice, de type [`<number>`](/fr/docs/Web/CSS/number), qui définissent la translation à appliquer.
 
-> **Note :** Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs {{cssxref("&lt;length&gt;")}} pour les coefficients `tx` et `ty`.
+> **Note :** Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/length) pour les coefficients `tx` et `ty`.
 
 <table class="standard-table">
   <thead>
@@ -121,17 +121,15 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName("CSS3 Transforms", "#funcdef-transform-matrix", "matrix()")}} | {{Spec2("CSS3 Transforms")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
 - [`matrix3d()`](</fr/docs/Web/CSS/transform-function/matrix3d()>)
 - [Comprendre les matrices de transformations CSS (en anglais)](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

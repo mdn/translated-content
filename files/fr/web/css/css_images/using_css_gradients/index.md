@@ -1,10 +1,6 @@
 ---
 title: Utilisation de dégradés CSS
 slug: Web/CSS/CSS_Images/Using_CSS_gradients
-tags:
-  - Avancé
-  - CSS
-  - Guide
 translation_of: Web/CSS/CSS_Images/Using_CSS_gradients
 original_slug: Web/CSS/Utilisation_de_dégradés_CSS
 ---
@@ -188,7 +184,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Arrêts_de_couleur",120,120)}}
+{{EmbedLiveSample("Arrêts_de_couleurs",120,120)}}
 
 Notez que la première et la dernière couleur n'indiquent pas d'emplacement ; en conséquence les valeurs 0% et 100% sont assignées automatiquement. La couleur centrale indique un emplacement à 80%, ce qui la place proche du bas.
 

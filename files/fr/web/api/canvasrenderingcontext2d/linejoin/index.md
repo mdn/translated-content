@@ -1,13 +1,6 @@
 ---
 title: CanvasRenderingContext2D.lineJoin
 slug: Web/API/CanvasRenderingContext2D/lineJoin
-tags:
-  - API
-  - Canvas
-  - Propriété
-  - arrondit
-  - coin
-  - stroke
 translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 ---
 {{APIRef}}
@@ -65,7 +58,7 @@ ctx.stroke();
 
 #### Résultat
 
-{{ EmbedLiveSample('Changing_the_joins_in_a_path', 700, 180) }}
+{{ EmbedLiveSample('Modifier_les_jointures_d\'un_tracé', 700, 180) }}
 
 ### Comparaison des jointures de lignes
 
@@ -92,7 +85,7 @@ for (let i = 0; i < lineJoin.length; i++) {
 }
 ```
 
-{{EmbedLiveSample("Comparison_of_line_joins", "180", "180", "canvas_linejoin.png")}}
+{{EmbedLiveSample("Comparaison_des_jointures_de_lignes", "180", "180", "canvas_linejoin.png")}}
 
 ## Spécifications
 

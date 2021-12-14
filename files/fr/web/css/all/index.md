@@ -1,10 +1,6 @@
 ---
 title: all
 slug: Web/CSS/all
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/all
 ---
 {{CSSRef}}
@@ -89,7 +85,7 @@ body { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue;  color: red; }
 ```
 
-{{EmbedLiveSample("ex0", "200", "125")}}
+{{EmbedLiveSample("Pas_de_propriété_all", "200", "125")}}
 
 L'élément {{HTMLElement("blockquote")}} utilise la mise en forme par défaut du navigateur avec un arrière-plan spécifique et une couleur pour le texte. L'élément se comporte comme un élément de bloc : le texte qui suit est placé en dessous.
 
@@ -105,7 +101,7 @@ blockquote { background-color: skyblue;  color: red; }
 blockquote { all: unset; }
 ```
 
-{{EmbedLiveSample("ex1", "200", "125")}}
+{{EmbedLiveSample("all:unset", "200", "125")}}
 
 L'élément {{HTMLElement("blockquote")}} n'utilise pas la mise en forme par défaut du naivgateur, c'est un élément en ligne (_inline_) (sa valeur initiale), la valeur de {{cssxref("background-color")}} est `transparent` (la valeur initiale), mais {{cssxref("font-size")}} vaut toujours `small` (valeur héritée) et {{cssxref("color")}} vaut (valeur héritée).
 
@@ -121,7 +117,7 @@ blockquote { background-color: skyblue;  color: red; }
 blockquote { all: initial; }
 ```
 
-{{EmbedLiveSample("ex2", "200", "125")}}
+{{EmbedLiveSample("all:initial", "200", "125")}}
 
 L'élément {{HTMLElement("blockquote")}} n'utilise pas la mise en forme par défaut du navigateur, c'est un élément en ligne (sa valeur initiale). La propriété {{cssxref("background-color")}} vaut `transparent` (sa valeur initiale), {{cssxref("font-size")}} vaut `normal` (valeur initiale) et {{cssxref("color")}} vaut `black` (sa valeur initiale).
 
@@ -137,7 +133,7 @@ blockquote { background-color: skyblue; color: red; }
 blockquote { all: inherit; }
 ```
 
-{{EmbedLiveSample("ex3", "200", "125")}}
+{{EmbedLiveSample("all:inherit", "200", "125")}}
 
 L'élément {{HTMLElement("blockquote")}} n'utilise pas la mise en forme par défaut du navigateur, c'est un élément de bloc (valeur héritée depuis l'élément englobant {{HTMLElement("div")}}), {{cssxref("background-color")}} vaut `#F0F0F0` (valeur héritée), {{cssxref("font-size")}} vaut `small` (valeur héritée) et {{cssxref("color")}} vaut `blue` (valeur héritée).
 

@@ -5213,6 +5213,12 @@
       "Sebastianz"
     ]
   },
+  "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
+    "modified": "2019-03-23T22:41:18.157Z",
+    "contributors": [
+      "Sebastianz"
+    ]
+  },
   "Web/CSS/CSS_Device_Adaptation": {
     "modified": "2019-03-23T22:30:44.810Z",
     "contributors": [
@@ -5303,12 +5309,6 @@
   },
   "Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation": {
     "modified": "2019-03-23T22:42:20.521Z",
-    "contributors": [
-      "Sebastianz"
-    ]
-  },
-  "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
-    "modified": "2019-03-23T22:41:18.157Z",
     "contributors": [
       "Sebastianz"
     ]

@@ -1,0 +1,87 @@
+---
+title: Liczniki CSS
+slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
+tags:
+  - CSS
+  - Wszystkie_kategorie
+translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+---
+<p> </p>
+
+<h3 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h3>
+
+<p>Liczniki w CSS zostały opisane w sekcji <a class="external" href="http://www.w3.org/TR/CSS21/generate.html#counters">Automatic counters and numbering</a> dokumentacji CSS 2.1. Wartość licznika jest ustawiana poprzez użycie własności <a href="pl/CSS/counter-reset">counter-reset</a> oraz <a href="pl/CSS/counter-increment">counter-increment</a>, natomiast wyświetlana jest przy wykorzystaniu funkcji counter() lub counters() należących do własności <a href="pl/CSS/content">content</a>.</p>
+
+<h3 id="Zastosowanie_licznik.C3.B3w" name="Zastosowanie_licznik.C3.B3w">Zastosowanie liczników</h3>
+
+<p>Aby użyć licznika CSS, należy najpierw ustawić mu wartość (domyślnie jest to 0) przy pomocy własności <a href="pl/CSS/counter-reset">reset</a>. Aby wyświetlić wartość licznika w danym elemencie należy skorzystać z funkcji counter(). Poniższy przykład dodaje na początku każdego elementu <code>h1</code> "Sekcja <code>wartość licznika</code>:".</p>
+
+<pre>  body {
+    counter-reset: sekcja;           /* Ustawienie licznika sekcja na 0 */
+  }
+  h1::before {
+    counter-increment: sekcja;               /* Zwiększa licznik sekcja */
+    content: "Sekcja " counter(sekcja) ": ";       /* Wyświetla licznik */
+  }
+</pre>
+
+<h3 id="Zagnie.C5.BCd.C5.BCanie_licznik.C3.B3w" name="Zagnie.C5.BCd.C5.BCanie_licznik.C3.B3w">Zagnieżdżanie liczników</h3>
+
+<p>Liczniki CSS mogą być szczególnie użyteczne przy listach uporządkowanych (<code>ol</code>), ponieważ nowa instancja licznika CSS jest automatycznie tworzona dla potomków danego elementu. Użycie funkcji counters() pozwala na dodanie ciągu znaków, który będzie oddzielał kolejne poziomy zagnieżdżonych liczników:</p>
+
+<pre>  ol {
+    counter-reset: sekcja;                /* Tworzy nową instancję licznika
+                                             sekcja w każdym elemencie ol */
+    list-style-type: none;                /* Usuwa domyślnie wyświetlany licznik */
+  }
+  li::before {
+    counter-increment: sekcja;            /* Zwiększa tylko tę instancję
+                                             licznika sekcja */
+    content: counters(sekcja, ".") " ";   /* Wyświetla wartości wszystkich
+                                             instancji licznika sekcja,
+                                             oddzielając je ciągiem ".". */
+  }
+</pre>
+
+<p>Przykładowy HTML (w komentarzach podano wartość wygenerowanego licznika):</p>
+
+<pre>&lt;ol&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 1     --&gt;
+  &lt;li&gt;item               &lt;!-- 2     --&gt;
+    &lt;ol&gt;
+      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.1   --&gt;
+      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.2   --&gt;
+      &lt;li&gt;item           &lt;!-- 2.3   --&gt;
+        &lt;ol&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.1 --&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.2 --&gt;
+        &lt;/ol&gt;
+        &lt;ol&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.1 --&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.2 --&gt;
+          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.3 --&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.4   --&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 3     --&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 4     --&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 1     --&gt;
+  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 2     --&gt;
+&lt;/ol&gt;
+</pre>
+
+<h3 id="Zobacz_tak.C5.BCe" name="Zobacz_tak.C5.BCe">Zobacz także</h3>
+
+<ul>
+ <li><a href="pl/CSS/counter-reset">counter-reset</a></li>
+ <li><a href="pl/CSS/counter-increment">counter-increment</a></li>
+</ul>
+
+<p><span class="comment">potrzebna treść do artykułu</span></p>
+
+<p>{{ languages( { "en": "en/CSS_Counters", "fr": "fr/Compteurs_CSS" } ) }}</p>

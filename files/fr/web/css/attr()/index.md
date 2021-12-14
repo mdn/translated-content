@@ -1,10 +1,6 @@
 ---
 title: attr()
 slug: Web/CSS/attr()
-tags:
-  - CSS
-  - Fonction
-  - Reference
 translation_of: Web/CSS/attr()
 ---
 {{CSSRef}}
@@ -349,7 +345,7 @@ body,
 
 #### Résultat
 
-{{EmbedLiveSample("Valeur_&lt;color&gt;", "100%", "50")}}
+{{EmbedLiveSample("Valeur_color", "100%", "50")}}
 
 ## Spécifications
 

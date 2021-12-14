@@ -1,10 +1,6 @@
 ---
 title: HTMLButtonElement.labels
 slug: Web/API/HTMLButtonElement/labels
-tags:
-  - API
-  - DOM
-  - Propriété
 translation_of: Web/API/HTMLButtonElement/labels
 ---
 {{APIRef("DOM")}}
@@ -40,7 +36,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Exemple", "100%", 30)}}
 
 ## Spécifications
 

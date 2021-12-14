@@ -1,12 +1,8 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/translate()
+browser-compat: css.types.transform-function.translate
 ---
 {{CSSRef}}
 
@@ -14,26 +10,34 @@ La fonction **`translate()`** permet de déplacer un élément sur le plan repr�
 
 ![](translate.png)
 
-La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.
+La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
 ## Syntaxe
 
-    translate(tx)
-    translate(tx, ty)
+```css
+/* Avec une seule valeur <length-percentage> */
+transform: translate(200px);
+transform: translate(50%);
 
+/* Avec deux valeurs <length-percentage> */
+transform: translate(100px, 200px);
+transform: translate(100px, 50%);
+transform: translate(30%, 200px);
+transform: translate(30%, 50%);
+```
 ### Valeurs
 
-- `tx`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente l'abscisse du vecteur de translation. Autrement dit, c'est l'amplitude du déplacement horizontal de la translation.
-- `ty`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente l'ordonnée du vecteur de translation. Autrement dit, c'est l'amplitude du déplacement vertical de la translation. Si ce paramètre n'est pas utilisé, la valeur par défaut sera 0 : `translate(2)` sera donc équivalent à `translate(2, 0)`.
+- Avec une seule valeur `<length-percentage>`
+  - : Cette valeur  est de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) et représente l'abscisse (la coordonnée horizontale) du vecteur de translation. La composante verticale du vecteur de translation sera nulle. Ainsi, `translate(2px)` est équivalent à `translate(2px, 0)`. Une valeur en pourcentage sera relative à la largeur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/transform-box).
+- Avec deux valeurs `<length-percentage>`
+  - : Ces valeurs sont de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) et décrivent respectivement l'abscisse (la coordonnée horizontale) et l'ordonnée (la coordonnée verticale) du vecteur de translation. Un premier pourcentage sera relatif à la largeur de la boîte de référence et un deuxième pourcentage sera relatif à sa hauteur (la boîte de référence étant définie par la propriété [`transform-box`](/fr/docs/Web/CSS/transform-box)).
 
 <table class="standard-table">
   <thead>
     <tr>
       <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
       <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
       <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
     </tr>
   </thead>
@@ -44,7 +48,7 @@ La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-functi
           Une translation plane n'est pas une transformation linéaire de ℝ<sup
             >2</sup
           >
-          et ne peut donc pas être représentée sous la forme d'une matrice dans 
+          et ne peut donc pas être représentée sous la forme d'une matrice dans 
           le système cartésien.
         </p>
       </td>
@@ -98,24 +102,23 @@ La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-functi
 #### HTML
 
 ```html
-<p>toto</p>
-<p class="transformation">truc</p>
-<p>toto</p>
+<div>Statique</div>
+<div class="moved">Déplacé</div>
+<div>Statique</div>
 ```
 
 #### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+div {
+  width: 60px;
+  height: 60px;
+  background-color: skyblue;
 }
 
-.transformation {
-  transform: translate(10px);
-  /* équivalent à translateX(10px)*/
-  background-color: blue;
+.moved {
+  transform: translate(10px); /* Équivalent à : translateX(10px) ou translate(10px, 0) */
+  background-color: pink;
 }
 ```
 
@@ -128,23 +131,23 @@ p {
 #### HTML
 
 ```html
-<p>toto</p>
-<p class="transformation">truc</p>
-<p>toto</p>
+<div>Statique</div>
+<div class="moved">Déplacé</div>
+<div>Statique</div>
 ```
 
 #### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+div {
+  width: 60px;
+  height: 60px;
+  background-color: skyblue;
 }
 
-.transformation {
-  transform: translate(10px,10px);
-  background-color: blue;
+.moved {
+  transform: translate(10px, 10px);
+  background-color: pink;
 }
 ```
 
@@ -154,15 +157,13 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Transforms', '#funcdef-transform-translate', 'translate()')}} | {{Spec2('CSS3 Transforms')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)

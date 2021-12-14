@@ -1,12 +1,6 @@
 ---
 title: L'alignement des boîtes avec les grilles CSS
 slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
-tags:
-  - CSS
-  - CSS Grid
-  - Grille CSS
-  - Guides
-  - Intermédiaire
 translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS
 ---
@@ -102,7 +96,7 @@ Dans l'exemple suivant, on a quatre zones sur la grille. On peut utiliser la pro
 </div>
 ```
 
-{{EmbedLiveSample('utiliser_align-items', '500', '450')}}
+{{EmbedLiveSample('Utiliser_align-items', '500', '450')}}
 
 Lorsqu'on utilise `align-self: start`, la hauteur de chaque `<div>` sera déterminée par le contenu du `<div>`. En revanche, si on n'utilise pas {{cssxref("align-self")}}, chaque `<div>` sera étiré afin de remplir la zone de la grille.
 
@@ -168,7 +162,7 @@ Dans le prochain exemple, on utilise la propriété `align-self` afin d'illustre
 </div>
 ```
 
-{{EmbedLiveSample('utiliser_align-self', '500', '450')}}
+{{EmbedLiveSample('Utiliser_align-self', '500', '450')}}
 
 ### Gestion des objets avec un ratio intrinsèque
 
@@ -250,9 +244,7 @@ Là encore, la valeur par défaut `stretch` pour les objets qui n'ont pas de rat
 </div>
 ```
 
-Justifier_les_objets_sur_laxe_en_ligne_inline_axis
-
-{{EmbedLiveSample('alignment_3', '500', '450')}}
+{{EmbedLiveSample('Justifier_les_objets_sur_laxe_en_ligne_inline_axis', '500', '450')}}
 
 Comme pour {{cssxref("align-self")}} et {{cssxref("align-items")}}, on peut utiliser la propriété {{cssxref("justify-items")}} sur le conteneur de la grille afin de régler la valeur de {{cssxref("justify-self")}} pour l'ensemble des objets de la grille.
 
@@ -389,7 +381,7 @@ La propriété `align-content` s'applique sur le conteneur de la grille car elle
 </div>
 ```
 
-{{EmbedLiveSample('alignement_par_defaut', '500', '520')}}
+{{EmbedLiveSample('Alignement_par_défaut', '500', '520')}}
 
 ### Utiliser align-content: end
 
@@ -450,7 +442,7 @@ Si on ajoute `align-content` avec la valeur `end` sur le conteneur, les pistes s
 </div>
 ```
 
-{{EmbedLiveSample('align-content_end', '500', '520')}}
+{{EmbedLiveSample('Utiliser_align-content_end', '500', '520')}}
 
 ### Utiliser align-content: space-between
 
@@ -511,7 +503,7 @@ Pour cette propriété, on peut également utiliser des valeurs qu'on manipule a
 </div>
 ```
 
-{{EmbedLiveSample('align-content_end_space-between', '500', '1570')}}
+{{EmbedLiveSample('Utiliser_align-content_space-between', '500', '1570')}}
 
 On notera qu'en utilisant ces valeurs pour répartir l'espace, cela peut agrandir les objets de la grille. Si un objet s'étale sur plusieurs pistes, un espace sera ajouté entre chaque piste afin que l'objet qui doit être agrandi puisse absorber cet espace. Aussi, si vous choisissez d'utiliser ces valeurs, assurez-vous que le contenu des pistes puisse absorber cet espace supplémentaire ou que les propriétés d'alignement les renvoient au début de la piste plutôt que de les étirer.
 

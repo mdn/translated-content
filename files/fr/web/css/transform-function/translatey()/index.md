@@ -1,16 +1,12 @@
 ---
 title: translateY()
 slug: Web/CSS/transform-function/translateY()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/translateY()
+browser-compat: css.types.transform-function.translateY
 ---
 {{CSSRef}}
 
-La fonction **`translateY()`** permet de déplacer un élement verticalement sur le plan. Cette transformation est caractérisée par une longueur (type {{cssxref("&lt;length&gt;")}}) qui définit l'amplitude du déplacement. La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.
+La fonction **`translateY()`** permet de déplacer un élement verticalement sur le plan. Cette transformation est caractérisée par une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) qui définit l'amplitude du déplacement. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
 ![](translatey.png)
 
@@ -18,12 +14,16 @@ La fonction **`translateY()`** permet de déplacer un élement verticalement sur
 
 ## Syntaxe
 
-    translateY(t)
+```css
+/* Valeurs de type <length-percentage> */
+transform: translateY(200px);
+transform: translateY(50%);
+```
 
 ### Valeurs
 
 - `t`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente l'ordonnée du vecteur de translation (la composante en Y).
+  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) qui représente l'ordonnée du vecteur de translation (la composante en Y).
 
 <table class="standard-table">
   <thead>
@@ -90,28 +90,34 @@ La fonction **`translateY()`** permet de déplacer un élement verticalement sur
   </tbody>
 </table>
 
+### Syntaxe formelle
+
+```css
+translateY([`<length-percentage>`](/fr/docs/Web/CSS/length-percentage))
+```
+
 ## Exemples
 
 ### HTML
 
 ```html
-<p>toto</p>
-<p class="transformation">truc</p>
-<p>toto</p>
+<div>Statique</div>
+<div class="moved">Déplacé</div>
+<div>Statique</div>
 ```
 
 ### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+div {
+  width: 60px;
+  height: 60px;
+  background-color: skyblue;
 }
 
-.transformation {
+.moved {
   transform: translateY(10px);
-  background-color: blue;
+  background-color: pink;
 }
 ```
 
@@ -121,15 +127,13 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName("CSS3 Transforms", "#funcdef-transform-translatey", "translateY()")}} | {{Spec2("CSS3 Transforms")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)

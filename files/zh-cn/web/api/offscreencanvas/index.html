@@ -7,6 +7,7 @@ tags:
   - Experimental
   - Interface
   - Reference
+browser-compat: api.OffscreenCanvas
 translation_of: Web/API/OffscreenCanvas
 ---
 <div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
@@ -59,7 +60,7 @@ translation_of: Web/API/OffscreenCanvas
 <pre class="brush: html notranslate">&lt;canvas id="one"&gt;&lt;/canvas&gt;
 &lt;canvas id="two"&gt;&lt;/canvas&gt;</pre>
 
-<p>下面的代码会用<code>OffscreenCanva提供渲染结果，就像上面描述的一样。</code></p>
+<p>下面的代码会用<code>OffscreenCanvas提供渲染结果，就像上面描述的一样。</code></p>
 
 <pre class="brush: js notranslate">var one = document.getElementById("one").getContext("bitmaprenderer");
 var two = document.getElementById("two").getContext("bitmaprenderer");
@@ -121,20 +122,7 @@ worker.postMessage({canvas: offscreen}, [offscreen]);
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#the-offscreencanvas-interface", "OffscreenCanvas")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
