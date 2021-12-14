@@ -1,12 +1,6 @@
 ---
 title: CanvasRenderingContext2D.rotate()
 slug: Web/API/CanvasRenderingContext2D/rotate
-tags:
-  - API
-  - Cancas
-  - CanvasRenderingContext2D
-  - Méthode
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/rotate
 ---
 {{APIRef}}
@@ -93,7 +87,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ## Spécifications
 

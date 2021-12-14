@@ -1,12 +1,6 @@
 ---
 title: Construire des dispositions courantes avec des grilles CSS
 slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
-tags:
-  - CSS
-  - CSS Grids
-  - Grilles CSS
-  - Guide
-  - Intermédiaire
 translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 original_slug: >-
   Web/CSS/CSS_Grid_Layout/Construire_des_dispositions_courantes_avec_des_grilles_CSS
@@ -550,7 +544,7 @@ h2 {
 }
 ```
 
-{{EmbedLiveSample('empecher_les_espaces_avec_dense', '800', '900')}}
+{{EmbedLiveSample('Empêcher_les_espaces_avec_dense', '800', '900')}}
 
 Cette technique de placement automatiquement peut s'avérer extrêmement utile si vous devez gérer du contenu produit par un CMS pour un ensemble d'objets qui se ressemblent et auxquels vous ajoutez une classe lors de la génération en HTML.
 

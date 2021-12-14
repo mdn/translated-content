@@ -5,7 +5,7 @@ tags:
   - CSS
   - CSS フォント
   - CSS プロパティ
-  - Reference
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.font-family
 translation_of: Web/CSS/font-family
@@ -240,4 +240,4 @@ font-family: Gill Sans Extrabold, sans-serif;
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [基本的なテキストとフォントのスタイル付け](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)

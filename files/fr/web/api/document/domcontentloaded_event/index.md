@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 #### Résultat
 
-{{ EmbedLiveSample('Live_example', '100%', '160px') }}
+{{ EmbedLiveSample('Démonstration', '100%', '160px') }}
 
 ## Spécifications
 
