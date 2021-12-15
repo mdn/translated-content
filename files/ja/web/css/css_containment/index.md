@@ -1,122 +1,146 @@
 ---
-title: CSS Containment
+title: CSS 封じ込め
 slug: Web/CSS/CSS_Containment
+tags:
+  - CSS
+  - CSS 封じ込め
+  - Guide
+  - Paint
+  - Performance
 translation_of: Web/CSS/CSS_Containment
 ---
-<p>{{CSSRef}}<br>
- CSS Containment という仕様の目的は、開発者に Web ページの任意のサブツリーをそれ以外から独立させることでサイトパフォーマンスを向上させることです。もしブラウザがページの一部が独立していることを知っていれば、レンダリング時に最適化し、パフォーマンスを向上させることができます。この仕様は単一の CSS プロパティ {{cssxref("contain")}} を定義しています。この文書ではその仕様の基本的な目的を説明しています。</p>
+{{CSSRef}}
+CSS 封じ込め (CSS Containment) 仕様の目的は、ウェブページの表示性能を向上させるために、開発者がページの任意のサブツリーをページのそれ以外の部分から独立させることができるようにすることです。もしページの一部が独立していることをブラウザーが知っていれば、レンダリングを最適化し、表示性能を向上させることができます。この仕様では、単一の CSS プロパティ {{cssxref("contain")}} を定義しています。この文書では、その仕様の基本的な目的を説明しています。
 
-<h2 id="基本例">基本例</h2>
+## 基本的な例
 
-<p>多くの Web ページでは、互いに独立したいくつかのセクションで構成されています。例えば記事の見出しと内容が並んだ以下のようなマークアップで紹介します。</p>
+多くのウェブページは、互いに独立したいくつかのセクションで構成されています。例えば、記事の見出しと内容の一覧が、以下のようなマークアップで存在していたとします。
 
-<pre class="brush: html notranslate">&lt;h1&gt;My blog&lt;/h1&gt;
-&lt;article&gt;
-  &lt;h2&gt;Heading of a nice article&lt;/h2&gt;
-  &lt;p&gt;Content here.&lt;/p&gt;
-&lt;/article&gt;
-&lt;article&gt;
-  &lt;h2&gt;Another heading of another article&lt;/h2&gt;
-  &lt;p&gt;More content here.&lt;/p&gt;
-&lt;/article&gt;</pre>
+```html
+<h1>私のブログ</h1>
+<article>
+  <h2>良い記事の見出し</h2>
+  <p>内容はこちら。</p>
+</article>
+<article>
+  <h2>他の記事の他の見出し</h2>
+  <p>さらなる内容はこちら。</p>
+</article>
+```
 
-<p>各 <code>&lt;article&gt;</code> の CSS には {{cssxref("contain")}} プロパティに <code>content</code> という値が設定されています。</p>
+それぞれの記事には CSS で {{cssxref("contain")}} プロパティに `content` という値が設定されています。
 
-<pre class="brush: css notranslate">article {
+```css
+article {
   contain: content;
-}</pre>
+}
+```
 
-<p>各 <code>&lt;article&gt;</code> は他の article タグとは独立しており、 この時 <code>contain: content</code> はブラウザにそのことを伝えるために設定されています。ブラウザは次にこの情報をコンテンツのレンダリング方法の決定に用います。例えば、表示可能な領域の外側の記事はレンダリングしない場合があります。</p>
+それぞれの記事は、ページ上の他の記事と独立していますので、 `contain: content` がこのことをブラウザーに伝えるために指定されています。それでブラウザーはこの情報を使用して、どのようにして内容を描画するかを決定します。例えば、表示される領域の外側にある記事は描画しない場合があります。
 
-<p>各 <code>&lt;article&gt;</code> に <code>contain</code> プロパティが与えられた場合、新しい要素が追加されると、ブラウザは <code>contain</code> プロパティが設定された要素のサブツリーの外側については再レイアウトや再描画を行う必要がないと判断します。ただし、もし <code>&lt;article&gt;</code> が ( <code>height: auto</code> が設定されている時のように) そのコンテンツによってサイズが変わるようスタイリングされている場合は、ブラウザがサイズの変化に対応する必要があるかもしれません。</p>
+それぞれの `<article>` の `contain` プロパティを `content` の値に設定すると、新しい要素が挿入されたとき、ブラウザーはそれを含む要素のサブツリー以外の領域を再レイアウトまたは再描画する必要がないことを判断します。ただし、もし `<article>` が（`height: auto` の場合のように）そのコンテンツによってサイズが変わるようスタイル付けされている場合は、ブラウザーがサイズの変化に対応する必要があるかもしれません。
 
-<p><code>contain</code> プロパティについて、各 <code>&lt;article&gt;</code> の要素が独立である例を用いて説明しました。</p>
+各記事が独立していることを `contain` プロパティで伝えています。
 
-<p>この <code>content</code> という値は <code>contain: layout paint</code> の省略記法です。ブラウザに対して、内部で行われるレイアウト時にその他の要素と完全に区別するよう伝え、要素に関する全てがその境界の内側で描画されます。どの要素も視覚的にオーバーフローしません。</p>
+`content` の値は `contain: layout paint` の短縮形です。これはブラウザーに、要素の内部レイアウトがページの他の部分と完全に分離しており、要素に関するすべてがその境界の内側で描画されることを伝えます。視覚的にはみ出るようなものはありません。
 
-<p>ある要素のスタイルがその外側に影響しないようにすべきということは、web 開発者側にとってはよく知られており、実際ページを作るときにはそうします。しかし、ブラウザはそういった意図は分かりませんし、記事のスタイルがその中で閉じるように描画されるということは最初から分かりません。このプロパティはそのことをブラウザに伝えるのに有用なのです。これを使うことで、こうした知見に基づいたパフォーマンス最適化を行うことができます。</p>
+この情報は、ページを作成するウェブ開発者にとっては、通常知っていることであり、実際、非常に明白なことです。しかし、ブラウザーはその意図を推測することができず、記事が完全に自己完結していると仮定することはできません。したがって、このプロパティは、この事実をブラウザーに説明し、その知識に基づいて表示性能を最適化することを可能にする良い方法を提供します。
 
-<h2 id="主な概念と用語">主な概念と用語</h2>
+## 主要概念と用語
 
-<p>この仕様は {{cssxref("contain")}} というプロパティのみを定義しています。このプロパティの値には、封じ込めの種類を指定します。</p>
+この仕様では {{cssxref("contain")}} というプロパティのみを定義しています。このプロパティの値には、封じ込めの種類を指定します。
 
-<h3 id="レイアウトの封じ込め">レイアウトの封じ込め</h3>
+### レイアウトの封じ込め
 
-<pre class="brush: css notranslate">article {
+```css
+article {
   contain: layout;
-}</pre>
+}
+```
 
-<p>レイアウトは通常、ドキュメント全体がスコープになっています。つまり、ドキュメント全体の中からたった１つの要素を動かしただけで、様々なところが動かされたかのように扱われます。<code>contain: layout</code> を使うことで、ブラウザに対して必要な要素のみを伝えることができます。このプロパティを指定した要素の中の全てがその要素によって封じ込められ、その他の要素には影響せず、そしてその包含ブロックは独立したフォーマッティングコンテキストになります。</p>
+レイアウトは通常、文書全体がスコープになっています。つまり、文書全体の中から 1 つの要素を動かしただけで、すべてが動かされたかのように扱われます。 `contain: layout` を使うことで、ブラウザーに対して必要な要素のみを伝えることができます。このプロパティを指定した要素の中の全てがその要素によって封じ込められ、その他の要素には影響せず、そしてその包含ブロックは独立した整形コンテキストになります。
 
-<p>加えて、以下の点に注意する必要があります。</p>
+加えて、以下の点に注意する必要があります。
 
-<ul>
- <li><code>float</code> レイアウトはこのプロパティとは独立して作用します。</li>
- <li>マージンはレイアウトによる封じ込めの境界によって崩れることはありません。</li>
- <li>レイアウトの封じ込めは <code>position: </code><code>absolute</code>/<code>fixed</code> が指定されたブロックの子孫要素の包含ブロックになります。</li>
- <li>この包含ブロックはスタッキングコンテキストを作ります。なので {{cssxref("z-index")}} を使うことができます。</li>
-</ul>
+- `float` レイアウトはこのプロパティとは独立して作用します。
+- レイアウトの封じ込めの境界でマージンが相殺されることはありません。
+- レイアウトのコンテナーは `absolute`/`fixed` による位置指定の子要素の包含ブロックになります。
+- この包含ボックスは重ね合わせコンテキストを作ります。従って {{cssxref("z-index")}} を使用することができます。
 
-<h3 id="ペイントの封じ込め">ペイントの封じ込め</h3>
+### ペイントの封じ込め
 
-<pre class="brush: css notranslate">article {
+```css
+article {
   contain: paint;
-}</pre>
+}
+```
 
-<p>Paint containment essentially clips the box to the padding edge of the principal box. There can be no visible overflow. The same things are true for <code>paint</code> containment as <code>layout</code> containment (see above).</p>
+ペイントの封じ込めは、基本的に、ボックスを主要ボックスのパディングエッジでクリッピングします。視覚的なはみ出しは許されません。 `paint` 封じ込めにも `layout` 封じ込めと同じことが当てはまります（上記を参照）。
 
-<p>Another advantage is that if the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box.</p>
+もうひとつの利点は、包含ボックスが画面外にある場合、ブラウザーはその内包する要素を描く必要がないことです — これらはそのボックスによって完全に内包されているので、画面外にあるに違いないからです。
 
-<h3 id="サイズの封じ込め">サイズの封じ込め</h3>
+### サイズの封じ込め
 
-<pre class="brush: css notranslate">article {
+```css
+article {
   contain: size;
-}</pre>
+}
+```
 
-<p>Size containment does not offer much in the way of performance optimizations when used on its own. However, it means that the size of the element's children cannot affect the size of the element itself — its size is computed as if it had no children.</p>
+サイズの封じ込めを単独で使用した場合、表示性能の最適化はあまり期待できません。しかし、要素の子のサイズが要素自体のサイズに影響しないことを意味し、そのサイズは子がないものとして計算されます。
 
-<p>If you turn on <code>contain: size</code> you need to also specify the size of the element you have applied this to. It will end up being zero-sized in most cases, if you don't manually give it a size.</p>
+もし、`contain: size` をオンにした場合は、これを適用した要素のサイズも指定する必要があります。もし、手動でサイズを指定しない場合は、ほとんどの場合、サイズがゼロになってしまいます。
 
-<h3 id="スタイルの封じ込め">スタイルの封じ込め</h3>
+### スタイルの封じ込め
 
-<pre class="brush: css notranslate">article {
+```css
+article {
   contain: style;
-}</pre>
+}
+```
 
-<p>Despite the name, style containment does not provide scoped styles such as you would get with the <a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a>. The main use case is to prevent situations where a <a href="/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters">CSS Counter</a> could be changed in an element, which could then affect the rest of the tree. </p>
+名前に反して、スタイルの封じ込めは、 [Shadow DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) で得られるようにスタイルを封じ込めるわけではありません。主な使用例は、 [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) がある要素で変更され、それがツリーの残りの部分に影響する可能性がある状況を防ぐことです。
 
-<p>Using <code>contain: style</code> would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.</p>
+`contain: style` を使用すると、{{cssxref("counter-increment")}} と {{cssxref("counter-set")}} プロパティがそのサブツリーにのみ限定された新しいカウンターを作成することを保証します。
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: <code>style</code> containment is "at-risk" in the spec and may not be supported everywhere (it's not currently supported in Firefox).</p>
-</div>
+> **Note:** `style` の封じ込め仕様上「リスクがあり」、どこでも対応しているとは限りません (現在 Firefox は対応していません)。
 
-<h3 id="特殊な値">特殊な値</h3>
+### 特殊な値
 
-<p>There are two special values of contain:</p>
+封じ込めの特殊な値が 2 つあります。
 
-<ul>
- <li><code>content</code></li>
- <li><code>strict</code></li>
-</ul>
+- `content`
+- `strict`
 
-<p>We encountered the first in the example above. Using <code>contain: content</code> turns on <code>layout</code> and <code>paint</code> containment. The specification describes this value as being "reasonably safe to apply widely". It does not apply <code>size</code> containment, so you would not be at risk of a box ending up zero-sized due to a reliance on the size of its children.</p>
+1 つ目は上記の例で既に見ました。 `contain: content` を使用すると、 `layout` と `paint` の封じ込めが有効になります。仕様書では、この値を「広く適用してもそれなりに安全である」と説明しています。この値は `size` の封じ込めを適用しないので、子要素のサイズに依存して、ボックスのサイズがゼロになる危険性はありません。
 
-<p>To gain as much containment as possible use <code>contain: strict</code>, which behaves the same as <code>contain: size layout paint</code>, or perhaps the following to also add <code>style</code> containment in browsers that support it:</p>
+できるだけ多くの封じ込めを得るには、 `contain: strict` を使用します。これは `contain: size layout paint` と同じ動作をしますが、おそらく以下のようにすると、 `style` に対応しているブラウザーでは封じ込めを追加することができます。
 
-<pre class="brush: css notranslate">contain: strict;
-contain: strict style;</pre>
+```css
+contain: strict;
+contain: strict style;
+```
 
-<h2 id="参考リンク">参考リンク</h2>
+## リファレンス
 
-<h3 id="CSS_プロパティ">CSS プロパティ</h3>
+### CSS プロパティ
 
-<ul>
- <li>{{cssxref("contain")}}</li>
-</ul>
+- {{cssxref("contain")}}
+- {{cssxref("content-visibility")}}
 
-<h2 id="外部リンク">外部リンク</h2>
+## 仕様書
 
-<ul>
- <li><a href="https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/">An Introduction to CSS Containment</a></li>
-</ul>
+| 仕様書                                                                            | 状態                                   | 備考               |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------- |
+| {{SpecName('CSS Containment 2', '#contain-property', 'contain')}} | {{Spec2('CSS Containment 2')}} | `style` キーワードを追加 |
+
+## ブラウザーの互換性
+
+{{Compat("css.properties.contain")}}
+
+{{Compat("css.properties.content-visibility")}}
+
+## 外部リソース
+
+- [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)
+- [Everything You Need to Know About the CSS `will-change` Property](https://dev.opera.com/articles/css-will-change-property)
