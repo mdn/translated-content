@@ -1,111 +1,108 @@
 ---
 title: content-visibility
 slug: Web/CSS/content-visibility
+tags:
+  - CSS
+  - CSS 封じ込め
+  - CSS プロパティ
+  - レイアウト
+  - Paint
+  - リファレンス
+  - Style
+  - Visibility
+  - ウェブ
+browser-compat: css.properties.content-visibility
 translation_of: Web/CSS/content-visibility
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><span>content-visibility CSSプロパティは、要素がそのコンテンツをレンダリングするかどうかを制御するとともに、強力な包含セットを強制することで、ユーザーエージェントが必要になるまで大量のレイアウトとレンダリング作業を省略できるようにします。基本的に、ユーザーエージェントは、レイアウトやペイントなどの要素のレンダリング作業を必要になるまでスキップできるため、最初のページの読み込みがはるかに高速になります。</span></p>
+**`content-visibility`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がその内容物をレンダリングするかどうかを制御するとともに、強力な封じ込めのセットを強制することで、必要になるまでユーザーエージェントが大量のレイアウトとレンダリングの作業を省略できるようにします。基本的に、ユーザーエージェントは、レイアウトやペイントなどの要素のレンダリング作業を必要になるまでスキップできるため、最初のページの読み込みがはるかに高速になります。
 
-<p><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 37.33327865600586px;"><strong>文法</strong></span></font></p>
+## 構文
 
-<pre class="brush: css no-line-numbers notranslate">/* Keyword values */
+```css
+/* キーワード値 */
 content-visibility: visible;
 content-visibility: hidden;
 content-visibility: auto;
 
-/* Global values */
+/* グローバル値 */
+content-visibility: inherit;
 content-visibility: initial;
+content-visibility: revert;
 content-visibility: unset;
-</pre>
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>
- <p dir="ltr" id="tw-target-text">無効。要素のコンテンツは通常どおりにレイアウトおよびレンダリングされます。</p>
- </dd>
- <dt><code>hidden</code></dt>
- <dd>
- <p dir="ltr" id="tw-target-text">要素はその内容をスキップします。スキップされたコンテンツは、ページ内検索、タブオーダーナビゲーションなどのユーザーエージェント機能にアクセスできたり、選択またはフォーカス可能であってはなりません。これは、<code>display: none</code>をコンテンツに与えるのと似ています。</p>
- </dd>
- <dt><code>auto</code></dt>
- <dd>
- <p>この要素は、レイアウトの封じ込め、スタイルの封じ込め、およびペイントの封じ込めをオンにします。要素がユーザーに関連していない場合は、その内容もスキップします。非表示とは異なり、スキップされたコンテンツは、ページ内検索、タブオーダーナビゲーションなどのユーザーエージェント機能に対して通常どおり利用可能である必要があり、通常どおりフォーカス可能で選択可能である必要があります。</p>
- </dd>
-</dl>
+- `visible`
+  - : 効果なし。要素の内容物は通常通りにレイアウトおよび描画されます。
+- `hidden`
+  - : 要素はその内容物を読み飛ばします。読み飛ばされた内容物は、ページ内検索やタブ順序ナビゲーションなどのユーザーエージェント機能でアクセス可能になることはなく、また選択可能やフォーカス可能にもなりません。これは、内容物に `display: none` を設定することに似ています。
+- `auto`
+  - : この要素の、レイアウトの封じ込め、スタイルの封じ込め、描画の封じ込めをオンにします。要素がユーザーに関連していない場合、その内容の読み飛ばしも行われます。 hidden の場合とは異なり、読み飛ばされたコンテンツは、ページ内検索やタブ順序ナビゲーションなどのユーザーエージェント機能で通常通り利用可能となり、通常通りフォーカスや選択が可能になります。
 
-<h2 id="例"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 37.33327865600586px;"><strong>例</strong></span></font></h2>
+## 公式定義
 
-<h3 dir="ltr" id="autoを使用して長いページのレンダリングコストを削減">autoを使用して長いページのレンダリングコストを削減</h3>
+{{cssinfo}}
 
-<p dir="ltr" id="tw-target-text">次の例は、autoを使用して画面外のセクションのペイントとレンダリングをスキップする方法を示しています。ビューポート外のコンテンツはレンダリングされないため、これはページの読み込みと操作の両方に役立ちます。</p>
+## アクセシビリティの考慮
 
-<pre class="brush: html notranslate">&lt;style&gt;
+見出しやその他のコンテンツが画面外にあるとみなされた場合、 `content-visibility` によって抑制されます。これは、画面リーダーの利用者が、ページのアウトラインを完全に読み上げるという利点を失う可能性があることを意味します。
+
+詳しくは [Content-visibility and Accessible Semantics](https://marcysutton.com/content-visibility-accessible-semantics) をご覧ください。
+
+## 例
+
+### auto を使用して長いページのレンダリングコストを削減
+
+次の例は、 auto を使用して画面外のセクションのペイントとレンダリングを飛ばす方法を示しています。ビューポート外の内容物はレンダリングされないため、これはページの読み込みと操作の両方に役立ちます。</p>
+
+```html
+<style>
 section {
   content-visibility: auto;
   contain-intrinsic-size: 0 500px;
 }
 
-&lt;section&gt;...
-&lt;section&gt;...
-&lt;section&gt;...
-&lt;section&gt;...
+<section>...
+<section>...
+<section>...
+<section>...
 ...
-</pre>
+```
 
-<h3 dir="ltr" id="hiddenを使用して手動で可視性を管理">hiddenを使用して手動で可視性を管理</h3>
+### hidden を使用して手動で可視性を管理
 
-<p>次の例は、スクリプトで可視性を管理できることを示しています。たとえば、display：noneの代わりにcontent-visiblity：hiddenを使用することの追加の利点は、content-visibilityで非表示にしたときにレンダリングされたコンテンツがレンダリング状態を保持することです。これは、コンテンツが再度表示される場合、他のコンテンツよりも速くレンダリングされることを意味します。</p>
+次の例は、スクリプトで可視性を管理できることを示しています。 `content-visiblity: hidden` を、たとえば `display: none` の代わりに使用することの追加の利点は、 `content-visibility` で非表示にしたときにレンダリングされたコンテンツがレンダリング状態を保持することです。これは、コンテンツが再度表示される場合、他のコンテンツよりも高速にレンダリングされることを意味します。
 
-<pre class="brush: html notranslate">&lt;style&gt;
+```html
+<style>
 .hidden {
   content-visibility: hidden;
-  /* 非表示の場合、要素のサイズを0x500pxサイズの子が1つあるかのようにします */
+  /* 非表示の場合、要素のサイズを 0 x 500px サイズの子が 1 つあるかのようにします */
   contain-intrinsic-size: 0 500px;
 }
 .visible {
   content-visibility: visible;
-  /* これは、.hiddenと.visibleを切り替えるときにレイアウトがシフトしないようにするためです */
+  /* これは、 .hidden と .visible を切り替えるときにレイアウトがシフトしないようにするためです */
   contain: style layout paint;
 }
 
+<div class=hidden>...
+<div class=visible>...
+<div class=hidden>...
+<div class=hidden>...
+```
 
+## 仕様書
 
-&lt;div class=hidden&gt;...
-&lt;div class=visible&gt;...
-&lt;div class=hidden&gt;...
-&lt;div class=hidden&gt;...
-</pre>
+{{Specifications}}
 
-<h2 id="Specifications">Specifications</h2>
+## ブラウザーの互換性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Containment 2', '#content-visibility')}}</td>
-   <td>{{Spec2('CSS Containment 2')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## 関連情報
 
-
-
-<p>{{Compat("css.properties.content-visibility")}}</p>
-
-<h2 id="See_Also">See Also</h2>
-
-<ul>
- <li><a href="https://web.dev/content-visibility/">content-visibility: the new CSS property that boosts your rendering performance</a> (web.dev)</li>
-</ul>
+- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)
