@@ -1574,6 +1574,7 @@
 /es/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Wtilizando_texturas_en_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/es/docs/Web/API/WebSocket/onerror	/es/docs/Web/API/WebSocket/error_event
 /es/docs/Web/API/WebSockets_API/Escribiendo_servidor_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_server
 /es/docs/Web/API/WebSockets_API/Escribiendo_servidores_con_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
 /es/docs/Web/API/Web_Speech_API/Uso_de_la_Web_Speech_API	/es/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API

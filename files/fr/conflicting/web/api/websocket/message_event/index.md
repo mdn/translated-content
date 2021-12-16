@@ -1,6 +1,7 @@
 ---
 title: WebSocket.onmessage
-slug: Web/API/WebSocket/onmessage
+slug: conflicting/Web/API/WebSocket/message_event
+original_slug: Web/API/WebSocket/onmessage
 browser-compat: api.WebSocket.onmessage
 ---
 {{APIRef("Web Sockets API")}}

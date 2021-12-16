@@ -3291,6 +3291,10 @@
 /ja/docs/Web/API/WebGL_API/Lighting_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 /ja/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /ja/docs/Web/API/WebGL_API/Using_textures_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/ja/docs/Web/API/WebSocket/onclose	/ja/docs/conflicting/Web/API/WebSocket/close_event
+/ja/docs/Web/API/WebSocket/onerror	/ja/docs/conflicting/Web/API/WebSocket/error_event
+/ja/docs/Web/API/WebSocket/onmessage	/ja/docs/conflicting/Web/API/WebSocket/message_event
+/ja/docs/Web/API/WebSocket/onopen	/ja/docs/conflicting/Web/API/WebSocket/open_event
 /ja/docs/Web/API/WebSockets_API/WebSockets_reference	/ja/docs/Web/API/WebSockets_API
 /ja/docs/Web/API/WebVR_API/WebVR_concepts	/ja/docs/Web/API/WebVR_API/Concepts
 /ja/docs/Web/API/Web_Video_Text_Tracks_Format	/ja/docs/Web/API/WebVTT_API

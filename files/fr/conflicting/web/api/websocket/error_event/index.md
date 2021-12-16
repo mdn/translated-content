@@ -1,6 +1,7 @@
 ---
 title: WebSocket.onerror
-slug: Web/API/WebSocket/onerror
+slug: conflicting/Web/API/WebSocket/error_event
+original_slug: Web/API/WebSocket/onerror
 browser-compat: api.WebSocket.onerror
 ---
 {{APIRef("Web Sockets API")}}

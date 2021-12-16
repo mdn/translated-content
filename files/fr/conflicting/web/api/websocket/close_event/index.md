@@ -1,6 +1,7 @@
 ---
 title: WebSocket.onclose
-slug: Web/API/WebSocket/onclose
+slug: conflicting/Web/API/WebSocket/close_event
+original_slug: Web/API/WebSocket/onclose
 browser-compat: api.WebSocket.onclose
 ---
 {{APIRef("Web Sockets API")}}

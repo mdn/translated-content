@@ -1,6 +1,7 @@
 ---
 title: WebSocket.onopen
-slug: Web/API/WebSocket/onopen
+slug: conflicting/Web/API/WebSocket/open_event
+original_slug: Web/API/WebSocket/onopen
 browser-compat: api.WebSocket.onopen
 ---
 {{APIRef("Web Sockets API")}}
