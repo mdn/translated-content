@@ -30,7 +30,7 @@ _a-rate_ `AudioParam` 은 오디오 신호의 각 [샘플 프레임](/ko/docs/We
 
 ### k-rate
 
-_k-rate_ `AudioParam` 은 처리되는 전체 블럭에 대해 같은 초기 오디오 파라미터 값을 사용합니다; 즉, 128 샘플 프레임입니다. 다른 말로 하자면, 오디오가 노드에 의해 처리되는 동안 같은 값이 오디오에 있는 모든 프레임에 적용됩니다.
+_k-rate_ `AudioParam` 은 처리되는 전체 블럭에 대해 같은 초기 오디오 파라미터 값을 사용합니다. 즉, 128 샘플 프레임입니다. 다른 말로 하자면, 오디오가 노드에 의해 처리되는 동안 같은 값이 오디오에 있는 모든 프레임에 적용됩니다.
 
 ## 속성
 
@@ -41,7 +41,7 @@ _k-rate_ `AudioParam` 은 처리되는 전체 블럭에 대해 같은 초기 오
 - {{domxref("AudioParam.minValue")}} {{readonlyinline}}
   - : 파라미터의 명목상의 (효과적인) 범위에 대한 최소로 가능한 값을 나타냅니다.
 - {{domxref("AudioParam.value")}}
-  - : 현재 시간에 대한 파라미터의 현재 값을 나타냅니다; 초기적으로는 {{domxref("AudioParam.defaultValue", "defaultValue")}}의 값으로 설정됩니다.
+  - : 현재 시간에 대한 파라미터의 현재 값을 나타냅니다. 초기적으로는 {{domxref("AudioParam.defaultValue", "defaultValue")}}의 값으로 설정됩니다.
 
 ## 메서드
 
