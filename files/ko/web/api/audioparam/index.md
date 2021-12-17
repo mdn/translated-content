@@ -72,7 +72,7 @@ var gainNode = audioCtx.createGain();
 gainNode.gain.value = 0;
 ```
 
-다음 예제는 {{ domxref("DynamicsCompressorNode") }}가 몇 개의 param 값들을 조작하는 것을 보여줍니다. 이 값들은 k-rate AudioParam의 예시인데, 왜냐하면 이것들은 한번에 전체 오디오 블럭에 대해 설정되기 때문입니다.
+다음 예제는 {{ domxref("DynamicsCompressorNode") }}가 몇 개의 파라미터 값들을 조작하는 것을 보여줍니다. 이 값들은 k-rate AudioParam의 예시인데, 왜냐하면 이것들은 한번에 전체 오디오 블럭에 대해 설정되기 때문입니다.
 
 ```js
 var compressor = audioCtx.createDynamicsCompressor();
