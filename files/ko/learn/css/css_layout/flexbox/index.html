@@ -49,7 +49,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>(편집기로 본) 소스안에 최상위 수준에 {{htmlelement("header")}} 요소와 세 개의 {{htmlelement("article")}}를 포함한 {{htmlelement("section")}} 요소가 있음을 알 수 있습니다. 우리는 이것들을 사용해 상당히 표준적인 삼단 레이아웃을 생성할 겁니다.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
 <h2 id="flexbox로_레이아웃할_요소_지정">flexbox로 레이아웃할 요소 지정</h2>
 
@@ -61,7 +61,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>그 결과는 다음과 같아야 합니다:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13408/flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
 
 <p>자. 이 단일 선언이 우리에게 필요한 모든 것을 제공합니다. 놀랍죠, 그쵸? 우리는 단의 크기가 동일한 다단 레이아웃를 갖게 되었고, 단의 높이가 모두 같습니다. 이렇게 된 까닭은 (flex container의 자식인) flex item에 주어진 기본값이 이와 같은 일반적인 문제를 해결하도록 설정되었기 때문입니다. 관련 내용은 나중에 추가합니다.</p>
 
@@ -73,7 +73,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>요소들을 flexbox로 레이아웃될 때 그 상자들은 두 개의 축을 따라 배치됩니다.</p>
 
-<p><img alt="flex_terms.png" class="default internal" src="/files/3739/flex_terms.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="flex_terms.png" class="default internal" src="flex_terms.png"></p>
 
 <ul>
  <li><ruby><strong>기본 축</strong><rp> (</rp><rt>main axis</rt><rp>) </rp></ruby>은 flex item이 배치되고 있는 방향으로 진행하는 축입니다(예: 페이지를 가로지르는 행 또는 페이지 밑으로 쌓이는 열). 이 기본 축의 시작과 끝을 일컬어 <strong>main start</strong>과 <strong>main end</strong>라고 합니다.</li>
@@ -102,7 +102,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>당신의 레이아웃에 너비 또는 높이가 고정 크기를 갖고 있어 생기는 한 가지 문제는 결국 flexbox 자식 요소가 컨테이너에서 대열이탈하면서 레이아웃이 깨진다는 것입니다. 우리가 제시하는 <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html">flexbox-wrap0.html</a> 예제를 확인하고 난 뒤 <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html">라이브 보기</a>를 시도하세요(이 예제를 따라해보고 싶다면 이제 이 파일의 사본을 내려받으세요):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13410/flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
 
 <p>여기서 우리는 자식들이 정말로 소속 컨테이너에서 이탈하는 모습을 확인할 수 있습니다. 이것을 해소할 수 있는 한 가지 방법은 다음 선언을 {{htmlelement("section")}} 규칙 부분에 추가하면 됩니다:</p>
 
@@ -114,7 +114,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>지금 시도해보십시오. 동 규칙이 포함된 상태에선 레이아웃 모양이 개선되는 걸 보게 됩겁니다:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13412/flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;">우리는 이제 여러 행을 갖게 되었다. 많은 flexbox 자녀들이 합당하다 싶게 각 행마다 (분배되어) 알맞게 맞춰졌습니다. 대열이탈된 것들은 다음 행으로 넘어갑니다. 아티클 요소에 <code>flex: 200px</code> 선언이 지정되었다는 의미는 각 요소에 적어도 200px 너비가 지정되었다는 의미이다. 우리는 나중에 이 속성에 대해 더 자세히 논의할 겁니다. 마지막 행에 있는 마지막 몇몇 자식들의 각 너비가 더 연장되면서 전체 행이 마찬가지로 채워진 것을 볼 수 있습니다.</p>
+<p><img alt="" src="flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;">우리는 이제 여러 행을 갖게 되었다. 많은 flexbox 자녀들이 합당하다 싶게 각 행마다 (분배되어) 알맞게 맞춰졌습니다. 대열이탈된 것들은 다음 행으로 넘어갑니다. 아티클 요소에 <code>flex: 200px</code> 선언이 지정되었다는 의미는 각 요소에 적어도 200px 너비가 지정되었다는 의미이다. 우리는 나중에 이 속성에 대해 더 자세히 논의할 겁니다. 마지막 행에 있는 마지막 몇몇 자식들의 각 너비가 더 연장되면서 전체 행이 마찬가지로 채워진 것을 볼 수 있습니다.</p>
 
 <p>하지만 할 수 있는 게 더 있습니다. 우선, {{cssxref("flex-direction")}} 속성값을 <code>row-reverse</code>로 변경해 보십시오. 이제 여러 행 레이아웃을 보유한 것은 마찬가지지만, 브라우저 창의 반대쪽 구석에서 시작하여 역방향 대열이 된 것이 확인될 겁니다.</p>
 
@@ -161,7 +161,7 @@ article:nth-of-type(3) {
 
 <p>이것은 기본적으로 "각 flex item은 먼저 사용 가능한 공간에서 200px를 부여받습니다. 그 후, 나머지 사용 가능한 공간은 비례 단위에 따라 분배됩니다." 새로 고침을 해보면 공간 배분 방식이 달라진 것이 확인될 겁니다.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
 <p>flexbox의 실제 값은 flex성/반응성에 포함되어 있다고 볼 수 있습니다. 다시말해 브라우저 창의 크기를 재조정하거나 다른 {{htmlelement("article")}} 요소를 추가하더라도 레이아웃이 계속 정상적으로 작동합니다.</p>
 
@@ -181,7 +181,7 @@ article:nth-of-type(3) {
 
 <p>또한 flexbox 기능을 사용하여 기본 축 또는 교차축을 따라 flex item을 정렬할수 있습니다. 이 기능은 새로운 예제인 <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">flex-align0.html</a>을 통해 살펴보자(<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">라이브로도 보세요</a>). flexbox가 우리는 깔끔한 flex형 단추/툴바로 바뀌게될 겁니다. 지금 당장은 몇몇 단추들이 왼쪽 상단 모서리에 몰린 상태의 수평 메뉴 표시줄이 보입니다.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13414/flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="" src="flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
 
 <p>우선 이 예제의 사본을 취득합니다.</p>
 
@@ -252,7 +252,7 @@ article:nth-of-type(3) {
 
 <p>flexbox를 사용하여 꽤 복잡한 레이아웃을 만들 수 있습니다. flex item을 flex container로 설정해도 전혀 문제없습니다. 그렇게 되면 그 컨테이너의 자녀가 flexbox처럼 배치됩니다. <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html">complex-flexbox.html</a>를 찾아보세요. (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">라이브로도 보세요</a>).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13418/flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>이를 위한 HTML은 상당히 간단합니다. 세 개의 {{htmlelement("article")}}를 포함하는 {{htmlelement("section")}} 요소가 있습니다. 세 번째 {{htmlelement("article")}}은 세 개의 {{htmlelement("div")}}를 포함하고 있습니다. :</p>
 
