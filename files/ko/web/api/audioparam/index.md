@@ -54,7 +54,7 @@ _k-rate_ `AudioParam` 은 처리되는 전체 블럭에 대해 같은 초기 오
 - {{domxref("AudioParam.setTargetAtTime()")}}
   - : `AudioParam` 의 값에 변화의 시작을 예정합니다. 이 변화는 `startTime` 에 명시된 시간에 시작해 `target` 매개변수에 주어진 값을 향해 지수적으로 움직입니다. 이 지수적인 감소(decay) 비율은 `timeConstant` 매개변수에 의해 정의되는데, 이 값은 초 단위로 측정된 시간입니다.
 - {{domxref("AudioParam.setValueCurveAtTime()")}}
-  - : `AudioParam` 의 값들이 값들의 집합을 따르게 예정합니다. 이 값들의 집합은 주어진 구간에 맞도록 조정된 부동점 숫자들의 집합에 의해 정의됩니다. 변화는 주어진 시작 시간에 시작하고, 주어진 시간 기간에 걸쳐 이어집니다.
+  - : `AudioParam` 의 값들이 주어진 구간에 맞도록 조정된 부동점 숫자들의 배열을 따르게 예정합니다. 수의 구간은 주어진 시작 시간에 시작하고, 주어진 지속 시간에 걸쳐 이어집니다.
 - {{domxref("AudioParam.cancelScheduledValues()")}}
   - : `AudioParam` 에 예정된 모든 미래의 변화들을 취소합니다.
 - {{domxref("AudioParam.cancelAndHoldAtTime()")}}
