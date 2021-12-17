@@ -41,7 +41,7 @@ _k-rate_ `AudioParam` 은 처리되는 전체 블럭에 대해 같은 초기 오
 - {{domxref("AudioParam.minValue")}} {{readonlyinline}}
   - : 파라미터의 명목상의 (효과적인) 범위에 대한 최소로 가능한 값을 나타냅니다.
 - {{domxref("AudioParam.value")}}
-  - : 현재 시간에 대한 파라미터의 현재 값을 나타냅니다; 초기적으로는 {{domxref("AudioParam.defaultValue", "defaultValue")}}.의 값으로 설정됩니다.
+  - : 현재 시간에 대한 파라미터의 현재 값을 나타냅니다; 초기적으로는 {{domxref("AudioParam.defaultValue", "defaultValue")}}의 값으로 설정됩니다.
 
 ## 메서드
 
