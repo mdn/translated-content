@@ -3,52 +3,60 @@ title: prefix
 slug: Web/CSS/@counter-style/prefix
 tags:
   - '@counter-style'
+  - アットルール記述子
   - CSS
   - CSS カウンタースタイル
   - CSS 記述子
   - リファレンス
+browser-compat: css.at-rules.counter-style.prefix
 translation_of: Web/CSS/@counter-style/prefix
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>{{cssxref('@counter-style')}} 規則の <code><strong>prefix</strong></code> 記述子は、マーカーに先立って表示される内容を指定します。指定されていない場合、既定値は <code>""</code> (空文字列) になります。</p>
+**`prefix`** は {{cssxref('@counter-style')}} ルールの記述子で、マーカーに先立って表示される内容を指定します。指定されていない場合、既定値は `""` (空文字列) になります。
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush: css">/* &lt;symbol&gt; 値 */
+```css
+/* <symbol> 値 */
 prefix: "»";
 prefix: "Page ";
 prefix: url(bullet.png);
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>&lt;symbol&gt;</code></dt>
- <dd>マーカーに先立って表示される <code>&lt;symbol&gt;</code> を指定します。 {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;custom-ident&gt;")}} の何れかです。</dd>
-</dl>
+- `<symbol>`
+  - : マーカーに先立って表示される `<symbol>` を指定します。 {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;custom-ident&gt;")}} の何れかです。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### カウンターに接頭辞を追加
 
-<pre class="brush: html">&lt;ul class="index"&gt;
-  &lt;li&gt;The Boy Who Lived&lt;/li&gt;
-  &lt;li&gt;The Vanishing Glass&lt;/li&gt;
-  &lt;li&gt;The Letters from No One&lt;/li&gt;
-  &lt;li&gt;The Keeper of the Keys&lt;/li&gt;
-  &lt;li&gt;Diagon Alley&lt;/li&gt;
-&lt;/ul&gt;</pre>
+#### HTML
 
-<h3 id="CSS">CSS</h3>
+```html
+<ul class="index">
+  <li>The Boy Who Lived</li>
+  <li>The Vanishing Glass</li>
+  <li>The Letters from No One</li>
+  <li>The Keeper of the Keys</li>
+  <li>Diagon Alley</li>
+</ul>
+```
 
-<pre class="brush: css">@counter-style chapters {
+#### CSS
+
+```css
+@counter-style chapters {
   system: numeric;
   symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
   prefix: 'Chapter ';
@@ -57,38 +65,22 @@ prefix: url(bullet.png);
 .index {
   list-style: chapters;
   padding-left: 15ch;
-}</pre>
+}
+```
 
 <h3 id="Result" name="Result">結果</h3>
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Adding_a_prefix_to_a_counter') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Counter Styles', '#descdef-counter-style-prefix', 'prefix')}}</td>
-   <td>{{Spec2('CSS3 Counter Styles')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.at-rules.counter-style.prefix")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols", "symbols()")}}、 匿名のカウンタースタイルを作成するために使用される関数形式の記述方法です。</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("symbols()", "symbols()")}}、無名のカウンタースタイルを作成する関数記法
