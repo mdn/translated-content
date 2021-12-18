@@ -153,19 +153,19 @@ let o = new Object(Boolean())
 hook을 통해 프로토타입을 수정하고자 할 때엔 해당 함수에서 `apply()`를 호출하면서 `this`와 arguments 객체를 현재 동작에 전달합니다. 이 패턴은 `Node.prototype`, `Function.prototype` 등 모든 프로토타입에 적용할 수 있습니다.
 
 ```js
-var current = Object.prototype.valueOf
+var current = Object.prototype.valueOf;
+
 // 내가 지정한 속성 "-prop-value"은 범분야에 걸쳐 사용되고 있고
-// 항상 동일한 프로토타입 체인에 있지 않기 때문에,
-// Object.prototype을 수정하고 싶습니다.
+// 항상 동일한 프로토타입 체인에 있지 않기 때문에, Object.prototype을 수정하고 싶습니다.
 Object.prototype.valueOf = function () {
   if (this.hasOwnProperty('-prop-value')) {
-    return this['-prop-value']
+    return this['-prop-value'];
   } else {
     // 내가 만든 객체가 아닌 것 같으므로,
     // 가능한 최선을 다해 원래의 동작을 재현하여 기본 동작으로 돌아가겠습니다.
     // 'apply' 메서드는 다른 언어에서의 'super'처럼 작동합니다.
     // valueOf()가 arguments를 취하지 않더라도, 다른 hook이 있으리라 생각합니다.
-    return current.apply(this, arguments)
+    return current.apply(this, arguments);
   }
 }
 ```
@@ -174,59 +174,68 @@ JavaScript에는 명확한 하위 클래스 객체가 없기 때문에, 프로�
 
 ```js
 var Person = function (name) {
-  this.name = name
-  this.canTalk = true
+  this.name = name;
+  this.canTalk = true;
 }
 Person.prototype.greet = function () {
   if (this.canTalk) {
-    console.log('Hi, I am ' + this.name)
+    console.log('Hi, I am ' + this.name);
   }
-}
+};
+
 var Employee = function (name, title) {
-  Person.call(this, name)
-  this.title = title
-}
-Employee.prototype = Object.create(Person.prototype)
-Employee.prototype.constructor = Employee
-// Object.prototype.constructor를 Employee로 설정하지 않으면
-// Person (parent)의 prototype.constructor를 사용합니다.
-// 이를 피하기 위해 prototype.constructor를 Employee (child)로 설정합니다.
+  Person.call(this, name);
+  this.title = title;
+};
+
+Employee.prototype = Object.create(Person.prototype);
+Employee.prototype.constructor = Employee; // Object.prototype.constructor를 Employee로 설정하지 않으면
+                                           // Person (parent)의 prototype.constructor를 사용합니다.
+                                           // 이를 피하기 위해 prototype.constructor를 Employee (child)로 설정합니다.
 Employee.prototype.greet = function () {
   if (this.canTalk) {
-    console.log('Hi, I am ' + this.name + ', the ' + this.title)
+    console.log('Hi, I am ' + this.name + ', the ' + this.title);
   }
-}
+};
+
 var Customer = function (name) {
-  Person.call(this, name)
-}
-Customer.prototype = Object.create(Person.prototype)
-Customer.prototype.constructor = Customer
-// Object.prototype.constructor를 Customer로 설정하지 않으면
-// Person (parent)의 prototype.constructor를 사용합니다.
-// 이를 피하기 위해 prototype.constructor를 Customer (child)로 설정합니다.
+  Person.call(this, name);
+};
+
+Customer.prototype = Object.create(Person.prototype);
+Customer.prototype.constructor = Customer; // Object.prototype.constructor를 Customer로 설정하지 않으면
+                                           // Person (parent)의 prototype.constructor를 사용합니다.
+                                           // 이를 피하기 위해 prototype.constructor를 Customer (child)로 설정합니다.
+
 var Mime = function (name) {
-  Person.call(this, name)
-  this.canTalk = false
-}
-Mime.prototype = Object.create(Person.prototype)
-Mime.prototype.constructor = Mime
-// Object.prototype.constructor를 Mime로 설정하지 않으면
-// Person (parent)의 prototype.constructor를 사용합니다.
-// 이를 피하기 위해 prototype.constructor를 Mime (child)로 설정합니다.
-var bob = new Employee('Bob', 'Builder')
-var joe = new Customer('Joe')
-var rg = new Employee('Red Green', 'Handyman')
-var mike = new Customer('Mike')
-var mime = new Mime('Mime')
-bob.greet()
+  Person.call(this, name);
+  this.canTalk = false;
+};
+
+Mime.prototype = Object.create(Person.prototype);
+Mime.prototype.constructor = Mime; // Object.prototype.constructor를 Mime로 설정하지 않으면
+                                   // Person (parent)의 prototype.constructor를 사용합니다.
+                                   // 이를 피하기 위해 prototype.constructor를 Mime (child)로 설정합니다.
+
+var bob = new Employee('Bob', 'Builder');
+var joe = new Customer('Joe');
+var rg = new Employee('Red Green', 'Handyman');
+var mike = new Customer('Mike');
+var mime = new Mime('Mime');
+
+bob.greet();
 // Hi, I am Bob, the Builder
-joe.greet()
+
+joe.greet();
 // Hi, I am Joe
-rg.greet()
+
+rg.greet();
 // Hi, I am Red Green, the Handyman
-mike.greet()
+
+mike.greet();
 // Hi, I am Mike
-mime.greet()
+
+mime.greet();
 ```
 
 ## 명세
