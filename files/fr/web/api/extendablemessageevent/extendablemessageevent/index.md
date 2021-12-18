@@ -11,7 +11,7 @@ translation_of: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
 ---
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
 
-Le constructeur **`Extendable`\*\***`MessageEvent()`\*\*crée une nouvelle instance d'un {{domxref("ExtendableMessageEvent")}}.
+Le constructeur **`Extendable.MessageEvent()`** crée une nouvelle instance d'un {{domxref("ExtendableMessageEvent")}}.
 
 ## Syntaxe
 

@@ -71,7 +71,7 @@ Méthodes :
 read(byte[] b, int off, int len)
 ```
 
-Reads up to _len_ bytes of data from the input stream into an array of bytes.\*\*
+Reads up to _len_ bytes of data from the input stream into an array of bytes.
 
 Lit jusqu'à _len_ octets de données depuis source d'entrée dans un tableau d'octets.
 

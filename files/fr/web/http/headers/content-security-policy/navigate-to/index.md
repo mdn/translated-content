@@ -15,7 +15,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/navigate-to
 ---
 {{HTTPSidebar}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`navigate`\*\***`-to`** restreint les URL vers lesquelles un document peut initier une navigation de quelque manière que ce soit, dont {{HTMLElement("form")}} (si {{CSP("form-action")}} n'est pas spécifié), {{HTMLElement("a")}}, {{DOMxRef("window.location")}}, {{DOMxRef("window.open")}}, etc. Elle permet de renforcer les navigations que le document peut initier et **non\*\* les adresses vers lesquelles ce document peut naviguer.
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`navigate-to`** restreint les URL vers lesquelles un document peut initier une navigation de quelque manière que ce soit, dont {{HTMLElement("form")}} (si {{CSP("form-action")}} n'est pas spécifié), {{HTMLElement("a")}}, {{DOMxRef("window.location")}}, {{DOMxRef("window.open")}}, etc. Elle permet de renforcer les navigations que le document peut initier et **non** les adresses vers lesquelles ce document peut naviguer.
 
 > **Note :** Si la directive {{CSP("form-action")}} est présente, la directive `navigate-to` ne sera pas appliquée sur la navigation par la soumission de formulaire.
 

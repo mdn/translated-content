@@ -93,7 +93,7 @@ _Cette interface hérite aussi des interfaces {{domxref("Node")}} et {{domxref("
 - {{domxref("Document.undoManager")}} {{readonlyinline}} {{experimental_inline}}
   - : ...
 - {{domxref("Document.visibilityState")}} {{readonlyinline}}
-  - : renvoie une `string` _(chaîne de caractères)_ indiquant l'état de visibilité du document. Les valeurs possibles sont `visible` , `hidden (masqué)` , prerender _(pré-rendu)_ et `unloaded` _(\*\*déchargées_).
+  - : renvoie une `string` _(chaîne de caractères)_ indiquant l'état de visibilité du document. Les valeurs possibles sont `visible` , `hidden (masqué)` , prerender _(pré-rendu)_ et `unloaded` (_déchargées_).
 - {{domxref("Document.xmlEncoding")}} {{Deprecated_inline}}
   - : retourne le codage déterminé par une déclaration XML.
 - {{domxref("Document.xmlStandalone")}} {{obsolete_inline("10.0")}}

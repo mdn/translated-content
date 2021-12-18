@@ -15,7 +15,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/font-src
 ---
 {{HTTPSidebar}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`font`\*\***`-src`\*\* spécifie les sources valides pour les polices chargés avec {{cssxref("@font-face")}}.
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`font-src`** spécifie les sources valides pour les polices chargés avec {{cssxref("@font-face")}}.
 
 <table class="properties">
   <tbody>

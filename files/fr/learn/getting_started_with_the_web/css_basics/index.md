@@ -51,7 +51,7 @@ Cette structure s'appelle **un ensemble de règles** (ou seulement « une règl
 - Sélecteur
   - : C'est le nom de l'élément HTML situé au début de l'ensemble de règles. Il permet de sélectionner les éléments sur lesquels appliquer le style souhaité (en l'occurence, les éléments `p`). Pour mettre en forme un élément différent, il suffit de changer le sélecteur.
 - Déclaration
-  - : C'est une règle simple comme `color: red;` qui détermine les **propriétés\*\*** \*\*de l'élément que l'on veut mettre en forme.
+  - : C'est une règle simple comme `color: red;` qui détermine les **propriétés** de l'élément que l'on veut mettre en forme.
 - Propriétés
   - : Les différentes façons dont on peut mettre en forme un élément HTML (dans ce cas, `color` est une propriété des éléments `p`). En CSS, vous choisissez les différentes propriétés que vous voulez utiliser dans une règle CSS.
 - Valeur de la propriété

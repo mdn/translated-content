@@ -8,7 +8,7 @@ tags:
 translation_of: Glossary/MitM
 original_slug: Glossaire/MitM
 ---
-Une **attaque de l'homme du milieu** **(\***Man-in-the-middle attack\* **MitM**) intercepte une communication entre deux systèmes. Par exemple, un routeur Wi-Fi peut être compromis.
+Une **attaque de l'homme du milieu** (Man-in-the-middle attack ou MitM) intercepte une communication entre deux systèmes. Par exemple, un routeur Wi-Fi peut être compromis.
 
 En comparant cela au courrier physique : si vous échangez des lettres, le facteur peut intercepter chaque lettre que vous postez. Il l'ouvre, la lit, la modifie finalement, puis la reconditionne et seulement ensuite l'envoie à son destinataire initial. Celui-ci vous répond par lettre postée, et à nouveau, le facteur l'ouvre, la lit, la modifie éventuellement, la reconditionne et vous la remet. Vous ne savez pas qu'il y a un homme au milieu de votre canal de communication - le facteur est invisible pour vous et votre destinataire.
 

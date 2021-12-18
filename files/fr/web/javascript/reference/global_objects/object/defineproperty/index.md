@@ -46,9 +46,9 @@ Les descripteurs de données et d'accesseur sont des objets. Ils partagent les p
 
 - `configurable`
   - : `true` si et seulement si le type de ce descripteur de propriété peut être changé et si la propriété peut/pourra être supprimée de l'objet correspondant..
-    **La valeur par défaut est** **`false`\*\***.\*\*
+    **La valeur par défaut est `false`.**
 - `enumerable`
-  - : `true` si et seulement si la propriété apparaît lors de l'énumération des propriétés de l'objet correspondant. \***\*La valeur par défaut est** \***\*`false`\*\***.\*\*
+  - : `true` si et seulement si la propriété apparaît lors de l'énumération des propriétés de l'objet correspondant. **La valeur par défaut est `false`.**
 
 Un descripteur de données possède les propriétés optionnelles suivantes :
 
@@ -56,12 +56,12 @@ Un descripteur de données possède les propriétés optionnelles suivantes :
   - : La valeur associée à la propriété. Peut être n'importe quelle valeur JavaScript valide (un nombre, un objet, etc.).
     **La valeur par défaut est {{jsxref("undefined")}}.**
 - `writable`
-  - : `true` si et seulement si la valeur associée à la propriété peut être modifiée en utilisant un {{jsxref("Opérateurs/Opérateurs_d_affectation", "opérateur d'affectation", "", 1)}}. \***\*La valeur par défaut est** `false`.\*\*
+  - : `true` si et seulement si la valeur associée à la propriété peut être modifiée en utilisant un {{jsxref("Opérateurs/Opérateurs_d_affectation", "opérateur d'affectation", "", 1)}}. **La valeur par défaut est `false`.**
 
 Un descripteur d'accesseur possède les propriétés optionnelles suivantes :
 
 - `get`
-  - : Une fonction qui est utilisée comme accesseur (_getter_) pour la propriété ou bien {{jsxref("undefined")}} s'il n'existe pas d'accesseur. La valeur de retour de la fonction sera utilisée comme valeur pour la propriété. Lorsqu'on accède à la propriété, la fonction est appelée sans argument avec `this` qui est l'objet pour lequel on souhaite consulter la propriété. \***\*La valeur par défaut est** {{jsxref("undefined")}}\*\*.
+  - : Une fonction qui est utilisée comme accesseur (_getter_) pour la propriété ou bien {{jsxref("undefined")}} s'il n'existe pas d'accesseur. La valeur de retour de la fonction sera utilisée comme valeur pour la propriété. Lorsqu'on accède à la propriété, la fonction est appelée sans argument avec `this` qui est l'objet pour lequel on souhaite consulter la propriété. **La valeur par défaut est {{jsxref("undefined")}}**.
 - `set`
   - : Une fonction qui est utilisée comme mutateur (_setter_) pour la propriété ou bien {{jsxref("undefined")}} s'il n'existe pas de mutateur. Pour unique argument, la fonction recevra la nouvelle valeur à affecter à la propriété. Le contexte `this` passé est l'objet sur lequel on souhaite modifier la propriété.
     **La valeur par défaut est {{jsxref("undefined")}}**.

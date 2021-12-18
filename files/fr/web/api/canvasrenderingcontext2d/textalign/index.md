@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/textAlign
 ---
 {{APIRef}}
 
-La propriété **`CanvasRenderingContext2D`\*\***`.textAlign`** de l'API Canvas 2D indique l'alignement de texte courant à utiliser lors du dessin de texte. Faites attention au fait que l'alignement a pour base la valeur x de la méthode CanvasRenderingContext2D.**fillText\*\*. Ainsi, si textAlign="center", le texte sera alors dessiné en x-50%\*width.
+La propriété **`CanvasRenderingContext2D.textAlign`** de l'API Canvas 2D indique l'alignement de texte courant à utiliser lors du dessin de texte. Faites attention au fait que l'alignement a pour base la valeur x de la méthode `CanvasRenderingContext2D.fillText` Ainsi, si textAlign="center", le texte sera alors dessiné en x-50%\*width.
 
 ## Syntaxe
 

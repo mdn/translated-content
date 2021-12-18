@@ -11,7 +11,7 @@ translation_of: Web/API/Element/scrollTo
 ---
 {{ APIRef }}
 
-La méthode **`scrollTo()`\*\*** \*\*de l'interface {{domxref("Element")}} permet de faire défiler le document jusqu'à un jeu de coordonnées particulier.
+La méthode **`scrollTo()`** de l'interface {{domxref("Element")}} permet de faire défiler le document jusqu'à un jeu de coordonnées particulier.
 
 ## Syntaxe
 

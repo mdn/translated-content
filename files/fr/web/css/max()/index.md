@@ -9,7 +9,7 @@ translation_of: Web/CSS/max()
 ---
 {{CSSRef}}
 
-La fonction CSS **`max`\*\***`()`\*\* permet d'obtenir la plus grande valeurs parmi une liste d'expressions, séparées par des virgules afin d'utiliser ce maximum comme valeur d'une propriété CSS. La fonction `max()` peut être utilisée à tout endroit où une valeur de type {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}} ou {{cssxref("&lt;integer&gt;")}} est autorisée.
+La fonction CSS **`max()`** permet d'obtenir la plus grande valeurs parmi une liste d'expressions, séparées par des virgules afin d'utiliser ce maximum comme valeur d'une propriété CSS. La fonction `max()` peut être utilisée à tout endroit où une valeur de type {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}} ou {{cssxref("&lt;integer&gt;")}} est autorisée.
 
 ```css
 /* property: max(expression [, expression]) */

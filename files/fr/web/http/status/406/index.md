@@ -9,7 +9,7 @@ translation_of: Web/HTTP/Status/406
 ---
 {{HTTPSidebar}}
 
-Le code de réponse d'erreur HTTP **`406`\*\***` Not Acceptable`\*\* indique qu'il est impossible de servir une réponse qui satisfait aux critères définis dans les en-têtes {{HTTPHeader("Accept-Charset")}} et {{HTTPHeader("Accept-Language")}}.
+Le code de réponse d'erreur HTTP **`406 Not Acceptable`** indique qu'il est impossible de servir une réponse qui satisfait aux critères définis dans les en-têtes {{HTTPHeader("Accept-Charset")}} et {{HTTPHeader("Accept-Language")}}.
 
 En réalité, cette erreur est très rarement utilisée. Plutôt que de répondre avec ce code, incompréhensible de l'utilisateur (et difficile à résoudre), les serveurs ignorent les en-têtes en question et renvoient une page à l'utilisateur. On part du principe que, même si l'utilisateur ne sera pas complètement satisfait, ce scénario est préférable à un code d'erreur.
 

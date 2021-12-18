@@ -41,7 +41,7 @@ animation-direction: unset;
 - `reverse`
   - : L'animation est jouée dans le sens inverse à chaque cycle. Au début de chaque cycle, l'animation reprend depuis l'état de fin.
 - `alternate`
-  - : La lecture de l'animation se fait de façon alternée et change de sens à chaque cycle en commençant par le sens normal. Lorsque le sens est inversé, les étapes de l'animation sont effectuées de façon inversée et les fonctions de progression (_timing function\*\*s_) sont également inversées (`ease-in` sera ainsi remplacée par `ease-out`). Le premier cycle se fait dans le sens normal, le deuxième dans le sens inverse et ainsi de suite.
+  - : La lecture de l'animation se fait de façon alternée et change de sens à chaque cycle en commençant par le sens normal. Lorsque le sens est inversé, les étapes de l'animation sont effectuées de façon inversée et les fonctions de progression (_timing functions_) sont également inversées (`ease-in` sera ainsi remplacée par `ease-out`). Le premier cycle se fait dans le sens normal, le deuxième dans le sens inverse et ainsi de suite.
 - `alternate-reverse`
   - : La lecture de l'animation se fait de façon alternée et change de sens à chaque cycle en commençant par le sens inverse (cf. ci-avant). Le premier cycle se fait dans le sens inverse, le deuxième dans le sens normal et ainsi de suite.
 

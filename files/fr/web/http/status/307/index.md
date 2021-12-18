@@ -9,7 +9,7 @@ translation_of: Web/HTTP/Status/307
 ---
 {{HTTPSidebar}}
 
-Le code de statut de réponse de redirection **`307`\*\***` Temporary Redirect`\*\* indique que la ressource est temporairement déplacée vers l'URL contenue dans l'en-tête {{HTTPHeader("Location")}}. Un navigateur redirige vers cette page mais les moteurs de recherche ne mettent pas à jour leurs liens vers la ressource (en termes de référencement, cela indique que le flux de référencement n'est pas envoyé vers la nouvelle URL).
+Le code de statut de réponse de redirection **`307 Temporary Redirect`** indique que la ressource est temporairement déplacée vers l'URL contenue dans l'en-tête {{HTTPHeader("Location")}}. Un navigateur redirige vers cette page mais les moteurs de recherche ne mettent pas à jour leurs liens vers la ressource (en termes de référencement, cela indique que le flux de référencement n'est pas envoyé vers la nouvelle URL).
 
 La méthode et le corps de la requête original sont réutilisés pour réaliser la requête redirigée. Si vous souhaitez que la méthode utilisée soit changée {{HTTPMethod("GET")}}, il faut alors utiliser le code  {{HTTPStatus("303")}} `See Also` à la place. Ceci s'avère utile lorsqu'on souhaite donner une réponse à une méthode {{HTTPMethod("PUT")}} et que cette réponse n'est pas la ressource téléversée mais un message de confirmation (par exemple "Vous avez téléversé avec succès XYZ").
 

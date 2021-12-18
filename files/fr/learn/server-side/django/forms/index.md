@@ -570,7 +570,7 @@ Créez le fichier de template **locallibrary/catalog/templates/catalog/author_fo
 
 Ce formulaire est semblable à nos formulaires précédents et affiche les champs en utilisant un tableau. Notez aussi comment nous déclarons à nouveau le `{% csrf_token %}` pour nous assurer que nos formulaires résisteront à d'éventuelles attaques par CSRF (Cross Site Request Forgery).
 
-La vue "supprimer" s'attend à trouver un template avec un nom au format \*model_name**\*\_confirm_delete.html** (de nouveau, vous pouvez changer le suffixe en utilisant `template_name_suffix` dans votre vue). Créez le fichier de template **locallibrary/catalog/templates/catalog/author_confirm_delete\*\***.html\*\*, et copiez-y le texte suivant.
+La vue "supprimer" s'attend à trouver un template avec un nom au format \*model_name**\*\_confirm_delete.html** (de nouveau, vous pouvez changer le suffixe en utilisant `template_name_suffix` dans votre vue). Créez le fichier de template **locallibrary/catalog/templates/catalog/author_confirm_delete.html**, et copiez-y le texte suivant.
 
 ```html
 {% extends "base_generic.html" %}

@@ -42,7 +42,7 @@ _Cette interface n’a pas de propriétés spécifiques, mais hérite de celles 
 
 ## Méthodes
 
-_Cette interface hérite des méthodes de son parent, {{domxref("Node")}}_, et implémente celles de l’interface {{domxref("ParentNode")}}_\*\*._
+_Cette interface hérite des méthodes de son parent, {{domxref("Node")}}_, et implémente celles de l’interface {{domxref("ParentNode")}}.
 
 - {{domxref("DocumentFragment.querySelector()")}}
   - : Retourne le premier nœud {{domxref("Element")}} du `DocumentFragment`, dans l’ordre du document, correspondant aux sélécteurs spécifiés.

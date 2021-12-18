@@ -97,7 +97,7 @@ Dans l'exemple que nous avons vu au-dessus, cette ligne était présente :
 <meta charset="utf-8">
 ```
 
-Cet élément définit l'encodage des caractères du document - le jeu de caractères qu'il est autorisé à utiliser. `utf-8` \*\*est un jeu de caractères universel qui inclut à peu près tous les caractères des langues humaines. Cela signifie que votre page web sera capable de gérer l'affichage de n'importe quelle langue ; c'est donc une bonne idée de le définir dans chaque page web que vous créez ! Par exemple, votre page peut gérer l'anglais et le japonais sans aucun souci :
+Cet élément définit l'encodage des caractères du document - le jeu de caractères qu'il est autorisé à utiliser. `utf-8` est un jeu de caractères universel qui inclut à peu près tous les caractères des langues humaines. Cela signifie que votre page web sera capable de gérer l'affichage de n'importe quelle langue ; c'est donc une bonne idée de le définir dans chaque page web que vous créez ! Par exemple, votre page peut gérer l'anglais et le japonais sans aucun souci :
 
 ![Une page Web contenant des caractères français et japonais, le jeu de caractères étant universel ou utf-8. Les deux langues s'affichent correctement.](fr-meta-utf8.png)Si vous définissez votre encodage de caractères en `ISO-8859-1` , par exemple (le jeu de caractères de l'alphabet latin), le rendu de votre page sera totalement perturbé :
 

@@ -44,7 +44,7 @@ var querying = browser.tabs.query(
     - `currentWindow`{{optional_inline}}
       - : `boolean`. Si les onglets sont dans la fenêtre actuelle.
     - `discarded`{{optional_inline}}
-      - : `boolean`. Si les onglets sont supprimés. Un onglet supprimé est celui dont le contenu a été déchargé de la mémoire, mais est toujours visible dans la bande d'onglets. Son contenu est rechargé la prochaine fois qu'il est activé.\*\*\*
+      - : `boolean`. Si les onglets sont supprimés. Un onglet supprimé est celui dont le contenu a été déchargé de la mémoire, mais est toujours visible dans la bande d'onglets. Son contenu est rechargé la prochaine fois qu'il est activé.
     - `hidden`{{optional_inline}}
       - : `boolean`. Si les onglets sont cachés.
     - `highlighted`{{optional_inline}}

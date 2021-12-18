@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.quadraticCurveTo()`\*\* de l'API Canvas 2D ajoute une [courbe de Bézier](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) quadratique au sous-chemin courant. Elle requiert deux points: le premier est le point de contrôle et le second est le point d'arrivée. Le point de départ est le dernier point du chemin courant, qui peut être changé au moyen de la méthode {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} avant de créer la courbe quadratique de Bézier.
+La méthode **`CanvasRenderingContext2D.quadraticCurveTo()`** de l'API Canvas 2D ajoute une [courbe de Bézier](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) quadratique au sous-chemin courant. Elle requiert deux points: le premier est le point de contrôle et le second est le point d'arrivée. Le point de départ est le dernier point du chemin courant, qui peut être changé au moyen de la méthode {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} avant de créer la courbe quadratique de Bézier.
 
 ## Syntaxe
 

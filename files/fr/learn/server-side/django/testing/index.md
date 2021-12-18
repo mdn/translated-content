@@ -542,7 +542,7 @@ response = self.client.get(reverse('authors'))
 
 Une fois que nous avons la réponse, nous lui demandons son code de statut, le template utilisé, si la réponse est paginée ou non, le nombre d'éléments retournés et le nombre total d'éléments.
 
-> **Note :** Si, dans votre fichier **/c\*\***atalog/views.py\*\*, vous mettez la variable `paginate_by` à un nombre autre que 10, assurez-vous de mettre à jour les lignes qui testent le nombre correct d'éléments affichés dans les templates paginés, ci-dessus et dans les sections qui suivent. Par exemple, si vous mettez à 5 la variable pour la liste des auteurs, changez ainsi la ligne ci-dessus :
+> **Note :** Si, dans votre fichier **/catalog/views.py**, vous mettez la variable `paginate_by` à un nombre autre que 10, assurez-vous de mettre à jour les lignes qui testent le nombre correct d'éléments affichés dans les templates paginés, ci-dessus et dans les sections qui suivent. Par exemple, si vous mettez à 5 la variable pour la liste des auteurs, changez ainsi la ligne ci-dessus :
 >
 > ```python
 > self.assertTrue(len(response.context['author_list']) == 5)

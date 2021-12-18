@@ -10,7 +10,7 @@ translation_of: Web/CSS/place-content
 ---
 {{CSSRef}}
 
-La propriété raccourcie **`place`\*\***`-content`\*\* permet de définir les valeurs des propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}. Elle peut être utilisée pour n'importe quelle méthode de disposition (boîtes flexibles, grilles, etc;) qui prend en charge ces deux propriétés d'alignement.
+La propriété raccourcie **`place-content`** permet de définir les valeurs des propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}. Elle peut être utilisée pour n'importe quelle méthode de disposition (boîtes flexibles, grilles, etc;) qui prend en charge ces deux propriétés d'alignement.
 
 {{EmbedInteractiveExample("pages/css/place-content.html")}}Syntaxe
 

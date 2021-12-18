@@ -30,7 +30,7 @@ WebGL utilise le système de coordonnées de droite — l'axe x pointe vers la
 Differents types d'objets sont construits en utilisant les sommets. Un Sommet (Vertex) est un point dans l'espace ayant sa propre position 3D dans le système de coordonnées et souvent quelques informations supplémentaires qui le définissent. Chaque sommet est décrit par ces attributs :
 
 - **Position** : L'identifie dans un espace 3D (`x`, `y`, `z`).
-- **Color** \*(Couleur)**\* **: Prend une valeur RVBA (R, V et B pour le Rouge, Vert et Bleu, A (alpha) pour l'opacité — toutes les valeurs comprises entre 0.0 et 1.0)
+- **Color** (Couleur) : Prend une valeur RVBA (R, V et B pour le Rouge, Vert et Bleu, A (alpha) pour l'opacité — toutes les valeurs comprises entre 0.0 et 1.0)
 - **Normal :**  Une manière de décrire la direction à laquelle fait face le sommet.
 - **Texture** : Une image 2D que le sommet peut utiliser pour décorer la surface dont il fait partie à la place d'une simple couleur.
 
@@ -96,7 +96,7 @@ Les couleurs que nous voyons sur l'écran sont le résultat d'une source de lumi
 
 - **Diffuse** _(diffusion)_ : Une lumière directionnelle distante, comme le Soleil.
 - **Specular** _(Particulier)_ : Un point de lumière, comme un bulle de lumière dans une pièce ou un flash.
-- **Ambient** \*(Ambiant)**\* **: Une lumière constante appliquée à tous les objets dans la scène.
+- **Ambient** _(Ambiant)_ : Une lumière constante appliquée à tous les objets dans la scène.
 - **Emissive** _(Émission)_ : La lumière émise directement par un objet.
 
 ## Fusion de sortie

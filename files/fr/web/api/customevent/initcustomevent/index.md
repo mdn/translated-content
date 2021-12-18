@@ -29,7 +29,7 @@ Les évènements initialisés par ce moyen doivent être créés avec la méthod
   - : est un {{jsxref("Boolean")}} (_booléen_) indiquant si l'événement passe à travers le DOM ou non.
 - `cancelable`
   - : est un {{jsxref("Boolean")}} indiquant si l'événement est annulable.
-- _`deta`\*\*`il`_
+- _`detail`_
   - : Les données transmises lors de l'initialisation de l'évènement.
 
 ## Spécifications

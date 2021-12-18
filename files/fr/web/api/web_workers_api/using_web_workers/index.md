@@ -387,7 +387,7 @@ Dans cette section nous voyons d'autres exemples d'application.
 
 ### Effectuer des calculs en arrière-plan
 
-Les _workers_ sont notamment utiles pour réaliser des opérations de traitement intensives sans bloquer pour autant le _thread_ responsable de l'interface utilisateur. Dans cet exemple, on utilise un* \*\*worker* afin de calculer la suite de Fibonacci.
+Les _workers_ sont notamment utiles pour réaliser des opérations de traitement intensives sans bloquer pour autant le _thread_ responsable de l'interface utilisateur. Dans cet exemple, on utilise un *worker* afin de calculer la suite de Fibonacci.
 
 #### JavaScript
 

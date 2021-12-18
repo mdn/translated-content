@@ -150,7 +150,7 @@ class Employee {
 }
 ```
 
-#### JavaScript \*\* (utilisez plutôt ceci)
+#### JavaScript (utilisez plutôt ceci)
 
 ```js
 function Employee() {

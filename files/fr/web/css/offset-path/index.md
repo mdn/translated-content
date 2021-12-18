@@ -9,7 +9,7 @@ translation_of: Web/CSS/offset-path
 ---
 {{SeeCompatTable}}{{CSSRef}}
 
-La propriété **`offset`\*\***`-path`\*\* définit le tracé d'un mouvement sur lequel un élément est positionné, relativement au conteneur parent ou au système de coordonnées SVG.
+La propriété **`offset-path`** définit le tracé d'un mouvement sur lequel un élément est positionné, relativement au conteneur parent ou au système de coordonnées SVG.
 
 {{EmbedInteractiveExample("pages/css/offset-path.html")}}
 

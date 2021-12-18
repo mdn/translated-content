@@ -82,7 +82,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `width` {{optional_inline}}
   - : `integer`. La largeur de l'onglet en pixels
 - `windowId`
-  - : `integer`. L'ID de la fenêtre qui héberge cet onglet.\*\*
+  - : `integer`. L'ID de la fenêtre qui héberge cet onglet.
 
 ## Compatibilité du navigateur
 

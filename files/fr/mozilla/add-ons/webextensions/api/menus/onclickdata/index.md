@@ -22,7 +22,7 @@ Informations transmises à l'écouteur d'événement {{WebExtAPIRef("menus.onCli
 Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
 - `bookmarkId` {{optional_inline}}
-  - : `string`. L'ID du signet dans lequel le menu contextuel a été cliqué.\*\*\*
+  - : `string`. L'ID du signet dans lequel le menu contextuel a été cliqué.
 - `button` {{optional_inline}}
   - : `integer`. Quel bouton de la souris a été enfoncé. Les valeurs sont les mêmes que pour  [`MouseEvent.button`](/fr/docs/Web/API/MouseEvent/button).
 - `checked` {{optional_inline}}

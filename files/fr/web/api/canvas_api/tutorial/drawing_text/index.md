@@ -68,9 +68,9 @@ Dans les exemples ci-dessus, nous utilisons déjà la propriété de police pour
 - {{domxref("CanvasRenderingContext2D.font", "font = value")}}
   - : Le style de texte actuel utilisé lors du dessin du texte. Cette chaîne utilise la même syntaxe que la propriété CSS {{cssxref ("font")}}. La police par défaut est 10px sans-serif.
 - {{domxref("CanvasRenderingContext2D.textAlign", "textAlign = value")}}
-  - : Paramètre d'alignement du texte. Valeurs possibles : `start` _(\*\*début)_, `end` _(\*\*fin)_, `left` _(\*\*gauche)_, `right` _(\*\*droite)_ ou `center` _(\*\*centre)_. La valeur par défaut est `start`.
+  - : Paramètre d'alignement du texte. Valeurs possibles : `start` _(début)_, `end` _(fin)_, `left` _(gauche)_, `right` _(droite)_ ou `center` _(centre)_. La valeur par défaut est `start`.
 - {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline = value")}}
-  - : Paramètre d'alignement de base. Valeurs possibles : `top` _(\*\*haut)_, `hanging` _(\*\*suspendu)_, `middle` _(\*\*moyen)_, `alphabetic` _(\*\*alphabétique)_, `ideographic` _(\*\*idéographique)_, `bottom` _(\*\*en bas)_. La valeur par défaut est `alphabetic`.
+  - : Paramètre d'alignement de base. Valeurs possibles : `top` _(haut)_, `hanging` _(suspendu)_, `middle` _(moyen)_, `alphabetic` _(alphabétique)_, `ideographic` _(idéographique)_, `bottom` _(en bas)_. La valeur par défaut est `alphabetic`.
 - {{domxref("CanvasRenderingContext2D.direction", "direction = value")}}
   - : Directionnalité. Valeurs possibles: `ltr` _(de gauche à droite)_, `rtl` _(de droite à gauche)_, `inherit` _(hérité)_. La valeur par défaut est `inherit`.
 

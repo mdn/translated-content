@@ -138,7 +138,7 @@ Si un script de contenu veut utiliser une bibliothèque JavaScript, alors la bib
 
 > **Note :** Firefox _fournis_ certaines API qui permettent aux scripts de contenu d'accéder aux objets JavaScript créés par les scripts de page et d'exposer leurs propres objets JavaScript aux scripts de page.
 >
-> Voir [Partage d'objets avec des scripts de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) pour plus de détails.\*\*\*
+> Voir [Partage d'objets avec des scripts de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) pour plus de détails.
 
 ### Les API WebExtension accessibles
 

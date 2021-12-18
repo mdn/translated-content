@@ -18,7 +18,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/style-src-elem
 ---
 {{HTTPSidebar}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style`\*\***`-src-elem`\*\* spécifie les sources valides pour les feuilles de styles embarquées avec l'élément {{HTMLElement("style")}} et pour l'élément {{HTMLElement("link")}} avec l'attribut `rel="stylesheet"`.
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src-elem`** spécifie les sources valides pour les feuilles de styles embarquées avec l'élément {{HTMLElement("style")}} et pour l'élément {{HTMLElement("link")}} avec l'attribut `rel="stylesheet"`.
 
 <table class="properties">
   <tbody>

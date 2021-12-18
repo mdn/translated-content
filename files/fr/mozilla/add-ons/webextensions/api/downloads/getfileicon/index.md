@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
 ---
 {{AddonSidebar()}}
 
-La fonction **`getFileIcon`\*\***`()`\*\* de l'API {{WebExtAPIRef("downloads")}} récupère une icône pour le téléchargement spécifié.
+La fonction **`getFileIcon()`** de l'API {{WebExtAPIRef("downloads")}} récupère une icône pour le téléchargement spécifié.
 
 Pour les nouveaux téléchargements, les icônes de fichiers sont disponibles après la réception de l'événement {{WebExtAPIRef("downloads.onCreated")}}. L'image renvoyée par cette fonction pendant le téléchargement peut être différente de l'image renvoyée une fois le téléchargement terminé.
 

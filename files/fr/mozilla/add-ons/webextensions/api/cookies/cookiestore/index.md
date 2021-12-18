@@ -24,7 +24,7 @@ Les fenperes dans les différents mode de navigations peut utiliser différents 
 Les valeurs de ce type sont des objets, qui peuvent contenir les propriétés suivantes :
 
 - `id`
-  - : Une `chaîne` représentant l'identification unique pour le cookie store.\*\*\*
+  - : Une `chaîne` représentant l'identification unique pour le cookie store.
 - `incognito`
   - : Une valeur booléenne qui indique s'il s'agit d'un magasin de cookies incognito.
 - `tabIds`

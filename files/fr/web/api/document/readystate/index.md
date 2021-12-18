@@ -20,7 +20,7 @@ La valeur **Document.readyState** est une propriété de {{ domxref("document")
 
 ### Valeurs
 
-La variable `readyState`\*\* \*\*peut valoir :
+La variable `readyState` peut valoir :
 
 - **`loading`**
   - : Le {{ domxref("document") }} est encore en chargement.

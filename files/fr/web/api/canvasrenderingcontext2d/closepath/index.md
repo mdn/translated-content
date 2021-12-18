@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/closePath
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.closePath()`\*\* de l'API Canvas 2D provoque le retour du stylo au point de départ du sous-traçé courant. Il le fait en ajoutant une ligne droite entre le point courant et le point rejoint. Si la figure a déjà été fermée ou n'est constituée que d'un seul point, cette méthode ne provoque rien.
+La méthode **`CanvasRenderingContext2D.closePath()`** de l'API Canvas 2D provoque le retour du stylo au point de départ du sous-traçé courant. Il le fait en ajoutant une ligne droite entre le point courant et le point rejoint. Si la figure a déjà été fermée ou n'est constituée que d'un seul point, cette méthode ne provoque rien.
 
 ## Syntax
 
