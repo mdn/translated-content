@@ -35,7 +35,7 @@ Flexbox est une méthode de mise en page selon un axe principal, permettant de d
 
 Pendant longtemps, les seuls outils de mise en page CSS fiables et compatibles avec les navigateurs, étaient les propriétés concernant les [flotteurs (boîtes flottantes)](/fr/docs/Learn/CSS/CSS_layout/Floats) et le [positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning). Ces outils sont bien et fonctionnent, mais restent à certains égards plutôt limitatifs et frustrants.
 
-Les simples exigences de mise en page suivantes sont difficiles si ce n'est impossibles à réaliser de manière pratique et souple avec ces outils :
+Les simples exigences de mise en page suivantes sont difficiles sinon impossibles à réaliser de manière pratique et souple avec ces outils :
 
 - centrer verticalement un bloc de contenu dans son parent ;
 - faire que tous les enfants d'un conteneur occupent tous une même quantité de hauteur/largeur disponible selon l'espace offert ;
@@ -45,7 +45,7 @@ Comme vous le verrez dans les paragraphes suivants, flexbox facilite considérab
 
 ## Voici un exemple simple
 
-Dans cet article, nous allons commenter une série d'exercices pour vous faciliter la compréhension du fonctionnement de flexbox. Pour commencer, faites une copie locale du premier fichier de démarrage — [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) de notre dépôt Github —, chargez‑le dans un navigateur moderne (comme Firefox ou Chrome) et regardez le code dans votre éditeur. Vous pouvez le [voir en direct ici](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html) aussi.
+Dans cet article, nous allons commenter une série d'exercices pour vous faciliter la compréhension du fonctionnement de flexbox. Pour commencer, faites une copie locale du premier fichier de démarrage — [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) de notre dépôt GitHub —, chargez‑le dans un navigateur moderne (comme Firefox ou Chrome) et regardez le code dans votre éditeur. Vous pouvez le [voir en direct ici](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html) aussi.
 
 Qu'avons‑nous ? un élément {{htmlelement("header")}} avec un en‑tête de haut niveau à l'intérieur, et un élément {{htmlelement("section")}} contenant trois {{htmlelement("article")}}s. Nous allons les utiliser pour créer une disposition vraiment classique sur trois colonnes.
 
@@ -67,7 +67,7 @@ Voici le résultat :
 
 Ainsi, cette unique déclaration donne tout ce dont nous avons besoin — incroyable, non ? Nous avons ainsi notre disposition en plusieurs colonnes de largeur égale, et toutes de même hauteur. Ceci parce que les valeurs par défaut données aux éléments flex (les enfants du conteneur flex) sont configurés pour résoudre des problèmes courants tels celui-ci. On en reparlera plus tard.
 
-> **Note :** Vous pouvez aussi définir une valeur `inline-flex` pour  {{cssxref("display")}} si vous voulez disposer des éléments en ligne sous forme de boîtes modulables.
+> **Note :** Vous pouvez aussi définir une valeur `inline-flex` pour {{cssxref("display")}} si vous voulez disposer des éléments en ligne sous forme de boîtes modulables.
 
 ## Aparté sur le modèle flex
 
@@ -76,8 +76,8 @@ Lorsque les éléments sont disposés en boîtes flexibles, ils sont disposés l
 ![Terminologie pour les boîtes modulables](flex_terms.png)
 
 - L'**axe principal** **(main axis)** est l'axe de la direction dans laquelle sont disposés les éléments flex (par exemple, horizontalement sur la page, ou verticalement de haut en bas de la page). Le début et la fin de cet axe sont appelés l'**origine principale** **(main start)** et la **fin principale (main end)**.
-- L'**axe croisé** \*\* **est l'axe perpendiculaire à l'axe principal, càd à la direction dans laquelle sont disposés les éléments flex. Le début et la fin de cet axe sont appelés le début **(cross start)** et la fin (**cross end\*\*) de l'axe croisé.
-- L'élément parent dont la propriété est `display: flex`  ({{htmlelement("section")}} dans notre exemple) est appelé le **conteneur flex** (**flex container**).
+- L'**axe croisé** est l'axe perpendiculaire à l'axe principal, c'est-à-dire à la direction dans laquelle sont disposés les éléments flex. Le début et la fin de cet axe sont appelés le début (**cross start**) et la fin (**cross end**) de l'axe croisé.
+- L'élément parent dont la propriété est `display: flex` ({{htmlelement("section")}} dans notre exemple) est appelé le **conteneur flex** (**flex container**).
 - Les éléments disposés en tant que boîtes flexibles à l'intérieur du conteneur flex sont appelés **éléments flex (flex items)** (les éléments {{htmlelement("article")}}} dans notre exemple).
 
 Gardez cette terminologie en tête en lisant les paragraphes suivants. Vous pouvez toujours vous y référer si vous avez un doute sur la signification des termes utilisés.
@@ -141,7 +141,7 @@ article {
 }
 ```
 
-Il s'agit d'une valeur de proportion, sans unité, définissant la quantité d'espace disponible que chaque élément flex prendra le long de l'axe principal. Dans ce cas, nous donnons à chaque élément {{htmlelement("article")}}} une valeur de 1, ce qui signifie qu'ils prendront tous une portion égale de l'espace libre après le calcul du remplissage et de la marge. Cette valeur représente une proportion, càd que le fait de donner une valeur de 400 000 simultanément à tous les éléments flex aurait exactement le même effet.
+Il s'agit d'une valeur de proportion, sans unité, définissant la quantité d'espace disponible que chaque élément flex prendra le long de l'axe principal. Dans ce cas, nous donnons à chaque élément {{htmlelement("article")}}} une valeur de 1, ce qui signifie qu'ils prendront tous une portion égale de l'espace libre après le calcul du remplissage et de la marge. Cette valeur représente une proportion, c'est-à-dire que le fait de donner une valeur de 400 000 simultanément à tous les éléments flex aurait exactement le même effet.
 
 Maintenant ajoutons cette règle en-dessous de la précédente :
 
@@ -249,7 +249,7 @@ Actualisez, et vous pouvez voir que le bouton « Smile » a été déplacé 
 
 - par défaut, tous les éléments flex possèdent une valeur {{cssxref("order")}} égale à 0 ;
 - les éléments flex avec des valeurs `order` plus élévées apparaîtront plus tard dans l'ordre d'affichage que ceux avec des valeurs plus faibles ;
-- les éléments flex avec les mêmes valeurs pour `order` sont affichés dans l'ordre de la source. Ainsi, si vous avez 4 éléments avec des valeurs `order` de 2, 1, 1 et 0, leur ordre d'affichage sera 4ème, 2ème, 3ème et premier.
+- les éléments flex avec les mêmes valeurs pour `order` sont affichés dans l'ordre de la source. Ainsi, si vous avez 4 éléments avec des valeurs `order` de 2, 1, 1 et 0, leur ordre d'affichage sera 4e, 2e, 3e et premier.
 - Le troisième élément suit le deuxième, car il a la même valeur pour `order` et qu'il est placé après dans le code source.
 
 Vous pouvez donner des valeurs négatives à `order` pour faire en sorte que ces éléments soient affichés avant les éléments d'ordre 0. Par exemple, vous pouvez faire apparaître le bouton « Blush » en tête de l'axe principal avec la règle suivante :
@@ -312,7 +312,7 @@ article:nth-of-type(3) div:first-child {
 }
 ```
 
-Enfin, nous définissons un dimensionnement des boutons, et plus précisément nous leur donnons une valeur flex de 1. L'effet obtenu est très intéressant ; vous l'observerez en modifiant la largeur de la fenêtre du navigateur. Les boutons prennent autant d'espace qu'il leur est permis, et sont si possible disposés sur la même ligne ; mais si ce n'est pas possible, il "descendent" pour créer de nouvelles lignes.
+Enfin, nous définissons un dimensionnement des boutons, et plus précisément nous leur donnons une valeur flex de 1. L'effet obtenu est très intéressant ; vous l'observerez en modifiant la largeur de la fenêtre du navigateur. Les boutons prennent autant d'espace qu'il leur est permis, et sont si possible disposés sur la même ligne ; mais si ce n'est pas possible, ils "descendent" pour créer de nouvelles lignes.
 
 ```css
 button {

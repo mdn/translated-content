@@ -37,7 +37,7 @@ Les [listes](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lis
 
 ## Un exemple de liste simple
 
-Pour commencer, regardons un exemple de liste simple. Au long de cet article nous verrons les listes non ordonnées, ordonnées et des listes descriptives — tous les styles ont des fonctionnalités similaires, mais il existe quelques particularités en fonction du type de liste. Un exemple sans style est [disponible sur Github](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) (voyez aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html)).
+Pour commencer, regardons un exemple de liste simple. Au long de cet article nous verrons les listes non ordonnées, ordonnées et des listes descriptives — tous les styles ont des fonctionnalités similaires, mais il existe quelques particularités en fonction du type de liste. Un exemple sans style est [disponible sur GitHub](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) (voyez aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html)).
 
 Le code HTML pour nos exemples de liste ressemble à ceci :
 
@@ -93,7 +93,7 @@ Si vous allez à l'exemple réel maintenant, et examinez les éléments de la li
 
 ## Gestion d'espacement des listes
 
-Si vous modifiez le style des listes, vous devez ajuster l'espacement vertical et horizontal de manière à le rendre identique à celui des éléments environnants (tels que paragraphes ou images : ce principe est parfois appelé « rythme vertical » — vous pouvez voir l'[exemple de style terminé](https://mdn.github.io/learning-area/css/styling-text/styling-lists/) sur Github et trouver[ le code source](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html) aussi.)
+Si vous modifiez le style des listes, vous devez ajuster l'espacement vertical et horizontal de manière à le rendre identique à celui des éléments environnants (tels que paragraphes ou images : ce principe est parfois appelé « rythme vertical » — vous pouvez voir l'[exemple de style terminé](https://mdn.github.io/learning-area/css/styling-text/styling-lists/) sur GitHub et trouver[ le code source](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html) aussi.)
 
 Le CSS utilisé pour le style et l'espacement du texte est le suivant :
 
@@ -162,7 +162,7 @@ Vous pouvez trouver beaucoup plus d'options en consultant la page de référence
 
 ### Position des puces
 
-La propriété {{cssxref("list-style-position")}} définit si les puces apparaissent à l'extérieur ou à l'intérieur de la liste devant chaque élément. Par défaut, la valeur est `outside` et les puces apparaîssent comme ci-dessus.
+La propriété {{cssxref("list-style-position")}} définit si les puces apparaissent à l'extérieur ou à l'intérieur de la liste devant chaque élément. Par défaut, la valeur est `outside` et les puces apparaissent comme ci-dessus.
 
 Si vous choisissez la valeur `inside`, les puces seront disposées dans la ligne :
 
@@ -185,7 +185,7 @@ ul {
 }
 ```
 
-Cependant, cette propriété est un peu limitée en terme de contrôle de la position, de la taille, etc. des puces. Il vaut mieux utiliser la famille de propriétés de {{cssxref ("background")}}, dont vous apprendrez beaucoup plus dans le module [Styliser les boîtes](/fr/docs/Learn/CSS/Building_blocks). Pour l'instant, voici un avant-goût !
+Cependant, cette propriété est un peu limitée en termes de contrôle de la position, de la taille, etc. des puces. Il vaut mieux utiliser la famille de propriétés de {{cssxref ("background")}}, dont vous apprendrez beaucoup plus dans le module [Styliser les boîtes](/fr/docs/Learn/CSS/Building_blocks). Pour l'instant, voici un avant-goût !
 
 Dans notre exemple achevé, nous avons appliqué un style à la liste non ordonnée (en plus de ce que vous avez déjà vu ci-dessus) comme ceci :
 
@@ -206,7 +206,7 @@ ul li {
 
 Voici ce que nous avons fait :
 
-- abaissé la valeur de la propriété {{cssxref ("padding-left")}} de l'élément {{htmlelement ("ul")}} de `40px` par défaut à `20px`, puis défini la même valeur pour les éléments de la liste. Ainsi,  l'ensemble des éléments d'une liste non ordonnée seront toujours alignés avec les éléments d'une liste ordonnée et les descriptions d'une liste descriptive; tout en disposant d'un remplissage où les images d'arrière-plan seront placées. Si nous ne le faisions pas, les images d'arrière-plan et le texte de l'élément de liste se superposeraient, ce qui ferait brouillon.
+- abaissé la valeur de la propriété {{cssxref ("padding-left")}} de l'élément {{htmlelement ("ul")}} de `40px` par défaut à `20px`, puis défini la même valeur pour les éléments de la liste. Ainsi, l'ensemble des éléments d'une liste non ordonnée seront toujours alignés avec les éléments d'une liste ordonnée et les descriptions d'une liste descriptive; tout en disposant d'un remplissage où les images d'arrière-plan seront placées. Si nous ne le faisions pas, les images d'arrière-plan et le texte de l'élément de liste se superposeraient, ce qui ferait brouillon.
 - défini la propriété {{cssxref("list-style-type")}} à `none`, ainsi aucune puce par défaut n'apparaît. Nous allons utiliser les propriétés de {{cssxref("background")}} pour gérer les puces.
 - inséré une puce pour chaque élément de la liste désordonnée. Les propriétés pertinentes sont les suivantes :
 
@@ -241,11 +241,11 @@ Les valeurs peuvent être listées dans n'importe quel ordre et vous pouvez en m
 
 ## Contrôle du numérotage des listes
 
-Parfois, vous pouvez vouloir numéroter différemment une liste ordonnée — par ex., à partir d'un nombre autre que 1 ou en comptant à rebours ou en comptant par pas supérieur à 1. HTML et CSS ont quelques outils pour vous le permettre.
+Parfois, vous pouvez vouloir numéroter différemment une liste ordonnée — par exemple, à partir d'un nombre autre que 1 ou en comptant à rebours ou en comptant par pas supérieur à 1. HTML et CSS ont quelques outils pour vous le permettre.
 
 ### Numéro de départ
 
-L'attribut {{htmlattrxref("start","ol")}} vous permet de commencer le numérotage de la liste à partir d'un nombreautre que 1. L'exemple suivant :
+L'attribut {{htmlattrxref("start","ol")}} vous permet de commencer le numérotage de la liste à partir d'un nombre autre que 1. L'exemple suivant :
 
 ```html
 <ol start="4">
@@ -279,7 +279,7 @@ donne cette sortie :
 
 ### Valeurs individualisées
 
-L'attribut {{htmlattrxref("value","ol")}} vous permet de numéroter les éléments de liste avec des valeurs numériques de votre choix . L'exemple suivant :
+L'attribut {{htmlattrxref("value","ol")}} vous permet de numéroter les éléments de liste avec des valeurs numériques de votre choix. L'exemple suivant :
 
 ```html
 <ol>
@@ -294,7 +294,7 @@ vous donne cette sortie :
 
 {{ EmbedLiveSample('Valeurs_individualisées', '100%', 150) }}
 
-> **Note :** Même si vous utilisez une propriété {{cssxref ("type-style-list")}}  avec des caractères non‑numériques, vous devez toujours utiliser les valeurs numériques équivalentes avec l'attribut `value`.
+> **Note :** Même si vous utilisez une propriété {{cssxref ("type-style-list")}} avec des caractères non‑numériques, vous devez toujours utiliser les valeurs numériques équivalentes avec l'attribut `value`.
 
 ## Apprentissage actif : définir le style d'une liste imbriquée
 

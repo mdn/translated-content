@@ -45,7 +45,7 @@ Après avoir décidé le maillage voulu pour votre design, vous pouvez utiliser 
 
 ### Définition d'une trame
 
-Pour débuter, téléchargez et ouvrez [le fichier de départ](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/0-starting-point.html) dans l'éditeur de texte et dans le navigateur. Vous y verrez un exemple constitué d'un conteneur avec quelques enfants. Par défaut, ils sont présentés suivant le cours normal : les boîtes s'affichent donc accolées les unes au dessous des autres. Nous travaillerons avec ce fichier dans la première partie de la leçon ; nous y introduirons des changements et observerons les modifications induites dans le comportement du maillage.
+Pour débuter, téléchargez et ouvrez [le fichier de départ](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/0-starting-point.html) dans l'éditeur de texte et dans le navigateur. Vous y verrez un exemple constitué d'un conteneur avec quelques enfants. Par défaut, ils sont présentés suivant le cours normal : les boîtes s'affichent donc accolées les unes au-dessous des autres. Nous travaillerons avec ce fichier dans la première partie de la leçon ; nous y introduirons des changements et observerons les modifications induites dans le comportement du maillage.
 
 Pour définir un tramage, on affecte la valeur `grid` à la propriété {{cssxref("display")}}. De la même manière qu'avec Flexbox, nous basculons ainsi en « Grid Layout » (disposition en quadrillage) ; tous les enfants directs du conteneur deviennent des éléments de la maille. Ajoutez ceci à la CSS du fichier :
 
@@ -245,9 +245,9 @@ Nous obtenons 3 chaînes de `1fr` de large, comme précédemment. La première v
 
 ### Trame implicite et explicite
 
-Nous n'avons jusqu'à présent défini que des  chaînes en colonnes, mais on peut aussi les créer en lignes pour recevoir les contenus. C'est un exemple de trame explicite (la chaîne) vs. implicite (la trame). La chaîne explicite est celle créée avec `grid-template-columns` **ou** `grid-template-rows`. La trame implicite est créée lorsque l'on met du contenu dans ce quadrillage — comme dans les rangées de nos exemples. La cahîne explicite et la trame  implicite sont analogues aux axes principal et croisé de Flexbox.
+Nous n'avons jusqu'à présent défini que des chaînes en colonnes, mais on peut aussi les créer en lignes pour recevoir les contenus. C'est un exemple de trame explicite (la chaîne) vs. implicite (la trame). La chaîne explicite est celle créée avec `grid-template-columns` **ou** `grid-template-rows`. La trame implicite est créée lorsque l'on met du contenu dans ce quadrillage — comme dans les rangées de nos exemples. La cahîne explicite et la trame implicite sont analogues aux axes principal et croisé de Flexbox.
 
-Par défaut, les rangées de la trame implicite sont `auto` dimensionnées, ce qui signifie qu'elles sont, en général, suffisamment grandes pour accueillir le contenu. Si vous voulez que les rangées de trame créées par le navigateur aient une taille donnée, utilisez les propriétés  {{cssxref("grid-auto-rows")}} et {{cssxref("grid-auto-columns")}}. Si vous ajoutez la propriété `grid-auto-rows` avec une valeur de `100px` dans la CSS, vous verrez que le rangées créées ont maintenant 100 pixels de haut.
+Par défaut, les rangées de la trame implicite sont `auto` dimensionnées, ce qui signifie qu'elles sont, en général, suffisamment grandes pour accueillir le contenu. Si vous voulez que les rangées de trame créées par le navigateur aient une taille donnée, utilisez les propriétés {{cssxref("grid-auto-rows")}} et {{cssxref("grid-auto-columns")}}. Si vous ajoutez la propriété `grid-auto-rows` avec une valeur de `100px` dans la CSS, vous verrez que les rangées créées ont maintenant 100 pixels de haut.
 
 ```css hidden
 body {
@@ -293,7 +293,7 @@ body {
 
 Les rangées de trame de 100 pixels de haut ne seront pas très utiles si nous y plaçons des contenus de plus de 100 pixels de haut : il y aurait alors débordement. Il est préférable d'avoir des pistes d'_au moins_ 100 pixels de haut, mais susceptibles de s'agrandir si le contenu déposé le nécessite. C'est un constat classique à propos du web : vous ne savez jamais vraiment quelle sera la hauteur d'un élément ; du contenu supplémentaire ou des tailles de police plus grandes peuvent amener des problèmes avec des designs en pixels visant la perfection dans toute dimension.
 
-La fonction `minmax` nous permet de fixer une taille maximale et minimale pour une trame, par exemple `minmax(100px, auto)`. La taille minimale est de 100 px, mais la maximale est `auto` — elle  s'agrandira selon le contenu. Changeons `grid-auto-rows` en utilisant une valeur `minmax` :
+La fonction `minmax` nous permet de fixer une taille maximale et minimale pour une trame, par exemple `minmax(100px, auto)`. La taille minimale est de 100 px, mais la maximale est `auto` — elle s'agrandira selon le contenu. Changeons `grid-auto-rows` en utilisant une valeur `minmax` :
 
 ```css
 .container {
@@ -306,9 +306,9 @@ La fonction `minmax` nous permet de fixer une taille maximale et minimale pour u
 
 Si vous ajoutez du contenu supplémentaire, vous verrez que la trame grandit pour permettre l'incorporation. Notez que l'agrandissement est général pour toute la rangée.
 
-### Autant de chaînes que possibles
+### Autant de chaînes que possible
 
-Il est possible de combiner nos savoirs à propos des listes de pistes, la notation `repeat` et `minmax()` pour créer un modèle utile. Parfois, demander à ce que la génèration automatique crée autant de chaînes que possibles dans un conteneur nous faciliterait la tâche. Pour réaliser cela, définissez la valeur de `grid-template-columns` égale à `repeat()` avec le mot-clé `auto-fill` comme premier paramètre au lieu d'un nombre. Pour le second paramètre de la fonction, utilisez `minmax()` avec pour minimum la taille souhaitée pour la piste et 1fr pour maximum.
+Il est possible de combiner nos savoirs à propos des listes de pistes, la notation `repeat` et `minmax()` pour créer un modèle utile. Parfois, demander à ce que la génération automatique crée autant de chaînes que possible dans un conteneur nous faciliterait la tâche. Pour réaliser cela, définissez la valeur de `grid-template-columns` égale à `repeat()` avec le mot-clé `auto-fill` comme premier paramètre au lieu d'un nombre. Pour le second paramètre de la fonction, utilisez `minmax()` avec pour minimum la taille souhaitée pour la piste et 1fr pour maximum.
 
 Essayez ceci dans le fichier avec la CSS ci-dessous :
 
@@ -356,7 +356,7 @@ Il a été créé autant de chaînes de 200 pixels qu'il y a de place dans le co
 
 ## Placement sur les lignes
 
-Nous passons maintenant de la création du quadrillage à la mise en place des choses sur dans celui-ci. Le quadrillage a toujours des fils de chaîne, ils commencent à 1 et sont en  relation avec le Writing Mode (mode d'écriture) du document. Ainsi, en anglais, la rangée de la chaîne 1 sera une colonne et se trouvera à gauche du quadrillage et la rangée de la trame sera une ligne 1 en haut. En arabe, la rangée de la chaîne 1 se situera du côté droit, car l'arabe s'écrit de droite à gauche.
+Nous passons maintenant de la création du quadrillage à la mise en place des choses sur dans celui-ci. Le quadrillage a toujours des fils de chaîne, ils commencent à 1 et sont en relation avec le Writing Mode (mode d'écriture) du document. Ainsi, en anglais, la rangée de la chaîne 1 sera une colonne et se trouvera à gauche du quadrillage et la rangée de la trame sera une ligne 1 en haut. En arabe, la rangée de la chaîne 1 se situera du côté droit, car l'arabe s'écrit de droite à gauche.
 
 Nous pouvons placer les choses dans ces rangées en indiquant les rangées de début et de fin. Pour ce faire, nous utilisons les propriétés suivantes :
 
@@ -463,11 +463,11 @@ aside {
 
 {{ EmbedLiveSample('Placement_sur_les_lignes', '100%', 400) }}
 
-> **Note :** vous pouvez aussi utiliser la valeur `-1` pour cibler la dernière rangée de la chaîne  et compter vers l'intérieur à partir de la fin en utilisant des valeurs négatives. Cependant, cela ne fonctionne que pour la chaîne explicite. La valeur `-1` ne ciblera pas le rang de fin de trame implicite.
+> **Note :** vous pouvez aussi utiliser la valeur `-1` pour cibler la dernière rangée de la chaîne et compter vers l'intérieur à partir de la fin en utilisant des valeurs négatives. Cependant, cela ne fonctionne que pour la chaîne explicite. La valeur `-1` ne ciblera pas le rang de fin de trame implicite.
 
 ## Placer avec « grid-template-areas »
 
-Une autre façon de placer des éléments dans le quadrillage consiste à utiliser la propriété  {{cssxref("grid-template-areas")}} en donnant un nom au divers éléments du design.
+Une autre façon de placer des éléments dans le quadrillage consiste à utiliser la propriété {{cssxref("grid-template-areas")}} en donnant un nom au divers éléments du design.
 
 Supprimez le placement sur les lignes du dernier exemple (ou bien rechargez le fichier pour avoir un nouveau point de départ) et ajoutez ceci à la CSS.
 
@@ -582,7 +582,7 @@ Vous pouvez jouer avec la disposition, en modifiant le pied de page pour qu'il n
 
 Les « structures » de quadrillage se fondent sur une série de 12 à 16 rangées ; avec « CSS Grid », vous n'avez pas besoin d'outils tierce partie pour créer la structure — elle est déjà dans les spécifications.
 
-[Chargez le fichier de départ](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/11-grid-system-starting-point.html). Il contient un conteneur à 12 colonnes et le même balisage que celui utilisé dans les deux exemples précédents. Nous pouvons maintenant utiliser le placement  sur les lignes pour mettre le contenu sur le quadrillage à 12 colonnes.
+[Chargez le fichier de départ](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/11-grid-system-starting-point.html). Il contient un conteneur à 12 colonnes et le même balisage que celui utilisé dans les deux exemples précédents. Nous pouvons maintenant utiliser le placement sur les lignes pour mettre le contenu sur le quadrillage à 12 colonnes.
 
 ```css
 header {
