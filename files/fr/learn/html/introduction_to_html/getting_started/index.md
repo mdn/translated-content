@@ -703,7 +703,7 @@ Dans l'exemple ci-dessous, voici deux paragraphes parlant de techniques Web :
 
 Dans la zone de rendu en direct ci-dessous, vous pouvez voir que le premier paragraphe n'est pas correctement affiché : le navigateur interprète le second `<p>` comme le début d'un nouveau paragraphe ! Le deuxième paragraphe est bien affiché, car nous avons remplacé les signes inférieur (<) et supérieur (>) par leurs références de caractère.
 
-{{ EmbedLiveSample("Références_dentités", 700, 200, "", "") }}
+{{ EmbedLiveSample("Références_d\'entités_inclure_les_caractères_spéciaux_en_HTML", 700, 200) }}
 
 > **Note :** Vous n'avez pas besoin d'utiliser des références d'entité de caractères pour d'autres symboles — les navigateurs modernes les restitueront sans problème à condition que [vous définissiez votre encodage de caractères en UTF-8](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#définition_de_lencodage_des_caractères_du_document).
 

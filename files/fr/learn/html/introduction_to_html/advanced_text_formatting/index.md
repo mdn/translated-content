@@ -424,7 +424,7 @@ textarea.onkeyup = function(){
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_Qui_a_dit_quoi', 700, 450, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Apprentissage_actif_Qui_a_dit_quoi_', 700, 450, "", "", "hide-codepen-jsfiddle") }}
 
 ## Abréviations
 

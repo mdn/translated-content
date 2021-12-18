@@ -80,7 +80,7 @@ position: relative;
 
 Si vous sauvegardez et actualisez à ce stade, vous ne verrez aucun changement dans le résultat. Alors, comment modifier la position de l'élément ? Vous avez besoin d'employer les propriétés {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} dont nous parlerons dans le prochain paragraphe.
 
-### Présentation de « top », « bottom », « left » et « right »
+### Présentation de top, bottom, left et right
 
 {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} sont utilisés conjointement à {{cssxref("position")}} pour définir exactement là où placer l'élément positionné. Pour le tester, ajoutez les déclarations suivantes à la règle `.positioned` dans la CSS :
 
@@ -118,18 +118,19 @@ span {
   left: 30px; }
 ```
 
-{{ EmbedLiveSample('Présentation_de_«_top_»_«_bottom_»_«_left_»_et_«_right_»', '100%', 500) }}
+{{ EmbedLiveSample('Présentation_de_top,_bottom,_left,_et_right', '100%', 500) }}
 
 Cool, n'est-ce-pas ? Oui, mais ce n'était probablement pas ce à quoi vous vous attendiez. Pourquoi le déplacement s'est‑il effectué vers le bas et à droite si nous avons défini `top` (haut) et `left` (gauche) ? Même si cela peut paraître illogique, c'est la façon dont fonctionne le positionnement relatif. Songez à une force invisible poussant le côté spécifié de l'élément à positionner, le déplaçant ainsi dans la direction opposé. Par exemple, si nous spécifions `top: 30px;`, une force pousse le haut de la boîte, entraînant son déplacement vers le bas de 30px.
 
 > **Note :** à ce stade de l'article, vous pouvez retrouver un exemple ici [`2_relative-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html)).
 
-### Positionnement « absolute »
+### Positionnement absolu
 
 Le positionnement absolu nous apporte des résultats bien différents. Modifions la déclaration de `position` dans le code :
 
+```css
     position: absolute;
-
+```
 Si vous enregistrez et actualisez maintenant, vous verrez quelque chose comme ceci apparaitre :
 
 ```html hidden
@@ -159,7 +160,7 @@ span {
   left: 30px; }
 ```
 
-{{ EmbedLiveSample('Positionnement_«_absolute_»', '100%', 420) }}
+{{ EmbedLiveSample('Positionnement_absolu', '100%', 420) }}
 
 Tout d'abord, notez que l'emplacement où l'élément à positionner aurait dû se trouver dans le cours normal de la mise en page du document ne s'y trouve plus. Le premier élément et le troisième sont l'un à côté de l'autre comme si le second n'existait plus ! Dans un sens, c'est le cas. Un élément positionné de manière absolue ne fait plus partie du cours normal de la mise en page. Il se trouve maintenant sur un plan qui lui est propre, séparé de tout le reste. C'est très utile : cela signifie que nous pouvons créer une fonctionnalité d'interface graphique isolée qui n'interfère pas avec la position des autres éléments sur la page. Par exemple, des boîtes d'informations contextuelles (popup), des menus de contrôle, des panneaux déroulants (rollover panels), des fonctionnalités d'interface utilisateur que l'on peut glisser et déposer n'importe où sur la page, et bien plus encore.
 
@@ -290,7 +291,7 @@ Notez que `z-index` n'accepte que des valeurs d'index sans unité ; vous ne pouv
 
 > **Note :** sur ce sujet, vous pouvez voir l'exemple [`5_z-index.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([voir le code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html)).
 
-### Positionnement « fixed »
+### Positionnement fixe
 
 Voyons maintenant le positionnement « fixed ». Cela fonctionne exactement de la même manière que le positionnement absolu, avec une différence essentielle : alors que le positionnement absolu fixe un élément en place par rapport à l'élément {{htmlelement("html")}} ou son parent positionné le plus proche, le positionnement « fixed » fige un élément en place par rapport à la vue par la fenêtre du navigateur elle-même. Cela signifie que vous pouvez créer des éléments d'interface utilisateur utiles qui sont fixés en place, comme des menus de navigation persistants.
 
@@ -298,30 +299,36 @@ Voici un exemple simple pour montrer ce que nous voulons dire. D'abord, supprime
 
 Maintenant, mettez à jour la règle `body` : supprimez la déclaration `position : relative ;` et ajoutez une hauteur fixe, ainsi :
 
-    body {
-      width: 500px;
-      height: 1400px;
-      margin: 0 auto;
-    }
+```css
+body {
+  width: 500px;
+  height: 1400px;
+  margin: 0 auto;
+}
+```
 
 Maintenant, donnez la position `fixed` à l'élément {{htmlelement("h1")}} et centrez‑le en haut de la fenêtre. Ajoutez la règle suivante à la CSS :
 
-    h1 {
-      position: fixed;
-      top: 0;
-      width: 500px;
-      margin: 0 auto;
-      background: white;
-      padding: 10px;
-    }
+```css
+h1 {
+  position: fixed;
+  top: 0;
+  width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 10px;
+}
+```
 
 `top: 0;` est requis pour qu'il colle au haut de l'écran ; ensuite nous donnons au titre d'en‑tête la même largeur que la colonne de contenu et utilisons la vieille astuce classique `margin: 0 auto;` pour le centrer. Nous mettons ensuite un fond blanc et un peu de remplissage pour que le contenu ne soit pas visible sous lui.
 
 Si vous enregistrez et actualisez maintenant, vous verrez un petit effet amusant par lequel le titre reste fixe et le contenu semble défiler vers le haut et disparaître en dessous. Mais nous pouvons l'améliorer davantage — actuellement, une partie du contenu commence sous l'en‑tête. En effet, l'en-tête positionné n'apparaît plus dans le cours du document, de sorte que le reste du contenu se déplace vers le haut. Nous devons tout baisser un peu ; nous pouvons le faire en fixant une marge supérieure sur le premier paragraphe. Ajoutez ceci maintenant :
 
-    p:nth-of-type(1) {
-      margin-top: 60px;
-    }
+```css
+p:nth-of-type(1) {
+  margin-top: 60px;
+}
+```
 
 Voici l'exemple terminé :
 
@@ -367,7 +374,7 @@ p:nth-of-type(1) {
 }
 ```
 
-{{ EmbedLiveSample('Positionnement_«_fixed_»', '100%', 400) }}
+{{ EmbedLiveSample('Positionnement_fixe', '100%', 400) }}
 
 > **Note :** à ce stade de l'article, vous pouvez voir un exemple en direct ici  [`6_fixed-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
 

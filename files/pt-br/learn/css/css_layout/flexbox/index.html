@@ -55,7 +55,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Você verá que temos um elemento {{HTMLElement("header")}} com um cabeçalho no nível superior dentro dele, e um elemento {{HTMLElement("section")}} contendo três {{HTMLElement("article")}}s. Nós vamos usá-los para criar um layout padrão de três colunas.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
 <h2 id="Especificando_os_elementos_a_serem_definidos_como_caixas_flex">Especificando os elementos a serem definidos como caixas <em>flex</em></h2>
 
@@ -67,7 +67,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>O resultado disso deve ser algo assim:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13408/flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
 
 <p>Então, esta única declaração nos dá tudo que precisamos — incrivel, certo? Nós temos um layout de múltiplas com tamanhos iguais, e todas as colunas tem a mesma altura. Isto porque o valor padrão dado aos flex items (os filhos do flex container) são configurados para resolver problemas comuns, como este. Voltaremos a este assunto depois.</p>
 
@@ -79,7 +79,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Quando os elementos são definidos como flexibles boxes, eles são dispostos ao longo de dois eixos:</p>
 
-<p><img alt="flex_terms.png" class="default internal" src="/files/3739/flex_terms.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="flex_terms.png" class="default internal" src="flex_terms.png"></p>
 
 <ul>
  <li>O <em><strong>main axis</strong></em> é o eixo que corre na direção em que os flex items estão dispostos (por exemplo, as linhas da página, ou colunas abaixo da página.) O início e o fim do eixo é chamado <em><strong>main start</strong></em> e <em><strong>main end</strong></em>.</li>
@@ -108,7 +108,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Um problema que aparece quando você tem uma quantidade fixa de elementos com a mesma largura e altura no seu esquema é que eventualmente seus elementos filhos <em>flexbox</em> irão sobrepor seu elemento pai (<em>container</em>), quebrando o laioute. Dê uma olhada no nosso exemplo <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html">flexbox-wrap0.html</a>, e experimente <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html">visualizá-lo online</a> (tenha uma cópia local desse arquivo no seu computador se você quiser continuar acompanhando os exemplos):</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13410/flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
 
 <p>Aqui vemos que os filhos estão de fato saindo fora do elemento recipiente (<em>container</em>). Uma maneira de consertar isso é adicionando a seguinte declaração na seção de sua regra CSS:</p>
 
@@ -116,7 +116,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Experimente isso agora; você verá que o laioute parece muito melhor agora com essa regra:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13412/flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;">Agora temos várias linhas — tantos elementos filhos <em>flexbox</em> estão encaixados em cada linha quantos fazem sentido, e qualquer sobreposição é movida para a próxima linha. A declaração <code>flex: 200px</code> configurada nos elementos {{htmlelement("article")}} significa que cada um terá pelo menos 200 pixels de largura; discutiremos essa propriedade mais detalhadamente mais tarde. Você também deve notar que os últimos filhos na última linha estão mais largos para que a linha inteira possa ser preenchida.</p>
+<p><img alt="" src="flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;">Agora temos várias linhas — tantos elementos filhos <em>flexbox</em> estão encaixados em cada linha quantos fazem sentido, e qualquer sobreposição é movida para a próxima linha. A declaração <code>flex: 200px</code> configurada nos elementos {{htmlelement("article")}} significa que cada um terá pelo menos 200 pixels de largura; discutiremos essa propriedade mais detalhadamente mais tarde. Você também deve notar que os últimos filhos na última linha estão mais largos para que a linha inteira possa ser preenchida.</p>
 
 <p>Mas ainda tem mais para fazermos com isso. Primeiro, experimente mudar sua propriedade {{cssxref("flex-direction")}} para o valor <code>row-reverse</code> — agora você verá que ainda tem um laioute com várias linhas, mas ele começa no canto oposto da janela do navegador e segue na direção reversa.</p>
 
@@ -163,7 +163,7 @@ article:nth-of-type(3) {
 
 <p>Isso basicamente diz o seguinte: "Para cada elemento <em>flex</em> primeiro será dado 200px do espaço disponível. Depois, o restante do espaço disponível será distribuído entre os elementos, de acordo com a unidade de proporção definida.". Atualize a página e você verá a diferença de como o espaço é distribuído.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13406/flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
 <p>O valor real de cada caixa <em>flex</em> pode ser visto pela sua flexibilidade/responsividade — se você redimensionar a janela do navegador, ou adicionar outro elemento {{HTMLElement("article")}}, o laioute continua funcionando sem quebrar.</p>
 
@@ -183,7 +183,7 @@ article:nth-of-type(3) {
 
 <p>Você também pode usar as funcionalidade do <em>flexbox</em> para alinhar elementos no eixo principal ou no eixo transversal (relembre esse assunto na seção <a href="/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#Um_aparte_no_modelo_flex">Um aparte no modelo flex</a>). Vamos explorar isso olhando para um outro exemplo — <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">flex-align0.html</a> (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">veja online</a>) — o qual vamos transformá-lo num botão/barra de ferramentas bem feito e flexível. Neste momento você verá uma barra de menu horizontal, com alguns botões expremidos no canto superior esquerdo:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13414/flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="" src="flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
 
 <p>Primeiro, tenha uma cópia local desse exemplo.</p>
 
@@ -258,7 +258,7 @@ article:nth-of-type(3) {
 
 <p>É possível criar laioutes bem complexos com <em>flexbox</em>. É perfeitamente aceitável configurar um elemento <em>flex</em> para também ser um <em>container</em>, para que seus filhos também se comportem como caixas <em>flex</em>. Dê uma olhada em <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html">complex-flexbox.html</a> (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">veja também online</a>).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13418/flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>O HTML desse exemplo é relativamente simples. Temos um elemento {{HTMLElement("section")}} contendo três {{HTMLElement("article")}}. O terceiro desses {{HTMLElement("article")}} contém três elementos {{HTMLElement("div")}}:</p>
 

@@ -12,7 +12,7 @@ Ceci est le deuxième exemple expliquant comment [construire un formulaire perso
 
 ## JS
 
-### HTML Content
+### HTML
 
 ```html
 <form class="no-widget">
@@ -37,7 +37,7 @@ Ceci est le deuxième exemple expliquant comment [construire un formulaire perso
 <form>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 .widget select,
@@ -181,7 +181,7 @@ window.addEventListener("load", function () {
 
 ## Sans JS
 
-### HTML Content
+### HTML
 
 ```html
 <form class="no-widget">
@@ -206,7 +206,7 @@ window.addEventListener("load", function () {
 <form>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 .widget select,
@@ -218,6 +218,6 @@ window.addEventListener("load", function () {
 }
 ```
 
-### Result for No JS
+### Résultat
 
-{{ EmbedLiveSample('No_JS', 120, 130) }}
+{{ EmbedLiveSample('Sans_JS', 120, 130) }}

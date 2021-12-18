@@ -148,7 +148,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Que_se_passe-t-il_quand_un_navigateur_rencontre_du_CSS_quil_ne_comprend_pas', '100%', 200)}}
+{{EmbedLiveSample('Que_se_passe-t-il_quand_un_navigateur_rencontre_du_CSS_quil_ne_comprend_pas_', '100%', 200)}}
 
 Le comportement décrit ci-dessus est très utile : vous pouvez utiliser du CSS récent pour perfectionner la mise en forme de vos pages, sachant qu'aucune erreur ne se produira quand votre code n'est pas compris — le navigateur interprète la règle... ou ne fait rien. Rappelez vous maintenant la _cascade_ : entre deux règles de même spécificité, le navigateur choisira la dernière rencontrée. La cascade permet d'offrir une alternative pour les navigateurs qui ne prennent pas en charge le CSS le plus récent.
 

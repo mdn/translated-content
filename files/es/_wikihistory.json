@@ -8585,7 +8585,7 @@
       "FLAVIOALFA"
     ]
   },
-  "Web/API/WebSocket/onerror": {
+  "Web/API/WebSocket/error_event": {
     "modified": "2020-10-15T22:13:54.439Z",
     "contributors": [
       "Bumxu"

@@ -105,7 +105,7 @@ body {
 
 {{ EmbedLiveSample('Définition_dune_trame', '100%', 400) }}
 
-### Trames adaptables avec l'unité « fr »
+### Trames adaptables avec l'unité fr
 
 En plus de créer des fils de chaîne en unités de longueur ou de pourcentage, nous pouvons utiliser l'unité « fr » pour moduler la taille des lignes et colonnes du quadrillage. Cette unité représente une fraction de l'espace disponible du conteneur de trame.
 
@@ -216,7 +216,7 @@ body {
 </div>
 ```
 
-{{ EmbedLiveSample('Grid_3', '100%', 400) }}
+{{ EmbedLiveSample('Espaces_entre_pistes', '100%', 400) }}
 
 > **Note :** Les propriétés _\*gap_ étaient traditionnellement préfixées par `grid-`, mais la norme a été modifiée avec l'intention de la rendre utilisable dans les diverses méthodes de mise en page. Actuellement, Edge et Firefox prennent en charge la version non préfixée ; les versions préfixées seront maintenues en tant qu'alias, de sorte qu'elles seront utilisables en toute sécurité pendant un certain temps. En appliquant le principe de précaution, vous pouvez doubler et mettre les deux types de propriétés pour « blinder » votre code.
 
@@ -465,7 +465,7 @@ aside {
 
 > **Note :** vous pouvez aussi utiliser la valeur `-1` pour cibler la dernière rangée de la chaîne et compter vers l'intérieur à partir de la fin en utilisant des valeurs négatives. Cependant, cela ne fonctionne que pour la chaîne explicite. La valeur `-1` ne ciblera pas le rang de fin de trame implicite.
 
-## Placer avec « grid-template-areas »
+## Placer avec grid-template-areas
 
 Une autre façon de placer des éléments dans le quadrillage consiste à utiliser la propriété {{cssxref("grid-template-areas")}} en donnant un nom au divers éléments du design.
 
