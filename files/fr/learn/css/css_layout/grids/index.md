@@ -163,7 +163,7 @@ body {
 </div>
 ```
 
-{{ EmbedLiveSample('Trames_adaptables_avec_lunité_«_fr_»', '100%', 400) }}
+{{ EmbedLiveSample("", '100%', 400) }}
 
 > **Note :** L'unité `fr` distribue l'espace disponible, et non sa _totalité_. Donc, si une des pistes contient quelque chose de grande taille, il y aura moins d'espace disponible à partager.
 
@@ -566,7 +566,7 @@ footer {
 </div>
 ```
 
-{{ EmbedLiveSample('Placer_avec_«_grid-template-areas_»', '100%', 400) }}
+{{ EmbedLiveSample('', '100%', 400) }}
 
 Les règles pour `grid-template-areas` sont les suivantes :
 
