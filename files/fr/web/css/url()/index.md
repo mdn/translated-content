@@ -11,7 +11,7 @@ translation_of: Web/CSS/url()
 ---
 {{CSSRef}}
 
-La fonction CSS **`url()`** est utilisée afin d'inclure un fichier. Le paramètre est une URL absolue, une URL relative ou un URI de donnée. La fonction **`url`\***\*`()`** peut être utilisée comme paramètre d'une autre fonction comme {{cssxref('attr()')}}. Selon la propriété pour laquelle elle est utilisée, la ressource utilisée peut être une image, une police ou une feuille de stye.
+La fonction CSS **`url()`** est utilisée afin d'inclure un fichier. Le paramètre est une URL absolue, une URL relative ou un URI de donnée. La fonction **`url()`** peut être utilisée comme paramètre d'une autre fonction comme {{cssxref('attr()')}}. Selon la propriété pour laquelle elle est utilisée, la ressource utilisée peut être une image, une police ou une feuille de stye.
 
 La notation fonctionelle `url()` correspond au type de donnée CSS [`<url>`](</fr/docs/conflicting/Web/CSS/url()_168028c4e5edd9e19c061adb4b604d4f>).
 

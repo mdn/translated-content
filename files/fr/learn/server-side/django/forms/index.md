@@ -86,7 +86,7 @@ Comme vous pouvez l'imaginer, créer le code HTML, vérifier les données envoy�
 
 ## Les étapes de gestion d'un formulaire avec Django
 
-Django gère un formulaire en utilisant les mêmes techniques qu'évoquées lors des formations précédentes (pour afficher des informations à propos de nos modèles): La vue reçoit une requête, exécute toute acion nécessaire, incluant la lecture de données depuis les modèles, puis génère une page HTML (à partir d'un squelette à qui nous transmettons un _contexte_ contenant les données à afficher\* \*). Ce qui rend les choses plus compliquées, c'est que le serveur a aussi besoin d'être capable de traiter les données fournies par l'utilisateur (pas seulement le contexte) et doit pouvoir réafficher les pages s'il y a une quelconque erreur.
+Django gère un formulaire en utilisant les mêmes techniques qu'évoquées lors des formations précédentes (pour afficher des informations à propos de nos modèles): La vue reçoit une requête, exécute toute acion nécessaire, incluant la lecture de données depuis les modèles, puis génère une page HTML (à partir d'un squelette à qui nous transmettons un _contexte_ contenant les données à afficher). Ce qui rend les choses plus compliquées, c'est que le serveur a aussi besoin d'être capable de traiter les données fournies par l'utilisateur (pas seulement le contexte) et doit pouvoir réafficher les pages s'il y a une quelconque erreur.
 
 Voici ci-dessous un diagramme représentant les étapes de gestion d'un formulaire de requêtes, commencant par la demande par le navigateur d'une page, dont le code HTML se trouve contenir un formulaire (en vert).
 
@@ -149,7 +149,7 @@ Les arguments communs de la plupart des champs sont listés ci-dessous (ils ont 
 
 - [required](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#required): Si `True`, le champ ne peut être laissé vide ou recevoir une valeur `None`. Les champs sont requis par défaut, aussi devez-vous préciser `required=False` pour autoriser des valeurs vides dans le formulaire.
 - [label](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label): Le label à utiliser au moment de rendre le champ en HTML. Si [label](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label) n'est pas précisé, alors Django en créera un à partir du nom du champ concerné, en mettant en majuscule la première lettre et en remplaçant les tirets bas par des espaces (p. ex. _Renewal date_).
-- [label_suffix](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label-suffix): Par défaut, un double point est affiché après le label (p. ex. Renewal date**:**). Cet argument vous permet de préciser un suffixe différent contenant un ou plusieurs autres caractère(s).
+- [label_suffix](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label-suffix): Par défaut, un double point est affiché après le label (p. ex. Renewal date :). Cet argument vous permet de préciser un suffixe différent contenant un ou plusieurs autres caractère(s).
 - [initial](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#initial): La valeur intiale pour le champ lorsque le formulaire est affiché.
 - [widget](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#widget): Le widget d'affichage à utiliser.
 - [help_text](https://docs.djangoproject.com/en/1.10/ref/forms/fields/#help-text) (comme dans l'exemple ci-dessus): Un texte supplémentaire qui peut être affiché dans les formulaires pour expliquer comment utiliser le champ.
@@ -548,7 +548,7 @@ La classe  ne requiert pas l'affichage d'aucun champ, aussi n'ont-ils pas besoi
 
 ### Templates
 
-Les vues "créer" et "modifier" utilisent le même template par défaut, lequel sera nommé d'après votre modèle : \*model_name**\*\_form.html** (vous pouvez changer le suffixe en autre chose que **\_form** en utilisant le champ `template_name_suffix` dans votre vue, par exemple `template_name_suffix = '_other_suffix'`).
+Les vues "créer" et "modifier" utilisent le même template par défaut, lequel sera nommé d'après votre modèle : **model_name\*form.html** (vous pouvez changer le suffixe en autre chose que **\_form** en utilisant le champ `template_name_suffix` dans votre vue, par exemple `template_name_suffix = '_other_suffix'`).
 
 Créez le fichier de template **locallibrary/catalog/templates/catalog/author_form.html**, et copiez-y le texte suivant.
 
@@ -570,7 +570,7 @@ Créez le fichier de template **locallibrary/catalog/templates/catalog/author_fo
 
 Ce formulaire est semblable à nos formulaires précédents et affiche les champs en utilisant un tableau. Notez aussi comment nous déclarons à nouveau le `{% csrf_token %}` pour nous assurer que nos formulaires résisteront à d'éventuelles attaques par CSRF (Cross Site Request Forgery).
 
-La vue "supprimer" s'attend à trouver un template avec un nom au format \*model_name**\*\_confirm_delete.html** (de nouveau, vous pouvez changer le suffixe en utilisant `template_name_suffix` dans votre vue). Créez le fichier de template **locallibrary/catalog/templates/catalog/author_confirm_delete.html**, et copiez-y le texte suivant.
+La vue "supprimer" s'attend à trouver un template avec un nom au format **model_name\*confirm_delete.html** (de nouveau, vous pouvez changer le suffixe en utilisant `template_name_suffix` dans votre vue). Créez le fichier de template **locallibrary/catalog/templates/catalog/author_confirm_delete.html**, et copiez-y le texte suivant.
 
 ```html
 {% extends "base_generic.html" %}

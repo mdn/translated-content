@@ -40,7 +40,7 @@ Conteneurs et définitions qui donnent sa forme au graphe audio
 - {{domxref("AudioContext")}}
   - : Un objet **`AudioContext`** désigne un graphe de traitement audio construit à partir de modules reliés entre eux, chacun représenté par un noeud audio ({{domxref("AudioNode")}}). Le contexte audio contrôle la création des noeuds qu'il contient, ainsi que l'exécution du traitement audio, et du décodage. Il est nécessaire de créer un `AudioContext` avant de faire quoi que ce soit d'autre, puisque tout se passe dans un contexte.
 - {{domxref("AudioNode")}}
-  - : Un objet **`AudioNode`** est un module de traitement audio, tel qu'une *source audio* (c'est-à-dire un élément HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}}), une *destination audio*, un *module de traitement intermédiaire (par exemple un filtre {{domxref("BiquadFilterNode")}}), ou un contrôle du volume {{domxref("GainNode")}}).
+  - : Un objet **`AudioNode`** est un module de traitement audio, tel qu'une *source audio* (c'est-à-dire un élément HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}}), une *destination audio*, un module de traitement intermédiaire (par exemple un filtre {{domxref("BiquadFilterNode")}}), ou un contrôle du volume {{domxref("GainNode")}}).
 - {{domxref("AudioParam")}}
   - : Un objet **`AudioParam`** est un paramètre audio, qui est lié à un {{domxref("AudioNode")}}. On peut lui assigner une valeur ou un changement de valeur, que l'on peut programmer à un moment spécifique et/ou selon un motif particulier.
 - {{event("ended_(Web_Audio)", "ended")}} (event)
@@ -62,15 +62,15 @@ Conteneurs et définitions qui donnent sa forme au graphe audio
 ### Définition des filtres d'effets audio
 
 - {{domxref("BiquadFilterNode")}}
-  - : Un objet **`BiquadFilterNode` **est un simple filtre de bas niveau. Il peut s'agir de différents types de filtres, contrôle du volume ou égaliseurs graphiques. Un `BiquadFilterNode` a toujours exactement une entrée et une sortie.
+  - : Un objet **`BiquadFilterNode`** est un simple filtre de bas niveau. Il peut s'agir de différents types de filtres, contrôle du volume ou égaliseurs graphiques. Un `BiquadFilterNode` a toujours exactement une entrée et une sortie.
 - {{domxref("ConvolverNode")}}
-  - : Un objet **`Convolver.Node`** **est un {{domxref("AudioNode")}} qui exécute une circonvolution linéaire sur un AudioBuffer donné, souvent utilisé pour créer un effet de réverbération.
+  - : Un objet **`Convolver.Node`** est un {{domxref("AudioNode")}} qui exécute une circonvolution linéaire sur un AudioBuffer donné, souvent utilisé pour créer un effet de réverbération.
 - {{domxref("DelayNode")}}
   - : Un objet **`DelayNode`** est une ligne à retard numérique, c'est-à-dire un module de traitement automatique qui provoque un délai entre l'arrivée du son en entrée et sa propagation en sortie.
 - {{domxref("DynamicsCompressorNode")}}
   - : Un objet **`DynamicsCompressorNode`** permet un effet de compression, qui réduit le volume des parties les plus fortes du signal de façon à éviter les effets de clipping et la distortion qui peuvent se produire lorsque des sons multiples sont diffusés simultanément.
 - {{domxref("GainNode")}}
-  - : Un objet **`GainNode`** représente une modification du volume sonore. C'est un module de traitement audio qui provoque l'application d'un *gain\* aux données récupérées en entrée avant leur propagation vers la sortie.
+  - : Un objet **`GainNode`** représente une modification du volume sonore. C'est un module de traitement audio qui provoque l'application d'un *gain* aux données récupérées en entrée avant leur propagation vers la sortie.
 - {{domxref("WaveShaperNode")}}
   - : Un objet **`WaveShaperNode`** représente une distortion non linéaire. C'est un {{domxref("AudioNode")}} qui utilise une courbe pour appliquer au signal une distortion de mise en forme des ondes. En dehors de l'effet de distortion évident, il est souvent utilisé pour donner un caractère plus chaleureux au son.
 - {{domxref("PeriodicWave")}}

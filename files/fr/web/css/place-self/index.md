@@ -56,7 +56,7 @@ place-self: unset;
     - Pour les éléments positionnés de façon statique au sein d'une disposition absolue, ce mot-clé agira comme `stretch`
     - Pour les cellules de tableaux, ce mot-clé n'a pas de signification car cette propriété est ignorée.
     - Pour les éléments disposés en blocs, cette propriété est ignorée.
-    - Pour les dispositions qui utilisent les boîtes flexibles, ce mot-clé n'a pas de signification car cette propriété est ignorée*.*
+    - Pour les dispositions qui utilisent les boîtes flexibles, ce mot-clé n'a pas de signification car cette propriété est ignorée.
     - Pour les dispositions qui utilisent une grille, ce mot-clé aura un comportement proche de `stretch`, sauf pour les boîtes qui ont des dimensions intrinsèques, dans ce cas, il est synonyme de `start`.
 
 - `self-start`

@@ -144,7 +144,7 @@ Vous verrez rapidement qu'avec les CSS, tout tourne autour de boîtes : définir
 
 ![a big stack of boxes or crates sat on top of one another](boxes.jpg)
 
-C'est pour cette raison que l'architecture de CSS est principalement basée sur un _modèle de boîtes_.\* \*Chacun de ces blocs prend un certain espace sur la page, de cette façon :
+C'est pour cette raison que l'architecture de CSS est principalement basée sur un _modèle de boîtes_. Chacun de ces blocs prend un certain espace sur la page, de cette façon :
 
 - `padding`, l'espace autour, proche du contenu (par exemple, l'espace autour du texte d'un paragraphe) (en français, on pourrait traduire cela par du « remplissage » mais le terme _padding_ étant communément utilisé lorsqu'on parle de CSS, on continuera à utiliser ce terme)
 - `border`, la ligne qui est juste autour du _padding_ (en français cela correspond à la bordure)

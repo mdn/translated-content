@@ -104,7 +104,7 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 
 ## Méthodes
 
-*L'interface `URL` *implémente les méthodes définies dans _{{domxref("URLUtils")}}._
+L'interface `URL` implémente les méthodes définies dans _{{domxref("URLUtils")}}._
 
 - {{domxref("URLUtils.toString()")}}
   - : Retourne une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant l'URL entière. C'est un synonyme de {{domxref("URLUtils.href")}}, mais il ne peut pas être utilisé pour modifier la valeur.
