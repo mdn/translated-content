@@ -50,13 +50,13 @@ _`AudioWorkletProcessor` 인터페이스는 어떠한 이벤트에도 응답하�
 
 사용자 정의 오디오 프로세싱 생성 메커니즘의 예제 알고리즘입니다.
 
-1.  별도의 파일을 생성합니다;
-2.  그 파일에서:
+1.  별도의 파일을 생성합니다.
+2.  그 파일에서
 
-    1.  `AudioWorkletProcessor` 클래스를 확장하고 (["클래스 파생" 섹션](#클래스_파생)을 참고하세요) 여러분만의 {{domxref("AudioWorkletProcessor.process", "process()")}} 메서드를 그 안에 제공하세요;
-    2.  {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} 메서드를 사용해 프로세서를 등록하세요;
+    1.  `AudioWorkletProcessor` 클래스를 확장하고 (["클래스 파생" 섹션](#클래스_파생)을 참고하세요) 여러분만의 {{domxref("AudioWorkletProcessor.process", "process()")}} 메서드를 그 안에 제공하세요.
+    2.  {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} 메서드를 사용해 프로세서를 등록하세요.
 
-3.  여러분의 오디오 컨텍스트의 {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} 속성에서 {{domxref("Worklet.addModule", "addModule()")}} 메서드를 사용하여 파일을 로드하세요;
+3.  오디오 컨텍스트의 {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} 속성에서 {{domxref("Worklet.addModule", "addModule()")}} 메서드를 사용하여 파일을 로드하세요.
 4.  이 프로세서에 기반하는 {{domxref("AudioWorkletNode")}}를 생성하세요. 이 프로세서는 `AudioWorkletNode` 생성자에 의해 내부적으로 초기화될 것입니다.
 5.  이 노드를 다른 노드들에 연결하세요.
 
