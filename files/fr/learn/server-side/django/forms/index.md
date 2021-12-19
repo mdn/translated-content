@@ -381,14 +381,14 @@ Créez le template référencé dans la vue (**/catalog/templates/catalog/book_r
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Renew: {{ book_instance.book.title }}</h1>
-  <p>Borrower: {{ book_instance.borrower }}</p>
-  <p {% if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: {{ book_instance.due_back }}</p>
+  <h1>Renew: \{{ book_instance.book.title }}</h1>
+  <p>Borrower: \{{ book_instance.borrower }}</p>
+  <p {% if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: \{{ book_instance.due_back }}</p>
 
   <form action="" method="post">
     {% csrf_token %}
     <table>
-    {{ form.as_table }}
+    \{{ form.as_table }}
     </table>
     <input type="submit" value="Submit">
   </form>
@@ -590,7 +590,7 @@ Créez le fichier de template **locallibrary/catalog/templates/catalog/author_fo
   <form action="" method="post">
     {% csrf_token %}
     <table>
-    {{ form.as_table }}
+    \{{ form.as_table }}
     </table>
     <input type="submit" value="Submit">
   </form>
@@ -608,7 +608,7 @@ La vue "supprimer" s'attend à trouver un template avec un nom au format *model_
 
 <h1>Delete Author</h1>
 
-<p>Are you sure you want to delete the author: {{ author }}?</p>
+<p>Are you sure you want to delete the author: \{{ author }}?</p>
 
 <form action="" method="POST">
   {% csrf_token %}
