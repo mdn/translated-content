@@ -64,7 +64,7 @@ _`AudioWorkletProcessor` 인터페이스는 어떠한 이벤트에도 응답하�
 
 아래의 예제에서 우리는 백색소음을 출력하는 사용자 정의 {{domxref("AudioWorkletNode")}}를 생성합니다.
 
-우선, 우리는 백색소음을 출력할 사용자 정의 `AudioWorkletProcessor` 를 정의하고, 등록할 필요가 있습니다. 이 작업은 별도의 파일에서 이루어져야 함에 주목하세요.
+우선, 우리는 백색소음을 출력할 사용자 정의 `AudioWorkletProcessor` 를 정의하고, 등록할 필요가 있습니다. 이 작업은 별도의 파일에서 이루어져야 함에 주의하세요.
 
 ```js
 // white-noise-processor.js
