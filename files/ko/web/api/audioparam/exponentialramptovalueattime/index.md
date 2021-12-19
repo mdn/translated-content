@@ -12,11 +12,11 @@ browser-compat: api.AudioParam.exponentialRampToValueAtTime
 ---
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioParam") }} 인터페이스의 **`exponentialRampToValueAtTime()`** 메서드는 {{domxref("AudioParam")}}의 값에 점진적인 지수적 변화를 예정합니다. 변화는 _previous_ 이벤트에 명시된 시간에 시작해, 지수적 ramp를 따라 `value` 매개변수에 주어진 새로운 값으로 향하고, `endTime` 매개변수에 주어진 시간에 새로운 값에 도달합니다.
+{{ domxref("AudioParam") }} 인터페이스의 **`exponentialRampToValueAtTime()`** 메서드는 {{domxref("AudioParam")}}의 값에 점진적인 지수적 변화를 예정합니다. 변화는 **이전** 이벤트에 명시된 시간에 시작해, 지수적 경사(ramp)를 따라 `value` 매개변수에 주어진 새로운 값으로 향하고, `endTime` 매개변수에 주어진 시간에 새로운 값에 도달합니다.
 
 > **참고:** 사람의 귀가 작동하는 방식 때문에,
 > 주파수나 playback rate를 변화시킬 때
-> 지수적 ramp는 선형적 ramp에 비해 더욱 유용한 것으로 여겨집니다.
+> 지수적 경사는 선형적 경사에 비해 더욱 유용한 것으로 여겨집니다.
 
 ## 구문
 
@@ -27,9 +27,9 @@ var AudioParam = AudioParam.exponentialRampToValueAtTime(value, endTime)
 ### 매개변수
 
 - value
-  - : `AudioParam` 이 주어진 시간까지 ramp할 값을 나타내는 부동소수점 수.
+  - : `AudioParam` 이 주어진 시간까지 변화될 값을 나타내는 부동소수점 수.
 - endTime
-  - : ramping이 시작한 이후 값의 변화가 멈출 정확한 시간(단위: 초)을 나타내는 double.
+  - : 변화가 시작된 이후 값의 변화가 멈출 정확한 시간(단위: 초)을 나타내는 double.
 
 ### 반환
 
@@ -78,7 +78,7 @@ expRampMinus.onclick = function() {
 }
 ```
 
-> **참고:** 마지막 함수에서 0이 아니라 0.01의 값이 ramp down할 값에 사용되었는데,
+> **참고:** 마지막 함수에서 변화시킬 값으로 0이 아니라 0.01의 값이 사용되었는데,
 > 이는 만약 0이 사용된다면
 > _invalid or illegal string_ 오류가 발생되기 때문입니다 — 이 값은 양수일 필요가 있습니다.
 
