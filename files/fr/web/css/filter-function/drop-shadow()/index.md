@@ -1,57 +1,69 @@
 ---
 title: drop-shadow()
 slug: Web/CSS/filter-function/drop-shadow()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Type
 translation_of: Web/CSS/filter-function/drop-shadow()
+browser-compat: css.types.filter-function.drop-shadow
 ---
 {{CSSRef}}
 
-La fonction CSS **`drop-shadow()`** permet d'appliquer une ombre portée sur une image. Le résultat obtenu par cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
+La fonction CSS **`drop-shadow()`** permet d'appliquer une ombre portée sur une image. Le résultat obtenu par cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
 
 {{EmbedInteractiveExample("pages/css/function-drop-shadow.html")}}
 
-En pratique, une ombre portée correspond à une version floutée et décalée du masque alpha de l'image, dessiné dans une couleur donnée et fusionné sous l'image.
+En pratique, une ombre portée correspond à une version floutée et décalée du masque alpha de l'image, dessiné avec une couleur donnée et fusionné sous l'image.
 
-> **Note :** Cette fonction s'apparente à la propriété {{cssxref("box-shadow")}}. La propriété `box-shadow` permet de créer une ombre rectangulaire sous **la boîte entière** d'un élément. En revanche, la fonction `drop-shadow()` permet de créer un ombre qui épouse la forme (le canal alpha) de **l'image même**.
+> **Note :** Cette fonction s'apparente à la propriété [`box-shadow`](/fr/docs/Web/CSS/box-shadow). La propriété `box-shadow` permet de créer une ombre rectangulaire sous **la boîte entière** d'un élément. En revanche, la fonction `drop-shadow()` permet de créer un ombre qui épouse la forme (le canal alpha) de **l'image même**.
 
 ## Syntaxe
 
-    drop-shadow(décalage-x, décalage-y, rayon-flou, rayon-étalement, couleur)
+```css
+drop-shadow(decalage-x decalage-y rayon-flou couleur)
+```
 
-La fonction `drop-shadow()` accepte un paramètre de type `<shadow>` (défini avec la propriété {{cssxref("box-shadow")}}), mais où le mot-clé `inset` n'est pas autorisé.
+La fonction `drop-shadow()` accepte un paramètre de type `<shadow>` (tel que défini dans la documentation de [`box-shadow`](/fr/docs/Web/CSS/box-shadow)), mais pour lequel le mot-clé `inset` et le paramètre `spread` ne sont pas acceptés.
 
 ### Paramètres
 
-- `décalage-x` `décalage-y`
-  - : Deux longueurs ({{cssxref("&lt;length&gt;")}}) qui déterminent le décalage de l'ombre sous l'image. `décalage-x` indique la distance horizontale (les valeurs négatives décalent l'ombre vers la gauche et les valeurs positives la décalent vers la droite). `décalage-y` indique la distance verticale (les valeurs négatives décalent l'ombre vers le haut et les valeurs positives vers le bas). Si les deux valeurs sont égales à `0`, l'ombre est directement placée sous l'image.
-- `rayon-flou` {{optional_inline}}
-  - : Une longueur ({{cssxref("&lt;length&gt;")}}) qui représente le rayon du flou. Plus la valeur est élevée, plus l'ombre sera grande et floue. La valeur par défaut est `0` ce qui correspond à un contour net, sans flou. Il n'est pas possible d'utiliser des valeurs négatives
-- `rayon-étalement`{{optional_inline}}
-
-  - : Le rayon d'étalement de l'ombre, défini sous la forme d'une longueur ({{cssxref("&lt;length&gt;")}}). Les valeurs positives permettent d'avoir une ombre plus grande et plus étendue et les valeurs négatives permettent de réduire la zone d'ombre. La valeur par défaut est `0` : l'ombre a alors la même taille que l'image.
-
-    > **Attention :** Chrome et Safari (basés sur WebKit) ne prennent pas en charge ce paramètre. S'il est utilisé, l'effet ne sera pas applique du tout.
-
-- `couleur`{{optional_inline}}
-  - : La couleur de l'ombre, indiquée sous la forme d'une valeur {{cssxref("&lt;color&gt;")}}. La valeur par défaut dépend du navigateur. Pour Firefox et Internet Explorer, c'est la valeur de la propriété {{cssxref("color")}} qui sera utilisée alors que les navigateurs basés sur WebKit utiliseront une ombre transparente par défaut.
+- `decalage-x` `decalage-y` (required)
+  - : Deux valeurs de longueur ( type [`<length>`](/fr/docs/Web/CSS/length)) qui déterminent le décalage de l'ombre. `decalage-x` indique la distance horizontale, les valeurs négatives décalant l'ombre vers la gauche de l'élément. `decalage-y` indique la distance verticale, les valeurs négatives décalant l'ombre vers le haut de l'élément. Si les deux valeurs sont `0`, l'ombre est placée directement sous l'élément.
+- `rayon-flou` (optional)
+  - : Le rayon de flou de l'ombre, indiqué comme une longueur (type [`<length>`](/fr/docs/Web/CSS/length)). Plus la valeur est grande, plus l'ombre sera grande et floue. Si cette valeur n'est pas fournie, elle prendra 0 comme valeur par défaut, ce qui créera une ombre au contour net. Les valeurs négatives ne sont pas autorisées.
+- `couleur` (optional)
+  - : La couleur de l'ombre, indiquée sous la forme d'une valeur de type [`<color>`](/fr/docs/Web/CSS/color_value). Si cette valeur n'est pas fournie, c'est la couleur indiquée par la propriété [`color`](/fr/docs/Web/CSS/color) qui est utilisée.
 
 ## Exemples
 
-```css
-/* Une ombre noire avec un flou de 10px de rayon. */
-drop-shadow(16px 16px 10px black)
+### Définir une ombre portée avec des décalages et un rayon de flou exprimés en pixels
 
-/* Une ombre rouge avec un flou de 1rem de rayon et de .3rem d'étalement */
-/* Attention, à l'heure actuelle, ce type d'ombre n'est pas pris en charge */
-/* par l'ensemble des navigateurs */
-drop-shadow(.5rem .5rem 1rem .3rem #e23)
+```css
+/* Une ombre noire avec un rayon de flou de 10px */
+drop-shadow(16px 16px 10px black)
 ```
 
+### Définir une ombre portée avec des décalages et un rayon de flou en rem
+
+```css
+/* Une ombre rougeâtre avec un rayon de flou de 1rem */
+drop-shadow(.5rem .5rem 1rem #e23)
+```
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 ## Voir aussi
 
-- {{cssxref("&lt;filter-function&gt;")}}
-- La propriété CSS {{cssxref("box-shadow")}}
+- [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
+  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur())
+  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness())
+  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast())
+  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale())
+  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate())
+  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert())
+  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity())
+  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate())
+  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia())
+- La propriété CSS [`box-shadow`](/fr/docs/Web/CSS/box-shadow)
