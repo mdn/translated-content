@@ -84,60 +84,58 @@ const fetchResponsePromise = fetch(resource [, init])
             > **Note:** As credenciais podem ser incluídas em requisições cross-origin simples e "finais", mas não devem ser incluídas em [requisições de comprovação de CORS](/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials).
 
     - `cache`
-      - : A string indicating how the request will interact with the browser’s [HTTP cache](/en-US/docs/Web/HTTP/Caching). The possible values, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, and `only-if-cached`, are documented in the article for the {{domxref("Request/cache", "cache")}} property of the {{domxref("Request")}} object.
+      - : Uma string indicando como a requisição vai interagir como o [cache HTTP](/pt-BR/docs/Web/HTTP/Caching) do navegador. Os valores possíveis, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, e `only-if-cached`, estão documentados no artigo para a propriedade {{domxref("Request/cache", "cache")}} do objeto {{domxref("Request")}}.
     - `redirect`
 
-      - : How to handle a `redirect` response:
+      - : Como lidar com uma resposta `redirect`:
 
-        - `follow`: Automatically follow redirects. Unless otherwise stated the redirect mode is set to `follow`
-        - `error`: Abort with an error if a redirect occurs.
-        - `manual`: Caller intends to process the response in another context.
-          See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#requests) for more information.
+        - `follow`: Segue os redirecionamentos automaticamente. A menos que esteja definido de outra forma, o redirecionamento é definido, por padrão, como `follow`.
+        - `error`: Aborta com um erro se o redirecionamento ocorrer.
+        - `manual`: O autor da chamada pretende processar a resposta em outro contexto.
+          Veja [WHATWG fetch standard](https://fetch.spec.whatwg.org/#requests) para mais informações.
 
     - `referrer`
-      - : A {{domxref("USVString")}} specifying the referrer of the request. This can be a
-        same-origin URL, `about:client`, or an empty string.
+      - : Uma {{domxref("USVString")}} especificando o referenciador da requisição. Isso pode ser uma URL
+        same-origin, `about:client`, ou uma string vazia.
     - `referrerPolicy`
-      - : Specifies the [referrer
-        policy](https://w3c.github.io/webappsec-referrer-policy/#referrer-policies) to use for the request. May be one of `no-referrer`,
+      - : Especifica a [referrer
+        policy](https://w3c.github.io/webappsec-referrer-policy/#referrer-policies) para usar para a requisição. Pode ser `no-referrer`,
         `no-referrer-when-downgrade`, `same-origin`,
         `origin`, `strict-origin`,
         `origin-when-cross-origin`,
-        `strict-origin-when-cross-origin`, or `unsafe-url`.
+        `strict-origin-when-cross-origin` ou `unsafe-url`.
     - `integrity`
-      - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
-        value of the request (e.g.,
+      - : Contém o valor [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
+        da requisição (por exemplo,
         `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
     - `keepalive`
-      - : The `keepalive` option can be used to allow the request to outlive
-        the page. Fetch with the `keepalive` flag is a replacement for the
-        {{domxref("Navigator.sendBeacon()")}} API.
+      - : A opção `keepalive` pode ser usada para permitir que a requisição sobreviva à página. A busca com a flag `keepalive` é uma substituição para a API
+        {{domxref("Navigator.sendBeacon()")}}.
     - `signal`
-      - : An {{domxref("AbortSignal")}} object instance; allows you to communicate with a
-        fetch request and abort it if desired via an {{domxref("AbortController")}}.
+      - : Uma instância de objeto {{domxref("AbortSignal")}}; permite comunicar com uma requisição fetch e abortá-la, se desejado, por meio de um {{domxref("AbortController")}}.
 
-### Return value
+### Valor de retorno
 
-A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
+Uma {{jsxref("Promise")}} que resolve para um objeto {{domxref("Response")}}.
 
-### Exceptions
+### Exceções
 
 - `AbortError`
-  - : The request was aborted due to a call to the {{domxref("AbortController")}}
-    {{domxref("AbortController.abort", "abort()")}} method.
+  - : A requisição foi abortada devido a uma chamada ao {{domxref("AbortController")}} ou ao método
+    {{domxref("AbortController.abort", "abort()")}}.
 - `TypeError`
-  - : Can occur for the following reasons:
+  - : Pode ocorrer pelos seguintes motivos:
 
 <table>
   <thead>
     <tr>
-      <th scope="col">Reason</th>
-      <th scope="col">Failing examples</th>
+      <th scope="col">Motivo</th>
+      <th scope="col">Exemplos de falha</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Invalid header name</td>
+      <td>Nome do cabeçalho inválido</td>
       <td>
         <pre>
 // space in "C ontent-Type"
@@ -151,7 +149,7 @@ fetch('https://example.com/', { headers });
     </tr>
     <tr>
       <td>
-        Invalid header value. The header object must contain exactly two elements.
+        Valor do cabeçalho inválido. O objeto header deve conter exatamente dois elementos.
       </td>
       <td>
         <pre>
@@ -165,7 +163,7 @@ fetch('https://example.com/', { headers });
     </tr>
     <tr>
       <td>
-        Invalid URL or scheme, or using a scheme that fetch does not support, or using a scheme that is not supported for a particular request mode.
+        URL inválida ou esquema, ou está usando um esquema que fetch não suporta, ou está usando um esquema que não é suportado por um modo de requisição específico.
       </td>
       <td>
         <pre>
@@ -173,14 +171,14 @@ fetch('blob://example.com/', { mode: 'cors' })
         </pre>
       </td>
     </tr>
-      <td>URL includes credentials</td>
+      <td>URL que inclui credenciais</td>
       <td>
         <pre>
 fetch('https://user:password@example.com/')
         </pre>
       </td>
     <tr>
-      <td>Invalid referrer URL</td>
+      <td>URL de referência inválida</td>
       <td>
         <pre>
 fetch('https://example.com/', {
@@ -190,7 +188,7 @@ fetch('https://example.com/', {
       </td>
     </tr>
     <tr>
-      <td>Invalid modes (<code>navigate</code> and <code>websocket</code>)</td>
+      <td>Modos inválidos (<code>navigate</code> and <code>websocket</code>)</td>
       <td>
         <pre>
 fetch('https://example.com/', { mode: 'navigate' })
@@ -199,7 +197,7 @@ fetch('https://example.com/', { mode: 'navigate' })
     </tr>
     <tr>
       <td>
-        If the request cache mode is "only-if-cached" and the request mode is other than "same-origin".
+        Se o modo de cache da requisição é "only-if-cached" e o modo da requisição é diferente de "same-origin".
       </td>
       <td>
         <pre>
@@ -212,7 +210,7 @@ fetch('https://example.com/', {
     </tr>
     <tr>
       <td>
-        If the request method is an invalid name token or one of forbidden headers.
+        Se o método da requisição for um token de nome inválido ou um dos cabeçalhos proibidos:
         CONNECT, TRACE or TRACK
       </td>
       <td>
@@ -223,7 +221,7 @@ fetch('https://example.com/', { method: 'CONNECT' })
     </tr>
     <tr>
       <td>
-        If the request mode is "no-cors" and the request method is not a CORS-safe-listed method (GET, HEAD, or POST)
+        Se o modo da requisição é "no-cors" e o método da requisição não é um método CORS-safe-listed (GET, HEAD ou POST)
       </td>
       <td>
         <pre>
@@ -236,7 +234,7 @@ fetch('https://example.com/', {
     </tr>
     <tr>
       <td>
-        If the request method is GET or HEAD and the body is non-null or not undefined.
+        Se o método da requisição é GET ou HEAD e o corpo não for nulo(null) ou undefined.
       </td>
       <td>
         <pre>
@@ -248,21 +246,18 @@ fetch('https://example.com/', {
       </td>
     </tr>
     <tr>
-      <td>If fetch throws a network error.</td>
+      <td>Se fetch gera um erro de rede.</td>
       <td></td>
     </tr>
   </tbody>
 </table>
 
-## Examples
+## Exemplos
 
-In our [Fetch
-Request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) we
-create a new {{domxref("Request")}} object using the relevant constructor, then fetch it
-using a `fetch()` call. Since we are fetching an image, we run
-{{domxref("Response.blob()")}} on the response to give it the proper MIME type so it will be
-handled properly, then create an Object URL of it and display it in an
-{{htmlelement("img")}} element.
+No nosso exemplo de [requisição Fetch](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (veja [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) nós criamos um novo objeto {{domxref("Request")}} usando um constructor relevante, depois buscamos isso usando uma chamada ao `fetch()`. Uma vez que estamos buscando uma imagem, executamos
+{{domxref("Response.blob()")}} na resposta para dar a ela o tipo MIME adequado para que lidemos adequadamente
+handled properly, então criamos um Objeto URL disso e exibimos isso em um elemento
+{{htmlelement("img")}}.
 
 ```js
 const myImage = document.querySelector('img');
@@ -282,10 +277,10 @@ fetch(myRequest)
 });
 ```
 
-In the [Fetch
-with init then Request example](https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html) (see [Fetch
-Request init live](https://mdn.github.io/fetch-examples/fetch-with-init-then-request/)), we do the same thing except that we pass in an
-`init` object when we invoke `fetch()`:
+No exemplo [Fetch
+with init then Request](https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html) (veja [Fetch
+Request init live](https://mdn.github.io/fetch-examples/fetch-with-init-then-request/)), nós fazemos a mesma coisa exceto que passamos em um objeto
+`init` quando invocamos o `fetch()`:
 
 ```js
 const myImage = document.querySelector('img');
@@ -307,14 +302,14 @@ fetch(myRequest, myInit).then(function(response) {
 });
 ```
 
-You could also pass the `init` object in with the
-`Request` constructor to get the same effect:
+Você também poderia passar o objeto `init` com o constructor
+`Request` para obter o mesmo efeito:
 
 ```js
 let myRequest = new Request('flowers.jpg', myInit);
 ```
 
-You can also use an object literal as `headers` in
+Você também pode usar um object literal como `headers` em
 `init`.
 
 ```js
@@ -330,17 +325,17 @@ const myInit = {
 let myRequest = new Request('flowers.jpg', myInit);
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade nos navegadores
 
 {{Compat}}
 
-## See also
+## Veja também
 
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)
-- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [Fetch API](/pt-BR/docs/Web/API/Fetch_API)
+- [ServiceWorker API](/pt-BR/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/CORS)
+- [HTTP](/pt-BR/docs/Web/HTTP)
