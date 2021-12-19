@@ -29,7 +29,7 @@ var AudioParam = AudioParam.exponentialRampToValueAtTime(value, endTime)
 - value
   - : `AudioParam` 이 주어진 시간까지 ramp할 값을 나타내는 부동소수점 수.
 - endTime
-  - : ramping이 시작한 이후 값의 변화가 멈출 정확한 시간 (초로 표현됨) 을 나타내는 double.
+  - : ramping이 시작한 이후 값의 변화가 멈출 정확한 시간(단위: 초)을 나타내는 double.
 
 ### 반환
 
