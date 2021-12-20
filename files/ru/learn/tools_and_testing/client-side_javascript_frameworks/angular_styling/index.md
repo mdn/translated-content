@@ -26,7 +26,7 @@ tags:
     </tr>
     <tr>
       <th scope="row">Цель:</th>
-      <td>Изучить как работать со стилями в Angular.</td>
+      <td>Изучить, как работать со стилями в Angular.</td>
     </tr>
   </tbody>
 </table>
