@@ -76,7 +76,7 @@ translation_of: Web/Progressive_web_apps/App_structure
 
 <p>Desde el punto de vista HTML, el intérprete de la aplicación es todo lo que está fuera de la sección de contenido:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
 	&lt;meta charset="utf-8"&gt;
@@ -122,7 +122,7 @@ translation_of: Web/Progressive_web_apps/App_structure
 
 <p>El archivo <code>app.js</code> hace algunas cosas que veremos de cerca en los próximos artículos. En primer lugar, genera el contenido en base a esta plantilla:</p>
 
-<pre class="brush: js notranslate">var template = "&lt;article&gt;\n\
+<pre class="brush: js">var template = "&lt;article&gt;\n\
     &lt;img src='data/img/SLUG.jpg' alt='NAME'&gt;\n\
     &lt;h3&gt;#POS. NAME&lt;/h3&gt;\n\
     &lt;ul&gt;\n\
@@ -149,13 +149,13 @@ document.getElementById('content').innerHTML = content;</pre>
 
 <p>A continuación, registra un servicio <em>works</em>:</p>
 
-<pre class="brush: js notranslate">if('serviceWorker' in navigator) {
+<pre class="brush: js">if('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
 };</pre>
 
 <p>El siguiente bloque de código solicita permiso para recibir notificaciones cuando se hace clic en un botón:</p>
 
-<pre class="brush: js notranslate">var button = document.getElementById("notifications");
+<pre class="brush: js">var button = document.getElementById("notifications");
 button.addEventListener('click', function(e) {
     Notification.requestPermission().then(function(result) {
         if(result === 'granted') {
@@ -166,7 +166,7 @@ button.addEventListener('click', function(e) {
 
 <p>El último bloque crea notificaciones que muestran un elemento seleccionado al azar de la lista de juegos:</p>
 
-<pre class="brush: js notranslate">function randomNotification() {
+<pre class="brush: js">function randomNotification() {
     var randomItem = Math.floor(Math.random()*games.length);
     var notifTitle = games[randomItem].name;
     var notifBody = 'Creado por '+games[randomItem].author+'.';
@@ -183,11 +183,11 @@ button.addEventListener('click', function(e) {
 
 <p>El último archivo que veremos rápidamente es el servicio <em>worker</em>: <code>sw.js</code> — primero importa datos del archivo <code>games.js</code>:</p>
 
-<pre class="brush: js notranslate">self.importScripts('data/games.js');</pre>
+<pre class="brush: js">self.importScripts('data/games.js');</pre>
 
 <p>A continuación, crea una lista de todos los archivos que se almacenarán en caché, tanto del intérprete de la aplicación como del contenido:</p>
 
-<pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';
+<pre class="brush: js">var cacheName = 'js13kPWA-v1';
 var appShellFiles = [
   '/pwa-examples/js13kpwa/',
   '/pwa-examples/js13kpwa/index.html',
@@ -216,7 +216,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>El siguiente bloque instala el servicio <em>worker</em>, que luego almacena en caché todos los archivos contenidos en la lista anterior:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', function(e) {
+<pre class="brush: js">self.addEventListener('install', function(e) {
   console.log('[Service Worker] Install');
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
@@ -228,7 +228,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>Por último, el servicio <em>worker</em> obtiene contenido de la caché si está disponible allí, lo cual proporciona una funcionalidad fuera de línea:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', function(e) {
+<pre class="brush: js">self.addEventListener('fetch', function(e) {
   e.respondWith(
     caches.match(e.request).then(function(r) {
       console.log('[Servicio Worker] Obteniendo recurso: '+e.request.url);
@@ -247,7 +247,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>Los datos de los juegos están presentes en el directorio <em>data</em> en forma de un objeto JavaScript (<a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa/data/games.js"><code>games.js</code></a>):</p>
 
-<pre class="brush: js notranslate">var games = [
+<pre class="brush: js">var games = [
     {
         slug: 'perdido-en-el-ciberespacio',
         name: 'Perdido en el ciberespacio',

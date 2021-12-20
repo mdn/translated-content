@@ -31,7 +31,7 @@ original_slug: Web/JavaScript/Referencia/Funciones/Arrow_functions
 <p>Observa, paso a paso, la descomposición de una "función tradicional" hasta la "función flecha" más simple:<br>
  <strong>Nota</strong>: Cada paso a lo largo del camino es una "función flecha" válida</p>
 
-<pre class="brush: js notranslate">// Función tradicional
+<pre class="brush: js">// Función tradicional
 function (a){
   return a + 100;
 }
@@ -55,7 +55,7 @@ a =&gt; a + 100;</pre>
 
 <p>Por ejemplo, si tienes <strong>varios argumentos</strong> o <strong>ningún argumento</strong>, deberás volver a introducir paréntesis alrededor de los argumentos:</p>
 
-<pre class="brush: js notranslate">// Función tradicional
+<pre class="brush: js">// Función tradicional
 function (a, b){
   return a + b + 100;
 }
@@ -77,7 +77,7 @@ let b = 2;
 
 <p>Del mismo modo, si el cuerpo requiere <strong>líneas de procesamiento adicionales</strong>, deberás volver a introducir los corchetes <strong>Más el "return"</strong> (las funciones flecha no adivinan mágicamente qué o cuándo quieres "volver"):</p>
 
-<pre class="brush: js notranslate">// Función tradicional
+<pre class="brush: js">// Función tradicional
 function (a, b){
   let chuck = 42;
   return a + b + chuck;
@@ -92,7 +92,7 @@ function (a, b){
 <div>Y finalmente, en las <strong>funciones con nombre</strong> tratamos las expresiones de flecha como variables</div>
 
 <div>
-<pre class="brush: js notranslate">// Función tradicional
+<pre class="brush: js">// Función tradicional
 function bob (a){
   return a + 100;
 }
@@ -109,45 +109,45 @@ let bob = a =&gt; a + 100;</pre>
 
 <h3 id="Sintaxis_básica">Sintaxis básica</h3>
 
-<p class="syntaxbox notranslate">Un parámetro. Con una expresión simple no se necesita <code>return</code>:</p>
+<p class="syntaxbox">Un parámetro. Con una expresión simple no se necesita <code>return</code>:</p>
 
-<pre class="brush: js notranslate">param =&gt; expression</pre>
+<pre class="brush: js">param =&gt; expression</pre>
 
-<p class="syntaxbox notranslate">Varios parámetros requieren paréntesis. Con una expresión simple no se necesita <code>return</code>:</p>
+<p class="syntaxbox">Varios parámetros requieren paréntesis. Con una expresión simple no se necesita <code>return</code>:</p>
 
-<pre class="brush: js notranslate">(param1, paramN) =&gt; expression</pre>
+<pre class="brush: js">(param1, paramN) =&gt; expression</pre>
 
-<p class="syntaxbox notranslate">Las declaraciones de varias líneas requieren corchetes y <code>return</code>:</p>
+<p class="syntaxbox">Las declaraciones de varias líneas requieren corchetes y <code>return</code>:</p>
 
-<pre class="brush: js notranslate">param =&gt; {
+<pre class="brush: js">param =&gt; {
   let a = 1;
   return a + b;
 }</pre>
 
-<p class="syntaxbox notranslate">Varios parámetros requieren paréntesis. Las declaraciones de varias líneas requieren corchetes y <code>return</code>:</p>
+<p class="syntaxbox">Varios parámetros requieren paréntesis. Las declaraciones de varias líneas requieren corchetes y <code>return</code>:</p>
 
-<pre class="brush: js notranslate">(param1, paramN) =&gt; {
+<pre class="brush: js">(param1, paramN) =&gt; {
    let a = 1;
    return a + b;
 }</pre>
 
 <h3 id="Sintaxis_avanzada">Sintaxis avanzada</h3>
 
-<p class="syntaxbox notranslate">Para devolver una expresión de objeto literal, se requieren paréntesis alrededor de la expresión:</p>
+<p class="syntaxbox">Para devolver una expresión de objeto literal, se requieren paréntesis alrededor de la expresión:</p>
 
-<pre class="brush: js notranslate">params =&gt; ({foo: "a"}) // devuelve el objeto {foo: "a"}</pre>
+<pre class="brush: js">params =&gt; ({foo: "a"}) // devuelve el objeto {foo: "a"}</pre>
 
-<p class="syntaxbox notranslate">Los {{JSxRef("Funciones/parametros_rest", "parámetros rest")}} son compatibles:</p>
+<p class="syntaxbox">Los {{JSxRef("Funciones/parametros_rest", "parámetros rest")}} son compatibles:</p>
 
-<pre class="brush: js notranslate">(a, b, ...r) =&gt; expression</pre>
+<pre class="brush: js">(a, b, ...r) =&gt; expression</pre>
 
-<p class="syntaxbox notranslate">Se admiten los {{JSxRef("Funciones/Parametros_por_defecto", "parámetros predeterminados")}}:</p>
+<p class="syntaxbox">Se admiten los {{JSxRef("Funciones/Parametros_por_defecto", "parámetros predeterminados")}}:</p>
 
-<pre class="brush: js notranslate">(a=400, b=20, c) =&gt; expression</pre>
+<pre class="brush: js">(a=400, b=20, c) =&gt; expression</pre>
 
 <p class="brush: js">{{JSxRef("Operadores/Destructuring_assignment", "Desestructuración")}} dentro de los parámetros admitidos:</p>
 
-<pre class="brush: js notranslate">([a, b] = [10, 20]) =&gt; a + b;  // el resultado es 30
+<pre class="brush: js">([a, b] = [10, 20]) =&gt; a + b;  // el resultado es 30
 ({ a, b } = { a: 10, b: 20 }) =&gt; a + b; // resultado es 30
 </pre>
 
@@ -157,18 +157,18 @@ let bob = a =&gt; a + 100;</pre>
 
 <h3 id="this_y_funciones_flecha">"<code>this</code>" y funciones flecha</h3>
 
-<p class="brush: js notranslate">Una de las razones por las que se introdujeron las funciones flecha fue para eliminar complejidades del ámbito ({{JSxRef("Operadores/this", "this")}}) y hacer que la ejecución de funciones sea mucho más intuitiva.</p>
+<p class="brush: js">Una de las razones por las que se introdujeron las funciones flecha fue para eliminar complejidades del ámbito ({{JSxRef("Operadores/this", "this")}}) y hacer que la ejecución de funciones sea mucho más intuitiva.</p>
 
 <div class="blockIndicator note">
-<p class="brush: js notranslate">Si <code>this</code> es un misterio para ti, consulta {{JSxRef("Operadores/this", "este documento")}} para obtener más información sobre cómo funciona <code>this</code>. Para resumir, <code>this</code> se refiere a la instancia. Las instancias se crean cuando se invoca la palabra clave <code>new</code>. De lo contrario, <code>this</code> se establecerá —de forma predeterminada— en el {{Glossary("Scope", "ámbito o alcance")}} de window.</p>
+<p class="brush: js">Si <code>this</code> es un misterio para ti, consulta {{JSxRef("Operadores/this", "este documento")}} para obtener más información sobre cómo funciona <code>this</code>. Para resumir, <code>this</code> se refiere a la instancia. Las instancias se crean cuando se invoca la palabra clave <code>new</code>. De lo contrario, <code>this</code> se establecerá —de forma predeterminada— en el {{Glossary("Scope", "ámbito o alcance")}} de window.</p>
 </div>
 
-<p class="brush: js notranslate">En las <strong>funciones tradicionales</strong> de manera predeterminada <code>this</code> está en el ámbito de <code>window</code>:</p>
+<p class="brush: js">En las <strong>funciones tradicionales</strong> de manera predeterminada <code>this</code> está en el ámbito de <code>window</code>:</p>
 
 <ul>
 </ul>
 
-<pre class="brush: js notranslate">window.age = 10; // &lt;-- ¿me notas?
+<pre class="brush: js">window.age = 10; // &lt;-- ¿me notas?
 function Person() {
   this.age = 42; // &lt;-- ¿me notas?
   setTimeout(function () {// &lt;-- La función tradicional se está ejecutando en el ámbito de window
@@ -182,7 +182,7 @@ var p = new Person();
 
 <p>Las <strong>funciones flecha</strong> <strong>no</strong> predeterminan <code>this</code> al {{Glossary("Scope", "ámbito o alcance")}} de <code>window</code>, más bien se ejecutan en el {{Glossary("Scope", "ámbito o alcance")}} en que se crean:</p>
 
-<pre class="brush: js notranslate">window.age = 10; // &lt;-- ¿me notas?
+<pre class="brush: js">window.age = 10; // &lt;-- ¿me notas?
 function Person() {
   this.age = 42; // &lt;-- ¿me notas?
   setTimeout(() =&gt; {// &lt;-- Función flecha ejecutándose en el ámbito de "p" (una instancia de Person)
@@ -200,7 +200,7 @@ var p = new Person();
 
 <p>Dado que <code>this</code> proviene del contexto léxico circundante, en el {{JSxRef("Modo_estricto", "modo estricto")}} se ignoran las reglas con respecto a <code>this</code>.</p>
 
-<pre class="brush: js notranslate">var f = () =&gt; {
+<pre class="brush: js">var f = () =&gt; {
     'use strict';
     return this;
 };
@@ -217,7 +217,7 @@ f() === window; // o el objeto global</pre>
 
 <p>Como se indicó anteriormente, las expresiones de función flecha son más adecuadas para funciones que no son métodos. Observa qué sucede cuando intentas usarlas como métodos:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 
 var obj = { // no crea un nuevo ámbito
   i: 10,
@@ -232,7 +232,7 @@ obj.c(); // imprime 10, Object {...}</pre>
 
 <p>Las funciones flecha no tienen su propio <code>this</code>. Otro ejemplo que involucra {{JSxRef("Object.defineProperty()")}}:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 
 var obj = {
   a: 10
@@ -252,7 +252,7 @@ Object.defineProperty(obj, 'b', {
 
 <p>Por ejemplo, {{JSxRef("Objetos_globales/Function/call", "call")}}, {{JSxRef("Objetos_globales/Function/apply", "apply")}} y {{JSxRef("Objetos_globales/Function/bind", "bind")}} funcionan como se esperaba con las funciones tradicionales, porque establecen el ámbito para cada uno de los métodos:</p>
 
-<pre class="brush: js notranslate">// ----------------------
+<pre class="brush: js">// ----------------------
 // Ejemplo tradicional
 // ----------------------
 // Un objeto simplista con su propio "this".
@@ -283,7 +283,7 @@ console.log(result(1, 2, 3)) // resultado 106</pre>
 
 <p>Con las funciones flecha, dado que la función <code>add</code> esencialmente se crea en el ámbito del <code>window</code> (global), asumirá que <code>this</code> es window.</p>
 
-<pre class="brush: js notranslate">// ----------------------
+<pre class="brush: js">// ----------------------
 // Ejemplo de flecha
 // ----------------------
 
@@ -314,7 +314,7 @@ console.log(bound(1, 2, 3)) // resultado 2026
 
 <p><strong>Ejemplo tradicional:</strong></p>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
     count : 10,
     doSomethingLater : function (){
         setTimeout(function(){ // la función se ejecuta en el ámbito de window
@@ -328,7 +328,7 @@ obj.doSomethingLater(); // la consola imprime "NaN", porque la propiedad "count"
 
 <p><strong>Ejemplo de flecha:</strong></p>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
     count : 10,
     doSomethingLater : function(){  // por supuesto, las funciones flecha no son adecuadas para métodos
         setTimeout( () =&gt; { // dado que la función flecha se creó dentro del "obj", asume el "this" del objeto
@@ -344,7 +344,7 @@ obj.doSomethingLater();</pre>
 
 <p>Las funciones flecha no tienen su propio objeto {{JSxRef("Funciones/arguments", "arguments")}}. Por tanto, en este ejemplo, <code>arguments</code> simplemente es una referencia a los argumentos del ámbito adjunto:</p>
 
-<pre class="brush: js notranslate">var arguments = [1, 2, 3];
+<pre class="brush: js">var arguments = [1, 2, 3];
 var arr = () =&gt; arguments[0];
 
 arr(); // 1
@@ -358,7 +358,7 @@ foo(3); // 6</pre>
 
 <p>En la mayoría de los casos, usar {{JSxRef("Funciones/parametros_rest", "parámetros rest")}} es una buena alternativa a usar un objeto <code>arguments</code>.</p>
 
-<pre class="brush: js notranslate">function foo(n) {
+<pre class="brush: js">function foo(n) {
   var f = (...args) =&gt; args[0] + n;
   return f(10);
 }
@@ -369,14 +369,14 @@ foo(1); // 11</pre>
 
 <p>Las funciones flecha no se pueden usar como constructores y arrojarán un error cuando se usen con <code>new</code>.</p>
 
-<pre class="brush: js notranslate">var Foo = () =&gt; {};
+<pre class="brush: js">var Foo = () =&gt; {};
 var foo = new Foo(); // TypeError: Foo no es un constructor</pre>
 
 <h3 id="Uso_de_la_propiedad_prototype">Uso de la propiedad <code>prototype</code></h3>
 
 <p>Las funciones flecha no tienen una propiedad <code>prototype</code>.</p>
 
-<pre class="brush: js notranslate">var Foo = () =&gt; {};
+<pre class="brush: js">var Foo = () =&gt; {};
 console.log(Foo.prototype); // undefined
 </pre>
 
@@ -390,7 +390,7 @@ console.log(Foo.prototype); // undefined
 
 <p>En un cuerpo conciso, solo se especifica una expresión, que se convierte en el valor de retorno implícito. En el cuerpo de un bloque, debes utilizar una instrucción <code>return</code> explícita.</p>
 
-<pre class="brush: js notranslate">var func = x =&gt; x * x;
+<pre class="brush: js">var func = x =&gt; x * x;
 // sintaxis de cuerpo conciso, "return" implícito
 
 var func = (x, y) =&gt; { return x + y; };
@@ -401,7 +401,7 @@ var func = (x, y) =&gt; { return x + y; };
 
 <p>Ten en cuenta que devolver objetos literales utilizando la sintaxis de cuerpo conciso <code>params =&gt; {object: literal}</code> no funcionará como se esperaba.</p>
 
-<pre class="brush: js notranslate">var func = () =&gt; { foo: 1 };
+<pre class="brush: js">var func = () =&gt; { foo: 1 };
 // ¡Llamar a func() devuelve undefined!
 
 var func = () =&gt; { foo: function() {} };
@@ -411,19 +411,19 @@ var func = () =&gt; { foo: function() {} };
 
 <p>Debes envolver el objeto literal entre paréntesis:</p>
 
-<pre class="brush: js notranslate">var func = () =&gt; ({ foo: 1 });</pre>
+<pre class="brush: js">var func = () =&gt; ({ foo: 1 });</pre>
 
 <h3 id="Saltos_de_línea">Saltos de línea</h3>
 
 <p>Una función flecha no puede contener un salto de línea entre sus parámetros y su flecha.</p>
 
-<pre class="brush: js notranslate">var func = (a, b, c)
+<pre class="brush: js">var func = (a, b, c)
   =&gt; 1;
 // SyntaxError: expresión esperada, obtuve '=&gt;'</pre>
 
 <p>Sin embargo, esto se puede modificar colocando el salto de línea después de la flecha o usando paréntesis/llaves como se ve a continuación para garantizar que el código se mantenga bonito y esponjoso. También puedes poner saltos de línea entre argumentos.</p>
 
-<pre class="brush: js notranslate">var func = (a, b, c) =&gt;
+<pre class="brush: js">var func = (a, b, c) =&gt;
   1;
 
 var func = (a, b, c) =&gt; (
@@ -446,7 +446,7 @@ var func = (
 
 <p>Aunque la flecha en una función flecha no es un operador, las funciones flecha tienen reglas de procesamiento especiales que interactúan de manera diferente con {{JSxRef("Operadores/Operator_Precedence", "prioridad de operadores")}} en comparación con las funciones regulares.</p>
 
-<pre class="brush: js notranslate">let callback;
+<pre class="brush: js">let callback;
 
 callback = callback || function() {}; // ok
 
@@ -460,7 +460,7 @@ callback = callback || (() =&gt; {});    // bien
 
 <h3 id="Uso_básico">Uso básico</h3>
 
-<pre class="brush: js notranslate">// Una función flecha vacía devuelve undefinided
+<pre class="brush: js">// Una función flecha vacía devuelve undefinided
 let empty = () =&gt; {};
 
 (() =&gt; 'foobar')();

@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
  <li>
   <p>Usando una expresión regular literal, que consiste en un patrón encerrado entre barras, como sigue:</p>
 
-  <pre class="brush: js notranslate">let re = /ab+c/;
+  <pre class="brush: js">let re = /ab+c/;
 </pre>
 
   <p>Las expresiones regulares literales proporcionan la compilación de la expresión regular cuando se carga el script. Si la expresión regular permanece constante, su uso puede mejorar el rendimiento.</p>
@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
  <li>
   <p>O llamando a la función constructora del objeto {{jsxref("RegExp")}}, de la siguiente manera:</p>
 
-  <pre class="brush: js notranslate">let re = new RegExp('ab+c');
+  <pre class="brush: js">let re = new RegExp('ab+c');
 </pre>
 
   <p>El uso de la función constructora proporciona una compilación en tiempo de ejecución de la expresión regular. Usa la función constructora cuando sepas que el patrón de la expresión regular cambiará, o no conoces el patrón y lo obtienes de otra fuente, como la entrada del usuario.</p>
@@ -127,7 +127,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <p>Si las cadenas de escape aún no forman parte de tu patrón, puedes agregarlas usando {{jsxref('String.replace')}}:</p>
 
-<pre class="brush: js notranslate">function escapeRegExp(string) {
+<pre class="brush: js">function escapeRegExp(string) {
   return string.replace(/[.*+\-?^${}()|[\]\\]/g,'\\$&amp;'); // $&amp; significa toda la cadena coincidente
 }
 </pre>
@@ -192,13 +192,13 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <p>En el siguiente ejemplo, el script utiliza el método <code>exec()</code> para encontrar una coincidencia en una cadena.</p>
 
-<pre class="brush: js notranslate">var myRe = /d(b+)d/g;
+<pre class="brush: js">var myRe = /d(b+)d/g;
 var myArray = myRe.exec('cdbbdbsbz');
 </pre>
 
 <p>Si no necesitas acceder a las propiedades de la expresión regular, una forma alternativa de crear <code>myArray</code> es con este script:</p>
 
-<pre class="brush: js notranslate">var myArray = /d(b+)d/g.exec('cdbbdbsbz');
+<pre class="brush: js">var myArray = /d(b+)d/g.exec('cdbbdbsbz');
     // similar a "cdbbdbsbz" .match(/d(b+)d/g); sin embargo,
     // "cdbbdbsbz" .match (/d(b+)d/g) genera Array ["dbbd"], mientras
     // /d(b+)d/g.exec('cdbbdbsbz ') produce Array ['dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ].
@@ -208,7 +208,7 @@ var myArray = myRe.exec('cdbbdbsbz');
 
 <p>Si deseas construir la expresión regular a partir de una cadena, otra alternativa más es este script:</p>
 
-<pre class="brush: js notranslate">var myRe = new RegExp('d(b+)d', 'g');
+<pre class="brush: js">var myRe = new RegExp('d(b+)d', 'g');
 var myArray = myRe.exec('cdbbdbsbz');
 </pre>
 
@@ -262,7 +262,7 @@ var myArray = myRe.exec('cdbbdbsbz');
 
 <p>Como se muestra en la segunda forma de este ejemplo, puedes usar una expresión regular creada con un iniciador de objeto sin asignarla a una variable. Sin embargo, si lo hace, cada aparición es una nueva expresión regular. Por este motivo, si utilizas esta forma sin asignarla a una variable, no podrás acceder posteriormente a las propiedades de esa expresión regular. Por ejemplo, supongamos que tienes este script:</p>
 
-<pre class="brush: js notranslate">var myRe = /d(b+)d/g;
+<pre class="brush: js">var myRe = /d(b+)d/g;
 var myArray = myRe.exec('cdbbdbsbz');
 console.log('El valor de lastIndex es ' + myRe.lastIndex);
 
@@ -271,7 +271,7 @@ console.log('El valor de lastIndex es ' + myRe.lastIndex);
 
 <p>Sin embargo, si tienes este script:</p>
 
-<pre class="brush: js notranslate">var myArray = /d(b+)d/g.exec('cdbbdbsbz');
+<pre class="brush: js">var myArray = /d(b+)d/g.exec('cdbbdbsbz');
 console.log('El valor de lastIndex es ' + /d(b+)d/g.lastIndex);
 
 // "El valor de lastIndex es 0"
@@ -328,19 +328,19 @@ console.log('El valor de lastIndex es ' + /d(b+)d/g.lastIndex);
 
 <p>Para incluir una bandera con la expresión regular, usa esta sintaxis:</p>
 
-<pre class="brush: js notranslate">var re = /patrón/banderas;
+<pre class="brush: js">var re = /patrón/banderas;
 </pre>
 
 <p>o</p>
 
-<pre class="brush: js notranslate">var re = new RegExp('patrón', 'banderas');
+<pre class="brush: js">var re = new RegExp('patrón', 'banderas');
 </pre>
 
 <p>Ten en cuenta que las banderas son parte integral de una expresión regular. No se pueden agregar ni eliminar más tarde.</p>
 
 <p>Por ejemplo, <code>re = /\w+\s/g</code> crea una expresión regular que busca uno o más caracteres seguidos de un espacio y busca esta combinación en toda la cadena.</p>
 
-<pre class="brush: js notranslate">var re = /\w+\s/g;
+<pre class="brush: js">var re = /\w+\s/g;
 var str = 'fee fi fo fum';
 var myArray = str.match(re);
 console.log(myArray);
@@ -350,19 +350,19 @@ console.log(myArray);
 
 <p>Podrías reemplazar la línea:</p>
 
-<pre class="brush: js notranslate">var re = /\w+\s/g;
+<pre class="brush: js">var re = /\w+\s/g;
 </pre>
 
 <p>con:</p>
 
-<pre class="brush: js notranslate">var re = new RegExp('\\w+\\s', 'g');
+<pre class="brush: js">var re = new RegExp('\\w+\\s', 'g');
 </pre>
 
 <p>y obtener el mismo resultado.</p>
 
 <p id="g-different-behaviors">El comportamiento asociado con el indicador <code>g</code> es diferente cuando se usa el método <code>.exec()</code>. Los roles de "clase" y "argumento" se invierten: En el caso de <code>.match()</code>, la clase cadena (o tipo de datos) posee el método y la expresión regular es solo un argumento, mientras que en el caso de <code>.exec()</code>, es la expresión regular la que posee el método, siendo la cadena el argumento. Compara esto <em><code>str.match(re)</code></em> con <em><code>re.exec(str)</code></em>. El indicador <code>g</code> se usa con el método <strong><code>.exec()</code></strong> para obtener una progresión iterativa.</p>
 
-<pre class="brush: js notranslate">var xArray; while(xArray = re.exec(str)) console.log(xArray);
+<pre class="brush: js">var xArray; while(xArray = re.exec(str)) console.log(xArray);
 // produce:
 // ["fee ", index: 0, input: "fee fi fo fum"]
 // ["fi ", index: 4, input: "fee fi fo fum"]
@@ -391,7 +391,7 @@ console.log(myArray);
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   Ingresa tu número de teléfono (con el código de área) y luego haz clic en "Comprobar".
   &lt;br&gt;
   El formato esperado es como ###-###-####.
@@ -403,7 +403,7 @@ console.log(myArray);
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
+<pre class="brush: js">var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
 function testInfo(phoneInput) {
   var OK = re.exec(phoneInput.value);
   if (!OK) {

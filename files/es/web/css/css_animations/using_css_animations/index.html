@@ -66,7 +66,7 @@ original_slug: Web/CSS/CSS_Animations/Usando_animaciones_CSS
 
 <p>Animaciones como esta pueden hacer que la página se vuelva más ancha que la ventana del navegador. Para evitar este problema, pon el elemento que será animado en un contenedor y agrega {{cssxref("overflow")}}<code>:hidden</code> en el contenedor.</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -92,7 +92,7 @@ original_slug: Web/CSS/CSS_Animations/Usando_animaciones_CSS
 
 <p>El segundo (y último) fotograma sucede en el 100% (hemos usado su alias <code>to</code>). Hemos puesto el margen derecho al 0% y el ancho del elemento al 100%. Esto produce que el encabezado, al finalizar la animación, esté en el borde derecho del área de contenido.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
+<pre class="brush: html">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
 at last the Caterpillar took the hookah out of its mouth, and addressed
 her in a languid, sleepy voice.&lt;/p&gt;</pre>
 
@@ -104,14 +104,14 @@ her in a languid, sleepy voice.&lt;/p&gt;</pre>
 
 <p>Vamos a añadir otro fotograma a la animación de nuestro ejemplo anterior. Pongamos que queremos que el tamaño de fuente del encabezado aumente a medida que se mueve durante un tiempo y que después disminuye hasta su tamaño original. Esto es tan sencillo como añadir este fotograma:</p>
 
-<pre class="brush: css notranslate">75% {
+<pre class="brush: css">75% {
   font-size: 300%;
   margin-left: 25%;
   width: 150%;
 }
 </pre>
 
-<pre class="brush: css hidden notranslate">p {
+<pre class="brush: css hidden">p {
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -129,7 +129,7 @@ her in a languid, sleepy voice.&lt;/p&gt;</pre>
 }
 </pre>
 
-<pre class="brush: html hidden notranslate">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
+<pre class="brush: html hidden">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
 at last the Caterpillar took the hookah out of its mouth, and addressed
 her in a languid, sleepy voice.&lt;/p&gt;
 </pre>
@@ -144,14 +144,14 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <p>Para hacer que la animación se repita, solo hay que usar la propiedad {{ cssxref("animation-iteration-count") }} e indicarle cuántas veces debe repetirse. En nuestro caso, usamos  <code>infinite</code> para que la animación se repita indefinidamente:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   animation-duration: 3s;
   animation-name: slidein;
   animation-iteration-count: infinite;
 }
 </pre>
 
-<pre class="brush: css hidden notranslate">@keyframes slidein {
+<pre class="brush: css hidden">@keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
@@ -164,7 +164,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 }
 </pre>
 
-<pre class="brush: html hidden notranslate">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
+<pre class="brush: html hidden">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
 at last the Caterpillar took the hookah out of its mouth, and addressed
 her in a languid, sleepy voice.&lt;/p&gt;
 </pre>
@@ -175,7 +175,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <p>Hemos hecho que se repita, pero queda un poco raro que salte al inicio de la animación cada vez que ésta comienza. Queremos que se mueva hacia adelante y hacia atrás en la pantalla. Esto lo conseguimos fácilmente indicando que {{ cssxref("animation-direction") }} es <code>alternate</code>:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   animation-duration: 3s;
   animation-name: slidein;
   animation-iteration-count: infinite;
@@ -183,7 +183,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 }
 </pre>
 
-<pre class="brush: css hidden notranslate">@keyframes slidein {
+<pre class="brush: css hidden">@keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
@@ -196,7 +196,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 }
 </pre>
 
-<pre class="brush: html hidden notranslate">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
+<pre class="brush: html hidden">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
 at last the Caterpillar took the hookah out of its mouth, and addressed
 her in a languid, sleepy voice.&lt;/p&gt;
 </pre>
@@ -257,7 +257,7 @@ animation-iteration-count: 2, 1;</code></pre>
 
 <p>Empezamos creando el CSS para la animación. Esta animación durará 3 segundos, se llama <code>slidein</code>, se repite 3 veces, y alterna de dirección cada vez. En {{cssxref("@keyframes")}}, <code>width</code> y <code>margin-left</code> son manipulados para hacer que el elemento se deslice por la pantalla.</p>
 
-<pre class="brush: css notranslate">.slidein {
+<pre class="brush: css">.slidein {
   animation-duration: 3s;
   animation-name: slidein;
   animation-iteration-count: 3;
@@ -280,7 +280,7 @@ animation-iteration-count: 2, 1;</code></pre>
 
 <p>Usaremos un poco de Javascript para escuchar los tres posibles eventos de animación. Este código configura nuestros detectores de eventos (event listeners); los llamamos cuando el documento carga por primera vez para configurar todo.</p>
 
-<pre class="brush: js notranslate">var e = document.getElementById("watchme");
+<pre class="brush: js">var e = document.getElementById("watchme");
 e.addEventListener("animationstart", listener, false);
 e.addEventListener("animationend", listener, false);
 e.addEventListener("animationiteration", listener, false);
@@ -295,7 +295,7 @@ e.className = "slidein";</pre>
 
 <p>Los eventos, al irse disparando, llamarán a la función <code>listener()</code>.</p>
 
-<pre class="brush: js notranslate">function listener(e) {
+<pre class="brush: js">function listener(e) {
   var l = document.createElement("li");
   switch(e.type) {
     case "animationstart":
@@ -329,7 +329,7 @@ e.className = "slidein";</pre>
 
 <p>Solo nos falta mostrar el código HTML necesario para mostrar el ejemplo en la página, incluyendo la lista en la que el script irá insertando la información de los eventos que se vayan disparando.</p>
 
-<pre class="brush: html notranslate">&lt;h1 id="watchme"&gt;Watch me move&lt;/h1&gt;
+<pre class="brush: html">&lt;h1 id="watchme"&gt;Watch me move&lt;/h1&gt;
 &lt;p&gt;
   This example shows how to use CSS animations to make &lt;code&gt;H1&lt;/code&gt;
   elements move across the page.&lt;/p&gt;

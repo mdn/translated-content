@@ -29,14 +29,14 @@ translation_of: WebAssembly/Loading_and_running
 
 <p>La manera más eficiente y rápida de traer un módulo wasm (WebAssembly Module) es utilizando el método actualizado {{jsxref("WebAssembly.instantiateStreaming()")}}, que puede generar una llamada al método <code>fetch()</code> como primer argumento y manejará la búsqueda, compilación e instanciación del módulo paso a paso, teniendo acceso a los bytes sin procesar mientras se transmiten (stream) del servidor:</p>
 
-<pre class="brush: js notranslate">WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
+<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 .then(results =&gt; {
   // Hacemos algo con el resultado aquí!
 });</pre>
 
 <p>Si usamos el método anterior {{jsxref("WebAssembly.instantiate()")}} , que no trabaja sobre una transmisión (stream) directa, necesitaremos un paso adicional para convertir el byte code buscado a un {{domxref("ArrayBuffer")}}, como se muestra a continuación:</p>
 
-<pre class="brush: js notranslate">fetch('module.wasm').then(response =&gt;
+<pre class="brush: js">fetch('module.wasm').then(response =&gt;
   response.arrayBuffer()
 ).then(bytes =&gt;
   WebAssembly.instantiate(bytes, importObject)
@@ -48,7 +48,7 @@ translation_of: WebAssembly/Loading_and_running
 
 <p>La función {{jsxref("WebAssembly.instantiate()")}} tiene dos formas de sobrecargar — la primera se muestra arriba, toma el byte code como argumento para compilar y regresa un compromiso de que resolverá un objeto que contenga tanto un módulo objeto compilado, como una instancia desarrollada de ello. El objeto se ve como lo siguiente:</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
   module : Module // El recién compilado objeto WebAssembly.Module,
   instance : Instance // Una instancia nueva de WebAssembly.Instance del módulo}</pre>
 
@@ -64,7 +64,7 @@ translation_of: WebAssembly/Loading_and_running
 
 <p>Una vez que se tiene disponible la instancia WebAssembly en su código JavaScript, puede entonces comenzar a utilizar las funcionalidades de éste, que han sido exportadas vía la propiedad {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}}. Su código podría verse como lo que a continuación mostramos:</p>
 
-<pre class="brush: js notranslate">WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
+<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 .then(obj =&gt; {
   // Llamada a una función exportada:
   obj.instance.exports.exported_func();
@@ -94,7 +94,7 @@ translation_of: WebAssembly/Loading_and_running
 
 <p>El código final queda:</p>
 
-<pre class="brush: js notranslate">request = new XMLHttpRequest();
+<pre class="brush: js">request = new XMLHttpRequest();
 request.open('GET', 'simple.wasm');
 request.responseType = 'arraybuffer';
 request.send();

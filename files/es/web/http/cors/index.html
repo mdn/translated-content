@@ -82,7 +82,7 @@ original_slug: Web/HTTP/Access_control_CORS
 
 <p>Por ejemplo, suponga que el contenido web en el dominio <code class="plain">http://foo.example</code> desea invocar contenido en el dominio <code class="plain">http://bar.other</code>. Código de este tipo puede ser utilizado dentro de JavaScript desplegado en foo.example:</p>
 
-<pre class="brush: js notranslate" id="line1">var invocation = new XMLHttpRequest();
+<pre class="brush: js" id="line1">var invocation = new XMLHttpRequest();
 var url = 'http://bar.other/resources/public-data/';
 
 function callOtherDomain() {
@@ -96,7 +96,7 @@ function callOtherDomain() {
 
 <p>Dejándonos ver lo que el explorador enviará al servidor en este caso, y veamos como responde el servidor:</p>
 
-<pre class="brush: shell notranslate">GET /resources/public-data/ HTTP/1.1
+<pre class="brush: shell">GET /resources/public-data/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -143,7 +143,7 @@ Content-Type: application/xml
 
 <p>Un ejemplo de este tipo de invocación puede ser:</p>
 
-<pre class="brush: js notranslate" id="line1">var invocation = new XMLHttpRequest();
+<pre class="brush: js" id="line1">var invocation = new XMLHttpRequest();
 var url = 'http://bar.other/resources/post-here/';
 var body = '&lt;?xml version="1.0"?&gt;&lt;person&gt;&lt;name&gt;Arun&lt;/name&gt;&lt;/person&gt;';
 
@@ -165,7 +165,7 @@ function callOtherDomain(){
 
 <p>Veamos este intercambio completo entre un cliente y un servidor:</p>
 
-<pre class="brush: shell notranslate">OPTIONS /resources/post-here/ HTTP/1.1
+<pre class="brush: shell">OPTIONS /resources/post-here/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -248,7 +248,7 @@ Access-Control-Max-Age: 1728000</pre>
 
 <p>En este ejemplo, el contenido cargado originalmente desde <code class="plain">http://foo.example</code> hace una solicitud GET simple a un recurso en <code class="plain">http://bar.other</code> que establece Cookies. El contenido en foo.example puede contener un JavaScript como este:</p>
 
-<pre class="brush: js notranslate" id="line1">var invocation = new XMLHttpRequest();
+<pre class="brush: js" id="line1">var invocation = new XMLHttpRequest();
 var url = 'http://bar.other/resources/credentialed-content/';
 
 function callOtherDomain(){
@@ -264,7 +264,7 @@ function callOtherDomain(){
 
 <p>A continuación se proporciona una muestra de intercambio entre un cliente y un servidor:</p>
 
-<pre class="brush: shell notranslate">GET /resources/access-control-with-credentials/ HTTP/1.1
+<pre class="brush: shell">GET /resources/access-control-with-credentials/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8

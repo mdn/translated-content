@@ -46,7 +46,7 @@ translation_of: Web/API/Intersection_Observer_API
 
 <p>Cree el intersection observer llamando a su constructor y pasándole una función callback para que se ejecute cuando se cruce un umbral (threshold) en una u otra dirección:</p>
 
-<pre class="brush: js notranslate">let options = {
+<pre class="brush: js">let options = {
   root: document.querySelector('#scrollArea'),
   rootMargin: '0px',
   threshold: 1.0
@@ -73,7 +73,7 @@ let observer = new IntersectionObserver(callback, options);</pre>
 
 <p>Una vez usted ha creado el observer, necesita darle un elemento target para observar:</p>
 
-<pre class="brush: js notranslate">var target = document.querySelector('#listItem');
+<pre class="brush: js">var target = document.querySelector('#listItem');
 observer.observe(target);
 
 // el callback que indicamos al observador será ejecutado ahora por primera vez
@@ -82,7 +82,7 @@ observer.observe(target);
 
 <p>Cuando el elemento target encuentra un threshold especificado por el <code>IntersectionObserver</code>, la función callback es invocada. La función callback recibe una lista de objetos {{domxref("IntersectionObserverEntry")}} y el observer:</p>
 
-<pre class="brush: js notranslate">var callback = function(entries, observer) {
+<pre class="brush: js">var callback = function(entries, observer) {
   entries.forEach(entry =&gt; {
     // Cada entry describe un cambio en la intersección para
     // un elemento observado
@@ -129,7 +129,7 @@ observer.observe(target);
 </ul>
 
 <div class="hidden" id="threshold-example">
-<pre class="brush: html notranslate">&lt;template id="boxTemplate"&gt;
+<pre class="brush: html">&lt;template id="boxTemplate"&gt;
   &lt;div class="sampleBox"&gt;
     &lt;div class="label topLeft"&gt;&lt;/div&gt;
     &lt;div class="label topRight"&gt;&lt;/div&gt;
@@ -145,7 +145,7 @@ observer.observe(target);
   &lt;/div&gt;
 &lt;/main&gt;</pre>
 
-<pre class="brush: css notranslate">.contents {
+<pre class="brush: css">.contents {
   position: absolute;
   width: 700px;
   height: 1725px;
@@ -215,7 +215,7 @@ observer.observe(target);
 }
 </pre>
 
-<pre class="brush: js notranslate">let observers = [];
+<pre class="brush: js">let observers = [];
 
 startup();
 
@@ -332,7 +332,7 @@ function intersectionCallback(entries) {
 
 <p>El HTML para este ejemplo es muy simple, con un elemento primario que será la caja que querremos observar (con la creativa ID de <code>"box"</code>) y algo de contenido para dentro de la caja.</p>
 
-<pre class="brush: html notranslate">&lt;div id="box"&gt;
+<pre class="brush: html">&lt;div id="box"&gt;
   &lt;div class="vertical"&gt;
     Welcome to &lt;strong&gt;The Box!&lt;/strong&gt;
   &lt;/div&gt;
@@ -342,7 +342,7 @@ function intersectionCallback(entries) {
 
 <p>El CSS del ejemplo no es muy importante para el propósito de este ejemplo: pinta el elemento y establece que los atributos {{cssxref("background-color")}} y {{cssxref("border")}} puedan participar en las <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transitions</a>, los cuáles usaremos para afectar los cambios al elemento conforme este es más o menos visible.</p>
 
-<pre class="brush: css notranslate">#box {
+<pre class="brush: css">#box {
   background-color: rgba(40, 40, 190, 255);
   border: 4px solid rgb(20, 20, 120);
   transition: background-color 1s, border 1s;
@@ -376,7 +376,7 @@ function intersectionCallback(entries) {
 
 <p>Primero, necesitamos preparar algunas variables e instalar el observador.</p>
 
-<pre class="brush: js notranslate">var numSteps = 20.0;
+<pre class="brush: js">var numSteps = 20.0;
 
 var boxElement;
 var prevRatio = 0.0;
@@ -410,7 +410,7 @@ window.addEventListener("load", function(event) {
 
 <p>The <code>createObserver()</code> method is called once page load is complete to handle actually creating the new {{domxref("IntersectionObserver")}} and starting the process of observing the target element.</p>
 
-<pre class="brush: js notranslate">function createObserver() {
+<pre class="brush: js">function createObserver() {
   var observer;
 
   var options = {
@@ -435,7 +435,7 @@ window.addEventListener("load", function(event) {
 
 <p>The <code>buildThresholdList()</code> function, which builds the list of thresholds, looks like this:</p>
 
-<pre class="brush: js notranslate">function buildThresholdList() {
+<pre class="brush: js">function buildThresholdList() {
   var thresholds = [];
 
   for (var i=1.0; i&lt;=numSteps; i++) {
@@ -526,7 +526,7 @@ window.addEventListener("load", function(event) {
 
 <p>When the browser detects that the target element (in our case, the one with the ID <code>"box"</code>) has been unveiled or obscured such that its visibility ratio crosses one of the thresholds in our list, it calls our handler function, <code>handleIntersect()</code>:</p>
 
-<pre class="brush: js notranslate">function handleIntersect(entries, observer) {
+<pre class="brush: js">function handleIntersect(entries, observer) {
   entries.forEach(function(entry) {
     if (entry.intersectionRatio &gt; prevRatio) {
       entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);

@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Referencia/Funciones/set
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">{set <em>prop</em>(<em>val</em>) { . . . }}
+<pre class="syntaxbox">{set <em>prop</em>(<em>val</em>) { . . . }}
 {set [expression](<em>val</em>) { . . . }}</pre>
 
 <h3 id="Parámetros">Parámetros</h3>
@@ -48,7 +48,7 @@ original_slug: Web/JavaScript/Referencia/Funciones/set
 
 <p>En el siguiente ejemplo definimos una pseudo-propiedad  <code>actual</code>  al objeto <code>lenguaje</code>. Cuando se le asigne un valor a <code>actual</code>, actualiza <code>log</code> con ese valor:</p>
 
-<pre class="brush: js notranslate">var lenguaje = {
+<pre class="brush: js">var lenguaje = {
   set actual(mensaje) {
     this.log.push(mensaje);
   },
@@ -69,14 +69,14 @@ console.log(lenguaje.log); // ['ES', 'FR']
 
 <p>Si desea eliminar el setter, puede simplemente aplicar <a href="/es/docs/Web/JavaScript/Referencia/Operadores/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete"><code>delete</code></a> en él:</p>
 
-<pre class="brush: js notranslate">delete lenguaje.actual;
+<pre class="brush: js">delete lenguaje.actual;
 </pre>
 
 <h3 id="Definiendo_un_setter_en_un_objecto_existente_usando_defineProperty">Definiendo un setter en un objecto existente usando <code>defineProperty</code></h3>
 
 <p>Para añadir un setter a un objeto <em>existente</em>,<em> </em>use {{jsxref("Object.defineProperty()")}}</p>
 
-<pre class="brush: js notranslate">consr o = {a: 0};
+<pre class="brush: js">consr o = {a: 0};
 
 Object.defineProperty(o, 'b', {
   set: function (x) { this.a = x / 2; }
@@ -91,7 +91,7 @@ console.log(o.a) // 5</pre>
 <p><strong>Nota:</strong> Propiedades computadas son 'experimental technology'<em>,</em> parte de la propuesta para ECMAScript 6, y no está soportado en todos los navegadores. Dará error de sintaxis en entornos no soportados.</p>
 </div>
 
-<pre class="brush: js notranslate">const expr = 'foo';
+<pre class="brush: js">const expr = 'foo';
 
 var obj = {
   baz: 'bar',

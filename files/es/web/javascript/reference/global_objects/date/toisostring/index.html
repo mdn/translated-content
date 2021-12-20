@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toISOString
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.toISOString()</code>
+<pre class="syntaxbox"><code><var>dateObj</var>.toISOString()</code>
 </pre>
 
 <h3 id="Valor_devuelto">Valor devuelto</h3>
@@ -26,7 +26,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toISOString
 
 <h3 id="Usando_toISOString">Usando <code>toISOString()</code></h3>
 
-<pre class="brush: js notranslate">var today = new Date('05 October 2011 14:48 UTC');
+<pre class="brush: js">var today = new Date('05 October 2011 14:48 UTC');
 
 console.log(today.toISOString()); // Devuelve 2011-10-05T14:48:00.000Z
 </pre>
@@ -37,7 +37,7 @@ console.log(today.toISOString()); // Devuelve 2011-10-05T14:48:00.000Z
 
 <p>Este método fue estandarizado en ECMA-262 5° edición. Los motores javascript que no han sido actualizados para soportar este método pueden solucionar su ausencia de la siguiente manera:</p>
 
-<pre class="brush: js notranslate">if (!Date.prototype.toISOString) {
+<pre class="brush: js">if (!Date.prototype.toISOString) {
   (function() {
 
     function pad(number) {

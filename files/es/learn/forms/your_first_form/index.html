@@ -63,7 +63,7 @@ original_slug: Learn/HTML/Forms/Your_first_HTML_form
 
 <p>Todos los formularios comienzan con un elemento {{HTMLelement("form")}}, como este:</p>
 
-<pre class="brush:html; notranslate">&lt;form action="/my-handling-form-page" method="post"&gt;
+<pre class="brush:html;">&lt;form action="/my-handling-form-page" method="post"&gt;
 
 &lt;/form&gt;</pre>
 
@@ -92,7 +92,7 @@ original_slug: Learn/HTML/Forms/Your_first_HTML_form
 
 <p>En términos de código HTML, para implementar estos controles de formulario necesitamos algo como lo siguiente:</p>
 
-<pre class="brush:html; notranslate" dir="rtl">&lt;form action="/my-handling-form-page" method="post"&gt;
+<pre class="brush:html;" dir="rtl">&lt;form action="/my-handling-form-page" method="post"&gt;
  &lt;ul&gt;
   &lt;li&gt;
     &lt;label for="name"&gt;Nombre:&lt;/label&gt;
@@ -124,11 +124,11 @@ original_slug: Learn/HTML/Forms/Your_first_HTML_form
 
 <p>Por último, pero no por ello menos importante, ten en cuenta la sintaxis de <code>&lt;input&gt;</code> en contraposición con la de <code>&lt;textarea&gt;&lt;/textarea&gt;</code>. Esta es una de las rarezas del HTML. La etiqueta <code>&lt;input&gt;</code> es un elemento vacío, lo que significa que no necesita una etiqueta de cierre. El elemento {{HTMLElement("textarea")}} no es un elemento vacío, lo que significa que debe cerrarse con la etiqueta de cierre adecuada. Esto tiene un impacto en una característica específica de los formularios: el modo en que defines el valor predeterminado. Para definir el valor predeterminado de un elemento {{HTMLElement("input")}}, debes usar el atributo <a href="/en-US/docs/Web/HTML/Attributes/value"><code>value</code></a> de esta manera:</p>
 
-<pre class="brush:html; notranslate">&lt;input type="text" value="por defecto este elemento se llena con este texto"&gt;</pre>
+<pre class="brush:html;">&lt;input type="text" value="por defecto este elemento se llena con este texto"&gt;</pre>
 
 <p>Por otro lado, si deseas definir un valor predeterminado para un elemento {{HTMLElement("textarea")}}, lo colocas entre las etiquetas de apertura y cierre del elemento {{HTMLElement("textarea")}}, así:</p>
 
-<pre class="brush:html; notranslate">&lt;textarea&gt;
+<pre class="brush:html;">&lt;textarea&gt;
 Por defecto, este elemento contiene este texto
 &lt;/textarea&gt;</pre>
 
@@ -136,7 +136,7 @@ Por defecto, este elemento contiene este texto
 
 <p>El marcado de nuestro formulario está casi completo; solo necesitamos añadir un botón para permitir que el usuario envíe sus datos una vez que haya completado el formulario. Esto se hace con el elemento {{HTMLelement("button")}}; añade lo siguiente justo encima de la etiqueta de cierre <code>&lt;/form&gt;</code>:</p>
 
-<pre class="brush:html; notranslate">&lt;li class="button"&gt;
+<pre class="brush:html;">&lt;li class="button"&gt;
   &lt;button type="submit"&gt;Envíe su mensaje&lt;/button&gt;
 &lt;/li&gt;</pre>
 
@@ -164,13 +164,13 @@ Por defecto, este elemento contiene este texto
 
 <p>En primer lugar, añade un elemento {{htmlelement("style")}} a tu página, dentro de la cabecera del HTML. Debe quedar así:</p>
 
-<pre class="brush: html notranslate">&lt;style&gt;
+<pre class="brush: html">&lt;style&gt;
 
 &lt;/style&gt;</pre>
 
 <p>Dentro de las etiquetas <code>style</code>, añade el código CSS siguiente:</p>
 
-<pre class="brush:css; notranslate">form {
+<pre class="brush:css;">form {
   /* Centrar el formulario en la página */
   margin: 0 auto;
   width: 400px;
@@ -250,7 +250,7 @@ button {
 
 <p>Para poner nombre a los diversos datos que se introducen en un formulario, debes usar el atributo <code>name</code> en cada control de formulario que recopila un dato específico. Veamos de nuevo algunos de nuestros códigos de formulario:</p>
 
-<pre class="brush:html; notranslate">&lt;form action="/my-handling-form-page" method="post"&gt;
+<pre class="brush:html;">&lt;form action="/my-handling-form-page" method="post"&gt;
  &lt;ul&gt;
   &lt;li&gt;
     &lt;label for="name"&gt;Nombre:&lt;/label&gt;

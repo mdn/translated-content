@@ -41,9 +41,9 @@ translation_of: Learn/JavaScript/First_steps/Variables
 
 <p>Una variable es un contenedor para un valor, como un número que podríamos usar en una suma, o una cadena que podríamos usar como parte de una oración. Pero una cosa especial acerca de las variables es que los valores que contienen pueden cambiar. Veamos un sencillo ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Presióname&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button&gt;Presióname&lt;/button&gt;</pre>
 
-<pre class="brush: js notranslate">const button = document.querySelector('button');
+<pre class="brush: js">const button = document.querySelector('button');
 
 button.onclick = function() {
   let name = prompt('¿Cuál es tu nombre?');
@@ -56,7 +56,7 @@ button.onclick = function() {
 
 <p>Para entender por qué esto es tan útil, pensemos en cómo escribiríamos este ejemplo sin usar una variable. Terminaría luciendo algo como esto:</p>
 
-<pre class="example-bad notranslate">let name = prompt('¿Cuál es tu nombre?');
+<pre class="example-bad">let name = prompt('¿Cuál es tu nombre?');
 
 if (name === 'Adam') {
   alert('¡Hola Adam, encantado de verte!');
@@ -88,7 +88,7 @@ if (name === 'Adam') {
 
 <p>Para usar una variable, primero debes crearla — precisamente, a esto lo llamamos declarar la variable. Para hacerlo, escribimos la palabra clave <code>var</code> o <code>let</code> seguida del nombre con el que deseas llamar a tu variable:</p>
 
-<pre class="brush: js notranslate">let myName;
+<pre class="brush: js">let myName;
 let myAge;</pre>
 
 <p>Aquí estamos creando dos variables llamadas <code>myName</code> y <code>myAge</code>. Intenta escribir estas líneas en la consola de tu navegador web. Después de eso, intenta crear una variable (o dos) eligiendo tú su nombre.</p>
@@ -99,12 +99,12 @@ let myAge;</pre>
 
 <p>Puedes probar si estos valores existen ahora en el entorno de ejecución escribiendo solo el nombre de la variable, p. ej.</p>
 
-<pre class="brush: js notranslate">myName;
+<pre class="brush: js">myName;
 myAge;</pre>
 
 <p>Actualmente no tienen ningún valor; son contenedores vacíos. Cuando ingreses los nombres de las variables, deberías obtener devuelto un valor <code>undefined</code>. Si no existen, recibirás un mensaje de error; intenta escribir</p>
 
-<pre class="brush: js notranslate">scoobyDoo;</pre>
+<pre class="brush: js">scoobyDoo;</pre>
 
 <div class="note">
 <p><strong>Nota</strong>: No confundas una variable que existe pero no tiene un valor definido, con una variable que no existe en absoluto — son cosas muy diferentes. En la analogía de cajas que viste arriba, no existir significaría que no hay una caja (variable) para guardar un valor. Ningún valor definido significaría que HAY una caja, pero no tiene ningún valor dentro de ella.</p>
@@ -114,17 +114,17 @@ myAge;</pre>
 
 <p>Una vez que hayas declarado una variable, la puedes iniciar con un valor. Para ello, escribe el nombre de la variable, seguido de un signo igual (<code>=</code>), seguido del valor que deseas darle. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">myName = 'Chris';
+<pre class="brush: js">myName = 'Chris';
 myAge = 37;</pre>
 
 <p>Intenta volver a la consola ahora y escribe estas líneas. Deberías ver el valor que le has asignado a la variable devuelto en la consola para confirmarlo, en cada caso. Nuevamente, puedes devolver los valores de tus variables simplemente escribiendo su nombre en la consola; inténtalo nuevamente:</p>
 
-<pre class="brush: js notranslate">myName;
+<pre class="brush: js">myName;
 myAge;</pre>
 
 <p>Puedes declarar e iniciar una variable al mismo tiempo, así:</p>
 
-<pre class="brush: js notranslate">let myDog = 'Rover';</pre>
+<pre class="brush: js">let myDog = 'Rover';</pre>
 
 <p>Esto probablemente es lo que harás la mayor parte del tiempo, ya que es más rápido que realizar las dos acciones en dos líneas separadas.</p>
 
@@ -138,7 +138,7 @@ myAge;</pre>
 
 <p>Para empezar, si escribes un programa JavaScript de varias líneas que declara e inicia una variable, puedes declarar una variable con <code>var</code> después de iniciarla y seguirá funcionando. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">myName = 'Chris';
+<pre class="brush: js">myName = 'Chris';
 
 function logName() {
   console.log(myName);
@@ -158,17 +158,17 @@ var myName;</pre>
 
 <p>En segundo lugar, cuando usas <code>var</code>, puedes declarar la misma variable tantas veces como desees, pero con <code>let</code> no puedes. Lo siguiente funcionaría:</p>
 
-<pre class="brush: js notranslate">var myName = 'Chris';
+<pre class="brush: js">var myName = 'Chris';
 var myName = 'Bob';</pre>
 
 <p>Pero lo siguiente arrojaría un error en la segunda línea:</p>
 
-<pre class="brush: js notranslate">let myName = 'Chris';
+<pre class="brush: js">let myName = 'Chris';
 let myName = 'Bob';</pre>
 
 <p>Tendrías que hacer esto en su lugar:</p>
 
-<pre class="brush: js notranslate">let myName = 'Chris';
+<pre class="brush: js">let myName = 'Chris';
 myName = 'Bob';</pre>
 
 <p>Nuevamente, esta es una sensata decisión del lenguaje. No hay razón para volver a declarar las variables — solo hace que las cosas sean más confusas.</p>
@@ -179,7 +179,7 @@ myName = 'Bob';</pre>
 
 <p>Una vez que una variable se ha iniciado con un valor, puedes cambiar (o actualizar) ese valor simplemente dándole un valor diferente. Intenta ingresar las siguientes líneas en tu consola:</p>
 
-<pre class="brush: js notranslate">myName = 'Bob';
+<pre class="brush: js">myName = 'Bob';
 myAge = 40;</pre>
 
 <h3 id="Un_consejo_sobre_las_reglas_de_nomenclatura_de_variables">Un consejo sobre las reglas de nomenclatura de variables</h3>
@@ -202,7 +202,7 @@ myAge = 40;</pre>
 
 <p>Ejemplos de buenos nombres:</p>
 
-<pre class="example-good notranslate">age
+<pre class="example-good">age
 myAge
 init
 initialColor
@@ -212,7 +212,7 @@ audio2</pre>
 
 <p>Ejemplos de nombres incorrectos:</p>
 
-<pre class="example-bad notranslate">1
+<pre class="example-bad">1
 a
 _12
 myage
@@ -234,23 +234,23 @@ thisisareallylongstupidvariablenameman</pre>
 
 <p>Puedes almacenar números en variables, ya sea números enteros como 30 (también llamados enteros — "<code>integer</code>") o números decimales como 2.456 (también llamados números flotantes o de coma flotante — "<code>number</code>"). No es necesario declarar el tipo de las variables en JavaScript, a diferencia de otros lenguajes de programación. Cuando le das a una variable un valor numérico, no incluye comillas:</p>
 
-<pre class="brush: js notranslate">let myAge = 17;</pre>
+<pre class="brush: js">let myAge = 17;</pre>
 
 <h3 id="Cadenas_de_caracteres_Strings">Cadenas de caracteres (<code>String</code>s)</h3>
 
 <p>Las <code>string</code>s (cadenas) son piezas de texto. Cuando le das a una variable un valor de cadena, debes encerrarlo entre comillas simples o dobles; de lo contrario, JavaScript intenta interpretarlo como otro nombre de variable.</p>
 
-<pre class="brush: js notranslate">let dolphinGoodbye = 'Hasta luego y gracias por todos los peces';</pre>
+<pre class="brush: js">let dolphinGoodbye = 'Hasta luego y gracias por todos los peces';</pre>
 
 <h3 id="Booleanos">Booleanos</h3>
 
 <p>Los booleanos son valores verdadero/falso — pueden tener dos valores, <code>true</code> o <code>false</code>. Estos, generalmente se utilizan para probar una condición, después de lo cual se ejecuta el código según corresponda. Así, por ejemplo, un caso simple sería:</p>
 
-<pre class="brush: js notranslate">let iAmAlive = true;</pre>
+<pre class="brush: js">let iAmAlive = true;</pre>
 
 <p>Mientras que en realidad se usaría más así:</p>
 
-<pre class="brush: js notranslate">let test = 6 &lt; 3;</pre>
+<pre class="brush: js">let test = 6 &lt; 3;</pre>
 
 <p>Aquí se está usando el operador "menor que" (<code>&lt;</code>) para probar si 6 es menor que 3. Como era de esperar, devuelve <code>false</code>, ¡porque 6 no es menor que 3! Aprenderás mucho más sobre estos operadores más adelante en el curso.</p>
 
@@ -258,12 +258,12 @@ thisisareallylongstupidvariablenameman</pre>
 
 <p>Un arreglo es un objeto único que contiene múltiples valores encerrados entre corchetes y separados por comas. Intenta ingresar las siguientes líneas en tu consola:</p>
 
-<pre class="brush: js notranslate">let myNameArray = ['Chris', 'Bob', 'Jim'];
+<pre class="brush: js">let myNameArray = ['Chris', 'Bob', 'Jim'];
 let myNumberArray = [10, 15, 40];</pre>
 
 <p>Una vez que se definen estos arreglos, puedes acceder a cada valor por su ubicación dentro del arreglo. Prueba estas líneas:</p>
 
-<pre class="brush: js notranslate">myNameArray[0]; // debería devolver 'Chris'
+<pre class="brush: js">myNameArray[0]; // debería devolver 'Chris'
 myNumberArray[2]; // debe devolver 40</pre>
 
 <p>Los corchetes especifican un valor de índice correspondiente a la posición del valor que deseas devolver. Posiblemente hayas notado que los arreglos en JavaScript tienen índice cero: el primer elemento está en el índice 0.</p>
@@ -276,11 +276,11 @@ myNumberArray[2]; // debe devolver 40</pre>
 
 <p>Intenta ingresar la siguiente línea en tu consola:</p>
 
-<pre class="brush: js notranslate">let dog = { name : 'Spot', breed : 'Dalmatian' };</pre>
+<pre class="brush: js">let dog = { name : 'Spot', breed : 'Dalmatian' };</pre>
 
 <p>Para recuperar la información almacenada en el objeto, puedes utilizar la siguiente sintaxis:</p>
 
-<pre class="brush: js notranslate">dog.name</pre>
+<pre class="brush: js">dog.name</pre>
 
 <p>Por ahora, no veremos más objetos. Puedes obtener más información sobre ellos en <a href="/es/docs/Learn/JavaScript/Objects">un futuro módulo</a>.</p>
 
@@ -290,11 +290,11 @@ myNumberArray[2]; // debe devolver 40</pre>
 
 <p>Por ejemplo, si declaras una variable y le das un valor entre comillas, el navegador trata a la variable como una cadena (<code>string</code>):</p>
 
-<pre class="brush: js notranslate">let myString = 'Hello';</pre>
+<pre class="brush: js">let myString = 'Hello';</pre>
 
 <p>Incluso si el valor contiene números, sigue siendo una cadena, así que ten cuidado:</p>
 
-<pre class="brush: js notranslate">let myNumber = '500'; // Vaya, esto sigue siendo una cadena
+<pre class="brush: js">let myNumber = '500'; // Vaya, esto sigue siendo una cadena
 typeof myNumber;
 myNumber = 500; // mucho mejor — ahora este es un número
 typeof myNumber;</pre>
@@ -307,12 +307,12 @@ typeof myNumber;</pre>
 
 <p>En los primeros días de JavaScript, las constantes no existían. En JavaScript moderno, tenemos la palabra clave <code>const</code>, que nos permite almacenar valores que nunca se pueden cambiar:</p>
 
-<pre class="brush: js notranslate">const daysInWeek = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
+<pre class="brush: js">const daysInWeek = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
 const hoursInDay = 24;</span></span></span></span></pre>
 
 <p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number"><code>const</code> funciona exactamente de la misma manera que <code>let</code>, excepto que a <code>const</code> no le puedes dar un nuevo valor. En el siguiente ejemplo, la segunda línea arrojará un error:</span></span></span></span></p>
 
-<pre class="brush: js notranslate">const daysInWeek = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
+<pre class="brush: js">const daysInWeek = 7<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">;
 daysInWeek = 8;</span></span></span></span></pre>
 
 <h2 id="¡Pon_a_prueba_tus_habilidades!">¡Pon a prueba tus habilidades!</h2>

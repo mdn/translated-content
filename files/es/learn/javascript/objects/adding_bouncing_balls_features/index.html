@@ -115,7 +115,7 @@ translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 <p>Este método agregará un detector de eventos <code>onkeydown</code> al objeto <code>window</code> para que cuando se presionen ciertas teclas del teclado, podamos mover el círculo maligno. El siguiente bloque de código debe colocarse dentro de la definición del método:</p>
 
-<pre class="brush: js notranslate">var _this = this;
+<pre class="brush: js">var _this = this;
 window.onkeydown = function(e) {
     if (e.keyCode === 65) {
       _this.x -= _this.velX;
@@ -161,7 +161,7 @@ window.onkeydown = function(e) {
 <ol>
  <li>En tu archivo HTML añade un elemento {{HTMLElement("p")}} justo debajo del elemento {{HTMLElement("h1")}} que contiene el texto "Ball count: ".</li>
  <li>En tu archivo CSS, agregue la siguiente regla en la parte inferior:
-  <pre class="brush: css notranslate">p {
+  <pre class="brush: css">p {
   position: absolute;
   margin: 0;
   top: 35px;

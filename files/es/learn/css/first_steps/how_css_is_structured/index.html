@@ -33,7 +33,7 @@ original_slug: Learn/CSS/First_steps/Como_se_estructura_CSS
 
 <p>Una hoja de estilo externa significa que el CSS está escrito en un archivo independiente con una extensión <code>.css</code> y que lo vinculas desde un elemento <code>&lt;link&gt;</code> de HTML:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -48,7 +48,7 @@ original_slug: Learn/CSS/First_steps/Como_se_estructura_CSS
 
 <p>El archivo CSS podría parecerse a esto:</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   color: blue;
   background-color: yellow;
   border: 1px solid black;
@@ -62,7 +62,7 @@ p {
 
 <p>En el ejemplo anterior, el archivo CSS está en la misma carpeta que el documento HTML, pero puedes colocarlo en otro lugar y especificar la ruta adecuada. Por ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;!-- Dentro de un subdirectorio llamado styles dentro del directorio de trabajo --&gt;
+<pre class="brush: html">&lt;!-- Dentro de un subdirectorio llamado styles dentro del directorio de trabajo --&gt;
 &lt;link rel="stylesheet" href="styles/style.css"&gt;
 
 &lt;!-- Dentro de un subdirectorio llamado general, que está en un subdirectorio llamado styles, dentro del directorio de trabajo --&gt;
@@ -77,7 +77,7 @@ p {
 
 <p>En este caso, el HTML se vería así:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -106,7 +106,7 @@ p {
 
 <p>Los estilos en línea son declaraciones CSS que afectan a un solo elemento, contenido dentro de un atributo de <code>style</code>:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -128,7 +128,7 @@ p {
 
 <p><strong>index.html:</strong></p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -144,7 +144,7 @@ p {
 
 <p><strong>styles.css:</strong></p>
 
-<pre class="brush: css notranslate">/* Crea tu CSS de prueba aquí */
+<pre class="brush: css">/* Crea tu CSS de prueba aquí */
 
 p {
   color: red;
@@ -164,7 +164,7 @@ p {
 
 <p>Cada regla CSS comienza con un selector o una lista de selectores que indican al navegador a qué elemento o elementos deben aplicarse dichas reglas. Todos los siguientes son ejemplos de selectores válidos o listas de selectores.</p>
 
-<pre class="brush: css notranslate">h1
+<pre class="brush: css">h1
 a:link
 .manythings
 #onething
@@ -183,7 +183,7 @@ h1, h2, .intro</pre>
 
 <p>A menudo habrá situaciones en las que dos selectores podrían determinar un mismo elemento HTML. Considera la siguiente hoja de estilo, en que definimos una regla con un selector <code>p</code> que establecerá los párrafos en color azul, y también una clase que establecerá los elementos seleccionados en color rojo.</p>
 
-<pre class="brush: css notranslate">.special {
+<pre class="brush: css">.special {
   color: red;
 }
 
@@ -193,11 +193,11 @@ p {
 
 <p>Digamos que en nuestro documento HTML hay un párrafo con una clase <code>special</code>. Ambas reglas podrían aplicarse. ¿Cuál ganará? ¿De qué color crees que será nuestro párrafo?</p>
 
-<pre class="brush: html notranslate">&lt;p class="special"&gt;¿De qué color soy?&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p class="special"&gt;¿De qué color soy?&lt;/p&gt;</pre>
 
 <p>El lenguaje CSS tiene reglas para controlar cuál ganará en caso de colisión; reciben el nombre de <strong>cascada</strong> y <strong>especificidad</strong>. En el siguiente bloque de códigos hemos definido dos reglas para el selector <code>p</code>, pero el párrafo termina siendo de color azul. Esto se debe a que la declaración que lo establece en azul aparece más abajo en la hoja de estilo, y los estilos posteriores anulan a los anteriores. Así funciona la regla de la cascada.</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   color: red;
 }
 
@@ -261,9 +261,9 @@ p {
 <p>Si bien la mayoría de valores son palabras clave relativamente simples o valores numéricos, es posible que algunos valores tomen la forma de una función. Un ejemplo sería la función <code>calc()</code>. Esta función te permite hacer operaciones matemáticas sencillas desde tu CSS, por ejemplo:</p>
 
 <div id="calc_example">
-<pre class="brush: html notranslate">&lt;div class="external"&gt; &lt;div class="box"&gt;La caja interior es del 90% - 30px.&lt;/div&gt;&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="external"&gt; &lt;div class="box"&gt;La caja interior es del 90% - 30px.&lt;/div&gt;&lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">.outer {
+<pre class="brush: css">.outer {
   border: 5px solid black;
 }
 
@@ -284,9 +284,9 @@ p {
 <p>Otro ejemplo serían los diversos valores para {{cssxref ("transform")}}, como <code>rotate()</code>.</p>
 
 <div id="transform_example">
-<pre class="brush: html notranslate">&lt;div class="box"&gt;&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="box"&gt;&lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   margin: 30px;
   width: 100px;
   height: 100px;
@@ -311,13 +311,13 @@ p {
 
 <p>Las <code><a href="/es/docs/Web/CSS/At-rule">@rules</a></code> (leído "at-rules" en inglés) dan al CSS algunas instrucciones sobre cómo comportarse. Algunas <code>@rules</code> son simples, con el nombre de la regla y un valor. Por ejemplo, para importar una hoja de estilo adicional a tu hoja de estilo CSS principal, puedes usar <code>@import</code>:</p>
 
-<pre class="brush: css notranslate">@import 'styles2.css';</pre>
+<pre class="brush: css">@import 'styles2.css';</pre>
 
 <p>Una de las <code>@rules</code> más comunes con las que te encontrarás es <code>@media</code>, que permite usar <a href="/es/docs/Web/CSS/Media_Queries">consultas a medios</a> para aplicar CSS solo cuando se dan ciertas condiciones (por ejemplo, cuando la resolución de la pantalla supera un valor determinado o la anchura supera un valor concreto).</p>
 
 <p>En el CSS que se muestra a continuación, tenemos una hoja de estilo que le da al elemento <code>&lt;body&gt;</code> un color de fondo rosado. Sin embargo, luego usamos <code>@media</code> para crear una sección de nuestra hoja de estilo que solo se aplicará en los navegadores con una ventana gráfica de más de 30em de ancho. Si el navegador es más ancho que 30em, el color de fondo será azul.</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   background-color: pink;
 }
 
@@ -337,7 +337,7 @@ p {
 
 <p>Por ejemplo, esta línea:</p>
 
-<pre class="brush: css notranslate">/* En propiedades abreviadas con 4 valores, como margin y padding (relleno), los valores se aplican
+<pre class="brush: css">/* En propiedades abreviadas con 4 valores, como margin y padding (relleno), los valores se aplican
    según el orden: arriba, derecha, abajo e izquierda (en sentido horario desde la parte superior). También hay otros
    tipos de abreviaturas, como las propiedades abreviadas con 2 valores que establecen el relleno/margen,
    arriba/abajo, y luego izquierda/derecha */
@@ -345,18 +345,18 @@ padding: 10px 15px 15px 5px;</pre>
 
 <p>Hace lo mismo que todas estas juntas:</p>
 
-<pre class="brush: css notranslate">padding-top: 10px;
+<pre class="brush: css">padding-top: 10px;
 padding-right: 15px;
 padding-bottom: 15px;
 padding-left: 5px;</pre>
 
 <p>Mientras que esta línea:</p>
 
-<pre class="brush: css notranslate">background: red url(bg-graphic.png) 10px 10px repeat-x fixed;</pre>
+<pre class="brush: css">background: red url(bg-graphic.png) 10px 10px repeat-x fixed;</pre>
 
 <p>Hace lo mismo que todas estas juntas:</p>
 
-<pre class="brush: css notranslate">background-color: red;
+<pre class="brush: css">background-color: red;
 background-image: url(bg-graphic.png);
 background-position: 10px 10px;
 background-repeat: repeat-x;
@@ -376,7 +376,7 @@ background-scroll: fixed;</pre>
 
 <p>Los comentarios en el CSS comienzan con <code>/*</code> y terminan con <code>*/</code>. En el bloque de código que encontrarás a continuación, hemos usado comentarios para marcar el inicio de las diferentes secciones de código. Esto es útil para ayudarnos a movernos por la base de código a medida que aumenta: puedes buscar los comentarios en tu editor de código.</p>
 
-<pre class="brush: css notranslate">/* con elementos básicos de aplicación de estilo */
+<pre class="brush: css">/* con elementos básicos de aplicación de estilo */
 /* -------------------------------------------------------------------------------------------- */
 body {
   font: 1em/150% Helvética, Arial, sans-serif;
@@ -413,7 +413,7 @@ div p + p {
 
 <p>Los comentarios también son útiles para <em>comentar</em> temporalmente ciertas partes del código con fines de prueba, por ejemplo, si tratas de encontrar qué parte de tu código causa un error. En el siguiente ejemplo, hemos comentado las reglas para el selector <code>.special</code>.</p>
 
-<pre class="brush: css notranslate">/*.special {
+<pre class="brush: css">/*.special {
   color: red;
 }*/
 
@@ -429,7 +429,7 @@ p {
 
 <p>En el siguiente ejemplo, cada declaración (y el principio/fin de regla) está en una línea propia; esta es posiblemente una buena forma de escribir el CSS, ya que facilita el mantenimiento y la comprensión:</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font: 1em/150% Helvética, Arial, sans-serif;
   padding: 1em;
   margin: 0 auto;
@@ -464,7 +464,7 @@ div p + p {
 
 <p id="Very_compact">Podrías escribir exactamente el mismo CSS eliminando la mayoría de los espacios en blanco; este bloque de código es funcionalmente idéntico al primer ejemplo, pero seguro que estarás de acuerdo en que resulta algo más difícil de leer:</p>
 
-<pre class="brush: css notranslate">body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
+<pre class="brush: css">body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
 @media (min-width: 70em) { body {font-size: 130%;} }
 
 h1 {font-size: 1.5em;}
@@ -482,12 +482,12 @@ div p + p {padding-top: 0;}
 
 <p>Por ejemplo, las siguientes declaraciones de CSS son válidas:</p>
 
-<pre class="brush: css notranslate">margin: 0 auto;
+<pre class="brush: css">margin: 0 auto;
 padding-left: 10px;</pre>
 
 <p>Pero las siguientes no lo son:</p>
 
-<pre class="brush: css notranslate">margin: 0auto;
+<pre class="brush: css">margin: 0auto;
 padding- left: 10px;</pre>
 
 <p>¿Ves los errores de espaciado? <code>0auto</code> no se reconoce como un valor válido para la propiedad de <code>margin</code> (<code>0</code> y <code>auto</code> son dos valores separados) y el navegador no reconoce <code>padding-</code> como una propiedad válida. El valor correcto de propiedad (<code>padding-left</code>) se ha separado por un espacio perdido.</p>

@@ -134,7 +134,7 @@ original_slug: Web/HTML/Elemento/a
 
 <h3 id="Enlazando_a_una_ubicación_externa">Enlazando a una ubicación externa</h3>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;!-- anclaje a un archivo externo --&gt;
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;!-- anclaje a un archivo externo --&gt;
 &lt;a href="https://www.mozilla.com/"&gt;
 Enlace externo
 &lt;/a&gt;</code></pre>
@@ -145,7 +145,7 @@ Enlace externo
 
 <h3 id="Enlazando_a_otra_sección_de_la_misma_página">Enlazando a otra sección de la misma página</h3>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;!-- enlace a un elemento en esta página con id="attr-href" --&gt;
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;!-- enlace a un elemento en esta página con id="attr-href" --&gt;
 &lt;a href="#attr-href"&gt;
 Descripción de enlaces de la misma página
 &lt;/a&gt;</code></pre>
@@ -158,7 +158,7 @@ Descripción de enlaces de la misma página
 
 <p>Este ejemplo utiliza una imagen que enlaza a la página de inicio de MDN. La página de inicio se abrirá en un contexto de navegación nuevo, esto es, en una nueva página o nueva ventana.</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;a href="https://developer.mozilla.org/en-US/" target="_blank"&gt;
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;a href="https://developer.mozilla.org/en-US/" target="_blank"&gt;
   &lt;img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png"
        alt="MDN logo" /&gt;
 &lt;/a&gt;</code></pre>
@@ -173,7 +173,7 @@ Descripción de enlaces de la misma página
 
 <p>Es común crear enlaces que abren el programa de correo del usuario para permitir enviar un nuevo mensaje. Esto se hace con un enlace <code>mailto:</code>. Aquí tenemos un ejemplo:</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;a href="mailto:nowhere@mozilla.org"&gt;Enviar correo a nowhere&lt;/a&gt;</code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;a href="mailto:nowhere@mozilla.org"&gt;Enviar correo a nowhere&lt;/a&gt;</code></pre>
 
 <h4 id="Resultado_3">Resultado</h4>
 
@@ -185,7 +185,7 @@ Descripción de enlaces de la misma página
 
 <p>Ofrecer enlaces a números de teléfono es muy útil para los ususarios que observan documentos de internet desde computadoras portátiles conectadas a teléfonos o desde teléfonos celulares (móviles)</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;a href="tel:+491570156"&gt;+49 157 0156&lt;/a&gt;</code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;a href="tel:+491570156"&gt;+49 157 0156&lt;/a&gt;</code></pre>
 
 <p>Para detalles adicionales acerca del esquema de la URL <code>tel</code>, consultar {{RFC(2806)}} y {{RFC(2396)}}.</p>
 
@@ -193,7 +193,7 @@ Descripción de enlaces de la misma página
 
 <p>Si deseas permitir a los usurios descargar una elemento HTML {{HTMLElement("canvas")}} como una imagen, puedes crear un enlace con una atributo <code>download</code> y la información canvas como un archivo URL:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var link = document.createElement('a');
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var link = document.createElement('a');
 link.innerHTML = 'download image';
 
 link.addEventListener('click', function(ev) {

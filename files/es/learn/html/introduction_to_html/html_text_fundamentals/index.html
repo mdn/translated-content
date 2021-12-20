@@ -46,11 +46,11 @@ original_slug: Learn/HTML/Introduccion_a_HTML/texto
 
 <p>En HTML, cada párrafo tiene que estar delimitado por un elemento {{HTMLElement("p")}}, como en este ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Soy un párrafo, ¡desde luego que lo soy!&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Soy un párrafo, ¡desde luego que lo soy!&lt;/p&gt;</pre>
 
 <p>Cada sección tiene que estar delimitada por un elemento de encabezado:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Yo soy el título de la historia&lt;/h1&gt;</pre>
+<pre class="brush: html">&lt;h1&gt;Yo soy el título de la historia&lt;/h1&gt;</pre>
 
 <p>Hay seis elementos de encabezado: {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}} y {{HTMLElement("h6")}}. Cada elemento representa un nivel de contenido diferente en el documento; <code>&lt;h1&gt;</code> representa el título principal, <code>&lt;h2&gt;</code> representa el subtítulo, <code>&lt;h3&gt;</code> representa el subtítulo del subtítulo, y así sucesivamente.</p>
 
@@ -58,7 +58,7 @@ original_slug: Learn/HTML/Introduccion_a_HTML/texto
 
 <p>Por ejemplo, en esta historia, <code>&lt;h1&gt;</code> representa el título de la historia, <code>&lt;h2&gt;</code> representará el título de cada capítulo y <code>&lt;h3&gt;</code> las diferentes secciones del capítulo, y así sucesivamente.</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;El agujero aplastante&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;El agujero aplastante&lt;/h1&gt;
 
 &lt;p&gt;Por Chris Mills&lt;/p&gt;
 
@@ -110,7 +110,7 @@ original_slug: Learn/HTML/Introduccion_a_HTML/texto
 <div class="hidden">
 <h6 id="Código_reproducible">Código reproducible</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -127,7 +127,7 @@ Mis piernas son de cartón y estoy casada con un pez.&lt;/textarea&gt;
   &lt;input id="solution" type="button" value="Mostrar solución"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -147,7 +147,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -234,13 +234,13 @@ textarea.onkeyup = function(){
 
 <p>De manera similar, debemos asegurarnos de que utilizamos los elementos adecuados y damos a nuestro contenido el significado y función correctos y la apariencia adecuada. En este mismo sentido, el elemento {{HTMLElement("h1")}} es un elemento semántico que da al texto al que delimita la función (o significado) de un <em>titular de primer nivel en tu página</em>.</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Este es un titular de primer nivel&lt;/h1&gt;</pre>
+<pre class="brush: html">&lt;h1&gt;Este es un titular de primer nivel&lt;/h1&gt;</pre>
 
 <p>De manera predeterminada, el navegador le asignará una fuente de gran tamaño para darle el aspecto de un titular (aunque se le podrá dar el estilo que se quisiera usando CSS). Lo más importante es que su valor semántico se va a usar de diferente manera, por ejemplo, por los motores de búsqueda y los lectores de pantalla (como se mencionó antes).</p>
 
 <p>Por otra parte, podrías hacer que cualquier elemento <em>parezca</em> un titular de primer rango. Considera lo siguiente:</p>
 
-<pre class="brush: html notranslate">&lt;span style="font-size: 32px; margin: 21px 0;"&gt;¿Es este un titular de primer rango?&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span style="font-size: 32px; margin: 21px 0;"&gt;¿Es este un titular de primer rango?&lt;/span&gt;</pre>
 
 <p>Este es un elemento {{HTMLElement("span")}}. No tiene semántica. Se usa para delimitar contenido cuando se le quiere aplicar CSS (o tratarlo con JavaScript) sin proporcionarle ningún significado extra (encontrarás más información sobre este tipo de elemento más adelante en el curso). Hemos aplicado CSS a este elemento para que parezca un titular de primer nivel, pero al no tener valor semántico, no tiene ninguna de las ventajas añadidas que hemos descrito antes. Es una buena idea usar el elemento HTML apropiado para cada tarea.</p>
 
@@ -252,14 +252,14 @@ textarea.onkeyup = function(){
 
 <p>Las listas no ordenadas se usan para marcar listas de artículos cuyo orden no es importante. Tomemos como ejemplo una lista de compras:</p>
 
-<pre class="brush: bash notranslate">leche
+<pre class="brush: bash">leche
 huevos
 pan
 hummus</pre>
 
 <p>Cada lista desordenada comienza con un elemento {{HTMLElement("ul")}} («<em>unordered list</em>») que delimita todos los elementos de la lista:</p>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
 leche
 huevos
 pan
@@ -268,7 +268,7 @@ hummus
 
 <p>El siguiente paso es delimitar cada artículo de la lista con un elemento {{HTMLElement("li")}} («<em>list item</em>»).</p>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;leche&lt;/li&gt;
   &lt;li&gt;huevos&lt;/li&gt;
   &lt;li&gt;pan&lt;/li&gt;
@@ -282,7 +282,7 @@ hummus
 <div class="hidden">
 <h6 id="Código_reproducible_2">Código reproducible</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -300,7 +300,7 @@ hummus&lt;/textarea&gt;
   &lt;input id="solution" type="button" value="Mostrar solución"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -320,7 +320,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -405,7 +405,7 @@ textarea.onkeyup = function(){
 
 <p>Las listas ordenadas son aquellas en las que el orden de los elementos <em>sí</em> importa. Tomemos como ejemplo una lista de instrucciones para seguir un itinerario:</p>
 
-<pre class="brush: bash notranslate">Conduce hasta el final de la calle
+<pre class="brush: bash">Conduce hasta el final de la calle
 Gira a la derecha
 Sigue derecho por las dos primeras glorietas
 Gira a la izquierda en la tercer glorieta
@@ -413,7 +413,7 @@ El colegio está a la derecha, 300 metros más adelante</pre>
 
 <p>La estructura de marcado es la misma que para las listas no ordenadas, excepto que debes delimitar los elementos de la lista con una etiqueta {{HTMLElement("ol")}} («ordered list»), en lugar de <code>&lt;ul&gt;</code>:</p>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li&gt;Conduce hasta el final de la calle&lt;/li&gt;
   &lt;li&gt;Gira a la derecha&lt;/li&gt;
   &lt;li&gt;Sigue derecho por las dos primeras glorietas&lt;/li&gt;
@@ -428,7 +428,7 @@ El colegio está a la derecha, 300 metros más adelante</pre>
 <div class="hidden">
 <h6 id="Código_reproducible_3">Código reproducible</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -447,7 +447,7 @@ La escuela está a tu derecha, 300 metros por más adelante&lt;/textarea&gt;
   &lt;input id="solution" type="button" value="Mostrar solución"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -467,7 +467,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -555,7 +555,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Código_reproducible_4">Código reproducible</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -601,7 +601,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Mostrar solución"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -621,7 +621,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -708,7 +708,7 @@ textarea.onkeyup = function(){
 
 <p>Es perfectamente correcto anidar una lista dentro de otra. Posiblemente quieras tener subelementos bajo elementos de rango superior. Tomemos la segunda lista de nuestro ejemplo de la receta:</p>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li&gt;Pela el ajo y picarlo en trozos gruesos.&lt;/li&gt;
   &lt;li&gt;Retira las semillas y el tallo del pimiento, y cortarlo en trozos gruesos.&lt;/li&gt;
   &lt;li&gt;Mete todos los alimentos en un procesador de alimentos.&lt;/li&gt;
@@ -719,7 +719,7 @@ textarea.onkeyup = function(){
 
 <p>Puesto que los dos últimos elementos están estrechamente relacionados con el elemento anterior (se leen como subinstrucciones u opciones que encajan bajo ese elemento), puede tener sentido anidarlos dentro de su propia lista no ordenada e introducir esa lista bajo el cuarto elemento. Tendría el siguiente aspecto:</p>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li&gt;Pela el ajo y picarlo en trozos gruesos.&lt;/li&gt;
   &lt;li&gt;Retira las semillas y el tallo del pimiento, y cortarlo en trozos gruesos.&lt;/li&gt;
   &lt;li&gt;Mete todos los alimentos en un procesador de alimentos.&lt;/li&gt;
@@ -749,7 +749,7 @@ textarea.onkeyup = function(){
 
 <p>En HTML usamos el elemento {{HTMLElement("em")}} («<em>emphasis</em>») para marcar estos casos. El documento logra entonces transmitir una lectura más interesante y además así lo reconocen los lectores de pantalla, que lo expresan con un diferente tono de voz. El navegador, de manera predeterminada, aplica el estilo de letra itálica, pero no debes utilizar esta etiqueta solamente para establecer el estilo de letra itálica. Para usar ese estilo, debes utilizar únicamente la etiqueta del elemento {{HTMLElement("span")}} y algo de CSS u otra etiqueta con el elemento {{HTMLElement("i")}} (ve abajo).</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Me &lt;em&gt;alegro&lt;/em&gt; de que no llegues &lt;em&gt;tarde&lt;/em&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Me &lt;em&gt;alegro&lt;/em&gt; de que no llegues &lt;em&gt;tarde&lt;/em&gt;.&lt;/p&gt;</pre>
 
 <h3 id="Importancia_fuerte">Importancia fuerte</h3>
 
@@ -761,13 +761,13 @@ textarea.onkeyup = function(){
 
 <p>En HTML usamos el elemento {{HTMLElement("strong")}} (importancia fuerte) para marcar tales expresiones. El documento resulta entonces más útil, y de nuevo los lectores de pantalla reconocen estos elementos y el tono de voz cambia a uno más fuerte. El estilo negrita es el que aplican los navegadores por omisión, pero no debes usar esta etiqueta solamente para aplicar este estilo. Para hacer eso usa el elemento {{HTMLElement("span")}} y CSS, o un elemento  {{HTMLElement("b")}} (ve más abajo).</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Este líquido es &lt;strong&gt;altamente tóxico&lt;/strong&gt;.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Este líquido es &lt;strong&gt;altamente tóxico&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Cuento contigo. &lt;strong&gt;¡No llegues tarde!&lt;/strong&gt;&lt;/p&gt;</pre>
 
 <p>Puedes anidar elementos de énfasis dentro de elementos de importancia y viceversa si lo deseas:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Este líquido es &lt;strong&gt;altamente tóxico&lt;/strong&gt; —
+<pre class="brush: html">&lt;p&gt;Este líquido es &lt;strong&gt;altamente tóxico&lt;/strong&gt; —
 si lo bebes, &lt;strong&gt;podrías &lt;em&gt;morir&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;</pre>
 
 <h3 id="Aprendizaje_activo_¡Seamos_importantes!">Aprendizaje activo: ¡Seamos importantes!</h3>
@@ -777,7 +777,7 @@ si lo bebes, &lt;strong&gt;podrías &lt;em&gt;morir&lt;/em&gt;&lt;/strong&gt;.&l
 <div class="hidden">
 <h6 id="Código_reproducible_5">Código reproducible</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -799,7 +799,7 @@ si lo bebes, &lt;strong&gt;podrías &lt;em&gt;morir&lt;/em&gt;&lt;/strong&gt;.&l
   &lt;input id="solution" type="button" value="Mostrar solución"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -819,7 +819,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -918,7 +918,7 @@ textarea.onkeyup = function(){
 <p>Una observación prudente acerca del subrayado: <strong>La gente suele asociar estrechamente el subrayado con los hipervínculos.</strong> Por ello en la web es mejor reservar el subrayado para los enlaces. Utiliza el elemento {{HTMLElement('u')}} cuando resulte apropiado semánticamente, pero considera usar CSS para cambiar el subrayado predeterminado por algo más adecuado en la web. El siguiente ejemplo ilustra cómo lo puedes hacer.</p>
 </div>
 
-<pre class="brush: html notranslate">&lt;!-- nombres científicos --&gt;
+<pre class="brush: html">&lt;!-- nombres científicos --&gt;
 &lt;p&gt;
   El colibrí garganta de rubí (&lt;i&gt;Archilochus colubris&lt;/i&gt;)
   es el colibrí más común en el este de América del Norte.

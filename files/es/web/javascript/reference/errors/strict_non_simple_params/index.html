@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Reference/Errors/Strict_y_parámetros_complejos
 
 <h2 id="Mensaje">Mensaje</h2>
 
-<pre class="syntaxbox notranslate">Edge:
+<pre class="syntaxbox">Edge:
 No se puede aplicar el modo estricto en funciones con una lista de parámetros complejos
 
 Firefox:
@@ -49,7 +49,7 @@ SyntaxError: directiva ilegal 'use strict' en función con una lista de parámet
 
 <p>En este caso, la función <code>sum</code> tiene los parámetros predeterminados <code>a = 1</code> y <code>b = 2</code>:</p>
 
-<pre class="brush: js example-bad notranslate">function sum(a = 1, b = 2) {
+<pre class="brush: js example-bad">function sum(a = 1, b = 2) {
   SyntaxError: 'use strict' no permitida en la función con parámetros predeterminados
   'use strict';
   return a + b;
@@ -58,7 +58,7 @@ SyntaxError: directiva ilegal 'use strict' en función con una lista de parámet
 
 <p>Si la función debe estar en <a href="/es/docs/Web/JavaScript/Reference/Strict_mode">modo estricto</a>, y todo el script o la función adjunta también está bien que esté en modo estricto, puedes mover la directiva <code>"use strict"</code> fuera de la función:</p>
 
-<pre class="brush: js example-good notranslate">'use strict';
+<pre class="brush: js example-good">'use strict';
 function sum(a = 1, b = 2) {
   return a + b;
 }
@@ -68,7 +68,7 @@ function sum(a = 1, b = 2) {
 
 <p>Una expresión <code>function</code> puede usar otra solución alternativa:</p>
 
-<pre class="brush: js example-bad notranslate">var sum = function sum([a, b]) {
+<pre class="brush: js example-bad">var sum = function sum([a, b]) {
   // SyntaxError: "use strict" no permitido en función con parámetros de desestructuración
   'use strict';
   return a + b;
@@ -77,7 +77,7 @@ function sum(a = 1, b = 2) {
 
 <p>Esta se puede convertir a la siguiente expresión:</p>
 
-<pre class="brush: js example-good notranslate">var sum = (function() {
+<pre class="brush: js example-good">var sum = (function() {
   'use strict';
   return function sum([a, b]) {
     return a + b;
@@ -89,7 +89,7 @@ function sum(a = 1, b = 2) {
 
 <p>Si una función de flecha necesita acceder a la variable <code>this</code>, puedes usar la función de flecha como función circundante:</p>
 
-<pre class="brush: js example-bad notranslate">var callback = (...args) =&gt; {
+<pre class="brush: js example-bad">var callback = (...args) =&gt; {
   SyntaxError: "use strict" no permitido en la función con parámetro rest
   'use strict';
   return this.run(args);
@@ -98,7 +98,7 @@ function sum(a = 1, b = 2) {
 
 <p>Esta se puede convertir a la siguiente expresión:</p>
 
-<pre class="brush: js example-good notranslate">var callback = (() =&gt; {
+<pre class="brush: js example-good">var callback = (() =&gt; {
   'use strict';
   return (...args) =&gt; {
     return this.run(args);

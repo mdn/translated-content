@@ -12,7 +12,7 @@ original_slug: Learn/HTML/como/Usando_atributos_de_datos
 
 <p>La sintáxis es simple. Un atributo cualquiera cuyo nombre comience con <code>data-</code>es un atributo de datos. Supongamos que tenemos un artículo y deseamos almacenar información adicional que no tiene ninguna representación visual. En ese caso, alcanza con que hagamos uso de los atributos <code>data</code>:</p>
 
-<pre class="brush: html notranslate">&lt;article
+<pre class="brush: html">&lt;article
   id="electriccars"
   data-columns="3"
   data-index-number="12314"
@@ -26,7 +26,7 @@ original_slug: Learn/HTML/como/Usando_atributos_de_datos
 
 <p>Para obtener un atributo <code>data</code> a través del <code>dataset</code> del objeto, obtenga la propiedad por la parte del nombre del atributo despues de <code>data-</code> (tenga en cuenta que los guiones son convertidos en camelCase).</p>
 
-<pre class="brush: js notranslate">var article = document.getElementById('electriccars');
+<pre class="brush: js">var article = document.getElementById('electriccars');
 
 article.dataset.columns // "3"
 article.dataset.indexNumber // "12314"
@@ -38,13 +38,13 @@ article.dataset.parent // "cars"</pre>
 
 <p>Tenga en cuenta que, debido a que los atributos de datos son atributos simples de HTML, incluso puede acceder a ellos desde <a href="/en-US/docs/Web/CSS">CSS</a>. Por ejemplo, para mostrar los <code>data-parent</code> en el artículo, puede usar el <a href="/en-US/docs/Web/CSS/content">contenido generado</a> en CSS con la función {{cssxref("attr")}}:</p>
 
-<pre class="brush: css notranslate">article::before {
+<pre class="brush: css">article::before {
   content: attr(data-parent);
 }</pre>
 
 <p>También puede usar los <a href="/en-US/docs/Web/CSS/Attribute_selectors">selectores de atributos</a> en CSS para cambiar los estilos de acuerdo a las priopiedades de datos:</p>
 
-<pre class="brush: css notranslate">article[data-columns='3'] {
+<pre class="brush: css">article[data-columns='3'] {
   width: 400px;
 }
 article[data-columns='4'] {

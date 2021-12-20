@@ -14,12 +14,12 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Funcionesasíncronas
 
 <div></div>
 
-<pre class="brush: js notranslate">Object.getPrototypeOf(async function(){}).constructor
+<pre class="brush: js">Object.getPrototypeOf(async function(){}).constructor
 </pre>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">new AsyncFunction([<var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]],] <var>functionBody</var>)</pre>
+<pre class="syntaxbox">new AsyncFunction([<var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]],] <var>functionBody</var>)</pre>
 
 <h3 id="Parametros">Parametros</h3>
 
@@ -65,7 +65,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Funcionesasíncronas
 
 <h3 id="Creating_an_async_function_from_an_AsyncFunction_constructor">Creating an async function from an <code>AsyncFunction</code> constructor</h3>
 
-<pre class="brush: js notranslate">function resolveAfter2Seconds(x) {
+<pre class="brush: js">function resolveAfter2Seconds(x) {
   return new Promise(resolve =&gt; {
     setTimeout(() =&gt; {
       resolve(x);

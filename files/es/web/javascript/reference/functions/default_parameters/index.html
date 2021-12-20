@@ -19,7 +19,7 @@ original_slug: Web/JavaScript/Referencia/Funciones/Parametros_por_defecto
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">function [<var>name</var>]([<var>param1</var>[ = <var>defaultValue1</var> ][, ..., <var>paramN</var>[ = <var>defaultValueN</var> ]]]) {
+<pre class="syntaxbox">function [<var>name</var>]([<var>param1</var>[ = <var>defaultValue1</var> ][, ..., <var>paramN</var>[ = <var>defaultValueN</var> ]]]) {
    <var>statements</var>
 }
 </pre>
@@ -32,7 +32,7 @@ original_slug: Web/JavaScript/Referencia/Funciones/Parametros_por_defecto
 
 <p>En el siguiente ejemplo, si no se proporciona ningún valor para <code><var>b</var></code> cuando se llama a <code>multiply</code>, el valor de <code><var>b</var></code> sería <code>undefined</code> al evaluar <code><var>a</var> * <var>b</var></code> y <code>multiply</code> devolvería <code>NaN</code>.</p>
 
-<pre class="brush: js notranslate">function multiply(a, b) {
+<pre class="brush: js">function multiply(a, b) {
   return a * b
 }
 
@@ -42,7 +42,7 @@ multiply(5)     // NaN !
 
 <p>Para protegerte contra esto, usarías algo como la segunda línea, donde <code><var>b</var></code> se establece en <code>1</code> si llamas a <code>multiply</code> con un solo argumento:</p>
 
-<pre class="brush: js notranslate">function multiply(a, b) {
+<pre class="brush: js">function multiply(a, b) {
   b = (typeof b !== 'undefined') ?  b : 1
   return a * b
 }
@@ -53,7 +53,7 @@ multiply(5)     // 5
 
 <p>Con los parámetros predeterminados en ES2015, las comprobaciones en el cuerpo de la función ya no son necesarias. Ahora, puedes asignar <code>1</code> como valor predeterminado para <code><var>b</var></code> en el encabezado de la función:</p>
 
-<pre class="brush: js notranslate">function multiply(a, b = 1) {
+<pre class="brush: js">function multiply(a, b = 1) {
   return a * b
 }
 
@@ -68,7 +68,7 @@ multiply(5, undefined)  // 5
 
 <p>En la segunda llamada de este ejemplo, incluso si el primer argumento se establece explícitamente en <code>undefined</code> (aunque no <code>null</code> u otros valores {{Glossary("falsy", "falsos", "", 1)}} , el valor del argumento <code><var>num</var></code> sigue siendo el predeterminado.</p>
 
-<pre class="brush: js notranslate">function test(num = 1) {
+<pre class="brush: js">function test(num = 1) {
   console.log(typeof num)
 }
 
@@ -84,7 +84,7 @@ test(null)       // 'object' (num se establece en null)
 
 <p>El argumento predeterminado se evalúa en el <em>momento de la llamada</em>. Entonces, a diferencia de (por ejemplo) Python, se crea un nuevo objeto cada vez que se llama a la función.</p>
 
-<pre class="brush: js notranslate">function append(value, array = []) {
+<pre class="brush: js">function append(value, array = []) {
   array.push(value)
   return array
 }
@@ -95,7 +95,7 @@ append(2)  // [2], no [1, 2]
 
 <p>Esto incluso se aplica a funciones y variables:</p>
 
-<pre class="brush: js notranslate">function callSomething(thing = something()) {
+<pre class="brush: js">function callSomething(thing = something()) {
   return thing
 }
 
@@ -113,7 +113,7 @@ callSomething()  // 2
 
 <p>Los parámetros definidos anteriormente (a la izquierda) están disponibles para los parámetros predeterminados posteriores:</p>
 
-<pre class="brush: js notranslate">function greet(name, greeting, message = greeting + ' ' + name) {
+<pre class="brush: js">function greet(name, greeting, message = greeting + ' ' + name) {
   return [name, greeting, message]
 }
 
@@ -123,7 +123,7 @@ greet('David', 'Hi', 'Happy Birthday!')  // ["David", "Hi", "Happy Birthday!"]
 
 <p>Esta funcionalidad se puede aproximar de esta manera, lo que demuestra cuántos casos extremos se manejan:</p>
 
-<pre class="brush: js notranslate">function go() {
+<pre class="brush: js">function go() {
   return ':P'
 }
 
@@ -170,14 +170,14 @@ withoutDefaults.call({value: '=^_^='});
 
 <p>La siguiente función arrojará un <code>ReferenceError</code> cuando se invoca, porque el valor del parámetro predeterminado no tiene acceso al ámbito secundario del cuerpo de la función:</p>
 
-<pre class="brush: js example-bad notranslate">function f(a = go()) { // Lanza un `ReferenceError` cuando se invoca a `f`.
+<pre class="brush: js example-bad">function f(a = go()) { // Lanza un `ReferenceError` cuando se invoca a `f`.
   function go() { return ':P' }
 }
 </pre>
 
 <p>...y esta función imprimirá <code>undefined</code> porque la variable <code>var a</code> se eleva solo a la parte superior del ámbito creado para el cuerpo de la función (y no hasta el ámbito principal creado para la lista de parámetros):</p>
 
-<pre class="brush: js example-bad notranslate">function f(a, b = () =&gt; console.log(a)) {
+<pre class="brush: js example-bad">function f(a, b = () =&gt; console.log(a)) {
   var a = 1
   b() // Imprime `undefined`, porque los valores de los parámetros predeterminados existen en su propio ámbito
 }
@@ -187,7 +187,7 @@ withoutDefaults.call({value: '=^_^='});
 
 <p>Los parámetros aún se establecen de izquierda a derecha, sobrescribiendo los parámetros predeterminados incluso si hay parámetros posteriores sin valores predeterminados.</p>
 
-<pre class="brush: js notranslate">function f(x = 1, y) {
+<pre class="brush: js">function f(x = 1, y) {
   return [x, y]
 }
 
@@ -199,7 +199,7 @@ f(2)  // [2, undefined]
 
 <p>Puedes usar la asignación de valor predeterminado con la notación {{jsxref("Operators/Destructuring_assignment", "la desestructuración", "", 1)}}:</p>
 
-<pre class="brush: js notranslate">function f([x, y] = [1, 2], {z: z} = {z: 3}) {
+<pre class="brush: js">function f([x, y] = [1, 2], {z: z} = {z: 3}) {
   return x + y + z
 }
 

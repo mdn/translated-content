@@ -119,7 +119,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Aserciones
 
 <h3 id="Ejemplo_de_descripción_de_tipo_límite">Ejemplo de descripción de tipo límite</h3>
 
-<pre class="brush: js notranslate">// Usa límites Regex para arreglar cadenas con errores.
+<pre class="brush: js">// Usa límites Regex para arreglar cadenas con errores.
 let multilineaIncorrecta = `tey, la brillante manzena vered
 toy cuelga en una rama del arbol vered`;
 
@@ -144,7 +144,7 @@ console.log(4, multilineaCorrecta); // corrige  'manzena' pero no toca 'en'.
 
 <p>Usa <code>^</code> para hacer coincidir al comienzo de la entrada. En este ejemplo, podemos obtener las frutas que comienzan con 'A' con una expresión regular <code>/^A/</code>. Para seleccionar las frutas adecuadas, podemos utilizar el método {{JSxRef("Objetos_globales/Array/filter", "filter")}} con un {{JSxRef("Funciones/Arrow_functions", "función flecha")}}.</p>
 
-<pre class="brush: js notranslate">let frutas = ["Manzana", "Sandía", "Naranja", "Aguacate", "Fresa", "Melón"];
+<pre class="brush: js">let frutas = ["Manzana", "Sandía", "Naranja", "Aguacate", "Fresa", "Melón"];
 
 // Selecciona frutas que comiencen con 'M' por la Regex /^M/.
 // Aquí se usa el símbolo de control '^' solo en un rol: Reconocer desde el inicio una entrada.
@@ -154,7 +154,7 @@ console.log(frutasEmpiezanConM); // [ 'Manzana', 'Melón' ]</pre>
 
 <p>En el segundo ejemplo, <code>^</code> se usa tanto para hacer coincidir al comienzo de la entrada como para crear conjuntos de caracteres negados o complementados cuando se usa dentro de {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "grupos")}}.</p>
 
-<pre class="brush: js notranslate">let frutas = ["Manzana", "Sandía", "Naranja", "Aguacate", "Fresa", "Melón"];
+<pre class="brush: js">let frutas = ["Manzana", "Sandía", "Naranja", "Aguacate", "Fresa", "Melón"];
 
 // Seleccionar frutas que no comiencen por 'M' con la regexp /^[^M]/.
 // En este ejemplo, se representan dos significados del símbolo de control '^':
@@ -168,7 +168,7 @@ console.log(frutasNoEmpiezanConM); // [ "Sandía", "Naranja", "Aguacate", "Fresa
 
 <h3 id="Reconoce_el_límite_de_palabra">Reconoce el límite de palabra</h3>
 
-<pre class="brush: js notranslate">let frutasConDescripcion = ["Manzana roja", "Piña amarilla", "Aguacate verde"];
+<pre class="brush: js">let frutasConDescripcion = ["Manzana roja", "Piña amarilla", "Aguacate verde"];
 
 // Selecciona descripciones que contengan terminaciones de palabras 'ja' o 'de':
 let deJaSeleccion = frutasConDescripcion.filter(descr =&gt; /(de|ja)\b/.test(descr));
@@ -177,7 +177,7 @@ console.log(deJaSeleccion); // ["Manzana roja", "Aguacate verde"]</pre>
 
 <h3 id="Aserción_anticipada">Aserción anticipada</h3>
 
-<pre class="brush: js notranslate">// JS aserción anticipada x(?=Y)
+<pre class="brush: js">// JS aserción anticipada x(?=Y)
 
 let regex = /Primer(?= prueba)/g;
 
@@ -191,14 +191,14 @@ console.log('Este es mi Primer melocotón en un mes.'.match(regex)); // null
 
 <p>Por ejemplo, <code>/\d+(?!\.)/</code><span> coincide con un número solo si no va seguido de un punto decimal. </span><code>/\d+(?!\.)/.exec('3.141')</code> coincide con "141" pero no con "3."</p>
 
-<pre class="brush: js notranslate">console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
+<pre class="brush: js">console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 </pre>
 
 <h3 id="Diferente_significado_del_uso_de_la_combinación_!_en_aserciones_y_rangos">Diferente significado del uso de la combinación '?!' en aserciones y rangos</h3>
 
 <p>Diferente significado del uso de la combinación <code>?!</code> en {{JSxRef("../Guide/Regular_Expressions/Aserciones", "Aserciones")}} <code>/x(?!y)/</code> y de <code>[^?!]</code> en {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Rangos")}}.</p>
 
-<pre class="brush: js notranslate">let naranjaNoLimon = "¿Quieres beber jugo de naranja? ¡Sí, no quiero tomar jugo de limón!";
+<pre class="brush: js">let naranjaNoLimon = "¿Quieres beber jugo de naranja? ¡Sí, no quiero tomar jugo de limón!";
 
 // Diferente significado del uso de la combinación '?!' en Aserciones /x(?!y)/ y [^?!] en Rangos.
 let regexNoSeleccionaLimon = /[^?!]+beber(?! de limón)[^?!]+[?!]/gi
@@ -210,7 +210,7 @@ console.log(naranjaNoLimon.match(regexNoSeleccionaNaranja)); // [ ' ¡Sí, no qu
 
 <h3 id="Aserción_inversa">Aserción inversa</h3>
 
-<pre class="brush: js notranslate">let naranjas = ['naranja madura A', 'naranja verde B', 'naranja madura C',];
+<pre class="brush: js">let naranjas = ['naranja madura A', 'naranja verde B', 'naranja madura C',];
 
 let naranjas_maduras = naranjas.filter(fruta =&gt; fruta.match(/(?&lt;=naranja) madura/));
 console.log(naranjas_maduras); // [ 'naranja madura A ', 'naranja madura C' ]

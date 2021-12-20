@@ -27,7 +27,7 @@ original_slug: Learn/HTML/Tablas/Funciones_avanzadas_de_las_tablas_HTML_y_accesi
 
 <p>Puedes dar un título a tu tabla colocándolo dentro de un elemento {{htmlelement ("caption")}} y anidándolo dentro del elemento {{htmlelement ("table")}}. Debes ponerlo justo debajo de la etiqueta de apertura <code>&lt;table&gt;</code>.</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;caption&gt;Dinosaurios en el período Jurásico&lt;/caption&gt;
 
   ...
@@ -84,7 +84,7 @@ original_slug: Learn/HTML/Tablas/Funciones_avanzadas_de_las_tablas_HTML_y_accesi
  <li>Guarda y actualiza, y observa que añadir el elemento <code>&lt;tfoot&gt;</code> ha provocado que la fila «SUM» pase al final de la tabla.</li>
  <li>Luego, añade un atributo {{htmlattrxref ("colspan", "td")}} para que la celda «SUM» abarque las primeras cuatro columnas, de modo que el número aparezca en la parte inferior de la columna «Costes».</li>
  <li>Vamos a añadir un estilo adicional sencillo a la tabla para que veas cuán útiles son estos elementos para aplicar CSS. Dentro del encabezado del documento HTML hay un elemento {{htmlelement ("style")}} vacío. Añade a este elemento las líneas de código CSS siguientes:
-  <pre class="brush: css notranslate">tbody {
+  <pre class="brush: css">tbody {
   font-size: 95%;
   font-style: italic;
 }
@@ -106,7 +106,7 @@ tfoot {
 <div class="hidden">
 <h6 id="Hidden_example">Hidden example</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -235,7 +235,7 @@ tfoot {
 
 <p>El marcado siguiente muestra una tabla anidada simple:</p>
 
-<pre class="brush: html notranslate">&lt;table id="tabla1"&gt;
+<pre class="brush: html">&lt;table id="tabla1"&gt;
   &lt;tr&gt;
     &lt;th&gt;título1&lt;/th&gt;
     &lt;th&gt;título2&lt;/th&gt;
@@ -378,7 +378,7 @@ tfoot {
 
 <p>Un nuevo tema para este artículo es el atributo {{htmlattrxref ("scope", "th")}}, que se puede añadir al elemento <code>&lt;th&gt;</code> para indicar a los lectores de pantalla exactamente para qué celdas es el encabezado. Volviendo a nuestro ejemplo anterior de registro de gastos, podrías definir los encabezados de columna inequívocamente como encabezados de columna de este modo:</p>
 
-<pre class="brush: html notranslate">&lt;thead&gt;
+<pre class="brush: html">&lt;thead&gt;
   &lt;tr&gt;
     &lt;th scope="col"&gt;Compra&lt;/th&gt;
     &lt;th scope="col"&gt;Ubicación&lt;/th&gt;
@@ -390,7 +390,7 @@ tfoot {
 
 <p>Y también cada fila podría tener un encabezado definido de esta manera (si añadimos encabezados de fila y encabezados de columna):</p>
 
-<pre class="brush: html notranslate">&lt;tr&gt;
+<pre class="brush: html">&lt;tr&gt;
   &lt;th scope="row"&gt;Corte de pelo&lt;/th&gt;
 
 &lt;td&gt;Peluquería&lt;/td&gt;
@@ -417,7 +417,7 @@ tfoot {
 
 <p>Volviendo a nuestro ejemplo de gastos, los dos fragmentos anteriores podrían reescribirse así:</p>
 
-<pre class="brush: html notranslate">&lt;thead&gt;
+<pre class="brush: html">&lt;thead&gt;
   &lt;tr&gt;
     &lt;th id="purchase"&gt;Compra&lt;/th&gt;
     &lt;th id="location"&gt;Ubicación&lt;/th&gt;

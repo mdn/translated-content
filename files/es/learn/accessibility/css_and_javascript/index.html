@@ -44,7 +44,7 @@ translation_of: Learn/Accessibility/CSS_and_JavaScript
 
 <p>Encabezados, párrafos, listas: el contenido de texto central de su página:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Cabecera&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Cabecera&lt;/h1&gt;
 
 &lt;p&gt;Párrafo&lt;/p&gt;
 
@@ -55,7 +55,7 @@ translation_of: Learn/Accessibility/CSS_and_JavaScript
 
 <p>Un CSS típico podría tener este aspecto:</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font-size: 5rem;
 }
 
@@ -78,13 +78,13 @@ p, li {
 
 <p>Marcado en línea que confiere un énfasis específico al texto que rodea:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;El agua está &lt;em&gt;muy caliente&lt;/em&gt;.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;El agua está &lt;em&gt;muy caliente&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Las gotas de agua que se acumulan en las superficies se denominan &lt;strong&gt;condensación&lt;/strong&gt;.&lt;/p&gt;</pre>
 
 <p>Es posible que desees agregar algunos colores simples a su texto enfatizado:</p>
 
-<pre class="brush: css notranslate">strong, em {
+<pre class="brush: css">strong, em {
   color: #a60000;
 }</pre>
 
@@ -94,11 +94,11 @@ p, li {
 
 <p>Un elemento que permite asociar una abreviatura, un acrónimo o una inicialización a su expansión:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;El contenido web se marca usando &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;El contenido web se marca usando &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;.&lt;/p&gt;</pre>
 
 <p>Nuevamente, es posible que desees darle estilo de una manera simple:</p>
 
-<pre class="brush: css notranslate">abbr {
+<pre class="brush: css">abbr {
   color: #a60000;
 }</pre>
 
@@ -108,11 +108,11 @@ p, li {
 
 <p>Hipervínculos: la forma de llegar a nuevos lugares en la web:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Visita la &lt;a href="https://www.mozilla.org"&gt;página de inicio de Mozilla&lt;/a&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Visita la &lt;a href="https://www.mozilla.org"&gt;página de inicio de Mozilla&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <p>A continuación se muestra un estilo de enlace muy simple:</p>
 
-<pre class="brush: css notranslate">a {
+<pre class="brush: css">a {
   color: #ff0000;
 }
 
@@ -138,7 +138,7 @@ a:active {
 
 <p>Elementos que permiten a los usuarios introducir datos en sitios web:</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;label for="nombre"&gt;Entra tu nombre&lt;/label&gt;
   &lt;input type="text" id="nombre" name="nombre"&gt;
 &lt;/div&gt;</pre>
@@ -238,12 +238,12 @@ a:active {
 
 <p>También hemos hecho que esta validación de formulario sea bastante accesible. Hemos utilizado elementos {{htmlelement ("label")}} para asegurarnos de que las etiquetas del formulario estén vinculadas de forma inequívoca a sus entradas, de modo que los lectores de pantalla puedan leerlas junto con ellas:</p>
 
-<pre class="brush: html notranslate">&lt;label for="name"&gt;Entra tu nombre:&lt;/label&gt;
+<pre class="brush: html">&lt;label for="name"&gt;Entra tu nombre:&lt;/label&gt;
 &lt;input type="text" name="name" id="name"&gt;</pre>
 
 <p>Solo realizamos la validación cuando se envía el formulario; esto es para no actualizar la IU con demasiada frecuencia y confundir potencialmente a los lectores de pantalla (y posiblemente a otros) usuarios:</p>
 
-<pre class="brush: js notranslate">form.onsubmit = validate;
+<pre class="brush: js">form.onsubmit = validate;
 
 function validate(e) {
   errorList.innerHTML = '';
@@ -270,7 +270,7 @@ function validate(e) {
 
 <p>Para cada entrada sin un valor completado cuando se envía el formulario, creamos un elemento de lista con un enlace y lo insertamos en <code>errorList</code>.</p>
 
-<pre class="brush: js notranslate">function createLink(testItem) {
+<pre class="brush: js">function createLink(testItem) {
   const listItem = document.createElement('li');
   const anchor = document.createElement('a');
 
@@ -322,7 +322,7 @@ function validate(e) {
 
 <p>Hemos creado un ejemplo muy simple, que puedes encontrar en <a href="http://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html">mouse-and-keyboard-events.html</a> (consulta también el <a href="https://github.com/mdn/learning-area/blob/master/accessibility/css/mouse-and-keyboard-events.html">código fuente</a>). El código presenta dos funciones que muestran y ocultan la imagen ampliada; estas se ejecutan mediante las siguientes líneas que las configuran como controladores de eventos:</p>
 
-<pre class="brush: js notranslate">imgThumb.onmouseover = showImg;
+<pre class="brush: js">imgThumb.onmouseover = showImg;
 imgThumb.onmouseout = hideImg;
 
 imgThumb.onfocus = showImg;

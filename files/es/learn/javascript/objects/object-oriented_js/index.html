@@ -103,7 +103,7 @@ translation_of: Learn/JavaScript/Objects/Object-oriented_JS
 <ol>
  <li>Comencemos por ver cómo puedes definir una persona con una funcion normal. Agrega esta funcion dentro del elemento <code>script</code>:
 
-  <pre class="brush: js notranslate">function createNewPerson(name) {
+  <pre class="brush: js">function createNewPerson(name) {
   var obj = {};
   obj.name = name;
   obj.greeting = function() {
@@ -113,12 +113,12 @@ translation_of: Learn/JavaScript/Objects/Object-oriented_JS
 }</pre>
  </li>
  <li>Ahora puedes crear una nueva persona llamando a esta funcion — prueba con las siguientes lineas en la consola Javascript de tu navegador:
-  <pre class="brush: js notranslate">var salva = createNewPerson('Salva');
+  <pre class="brush: js">var salva = createNewPerson('Salva');
 salva.name;
 salva.greeting();</pre>
   Esto funciona bastante bien, pero es un poco largo; si sabemos que queremos crear un objeto, ¿por qué necesitamos crear explícitamente un nuevo objeto vacío y devolverlo? Afortunadamente, JavaScript nos proporciona un práctico acceso directo, en forma de funciones constructoras — ¡hagamos una ahora!</li>
  <li>Reemplaza tu función anterior por la siguiente:
-  <pre class="brush: js notranslate">function Person(name) {
+  <pre class="brush: js">function Person(name) {
   this.name = name;
   this.greeting = function() {
     alert('Hi! I\'m ' + this.name + '.');
@@ -137,11 +137,11 @@ salva.greeting();</pre>
 
 <ol>
  <li>Agrega las siguientes líneas debajo de tu código anterior:
-  <pre class="brush: js notranslate">var person1 = new Person('Bob');
+  <pre class="brush: js">var person1 = new Person('Bob');
 var person2 = new Person('Sarah');</pre>
  </li>
  <li>Guarda el código y vuelve a cargarlo en el navegador, e intenta ingresar las siguientes líneas en la consola Javascript :
-  <pre class="brush: js notranslate">person1.name
+  <pre class="brush: js">person1.name
 person1.greeting()
 person2.name
 person2.greeting()</pre>
@@ -152,12 +152,12 @@ person2.greeting()</pre>
 
 <p>Veamos nuevamente las llamadas del constructor:</p>
 
-<pre class="brush: js notranslate">var person1 = new Person('Bob');
+<pre class="brush: js">var person1 = new Person('Bob');
 var person2 = new Person('Sarah');</pre>
 
 <p>En cada caso, la  palabra clave <code>new</code> se usa para indicarle al navegador que queremos crear una nueva instancia del objeto, seguida del nombre de la función con sus parámetros requeridos entre paréntesis, y el resultado se almacena en una variable — muy similar a cómo se llama a una función estándar. Cada instancia se crea de acuerdo con esta definición:</p>
 
-<pre class="brush: js notranslate">function Person(name) {
+<pre class="brush: js">function Person(name) {
   this.name = name;
   this.greeting = function() {
     alert('Hi! I\'m ' + this.name + '.');
@@ -166,7 +166,7 @@ var person2 = new Person('Sarah');</pre>
 
 <p>Una vez creados los nuevos objetos, las variables <code>person1</code> y <code>person2</code> contienen los siguientes objetos:</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
   name: 'Bob',
   greeting: function() {
     alert('Hi! I\'m ' + this.name + '.');
@@ -188,7 +188,7 @@ var person2 = new Person('Sarah');</pre>
 
 <ol>
  <li>Elimina el código que insertaste hasta ahora y agrega este constructor de reemplazo; este es exactamente el mismo que el ejemplo simple del principio, con un poco más de complejidad:
-  <pre class="brush: js notranslate">function Person(first, last, age, gender, interests) {
+  <pre class="brush: js">function Person(first, last, age, gender, interests) {
   this.name = {
     'first': first,
     'last' : last
@@ -205,13 +205,13 @@ var person2 = new Person('Sarah');</pre>
 }</pre>
  </li>
  <li>Ahora, agrega la siguiente línea para crear una instancia del objeto:
-  <pre class="brush: js notranslate">var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
+  <pre class="brush: js">var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
  </li>
 </ol>
 
 <p>Ahora verás que puedes acceder a las propiedades y métodos justo como lo hiciste anteriormente — intenta esto en tu consola JS:</p>
 
-<pre class="brush: js notranslate">person1['age']
+<pre class="brush: js">person1['age']
 person1.interests[1]
 person1.bio()
 // etc.</pre>
@@ -242,17 +242,17 @@ person1.bio()
 
 <ol>
  <li>Intenta ingresar este código en la consola JavaScript de tu navegador:
-  <pre class="brush: js notranslate">var person1 = new Object();</pre>
+  <pre class="brush: js">var person1 = new Object();</pre>
  </li>
  <li>Esto guarda un objeto vacío en la variable <code>person1</code>. Luego pueded agregar propiedades y métodos a este objeto usando la notación de punto (.) o de corchetes (['']); prueba estos ejemplos en tu consola:
-  <pre class="brush: js notranslate">person1.name = 'Chris';
+  <pre class="brush: js">person1.name = 'Chris';
 person1['age'] = 38;
 person1.greeting = function() {
   alert('Hi! I\'m ' + this.name + '.');
 };</pre>
  </li>
  <li>También puedes pasar un objeto literal como parámetro al constructor <code>Object()</code>, para precargarlo con propiedades/métodos. Prueba esto en tu consola:
-  <pre class="brush: js notranslate">var person1 = new Object({
+  <pre class="brush: js">var person1 = new Object({
   name: 'Chris',
   age: 38,
   greeting: function() {
@@ -272,10 +272,10 @@ person1.greeting = function() {
 
 <ol>
  <li>Con tu ejercicio de la sección anterior cargado en el navegador, prueba esto en tu consola JavaScript
-  <pre class="brush: js notranslate">var person2 = Object.create(person1);</pre>
+  <pre class="brush: js">var person2 = Object.create(person1);</pre>
  </li>
  <li>Y ahora prueba esto:
-  <pre class="brush: js notranslate">person2.name
+  <pre class="brush: js">person2.name
 person2.greeting()</pre>
  </li>
 </ol>

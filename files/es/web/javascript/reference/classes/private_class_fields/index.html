@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Referencia/Classes/Private_class_fields
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">class ClassWithPrivateField {
+<pre class="syntaxbox">class ClassWithPrivateField {
   #privateField
 }
 
@@ -31,7 +31,7 @@ class ClassWithPrivateStaticField {
 
 <p><font><font>La limitación de las variables estáticas que se llaman solo por métodos estáticos aún se mantiene</font></font></p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateStaticField {
+<pre class="brush: js">class ClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 
   static publicStaticMethod() {
@@ -48,7 +48,7 @@ console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)</pre>
 
 <p><font><font>Esto puede conducir a un comportamiento inesperado al usar </font></font><strong><code>this</code></strong><font><font>.</font></font></p>
 
-<pre class="brush: js notranslate">class BaseClassWithPrivateStaticField {
+<pre class="brush: js">class BaseClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 
   static basePublicStaticMethod() {
@@ -74,7 +74,7 @@ console.assert(error instanceof TypeError)
 
 <p><font><font>La encapsulación es impuesta por el lenguaje. </font><font>Es un error de sintaxis referirse a </font></font><code>#</code><font><font>nombres que están fuera del alcance.</font></font></p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateField {
+<pre class="brush: js">class ClassWithPrivateField {
   #privateField
 
   constructor() {
@@ -95,7 +95,7 @@ instance.#privateField === 42 // Syntax error
 
 <p><font><font>Los métodos estáticos privados pueden ser funciones generadoras, asíncronas y asíncronas.</font></font></p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateStaticMethod {
+<pre class="brush: js">class ClassWithPrivateStaticMethod {
     static #privateStaticMethod() {
         return 42
     }
@@ -115,7 +115,7 @@ console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
 
 <p><font><font>Esto puede conducir a un comportamiento inesperado al usar </font></font><strong><code>this</code></strong><font><font>. </font><font>En el siguiente ejemplo se </font></font><code>this</code><font><font>hace referencia a la </font></font><code>Derived</code><font><font>clase (no a la </font></font><code>Base</code><font><font>clase) cuando intentamos llamar </font></font><code>Derived.publicStaticMethod2()</code><font><font>, y por lo tanto exhibe la misma "restricción de procedencia" que se mencionó anteriormente:</font></font></p>
 
-<pre class="brush: js notranslate">class Base {
+<pre class="brush: js">class Base {
     static #privateStaticMethod() {
         return 42;
     }
@@ -137,7 +137,7 @@ console.log(Derived.publicStaticMethod2()); // TypeError
 
 <p><font><font>Los métodos de instancia privada son métodos disponibles en instancias de clase cuyo acceso está restringido de la misma manera que los campos de instancia privada.</font></font></p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateMethod {
+<pre class="brush: js">class ClassWithPrivateMethod {
   #privateMethod() {
     return 'hello world'
   }
@@ -153,7 +153,7 @@ console.log(instance.getPrivateMessage())
 
 <p><font><font>Los métodos de instancia privada pueden ser funciones generadoras, asíncronas o asíncronas. </font><font>Los getters y setters privados también son posibles:</font></font></p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateAccessor {
+<pre class="brush: js">class ClassWithPrivateAccessor {
   #message
 
   get #decoratedMessage() {

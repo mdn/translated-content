@@ -84,7 +84,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Error
 
 <p>Normalmente, creas un objeto <code>Error</code> con la intención de generarlo utilizando la palabra clave {{JSxRef("Sentencias/throw", "throw")}}. Puedes manejar el error usando la construcción {{JSxRef("Sentencias/try...catch", "try...catch")}}:</p>
 
-<pre class="brush: js; notranslate">try {
+<pre class="brush: js;">try {
   throw new Error('¡Ups!')
 } catch (e) {
   console.error(e.name + ': ' + e.message)
@@ -95,7 +95,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Error
 
 <p>Puede elegir manejar solo tipos de error específicos probando el tipo de error con la propiedad {{JSxRef("Object.prototype.constructor", "constructor")}} del error o, si estás escribiendo para motores JavaScript modernos, la palabra clave {{JSxRef("Operators/instanceof", "instanceof")}}:</p>
 
-<pre class="brush: js; notranslate">try {
+<pre class="brush: js;">try {
   foo.bar()
 } catch (e) {
   if (e instanceof EvalError) {
@@ -123,7 +123,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Error
 <p>Algunos navegadores incluyen el constructor <code>CustomError</code> en el seguimiento de la pila cuando se utilizan clases de ES2015.</p>
 </div>
 
-<pre class="brush: js notranslate">class CustomError extends Error {
+<pre class="brush: js">class CustomError extends Error {
   constructor(foo = 'bar', ...params) {
     // Pasa los argumentos restantes (incluidos los específicos del proveedor) al constructor padre
     super(...params)
@@ -155,7 +155,7 @@ try {
 <p><strong>Todos</strong> los navegadores incluyen el constructor <code>CustomError</code> en el seguimiento de la pila cuando se usa una declaración de prototipo.</p>
 </div>
 
-<pre class="brush: js notranslate">function CustomError(foo, message, fileName, lineNumber) {
+<pre class="brush: js">function CustomError(foo, message, fileName, lineNumber) {
   var instance = new Error(message, fileName, lineNumber);
   instance.name = 'CustomError';
   instance.foo = foo;

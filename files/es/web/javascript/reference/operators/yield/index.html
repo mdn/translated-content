@@ -21,7 +21,7 @@ original_slug: Web/JavaScript/Referencia/Operadores/yield
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">[<var>rv</var>] = <strong>yield</strong> [<var>expression</var>]</pre>
+<pre class="syntaxbox">[<var>rv</var>] = <strong>yield</strong> [<var>expression</var>]</pre>
 
 <dl>
  <dt><code><var>expression</var></code> {{optional_inline}}</dt>
@@ -63,7 +63,7 @@ original_slug: Web/JavaScript/Referencia/Operadores/yield
 
 <p>El siguiente código es la declaración de una función generadora de ejemplo.</p>
 
-<pre class="brush: js notranslate">function* countAppleSales () {
+<pre class="brush: js">function* countAppleSales () {
   let saleList = [3, 7, 5]
   for (let i = 0; i &lt; saleList.length; i++) {
     yield saleList[i]
@@ -72,7 +72,7 @@ original_slug: Web/JavaScript/Referencia/Operadores/yield
 
 <p>Una vez que se define una función generadora, se puede usar construyendo un iterador como el siguiente.</p>
 
-<pre class="brush: js notranslate">let appleStore = countAppleSales()  // Generator { }
+<pre class="brush: js">let appleStore = countAppleSales()  // Generator { }
 console.log(appleStore.next())      // { value: 3, done: false }
 console.log(appleStore.next())      // { value: 7, done: false }
 console.log(appleStore.next())      // { value: 5, done: false }
@@ -80,7 +80,7 @@ console.log(appleStore.next())      // { value: undefined, done: true }</pre>
 
 <p>También puedes enviar un valor con <code>next(value)</code> al generador. '<code>step</code>' se evalúa como un valor de retorno en esta sintaxis [<var>rv</var>] = <strong>yield</strong> [<var>expression</var>]</p>
 
-<pre class="brush: js notranslate">function* counter(value) {
+<pre class="brush: js">function* counter(value) {
  let step;
 
  while (true) {

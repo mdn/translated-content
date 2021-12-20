@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><code>new WeakMap([iterable])
+<pre class="syntaxbox"><code>new WeakMap([iterable])
 </code></pre>
 
 <h3 id="Parámetros">Parámetros</h3>
@@ -59,7 +59,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap
 
 <h3 id="Usando_WeakMap">Usando <code>WeakMap</code></h3>
 
-<pre class="brush: js notranslate">var wm1 = new WeakMap(),
+<pre class="brush: js">var wm1 = new WeakMap(),
     wm2 = new WeakMap(),
     wm3 = new WeakMap();
 var o1 = {},
@@ -92,7 +92,7 @@ wm1.has(o1);   // false
 
 <p>Con propósito expositivo, el siguiente ejemplo usa el nuevo costruct class  de ECMAScript 2015, que actualmente no ha sido implementado de forma amplia.</p>
 
-<pre class="brush: js notranslate">class ClearableWeakMap {
+<pre class="brush: js">class ClearableWeakMap {
   constructor(init) {
     this._wm = new WeakMap(init)
   }

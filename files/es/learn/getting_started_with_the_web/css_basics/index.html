@@ -22,7 +22,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 <p>Como HTML, CSS (<em>Cascading Style Sheets</em>) u Hojas de estilo en cascada en español, no es realmente un lenguaje de programación, tampoco es un lenguaje de marcado. Es un <em>lenguaje de hojas de estilo,</em> es decir, te permite aplicar estilos de manera selectiva a elementos en documentos HTML. Por ejemplo, para seleccionar <strong>todos</strong> los elementos de párrafo en una página HTML y volver el texto dentro de ellos de color rojo, has de escribir este CSS:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   color: red;
 }</pre>
 
@@ -33,7 +33,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 <ol>
  <li>Abre tu archivo <code>index.html</code> y pega la siguiente línea en algún lugar dentro del {{htmlelement("head")}}, es decir, entre las etiquetas <code>&lt;head&gt;</code> y <code>&lt;/head&gt;</code>:
 
-  <pre class="brush: html notranslate">&lt;link href="styles/style.css" rel="stylesheet" type="text/css"&gt;</pre>
+  <pre class="brush: html">&lt;link href="styles/style.css" rel="stylesheet" type="text/css"&gt;</pre>
  </li>
  <li>Guarda el archivo <code>index.html</code> y cárgalo en tu navegador. Debes ver algo como esto:</li>
 </ol>
@@ -69,7 +69,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 <p>De este modo para modificar varios valores de propiedad a la vez, solo necesitas escribirlos separados por punto y coma (;), así:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   color: red;
   width: 500px;
   border: 1px solid black;
@@ -79,7 +79,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 <p>También puedes seleccionar varios elementos y aplicar una sola regla a todos ellos. Incluye varios selectores separados por comas (,). Por ejemplo:</p>
 
-<pre class="brush: css notranslate">p,li,h1 {
+<pre class="brush: css">p,li,h1 {
   color: red;
 }</pre>
 
@@ -138,13 +138,13 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 <ol>
  <li>Antes que nada, regresa y busca las <a href="/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Fuente">fuentes de Google Fonts</a> que guardaste en un lugar seguro. Agrega el elemento {{htmlelement("link")}}<code>...</code> en algún lugar del <em>head</em> de tu archivo <code>index.html</code> (de nuevo, en cualquier lugar entre las etiquetas {{htmlelement("head")}} y <code>&lt;/head&gt;</code>). Debe verse algo así:
 
-  <pre class="brush: html notranslate">&lt;link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet" type="text/css"&gt;</pre>
+  <pre class="brush: html">&lt;link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet" type="text/css"&gt;</pre>
  </li>
  <li>Luego, borra la regla existente en tu archivo <code>style.css</code>. Fue una buena prueba, pero el texto en rojo en realidad no se ve muy bien.</li>
  <li>
   <p>Añade las siguientes líneas (que se muestran a continuación), sustituyendo la asignación de <code>font-family</code> por tu selección de <code>font-family</code> que obtuviste en <a href="/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Fuente">¿Cuál será la apariencia de tu sitio Web?</a> La propiedad <code>font-family</code> se refiere a la(s) fuente(s) que deseas usar en tu texto. Esta regla define una fuente base global y un tamaño de fuente para usar en toda la página. Dado que {{htmlelement("html")}} es el elemento primario (o padre) de toda la página, todos los elementos contenidos dentro de él heredan las propiedades <code>font-size</code> y <code>font-family</code>):</p>
 
-  <pre class="brush: css notranslate">html {
+  <pre class="brush: css">html {
   font-size: 10px; /* px quiere decir 'píxeles': el tamaño de la fuente base es ahora de 10 píxeles de altura */
   font-family: "Open Sans", sans-serif; /* Este debe ser el resto del resultado que obtuviste de Google fonts */
 }</pre>
@@ -154,7 +154,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
   </div>
  </li>
  <li>Ahora escoge el tamaño de fuente para los elementos que contienen texto dentro del cuerpo del HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, y {{htmlelement("p")}}). También centra el texto del título, escoge un ancho de línea y espaciado entre letras en el contenido del texto para hacerlo un poco más legible:
-  <pre class="brush: css notranslate">h1 {
+  <pre class="brush: css">h1 {
   font-size: 60px;
   text-align: center;
 }
@@ -201,7 +201,7 @@ p, li {
 
 <h3 id="Cambiar_el_color_de_la_página">Cambiar el color de la página</h3>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   background-color: #00539F;
 }</pre>
 
@@ -209,7 +209,7 @@ p, li {
 
 <h3 id="Dar_estilo_al_cuerpo_del_documento">Dar estilo al cuerpo del documento</h3>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 600px;
   margin: 0 auto;
   background-color: #FF9500;
@@ -229,7 +229,7 @@ p, li {
 
 <h3 id="Posicionar_y_dar_estilo_al_título_principal_de_la_página">Posicionar y dar estilo al título principal de la página</h3>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   margin: 0;
   padding: 20px 0;
   color: #00539F;
@@ -253,7 +253,7 @@ p, li {
 
 <h3 id="Centrar_la_imagen">Centrar la imagen</h3>
 
-<pre class="brush: css notranslate">img {
+<pre class="brush: css">img {
   display: block;
   margin: 0 auto;
 }</pre>

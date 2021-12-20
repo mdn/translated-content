@@ -156,12 +156,12 @@ original_slug: Web/JavaScript/Vectores_tipados
 
 <p>En primer lugar, necesitaremos crear un búfer, aquí con una longitud fija de 16 bytes:</p>
 
-<pre class="brush:js notranslate">let buffer = new ArrayBuffer(16);
+<pre class="brush:js">let buffer = new ArrayBuffer(16);
 </pre>
 
 <p>En este punto, tenemos una porción de memoria cuyos bytes están todos preiniciados a 0. Sin embargo, no hay mucho que podamos hacer con él. Podemos confirmar que de hecho tiene 16 bytes de longitud, y eso es todo:</p>
 
-<pre class="brush:js notranslate">if (buffer.byteLength === 16) {
+<pre class="brush:js">if (buffer.byteLength === 16) {
   console.log("Sí, son 16 bytes");
 } else {
   console.log("¡Oh no, es del tamaño incorrecto!");
@@ -170,12 +170,12 @@ original_slug: Web/JavaScript/Vectores_tipados
 
 <p>Antes de que podamos trabajar realmente con este búfer, necesitamos crear una vista. Creemos una vista que trate los datos en el búfer como un arreglo de enteros de 32 bits con signo:</p>
 
-<pre class="brush:js notranslate">let int32View = new Int32Array(buffer);
+<pre class="brush:js">let int32View = new Int32Array(buffer);
 </pre>
 
 <p>Ahora podemos acceder a los campos del arreglo como un arreglo normal:</p>
 
-<pre class="brush:js notranslate">for (let i = 0; i &lt; int32View.length; i++) {
+<pre class="brush:js">for (let i = 0; i &lt; int32View.length; i++) {
   int32View[i] = i * 2;
 }
 </pre>
@@ -186,7 +186,7 @@ original_slug: Web/JavaScript/Vectores_tipados
 
 <p>Las cosas comienzan a ponerse realmente interesantes cuando consideras que puedes crear múltiples vistas sobre los mismos datos. Por ejemplo, dado el código anterior, podemos continuar así:</p>
 
-<pre class="brush:js notranslate">let int16View = new Int16Array(buffer);
+<pre class="brush:js">let int16View = new Int16Array(buffer);
 
 for (let i = 0; i &lt; int16View.length; i++) {
   console.log('Entrada ' + i + ': ' + int16View[i]);
@@ -197,7 +197,7 @@ for (let i = 0; i &lt; int16View.length; i++) {
 
 <p>Sin embargo, puedes dar un paso más. Considera esto:</p>
 
-<pre class="brush:js notranslate">int16View[0] = 32;
+<pre class="brush:js">int16View[0] = 32;
 console.log('La entrada 0 en el arreglo de 32 bits ahora es ' + int32View[0]);
 </pre>
 
@@ -211,7 +211,7 @@ console.log('La entrada 0 en el arreglo de 32 bits ahora es ' + int32View[0]);
 
 <p>Considera esta estructura C:</p>
 
-<pre class="brush:cpp notranslate">struct someStruct {
+<pre class="brush:cpp">struct someStruct {
   unsigned long id;
   char username[16];
   float amountDue;
@@ -219,7 +219,7 @@ console.log('La entrada 0 en el arreglo de 32 bits ahora es ' + int32View[0]);
 
 <p>Puedes acceder a un búfer que contiene datos en un formato como este:</p>
 
-<pre class="brush:js notranslate">let buffer = new ArrayBuffer(24);
+<pre class="brush:js">let buffer = new ArrayBuffer(24);
 
 // ... lee los datos en el búfer ...
 
@@ -235,7 +235,7 @@ let amountDueView = new Float32Array(buffer, 20, 1);</pre>
 
 <p>Después de procesar un arreglo con tipo, a veces es útil volver a convertirla en un arreglo normal para beneficiarse del prototipo {{jsxref("Array")}}. Esto se puede hacer usando {{JSxRef("Array.from()")}}, o usando el siguiente código donde <code>Array.from()</code> no es compatible.</p>
 
-<pre class="brush:js notranslate">let typedArray = new Uint8Array([1, 2, 3, 4]),
+<pre class="brush:js">let typedArray = new Uint8Array([1, 2, 3, 4]),
     normalArray = Array.prototype.slice.call(typedArray);
 normalArray.length === 4;
 normalArray.constructor === Array;

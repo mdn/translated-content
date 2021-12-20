@@ -23,7 +23,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Boolean
 
 <p><strong>Cualquier</strong> objeto cuyo valor no sea {{jsxref("undefined")}} o {{jsxref("null")}}, incluido un objeto <code>Boolean</code> cuyo valor es <code>false</code>, se evalúa como <code>true</code> cuando se pasa a una declaración condicional. Por ejemplo, la condición en la siguiente declaración {{jsxref("Statements/if...else", "if")}} se evalúa como <code>true</code>:</p>
 
-<pre class="brush: js notranslate">var x = new Boolean(false);
+<pre class="brush: js">var x = new Boolean(false);
 if (x) {
   // este código se ejecuta
 }
@@ -31,7 +31,7 @@ if (x) {
 
 <p>Este comportamiento no se aplica a los <code>Boolean</code> primitivos. Por ejemplo, la condición en la siguiente instrucción {{jsxref("Statements/if...else", "if")}} se evalúa como <code>false</code>:</p>
 
-<pre class="brush: js notranslate">var x = false;
+<pre class="brush: js">var x = false;
 if (x) {
   // este código no se ejecuta
 }
@@ -39,14 +39,14 @@ if (x) {
 
 <p>No utilices un objeto <code>Boolean</code> para convertir un valor no booleano en un valor booleano. Para realizar esta tarea, en su lugar, usa <code>Boolean</code> como función, o un <a href="/es/docs/Web/JavaScript/Reference/Operators/Logical_NOT">operador <code>NOT</code> doble</a>:</p>
 
-<pre class="brush: js notranslate">var x = Boolean(expression);     // usa esta...
+<pre class="brush: js">var x = Boolean(expression);     // usa esta...
 var x = !!(expression);          // ... o esta
 var x = new Boolean(expression); // ¡no uses esta!
 </pre>
 
 <p>Si especificas cualquier objeto, incluido un objeto <code>Boolean</code> cuyo valor es <code>false</code>, como valor inicial de un objeto <code>Boolean</code>, el nuevo objeto <code>Boolean</code> tiene un valor de <code>true</code>.</p>
 
-<pre class="brush: js notranslate">var myFalse = new Boolean(false);   // valor inicial de false
+<pre class="brush: js">var myFalse = new Boolean(false);   // valor inicial de false
 var g = Boolean(myFalse);           // valor inicial de true
 var myString = new String('Hola');  // objeto string
 var s = Boolean(myString);          // valor inicial de true
@@ -78,7 +78,7 @@ var s = Boolean(myString);          // valor inicial de true
 
 <h3 id="Creación_de_objetos_Boolean_con_un_valor_inicial_de_false">Creación de objetos <code>Boolean</code> con un valor inicial de <code>false</code></h3>
 
-<pre class="brush: js notranslate">var bNoParam = new Boolean();
+<pre class="brush: js">var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
 var bEmptyString = new Boolean('');
@@ -87,7 +87,7 @@ var bfalse = new Boolean(false);
 
 <h3 id="Creación_de_objetos_Boolean_con_un_valor_inicial_de_true">Creación de objetos <code>Boolean</code> con un valor inicial de <code>true</code></h3>
 
-<pre class="brush: js notranslate">var btrue = new Boolean(true);
+<pre class="brush: js">var btrue = new Boolean(true);
 var btrueString = new Boolean('true');
 var bfalseString = new Boolean('false');
 var bSuLin = new Boolean('Su Lin');

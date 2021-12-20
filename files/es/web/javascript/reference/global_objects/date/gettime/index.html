@@ -21,7 +21,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getTime
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.getTime()</code>
+<pre class="syntaxbox"><code><var>dateObj</var>.getTime()</code>
 </pre>
 
 <h3 id="Returns" name="Returns">Valor devuelto</h3>
@@ -34,7 +34,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getTime
 
 <p>Construir un objeto de fecha con el mismo valor de tiempo.</p>
 
-<pre class="brush: js notranslate">var birthday = new Date(1994, 12, 10);
+<pre class="brush: js">var birthday = new Date(1994, 12, 10);
 var copy = new Date();
 copy.setTime(birthday.getTime());
 </pre>
@@ -43,7 +43,7 @@ copy.setTime(birthday.getTime());
 
 <p>Restando dos llamadas <code>getTime() </code>subsiguientes en objetos {{jsxref("Global_Objects/Date", "Date")}} recién generados, dé el intervalo de tiempo entre estas dos llamadas. Esto se puede utilizar para calcular el tiempo de ejecución de algunas operaciones.</p>
 
-<pre class="brush: js notranslate">var end, start;
+<pre class="brush: js">var end, start;
 
 start = new Date();
 for (var i = 0; i &lt; 1000; i++) {

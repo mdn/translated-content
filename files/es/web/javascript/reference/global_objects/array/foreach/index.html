@@ -21,7 +21,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/forEach
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><var>arr</var>.forEach(function <var>callback(currentValue, index, array) {
+<pre class="syntaxbox"><var>arr</var>.forEach(function <var>callback(currentValue, index, array) {
     // tu iterador
 }</var>[, <var>thisArg</var>]);</pre>
 
@@ -76,7 +76,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/forEach
 
 <p>El siguiente código imprime una línea por cada elemento en un array:</p>
 
-<pre class="brush:js notranslate">function logArrayElements(element, index, array) {
+<pre class="brush:js">function logArrayElements(element, index, array) {
     console.log("a[" + index + "] = " + element);
 }
 // Nótese que se evita el 2° índice ya que no hay ningún elemento en esa posición del array
@@ -91,7 +91,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/forEach
 
 <p>El siguiente ejemplo actualiza las propiedades del objeto por cada entrada en el array:</p>
 
-<pre class="brush:js notranslate">function Counter() {
+<pre class="brush:js">function Counter() {
   this.sum = 0;
   this.count = 0;
 }
@@ -116,7 +116,7 @@ obj.sum
 
 <p>El siguiente código crea una copia de un objeto dado. Hay diferentes formas de crear una copia de un objeto, ésta es sólo una de ellas y sirve para explicar cómo funciona <code>Array.prototype.forEach </code>utilizando funciones <code>Object.*</code> de ECMAScript 5.</p>
 
-<pre class="brush: js notranslate">function copy(o){
+<pre class="brush: js">function copy(o){
   var copy = Object.create( Object.getPrototypeOf(o) );
   var propNames = Object.getOwnPropertyNames(o);
 
@@ -136,7 +136,7 @@ var o2 = copy(o1); // o2 ahora se parece a o1
 
 <p>El siguiente ejemplo muestra por consola "uno", "dos", "cuatro". Cuando se alcanza el registro que contiene el valor "dos", el primer registro del array se desplaza, lo que hace que los registros restantes se muevan una posición. Debido a que el elemento "cuatro" está ahora en una posición anterior en el array, "tres" se omitirá. <code>forEach()</code> no hace una copia del array antes de iterar.</p>
 
-<pre class="brush:js notranslate">var words = ['uno', 'dos', 'tres', 'cuatro'];
+<pre class="brush:js">var words = ['uno', 'dos', 'tres', 'cuatro'];
 words.forEach(function(word) {
   console.log(word);
   if (word === 'dos') {
@@ -152,7 +152,7 @@ words.forEach(function(word) {
 
 <p><code>forEach</code> se agregó de manera reciente al estándar ECMA-262; así que puede no estar presente en otras implementaciones del estándar. Se puede asegurar el uso del <span style="font-family: consolas,monaco,andale mono,monospace;">forEach</span> con tan solo agregar el siguiente código al inicio de los scripts, permitiendo así el uso de <span style="font-family: consolas,monaco,andale mono,monospace;">forEach</span> en implementaciones que no lo soportan de manera nativa. El algoritmo es el mismo que se especifica en la quinta versión de ECMA-262, asumiendo que {{jsxref("Object")}} y {{jsxref("TypeError")}} tienen sus valores originales y que <span style="font-family: consolas,monaco,andale mono,monospace;">callback.call </span>evalúa el valor original de {{jsxref("Function.prototype.call()")}}.</p>
 
-<pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.18
+<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: http://es5.github.com/#x15.4.4.18
 if (!Array.prototype.forEach) {
 

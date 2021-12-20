@@ -126,7 +126,7 @@ with open('/etc/secret_key.txt') as f:
 
 <p><span>Abra </span><strong>/locallibrary/settings.py</strong><span>, deshabilite la configuración original de l </span><code>SECRET_KEY</code><span> y añada las nuevas líneas tal como se muestran abajo en <strong>negrita</strong>. Durante el desarrollo no se especificará ninguna variable de entorno para la clave, por lo que se usará el valor por defecto (no debería importar qué clave utilizas aquí, o si la clave tiene "fugas", dado que no la utilizarás en producción).</span></p>
 
-<pre class="brush: python notranslate"># SECURITY WARNING: keep the secret key used in production secret!
+<pre class="brush: python"># SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'cg#p$g+j9tax!#a3cup@1$8obt2_+&amp;k3q+pmu)5%asj6yjpkag'
 <strong>import os</strong>
 <strong>SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&amp;k3q+pmu)5%asj6yjpkag')</strong>
@@ -134,7 +134,7 @@ with open('/etc/secret_key.txt') as f:
 
 <p>A continuación, comenta el ajuste de <code>DEBUG</code> existente y añade la nueva línea que se muestra abajo.</p>
 
-<pre class="brush: python notranslate"># SECURITY WARNING: don't run with debug turned on in production!
+<pre class="brush: python"># SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 <strong>DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )</strong>
 </pre>
@@ -147,7 +147,7 @@ with open('/etc/secret_key.txt') as f:
 
 <p><a href="https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/">Deployment checklist</a> (Django docs) proporciona una lista de comprobación completa de ajustes que podrías querer cambiar. Puedes también sacar una lista de algunos de ellos usando el siguiente comando de terminal:</p>
 
-<pre class="brush: python notranslate">python3 manage.py check --deploy
+<pre class="brush: python">python3 manage.py check --deploy
 </pre>
 
 <h2 id="Ejemplo_Instalando_LocalLibrary_en_Heroku">Ejemplo: Instalando LocalLibrary en Heroku</h2>
@@ -234,11 +234,11 @@ with open('/etc/secret_key.txt') as f:
 <ol>
  <li>Instala <em>git</em> para tu computadora local (puedes encontrar versiones para distintas plataformas <a href="https://git-scm.com/downloads">here</a>).</li>
  <li>Abre una ventana/terminal de comandos y clona tu repositorio usando la URL que copiaste anteriormente:
-  <pre class="brush: bash notranslate">git clone https://github.com/<strong><em>&lt;your_git_user_id&gt;</em></strong>/django_local_library.git
+  <pre class="brush: bash">git clone https://github.com/<strong><em>&lt;your_git_user_id&gt;</em></strong>/django_local_library.git
 </pre>
   Esto creará el repositorio debajo del punto actual.</li>
  <li>Navega dentro del nuevo repositorio.
-  <pre class="brush: bash notranslate">cd django_local_library.git</pre>
+  <pre class="brush: bash">cd django_local_library.git</pre>
  </li>
 </ol>
 
@@ -254,7 +254,7 @@ with open('/etc/secret_key.txt') as f:
 *.sqlite3</pre>
  </li>
  <li>Abre una ventana/terminal de comandos y utiliza el comando <code>add</code> para añadir todos los archivos a git.
-  <pre class="brush: bash notranslate">git add -A
+  <pre class="brush: bash">git add -A
 </pre>
  </li>
  <li>Utiliza el comando status para comprobar que todos los archivos que vas a añadir son correctos (quieres incluir ficheros fuentes, no binarios, archivos temporales, etc). Debería tener un aspecto similar a la lista siguiente.
@@ -272,7 +272,7 @@ Changes to be committed:
         new file:   templates/registration/password_reset_form.html</pre>
  </li>
  <li>Si estás conforme, consolida tus archivos en el repositorio local:
-  <pre class="brush: bash notranslate">git commit -m "First version of application moved into github"</pre>
+  <pre class="brush: bash">git commit -m "First version of application moved into github"</pre>
  </li>
  <li>A continuación, sincroniza tu repositorio local con el sitio web Github, usando lo siguiente:
   <pre class="notranslate">git push origin master</pre>
@@ -309,7 +309,7 @@ Changes to be committed:
 
 <p>Instala <em>Gunicorn</em> localmente usando <em>pip</em> en la línea de comandos (que instalamos en <a href="/en-US/docs/Learn/Server-side/Django/development_environment">setting up the development environment</a>):</p>
 
-<pre class="brush: bash notranslate">pip3 install gunicorn
+<pre class="brush: bash">pip3 install gunicorn
 </pre>
 
 <h4 id="Configuración_de_la_Base_de_Datos">Configuración de la Base de Datos</h4>
@@ -351,7 +351,7 @@ DATABASES['default'].update(db_from_env)</pre>
 
 <p>Django utilizará la base de datos SQLite en modo local por defecto, porque la variable de entorno <code>DATABASE_URL</code> no está establecida en nuestro entorno local. Si quieres cambiar a Postgres completamente y usar nuestra base de datos del nivel gratuito de Heroku tanto en desarrollo como en producción, puedes hacerlo. Por ejemplo, para instalar psycopg2 y sus dependencias localmente en un sistema basado en Linux, usarías los siguientes comandos bash/terminal:</p>
 
-<pre class="brush: bash notranslate"><code>sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib</code>
+<pre class="brush: bash"><code>sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib</code>
 pip3 install psycopg2
 </pre>
 
@@ -439,7 +439,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 <p>Los requerimientos Python de tu aplicación web deben ser almacenados en un archivo <strong>requirements.txt</strong> en la carpeta raíz de tu repositorio. Heroku los instalará cuando reconstruya tu entorno. Puedes crear este archivo utilizando <em>pip</em> en la línea de comandos (ejecuta los siguiente en la raíz del repositorio):</p>
 
-<pre class="brush: bash notranslate">pip3 freeze &gt; requirements.txt</pre>
+<pre class="brush: bash">pip3 freeze &gt; requirements.txt</pre>
 
 <p>Después de instalar todas las dependencias anteriores, tu archivo <strong>requirements.txt</strong> debería tener <em>al menos</em> estos objetos (aunque los números de versión pueden ser diferentes). Por favor, borra cualquier otra dependencia no listada abajo, a menos que la hayas añadido explícitamente para esta aplicación.</p>
 
@@ -468,13 +468,13 @@ whitenoise==3.2.2
 
 <p>A continuacion, guardemos nuestros cambios en Github. En el terminal (dentro de nuestro respositorio), introduce los comandos siguientes:</p>
 
-<pre class="brush: python notranslate">git add -A
+<pre class="brush: python">git add -A
 git commit -m "Added files and changes required for deployment to heroku"
 git push origin master</pre>
 
 <p>Antes de continuar, probemos de nuevo nuestro sitio localmente y asegurémonos de que no ha sido afectado por ninguno de los cambios anteriores. Pon en marcha el servidor web de desarrollo de la forma habitual y comprueba que el sitio aún funciona como esperas en tu navegador.</p>
 
-<pre class="brush: bash notranslate">python3 manage.py runserver</pre>
+<pre class="brush: bash">python3 manage.py runserver</pre>
 
 <p>Ya deberíamos estar preparados para empezar a desplegar LocalLibrary en Heroku.</p>
 
@@ -496,14 +496,14 @@ git push origin master</pre>
 
 <p>Una vez instalado el cliente, ya podrás ejecutar comandos. Por ejemplo, para mostrar ayuda en el cliente:</p>
 
-<pre class="brush: bash notranslate">heroku help
+<pre class="brush: bash">heroku help
 </pre>
 
 <h3 id="Crea_y_sube_el_sitio_web">Crea y sube el sitio web</h3>
 
 <p>Para crear la app ejecutamos el comando "create" en el directorio raíz de nuestro repositorio. Esta operación crea un git remoto ("puntero hacia el repositorio remoto") denominado <em>heroku</em> en nuestro entorno git local.</p>
 
-<pre class="brush: bash notranslate">heroku create</pre>
+<pre class="brush: bash">heroku create</pre>
 
 <div class="note">
 <p><strong>Nota:</strong> Puedes nombrar el remoto, si lo deseas, especificando un valor después de "create". Si no, obtendrás un nombre aleatorio. Este nombre es el que se utiliza en la URL por defecto.</p>
@@ -511,19 +511,19 @@ git push origin master</pre>
 
 <p>Podemos a continuación "empujar" (push) nuestra aplicación hacia el respositorio Heroku como se muestra abajo. Este proceso subirá la aplicación, la empaquetará en un dyno, ejecutará collestatic, y arrancará el sitio.</p>
 
-<pre class="brush: bash notranslate">git push heroku master</pre>
+<pre class="brush: bash">git push heroku master</pre>
 
 <p>Si tenemos suerte, la app ya estará "corriendo" en el sitio, pero no estará funcionando correctamente ya que no hemos colocado las tablas que usa nuestra aplicación. Para hacer esto necesitamos utilizar el comando <code>heroku run</code> y arrancar un "<a href="https://devcenter.heroku.com/articles/deploying-python#one-off-dynos">one off dyno</a>" para realizar una operación de migración. Introduce el siguiente comando en el terminal:</p>
 
-<pre class="brush: bash notranslate">heroku run python manage.py migrate</pre>
+<pre class="brush: bash">heroku run python manage.py migrate</pre>
 
 <p>Vamos a necesitar también poder añadir libros y autores, así que vamos a crear nuestro superusuario de administración, de nuevo utilizando un "one-off dyno":</p>
 
-<pre class="brush: bash notranslate">heroku run python manage.py createsuperuser</pre>
+<pre class="brush: bash">heroku run python manage.py createsuperuser</pre>
 
 <p>Una vez llevado a cabo ésto, podremos ver el sitio. Debería funcionar, aunque no tendrá aún ningún libro. Para abrir el navegador hacia el nuevo sitio web, usa el comando:</p>
 
-<pre class="brush: bash notranslate">heroku open</pre>
+<pre class="brush: bash">heroku open</pre>
 
 <p>Crea algunos libros en el sitio de administración, y comprueba que el sitio se comporta tal y como esperas.</p>
 
@@ -531,7 +531,7 @@ git push origin master</pre>
 
 <p>Puedes revisar los add-ons de tu app usando el comando <code>heroku addons</code>. Se listarán todos los addons, su nivel de precio y estado.</p>
 
-<pre class="brush: bash notranslate">&gt;heroku addons
+<pre class="brush: bash">&gt;heroku addons
 
 Add-on                                     Plan       Price  State
 ─────────────────────────────────────────  ─────────  ─────  ───────
@@ -540,7 +540,7 @@ heroku-postgresql (postgresql-flat-26536)  hobby-dev  free   created
 
 <p>Aquí vemos que tenemos un único add-on, la base de datos postgres SQL. Es gratuito, y fue creado automáticamente cuando se creó la aplicación. Puedes abrir una página web en la que examinar con más detalle el add-on de la base de datos (o cualquier otro add-on) utilizando el siguiente comando:</p>
 
-<pre class="brush: bash notranslate">heroku addons:open heroku-postgresql
+<pre class="brush: bash">heroku addons:open heroku-postgresql
 </pre>
 
 <p>Otros comandos te permiten crear, destruir, subir o bajar de versión de los addons (con una sintaxis similar a la de abrir). Para más información, consulta <a href="https://devcenter.heroku.com/articles/managing-add-ons">Managing Add-ons</a> (Heroku docs).</p>
@@ -549,7 +549,7 @@ heroku-postgresql (postgresql-flat-26536)  hobby-dev  free   created
 
 <p>Puedes revisar las variables de configuración para el sitio con el comando <code>heroku config</code>. Abajo puedes comprobar que solo tenemos una variable, <code>DATABASE_URL</code>, usada para configurar nuestra base de datos.</p>
 
-<pre class="brush: bash notranslate">&gt;heroku config
+<pre class="brush: bash">&gt;heroku config
 
 === locallibrary Config Vars
 DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-201-144.compute-1.amazonaws.com:5432/dbftm4qgh3kda3</pre>
@@ -562,7 +562,7 @@ DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-20
 
 <p>Establecemos el valor de la variable <code>DJANGO_SECRET_KEY</code> con el comando <code>config:set</code> (como se muestra abajo). Recuerda usar tu propia clave secreta!</p>
 
-<pre class="brush: bash notranslate">&gt;heroku config:set DJANGO_SECRET_KEY=eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh&amp;=
+<pre class="brush: bash">&gt;heroku config:set DJANGO_SECRET_KEY=eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh&amp;=
 
 Setting DJANGO_SECRET_KEY and restarting locallibrary... done, v7
 DJANGO_SECRET_KEY: eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh
@@ -570,20 +570,20 @@ DJANGO_SECRET_KEY: eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh
 
 <p>De forma similar, establecemos <code>DJANGO_DEBUG</code>:</p>
 
-<pre class="brush: bash notranslate">&gt;heroku config:set <code>DJANGO_DEBUG=''
+<pre class="brush: bash">&gt;heroku config:set <code>DJANGO_DEBUG=''
 
 Setting DJANGO_DEBUG and restarting locallibrary... done, v8</code></pre>
 
 <p>Si visitas ahora el sitio recibirás un error "Bad request", porque es <em>obligatorio</em> establecer <a href="https://docs.djangoproject.com/en/1.10/ref/settings/#allowed-hosts">ALLOWED_HOSTS</a> si tienes establecido <code>DEBUG=False</code> (como medida de seguridad). Abre <strong>/locallibrary/settings.py</strong> y cambia el valor de <code>ALLOWED_HOSTS</code> para incluir la url base de tu app (por ejemplo, 'locallibrary1234.herokuapp.com') y la URL que usas normalmente en tu servidor de desarrollo local.</p>
 
-<pre class="brush: python notranslate">ALLOWED_HOSTS = ['&lt;your app URL without the https:// prefix&gt;.herokuapp.com','127.0.0.1']
+<pre class="brush: python">ALLOWED_HOSTS = ['&lt;your app URL without the https:// prefix&gt;.herokuapp.com','127.0.0.1']
 # For example:
 # ALLOWED_HOSTS = ['fathomless-scrubland-30645.herokuapp.com','127.0.0.1']
 </pre>
 
 <p>A continuación guarda los cambios y consolídalos en tu repo Github y en Heroku.</p>
 
-<pre class="brush: bash notranslate">git add -A
+<pre class="brush: bash">git add -A
 git commit -m 'Update ALLOWED_HOSTS with site and development server URL'
 git push origin master
 git push heroku master</pre>
@@ -596,7 +596,7 @@ git push heroku master</pre>
 
 <p>El cliente Heroku proporciona algunas herramientas para la depuración:</p>
 
-<pre class="brush: bash notranslate">heroku logs  # Show current logs
+<pre class="brush: bash">heroku logs  # Show current logs
 heroku logs --tail # Show current logs and keep updating with any new results
 heroku config:set DEBUG_COLLECTSTATIC=1 # Add additional logging for collectstatic (this tool is run automatically during a build)
 heroku ps   #Display dyno status

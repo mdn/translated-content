@@ -130,12 +130,12 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Math
 
 <p>Como muchos de los objetos incluidos en JavaScript, el objeto <code>Math</code> puede ser extendido con propiedades y métodos personalizados. Para extender el objeto <code>Math</code> no se debe usar 'prototype'. Es posible extender directamente <code>Math</code>:</p>
 
-<pre class="brush: js notranslate">Math.propName = propValue;
+<pre class="brush: js">Math.propName = propValue;
 Math.methodName = methodRef;</pre>
 
 <p>Como demostración, el siguiente ejemplo agrega un método al objeto <code>Math</code> para calcular el <em>máximo común divisor</em> de una lista de argumentos.</p>
 
-<pre class="brush: js notranslate">/* Función variádica -- Retorna el máximo común divisor de una lista de argumentos */
+<pre class="brush: js">/* Función variádica -- Retorna el máximo común divisor de una lista de argumentos */
 Math.gcd = function() {
     if (arguments.length == 2) {
         if (arguments[1] == 0)
@@ -152,7 +152,7 @@ Math.gcd = function() {
 
 <p>Pruébalo:</p>
 
-<pre class="brush: js notranslate">console.log(Math.gcd(20, 30, 15, 70, 40)); // `5`</pre>
+<pre class="brush: js">console.log(Math.gcd(20, 30, 15, 70, 40)); // `5`</pre>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 

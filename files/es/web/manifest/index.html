@@ -7,7 +7,7 @@ translation_of: Web/Manifest
 
 <h2 id="Manifiesto_de_ejemplo">Manifiesto de ejemplo</h2>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "Google I/O 2015",
   "short_name": "I/O 2015",
   "start_url": "./?utm_source=web_app_manifest",
@@ -51,7 +51,7 @@ translation_of: Web/Manifest
 
 <p>Define el color de fondo deseado para la aplicación. Este valor repite lo definido en la hoja de estilos de la aplicación, pero puede ser utilizado por los navegadores para pintar el color de fondo de una app si el manifiesto está disponible antes de que la hoja de estilos se haya cargado. Esto suaviza la transición entre lanzar una aplicación y cargar el contenido de la misma.</p>
 
-<pre class="brush: json notranslate">"background_color": "red"</pre>
+<pre class="brush: json">"background_color": "red"</pre>
 
 <div class="note">
 <p><strong>Note</strong>: El <code>background_color</code> únicamente está destinado a mejorar la experiencia de usuario mientras se carga la aplicación y no se debe usar como color de fondo cuando la hoja de estilos de la aplicación esté disponible.</p>
@@ -61,13 +61,13 @@ translation_of: Web/Manifest
 
 <p>Proporciona una descripción general sobre qué hace la aplicación.</p>
 
-<pre class="brush: json notranslate">"description": "The app that helps you find the best food in town!"</pre>
+<pre class="brush: json">"description": "The app that helps you find the best food in town!"</pre>
 
 <h3 id="dir"><code>dir</code></h3>
 
 <p>Especifica la dirección del texto para <code>name</code>, <code>short_name</code>, y <code>description</code>. Junto con <code>lang</code>, ayuda a representar correctamente los idiomas que se escriben de derecha a izquierda (right-to-left).</p>
 
-<pre class="brush: json notranslate" dir="rtl">"dir": "rtl",
+<pre class="brush: json" dir="rtl">"dir": "rtl",
 "lang": "ar",
 "short_name": "أنا من التطبيق!"</pre>
 
@@ -87,7 +87,7 @@ translation_of: Web/Manifest
 
 <p>Define el modo de visualización preferido para la aplicación web.</p>
 
-<pre class="brush: json notranslate">"display": "standalone"</pre>
+<pre class="brush: json">"display": "standalone"</pre>
 
 <p>Los valores aceptados son:</p>
 
@@ -131,7 +131,7 @@ translation_of: Web/Manifest
 
 <p>Especifica un <em>array</em> de imágenes que pueden servir como iconos de aplicación en diferentes contextos. Por ejemplo, se pueden utilizar para representar la aplicación entre un listado de aplicaciones, o para integrar la aplicación web con un gestor de tareas del sistema operativo y/o las preferencias del sistema.</p>
 
-<pre class="brush: json notranslate">"icons": [
+<pre class="brush: json">"icons": [
   {
     "src": "icon/lowres.webp",
     "sizes": "48x48",
@@ -180,19 +180,19 @@ translation_of: Web/Manifest
 
 <p>Especifica el idioma principal para in the <code>name</code> and <code>short_name</code> members. This value is a string containing a single language tag.</p>
 
-<pre class="brush: json notranslate">"lang": "en-US"</pre>
+<pre class="brush: json">"lang": "en-US"</pre>
 
 <h3 id="name"><code>name</code></h3>
 
 <p>Provides a human-readable name for the application as it is intended to be displayed to the user, for example among a list of other applications or as a label for an icon.</p>
 
-<pre class="brush: json notranslate">"name": "Google I/O 2015" </pre>
+<pre class="brush: json">"name": "Google I/O 2015" </pre>
 
 <h3 id="orientation"><code>orientation</code></h3>
 
 <p>Define la orientación por defecto for all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.</p>
 
-<pre class="brush: json notranslate"><code>​​"orientation": "portrait-primary"</code></pre>
+<pre class="brush: json"><code>​​"orientation": "portrait-primary"</code></pre>
 
 <p>Orientation puede ser alguno de los siguentes valores:</p>
 
@@ -211,7 +211,7 @@ translation_of: Web/Manifest
 
 <p>Especifica un valor booleano que sugiere que el agente de usuario le indique al usuario que las aplicaciones específicas relacionadas (ver abajo) están disponibles, y recomendadas sobre la aplicación web. Esto solamente debería ser usado si la aplicación nativa relacionada realmente ofrece algo que la aplicación web no puede hacer.  </p>
 
-<pre class="brush: json notranslate">"prefer_related_applications": false</pre>
+<pre class="brush: json">"prefer_related_applications": false</pre>
 
 <div class="note">
 <p><strong>Note</strong>: Si se omite, el valor por defecto es <code>false</code>.</p>
@@ -221,7 +221,7 @@ translation_of: Web/Manifest
 
 <p>Specifies an array of "application objects" representing native applications that are installable by, or accessible to, the underlying platform — for example a native Android application obtainable through the Google Play Store. Such applications are intended to be alternatives to the web application that provide similar or equivalent functionality — like the native app version of the web app.</p>
 
-<pre class="brush: json notranslate">"related_applications": [
+<pre class="brush: json">"related_applications": [
   {
     "platform": "play",
     "url": "https://play.google.com/store/apps/details?id=com.example.app1",
@@ -260,26 +260,26 @@ translation_of: Web/Manifest
 
 <p>Define el ámbito de navegación en el contexto de la aplicación web. Esto basicamente restringe qué paginas se pueden ver cuando se aplica el manifiesto. Si el usuario navega fuera del ámbito de la aplicación, continúa como en una web normal. </p>
 
-<pre class="brush: json notranslate">"scope": "/myapp/"</pre>
+<pre class="brush: json">"scope": "/myapp/"</pre>
 
 <h3 id="short_name"><code>short_name</code></h3>
 
 <p>Proporciona un nombre corto para la aplicación. Está destinado para su uso cuando hay poco espacio para mostrar el nombre completo de la aplicación.</p>
 
-<pre class="brush: json notranslate">"short_name": "I/O 2015"
+<pre class="brush: json">"short_name": "I/O 2015"
 </pre>
 
 <h3 id="start_url"><code>start_url</code></h3>
 
 <p>Especifica la URL que se carga cuando el usuario lanza la aplicación desde un dispositivo. </p>
 
-<pre class="brush: json notranslate">"start_url": "./?utm_source=web_app_manifest"</pre>
+<pre class="brush: json">"start_url": "./?utm_source=web_app_manifest"</pre>
 
 <h3 id="theme_color"><code>theme_color</code></h3>
 
 <p>Define el color por defecto para la aplicación. Esto en ocasiones afecta a como se muestra por el OS (e.g., en el lanzador de aplicaciones de Android, el color envuelve la aplicación).  </p>
 
-<pre class="brush: json notranslate">"theme_color": "aliceblue"</pre>
+<pre class="brush: json">"theme_color": "aliceblue"</pre>
 
 <h2 id="Splash_screens">Splash screens</h2>
 

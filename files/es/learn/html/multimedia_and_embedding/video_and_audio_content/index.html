@@ -38,7 +38,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>El elemento {{htmlelement("video")}} nos permite incrustar video fácilmente. Un ejemplo muy simple luce como lo siguiente:</p>
 
-<pre class="brush: html notranslate">&lt;video src="rabbit320.webm" controls&gt;
+<pre class="brush: html">&lt;video src="rabbit320.webm" controls&gt;
   &lt;p&gt;Tu navegador no soporta HTML5 video. Aquí está el &lt;a href="rabbit320.webm"&gt;enlace del video&lt;/a&gt;.&lt;/p&gt;
 &lt;/video&gt;</pre>
 
@@ -95,7 +95,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>Está bien, ¿pero cómo lo hacemos? Miremos el siguiente <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html">ejemplo actualizado (</a><a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html">pruébalo en vivo aquí</a>), o acá:</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
   &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
   &lt;source src="rabbit320.webm" type="video/webm"&gt;
   &lt;p&gt;Su navegador no soporta video HTML5. Aquí hay un &lt;a href="rabbit320.mp4"&gt;enlace al video&lt;/a&gt;.&lt;/p&gt;
@@ -113,7 +113,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>Hay varias otras características que puede incluir en un vídeo HTML5. Eche un vistazo a nuestro tercer ejemplo, a continuación.</p>
 
-<pre class="brush: html notranslate">&lt;video controls width="400" height="400"
+<pre class="brush: html">&lt;video controls width="400" height="400"
        autoplay loop muted
        poster="poster.png"&gt;
   &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
@@ -155,7 +155,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>El elemento  {{htmlelement("audio")}} funciona exactamente de la misma forma que el elemento {{htmlelement("video")}}, con algunas pequeñas diferencias como se describe a continuación. Un ejemplo típico podría ser así:</p>
 
-<pre class="brush: html notranslate">&lt;audio controls&gt;
+<pre class="brush: html">&lt;audio controls&gt;
   &lt;source src="viper.mp3" type="audio/mp3"&gt;
   &lt;source src="viper.ogg" type="audio/ogg"&gt;
   &lt;p&gt;Your browser doesn't support HTML5 audio. Here is a &lt;a href="viper.mp3"&gt;link to the audio&lt;/a&gt; instead.&lt;/p&gt;
@@ -182,14 +182,14 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>En cualquier momento, puede restablecer los medios al principio—incluyendo el proceso de selección de la mejor fuente de medios, si se especifica más de una usando {{HTMLElement("source")}} elementos—llamando al elemento {{domxref("HTMLMediaElement.load", "load()")}} method:</p>
 
-<pre class="brush: js notranslate">var mediaElem = document.getElementById("my-media-element");
+<pre class="brush: js">var mediaElem = document.getElementById("my-media-element");
 mediaElem.load();</pre>
 
 <h3 id="Detecting_track_addition_and_removal">Detecting track addition and removal</h3>
 
 <p>You can monitor the track lists within a media element to detect when tracks are added to or removed from the element's media. For example, you can watch for the {{event("addtrack")}} event being fired on the associated {{domxref("AudioTrackList")}} object (retrieved via {{domxref("HTMLMediaElement.audioTracks")}}) to be informed when audio tracks are added to the media:</p>
 
-<pre class="brush: js notranslate">var mediaElem = document.querySelector("video");
+<pre class="brush: js">var mediaElem = document.querySelector("video");
 mediaElem.audioTracks.onaddtrack = function(event) {
   audioTrackAdded(event.track);
 }
@@ -226,7 +226,7 @@ mediaElem.audioTracks.onaddtrack = function(event) {
 
 <p>A typical WebVTT file will look something like this:</p>
 
-<pre class="eval line-numbers  language-html notranslate"><code class="language-html">WEBVTT
+<pre class="eval line-numbers  language-html"><code class="language-html">WEBVTT
 
 1
 00:00:22.230 --&gt; 00:00:24.606
@@ -248,7 +248,7 @@ This is the second.
 
 <p>Here's an example:</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
     &lt;source src="example.mp4" type="video/mp4"&gt;
     &lt;source src="example.webm" type="video/webm"&gt;
     &lt;track kind="subtitles" src="subtitles_en.vtt" srclang="en"&gt;

@@ -19,7 +19,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/is
 
 <h2 id="Síntaxis">Síntaxis</h2>
 
-<pre class="syntaxbox notranslate"><code>Object.is(<var>valor1</var>, <var>valor2</var>);</code></pre>
+<pre class="syntaxbox"><code>Object.is(<var>valor1</var>, <var>valor2</var>);</code></pre>
 
 <h3 id="Parámetros">Parámetros</h3>
 
@@ -60,7 +60,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/is
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<pre class="brush: js notranslate">Object.is('foo', 'foo');     // true
+<pre class="brush: js">Object.is('foo', 'foo');     // true
 Object.is(window, window);   // true
 
 Object.is('foo', 'bar');     // false
@@ -81,7 +81,7 @@ Object.is(NaN, 0/0);         // true
 
 <p><code>Object.is()</code> es una adición propuesta en el estandar ECMA-262; y como tal, puede no estar presente en todos los navegadores. Para los casos en que no tenga disponible este método, podría utilizar este código haciendolo que se cargue antes que cualquier otro script. Esto permite que puedas utilizar <code>Object.is()</code> en los navegadores que no lo llevan incluído.</p>
 
-<pre class="brush: js notranslate">if (!Object.is) {
+<pre class="brush: js">if (!Object.is) {
   Object.is = function(x, y) {
     // SameValue algorithm
     if (x === y) { // Steps 1-5, 7-10

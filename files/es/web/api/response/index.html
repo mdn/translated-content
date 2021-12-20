@@ -84,7 +84,7 @@ translation_of: Web/API/Response
 
 <p>Observa como ya que lo que estamos solicitando es una imagen, necesitamos ejecutar {{domxref("Body.blob")}} ({{domxref("Response")}} implements body) para darle a la respuesta su tipo MIME correcto.</p>
 
-<pre class="brush: js notranslate">var myImage = document.querySelector('.my-image');
+<pre class="brush: js">var myImage = document.querySelector('.my-image');
 fetch('flowers.jpg').then(function(response) {
   return response.blob();
 }).then(function(blob) {
@@ -94,7 +94,7 @@ fetch('flowers.jpg').then(function(response) {
 
 <p>También puedes usar el constructor {{domxref("Response.Response()")}} para crear tus objetos <code>Response</code> personalizados:</p>
 
-<pre class="brush: js notranslate">var myResponse = new Response();</pre>
+<pre class="brush: js">var myResponse = new Response();</pre>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 

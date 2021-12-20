@@ -32,13 +32,13 @@ translation_of: Web/Web_Components/Using_custom_elements
 
 <p>Entonces por ejemplo, podríamos definir un elemento personalizado <a href="https://mdn.github.io/web-components-examples/word-count-web-component/">word-count</a> como este:</p>
 
-<pre class="brush: js notranslate">customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+<pre class="brush: js">customElements.define('word-count', WordCount, { extends: 'p' });</pre>
 
 <p>El elemento se llama <code>word-count</code>, la clase es <code>WordCount</code>, y extiende el elemento {{htmlelement("p")}}.</p>
 
 <p>Para escribir una clase que defina un elemento personalizado, usamos la sintáxis estándar de ES 2015. Por ejemplo, <code>WordCount</code> está estructurada así:</p>
 
-<pre class="brush: js notranslate">class WordCount extends HTMLParagraphElement {
+<pre class="brush: js">class WordCount extends HTMLParagraphElement {
   constructor() {
     // Siempre llamar primero a super en el constructor
     super();
@@ -70,7 +70,7 @@ translation_of: Web/Web_Components/Using_custom_elements
 
 <p>Para empezar, en un fichero JavaScript se define una clase llamada <code>PopUpInfo</code>, que extiende la clase genérica {{domxref("HTMLElement")}}.</p>
 
-<pre class="brush: js notranslate">class PopUpInfo extends HTMLElement {
+<pre class="brush: js">class PopUpInfo extends HTMLElement {
   constructor() {
     // Siempre llamar primero a super en el constructor
     super();
@@ -85,7 +85,7 @@ translation_of: Web/Web_Components/Using_custom_elements
 
 <p>Dentro del constructor, definimos toda la funcionalidad que tendrá el elemento cuando se instancie. En este caso, adjuntamos una shadow root al elemento personalizado, mediante manipulación de DOM creamos la estructura interna del shadow DOM del elemento — que se adjunta a su vez a la shadow root — y finalmente añadimos algo de estilos CSS al shadow root.</p>
 
-<pre class="brush: js notranslate">// Creamos un shadow root
+<pre class="brush: js">// Creamos un shadow root
 var shadow = this.attachShadow({mode: 'open'});
 
 // Creamos spans
@@ -127,11 +127,11 @@ wrapper.appendChild(info);</pre>
 
 <p>Finalmente, registraremos nuestro elemento en el <code>CustomElementRegistry</code> usando el método <code>define()</code> que mencionamos anteriormente  — en los parámetros especificamos el nombre del elemento, y el nombre de la clase que define su funcionalidad::</p>
 
-<pre class="brush: js notranslate">customElements.define('popup-info', PopUpInfo);</pre>
+<pre class="brush: js">customElements.define('popup-info', PopUpInfo);</pre>
 
 <p>Ahora ya está disponible para usarse en nuestra página. En nuestro HTML, lo usamos de esta manera:</p>
 
-<pre class="brush: html notranslate">&lt;popup-info img="img/alt.png" data-text="Your card validation code (CVC)
+<pre class="brush: html">&lt;popup-info img="img/alt.png" data-text="Your card validation code (CVC)
   is an extra security feature — it is the last 3 or 4 numbers on the
   back of your card."&gt;&lt;/popup-info&gt;</pre>
 
@@ -149,7 +149,7 @@ wrapper.appendChild(info);</pre>
 
 <p>Por ejemplo, echemos un vistazo al código de ejemplo de <a href="https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/">popup-info-box-external-stylesheet</a> (ver el <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js">código fuente</a>):</p>
 
-<pre class="brush: js notranslate">// Creamos elemento link para cargar hoja de estilos externa
+<pre class="brush: js">// Creamos elemento link para cargar hoja de estilos externa
 const linkElem = document.createElement('link');
 linkElem.setAttribute('rel', 'stylesheet');
 linkElem.setAttribute('href', 'style.css');
@@ -167,7 +167,7 @@ shadow.appendChild(linkElem);</pre>
 
 <p>Primero de todo, definimos nuesta clase, de la misma forma que antes:</p>
 
-<pre class="brush: js notranslate">class ExpandingList extends HTMLUListElement {
+<pre class="brush: js">class ExpandingList extends HTMLUListElement {
   constructor() {
     // Siempre llamar primero a super en el constructor
     super();
@@ -182,11 +182,11 @@ shadow.appendChild(linkElem);</pre>
 
 <p>Después, registramos el elemento usando el método <code>define()</code> como antes, excepto que esta vez incluimos un objeto de opciones, en el tercer parámetro, que detalla de qué elemento hereda:</p>
 
-<pre class="brush: js notranslate">customElements.define('expanding-list', ExpandingList, { extends: "ul" });</pre>
+<pre class="brush: js">customElements.define('expanding-list', ExpandingList, { extends: "ul" });</pre>
 
 <p>El uso de un elemento preconstruido en un documento web también es algo distinto:</p>
 
-<pre class="brush: html notranslate">&lt;ul is="expanding-list"&gt;
+<pre class="brush: html">&lt;ul is="expanding-list"&gt;
 
   ...
 
@@ -216,11 +216,11 @@ shadow.appendChild(linkElem);</pre>
 
 <p>Echemos un vistazo a un ejemplo de todo esto.  El código de abajo se ha tomado del ejemplo <a href="https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks">life-cycle-callbacks</a>  (ver el <a href="https://mdn.github.io/web-components-examples/life-cycle-callbacks/">ejemplo en vivo</a>).  Se trata de un ejemplo trivial que simplemente genera un cuadrado coloreado de un tamaño fijo en la página. El elemento personalizado es algo como esto:</p>
 
-<pre class="brush: html notranslate">&lt;custom-square l="100" c="red"&gt;&lt;/custom-square&gt;</pre>
+<pre class="brush: html">&lt;custom-square l="100" c="red"&gt;&lt;/custom-square&gt;</pre>
 
 <p>El constructor de la clase es muy simple — adjuntamos un shadow DOM al elemento, y después adjuntamos un {{htmlelement("div")}} vacío y un elemento {{htmlelement("style")}} al shadow root:</p>
 
-<pre class="brush: js notranslate">var shadow = this.attachShadow({mode: 'open'});
+<pre class="brush: js">var shadow = this.attachShadow({mode: 'open'});
 
 var div = document.createElement('div');
 var style = document.createElement('style');
@@ -229,7 +229,7 @@ shadow.appendChild(div);</pre>
 
 <p>La función clave en este ejemplo es  <code>updateStyle()</code> — esta toma un elemento, obtiene su shadow root, busca su elemento <code>&lt;style&gt;</code>, y añade al estilo {{cssxref("width")}}, {{cssxref("height")}}, y {{cssxref("background-color")}}.</p>
 
-<pre class="brush: js notranslate">function updateStyle(elem) {
+<pre class="brush: js">function updateStyle(elem) {
   const shadow = elem.shadowRoot;
   shadow.querySelector('style').textContent = `
     div {
@@ -242,14 +242,14 @@ shadow.appendChild(div);</pre>
 
 <p>Las actualizaciones se manejan mediande los callbacks que se incluyen en la definición de la clase. El método <code>connectedCallback()</code> se ejecuta cada vez que el elemento se añade al DOM — en este instante ejecutamos la función <code>updateStyle()</code> para asegurarnos que el cuadrado se pinta tal y como se definió en sus atributos:</p>
 
-<pre class="brush: js notranslate">connectedCallback() {
+<pre class="brush: js">connectedCallback() {
   console.log('Custom square element added to page.');
   updateStyle(this);
 }</pre>
 
 <p>Los callbacks <code>disconnectedCallback()</code> y <code>adoptedCallback()</code> simplemente imprimen mensajes a la consola para informarnos cuando el elemento se quita del DOM, o bien se mueve a una página distinta:</p>
 
-<pre class="brush: js notranslate">disconnectedCallback() {
+<pre class="brush: js">disconnectedCallback() {
   console.log('Custom square element removed from page.');
 }
 
@@ -259,14 +259,14 @@ adoptedCallback() {
 
 <p>El callback <code>attributeChangedCallback()</code> se ejecuta cuando los atributos cambian de alguna forma. Como puedes ver en sus propiedades, es posible actuar sobre atributos individuales, teniendo en cuenta su nombre, y sus valores anterior y nuevo.  Sinembargo en este ejemplo, simplemente ejecutamos de nuevo la función <code>updateStyle()</code> para asegurarnos de que el cuadrado tiene el estilo adecuado a sus nuevos valores:</p>
 
-<pre class="brush: js notranslate">attributeChangedCallback(name, oldValue, newValue) {
+<pre class="brush: js">attributeChangedCallback(name, oldValue, newValue) {
   console.log('Custom square element attributes changed.');
   updateStyle(this);
 }</pre>
 
 <p>Nótese que el callback <code>attributeChangedCallback()</code> se dispara cuando un atributo cambia y está observándose el atributo. Esto se hace mediante el método <code>static get observedAttributes()</code> dentro de la clase  - este debería devolver un array que contiene los nombres de los atributos que se deben observar:</p>
 
-<pre class="brush: js notranslate">static get observedAttributes() { return ['c', 'l']; }</pre>
+<pre class="brush: js">static get observedAttributes() { return ['c', 'l']; }</pre>
 
 <p>Este código se coloca en la parte de arriba del constructor en nuestro ejemplo.</p>
 
@@ -280,7 +280,7 @@ adoptedCallback() {
 
 <p>Si necesitas un <code>constructor</code> y una llamada obligatoria a <code>super</code>, recuerda indicar los argumentos opcionales en el constructor y pasarlos a <code>super</code>.</p>
 
-<pre class="brush: js notranslate">class CustomElement extends HTMLElement {
+<pre class="brush: js">class CustomElement extends HTMLElement {
   constructor(...args) {
     const self = super(...args);
     // self functionality written in here
@@ -292,7 +292,7 @@ adoptedCallback() {
 
 <p>Si no necesitar realizar ninguna operación en el constructor, simplemente omítelo, ya que se preservará su comportamiento nativo  (ver a continuación).</p>
 
-<pre class="brush: js notranslate"> constructor(...args) { return super(...args); }
+<pre class="brush: js"> constructor(...args) { return super(...args); }
 </pre>
 
 <h2 id="Transpiladores_vs._clases">Transpiladores vs. clases</h2>

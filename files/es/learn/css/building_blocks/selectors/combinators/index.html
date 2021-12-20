@@ -25,7 +25,7 @@ original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Combinadores
 
 <p>Ya hemos visto los selectores de descendientes en artículos anteriores (selectores con espacios entre ellos):</p>
 
-<pre class="brush: css notranslate">body article p</pre>
+<pre class="brush: css">body article p</pre>
 
 <p>Estos selectores seleccionan elementos que son descendientes de otros selectores. No es necesario que sean hijos directos.</p>
 
@@ -37,7 +37,7 @@ original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Combinadores
 
 <p>El selector de combinación de elementos hijo es un símbolo de «mayor que» (<code>&gt;</code>), que selecciona solo cuando los selectores identifican elementos que son hijos directos. Los elementos descendientes que se encuentran más abajo en la jerarquía no se seleccionan. Por ejemplo, para seleccionar solo los elementos <code>&lt;p&gt;</code> que son hijos directos de elementos <code>&lt;article&gt;</code>:</p>
 
-<pre class="brush: css notranslate">article &gt; p</pre>
+<pre class="brush: css">article &gt; p</pre>
 
 <p>En el ejemplo siguiente hay una lista ordenada anidada dentro de otra lista no ordenada. Utilizamos los selectores de elementos hijo para seleccionar solo los elementos <code>&lt;li&gt;</code> que son hijos directos de <code>&lt;ul&gt;</code> y les aplicamos un borde superior.</p>
 
@@ -49,7 +49,7 @@ original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Combinadores
 
 <p>El selector de elementos hermanos adyacentes (<code>+</code>) se utiliza para seleccionar un elemento que se encuentra justo al lado de otro elemento en el mismo nivel de la jerarquía. Por ejemplo, para seleccionar todos los elementos <code>&lt;img&gt;</code> que aparecen justo después de elementos <code>&lt;p&gt;</code>:</p>
 
-<pre class="brush: css notranslate">p + img</pre>
+<pre class="brush: css">p + img</pre>
 
 <p>El caso de uso más común es modificar el párrafo que va justo después del título, como en el ejemplo siguiente. Vamos a buscar un párrafo que sea directamente adyacente a <code>&lt;h1&gt;</code> y le vamos a aplicar un estilo.</p>
 
@@ -61,7 +61,7 @@ original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Combinadores
 
 <p>Si deseas seleccionar los hermanos de un elemento, incluso si no son directamente adyacentes, puedes utilizar el combinador de hermanos general (<code>~</code>). Por ejemplo, para seleccionar todos los elementos <code>&lt;img&gt;</code> que aparecen <em>después</em> de los elementos <code>&lt;p&gt;</code>, hacemos esto:</p>
 
-<pre class="brush: css notranslate">p ~ img</pre>
+<pre class="brush: css">p ~ img</pre>
 
 <p>En el ejemplo siguiente seleccionamos todos los elementos <code>&lt;p&gt;</code> que vienen después de <code>&lt;h1&gt;</code>, y aunque en el documento también hay un <code>&lt;div&gt;</code>, se selecciona incluso la etiqueta <code>&lt;p&gt;</code> que viene después.</p>
 
@@ -71,7 +71,7 @@ original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Combinadores
 
 <p>Puedes combinar cualquiera de los selectores de los artículos anteriores con selectores de combinación para seleccionar una parte del documento. Por ejemplo, podrías utilizar el código siguiente para seleccionar elementos de una lista con una clase «a» que son hijos directos de <code>&lt;ul&gt;</code>:</p>
 
-<pre class="brush: css notranslate">ul &gt; li[class="a"]  {  }</pre>
+<pre class="brush: css">ul &gt; li[class="a"]  {  }</pre>
 
 <p>Ten cuidado cuando creas largas listas de selectores que seleccionan partes del documento muy específicas. Te será difícil volver a utilizar las reglas CSS porque has definido un selector muy específico para la ubicación del elemento en el marcado.</p>
 

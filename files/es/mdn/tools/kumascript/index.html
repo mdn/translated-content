@@ -192,7 +192,7 @@ Hello #&lt;%= i %&gt;
 
 <p>Se puede buscar si una etiqueta específica existe en una página, así:</p>
 
-<pre class="brush: js notranslate">if (env.tags.indexOf("tag") != −1) {
+<pre class="brush: js">if (env.tags.indexOf("tag") != −1) {
   // The page has the tag "tag"
 }
 </pre>
@@ -201,7 +201,7 @@ Hello #&lt;%= i %&gt;
 
 <p>Se pueden recorrer todas las etiquetas de la página, así:</p>
 
-<pre class="brush: js notranslate">env.tag.forEach(function(tag) {
+<pre class="brush: js">env.tag.forEach(function(tag) {
   // haz cualquier cosa que necesites, tal como:
   if (tag.indexOf("a") == 0) {
     // esta etiqueta empieza con "a" - woohoo!

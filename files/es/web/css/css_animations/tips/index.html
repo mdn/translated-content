@@ -17,7 +17,7 @@ translation_of: Web/CSS/CSS_Animations/Tips
 
 <p>Primero, definamos el HTML para un {{HTMLElement("div")}}  que deseamos animar y un botón que ejecurara (o repetira) la animación.</p>
 
-<pre class="brush: html notranslate">&lt;div class="box"&gt;
+<pre class="brush: html">&lt;div class="box"&gt;
 &lt;/div&gt;
 
 &lt;div class="runButton"&gt;Click me to run the animation&lt;/div&gt;</pre>
@@ -27,7 +27,7 @@ translation_of: Web/CSS/CSS_Animations/Tips
 <p>Ahora definiremos la animación en si usando CSS. Algún CSS que no es importante (el estilo del botón "Run" en sí)  no se muestran aquí, por brevedad.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">.runButton {
+<pre class="brush: css">.runButton {
   cursor: pointer;
   width: 300px;
   border: 1px solid black;
@@ -42,7 +42,7 @@ translation_of: Web/CSS/CSS_Animations/Tips
 }</pre>
 </div>
 
-<pre class="brush: css notranslate">@keyframes colorchange {
+<pre class="brush: css">@keyframes colorchange {
   0% { background: yellow }
   100% { background: blue }
 }
@@ -65,7 +65,7 @@ translation_of: Web/CSS/CSS_Animations/Tips
 
 <p>Ahora veremos el JavaScript que jace el trabajo. La escencia de la técnica esta en la función <code>play()</code>, que se llama cuando el usuario hace clic en  el botón "Run".</p>
 
-<pre class="brush: js notranslate">function play() {
+<pre class="brush: js">function play() {
   document.querySelector(".box").className = "box";
   window.requestAnimationFrame(function(time) {
     window.requestAnimationFrame(function(time) {
@@ -86,7 +86,7 @@ translation_of: Web/CSS/CSS_Animations/Tips
 
 <p>Por supuesto, también necesitamos agregar un controlador de eventos a nuestro botón  "Run" para que en verdad haga algo</p>
 
-<pre class="brush: js notranslate">document.querySelector(".runButton").addEventListener("click", play, false);</pre>
+<pre class="brush: js">document.querySelector(".runButton").addEventListener("click", play, false);</pre>
 
 <h3 id="Resultado">Resultado</h3>
 
@@ -103,7 +103,7 @@ translation_of: Web/CSS/CSS_Animations/Tips
 
 <p>El siguiente demo muestra como puedes lograr las técnicas JavaScript mencionandas anteriormente:</p>
 
-<pre class="brush: css notranslate">.slidein {
+<pre class="brush: css">.slidein {
   animation-duration: 5s;
   animation-name: slidein;
   animation-iteration-count: infinite;
@@ -126,10 +126,10 @@ translation_of: Web/CSS/CSS_Animations/Tips
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;h1 id="watchme"&gt;Click me to stop&lt;/h1&gt;
+<pre class="brush: html">&lt;h1 id="watchme"&gt;Click me to stop&lt;/h1&gt;
 </pre>
 
-<pre class="brush: js notranslate">let watchme = document.getElementById('watchme')
+<pre class="brush: js">let watchme = document.getElementById('watchme')
 
 watchme.className = 'slidein'
 const listener = (e) =&gt; {

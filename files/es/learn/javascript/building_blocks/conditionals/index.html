@@ -86,7 +86,7 @@ else ejecuta este otro código </pre>
 
 <p>Para comprender mejor la sintaxis,  realicemos un ejemplo real. Imagínese a un niño a quien su madre o padre le pide ayuda con una tarea. El padre podría decir: "¡Hola, cariño! Si me ayudas yendo y haciendo las compras, te daré un subsidio adicional para que puedas pagar ese juguete que querías". En JavaScript, podríamos representar esto así:</p>
 
-<pre class="brush: js notranslate">let compraRealizada = false;
+<pre class="brush: js">let compraRealizada = false;
 
 if (compraRealizada === true) {
   let subsidioAdicional = 10;
@@ -106,7 +106,7 @@ if (compraRealizada === true) {
 
 <p>Hay una forma de encadenar  opciones / resultados adicionales extras a <code>if...else</code> — usando <code>else if</code>. Cada opción extra requiere un bloque adicional para poner en medio de bloque <code>if() { ... }</code> y <code>else { ... }</code> — Vea el siguiente ejemplo un poco más complicado, que podría ser parte de una aplicación para un simple pronóstico del tiempo:</p>
 
-<pre class="brush: html notranslate">&lt;label for="clima"&gt;Seleccione el tipo de clima de hoy: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="clima"&gt;Seleccione el tipo de clima de hoy: &lt;/label&gt;
 &lt;select id="clima"&gt;
   &lt;option value=""&gt;--Haga una elección--&lt;/option&gt;
   &lt;option value="soleado"&gt;Soleado&lt;/option&gt;
@@ -117,7 +117,7 @@ if (compraRealizada === true) {
 
 &lt;p&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js notranslate">let seleccionar = document.querySelector('select');
+<pre class="brush: js">let seleccionar = document.querySelector('select');
 let parrafo = document.querySelector('p');
 
 seleccionar.addEventListener('change', establecerClima);
@@ -169,7 +169,7 @@ function establecerClima() {
 
 <p>Queremos hacer una mención especial al probar los valores  (<code>true</code>/<code>false</code>) , y un patrón común que te encontrarás una y otra vez. Cualquier valor que no sea <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code>,  o una cadena vacía string (<code>''</code>) realmente retorna el valor <code>true</code> cuando es probada como una declaración condicional, por lo tanto puedes simplemente usar el nombre de una variable para probar si es  <code>true</code>, o si al menos existe  (i.e. no está definido.) Por ejemplo:</p>
 
-<pre class="brush: js notranslate">let queso = 'Cheddar';
+<pre class="brush: js">let queso = 'Cheddar';
 
 if (queso) {
   console.log('¡Siii! Hay queso para hacer tostadas con queso.');
@@ -181,7 +181,7 @@ if (queso) {
 
 <p>Y, devolviéndonos al ejemplo previo del niño haciendo las compras para su padre, lo podrías haber escrito así:</p>
 
-<pre class="brush: js notranslate">let compraRealizada = false;
+<pre class="brush: js">let compraRealizada = false;
 
 if (compraRealizada) { //no necesitas especificar explícitamente '=== true'
    let subsidioAdicional = 10;
@@ -193,7 +193,7 @@ if (compraRealizada) { //no necesitas especificar explícitamente '=== true'
 
 <p>Está perfectamente permitido poner una declaración  <code>if...else</code> dentro de otra declaración <code>if...else</code> —  para anidarlas. Por ejemplo, podemos actualizar nuestra aplicación del clima para mostrar una serie de opciones dependiendo de cual sea la temperatura:</p>
 
-<pre class="brush: js notranslate">if (elección === 'soleado') {
+<pre class="brush: js">if (elección === 'soleado') {
   if (temperatura &lt; 86) {
     parrafo.textContent = 'Está a ' + temperatura + ' grados afuera — agradable y soleado. Vamos a la playa, o al parque, y comer helado.';
   } else if (temperatura &gt;= 86) {
@@ -214,7 +214,7 @@ if (compraRealizada) { //no necesitas especificar explícitamente '=== true'
 
 <p>Para poner un ejemplo de  AND, el anterior código puede ser reescrito de esta manera:</p>
 
-<pre class="brush: js notranslate">if (eleccion === 'soleado' &amp;&amp; temperatura &lt; 86) {
+<pre class="brush: js">if (eleccion === 'soleado' &amp;&amp; temperatura &lt; 86) {
   parrafo.textContent = 'Está a ' + temperatura + ' grados afuera — agradable y soleado. Vamos a la playa, o al parque, y comer helado.';
 } else if (eleccion === 'soleado' &amp;&amp; temperatura &gt;= 86) {
   parrafo.textContent = 'Está a ' + temperatura + ' grados afuera — ¡QUÉ CALOR! Si deseas salir, asegúrate de aplicarte bloqueador solar.';
@@ -224,7 +224,7 @@ if (compraRealizada) { //no necesitas especificar explícitamente '=== true'
 
 <p>Observemos un ejemplo rápido del operador OR:</p>
 
-<pre class="brush: js notranslate">if (carritoDeHelados || estadoDeLaCasa === 'en llamas') {
+<pre class="brush: js">if (carritoDeHelados || estadoDeLaCasa === 'en llamas') {
   console.log('Debes salir de la casa rápidamente.');
 } else {
   console.log('Es mejor que te quedes dentro de casa');
@@ -232,7 +232,7 @@ if (compraRealizada) { //no necesitas especificar explícitamente '=== true'
 
 <p>El último tipo de operador lógico, NOT, es expresado con el operador <code>!</code>, puede ser usado para negar una expresión. Vamos a combinarlo con el operador OR en el siguiente ejemplo:</p>
 
-<pre class="brush: js notranslate">if (!(carritoDeHelados || estadoDeLaCasa === 'en llamas')) {
+<pre class="brush: js">if (!(carritoDeHelados || estadoDeLaCasa === 'en llamas')) {
   console.log('Es mejor que te quedes dentro de casa');
 } else {
   console.log('Debes salir de la casa rápidamente.');
@@ -242,19 +242,19 @@ if (compraRealizada) { //no necesitas especificar explícitamente '=== true'
 
 <p>Puedes combinar los operadores que quieras dentro de las sentencias, en cualquier estructura. El siguiente ejemplo ejecuta el código dentro del condicional solo si ambas sentencias OR devuelven verdadero, lo que significa que la instrucción general AND devolverá verdadero:</p>
 
-<pre class="brush: js notranslate">if ((x === 5 || y &gt; 3 || z &lt;= 10) &amp;&amp; (logueado || nombreUsuario === 'Steve')) {
+<pre class="brush: js">if ((x === 5 || y &gt; 3 || z &lt;= 10) &amp;&amp; (logueado || nombreUsuario === 'Steve')) {
   // ejecuta el código
 }</pre>
 
 <p>Un error comun cuando se utiliza el operador OR en las declaraciones condicionales es intentar verificar el valor de la variable una sola vez, y luego darle una lista de valores que podrían retornar verdadero separados por  operadores ||. Por ejemplo:</p>
 
-<pre class="example-bad brush: js notranslate">if (x === 5 || 7 || 10 || 20) {
+<pre class="example-bad brush: js">if (x === 5 || 7 || 10 || 20) {
   // ejecuta mi código
 }</pre>
 
 <p>En este caso la condición  <code>if(...)</code>  siempre evaluará a verdadero siendo que  7 (u otro valor que no sea 0) siempre será verdadero. Esta condición lo que realmente está diciendo es que "if x es igual a 5, o 7 es verdadero— lo cual siempre es". ¡Esto no es lógicamente lo que queremos!  Para hacer que esto funcione, tenemos que especificar una prueba completa para cada lado del operador OR:</p>
 
-<pre class="brush: js notranslate">if (x === 5 || x === 7 || x === 10 ||x === 20) {
+<pre class="brush: js">if (x === 5 || x === 7 || x === 10 ||x === 20) {
   // ejecuta mi código
 }</pre>
 
@@ -299,7 +299,7 @@ if (compraRealizada) { //no necesitas especificar explícitamente '=== true'
 
 <p>Let's have a look at a real example — we'll rewrite our weather forecast application to use a switch statement instead:</p>
 
-<pre class="brush: html notranslate">&lt;label for="weather"&gt;Select the weather type today: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="weather"&gt;Select the weather type today: &lt;/label&gt;
 &lt;select id="weather"&gt;
   &lt;option value=""&gt;--Make a choice--&lt;/option&gt;
   &lt;option value="sunny"&gt;Sunny&lt;/option&gt;
@@ -310,7 +310,7 @@ if (compraRealizada) { //no necesitas especificar explícitamente '=== true'
 
 &lt;p&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js notranslate">let select = document.querySelector('select');
+<pre class="brush: js">let select = document.querySelector('select');
 let para = document.querySelector('p');
 
 select.addEventListener('change', setWeather);
@@ -351,7 +351,7 @@ function setWeather() {
 
 <p>Veamos un ejemplo simple:</p>
 
-<pre class="brush: js notranslate">let greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';</pre>
+<pre class="brush: js">let greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';</pre>
 
 <p>Aquí tenemos una variable llamada <code>isBirthday</code> — si esta es <code>true</code>, le damos a nuestro invitado un mensaje de feliz cumpleaños; si no, le damos el saludo diario estándar.</p>
 
@@ -359,7 +359,7 @@ function setWeather() {
 
 <p>No solo puedes establecer valores variables con el operador ternario; También puedes ejecutar funciones o líneas de código — lo que quieras. El siguiente ejemplo muestra un selector de tema simple donde el estilo del sitio se aplica utilizando un operador ternario.</p>
 
-<pre class="brush: html notranslate">&lt;label for="theme"&gt;Select theme: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="theme"&gt;Select theme: &lt;/label&gt;
 &lt;select id="theme"&gt;
   &lt;option value="white"&gt;White&lt;/option&gt;
   &lt;option value="black"&gt;Black&lt;/option&gt;
@@ -367,7 +367,7 @@ function setWeather() {
 
 &lt;h1&gt;This is my website&lt;/h1&gt;</pre>
 
-<pre class="brush: js notranslate">let select = document.querySelector('select');
+<pre class="brush: js">let select = document.querySelector('select');
 let html = document.querySelector('html');
 document.body.style.padding = '10px';
 
@@ -420,7 +420,7 @@ select.onchange = function() {
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 500px;overflow: auto;"&gt;
   &lt;label for="month"&gt;Select month: &lt;/label&gt;
   &lt;select id="month"&gt;
@@ -478,7 +478,7 @@ createCalendar(31,'January');
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.output * {
+<pre class="brush: css">.output * {
   box-sizing: border-box;
 }
 
@@ -517,7 +517,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -612,7 +612,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code 2</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 300px;"&gt;
   &lt;label for="theme"&gt;Select theme: &lt;/label&gt;
   &lt;select id="theme"&gt;
@@ -650,7 +650,7 @@ function update(bgColor, textColor) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -670,7 +670,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;

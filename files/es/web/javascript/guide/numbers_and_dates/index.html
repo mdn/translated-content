@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Guide/Numbers_and_dates
 
 <h3 id="Números_decimales">Números decimales</h3>
 
-<pre class="brush: js notranslate">1234567890
+<pre class="brush: js">1234567890
 42
 
 // Precaución al usar ceros a la izquierda:
@@ -49,7 +49,7 @@ translation_of: Web/JavaScript/Guide/Numbers_and_dates
 
 <p>La sintaxis de números binarios utiliza un cero inicial seguido de una letra "B" latina en minúscula o mayúscula (<code>0b</code> o <code>0B</code>). Si los dígitos después del <code>0b</code> no son 0 o 1, el siguiente {{JSxRef("Objetos_globales/SyntaxError", "SyntaxError")}} se lanza un: "Faltan dígitos binarios después de 0b".</p>
 
-<pre class="brush: js notranslate">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+<pre class="brush: js">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
 var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
@@ -57,27 +57,27 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
 <p>La sintaxis de números octales utiliza un cero a la izquierda. Si los dígitos después del <code>0</code> están fuera del rango de 0 a 7, el número se interpretará como un número decimal.</p>
 
-<pre class="brush: js notranslate">var n = 0755; // 493
+<pre class="brush: js">var n = 0755; // 493
 var m = 0644; // 420
 </pre>
 
 <p>El modo estricto en ECMAScript 5 prohíbe la sintaxis octal. La notación octal no es parte de ECMAScript 5, pero la admiten todos los navegadores al poner como prefijo un cero al número: <code>0644 == 420</code> y <code>"\045" === "%"</code>. En ECMAScript 2015, los números octales son compatibles si tienen el prefijo <code>0o</code>, por ejemplo:</p>
 
-<pre class="brush: js notranslate">var a = 0o10; // ES2015: 8
+<pre class="brush: js">var a = 0o10; // ES2015: 8
 </pre>
 
 <h3 id="Números_hexadecimales">Números hexadecimales</h3>
 
 <p>La sintaxis de números hexadecimales utiliza un cero inicial seguido de una letra "X" latina en minúscula o mayúscula (<code>0x</code> o <code>0X</code>). Si los dígitos después de <code>0x</code> están fuera del rango (0123456789ABCDEF), el siguiente {{JSxRef("Objetos_globales/SyntaxError", "SyntaxError")}} se lanza: "El identificador comienza inmediatamente después del literal numérico".</p>
 
-<pre class="brush: js notranslate">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+<pre class="brush: js">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
 0XA                 // 10
 </pre>
 
 <h3 id="Exponenciación">Exponenciación</h3>
 
-<pre class="brush: js notranslate">1E3   // 1000
+<pre class="brush: js">1E3   // 1000
 2e6   // 2000000
 0.1e2 // 10</pre>
 
@@ -85,7 +85,7 @@ var m = 0644; // 420
 
 <p>El objeto integrado {{JSxRef("Number")}} tiene propiedades para constantes numéricas, como valor máximo, <code>NaN</code> (no un número) e <code>infinity</code>. No puedes cambiar los valores de estas propiedades y las debes usar de la siguiente manera:</p>
 
-<pre class="brush: js notranslate">var biggestNum = Number.MAX_VALUE;
+<pre class="brush: js">var biggestNum = Number.MAX_VALUE;
 var smallestNum = Number.MIN_VALUE;
 var infiniteNum = Number.POSITIVE_INFINITY;
 var negInfiniteNum = Number.NEGATIVE_INFINITY;
@@ -208,12 +208,12 @@ var notANum = Number.NaN;
 
 <p>El objeto integrado {{JSxRef("Math")}} tiene propiedades y métodos para constantes y funciones matemáticas. Por ejemplo, la propiedad <code>PI</code> del objeto <code>Math</code> tiene el valor de <code>pi</code> (3.141...), que usarías en una aplicación como:</p>
 
-<pre class="brush: js notranslate">Math.PI
+<pre class="brush: js">Math.PI
 </pre>
 
 <p>De manera similar, las funciones matemáticas estándar son métodos de <code>Math</code>. Estas incluyen funciones trigonométricas, logarítmicas, exponenciales y otras. Por ejemplo, si deseas utilizar la función trigonométrica «seno», debes escribir</p>
 
-<pre class="brush: js notranslate">Math.sin(1.56)
+<pre class="brush: js">Math.sin(1.56)
 </pre>
 
 <p>Ten en cuenta que todos los métodos trigonométricos de <code>Math</code> toman argumentos en radianes.</p>
@@ -300,7 +300,7 @@ var notANum = Number.NaN;
 
 <p>Para crear un objeto <code>Date</code>:</p>
 
-<pre class="brush: js notranslate">var dateObjectName = new Date([parameters]);
+<pre class="brush: js">var dateObjectName = new Date([parameters]);
 </pre>
 
 <p>donde <code>dateObjectName</code> es el nombre del objeto <code>Date</code> que se está creando; puede ser un objeto nuevo o una propiedad de un objeto existente.</p>
@@ -340,7 +340,7 @@ var notANum = Number.NaN;
 
 <p>Por ejemplo, supongamos que defines la siguiente fecha:</p>
 
-<pre class="brush: js notranslate">var Xmas95 = new Date('December 25, 1995');
+<pre class="brush: js">var Xmas95 = new Date('December 25, 1995');
 </pre>
 
 <p>Entonces, <code>Xmas95.getMonth()</code> devuelve 11 y <code>Xmas95.getFullYear()</code> devuelve 1995.</p>
@@ -349,7 +349,7 @@ var notANum = Number.NaN;
 
 <p>Por ejemplo, el siguiente código muestra el número de días que quedan en el año actual:</p>
 
-<pre class="brush: js notranslate">var today = new Date();
+<pre class="brush: js">var today = new Date();
 var endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // Establece día y mes
 endYear.setFullYear(today.getFullYear()); // Establece año a este año
 var msPerDay = 24 * 60 * 60 * 1000; // Número de milisegundos por día
@@ -361,7 +361,7 @@ var daysLeft = Math.round(daysLeft); // devuelve los días que quedan en el año
 
 <p>El método <code>parse</code> es útil para asignar valores de cadenas de fecha a objetos <code>Date</code> existentes. Por ejemplo, el siguiente código usa <code>parse</code> y <code>setTime</code> para asignar un valor de fecha al objeto <code>IPOdate</code>:</p>
 
-<pre class="brush: js notranslate">var IPOdate = new Date();
+<pre class="brush: js">var IPOdate = new Date();
 IPOdate.setTime(Date.parse('Aug 9, 1995'));
 </pre>
 
@@ -369,7 +369,7 @@ IPOdate.setTime(Date.parse('Aug 9, 1995'));
 
 <p>En el siguiente ejemplo, la función <code>JSClock()</code> devuelve la hora en el formato de un reloj digital.</p>
 
-<pre class="brush: js notranslate">function JSClock() {
+<pre class="brush: js">function JSClock() {
   var time = new Date();
   var hour = time.getHours();
   var minute = time.getMinutes();

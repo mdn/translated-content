@@ -48,7 +48,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Para comenzar, vamos a seleccionar qué elementos se van a presentar como cajas flexibles. Para ello, establecemos un valor especial de {{cssxref ("display")}} en el elemento padre de los elementos que deseas editar. En este caso, queremos compaginar los elementos {{htmlelement ("article")}}, por lo que lo establecemos en {{htmlelement ("section")}} (que se convierte en un contenedor flexible):</p>
 
-<pre class="brush: css notranslate">section {
+<pre class="brush: css">section {
   display: flex;
 }</pre>
 
@@ -83,7 +83,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Añade la declaración siguiente a tu regla {{htmlelement ("section")}}:</p>
 
-<pre class="brush: css notranslate">flex-direction: column;</pre>
+<pre class="brush: css">flex-direction: column;</pre>
 
 <p>Observa que esto vuelve a colocar los elementos en una disposición en columna, al igual que antes de añadir cualquier CSS. Antes de continuar, elimina esta declaración de tu ejemplo.</p>
 
@@ -99,11 +99,11 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Aquí vemos que los elementos hijo se salen de su contenedor. Una forma de solucionar esto es añadir la declaración siguiente a tu regla {{htmlelement ("section")}}:</p>
 
-<pre class="brush: css notranslate">flex-wrap: wrap;</pre>
+<pre class="brush: css">flex-wrap: wrap;</pre>
 
 <p>Añade también la declaración siguiente a tu regla {{htmlelement ("article")}}:</p>
 
-<pre class="brush: css notranslate">flex: 200px;</pre>
+<pre class="brush: css">flex: 200px;</pre>
 
 <p>Pruébalo; observa que al haberlo incluido el aspecto de la compaginación resulta mucho más agradable:</p>
 
@@ -115,12 +115,12 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>En este punto vale la pena señalar que hay una propiedad abreviada para {{cssxref ("flex-direction")}} y {{cssxref ("flex-wrap")}}: {{cssxref ("flex-flow")}}. Así, por ejemplo, puedes reemplazar:</p>
 
-<pre class="brush: css notranslate">flex-direction: row;
+<pre class="brush: css">flex-direction: row;
 flex-wrap: wrap;</pre>
 
 <p>con</p>
 
-<pre class="brush: css notranslate">flex-flow: row wrap;</pre>
+<pre class="brush: css">flex-flow: row wrap;</pre>
 
 <h2 id="Dimensionamiento_flexible_de_elementos_flexibles">Dimensionamiento flexible de elementos flexibles</h2>
 
@@ -128,7 +128,7 @@ flex-wrap: wrap;</pre>
 
 <p>Primero, añade la regla siguiente al final de tu CSS:</p>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   flex: 1;
 }</pre>
 
@@ -136,7 +136,7 @@ flex-wrap: wrap;</pre>
 
 <p>Ahora añade la regla siguiente debajo de la anterior:</p>
 
-<pre class="brush: css notranslate">article:nth-of-type(3) {
+<pre class="brush: css">article:nth-of-type(3) {
   flex: 2;
 }</pre>
 
@@ -144,7 +144,7 @@ flex-wrap: wrap;</pre>
 
 <p>También puedes especificar un valor de tamaño mínimo dentro del valor flexible. Actualiza las reglas para tu artículo de la manera siguiente:</p>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   flex: 1 200px;
 }
 
@@ -180,7 +180,7 @@ article:nth-of-type(3) {
 
 <p>Ahora, añade a la parte inferior del CSS del ejemplo lo siguiente:</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -198,7 +198,7 @@ article:nth-of-type(3) {
 
 <p>Puedes anular el comportamiento {{cssxref ("align-items")}} para elementos flexibles individuales aplicándoles la propiedad {{cssxref ("align-self")}}. Por ejemplo, añade a tu CSS lo siguiente:</p>
 
-<pre class="brush: css notranslate">button:first-child {
+<pre class="brush: css">button:first-child {
   align-self: flex-end;
 }</pre>
 
@@ -222,7 +222,7 @@ article:nth-of-type(3) {
 
 <p>El código para esto es simple: añade el siguiente CSS al código de ejemplo de la barra de controles:</p>
 
-<pre class="brush: css notranslate">button:first-child {
+<pre class="brush: css">button:first-child {
   order: 1;
 }</pre>
 
@@ -237,7 +237,7 @@ article:nth-of-type(3) {
 
 <p>Puedes establecer valores de orden negativos para que los elementos aparezcan antes que los elementos establecidos con el valor 0. Por ejemplo, puedes hacer que el botón «Blush» aparezca al comienzo del eje principal utilizando la regla siguiente:</p>
 
-<pre class="brush: css notranslate">button:last-child {
+<pre class="brush: css">button:last-child {
   order: -1;
 }</pre>
 
@@ -261,13 +261,13 @@ article:nth-of-type(3) {
 
 <p>En primer lugar, configuramos los elementos secundarios de {{htmlelement ("section")}} para que se presenten como cajas flexibles.</p>
 
-<pre class="brush: css notranslate">section {
+<pre class="brush: css">section {
   display: flex;
 }</pre>
 
 <p>A continuación, establecemos algunos valores flexibles en los elementos {{htmlelement ("article")}}. Presta una atención especial a la segunda regla: configuramos el tercer elemento {{htmlelement ("article")}} para que sus hijos también se presenten como elementos flexibles, pero esta vez los disponemos en una columna.</p>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   flex: 1 200px;
 }
 
@@ -280,7 +280,7 @@ article:nth-of-type(3) {
 
 <p>A continuación, seleccionamos el primer elemento {{htmlelement ("div")}}. Primero usamos <code>flex:1 100px;</code> para darle una altura mínima efectiva de 100 px, luego configuramos sus elementos secundarios (los elementos {{htmlelement ("button")}}) para que también se presenten como elementos flexibles. Aquí los colocamos en una fila que los delimita y los alineamos en el centro del espacio disponible, como hicimos en el ejemplo del botón individual que vimos antes.</p>
 
-<pre class="brush: css notranslate">article:nth-of-type(3) div:first-child {
+<pre class="brush: css">article:nth-of-type(3) div:first-child {
   flex:1 100px;
   display: flex;
   flex-flow: row wrap;
@@ -290,7 +290,7 @@ article:nth-of-type(3) {
 
 <p>Por último, establecemos un tamaño para el botón, pero lo más interesante es que le damos un valor flexible de 1 auto. Esto tiene un efecto muy interesante, que puedes observar si cambias el tamaño del ancho de la ventana de tu navegador. Los botones ocuparán tanto espacio como puedan y se asentarán tantos en la misma línea como quepan, pero cuando ya no quepan con comodidad en la misma línea, saltarán de línea y crearán líneas nuevas.</p>
 
-<pre class="brush: css notranslate">button {
+<pre class="brush: css">button {
   flex: 1 auto;
   margin: 5px;
   font-size: 18px;

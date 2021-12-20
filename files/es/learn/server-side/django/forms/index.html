@@ -42,7 +42,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>El formulario es definido en HTML como una colección de elementos dentro de las etiquetas  <code>&lt;form&gt;...&lt;/form&gt;</code>, conteniendo por lo menos un elemento de entrada - <code>input</code> de tipo enviar - <code>type="submit"</code>.</p>
 
-<pre class="brush: html notranslate">&lt;form action="/team_name_url/" method="post"&gt;
+<pre class="brush: html">&lt;form action="/team_name_url/" method="post"&gt;
     &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
     &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
     &lt;input type="submit" value="OK"&gt;
@@ -121,7 +121,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>Para crear un formulario (<code>Form</code>) es necesario importar la libreria f<code>orms</code>, derivada de la clase <code>Form</code>, y tambien declarar los campos del formulario. A continuación se muestra una clase de formulario muy básica para nuestro formulario de renovación de libros de la biblioteca:</p>
 
-<pre class="brush: python notranslate">from django import forms
+<pre class="brush: python">from django import forms
 
 class RenewBookForm(forms.Form):
     renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
@@ -152,7 +152,7 @@ class RenewBookForm(forms.Form):
 
 <p>Django proporciona numerosos lugares donde puede validar sus datos. La forma más fácil de validar un solo campo es anular el método <code>clean_<strong>&lt;fieldname&gt;</strong>()</code> para el campo que desea verificar. Entonces, por ejemplo, podemos validar lo ingresado <code>renewal_date</code> los valores son entre ahora y 4 semanas mediante la implementación <code>clean_<strong>renewal_date</strong>() </code>como se muestra abajo.</p>
 
-<pre class="brush: python notranslate">from django import forms
+<pre class="brush: python">from django import forms
 
 <strong>from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
@@ -193,7 +193,7 @@ class RenewBookForm(forms.Form):
 
 <p>Antes de crear nuestra vista, agreguemos una configuración de URL para la página de renovar libros. Copie la siguiente configuración en la parte inferior de  <strong>locallibrary/catalog/urls.py</strong>.</p>
 
-<pre class="brush: python notranslate">urlpatterns += [
+<pre class="brush: python">urlpatterns += [
     url(r'^book/(?P&lt;pk&gt;[-\w]+)/renew/$', views.renew_book_librarian, name='renew-book-librarian'),
 ]</pre>
 
@@ -211,7 +211,7 @@ class RenewBookForm(forms.Form):
 
 <p>El proceso de renovacion de un libro escribira cambios en nuestra base de datos , entonces por convencion usaremos una peticion de tipo <code>POST</code>. El siguiente fragmento de código muestra el patrón (muy estándar) para este tipo de vista de funciones. </p>
 
-<pre class="brush: python notranslate">from django.shortcuts import get_object_or_404
+<pre class="brush: python">from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 import datetime
@@ -254,7 +254,7 @@ def renew_book_librarian(request, pk):
 
 <p>En la vista, primero usamos el argumento <code>pk</code> argument en  <code>get_object_or_404()</code> para obtener el actual <code>BookInstance</code> (si esto no existe, la vista se cerrará inmediatamente y la página mostrará un error "no encontrado"). Si no se trata de una solicitud POST (manejada por la cláusula else), creamos el formulario predeterminado que pasa un valor inicial (initial) para el campo renewal_date (como se muestra en negrita a continuación, esto es 3 semanas desde la fecha actual)..</p>
 
-<pre class="brush: python notranslate">    book_inst=get_object_or_404(BookInstance, pk = pk)
+<pre class="brush: python">    book_inst=get_object_or_404(BookInstance, pk = pk)
 
     # If this is a GET (or any other method) create the default form
     <strong>else:</strong>
@@ -267,7 +267,7 @@ def renew_book_librarian(request, pk):
 
 <p>Sin embargo, si esto es una solicitud <code>POST</code>, entonces crearemos nuestro objeto <code>form</code> y llenarlo con datos de la solicitud. Este proceso se llama "enlace" (binding) y nos permite validar el formulario. Luego verificamos si el formulario es válido, que ejecuta todo el código de validación en todos los campos, incluido el código genérico para verificar que nuestro campo de fecha sea realmente una fecha válida y nuestra funcion del formulario <code>clean_renewal_date()</code> chequea la fecha que tenga un rango correcto. </p>
 
-<pre class="brush: python notranslate">    book_inst=get_object_or_404(BookInstance, pk = pk)
+<pre class="brush: python">    book_inst=get_object_or_404(BookInstance, pk = pk)
 
     # If this is a POST request then process the Form data
     if request.method == 'POST':
@@ -343,7 +343,7 @@ def renew_book_librarian(request, pk):
 
 <p>Crea la plantilla html referenciada en la vista dentro del directorio (<strong>/catalog/templates/catalog/book_renew_librarian.html</strong>) y copia el codigo a continuacion dentro del archivo que creaste:</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 {% block content %}
 
     &lt;h1&gt;Renew: \{{bookinst.book.title}}&lt;/h1&gt;
@@ -370,7 +370,7 @@ def renew_book_librarian(request, pk):
 
 <p>Todo lo que queda es la variable de la plantilla  <code>\{{form}}</code>, <span class="tlid-translation translation" lang="es"><span title="">que pasamos a la plantilla en el diccionario de contexto.</span> <span title="">Quizás, como era de esperar, cuando se usa como se muestra, proporciona la representación predeterminada de todos los campos del formulario, incluidas sus etiquetas, widgets y texto de ayuda; la representación es la que se muestra a continuación:</span></span></p>
 
-<pre class="brush: html notranslate">&lt;tr&gt;
+<pre class="brush: html">&lt;tr&gt;
   &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
   &lt;td&gt;
     &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required /&gt;
@@ -386,7 +386,7 @@ def renew_book_librarian(request, pk):
 
 <p>Si tuviera que ingresar una fecha no válida, también obtendría una lista de los errores que se muestran en la página (en negrita a continuación).</p>
 
-<pre class="brush: html notranslate">&lt;tr&gt;
+<pre class="brush: html">&lt;tr&gt;
   &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
    &lt;td&gt;
 <strong>      &lt;ul class="errorlist"&gt;
@@ -418,7 +418,7 @@ def renew_book_librarian(request, pk):
 
 <p>Si aceptó el "desafío" en <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Django Tutorial Part 8: User authentication and permissions</a> tendrá una lista de todos los libros prestados en la biblioteca, que solo es visible para el personal de la biblioteca. Podemos agregar un enlace a nuestra página de renovación al lado de cada artículo usando el código de plantilla a continuación.</p>
 
-<pre class="brush: html notranslate">{% if perms.catalog.can_mark_returned %}- &lt;a href="{% url 'renew-book-librarian' bookinst.id %}"&gt;Renew&lt;/a&gt;  {% endif %}</pre>
+<pre class="brush: html">{% if perms.catalog.can_mark_returned %}- &lt;a href="{% url 'renew-book-librarian' bookinst.id %}"&gt;Renew&lt;/a&gt;  {% endif %}</pre>
 
 <div class="note">
 <p><strong>Nota</strong>: Recuerde que su inicio de sesión de prueba deberá tener el permiso "<code>catalog.can_mark_returned</code>" para acceder a la página de renovar el libro (quizás use su cuenta de superusuario).</p>
@@ -448,7 +448,7 @@ def renew_book_librarian(request, pk):
 
 <p>Un <code>ModelForm</code> que contiene el mismo campo que nuestro original <code>RenewBookForm</code>se muestra a continuación. Todo lo que necesita hacer para crear el formulario es agregar <code>class Meta</code> with the associated <code>model</code> (<code>BookInstance</code>) y una lista de los campos del  modelo <code>fields</code>para incluir en el formulario (puede incluir todos los campos usando <code>fields = '__all__'</code>, o puedes usar <code>exclude</code> (en vez de <code>fields</code>) para especificar los campos que no se incluirán del modelo).</p>
 
-<pre class="brush: python notranslate">from django.forms import ModelForm
+<pre class="brush: python">from django.forms import ModelForm
 from .models import BookInstance
 
 class RenewBookModelForm(ModelForm):
@@ -463,7 +463,7 @@ class RenewBookModelForm(ModelForm):
 
 <p>El resto de la información proviene de las definiciones de campo del modelo (por ejemplo, etiquetas, widgets, texto de ayuda, mensajes de error). Si estos no son del todo correctos, entonces podemos anularlos en nuestro <code>class Meta</code>, especificando un diccionario que contiene el campo a cambiar y su nuevo valor. Por ejemplo, en este formulario podríamos querer una etiqueta para nuestro campo de "Fecha de renovación" (en lugar del valor predeterminado basado en el nombre del campo: Fecha de vencimiento), y también queremos que nuestro texto de ayuda sea específico para este caso de uso. El <code>Meta</code> a continuación le muestra cómo anular estos campos, y puede configurar de manera similar <code>widgets</code> y <code>error_messages</code> si los valores predeterminados no son suficientes.</p>
 
-<pre class="brush: python notranslate">class Meta:
+<pre class="brush: python">class Meta:
     model = BookInstance
     fields = ['due_back',]
 <strong>    labels = { 'due_back': _('Renewal date'), }
@@ -472,7 +472,7 @@ class RenewBookModelForm(ModelForm):
 
 <p>Para agregar validación, puede usar el mismo enfoque que para un normal <code>Form</code> — define una función llamada <code>clean_<em>field_name</em>()</code> y coloca (raise)  <code>ValidationError</code> excepciones para valores no válidos. La única diferencia con respecto a nuestro formulario original es que el campo modelo se llama <code>due_back</code> y no "<code>renewal_date</code>".</p>
 
-<pre class="brush: python notranslate">from django.forms import ModelForm
+<pre class="brush: python">from django.forms import ModelForm
 from .models import BookInstance
 
 class RenewBookModelForm(ModelForm):
@@ -513,7 +513,7 @@ class RenewBookModelForm(ModelForm):
 
 <p>Abre el archivo de vistas (<strong>locallibrary/catalog/views.py</strong>) y agregue el siguiente bloque de código al final:</p>
 
-<pre class="brush: python notranslate">from django.views.generic.edit import CreateView, UpdateView, DeleteView
+<pre class="brush: python">from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Author
 
@@ -542,7 +542,7 @@ class AuthorDelete(DeleteView):
 
 <p>Crea la siguiente plantilla <strong>locallibrary/catalog/templates/catalog/author_form.html </strong> y copia el siguiente texto:</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
 
@@ -560,7 +560,7 @@ class AuthorDelete(DeleteView):
 
 <p>La vista "delete" espera encontrar una plantilla con el formato <em>model_name</em><strong>_confirm_delete.html</strong> (de nuevo, puedes cambiar el sufijo usando <code>template_name_suffix</code> en tu vista). Crea la siguiente plantilla <strong>locallibrary/catalog/templates/catalog/author_confirm_delete.html</strong> y copia en el texto a continuación.</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
 
@@ -580,7 +580,7 @@ class AuthorDelete(DeleteView):
 
 <p>Abra el archivo de configuración de URL (<strong>locallibrary/catalog/urls.py</strong>) y agregue la siguiente configuración al final del archivo:</p>
 
-<pre class="brush: python notranslate">urlpatterns += [
+<pre class="brush: python">urlpatterns += [
     url(r'^author/create/$', views.AuthorCreate.as_view(), name='author_create'),
     url(r'^author/(?P&lt;pk&gt;\d+)/update/$', views.AuthorUpdate.as_view(), name='author_update'),
     url(r'^author/(?P&lt;pk&gt;\d+)/delete/$', views.AuthorDelete.as_view(), name='author_delete'),

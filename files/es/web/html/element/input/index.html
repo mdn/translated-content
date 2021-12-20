@@ -309,7 +309,7 @@ original_slug: Web/HTML/Elemento/input
 
 <p>No se puede establecer el valor de un selector de archivos desde un script. Hacer algo como lo siguiente no tiene efecto alguno:</p>
 
-<pre class="brush: js notranslate">var e = getElementById("someFileInputElement");
+<pre class="brush: js">var e = getElementById("someFileInputElement");
 e.value = "foo";
 </pre>
 
@@ -317,7 +317,7 @@ e.value = "foo";
 
 <p>Para que Firefox presente un mensaje de error personalizado cuando la validación de un campo falla, se puede usar el atributo <code>x-moz-errormessage</code>:</p>
 
-<pre class="brush: html notranslate">&lt;input type="email" x-moz-errormessage="Por favor, especifique una dirección de correo válida."&gt;
+<pre class="brush: html">&lt;input type="email" x-moz-errormessage="Por favor, especifique una dirección de correo válida."&gt;
 </pre>
 
 <p>Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros navegadores.</p>
@@ -328,7 +328,7 @@ e.value = "foo";
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Simple input box&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Simple input box&lt;/p&gt;
 &lt;input type="text" value="Type here"&gt;
 </pre>
 
@@ -340,7 +340,7 @@ e.value = "foo";
 
 <h3 id="HTML_2">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;A common form that includes input tags&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;A common form that includes input tags&lt;/p&gt;
 &lt;form action="getform.php" method="get"&gt;
     &lt;label&gt;First name: &lt;input type="text"&gt;&lt;/label&gt;&lt;br&gt;
      &lt;label&gt;Last name: &lt;input type="text"&gt;&lt;/label&gt;&lt;br&gt;
@@ -357,7 +357,7 @@ e.value = "foo";
 
 <p>Se puede usar el atributo {{htmlattrxref("mozactionhint", "input")}} para especificar el texto para la etiqueta de la tecla Enter en el teclado virtual cuando el formulario es mostrado en Firefox mobile. Por ejemplo, para mostrar una etiqueta "Next", se puede hacer esto:</p>
 
-<pre class="brush: html notranslate">&lt;input type="text" mozactionhint="next"&gt;
+<pre class="brush: html">&lt;input type="text" mozactionhint="next"&gt;
 </pre>
 
 <p>El resultado es:</p>

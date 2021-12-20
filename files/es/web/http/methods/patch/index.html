@@ -51,14 +51,14 @@ translation_of: Web/HTTP/Methods/PATCH
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">PATCH /file.txt HTTP/1.1
+<pre class="syntaxbox">PATCH /file.txt HTTP/1.1
 </pre>
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
 <h3 id="Petición">Petición</h3>
 
-<pre class="line-numbers  language-html notranslate">PATCH /file.txt HTTP/1.1
+<pre class="line-numbers  language-html">PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
 If-Match: "e0023aa4e"
@@ -70,7 +70,7 @@ Content-Length: 100
 
 <p>Una respuesta exitosa es indicada con un código de respuesta {{HTTPStatus("204")}}, porque la respuesta no tiene mensaje en el body. (el cual tendría una respuesta con el código 200). Tenga en cuenta que también se pueden utilizar otros códigos.</p>
 
-<pre class="newpage notranslate">HTTP/1.1 204 No Content
+<pre class="newpage">HTTP/1.1 204 No Content
 Content-Location: /file.txt
 ETag: "e0023aa4f"</pre>
 

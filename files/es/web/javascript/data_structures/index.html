@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Data_structures
 
 <p>JavaScript es un lenguaje <em>débilmente tipado</em> y <em>dinámico</em>. Las variables en JavaScript no están asociadas directamente con ningún tipo de valor en particular, y a cualquier variable se le puede asignar (y reasignar) valores de todos los tipos:</p>
 
-<pre class="brush: js notranslate">let foo = 42;    // foo ahora es un número
+<pre class="brush: js">let foo = 42;    // foo ahora es un número
 foo     = 'bar'; // foo ahora es un string
 foo     = true;  // foo ahora es un booleano
 </pre>
@@ -78,7 +78,7 @@ foo     = true;  // foo ahora es un booleano
 
 <p>En la praxis, esto casi no tiene impacto. Por ejemplo, <code>+0 === -0</code> es <code>true</code>. Sin embargo, puedes notar esto cuando divides entre cero:</p>
 
-<pre class="brush: js notranslate">&gt; 42 / +0
+<pre class="brush: js">&gt; 42 / +0
 Infinity
 &gt; 42 / -0
 -Infinity
@@ -102,7 +102,7 @@ Infinity
 
 <p>Este ejemplo demuestra, dónde, incrementando el {{jsxref("Number.MAX_SAFE_INTEGER")}} devuelve el resultado esperado:</p>
 
-<pre class="brush: js notranslate">&gt; const x = 2n ** 53n;
+<pre class="brush: js">&gt; const x = 2n ** 53n;
 9007199254740992n
 &gt; const y = x + 1n;
 9007199254740993n

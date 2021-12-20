@@ -54,7 +54,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing
 
 <p>En este ejemplo, utilizamos un trazado de recorte de forma circular para restringir el dibujo de un conjunto de estrellas aleatorias dentro de una región particular del lienzo.</p>
 
-<pre class="brush: js;highlight[9] notranslate">function dibuja() {
+<pre class="brush: js;highlight[9]">function dibuja() {
   var ctx = document.getElementById('lienzo').getContext('2d');
   ctx.fillRect(0, 0, 150, 150);
   ctx.translate(75, 75);
@@ -103,9 +103,9 @@ function dibujaEstrella(ctx, r) {
 </pre>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="lienzo" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html">&lt;canvas id="lienzo" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js notranslate">dibuja();</pre>
+<pre class="brush: js">dibuja();</pre>
 </div>
 
 <p>En las primeras líneas de código, dibujamos un rectángulo negro del tamaño del lienzo como telón de fondo, luego trasladamos el origen del mismo al centro. A continuación, creamos un trazado de recorte de forma circular, a través de dibujar un arco y mediante la llamada a <code>clip()</code>. El recorte también es parte del estado guardado del lienzo. Si queremos mantener el recorte original, podríamos haber guardado el estado anterior del lienzo justo antes de que creamos el nuevo.</p>

@@ -109,13 +109,13 @@ original_slug: Learn/HTML/Forms/Validacion_formulario_datos
 
 <p>Vamos a empezar con un ejemplo sencillo: una entrada que te permite elegir si prefieres un plátano o una cereza. Este ejemplo implica una simple entrada ({{HTMLElement("input")}}) de texto con una etiqueta ({{htmlelement("label")}}) asociada y un botón de envío ({{htmlelement ("button")}}). Puedes encontrar el código fuente en GitHub en <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> y el ejemplo en vivo a continuación.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="choose"&gt;¿Prefieres un plátano o una cereza?&lt;/label&gt;
   &lt;input id="choose" name="i_like"&gt;
   &lt;button&gt;Enviar&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: 2px dashed red;
 }
 
@@ -133,7 +133,7 @@ input:valid {
 
 <p>Añade un atributo <code>required</code> a tu entrada, como se muestra a continuación.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="choose"&gt;¿Prefieres un plátano o una cereza? (requerido) &lt;/label&gt;
   &lt;input id="choose" name="i_like" <strong>required</strong>&gt;
   &lt;button&gt;Enviar&lt;/button&gt;
@@ -141,7 +141,7 @@ input:valid {
 
 <p>Ten en cuenta el CSS que en el archivo de ejemplo se ha incluido:</p>
 
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: 2px dashed red;
 }
 
@@ -188,7 +188,7 @@ input:valid {
 
 <p>Implementemos un ejemplo. Actualiza tu HTML para añadir un atributo <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> como este:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="choose"&gt;¿Prefieres un plátano o una cereza?&lt;/label&gt;
   &lt;input id="choose" name="i_like" required pattern="[Pp]látano|[Cc]ereza "&gt;
   &lt;button&gt;Enviar&lt;/button&gt;
@@ -196,7 +196,7 @@ input:valid {
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: 2px dashed red;
 }
 
@@ -241,7 +241,7 @@ input:valid {
 
 <p>Ahora elimina el contenido del elemento <code>&lt;body&gt;</code> y reemplázalo con lo siguiente:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="choose"&gt;¿Prefieres un plátano o una cereza?&lt;/label&gt;
     &lt;input type="text" id="choose" name="i_like" required minlength="6" maxlength="6"&gt;
@@ -261,7 +261,7 @@ input:valid {
 </ul>
 
 <div class="hidden">
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: 2px dashed red;
 }
 
@@ -290,7 +290,7 @@ div {
 
 <p>Aquí hay un ejemplo completo que muestra el uso de las funciones de validación integradas en HTML. En primer lugar, un poco de HTML:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;
     &lt;fieldset&gt;
       &lt;legend&gt;¿Tienes carné de conducir?&lt;abbr title="Este campo es obligatorio" aria-label="required"&gt;*&lt;/abbr&gt;&lt;/legend&gt;
@@ -339,7 +339,7 @@ div {
 
 <p>Y ahora, algo de CSS para añadir estilo al HTML:</p>
 
-<pre class="brush: css notranslate">form {
+<pre class="brush: css">form {
   font: 1em sans-serif;
   max-width: 320px;
 }
@@ -436,7 +436,7 @@ input:focus:invalid {
 
 <p>Comenzaremos con un HTML simple (siéntete libre de poner esto en un archivo HTML en blanco; usa una copia nueva de <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> como base, si lo deseas):</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="mail"&gt;Me gustaría que me proporcionara una dirección de correo electrónico:&lt;label&gt;
   &lt;input type="email" id="mail" name="mail"&gt;
   &lt;button&gt;Enviar&lt;/button&gt;
@@ -444,7 +444,7 @@ input:focus:invalid {
 
 <p>Y añade a la página el JavaScript siguiente:</p>
 
-<pre class="brush: js notranslate">const email = document.getElementById("mail");
+<pre class="brush: js">const email = document.getElementById("mail");
 
 email.addEventListener("input", function (event) {
   if (email.validity.typeMismatch) {
@@ -474,7 +474,7 @@ email.addEventListener("input", function (event) {
 
 <p>En primer lugar, el código HTML. Una vez más, siéntete libre de construir esto junto con nosotros:</p>
 
-<pre class="brush: html notranslate">&lt;form novalidate&gt;
+<pre class="brush: html">&lt;form novalidate&gt;
   &lt;p&gt;
     &lt;label for="mail"&gt;
       &lt;span&gt;Por favor, introduzca una dirección de correo electrónico: &lt;/span&gt;
@@ -497,7 +497,7 @@ email.addEventListener("input", function (event) {
 
 <p>Ahora aplicaremos algo de CSS básico para mejorar ligeramente el aspecto del formulario y proporcionar algunos comentarios visuales cuando los datos de entrada no sean válidos:</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font: 1em sans-serif;
   width: 200px;
   padding: 0;
@@ -551,7 +551,7 @@ input:focus:invalid {
 
 <p>Vamos a ver el JavaScript que implementa la validación de error personalizada.</p>
 
-<pre class="brush: js notranslate">// Hay muchas formas de elegir un nodo DOM; aquí obtenemos el formulario y, a continuación, el campo de entrada
+<pre class="brush: js">// Hay muchas formas de elegir un nodo DOM; aquí obtenemos el formulario y, a continuación, el campo de entrada
 // del correo electrónico, así como el elemento span en el que colocaremos el mensaje de error.
 const form  = document.getElementsByTagName('form')[0];
 
@@ -653,7 +653,7 @@ function showError() {
 
 <p>El HTML es casi el mismo; solo hemos eliminado las funciones de validación de HTML.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;
     &lt;label for="mail"&gt;
         &lt;span&gt;Por favor, introduzca una dirección de correo electrónico: &lt;/span&gt;
@@ -668,7 +668,7 @@ function showError() {
 
 <p>Del mismo modo, no es necesario cambiar mucho el CSS; acabamos de convertir la pseudoclase {{cssxref(":invalid")}} de CSS en una clase real y evitamos usar el selector de atributos que no funciona en Internet Explorer 6.</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font: 1em sans-serif;
   width: 200px;
   padding: 0;
@@ -724,7 +724,7 @@ input:focus.invalid {
 
 <p>Los grandes cambios están en el código JavaScript, que necesita hacer mucho más trabajo pesado.</p>
 
-<pre class="brush: js notranslate">// Hay menos formas de elegir un nodo DOM con navegadores antiguos
+<pre class="brush: js">// Hay menos formas de elegir un nodo DOM con navegadores antiguos
 const form  = document.getElementsByTagName('form')[0];
 const email = document.getElementById('mail');
 

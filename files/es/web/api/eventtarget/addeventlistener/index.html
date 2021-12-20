@@ -13,7 +13,7 @@ translation_of: Web/API/EventTarget/addEventListener
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><code><em>target</em>.addEventListener(tipo, <em>listener</em>[, <em>useCapture</em>]);
+<pre class="syntaxbox"><code><em>target</em>.addEventListener(tipo, <em>listener</em>[, <em>useCapture</em>]);
 <em>target</em>.addEventListener(tipo, <em>listener</em>[, <em>useCapture</em>, <em>wantsUntrusted </em>{{ Non-standard_inline() }}]); // Gecko/Mozilla only</code></pre>
 
 <dl>
@@ -36,7 +36,7 @@ translation_of: Web/API/EventTarget/addEventListener
 
 <h2 id="Example" name="Example">Ejemplo</h2>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;DOM Event Example&lt;/title&gt;
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", load, false);
 
 <p>Si quieres pasar parámetros a la función del listener, debes utilizar funciones anónimas.</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;DOM Event Example&lt;/title&gt;
@@ -145,7 +145,7 @@ function load() {
 
 <p>In the example above, the value of <code>this</code> within <code>modifyText()</code> when called from the click event is a reference to the table 't'. This is in contrast to the behavior that occurs if the handler is added in the HTML source:</p>
 
-<pre class="brush: html notranslate">&lt;table id="t" onclick="modifyText();"&gt;
+<pre class="brush: html">&lt;table id="t" onclick="modifyText();"&gt;
   . . .
 </pre>
 
@@ -155,7 +155,7 @@ function load() {
 
 <p>This is an example with and without <code>bind</code>:</p>
 
-<pre class="brush: js notranslate">var Something = function(element)
+<pre class="brush: js">var Something = function(element)
 {
   this.name = 'Something Good';
   this.onclick1 = function(event) {
@@ -171,7 +171,7 @@ function load() {
 
 <p>A problem in the example above is that you cannot remove the listener with <code>bind</code>. Another solution is using a special function called <code>handleEvent</code> to catch any events:</p>
 
-<pre class="brush: js notranslate">var Something = function(element)
+<pre class="brush: js">var Something = function(element)
 {
   this.name = 'Something Good';
   this.handleEvent = function(event) {
@@ -200,7 +200,7 @@ function load() {
 
 <p>In Internet Explorer versions prior to IE 9, you have to use <code><a class="external" href="http://msdn.microsoft.com/en-us/library/ms536343(VS.85).aspx">attachEvent</a></code> rather than the standard <code>addEventListener</code>. To support IE, the example above can be modified to:</p>
 
-<pre class="brush: js notranslate">if (el.addEventListener) {
+<pre class="brush: js">if (el.addEventListener) {
   el.addEventListener('click', modifyText, false);
 } else if (el.attachEvent)  {
   el.attachEvent('onclick', modifyText);
@@ -213,7 +213,7 @@ function load() {
 
 <p><code>addEventListener()</code> was introduced with the DOM 2 <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events">Events</a> specification. Before then, event listeners were registered as follows:</p>
 
-<pre class="brush: js notranslate">// Pass a function reference — do not add '()' after it, which would call the function!
+<pre class="brush: js">// Pass a function reference — do not add '()' after it, which would call the function!
 el.onclick = modifyText;
 
 // Using a function expression
@@ -228,7 +228,7 @@ element.onclick = function() {
 
 <h3 id="Memory_issues" name="Memory_issues">Memory issues</h3>
 
-<pre class="brush: js notranslate">var i;
+<pre class="brush: js">var i;
 var els = document.getElementsByTagName('*');
 
 // Case 1

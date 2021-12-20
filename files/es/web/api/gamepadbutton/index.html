@@ -31,7 +31,7 @@ translation_of: Web/API/GamepadButton
 
 <p>El siguiente código se toma de mi demostración del botón del API de Gamepad (puedes <a href="http://chrisdavidmills.github.io/gamepad-buttons/">ver el demo en vivo</a>, y <a href="https://github.com/chrisdavidmills/gamepad-buttons/tree/master">encontrar el código fuente</a> en Github.) Nota que el código — en Chrome {{domxref("Navigator.getGamepads")}} necesita un prefijo <code>webkit</code> y los valores del botón serán guardados como un array de valores dobles, mientras qe en Firefox {{domxref("Navigator.getGamepads")}} no se necesita un prefijo, y los valores de los botones se guardan como un array de objetos {{domxref("GamepadButton")}}; estas son las propiedades {{domxref("GamepadButton.value")}} o {{domxref("GamepadButton.pressed")}} a las que necesitamos acceder, dependiendo de qué tipo de botones haya. En este simple ejemplo yo solo he permitido estos.</p>
 
-<pre class="brush: js notranslate">function gameLoop() {
+<pre class="brush: js">function gameLoop() {
   if(navigator.webkitGetGamepads) {
     var gp = navigator.webkitGetGamepads()[0];
 

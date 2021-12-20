@@ -13,13 +13,13 @@ translation_of: Web/API/Event/target
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">const theTarget = algunEvento.target</pre>
+<pre class="syntaxbox">const theTarget = algunEvento.target</pre>
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
 <p>La propiedad <code>event.target</code>  puede ser usada para implementar una <strong>delegación del evento</strong>.</p>
 
-<pre class="brush: js notranslate">// Crear una lista
+<pre class="brush: js">// Crear una lista
 const ul = document.createElement('ul');
 document.body.appendChild(ul);
 
@@ -124,7 +124,7 @@ ul.addEventListener('click', hide, false);
 
 <p>En IE 6-8 el evento 'model' es diferente. Los eventos 'listeners' son  are incluidos con el método no estándar {{domxref('EventTarget.attachEvent')}}. En este modelo, el evento 'object' tiene una propiedad {{domxref('Event.srcElement')}}, en vez de la propiedad <code>target</code>, y tiene la misma semántica que <code>event.target</code>.</p>
 
-<pre class="brush: js notranslate">function hide(e) {
+<pre class="brush: js">function hide(e) {
   // Soporte en IE6-8
   var target = e.target || e.srcElement;
   target.style.visibility = 'hidden';

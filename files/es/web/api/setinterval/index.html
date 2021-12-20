@@ -22,7 +22,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><em>var procesoID</em> = window.setInterval(<em>función</em>, <em>intervaloDeTiempo</em>[, <em>parámetro1</em>, <em>parámetro2</em>, ... , parámetroN]);
+<pre class="syntaxbox"><em>var procesoID</em> = window.setInterval(<em>función</em>, <em>intervaloDeTiempo</em>[, <em>parámetro1</em>, <em>parámetro2</em>, ... , parámetroN]);
 <em>var procesoID</em> = window.setInterval(<em>código</em>, <em>intervaloDeTiempo</em>);
 </pre>
 
@@ -60,7 +60,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 
 <p>El siguiente ejemplo muestra la sintaxis básica.</p>
 
-<pre class="brush:js notranslate">var intervalID = window.setInterval(miFuncion, 500, 'Parametro 1', 'Parametro 2');
+<pre class="brush:js">var intervalID = window.setInterval(miFuncion, 500, 'Parametro 1', 'Parametro 2');
 
 function miFuncion(a,b) {
   // Aquí va tu código
@@ -74,7 +74,7 @@ function miFuncion(a,b) {
 
 <p>El siguiente ejemplo se llama a la función <code>flashtext()</code> una vez por segundo hasta que se presiona el botón Detener.</p>
 
-<pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8" /&gt;
@@ -110,7 +110,7 @@ function miFuncion(a,b) {
 
 <p>El siguiente ejemplo simula una máquina de escribir, primero borra el contenido de una lista de nodos (<code><a href="/en-US/docs/DOM/NodeList">NodeList</a>)</code> que coinciden con un grupo de selectores y después lo escribe lentamente.</p>
 
-<pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="UTF-8" /&gt;
@@ -274,7 +274,7 @@ Vivamus blandit massa ut metus mattis in fringilla lectus imperdiet. Proin ac an
 
 <p>Como se mencionó previamente Internet Explorer version 9 y anteriores no soportan el pasar argumentos a la función Callback en <code>setTimeout()</code> ni en <code>setInterval()</code>. El siguiente código específico de Internet Explorer muestra un método de superar esta limitante. Para usarlo basta añadir el código marcado al inicio de tu script.</p>
 
-<pre class="brush:js notranslate">/*\
+<pre class="brush:js">/*\
 |*|
 |*|  IE-specific polyfill that enables the passage of arbitrary arguments to the
 |*|  callback functions of javascript timers (HTML5 standard syntax).
@@ -315,11 +315,11 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 
 <p>Otra posible solución es el usar funciones anónimas para llamar al Callback, aunque esta solución es un poco más cara. Ejemplo:</p>
 
-<pre class="brush:js notranslate">var intervalID = setInterval(function() { myFunc("one", "two", "three"); }, 1000);</pre>
+<pre class="brush:js">var intervalID = setInterval(function() { myFunc("one", "two", "three"); }, 1000);</pre>
 
 <p>También puedes hacer uso de <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">function's bind</a>. Ejemplo:</p>
 
-<pre class="brush:js notranslate">var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);</pre>
+<pre class="brush:js">var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);</pre>
 
 <p>{{h3_gecko_minversion("Inactive tabs", "5.0")}}</p>
 
@@ -333,7 +333,7 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 
 <p>Cuando <code>setInterval() o setTimeOut()</code> ejecuta un determinado código o función, ésta corre en un contexto de ejecución separado al de la función en la que se creó dicho temporizador. Por esta razón a la palabra clave <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> se le asigna el valor del objeto <code>window</code> (o el objeto <code>global</code>), no es igual que usar <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> dentro de una fuinción que invoque a <code>setTimeOut()</code>. Observa el siguiente ejemplo (que utiliza <code>setTimeOut()</code> en lugar de <code>setInterval()</code> – el problema, de hecho, es el mismo para ambos temporizadores):</p>
 
-<pre class="brush:js notranslate">miArreglo = ["cero", "uno", "dos"];
+<pre class="brush:js">miArreglo = ["cero", "uno", "dos"];
 
 miArreglo.miMetodo = function (sPropiedad) {
     alert(arguments.length &gt; 0 ? this[sPropiedad] : this);
@@ -353,7 +353,7 @@ setTimeout.call(miArreglo, miArreglo.miMetodo, 2500, 2); // same error</pre>
 
 <p>Una posible alternativa para resolver ésto es reemplazar las dos funciones globales nativas <code>setTimeout()</code> y <code>setInterval()</code> con las siguientes funciones no nativas que permiten su ejecución a través del método <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/call"><code>Function.prototype.call</code></a>. El siguiente ejemplo muestra una posible sustitución:</p>
 
-<pre class="brush:js notranslate">// Permite el pase del objeto 'this' a través de temporizadores JavaScript
+<pre class="brush:js">// Permite el pase del objeto 'this' a través de temporizadores JavaScript
 
 var __nativeST__ = window.setTimeout, __nativeSI__ = window.setInterval;
 
@@ -376,7 +376,7 @@ window.setInterval = function (vCallback, nDelay /*, argumentoAPasar1, argumento
 
 <p>Prueba de nueva funcionalidad:</p>
 
-<pre class="brush:js notranslate">miArreglo = ["cero", "uno", "dos"];
+<pre class="brush:js">miArreglo = ["cero", "uno", "dos"];
 
 miArreglo.miMetodo = function (sProperty) {
     alert(arguments.length &gt; 0 ? this[sProperty] : this);
@@ -399,7 +399,7 @@ setTimeout.call(miArreglo, miArreglo.miMetodo, 2500, 2); // imprime "dos" despue
 
 <h3 id="minidaemon.js">minidaemon.js</h3>
 
-<pre class="brush:js notranslate">/*\
+<pre class="brush:js">/*\
 |*|
 |*|  :: MiniDaemon ::
 |*|
@@ -529,7 +529,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <p>Tu página HTML:</p>
 
-<pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8" /&gt;
@@ -580,7 +580,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <p>En estos casos llamadas con un patrón de <code>setTimeout()</code> recursivo es preferible:</p>
 
-<pre class="brush:js notranslate">(function loop(){
+<pre class="brush:js">(function loop(){
    setTimeout(function() {
       // Your logic here
 

@@ -17,12 +17,12 @@ original_slug: Web/HTML/Atributos/accept
 
 <p>Por ejemplo, hay varias formas de identificar los archivos de Microsoft Word, por lo que un sitio que acepta archivos de Word puede usar un <code>&lt;input&gt;</code> como este:</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" id="docpicker"
+<pre class="brush: html">&lt;input type="file" id="docpicker"
   accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"&gt;</pre>
 
 <p>Mientras que si aceptas un archivo multimedia, es posible que desees incluir cualquier formato de ese tipo de medio:</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" id="soundFile" accept="audio/*"&gt;
+<pre class="brush: html">&lt;input type="file" id="soundFile" accept="audio/*"&gt;
 &lt;input type="file" id="videoFile" accept="video/*"&gt;
 &lt;input type="file" id="imageFile" accept="image/*"&gt;</pre>
 
@@ -35,7 +35,7 @@ original_slug: Web/HTML/Atributos/accept
 <p>Cuando se configura en un tipo de entrada de archivo, el selector de archivos nativo que se abre solo debe permitir seleccionar archivos del tipo de archivo correcto. La mayoría de los sistemas operativos aligeran los archivos que no coinciden con los criterios y no se pueden seleccionar.</p>
 
 <div id="ejemplo_sencillo">
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
 	&lt;label for="soundFile"&gt;Selecciona un archivo de audio:&lt;/label&gt;
 	&lt;input type="file" id="soundFile" accept="audio/*"&gt;
 	&lt;/p&gt;
@@ -67,13 +67,13 @@ original_slug: Web/HTML/Atributos/accept
 
 <p>El atributo <code>accept</code> toma como valor una cadena que contiene uno o más de estos especificadores de tipo de archivo únicos, separados por comas. Por ejemplo, un selector de archivos que necesita contenido que se puede presentar como una imagen, incluidos los formatos de imagen estándar y los archivos PDF, podría verse así:</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" accept="image/*,.pdf"&gt;</pre>
+<pre class="brush: html">&lt;input type="file" accept="image/*,.pdf"&gt;</pre>
 
 <h2 id="Usar_inputs_de_archivo">Usar <em>input</em>s de archivo</h2>
 
 <h3 id="Un_ejemplo_básico">Un ejemplo básico</h3>
 
-<pre class="brush: html notranslate">&lt;form method="post" enctype="multipart/form-data"&gt;
+<pre class="brush: html">&lt;form method="post" enctype="multipart/form-data"&gt;
  &lt;div&gt;
    &lt;label for="file"&gt;Elige el archivo a cargar&lt;/label&gt;
    &lt;input type="file" id="file" name="file" multiple&gt;
@@ -84,7 +84,7 @@ original_slug: Web/HTML/Atributos/accept
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
 }</pre>
 </div>
@@ -116,7 +116,7 @@ original_slug: Web/HTML/Atributos/accept
 
 <p>Veamos un ejemplo más completo:</p>
 
-<pre class="brush: html notranslate">&lt;form method="post" enctype="multipart/form-data"&gt;
+<pre class="brush: html">&lt;form method="post" enctype="multipart/form-data"&gt;
   &lt;div&gt;
     &lt;label for="profile_pic"&gt;Elige el archivo para cargar&lt;/label&gt;
     &lt;input type="file" id="profile_pic" name="profile_pic"
@@ -128,7 +128,7 @@ original_slug: Web/HTML/Atributos/accept
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
 }</pre>
 </div>

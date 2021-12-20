@@ -170,7 +170,7 @@ original_slug: Web/JavaScript/Referencia/Gramatica_lexica
 
 <p>La primera forma son las dobles barras inclinadas <code>//</code> comentario<strong>;</strong> esta convierte en comentario todo el texto que le sigue en la misma línea. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">function comment() {
+<pre class="brush: js">function comment() {
   // Este es un comentario JavaScript de una línea
   console.log('¡Hola mundo!');
 }
@@ -181,7 +181,7 @@ comment();
 
 <p>Por ejemplo, lo puedes usar en una sola línea:</p>
 
-<pre class="brush: js notranslate">function comment() {
+<pre class="brush: js">function comment() {
   /* Este es un comentario JavaScript de una línea */
   console.log('¡Hola mundo!');
 }
@@ -189,7 +189,7 @@ comment();</pre>
 
 <p>También puedes hacer comentarios de varias líneas, como este:</p>
 
-<pre class="brush: js notranslate">function comment() {
+<pre class="brush: js">function comment() {
   /* Este comentario abarca varias líneas. Aviso
      No necesitamos cerrar el comentario hasta que terminemos. */
   console.log('¡Hola mundo!');
@@ -198,14 +198,14 @@ comment();</pre>
 
 <p>También lo puedes usar en medio de una línea, si lo deseas, aunque esto puede hacer que tu código sea más difícil de leer, por lo que se debe usar con precaución:</p>
 
-<pre class="brush: js notranslate">function comment(x) {
+<pre class="brush: js">function comment(x) {
   console.log('¡Hola' + x /* inserta el valor de x */ + ' !');
 }
 comment('mundo');</pre>
 
 <p>Además, lo puedes usar para deshabilitar el código y evitar que se ejecute, envolviendo el código en un comentario, como este:</p>
 
-<pre class="brush: js notranslate">function comment() {
+<pre class="brush: js">function comment() {
   /* console.log('¡Hola mundo!'); */
 }
 comment();</pre>
@@ -220,7 +220,7 @@ comment();</pre>
 
 <p>El comentario <code>hashbang</code> especifica la ruta a un intérprete de JavaScript específico que deseas utilizar para ejecutar el script. Aquí tienes un sencillo ejemplo:</p>
 
-<pre class="brush: js notranslate">#!/usr/bin/env node
+<pre class="brush: js">#!/usr/bin/env node
 
 console.log("Hola mundo");
 </pre>
@@ -334,14 +334,14 @@ console.log("Hola mundo");
 
 <p>Las palabras reservadas en realidad solo se aplican a los <em>identificadores</em> (frente a los <em>nombres de identificadores</em>). Como se describe en <a href="http://es5.github.com/#A.1">es5.github.com/#A.1</a>, todos estos son <em>IdentifierName</em>s que no excluyen <em>Palabras reservadas</em>.</p>
 
-<pre class="brush: js notranslate">a.import
+<pre class="brush: js">a.import
 a['import']
 a = { import: 'test' }.
 </pre>
 
 <p>Por otro lado, lo siguiente es ilegal porque es un <em>Identificador</em>, que es un <em>IdentifierName</em> sin palabras reservadas. Los identificadores se utilizan para <em>FunctionDeclaration</em>, <em>FunctionExpression</em>, <em>VariableDeclaration</em> y así sucesivamente. Los <em>IdentifierNames</em> se utilizan para <em>MemberExpression</em>, <em>CallExpression</em> y así sucesivamente.</p>
 
-<pre class="brush: js notranslate">function import() {} // Ilegal.</pre>
+<pre class="brush: js">function import() {} // Ilegal.</pre>
 
 <h3 id="Identificadores_con_significado_especial">Identificadores con significado especial</h3>
 
@@ -359,13 +359,13 @@ a = { import: 'test' }.
 
 <p>Consulta también {{jsxref("null")}} para obtener más información.</p>
 
-<pre class="brush: js notranslate">null</pre>
+<pre class="brush: js">null</pre>
 
 <h3 id="Booleanos_literales">Booleanos literales</h3>
 
 <p>Consulta también {{jsxref("Boolean", "Booleano")}} para obtener más información.</p>
 
-<pre class="brush: js notranslate">true
+<pre class="brush: js">true
 false</pre>
 
 <h3 id="Literales_numéricos">Literales numéricos</h3>
@@ -374,7 +374,7 @@ false</pre>
 
 <h4 id="Decimal">Decimal</h4>
 
-<pre class="brush: js notranslate">1234567890
+<pre class="brush: js">1234567890
 42
 
 // Precaución al usar con un cero a la izquierda:
@@ -388,7 +388,7 @@ false</pre>
 
 <p>El literal exponencial decimal se especifica mediante el siguiente formato: <code>beN</code>; donde <code>b</code> es un número base (entero o flotante), seguido del caracter <code>e</code> (que sirve como separador o <em>indicador de exponente</em>) y <code>N</code>, que es un número <em>exponente</em> o <em>potencia</em>: un entero con signo (según las especificaciones ECMA-262 de 2019):</p>
 
-<pre class="brush: js notranslate">0e-5   // =&gt; 0
+<pre class="brush: js">0e-5   // =&gt; 0
 0e+5   // =&gt; 0
 5e1    // =&gt; 50
 175e-2 // =&gt; 1.75
@@ -400,7 +400,7 @@ false</pre>
 
 <p>La sintaxis de números binarios utiliza un cero inicial seguido de una letra "B" latina en minúscula o mayúscula (<code>0b</code> o <code>0B</code>). Debido a que esta sintaxis es nueva en ECMAScript 2015, consulta la tabla de compatibilidad del navegador a continuación. Si los dígitos después de <code>0b</code> no son 0 o 1, se muestra el siguiente {{jsxref("SyntaxError")}}: "Faltan dígitos binarios después de 0b".</p>
 
-<pre class="brush: js notranslate">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+<pre class="brush: js">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
 var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
@@ -408,7 +408,7 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
 <p>La sintaxis de números octales utiliza un cero inicial seguido de una letra "O" latina en minúscula o mayúscula (<code>0o</code> o <code>0O</code>). Debido a que esta sintaxis es nueva en ECMAScript 2015, consulta la tabla de compatibilidad del navegador a continuación. Si los dígitos después del <code>0o</code> están fuera del rango (01234567), se lanza el siguiente {{jsxref("SyntaxError")}}: "Dígitos octales faltantes después del 0o".</p>
 
-<pre class="brush: js notranslate">var n = 0O755; // 493
+<pre class="brush: js">var n = 0O755; // 493
 var m = 0o644; // 420
 
 // También es posible con solo un cero inicial (ve la nota sobre los decimales arriba)
@@ -420,7 +420,7 @@ var m = 0o644; // 420
 
 <p>La sintaxis de números hexadecimales utiliza un cero inicial seguido de una letra "X" latina en minúscula o mayúscula (<code>0x</code> o <code>0X</code>). Si los dígitos después de 0x están fuera del rango (0123456789ABCDEF), se lanza el siguiente {{jsxref("SyntaxError")}}: "El identificador comienza inmediatamente después del literal numérico".</p>
 
-<pre class="brush: js notranslate">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+<pre class="brush: js">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
 0XA                 // 10
 </pre>
@@ -429,7 +429,7 @@ var m = 0o644; // 420
 
 <p>El tipo {{jsxref("BigInt")}} es una primitiva numérica en JavaScript que puede representar números enteros con precisión arbitraria. Los BigInt literales se crean agregando <code>n</code> al final de un número entero.</p>
 
-<pre class="brush: js notranslate">123456789123456789n     // 123456789123456789
+<pre class="brush: js">123456789123456789n     // 123456789123456789
 0o777777777777n         // 68719476735
 0x123456789ABCDEFn      // 81985529216486895‬
 0b11101001010101010101n // 955733
@@ -437,12 +437,12 @@ var m = 0o644; // 420
 
 <p>Ten en cuenta que los números octales heredados con solo un cero a la izquierda no funcionarán para <code>BigInt</code>:</p>
 
-<pre class="brush: js example-bad notranslate">// 0755n
+<pre class="brush: js example-bad">// 0755n
 // SyntaxError: sintaxis de BigInt no válida</pre>
 
 <p>Para números <code>BigInt</code> octales, siempre utiliza cero seguido de la letra "o" (mayúscula o minúscula):</p>
 
-<pre class="brush: js example-good notranslate">0o755n</pre>
+<pre class="brush: js example-good">0o755n</pre>
 
 <p>Para obtener más información sobre <code>BigInt</code>, consulta también <a href="/es/docs/Web/JavaScript/Data_structures#BigInt_type">estructuras de datos JavaScript</a>.</p>
 
@@ -450,7 +450,7 @@ var m = 0o644; // 420
 
 <p>Para mejorar la legibilidad de literales numéricos, se pueden usar guiones bajos (<code>_</code>, <code>U+005F</code>) como separadores:</p>
 
-<pre class="brush: js notranslate">// separadores en números decimales
+<pre class="brush: js">// separadores en números decimales
 1_000_000_000_000
 1_050.95
 
@@ -469,7 +469,7 @@ var m = 0o644; // 420
 
 <p>Ten en cuenta estas limitaciones:</p>
 
-<pre class="brush: js example-bad notranslate"> // No se permite más de un guión bajo en una fila
+<pre class="brush: js example-bad"> // No se permite más de un guión bajo en una fila
 100__000; // SyntaxError
 
 // No permitido al final de literales numéricos
@@ -483,7 +483,7 @@ var m = 0o644; // 420
 
 <p>Consulta también {{jsxref("Object")}} e <a href="/es/docs/Web/JavaScript/Reference/Operators/Object_initializer">Iniciador de objeto</a> para obtener más información.</p>
 
-<pre class="brush: js notranslate">var o = { a: 'foo', b: 'bar', c: 42 };
+<pre class="brush: js">var o = { a: 'foo', b: 'bar', c: 42 };
 
 // notación abreviada. Nueva en ES2015
 var a = 'foo', b = 'bar', c = 42;
@@ -497,7 +497,7 @@ var o = { a: a, b: b, c: c };
 
 <p>Consulta también {{jsxref("Array")}} para obtener más información.</p>
 
-<pre class="brush: js notranslate">[1954, 1974, 1990, 2014]</pre>
+<pre class="brush: js">[1954, 1974, 1990, 2014]</pre>
 
 <h3 id="Cadenas_literales">Cadenas literales</h3>
 
@@ -513,14 +513,14 @@ var o = { a: a, b: b, c: c };
 
 <p>Cualquier punto de código puede aparecer en forma de secuencia de escape. Las cadenas literales se evalúan como valores de cadena de ECMAScript. Al generar estos valores de cadena, los puntos de código Unicode están codificados en UTF-16.</p>
 
-<pre class="brush: js notranslate">'foo'
+<pre class="brush: js">'foo'
 "bar"</pre>
 
 <h4 id="Secuencias_de_escape_hexadecimales">Secuencias de escape hexadecimales</h4>
 
 <p>Las secuencias de escape hexadecimales constan de <code>\x</code> seguido de exactamente dos dígitos hexadecimales que representan una unidad de código o un punto de código en el rango de 0x0000 a 0x00FF.</p>
 
-<pre class="brush: js notranslate">'\xA9' // "©"
+<pre class="brush: js">'\xA9' // "©"
 </pre>
 
 <h4 id="Secuencias_de_escape_Unicode">Secuencias de escape Unicode</h4>
@@ -529,7 +529,7 @@ var o = { a: a, b: b, c: c };
 
 <p>Consulta también {{jsxref("String.fromCharCode()")}} y {{jsxref("String.prototype.charCodeAt()")}}.</p>
 
-<pre class="brush: js notranslate">'\u00A9' // "©" (U+A9)</pre>
+<pre class="brush: js">'\u00A9' // "©" (U+A9)</pre>
 
 <h4 id="Puntos_de_escape_de_código_Unicode">Puntos de escape de código Unicode</h4>
 
@@ -537,7 +537,7 @@ var o = { a: a, b: b, c: c };
 
 <p>Consulta también {{jsxref("String.fromCodePoint()")}} y {{jsxref("String.prototype.codePointAt()")}}.</p>
 
-<pre class="brush: js notranslate">'\u{2F804}' // CJK COMPATIBILIDAD IDEOGRÁFICA-2F804 (U+2F804)
+<pre class="brush: js">'\u{2F804}' // CJK COMPATIBILIDAD IDEOGRÁFICA-2F804 (U+2F804)
 
 // el mismo caracter representado como un par suplente
 '\uD87E\uDC04'</pre>
@@ -546,7 +546,7 @@ var o = { a: a, b: b, c: c };
 
 <p>Consulta también {{jsxref("RegExp")}} para obtener más información.</p>
 
-<pre class="brush: js notranslate">/ab+c/g
+<pre class="brush: js">/ab+c/g
 
 // Una expresión regular literal "vacía"
 // El grupo de no captura vacío es necesario
@@ -557,7 +557,7 @@ var o = { a: a, b: b, c: c };
 
 <p>Consulta también <a href="/es/docs/Web/JavaScript/Reference/template_strings">cadenas de plantilla</a> para obtener más información.</p>
 
-<pre class="brush: js notranslate">`string text`
+<pre class="brush: js">`string text`
 
 `string text line 1
  string text line 2`
@@ -584,7 +584,7 @@ tag `string text ${expression} string text`</pre>
 
 <p>1. Se inserta un punto y coma antes, cuando se encuentra un <a href="#Line_terminators">terminador de línea</a> o "}" que no está permitido por la gramática.</p>
 
-<pre class="brush: js notranslate">{ 1 2 } 3
+<pre class="brush: js">{ 1 2 } 3
 
 // La IAPC lo transforma en
 
@@ -594,7 +594,7 @@ tag `string text ${expression} string text`</pre>
 
 <p>Aquí <code>++</code> no se trata como un <a href="/es/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment">operador sufijo</a> que se aplica a la variable <code>b</code>, porque se produce un terminador de línea entre <code>b</code> y <code>++</code>.</p>
 
-<pre class="brush: js notranslate">a = b
+<pre class="brush: js">a = b
 ++c
 
 // IAPC lo transforma en
@@ -614,7 +614,7 @@ a = b;
  <li><code>module</code></li>
 </ul>
 
-<pre class="brush: js notranslate">return
+<pre class="brush: js">return
 a + b
 
 // La IAPC lo transforma en

@@ -45,7 +45,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/RelativeTimeForma
 
 <p>El siguiente ejemplo muestra cómo conseguir el tiempo relativo para el mejor idioma según el usuario.</p>
 
-<pre class="brush: js notranslate">// Crea un formateador de tiempo relativo en tu lenguaje
+<pre class="brush: js">// Crea un formateador de tiempo relativo en tu lenguaje
 // con los valores por defectos pasados expresamente.
 const rtf = new Intl.RelativeTimeFormat("en", {
     localeMatcher: "best fit", // otros valores: "lookup"
@@ -65,7 +65,7 @@ rtf.format(1, "day");
 
 <p>El siguiente ejemplo muestra cómo crear un formateador de tiempo relativo que devuelve las partes separadas:</p>
 
-<pre class="brush: js notranslate">const rtf = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+<pre class="brush: js">const rtf = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
 
 // Formatea el tiempo relativo usando día como unidad.
 rtf.formatToParts(-1, "day");

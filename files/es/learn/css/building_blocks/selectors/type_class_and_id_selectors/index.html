@@ -41,7 +41,7 @@ original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Selectores_de_tipo_clase
 
 <p>Uno de los usos del selector universal es facilitar la legibilidad de los selectores y clarificar sus funciones. Por ejemplo, si quiero seleccionar el primer elemento hijo de cualquier elemento <code>&lt;article&gt;</code> y poner ese elemento, cualquiera que sea, en negrita, puedo utilizar el selector {{cssxref(":first-child")}}, que veremos con mayor detalle más adelante en el artículo de <a href="/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Pseudo-clases_y_pseudo-elementos">pseudoclases y pseudoelementos</a>, como selector descendente junto con el selector de elemento <code>&lt;article&gt;</code>: </p>
 
-<pre class="brush: css notranslate">article :first-child {
+<pre class="brush: css">article :first-child {
 
 }</pre>
 
@@ -49,7 +49,7 @@ original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Selectores_de_tipo_clase
 
 <p>Para evitar esta confusión podemos añadir al selector <code>:first-child</code> el selector universal. De este modo la función del selector resulta obvia: seleccionará <em>cualquier</em> elemento que entre en la jerarquía de primer hijo de un elemento <code>&lt;article&gt;</code>:</p>
 
-<pre class="brush: css notranslate">article *:first-child {
+<pre class="brush: css">article *:first-child {
 
 } </pre>
 

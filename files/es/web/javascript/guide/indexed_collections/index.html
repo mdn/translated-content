@@ -26,7 +26,7 @@ original_slug: Web/JavaScript/Guide/colecciones_indexadas
 
 <p>Las siguientes declaraciones crean arreglos equivalentes:</p>
 
-<pre class="brush: js notranslate">let arr = new Array(<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>)
+<pre class="brush: js">let arr = new Array(<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>)
 let arr = Array(<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>)
 let arr = [<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>]
 </pre>
@@ -37,7 +37,7 @@ let arr = [<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>]
 
 <p>Para crear un arreglo con una longitud distinta de cero, pero sin ningún elemento, se puede utilizar cualquiera de las siguientes:</p>
 
-<pre class="brush: js notranslate">// Esta...
+<pre class="brush: js">// Esta...
 let arr = new Array(<var>arrayLength</var>)
 
 // ...da como resultado el mismo arreglo que este
@@ -55,7 +55,7 @@ arr.length = <var>arrayLength</var>
 
 <p>Además de una variable recién definida como se muestra arriba, los arreglos también se pueden asignar como una propiedad a un objeto nuevo o existente:</p>
 
-<pre class="brush: js notranslate">let obj = {}
+<pre class="brush: js">let obj = {}
 // ...
 obj.prop = [element0, element1, ..., elementN]
 
@@ -65,7 +65,7 @@ let obj = {prop: [element0, element1, ...., elementN]}
 
 <p>Si deseas iniciar un arreglo con un solo elemento, y el elemento resulta ser un <code>Número</code>, debes usar la sintaxis de corchetes. Cuando se pasa un solo valor <code>Number</code> al constructor o función <code>Array()</code>, se interpreta como un <code>arrayLength</code>, no como un solo elemento.</p>
 
-<pre class="brush: js notranslate">let arr = [42]       // Crea un arreglo con un solo elemento:
+<pre class="brush: js">let arr = [42]       // Crea un arreglo con un solo elemento:
                      // el número 42.
 
 let arr = Array(42)  // Crea un arreglo sin elementos
@@ -78,20 +78,20 @@ arr.length = 42
 
 <p>Llamar a <code>Array(<var>N</var>)</code> da como resultado un <code>RangeError</code>, si <code><var>N</var></code> no es un número entero cuya porción fraccionaria no es cero. El siguiente ejemplo ilustra este comportamiento.</p>
 
-<pre class="brush: js notranslate">let arr = Array(9.3)   // RangeError: Longitud de arreglo no válida
+<pre class="brush: js">let arr = Array(9.3)   // RangeError: Longitud de arreglo no válida
 </pre>
 
 <p>Si tu código necesita crear arreglos con elementos únicos de un tipo de dato arbitrario, es más seguro utilizar arreglos literales. Alternativamente, crea un arreglo vacío primero antes de agregarle el único elemento.</p>
 
 <p>En ES2015, puedes utilizar el método estático {{jsxref("Array.of")}} para crear arreglos con un solo elemento.</p>
 
-<pre class="brush: js notranslate">let wisenArray = Array.of(9.3)   // wisenArray contiene solo un elemento 9.3</pre>
+<pre class="brush: js">let wisenArray = Array.of(9.3)   // wisenArray contiene solo un elemento 9.3</pre>
 
 <h3 id="Refiriéndose_a_elementos_del_arreglo">Refiriéndose a elementos del arreglo</h3>
 
 <p>Dado que los elementos también son propiedades, puedes acceder a ellos usando la <a href="/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors">propiedad <code>accessors</code></a>. Supongamos que defines el siguiente arreglo:</p>
 
-<pre class="brush: js notranslate">let myArray = ['Wind', 'Rain', 'Fire']
+<pre class="brush: js">let myArray = ['Wind', 'Rain', 'Fire']
 </pre>
 
 <p>Puedes referirte al primer elemento del arreglo como <code>myArray[0]</code>, al segundo elemento del arreglo como <code>myArray[1]</code>, etc<span class="st">…</span> El índice de los elementos comienza en cero.</p>
@@ -99,7 +99,7 @@ arr.length = 42
 <div class="note">
 <p><strong>Nota</strong>: También puedes utilizar la <a href="/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors">propiedad <code>accessors</code></a> para acceder a otras propiedades del arreglo, como con un objeto.</p>
 
-<pre class="brush: js notranslate">let arr = ['one', 'two', 'three']
+<pre class="brush: js">let arr = ['one', 'two', 'three']
 arr[2]          // three
 arr['length']   // 3
 </pre>
@@ -109,7 +109,7 @@ arr['length']   // 3
 
 <p>Puedes llenar un arreglo asignando valores a sus elementos. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">let emp = []
+<pre class="brush: js">let emp = []
 emp[0] = 'Casey Jones'
 emp[1] = 'Phil Lesh'
 emp[2] = 'August West'
@@ -118,7 +118,7 @@ emp[2] = 'August West'
 <div class="note">
 <p><strong>Nota</strong>: Si proporcionas un valor no entero al operador <code>array</code> en el código anterior, se creará una propiedad en el objeto que representa al arreglo, en lugar de un elemento del arreglo.</p>
 
-<pre class="brush: js notranslate">let arr = []
+<pre class="brush: js">let arr = []
 arr[3.4] = 'Oranges'
 console.log(arr.length)                 // 0
 console.log(arr.hasOwnProperty(3.4))    // true
@@ -127,7 +127,7 @@ console.log(arr.hasOwnProperty(3.4))    // true
 
 <p>También puedes rellenar un arreglo cuando lo creas:</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('Hello', myVar, 3.14159)
+<pre class="brush: js">let myArray = new Array('Hello', myVar, 3.14159)
 // OR
 let myArray = ['Mango', 'Apple', 'Orange']
 </pre>
@@ -140,7 +140,7 @@ let myArray = ['Mango', 'Apple', 'Orange']
 
 <p>Recuerda, los índices del Array JavaScript están basados en 0: comienzan en <code>0</code>, no en <code>1</code>. Esto significa que la propiedad <code>length</code> será uno más que el índice más alto almacenado en el arreglo:</p>
 
-<pre class="brush: js notranslate">let cats = []
+<pre class="brush: js">let cats = []
 cats[30] = ['Dusty']
 console.log(cats.length) // 31
 </pre>
@@ -149,7 +149,7 @@ console.log(cats.length) // 31
 
 <p>Escribir un valor que sea más corto que el número de elementos almacenados trunca el arreglo. Escribir <code>0</code> lo vacía por completo:</p>
 
-<pre class="brush: js notranslate">let cats = ['Dusty', 'Misty', 'Twiggy']
+<pre class="brush: js">let cats = ['Dusty', 'Misty', 'Twiggy']
 console.log(cats.length)  // 3
 
 cats.length = 2
@@ -166,7 +166,7 @@ console.log(cats)  // logs [ &lt;3 elementos vacíos&gt; ]
 
 <p>Una operación común es iterar sobre los valores de un arreglo, procesando cada uno de alguna manera. La forma más sencilla de hacerlo es la siguiente:</p>
 
-<pre class="brush: js notranslate">let colors = ['red', 'green', 'blue']
+<pre class="brush: js">let colors = ['red', 'green', 'blue']
 for (let i = 0; i &lt; colors.length; i++) {
   console.log(colors[i])
 }
@@ -174,7 +174,7 @@ for (let i = 0; i &lt; colors.length; i++) {
 
 <p>Si sabes que ninguno de los elementos de tu arreglo se evalúa como <code>false</code> en un contexto booleano, si tu arreglo consta solo de nodos <a href="/es/docs/DOM" title="/es/docs/DOM">DOM</a>, por ejemplo, puedes usar un lenguaje eficiente:</p>
 
-<pre class="brush: js notranslate">let divs = document.getElementsByTagName('div')
+<pre class="brush: js">let divs = document.getElementsByTagName('div')
 for (let i = 0, div; div = divs[i]; i++) {
   /* Procesar div de alguna manera */
 }
@@ -184,7 +184,7 @@ for (let i = 0, div; div = divs[i]; i++) {
 
 <p>El método {{jsxref("Array.forEach", "forEach()")}} proporciona otra forma de iterar sobre un arreglo:</p>
 
-<pre class="brush: js notranslate">let colors = ['red', 'green', 'blue']
+<pre class="brush: js">let colors = ['red', 'green', 'blue']
 colors.forEach(function(color) {
   console.log(color)
 })
@@ -195,7 +195,7 @@ colors.forEach(function(color) {
 
 <p>Alternativamente, puedes acortar el código para el parámetro <code>forEach</code> con las funciones de flecha ES2015:</p>
 
-<pre class="brush: js notranslate">let colors = ['red', 'green', 'blue']
+<pre class="brush: js">let colors = ['red', 'green', 'blue']
 colors.forEach(color =&gt; console.log(color))
 // red
 // green
@@ -206,7 +206,7 @@ colors.forEach(color =&gt; console.log(color))
 
 <p>Ten en cuenta que los elementos de un arreglo que se omiten cuando se define el arreglo no se enumeran cuando lo itera <code>forEach</code>, pero <em>se enumeran</em> cuando <code>undefined</code> se ha asignado manualmente al elemento:</p>
 
-<pre class="brush: js notranslate">let array = ['first', 'second', , 'fourth']
+<pre class="brush: js">let array = ['first', 'second', , 'fourth']
 
 array.forEach(function(element) {
   console.log(element)
@@ -238,54 +238,54 @@ array.forEach(function(element) {
 
 <p>{{jsxref("Array.concat", "concat()")}} une dos o más arreglos y devuelve un nuevo arreglo.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2', '3')
+<pre class="brush: js">let myArray = new Array('1', '2', '3')
 myArray = myArray.concat('a', 'b', 'c')
 // myArray is now ["1", "2", "3", "a", "b", "c"]
 </pre>
 
 <p>{{jsxref("Array.join", "join(delimiter = ',')")}} une todos los elementos de un arreglo en una cadena.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('Viento', 'Lluvia', 'Fuego')
+<pre class="brush: js">let myArray = new Array('Viento', 'Lluvia', 'Fuego')
 let list = myArray.join('-')   // la lista es "Viento - Lluvia - Fuego"
 </pre>
 
 <p>{{jsxref("Array.push", "push()")}} agrega uno o más elementos al final de un arreglo y devuelve la <code>longitud</code> resultante del arreglo.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2')
+<pre class="brush: js">let myArray = new Array('1', '2')
 myArray.push('3') // myArray ahora es ["1", "2", "3"]
 </pre>
 
 <p>{{jsxref("Array.pop", "pop()")}} elimina el último elemento de un arreglo y devuelve ese elemento.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array ('1', '2', '3')
+<pre class="brush: js">let myArray = new Array ('1', '2', '3')
 let last = myArray.pop()
 // myArray ahora es ["1", "2"], last = "3"
 </pre>
 
 <p>{{jsxref("Array.shift", "shift()")}} elimina el primer elemento de un arreglo y devuelve ese elemento.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array ('1', '2', '3')
+<pre class="brush: js">let myArray = new Array ('1', '2', '3')
 let first = myArray.shift()
 // myArray ahora es ["2", "3"], first es "1"
 </pre>
 
 <p>{{jsxref("Array.unshift", "unshift()")}} agrega uno o más elementos al frente de un arreglo y devuelve la nueva longitud del arreglo.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2', '3')
+<pre class="brush: js">let myArray = new Array('1', '2', '3')
 myArray.unshift('4', '5')
 // myArray se convierte en ["4", "5", "1", "2", "3"]
 </pre>
 
 <p>{{jsxref("Array.slice", "slice(start_index, upto_index)")}} extrae una sección de un arreglo y devuelve un nuevo arreglo.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('a', 'b', 'c', 'd', 'e')
+<pre class="brush: js">let myArray = new Array('a', 'b', 'c', 'd', 'e')
 myArray = myArray.slice(1, 4) // comienza en el índice 1 y extrae todos los elementos
                                // hasta el índice 3, devuelve ["b", "c", "d"]
 </pre>
 
 <p>{{jsxref("Array.splice", "splice(index, count_to_remove, addElement1, addElement2, ...)")}} elimina elementos de un arreglo y (opcionalmente) los reemplaza. Devuelve los elementos que se eliminaron del arreglo.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2', '3', '4', '5')
+<pre class="brush: js">let myArray = new Array('1', '2', '3', '4', '5')
 myArray.splice(1, 3, 'a', 'b', 'c', 'd')
 // myArray ahora es ["1", "a", "b", "c", "d", "5"]
 // Este código comenzó en el índice uno (o donde estaba el "2"),
@@ -295,14 +295,14 @@ myArray.splice(1, 3, 'a', 'b', 'c', 'd')
 
 <p>{{jsxref("Array.reverse", "reverse()")}} transpone los elementos de un arreglo, en su lugar: el primer elemento del arreglo se convierte en el último y el último en el primero. Devuelve una referencia al arreglo.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array ('1', '2', '3')
+<pre class="brush: js">let myArray = new Array ('1', '2', '3')
 myArray.reverse()
 // transpone el arreglo para que myArray = ["3", "2", "1"]
 </pre>
 
 <p>{{jsxref("Array.sort", "sort()")}} ordena los elementos de un arreglo en su lugar y devuelve una referencia al arreglo.</p>
 
-<pre class="brush: js notranslate">let myArray = new Array('Viento', 'Lluvia', 'Fuego')
+<pre class="brush: js">let myArray = new Array('Viento', 'Lluvia', 'Fuego')
 myArray.sort()
 // ordena el arreglo para que myArray = ["Fuego", "Lluvia", "Viento"]
 </pre>
@@ -317,7 +317,7 @@ myArray.sort()
 
 <p>Por ejemplo, lo siguiente se ordenará por la última letra de una cadena:</p>
 
-<pre class="brush: js notranslate">let sortFn = function(a, b) {
+<pre class="brush: js">let sortFn = function(a, b) {
   if (a[a.length - 1] &lt; b[b.length - 1]) return -1;
   if (a[a.length - 1] &gt; b[b.length - 1]) return 1;
   if (a[a.length - 1] == b[b.length - 1]) return 0;
@@ -333,7 +333,7 @@ myArray.sort(sortFn)
 
 <p>{{jsxref("Array.indexOf", "indexOf (searchElement[, fromIndex])")}} busca en el arreglo <code><var>searchElement</var></code> y devuelve el índice de la primera coincidencia.</p>
 
-<pre class="brush: js notranslate">let a = ['a', 'b', 'a', 'b', 'a']
+<pre class="brush: js">let a = ['a', 'b', 'a', 'b', 'a']
 console.log(a.indexOf('b')) // registros 1
 
 // Ahora inténtalo de nuevo, comenzando después de la última coincidencia
@@ -343,7 +343,7 @@ console.log(a.indexOf('z')) // logs -1, porque no se encontró 'z'
 
 <p>{{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement [, fromIndex])")}} funciona como <code>indexOf</code>, pero comienza al final y busca hacia atrás.</p>
 
-<pre class="brush: js notranslate">let​a = ['a', 'b', 'c', 'd', 'a', 'b']
+<pre class="brush: js">let​a = ['a', 'b', 'c', 'd', 'a', 'b']
 console.log(a.lastIndexOf('b')) // registra 5
 
 // Ahora inténtalo de nuevo, comenzando desde antes de la última coincidencia
@@ -353,28 +353,28 @@ console.log(a.lastIndexOf('z'))    // registra -1
 
 <p>{{jsxref("Array.forEach", "forEach(callback[, thisObject])")}} ejecuta <code><var>callback</var></code> en cada elemento del arreglo y devuelve <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">let​a = ['a', 'b', 'c']
+<pre class="brush: js">let​a = ['a', 'b', 'c']
 a.forEach(function(elemento) { console.log(elemento) })
 // registra cada elemento por turno
 </pre>
 
 <p>{{jsxref("Array.map", "map(callback [, thisObject])")}} devuelve un nuevo arreglo del valor de retorno de ejecutar <code><var>callback</var></code> en cada elemento del arreglo.</p>
 
-<pre class="brush: js notranslate">let a1 = ['a', 'b', 'c']
+<pre class="brush: js">let a1 = ['a', 'b', 'c']
 let a2 = a1.map(function(item) { return item.toUpperCase() })
 console.log(a2) // registra ['A', 'B', 'C']
 </pre>
 
 <p>{{jsxref("Array.filter", "filter(callback [, thisObject])")}} devuelve un nuevo arreglo que contiene los elementos para los cuales <code><var>callback</var></code> devolvió <code>true</code>.</p>
 
-<pre class="brush: js notranslate">let a1 = ['a', 10, 'b', 20, 'c', 30]
+<pre class="brush: js">let a1 = ['a', 10, 'b', 20, 'c', 30]
 let a2 = a1.filter(function(item) { return typeof item === 'number'; })
 console.log(a2)  // registra [10, 20, 30]
 </pre>
 
 <p>{{jsxref("Array.every", "every(callback [, thisObject])")}} devuelve <code>true</code> si <code><var>callback</var></code> devuelve <code>true</code> para cada elemento del arreglo.</p>
 
-<pre class="brush: js notranslate">function isNumber(value) {
+<pre class="brush: js">function isNumber(value) {
   return typeof value === 'number'
 }
 let a1 = [1, 2, 3]
@@ -385,7 +385,7 @@ console.log(a2.every(isNumber))  // registra false
 
 <p>{{jsxref("Array.some", "some(callback[, thisObject])")}} devuelve <code>true</code> si <code><var>callback</var></code> devuelve <code>true</code> para al menos un elemento del arreglo.</p>
 
-<pre class="brush: js notranslate">function isNumber(value) {
+<pre class="brush: js">function isNumber(value) {
   return typeof value === 'number'
 }
 let a1 = [1, 2, 3]
@@ -404,7 +404,7 @@ console.log(a3.some(isNumber))  // registra false
 
 <p>Si <code><var>callback</var></code> necesita acceso al índice del elemento que se está procesando, al acceder al arreglo completo, están disponibles como parámetros opcionales.</p>
 
-<pre class="brush: js notranslate">let​a = [10, 20, 30]
+<pre class="brush: js">let​a = [10, 20, 30]
 let total = a.reduce(function(accumulator, currentValue) { return accumulator + currentValue }, 0)
 console.log(total) // Imprime 60
 </pre>
@@ -419,7 +419,7 @@ console.log(total) // Imprime 60
 
 <p>El siguiente código crea un arreglo bidimensional.</p>
 
-<pre class="brush: js notranslate">let a = new Array(4)
+<pre class="brush: js">let a = new Array(4)
 for (let i = 0; i &lt; 4; i++) {
   a[i] = new Array(4)
   for (let j = 0; j &lt; 4; j++) {
@@ -440,7 +440,7 @@ Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
 
 <p>Los arreglos también se pueden utilizar como objetos para almacenar información relacionada.</p>
 
-<pre class="brush: js notranslate"><code>const arr = [1, 2, 3];
+<pre class="brush: js"><code>const arr = [1, 2, 3];
 arr.property = "value";
 console.log(arr.property);  // Registra "value"</code>
 </pre>
@@ -455,7 +455,7 @@ console.log(arr.property);  // Registra "value"</code>
 
 <p>Los métodos de arreglo no se pueden llamar directamente en objetos similares a un arreglo.</p>
 
-<pre class="brush: js example-bad notranslate"><code>function printArguments() {
+<pre class="brush: js example-bad"><code>function printArguments() {
   arguments.forEach(function(item) {// <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format">TypeError: <span class="objectBox objectBox-string">arguments.forEach no es una función</span></span></span></span></span>
     console.log(item);
   });
@@ -464,7 +464,7 @@ console.log(arr.property);  // Registra "value"</code>
 
 <p>Pero puedes llamarlos indirectamente usando {{jsxref("Global_Objects/Function/call", "Function.prototype.call()")}}.</p>
 
-<pre class="brush: js example-good notranslate"><code>function printArguments() {
+<pre class="brush: js example-good"><code>function printArguments() {
   Array.prototype.forEach.call(arguments, function(item) {
     console.log(item);
   });
@@ -473,7 +473,7 @@ console.log(arr.property);  // Registra "value"</code>
 
 <p>Los métodos de prototipos de arreglos también se pueden utilizar en cadenas, ya que proporcionan acceso secuencial a sus caracteres de forma similar a los arreglos:</p>
 
-<pre class="brush: js notranslate">Array.prototype.forEach.call('a string', function(chr) {
+<pre class="brush: js">Array.prototype.forEach.call('a string', function(chr) {
   console.log(chr)
 })
 </pre>

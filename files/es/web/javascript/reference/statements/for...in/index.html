@@ -18,7 +18,7 @@ original_slug: Web/JavaScript/Referencia/Sentencias/for...in
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">for (<var>variable</var> in <var>objeto</var>)
+<pre class="syntaxbox">for (<var>variable</var> in <var>objeto</var>)
   instrucción</pre>
 
 <dl>
@@ -66,7 +66,7 @@ original_slug: Web/JavaScript/Referencia/Sentencias/for...in
 
 <p>El siguiente bucle <code>for...in</code> itera sobre todas las propiedades enumerables que no son símbolos del objeto y registra una cadena de los nombres de propiedad y sus valores.</p>
 
-<pre class="brush: js notranslate">var obj = {a: 1, b: 2, c: 3};
+<pre class="brush: js">var obj = {a: 1, b: 2, c: 3};
 
 for (const prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
@@ -81,7 +81,7 @@ for (const prop in obj) {
 
 <p>La siguiente función ilustra el uso de {{JSxRef("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} — las propiedades heredadas no se muestran.</p>
 
-<pre class="brush: js notranslate">var triangle = {a: 1, b: 2, c: 3};
+<pre class="brush: js">var triangle = {a: 1, b: 2, c: 3};
 
 function ColoredTriangle() {
   this.color = 'red';
@@ -124,7 +124,7 @@ for (const prop in obj) {
 
 <p>Antes de Firefox 40, era posible utilizar una expresión iniciadora (<code>i=0</code>) en un bucle <code>for...in</code>:</p>
 
-<pre class="brush: js example-bad notranslate">var obj = {a: 1, b: 2, c: 3};
+<pre class="brush: js example-bad">var obj = {a: 1, b: 2, c: 3};
 for (var i = 0 in obj) {
   console.log(obj[i]);
 }

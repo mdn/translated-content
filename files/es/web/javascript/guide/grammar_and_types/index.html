@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 
 <p>JavaScript distingue entre mayúsculas y minúsculas (es <strong>case-sensitive</strong>) y utiliza el conjunto de caracteres <strong>Unicode</strong>. Por ejemplo, la palabra «Früh» (que significa "temprano" en Alemán) se podría usar como el nombre de una variable.</p>
 
-<pre class="brush: js notranslate">let Früh = "foobar"</pre>
+<pre class="brush: js">let Früh = "foobar"</pre>
 
 <p>Pero, la variable <code>früh</code> no es la misma que <code>Früh</code> porque JavaScript distingue entre mayúsculas y minúsculas.</p>
 
@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 
 <p>La sintaxis de los <strong>comentarios</strong> es la misma que en C++ y en muchos otros lenguajes:</p>
 
-<pre class="brush: js notranslate">// un comentario de una línea
+<pre class="brush: js">// un comentario de una línea
 
 /* este es un comentario
  * más largo, de varias líneas
@@ -98,7 +98,7 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 
 <p>Un intento de acceder a una variable no declarada da como resultado el disparo de una excepción {{JSxRef("ReferenceError")}}:</p>
 
-<pre class="brush: js notranslate">var a;
+<pre class="brush: js">var a;
 console.log('El valor de a es ' + a); // El valor de a es undefined
 
 console.log('El valor de b es ' + b); // El valor de b es undefined
@@ -115,7 +115,7 @@ let y;</pre>
 
 <p>Puedes usar <code>undefined</code> para determinar si una variable tiene un valor. En el siguiente código, a la variable <code>input</code> no se le asigna un valor y la declaración {{JSxRef("Sentencias/if...else", "if")}} evalúa a <code>true</code>.</p>
 
-<pre class="brush: js notranslate">var input;
+<pre class="brush: js">var input;
 if (input === undefined) {
   doThis();
 } else {
@@ -125,18 +125,18 @@ if (input === undefined) {
 
 <p>El valor <code>undefined</code> se comporta como <code>false</code> cuando se usa en un contexto booleano. Por ejemplo, el siguiente código ejecuta la función <code>myFunction</code> porque el elemento <code>myArray</code> es <code>undefined</code>:</p>
 
-<pre class="brush: js notranslate">var myArray = [];
+<pre class="brush: js">var myArray = [];
 if (!myArray[0]) myFunction();
 </pre>
 
 <p>El valor <code>undefined</code> se convierte en <code>NaN</code> cuando se usa en contexto numérico.</p>
 
-<pre class="brush: js notranslate">var a;
+<pre class="brush: js">var a;
 a + 2;  // Evalúa a NaN</pre>
 
 <p>Cuando evalúas una variable {{JSxRef("null")}}, el valor nulo se comporta como <code>0</code> en contextos numéricos y como <code>false</code> en contextos booleanos. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">var n = null;
+<pre class="brush: js">var n = null;
 console.log(n * 32); // Registrará 0 en la consola
 </pre>
 
@@ -148,7 +148,7 @@ console.log(n * 32); // Registrará 0 en la consola
 
 <p>Por ejemplo, el siguiente código registrará <code>5</code>, porque el ámbito de <code>x</code> es el contexto global (o el contexto de la función si el código es parte de una función). El ámbito de <code>x</code> no se limita al bloque de instrucciones <code>if</code> inmediato.</p>
 
-<pre class="brush: js notranslate">if (true) {
+<pre class="brush: js">if (true) {
   var x = 5;
 }
 console.log(x);  // x es 5
@@ -156,7 +156,7 @@ console.log(x);  // x es 5
 
 <p>Este comportamiento cambia cuando se usa la declaración <code>let</code> (introducida en ECMAScript 2015).</p>
 
-<pre class="brush: js notranslate">if (true) {
+<pre class="brush: js">if (true) {
   let y = 5;
 }
 console.log(y); // ReferenceError: y no está definida
@@ -168,7 +168,7 @@ console.log(y); // ReferenceError: y no está definida
 
 <p>Este concepto se conoce como <strong>elevación.</strong> Las variables en JavaScript son, en cierto sentido, "elevadas" (o "izadas") a la parte superior de la función o declaración. Sin embargo, las variables que se elevan devuelven un valor de <code>undefined</code>. Entonces, incluso si la declaras e inicias después de usarla o hacer referencia a esta variable, todavía devuelve <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">/**
+<pre class="brush: js">/**
  * Ejemplo 1
  */
 console.log(x === undefined); // true
@@ -188,7 +188,7 @@ var myvar = 'my value';
 
 <p>Los ejemplos anteriores se interpretarán de la misma manera que:</p>
 
-<pre class="brush: js notranslate">/**
+<pre class="brush: js">/**
  * Ejemplo 1
  */
 var x;
@@ -211,14 +211,14 @@ var myvar = 'my value';
 
 <p>En ECMAScript 2015, <code>let</code> y <code>const</code> <strong>se elevan pero no se inician</strong>. Hacer referencia a la variable en el bloque antes de la declaración de la variable da como resultado un {{JSxRef("ReferenceError")}}, porque la variable está en una "zona muerta temporal" desde el inicio del bloque hasta que se procesa la declaración.</p>
 
-<pre class="brush: js notranslate">console.log(x); // ReferenceError
+<pre class="brush: js">console.log(x); // ReferenceError
 let x = 3;</pre>
 
 <h3 id="Elevación_de_función">Elevación de función</h3>
 
 <p>En el caso de las funciones, solo se incluyen <em>declaraciones</em> de función, pero <em>no</em> las <em>expresiones</em> de la función.</p>
 
-<pre class="brush: js notranslate">/* Declaración de función */
+<pre class="brush: js">/* Declaración de función */
 
 foo(); // "bar"
 
@@ -250,7 +250,7 @@ var baz = function() {
 
 <p>La sintaxis de un identificador de constante es la misma que la de cualquier identificador de variable: debe comenzar con una letra, un subrayado o un signo de dólar (<code>$</code>) y puede contener caracteres alfabéticos, numéricos o de subrayado.</p>
 
-<pre class="brush: js notranslate">const PI = 3.14;
+<pre class="brush: js">const PI = 3.14;
 </pre>
 
 <p>Una constante no puede cambiar el valor a través de la asignación o volver a declararla mientras se ejecuta el script. Se debe iniciar a un valor.</p>
@@ -259,7 +259,7 @@ var baz = function() {
 
 <p>No puedes declarar una constante con el mismo nombre que una función o una variable en el mismo ámbito. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">// ESTO CAUSARÁ UN ERROR
+<pre class="brush: js">// ESTO CAUSARÁ UN ERROR
 function f() {};
 const f = 5;
 
@@ -274,12 +274,12 @@ function f() {
 
 <p>Sin embargo, las propiedades de los objetos asignados a constantes no son protegidas, es por esto que la siguiente declaración se ejecuta sin problemas.</p>
 
-<pre class="brush: js notranslate">const MY_OBJECT = {'key': 'value'};
+<pre class="brush: js">const MY_OBJECT = {'key': 'value'};
 MY_OBJECT.key = 'otherValue';</pre>
 
 <p>Además, el contenido de los arreglos tampoco está protegido cuando es asignado a una constante, es por esto que la siguiente declaración se ejecuta sin problemas.</p>
 
-<pre class="brush: js notranslate">const MY_ARRAY = ['HTML','CSS'];
+<pre class="brush: js">const MY_ARRAY = ['HTML','CSS'];
 MY_ARRAY.push('JAVASCRIPT');
 console.log(MY_ARRAY); // registra ['HTML','CSS','JAVASCRIPT'];
 </pre>
@@ -313,12 +313,12 @@ console.log(MY_ARRAY); // registra ['HTML','CSS','JAVASCRIPT'];
 
 <p>Así, por ejemplo, puedes definir una variable de la siguiente manera:</p>
 
-<pre class="brush: js notranslate">var answer = 42;
+<pre class="brush: js">var answer = 42;
 </pre>
 
 <p>Y luego, puedes asignarle una cadena a esa misma variable, por ejemplo:</p>
 
-<pre class="brush: js notranslate">answer = 'Gracias por todo el pescado...';
+<pre class="brush: js">answer = 'Gracias por todo el pescado...';
 </pre>
 
 <p>Debido a que JavaScript se tipifica dinámicamente, esta asignación no genera un mensaje de error.</p>
@@ -327,13 +327,13 @@ console.log(MY_ARRAY); // registra ['HTML','CSS','JAVASCRIPT'];
 
 <p>En expresiones que involucran valores numéricos y de cadena con el operador <code>+</code>, JavaScript convierte los valores numéricos en cadenas. Por ejemplo, considera las siguientes declaraciones:</p>
 
-<pre class="brush: js notranslate">x = 'La respuesta es ' + 42 // "La respuesta es 42"
+<pre class="brush: js">x = 'La respuesta es ' + 42 // "La respuesta es 42"
 y = 42 + ' es la respuesta' // "42 es la respuesta"
 </pre>
 
 <p>Con todos los demás operadores, JavaScript <em>no</em> convierte valores numéricos en cadenas. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">'37' - 7 // 30
+<pre class="brush: js">'37' - 7 // 30
 '37' + 7 // "377"
 </pre>
 
@@ -352,11 +352,11 @@ y = 42 + ' es la respuesta' // "42 es la respuesta"
 <p>Además, una práctica recomendada para <code>parseInt</code> es incluir siempre el parámetro <em>radix</em>. El parámetro <code>radix</code> se utiliza para especificar qué sistema numérico se utilizará.</p>
 </div>
 
-<pre class="brush: js notranslate">parseInt('101', 2) // 5</pre>
+<pre class="brush: js">parseInt('101', 2) // 5</pre>
 
 <p>Un método alternativo para recuperar un número de una cadena es con el operador <code>+</code> (más unario):</p>
 
-<pre class="brush: js notranslate">'1.1' + '1.1' // '1.11.1'
+<pre class="brush: js">'1.1' + '1.1' // '1.11.1'
 (+'1.1') + (+'1.1') // 2.2
 // Nota: los paréntesis se agregan para mayor claridad, no son necesarios.</pre>
 
@@ -380,7 +380,7 @@ y = 42 + ' es la respuesta' // "42 es la respuesta"
 
 <p>El siguiente ejemplo crea el arreglo <code>coffees</code> con tres elementos y <code>length</code> de tres:</p>
 
-<pre class="brush: js notranslate">let coffees = ['French Roast', 'Colombian', 'Kona'];
+<pre class="brush: js">let coffees = ['French Roast', 'Colombian', 'Kona'];
 </pre>
 
 <div class="note">
@@ -397,7 +397,7 @@ y = 42 + ' es la respuesta' // "42 es la respuesta"
 
 <p>No tienes que especificar todos los elementos en un arreglo literal. Si colocas dos comas en una fila, el arreglo completa el valor <code>undefined</code> para los elementos no especificados. El siguiente ejemplo crea el arreglo <code>fish</code>:</p>
 
-<pre class="brush: js notranslate">let fish = ['Lion', , 'Angel'];
+<pre class="brush: js">let fish = ['Lion', , 'Angel'];
 </pre>
 
 <p>Este arreglo tiene dos elementos con valores y un elemento vacío:</p>
@@ -416,17 +416,17 @@ y = 42 + ' es la respuesta' // "42 es la respuesta"
 <p><strong>Nota</strong>: Las comas finales pueden crear errores en versiones anteriores del navegador y se recomienda eliminarlas.</p>
 </div>
 
-<pre class="brush: js notranslate">let myList = ['home', , 'school', ];
+<pre class="brush: js">let myList = ['home', , 'school', ];
 </pre>
 
 <p>En el siguiente ejemplo, el <code>length</code> del arreglo es cuatro, y faltan <code>myList[0]</code> y <code>myList[2]</code>.</p>
 
-<pre class="brush: js notranslate">let myList = [ ,'home', , 'school'];
+<pre class="brush: js">let myList = [ ,'home', , 'school'];
 </pre>
 
 <p>En el siguiente ejemplo, el <code>length</code> del arreglo es cuatro, y faltan <code>myList[1]</code> y <code>myList[3]</code>. <strong>Solo se ignora la última coma.</strong></p>
 
-<pre class="brush: js notranslate">let myList = ['home', , 'school', , ];
+<pre class="brush: js">let myList = ['home', , 'school', , ];
 </pre>
 
 <p>Entender el comportamiento de las comas adicionales es importante para comprender JavaScript como lenguaje.</p>
@@ -458,7 +458,7 @@ y = 42 + ' es la respuesta' // "42 es la respuesta"
 
 <p>Aquí tienes algunos ejemplos de literales numéricos:</p>
 
-<pre class="eval notranslate">0, 117, -345, 123456789123456789n             (decimal, base 10)
+<pre class="eval">0, 117, -345, 123456789123456789n             (decimal, base 10)
 015, 0001, -0o77, 0o777777777777n             (octal, base 8)
 0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn  (hexadecimal, "hex" o base 16)
 0b11, 0b0011, -0b11, 0b11101001010101010101n  (binario, base 2)
@@ -481,12 +481,12 @@ y = 42 + ' es la respuesta' // "42 es la respuesta"
 
 <p>Específicamente, la sintaxis es:</p>
 
-<pre class="eval notranslate">[(+|-)][dígitos].[dígitos][(E|e)[(+|-)]dígitos]
+<pre class="eval">[(+|-)][dígitos].[dígitos][(E|e)[(+|-)]dígitos]
 </pre>
 
 <p>Por ejemplo:</p>
 
-<pre class="eval notranslate">3.1415926
+<pre class="eval">3.1415926
 -.123456789
 -3.1E+12
 .1e-23
@@ -502,7 +502,7 @@ y = 42 + ' es la respuesta' // "42 es la respuesta"
 
 <p>El siguiente es un ejemplo de un objeto literal. El primer elemento del objeto <code>car</code> define una propiedad, <code>myCar</code>, y le asigna una nueva cadena, "<code>Saturn</code>"; al segundo elemento, la propiedad <code>getCar</code>, se le asigna inmediatamente el resultado de invocar a la función <code>(carTypes("Honda"));</code> el tercer elemento, la propiedad <code>special</code>, utiliza una variable (<code>sales</code>) existente.</p>
 
-<pre class="brush: js notranslate">var sales = 'Toyota';
+<pre class="brush: js">var sales = 'Toyota';
 
 function carTypes(name) {
   if (name === 'Honda') {
@@ -521,7 +521,7 @@ console.log(car.special); // Toyota
 
 <p>Además, puedes utilizar un literal numérico o de cadena para el nombre de una propiedad o anidar un objeto dentro de otro. El siguiente ejemplo usa estas opciones.</p>
 
-<pre class="brush: js notranslate">var car = { manyCars: {a: 'Saab', b: 'Jeep'}, 7: 'Mazda' };
+<pre class="brush: js">var car = { manyCars: {a: 'Saab', b: 'Jeep'}, 7: 'Mazda' };
 
 console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
@@ -531,7 +531,7 @@ console.log(car[7]); // Mazda
 
 <p>No se puede acceder a los nombres de propiedad que no sean identificadores válidos como un punto (<code>.</code>), propiedad, pero <em>se pueden</em> acceder y configurar con la notación tipo arreglo ("<code>[]</code>").</p>
 
-<pre class="brush: js notranslate">var unusualPropertyNames = {
+<pre class="brush: js">var unusualPropertyNames = {
   '': 'Una cadena vacía',
   '!': '¡Bang!'
 }
@@ -546,7 +546,7 @@ console.log(unusualPropertyNames['!']); // ¡Bang!</pre>
 
 <p>Juntos, estos también acercan los objetos literales y las declaraciones de clase, y permiten que el diseño basado en objetos se beneficie de algunas de las mismas conveniencias.</p>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
     // __proto__
     __proto__: theProtoObj,
     // Abreviatura de "handler: handler"
@@ -565,7 +565,7 @@ console.log(unusualPropertyNames['!']); // ¡Bang!</pre>
 
 <p>Un expresión regular literal (que se define en detalle {{JSxRef("../Guide/Regular_Expressions", "más adelante")}}) es un patrón incluido entre barras. El siguiente es un ejemplo de una expresión regular literal.</p>
 
-<pre class="brush: js notranslate">var re = /ab+c/;</pre>
+<pre class="brush: js">var re = /ab+c/;</pre>
 
 <h3 id="Cadenas_literales">Cadenas literales</h3>
 
@@ -573,7 +573,7 @@ console.log(unusualPropertyNames['!']); // ¡Bang!</pre>
 
 <p>Los siguientes son ejemplos de cadenas literales:</p>
 
-<pre class="brush: js notranslate">'foo'
+<pre class="brush: js">'foo'
 "bar"
 '1234'
 "una linea \n otra linea"
@@ -582,7 +582,7 @@ console.log(unusualPropertyNames['!']); // ¡Bang!</pre>
 
 <p>Puedes llamar a cualquiera de los métodos del objeto {{JSxRef("String")}} en un valor de cadena literal. JavaScript automáticamente convierte la cadena literal en un objeto <code>String</code> temporal, llama al método y luego descarta el objeto <code>String</code> temporal. También puedes usar la propiedad <code>String.length</code> con una cadena literal:</p>
 
-<pre class="brush: js notranslate">// Imprimirá el número de símbolos en la cadena, incluidos los espacios en blanco.
+<pre class="brush: js">// Imprimirá el número de símbolos en la cadena, incluidos los espacios en blanco.
 console.log("John's cat".length)  // En este caso, 10.
 </pre>
 
@@ -592,7 +592,7 @@ console.log("John's cat".length)  // En este caso, 10.
 
 <p>Opcionalmente, puedes agregar una etiqueta para permitirte personalizar la construcción de la cadena, evitando ataques de inyección o construyendo estructuras de datos de nivel superior a partir del contenido de la cadena.</p>
 
-<pre class="brush: js notranslate">// Creación de cadenas literales básicas
+<pre class="brush: js">// Creación de cadenas literales básicas
 `en JavaScript '\n' es un avance de línea.`
 
 // Cadenas multilínea
@@ -617,7 +617,7 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
 
 <p>Adicionalmente a los caracteres normales, también puedes incluir caracteres especiales en las cadenas, como muestra el siguiente ejemplo:</p>
 
-<pre class="brush: js notranslate">"una linea \n otra linea"
+<pre class="brush: js">"una linea \n otra linea"
 </pre>
 
 <p>La siguiente tabla enumera los caracteres especiales que se pueden usar en una cadena JavaScript.</p>
@@ -706,23 +706,23 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
 
 <p>Puedes insertar comillas dobles dentro de una cadena anteponiendo un caracter de barra inversa. Esto se conoce como <em>escapar</em> las comillas. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">var quote = "Él leyó \"La cremación de Sam McGee\" de R.W. Service.";
+<pre class="brush: js">var quote = "Él leyó \"La cremación de Sam McGee\" de R.W. Service.";
 console.log(quote);
 </pre>
 
 <p>El resultado de esto sería:</p>
 
-<pre class="eval notranslate">El leyó "La cremación de Sam McGee" de R.W. Service.
+<pre class="eval">El leyó "La cremación de Sam McGee" de R.W. Service.
 </pre>
 
 <p>Para incluir una barra invertida literal dentro de una cadena, debes escapar el caracter de barra invertida. Por ejemplo, para asignar la ruta del archivo <code>c:\temp</code> a una cadena, usa lo siguiente:</p>
 
-<pre class="brush: js notranslate">var home = 'c:\\temp';
+<pre class="brush: js">var home = 'c:\\temp';
 </pre>
 
 <p>También puedes escapar los saltos de línea precediéndolos con una barra invertida. La barra invertida y el salto de línea se eliminan del valor de la cadena.</p>
 
-<pre class="brush: js notranslate">var str = 'esta cadena \
+<pre class="brush: js">var str = 'esta cadena \
 se divide \
 en múltiples \
 líneas.'
@@ -731,7 +731,7 @@ console.log(str);   // esta cadena se divide en múltiples líneas.
 
 <p>Aunque JavaScript no tiene sintaxis "«heredoc»" se puede acercar insertando una barra inversa y un salto de linea al final de cada linea:</p>
 
-<pre class="brush: js notranslate">var poem =
+<pre class="brush: js">var poem =
 'Las rosas son rojas,\n\
 Las violetas son azules.\n\
 El azúcar es dulce,\n\
@@ -740,7 +740,7 @@ y foo también.'
 
 <p>ECMAScript 2015 introduce un nuevo tipo de literal, a saber, {{JSxRef("template_strings", "plantillas literales")}}. Esto permite muchas nuevas funciones, ¡incluidas cadenas multilínea!</p>
 
-<pre class="brush: js notranslate" dir="rtl">var poem =
+<pre class="brush: js" dir="rtl">var poem =
 `Las rosas son rojas,
 Las violetas son azules.
 El azúcar es dulce,

@@ -22,7 +22,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador
 
 <p>Este objeto no puede ser instanciado directamente. En su lugar, una instancia del objeto <code>Generator</code> puede ser devuelta por una <a href="/es/docs/Web/JavaScript/Referencia/Sentencias/function*">función generator</a>:</p>
 
-<pre class="syntaxbox notranslate">	function* gen() {
+<pre class="syntaxbox">	function* gen() {
 	  yield 1;
 	  yield 2;
 	  yield 3;
@@ -64,7 +64,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador
 
 <h3 id="Un_iterador_infinito">Un iterador infinito</h3>
 
-<pre class="brush: js notranslate">	function* idMaker() {
+<pre class="brush: js">	function* idMaker() {
 	    var index = 0;
 	    while(true)
 	        yield index++;
@@ -99,7 +99,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador
 
 <h3 id="Ejemplo_de_generador_legado">Ejemplo de generador legado</h3>
 
-<pre class="brush: js notranslate">	function fibonacci() {
+<pre class="brush: js">	function fibonacci() {
 	  var a = yield 1;
 	  yield a * 2;
 	}

@@ -36,11 +36,11 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <p>Ya debe haber instalado el generador como parte de <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Configurar un entorno de desarrollo de Node</a>. Como un rápido recordatorio, la herramienta generador se instala para todos los sitios usando el manejador de paquetes NPM, como se muestra:</p>
 
-<pre class="brush: bash notranslate"><code>npm install express-generator -g</code></pre>
+<pre class="brush: bash"><code>npm install express-generator -g</code></pre>
 
 <p>El generador tiene un número de opciones, las cuales puede observar en la línea de comandos usando el comando <code>--help</code> (o bien  <code>-h</code>):</p>
 
-<pre class="brush: bash notranslate">&gt; express --help
+<pre class="brush: bash">&gt; express --help
 
   Usage: express [options] [dir]
 
@@ -60,7 +60,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <p>Simplemente puede especificar <code>express</code> para crear un proyecto dentro del directorio actual usando el motor de plantillas <em>Jade</em> y CSS plano (si especifica un nombre de directorio entonces el proyecto será creado en un subdirectorio con ese nombre).</p>
 
-<pre class="brush: bash notranslate"><code>express</code></pre>
+<pre class="brush: bash"><code>express</code></pre>
 
 <p>También puede seleccionar el motor de plantillas para las vistas usando  <code>--view</code> y/o un motor generador de CSS usando <code>--css</code>.</p>
 
@@ -124,12 +124,12 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <p>Primero navegue a donde quiera crear el proyecto y luego ejecute el <em>Generador de Aplicaciones Express en la línea  de comandos como se muestra</em>:</p>
 
-<pre class="brush: bash notranslate">express express-locallibrary-tutorial --view=pug
+<pre class="brush: bash">express express-locallibrary-tutorial --view=pug
 </pre>
 
 <p>El generador creará (y listará) los archivos del proyecto.</p>
 
-<pre class="brush: bash notranslate">   create : express-locallibrary-tutorial
+<pre class="brush: bash">   create : express-locallibrary-tutorial
    create : express-locallibrary-tutorial/package.json
    create : express-locallibrary-tutorial/app.js
    create : express-locallibrary-tutorial/public/images
@@ -162,16 +162,16 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <ol>
  <li>Primero instale las dependencias (el comando <code>install</code> recuperará todas las dependencias listadas e el archivo <strong>package.json</strong> del proyecto).
 
-  <pre class="brush: bash notranslate">cd express-locallibrary-tutorial
+  <pre class="brush: bash">cd express-locallibrary-tutorial
 npm install</pre>
  </li>
  <li>Luego ejecute la aplicación.
   <ul>
    <li>En Windows, use este  comando:
-    <pre class="brush: bash notranslate">SET DEBUG=express-locallibrary-tutorial:* &amp; npm start</pre>
+    <pre class="brush: bash">SET DEBUG=express-locallibrary-tutorial:* &amp; npm start</pre>
    </li>
    <li>En macOS o Linux, use este comando:
-    <pre class="brush: bash notranslate">DEBUG=express-locallibrary-tutorial:* npm start
+    <pre class="brush: bash">DEBUG=express-locallibrary-tutorial:* npm start
 </pre>
    </li>
   </ul>
@@ -188,7 +188,7 @@ npm install</pre>
 <div class="note">
 <p><strong>Nota:</strong> También podría ejecutar la app usando el comando <code>npm start</code>. Especificado la variable DEBUG como se muestra habilita el logging/debugging por consola. Por ejemplo, cuando visite la página mostrada arriba verá la información de depuración como esta:</p>
 
-<pre class="brush: bash notranslate">&gt;SET DEBUG=express-locallibrary-tutorial:* &amp; npm start
+<pre class="brush: bash">&gt;SET DEBUG=express-locallibrary-tutorial:* &amp; npm start
 
 &gt; express-locallibrary-tutorial@0.0.0 start D:\express-locallibrary-tutorial
 &gt; node ./bin/www
@@ -205,18 +205,18 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 <p>Una de las herramientas más sencillas para este propósito es <a href="https://github.com/remy/nodemon">nodemon</a>. Éste usualmente se instala globalmente (ya que es una "herramienta"), pero aquí lo instalaremos y usaremos localmente como una dependencia de desarrollo, así cualquier desarrollador que esté trabajando con el proyecto lo obtendrá automáticamente cuando instale la aplicación. Use el siguiente comando en el directorio raíz del esqueleto del proyecto:</p>
 
-<pre class="brush: bash notranslate">npm install --save-dev nodemon</pre>
+<pre class="brush: bash">npm install --save-dev nodemon</pre>
 
 <p>Si abre el archivo <strong>package.json</strong> de su proyecto verá una nueva sección con esta dependencia:</p>
 
-<pre class="brush: json notranslate">  "devDependencies": {
+<pre class="brush: json">  "devDependencies": {
     "nodemon": "^1.14.11"
   }
 </pre>
 
 <p>Debido a que la herramienta no fue instalada globalmente no podemos ejecutarla desde la línea de comandos (a menos que la agreguemos a la ruta) pero podemos llamarla desde un script NPM porque NPM sabe todo sobre los paquetes instalados. Busque la sección <code>scripts</code> de su package.json. Inicialmente contendrá una línea, la cual comienza con <code>"start"</code>. Actualicela colocando una coma al final de la línea, y agregue la línea <code>"devstart"</code> mostrada abajo:</p>
 
-<pre class="brush: json notranslate">  "scripts": {
+<pre class="brush: json">  "scripts": {
     "start": "node ./bin/www"<strong>,</strong>
 <strong>    "devstart": "nodemon ./bin/www"</strong>
   },
@@ -226,10 +226,10 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 <ul>
  <li>En Windows, use este comando:
-  <pre class="brush: bash notranslate">SET DEBUG=express-locallibrary-tutorial:* &amp; npm <strong>run devstart</strong></pre>
+  <pre class="brush: bash">SET DEBUG=express-locallibrary-tutorial:* &amp; npm <strong>run devstart</strong></pre>
  </li>
  <li>En macOS or Linux, use este comando:
-  <pre class="brush: bash notranslate">DEBUG=express-locallibrary-tutorial:* npm <strong>run devstart</strong>
+  <pre class="brush: bash">DEBUG=express-locallibrary-tutorial:* npm <strong>run devstart</strong>
 </pre>
  </li>
 </ul>
@@ -276,7 +276,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 <p>El archivo <strong>package.json </strong>define las dependencias de la aplicación y otra información: </p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "express-locallibrary-tutorial",
   "version": "0.0.0",
   "private": true,
@@ -311,7 +311,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 <p class="brush: bash">La sección de scripts define un script de "<em>start</em>", que es lo que invocamos cuando llamamos a npm start para iniciar el servidor. Desde la definición del script, puede ver que esto realmente inicia el archivo JavaScript <strong>./bin/www </strong>con <em>node</em>. También define un script "<em>devstart</em>", que invocamos cuando llamamos a npm run devstart en su lugar. Esto inicia el mismo archivo <strong>./bin/www</strong>, pero con <em>nodemon</em> en lugar de node.</p>
 
-<pre class="brush: json notranslate">  "scripts": {
+<pre class="brush: json">  "scripts": {
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www"
   },
@@ -321,7 +321,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 <p>El archivo <strong>/bin/www</strong> es el punto de entrada de la aplicación. Lo primero que hace es require () el punto de entrada de la aplicación "real" (<strong>app.js</strong>, en la raíz del proyecto) que configura y devuelve el objeto de la aplicación express ().</p>
 
-<pre class="brush: js notranslate">#!/usr/bin/env node
+<pre class="brush: js">#!/usr/bin/env node
 
 /**
  * Module dependencies.
@@ -340,7 +340,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 <p>Este archivo crea un objeto de aplicación rápida (aplicación denominada, por convención), configura la aplicación con varias configuraciones y middleware, y luego exporta la aplicación desde el módulo. El siguiente código muestra solo las partes del archivo que crean y exportan el objeto de la aplicación:</p>
 
-<pre class="brush: js notranslate"><code>var express = require('express');
+<pre class="brush: js"><code>var express = require('express');
 var app = express();
 ...
 </code>module.exports = app;
@@ -350,7 +350,7 @@ var app = express();
 
 <p>Permite trabajar a través del archivo <strong>app.js </strong>en detalle. Primero importamos algunas bibliotecas de node útiles en el archivo usando require (), incluyendo <em>express</em>, <em>serve-favicon</em>, <em>morgan</em>, <em>cookie-parser</em> y <em>body-parser</em> que previamente descargamos para nuestra aplicación usando NPM; y <em>path</em>, que es una biblioteca central de nodos para analizar rutas de archivos y directorios.</p>
 
-<pre class="brush: js notranslate">var express = require('express');
+<pre class="brush: js">var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -360,7 +360,7 @@ var bodyParser = require('body-parser');
 
 <p>Luego require () modules de nuestro directorio de rutas. Estos modules/files contienen código para manejar conjuntos particulares de "routes" relacionadas (rutas URL). Cuando extendemos la aplicación esqueleto, por ejemplo, para enumerar todos los libros de la biblioteca, agregaremos un nuevo archivo para tratar las rutas relacionadas con los libros.</p>
 
-<pre class="brush: js notranslate">var index = require('./routes/index');
+<pre class="brush: js">var index = require('./routes/index');
 var users = require('./routes/users');
 </pre>
 
@@ -370,7 +370,7 @@ var users = require('./routes/users');
 
 <p>Next we create the <code>app</code> object using our imported <em>express</em> module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First we set the '<code>views</code>' value to specify the folder where the templates will be stored (in this case the sub folder <strong>/views</strong>). Then we set the '<code>view engine</code>' value to specify the template library (in this case "pug").</p>
 
-<pre class="brush: js notranslate">var app = express();
+<pre class="brush: js">var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -379,7 +379,7 @@ app.set('view engine', 'pug');
 
 <p>The next set of functions call <code>app.use()</code> to add the <em>middleware</em> libraries into the request handling chain. In addition to the 3rd party libraries we imported previously, we use the <code>express.static</code> middleware to get <em>Express</em> to serve all the static files in the <strong>/public</strong> directory in the project root.</p>
 
-<pre class="brush: js notranslate">// uncomment after placing your favicon in /public
+<pre class="brush: js">// uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -390,7 +390,7 @@ app.use(cookieParser());
 
 <p>Now that all the other middleware is set up, we add our (previously imported) route-handling code to the request handling chain. The imported code will define particular routes for the different <em>parts</em> of the site:</p>
 
-<pre class="brush: js notranslate">app.use('/', index);
+<pre class="brush: js">app.use('/', index);
 app.use('/users', users);
 </pre>
 
@@ -400,7 +400,7 @@ app.use('/users', users);
 
 <p id="error_handling">The last middleware in the file adds handler methods for errors and HTTP 404 responses.</p>
 
-<pre class="brush: js notranslate">// catch 404 and forward to error handler
+<pre class="brush: js">// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
@@ -421,13 +421,13 @@ app.use(function(err, req, res, next) {
 
 <p>The Express application object (app) is now fully configured. The last step is to add it to the module exports (this is what allows it to be imported by <strong>/bin/www</strong>).</p>
 
-<pre class="brush: js notranslate">module.exports = app;</pre>
+<pre class="brush: js">module.exports = app;</pre>
 
 <h3 id="Routes">Routes</h3>
 
 <p>The route file <strong>/routes/users.js</strong> is shown below (route files share a similar structure, so we don't need to also show <strong>index.js</strong>). First it loads the <em>express</em> module, and uses it to get an <code>express.Router</code> object. Then it specifies a route on that object, and lastly exports the router from the module (this is what allows the file to be imported into <strong>app.js</strong>).</p>
 
-<pre class="brush: js notranslate">var express = require('express');
+<pre class="brush: js">var express = require('express');
 var router = express.Router();
 
 /* GET users listing. */
@@ -450,7 +450,7 @@ module.exports = router;
 
 <p>The views (templates) are stored in the <strong>/views</strong> directory (as specified in <strong>app.js</strong>) and are given the file extension <strong>.pug</strong>. The method <code><a href="http://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> is used to render a specified template along with the values of named variables passed in an object, and then send the result as a response. In the code below from <strong>/routes/index.js</strong> you can see how that route renders a response using the template "index" passing the template variable "title".</p>
 
-<pre class="brush: js notranslate">/* GET home page. */
+<pre class="brush: js">/* GET home page. */
 router.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
 });

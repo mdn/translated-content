@@ -106,12 +106,12 @@ translation_of: Web/HTTP/Overview
 <ol>
  <li>Abre una conexión TCP: la conexión TCP se usará para hacer una petición, o varias, y recibir la respuesta. El cliente pude abrir una conexión nueva, reusar una existente, o abrir varias a la vez hacia el servidor.</li>
  <li>Hacer una petición HTTP: Los mensajes HTTP (previos a HTTP/2) son legibles en texto plano. A partir de la versión del protocolo HTTP/2, los mensajes se encapsulan en franjas, haciendo que no sean directamente interpretables, aunque el principio de operación es el mismo.
-  <pre class="line-numbers  language-html notranslate"><code class="language-html">GET / HTTP/1.1
+  <pre class="line-numbers  language-html"><code class="language-html">GET / HTTP/1.1
 Host: developer.mozilla.org
 Accept-Language: fr</code></pre>
  </li>
  <li>Leer la respuesta enviada por el servidor:
-  <pre class="line-numbers  language-html notranslate"><code class="language-html">HTTP/1.1 200 OK
+  <pre class="line-numbers  language-html"><code class="language-html">HTTP/1.1 200 OK
 Date: Sat, 09 Oct 2010 14:28:02 GMT
 Server: Apache
 Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT

@@ -35,19 +35,19 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <p>JavaScript tiene ambos operadores <em>binarios</em> y <em>unarios</em>, y un operador ternario especial, el operador condicional. Un operador binario requiere dos operandos, uno antes del operando y otro después del operador:</p>
 
-<pre class="syntaxbox notranslate"><em>operando1</em> <em>operador</em> <em>operando2</em>
+<pre class="syntaxbox"><em>operando1</em> <em>operador</em> <em>operando2</em>
 </pre>
 
 <p>Por ejemplo, <code>3+4</code> o <code>x*y</code>.</p>
 
 <p>Un operador unario requiere un solo operando, ya sea antes o después del operador:</p>
 
-<pre class="syntaxbox notranslate"><em>operador</em> <em>operando</em>
+<pre class="syntaxbox"><em>operador</em> <em>operando</em>
 </pre>
 
 <p>o</p>
 
-<pre class="syntaxbox notranslate"><em>operando</em> <em>operador</em>
+<pre class="syntaxbox"><em>operando</em> <em>operador</em>
 </pre>
 
 <p>Por ejemplo, <code>x++</code> o <code>++x</code>.</p>
@@ -155,7 +155,7 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <p>Como la mayoría de las expresiones, asignaciones como <code>x = y</code> tienen un valor de retorno. Se puede recuperar p. ej. asignando la expresión o registrándola:</p>
 
-<pre class="brush: bash notranslate">const z = (x = y); // O de forma equivalente: const z = x = y;
+<pre class="brush: bash">const z = (x = y); // O de forma equivalente: const z = x = y;
 
 console.log(z); // Registra el valor de retorno de la asignación x = y.
 console.log(x = y); // O registra el valor de retorno directamente.
@@ -178,7 +178,7 @@ console.log(x = y); // O registra el valor de retorno directamente.
 
 <p>Para asignaciones más complejas, la sintaxis de {{JSxRef("Operadores/Destructuring_assignment", "asignación de desestructuración")}} es una expresión de JavaScript que hace posible extraer datos de arreglos u objetos usando una sintaxis que refleja la construcción de arreglos y objetos literales.</p>
 
-<pre class="brush: js notranslate">var foo = ['one', 'two', 'three'];
+<pre class="brush: js">var foo = ['one', 'two', 'three'];
 
 // sin desestructurar
 var one   = foo[0];
@@ -194,7 +194,7 @@ var [one, two, three] = foo;</pre>
 
 <p><a id="Comparacion" name="Comparacion">Un operador de comparación compara sus operandos y devuelve un valor lógico en función de si la comparación es verdadera (<code>true</code>) o falsa (<code>false</code>). Los operandos pueden ser valores numéricos, de cadena, lógicos u objetos. Las cadenas se comparan según el orden lexicográfico estándar, utilizando valores Unicode. En la mayoría de los casos, si los dos operandos no son del mismo tipo, JavaScript intenta convertirlos a un tipo apropiado para la comparación. Este comportamiento generalmente resulta en comparar los operandos numéricamente. Las únicas excepciones a la conversión de tipos dentro de las comparaciones involucran a los operadores <code>===</code> y <code>!==</code>, que realizan comparaciones estrictas de igualdad y desigualdad. Estos operadores no intentan convertir los operandos a tipos compatibles antes de verificar la igualdad. La siguiente tabla describe los operadores de comparación en términos de este código de ejemplo:</a></p>
 
-<pre class="brush: js notranslate"><a id="Comparacion" name="Comparacion">
+<pre class="brush: js"><a id="Comparacion" name="Comparacion">
 var var1 = 3;
 var var2 = 4;
 </a></pre>
@@ -268,7 +268,7 @@ var var2 = 4;
 
 <p>Un operador aritmético toma valores numéricos (ya sean literales o variables) como sus operandos y devuelve un solo valor numérico. Los operadores aritméticos estándar son suma (<code>+</code>), resta (<code>-</code>), multiplicación (<code>*</code>) y división (<code>/</code>). Estos operadores funcionan como lo hacen en la mayoría de los otros lenguajes de programación cuando se usan con números de punto flotante (en particular, ten en cuenta que la división entre cero produce {{JSxRef("Infinity")}}). Por ejemplo:</p>
 
-<pre class="brush: js notranslate">1 / 2; // 0.5
+<pre class="brush: js">1 / 2; // 0.5
 1 / 2 == 1.0 / 2.0; // Esto es true
 </pre>
 
@@ -380,7 +380,7 @@ var var2 = 4;
 
 <ul>
  <li>Los operandos se convierten en enteros de treinta y dos bits y se expresan mediante una serie de bits (ceros y unos). A los números con más de 32 bits se les descartan los bits más significativos. Por ejemplo, el siguiente número entero con más de 32 bits se convertirá en un número entero de 32 bits:
-  <pre class="brush: bash notranslate">Antes:  1110<code> </code>0110<code> </code>1111<code> </code>1010<code> </code>0000<code> </code>0000<code> </code>0000<code> </code>0110<code> </code>0000<code> </code>0000<code> </code>0001
+  <pre class="brush: bash">Antes:  1110<code> </code>0110<code> </code>1111<code> </code>1010<code> </code>0000<code> </code>0000<code> </code>0000<code> </code>0110<code> </code>0000<code> </code>0000<code> </code>0001
 Después:               1010<code> </code>0000<code> </code>0000<code> </code>0000<code> </code>0110<code> </code>0000<code> </code>0000<code> </code>0001</pre>
  </li>
  <li>Cada bit en el primer operando se empareja con el bit correspondiente en el segundo operando: primer bit al primer bit, segundo bit al segundo bit, y así sucesivamente.</li>
@@ -502,7 +502,7 @@ Después:               1010<code> </code>0000<code> </code>0000<code> </c
 
 <p>El siguiente código muestra ejemplos del operador <code>&amp;&amp;</code> (<code>AND</code> lógico).</p>
 
-<pre class="brush: js notranslate">var a1 =  true &amp;&amp; true;     // t &amp;&amp; t devuelve true
+<pre class="brush: js">var a1 =  true &amp;&amp; true;     // t &amp;&amp; t devuelve true
 var a2 =  true &amp;&amp; false;    // t &amp;&amp; f devuelve false
 var a3 = false &amp;&amp; true;     // f &amp;&amp; t devuelve false
 var a4 = false &amp;&amp; (3 == 4); // f &amp;&amp; f devuelve false
@@ -513,7 +513,7 @@ var a7 = 'Cat' &amp;&amp; false;    // t &amp;&amp; f devuelve false
 
 <p>El siguiente código muestra ejemplos del operador || (<code>OR</code> lógico).</p>
 
-<pre class="brush: js notranslate">var o1 =  true || true;     // t || t devuelve true
+<pre class="brush: js">var o1 =  true || true;     // t || t devuelve true
 var o2 = false || true;     // f || t devuelve true
 var o3 =  true || false;    // t || f devuelve true
 var o4 = false || (3 == 4); // f || f devuelve false
@@ -524,7 +524,7 @@ var o7 = 'Cat' || false;    // t || f devuelve Cat
 
 <p>El siguiente código muestra ejemplos de el operador ! (<code>NOT</code> lógico).</p>
 
-<pre class="brush: js notranslate">var n1 = !true;  // !t devuelve false
+<pre class="brush: js">var n1 = !true;  // !t devuelve false
 var n2 = !false; // !f devuelve true
 var n3 = !'Cat'; // !t devuelve false
 </pre>
@@ -548,27 +548,27 @@ var n3 = !'Cat'; // !t devuelve false
 
 <p>Por ejemplo,</p>
 
-<pre class="brush: js notranslate">console.log('mi ' + 'cadena'); // la consola registra la cadena "mi cadena".</pre>
+<pre class="brush: js">console.log('mi ' + 'cadena'); // la consola registra la cadena "mi cadena".</pre>
 
 <p>El operador de asignación abreviada <code>+=</code> también se puede utilizar para concatenar cadenas.</p>
 
 <p>Por ejemplo,</p>
 
-<pre class="brush: js notranslate">var mystring = 'alpha';
+<pre class="brush: js">var mystring = 'alpha';
 mystring += 'bet'; // se evalúa como "alphabet" y asigna este valor a mystring.</pre>
 
 <h3 id="Operador_condicional_ternario"><a id="Condicional" name="Condicional">Operador condicional (ternario)</a></h3>
 
 <p>El {{JSxRef("Operadores/Conditional_Operator", "operador condicional")}} es el único operador de JavaScript que toma tres operandos. El operador puede tener uno de dos valores según una condición. La sintaxis es:</p>
 
-<pre class="syntaxbox notranslate"><em>condition</em> ? <em>val1</em> : <em>val2</em>
+<pre class="syntaxbox"><em>condition</em> ? <em>val1</em> : <em>val2</em>
 </pre>
 
 <p>Si <code>condition</code> es <code>true</code>, el operador tiene el valor de <code>val1</code>. De lo contrario, tiene el valor de <code>val2</code>. Puedes utilizar el operador condicional en cualquier lugar donde normalmente utilizas un operador estándar.</p>
 
 <p>Por ejemplo,</p>
 
-<pre class="brush: js notranslate">var status = (age &gt;= 18) ? 'adult' : 'minor';
+<pre class="brush: js">var status = (age &gt;= 18) ? 'adult' : 'minor';
 </pre>
 
 <p>Esta declaración asigna el valor "<code>adult</code>" a la variable <code>status</code> si <code>age</code> es de dieciocho años o más. De lo contrario, asigna el valor "<code>minor</code>" a <code>status</code>.</p>
@@ -579,7 +579,7 @@ mystring += 'bet'; // se evalúa como "alphabet" y asigna este valor a mystring.
 
 <p>Por ejemplo, si <code>a</code> es un arreglo bidimensional con 10 elementos en un lado, el siguiente código usa el operador <code>coma</code> para actualizar dos variables a la vez. El código imprime los valores de los elementos diagonales en el arreglo:</p>
 
-<pre class="brush: js notranslate">var x = [0,1,2,3,4,5,6,7,8,9]
+<pre class="brush: js">var x = [0,1,2,3,4,5,6,7,8,9]
 var a = [x, x, x, x, x];
 
 for (var i = 0, j = 9; i &lt;= j; i++, j--)
@@ -595,7 +595,7 @@ for (var i = 0, j = 9; i &lt;= j; i++, j--)
 
 <p>El operador {{JSxRef("Operadores/delete", "delete")}} elimina la propiedad de un objeto. La sintaxis es:</p>
 
-<pre class="brush: js notranslate">delete object.property;
+<pre class="brush: js">delete object.property;
 delete object[propertyKey];
 delete objectName[index];
 delete property; // legal solo dentro de una declaración with
@@ -607,7 +607,7 @@ delete property; // legal solo dentro de una declaración with
 
 <p>Si el operador <code>delete</code> tiene éxito, elimina la propiedad del objeto. Intentar acceder a él después dará como resultado <code>undefined</code>. El operador <code>delete</code> devuelve <code>true</code> si la operación es posible; devuelve <code>false</code> si la operación no es posible.</p>
 
-<pre class="brush: js notranslate">x = 42; // implícitamente crea window.x
+<pre class="brush: js">x = 42; // implícitamente crea window.x
 var y = 43;
 var myobj = {h: 4}; // crea un objeto con la propiedad h
 
@@ -625,7 +625,7 @@ delete myobj.h; // devuelve true (puede eliminar propiedades definidas por el us
 
 <p>El {{JSxRef("Operadores/typeof", "operador typeof")}} se utiliza de cualquiera de las siguientes formas:</p>
 
-<pre class="syntaxbox notranslate">typeof operand
+<pre class="syntaxbox">typeof operand
 typeof (operand)
 </pre>
 
@@ -633,7 +633,7 @@ typeof (operand)
 
 <p>Supón que defines las siguientes variables:</p>
 
-<pre class="brush: js notranslate">var myFun = new Function('5 + 2');
+<pre class="brush: js">var myFun = new Function('5 + 2');
 var shape = 'round';
 var size = 1;
 var foo = ['Apple', 'Mango', 'Orange'];
@@ -642,7 +642,7 @@ var today = new Date();
 
 <p>El operador <code>typeof</code> devuelve los siguientes resultados para estas variables:</p>
 
-<pre class="brush: js notranslate">typeof myFun;       // devuelve "function"
+<pre class="brush: js">typeof myFun;       // devuelve "function"
 typeof shape;       // devuelve "string"
 typeof size;        // devuelve "number"
 typeof foo;         // devuelve "object"
@@ -652,26 +652,26 @@ typeof doesntExist; // devuelve "undefined"
 
 <p>Para las palabras clave <code>true</code> y <code>null</code>, el operador <code>typeof</code> devuelve los siguientes resultados:</p>
 
-<pre class="brush: js notranslate">typeof true; // devuelve "boolean"
+<pre class="brush: js">typeof true; // devuelve "boolean"
 typeof null; // devuelve "object"
 </pre>
 
 <p>Para un número o cadena, el operador <code>typeof</code> devuelve los siguientes resultados:</p>
 
-<pre class="brush: js notranslate">typeof 62;            // devuelve "number"
+<pre class="brush: js">typeof 62;            // devuelve "number"
 typeof 'Hola mundo';  // devuelve "string"
 </pre>
 
 <p>Para los valores de propiedad, el operador <code>typeof</code> devuelve el tipo de valor que contiene la propiedad:</p>
 
-<pre class="brush: js notranslate">typeof document.lastModified; // devuelve "string"
+<pre class="brush: js">typeof document.lastModified; // devuelve "string"
 typeof window.length;         // devuelve "number"
 typeof Math.LN2;              // devuelve "number"
 </pre>
 
 <p>Para métodos y funciones, el operador <code>typeof</code> devuelve los siguientes resultados:</p>
 
-<pre class="brush: js notranslate">typeof blur;        // devuelve "function"
+<pre class="brush: js">typeof blur;        // devuelve "function"
 typeof eval;        // devuelve "function"
 typeof parseInt;    // devuelve "function"
 typeof shape.split; // devuelve "function"
@@ -679,7 +679,7 @@ typeof shape.split; // devuelve "function"
 
 <p>Para objetos predefinidos, el operador <code>typeof</code> devuelve los siguientes resultados:</p>
 
-<pre class="brush: js notranslate">typeof Date;     // devuelve "function"
+<pre class="brush: js">typeof Date;     // devuelve "function"
 typeof Function; // devuelve "function"
 typeof Math;     // devuelve "object"
 typeof Option;   // devuelve "function"
@@ -690,7 +690,7 @@ typeof String;   // devuelve "function"
 
 <p>El {{JSxRef("Operadores/void", "operador void")}} se utiliza de cualquiera de las siguientes formas:</p>
 
-<pre class="syntaxbox notranslate">void (expression)
+<pre class="syntaxbox">void (expression)
 void expression
 </pre>
 
@@ -704,14 +704,14 @@ void expression
 
 <p>El {{JSxRef("Operadores/in", "operador in")}} devuelve <code>true</code> si la propiedad especificada está en el objeto especificado. La sintaxis es:</p>
 
-<pre class="brush: js notranslate">propNameOrNumber in objectName
+<pre class="brush: js">propNameOrNumber in objectName
 </pre>
 
 <p>donde <code>propNameOrNumber</code> es una expresión de cadena, numérica o de símbolo que representa un nombre de propiedad o índice de arreglo, y <code>objectName</code> es el nombre de un objeto.</p>
 
 <p>Los siguientes ejemplos muestran algunos usos del operador <code>in</code>.</p>
 
-<pre class="brush: js notranslate">// Arreglos
+<pre class="brush: js">// Arreglos
 var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 0 in trees;        // devuelve true
 3 in trees;        // devuelve true
@@ -735,7 +735,7 @@ var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
 
 <p>El {{JSxRef("Operadores/instanceof", "operador instanceof")}} devuelve <code>true</code> si el objeto especificado es del tipo de objeto especificado. La sintaxis es:</p>
 
-<pre class="syntaxbox notranslate">objectName instanceof objectType
+<pre class="syntaxbox">objectName instanceof objectType
 </pre>
 
 <p>donde <code>objectName</code> es el nombre del objeto para comparar con <code>objectType</code>, y <code>objectType</code> es un tipo de objeto, como {{JSxRef("Date")}} o {{JSxRef("Array")}}.</p>
@@ -744,7 +744,7 @@ var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
 
 <p>Por ejemplo, el siguiente código usa <code>instanceof</code> para determinar si <code>theDay</code> es un objeto <code>Date</code>. Debido a que <code>theDay</code> es un objeto <code>Date</code>, las instrucciones de la expresión <code>if</code> se ejecutan.</p>
 
-<pre class="brush: js notranslate">var theDay = new Date(1995, 12, 17);
+<pre class="brush: js">var theDay = new Date(1995, 12, 17);
 if (theDay instanceof Date) {
   // instrucciones a ejecutar
 }
@@ -863,13 +863,13 @@ if (theDay instanceof Date) {
 
 <p>Utiliza la {{JSxRef("Operadores/this", "palabra clave this")}} para hacer referencia al objeto actual. En general, <code>this</code> se refiere al objeto que llama en un método. Usa <code>this</code> con la notación de punto o entre corchetes:</p>
 
-<pre class="syntaxbox notranslate">this['propertyName']
+<pre class="syntaxbox">this['propertyName']
 this.propertyName
 </pre>
 
 <p>Supongamos que una función llamada <code>validate</code> valida la propiedad <code>value</code> de un objeto, dado el objeto y los valores alto y bajo:</p>
 
-<pre class="brush: js notranslate">function validate(obj, lowval, hival) {
+<pre class="brush: js">function validate(obj, lowval, hival) {
   if ((obj.value &lt; lowval) || (obj.value &gt; hival))
     console.log('¡Valor no válido!');
 }
@@ -877,7 +877,7 @@ this.propertyName
 
 <p>Puedes llamar a <code>validate</code> en el controlador de eventos <code>onChange</code> de cada elemento de formulario, utilizando <code>this</code> para pasarlo al elemento de formulario, como en el siguiente ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Ingresa un número entre 18 y 99:&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Ingresa un número entre 18 y 99:&lt;/p&gt;
 &lt;input type="text" name="age" size=3 onChange="validate(this, 18, 99);"&gt;
 </pre>
 
@@ -885,7 +885,7 @@ this.propertyName
 
 <p>El operador de agrupación <code>()</code> controla la precedencia de la evaluación en las expresiones. Por ejemplo, puedes redefinir la multiplicación y la división primero, luego la suma y la resta para evaluar la suma primero.</p>
 
-<pre class="brush:js notranslate">var a = 1;
+<pre class="brush:js">var a = 1;
 var b = 2;
 var c = 3;
 
@@ -910,14 +910,14 @@ a * c + b * c // 9
 
 <p>Puedes utilizar el {{JSxRef("Operadores/new", "operador new")}} para crear una instancia de un tipo de objeto definido por el usuario o de uno de los tipos de objeto integrados. Utiliza <code>new</code> de la siguiente manera:</p>
 
-<pre class="brush: js notranslate">var objectName = new objectType([param1, param2, ..., paramN]);
+<pre class="brush: js">var objectName = new objectType([param1, param2, ..., paramN]);
 </pre>
 
 <h4 id="super"><code>super</code></h4>
 
 <p>La {{JSxRef("Operadores/super", "palabra clave super")}} se utiliza para llamar a funciones en el padre de un objeto. Es útil con {{JSxRef("Classes", "clases")}} llamar al constructor padre, por ejemplo.</p>
 
-<pre class="syntaxbox notranslate">super([arguments]); // llama al constructor padre.
+<pre class="syntaxbox">super([arguments]); // llama al constructor padre.
 super.functionOnParent([arguments]);
 </pre>
 

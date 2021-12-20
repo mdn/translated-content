@@ -65,7 +65,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 <p>Aquí hay un ejemplo básico de campo de texto de una sola línea:</p>
 
-<pre class="brush: html notranslate">&lt;input type="text" id="comment" name="comment" value="I'm a text field"&gt;</pre>
+<pre class="brush: html">&lt;input type="text" id="comment" name="comment" value="I'm a text field"&gt;</pre>
 
 <p>Los campos de texto de una sola línea solo tienen una restricción verdadera: si escribes el texto con saltos de línea, el navegador elimina esos saltos de línea antes de enviar los datos al servidor.</p>
 
@@ -81,7 +81,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 <p>Uno de los tipos de entrada originales era el tipo de campo de texto <code>password</code>:</p>
 
-<pre class="brush: html notranslate">&lt;input type="password" id="pwd" name="pwd"&gt;</pre>
+<pre class="brush: html">&lt;input type="password" id="pwd" name="pwd"&gt;</pre>
 
 <p>El valor de la contraseña no añade restricciones especiales al texto que se introduce, pero oculta el valor que se introduce en el campo (por ejemplo, con puntos o asteriscos) para impedir que otros puedan leerlo.</p>
 
@@ -93,7 +93,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 <p>Otro control de texto original es el tipo de entrada <code>hidden</code>. Se usa para crear un control de formulario que es invisible para el usuario, pero que aun así se envía al servidor junto con el resto de los datos del formulario una vez se transmiten; por ejemplo, es posible que desees enviar una marca de tiempo al servidor que indique cuándo se realizó un pedido. Al estar oculto, el usuario no puede ver ni editar su valor intencionadamente, el control nunca recibirá el foco y un lector de pantalla tampoco lo detectará.</p>
 
-<pre class="brush: html notranslate">&lt;input type="hidden" id="timestamp" name="timestamp" value="1286705410"&gt;
+<pre class="brush: html">&lt;input type="hidden" id="timestamp" name="timestamp" value="1286705410"&gt;
 </pre>
 
 <p>Si creas un elemento así, es necesario establecer sus atributos <code>name</code> y <code>value</code>. Su valor puede establecerse dinámicamente a través de JavaScript. El tipo de entrada oculta no debe tener ninguna etiqueta asociada.</p>
@@ -116,7 +116,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 <p>Las casillas de verificación se crean estableciendo el atributo <a href="/en-US/docs/Web/HTML/Attributes/type"><code>type</code></a> del elemento {{HTMLElement ("input")}} en el valor {{HTMLElement ("input / checkbox", "checkbox")}}.</p>
 
-<pre class="brush: html notranslate">&lt;input type="checkbox" id="carrots" name="carrots" value="carrots" checked&gt;
+<pre class="brush: html">&lt;input type="checkbox" id="carrots" name="carrots" value="carrots" checked&gt;
 </pre>
 
 <p>Al incluir el atributo <code><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code>, la casilla de verificación se marca automáticamente cuando se carga la página. Al hacer clic en la casilla de verificación o en su etiqueta asociada, la casilla de verificación se activa o desactiva.</p>
@@ -135,11 +135,11 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 <p>Un botón de opción se crea estableciendo el atributo {{htmlattrxref ("type", "input")}} del elemento {{HTMLElement ("input")}} en el valor <code>radio</code>:</p>
 
-<pre class="brush: html notranslate">&lt;input type="radio" id="soup" name="meal" checked&gt;</pre>
+<pre class="brush: html">&lt;input type="radio" id="soup" name="meal" checked&gt;</pre>
 
 <p>Es posible asociar diversos botones de opción. Si comparten el mismo valor de atributo {{htmlattrxref ("name", "input")}}, se considera que están en el mismo grupo de botones. Solo un botón dentro de un grupo puede estar activado en cada momento. Esto significa que cuando uno de ellos se selecciona, todos los demás se deseleccionan automáticamente. Al enviar el formulario, solo se envía el valor del botón de opción seleccionado. Si ninguno de ellos está seleccionado, se considera que el conjunto completo de botones de opción está en un estado desconocido y no se envía ningún valor con el formulario. Cuando en un grupo de botones con el mismo nombre se selecciona uno de los botones de opción, no es posible deseleccionar todos los botones sin reiniciar el formulario.</p>
 
-<pre class="brush: html notranslate">&lt;fieldset&gt;
+<pre class="brush: html">&lt;fieldset&gt;
   &lt;legend&gt;¿Cuál es tu comida favorita?&lt;/legend&gt;
   &lt;ul&gt;
     &lt;li&gt;
@@ -188,7 +188,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 <h3 id="enviar">enviar</h3>
 
-<pre class="brush: html notranslate">&lt;button type="submit"&gt;
+<pre class="brush: html">&lt;button type="submit"&gt;
     Este es un &lt;strong&gt;botón de envío&lt;/strong&gt;
 &lt;/button&gt;
 
@@ -196,7 +196,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 <h3 id="reiniciar">reiniciar</h3>
 
-<pre class="brush: html notranslate">&lt;button type="reset"&gt;
+<pre class="brush: html">&lt;button type="reset"&gt;
     Este es un &lt;strong&gt;botón de reinicio&lt;/strong&gt;
 &lt;/button&gt;
 
@@ -204,7 +204,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 <h3 id="anónimo">anónimo</h3>
 
-<pre class="brush: html notranslate">&lt;button type="button"&gt;
+<pre class="brush: html">&lt;button type="button"&gt;
     Este es un &lt;strong&gt;botón anónimo&lt;/strong&gt;
 &lt;/button&gt;
 
@@ -222,7 +222,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 <p>Se crea un botón de imagen usando un elemento {{HTMLElement ("input")}} con su atributo {{htmlattrxref ("type","input")}} establecido en el valor <code>image</code>. Este elemento admite exactamente el mismo conjunto de atributos que el elemento {{HTMLElement ("img")}}, además de todos los atributos que admiten el resto de botones de formulario.</p>
 
-<pre class="brush: html notranslate">&lt;input type="image" alt="¡Púlsame!" src="my-img.png" width="80" height="30"&gt;</pre>
+<pre class="brush: html">&lt;input type="image" alt="¡Púlsame!" src="my-img.png" width="80" height="30"&gt;</pre>
 
 <p>Si el botón de imagen se usa para enviar un formulario, este control no envía su valor; en lugar de ello se envían las coordenadas X e Y del clic que se ha hecho sobre la imagen (las coordenadas son relativas a la imagen, lo que significa que la esquina superior izquierda de la imagen representa la coordenada (0, 0)). Las coordenadas se envían como dos pares clave/valor:</p>
 
@@ -247,7 +247,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 <p>En este ejemplo, se crea un control de selección de archivos que solicita archivos de imágenes gráficas. El usuario puede seleccionar múltiples archivos en este caso.</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" name="file" id="file" accept="image/*" multiple&gt;</pre>
+<pre class="brush: html">&lt;input type="file" name="file" id="file" accept="image/*" multiple&gt;</pre>
 
 <p>En algunos dispositivos móviles, el control de selección de archivos puede acceder a fotos, vídeos y audio capturados directamente por la cámara y el micrófono del dispositivo y añadir información de captura al atributo <code>accept</code> de la manera siguiente:</p>
 

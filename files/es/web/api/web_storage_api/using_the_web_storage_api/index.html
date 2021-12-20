@@ -22,7 +22,7 @@ original_slug: Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento
 
 <p>Los objetos de almacenamiento son simples almacenes de clave/valor, similares a objetos, pero que permanecen intactos cuando la página se recarga. Las claves y los valores siempre son cadenas de texto (fíjate que las claves con enteros se convierten automáticamente a cadenas, tal y como lo hacen los objetos). Puedes acceder a estos valores como un objeto, o con los métodos {{domxref("Storage.getItem()")}} y {{domxref("Storage.setItem()")}}. Estas tres líneas modifican el valor de colorSetting de la misma manera:</p>
 
-<pre class="brush: js notranslate" style="white-space: pre;">localStorage.colorSetting = '#a4509b';
+<pre class="brush: js" style="white-space: pre;">localStorage.colorSetting = '#a4509b';
 localStorage['colorSetting'] = '#a4509b';
 localStorage.setItem('colorSetting', '#a4509b');</pre>
 
@@ -55,7 +55,7 @@ localStorage.setItem('colorSetting', '#a4509b');</pre>
 
 <p>Esta función detecta si localStorage tiene soporte y está disponible:</p>
 
-<pre class="brush: js notranslate">function storageAvailable(type) {
+<pre class="brush: js">function storageAvailable(type) {
     try {
         var storage = window[type],
             x = '__storage_test__';
@@ -81,7 +81,7 @@ localStorage.setItem('colorSetting', '#a4509b');</pre>
 
 <p>Y aquí se muestra cómo usarla:</p>
 
-<pre class="brush: js notranslate">if (storageAvailable('localStorage')) {
+<pre class="brush: js">if (storageAvailable('localStorage')) {
   // Yippee! We can use localStorage awesomeness
 }
 else {
@@ -110,7 +110,7 @@ else {
 
 <p>En el inicio de <a href="https://github.com/mdn/dom-examples/blob/master/web-storage/main.js">main.js</a>, probamos si el objeto ya tiene valores (es decir, si la página ya fue visitada):</p>
 
-<pre class="brush: js notranslate">if(!localStorage.getItem('bgcolor')) {
+<pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
@@ -124,7 +124,7 @@ else {
 
 <p>Como dijimos arriba, los valores se pueden recuperar de la memoria usando {{domxref("Storage.getItem()")}}. Este método usa la llave del dato como argumento y devuelve el valor. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">function setStyles() {
+<pre class="brush: js">function setStyles() {
   var currentColor = localStorage.getItem('bgcolor');
   var currentFont = localStorage.getItem('font');
   var currentImage = localStorage.getItem('image');
@@ -144,7 +144,7 @@ else {
 
 <p>{{domxref("Storage.setItem()")}} se usa tanto para crear nuevos datos como para actualizar valores existentes (si el dato ya existía). Este método recibe dos argumentos: la llave del dato que se va a crear/modificar y el valor que se va a guardar.</p>
 
-<pre class="brush: js notranslate">function populateStorage() {
+<pre class="brush: js">function populateStorage() {
   localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
   localStorage.setItem('font', document.getElementById('font').value);
   localStorage.setItem('image', document.getElementById('image').value);
@@ -156,7 +156,7 @@ else {
 
 <p>También incluimos un manejador <code>onchange</code> para cada elemento del formulario, de manera que los datos y los estilos son actualizados cada vez que un valor del formulario cambia:</p>
 
-<pre class="brush: js notranslate">bgcolorForm.onchange = populateStorage;
+<pre class="brush: js">bgcolorForm.onchange = populateStorage;
 fontForm.onchange = populateStorage;
 imageForm.onchange = populateStorage;</pre>
 
@@ -166,7 +166,7 @@ imageForm.onchange = populateStorage;</pre>
 
 <p>En la página de eventos (ver <a href="https://github.com/mdn/dom-examples/blob/master/web-storage/event.js">events.js</a>) el único JavaScript es el siguiente:</p>
 
-<pre class="brush: js notranslate">window.addEventListener('storage', function(e) {
+<pre class="brush: js">window.addEventListener('storage', function(e) {
   document.querySelector('.my-key').textContent = e.key;
   document.querySelector('.my-old').textContent = e.oldValue;
   document.querySelector('.my-new').textContent = e.newValue;

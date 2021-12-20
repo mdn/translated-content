@@ -35,7 +35,7 @@ original_slug: Learn/CSS/Building_blocks/Selectores_CSS
 
 <p>Si más de un elemento utiliza el mismo CSS, puedes combinar los selectores en una <em>lista de selectores</em> para que la regla se aplique a cada uno de los selectores individuales. Por ejemplo, si tengo el mismo CSS para un <code>h1</code> y para una clase <code>.special</code>, los puedo escribir como dos reglas separadas.</p>
 
-<pre class="brush: css notranslate"><code>h1 {
+<pre class="brush: css"><code>h1 {
   color: blue;
 }
 
@@ -45,13 +45,13 @@ original_slug: Learn/CSS/Building_blocks/Selectores_CSS
 
 <p>También los podrías combinar en una lista de selectores, separándolos con una coma.</p>
 
-<pre class="brush: css notranslate"><code>h1, .special {
+<pre class="brush: css"><code>h1, .special {
   color: blue;
 } </code></pre>
 
 <p>Es posible dejar un espacio en blanco tanto antes como después de la coma. Incluso puede resultar más legible si cada selector se encuentra en una línea distinta.</p>
 
-<pre class="brush: css notranslate"><code>h1,
+<pre class="brush: css"><code>h1,
 .special {
   color: blue;
 } </code></pre>
@@ -64,7 +64,7 @@ original_slug: Learn/CSS/Building_blocks/Selectores_CSS
 
 <p>En el ejemplo siguiente, la regla que corresponde al selector de clase que no es válido se ignora, mientras que el estilo se aplica al elemento <code>h1</code>.</p>
 
-<pre class="brush: css notranslate"><code>h1 {
+<pre class="brush: css"><code>h1 {
   color: blue;
 }
 
@@ -74,7 +74,7 @@ original_slug: Learn/CSS/Building_blocks/Selectores_CSS
 
 <p>Sin embargo, si se combinan, toda la regla se considera no válida y no se aplicará estilo ni a <code>h1</code> ni a la clase.</p>
 
-<pre class="brush: css notranslate"><code>h1, ..special {
+<pre class="brush: css"><code>h1, ..special {
   color: blue;
 } </code></pre>
 
@@ -86,41 +86,41 @@ original_slug: Learn/CSS/Building_blocks/Selectores_CSS
 
 <p>Este grupo incluye selectores que delimitan un elemento HTML, como por ejemplo un <code>&lt;h1&gt;</code>.</p>
 
-<pre class="brush: css notranslate">h1 { }</pre>
+<pre class="brush: css">h1 { }</pre>
 
 <p>También incluye selectores que delimitan una clase:</p>
 
-<pre class="brush: css notranslate">.box { }</pre>
+<pre class="brush: css">.box { }</pre>
 
 <p>o un ID:</p>
 
-<pre class="brush: css notranslate">#unique { }</pre>
+<pre class="brush: css">#unique { }</pre>
 
 <h3 id="Selectores_de_atributo">Selectores de atributo</h3>
 
 <p>Este grupo de selectores te proporciona diferentes formas de seleccionar elementos según la presencia de un atributo determinado en un elemento:</p>
 
-<pre class="brush: css notranslate">a[title] { }</pre>
+<pre class="brush: css">a[title] { }</pre>
 
 <p>O incluso hacer una selección basada en la presencia de un atributo que tiene un valor particular asignado:</p>
 
-<pre class="brush: css notranslate">a[href="https://example.com"] { }</pre>
+<pre class="brush: css">a[href="https://example.com"] { }</pre>
 
 <h3 id="Las_pseudoclases_y_los_pseudoelementos">Las pseudoclases y los pseudoelementos</h3>
 
 <p>Este grupo de selectores incluye pseudoclases, que aplican estilo a ciertos estados de un elemento. La pseudoclase <code>:hover</code>, por ejemplo, selecciona un elemento solo cuando se le pasa el ratón por encima.</p>
 
-<pre class="brush: css notranslate">a: hover {}</pre>
+<pre class="brush: css">a: hover {}</pre>
 
 <p>También incluye pseudoelementos, que seleccionan una parte determinada de un elemento en vez del elemento en sí. Por ejemplo, <code>::first-line</code> siempre selecciona la primera línea del texto que se encuentra dentro de un elemento (<code>&lt;p&gt;</code>, en el ejemplo siguiente), y actúa como si un elemento <code>&lt;span&gt;</code> hubiera delimitado la primera línea, seleccionado y aplicado estilo.</p>
 
-<pre class="brush: css notranslate">p::first-line { }</pre>
+<pre class="brush: css">p::first-line { }</pre>
 
 <h3 id="Combinadores">Combinadores</h3>
 
 <p>El último grupo de selectores combina otros selectores con el fin de delimitar elementos de nuestros documentos. El ejemplo siguiente selecciona los párrafos que son hijos directos del elemento <code>&lt;article&gt;</code> utilizando el operador de combinación hijo (<code>&gt;</code>):</p>
 
-<pre class="brush: css notranslate">article &gt; p { }</pre>
+<pre class="brush: css">article &gt; p { }</pre>
 
 <h2 id="Próximos_pasos">Próximos pasos</h2>
 

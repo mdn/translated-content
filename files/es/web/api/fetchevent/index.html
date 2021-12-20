@@ -54,7 +54,7 @@ translation_of: Web/API/FetchEvent
 
 <p>Este evento fetch, permite al navegador hacer esta acción por defecto para peticiones non-GET. Para peticiones GET  esto intenta retornar una coincidencia en el cache, y  vuelve de nuevo a la red. Si busca una concidencia en el cache, actualiza asincronicamente el cache para la próxima vez.</p>
 
-<pre class="brush: js notranslate">addEventListener('fetch', event =&gt; {
+<pre class="brush: js">addEventListener('fetch', event =&gt; {
   // Permite al navegador hacer este asunto por defecto
   // para peticiones non-GET.
   if (event.request.method != 'GET') return;

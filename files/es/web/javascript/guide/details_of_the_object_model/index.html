@@ -177,7 +177,7 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
  <tbody>
   <tr>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function Employee () {
   this.name = "";
   this.dept = "general";
@@ -185,7 +185,7 @@ function Employee () {
 </pre>
    </td>
    <td>
-    <pre class="brush: java notranslate">
+    <pre class="brush: java">
 public class Employee {
    public String name;
    public String dept;
@@ -212,7 +212,7 @@ public class Employee {
  <tbody>
   <tr>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function Manager () {
   this.reports = [];
 }
@@ -225,7 +225,7 @@ WorkerBee.prototype = new Employee;
 </pre>
    </td>
    <td>
-    <pre class="brush: java notranslate">
+    <pre class="brush: java">
 public class Manager extends Employee {
    public Employee[] reports;
    public Manager () {
@@ -257,7 +257,7 @@ public class WorkerBee extends Employee {
  <tbody>
   <tr>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function SalesPerson () {
    this.dept = "sales";
    this.quota = 100;
@@ -272,7 +272,7 @@ Engineer.prototype = new WorkerBee;
 </pre>
    </td>
    <td>
-    <pre class="brush: java notranslate">
+    <pre class="brush: java">
 public class SalesPerson extends WorkerBee {
    public double quota;
    public SalesPerson () {
@@ -320,14 +320,14 @@ public class Engineer extends WorkerBee {
 
 <p>Supongamos que creas el objeto <code>mark</code> como un <code>WorkerBee</code> (como se muestra en la <a href="#8.3">Figura 8.3</a>) con la siguiente sentencia:</p>
 
-<pre class="brush: js notranslate">var mark = new WorkerBee;
+<pre class="brush: js">var mark = new WorkerBee;
 </pre>
 
 <p>Cuando el intérprete de JavaScript encuentra el operador <code>new</code>, crea un nuevo objeto genérico y establece implícitamente el valor de la propiedad interna [[Prototype]] con el valor de <code>WorkerBee.prototype</code> y pasa este nuevo objeto como <code>this</code> a la función constructora de WorkerBee. La propiedad interna [[Prototype]] (que puede observarse como <code>__proto__</code>, la propiedad cuyo nombe tiene dos guiones al principio y al final) determina la cadena de prototipo usada para devolver los valores de la propiedades cuando se accede a ellas. Una vez que estas propiedades tienen sus valores, JavaScript devuelve el nuevo objeto y la sentencia de asignación asigna el nuevo objeto ya inicializado a la variable <code>mark</code>.</p>
 
 <p>Este proceso no asigna explícitamente valores al objeto <code>mark</code> (valores <em>locales</em>) para las propiedades que <code>mark</code> hereda de la cadena de prototipos. Cuando solicitas valor de una propiedad, JavaScript primero comprueba si existe un valor para esa propiedad en el objeto. Si existe, se devuelve ese valor; sino, JavaScript comprueba la cadena de prototipos (usando la propiedad  <code>__proto__</code>). Si un objeto en la cadena de prototipos tiene un valor para esa propiedad, se devuelve ese valor. Si no existe en ningún objeto de la cadena de prototipos un valor para esa propiedad, JavaScript dice que el objeto no tiene esa propiedad. En el caso de nuestro objeto <code>mark</code>, éste tiene las siguientes propiedades y valores:</p>
 
-<pre class="brush: js notranslate">mark.name = "";
+<pre class="brush: js">mark.name = "";
 mark.dept = "general";
 mark.projects = [];
 </pre>
@@ -336,7 +336,7 @@ mark.projects = [];
 
 <p>Debido a que estos constructores no permiten especificar valores específicos de instancia, esta información es genérica. Los valores de las propiedades son los valores por omisión, compartidos por todos los objetos nuevos creados a partir de <code>WorkerBee</code>. Por supuesto se pueden cambiar después los valores de estas propiedades. Por ejemplo podríamos dar valores con información específica a <code>mark</code> de la siguiente forma:</p>
 
-<pre class="brush: js notranslate">mark.name = "Doe, Mark";
+<pre class="brush: js">mark.name = "Doe, Mark";
 mark.dept = "admin";
 mark.projects = ["navigator"];</pre>
 
@@ -344,14 +344,14 @@ mark.projects = ["navigator"];</pre>
 
 <p>En JavaScript puedes añadir propiedades a los objetos en tiempo de ejecución. No estás limitado a utilizar solo las  propiedades que proporciona la función constructora. Para añadir una propiedad que es especifica para un objeto determinado, se le asigna un valor a la propiedad del objeto de la siguiente forma:</p>
 
-<pre class="brush: js notranslate">mark.bonus = 3000;
+<pre class="brush: js">mark.bonus = 3000;
 </pre>
 
 <p>Ahora el objeto <code>mark</code> tiene una propiedad <code>bonus</code>, pero ningún otro objeto creado con la función <em>constructor</em> <code>WorkerBee</code> tiene esta propiedad.</p>
 
 <p>Si añades una nueva propiedad a un objeto que se esta utilizando como el prototipo de una función <em>constructor</em>, dicha propiedad se añade a todos los objetos que heredan propiedades de dicho prototipo. Por ejemplo, puedes añadir una propiedad <code>specialty</code> a todos los empleados con la siguientes sentencia:</p>
 
-<pre class="brush: js notranslate">Employee.prototype.specialty = "none";
+<pre class="brush: js">Employee.prototype.specialty = "none";
 </pre>
 
 <p>Tan pronto JavaScript ejecuta esta sentencia, el objeto <code>mark</code> también tienen la propiedad <code>specialty</code> con el valor <code>"none"</code>. La siguiente figura muestra el efecto de añadir esta propiedad al prototipo  <code>Employee</code> y después reemplazarlo por el prototipo <code>Engineer</code>.</p>
@@ -378,7 +378,7 @@ mark.projects = ["navigator"];</pre>
  <tbody>
   <tr>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function Employee (name, dept) {
   this.name = name || "";
   this.dept = dept || "general";
@@ -386,7 +386,7 @@ function Employee (name, dept) {
 </pre>
    </td>
    <td>
-    <pre class="brush: java notranslate">
+    <pre class="brush: java">
 public class Employee {
    public String name;
    public String dept;
@@ -406,7 +406,7 @@ public class Employee {
   </tr>
   <tr>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function WorkerBee (projs) {
   this.projects = projs || [];
 }
@@ -414,7 +414,7 @@ WorkerBee.prototype = new Employee;
 </pre>
    </td>
    <td>
-    <pre class="brush: java notranslate">
+    <pre class="brush: java">
 public class WorkerBee extends Employee {
    public String[] projects;
    public WorkerBee () {
@@ -430,7 +430,7 @@ public class WorkerBee extends Employee {
   </tr>
   <tr>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 
 function Engineer (mach) {
    this.dept = "engineering";
@@ -440,7 +440,7 @@ Engineer.prototype = new WorkerBee;
 </pre>
    </td>
    <td>
-    <pre class="brush: java notranslate">
+    <pre class="brush: java">
 public class Engineer extends WorkerBee {
    public String machine;
    public Engineer () {
@@ -460,7 +460,7 @@ public class Engineer extends WorkerBee {
 
 <p>Estas definiciones JavaScript realizan un uso idiomático especial para asignar valores por defecto:</p>
 
-<pre class="brush: js notranslate">this.name = name || "";
+<pre class="brush: js">this.name = name || "";
 </pre>
 
 <p>El operador lógico OR de JavaScript (<code>||</code>) evalúa su primer argumento. Si dicho argumento se convierte a true, el operador lo devuelve. Si no, el operador devuelve el valor del segundo argumento. Por tanto, esta linea de código comprueba si <code>name</code> tiene un valor útil para la propiedad <code>name</code>, en cuyo caso asigna a <code>this.name</code> este valor. En caso contrario asigna a  <code>this.name</code> el string vacío. Este capitulo emplea este uso idiomático por abreviación. Sin embargo puede resultar chocante a primera vista.</p>
@@ -471,12 +471,12 @@ public class Engineer extends WorkerBee {
 
 <p>Con estas definiciones, cuando creas una instancia de un objeto, puedes especificar valores para las propiedades definidas localmente. Tal como se muestra en <a href="#8.5">Figura 8.5</a>, puedes utilizar la siguiente sentencia para crear un nuevo <code>Engineer</code>:</p>
 
-<pre class="brush: js notranslate">var jane = new Engineer("belau");
+<pre class="brush: js">var jane = new Engineer("belau");
 </pre>
 
 <p>Ahora las propiedades de <code>jane</code> son:</p>
 
-<pre class="brush: js notranslate">jane.name == "";
+<pre class="brush: js">jane.name == "";
 jane.dept == "engineering";
 jane.projects == [];
 jane.machine == "belau"
@@ -493,7 +493,7 @@ jane.machine == "belau"
 
 <p>Veamos los detalles de una de estas definiciones. Aquí tenemos la nueva definición del <em>constructor</em> <code>Engineer</code>:</p>
 
-<pre class="brush: js notranslate">function Engineer (name, projs, mach) {
+<pre class="brush: js">function Engineer (name, projs, mach) {
   this.base = WorkerBee;
   this.base(name, "engineering", projs);
   this.machine = mach || "";
@@ -502,7 +502,7 @@ jane.machine == "belau"
 
 <p>Supongamos que se crea un nuevo <code>Engineer</code> de esta forma:</p>
 
-<pre class="brush: js notranslate">var jane = new Engineer("Doe, Jane", ["navigator", "javascript"], "belau");
+<pre class="brush: js">var jane = new Engineer("Doe, Jane", ["navigator", "javascript"], "belau");
 </pre>
 
 <p>JavaScript sigue los siguientes pasos:</p>
@@ -521,7 +521,7 @@ jane.machine == "belau"
 
 <p>Podrías pensar que al haber llamado al constructor <code>WorkerBee</code> desde el constructor <code>Engineer</code> ya dejas establecida la herencia para los objetos  <code>Engineer</code>. Pero no es así. Al llamar al constructor <code>WorkerBee</code> se garantiza que un objeto <code>Engineer</code> comience con las propiedades especificadas en todas las funciones del constructor que se llaman. Pero si luego se añaden propiedades a los prototipos de <code>Employee</code> o de <code>WorkerBee</code>, estas propiedades no se heredan por los objetos <code>Engineer</code>. Por ejemplo, veamos las siguientes sentencias:</p>
 
-<pre class="brush: js notranslate">function Engineer (name, projs, mach) {
+<pre class="brush: js">function Engineer (name, projs, mach) {
   this.base = WorkerBee;
   this.base(name, "engineering", projs);
   this.machine = mach || "";
@@ -532,7 +532,7 @@ Employee.prototype.specialty = "none";
 
 <p>El objeto <code>jane</code> no hereda la propiedad <code>specialty</code> añadida al prototipo de <code>Employee</code>. Sigue siendo necesario dar valor al prototipo de <code>Employee</code> para que la herencia buscada se establezca. Veamos las siguientes sentencias:</p>
 
-<pre class="brush: js notranslate">function Engineer (name, projs, mach) {
+<pre class="brush: js">function Engineer (name, projs, mach) {
   this.base = WorkerBee;
   this.base(name, "engineering", projs);
   this.machine = mach || "";
@@ -550,7 +550,7 @@ Employee.prototype.specialty = "none";
  <tbody>
   <tr>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function Engineer (name, projs, mach) {
   this.base = WorkerBee;
   this.base(name, "engineering", projs);
@@ -559,7 +559,7 @@ function Engineer (name, projs, mach) {
 </pre>
    </td>
    <td>
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function Engineer (name, projs, mach) {
   WorkerBee.call(this, name, "engineering", projs);
   this.machine = mach || "";
@@ -589,7 +589,7 @@ function Engineer (name, projs, mach) {
 
 <p>El resultado de estos pasos depende de cómo se definan las cosas en el camino. El ejemplo original tenía estas definiciones:</p>
 
-<pre class="brush: js notranslate">function Employee () {
+<pre class="brush: js">function Employee () {
   this.name = "";
   this.dept = "general";
 }
@@ -602,19 +602,19 @@ WorkerBee.prototype = new Employee;
 
 <p>Con estas definiciones, supongamos que se crea <code>amy</code> como una instancia de <code>WorkerBee</code> con la siguiente sentencia:</p>
 
-<pre class="brush: js notranslate">var amy = new WorkerBee;
+<pre class="brush: js">var amy = new WorkerBee;
 </pre>
 
 <p>El objeto <code>amy</code> tiene una propiedad local, <code>projects</code>. Los valores de las propiedades <code>name</code> y <code>dept</code> no son locales para <code>amy</code> y por eso se obtienen de la propiedad <code>__proto__</code> del objeto. Por ello, <code>amy</code> tiene estos valores en sus propiedades:</p>
 
-<pre class="brush: js notranslate">amy.name == "";
+<pre class="brush: js">amy.name == "";
 amy.dept == "general";
 amy.projects == [];
 </pre>
 
 <p>Ahora supongamos que cambias el valor de la propiedad <code>name</code> en el prototipo asociado a <code>Employee</code>:</p>
 
-<pre class="brush: js notranslate">Employee.prototype.name = "Unknown"
+<pre class="brush: js">Employee.prototype.name = "Unknown"
 </pre>
 
 <p>A primera vista, esperarías que el nuevo valor se propague hacia abajo a todas las instancias de <code>Employee</code>. Pero no es esto lo que ocurre.</p>
@@ -623,7 +623,7 @@ amy.projects == [];
 
 <p>Si quieres cambiar el valor de una propiedad de un objeto en tiempo de ejecución y conseguir que el nuevo valor sea heredado por todos los descendientes del objeto, no puedes definir la propiedad en la función constructor del objeto. En su lugar, la tienes que añadir al prototipo asociado al constructor. Por ejemplo, supongamos que cambiamos el código anterior por este otro:</p>
 
-<pre class="brush: js notranslate">function Employee () {
+<pre class="brush: js">function Employee () {
   this.dept = "general";
 }
 Employee.prototype.name = "";
@@ -650,17 +650,17 @@ Employee.prototype.name = "Unknown";
 
 <p>Todo objeto tiene una propiedad <code>__proto__</code> (salvo <code>Object</code>); toda función tiene una propiedad <code>prototype</code>. Es así como los objetos pueden relacionarse mediante 'herencia de prototipos' con otros objetos. Puedes comprobar la herencia comparando el valor de la propiedad <code>__proto__</code> con el valor de <code>prototype</code> de una función <em>constructor</em>. JavaScript proporciona un atajo: el operador <code>instanceof</code> que compara un objeto con una función <em>constructor</em> y devuelve true si el objeto hereda del prototipo de la función. Por ejemplo,</p>
 
-<pre class="brush: js notranslate">var f = new Foo();
+<pre class="brush: js">var f = new Foo();
 var isTrue = (f instanceof Foo);</pre>
 
 <p>Para ver un ejemplo más detallado, supongamos que tenemos el conjunto de definiciones mostrado en <a href="#Inheriting_properties">heredando propiedades</a>. Creamos un objeto <code>Engineer</code> somo sigue:</p>
 
-<pre class="brush: js notranslate">var chris = new Engineer("Pigman, Chris", ["jsd"], "fiji");
+<pre class="brush: js">var chris = new Engineer("Pigman, Chris", ["jsd"], "fiji");
 </pre>
 
 <p>En este objeto, las siguientes sentencias son todas true:</p>
 
-<pre class="brush: js notranslate">chris.__proto__ == Engineer.prototype;
+<pre class="brush: js">chris.__proto__ == Engineer.prototype;
 chris.__proto__.__proto__ == WorkerBee.prototype;
 chris.__proto__.__proto__.__proto__ == Employee.prototype;
 chris.__proto__.__proto__.__proto__.__proto__ == Object.prototype;
@@ -669,7 +669,7 @@ chris.__proto__.__proto__.__proto__.__proto__.__proto__ == null;
 
 <p>Por tanto podría escribirse una función <code>instanceOf</code> así:</p>
 
-<pre class="brush: js notranslate">function instanceOf(object, constructor) {
+<pre class="brush: js">function instanceOf(object, constructor) {
    while (object != null) {
       if (object == constructor.prototype)
          return true;
@@ -686,7 +686,7 @@ chris.__proto__.__proto__.__proto__.__proto__.__proto__ == null;
 
 <p>Usando esta función <code>instanceOf</code> estas expresiones son todas <code>true</code>:</p>
 
-<pre class="brush: js notranslate">instanceOf (chris, Engineer)
+<pre class="brush: js">instanceOf (chris, Engineer)
 instanceOf (chris, WorkerBee)
 instanceOf (chris, Employee)
 instanceOf (chris, Object)
@@ -694,13 +694,13 @@ instanceOf (chris, Object)
 
 <p>Pero la siguiente expresión es <code>false</code>:</p>
 
-<pre class="brush: js notranslate">instanceOf (chris, SalesPerson)</pre>
+<pre class="brush: js">instanceOf (chris, SalesPerson)</pre>
 
 <h3 id="Información_global_en_los_constructores">Información global en los constructores</h3>
 
 <p>Cuando creas constructores tienes que tener especial cuidado si se asigna información global en el constructor. Por ejemplo, supongamos que quieres tener un ID único que se asigne automáticamente a cada nuevo empleado. Podrías utilizar la siguiente definición para <code>Employee</code>:</p>
 
-<pre class="brush: js notranslate">var idCounter = 1;
+<pre class="brush: js">var idCounter = 1;
 
 function Employee (name, dept) {
    this.name = name || "";
@@ -711,13 +711,13 @@ function Employee (name, dept) {
 
 <p>Con esta definición, cuando cread un nuevo <code>Employee</code>, el constructor le asigna el siguiente ID y luego incrementa el contador global ID. Por tanto, tras ejecutar el siguiente código, <code>victoria.id</code> es 1 y <code>harry.id</code> es 2:</p>
 
-<pre class="brush: js notranslate">var victoria = new Employee("Pigbert, Victoria", "pubs")
+<pre class="brush: js">var victoria = new Employee("Pigbert, Victoria", "pubs")
 var harry = new Employee("Tschopik, Harry", "sales")
 </pre>
 
 <p>A primera vista puede parecer razonable. Sin embargo, <code>idCounter</code> se incrementa cada vez que se crea un nuevo objeto <code>Employee</code>, cualquiera que sea su propósito. Si creas la jerarquía completa de <code>Employee</code> mostrada en este capítulo, el constructor <code>Employee</code> es llamado cada vez que se asigna valor a un prototipo. Supongamos que tienes el siguiente código:</p>
 
-<pre class="brush: js notranslate">var idCounter = 1;
+<pre class="brush: js">var idCounter = 1;
 
 function Employee (name, dept) {
    this.name = name || "";
@@ -744,7 +744,7 @@ var mac = new Engineer("Wood, Mac");
 
 <p>Dependiendo de la aplicación, puede o no importar que el contador se haya incrementado esas veces extra. En caso de que importe, una solución es utilizar este constructor:</p>
 
-<pre class="brush: js notranslate">function Employee (name, dept) {
+<pre class="brush: js">function Employee (name, dept) {
    this.name = name || "";
    this.dept = dept || "general";
    if (name)
@@ -762,7 +762,7 @@ var mac = new Engineer("Wood, Mac");
 
 <p>En JavaScript se puede hacer que desde una función constructor llame a una o más funciones <em>constructor</em>. Esto da la ilusión de herencia múltiple. Considera, por ejemplo, las siguientes definiciones:</p>
 
-<pre class="brush: js notranslate">function Hobbyist (hobby) {
+<pre class="brush: js">function Hobbyist (hobby) {
    this.hobby = hobby || "scuba";
 }
 
@@ -780,7 +780,7 @@ var dennis = new Engineer("Doe, Dennis", ["collabra"], "hugo")
 
 <p>Consideremos, además, la definición de <code>WorkerBee</code> que se usó antes en este capítulo. En este caso, el objeto <code>dennis</code> tiene estas propiedades:</p>
 
-<pre class="brush: js notranslate">dennis.name == "Doe, Dennis"
+<pre class="brush: js">dennis.name == "Doe, Dennis"
 dennis.dept == "engineering"
 dennis.projects == ["collabra"]
 dennis.machine == "hugo"
@@ -789,7 +789,7 @@ dennis.hobby == "scuba"
 
 <p>Por tanto <code>dennis</code> obtiene la propiedad <code>hobby</code> del constructor<code> Hobbyist</code> . Sin embargo, si luego añades una propiedad al prototipo del constructor de <code>Hobbyist</code>:</p>
 
-<pre class="brush: js notranslate">Hobbyist.prototype.equipment = ["mask", "fins", "regulator", "bcd"]
+<pre class="brush: js">Hobbyist.prototype.equipment = ["mask", "fins", "regulator", "bcd"]
 </pre>
 
 <p>El objeto <code>dennis</code> no hereda esta nueva propiedad porque no está en su cadena de prototipos.</p>

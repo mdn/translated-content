@@ -16,7 +16,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/call
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><code><em>function</em>.call(<em>thisArg</em>[, <em>arg1</em>[, <em>arg2</em>[, ...]]])</code></pre>
+<pre class="syntaxbox"><code><em>function</em>.call(<em>thisArg</em>[, <em>arg1</em>[, <em>arg2</em>[, ...]]])</code></pre>
 
 <h3 id="Parametros">Parametros</h3>
 
@@ -56,7 +56,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/call
 
 <p>Otras dos funciones <code>Comida</code> y <code>Juguete</code> invocan a <code>Producto</code>, pasándo <code>this</code>, <code>nombre</code> y <code>precio</code>. <code>Producto</code> inicializa las propiedades <code>nombre</code> y <code>precio</code>, ambas funciones especializadas definen la <code>categoria</code>.</p>
 
-<pre class="brush: js notranslate">function Producto(nombre, precio) {
+<pre class="brush: js">function Producto(nombre, precio) {
   this.nombre = nombre;
   this.precio = precio;
 
@@ -91,7 +91,7 @@ var diversion = new Juguete('robot', 40);
 <p>Pasar el objeto como valor <code>this</code> no es estrictamente necesario, pero se hace con propósito explicativo.</p>
 </div>
 
-<pre class="brush: js notranslate">var animales = [
+<pre class="brush: js">var animales = [
   {especie: 'Leon', nombre: 'Rey'},
   {especie: 'Whale', nombre: 'Fail'}
 ];

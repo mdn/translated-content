@@ -45,7 +45,7 @@ translation_of: Learn/JavaScript/Asynchronous/Concepts
 
 <p>En nuestro ejemplo <a href="https://github.com/mdn/learning-area/tree/master/javascript/asynchronous/introducing/simple-sync.html">simple-sync.html</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync.html">véalo en vivo</a>), agregamos un detector del evento click ("click event listener") a un botón con el fin de que cuando sea clickeado, ejecute una operación de un gran consumo de tiempo (calcula 10 millones de fechas y luego muestra la última en la consola) y luego agrega un párrafo al DOM:</p>
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
+<pre class="brush: js">const btn = document.querySelector('button');
 btn.addEventListener('click', () =&gt; {
   let myDate;
   for(let i = 0; i &lt; 10000000; i++) {
@@ -73,7 +73,7 @@ btn.addEventListener('click', () =&gt; {
  <li>Un botón "Click me for alert" que cuando es clickeado muestra un mensaje de alerta.</li>
 </ul>
 
-<pre class="brush: js notranslate">function expensiveOperation() {
+<pre class="brush: js">function expensiveOperation() {
   for(let i = 0; i &lt; 1000000; i++) {
     ctx.fillStyle = 'rgba(0,0,255, 0.2)';
     ctx.beginPath();

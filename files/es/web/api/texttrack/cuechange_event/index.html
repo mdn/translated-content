@@ -47,14 +47,14 @@ translation_of: Web/API/TextTrack/cuechange_event
 
 <p>Tu puedes preparar una escucha para el evento <code>cuechange</code> en un <code>TextTrack</code> usando el método {{domxref("EventTarget.addEventListener", "addEventListener()")}}:</p>
 
-<pre class="brush: js notranslate">track.addEventListener('cuechange', function () {
+<pre class="brush: js">track.addEventListener('cuechange', function () {
   let cues = track.activeCues;  // array de las anotaciones actuales
 });
 </pre>
 
 <p>O puedes solo preparar la propiedad del controlador de eventos {{domxref("GlobalEventHandlers.oncuechange", "oncuechange")}}:</p>
 
-<pre class="brush: js notranslate">track.oncuechange = function () {
+<pre class="brush: js">track.oncuechange = function () {
   let cues = track.activeCues; // array of current cues
 }</pre>
 
@@ -64,7 +64,7 @@ translation_of: Web/API/TextTrack/cuechange_event
 
 <p>Si la pista de texto <em>está</em> asociada con el elemento multimedia, usando el elemento {{HTMLElement("track")}} como hijo del elemento {{HTMLElement("audio")}} o del elemento {{HTMLElement("video")}}, el evento <code>cuechange</code> es también enviado al {{domxref("HTMLTrackElement")}}.</p>
 
-<pre class="brush: js notranslate">let textTrackElem = document.getElementById("texttrack");
+<pre class="brush: js">let textTrackElem = document.getElementById("texttrack");
 
 textTrackElem.addEventListener("cuechange", (event) =&gt; {
   let cues = event.target.track.activeCues;
@@ -73,7 +73,7 @@ textTrackElem.addEventListener("cuechange", (event) =&gt; {
 
 <p>Además, puedes utilizar el controlador de eventos <code>oncuechange</code>:</p>
 
-<pre class="brush: js notranslate">let textTrackElem = document.getElementById("texttrack");
+<pre class="brush: js">let textTrackElem = document.getElementById("texttrack");
 
 textTrackElem.oncuechange = (event) =&gt; {
   let cues = event.target.track.activeCues;

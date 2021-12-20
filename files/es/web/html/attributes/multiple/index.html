@@ -14,19 +14,19 @@ original_slug: Web/HTML/Atributos/multiple
 
 <p>Cuando se establece {{HTMLAttrxRef("multiple", "input")}} en el tipo de entrada {{HTMLElement("input/email", "email")}}, el usuario puede incluir cero (si no es {{web.link("/es/docs/Web/HTML/Attributes/required", "required")}} también), una o más direcciones de correo electrónico separadas por comas.</p>
 
-<pre class="brush: html notranslate"><code class="brush: html">&lt;input type="email" <strong>multiple</strong> name="emails" id="emails"&gt;</code></pre>
+<pre class="brush: html"><code class="brush: html">&lt;input type="email" <strong>multiple</strong> name="emails" id="emails"&gt;</code></pre>
 
 <p>Si y solo si se especifica el atributo {{HTMLAttrxRef("multiple", "input")}}, el valor puede ser una lista de direcciones de correo electrónico separadas por comas y formadas correctamente. Los espacios en blanco iniciales y finales se eliminan de cada dirección de la lista.</p>
 
 <p>Cuando se establece {{HTMLAttrxRef("multiple", "input")}} en el tipo de entrada {{HTMLElement("input/file", "file")}}, el usuario puede seleccionar uno o más archivos. El usuario puede elegir varios archivos del selector de archivos de cualquier manera que la plataforma elegida lo permita (por ejemplo, manteniendo presionada la tecla <kbd>Mayús</kbd> o <kbd>Control</kbd> y luego haciendo clic).</p>
 
-<pre class="brush: html notranslate"><code class="brush: html">&lt;input type="file" <strong>multiple</strong> name="uploads" id="uploads"&gt;</code></pre>
+<pre class="brush: html"><code class="brush: html">&lt;input type="file" <strong>multiple</strong> name="uploads" id="uploads"&gt;</code></pre>
 
 <p>Cuando se omite el atributo, el usuario solo puede seleccionar un único archivo por {{HTMLElement("input")}}.</p>
 
 <p>El atributo {{HTMLAttrxRef("multiple", "input")}} en el elemento {{HTMLElement("select")}} representa un control para seleccionar cero o más opciones de la lista. De lo contrario, el elemento {{HTMLElement("select")}} representa un control para seleccionar una única {{HTMLElement("option")}} de la lista de opciones.</p>
 
-<pre class="brush: html notranslate">&lt;select multiple name="drawfs" id="drawfs"&gt;
+<pre class="brush: html">&lt;select multiple name="drawfs" id="drawfs"&gt;
   &lt;option&gt;Gruñón&lt;/option&gt;
   &lt;option&gt;Feliz&lt;/option&gt;
   &lt;option&gt;Dormilón&lt;/option&gt;
@@ -42,7 +42,7 @@ original_slug: Web/HTML/Atributos/multiple
 
 <h3 id="input_para_correoᵉ"><code>input</code> para correoᵉ</h3>
 
-<pre class="brush: html notranslate">&lt;label for="emails"&gt;¿A quién deseas enviar un correo electrónico?&lt;/label&gt;
+<pre class="brush: html">&lt;label for="emails"&gt;¿A quién deseas enviar un correo electrónico?&lt;/label&gt;
 &lt;input type="email" multiple name="emails" id="emails" list="drawfemails" required size="64"&gt;
 
 &lt;datalist id="drawfemails"&gt;
@@ -56,7 +56,7 @@ original_slug: Web/HTML/Atributos/multiple
 &lt;/datalist&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">input:invalid {border: red solid 3px;}</pre>
+<pre class="brush: css">input:invalid {border: red solid 3px;}</pre>
 </div>
 
 <p>Si y solo si se especifica el atributo {{HTMLAttrxRef("multiple", "input")}}, el valor puede ser una lista de direcciones de correo electrónico separadas por comas y formadas correctamente. Los espacios en blanco iniciales y finales se eliminan de cada dirección de la lista. Si el atributo {{web.link("/es/docs/Web/HTML/Attributes/required", "required")}} está presente, se requiere al menos una dirección de correo electrónico.</p>
@@ -69,7 +69,7 @@ original_slug: Web/HTML/Atributos/multiple
 
 <p>Cuando se establece {{HTMLAttrxRef("multiple", "input")}} en el {{HTMLElement("input")}} de tipo  {{HTMLElement("input/file", "file")}}, el usuario puede seleccionar uno o más archivos:</p>
 
-<pre class="brush: html notranslate">&lt;form method="post" enctype="multipart/form-data"&gt;
+<pre class="brush: html">&lt;form method="post" enctype="multipart/form-data"&gt;
   &lt;p&gt;
     &lt;label for="uploads"&gt;
        Elige las imágenes que deseas cargar:
@@ -95,7 +95,7 @@ original_slug: Web/HTML/Atributos/multiple
 
 <p>El atributo {{HTMLAttrxRef("multiple", "input")}} en el elemento {{HTMLElement("select")}} representa un control para seleccionar cero o más opciones de la lista. De lo contrario, el elemento {{HTMLElement("select")}} representa un control para seleccionar una única {{HTMLElement("option")}} de la lista de opciones. El control generalmente tiene una apariencia diferente en función de la presencia del atributo {{HTMLAttrxRef("multiple", "input")}}, y la mayoría de los navegadores muestran un cuadro de lista de desplazamiento en lugar de una lista desplegable de una sola línea cuando el atributo está presente.</p>
 
-<pre class="brush: html notranslate">&lt;form method="get" action="#"&gt;
+<pre class="brush: html">&lt;form method="get" action="#"&gt;
 &lt;p&gt;
  &lt;label for="dwarfs"&gt;Selecciona los leñadores que te gusten:&lt;/label&gt;
   &lt;select multiple name="drawfs" id="drawfs"&gt;
@@ -129,7 +129,7 @@ original_slug: Web/HTML/Atributos/multiple
 
 <p>Ten en cuenta la diferencia de apariencia entre los dos controles de formulario.</p>
 
-<pre class="brush: css notranslate">/* descomenta este CSS para que el multiple tenga la misma altura que single */
+<pre class="brush: css">/* descomenta este CSS para que el multiple tenga la misma altura que single */
 
 /*
 select[multiple] {

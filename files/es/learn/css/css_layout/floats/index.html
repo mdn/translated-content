@@ -38,7 +38,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Primero, empecemos con algo de HTML simple — añade lo siguiente al cuerpo de tu HTML, eliminando cualquier otra cosa que hubiera antes:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
 
 &lt;div class="box"&gt;Caja flotante&lt;/div&gt;
 
@@ -50,7 +50,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Ahora aplica el siguiente CSS a tu HTML (usando un elemento {{htmlelement("style")}} o un {{htmlelement("link")}} para separar el fichero <code>.css</code>  — tú eliges):</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -67,7 +67,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Si guardas y recargas la página, verás algo parecido a lo que esperarías: la caja se encuentra por encima del texto, en un flujo normal. Para flotar el texto alrededor, añade las propiedades {{cssxref("float")}} y {{cssxref("margin-right")}} a la regla <code>.box</code>:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   float: left;
   margin-right: 15px;
   width: 150px;
@@ -83,7 +83,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 <div class="hidden">
 <h6 id="Float_Example_1">Float Example 1</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
 
 &lt;div class="box"&gt;Caja flotante&lt;/div&gt;
 
@@ -94,7 +94,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -124,7 +124,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Añade una clase <code>special</code> al primer párrafo de texto, el que sucede inmediatamente a la caja flotante, y luego añade en tu CSS las siguientes reglas. Esto le dará al párrafo siguiente un color de fondo.</p>
 
-<pre class="brush: css notranslate">.special {
+<pre class="brush: css">.special {
   background-color: rgb(79,185,227);
   padding: 10px;
   color: #fff;
@@ -137,7 +137,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 <div class="hidden">
 <h6 id="Float_Example_2">Float Example 2</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
 
 &lt;div class="box"&gt;Caja flotante&lt;/div&gt;
 
@@ -147,7 +147,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;    </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -183,7 +183,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>En el HTML del ejemplo anterior, añade una clase <code>cleared</code> al segundo párrafo debajo del elemento flotante. Luego añade lo siguiente a tu CSS:</p>
 
-<pre class="brush: css notranslate">.cleared {
+<pre class="brush: css">.cleared {
   clear: left;
 }
 </pre>
@@ -192,7 +192,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 <div class="hidden">
 <h6 id="Float_Example_3">Float Example 3</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
 
 &lt;div class="box"&gt;Caja flotante&lt;/div&gt;
 
@@ -203,7 +203,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
     </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -241,7 +241,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Ahora ya sabes cómo limpiar un elemento que sigue a un elemento flotante, pero observa lo que sucede si tienes un flotante alto y un párrafo corto, con una caja envolviendo a ambos elementos. Modifica tu documento para que el primer párrafo y el cuadro flotante estén envueltos por un {{htmlelement("div")}} con una clase <code>wrapper</code>.</p>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Caja flotante&lt;/div&gt;
 
   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.&lt;/p&gt;
@@ -250,7 +250,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>En tu CSS, añade la siguiente regla para la clase <code>.wrapper</code> y después recarga la página:</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   background-color: rgb(79,185,227);
   padding: 10px;
   color: #fff;
@@ -258,7 +258,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Además, elimina la clase <code>.cleared</code> anterior:</p>
 
-<pre class="comment-text  notranslate" id="ct-0">.cleared {
+<pre class="comment-text " id="ct-0">.cleared {
     clear: left;
 }</pre>
 
@@ -268,7 +268,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 <div class="hidden">
 <h6 id="Float_Example_4">Float Example 4</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
 &lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Caja flotante&lt;/div&gt;
 
@@ -279,7 +279,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;    </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -315,7 +315,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Añade el siguiente CSS al ejemplo:</p>
 
-<pre class="brush: css notranslate">.wrapper::after {
+<pre class="brush: css">.wrapper::after {
   content: "";
   clear: both;
   display: block;
@@ -327,7 +327,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 <div class="hidden">
 <h6 id="Float_Example_5">Float Example 5</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
 &lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Caja flotante&lt;/div&gt;
 
@@ -337,7 +337,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;      </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -377,7 +377,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Elimina el CSS clearfix que añadiste en la anterior sección y, en su lugar, añade <code>overflow: auto</code> a las reglas de la caja envolvente. De nuevo, la caja debería limpiarse.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   background-color: rgb(79,185,227);
   padding: 10px;
   color: #fff;
@@ -388,7 +388,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 <div class="hidden">
 <h6 id="Float_Example_6">Float Example 6</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
 &lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Caja flotante&lt;/div&gt;
 
@@ -398,7 +398,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;    </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -433,7 +433,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>La manera moderna de resolver este problema es usar el valor <code>flow-root</code> de la propiedad <code>display</code>. Esto existe solo para crear un BFC sin usar hacks; no habrá consecuencias no deseadas cuando lo use. Elimina <code>overflow: auto</code> de la regla <code>.wrapper</code> y añade <code>display: flow-root</code>. Asumiendo que tu <a href="/en-US/docs/Web/CSS/display#Browser_compatibility">navegador sea compatible</a>, la caja se limpiará.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   background-color: rgb(79,185,227);
   padding: 10px;
   color: #fff;
@@ -444,7 +444,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 <div class="hidden">
 <h6 id="Float_Example_7">Float Example 7</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Ejemplo simple de caja flotante&lt;/h1&gt;
 &lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Caja flotante&lt;/div&gt;
 
@@ -454,7 +454,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;    </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;

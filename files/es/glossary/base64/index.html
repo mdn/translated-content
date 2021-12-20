@@ -93,7 +93,7 @@ original_slug: Web/API/WindowBase64/Base64_codificando_y_decodificando
 
 <h3 id="Solución_1_–_escapar_la_cadena_antes_de_codificarla">Solución #1 – escapar la cadena antes de codificarla</h3>
 
-<pre class="brush:js notranslate">function utf8_to_b64( str ) {
+<pre class="brush:js">function utf8_to_b64( str ) {
   return window.btoa(unescape(encodeURIComponent( str )));
 }
 
@@ -109,7 +109,7 @@ b64_to_utf8('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"</pre>
 
 <p>Otra posible solución sin utilizar las funciones 'unscape' y 'escape', ya obsoletas.</p>
 
-<pre class="brush:js notranslate">function b64EncodeUnicode(str) {
+<pre class="brush:js">function b64EncodeUnicode(str) {
     return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function(match, p1) {
         return String.fromCharCode('0x' + p1);
     }));
@@ -121,7 +121,7 @@ b64_to_utf8('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"</pre>
 
 <div class="note"><strong>Nota:</strong> El siguiente código también es útil para obtener un <a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer">ArrayBuffer</a> a partir de una cadena <em>Base64</em> y/o viceversa (<a href="#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer" title="#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">véase abajo</a>). <strong>Para una librería completa de arrays tipados, vea <a href="/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView">este artículo</a></strong>.</div>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js">"use strict";
 
 /*\
 |*|
@@ -297,7 +297,7 @@ function strToUTF8Arr (sDOMStr) {
 
 <h4 id="Tests">Tests</h4>
 
-<pre class="brush: js notranslate">/* Tests */
+<pre class="brush: js">/* Tests */
 
 var sMyInput = "Base 64 \u2014 Mozilla Developer Network";
 
@@ -317,7 +317,7 @@ alert(sMyOutput);</pre>
 
 <p>Estas funciones nos permiten crear también <a href="/en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array">uint8Arrays</a> o <a href="/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer">arrayBuffers</a> a partir de cadenas codificadas en base 64:</p>
 
-<pre class="brush: js notranslate">var myArray = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="); // "Base 64 \u2014 Mozilla Developer Network"
+<pre class="brush: js">var myArray = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="); // "Base 64 \u2014 Mozilla Developer Network"
 
 var myBuffer = base64DecToArr("QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==").buffer; // "Base 64 \u2014 Mozilla Developer Network"
 

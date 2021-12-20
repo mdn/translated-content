@@ -109,7 +109,7 @@ modules/
 
 <p>La forma más sencilla de utilizarla es colocarla delante de cualquier elemento que desees exportar fuera del módulo, por ejemplo:</p>
 
-<pre class="brush: js; notranslate">export const name = 'square';
+<pre class="brush: js;">export const name = 'square';
 
 export function draw(ctx, length, x, y, color) {
   ctx.fillStyle = color;
@@ -127,13 +127,13 @@ export function draw(ctx, length, x, y, color) {
 
 <p>Una forma más conveniente de exportar todos los elementos que deseas exportar es usar una sola declaración de exportación al final de tu archivo de módulo, seguida de una lista separada por comas de las características que deseas exportar entre llaves. Por ejemplo:</p>
 
-<pre class="brush: js; notranslate">export { name, draw, reportArea, reportPerimeter };</pre>
+<pre class="brush: js;">export { name, draw, reportArea, reportPerimeter };</pre>
 
 <h2 id="Importación_de_características_en_tu_script">Importación de características en tu script</h2>
 
 <p>Una vez que hayas declarado las funciones y características que deseas exportar de tu módulo, debes importarlas en tu script para poder usarlas. La forma más sencilla de hacerlo es la siguiente:</p>
 
-<pre class="brush: js; notranslate">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';</pre>
+<pre class="brush: js;">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';</pre>
 
 <p>Utiliza la declaración {{jsxref("Statements/import", "import")}}, seguida de una lista separada por comas de las características que deseas importar entre llaves, seguida de la palabra clave <code>from</code>, seguida de la ruta al archivo del módulo — una ruta relativa a la raíz del sitio, que para nuestro ejemplo de <code>basic-modules</code> sería <code>/js-examples/modules/basic-modules</code>.</p>
 
@@ -155,7 +155,7 @@ export function draw(ctx, length, x, y, color) {
 
 <p>Una vez que hayas importado las funciones a tu script, las puedes usar tal como se definieron dentro del mismo archivo. Lo siguiente se encuentra en <code>main.js</code>, debajo de las líneas <code>import</code>:</p>
 
-<pre class="brush: js; notranslate">let myCanvas = create('myCanvas', document.body, 480, 320);
+<pre class="brush: js;">let myCanvas = create('myCanvas', document.body, 480, 320);
 let reportList = createReportList(myCanvas.id);
 
 let square1 = draw(myCanvas.ctx, 50, 50, 100, 'blue');
@@ -173,11 +173,11 @@ reportPerimeter(square1.length, reportList);
 
 <p>En primer lugar, debes incluir <code>type="module"</code> en el elemento <a href="/es/docs/Web/HTML/Element/script" title="El elemento ↑&lt;script>↓ de HTML se utiliza para incrustar o hacer referencia al código ejecutable; esto se usa normalmente para incrustar o hacer referencia a código JavaScript."><code>&lt;script&gt;</code></a>, para declarar este script como un módulo. Para importar el script <code>main.js</code>, usamos esto:</p>
 
-<pre class="brush: html; no-line-numbers notranslate">&lt;script type="module" src="main.js"&gt;&lt;/script&gt;</pre>
+<pre class="brush: html; no-line-numbers">&lt;script type="module" src="main.js"&gt;&lt;/script&gt;</pre>
 
 <p>También puedes incrustar el script del módulo directamente en el archivo HTML colocando el código JavaScript dentro del cuerpo del elemento <code>&lt;script&gt;</code>:</p>
 
-<pre class="brush: js notranslate">&lt;script type="module"&gt;
+<pre class="brush: js">&lt;script type="module"&gt;
   /* El código del módulo JavaScript va aquí */
 &lt;/script&gt;</pre>
 
@@ -203,23 +203,23 @@ reportPerimeter(square1.length, reportList);
 
 <p>Veamos un ejemplo mientras explicamos cómo funciona. En nuestros ↑basic-modules↓ <code>square.js</code> puedes encontrar una función llamada <code>randomSquare()</code> que crea un cuadrado con un color, tamaño y posición aleatorios. Lo queremos exportar como nuestro predeterminado, por lo que en la parte inferior del archivo escribimos esto:</p>
 
-<pre class="brush: js; notranslate">export default randomSquare;</pre>
+<pre class="brush: js;">export default randomSquare;</pre>
 
 <p>Ten en cuenta la falta de llaves.</p>
 
 <p>En su lugar, podríamos anteponer <code>export default</code> a la función y definirla como una función anónima, así:</p>
 
-<pre class="brush: js; notranslate">export default function(ctx) {
+<pre class="brush: js;">export default function(ctx) {
   ...
 }</pre>
 
 <p>En nuestro archivo <code>main.js</code>, importamos la función predeterminada usando esta línea:</p>
 
-<pre class="brush: js; notranslate">import randomSquare from './modules/square.js';</pre>
+<pre class="brush: js;">import randomSquare from './modules/square.js';</pre>
 
 <p>Una vez más, ten en cuenta la falta de llaves. Esto se debe a que solo se permite una exportación predeterminada por módulo, y sabemos que <code>randomSquare</code> lo es. La línea anterior es básicamente una abreviatura de:</p>
 
-<pre class="brush: js; notranslate">import {default as randomSquare} from './modules/square.js';</pre>
+<pre class="brush: js;">import {default as randomSquare} from './modules/square.js';</pre>
 
 <div class="blockIndicator note">
 <p><strong>Nota</strong>: La sintaxis as para cambiar el nombre de los elementos exportados se explica a continuación en la sección <a href="#Renombrar_impotaciones_y_exportaciones">Renombrar importaciones y exportaciones</a>.</p>
@@ -237,7 +237,7 @@ reportPerimeter(square1.length, reportList);
 
 <p>Entonces, por ejemplo, ambos de los siguientes harían el mismo trabajo, aunque de una manera ligeramente diferente:</p>
 
-<pre class="brush: js; notranslate">// dentro de module.js
+<pre class="brush: js;">// dentro de module.js
 export {
   function1 as newFunctionName,
   function2 as anotherNewFunctionName
@@ -246,7 +246,7 @@ export {
 // dentro de main.js
 import {newFunctionName, anotherNewFunctionName} from './modules/module.js';</pre>
 
-<pre class="brush: js; notranslate">// dentro de module.js
+<pre class="brush: js;">// dentro de module.js
 export {function1, function2};
 
 // dentro de main.js
@@ -257,11 +257,11 @@ import {function1 as newFunctionName,
 
 <p>Dentro de cada uno de estos módulos, tenemos características con los mismos nombres que se exportan y, por lo tanto, cada una tiene la misma instrucción <code>export</code> en la parte inferior:</p>
 
-<pre class="brush: js; notranslate">export { name, draw, reportArea, reportPerimeter };</pre>
+<pre class="brush: js;">export { name, draw, reportArea, reportPerimeter };</pre>
 
 <p>Al importarlos a <code>main.js</code>, si intentamos usar esto:</p>
 
-<pre class="brush: js; notranslate">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
+<pre class="brush: js;">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
 import { name, draw, reportArea, reportPerimeter } from './modules/circle.js';
 import { name, draw, reportArea, reportPerimeter } from './modules/triangle.js';</pre>
 
@@ -269,7 +269,7 @@ import { name, draw, reportArea, reportPerimeter } from './modules/triangle.js';
 
 <p>En su lugar, necesitamos cambiar el nombre de las importaciones para que sean únicas:</p>
 
-<pre class="brush: js; notranslate">import { name as squareName,
+<pre class="brush: js;">import { name as squareName,
          draw as drawSquare,
          reportArea as reportSquareArea,
          reportPerimeter as reportSquarePerimeter } from './modules/square.js';
@@ -286,13 +286,13 @@ import { name as triangleName,
 
 <p>Ten en cuenta que podrías resolver el problema en los archivos del módulo, p. ej.</p>
 
-<pre class="brush: js; notranslate">// en square.js
+<pre class="brush: js;">// en square.js
 export {name as squareName,
          draw as drawSquare,
          reportArea as reportSquareArea,
          reportPerimeter as reportSquarePerimeter };</pre>
 
-<pre class="brush: js; notranslate">// en main.js
+<pre class="brush: js;">// en main.js
 import {squareName, drawSquare, reportSquareArea, reportSquarePerimeter} from './modules/square.js';</pre>
 
 <p>Y funcionaría igual. El estilo que uses depende de ti, sin embargo, podría decirse que tiene más sentido dejar el código de tu módulo tal cual y realizar los cambios en las importaciones. Esto tiene sentido especialmente cuando estás importando desde módulos de terceros sobre los que no tienes ningún control.</p>
@@ -301,21 +301,21 @@ import {squareName, drawSquare, reportSquareArea, reportSquarePerimeter} from '.
 
 <p>El método anterior funciona bien, pero es un poco complicado y largo. Una solución aún mejor es importar las características de cada módulo dentro de un objeto <code>module</code>. La siguiente forma de sintaxis hace eso:</p>
 
-<pre class="brush: js; notranslate">import * as Module from './modules/module.js';</pre>
+<pre class="brush: js;">import * as Module from './modules/module.js';</pre>
 
 <p>Esto toma todas las exportaciones disponibles dentro de <code>module.js</code> y las hace disponibles como miembros de un objeto <code>Module</code>, dándole efectivamente su propio espacio de nombres. Así por ejemplo:</p>
 
-<pre class="brush: js; notranslate">Module.function1()
+<pre class="brush: js;">Module.function1()
 Module.function2()
 etc.</pre>
 
 <p>De nuevo, veamos un ejemplo real. Si vas a nuestro directorio <a href="https://github.com/mdn/js-examples/tree/master/modules/module-objects">module-objects</a>, verás el mismo ejemplo nuevamente, pero reescrito para aprovechar esta nueva sintaxis. En los módulos, las exportaciones están todas en la siguiente forma simple:</p>
 
-<pre class="brush: js; notranslate">export { name, draw, reportArea, reportPerimeter };</pre>
+<pre class="brush: js;">export { name, draw, reportArea, reportPerimeter };</pre>
 
 <p>Las importaciones, por otro lado, se ven así:</p>
 
-<pre class="brush: js; notranslate">import * as Canvas from './modules/canvas.js';
+<pre class="brush: js;">import * as Canvas from './modules/canvas.js';
 
 import * as Square from './modules/square.js';
 import * as Circle from './modules/circle.js';
@@ -323,7 +323,7 @@ import * as Triangle from './modules/triangle.js';</pre>
 
 <p>En cada caso, ahora puedes acceder a las importaciones del módulo debajo del nombre del objeto especificado, por ejemplo:</p>
 
-<pre class="brush: js; notranslate">let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, 'blue');
+<pre class="brush: js;">let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, 'blue');
 Square.reportArea(square1.length, reportList);
 Square.reportPerimeter(square1.length, reportList);</pre>
 
@@ -335,7 +335,7 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 
 <p>Puedes ver un ejemplo de nuestro módulo de dibujo de formas reescrito con clases ES en nuestro directorio <a href="https://github.com/mdn/js-examples/tree/master/modules/classes">classes</a>. Como ejemplo, el archivo <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/modules/square.js">square.js</a></code> ahora contiene toda su funcionalidad en una sola clase:</p>
 
-<pre class="brush: js; notranslate">class Square {
+<pre class="brush: js;">class Square {
   constructor(ctx, listId, length, x, y, color) {
     ...
   }
@@ -349,15 +349,15 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 
 <p>que luego exportamos:</p>
 
-<pre class="brush: js; notranslate">export { Square };</pre>
+<pre class="brush: js;">export { Square };</pre>
 
 <p>En <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/main.js">main.js</a></code>, lo importamos así:</p>
 
-<pre class="brush: js; notranslate">import { Square } from './modules/square.js';</pre>
+<pre class="brush: js;">import { Square } from './modules/square.js';</pre>
 
 <p>Y luego usas la clase para dibujar nuestro cuadrado:</p>
 
-<pre class="brush: js; notranslate">let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+<pre class="brush: js;">let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
 square1.draw();
 square1.reportArea();
 square1.reportPerimeter();</pre>
@@ -366,7 +366,7 @@ square1.reportPerimeter();</pre>
 
 <p>Habrá ocasiones en las que querrás agregar módulos juntos. Es posible que tengas varios niveles de dependencias, donde desees simplificar las cosas, combinando varios submódulos en un módulo principal. Esto es posible utilizando la sintaxis de exportación de los siguientes formas en el módulo principal:</p>
 
-<pre class="brush: js; notranslate">export * from 'x.js'
+<pre class="brush: js;">export * from 'x.js'
 export { name } from 'x.js'</pre>
 
 <p>Para ver un ejemplo, ve nuestro directorio <a href="https://github.com/mdn/js-examples/tree/master/modules/module-aggregation">module-aggregation</a>. En este ejemplo (basado en nuestro ejemplo de clases anterior) tenemos un módulo adicional llamado <code>shapes.js</code>, que reúne toda la funcionalidad de <code>circle.js</code>, <code>square.js</code> y <code>triangle.js</code>. También hemos movido nuestros submódulos dentro de un subdirectorio dentro del directorio <code>modules</code> llamado <code>shapes</code>. Entonces, la estructura del módulo en este ejemplo es:</p>
@@ -381,11 +381,11 @@ export { name } from 'x.js'</pre>
 
 <p>En cada uno de los submódulos, la exportación es de la misma forma, p. ej.</p>
 
-<pre class="brush: js; notranslate">export { Square };</pre>
+<pre class="brush: js;">export { Square };</pre>
 
 <p>Luego viene la parte de agregación. Dentro de <code><a href="https://github.com/mdn/js-examples/blob/master/modules/module-aggregation/modules/shapes.js">shapes.js</a></code>, incluimos las siguientes líneas:</p>
 
-<pre class="brush: js; notranslate">export { Square } from './shapes/square.js';
+<pre class="brush: js;">export { Square } from './shapes/square.js';
 export { Triangle } from './shapes/triangle.js';
 export { Circle } from './shapes/circle.js';</pre>
 
@@ -397,13 +397,13 @@ export { Circle } from './shapes/circle.js';</pre>
 
 <p>Entonces, ahora en el archivo <code>main.js</code>, podemos obtener acceso a las tres clases de módulos reemplazando</p>
 
-<pre class="brush: js; notranslate">import { Square } from './modules/square.js';
+<pre class="brush: js;">import { Square } from './modules/square.js';
 import { Circle } from './modules/circle.js';
 import { Triangle } from './modules/triangle.js';</pre>
 
 <p>con la siguiente única línea:</p>
 
-<pre class="brush: js; notranslate">import { Square, Circle, Triangle } from './modules/shapes.js';</pre>
+<pre class="brush: js;">import { Square, Circle, Triangle } from './modules/shapes.js';</pre>
 
 <h2 id="Carga_dinámica_de_módulos">Carga dinámica de módulos</h2>
 
@@ -411,7 +411,7 @@ import { Triangle } from './modules/triangle.js';</pre>
 
 <p>Esta nueva funcionalidad te permite llamar a {{jsxref("Statements/import", "import()", "#Importaciones_Dinámicas")}} como una función, pasándole la ruta al módulo como parámetro. Devuelve una {{jsxref("Promise")}}, que se cumple con un objeto <code>module</code> (consulta <a href="#Crear_un_objeto_module">Crear un objeto <code>module</code></a>) que te da acceso a las exportaciones de ese objeto, p. ej.</p>
 
-<pre class="brush: js; notranslate">import('./modules/myModule.js')
+<pre class="brush: js;">import('./modules/myModule.js')
   .then((module) =&gt; {
     // Haz algo con el módulo.
   });</pre>
@@ -422,11 +422,11 @@ import { Triangle } from './modules/triangle.js';</pre>
 
 <p>En <code>main.js</code> hemos tomado una referencia a cada botón usando una llamada a <a href="/es/docs/Web/API/Document/querySelector"><code>Document.querySelector()</code></a>, por ejemplo:</p>
 
-<pre class="brush: js; notranslate">let squareBtn = document.querySelector('.square');</pre>
+<pre class="brush: js;">let squareBtn = document.querySelector('.square');</pre>
 
 <p>Luego adjuntamos un escucha de eventos a cada botón para que cuando se presione, el módulo relevante se cargue dinámicamente y se use para dibujar la forma:</p>
 
-<pre class="brush: js; notranslate">squareBtn.addEventListener('click', () =&gt; {
+<pre class="brush: js;">squareBtn.addEventListener('click', () =&gt; {
   import('./modules/square.js').then((Module) =&gt; {
     let square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
     square1.draw();

@@ -34,35 +34,35 @@ original_slug: Web/JavaScript/Referencia/Funciones/arguments
 
 <p>Por ejemplo, si a una función se le pasan 3 argumentos, puedes acceder a ellos de la siguiente manera:</p>
 
-<pre class="brush: js notranslate">arguments[0] // primer argumento
+<pre class="brush: js">arguments[0] // primer argumento
 arguments[1] // segundo argumento
 arguments[2] // tercer argumento
 </pre>
 
 <p>También puedes establecer o reasignar cada argumento:</p>
 
-<pre class="brush: js notranslate">arguments[1] = 'new value';
+<pre class="brush: js">arguments[1] = 'new value';
 </pre>
 
 <p>El objeto <code>arguments</code> no es un {{jsxref("Array")}}. Es similar, pero carece de todas las propiedades de <code>Array</code> excepto de {{jsxref("Array.length", "length")}}. Por ejemplo, no tiene el método {{jsxref("Array.pop", "pop()")}}.</p>
 
 <p>Sin embargo, se puede convertir en un <code>Array</code> real:</p>
 
-<pre class="brush: js notranslate">var args = Array.prototype.slice.call(arguments);
+<pre class="brush: js">var args = Array.prototype.slice.call(arguments);
 // El uso de un arreglo literal es más corto que el anterior pero asigna un arreglo vacío
 var args = [].slice.call(arguments);
 </pre>
 
 <p>Así como puedes hacer con cualquier objeto tipo <code>Array</code>, puedes usar el método {{jsxref("Array.from()")}} de ES2015 o la {{jsxref("Operators/Spread_syntax", "propagación de sintaxis")}} para convertir <code>arguments</code> en un arreglo real:</p>
 
-<pre class="brush: js notranslate">let args = Array.from(arguments);
+<pre class="brush: js">let args = Array.from(arguments);
 // o
 let args = [...arguments];
 </pre>
 
 <p>El objeto <code>arguments</code> es útil para funciones llamadas con más argumentos de los que declara aceptar formalmente. Esta técnica es útil para funciones a las que se les puede pasar un número variable de argumentos, como {{jsxref("Math.min()")}}. Esta función de ejemplo acepta cualquier número de argumentos de cadena y devuelve la más larga:</p>
 
-<pre class="brush: js notranslate">function longestString() {
+<pre class="brush: js">function longestString() {
   var longest = '';
   for (var i=0; i &lt; arguments.length; i++) {
     if (arguments[i].length &gt; longest.length) {
@@ -79,7 +79,7 @@ let args = [...arguments];
 
 <p>El operador {{jsxref("Operators/typeof", "typeof")}} devuelve <code>'object'</code> cuando se usa con <code>arguments</code></p>
 
-<pre class="brush: js notranslate">console.log(typeof arguments); // 'object' </pre>
+<pre class="brush: js">console.log(typeof arguments); // 'object' </pre>
 
 <p>El tipo de argumentos individuales se puede determinar indexando <code>arguments</code>:</p>
 
@@ -102,14 +102,14 @@ let args = [...arguments];
 
 <p>Este ejemplo define una función que concatena varias cadenas. El único argumento formal de la función es una cadena que contiene los caracteres que separan los elementos a concatenar.</p>
 
-<pre class="brush:js notranslate">function myConcat(separator) {
+<pre class="brush:js">function myConcat(separator) {
   let args = Array.prototype.slice.call(arguments, 1);
   return args.join(separator);
 }</pre>
 
 <p>Puedes pasar tantos argumentos como desees a esta función. Devuelve una lista de cadenas usando cada argumento en la lista:</p>
 
-<pre class="brush:js notranslate">// returns "red, orange, blue"
+<pre class="brush:js">// returns "red, orange, blue"
 myConcat(', ', 'red', 'orange', 'blue');
 
 // devuelve "elephant; giraffe; lion; cheetah"
@@ -122,7 +122,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');</pre>
 
 <p>Este ejemplo define una función que crea una cadena que contiene HTML para una lista. El único argumento formal para la función es una cadena que es "<code>u</code>" si la lista debe estar {{htmlelement("ul", "desordenada (con viñetas)")}}, u "<code>o</code>" si la lista es {{htmlelement("ol", "ordenada (numerada)")}}. La función se define de la siguiente manera:</p>
 
-<pre class="brush:js notranslate">function list(type) {
+<pre class="brush:js">function list(type) {
   var html = '&lt;' + type + 'l&gt;&lt;li&gt;';
   var args = Array.prototype.slice.call(arguments, 1);
   html += args.join('&lt;/li&gt;&lt;li&gt;');
@@ -132,7 +132,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');</pre>
 
 <p>Puedes pasar cualquier número de argumentos a esta función y agregar cada argumento como un elemento de lista a una lista del tipo indicado. Por ejemplo:</p>
 
-<pre class="brush:js notranslate">let listHTML = list('u', 'One', 'Two', 'Three');
+<pre class="brush:js">let listHTML = list('u', 'One', 'Two', 'Three');
 
 /* la listHTML es:
 "&lt;ul&gt;&lt;li&gt;One&lt;/li&gt;&lt;li&gt;Two&lt;/li&gt;&lt;li&gt;Three&lt;/li&gt;&lt;/ul&gt;"
@@ -144,7 +144,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');</pre>
 <p>El objeto <code>arguments</code> se puede utilizar junto con parámetros {{jsxref("Functions/rest_parameters", "rest")}}, {{jsxref("Functions/Default_parameters", "predeterminados")}} y {{jsxref("Operators/Destructuring_assignment", "desestructurados")}}.</p>
 </div>
 
-<pre class="brush: js notranslate">function foo(...args) {
+<pre class="brush: js">function foo(...args) {
   return args;
 }
 foo(1, 2, 3); // [1, 2, 3]
@@ -160,7 +160,7 @@ foo(1, 2, 3); // [1, 2, 3]
 
 <p>Las funciones no estrictas a las que se les pasan solo parámetros simples (es decir, no parámetros <code>rest</code>, predeterminados o desestructurados) sincronizarán el valor de los nuevos valores de las variables en el cuerpo de la función con el objeto <code>arguments</code>, y viceversa:</p>
 
-<pre class="brush: js notranslate">function func(a) {
+<pre class="brush: js">function func(a) {
   arguments[0] = 99; // actualiza arguments[0] además actualiza a
   console.log(a);
 }
@@ -169,7 +169,7 @@ func(10); // 99
 
 <p>Y también:</p>
 
-<pre class="brush: js notranslate">function func(a) {
+<pre class="brush: js">function func(a) {
   a = 99; // la actualización también actualiza arguments[0]
   console.log(arguments[0]);
 }
@@ -178,7 +178,7 @@ func(10); // 99
 
 <p>Por el contrario, las funciones no estrictas a las que <strong>se les pasan</strong> parámetros <code>rest</code>, predeterminados o desestructurados <strong>no</strong> sincronizarán los nuevos valores asignados a las variables de los argumentos en el cuerpo de la función con el objeto <code>arguments</code>. En cambio, el objeto <code>arguments</code> en funciones no estrictas con parámetros complejos <strong>siempre</strong> reflejarán los valores pasados a la función cuando se invocó (este es el mismo comportamiento exhibido por todas las funciones en modo estricto, independientemente del tipo de variables que se le pasen):</p>
 
-<pre class="brush: js notranslate">function func(a = 55) {
+<pre class="brush: js">function func(a = 55) {
   arguments[0] = 99; // actualizar arguments[0] tampoco actualiza a
   console.log(a);
 }
@@ -186,7 +186,7 @@ func(10); // 10</pre>
 
 <p>Y también:</p>
 
-<pre class="brush: js notranslate">function func(a = 55) {
+<pre class="brush: js">function func(a = 55) {
   a = 99; // actualizar a tampoco actualiza arguments[0]
   console.log(arguments[0]);
 }
@@ -195,7 +195,7 @@ func(10); // 10
 
 <p>Y también:</p>
 
-<pre class="brush: js notranslate">// Un parámetro predeterminado sin seguimiento
+<pre class="brush: js">// Un parámetro predeterminado sin seguimiento
 function func(a = 55) {
   console.log(arguments[0]);
 }

@@ -26,7 +26,7 @@ original_slug: Web/JavaScript/Referencia/Classes
 
 <p>Una manera de definir una clase es mediante una <strong>declaración de clase</strong><em>. </em>Para declarar una clase, se utiliza la palabra reservada <code>class</code> y un nombre para la clase "Rectangulo".</p>
 
-<pre class="brush: js notranslate">class Rectangulo {
+<pre class="brush: js">class Rectangulo {
   constructor(alto, ancho) {
     this.alto = alto;
     this.ancho = ancho;
@@ -37,7 +37,7 @@ original_slug: Web/JavaScript/Referencia/Classes
 
 <p>Una importante diferencia entre las <strong>declaraciones de funciones</strong><em> y </em>las <strong>declaraciones de clases</strong> es que las <strong>declaraciones de funciones</strong><em> </em>son alojadas y las <strong>declaraciones de clases</strong><em> </em>no lo son. En primer lugar necesitas declarar tu clase y luego acceder a ella, de otro modo el ejemplo de código siguiente arrojará un {{jsxref("ReferenceError")}}:</p>
 
-<pre class="brush: js example-bad notranslate">const p = new Rectangle(); // ReferenceError
+<pre class="brush: js example-bad">const p = new Rectangle(); // ReferenceError
 
 class Rectangle {}
 </pre>
@@ -90,7 +90,7 @@ console.log(Rectangulo.name);
 
 <p>Vea también <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">métodos definidos</a>.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">class Rectangulo {
+<pre class="brush: js line-numbers  language-js"><code class="language-js">class Rectangulo {
   constructor (alto, ancho) {
     this.alto = alto;
     this.ancho = ancho;
@@ -115,7 +115,7 @@ console.log(cuadrado.area); // 100</code></pre>
 
 <p>La <em>palabra clave</em> <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/static">static</a></code> define un método estático para una clase. Los métodos estáticos son llamados sin instanciar su clase y <strong>no</strong> pueden ser llamados mediante una instancia de clase. Los métodos estáticos son a menudo usados para crear funciones de utilidad para una aplicación.</p>
 
-<pre class="brush: js notranslate">class Punto {
+<pre class="brush: js">class Punto {
   constructor ( x , y ){
     this.x = x;
     this.y = y;
@@ -179,7 +179,7 @@ hablar(); // global object</code></pre>
 
 <p>La palabra clave <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/extends">extends</a></code> es usada en <em>declaraciones de clase</em> o <em>expresiones de clase</em> para crear una clase hija.</p>
 
-<pre class="brush: js notranslate"><code>class Animal {
+<pre class="brush: js"><code>class Animal {
   constructor(nombre) {
     this.nombre = nombre;
   }
@@ -197,7 +197,7 @@ class Perro extends Animal {
 
 <p>También se pueden extender las clases tradicionales basadas en funciones:</p>
 
-<pre class="brush: js notranslate">function Animal (nombre) {
+<pre class="brush: js">function Animal (nombre) {
   this.nombre = nombre;
 }
 Animal.prototype.hablar = function () {
@@ -242,7 +242,7 @@ d.hablar();</code></pre>
 
 <p>Por ejemplo, cuando se usan metodos del tipo {{jsxref("Array.map", "map()")}} que devuelven el constructor por defecto, se quiere que esos métodos devuelvan un objeto padre Array, en vez de MyArray. El símbolo {{jsxref("Symbol.species")}} permite hacer:</p>
 
-<pre class="brush: js notranslate"><code>class MyArray extends Array {
+<pre class="brush: js"><code>class MyArray extends Array {
   // Sobre escribe species sobre el constructor padre Array
   static get [Symbol.species]() { return Array; }
 }
@@ -281,7 +281,7 @@ class Leon extends Gato {
 
 <p>Una función con una clase padre como entrada y una subclase extendiendo la clase padre como salida puede ser usado para implementar mix-ins en EMCAScript:</p>
 
-<pre class="brush: js notranslate"><code>var calculatorMixin = Base =&gt; class extends Base {
+<pre class="brush: js"><code>var calculatorMixin = Base =&gt; class extends Base {
   calc() { }
 };
 
@@ -291,7 +291,7 @@ var randomizerMixin = Base =&gt; class extends Base {
 
 <p>Una clase que use este método puede ser escrita tal que así:</p>
 
-<pre class="brush: js notranslate"><code>class Foo { }
+<pre class="brush: js"><code>class Foo { }
 class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</code></pre>
 
 <h2 id="Especificaciones">Especificaciones</h2>

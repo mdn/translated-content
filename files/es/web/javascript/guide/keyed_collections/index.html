@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Guide/Keyed_collections
 
 <p>El siguiente código muestra algunas operaciones básicas con un <code>Map</code>. Consulta también la página de referencia de {{JSxRef("Map")}} para obtener más ejemplos y la API completa. Puedes usar un bucle {{JSxRef("Sentencias/for...of", "for...of")}} para devolver un arreglo de <code>[<var>key</var>, <var>value</var>]</code> para cada iteración.</p>
 
-<pre class="brush: js notranslate">let sayings = new Map();
+<pre class="brush: js">let sayings = new Map();
 sayings.set('dog', 'woof');
 sayings.set('cat', 'meow');
 sayings.set('elephant', 'toot');
@@ -73,7 +73,7 @@ sayings.size; // 0
 
 <p>Un caso de uso de los objetos <code>WeakMap</code> es almacenar datos privados para un objeto u ocultar detalles de implementación. El siguiente ejemplo es de la publicación del blog de Nick Fitzgerald <a href="http://fitzgeraldnick.com/weblog/53/">"Ocultar detalles de implementación con WeakMaps de ECMAScript 6"</a>. Los datos y métodos privados pertenecen al objeto y se almacenan en <code><var>privates</var></code> del objeto <code>WeakMap</code>. Todo lo expuesto en la instancia y el prototipo es público; todo lo demás es inaccesible desde el mundo exterior porque <code><var>privates</var></code> no se exporta desde el módulo.</p>
 
-<pre class="brush: js notranslate">const privates = new WeakMap();
+<pre class="brush: js">const privates = new WeakMap();
 
 function Public() {
   const me = {
@@ -97,7 +97,7 @@ module.exports = Public;</pre>
 
 <p>El siguiente código muestra algunas operaciones básicas con un <code>Set</code>. Además, consulta la página de referencia de {{JSxRef("Set")}} para obtener más ejemplos y la API completa.</p>
 
-<pre class="brush: js notranslate">let mySet = new Set();
+<pre class="brush: js">let mySet = new Set();
 mySet.add(1);
 mySet.add('algún texto');
 mySet.add('foo');
@@ -119,7 +119,7 @@ for (let item of mySet) console.log(item);
 <p><strong>Nota</strong>: Recuerda que los objetos <code>Set</code> almacenan <em>valores únicos</em>, por lo que cualquier elemento duplicado de un arreglo se elimina al realizar la conversión.</p>
 </div>
 
-<pre class="brush: js notranslate">Array.from(mySet);
+<pre class="brush: js">Array.from(mySet);
 [...mySet2];
 
 mySet2 = new Set([1, 2, 3, 4]);

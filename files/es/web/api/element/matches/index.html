@@ -17,7 +17,7 @@ translation_of: Web/API/Element/matches
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">var <var>result</var> = <var>element</var>.matches(<var>selectorString</var>);
+<pre class="syntaxbox">var <var>result</var> = <var>element</var>.matches(<var>selectorString</var>);
 </pre>
 
 <h3 id="Parámetros">Parámetros</h3>
@@ -37,7 +37,7 @@ translation_of: Web/API/Element/matches
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
-<pre class="brush: html notranslate">&lt;ul id="aves"&gt;
+<pre class="brush: html">&lt;ul id="aves"&gt;
   &lt;li&gt;Loro de alas naranja&lt;/li&gt;
   &lt;li class="amenazada"&gt;Ágila Filipina&lt;/li&gt;
   &lt;li&gt;Gran Pelícano Blancpo/li&gt;
@@ -77,7 +77,7 @@ translation_of: Web/API/Element/matches
 
 <p>However, given the practicality of supporting older browsers, the following should suffice for most (if not all) practical cases (ej. soporte IE9+).</p>
 
-<pre class="brush: js notranslate">if (!Element.prototype.matches) {
+<pre class="brush: js">if (!Element.prototype.matches) {
   Element.prototype.matches = Element.prototype.msMatchesSelector ||
                               Element.prototype.webkitMatchesSelector;
 }

@@ -27,7 +27,7 @@ original_slug: Tools/Web_Console/La_línea_de_comandos_del_intérprete
 
 <p>Por ejemplo, si escribes:</p>
 
-<pre class="brush: js notranslate">function foo() {</pre>
+<pre class="brush: js">function foo() {</pre>
 
 <p>y luego <kbd>Intro</kbd>, la consola no ejecuta inmediatamente la entrada, pero se comporta como si hubieras presionado <kbd>Mayús</kbd>+<kbd>Intro</kbd>, para que puedas terminar de ingresar la definición de la función.</p>
 
@@ -129,26 +129,26 @@ original_slug: Tools/Web_Console/La_línea_de_comandos_del_intérprete
 
 <p>Puedes pasar el elemento <code>iframe</code> del DOM:</p>
 
-<pre class="brush: js notranslate">var frame = document.getElementById("frame1");
+<pre class="brush: js">var frame = document.getElementById("frame1");
 cd(frame);</pre>
 
 <p>Puedes pasar un selector de CSS que coincida con el <code>iframe</code>:</p>
 
-<pre class="brush: js notranslate">cd("#frame1");</pre>
+<pre class="brush: js">cd("#frame1");</pre>
 
 <p>Puedes pasar el objeto <code>window</code> global del <code>iframe</code>:</p>
 
-<pre class="brush: js notranslate">var frame = document.getElementById("frame1");
+<pre class="brush: js">var frame = document.getElementById("frame1");
 cd(frame.contentWindow);
 </pre>
 
 <p>Para volver a cambiar el contexto al objeto <code>window</code> de nivel superior, llama a <code>cd()</code> sin argumentos:</p>
 
-<pre class="brush: js notranslate">cd();</pre>
+<pre class="brush: js">cd();</pre>
 
 <p>Por ejemplo, supongamos que tenemos un documento que incluye un <code>iframe</code>:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -160,7 +160,7 @@ cd(frame.contentWindow);
 
 <p>El <code>iframe</code> define una nueva función:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -176,7 +176,7 @@ cd(frame.contentWindow);
 
 <p>Puedes cambiar el contexto al <code>iframe</code> de esta manera:</p>
 
-<pre class="brush: js notranslate">cd("#frame1");</pre>
+<pre class="brush: js">cd("#frame1");</pre>
 
 <p>Ahora verás que el objeto <code>window</code> global del documento es el <code>iframe</code>:</p>
 

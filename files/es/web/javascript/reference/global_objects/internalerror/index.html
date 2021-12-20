@@ -53,7 +53,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/InternalError
 
 <p>Esta función recursiva se ejecuta 10 veces, según la condición de salida.</p>
 
-<pre class="brush: js notranslate">function loop(x) {
+<pre class="brush: js">function loop(x) {
   if (x &gt;= 10) // "x &gt;= 10" es la condición de salida
     return;
   // hacer cosas
@@ -63,7 +63,7 @@ loop(0);</pre>
 
 <p>Establecer esta condición en un valor extremadamente alto, no funcionará:</p>
 
-<pre class="brush: js example-bad notranslate">function loop(x) {
+<pre class="brush: js example-bad">function loop(x) {
   if (x &gt;= 1000000000000)
     return;
   // hacer cosas

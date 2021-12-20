@@ -79,7 +79,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
   </ul>
  </li>
  <li>Si miramos la línea 86 en nuestro editor de código, encontraremos esta línea:
-  <pre class="brush: js notranslate">guessSubmit.addeventListener('click', checkGuess);</pre>
+  <pre class="brush: js">guessSubmit.addeventListener('click', checkGuess);</pre>
  </li>
  <li>El mensaje de error dice "<code>guessSubmit.addeventListener no es una función</code>", lo cual significa que el intérprete de JavaScript no reconoce la función que estamos llamando. A menudo, este mensaje de error en realidad significa que hemos escrito algo mal. Si no estás seguro de la ortografía correcta de una parte de la sintaxis, a menudo es bueno buscar la función en MDN. La mejor manera de hacer esto es, en tu navegador favorito, buscar "mdn <em>nombre-de-característica</em>". Aquí hay un atajo para ahorrarte algo de tiempo en esta instancia: <code><a href="/es/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>.</li>
  <li>Entonces, al mirar esta página, ¡el error parece ser que hemos escrito mal el nombre de la función!. Recuerda que JavaScript distingue entre mayúsculas y minúsculas, por lo que cualquier pequeña diferencia en la ortografía o en mayúsculas provocará un error. Cambiar <code>addeventListener</code> a <code>addEventListener</code> debería solucionar este problema. Hazlo ahora.</li>
@@ -100,13 +100,13 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
   <div class="note"><strong>Nota</strong>: Este error no apareció tan pronto como se cargó la página porque este error ocurrió dentro de una función (dentro del bloque <code>checkGuess() {...}</code>). Como pronto aprenderás con más detalle en nuestro <a href="/es/docs/Learn/JavaScript/Building_blocks/Functions">artículo de funciones</a>, el código dentro de las funciones se ejecuta en un ámbito separado que el código fuera de las funciones. En este caso, el código no se ejecutó y el error no se lanzó hasta que la función <code>checkGuess()</code> se ejecutó en la línea 86.</div>
  </li>
  <li>Échale un vistazo a la línea 78 y verás el siguiente código:
-  <pre class="brush: js notranslate">lowOrHi.textContent = '¡El número es muy grande!';</pre>
+  <pre class="brush: js">lowOrHi.textContent = '¡El número es muy grande!';</pre>
  </li>
  <li>Esta línea está intentando establecer la propiedad <code>textContent</code> de la constante <code>lowOrHi</code> en una cadena de texto, pero no funciona porque <code>lowOrHi</code> no contiene lo que es supone. Veamos por qué es así — intenta buscar otras instancias de <code>lowOrHi</code> en el código. La primera instancia que encontrarás en JavaScript está en la línea 48:
-  <pre class="brush: js notranslate">const lowOrHi = document.querySelector('lowOrHi');</pre>
+  <pre class="brush: js">const lowOrHi = document.querySelector('lowOrHi');</pre>
  </li>
  <li>En este punto, estamos intentando hacer que la variable contenga una referencia a un elemento en el HTML del documento. Comprobemos si el valor es <code>null</code> después de ejecutar esta línea. Agrega el siguiente código en la línea 49:
-  <pre class="brush: js notranslate">console.log(lowOrHi);</pre>
+  <pre class="brush: js">console.log(lowOrHi);</pre>
 
   <div class="note">
   <p><strong>Nota</strong>: <code><a href="/es/docs/Web/API/Console/log">console.log()</a></code> es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de <code>lowOrHi</code> en la consola tan pronto como intentemos configurarlo en la línea 48.</p>
@@ -114,7 +114,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
  </li>
  <li>Guarda y refresca, y ahora deberías ver el resultado de <code>console.log()</code> en tu consola. <img alt="" src="https://mdn.mozillademos.org/files/13494/console-log-output.png" style="display: block; margin: 0 auto;">Efectivamente, el valor de <code>lowOrHi</code>es <code>null</code> en este punto, así que definitivamente hay un problema con la línea 48.</li>
  <li>Pensemos en cuál podría ser el problema. La línea 48 está utilizando un método <code><a href="/es/docs/Web/API/Document/querySelector">document.querySelector()</a></code> para obtener una referencia a un elemento seleccionándolo con un selector CSS. Buscando más adelante en nuestro archivo, podemos encontrar el párrafo en cuestión:
-  <pre class="brush: js notranslate">&lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
+  <pre class="brush: js">&lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
  </li>
  <li>Entonces necesitamos un selector de clase aquí, que comienza con un punto (<code>.</code>), pero el selector que se pasa al método <code>querySelector()</code> en la línea 48 no tiene punto. ¡Este podría ser el problema! Intenta cambiar <code>lowOrHi</code> a <code>.lowOrHi</code> en la línea 48.</li>
  <li>Ahora guarda y refresca nuevamente, y tu declaración <code>console.log()</code> debería devolver el elemento <code>&lt;p&gt;</code> que queremos. ¡Uf! ¡Otro error solucionado! Ahora puedes eliminar tu línea <code>console.log()</code>, o mantenerla como referencia más adelante — tu elección.</li>
@@ -141,13 +141,13 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 <ol>
  <li>Busca la variable <code>randomNumber</code> y las líneas donde se establece primero el número aleatorio. La instancia que almacena el número aleatorio que queremos adivinar al comienzo del juego debe estar alrededor de la línea número 44:
 
-  <pre class="brush: js notranslate">let randomNumber = Math.floor(Math.random()) + 1;</pre>
+  <pre class="brush: js">let randomNumber = Math.floor(Math.random()) + 1;</pre>
   Y la que genera el número aleatorio antes de cada juego subsiguiente está alrededor de la línea 113:</li>
  <li>
-  <pre class="brush: js notranslate">randomNumber = Math.floor(Math.random()) + 1;</pre>
+  <pre class="brush: js">randomNumber = Math.floor(Math.random()) + 1;</pre>
  </li>
  <li>Para comprobar si estas líneas son realmente el problema, volvamos a echar mano de nuestra amiga <code>console.log()</code> — inserta la siguiente línea directamente debajo de cada una de las dos líneas anteriores:
-  <pre class="brush: js notranslate">console.log(randomNumber);</pre>
+  <pre class="brush: js">console.log(randomNumber);</pre>
  </li>
  <li>Guarda y refresca, luego juega un par de veces — verás que <code>randomNumber</code> es igual a 1 en cada punto en el que se registra en la consola.</li>
 </ol>
@@ -156,7 +156,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 <p>Para solucionar esto, consideremos cómo está funcionando esta línea. Primero, invocamos a <code><a href="/es/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a></code>, que genera un número decimal aleatorio entre 0 y 1, p. ej. 0.5675493843.</p>
 
-<pre class="brush: js notranslate">Math.random()</pre>
+<pre class="brush: js">Math.random()</pre>
 
 <p>A continuación, pasamos el resultado de invocar a <code>Math.random()</code> a <code><a href="/es/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a></code>, que redondea el número pasado al número entero más cercano. Luego agregamos 1 a ese resultado:</p>
 
@@ -164,11 +164,11 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 <p>Redondear un número decimal aleatorio entre 0 y 1 siempre devolverá 0, por lo que agregarle 1 siempre devolverá 1. Necesitamos multiplicar el número aleatorio por 100 antes de redondearlo hacia abajo. Lo siguiente nos daría un número aleatorio entre 0 y 99:</p>
 
-<pre class="brush: js notranslate">Math.floor(Math.random()*100);</pre>
+<pre class="brush: js">Math.floor(Math.random()*100);</pre>
 
 <p>De ahí que queramos sumar 1, para darnos un número aleatorio entre 1 y 100:</p>
 
-<pre class="brush: js notranslate">Math.floor(Math.random()*100) + 1;</pre>
+<pre class="brush: js">Math.floor(Math.random()*100) + 1;</pre>
 
 <p>Intenta actualizar ambas líneas de esta manera, luego guarda y refresca — ¡el juego ahora debería trabajar como pretendemos!</p>
 
@@ -180,11 +180,11 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 <p>Este error generalmente significa que has omitido un punto y coma al final de una de sus líneas de código, pero a veces puede ser más críptico. Por ejemplo, si cambiamos esta línea dentro de la función <code>checkGuess()</code>:</p>
 
-<pre class="brush: js notranslate">var userGuess = Number(guessField.value);</pre>
+<pre class="brush: js">var userGuess = Number(guessField.value);</pre>
 
 <p>a</p>
 
-<pre class="brush: js notranslate">var userGuess === Number(guessField.value);</pre>
+<pre class="brush: js">var userGuess === Number(guessField.value);</pre>
 
 <p>Lanza este error porque cree que estás intentando hacer algo diferente. Debes asegurarte de no confundir el operador de asignación (<code>=</code>), que establece una variable para que sea igual a un valor — con el operador de igualdad estricta (<code>===</code>), que prueba si un valor es igual a otro y devuelve un resultado <code>true</code>/<code>false</code>.</p>
 
@@ -196,11 +196,11 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 <p>Este podría ser otro síntoma de confusión entre la asignación y los operadores de igualdad estricta. Por ejemplo, si cambiamos esta línea dentro de <code>checkGuess()</code>:</p>
 
-<pre class="brush: js notranslate">if (userGuess === randomNumber) {</pre>
+<pre class="brush: js">if (userGuess === randomNumber) {</pre>
 
 <p>a</p>
 
-<pre class="brush: js notranslate">if (userGuess = randomNumber) {</pre>
+<pre class="brush: js">if (userGuess = randomNumber) {</pre>
 
 <p>la prueba siempre devolvería <code>true</code>, haciendo que el programa informe que se ganó el juego. ¡Ten cuidado!</p>
 
@@ -216,11 +216,11 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 <p>Este error generalmente se relaciona con un objeto JavaScript formado incorrectamente, pero en este caso logramos obtenerlo cambiando</p>
 
-<pre class="brush: js notranslate">function checkGuess() {</pre>
+<pre class="brush: js">function checkGuess() {</pre>
 
 <p>a</p>
 
-<pre class="brush: js notranslate">function checkGuess( {</pre>
+<pre class="brush: js">function checkGuess( {</pre>
 
 <p>Esto ha hecho que el navegador piense que estamos tratando de pasar el contenido de la función a la función como un argumento. ¡Cuidado con esos paréntesis!</p>
 

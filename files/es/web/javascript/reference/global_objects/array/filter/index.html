@@ -69,7 +69,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/filter
 
 <p>El siguiente ejemplo usa <code>filter()</code> para crear un array filtrado que excluye todos los elementos con valores inferiores a 10.</p>
 
-<pre class="brush: js notranslate">function esSuficientementeGrande(elemento) {
+<pre class="brush: js">function esSuficientementeGrande(elemento) {
   return elemento &gt;= 10;
 }
 var filtrados = [12, 5, 8, 130, 44].filter(esSuficientementeGrande);
@@ -80,7 +80,7 @@ var filtrados = [12, 5, 8, 130, 44].filter(esSuficientementeGrande);
 
 <p>El siguiente ejemplo emplea <code>filter()</code> para crear un json filtrado con todos lo elementos que tengan id numérico distinto de cero.</p>
 
-<pre class="brush: js notranslate">var arr = [
+<pre class="brush: js">var arr = [
   { id: 15 },
   { id: -1 },
   { id: 0 },
@@ -116,7 +116,7 @@ console.log('Número de Entradas Invalidas = ', entradasInvalidas);
 
 <p>El siguiente ejemplo emplea filter() para filtrar el contendio de un arreglo en función de un criterio de búsqueda.</p>
 
-<pre class="brush: js notranslate">var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+<pre class="brush: js">var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
 
 /**
  * Filtra la matríz en función de un criterio de búsqueda (query)
@@ -132,7 +132,7 @@ console.log(filterItems('an')); // ['banana', 'mango', 'orange']</pre>
 
 <h3 id="Implementación_en_ES2015">Implementación en ES2015</h3>
 
-<pre class="brush: js notranslate">const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+<pre class="brush: js">const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
 
 /**
  * Filtra la matríz en función de un criterio de búsqueda (query)

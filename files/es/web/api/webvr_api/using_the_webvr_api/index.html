@@ -88,7 +88,7 @@ translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 
 <p><span id="result_box" lang="es"><span>El primer código relacionado con WebVR que encontrarás es el siguiente bloque:</span></span></p>
 
-<pre class="brush: js notranslate">// WebVR variables
+<pre class="brush: js">// WebVR variables
 
 var frameData = new VRFrameData();
 var vrDisplay;
@@ -122,7 +122,7 @@ var poseStatsDisplayed = false;</pre>
 
 <p><span id="result_box" lang="es"><span>Una de las principales funciones dentro de nuestro código es start () - ejecutamos esta función cuando el cuerpo ha terminado de cargar:</span></span></p>
 
-<pre class="brush: js notranslate">// start
+<pre class="brush: js">// start
 //
 // Called when the body has loaded is created to get the ball rolling.
 
@@ -130,7 +130,7 @@ document.body.onload = start;</pre>
 
 <p>Para empezar, <code>start()</code> <span id="result_box" lang="es"><span>recupera un contexto de WebGL para usarlo para renderizar gráficos 3D</span></span> {{htmlelement("canvas")}} <span class="short_text" id="result_box" lang="es"><span>elemento en </span></span><a href="https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/index.html">our HTML</a>. <span class="short_text" id="result_box" lang="es"><span>A continuación verificamos si la</span></span> <code>gl</code> <span class="short_text" id="result_box" lang="es"><span>contexto está disponible</span></span> — <span id="result_box" lang="es"><span>si es así, ejecutamos una serie de funciones para configurar la escena para su visualización.</span></span></p>
 
-<pre class="brush: js notranslate">function start() {
+<pre class="brush: js">function start() {
   canvas = document.getElementById("glcanvas");
 
   initWebGL(canvas);      // Initialize the GL context
@@ -139,7 +139,7 @@ document.body.onload = start;</pre>
 
 <p>Next, we start the process of actually rendering the scene onto the canvas, by setting the canvas to fill the entire browser viewport, and running the rendering loop (<code>drawScene()</code>) for the first time. This is the non-WebVR — normal — rendering loop.</p>
 
-<pre class="brush: js notranslate">    // draw the scene normally, without WebVR - for those who don't have it and want to see the scene in their browser
+<pre class="brush: js">    // draw the scene normally, without WebVR - for those who don't have it and want to see the scene in their browser
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -147,18 +147,18 @@ document.body.onload = start;</pre>
 
 <p>Now onto our first WebVR-specific code. First of all, we check to see if {{domxref("Navigator.getVRDisplays")}} exists — this is the entry point into the API, and therefore good basic feature detection for WebVR. You'll see at the end of the block (inside the <code>else</code> clause) that if this doesn't exist, we log a message to indicate that WebVR 1.1 isn't supported by the browser.</p>
 
-<pre class="brush: js notranslate">    // WebVR: Check to see if WebVR is supported
+<pre class="brush: js">    // WebVR: Check to see if WebVR is supported
     if(navigator.getVRDisplays) {
       console.log('WebVR 1.1 supported');</pre>
 
 <p>Inside our <code>if() { ... }</code> block, we run the {{domxref("Navigator.getVRDisplays()")}} function. This returns a promise, which is fulfilled with an array containing all the VR display devices connected to the computer. If none are connected, the array will be empty.</p>
 
-<pre class="brush: js notranslate">      // Then get the displays attached to the computer
+<pre class="brush: js">      // Then get the displays attached to the computer
       navigator.getVRDisplays().then(function(displays) {</pre>
 
 <p>Inside the promise <code>then()</code> block, we check whether the array length is more than 0; if so, we set the value of our <code>vrDisplay</code> variable to the 0 index item inside the array. <code>vrDisplay</code> now contains a {{domxref("VRDisplay")}} object representing our connected display!</p>
 
-<pre class="brush: js notranslate">        // If a display is available, use it to present the scene
+<pre class="brush: js">        // If a display is available, use it to present the scene
         if(displays.length &gt; 0) {
           vrDisplay = displays[0];
           console.log('Display found');</pre>
@@ -179,7 +179,7 @@ document.body.onload = start;</pre>
 
 <p><code>requestPresent()</code> returns a promise that is fulfilled when the presentation begins successfully.</p>
 
-<pre class="brush: js notranslate">          // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
+<pre class="brush: js">          // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
           btn.addEventListener('click', function() {
             if(btn.textContent === 'Start VR display') {
               vrDisplay.requestPresent([{ source: canvas }]).then(function() {
@@ -189,7 +189,7 @@ document.body.onload = start;</pre>
 
 <p>We then do some simple math to calculate the total width of the VRDisplay rendering area based on the eye {{domxref("VREyeParameters.renderWidth")}} and {{domxref("VREyeParameters.renderHeight")}}.</p>
 
-<pre class="brush: js notranslate">                // Set the canvas size to the size of the vrDisplay viewport
+<pre class="brush: js">                // Set the canvas size to the size of the vrDisplay viewport
 
                 var leftEye = vrDisplay.getEyeParameters('left');
                 var rightEye = vrDisplay.getEyeParameters('right');
@@ -199,19 +199,19 @@ document.body.onload = start;</pre>
 
 <p>Next, we {{domxref("Window.cancelAnimationFrame()", "cancel the animation loop")}} previously set in motion by the {{domxref("Window.requestAnimationFrame()")}} call inside the <code>drawScene()</code> function, and instead invoke <code>drawVRScene()</code>. This function renders the same scene as before, but with some special WebVR magic going on. The loop inside here is maintained by WebVR's special {{domxref("VRDisplay.requestAnimationFrame")}} method.</p>
 
-<pre class="brush: js notranslate">                // stop the normal presentation, and start the vr presentation
+<pre class="brush: js">                // stop the normal presentation, and start the vr presentation
                 window.cancelAnimationFrame(normalSceneFrame);
                 drawVRScene();</pre>
 
 <p><span id="result_box" lang="es"><span>Finalmente, actualizamos el texto del botón para que la próxima vez que se presione, detenga la presentación en la pantalla VR.</span></span></p>
 
-<pre class="brush: js notranslate">                btn.textContent = 'Exit VR display';
+<pre class="brush: js">                btn.textContent = 'Exit VR display';
               });</pre>
 
 <p><br>
  To stop the VR presentation when the button is subsequently pressed, we call {{domxref("VRDisplay.exitPresent()")}}. We also reverse the button's text content, and swap over the <code>requestAnimationFrame</code> calls. You can see here that we are using {{domxref("VRDisplay.cancelAnimationFrame")}} to stop the VR rendering loop, and starting the normal rendering loop off again by calling <code>drawScene()</code>.</p>
 
-<pre class="brush: js notranslate">            } else {
+<pre class="brush: js">            } else {
               vrDisplay.exitPresent();
               console.log('Stopped presenting to WebVR display');
 
@@ -248,7 +248,7 @@ document.body.onload = start;</pre>
 
 <p>First of all, we begin the definition of our rendering loop function — <code>drawVRScene()</code>. The first thing we do inside here is make a call to {{domxref("VRDisplay.requestAnimationFrame()")}} to keep the loop running after it has been called once (this occurred earlier on in our code when we started presenting to the VR display). This call is set as the value of the global <code>vrSceneFrame</code> variable, so we can cancel the loop with a call to {{domxref("VRDisplay.cancelAnimationFrame()")}} once we exit VR presenting.</p>
 
-<pre class="brush: js notranslate">function drawVRScene() {
+<pre class="brush: js">function drawVRScene() {
   // WebVR: Request the next frame of the animation
   vrSceneFrame = vrDisplay.requestAnimationFrame(drawVRScene);</pre>
 
@@ -256,12 +256,12 @@ document.body.onload = start;</pre>
 
 <p>This has to be called on every frame so the rendered view is always up-to-date.</p>
 
-<pre class="brush: js notranslate">  // Populate frameData with the data of the next frame to display
+<pre class="brush: js">  // Populate frameData with the data of the next frame to display
   vrDisplay.getFrameData(frameData);</pre>
 
 <p>Now we retrieve the current {{domxref("VRPose")}} from the {{domxref("VRFrameData.pose")}} property, store the position and orientation for use later on, and send the current pose to the pose stats box for display, if the <code>poseStatsDisplayed</code> variable is set to true.</p>
 
-<pre class="brush: js notranslate">  // You can get the position, orientation, etc. of the display from the current frame's pose
+<pre class="brush: js">  // You can get the position, orientation, etc. of the display from the current frame's pose
 
   var curFramePose = frameData.pose;
   var curPos = curFramePose.position;
@@ -272,13 +272,13 @@ document.body.onload = start;</pre>
 
 <p>  We now clear the canvas before we start drawing on it, so that the next frame is clearly seen, and we don't also see previous rendered frames:</p>
 
-<pre class="brush: js notranslate">  // Clear the canvas before we start drawing on it.
+<pre class="brush: js">  // Clear the canvas before we start drawing on it.
 
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</pre>
 
 <p>We now render the view for both the left and right eyes. First of all we need to create projection and view locations for use in the rendering. these are {{domxref("WebGLUniformLocation")}} objects, created using the {{domxref("WebGLRenderingContext.getUniformLocation()")}} method, passing it the shader program's identifier and an identifying name as parameters.</p>
 
-<pre class="brush: js notranslate">  // WebVR: Create the required projection and view matrix locations needed
+<pre class="brush: js">  // WebVR: Create the required projection and view matrix locations needed
   // for passing into the uniformMatrix4fv methods below
 
   var projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
@@ -292,7 +292,7 @@ document.body.onload = start;</pre>
  <li>Running the <code>drawGeometry()</code> function, which renders the actual scene — because of what we specified in the previous two steps, we will render it for the left eye only.</li>
 </ul>
 
-<pre class="brush: js notranslate">  // WebVR: Render the left eye’s view to the left half of the canvas
+<pre class="brush: js">  // WebVR: Render the left eye’s view to the left half of the canvas
   gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
   gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.leftProjectionMatrix);
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
@@ -300,7 +300,7 @@ document.body.onload = start;</pre>
 
 <p>We now do exactly the same thing, but for the right eye:</p>
 
-<pre class="brush: js notranslate">  // WebVR: Render the right eye’s view to the right half of the canvas
+<pre class="brush: js">  // WebVR: Render the right eye’s view to the right half of the canvas
   gl.viewport(canvas.width * 0.5, 0, canvas.width * 0.5, canvas.height);
   gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.rightProjectionMatrix);
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);
@@ -312,7 +312,7 @@ document.body.onload = start;</pre>
 
 <p>This is a quick and dirty way to use VR pose data, but it illustrates the basic principle.</p>
 
-<pre class="brush: js notranslate">  function drawGeometry() {
+<pre class="brush: js">  function drawGeometry() {
     // Establish the perspective with which we want to view the
     // scene. Our field of view is 45 degrees, with a width/height
     // ratio of 640:480, and we only want to see objects between 0.1 units
@@ -370,7 +370,7 @@ document.body.onload = start;</pre>
 
 <p>The next bit of the code has nothing to do with WebVR — it just updates the rotation of the cube on each frame:</p>
 
-<pre class="brush: js notranslate">  // Update the rotation for the next draw, if it's time to do so.
+<pre class="brush: js">  // Update the rotation for the next draw, if it's time to do so.
 
   var currentTime = (new Date).getTime();
   if (lastCubeUpdateTime) {
@@ -383,7 +383,7 @@ document.body.onload = start;</pre>
 
 <p>The last part of the rendering loop involves us calling {{domxref("VRDisplay.submitFrame()")}} — now all the work has been done and we've rendered the display on the {{htmlelement("canvas")}}, this method then submits the frame to the VR display so it is displayed on there as well.</p>
 
-<pre class="brush: js notranslate">  // WebVR: Indicate that we are ready to present the rendered frame to the VR display
+<pre class="brush: js">  // WebVR: Indicate that we are ready to present the rendered frame to the VR display
   vrDisplay.submitFrame();
 }</pre>
 
@@ -393,7 +393,7 @@ document.body.onload = start;</pre>
 
 <p>First of all, we store the six different property values obtainable from the {{domxref("VRPose")}} object in their own variables — each one is a {{domxref("Float32Array")}}.</p>
 
-<pre class="brush: js notranslate">function displayPoseStats(pose) {
+<pre class="brush: js">function displayPoseStats(pose) {
   var pos = pose.position;
   var orient = pose.orientation;
   var linVel = pose.linearVelocity;
@@ -405,7 +405,7 @@ document.body.onload = start;</pre>
 
 <p>You should note that we've used a conditional expression to detect whether the linear acceleration and angular acceleration arrays are successfully returned before we display the data. These values are not reported by most VR hardware as yet, so the code would throw an error if we did not do this (the arrays return <code>null</code> if they are not successfully reported).</p>
 
-<pre class="brush: js notranslate">  posStats.textContent = 'Position: x ' + pos[0].toFixed(3) + ', y ' + pos[1].toFixed(3) + ', z ' + pos[2].toFixed(3);
+<pre class="brush: js">  posStats.textContent = 'Position: x ' + pos[0].toFixed(3) + ', y ' + pos[1].toFixed(3) + ', z ' + pos[2].toFixed(3);
   orientStats.textContent = 'Orientation: x ' + orient[0].toFixed(3) + ', y ' + orient[1].toFixed(3) + ', z ' + orient[2].toFixed(3);
   linVelStats.textContent = 'Linear velocity: x ' + linVel[0].toFixed(3) + ', y ' + linVel[1].toFixed(3) + ', z ' + linVel[2].toFixed(3);
   angVelStats.textContent = 'Angular velocity: x ' + angVel[0].toFixed(3) + ', y ' + angVel[1].toFixed(3) + ', z ' + angVel[2].toFixed(3);
@@ -435,7 +435,7 @@ document.body.onload = start;</pre>
 
 <p>To demonstrate how they work, our simple demo includes the following example:</p>
 
-<pre class="brush: js notranslate">window.addEventListener('vrdisplaypresentchange', function(e) {
+<pre class="brush: js">window.addEventListener('vrdisplaypresentchange', function(e) {
   console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
 });</pre>
 

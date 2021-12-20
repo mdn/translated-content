@@ -34,7 +34,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/AggregateError
 
 <h3 id="Capturar_un_error_agregado">Capturar un error agregado</h3>
 
-<pre class="brush: js; notranslate">Promise.any([
+<pre class="brush: js;">Promise.any([
   Promise.reject(new Error("algún error")),
 ]).catch(e =&gt; {
   console.log(e instanceof AggregateError); // true
@@ -46,7 +46,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/AggregateError
 
 <h3 id="Crear_un_AggregateError">Crear un <code>AggregateError</code></h3>
 
-<pre class="brush: js; notranslate">try {
+<pre class="brush: js;">try {
   throw new AggregateError([
     new Error("algún error"),
   ], 'Hola');

@@ -56,13 +56,13 @@ original_slug: >-
 
 <p>React utiliza características modernas de JavaScript para muchos de sus patrones. El punto donde más se aleja de JavaScript se refleja en el uso de la sintaxis <a href="https://es.reactjs.org/docs/introducing-jsx.html">JSX</a>, la que, a su vez, amplía la sintaxis de JavaScript para que código similar a HTML pueda formar parte del mismo. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">const heading = &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;;</pre>
+<pre class="brush: js">const heading = &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;;</pre>
 
 <p>Esta constante "heading" se conoce como una <strong>expresión JSX</strong>. React puede usarla para representar la etiqueta <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> en nuestra aplicación.</p>
 
 <p>Supongamos que, por razones semánticas, queremos envolver nuestro encabezado en una etiqueta <code><a href="/en-US/docs/Web/HTML/Element/header">&lt;header&gt;</a></code>. El enfoque JSX nos permite anidar nuestros elementos entre sí, tal como lo hacemos con HTML:</p>
 
-<pre class="brush: js notranslate">const header = (
+<pre class="brush: js">const header = (
   &lt;header&gt;
     &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;
   &lt;/header&gt;
@@ -71,7 +71,7 @@ original_slug: >-
 <div class="blockIndicator note">
 <p><strong>Nota</strong>: Los paréntesis en el fragmento anterior no son exclusivos de JSX y no tienen ningún efecto en la aplicación. Son una señal para ti (y tu computadora) de que las múltiples líneas de código que contiene forman parte de una misma expresión. También podríamos escribir la expresión del encabezado de esta manera:</p>
 
-<pre class="brush: js notranslate">const header = &lt;header&gt;
+<pre class="brush: js">const header = &lt;header&gt;
     &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;
 &lt;/header&gt;</pre>
 
@@ -80,7 +80,7 @@ original_slug: >-
 
 <p>Por supuesto, tu navegador no puede leer JSX sin ayuda. Al compilarla (usando una herramienta como <a href="https://babeljs.io/">Babel</a> o <a href="https://parceljs.org/">Parcel</a>), nuestra expresión de encabezado se vería así:</p>
 
-<pre class="brush: js notranslate">const header = React.createElement("header", null,
+<pre class="brush: js">const header = React.createElement("header", null,
   React.createElement("h1", null, "Mozilla Developer Network")
 );</pre>
 
@@ -118,7 +118,7 @@ original_slug: >-
 
 <p>create-react-app recibe un argumento: el nombre que te gustaría darle a tu aplicación. create-react-app usa este nombre para crear una nueva carpeta, luego crea los archivos necesarios dentro de la misma. Asegúrate de <code>cd</code> al lugar donde te gustaría que se guarde tu aplicación en tu disco duro, luego ejecuta lo siguiente en tu terminal:</p>
 
-<pre class="brush: bash notranslate">npx create-react-app moz-todo-react</pre>
+<pre class="brush: bash">npx create-react-app moz-todo-react</pre>
 
 <p>Esto crea una carpeta <code>moz-todo-react</code>, y hace varias cosas dentro de la misma:</p>
 
@@ -132,7 +132,7 @@ original_slug: >-
 <div class="blockIndicator note">
 <p><strong>Nota</strong>: si tienes instalado el administrador de paquetes yarn, create-react-app lo usará por defecto en lugar de npm. Si tienes ambos administradores de paquetes instalados y quieres, explícitamente, usar npm, puedes agregar el indicador <code>--use-npm</code> cuando ejecutes create-react-app:</p>
 
-<pre class="brush: bash notranslate">npx create-react-app moz-todo-react --use-npm</pre>
+<pre class="brush: bash">npx create-react-app moz-todo-react --use-npm</pre>
 </div>
 
 <p>create-react-app mostrará una serie de mensajes en tu terminal mientras opera, ¡lo cual es normal! Esto puede tardar unos minutos, por lo que ahora podría ser un buen momento para preparar una taza de té.</p>
@@ -178,7 +178,7 @@ original_slug: >-
 
 <p>Abramos <code>src/App.js</code>, ya que nuestro navegador nos pide que lo editemos. Este archivo contiene nuestro primer componente —<code>App</code>—, y algunas otras líneas de código:</p>
 
-<pre class="brush: js notranslate">import React from 'react';
+<pre class="brush: js">import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -210,7 +210,7 @@ export default App;</pre>
 
 <p>Las declaraciones <code>import</code> en la parte superior del archivo le permiten a <code>App.js</code> utilizar código que ha sido definido en otra parte. Revisemos estas declaraciones más detalladamente.</p>
 
-<pre class="brush: js notranslate">import React from 'react';
+<pre class="brush: js">import React from 'react';
 import logo from './logo.svg';
 import './App.css';</pre>
 
@@ -228,7 +228,7 @@ import './App.css';</pre>
 
 <p>Vamos a darle un vistazo más detallado a <code>App</code>.</p>
 
-<pre class="brush: js notranslate">function App() {
+<pre class="brush: js">function App() {
   return (
     &lt;div className="App"&gt;
       &lt;header className="App-header"&gt;
@@ -257,7 +257,7 @@ import './App.css';</pre>
 
 <p>Ahora, tu componente <code>App</code> debería lucir así:</p>
 
-<pre class="brush: js notranslate">function App() {
+<pre class="brush: js">function App() {
   return (
     &lt;div className="App"&gt;
       &lt;header className="App-header"&gt;
@@ -278,7 +278,7 @@ import './App.css';</pre>
 
 <p>Vamos a abrir el archivo <code>src/index.js</code>, ya que es en este donde el componente <code>App</code> está siendo utilizado. Este archivo es el punto de entrada para nuestra aplicación, e inicialmente luce así:</p>
 
-<pre class="brush: js notranslate">import React from 'react';
+<pre class="brush: js">import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -310,7 +310,7 @@ serviceWorker.unregister();</pre>
 
 <p>Finalmente, tu archivo <code>index.js</code> debería verse así:</p>
 
-<pre class="brush: js notranslate">import React from 'react';
+<pre class="brush: js">import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -325,13 +325,13 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 
 <p>De vuelta en <code>App.js</code>, enfoquémonos en la línea 9:</p>
 
-<pre class="brush: js notranslate">&lt;img src={logo} className="App-logo" alt="logo" /&gt;</pre>
+<pre class="brush: js">&lt;img src={logo} className="App-logo" alt="logo" /&gt;</pre>
 
 <p>Aquí, el valor del atributo <code>src</code> de la etiqueta <code>&lt;img /&gt;</code> está entre llaves. Así es como JSX reconoce las variables. Al encontrarse con <code>{logo}</code>, React sabrá que nos referimos a la importación del logotipo en la línea 2 de nuestra aplicación, y luego recuperará el archivo del logo y lo renderizará.</p>
 
 <p>Vamos a intentar crear una variable propia. Antes de la declaración return de <code>App</code>, agrega <code>const subject = "React";</code>. Tu componente <code>App</code> ahora debería verse así:</p>
 
-<pre class="brush: js notranslate">function App() {
+<pre class="brush: js">function App() {
   const subject = "React";
   return (
     &lt;div className="App"&gt;
@@ -347,7 +347,7 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 
 <p>Cambia la línea 8, de manera que se use la variable <code>subject</code> en vez de la palabra "mundo", así:</p>
 
-<pre class="brush: js notranslate">function App() {
+<pre class="brush: js">function App() {
   const subject = "React";
   return (
     &lt;div className="App"&gt;
@@ -371,11 +371,11 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 
 <p>Agrega un prop de <code>subject</code> a la llamada del componente <code>&lt;App /&gt;</code>, con un valor de <code>Clarice</code>. Al terminar, tu código debería verse similar a este:</p>
 
-<pre class="brush: js notranslate">ReactDOM.render(&lt;App subject="Clarice" /&gt;, document.getElementById('root'));</pre>
+<pre class="brush: js">ReactDOM.render(&lt;App subject="Clarice" /&gt;, document.getElementById('root'));</pre>
 
 <p>Volviendo a <code>App.js</code>, vamos a revisar nuevamente la función <code>App</code> como tal, la cual se lee así (acortando la declaración <code>return</code> por razones de brevedad):</p>
 
-<pre class="brush: js notranslate">function App() {
+<pre class="brush: js">function App() {
   const subject = "React";
   return (
     // return statement
@@ -384,7 +384,7 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 
 <p>Cambia la declaración de la función <code>App</code> de manera que tome <code>props</code> como un parámetro, y elimina la constante <code>subject</code>. Al igual que cualquier otro parámetro de una función, puedes pasar <code>props</code> a <code>console.log()</code> para imprimirlos en la consola de tu navegador. Continúa, haciendo esto antes de la declaración <code>return</code>, así:</p>
 
-<pre class="brush: js notranslate">function App(props) {
+<pre class="brush: js">function App(props) {
   console.log(props);
   return (
     // return statement
@@ -393,13 +393,13 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 
 <p>Guarda tu archivo y revisa la consola JavaScript de tu navegador. Deberías ver registrado algo como esto:</p>
 
-<pre class="brush: js notranslate">Object { subject: "Clarice" }</pre>
+<pre class="brush: js">Object { subject: "Clarice" }</pre>
 
 <p>La propiedad <code>subject</code> del objeto corresponde al prop <code>subject</code> que agregamos a la llamada de nuestro componente <code>&lt;App /&gt;</code>, y la cadena <code>Clarice</code> corresponde a su valor. Los props de componentes en React siempre se recopilan en objetos de esta manera.</p>
 
 <p>Ahora que <code>subject</code> es uno de nuestros props, usémoslo en <code>App.js</code>. Cambia la constante <code>subject</code> de manera que, en vez de definirla como la cadena <code>React</code>, estés leyendo el valor de <code>props.subject</code>. También puedes eliminar <code>console.log()</code>, si así lo quieres.</p>
 
-<pre class="brush: js notranslate">function App(props) {
+<pre class="brush: js">function App(props) {
   const subject = props.subject;
   return (
     // return statement

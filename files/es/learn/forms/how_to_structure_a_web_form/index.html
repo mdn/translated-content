@@ -45,7 +45,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 
 <p>Un pequeño ejemplo:</p>
 
-<pre class="brush:html; notranslate">&lt;form&gt;
+<pre class="brush:html;">&lt;form&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Tamaño del zumo de fruta&lt;/legend&gt;
     &lt;p&gt;
@@ -77,13 +77,13 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 
 <p>Como vimos en el artículo anterior, el elemento {{HTMLElement ("label")}} es la forma formal de definir una etiqueta para un control de un formulario HTML. Este es el elemento más importante si deseas crear formularios accesibles porque cuando se implementan correctamente, los lectores de pantalla leen la etiqueta de un elemento de formulario junto con las instrucciones relacionadas, y esto además resulta muy útil para los usuarios videntes. Tomemos este ejemplo que vimos en el artículo anterior:</p>
 
-<pre class="brush: html notranslate">&lt;label for="name"&gt;Nombre:&lt;/label&gt; &lt;input type="text" id="name" name="user_name"&gt;</pre>
+<pre class="brush: html">&lt;label for="name"&gt;Nombre:&lt;/label&gt; &lt;input type="text" id="name" name="user_name"&gt;</pre>
 
 <p>Con la etiqueta <code>&lt;label&gt;</code> asociada correctamente con <code>&lt;input&gt;</code> por su atributo <code>for</code> (que contiene el atributo <code>id</code> del elemento <code>&lt;input&gt;</code>), un lector de pantalla leerá algo como «Nombre, editar texto».</p>
 
 <p>Hay otra forma de asociar un control de formulario con una etiqueta: asociarlo implícitamente anidando el control de formulario dentro de <code>&lt;label&gt;</code>.</p>
 
-<pre class="brush: html notranslate">&lt;label for="name"&gt;
+<pre class="brush: html">&lt;label for="name"&gt;
   Nombre: &lt;input type="text" id="name" name="user_name"&gt;
 &lt;/label&gt;</pre>
 
@@ -97,7 +97,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 
 <p>Por ejemplo, al hacer clic en el texto de la etiqueta «Me gustan las cerezas» del ejemplo siguiente, cambiará el estado seleccionado de la casilla de verificación <em>taste_cherry</em>:</p>
 
-<pre class="brush:html; notranslate">&lt;form&gt;
+<pre class="brush:html;">&lt;form&gt;
   &lt;p&gt;
     &lt;input type="checkbox" id="taste_1" name="taste_cherry" value="cherry"&gt;
     &lt;label for="taste_1"&gt;Me gustan las cerezas&lt;/label&gt;
@@ -118,7 +118,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 
 <p>Consideremos este ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Los campos obligatorios se marcan con un &lt;abbr title = "required"&gt;*&lt;/abbr&gt;.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Los campos obligatorios se marcan con un &lt;abbr title = "required"&gt;*&lt;/abbr&gt;.&lt;/p&gt;
 
 &lt;!-- Así que esto: --&gt;
 &lt;div&gt;
@@ -179,19 +179,19 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 <ol>
  <li>Para comenzar, haz una copia local de nuestro <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">archivo de plantilla en blanco</a> y el <a href="https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css">CSS de nuestro formulario de pago</a> en un nuevo directorio de tu ordenador.</li>
  <li>Añade dentro del elemento HTML {{htmlelement ("head")}} la línea siguiente para aplicar el CSS al HTML:
-  <pre class="brush: html notranslate">&lt;link href="payment-form.css" rel="stylesheet"&gt;</pre>
+  <pre class="brush: html">&lt;link href="payment-form.css" rel="stylesheet"&gt;</pre>
  </li>
  <li>A continuación, añade el elemento externo {{htmlelement ("form")}} para crear tu formulario:
-  <pre class="brush: html notranslate">&lt;form&gt;
+  <pre class="brush: html">&lt;form&gt;
 
 &lt;/form&gt;</pre>
  </li>
  <li>Añade un encabezado y un párrafo dentro de las etiquetas <code>&lt;form&gt;</code>&gt; para informar a los usuarios cómo se marcan los campos obligatorios:
-  <pre class="brush: html notranslate">&lt;h1&gt;Forma de pago&lt;/h1&gt;
+  <pre class="brush: html">&lt;h1&gt;Forma de pago&lt;/h1&gt;
 &lt;p&gt;Los campos obligatorios van seguidos de &lt;strong&gt; &lt;abbr title = "required"&gt; * &lt;/abbr&gt; &lt;/strong&gt;.&lt;/p&gt;</pre>
  </li>
  <li>A continuación añadimos al formulario una sección de código más grande, justo debajo de nuestra entrada anterior. Aquí verás que delimitamos con un elemento {{htmlelement ("section")}} independiente los campos con la información de contacto. Además, hay un conjunto de dos botones de opción, cada uno de los cuales colocamos dentro de su elemento de lista ({{htmlelement ("li")}}) propio. También hay dos entradas de texto estándar {{htmlelement ("input")}} y sus elementos {{htmlelement ("label")}} asociados, cada uno anidado dentro de un elemento {{htmlelement ("p")}} y una entrada de texto para introducir una contraseña. Añade este código a tu formulario:
-  <pre class="brush: html notranslate">&lt;section&gt;
+  <pre class="brush: html">&lt;section&gt;
     &lt;h2&gt;Información de contacto&lt;/h2&gt;
     &lt;fieldset&gt;
       &lt;legend&gt;Título&lt;/legend&gt;
@@ -242,7 +242,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
  <li>La segunda <code>&lt;section&gt;</code> de nuestro formulario es la información de pago. Hay tres controles diferentes, junto con sus etiquetas, cada uno contenido dentro de un elemento <code>&lt;p&gt;</code>. El primero es un menú desplegable ({{htmlelement ("select")}}) para seleccionar el tipo de tarjeta de crédito. El segundo es un elemento <code>&lt;input&gt;</code> de tipo <code>tel</code>, para introducir un número de tarjeta de crédito. Si bien podríamos haber usado el tipo <code>number</code>, no queremos una interfaz de usuario con control de número. El último es un elemento <code>&lt;input&gt;</code> de tipo <code>date</code>, para introducir la fecha de caducidad de la tarjeta; aparecerá como un control de selección de fecha en navegadores compatibles, y como una entrada de texto normal en navegadores no compatibles. Estos tipos de entrada más nuevos volverán a aparecer en el artículo <a href="/en-US/docs/Learn/Forms/HTML5_input_types">Tipos de entrada HTML5</a>.<br>
   <br>
   Introduce los datos siguientes a continuación de la sección anterior:
-  <pre class="brush: html notranslate">&lt;section&gt;
+  <pre class="brush: html">&lt;section&gt;
     &lt;h2&gt;Información de pago&lt;/h2&gt;
     &lt;p&gt;
       &lt;label for="card"&gt;
@@ -272,7 +272,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 &lt;/section&gt;</pre>
  </li>
  <li>La última sección que añadimos es mucho más simple y contiene solo un {{htmlelement ("button")}} de tipo <code>submit</code>, para enviar los datos del formulario. Añádelo al final de tu formulario:
-  <pre class="brush: html notranslate">&lt;p&gt; &lt;button type="submit"&gt;Validar el pago&lt;/button&gt; &lt;/p&gt;</pre>
+  <pre class="brush: html">&lt;p&gt; &lt;button type="submit"&gt;Validar el pago&lt;/button&gt; &lt;/p&gt;</pre>
  </li>
 </ol>
 

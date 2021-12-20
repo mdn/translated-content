@@ -52,7 +52,7 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 
 <p>En este ejemplo, hemos definido una función constructor, así:</p>
 
-<pre class="brush: js notranslate">function Persona(nombre, apellido, edad, genero, intereses) {
+<pre class="brush: js">function Persona(nombre, apellido, edad, genero, intereses) {
 
   // definiendo de propiedades y métodos
   this.first = first;
@@ -63,7 +63,7 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 
 <p>Entonces hemos creado una instancia de un objeto como este:</p>
 
-<pre class="brush: js notranslate">var person1 = new Persona('Bob', 'Smith', 32, 'hombre', ['music', 'skiing']);</pre>
+<pre class="brush: js">var person1 = new Persona('Bob', 'Smith', 32, 'hombre', ['music', 'skiing']);</pre>
 
 <p>Si escribe "person1." en su consola JavaScript, debería ver que el navegador intenta completarlo automáticamente con los nombres de miembro disponibles en este objeto:</p>
 
@@ -75,7 +75,7 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 
 <p>Entonces, ¿qué sucede si llama a un método en <code>person1</code>, que está definido en <code>Object</code>? Por ejemplo:</p>
 
-<pre class="brush: js notranslate">person1.valueOf()</pre>
+<pre class="brush: js">person1.valueOf()</pre>
 
 <p>Este método <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">valueOf()</a> simplemente retornará el valor del objeto sobre el que se llama - ¡pruébalo y verás! En este caso, lo que pasa es que:</p>
 
@@ -113,10 +113,10 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 
 <ol>
  <li>Puede comprobar las propiedades de los prototipos existentes - vuelva a nuestro ejemplo anterior e intente introducir lo siguiente en la consola JavaScript:
-  <pre class="brush: js notranslate">Person.prototype</pre>
+  <pre class="brush: js">Person.prototype</pre>
  </li>
  <li>El resultado no le mostrará mucho - después de todo, no hemos definido nada en el prototipo de nuestro constructor personalizado! Por defecto, el prototipo de un constructor siempre comienza vacío. Ahora intente lo siguiente:
-  <pre class="brush: js notranslate">Object.prototype</pre>
+  <pre class="brush: js">Object.prototype</pre>
  </li>
 </ol>
 
@@ -124,7 +124,7 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 
 <p>Verá otros ejemplos de herencia de cadena de prototipos en todo JavaScript - intente buscar los métodos y propiedades definidas en el prototipo de los objetos globales String, Date, Number y Array, por ejemplo. Todos ellos tienen un número de miembros definidos en su prototipo, por lo que, por ejemplo, cuando se crea una cadena, como ésta:</p>
 
-<pre class="brush: js notranslate">var myString = 'Esto es mi String.';</pre>
+<pre class="brush: js">var myString = 'Esto es mi String.';</pre>
 
 <p><code>myString</code> inmediatamente tiene una serie de métodos útiles disponibles en él, como <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">split()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a></code>, etc.</p>
 
@@ -138,10 +138,10 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 
 <ol>
  <li>Por ejemplo, pruebe esto en la consola JavaScript de su ejemplo anterior:
-  <pre class="brush: js notranslate">var person2 = Object.create(person1);</pre>
+  <pre class="brush: js">var person2 = Object.create(person1);</pre>
  </li>
  <li>Lo que hace create() es crear un nuevo objeto a partir de un objeto prototipo específico. Aquí, la person2 se crea utilizando la person1 como objeto prototipo. Puede comprobarlo introduciendo lo siguiente en la consola:
-  <pre class="brush: js notranslate">person2.__proto__</pre>
+  <pre class="brush: js">person2.__proto__</pre>
  </li>
 </ol>
 
@@ -155,7 +155,7 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 
 <ol>
  <li>Por ejemplo, pruebe estos comandos en la consola:
-  <pre class="brush: js notranslate">person1.constructor
+  <pre class="brush: js">person1.constructor
 person2.constructor</pre>
 
   <p>Ambos deberían devolver el constructor <code>Person()</code>, ya que contienen la definición original de esas instancias.</p>
@@ -163,10 +163,10 @@ person2.constructor</pre>
   <p>Un truco interesante es que se puede añadir paréntesis al final de la propiedad <code>constructor</code> (añadiendo todos los parámetros requeridos) para crear otra instancia desde ese constructor. Después de todo, el constructor es una función, por lo que puede ser invocada usando paréntesis; solamente se necesita incluir la palabra clave <code>new</code> para especificar que se quiere usar la función como un constructor.</p>
  </li>
  <li>Inténtese esto en la consola:
-  <pre class="brush: js notranslate">let person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);</pre>
+  <pre class="brush: js">let person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);</pre>
  </li>
  <li>Ahora intente acceder a las características del nuevo objeto, como:
-  <pre class="brush: js notranslate">person3.name.first
+  <pre class="brush: js">person3.name.first
 person3.age
 person3.bio()</pre>
  </li>
@@ -176,11 +176,11 @@ person3.bio()</pre>
 
 <p>La propiedad <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">constructor</a></code> tiene otros usos. Por ejemplo, si se tiene una instancia y se quiere devolver el nombre del que el constructor es una instancia, se puede usar lo siguiente:</p>
 
-<pre class="brush: js notranslate">instanceName.constructor.name</pre>
+<pre class="brush: js">instanceName.constructor.name</pre>
 
 <p>Intente esto, por ejemplo:</p>
 
-<pre class="brush: js notranslate">person1.constructor.name
+<pre class="brush: js">person1.constructor.name
 </pre>
 
 <div class="note">
@@ -197,12 +197,12 @@ person3.bio()</pre>
 <ol>
  <li>Regresemos a nuestro ejemplo <a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">oojs-class-further-exercises.html</a> y creemos una copia local del <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">código fuente</a>. Debajo del código JavaScript existente, agrega el siguiente código, el cuál añade un nuevo método a la propiedad <code>prototype</code> del constructor:
 
-  <pre class="brush: js notranslate">Person.prototype.farewell = function() {
+  <pre class="brush: js">Person.prototype.farewell = function() {
   alert(this.name.first + ' has left the building. Bye for now!');
 };</pre>
  </li>
  <li>Guarda el código y abre la página en el navegador, e ingresa lo siguiente en la entrada de texto.
-  <pre class="brush: js notranslate">person1.farewell();</pre>
+  <pre class="brush: js">person1.farewell();</pre>
  </li>
 </ol>
 
@@ -210,7 +210,7 @@ person3.bio()</pre>
 
 <p>Piensa sobre esto por un momento. En nuestro código definimos el constructor, luego creamos una insancia del objeto desde el constructor, después agregamos un nuevo método a el prototipo del constructor.</p>
 
-<pre class="brush: js notranslate">function Person(first, last, age, gender, interests) {
+<pre class="brush: js">function Person(first, last, age, gender, interests) {
 
   // property and method definitions
 
@@ -230,19 +230,19 @@ Person.prototype.farewell = function() {
 
 <p>Raramente verás propiedades definidas en la propiedad <code>prototype</code>, ya no son muy flexibles cuando son definidas de esta forma. Por ejemplo, puedes añadir una propiedad como esta:</p>
 
-<pre class="brush: js notranslate">Person.prototype.fullName = 'Bob Smith';
+<pre class="brush: js">Person.prototype.fullName = 'Bob Smith';
 </pre>
 
 <p>Esto no es muy flexible, ya que la persona podría no llamarse así. Sería mucho mejor construir <code>fullname</code> desde <code>name.first</code> y <code>name.last</code>.</p>
 
-<pre class="brush: js notranslate">Person.prototype.fullName = this.name.first + ' ' + this.name.last;
+<pre class="brush: js">Person.prototype.fullName = this.name.first + ' ' + this.name.last;
 </pre>
 
 <p>Sin embargo esto no funciona, ya que <code>this</code> estará referenciando al scope global en este caso, no al scope de la función. Llamar esta propiedad retornaría <code>undefined undefined</code>. Esto funcionó bien en el método que declaramos anteriormente dentro del prototipo, porque se encuentra dentro del scope de la función, que se transferirá con éxito al scope de la instancia del objeto.Así que deberías definir propiedades constantes en el prototipo (p.e. una que nunca necesite cambiar), pero generalmente funciona mejor definir propiedades dentro del constructor.</p>
 
 <p>De hecho, un patrón bastante común para la mayoría de definiciones de objetos es declarar las propiedades dentro del constructor, y los métodos en el prototipo. Esto hace el código más fácil de leer, ya que el constructor sólo contiene las definiciones de propiedades, y los métodos están en bloques separados. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">// Constructor with property definitions
+<pre class="brush: js">// Constructor with property definitions
 
 function Test(a, b, c, d) {
   // property definitions

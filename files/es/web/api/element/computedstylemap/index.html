@@ -19,7 +19,7 @@ translation_of: Web/API/Element/computedStyleMap
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">var <var>stylePropertyMapReadOnly</var> = Element.computedStyleMap()</pre>
+<pre class="syntaxbox">var <var>stylePropertyMapReadOnly</var> = Element.computedStyleMap()</pre>
 
 <h3 id="Parámetros">Parámetros</h3>
 
@@ -33,21 +33,21 @@ translation_of: Web/API/Element/computedStyleMap
 
 <p>Comenzamos con algo de HTML simple: un párrafo con un enlace, y una lista de definición a la cual le añadiremos todos los pares de Propiedad CSS / Valor.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
    &lt;a href="https://example.com"&gt;Link&lt;/a&gt;
 &lt;/p&gt;
 &lt;dl id="regurgitation"&gt;&lt;/dl&gt;</pre>
 
 <p>Añadimos un poco de CSS</p>
 
-<pre class="brush: css notranslate">a {
+<pre class="brush: css">a {
   --colour: red;
   color: var(--colour);
 }</pre>
 
 <p>Añadimos Javascript para tomar nuestro enlace y devolvemos una lista de definición de todos los valores de propiedades CSS usando <code>computedStyleMap().</code></p>
 
-<pre class="brush: js notranslate">// obtenemos el elemento
+<pre class="brush: js">// obtenemos el elemento
 const myElement = document.querySelector('a');
 
 // obtenemos la &lt;dl&gt; que llenaremos

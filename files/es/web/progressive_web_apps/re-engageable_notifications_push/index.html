@@ -30,7 +30,7 @@ translation_of: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 
 <p>Para mostrar una notificación, primero debes solicitar permiso. Sin embargo, en lugar de mostrar la notificación de inmediato, la mejor práctica dicta que deberíamos mostrar la ventana emergente cuando el usuario la solicite haciendo clic en un botón:</p>
 
-<pre class="brush: js notranslate">var button = document.getElementById("notifications");
+<pre class="brush: js">var button = document.getElementById("notifications");
 button.addEventListener('click', function(e) {
     Notification.requestPermission().then(function(result) {
         if(result === 'granted') {
@@ -51,7 +51,7 @@ button.addEventListener('click', function(e) {
 
 <p>La aplicación de ejemplo crea una notificación a partir de los datos disponibles: se elige un juego al azar y el elegido alimenta la notificación con el contenido — establece el nombre del juego como título, menciona al autor en el cuerpo y muestra la imagen como un icono:</p>
 
-<pre class="brush: js notranslate">function randomNotification() {
+<pre class="brush: js">function randomNotification() {
     var randomItem = Math.floor(Math.random()*games.length);
     var notifTitle = games[randomItem].name;
     var notifBody = 'Creado por '+games[randomItem].author+'.';
@@ -74,7 +74,7 @@ button.addEventListener('click', function(e) {
 
 <p>Como se mencionó anteriormente, para poder recibir mensajes <code>push</code>, debes tener un servicio <em>worker</em>, cuyos conceptos básicos ya se explican en {{web.link("/es/docs/Web/Apps/Progressive/Offline_Service_workers", "Cómo hacer que las PWAs funcionen sin conexión con el servicio workers")}}. Dentro del servicio <em>workers</em>, se crea un mecanismo de suscripción del servicio <code>push</code>.</p>
 
-<pre class="brush: js notranslate">registration.pushManager.getSubscription() .then( /* ... */ );</pre>
+<pre class="brush: js">registration.pushManager.getSubscription() .then( /* ... */ );</pre>
 
 <p>Una vez que el usuario está suscrito, puede recibir notificaciones automáticas del servidor.</p>
 
@@ -82,7 +82,7 @@ button.addEventListener('click', function(e) {
 
 <p>Para recibir mensajes <code>push</code>, podemos escuchar el evento {{event("push")}} en el archivo <code>Service Worker</code>:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('push', function(e) { /* ... */ });</pre>
+<pre class="brush: js">self.addEventListener('push', function(e) { /* ... */ });</pre>
 
 <p>Los datos se pueden recuperar y luego mostrar como una notificación al usuario inmediatamente. Esto, por ejemplo, se puede usar para recordarle algo al usuario o para informarle sobre contenido nuevo disponible en la aplicación.</p>
 
@@ -104,7 +104,7 @@ button.addEventListener('click', function(e) {
 
 <p>El archivo <code>index.js</code> comienza registrando el servicio <code>worker</code>:</p>
 
-<pre class="brush: js notranslate">navigator.serviceWorker.register('service-worker.js')
+<pre class="brush: js">navigator.serviceWorker.register('service-worker.js')
 .then(function(registration) {
   return registration.pushManager.getSubscription()
   .then(async function(subscription) {
@@ -119,13 +119,13 @@ button.addEventListener('click', function(e) {
 
 <p>En la parte de registro, el código se ve así:</p>
 
-<pre class="brush: js notranslate">if(subscription) {
+<pre class="brush: js">if(subscription) {
     return subscription;
 }</pre>
 
 <p>Si el usuario ya se ha suscrito, devolvemos el objeto de suscripción y pasamos a la parte de suscripción. Si no, iniciamos una nueva suscripción:</p>
 
-<pre class="brush: js notranslate">const response = await fetch('./vapidPublicKey');
+<pre class="brush: js">const response = await fetch('./vapidPublicKey');
 const vapidPublicKey = await response.text();
 const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);</pre>
 
@@ -133,14 +133,14 @@ const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);</pre>
 
 <p>La aplicación ahora puede usar {{DOMxRef("PushManager")}} para suscribir al nuevo usuario. Hay dos opciones pasadas al método {{DOMxRef("PushManager.subscribe()")}} — la primera es <code>userVisibleOnly: true</code>, lo cual significa que todas las notificaciones enviadas al usuario serán visibles para ellos, y el segundo es <code>applicationServerKey</code>, que contiene nuestra clave <em>IDVAP</em> adquirida y convertida con éxito.</p>
 
-<pre class="brush: js notranslate">return registration.pushManager.subscribe({
+<pre class="brush: js">return registration.pushManager.subscribe({
     userVisibleOnly: true,
     applicationServerKey: convertedVapidKey
 });</pre>
 
 <p>Ahora pasemos a la parte de la suscripción: la aplicación primero envía los detalles de la suscripción como JSON al servidor mediante <code>Fetch</code>.</p>
 
-<pre class="brush: js notranslate">fetch('./register', {
+<pre class="brush: js">fetch('./register', {
     method: 'post',
     headers: {
         'Content-type': 'application/json'
@@ -152,7 +152,7 @@ const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);</pre>
 
 <p>Luego, se define la función {{DOMxRef("onclick", "GlobalEventHandlers.onclick")}} en el botón <em>Suscribirse</em>:</p>
 
-<pre class="brush: js notranslate">document.getElementById('doIt').onclick = function() {
+<pre class="brush: js">document.getElementById('doIt').onclick = function() {
     const payload = document.getElementById('notification-payload').value;
     const delay = document.getElementById('notification-delay').value;
     const ttl = document.getElementById('notification-ttl').value;
@@ -181,7 +181,7 @@ const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);</pre>
 
 <p>El <a href="https://www.npmjs.com/package/web-push">módulo <code>web-push</code></a> se utiliza para configurar las claves <code>IDVAP</code> y, opcionalmente, generarlas si aún no están disponibles.</p>
 
-<pre class="brush: js notranslate">const webPush = require('web-push');
+<pre class="brush: js">const webPush = require('web-push');
 
 if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
   console.log("Debes configurar las variables de entorno VAPID_PUBLIC_KEY y " +
@@ -199,7 +199,7 @@ webPush.setVapidDetails(
 
 <p>A continuación, un módulo define y exporta todas las rutas que una aplicación necesita manejar: obtener la clave pública <em>IDVAP</em>, registrarse y luego enviar notificaciones. Puedes ver las variables del archivo <code>index.js</code> que se está utilizando: <code>payload</code>, <code>delay</code> y <code>ttl</code>.</p>
 
-<pre class="brush: js notranslate">module.exports = function(app, route) {
+<pre class="brush: js">module.exports = function(app, route) {
   app.get(route + 'vapidPublicKey', function(req, res) {
     res.send(process.env.VAPID_PUBLIC_KEY);
   });
@@ -233,7 +233,7 @@ webPush.setVapidDetails(
 
 <p>El último archivo que veremos es el del servicio <em>worker</em>:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('push', function(event) {
+<pre class="brush: js">self.addEventListener('push', function(event) {
     const payload = event.data ? event.data.text() : 'no payload';
     event.waitUntil(
         self.registration.showNotification('ServiceWorker Cookbook', {

@@ -17,7 +17,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/sort
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><code><var>arr</var>.sort([<var>compareFunction</var>])</code></pre>
+<pre class="syntaxbox"><code><var>arr</var>.sort([<var>compareFunction</var>])</code></pre>
 
 <h3 id="Parámetros">Parámetros</h3>
 
@@ -38,7 +38,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/sort
 
 <p>Si no se provee <code>compareFunction</code>, los elementos son ordenados convirtiéndolos a strings y comparando la posición del valor Unicode de dichos strings. Por ejemplo, "Cherry" viene antes que "banana"  (porque las mayúsculas van antes que las minúsculas en la codificación Unicode) . En un ordenamiento numérico, 9 está antes que 80, pero dado que los números son convertidos a strings y ordenados según el valor Unicode, el resultado será "80" antes que "9".</p>
 
-<pre class="brush: js notranslate">var frutas = ['guindas', 'manzanas', 'bananas'];
+<pre class="brush: js">var frutas = ['guindas', 'manzanas', 'bananas'];
 frutas.sort(); // ['bananas', 'guindas', 'manzanas']
 
 var puntos = [1, 10, 2, 21];
@@ -63,7 +63,7 @@ cosas.sort(); // ['1 Word', '2 Words', 'Word', 'word']
 
 <p>Entonces, la función de comparación tiene la siguiente forma:</p>
 
-<pre class="brush: js notranslate">function compare(a, b) {
+<pre class="brush: js">function compare(a, b) {
   if (a es menor que b según criterio de ordenamiento) {
     return -1;
   }
@@ -77,14 +77,14 @@ cosas.sort(); // ['1 Word', '2 Words', 'Word', 'word']
 
 <p>Para comparar números en lugar de strings, la función de comparación puede simplemente restar <code>b</code> de <code>a</code>. La siguiente función ordena el array de modo ascendente:</p>
 
-<pre class="brush: js notranslate">function compareNumbers(a, b) {
+<pre class="brush: js">function compareNumbers(a, b) {
   return a - b;
 }
 </pre>
 
 <p>El metodo <code>sort</code> puede ser usado convenientemente con {{jsxref("Operators/function", "function expressions", "", 1)}} (y <a href="/en-US/docs/Web/JavaScript/Guide/Closures">closures</a>):</p>
 
-<pre class="brush: js notranslate">var numbers = [4, 2, 5, 1, 3];
+<pre class="brush: js">var numbers = [4, 2, 5, 1, 3];
 numbers.sort(function(a, b) {
   return a - b;
 });
@@ -96,7 +96,7 @@ console.log(numbers);
 
 <p>Los objectos pueden ser ordenados por el valor de una de sus propiedades.</p>
 
-<pre class="brush: js notranslate">var items = [
+<pre class="brush: js">var items = [
   { name: 'Edward', value: 21 },
   { name: 'Sharpe', value: 37 },
   { name: 'And', value: 45 },
@@ -122,30 +122,30 @@ items.sort(function (a, b) {
 
 <p>Un array de elementos string, sin especificar una función de comparación:</p>
 
-<pre class="brush: js notranslate">var arr = [ 'a', 'b', 'Z', 'Aa', 'AA' ];
+<pre class="brush: js">var arr = [ 'a', 'b', 'Z', 'Aa', 'AA' ];
 arr.sort();  //[ 'AA', 'Aa', 'Z', 'a', 'b' ]
 </pre>
 
 <p>Un array de elementos numéricos,  sin función de comparación:</p>
 
-<pre class="brush: js notranslate">var arr = [ 40, 1, 5, 200 ];
+<pre class="brush: js">var arr = [ 40, 1, 5, 200 ];
 arr.sort();  //[ 1, 200, 40, 5 ]
 </pre>
 
 <p>Un array de elementos numéricos, usando una función de comparación:</p>
 
-<pre class="brush: js notranslate">var arr = [ 40, 1, 5, 200 ];
+<pre class="brush: js">var arr = [ 40, 1, 5, 200 ];
 function comparar ( a, b ){ return a - b; }
 arr.sort( comparar );  // [ 1, 5, 40, 200 ]</pre>
 
 <p>Lo mismo pero usando una función anónima normal:</p>
 
-<pre class="brush: js notranslate">var arr = [ 40, 1, 5, 200 ];
+<pre class="brush: js">var arr = [ 40, 1, 5, 200 ];
 arr.sort(function(a,b){return a - b;});  // [ 1, 5, 40, 200 ]</pre>
 
 <p>Lo mismo escrito más compacto mediante una <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions">función flecha</a>:</p>
 
-<pre class="brush: js notranslate">var arr = [ 40, 1, 5, 200 ];
+<pre class="brush: js">var arr = [ 40, 1, 5, 200 ];
 arr.sort((a,b)=&gt;a-b);  // [ 1, 5, 40, 200 ]</pre>
 
 <h3 id="Creating.2C_displaying.2C_and_sorting_an_array" name="Creating.2C_displaying.2C_and_sorting_an_array"></h3>
@@ -154,7 +154,7 @@ arr.sort((a,b)=&gt;a-b);  // [ 1, 5, 40, 200 ]</pre>
 
 <p>El siguiente ejemplo abunda en la idea de ordenar con y sin función de comparación. Además, ilustra una manera de mostrar un array una vez creado. El método <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/join">join</a> es usado para convertir el array en una cadena de texto que imprimir. Al no pasarle un argumento que indique el separador, usará la coma por defecto para separar los elementos del array dentro de la cadena.</p>
 
-<pre class="brush: js notranslate">var arr = ['80', '9', '700', 40, 1, 5, 200];
+<pre class="brush: js">var arr = ['80', '9', '700', 40, 1, 5, 200];
 function comparar(a, b) {
   return a - b;
 }
@@ -174,7 +174,7 @@ ordenado con función: 1,5,9,40,80,200,700
 
 <p>Para ordenar strings con characters no ASCII, i.e. strings con caracteres con acento (e, é, è, a, ä, etc.), strings de lenguajes diferentes al inglés: use {{jsxref("String.localeCompare")}}. Esta función puede comparar esos caracteres para que aparezcan en el orden correcto.</p>
 
-<pre class="brush: js notranslate">var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
+<pre class="brush: js">var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });
@@ -186,7 +186,7 @@ items.sort(function (a, b) {
 
 <p>La <code>compareFunction</code> puede ser invocada múltiples veces por elemento dentro del array. Dependiendo de la naturaleza de <code>compareFunction</code>, este puede resultar en una alta penalización de rendimiento. Cuanto más trabajo hace una <code>compareFunction</code> y más elementos hay para ordenar, resulta más recomendable usar una función <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> para ordenar. La idea es recorrer el array una sola vez para extraer los valores usados para ordenar en un array temporal, ordenar el array temporal y luego recorrer el array para lograr el orden correcto.</p>
 
-<pre class="brush: js notranslate">// el array a ordenar
+<pre class="brush: js">// el array a ordenar
 var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
 
 // array temporal contiene objetos con posición y valor de ordenamiento

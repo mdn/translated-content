@@ -37,7 +37,7 @@ original_slug: Learn/CSS/First_steps/Comenzando_CSS
 
 <p>Nuestro punto de partida es un documento HTML. Puedes copiar el código de abajo si quieres trabajar en tu ordenador. Guarda el siguiente código como <code>index.html</code> en una carpeta de tu equipo.</p>
 
-<pre class="brush: html notranslate">&lt;!doctype html&gt;
+<pre class="brush: html">&lt;!doctype html&gt;
 &lt;html lang="es"&gt;
 &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -76,11 +76,11 @@ y también un &lt;a href="http://example.com"&gt;enlace&lt;/a&gt;.&lt;/p&gt;
 
 <p>Para vincular <code>styles.css</code> a <code>index.html</code>, añade la siguiente línea en algún lugar dentro del {{htmlelement ("head")}} del documento HTML:</p>
 
-<pre class="brush: html notranslate">&lt;link rel="stylesheet" href="styles.css"&gt;</pre>
+<pre class="brush: html">&lt;link rel="stylesheet" href="styles.css"&gt;</pre>
 
 <p>Este elemento {{htmlelement ("link")}} le dice al navegador que hay una hoja de estilo con el atributo <code>rel</code> y la ubicación de esa hoja de estilo como el valor del atributo <code>href</code>. Puedes probar si el CSS funciona añadiendo una regla a <code>styles.css</code>. Usando el editor de código, añade lo siguiente al archivo CSS:</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   color: red;
 }</pre>
 
@@ -92,13 +92,13 @@ y también un &lt;a href="http://example.com"&gt;enlace&lt;/a&gt;.&lt;/p&gt;
 
 <p>Al poner nuestro título de encabezado en rojo, ya hemos demostrado que podemos elegir un elemento HTML y darle formato. Hacemos esto con un <em>selector de elementos</em>: un selector que coincide directamente con el nombre de un elemento HTML. Para determinar todos los párrafos del documento, se usa el selector <code>p</code>. Para hacer que todos los párrafos se vean verdes se usa:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   color: green;
 }</pre>
 
 <p>Puedes determinar múltiples selectores a la vez, separándolos con una coma. Si queremos que todos los párrafos y todos los elementos de la lista sean verdes, el código se verá así:</p>
 
-<pre class="brush: css notranslate">p, li {
+<pre class="brush: css">p, li {
     color: green;
 }</pre>
 
@@ -112,7 +112,7 @@ y también un &lt;a href="http://example.com"&gt;enlace&lt;/a&gt;.&lt;/p&gt;
 
 <p>Sin embargo, a menudo querrás algo diferente a la elección que ha hecho el navegador. Esto se puede solucionar con el simple hecho de escoger el elemento HTML que deseas cambiar y utilizar una regla CSS para cambiar su apariencia.  Un buen ejemplo es <code>&lt;ul&gt;</code>, que muestra una lista desordenada. Tiene viñetas y, si decidimos que no las queremos, podemos eliminarlas de este modo:</p>
 
-<pre class="brush: css notranslate">li {
+<pre class="brush: css">li {
   list-style-type: none;
 }</pre>
 
@@ -128,7 +128,7 @@ y también un &lt;a href="http://example.com"&gt;enlace&lt;/a&gt;.&lt;/p&gt;
 
 <p>En tu documento HTML, añade al segundo elemento de la lista un <a href="/es/docs/Web/HTML/Atributos_Globales/class">atributo de clase</a>. Debería verse así:</p>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;Punto uno&lt;/li&gt;
   &lt;li <strong>class = "special"</strong>&gt;Punto dos&lt;/li&gt;
   &lt;li&gt;Punto &lt;em&gt;tres&lt;/em&gt;&lt;/li&gt;
@@ -136,7 +136,7 @@ y también un &lt;a href="http://example.com"&gt;enlace&lt;/a&gt;.&lt;/p&gt;
 
 <p>En tu CSS, puedes seleccionar una clase <code>special</code> creando un selector que comience con un carácter de punto final. Añade lo siguiente a tu archivo CSS:</p>
 
-<pre class="brush: css notranslate">.special {
+<pre class="brush: css">.special {
   color: orange;
   font-weight: bold;
 }</pre>
@@ -147,14 +147,14 @@ y también un &lt;a href="http://example.com"&gt;enlace&lt;/a&gt;.&lt;/p&gt;
 
 <p>A veces verás reglas con un selector que enumera el selector de elementos HTML junto con la clase:</p>
 
-<pre class="brush: css notranslate">li.special {
+<pre class="brush: css">li.special {
   color: orange;
   font-weight: bold;
 }</pre>
 
 <p>Esta sintaxis significa «determina cualquier elemento <code>li</code> que tenga una clase special». Si hicieras esto, ya no podrías aplicar la clase a un elemento <code>&lt;span&gt;</code> u otro elemento simplemente añadiéndole la clase; tendrías que añadir ese elemento a la lista de selectores:</p>
 
-<pre class="brush: css notranslate">li.special,
+<pre class="brush: css">li.special,
 span.special {
   color: orange;
   font-weight: bold;
@@ -168,7 +168,7 @@ span.special {
 
 <p>Añade la siguiente regla a la hoja de estilo.</p>
 
-<pre class="brush: css notranslate">li em {
+<pre class="brush: css">li em {
   color: rebeccapurple;
 }</pre>
 
@@ -178,7 +178,7 @@ span.special {
 
 <p>Intenta añadir también esta regla a la hoja de estilo:</p>
 
-<pre class="brush: css notranslate">h1 + p {
+<pre class="brush: css">h1 + p {
   font-size: 200%;
 }</pre>
 
@@ -194,7 +194,7 @@ span.special {
 
 <p>El último tipo de estilo que veremos en este tutorial es la capacidad de dar formato a los elementos en función de su estado. Un ejemplo sencillo es el estilo de los enlaces. Cuando damos formato a un enlace, necesitamos seleccionar el elemento <code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> (anclaje). Tiene diferentes estados dependiendo de si se ha visitado o no, se pasa por encima, o se presiona con el teclado o se hace clic (se activa). Puedes usar CSS para dar formato a estos diferentes estados. El CSS que encontrarás a continuación presenta en color rosa los enlaces que no se han visitado y en verde los que sí.</p>
 
-<pre class="brush: css notranslate">a:link {
+<pre class="brush: css">a:link {
   color: pink;
 }
 
@@ -204,7 +204,7 @@ a:visited {
 
 <p>Puedes cambiar la apariencia del enlace, por ejemplo, eliminando el subrayado, lo que se logra mediante la siguiente regla:</p>
 
-<pre class="brush: css notranslate">a:hover {
+<pre class="brush: css">a:hover {
   text-decoration: none;
 }</pre>
 
@@ -226,7 +226,7 @@ a:visited {
 
 <p>Vale la pena señalar que puedes hacer múltiples combinaciones de selectores y combinadores. Por ejemplo:</p>
 
-<pre class="brush: css notranslate">/* selecciona cualquier elemento &lt;span&gt; que se encuentre dentro de un &lt;p&gt;, que esté dentro de un &lt;artículo&gt; */
+<pre class="brush: css">/* selecciona cualquier elemento &lt;span&gt; que se encuentre dentro de un &lt;p&gt;, que esté dentro de un &lt;artículo&gt; */
 artículo p span { ... }
 
 /* selecciona cualquier &lt;p&gt; que se encuentre directamente después de &lt;ul&gt;, que va directamente después de &lt;h1&gt; */
@@ -234,7 +234,7 @@ h1 + ul + p { ... }</pre>
 
 <p>También puedes combinar varios tipos juntos. Intenta añadir lo siguiente al código:</p>
 
-<pre class="brush: css notranslate">body h1 + p .special {
+<pre class="brush: css">body h1 + p .special {
   color: yellow;
   background-color: black;
   padding: 5px;

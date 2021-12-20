@@ -34,11 +34,11 @@ original_slug: Learn/HTML/Introduccion_a_HTML/iniciar
 
 <p>{{Glossary("HTML")}} ("<em>Hypertext Markup Language</em>") no es un lenguaje de programación. Es un <em>lenguaje de marcado</em> que le dice a los navegadores web cómo estructurar las páginas web que estás visitando. Puede ser tan complejo o tan simple como desee el desarrollador web. El HTML consiste en una serie de {{Glossary("Element", "elementos")}}, que puedes utilizar para encerrar, delimitar o <em>marcar</em> diferentes partes del contenido para hacer que aparezcan de una cierta manera, o actúen de determinada forma. Las {{Glossary("Tag", "etiquetas")}} que delimitan un fragmento de contenido pueden hacer que dicho contenido enlace con otra página, ponga una palabra en cursiva, etcétera. Por ejemplo, dada la siguiente línea de contenido:</p>
 
-<pre class="brush: bash notranslate">Mi gato es muy gruñón</pre>
+<pre class="brush: bash">Mi gato es muy gruñón</pre>
 
 <p>Si queremos que la línea sea independiente de otras, podemos especificar que es un párrafo encerrándola con una etiqueta de elemento de párrafo ({{htmlelement("p")}}):</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Mi gato es muy gruñón&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Mi gato es muy gruñón&lt;/p&gt;</pre>
 
 <div class="note">
 <p><strong>Nota</strong>: Las etiquetas en HTML no distinguen entre mayúsculas y minúsculas. Así que se pueden escribir tanto en mayúsculas como en minúsculas. Por ejemplo, una etiqueta {{htmlelement("title")}} se puede escribir como <code>&lt;title&gt;</code>, <code>&lt;TITLE&gt;</code>, <code>&lt;Title&gt;</code>, <code>&lt;TiTle&gt;</code>, etc., y funcionará correctamente. La mejor práctica, sin embargo, es escribir todas las etiquetas en minúsculas para mantener la coherencia y legibilidad, entre otros motivos.</p>
@@ -69,7 +69,7 @@ original_slug: Learn/HTML/Introduccion_a_HTML/iniciar
 <div class="hidden">
 <h6 id="Código_reproducible">Código reproducible</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
 
@@ -86,7 +86,7 @@ original_slug: Learn/HTML/Introduccion_a_HTML/iniciar
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -107,7 +107,7 @@ body {
 }
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -192,13 +192,13 @@ textarea.onkeyup = function(){
 
 <p>Se pueden poner elementos dentro de otros elementos. Esto se llama <strong>anidamiento</strong>. Si quisiéramos decir que nuestro gato es <strong>muy</strong> gruñón, podríamos encerrar la palabra <em>muy</em> en un elemento {{htmlelement("strong")}} para que aparezca destacada.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Mi gato es &lt;strong&gt;muy&lt;/strong&gt; gruñón.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Mi gato es &lt;strong&gt;muy&lt;/strong&gt; gruñón.&lt;/p&gt;</pre>
 
 <p>Hay una forma correcta e incorrecta de anidar. En el ejemplo anterior, primero abrimos el elemento <code>p</code>, luego abrimos el elemento <code>strong</code>. Para un anidamiento adecuado, primero debemos cerrar el elemento <code>strong</code>, antes de cerrar el <code>p</code>.</p>
 
 <p>El siguiente es un ejemplo de la forma <em>incorrecta</em> de anidar:</p>
 
-<pre class="example-bad brush: html notranslate">&lt;p&gt;Mi gato es &lt;strong&gt;muy gruñón.&lt;/p&gt;&lt;/strong&gt;</pre>
+<pre class="example-bad brush: html">&lt;p&gt;Mi gato es &lt;strong&gt;muy gruñón.&lt;/p&gt;&lt;/strong&gt;</pre>
 
 <p>Los elementos tienen que abrirse y cerrarse correctamente para que estén claramente dentro o fuera el uno del otro. Con el tipo de superposición en el ejemplo anterior, el navegador tiene que adivinar tu intención. Este tipo de adivinanzas puede producir resultados inesperados.</p>
 
@@ -213,7 +213,7 @@ textarea.onkeyup = function(){
 
 <p>Considera el siguiente ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;em&gt;primero&lt;/em&gt;&lt;em&gt;segundo&lt;/em&gt;&lt;em&gt;tercero&lt;/em&gt;
+<pre class="brush: html">&lt;em&gt;primero&lt;/em&gt;&lt;em&gt;segundo&lt;/em&gt;&lt;em&gt;tercero&lt;/em&gt;
 
 &lt;p&gt;cuarto&lt;/p&gt;&lt;p&gt;quinto&lt;/p&gt;&lt;p&gt;sexto&lt;/p&gt;
 </pre>
@@ -238,7 +238,7 @@ textarea.onkeyup = function(){
 
 <p>No todos los elementos siguen el patrón de etiqueta de apertura, contenido y etiqueta de cierre. Algunos elementos consisten solo en una etiqueta única, que se utiliza generalmente para insertar/incrustar algo en el documento en el lugar donde se le quiere incluir. Por ejemplo, el elemento {{htmlelement("img")}} inserta una imagen en la página:</p>
 
-<pre class="brush: html notranslate">&lt;img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"&gt;</pre>
+<pre class="brush: html">&lt;img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"&gt;</pre>
 
 <p>Este texto mostrará lo siguiente en tu página:</p>
 
@@ -289,7 +289,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Código_reproducible_2">Código reproducible 2</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -306,7 +306,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Mostrar solución"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -326,7 +326,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -411,11 +411,11 @@ textarea.onkeyup = function(){
 
 <p>En ocasiones puedes ver atributos escritos sin valor. Esto está permitido. Estos se denominan atributos booleanos. Los atributos booleanos solo pueden tener un valor, que generalmente es el mismo que el nombre del atributo. Por ejemplo, considera el atributo {{htmlattrxref("disabled", "input")}}, que puedes asignar a los elementos de entrada del formulario. (Usa esto para <em>deshabilitar</em> los elementos de entrada del formulario para que el usuario no pueda realizar entradas. Los elementos desactivados suelen tener una apariencia atenuada). Por ejemplo:</p>
 
-<pre class="brush: bash notranslate">&lt;input type="text" disabled="disabled"&gt;</pre>
+<pre class="brush: bash">&lt;input type="text" disabled="disabled"&gt;</pre>
 
 <p>De manera abreviada, también es posible escribirlo como se describe a continuación (además, se ha incluido un elemento de entrada de formulario no desactivado como referencia, para dar una idea más precisa de lo que sucede):</p>
 
-<pre class="brush: html notranslate">&lt;!-- el uso del atributo deshabilitado evita que el usuario final introduzca texto en el cuadro de entrada --&gt;
+<pre class="brush: html">&lt;!-- el uso del atributo deshabilitado evita que el usuario final introduzca texto en el cuadro de entrada --&gt;
 &lt;input type="text" disabled&gt;
 
 &lt;!-- se permite la entrada de texto, ya que no contiene el atributo deshabilitado --&gt;
@@ -430,11 +430,11 @@ textarea.onkeyup = function(){
 
 <p>Cuando observas diferentes páginas web, puedes encontrarte con todo tipo de estilos de etiquetado extraños, que incluyen valores de atributos sin comillas. Esto se permite en ciertas circunstancias, pero interrumpirá la edición en otras. Por ejemplo, si volvemos a revisar el ejemplo del enlace, sería posible escribir una versión básica con solo el atributo <code>href</code>, así:</p>
 
-<pre class="brush: html notranslate">&lt;a href=https://www.mozilla.org/&gt;mi sitio web favorito&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a href=https://www.mozilla.org/&gt;mi sitio web favorito&lt;/a&gt;</pre>
 
 <p>Sin embargo, las cosas no funcionarán cuando a este estilo se añada el atributo <code>title</code>:</p>
 
-<pre class="example-bad brush: html notranslate">&lt;a href=https://www.mozilla.org/ title=The Mozilla homepage&gt;mi sitio web favorito&lt;/a&gt;</pre>
+<pre class="example-bad brush: html">&lt;a href=https://www.mozilla.org/ title=The Mozilla homepage&gt;mi sitio web favorito&lt;/a&gt;</pre>
 
 <p>En este punto el navegador interpretará mal el cambio y pensará que el atributo <code>title</code> corresponde a tres atributos: un atributo <code>title</code> con el valor <em>The</em> y dos atributos booleanos: <code>Mozilla</code> y <code>homepage</code>. ¡Obviamente, esta no es la intensión! Causará errores o comportamientos inesperados, como puedes ver en el ejemplo en vivo a continuación. ¡Intenta colocar el cursor sobre el enlace para ver el texto del título!</p>
 
@@ -446,31 +446,31 @@ textarea.onkeyup = function(){
 
 <p>En este artículo todos los atributos se han incluido en comillas dobles. Sin embargo, se pueden ver comillas simples en algún código HTML. Es una cuestión de estilo. Puedes elegir libremente cuál prefieres. Ambas líneas de código son equivalentes:</p>
 
-<pre class="brush: html notranslate">&lt;a href="http://www.ejemplo.com"&gt;Un enlace a mi ejemplo.&lt;/a&gt;
+<pre class="brush: html">&lt;a href="http://www.ejemplo.com"&gt;Un enlace a mi ejemplo.&lt;/a&gt;
 
 &lt;a href='http://www.ejemplo.com'&gt;Un enlace a mi ejemplo.&lt;/a&gt;</pre>
 
 <p>Asegúrate de no mezclar ambos tipos de comillas. El siguiente ejemplo muestra un tipo de mezcla de comillas que saldrá mal:</p>
 
-<pre class="example-bad brush: html notranslate">&lt;a href="http://www.ejemplo.com'&gt;Un enlace a mi ejemplo.&lt;/a&gt;</pre>
+<pre class="example-bad brush: html">&lt;a href="http://www.ejemplo.com'&gt;Un enlace a mi ejemplo.&lt;/a&gt;</pre>
 
 <p>Si utilizas un tipo de comillas en tu documento HTML, puedes incluir el otro tipo de comillas para tus valores de atributo sin que esto te cause problemas:</p>
 
-<pre class="brush: html notranslate">&lt;a href="http://www.ejemplo.com" title="¿A que es 'divertido'"&gt;Un enlace a mi ejemplo.&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a href="http://www.ejemplo.com" title="¿A que es 'divertido'"&gt;Un enlace a mi ejemplo.&lt;/a&gt;</pre>
 
 <p>Sin embargo, si deseas anidar unas comillas dentro de otras del mismo tipo (ya sea simples o dobles), tendrás que utilizar entidades HTML para las comillas. Por ejemplo, el siguiente código no va a funcionar:</p>
 
-<pre class="example-bad brush: html notranslate">&lt;a href='http://www.ejemplo.com' title='¿A que es 'divertido'?'&gt;Un enlace a mi ejemplo.&lt;/a&gt;</pre>
+<pre class="example-bad brush: html">&lt;a href='http://www.ejemplo.com' title='¿A que es 'divertido'?'&gt;Un enlace a mi ejemplo.&lt;/a&gt;</pre>
 
 <p>Así que tendrás que hacer esto:</p>
 
-<pre class="brush: html notranslate">&lt;a href='http://www.ejemplo.com' title='¿A que es &amp;apos;divertido&amp;apos;?'&gt;Un enlace a mi ejemplo.&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a href='http://www.ejemplo.com' title='¿A que es &amp;apos;divertido&amp;apos;?'&gt;Un enlace a mi ejemplo.&lt;/a&gt;</pre>
 
 <h2 id="Anatomía_de_un_documento_HTML">Anatomía de un documento HTML</h2>
 
 <p>Los elementos HTML no son muy útiles por sí mismos. Ahora veremos cómo combinar los elementos individuales para formar una página HTML completa:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -486,7 +486,7 @@ textarea.onkeyup = function(){
 <ol>
  <li><code>&lt;!DOCTYPE html&gt;</code>: El elemento <em>doctype</em>. En sus inicios, cuando el HTML llevaba poco tiempo (alrededor de 1991-1992), los <em>doctypes</em> servían como enlaces al conjunto de reglas que la página HTML debía seguir para que fuera considerado buen HTML. Un elemento <em>doctype</em> de aquella época podía parecerse a esto:
 
-  <pre class="brush: bash notranslate">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  <pre class="brush: bash">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</pre>
   En la actualidad se ignora y se considera un legado histórico que hay que incluir para que todo funcione correctamente. <code>&lt;!DOCTYPE html&gt;</code> es la secuencia de caracteres más corta que se acepta como elemento <em>doctype</em> válido. Eso es lo único que realmente necesitas saber.</li>
  <li><code>&lt;html&gt;&lt;/html&gt;</code>: El elemento <code>&lt;html&gt;</code>. Este elemento envuelve todo el contenido de la página. A veces se lo conoce como el elemento raíz.</li>
@@ -528,7 +528,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Código_reproducible_3">Código reproducible 3</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -545,7 +545,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Mostrar solución"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -573,7 +573,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -658,7 +658,7 @@ textarea.onkeyup = function(){
 
 <p>En los ejemplos anteriores se han incluido espacios en blanco y saltos de línea en el código. Esto realmente no es necesario. Los dos siguientes fragmentos de código son equivalentes:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Los perros son tontos.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Los perros son tontos.&lt;/p&gt;
 
 &lt;p&gt;Los    perros        son
          tontos.&lt;/p&gt;</pre>
@@ -708,7 +708,7 @@ textarea.onkeyup = function(){
  <br>
  Considera los dos siguientes párrafos:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;En HTML, defines un párrafo con el elemento &lt;p&gt;.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;En HTML, defines un párrafo con el elemento &lt;p&gt;.&lt;/p&gt;
 
 &lt;p&gt;En HTML, defines un párrafo con el elemento &amp;lt;p&amp;gt;.&lt;/p&gt;</pre>
 
@@ -726,7 +726,7 @@ textarea.onkeyup = function(){
 
 <p>Para convertir en un comentario una sección de contenido de tu archivo HTML, debes delimitarlo con los marcadores especiales <code>&lt;!--</code> y <code>--&gt;</code>. Por ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;No soy un comentario&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;No soy un comentario&lt;/p&gt;
 
 &lt;!-- &lt;p&gt;¡Yo sí!&lt;/p&gt; --&gt;</pre>
 

@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/toString
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><code><var>e</var>.toString()</code></pre>
+<pre class="syntaxbox"><code><var>e</var>.toString()</code></pre>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
@@ -24,7 +24,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/toString
 
 <p>El objeto {{JSxRef("Error")}} redefine el método {{JSxRef("Object.prototype.toString()")}} heredado por todos los objetos. Su semántica es la siguiente (asumiendo que {{JSxRef("Object")}} y {{JSxRef("String")}} tienen sus valores originales):</p>
 
-<pre class="brush: js notranslate">Error.prototype.toString = function() {
+<pre class="brush: js">Error.prototype.toString = function() {
   'use strict';
 
   var obj = Object(this);
@@ -53,7 +53,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/toString
 
 <h3 id="Usar_toString">Usar <code>toString()</code></h3>
 
-<pre class="brush: js notranslate">var e = new Error('fatal error');
+<pre class="brush: js">var e = new Error('fatal error');
 console.log(e.toString()); // 'Error: error fatal'
 
 e.name = undefined;

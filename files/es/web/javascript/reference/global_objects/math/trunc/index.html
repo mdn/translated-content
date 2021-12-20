@@ -16,7 +16,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/trunc
 
 <h2 id="Sintaxis.">Sintaxis.</h2>
 
-<pre class="syntaxbox notranslate"><code>Math.trunc(<var>x</var>)</code></pre>
+<pre class="syntaxbox"><code>Math.trunc(<var>x</var>)</code></pre>
 
 <h3 id="Parámetros.">Parámetros.</h3>
 
@@ -43,7 +43,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/trunc
 
 <h3 id="Usando_Math.trunc">Usando <code>Math.trunc()</code></h3>
 
-<pre class="brush: js notranslate">Math.trunc(13.37);    // 13
+<pre class="brush: js">Math.trunc(13.37);    // 13
 Math.trunc(42.84);    // 42
 Math.trunc(0.123);    //  0
 Math.trunc(-0.123);   // -0
@@ -55,7 +55,7 @@ Math.trunc();         // NaN
 
 <h2 id="Polyfill.">Polyfill.</h2>
 
-<pre class="brush: js notranslate">Math.trunc = Math.trunc || function (x) {
+<pre class="brush: js">Math.trunc = Math.trunc || function (x) {
     return (x &lt; 0 ? Math.ceil(x) : Math.floor(x));
 }
 </pre>

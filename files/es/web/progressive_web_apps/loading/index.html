@@ -31,12 +31,12 @@ translation_of: Web/Progressive_web_apps/Loading
 
 <p>Para solucionarlo, podemos, por ejemplo, agregar <code>defer</code> a los archivos JavaScript:</p>
 
-<pre class="brush: html notranslate">&lt;script src="app.js" defer&gt;&lt;/script&gt;
+<pre class="brush: html">&lt;script src="app.js" defer&gt;&lt;/script&gt;
 </pre>
 
 <p>Se descargarán y ejecutarán <em>después</em> que el documento en sí haya sido procesado, por lo que no bloqueará la representación de la estructura HTML. También podemos dividir archivos css y agregarles tipos de medios:</p>
 
-<pre class="brush: html notranslate">&lt;link rel="stylesheet" href="style.css"&gt;
+<pre class="brush: html">&lt;link rel="stylesheet" href="style.css"&gt;
 &lt;link rel="stylesheet" href="print.css" media="print"&gt;
 </pre>
 
@@ -54,7 +54,7 @@ translation_of: Web/Progressive_web_apps/Loading
 
 <p>En lugar de tener todas las capturas de pantalla de los juegos referenciados en los atributos del elemento <code>&lt;img&gt;</code> <code>src</code>, que obligarán al navegador a descargarlos automáticamente, podemos hacerlo de forma selectiva a través de JavaScript. En su lugar, la aplicación js13kPWA usa una imagen de marcador de posición, que es pequeña y liviana, mientras que las rutas finales a las imágenes de destino se almacenan en los atributos <code>data-src</code>:</p>
 
-<pre class="brush: html notranslate">&lt;img src='data/img/placeholder.png' data-src='data/img/SLUG.jpg' alt='NAME'&gt;
+<pre class="brush: html">&lt;img src='data/img/placeholder.png' data-src='data/img/SLUG.jpg' alt='NAME'&gt;
 </pre>
 
 <p>Esas imágenes se cargarán mediante JavaScript <em>después</em> que el sitio termine de construir la estructura HTML. La imagen del marcador de posición se escala de la misma manera que las imágenes originales, por lo que ocupará el mismo espacio y no hará que el diseño se vuelva a pintar a medida que se cargan las imágenes.</p>
@@ -63,7 +63,7 @@ translation_of: Web/Progressive_web_apps/Loading
 
 <p>El archivo <code>app.js</code> procesa los atributos <code>data-src</code> así:</p>
 
-<pre class="brush: js notranslate">let imagesToLoad = document.querySelectorAll('img[data-src]');
+<pre class="brush: js">let imagesToLoad = document.querySelectorAll('img[data-src]');
 const loadImages = (image) =&gt; {
   image.setAttribute('src', image.getAttribute('data-src'));
   image.onload = () =&gt; {
@@ -73,7 +73,7 @@ const loadImages = (image) =&gt; {
 
 <p>La variable <code>imagesToLoad</code> contiene referencias a todas las imágenes, mientras que la función <code>loadImages</code> mueve la ruta de <code>data-src</code> a <code>src</code>. Cuando cada imagen está realmente cargada, eliminamos su atributo <code>data-src</code> porque ya no es necesario. Luego recorremos cada imagen y la cargamos:</p>
 
-<pre class="brush: js notranslate">imagesToLoad.forEach((img) =&gt; {
+<pre class="brush: js">imagesToLoad.forEach((img) =&gt; {
   loadImages(img);
 });</pre>
 
@@ -85,7 +85,7 @@ const loadImages = (image) =&gt; {
 
 <p>Renderizamos las imágenes con un desenfoque al principio, por lo que se puede lograr una transición hacia la nitidez:</p>
 
-<pre class="brush: css notranslate">article img[data-src] {
+<pre class="brush: css">article img[data-src] {
   filter: blur(0.2em);
 }
 
@@ -108,7 +108,7 @@ article img {
 
 <p>Así es como se ve el código relevante:</p>
 
-<pre class="brush: js notranslate">if('IntersectionObserver' in window) {
+<pre class="brush: js">if('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((items, observer) =&gt; {
     items.forEach((item) =&gt; {
       if(item.isIntersecting) {

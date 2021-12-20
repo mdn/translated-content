@@ -18,7 +18,7 @@ original_slug: Web/JavaScript/Referencia/Funciones/parametros_rest
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="brush: js notranslate">function(a, b, ...theArgs) {
+<pre class="brush: js">function(a, b, ...theArgs) {
   // ...
 }
 </pre>
@@ -29,7 +29,7 @@ original_slug: Web/JavaScript/Referencia/Funciones/parametros_rest
 
 <p class="brush: js">Sólo el último parámetro puede ser un "parámetro rest".</p>
 
-<pre class="brush: js notranslate">function myFun(a, b, ...manyMoreArgs) {
+<pre class="brush: js">function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a);
   console.log("b", b);
   console.log("manyMoreArgs", manyMoreArgs);
@@ -57,7 +57,7 @@ myFun("one", "two", "three", "four", "five", "six");
 
 <p>Los parámetros rest han sido agregados para reducir el código repetitivo que se usaba en los parámetros.</p>
 
-<pre class="brush: js notranslate">// Antes de los parámetros rest, "arguments" se podía convertir en un array usando:
+<pre class="brush: js">// Antes de los parámetros rest, "arguments" se podía convertir en un array usando:
 
 function f(a, b) {
 
@@ -98,7 +98,7 @@ f(1, 2, 3, 4) // 6 (el cuarto parámetro no está desestructurado)</code></pre>
 
 <p>De todas formas, el tercer argumento, <code>manyMoreArgs</code>, será un array que contendrá tantos argumentos como el usuario incluya (3er, 4to, 5to ...).</p>
 
-<pre class="brush: js notranslate">function myFun(a, b, ...manyMoreArgs) {
+<pre class="brush: js">function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a)
   console.log("b", b)
   console.log("manyMoreArgs", manyMoreArgs)
@@ -112,7 +112,7 @@ myFun("one", "two", "three", "four", "five", "six")
 
 <p>Debajo... incluso si hay solo un valor, el ultimo argumento seguirá siendo colocado dentro de un array.</p>
 
-<pre class="brush: js notranslate">// usando la misma definición de función del ejemplo anterior
+<pre class="brush: js">// usando la misma definición de función del ejemplo anterior
 myFun("one", "two", "three")
 
 // a, one
@@ -121,7 +121,7 @@ myFun("one", "two", "three")
 
 <p>Debajo, el tercer argumento no esta provisto, pero <code>manyMoreArgs</code> continúa siendo un array (aunque uno vacío).</p>
 
-<pre class="brush: js notranslate">//usando la misma definición de función del ejemplo anterior
+<pre class="brush: js">//usando la misma definición de función del ejemplo anterior
 
 myFun("one", "two")
 
@@ -133,7 +133,7 @@ myFun("one", "two")
 
 <p>Puesto que <code>theArgs</code> es un array, su tamaño (un conteo de sus elementos) es dado por la propiedad <code>length</code> :</p>
 
-<pre class="brush: js notranslate">function fun1(...theArgs) {
+<pre class="brush: js">function fun1(...theArgs) {
   console.log(theArgs.length);
 }
 
@@ -146,7 +146,7 @@ fun1(5, 6, 7); // 3
 
 <p>En el siguiente ejemplo, se usa un parámetro rest para agrupar  dentro de un array a todos los argumentos despues del primero.  Luego cada uno es multiplicado por el primero y el arreglo es retornado:</p>
 
-<pre class="brush: js notranslate">function multiply(multiplier, ...theArgs) {
+<pre class="brush: js">function multiply(multiplier, ...theArgs) {
   return theArgs.map(function (element) {
     return multiplier * element;
   });
@@ -158,7 +158,7 @@ console.log(arr); // [2, 4, 6]
 
 <p>El siguiente ejemplo muestra que se puede usar los métodos de <code>Array</code> en los parámetros rest , pero no en el objeto <code>arguments</code>:</p>
 
-<pre class="brush: js notranslate">function sortRestArgs(...theArgs) {
+<pre class="brush: js">function sortRestArgs(...theArgs) {
   var sortedArgs = theArgs.sort();
   return sortedArgs;
 }

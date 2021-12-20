@@ -138,7 +138,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/TypedArray
 
 <p>No se puede crear una instancia de este objeto directamente. En su lugar, crea una instancia de un arreglo de un tipo particular, tal como {{jsxref("Int8Array")}} o {{jsxref("BigInt64Array")}}. Todos estos objetos tienen una sintaxis común para sus constructores:</p>
 
-<pre class="syntaxbox notranslate">new <var>TypedArray</var>();
+<pre class="syntaxbox">new <var>TypedArray</var>();
 new <var>TypedArray</var>(<var>length</var>);
 new <var>TypedArray</var>(<var>typedArray</var>);
 new <var>TypedArray</var>(<var>object</var>);
@@ -258,17 +258,17 @@ new <var>TypedArray</var>(<var>buffer</var> [, <var>byteOffset</var> [, <var>len
 
 <p>A partir de ECMAScript 2015, los constructores <code>TypedArray</code> se deben construir con el operador {{jsxref("Operators/new", "new")}}. Llamar a un constructor <code>TypedArray</code> como una función sin <code>new</code> arrojará un {{jsxref("TypeError")}}.</p>
 
-<pre class="brush: js example-bad notranslate">var dv = Int8Array([1, 2, 3]);
+<pre class="brush: js example-bad">var dv = Int8Array([1, 2, 3]);
 // TypeError: llamar a un constructor Int8Array incorporado
 // sin new está prohibido</pre>
 
-<pre class="brush: js example-good notranslate">var dv = new Int8Array([1, 2, 3]);</pre>
+<pre class="brush: js example-good">var dv = new Int8Array([1, 2, 3]);</pre>
 
 <h3 id="Acceso_a_la_propiedad">Acceso a la propiedad</h3>
 
 <p>Puedes hacer referencia a elementos en el arreglo utilizando la sintaxis de índice de arreglo estándar (es decir, utilizando la notación entre corchetes). Sin embargo, obtener o establecer propiedades indexadas en arreglos tipados no buscará esta propiedad en la cadena de prototipos, incluso cuando los índices estén fuera de límites. Las propiedades indexadas consultarán el {{jsxref("ArrayBuffer")}} y nunca mirarán las propiedades del objeto. Aún puedes usar propiedades con nombre, al igual que con todos los objetos.</p>
 
-<pre class="brush: js notranslate">// Configuración y obtención usando la sintaxis de arreglo estándar
+<pre class="brush: js">// Configuración y obtención usando la sintaxis de arreglo estándar
 var int16 = new Int16Array(2);
 int16[0] = 42;
 [parcial]console.log(0);

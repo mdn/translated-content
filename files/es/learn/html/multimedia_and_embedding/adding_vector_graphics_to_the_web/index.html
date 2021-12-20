@@ -69,7 +69,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_th
 
 <p>Como ejemplo simple, el siguiente código crea un círculo y un rectángulo:</p>
 
-<pre class="brush: html notranslate">&lt;svg version="1.1"
+<pre class="brush: html">&lt;svg version="1.1"
      baseProfile="full"
      width="300" height="200"
      xmlns="http://www.w3.org/2000/svg"&gt;
@@ -112,7 +112,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_th
 
 <p>Para incrustar un SVG a través de un elemento {{htmlelement ("img")}}, solo necesita hacer referencia a él en el atributo src como es de esperar. Necesitará un atributo de altura o ancho (o ambos si su SVG no tiene una relación de aspecto inherente). Si aún no lo ha hecho, lea <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Imágenes en HTML</a>.</p>
 
-<pre class="brush: html notranslate">&lt;img
+<pre class="brush: html">&lt;img
     src="equilateral.svg"
     alt="triangle with all three sides equal"
     height="87"
@@ -140,11 +140,11 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_th
 
 <p>Para los navegadores que no admiten SVG (IE 8 y versiones anteriores, Android 2.3 y versiones anteriores), puede hacer referencia a un PNG o JPG de su atributo src y usar un atributo {{htmlattrxref ("srcset", "img")}} ( que solo los navegadores recientes reconocen) para hacer referencia al SVG. Siendo este el caso, solo los navegadores compatibles cargarán el SVG; los navegadores más antiguos cargarán el PNG en su lugar:</p>
 
-<pre class="brush: html notranslate">&lt;img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg"&gt;</pre>
+<pre class="brush: html">&lt;img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg"&gt;</pre>
 
 <p>También puede usar SVG como imágenes de fondo CSS, como se muestra a continuación. En el siguiente código, los navegadores más antiguos se quedarán con el PNG que entienden, mientras que los navegadores más nuevos cargarán el SVG:</p>
 
-<pre class="brush: css notranslate"><code>background: url("fallback.png") no-repeat center;</code>
+<pre class="brush: css"><code>background: url("fallback.png") no-repeat center;</code>
 <code>background-image: url("image.svg");
 background-size: contain;</code></pre>
 
@@ -156,7 +156,7 @@ background-size: contain;</code></pre>
 
 <p>También puede abrir el archivo SVG en un editor de texto, copiar el código SVG y pegarlo en su documento HTML; esto a veces se denomina poner su SVG en línea o SVG en línea. Asegúrese de que su fragmento de código SVG comience y termine con las etiquetas &lt;svg&gt; &lt;/svg&gt; (no incluya nada fuera de ellas). Aquí tiene un ejemplo muy simple de lo que puede pegar en su documento:</p>
 
-<pre class="brush: html notranslate">&lt;svg width="300" height="200"&gt;
+<pre class="brush: html">&lt;svg width="300" height="200"&gt;
     &lt;rect width="100%" height="100%" fill="green" /&gt;
 &lt;/svg&gt;
 </pre>
@@ -188,7 +188,7 @@ background-size: contain;</code></pre>
 
 <p>Aquí hay una revisión rápida:</p>
 
-<pre class="brush: html notranslate">&lt;iframe src="triangle.svg" width="500" height="500" sandbox&gt;
+<pre class="brush: html">&lt;iframe src="triangle.svg" width="500" height="500" sandbox&gt;
     &lt;img src="triangle.png" alt="Triangle with three unequal sides" /&gt;
 &lt;/iframe&gt;</pre>
 
@@ -210,7 +210,7 @@ background-size: contain;</code></pre>
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -235,7 +235,7 @@ background-size: contain;</code></pre>
   &lt;input id="solution" type="button" value="Show solution" disabled&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -255,7 +255,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+<pre class="brush: js">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');

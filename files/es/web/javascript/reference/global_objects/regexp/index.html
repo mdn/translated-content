@@ -29,7 +29,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp
 
 <p>Las siguientes tres expresiones crean el mismo objeto de expresión regular:</p>
 
-<pre class="brush: js notranslate">let er = /ab+c/i; // notación literal
+<pre class="brush: js">let er = /ab+c/i; // notación literal
 let er = new RegExp('ab+c', 'i') // constructor con patrón de cadena como primer argumento
 let er = new RegExp(/ab+c/, 'i') // constructor con expresión regular literal como primer argumento (a partir de ECMAScript 6)
 </pre>
@@ -46,7 +46,7 @@ let er = new RegExp(/ab+c/, 'i') // constructor con expresión regular literal c
 
 <p>Por ejemplo, los siguientes son equivalentes:</p>
 
-<pre class="brush: js notranslate">let er = /\w+/
+<pre class="brush: js">let er = /\w+/
 let er = new RegExp('\\w+')
 </pre>
 
@@ -122,7 +122,7 @@ let er = new RegExp('\\w+')
 
 <p>En el texto de reemplazo, el script usa <code>$1</code> y <code>$2</code> para indicar los resultados de los correspondientes paréntesis coincidentes en el patrón de expresión regular.</p>
 
-<pre class="brush: js notranslate">let er = /(\w+)\s(\w+)/
+<pre class="brush: js">let er = /(\w+)\s(\w+)/
 let str = 'John Smith'
 let newstr = str.replace(er, '$2, $1')
 console.log(newstr)
@@ -134,7 +134,7 @@ console.log(newstr)
 
 <p>El final de línea predeterminado varía según la plataforma (Unix, Windows, etc.). La división de líneas proporcionada en este ejemplo funciona en todas las plataformas.</p>
 
-<pre class="brush: js notranslate">let texto = 'Un poco de texto\ny un poco más\r\ny aún\reste es el final'
+<pre class="brush: js">let texto = 'Un poco de texto\ny un poco más\r\ny aún\reste es el final'
 let lineas = texto.split(/\r\n|\r|\n/)
 console.log(lineas) // logs [ 'Un poco de texto', 'y un poco más', 'y aún', 'este es el final' ]
 </pre>
@@ -143,7 +143,7 @@ console.log(lineas) // logs [ 'Un poco de texto', 'y un poco más', 'y aún', 'e
 
 <h3 id="Usar_expresiones_regulares_en_varias_líneas">Usar expresiones regulares en varias líneas</h3>
 
-<pre class="brush: js notranslate">let s = '¡Por favor, sí\nhazme el día!'
+<pre class="brush: js">let s = '¡Por favor, sí\nhazme el día!'
 
 s.match(/sí.*día/);
 // Devuelve null
@@ -156,7 +156,7 @@ s.match(/sí[^]*día/);
 
 <p>La bandera {{JSxRef("Objetos_globales/RegExp/sticky", "sticky")}} indica que la expresión regular realiza una coincidencia permanente en la cadena de destino al intentar hacer coincidir a partir de {{JSxRef("RegExp.prototype.lastIndex")}}.</p>
 
-<pre class="brush: js notranslate">let str = '#foo#'
+<pre class="brush: js">let str = '#foo#'
 let regex = /foo/y
 
 regex.lastIndex = 1
@@ -169,7 +169,7 @@ regex.lastIndex      // 0 (restablecer después de un error de coincidencia)</pr
 
 <p>Con la bandera pegajosa <code>y</code>, la siguiente coincidencia tiene que ocurrir en la posición <code>lastIndex</code>, mientras que con la bandera global <code>g</code>, la coincidencia puede ocurrir en la posición <code>lastIndex</code> o posterior:</p>
 
-<pre class="brush: js notranslate">er = /\d/y;
+<pre class="brush: js">er = /\d/y;
 while (r = re.exec("123 456")) console.log(r, "Y er.lastIndex", er.lastIndex);
 
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND er.lastIndex 1
@@ -187,7 +187,7 @@ while (r = re.exec("123 456")) console.log(r, "Y er.lastIndex", er.lastIndex);
 
 <p>Este ejemplo demuestra cómo se pueden separar los caracteres Unicode de una palabra.</p>
 
-<pre class="brush: js notranslate">let texto = 'Образец texto на русском языке'
+<pre class="brush: js">let texto = 'Образец texto на русском языке'
 let regex = /[\u0400-\u04FF]+/g
 
 let match = regex.exec(text)
@@ -205,7 +205,7 @@ console.log(regex.lastIndex) // registra '15'
 
 <h3 id="Extraer_el_nombre_de_subdominio_de_la_URL">Extraer el nombre de subdominio de la URL</h3>
 
-<pre class="brush: js notranslate">let url = 'http://xxx.dominio.com'
+<pre class="brush: js">let url = 'http://xxx.dominio.com'
 console.log(/[^.]+/.exec(url)[0].substr(7)) // registra 'xxx'
 </pre>
 
@@ -240,7 +240,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // registra 'xxx'
 
 <p>A partir de Firefox 34, en el caso de un grupo de captura con cuantificadores que impiden su ejercicio, el texto coincidente para un grupo de captura ahora es <code>undefined</code> en lugar de una cadena vacía:</p>
 
-<pre class="brush: js notranslate">// Firefox 33 o anterior
+<pre class="brush: js">// Firefox 33 o anterior
 'x'.replace(/x(.)?/g, function(m, group) {
   console.log("'grupo: " + group + "'");
 });

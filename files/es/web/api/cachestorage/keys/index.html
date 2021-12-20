@@ -11,7 +11,7 @@ translation_of: Web/API/CacheStorage/keys
 
 <h2 id="Sintaxis"><font><font>Sintaxis</font></font></h2>
 
-<pre class="syntaxbox notranslate"><font><font>caches.keys().then(function(</font></font><em><font><font>keyList</font></font></em><font><font>) {</font></font><font><font>
+<pre class="syntaxbox"><font><font>caches.keys().then(function(</font></font><em><font><font>keyList</font></font></em><font><font>) {</font></font><font><font>
   // haz algo con tu keyList</font></font><font><font>
 });</font></font>
 </pre>
@@ -28,7 +28,7 @@ translation_of: Web/API/CacheStorage/keys
 
 <p>In this code snippet we wait for an {{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} event, and then run a {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old, unused caches before a new service worker is activated. Here we have a whitelist containing the names of the caches we want to keep (<code>cacheWhitelist</code>). We return the keys of the caches in the {{domxref("CacheStorage")}} object using <code>keys()</code>, then check each key to see if it is in the whitelist. If not, we delete it using {{domxref("CacheStorage.delete()")}}.</p>
 
-<pre class="brush: js notranslate"><font><font><font><font>then.addEventListener('activar', función (evento) { </font></font></font></font><font><font><font><font>
+<pre class="brush: js"><font><font><font><font>then.addEventListener('activar', función (evento) { </font></font></font></font><font><font><font><font>
   var cacheWhitelist = ['v2']; </font></font></font></font>
 <font><font><font><font>
   event.waitUntil( </font></font></font></font><font><font><font><font>

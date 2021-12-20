@@ -52,7 +52,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 
 <p>Puedes crear de forma sencilla un servidor web básico para responder cualquier petición simplemente usando el paquete HTTP de <em>Node</em>, como se muestra abajo. Este, creará un servidor y escuchará cualquier clase de peticiones en la URL <code>http://127.0.0.1:8000/</code>; cuando se reciba una petición, se responderá enviando en texto la respuesta: "Hola Mundo!".</p>
 
-<pre class="brush: js notranslate">// Se carga el módulo de HTTP
+<pre class="brush: js">// Se carga el módulo de HTTP
 var http = require("http");
 
 // Creación del servidor HTTP, y se define la escucha
@@ -126,7 +126,7 @@ console.log('Servidor en la url http://127.0.0.1:8000/');</pre>
 <p><strong>Consejo:</strong> Si tiene <em>Node</em> y <em>Express</em> instalado (o piensa instalarlos posteriormente) puede guardar este código en un archivo llamado <strong>app.js</strong> y ejecutarlo posteriormente en la linea de comandos invocándolo mediante: <code>node app.js</code>. </p>
 </div>
 
-<pre class="brush: js notranslate">var express = require('express');
+<pre class="brush: js">var express = require('express');
 var app = express();
 
 <strong>app.get('/', function(req, res) {
@@ -152,7 +152,7 @@ app.listen(3000, function() {
 
 <p>Posteriormente, se puede acceder a las propiedades y funciones del objeto Aplicación.</p>
 
-<pre class="brush: js notranslate">var express = require('express');
+<pre class="brush: js">var express = require('express');
 var app = express();
 </pre>
 
@@ -166,13 +166,13 @@ var app = express();
 
 <p>Para hacer que los objetos esten disponibles fuera de un modulo, solamente es necesario asignarlos al objeto <code>exports</code>. Por ejemplo, el modulo mostrado a continuación <strong>square.js</strong>  es un archivo que exporta los métodos <code>area()</code> y <code>perimeter()</code> :</p>
 
-<pre class="brush: js notranslate"><strong>exports</strong>.area = function(width) { return width * width; };
+<pre class="brush: js"><strong>exports</strong>.area = function(width) { return width * width; };
 <strong>exports</strong>.perimeter = function(width) { return 4 * width; };
 </pre>
 
 <p>Nosotros podemos importar este módulo utilizando la función <code>require()</code>, y entonces podremos invocar los métodos exportados de la siguiente manera:</p>
 
-<pre class="brush: js notranslate">// Utilizamos la función<strong> require()</strong> El nombre del archivo se ingresa sin la extensión (opcional) .js
+<pre class="brush: js">// Utilizamos la función<strong> require()</strong> El nombre del archivo se ingresa sin la extensión (opcional) .js
 var square = require('./square');
 // invocamos el metodo <strong>area()</strong>
 console.log('El área de un cuadrado con lado de 4 es ' + square.area(4));</pre>
@@ -183,7 +183,7 @@ console.log('El área de un cuadrado con lado de 4 es ' + square.area(4));</pre>
 
 <p>Si usted desea exportar completamente un objeto en una asignación en lugar de construir cada propiedad por separado, debe asignarlo al módulo <code>module.exports</code> como se muestra a continuación (también puede hacer esto al inicio de un constructor o de otra función.)</p>
 
-<pre class="brush: js notranslate">module.exports = {
+<pre class="brush: js">module.exports = {
   area: function(width) {
     return width * width;
   },
@@ -200,13 +200,13 @@ console.log('El área de un cuadrado con lado de 4 es ' + square.area(4));</pre>
 
 <p>El código JavaScript usa frecuentemente APIs asíncronas antes que sincrónicas para operaciones que tomen algún tiempo en completarse. En una API sincrónica cada operación debe completarse antes de que la siguiente pueda comenzar. Por ejemplo, la siguiente función de registro es síncrona, y escribirá en orden el texto en la consola (Primero, Segundo).</p>
 
-<pre class="brush: js notranslate">console.log('Primero');
+<pre class="brush: js">console.log('Primero');
 console.log('Segundo');
 </pre>
 
 <p>En contraste, en una API asincrónica, la API comenzará una operación e inmediatamente retornará (antes de que la operación se complete). Una vez que la operación finalice, la API usará algún mecanismo para realizar operaciones adicionales. Por ejemplo, el código de abajo imprimirá "Segundo, Primero" porque aunque el método <code>setTimeout()</code> es llamado primero y retorna inmediatamente, la operación no se completa por varios segundos.</p>
 
-<pre class="brush: js notranslate">setTimeout(function() {
+<pre class="brush: js">setTimeout(function() {
    console.log('Primero');
    }, 3000);
 console.log('Segundo');
@@ -228,7 +228,7 @@ console.log('Segundo');
 
 <p>En nuestro ejemplo anterior de "Hola Mundo!" en <em>Express</em> (véase mas arriba), definimos una función (callback) manejadora de ruta para peticiones HTTP <code>GET</code> a la raíz del sitio (<code>'/'</code>).</p>
 
-<pre class="brush: js notranslate">app.<strong>get</strong>('/', function(req, res) {
+<pre class="brush: js">app.<strong>get</strong>('/', function(req, res) {
   res.send('Hello World!');
 });
 </pre>
@@ -243,7 +243,7 @@ console.log('Segundo');
 
 <p>Hay un método general para definir las rutas:  <code>app.all()</code>, el cual será llamado en respuesta a cualquier método HTTP. Se usa para cargar funciones del middleware en una dirección particular para todos los métodos de peticiones. El siguiente ejemplo (de la documentación de <em>Express</em>) muestra el uso de los manejadores a  <code>/secret</code>  sin tener en cuenta el verbo HTTP utilizado (siempre que esté definido por el <a href="https://nodejs.org/api/http.html#http_http_methods">módulo http</a>).</p>
 
-<pre class="brush: js notranslate">app.all('/secret', function(req, res, next) {
+<pre class="brush: js">app.all('/secret', function(req, res, next) {
   console.log('Accediendo a la seccion secreta ...');
   next(); // pasa el control al siguiente manejador
 });</pre>
@@ -252,7 +252,7 @@ console.log('Segundo');
 
 <p>Usualmente es útil agrupar manejadores de rutas para una parte del sitio juntos y accederlos usando un prefijo de ruta en común. (Ej: un sitio con una Wiki podría tener todas las rutas relacionadas a dicha sección en un archivo y siendo accedidas con el prefijo de ruta /wiki/. En <em>Express</em> esto se logra usando el objeto <code><a href="http://expressjs.com/en/guide/routing.html#express-router">express.Router</a></code>. Ej: podemos crear nuestra ruta wiki en un módulo llamado wiki.js, y entonces exportar el objeto <code>Router</code>, como se muestra debajo:</p>
 
-<pre class="brush: js notranslate">// wiki.js - Modulo de rutas Wiki
+<pre class="brush: js">// wiki.js - Modulo de rutas Wiki
 
 var express = require('express');
 var router = express.Router();
@@ -276,7 +276,7 @@ module.exports = router;
 
 <p>Para usar el router en nuestro archivo app principal, necesitamos <code>require()</code> el módulo de rutas (<strong>wiki.js</strong>), entonces llame <code>use()</code> en la aplicación <em>Express</em> para agregar el Router al software intermediario que maneja las rutas. Las dos rutas serán accesibles entonces desde <code style="font-style: normal; font-weight: normal;">/wiki/</code> y <code style="font-style: normal; font-weight: normal;">/wiki/about/</code>.</p>
 
-<pre class="brush: js notranslate">var wiki = require('./wiki.js');
+<pre class="brush: js">var wiki = require('./wiki.js');
 // ...
 app.use('/wiki', wiki);</pre>
 
@@ -294,12 +294,12 @@ app.use('/wiki', wiki);</pre>
 
 <p>Para usar estas colecciones, primero ha de instalar la aplicación usando NPM. Por ejemplo para instalar el registro de peticiones HTTP <a href="http://expressjs.com/en/resources/middleware/morgan.html">morgan</a>, se haría con el comando Bash:  </p>
 
-<pre class="brush: bash notranslate"><code>$ npm install morgan
+<pre class="brush: bash"><code>$ npm install morgan
 </code></pre>
 
 <p>Entonces podría llamar a la función <code>use()</code> en un objeto de aplicación <em>Express</em> para utilizar este middleware a su aplicación. </p>
 
-<pre class="brush: js notranslate">var express = require('express');
+<pre class="brush: js">var express = require('express');
 <strong>var logger = require('morgan');</strong>
 var app = express();
 <strong>app.use(logger('dev'));</strong>
@@ -315,7 +315,7 @@ var app = express();
 
 <p>El ejemplo de abajo muestra como puede agregar la función middleware usando ambos métodos, y con/sin una ruta.</p>
 
-<pre class="brush: js notranslate">var express = require('express');
+<pre class="brush: js">var express = require('express');
 var app = express();
 
 // An example middleware function
@@ -345,7 +345,7 @@ app.listen(3000);</pre>
 
 <p>Puede utilizar el middleware <a href="http://expressjs.com/en/4x/api.html#express.static">express.static</a> para servir archivos estáticos, incluyendo sus imagenes, CSS y JavaScript (<code>static()</code> es la única función  middleware que es actualmente <strong>parte</strong> de <em>Express</em>). Por ejemplo, podria utilizar la linea de abajo para servir imágenes, archivos CSS, y archivos JavaScript desde un directorio nombrado '<strong>public'</strong> al mismo nivel desde donde llama a node:</p>
 
-<pre class="brush: js notranslate">app.use(express.static('public'));
+<pre class="brush: js">app.use(express.static('public'));
 </pre>
 
 <p>Cualesquiere archivos en el directorio público son servidos al agregar su nombre de archivo (<em>relativo</em> a la ubicación del directorio "público" ) de la ubicación URL. Por ejemplo:</p>
@@ -358,13 +358,13 @@ http://localhost:3000/about.html
 
 <p>Puede llamar <code>static()</code> multiples ocasiones a servir multiples directorios. Si un archivo no puede ser encontrado por una función middleware entonces este simplemente será pasado en la subsequente middleware (el orden en que el middleware está basado en  su orden de declaración).</p>
 
-<pre class="brush: js notranslate">app.use(express.static('public'));
+<pre class="brush: js">app.use(express.static('public'));
 app.use(express.static('media'));
 </pre>
 
 <p>Tambien puede crear un prefijo virtual para sus URLs estáticas, aun más teniendo los archivos agregados en la ubicación URL. Por ejemplo, aqui especificamos <a href="http://expressjs.com/en/4x/api.html#app.use">a mount path</a> tal que los archivos son bajados con el prefijo "/media":</p>
 
-<pre class="brush: js notranslate">app.use('/media', express.static('public'));
+<pre class="brush: js">app.use('/media', express.static('public'));
 </pre>
 
 <p>Ahora, puede bajar los archivos que estan en el directorio <code>publico</code> del path con prefijo <code>/media</code>.</p>
@@ -380,7 +380,7 @@ http://localhost:3000/media/cry.mp3</code>
 
 <p>Los errores majejados por una o más funciones especiales middleware que tienen cuatro argumentos, en lugar de las usuales tres: <code>(err, req, res, next)</code>. For example:</p>
 
-<pre class="brush: js notranslate">app.use(function(err, req, res, next) {
+<pre class="brush: js">app.use(function(err, req, res, next) {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
@@ -406,12 +406,12 @@ http://localhost:3000/media/cry.mp3</code>
 
 <p>Con el propósito de usar éste, debe primero instalar el manejador de bases de datos utilizando NPM. Por ejemplo, para instalar el manejador para el popular NoSQL MongoDB querría utilizar el comando:</p>
 
-<pre class="brush: bash notranslate"><code>$ npm install mongodb
+<pre class="brush: bash"><code>$ npm install mongodb
 </code></pre>
 
 <p>La base de datos por si misma puede ser instalada localmente o en un servidor de la nube. En su codigo Express requiere el manejador, conectarse a la base de datos, y entonces ejecutar operaciones crear, leer, actualizar, y borrar (CLAB). }El ejemplo de abajo (de la documentación Express documentation) muestra como puede encontrar registros en la colección "mamiferos" usando MongoDB.</p>
 
-<pre class="brush: js notranslate">var MongoClient = require('mongodb').MongoClient;
+<pre class="brush: js">var MongoClient = require('mongodb').MongoClient;
 
 MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
   if (err) throw err;
@@ -433,7 +433,7 @@ MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
 
 <p>En su código de configuración de su aplicación usted configura el motor de plantillas para usar y su localización Express podiría buscar plantillas usando las configuraciones de 'vistas' y 'motores de vistas', mostrado abajo (tendría también que instalar el paquete conteniendo su librería de plantillas!)</p>
 
-<pre class="brush: js notranslate">var express = require('express');
+<pre class="brush: js">var express = require('express');
 var app = express();
 
 // Set directory to contain the templates ('views')
@@ -445,7 +445,7 @@ app.set('view engine', 'some_template_engine_name');
 
 <p>La apariencia de la plantilla dependera de qué motor use. Asumiendo que tiene un archivo de plantillas nombrado "index.&lt;template_extension&gt;" este contiene placeholders para variables de datos nombradas 'title' y "message", podría llamar <code><a href="http://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> en una función manejadora de rutas para crear y enviar la HTML response:</p>
 
-<pre class="brush: js notranslate">app.get('/', function(req, res) {
+<pre class="brush: js">app.get('/', function(req, res) {
   res.render('index', { title: 'About dogs', message: 'Dogs rock!' });
 });</pre>
 

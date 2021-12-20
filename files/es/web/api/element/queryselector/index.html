@@ -9,7 +9,7 @@ translation_of: Web/API/Element/querySelector
 
 <h2 id="Syntax" name="Syntax">Sintáxis</h2>
 
-<pre class="syntaxbox notranslate"><var>elemento</var> = elementoBase.querySelector(<em>selectore</em>s);
+<pre class="syntaxbox"><var>elemento</var> = elementoBase.querySelector(<em>selectore</em>s);
 </pre>
 
 <h3 id="Parametros">Parametros</h3>
@@ -40,7 +40,7 @@ translation_of: Web/API/Element/querySelector
 
 <p>En este primer ejemplo, obtendremos el primer elemento {{HTMLElement("style")}} del body del documento HTML que no tenga atributo "type" o cuyo atributo "type" sea igual a "text/css":</p>
 
-<pre class="brush:js notranslate">var el = document.body.querySelector("style[type='text/css'], style:not([type])");
+<pre class="brush:js">var el = document.body.querySelector("style[type='text/css'], style:not([type])");
 </pre>
 
 <h3 id="Toda_la_jerarquía_cuenta">Toda la jerarquía cuenta</h3>
@@ -49,7 +49,7 @@ translation_of: Web/API/Element/querySelector
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;h5&gt;Original content&lt;/h5&gt;
   &lt;p&gt;
     inside paragraph
@@ -64,7 +64,7 @@ translation_of: Web/API/Element/querySelector
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var baseElement = document.querySelector("p");
+<pre class="brush: js">var baseElement = document.querySelector("p");
 document.getElementById("output").innerHTML =
          (baseElement.querySelector("div span").innerHTML);</pre>
 

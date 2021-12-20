@@ -39,7 +39,7 @@ original_slug: Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting
 
 <p>En los fundamentos del texto HTML, explicamos cómo {{web.link("/es/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists", "marcar listas básicas")}} en HTML, pero no mencionamos el tercer tipo de lista con la que te encontrarás ocasionalmente: <strong>listas de descripción</strong>. El propósito de estas listas es marcar un conjunto de elementos y sus descripciones asociadas, como términos y definiciones, o preguntas y respuestas. Veamos un ejemplo de un conjunto de términos y definiciones:</p>
 
-<pre class="brush: bash notranslate">soliloquio
+<pre class="brush: bash">soliloquio
 En las obras dramáticas, corresponde a cuando un personaje se habla a sí mismo para representar sus pensamientos o sentimientos internos y, en el proceso, transmitirlos a la audiencia (pero no a otros personajes).
 monólogo
 En las obras dramáticas, corresponde a cuando un personaje habla de sus pensamientos en voz alta para compartirlos con el público y cualquier otro personaje presente.
@@ -49,7 +49,7 @@ En las obras dramáticas, corresponde a cuando un personaje comparte un comentar
 <p>Las listas de descripción utilizan un contenedor diferente al de los otros tipos de listas — {{HTMLElement("dl")}} («<em><b>d</b>escription <b>l</b>ist</em>» o lista de descripciones); además, cada término está envuelto en un elemento {{HTMLElement("dt")}} («<em><b>d</b>escription <b>t</b>erm</em>» o término a describir), y cada descripción está envuelta en un elemento {{HTMLElement("dd")}} («<em><b>d</b>escription <b>d</b>efinition</em>» o definición de descripción). Para redondear esta información veamos un ejemplo:</p>
 
 <div id="listas-de-descripciones-ejemplo-activo-1">
-<pre class="brush: html notranslate">&lt;dl&gt;
+<pre class="brush: html">&lt;dl&gt;
   &lt;dt&gt;soliloquio&lt;/dt&gt;
   &lt;dd&gt;En las obras dramáticas, corresponde a cuando un personaje se habla a sí mismo para representar sus pensamientos o sentimientos internos y, en el proceso, transmitirlos a la audiencia (pero no a otros personajes).&lt;/dd&gt;
   &lt;dt&gt;monólogo&lt;/dt&gt;
@@ -66,7 +66,7 @@ En las obras dramáticas, corresponde a cuando un personaje comparte un comentar
 <p>Ten en cuenta que un solo término puede tener múltiples descripciones, por ejemplo:</p>
 
 <div id="listas-de-descripciones-ejemplo-activo-2">
-<pre class="brush: html notranslate">&lt;dl&gt;
+<pre class="brush: html">&lt;dl&gt;
   &lt;dt&gt;aparte&lt;/dt&gt;
   &lt;dd&gt;En las obras dramáticas, corresponde a cuando un personaje comparte un comentario solo con la audiencia para dar efecto cómico o dramático. Suele ser un sentimiento, un pensamiento o información adicional.&lt;/dd&gt;
   &lt;dd&gt;Si la obra es impresa, es una sección de contenido que se relaciona con el tema, pero no encaja directamente en el flujo principal de contenido, de modo que se presenta por separado (a menudo en una caja de texto en el margen).&lt;/dd&gt;
@@ -84,7 +84,7 @@ En las obras dramáticas, corresponde a cuando un personaje comparte un comentar
 <div class="hidden">
 <h6 id="Código_reproducible">Código reproducible</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -106,7 +106,7 @@ Un color marrón claro.&lt;/textarea&gt;
   &lt;input id="solution" type="button" value="Mostrar solución"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -126,7 +126,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+<pre class="brush: js">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');
@@ -215,13 +215,13 @@ textarea.onkeyup = function(){
 
 <p>Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párrafos, una lista, etc.) se cita en otro lugar, debes envolverla dentro de un elemento {{HTMLElement("blockquote")}} para indicarlo, e incluye una URL que apunte a la fuente de la cita dentro de un atributo {{HTMLAttrxRef("cite", "blockquote")}}. Por ejemplo, el siguiente marcado tomado de la página del elemento <code>&lt;blockquote&gt;</code> de MDN:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;El &lt;strong&gt;elemento HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/strong&gt; (o &lt;em&gt;elemento HTML de cita
+<pre class="brush: html">&lt;p&gt;El &lt;strong&gt;elemento HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/strong&gt; (o &lt;em&gt;elemento HTML de cita
 en bloque independiente&lt;/em&gt;) indica que el texto al que delimita es una cita ampliada.&lt;/p&gt;</pre>
 
 <p>Para convertir esto en una cita en bloque independiente, simplemente harías lo siguiente:</p>
 
 <div id="blockquote-ejemplo-en-vivo">
-<pre class="brush: html notranslate">&lt;p&gt;A continuación se muestra una cita en bloque independiente...&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;A continuación se muestra una cita en bloque independiente...&lt;/p&gt;
 &lt;blockquote cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"&gt;
   &lt;p&gt;El &lt;strong&gt;elemento HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/strong&gt; (o &lt;em&gt;elemento HTML de cita
   en bloque independiente&lt;/em&gt;) indica que el texto al que delimita es una cita ampliada.&lt;/p&gt;
@@ -236,7 +236,7 @@ en bloque independiente&lt;/em&gt;) indica que el texto al que delimita es una c
 
 <p>Las citas en línea funcionan exactamente de la misma manera, excepto que usan el elemento {{HTMLElement("q")}}. Por ejemplo, el siguiente fragmento de marcado contiene una cita <code>&lt;q&gt;</code> de la página MDN:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;El elemento de cita — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — se &lt;q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;utiliza en
+<pre class="brush: html">&lt;p&gt;El elemento de cita — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — se &lt;q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;utiliza en
 para citas breves que no requieren saltos de párrafo.&lt;/q&gt;&lt;/p&gt;</pre>
 
 <p>El estilo predeterminado del navegador lo representará como texto normal entre comillas para indicar una cita, así:</p>
@@ -249,7 +249,7 @@ para citas breves que no requieren saltos de párrafo.&lt;/q&gt;&lt;/p&gt;</pre>
 
 <p>Hay un elemento {{HTMLElement("cite")}}, pero está destinado a contener el título del recurso que se cita, p. ej. el nombre del libro. Sin embargo, no hay razón por la que no puedas vincular el texto dentro de <code>&lt;cite&gt;</code> a la fuente de la cita de alguna manera:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;De acuerdo con &lt;a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"&gt;
+<pre class="brush: html">&lt;p&gt;De acuerdo con &lt;a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"&gt;
 &lt;cite&gt;página de citas en bloque independiente de MDN&lt;/cite&gt;&lt;/a&gt;:
 &lt;/p&gt;
 
@@ -288,7 +288,7 @@ citas breves que no requieren saltos de párrafo.&lt;/q&gt; -- &lt;a href="https
 <div class="hidden">
 <h6 id="Código_reproducible_2">Código reproducible 2</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -307,7 +307,7 @@ citas breves que no requieren saltos de párrafo.&lt;/q&gt; -- &lt;a href="https
   &lt;input id="solution" type="button" value="Mostrar solución"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -327,7 +327,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+<pre class="brush: js">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');
@@ -413,7 +413,7 @@ textarea.onkeyup = function(){
 <p>Otro elemento bastante común que encontrarás cuando busques en la Web es {{HTMLElement("abbr")}} — se usa para envolver una abreviatura o acrónimo, y proporcionar una expansión completa del término (incluida dentro de un atributo {{HTMLAttrxRef("title")}}. Veamos un par de ejemplos:</p>
 
 <div id="ejemplo-de-abreviaturas-en-vivo">
-<pre class="brush: html notranslate">&lt;p&gt;Usamos &lt;abbr title="Lenguaje de marcado de hipertexto"&gt;HTML&lt;/abbr&gt; para estructurar nuestros documentos web.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Usamos &lt;abbr title="Lenguaje de marcado de hipertexto"&gt;HTML&lt;/abbr&gt; para estructurar nuestros documentos web.&lt;/p&gt;
 
 &lt;p&gt;Creo que el &lt;abbr title="Reverendo""&gt;Rev.&lt;/abbr&gt; Green lo hizo en la cocina con la motosierra.&lt;/p&gt;</pre>
 </div>
@@ -433,7 +433,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Código_reproducible_3">Código reproducible</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Salida en vivo&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -450,7 +450,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Mostrar solución"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -470,7 +470,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+<pre class="brush: js">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');
@@ -555,13 +555,13 @@ textarea.onkeyup = function(){
 
 <p>HTML tiene un elemento para marcar la información de contacto — {{HTMLElement("address")}}. Este simplemente envuelve tus datos de contacto, por ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;address&gt;
+<pre class="brush: html">&lt;address&gt;
   &lt;p&gt;Chris Mills, Manchester, The Grim North, Reino Unido&lt;/p&gt;
 &lt;/address&gt;</pre>
 
 <p>También podrías incluir un marcado más complejo y otras formas de información de contacto, por ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;address&gt;
+<pre class="brush: html">&lt;address&gt;
   &lt;p&gt;
     Chris Mills&lt;br&gt;
     Manchester&lt;br&gt;
@@ -577,7 +577,7 @@ textarea.onkeyup = function(){
 
 <p>Ten en cuenta que algo como esto también estaría bien, si la página vinculada contuviera la información de contacto:</p>
 
-<pre class="brush: html notranslate">&lt;address&gt;
+<pre class="brush: html">&lt;address&gt;
   &lt;p&gt;Página escrita por &lt;a href="../authors/chris-mills/"&gt;Chris Mills&lt;/a&gt;.&lt;/p&gt;
 &lt;/address&gt;</pre>
 
@@ -585,7 +585,7 @@ textarea.onkeyup = function(){
 
 <p>En ocasiones, necesitarás utilizar superíndice y subíndice al marcar elementos como fechas, fórmulas químicas y ecuaciones matemáticas para que tengan el significado correcto. Los elementos {{HTMLElement("sup")}} y {{HTMLElement("sub")}} se ocupan de ello. Por ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Nací el 25&lt;sup&gt;th&lt;/sup&gt; de mayo de 2001.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Nací el 25&lt;sup&gt;th&lt;/sup&gt; de mayo de 2001.&lt;/p&gt;
 &lt;p&gt;La fórmula química de la cafeína es C&lt;sub&gt;8&lt;/sub&gt;H&lt;sub&gt;10&lt;/sub&gt;N&lt;sub&gt;4&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;.&lt;/p&gt;
 &lt;p&gt;If x&lt;sup&gt;2&lt;/sup&gt; es 9, x debe ser igual 3 o -3.&lt;/p&gt;</pre>
 
@@ -607,7 +607,7 @@ textarea.onkeyup = function(){
 
 <p>Veamos algunos ejemplos. Deberías intentar jugar con estos (intenta obtener una copia de nuestro archivo de ejemplo <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html">other-semantics.html</a>):</p>
 
-<pre class="brush: html notranslate">&lt;pre&gt;&lt;code&gt;var para = document.querySelector('p');
+<pre class="brush: html">&lt;pre&gt;&lt;code&gt;var para = document.querySelector('p');
 
 para.onclick = function() {
   alert('¡Guau!, ¡deja de apretar!');
@@ -632,7 +632,7 @@ para.onclick = function() {
 
 <p>HTML también proporciona el elemento {{HTMLElement("time")}} para marcar horas y fechas en un formato legible por la máquina. Por ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;time datetime="2016-01-20"&gt;20 Enero 2016&lt;/time&gt;
+<pre class="brush: html">&lt;time datetime="2016-01-20"&gt;20 Enero 2016&lt;/time&gt;
 </pre>
 
 <p>¿Por qué es útil esto? Bueno, hay muchas formas diferentes en que los humanos escriben las fechas. La fecha anterior se podría escribir como:</p>
@@ -653,7 +653,7 @@ para.onclick = function() {
 
 <p>El ejemplo básico anterior solo proporciona una fecha simple legible por la máquina, pero hay muchas otras opciones que son posibles, por ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;!-- Fecha simple estándar --&gt;
+<pre class="brush: html">&lt;!-- Fecha simple estándar --&gt;
 &lt;time datetime="2016-01-20"&gt;20 Enero 2016&lt;/time&gt;
 &lt;!-- Solo año y mes --&gt;
 &lt;time datetime="2016-01"&gt;Enero 2016&lt;/time&gt;

@@ -23,14 +23,14 @@ original_slug: Mozilla/Add-ons/WebExtensions/Tu_primera_WebExtension
 
 <p>Crea una nuevo directorio y navega a él. Por ejemplo, en tu línea de comandos/terminal se hace de esta manera:</p>
 
-<pre class="brush: bash notranslate">mkdir borderify
+<pre class="brush: bash">mkdir borderify
 cd borderify</pre>
 
 <h3 id="manifest.json">manifest.json</h3>
 
 <p>Ahora crearemos un archivo  nuevo llamado "manifest.json" directamente en la carpeta "borderify". Añádale el siguiente contenido:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
 
   "manifest_version": 2,
   "name": "Borderify",
@@ -67,7 +67,7 @@ cd borderify</pre>
 <div class="warning">
 <p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID">En algunas situaciones usted necesita especificar un ID para su extensión</a>. Si necesita especificar un ID para el complemento, incluya el parámetro <code><a href="/es/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> en el <code>manifest.json</code> y configure la propiedad <code>gecko.id</code>:</p>
 
-<pre class="brush: json notranslate">"applications": {
+<pre class="brush: json">"applications": {
   "gecko": {
     "id": "borderify@example.com"
   }
@@ -82,7 +82,7 @@ cd borderify</pre>
 
 <p>Si eliges emplear tu propio icono, este debe ser de 48x48 pixeles. También puedes aplicar un icono de 96x96 pixeles, para resoluciones mayores, y si haces esto, se especifica como la propiedad <code>96</code> en el objeto icons del manifest.json:</p>
 
-<pre class="brush: json notranslate">"icons": {
+<pre class="brush: json">"icons": {
   "48": "icons/border-48.png",
   "96": "icons/border-96.png"
 }</pre>
@@ -97,7 +97,7 @@ cd borderify</pre>
 
 <p>Finalmente, crea un archivo de nombre "borderify.js" directamente en el directorio "borderify". Y déjale el siguiente contenido:</p>
 
-<pre class="brush: js notranslate">document.body.style.border = "5px solid red";</pre>
+<pre class="brush: js">document.body.style.border = "5px solid red";</pre>
 
 <p>Este script se cargara en las páginas que coincidan con el patrón dado en el parámetro <code>content_scripts</code> del archivo manifest.json. El script tiene acceso directo al documento, de la misma manera que los scripts cargados por la propia página.</p>
 

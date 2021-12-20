@@ -34,11 +34,11 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>Ve al clon local de tu bifurcación en tu terminal/línea de comandos, y agrega un control remoto que apunte al repositorio principal (<code>upstream</code>) de esa manera (solo necesitas hacer esto una vez):</p>
 
-<pre class="brush: bash notranslate">git remote add upstream https://github.com/mdn/browser-compat-data.git</pre>
+<pre class="brush: bash">git remote add upstream https://github.com/mdn/browser-compat-data.git</pre>
 
 <p>Si no estás seguro de haber hecho esto, puedes verificar qué controles remotos tiene tu repositorio usando</p>
 
-<pre class="brush: bash notranslate">git remote -v</pre>
+<pre class="brush: bash">git remote -v</pre>
 
 <h3 id="Actualiza_tu_bifurcación_con_el_contenido_del_remoto">Actualiza tu bifurcación con el contenido del remoto</h3>
 
@@ -48,22 +48,22 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
  <li>
   <p>Asegúrate de que estas en la rama <code>master</code>:</p>
 
-  <pre class="brush: bash notranslate">git checkout master</pre>
+  <pre class="brush: bash">git checkout master</pre>
  </li>
  <li>
   <p>obtén el contenido actualizado del repositorio utilizando lo siguiente:</p>
 
-  <pre class="brush: bash notranslate">git fetch upstream</pre>
+  <pre class="brush: bash">git fetch upstream</pre>
  </li>
  <li>
   <p>rebasa el contenido de tu <code>master</code> con el contenido del repositorio principal:</p>
 
-  <pre class="brush: bash notranslate">git rebase upstream/master</pre>
+  <pre class="brush: bash">git rebase upstream/master</pre>
  </li>
  <li>
   <p>empuja estas actualizaciones a tu bifurcación remota usando lo siguiente:</p>
 
-  <pre class="brush: bash notranslate">git push</pre>
+  <pre class="brush: bash">git push</pre>
  </li>
 </ol>
 
@@ -83,11 +83,11 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>En este punto, regresa a tu terminal/línea de comando y actualiza el clon local de tu bifurcación para incluir tu nueva rama usando el siguiente comando:</p>
 
-<pre class="brush: bash notranslate">git pull</pre>
+<pre class="brush: bash">git pull</pre>
 
 <p>Ahora cambia a tu nueva rama usando esto:</p>
 
-<pre class="brush: bash notranslate">git checkout <em>nombre-de-rama</em></pre>
+<pre class="brush: bash">git checkout <em>nombre-de-rama</em></pre>
 
 <p>¡Ahora debería estar listo para comenzar a agregar tus datos!</p>
 
@@ -108,7 +108,7 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>Veamos un ejemplo. Los archivos JSON de propiedades CSS, por ejemplo, necesitan la siguiente estructura básica:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "css": {
     "properties": {
       "border-width": {
@@ -166,7 +166,7 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>Los datos de características de <a href="/es/docs/Web/CSS/border-width#Browser_compatibility"><code>border-width</code></a> (consulta también <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a>) se muestra a continuación como ejemplo:</p>
 
-<pre class="brush: json notranslate">"__compat": {
+<pre class="brush: json">"__compat": {
   "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-width",
   "support": {
     "chrome": {
@@ -217,7 +217,7 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>Hay un cuarto miembro, opcional, que puede ir dentro del miembro <code>__compat</code> — <code>description</code>. Este se puede utilizar para incluir una descripción legible por humanos de la característica. Únicamente lo debes incluir si es difícil ver cuál es la característica al mirar los datos. Por ejemplo, puede que no sea tan obvio lo que es un constructor al mirar la estructura de datos, por lo que puedes incluir una descripción como esta:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "api": {
     "AbortController": {
       "__compat": {
@@ -244,7 +244,7 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>Como ejemplo, consulta los <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/background-color.json">datos de compatibilidad</a> y la <a href="/es/docs/Web/CSS/background-color">página MDN correspondiente</a> para la propiedad <code>background-color</code>. El soporte básico existe dentro del objeto <code>__compat</code> como se explicó anteriormente, luego tienes una fila adicional para el soporte de los navegadores para "canal alfa para valores hexadecimales", que contiene tu propio objeto <code>__compat</code>.</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "css": {
     "properties": {
       "background-color": {
@@ -263,7 +263,7 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>Para una API, tienes los dos niveles superiores definidos como <code>api.<em>nombre-de-la-interfaz</em></code>, luego un <code>__compat</code> de nivel superior para definir la compatibilidad general del navegador de la interfaz, luego una subfunción para cada uno de los métodos, propiedades y constructores contenidos dentro de la interfaz. La estructura básica se ve así:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "api": {
     "VRDisplay": {
       "__compat": {
@@ -297,7 +297,7 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>A menudo, las tablas de compatibilidad incluirán notas a pie de página relacionadas con ciertas entradas que explican detalles útiles o comportamientos extraños que los desarrolladores encontrarán útiles. Como ejemplo, la entrada de Chrome para Android para {{domxref("VRDisplay.capabilities")}} (consulta también <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>) (en el momento de escribir este artículo) tenía una nota al pie de página "Actualmente solo es compatible con Google Daydream". Para incluir esto en los datos de capacidades, agregamos un submiembro "<code>notes</code>" dentro del submiembro "chrome_android" relevante; se vería así:</p>
 
-<pre class="brush: json notranslate">"chrome_android": {
+<pre class="brush: json">"chrome_android": {
   "version_added": true,
   "notes": "Currently supported only by Google Daydream."
 }</pre>
@@ -306,7 +306,7 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>Si una característica es compatible con un prefijo de proveedor en uno o más navegadores, querrás dejarlo en claro en los datos de compatibilidad del navegador. imagina que tienes una característica que es compatible con un prefijo <code>-moz-</code> en Firefox. Para especificar esto en los datos de compatibilidad, debes agregar un submiembro "<code>prefix</code>" dentro del submiembro "firefox" relevante. Y se vería así:</p>
 
-<pre class="brush: json notranslate">"firefox": {
+<pre class="brush: json">"firefox": {
   "version_added": true,
   "prefix": "-moz-"
 }</pre>
@@ -325,7 +325,7 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>Entonces, para agregar una preferencia/bandera al soporte de Chrome para una característica, harías algo como esto:</p>
 
-<pre class="brush: json notranslate">"chrome": {
+<pre class="brush: json">"chrome": {
   "version_added": "50",
   "flags": [
     {
@@ -338,7 +338,7 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>Si una característica está detrás de dos o más banderas, puedes agregar objetos adicionales al arreglo "<code>flags</code>", como en este caso, por ejemplo:</p>
 
-<pre class="brush: json notranslate">"firefox": {
+<pre class="brush: json">"firefox": {
   "version_added": "57",
   "flags": [
     {
@@ -358,7 +358,7 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>A veces, una característica se agregará en una determinada versión del navegador, pero luego se eliminará nuevamente cuando la característica esté obsoleta. Esto se puede representar fácilmente usando el submiembro "<code>version_removed</code>", que toma como valor una cadena que representa el número de versión en el que se eliminó. Por ejemplo:</p>
 
-<pre class="brush: json notranslate">"firefox": {
+<pre class="brush: json">"firefox": {
   "version_added": "35",
   "version_removed": "47",
 },</pre>
@@ -373,7 +373,7 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>Para incluir estos dos puntos de datos, puedes hacer que el valor del submiembro "<code>chrome</code>" sea un arreglo que contenga dos objetos de información de soporte, en lugar de un solo objeto de información de soporte:</p>
 
-<pre class="brush: json notranslate">"chrome": [
+<pre class="brush: json">"chrome": [
   {
     "version_added": "47"
   },
@@ -414,7 +414,7 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>Para representar esto en los datos, usamos el siguiente JSON:</p>
 
-<pre class="brush: json notranslate">"firefox": [
+<pre class="brush: json">"firefox": [
   {
     "version_added": "4",
     "notes": "Antes de Firefox 50.0, los estilos de borde de las esquinas redondeadas siempre se representaban como si <code>border-style</code> fuera sólido. Esto se ha solucionado en Firefox 50.0."
@@ -442,7 +442,7 @@ original_slug: MDN/Structures/Tablas_de_compatibilidad
 
 <p>Si se ve bien, debes confirmarlo y volver a colocarlo en tu bifurcación remota en GitHub. Lo puedes hacer fácilmente en tu terminal con comandos como estos:</p>
 
-<pre class="brush: bash notranslate">git add .
+<pre class="brush: bash">git add .
 git commit -m 'adding compat data for <em>nombre-de-la-característica</em>'
 git push</pre>
 
@@ -456,7 +456,7 @@ git push</pre>
 
 <p>Por encima de la llamada a la macro, para ayudar a otros colaboradores a encontrar su camino, debes agregar un texto oculto que solo sea visible a los colaboradores de MDN en el modo de edición:</p>
 
-<pre class="brush: html notranslate">&lt;div class="hidden"&gt;
+<pre class="brush: html">&lt;div class="hidden"&gt;
 La tabla de compatibilidad de esta página se genera a partir de datos estructurados.
 Si deseas contribuir con los datos, consulta
 &lt;a href="https://github.com/mdn/browser-compat-data"&gt;https://github.com/mdn/browser-compat-data&lt;/a&gt;

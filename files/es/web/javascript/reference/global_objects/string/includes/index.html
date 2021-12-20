@@ -19,7 +19,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/includes
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.includes(<var>searchString</var>[, <var>position</var>])</code></pre>
+<pre class="syntaxbox"><code><var>str</var>.includes(<var>searchString</var>[, <var>position</var>])</code></pre>
 
 <h3 id="Parametros">Parametros</h3>
 
@@ -42,7 +42,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/includes
 
 <p>El método <code>includes()</code> es "case sensitive" (tiene en cuenta mayúsculas y minúsculas). Por ejemplo, la siguiente expresión devolverá <code>false</code>:</p>
 
-<pre class="brush: js notranslate">'Ballena azul'.includes('ballena'); // devuelve false
+<pre class="brush: js">'Ballena azul'.includes('ballena'); // devuelve false
 </pre>
 
 <h2 id="Polyfill">Polyfill</h2>
@@ -51,7 +51,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/includes
 
 <p>Sin embargo, puedes usar este método como polyfill:</p>
 
-<pre class="brush: js notranslate">if (!String.prototype.includes) {
+<pre class="brush: js">if (!String.prototype.includes) {
   String.prototype.includes = function(search, start) {
     'use strict';
 
@@ -68,7 +68,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/includes
 
 <h3 id="Usando_includes">Usando <code>includes()</code></h3>
 
-<pre class="brush: js notranslate">const str = 'To be, or not to be, that is the question.'
+<pre class="brush: js">const str = 'To be, or not to be, that is the question.'
 
 console.log(str.includes('To be'))        // true
 console.log(str.includes('question'))     // true

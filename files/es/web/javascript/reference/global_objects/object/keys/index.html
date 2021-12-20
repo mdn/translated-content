@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/keys
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><code>Object.keys(<var>obj</var>)</code></pre>
+<pre class="syntaxbox"><code>Object.keys(<var>obj</var>)</code></pre>
 
 <h3 id="Parámetros">Parámetros</h3>
 
@@ -31,7 +31,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/keys
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<pre class="brush: js notranslate">var arr = ['a', 'b', 'c'];
+<pre class="brush: js">var arr = ['a', 'b', 'c'];
 console.log(Object.keys(arr)); // console: ['0', '1', '2']
 
 // arreglo como objeto
@@ -55,7 +55,7 @@ console.log(Object.keys(my_obj)); // console: ['foo']
 
 <p>En ES5, si el argumento para este método no es un objeto (uno primitivo), causará un {{jsxref("Global_Objects/TypeError", "TypeError")}}. En ES2015, un argumento no-objeto será coaccionado hacia un objeto.</p>
 
-<pre class="brush: js notranslate">&gt; Object.keys("foo")
+<pre class="brush: js">&gt; Object.keys("foo")
 // TypeError: "foo" is not an object  (ES5)
 
 &gt; Object.keys("foo")
@@ -65,7 +65,7 @@ console.log(Object.keys(my_obj)); // console: ['foo']
 
 <p>Para añadir soporte <code>Object.keys</code> en entornos más antiguos que no lo soportan de forma nativa, copia el siguiente fragmento:</p>
 
-<pre class="brush: js notranslate">// De https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+<pre class="brush: js">// De https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
   Object.keys = (function() {
     'use strict';

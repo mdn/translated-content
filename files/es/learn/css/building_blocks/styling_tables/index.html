@@ -26,7 +26,7 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
 
 <p>Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica porque la mayoría de los ejemplos de tablas HTML son sobre zapatos, el tiempo o empleados; y hemos decidido hacer las cosas más interesantes creando una tabla sobre grupos de música punk famosos del Reino Unido. El código es el siguiente:</p>
 
-<pre class="brush: html notranslate">&lt;table summary="Los grupos de música punk más famosos del Reino Unido"&gt;
+<pre class="brush: html">&lt;table summary="Los grupos de música punk más famosos del Reino Unido"&gt;
   &lt;caption&gt;Un resumen de los grupos de música punk más famosos del Reino Unido&lt;/caption&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -81,7 +81,7 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
  <li>Para comenzar, crea una copia local del <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html" title="código de ejemplo">código de ejemplo</a>, descarga las dos imágenes (<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png">noise</a> y <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg">leopardskin</a>), y pon los tres archivos en alguna carpeta de tu ordenador.</li>
  <li>Ahora crea un archivo nuevo llamado <code>style.css</code> y guárdalo con el resto de archivos, en la misma carpeta.</li>
  <li>Enlaza el CSS al HTML copiando la línea siguiente en {{htmlelement("head")}}:
-  <pre class="brush: html notranslate">&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;</pre>
+  <pre class="brush: html">&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;</pre>
  </li>
 </ol>
 
@@ -89,7 +89,7 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
 
 <p>Lo primero que hay que hacer es solucionar los aspectos de espaciado/distribución; ¡el estilo por defecto de la tabla es tan apretado! Para ello, añadimos el CSS siguiente al archivo <code>style.css</code>:</p>
 
-<pre class="brush: css notranslate">/* spacing */
+<pre class="brush: css">/* spacing */
 
 table {
   table-layout: fixed;
@@ -141,11 +141,11 @@ th, td {
 
 <p>Primero, añade el elemento {{htmlelement ("link")}} siguiente a tu encabezado HTML, justo encima del elemento <code>&lt;link&gt;</code>:</p>
 
-<pre class="brush: html notranslate">&lt;link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'&gt;</pre>
+<pre class="brush: html">&lt;link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'&gt;</pre>
 
 <p>Ahora añade el CSS siguiente a tu archivo <code>style.css</code>, debajo de la línea añadida anterior:</p>
 
-<pre class="brush: css notranslate">/* typography */
+<pre class="brush: css">/* typography */
 
 html {
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
@@ -190,7 +190,7 @@ tfoot th {
 
 <p>Empieza añadiendo el CSS siguiente a tu archivo <code>style.css</code>, de nuevo al final:</p>
 
-<pre class="brush: css notranslate">thead, tfoot {
+<pre class="brush: css">thead, tfoot {
   background: url(leopardskin.jpg);
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -212,7 +212,7 @@ thead th, tfoot th, tfoot td {
 
 <p>Queremos dedicar una sección independiente a mostrarte cómo implementar <strong>rayas de cebra</strong>, alternando filas de color que facilitan el análisis y la legibilidad de las diversas filas de datos de la tabla. Añade el CSS siguiente al final de tu archivo <code>style.css</code>:</p>
 
-<pre class="brush: css notranslate">tbody tr:nth-child(odd) {
+<pre class="brush: css">tbody tr:nth-child(odd) {
   background-color: #ff33cc;
 }
 
@@ -244,7 +244,7 @@ table {
 
 <p>Hay una última cosa que hacer con nuestra tabla: aplicar estilo al título. Para ello, añade al final de tu archivo <code>style.css</code> lo siguiente:</p>
 
-<pre class="brush: css notranslate">caption {
+<pre class="brush: css">caption {
   font-family: 'Rock Salt', cursive;
   padding: 20px;
   font-style: italic;

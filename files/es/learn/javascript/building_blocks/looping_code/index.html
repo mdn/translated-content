@@ -65,7 +65,7 @@ original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -136,7 +136,7 @@ original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
 
 <p>No tienes que entender todo el código por ahora, pero vamos a echar un vistazo a la parte de código que dibuja los 100 círculos:</p>
 
-<pre class="brush: js notranslate">for (var i = 0; i &lt; 100; i++) {
+<pre class="brush: js">for (var i = 0; i &lt; 100; i++) {
   ctx.beginPath();
   ctx.fillStyle = 'rgba(255,0,0,0.5)';
   ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
@@ -147,7 +147,7 @@ original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
 
 <p>Si no usáramos un bucle aquí, tendríamos que repetir el siguiente código por cada círculo que quisiéramos dibujar:</p>
 
-<pre class="brush: js notranslate">ctx.beginPath();
+<pre class="brush: js">ctx.beginPath();
 ctx.fillStyle = 'rgba(255,0,0,0.5)';
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ctx.fill();</pre>
@@ -178,7 +178,7 @@ ctx.fill();</pre>
 
 <p>Observa un ejemplo real para poder entender esto más claramente.</p>
 
-<pre class="brush: js notranslate">var cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
+<pre class="brush: js">var cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
 var info = 'My cats are called ';
 var para = document.querySelector('p');
 
@@ -193,7 +193,7 @@ para.textContent = info;</pre>
 <div class="hidden">
 <h6 id="Hidden_code_2">Hidden code 2</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -261,7 +261,7 @@ para.textContent = info;</pre>
 
 <p>Idealmente querríamos cambiar la concatenacion al final de la última iteracion del bucle, así no tendríamos una coma en el final de la frase. Bueno, no hay problema - podemos insertar un condicional dentro de nuestro bucle para solucionar este caso especial:</p>
 
-<pre class="brush: js notranslate">for (var i = 0; i &lt; cats.length; i++) {
+<pre class="brush: js">for (var i = 0; i &lt; cats.length; i++) {
   if (i === cats.length - 1) {
     info += 'and ' + cats[i] + '.';
   } else {
@@ -285,7 +285,7 @@ para.textContent = info;</pre>
 
 <p>Digamos que queremos buscar a través de un arreglo de contactos y números telefónicos y retornar sólo el número que queríamos encontrar. primero, un simple HTML -  un {{htmlelement("input")}} de texto que nos permita ingresar un nombre para buscar, un elemento {{htmlelement("button")}} para enviar la búsqueda, y un elemento {{htmlelement("p")}} para mostrar el resultado:</p>
 
-<pre class="brush: html notranslate">&lt;label for="search"&gt;Search by contact name: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="search"&gt;Search by contact name: &lt;/label&gt;
 &lt;input id="search" type="text"&gt;
 &lt;button&gt;Search&lt;/button&gt;
 
@@ -293,7 +293,7 @@ para.textContent = info;</pre>
 
 <p>Ahora en el JavaScript:</p>
 
-<pre class="brush: js notranslate">var contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+<pre class="brush: js">var contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
 var para = document.querySelector('p');
 var input = document.querySelector('input');
 var btn = document.querySelector('button');
@@ -316,7 +316,7 @@ btn.addEventListener('click', function() {
 <div class="hidden">
 <h6 id="Hidden_code_3">Hidden code 3</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -386,7 +386,7 @@ btn.addEventListener('click', function() {
 
 <p>The HTML is basically the same as the last example — a simple text input, and a paragraph for output. The JavaScript is mostly the same too, although the loop itself is a bit different:</p>
 
-<pre class="brush: js notranslate">var num = input.value;
+<pre class="brush: js">var num = input.value;
 
 for (var i = 1; i &lt;= num; i++) {
   var sqRoot = Math.sqrt(i);
@@ -402,7 +402,7 @@ for (var i = 1; i &lt;= num; i++) {
 <div class="hidden">
 <h6 id="Hidden_code_4">Hidden code 4</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -477,7 +477,7 @@ while (exit-condition) {
 
 <p>Let's have a look again at our cats list example, but rewritten to use a while loop:</p>
 
-<pre class="brush: js notranslate">var i = 0;
+<pre class="brush: js">var i = 0;
 
 while (i &lt; cats.length) {
   if (i === cats.length - 1) {
@@ -508,7 +508,7 @@ do {
 
 <p>Let's rewrite our cat listing example again to use a <code>do...while</code> loop:</p>
 
-<pre class="brush: js notranslate">var i = 0;
+<pre class="brush: js">var i = 0;
 
 do {
   if (i === cats.length - 1) {
@@ -556,7 +556,7 @@ do {
 <div class="hidden">
 <h6 id="Active_learning">Active learning</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 410px;overflow: auto;"&gt;
 
 &lt;/div&gt;
@@ -586,7 +586,7 @@ output.innerHTML = '';
 
 <p class="brush: js"></p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -614,7 +614,7 @@ body {
 
 <p class="brush: js"></p>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -727,7 +727,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Active_learning_2">Active learning 2</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 100px;overflow: auto;"&gt;
   &lt;p class="admitted"&gt;Admit: &lt;/p&gt;
   &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
@@ -756,7 +756,7 @@ refused.textContent = 'Refuse: '
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -776,7 +776,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;

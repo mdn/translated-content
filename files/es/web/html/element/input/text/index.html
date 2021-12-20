@@ -53,7 +53,7 @@ original_slug: Web/HTML/Elemento/input/text
 
 <p>El atributo {{HTMLAttrxRef("value", "input")}} es un {{DOMxRef("DOMString")}} que contiene el valor actual del texto ingresado en el campo de texto. Puedes recuperar esto usando la propiedad {{DOMxRef("HTMLInputElement.value", "value")}} en JavaScript.</p>
 
-<pre class="brush: js notranslate">let theText = myTextInput.value;
+<pre class="brush: js">let theText = myTextInput.value;
 </pre>
 
 <p>Si no existen restricciones de validación para la entrada (consulta {{anch("Validación")}} para obtener más detalles), el valor puede ser una cadena vacía ("").</p>
@@ -230,7 +230,7 @@ original_slug: Web/HTML/Elemento/input/text
 
 <h3 id="Ejemplo_básico">Ejemplo básico</h3>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Elige un nombre de usuario: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name"&gt;
@@ -250,7 +250,7 @@ original_slug: Web/HTML/Elemento/input/text
 
 <p>Puedes proporcionar un marcador de posición útil dentro de tu entrada de texto que puede proporcionar una pista sobre qué ingresar al incluir el uso del atributo {{HTMLAttrxRef("placeholder", "input")}}. Mira el siguiente ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Elige un nombre de usuario: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name"
@@ -271,7 +271,7 @@ original_slug: Web/HTML/Elemento/input/text
 
 <p>El tamaño físico del cuadro de entrada se puede controlar mediante el atributo {{HTMLAttrxRef("size", "input")}}. Con él, puedes especificar el número de caracteres que la entrada de texto puede mostrar a la vez. Esto afecta el ancho del elemento, lo cual te permite especificar el ancho en términos de caracteres en lugar de píxeles. En este ejemplo, por ejemplo, la entrada tiene 30 caracteres de ancho:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Elige un nombre de usuario: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name"
@@ -297,7 +297,7 @@ original_slug: Web/HTML/Elemento/input/text
 
 <p>Hay pseudoclases útiles disponibles para diseñar elementos de formulario para ayudar al usuario a ver cuándo sus valores son válidos o no. Estos son {{CSSxRef(": valid")}} e {{CSSxRef(":invalid")}}. En esta sección, usaremos el siguiente CSS, que colocará una marca de verificación (tilde) junto a las entradas que contienen valores válidos y una cruz (X) junto a las entradas que contienen valores no válidos.</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -323,7 +323,7 @@ input:valid+span:after {
 
 <p>Puedes usar el atributo {{HTMLAttrxRef("required", "input")}} como una manera fácil de hacer que se requiera ingresar un valor antes de que se permita el envío del formulario:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Elige un nombre de usuario: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name" required&gt;
@@ -335,7 +335,7 @@ input:valid+span:after {
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
+<pre class="brush: css">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
 </div>
 
 <p>Esto se renderiza así:</p>
@@ -350,7 +350,7 @@ input:valid+span:after {
 
 <p>El siguiente ejemplo requiere que el valor ingresado tenga entre 4 y 8 caracteres de longitud.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Elige un nombre de usuario: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name" required size="10"
@@ -364,7 +364,7 @@ input:valid+span:after {
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
+<pre class="brush: css">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
 </div>
 
 <p>Esto se renderiza así:</p>
@@ -383,7 +383,7 @@ input:valid+span:after {
 
 <p>El siguiente ejemplo restringe el valor a 4-8 caracteres y requiere que contenga solo letras minúsculas.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Elige un nombre de usuario: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name" required size="45"
@@ -397,7 +397,7 @@ input:valid+span:after {
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }

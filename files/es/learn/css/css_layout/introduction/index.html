@@ -42,7 +42,7 @@ original_slug: Learn/CSS/CSS_layout/Introducción
 
 <p>El flujo normal es el modo como el navegador presenta las páginas HTML de forma predeterminada cuando no haces nada para controlar el diseño de página. Echemos un vistazo rápido a un ejemplo HTML:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Amo a mi gato.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Amo a mi gato.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Comprar comida para gatos&lt;/li&gt;
@@ -96,7 +96,7 @@ original_slug: Learn/CSS/CSS_layout/Introducción
 <div class="hidden">
 <h6 id="Ejemplo_Flexbox_1">Ejemplo Flexbox 1</h6>
 
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper &gt; div {
     border-radius: 5px;
@@ -106,12 +106,12 @@ original_slug: Learn/CSS/CSS_layout/Introducción
     </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: flex;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;Uno&lt;/div&gt;
   &lt;div class="box2"&gt;Dos&lt;/div&gt;
   &lt;div class="box3"&gt;Tres&lt;/div&gt;
@@ -129,7 +129,7 @@ original_slug: Learn/CSS/CSS_layout/Introducción
 <div class="hidden">
 <h6 id="Ejemplo_Flexbox_2">Ejemplo Flexbox 2</h6>
 
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
     .wrapper &gt; div {
         border-radius: 5px;
@@ -138,7 +138,7 @@ original_slug: Learn/CSS/CSS_layout/Introducción
     }</pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: flex;
 }
 
@@ -147,7 +147,7 @@ original_slug: Learn/CSS/CSS_layout/Introducción
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="box1"&gt;Uno&lt;/div&gt;
     &lt;div class="box2"&gt;Dos&lt;/div&gt;
     &lt;div class="box3"&gt;Tres&lt;/div&gt;
@@ -171,7 +171,7 @@ original_slug: Learn/CSS/CSS_layout/Introducción
 <div class="hidden">
 <h6 id="Ejemplo_de_cuadrícula_1">Ejemplo de cuadrícula 1</h6>
 
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
     .wrapper &gt; div {
         border-radius: 5px;
@@ -180,7 +180,7 @@ original_slug: Learn/CSS/CSS_layout/Introducción
     }</pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px;
@@ -188,7 +188,7 @@ original_slug: Learn/CSS/CSS_layout/Introducción
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="box1"&gt;Uno&lt;/div&gt;
     &lt;div class="box2"&gt;Dos&lt;/div&gt;
     &lt;div class="box3"&gt;Tres&lt;/div&gt;
@@ -207,7 +207,7 @@ original_slug: Learn/CSS/CSS_layout/Introducción
 <div class="hidden">
 <h6 id="Ejemplo_de_cuadrícula_2">Ejemplo de cuadrícula 2</h6>
 
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
     .wrapper &gt; div {
         border-radius: 5px;
@@ -216,7 +216,7 @@ original_slug: Learn/CSS/CSS_layout/Introducción
     }</pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px;
@@ -239,7 +239,7 @@ original_slug: Learn/CSS/CSS_layout/Introducción
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="box1"&gt;Uno&lt;/div&gt;
     &lt;div class="box2"&gt;Dos&lt;/div&gt;
     &lt;div class="box3"&gt;Tres&lt;/div&gt;
@@ -274,7 +274,7 @@ original_slug: Learn/CSS/CSS_layout/Introducción
 <div class="hidden">
 <h6 id="Ejemplo_de_flotación">Ejemplo de flotación</h6>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
@@ -294,7 +294,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Ejemplo sencillo de flotación&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Ejemplo sencillo de flotación&lt;/h1&gt;
 
 &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -302,7 +302,7 @@ p {
 
 </pre>
 
-<pre class="brush: css notranslate">
+<pre class="brush: css">
 .box {
     float: left;
     width: 150px;
@@ -338,7 +338,7 @@ p {
 
 <p>Para familiarizarte con estas técnicas de diseño de página, te mostraremos un par de ejemplos rápidos. Todos nuestros ejemplos contarán con el mismo HTML, que es el siguiente:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Posicionamiento&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Posicionamiento&lt;/h1&gt;
 
 &lt;p&gt;Soy un elemento básico de nivel de bloque.&lt;/p&gt;
 &lt;p class="positioned"&gt;Soy un elemento básico de nivel de bloque.&lt;/p&gt;
@@ -346,7 +346,7 @@ p {
 
 <p>Aplicaremos a este HTML un estilo predeterminado definido por el CSS siguiente:</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -368,7 +368,7 @@ p {
 
 <p>El posicionamiento relativo permite compensar un elemento desde la posición por defecto que tendría en flujo normal. Esto significa que podrías hacer una tarea como mover un icono un poco hacia abajo para que se alinee con una etiqueta de texto. Para ello, podríamos añadir la regla de posicionamiento relativo siguiente:</p>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
   position: relative;
   top: 30px;
   left: 30px;
@@ -382,13 +382,13 @@ p {
 <div class="hidden">
 <h6 id="Ejemplo_de_posicionamiento_relativo">Ejemplo de posicionamiento relativo</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;El posicionamiento relativo&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;El posicionamiento relativo&lt;/h1&gt;
 
 &lt;p&gt;Soy un elemento básico de nivel de bloque.&lt;/p&gt;
 &lt;p class="positioned"&gt;Este es mi elemento con posicionamiento relativo. &lt;/p&gt;
 &lt;p&gt;Soy un elemento básico de nivel de bloque.&lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -403,7 +403,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
   position: relative;
   background: rgba(255,84,104,.3);
   border: 2px solid rgb(255,84,104);
@@ -420,7 +420,7 @@ p {
 
 <p>Volviendo a nuestro ejemplo original no posicionado, podríamos añadir la regla CSS siguiente para implementar el posicionamiento absoluto:</p>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
   position: absolute;
   top: 30px;
   left: 30px;
@@ -432,13 +432,13 @@ p {
 <div class="hidden">
 <h6 id="Ejemplo_de_posicionamiento_absoluto">Ejemplo de posicionamiento absoluto</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Posicionamiento absoluto&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Posicionamiento absoluto&lt;/h1&gt;
 
 &lt;p&gt;Soy un elemento básico de nivel de bloque.&lt;/p&gt;
 &lt;p class="positioned"&gt;Este es mi elemento con posicionamiento absoluto. &lt;/p&gt;
 &lt;p&gt;Soy un elemento básico de nivel de bloque.&lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -453,7 +453,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
     position: absolute;
     background: rgba(255,84,104,.3);
     border: 2px solid rgb(255,84,104);
@@ -472,7 +472,7 @@ p {
 
 <p>En este ejemplo nuestro HTML tiene tres párrafos de texto para poder tener una página que se desplace, y un cuadro al que asignamos la propiedad <code>position: fixed</code>.</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Posicionamiento fijo&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Posicionamiento fijo&lt;/h1&gt;
 
 &lt;div class="positioned"&gt;Fijo&lt;/div&gt;
 
@@ -485,7 +485,7 @@ p {
 <div class="hidden">
 <h6 id="Ejemplo_de_posicionamiento_fijo">Ejemplo de posicionamiento fijo</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Posicionamiento fijo&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Posicionamiento fijo&lt;/h1&gt;
 
 &lt;div class="positioned"&gt;Fijo&lt;/div&gt;
 
@@ -495,7 +495,7 @@ p {
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
     width: 500px;
     margin: 0 auto;
 }
@@ -509,7 +509,7 @@ p {
 }</pre>
 </div>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
     position: fixed;
     top: 30px;
     left: 30px;
@@ -526,7 +526,7 @@ p {
 <div class="hidden">
 <h6 id="Ejemplo_de_posicionamiento_pegajoso">Ejemplo de posicionamiento pegajoso</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Posicionamiento pegajoso&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Posicionamiento pegajoso&lt;/h1&gt;
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
 
@@ -536,7 +536,7 @@ p {
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;       </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -550,7 +550,7 @@ p {
 }</pre>
 </div>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
   position: sticky;
   top: 30px;
   left: 30px;
@@ -573,7 +573,7 @@ p {
 
 <p>Veamos un ejemplo. Primero, un código de marcado sencillo que crea un formulario HTML. Cada elemento de entrada tiene una etiqueta, y también hemos incluido un título dentro de un párrafo. Cada par etiqueta/entrada está delimitado por un elemento {{htmlelement ("div")}}, con fines de compaginación.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;En primer lugar, díganos su nombre y edad.&lt;/p&gt;
   &lt;div&gt;
     &lt;label for="fname"&gt;Nombre:&lt;/label&gt;
@@ -593,7 +593,7 @@ p {
 
 <p>Observa que se la ha proporcionado al párrafo de encabezado <code>display: table-caption;,</code> lo que hace que actúe como una celda de encabezado ({{htmlelement ("caption")}}) de la tabla; y con <code>caption-side: bottom;</code> se le dice a la celda de encabezado que se asiente en la parte inferior de la tabla con fines de aplicación de estilo, aunque en el código fuente el marcado está antes que los elementos <code>&lt;input&gt;</code>. Esto permite un poco de flexibilidad.</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -643,7 +643,7 @@ form p {
 
 <p>En el ejemplo siguiente comenzamos con un bloque de HTML dentro de un elemento <code>&lt;div&gt;</code> que contiene una clase <code>container</code>.</p>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
     &lt;H1&gt;Diseño en columnas&lt;/ h1&gt;
 
     &lt;p&gt;Párrafo 1.&lt;/p&gt;
@@ -658,7 +658,7 @@ form p {
 <div class="hidden">
 <h6 id="Ejemplo_de_diseño_en_columnas">Ejemplo de diseño en columnas</h6>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
         &lt;h1&gt; Diseño en columnas &lt;/h1&gt;
 
         &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
@@ -668,10 +668,10 @@ form p {
 
     &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">body { max-width: 800px; margin: 0 auto; } </pre>
+<pre class="brush: css">body { max-width: 800px; margin: 0 auto; } </pre>
 </div>
 
-<pre class="brush: css notranslate">    .container {
+<pre class="brush: css">    .container {
         column-width: 200px;
     }</pre>
 </div>

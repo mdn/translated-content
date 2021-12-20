@@ -100,13 +100,13 @@ original_slug: Web/HTML/Atributos/min
 
 <p>Agrega un gran borde rojo alrededor de los {{HTMLElement("input")}}s no válidos:</p>
 
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: solid red 3px;
 }</pre>
 
 <p>Luego define un {{HTMLElement("input")}} con un valor mínimo de 7.2, omitiendo el atributo <code>step</code>, en donde el valor predeterminado es 1.</p>
 
-<pre class="brush: html notranslate">&lt;input id="myNumber" name="myNumber" type="number" min="7.2" value="8"&gt;</pre>
+<pre class="brush: html">&lt;input id="myNumber" name="myNumber" type="number" min="7.2" value="8"&gt;</pre>
 
 <p>Dado que <code>step</code> tiene el valor predeterminado de 1, los valores válidos incluyen <code>7.2</code>, <code>8.2</code>, <code>9.2</code> y así sucesivamente. El valor 8 no es válido. Dado que incluye un valor no válido, los navegadores compatibles mostrarán el valor como no válido.</p>
 

@@ -67,33 +67,33 @@ original_slug: Web/JavaScript/Una_re-introducción_a_JavaScript
 
 <p>Los números en JavaScript son "valores IEEE 754 de formato de 64 bits de doble precisión", de acuerdo con las especificaciones. <strong><em>No existen números enteros</em></strong> en JavaScript (excepto {{jsxref("BigInt")}}), por lo que debes tener un poco de cuidado. Ve este ejemplo:</p>
 
-<pre class="syntaxbox notranslate">console.log(3 / 2);             // 1.5, <em>not</em> 1
+<pre class="syntaxbox">console.log(3 / 2);             // 1.5, <em>not</em> 1
 console.log(Math.floor(3 / 2)); // 1</pre>
 
 <p>Entonces, un <em>entero aparente</em> de hecho <em>implícitamente es un <code>float</code></em>.</p>
 
 <p>Además, ten cuidado con cosas como:</p>
 
-<pre class="brush: js notranslate">0.1 + 0.2 == 0.30000000000000004;
+<pre class="brush: js">0.1 + 0.2 == 0.30000000000000004;
 </pre>
 
 <p>En la práctica, los valores enteros se tratan como enteros de 32 bits, y algunas implementaciones incluso los almacenan de esa manera hasta que se les pide que realicen una instrucción que sea válida en un Número pero no en un entero de 32 bits. Esto puede ser importante para operaciones bit a bit.</p>
 
 <p>Se admiten los {{jsxref("Operators", "operadores", "#Operadores_aritméticos")}} estándar, incluidas la aritmética de suma, resta, módulo (o resto), etc. También hay un objeto incorporado que no mencionamos anteriormente llamado {{jsxref("Math")}} que proporciona funciones matemáticas avanzadas y constantes:</p>
 
-<pre class="brush: js notranslate">Math.sin(3.5);
+<pre class="brush: js">Math.sin(3.5);
 var circumference = 2 * Math.PI * r;
 </pre>
 
 <p>Puedes convertir una cadena en un número entero usando la función {{jsxref("Objetos_Globales/parseInt", "parseInt()")}} incorporada. Esta toma la base para la conversión como un segundo argumento opcional, que siempre debes proporcionar:</p>
 
-<pre class="brush: js notranslate">parseInt('123', 10); // 123
+<pre class="brush: js">parseInt('123', 10); // 123
 parseInt('010', 10); // 10
 </pre>
 
 <p>En los navegadores más antiguos, se supone que las cadenas que comienzan con un "0" están en octal (raíz 8), pero este no ha sido el caso desde 2013 más o menos. A menos que estés seguro de tu formato de cadena, puedes obtener resultados sorprendentes en esos navegadores más antiguos:</p>
 
-<pre class="brush: js notranslate">parseInt('010');  //  8
+<pre class="brush: js">parseInt('010');  //  8
 parseInt('0x10'); // 16
 </pre>
 
@@ -101,42 +101,42 @@ parseInt('0x10'); // 16
 
 <p>Si deseas convertir un número binario en un entero, simplemente cambia la base:</p>
 
-<pre class="brush: js notranslate">parseInt('11', 2); // 3
+<pre class="brush: js">parseInt('11', 2); // 3
 </pre>
 
 <p>De manera similar, puedes analizar números de coma flotante utilizando la función incorporada {{jsxref("Objetos_Globales/parseFloat", "parseFloat()")}}. A diferencia de su primo {{jsxref("Objetos_Globales/parseInt", "parseInt()")}}, <code>parseFloat()</code> siempre usa base 10.</p>
 
 <p>También puedes utilizar el operador <code>+</code> unario para convertir valores en números:</p>
 
-<pre class="brush: js notranslate">+ '42';   // 42
+<pre class="brush: js">+ '42';   // 42
 + '010';  // 10
 + '0x10'; // 16
 </pre>
 
 <p>Se devuelve un valor especial llamado {{jsxref("NaN")}} (abreviatura de "Not a Number" o "No es un número") si la cadena no es numérica:</p>
 
-<pre class="brush: js notranslate">parseInt('hello', 10); // NaN
+<pre class="brush: js">parseInt('hello', 10); // NaN
 </pre>
 
 <p><code>NaN</code> es tóxico: si lo proporcionas como operando para cualquier operación matemática, el resultado también será <code>NaN</code>:</p>
 
-<pre class="brush: js notranslate">NaN + 5; // NaN
+<pre class="brush: js">NaN + 5; // NaN
 </pre>
 
 <p>Puedes probar si un valor es <code>NaN</code> utilizando la función incorporada {{jsxref("Objetos_Globales/isNaN", "isNaN()")}}:</p>
 
-<pre class="brush: js notranslate">isNaN(NaN); // true
+<pre class="brush: js">isNaN(NaN); // true
 </pre>
 
 <p>JavaScript también tiene los valores especiales {{jsxref("Infinity")}} e <code>-Infinity</code>:</p>
 
-<pre class="brush: js notranslate"> 1 / 0; //  Infinity
+<pre class="brush: js"> 1 / 0; //  Infinity
 -1 / 0; // -Infinity
 </pre>
 
 <p>Puedes probar los valores <code>Infinity</code>, <code>-Infinity</code> y <code>NaN</code> utilizando la función integrada {{jsxref("Objetos_Globales/isFinite", "isFinite()")}}:</p>
 
-<pre class="brush: js notranslate">isFinite(1 / 0); // false
+<pre class="brush: js">isFinite(1 / 0); // false
 isFinite(-Infinity); // false
 isFinite(NaN); // false
 </pre>
@@ -151,12 +151,12 @@ isFinite(NaN); // false
 
 <p>Para encontrar la longitud de una cadena (en unidades de código), accede a su propiedad {{jsxref("Objetos_Globales/String/length", "lenght")}}:</p>
 
-<pre class="brush: js notranslate">'hello'.length; // 5
+<pre class="brush: js">'hello'.length; // 5
 </pre>
 
 <p>¡Aquí está nuestra primer pincelada con objetos JavaScript! ¿Mencionamos que también puedes usar cadenas como {{jsxref("Object", "objectos", "", 1)}}? También tienen {{jsxref("String", "métodos", "#Métodos", 1)}} que te permiten manipular la cadena y acceder a información sobre la cadena:</p>
 
-<pre class="brush: js notranslate">'hello'.charAt(0); // "h"
+<pre class="brush: js">'hello'.charAt(0); // "h"
 'hello, world'.replace('world', 'mars'); // "hello, mars"
 'hello'.toUpperCase(); // "HELLO"
 </pre>
@@ -174,7 +174,7 @@ isFinite(NaN); // false
 
 <p>Puedes realizar esta conversión explícitamente utilizando la función <code>Boolean()</code>:</p>
 
-<pre class="brush: js notranslate">Boolean('');  // false
+<pre class="brush: js">Boolean('');  // false
 Boolean(234); // true
 </pre>
 
@@ -188,13 +188,13 @@ Boolean(234); // true
  <br>
  <strong><code>let</code></strong> te permite declarar variables a nivel de bloque. La variable declarada está disponible en el <em>bloque</em> en el que está incluida.</p>
 
-<pre class="brush: js notranslate">let a;
+<pre class="brush: js">let a;
 let name = 'Simon';
 </pre>
 
 <p>El siguiente es un ejemplo de alcance con una variable declarada con <code><strong>let</strong></code>:</p>
 
-<pre class="brush: js notranslate">// myLetVariable *no* es visible aquí
+<pre class="brush: js">// myLetVariable *no* es visible aquí
 
 for (let myLetVariable = 0; myLetVariable &lt; 5; myLetVariable++) {
   // myLetVariable solo es visible aquí
@@ -206,18 +206,18 @@ for (let myLetVariable = 0; myLetVariable &lt; 5; myLetVariable++) {
 
 <p><code><strong>const</strong></code> te permite declarar variables cuyos valores pretendes nunca cambiar. La variable está disponible en el <em>bloque</em> en el que se declara.</p>
 
-<pre class="brush: js notranslate">const Pi = 3.14; // establece la variable Pi
+<pre class="brush: js">const Pi = 3.14; // establece la variable Pi
 Pi = 1; // arrojará un error porque no puede cambiar una variable constante.</pre>
 
 <p><br>
  <code><strong>var</strong></code> es la palabra clave declarativa más común. No tiene las restricciones que tienen las otras dos palabras clave. Esto se debe a que tradicionalmente era la única forma de declarar una variable en JavaScript. Una variable declarada con la palabra clave <strong><code>var</code></strong> está disponible en la <em>función</em> en la que se declara.</p>
 
-<pre class="brush: js notranslate">var a;
+<pre class="brush: js">var a;
 var name = 'Simon';</pre>
 
 <p>Un ejemplo de ámbito con una variable declarada con <strong><code>var</code>:</strong></p>
 
-<pre class="brush: js notranslate">// myVarVariable *es* visible aquí
+<pre class="brush: js">// myVarVariable *es* visible aquí
 
 for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
   // myVarVariable es visible para toda la función
@@ -234,7 +234,7 @@ for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
 
 <p>Los operadores numéricos de JavaScript son <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> y <code>%</code> que es el operador de residuo o resto (<a href="/es/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_%28%29">que es lo mismo que módulo</a>). Los valores se asignan usando <code>=</code>, y también hay declaraciones de asignación compuestas como <code>+=</code> y <code>-=</code>. Estas se extienden hasta <code>x = x <em>operador</em> y</code>.</p>
 
-<pre class="brush: js notranslate">x += 5;
+<pre class="brush: js">x += 5;
 x = x + 5;
 </pre>
 
@@ -242,12 +242,12 @@ x = x + 5;
 
 <p>El <a href="/es/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition" title="/es/JavaScript/Reference/Operators/String_Operators">operador <code>+</code></a> también hace concatenación de cadenas:</p>
 
-<pre class="brush: js notranslate">'hello' + ' world'; // "hello world"
+<pre class="brush: js">'hello' + ' world'; // "hello world"
 </pre>
 
 <p>Si agregas una cadena a un número (u otro valor), todo se convierte primero en cadena. Esto podría hacerte tropezar:</p>
 
-<pre class="brush: js notranslate">'3' + 4 + 5;  // "345"
+<pre class="brush: js">'3' + 4 + 5;  // "345"
  3 + 4 + '5'; // "75"
 </pre>
 
@@ -255,13 +255,13 @@ x = x + 5;
 
 <p><a href="/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="/es/JavaScript/Reference/Operators/Comparison_Operators">Se pueden realizar comparaciones</a> en JavaScript utilizando <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> y <code>&gt;=</code>. Estas funcionan tanto para cadenas como para números. La igualdad es un poco menos sencilla. El operador doble-igual realiza la coerción de tipos si le das diferentes tipos, con resultados a veces interesantes:</p>
 
-<pre class="brush: js notranslate">123 == '123'; // true
+<pre class="brush: js">123 == '123'; // true
 1 == true; // true
 </pre>
 
 <p>Para evitar la coerción de tipos, usa el operador triple-igual:</p>
 
-<pre class="brush: js notranslate">123 === '123'; // false
+<pre class="brush: js">123 === '123'; // false
 1 === true;    // false
 </pre>
 
@@ -273,7 +273,7 @@ x = x + 5;
 
 <p>JavaScript tiene un conjunto de estructuras de control similar a otros lenguajes de la familia C. Las declaraciones condicionales son compatibles con <code>if</code> y <code>else</code>; las puedes encadenarlas si lo deseas:</p>
 
-<pre class="brush: js notranslate">var name = 'kittens';
+<pre class="brush: js">var name = 'kittens';
 if (name == 'puppies') {
   name += ' woof';
 } else if (name == 'kittens') {
@@ -286,7 +286,7 @@ name == 'kittens meow';
 
 <p>JavaScript tiene bucles <code>while</code> y bucles <code>do-while</code>. El primero es bueno para bucles básicos; el segundo bucle para donde deseas asegurarte de que el cuerpo del bucle se ejecute por lo menos una vez:</p>
 
-<pre class="brush: js notranslate">while (true) {
+<pre class="brush: js">while (true) {
   // ¡un bucle infinito!
 }
 
@@ -298,43 +298,43 @@ do {
 
 <p>El <a href="/es/docs/Web/JavaScript/Reference/Statements/for">bucle <code>for</code></a> de JavaScript es igual que el de C y Java: te permite proporcione la información de control para tu bucle en una sola línea.</p>
 
-<pre class="brush: js notranslate">for (var i = 0; i &lt; 5; i++) {
+<pre class="brush: js">for (var i = 0; i &lt; 5; i++) {
   // Se ejecutará 5 veces
 }
 </pre>
 
 <p>JavaScript también contiene otros dos bucles <code>for</code> destacados: <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for</code>...<code>of</code></a></p>
 
-<pre class="brush: js notranslate">for (let value of array) {
+<pre class="brush: js">for (let value of array) {
   // haz algo con valor
 }
 </pre>
 
 <p>y <a href="/es/docs/Web/JavaScript/Reference/Statements/for...in"><code>for</code>...<code>in</code></a>:</p>
 
-<pre class="brush: js notranslate">for (let property in object) {
+<pre class="brush: js">for (let property in object) {
   // hacer algo con la propiedad del objeto
 }
 </pre>
 
 <p>Los operadores <code>&amp;&amp;</code> y <code>||</code> utilizan lógica de cortocircuito, lo cual significa que si ejecutarán su segundo operando depende del primero. Esto es útil para verificar objetos nulos antes de acceder a sus atributos:</p>
 
-<pre class="brush: js notranslate">var name = o &amp;&amp; o.getName();
+<pre class="brush: js">var name = o &amp;&amp; o.getName();
 </pre>
 
 <p>O para almacenar en caché los valores (cuando los valores falsos no son válidos):</p>
 
-<pre class="brush: js notranslate">var name = cachedName || (cachedName = getName());
+<pre class="brush: js">var name = cachedName || (cachedName = getName());
 </pre>
 
 <p>JavaScript tiene un operador ternario para expresiones condicionales:</p>
 
-<pre class="brush: js notranslate">var allowed = (age &gt; 18) ? 'yes' : 'no';
+<pre class="brush: js">var allowed = (age &gt; 18) ? 'yes' : 'no';
 </pre>
 
 <p>La instrucción <code>switch</code> se puede usar para múltiples ramas según un número o cadena:</p>
 
-<pre class="brush: js notranslate">switch (action) {
+<pre class="brush: js">switch (action) {
   case 'draw':
     drawIt();
     break;
@@ -348,7 +348,7 @@ do {
 
 <p>Si no agregas una instrucción <code>break</code>, la ejecución "caerá" al siguiente nivel. Esto muy rara vez es lo que deseas; de hecho, vale la pena etiquetar específicamente la caída deliberada con un comentario si realmente lo pretendías para ayudar a la depuración:</p>
 
-<pre class="brush: js notranslate">switch (a) {
+<pre class="brush: js">switch (a) {
   case 1: // caída deliberada
   case 2:
     eatIt();
@@ -360,7 +360,7 @@ do {
 
 <p>La cláusula <code>default</code> es opcional. Puedes tener expresiones tanto en la parte del switch como en los casos si lo deseas; las comparaciones tienen lugar entre los dos utilizando el operador <code>===</code>:</p>
 
-<pre class="brush: js notranslate">switch (1 + 3) {
+<pre class="brush: js">switch (1 + 3) {
   case 2 + 2:
     yay();
     break;
@@ -387,19 +387,19 @@ do {
 
 <p>Hay dos formas básicas de crear un objeto vacío:</p>
 
-<pre class="brush: js notranslate">var obj = new Object();
+<pre class="brush: js">var obj = new Object();
 </pre>
 
 <p>Y:</p>
 
-<pre class="brush: js notranslate">var obj = {};
+<pre class="brush: js">var obj = {};
 </pre>
 
 <p>Estas son semánticamente equivalentes; la segunda se llama sintaxis literal de objeto y es más conveniente. Esta sintaxis también es el núcleo del formato JSON y se debe preferir en todo momento.</p>
 
 <p>La sintaxis de objeto literal se puede utilizar para iniciar un objeto en su totalidad:</p>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
   name: 'Carrot',
   for: 'Max', // 'for' es una palabra reservada, use '_for' en su lugar.
   details: {
@@ -411,13 +411,13 @@ do {
 
 <p>El acceso a los atributos se puede encadenar:</p>
 
-<pre class="brush: js notranslate">obj.details.color; // orange
+<pre class="brush: js">obj.details.color; // orange
 obj['details']['size']; // 12
 </pre>
 
 <p>El siguiente ejemplo crea un prototipo de objeto (<code>Person</code>) y una instancia de ese prototipo (<code>you</code>).</p>
 
-<pre class="brush: js notranslate">function Person(name, age) {
+<pre class="brush: js">function Person(name, age) {
   this.name = name;
   this.age = age;
 }
@@ -430,14 +430,14 @@ var you = new Person('You', 24);
 
 <p><strong>Una vez creado</strong>, se puede volver a acceder a las propiedades de un objeto de dos formas:</p>
 
-<pre class="brush: js notranslate">// notación de puntos
+<pre class="brush: js">// notación de puntos
 obj.name = 'Simon';
 var name = obj.name;
 </pre>
 
 <p>Y...</p>
 
-<pre class="brush: js notranslate">// notación de corchetes
+<pre class="brush: js">// notación de corchetes
 obj['name'] = 'Simon';
 var name = obj['name'];
 // puedes usar una variable para definir una clave
@@ -447,7 +447,7 @@ obj[user] = prompt('¿cuál es su valor?')
 
 <p>Estas también son semánticamente equivalentes. El segundo método tiene la ventaja de que el nombre de la propiedad se proporciona como una cadena, lo cual significa que se puede calcular en tiempo de ejecución. Sin embargo, el uso de este método evita que se apliquen algunas optimizaciones de minificación y del motor de JavaScript. También se puede utilizar para establecer y obtener propiedades con nombres <a href="/es/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords" title="/es/JavaScript/Reference/Reserved_Words">palabras reservadas</a>:</p>
 
-<pre class="brush: js notranslate">obj.for = 'Simon'; // Error de sintaxis, porque 'for' es una palabra reservada
+<pre class="brush: js">obj.for = 'Simon'; // Error de sintaxis, porque 'for' es una palabra reservada
 obj['for'] = 'Simon'; // trabaja bien
 </pre>
 
@@ -467,7 +467,7 @@ obj['for'] = 'Simon'; // trabaja bien
 
 <p>Una forma de crear arreglos es la siguiente:</p>
 
-<pre class="brush: js notranslate">var a = new Array();
+<pre class="brush: js">var a = new Array();
 a[0] = 'dog';
 a[1] = 'cat';
 a[2] = 'hen';
@@ -476,13 +476,13 @@ a.length; // 3
 
 <p>Una notación más conveniente es usar un arreglo literal:</p>
 
-<pre class="brush: js notranslate">var a = ['dog', 'cat', 'hen'];
+<pre class="brush: js">var a = ['dog', 'cat', 'hen'];
 a.length; // 3
 </pre>
 
 <p>Ten en cuenta que <code>array.length</code> no necesariamente es el número de elementos del arreglo. Considera lo siguiente:</p>
 
-<pre class="brush: js notranslate">var a = ['dog', 'cat', 'hen'];
+<pre class="brush: js">var a = ['dog', 'cat', 'hen'];
 a[100] = 'fox';
 a.length; // 101
 </pre>
@@ -491,19 +491,19 @@ a.length; // 101
 
 <p>Si consultas un índice de arreglo que no existe, obtendrás un valor de <code>undefined</code>:</p>
 
-<pre class="brush: js notranslate">typeof a[90]; // undefined
+<pre class="brush: js">typeof a[90]; // undefined
 </pre>
 
 <p>Si tienes en cuenta lo anterior sobre <code>[]</code> y <code>length</code>, puedes iterar sobre un arreglo utilizando el siguiente bucle <code>for</code>:</p>
 
-<pre class="brush: js notranslate">for (var i = 0; i &lt; a.length; i++) {
+<pre class="brush: js">for (var i = 0; i &lt; a.length; i++) {
   // Haz algo con a[i]
 }
 </pre>
 
 <p>ES2015 introdujo el bucle más conciso <a href="/es/docs/Web/JavaScript/Reference/Statements/for...of"><code>for</code>...<code>of</code></a> para objetos iterables como arreglos:</p>
 
-<pre class="brush:js notranslate">for (const currentValue of a) {
+<pre class="brush:js">for (const currentValue of a) {
   // Haz algo con currentValue
 }</pre>
 
@@ -511,14 +511,14 @@ a.length; // 101
 
 <p>Otra forma de iterar sobre un arreglo que se agregó con ECMAScript 5 es {{jsxref("Objetos_Globales/Array/forEach", "arr.forEach()")}}:</p>
 
-<pre class="brush: js notranslate">['dog', 'cat', 'hen'].forEach(function(currentValue, index, array) {
+<pre class="brush: js">['dog', 'cat', 'hen'].forEach(function(currentValue, index, array) {
   // Hacer algo con currentValue o array[index]
 });
 </pre>
 
 <p>Si deseas agregar un elemento a un arreglo, simplemente hazlo así:</p>
 
-<pre class="brush: js notranslate">a.push(item);</pre>
+<pre class="brush: js">a.push(item);</pre>
 
 <p>Los arreglos vienen con varios métodos. Consulta también la {{jsxref("Objetos_Globales/Array", "documentación completa para métodos de arreglo")}}.</p>
 
@@ -585,7 +585,7 @@ a.length; // 101
 
 <p>Junto con los objetos, las funciones son el componente principal para comprender JavaScript. La función más básica no podría ser mucho más sencilla:</p>
 
-<pre class="brush: js notranslate">function add(x, y) {
+<pre class="brush: js">function add(x, y) {
   var total = x + y;
   return total;
 }
@@ -595,19 +595,19 @@ a.length; // 101
 
 <p>Los parámetros nombrados resultan ser más intuitivos que cualquier otra cosa. Puedes llamar a una función sin pasar los parámetros que espera, en cuyo caso se establecerán en <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">add(); // NaN
+<pre class="brush: js">add(); // NaN
 // No puedes realizar sumas en undefined
 </pre>
 
 <p>También puedes pasar más argumentos de los que espera la función:</p>
 
-<pre class="brush: js notranslate">add(2, 3, 4); // 5
+<pre class="brush: js">add(2, 3, 4); // 5
 // sumó los dos primeros; el 4 fue ignorado
 </pre>
 
 <p>Eso puede parecer un poco tonto, pero las funciones tienen acceso a una variable adicional dentro de su cuerpo llamada <a href="/es/docs/Web/JavaScript/Reference/Functions/argument" title="/es/JavaScript/Reference/Functions_and_function_scope/arguments"><code>argumentos</code></a>, que es un objeto tipo arreglo que contiene todos los valores pasados a la función. Reescribamos la función de suma para tomar tantos valores como queramos:</p>
 
-<pre class="brush: js notranslate">function add() {
+<pre class="brush: js">function add() {
   var sum = 0;
   for (var i = 0, j = arguments.length; i &lt; j; i++) {
     sum += arguments[i];
@@ -620,7 +620,7 @@ add(2, 3, 4, 5); // 14
 
 <p>Sin embargo, eso no es más útil que escribir <code>2 + 3 + 4 + 5</code>. Creemos una función de promedio:</p>
 
-<pre class="brush: js notranslate">function avg() {
+<pre class="brush: js">function avg() {
   var sum = 0;
   for (var i = 0, j = arguments.length; i &lt; j; i++) {
     sum += arguments[i];
@@ -633,7 +633,7 @@ avg(2, 3, 4, 5); // 3.5
 
 <p>Esta es bastante útil, pero parece un poco detallada. Para reducir un poco más este código, podemos considerar la sustitución del uso del arreglo de argumentos a través de la <a href="/es/docs/Web/JavaScript/Reference/Functions/rest_parameters">sintaxis del parámetro <code>Rest</code></a>. De esta manera, podemos pasar cualquier número de argumentos a la función manteniendo nuestro código mínimo. El <strong>operador de parámetro <code>rest</code></strong> se usa en listas de parámetros de función con el formato: <strong>...variable</strong> e incluirá dentro de esa variable la lista completa de argumentos no capturados a los que se llamó la función. <code>with</code>. También reemplazaremos el bucle <strong>for</strong> con un bucle <strong>for...of</strong> para devolver los valores dentro de nuestra variable.</p>
 
-<pre class="brush: js notranslate">function avg(...args) {
+<pre class="brush: js">function avg(...args) {
   var sum = 0;
   for (let value of args) {
     sum += value;
@@ -648,7 +648,7 @@ avg(2, 3, 4, 5); // 3.5
 <br>
 Es importante tener en cuenta que dondequiera que se coloque el operador de parámetro <code>rest</code> en una declaración de función, almacenará todos los argumentos <em>después</em> de su declaración, pero no antes. <em>es decir, function</em> <em>avg(</em><strong>firstValue, </strong><em>...args)</em> almacenará el primer valor pasado a la función en la variable <strong>firstValue</strong> y los argumentos restantes en <strong>args</strong>. Esa es otra característica útil del lenguaje, pero nos lleva a un nuevo problema. La función <code>avg() </code> toma una lista de argumentos separados por comas, pero ¿qué sucede si deseas encontrar el promedio de un arreglo? Simplemente, podrías reescribir la función de la siguiente manera:</div>
 
-<pre class="brush: js notranslate">function avgArray(arr) {
+<pre class="brush: js">function avgArray(arr) {
   var sum = 0;
   for (var i = 0, j = arr.length; i &lt; j; i++) {
     sum += arr[i];
@@ -661,7 +661,7 @@ avgArray([2, 3, 4, 5]); // 3.5
 
 <p>Pero sería bueno poder reutilizar la función que ya hemos creado. Afortunadamente, JavaScript te permite llamar a una función con un arreglo arbitrario de argumentos, usando el método {{jsxref("Function.apply", "apply()")}} de cualquier objeto función.</p>
 
-<pre class="brush: js notranslate">avg.apply(null, [2, 3, 4, 5]); // 3.5
+<pre class="brush: js">avg.apply(null, [2, 3, 4, 5]); // 3.5
 </pre>
 
 <p>El segundo argumento de <code>apply()</code> es el arreglo que se utilizará como <code>arguments</code>; el primero se explicará más adelante. Esto enfatiza el hecho de que las funciones también son objetos.</p>
@@ -674,7 +674,7 @@ avgArray([2, 3, 4, 5]); // 3.5
 
 <p>JavaScript te permite crear funciones anónimas.</p>
 
-<pre class="brush: js notranslate">var avg = function() {
+<pre class="brush: js">var avg = function() {
   var sum = 0;
   for (var i = 0, j = arguments.length; i &lt; j; i++) {
     sum += arguments[i];
@@ -685,7 +685,7 @@ avgArray([2, 3, 4, 5]); // 3.5
 
 <p>Esto semánticamente es equivalente a la forma <code>function avg()</code>. Es extremadamente poderosa, ya que te permite colocar una definición de función completa en cualquier lugar donde normalmente colocarías una expresión. Esto permite todo tipo de ingeniosos trucos. Aquí hay una forma de "ocultar" algunas variables locales — como alcance de bloque en C:</p>
 
-<pre class="brush: js notranslate">var a = 1;
+<pre class="brush: js">var a = 1;
 var b = 2;
 
 (function() {
@@ -699,7 +699,7 @@ b; // 2
 
 <p>JavaScript te permite llamar a funciones de forma recursiva. Esto es particularmente útil para tratar con estructuras de árbol, como las que se encuentran en el DOM del navegador.</p>
 
-<pre class="brush: js notranslate">function countChars(elm) {
+<pre class="brush: js">function countChars(elm) {
   if (elm.nodeType == 3) { // TEXT_NODE
     return elm.nodeValue.length;
   }
@@ -713,7 +713,7 @@ b; // 2
 
 <p>Esto resalta un problema potencial con las funciones anónimas: ¿cómo las llama de forma recursiva si no tienen un nombre? JavaScript te permite nombrar expresiones de función para esto. Puedes utilizar {{Glossary("IIFE", "IIFE (expresiones de función invocadas inmediatamente)")}} con nombre como se muestra a continuación:</p>
 
-<pre class="brush: js notranslate">var charsInBody = (function counter(elm) {
+<pre class="brush: js">var charsInBody = (function counter(elm) {
   if (elm.nodeType == 3) { // TEXT_NODE
     return elm.nodeValue.length;
   }
@@ -735,7 +735,7 @@ b; // 2
 
 <p>En la programación clásica orientada a objetos, los objetos son colecciones de datos y métodos que operan sobre esos datos. JavaScript es un lenguaje basado en prototipos que no contiene una declaración de clase, como la encontrarías en C++ o Java (esto, a veces es confuso para los programadores acostumbrados a lenguajes con una declaración de clase). En cambio, JavaScript usa funciones como clases. Consideremos un objeto <code>person</code> con campos <code>first</code> y <code>last name</code>. Hay dos formas de mostrar el nombre: como "primero último" o como "último, primero". Usando las funciones y objetos que hemos explicado anteriormente, podríamos mostrar los datos de esta manera:</p>
 
-<pre class="brush: js notranslate">function makePerson(first, last) {
+<pre class="brush: js">function makePerson(first, last) {
   return {
     first: first,
     last: last
@@ -755,7 +755,7 @@ personFullNameReversed(s); // "Willison, Simon"
 
 <p>Esto funciona, pero es bastante feo. Terminas con docenas de funciones en tu espacio de nombres global. Lo que realmente necesitamos es una forma de enlazar una función a un objeto. Dado que las funciones son objetos, esto es fácil:</p>
 
-<pre class="brush: js notranslate">function makePerson(first, last) {
+<pre class="brush: js">function makePerson(first, last) {
   return {
     first: first,
     last: last,
@@ -777,7 +777,7 @@ s.fullNameReversed(); // "Willison, Simon"
 
 <p>Ten en cuenta que <code>this</code> es una frecuente causa de errores. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">var s = makePerson('Simon', 'Willison');
+<pre class="brush: js">var s = makePerson('Simon', 'Willison');
 var fullName = s.fullName;
 fullName(); // undefined undefined
 </pre>
@@ -786,7 +786,7 @@ fullName(); // undefined undefined
 
 <p>Podemos aprovechar la palabra clave <code>this</code> para mejorar nuestra función <code>makePerson</code>:</p>
 
-<pre class="brush: js notranslate">function Person(first, last) {
+<pre class="brush: js">function Person(first, last) {
   this.first = first;
   this.last = last;
   this.fullName = function() {
@@ -805,7 +805,7 @@ var s = new Person('Simon', 'Willison');
 
 <p>Nuestros objetos <code>person</code> están mejorando, pero todavía tienen algunos bordes desagradables. Cada vez que creamos un objeto <code>person</code>, estamos creando dos nuevos objetos de función dentro de él, ¿no sería mejor si este código fuera compartido?</p>
 
-<pre class="brush: js notranslate">function personFullName() {
+<pre class="brush: js">function personFullName() {
   return this.first + ' ' + this.last;
 }
 function personFullNameReversed() {
@@ -821,7 +821,7 @@ function Person(first, last) {
 
 <p>Eso es mejor: estamos creando las funciones como métodos solo una vez y asignándoles referencias dentro del constructor. ¿Podemos hacer algo mejor que eso? La respuesta es sí:</p>
 
-<pre class="brush: js notranslate">function Person(first, last) {
+<pre class="brush: js">function Person(first, last) {
   this.first = first;
   this.last = last;
 }
@@ -837,7 +837,7 @@ Person.prototype.fullNameReversed = function() {
 
 <p>Esta es una herramienta increíblemente poderosa. JavaScript te permite modificar el prototipo de algo en cualquier momento en tu programa, lo cual significa que —en tiempo de ejecución— puedes agregar métodos adicionales a los objetos existentes:</p>
 
-<pre class="brush: js notranslate">var s = new Person('Simon', 'Willison');
+<pre class="brush: js">var s = new Person('Simon', 'Willison');
 s.firstNameCaps(); // TypeError en la línea 1: s.firstNameCaps no es una función
 
 Person.prototype.firstNameCaps = function() {
@@ -848,7 +848,7 @@ s.firstNameCaps(); // "SIMON"
 
 <p>Curiosamente, también puedes agregar cosas al prototipo de objetos JavaScript integrados. Agreguemos un método a <code>String</code> que devuelva esa cadena a la inversa:</p>
 
-<pre class="brush: js notranslate">var s = 'Simon';
+<pre class="brush: js">var s = 'Simon';
 s.reversed(); // TypeError en la línea 1: s.reversed no es una función
 
 String.prototype.reversed = function() {
@@ -864,12 +864,12 @@ s.reversed(); // nomiS
 
 <p>¡Nuestro método <code>new<code> funciona incluso con cadenas literales!</code></code></p><code><code>
 
-<pre class="brush: js notranslate">'Esto ahora se puede revertir'.reversed(); // ritrever edeup es aroha otsE
+<pre class="brush: js">'Esto ahora se puede revertir'.reversed(); // ritrever edeup es aroha otsE
 </pre>
 
 <p>Como se mencionó anteriormente, el prototipo forma parte de una cadena. La raíz de esa cadena es <code>Object.prototype</code>, cuyos métodos incluyen <code>toString()</code>; es este método el que se llama cuando intentas representar un objeto como una cadena. Esto es útil para depurar nuestros objetos <code>Person</code>:</p>
 
-<pre class="brush: js notranslate">var s = new Person('Simon', 'Willison');
+<pre class="brush: js">var s = new Person('Simon', 'Willison');
 s.toString(); // [object Object]
 
 Person.prototype.toString = function() {
@@ -881,7 +881,7 @@ s.toString(); // "&lt;Person: Simon Willison&gt;"
 
 <p>¿Recuerda cómo <code>avg.apply()</code> tenía un primer argumento <code>null</code>? Ahora lo podemos revisar. El primer argumento de <code>apply()</code> es el objeto que se debe tratar como '<code>this</code>'. Por ejemplo, aquí hay una implementación trivial de <code>new</code>:</p>
 
-<pre class="brush: js notranslate">function trivialNew(constructor, ...args) {
+<pre class="brush: js">function trivialNew(constructor, ...args) {
   var o = {}; // Crea un objeto
   constructor.apply(o, args);
   return o;
@@ -892,15 +892,15 @@ s.toString(); // "&lt;Person: Simon Willison&gt;"
 
 <p>Llamar a...</p>
 
-<pre class="brush: js notranslate">var bill = trivialNew(Person, 'William', 'Orange');</pre>
+<pre class="brush: js">var bill = trivialNew(Person, 'William', 'Orange');</pre>
 
 <p>...por tanto, casi es equivalente a</p>
 
-<pre class="brush: js notranslate">var bill = new Person('William', 'Orange');</pre>
+<pre class="brush: js">var bill = new Person('William', 'Orange');</pre>
 
 <p><code>apply()</code> tiene una función hermana llamada {{jsxref("Objetos_Globales/Function/call", "call()")}}, que nuevamente te permite establecer <code>this</code> pero toma una lista de argumentos expandida en lugar de un arreglo.</p>
 
-<pre class="brush: js notranslate">function lastNameCaps() {
+<pre class="brush: js">function lastNameCaps() {
   return this.last.toUpperCase();
 }
 var s = new Person('Simon', 'Willison');
@@ -914,7 +914,7 @@ s.lastNameCaps(); // WILLISON
 
 <p>Las declaraciones de función de JavaScript están permitidas dentro de otras funciones. Hemos visto esto una vez antes, con la función <code>makePerson()</code> anterior. Un detalle importante de las funciones anidadas en JavaScript es que pueden acceder a las variables en el alcance de su función padre:</p>
 
-<pre class="brush: js notranslate">function parentFunc() {
+<pre class="brush: js">function parentFunc() {
   var a = 1;
 
   function nestedFunc() {
@@ -933,7 +933,7 @@ s.lastNameCaps(); // WILLISON
 
 <p>Esto nos lleva a una de las abstracciones más poderosas que JavaScript tiene para ofrecer — pero potencialmente, también la más confusa. ¿Qué hace esta?</p>
 
-<pre class="brush: js notranslate">function makeAdder(a) {
+<pre class="brush: js">function makeAdder(a) {
   return function(b) {
     return a + b;
   };
@@ -948,7 +948,7 @@ add20(7); // ?
 
 <p>Lo que está sucediendo aquí es más o menos lo mismo que sucedía anteriormente con las funciones internas: una función definida dentro de otra función tiene acceso a las variables de la función externa. La única diferencia aquí es que la función externa ha regresado y, por lo tanto, el sentido común parece dictar que sus variables locales ya no existen. Pero <em>sí</em> existen todavía — de lo contrario, las funciones de suma no podrían funcionar. Además, hay dos diferentes "copias" de las variables locales de <code>makeAdder()</code>: una en la que <code>a</code> es 5 y la otra en la que <code>a</code> es 20. Entonces, el resultado de las llamadas a esa función es el siguiente:</p>
 
-<pre class="brush: js notranslate">add5(6); // returns 11
+<pre class="brush: js">add5(6); // returns 11
 add20(7); // devuelve 27
 </pre>
 

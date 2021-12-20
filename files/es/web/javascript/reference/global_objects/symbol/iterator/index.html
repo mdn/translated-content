@@ -41,7 +41,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Symbol/iterator
 
 <p>Podemos definir nuestros propios iterables de la siguiente forma:</p>
 
-<pre class="brush: js notranslate">var myIterable = {}
+<pre class="brush: js">var myIterable = {}
 myIterable[Symbol.iterator] = function* () {
     yield 1;
     yield 2;
@@ -54,7 +54,7 @@ myIterable[Symbol.iterator] = function* () {
 
 <p>Si un método iterador <code>@@iterator</code> no devuelve un objeto iterador, es un iterable mal formado. Usarlo como tal es probable que genere excepciones en tiempo de ejecución, o comportamientos inesperados.</p>
 
-<pre class="brush: js notranslate">var nonWellFormedIterable = {}
+<pre class="brush: js">var nonWellFormedIterable = {}
 nonWellFormedIterable[Symbol.iterator] = () =&gt; 1
 [...nonWellFormedIterable] // TypeError: [] is not a function
 </pre>

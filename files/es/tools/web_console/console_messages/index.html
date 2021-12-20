@@ -153,7 +153,7 @@ translation_of: Tools/Web_Console/Console_messages
 
 <p>Sin embargo, si algún código JavaScript lee un estilo que se ha modificado, a continuación, el navegador debe realizar una reflujo sincrónico con el fin de calcular el estilo computarizado a devolver. Por ejemplo, un código como éste provocará de inmediato un reflujo síncrono cuando se llame a <code>window.getComputedStyle(thing).height</code>:</p>
 
-<pre class="brush: js notranslate">var thing = document.getElementById("the-thing");
+<pre class="brush: js">var thing = document.getElementById("the-thing");
 thing.style.display = "inline-block";
 var thingHeight = window.getComputedStyle(thing).height;</pre>
 
@@ -277,7 +277,7 @@ var thingHeight = window.getComputedStyle(thing).height;</pre>
 
 <p>The console prints a stack trace for all error messages, like this:</p>
 
-<pre class="brush: js notranslate">function foo() {
+<pre class="brush: js">function foo() {
   console.error("it explodes");
 }
 

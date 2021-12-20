@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Reference/Errors/Indicador_regexp_no-val
 
 <h2 id="Mensaje">Mensaje</h2>
 
-<pre class="syntaxbox notranslate">SyntaxError: error de sintaxis en la expresión regular (Edge)
+<pre class="syntaxbox">SyntaxError: error de sintaxis en la expresión regular (Edge)
 SyntaxError: marca de expresión regular no válida "x" (Firefox)
 SyntaxError: indicadores de expresión regular no válidos (Chrome)
 </pre>
@@ -30,12 +30,12 @@ SyntaxError: indicadores de expresión regular no válidos (Chrome)
 
 <p>Para incluir una bandera con la expresión regular, usa esta sintaxis:</p>
 
-<pre class="brush: js notranslate">var re = /patrón/indicadores;
+<pre class="brush: js">var re = /patrón/indicadores;
 </pre>
 
 <p>o</p>
 
-<pre class="brush: js notranslate">var re = new RegExp('patrón', 'indicadores');</pre>
+<pre class="brush: js">var re = new RegExp('patrón', 'indicadores');</pre>
 
 <table class="standard-table">
  <caption>Indicadores de expresión regular</caption>
@@ -77,14 +77,14 @@ SyntaxError: indicadores de expresión regular no válidos (Chrome)
 
 <p>Solo hay seis indicadores de expresión regular válidos.</p>
 
-<pre class="brush: js example-bad notranslate">/foo/bar;
+<pre class="brush: js example-bad">/foo/bar;
 
 // SyntaxError: indicador de expresión regular no válido "b"
 </pre>
 
 <p>¿Tenías la intención de crear una expresión regular? Una expresión que contiene dos barras se interpreta como una expresión regular literal.</p>
 
-<pre class="brush: js example-bad notranslate">let obj = {
+<pre class="brush: js example-bad">let obj = {
   url: /docs/Web
 };
 
@@ -93,7 +93,7 @@ SyntaxError: indicadores de expresión regular no válidos (Chrome)
 
 <p>¿O pretendías crear una cadena en su lugar? Agrega comillas simples o dobles para crear una cadena literal.</p>
 
-<pre class="brush: js example-good notranslate">let obj = {
+<pre class="brush: js example-good">let obj = {
   url: '/docs/Web'
 };</pre>
 
@@ -101,7 +101,7 @@ SyntaxError: indicadores de expresión regular no válidos (Chrome)
 
 <p>Consulta la tabla anterior para ver las seis marcas de expresiones regulares válidas que están permitidas en JavaScript.</p>
 
-<pre class="brush: js example-good notranslate">/foo/g;
+<pre class="brush: js example-good">/foo/g;
 /foo/gims;
 /foo/uy;
 </pre>

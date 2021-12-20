@@ -28,7 +28,7 @@ translation_of: Learn/CSS/Styling_text/Styling_lists
 
 <p>El HTML para nuestro ejemplo de lista se ve así:</p>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Shopping (unordered) list&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Shopping (unordered) list&lt;/h2&gt;
 
 &lt;p&gt;Paragraph for reference, paragraph for reference, paragraph for reference,
 paragraph for reference, paragraph for reference, paragraph for reference.&lt;/p&gt;
@@ -84,7 +84,7 @@ paragraph for reference, paragraph for reference, paragraph for reference.&lt;/p
 
 <p>El CSS que se utiliza para aplicar estilo al texto y al espaciado de texto es el siguiente:</p>
 
-<pre class="brush: css notranslate">/* Estilos generales */
+<pre class="brush: css">/* Estilos generales */
 
 html {
   font-family: Helvetica, Arial, sans-serif;
@@ -139,7 +139,7 @@ dd {
 
 <p>Como ya sabes, la propiedad {{cssxref("list-style-type")}} te permite establecer qué tipo de viñeta usar. En nuestro ejemplo, hemos establecido que se usen números romanos en mayúsculas para la lista ordenada, con:</p>
 
-<pre class="brush: css notranslate">ol {
+<pre class="brush: css">ol {
   list-style-type: upper-roman;
 }</pre>
 
@@ -155,7 +155,7 @@ dd {
 
 <p>Si estableces el valor en <code>inside</code>, las viñetas se ubican dentro de las líneas:</p>
 
-<pre class="brush: css notranslate">ol {
+<pre class="brush: css">ol {
   list-style-type: upper-roman;
   list-style-position: inside;
 }</pre>
@@ -166,7 +166,7 @@ dd {
 
 <p>La propiedad {{cssxref("list-style-image")}} te permite usar una imagen personalizada para tu viñeta. La sintaxis es muy simple:</p>
 
-<pre class="brush: css notranslate">ul {
+<pre class="brush: css">ul {
   list-style-image: url(star.svg);
 }</pre>
 
@@ -174,7 +174,7 @@ dd {
 
 <p>En nuestro ejemplo terminado, hemos aplicado estilo a la lista no ordenada de este modo (encima de lo que ya has visto arriba):</p>
 
-<pre class="brush: css notranslate">ul {
+<pre class="brush: css">ul {
   padding-left: 2rem;
   list-style-type: none;
 }
@@ -215,7 +215,7 @@ ul li {
 
 <p>Es posible configurar las tres propiedades anteriores con una sola propiedad abreviada, {{cssxref("list-style")}}. Por ejemplo, observa el CSS siguiente:</p>
 
-<pre class="brush: css notranslate">ul {
+<pre class="brush: css">ul {
   list-style-type: square;
   list-style-image: url(example.png);
   list-style-position: inside;
@@ -237,7 +237,7 @@ ul li {
 
 <p>El atributo {{htmlattrxref("start","ol")}} te permite empezar la numeración de la lista en un número diferente de 1. Observa el ejemplo siguiente:</p>
 
-<pre class="brush: html notranslate">&lt;ol start="4"&gt;
+<pre class="brush: html">&lt;ol start="4"&gt;
   &lt;li&gt;Toast pitta, leave to cool, then slice down the edge.&lt;/li&gt;
   &lt;li&gt;Fry the halloumi in a shallow, non-stick pan, until browned on both sides.&lt;/li&gt;
   &lt;li&gt;Wash and chop the salad.&lt;/li&gt;
@@ -252,7 +252,7 @@ ul li {
 
 <p>El atributo {{htmlattrxref("reversed","ol")}} empieza la lista contando hacia atrás, en lugar de hacia adelante. Observa el ejemplo siguiente:</p>
 
-<pre class="brush: html notranslate">&lt;ol start="4" reversed&gt;
+<pre class="brush: html">&lt;ol start="4" reversed&gt;
   &lt;li&gt;Toast pitta, leave to cool, then slice down the edge.&lt;/li&gt;
   &lt;li&gt;Fry the halloumi in a shallow, non-stick pan, until browned on both sides.&lt;/li&gt;
   &lt;li&gt;Wash and chop the salad.&lt;/li&gt;
@@ -271,7 +271,7 @@ ul li {
 
 <p>El atributo {{htmlattrxref("value","ol")}} te permite establecer para tus elementos de lista unos valores numéricos específicos. Observa el ejemplo siguiente:</p>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li value="2"&gt;Toast pitta, leave to cool, then slice down the edge.&lt;/li&gt;
   &lt;li value="4"&gt;Fry the halloumi in a shallow, non-stick pan, until browned on both sides.&lt;/li&gt;
   &lt;li value="6"&gt;Wash and chop the salad.&lt;/li&gt;
@@ -302,7 +302,7 @@ ul li {
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;HTML Input&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;ul&gt;
   &lt;li&gt;First, light the candle.&lt;/li&gt;
@@ -328,7 +328,7 @@ ul li {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js notranslate">var htmlInput = document.querySelector(".html-input");
+<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;

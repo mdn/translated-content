@@ -18,7 +18,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/then
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><var>p.then(alCumplir[, enRechazo])</var>;
+<pre class="syntaxbox"><var>p.then(alCumplir[, enRechazo])</var>;
 
 p.then(function(value) {
    // cumplimiento
@@ -87,7 +87,7 @@ setTimeout(función(){
 
 <h3 id="Usando_el_metodo_then">Usando el metodo <code>then</code></h3>
 
-<pre class="brush: js notranslate">var p1 = new Promise(function(resolve, reject) {
+<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
   resolve('Success!');
   // or
   // reject ("Error!");
@@ -106,7 +106,7 @@ p1.then(function(value) {
 
 <p>Puedes pasar una lambda a <code>then</code> y si devuelve una promesa, una <code>Promise</code> equivalente será expuesta al <code>then</code> subsecuente en la cadena de métodos. El fragmento incluido debajo simula un código asíncrono mediante la función <code>setTimeout</code>. </p>
 
-<pre class="brush: js notranslate">Promise.resolve('foo')
+<pre class="brush: js">Promise.resolve('foo')
   // 1. Recibe "foo", concatena "bar" con él, y resuelve la cadena con el siguiente 'then'
   .then(función(hilo) {
     return new Promise(function(resolve, reject) {
@@ -141,7 +141,7 @@ p1.then(function(value) {
 
 <p>Cuando un valor sencillamente se devuelve desde un lambda <code>then</code> , devolverá un <code>Promise.resolve(&lt;valor devuelto por el controlador que haya sido invocado&gt;)</code>.</p>
 
-<pre class="brush: js notranslate">var p2 = nueva Promise(function(resolver, rechazar) {
+<pre class="brush: js">var p2 = nueva Promise(function(resolver, rechazar) {
   resolver(1);
 });
 
@@ -159,7 +159,7 @@ p2.then(función(valor) {
 
 <p>Una llamada a  <code>then</code> devolverá una promesa rechazada si la función lanza un error o devuelve una Promise rechazada.</p>
 
-<pre class="brush: js notranslate">Promise.resolve()
+<pre class="brush: js">Promise.resolve()
   .then( () =&gt; {
     // Hace que .then() devuelva una promera rechazada
     throw new Error('Oh no!');
@@ -172,13 +172,13 @@ p2.then(función(valor) {
 
 <p>En cualquier otro caso, una Promise en resolución será devuelta. El el siguiente ejemplo, el primer <code>then()</code> devolverá un <code>42</code> dentro de una Promise en resolución, aunque la Promise de la cadena fue rechazada.</p>
 
-<pre class="brush: js notranslate">Promise.reject()
+<pre class="brush: js">Promise.reject()
   .then( () =&gt; 99, () =&gt; 42 ) // enRechazo devuelve 42, que está dentro de una Promise en resolución
   .then( respuesta =&gt; console.log( 'Resuelta con ' + respuesta ) ); // Resuelta con 42</pre>
 
 <p>En la práctica, suele ser preferible capturar promesas rechazadas en lugar de utilizar la sintaxis de dos casos de <code>then,</code> como demostramos abajo.</p>
 
-<pre class="brush: js notranslate">Promise.resolve()
+<pre class="brush: js">Promise.resolve()
   .then( () =&gt; {
     // Hace que .then() devuelva una promesa rechazada
     throw new Error('Oh no!');
@@ -193,7 +193,7 @@ p2.then(función(valor) {
 <p><br>
  También puedes usar encadenamiento para implementar una función con una API basada en promesas, sobre una función del mismo tipo.</p>
 
-<pre class="brush: js notranslate">function traer_datos_actuales() {
+<pre class="brush: js">function traer_datos_actuales() {
   // La función <a href="/en-US/docs/Web/API/GlobalFetch/fetch">fetch</a>() de la API devuelve una Promesa. Esta función
   // expone una API similar, pero el valor de cumplimiento
   // de la Promesa de esta función tiene más tareas
@@ -212,7 +212,7 @@ p2.then(función(valor) {
 
 <p>Si <code>alCumplir</code> devuelve una promesa, el valor de retorno de <code>then</code> será resuelto o rechazado por la promesa.</p>
 
-<pre class="brush: js notranslate">function resolverDespues(resolver, reject) {
+<pre class="brush: js">function resolverDespues(resolver, reject) {
   setTimeout(función () {
     resolver(10);
   }, 1000);

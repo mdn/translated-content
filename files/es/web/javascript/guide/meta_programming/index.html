@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Guide/Meta_programming
 
 <p>Por ejemplo, obtener una propiedad sobre un objeto:</p>
 
-<pre class="brush: js notranslate">let <var>handler</var> = {
+<pre class="brush: js">let <var>handler</var> = {
   get: function(<var>target</var>, name) {
     return name in <var>target</var>? <var>target</var>[name] : 42
   }
@@ -241,7 +241,7 @@ console.log(p.a, p.b) // 1, 42
 
 <p>Posteriormente, cualquier operación en el proxy conduce a un {{jsxref("TypeError")}}.</p>
 
-<pre class="brush: js notranslate">let revocable = Proxy.revocable({}, {
+<pre class="brush: js">let revocable = Proxy.revocable({}, {
   get: function(target, name) {
     return '[[' + name + ']]'
   }
@@ -267,19 +267,19 @@ typeof proxy             // "object", typeof no activa ninguna trampa
 
 <p>Con {{jsxref("Reflect.has()")}} por ejemplo, obtienes el operador <a href="/es/docs/Web/JavaScript/Reference/Operators/in"><code>in</code></a> como función:</p>
 
-<pre class="brush: js notranslate">Reflect.has(Object, 'assign') // true
+<pre class="brush: js">Reflect.has(Object, 'assign') // true
 </pre>
 
 <h3 id="Una_mejor_función_apply">Una mejor función <code>apply</code></h3>
 
 <p>En ES5, normalmente usas el método {{jsxref("Function.prototype.apply()")}} para llamar a una función con un valor <code>this</code> y <code><var>arguments</var></code> proporcionado como un arreglo (o un <a href="/es/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">objeto similar a un arreglo</a>).</p>
 
-<pre class="brush: js notranslate">Function.prototype.apply.call(Math.floor, undefined, [1.75])
+<pre class="brush: js">Function.prototype.apply.call(Math.floor, undefined, [1.75])
 </pre>
 
 <p>Con {{jsxref("Reflect.apply")}} esto se vuelve menos detallado y más fácil de entender:</p>
 
-<pre class="brush: js notranslate">Reflect.apply(Math.floor, undefined, [1.75]);
+<pre class="brush: js">Reflect.apply(Math.floor, undefined, [1.75]);
 // 1;
 
 Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
@@ -296,7 +296,7 @@ Reflect.apply("".charAt, "ponies", [3]);
 
 <p>Con {{jsxref("Object.defineProperty")}}, que devuelve un objeto si tiene éxito, o arroja un {{jsxref("TypeError")}} de lo contrario, usaría un bloque {{jsxref("Statements/try...catch", "try...catch")}} para detectar cualquier error que haya ocurrido al definir una propiedad. Debido a que {{jsxref("Reflect.defineProperty")}} devuelve un estado de éxito booleano, aquí puedes usar un bloque {{jsxref("Statements/if...else", "if...else")}}:</p>
 
-<pre class="brush: js notranslate">if (Reflect.defineProperty(target, property, attributes)) {
+<pre class="brush: js">if (Reflect.defineProperty(target, property, attributes)) {
   // éxito
 } else {
   // fracaso

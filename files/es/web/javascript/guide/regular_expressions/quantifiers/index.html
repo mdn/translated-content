@@ -96,7 +96,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Cuantificadores
 
 <h3 id="Patrón_repetido">Patrón repetido</h3>
 
-<pre class="brush: js notranslate">var palabraTerminadaConAes = /\w+a+\b/;
+<pre class="brush: js">var palabraTerminadaConAes = /\w+a+\b/;
 var mensajeDelicado = "Esto es Espartaaaaaaa";
 
 console.table(mensajeDelicado.match(palabraTerminadaConAes)); // [ "Espartaaaaaaa" ]
@@ -104,7 +104,7 @@ console.table(mensajeDelicado.match(palabraTerminadaConAes)); // [ "Espartaaaaaa
 
 <h3 id="Conteo_de_caracteres">Conteo de caracteres</h3>
 
-<pre class="brush: js notranslate">var palabraDeUnaLetra = /\b\w\b/g;
+<pre class="brush: js">var palabraDeUnaLetra = /\b\w\b/g;
 var palabraNoTanLarga = /\b\w{1,6}\b/g;
 var palabraLaaaaarga = /\b\w{10,}\b/g;
 
@@ -117,7 +117,7 @@ console.table(frase.match(palabraLaaaaarga));      // ["multiplicar"]
 
 <h3 id="Caracter_opcional">Caracter opcional</h3>
 
-<pre class="brush: js notranslate">var londinText = "He asked his neighbour a favour.";
+<pre class="brush: js">var londinText = "He asked his neighbour a favour.";
 var yanquiText = "He asked his neighbor a favor.";
 
 var regexpEnding = /\w+ou?r/g;
@@ -135,7 +135,7 @@ console.table(yanquiText.match(regexpEnding));
 
 <h3 id="Codicioso_versus_no_codicioso">Codicioso versus no codicioso</h3>
 
-<pre class="brush: js notranslate">var texto = "Debo estar muy cerca del centro de la tierra.";
+<pre class="brush: js">var texto = "Debo estar muy cerca del centro de la tierra.";
 var regexpCodiciosa = /[\w ]+/;
 // [\w ]      una letra del alfabeto latino o un espacio en blanco
 //      +     una o varias veces

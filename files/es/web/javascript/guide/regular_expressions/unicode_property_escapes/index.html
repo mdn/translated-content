@@ -29,7 +29,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Escapes_de_propiedades_U
 
 <div class="hidden">La siguiente sección también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Hoja_de_referencia", "esta hoja de trucos")}}. No olvides editarla también, ¡gracias!</div>
 
-<pre class="brush: js notranslate">// Valores no binarios
+<pre class="brush: js">// Valores no binarios
 \p{<em>UnicodePropertyValue</em>}
 \p{<em>UnicodePropertyName</em>=<em>UnicodePropertyValue</em>}
 
@@ -74,7 +74,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Escapes_de_propiedades_U
 
 <p>Se pueden utilizar para reconocer letras, números, símbolos, signos de puntuación, espacios, etc. Para obtener una lista más exhaustiva de categorías generales, consulta <a href="https://unicode.org/reports/tr18/#General_Category_Property">la especificación Unicode</a>.</p>
 
-<pre class="brush: js notranslate">// encontrar todas las letras de un texto
+<pre class="brush: js">// encontrar todas las letras de un texto
 let historia = "Es el gato de Cheshire: ahora tendré alguien con quien hablar";
 
 // Forma más explícita
@@ -96,7 +96,7 @@ historia.match(/\p{Lu}|\p{Ll}|\p{Lt}|\p{Lm}|\p{Lo}/gu);
 
 <p>Por ejemplo, <code>A</code> pertenece al script <code>Latin</code> y <code>ε</code> al script <code>Greek</code> (Griego).</p>
 
-<pre class="brush: js notranslate">let caracteresMezclados = "aεЛ";
+<pre class="brush: js">let caracteresMezclados = "aεЛ";
 
 // Usando el nombre canónico "largo" del script
 caracteresMezclados.match(/\p{Script=Latin}/u); // a
@@ -112,7 +112,7 @@ caracteresMezclados.match(/\p{Sc=Cyrillic}/u); // Л
 
 <p>Si se usa un carácter en un conjunto limitado de scripts, la propiedad <code>Script</code> solo coincidirá con el script "predominante" utilizado. Si quieres hacer coincidir caracteres basados en un script "no predominante", podrías usar la propiedad <code>Script_Extensions</code> (<code>Scx</code> para abreviar).</p>
 
-<pre class="brush: js notranslate">// ٢ es el dígito 2 en notación Árabe-Índica
+<pre class="brush: js">// ٢ es el dígito 2 en notación Árabe-Índica
 // si bien está escrito en un script predominante en árabe
 // también se puede escribir en el script Thaana
 
@@ -129,7 +129,7 @@ caracteresMezclados.match(/\p{Sc=Cyrillic}/u); // Л
 
 <p>Las categorías de escape de propiedad Unicode abarcan muchos más caracteres y <code>\p{Letter}</code> o <code>\p{Number}</code> funcionarán para cualquier script.</p>
 
-<pre class="brush: js notranslate">// Intentando usar rangos para evitar limitaciones de \w:
+<pre class="brush: js">// Intentando usar rangos para evitar limitaciones de \w:
 
 const textoNoEs = "Приключения Алисы в Стране чудес";
 const regexpPalabraBMP = /([\u0000-\u0019\u0021-\uFFFF])+/gu;

@@ -91,7 +91,7 @@ postData('https://example.com/answer', { answer: 42 })
 
 <p>Una petición promise {{domxref("GlobalFetch.fetch","fetch()")}} será rechazada con {{jsxref("TypeError")}} cuando se encuentre un error de red, aunque esto normalmente significa problemas de permisos o similares — por ejemplo, un 404 no constituye un error de red. Una forma precisa de comprobar que la petición <code>fetch()</code> es satisfactoria pasa por comprobar si la promesa ha sido resuelta, además de comprobar que la propiedad {{domxref("Response.ok")}} tiene el valor <code>true</code> que indica que el estado de la petición HTTP es OK (código 200-299). El código sería algo así:</p>
 
-<pre class="brush: js notranslate">fetch('flores.jpg').then(function(response) {
+<pre class="brush: js">fetch('flores.jpg').then(function(response) {
   if(response.ok) {
     response.blob().then(function(miBlob) {
       var objectURL = URL.createObjectURL(miBlob);
@@ -109,7 +109,7 @@ postData('https://example.com/answer', { answer: 42 })
 
 <p>En lugar de pasar la ruta al recurso que deseas solicitar a la llamada del método <code>fetch()</code>, puedes crear un objeto de petición utilizando el constructor {{domxref("Request.Request","Request()")}}, y pasarlo como un argumento del método <code>fetch()</code>:</p>
 
-<pre class="brush: js notranslate">var myHeaders = new Headers();
+<pre class="brush: js">var myHeaders = new Headers();
 
 var myInit = { method: 'GET',
                headers: myHeaders,
@@ -129,7 +129,7 @@ fetch(myRequest)
 
 <p><code>Request()</code> acepta exactamente los mismos parámetros que el método <code>fetch()</code>. Puedes incluso pasar un objeto de petición existente para crear una copia del mismo:</p>
 
-<pre class="brush: js notranslate">var anotherRequest = new Request(myRequest, myInit);</pre>
+<pre class="brush: js">var anotherRequest = new Request(myRequest, myInit);</pre>
 
 <p>Esto es muy útil ya que el cuerpo de las solicitudes y respuestas son de un sólo uso. Haciendo una copia como esta te permite utilizar la petición/respuesta de nuevo, y al mismo tiempo, si lo deseas, modificar las opciones de <code>init</code>. La copia debe estar hecha antes de la lectura del &lt;body&gt;, y leyendo el &lt;body&gt; en la copia, se marcará como leido en la petición original.</p>
 
@@ -141,13 +141,13 @@ fetch(myRequest)
 
 <p>Para producir que los navegadores envien una petición con las credenciales incluidas, incluso para una llamada de origen cruzado, añadimos<code> credentials: 'include'</code> en el el objeto <code>init</code> que se pasa al método <code>fetch()</code>.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="function token">fetch</span><span class="punctuation token">(</span><span class="string token">'https://example.com'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="function token">fetch</span><span class="punctuation token">(</span><span class="string token">'https://example.com'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>
   credentials<span class="punctuation token">:</span> <span class="string token">'include'</span>
 <span class="punctuation token">}</span><span class="punctuation token">)</span></code></pre>
 
 <p>Si solo quieres enviar la credenciales si la URL de la petición está en el mismo origen desde donde se llamada el script, añade <code>credentials: 'same-origin'</code>.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="comment token">// El script fué llamado desde el origen 'https://example.com'</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// El script fué llamado desde el origen 'https://example.com'</span>
 
 <span class="function token">fetch</span><span class="punctuation token">(</span><span class="string token">'https://example.com'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>
   credentials<span class="punctuation token">:</span> <span class="string token">'same-origin'</span>
@@ -155,7 +155,7 @@ fetch(myRequest)
 
 <p>Sin embargo para asegurarte que el navegador no incluye las credenciales en la petición, usa <code>credentials: 'omit'</code>.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="function token">fetch</span><span class="punctuation token">(</span><span class="string token">'https://example.com'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="function token">fetch</span><span class="punctuation token">(</span><span class="string token">'https://example.com'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>
   credentials<span class="punctuation token">:</span> <span class="string token">'omit'</span>
 <span class="punctuation token">}</span><span class="punctuation token">)</span></code></pre>
 
@@ -163,7 +163,7 @@ fetch(myRequest)
 
 <p>Usa {{domxref("GlobalFetch.fetch","fetch()")}} para enviar una petición POST con datos codificados en JSON .</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> url <span class="operator token">=</span> <span class="string token">'https://example.com/profile'</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> url <span class="operator token">=</span> <span class="string token">'https://example.com/profile'</span><span class="punctuation token">;</span>
 <span class="keyword token">var</span> data <span class="operator token">=</span> <span class="punctuation token">{</span>username<span class="punctuation token">:</span> <span class="string token">'example'</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
 
 <span class="function token">fetch</span><span class="punctuation token">(</span>url<span class="punctuation token">,</span> <span class="punctuation token">{</span>
@@ -180,7 +180,7 @@ fetch(myRequest)
 
 <p>Los archivos pueden ser subido mediante el HTML de un elemento input <code>&lt;input type="file" /&gt;</code>, {{domxref("FormData.FormData","FormData()")}} y {{domxref("GlobalFetch.fetch","fetch()")}}.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> formData <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">FormData</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> formData <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">FormData</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 <span class="keyword token">var</span> fileField <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">"input[type='file']"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 
 formData<span class="punctuation token">.</span><span class="function token">append</span><span class="punctuation token">(</span><span class="string token">'username'</span><span class="punctuation token">,</span> <span class="string token">'abc123'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
@@ -198,7 +198,7 @@ formData<span class="punctuation token">.</span><span class="function token">app
 
 <p>La interfaz {{domxref("Headers")}} te permite crear tus propios objetos de headers mediante el constructor {{domxref("Headers.Headers","Headers()")}}. Un objeto headers es un simple multi-mapa de nombres y valores:</p>
 
-<pre class="brush: js notranslate">var content = "Hello World";
+<pre class="brush: js">var content = "Hello World";
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "text/plain");
 myHeaders.append("Content-Length", content.length.toString());
@@ -206,7 +206,7 @@ myHeaders.append("X-Custom-Header", "ProcessThisImmediately");</pre>
 
 <p>Lo mismo se puede lograr pasando un "array de arrays" o un objeto literal al constructor:</p>
 
-<pre class="brush: js notranslate">myHeaders = new Headers({
+<pre class="brush: js">myHeaders = new Headers({
   "Content-Type": "text/plain",
   "Content-Length": content.length.toString(),
   "X-Custom-Header": "ProcessThisImmediately",
@@ -214,7 +214,7 @@ myHeaders.append("X-Custom-Header", "ProcessThisImmediately");</pre>
 
 <p>Los contenidos pueden ser consultados o recuperados:</p>
 
-<pre class="brush: js notranslate">console.log(myHeaders.has("Content-Type")); // true
+<pre class="brush: js">console.log(myHeaders.has("Content-Type")); // true
 console.log(myHeaders.has("Set-Cookie")); // false
 myHeaders.set("Content-Type", "text/html");
 myHeaders.append("X-Custom-Header", "AnotherValue");
@@ -229,7 +229,7 @@ console.log(myHeaders.getAll("X-Custom-Header")); // [ ]</pre>
 
 <p>Todos los métodosde de <code>headers</code> lanzan un <code>TypeError</code> si un nombre de cabecera no es un nombre de cabecera HTTP válido. Las operaciones de mutación lanzarán un <code>TypeError</code> si hay un guarda inmutable (ver más abajo). Si no, fallan silenciosamente. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">var myResponse = Response.error();
+<pre class="brush: js">var myResponse = Response.error();
 try {
   myResponse.headers.set("Origin", "http://mybank.com");
 } catch(e) {
@@ -238,7 +238,7 @@ try {
 
 <p>Un buen caso de uso para <code>headers</code> es comprobar cuando el tipo de contenido es correcto antes de que se procese:</p>
 
-<pre class="brush: js notranslate">fetch(myRequest).then(function(response) {
+<pre class="brush: js">fetch(myRequest).then(function(response) {
   var contentType = response.headers.get("content-type");
   if(contentType &amp;&amp; contentType.indexOf("application/json") !== -1) {
     return response.json().then(function(json) {
@@ -281,7 +281,7 @@ try {
 
 <p>Estos pueden también creados programáticamente a través de JavaScript, pero esto solamente es realmete útil en {{domxref("ServiceWorker_API", "ServiceWorkers")}},  cuando pones un objeto response personalizado a una respuesta recibida usando un método {{domxref("FetchEvent.respondWith","respondWith()")}}:</p>
 
-<pre class="brush: js notranslate">var myBody = new Blob();
+<pre class="brush: js">var myBody = new Blob();
 
 addEventListener('fetch', function(event) {
   event.respondWith(
@@ -324,7 +324,7 @@ addEventListener('fetch', function(event) {
 
 <p>Las peticiones body pueden ser establecidas pasando el parametro body:</p>
 
-<pre class="brush: js notranslate">var form = new FormData(document.getElementById('login-form'));
+<pre class="brush: js">var form = new FormData(document.getElementById('login-form'));
 fetch("/login", {
   method: "POST",
   body: form
@@ -336,7 +336,7 @@ fetch("/login", {
 
 <p>Puedes comprobar si el navegador soporta  la API de Fetch comprobando la existencia de {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} o {{domxref("GlobalFetch.fetch","fetch()")}} sobre el ámbito de {{domxref("Window")}} o {{domxref("Worker")}}. Por ejemplo:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span>self<span class="punctuation token">.</span>fetch<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span>self<span class="punctuation token">.</span>fetch<span class="punctuation token">)</span> <span class="punctuation token">{</span>
     <span class="comment token">// run my fetch request here</span>
 <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
     <span class="comment token">// do something with XMLHttpRequest?</span>

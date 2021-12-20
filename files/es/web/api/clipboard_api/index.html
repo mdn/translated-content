@@ -14,7 +14,7 @@ original_slug: Web/API/API_del_portapapeles
 
 <p>En vez de instanciar un objeto <code>Clipboard</code>, se puede acceder al portapapeles del sistema a través de la variable global {{domxref("Navigator.clipboard")}}:</p>
 
-<pre class="brush: js notranslate">navigator.clipboard.readText().then(
+<pre class="brush: js">navigator.clipboard.readText().then(
   clipText =&gt; document.querySelector(".editor").innerText += clipText);</pre>
 
 <p>Esta pieza de código lee el texto que hay en el portapapeles y lo añade al primer elemento que tenga la clase <code>editor</code>. Desde que {{domxref("Clipboard.readText", "readText()")}} (y también {{domxref("Clipboard.read", "read()")}}, de hecho) devuelve una cadena de texto vacía si el contenido del portapapeles no es texto, este código es seguro.</p>

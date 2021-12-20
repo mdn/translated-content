@@ -37,7 +37,7 @@ translation_of: Web/HTTP/Headers/Access-Control-Allow-Credentials
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">Access-Control-Allow-Credentials: true
+<pre class="syntaxbox">Access-Control-Allow-Credentials: true
 </pre>
 
 <h2 id="Directivas">Directivas</h2>
@@ -55,14 +55,14 @@ translation_of: Web/HTTP/Headers/Access-Control-Allow-Credentials
 
 <p>Utilizando <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> con credenciales:</p>
 
-<pre class="brush: js notranslate">var xhr = new XMLHttpRequest();
+<pre class="brush: js">var xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://example.com/', true);
 xhr.withCredentials = true;
 xhr.send(null);</pre>
 
 <p>Utilizando <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> con credenciales:</p>
 
-<pre class="brush: js notranslate">fetch(url, {
+<pre class="brush: js">fetch(url, {
   credentials: 'include'
 })</pre>
 

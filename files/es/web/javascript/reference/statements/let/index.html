@@ -22,7 +22,7 @@ original_slug: Web/JavaScript/Referencia/Sentencias/let
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">let var1 [= valor1] [, var2 [= valor2]] [, ..., varN [= valorN]];</pre>
+<pre class="syntaxbox">let var1 [= valor1] [, var2 [= valor2]] [, ..., varN [= valorN]];</pre>
 
 <h3 id="Parámetros">Parámetros</h3>
 
@@ -43,7 +43,7 @@ original_slug: Web/JavaScript/Referencia/Sentencias/let
 
 <p>Usar la palabra reservada <code>let</code> para definir variables dentro de un bloque.</p>
 
-<pre class="brush:js notranslate">if (x &gt; y) {
+<pre class="brush:js">if (x &gt; y) {
   let gamma = 12.7 + y;
   i = gamma * x;
 }
@@ -51,12 +51,12 @@ original_slug: Web/JavaScript/Referencia/Sentencias/let
 
 <p>Es posible usar definiciones <code>let</code> para asociar código en extensiones con un pseudo-espacio-de-nombre (pseudo-namespace). (Ver <a href="/en-US/docs/Security_best_practices_in_extensions" title="en-US/docs/Security_best_practices_in_extensions">Mejores prácticas de seguridad en extensiones</a>.)</p>
 
-<pre class="brush:js notranslate">let Cc = Components.classes, Ci = Components.interfaces;
+<pre class="brush:js">let Cc = Components.classes, Ci = Components.interfaces;
 </pre>
 
 <p><code>let</code> puede ser útil para escribir código más limpio cuando usamos funciones internas.</p>
 
-<pre class="brush:js notranslate">var list = document.getElementById("list");
+<pre class="brush:js">var list = document.getElementById("list");
 
 for (var i = 1; i &lt;= 5; i++) {
   var item = document.createElement("LI");
@@ -76,7 +76,7 @@ for (var i = 1; i &lt;= 5; i++) {
 
 <p>Variables declaradas por <code>let</code> tienen por alcance el bloque en el que se han definido, así mismo, como en cualquier bloque interno. De esta manera, <code>let</code> trabaja muy parecido a <code>var</code>. La más notable diferencia es que el alcance de una variable <code>var</code> es la función contenedora:</p>
 
-<pre class="brush:js notranslate">function varTest() {
+<pre class="brush:js">function varTest() {
   var x = 31;
   if (true) {
     var x = 71;  // ¡misma variable!
@@ -100,7 +100,7 @@ letTest();
 
 <p>En el nivel superior de un programa y funciones, <code>let</code> , a diferencia de <code>var</code>, <strong>no crea</strong> una propiedad en el objeto global, por ejemplo:</p>
 
-<pre class="brush:js notranslate">var x = 'global';
+<pre class="brush:js">var x = 'global';
 let y = 'global';
 console.log(this.x); // "global"
 console.log(this.y); // undefined
@@ -112,7 +112,7 @@ console.log(this.y); // undefined
 
 <p>La <strong>redeclaración</strong> de la misma variable bajo un mismo <font><font><a href="https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments">ámbito léxico</a> </font></font>terminaría en un error de tipo <code><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError" title="SyntaxError">SyntaxError</a></code>. Esto también es <strong>extensible</strong> si usamos <code>var</code> dentro del <font><font>ámbito léxico</font></font>. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible  solo con <code>var.</code></p>
 
-<pre class="brush: js notranslate">if (x) {
+<pre class="brush: js">if (x) {
   let foo;
   let foo; // Terminamos con un SyntaxError.
 }
@@ -133,7 +133,7 @@ if (x) {
 
 <p>Es posible encontrar errores en bloques de control <a href="/en-US/docs/JavaScript/Reference/Statements/switch" title="switch"><code>switch</code></a> debido a que solamente existe un block subyacente.</p>
 
-<pre class="brush: js notranslate">switch (x) {
+<pre class="brush: js">switch (x) {
   case 0:
     let foo;
     break;
@@ -165,7 +165,7 @@ prueba();</code>
 
 <p>Cuando usamos <code>let</code> dentro de un bloque, podemos limitar el alcance de la variable a dicho bloque. Notemos la diferencia con <code>var</code>, cuyo alcance reside dentro de la función donde ha sido declarada la variable.</p>
 
-<pre class="brush: js notranslate">var a = 5;
+<pre class="brush: js">var a = 5;
 var b = 10;
 
 if (a === 5) {
@@ -183,7 +183,7 @@ console.log(b); // 1</pre>
 
 <p>Es posible usar la palabra reservada <code>let</code> para enlazar variables con alcance local dentro del alcance de un bucle en lugar de usar una variable global (definida usando <code>var</code>) para dicho propósito.</p>
 
-<pre class="brush: js notranslate">for (let i = 0; i&lt;10; i++) {
+<pre class="brush: js">for (let i = 0; i&lt;10; i++) {
   console.log(i); // 0, 1, 2, 3, 4 ... 9
 }
 
@@ -202,7 +202,7 @@ console.log(i); // ReferenceError: i is not defined
 
 <h4 id="Sintaxis_2">Sintaxis</h4>
 
-<pre class="syntaxbox notranslate">let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) {declaración};</pre>
+<pre class="syntaxbox">let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) {declaración};</pre>
 
 <h4 id="Descripción_2">Descripción</h4>
 
@@ -210,7 +210,7 @@ console.log(i); // ReferenceError: i is not defined
 
 <h4 id="Ejemplo">Ejemplo</h4>
 
-<pre class="brush:js notranslate">var x = 5;
+<pre class="brush:js">var x = 5;
 var y = 0;
 
 let (x = x+10, y = 12) {
@@ -236,13 +236,13 @@ console.log(x + y); // 5
 
 <h4 id="Sintaxis_3">Sintaxis</h4>
 
-<pre class="syntaxbox notranslate">let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) expression;</pre>
+<pre class="syntaxbox">let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) expression;</pre>
 
 <h4 id="Ejemplo_2">Ejemplo</h4>
 
 <p>Podemos usar <code>let</code> para establecer variables que tienen como alcance solo una expresión:</p>
 
-<pre class="brush: js notranslate">var a = 5;
+<pre class="brush: js">var a = 5;
 let(a = 6) console.log(a); // 6
 console.log(a); // 5</pre>
 
@@ -250,7 +250,7 @@ console.log(a); // 5</pre>
 
 <p>Dada la expresión <code>let</code> siguiente:</p>
 
-<pre class="eval notranslate">let (<var>decls</var>) <var>expr</var>
+<pre class="eval">let (<var>decls</var>) <var>expr</var>
 </pre>
 
 <p>Existe un bloque implícito creado alrededor de expr.</p>

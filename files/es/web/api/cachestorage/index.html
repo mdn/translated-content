@@ -65,7 +65,7 @@ translation_of: Web/API/CacheStorage
 
 <p>Finally, return whatever the custom response ended up being equal to, using {{domxref("FetchEvent.respondWith")}}.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', function(event) {
+<pre class="brush: js">self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -110,7 +110,7 @@ self.addEventListener('fetch', function(event) {
 
 <p>This snippet shows how the API can be used outside of a service worker context, and uses the <code>await</code> operator for much more readable code.</p>
 
-<pre class="brush: js notranslate">// Try to get data from the cache, but fall back to fetching it live.
+<pre class="brush: js">// Try to get data from the cache, but fall back to fetching it live.
 async function getData() {
    const cacheVersion = 1;
    const cacheName    = `myapp-${ cacheVersion }`;

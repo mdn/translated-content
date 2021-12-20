@@ -50,11 +50,11 @@ translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 <ol>
  <li>Primero, ve a tu sitio de pruebas y crea una carpeta llamada <code>scripts</code>. Luego, dentro de la nueva carpeta de scripts, crea un nuevo archivo llamado <code>main.js</code> y guárdalo.</li>
  <li>A continuación, abre tu archivo <code>index.html</code> e introduce el siguiente código en una nueva línea, justo antes de la etiqueta de cierre <code>&lt;/body&gt;</code>:
-  <pre class="brush: html notranslate"><font><font>&lt;script src="scripts/main.js"&gt;&lt;/script&gt;</font></font></pre>
+  <pre class="brush: html"><font><font>&lt;script src="scripts/main.js"&gt;&lt;/script&gt;</font></font></pre>
  </li>
  <li>Esto hace básicamente el mismo trabajo que el elemento {{htmlelement("link")}} para CSS: aplica el código JavaScript a la página, para que pueda actuar sobre el HTML (y CSS, o cualquier cosa en la página).</li>
  <li>Ahora añade el siguiente código al archivo <code>main.js</code>:
-  <pre class="brush: js notranslate">const miTitulo = document.querySelector('h1');
+  <pre class="brush: js">const miTitulo = document.querySelector('h1');
 miTitulo.textContent = '¡Hola mundo!';</pre>
  </li>
  <li>Finalmente, asegúrate de que has guardado los archivos HTML y JavaScript, y abre <code>index.html</code> en el navegador. Deberías ver algo así: <img alt="" src="https://mdn.mozillademos.org/files/9543/hello-world.png" style="display: block; height: 236px; margin: 0px auto; width: 806px;"></li>
@@ -88,7 +88,7 @@ miTitulo.textContent = '¡Hola mundo!';</pre>
 
 <p>Las {{Glossary("Variable", "Variables")}} son contenedores en los que puedes almacenar valores. Primero debes declarar la variable con la palabra clave <code><a href="/es/docs/Web/JavaScript/Reference/Statements/var">var</a></code> (menos recomendado) o <code><a href="/es/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, seguida del nombre que le quieras dar. Se recomienda más el uso de <code>let</code> que de <code>var</code> (más adelante se profundiza un poco sobre esto):</p>
 
-<pre class="brush: js notranslate">let nombreDeLaVariable;</pre>
+<pre class="brush: js">let nombreDeLaVariable;</pre>
 
 <div class="note">
 <p><strong>Nota</strong>: todas las líneas en JS deben acabar en punto y coma (;) para indicar que es ahí donde termina la declaración. Si no los incluyes puedes obtener resultados inesperados. Sin embargo, algunas personas creen que es una buena práctica tener punto y coma al final de cada declaración. Hay otras reglas para cuando se debe y no se debe usar punto y coma. Para más detalles, vea <a href="http://news.codecademy.com/your-guide-to-semicolons-in-javascript/">Guía del punto y coma en JavaScript</a> (en inglés).</p>
@@ -108,19 +108,19 @@ miTitulo.textContent = '¡Hola mundo!';</pre>
 
 <p>Tras declarar una variable, puedes asignarle un valor:</p>
 
-<pre class="brush: js notranslate">nombreDeLaVariable = 'Bob';</pre>
+<pre class="brush: js">nombreDeLaVariable = 'Bob';</pre>
 
 <p>Puedes hacer las dos cosas en la misma línea si lo necesitas:</p>
 
-<pre class="brush: js notranslate">let nombreDeLaVariable = 'Bob';</pre>
+<pre class="brush: js">let nombreDeLaVariable = 'Bob';</pre>
 
 <p>Puedes obtener el valor de la variable llamándola por su nombre:</p>
 
-<pre class="brush: js notranslate">nombreDeLaVariable;</pre>
+<pre class="brush: js">nombreDeLaVariable;</pre>
 
 <p>Después de haberle dado un valor a la variable, puedes volver a cambiarlo:</p>
 
-<pre class="brush: js notranslate">let nombreDeLaVariable = 'Bob';
+<pre class="brush: js">let nombreDeLaVariable = 'Bob';
 nombreDeLaVariable = 'Steve';</pre>
 
 <p>Advierte que las variables tienen distintos <a href="/es/docs/Web/JavaScript/Data_structures">tipos de datos</a>:</p>
@@ -174,11 +174,11 @@ nombreDeLaVariable = 'Steve';</pre>
 
 <p>Puedes escribir comentarios entre el código JavaScript, igual que puedes en CSS. El navegador ignora el texto marcado como comentario. En JavaScript, los comentarios de una sola línea se escriben así:</p>
 
-<pre class="brush: js notranslate">// Esto es un comentario</pre>
+<pre class="brush: js">// Esto es un comentario</pre>
 
 <p>Pero también puedes escribir comentarios en más de una línea, igual que en CSS:</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Esto es un comentario
 de varias líneas.
 */</pre>
@@ -255,7 +255,7 @@ de varias líneas.
 
 <p>Las condicionales son estructuras de código que permiten comprobar si una expresión devuelve <em>true</em> o no, y después ejecuta un código diferente dependiendo del resultado. La forma de condicional más común es la llamada <code>if... else</code>. Entonces, por ejemplo:</p>
 
-<pre class="brush: js notranslate">let helado = 'chocolate';
+<pre class="brush: js">let helado = 'chocolate';
 if (helado === 'chocolate') {
   alert('¡Sí, amo el helado de chocolate!');
 } else {
@@ -270,10 +270,10 @@ if (helado === 'chocolate') {
 
 <ol>
  <li>
-  <pre class="brush: js notranslate"><code>let</code> nombreDeLaVariable = document.querySelector('h1');</pre>
+  <pre class="brush: js"><code>let</code> nombreDeLaVariable = document.querySelector('h1');</pre>
  </li>
  <li>
-  <pre class="brush: js notranslate">alert('¡Hola!');</pre>
+  <pre class="brush: js">alert('¡Hola!');</pre>
  </li>
 </ol>
 
@@ -285,14 +285,14 @@ if (helado === 'chocolate') {
 
 <p>Las buenas noticias son que podemos definir nuestras propias funciones —en el siguiente ejemplo escribimos una función simple que toma dos números como argumentos y los multiplica entre sí—:</p>
 
-<pre class="brush: js notranslate">function multiplica(num1,num2) {
+<pre class="brush: js">function multiplica(num1,num2) {
   <code>let</code> resultado = num1 * num2;
   return resultado;
 }</pre>
 
 <p>Trata de ejecutar la función anterior en la consola. Después trata de usar la nueva función algunas veces, p.ej:</p>
 
-<pre class="brush: js notranslate">multiplica(4, 7);
+<pre class="brush: js">multiplica(4, 7);
 multiplica(20, 20);
 multiplica(0.5, 3);
 </pre>
@@ -305,7 +305,7 @@ multiplica(0.5, 3);
 
 <p>Para crear una interacción real en tu sitio web, debes usar eventos. Estos son unas estructuras de código que captan lo que sucede en el navegador, y permite que en respuesta a las acciones que suceden se ejecute un código. El ejemplo más obvio es un clic (<a href="/es/docs/Web/Events/click">click event</a>), que se activa al hacer clic sobre algo. Para demostrar esto, prueba ingresando lo siguiente en tu consola, luego da clic sobre la página actual:</p>
 
-<pre class="brush: js notranslate">document.querySelector('html').onclick = function() {
+<pre class="brush: js">document.querySelector('html').onclick = function() {
     alert('¡Ouch! ¡Deja de pincharme!');
 }
 </pre>
@@ -314,12 +314,12 @@ multiplica(0.5, 3);
 
 <p>Nota que</p>
 
-<pre class="brush: js notranslate">document.querySelector('html').onclick = function(){};
+<pre class="brush: js">document.querySelector('html').onclick = function(){};
 </pre>
 
 <p>es equivalente a</p>
 
-<pre class="brush: js notranslate"><code>let</code> miHTML = document.querySelector('html');
+<pre class="brush: js"><code>let</code> miHTML = document.querySelector('html');
 miHTML.onclick = function(){};
 </pre>
 
@@ -338,7 +338,7 @@ miHTML.onclick = function(){};
  <li>Guarda tu imagen en tu carpeta <code>images</code>.</li>
  <li>Renombra esta imagen «firefox2.png» (sin las comillas).</li>
  <li>Ve a tu archivo <code>main.js</code> y agrega el siguiente JavaScript (si tu JavaScript de <em>«Hola Mundo»</em> está aún allí, bórralo).
-  <pre class="brush: js notranslate"><code>let </code>miImage = document.querySelector('img');
+  <pre class="brush: js"><code>let </code>miImage = document.querySelector('img');
 miImage.onclick = function () {
     <code>let </code>miSrc = miImage.getAttribute('src');
     if (miSrc === 'images/firefox-icon.png') {
@@ -370,21 +370,21 @@ miImage.onclick = function () {
 <ol>
  <li>En <code>index.html</code>, agrega el siguiente código antes del elemento {{htmlelement("script")}}:
 
-  <pre class="brush: html notranslate">&lt;button&gt;Cambiar de usuario&lt;/button&gt;</pre>
+  <pre class="brush: html">&lt;button&gt;Cambiar de usuario&lt;/button&gt;</pre>
  </li>
  <li>En <code>main.js</code>, agrega el siguiente código al final del archivo, exactamente como está escrito. Esto toma referencia al nuevo botón que se agregó y al título y los almacena en variables:
-  <pre class="brush: js notranslate"><code>let</code> miBoton = document.querySelector('button');
+  <pre class="brush: js"><code>let</code> miBoton = document.querySelector('button');
 <code>let</code> miTitulo = document.querySelector( 'h1');</pre>
  </li>
  <li>Ahora agrega la siguiente función para poner el saludo personalizado, lo que no causará nada aún, pero arreglarás esto en un momento:
-  <pre class="brush: js notranslate">function estableceNombreUsuario() {
+  <pre class="brush: js">function estableceNombreUsuario() {
     <code>let</code> miNombre = prompt('Por favor, ingresa tu nombre.');
     localStorage.setItem('nombre', miNombre);
     miTitulo.textContent = 'Mozilla es genial,' + miNombre;
 }</pre>
   La función <code>estableceNombreUsuario()</code> contiene una función <a href="/es/docs/Web/API/Window/prompt"><code>prompt()</code></a>, que crea un cuadro de diálogo como lo hace <code>alert()</code>; la diferencia es que <code>prompt()</code> pide al usuario un dato, y almacena este dato en una variable cuando el botón <strong>Aceptar </strong>del cuadro de diálogo es presionado. En este caso, pedirás al usuario que ingrese su nombre. Luego, llamarás la API <code>localStorage</code>, que nos permite almacenar datos en el navegador y recuperarlos luego. Usarás la función <code>setItem()</code> de localStorage, que crea y almacena un dato en el elemento llamado <code>'nombre'</code>, y coloca este valor en la variable <code>miNombre</code> que contiene el nombre que el usuario ingresó. Finalmente, establecerás el <code>textContent</code> del título a una cadena, más el nombre de usuario recientemente almacenado.</li>
  <li>Luego, agregarás este bloque <code>if ... else</code>. Se podría llamar a esto el código de inicialización, como se ha establecido para cuando carga la app por primera vez:
-  <pre class="brush: js notranslate">if (!localStorage.getItem('nombre')) {
+  <pre class="brush: js">if (!localStorage.getItem('nombre')) {
     estableceNombreUsuario();
 }
 else {
@@ -393,7 +393,7 @@ else {
 }</pre>
   La primera línea de este bloque usa el operador de negación (NO lógico representado por <code>!</code>) para comprobar si el elemento <code>'nombre'</code> existe. Si no existe, la función <code>estableceNombreUsuario()</code> se iniciará para crearlo. Si ya existe (como por ejemplo cuando el usuario ya ingresó al sitio), se recupera el dato del nombre usando <code>getItem()</code> y se fija mediante <code>textContent</code> del título a la cadena, más el nombre del usuario, como hiciste dentro de <code>estableceNombreUsuario()</code>.</li>
  <li>Finalmente, agrega abajo el evento <code>onclick</code> que manipulará el botón, de modo que cuando sea pulsado se inicie la función <code>estableceNombreUsuario()</code>. Esto permitirá al usuario establecer un nuevo nombre cada vez que lo desee al pulsar el botón:
-  <pre class="brush: js notranslate">miBoton.onclick = function() {
+  <pre class="brush: js">miBoton.onclick = function() {
     <code>estableceNombreUsuario</code>();
 }</pre>
  </li>
@@ -409,7 +409,7 @@ else {
 
 <p>Para evitar estos problemas, podrías comprobar que el usuario no ha introducido un nombre en blanco. Actualiza tu función <code>estableceNombreUsuario()</code> a lo siguiente:</p>
 
-<pre class="brush: js notranslate">function estableceNombreUsuario() {
+<pre class="brush: js">function estableceNombreUsuario() {
   let miNombre = prompt('Introduzca su nombre.');
   if(!miNombre) {
     estableceNombreUsuario();

@@ -205,10 +205,10 @@ original_slug: Learn/HTML/Tablas/Conceptos_básicos_de_las_tablas_HTML
  <li>En primer lugar, haz una copia local de <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">blank-template.html</a> y <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">minimal-table.css</a> en un directorio nuevo de tu ordenador.</li>
  <li>El contenido de cada tabla está delimitado entre estas dos etiquetas: <strong><code><a href="/en-US/docs/Web/HTML/Element/table">&lt;table&gt;&lt;/table&gt;</a></code></strong>. Añádelas al cuerpo de tu código HTML.</li>
  <li>El contenedor más pequeño dentro de una tabla es una celda, que se crea con un elemento <strong><code><a href="/en-US/docs/Web/HTML/Element/td">&lt;td&gt;</a></code></strong> ('td' significa 'table data', <em>datos de tabla</em>). Añade lo siguiente dentro de tus etiquetas de tabla:
-  <pre class="brush: html notranslate">&lt;td&gt;Hola, soy tu primera celda.&lt;/td&gt;</pre>
+  <pre class="brush: html">&lt;td&gt;Hola, soy tu primera celda.&lt;/td&gt;</pre>
  </li>
  <li>Si quieres una fila de cuatro celdas, tienes que copiar estas etiquetas tres veces. Actualiza el contenido de la tabla para que se vea así:
-  <pre class="brush: html notranslate">&lt;td&gt;Hola, soy tu primera celda.&lt;/td&gt;
+  <pre class="brush: html">&lt;td&gt;Hola, soy tu primera celda.&lt;/td&gt;
 &lt;td&gt;Soy tu segunda celda.&lt;/td&gt;
 &lt;td&gt;Soy tu tercera celda.&lt;/td&gt;
 &lt;td&gt;Soy tu cuarta celda.&lt;/td&gt;</pre>
@@ -222,7 +222,7 @@ original_slug: Learn/HTML/Tablas/Conceptos_básicos_de_las_tablas_HTML
 <ol>
  <li>Coloca las cuatro celdas que has creado dentro de las etiquetas <code>&lt;tr&gt;</code>, de esta forma:
 
-  <pre class="brush: html notranslate">&lt;tr&gt;
+  <pre class="brush: html">&lt;tr&gt;
   &lt;td&gt;Hola, soy tu primera celda.&lt;/td&gt;
   &lt;td&gt;Soy tu segunda celda.&lt;/td&gt;
   &lt;td&gt;Soy tu tercera celda.&lt;/td&gt;
@@ -259,7 +259,7 @@ original_slug: Learn/HTML/Tablas/Conceptos_básicos_de_las_tablas_HTML
 
 <p>Ahora nos vamos a centrar en los encabezados de tabla: celdas especiales que van al comienzo de una fila o columna y definen el tipo de datos que contiene esa fila o columna (por ejemplo, observa las celdas «Propietario» y «Edad» en el primer ejemplo que se muestra en este artículo). Para ilustrar por qué son útiles, echa un vistazo al ejemplo de tabla siguiente. En primer lugar, el código fuente:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;&amp;nbsp;&lt;/td&gt;
     &lt;td&gt;Knocky&lt;/td&gt;
@@ -373,7 +373,7 @@ original_slug: Learn/HTML/Tablas/Conceptos_básicos_de_las_tablas_HTML
 
 <p>El marcado inicial se ve así:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;Animales&lt;/th&gt;
   &lt;/tr&gt;
@@ -456,7 +456,7 @@ original_slug: Learn/HTML/Tablas/Conceptos_básicos_de_las_tablas_HTML
 
 <p>Tomemos el ejemplo sencillo siguiente:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
 
 &lt;th&gt;Dato 1&lt;/th&gt;
@@ -493,7 +493,7 @@ original_slug: Learn/HTML/Tablas/Conceptos_básicos_de_las_tablas_HTML
 
 <p>Esto no es ideal, porque hay que repetir la información de estilo en las tres celdas de la columna (en un proyecto real probablemente habría definida una clase <code>class</code> en las tres celdas y el estilo se especificaría en una hoja de estilo por separado). En vez de hacer esto, podemos especificar la información una sola vez, con un elemento <code>&lt;col&gt;</code>. Los elementos <code>&lt;col&gt;</code> se especifican dentro de un contenedor <code>&lt;colgroup&gt;</code> justo debajo de la etiqueta de apertura <code>&lt;table&gt;</code>. Podríamos crear el mismo efecto que vemos arriba especificando nuestra tabla de la manera siguiente:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;colgroup&gt;
     &lt;col&gt;
     &lt;col style="background-color: yellow"&gt;
@@ -518,7 +518,7 @@ original_slug: Learn/HTML/Tablas/Conceptos_básicos_de_las_tablas_HTML
 
 <p>Si quisiéramos aplicar la información de estilo a ambas columnas, podríamos incluir un elemento <code>&lt;col&gt;</code> con un atributo <code>span</code>, como este:</p>
 
-<pre class="brush: html notranslate">&lt;colgroup&gt;
+<pre class="brush: html">&lt;colgroup&gt;
   &lt;col style="background-color: yellow" span="2"&gt;
 &lt;/colgroup&gt;</pre>
 

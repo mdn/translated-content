@@ -19,7 +19,7 @@ original_slug: Web/Guide/Performance/Usando_web_workers
 <p>Crear un nuevo worker es simple.  Sólo tienes que llamar el constructor {{ domxref("Worker.Worker", "Worker()") }}, especificando la URI de un script a ejecutar en el hilo del worker (<em>worker thread</em>), y, si deseas poder recibir notificaciones del worker, establece la propiedad  {{domxref("Worker.onmessage")}} del worker a una función de manejo de eventos apropiada.</p>
 
 <div style="overflow: hidden;">
-<pre class="brush: js notranslate">var myWorker = new Worker("my_task.js");
+<pre class="brush: js">var myWorker = new Worker("my_task.js");
 
 myWorker.onmessage = function (oEvent) {
   console.log("Called back by the worker!\n");
@@ -29,7 +29,7 @@ myWorker.onmessage = function (oEvent) {
 <p>Alternativamente, puedes usar <code>addEventListener()</code> :</p>
 
 <div style="overflow: hidden;">
-<pre class="brush: js notranslate">var myWorker = new Worker("my_task.js");
+<pre class="brush: js">var myWorker = new Worker("my_task.js");
 
 myWorker.addEventListener("message", function (oEvent) {
   console.log("Called back by the worker!\n");
@@ -48,7 +48,7 @@ myWorker.postMessage(""); // start the worker.</pre>
 
 <p>Antes de continuar, vamos a crear con fines didácticos una función llamada <code>emulateMessage()</code> que simulará el comportamiento de un valor el cual es clonado y no compartido durante el paso desde un <em>worker </em>a la página principal o viceversa:</p>
 
-<pre class="brush: js notranslate">function emulateMessage (vVal) {
+<pre class="brush: js">function emulateMessage (vVal) {
     return eval("(" + JSON.stringify(vVal) + ")");
 }
 
@@ -90,7 +90,7 @@ alert(emulateMessage(example5).constructor); // Object</pre>
 
 <p><strong>example.html</strong>: (la página principal):</p>
 
-<pre class="brush: js notranslate">var myWorker = new Worker("my_task.js");
+<pre class="brush: js">var myWorker = new Worker("my_task.js");
 
 myWorker.onmessage = function (oEvent) {
   console.log("Worker said : " + oEvent.data);
@@ -100,7 +100,7 @@ myWorker.postMessage("ali");</pre>
 
 <p><strong>my_task.js</strong> (el worker):</p>
 
-<pre class="brush: js notranslate">postMessage("I\'m working before postMessage(\'ali\').");
+<pre class="brush: js">postMessage("I\'m working before postMessage(\'ali\').");
 
 onmessage = function (oEvent) {
   postMessage("Hi " + oEvent.data);
@@ -116,7 +116,7 @@ onmessage = function (oEvent) {
 
 <p>El siguiente ejemplo muestra como usar un worker para ejecutar <strong>asíncronamente</strong> cualquier tipo de código en Javascript a traves de <a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval" title="/en-US/docs/JavaScript/Reference/Global_Objects/eval"><code>eval</code></a> dentro del worker:</p>
 
-<pre class="brush: js notranslate">// Syntax: asyncEval(code[, listener])
+<pre class="brush: js">// Syntax: asyncEval(code[, listener])
 
 var asyncEval = (function () {
 
@@ -140,7 +140,7 @@ var asyncEval = (function () {
 
 <p>Ejemplo de uso:</p>
 
-<pre class="brush: js notranslate">// asynchronous alert message...
+<pre class="brush: js">// asynchronous alert message...
 asyncEval("3 + 2", function (sMessage) {
     alert("3 + 2 = " + sMessage);
 });
@@ -159,7 +159,7 @@ asyncEval("(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open(\"get
 
 <p><strong>example.html</strong> (the main page):</p>
 
-<pre class="brush: html notranslate">&lt;!doctype html&gt;
+<pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="UTF-8"  /&gt;
@@ -233,7 +233,7 @@ asyncEval("(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open(\"get
 
 <p><strong>my_task.js</strong> (el worker):</p>
 
-<pre class="brush: js notranslate">// your custom PRIVATE functions
+<pre class="brush: js">// your custom PRIVATE functions
 
 function myPrivateFunc1 () {
   // do something
@@ -284,7 +284,7 @@ onmessage = function (oEvent) {
 
 <p>Google Chrome 17 y Firefox 18 implementan un método adicional para enviar ciertos tipos de objetos desde o hacia el worker con un mejor rendimiento. Estos objetos se denominan objetos transferibles (transferable objects), es decir, o<span class="external">bjetos que implementan la interfaz {{domxref("Transferable")}}</span>. Los objetos transferibles se transfieren de un contexto a otro con una operación "zero-copy". Esto supone una gran mejora de rendimiento al enviar grandes cantidades de datos. Piensa en ello como un paso por referencia si vienes del mundo de C/C++.  Sin embargo, a diferecia del paso por referencia, la "versión" original no queda disponible una vez transferida. Su contenido es transferido al nuevo contexto. Por ejemplo, cuando se transfiere un {{domxref("ArrayBuffer")}} de tu aplicacion al Worker, el contenido del {{domxref("ArrayBuffer")}} original se vacía y no se puede utilizar posteriormente. Su contenido es (literalmente) transferido al contexto del Worker.</p>
 
-<pre class="brush: js notranslate">// Create a 32MB "file" and fill it.
+<pre class="brush: js">// Create a 32MB "file" and fill it.
 var uInt8Array = new Uint8Array(1024*1024*32); // 32MB
 for (var i = 0; i &lt; uInt8Array.length; ++i) {
   uInt8Array[i] = i;
@@ -305,7 +305,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 <p>There is not an "official" way to embed the code of a worker within a web page as for the {{ HTMLElement("script") }} elements. But a {{ HTMLElement("script") }} element which does not have a <code>src</code> attribute and has a <code>type</code> attribute that does not identify an executable mime-type will be considered a data block element, that JavaScript could use.  "Data blocks" is a more general feature of HTML5 that can carry almost any textual data. So, a worker could be embedded in this way:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="UTF-8" /&gt;
@@ -366,13 +366,13 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 <p>If you need to immediately terminate a running worker, you can do so by calling the worker's <code>terminate()</code> method:</p>
 
-<pre class="syntaxbox notranslate">myWorker.terminate();</pre>
+<pre class="syntaxbox">myWorker.terminate();</pre>
 
 <p>The worker thread is killed immediately without an opportunity to complete its operations or clean up after itself.</p>
 
 <p>Workers may close themselves by calling their own {{ ifmethod("nsIWorkerScope", "close") }} method:</p>
 
-<pre class="syntaxbox notranslate">self.close();</pre>
+<pre class="syntaxbox">self.close();</pre>
 
 <h2 id="Manejo_de_errores">Manejo de errores</h2>
 
@@ -404,7 +404,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 <p>Worker threads have access to a global function, <code>importScripts()</code> , which lets them import scripts or libraries into their scope.  It accepts as parameters zero or more URIs to resources to import; all of the following examples are valid:</p>
 
-<pre class="brush: js notranslate">importScripts();                        /* imports nothing */
+<pre class="brush: js">importScripts();                        /* imports nothing */
 importScripts('foo.js');                /* imports just "foo.js" */
 importScripts('foo.js', 'bar.js');      /* imports two scripts */
 </pre>
@@ -425,7 +425,7 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 
 <p>The following JavaScript code is stored in the "fibonacci.js" file referenced by the HTML in the next section.</p>
 
-<pre class="brush: js notranslate">var results = [];
+<pre class="brush: js">var results = [];
 
 function resultReceiver(event) {
   results.push(parseInt(event.data));
@@ -458,7 +458,7 @@ onmessage = function(event) {
 
 <h4 id="The_HTML_code">The HTML code</h4>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"  /&gt;

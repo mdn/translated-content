@@ -17,7 +17,7 @@ original_slug: Web/JavaScript/Guide/Bucles_e_iteración
 
 <p>Puedes pensar en un bucle como una versión computarizada del juego en la que le dices a alguien que dé <em>X</em> pasos en una dirección y luego <em>Y</em> pasos en otra. Por ejemplo, la idea "Ve cinco pasos hacia el este" se podría expresar de esta manera como un bucle:</p>
 
-<pre class="brush: js notranslate">for (let step = 0; step &lt; 5; step++) {
+<pre class="brush: js">for (let step = 0; step &lt; 5; step++) {
   // Se ejecuta 5 veces, con valores del paso 0 al 4.
   console.log('Camina un paso hacia el este');
 }
@@ -46,7 +46,7 @@ original_slug: Web/JavaScript/Guide/Bucles_e_iteración
 
 <p>Una declaración <code>for</code> tiene el siguiente aspecto:</p>
 
-<pre class="syntaxbox notranslate">for ([expresiónInicial]; [expresiónCondicional]; [expresiónDeActualización])
+<pre class="syntaxbox">for ([expresiónInicial]; [expresiónCondicional]; [expresiónDeActualización])
   instrucción
 </pre>
 
@@ -64,7 +64,7 @@ original_slug: Web/JavaScript/Guide/Bucles_e_iteración
 
 <p>En el siguiente ejemplo, la función contiene una instrucción <code>for</code> que cuenta el número de opciones seleccionadas en una lista de desplazamiento (el elemento {{HTMLElement("select")}} de HTML representa un control que proporciona un menú de opciones que permite múltiples selecciones). La instrucción <code>for</code> declara la variable <code>i</code> y la inicia a <code>0</code>. Comprueba que <code>i</code> es menor que el número de opciones en el elemento <code>&lt;select&gt;</code>, realiza la siguiente instrucción <code>if</code> e incrementa <code>i</code> después de cada pasada por el bucle.</p>
 
-<pre class="brush: html notranslate">&lt;form name="selectForm"&gt;
+<pre class="brush: html">&lt;form name="selectForm"&gt;
   &lt;p&gt;
     &lt;label for="musicTypes"&gt;Elija algunos tipos de música, luego haga clic en el botón de abajo:&lt;/label&gt;
     &lt;select id="musicTypes" name="musicTypes" multiple="multiple"&gt;
@@ -104,7 +104,7 @@ btn.addEventListener('click', function() {
 
 <p>Una declaración <code>do...while</code> tiene el siguiente aspecto:</p>
 
-<pre class="syntaxbox notranslate">do
+<pre class="syntaxbox">do
   <em>expresión</em>
 while (condición);
 </pre>
@@ -123,7 +123,7 @@ while (condición);
 
 <p>Una declaración {{JSxRef("Sentencias/while", "while")}} ejecuta sus instrucciones siempre que una condición especificada se evalúe como <code>true</code>. Una instrucción <code>while</code> tiene el siguiente aspecto:</p>
 
-<pre class="syntaxbox notranslate">while (<em>condición</em>)
+<pre class="syntaxbox">while (<em>condición</em>)
   <em>expresión</em>
 </pre>
 
@@ -137,7 +137,7 @@ while (condición);
 
 <p>El siguiente ciclo del <code>while</code> se repite siempre que <em><code>n</code></em> sea menor que <code>3</code>:</p>
 
-<pre class="brush: js notranslate">let n = 0;
+<pre class="brush: js">let n = 0;
 let x = 0;
 while (n &lt; 3) {
   n++;
@@ -157,7 +157,7 @@ while (n &lt; 3) {
 
 <p>Evita los bucles infinitos. Asegúrate de que la condición en un bucle eventualmente se convierta en <code>false</code>; de lo contrario, el bucle nunca terminará. Las declaraciones en el siguiente bucle <code>while</code> se ejecutan indefinidamente porque la condición nunca se vuelve <code>false</code>:</p>
 
-<pre class="example-bad brush: js notranslate">// ¡Los bucles infinitos son malos!
+<pre class="example-bad brush: js">// ¡Los bucles infinitos son malos!
 while (true) {
   console.log('¡Hola, mundo!');
 }</pre>
@@ -185,7 +185,7 @@ while (true) {
 
 <p>La sintaxis de la instrucción <code>break</code> se ve así:</p>
 
-<pre class="syntaxbox notranslate">break;
+<pre class="syntaxbox">break;
 break [<em>label</em>];
 </pre>
 
@@ -198,7 +198,7 @@ break [<em>label</em>];
 
 <p>El siguiente ejemplo recorre en iteración los elementos de un arreglo hasta que encuentra el índice de un elemento cuyo valor es <code>theValue</code>:</p>
 
-<pre class="brush: js notranslate">for (let i = 0; i &lt; a.length; i++) {
+<pre class="brush: js">for (let i = 0; i &lt; a.length; i++) {
   if (a[i] === theValue) {
     break;
   }
@@ -206,7 +206,7 @@ break [<em>label</em>];
 
 <h3 id="Ejemplo_2_romper_una_etiqueta"><strong>Ejemplo 2:</strong> romper una etiqueta</h3>
 
-<pre class="brush: js notranslate">let x = 0;
+<pre class="brush: js">let x = 0;
 let z = 0;
 labelCancelLoops: while (true) {
   console.log('Bucles externos: ' + x);
@@ -235,14 +235,14 @@ labelCancelLoops: while (true) {
 
 <p>La sintaxis de la instrucción <code>continue</code> se parece a la siguiente:</p>
 
-<pre class="syntaxbox notranslate">continue [<em>label</em>];
+<pre class="syntaxbox">continue [<em>label</em>];
 </pre>
 
 <h3 id="Ejemplo_1_3"><strong>Ejemplo 1</strong></h3>
 
 <p>El siguiente ejemplo muestra un bucle <code>while</code> con una instrucción <code>continue</code> que se ejecuta cuando el valor de <code>i</code> es <code>3</code>. Por lo tanto, <code>n</code> toma los valores <code>1</code>, <code>3</code>, <code>7</code> y <code>12</code>.</p>
 
-<pre class="brush: js notranslate">let i = 0;
+<pre class="brush: js">let i = 0;
 let n = 0;
 while (i &lt; 5) {
   i++;
@@ -280,7 +280,7 @@ while (i &lt; 5) {
 
 <p>La instrucción {{JSxRef("Sentencias/for...in", "for...in")}} itera una variable especificada sobre todas las propiedades enumerables de un objeto. Para cada propiedad distinta, JavaScript ejecuta las instrucciones especificadas. Una declaración <code>for...in</code> tiene el siguiente aspecto:</p>
 
-<pre class="syntaxbox notranslate">for (variable in objeto)
+<pre class="syntaxbox">for (variable in objeto)
   instrucción
 </pre>
 
@@ -288,7 +288,7 @@ while (i &lt; 5) {
 
 <p>La siguiente función toma como argumento un objeto y el nombre del objeto. Luego itera sobre todas las propiedades del objeto y devuelve una cadena que enumera los nombres de las propiedades y sus valores.</p>
 
-<pre class="brush: js notranslate">function dump_props(obj, obj_name) {
+<pre class="brush: js">function dump_props(obj, obj_name) {
   let result = '';
   for (let i in obj) {
     result += obj_name + '.' + i + ' = ' + obj[i] + '&lt;br&gt;';
@@ -300,7 +300,7 @@ while (i &lt; 5) {
 
 <p>Para un objeto <code>car</code> con propiedades <code>make</code> y <code>model</code>, <code>result</code> sería:</p>
 
-<pre class="brush: js notranslate">car.make = Ford
+<pre class="brush: js">car.make = Ford
 car.model = Mustang
 </pre>
 
@@ -314,13 +314,13 @@ car.model = Mustang
 
 <p>La declaración {{JSxRef("Sentencias/for...of", "for...of")}} crea un bucle que se repite sobre {{JSxRef("../Guide/iterable", "objetos iterables")}} (incluidos {{JSxRef("Array")}}, {{JSxRef("Map")}}, {{JSxRef("Set")}}, objetos {{JSxRef("Funciones/arguments", "arguments")}} y así sucesivamente), invocando un gancho de iteración personalizado con declaraciones que se ejecutarán para el valor de cada distinta propiedad.</p>
 
-<pre class="syntaxbox notranslate">para (<em>variable</em> of <em>objeto</em>)
+<pre class="syntaxbox">para (<em>variable</em> of <em>objeto</em>)
   <em>expresión</em>
 </pre>
 
 <p>El siguiente ejemplo muestra la diferencia entre un bucle for<code>...in</code> y un bucle {{JSxRef("Sentencias/for...in", "for...in")}}. Mientras que <code>for...in</code> itera sobre los nombres de propiedad, <code>for...of</code> itera sobre los valores de propiedad:</p>
 
-<pre class="brush:js notranslate">const arr = [3, 5, 7];
+<pre class="brush:js">const arr = [3, 5, 7];
 arr.foo = 'hola';
 
 for (let i in arr) {

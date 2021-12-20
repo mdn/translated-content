@@ -32,7 +32,7 @@ translation_of: Learn/JavaScript/Objects/Inheritance
 
 <p>Primero que nada, hazte una copia local de nuestro archivo  <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html">oojs-class-inheritance-start.html</a> (míralo <a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html">corriendo en vivo</a> también). Dentro de aquí encontrarás el mismo ejemplo de constructor de <code>Persona()</code> que hemos estado usando a través del módulo, con una ligera diferencia — hemos definido solo las propiedades dentro del constructor:</p>
 
-<pre class="brush: js notranslate">function Persona(nombrePila, apellido, edad, genero, intereses) {
+<pre class="brush: js">function Persona(nombrePila, apellido, edad, genero, intereses) {
   this.nombre = {
     nombrePila,
     apellido
@@ -44,7 +44,7 @@ translation_of: Learn/JavaScript/Objects/Inheritance
 
 <p><em>Todos</em> los métodos están definidos en el prototipo del constructor. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">Persona.prototype.saludo = function() {
+<pre class="brush: js">Persona.prototype.saludo = function() {
   alert('¡Hola! soy ' + this.nombre.nombrePila + '.');
 };</pre>
 
@@ -63,7 +63,7 @@ translation_of: Learn/JavaScript/Objects/Inheritance
 
 <p>Lo primero que tenemos que hacer es crear el constructor Profesor<code>()</code>  — añadimos lo siguiente tras el código existente:</p>
 
-<pre class="brush: js notranslate">function Profesor(nombrePila, apellido, edad, genero, intereses, materia) {
+<pre class="brush: js">function Profesor(nombrePila, apellido, edad, genero, intereses, materia) {
   Person.call(this, nombrePila, apellido, edad, genero, intereses);
 
   this.materia = materia;
@@ -78,7 +78,7 @@ translation_of: Learn/JavaScript/Objects/Inheritance
 
 <p>Como nota, podríamos haber simplemente hecho esto:</p>
 
-<pre class="brush: js notranslate">function Profesor(nombrePila, apellido, edad, genero, intereses, materia) {
+<pre class="brush: js">function Profesor(nombrePila, apellido, edad, genero, intereses, materia) {
   this.nombre = {
     nombrePila,
     apellido
@@ -95,14 +95,14 @@ translation_of: Learn/JavaScript/Objects/Inheritance
 
 <p>Nótese que si el constructor del cual se está heredando no toma los valores de sus propiedades de parámetros, no se necesita especificarlos como argumentos adicionales en <code>call()</code>. Por ejemplo, si se tuviera algo muy simple como esto:</p>
 
-<pre class="brush: js notranslate">function Brick() {
+<pre class="brush: js">function Brick() {
   this.width = 10;
   this.height = 20;
 }</pre>
 
 <p>Se podrían heredar las propiedades <code>width</code> y <code>height</code> haciendo esto (así como los otros pasos descritos a continuación, por supuesto):</p>
 
-<pre class="brush: js notranslate">function BlueGlassBrick() {
+<pre class="brush: js">function BlueGlassBrick() {
   Brick.call(this);
 
   this.opacity = 0.5;
@@ -117,11 +117,11 @@ translation_of: Learn/JavaScript/Objects/Inheritance
 
 <ol>
  <li>Añade la siguiente línea debajo de tu adición anterior:
-  <pre class="brush: js notranslate">Profesor.prototype = Object.create(Persona.prototype);</pre>
+  <pre class="brush: js">Profesor.prototype = Object.create(Persona.prototype);</pre>
   Aquí es cuando nuestro amigo <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> sale al rescate de nuevo. En este caso lo estamos usando para crear un nuevo objeto y hacerlo el valor de <code>Profesor.prototype.</code> El nuevo objeto tiene <code>Persona.prototype</code> como su prototipo y por lo tanto heredará, si y cuando lo necesite, todos los métodos disponibles en <code>Persona.prototype</code>.</li>
  <li>Necesitamos hacer una cosa más antes de proseguir. Después de agregar la última línea, la propiedad <code>constructor </code>de  <code>Profesor.prototype</code> es ahora igual a <code>Persona()</code>, debido a que acabamos de asignar <code>Profesor.prototype</code> para que haga referencia a un objeto que hereda sus propiedades de <code>Persona.prototype</code>! Ahora prueba guardando tu código, carga la página en un explorador e intenta verificar en la consola el valor de  <code>Profesor.prototype.constructor</code>.</li>
  <li>Esto puede volverse un problema, así que necesitamos corregirlo. Puedes hacerlo regresando a tu código y agregando la siguiente línea al final:
-  <pre class="brush: js notranslate">Profesor.prototype.constructor = Profesor;</pre>
+  <pre class="brush: js">Profesor.prototype.constructor = Profesor;</pre>
  </li>
  <li>Ahora, si guardas y actualizas, el valor de <code>Profesor.prototype.constructor</code> debe regresar <code>Profesor()</code>, como se espera, además de que ahora estamos heredando de <code>Persona()</code>!</li>
 </ol>
@@ -132,7 +132,7 @@ translation_of: Learn/JavaScript/Objects/Inheritance
 
 <p>La manera más fácil es definirlo en el prototipo de <code>Profesor()</code> — agrega lo siguiente al final de tu código:</p>
 
-<pre class="brush: js notranslate">Profesor.prototype.saludo = function() {
+<pre class="brush: js">Profesor.prototype.saludo = function() {
   var prefijo;
 
   if (this.genero === 'masculino' || this.genero === 'Masculino' || this.genero === 'm' || this.genero === 'M') {
@@ -152,11 +152,11 @@ translation_of: Learn/JavaScript/Objects/Inheritance
 
 <p>Ahora que ha ingresado todo el código, intente creando una instancia de objeto desde <code>Profesor()</code> poniendo lo que sigue al final de su archivo (o algo similar a su elección):</p>
 
-<pre class="brush: js notranslate">var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');</pre>
+<pre class="brush: js">var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');</pre>
 
 <p>Ahora guarde y actualice, e intente accediendo a las propiedades y metodos de su nuevo<code> teacher1</code> objecto, por ejemplo:</p>
 
-<pre class="brush: js notranslate">teacher1.name.first;
+<pre class="brush: js">teacher1.name.first;
 teacher1.interests[0];
 teacher1.bio();
 teacher1.subject;
@@ -205,7 +205,7 @@ teacher1.farewell();</pre>
 
 <p>Let's look at a rewritten version of the Person example, class-style:</p>
 
-<pre class="brush: js notranslate">class Person {
+<pre class="brush: js">class Person {
   constructor(first, last, age, gender, interests) {
     this.name = {
       first,
@@ -235,7 +235,7 @@ teacher1.farewell();</pre>
 
 <p>We can now instantiate object instances using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a>, in just the same way as we did before:</p>
 
-<pre class="brush: js notranslate">let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
+<pre class="brush: js">let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
 han.greeting();
 // Hi! I'm Han
 
@@ -254,7 +254,7 @@ leia.farewell();
 
 <p>To create a subclass we use the <a href="/en-US/docs/Web/JavaScript/Reference/Classes/extends">extends keyword</a> to tell JavaScript the class we want to base our class on.</p>
 
-<pre class="brush: js notranslate">class Teacher extends Person {
+<pre class="brush: js">class Teacher extends Person {
   constructor(first, last, age, gender, interests, subject, grade) {
     this.name = {
       first,
@@ -272,7 +272,7 @@ leia.farewell();
 
 <p>We can make the code more readable by defining the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/super"><code>super()</code> operator</a> as the first item inside the <code>constructor()</code>. This will call the parent class' constructor, and inherit the members we specify as parameters of <code>super()</code>, as long as they are defined there:</p>
 
-<pre class="brush: js notranslate">class Teacher extends Person {
+<pre class="brush: js">class Teacher extends Person {
   constructor(first, last, age, gender, interests, subject, grade) {
     super(first, last, age, gender, interests);
 
@@ -285,7 +285,7 @@ leia.farewell();
 
 <p>When we instantiate <code>Teacher</code> object instances, we can now call methods and properties defined on both <code>Teacher</code> and <code>Person</code>, as we'd expect:</p>
 
-<pre class="brush: js notranslate">let snape = new Teacher('Severus', 'Snape', 58, 'male', ['Potions'], 'Dark arts', 5);
+<pre class="brush: js">let snape = new Teacher('Severus', 'Snape', 58, 'male', ['Potions'], 'Dark arts', 5);
 snape.greeting(); // Hi! I'm Severus.
 snape.farewell(); // Severus has left the building. Bye for now.
 snape.age // 58
@@ -310,7 +310,7 @@ snape.subject; // Dark arts
 
 <p>The modified <code>Teacher</code> class looks like this:</p>
 
-<pre class="brush: js notranslate">class Teacher extends Person {
+<pre class="brush: js">class Teacher extends Person {
   constructor(first, last, age, gender, interests, subject, grade) {
     super(first, last, age, gender, interests);
     // subject and grade are specific to Teacher
@@ -337,7 +337,7 @@ snape.subject; // Dark arts
 
 <p>The example below shows the two features in action:</p>
 
-<pre class="brush: js notranslate">// Check the default value
+<pre class="brush: js">// Check the default value
 console.log(snape.subject) // Returns "Dark arts"
 
 // Change the value

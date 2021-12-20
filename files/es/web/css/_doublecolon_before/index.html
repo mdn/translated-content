@@ -13,7 +13,7 @@ translation_of: 'Web/CSS/::before'
 
 <p><span class="seoSummary">En CSS, <code>::before</code> crea un <a href="/es/docs/Web/CSS/Pseudo-elements">pseudoelemento</a> que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido estético a un elemento, usando la propiedad {{cssxref("content")}}. Este elemento se muestra en línea con el texto de forma predeterminada.</span></p>
 
-<pre class="brush: css  language-css notranslate"><code class="language-css"><span class="comment token">/* Añade un corazón antes de los enlaces */</span>
+<pre class="brush: css  language-css"><code class="language-css"><span class="comment token">/* Añade un corazón antes de los enlaces */</span>
 <span class="selector token">a<span class="pseudo-element token">::before</span></span> <span class="punctuation token">{</span>
   <span class="property token">content</span><span class="punctuation token">:</span> "</code>♥<code class="language-css">"<span class="punctuation token">;</span>
 <span class="punctuation token">}</span></code></pre>
@@ -38,11 +38,11 @@ translation_of: 'Web/CSS/::before'
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush:html notranslate">&lt;q&gt;Some quotes&lt;/q&gt;, he said, &lt;q&gt;are better than none&lt;/q&gt;.</pre>
+<pre class="brush:html">&lt;q&gt;Some quotes&lt;/q&gt;, he said, &lt;q&gt;are better than none&lt;/q&gt;.</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush:css notranslate">q::before {
+<pre class="brush:css">q::before {
   content: "«";
   color: blue;
 }
@@ -61,11 +61,11 @@ q::after {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;span class="ribbon"&gt;Notice where the orange box is.&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span class="ribbon"&gt;Notice where the orange box is.&lt;/span&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">.ribbon {
+<pre class="brush: css">.ribbon {
   background-color: #5BC8F7;
 }
 
@@ -86,7 +86,7 @@ q::after {
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;Buy milk&lt;/li&gt;
   &lt;li&gt;Take the dog for a walk&lt;/li&gt;
   &lt;li&gt;Exercise&lt;/li&gt;
@@ -98,7 +98,7 @@ q::after {
 
 <h4 id="CSS_3">CSS</h4>
 
-<pre class="brush: css notranslate">li {
+<pre class="brush: css">li {
   list-style-type: none;
   position: relative;
   margin: 2px;
@@ -127,7 +127,7 @@ li.done::before {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var list = document.querySelector('ul');
+<pre class="brush: js">var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if( ev.target.tagName === 'LI') {
      ev.target.classList.toggle('done');
@@ -147,7 +147,7 @@ list.addEventListener('click', function(ev) {
 
 <h4 id="HTML_4">HTML</h4>
 
-<pre class="brush: html line-numbers language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>ol</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>ol</span><span class="punctuation token">&gt;</span></span>
   <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>Crack Eggs into bowl<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
   <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>Add Milk<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
   <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>Add Flour<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
@@ -160,7 +160,7 @@ list.addEventListener('click', function(ev) {
 
 <h4 id="CSS_4">CSS</h4>
 
-<pre class="brush: css language-css notranslate"><code class="language-css">
+<pre class="brush: css language-css"><code class="language-css">
 <span class="selector token">li</span> <span class="punctuation token">{</span>
   <span class="property token">padding</span><span class="punctuation token">:</span><span class="number token">0.5</span><span class="token unit">em</span><span class="punctuation token">;</span>
 <span class="punctuation token">}</span>

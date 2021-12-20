@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/toSource
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><var>e</var>.toSource()</pre>
+<pre class="syntaxbox"><var>e</var>.toSource()</pre>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
@@ -27,7 +27,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/toSource
 
 <p>Llamar al método <code>toSource</code> de una instancia {{JSxRef("Error")}} (incluido {{JSxRef("Global_Objects/Error", "NativeErrors", "#Error_types")}}) devolverá una cadena que contiene el código fuente del error. Esta cadena se puede evaluar para crear un objeto (aproximadamente) igual. Naturalmente, la cadena que contiene la fuente sigue la estructura del constructor {{JSxRef("Error")}}. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">(new<em>name</em>(<em>message</em> ,<em>fileName</em>,<em>lineNumber</em>))
+<pre class="brush: js">(new<em>name</em>(<em>message</em> ,<em>fileName</em>,<em>lineNumber</em>))
 </pre>
 
 <p>donde estos atributos corresponden a las propiedades respectivas de la instancia de <code>error</code>.</p>

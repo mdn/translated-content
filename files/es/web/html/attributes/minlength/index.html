@@ -19,11 +19,11 @@ original_slug: Web/HTML/Atributos/minlength
 
 <p>Al agregar <code>minlength="5"</code>, el valor debe estar vacío o tener cinco caracteres o más para ser válido.</p>
 
-<pre class="brush: html notranslate">&lt;label for="fruit"&gt;Ingresa un nombre de fruta que tenga al menos 5 letras&lt;/label&gt; &lt;input type="text" minlength="5" id="fruit"&gt;</pre>
+<pre class="brush: html">&lt;label for="fruit"&gt;Ingresa un nombre de fruta que tenga al menos 5 letras&lt;/label&gt; &lt;input type="text" minlength="5" id="fruit"&gt;</pre>
 
 <p>Podemos usar pseudoclases para estilizar el elemento en función de si el valor es válido. El valor será válido siempre que sea <code>null</code> (vacío) o tenga cinco o más caracteres. <em>Lima</em> no es válido, <em>limón es válido</em>.</p>
 
-<pre class="brush: css notranslate">input {
+<pre class="brush: css">input {
   border: 2px solid currentcolor;
 }
 input:invalid {

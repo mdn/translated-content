@@ -44,7 +44,7 @@ translation_of: Web/Progressive_web_apps/Offline_Service_workers
 
 <p><strong>Nota</strong>: Usamos la sintaxis de las <strong>funciones flecha</strong> de <a href="http://es6-features.org/">ES6</a> en la implementación del servicio <em>worker</em></p>
 
-<pre class="brush: js notranslate">if('serviceWorker' in navigator) {
+<pre class="brush: js">if('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./pwa-examples/js13kpwa/sw.js');
 };</pre>
 
@@ -58,7 +58,7 @@ translation_of: Web/Progressive_web_apps/Offline_Service_workers
 
 <p>La API nos permite agregar escuchas de eventos para los eventos clave que nos interesan; el primero es el evento <code>install</code>:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', (e) =&gt; {
+<pre class="brush: js">self.addEventListener('install', (e) =&gt; {
     console.log('[Service Worker] Install');
 });</pre>
 
@@ -66,7 +66,7 @@ translation_of: Web/Progressive_web_apps/Offline_Service_workers
 
 <p>Primero, se crea una variable para almacenar el nombre de la caché y los archivos del intérprete de la aplicación se enumeran en un arreglo.</p>
 
-<pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';
+<pre class="brush: js">var cacheName = 'js13kPWA-v1';
 var appShellFiles = [
   '/pwa-examples/js13kpwa/',
   '/pwa-examples/js13kpwa/index.html',
@@ -90,7 +90,7 @@ var appShellFiles = [
 
 <p>A continuación, los enlaces a las imágenes que se cargarán junto con el contenido del archivo <code>data/games.js</code> se generan en el segundo arreglo. Después de eso, ambos arreglos se fusionan usando la función {{JSxRef("Array.prototype.concat()")}}.</p>
 
-<pre class="brush: js notranslate">var gamesImages = [];
+<pre class="brush: js">var gamesImages = [];
 for(var i=0; i&lt;games.length; i++) {
   gamesImages.push('data/img/'+games[i].slug+'.jpg');
 }
@@ -98,7 +98,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>Entonces podemos manejar el evento <code>install</code> en sí mismo:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', (e) =&gt; {
+<pre class="brush: js">self.addEventListener('install', (e) =&gt; {
   console.log('[Service Worker] Install');
   e.waitUntil(
     caches.open(cacheName).then((cache) =&gt; {
@@ -124,7 +124,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>También tenemos un evento <code>fetch</code> a nuestra disposición, que se activa cada vez que se activa una solicitud HTTP desde nuestra aplicación. Esto es muy útil, ya que nos permite interceptar solicitudes y reaccionar con respuestas personalizadas. Aquí hay un sencillo ejemplo de uso:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (e) =&gt; {
+<pre class="brush: js">self.addEventListener('fetch', (e) =&gt; {
     console.log('[Servicio Worker] Recurso obtenido ' + e.request.url);
 });</pre>
 
@@ -132,7 +132,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>En nuestra aplicación de ejemplo, servimos contenido de la caché en lugar de la red siempre que el recurso realmente esté en la caché. Hacemos esto tanto si la aplicación está en línea como si está fuera de línea. Si el archivo no está en la caché, la aplicación primero lo agrega allí antes de servirlo:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (e) =&gt; {
+<pre class="brush: js">self.addEventListener('fetch', (e) =&gt; {
   e.respondWith(
     caches.match(e.request).then((r) =&gt; {
           console.log('[Servicio Worker] Obteniendo recurso: '+e.request.url);
@@ -157,11 +157,11 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>Todavía hay un punto que cubrir: ¿cómo se actualiza un servicio <em>worker</em> cuando hay disponible una nueva versión de la aplicación que contiene nuevos activos? El número de versión en el nombre de la caché es clave para esto:</p>
 
-<pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';</pre>
+<pre class="brush: js">var cacheName = 'js13kPWA-v1';</pre>
 
 <p>Cuando esto se actualice a v2, podemos agregar todos nuestros archivos (incluidos nuestros archivos nuevos) a una nueva caché:</p>
 
-<pre class="brush: js notranslate">contentToCache.push('/pwa-examples/js13kpwa/icons/icon-32.png');
+<pre class="brush: js">contentToCache.push('/pwa-examples/js13kpwa/icons/icon-32.png');
 
 // ...
 
@@ -179,7 +179,7 @@ self.addEventListener('install', (e) =&gt; {
 
 <p>¿Recuerdas el evento <code>active</code> que omitimos?, se puede usar para borrar la antigua caché que ya no necesitamos:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('activate', (e) =&gt; {
+<pre class="brush: js">self.addEventListener('activate', (e) =&gt; {
   e.waitUntil(
     caches.keys().then((keyList) =&gt; {
           return Promise.all(keyList.map((key) =&gt; {

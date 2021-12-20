@@ -21,7 +21,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array
 
 <p><strong>Crear un Array</strong></p>
 
-<pre class="brush: js notranslate">let frutas = ["Manzana", "Banana"]
+<pre class="brush: js">let frutas = ["Manzana", "Banana"]
 
 console.log(frutas.length)
 // 2
@@ -29,7 +29,7 @@ console.log(frutas.length)
 
 <p><strong>Acceder a un elemento de Array mediante su índice</strong></p>
 
-<pre class="brush: js notranslate">let primero = frutas[0]
+<pre class="brush: js">let primero = frutas[0]
 // Manzana
 
 let ultimo = frutas[frutas.length - 1]
@@ -37,7 +37,7 @@ let ultimo = frutas[frutas.length - 1]
 
 <p><strong>Recorrer un Array</strong></p>
 
-<pre class="brush: js notranslate">frutas.forEach(function(elemento, indice, array) {
+<pre class="brush: js">frutas.forEach(function(elemento, indice, array) {
     console.log(elemento, indice);
 })
 // Manzana 0
@@ -45,29 +45,29 @@ let ultimo = frutas[frutas.length - 1]
 
 <p><strong>Añadir un elemento al final de un Array</strong></p>
 
-<pre class="brush: js notranslate">let nuevaLongitud = frutas<strong>.push</strong>('Naranja') // Añade "Naranja" al final
+<pre class="brush: js">let nuevaLongitud = frutas<strong>.push</strong>('Naranja') // Añade "Naranja" al final
 // ["Manzana", "Banana", "Naranja"]</pre>
 
 <p><strong>Eliminar el último elemento de un Array</strong></p>
 
-<pre class="brush: js notranslate">let ultimo = frutas<strong>.pop</strong>() // Elimina "Naranja" del final
+<pre class="brush: js">let ultimo = frutas<strong>.pop</strong>() // Elimina "Naranja" del final
 // ["Manzana", "Banana"]</pre>
 
 <p><strong>Añadir un elemento al principio de un Array</strong></p>
 
-<pre class="brush: js notranslate">let nuevaLongitud = frutas<strong>.unshift</strong>('Fresa') // Añade "Fresa" al inicio
+<pre class="brush: js">let nuevaLongitud = frutas<strong>.unshift</strong>('Fresa') // Añade "Fresa" al inicio
 // ["Fresa" ,"Manzana", "Banana"]
 </pre>
 
 <p><strong>Eliminar el primer elemento de un Array</strong></p>
 
-<pre class="brush: js notranslate">let primero = frutas<strong>.shift</strong>() // Elimina "Fresa" del inicio
+<pre class="brush: js">let primero = frutas<strong>.shift</strong>() // Elimina "Fresa" del inicio
 // ["Manzana", "Banana"]
 </pre>
 
 <p><strong>Encontrar el índice de un elemento del Array</strong></p>
 
-<pre class="brush: js notranslate">frutas.push('Fresa')
+<pre class="brush: js">frutas.push('Fresa')
 // ["Manzana", "Banana", "Fresa"]
 
 let pos = frutas<strong>.indexOf</strong>('Banana') // (pos) es la posición para abreviar
@@ -80,7 +80,7 @@ let pos = frutas<strong>.indexOf</strong>('Banana') // (pos) es la posición par
  <dd>Eliminamos "Banana" del <em>array </em>pasándole dos parámetros: la posición del primer elemento que se elimina y el número de elementos que queremos eliminar. De esta forma, <code><strong>.splice</strong>(pos, 1)</code> empieza en la posición que nos indica el valor de la variable <code>pos</code> y elimina 1 elemento. En este caso, como <code>pos</code> vale 1, elimina un elemento comenzando en la posición 1 del <em>array,</em> es decir "Banana".</dd>
 </dl>
 
-<pre class="brush: js notranslate">let elementoEliminado = frutas<strong>.splice</strong>(pos, 1)
+<pre class="brush: js">let elementoEliminado = frutas<strong>.splice</strong>(pos, 1)
 // ["Manzana", "Fresa"]</pre>
 
 <p><strong>Eliminar varios elementos a partir de una posición</strong></p>
@@ -90,7 +90,7 @@ let pos = frutas<strong>.indexOf</strong>('Banana') // (pos) es la posición par
  <dd>Con <code><strong>.splice</strong>()</code> no solo se puede eliminar elementos del array, si no que también podemos extraerlos guardándolo en un nuevo array. ¡Ojo! que al hacer esto estaríamos modificando el array de origen.</dd>
 </dl>
 
-<pre class="brush: js notranslate">let vegetales = ['Repollo', 'Nabo', 'Rábano', 'Zanahoria']
+<pre class="brush: js">let vegetales = ['Repollo', 'Nabo', 'Rábano', 'Zanahoria']
 console.log(vegetales)
 // ["Repollo", "Nabo", "Rábano", "Zanahoria"]
 
@@ -104,7 +104,7 @@ console.log(vegetales)
 
 <p><strong>Copiar un Array</strong></p>
 
-<pre class="brush: js notranslate">let copiaArray = vegetales<strong>.slice</strong>();
+<pre class="brush: js">let copiaArray = vegetales<strong>.slice</strong>();
 // ["Repollo", "Zanahoria"]; ==&gt; Copiado en "copiaArray"</pre>
 
 <h3 id="Acceso_a_elementos_de_un_array">Acceso a elementos de un <em>array</em></h3>
@@ -113,7 +113,7 @@ console.log(vegetales)
 
 <p>Si se utiliza un número de índice no válido, se obtendrá <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">let arr = ['este es el primer elemento', 'este es el segundo elemento', 'este es el último elemento']
+<pre class="brush: js">let arr = ['este es el primer elemento', 'este es el segundo elemento', 'este es el último elemento']
 console.log(arr[0])              // escribe en consola 'este es el primer elemento'
 console.log(arr[1])              // escribe en consola 'este es el segundo elemento'
 console.log(arr[arr.length - 1]) // escribe en consola 'este es el último elemento'
@@ -121,25 +121,25 @@ console.log(arr[arr.length - 1]) // escribe en consola 'este es el último eleme
 
 <p>Los elementos de un <em>array</em> pueden considerarse propiedades del objeto tanto como <code>toString</code> (sin embargo, para ser precisos, <code>toString()</code> es un método). Sin embargo, se obtendrá un error de sintaxis si se intenta acceder a un elemento de un <em>array</em> de la forma siguiente, ya que el nombre de la propiedad no sería válido:</p>
 
-<pre class="brush: js notranslate">console.log(arr.0) // error de sintaxis</pre>
+<pre class="brush: js">console.log(arr.0) // error de sintaxis</pre>
 
 <p>No hay nada especial ni en los <em>arrays</em> de JavaScript ni en sus propiedades que ocasione esto. En JavaScript, las propiedades cuyo nombre comienza con un dígito no pueden referenciarse con la notación punto y debe accederse a ellas mediante la notación corchete.</p>
 
 <p>Por ejemplo, dado un objeto con una propiedad de nombre <code>'3d'</code>, sólo podría accederse a dicha propiedad con la notación corchete.</p>
 
-<pre class="brush: js notranslate">let decadas = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
+<pre class="brush: js">let decadas = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
 console.log(decadas.0)  // error de sintaxis
 console.log(decadas[0]) // funciona correctamente
 </pre>
 
-<pre class="brush: js notranslate">renderizador.3d.usarTextura(modelo, 'personaje.png')
+<pre class="brush: js">renderizador.3d.usarTextura(modelo, 'personaje.png')
 renderizador['3d'].usarTextura(modelo, 'personaje.png')</pre>
 
 <p>Obsérvese que, en el último ejemplo, ha sido necesario poner <code>'3d'</code> entre comillas. Es posible usar también comillas con los índices del los <em>arrays</em> de JavaScript (p. ej., <code>decadas['2']</code> en vez de <code>decadas[2]</code>), aunque no es necesario.</p>
 
 <p>El motor de JavaScript transforma en un string el 2 de <code>decadas[2]</code> a través de una conversión implícita mediante <code>toString</code>. Por tanto, <code>'2'</code> y <code>'02'</code> harían referencia a dos posiciones diferentes en el objeto <code>decadas</code>, y el siguiente ejemplo podría dar <code>true</code> como resultado:</p>
 
-<pre class="brush: js notranslate">console.log(decadas['2'] != decadas['02'])</pre>
+<pre class="brush: js">console.log(decadas['2'] != decadas['02'])</pre>
 
 <h3 id="Relación_entre_length_y_las_propiedades_numéricas">Relación entre <code>length</code> y las propiedades numéricas</h3>
 
@@ -149,7 +149,7 @@ renderizador['3d'].usarTextura(modelo, 'personaje.png')</pre>
 
 <p>Otros métodos (p. ej., <code>push()</code>, <code>splice()</code>, etc.) modifican la propiedad <code>length</code> de un array.</p>
 
-<pre class="brush: js notranslate">const frutas = []
+<pre class="brush: js">const frutas = []
 frutas.push('banana', 'manzana', 'pera')
 
 console.log(frutas.length) // 3
@@ -157,7 +157,7 @@ console.log(frutas.length) // 3
 
 <p>Cuando se le da a una propiedad de un <em>array</em> JavaScript un valor que corresponda a un índice válido para el <em>array</em> pero que se encuentre fuera de sus límites, el motor actualizará el valor de la propiedad <code>length</code> como corresponda:</p>
 
-<pre class="brush: js notranslate">frutas[5] = 'fresa'
+<pre class="brush: js">frutas[5] = 'fresa'
 console.log(frutas[5])           // 'fresa'
 console.log(Object.keys(frutas)) // ['0', '1', '2', '5']
 console.log(frutas.length)       // 6
@@ -165,7 +165,7 @@ console.log(frutas.length)       // 6
 
 <p>Si se aumenta el valor de <code>length</code>:</p>
 
-<pre class="brush: js notranslate">frutas.length = 10
+<pre class="brush: js">frutas.length = 10
 console.log(frutas)              // ['banana', 'manzana', 'pera', &lt;2 empty items&gt;, 'fresa', &lt;4 empty items&gt;]
 console.log(Object.keys(frutas)) // ['0', '1', '2', '5']
 console.log(frutas.length)       // 10
@@ -174,7 +174,7 @@ console.log(frutas[8])           // undefined
 
 <p>Si se disminuye el valor de la propiedad <code>length</code> pueden eliminarse elementos:</p>
 
-<pre class="brush: js notranslate">frutas.length = 2
+<pre class="brush: js">frutas.length = 2
 console.log(Object.keys(frutas)) // ['0', '1']
 console.log(frutas.length)       // 2
 </pre>
@@ -187,7 +187,7 @@ console.log(frutas.length)       // 2
 
 <p>El siguiente ejemplo, y la tabla que le sigue, pueden ayudar a comprender mejor las propiedades y elementos a los que nos referimos:</p>
 
-<pre class="brush: js notranslate">// Buscar una d seguida de una o más b y, al final, de otra d
+<pre class="brush: js">// Buscar una d seguida de una o más b y, al final, de otra d
 // Recordar las b y la d final
 // No distinguir mayúsculas y minúsculas
 
@@ -338,7 +338,7 @@ const miArray = miRe.exec('cdbBdbsbz')</pre>
 
 <p>El siguiente ejemplo crea un <em>array </em><code>mensajes</code> con una longitud de 0, y luego asigna valores a <code>mensajes[0]</code> y a <code>mensajes[99]</code>, con lo que la longitud del <em>array</em> pasa a ser 100.</p>
 
-<pre class="brush: js notranslate">let mensajes = [];
+<pre class="brush: js">let mensajes = [];
 mensajes[0] = "Hola";
 mensajes[99] = "mundo";
 
@@ -370,7 +370,7 @@ console.log(tablero.join('\n'))</pre>
 
 <p>Este es el resultado:</p>
 
-<pre class="eval notranslate">T,C,A,D,R,A,C,T
+<pre class="eval">T,C,A,D,R,A,C,T
 P,P,P,P,P,P,P,P
  , , , , , , ,
  , , , , , , ,

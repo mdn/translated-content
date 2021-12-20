@@ -23,11 +23,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String
 
 <p>Las cadenas se pueden crear como primitivas, a partir de cadena literales o como objetos, usando el constructor {{jsxref("String/String", "String()")}}:</p>
 
-<pre class="syntaxbox notranslate">const string1 = "Una cadena primitiva";
+<pre class="syntaxbox">const string1 = "Una cadena primitiva";
 const string2 = 'También una cadena primitiva';
 const string3 = `Otra cadena primitiva más`;</pre>
 
-<pre class="syntaxbox notranslate">const string4 = new String("Un objeto String");
+<pre class="syntaxbox">const string4 = new String("Un objeto String");
 </pre>
 
 <p>Las <code>string</code>s primitivas y los objetos <code>string</code> se pueden usar indistintamente en la mayoría de las situaciones. Consulta "<a href="#Primitivas_string_y_objetos_string">Primitivas <code>String</code> y objetos <code>String</code></a>" a continuación.</p>
@@ -38,12 +38,12 @@ const string3 = `Otra cadena primitiva más`;</pre>
 
 <p>Hay dos formas de acceder a un caracter individual en una cadena. La primera es con el método {{jsxref("String.prototype.charAt()", "charAt()")}}:</p>
 
-<pre class="brush: js notranslate">return 'cat'.charAt(1) // devuelve "a"
+<pre class="brush: js">return 'cat'.charAt(1) // devuelve "a"
 </pre>
 
 <p>La otra forma (introducida en ECMAScript 5) es tratar a la cadena como un objeto similar a un arreglo, donde los caracteres individuales corresponden a un índice numérico:</p>
 
-<pre class="brush: js notranslate">return 'cat'[1] // devuelve "a"
+<pre class="brush: js">return 'cat'[1] // devuelve "a"
 </pre>
 
 <p>Cuando se usa la notación entre corchetes para acceder a los caracteres, no se puede intentar eliminar o asignar un valor a estas propiedades. Las propiedades involucradas no se pueden escribir ni configurar. (Ve {{jsxref("Object.defineProperty()")}} para más información).</p>
@@ -52,7 +52,7 @@ const string3 = `Otra cadena primitiva más`;</pre>
 
 <p>En C, se usa la función <code>strcmp()</code> para comparar cadenas. En JavaScript, solo usas los <a href="/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">operadores menor que y mayor que</a>:</p>
 
-<pre class="brush: js notranslate">let a = 'a'
+<pre class="brush: js">let a = 'a'
 let b = 'b'
 if (a &lt; b) { // true
   console.log(a + ' es menor que ' + b)
@@ -81,7 +81,7 @@ if (a &lt; b) { // true
 
 <p>Las cadenas literales (denotadas por comillas simples o dobles) y cadenas devueltas de llamadas a <code>String</code> en un contexto que no es de constructor (es decir, llamado sin usar la palabra clave {{jsxref("Operators/new", "new")}}) son cadenas primitivas. JavaScript automáticamente convierte las primitivas en objetos <code>String</code>, por lo que es posible utilizar métodos del objeto <code>String</code> en cadenas primitivas. En contextos donde se va a invocar a un método en una cadena primitiva o se produce una búsqueda de propiedad, JavaScript ajustará automáticamente la cadena primitiva y llamará al método o realizará la búsqueda de la propiedad.</p>
 
-<pre class="brush: js notranslate">let s_prim = 'foo'
+<pre class="brush: js">let s_prim = 'foo'
 let s_obj = new String(s_prim)
 
 console.log(typeof s_prim) // Registra "string"
@@ -90,7 +90,7 @@ console.log(typeof s_obj)  // Registra "object"
 
 <p>Las primitivas de <code>String</code> y los objetos <code>String</code> también dan diferente resultado cuando se usa {{jsxref("Global_Objects/eval", "eval()")}}. Las primitivas pasadas a <code>eval</code> se tratan como código fuente; Los objetos <code>String</code> se tratan como todos los demás objetos, devuelven el objeto. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">let s1 = '2 + 2'              // crea una string primitiva
+<pre class="brush: js">let s1 = '2 + 2'              // crea una string primitiva
 let s2 = new String('2 + 2')  // crea un objeto String
 console.log(eval(s1))         // devuelve el número 4
 console.log(eval(s2))         // devuelve la cadena "2 + 2"
@@ -100,7 +100,7 @@ console.log(eval(s2))         // devuelve la cadena "2 + 2"
 
 <p>Un objeto <code>String</code> siempre se puede convertir a su contraparte primitiva con el método {{jsxref("String.prototype.valueOf()", "valueOf()")}}.</p>
 
-<pre class="brush: js notranslate">console.log(eval(s2.valueOf()))  // devuelve el número 4
+<pre class="brush: js">console.log(eval(s2.valueOf()))  // devuelve el número 4
 </pre>
 
 <h3 id="Notación_de_escape">Notación de escape</h3>
@@ -181,7 +181,7 @@ console.log(eval(s2))         // devuelve la cadena "2 + 2"
 
 <p>Puedes usar el operador <a href="/es/docs/Web/JavaScript/Reference/Operators/Addition">+</a> para agregar varias cadenas juntas, así:</p>
 
-<pre class="brush: js notranslate">let longString = "Esta es una cadena muy larga que necesita " +
+<pre class="brush: js">let longString = "Esta es una cadena muy larga que necesita " +
                  "que dividimos en varias líneas porque " +
                  "de lo contrario, mi código es ilegible."
 </pre>
@@ -192,7 +192,7 @@ console.log(eval(s2))         // devuelve la cadena "2 + 2"
 
 <p>Esa forma se ve así:</p>
 
-<pre class="brush: js notranslate">let longString = "Esta es una cadena muy larga que necesita \
+<pre class="brush: js">let longString = "Esta es una cadena muy larga que necesita \
 que dividimos en varias líneas porque \
 de lo contrario, mi código es ilegible."
 </pre>
@@ -348,7 +348,7 @@ de lo contrario, mi código es ilegible."
 
 <p>Es posible usar <code>String</code> como una alternativa más confiable de {{jsxref("String.prototype.toString()", "toString()")}}, ya que funciona cuando se usa en {{jsxref( "null")}}, {{jsxref("undefined")}} y en {{jsxref("Symbol", "símbolos")}}. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">let outputStrings = []
+<pre class="brush: js">let outputStrings = []
 for (let i = 0, n = inputValues.length; i &lt; n; ++i) {
   outputStrings.push(String(inputValues[i]));
 }

@@ -33,7 +33,7 @@ original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 
 <p>Este tipo de campo se define utilizando el valor  <code>email</code> en el atributo {{htmlattrxref("type","input")}} del elemento &lt;input&gt;:</p>
 
-<pre class="brush: html notranslate">&lt;input type="email" id="email" name="email"&gt;</pre>
+<pre class="brush: html">&lt;input type="email" id="email" name="email"&gt;</pre>
 
 <p>Cuando se utiliza este valor {{htmlattrxref("type","input")}} , se le obliga al usuario a escribir dentro del campo una dirección de correo electrónico válida. Cualquier otro contenido ocasiona que el navegador muestre un mensaje de error cuando se envía el formulario. Puedes verlo en acción en la siguiente captura de pantalla</p>
 
@@ -41,7 +41,7 @@ original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 
 <p>Puedes utilizar también el atributo <a href="/en-US/docs/Web/HTML/Attributes/multiple"><code>multiple</code></a> en combinación con el tipo input<code>email</code> para permitir que sean introducidas varias direcciones de correo electrónico separadas por comas en el mismo input:</p>
 
-<pre class="brush: html notranslate">&lt;input type="email" id="email" name="email" multiple&gt;</pre>
+<pre class="brush: html">&lt;input type="email" id="email" name="email" multiple&gt;</pre>
 
 <p>En algunos dispositivos, en particular dispositivos táctiles con teclados dinámicos como los smart phones, debería presentarse un teclado virtual que es más adecuado para introducir direcciones de correo electrónico, incluyendo la tecla <code>@</code>. Mira como ejemplo la siguiente captura de pantalla del teclado de Firefox para Android:</p>
 
@@ -69,7 +69,7 @@ original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 
 <p>Los campos de búsqueda están destinados a ser utilizados para crear cajas de búsqueda en páginas y aplicaciones. Este tipo de campo se define utilizando el valor <code>search</code> en su atributo {{htmlattrxref("type","input")}}:</p>
 
-<pre class="brush: html notranslate">&lt;input type="search" id="search" name="search"&gt;</pre>
+<pre class="brush: html">&lt;input type="search" id="search" name="search"&gt;</pre>
 
 <p>La diferéncia principal entre un campo <code>text</code> y un campo <code>search</code>, es la forma en que el navegador aplica estilo a su apariéncia. A menudo los campos <code>search</code> se muestran con bordes redondeados; y a veces también muestran una "Ⓧ", el cual despeja el campo de cualquier valor cuando se pulsa sobre él. Adicionalmente, en dispositivos con teclado dinámico, la tecla enter del teclado puede leer "<strong>search</strong>" o mostrar un icono de lupa.</p>
 
@@ -83,7 +83,7 @@ original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 
 <p>Se puede crear un campo especial para introducir números de teléfono utilizando <code>tel</code> como valor del atributo {{htmlattrxref("type","input")}}:</p>
 
-<pre class="brush: html notranslate">&lt;input type="tel" id="tel" name="tel"&gt;</pre>
+<pre class="brush: html">&lt;input type="tel" id="tel" name="tel"&gt;</pre>
 
 <p>Cuando se accede desde un dispositivo táctil con teclados dinámicos, muchos de ellos mostrarán un teclado numérico cuando se encuentren con <code>type="tel"</code>, lo que significa que este tipo es útil no sólo para ser utilizado para números de teléfono, sino también cuando sea útil un teclado numérico.</p>
 
@@ -99,7 +99,7 @@ original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 
 <p>Se puede crear un tipo especial de campo para introducir URLs utilizando el valor <code>url</code> para el atributo {{htmlattrxref("type","input")}}:</p>
 
-<pre class="brush: html notranslate">&lt;input type="url" id="url" name="url"&gt;</pre>
+<pre class="brush: html">&lt;input type="url" id="url" name="url"&gt;</pre>
 
 <p>Este tipo añade restricciones de validación en el campo. El navegador informará de un error si no se introdujo el protocolo (como <code>http:</code>), o si de algún modo el URL está mal formado. En dispositivos con teclados dinámicos a menudo mostrará por defecto algunas o todas las teclas como los dos puntos, el punto, y la barra inclinada.</p>
 
@@ -123,11 +123,11 @@ original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 
 <p>Miremos algunos ejemplos. El primero de los siguientes crea un control numérico cuyo valor está restringido a cualquier valor entre <code>1</code> y <code>10</code>, y sus botones cambian su valor en incrementos o decrementos de <code>2</code>.</p>
 
-<pre class="brush: html notranslate">&lt;input type="number" name="age" id="age" min="1" max="10" step="2"&gt;</pre>
+<pre class="brush: html">&lt;input type="number" name="age" id="age" min="1" max="10" step="2"&gt;</pre>
 
 <p>El segundo crea un control numérico cuyo valor está restringido a cualquier valor entre el <code>0</code> y <code>1</code> ambos inclusive, y sus botones cambian su valor en incrementos o decrementos de <code>0.01</code>.</p>
 
-<pre class="brush: html notranslate">&lt;input type="number" name="change" id="pennies" min="0" max="1" step="0.01"&gt;</pre>
+<pre class="brush: html">&lt;input type="number" name="change" id="pennies" min="0" max="1" step="0.01"&gt;</pre>
 
 <p>El tipo de input <code>number</code> tiene sentido cuando esté limitado el rango de valores válidos, por ejemplo la edad de una persona o su altura. Si el rango es demasiado grande para que los cambios de incremento tengan sentido ( por ejemplo los códigos postales de USA, cuyo rango va de <code>00001</code> a <code>99999</code>), entonces sería una mejor opción utilizar el tipo <code>tel</code>: proporciona el teclado numérico mientras que omite el componente de interfaz de usuario de los deslizadores de número.</p>
 
@@ -149,7 +149,7 @@ original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 
 <p>Let's look at the code behind the above example, so you can see how its done. First of all, the basic HTML:</p>
 
-<pre class="brush: html notranslate">&lt;label for="price"&gt;Choose a maximum house price: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="price"&gt;Choose a maximum house price: &lt;/label&gt;
 &lt;input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000"&gt;
 &lt;output class="price-output" for="price"&gt;&lt;/output&gt;</pre>
 
@@ -159,7 +159,7 @@ original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 
 <p>To actually display the current value, and update it as it changed, you must use JavaScript, but this is relatively easy to do:</p>
 
-<pre class="brush: js notranslate">const price = document.querySelector('#price')
+<pre class="brush: js">const price = document.querySelector('#price')
 const output = document.querySelector('.price-output')
 
 output.textContent = price.value
@@ -190,19 +190,19 @@ price.addEventListener('input', function() {
 
 <p><code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code> creates a widget to display and pick a date with time with no specific time zone information.</p>
 
-<pre class="brush: html notranslate">&lt;input type="datetime-local" name="datetime" id="datetime"&gt;</pre>
+<pre class="brush: html">&lt;input type="datetime-local" name="datetime" id="datetime"&gt;</pre>
 
 <h3 id="month"><code>month</code></h3>
 
 <p><code><a href="/en-US/docs/Web/HTML/Element/input/month">&lt;input type="month"&gt;</a></code> creates a widget to display and pick a month with a year.</p>
 
-<pre class="brush: html notranslate">&lt;input type="month" name="month" id="month"&gt;</pre>
+<pre class="brush: html">&lt;input type="month" name="month" id="month"&gt;</pre>
 
 <h3 id="time"><code>time</code></h3>
 
 <p><code><a href="/en-US/docs/Web/HTML/Element/input/time">&lt;input type="time"&gt;</a></code> creates a widget to display and pick a time value. While time may <em>display</em> in 12-hour format, the <em>value returned</em> is in 24-hour format.</p>
 
-<pre class="brush: html notranslate">&lt;input type="time" name="time" id="time"&gt;</pre>
+<pre class="brush: html">&lt;input type="time" name="time" id="time"&gt;</pre>
 
 <h3 id="week"><code>week</code></h3>
 
@@ -210,13 +210,13 @@ price.addEventListener('input', function() {
 
 <p>Weeks start on Monday and run to Sunday. Additionally, the first week 1 of each year contains the first Thursday of that year—which may not include the first day of the year, or may include the last few days of the previous year.</p>
 
-<pre class="brush: html notranslate">&lt;input type="week" name="week" id="week"&gt;</pre>
+<pre class="brush: html">&lt;input type="week" name="week" id="week"&gt;</pre>
 
 <h3 id="Constraining_datetime_values">Constraining date/time values</h3>
 
 <p>All date and time controls can be constrained using the <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attributes, with further constraining possible via the <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> attribute (whose value varies according to input type).</p>
 
-<pre class="brush: html notranslate">&lt;label for="myDate"&gt;When are you available this summer?&lt;/label&gt;
+<pre class="brush: html">&lt;label for="myDate"&gt;When are you available this summer?&lt;/label&gt;
 &lt;input type="date" name="myDate" min="2013-06-01" max="2013-08-31" step="7" id="myDate"&gt;</pre>
 
 <h3 id="Browser_support_for_datetime_inputs">Browser support for date/time inputs</h3>
@@ -231,7 +231,7 @@ price.addEventListener('input', function() {
 
 <p>A <code>color</code> control can be created using the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to the value <code>color</code>:</p>
 
-<pre class="brush: html notranslate">&lt;input type="color" name="color" id="color"&gt;</pre>
+<pre class="brush: html">&lt;input type="color" name="color" id="color"&gt;</pre>
 
 <p>When supported, clicking a color control will tend to display the operating system's default color picking functionality for you to actually make your choice with. The following screenshot taken on Firefox for macOS provides an example:</p>
 

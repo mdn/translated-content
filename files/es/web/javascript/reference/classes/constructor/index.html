@@ -16,7 +16,7 @@ original_slug: Web/JavaScript/Referencia/Classes/constructor
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">constructor([argumentos]) { ... }</pre>
+<pre class="syntaxbox">constructor([argumentos]) { ... }</pre>
 
 <h2 id="Descripción">Descripción</h2>
 
@@ -32,7 +32,7 @@ original_slug: Web/JavaScript/Referencia/Classes/constructor
 
 <p>Este fragmento de código se toma de la <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a>).</p>
 
-<pre class="brush: js notranslate">class Square extends Polygon {
+<pre class="brush: js">class Square extends Polygon {
   constructor(length) {
     // Aquí, llama al constructor de la clase padre con sus longitudes
     // contemplando la anchura y la altura del Polígono
@@ -56,12 +56,12 @@ original_slug: Web/JavaScript/Referencia/Classes/constructor
 
 <p>Si no especifica un método constructor, se utiliza un constructor predeterminado. Para las clases base, el constructor por defecto es:</p>
 
-<pre class="brush: js notranslate">constructor() {}
+<pre class="brush: js">constructor() {}
 </pre>
 
 <p>Para las clases derivadas, el constructor por defecto es:</p>
 
-<pre class="brush: js notranslate">constructor(...args) {
+<pre class="brush: js">constructor(...args) {
   super(...args);
 }</pre>
 

@@ -56,12 +56,12 @@ original_slug: Web/CSS/Especificidad
  <li>
   <p>Usar reglas más específicas. Indicando uno o más elementos antes del elemento que estás seleccionando, la regla se vuelve más específica y gana mayor prioridad:</p>
 
-  <pre class="brush: html notranslate">&lt;div id="test"&gt;
+  <pre class="brush: html">&lt;div id="test"&gt;
   &lt;span&gt;Text&lt;/span&gt;
 &lt;/div&gt;
 </pre>
 
-  <pre class="brush: css notranslate">div#test span { color: green; }
+  <pre class="brush: css">div#test span { color: green; }
 div span { color: blue; }
 span { color: red; }</pre>
  </li>
@@ -86,7 +86,7 @@ span { color: red; }</pre>
 
 <p>B) Otro escenario:</p>
 
-<pre class="default prettyprint prettyprinted notranslate"><code><span class="com">#someElement p {</span><span class="pln">
+<pre class="default prettyprint prettyprinted"><code><span class="com">#someElement p {</span><span class="pln">
     color</span><span class="pun">:</span><span class="pln"> blue</span><span class="pun">;</span><span class="pln">
 </span><span class="pun">}</span><span class="pln">
 
@@ -102,13 +102,13 @@ p</span><span class="pun">.</span><span class="pln">awesome </span><span class="
 
 <p>Algunos ejemplos con una gran especificidad:</p>
 
-<pre class="default prettyprint prettyprinted notranslate"><code><span class="pln">table td    </span><span class="pun">{</span><span class="pln">height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50px</span><span class="pln"> </span><span class="pun">!</span><span class="pln">important</span><span class="pun">;}</span><span class="pln">
+<pre class="default prettyprint prettyprinted"><code><span class="pln">table td    </span><span class="pun">{</span><span class="pln">height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50px</span><span class="pln"> </span><span class="pun">!</span><span class="pln">important</span><span class="pun">;}</span><span class="pln">
 </span><span class="pun">.</span><span class="pln">myTable td </span><span class="pun">{</span><span class="pln">height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50px</span><span class="pln"> </span><span class="pun">!</span><span class="pln">important</span><span class="pun">;}</span><span class="pln">
 </span><span class="com">#myTable td {height: 50px !important;}</span></code></pre>
 
 <p>B) O añade el mismo selector después de uno existente:</p>
 
-<pre class="default prettyprint prettyprinted notranslate"><code><span class="pln">td </span><span class="pun">{</span><span class="pln">height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50px</span><span class="pln"> </span><span class="pun">!</span><span class="pln">important</span><span class="pun">;}</span></code></pre>
+<pre class="default prettyprint prettyprinted"><code><span class="pln">td </span><span class="pun">{</span><span class="pln">height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50px</span><span class="pln"> </span><span class="pun">!</span><span class="pln">important</span><span class="pun">;}</span></code></pre>
 
 <p>C) O reescribe la regla original para evitar el uso de <code>!important</code>.</p>
 
@@ -130,7 +130,7 @@ p</span><span class="pun">.</span><span class="pln">awesome </span><span class="
 
 <p>Aquí tienes un pedazo de CSS:</p>
 
-<pre class="brush: css notranslate">div.outer p {
+<pre class="brush: css">div.outer p {
   color:orange;
 }
 div:not(.outer) p {
@@ -140,7 +140,7 @@ div:not(.outer) p {
 
 <p>cuando se usa con el siguiente HTML:</p>
 
-<pre class="brush: html notranslate">&lt;div class="outer"&gt;
+<pre class="brush: html">&lt;div class="outer"&gt;
   &lt;p&gt;Esto está en el outer div.&lt;/p&gt;
   &lt;div class="inner"&gt;
     &lt;p&gt;Este texto está en el inner div.&lt;/p&gt;
@@ -160,7 +160,7 @@ div:not(.outer) p {
 
 <p>Las siguientes declaraciones de estilo:</p>
 
-<pre class="brush: css notranslate">*#foo {
+<pre class="brush: css">*#foo {
   color: green;
 }
 *[id="foo"] {
@@ -170,7 +170,7 @@ div:not(.outer) p {
 
 <p>cuando se usan con este marcador:</p>
 
-<pre class="brush: html notranslate">&lt;p id="foo"&gt;Soy un texto de ejemplo.&lt;/p&gt;
+<pre class="brush: html">&lt;p id="foo"&gt;Soy un texto de ejemplo.&lt;/p&gt;
 </pre>
 
 <p>Se acabarán viendo así:</p>
@@ -183,7 +183,7 @@ div:not(.outer) p {
 
 <p>La proximidad de un elemento con otros a los que se hace referencia en un selector determinado, no tiene impacto en la especificidad. La siguiente declaración de estilo:</p>
 
-<pre class="brush: css notranslate">body h1 {
+<pre class="brush: css">body h1 {
   color: green;
 }
 html h1 {
@@ -193,7 +193,7 @@ html h1 {
 
 <p>Con el siguiente HTML:</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;body&gt;
   &lt;h1&gt;¡Aquí va un título!&lt;/h1&gt;
 &lt;/body&gt;
@@ -210,7 +210,7 @@ html h1 {
 
 <p>Los estilos para elementos objetivo de una declaración directa siempre tienen preferencia sobre los estilos heredados, sin importar la especificidad de la regla heredada.</p>
 
-<pre class="brush: css notranslate" style="font-size: 14px;">#parent {
+<pre class="brush: css" style="font-size: 14px;">#parent {
   color: green;
 }
 h1 {
@@ -219,7 +219,7 @@ h1 {
 
 <p>Con el siguiente HTML:</p>
 
-<pre class="brush: html notranslate" style="font-size: 14px;">&lt;html&gt;
+<pre class="brush: html" style="font-size: 14px;">&lt;html&gt;
 &lt;body id="parent"&gt;
   &lt;h1&gt;¡Aquí va un título!&lt;/h1&gt;
 &lt;/body&gt;

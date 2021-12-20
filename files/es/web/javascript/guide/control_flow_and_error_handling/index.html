@@ -27,7 +27,7 @@ original_slug: Web/JavaScript/Guide/Control_de_flujo_y_manejo_de_errores
 
 <p>La declaración más básica es una <dfn>declaración de bloque</dfn>, que se utiliza para agrupar instrucciones. El bloque está delimitado por un par de llaves:</p>
 
-<pre class="syntaxbox notranslate">{
+<pre class="syntaxbox">{
   <var>statement_1</var>;
   <var>statement_2</var>;
   ⋮
@@ -39,7 +39,7 @@ original_slug: Web/JavaScript/Guide/Control_de_flujo_y_manejo_de_errores
 
 <p>Las declaraciones de bloque se utilizan comúnmente con declaraciones de control de flujo (<code>if</code>, <code>for</code>, <code>while</code>).</p>
 
-<pre class="brush: js notranslate">while (x &lt; 10) {
+<pre class="brush: js">while (x &lt; 10) {
   x++;
 }
 </pre>
@@ -51,7 +51,7 @@ original_slug: Web/JavaScript/Guide/Control_de_flujo_y_manejo_de_errores
 
 <p>Los bloques "independientes" en JavaScript pueden producir resultados completamente diferentes de los que producirían en C o Java. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">var x = 1;
+<pre class="brush: js">var x = 1;
 {
   var x = 2;
 }
@@ -73,7 +73,7 @@ console.log(x); // muestra 2
 
 <p>Una declaración <code>if</code> se ve así:</p>
 
-<pre class="syntaxbox notranslate">if (<var>condition</var>) {
+<pre class="syntaxbox">if (<var>condition</var>) {
   <var>statement_1</var>;
 } else {
   <var>statement_2</var>;
@@ -85,7 +85,7 @@ console.log(x); // muestra 2
 
 <p>También puedes componer las declaraciones usando <code>else if</code> para que se prueben varias condiciones en secuencia, de la siguiente manera:</p>
 
-<pre class="syntaxbox notranslate">if (<var>condition_1</var>) {
+<pre class="syntaxbox">if (<var>condition_1</var>) {
   <var>statement_1</var>;
 } else if (<var>condition_2</var>) {
   <var>statement_2</var>;
@@ -102,7 +102,7 @@ console.log(x); // muestra 2
 
 <p>En general, es una buena práctica usar siempre declaraciones de bloque, <em>especialmente</em> al anidar declaraciones <code>if</code>:</p>
 
-<pre class="syntaxbox notranslate">if (<var>condition</var>) {
+<pre class="syntaxbox">if (<var>condition</var>) {
   <var>statement_1_runs_if_condition_is_true</var>;
   <var>statement_2_runs_if_condition_is_true</var>;
 } else {
@@ -115,7 +115,7 @@ console.log(x); // muestra 2
 
 <p>Por ejemplo, <em>no</em> escribas un código como este:</p>
 
-<pre class="example-bad brush: js notranslate">// Propenso a ser mal interpretado como "x == y"
+<pre class="example-bad brush: js">// Propenso a ser mal interpretado como "x == y"
 if (x = y) {
   /* expresiones aquí */
 }
@@ -123,7 +123,7 @@ if (x = y) {
 
 <p>Si necesitas usar una tarea en una expresión condicional, una práctica común es poner paréntesis adicionales alrededor de la asignación, así:</p>
 
-<pre class="example-good brush: js notranslate">if ((x = y)) {
+<pre class="example-good brush: js">if ((x = y)) {
   /* expresiones aquí */
 }
 </pre>
@@ -148,7 +148,7 @@ if (x = y) {
 
 <p>Por ejemplo:</p>
 
-<pre class="brush: js notranslate">var b = new Boolean(false);
+<pre class="brush: js">var b = new Boolean(false);
 if (b)         // esta condición se evalúa como verdadera
 if (b == true) // esta condición se evalúa como false
 </pre>
@@ -158,7 +158,7 @@ if (b == true) // esta condición se evalúa como false
 
 <p>En el siguiente ejemplo, la función <code>checkData</code> devuelve <code>true</code> si el número de caracteres en un objeto <code>Text</code> es tres. De lo contrario, muestra una alerta y devuelve <code>false</code>.</p>
 
-<pre class="brush: js notranslate">function checkData() {
+<pre class="brush: js">function checkData() {
   if (document.form1.threeChar.value.length == 3) {
     return true;
   } else {
@@ -176,7 +176,7 @@ if (b == true) // esta condición se evalúa como false
 
 <p>Una instrucción <code>switch</code> se ve así:</p>
 
-<pre class="syntaxbox notranslate">switch (<var>expression</var>) {
+<pre class="syntaxbox">switch (<var>expression</var>) {
   case <var>label_1</var>:
     <var>statements_1</var>
     [break;]
@@ -211,7 +211,7 @@ if (b == true) // esta condición se evalúa como false
 
 <p>En el siguiente ejemplo, si <code><var>fruittype</var></code> se evalúa como '<code>Bananas</code>', el programa hace coincidir el valor con el caso '<code>Bananas</code>' y ejecuta la declaración asociada. Cuando se encuentra <code>break</code>, el programa sale del <code>switch</code> y continúa la ejecución de la instrucción que sigue a <code>switch</code>. Si se omitiera <code>break</code>, también se ejecutará la instrucción para <code>case 'Cherries'</code>.</p>
 
-<pre class="brush: js notranslate">switch (<var>fruittype</var>) {
+<pre class="brush: js">switch (<var>fruittype</var>) {
   case 'Oranges':
     console.log('Las naranjas cuestan $0.59 la libra.');
     break;
@@ -257,12 +257,12 @@ console.log("¿Hay algo más que quieras?");</pre>
 
 <p>Utiliza la expresión <code>throw</code> para lanzar una excepción. Una expresión <code>throw</code> especifica el valor que se lanzará:</p>
 
-<pre class="syntaxbox notranslate">throw <var>expression</var>;
+<pre class="syntaxbox">throw <var>expression</var>;
 </pre>
 
 <p>Puedes lanzar cualquier expresión, no solo expresiones de un tipo específico. El siguiente código arroja varias excepciones de distintos tipos:</p>
 
-<pre class="brush: js notranslate">throw 'Error2';   // tipo String
+<pre class="brush: js">throw 'Error2';   // tipo String
 throw 42;         // tipo Number
 throw true;       // tipo Boolean
 throw {toString: function() { return "¡Soy un objeto!"; } };
@@ -272,7 +272,7 @@ throw {toString: function() { return "¡Soy un objeto!"; } };
 <p><strong>Nota</strong> Puedes especificar un objeto cuando lanzas una excepción. A continuación, puedes hacer referencia a las propiedades del objeto en el bloque <code>catch</code>.</p>
 </div>
 
-<pre class="brush: js notranslate">// Crea un objeto tipo de UserException
+<pre class="brush: js">// Crea un objeto tipo de UserException
 function UserException(message) {
   this.message = message;
   this.name = 'UserException';
@@ -297,7 +297,7 @@ throw new UserException('Valor muy alto');</pre>
 
 <p>El siguiente ejemplo usa una instrucción <code>try...catch</code>. El ejemplo llama a una función que recupera el nombre de un mes de un arreglo en función del valor pasado a la función. Si el valor no corresponde a un número de mes (<code>1</code>-<code>12</code>), se lanza una excepción con el valor "<code>InvalidMonthNo</code>" y las declaraciones en el bloque <code>catch</code> establezca la variable <code><var>monthName</var></code> en '<code>unknown</code>'.</p>
 
-<pre class="brush: js notranslate">function getMonthName(mo) {
+<pre class="brush: js">function getMonthName(mo) {
   mo = mo - 1; // Ajusta el número de mes para el índice del arreglo (1 = Ene, 12 = Dic)
   let months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul',
                 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
@@ -321,7 +321,7 @@ catch (e) {
 
 <p>Puedes usar un bloque <code>catch</code> para manejar todas las excepciones que se puedan generar en el bloque <code>try</code>.</p>
 
-<pre class="syntaxbox notranslate">catch (<var>catchID</var>) {
+<pre class="syntaxbox">catch (<var>catchID</var>) {
   <var>instrucciones</var>
 }
 </pre>
@@ -332,7 +332,7 @@ catch (e) {
 
 <p>Por ejemplo, el siguiente código lanza una excepción. Cuando ocurre la excepción, el control se transfiere al bloque <code>catch</code>.</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   throw 'myException'; // genera una excepción
 }
 catch (err) {
@@ -355,7 +355,7 @@ catch (err) {
 
 <p>El siguiente ejemplo abre un archivo y luego ejecuta declaraciones que usan el archivo. (JavaScript de lado del servidor te permite acceder a los archivos). Si se lanza una excepción mientras el archivo está abierto, el bloque <code>finally</code> cierra el archivo antes de que falle el script. Usar <code>finally</code> aquí <em>asegura</em> que el archivo nunca se deje abierto, incluso si ocurre un error.</p>
 
-<pre class="brush: js notranslate">openMyFile();
+<pre class="brush: js">openMyFile();
 try {
   writeMyFile(theData); // Esto puede arrojar un error
 } catch(e) {
@@ -367,7 +367,7 @@ try {
 
 <p>Si el bloque <code>finally</code> devuelve un valor, este valor se convierte en el valor de retorno de toda la producción de <code>try…catch…finally</code>, independientemente de las declaraciones <code>return</code> en los bloques <code>try</code> y <code>catch</code>:</p>
 
-<pre class="brush: js notranslate">function f() {
+<pre class="brush: js">function f() {
   try {
     console.log(0);
     throw 'bogus';
@@ -389,7 +389,7 @@ console.log(f()); // 0, 1, 3, false
 
 <p>La sobrescritura de los valores devueltos por el bloque <code>finally</code> también se aplica a las excepciones lanzadas o relanzadas dentro del bloque <code>catch</code>:</p>
 
-<pre class="brush: js notranslate">function f() {
+<pre class="brush: js">function f() {
   try {
     throw 'bogus';
   } catch(e) {
@@ -438,7 +438,7 @@ try {
 
 <p>Por ejemplo:</p>
 
-<pre class="brush: js notranslate">function doSomethingErrorProne() {
+<pre class="brush: js">function doSomethingErrorProne() {
   if (ourCodeMakesAMistake()) {
     throw (new Error('El mensaje'));
   } else {

@@ -150,7 +150,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Clases_de_caracteres
 
 <h3 id="Buscar_una_serie_de_dígitos">Buscar una serie de dígitos</h3>
 
-<pre class="brush: js notranslate">var datosAleatorios = "015 354 8787 687351 3512 8735";
+<pre class="brush: js">var datosAleatorios = "015 354 8787 687351 3512 8735";
 var regexpCuatroDigitos = /\b\d{4}\b/g;
 // \b indica un límite (es decir, no empieza a coincidir en medio de una palabra)
 // \d{4} indica un dígito, cuatro veces
@@ -163,7 +163,7 @@ console.table(datosAleatorios.match(regexpCuatroDigitos));
 
 <h3 id="Busca_una_palabra_del_alfabeto_latino_que_comience_con_A">Busca una palabra (del alfabeto latino) que comience con A</h3>
 
-<pre class="brush: js notranslate">var extractoAlicia = "Estoy segura de que no soy Ada, dijo, 'porque su cabello se hace en rizos tan largos, y el mío no se riza en absoluto'.";
+<pre class="brush: js">var extractoAlicia = "Estoy segura de que no soy Ada, dijo, 'porque su cabello se hace en rizos tan largos, y el mío no se riza en absoluto'.";
 var regexpPalabraEmpiezaConA = /\b[aA]\w+/g;
 // \b indica un límite (es decir, no empieza a coincidir en medio de una palabra)
 // [aA] indica las letras a o A
@@ -177,7 +177,7 @@ console.table(extractoAlicia.match(regexpPalabraEmpiezaConA));
 
 <p>En lugar del alfabeto latino, podemos usar una variedad de caracteres Unicode para identificar una palabra (de modo que podamos tratar con texto en otros idiomas, tal como Ruso o Árabe). El "Plano multilingüe básico" de Unicode contiene la mayoría de los caracteres que se utilizan en todo el mundo y podemos utilizar clases y rangos de caracteres para reconocer las palabras escritas con esos caracteres.</p>
 
-<pre class="brush: js notranslate">var textoNoEs = "Приключения Алисы в Стране чудес";
+<pre class="brush: js">var textoNoEs = "Приключения Алисы в Стране чудес";
 var regexpPalabraBMP = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // BMP pasa por U+0000 a U+FFFF pero el espacio es U+0020
 

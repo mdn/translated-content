@@ -46,11 +46,11 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 <p>Por ejemplo, si tu imagen se llama <code>dinosaur.jpg</code>, y está en el mismo directorio que tu página HTML, deberás incrustar la imagen de la siguiente manera:</p>
 
-<pre class="brush: html notranslate">&lt;img src="dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="dinosaur.jpg"&gt;</pre>
 
 <p>Si la imagen estaba en el subdirectorio <code>images</code>, que estaba en el mismo directorio que la página HTML (lo que Google recomienda con fines de indización y posicionamiento en buscadores {{glossary("SEO")}}), entonces deberías incrustar la imagen así:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"&gt;</pre>
 
 <p>y así sucesivamente.</p>
 
@@ -60,7 +60,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 <p>Puedes incrustar la imagen usando la URL absoluta, por ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;img src="https://www.example.com/images/dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="https://www.example.com/images/dinosaur.jpg"&gt;</pre>
 
 <p>Pero esto no tiene sentido, solo hace que el navegador trabaje más buscando la dirección IP desde el servidor DNS cada vez, etc. Casi siempre mantendrás las imágenes para tu sitio web en el mismo servidor de tu HTML.</p>
 
@@ -90,7 +90,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 <p>El próximo atributo que veremos es  <code>alt</code>. Su valor debe ser una descripción textual de la imagen para usarla en situaciones en que la imagen no puede ser vista/mostrada o tarde demasiado en mostrarse por una conexión lenta a internet. Por ejemplo, nuestro código anterior podría modificarse así:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
      alt="La cabeza y el torso de un esqueleto de dinosaurio;
            tiene una cabeza grande con dientes largos y afilados"&gt;</pre>
 
@@ -127,7 +127,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 <p>Puedes usar los atributos  ancho (<code>width</code>) y alto (<code>height</code>) para especificar la anchura y altura de tu imagen. Puedes encontrar el ancho y el alto de tu imagen de diversas maneras. Por ejemplo, en Mac puedes usar  <kbd>Cmd</kbd> + <kbd>I</kbd>  para mostrar información del archivo de imagen. Volviendo a nuestro ejemplo, podríamos hacer esto:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
      alt="La cabeza y el torso de un esqueleto de dinosaurio;
            tiene una cabeza grande con dientes largos y afilados"
      width="400"
@@ -149,7 +149,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 <p>Al igual que con los enlaces, también puedes añadir atributos <code>title</code> a las imágenes para proporcionar más información de ayuda si es necesario. En nuestro ejemplo, podríamos hacer esto:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
      alt="La cabeza y el torso de un esqueleto de dinosaurio;
            tiene una cabeza grande con dientes largos y afilados"
      width="400"
@@ -185,7 +185,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -202,7 +202,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -222,7 +222,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -307,7 +307,7 @@ textarea.onkeyup = function(){
 
 <p>Hay varias formas en que puedes añadir un pie a tu imagen. Por ejemplo, nada te impediría hacer esto:</p>
 
-<pre class="brush: html notranslate">&lt;div class="figure"&gt;
+<pre class="brush: html">&lt;div class="figure"&gt;
   &lt;img src="images/dinosaur.jpg"
        alt="La cabeza y el torso de un esqueleto de dinosaurio;
            tiene una cabeza grande con dientes largos y afilados"
@@ -360,7 +360,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code 2</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -376,7 +376,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -396,7 +396,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -481,7 +481,7 @@ textarea.onkeyup = function(){
 
 <p>También puedes usar CSS para insertar imágenes en páginas web (y JavaScript, pero eso ya es otra historia). La propiedad CSS {{cssxref("background-image")}} y las demás propiedades  <code>background-*</code> se usan para controlar la colocación de la imagen de fondo. Por ejemplo, para poner una imagen de fondo en cada párrafo de una página, podríamos hacer esto:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   background-image: url("images/dinosaur.jpg");
 }</pre>
 

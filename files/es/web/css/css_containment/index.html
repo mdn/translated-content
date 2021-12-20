@@ -11,7 +11,7 @@ translation_of: Web/CSS/CSS_Containment
 
 <p>Muchas páginas web contienen un número de secciones que don independientes entre sí. Por ejemplo una lista de encabezados de artículo y un contenido, como en el siguiente marcado.</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Mi blog&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Mi blog&lt;/h1&gt;
 &lt;article&gt;
   &lt;h2&gt;Encabezado de un bonito artículo&lt;/h2&gt;
   &lt;p&gt;Contenido del artículo.&lt;/p&gt;
@@ -23,7 +23,7 @@ translation_of: Web/CSS/CSS_Containment
 
 <p>Cada artículo tiene la propiedad {{cssxref("contain")}} con valor <code>content</code> aplicado en el CSS.</p>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   contain: content;
 }</pre>
 
@@ -43,7 +43,7 @@ translation_of: Web/CSS/CSS_Containment
 
 <h3 id="Layout_containment">Layout containment</h3>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   contain: layout;
 }</pre>
 
@@ -60,7 +60,7 @@ translation_of: Web/CSS/CSS_Containment
 
 <h3 id="Paint_containment">Paint containment</h3>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   contain: paint;
 }</pre>
 
@@ -70,7 +70,7 @@ translation_of: Web/CSS/CSS_Containment
 
 <h3 id="Size_containment">Size containment</h3>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   contain: size;
 }</pre>
 
@@ -80,7 +80,7 @@ translation_of: Web/CSS/CSS_Containment
 
 <h3 id="Style_containment">Style containment</h3>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   contain: style;
 }</pre>
 
@@ -105,7 +105,7 @@ translation_of: Web/CSS/CSS_Containment
 
 <p>To gain as much containment as possible use <code>contain: strict</code>, which behaves the same as <code>contain: size layout paint</code>, or perhaps the following to also add <code>style</code> containment in browsers that support it:</p>
 
-<pre class="brush: css notranslate">contain: strict;
+<pre class="brush: css">contain: strict;
 contain: strict style;</pre>
 
 <h2 id="Reference">Reference</h2>

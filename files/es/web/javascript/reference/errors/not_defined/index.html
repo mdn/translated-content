@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Errors/Not_defined
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<pre class="syntaxbox notranslate">ReferenceError: "x" no está definida.</pre>
+<pre class="syntaxbox">ReferenceError: "x" no está definida.</pre>
 
 <h2 id="Tipo_de_error">Tipo de error</h2>
 
@@ -27,19 +27,19 @@ translation_of: Web/JavaScript/Reference/Errors/Not_defined
 
 <h3 id="Variable_no_declarada">Variable no declarada</h3>
 
-<pre class="brush: js example-bad notranslate">foo.substring(1); // ReferenceError: foo no está declarada.
+<pre class="brush: js example-bad">foo.substring(1); // ReferenceError: foo no está declarada.
 </pre>
 
 <p>La variable "foo" no está declarada en ninguna parte. La variable debe ser alguna cadena para que el método {{jsxref("String.prototype.substring()")}} funcione correctamente.</p>
 
-<pre class="brush: js example-good notranslate">var foo = "bar";
+<pre class="brush: js example-good">var foo = "bar";
 foo.substring(1); // "ar"</pre>
 
 <h3 id="Contexto_erróneo">Contexto erróneo</h3>
 
 <p>Una variable necesita estar disponible en el contexto actual de ejecución. No se puede acceder a las variables definidas dentro de una <a href="/es/docs/Web/JavaScript/Referencia/Funciones">función</a> desde fuera de dicha función, debido a que la variable está definida solamente dentro de la función.</p>
 
-<pre class="brush: js example-bad notranslate">function numbers () {
+<pre class="brush: js example-bad">function numbers () {
   var num1 = 2,
       num2 = 3;
   return num1 + num2;
@@ -49,7 +49,7 @@ console.log(num1); // ReferenceError num1 sin definir.</pre>
 
 <p>Sin embargo, una función puede acceder a todas las variables y funciones definidas dentro del ámbito en la cual ha sido definida. Es decir, una función en el contexto global puede acceder a todas las variables definidas en el contexto global.</p>
 
-<pre class="brush: js example-good notranslate">var num1 = 2,
+<pre class="brush: js example-good">var num1 = 2,
     num2 = 3;
 
 function numbers () {

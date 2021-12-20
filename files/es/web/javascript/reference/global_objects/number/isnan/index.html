@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isNaN
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><code>Number.isNaN(v<var>alue</var>)</code></pre>
+<pre class="syntaxbox"><code>Number.isNaN(v<var>alue</var>)</code></pre>
 
 <h3 id="Parámetros">Parámetros</h3>
 
@@ -27,7 +27,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isNaN
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">Number.isNaN(NaN);        // true
+<pre class="brush: js">Number.isNaN(NaN);        // true
 Number.isNaN(Number.NaN); // true
 Number.isNaN(0 / 0)       // true
 
@@ -49,7 +49,7 @@ Number.isNaN(" ");
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">Number.isNaN = Number.isNaN || function(value) {
+<pre class="brush: js">Number.isNaN = Number.isNaN || function(value) {
     return typeof value === "number" &amp;&amp; isNaN(value);
 }
 

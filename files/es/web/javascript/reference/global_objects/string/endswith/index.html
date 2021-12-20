@@ -18,7 +18,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/endsWith
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.endsWith(<var>searchString</var>[, <var>position</var>])</code></pre>
+<pre class="syntaxbox"><code><var>str</var>.endsWith(<var>searchString</var>[, <var>position</var>])</code></pre>
 
 <h3 id="Parámetros">Parámetros</h3>
 
@@ -41,7 +41,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/endsWith
 
 <p>Este método ha sido añadido a la especificación ECMAScript 6 y puede no estar disponible en todas las implementaciones de JavaScript. Sin embargo, puedes implementar el polyfill <code>String.prototype.endsWith()</code> con el siguiente fragmento de código:</p>
 
-<pre class="brush: js notranslate">if (!String.prototype.endsWith) {
+<pre class="brush: js">if (!String.prototype.endsWith) {
 	String.prototype.endsWith = function(search, this_len) {
 		if (this_len === undefined || this_len &gt; this.length) {
 			this_len = this.length;
@@ -55,7 +55,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/endsWith
 
 <h3 id="Usando_endsWith">Usando <code>endsWith()</code></h3>
 
-<pre class="brush: js notranslate">let str = 'To be, or not to be, that is the question.'
+<pre class="brush: js">let str = 'To be, or not to be, that is the question.'
 
 console.log(str.endsWith('question.'))  // true
 console.log(str.endsWith('to be'))      // false

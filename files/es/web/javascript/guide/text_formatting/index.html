@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 <p>Puedes crear cadenas simples utilizando comillas simples o dobles:</p>
 
-<pre class="brush: js notranslate">'foo'
+<pre class="brush: js">'foo'
 "bar"</pre>
 
 <p>Se pueden crear cadenas más avanzadas usando secuencias de escape:</p>
@@ -29,14 +29,14 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 <p>El número después de \x se interpreta como un número del {{Interwiki("wikipedia", "Sistema_hexadecimal")}}.</p>
 
-<pre class="brush: js notranslate">'\xA9' // "©"
+<pre class="brush: js">'\xA9' // "©"
 </pre>
 
 <h4 id="Secuencias_de_escape_Unicode">Secuencias de escape Unicode</h4>
 
 <p>Las secuencias de escape Unicode requieren al menos cuatro dígitos hexadecimales después de <code>\u</code>.</p>
 
-<pre class="brush: js notranslate">'\u00A9' // "©"</pre>
+<pre class="brush: js">'\u00A9' // "©"</pre>
 
 <h4 id="Puntos_de_escape_de_código_Unicode">Puntos de escape de código Unicode</h4>
 
@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 <p>Consulta también {{JSxRef("String.fromCodePoint()")}} o {{JSxRef("String.prototype.codePointAt()")}}.</p>
 
-<pre class="brush: js notranslate">'\u{2F804}'
+<pre class="brush: js">'\u{2F804}'
 
 // lo mismo con los escapes Unicode simples
 '\uD87E\uDC04'</pre>
@@ -53,7 +53,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 <p>El objeto {{JSxRef("String")}} es una envoltura alrededor del tipo de dato primitivo <code>string</code>.</p>
 
-<pre class="brush: js notranslate">const foo = new String('foo'); // Crea un objeto String
+<pre class="brush: js">const foo = new String('foo'); // Crea un objeto String
 console.log(foo);              // Muestra: <span><span>[String: 'foo']</span></span>
 typeof foo;                    // Devuelve 'object'
 </pre>
@@ -62,14 +62,14 @@ typeof foo;                    // Devuelve 'object'
 
 <p>Debes usar cadenas literales a menos que necesites específicamente usar un objeto <code>String</code>, porque los objetos <code>String</code> pueden tener un comportamiento contrario a la intuición. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">const firstString = '2 + 2';              // Crea un valor de cadena literal
+<pre class="brush: js">const firstString = '2 + 2';              // Crea un valor de cadena literal
 const secondString = new String('2 + 2'); // Crea un objeto String
 eval(firstString);                        // Devuelve el número 4
 eval(secondString);                       // Devuelve la cadena "2 + 2"</pre>
 
 <p>Un objeto <code>String</code> tiene una propiedad, <code>length</code>, que indica el número de unidades de código UTF-16 en la cadena. Por ejemplo, el siguiente código asigna a <code>helloLength</code> el valor 13, porque "¡Hola, mundo!" tiene 13 caracteres, cada uno representado por una unidad de código UTF-16. Puedes acceder a cada unidad de código utilizando la notación de corchete de los arreglos. No puedes cambiar caracteres individuales porque las cadenas son objetos inmutables similares a los arreglos:</p>
 
-<pre class="brush: js notranslate">const hello = '¡Hola, mundo!';
+<pre class="brush: js">const hello = '¡Hola, mundo!';
 const helloLength = hello.length;
 hello[0] = 'L'; // Esto no tiene ningún efecto, porque las cadenas son inmutables
 hello[1];       // Esto devuelve "H"
@@ -159,14 +159,14 @@ hello[1];       // Esto devuelve "H"
 
 <p>Cualquier caracter de nueva línea insertado en la fuente es parte de la plantilla literal. Usando cadenas normales, tendrías que usar la siguiente sintaxis para obtener cadenas multilínea:</p>
 
-<pre class="brush: js notranslate">console.log('cadena de texto línea 1\n\
+<pre class="brush: js">console.log('cadena de texto línea 1\n\
 cadena de texto línea 2');
 // "cadena de texto línea 1
 // cadena de texto línea 2"</pre>
 
 <p>Para obtener el mismo efecto con cadenas multilínea, ahora puedes escribir:</p>
 
-<pre class="brush: js notranslate">console.log(`cadena de texto línea 1
+<pre class="brush: js">console.log(`cadena de texto línea 1
 cadena de texto línea 2`);
 // "cadena de texto línea 1
 // cadena de texto línea 2"</pre>
@@ -175,14 +175,14 @@ cadena de texto línea 2`);
 
 <p>Para incrustar expresiones dentro de cadenas normales, usarías la siguiente sintaxis:</p>
 
-<pre class="brush: js notranslate">const five = 5;
+<pre class="brush: js">const five = 5;
 const ten = 10;
 console.log('Quince es ' + (five + ten) + ' y no ' + (2 * five + ten) + '.');
 // "Quince es 15 y no 20."</pre>
 
 <p>Ahora, con las plantillas literales, puedes hacer uso del azúcar sintáctica haciendo que las sustituciones como esta sean más legibles:</p>
 
-<pre class="brush: js notranslate">const five = 5;
+<pre class="brush: js">const five = 5;
 const ten = 10;
 console.log (`Quince es ${five + ten} y no ${2 * five + ten}.`);
 // "Quince es 15 y no 20."</pre>
@@ -197,7 +197,7 @@ console.log (`Quince es ${five + ten} y no ${2 * five + ten}.`);
 
 <p>El objeto {{JSxRef("DateTimeFormat")}} es útil para formatear la fecha y la hora. El siguiente formato es una fecha para el Inglés como se usa en los Estados Unidos. (El resultado es diferente en otra zona horaria).</p>
 
-<pre class="brush: js notranslate">const msPerDay = 24 * 60 * 60 * 1000;
+<pre class="brush: js">const msPerDay = 24 * 60 * 60 * 1000;
 
 // July 17, 2014 00:00:00 UTC.
 const july172014 = new Date(msPerDay * (44 * 365 + 11 + 197));
@@ -213,7 +213,7 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 
 <p>El objeto {{JSxRef("NumberFormat")}} es útil para formatear números, por ejemplo, monedas.</p>
 
-<pre class="brush: js notranslate">const gasPrice = new Intl.NumberFormat('en-US',
+<pre class="brush: js">const gasPrice = new Intl.NumberFormat('en-US',
                         { style: 'currency', currency: 'USD',
                           minimumFractionDigits: 3 });
 
@@ -231,7 +231,7 @@ console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 
 <p>Por ejemplo, en realidad hay dos órdenes de clasificación diferentes en Alemán, «<em>phonebook</em>» y «<em>dictionary</em>». La clasificación «<em>phonebook</em>» enfatiza el sonido, y es como si "ä", "ö", etc. se expandieran a "ae", "oe", etc. antes de la clasificación.</p>
 
-<pre class="brush: js notranslate">const names = ['Hochberg', 'Hönigswald', 'Holzman'];
+<pre class="brush: js">const names = ['Hochberg', 'Hönigswald', 'Holzman'];
 
 const germanPhonebook = new Intl.Collator('de-DE-u-co-phonebk');
 
@@ -242,7 +242,7 @@ console.log(names.sort(germanPhonebook.compare).join(', '));
 
 <p>Algunas palabras alemanas se conjugan con diéresis adicionales, por lo que en los diccionarios es sensato ordenar ignorando diéresis (excepto cuando se ordenan palabras que difieren <em>solo</em> por las diéresis: «<em>schon</em>» antes de «<em>schön</em>»).</p>
 
-<pre class="brush: js notranslate">const germanDictionary = new Intl.Collator('de-DE-u-co-dict');
+<pre class="brush: js">const germanDictionary = new Intl.Collator('de-DE-u-co-dict');
 
 // como si ordenara ["Hochberg", "Honigswald", "Holzman"]:
 console.log(names.sort(germanDictionary.compare).join(', '));

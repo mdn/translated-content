@@ -19,7 +19,7 @@ original_slug: Web/JavaScript/Referencia/Operadores/new
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">new <var>constructor</var>[([<var>arguments</var>])]</pre>
+<pre class="syntaxbox">new <var>constructor</var>[([<var>arguments</var>])]</pre>
 
 <h3 id="Parámetros">Parámetros</h3>
 
@@ -65,7 +65,7 @@ original_slug: Web/JavaScript/Referencia/Operadores/new
 
 <p>Puedes agregar una propiedad compartida a un tipo de objeto definido previamente mediante la propiedad {{JSxRef("Global_Objects/Function/prototype", "Function.prototype")}}. Esto define una propiedad que comparten todos los objetos creados con esa función, en lugar de solo una instancia del tipo de objeto. El siguiente código agrega una propiedad de color con el valor <code>"color original"</code> a todos los objetos de tipo <code>Car</code>, y luego redefine ese valor con la cadena "<code>black</code>" solo en la instancia <code>car1</code> del objeto. Para obtener más información, consulta {{JSxRef("Global_Objects/Function/prototype", "prototype")}}.</p>
 
-<pre class="brush: js notranslate">function Car() {}
+<pre class="brush: js">function Car() {}
 car1 = new Car();
 car2 = new Car();
 
@@ -93,7 +93,7 @@ console.log(car2.color);   // 'color original'
 
 <p>Supongamos que deseas crear un tipo de objeto para <code>cars</code>. Quieres que este tipo de objeto se llame <code>Car</code>, y quieres que tenga propiedades para marca, modelo y año (<code>make</code>, <code>model</code> y <code>year</code> en inglés respectivamente). Para ello, podrías escribir la siguiente función:</p>
 
-<pre class="brush: js notranslate">function Car(make, model, year) {
+<pre class="brush: js">function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -102,21 +102,21 @@ console.log(car2.color);   // 'color original'
 
 <p>Ahora puedes crear un objeto llamado <code>myCar</code> de la siguiente manera:</p>
 
-<pre class="brush: js notranslate">var myCar = new Car('Eagle', 'Talon TSi', 1993);
+<pre class="brush: js">var myCar = new Car('Eagle', 'Talon TSi', 1993);
 </pre>
 
 <p>Esta declaración crea <code>myCar</code> y le asigna los valores especificados para sus propiedades. Entonces el valor de <code>myCar.make</code> es la cadena "Eagle", <code>myCar.year</code> es el entero 1993, y así sucesivamente.</p>
 
 <p>Puedes crear cualquier número de objetos <code>car</code> mediante llamadas a <code>new</code>. Por ejemplo:</p>
 
-<pre class="brush: js notranslate">var kensCar = new Car('Nissan', '300ZX', 1992);
+<pre class="brush: js">var kensCar = new Car('Nissan', '300ZX', 1992);
 </pre>
 
 <h3 id="Propiedad_del_objeto_que_en_sí_mismo_es_otro_objeto">Propiedad del objeto que en sí mismo es otro objeto</h3>
 
 <p>Supongamos que defines un objeto llamado <code>Person</code> de la siguiente manera:</p>
 
-<pre class="brush: js notranslate">function Person(name, age, sex) {
+<pre class="brush: js">function Person(name, age, sex) {
   this.name = name;
   this.age = age;
   this.sex = sex;
@@ -125,13 +125,13 @@ console.log(car2.color);   // 'color original'
 
 <p>Y luego creas una instancia de dos nuevos objetos <code>Person</code> de la siguiente manera:</p>
 
-<pre class="brush: js notranslate">var rand = new Person('Rand McNally', 33, 'M');
+<pre class="brush: js">var rand = new Person('Rand McNally', 33, 'M');
 var ken = new Person('Ken Jones', 39, 'M');
 </pre>
 
 <p>Luego, puedes reescribir la definición de <code>Car</code> para incluir una propiedad para <code>owner</code> (propietario en español) que tome un objeto <code>Person</code>, de la siguiente manera:</p>
 
-<pre class="brush: js notranslate">function Car(make, model, year, owner) {
+<pre class="brush: js">function Car(make, model, year, owner) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -141,13 +141,13 @@ var ken = new Person('Ken Jones', 39, 'M');
 
 <p>Para crear instancias de los nuevos objetos, utiliza lo siguiente:</p>
 
-<pre class="brush: js notranslate">var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
+<pre class="brush: js">var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
 var car2 = new Car('Nissan', '300ZX', 1992, ken);
 </pre>
 
 <p>En lugar de pasar una cadena literal o un valor entero al crear los nuevos objetos, las declaraciones anteriores pasan los objetos <code>rand</code> y <code>ken</code> como parámetros para los propietarios. Para conocer el nombre del propietario de <code>car2</code>, puedes acceder a la siguiente propiedad:</p>
 
-<pre class="brush: js notranslate">car2.owner.name
+<pre class="brush: js">car2.owner.name
 </pre>
 
 <h2 id="Especificaciones">Especificaciones</h2>

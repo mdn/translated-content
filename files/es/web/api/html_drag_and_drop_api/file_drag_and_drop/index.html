@@ -22,20 +22,20 @@ original_slug: DragDrop/Drag_and_Drop/drag_and_drop_archivo
 
 <p>Es necesario configurar un evento {{event("drop")}} en el objeto sobre el cual se soltará el objeto arrastrado. Este evento llamará una función global {{domxref("GlobalEventHandlers.ondrop","ondrop")}} que recibe los datos del objeto arrastrado. El siguiente código muestra cómo se hace con un elemento {{HTMLelement("div")}}:</p>
 
-<pre class="brush: html notranslate">&lt;div id="drop_zone" ondrop="dropHandler(event);"&gt;
+<pre class="brush: html">&lt;div id="drop_zone" ondrop="dropHandler(event);"&gt;
   &lt;p&gt;Arrastra y suelta uno o más archivos a esta zona ...&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <p>Normalmente, una aplicación incluirá una función de gestión de eventos {{event("dragover")}} en el elemento objetivo del arrastre y esa función desactivará el comportamiento de arrastre por defecto del browser. Para añadir esta función necesita incluir una función global {{domxref("GlobalEventHandlers.ondragover","ondragover")}}:</p>
 
-<pre class="brush: html notranslate">&lt;div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);"&gt;
+<pre class="brush: html">&lt;div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);"&gt;
   &lt;p&gt;Arrastra y suelta uno o más archivos a esta zona ...&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
 <p>Por último, puede que una aplicación quiera personalizar el estilo del elemento objetivo del arrastre para indicar visualmente que es una zona drag and drop. En este ejemplo, el elemento objetivo usa el siguiente estilo:</p>
 
-<pre class="brush: css notranslate">#drop_zone {
+<pre class="brush: css">#drop_zone {
   border: 5px solid blue;
   width:  200px;
   height: 100px;
@@ -54,7 +54,7 @@ original_slug: DragDrop/Drag_and_Drop/drag_and_drop_archivo
 
 <p>Nótese que en este ejemplo, cualquier item arrastrado que no sea un archivo es ignorado.</p>
 
-<pre class="brush: js notranslate">function dropHandler(ev) {
+<pre class="brush: js">function dropHandler(ev) {
   console.log('Fichero(s) arrastrados');
 
   // Evitar el comportamiendo por defecto (Evitar que el fichero se abra/ejecute)
@@ -84,7 +84,7 @@ original_slug: DragDrop/Drag_and_Drop/drag_and_drop_archivo
 
 <p>El siguiente evento {{event("dragover")}} llama a  {{domxref("Event.preventDefault","preventDefault()")}} para deshabilitar (turn off) la respuesta estandar drag-and-drop del browser.</p>
 
-<pre class="brush: js notranslate">function dragOverHandler(ev) {
+<pre class="brush: js">function dragOverHandler(ev) {
   console.log('File(s) in drop zone');
 
   // Prevent default behavior (Prevent file from being opened)
@@ -96,7 +96,7 @@ original_slug: DragDrop/Drag_and_Drop/drag_and_drop_archivo
 
 <p>Typically, an application may want to perform some cleanup by deleting the file drag data. In this example, the drop event is passed along from drop handler to a custom function called removeDragData. If the browser supports the {{domxref("DataTransferItemList")}} interface, the list's {{domxref("DataTransferItemList.clear","clear()")}} method is used to delete the file drag data; otherwise the {{domxref("DataTransfer")}} object's {{domxref("DataTransfer.clearData","clearData()")}} method is used to delete the data.</p>
 
-<pre class="brush: js notranslate">function removeDragData(ev) {
+<pre class="brush: js">function removeDragData(ev) {
   console.log('Removing drag data')
 
   if (ev.dataTransfer.items) {

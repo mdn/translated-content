@@ -22,7 +22,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/startsWith
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><var>str</var>.startsWith(<var>stringBuscada</var>[, <var>posicion</var>])</pre>
+<pre class="syntaxbox"><var>str</var>.startsWith(<var>stringBuscada</var>[, <var>posicion</var>])</pre>
 
 <h3 id="Parámetros">Parámetros</h3>
 
@@ -45,7 +45,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/startsWith
 
 <p>Este método se ha añadido a la especificación ECMAScript 2015 y podría no estar disponible aún en todas las implementaciones de JavaScript. Sin embargo, puedes utilizar un <em>polyfill</em> de <code>String.prototype.startsWith()</code> con el siguiente fragmento de código:</p>
 
-<pre class="brush: js notranslate">if (!String.prototype.startsWith) {
+<pre class="brush: js">if (!String.prototype.startsWith) {
     Object.defineProperty(String.prototype, 'startsWith', {
         value: function(search, rawPos) {
             var pos = rawPos &gt; 0 ? rawPos|0 : 0;
@@ -61,7 +61,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/startsWith
 
 <h3 id="Usando_startsWith">Usando <code>startsWith()</code></h3>
 
-<pre class="brush: js notranslate">//startswith
+<pre class="brush: js">//startswith
 var str = 'Ser, o no ser. ¡Esa es la cuestión!';
 
 console.log(str.startsWith('Ser'));           // true

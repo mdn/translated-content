@@ -60,7 +60,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Function
 
 <p>Las funciones creadas con el constructor <code>Function</code> no crean cierres para sus contextos de creación; siempre se crean en el ámbito global. Al ejecutarlos, solo podrán acceder a sus propias variables locales y globales, no a las del ámbito en el que se creó el constructor <code>Function</code>. Esto es diferente de usar {{jsxref("eval")}} con código para una expresión de función.</p>
 
-<pre class="brush: js notranslate">var x = 10;
+<pre class="brush: js">var x = 10;
 
 function createFunction1() {
     var x = 20;

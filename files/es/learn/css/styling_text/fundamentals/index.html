@@ -45,7 +45,7 @@ translation_of: Learn/CSS/Styling_text/Fundamentals
 
 <p>Veamos las propiedades que permiten definir el estilo del tipo de letra. En este ejemplo aplicaremos algunas propiedades CSS diferentes al mismo ejemplo HTML, que presentamos a continuación:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -64,14 +64,14 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>La propiedad <code>color</code> puede admitir cualquier <a href="/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS">unidad de color CSS</a>, por ejemplo:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   color: red;
 }</pre>
 
 <p>Esto mostrará el contenido de los párrafos en color rojo, en lugar del negro que es el estándar por defecto del navegador:</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -89,7 +89,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>Usamos la propiedad {{cssxref("font-family")}} para definir un tipo de letra diferente para nuestro texto. Esta propiedad indica al navegador el tipo de letra (o una lista de tipos de letra) que debe aplicar a los elementos seleccionados. El navegador solo aplica el tipo de letra si la máquina que accede al sitio web dispone de ella; en caso contrario, simplemente usa el tipo de letra que tiene definido por defecto ({{anch("Default fonts", "default font")}}). Aquí tienes un ejemplo sencillo:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-family: arial;
 }</pre>
 
@@ -200,7 +200,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>Ya que no puedes garantizar la disponibilidad de los tipos de letra que deseas utilizar (incluso un tipo de letra seguro para la web podría fallar por alguna razón), puedes proporcionar un <strong>lista de tipos de letra</strong> para que el navegador tenga diversos tipos de letra entre los que elegir. Consiste simplemente en introducirlo como el valor de <code>font-family</code>, que consistirá en una lista de diversos nombres de tipos de letra separados por comas, por ejemplo.</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-family: "Trebuchet MS", Verdana, sans-serif;
 }</pre>
 
@@ -216,7 +216,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>Vamos a introducir en nuestro ejemplo anterior una fuente de tipo sans-serif para los párrafos:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   color: red;
   font-family: Helvetica, Arial, sans-serif;
 }</pre>
@@ -224,7 +224,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 <p>Esto nos da el resultado siguiente:</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -252,7 +252,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>Las cosas se vuelven más complicadas cuando se empieza a alterar el tamaño del tipo de letra de los elementos anidados. Por ejemplo, si tu página incluye un elemento {{htmlelement("article")}} y estableces un tamaño de fuente de <code>1.5em</code> (que resultará en un tamaño final de 24px), y luego quieres que los párrafos dentro del elemento <code>&lt;article&gt;</code> tengan un tamaño de letra calculado de 20px, ¿qué valor de unidad <code>em</code> deberías usar?</p>
 
-<pre class="brush: html notranslate">&lt;!-- El tamaño de letra base del documento es 16px --&gt;
+<pre class="brush: html">&lt;!-- El tamaño de letra base del documento es 16px --&gt;
 &lt;article&gt; &lt;!-- Si mi tamaño de letra es 1.5em --&gt;
   &lt;p&gt;Mi párrafo&lt;/p&gt; &lt;!-- ¿Cómo calculo el tamaño del tipo de letra para que de 20px? --&gt;
 &lt;/article&gt;</pre>
@@ -266,7 +266,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 <p>Nuestro nuevo resultado es:</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -279,7 +279,7 @@ occasion such as this that he did.&lt;/p&gt;
 </pre>
 </div>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-size: 10px;
 }
 
@@ -336,7 +336,7 @@ p {
 <p>Añadamos un par de estas propiedades a nuestro ejemplo. Nuestro nuevo resultado quedaría como este:</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -349,7 +349,7 @@ occasion such as this that he did.&lt;/p&gt;
 </pre>
 </div>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-size: 10px;
 }
 
@@ -374,7 +374,7 @@ p {
 
 <p>Puedes aplicar sombras a tus textos con la propiedad {{cssxref("text-shadow")}}. Esta propiedad puede tomar hasta cuatro valores, como se muestra en ejemplo siguiente:</p>
 
-<pre class="brush: css notranslate">text-shadow: 1px 1px 1px red;</pre>
+<pre class="brush: css">text-shadow: 1px 1px 1px red;</pre>
 
 <p>Las cuatro propiedades son las siguientes:</p>
 
@@ -393,7 +393,7 @@ p {
 
 <p>Puedes aplicar diversas sombras al mismo texto incluyendo múltiples valores de sombra separados por comas, por ejemplo:</p>
 
-<pre class="brush: css notranslate"><code class="language-css"><span class="property token">text-shadow</span><span class="punctuation token">:</span> -<span class="number token">1</span>px -<span class="number token">1</span>px <span class="number token">1</span>px <span class="hexcode token">#aaa</span>,
+<pre class="brush: css"><code class="language-css"><span class="property token">text-shadow</span><span class="punctuation token">:</span> -<span class="number token">1</span>px -<span class="number token">1</span>px <span class="number token">1</span>px <span class="hexcode token">#aaa</span>,
              <span class="number token">0</span>px <span class="number token">4</span>px <span class="number token">1</span>px <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0.5</span><span class="punctuation token">)</span>,
              <span class="number token">4</span>px <span class="number token">4</span>px <span class="number token">5</span>px <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0.7</span><span class="punctuation token">)</span>,
              <span class="number token">0</span>px <span class="number token">0</span>px <span class="number token">7</span>px <span class="function token">rgba</span><span class="punctuation token">(</span><span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0</span>,<span class="number token">0.4</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
@@ -401,7 +401,7 @@ p {
 <p>Si aplicamos esto al elemento {{htmlelement("h1")}} de nuestro ejemplo <em>Tommy The Cat</em>, obtenemos esto:</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -413,7 +413,7 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-size: 10px;
 }
 
@@ -461,7 +461,7 @@ p {
 <p>Si aplicamos <code>text-align: center;</code> al elemento {{htmlelement("h1")}} de nuestro ejemplo, obtendremos esto:</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember as though it were a meal ago...&lt;/p&gt;
 
@@ -473,7 +473,7 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-size: 10px;
 }
 
@@ -504,12 +504,12 @@ p {
 
 <p>La propiedad {{cssxref("line-height")}} establece la altura entre cada línea de texto; esta propiedad admite la mayoría de las <a href="/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS">unidades y magnitudes</a>, pero también puede tomar un valor sin unidades, que actúa como un multiplicador y generalmente se considera la mejor opción porque se multiplica la propiedad {{cssxref("font-size")}} para obtener la altura de la línea (<code>line-height</code>). El texto del cuerpo (<code>body</code>) generalmente se ve mejor y es más fácil de leer si hay más separación entre las líneas; la altura recomendada de la línea es entre 1.5-2 (a doble espacio). Por lo tanto, para configurar nuestras líneas de texto a 1.5 veces la altura de la fuente, deberías usar esto:</p>
 
-<pre class="brush: css notranslate">line-height: 1.5;</pre>
+<pre class="brush: css">line-height: 1.5;</pre>
 
 <p>Aplicando esto a los elementos {{htmlelement("p")}} en nuestro ejemplo nos daría este resultado:</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -521,7 +521,7 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-size: 10px;
 }
 
@@ -555,7 +555,7 @@ p {
 
 <p>Así, como ejemplo, podemos aplicar a la primera línea de los elementos {{htmlelement("p")}} de nuestro ejemplo lo siguiente:</p>
 
-<pre class="brush: css notranslate">p::first-line {
+<pre class="brush: css">p::first-line {
   letter-spacing: 2px;
   word-spacing: 4px;
 }</pre>
@@ -563,7 +563,7 @@ p {
 <p>y obtendremos:</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;Well I remember it as though it were a meal ago...&lt;/p&gt;
 
@@ -575,7 +575,7 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-size: 10px;
 }
 
@@ -656,7 +656,7 @@ p {
 
 <p>Un ejemplo completo se vería así:</p>
 
-<pre class="brush: css notranslate">font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;</pre>
+<pre class="brush: css">font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;</pre>
 
 <h2 id="Aprendizaje_activo_Jugar_a_aplicar_estilos">Aprendizaje activo: Jugar a aplicar estilos</h2>
 
@@ -667,7 +667,7 @@ p {
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;HTML Input&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;
   &lt;p&gt;Some sample text for your delight&lt;/p&gt;&lt;/textarea&gt;
@@ -685,7 +685,7 @@ p {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js notranslate">var htmlInput = document.querySelector(".html-input");
+<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
 const cssInput = document.querySelector(".css-input");
 const reset = document.getElementById("reset");
 let htmlCode = htmlInput.value;

@@ -67,7 +67,7 @@ original_slug: Learn/HTML/Introduccion_a_HTML/Debugging_HTML
  <li>En primer lugar, hagamos una copia de nuestro <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html">ejemplo-demo a depurar</a> y guardémoslo de forma local. Está escrito para generar diversos errores que deberemos descubrir (se dice que el marcado de HTML está <strong>mal formado</strong>, en contraposición a un marcado <strong>bien formado</strong>).</li>
  <li>A continuación, abrámoslo en un navegador; veremos lo siguiente:<img alt="A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. " src="https://mdn.mozillademos.org/files/12437/badly-formed-html.png" style="display: block; margin: 0 auto;"></li>
  <li>No parece que esté bien; veamos el código fuente para ver qué podemos hacer (solo mostramos el contenido del &lt;body&gt;):
-  <pre class="brush: html notranslate">&lt;h1&gt;HTML debugging examples&lt;/h1&gt;
+  <pre class="brush: html">&lt;h1&gt;HTML debugging examples&lt;/h1&gt;
 
 &lt;p&gt;What causes errors in HTML?
 
@@ -99,13 +99,13 @@ original_slug: Learn/HTML/Introduccion_a_HTML/Debugging_HTML
    <li>Se han añadido etiquetas de cierre a los párrafos y las líneas de las listas.</li>
    <li>Al no estar claro el final del elemento <code>&lt;strong&gt;</code>, el navegador lo ha aplicado individualmente a todos los bloques de texto siguientes, a cada uno le ha añadido su etiqueta <code>strong</code> propia, desde donde está ¡hasta el final del documento!</li>
    <li>El navegador ha arreglado el anidamiento incorrecto del modo siguiente:
-    <pre class="brush: html notranslate">&lt;strong&gt;strong
+    <pre class="brush: html">&lt;strong&gt;strong
   &lt;em&gt;strong emphasised?&lt;/em&gt;
 &lt;/strong&gt;
 &lt;em&gt; what is this?&lt;/em&gt;</pre>
    </li>
    <li>El enlace a cuyo atributo le faltan las comillas del final ha sido ignorado. La última lista la ha dejado como sigue:
-    <pre class="brush: html notranslate">&lt;li&gt;
+    <pre class="brush: html">&lt;li&gt;
   &lt;strong&gt;Unclosed attributes: Another common source of HTML problems.
   Let's look at an example: &lt;/strong&gt;
 &lt;/li&gt;</pre>

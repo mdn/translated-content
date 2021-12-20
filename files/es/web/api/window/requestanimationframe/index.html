@@ -17,7 +17,7 @@ translation_of: Web/API/window/requestAnimationFrame
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><em>requestID</em> = window.mozRequestAnimationFrame(<em>callback</em>);   // Firefox
+<pre class="syntaxbox"><em>requestID</em> = window.mozRequestAnimationFrame(<em>callback</em>);   // Firefox
 window.msRequestAnimationFrame(<em><code>callback</code></em>);                // IE 10 PP2+
 window.webkitRequestAnimationFrame(callback<em>[, element]</em>); // Chrome/Webkit
 </pre>
@@ -35,7 +35,7 @@ window.webkitRequestAnimationFrame(callback<em>[, element]</em>); // Chrome/Webk
 
 <h2 id="Notes" name="Notes">Ejemplo</h2>
 
-<pre class="brush: js notranslate">(function() {
+<pre class="brush: js">(function() {
   var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                               window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
   window.requestAnimationFrame = requestAnimationFrame;

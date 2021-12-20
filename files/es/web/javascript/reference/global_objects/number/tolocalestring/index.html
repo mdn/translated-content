@@ -18,7 +18,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toLocaleString
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><code><em>numObj</em>.toLocaleString(</code><code>[locales [, options]])</code></pre>
+<pre class="syntaxbox"><code><em>numObj</em>.toLocaleString(</code><code>[locales [, options]])</code></pre>
 
 <h3 id="Parametros">Parametros</h3>
 
@@ -42,7 +42,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toLocaleString
 
 <p>Un uso básico sin especificar <code>locales</code>, retorna un texto formateado con el <code>locales</code> y <code>options</code> por defecto.</p>
 
-<pre class="brush: js notranslate">var number = 3500;
+<pre class="brush: js">var number = 3500;
 
 console.log(number.toLocaleString()); // Muestra "3,500" si se está utilizando la localización U.S. English
 </pre>
@@ -51,7 +51,7 @@ console.log(number.toLocaleString()); // Muestra "3,500" si se está utilizando 
 
 <p>Los parámetros <code>locales</code> y <code>options</code> no son soportados aún por todos los navegadores. Para verificar el soporte en ES5.1 y posteriores implementaciones, se puede utilizar el hecho que los tags inválidos en la localización son rechazados con una excepción {{jsxref("Global_Objects/RangeError", "RangeError")}}:</p>
 
-<pre class="brush: js notranslate">function toLocaleStringSupportsLocales() {
+<pre class="brush: js">function toLocaleStringSupportsLocales() {
   var number = 0;
   try {
     number.toLocaleString('i');
@@ -66,7 +66,7 @@ console.log(number.toLocaleString()); // Muestra "3,500" si se está utilizando 
 
 <p>Para verificar que funciona todos los navegadores, incluyendo aquellos que soportan ECMA-262, anterior a ES5.1, se puede verificar por las funcionalidades especificadas en ECMA-402 que requieren soportar opciones regionales para <code>Number.prototype.toLocaleString</code> directamente:</p>
 
-<pre class="brush: js notranslate">function toLocaleStringSupportsOptions() {
+<pre class="brush: js">function toLocaleStringSupportsOptions() {
   return !!(typeof Intl == 'object' &amp;&amp; Intl &amp;&amp; typeof Intl.NumberFormat == 'function');
 }
 </pre>
@@ -77,7 +77,7 @@ console.log(number.toLocaleString()); // Muestra "3,500" si se está utilizando 
 
 <p>Este ejemplo muestra alguna de las variaciones en los formatos de números localizados. Para obtener el formato de la localización utilizada en la interfaz del usuario de tu aplicación, asegurate de especificar la localización (y de ser posible alguna localización de respaldo) utilizando el parámetro <code>locales</code>:</p>
 
-<pre class="brush: js notranslate">var number = 123456.789;
+<pre class="brush: js">var number = 123456.789;
 
 // Aleman utiliza comas como separador decimal y puntos miles
 console.log(number.toLocaleString('de-DE'));
@@ -105,7 +105,7 @@ console.log(number.toLocaleString(['ban', 'id']));
 
 <p>El resultado proveido por  <code>toLocaleString</code> puede ser personalizado utilizando el parámetro <code>options</code> :</p>
 
-<pre class="brush: js notranslate">var number = 123456.789;
+<pre class="brush: js">var number = 123456.789;
 
 // solicitar un formato de moneda
 console.log(number.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));

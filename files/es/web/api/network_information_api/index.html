@@ -18,7 +18,7 @@ translation_of: Web/API/Network_Information_API
 
 <h3 id="Detectar_cambios_de_conexiónThis_example_watches_for_changes_to_the_users_connection."><span style="">Detectar cambios de conexión</span><span style="">This example watches for changes to the user's connection.</span></h3>
 
-<pre class="brush: js notranslate">var conexion = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+<pre class="brush: js">var conexion = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 var tipo = connection.effectiveType;
 
 function updateConnectionStatus() {
@@ -36,7 +36,7 @@ conexion.addEventListener('change', updateConnectionStatus);
  en caso usaría una declaración de switch o algún otro método para verificar todos los valores posibles de<br>
  use case would likely use a switch statement or some other method to check all of the possible values of {{domxref("NetworkInformation.type")}}. </span>Independientemente del valor de tipo, puede obtener una estimación de la velocidad de conexión a través de la propiedad<span style=""> {{domxref("NetworkInformation.effectiveType")}}.</span></p>
 
-<pre class="brush: js notranslate">let precargarVideo = true;
+<pre class="brush: js">let precargarVideo = true;
 var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 if (connection) {
   if (connection.effectiveType === 'slow-2g') {

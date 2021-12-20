@@ -21,7 +21,7 @@ translation_of: Web/API/Element/getBoundingClientRect
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate"><em>domRect</em> = <em>element</em>.getBoundingClientRect();</pre>
+<pre class="syntaxbox"><em>domRect</em> = <em>element</em>.getBoundingClientRect();</pre>
 
 <h3 id="Valor">Valor</h3>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/Element/getBoundingClientRect
 
 <p>Los scripts que requieran una alta compatibilidad <em>cross-browser</em> pueden usar {{domxref("window.pageXOffset")}} y {{domxref("window.pageYOffset")}} en lugar de <code>window.scrollX</code> y <code>window.scrollY.</code> Si no se tiene acceso a esas propiedades puede usarse el siguiente código:</p>
 
-<pre class="brush: js notranslate">// Para scrollX
+<pre class="brush: js">// Para scrollX
 (((t = document.documentElement) || (t = document.body.parentNode))
   &amp;&amp; typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
 // Para scrollY
@@ -47,7 +47,7 @@ translation_of: Web/API/Element/getBoundingClientRect
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
-<pre class="brush:js notranslate">// rect es un objeto DOMRect con ocho propiedades: left, top, right, bottom, x, y, width, height
+<pre class="brush:js">// rect es un objeto DOMRect con ocho propiedades: left, top, right, bottom, x, y, width, height
 var rect = obj.getBoundingClientRect();
 </pre>
 
@@ -78,7 +78,7 @@ var rect = obj.getBoundingClientRect();
 
 <p>Las propiedades en el objeto <code>DOMRect</code> devuelto no son suyas. Mientras que el operador <code>in</code> y <code>for...in</code> encontrarán las propiedades devueltas, otras API como <code>Object.keys()</code> fallarán. Además, e inesperadamente, ES2015 y nuevas características como <code>Object.assign()</code> y los operadores rest/spread de los objetos, no podrán copiar las propiedades devueltas.</p>
 
-<pre class="brush: js notranslate">rect = elt.getBoundingClientRect()
+<pre class="brush: js">rect = elt.getBoundingClientRect()
 // El resultado en emptyObj es {}
 emptyObj = Object.assign({}, rect)
 emptyObj = { ...rect }

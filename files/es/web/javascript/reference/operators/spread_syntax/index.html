@@ -22,16 +22,16 @@ original_slug: Web/JavaScript/Referencia/Operadores/Sintaxis_Spread
 
 <p>Para llamadas de funciones:</p>
 
-<pre class="syntaxbox notranslate">myFunction(...iterableObj);
+<pre class="syntaxbox">myFunction(...iterableObj);
 </pre>
 
 <p>Para arreglos literales o cadenas de caracteres:</p>
 
-<pre class="syntaxbox notranslate">[...iterableObj, '4', 'five', 6];</pre>
+<pre class="syntaxbox">[...iterableObj, '4', 'five', 6];</pre>
 
 <p>Para objetos literales (nuevo en ECMAScript 2018):</p>
 
-<pre class="syntaxbox notranslate">let objClone = { ...obj };</pre>
+<pre class="syntaxbox">let objClone = { ...obj };</pre>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
@@ -41,19 +41,19 @@ original_slug: Web/JavaScript/Referencia/Operadores/Sintaxis_Spread
 
 <p>Es frecuente usar {{jsxref( "Function.prototype.apply")}} en casos donde quieres usar los elementos de un arreglo como argumentos de una función.</p>
 
-<pre class="brush: js notranslate">function myFunction(x, y, z) { }
+<pre class="brush: js">function myFunction(x, y, z) { }
 var args = [0, 1, 2];
 myFunction.apply(null, args);</pre>
 
 <p>Con la sintaxis expandida (spread syntax), el código anterior puede ser escrito como:</p>
 
-<pre class="brush: js notranslate">function myFunction(x, y, z) { }
+<pre class="brush: js">function myFunction(x, y, z) { }
 var args = [0, 1, 2];
 myFunction(...args);</pre>
 
 <p>Cualquier argumento en la lista de argumentos puede usar la sintáxis expandida y esto puede ser usado varias veces.</p>
 
-<pre class="brush: js notranslate">function myFunction(v, w, x, y, z) { }
+<pre class="brush: js">function myFunction(v, w, x, y, z) { }
 var args = [0, 1];
 myFunction(-1, ...args, 2, ...[3]);</pre>
 
@@ -61,13 +61,13 @@ myFunction(-1, ...args, 2, ...[3]);</pre>
 
 <p>Cuando se llama un constructor con <code>new</code>, no es posible usar <strong>directamente</strong> un arreglo y <code>apply</code> (<code>apply</code> hace un <code>[[Call]]</code> y no un <code>[[Construct]]</code>). Sin embargo, un arreglo puede ser fácilmente usado con un new gracias a la sintáxis expandida:</p>
 
-<pre class="brush: js notranslate">var dateFields = [1970, 0, 1];  // 1 Jan 1970
+<pre class="brush: js">var dateFields = [1970, 0, 1];  // 1 Jan 1970
 var d = new Date(...dateFields);
 </pre>
 
 <p>Para usar <strong>new </strong>con un arreglo de parámetros sin la sintáxis expandida, podrías tener que hacerlo <strong>indirectamente </strong>a través de una aplicación parcial:</p>
 
-<pre class="brush: js notranslate">function applyAndNew(constructor, args) {
+<pre class="brush: js">function applyAndNew(constructor, args) {
    function partial () {
       return constructor.apply(this, args);
    };
@@ -99,7 +99,7 @@ console.log(new myConstructorWithArguments);
 
 <p>Sin <code><strong>sintaxis expandida (spread syntax)</strong></code>, para crear un nuevo arreglo usando un arreglo existente como parte de él,no es suficiente la sintaxis de Array literal y en su lugar se debe usar código imperativo con una combinación de <code>push</code>, <code>splice</code>, <code>concat</code>, etc. Con la sintaxis expandida, esto se vuelve mucho mas práctico:</p>
 
-<pre class="brush: js notranslate">var parts = ['shoulders', 'knees'];
+<pre class="brush: js">var parts = ['shoulders', 'knees'];
 var lyrics = ['head', ...parts, 'and', 'toes'];
 // ["head", "shoulders", "knees", "and", "toes"]
 </pre>
@@ -108,7 +108,7 @@ var lyrics = ['head', ...parts, 'and', 'toes'];
 
 <h4 id="Copiar_un_arreglo">Copiar un arreglo</h4>
 
-<pre class="brush: js notranslate">var arr = [1, 2, 3];
+<pre class="brush: js">var arr = [1, 2, 3];
 var arr2 = [...arr]; // like arr.slice()
 arr2.push(4);
 
@@ -118,7 +118,7 @@ arr2.push(4);
 
 <p><strong>Nota:</strong> La sintaxis expandida efectivamente va a un nivel de profundidad mientras copia un arreglo. Por lo tanto, esto no permite copiar arreglos multidimensionales como se muestra en los siguientes ejemplos (es lo mismo con {{jsxref("Object.assign()")}} y sintaxis spread).</p>
 
-<pre class="brush: js notranslate">var a = [[1], [2], [3]];
+<pre class="brush: js">var a = [[1], [2], [3]];
 var b = [...a];
 b.shift().shift(); // 1
 // Now array a is affected as well: [[], [2], [3]]
@@ -128,28 +128,28 @@ b.shift().shift(); // 1
 
 <p>{{jsxref("Array.concat")}} es usada a menudo para concatenar un arreglo al final de un arreglo ya existente. Sin la sintaxis spread se realiza:</p>
 
-<pre class="brush: js notranslate">var arr1 = [0, 1, 2];
+<pre class="brush: js">var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 // Append all items from arr2 onto arr1
 arr1 = arr1.concat(arr2);</pre>
 
 <p>Con la sintaxis spread se transforma en:</p>
 
-<pre class="brush: js notranslate">var arr1 = [0, 1, 2];
+<pre class="brush: js">var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 arr1 = [...arr1, ...arr2];
 </pre>
 
 <p>{{jsxref("Array.unshift")}} es a menudo usada para insertar un arreglo de valores al inicio de un arreglo existente. Sin la sintáxis spread, esto es hecho como:</p>
 
-<pre class="brush: js notranslate">var arr1 = [0, 1, 2];
+<pre class="brush: js">var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 // Prepend all items from arr2 onto arr1
 Array.prototype.unshift.apply(arr1, arr2) // arr1 is now [3, 4, 5, 0, 1, 2]</pre>
 
 <p>Con la sintaxis spread se convierte en [Observa, sin embargo, que esto crea un nuevo arreglo <code>arr1</code>.  Diferente a {{jsxref("Array.unshift")}}, esto no modifica el arreglo original en sitio <code>arr1</code>]:</p>
 
-<pre class="brush: js notranslate">var arr1 = [0, 1, 2];
+<pre class="brush: js">var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 arr1 = [...arr2, ...arr1]; // arr1 is now [3, 4, 5, 0, 1, 2]
 </pre>
@@ -160,7 +160,7 @@ arr1 = [...arr2, ...arr1]; // arr1 is now [3, 4, 5, 0, 1, 2]
 
 <p>Shallow-cloning (excluyendo prototype) o la combinación de objetos es ahora posible usando una sintaxis más corta que {{jsxref("Object.assign()")}}.</p>
 
-<pre class="brush: js notranslate">var obj1 = { foo: 'bar', x: 42 };
+<pre class="brush: js">var obj1 = { foo: 'bar', x: 42 };
 var obj2 = { foo: 'baz', y: 13 };
 
 var clonedObj = { ...obj1 };
@@ -173,7 +173,7 @@ var mergedObj = { ...obj1, ...obj2 };
 
 <p>Observa que tú no puedes reemplazar o replicar la función {{jsxref("Object.assign()")}}:</p>
 
-<pre class="brush: js notranslate">var obj1 = { foo: 'bar', x: 42 };
+<pre class="brush: js">var obj1 = { foo: 'bar', x: 42 };
 var obj2 = { foo: 'baz', y: 13 };
 const merge = ( ...objects ) =&gt; ( { ...objects } );
 
@@ -189,7 +189,7 @@ var mergedObj = merge ( {}, obj1, obj2);
 
 <p>La sintaxis Spread (otra que en el caso de las propiedades spread) puede ser aplicada sólo a los objetos <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator">iterables</a>:</p>
 
-<pre class="brush: js notranslate">var obj = {'key1': 'value1'};
+<pre class="brush: js">var obj = {'key1': 'value1'};
 var array = [...obj]; // TypeError: obj is not iterable
 </pre>
 

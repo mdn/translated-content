@@ -51,7 +51,7 @@ original_slug: Learn/CSS/First_steps/Como_funciona_CSS
 
 <p>Tomemos el siguiente código HTML:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   Usaremos:
   &lt;span&gt;Hojas&lt;/span&gt;
   &lt;span&gt;de estilo&lt;/span&gt;
@@ -76,14 +76,14 @@ original_slug: Learn/CSS/First_steps/Como_funciona_CSS
 <p>{{EmbedLiveSample('Una_representación_real_de_un_DOM', '100%', 55)}}</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">p {margin:0;}</pre>
+<pre class="brush: css">p {margin:0;}</pre>
 </div>
 
 <h2 id="La_aplicación_de_CSS_al_DOM">La aplicación de CSS al DOM</h2>
 
 <p>Pongamos que hemos añadido un poco de CSS a nuestro documento, para darle estilo. Una vez más, el HTML es el siguiente:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   Usaremos:
   &lt;span&gt;Hojas&lt;/span&gt;
   &lt;span&gt;de estilo&lt;/span&gt;
@@ -92,7 +92,7 @@ original_slug: Learn/CSS/First_steps/Como_funciona_CSS
 
 <p>Supongamos que le aplicamos el CSS siguiente:</p>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   border: 1px solid black;
   background-color: lime;
 }</pre>
@@ -118,9 +118,9 @@ original_slug: Learn/CSS/First_steps/Como_funciona_CSS
 <p>En el siguiente ejemplo hemos utilizado la ortografía británica para la propiedad color, que invalida la propiedad porque no la reconoce. Así que el párrafo no se muestra en azul. Sin embargo, se han aplicado todos los demás estilos del CSS; solo se ha ignorado la línea que no es válida.</p>
 
 <div id="Skipping_example">
-<pre class="brush: html notranslate">&lt;p&gt;Quiero este texto en grande, en negrita y en color azul.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Quiero este texto en grande, en negrita y en color azul.&lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-weight: bold;
   colour: blue; /* Ortografía incorrecta de la propiedad color */
   font-size: 200%;
@@ -133,7 +133,7 @@ original_slug: Learn/CSS/First_steps/Como_funciona_CSS
 
 <p>Esto funciona especialmente bien cuando quieres utilizar un valor que es bastante nuevo que no admiten todos los navegadores. Por ejemplo, algunos navegadores antiguos no entienden <code>calc()</code> como valor. Podríamos dar un valor de sustitución para el ancho de una caja en píxeles, y a continuación dar un ancho con un valor <code>calc()</code> de <code>100% - 50px</code>. Los navegadores antiguos usarán la versión en píxeles y harán caso omiso de la indicación <code>calc()</code>, porque no la entienden. Los navegadores nuevos interpretarán la línea del ancho en píxeles, pero la anularán al llegar a la línea de <code>calc()</code> porque aparece después en la cascada.</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 500px;
   width: calc(100% - 50px);
 }</pre>

@@ -44,7 +44,7 @@ translation_of: Web/HTTP/Headers/Cache-Control
 
 <p>Las directivas estándar <code>Cache-Control</code> que pueden ser usadas por el cliente en una solicitud HTTP.</p>
 
-<pre class="syntaxbox notranslate">Cache-Control: max-age=&lt;seconds&gt;
+<pre class="syntaxbox">Cache-Control: max-age=&lt;seconds&gt;
 Cache-Control: max-stale[=&lt;seconds&gt;]
 Cache-Control: min-fresh=&lt;seconds&gt;
 Cache-Control: no-cache
@@ -57,7 +57,7 @@ Cache-Control: only-if-cached
 
 <p>Las diretivas estándar <code>Cache-Control</code> que pueden ser usadas por el servidor en una respuesta HTTP.</p>
 
-<pre class="syntaxbox notranslate">Cache-Control: must-revalidate
+<pre class="syntaxbox">Cache-Control: must-revalidate
 Cache-Control: no-cache
 Cache-Control: no-store
 Cache-Control: no-transform
@@ -72,7 +72,7 @@ Cache-Control: s-maxage=&lt;seconds&gt;
 
 <p>Las directivas de extensión <code>Cache-Control</code> no forman parte de la base del documento estandar para cacheo HTTP. Revisé la <a href="#Browser_compatibility">tabla de compatibilidad</a> para ver su soporte, los agentes de usuario que no reconocen estas directivas las ignorarán.</p>
 
-<pre class="syntaxbox notranslate">Cache-Control: immutable
+<pre class="syntaxbox">Cache-Control: immutable
 Cache-Control: stale-while-revalidate=&lt;seconds&gt;
 Cache-Control: stale-if-error=&lt;seconds&gt;
 </pre>
@@ -110,10 +110,10 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
  <dd><strong>No copie y pege el método específico para Intenet Explorer</strong> <code>pre-check=0,post-check=0</code> si lo ve en línea porque es completamente ignorado, confirmado por <a href="https://twitter.com/ericlaw/status/685201170260819968">el tweet de un desarrollador de Edge</a>.</dd>
  <dt>Deshabilitando Cache vía Cache-Control</dt>
  <dd>
- <pre class="example-good notranslate">no-store</pre>
+ <pre class="example-good">no-store</pre>
  </dd>
  <dd>
- <pre class="example-bad notranslate">no-cache,no-store,must-revalidate,pre-check=0,post-check=0</pre>
+ <pre class="example-bad">no-cache,no-store,must-revalidate,pre-check=0,post-check=0</pre>
  </dd>
 </dl>
 
@@ -162,11 +162,11 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 
 <dl>
  <dd>
- <pre class="example-good brush: http no-line-numbers notranslate">Cache-Control: no-store
+ <pre class="example-good brush: http no-line-numbers">Cache-Control: no-store
 </pre>
  </dd>
  <dd>
- <pre class="example-bad brush: http no-line-numbers notranslate">Cache-Control: private,no-cache,no-store,max-age=0,must-revalidate,pre-check=0,post-check=0
+ <pre class="example-bad brush: http no-line-numbers">Cache-Control: private,no-cache,no-store,max-age=0,must-revalidate,pre-check=0,post-check=0
 </pre>
  </dd>
 </dl>
@@ -177,7 +177,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 
 <dl>
  <dd>
- <pre class="brush: http no-line-numbers notranslate">Cache-Control: public, max-age=604800, immutable
+ <pre class="brush: http no-line-numbers">Cache-Control: public, max-age=604800, immutable
 </pre>
  </dd>
 </dl>
@@ -188,7 +188,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 
 <dl>
  <dd>
- <pre class="brush: http no-line-numbers notranslate">Cache-Control: no-cache
+ <pre class="brush: http no-line-numbers">Cache-Control: no-cache
 Cache-Control: no-cache, max-age=0
 Cache-Control: no-cache, max-age=0, stale-while-revalidate=300
 </pre>

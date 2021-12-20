@@ -17,7 +17,7 @@ original_slug: Web/API/Document/abrir
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">document.open();
+<pre class="syntaxbox">document.open();
 </pre>
 
 <h3 id="Parametros">Parametros</h3>
@@ -60,13 +60,13 @@ document.close();</pre>
 
 <p>This call, for example opens github.com in a new window, with its opener set to <code>null</code>:</p>
 
-<pre class="brush: js notranslate"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">document</span>.<span class="cm-property">open</span>(<span class="cm-string">'https://www.github.com'</span>,<span class="cm-string">''</span>, <span class="cm-string">'noopener=true'</span>)</span></span></span></pre>
+<pre class="brush: js"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">document</span>.<span class="cm-property">open</span>(<span class="cm-string">'https://www.github.com'</span>,<span class="cm-string">''</span>, <span class="cm-string">'noopener=true'</span>)</span></span></span></pre>
 
 <h2 id="Two-argument_document.open"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Two-argument document.open()</span></span></span></h2>
 
 <p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Browsers used to support a two-argument <code>document.open()</code>, with the following signature:</span></span></span></p>
 
-<pre class="brush: js notranslate">document.open(<em>type</em>, <em>replace</em>)</pre>
+<pre class="brush: js">document.open(<em>type</em>, <em>replace</em>)</pre>
 
 <p>Where <code>type</code> specified the MIME type of the data you are writing (e.g. <code>text/html</code>) and replace if set (i.e. a string of <code>"replace"</code>) specified that the history entry for the new document would replace the current history entry of the document being written to.</p>
 

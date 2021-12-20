@@ -52,13 +52,13 @@ original_slug: Learn/JavaScript/First_steps/Qué_es_JavaScript
 
 <p>Las tres capas se superponen muy bien. Tomemos una etiqueta de texto simple como ejemplo. Podemos marcarla usando HTML para darle estructura y propósito:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Player 1: Chris&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Player 1: Chris&lt;/p&gt;</pre>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13422/just-html.png" style="height: 28px; width: 108px;"></p>
 
 <p>Luego, podemos agregar algo de CSS a la mezcla para que se vea bien:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-family: 'helvetica neue', helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -77,7 +77,7 @@ original_slug: Learn/JavaScript/First_steps/Qué_es_JavaScript
 
 <p>Y finalmente, podemos agregar algo de JavaScript para implementar un comportamiento dinámico:</p>
 
-<pre class="brush: js notranslate">const para = document.querySelector('p');
+<pre class="brush: js">const para = document.querySelector('p');
 
 para.addEventListener('click', updateName);
 
@@ -160,7 +160,7 @@ function updateName() {
 
 <p>Cuando el navegador encuentra un bloque de JavaScript, generalmente lo ejecuta en orden, de arriba a abajo. Esto significa que debes tener cuidado con el orden en el que colocas las cosas. Por ejemplo, volvamos al bloque de JavaScript que vimos en nuestro primer ejemplo:</p>
 
-<pre class="brush: js notranslate">const para = document.querySelector('p');
+<pre class="brush: js">const para = document.querySelector('p');
 
 para.addEventListener('click', updateName);
 
@@ -209,14 +209,14 @@ function updateName() {
  <li>En primer lugar, haz una copia local de nuestro archivo de ejemplo <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html">apply-javascript.html</a>. Guárdalo en un directorio en algún lugar accesible.</li>
  <li>Abre el archivo en tu navegador web y en tu editor de texto. Verás que el HTML crea una página web simple que contiene un botón en el que se puede hacer clic.</li>
  <li>A continuación, ve a tu editor de texto y agrega lo siguiente en tu <code>head</code>, justo antes de tu etiqueta de cierre <code>&lt;/head&gt;</code>:
-  <pre class="brush: html notranslate">&lt;script&gt;
+  <pre class="brush: html">&lt;script&gt;
 
   // JavaScript va aquí
 
 &lt;/script&gt;</pre>
  </li>
  <li>Ahora agregaremos algo de JavaScript dentro de nuestro elemento {{htmlelement("script")}} para que la página haga algo más interesante — agrega el siguiente código justo debajo de la línea "// El código JavaScript va aquí":
-  <pre class="brush: js notranslate">document.addEventListener("DOMContentLoaded", function() {
+  <pre class="brush: js">document.addEventListener("DOMContentLoaded", function() {
   function createParagraph() {
     let para = document.createElement('p');
     para.textContent = 'You clicked the button!';
@@ -248,10 +248,10 @@ function updateName() {
 <ol>
  <li>Primero, crea un nuevo archivo en el mismo directorio que tu archivo HTML del ejemplo. Como nombre ponle <code>script.js</code>; asegúrate de que el nombre tenga la extensión <code>.js</code>, ya que así es como se reconoce como JavaScript.</li>
  <li>Reemplaza tu elemento {{htmlelement("script")}} actual con lo siguiente:
-  <pre class="brush: html notranslate">&lt;script src="script.js" defer&gt;&lt;/script&gt;</pre>
+  <pre class="brush: html">&lt;script src="script.js" defer&gt;&lt;/script&gt;</pre>
  </li>
  <li>Dentro de <code>script.js</code>, agrega el siguiente script:
-  <pre class="brush: js notranslate">function createParagraph() {
+  <pre class="brush: js">function createParagraph() {
   let para = document.createElement('p');
   para.textContent = 'You clicked the button!';
   document.body.appendChild(para);
@@ -275,13 +275,13 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 <p>Ten en cuenta que a veces te encontrarás con fragmentos de código JavaScript real dentro de HTML. Podría verse algo similar a esto:</p>
 
 <div id="inline_js_example">
-<pre class="brush: js example-bad notranslate">function createParagraph() {
+<pre class="brush: js example-bad">function createParagraph() {
   let para = document.createElement('p');
   para.textContent = 'You clicked the button!';
   document.body.appendChild(para);
 }</pre>
 
-<pre class="brush: html example-bad notranslate">&lt;button onclick="createParagraph()"&gt;Click me!&lt;/button&gt;</pre>
+<pre class="brush: html example-bad">&lt;button onclick="createParagraph()"&gt;Click me!&lt;/button&gt;</pre>
 </div>
 
 <p>Puedes probar esta versión de nuestra demostración a continuación.</p>
@@ -294,7 +294,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>El uso de una construcción de JavaScript pura te permite seleccionar todos los botones usando una instrucción. El código que usamos anteriormente para cumplir este propósito se ve así:</p>
 
-<pre class="brush: js notranslate">const buttons = document.querySelectorAll('button');
+<pre class="brush: js">const buttons = document.querySelectorAll('button');
 
 for(let i = 0; i &lt; buttons.length ; i++) {
   buttons[i].addEventListener('click', createParagraph);
@@ -314,7 +314,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>En el ejemplo interno, puedes ver esta estructura alrededor del código:</p>
 
-<pre class="brush: js notranslate">document.addEventListener("DOMContentLoaded", function() {
+<pre class="brush: js">document.addEventListener("DOMContentLoaded", function() {
   ...
 });</pre>
 
@@ -322,7 +322,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>En el ejemplo externo, usamos una función de JavaScript más moderno para resolver el problema, el atributo <code>defer</code>, que le dice al navegador que continúe descargando el contenido HTML una vez que se ha alcanzado la etiqueta del elemento <code>&lt;script&gt;</code>.</p>
 
-<pre class="brush: js notranslate">&lt;script src="script.js" defer&gt;&lt;/script&gt;</pre>
+<pre class="brush: js">&lt;script src="script.js" defer&gt;&lt;/script&gt;</pre>
 
 <p>En este caso, tanto el script como el HTML se cargarán simultáneamente y el código funcionará.</p>
 
@@ -340,7 +340,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>Por ejemplo, si tienes los siguientes elementos <code>script</code>:</p>
 
-<pre class="brush: html notranslate">&lt;script async src="js/vendor/jquery.js"&gt;&lt;/script&gt;
+<pre class="brush: html">&lt;script async src="js/vendor/jquery.js"&gt;&lt;/script&gt;
 
 &lt;script async src="js/script2.js"&gt;&lt;/script&gt;
 
@@ -352,7 +352,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>Los <code>script</code>s cargados con el atributo <code>defer</code> (ve a continuación) se ejecutarán en el orden en que aparecen en la página y los ejecutará tan pronto como se descarguen el <code>script</code> y el contenido:</p>
 
-<pre class="brush: html notranslate">&lt;script defer src="js/vendor/jquery.js"&gt;&lt;/script&gt;
+<pre class="brush: html">&lt;script defer src="js/vendor/jquery.js"&gt;&lt;/script&gt;
 
 &lt;script defer src="js/script2.js"&gt;&lt;/script&gt;
 
@@ -374,10 +374,10 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <ul>
  <li>Un comentario de una sola línea se escribe después de una doble barra inclinada (//), p. ej.
-  <pre class="brush: js notranslate">// soy un comentario</pre>
+  <pre class="brush: js">// soy un comentario</pre>
  </li>
  <li>Se escribe un comentario de varias líneas entre las cadenas /* y */, p. ej.
-  <pre class="brush: js notranslate">/*
+  <pre class="brush: js">/*
   Yo también soy
   un comentario
 */</pre>
@@ -386,7 +386,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>Entonces, por ejemplo, podríamos anotar el JavaScript de nuestra última demostración con comentarios como este:</p>
 
-<pre class="brush: js notranslate">// Función: crea un nuevo párrafo y lo agrega al final del cuerpo HTML.
+<pre class="brush: js">// Función: crea un nuevo párrafo y lo agrega al final del cuerpo HTML.
 
 function createParagraph() {
   let para = document.createElement('p');

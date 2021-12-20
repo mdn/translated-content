@@ -19,7 +19,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/fromEntries
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">Object.fromEntries(<var>iterable</var>);</pre>
+<pre class="syntaxbox">Object.fromEntries(<var>iterable</var>);</pre>
 
 <h3 id="Parámetros">Parámetros</h3>
 
@@ -44,7 +44,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/fromEntries
 
 <p>Con <code>Object.fromEntries</code>, puedes convertir de un {{jsxref("Map")}} a un {{jsxref("Object")}}:</p>
 
-<pre class="brush: js notranslate">const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
+<pre class="brush: js">const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
 const obj = Object.fromEntries(map);
 console.log(obj); // { foo: "bar", baz: 42 }
 </pre>
@@ -53,7 +53,7 @@ console.log(obj); // { foo: "bar", baz: 42 }
 
 <p>Con <code>Object.fromEntries</code>, puedes convertir de un {{jsxref("Array")}} a un {{jsxref("Object")}}:</p>
 
-<pre class="brush: js notranslate">const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
+<pre class="brush: js">const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
 const obj = Object.fromEntries(arr);
 console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 </pre>
@@ -62,7 +62,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 
 <p>Con <code>Object.fromEntries</code>, su método inverso {{jsxref("Object.entries()")}}, y <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2">array métodos de manipulaciín de arreglos</a>, puedes transformar objetos así:</p>
 
-<pre class="brush: js notranslate">const object1 = { a: 1, b: 2, c: 3 };
+<pre class="brush: js">const object1 = { a: 1, b: 2, c: 3 };
 
 const object2 = Object.fromEntries(
   Object.entries(object1)

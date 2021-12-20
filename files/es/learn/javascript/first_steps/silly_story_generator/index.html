@@ -121,7 +121,7 @@ original_slug: Learn/JavaScript/First_steps/Generador_de_historias_absurdas
 <ul>
  <li>No necesitas modificar el HTML, salvo para incrustar el JavaScript a tu HTML.</li>
  <li>Si no estás seguro si el JavaScript está siendo aplicado adecuadamente a tu HTML, intenta remover temporalmente todo el codigo del archivo JavaScript, agregar una instruccion simple que sabes que tendrá un efecto obvio, luego guarda y actualiza. El siguiente ejemplo cambia el fondo de {{htmlelement("html")}} - así la ventana se verá completamente roja si el JavaScript está siendo aplicado adecuadamente.:
-  <pre class="brush: js notranslate">document.querySelector('html').style.backgroundColor = 'red';</pre>
+  <pre class="brush: js">document.querySelector('html').style.backgroundColor = 'red';</pre>
  </li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round">Math.round()</a> es un método JavaScript integrado que simplemente redondea el resultado de un cálculo al número entero más cercano.</li>
  <li>Hay tres casos de cadenas que deben reemplazarse. Puede repetir el método <code>replace()</code> varias veces o puede utilizar expresiones regulares. Por ejemplo, <code>let text = 'I am the biggest lover, I love my love'; text.replace(/love/g,'like');</code> Reemplazará todas las instancias de 'love' a 'like'. Recuerde, las cuerdas son inmutables.</li>

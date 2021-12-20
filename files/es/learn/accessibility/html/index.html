@@ -28,11 +28,11 @@ translation_of: Learn/Accessibility/HTML
 
 <p>Puedes estarte preguntando ¿por qué es esto tan importante?. Después de todo, puedes usar una combinación de CSS y JavaScript para hacer que casi cualquier elemento HTML se comporte en la forma que tú quieras. Por ejemplo, un botón que reproduzca un vídeo en tu sitio puede estar hecho así:</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;Reproducir vídeo&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div&gt;Reproducir vídeo&lt;/div&gt;</pre>
 
 <p>Pero como verás más adelante, tiene sentido utilizar el elemento correcto para este trabajo:</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Reproducir vídeo&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button&gt;Reproducir vídeo&lt;/button&gt;</pre>
 
 <p>No solo la etiqueta <code>&lt;button&gt;</code> de HTML ya tiene estilos adecuados por defecto (que probablemente quieras sobrescribir), también están construidos para ser accesibles con el teclado —el usuario puede navegar entre botones usando <kbd>Tab</kbd> y activando su selección usando <kbd>Return</kbd> o <kbd>Enter</kbd>.</p>
 
@@ -64,7 +64,7 @@ translation_of: Learn/Accessibility/HTML
 
 <p>Una de las mejores ayudas de accesibilidad que un usuario lector de pantalla puede tener es una buena estructura de contenido de cabeceras, párrafos, listas, etc. Un  ejemplo de buena semántica puede lucir como el de a continuación:</p>
 
-<pre class="brush: html example-good line-numbers language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h1</span><span class="punctuation token">&gt;</span></span>Mi cabecera<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h1</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html example-good line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h1</span><span class="punctuation token">&gt;</span></span>Mi cabecera<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h1</span><span class="punctuation token">&gt;</span></span>
 
 <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;Esta es la primera sección de mi documento</span></span>.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
 
@@ -95,7 +95,7 @@ translation_of: Learn/Accessibility/HTML
 
 <p>Las personas a veces escriben encabezados, párrafos, etc. usando HTML presentacional y saltos de línea, algo como lo siguiente:</p>
 
-<pre class="brush: html example-bad line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span> <span class="attr-name token">size</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>7<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Mi cabecera<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html example-bad line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span> <span class="attr-name token">size</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>7<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Mi cabecera<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span>
 <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
 Esta es la primera sección del documento.
 <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
@@ -135,7 +135,7 @@ Esta es la segunda subsección de mi documento. Creo que es más interesante que
 
 <p>Prueba nuestro ejemplo <a href="http://mdn.github.io/learning-area/accessibility/html/table-layout.html">table-layout.html</a>, que tiene este código:</p>
 
-<pre class="brush: html notranslate">&lt;table width="1200"&gt;
+<pre class="brush: html">&lt;table width="1200"&gt;
       &lt;!-- main heading row --&gt;
       &lt;tr id="heading"&gt;
         &lt;td colspan="6"&gt;
@@ -204,7 +204,7 @@ Esta es la segunda subsección de mi documento. Creo que es más interesante que
 
 <p>Los diseños con tablas son una reliquia del pasado: tenían sentido cuando la compatibilidad con CSS no estaba muy extendida en los navegadores, pero ahora solo crean confusión para los usuarios de lectores de pantalla. Además, su código fuente requiere más marcado, lo que los hace menos flexibles y más difíciles de mantener. Puedes verificar estas afirmaciones comparando tu experiencia anterior con un ejemplo de <a href="http://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/">estructura de sitio web más moderno</a>, que podría verse así:</p>
 
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
   &lt;h1&gt;Header&lt;/h1&gt;
 &lt;/header&gt;
 
@@ -260,7 +260,7 @@ Esta es la segunda subsección de mi documento. Creo que es más interesante que
 
 <p>Básicamente, obtienes este comportamiento gratis, solo con el uso de los elementos apropiados. Por ejemplo:</p>
 
-<pre class="brush: html example-good notranslate">&lt;h1&gt;Enlaces&lt;/h1&gt;
+<pre class="brush: html example-good">&lt;h1&gt;Enlaces&lt;/h1&gt;
 
 &lt;p&gt;Esto es un enlace a &lt;a href="https://www.mozilla.org"&gt;Mozilla&lt;/a&gt;.&lt;/p&gt;
 
@@ -300,7 +300,7 @@ Esta es la segunda subsección de mi documento. Creo que es más interesante que
 
 <p>Sin embargo, nuevamente se da el caso de que la gente a veces hace cosas extrañas con HTML. Por ejemplo, a veces ves botones marcados con {{htmlelement ("div")}}s, por ejemplo:</p>
 
-<pre class="brush: html example-bad notranslate">&lt;div data-message="Esto es del primer botón"&gt;¡Haz clic aquí!&lt;/div&gt;
+<pre class="brush: html example-bad">&lt;div data-message="Esto es del primer botón"&gt;¡Haz clic aquí!&lt;/div&gt;
 &lt;div data-message="Esto es del segundo botón"&gt;¡Haz clic aquñi también!&lt;/div&gt;
 &lt;div data-message="Esto es del tercer botón"&gt;¡Y aquí!&lt;/div&gt;</pre>
 
@@ -310,7 +310,7 @@ Esta es la segunda subsección de mi documento. Creo que es más interesante que
 
 <p>Volver a agregar estas ventajas requiere un poco de trabajo (puedes ver un ejemplo en nuestro ejemplo <a class="external external-icon" href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a>; consulta también el <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">código fuente</a>). Aquí le hemos dado a nuestros botones <code>&lt;div&gt;</code> falsos la capacidad de enfocarse (incluso a través de la tecla de tabulación) dándole a cada uno el atributo <code>tabindex="0"</code>:</p>
 
-<pre class="brush: html notranslate">&lt;div data-message="Esto es del primer botón" tabindex="0"&gt;¡Haz clic aquí!&lt;/div&gt;
+<pre class="brush: html">&lt;div data-message="Esto es del primer botón" tabindex="0"&gt;¡Haz clic aquí!&lt;/div&gt;
 &lt;div data-message="Esto es del segundo botón" tabindex="0"&gt;¡Haz clic aquí también!&lt;/div&gt;
 &lt;div data-message="Esto es del tercer botón" tabindex="0"&gt;¡Y aquí!&lt;/div&gt;</pre>
 
@@ -323,7 +323,7 @@ Esta es la segunda subsección de mi documento. Creo que es más interesante que
 
 <p>Si bien la adición anterior nos permite tabular los botones, no nos permite activarlos a través de la tecla <kbd>Enter</kbd> / <kbd>Return</kbd>. Para hacer eso, hemos tenido que agregar el siguiente truco en JavaScript:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">document<span class="punctuation token">.</span>onkeydown <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">document<span class="punctuation token">.</span>onkeydown <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   <span class="keyword token">if</span><span class="punctuation token">(</span>e<span class="punctuation token">.</span>keyCode <span class="operator token">===</span> <span class="number token">13</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">// La tecla Enter/Return</span>
     document<span class="punctuation token">.</span>activeElement<span class="punctuation token">.</span><span class="function token">click</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
   <span class="punctuation token">}</span>
@@ -343,11 +343,11 @@ Esta es la segunda subsección de mi documento. Creo que es más interesante que
 
 <p>Asegúrate de que tus etiquetas tienen sentido sin su contexto, leídas solas, así como en el contexto del párrafo en que están. Por ejemplo, lo siguiente muestra un buen ejemplo de enlace de texto:</p>
 
-<pre class="brush: html example-good notranslate">&lt;p&gt;Las ballenas son criaturas realmente impresionantes. &lt;a href="whales.html"&gt;Aprende más sobre las ballenas&lt;/a&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html example-good">&lt;p&gt;Las ballenas son criaturas realmente impresionantes. &lt;a href="whales.html"&gt;Aprende más sobre las ballenas&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <p>y esto es un mal texto de enlace:</p>
 
-<pre class="brush: html example-bad notranslate">&lt;p&gt;Las ballenas son criaturas realmente impresionantes. Para aprender más sobre las ballenas, &lt;a href="whales.html"&gt;haz clic aquí&lt;/a&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html example-bad">&lt;p&gt;Las ballenas son criaturas realmente impresionantes. Para aprender más sobre las ballenas, &lt;a href="whales.html"&gt;haz clic aquí&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <div class="note">
 <p><strong>Note</strong>: Encontrarás mucho más sobre la implementación de enlaces y buenas prácticas en nuestro artículo <a href="/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks">Crear hipervínculos</a>. También encontrarás buenos y malos ejemplos en <a href="http://mdn.github.io/learning-area/accessibility/html/good-links.html">good-links.html</a> y <a href="http://mdn.github.io/learning-area/accessibility/html/bad-links.html">bad-links.html</a>.</p>
@@ -355,13 +355,13 @@ Esta es la segunda subsección de mi documento. Creo que es más interesante que
 
 <p>Las etiquetas de formulario también son importantes, para darte una pista sobre lo que necesita introducir en cada campo de formulario. El siguiente parece un ejemplo bastante razonable:</p>
 
-<pre class="brush: html example-bad notranslate">Entra tu nombre: &lt;input type="text" id="nombre" name="nombre"&gt;</pre>
+<pre class="brush: html example-bad">Entra tu nombre: &lt;input type="text" id="nombre" name="nombre"&gt;</pre>
 
 <p>Sin embargo, esto no es tan útil para usuarios con discapacidad. No hay nada en el ejemplo anterior para asociar la etiqueta de forma inequívoca con la entrada del formulario y dejar claro cómo rellenarlo si no puede verlo. Si accedes con algunos lectores de pantalla, es posible que solo se te proporcione una descripción en la línea de "editar texto".</p>
 
 <p>El siguiente es un ejemplo mucho mejor:</p>
 
-<pre class="brush: html example-good notranslate">&lt;div&gt;
+<pre class="brush: html example-good">&lt;div&gt;
   &lt;label for="combre"&gt;Entra tu nombre:&lt;/label&gt;
   &lt;input type="text" id="combre" name="nombre"&gt;
 &lt;/div&gt;</pre>
@@ -380,7 +380,7 @@ Esta es la segunda subsección de mi documento. Creo que es más interesante que
 
 <p>Se puede escribir una tabla de datos básica con un marcado muy simple, por ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;Nombre&lt;/td&gt;
     &lt;td&gt;Edad&lt;/td&gt;
@@ -461,7 +461,7 @@ Esta es la segunda subsección de mi documento. Creo que es más interesante que
 
 <p>Echemos otro vistazo al cuarto método:</p>
 
-<pre class="brush: html notranslate">&lt;img src="dinosaur.png" aria-labelledby="dino-label"&gt;
+<pre class="brush: html">&lt;img src="dinosaur.png" aria-labelledby="dino-label"&gt;
 
 &lt;p id="dino-label"&gt;The Mozilla red Tyrannosaurus ... &lt;/p&gt;</pre>
 
@@ -475,13 +475,13 @@ Esta es la segunda subsección de mi documento. Creo que es más interesante que
 
 <p>Las imágenes también tienen otros mecanismos disponibles para proporcionar texto descriptivo. Por ejemplo, hay un atributo <code>longdesc</code> que apunta a un documento web separado que contiene una descripción ampliada de la imagen, por ejemplo:</p>
 
-<pre class="brush: html notranslate">&lt;img src="dinosaur.png" longdesc="dino-info.html"&gt;</pre>
+<pre class="brush: html">&lt;img src="dinosaur.png" longdesc="dino-info.html"&gt;</pre>
 
 <p>Parece una buena idea, especialmente para infografías como gráficos grandes con mucha información que tal vez podría representarse como una tabla de datos accesible (consulte la sección anterior). Sin embargo, <code>longdesc</code> no es compatible de forma consistente con lectores de pantalla, y el contenido es completamente inaccesible para los usuarios que no usan lectores de pantalla. Podría decirse que es mucho mejor incluir la descripción larga en la misma página que la imagen, o vincularla con un enlace normal.</p>
 
 <p>HTML5 incluye dos elementos nuevos, {{htmlelement("figure")}} y {{htmlelement("figcaption")}}, que se supone que asocian una figura de algún tipo (podría ser cualquier cosa, no necesariamente una imagen) con un pie de figura:</p>
 
-<pre class="brush: html notranslate">&lt;figure&gt;
+<pre class="brush: html">&lt;figure&gt;
   &lt;img src="dinosaur.png" alt="El Tyrannosaurus de Mozilla"&gt;
   &lt;figcaption&gt;Un Tyrannosaurus Rex rojo: Un dinosaurio de dos piernas, de pie como un humano, con brazos pequeños y una cabeza grande con un montón de dientes afilados.&lt;/figcaption&gt;
 &lt;/figure&gt;</pre>
@@ -490,7 +490,7 @@ Esta es la segunda subsección de mi documento. Creo que es más interesante que
 
 <h3 id="Atributos_alt_vacíos">Atributos alt vacíos</h3>
 
-<pre class="brush: html notranslate">&lt;h3&gt;
+<pre class="brush: html">&lt;h3&gt;
   &lt;img src="article-icon.png" alt=""&gt;
   Tyrannosaurus Rex: el rey de los dinosaurios
 &lt;/h3&gt;</pre>
@@ -527,11 +527,11 @@ Esta es la segunda subsección de mi documento. Creo que es más interesante que
 
 <h4 id="Enlace_que_abre_una_nueva_pestaña_o_ventana">Enlace que abre una nueva pestaña o ventana</h4>
 
-<pre class="brush: html notranslate">&lt;a target="_blank" href="https://www.wikipedia.org/"&gt;Wikipedia (se abre en una nueva ventana)&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a target="_blank" href="https://www.wikipedia.org/"&gt;Wikipedia (se abre en una nueva ventana)&lt;/a&gt;</pre>
 
 <h4 id="Enlace_a_un_recurso_que_no_es_HTML">Enlace a un recurso que no es HTML</h4>
 
-<pre class="brush: html notranslate">&lt;a target="_blank" href="2017-annual-report.ppt"&gt;Informe anual de 2017 (PowerPoint)&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a target="_blank" href="2017-annual-report.ppt"&gt;Informe anual de 2017 (PowerPoint)&lt;/a&gt;</pre>
 
 <p>Si se utiliza un icono en lugar de texto para indicar este tipo de comportamiento de enlaces, asegúrate de que incluya una {{HTMLAttrxRef("alt", "img", "descripción alternativa", "true")}}.</p>
 

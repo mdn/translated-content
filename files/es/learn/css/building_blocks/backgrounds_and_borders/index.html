@@ -25,7 +25,7 @@ original_slug: Learn/CSS/Building_blocks/Fondos_y_bordes
 
 <p>La propiedad {{cssxref ("background")}} de CSS es una propiedad abreviada de una serie de propiedades de fondo que vamos a ver en este artículo. Si descubres una propiedad de fondo compleja en una hoja de estilo, puede parecer un poco difícil de entender porque pueden estarse pasando muchos valores a la vez.</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
   url(big-star.png) center no-repeat, rebeccapurple;
 } </code>
@@ -103,7 +103,7 @@ original_slug: Learn/CSS/Building_blocks/Fondos_y_bordes
 
 <p>Puedes usar palabras clave como <code>top</code> y <code>right</code> (busca todas las demás en la página sobre la propiedad {{cssxref ("background-position")}}):</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top center;
@@ -112,7 +112,7 @@ original_slug: Learn/CSS/Building_blocks/Fondos_y_bordes
 
 <p>Y también <a href="/es/docs/Web/CSS/length">longitudes</a> y <a href="/es/docs/Web/CSS/porcentaje">porcentajes</a>:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: 20px 10%;
@@ -121,7 +121,7 @@ original_slug: Learn/CSS/Building_blocks/Fondos_y_bordes
 
 <p>También puedes mezclar valores de palabras clave con longitudes o porcentajes, por ejemplo:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top 20px;
@@ -129,7 +129,7 @@ original_slug: Learn/CSS/Building_blocks/Fondos_y_bordes
 
 <p>Por último, también puedes usar una sintaxis de 4 valores para indicar una distancia desde ciertos bordes del cuadro: la unidad de longitud en este caso es un desplazamiento del valor que la precede. Entonces, en el CSS siguiente, colocamos el fondo a 20 px desde la parte superior y a 10 px desde la derecha:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top 20px right 10px;
@@ -165,7 +165,7 @@ original_slug: Learn/CSS/Building_blocks/Fondos_y_bordes
 
 <p>Las otras propiedades <code>background-*</code> también pueden tener valores múltiples separados por comas, de la misma manera que <code>background-image</code>:</p>
 
-<pre class="brush: css notranslate">background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
+<pre class="brush: css">background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position: 10px 20px,  top right;</pre>
 
@@ -216,19 +216,19 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>Podemos establecer un borde para los cuatro lados de una caja con {{cssxref ("border")}}:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border: 1px solid black;
 } </code></pre>
 
 <p>O podemos establecer solo un borde de la caja, por ejemplo:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-top: 1px solid black;
 } </code></pre>
 
 <p>Cada una de las propiedades de estas propiedades abreviadas sería:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-width: 1px;
   border-style: solid;
   border-color: black;
@@ -236,7 +236,7 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>Y las no abreviadas:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: black;
@@ -256,13 +256,13 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>Por ejemplo, para hacer que las cuatro esquinas de una caja tengan un radio de 10 píxeles:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-radius: 10px;
 } </code></pre>
 
 <p>O para hacer que la esquina superior derecha tenga un radio horizontal de 1 em y un radio vertical del 10%:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-top-right-radius: 1em 10%;
 } </code></pre>
 

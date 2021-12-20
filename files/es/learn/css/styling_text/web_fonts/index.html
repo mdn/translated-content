@@ -27,7 +27,7 @@ original_slug: Learn/CSS/Styling_text/Fuentes_web
 
 <p>Como observamos en el artículo <a href="/es/docs/Learn/CSS/Styling_text/Fundamentals">Texto y tipos de letra</a>, puedes controlar los tipos de letra que aplicas a tu HTML con la propiedad {{cssxref ("font-family")}}. Este atributo toma uno o más nombres de familia de tipos de letra y el navegador recorre esta lista hasta que encuentra un tipo de letra disponible en el sistema en el que se ejecuta:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }</pre>
 
@@ -39,14 +39,14 @@ original_slug: Learn/CSS/Styling_text/Fuentes_web
 
 <p>En primer lugar, tienes un bloque {{cssxref ("@font-face")}} al comienzo del CSS, que especifica los archivos de los tipos de letra que quieres que se descarguen:</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
   font-family: "myFont";
   src: url("myFont.woff");
 }</pre>
 
 <p>A continuación, puedes usar el nombre de la familia de tipos de letra especificado en <code>@font-face</code> para aplicar tu tipo de letra personalizado a cualquier elemento que desees:</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: "myFont", "Bitstream Vera Serif", serif;
 }</pre>
 
@@ -118,7 +118,7 @@ original_slug: Learn/CSS/Styling_text/Fuentes_web
  <li>Abre el archivo <code>stylesheet.css</code> y copia los dos bloques <code>@font-face</code> incluidos en tu archivo <code>web-font-start.css</code>. Debes ponerlos en la parte superior, antes de cualquier elemento CSS, ya que los tipos de letra deben importarse antes que los puedas utilizar en tu sitio web.</li>
  <li>Cada una de las funciones <code>url()</code> apunta a un archivo de tipo de letra que tenemos que importar a nuestro CSS. Necesitamos asegurarnos de que las rutas a los archivos son correctas, así que añade <code>fonts/</code> al inicio de cada ruta (ajusta la ruta como sea necesario).</li>
  <li>Ahora puedes usar estos tipos de letra en tu lista de tipos de letra, al igual que cualquier tipo de letra seguro o predeterminado del sistema. Por ejemplo:
-  <pre class="brush: css notranslate">font-family: 'zantrokeregular', serif;</pre>
+  <pre class="brush: css">font-family: 'zantrokeregular', serif;</pre>
  </li>
 </ol>
 
@@ -153,7 +153,7 @@ original_slug: Learn/CSS/Styling_text/Fuentes_web
 
 <p>Vamos a explorar que la sintaxis correspondiente a <code>@font-face</code> que te ha generado Fontsquirrel. Uno de los bloques se verá así:</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
   font-family: 'ciclefina';
   src: url('fonts/cicle_fina-webfont.eot');
   src: url('fonts/cicle_fina-webfont.eot?#iefix') format('embedded-opentype'),

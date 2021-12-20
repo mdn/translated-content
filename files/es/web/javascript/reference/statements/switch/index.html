@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Referencia/Sentencias/switch
 
 <h2 id="Syntaxis">Syntaxis</h2>
 
-<pre class="syntaxbox notranslate">switch (expresión) {
+<pre class="syntaxbox">switch (expresión) {
   case valor1:
     //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
     [break;]
@@ -79,7 +79,7 @@ console.log("¿Hay algo más que te quisiera consultar?");</code></pre>
 
 <p>Si olvidas un <code>break</code>, el script se ejecutará desde donde se cumple la condición y ejecutará el siguiente <code>case</code> independientemente si esta condición se cumple o no. Ver el siguiente ejemplo:</p>
 
-<pre class="brush: js notranslate">var foo = 0;
+<pre class="brush: js">var foo = 0;
 switch (foo) {
   case -1:
     console.log('1 negativo');
@@ -128,7 +128,7 @@ switch (foo) {
 
 <p>Este es un ejemplo de operación única con sentencia <code>switch</code> secuencial, donde cuatro valores diferentes se comportan exactamente de la misma manera:</p>
 
-<pre class="brush: js notranslate">var Animal = 'Jirafa';
+<pre class="brush: js">var Animal = 'Jirafa';
 switch (Animal) {
   case 'Vaca':
   case 'Jirafa':
@@ -145,7 +145,7 @@ switch (Animal) {
 
 <p>Este es un ejemplo de una sentencia <code>switch</code> secuencial con múltiples operaciones, donde, dependiendo del valor entero dado, se pueden recibir diferentes resultados. Esto demuestra que el algoritmo correrá en el orden en que se coloquen las declaraciones <code>case</code>, y que no tiene que ser numéricamente secuencial. En JavaScript, también es posible combinar definiciones con valores <em><code>"string"</code> </em>dentro de estas declaraciones <code>case</code>.</p>
 
-<pre class="brush: js notranslate">var foo = 1;
+<pre class="brush: js">var foo = 1;
 var output = 'Salida: ';
 switch (foo) {
   case 10:

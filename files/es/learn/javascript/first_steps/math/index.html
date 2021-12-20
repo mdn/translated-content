@@ -76,14 +76,14 @@ original_slug: Learn/JavaScript/First_steps/Matemáticas
 
 <ol>
  <li>Primero que todo, declara un par de variables e inicializalas con un entero y un flotante, respectivamente, luego escribe los nombres de esas variables para chequear que todo esté en orden:
-  <pre class="brush: js notranslate">var myInt = 5;
+  <pre class="brush: js">var myInt = 5;
 var myFloat = 6.667;
 myInt;
 myFloat;</pre>
  </li>
  <li>Los valores numéricos están escritos sin comillas - Trata de declarar e inicializar un par de variables más que contengan números antes de continuar.</li>
  <li>Ahora chequea que nuestras variables originales sean del mismo tipo. Hay un operador llamado {{jsxref("Operators/typeof", "typeof")}} en JavaScript hace esto. Digita las dos lineas siguientes:
-  <pre class="brush: js notranslate">typeof myInt;
+  <pre class="brush: js">typeof myInt;
 typeof myFloat;</pre>
   Obtendrás <code>"number"</code> en ambos casos — esto hace las cosas mucho más fáciles que si diferentes números tuvieran difetentes tipos, y tuvimos que lidiar con ellos de diferentes maneras. Uf !</li>
 </ol>
@@ -145,18 +145,18 @@ typeof myFloat;</pre>
 
 <ol>
  <li>Primero, trata entrando un ejemplo simple por tu cuenta, como
-  <pre class="brush: js notranslate">10 + 7
+  <pre class="brush: js">10 + 7
 9 * 8
 60 % 3</pre>
  </li>
  <li>Puedes tratar declarando e inicializando algunos números en variables, y probar usándolos en la suma - Las variables se comportarán exactamente como los valores que tienen para los fines de la suma. Por ejemplo:
-  <pre class="brush: js notranslate">var num1 = 10;
+  <pre class="brush: js">var num1 = 10;
 var num2 = 50;
 9 * num1;
 num2 / num1;</pre>
  </li>
  <li>Por último, trate entrando algunas expresiones complejas, como:
-  <pre class="brush: js notranslate">5 + 10 * 3;
+  <pre class="brush: js">5 + 10 * 3;
 num2 % 9 * num1;
 num2 + num1 / 8 + 2;</pre>
  </li>
@@ -168,7 +168,7 @@ num2 + num1 / 8 + 2;</pre>
 
 <p>Veamos el último ejemplo de arriba, asumiendo que num2 tiene el valor 50 y num1 tiene el valor 10 (como se indicó anteriormente):</p>
 
-<pre class="brush: js notranslate">num2 + num1 / 8 + 2;</pre>
+<pre class="brush: js">num2 + num1 / 8 + 2;</pre>
 
 <p>Como un ser humano, puedes leer esto como "50 más 10 es igual a 60", luego "8 más 2 es igual a 10", y finalmente "60 dividido por 10 es igual a 6".</p>
 
@@ -178,7 +178,7 @@ num2 + num1 / 8 + 2;</pre>
 
 <p>Si quieres alterar la precedencia de operación, puedes colocar paréntesis alrededor de las partes que quieras explícitamente evaluar primero. Para obtener un resultado de 6, podríamos hacer esto:</p>
 
-<pre class="brush: js notranslate">(num2 + num1) / (8 + 2);</pre>
+<pre class="brush: js">(num2 + num1) / (8 + 2);</pre>
 
 <p>Pruébalo y verás.</p>
 
@@ -190,7 +190,7 @@ num2 + num1 / 8 + 2;</pre>
 
 <p>Algunas veces necesitarás repetidamente sumar o restar uno de/a una variable numérica. Esto puede hacerse convenientemente usando los operadores de incremento (<code>++</code>) y decremento (<code>--</code>). Usamos <code>++</code> en nuestro juego "Adivina el número" en nuestro artículo <a href="/es/docs/Learn/JavaScript/First_steps/A_first_splash">Un primer acercamiento a JavaScrip</a><a href="/es/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash">t</a>, cuando agregamos 1 a nuestra variable <code>guessCount</code> para mantener una pista de cuantas respuestas le quedan al usuario por turno.</p>
 
-<pre class="brush: js notranslate">guessCount++;</pre>
+<pre class="brush: js">guessCount++;</pre>
 
 <div class="note">
 <p><strong>Nota</strong>: Son muy comunmente usadas en <a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">ciclos</a>, que aprenderás más adelante en el curso. Por ejemplo, Digamos que quieras recorrer una lista de precios, y agregar impuestos a cada uno. Usaría un ciclo para recorrer cada valor y realizar el cálculo necesario para agregar el impuesto a las ventas en cada caso. El incrementador es usado para mover al próximo valor cuando es necesario. Damos un simple ejemplo En realidad, proporcionamos un ejemplo simple que muestra cómo se hace esto: ¡pruébalo en vivo y mira el código fuente para ver si puedes detectar los incrementadores! Veremos los ciclos en detalle más adelante en el curso..</p>
@@ -198,20 +198,20 @@ num2 + num1 / 8 + 2;</pre>
 
 <p>Trata jugando con eso en tu consola. Para empezar, nota que no puedes aplicar esto directamente a un número, sin operar en él mismo. Lo siguiente retorna un error:</p>
 
-<pre class="brush: js notranslate">3++;</pre>
+<pre class="brush: js">3++;</pre>
 
 <p>Asì, puedes solo incrementar una variable existente. Prueba esto:</p>
 
-<pre class="brush: js notranslate">var num1 = 4;
+<pre class="brush: js">var num1 = 4;
 num1++;</pre>
 
 <p>Ok, la extrañeza número 2! Cuando hagas esto, verás que se devuelve un valor de 4; esto se debe a que el navegador devuelve el valor actual y luego incrementa la variable. Puedes ver que se ha incrementado si devuelves el valor variable nuevamente:</p>
 
-<pre class="brush: js notranslate">num1;</pre>
+<pre class="brush: js">num1;</pre>
 
 <p>Lo mismo funciona con <code>--</code> : intenta lo siguiente:</p>
 
-<pre class="brush: js notranslate">var num2 = 6;
+<pre class="brush: js">var num2 = 6;
 num2--;
 num2;</pre>
 
@@ -223,7 +223,7 @@ num2;</pre>
 
 <p>Los operadores de asignación son operadores que asignan un valor a una variable. Ya usamos el más básico, <code>=</code>, muchas veces — simplemente asigna a la variable de la izquierda, el valor de la derecha:</p>
 
-<pre class="brush: js notranslate">var x = 3; // x contiene el valor 3
+<pre class="brush: js">var x = 3; // x contiene el valor 3
 var y = 4; // y contiene el valor 4
 x = y; // x ahora contiene el mismo valor de y... 4</pre>
 
@@ -289,7 +289,7 @@ x = y; // x ahora contiene el mismo valor de y... 4</pre>
 
 <p>Ten en cuenta que puedes usar otras variables en el lado derecho de cada expresión, por ejemplo:</p>
 
-<pre class="brush: js notranslate">var x = 3; // x contiene el valor 3
+<pre class="brush: js">var x = 3; // x contiene el valor 3
 var y = 4; // y contiene el valor 4
 x *= y; // x ahora contiene el valor 12</pre>
 
@@ -384,11 +384,11 @@ x *= y; // x ahora contiene el valor 12</pre>
 
 <p>Veremos cómo codificar dicha lógica cuando veamos declaraciones condicionales en un artículo futuro. Por ahora, veamos un ejemplo rápido:</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Iniciar máquina&lt;/button&gt;
+<pre class="brush: html">&lt;button&gt;Iniciar máquina&lt;/button&gt;
 &lt;p&gt;La máquina se detuvo.&lt;/p&gt;
 </pre>
 
-<pre class="brush: js notranslate">var btn = document.querySelector('button');
+<pre class="brush: js">var btn = document.querySelector('button');
 var txt = document.querySelector('p');
 
 btn.addEventListener('click', updateBtn);

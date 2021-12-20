@@ -24,7 +24,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/create
 
 <h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox notranslate">Object.create(<var>proto</var>[, <var>propertiesObject</var>])</pre>
+<pre class="syntaxbox">Object.create(<var>proto</var>[, <var>propertiesObject</var>])</pre>
 
 <h3 id="Parámetros" name="Parámetros">Parámetros</h3>
 
@@ -49,7 +49,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/create
 
 <p>Debajo se encuentra un ejemplo de cómo usar <code>Object.create()</code> para lograr herencia clásica. Este es para herencia simple, la cual es todo lo que soporta JavaScript.</p>
 
-<pre class="brush: js notranslate">// Shape - superclase
+<pre class="brush: js">// Shape - superclase
 function Shape() {
   this.x = 0;
   this.y = 0;
@@ -82,7 +82,7 @@ rect.move(1, 1); // Imprime, 'Shape moved.'
 
 <p>Si desea heredar desde múltiples objetos, entonces los mixins son una posibilidad.</p>
 
-<pre class="brush: js notranslate">function MyClass() {
+<pre class="brush: js">function MyClass() {
   SuperClass.call(this);
   OtherSuperClass.call(this);
 }
@@ -103,7 +103,7 @@ MyClass.prototype.myMethod = function() {
 
 <h3 id="Usando_el_argumento_propertiesObject_con_Object.create">Usando el argumento <code>propertiesObject</code> con <code>Object.create()</code></h3>
 
-<pre class="brush: js notranslate">var o;
+<pre class="brush: js">var o;
 
 // crea un objeto con un prototipo como null
 o = Object.create(null);
@@ -167,7 +167,7 @@ o2 = Object.create({}, { p: {
 
 <p>Un objeto nuevo creado de un objeto completamente personalizado (especialmente uno creado de un objeto nulo, que es básicamente un objeto personalizado sin miembros) puede comportarse de manera inesperada. Esto es especialmente cierto cuando se depura, ya que las funciones comunes  de conversión/detección de propiedad de objeto pueden generar errores, o simplemente perder información (especialmente si se atrapan excepciones de manera silenciosa que ignoran los errores). Por ejemplo, aquí hay dos objetos:</p>
 
-<pre class="brush: js notranslate">oco = Object.create( {} );   // Crea un objeto normal
+<pre class="brush: js">oco = Object.create( {} );   // Crea un objeto normal
 ocn = Object.create( null ); // Crea un objeto "null"
 
 &gt; console.log(oco) // {} -- Parece normal
@@ -182,14 +182,14 @@ ocn.p = 0; // Crea una propiedad simple en un objeto "null"
 
 <p>Como se muestra arriba, todo parece normal hasta ahora. Sin embargo, al intentar usar estos objetos, sus diferencias se hacen evidentes rápidamente:</p>
 
-<pre class="brush: js notranslate">&gt; "oco is: " + oco // Muestra "ocn is: [object Object]"
+<pre class="brush: js">&gt; "oco is: " + oco // Muestra "ocn is: [object Object]"
 
 &gt; "ocn is: " + ocn // Arroja error: Cannot convert object to primitive value
 </pre>
 
 <p>Probar solo algunas de las funciones incorporadas más básicas muestra la magnitud del problema más claramente:</p>
 
-<pre class="brush: js notranslate">&gt; alert(oco) // Muestra: [object Object]
+<pre class="brush: js">&gt; alert(oco) // Muestra: [object Object]
 &gt; alert(ocn) // Arroja error: Cannot convert object to primitive value
 
 &gt; oco.toString() // Muestra [object Object]
@@ -209,14 +209,14 @@ ocn.p = 0; // Crea una propiedad simple en un objeto "null"
 
 <p><em>Una función simple de depuración:</em></p>
 
-<pre class="brush: js notranslate">// mostrar nombre de propiedad de nivel superior: pares de valores de un objeto dado
+<pre class="brush: js">// mostrar nombre de propiedad de nivel superior: pares de valores de un objeto dado
 function ShowProperties( b ){
   for( var i in b ){  console.log( i + ": " + b[i] + "\n" )  }
 }</pre>
 
 <p><em>Resultados no tan simples: (especialmente si la captura silenciosa de errores había ocultado los mensajes de error)</em></p>
 
-<pre class="brush: js notranslate">ob={}; ob.po=oco; ob.pn=ocn; // crear un objeto compuesto usando los objetos de prueba de arriba como valores de propiedad
+<pre class="brush: js">ob={}; ob.po=oco; ob.pn=ocn; // crear un objeto compuesto usando los objetos de prueba de arriba como valores de propiedad
 
 &gt; ShowProperties( ob ) // Muestra propiedades de nivel superior
 - po: [object Object]
@@ -227,7 +227,7 @@ Tenga en cuenta que solo se muestra la primera propiedad.
 
 <p><em>(Pero si se crea el mismo objeto simplemente en un orden diferente, al menos en algunas implementaciones ...)</em></p>
 
-<pre class="brush: js notranslate">ob={}; ob.pn=ocn; ob.po=oco; // cree el mismo objeto compuesto nuevamente, pero cree las mismas propiedades en un orden diferente
+<pre class="brush: js">ob={}; ob.pn=ocn; ob.po=oco; // cree el mismo objeto compuesto nuevamente, pero cree las mismas propiedades en un orden diferente
 
 &gt; ShowProperties( ob ) // Muestra propiedades de nivel superior
 - Error: Cannot convert object to primitive value
@@ -242,7 +242,7 @@ Tenga en cuenta que ninguna propiedad se muestra.</pre>
 
 <p>Adding the missing object-method directly from the standard-object does NOT work:</p>
 
-<pre class="brush: js notranslate">ocn = Object.create( null ); // create "null" object (same as before)
+<pre class="brush: js">ocn = Object.create( null ); // create "null" object (same as before)
 
 ocn.toString = Object.toString; // since new object lacks method then try assigning it directly from standard-object
 
@@ -255,7 +255,7 @@ ocn.toString = Object.toString; // since new object lacks method then try assign
 <p><br>
  Adding the missing object-method directly to new object's "prototype" does not work either, since new object does not have a real prototype (which is really the cause of ALL these problems) and one cannot be <strong>directly</strong> added:</p>
 
-<pre class="brush: js notranslate">ocn = Object.create( null ); // create "null" object (same as before)
+<pre class="brush: js">ocn = Object.create( null ); // create "null" object (same as before)
 
 ocn.prototype.toString = Object.toString; // Error: Cannot set property 'toString' of undefined
 
@@ -268,7 +268,7 @@ ocn.prototype.toString = Object.toString; // since new object lacks method then 
 <p><br>
  Adding the missing object-method by using the standard-object<strong> </strong>as new object's prototype does not work either:</p>
 
-<pre class="brush: js notranslate">ocn = Object.create( null );        // create "null" object (same as before)
+<pre class="brush: js">ocn = Object.create( null );        // create "null" object (same as before)
 Object.setPrototypeOf(ocn, Object); // set new object's prototype to the standard-object
 
 &gt; ocn.toString() // error: Function.prototype.toString requires that 'this' be a Function
@@ -278,7 +278,7 @@ Object.setPrototypeOf(ocn, Object); // set new object's prototype to the standar
 
 <p>Again, adding the missing object-method directly from the <strong>standard-object </strong>does NOT work. However, adding the <strong>generic</strong> method directly, DOES:</p>
 
-<pre class="brush: js notranslate">ocn = Object.create( null ); // create "null" object (same as before)
+<pre class="brush: js">ocn = Object.create( null ); // create "null" object (same as before)
 
 ocn.toString = toString; // since new object lacks method then assign it directly from generic version
 
@@ -295,13 +295,13 @@ ob={}; ob.pn=ocn; ob.po=oco; // create a compound object (same as before)
 
 <p>However, setting the generic <strong>prototype</strong> as the new object's prototype works even better:</p>
 
-<pre class="brush: js notranslate">ocn = Object.create( null );                  // create "null" object (same as before)
+<pre class="brush: js">ocn = Object.create( null );                  // create "null" object (same as before)
 Object.setPrototypeOf(ocn, Object.prototype); // set new object's prototype to the "generic" object (NOT standard-object)
 </pre>
 
 <p><em>(In addition to all the string-related functions shown above, this also adds:)</em></p>
 
-<pre class="brush: js notranslate">&gt; ocn.valueOf() // shows {}
+<pre class="brush: js">&gt; ocn.valueOf() // shows {}
 &gt; ocn.hasOwnProperty("x") // shows "false"
 &gt; ocn.constructor // shows "Object() { [native code] }"
 
@@ -316,7 +316,7 @@ Object.setPrototypeOf(ocn, Object.prototype); // set new object's prototype to t
 
 <p>Note that while the setting of <code>null</code> as <code>[[Prototype]]</code> is supported in the real ES5 <code>Object.create</code>, this polyfill cannot support it due to a limitation inherent in versions of ECMAScript lower than 5.</p>
 
-<pre class="brush: js notranslate"> if (typeof Object.create !== "function") {
+<pre class="brush: js"> if (typeof Object.create !== "function") {
     Object.create = function (proto, propertiesObject) {
         if (typeof proto !== 'object' &amp;&amp; typeof proto !== 'function') {
             throw new TypeError('Object prototype may only be an Object: ' + proto);
