@@ -12,7 +12,7 @@ Le but de cette tâche est de vous faire travailler avec Flexbox et de démontre
 >
 > N'hésitez pas à nous contacter si vous avez besoin d'aide — voir la section [Évaluation ou aide supplémentaire](#évaluation_ou_aide_supplémentaire) au bas de cette page.
 
-## Mise en page flexible 1
+## Disposition flexible 1
 
 Ces éléments de liste constituent la navigation pour un site. Ils doivent être disposés en ligne, avec un espace égal entre chaque élément. L'exemple fini doit ressembler à l'image ci-dessous.
 
@@ -24,7 +24,7 @@ Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé :
 
 > **Remarque :** Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (1re mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox1-download.html).
 
-## Mise en page flexible 2
+## Disposition flexible 2
 
 Ces éléments de liste sont tous de tailles différentes, mais nous voulons qu'ils soient affichés sous forme de trois colonnes de taille égale, quel que soit le contenu de chaque élément.
 
@@ -40,7 +40,7 @@ Questions supplémentaires :
 
 > **Remarque :** Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (2e mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox2-download.html).
 
-## Mise en page flexible 3
+## Disposition flexible 3
 
 Il y a deux éléments dans le HTML ci-dessous, une `div` avec une classe `.parent` qui contient une autre `div` avec une classe `.child`. Utilisez Flexbox pour centrer le fichier enfant à l'intérieur du parent.
 
@@ -52,7 +52,7 @@ Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé :
 
 > **Remarque :** Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (3e mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox3-download.html).
 
-## Mise en page flexible 4
+## Disposition flexible 4
 
 Dans cette dernière tâche, placez ces éléments en lignes comme dans l'image.
 
