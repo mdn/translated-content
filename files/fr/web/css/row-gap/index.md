@@ -9,7 +9,7 @@ translation_of: Web/CSS/row-gap
 ---
 {{CSSRef}}
 
-La propriété **`row-gap`** définit la taille des espaces ({{glossary("gutters", "gouttières")}}) entre les pistes de grille d'un élément.
+La propriété **`row-gap`** définit la taille des espaces ({{glossary("gutters", "gouttières")}}) entre les lignes d'un élément.
 
 {{EmbedInteractiveExample("pages/css/row-gap.html")}}
 
