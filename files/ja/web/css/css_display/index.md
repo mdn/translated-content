@@ -30,7 +30,7 @@ translation_of: Web/CSS/CSS_Display
 
 ## ガイド
 
-- [Adapting to the two-value syntax of display](/ja/docs/Web/CSS/display/two-value_syntax_of_display)
+- [display の新しい 2 値構文への対応](/ja/docs/Web/CSS/display/two-value_syntax_of_display)
 
 ### CSS フローレイアウト (`display: block`, `display: inline`)
 
