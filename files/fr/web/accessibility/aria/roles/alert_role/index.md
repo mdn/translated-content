@@ -1,13 +1,13 @@
 ---
 title: Utilisation du rôle alert
-slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
+slug: Web/Accessibility/ARIA/Roles/alert_role
 tags:
   - ARIA
   - Accessibilité
   - Rôle
   - À relire
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
-original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alert
+original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 ---
 ### Description
 
@@ -98,7 +98,7 @@ Si un élément possède déjà `role="alert"` et qu’il est initialement cach�
 document.getElementById("expirationWarning").className = "";
 ```
 
-### Notes 
+### Notes
 
 - L’utilisation du rôle `alert` sur un élément implique que cet élément a l’attribut `aria-live="assertive"` ;
 - Le rôle `alert` ne devrait être utilisé que pour du contenu texte statique. L’élément sur lequel on utilise le rôle `alert` ne devrait pas pouvoir recevoir le focus, car les lecteurs d’écran annonceront automatiquement l’alerte où que se trouve le focus clavier ;

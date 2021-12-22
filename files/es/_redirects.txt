@@ -1612,6 +1612,7 @@
 /es/docs/Web/Accesibilidad/Understanding_WCAG/Teclado	/es/docs/Web/Accessibility/Understanding_WCAG/Keyboard
 /es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_atributo_aria-required	/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 /es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_rol_alertdialog	/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
+/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/es/docs/Web/Accessibility/ARIA/Roles/alert_role
 /es/docs/Web/Accessibility/ARIA/forms/Etiquetas_complejas	/es/docs/Web/Accessibility/ARIA/forms/Multipart_labels
 /es/docs/Web/Accessibility/ARIA/forms/alertas	/es/docs/Web/Accessibility/ARIA/forms/alerts
 /es/docs/Web/Accessibility/ARIA/forms/consejos_basicos_para_formularios	/es/docs/Web/Accessibility/ARIA/forms/Basic_form_hints

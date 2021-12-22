@@ -7049,13 +7049,6 @@
       "Sheppy"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role": {
-    "modified": "2019-03-23T22:50:52.511Z",
-    "contributors": [
-      "Aschlla",
-      "iCynthia"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute": {
     "modified": "2020-01-24T10:16:14.859Z",
     "contributors": [
@@ -7099,6 +7092,13 @@
     "contributors": [
       "Painatalman",
       "rafaelcavalcante"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/alert_role": {
+    "modified": "2019-03-23T22:50:52.511Z",
+    "contributors": [
+      "Aschlla",
+      "iCynthia"
     ]
   },
   "Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ": {
