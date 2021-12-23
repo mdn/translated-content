@@ -15,9 +15,9 @@ browser-compat: javascript.builtins.Array.at
 ---
 {{JSRef}}
 
-**`at()`** 方法接收一个整数值并返回该索引的项目，允许正数和负数。负整数从数组中的最后一个项目开始倒数。
+**`at()`**方法接收一个整数值并返回该索引的项目，允许正数和负数。负整数从数组中的最后一个元素开始倒数。
 
-方括号符号没有问题。例如，`array[0]`将返回第一个项目。然而，对于后面的项目，不要使用{{jsxref('Array.prototype.length','array.length')}}，例如，对于最后一个项目，可以调用`array.at(-1)`。[(参见以下示例)](#examples)
+（对数组使用）方括号符号固然没有问题，例如，`array[0]`将返回第一个元素。然而，对于处在数组最后的元素，建议不要使用{{jsxref('Array.prototype.length','array.length')}}，例如，对于最后一个项目，可以调用`array.at(-1)`。[(参见以下示例：)](#examples)
 {{EmbedInteractiveExample("pages/js/array-at.html")}}
 
 ## 语法
@@ -65,18 +65,18 @@ console.log(item2); // 'orange'
 这个例子比较了选择{{jsxref('Array')}}中倒数第二项的不同方法。虽然下面显示的所有方法都是可行的，但这个例子凸显了`at()`方法的简洁性和可读性。
 
 ```js
-// 数组及数组元素。
+// 数组及数组元素
 const colors = ['red', 'green', 'blue'];
 
-// 使用长度属性。
+// 使用长度属性
 const lengthWay = colors[colors.length-2];
 console.log(lengthWay); // 'green'
 
-// 使用 slice() 方法。注意会返回一个数组。
+// 使用 slice() 方法。注意会返回一个数组
 const sliceWay = colors.slice(-2, -1);
 console.log(sliceWay[0]); // 'green'
 
-// 使用 at() 方法。
+// 使用 at() 方法
 const atWay = colors.at(-2);
 console.log(atWay); // 'green'
 ```
