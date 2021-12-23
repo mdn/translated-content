@@ -3,87 +3,81 @@ title: 'レシピ: メディアオブジェクト'
 slug: Web/CSS/Layout_cookbook/Media_objects
 tags:
   - CSS
-  - Layout
-  - Media object
-  - Recipe
-  - cookbook
+  - ガイド
+  - レイアウト
+  - メディアオブジェクト
+  - 料理帳
   - fit-content
   - float
-  - grid
+  - グリッド
 translation_of: Web/CSS/Layout_cookbook/Media_objects
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary"><span class="seoSummary"><em>メディアオブジェクト</em>は、ウェブ上のいたるところで見られるパターンです。 <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">Nicole Sullivan によって命名</a>され、それは一方の側に画像を、そして他方の側に説明的なテキストを有する Facebook の投稿やツイートのような2列のボックスを指します。</span></p>
+*メディアオブジェクト*は、ウェブ上のいたるところで見られるパターンです。 [Nicole Sullivan によって命名](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)され、一方の側に画像を、そして他方の側に説明的なテキストを有する Facebook の投稿やツイートのような 2 列のボックスを指します。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16112/media-object.png"></p>
+![](media-object.png)
 
-<h2 id="Requirements" name="Requirements">必要条件</h2>
+## 要件
 
-<p>メディアオブジェクトのパターンには、次の特性の一部または全部が必要です。</p>
+メディアオブジェクトのパターンには、次の特性の一部または全部が必要です。
 
-<ul>
- <li>モバイルでは積み重ね、デスクトップでは2列です。</li>
- <li>画像は左右どちらでもかまいません。</li>
- <li>画像は小さい場合も大きい場合もあります。</li>
- <li>メディアオブジェクトはネストできます。</li>
- <li>メディアオブジェクトは、どちらの側が最も高いかに関係なく、コンテンツをクリアする（区切る）必要があります。</li>
-</ul>
+- モバイルでは積み重ね、デスクトップでは 2 列です。
+- 画像は左右どちらでもかまいません。
+- 画像は小さい場合も大きい場合もあります。
+- メディアオブジェクトはネストできます。
+- メディアオブジェクトは、どちら側が高いかに関係なく、コンテンツをクリアする（区切る）必要があります。
 
-<h2 id="The_recipe" name="The_recipe">レシピ</h2>
+## レシピ
 
-<p class="codepen">{{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 1200)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 2700)}}
 
-<div class="note">
-<p class="codepen"><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html">この例をダウンロードする</a></p>
-</div>
+> **Callout:**
+>
+> [この例をダウンロードする](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
 
-<h2 id="Choices_made" name="Choices_made">行った選択</h2>
+## 行った選択
 
-<p>必要に応じて2次元でレイアウトを制御できるため、メディアオブジェクトに<a href="/ja/docs/Web/CSS/CSS_Grid_Layout">グリッドレイアウト</a>を使用することを選択しました。 つまり、フッターがあり、その上に短いコンテンツがある場合、そのフッターはそのメディアオブジェクトの下部にまで押し下げられます。</p>
+必要に応じて 2 次元でレイアウトを制御できるようにするため、メディアオブジェクトに[グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)を使用することを選択しました。 つまり、フッターがあり、その上に短いコンテンツがある場合、そのフッターはそのメディアオブジェクトの下部にまで押し下げられます。
 
-<p>グリッドレイアウトを使用するもう1つの理由は、画像のトラックのサイズ変更に {{cssxref("fit-content")}} を使用できるようにするためです。 最大サイズが 200 ピクセルの <code>fit-content</code> を使用すると、アイコンのような小さい画像がある場合、トラックはその画像のサイズ、つまり <code>max-content</code> のサイズと同じサイズになります。 画像が大きい場合、トラックは 200 ピクセルで拡大しなくなり、画像には 100% の {{cssxref("max-width")}} が適用されるため、列の内側に収まるように縮小されます。</p>
+グリッドレイアウトを使用するもう 1 つの理由は、画像のトラックのサイズ変更に {{cssxref("fit-content")}} を使用できるようにするためです。 最大サイズが 200 ピクセルの `fit-content` を使用すると、アイコンのような小さい画像がある場合、トラックはその画像のサイズ、つまり `max-content` のサイズと同じサイズになります。 画像が大きい場合、トラックは 200 ピクセルで拡大しなくなり、画像には 100% の {{cssxref("max-width")}} が適用されるため、列の内側に収まるように縮小されます。
 
-<p>レイアウトを実現するために {{cssxref("grid-template-areas")}} を使用することで、CSS でこのパターンを見ることができます。 max-width が 500 ピクセルになったら、グリッドを定義します。 そのため、より小さいデバイスではメディアオブジェクトが積み重ねられます。</p>
+レイアウトを実現するために {{cssxref("grid-template-areas")}} を使用することで、CSS でこのパターンを見ることができます。 max-width が 500 ピクセルになった時点でグリッドを定義しているので、小さな端末ではメディアオブジェクトが積み重なります。
 
-<p>パターンのオプションはそれを反転して画像を反対側に切り替えることです — これはレイアウトを反映させる反転グリッドテンプレートを定義する <code>media-flip</code> クラスを追加することによって行われます。</p>
+パターンのオプションに、反転して反対側に切り替えるというものがあります。 — これはレイアウトを反映させる反転グリッドテンプレートを定義する `media-flip` クラスを追加することによって行われます。
 
-<p>あるメディアオブジェクトを別のメディアオブジェクトの中にネストするときは、通常のレイアウトでは2番目のトラックに、反転したときは最初のトラックに配置する必要があります。</p>
+あるメディアオブジェクトを別のメディアオブジェクトの中に入れ子にするときは、通常のレイアウトでは 2 番目のトラックに、反転したときは最初のトラックに配置する必要があります。
 
-<h2 id="Fallbacks" name="Fallbacks">代替方法</h2>
+## 代替策
 
-<p>サポートしたいブラウザーに応じて、このパターンにはいくつかの代替方法があります。 良いキャッチオールは、画像を左に浮かべること、そしてそれがフロートを含むことを確実にするためにボックスに clearfix ハックを追加することです。</p>
+このパターンには、対応するブラウザーによって、いくつかの代替策が考えられます。良い万能策としては、画像を左に浮動させ、ボックスに clearfix を追加して、浮動が確実に収まるようにすることです。
 
-<p class="codepen">{{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 1200)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 3000)}}
 
-<div class="note">
-<p class="codepen"><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html">この例をダウンロードする</a></p>
-</div>
+> **Callout:**
+>
+> [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
 
-<p>浮動要素がグリッド項目になると、そのフロートは適用されなくなるため、フロートを除去するために特別なことをする必要はありません。</p>
+浮動要素がグリッドアイテムになると、その float が適用されなくなるため、浮動要素を除去するために特別なことをする必要はありません。
 
-<p>する必要があるのは、項目に適用されているすべてのマージンと、グリッドのコンテキストで必要としていないすべての幅を取り除くことです（グリッドでそれを制御するための {{cssxref("gap")}} プロパティがあり、トラックがサイズを制御します）。</p>
+やらなければならないことは、アイテムに適用されているすべてのマージンと、グリッドのコンテキストで必要としていないすべての幅を取り除くことです（グリッドでそれを制御するための {{cssxref("gap")}} プロパティがあり、トラックがサイズを制御します）。
 
-<h2 id="Relevant_resources_on_MDN" name="Relevant_resources_on_MDN">MDN の関連資料</h2>
+## MDN の関連資料
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout">CSS グリッドレイアウト</a></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">プログレッシブエンハンスメントとグリッドレイアウト</a></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">グリッドテンプレート領域の使用</a></li>
- <li><a href="/ja/docs/Web/CSS/fit-content">fit-content</a></li>
- <li><a href="/ja/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-</ul>
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)
+- [プログレッシブエンハンスメントとグリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [グリッドテンプレート領域の使用](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+- [fit-content](/ja/docs/Web/CSS/fit-content)
+- [grid-template-areas](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
-<p>さまざまなレイアウト方法が異なるブラウザーサポートを持っています。 使用しているプロパティの基本的なサポートの詳細については、以下の表を参照してください。</p>
+レイアウト方法によってブラウザーの対応状況が異なります。使用しているプロパティの基本的な対応の詳細については、以下の表を参照してください。
 
-<p>このページの互換性テーブルは構造化データから生成されます。 データに貢献したい場合は、<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックして、プルリクエストを送ってください。</p>
+#### grid-template-areas
 
-<h4 id="grid-template-areas" name="grid-template-areas">grid-template-areas</h4>
+{{Compat("css.properties.grid-template-areas")}}
 
-<p>{{Compat("css.properties.grid-template-areas")}}</p>
+#### float
 
-<h4 id="float" name="float">float</h4>
-
-<p>{{Compat("css.properties.float")}}</p>
+{{Compat("css.properties.float")}}
