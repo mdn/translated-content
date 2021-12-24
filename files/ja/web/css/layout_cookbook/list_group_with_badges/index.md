@@ -3,54 +3,53 @@ title: バッジ付きリストグループ
 slug: Web/CSS/Layout_cookbook/List_group_with_badges
 tags:
   - CSS
-  - Layout
-  - box alignment
-  - cookbook
-  - flexbox
-  - lists
+  - ガイド
+  - レイアウト
+  - ボックス配置
+  - 料理帳
+  - フレックスボックス
+  - リスト
 translation_of: Web/CSS/Layout_cookbook/List_group_with_badges
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p class="summary"><span class="seoSummary">このレシピでは、カウントを示すバッジ付きのリストグループのパターンを作成します。</span></p>
+このレシピでは、カウントを示すバッジ付きのリストグループのパターンを作成します。
 
-<p><img alt="テキストの右側に表示されるカウントを示すバッジ付きの項目のリスト。" src="https://mdn.mozillademos.org/files/16255/list-group-badges.png" style="height: 423px; width: 791px;"></p>
+![テキストの右側に表示されるカウントを示すバッジ付きの項目のリスト。](list-group-badges.png)
 
-<h2 id="Requirements" name="Requirements">要件</h2>
+## 要件
 
-<p>項目のコンテンツ量に関係なく、リスト項目の右側にバッジを並べて表示する必要があります。 1行のコンテンツでも、複数行のコンテンツでも、バッジは常に垂直方向の中央に配置する必要があります。</p>
+項目のコンテンツ量に関係なく、リスト項目の右側にバッジを並べて表示する必要があります。 1　行のコンテンツでも、複数行のコンテンツでも、バッジは常に垂直方向の中央に配置する必要があります。
 
-<h2 id="Recipe" name="Recipe">レシピ</h2>
+## レシピ
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/list-group-badges.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/list-group-badges.html", '100%', 720)}}
 
-<div class="note">
-<p><a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/list-group-badges--download.html">この例をダウンロードする</a></p>
-</div>
+> **Callout:**
+>
+> [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/list-group-badges--download.html)
 
-<h2 id="Choices_made" name="Choices_made">行った選択</h2>
+## 行った選択
 
-<p>フレックスボックスは、この特定のパターンを簡単にし、またレイアウトの変更を容易にします。</p>
+フレックスボックスは、この特定のパターンを簡単にし、またレイアウトの変更を容易にします。
 
-<p>テキストとバッジが正しく並ぶようにするために、{{cssxref("justify-content")}} プロパティに <code>space-between</code> の値を使用します。 これにより、項目間に余分なスペースが入ります。 実際の例では、このプロパティを削除すると、テキストが1行より短い項目のバッジがテキストの末尾に移動します。</p>
+テキストとバッジが正しく並ぶようにするために、{{cssxref("justify-content")}} プロパティに `space-between` の値を使用します。 これにより、項目間に余分な空白が入ります。 実際の例では、このプロパティを削除すると、テキストが 1 行より短い項目のバッジがテキストの末尾に移動します。
 
-<p>コンテンツを垂直方向に揃えるには、{{cssxref("align-items")}} プロパティを使用してテキストとバッジを交差軸上で揃えます。 代わりに、バッジをコンテンツの上部に揃える場合は、これを <code>align-items: flex-start</code> に変更します。</p>
+コンテンツを垂直方向に揃えるには、{{cssxref("align-items")}} プロパティを使用してテキストとバッジを交差軸上で揃えます。 代わりに、バッジをコンテンツの上部に揃える場合は、これを `align-items: flex-start` に変更します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
-<p>さまざまなレイアウト方法が異なるブラウザーサポートを持っています。 使用されているプロパティの基本的なサポートの詳細については、以下の表を参照してください。</p>
+レイアウト方法によってブラウザーの対応状況が異なります。使用しているプロパティの基本的な対応の詳細については、以下の表を参照してください。
 
-<h4 id="justify-content" name="justify-content">justify-content</h4>
+#### justify-content
 
-<p>{{Compat("css.properties.justify-content")}}</p>
+{{Compat("css.properties.justify-content")}}
 
-<h4 id="align-items" name="align-items">align-items</h4>
+#### align-items
 
-<p>{{Compat("css.properties.align-items")}}</p>
+{{Compat("css.properties.align-items")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">フレックスボックスでのボックス配置</a></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">フレックスコンテナー内のアイテムの配置</a></li>
-</ul>
+- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
