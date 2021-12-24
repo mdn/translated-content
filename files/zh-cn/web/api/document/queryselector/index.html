@@ -11,7 +11,7 @@ translation_of: Web/API/Document/querySelector
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<p>文档对象模型{{domxref("Document")}}引用的<code><strong>querySelector()</strong></code>方法返回文档中与指定选择器或选择器组匹配的第一个 {{domxref("HTMLElement")}}对象。 如果找不到匹配项，则返回<code>null</code>。</p>
+<p>文档对象模型{{domxref("Document")}}引用的<code><strong>querySelector()</strong></code>方法返回文档中与指定选择器或选择器组匹配的第一个 {{domxref("Element")}}对象。 如果找不到匹配项，则返回<code>null</code>。</p>
 
 <div class="note">
 <p><strong>提示</strong>: 匹配是使用深度优先先序遍历，从文档标记中的第一个元素开始，并按子节点的顺序依次遍历。</p>
@@ -34,7 +34,7 @@ translation_of: Web/API/Document/querySelector
 
 <h3 id="返回值">返回值</h3>
 
-<p>表示文档中与指定的一组CSS选择器匹配的第一个元素,一个 {{domxref("HTMLElement")}}对象。如果没有匹配到，则返回null。</p>
+<p>表示文档中与指定的一组CSS选择器匹配的第一个元素,一个 {{domxref("Element")}}对象。如果没有匹配到，则返回null。</p>
 
 <p>如果您需要与指定选择器匹配的所有元素的列表，则应该使用{{domxref("Document.querySelectorAll", "querySelectorAll()")}} 。</p>
 
