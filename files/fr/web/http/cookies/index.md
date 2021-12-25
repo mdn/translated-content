@@ -36,7 +36,7 @@ L'entête de réponse HTTP {{HTTPHeader("Set-Cookie")}} envoie un cookie depuis 
 
     Set-Cookie: <nom-du-cookie>=<valeur-du-cookie>
 
-> **Note :** Voici comme utiliser l'en-tête `Set-Cookie` dans divers langages de programmation côté serveur :
+> **Note :** Voici comment utiliser l'en-tête `Set-Cookie` dans divers langages de programmation côté serveur :
 >
 > - [PHP](https://secure.php.net/manual/en/function.setcookie.php)
 > - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
