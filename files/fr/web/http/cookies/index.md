@@ -109,7 +109,7 @@ Prenez garde aux problèmes de sécurité, décrits dans la section {{ anch("Sé
 
 ## Sécurité
 
-> **Note :** Les informations confidentielles ou sensibles ne devraient jamais être stockée ou transmises avec les Cookies HTTP, car le mécanisme entier est intrinsèquement insécurisé.
+> **Note :** Les informations confidentielles ou sensibles ne devraient jamais être stockées ou transmises avec les Cookies HTTP, car le mécanisme entier est intrinsèquement insécurisé.
 
 ### Piratage de session et XSS
 
