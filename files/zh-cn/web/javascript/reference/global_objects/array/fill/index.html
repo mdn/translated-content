@@ -61,7 +61,7 @@ Array(3).fill(4);                // [4, 4, 4]
 
 // Objects by reference.
 var arr = Array(3).fill({}) // [{}, {}, {}];
-// 需要注意如果fill的参数为引用类型，会导致都执行都一个引用类型
+// 需要注意如果fill的参数为引用类型，会导致都执行同一个引用类型
 // 如 arr[0] === arr[1] 为true
 arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]</pre>
 

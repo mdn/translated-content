@@ -396,12 +396,12 @@ IPOdate.setTime(Date.parse("Aug 9, 1995"));
 }
 </pre>
 
-<p><code>JSClock函数首先创建了一个叫做time的新的Date对象，因为没有参数，所以time代表了当前日期和时间。然后调用了</code><code>getHours</code>, <code>getMinutes以及getSeconds方法把当前的时分秒分别赋值给了hour</code>, <code>minute</code>,<code>second。</code></p>
+<p><code>JSClock</code>函数首先创建了一个叫做<code>time</code>的新的<code>Date</code>对象，因为没有参数，所以<code>time</code>代表了当前日期和时间。然后调用了<code>getHours</code>，<code>getMinutes</code>以及<code>getSeconds</code>方法把当前的时分秒分别赋值给了<code>hour</code>，<code>minute</code>，<code>second</code>。</p>
 
-<p>接下来的4句在time的基础上创建了一个字符串，第一句创建了一个变量temp，并通过一个条件表达式进行了赋值，如果小时大于12，就为 (<code>hour - 12</code>), 其他情况就为 hour, 除非 hour 为 0, 这种情况下，它会变成 12.</p>
+<p>接下来的4句在<code>time</code>的基础上创建了一个字符串，第一句创建了一个变量<code>temp</code>，并通过一个条件表达式进行了赋值，如果小时大于12，就为(<code>hour - 12</code>)，其他情况就为<code>hour</code>，除非<code>hour</code>为0，这种情况下，它会变成12。</p>
 
-<p>接下来的语句拼接了<code>minute</code>的值到<code>temp后。如果minute小于10，条件表达式就会在minute前边加个0，其他情况下加一个分号。然后按同样的方式在temp后拼接上了秒。</code></p>
+<p>接下来的语句拼接了<code>minute</code>的值到<code>temp</code>后。如果<code>minute</code>小于10，条件表达式就会在<code>minute</code>前边加个0，其他情况下加一个冒号。然后按同样的方式在<code>temp</code>后拼接上了秒。</p>
 
-<p>最后，如果hour是12或者更大，条件表达式会在temp后拼接"P.M."，否则拼接"A.M." 。</p>
+<p>最后，如果<code>hour</code>是12或者更大，条件表达式会在<code>temp</code>后拼接"P.M."，否则拼接"A.M."。</p>
 
 <p>{{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}</p>
