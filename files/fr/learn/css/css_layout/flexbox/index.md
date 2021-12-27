@@ -49,11 +49,11 @@ Dans cet article, nous allons commencer une série d'exercices pour vous facilit
 
 ![Une image montrant le point de départ de ce didacticiel sur Flexbox](bih741v.png)
 
-Qu'avons‑nous&nbsp;? Un élément {{htmlelement("header")}} avec un en‑tête de haut niveau à l'intérieur, et un élément {{htmlelement("section")}} contenant trois eléments {{htmlelement("article")}}. Nous allons les utiliser pour créer une disposition vraiment classique sur trois colonnes.
+Qu'avons‑nous&nbsp;? Un élément [`<header>`](/fr/docs/Web/HTML/Element/header) avec un en‑tête de haut niveau à l'intérieur, et un élément [`<section>`](/fr/docs/Web/HTML/Element/section) contenant trois éléments [`<article>`](/fr/docs/Web/HTML/Element/article). Nous allons les utiliser pour créer une disposition vraiment classique sur trois colonnes.
 
 ## Détermination des éléments à disposer en boîtes flexibles
 
-Pour commencer, sélectionnons les éléments devant être présentés sous forme de boîtes flexibles. Pour ce faire, donnons une valeur spéciale à la propriété  {{CSSxRef("display")}} du parent de ces éléments à disposer. Dans ce cas, comme cela concerne les éléments {{htmlelement("article")}}, nous affectons la valeur `flex` à l'élément {{htmlelement("section")}} (qui devient un conteneur flex)&nbsp;:
+Pour commencer, sélectionnons les éléments devant être présentés sous forme de boîtes flexibles. Pour ce faire, donnons une valeur spéciale à la propriété  [`display`](/fr/docs/Web/CSS/display) du parent de ces éléments à disposer. Dans ce cas, comme cela concerne les éléments [`<article>`](/fr/docs/Web/HTML/Element/article), nous affectons la valeur `flex` à l'élément [`<section>`](/fr/docs/Web/HTML/Element/section) (qui devient un conteneur flex)&nbsp;:
 
 ```css
 section {
@@ -61,13 +61,13 @@ section {
 }
 ```
 
-Voici le résultat :
+Voici le résultat&nbsp;:
 
 ![Échantillon d'utilisation de Flexbox](flexbox-example2.png)
 
 Cette unique déclaration donne tout ce dont nous avons besoin — incroyable, non&nbsp;? Nous avons ainsi notre disposition en plusieurs colonnes de largeur égale et toutes de même hauteur. Ceci parce que les valeurs par défaut données aux éléments flex (les enfants du conteneur flex) sont configurés pour résoudre des problèmes courants tels celui-ci.
 
-Récapitulons ce qui se passe ici&nbsp;: l'élément auquel nous avons affecté une valeur {{CSSxRef("display")}} de `flex` se comporte d'une manière d'un élément de bloc par rapport à sa façon d'interagir avec le reste de la page, tandis que les enfants se disposent comme des éléments flexibles. On en reparlera plus tard. À noter également que vous pouvez définir une valeur `inline-flex` pour {{CSSxRef("display")}} si vous voulez disposer des éléments en ligne sous forme de boîtes modulables.
+Récapitulons ce qui se passe ici&nbsp;: l'élément auquel nous avons affecté une valeur [`display`](/fr/docs/Web/CSS/display) de `flex` se comporte d'une manière d'un élément de bloc par rapport à sa façon d'interagir avec le reste de la page, tandis que les enfants se disposent comme des éléments flexibles. On en reparlera plus tard. À noter également que vous pouvez définir une valeur `inline-flex` pour [`display`](/fr/docs/Web/CSS/display) si vous voulez disposer des éléments en ligne sous forme de boîtes modulables.
 
 ## Aparté sur le modèle flex
 
@@ -77,16 +77,16 @@ Lorsque les éléments sont disposés en boîtes flexibles, ils sont disposés l
 
 - L'**axe principal (*main axis*)** est l'axe de la direction dans laquelle sont disposés les éléments flex (par exemple, horizontalement sur la page, ou verticalement de haut en bas de la page). Le début et la fin de cet axe sont appelés l'**origine principale (*main start*)** et la **fin principale (*main end*)**.
 - L'**axe croisé (*cross axis*)** est l'axe perpendiculaire à l'axe principal, c'est-à-dire à la direction dans laquelle sont disposés les éléments flex. Le début et la fin de cet axe sont appelés le **début (*cross start*)** et la **fin (*cross end*)** de l'axe croisé.
-- L'élément parent dont la propriété est `display: flex` ({{htmlelement("section")}} dans notre exemple) est appelé le **conteneur flex (*flex container*)**.
-- Les éléments disposés en tant que boîtes flexibles à l'intérieur du conteneur flex sont appelés **éléments flex (*flex items*)** (les éléments {{htmlelement("article")}} dans notre exemple).
+- L'élément parent dont la propriété est `display: flex` ([`<section>`](/fr/docs/Web/HTML/Element/section) dans notre exemple) est appelé le **conteneur flex (*flex container*)**.
+- Les éléments disposés en tant que boîtes flexibles à l'intérieur du conteneur flex sont appelés **éléments flex (*flex items*)** (les éléments [`<article>`](/fr/docs/Web/HTML/Element/article) dans notre exemple).
 
 Gardez cette terminologie en tête en lisant les paragraphes suivants. Vous pouvez toujours vous y référer si vous avez un doute sur la signification des termes utilisés.
 
 ## Colonnes ou lignes&nbsp;?
 
-Flexbox dispose de la propriété {{CSSxRef("flex-direction")}} pour indiquer la direction de l'axe principal (direction dans laquelle les enfants flexibles sont disposés). Cette propriété est égale par défaut à `row`&nbsp;: ils sont donc disposés en ligne, dans le sens de lecture de la langue par défaut du navigateur (de gauche à droite, dans le cas d'un navigateur français).
+Flexbox dispose de la propriété [`flex-direction`](/fr/docs/Web/CSS/flex-direction) pour indiquer la direction de l'axe principal (direction dans laquelle les enfants flexibles sont disposés). Cette propriété est égale par défaut à `row`&nbsp;: ils sont donc disposés en ligne, dans le sens de lecture de la langue par défaut du navigateur (de gauche à droite, dans le cas d'un navigateur français).
 
-Ajoutez la déclaration suivante dans la règle CSS pour l'élément {{htmlelement("section")}}&nbsp;:
+Ajoutez la déclaration suivante dans la règle CSS pour l'élément [`<section>`](/fr/docs/Web/HTML/Element/section)&nbsp;:
 
 ```css
 flex-direction: column;
@@ -102,13 +102,13 @@ Problème&nbsp;: quand votre structure est de largeur ou hauteur fixe, il arrive
 
 ![Débordement des éléments modulables](flexbox-example3.png)
 
-Ici, nous voyons que les enfants débordent du conteneur. Une façon d'y remédier est d'ajouter la déclaration suivante à votre règle pour {{htmlelement("section")}}&nbsp;:
+Ici, nous voyons que les enfants débordent du conteneur. Une façon d'y remédier est d'ajouter la déclaration suivante à votre règle pour [`<section>`](/fr/docs/Web/HTML/Element/section)&nbsp;:
 
 ```css
 flex-wrap: wrap;
 ```
 
-Ajoutez aussi la déclaration suivante à votre règle pour {{htmlelement("article")}}&nbsp;:
+Ajoutez aussi la déclaration suivante à votre règle pour [`<article>`](/fr/docs/Web/HTML/Element/article)&nbsp;:
 
 ```css
 flex: 200px;
@@ -118,11 +118,11 @@ Essayons&nbsp;; la disposition est bien meilleure avec ces ajouts&nbsp;:
 
 ![Conditionnement des éléments modulables](flexbox-example4.png)Nous avons maintenant plusieurs lignes — un nombre sensé d'enfants flexibles est placé sur chaque ligne, et le débordement est déplacé vers le bas sur une ligne supplémentaire. La déclaration `flex: 200px` pour les éléments `article` signifie que chacun aura au moins 200px de large ; nous discuterons de cette propriété plus en détail plus tard. Vous noterez aussi que chacun des enfants de la dernière rangée est plus large, de façon à ce que toute la rangée reste remplie.
 
-Mais nous pouvons faire plus ici. Tout d'abord, essayez de changer la valeur de la propriété {{CSSxRef("flex-direction")}} en `row-reverse` — maintenant vous avez toujours la disposition sur plusieurs lignes, mais elles commencent dans l'angle opposé de la fenêtre du navigateur et se disposent à l'envers.
+Mais nous pouvons faire plus ici. Tout d'abord, essayez de changer la valeur de la propriété [`flex-direction`](/fr/docs/Web/CSS/flex-direction) en `row-reverse` — maintenant vous avez toujours la disposition sur plusieurs lignes, mais elles commencent dans l'angle opposé de la fenêtre du navigateur et se disposent à l'envers.
 
 ## Forme abrégée «&nbsp;flex-flow&nbsp;»
 
-Notez maintenant qu'il y a une forme abrégée pour {{CSSxRef("flex-direction")}} et {{CSSxRef("flex-wrap")}} — {{CSSxRef("flex-flow")}}. Ainsi, par exemple, vous pouvez remplacer&nbsp;:
+Notez maintenant qu'il y a une forme abrégée pour [`flex-direction`](/fr/docs/Web/CSS/flex-direction) et [`flex-wrap`](/fr/docs/Web/CSS/flex-wrap) — [`flex-flow`](/fr/docs/Web/CSS/flex-flow). Ainsi, par exemple, vous pouvez remplacer&nbsp;:
 
 ```css
 flex-direction: row;
@@ -147,9 +147,9 @@ article {
 }
 ```
 
-Il s'agit d'une valeur de proportion, sans unité, définissant la quantité d'espace disponible que chaque élément flex prendra le long de l'axe principal. Dans ce cas, nous donnons à chaque élément {{htmlelement("article")}} une valeur de 1, ce qui signifie qu'ils prendront tous une portion égale de l'espace libre après le calcul du remplissage et de la marge. Cette valeur représente une proportion, c'est-à-dire que le fait de donner une valeur de 400 000 simultanément à tous les éléments flex aurait exactement le même effet.
+Il s'agit d'une valeur de proportion, sans unité, définissant la quantité d'espace disponible que chaque élément flex prendra le long de l'axe principal. Dans ce cas, nous donnons à chaque élément [`<article>`](/fr/docs/Web/HTML/Element/article) une valeur de 1, ce qui signifie qu'ils prendront tous une portion égale de l'espace libre après le calcul du remplissage et de la marge. Cette valeur représente une proportion, c'est-à-dire que le fait de donner une valeur de 400 000 simultanément à tous les éléments flex aurait exactement le même effet.
 
-Maintenant ajoutons cette règle en-dessous de la précédente&nbsp;:
+Maintenant ajoutons cette règle en dessous de la précédente&nbsp;:
 
 ```css
 article:nth-of-type(3) {
@@ -157,7 +157,7 @@ article:nth-of-type(3) {
 }
 ```
 
-Maintenant, lorsque vous actualisez, vous voyez que le troisième {{htmlelement("article")}} occupe deux fois plus de largeur disponible que chacun des deux autres — il y a maintenant quatre unités de division disponibles au total (puisque 1&nbsp;+&nbsp;1&nbsp;+&nbsp;2&nbsp;=&nbsp;4). Les deux premiers éléments flexibles en occupent chacun un, soit 1/4 de l'espace disponible pour chacun. Le troisième remplit deux unités, soit 2/4 (la moitié) de l'espace disponible.
+Maintenant, lorsque vous actualisez, vous voyez que le troisième [`<article>`](/fr/docs/Web/HTML/Element/article) occupe deux fois plus de largeur disponible que chacun des deux autres — il y a maintenant quatre unités de division disponibles au total (puisque 1&nbsp;+&nbsp;1&nbsp;+&nbsp;2&nbsp;=&nbsp;4). Les deux premiers éléments flexibles en occupent chacun un, soit 1/4 de l'espace disponible pour chacun. Le troisième remplit deux unités, soit 2/4 (la moitié) de l'espace disponible.
 
 Vous pouvez également définir une valeur minimale de taille dans la valeur `flex`. Modifiez comme suit vos règles `article` existantes&nbsp;:
 
@@ -175,15 +175,15 @@ En gros, cela dit&nbsp;: «&nbsp;Chaque élément flex reçoit d'abord 200px de 
 
 ![Modulation de la largeur](flexbox-example1.png)
 
-Le véritable intérêt de Flexbox apparaît dans sa souplesse et sa réactivité — si vous redimensionnez la fenêtre du navigateur ou ajoutez un autre élément {{htmlelement("article")}}, la mise en page continue de fonctionner correctement.
+Le véritable intérêt de Flexbox apparaît dans sa souplesse et sa réactivité — si vous redimensionnez la fenêtre du navigateur ou ajoutez un autre élément [`<article>`](/fr/docs/Web/HTML/Element/article), la mise en page continue de fonctionner correctement.
 
 ## flex&nbsp;: forme abrégée vs forme longue
 
-{{CSSxRef("flex")}} est une forme abrégée de propriété qui peut servir à définir trois valeurs différentes&nbsp;:
+[`flex`](/fr/docs/Web/CSS/flex) est une forme abrégée de propriété qui peut servir à définir trois valeurs différentes&nbsp;:
 
-- Une valeur de proportion sans unité, vue ci‑dessus. Elle peut être précisée seule avec la forme longue de la propriété {{CSSxRef("flex-grow")}}&nbsp;;
-- Une deuxième valeur de proportion sans unité, {{CSSxRef("flex-shrink")}}, intervenant quand les éléments flex débordent du conteneur. Elle indique la quantité de dépassement à retirer de l'extension de chacun des éléments flex pour les empêcher de déborder du conteneur. Il s'agit d'une fonctionnalité avancée de Flexbox — nous n'en parlerons plus dans cet article&nbsp;;
-- Une valeur de taille minimale, vue ci‑dessus. Elle peut aussi être précisée seule avec la forme longue de la propriété {{CSSxRef("flex-basis")}}.
+- Une valeur de proportion sans unité, vue ci‑dessus. Elle peut être précisée seule avec la forme longue de la propriété [`flex-grow`](/fr/docs/Web/CSS/flex-grow)&nbsp;;
+- Une deuxième valeur de proportion sans unité, [`flex-shrink`](/fr/docs/Web/CSS/flex-shrink), intervenant quand les éléments flex débordent du conteneur. Elle indique la quantité de dépassement à retirer de l'extension de chacun des éléments flex pour les empêcher de déborder du conteneur. Il s'agit d'une fonctionnalité avancée de Flexbox — nous n'en parlerons plus dans cet article&nbsp;;
+- Une valeur de taille minimale, vue ci‑dessus. Elle peut aussi être précisée seule avec la forme longue de la propriété [`flex-basis`](/fr/docs/Web/CSS/flex-basis).
 
 Nous vous déconseillons d'utiliser les propriétés flex sous leur forme longue, sans autre alternative possible (par exemple, pour annuler quelque chose déjà défini). Elles représentent du code supplémentaire et peuvent être quelque peu déroutantes.
 
@@ -209,13 +209,13 @@ div {
 
 Actualisez la page et vous verrez que les boutons sont maintenant bien centrés, horizontalement et verticalement. Cette transformation a été opérée grâce à deux nouvelles propriétés.
 
-{{CSSxRef("align-items")}} fixe là où les éléments flex sont placés sur l'axe perpendiculaire, dit aussi croisé (_cross axis_).
+[`align-items`](/fr/docs/Web/CSS/align-items) fixe là où les éléments flex sont placés sur l'axe perpendiculaire, dit aussi croisé (_cross axis_).
 
 - Par défaut, la valeur est `stretch`, qui étire tous les éléments flex de manière à emplir le conteneur parent le long de l'axe croisé. Si le parent ne possède pas de dimension définie dans la direction de l'axe croisé, alors tous les éléments flex auront la dimension du plus étiré des éléments. C'est pour cette raison que, dans notre premier exemple, les colonnes ont toutes la même hauteur par défaut.
 - Avec la valeur `center` utilisée dans le code ci-dessus, les éléments gardent leur dimension intrinsèque, tout en étant centrés sur l'axe croisé. C'est la raison pour laquelle, dans l'exemple actuel, les boutons sont centrés verticalement.
-- Il y a également des valeurs comme `flex-start` et `flex-end` qui alignent respectivement tous les éléments au début ou à la fin de l'axe croisé. Voyez {{CSSxRef("align-items")}} pour tous les détails.
+- Il y a également des valeurs comme `flex-start` et `flex-end` qui alignent respectivement tous les éléments au début ou à la fin de l'axe croisé. Voyez [`align-items`](/fr/docs/Web/CSS/align-items) pour tous les détails.
 
-Vous pouvez prendre le pas sur le comportement de {{CSSxRef("align-items")}} pour un élément flex donné en lui appliquant la propriété {{CSSxRef("align-self")}}. Par exemple, ajoutez ce qui suit aux CSS&nbsp;:
+Vous pouvez prendre le pas sur le comportement de [`align-items`](/fr/docs/Web/CSS/align-items) pour un élément flex donné en lui appliquant la propriété [`align-self`](/fr/docs/Web/CSS/align-self). Par exemple, ajoutez ce qui suit aux CSS&nbsp;:
 
 ```css
 button:first-child {
@@ -227,13 +227,13 @@ button:first-child {
 
 Voyez l'effet obtenu, puis supprimez ensuite la règle.
 
-{{CSSxRef("justify-content")}} fixe où les éléments flex sont placés sur l'axe principal.
+[`justify-content`](/fr/docs/Web/CSS/justify-content) fixe où les éléments flex sont placés sur l'axe principal.
 
 - La valeur par défaut est `flex-start` : tous les éléments sont disposés vers l'origine de l'axe principal.
 - Vous utiliserez `flex-end` pour les disposer vers la fin.
 - `center` est aussi une valeur possible pour `justify-content`. Avec elle, les éléments flex sont placés vers le centre de l'axe principal.
 - La valeur `space-around`, utilisée plus haut, est pratique — elle distribue régulièrement tous les éléments le long de l'axe principal, en laissant autant d'espace à chaque extrémité qu'entre chacun.
-- Une autre valeur, `space-between`, est semblable à `space-around` mais elle ne laisse pas d'espace aux extrémités.
+- Une autre valeur, `space-between`, est semblable à `space-around`, mais elle ne laisse pas d'espace aux extrémités.
 
 N'hésitez pas à jouer avec ces valeurs pour visualiser leur fonctionnement avant de poursuivre.
 
@@ -251,8 +251,8 @@ button:first-child {
 
 Actualisez, et vous pouvez voir que le bouton «&nbsp;Smile&nbsp;» a été déplacé en fin de l'axe principal. Voyons en détail comment cela fonctionne&nbsp;:
 
-- Par défaut, tous les éléments flex possèdent une valeur {{CSSxRef("order")}} égale à 0&nbsp;;
-- Les éléments flex avec des valeurs `order` plus élévées apparaîtront plus tard dans l'ordre d'affichage que ceux avec des valeurs plus faibles&nbsp;;
+- Par défaut, tous les éléments flex possèdent une valeur [`order`](/fr/docs/Web/CSS/order) égale à 0&nbsp;;
+- Les éléments flex avec des valeurs `order` plus élevées apparaîtront plus tard dans l'ordre d'affichage que ceux avec des valeurs plus faibles&nbsp;;
 - Les éléments flex avec les mêmes valeurs pour `order` sont affichés dans l'ordre de la source. Ainsi, si vous avez 4 éléments avec des valeurs `order` de 2, 1, 1 et 0, leur ordre d'affichage sera 4e, 2e, 3e et 1er&nbsp;;
 - Le troisième élément suit le deuxième, car il a la même valeur pour `order` et qu'il est placé après dans le code source.
 
@@ -270,7 +270,7 @@ Il est possible de créer des mises en page joliment complexes avec Flexbox. Il 
 
 ![Imbrications avec flexbox](flexbox-example7.png)
 
-Le HTML pour cela est vraiment simple. Voici un élément {{htmlelement("section")}} contenant trois éléments {{htmlelement("article")}}. Le troisième élément {{htmlelement("article")}} contient trois éléments {{htmlelement("div")}}, et le premier élément {{htmlelement("div")}} contient cinq éléments {{htmlelement("button")}}&nbsp;:
+Le HTML pour cela est vraiment simple. Voici un élément [`<section>`](/fr/docs/Web/HTML/Element/section) contenant trois éléments [`<article>`](/fr/docs/Web/HTML/Element/article). Le troisième élément [`<article>`](/fr/docs/Web/HTML/Element/article) contient trois éléments [`<div>`](/fr/docs/Web/HTML/Element/div), et le premier élément [`<div>`](/fr/docs/Web/HTML/Element/div) contient cinq éléments [`<button>`](/fr/docs/Web/HTML/Element/Button)&nbsp;:
 
     section - article
               article
@@ -282,7 +282,7 @@ Le HTML pour cela est vraiment simple. Voici un élément {{htmlelement("section
 
 Regardez le code utilisé pour cette disposition.
 
-Primo, nous déterminons que les enfants de l'élément {{htmlelement("section")}} seront des boîtes flexibles.
+Primo, nous déterminons que les enfants de l'élément [`<section>`](/fr/docs/Web/HTML/Element/section) seront des boîtes flexibles.
 
 ```css
 section {
@@ -290,7 +290,7 @@ section {
 }
 ```
 
-Secundo, nous définissons des valeurs flex pour les éléments {{htmlelement("article")}} eux‑mêmes. Remarquez en particulier ici la deuxième règle — nous paramétrons le troisième élément {{htmlelement("article")}} pour que ses enfants soient eux-mêmes disposés en tant qu'éléments flex, mais cette fois‑ci en colonne.
+Secundo, nous définissons des valeurs flex pour les éléments [`<article>`](/fr/docs/Web/HTML/Element/article) eux‑mêmes. Remarquez en particulier ici la deuxième règle — nous paramétrons le troisième élément [`<article>`](/fr/docs/Web/HTML/Element/article) pour que ses enfants soient eux-mêmes disposés en tant qu'éléments flex, mais cette fois‑ci en colonne.
 
 ```css
 article {
@@ -304,7 +304,7 @@ article:nth-of-type(3) {
 }
 ```
 
-Tertio, nous sélectionnons le premier élément {{htmlelement("div")}} et lui assignons la valeur `flex: 1 100px;` pour qu'il ait effectivement une hauteur minimale de 100px. Ensuite, nous indiquons que ses enfants (les éléments {{htmlelement("button")}}) doivent être disposés en tant qu'éléments flex dans une ligne enveloppante, centrés dans l'espace disponible comme dans l'exemple des boutons vu plus haut.
+Tertio, nous sélectionnons le premier élément [`<div>`](/fr/docs/Web/HTML/Element/div) et lui assignons la valeur `flex: 1 100px;` pour qu'il ait effectivement une hauteur minimale de 100px. Ensuite, nous indiquons que ses enfants (les éléments [`<button>`](/fr/docs/Web/HTML/Element/Button)) doivent être disposés en tant qu'éléments flex dans une ligne enveloppante, centrés dans l'espace disponible comme dans l'exemple des boutons vu plus haut.
 
 ```css
 article:nth-of-type(3) div:first-child {

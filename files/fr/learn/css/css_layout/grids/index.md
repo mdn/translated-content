@@ -49,9 +49,9 @@ La vidéo suivante fournit une belle explication visuelle de l'utilisation de «
 
 ### Définition d'une trame
 
-Pour débuter, téléchargez et ouvrez [le fichier de départ](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/0-starting-point.html) dans l'éditeur de texte et dans le navigateur (vous pouvez également le [voir en direct ici](https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html)). Vous y verrez un exemple constitué d'un conteneur avec quelques enfants. Par défaut, ils sont présentés suivant le cours normal&nbsp;: les boîtes s'affichent donc accolées les unes au-dessous des autres. Nous travaillerons avec ce fichier dans la première partie de la leço&nbsp;; nous y introduirons des changements et observerons les modifications induites dans le comportement du maillage.
+Pour débuter, téléchargez et ouvrez [le fichier de départ](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/0-starting-point.html) dans l'éditeur de texte et dans le navigateur (vous pouvez également le [voir en direct ici](https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html)). Vous y verrez un exemple constitué d'un conteneur avec quelques enfants. Par défaut, ils sont présentés suivant le cours normal&nbsp;: les boîtes s'affichent donc accolées les unes au-dessous des autres. Nous travaillerons avec ce fichier dans la première partie de la leçon&nbsp;; nous y introduirons des changements et observerons les modifications induites dans le comportement du maillage.
 
-Pour définir un tramage, on affecte la valeur `grid` à la propriété {{CSSxRef("display")}}. De la même manière qu'avec Flexbox, nous basculons ainsi en disposition en quadrillage&nbsp;; tous les enfants directs du conteneur deviennent des éléments de la maille. Ajoutez ceci à la CSS du fichier&nbsp;:
+Pour définir un tramage, on affecte la valeur `grid` à la propriété [`display`](/fr/docs/Web/CSS/display). De la même manière qu'avec Flexbox, nous basculons ainsi en disposition en quadrillage&nbsp;; tous les enfants directs du conteneur deviennent des éléments de la maille. Ajoutez ceci à la CSS du fichier&nbsp;:
 
 ```css
 .container {
@@ -100,7 +100,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Définition_dune_trame', '100%', 400) }}
+{{ EmbedLiveSample('', '100%', 400) }}
 
 ### Trames adaptables avec l'unité **fr**
 
@@ -160,13 +160,13 @@ body {
 </div>
 ```
 
-{{ EmbedLiveSample("", '100%', 400) }}
+{{ EmbedLiveSample('', '100%', 400) }}
 
 > **Note :** L'unité `fr` distribue l'espace disponible, et non sa _totalité_. Donc, si une des pistes contient quelque chose de grande taille, il y aura moins d'espace disponible à partager.
 
 ### Espaces entre pistes
 
-Pour créer des «&nbsp;gouttières&nbsp;» entre chaînes et trames, nous nous servons des propriétés {{CSSxRef("column-gap")}} et {{CSSxRef("row-gap")}} pour, respectivement, les espacements entre colonnes et entre lignes&nbsp;; la propriété {{CSSxRef("gap")}} définit les deux d'un coup.
+Pour créer des «&nbsp;gouttières&nbsp;» entre chaînes et trames, nous nous servons des propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap) et [`row-gap`](/fr/docs/Web/CSS/row-gap) pour, respectivement, les espacements entre colonnes et entre lignes&nbsp;; la propriété [`gap`](/fr/docs/Web/CSS/gap) définit les deux d'un coup.
 
 ```css
 .container {
@@ -184,12 +184,6 @@ body {
   max-width: 900px;
   margin: 2em auto;
   font: .9em/1.2 Arial, Helvetica, sans-serif;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 20px;
 }
 
 .container > div {
@@ -213,7 +207,7 @@ body {
 </div>
 ```
 
-{{ EmbedLiveSample('Espaces_entre_pistes', '100%', 400) }}
+{{ EmbedLiveSample('', '100%', 400) }}
 
 > **Note :** Les propriétés `-gap` (`column-gap`, `row-gap` et `gap`) étaient traditionnellement préfixées par `grid-`, mais la norme a été modifiée avec l'intention de la rendre utilisable dans les diverses méthodes de mise en page. Les versions préfixées seront maintenues en tant qu'alias, de sorte qu'elles seront utilisables en toute sécurité pendant un certain temps. En appliquant le principe de précaution, vous pouvez doubler et mettre les deux types de propriétés pour «&nbsp;blinder&nbsp;» votre code&nbsp;:
 > 
@@ -244,7 +238,7 @@ Nous obtenons trois chaînes de `1fr` de large, comme précédemment. La premiè
 
 Nous n'avons jusqu'à présent défini que des chaînes en colonnes, mais on peut aussi les créer en lignes pour recevoir les contenus. C'est un exemple de trame explicite (la chaîne) vs implicite (la trame). La chaîne explicite est celle créée avec `grid-template-columns` ou `grid-template-rows`. La trame implicite est créée lorsque l'on met du contenu dans ce quadrillage — comme dans les rangées de nos exemples. La chaîne explicite et la trame implicite sont analogues aux axes principal et croisé de Flexbox.
 
-Par défaut, les rangées de la trame implicite sont `auto` dimensionnées, ce qui signifie qu'elles sont, en général, suffisamment grandes pour accueillir le contenu. Si vous voulez que les rangées de trame créées par le navigateur aient une taille donnée, utilisez les propriétés {{CSSxRef("grid-auto-rows")}} et {{CSSxRef("grid-auto-columns")}}. Si vous ajoutez la propriété `grid-auto-rows` avec une valeur de `100px` dans la CSS, vous verrez que les rangées créées ont maintenant 100 pixels de haut.
+Par défaut, les rangées de la trame implicite sont `auto` dimensionnées, ce qui signifie qu'elles sont, en général, suffisamment grandes pour accueillir le contenu. Si vous voulez que les rangées de trame créées par le navigateur aient une taille donnée, utilisez les propriétés [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows) et [`grid-auto-columns`](/fr/docs/Web/CSS/grid-auto-columns). Si vous ajoutez la propriété `grid-auto-rows` avec une valeur de `100px` dans la CSS, vous verrez que les rangées créées ont maintenant 100 pixels de haut.
 
 ```css hidden
 body {
@@ -284,13 +278,13 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Trame_implicite_et_explicite', '100%', 400) }}
+{{ EmbedLiveSample('', '100%', 400) }}
 
 ### La fonction minmax()
 
 Les rangées de trame de 100 pixels de haut ne seront pas très utiles si nous y plaçons des contenus de plus de 100 pixels de haut&nbsp;: il y aurait alors débordement. Il est préférable d'avoir des pistes d'_au moins_ 100 pixels de haut, mais susceptibles de s'agrandir si le contenu déposé le nécessite. C'est un constat classique à propos du web&nbsp;: vous ne savez jamais vraiment quelle sera la hauteur d'un élément — du contenu supplémentaire ou des tailles de police plus grandes peuvent amener des problèmes avec des designs en pixels visant la perfection dans toute dimension.
 
-La fonction {{CSSxRef("minmax()")}} nous permet de fixer une taille maximale et minimale pour une trame, par exemple `minmax(100px, auto)`. La taille minimale est de 100 pixels, mais la maximale est `auto` — elle s'agrandira selon le contenu. Changeons `grid-auto-rows` en utilisant une valeur `minmax`&nbsp;:
+La fonction [`minmax()`](/fr/docs/Web/CSS/minmax()) nous permet de fixer une taille maximale et minimale pour une trame, par exemple `minmax(100px, auto)`. La taille minimale est de 100 pixels, mais la maximale est `auto` — elle s'agrandira selon le contenu. Changeons `grid-auto-rows` en utilisant une valeur `minmax`&nbsp;:
 
 ```css
 .container {
@@ -305,7 +299,7 @@ Si vous ajoutez du contenu supplémentaire, vous verrez que la trame grandit pou
 
 ### Autant de chaînes que possible
 
-Il est possible de combiner nos savoirs à propos des listes de pistes, la notation `repeat()` et {{CSSxRef("minmax()")}} pour créer un modèle utile. Parfois, demander à ce que la génération automatique crée autant de chaînes que possible dans un conteneur nous faciliterait la tâche. Pour réaliser cela, définissez la valeur de `grid-template-columns` égale à {{CSSxRef("repeat()")}} avec le mot-clé `auto-fill` comme premier paramètre au lieu d'un nombre. Pour le second paramètre de la fonction, utilisez `minmax()` avec pour minimum la taille souhaitée pour la piste et `1fr` pour maximum.
+Il est possible de combiner nos savoirs à propos des listes de pistes, la notation `repeat()` et [`minmax()`](/fr/docs/Web/CSS/minmax()) pour créer un modèle utile. Parfois, demander à ce que la génération automatique crée autant de chaînes que possible dans un conteneur nous faciliterait la tâche. Pour réaliser cela, définissez la valeur de `grid-template-columns` égale à [`repeat()`](/fr/docs/Web/CSS/repeat()) avec le mot-clé `auto-fill` comme premier paramètre au lieu d'un nombre. Pour le second paramètre de la fonction, utilisez `minmax()` avec pour minimum la taille souhaitée pour la piste et `1fr` pour maximum.
 
 Essayez ceci dans le fichier avec la CSS ci-dessous&nbsp;:
 
@@ -347,7 +341,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Autant_de_chaînes_que_possible', '100%', 400) }}
+{{ EmbedLiveSample('', '100%', 400) }}
 
 Il a été créé autant de chaînes de 200 pixels qu'il y a de place dans le conteneur, puis l'espace restant a été partagé entre toutes les colonnes — le maximum de `1fr` répartit, comme nous le savons déjà, l'espace de façon égale entre rangées.
 
@@ -357,15 +351,15 @@ Nous passons maintenant de la création du quadrillage à la mise en place des c
 
 Nous pouvons placer les choses dans ces rangées en indiquant les rangées de début et de fin. Pour ce faire, nous utilisons les propriétés suivantes&nbsp;:
 
-- {{CSSxRef("grid-column-start")}}
-- {{CSSxRef("grid-column-end")}}
-- {{CSSxRef("grid-row-start")}}
-- {{CSSxRef("grid-row-end")}}
+- [`grid-column-start`](/fr/docs/Web/CSS/grid-column-start)
+- [`grid-column-end`](/fr/docs/Web/CSS/grid-column-end)
+- [`grid-row-start`](/fr/docs/Web/CSS/grid-row-start)
+- [`grid-row-end`](/fr/docs/Web/CSS/grid-row-end)
 
 Ces propriétés acceptent toutes un numéro de ligne comme valeur. Vous pouvez également utiliser les formes abrégées de ces propriétés&nbsp;:
 
-- {{CSSxRef("grid-column")}}
-- {{CSSxRef("grid-row")}}
+- [`grid-column`](/fr/docs/Web/CSS/grid-column)
+- [`grid-row`](/fr/docs/Web/CSS/grid-row)
 
 Cela vous permet de définir les rangées de départ et de fin simultanément, en les séparant avec une barre oblique `/`.
 
@@ -458,13 +452,13 @@ aside {
 </div>
 ```
 
-{{ EmbedLiveSample('Placement_sur_les_lignes', '100%', 600) }}
+{{ EmbedLiveSample('', '100%', 600) }}
 
 > **Note :** Vous pouvez aussi utiliser la valeur `-1` pour cibler la dernière rangée de la chaîne et compter vers l'intérieur à partir de la fin en utilisant des valeurs négatives. Cependant, cela ne fonctionne que pour la chaîne explicite. La valeur `-1` ne ciblera pas le rang de fin de [trame implicite](/fr/docs/Glossary/Grid).
 
 ## Placer avec grid-template-areas
 
-Une autre façon de placer des éléments dans le quadrillage consiste à utiliser la propriété {{CSSxRef("grid-template-areas")}} en donnant un nom au divers éléments du design.
+Une autre façon de placer des éléments dans le quadrillage consiste à utiliser la propriété [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas) en donnant un nom au divers éléments du design.
 
 Supprimez le placement sur les lignes du dernier exemple (ou bien rechargez le fichier pour avoir un nouveau point de départ) et ajoutez ceci à la CSS.
 
@@ -668,7 +662,7 @@ aside {
 </div>
 ```
 
-{{ EmbedLiveSample('_Grilles_CSS_une_structure_de_quadrillage', '100%', 600) }}
+{{ EmbedLiveSample('', '100%', 600) }}
 
 Si vous utilisez [_Firefox Grid Inspector_ (inspecteur de grilles)](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) (Inspecteur > Mise en page > Grilles) pour superposer les lignes du quadrillage sur le design, vous verrez comment le quadrillage à 12 colonnes fonctionne.
 
@@ -682,7 +676,7 @@ Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informat
 
 Dans cet aperçu, nous avons parcouru les principales caractéristiques de la mise en page avec les fonctionnalités du modèle de disposition en grille. Vous devriez pouvoir commencer à l'utiliser dans vos mises en page. Pour en savoir plus sur les spécifications, lisez nos guides sur la disposition en trame&nbsp;; leurs intitulés sont rappelés ci-dessous.
 
-## Voir également
+## Voir aussi
 
 - [Grilles CSS (CSS Grid)&nbsp;: Guides](/fr/docs/Web/CSS/CSS_Grid_Layout#guides)
 - [Inspecteur de grille CSS&nbsp;: examiner les grilles](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
