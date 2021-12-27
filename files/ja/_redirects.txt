@@ -1140,8 +1140,6 @@
 /ja/docs/DOM/EventTarget.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
 /ja/docs/DOM/File.fileName	/ja/docs/conflicting/Web/API/File/name
 /ja/docs/DOM/File.fileSize	/ja/docs/conflicting/Web/API/Blob/size
-/ja/docs/DOM/File.getAsBinary	/ja/docs/Web/API/File/getAsBinary
-/ja/docs/DOM/File.getAsText	/ja/docs/Web/API/File/getAsText
 /ja/docs/DOM/File.lastModifiedDate	/ja/docs/Web/API/File/lastModifiedDate
 /ja/docs/DOM/File.name	/ja/docs/Web/API/File/name
 /ja/docs/DOM/File.size	/ja/docs/Web/API/Blob/size
@@ -3090,8 +3088,6 @@
 /ja/docs/Web/API/FetchEvent_clone	/ja/docs/Web/API/FetchEvent
 /ja/docs/Web/API/File.fileName	/ja/docs/conflicting/Web/API/File/name
 /ja/docs/Web/API/File.fileSize	/ja/docs/conflicting/Web/API/Blob/size
-/ja/docs/Web/API/File.getAsBinary	/ja/docs/Web/API/File/getAsBinary
-/ja/docs/Web/API/File.getAsText	/ja/docs/Web/API/File/getAsText
 /ja/docs/Web/API/File.name	/ja/docs/Web/API/File/name
 /ja/docs/Web/API/File.size	/ja/docs/Web/API/Blob/size
 /ja/docs/Web/API/File.type	/ja/docs/Web/API/Blob/type
