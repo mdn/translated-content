@@ -4,67 +4,56 @@ slug: Web/API/File/type
 tags:
   - API
   - File API
-  - Reference
+  - リファレンス
   - ファイル
   - ファイルタイプ
   - プロパティ
+browser-compat: api.File.type
 translation_of: Web/API/File/type
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>{{domxref("File")}} オブジェクトによって表されるファイルのメディアタイプ (<a href="/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME</a>) を返します。</p>
+{{domxref("File")}} オブジェクトによって表されるファイルのメディアタイプ ([MIME](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js notranslate">var name = <var>file</var>.type;</pre>
+```js
+var name = file.type;
+```
 
-<h2 id="Value" name="Value">値</h2>
+## 値
 
-<p>ファイルのタイプを示すメディアタイプ (MIME) を含む文字列。たとえば、 PNG 画像の場合は "image/png" です。</p>
+ファイルのタイプを示すメディアタイプ (MIME) を含む文字列。たとえば、 PNG 画像の場合は "image/png" です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: html notranslate">&lt;input type="file" multiple onchange="showType(this)"&gt;
-</pre>
+```html
+<input type="file" multiple onchange="showType(this)">
+```
 
-<pre class="brush: js notranslate">function showType(fileInput) {
+```js
+function showType(fileInput) {
   var files = fileInput.files;
 
-  for (var i = 0; i &lt; files.length; i++) {
+  for (var i = 0; i < files.length; i++) {
     var name = files[i].name;
     var type = files[i].type;
     alert("Filename: " + name + " , Type: " + type);
   }
-}</pre>
+}
+```
 
-<p><strong>メモ:</strong> 現在の実装に基づけば、ブラウザーは実際にファイルのバイトストリームを読み取ってメディアタイプを判断している訳ではありません。ファイルの拡張子に基づいて推測します。 PNG 画像ファイルを .txt に改名すると "<em>text/plain</em>" となり、"<em>image/png</em>" とはなりません。さらに <code>file.type</code> は一般的に、画像、 HTML 文書、音声、動画などの一般的なファイルタイプに対してのみ信頼できます。一般的ではないファイルの拡張子に対しては、空の文字列を返します。クライアントの構成 (Windows レジストリなど) によっては、一般的なタイプの場合でも予期しない値が発生することがあります。<strong>開発者は、このプロパティを唯一の検証方法として信頼しないことをお勧めします。</strong></p>
+> **Note:** 現在の実装に基づくと、ブラウザーは実際にファイルのバイトストリームを読み取ってメディアタイプを判断している訳ではありません。ファイルの拡張子に基づいて推測します。 PNG 画像ファイルを .txt に改名すると "_text/plain_" となり、"_image/png_" とはなりません。さらに `file.type` は一般的に、画像、 HTML 文書、音声、動画などの一般的なファイルタイプに対してのみ信頼できます。一般的ではないファイルの拡張子に対しては、空の文字列を返します。クライアントの構成 (Windows レジストリーなど) によっては、一般的なタイプの場合でも予期しない値が発生することがあります。**開発者は、このプロパティを唯一の検証方法として信頼しないことをお勧めします。**
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File API', '#dfn-type', 'type')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.File.type")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/File/Using_files_from_web_applications">Web アプリケーションからのファイルの使用</a></li>
- <li>ブログ記事: <a href="https://textslashplain.com/2018/07/26/be-skeptical-of-client-reported-mime-content-types/">Be skeptical of client-reported MIME types</a></li>
-</ul>
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+- ブログ記事: [Be skeptical of client-reported MIME types](https://textslashplain.com/2018/07/26/be-skeptical-of-client-reported-mime-content-types/)
