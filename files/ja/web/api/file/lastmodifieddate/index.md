@@ -3,83 +3,77 @@ title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
 tags:
   - API
+  - 非推奨
   - File
   - File API
-  - lastModifiedDate
   - ファイル
   - プロパティ
-  - リファレンス
   - 読み取り専用
-  - 非推奨
+  - リファレンス
+  - lastModifiedDate
+browser-compat: api.File.lastModifiedDate
 translation_of: Web/API/File/lastModifiedDate
 ---
-<div>
-<p>{{APIRef("File API") }} {{deprecated_header}}</p>
+{{APIRef("File API") }} {{deprecated_header}}
 
-<p><code><strong>File.lastModifiedDate</strong></code><strong> </strong>読み取り専用プロパティは、ファイルの最終更新日を返します。最終更新日がわからないファイルは、現在の日付を返します。</p>
+**`File.lastModifiedDate`** 読み取り専用プロパティは、ファイルの最終更新日を返します。最終更新日がわからないファイルは、現在の日付を返します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="line-numbers  language-html notranslate"><code class="language-html">var time = instanceOfFile.lastModifiedDate</code></pre>
+```js
+var time = instanceOfFile.lastModifiedDate
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>ファイルが最後に変更された日時を示す <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> オブジェクトです。</p>
+[`Date`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) オブジェクトで、ファイルが最後に変更された日時を表します。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush:js notranslate">var fileInput = document.getElementById("myfileinput");
-// fileInput は HTMLInputElement オブジェクトを参照するものとする: &lt;input type="file" multiple id="myfileinput"&gt;
+```js
+// fileInput は HTMLInputElement である <input type="file" multiple id="myfileinput">
+var fileInput = document.getElementById("myfileinput");
 
+// files は (NodeList に似た) FileList オブジェクト
 var files = fileInput.files;
-// files は (NodeList に似た) FileList オブジェクトを参照
 
-for (var i = 0; i &lt; files.length; i++) {
-  alert(
-    files[i].name +
-    " (最終更新日:  " +
-    files[i].lastModifiedDate +
-    ")"
-  );
+for (var i = 0; i < files.length; i++) {
+  alert(files[i].name + " の最終更新日は  " + files[i].lastModifiedDate);
 }
-</pre>
+```
 
-<h2 id="短縮された時間精度">短縮された時間精度</h2>
+## 時間の精度の低下
 
-<p>タイミング攻撃やフィンガープリンティングに対する保護機能を提供するため、<code>someFile.lastModifiedDate.getTime()</code> の精度がブラウザの設定に応じて丸められることがあります。</p>
+タイミング攻撃やフィンガープリンティングに対する保護機能を提供するために、 `someFile.lastModifiedDate.getTime()` の精度がブラウザーの設定に応じて丸められることがあります。
 
-<p>Firefox では、<code>privacy.reduceTimerPrecision</code> 設定はデフォルトで有効になっており、Firefox 59 ではデフォルトで 20 us に設定されています。60 で 2 ms になります。</p>
+Firefox では、`privacy.reduceTimerPrecision` 設定は既定で有効になっており、 Firefox 59 では既定で 20 us に設定されています。60 で 2 ms になります。
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="comment token">// reduced time precision (2ms) in Firefox 60</span>
-someFile<span class="punctuation token">.</span>lastModifiedDate<span class="punctuation token">.</span><span class="function token">getTime</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// 1519211809934</span>
-<span class="comment token">// 1519211810362</span>
-<span class="comment token">// 1519211811670</span>
-<span class="comment token">// ...</span>
+```js
+// Firefox 60 での時間の制度の低下 (2ms)
+someFile.lastModifiedDate.getTime();
+// 1519211809934
+// 1519211810362
+// 1519211811670
+// ...
 
+// `privacy.resistFingerprinting` が有効な場合の時間の制度の低下
+someFile.lastModifiedDate.getTime();
+// 1519129853500
+// 1519129858900
+// 1519129864400
+// ...
+```
 
-<span class="comment token">// reduced time precision with `privacy.resistFingerprinting` enabled</span>
-someFile<span class="punctuation token">.</span>lastModifiedDate<span class="punctuation token">.</span><span class="function token">getTime</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// 1519129853500</span>
-<span class="comment token">// 1519129858900</span>
-<span class="comment token">// 1519129864400</span>
-<span class="comment token">// ...</span></code></pre>
+Firefox では、`privacy.resistFingerprinting` を有効にすることもできます。精度は 100ms か `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` のいずれか大きい方の値になります。
 
-<p>Firefox では、<code>privacy.resistFingerprinting</code> を有効にすることもできます。精度は 100 ms か <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code> のいずれか大きい方の値になります。</p>
+## 仕様書
 
-<h2 id="仕様">仕様</h2>
+_File API 仕様の初期のドラフトにありますが、このプロパティは削除されており、現在は非標準です。代わりに{{domxref("File.lastModified")}} を使用してください。_
 
-<p><em>File API 仕様の初期のドラフトにありますが、このプロパティは削除されており、現在は非標準です。代わりに{{domxref("File.lastModified")}} を使用してください。</em></p>
+## ブラウザーの互換性
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+{{Compat}}
 
-<div>
-<p>{{Compat("api.File.lastModifiedDate")}}</p>
-</div>
+## 関連情報
 
-<h2 id="あわせて参照">あわせて参照</h2>
-
-<ul>
- <li>{{domxref("File")}}</li>
-</ul>
-</div>
+- {{domxref("File")}}
