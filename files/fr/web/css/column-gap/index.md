@@ -1,15 +1,12 @@
 ---
 title: column-gap (grid-column-gap)
 slug: Web/CSS/column-gap
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/column-gap
+browser-compat: css.properties.column-gap
 ---
 {{CSSRef}}
 
-La propriété **`column-gap`** permet de définir la taille des espaces ({{glossary("gutters", "gouttières")}}) entre les colonnes d'un élément.
+La propriété **`column-gap`** permet de définir la taille des espaces ([gouttières](/fr/docs/Glossary/Gutters)) entre les colonnes d'un élément.
 
 {{EmbedInteractiveExample("pages/css/column-gap.html")}}
 
@@ -41,12 +38,16 @@ column-gap: unset;
 
 - `normal`
   - : Un mot-clé qui indique qu'on souhaite utiliser l'espacement par défaut créé par le navigateur. Pour les dispositions en colonnes, cette valeur correspond à `1em`, sinon elle correspond à `0`.
-- {{CSSxRef("&lt;length&gt;")}}
-  - : Une valeur de longueur (type {{CSSxRef("&lt;length&gt;")}}) qui définit la taille de l'espace entre les colonnes. Cette valeur peut être nulle mais ne doit pas être négative.
-- {{CSSxRef("&lt;percentage&gt;")}}
-  - : Une valeur de pourcentage (type {{CSSxRef("&lt;percentage&gt;")}}) qui définit la taille de l'espace entre les colonnes. Cette valeur peut être nulle mais ne doit pas être négative.
+- [`<length>`](/fr/docs/Web/CSS/length)
+  - : Une valeur de longueur (type [`<length>`](/fr/docs/Web/CSS/length)) qui définit la taille de l'espace entre les colonnes. Cette valeur peut être nulle mais ne doit pas être négative.
+- [`<percentage>`](/fr/docs/Web/CSS/percentage)
+  - : Une valeur de pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) qui définit la taille de l'espace entre les colonnes. Cette valeur peut être nulle mais ne doit pas être négative.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{cssinfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
@@ -82,7 +83,7 @@ column-gap: unset;
 
 #### Résultat
 
-{{EmbedLiveSample("Disposition_flexible","auto","120px")}}
+{{EmbedLiveSample("","auto","130px")}}
 
 ### Disposition en grille
 
@@ -115,7 +116,7 @@ column-gap: unset;
 
 #### Résultat
 
-{{EmbedLiveSample("Disposition_en_grille", "auto", "120px")}}
+{{EmbedLiveSample("","auto", "130px")}}
 
 ### Disposition multi-colonnes
 
@@ -140,13 +141,11 @@ column-gap: unset;
 
 #### Résultat
 
-{{EmbedLiveSample("Disposition_en_colonnes", "auto", "120px")}}
+{{EmbedLiveSample("", "auto", "130px")}}
 
 ## Spécifications
 
 {{Specifications("css.properties.column-gap.grid_context")}}
-
-{{cssinfo}}
 
 ## Compatibilité des navigateurs
 
@@ -154,6 +153,6 @@ column-gap: unset;
 
 ## Voir aussi
 
-- Les autres propriétés relatives aux gouttières : {{CSSxRef("row-gap")}}, {{CSSxRef("gap")}}
-- Guide sur les grilles : _[Les concepts de base des grilles CSS : les gouttières](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#les_gouttières)_
-- Guide sur la disposition multi-colonnes : _[Mettre en forme les colonnes](/fr/docs/Web/CSS/CSS_Columns/Styling_Columns)_
+- Les autres propriétés relatives aux gouttières&nbsp;: [`row-gap`](/fr/docs/Web/CSS/row-gap), [`gap`](/fr/docs/Web/CSS/gap)
+- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#les_gouttières)_
+- Guide sur la disposition multi-colonnes&nbsp;: _[Mettre en forme les colonnes](/fr/docs/Web/CSS/CSS_Columns/Styling_Columns)_

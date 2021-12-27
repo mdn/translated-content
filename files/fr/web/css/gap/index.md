@@ -2,10 +2,11 @@
 title: gap (grid-gap)
 slug: Web/CSS/gap
 translation_of: Web/CSS/gap
+browser-compat: css.properties.gap
 ---
 {{CSSRef}}
 
-La propriété **`gap`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) pour {{CSSxRef("row-gap")}} et {{CSSxRef("column-gap")}} qui permet de définir les espaces (les {{glossary("gutters", "gouttières")}}) entre les lignes et entre les colonnes d'une grille.
+La propriété **`gap`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) pour [`row-gap`](/fr/docs/Web/CSS/row-gap) et [`column-gap`](/fr/docs/Web/CSS/column-gap) qui permet de définir les espaces (les [gouttières](/fr/docs/Glossary/Gutters)) entre les lignes et entre les colonnes d'une grille.
 
 {{EmbedInteractiveExample("pages/css/gap.html")}}
 
@@ -52,12 +53,16 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 ### Valeurs
 
-- {{CSSxRef("&lt;length&gt;")}}
+- [`<length>`](/fr/docs/Web/CSS/length)
   - : La largeur de l'espace entre les pistes de grille.
-- {{CSSxRef("&lt;percentage&gt;")}}
+- [`<percentage>`](/fr/docs/Web/CSS/percentage)
   - : La largeur de l'espace entre les pistes de grille en fonction de la taille de l'élément englobant.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{cssinfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
@@ -100,7 +105,7 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 #### Résultat
 
-{{EmbedLiveSample("Disposition_flexible", "auto", "120px")}}
+{{EmbedLiveSample("", "auto", "230px")}}
 
 ### Disposition en grille
 
@@ -144,7 +149,7 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 #### Résultat
 
-{{EmbedLiveSample("Grilles_CSS", "auto", "120px")}}
+{{EmbedLiveSample("", "auto", "230px")}}
 
 ### Disposition multi-colonnes
 
@@ -169,13 +174,11 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 #### Résultat
 
-{{EmbedLiveSample("Multi-colonnes", "auto", "120px")}}
+{{EmbedLiveSample("", "auto", "120px")}}
 
 ## Spécifications
 
 {{Specifications("css.properties.gap.grid_context")}}
-
-{{cssinfo}}
 
 ## Compatibilité des navigateurs
 
@@ -183,5 +186,5 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 ## Voir aussi
 
-- Les autres propriétés relatives aux gouttières : {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}
-- Guide sur les grilles : _[Les concepts de base des grilles CSS : les gouttières](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#les_gouttières)_
+- Les autres propriétés relatives aux gouttières&nbsp;: [`row-gap`](/fr/docs/Web/CSS/row-gap), [`column-gap`](/fr/docs/Web/CSS/column-gap)
+- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#les_gouttières)_

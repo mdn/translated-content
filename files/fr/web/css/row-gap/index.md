@@ -1,11 +1,8 @@
 ---
 title: row-gap (grid-row-gap)
 slug: Web/CSS/row-gap
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/row-gap
+browser-compat: css.properties.row-gap
 ---
 {{CSSRef}}
 
@@ -36,10 +33,14 @@ row-gap: unset;
 
 ### Valeurs
 
-- {{CSSxRef("&lt;length-percentage&gt;")}}
-  - : La largeur de la « gouttière » placée entre les lignes de la grille. Les valeurs exprimées en pourcentages ({{CSSxRef("&lt;percentage&gt;")}}) sont relatives aux dimensions de l'élément.
+- [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage)
+  - : La largeur de la « gouttière » placée entre les lignes de la grille. Les valeurs exprimées en pourcentages ([`<percentage>`](/fr/docs/Web/CSS/percentage)) sont relatives aux dimensions de l'élément.
 
-### Syntaxe formelle
+## Formal definition
+
+{{cssinfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
@@ -81,7 +82,7 @@ row-gap: unset;
 
 #### Résultat
 
-{{EmbedLiveSample('Disposition_flexible', "auto", "120px")}}
+{{EmbedLiveSample('', "auto", "240px")}}
 
 ### Disposition en grille
 
@@ -113,13 +114,11 @@ row-gap: unset;
 
 #### Résultat
 
-{{EmbedLiveSample('Disposition_sur_une_grille', 'auto', 120)}}
+{{EmbedLiveSample('', 'auto', '240px')}}
 
 ## Spécifications
 
 {{Specifications("css.properties.row-gap.grid_context")}}
-
-{{cssinfo}}
 
 ## Compatibilité des navigateurs
 
@@ -127,5 +126,5 @@ row-gap: unset;
 
 ## Voir aussi
 
-- Les autres propriétés relatives aux gouttières : {{CSSxRef("column-gap")}}, {{CSSxRef("gap")}}
-- Guide sur les grilles : _[Les concepts de base des grilles CSS : les gouttières](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#les_gouttières)_
+- Les autres propriétés relatives aux gouttières&nbsp;: [`column-gap`](/fr/docs/Web/CSS/column-gap), [`gap`](/fr/docs/Web/CSS/gap)
+- Guide sur les grilles&nbsp;: _[Les concepts de base des grilles CSS&nbsp;: les gouttières](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#les_gouttières)_
