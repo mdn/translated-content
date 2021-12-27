@@ -4,94 +4,70 @@ slug: Web/API/File
 tags:
   - API
   - File API
-  - Interface
-  - Reference
-  - Web
+  - インターフェイス
+  - リファレンス
+  - ウェブ
+browser-compat: api.File
 translation_of: Web/API/File
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>File</code></strong> インターフェイスは、ファイルについての情報を提供したり、ウェブページ内の JavaScript からその内容にアクセスできるようにしたりします。</p>
+**`File`** インターフェイスは、ファイルについての情報を提供したり、ウェブページ内の JavaScript からその内容にアクセスできるようにしたりします。
 
-<p><code>File</code> オブジェクトは通常、 {{HTMLElement("input")}} 要素を使用してファイルを選択した結果として返される {{DOMxRef("FileList")}} オブジェクト、ドラッグ＆ドロップ操作の {{DOMxRef("DataTransfer")}} オブジェクト、または {{DOMxRef("HTMLCanvasElement")}} 上の <code>mozGetAsFile()</code> API から取得します。</p>
+`File` オブジェクトは通常、 {{HTMLElement("input")}} 要素を使用してファイルを選択した結果として返される {{DOMxRef("FileList")}} オブジェクト、ドラッグ＆ドロップ操作の {{DOMxRef("DataTransfer")}} オブジェクト、または {{DOMxRef("HTMLCanvasElement")}} 上の `mozGetAsFile()` API から取得します。
 
-<p><code>File</code> オブジェクトは特別な種類の {{domxref("Blob")}} オブジェクトであり、 Blob が利用できる場面ではどこでも利用できます。特に、{{DOMxRef("FileReader")}}、{{DOMxRef("URL.createObjectURL()")}}、{{DOMxRef("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}、{{DOMxRef("XMLHttpRequest", "", "send()")}} は、<code>Blob</code> と <code>File</code> の両方を受け付けます。</p>
+`File` オブジェクトは特別な種類の {{DOMxRef("Blob")}} オブジェクトであり、 Blob が利用できる場面ではどこでも利用できます。特に、{{DOMxRef("FileReader")}}、{{DOMxRef("URL.createObjectURL()")}}、{{DOMxRef("createImageBitmap()")}}、{{DOMxRef("XMLHttpRequest", "", "send()")}} は、`Blob` と `File` の両方を受け付けます。
 
-<p>詳しい情報や例は、<a href="/ja/docs/Web/API/File/Using_files_from_web_applications">ウェブアプリケーションからのファイルの使用</a> を参照してください。</p>
+詳しい情報や例は、[ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications) を参照してください。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+## コンストラクター
 
-<dl>
- <dt>{{DOMxRef("File.File", "File()")}}</dt>
- <dd>新しく構築された <code>File</code> オブジェクトを返します。</dd>
-</dl>
+- {{DOMxRef("File.File", "File()")}}
+  - : 新しく構築された `File` オブジェクトを返します。
 
-<h2 id="Instance_properties" name="Instance_properties">インスタンスプロパティ</h2>
+## インスタンスプロパティ
 
-<dl>
- <dt>{{DOMxRef("File.prototype.lastModified")}} {{ReadOnlyInline}}</dt>
- <dd>ファイルの最終更新時刻を、 UNIX 元期 (1970年1月1日深夜) からの経過ミリ秒数で返します。</dd>
- <dt>{{DOMxRef("File.prototype.lastModifiedDate")}} {{Deprecated_Inline}} {{ReadOnlyInline}}</dt>
- <dd><code>File</code> オブジェクトが参照しているファイルの最終更新時刻の {{JSxRef("Date")}} を返します。</dd>
- <dt>{{DOMxRef("File.prototype.name")}}{{ReadOnlyInline}}</dt>
- <dd><code>File</code> オブジェクトが参照しているファイルの名前を返します。</dd>
- <dt>{{DOMxRef("File.prototype.webkitRelativePath")}} {{Non-standard_Inline}} {{ReadOnlyInline}}</dt>
- <dd>{{DOMxRef("File")}} の URL の相対パスを返します。</dd>
-</dl>
+- {{DOMxRef("File.prototype.lastModified")}} {{ReadOnlyInline}}
+  - : ファイルの最終更新時刻を、 UNIX 元期 (1970 年 1 月 1 日深夜) からの経過ミリ秒数で返します。
+- {{DOMxRef("File.prototype.lastModifiedDate")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+  - : `File` オブジェクトが参照しているファイルの最終更新時刻の {{JSxRef("Date")}} を返します。
+- {{DOMxRef("File.prototype.name")}}{{ReadOnlyInline}}
+  - : `File` オブジェクトが参照しているファイルの名前を返します。
+- {{DOMxRef("File.prototype.webkitRelativePath")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
+  - : {{DOMxRef("File")}} の URL の相対パスを返します。
 
-<p><code>File</code> は {{DOMxRef("Blob")}} を実装しているので、以下のようなプロパティも利用できます。</p>
+`File` は {{DOMxRef("Blob")}} を実装しているので、以下のようなプロパティも利用できます。
 
-<dl>
- <dt>{{DOMxRef("File.prototype.size")}} {{ReadOnlyInline}}</dt>
- <dd>ファイルのサイズをバイト単位で返します。</dd>
- <dt>{{DOMxRef("File.prototype.type")}} {{ReadOnlyInline}}</dt>
- <dd>ファイルの <a href="/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME</a> タイプを返します。</dd>
-</dl>
+- {{DOMxRef("File.prototype.size")}} {{ReadOnlyInline}}
+  - : ファイルのサイズをバイト単位で返します。
+- {{DOMxRef("File.prototype.type")}} {{ReadOnlyInline}}
+  - : ファイルの [MIME](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types) タイプを返します。
 
-<h2 id="Instance_methods" name="Instance_methods">インスタンスメソッド</h2>
+## インスタンスメソッド
 
-<p><em><code>File</code> インターフェイスはメソッドを定義せず、{{DOMxRef("Blob")}} インターフェイスからメソッドを継承しています。</em></p>
+_`File` インターフェイスはメソッドを定義せず、{{DOMxRef("Blob")}} インターフェイスからメソッドを継承しています。_
 
-<dl>
- <dt>{{DOMxRef("Blob.prototype.slice()", "Blob.prototype.slice([start[, end[, contentType]]])")}}</dt>
- <dd>ソース <code>Blob</code> の指定したバイト数の範囲のデータを含む新しい <code>Blob</code> オブジェクトを返します。</dd>
- <dt>{{DOMxRef("Blob.prototype.stream()")}}</dt>
- <dd><code>File</code> を {{DOMxRef("ReadableStream")}} に変換し、<code>File</code> の内容を読み込めるようにします。</dd>
- <dt>{{DOMxRef("Blob.prototype.text()")}}</dt>
- <dd><code>File</code> をストリームに変換し、最後まで読み込みます。これは、{{DOMxRef("USVString")}} (テキスト) で解決するプロミスを返します。</dd>
- <dt>{{DOMxRef("Blob.prototype.arrayBuffer()")}}</dt>
- <dd><code>File</code> をストリームに変換し、最後まで読み込みます。 {{DOMxRef("ArrayBuffer")}} で解決するプロミスを返します。</dd>
-</dl>
+- {{DOMxRef("Blob.prototype.slice()", "Blob.prototype.slice([start[, end[, contentType]]])")}}
+  - : ソース `Blob` の指定したバイト数の範囲のデータを含む新しい `Blob` オブジェクトを返します。
+- {{DOMxRef("Blob.prototype.stream()")}}
+  - : `File` を {{DOMxRef("ReadableStream")}} に変換し、`File` の内容を読み込めるようにします。
+- {{DOMxRef("Blob.prototype.text()")}}
+  - : `File` をストリームに変換し、最後まで読み込みます。これは、{{DOMxRef("USVString")}} (テキスト) で解決するプロミスを返します。
+- {{DOMxRef("Blob.prototype.arrayBuffer()")}}
+  - : `File` をストリームに変換し、最後まで読み込みます。 {{jsxref("ArrayBuffer")}} で解決するプロミスを返します。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File API')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.File")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/File/Using_files_from_web_applications">ウェブアプリケーションからのファイルの使用</a></li>
- <li>{{domxref("FileReader")}}</li>
- <li><a href="/ja/docs/Extensions/Using_the_DOM_File_API_in_chrome_code">DOM File API を chrome code で使う</a> (Firefox アドオンのような Gecko で実行される特権コード向け)</li>
-</ul>
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+- {{DOMxRef("FileReader")}}
+- [DOM の File API をクロームコードで使う](/ja/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) (Firefox アドオンのような Gecko で実行される特権コード向け)
