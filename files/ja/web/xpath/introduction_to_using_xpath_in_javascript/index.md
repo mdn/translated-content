@@ -359,11 +359,11 @@ var thisitemEl = thislevel.iterateNext();
 ## 関連情報
 
 - [XPath](/ja/docs/Web/XPath)
-- [XML Path Language](http://www.xml.com/pub/a/2000/08/holman/index.html?page=2#xpath-info) from _[What is XSLT?](http://www.xml.com/pub/a/2000/08/holman/)_ by G. Ken Holman
+- [XML Path Language](https://www.xml.com/pub/a/2000/08/holman/index.html?page=2#xpath-info) from _[What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/)_ by G. Ken Holman
 
 ## 原著情報
 
-- 原文 [Mozilla XPath Tutorial](http://www-xray.ast.cam.ac.uk/~jgraham/mozilla/xpath-tutorial.html) に基づいて作成されています。
+- 原文 [Mozilla XPath Tutorial](https://www-xray.ast.cam.ac.uk/~jgraham/mozilla/xpath-tutorial.html) に基づいて作成されています。
 - 原文の著者: James Graham
 - その他の貢献者: James Thompson
 - 最終更新日: 2006 年 3 月 25 日
