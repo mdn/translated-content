@@ -5,132 +5,96 @@ tags:
   - API
   - HTML DOM
   - HTMLVideoElement
-  - Interface
-  - Reference
+  - インターフェイス
+  - リファレンス
   - Video
+browser-compat: api.HTMLVideoElement
 translation_of: Web/API/HTMLVideoElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLVideoElement</code></strong> インターフェースは、ビデオオブジェクトを操作するための特別なプロパティとメソッドを提供します。また、{{domxref("HTMLMediaElement")}} と {{domxref("HTMLElement")}} のプロパティとメソッドを継承します。</p>
+**`HTMLVideoElement`** インターフェイスは、動画ブジェクトを操作するための特別なプロパティとメソッドを提供します。また、 {{domxref("HTMLMediaElement")}} と {{domxref("HTMLElement")}} のプロパティとメソッドを継承しています。
 
-<p><a href="/ja/docs/Web/Media/Formats">サポートされているメディアフォーマット</a>のリストは、ブラウザによって異なります。関連するすべてのブラウザがサポートする単一のフォーマットで動画を提供するか、またはサポートする必要のあるすべてのブラウザがカバーするように、複数の動画ソースを十分に異なるフォーマットで提供する必要があります。</p>
+[対応しているメディア形式](/en-US/docs/Web/Media/Formats)のリストは、ブラウザーによって異なります。動画を提供する際には、関連するすべてのブラウザーが対応している単一の形式で提供するか、対応する必要のあるすべてのブラウザーをカバーするように、異なる形式で複数の動画ソースを提供するかしてください。
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## プロパティ
 
-<p><em>その先祖のインターフェースである {{domxref("HTMLMediaElement")}} と {{domxref("HTMLElement")}} からプロパティを継承します。</em></p>
+_祖先インターフェイスである {{domxref("HTMLMediaElement")}} および {{domxref("HTMLElement")}} からプロパティを継承しています。
 
-<dl>
- <dt>{{domxref("HTMLVideoElement.height")}}</dt>
- <dd>{{htmlattrxref("height", "video")}} を反映した {{domxref("DOMString")}} です。表示領域の高さを CSS ピクセルで指定する HTML 属性です。</dd>
- <dt>{{domxref("HTMLVideoElement.poster")}}</dt>
- <dd>{{htmlattrxref("poster", "video")}} を反映した {{domxref("DOMString")}} です。HTML 属性で、動画データがないときに表示する画像を指定します。</dd>
- <dt>{{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}</dt>
- <dd>リソースの固有の高さを示す符号なし整数値をCSSピクセル、または、まだ利用可能なメディアがない場合は 0 を返します。</dd>
- <dt>{{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}</dt>
- <dd>リソースの本質的な幅を示す符号なし整数値をCSSピクセル、または、まだ利用可能なメディアがない場合は 0 を返します。</dd>
- <dt>{{domxref("HTMLVideoElement.width")}}</dt>
- <dd>{{htmlattrxref("width", "video")}} を反映した{{domxref("DOMString")}} です。表示領域の幅を CSS ピクセルで指定する HTML 属性です。</dd>
- <dt>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</dt>
- <dd><code>autoPictureInPicture</code> 属性は、ユーザがタブやアプリケーションを切り替えると、自動的にビデオ要素のピクチャ・イン・ピクチャモードに入ったり、抜けたりします。</dd>
- <dt>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</dt>
- <dd><code>disablePictureInPicture</code> プロパティは、ユーザーにピクチャ・イン・ピクチャを提案しないか、または自動的に要求するように、ユーザーエージェントにヒントを与えます。</dd>
-</dl>
+- {{domxref("HTMLVideoElement.height")}}
+  - : {{domxref("DOMString")}} で、 HTML の {{htmlattrxref("height", "video")}} 属性を反映し、表示領域の高さを CSS ピクセル数で指定します。
+- {{domxref("HTMLVideoElement.poster")}}
+  - : {{domxref("DOMString")}} で、 HTML の {{htmlattrxref("poster", "video")}} 属性を反映し、動画データが利用できないときに表示する画像を指定します。
+- {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
+  - : 符号なし整数値で、リソースの内在的な高さを CSS ピクセル数で示す値を返します。メディアが利用できない場合は 0 を返します。
+- {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
+  - : 符号なし整数値で、リソースの内在的な幅を CSS ピクセル数で示す値を返します。メディアが利用できない場合は 0 を返します。
+- {{domxref("HTMLVideoElement.width")}}
+  - : {{domxref("DOMString")}} で、 HTML の {{htmlattrxref("width", "video")}} 属性を反映し、表示領域の幅を CSS ピクセル数で指定します。
+- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
+  - : `autoPictureInPicture` 属性は、ユーザーがタブやアプリケーションを切り替えると、自動的に video 要素のピクチャインピクチャモードに入ったり抜けたりします。
+- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
+  - : `disablePictureInPicture` プロパティは、ユーザーにピクチャインピクチャを提案しないようにするか、または自動的に要求するか、ユーザーエージェントにヒントを与えます。
 
-<h3 id="Gecko-specific_properties">Gecko-specific properties</h3>
+### Gecko 固有のプロパティ
 
-<dl>
- <dt>{{domxref("HTMLVideoElement.mozParsedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
- <dd>メディアリソースから解析されたビデオフレーム数を <code>unsigned long</code> で返します。</dd>
- <dt>{{domxref("HTMLVideoElement.mozDecodedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
- <dd>画像にデコードされたパースされたビデオフレームの数を <code>unsigned long</code> で返します。</dd>
- <dt>{{domxref("HTMLVideoElement.mozPresentedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
- <dd>ペイントのためにレンダリングパイプラインに提示されたデコードされたフレームの数を <code>unsigned long</code> で返します。</dd>
- <dt>{{domxref("HTMLVideoElement.mozPaintedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
- <dd>画面上に描画されたフレームの数を <code>unsigned long</code> で返します。</dd>
- <dt>{{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
- <dd>最後にペイントされたビデオフレームの時間を<code>秒</code>単位で返します。</dd>
- <dt>{{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
- <dd>動画に音声があるかどうかを示す {{JSxRef("Boolean", "真偽値")}} を返します。</dd>
-</dl>
+- {{domxref("HTMLVideoElement.mozParsedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+  - : `unsigned long` で、メディアリソースから解析された動画のフレーム数を返します。
+- {{domxref("HTMLVideoElement.mozDecodedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}} {{deprecated_inline}}
+  - : `unsigned long` で、すでに画像にデコードされた、解析された動画のフレーム数を返します。
+- {{domxref("HTMLVideoElement.mozPresentedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+  - : `unsigned long` で、描画のためにレンダリングパイプラインに提示されたデコード済みのフレーム数を返します。
+- {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+  - : `unsigned long` で、画面上に描画されたフレームの数を返します。
+- {{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+  - : `double` で、最後にペイントされたビデオフレームの時刻をを秒単位で返します。
+- {{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
+  - : 論理値で、動画に音声があるかどうかを示す値を返します。
 
-<h3 id="Microsoft_Extensions">Microsoft Extensions</h3>
+### Microsoft 拡張
 
-<dl>
- <dt>{{DOMxRef("HTMLVideoElement.msFrameStep()")}} {{Non-standard_Inline}}</dt>
- <dd>ビデオを1フレーム前または1フレーム後ろにステップさせます。</dd>
- <dt>{{DOMxRef("HTMLVideoElement.msHorizontalMirror")}} {{Non-standard_Inline}}</dt>
- <dd>ディスプレイ上で動画要素を水平方向に反転させるかどうかを取得または設定します。</dd>
- <dt>{{DOMxRef("HTMLVideoElement.msInsertVideoEffect()")}} {{Non-standard_Inline}}</dt>
- <dd>指定されたビデオエフェクトをメディアパイプラインに挿入します。</dd>
- <dt>{{DOMxRef("HTMLVideoElement.msIsLayoutOptimalForPlayback")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
- <dd>動画をより効率的にレンダリングできるかどうかを示します。</dd>
- <dt>{{DOMxRef("HTMLVideoElement.msIsStereo3D")}} {{Non-standard_Inline}}{{ReadOnlyInline}}</dt>
- <dd>読み込まれたビデオソースがステレオ 3D であるとシステムが判断するかどうかを決定します。true に設定された値は、ソースがステレオ 3D であることを示します。</dd>
- <dt>{{DOMxRef("HTMLVideoElement.msZoom")}} {{Non-standard_Inline}}</dt>
- <dd>ビデオフレームをビデオディスプレイに合わせてトリミングするかどうかを制御します。</dd>
-</dl>
+- {{DOMxRef("HTMLVideoElement.msFrameStep()")}} {{Non-standard_Inline}}
+  - : 動画を 1 フレーム前、または 1 フレーム後にコマ送りします。
+- {{DOMxRef("HTMLVideoElement.msHorizontalMirror")}} {{Non-standard_Inline}}
+  - : 画面上で video 要素を水平方向に反転させるかどうかを取得または設定します。
+- {{DOMxRef("HTMLVideoElement.msInsertVideoEffect()")}} {{Non-standard_Inline}}
+  - : 指定された動画エフェクトをメディアパイプラインに挿入します。
+- {{DOMxRef("HTMLVideoElement.msIsLayoutOptimalForPlayback")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
+  - : 動画をより効率的にレンダリングできるかどうかを示します。
+- {{DOMxRef("HTMLVideoElement.msIsStereo3D")}} {{Non-standard_Inline}}{{ReadOnlyInline}}
+  - : 読み込まれた動画ソースがステレオ 3D であるとシステムが判断するかどうかを決定します。true に設定されていると、ソースがステレオ 3D であることを示します。
+- {{DOMxRef("HTMLVideoElement.msZoom")}} {{Non-standard_Inline}}
+  - : 動画フレームを動画の画面に合わせてトリミングするかどうかを制御します。
 
-<h2 id="Methods">Methods</h2>
+## メソッド
 
-<p><em>親である {{domxref("HTMLMediaElement")}} とその先祖である {{domxref("HTMLElement")}} からメソッドを継承します。</em></p>
+_親である {{domxref("HTMLMediaElement")}} とその祖先である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
-<dl>
- <dt>{{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} {{experimental_inline}}</dt>
- <dd>現在の再生メトリクスを含む {{domxref("VideoPlaybackQuality")}} オブジェクトを返します。この情報には、ドロップされたフレーム数や破損したフレーム数、総フレーム数などが含まれます。</dd>
- <dt>{{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}</dt>
- <dd>ユーザーエージェントがピクチャーインピクチャーモードに入るようにビデオを作成することをリクエストします。</dd>
-</dl>
+- {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} {{experimental_inline}}
+  - : 現在の再生メトリクスを含む {{domxref("VideoPlaybackQuality")}} オブジェクトを返します。この情報には、ドロップされたフレーム数や破損したフレーム数、総フレーム数などが含まれます。
+- {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
+  - : ユーザーエージェントが動画をピクチャーインピクチャーモードにすることをリクエストします。
 
-<h2 id="Event_Handlers">Event Handlers</h2>
+## イベント
 
-<p><em>親である {{domxref("HTMLMediaElement")}} とその先祖である {{domxref("HTMLElement")}} からイベントハンドラを継承します。</em></p>
+_親である {{domxref("HTMLMediaElement")}} およびその祖先である {{domxref("HTMLElement")}} からイベントを継承しています。_ これらのイベントを待ち受けするには、 [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用するか、イベントリスナーをこのインターフェイスの `oneventname` に代入するかしてください。
 
-<dl>
- <dt>{{DOMxRef("HTMLVideoElement.onenterpictureinpicture")}}</dt>
- <dd>動画がピクチャインピクチャモードになったときに {{DOMxRef("HTMLVideoElement")}} に送られる {{Event("enterpictureinpicture")}} イベントのイベントハンドラです。</dd>
- <dt>{{Event("leavepictureinpicture")}}</dt>
- <dd>文書がピクチャインピクチャモードを終了したときに {{DOMxRef("HTMLVideoElement")}} に送信される {{Event("leavepictureinpicture")}} イベントのイベントハンドラです。このハンドラは、{{DOMxRef("PictureInPictureWindow")}} 全体が提示されたときにのみ呼び出されます。</dd>
-</dl>
+- {{DOMxRef("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}
+  - : ピクチャインピクチャモードになったときに {{DOMxRef("HTMLVideoElement")}} に送信されます。対応するイベントハンドラーは {{DOMxRef("HTMLVideoElement.onenterpictureinpicture")}} です。
+- {{DOMxRef("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
+  - : ピクチャインピクチャモードになったときに {{DOMxRef("HTMLVideoElement")}} に送信されます。対応するイベントハンドラーは {{DOMxRef("HTMLVideoElement.onleavepictureinpicture")}} です。
 
-<h2 id="Events">Events</h2>
+## 仕様書
 
-<p><em>親である {{domxref("HTMLMediaElement")}} およびその祖先である {{domxref("HTMLElement")}} からイベントを継承します。</em><code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>を使用するか、このインターフェイスの <code>on<em>eventname</em></code> プロパティにイベントリスナーを割り当てることで、これらのイベントをリッスンします。</p>
+{{Specifications}}
 
-<dl>
- <dt>{{Event("enterpictureinpicture")}}</dt>
- <dd>ピクチャーインピクチャーモードになったときに {{DOMxRef("HTMLVideoElement")}} に送信されます。</dd>
- <dt>{{Event("leavepictureinpicture")}}</dt>
- <dd>ピクチャーインピクチャーモードになったときに {{DOMxRef("HTMLVideoElement")}} に送信されます。</dd>
-</dl>
+## ブラウザーの互換性
 
-<h2 id="Specifications">Specifications</h2>
+{{Compat}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlvideoelement", "HTMLVideoElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## 関連情報
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat("api.HTMLVideoElement")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>このインターフェイスを実装した HTML 要素 {{HTMLElement("video")}} です</li>
- <li><a class="external" href="http://people.mozilla.org/~cpearce/paint-stats-demo.html">Demo of video paint statistics</a></li>
- <li><a href="/ja/docs/Web/Media/Formats">サポートされているメディアフォーマット</a></li>
-</ul>
+- このインターフェイスを実装している HTML 要素: {{HTMLElement("video")}}
+- [対応しているメディア形式](/ja/docs/Web/Media/Formats)
