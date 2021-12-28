@@ -1,23 +1,28 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-translation_of: Web/HTTP/Заголовки/User-Agent
+tags:
+  - HTTP
+  - Заголовки HTTP
+  - Справка
+  - User-agent
+translation_of: Web/HTTP/Headers/User-Agent
 ---
 {{HTTPSidebar}}
 
-{{Glossary("request header", "Заголовок запроса")}} **User-Agent** - это строка характеристик, которая позволяет серверам и одноранговым сетям идентифицировать приложение, операционную систему, поставщика и/или версию запрашивающего {{Glossary("user agent")}}.
+{{Glossary("request header", "Заголовок запроса")}} **User-Agent** - это строка с характеристиками, по которым сервера и сетевые узлы могут определить тип приложения, операционную систему, производителя и/или версию {{Glossary("user agent", "пользовательского агента (_user agent_ или сокращённо _UA_)")}}.
 
-> **Внимание:** Пожалуйста, ознакомьтесь с [Определением браузера с помощью user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent), чтобы понять, почему не рекомендуется обслуживание разных веб-страниц или сервисов в разных браузерах.
+> **Обратите внимание:** Показывать ту или иную страницу в зависимости от характеристик пользовательского агента — дурная практика. Почему не стоит так делать, читайте в статье «[Определение браузера по пользовательскому агенту](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent)».
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
+      <th scope="row">Тип заголовка</th>
+      <td>{{Glossary("Request header", "Заголовок запроса")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <th scope="row">{{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}</th>
+      <td>Нет</td>
     </tr>
   </tbody>
 </table>
@@ -45,16 +50,18 @@ User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <
 
 ## Строка UA в Firefox
 
-Дополнительные сведения о строках user agent на основе Firefox и Gecko смотрите в [справочнике по строкам user agent в Firefox](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox). Строка UA в Firefox разбита на 4 компонента:
+Подробные сведения о _user agent_ строках в Firefox и других браузерах, основанных на движке Gecko, вы найдёте в [справочнике](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox).
+
+Строка UA в Firefox разбита на 4 части и одну общую метку для всех:
 
 ```
 Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
 ```
 
-1. `Mozilla/5.0` — это общий маркер, который говорит о том, что браузер совместим с Mozilla. По историческим причинам почти каждый браузер сегодня его отправляет.
-2. **_platform_** описывает платформу, на которой работает браузер (Windows, Mac, Linux, Android, Mobile и т.д.), В Телефонах на {{Glossary("Firefox OS")}} платформа обозначается как `Mobile`. Обратите внимание, что **_platform_** может состоять из нескольких токенов разделенных ";" . Более подробную информацию и примеры смотрите ниже.
+1. `Mozilla/5.0` — общая метка, которая сообщает, что браузер совместим с Mozilla. По историческим причинам сегодня её отправляет почти каждый браузер.
+2. **_platform_** указывает платформу, на которой работает браузер (Windows, Mac, Linux, Android и т.д.), а так же, мобильный ли это телефон. В телефонах на {{Glossary("Firefox OS")}} указывается только `Mobile`, поскольку Firefox OS построена на веб-технологиях. Обратите внимание, **_platform_** может содержать несколько значений, разделённых `;`. Подробная информация и примеры ниже.
 3. **rv:_geckoversion_** указывает релизную версию Gecko (например, "_17.0_"). В последних браузерах **_geckoversion_** совпадает с **_firefoxversion_**.
-4. **_Gecko/geckotrail_** указывает, что браузер основан на Gecko. (На ПК **_geckotrail_** всегда является фиксированной строкой `20100101`.)
+4. **_Gecko/geckotrail_** указывает, что браузер основан на Gecko (на компьютерах **_geckotrail_** — всегда строка `20100101`).
 5. **_Firefox/firefoxversion_** обозначает, что браузером является Firefox, и указывает его версию (например, "_17.0_").
 
 ### Примеры
@@ -66,7 +73,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
 
 ## Строка UA в Chrome
 
-Строка user agent в Chrome (или браузерах на на основе движка Chromium/Blink) аналогична строке Firefox. Для совместимости добавлены строки `KHTML, like Gecko` и `Safari`.
+Строка _user agent_ в Chrome и браузерах, основанных на движке Chromium/Blink, аналогична строке Firefox. Для совместимости добавлены строки `KHTML, like Gecko` и `Safari`.
 
 ### Примеры
 
@@ -76,7 +83,7 @@ Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51
 
 ## Строка UA в Opera
 
-Браузер Opera также основан на движке Blink, поэтому он выглядит почти так же, как строка UA в Chrome, но добавляет `"OPR/<version>"`.
+Браузер Opera также основан на движке Blink, поэтому его строка _user agent_ совпадает со строкой Chrome, только в конце добавляется `"OPR/<version>"`.
 
 ### Примеры
 
@@ -84,7 +91,7 @@ Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51
 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41
 ```
 
-В старых версиях Opera на базе Presto строки выглядят так:
+В старых версиях Opera, на базе движка Presto, строки выглядят так:
 
 ```
 Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
@@ -93,7 +100,7 @@ Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1
 
 ## Строка UA в Microsoft Edge
 
-Браузер Edge также основан на движке Blink. Добавляется `"Edg/<version>"`.
+Браузер Microsoft Edge также основан на движке Blink, поэтому его строка _user agent_ совпадает со строкой Chrome, только в конце добавляется `"Edg/<version>"`.
 
 ### Примеры
 
@@ -103,7 +110,7 @@ Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
 
 ## Строка UA в Safari
 
-В этом примере строка user agent представлена в мобильной версии Safari. Она содержит слово `"Mobile"`.
+В этом примере строка _user agent_ представлена в мобильной версии Safari и содержит слово `"Mobile"`.
 
 ### Примеры
 
@@ -119,7 +126,7 @@ Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (K
 Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)
 ```
 
-## Строка UA у Поискового бота (Crawler)
+## Строка UA поискового робота
 
 ### Примеры
 
@@ -147,7 +154,7 @@ PostmanRuntime/7.26.5
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 
