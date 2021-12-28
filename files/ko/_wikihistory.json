@@ -303,12 +303,6 @@
       "enfroze"
     ]
   },
-  "Glossary/Client_hints": {
-    "modified": "2020-03-30T11:50:49.956Z",
-    "contributors": [
-      "oinochoe"
-    ]
-  },
   "Glossary/Compile": {
     "modified": "2019-10-29T10:03:26.609Z",
     "contributors": [
@@ -11342,6 +11336,12 @@
       "amorfati0310",
       "seungha-kim",
       "devcken"
+    ]
+  },
+  "Web/HTTP/Client_hints": {
+    "modified": "2020-03-30T11:50:49.956Z",
+    "contributors": [
+      "oinochoe"
     ]
   },
   "Web/HTTP/Compression": {

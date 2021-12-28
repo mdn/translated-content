@@ -208,6 +208,7 @@
 /ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Track_the_score_and_win	/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 /ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/공_움직이기	/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 /ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기	/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+/ko/docs/Glossary/Client_hints	/ko/docs/Web/HTTP/Client_hints
 /ko/docs/Glossary/Header	/ko/docs/Glossary/HTTP_header
 /ko/docs/Glossary/동적_프로그래밍_언어	/ko/docs/Glossary/Dynamic_programming_language
 /ko/docs/Glossary/배열	/ko/docs/Glossary/array
