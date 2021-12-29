@@ -3,113 +3,99 @@ title: column-span
 slug: Web/CSS/column-span
 tags:
   - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - 'recipe:css-property'
+  - CSS 段組みレイアウト
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.column-span
 translation_of: Web/CSS/column-span
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>column-span</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、値に <code>all</code> を設定した場合、段組みレイアウトで要素をすべての段にまたがらせることができます。</p>
+**`column-span`** は [CSS](/ja/docs/Web/CSS) のプロパティで、値に `all` を設定した場合、段組みレイアウトで要素をすべての段にまたがらせることができます。
 
-<div>{{EmbedInteractiveExample("pages/css/column-span.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-span.html")}}
 
-<pre class="brush:css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 column-span: none;
 column-span: all;
 
 /* グローバル値 */
 column-span: inherit;
 column-span: initial;
+column-span: revert;
 column-span: unset;
-</pre>
+```
 
-<p>複数の段にまたがる要素は、<ruby><strong>スパニング要素</strong><rp> (</rp><rt>spanning element</rt><rp>) </rp></ruby>と呼びます。</p>
+複数の段にまたがる要素は**段抜き要素** (spanning element) と呼びます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>column-span</code> プロパティは以下に挙げたキーワード値のうちの一つで指定します。</p>
+`column-span` プロパティは以下に挙げたキーワード値のうちの一つで指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>none</code></dt>
- <dd>この要素は複数の段にまたがりません。</dd>
- <dt><code>all</code></dt>
- <dd>この要素がすべての段にまたがります。この要素よりも前に現れた通常フローのコンテンツは、自動的にすべての段で均等になります。この要素は新しいブロック整形コンテキストを生成します。</dd>
-</dl>
+- `none`
+  - : この要素は複数の段にまたがりません。
+- `all`
+  - : この要素がすべての段にまたがります。この要素よりも前に現れた通常フローのコンテンツは、自動的にすべての段で均等になります。この要素は新しいブロック整形コンテキストを生成します。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Making_a_heading_span_columns" name="Making_a_heading_span_columns">段をまたぐ見出しの設定</h3>
+### 段抜きの見出しの設定
 
-<p>この例では、見出しが記事のすべての段にまたがって作成されます。</p>
+この例では、見出しが記事のすべての段にまたがって作成されます。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;article&gt;
-  &lt;h2&gt;Header spanning all of the columns&lt;/h2&gt;
-  &lt;p&gt;
+```html
+<article>
+  <h2>Header spanning all of the columns</h2>
+  <p>
      The h2 should span all the columns. The rest
      of the text should be distributed among the columns.
-  &lt;/p&gt;
-  &lt;p&gt;This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.&lt;/p&gt;
-  &lt;p&gt;This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.&lt;/p&gt;
-  &lt;p&gt;This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.&lt;/p&gt;
-  &lt;p&gt;This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.&lt;/p&gt;
-&lt;/article&gt;
-</pre>
+  </p>
+  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
+  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
+  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
+  <p>This is a bunch of text split into three columns using the CSS `columns` property. The text is equally distributed over the columns.</p>
+</article>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css notranslate">article {
+```css
+article {
   columns: 3;
 }
 
 h2 {
   column-span: all;
 }
-</pre>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Making_a_heading_span_columns', 'auto', 260)}}</p>
+{{EmbedLiveSample('Making_a_heading_span_columns', 'auto', 260)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#column-span', 'column-span')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.column-span")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/HTML/Inline_elements">インライン要素</a></li>
- <li>{{domxref("HTMLSpanElement")}} </li>
-</ul>
+- [インライン要素](/ja/docs/Web/HTML/Inline_elements)
+- {{domxref("HTMLSpanElement")}}
