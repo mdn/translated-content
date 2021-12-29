@@ -3,24 +3,28 @@ title: column-rule-color
 slug: Web/CSS/column-rule-color
 tags:
   - CSS
-  - CSS プロパティ
   - CSS 段組みレイアウト
+  - CSS プロパティ
   - HTML 色
-  - Reference
-  - 段組み
+  - リファレンス
+  - スタイル
+  - HTML のスタイル付け
+  - column-rule-color
+  - columns
+  - recipe:css-property
+browser-compat: css.properties.column-rule-color
 translation_of: Web/CSS/column-rule-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>column-rule-color</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、段組みレイアウトで段間に引かれる線の色を設定します。</p>
+**`column-rule-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の色を設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/column-rule-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-rule-color.html")}}
 
-<p class="hidden">この対話型サンプルのソースファイルは GitHub リポジトリに格納されています。対話型サンプルプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;color&gt; 値 */
+```css
+/* <color> 値 */
 column-rule-color: red;
 column-rule-color: rgb(192, 56, 78);
 column-rule-color: transparent;
@@ -29,73 +33,62 @@ column-rule-color: hsla(0, 100%, 50%, 0.6);
 /* グローバル値 */
 column-rule-color: inherit;
 column-rule-color: initial;
+column-rule-color: revert;
 column-rule-color: unset;
-</pre>
+```
 
-<p><code>column-rule-color</code> プロパティは、単一の <code>&lt;color&gt;</code> 値で指定します。</p>
+`column-rule-color` プロパティは、単一の `<color>` 値で指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>段を分割する段間罫の色です。</dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : 段を分割する段間罫の色です。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### 青い段間罫を設定
 
-<pre class="brush: html">&lt;p&gt;This is a bunch of text split into three columns.
+#### HTML
+
+```html
+<p>This is a bunch of text split into three columns.
    The `column-rule-color` property is used to change
    the color of the line that is drawn between columns.
-   Don't you think that's wonderful?&lt;/p&gt;</pre>
+   Don't you think that's wonderful?</p>
+```
 
-<h3 id="CSS">CSS</h3>
+#### CSS
 
-<pre class="brush:css">p {
+```css
+p {
   column-count: 3;
   column-rule-style: solid;
   column-rule-color: blue;
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Setting_a_blue_column_rule")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#crc', 'column-rule-color')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.column-rule-color")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{cssxref("&lt;color&gt;")}} データ型</li>
- <li>他の色に関するプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}</li>
- <li><a href="/ja/docs/Web/HTML/Applying_color">CSS を使った HTML の要素への色の適用</a></li>
-</ul>
+- {{cssxref("&lt;color&gt;")}} データ型
+- 色に関する他のプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/HTML/Applying_color)
