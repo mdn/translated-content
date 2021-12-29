@@ -3,94 +3,75 @@ title: CSS スクロールバー
 slug: Web/CSS/CSS_Scrollbars
 tags:
   - CSS
-  - CSS スクロールバー
-  - Overview
+  - ガイド
   - 概要
+  - CSS スクロールバー
 translation_of: Web/CSS/CSS_Scrollbars
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p class="summary"><span class="seoSummary"><ruby><strong>CSS スクロールバー</strong><rp> (</rp><rt>CSS Scrollbars</rt><rp>) </rp></ruby>は、2000年に Windows の IE 5.5 で導入され、廃止されたスクロールバーの色のプロパティを標準化するためのものです。</span></p>
+**CSS スクロールバー** (CSS Scrollbars) は、 2000 年に Windows の IE 5.5 で導入され、廃止されたスクロールバーの色のプロパティを標準化するためのものです。
 
-<h2 id="Basic_Example" name="Basic_Example">基本的な例</h2>
+## 基本的な例
 
-<p>この例では、緑色のトラックと紫色のつまみを持った細いスクロールバーを使用してみました。</p>
+この例では、緑色のトラックと紫色のつまみを持った細いスクロールバーを使用してみました。
 
-<div id="Example">
-<pre class="brush:css">.scroller {
+```css
+.scroller {
   width: 300px;
   height: 100px;
   overflow-y: scroll;
   scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="scroller"&gt;
+```html
+<div class="scroller">
 Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi
 welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
 Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
 tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
 Dandelion cucumber earthnut pea peanut soko zucchini.
-&lt;/div&gt;</pre>
-
-<h3 id="Result" name="Result">結果</h3>
-
-<p>{{EmbedLiveSample("Example")}}</p>
 </div>
+```
 
-<h2 id="Reference" name="Reference">リファレンス</h2>
+### 結果
 
-<h3 id="CSS_Properties" name="CSS_Properties">CSS プロパティ</h3>
+{{EmbedLiveSample("Basic_Example")}}
 
-<div class="index">
-<ul>
- <li>{{CSSxRef("scrollbar-width")}}</li>
- <li>{{CSSxRef("scrollbar-color")}}</li>
-</ul>
-</div>
+## リファレンス
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+### CSS プロパティ
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scrollbars")}}</td>
-   <td>{{Spec2("CSS Scrollbars")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+- {{CSSxRef("scrollbar-width")}}
+- {{CSSxRef("scrollbar-color")}}
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
+## 仕様書
 
-<p>スクロールバーをカスタマイズする場合は、十分なコントラストがあることと、ヒット領域がタッチ入力を使っている人が操作できるだけ大きいかどうかを考慮してください。</p>
+| 仕様書                            | 状態                               | 備考             |
+| ---------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName("CSS Scrollbars")}} | {{Spec2("CSS Scrollbars")}} | 初回定義 |
 
-<ul>
- <li><a href="http://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html">Baseline Rules for Scrollbar Usability | Adrian Roselli</a></li>
-</ul>
+## アクセシビリティの考慮
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+スクロールバーをカスタマイズする場合は、十分なコントラストがあることと、ヒット領域がタッチ入力を使っている人が操作できるだけ大きいかどうかを考慮してください。
 
-<h3 id="scrollbar-width">scrollbar-width</h3>
+- [Baseline Rules for Scrollbar Usability | Adrian Roselli](http://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
 
-<div>{{Compat("css.properties.scrollbar-width")}}</div>
+## ブラウザーの互換性
 
-<h3 id="scrollbar-color">scrollbar-color</h3>
+### scrollbar-width
 
-<div>{{Compat("css.properties.scrollbar-color")}}</div>
+{{Compat("css.properties.scrollbar-width")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+### scrollbar-color
 
-<ul>
- <li>{{CSSxRef("::-webkit-scrollbar")}}</li>
- <li>{{CSSxRef("-ms-overflow-style")}}</li>
-</ul>
+{{Compat("css.properties.scrollbar-color")}}
+
+## 関連情報
+
+- {{CSSxRef("::-webkit-scrollbar")}}
+- {{CSSxRef("-ms-overflow-style")}}
