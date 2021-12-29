@@ -61,7 +61,7 @@ Existem inúmeros repos diferentes que você pode ter que atualizar conforme voc
 
 ### Bifurcando e clonando
 
-_Bifurcar_, também conhecido como _criar um fork_, e _clonar_ são dois termos com os quais você vai se deparar frequentemente no mundo do Git:
+_Bifurcar_, geralmente mencionado como _criar um fork_ ou _forkar_, e _clonar_ são dois termos com os quais você vai se deparar frequentemente no mundo do Git:
 
 - Bifurcar significa criar sua própria cópia de um repo no GitHub.
 - Clonar significa fazer uma cópia local de um repositório para você trabalhar nela (i.e. no seu disco rígido local).
@@ -153,22 +153,22 @@ origin    git@github.com:chrisdavidmills/content.git (push)
 
 Agora que você tem seu fork local, clonado e configurado para trabalhar, há um conjunto de comandos que você deve ter o hábito de rodar antes de tentar fazer qualquer mudança nova.
 
-### Mudar para o ramo principal
+### Mudar para a branch main
 
-Cada repo tem um número diferente de ramos, que são, basicamente, versões diferentes do código base dentro do mesmo repo. A ideia é que para cada mudança no código base, faça a alteração em um ramo separado e teste lá primeiro, antes de enviar as mudanças para a cópia principal do código.
+Cada repo tem um número diferente de branches(ramos), que são, basicamente, versões diferentes do código base dentro do mesmo repo. A ideia é que para cada mudança no código base, a alteração seja feita em uma branch separada e testada lá primeiro, antes de enviar as mudanças para a cópia principal do código.
 
-O ramo principal do conteúdo do repo é chamada de "main" (pode ser chamado de outra coisa como "master" em outros repos, e se for o caso você terá que atualizar o nome em todos os comandos abaixo). Você estará nesse ramo por padrão se você tiver acabado de clonar o repo, mas se você já tiver feito algum trabalho, provavelmente vai estar em um ramo diferente.
-Tenha certeza de rodar o comando a seguir para mudar para o ramo principal antes de fazer qualquer outra coisa:
+A branch principal do repositório content é chamada de "main" (pode ser chamado de outra coisa como "master" em outros repos, e se for o caso você terá que atualizar o nome em todos os comandos abaixo). Você estará nessa branch por padrão se você tiver acabado de clonar o repo, mas se você já tiver feito algum trabalho, provavelmente vai estar em uma branch diferente.
+Tenha certeza de rodar o comando a seguir para mudar para a branch main antes de fazer qualquer outra coisa:
 
 ```bash
 git switch main
 ```
 
-> **Nota:** Em outros tutoriais você pode ter visto `git checkout` sendo usado para mudar de ramos no repo. Isto funciona na maior parte do tempo, mas pode ter efeitos colaterais indesejados, por isso neste tutorial nós estamos recomendando o novo comando `git switch`, que é projetado puramente para trocar de ramos e tem menos chance de dar problema. Se você estiver interessado em como estes comandos estão relacionados, e as diferenças entre eles [Destaques do Git 2.23 > Alternativas experimentais para o git checkout](https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout) tem um bom resumo.
+> **Nota:** Em outros tutoriais você pode ter visto `git checkout` sendo usado para mudar de branches no repo. Isto funciona na maior parte do tempo, mas pode ter efeitos colaterais indesejados, por isso neste tutorial nós estamos recomendando o novo comando `git switch`, que é projetado puramente para trocar de branches e tem menos chance de dar problema. Se você estiver interessado em como estes comandos estão relacionados, e as diferenças entre eles [Destaques do Git 2.23 > Alternativas experimentais para o git checkout](https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout) tem um bom resumo.
 
-### Atualize o seu ramo principal
+### Atualize a sua branch main
 
-Em seguida, você deveria atualizar seu ramo principal para que ele tenha o mesmo conteúdo que o ramo principal do repo principal. O repo content é atualizado muitas vezes por dia por uma grande quantidade de contribuidores, então se você não fizer isto, sua versão vai ficar desatualizada, e isto vai causar problemas quando você tentar submeter suas atualizações. É aqui que o seu remoto vai vir a calhar!
+Em seguida, você deveria atualizar sua branch main para que ela tenha o mesmo conteúdo que a branch main do repo principal. O repo content é atualizado muitas vezes por dia por uma grande quantidade de contribuidores, então se você não fizer isto, sua versão vai ficar desatualizada, e isto vai causar problemas quando você tentar submeter suas atualizações. É aqui que o seu remoto vai vir a calhar!
 
 Para atualizar seu repo:
 
@@ -184,10 +184,10 @@ Para atualizar seu repo:
     git fetch mozilla
     ```
 
-2.  Em seguida, substitua o conteúdo do seu ramo principal com o conteúdo do ramo principal do repo remoto. Existem várias formas que você poderia fazer isto, mas eu tendo a usar o comando `rebase`, assim:
+2.  Em seguida, substitua o conteúdo da sua branch main com o conteúdo da branch main do repo remoto. Existem várias formas que você poderia fazer isto, mas eu tendo a usar o comando `rebase`, assim:
 
     ```bash
-    git rebase nome-remoto/nome-ramo-principal
+    git rebase nome-remoto/nome-branch-principal
     ```
 
     Então por exemplo:
@@ -202,46 +202,46 @@ Para atualizar seu repo:
     git push
     ```
 
-Você vai saber se as suas atualizações funcionaram corretamente vendo a página do seu fork em github.com (i.e. a minha é <https://github.com/chrisdavidmills/content>). Deve aparecer algo como "Este ramo está atualizado com mdn:main." em algum lugar próximo ao topo. Se estiver escrito que seu ramo principal está atrás da mdn:main por um número de commits, então você vai ter que tentar novamente ou leia [solução de problemas](#troubleshooting).
+Você vai saber se as suas atualizações funcionaram corretamente vendo a página do seu fork em github.com (i.e. a minha é <https://github.com/chrisdavidmills/content>). Deve aparecer algo como "Esta branch está atualizada com mdn:main." em algum lugar próximo ao topo. Se estiver escrito que sua branch main está atrás da mdn:main por um número de commits, então você vai ter que tentar novamente ou leia [solução de problemas](#troubleshooting).
 
-### Crie um novo ramo para você trabalhar
+### Crie uma branch nova para você trabalhar
 
-Uma vez que você tenha atualizado o ramo principal do seu fork, você sempre deve criar um novo ramo para fazer suas alterações. Você _nunca_ deve fazer seu trabalho no ramo principal ou submeter a partir de lá — isso pode virar uma bagunça muito rápido, confie em nós. Isso é bem mais limpo e menos sujeito a erros fazer todo o trabalho em ramos separados.
+Uma vez que você tenha atualizado a branch principal do seu fork, você deve criar uma branch nova para fazer suas alterações. Você _nunca_ deve fazer seu trabalho na branch principal ou submeter a partir de lá — isso pode virar uma bagunça rapidamente, confie em nós. É bem mais limpo e menos sujeito a erros fazer todo o trabalho em branches separadas.
 
-Para criar um novo ramo:
+Para criar uma branch nova:
 
-1.  Vá para a página do seu fork em github.com (i.e. a minha é <https://github.com/chrisdavidmills/content>) e encontre botão de ramo no canto superior esquerdo da lista de arquivos, no qual deve estar escrito "main":
+1.  Vá para a página do seu fork em github.com (i.e. a minha é <https://github.com/chrisdavidmills/content>) e encontre botão de branch no canto superior esquerdo da lista de arquivos, no qual deve estar escrito "main":
 
     ![Botão rotulado como main](branch-button.png)
 
-2.  Clique nele, e você receberá uma lista de ramos e um campo de texto que diz "Encontre ou crie um ramo...":
+2.  Clique nele, e você receberá uma lista de branches e um campo de texto que diz "Encontre ou crie uma branch...":
 
-    ![menu mostrando a lista de nomes de ramos com uma caixa de texto rotulada como encontre ou crie um ramo](branch-menu.png)
+    ![menu mostrando a lista de nomes de branches com uma caixa de texto rotulada como encontre ou crie um ramo](branch-menu.png)
 
-3.  Se você digitar parte do nome de um ramo que exista no campo de texto, a lista de ramos vai ser filtrada a partir desse texto, permitindo que você busque por um ramo existente facilmente. Contudo, nós queremos criar um ramo novo. Digite o nome de um ramo que ainda não exite (tente algo como test-branch) e a tela vai mudar para te mostrar um botão rotulado "Crie um ramo: test-branch a partir do 'main'":
+3.  Se você digitar parte do nome de uma branch que exista no campo de texto, a lista de branches vai ser filtrada a partir desse texto, permitindo que você busque por uma branch existente facilmente. Contudo, nós queremos criar uma branch nova. Digite o nome de uma branch que ainda não existe (tente algo como test-branch) e a tela vai mudar para te mostrar um botão rotulado "Crie uma branch: test-branch a partir da 'main'":
 
-    ![menu mostrando um novo ramo chamado test-branch digitado em uma caixa de texto, com um botão de criar ramo embaixo](new-branch.png)
+    ![menu mostrando uma nova branch chamada test-branch digitado em uma caixa de texto, com um botão de criar branch embaixo](new-branch.png)
 
-4.  Assim que você estiver feliz com o nome do seu ramo, clique no botão, e a tela vai ser atualizada para mostrar o nome do ramo no botão ramo:
+4.  Assim que você estiver feliz com o nome da sua branch, clique no botão, e a tela vai ser atualizada para mostrar o nome da branch no botão branch:
 
     ![Botão rotulado test-branch](branch-button-new-branch.png)
 
-É isso! Agora você criou um novo ramo para trabalhar. Este ramo é identico ao estado do ramo principal no momento em que você criou. Um bom ponto de partida para fazer o seu trabalho.
+É isso! Agora você criou uma nova branch para trabalhar. Esta branch é identica ao estado da branch main no momento em que você criou. Um bom ponto de partida para fazer o seu trabalho.
 
 Dicas:
 
-- Tenha certeza de sempre atualizar seu ramo principal para estar atualizado com o ramo principal da mozilla, conforme discutido na seção anterior, antes de criar um ramo novo.
-- Tenha certeza de sempre criar um ramo novo baseado no main, e não algum outro ramo. Para fazer isto, tenha certeza que o botão ramo mostre "main" antes de começar o processo. Se você não fizer isso, seu novo ramo provavelmente estará desatualizado, o que irá causar problemas no conteúdo.
+- Tenha certeza de sempre atualizar sua branch main para estar atualizada com a branch main da mozilla, conforme discutido na seção anterior, antes de criar uma branch nova.
+- Tenha certeza de sempre criar uma branch nova baseada na main, e não alguma outra branch. Para fazer isto, tenha certeza que o botão branch mostre "main" antes de começar o processo. Se você não fizer isso, sua nova branch provavelmente estará desatualizada, o que irá causar problemas no conteúdo.
 
-### Obtenha seu ramo localmente e mude para ele
+### Obtenha sua branch localmente e mude para ela
 
-A seção anterior te ensinou com criar um novo ramo no seu fork, mas atualmente ele só existe na versão remota do seu fork. Para trabalhar nele, você vai precisar obter ele na sua versão local.
+A seção anterior te ensinou com criar uma nova branch no seu fork, mas atualmente ela só existe na versão remota do seu fork. Para trabalhar nela, você vai precisar obter ela na sua versão local.
 
 Para fazer isto, volte para o seu terminal e, tendo certeza que você está dentro do diretório do repo no qual você está trabalhando (`content` para este exemplo):
 
 1.  Puxe as mudanças remotas para o seu clone local rodando o comando `git pull`
 2.  Entre a mensagem exibida, você deve ver as linhas `* [new branch] test-branch -> origin/test-branch`
-3.  Para mudar para seu ramo (O que significa mudar do "main" para trabalhar no seu ramo ao invés disso) rodando o comando `git switch test-branch`
+3.  Para mudar para sua branch (O que significa mudar do "main" para trabalhar na sua branch ao invés disso) rodando o comando `git switch test-branch`
 
 Se você foi bem sucedido, o git deve te dizer algo como:
 
@@ -259,9 +259,9 @@ Your branch is up to date with 'origin/test-branch'.
 nothing to commit, working tree clean
 ```
 
-Isto parece certo. Nós estamos no ramo "test-branch", e nós ainda não fizemos mudanças.
+Isto parece certo. Nós estamos na branch "test-branch", e nós ainda não fizemos mudanças.
 
-## Adicionando, dando commit, e impulsionando alterações (push)
+## Adicionando, commitando e dando push
 
 Neste ponto você já está preparado para fazer alterações no repo que você está trabalhando — para corrigir um bug no MDN ou qualquer coisa que você esteja fazendo. No geral, vamos pular esta parte, já que esse não é o objetivo do tutorial. Se você quiser corrigir um problema real no MDN, vá e escolha um bug para corrigir da nossa [lista de issues de conteúdo](https://github.com/mdn/content/issues/), ou leia [Contribuindo para o MDN](/pt-BR/docs/MDN/Contribute) para mais orientações.
 
@@ -281,7 +281,7 @@ Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos
         no changes added to commit (use "git add" and/or "git commit -a")
     ```
 
-3.  Então, neste momento a mensagem está falando que arquivos você modificou. A próxima etapa é "adicionar" eles, o que significa adicionar eles para uma lista de arquivos que você quer dar commit para impulsionar as alterações para o fork remoto. Para adicionar este arquivo para a lista de commit, digite o seguinte:
+3.  Então, neste momento a mensagem está falando quais arquivos você modificou. A próxima etapa é "adicionar" eles, o que significa adicionar eles para uma lista de arquivos que você quer dar commit e então dar push nas alterações para o fork remoto. Para adicionar este arquivo para a lista de commit, digite o seguinte:
 
     ```bash
     git add README.md
@@ -300,7 +300,7 @@ Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos
             modified:   README.md
     ```
 
-5.  O Git está nos dizendo que `README.md` agora está em nossa lista de commit. Para incluir todos os arquivos da lista de commit em um commit (um único conjunto de mudanças que depois nós vamos tentar enviar para o ramo principal), rode o seguinte (a opção `-m` é a abreviação para mensagem):
+5.  O Git está nos dizendo que `README.md` agora está em nossa lista de commit. Para incluir todos os arquivos da lista de commit em um commit (um único conjunto de mudanças que depois nós vamos tentar enviar para a branch principal), rode o seguinte (a opção `-m` é a abreviação para mensagem):
 
     ```bash
     git commit -m 'meu primeiro commit'
@@ -325,9 +325,9 @@ Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos
         nothing to commit, working tree clean
     ```
 
-A informação lida basicamente foi redefinida — está nos dizendo que não temos mudanças para fazer um commit, porque agora nós mandamos nossas mudanças anteriores para o sistema como um commit. A diferença chave de antes é a linha "Your branch is ahead of 'origin/test-branch' by 1 commit." (Seu ramo está na frente de 'origin/test-branch' por 1 commit.) — nossa versão local do ramo "test-branch" agora está a frente da versão remota de "teste-branch" por um commit — em outras palavras, nós fizemos uma mudança localmente que o ramo remoto não tem.
+A informação lida basicamente foi redefinida — está nos dizendo que não temos mudanças para fazer um commit, porque agora nós mandamos nossas mudanças anteriores para o sistema como um commit. A diferença chave de antes é a linha "Your branch is ahead of 'origin/test-branch' by 1 commit." (Sua branch está na frente de 'origin/test-branch' por 1 commit.) — nossa versão local da branch "test-branch" agora está a frente da versão remota de "test-branch" por um commit — em outras palavras, nós fizemos uma mudança localmente que a branch remota não tem.
 
-Vamos enviar nossa mudança local para o ramo remoto. Você pode fazer isto rodando o comando `git push` — tente isto agora. Se não tiver erros, você deve ter lido algo como isto:
+Vamos enviar nossa mudança local para a branch remota. Você pode fazer isto rodando o comando `git push` — tente isto agora. Se não tiver erros, você deve ter lido algo como isto:
 
 ```plain
 Enumerating objects: 5, done.
@@ -343,7 +343,7 @@ To github.com:chrisdavidmills/content.git
 
 ## Criando um pull request
 
-Neste momento, volte para o a página do fork remoto em github.com. Você deve ver uma mensagem parecida com "Seu ramo está 1 commit a frente de mdn:main. " o que significa que o conteúdo do nosso fork tem uma mudança (commit) nela que não existe no ramo "main" do mozilla.
+Neste momento, volte para a página do fork remoto em github.com. Você deve ver uma mensagem parecida com "Sua branch está 1 commit a frente de mdn:main." o que significa que o conteúdo do nosso fork tem uma mudança (commit) nela que não existe na branch "main" do mozilla.
 
 1.  To send our change up to the main copy of the repo, we need to create a pull request. This can be easily done using the "Compare & pull request" button that you should see up the top of the files list, once the branch has had a change pushed to it.
 
@@ -419,13 +419,13 @@ If you look at your remote fork's github.com page again, you'll see the commit t
 >
 > It is usually a good idea to get the rest of the pull request looking exactly how you want it before you make changes via the GitHub UI. If you do something like this and then end up having to make more changes, you'll need to remember to pull the changes you made to your remote branch down to your local branch (e.g. with `git pull`) before you can push more commits.
 
-### Want to see more?
+### Quer ver mais?
 
-If you think this troubleshooting guide should contain more information, please [create an issue](https://github.com/mdn/content/issues/new) to suggest what you think we should include.
+Se você acha que este guia de solução de problemas deveria ter mais informações, por favor [cria uma issue](https://github.com/mdn/content/issues/new) para sugerir o que você acha que nós devemos incluir.
 
-## See also
+## Veja também
 
-- [MDN Learn > Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub)
+- [MDN Learn > Git and GitHub](/pt-BR/docs/Learn/Tools_and_testing/GitHub)
 - [Dangit, Git](https://dangitgit.com/en) — additional useful troubleshooting techniques
 - [45 Github Issues Dos and Don'ts](https://hackernoon.com/45-github-issues-dos-and-donts-dfec9ab4b612)
 - [gh CLI tool](https://cli.github.com/) — once you are used to using the vanilla git CLI commands to control your repos, you might want to consider installing GitHub's own gh CLI tool, which provides commands to speed up a number of the processes discussed above.
