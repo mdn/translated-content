@@ -80,31 +80,31 @@ function myFunc() {
 function myFunc() { console.log('Hello!'); };
 ```
 
-We also have a few specific rules around spacing inside language features. You should include spaces between operators and operands, parameters, etc.
+他にもスペースに関する言語特有の固有のルールがいくつかあります。演算子、オペランド、パラメーターなどの間にはスペースを入れる必要があります。
 
-This is more readable
+こちらの方が読みやすいです。
 
-```js example-good
+```js 良い例
 if(dayOfWeek === 7 && weather === 'sunny') {
   goOnTrip('beach', 'car', ['ice cream', 'bucket and spade', 'beach towel']);
 }
 ```
 
-than this
+こちらよりも
 
-```js example-bad
+```js 悪い例
 if(dayOfWeek===7&&weather==='sunny'){
   goOnTrip('beach','car',['ice cream','bucket and spade','beach towel']);
 }
 ```
 
-In addition, keep these specifics in mind:
+加えて、以下の詳細を心に留めておいてください：
 
-- Don't include padding spaces after opening brackets or before closing brackets — `(myVar)`, not `( myVar )`.
-- All statements must end with semicolons (";"). We require them in all of our code samples even though they're technically optional in JavaScript because we feel that it leads to code that is clearer and more precise about where each statement ends.
-- Use single quotes in JavaScript, wherever single quotes are needed in syntax.
-- There should be no space between a control statement keyword, function, or loop keyword and its opening parenthesis (e.g. `if() { ... }`, `function myFunc() { ... }, for(...) { ... }`).
-- There should be a space between the parentheses and the opening curly brace in such cases as described in the previous bullet.
+- 丸括弧を開けた後と、閉じる前に一文字分のスペースを入れないでください。 — `(myVar)`は良いですが、`( myVar )`は良くないです。
+- 全てのステートメントはセミコロンで終えてください (";")。厳密にいうとJavaScriptではこのルールは任意ですが、MDNでは全てのコードサンプルにおいて必須です、なぜなら コードが明確になり、どこで各ステートメントが終わっているのかがはっきりすると考ているからです。
+- 構文にてシングルクウォートが必要とされるいかなる箇所でも、JavaScriptではシングルクウォートを使用してください
+- 制御ステートメントキーワード、関数、ループキーワードと、丸括弧を開ける前にはスペースを入れないでください (例 `if() { ... }`, `function myFunc() { ... }, for(...) { ... }`)。
+- 先の項目で説明したようなケースでは、丸括弧と中括弧を開ける前に一文字のスペースが必要です。
 
 ### JavaScript comments
 
