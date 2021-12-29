@@ -3,94 +3,91 @@ title: column-rule-width
 slug: Web/CSS/column-rule-width
 tags:
   - CSS
-  - CSS Property
-  - CSS プロパティ
   - CSS 段組みレイアウト
-  - Reference
-  - 段組み
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.column-rule-width
 translation_of: Web/CSS/column-rule-width
 ---
-<div>{{ CSSRef}}</div>
+{{ CSSRef}}
 
-<p><strong><code>column-rule-width</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、段組みレイアウトで段間に引かれる線の太さを設定します。</p>
+**`column-rule-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の太さを設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/column-rule-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-rule-width.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 column-rule-width: thin;
 column-rule-width: medium;
 column-rule-width: thick;
 
-/* &lt;length&gt; 値 */
+/* <length> 値 */
 column-rule-width: 1px;
 column-rule-width: 2.5em;
 
 /* グローバル値 */
 column-rule-width: inherit;
 column-rule-width: initial;
+column-rule-width: revert;
 column-rule-width: unset;
-</pre>
+```
 
-<p><code>column-rule-width</code> プロパティは単一の <code>&lt;'border-width'&gt;</code> の値で指定します。</p>
+`column-rule-width` プロパティは単一の `<'border-width'>` の値で指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>{{ cssxref("border-width") }} で定められたキーワードで段間罫の太さを指定します。 {{cssxref("&lt;length&gt;")}} または <code>thin</code>、 <code>medium</code>、 <code>thick</code> のキーワードのいずれかです。</dd>
-</dl>
+- `<'border-width'>`
+  - : {{ cssxref("border-width") }} で定められたキーワードで段間罫の太さを指定します。 {{cssxref("&lt;length&gt;")}} または `thin`、 `medium`、 `thick` のキーワードのいずれかです。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### 太い段間罫を設定
 
-<pre class="brush: html">&lt;p&gt;This is a bunch of text split into three columns.
+#### HTML
+
+```html
+<p>This is a bunch of text split into three columns.
    The `column-rule-width` property is used to change
    the width of the line that is drawn between columns.
-   Don't you think that's wonderful?&lt;/p&gt;</pre>
+   Don't you think that's wonderful?</p>
+```
 
-<h3 id="CSS">CSS</h3>
+#### CSS
 
-<pre class="brush:css">p {
+```css
+p {
   column-count: 3;
   column-rule-style: solid;
   column-rule-width: thick;
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Setting_a_thick_column_rule")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Multicol', '#crw', 'column-rule-width') }}</td>
-   <td>{{ Spec2('CSS3 Multicol') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.column-rule-width")}}</p>
+## 関連情報
+
+- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- {{CSSXref("column-rule-style")}}
+- {{CSSXref("column-rule-color")}}
+- {{CSSXref("column-rule")}}
