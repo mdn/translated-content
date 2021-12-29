@@ -3,23 +3,23 @@ title: column-fill
 slug: Web/CSS/column-fill
 tags:
   - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - 'recipe:css-property'
+  - CSS 段組みレイアウト
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.column-fill
 translation_of: Web/CSS/column-fill
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>column-fill</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、段組みレイアウトで要素のコンテンツが複数の段に分割されるとき、どのようにバランスを取るのかを制御します。</p>
+**`column-fill`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで要素の内容物が複数の段に分割されるとき、どのようにバランスを取るのかを制御します。
 
-<div>{{EmbedInteractiveExample("pages/css/column-fill.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-fill.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush: css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 column-fill: auto;
 column-fill: balance;
 column-fill: balance-all;
@@ -27,82 +27,82 @@ column-fill: balance-all;
 /* グローバル値 */
 column-fill: inherit;
 column-fill: initial;
+column-fill: revert;
 column-fill: unset;
-</pre>
+```
 
-<p><code>column-fill</code> プロパティは、以下に挙げたキーワード値のうちの1つで指定します。初期値は <code>balance</code> で、コンテンツは段の間で均等になります。</p>
+`column-fill` プロパティは、以下に挙げたキーワード値のうちの 1 つで指定します。初期値は `balance` で、コンテンツは段の間で均等になります。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>段は順に埋められます。コンテンツは必要な余地があるときだけ分割されるので、一部の段は空になることがあります。</dd>
- <dt><code>balance</code></dt>
- <dd>コンテンツは各段に均等に分割されます。<a href="/ja/docs/Web/CSS/Paged_Media">ページ付きメディア</a>などの断片化されたコンテキストでは、最後の断片のみが均等に分割されます。従ってページ付きメディアでは、最後のページのみが均等に分割されます。</dd>
- <dt><code>balance-all</code></dt>
- <dd>コンテンツは格段に均等に分割されます。<a href="/ja/docs/Web/CSS/Paged_Media">ページ付きメディア</a>などの断片化されたコンテキストでは、すべての断片が均等になります。</dd>
-</dl>
+- `auto`
+  - : 段は順に埋められます。コンテンツは必要な余地があるときだけ分割されるので、一部の段は空になることがあります。
+- `balance`
+  - : コンテンツは各段に均等に分割されます。[ページ付きメディア](/ja/docs/Web/CSS/Paged_Media)などの断片化されたコンテキストでは、最後の断片のみが均等に分割されます。従ってページ付きメディアでは、最後のページのみが均等に分割されます。
+- `balance-all`
+  - : コンテンツは格段に均等に分割されます。[ページ付きメディア](/ja/docs/Web/CSS/Paged_Media)などの断片化されたコンテキストでは、すべての断片が均等になります。
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="Splitting_text_evenly_across_columns" name="Splitting_text_evenly_across_columns">テキストを段間で均等に分割</h3>
+### 段の内容を均等にする
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p class="content-box"&gt;
-  This is a bunch of text split into multiple
-  columns. The CSS `column-fill` property is
-  used to spread the contents evenly across
-  all the columns.
-&lt;/p&gt;
-</pre>
+```html
+<p class="fill-auto">
+  この段落では、段を 1 つずつ埋めていきます。すべてのテキストが最初の段に収まるので、他の段は空白になります。
+</p>
 
-<h4 id="CSS">CSS</h4>
+<p class="fill-balance">
+  この段落では、それぞれの段で内容量のバランスを取ろうとします。
+</p>
+```
 
-<pre class="brush:css; highlight=[4] notranslate">.content-box {
-  column-count: 4;
-  column-rule: 1px solid black;
+#### CSS
+
+```css
+p {
+  height: 7em;
+  background: #ff9;
+  columns: 3;
+  column-rule: 1px solid;
+}
+
+p.fill-auto {
+  column-fill: auto;
+}
+
+p.fill-balance {
   column-fill: balance;
 }
-</pre>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Splitting_text_evenly_across_columns', 'auto', 120)}}</p>
+{{EmbedLiveSample('Balancing_column_content', 'auto', 320)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#cf', 'column-fill')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.column-fill")}}</p>
+{{Compat}}
 
-<div class="blockIndicator warning">
-<p>仕様上の未解決の問題により、 <code>column-fill</code> にはブラウザ－間の相互運用性の問題やバグがあることに注意してください。</p>
+> **Warning:** 仕様上の未解決の問題により、 `column-fill` にはブラウザ－間の相互運用性の問題やバグがあることに注意してください。
+>
+> 特に、 `column-fill: auto` を使用して連続的に段を埋める場合、 Chrome は、段組みコンテナーにブロック方向の寸法 (例: 横書きモードならば高さ) がある場合にのみこの値を参照します。 Firefox は常にこのプロパティを参照するため、寸法がない場合は最初の段をすべての内容物で埋めます。
 
-<p>特に、 <code>column-fill: auto</code> を使用して連続的に列を埋める場合、 Chrome は、段組みコンテナーにブロック方向の寸法 (例: 横書きモードならば高さ) がある場合にのみこの値を参照します。 Firefox は常にこのプロパティを参照するため、寸法がない場合は最初の列をすべてのコンテンツで埋めます。</p>
-</div>
+## 関連情報
+
+- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- {{CSSXref("column-count")}}
+- {{CSSXref("column-width")}}
