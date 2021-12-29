@@ -1,15 +1,12 @@
 ---
 title: break-before
 slug: Web/CSS/break-before
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/break-before
+browser-compat: css.properties.break-before
 ---
 {{CSSRef}}
 
-La propriété** `break-before`** décrit la façon dont la page, la colonne ou la région se fragmente avant la boîte générée. S'il n'y a aucune boîte générée, la propriété est ignorée.
+La propriété **`break-before`** décrit la façon dont la page, la colonne ou la région se fragmente avant la boîte générée. S'il n'y a aucune boîte générée, la propriété est ignorée.
 
 ```css
 /* Valeurs de rupture génériques */
@@ -20,7 +17,7 @@ break-before: all;
 
 /* Valeurs de rupture pour les pages */
 break-before: avoid-page;
-break-before: page:
+break-before: page;
 break-before: left;
 break-before: right;
 break-before: recto;
@@ -37,17 +34,18 @@ break-before: region;
 /* Valeurs globales */
 break-before: inherit;
 break-before: initial;
+break-before: revert;
 break-before: unset;
 ```
 
-Chaque point de rupture éventuel (c'est-à-dire chaque frontière d'élément) est influencé par trois propriétés : la valeur de {{cssxref("break-after")}} de l'élément précédent, la valeur de {{cssxref("break-before")}} de l'élément suivant et la valeur de `break-inside` de l'élément englobant.
+Chaque point de rupture éventuel (c'est-à-dire chaque frontière d'élément) est influencé par trois propriétés&nbsp;: la valeur de [`break-after`](/fr/docs/Web/CSS/break-after) de l'élément précédent, la valeur de `break-before` de l'élément suivant et la valeur de [`break-inside`](/fr/docs/Web/CSS/break-inside) de l'élément englobant.
 
-Pour déterminer si on a une rupture, on applique les règles suivantes :
+Pour déterminer si on a une rupture, on applique les règles suivantes&nbsp;:
 
-1.  Si l'une des trois valeurs correspond à une rupture forcée (`always`, `left`, `right`, `page`, `column` ou `region`), cette valeur l'emporte. Si plusieurs valeurs décrivent une rupture forcée, c'est celle de l'élément qui apparaît le plus tard dans le flux qui est prise en compte (autrement dit, {{cssxref("break-before")}} l'emporte sur {{cssxref("break-after")}} qui l'emporte sur {{cssxref("break-inside")}}).
-2.  Si l'une des trois valeurs correspond à une valeur visant à éviter une rupture (`avoid`, `avoid-page`, `avoid-region`, `avoid-column`), aucune rupture ne sera appliquée à cet endroit.
+1.  Si l'une des trois valeurs correspond à une rupture forcée (`always`, `left`, `right`, `page`, `column` ou `region`), cette valeur l'emporte. Si plusieurs valeurs décrivent une rupture forcée, c'est celle de l'élément qui apparaît le plus tard dans le flux qui est prise en compte (autrement dit, `break-before` l'emporte sur `break-after`, qui l'emporte sur `break-inside`).
+2.  Si l'une des trois valeurs correspond à une valeur visant à éviter une rupture (`avoid`, `avoid-page`, `avoid-region` ou `avoid-column`), aucune rupture ne sera appliquée à cet endroit.
 
-Une fois que les ruptures forcées ont été appliquées, le moteur peut ajouter des ruptures « douces » sauf aux endroits où les propriétés empêchent les ruptures.
+Une fois que les ruptures forcées ont été appliquées, le moteur peut ajouter des ruptures «&nbsp;douces&nbsp;» sauf aux endroits où les propriétés empêchent les ruptures.
 
 ## Syntaxe
 
@@ -59,12 +57,12 @@ La propriété `break-before` se paramètre avec un des mots-clés définis ci-a
 
 - `auto`
   - : Valeur initiale qui ne force ni n'interdit de rupture (de page, de colonne ou de région) avant la boîte.
-- `all`{{experimental_inline}}
-  - : Force la rupture juste avant la boîte principale. La rupture a lieu pour l'ensemble des contextes de fragmentation. Ainsi si l'élément concerné est dans un conteneur multi-colonnes dans un média paginé, il y aura une rupture de colonne et une rupture de page.
-- `always`{{experimental_inline}}
-  - : Force la rupture juste avant la boîte principale. Le type de rupture dépend du contexte de fragmentation englobant l'élément. Si l'élément est situé dans un conteneur multi-colonne, une rupture de colonne sera ajoutée. Si l'élément est situé dans un média paginé (mais pas dans un conteneur multi-colonnes), la rupture introduite sera une rupture de page.
 - `avoid`
   - : Empêche toute rupture (de page, de colonne ou de région) avant la boîte.
+- `always` {{experimental_inline}}
+  - : Force la rupture juste avant la boîte principale. Le type de rupture dépend du contexte de fragmentation englobant l'élément. Si l'élément est situé dans un conteneur multi-colonne, une rupture de colonne sera ajoutée. Si l'élément est situé dans un média paginé (mais pas dans un conteneur multi-colonnes), la rupture introduite sera une rupture de page.
+- `all` {{experimental_inline}}
+  - : Force la rupture juste avant la boîte principale. La rupture a lieu pour l'ensemble des contextes de fragmentation. Ainsi si l'élément concerné est dans un conteneur multi-colonnes dans un média paginé, il y aura une rupture de colonne et une rupture de page.
 
 #### Valeurs de rupture liées aux médias paginés
 
@@ -74,11 +72,11 @@ La propriété `break-before` se paramètre avec un des mots-clés définis ci-a
   - : Force un saut de page avant la boîte de l'élément
 - `left`
   - : Force un ou deux saut de page avant la boîte de l'élément afin que la prochaine page soit une page gauche.
-- `recto` {{experimental_inline}}
-  - : Force un ou deux sauts de page avant la boîte de l'élément afin que la prochaine page soit une page recto (une page droite pour le sens de lecture gauche à droite et une page gauche pour le sens de lecture droite à gauche).
 - `right`
   - : Force un ou deux saut de page avant la boîte de l'élément afin que la prochaine page soit une page droite.
-- `verso`{{experimental_inline}}
+- `recto` {{experimental_inline}}
+  - : Force un ou deux sauts de page avant la boîte de l'élément afin que la prochaine page soit une page recto (une page droite pour le sens de lecture gauche à droite et une page gauche pour le sens de lecture droite à gauche).
+- `verso` {{experimental_inline}}
   - : Force un ou deux sauts de page avant la boîte de l'élément afin que la prochaine page soit une page verso (une page gauche pour le sens de lecture gauche à droite et une page droite pour le sens de lecture droite à gauche).
 
 #### Valeurs de ruptures relatives aux dispositions en colonnes
@@ -90,10 +88,10 @@ La propriété `break-before` se paramètre avec un des mots-clés définis ci-a
 
 #### Valeurs de ruptures relatives aux régions
 
-- `region`{{experimental_inline}}
-  - : Force une rupture de région avant la boîte de l'élément.
-- `avoid-region`{{experimental_inline}}
+- `avoid-region` {{experimental_inline}}
   - : Empêche toute rupture de région avant la boîte de l'élément.
+- `region` {{experimental_inline}}
+  - : Force une rupture de région avant la boîte de l'élément.
 
 ### Syntaxe formelle
 
@@ -101,7 +99,7 @@ La propriété `break-before` se paramètre avec un des mots-clés définis ci-a
 
 ## Alias/synonymes pour les ruptures de page
 
-Pour des raisons de compatibilité, la propriété historique {{cssxref("page-break-before")}} devrait être considérée par les navigateurs comme un synonyme de `break-before`. Cela permet aux sites utilisant `page-break-before` de continuer à fonctionner comme précédemment. Voici un sous-ensemble des valeurs avec leurs alias :
+Pour des raisons de compatibilité, la propriété historique [`page-break-before`](/fr/docs/Web/CSS/page-break-before) devrait être considérée par les navigateurs comme un synonyme de `break-before`. Cela permet aux sites utilisant `page-break-before` de continuer à fonctionner comme précédemment. Voici un sous-ensemble des valeurs avec leurs alias&nbsp;:
 
 | `page-break-before` | `break-before` |
 | ------------------- | -------------- |
@@ -111,65 +109,79 @@ Pour des raisons de compatibilité, la propriété historique {{cssxref("page-br
 | `avoid`             | `avoid`        |
 | `always`            | `page`         |
 
-> **Note :** La valeur `always` pour `page-break-before` a été implémentée par les navigateurs comme une rupture de page et non comme une rupture de colonne. C'est pourquoi l'alias ici utilisé est `page` et non `always`.
+> **Note :** La valeur `always` pour `page-break-*` a été implémentée par les navigateurs comme une rupture de page et non comme une rupture de colonne. C'est pourquoi l'alias ici utilisé est `page` et non `always`.
 
 ## Exemples
-
-### CSS
-
-```css
-.exemple {
-  -webkit-column-count: 4;
-  -moz-column-count: 4;
-  column-count: 4;
-}
-
-p {
-  break-before: avoid-column;
-  /* Pour Firefox : */
-  page-break-before: avoid;
-  /* Pour WebKit : */
-  -webkit-column-break-before: avoid;
-}
-```
 
 ### HTML
 
 ```html
-<div class="exemple">
-  <p>« Mais alors, » pensa Alice, « ne serai-je donc
-  jamais plus vieille que je ne le suis maintenant ?
-  D’un côté cela aura ses avantages, ne jamais être
-  une vieille femme. Mais alors avoir toujours des
-  leçons à apprendre ! Oh, je n’aimerais pas cela du
-  tout. »</p>
-  <p>« Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ?
-  Il y a à peine de la place pour vous, et il n’y en
-  a pas du tout pour vos livres de leçons. »</p>
-</div>
+<article>
+  <h1>Main heading</h1>
+
+  <h2>Subheading</h2>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus. Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque dapibus, eu lacinia lectus dictum.</p>
+  
+  <h2>Subheading</h2>
+  
+  <p>Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie nec nisi.</p>
+  
+  <h2>Subheading</h2>
+  
+  <p>Vivamus eleifend metus vitae neque placerat, eget interdum elit mattis. Donec eu vulputate nibh. Ut turpis leo, malesuada quis nisl nec, volutpat egestas tellus.
+  
+  <h2>Subheading</h2>
+  
+  <p>In finibus viverra enim vel suscipit. Quisque consequat velit eu orci malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl, sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.</p>
+</article>
+```
+
+### CSS
+
+```css
+html {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  column-span: all;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: red;
+  letter-spacing: 1px;
+  break-before: column;
+}
+
+p {
+  line-height: 1.5;
+}
+
+article {
+  column-width: 200px;
+  gap: 20px;
+}
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","400","300")}}
+{{EmbedLiveSample('', '100%', '600')}}
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                     | Commentaires                                                                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Fragmentation', '#break-between', 'break-before')}}                         | {{Spec2('CSS3 Fragmentation')}} | Ajouts des mots-clés `recto` et `verso`. Le type de média pour cette propriété est passé de `paged` à `visual`. L'algorithme de rupture est précisé afin de gérer les différents types de rupture. |
-| {{SpecName('CSS3 Regions', '#region-flow-break', 'break-before')}}                             | {{Spec2('CSS3 Regions')}}         | La spécification étend la propriété pour gérer les sauts de région. Les mots-clés `avoid-region` et `region` sont ajoutés.                                                                         |
-| {{SpecName('CSS3 Multicol', '#break-before-break-after-break-inside', 'break-before')}} | {{Spec2('CSS3 Multicol')}}     | Définition initiale. La spécification étend la propriété {{cssxref("page-break-before")}} de  CSS 2.1 afin de gérer les sauts de page ou de colonne.                                   |
+{{Specifications("css.properties.break-before.multicol_context")}}
 
 {{cssinfo}}
 
 ## Compatibilité des navigateurs
 
-### Prise en charge pour une disposition multi-colonnes
+{{Compat}}
 
-{{Compat("css.properties.break-before.multicol_context")}}
+## Voir aussi
 
-### Prise en charge pour les média paginés
-
-{{Compat("css.properties.break-before.paged_context")}}
+- [Disposition sur plusieurs colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Breaking Boxes With CSS Fragmentation](https://www.smashingmagazine.com/2019/02/css-fragmentation/)

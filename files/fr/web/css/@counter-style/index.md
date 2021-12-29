@@ -1,15 +1,12 @@
 ---
 title: '@counter-style'
 slug: Web/CSS/@counter-style
-tags:
-  - CSS
-  - Reference
-  - Règle @
 translation_of: Web/CSS/@counter-style
+browser-compat: css.at-rules.counter-style
 ---
 {{CSSRef}}
 
-La [règle @](/fr/docs/Web/CSS/Règles_@) CSS** `@counter-style`** permet aux auteurs de définir des styles de compteurs qui ne font pas partie de l'ensemble des styles natifs prédéfinis. Une règle `@counter-style` explique comment convertir la valeur d'un compteur en une chaîne de caractères correspondantes.
+La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@counter-style`** permet aux auteurs de définir des styles de compteurs qui ne font pas partie de l'ensemble des styles natifs prédéfinis. Une règle `@counter-style` explique comment convertir la valeur d'un compteur en une chaîne de caractères correspondantes.
 
 ```css
 @counter-style thumbs {
@@ -19,7 +16,7 @@ La [règle @](/fr/docs/Web/CSS/Règles_@) CSS** `@counter-style`** permet aux au
 }
 
 ul {
-   list-style: thumbs;
+  list-style: thumbs;
 }
 ```
 
@@ -31,42 +28,42 @@ La version initiale de CSS définit un ensemble de compteurs qui peuvent être u
 
 Chaque `@counter-style` est identifié par un nom et possède un ensemble de descripteurs.
 
-- {{cssxref("@counter-style/system", "system")}}
+- [`system`](/fr/docs/Web/CSS/@counter-style/system)
   - : Ce descripteur indique l'algorithme à utiliser pour convertir les valeurs entières du compteur en des chaînes de caractères correspondantes.
 
 <!---->
 
-- {{cssxref("@counter-style/negative", "negative")}}
+- [`negative`](/fr/docs/Web/CSS/@counter-style/negative)
   - : Ce descripteur permet d'indiquer si le symbole du compteur doit être préfixé ou suffixé si la valeur est négative.
 
 <!---->
 
-- {{cssxref("@counter-style/prefix", "prefix")}}
+- [`prefix`](/fr/docs/Web/CSS/@counter-style/prefix)
   - : Ce descripteur indique un symbole qui doit être utilisé comme préfixe pour le compteur. Les préfixes sont ajoutés à la fin de la représentation et apparaissent avant le signe négatif.
 
 <!---->
 
-- {{cssxref("@counter-style/suffix", "suffix")}}
+- [`suffix`](/fr/docs/Web/CSS/@counter-style/suffix)
   - : Ce descripteur indique un symbole qui doit être utilisé comme suffixe pour le compteur. Comme pour les préfixes, les suffixes sont ajoutés à la fin de la représentation.
 
 <!---->
 
-- {{cssxref("@counter-style/range", "range")}}
+- [`range`](/fr/docs/Web/CSS/@counter-style/range)
   - : Ce descripteur indique l'intervalle de valeur pour lequel le style du compteur peut s'appliquer. Pour les valeurs du compteur en dehors de cet intervalle, le style utilisé sera le style de secours.
 
 <!---->
 
-- {{cssxref("@counter-style/pad", "pad")}}
+- [`pad`](/fr/docs/Web/CSS/@counter-style/pad)
   - : Ce descripteur est utilisé lorsqu'il faut que la représentation du marqueur ait une longueur minimale. Ainsi, s'il faut que le compteur mesure deux caractères (ex. 01, 02, 03, 04 etc), on utilisera ce descripteur. Pour les valeurs dont la taille est plus grande que celle indiquée dans ce descripteur, le marqueur est construit normalement.
 
 <!---->
 
-- {{cssxref("@counter-style/fallback", "fallback")}}
+- [`fallback`](/fr/docs/Web/CSS/@counter-style/fallback)
   - : Ce descripteur définit le système en cas de secours (si le système définit via la règle @ ne permet pas de construire le marqueur ou si la valeur du compteur est en dehors de l'intervalle défini). Si le système indiqué en secours échoue également, ce sera alors le système de secours de secours qui sera utilisé et ainsi de suite si nécessaire. Si besoin, le style décimal sera utilisé en fin de chaîne.
 
 <!---->
 
-- {{cssxref("@counter-style/symbols", "symbols")}}
+- [`symbols`](/fr/docs/Web/CSS/@counter-style/symbols)
 
   - : Ce descripteur définit les symboles qui doivent être utilisés pour représenter le marqueur. Les symboles peuvent contenir des chaînes de caractères, des images ou des identifiants. L'utilisation des symboles et leur combinaison pour représenter le marqueur dépend de l'algorithme indiqué via le descripteur `system`. Ainsi, si `system` vaut `fixed`, chacun des N symboles définis dans le descripteur sera utilisé pour représenter les N premiers symboles. Une fois l'ensemble épuisé, le style de secours sera utilisé pour le reste de la liste.
 
@@ -82,12 +79,12 @@ Chaque `@counter-style` est identifié par un nom et possède un ensemble de des
 
 <!---->
 
-- {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
-  - : Certains symboles définis via le descripteurs `symbols` sont utilisés par la plupart des algorithmes. Certains systèmes dits « additifs » s'appuient sur des _tuples additifs_ décrit avec ce descripteur. Chaque tuple additif se compose d'un symbole de compteur et d'un poids entier positif. Les tuples additifs doivent être définis dans l'ordre décroissant de leurs poids.
+- [`additive-symbols`](/fr/docs/Web/CSS/@counter-style/additive-symbols)
+  - : Certains symboles définis via le descripteurs `symbols` sont utilisés par la plupart des algorithmes. Certains systèmes dits «&nbsp;additifs&nbsp;» s'appuient sur des _tuples additifs_ décrit avec ce descripteur. Chaque tuple additif se compose d'un symbole de compteur et d'un poids entier positif. Les tuples additifs doivent être définis dans l'ordre décroissant de leurs poids.
 
 <!---->
 
-- {{cssxref("@counter-style/speak-as", "speak-as")}}
+- [`speak-as`](/fr/docs/Web/CSS/@counter-style/speak-as)
   - : Ce descripteur indique la façon dont le compteur peut être prononcé par un lecteur d'écran. Ainsi, la valeur du symbole peut être lue comme un nombre ou comme un alphabet ou comme des sons fournis.
 
 ### Syntaxe formelle
@@ -95,22 +92,6 @@ Chaque `@counter-style` est identifié par un nom et possède un ensemble de des
 {{csssyntax}}
 
 ## Exemples
-
-### CSS
-
-```css
-@counter-style circled-alpha {
-  system: fixed;
-  symbols: Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ;
-  suffix: " ";
-}
-```
-
-```css
-.exemple {
-   list-style: circled-alpha;
-}
-```
 
 ### HTML
 
@@ -125,32 +106,37 @@ Chaque `@counter-style` est identifié par un nom et possède un ensemble de des
 </ul>
 ```
 
+### CSS
+
+```css
+@counter-style circled-alpha {
+  system: fixed;
+  symbols: Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ;
+  suffix: " ";
+}
+
+.exemple {
+   list-style: circled-alpha;
+}
+```
+
 ### Résultat
 
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample('')}}
 
-> **Note :** Une page d'exemple avec plus de variables est disponible ici : <https://mdn.github.io/css-examples/counter-style-demo/>.
+> **Note :** Une page d'exemple avec plus de variables est disponible ici&nbsp;: <https://mdn.github.io/css-examples/counter-style-demo/>.
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#the-counter-style-rule', 'counter-style')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style")}}
-
-### Notes relatives à Quantum
-
-- Gecko permettait d'utiliser `none` comme valeur pour les descripteurs `system` et `fallback` de `@counter-style` alors que ce devrait être invalide selon la spécification. Le nouveau moteur CSS de Firefox, Quantum CSS (aussi appelé [Stylo](https://wiki.mozilla.org/Quantum/Stylo), prévu pour Firefox 57) a résolu ce bug ({{bug(1377414)}}).
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("list-style")}}
-- {{cssxref("list-style-image")}}
-- {{cssxref("list-style-position")}}
-- {{cssxref("list-style-type")}}
-- {{cssxref("symbols", "symbols()")}} : la notation fonctionnelle qui permet de créer des styles de compteur anonymes
-- Les fonctions CSS {{Cssxref("counter")}} et {{Cssxref("counters")}}
+- [`list-style`](/fr/docs/Web/CSS/list-style), [`list-style-image`](/fr/docs/Web/CSS/list-style-image), [`list-style-position`](/fr/docs/Web/CSS/list-style-position), [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
+- [`symbols()`](/fr/docs/Web/CSS/symbols())&nbsp;: la notation fonctionnelle qui permet de créer des styles de compteur anonymes
+- Les fonctions CSS [`counter()`](/fr/docs/Web/CSS/counter()) et [`counters()`](/fr/docs/Web/CSS/counters())
 - [Démonstration pour les styles de compteur](https://mdn.github.io/css-examples/counter-style-demo/) ([code](https://github.com/mdn/css-examples/tree/master/counter-style-demo))
