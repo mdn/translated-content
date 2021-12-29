@@ -3,26 +3,30 @@ title: columns
 slug: Web/CSS/columns
 tags:
   - CSS
-  - CSS Property
   - CSS 段組みレイアウト
-  - Reference
-  - 一括指定プロパティ
-  - 段組み
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-shorthand-property
+browser-compat: css.properties.columns
 translation_of: Web/CSS/columns
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/CSS" title="CSS">CSS</a> の <strong><code>columns</code></strong> プロパティは、段組みされた要素の段の幅や段数を設定します。</p>
+**`columns`** は [CSS](/ja/docs/Web/CSS) 一括指定プロパティで、要素の内容物を描画する際に使用する段数や段の幅を設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/columns.html")}}</div>
+{{EmbedInteractiveExample("pages/css/columns.html")}}
 
-<p class="hidden">この対話型サンプルのソースファイルは GitHub リポジトリに格納されています。対話型サンプルプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構成要素のプロパティ
 
-<p>これは {{cssxref('column-width')}} と {{cssxref("column-count")}} の両方を一度に便利に宣言できる<a href="/ja/docs/Web/CSS/Shorthand_properties">一括指定プロパティ</a>です。他の一括指定プロパティと同様に、指定されなかった個別の値は初期値が設定されます。</p>
+このプロパティは以下の CSS プロパティの一括指定です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+- [`column-count`](/ja/docs/Web/CSS/column-count)
+- [`column-width`](/ja/docs/Web/CSS/column-width)
 
-<pre class="brush:css no-line-numbers">/* 段の幅 */
+## 構文
+
+```css
+/* 段の幅 */
 columns: 18em;
 
 /* 段数 */
@@ -37,65 +41,64 @@ columns: auto auto;
 /* グローバル値 */
 columns: inherit;
 columns: initial;
-columns: unset;</pre>
+columns: revert;
+columns: unset;
+```
 
-<p><code>columns</code> プロパティは以下に挙げる値を1つまたは2つで、順不同で指定します。</p>
+`columns` プロパティは以下に挙げる値を 1 つまたは 2 つで、順不同で指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>&lt;'column-width'&gt;</code></dt>
- <dd>{{cssxref("&lt;length&gt;")}} 値または <code>auto</code> キーワードで、段の幅を最適化するヒントになります。実際の段の幅はより広くなったり（余白を埋めるため）、より狭くなったり（利用可能なスペースが指定された段の幅よりも小さい場合のみ）します。この値は正の数だけで、そうでなければ宣言は無効になります。</dd>
- <dt><code>&lt;'column-count'&gt;</code></dt>
- <dd>正の {{cssxref("&lt;integer&gt;")}} のみで、要素の中で流れる理想的な段数を記述します。 {{cssxref("column-width")}} が <code>auto</code> 以外の値で一緒に設定された場合は、最大の段数を示します。</dd>
-</dl>
+- `<'column-width'>`
+  - : 理想的な段の幅であり、 {{cssxref("&lt;length&gt;")}} または `auto` キーワードで定義されます。実際の段の幅は、実際の空間に合わせて広くなったり狭くなったりします。 {{cssxref("column-width")}} を参照してください。
+- `<'column-count'>`
+  - : 要素の内容物が流れる理想的な段の数であり、 {{cssxref("&lt;integer&gt;")}} または `auto` キーワードで定義します。この値と段の幅の両方が `auto` でない場合は、最大の段数を示します。 {{cssxref("column-count")}} を参照してください。
 
-<h3 id="Formal_syntax" name="Formal_syntax">構文形式</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### 3 つの等しい段の設定
 
-<pre class="brush: html">&lt;p class="content-box"&gt;
+#### HTML
+
+```html
+<p class="content-box">
   This is a bunch of text split into three columns
   using the CSS `columns` property. The text
   is equally distributed over the columns.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+#### CSS
 
-<pre class="brush: css;">.content-box {
+```css
+.content-box {
   columns: 3 auto;
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
-<p>{{EmbedLiveSample('Example', 'auto', 120)}}</p>
+{{EmbedLiveSample('Setting_three_equal_columns', 'auto', 120)}}
 
-<h2 id="Specifications" name="Specifications">仕様策定状況</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#columns', 'columns')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.columns")}}</p>
+## 関連情報
+
+- {{cssxref("widows")}}
+- {{cssxref("orphans")}}
+- [ページ化メディア](/ja/docs/Web/CSS/Paged_Media)
+- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
