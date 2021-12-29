@@ -3,29 +3,28 @@ title: column-width
 slug: Web/CSS/column-width
 tags:
   - CSS
-  - CSS Property
-  - CSS プロパティ
   - CSS 段組みレイアウト
+  - CSS プロパティ
   - リファレンス
-  - 段組み
+  - recipe:css-property
+browser-compat: css.properties.column-width
 translation_of: Web/CSS/column-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>column-width</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、段組みレイアウトで理想的な段の幅を設定します。</span>コンテナーは <code>column-width</code> の値よりも狭い段がないように、できるだけ多くの段を配置します。コンテナーの幅が指定された値よりも狭い場合、実際の段の幅はより狭くなることがあります。</p>
+**`column-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで理想的な段の幅を設定します。コンテナーは `column-width` の値よりも狭い段がないように、できるだけ多くの段を配置します。コンテナーの幅が指定された値よりも狭い場合、実際の段の幅はより狭くなることがあります。
 
-<div>{{EmbedInteractiveExample("pages/css/column-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-width.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+このプロパティは様々な画面の大きさに合うレスポンシブデザインを作成するのに役立ちます。特に (優先度の高い) {{cssxref("column-count")}} プロパティがある場合、正確な段の幅を設定するには、すべての幅の値を指定する必要があります。横書きでは、これらは {{cssxref('width')}}, {{cssxref('column-width')}}, {{cssxref('column-gap')}}, {{cssxref('column-rule-width')}} です。
 
-<p>このプロパティは様々な画面の大きさに合うレスポンシブデザインを作成するのに役立ちます。特に (優先度の高い) {{cssxref("column-count")}} プロパティがある場合、正確な段の幅を設定するには、すべての幅の値を指定する必要があります。横書きでは、これらは {{cssxref('width')}}, {{cssxref('column-width')}}, {{cssxref('column-gap')}}, {{cssxref('column-rule-width')}} です。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 column-width: auto;
 
-/* &lt;length&gt; 値 */
+/* <length> 値 */
 column-width: 60px;
 column-width: 15.5em;
 column-width: 3.3vw;
@@ -33,76 +32,60 @@ column-width: 3.3vw;
 /* グローバル値 */
 column-width: inherit;
 column-width: initial;
+column-width: revert;
 column-width: unset;
-</pre>
+```
 
-<p><code>column-width</code> プロパティは以下に挙げた値のうちの一つで指定します。</p>
+`column-width` プロパティは以下に挙げた値のうちの一つで指定します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>段の最適な幅のヒントを与えます。実際の段の幅は指定された値と異なります。余白を埋める必要がある場合は広くなる可能性があり、利用可能な幅が小さすぎる場合は狭くなる可能性があります。この値は正の数だけで、そうでなければ宣言は無効になります。パーセント値も無効です。</dd>
- <dt><code>auto</code></dt>
- <dd>段の幅は {{cssxref("column-count")}} などの他の CSS プロパティによって決定されます。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : 段の最適な幅のヒントを与えます。実際の段の幅は指定された値と異なります。空間を埋める必要がある場合は広くなる可能性があり、利用可能な幅が狭すぎる場合は狭くなる可能性があります。この値は正の数だけで、そうでなければ宣言は無効になります。パーセント値も無効です。
+- `auto`
+  - : 段の幅は {{cssxref("column-count")}} などの他の CSS プロパティによって決定されます。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### 段の幅をピクセル数で設定
 
-<pre class="brush: html">&lt;p class="content-box"&gt;
+#### HTML
+
+```html
+<p class="content-box">
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+#### CSS
 
-<pre class="brush: css">.content-box {
+```css
+.content-box {
   column-width: 100px;
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
-<p>{{EmbedLiveSample('Example', 'auto', 160)}}</p>
+{{EmbedLiveSample('Setting_column_width_in_pixels', 'auto', 160)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Writing Modes', '#auto-multicol', 'column-width')}}</td>
-   <td>{{Spec2('CSS4 Writing Modes')}}</td>
-   <td><code>min-content</code>, <code>max-content</code>, <code>fill-available</code>, <code>fit-content</code> の各キーワードによって固有の寸法を追加。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#cw', 'column-width')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.column-width")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">段組みレイアウト</a> (レイアウトの学習)</li>
- <li><a href="/ja/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol">段組みの基本概念</a></li>
-</ul>
+- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) (レイアウトの学習)
+- [段組みの基本概念](/ja/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
