@@ -216,7 +216,7 @@ Para criar uma branch nova:
 
 2.  Clique nele, e você receberá uma lista de branches e um campo de texto que diz "Encontre ou crie uma branch...":
 
-    ![menu mostrando a lista de nomes de branches com uma caixa de texto rotulada como encontre ou crie um ramo](branch-menu.png)
+    ![menu mostrando a lista de nomes de branches com uma caixa de texto rotulada como encontre ou crie uma branch](branch-menu.png)
 
 3.  Se você digitar parte do nome de uma branch que exista no campo de texto, a lista de branches vai ser filtrada a partir desse texto, permitindo que você busque por uma branch existente facilmente. Contudo, nós queremos criar uma branch nova. Digite o nome de uma branch que ainda não existe (tente algo como test-branch) e a tela vai mudar para te mostrar um botão rotulado "Crie uma branch: test-branch a partir da 'main'":
 
@@ -345,30 +345,30 @@ To github.com:chrisdavidmills/content.git
 
 Neste momento, volte para a página do fork remoto em github.com. Você deve ver uma mensagem parecida com "Sua branch está 1 commit a frente de mdn:main." o que significa que o conteúdo do nosso fork tem uma mudança (commit) nela que não existe na branch "main" do mozilla.
 
-1.  To send our change up to the main copy of the repo, we need to create a pull request. This can be easily done using the "Compare & pull request" button that you should see up the top of the files list, once the branch has had a change pushed to it.
+1.  Para enviar nossas mudanças para a cópia principal do repo, nós precisamos criar um pull request (PR). Isto pode ser feito facilmente usando o botão "Compare & pull request" que você deve ver no topo da lista de arquivos, uma vez que você tenha dado push na branch.
 
-    ![Banner with text test branch had recent pushes, and a button labeled compare and pull request](compare-and-pull-request.png)
+    ![Banner com o texto test branch tem alterações recentes, e um botão com o texto comparar e criar um pull request](compare-and-pull-request.png)
 
-    Press this button, and you should get a new screen appearing along these lines:
+    Clique neste botão, e deve aparecer uma tela exibindo estas linhas:
 
-    ![open pull request form, which includes text fields for title and description](open-pull-request.png)
+    ![Formulário para abrir um pull request, que inclui os campos de texto para título e descrição](open-pull-request.png)
 
-    > **Warning:** Only follow the rest of these steps if you have a real change to make to the repo! Please do not actually submit test PRs to our repos.
+    > **Aviso:** Sigo os próximos passos apenas se você tiver uma alteração real para ser feito no repo! Por favor, não faça PRs de teste em nossos repos.
 
-2.  At this point, enter a useful title and description for your PR, saying exactly what it changed, why this is a good thing, and what related issue it fixed, if appropriate. Specifically, include a line saying `Fixes issue-url`. GitHub automatically renders this as a link to the issue number, e.g. `Fixes #1234` and, in addition, automatically closes the related issue once the pull request is merged.
-3.  Once you are ready to send your pull request, click the "Create pull request" button. This will cause your pull request (PR) to appear in the repo's [Pull requests list](https://github.com/mdn/content/pulls), where it'll be reviewed by our review teams, and hopefully merged into the main codebase.
+2.  Neste momento, coloque um título e uma descrição úteis para o seu PR, dizendo exatamente o que você mudou, o porquê disto ser uma coisa boa, e qual a issue que é corrigida, se necessário. Especificamente, inclua uma linha dizendo `Corrige url-issue`. O GitHub automaticamente renderiza isto como um link para o número da issue, e.g. `Corrige #1234` e, além disso, automaticamente fecha a issue relacionada uma vez que o pull request for mesclado.
+3.  Uma vez que você esteja pronto para enviar o seu pull request, clique no botão "Criar pull request". Isto fará com que seu pull request apareça na [Lista de pull requests](https://github.com/mdn/content/pulls) do repo na qual ele será revisado pela equipe de revisão, e, com sorte, mesclado na base principal de código.
 
-    If the review team has changes they want you to make, they'll tell you in comments in the pull request thread (you should receive an email notification to tell you this).
+    Caso a equipe de revisão queira que você faça mudanças, eles vão te falar nos comentários do seu pull request (você deve receber uma notificação por email te avisando sobre isto).
 
-4.  If you want to make further changes to the same pull request you've already submitted, you can do so by making more commits on the same local branch and then pushing them as explained previously. There is no need to create a completely new pull request. **Just make sure you are making them on the same branch as before**.
+4.  Se você quiser fazer mais mudanças para o mesmo pull request que você já submeteu, você pode fazer isso fazendo mais commits na mesma branch local e então dando push conforme foi explicado anteriormente. Não há necessidade de criar um novo pull request. **Tenha certeza de estar fazendo as alterações na mesma branch de antes**
 
-## Troubleshooting
+## Solução de problemas
 
-The above tutorial is aimed at providing you with the basics of git and GitHub that you'll need to contribute to GitHub repos at a basic level. We hope it was helpful! We'd also like to discuss the fact that, despite being the industry standard version control system for the web industry, Git has a kind of mythical/legendary reputation as a painfully difficult tool to learn and use.
+O tutorial acima tem a intenção de te fornecer os fundamentos do git e do GitHub que você vai precisar para contribuir em um nível básico ao repos do GitHub. Esperamos que seja útil! Nós também gostaríamos de discutir o fato de que, apesar de ser o o sistema de controle de versão padrão da indústria para a indústria da web, o Git tem uma reputação meio mística/lendária de ser uma ferramenta dolorosa e difícil de aprender e usar.
 
-We're not sure this is entirely fair. Git has a lot of commands that are sometimes fairly cryptic in their use, and does take a long time to master. It is also fair to say that if you forget some of the commands or do things in the wrong order you can find yourself in some interesting messes that are hard to get out of. However, as long as you get yourself into some good habits as described above, you shouldn't go too far wrong. It is also worth mentioning that Git is much easier to use than it was 10 years ago.
+Nós não achamos isto totalmente justo. O Git tem vários comandos que, pra ser justo, as vezes parecem enigmáticos em seu uso, e realmente tem um longo período para dominar. Também é justo dizer que se você esquecer alguns dos comandos ou fizer as coisas na ordem errada, você pode se encontrar em uma bagunça interessante e difícil de resolver. Contudo, enquanto você tiver bons hábitos conforme os escritos acima, você não deve prolongar tanto o erro. Também vale mencionar que o Git é bem mais fácil de usar do que era há 10 anos atrás.
 
-This section will be added to over time, and includes some useful commands/sequences to help you fix common problems.
+Esta seção vai ser incrementada com o tempo, e incluir alguns comandos/sequências úteis para corrigir problemas comuns.
 
 ### Reverting a change you made to a file that you haven't yet added to the commit list
 
@@ -425,7 +425,7 @@ Se você acha que este guia de solução de problemas deveria ter mais informaç
 
 ## Veja também
 
-- [MDN Learn > Git and GitHub](/pt-BR/docs/Learn/Tools_and_testing/GitHub)
-- [Dangit, Git](https://dangitgit.com/en) — additional useful troubleshooting techniques
-- [45 Github Issues Dos and Don'ts](https://hackernoon.com/45-github-issues-dos-and-donts-dfec9ab4b612)
-- [gh CLI tool](https://cli.github.com/) — once you are used to using the vanilla git CLI commands to control your repos, you might want to consider installing GitHub's own gh CLI tool, which provides commands to speed up a number of the processes discussed above.
+- [Aprendendo com MDN > Git e GitHub](/pt-BR/docs/Learn/Tools_and_testing/GitHub)
+- [Dangit, Git](https://dangitgit.com/en) — técnicas adicionais úteis de solução de problemas
+- [Github Issues - 35 dicas do  que fazer e não fazer](https://hackernoon.com/45-github-issues-dos-and-donts-dfec9ab4b612)
+- [gh CLI tool](https://cli.github.com/) — uma vez que você esteja habituado a usar os comandos do git CLI puro para controlar seus repos, você pode querer considerar instalar a ferramenta gh CLI do GitHub, a qual provê comandos para agilizar os processos discutidos acima.
