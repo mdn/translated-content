@@ -3,31 +3,31 @@ title: transition-property
 slug: Web/CSS/transition-property
 tags:
   - CSS
-  - CSS Property
-  - CSS Transitions
-  - Reference
-  - 'recipe:css-property'
+  - CSS プロパティ
+  - CSS トランジション
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.transition-property
 translation_of: Web/CSS/transition-property
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>transition-property</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、<a href="/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">トランジション効果</a>を適用する CSS プロパティを指定します。</p>
+**`transition-property`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)を適用する CSS プロパティを指定します。
 
-<div>{{EmbedInteractiveExample("pages/css/transition-property.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transition-property.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+> **Note:** [アニメーション可能なプロパティのセット](/ja/docs/Web/CSS/CSS_animated_properties)は変更される可能性があります。これにより、将来意図しない結果を引き起こす可能性があるため、リストで現状アニメーションしないとしているプロパティを使用することは避けてください。
 
-<div class="note"><strong>注:</strong> <a href="/ja/docs/Web/CSS/CSS_animated_properties">アニメーション可能なプロパティのセット</a>は変更される可能性があります。これにより、将来意図しない結果を引き起こす可能性があるため、リストで現状アニメーションしないとしているプロパティを使用することは避けてください。</div>
+一括指定プロパティ (例えば {{cssxref("background")}}) を指定すると、その個別指定のサブプロパティすべてをアニメーションさせることができます。
 
-<p>一括指定プロパティ (例えば {{cssxref("background")}}) を指定すると、その個別指定のサブプロパティすべてをアニメーションさせることができます。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush: css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 transition-property: none;
 transition-property: all;
 
-/* &lt;custom-ident&gt; 値 */
+/* <custom-ident> 値 */
 transition-property: test_05;
 transition-property: -specific;
 transition-property: sliding-vertically;
@@ -40,62 +40,72 @@ transition-property: all, -moz-specific, sliding;
 /* グローバル値 */
 transition-property: inherit;
 transition-property: initial;
+transition-property: revert;
 transition-property: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>none</code></dt>
- <dd>どのプロパティもトランジションを行いません。</dd>
- <dt><code>all</code></dt>
- <dd>トランジションが可能なすべてのプロパティで、トランジションを行います。</dd>
- <dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
- <dd>値が変更されたとき、トランジション効果を適用するプロパティを識別する文字列です。</dd>
-</dl>
+- `none`
+  - : どのプロパティもトランジションを行いません。
+- `all`
+  - : トランジションが可能なすべてのプロパティで、トランジションを行います。
+- {{cssxref("&lt;custom-ident&gt;")}}
+  - : 値が変更されたとき、トランジション効果を適用するプロパティを識別する文字列です。
 
-<h2 id="Formal_definition">Formal definition</h2>
+## 公式定義
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>中心となる <a href="/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS トランジション</a>の記事に、 CSS トランジションの例がいくつかあります。</p>
+### 単純な例
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+この例では、ユーザーが要素の上にカーソルを置いたときに、 4 秒間でフォントサイズの遷移を行います。 `transition-property` は `font-size` です。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#transition-property-property', 'transition-property')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+#### HTML
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+```html
+<a class="target">ここにマウスポインターを置いてください</a>
+```
 
-<p>{{Compat("css.properties.transition-property")}}</p>
+#### CSS
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+```css
+.target {
+  font-size: 14px;
+  transition-property: font-size;
+  transition-duration: 4s;
+}
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS トランジションの使用</a></li>
- <li>{{cssxref('transition')}}</li>
- <li>{{cssxref('transition-duration')}}</li>
- <li>{{cssxref('transition-timing-function')}}</li>
- <li>{{cssxref('transition-delay')}}</li>
- <li>{{domxref("TransitionEvent")}}</li>
-</ul>
+.target:hover {
+  font-size: 36px;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Simple_example', 600, 100)}}
+
+`transition-property` のその他の例は、主となる [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)の記事にあります。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- {{cssxref('transition')}}
+- {{cssxref('transition-duration')}}
+- {{cssxref('transition-timing-function')}}
+- {{cssxref('transition-delay')}}
+- {{domxref("TransitionEvent")}}
