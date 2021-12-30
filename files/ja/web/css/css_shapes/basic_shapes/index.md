@@ -3,141 +3,143 @@ title: 基本シェイプ
 slug: Web/CSS/CSS_Shapes/Basic_Shapes
 tags:
   - CSS
-  - CSS Shapes
   - CSS シェイプ
-  - Guide
-  - Reference
-  - ガイド
+  - 概要
+  - リファレンス
 translation_of: Web/CSS/CSS_Shapes/Basic_Shapes
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p class="summary">CSS のシェイプは {{cssxref("&lt;basic-shape&gt;")}} 型を使用して定義することができ、このガイドでは、この方で受け入れられる様々な値のそれぞれが、どのように動作するかを説明します。単純な円から複雑な多角形までがあります。</p>
+CSS のシェイプは {{cssxref("&lt;basic-shape&gt;")}} 型を使用して定義することができ、このガイドでは、この方で受け入れられる様々な値のそれぞれが、どのように動作するかを説明します。単純な円から複雑な多角形までがあります。
 
-<p>シェイプについて見る前に、これらのシェイプを実現するために一緒に使われる二つの情報を理解しておくことに価値があります。</p>
+シェイプについて見る前に、これらのシェイプを実現するために一緒に使われる二つの情報を理解しておくことに価値があります。
 
-<ul>
- <li><code>&lt;basic-shape&gt;</code> 型</li>
- <li>参照ボックス</li>
-</ul>
+- `<basic-shape>` 型
+- 参照ボックス
 
-<h2 id="The_&lt;basic-shape>_type" name="The_&lt;basic-shape>_type">&lt;basic-shape&gt; 型</h2>
+## \<basic-shape> 型
 
-<p><code>&lt;basic-shape&gt;</code> 型は、すべての基本シェイプを値として使用します。この方は関数表記を使用します。シェイプ型の後に括弧が続き、中にシェイプを説明する追加の値があります。</p>
+`<basic-shape>` 型は、すべての基本シェイプを値として使用します。この方は関数表記を使用します。シェイプ型の後に括弧が続き、中にシェイプを説明する追加の値があります。
 
-<p>受け付ける引数は、作成しようとしているシェイプによって様々です。これらは以下の例で説明します。</p>
+受け付ける引数は、作成しようとしているシェイプによって様々です。これらは以下の例で説明します。
 
-<h2 id="The_reference_box" name="The_reference_box">参照ボックス</h2>
+## 参照ボックス
 
-<p>CSS シェイプで使用される参照ボックスを理解することは、これがそれぞれのシェイプの座標システムを定義するので、基本シェイプを使用するときには重要です。参照ボックスは既に<a href="/ja/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values">ボックス値からシェイプを作成するガイド</a>で、直接参照ボックスを使用してシェイプを作成するのを見たことがありますね。</p>
+CSS シェイプで使用される参照ボックスを理解することは、これがそれぞれのシェイプの座標システムを定義するので、基本シェイプを使用するときには重要です。参照ボックスは既に[ボックス値からシェイプを作成するガイド](/ja/docs/Web/CSS/CSS_Shapes/From_box_values)で、直接参照ボックスを使用してシェイプを作成するのを見たことがありますね。
 
-<p>The Firefox Shapes Inspector helpfully shows the reference box in use when you inspect a shape. In the screenshot below I have created a circle, using <code>shape-outside: circle(50%)</code>. The floated element has 20 pixels of padding, border and margin applied, and the Shapes Inspector highlights these reference boxes. When using a Basic Shape the reference box used by default is the margin-box. You can see in the screenshot that the shape is being defined with reference to that part of the Box Model.</p>
+Firefox のシェイプインスペクターでは、図形を検査するときに使用中の参照ボックスが表示されるようになっています。下のスクリーンショットでは、 `shape-outside: circle(50%)` を使って円を作りました。浮動要素には 20 ピクセルのパディング、境界、マージンが適用され、シェイプインスペクターはこれらの参照ボックスをハイライト表示します。基本図形を使用する場合、既定で使用される参照ボックスは margin-box です。このスクリーンショットでは、ボックスモデルのその部分を参照して形状が定義されていることがわかります。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15904/shapes-reference-box.png" style="height: 840px; width: 1536px;"></p>
+![](shapes-reference-box.png)
 
-<p>You can add the various Box Values after your Basic Shape definition. Therefore the default behaviour is as if you have defined.</p>
+基本図形を定義した後に、様々なボックス値を追加することができます。したがって、既定の動作は、定義した通りになります。
 
-<pre class="brush: css">.shape {
+```css
+.shape {
   shape-outside: circle(50%) margin-box;
 }
-</pre>
+```
 
-<p>You can therefore change this in order that your shape uses the different parts of the box model, for example to use the border.</p>
+したがって、ボックスモデルのさまざまな部分を使用するように、たとえば、境界を使用するように変更することができます。
 
-<pre class="brush: css">.shape {
+```css
+.shape {
   shape-outside: circle(50%) border-box;
 }
-</pre>
+```
 
-<p>What is worth noting is that the <code>margin-box</code> will clip the shape, therefore shapes created in reference to other shapes which extend past the margin box will have the shape clipped to the margin box. We will see this in the following examples of basic shapes.</p>
+注目すべきは、 `margin-box` がシェイプを切り取ることです。したがって、マージンボックスからはみ出した他のシェイプを参照して作成されたシェイプは、マージンボックスで切り取られることになります。このことは、以下の基本的な図形の例で見ることができます。
 
-<p>For an excellent description of references boxes as they apply to CSS Shapes see <a href="http://razvancaliman.com/writing/css-shapes-reference-boxes/">Understanding Reference Boxes for CSS Shapes</a>.</p>
+CSS シェイプに適用される参照ボックスの優れた説明については、 [Understanding Reference Boxes for CSS Shapes](http://razvancaliman.com/writing/css-shapes-reference-boxes/) を参照してください。
 
-<h2 id="inset()">inset()</h2>
+## inset()
 
-<p>The <code>inset()</code> type defines a rectangle, which may not seem very useful as simply floating an item will give you a rectangular shape around it. However the <code>inset()</code> types enables the definition of offsets, thus pulling the content in over the shape.</p>
+`inset()` 型は矩形を定義します。アイテムを浮動にすると、その周囲に矩形ができるので、あまり有用ではないように見えるかもしれません。しかし、 `inset()` 型はオフセットの定義が可能なので、コンテンツをシェイプの上に引き込むことができます。
 
-<p>Therefore <code>inset()</code> takes four values for the top, right, bottom and left values plus a final value for <code>border-radius</code>. The below CSS creates a rectangular shape inset from the reference box of the floated element 20 pixels from the top and bottom and 10 pixels from the left and right, with a border-radius value of 10 pixels.</p>
+したがって、 `inset()` は top, right, bottom, left の 4 つの値に加えて、最後に `border-radius` の値を取ります。以下の CSS は、浮動している要素の参照ボックスから、上下 20 ピクセル、左右 1 0ピクセルの長方形を挿入し、 border-radius の値を 10 ピクセルとします。
 
-<pre class="brush: css">.shape {
+```css
+.shape {
   float: left;
   shape-outside: inset(20px 10px 20px 10px round 10px);
 }
-</pre>
+```
 
-<p>Using the same rules as we use for the margin shorthand, you can set more than one offset at once. If there is only one value, it applies to all sides. If there are two values, the top and bottom offsets are set to the first value and the right and left offsets are set to the second. If there are three values, the top is set to the first value, the left and right are set to the second, and the bottom is set to the third. If there are four values, they apply to the top, right, bottom, and left, respectively. So, the above rules could also be described as:</p>
+マージンの一括指定と同じルールで、一度に複数のオフセットを設定することができます。値が 1 つしかない場合は、すべての辺に適用されます。値が 2 つある場合は、最初の値が上下のオフセットに設定され、 2 番目の値が右と左のオフセットに設定されます。値が 3 つある場合は、 top が 1 番目の値、 left と right が 2 番目の値、 bottom が 3 番目の値に設定されます。値が 4 つある場合は、top、right、bottom、left にそれぞれ適用されます。つまり、上記のルールは次のように表現することもできます。
 
-<pre class="brush: css">.shape {
+```css
+.shape {
   float: left;
   shape-outside: inset(20px 10px round 10px);
-}</pre>
+}
+```
 
-<p>In the example below we have an <code>inset()</code> shape used to pull content over the floated element. Change the offset values to see how the shape changes.</p>
+以下の例では、 `inset()` シェイプを使用して、浮動している要素にコンテンツを引き寄せています。オフセットの値を変更して、シェイプがどのように変化するかを見てみましょう。
 
-<p>{{EmbedGHLiveSample("css-examples/shapes/basic-shape/inset.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/shapes/basic-shape/inset.html", '100%', 800)}}
 
-<p>You can also add the Box Value that you wish to use as a reference box. In the example below change the reference box from <code>margin-box</code> to <code>border-box</code>, <code>padding-box</code> or <code>content-box</code> to see how the reference box used as the starting point before offsets are calculated changes.</p>
+また、参照ボックスとして使用したいボックス値を追加することもできます。以下の例では、参照ボックスを `margin-box` から `border-box`、`padding-box` または `content-box` に変更すると、オフセットの計算前に開始点として使用する参照ボックスがどのように変化するかを確認することができます。
 
-<p>{{EmbedGHLiveSample("css-examples/shapes/basic-shape/inset-box.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/shapes/basic-shape/inset-box.html", '100%', 800)}}
 
-<h2 id="circle()">circle()</h2>
+## circle()
 
-<p>The <code>circle()</code> value for <code>shape-outside</code> can accept two possible arguments. The first is the <code>shape-radius</code>.</p>
+`shape-outside` の `circle()` 値は 2 つの引数を取ることができます。最初は `shape-radius` です。
 
-<p>Both <code>circle()</code> and <code>ellipse()</code> values for <code>shape-outside</code> are specified as accepting this argument of <code>&lt;shape-radius&gt;</code>. This argument can be a length or percentage but can also be one of the keywords <code>closest-side</code> or <code>farthest-side</code>.</p>
+`shape-outside` の `circle()` と `ellipse()` の両方の値は、この `<shape-radius>` という引数を受け付けるように指定されています。この引数は長さまたはパーセント値ですが、キーワード `closest-side` や `farthest-side` のいずれかにすることもできます。
 
-<p>The keyword <code><strong>closest-side</strong></code> uses the length from the center of the shape to the closest side of the reference box. For circles, this is the closest side in any dimension. For ellipses, this is the closest side in the radius dimension.</p>
+**`closest-side`** のキーワードは、シェイプの中心から参照ボックスの最も近い辺までの長さを使用します。円の場合、これは任意の次元で最も近い辺となります。楕円の場合、これはその半径の方向で最も近い辺となります。
 
-<p>The keyword <code><strong>farthest-side</strong></code> uses the length from the center of the shape to the farthest side of the reference box. For circles, this is the farthest side in any dimension. For ellipses, this is the farthest side in the radius dimension.</p>
+**`farthest-side`** のキーワードは、シェイプの中心から参照ボックスの最も遠い辺までの長さを使用します。円の場合、これは任意の次元で最も遠い辺となります。楕円の場合、これはその半径の方向で最も遠い辺となります。
 
-<p>The second argument is a <code>position</code>. If omitted this will be set to <code>center</code>. However you can use any valid position here to indicate the position of the centre of the circle.</p>
+第 2 引数には `position` を指定します。省略した場合は `center` に設定されます。しかし、ここでは、円の中心の位置を示すために、任意の有効な位置を使用することができます。
 
-<p>Our circle therefore accepts one radius value, which may be a length, a percentage or the closest-side or farthest side keyword then optionally the keyword <strong>at</strong> followed by a position value.</p>
+この円は半径の値を 1 つ受け取ります。半径は長さ、パーセント値、または closest-side、farthest-side のキーワードで、オプションでキーワード **at** とその後に位置の値を指定することができます。
 
-<p>In the below example I have created a circle on an item with a width of 100 pixels, plus a margin of 20 pixels. This gives a total width for the reference box of 140 pixels. I have given a value of 50% for the shape-radius value which means that our radius is 70px. I have then set the position value to 30%.</p>
+以下の例では、幅 100 ピクセル、余白20ピクセルのアイテムに円を作成しました。これにより、参照ボックスの幅は合計で 140 ピクセルになります。シェイプの半径の値を 50% に設定し、半径を 70 ピクセルに設定しました。そして、位置の値を 30% に設定した。
 
-<p>{{EmbedGHLiveSample("css-examples/shapes/basic-shape/circle.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/shapes/basic-shape/circle.html", '100%', 800)}}
 
-<p>In the live example you can play with increasing or decreasing the size of the circle by changing the size of the radius, moving the circle around with the position value, or setting a reference box as we did for <code>inset()</code>.</p>
+ライブサンプルでは、半径の大きさを変えたり、ポジションの値で円を動かしたり、 `inset()` で行ったように参照ボックスを設定することで、円の大きさを拡大縮小して遊ぶことができます。
 
-<p>As an additional example, if you use the keywords <code>top left</code> for position, you can make a quarter circle shape in the top left corner of the page. The example below uses generated content to create a quarter circle shape for text to flow around.</p>
+追加の例として、 position に `top left` というキーワードを使用すると、ページの左上隅に 1/4 の扇形を作ることができます。以下の例では、生成コンテンツを使って、テキストが流れるような 1/4 の扇形を作成しています。
 
-<p>{{EmbedGHLiveSample("css-examples/shapes/basic-shape/circle-generated.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/shapes/basic-shape/circle-generated.html", '100%', 700)}}
 
-<h3 id="The_shape_will_be_clipped_by_the_margin_box" name="The_shape_will_be_clipped_by_the_margin_box">シェイプはマージンボックスで切り取られる</h3>
+### 図形はマージンボックスで切り取られる
 
-<p>When describing Reference Boxes I explained that the margin-box will clip the shape. You can see this by moving the centre of our circle towards the content by setting the position to 60%. The centre of the circle is now nearer the content and the circle extends past the margin-box. This means that the extension becomes clipped and squared off.</p>
+参照ボックスの説明の際に、 margin-box ではシェイプが切り取られることを説明しました。これは、位置を 60% に設定して、円の中心をコンテンツの方に移動させることで確認できます。円の中心はコンテンツに近くなり、円は margin-box を越えて広がっています。これは、広がった部分が切り取られ、四角くなることを意味します。
 
-<pre class="brush: css">img {
+```css
+img {
   float: left;
   shape-outside: circle(50% at 60%);
 }
-</pre>
+```
 
-<p><img alt="The circle shape is clipped by the margin box" src="https://mdn.mozillademos.org/files/15903/shapes-circle-clipped.png" style="height: 602px; width: 1536px;"></p>
+![円形はマージンボックスで切り取られる](shapes-circle-clipped.png)
 
-<h2 id="ellipse()">ellipse()</h2>
+## ellipse()
 
-<p>An ellipse is essentially a squashed circle and so <code>ellipse()</code> acts in a very similar way to <code>circle()</code> except that we have to specify two radii x and y in that order.</p>
+楕円は基本的に円をつぶしたものなので、 `ellipse()` は `circle()` ととてもよく似た動作をしますが、 x と y の 2 つの半径をこの順番で指定しなければならない点が異なります。
 
-<p>These may then be followed by position values as with <code>circle()</code> to move the centre of the ellipse around. In the example below we have an ellipse with an x radius of 40%, a y radius of 50% and the position being left. This means that the centre of the ellipse is on the left edge of the box giving us a half ellipse shape to wrap our text around. You can change these values to see how the ellipse changes.</p>
+そして、これらの半径の後に `circle()` と同様に位置を指定して、楕円の中心を移動させることができます。以下の例では、 x の半径が 40%、 y の半径が 50%、位置が left の楕円を作成しています。これは、楕円の中心がボックスの左端にあることを意味し、テキストを囲むための半分の楕円の形が得られます。これらの値を変更することで、楕円の形がどのように変化するかを確認できます。
 
-<p>{{EmbedGHLiveSample("css-examples/shapes/basic-shape/ellipse.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/shapes/basic-shape/ellipse.html", '100%', 800)}}
 
-<p>The keyword values of <code>closest-side</code> and <code>farthest-side</code> are useful to create a quick ellipse based on the size of the floated element reference box.</p>
+キーワード値である `closest-side` と `farthest-side` は、浮動要素の参照ボックスの大きさに基づいて、素早く楕円を作成するのに便利です。
 
-<p>{{EmbedGHLiveSample("css-examples/shapes/basic-shape/ellipse-keywords.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/shapes/basic-shape/ellipse-keywords.html", '100%', 800)}}
 
-<h2 id="polygon()">polygon()</h2>
+## polygon()
 
-<p>The final Basic Shape is the most complex and enables the creation of many side shapes by way of creating a <code>polygon()</code>. This shape accepts three or more pairs of values (a polygon must at least draw a triangle). These values are co-ordinates drawn with reference to the reference box.</p>
+最後の基本図形は最も複雑なもので、 `polygon()` を作成することによって多くの辺を持ったシェイプを作成することができます。この図形は、 3 つ以上の値の組を受け付けます（多角形は少なくとも三角形を描かなければなりません）。これらの値は、参照ボックスを基準にして描かれた座標です。
 
-<p>In the example below I have created a shape for text to follow using the <code>polygon()</code>, you can change any of the values to see how the shape is changed.</p>
+下の例では、`polygon()` を使って、テキストを追うための形状を作成しました。どの値を変更しても、形状がどのように変化するかを見ることができます。
 
-<p>{{EmbedGHLiveSample("css-examples/shapes/basic-shape/polygon.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/shapes/basic-shape/polygon.html", '100%', 800)}}
 
-<p>You may well find the Firefox Shape Inspector very useful here to create your polygon shape. The screenshot below shows the shape highlighted in the tool.</p>
+ここで、多角形の形状を作成するのに、 Firefox のシェイプインスペクターがとても便利であることが分かるかもしれません。下のスクリーンショットは、このツールで強調された形状を示しています。
 
-<p><img alt="The polygon basic shape, highlighted with the Shapes Inspector." src="https://mdn.mozillademos.org/files/15902/shapes-polygon.png" style="height: 540px; width: 1524px;"></p>
+![シェイプインスペクターで強調表示されたポリゴンの基本シェイプ](shapes-polygon.png)
 
-<p>Another useful resource is <a href="http://bennettfeely.com/clippy/">Clippy</a> - a tool for creating shapes for <code>clip-path</code>, as the values for Basic Shapes are the same as those used for <code>clip-path</code>.</p>
+もう一つの有用なリソースは [Clippy](https://bennettfeely.com/clippy/) です。これは `clip-path` 用のシェイプを作成するツールですが、基本シェイプの値は `clip-path` で使われるものと同じだからです。
