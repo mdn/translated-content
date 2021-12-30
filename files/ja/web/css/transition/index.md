@@ -31,16 +31,16 @@ translation_of: Web/CSS/transition
 
 ```css
 /* 1 つのプロパティへの適用 */
-/* プロパティ名 | 時間 */
+/* プロパティ名 | 所要時間 */
 transition: margin-right 4s;
 
-/* プロパティ名 | 時間 | 遅延 */
+/* プロパティ名 | 所要時間 | 待ち時間 */
 transition: margin-right 4s 1s;
 
-/* プロパティ名 | 時間 | イージング関数 */
+/* プロパティ名 | 所要時間 | イージング関数 */
 transition: margin-right 4s ease-in-out;
 
-/* プロパティ名 | 時間 | イージング関数 | 遅延 */
+/* プロパティ名 | 所要時間 | イージング関数 | 待ち時間 */
 transition: margin-right 4s ease-in-out 1s;
 
 /* 2 つのプロパティへの適用 */
@@ -67,7 +67,7 @@ transition: unset;
   - CSS プロパティの名前である {{cssxref("&lt;custom-ident&gt;")}}
 
 - 使用するイージング関数を表す 0 または 1 個の {{cssxref("&lt;easing-function&gt;")}} の値
-- 0 ～ 2 個の {{cssxref("&lt;time&gt;")}} の値。 1 番目の値は {{cssxref("transition-duration")}} に割り当てられる時間として解釈され、 2 番目の値は {{cssxref("transition-delay")}} に割り当てられる時間として解釈されます。
+- 0 ～ 2 個の {{cssxref("&lt;time&gt;")}} の値。 1 番目の値は {{cssxref("transition-duration")}} に割り当てられる所要時間として解釈され、 2 番目の値は {{cssxref("transition-delay")}} に割り当てられる待ち時間として解釈されます。
 
 プロパティ値の一覧が同じ長さではない場合については、[プロパティ値のリストの長さが異なる場合](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths)を参照してください。つまり、実際にアニメーション化されているプロパティの数を超える余分なトランジションの記述は無視されます。
 
