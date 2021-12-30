@@ -2,869 +2,62 @@
 title: CSS トランジションの使用
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
 tags:
-  - Advanced
+  - 上級者
   - CSS
-  - CSS Transitions
-  - CSS3 Transitions
+  - CSS トランジション
+  - CSS3 トランジション
   - Guide
 translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
-<p>{{CSSref}}</p>
+{{CSSref}}
 
-<p><span class="seoSummary"><strong>CSS トランジション</strong>は、 CSS プロパティが変化する際のアニメーションの速度を操作する手段を提供します。プロパティの変更を直ちに有効にするのではなく、プロパティの変更を一定期間にわたって発生させることを可能にします。</span>例えば、ある要素の前景色を白色から黒色に変更した場合、通常は即座に前景色が替わります。 CSS トランジションを有効にすると、加速カーブに従った時間間隔で変更が行われ、その変化のすべてをカスタマイズすることができます。</p>
+**CSS トランジション**は、 CSS プロパティが変化する際のアニメーションの速度を操作する手段を提供します。プロパティの変更を直ちに有効にするのではなく、プロパティの変更を一定期間にわたって発生させることを可能にします。例えば、ある要素の前景色を白色から黒色に変更した場合、通常は即座に前景色が替わります。 CSS トランジションを有効にすると、加速カーブに従った時間間隔で変更が行われ、その変化のすべてをカスタマイズすることができます。
 
-<p>2つの状態間のトランジションを含むアニメーションは、開始状態と最終状態の間の状態がブラウザーによって暗黙的に定義されるため、<em>暗黙的なトランジション</em>と呼ばれることがあります。</p>
+2 つの状態間のトランジションを含むアニメーションは、開始状態と最終状態の間の状態がブラウザーによって暗黙的に定義されるため、*暗黙的なトランジション*と呼ばれることがあります。
 
-<p><img alt="A CSS transition tells the browser to draw the intermediate states between the initial and final states, showing the user a smooth transitions." src="/files/4529/TransitionsPrinciple.png" style="display: block; height: 196px; margin: auto; width: 680px;"></p>
+![CSS トランジションは、初期状態と最終状態の間にある中間状態を描画することで、ユーザーにスムーズな遷移を見せるものです。](transitionsprinciple.png)
 
-<p>CSS トランジションは、アニメーションを開始する場合 (<em>遅延</em>を設定することで)、トランジションをどの程度持続するか (<em>持続時間</em>を設定することによって)、およびトランジションをどのように実行するか (<em>タイミング関数</em>を定義することによって、例えば、直線的または最初は速く、最後に遅くなど) を、 (明示的にリストすることによって) アニメーションするためのプロパティを決定させます。</p>
+CSS トランジションは、アニメーションを開始する場合 (*遅延*を設定することで)、トランジションをどの程度持続するか (*持続時間*を設定することによって)、およびトランジションをどのように実行するか (*タイミング関数*を定義することによって、例えば、直線的または最初は速く、最後に遅くなど) を、 (明示的にリストすることによって) アニメーションするためのプロパティを決定させます。
 
-<h2 id="Which_CSS_properties_can_be_transitioned" name="Which_CSS_properties_can_be_transitioned">トランジション可能な CSS プロパティとは</h2>
+## トランジション可能な CSS プロパティとは
 
-<p>ウェブサイトの作成者はどのプロパティを、どのようにアニメーションさせるのかを定義できます。これにより複雑な遷移を起こすことが可能です。プロパティによってはアニメーションさせることに意味がない場合があるので、<a href="/ja/docs/Web/CSS/CSS_animated_properties">アニメーション可能なプロパティ</a>は限られています。</p>
+ウェブサイトの作成者はどのプロパティを、どのようにアニメーションさせるのかを定義できます。これにより複雑な遷移を起こすことが可能です。プロパティによってはアニメーションさせることに意味がない場合があるので、[アニメーション可能なプロパティ](/ja/docs/Web/CSS/CSS_animated_properties)は限られています。
 
-<div class="note">注: アニメーションさせることのできるプロパティは仕様改定により変わっています。</div>
+> **Note:** アニメーションさせることのできるプロパティは仕様改訂により変化しています。
 
-<p class="note"><code>auto</code> の値はしばしばとても複雑になります。仕様書では開始及び終了値が <code>auto</code> の場合はアニメーションしないよう推奨しています。 Gecko を利用したものなど、一部のユーザーエージェントはこの要件を実装しており、 WebKit を利用したものなどではより制約が少なくなります。 <code>auto</code> でアニメーションを利用すると、ブラウザーやそのバージョンによって予測できない結果になる可能性があるため、避けるべきです。</p>
+> **Note:** `auto` の値はしばしばとても複雑になります。仕様書では開始値および終了値が `auto` の場合はアニメーションしないよう推奨しています。 Gecko を利用したものなど、一部のユーザーエージェントはこの要件を実装しており、 WebKit を利用したものなどではより制約が少なくなります。 `auto` でアニメーションを利用すると、ブラウザーやそのバージョンによって予測できない結果になる可能性があるため、避けるべきです。
 
-<h2 id="Defining_transitions" name="Defining_transitions">トランジションの定義</h2>
+## トランジションの定義
 
-<p>CSS トランジションは一括指定の {{cssxref("transition")}} プロパティを使用して制御されます。トランジションを設定する上で最も良い方法で、パラメータを列挙する数がずれてしまって、とってもイライラしながら CSS のデバッグを多大な時間を使って行うことを防いでくれます。</p>
+CSS トランジションは一括指定の {{cssxref("transition")}} プロパティを使用して制御されます。トランジションを設定する上で最も良い方法で、パラメータを列挙する数がずれてしまって、とってもイライラしながら CSS のデバッグを多大な時間を使って行うことを防いでくれます。
 
-<p>それぞれのトランジションコンポーネントに対しては以下のサブプロパティを用いてコントロールできます。</p>
+それぞれのトランジションコンポーネントに対しては以下のサブプロパティを用いてコントロールできます。
 
-<p><strong>(なお、以下のトランジションは、サンプルをお見せするために無限ループさせています。 CSS のトランジションは、プロパティの変更を始点から終点まで視覚化するだけです。ループさせる必要がある場合は、 CSS の <code><a href="/ja/docs/CSS/animation">animation</a></code> プロパティを参照してください。)</strong></p>
+- {{cssxref("transition-property")}}
+  - : トランジションを適用する CSS プロパティの名前を指定します。ここに指定したプロパティだけが、トランジションによりアニメーションします。通常、それ以外のプロパティの変更は即座に反映されます。
+- {{cssxref("transition-duration")}}
+  - : トランジションの実行にかかる所要時間を指定します。単一の値を指定すると、すべてのプロパティのトランジションの所要時間として適用されます。または複数の値を指定すると、プロパティごとにトランジションの所要時間として異なる値を指定することができます。
+- {{cssxref("transition-timing-function")}}
+  - : プロパティの中間の値を計算する方法を定義する関数を指定します。*タイミング関数*はトランジションの中間の値がどのように計算されるかを定義します。多くの[タイミング関数](/ja/docs/Web/CSS/easing-function)は対応する関数のグラフを提供することで指定され、これは三次ベジェ関数を定義する 4 つの点で定義されます。 [Easing Functions Cheat Sheet](https://easings.net/) からイージングを選択することもできます。
+- {{cssxref("transition-delay")}}
+  - : プロパティが変化した時点から、トランジションが実際に始まるまでの待ち時間を定義します。
 
-<dl>
- <dt>{{cssxref("transition-property")}}</dt>
- <dd>トランジションを適用する CSS プロパティの名前を指定します。ここに指定したプロパティだけが、トランジションによりアニメーションします。通常、それ以外のプロパティの変更は即座に反映されます。</dd>
- <dt>{{cssxref("transition-duration")}}</dt>
- <dd>トランジションの実行にかかる所要時間を指定します。単一の値を指定すると、すべてのプロパティのトランジションの所要時間として適用されます。または複数の値を指定すると、プロパティごとにトランジションの所要時間として異なる値を指定することができます。
- <div>
- <div id="duration_0_5s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
- <p><code>transition-duration: 0.5s</code></p>
+一括指定の CSS の構文は以下のように書きます。
 
- <div class="hidden">
- <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
- <pre class="brush:css notranslate">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration: 0.5s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
+```css
+div {
+    transition: <property> <duration> <timing-function> <delay>;
 }
-.box1{
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top: 25px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration: 0.5s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transformv color;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
-}
-</pre>
+```
 
- <pre class="brush:js notranslate">function updateTransition() {
-  var el = document.querySelector("div.box");
+## 例
 
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
+### 単純な例
 
-  return el;
-}
+この例では 4 秒間のフォントの大きさのトランジションを行い、ユーザーがマウスを要素上に移動してからアニメーション効果が始まるまで 2 秒間の遅延を行います。
 
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
- </div>
-
- <div>{{EmbedLiveSample("duration_0_5s", 275, 150)}}</div>
- </div>
-
- <div id="duration_1s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
- <p><code>transition-duration: 1s</code></p>
-
- <div class="hidden">
- <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
- <pre class="brush: css notranslate">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top -webkit-transform color;
-    -webkit-transition-duration: 1s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform color;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-}
-.box1{
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top: 25px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top -webkit-transform transform color;
-    -webkit-transition-duration: 1s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-}
-</pre>
-
- <pre class="brush:js notranslate">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
- </div>
-
- <div>{{EmbedLiveSample("duration_1s",275,150)}}</div>
- </div>
-
- <div id="duration_2s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
- <p><code>transition-duration: 2s</code></p>
-
- <div class="hidden">
- <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
- <pre class="brush: css notranslate">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration: 2s;
-    transition-timing-function: ease-in-out;
-}
-.box1{
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top: 25px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration: 2s;
-    transition-timing-function: ease-in-out;
-}
-</pre>
-
- <pre class="brush:js notranslate">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
- </div>
-
- <div>{{EmbedLiveSample("duration_2s",275,150)}}</div>
- </div>
-
- <div id="duration_4s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
- <p><code>transition-duration: 4s</code></p>
-
- <div class="hidden">
- <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
- <pre class="brush: css notranslate">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration: 4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration: 4s;
-    transition-timing-function: ease-in-out;
-}
-.box1{
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top: 25px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top transform -webkit-transform color;
-    -webkit-transition-duration: 4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top transform -webkit-transform color;
-    transition-duration: 4s;
-    transition-timing-function: ease-in-out;
-}
-</pre>
-
- <pre class="brush:js notranslate">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
- </div>
-
- <div>{{EmbedLiveSample("duration_4s",275,150)}}</div>
- </div>
- </div>
- </dd>
- <dt>{{cssxref("transition-timing-function")}}</dt>
- <dd><img alt="" src="/files/3434/TF_with_output_gt_than_1.png" style="float: left; height: 173px; margin-right: 5px; width: 130px;">プロパティの中間の値を計算する方法を定義する関数を指定します。<em>タイミング関数</em>はトランジションの中間の値がどのように計算されるかを定義します。多くの<a href="/ja/docs/Web/CSS/timing-function">タイミング関数</a>は対応する関数のグラフを提供することで指定され、これは三次ベジェ関数を定義する4つの点で定義されます。 <a href="http://easings.net/">Easing Functions Cheat Sheet</a> からイージングを選択することもできます。.
- <div class="cleared">
- <div id="ttf_ease" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
- <p><code>transition-timing-function: ease</code></p>
-
- <div class="hidden">
- <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
- <pre class="brush: css notranslate">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-timing-function: ease;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-timing-function: ease;
-}
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top: 25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-timing-function: ease;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-timing-function: ease;
-}
-</pre>
-
- <pre class="brush:js notranslate">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
- </div>
-
- <div>{{EmbedLiveSample("ttf_ease",275,150)}}</div>
- </div>
-
- <div id="ttf_linear" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
- <p><code>transition-timing-function: linear</code></p>
-
- <div class="hidden">
- <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
- <pre class="brush: css notranslate">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-timing-function: linear;
-}
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-timing-function: linear;
-}
-</pre>
-
- <pre class="brush:js notranslate">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
- </div>
-
- <div>{{EmbedLiveSample("ttf_linear",275,150)}}</div>
- </div>
-
- <div id="ttf_stepend" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
- <p><code>transition-timing-function: step-end</code></p>
-
- <div class="hidden">
- <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
- <pre class="brush: css notranslate">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-timing-function: step-end;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-timing-function: step-end;
-}
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-timing-function: step-end;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-timing-function: step-end;
-}
-</pre>
-
- <pre class="brush:js notranslate">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
- </div>
-
- <div>{{EmbedLiveSample("ttf_stepend",275,150)}}</div>
- </div>
-
- <div id="ttf_step4end" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
- <p><code>transition-timing-function: steps(4, end)</code></p>
-
- <div class="hidden">
- <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
- <pre class="brush: css notranslate">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-timing-function: steps(4, end);
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-timing-function: steps(4, end);
-}
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top: 25px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-timing-function: steps(4, end);
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-timing-function: steps(4, end);
-}
-</pre>
-
- <pre class="brush:js notranslate">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
- </div>
-
- <div>{{EmbedLiveSample("ttf_step4end",275,150)}}</div>
- </div>
- </div>
- </dd>
- <dt>{{cssxref("transition-delay")}}</dt>
- <dd>プロパティが変化した時点から、トランジションが実際に始まるまでの待ち時間を定義します。
- <div>
- <div id="delay_0_5s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
- <p><code>transition-delay: 0.5s</code></p>
-
- <div class="hidden">
- <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
- <pre class="brush: css notranslate">.parent {
-    width: 250px;
-    height: 125px;
-}
-
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-delay: 0.5s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-delay: 0.5s;
-    transition-timing-function: linear;
-}
-
-.box1 {
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position: absolute;
-     -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-delay: 0.5s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-delay: 0.5s;
-    transition-timing-function: linear;
-}
-</pre>
-
- <pre class="brush:js notranslate">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
- </div>
-
- <div>{{EmbedLiveSample("delay_0_5s",275,150)}}</div>
- </div>
-
- <div id="delay_1s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
- <p><code>transition-delay: 1s</code></p>
-
- <div class="hidden">
- <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
- <pre class="brush: css notranslate">.parent {
-    width: 250px;
-    height: 125px;
-}
-
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-     -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-delay: 1s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-delay: 1s;
-    transition-timing-function: linear;
-}
-
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top: 25px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-delay: 1s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-delay: 1s;
-    transition-timing-function: linear;
-}
-</pre>
-
- <pre class="brush:js notranslate">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
- </div>
-
- <div>{{EmbedLiveSample("delay_1s",275,150)}}</div>
- </div>
-
- <div id="delay_2s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
- <p><code>transition-delay: 2s</code></p>
-
- <div class="hidden">
- <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
- <pre class="brush: css notranslate">.parent {
-    width: 250px;
-    height: 125px;
-}
-
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-delay: 2s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-delay: 2s;
-    transition-timing-function: linear;
-}
-
-.box1 {
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top: 25px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-delay: 2s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-delay: 2s;
-    transition-timing-function: linear;
-}
-</pre>
-
- <pre class="brush:js notranslate">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
- </div>
-
- <div>{{EmbedLiveSample("delay_2s",275,150)}}</div>
- </div>
-
- <div id="delay_4s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
- <p><code>transition-delay: 4s</code></p>
-
- <div class="hidden">
- <pre class="brush:html notranslate"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
- <pre class="brush: css notranslate">.parent {
-    width: 250px;
-    height: 125px;
-}
-
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-delay: 4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-delay: 4s;
-    transition-timing-function: ease-in-out;
-}
-
-.box1 {
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top: 25px;
-    position: absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-delay: 4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
-    transition-delay: 4s;
-    transition-timing-function: ease-in-out;
-}
-</pre>
-
- <pre class="brush:js notranslate">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
- </div>
-
- <div>{{EmbedLiveSample("delay_4s",275,150)}}</div>
- </div>
- </div>
- </dd>
-</dl>
-
-<p>一括指定の CSS の構文は以下のように書きます。</p>
-
-<pre class="brush: css notranslate">div {
-    transition: &lt;property&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt;;
-}</pre>
-
-<h2 id="Examples" name="Examples">例</h2>
-
-<h3 id="Simple_example" name="Simple_example">単純な例</h3>
-
-<p>この例では4秒間のフォントの大きさのトランジションを行い、ユーザーがマウスを要素上に移動してからアニメーション効果が始まるまで2秒間の遅延を行います。</p>
-
-<pre class="brush: css notranslate">#delay {
+```css
+#delay {
   font-size: 14px;
   transition-property: font-size;
   transition-duration: 4s;
@@ -874,22 +67,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 #delay:hover {
   font-size: 36px;
 }
-</pre>
+```
 
-<h3 id="Multiple_animated_properties_example" name="Multiple_animated_properties_example">複数のアニメーションするプロパティの例</h3>
+<h3 id="Multiple_animated_properties_example">複数のアニメーションするプロパティの例</h3>
 
-<div class="hidden">
-<h4 id="HTML_Content">HTML Content</h4>
+```html hidden
+<body>
+    <p>The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.</p>
+    <div class="box">Sample</div>
+</body>
+```
 
-<pre class="brush: html; highlight:[3] notranslate">&lt;body&gt;
-    &lt;p&gt;The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.&lt;/p&gt;
-    &lt;div class="box"&gt;Sample&lt;/div&gt;
-&lt;/body&gt;</pre>
-</div>
+#### CSS コンテンツ
 
-<h4 id="CSS_Content">CSS Content</h4>
-
-<pre class="brush: css; highlight:[8,9] notranslate">.box {
+```css
+.box {
     border-style: solid;
     border-width: 1px;
     display: block;
@@ -905,111 +97,126 @@ var intervalID = window.setInterval(updateTransition, 7000);
     height: 200px;
     transform: rotate(180deg);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Multiple_animated_properties_example', 600, 300)}}</p>
+{{EmbedLiveSample('Multiple_animated_properties_example', 600, 300)}}
 
-<h3 id="When_property_value_lists_are_of_different_lengths" name="When_property_value_lists_are_of_different_lengths">プロパティ値のリストの長さが異なる場合</h3>
+### プロパティ値のリストの長さが異なる場合
 
-<p>何れかのプロパティで、値のリストが他よりも短い場合、以下のように、他と一致するまで繰り返されます。</p>
+何れかのプロパティで、値のリストが他よりも短い場合、以下のように、他と一致するまで繰り返されます。
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   transition-property: opacity, left, top, height;
   transition-duration: 3s, 5s;
 }
-</pre>
+```
 
-<p>以下のようであるかのように扱われます。</p>
+This is treated as if it were:
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   transition-property: opacity, left, top, height;
   transition-duration: 3s, 5s, 3s, 5s;
-}</pre>
+}
+```
 
-<p>同様に、何れかのプロパティで値のリストが {{cssxref("transition-property")}} のリストよりも長い場合は切り詰められますので、以下の CSS のようになります。</p>
+同様に、何れかのプロパティで値のリストが {{cssxref("transition-property")}} のリストよりも長い場合は切り詰められますので、以下の CSS のようになります。
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   transition-property: opacity, left;
   transition-duration: 3s, 5s, 2s, 1s;
-}</pre>
+}
+```
 
-<p>これは以下のように解釈されます。</p>
+This gets interpreted as:
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   transition-property: opacity, left;
   transition-duration: 3s, 5s;
-}</pre>
+}
+```
 
-<h3 id="Using_transitions_when_highlighting_menus" name="Using_transitions_when_highlighting_menus">メニューのハイライトにトランジションを用いる</h3>
+### メニューのハイライトにトランジションを用いる
 
-<p>CSS の一般的な使い方として、メニューのアイテムにマウスポインターを乗せたときに、そのアイテムをハイライトさせることがあります。より魅力的な効果を出すためにトランジションを使うことは、簡単にできます。</p>
+CSS の一般的な使い方として、メニューのアイテムにマウスポインターを乗せたときに、そのアイテムをハイライトさせることがあります。より魅力的な効果を出すためにトランジションを使うことは、簡単にできます。
 
-<p>コードの断片を見る前に、<a href="https://codepen.io/anon/pen/WOEpva">ライブデモ</a>をご覧になるとよいでしょう (ご利用のブラウザーがトランジションに対応している場合)。</p>
+まずは、 HTML でメニューを作成します。
 
-<p>まずは、 HTML でメニューを作成します。</p>
+```html
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact Us</a>
+  <a href="#">Links</a>
+</nav>
+```
 
-<pre class="brush: html notranslate">&lt;nav&gt;
-  &lt;a href="#"&gt;Home&lt;/a&gt;
-  &lt;a href="#"&gt;About&lt;/a&gt;
-  &lt;a href="#"&gt;Contact Us&lt;/a&gt;
-  &lt;a href="#"&gt;Links&lt;/a&gt;
-&lt;/nav&gt;</pre>
+そして、メニューのルック＆フィールを実装するために CSS を作成します。関連のある部分を以下に示します。
 
-<p>そして、メニューのルック＆フィールを実装するために CSS を作成します。関連のある部分を以下に示します。</p>
+```css
+nav {
+  display: flex;
+  gap: 0.5rem;
+}
 
-<pre class="brush: css notranslate">a {
-  color: #fff;
+a {
+  flex: 1;
   background-color: #333;
-  transition: all 1s ease-out;
+  color: #fff;
+  border: 1px solid;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
 }
 
 a:hover,
 a:focus {
-  color: #333;
   background-color: #fff;
+  color: #333;
 }
-</pre>
+```
 
-<p>この CSS は、メニューの外見を決めています。また、要素が {{cssxref(":hover")}} および {{cssxref(":focus")}} の状態であるときに、背景色と前景色を変化させています。</p>
+この CSS は、メニューの外見を決めています。また、要素が {{cssxref(":hover")}} および {{cssxref(":focus")}} の状態であるときに、背景色と前景色を変化させています。
 
-<h2 id="JavaScript_examples" name="JavaScript_examples">JavaScript の例</h2>
+{{EmbedLiveSample("Using transitions when highlighting menus")}}
 
-<div class="note">
-<p>次のような場合の直後にトランジションを使用する場合は注意してください。</p>
+## JavaScript の例
 
-<ul>
- <li><code>.appendChild()</code> を使用して DOM に要素を追加したとき</li>
- <li>要素の <code>display: none;</code> プロパティを外したとき</li>
-</ul>
+> **Note:** 次のような場合の直後にトランジションを使用する場合は注意してください。
+>
+> - `.appendChild()` を使用して DOM に要素を追加したとき
+> - 要素の `display: none;` プロパティを外したとき
+>
+> この場合、初期の状態が発生せず、要素が常に最後の状態であるかのように扱われます。この制限を解決する簡単な方法は、トランジションを行いたい CSS プロパティを変更する前に、数ミリ秒の `window.setTimeout()` を適用することです。
 
-<p>この場合、初期の状態が発生せず、要素が常に最後の状態であるかのように扱われます。この制限を会計つする簡単な方法は、トランジションを行いたい CSS プロパティを変更する前に、数ミリ秒の <code>window.setTimeout()</code> を適用することです。</p>
-</div>
+### JavaScript の機能をスムーズにするためのトランジション
 
-<h3 id="Using_transitions_to_make_JavaScript_functionality_smooth" name="Using_transitions_to_make_JavaScript_functionality_smooth">JavaScript の機能をスムーズにするためのトランジション</h3>
+トランジションは、 JavaScript による機能に対して何も行うことなしに、よりスムーズにさせることができる素晴らしいツールです。以下の例をご覧ください。
 
-<p>トランジションは、 JavaScript による機能に対して何も行うことなしに、よりスムーズにさせることができる素晴らしいツールです。以下の例をご覧ください。</p>
+```html
+<p>Click anywhere to move the ball</p>
+<div id="foo" class="ball"></div>
+```
 
-<pre class="brush: html notranslate">&lt;p&gt;Click anywhere to move the ball&lt;/p&gt;
-&lt;div id="foo"&gt;&lt;/div&gt;
-</pre>
+JavaScript を使用して、ある場所にボールを移動させる効果を作ることができます。
 
-<p>JavaScript を使用して、ある場所にボールを移動させる効果を作ることができます。</p>
-
-<pre class="brush: js notranslate">var f = document.getElementById('foo');
+```js
+var f = document.getElementById('foo');
 document.addEventListener('click', function(ev){
     f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
     f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
 },false);
-</pre>
+```
 
-<p>CSS により余分な努力をせずに、上記の効果をスムーズにさせることができます。単に要素へトランジションを追加すると、変化がスムーズに発生するようになります。</p>
+CSS により余分な努力をせずに、上記の効果をスムーズにさせることができます。単に要素へトランジションを追加すると、変化がスムーズに発生するようになります。
 
-<pre class="brush: css notranslate">p {
-  padding-left: 60px;
-}
-
-#foo {
-  border-radius: 50px;
+```css
+.ball {
+  border-radius: 25px;
   width: 50px;
   height: 50px;
   background: #c00;
@@ -1018,55 +225,41 @@ document.addEventListener('click', function(ev){
   left: 0;
   transition: transform 1s;
 }
-</pre>
+```
 
-<p>この例は、 <a href="http://jsfiddle.net/9h261pzo/291/">http://jsfiddle.net/9h261pzo/291/</a> で実行することができます。</p>
+{{EmbedGHLiveSample("css-examples/transitions/js-transitions.html", '100%', 500)}}
 
-<h3 id="Detecting_the_start_and_completion_of_a_transition" name="Detecting_the_start_and_completion_of_a_transition">トランジションの開始と完了の検出</h3>
+### トランジションの開始と完了の検出
 
-<p>{{event("transitionend")}} イベントを使用することでで、アニメーションの実行が終了したことを検出することができます。これは {{domxref("TransitionEvent")}} オブジェクトで、通常の {{domxref("Event")}} オブジェクトに二つのプロパティを追加したものです。</p>
+{{domxref("HTMLElement/transitionend_event", "transitionend")}} イベントを使用することでで、アニメーションの実行が終了したことを検出することができます。これは {{domxref("TransitionEvent")}} オブジェクトで、通常の {{domxref("Event")}} オブジェクトに 2 つのプロパティを追加したものです。
 
-<dl>
- <dt><code>propertyName</code></dt>
- <dd>文字列で、トランジションが完了した CSS プロパティの名前を示します。</dd>
- <dt><code>elapsedTime</code></dt>
- <dd>浮動小数点値で、イベントが発火してからトランジションが実行された時間を示します。この値は {{cssxref("transition-delay")}} の値に影響されません。</dd>
-</dl>
+- `propertyName`
+  - : 文字列で、トランジションが完了した CSS プロパティの名前を示します。
+- `elapsedTime`
+  - : 浮動小数点値で、イベントが発行されてからトランジションが実行された時間を示します。この値は {{cssxref("transition-delay")}} の値に影響されません。
 
-<p>通常は、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} メソッドを使用してこのイベントを監視することができます。</p>
+通常は、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} メソッドを使用してこのイベントを監視することができます。
 
-<pre class="brush: js notranslate">el.addEventListener("transitionend", updateTransition, true);
-</pre>
+```js
+el.addEventListener("transitionend", updateTransition, true);
+```
 
-<p>トランジションの開始は {{event("transitionrun")}} (遅延の前に発火) および {{event("transitionstart")}} (遅延の後に発火) を使用して、同じ形で検出することができます。</p>
+トランジションの開始は {{domxref("HTMLElement/transitionrun_event", "transitionrun")}} (遅延の前に発行) および {{domxref("HTMLElement/transitionstart_event", "transitionstart")}} (遅延の後に発行) を使用して、同じ形で検出することができます。
 
-<pre class="brush: js notranslate">el.addEventListener("transitionrun", signalStart, true);
-el.addEventListener("transitionstart", signalStart, true);</pre>
+```js
+el.addEventListener("transitionrun", signalStart, true);
+el.addEventListener("transitionstart", signalStart, true);
+```
 
-<div class="note"><strong>注</strong>: <code>transitionend</code> イベントは、要素に {{cssxref("display")}}<code>: none</code> が適用されたりアニメーション中のプロパティの値が変更されたりして、トランジションが完了する前に中止された場合は発火しません。</div>
+> **Note:** `transitionend` イベントは、要素に {{cssxref("display")}}`: none` が適用されたりアニメーション中のプロパティの値が変更されたりして、トランジションが完了する前に中止された場合は発行されません。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '', '')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                   | 状態                          | 備考     |
+| ---------------------------------------- | ----------------------------- | -------- |
+| {{SpecName('CSS3 Transitions', '', '')}} | {{Spec2('CSS3 Transitions')}} | 初回定義 |
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("TransitionEvent")}} インターフェイスと {{event("transitionend")}} イベント</li>
- <li><a href="/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS アニメーションの使い方</a></li>
-</ul>
+- {{domxref("TransitionEvent")}} インターフェイスと {{domxref("HTMLElement/transitionend_event", "transitionend")}} イベント
+- [CSS アニメーションの使い方](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
