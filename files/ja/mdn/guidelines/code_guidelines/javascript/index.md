@@ -19,26 +19,26 @@ tags:
 
 - [JavaScriptガイドラインの概要](#general_javascript_guidelines)
 
-  - [拡張されたシンタックスの使用](#use_expanded_syntax)
+  - [拡張されたシンタックスを使う](#use_expanded_syntax)
   - [JavaScript コメント](#javascript_comments)
-  - [モダンな JS 機能の使用](#use_modern_js_features)
+  - [モダンな JS 機能を使う](#use_modern_js_features)
 
 - [変数](#variables)
 
-  - [変数の名付け](#variable_naming)
+  - [変数の命名規則](#variable_naming)
   - [変数宣言](#declaring_variables)
 
 - [演算子と比較](#operators_and_comparison)
 
   - [三項演算子](#ternary_operators)
-  - [厳密等価演算子の使用](#use_strict_equality)
-  - [ブーリアンテストでのショートカットの使用](#use_shortcuts_for_boolean_tests)
+  - [厳密等価演算子を使う](#use_strict_equality)
+  - [ブーリアンテストでのショートカットを使う](#use_shortcuts_for_boolean_tests)
 
-- [コントロールステートメント](#control_statements)
+- [制御文](#control_statements)
 - [文字列](#strings)
 
-  - [テンプレート文字列の使用](#use_template_literals)
-  - [innerHTMLではなく、 textContentの使用](#use_textcontent_not_innerhtml)
+  - [テンプレート文字列を使う](#use_template_literals)
+  - [innerHTMLではなく、 textContentを使う](#use_textcontent_not_innerhtml)
 
 - [条件文](#conditionals)
 
@@ -47,11 +47,11 @@ tags:
 
 - [関数とオブジェクト](#functions_and_objects)
 
-  - [関数の名付け](#function_naming)
+  - [関数の命名規則](#function_naming)
   - [関数の定義](#defining_functions)
   - [オブジェクトの作成](#creating_objects)
   - [オブジェクトクラス](#object_classes)
-  - [オブジェクトの名付け](#object_naming)
+  - [オブジェクトの命名規則](#object_naming)
 
 - [配列](#arrays)
 
@@ -62,7 +62,7 @@ tags:
 
 ## JavaScript ガイドライン概要
 
-### 拡張シンタックスの使用
+### 拡張シンタックスを使う
 
 私たちはJavaScriptでは、各行のJSを新しい行に書き、ブロックの始まりの角括弧はそれに関連した宣言と同じ行に収め、ブロックを閉じる角括弧は新しい行に書く、拡張シンタックスを使用しています。これはコードを非常に読み易くし、MDNでの統一性を高めます。
 
@@ -102,8 +102,8 @@ if(dayOfWeek===7&&weather==='sunny'){
 
 - 丸括弧を開けた後と、閉じる前に一文字分のスペースを入れないでください。 — `(myVar)`は良いですが、`( myVar )`は良くないです。
 - 全てのステートメントはセミコロンで終えてください (";")。厳密にいうとJavaScriptではこのルールは任意ですが、MDNでは全てのコードサンプルにおいて必須です、なぜなら コードが明確になり、どこで各ステートメントが終わっているのかがはっきりすると考ているからです。
-- 構文にてシングルクウォートが必要とされるいかなる箇所でも、JavaScriptではシングルクウォートを使用してください
-- 制御ステートメントキーワード、関数、ループキーワードと、丸括弧を開ける前にはスペースを入れないでください (例 `if() { ... }`, `function myFunc() { ... }, for(...) { ... }`)。
+- 構文にてシングルクウォートが必要とされるいかなる箇所でも、JavaScriptではシングルクウォートを使ってください。
+- 制御文キーワード、関数、ループキーワードと、丸括弧を開ける前にはスペースを入れないでください (例 `if() { ... }`, `function myFunc() { ... }, for(...) { ... }`)。
 - 先の項目で説明したようなケースでは、丸括弧と中括弧を開ける前に一文字のスペースが必要です。
 
 ### JavaScript comments
