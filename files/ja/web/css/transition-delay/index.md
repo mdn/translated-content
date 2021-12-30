@@ -5,351 +5,134 @@ tags:
   - CSS
   - CSS トランジション
   - CSS プロパティ
-  - Reference
   - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.transition-delay
 translation_of: Web/CSS/transition-delay
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS の <code>transition-delay</code> プロパティは、値が変更されたときにプロパティの<a href="/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">トランジション効果</a>が始まるまでの待ち時間を指定します。</p>
+CSS の `transition-delay` プロパティは、値が変更されたときにプロパティの[トランジション効果](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)が始まるまでの待ち時間を指定します。
 
-<div>{{EmbedInteractiveExample("pages/css/transition-delay.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transition-delay.html")}}
 
-<p class="hidden">この対話型サンプルのソースファイルは GitHub リポジトリに格納されています。対話型サンプルプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+待ち時間はゼロ、正の数、負の数で指定します。
 
-<p>待ち時間はゼロ、正の数、負の数で指定します。</p>
+- `0s` (または `0ms`) の値は直ちにトランジション効果が始まります。
+- 正の数の場合は、指定された時間の長さの分だけトランジション効果が始まるのが遅れます。
+- 負の数の場合は、直ちにトランジション効果が、効果の途中から始まります。言い換えれば、効果は指定された時間の長さの分だけ既に実行されていたかのように動きます。
 
-<ul>
- <li><code>0s</code> (又は <code>0ms</code>) の値は直ちにトランジション効果が始まります。</li>
- <li>正の数の場合は、指定された時間の長さの分だけトランジション効果が始まるのが遅れます。</li>
- <li>負の数の場合は、直ちにトランジション効果が、効果の途中から始まります。言い換えれば、効果は指定された時間の長さの分だけ既に実行されていたかのように動きます。</li>
-</ul>
+複数の待ち時間を指定することができ、複数のプロパティのトランジションを行うときに有用です。それぞれの待ち時間は、マスターリストである {{cssxref("transition-property")}} プロパティによって指定された対応するプロパティに適用されます。マスターリストよりも指定された待ち時間が少ない場合は、充足するまで待ち時間のリストが繰り返して使用されます。また待ち時間の数が多い場合は、リストが適切な長さに切り詰められます。どちらの場合も、 CSS の宣言として妥当です。
 
-<p>複数の待ち時間を指定することができ、複数のプロパティのトランジションを行うときに有用です。それぞれの待ち時間は、マスターリストである {{cssxref("transition-property")}} プロパティによって指定された対応するプロパティに適用されます。マスターリストよりも指定された待ち時間が少ない場合は、充足するまで待ち時間のリストが繰り返して使用されます。また待ち時間の数が多い場合は、リストが適切な長さに切り詰められます。どちらの場合も、 CSS の宣言として妥当です。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush: css no-line-numbers">/* &lt;time&gt; 値 */
+```css
+/* <time> 値 */
 transition-delay: 3s;
 transition-delay: 2s, 4ms;
 
 /* グローバル値 */
 transition-delay: inherit;
 transition-delay: initial;
+transition-delay: revert;
 transition-delay: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>&lt;time&gt;</code></dt>
- <dd>プロパティの値の変更からアニメーション効果が始まるまでの待ち時間を表す {{cssxref("&lt;time&gt;")}} 形式の値。</dd>
-</dl>
+- {{cssxref("&lt;time&gt;")}}
+  - : プロパティの値が変化してからトランジション効果が始まるまでの待ち時間を記述します。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<div>
-<div id="delay_0_5s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 0.5s</code></p>
+### 様々な待ち時間を示す例
 
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
+#### HTML
 
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```html
+  <div class="box delay-1">0.5 seconds</div>
+
+  <div class="box delay-2">2 seconds</div>
+
+  <div class="box delay-3">4 seconds</div>
+
+  <button id="change">Change</button>
+```
+
+#### CSS
+
+```css
 .box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:0.5s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:0.5s;
-    transition-timing-function: linear;
+  margin: 20px;
+  padding: 10px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 18px;
+  transition-property: background-color font-size transform color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 3s;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-     -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:0.5s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:0.5s;
-    transition-timing-function: linear;
+
+.transformed-state {
+  transform: rotate(270deg);
+  background-color: blue;
+  color: yellow;
+  font-size: 12px;
+  transition-property: background-color font-size transform color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 3s;
 }
-</pre>
 
-<pre class="brush:js">function updateTransition() {
-  var el = document.querySelector("div.box");
+.delay-1 {
+  transition-delay: 0.5s;
+}
 
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
+.delay-2 {
+  transition-delay: 2s;
+}
+
+.delay-3 {
+  transition-delay: 4s;
+}
+```
+
+#### JavaScript
+
+```js
+function change() {
+  const elements = document.querySelectorAll("div.box");
+  for (let element of elements) {
+    element.classList.toggle("transformed-state");
   }
-
-  return el;
 }
 
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
+const changeButton = document.querySelector("#change");
+changeButton.addEventListener("click", change);
+```
 
-<div>{{EmbedLiveSample("delay_0_5s",275,150)}}</div>
-</div>
+#### 結果
 
-<div id="delay_1s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 1s</code></p>
+{{EmbedLiveSample("Example_showing_different_delays",275,200)}}
 
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
+## 仕様書
 
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-     -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:1s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:1s;
-    transition-timing-function: linear;
-}
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:1s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:1s;
-    transition-timing-function: linear;
-}
-</pre>
+{{Specifications}}
 
-<pre class="brush:js">function updateTransition() {
-  var el = document.querySelector("div.box");
+## ブラウザーの互換性
 
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
+{{Compat}}
 
-  return el;
-}
+## 関連情報
 
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
-
-<div>{{EmbedLiveSample("delay_1s",275,150)}}</div>
-</div>
-
-<div id="delay_2s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 2s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:2s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:2s;
-    transition-timing-function: linear;
-}
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:2s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:2s;
-    transition-timing-function: linear;
-}
-</pre>
-
-<pre class="brush:js">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
-
-<div>{{EmbedLiveSample("delay_2s",275,150)}}</div>
-</div>
-
-<div id="delay_4s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 4s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:4s;
-    transition-timing-function: ease-in-out;
-}
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:4s;
-    transition-timing-function: ease-in-out;
-}
-</pre>
-
-<pre class="brush:js">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
-
-<div>{{EmbedLiveSample("delay_4s",275,150)}}</div>
-</div>
-</div>
-
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#transition-delay-property', 'transition-delay')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
-
-<p>{{Compat("css.properties.transition-delay")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS トランジションの利用</a></li>
- <li>{{domxref("TransitionEvent")}}</li>
-</ul>
+- [CSS トランジションの利用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- {{domxref("TransitionEvent")}}
