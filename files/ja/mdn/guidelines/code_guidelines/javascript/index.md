@@ -106,34 +106,34 @@ if(dayOfWeek===7&&weather==='sunny'){
 - 制御文キーワード、関数、ループキーワードと、丸括弧を開ける前にはスペースを入れないでください (例 `if() { ... }`, `function myFunc() { ... }, for(...) { ... }`)。
 - 先の項目で説明したようなケースでは、丸括弧と中括弧を開ける前に一文字のスペースが必要です。
 
-### JavaScript comments
+### JavaScriptコメント
 
-Use JS-style comments to comment code that isn't self-documenting:
+自己文章化コードでないコードにコメントする際、JS-スタイルのコメントを使う：
 
-```js example-good
-// This is a JavaScript-style comment
+```js 良い例
+// これは JavaScript-スタイルのコメントです
 ```
 
-Put your comments on separate lines preceding the code they are referring to:
+コメントを参照している前途のコードの別の列に挿入する：
 
-```js example-good
+```js 良い例
 function myFunc() {
-  // Output the string 'Hello' to the browser's JS console
+  // 文字列"Hello"をブラウザのJSコンソールに出力
   console.log('Hello');
-  // Create a new paragraph, fill it with content, and append it to the <body>
+  //　新しい段落を作成、コンテンツでそれを埋める、そしてそれを<body>に追加
   let para = document.createElement('p');
   para.textContent = 'My new paragraph';
   document.body.appendChild(para);
 }
 ```
 
-Also note that you should leave a space between the slashes and the comment, in each case.
+両方の場合において、二つのスラッシュとコメントの間に一文字分のスペースを入れることに注意してください
 
-### Use modern JS features
+### モダンなJS機能を使う
 
-For general usage, you can use modern well-supported JS features (such as [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)/[`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals), and [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)) in MDN examples. We include them in many places in these guidelines, as we believe the web industry has generally gotten to the point where such features are familiar enough to be understandable. And for those that don't use them yet, we'd like to play our part in helping people to evolve their skills.
+通常の使用状況下では、MDNの例にある、サポートされたモダンなJS機能を使ってください([アロー関数](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [プロミス](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)/[`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [テンプレート文字列](/en-US/docs/Web/JavaScript/Reference/Template_literals)、そして [スプレッド構文](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)のような) 。ウェブ業界では既にそれらの機能は多くの人に十分理解されている段階に来ていると考えられるので、私たちはこのガイドラインのたくさんの箇所にこれらを取り入れています。そして、まだそれらの機能をお使いになっていない方々には、スキルを磨くのをサポートするためにMDNをご活用ください。
 
-> **Note:** By "general usage", we mean general example writing. Reference pages covering specific JS features obviously need to use the features they are documenting!
+> **注意:** 「通常の使用状況」とは、一般的な例の書き方という意味です。 参照先のページでは特別なJS機能　Reference pages covering specific JS features obviously need to use the features they are documenting!
 
 ## Variables
 
