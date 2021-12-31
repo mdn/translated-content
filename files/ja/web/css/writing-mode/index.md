@@ -4,26 +4,25 @@ slug: Web/CSS/writing-mode
 tags:
   - CSS
   - CSS プロパティ
-  - CSS 書字方向
-  - Reference
-  - リファレンス
   - レイアウト
+  - リファレンス
+  - recipe:css-property
   - 日本語処理
+browser-compat: css.properties.writing-mode
 translation_of: Web/CSS/writing-mode
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>writing-mode</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、テキストの行のレイアウトを横書きにするか縦書きにするか、ブロックのフロー方向を左向きにするか右向きにするかを設定します。文書全体に設定する場合は、ルート要素 (HTML 文書の場合は <code>html</code> 要素) に設定してください。</p>
+**`writing-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの行のレイアウトを横書きにするか縦書きにするか、ブロックのフロー方向を左向きにするか右向きにするかを設定します。文書全体に設定する場合は、ルート要素 (HTML 文書の場合は `html` 要素) に設定してください。
 
-<div>{{EmbedInteractiveExample("pages/css/writing-mode.html")}}</div>
+{{EmbedInteractiveExample("pages/css/writing-mode.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+このプロパティは、*ブロックのフロー方向*を指定します。これは、ブロックレベルコンテナーが積まれる方向と、インラインレベルの内容物がブロックコンテナー内でフローする方向です。このように、 `writing-mode` プロパティはブロックレベルの内容物の順序も決定します。
 
-<p>このプロパティは、<em>ブロックのフロー方向</em>を指定します。これは、ブロックレベルコンテナが積まれる方向と、インラインレベルのコンテンツがブロックコンテナ内でフローする方向です。このように、 <code>writing-mode</code> プロパティはブロックレベルのコンテンツの順序も決定します。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* キーワードの値 */
+```css
+/* キーワードの値 */
 writing-mode: horizontal-tb;
 writing-mode: vertical-rl;
 writing-mode: vertical-lr;
@@ -31,99 +30,106 @@ writing-mode: vertical-lr;
 /* グローバルの値 */
 writing-mode: inherit;
 writing-mode: initial;
-writing-mode: unset;</pre>
+writing-mode: revert;
+writing-mode: unset;
+```
 
-<p><code>writing-mode</code> プロパティは、以下のいずれかの値として指定されます。横書きの場合は<a href="https://www.w3.org/International/questions/qa-scripts.en">その言葉の書字方向</a>も影響し、左書き (<code>ltr</code>、英語やその他の多くの言葉) や右書き (<code>rtl</code>、ヘブライ語やアラビア語) のどちらかになります。</p>
+`writing-mode` プロパティは、以下のいずれかの値として指定されます。横書きの場合は[その言葉の書字方向](https://www.w3.org/International/questions/qa-scripts.en)も影響し、左書き (`ltr`、英語やその他の多くの言葉) や右書き (`rtl`、ヘブライ語やアラビア語) のどちらかになります。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>horizontal-tb</code></dt>
- <dd><code>ltr</code> の言語では、コンテンツは左から右へ水平に流れます。 <code>rtl</code> の言語では、コンテンツは右から左へ水平に流れます。次の水平の行は、前の行の下に配置されます。</dd>
- <dt><code>vertical-rl</code></dt>
- <dd><code>ltr</code> の言語では、コンテンツは上から下へ垂直に流れ、次の垂直の行は、前の行の左に配置されます。 <code>rtl</code> の言語では、コンテンツは下から上へ垂直に流れ、次の垂直の行は前の行の右に配置されます。</dd>
- <dt><code>vertical-lr</code></dt>
- <dd><code>ltr</code> の言語では、コンテンツは上から下へ垂直に流れ、次の垂直の行は、前の行の右に配置されます。 <code>rtl</code> の言語では、コンテンツは下から上へ垂直に流れ、次の垂直の行は前の行の左に配置されます。</dd>
- <dt><code>sideways-rl</code> {{experimental_inline}}</dt>
- <dd><code>ltr</code> の言語では、コンテンツは下から上へ垂直に流れます。 <code>rtl</code> の言語では、コンテンツは上から下へ垂直に流れます。垂直方向に並べられる書体を含むすべてのグリフを右へ横倒しにします。</dd>
- <dt><code>sideways-lr</code> {{experimental_inline}}</dt>
- <dd><code>ltr</code> の言語では、コンテンツは上から下へ垂直に流れます。 <code>rtl</code> の言語では、コンテンツは下から上へ垂直に流れます。垂直方向に並べられる書体を含むすべてのグリフを左へ横倒しにします。</dd>
- <dt><code>lr</code> {{deprecated_inline}}</dt>
- <dd>SVG1 文書を除き、非推奨です。CSS では、<code>horizontal-tb</code> を代わりに使用してください。</dd>
- <dt><code>lr-tb</code> {{deprecated_inline}}</dt>
- <dd>SVG1 文書を除き、非推奨です。CSS では、<code>horizontal-tb</code> を代わりに使用してください。</dd>
- <dt><code>rl</code> {{deprecated_inline}}</dt>
- <dd>SVG1 文書を除き、非推奨です。CSS では、<code>horizontal-tb</code> を代わりに使用してください。</dd>
- <dt><code>tb</code> {{deprecated_inline}}</dt>
- <dd>SVG1 文書を除き、非推奨です。CSS では、<code>vertical-rl</code> を代わりに使用してください。</dd>
- <dt><code>tb-rl</code> {{deprecated_inline}}</dt>
- <dd>SVG1 文書を除き、非推奨です。CSS では、<code>vertical-rl</code> を代わりに使用してください。</dd>
-</dl>
+- `horizontal-tb`
+  - : `ltr` の言語では、内容物は左から右へ水平に流れます。 `rtl` の言語では、内容物は右から左へ水平に流れます。次の水平の行は、前の行の下に配置されます。
+- `vertical-rl`
+  - : `ltr` の言語では、内容物は上から下へ垂直に流れ、次の垂直の行は、前の行の左に配置されます。 `rtl` の言語では、内容物は下から上へ垂直に流れ、次の垂直の行は、前の行の右に配置されます。
+- `vertical-lr`
+  - : `ltr` の言語では、内容物は上から下へ垂直に流れ、次の垂直の行は、前の行の右に配置されます。 `rtl` の言語では、内容物は下から上へ垂直に流れ、次の垂直の行は、前の行の左に配置されます。
+- `sideways-rl` {{experimental_inline}}
+  - : `ltr` の言語では、内容物は下から上へ垂直に流れます。 `rtl` の言語では、内容物は上から下へ垂直に流れます。垂直方向に並べられる書体を含むすべての文字を右へ横倒しにします。
+- `sideways-lr` {{experimental_inline}}
+  - : `ltr` の言語では、内容物は上から下へ垂直に流れます。 `rtl` の言語では、内容物は下から上へ垂直に流れます。垂直方向に並べられる書体を含むすべての文字を左へ横倒しにします。
+- `lr` {{deprecated_inline}}
+  - : SVG1 文書を除き、非推奨です。CSS では、`horizontal-tb` を代わりに使用してください。
+- `lr-tb` {{deprecated_inline}}
+  - : SVG1 文書を除き、非推奨です。CSS では、`horizontal-tb` を代わりに使用してください。
+- `rl` {{deprecated_inline}}
+  - : SVG1 文書を除き、非推奨です。CSS では、`horizontal-tb` を代わりに使用してください。
+- `tb` {{deprecated_inline}}
+  - : SVG1 文書を除き、非推奨です。CSS では、`vertical-rl` を代わりに使用してください。
+- `tb-lr` {{deprecated_inline}}
+  - : SVG1 文書を除き、非推奨です。CSS では、`vertical-lr` を代わりに使用してください。
+- `tb-rl` {{deprecated_inline}}
+  - : SVG1 文書を除き、非推奨です。CSS では、`vertical-rl` を代わりに使用してください。
 
-<h3 id="Formal_syntax" name="Formal_syntax">正式な構文</h3>
+## 公式定義
 
-{{csssyntax}}
+{{CSSInfo}}
 
-<h2 id="Example" name="Example">例</h2>
+## 形式文法
 
-<p>この例では、すべての書字方向を示し、各モードでさまざまな言語のテキストを表示します。</p>
+{{CSSSyntax}}
 
-<h3 id="HTML">HTML</h3>
+## 例
 
-<p>HTML は単純な {{HTMLElement("table")}} であり、行方向に書字方向を、列方向にその書字方向を使用して、さまざまな種類のテキストが表示される様子を表します。</p>
+### 複数の書字方向の使用
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Value&lt;/th&gt;
-    &lt;th&gt;Vertical script&lt;/th&gt;
-    &lt;th&gt;Horizontal (LTR) script&lt;/th&gt;
-    &lt;th&gt;Horizontal (RTL) script&lt;/th&gt;
-    &lt;th&gt;Mixed script&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;horizontal-tb&lt;/td&gt;
-    &lt;td class="example Text1"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text1"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text1"&gt;&lt;span&gt;מלל ארוך לדוגמא&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text1"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;vertical-lr&lt;/td&gt;
-    &lt;td class="example Text2"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text2"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text2"&gt;&lt;span&gt;מלל ארוך לדוגמא&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text2"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;vertical-rl&lt;/td&gt;
-    &lt;td class="example Text3"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text3"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text3"&gt;&lt;span&gt;מלל ארוך לדוגמא&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text3"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;sideways-lr&lt;/td&gt;
-    &lt;td class="example Text4"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text4"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text4"&gt;&lt;span&gt;מלל ארוך לדוגמא&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text4"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;sideways-rl&lt;/td&gt;
-    &lt;td class="example Text5"&gt;&lt;span&gt;我家没有电脑。&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text5"&gt;&lt;span&gt;Example text&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text5"&gt;&lt;span&gt;מלל ארוך לדוגמא&lt;/span&gt;&lt;/td&gt;
-    &lt;td class="example Text5"&gt;&lt;span&gt;1994年に至っては&lt;/span&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+この例では、すべての書字方向を示し、各モードでさまざまな言語のテキストを表示します。
 
-<h3 id="CSS">CSS</h3>
+#### HTML
 
-<div class="hidden">
-<p>いくつかの予備的な CSS だけで、少し良く見えるようになります。</p>
+HTML は単純な {{HTMLElement("table")}} であり、行方向に書字方向を、列方向にその書字方向を使用してさまざまな種類のテキストが表示される様子を表します。
 
-<pre class="brush: css">table {
+```html
+<table>
+  <tr>
+    <th>値</th>
+    <th>縦書きの文字</th>
+    <th>横書き (LTR) の文字</th>
+    <th>横書き (RTL) の文字</th>
+    <th>混在する文字</th>
+  </tr>
+  <tr>
+    <td>horizontal-tb</td>
+    <td class="example Text1"><span>我家没有电脑。</span></td>
+    <td class="example Text1"><span>Example text</span></td>
+    <td class="example Text1"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text1"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>vertical-lr</td>
+    <td class="example Text2"><span>我家没有电脑。</span></td>
+    <td class="example Text2"><span>Example text</span></td>
+    <td class="example Text2"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text2"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>vertical-rl</td>
+    <td class="example Text3"><span>我家没有电脑。</span></td>
+    <td class="example Text3"><span>Example text</span></td>
+    <td class="example Text3"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text3"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>sideways-lr</td>
+    <td class="example Text4"><span>我家没有电脑。</span></td>
+    <td class="example Text4"><span>Example text</span></td>
+    <td class="example Text4"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text4"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>sideways-rl</td>
+    <td class="example Text5"><span>我家没有电脑。</span></td>
+    <td class="example Text5"><span>Example text</span></td>
+    <td class="example Text5"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text5"><span>1994年に至っては</span></td>
+  </tr>
+</table>
+```
+
+#### CSS
+
+```css hidden
+table {
   border-collapse:collapse;
 }
 td, th {
@@ -135,12 +141,13 @@ th {
 .example {
   height:75px;
   width:75px;
-}</pre>
-</div>
+}
+```
 
-<p>コンテンツの方向を調整する CSS は次のようになります。</p>
+内容物の方向を調整する CSS は次のようになります。
 
-<pre class="brush:css;">.example.Text1 span, .example.Text1 {
+```css
+.example.Text1 span, .example.Text1 {
   writing-mode: horizontal-tb;
   -webkit-writing-mode: horizontal-tb;
   -ms-writing-mode: horizontal-tb;
@@ -169,55 +176,31 @@ th {
   -webkit-writing-mode: sideways-rl;
   -ms-writing-mode: sideways-rl;
 }
-</pre>
+```
 
-<h3 id="Actual_result" name="Actual_result">結果</h3>
+#### 結果
 
-<p>{{EmbedLiveSample("Example", 400, 500)}}</p>
+以下の画像は、ブラウザーの `writing-mode` の対応が不完全な場合のために、出力結果がどのように見えるかを示したものです。
 
-<p>以下の画像は、ブラウザーの <code>writing-mode</code> の対応が不完全な場合のために、出力結果がどのように見えるかを示したものです。</p>
+![](screenshot_2020-02-05_21-04-30.png)
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17087/Screenshot_2020-02-05_21-04-30.png" style="height: 508px; width: 493px;"></p>
+{{EmbedLiveSample("Using_multiple_writing_modes", 400, 500)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Writing Modes", "#block-flow", "writing-mode")}}</td>
-   <td>{{Spec2("CSS4 Writing Modes")}}</td>
-   <td><code>sideways-lr</code> および <code>sideways-rl</code> を追加</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}}</td>
-   <td>{{Spec2("CSS3 Writing Modes")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.writing-mode")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>SVG <code><a href="/ja/docs/Web/SVG/Attribute/writing-mode">writing-mode</a></code> 属性</li>
- <li>{{Cssxref("direction")}}</li>
- <li>{{Cssxref("unicode-bidi")}}</li>
- <li>{{Cssxref("text-orientation")}}</li>
- <li>{{Cssxref("text-combine-upright")}}</li>
- <li><a href="/ja/docs/Web/CSS/CSS_Logical_Properties">CSS 論理的プロパティ</a></li>
- <li><a href="https://www.w3.org/International/articles/vertical-text/">Styling vertical text (Chinse, Japanese, Korean and Mongolian)</a></li>
- <li>広範なブラウザーの対応試験結果: <a href="https://w3c.github.io/i18n-tests/results/writing-mode-vertical">https://w3c.github.io/i18n-tests/results/writing-mode-vertical</a></li>
-</ul>
+- SVG の [`writing-mode`](/ja/docs/Web/SVG/Attribute/writing-mode) 属性
+- {{Cssxref("direction")}}
+- {{Cssxref("unicode-bidi")}}
+- {{Cssxref("text-orientation")}}
+- {{Cssxref("text-combine-upright")}}
+- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties)
+- [Styling vertical text (Chinse, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/)
+- 広範なブラウザーの対応試験結果: [https://w3c.github.io/i18n-tests/results/writing-mode-vertical](https://w3c.github.io/i18n-tests/results/writing-mode-vertical)
