@@ -20,7 +20,7 @@ translation_of: Web/API/MouseEvent/ctrlKey
 
 ## 値
 
-論理値gで、 `true` はキーが押されていたことを示し、 `false` はキーが押されていなかったことを示します。
+論理値で、 `true` はキーが押されていたことを示し、 `false` はキーが押されていなかったことを示します。
 
 ## 例
 
