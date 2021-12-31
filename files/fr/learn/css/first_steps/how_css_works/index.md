@@ -42,7 +42,7 @@ Pour afficher un document, un navigateur doit combiner le contenu du document et
 
 1.  Le navigateur charge le HTML (par exemple, il le reçoit à travers le réseau).
 2.  Il traduit le [HTML](/fr/docs/Glossary/HTML) en un [DOM](/fr/docs/Glossary/DOM) (_Document Object Model_)&nbsp;: une représentation du document HTML stockable en mémoire sur votre ordinateur. Nous expliquons le DOM plus en détails dans la prochaine section.
-3.  Le navigateur récupère ensuite la plupart des ressources attachées au document HTML, telles les images, les vidéos ajoutées à la page... et la feuille CSS externe&nbsp;! JavaScript est traité un peu plus tard et nous n'en parlerons pas ici pour simplifier la présentation.
+3.  Le navigateur récupère ensuite la plupart des ressources attachées au document HTML, telles les images, les vidéos ajoutées à la page… et la feuille CSS externe&nbsp;! JavaScript est traité un peu plus tard et nous n'en parlerons pas ici pour simplifier la présentation.
 4.  Le navigateur *parse* le CSS, classe les différentes règles par types de sélecteur (par exemple, élément, classe, ID, etc.) dans des «&nbsp;_buckets_&nbsp;». En fonction des sélecteurs trouvés, le navigateur calcule quelle règle s'applique à quel nœud du DOM. Chaque nœud du DOM ciblé par CSS est étiqueté par sa règle de style. L'arbre ainsi obtenu s'appelle l'arbre de rendu (<i lang="en">render tree</i>).
 5.  Pour chaque nœud de l'arbre de rendu, le navigateur calcule l'effet visuel de la règle CSS associée.
 6.  Le visuel ainsi produit est affiché à l'écran (cette étape s'appelle «&nbsp;_painting_&nbsp;»).

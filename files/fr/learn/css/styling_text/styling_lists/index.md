@@ -93,7 +93,7 @@ Si vous allez à l'exemple réel maintenant, et examinez les éléments de la li
 
 ## Gestion d'espacement des listes
 
-Si vous modifiez le style des listes, vous devez ajuster l'espacement vertical et horizontal de manière à le rendre identique à celui des éléments environnants (tels que paragraphes ou images&nbsp;: ce principe est parfois appelé «&nbsp;rythme vertical&nbsp;» — vous pouvez voir l'[exemple de style terminé](https://mdn.github.io/learning-area/css/styling-text/styling-lists/) sur GitHub et trouver[ le code source](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html) aussi.)
+Si vous modifiez le style des listes, vous devez ajuster l'espacement vertical et horizontal de manière à le rendre identique à celui des éléments environnants (tels que paragraphes ou images&nbsp;: ce principe est parfois appelé «&nbsp;rythme vertical&nbsp;» — vous pouvez voir l'[exemple de style terminé](https://mdn.github.io/learning-area/css/styling-text/styling-lists/) sur GitHub et trouver [le code source](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html) aussi.)
 
 Le CSS utilisé pour le style et l'espacement du texte est le suivant&nbsp;:
 
