@@ -4,57 +4,53 @@ slug: Web/API/MouseEvent/button
 tags:
   - API
   - DOM
-  - DOM Events
+  - DOM イベント
   - MouseEvent
-  - Property
-  - Read-only
-  - Reference
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+browser-compat: api.MouseEvent.button
 translation_of: Web/API/MouseEvent/button
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>読み取り専用プロパティ <strong><code>MouseEvent.button</code></strong> はイベントのトリガーとなったのがどのボタンが押されたのかを表します。</p>
+**`MouseEvent.button`** は読み取り専用のプロパティで、イベントを引き起こすのにどのボタンが押されたのかを表します。
 
-<p>このプロパティは、1つまたは複数のボタンを押したり離したりすることによって発生したイベント中にどのボタンが押されたかを示すことのみを保証します。したがって、 {{event("mouseenter")}}, {{event("mouseleave")}}, {{event("mouseover")}}, {{event("mouseout")}} ,{{event("mousemove")}} のようなイベントに対しては確かではありません。</p>
+このプロパティは、 1 つまたは複数のボタンを押したり離したりすることによって発生したイベント中に、どのボタンが押されたかを示すことのみを保証します。
+したがって、 {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mouseleave_event", "mouseleave")}}, {{domxref("Element/mouseover_event", "mouseover")}}, {{domxref("Element/mouseout_event", "mouseout")}}, {{domxref("Element/mousemove_event", "mousemove")}} のようなイベントに対しては確かではありません。
 
-<p>ユーザーはポインティングデバイスの設定を変更できるため、例えばイベントのボタンプロパティがゼロだった場合、必ずしも物理的な左ボタンによるものとは限りません。ただし、そのような場合でも標準設定における左ボタンと同じ動作をするべきです。</p>
+ユーザーはポインティングデバイスの設定を変更できるため、例えばイベントのボタンプロパティがゼロだった場合、必ずしも物理的な左ボタンによるものとは限りません。ただし、そのような場合でも標準設定における左ボタンと同じ動作をするべきです。
 
-<div class="note">
-<p><strong>Note:</strong> 全てのマウスイベントで扱える、複数のボタンを同時に押下されていることを表せる {{domxref("MouseEvent.buttons")}} プロパティと混同しないように注意してください。</p>
-</div>
+> **Note:** {{domxref("MouseEvent.buttons")}} プロパティと混同しないように注意してください。こちらはすべての種類のマウスイベントで、ボタンの押下状態を示します。
 
-<h2 id="構文">構文</h2>
+## 値
 
-<pre class="syntaxbox">var <em>buttonPressed</em> = <em>instanceOfMouseEvent</em>.button
-</pre>
+該当するボタンに対応する番号です。
 
-<h3 id="戻り値">戻り値</h3>
+- `0`: 主ボタンが押された。通常は左ボタンか初期化されていない状態。
+- `1`: 補助ボタンが押された。通常はホイールボタンまたは中央のボタンが押された場合。
+- `2`: 副ボタンが押された。通常は右ボタン。
+- `3`: 第四ボタン。一般的にブラウザーの戻るボタン。
+- `4`: 第五ボタン。一般的にブラウザーの進むボタン。
 
-<p>該当するボタンに対応する番号:</p>
+上記のように、ボタンは標準の「左から右へ」のレイアウトとは異なる構成でも構いません。
+左利き用に設定されたマウスでは、ボタンの動作が逆になることがあります。
+ポインティングデバイスによっては 1 つのボタンしか持たず、キーボードまたは他の入力機構を使用して主、副、補助などを示します。
+他のポインティングデバイスは多くのボタンを異なる機能およびボタン値にマッピングすることができます。
 
-<ul>
- <li><code>0</code>: メインボタンが押された。通常は左ボタンか未初期化状態。</li>
- <li><code>1</code>: 補助ボタンが押された。通常はホイールボタンまたは中央のボタンが押された場合。</li>
- <li><code>2</code>: 第二ボタンが押された。通常は右ボタン。</li>
- <li><code>3</code>: 第四ボタン。一般的にブラウザーの戻るボタン。</li>
- <li><code>4</code>: 第五ボタン。一般的にブラウザーの進むボタン。</li>
-</ul>
+## 例
 
-<p>上記のように、ボタンは標準の「左から右へ」のレイアウトとは異なるように構成されてもよいく、左利き用に設定されたマウスでは、ボタンの動作が逆になることがあります。いくつかのポインティングデバイスは１つのボタンしか持たず、キーボードまたは他の入力機構を使用して主、副、補助などを示します。他のポインティングデバイスは多くのボタンを異なる機能およびボタン値にマッピングすることができます。</p>
+### HTML
 
-<h2 id="例">例</h2>
+```html
+<button id="button" oncontextmenu="event.preventDefault();">マウスでここをクリックしてください...</button>
+<p id="log"></p>
+```
 
-<p> </p>
+### JavaScript
 
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html"><code>&lt;button id="button" oncontextmenu="event.preventDefault();"&gt;Click here with your mouse...&lt;/button&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</code>
-</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js"><code>let button = document.querySelector('#button');
+```js
+let button = document.querySelector('#button');
 let log = document.querySelector('#log');
 button.addEventListener('mouseup', logMouseButton);
 
@@ -62,49 +58,33 @@ function logMouseButton(e) {
   if (typeof e === 'object') {
     switch (e.button) {
       case 0:
-        log.textContent = 'Left button clicked.';
+        log.textContent = '左ボタンがクリックされました。';
         break;
       case 1:
-        log.textContent = 'Middle button clicked.';
+        log.textContent = '中央ボタンがクリックされました。';
         break;
       case 2:
-        log.textContent = 'Right button clicked.';
+        log.textContent = '右ボタンがクリックされました。';
         break;
       default:
-        log.textContent = `Unknown button code: ${btnCode}`;
+        log.textContent = `不明なボタンコード: ${e.button}`;
     }
   }
-}</code>
-</pre>
+}
+```
 
-<h2 id="仕様">仕様</h2>
+### 結果
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-MouseEvent-button','MouseEvent.button')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Compared to {{SpecName('DOM2 Events')}}, the return value can be negative.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.button')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## 仕様書
 
-<div id="compat-desktop">{{Compat("api.MouseEvent.button")}}</div>
+{{Specifications}}
 
-<h2 id="関連情報">関連情報</h2>
+## ブラウザーの互換性
 
-<ul>
- <li>{{domxref('"MouseEvent"')}}</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("MouseEvent")}}
