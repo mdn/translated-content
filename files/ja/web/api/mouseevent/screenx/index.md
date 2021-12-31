@@ -1,84 +1,86 @@
 ---
 title: MouseEvent.screenX
 slug: Web/API/MouseEvent/screenX
+tags:
+  - API
+  - CSSOM View
+  - DOM イベント
+  - MouseEvent
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+browser-compat: api.MouseEvent.screenX
 translation_of: Web/API/MouseEvent/screenX
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>MouseEvent.screenX</code></strong> は、イベントの発生した位置の、スクリーン内での X 座標を参照できる読み取り専用の属性です。</p>
+**`screenX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、グローバル（スクリーン）座標における、マウスポインターの水平方向の座標（オフセット）を示します。
 
-<h2 id="記法">記法</h2>
+> **Note:** マルチスクリーン環境では、水平方向に並べられた画面が単一の機器として扱われ、 `screenX` の範囲に画面の幅が加算されることがあります。
 
-<pre class="syntaxbox">var <em>pixelNumber</em> = <em>instanceOfMouseEvent</em>.screenX
-</pre>
+## 構文
 
-<h3 id="返り値">返り値</h3>
+```js
+var x = instanceOfMouseEvent.screenX
+```
 
-<ul>
- <li><em><code>pixelNumber</code></em> はスクリーンの左上の点からのピクセル数です。</li>
-</ul>
+### 返値
 
-<h3 id="Example" name="Example">使用例</h3>
+`double` の浮動小数点値です。
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;screenX\screenY example&lt;/title&gt;
+これを定義する早期の版の仕様書では、ピクセル数を表す整数として定義していました。
 
-&lt;script type="text/javascript"&gt;
+## 例
 
-function showCoords(evt){
-  alert(
-    "screenX value: " + evt.screenX + "\n"
-    + "screenY value: " + evt.screenY + "\n"
-  );
+この例では、 {{domxref("Element/mousemove_event", "mousemove")}} イベントが発行されるたびにマウスの座標を表示します。
+
+#### HTML
+
+```html
+<p>マウスを動かして、位置を確認してください。</p>
+<p id="screen-log"></p>
+```
+
+#### JavaScript
+
+```js
+let screenLog = document.querySelector('#screen-log');
+document.addEventListener('mousemove', logKey);
+
+function logKey(e) {
+  screenLog.innerText = `
+    Screen X/Y: ${e.screenX}, ${e.screenY}
+    Client X/Y: ${e.clientX}, ${e.clientY}`;
 }
+```
 
-&lt;/script&gt;
-&lt;/head&gt;
+#### 結果
 
-&lt;body onmousedown="showCoords(event)"&gt;
-&lt;p&gt;To display the mouse coordinates click anywhere on the page.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+{{EmbedLiveSample("Example")}}
 
-<p>window や document のような領域の広い要素に対してイベントを処理する場合、以下のように座標を元に適切な処理を呼び出すことができます。</p>
+### イベントのルーティング
 
-<pre class="brush: js">function checkClickMap(e) {
-  if (e.screenX &lt; 50) doRedButton();
-  if (50 &lt;= e.screenX<span style="font-size: 1rem;"> &amp;&amp; </span>e.screenX<span style="font-size: 1rem;"> &lt; 100)</span><span style="font-size: 1rem;"> doYellowButton();
-</span>  if (e.screenX &gt;= 100) doRedButton();
+
+ウィンドウや文書、範囲の要素にイベントをトラップすると、次の例のように、そのイベント（クリックなど）の座標を取得して、適切にルーティングすることができます。
+
+```js
+function checkClickMap(e) {
+  if (e.screenX < 50) doRedButton();
+  if (50 <= e.screenX && e.screenX < 100) doYellowButton();
+  if (e.screenX >= 100) doRedButton();
 }
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-MouseEvent-screenX','MouseEvent.screenX')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td> {{SpecName('DOM2 Events')}} からの変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.sceenX')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>最初の定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MouseEvent.screenX")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
-</ul>
+- {{ domxref("MouseEvent") }}
+- {{ domxref("MouseEvent.screenY","screenY") }}
+- {{ domxref("MouseEvent.clientX","clientX") }} / {{ domxref("MouseEvent.clientY", "clientY") }}
