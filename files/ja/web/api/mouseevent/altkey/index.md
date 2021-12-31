@@ -1,45 +1,65 @@
 ---
-title: event.altKey
+title: MouseEvent.altKey
 slug: Web/API/MouseEvent/altKey
 tags:
+  - API
   - DOM
-  - Gecko
-  - Gecko DOM Reference
+  - DOM イベント
+  - MouseEvent
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+browser-compat: api.MouseEvent.altKey
 translation_of: Web/API/MouseEvent/altKey
 translation_of_original: Web/API/event.altKey
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="Summary" name="Summary">Summary</h3>
-<p>イベントが発生したときALTキーが押されていたかどうかを示します。</p>
-<h3 id="Syntax" name="Syntax">Syntax</h3>
-<pre class="eval"><i>bool</i> = event.altKey
-</pre>
-<p><code>bool</code> は <code>true</code> か <code>false</code> であり、イベントが発生したときに ALT キーが押されていたかどうかを示しています。</p>
-<h3 id="Example" name="Example">Example</h3>
-<pre>&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;altKey example&lt;/title&gt;
+{{APIRef("DOM Events")}}
 
-&lt;script type="text/javascript"&gt;
+**`MouseEvent.altKey`** は読み取り専用のプロパティであり、論理値で、マウスイベントが発行されたときに <kbd>alt</kbd> キーが押されていたかどうかを示します。
 
-function showChar(e){
-  alert(
-    "Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
-    + "charCode: " + e.charCode + "\n"
-    + "ALT key pressed: " + e.altKey + "\n"
-  );
+オペレーティングシステムによっては、いつでも <kbd>alt</kbd> キーを検出できるとは限りらないことに注意してください。
+例えば、一部の Linux では、 <kbd>alt</kbd> キーを押しながらマウスの左クリックが、ウィンドウの移動またはリサイズに使われています。
+
+> **Note:** Macintosh のキーボードでは、このキーは <kbd>option</kbd> キーとも呼ばれています。
+
+## 値
+
+論理値であり、 `true` はキーが押されていたことを、 `false` はキーが押されてい*なかった*ことを示します。
+
+## 例
+
+この例は、 {{Event("click")}} イベントが発行されたときに `altKey` プロパティを記録します。
+
+### HTML
+
+```html
+<p><code>altKey</code> プロパティを試験するためにどこかをクリックしてください。</p>
+<p id="log"></p>
+```
+
+### JavaScript
+
+```js
+let log = document.querySelector('#log');
+document.addEventListener('click', logKey);
+
+function logKey(e) {
+  log.textContent = `Alt キーの押下状態: ${e.altKey}`;
 }
+```
 
-&lt;/script&gt;
-&lt;/head&gt;
+### 結果
 
-&lt;body onkeypress="showChar(event);"&gt;
-&lt;p&gt;
-Press any character key,
-with or without holding down the ALT key.&lt;br /&gt;
-You can also use the SHIFT key together with the ALT key.
-&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<p>{{ languages( { "en": "en/DOM/event.altKey", "pl": "pl/DOM/event.altKey" } ) }}</p>
+{{EmbedLiveSample("Example")}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{ domxref("MouseEvent") }}
