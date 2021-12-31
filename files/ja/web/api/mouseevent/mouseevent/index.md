@@ -3,146 +3,105 @@ title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
 tags:
   - API
-  - Constructor
+  - コンストラクター
   - DOM
   - MouseEvent
-  - Reference
-  - events
+  - リファレンス
+  - イベント
+browser-compat: api.MouseEvent.MouseEvent
 translation_of: Web/API/MouseEvent/MouseEvent
 ---
-<p id="Summary">{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>MouseEvent()</code></strong> コンストラクタは、新しい {{domxref("MouseEvent")}} を作成します。</p>
+**`MouseEvent()`** コンストラクターは、新しい {{domxref("MouseEvent")}} を生成します。
 
-<h2 id="シンタックス">シンタックス</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"> <em>event</em> = new MouseEvent(<em>typeArg</em>, <em>mouseEventInit</em>);</pre>
+```js
+ event = new MouseEvent(typeArg, mouseEventInit);
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<dl>
- <dt><em>typeArg</em></dt>
- <dd>イベント名を表す {{domxref("DOMString")}} です。</dd>
- <dt><em>mouseEventInit</em> {{optional_inline}}</dt>
-</dl>
+- _typeArg_
+  - : {{domxref("DOMString")}} で、イベントの名前を表します。
+- _mouseEventInit_ {{optional_inline}}
 
-<dl>
- <dd>Is a <code>MouseEventInit</code> dictionary, having the following fields:
+  - : `MouseEventInit` ディクショナリーで、以下のフィールドを持ちます。
 
- <ul>
-  <li><code>"screenX"</code>, optional and defaulting to <code>0</code>, of type <code>long</code>, that is the horizontal position of the mouse event on the user's screen; setting this value doesn't move the mouse pointer.</li>
-  <li><code>"screenY"</code>, optional and defaulting to <code>0</code>, of type <code>long</code>, that is the vertical position of the mouse event on the user's screen; setting this value doesn't move the mouse pointer.</li>
-  <li><code>"clientX"</code>, optional and defaulting to <code>0</code>, of type <code>long</code>, that is the horizontal position of the mouse event on the client window of user's screen; setting this value doesn't move the mouse pointer.</li>
-  <li><code>"clientY"</code>, optional and defaulting to <code>0</code>, of type <code>long</code>, that is the vertical position of the mouse event on the client window of the user's screen; setting this value doesn't move the mouse pointer.</li>
-  <li><code>"ctrlKey"</code>, optional and defaulting to <code>false</code>, of type {{jsxref("Boolean")}}, that indicates if the <kbd>ctrl</kbd> key was simultaneously pressed.</li>
-  <li><code>"shiftKey"</code>, optional and defaulting to <code>false</code>, of type {{jsxref("Boolean")}}, that indicates if the <kbd>shift</kbd> key was simultaneously pressed.</li>
-  <li><code>"altKey"</code>, optional and defaulting to <code>false</code>, of type {{jsxref("Boolean")}}, that indicates if the <kbd>alt</kbd> key was simultaneously pressed.</li>
-  <li><code>"metaKey"</code>, optional and defaulting to <code>false</code>, of type {{jsxref("Boolean")}}, that indicates if the <kbd>meta</kbd> key was simultaneously pressed.</li>
-  <li><code>"button"</code>, optional and defaulting to <code>0</code>, of type <code>short</code>, that describes which button is pressed during events related to the press or release of a button:
-   <table class="standard-table">
-    <thead>
-     <tr>
-      <th scope="col">Value</th>
-      <th scope="col">Meaning</th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td><code>0</code></td>
-      <td>Main button pressed (usually the left button) or un-initialized</td>
-     </tr>
-     <tr>
-      <td><code>1</code></td>
-      <td>Auxiliary button pressed (usually the middle button)</td>
-     </tr>
-     <tr>
-      <td><code>2</code></td>
-      <td>Secondary button pressed (usually the right button)</td>
-     </tr>
-    </tbody>
-   </table>
-  </li>
-  <li><code>"buttons"</code>, optional and defaulting to <code>0</code>, of type <code>unsigned short</code>, that describes which buttons are pressed when the event is launched:
-   <table class="standard-table">
-    <thead>
-     <tr>
-      <th scope="col">Bit-field value</th>
-      <th scope="col">Meaning</th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td><code>0</code></td>
-      <td>No button pressed</td>
-     </tr>
-     <tr>
-      <td><code>1</code></td>
-      <td>Main button pressed (usually the left button)</td>
-     </tr>
-     <tr>
-      <td><code>2</code></td>
-      <td>Secondary button pressed (usually the right button)</td>
-     </tr>
-     <tr>
-      <td><code>4</code></td>
-      <td>Auxiliary button pressed (usually the middle button)</td>
-     </tr>
-    </tbody>
-   </table>
-  </li>
-  <li><code>"relatedTarget"</code>, optional and defaulting to <code>null</code>, of type {{domxref("EventTarget")}}, that is the element just left (in case of  a {{event("mouseenter")}} or {{event("mouseover")}}) or is entering (in case of a {{event("mouseout")}} or {{event("mouseleave")}}).</li>
-  <li><code>"region"</code>, optional and defaulting to <code>null</code>, of type {{domxref("DOMString")}}, is the id of the hit region affected by the event. The absence of any hit region is affected, is represented by the <code>null</code> value.</li>
- </ul>
+    - `"screenX"`, 省略可能な `long`, 既定値は `0`,
+      ユーザーの画面におけるマウスイベントの水平位置です。
+      この値を設定しても、マウスポインターは移動しません。
+    - `"screenY"`, 省略可能な `long`, 既定値は `0`,
+      ユーザーの画面におけるマウスイベントの垂直位置です。
+      この値を設定しても、マウスポインターは移動しません。
+    - `"clientX"`, 省略可能な `long`, 既定値は `0`,
+      ユーザーの画面のクライアントウィンドウにおけるマウスイベントの水平位置です。
+      この値を設定しても、マウスポインターは移動しません。
+    - `"clientY"`, 省略可能な `long`, 既定値は `0`,
+      ユーザーの画面のクライアントウィンドウにおけるマウスイベントの垂直位置です。
+      この値を設定しても、マウスポインターは移動しません。
+    - `"ctrlKey"`, 省略可能な論理値, 既定値は `false`,
+      <kbd>ctrl</kbd> キーが同時に押されていたかどうかを示します。
+    - `"shiftKey"`, 省略可能な論理値, 既定値は `false`,
+      <kbd>shift</kbd> キーが同時に押されていたかどうかを示します。
+    - `"altKey"`, 省略可能な論理値, 既定値は `false`,
+      <kbd>alt</kbd> キーが同時に押されていたかどうかを示します。
+    - `"metaKey"`, 省略可能な論理値, 既定値は `false`,
+      <kbd>meta</kbd> キーが同時に押されていたかどうかを示します。
+    - `"button"`, 省略可能な `short`, 既定値は `0`,
+      ボタンの押下や解放に関連するイベント時に、どのボタンが押されたかを示します。
 
- <p>実装によっては、スクリーンとクライアントのフィールドに数値以外のものを渡すと <code>TypeError</code> がスローされます。</p>
+      | 値    | 意味                                                           |
+      | ----- | -------------------------------------------------------------- |
+      | `0`   | 主ボタン（通常は左ボタン）が押された、または初期化されていない |
+      | `1`   | 予備ボタン（通常は中ボタン）が押された                         |
+      | `2`   | 第二ボタン（通常は右ボタン）が押された                         |
 
- <div class="note">
- <p><em><code>MouseEventInit</code> ディクショナリは、{{domxref("UIEvent.UIEvent", "UIEventInit")}} や {{domxref("Event.Event", "EventInit")}} ディクショナリのフィールドも受け入れます。</em></p>
- </div>
- </dd>
-</dl>
+    - `"buttons"`, 省略可能な `unsigned short`, 既定値は `0`,
+      イベントが発行されたときに押されたボタンを示します。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+      | ビットフィールド値 | 意味                                       |
+      | ------------------ | ------------------------------------------ |
+      | `0`                | ボタンが押されていない                     |
+      | `1`                | 主ボタン（通常は左ボタン）が押されていた   |
+      | `2`                | 第二ボタン（通常は右ボタン）が押されていた |
+      | `4`                | 予備ボタン（通常は中ボタン）が押されていた |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#extensions-to-the-mouseevent-interface', 'MouseEvent')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>画面とクライアントのフィールド long を double に再定義しました。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#interface-MouseEvent','MouseEvent()')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+    - `"relatedTarget"`, 省略可能な {{domxref("EventTarget")}}, 既定値は `null`
+      離れた要素
+      ({{domxref("Element/mouseenter_event", "mouseenter")}} や {{domxref("Element/mouseover_event", "mouseover")}} の場合)
+      または、入った要素 ({{domxref("Element/mouseout_event", "mouseout")}} や {{domxref("Element/mouseleave_event", "mouseleave")}} の場合) です。
+    - `"region"`, 省略可能な {{domxref("DOMString")}}, 既定値は `null`,
+      そのイベントによって影響を受けたヒット領域の ID です。
+      影響を受けるヒット領域がない場合は `null` 値で表現されます。
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+    実装によっては、 screen と client フィールドに数値以外のものを渡すと `TypeError` が発生します。
 
-<p>{{Compat("api.MouseEvent.MouseEvent")}}</p>
+    > **Note:** `MouseEventInit` ディクショナリーは {{domxref("UIEvent.UIEvent", "UIEventInit")}} および {{domxref("Event.Event", "EventInit")}} のフィールドも受け入れます。
 
-<h2 id="ポリフィル">ポリフィル</h2>
+## 仕様書
 
-<p>Internet Explorer 9 以降の <code>MouseEvent()</code> コンストラクタ機能は、以下のコードでポリフィルすることができます。</p>
+{{Specifications}}
 
-<pre class="brush: js notranslate">(function (window) {
+## ブラウザーの互換性
+
+{{Compat}}
+
+## ポリフィル
+
+Internet Explorer 9 以降では、以下のコードで `MouseEvent()` コンストラクターの機能を代替することができます。
+
+```js
+(function (window) {
   try {
     new MouseEvent('test');
-    return false; // ポリフィル不要
+    return false; // No need to polyfill
   } catch (e) {
-		// ポリフィルの必要性 - 落下
+		// Need to polyfill - fall through
   }
 
-    // ポリフィル DOM4 MouseEvent
+    // Polyfills DOM4 MouseEvent
 	var MouseEventPolyfill = function (eventType, params) {
 		params = params || { bubbles: false, cancelable: false };
 		var mouseEvent = document.createEvent('MouseEvent');
@@ -170,10 +129,8 @@ translation_of: Web/API/MouseEvent/MouseEvent
 
 	window.MouseEvent = MouseEventPolyfill;
 })(window);
-</pre>
+```
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("MouseEvent")}}, は、それが構築するオブジェクトのインターフェイス</li>
-</ul>
+- {{domxref("MouseEvent")}}: 構築するオブジェクトのインターフェイス
