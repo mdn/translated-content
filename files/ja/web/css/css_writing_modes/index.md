@@ -15,7 +15,7 @@ translation_of: Web/CSS/CSS_Writing_Modes
 
 ## リファレンス
 
-## プロパティ
+### プロパティ
 
 - {{cssxref("direction")}}
 - {{cssxref("glyph-orientation-horizontal")}}
