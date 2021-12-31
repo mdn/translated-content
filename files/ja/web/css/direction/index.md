@@ -2,98 +2,94 @@
 title: direction
 slug: Web/CSS/direction
 tags:
+  - BiDi
   - CSS
-  - CSS Reference
+  - CSS プロパティ
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.direction
 translation_of: Web/CSS/direction
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS の <code>direction</code> プロパティは文章の記述方向にあわせて設定されるべきです。ヘブライ語やアラビア語のテキストでは <code>rtl</code> を、それ以外では <code>ltr</code> を使います。</p>
+**`direction`** は CSS のプロパティで、テキスト、表の列、水平方向のはみ出しの方向を設定します。右書きの言語（ヘブライ語やアラビア語など）では `rtl` を、左書きの言語（英語やそれ以外の多くの言語）では `ltr` を使います。
 
-<div>{{EmbedInteractiveExample("pages/css/direction.html")}}</div>
+{{EmbedInteractiveExample("pages/css/direction.html")}}
 
+なお、テキストの方向はふつうは文書内で（例えば [HTML の `dir` 属性](/ja/docs/Web/HTML/Global_attributes/dir) で）定義するものであり、 `direction` プロパティ直接使用して行うものではありません。
 
+このプロパティは、基本的な文章の方向と、 {{Cssxref("unicode-bidi")}} プロパティで作られた埋め込み (embeddings) の方向を設定します。また、テキストやブロックレベル要素の既定の文字揃えや、表の行内にセルが流し込まれる方向を決めます。
 
-<p>通常、この設定は CSS から直接行うのではなく、文書の一部として HTML の <code>dir</code> 属性を使うなどして行うほうがよいでしょう。</p>
+HTML の `dir` 属性とは異なり、`direction` プロパティは表の列から表のセルには継承されません。これは CSS の継承が文書木に従うためで、表のセルは表の列の中ではなく、行の中にあるからです。
 
-<p>このプロパティは基本的な文章の方向と {{Cssxref("unicode-bidi")}} プロパティで作られた 埋め込み (embeddings) の方向を設定します。また、テキストやブロックレベル要素のデフォルトの文字揃えや、テーブルの行内にセルが流し込まれる方向を決めます。</p>
+`direction` プロパティと {{cssxref("unicode-bidi")}} プロパティのみが、 {{cssxref("all")}} 一括指定プロパティの影響を受けません。
 
-<p>HTML の <code>dir</code> 属性と違って、<code>direction</code> プロパティはテーブルの列からテーブルのセルに継承されません。これは CSS の継承が文書木に従うためで、テーブルセルはテーブルの列の中ではなく、行の中にあるからです。</p>
+## 構文
 
-<p><code>direction</code> プロパティと {{cssxref("unicode-bidi")}} プロパティは、 {{cssxref("all")}} 短縮プロパティの影響を受けない唯一のプロパティです。</p>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* キーワード値 */
 direction: ltr;
 direction: rtl;
 
-/* Global values */
+/* グローバル値 */
 direction: inherit;
 direction: initial;
-direction: unset;</pre>
+direction: revert;
+direction: unset;
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>ltr</code></dt>
- <dd>デフォルト値です。テキストと他の要素は左から右に進みます</dd>
- <dt><code>rtl</code></dt>
- <dd>テキストと他の要素は右から左に進みます</dd>
-</dl>
+- `ltr`
+  - : テキストやその他の要素は左から右へと進みます。これが既定値です。
+- `rtl`
+  - : テキストやその他の要素は右から左へと進みます。
 
-<p>インラインレベル要素で <code>direction</code> プロパティに効果を持たせたいときは、{{Cssxref("unicode-bidi")}} プロパティの値が <code>embed</code> もしくは <code>override</code> である必要があります。</p>
+インラインレベル要素で `direction` プロパティに効果を持たせたいときは、{{Cssxref("unicode-bidi")}} プロパティの値が `embed` もしくは `override` である必要があります。
 
-<h3 id="形式文法">形式文法</h3>
+## 公式定義
 
-{{csssyntax("direction")}}
+{{cssinfo}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 形式文法
 
-<pre class="brush: css">blockquote {
+{{csssyntax}}
+
+## 例
+
+### 右書きの方向を設定
+
+以下の例では、 2 つのテキスト文字列があり、どちらも `direction: rtl` を使って表示されています。アラビア語のテキストはこの設定で正しく表示されますが、日本語のテキストは句点が異常な位置に表示されるようになりました。
+
+```css
+blockquote {
   direction: rtl;
+  width: 300px;
 }
-</pre>
+```
 
-<h2 id="Specification" name="Specification">仕様</h2>
+```html
+<blockquote>
+<p>この段落は日本語ですが、間違って右から左へ書かれています。<p>
+</blockquote>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Writing Modes', '#direction', 'direction')}}</td>
-   <td>{{Spec2('CSS3 Writing Modes')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#direction', 'direction')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+<blockquote>
+<p>هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.<p>
+</blockquote>
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+{{EmbedLiveSample('Setting_right-to-left_direction', '100%', 200)}}
 
-<div>
-<div>
+## 仕様書
 
+{{Specifications}}
 
-<p>{{Compat("css.properties.direction")}}</p>
-</div>
-</div>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li>{{Cssxref("unicode-bidi")}}</li>
- <li>{{Cssxref("writing-mode")}}</li>
-</ul>
+## 関連情報
+
+- {{Cssxref("unicode-bidi")}}
+- {{Cssxref("writing-mode")}}
+- HTML の {{htmlattrxref("dir")}} グローバル属性
