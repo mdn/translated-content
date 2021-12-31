@@ -1,75 +1,61 @@
 ---
 title: MouseEvent.ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
+tags:
+  - API
+  - DOM
+  - DOM イベント
+  - MouseEvent
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+browser-compat: api.MouseEvent.ctrlKey
 translation_of: Web/API/MouseEvent/ctrlKey
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>読み取り専用プロパティ <strong><code>MouseEvent.ctrlKey</code></strong> は、イベント発生時に <kbd>control</kbd> キーが押されたかどうかを、押されていた (<code>true</code>) または押されていない (<code>false</code>) の{{jsxref("Boolean")}} で返します。</p>
+**`MouseEvent.ctrlKey`** は読み取り専用のプロパティで、このマウスイベントが発生した際に <kbd>ctrl</kbd> キーが押されていたかどうかを示す論理値です。
 
-<h2 id="構文">構文</h2>
+> **Note:** Macintosh のキーボードでは、このキーは <kbd>control</kbd> キーです。
 
-<pre class="syntaxbox">var <em>ctrlKeyPressed</em> = <em>instanceOfMouseEvent</em>.ctrlKey
-</pre>
+## 値
 
-<h3 id="戻り値">戻り値</h3>
+論理値gで、 `true` はキーが押されていたことを示し、 `false` はキーが押されていなかったことを示します。
 
-<p>A boolean</p>
+## 例
 
-<h2 id="Example" name="Example">例</h2>
+この例では、 {{Event("click")}} イベントを発生させた際に `ctrlKey` プロパティを記録します。
 
-<pre class="brush: js">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;ctrlKey使用例&lt;/title&gt;
+### HTML
 
-&lt;script type="text/javascript"&gt;
+```html
+<p><code>ctrlKey</code> プロパティを試験するためにどこかをクリックしてください。</p>
+<p id="log"></p>
+```
 
-function showChar(e){
-  alert(
-    "Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
-    + "charCode: " + e.charCode + "\n"
-    + "CTRL key pressed: " + e.ctrlKey + "\n"
-  );
+### JavaScript
+
+```js
+let log = document.querySelector('#log');
+document.addEventListener('click', logKey);
+
+function logKey(e) {
+  log.textContent = `Ctrl キーの押下状態: ${e.ctrlKey}`;
 }
+```
 
-&lt;/script&gt;
-&lt;/head&gt;
+### 結果
 
-&lt;body onkeypress="showChar(event);"&gt;
-&lt;p&gt;何か文字キーを単体またはCTRLキーと同時に押してください。&lt;br /&gt;
-また、CTRLキーに加え、SHIFTキーも同時に使用できます。&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-MouseEvent-ctrlKey','MouseEvent.ctrlKey')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>{{SpecName('DOM2 Events')}}から変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.ctrlKey')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>最初期の定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MouseEvent.ctrlKey")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
-</ul>
+- {{ domxref("MouseEvent") }}
