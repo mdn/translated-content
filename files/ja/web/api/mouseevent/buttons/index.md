@@ -1,101 +1,93 @@
 ---
 title: MouseEvent.buttons
 slug: Web/API/MouseEvent/buttons
+tags:
+  - API
+  - DOM
+  - DOM イベント
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+  - UIEvent
+browser-compat: api.MouseEvent.buttons
 translation_of: Web/API/MouseEvent/buttons
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p><span class="seoSummary">The<strong> <code>MouseEvent.buttons</code></strong> read-only property indicates which buttons are pressed on the mouse (or other input device) when a mouse event is triggered.</span></p>
+**`MouseEvent.buttons`** は読み取り専用のプロパティで、マウスイベントが発行されたときにマウス（またはその他の入力機器）のどのボタンが押されていたかを示します。
 
-<p>Each button that can be pressed is represented by a given number (see below). If more than one button is pressed, the button values are added together to produce a new number. For example, if the secondary (<code>2</code>) and auxilary (<code>4</code>) buttons are pressed simultaneously, the value is <code>6</code> (i.e., <code>2 + 4</code>).</p>
+押されている可能性があるそれぞれのボタンは、数字で表されます（下図参照）。
+複数のボタンが押された場合は、ボタンの値を足し合わせて新しい数値が生成されます。
+例えば、副ボタン（`2`）と補助ボタン（`4`）を同時に押した場合、その値は`6`（すなわち、`2 + 4`）となります。
 
-<div class="note">
-<p><strong>Note:</strong> Do not confuse this property with the {{domxref("MouseEvent.button")}} property. The {{domxref("MouseEvent.buttons")}} property indicates the state of buttons pressed during any kind of mouse event, while the {{domxref("MouseEvent.button")}} property only guarantees the correct value for mouse events caused by pressing or releasing one or multiple buttons.</p>
-</div>
+> **Note:** このプロパティを {{domxref("MouseEvent.button")}} プロパティと混同しないでください。
+> {{domxref("MouseEvent.buttons")}} プロパティはあらゆる種類のマウスイベントの際に押されていたボタンの状態を示すのに対して、
+> {{domxref("MouseEvent.button")}} プロパティは 1 つまたは複数のボタンを押したか離したことによって引き起こされたマウスイベントのみ、正しい値を保証します。
 
-<h2 id="Syntax">Syntax</h2>
+## 値
 
-<pre class="syntaxbox">var <em>buttonsPressed</em> = <em>instanceOfMouseEvent</em>.buttons
-</pre>
+1 つまたは複数のボタンを表す数値です。
+複数のボタンが同時に押されていた場合、値が組み合わされます（例えば、 `3` は主ボタン＋副ボタンです）。
 
-<h3 id="Return_value">Return value</h3>
+- `0`: ボタンが押されていない、または初期化されていない
+- `1`: 主ボタン (通常は左ボタン)
+- `2`: 副ボタン (通常は右ボタン)
+- `4`: 補助ボタン (通常はマウスホイールボタンまたは中央ボタン)
+- `8`: 第四ボタン (通常は「ブラウザーで戻る」ボタン)
+- `16` : 第五ボタン (通常は「ブラウザーで進む」ボタン)
 
-<p>A number representing one or more buttons. For more than one button pressed simultaneously, the values are combined (e.g., <code>3</code> is primary + secondary).</p>
+## 例
 
-<ul>
- <li><code>0 </code> : No button or un-initialized</li>
- <li><code>1 </code> : Primary button (usually the left button)</li>
- <li><code>2 </code> : Secondary button (usually the right button)</li>
- <li><code>4 </code> : Auxiliary button (usually the mouse wheel button or middle button)</li>
- <li><code>8 </code> : 4th button (typically the "Browser Back" button)</li>
- <li><code>16</code> : 5th button (typically the "Browser Forward" button)</li>
-</ul>
+この例では、 {{domxref("Element/mousedown_event", "mousedown")}} イベントを発行したときに `buttons` プロパティを記録します。
 
-<h2 id="Example">Example</h2>
+### HTML
 
-<p>This example logs the <code>buttons</code> property when you trigger a {{Event("mousedown")}} event.</p>
+```html
+<p>1 つまたは複数のボタンでどこかをクリックしてください</p>
+<pre id="log">buttons: </pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### JavaScript
 
-<pre class="brush: html">&lt;p&gt;Click anywhere with one or more mouse buttons.&lt;/p&gt;
-&lt;p id="log"&gt;buttons: &lt;/p&gt;</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">let button = document.querySelector('#button');
-let log = document.createTextNode('?');
-document.addEventListener('mousedown', logButtons);
+```js
+let log = document.createTextNode('?');   // let log = new Text('?');
 
 function logButtons(e) {
-  log.data = `${e.buttons} (mousedown)`;
+  log.data = `${e.buttons} (${e.type})`;  // log.nodeValue= `${e.buttons} (${e.type})`;
 }
-document.addEventListener('mouseup', unpress);
-function unpress(e) {
-  log.data = `${e.buttons} (mouseup)`
-}
-document.querySelector('#log').appendChild(log)</pre>
 
-<h3 id="Result">Result</h3>
+document.addEventListener('mouseup', logButtons);
+document.addEventListener('mousedown', logButtons);
+// document.addEventListener('mousemove', logButtons);
 
-<p>{{EmbedLiveSample("Example")}}</p>
+document.querySelector('#log').appendChild(log)
+```
 
-<h2 id="Specifications">Specifications</h2>
+### 結果
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-MouseEvent-buttons','MouseEvent.buttons')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## 仕様書
 
+{{Specifications}}
 
+## ブラウザーの互換性
 
-<p>{{Compat("api.MouseEvent.buttons")}}</p>
+{{Compat}}
 
-<h3 id="Firefox_notes">Firefox notes</h3>
+### Firefox のメモ
 
-<p>Firefox supports the <code>buttons</code> attribute on Windows, Linux (GTK), and macOS with the following restrictions:</p>
+Firefox は `buttons` 属性に Windows, Linux (GTK), macOS で対応していますが、以下の制限があります。
 
-<ul>
- <li>Utilities allow customization of button actions. Therefore, <em>primary</em> might not be the the left button on the device, <em>secondary</em> might not be the right button, and so on. Moreover, the middle (wheel) button, 4th button, and 5th button might not be assigned a value, even when they are pressed.</li>
- <li>Single-button devices may emulate additional buttons with combinations of button and keyboard presses.</li>
- <li>Touch devices may emulate buttons with configurable gestures (e.g., one-finger touch for <em>primary</em>, two-finger touch for <em>secondary</em>, etc.).</li>
- <li>On Linux (GTK), the 4th button and the 5th button are not supported. In addition, a {{Event("mouseup")}} event always includes the releasing button information in the <code>buttons</code> value.</li>
- <li>On Mac OS X 10.5, the <code>buttons</code> attribute always returns <code>0</code> because there is no platform API for implementing this feature.</li>
-</ul>
+- ユーティリティで、ボタン操作のカスタマイズをすることができます。
+  したがって、*主ボタン*は機器の左ボタンではない、*副ボタン*は右ボタンではない、などということもありえます。
+  また、中（ホイール）ボタン、第四ボタン、第五ボタンは、押されても値が割り当てられないかもしれません。
+- 単一ボタンの機器では、ボタンとキーボードの押下の組み合わせで追加のボタンをエミュレートすることができます。
+- タッチ機器では、設定可能なジェスチャー（例えば、 1 本指タッチで「主ボタン」、2 本指タッチで「副ボタン」等）でボタンをエミュレートすることができます。
+- Linux (GTK) では、第四ボタンと第五ボタンには対応していません。
+  加えて {{domxref("Element/mouseup_event", "mouseup")}} イベントでは、常に `buttons` の値に離したボタンの情報を含みます。
+- Mac OS X 10.5 では、 `buttons` 属性は常に `0` を返します。プラットフォームの API がこの機能を実装していないからです。
 
-<h2 id="See_also">See also</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("MouseEvent")}}</li>
-</ul>
+- {{domxref("MouseEvent")}}
