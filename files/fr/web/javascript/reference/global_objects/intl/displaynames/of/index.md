@@ -22,8 +22,8 @@ of(code)
   - : La valeur du `code` à fournir dépend du `type`&nbsp;:
 
     - Si le type est `"region"`, le code sera [un code de région ISO-3166 sur deux lettres](https://www.iso.org/iso-3166-country-codes.html), ou [un code de région géographique sur trois chiffres UN M49](https://unstats.un.org/unsd/methodology/m49/).
-    - Si le type est `"script"`, le code sera [un code de script ISO-15924 sur quatre lettres](http://unicode.org/iso15924/iso15924-codes.html).
-    - Si le type est `"language"`, le code sera de la forme d'une sous-séquence _languageCode_ \["-"_scriptCode_] \["-" _regionCode_ ] \*("-" _variant_ ) de la grammaire unicode_language_id pour [la grammaire des identifiants de locales et de langues Unicode UTS 35](http://unicode.org/reports/tr35/#Unicode_language_identifier). _languageCode_ est soit un code de langue ISO 639-1 sur deux lettres ou un code de langue ISO 639-2 sur trois lettres.
+    - Si le type est `"script"`, le code sera [un code de script ISO-15924 sur quatre lettres](https://unicode.org/iso15924/iso15924-codes.html).
+    - Si le type est `"language"`, le code sera de la forme d'une sous-séquence _languageCode_ \["-"_scriptCode_] \["-" _regionCode_ ] \*("-" _variant_ ) de la grammaire unicode_language_id pour [la grammaire des identifiants de locales et de langues Unicode UTS 35](https://unicode.org/reports/tr35/#Unicode_language_identifier). _languageCode_ est soit un code de langue ISO 639-1 sur deux lettres ou un code de langue ISO 639-2 sur trois lettres.
     - Si le type est `"currency"`, le code sera [un code à 3 lettres ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
 
 ### Valeur de retour

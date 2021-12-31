@@ -5,7 +5,7 @@ browser-compat: javascript.builtins.Intl.Collator.Collator
 ---
 {{JSRef}}
 
-Le constructeur **`Intl.Collator()`** crée un objet [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Intl/Collator) qui permet de comparer des chaînes de caractères en prenant en compte la locale.
+Le constructeur **`Intl.Collator()`** crée un objet [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) qui permet de comparer des chaînes de caractères en prenant en compte la locale.
 
 {{EmbedInteractiveExample("pages/js/intl-collator.html")}}
 
