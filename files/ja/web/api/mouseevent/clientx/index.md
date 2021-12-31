@@ -1,74 +1,67 @@
 ---
 title: MouseEvent.clientX
 slug: Web/API/MouseEvent/clientX
+tags:
+  - API
+  - CSSOM View
+  - DOM
+  - DOM イベント
+  - MouseEvent
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+browser-compat: api.MouseEvent.clientX
 translation_of: Web/API/MouseEvent/clientX
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>MouseEvent.clientX</code></strong> は event の起きた点の、クライアント内での X 座標を参照できる読み取り専用の属性です。画面の左上でクリックした場合、ページの横スクロール位置に関わらず、その値は 0 となります。</p>
+**`clientX`** は {{domxref("MouseEvent")}} の読み取り専用のプロパティで、このイベントが発生した時点のアプリケーションの{{glossary("viewport", "ビューポート")}}における水平座標を定義します（ページにおける座標ではありません）。
 
-<h2 id="記法">記法</h2>
+例えば、ビューポートの左端をクリックすると、そのページが水平方向にスクロールしているかどうかにかかわらず、常に `clientX` の値が `0` のマウスイベントが発生します。
 
-<pre class="syntaxbox">var <em>x</em> = <em>instanceOfMouseEvent</em>.clientX
-</pre>
+## 値
 
-<h3 id="返り値">返り値</h3>
+`double` の浮動小数点値です。
 
-<p>数値</p>
+## 例
 
-<h2 id="Example" name="Example">使用例</h2>
+この例では、 {{domxref("Element/mousemove_event", "mousemove")}} イベントが発生するたびに、マウスの座標を表示します。
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;clientX\clientY example&lt;/title&gt;
+### HTML
 
-&lt;script&gt;
-function showCoords(evt){
-  alert(
-    "clientX value: " + evt.clientX + "\n" +
-    "clientY value: " + evt.clientY + "\n"
-  );
+```html
+<p>マウスを動かして位置を確認してください。</p>
+<p id="screen-log"></p>
+```
+
+### JavaScript
+
+```js
+let screenLog = document.querySelector('#screen-log');
+document.addEventListener('mousemove', logKey);
+
+function logKey(e) {
+  screenLog.innerText = `
+    Screen X/Y: ${e.screenX}, ${e.screenY}
+    Client X/Y: ${e.clientX}, ${e.clientY}`;
 }
-&lt;/script&gt;
-&lt;/head&gt;
+```
 
-&lt;body onmousedown="showCoords(event)"&gt;
-&lt;p&gt;To display the mouse coordinates click anywhere on the page.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+### 結果
 
-<h2 id="仕様">仕様</h2>
+{{EmbedLiveSample("Example")}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-MouseEvent-clientX','MouseEvent.clientX')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>{{SpecName('DOM2 Events')}} からの変更はなし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.clientX')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>最初の定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("api.MouseEvent.clientX")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
- <li>{{domxref("event.clientY","clientY")}}</li>
- <li>{{domxref("event.screenX","screenX")}} / {{domxref("event.screenY","screenY")}}</li>
-</ul>
+## 関連情報
+
+- {{ domxref("MouseEvent") }}
+- {{domxref("MouseEvent.clientY","clientY")}}
+- {{domxref("MouseEvent.screenX","screenX")}} /
+  {{domxref("MouseEvent.screenY","screenY")}}
