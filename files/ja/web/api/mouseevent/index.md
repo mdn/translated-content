@@ -15,7 +15,7 @@ translation_of: Web/API/MouseEvent
 ---
 {{APIRef("DOM Events")}}
 
-**`MouseEvent`** インターフェイスは、ポインティング機器 (マウスなど) によるユーザーの操作によって発行されたイベントを表します。
+**`MouseEvent`** インターフェイスは、ポインティングデバイス (マウスなど) によるユーザーの操作によって発行されたイベントを表します。
 このインターフェイスを使用する一般的なイベントとして {{domxref("Element/click_event", "click")}}, {{domxref("Element/dblclick_event", "dblclick")}}, {{domxref("Element/mouseup_event", "mouseup")}}, {{domxref("Element/mousedown_event", "mousedown")}} があります。
 
 `MouseEvent` は {{domxref("UIEvent")}} から派生しており、これはさらに {{domxref("Event")}} から派生しています。後方互換性のために {{domxref("MouseEvent.initMouseEvent()")}} メソッドは維持されていますが、 `MouseEvent` オブジェクトを作成する際は {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} コンストラクターを使用するべきです。
