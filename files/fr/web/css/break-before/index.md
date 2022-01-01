@@ -71,9 +71,9 @@ La propriété `break-before` se paramètre avec un des mots-clés définis ci-a
 - `page`
   - : Force un saut de page avant la boîte de l'élément
 - `left`
-  - : Force un ou deux saut de page avant la boîte de l'élément afin que la prochaine page soit une page gauche.
+  - : Force un ou deux sauts de page avant la boîte de l'élément afin que la prochaine page soit une page gauche.
 - `right`
-  - : Force un ou deux saut de page avant la boîte de l'élément afin que la prochaine page soit une page droite.
+  - : Force un ou deux sauts de page avant la boîte de l'élément afin que la prochaine page soit une page droite.
 - `recto` {{experimental_inline}}
   - : Force un ou deux sauts de page avant la boîte de l'élément afin que la prochaine page soit une page recto (une page droite pour le sens de lecture gauche à droite et une page gauche pour le sens de lecture droite à gauche).
 - `verso` {{experimental_inline}}
@@ -93,10 +93,6 @@ La propriété `break-before` se paramètre avec un des mots-clés définis ci-a
 - `region` {{experimental_inline}}
   - : Force une rupture de région avant la boîte de l'élément.
 
-### Syntaxe formelle
-
-{{csssyntax}}
-
 ## Alias/synonymes pour les ruptures de page
 
 Pour des raisons de compatibilité, la propriété historique [`page-break-before`](/fr/docs/Web/CSS/page-break-before) devrait être considérée par les navigateurs comme un synonyme de `break-before`. Cela permet aux sites utilisant `page-break-before` de continuer à fonctionner comme précédemment. Voici un sous-ensemble des valeurs avec leurs alias&nbsp;:
@@ -111,27 +107,39 @@ Pour des raisons de compatibilité, la propriété historique [`page-break-befor
 
 > **Note :** La valeur `always` pour `page-break-*` a été implémentée par les navigateurs comme une rupture de page et non comme une rupture de colonne. C'est pourquoi l'alias ici utilisé est `page` et non `always`.
 
+## Définition formelle
+
+{{cssinfo}}
+
+## Syntaxe formelle
+
+{{csssyntax}}
+
 ## Exemples
+
+Dans l'exemple qui suit, on a un conteneur qui contient un élément `<h1>` qui s'étend sur l'ensemble des colonnes (grâce à `column-span: all`) et un ensemble d'éléments `<h2>` et de paragraphes disposés sur les différentes colonnes avec `column-width: 200px`.
+
+Par défaut, les sous-titres et les paragraphes auraient été disposés de façon chaotique en raison de l'emplacement non-uniforme des titres. Cependant, en utilisant `break-before: column` sur les éléments `<h2>`, on force une rupture de colonne avant chaque sous-titre et on obtient ainsi leur positionnement en début de colonne (pour les navigateurs compatibles).
 
 ### HTML
 
 ```html
 <article>
-  <h1>Main heading</h1>
+  <h1>Titre principal</h1>
 
-  <h2>Subheading</h2>
+  <h2>Sous-titre</h2>
 
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae fringilla mauris. Quisque commodo eget nisi sed pretium. Mauris luctus nec lacus in ultricies. Mauris vitae hendrerit arcu, ac scelerisque lacus. Aliquam lobortis in lacus sit amet posuere. Fusce iaculis urna id neque dapibus, eu lacinia lectus dictum.</p>
   
-  <h2>Subheading</h2>
+  <h2>Sous-titre</h2>
   
   <p>Praesent condimentum dui dui, sit amet rutrum diam tincidunt eu. Cras suscipit porta leo sit amet rutrum. Sed vehicula ornare tincidunt. Curabitur a ipsum ac diam mattis volutpat ac ut elit. Nullam luctus justo non vestibulum gravida. Morbi metus libero, pharetra non porttitor a, molestie nec nisi.</p>
   
-  <h2>Subheading</h2>
+  <h2>Sous-titre</h2>
   
   <p>Vivamus eleifend metus vitae neque placerat, eget interdum elit mattis. Donec eu vulputate nibh. Ut turpis leo, malesuada quis nisl nec, volutpat egestas tellus.
   
-  <h2>Subheading</h2>
+  <h2>Sous-titre</h2>
   
   <p>In finibus viverra enim vel suscipit. Quisque consequat velit eu orci malesuada, ut interdum tortor molestie. Proin sed pellentesque augue. Nam risus justo, faucibus non porta a, congue vel massa. Cras luctus lacus nisl, sed tincidunt velit pharetra ac. Duis suscipit faucibus dui sed ultricies.</p>
 </article>
@@ -174,8 +182,6 @@ article {
 ## Spécifications
 
 {{Specifications("css.properties.break-before.multicol_context")}}
-
-{{cssinfo}}
 
 ## Compatibilité des navigateurs
 

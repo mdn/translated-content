@@ -36,7 +36,11 @@ border-top-style: unset;
 
 La propriété `border-top-style` se définit avec l'un des mots-clés utilisés par la propriété [`border-style`](/fr/docs/Web/CSS/border-style).
 
-### Syntaxe formelle
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
@@ -97,8 +101,6 @@ tr, td {
 ## Spécifications
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## Compatibilité des navigateurs
 

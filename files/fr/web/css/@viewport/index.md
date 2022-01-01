@@ -6,6 +6,8 @@ browser-compat: css.at-rules.viewport
 ---
 {{CSSRef}}{{deprecated_header}}
 
+> **Note :** Voir <https://github.com/w3c/csswg-drafts/issues/4766> quant à la discussion pour le retrait de @viewport des standards.
+
 La [règle @](fr/docs/Web/CSS/At-rule) **`@viewport`** permet de configurer la zone d'affichage (le _viewport_ en anglais) à travers laquelle le document est affiché. Cette règle est principalement utilisée pour les appareils mobiles mais aussi pour les navigateurs de bureau (par exemple, Microsoft Edge qui gère la division de l'écran).
 
 Les longueurs exprimées en pourcentages sont calculées de façon relative à la **zone d'affichage initiale** c'est-à-dire le _viewport_ avant tout ajustement effectué par le navigateur ou par les styles de la page. Généralement, cela correspond à la taille de la fenêtre pour les navigateurs de bureau lorsqu'ils ne sont pas utilisés en mode plein écran.

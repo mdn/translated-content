@@ -6,10 +6,17 @@ browser-compat: css.properties.border-inline-start
 ---
 {{CSSRef}}
 
-La propriété **`border-inline-start`** est une propriété raccourcie qui permet de définir la bordure d'un élément pour le côté correspondant au début de l'élément dans le sens de lecture. Elle peut être utilisée pour définir les valeurs de [`border-inline-start-width`](/fr/docs/Web/CSS/border-inline-start-width), [`border-inline-start-style`](/fr/docs/Web/CSS/border-inline-start-style) et [`border-inline-start-width`](/fr/docs/Web/CSS/border-inline-start-width).
+La propriété **`border-inline-start`** est une propriété raccourcie qui permet de définir la bordure d'un élément pour le côté correspondant au début de l'élément dans le sens de lecture.
 
 {{EmbedInteractiveExample("pages/css/border-inline-start.html")}}
 
+## Propriétés détaillées correspondantes
+
+Cette propriété est une propriété raccourcie pour les propriétés CSS&nbsp;:
+
+- [`border-inline-start-color`](/fr/docs/Web/CSS/border-inline-start-color)
+- [`border-inline-start-style`](/fr/docs/Web/CSS/border-inline-start-style)
+- [`border-inline-start-width`](/fr/docs/Web/CSS/border-inline-start-width)
 
 ## Syntaxe
 
@@ -38,9 +45,13 @@ Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre&nbsp;:
 - `<'border-style'>`
   - : Le style utilisé pour la ligne de la bordure sur ce côté, voir [`border-style`](/fr/docs/Web/CSS/border-style).
 - `<'color'>`
-  - : La couleur utilisé pour la bordure sur ce côté, voir [`color`](/fr/docs/Web/CSS/color).
+  - : La couleur utilisée pour la bordure sur ce côté, voir [`color`](/fr/docs/Web/CSS/color).
 
-### Syntaxe formelle
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
@@ -77,13 +88,11 @@ div {
 
 {{Specifications}}
 
-{{cssinfo}}
-
 ## Compatibilité des navigateurs
 
 {{Compat}}
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes&nbsp;: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- Les propriétés physiques correspondantes&nbsp;: [`border-top`](/fr/docs/Web/CSS/border-top), [`border-right`](/fr/docs/Web/CSS/border-right), [`border-bottom`](/fr/docs/Web/CSS/border-bottom), [`border-left`](/fr/docs/Web/CSS/border-left)
+- [`writing-mode`](/fr/docs/Web/CSS/writing-mode), [`direction`](/fr/docs/Web/CSS/direction), [`text-orientation`](/fr/docs/Web/CSS/text-orientation)

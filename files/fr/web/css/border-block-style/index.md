@@ -32,7 +32,11 @@ border-block-style: unset;
 - `<'border-style'>`
   - : Le style de la ligne pour la bordure. Voir [`border-style`](/fr/docs/Web/CSS/border-style).
 
-### Syntaxe formelle
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
@@ -69,8 +73,6 @@ div {
 ## Spécifications
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## Compatibilité des navigateurs
 
