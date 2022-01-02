@@ -1,62 +1,57 @@
 ---
 title: '::-moz-color-swatch'
-slug: 'Web/CSS/::-moz-color-swatch'
+slug: Web/CSS/::-moz-color-swatch
 tags:
   - CSS
-  - 'CSS:Mozilla Extensions'
-  - 'CSS:Mozilla 拡張'
-  - Non-standard
-  - Pseudo-element
-  - Reference
+  - CSS:Mozilla 拡張
   - 標準外
-  - 疑似要素
-translation_of: 'Web/CSS/::-moz-color-swatch'
+  - 擬似要素
+  - リファレンス
+  - セレクター
+browser-compat: css.selectors.-moz-color-swatch
+translation_of: Web/CSS/::-moz-color-swatch
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p><strong><code>::-moz-color-swatch</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Pseudo-elements" title="en/CSS/Pseudo-elements">疑似要素</a>であり、 <a href="/ja/docs/Web/CSS/Mozilla_Extensions">Mozilla 拡張</a>で、 {{HTMLElement("input")}} の <code>type="color"</code> で選択された色を表します。</p>
+**`::-moz-color-swatch`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)であり、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)で、 {{HTMLElement("input")}} の `type="color"` で選択された色を表します。
 
-<div class="note">
-<p><strong>メモ:</strong> <code>::-moz-color-swatch</code> を <code>&lt;input type="color"&gt;</code> 以外に何も一致せず、何も効果がありません。</p>
-</div>
+> **Note:** `::-moz-color-swatch` を `<input type="color">` 以外に何も一致せず、何も効果がありません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input type="color" value="#de2020" /&gt;
-</pre>
+```html
+<input type="color" value="#de2020" />
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input[type=color]::-moz-color-swatch {
+```css
+input[type=color]::-moz-color-swatch {
   border-radius: 10px;
   border-style: none;
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example", 300, 50)}}</p>
+{{EmbedLiveSample("Examples", 300, 50)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<p>どの仕様書でも定義されていません。これは Gecko に固有の専用の疑似要素です。</p>
+どの仕様書でも定義されていません。これは Gecko に固有の専用の擬似要素です。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.selectors.-moz-color-swatch")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>他のブラウザーで使われる同様の疑似要素:
-  <ul>
-   <li>{{cssxref("::-webkit-color-swatch")}} WebKit および Blink (Safari, Chrome, Opera) で対応している疑似要素</li>
-  </ul>
- </li>
-</ul>
+- 他のブラウザーで使用される似た擬似要素
+
+  - {{cssxref("::-webkit-color-swatch")}} WebKit および Blink (Safari, Chrome, Opera) で対応している擬似要素
