@@ -69,8 +69,6 @@ _このインターフェイスは、親インターフェイスである {{domx
   - : グローバル (スクリーン) 座標における、マウスポインターの Y 座標。
 - {{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}
   - : マウスイベントが発行されたときに <kbd>shift</kbd> キーが押下されていれば、`true` を返します。
-- {{domxref("UIEvent.which")}} {{non-standard_inline}} {{readonlyinline}}
-  - : マウスイベントが発行されたときに押下されていたボタンです。
 - {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{deprecated_inline}} {{readonlyinline}}
   - : イベントが発行されたとき、タッチ機器やタブレット機器に与えられた圧力の大きさです。この値の範囲は、`0.0` (最小圧力) から `1.0` (最大圧力) の間です。
     このプロパティは非推奨 (かつ標準外) であり、代わりに {{domxref("PointerEvent")}} を使用し、 {{domxref("PointerEvent.pressure", "pressure")}} プロパティを参照してください。
