@@ -1,66 +1,73 @@
 ---
 title: '::-webkit-progress-value'
-slug: 'Web/CSS/::-webkit-progress-value'
+slug: Web/CSS/::-webkit-progress-value
 tags:
   - CSS
-  - Reference
-  - Selector
-  - 疑似要素
-  - 非標準
-translation_of: 'Web/CSS/::-webkit-progress-value'
+  - 標準外
+  - 擬似要素
+  - リファレンス
+  - セレクター
+browser-compat: css.selectors.-webkit-progress-value
+translation_of: Web/CSS/::-webkit-progress-value
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p><strong><code>::-webkit-progress-value</code></strong> <a href="/ja/docs/Web/CSS">CSS</a> <a href="/ja/docs/Web/CSS/Pseudo-elements">疑似要素</a> は、 {{HTMLElement("progress")}} 要素のバーの塗りつぶされた部分を表します。これは、 {{cssxref("::-webkit-progress-bar")}} 疑似要素の子要素です。</p>
+**`::-webkit-progress-value`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("progress")}} 要素のバーの塗りつぶされた部分を表します。これは、 {{cssxref("::-webkit-progress-bar")}} 擬似要素の子要素です。
 
-<div class="note">
-<p><strong>Note:</strong> <code>::-webkit-progress-value</code> を有効にするには {{cssxref("-webkit-appearance")}} を <code>&lt;progress&gt;</code> 要素で <code>none</code> に設定する必要があります。</p>
-</div>
+> **Note:** `::-webkit-progress-value` を有効にするには {{cssxref("-webkit-appearance")}} を `<progress>` 要素で `none` に設定する必要があります。
 
-<h2 id="仕様">仕様</h2>
+## 構文
 
-<p>仕様の一部ではありません。これは、 WebKit/Blink に固有の独自疑似要素です。</p>
+```css
+::-webkit-progress-value
+```
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+この例は Blink または WebKit ベースのブラウザーでのみ動作します。
 
-<pre class="brush: html notranslate">&lt;progress value="10" max="50"&gt;
-</pre>
+### HTML
 
-<h3 id="CSS">CSS</h3>
+```html
+<progress value="10" max="50">
+```
 
-<pre class="brush: css notranslate">progress {
+### CSS
+
+```css
+progress {
   -webkit-appearance: none;
 }
 
 ::-webkit-progress-value {
   background-color: orange;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example", 200, 50)}}</p>
+{{EmbedLiveSample("Examples", 200, 50)}}
 
-<p>上記のスタイルを使用したプログレスバーは次のようになります:</p>
+### 結果のスクリーンショット
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13490/progress-value.png" style="height: 60px; width: 249px;"></p>
+上記のスタイルを使用したプログレスバーは次のようになります:
 
-<h2 id="ブラウザーの実装状況">ブラウザーの実装状況</h2>
+![](progress-value.png)
 
+## 仕様書
 
+どの標準にも含まれていません。
 
-<p>{{Compat("css.selectors.-webkit-progress-value")}}</p>
+## ブラウザーの互換性
 
-<h2 id="関連項目">関連項目</h2>
+{{Compat}}
 
-<ul>
- <li>WebKit/Blink が {{HTMLElement("progress")}} 要素のその他の部分をスタイルするために使用する疑似要素:
-  <ul>
-   <li>{{ cssxref("::-webkit-progress-bar") }}</li>
-   <li>{{ cssxref("::-webkit-progress-inner-element") }}</li>
-  </ul>
- </li>
- <li>{{ cssxref("::-moz-progress-bar") }}</li>
- <li>{{ cssxref("::-ms-fill") }}</li>
-</ul>
+## 関連情報
+
+- WebKit/Blink が {{HTMLElement("progress")}} 要素のその他の部分を整形するために使用する擬似要素:
+
+  - {{ cssxref("::-webkit-progress-bar") }}
+  - {{ cssxref("::-webkit-progress-inner-element") }}
+
+- {{ cssxref("::-moz-progress-bar") }}
+- {{ cssxref("::-ms-fill") }}
