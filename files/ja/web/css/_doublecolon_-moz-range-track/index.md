@@ -1,74 +1,68 @@
 ---
 title: '::-moz-range-track'
-slug: 'Web/CSS/::-moz-range-track'
+slug: Web/CSS/::-moz-range-track
 tags:
   - CSS
-  - 'CSS:Mozilla Extensions'
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
-translation_of: 'Web/CSS/::-moz-range-track'
+  - CSS:Mozilla 拡張
+  - 標準外
+  - 擬似要素
+  - リファレンス
+  - セレクター
+translation_of: Web/CSS/::-moz-range-track
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p><strong><code>::-moz-range-track</code></strong> <a href="/ja/docs/Web/CSS">CSS</a> <a href="/ja/docs/Web/CSS/Pseudo-elements" title="en/CSS/Pseudo-elements">疑似要素</a>は、 <code>type="range"</code> の {{HTMLElement("input")}} でインジケーターがスライドする <em>track</em> (例, 溝) を表す <a href="/ja/docs/Web/CSS/Mozilla_Extensions">Mozilla 拡張機能</a> です。</p>
+**`::-moz-range-track`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、 `type="range"` の {{HTMLElement("input")}} でインジケーターがスライドする*トラック* (すなわち、溝) を表します。
 
-<div class="note">
-<p><strong>Note:</strong> <code>::-moz-range-track</code> を <code>&lt;input type="range"&gt;</code> 以外で使用すると、何にも一致せず、効果がありません。</p>
-</div>
+> **Note:** `::-moz-range-track` を `<input type="range">` 以外で使用すると、何にも一致せず、効果がありません。
 
-<h2 id="構文">構文</h2>
+## 構文
 
 {{csssyntax}}
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;input type="range" min="0" max="100" step="5" value="50"/&gt;
-</pre>
+```html
+<input type="range" min="0" max="100" step="5" value="50"/>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">input[type=range]::-moz-range-track {
+```css
+input[type=range]::-moz-range-track {
   background-color: green;
 }
-</pre>
+```
 
-<h3 id="結果">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example", 300, 50)}}</p>
+{{EmbedLiveSample("Examples", 300, 50)}}
 
-<p>このスタイルを使用するプログレスバーは、次のようになります:</p>
+このスタイルを使用するプログレスバーは、次のようになります。
 
-<p><img alt="A range with the track green." src="https://mdn.mozillademos.org/files/11999/Screen%20Shot%202015-12-04%20at%2010.14.34.png"></p>
+![A range with the track green](screen_shot_2015-12-04_at_10.14.34.png)
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<p>標準の一部ではありません。</p>
+標準の一部ではありません。
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("css.selectors.-moz-range-track")}}</p>
+- Gecko で使われる他の range 型の入力の他の部品をスタイル付けする擬似要素:
 
-<h2 id="関連項目">関連項目</h2>
+  - {{cssxref("::-moz-range-thumb")}} は溝をスライドするインジケーターを表します。
+  - {{cssxref("::-moz-range-progress")}} はトラックの下の部分を表します。
 
-<ul>
- <li>The pseudo-elements used by Gecko to style other parts of a range input:
-  <ul>
-   <li>{{cssxref("::-moz-range-thumb")}} represents the indicator that slides in the groove.</li>
-   <li>{{cssxref("::-moz-range-progress")}} represents the lower portion of the track.</li>
-  </ul>
- </li>
- <li>Similar pseudo-elements used by other browsers:
-  <ul>
-   <li>{{cssxref("::-webkit-slider-runnable-track")}}, pseudo-element supported by WebKit and Blink (Safari, Chrome, and Opera)</li>
-   <li>{{cssxref("::-ms-track")}}, pseudo-element supported by Internet Explorer and Edge</li>
-  </ul>
- </li>
- <li><a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/">CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS</a></li>
- <li><a href="http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html">QuirksMode: Styling and scripting sliders</a></li>
-</ul>
+- 他のブラウザーで使われる同様の擬似要素:
+
+  - {{cssxref("::-webkit-slider-runnable-track")}} WebKit および Blink (Safari, Chrome, Opera) が対応している擬似要素
+  - {{cssxref("::-ms-track")}} Internet Explorer および Edge が対応している擬似要素
+
+- [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
