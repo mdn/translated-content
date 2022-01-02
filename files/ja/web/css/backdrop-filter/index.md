@@ -4,28 +4,29 @@ slug: Web/CSS/backdrop-filter
 tags:
   - CSS
   - CSS プロパティ
-  - Graphics
-  - Layout
-  - Reference
-  - SVG
-  - SVG フィルター
-  - Web
-  - ウェブ
   - グラフィック
   - レイアウト
+  - NeedsContent
+  - リファレンス
+  - SVG
+  - SVG フィルター
+  - ウェブ
+  - recipe:css-property
+browser-compat: css.properties.backdrop-filter
 translation_of: Web/CSS/backdrop-filter
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>backdrop-filter</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、要素の背後の領域に、ぼかしや色変化のようなグラフィック効果を適用することができます。要素の<em>背後</em>のすべてに適用されるため、効果を見るためには少なくとも一部が透明な要素またはその背景を作成する必要があります。</p>
+**`backdrop-filter`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背後の領域に、ぼかしや色変化のようなグラフィック効果を適用することができます。要素の*背後*のすべてに適用されるため、効果を見るためには少なくとも一部が透明な要素またはその背景を作成する必要があります。
 
-<pre class="brush: css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 backdrop-filter: none;
 
 /* SVG フィルターへの URL */
 backdrop-filter: url(commonfilters.svg#filter);
 
-/* &lt;filter-function&gt; 値 */
+/* <filter-function> 値 */
 backdrop-filter: blur(2px);
 backdrop-filter: brightness(60%);
 backdrop-filter: contrast(40%);
@@ -43,31 +44,33 @@ backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
 /* グローバル値 */
 backdrop-filter: inherit;
 backdrop-filter: initial;
+backdrop-filter: revert;
 backdrop-filter: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+- `none`
+  - : 背後にフィルターを適用しません。
+- `<filter-function-list>`
+  - : 背景に適用する {{cssxref("&lt;filter-function&gt;")}} または [SVG フィルター](/ja/docs/Web/SVG/Element/filter)の空白区切りのリストです。
 
-<dl>
- <dt><code>none</code></dt>
- <dd>背後にフィルターを適用しません。</dd>
- <dt><code>&lt;filter-function-list&gt;</code></dt>
- <dd>背景に適用する {{cssxref("&lt;filter-function&gt;")}} または <a href="/ja/docs/Web/SVG/Element/filter">SVG フィルター</a>の空白区切りのリストです。</dd>
-</dl>
+## 公式定義
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">.box {
+```css
+.box {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   font-family: sans-serif;
@@ -99,47 +102,31 @@ body {
   justify-content: center;
   height: 100%;
   width: 100%;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
-  &lt;div class="box"&gt;
-    &lt;p&gt;backdrop-filter: blur(10px)&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="container">
+  <div class="box">
+    <p>backdrop-filter: blur(10px)</p>
+  </div>
+</div>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example", 600, 400)}}</p>
+{{EmbedLiveSample("Examples", 600, 400)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Filters 2.0', '#BackdropFilterProperty', 'backdrop-filter')}}</td>
-   <td>{{Spec2('Filters 2.0')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.backdrop-filter")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("filter")}}</li>
- <li><a href="http://product.voxmedia.com/til/2015/2/17/8053347/css-ios-transparency-with-webkit-backdrop-filter">Building iOS-like transparency effects in CSS with backdrop-filter</a></li>
-</ul>
+- {{cssxref("filter")}}
