@@ -34,14 +34,14 @@ var x = instanceOfMouseEvent.screenX
 
 この例では、 {{domxref("Element/mousemove_event", "mousemove")}} イベントが発行されるたびにマウスの座標を表示します。
 
-#### HTML
+### HTML
 
 ```html
 <p>マウスを動かして、位置を確認してください。</p>
 <p id="screen-log"></p>
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 let screenLog = document.querySelector('#screen-log');
@@ -54,12 +54,11 @@ function logKey(e) {
 }
 ```
 
-#### 結果
+### 結果
 
 {{EmbedLiveSample("Example")}}
 
 ### イベントのルーティング
-
 
 ウィンドウや文書、範囲の要素にイベントをトラップすると、次の例のように、そのイベント（クリックなど）の座標を取得して、適切にルーティングすることができます。
 
