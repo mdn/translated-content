@@ -1,39 +1,40 @@
 ---
 title: '::part()'
-slug: 'Web/CSS/::part'
+slug: Web/CSS/::part
 tags:
   - '::part'
   - CSS
   - Draft
-  - Experimental
+  - 実験的
   - NeedsBrowserCompatibility
   - NeedsExample
-  - Pseudo-element
-  - Reference
-  - Selector
-  - セレクター
   - 擬似要素
-translation_of: 'Web/CSS/::part'
+  - リファレンス
+  - セレクター
+browser-compat: css.selectors.part
+translation_of: Web/CSS/::part
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>::part</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Pseudo-elements">擬似要素</a>で、一致する {{HTMLAttrxRef("part")}} 属性を持つ<a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">シャドウツリー</a>内の要素を表します。</p>
+**`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、一致する {{HTMLAttrxRef("part")}} 属性を持つ[シャドウツリー](/ja/docs/Web/Web_Components/Using_shadow_DOM)内の要素を表します。
 
-<pre class="brush: css no-line-numbers notranslate">custom-element::part(foo) {
-  /* Styles to apply to the `foo` part */
+```css
+custom-element::part(foo) {
+  /* `foo` の部分に適用するスタイル */
 }
-</pre>
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 {{CSSSyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;template id="tabbed-custom-element"&gt;
-&lt;style type="text/css"&gt;
+```html
+<template id="tabbed-custom-element">
+<style type="text/css">
 *, ::before, ::after {
   box-sizing: border-box;
   padding: 1rem;
@@ -41,28 +42,30 @@ translation_of: 'Web/CSS/::part'
 :host {
   display: flex;
 }
-&lt;/style&gt;
-&lt;div part="tab active"&gt;Tab 1&lt;/div&gt;
-&lt;div part="tab"&gt;Tab 2&lt;/div&gt;
-&lt;div part="tab"&gt;Tab 3&lt;/div&gt;
-&lt;/template&gt;
+</style>
+<div part="tab active">Tab 1</div>
+<div part="tab">Tab 2</div>
+<div part="tab">Tab 3</div>
+</template>
 
-&lt;tabbed-custom-element&gt;&lt;/tabbed-custom-element&gt;</pre>
+<tabbed-custom-element></tabbed-custom-element>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">tabbed-custom-element::part(tab) {
-  color: #0c0c0dcc;
+```css
+tabbed-custom-element::part(tab) {
+  color: #0c0dcc;
   border-bottom: transparent solid 2px;
 }
 
 tabbed-custom-element::part(tab):hover {
-  background-color: #0c0c0d19;
-  border-color: #0c0c0d33;
+  background-color: #0c0d19;
+  border-color: #0c0d33;
 }
 
 tabbed-custom-element::part(tab):hover:active {
-  background-color: #0c0c0d33;
+  background-color: #0c0d33;
 }
 
 tabbed-custom-element::part(tab):focus {
@@ -76,11 +79,12 @@ tabbed-custom-element::part(active) {
   color: #0060df;
   border-color: #0a84ff !important;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">let template = document.querySelector("#tabbed-custom-element");
+```js
+let template = document.querySelector("#tabbed-custom-element");
 globalThis.customElements.define(template.id, class extends HTMLElement {
   constructor() {
     super();
@@ -88,39 +92,22 @@ globalThis.customElements.define(template.id, class extends HTMLElement {
     this.shadowRoot.appendChild(template.content);
   }
 });
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Shadow Parts", "#part", "::part")}}</td>
-   <td>{{Spec2("CSS Shadow Parts")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.selectors.part")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLAttrxRef("part")}} 属性 - <code>::part()</code> セレクタで選択できるパーツを定義するために使用されます</li>
- <li>{{HTMLAttrxRef("exportparts")}} 属性 - ネストされたシャドウツリーにシャドウパーツを推移的にエクスポートするために使用されます。</li>
- <li><a href="https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md">Explainer: CSS Shadow ::part and ::theme</a></li>
-</ul>
+- {{HTMLAttrxRef("part")}} 属性 - `::part()` セレクタで選択できるパーツを定義するために使用されます
+- {{HTMLAttrxRef("exportparts")}} 属性 - ネストされたシャドウツリーにシャドウパーツを推移的にエクスポートするために使用されます。
+- [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)
