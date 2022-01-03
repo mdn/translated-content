@@ -1,0 +1,40 @@
+---
+title: Client Hints (クライアントヒント)
+slug: Web/HTTP/Client_hints
+tags:
+  - Client hints
+  - Glossary
+  - Performance
+  - Reference
+  - Web Performance
+translation_of: Glossary/Client_hints
+original_slug: Glossary/Client_hints
+---
+<p><span class="seoSummary"><strong>クライアントヒント</strong> (Client Hints) は、プロアクティブコンテンツネゴシエーション用の <a href="/ja/docs/Web/HTTP/Headers">HTTP リクエストヘッダー</a>フィールドのセットで、クライアントがデバイスとエージェントに固有の設定のリストを示すことができます。</span> <a href="/ja/docs/Web/HTTP/Headers#Client_hints">クライアントヒント</a>により、画像の <abbr title="device pixel ratio">DPR</abbr> 解像度の自動ネゴシエーションなどの最適化されたアセットの自動配信が可能になります。</p>
+
+<p>クライアントヒントの使用は自動ではありません。 サーバーはクライアントヒントをサポートしていることを知らせる必要があります。 サーバーは、<code><a href="https://tools.ietf.org/html/draft-grigorik-http-client-hints-03#section-2.2.1">Accept-CH</a></code> (クライアントヒントを受け入れる) ヘッダーまたは <code><a href="/ja/docs/Web/HTML/Element/meta#Attributes">http-equiv</a></code> 属性を持つ同等の HTML の meta 要素を使用して、クライアントヒントのサポートを知らせます。</p>
+
+<p><code>Accept-CH: <abbr title="device pixel ratio">DPR</abbr>, Width, Viewport-Width, Downlink</code></p>
+
+<p>および/または</p>
+
+<p><code>&lt;meta http-equiv="Accept-CH" content="<abbr title="device pixel ratio">DPR</abbr>, Width, Viewport-Width, Downlink</code><code>"&gt;</code></p>
+
+<p>クライアントが <code>Accept-CH</code> ヘッダーを受信すると、サポートしている場合は、知らされたフィールド値と一致するクライアントヒントのヘッダーを追加します。 例えば、上記の Accept-CH の例に基づいて、クライアントは DPR、Width、Viewport-Width、および Downlink のヘッダーを後続のすべてのリクエストに追加できます。 2番目の例では、サーバーは Accept-CH meta タグを設定することにより、ブラウザーにヒントを提供します。</p>
+
+<p>基本的に、クライアントヒントのヘッダーを使用すると、開発者またはアプリは、デバイスピクセル比、ビューポート幅、ディスプレイ幅など、それ自体に関する情報をサーバーに知らせるようにブラウザーに指示できます。 その後、クライアントはサーバーにクライアントの環境に関する情報を提供でき、サーバーはその情報に基づいて送信するリソースを決定できます。</p>
+
+<h2 id="Varying_Client_Hints" name="Varying_Client_Hints">変化するクライアントヒント</h2>
+
+<p>異なる<a href="/ja/docs/Web/HTTP/Headers#Client_hints">クライアントヒント</a>がレスポンスに影響する可能性があることをキャッシュに伝えるには、<code><a href="/ja/docs/Web/HTTP/Headers/Vary">Vary</a></code> HTTP ヘッダーを使用する必要があります。</p>
+
+<p id="Example_varying_response">変化するレスポンスの例:</p>
+
+<p><code>Vary: Accept, <abbr title="device pixel ratio">DPR</abbr>, Width, Viewport-Width, Downlink</code></p>
+
+<h2 id="See_Also" name="See_Also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/HTTP/Headers#Client_hints">クライアントヒントのヘッダー</a></li>
+ <li><a href="/ja/docs/Web/HTTP/Headers/Vary"><code>Vary</code> HTTP ヘッダー</a></li>
+</ul>

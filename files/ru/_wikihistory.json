@@ -10541,20 +10541,20 @@
       "Kami-san"
     ]
   },
-  "Web/API/USB/getDevices": {
-    "modified": "2020-10-15T22:31:15.293Z",
-    "contributors": [
-      "Kami-san"
-    ]
-  },
-  "Web/API/USB/onconnect": {
+  "Web/API/USB/connect_event": {
     "modified": "2020-10-15T22:31:15.839Z",
     "contributors": [
       "Kami-san"
     ]
   },
-  "Web/API/USB/ondisconnect": {
+  "Web/API/USB/disconnect_event": {
     "modified": "2020-10-15T22:31:11.552Z",
+    "contributors": [
+      "Kami-san"
+    ]
+  },
+  "Web/API/USB/getDevices": {
+    "modified": "2020-10-15T22:31:15.293Z",
     "contributors": [
       "Kami-san"
     ]

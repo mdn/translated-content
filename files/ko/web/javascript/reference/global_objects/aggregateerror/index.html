@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 
 <h3 id="AggregateError_다루기">AggregateError 다루기</h3>
 
-<pre class="brush: js; notranslate">Promise.any([
+<pre class="brush: js">Promise.any([
   Promise.reject(new Error("some error")),
 ]).catch(e =&gt; {
   console.log(e instanceof AggregateError); // true
@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 
 <h3 id="AggregateError_발생시키기">AggregateError 발생시키기</h3>
 
-<pre class="brush: js; notranslate">try {
+<pre class="brush: js">try {
   throw new AggregateError([
     new Error("some error"),
   ], 'Hello');

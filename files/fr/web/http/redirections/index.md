@@ -67,7 +67,7 @@ L'attribut {{htmlattrxref("content")}} commence avec un nombre indiquant combien
 
 Bien entendu, cette méthode ne fonctionne qu'avec des pages HTML (ou similaires) et ne peut être utilisée pour des images ou tout autre type de contenu.
 
-> **Note :** Ces redirections cassent le bouton de retour dans un navigateur : vous pouvez revenir à une page avec cet en-tête mais mais vous serez de nouveau instantanément rediriger.
+> **Note :** Ces redirections cassent le bouton de retour dans un navigateur : vous pouvez revenir à une page avec cet en-tête mais vous serez de nouveau instantanément redirigé.
 
 ### Redirections JavaScript
 
@@ -84,7 +84,7 @@ Comme les redirections HTML, cela ne fonctionne pas sur toutes les ressources, e
 Avec trois possibilités de redirections d'URL, plusieurs méthodes peuvent être spécifiées en même temps, mais laquelle est appliquée en premier ? L'ordre de priorité est le suivant:
 
 1.  Les redirections HTTP sont toujours exécutées en premier, alors même que la page n'est pas transmise, et ni même lue.
-2.  Les redirections HTML ({{HTMLElement("meta")}}) sont exécutées are executed s'il n'y avait pas de redirections HTTP.
+2.  Les redirections HTML ({{HTMLElement("meta")}}) sont exécutées s'il n'y avait pas de redirections HTTP.
 3.  Les redirections JavaScript sont utilisées en dernier recours, et uniquement si JavaScript est activé côté client.
 
 Dans la mesure du possible, utilisez des redirections HTTP, et n'ajoutez pas d'élément {{HTMLElement("meta")}} de redirection. Si quelqu'un change les redirections HTTP et oublie de changer les redirections HTML, les redirections ne seront plus identiques, ce qui pourrait causer une boucle infinie ou d'autres cauchemars.
@@ -111,7 +111,7 @@ Lorsque vous restructurez des sites Web, les URL des ressources changent. Même 
 
 ### Réponses temporaires aux requêtes non sécurisées
 
-Les requêtes {{Glossary("safe", "Unsafe")}} modifient l'état du serveur et l'utilisateur ne devrait pas les rejouer par inadvertance. Typiquement, vous ne voulez pas que vos utilisateurs renvoient des requêtes {{HTTPMethod("PUT")}}, {{HTTPMethod("POST")}} ou {{HTTPMethod("DELETE")}}. Si vous ne vous contentez que d'envoyer la réponse à la suite de cette requête, une simple clic sur le bouton de rechargement (éventuellement après un message de confirmation), renvoie la demande.
+Les requêtes {{Glossary("safe", "Unsafe")}} modifient l'état du serveur et l'utilisateur ne devrait pas les rejouer par inadvertance. Typiquement, vous ne voulez pas que vos utilisateurs renvoient des requêtes {{HTTPMethod("PUT")}}, {{HTTPMethod("POST")}} ou {{HTTPMethod("DELETE")}}. Si vous ne vous contentez que d'envoyer la réponse à la suite de cette requête, un simple clic sur le bouton de rechargement (éventuellement après un message de confirmation), renvoie la demande.
 
 Dans ce cas, le serveur peut renvoyer une réponse {{HTTPStatus("303")}} (See Other) qui contiendra les bonnes informations, mais si le bouton de rechargement est pressé, seule cette page est réaffichée, sans rejouer les demandes non sécurisées.
 
@@ -168,7 +168,7 @@ Dans IIS, vous devez utiliser l'élément [`<httpRedirect>`](https://www.iis.net
 
 ## Boucles de redirection
 
-Les boucles de redirection se produisent lorsque lorsque les redirections se succèdent en suivant celle déjà effectuée. En d'autres termes, il y a une boucle qui ne terminera jamais et aucune page ne sera finalement trouvée.
+Les boucles de redirection se produisent lorsque les redirections se succèdent en suivant celle déjà effectuée. En d'autres termes, il y a une boucle qui ne terminera jamais et aucune page ne sera finalement trouvée.
 
 La plupart du temps, il s'agit d'un problème de serveur, et si le serveur ne peut pas le détecter, il renvoie le message {{HTTPStatus("500")}} `Internal Server Error`. Si vous rencontrez une telle erreur peu après avoir modifié une configuration de serveur, il s'agit probablement d'une boucle de redirection.
 

@@ -323,7 +323,7 @@ body {
 
 Encore une fois, c'est parce que la boîte flottante a été retirée du cours normal de l'affichage. Dégager l'élément suivant ne résout pas ce problème où vous voulez que la boîte d'emballage de l'élément flottant et le contenu textuel , même court, arrive au bas de l'élément flottant. Il y a trois façons possibles de résoudre ce problème, deux fonctionnant avec tous les navigateurs — mais relevant un peu de la débrouille — et une troisième, nouvelle, permettant de faire face à cette situation proprement.
 
-### Le « clearfix hack »
+### Débogage avec clear
 
 La façon dont cette situation est traditionnellement traitée consiste à utiliser un procédé connu sous le nom de « clearfix hack » (truc pour déboguer clear). Cela consiste à insérer un contenu après la boîte contenant le flotteur, envelopper le contenu et donner la valeur `both` à la propriété `clear`.
 
@@ -382,7 +382,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Le_«_clearfix_hack_»', '100%', 600) }}
+{{ EmbedLiveSample('Débogage_avec_clear', '100%', 600) }}
 
 ### Utilisation du débordement
 

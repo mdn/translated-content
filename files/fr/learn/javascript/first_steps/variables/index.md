@@ -48,7 +48,7 @@ button.onclick = function() {
 }
 ```
 
-{{ EmbedLiveSample('Quest_ce_quune_variable', '100%', 50) }}
+{{ EmbedLiveSample('Qu\'est_ce_qu\'une_variable_?', '100%', 50) }}
 
 Dans cet exemple, presser le bouton déclenche l'exécution de quelques lignes de code. La première ligne affiche à l'écran une boîte priant l'utilisateur de saisir son nom et stocke la valeur entrée dans une variable. La deuxième affiche un message de bienvenue avec la valeur de la variable.
 

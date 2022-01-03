@@ -44,7 +44,7 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>formNoValidate</code></td>
-   <td><em>{{jsxref("Boolean")}}:</em> その要素の {{ htmlattrxref("formnovalidate", "input") }} 属性を<strong>返却または設定</strong>します。これは送信時にそのフォームが検証されないかどうかを示します。これは親フォームの {{ htmlattrxref("novalidate", "form") }} 属性を上書きします。</td>
+   <td><em><code>boolean</code>:</em> その要素の {{ htmlattrxref("formnovalidate", "input") }} 属性を<strong>返却または設定</strong>します。これは送信時にそのフォームが検証されないかどうかを示します。これは親フォームの {{ htmlattrxref("novalidate", "form") }} 属性を上書きします。</td>
   </tr>
   <tr>
    <td><code>formTarget</code></td>
@@ -66,15 +66,15 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>disabled</code></td>
-   <td><em>{{jsxref("Boolean")}}:</em> その要素の {{ htmlattrxref("disabled", "input") }} 属性を<strong>返却または設定</strong>します。これはそのコントロールが対話を受け付けないかどうかを示します。その入力値はフォームとともに送信されません。 {{ htmlattrxref("readOnly", "input") }} もご覧ください。</td>
+   <td><em><code>boolean</code>:</em> その要素の {{ htmlattrxref("disabled", "input") }} 属性を<strong>返却または設定</strong>します。これはそのコントロールが対話を受け付けないかどうかを示します。その入力値はフォームとともに送信されません。 {{ htmlattrxref("readOnly", "input") }} もご覧ください。</td>
   </tr>
   <tr>
    <td><code>autofocus</code></td>
-   <td><em>{{jsxref("Boolean")}}:</em> その要素の {{ htmlattrxref("autofocus", "input") }} 属性を<strong>返却または設定</strong>します。ページが読み込まれたときに、ユーザーが別のコントロールに入力するなどしてそれを上書きしない限り、そのフォームコントロールが入力フォーカスを持つべきであることを指定します。文書内の一つの form 要素だけが {{htmlattrxref("autofocus","input")}} 属性を持つことができます。 {{htmlattrxref("type","input")}} 属性が <code>hidden</code> に設定されている場合には適用できません (つまり、非表示のコントロールにフォーカスを自動的に設定することはできません)。</td>
+   <td><em><code>boolean</code>:</em> その要素の {{ htmlattrxref("autofocus", "input") }} 属性を<strong>返却または設定</strong>します。ページが読み込まれたときに、ユーザーが別のコントロールに入力するなどしてそれを上書きしない限り、そのフォームコントロールが入力フォーカスを持つべきであることを指定します。文書内の一つの form 要素だけが {{htmlattrxref("autofocus","input")}} 属性を持つことができます。 {{htmlattrxref("type","input")}} 属性が <code>hidden</code> に設定されている場合には適用できません (つまり、非表示のコントロールにフォーカスを自動的に設定することはできません)。</td>
   </tr>
   <tr>
    <td><code>required</code></td>
-   <td><em>{{jsxref("Boolean")}}:</em> その要素の {{ htmlattrxref("required", "input") }} 属性を<strong>返却または設定</strong>します。これは、フォームを送信する前にユーザーが値を入力しなければならないかどうかを示します。</td>
+   <td><em><code>boolean</code>:</em> その要素の {{ htmlattrxref("required", "input") }} 属性を<strong>返却または設定</strong>します。これは、フォームを送信する前にユーザーが値を入力しなければならないかどうかを示します。</td>
   </tr>
   <tr>
    <td><code>value</code></td>
@@ -92,7 +92,7 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>willValidate</code> {{readonlyInline}}</td>
-   <td><em>{{jsxref("Boolean")}}:</em> その要素が制約検証の候補であるかどうかを<strong>返します</strong>。これは何か制約検証を阻む条件がある場合、例えば、 <code>type</code> が <code>hidden</code>、<code>reset</code>、<code>button</code> のいずれかである、祖先に {{HTMLElement("datalist")}} がある、 <code>disabled</code> プロパティが <code>true</code> である、などです。</td>
+   <td><em><code>boolean</code>:</em> その要素が制約検証の候補であるかどうかを<strong>返します</strong>。これは何か制約検証を阻む条件がある場合、例えば、 <code>type</code> が <code>hidden</code>、<code>reset</code>、<code>button</code> のいずれかである、祖先に {{HTMLElement("datalist")}} がある、 <code>disabled</code> プロパティが <code>true</code> である、などです。</td>
   </tr>
  </tbody>
 </table>
@@ -102,15 +102,15 @@ translation_of: Web/API/HTMLInputElement
  <tbody>
   <tr>
    <td><code>checked</code></td>
-   <td><em>{{jsxref("Boolean")}}:</em> {{htmlattrxref("type","input")}} が <code>checkbox</code> または <code>radio</code> の場合、要素の現在の状態を<strong>返却または設定</strong>します。</td>
+   <td><em><code>boolean</code>:</em> {{htmlattrxref("type","input")}} が <code>checkbox</code> または <code>radio</code> の場合、要素の現在の状態を<strong>返却または設定</strong>します。</td>
   </tr>
   <tr>
    <td><code>defaultChecked</code></td>
-   <td><em>{{jsxref("Boolean")}}:</em> このオブジェクトを生成した HTML でもともと指定されていたラジオボタンまたはチェックボックスの既定の状態を<strong>返却または設定</strong>します。</td>
+   <td><em><code>boolean</code>:</em> このオブジェクトを生成した HTML でもともと指定されていたラジオボタンまたはチェックボックスの既定の状態を<strong>返却または設定</strong>します。</td>
   </tr>
   <tr>
    <td><code id="indeterminate">indeterminate</code></td>
-   <td><em>{{jsxref("Boolean")}}:</em> チェックボックスやラジオボタンの状態が不確定であるかどうかを<strong>返します</strong>。チェックボックスの場合は、その状態が不確定 (チェックでも未チェックでもない状態) であることを示すために、チェックボックスの外観が何らかの方法で不明瞭になったり、灰色になったりする効果があります。 <code>checked</code> 属性の値には影響を与えず、チェックボックスをクリックするとその値は false になります。</td>
+   <td><em><code>boolean</code>:</em> チェックボックスやラジオボタンの状態が不確定であるかどうかを<strong>返します</strong>。チェックボックスの場合は、その状態が不確定 (チェックでも未チェックでもない状態) であることを示すために、チェックボックスの外観が何らかの方法で不明瞭になったり、灰色になったりする効果があります。 <code>checked</code> 属性の値には影響を与えず、チェックボックスをクリックするとその値は false になります。</td>
   </tr>
  </tbody>
 </table>
@@ -146,7 +146,7 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>allowdirs</code> {{non-standard_inline}}</td>
-   <td><em>{{jsxref("Boolean")}}:</em> 標準外の Directory Upload API の一部です。ファイルリストでディレクトリーとファイルの両方を選択できるようにするかどうかを<strong>示します</strong>。 Firefox でのみ実装されており、設定で隠されています。</td>
+   <td><em><code>boolean</code>:</em> 標準外の Directory Upload API の一部です。ファイルリストでディレクトリーとファイルの両方を選択できるようにするかどうかを<strong>示します</strong>。 Firefox でのみ実装されており、設定で隠されています。</td>
   </tr>
   <tr>
    <td><code id="files_prop">files</code></td>
@@ -154,7 +154,7 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td>{{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}} {{Non-standard_inline}}</td>
-   <td><em>{{jsxref("Boolean")}}:</em> {{htmlattrxref("webkitdirectory", "input")}} 属性を<strong>返します</strong>。 true の場合、ファイルシステム選択インターフェイスはファイルではなくディレクトリーのみが選択できるようになります。</td>
+   <td><em><code>boolean</code>:</em> {{htmlattrxref("webkitdirectory", "input")}} 属性を<strong>返します</strong>。 true の場合、ファイルシステム選択インターフェイスはファイルではなくディレクトリーのみが選択できるようになります。</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} {{Non-standard_inline}}</td>
@@ -244,7 +244,7 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>multiple</code></td>
-   <td><em>{{jsxref("Boolean")}}:</em> その要素の {{ htmlattrxref("multiple", "input") }} 属性を<strong>返却または設定</strong>します。これは複数の値 (例えば複数のファイル) を持つことが可能であるかどうかを示します。</td>
+   <td><em><code>boolean</code>:</em> その要素の {{ htmlattrxref("multiple", "input") }} 属性を<strong>返却または設定</strong>します。これは複数の値 (例えば複数のファイル) を持つことが可能であるかどうかを示します。</td>
   </tr>
   <tr>
    <td><code>files</code></td>
@@ -324,7 +324,7 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>checkValidity()</code></td>
-   <td>{{jsxref("Boolean")}} を返します。 <code>false</code> の場合はその要素が制約検証の候補であり、制約を満たしていないことを表します。この場合、その要素で {{event("invalid")}} イベントも発生します。 <code>true</code> の場合はその要素が制約検証の候補でないか、制約を満たしていることを表します。</td>
+   <td><code>boolean</code> を返します。 <code>false</code> の場合はその要素が制約検証の候補であり、制約を満たしていないことを表します。この場合、その要素で {{event("invalid")}} イベントも発生します。 <code>true</code> の場合はその要素が制約検証の候補でないか、制約を満たしていることを表します。</td>
   </tr>
   <tr>
    <td><code>reportValidity()</code></td>

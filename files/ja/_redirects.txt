@@ -1887,6 +1887,7 @@
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser/Physics	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics
 /ja/docs/Glossary/AOM	/ja/docs/Glossary/Accessibility_tree
+/ja/docs/Glossary/Client_hints	/ja/docs/Web/HTTP/Client_hints
 /ja/docs/Glossary/Constant(定数)	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
@@ -3291,6 +3292,10 @@
 /ja/docs/Web/API/WebGL_API/Lighting_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 /ja/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /ja/docs/Web/API/WebGL_API/Using_textures_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/ja/docs/Web/API/WebSocket/onclose	/ja/docs/conflicting/Web/API/WebSocket/close_event
+/ja/docs/Web/API/WebSocket/onerror	/ja/docs/conflicting/Web/API/WebSocket/error_event
+/ja/docs/Web/API/WebSocket/onmessage	/ja/docs/conflicting/Web/API/WebSocket/message_event
+/ja/docs/Web/API/WebSocket/onopen	/ja/docs/conflicting/Web/API/WebSocket/open_event
 /ja/docs/Web/API/WebSockets_API/WebSockets_reference	/ja/docs/Web/API/WebSockets_API
 /ja/docs/Web/API/WebVR_API/WebVR_concepts	/ja/docs/Web/API/WebVR_API/Concepts
 /ja/docs/Web/API/Web_Video_Text_Tracks_Format	/ja/docs/Web/API/WebVTT_API
@@ -3580,6 +3585,7 @@
 /ja/docs/Web/API/window.unescape	/ja/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /ja/docs/Web/API/window.updateCommands	/ja/docs/Web/API/Window/updateCommands
 /ja/docs/Web/API/window.window	/ja/docs/Web/API/Window/window
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/ja/docs/conflicting/Web/Accessibility/ARIA/Roles/alert_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/ja/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/ja/docs/Web/Accessibility/ARIA/Roles/button_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role	/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role

@@ -103,45 +103,82 @@ switch (foo) {
         console.log('default');
 }</pre>
 
-<h3 id="Methods_for_Multi-criteria_Case">Пример: Использование нескольких значений для одного случая</h3>
+<h3 id="Methods_for_Multi-criteria_Case">Цепочки case</h3>
 
-<p>Если вы хотите использовать один набор инструкций для соответствия нескольким случаям, можно использовать два способа. Первый способ является рекомендуемым, а второй - скорее трюком. Оба способа вызовут предупреждение с текстом "yes", если значение <code>foo</code> равно 0, 1, 2 или 3.</p>
+<h4 id="Одна_операция">Одна операция</h4>
 
-<p>Исходники этих способов здесь:</p>
+<p>
+  Этот метод использует тот факт, что после <code>case</code> нет прерывания и продолжится
+  выполнение следующего <code>case</code> независимо от того, соответствует ли <code>case</code> 
+  предоставленному условию. Подробнее в примере "Что случится, если не использовать break?.
+</p>
 
-<ol>
- <li><a href="http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript">Switch statement multiple cases in JavaScript (Stack Overflow)</a></li>
- <li><a href="http://stackoverflow.com/questions/21808543/multple-cripteria-single-case-switch-statement">Multiple Criteria Single Case Switch Statement (Stack Overflow)</a></li>
-</ol>
+<p>
+  Это пример <code>case</code> с одной операцией, где четыре разных значения отрабатывают одинаково.
+</p>
 
-<h4 id="Первый_способ">Первый способ</h4>
+<pre class="brush: js">var Animal = 'Giraffe';
+switch (Animal) {
+  case 'Cow':
+  case 'Giraffe':
+  case 'Dog':
+  case 'Pig':
+    console.log('This animal is not extinct.');
+    break;
+  case 'Dinosaur':
+  default:
+    console.log('This animal is extinct.');
+}</pre>
 
-<p>В первом способе используется то, что выполнение инструкции <code>switch</code> продолжится, если не использовать инструкцию <code>break</code>. Подробнее в примере "Что случится, если не использовать break?"</p>
+<h4 id="Цепочка_операций">Цепочка операций</h4>
+
+<p>
+  Это пример множественных операций внутри <code>case</code>, где в зависимости от 
+  предоставленного числа можно увидеть разный вывод. Здесь показывается, что операции 
+  отрабатывают в том порядке, в котором расположены <code>case</code>. При этом
+  числовая последовательность может не соблюдаться. Также возможно примешать в 
+  <code>case</code> строки.
+</p>
 
 <pre class="brush: js">var foo = 1;
+var output = 'Output: ';
 switch (foo) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-        alert('yes');
-        break;
-    default:
-        alert('not');
+  case 0:
+    output += 'So ';
+  case 1:
+    output += 'What ';
+    output += 'Is ';
+  case 2:
+    output += 'Your ';
+  case 3:
+    output += 'Name';
+  case 4:
+    output += '?';
+    console.log(output);
+    break;
+  case 5:
+    output += '!';
+    console.log(output);
+    break;
+  default:
+    console.log('Please pick a number from 0 to 5!');
 }</pre>
 
-<h4 id="Второй_способ">Второй способ</h4>
 
-<p>Другой способ, менее стандартный; во второй строке, где вы ожидали увидеть <code>switch(foo)</code>, расположено постоянное значение <code>true</code>, и в случаях используются выражения вместо констант:</p>
-
-<pre class="brush: js">var foo = 1;
-switch (true) { // Постоянное значение true вместо foo
-    case foo &gt;= 0 &amp;&amp; foo &lt;= 3:
-        alert('yes');
-        break;
-    default:
-        alert('not');
-}</pre>
+Вывод этого примера:
+<table>
+  <tr>
+    <th>Значение</th>
+    <th>Лог</th>
+  </tr>
+  <tr><td>`foo` is `NaN` or not `1`, `2`, `3`, `4`, `5`, or `0`</td><td>Please pick a number from 0 to 5!</td></tr>
+  <tr><td>`0`</td><td>Output: So What Is Your Name?</td></tr>
+  <tr><td>`1`</td><td>Output: What Is Your Name?</td></tr>
+  <tr><td>`2`</td><td>Output: Your Name?</td></tr>
+  <tr><td>`3`</td><td>Output: Name?</td></tr>
+  <tr><td>`4`</td><td>Output: ?</td></tr>
+  <tr><td>`5`</td><td>Output: !</td></tr>
+</table>
 
 <h2 id="Спецификации">Спецификации</h2>
 

@@ -36,7 +36,7 @@ L'entête de réponse HTTP {{HTTPHeader("Set-Cookie")}} envoie un cookie depuis 
 
     Set-Cookie: <nom-du-cookie>=<valeur-du-cookie>
 
-> **Note :** Voici comme utiliser l'en-tête `Set-Cookie` dans divers langages de programmation côté serveur :
+> **Note :** Voici comment utiliser l'en-tête `Set-Cookie` dans divers langages de programmation côté serveur :
 >
 > - [PHP](https://secure.php.net/manual/en/function.setcookie.php)
 > - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
@@ -72,7 +72,7 @@ Plutôt que d'expirer quand le client ferme, _les cookies permanents_ expirent 
 
 ### Cookies `Secure` et `HttpOnly`
 
-Un cookie sécurisé est uniquement envoyé au serveur avec les requêtes chiffrées, via le protocole HTTPS. Même avec `Secure`, les informations sensibles ne devraient _jamais_ être stockées dans les cookies, car ils sont intrinsèquement insécurisés et cette option ne peut pas offrir de protection réelle. À partir de Chrome 52 et Firefox 52, les sites non sécurisés (`http:`) ne peuvent pas définir de cookies avec la directive `Secure`.
+Un cookie sécurisé est uniquement envoyé au serveur avec les requêtes chiffrées, via le protocole HTTPS. Même avec `Secure`, les informations sensibles ne devraient _jamais_ être stockées dans les cookies, car ils sont intrinsèquement non sécurisés et cette option ne peut pas offrir de protection réelle. À partir de Chrome 52 et Firefox 52, les sites non sécurisés (`http:`) ne peuvent pas définir de cookies avec la directive `Secure`.
 
 Pour empêcher les attaques de cross-site scripting ({{Glossary("Cross-site_scripting","XSS")}}), on peut utiliser les cookies `HttpOnly`, qui sont inaccessibles à l'API JavaScript {{domxref("Document.cookie")}}; ils sont uniquement envoyés au serveur. Par exemple, les cookies qui persistent la session côté serveur n'ont pas besoin d'être accessibles via JavaScript, et l'option `HttpOnly` doit être définie.
 
@@ -109,7 +109,7 @@ Prenez garde aux problèmes de sécurité, décrits dans la section {{ anch("Sé
 
 ## Sécurité
 
-> **Note :** Les informations confidentielles ou sensibles ne devraient jamais être stockée ou transmises avec les Cookies HTTP, car le mécanisme entier est intrinsèquement insécurisé.
+> **Note :** Les informations confidentielles ou sensibles ne devraient jamais être stockées ou transmises avec les Cookies HTTP, car le mécanisme entier est intrinsèquement non sécurisé.
 
 ### Piratage de session et XSS
 

@@ -60,7 +60,7 @@ border-collapse: unset;
 
 ```html
 <table class="separate">
-  <caption>`border-collapse: separate`</caption>
+  <caption><code>border-collapse: separate</code></caption>
   <tbody>
     <tr><th>Browser</th> <th>Layout Engine</th></tr>
     <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td></tr>
@@ -71,7 +71,7 @@ border-collapse: unset;
   </tbody>
 </table>
 <table class="collapse">
-  <caption>`border-collapse: collapse`</caption>
+  <caption><code>border-collapse: collapse</code></caption>
   <tbody>
     <tr><th>Browser</th> <th>Layout Engine</th></tr>
     <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td></tr>

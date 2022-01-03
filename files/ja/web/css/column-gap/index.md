@@ -62,7 +62,7 @@ column-gap: unset;
 
 ## 例
 
-<h3 id="Flex_layout">フレックスレイアウト</h3>
+### フレックスレイアウト
 
 #### HTML
 
@@ -94,7 +94,7 @@ column-gap: unset;
 
 {{EmbedLiveSample("Flex_layout", "auto", "120px")}}
 
-<h3 id="Grid_layout">グリッドレイアウト</h3>
+### グリッドレイアウト
 
 #### HTML
 
@@ -127,7 +127,7 @@ column-gap: unset;
 
 {{EmbedLiveSample("Grid_layout", "auto", "120px")}}
 
-<h3 id="Multi-column_layout">段組みレイアウト</h3>
+### 段組みレイアウト
 
 #### HTML
 
@@ -163,5 +163,5 @@ column-gap: unset;
 ## 関連情報
 
 - 関連する CSS プロパティ: {{CSSxRef("row-gap")}}, {{CSSxRef("gap")}}
-- グリッドレイアウトのガイド: _[グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)_
-- 段組みレイアウトのガイド: _[段組みのスタイル付け](/ja/docs/Web/CSS/CSS_Columns/Styling_Columns)_
+- グリッドレイアウトのガイド: [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)
+- 段組みレイアウトのガイド: [段組みのスタイル付け](/ja/docs/Web/CSS/CSS_Columns/Styling_Columns)

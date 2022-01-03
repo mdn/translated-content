@@ -46,7 +46,7 @@
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_slider	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_status	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_textbox	/fr/docs/Web/Accessibility/ARIA/Roles/textbox_role
-/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alert	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
+/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alert	/fr/docs/Web/Accessibility/ARIA/Roles/alert_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_article	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_article_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_button	/fr/docs/Web/Accessibility/ARIA/Roles/button_role
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog	/fr/docs/Web/Accessibility/ARIA/Roles/dialog_role
@@ -1744,6 +1744,7 @@
 /fr/docs/Glossary/Accessibilité	/fr/docs/Glossary/Accessibility
 /fr/docs/Glossary/Attribut	/fr/docs/Glossary/Attribute
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS
+/fr/docs/Glossary/Client_hints	/fr/docs/Web/HTTP/Client_hints
 /fr/docs/Glossary/Gaia	/fr/docs/orphaned/Glossary/Gaia
 /fr/docs/Glossary/Gonk	/fr/docs/orphaned/Glossary/Gonk
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/orphaned/Glossary/Modern_web_apps
@@ -3750,6 +3751,10 @@
 /fr/docs/Web/API/WebGL_API/Tutorial/Creer_des_objets_3D_avec_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /fr/docs/Web/API/WebGL_API/Tutorial/Eclairage_en_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 /fr/docs/Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/fr/docs/Web/API/WebSocket/onclose	/fr/docs/conflicting/Web/API/WebSocket/close_event
+/fr/docs/Web/API/WebSocket/onerror	/fr/docs/conflicting/Web/API/WebSocket/error_event
+/fr/docs/Web/API/WebSocket/onmessage	/fr/docs/conflicting/Web/API/WebSocket/message_event
+/fr/docs/Web/API/WebSocket/onopen	/fr/docs/conflicting/Web/API/WebSocket/open_event
 /fr/docs/Web/API/WebVR_API/Utiliser_des_contrôleurs_de_realite_virtuelle_pour_du_WebVR	/fr/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 /fr/docs/Web/API/Web_Workers_API/Advanced_concepts_and_examples	/fr/docs/conflicting/Web/API/Web_Workers_API/Using_web_workers
 /fr/docs/Web/API/Web_Workers_API/Utilisation_des_web_workers	/fr/docs/Web/API/Web_Workers_API/Using_web_workers
@@ -3837,6 +3842,7 @@
 /fr/docs/Web/API/notification/Using_Web_Notifications	/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /fr/docs/Web/API/window.location	/fr/docs/Web/API/window/location
 /fr/docs/Web/API/window.requestAnimationFrame	/fr/docs/Web/API/Window/requestAnimationFrame
+/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/fr/docs/Web/Accessibility/ARIA/Roles/alert_role
 /fr/docs/Web/Accessibility/ARIA/widgets/overview	/fr/docs/conflicting/Web/Accessibility/ARIA/widgets
 /fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Contraste_de_la_couleur	/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 /fr/docs/Web/Apps/Build/Audio_and_video_delivery	/fr/docs/Web/Guide/Audio_and_video_delivery
