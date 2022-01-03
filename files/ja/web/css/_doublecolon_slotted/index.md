@@ -1,56 +1,64 @@
 ---
 title: '::slotted()'
-slug: 'Web/CSS/::slotted'
+slug: Web/CSS/::slotted
 tags:
   - '::slotted'
   - CSS
-  - Reference
-  - ウェブ
   - レイアウト
-  - 疑似要素
-translation_of: 'Web/CSS/::slotted'
+  - 擬似要素
+  - リファレンス
+  - セレクター
+  - ウェブ
+browser-compat: css.selectors.slotted
+translation_of: Web/CSS/::slotted
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p><strong><code>::slotted()</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の <a href="/ja/docs/Web/CSS/Pseudo-elements">疑似要素</a>で、 HTML テンプレート内にあるスロットに配置された任意の要素を表します (詳しくは<a href="/ja/docs/Web/Web_Components/Using_templates_and_slots">テンプレートとスロットの利用</a>をご覧ください)。</p>
+**`::slotted()`** は [CSS](/ja/docs/Web/CSS) の [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 HTML テンプレート内にあるスロットに配置された任意の要素を表します (詳しくは[テンプレートとスロットの利用](/ja/docs/Web/Web_Components/Using_templates_and_slots)をご覧ください)。
 
-<p>これは <a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> 内に配置された CSS の中で使われた時のみ機能します。なお、このセレクターはスロット内に配置されたテキストノードは選択しません。実際の要素のみを対象にします。</p>
+これは [shadow DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) 内に配置された CSS の中で使われた時のみ機能します。なお、このセレクターはスロット内に配置されたテキストノードは選択しません。実際の要素のみを対象にします。
 
-<pre class="brush: css no-line-numbers">/* スロット内に配置された任意の要素を選択 */
+```css
+/* スロット内に配置された任意の要素を選択 */
 ::slotted(*) {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 /* スロット内に配置された &lt;span&gt; 要素を選択 */
 ::slotted(span) {
-  font-weight: bold;
+  font-weight: bold;
 }
-</pre>
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>以下のコードの断片は <a href="https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element">slotted-pseudo-element</a> デモから取られたものです (<a href="https://mdn.github.io/web-components-examples/slotted-pseudo-element/">ライブでもご覧ください</a>)。</p>
+###スロット化された要素を強調
 
-<p>このデモでは、３つのスロットを持つ単純なテンプレートを使用します。</p>
+以下のコードの断片は [slotted-pseudo-element](https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element) デモから取られたものです ([ライブでもご覧ください](https://mdn.github.io/web-components-examples/slotted-pseudo-element/))。
 
-<pre class="brush: html">&lt;template id="person-template"&gt;
-  &lt;div&gt;
-    &lt;h2&gt;Personal ID Card&lt;/h2&gt;
-    &lt;slot name="person-name"&gt;NAME MISSING&lt;/slot&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;slot name="person-age"&gt;AGE MISSING&lt;/slot&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;slot name="person-occupation"&gt;OCCUPATION MISSING&lt;/slot&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/template&gt;</pre>
+このデモでは、 3 つのスロットを持つ単純なテンプレートを使用します。
 
-<p>カスタム要素 — <code>&lt;person-details&gt;</code> — は以下のように定義されています。</p>
+```html
+<template id="person-template">
+  <div>
+    <h2>Personal ID Card</h2>
+    <slot name="person-name">NAME MISSING</slot>
+    <ul>
+      <li><slot name="person-age">AGE MISSING</slot></li>
+      <li><slot name="person-occupation">OCCUPATION MISSING</slot></li>
+    </ul>
+  </div>
+</template>
+```
 
-<pre class="brush: js">customElements.define('person-details',
+カスタム要素 — `<person-details>` — は以下のように定義されています。
+
+```js
+customElements.define('person-details',
   class extends HTMLElement {
     constructor() {
       super();
@@ -69,43 +77,29 @@ translation_of: 'Web/CSS/::slotted'
       shadowRoot.appendChild(style);
       shadowRoot.appendChild(templateContent.cloneNode(true));
   }
-})</pre>
+})
+```
 
-<p><code>style</code> 要素のコンテンツを埋めると、スロットになるすべての要素を選択し (<code>::slotted(*)</code>)、それぞれに異なるフォントと色を与えているのが分かるでしょう。これにより、隣のコンテンツが埋まらなかったスロットよりも目立たせることができます。</p>
+`style` 要素のコンテンツを埋めると、スロットになるすべての要素を選択し (`::slotted(*)`)、それぞれに異なるフォントと色を与えているのが分かるでしょう。これにより、隣のコンテンツが埋まらなかったスロットよりも目立たせることができます。
 
-<p>この要素がページに挿入されると、以下のように見えます。</p>
+この要素がページに挿入されると、以下のように見えます。
 
-<pre class="brush: html">&lt;person-details&gt;
-  &lt;p slot="person-name"&gt;Dr. Shazaam&lt;/p&gt;
-  &lt;span slot="person-age"&gt;Immortal&lt;/span&gt;
-  &lt;span slot="person-occupation"&gt;Superhero&lt;/span&gt;
-&lt;/person-details&gt;</pre>
+```html
+<person-details>
+  <p slot="person-name">Dr. Shazaam</p>
+  <span slot="person-age">Immortal</span>
+  <span slot="person-occupation">Superhero</span>
+</person-details>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS Scope', '#slotted-pseudo', '::slotted') }}</td>
-   <td>{{ Spec2('CSS Scope') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.selectors.slotted")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/Web_Components">Web components</a></li>
-</ul>
+- [ウェブコンポーネント](/ja/docs/Web/Web_Components)
