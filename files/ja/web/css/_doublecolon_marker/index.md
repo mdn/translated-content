@@ -1,100 +1,78 @@
 ---
 title: '::marker'
-slug: 'Web/CSS/::marker'
+slug: Web/CSS/::marker
 tags:
   - CSS
-  - CSS Lists
   - CSS リスト
-  - Experimental
-  - Layout
-  - Pseudo-element
-  - Reference
-  - 疑似要素
-translation_of: 'Web/CSS/::marker'
+  - 実験的
+  - レイアウト
+  - 擬似要素
+  - リファレンス
+  - セレクター
+browser-compat: css.selectors.marker
+translation_of: Web/CSS/::marker
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>::marker</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Pseudo-elements">擬似要素</a>で、リスト項目の箇条書き記号ボックス (ふつうは黒丸や番号) を選択します。</span>これは <code><a href="/ja/docs/Web/CSS/display">display: list-item</a></code> が設定された要素や擬似要素、例えば {{HTMLElement("li")}} 要素や {{HTMLElement("summary")}} 要素で利用できます。</p>
+**`::marker`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、リスト項目の箇条書き記号ボックス (ふつうは黒丸や番号) を選択します。これは `[display: list-item](/ja/docs/Web/CSS/display)` が設定された要素や擬似要素、例えば {{HTMLElement("li")}} 要素や {{HTMLElement("summary")}} 要素で利用できます。
 
-<pre class="brush: css no-line-numbers notranslate">::marker {
+```css
+::marker {
   color: blue;
   font-size: 1.2em;
-}</pre>
+}
+```
 
-<h2 id="Allowable_properties" name="Allowable_properties">利用できるプロパティ</h2>
+## 利用できるプロパティ
 
-<p><code>::marker</code> 擬似要素では、一部の CSS プロパティのみが利用できます。</p>
+`::marker` 擬似要素では、一部の CSS プロパティのみが利用できます。
 
-<ul>
- <li>すべての<a href="/ja/docs/Web/CSS/CSS_Fonts">フォントプロパティ</a></li>
- <li>{{CSSxRef("white-space")}} プロパティ</li>
- <li>{{CSSxRef("color")}}</li>
- <li>{{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}}, {{CSSxRef("direction")}} の各プロパティ</li>
- <li>{{CSSxRef("content")}} プロパティ</li>
- <li>すべての<a href="/ja/docs/Web/CSS/CSS_Animations#CSS_Properties">アニメーション</a>および<a href="/ja/docs/Web/CSS/CSS_Transitions#Properties">トランジション</a>プロパティ</li>
-</ul>
+- すべての[フォントプロパティ](/ja/docs/Web/CSS/CSS_Fonts)
+- {{CSSxRef("white-space")}} プロパティ
+- {{CSSxRef("color")}}
+- {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}}, {{CSSxRef("direction")}} の各プロパティ
+- {{CSSxRef("content")}} プロパティ
+- すべての[アニメーション](/ja/docs/Web/CSS/CSS_Animations#css_プロパティ)および[トランジション](/ja/docs/Web/CSS/CSS_Transitions#プロパティ)プロパティ
 
-<div class="blockIndicator note">
-<p>この仕様書は、将来追加の CSS プロパティに対応する可能性があることを示しています。</p>
-</div>
+> **Note:** この仕様書は、将来追加の CSS プロパティにも対応する可能性があることを示しています。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 {{CSSSyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li&gt;Peaches&lt;/li&gt;
-  &lt;li&gt;Apples&lt;/li&gt;
-  &lt;li&gt;Plums&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li>Peaches</li>
+  <li>Apples</li>
+  <li>Plums</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">ul li::marker {
+```css
+ul li::marker {
   color: red;
   font-size: 1.5em;
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Pseudo-Elements', '#marker-pseudo', '::marker')}}</td>
-   <td>{{Spec2('CSS4 Pseudo-Elements')}}</td>
-   <td>重要な変更はなし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Lists', '#marker-pseudo', '::marker')}}</td>
-   <td>{{Spec2('CSS3 Lists')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("css.selectors.marker")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>既定で箇条書き記号ボックスがある HTML 要素: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("summary")}}</li>
-</ul>
+- 既定で箇条書き記号ボックスがある HTML 要素: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("summary")}}
