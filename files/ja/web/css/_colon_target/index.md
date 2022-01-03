@@ -1,63 +1,69 @@
 ---
 title: ':target'
-slug: 'Web/CSS/:target'
+slug: Web/CSS/:target
 tags:
   - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
+  - レイアウト
+  - 擬似クラス
+  - リファレンス
   - セレクター
-  - 疑似クラス
-translation_of: 'Web/CSS/:target'
+  - ウェブ
+browser-compat: css.selectors.target
+translation_of: Web/CSS/:target
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>:target</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a>は、 URL のフラグメントに一致する {{htmlattrxref("id")}} を持つ固有の要素 (<em>対象要素</em>) を表します。</p>
+**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は、 URL のフラグメントに一致する {{htmlattrxref("id")}} を持つ固有の要素 (*対象要素*) を表します。
 
-<pre class="brush: css no-line-numbers notranslate">/* 現在の URL のフラグメントに一致する ID を持つ要素を選択 */
+```css
+/* 現在の URL のフラグメントに一致する ID を持つ要素を選択 */
 :target {
   border: 2px solid black;
-}</pre>
+}
+```
 
-<p>例えば、以下の URL には <code>section2</code> と呼ばれる要素を指すフラグメント (<em>#</em> 記号で記述) があります。</p>
+例えば、以下の URL には `section2` と呼ばれる要素を指すフラグメント (_#_ 記号で記述) があります。
 
-<pre class="notranslate">http://www.example.com/index.html#section2</pre>
+    http://www.example.com/index.html#section2
 
-<p>現在の URL が上記の通りの場合、以下の要素が <code>:target</code> セレクターで選択されます。</p>
+現在の URL が上記の通りの場合、以下の要素が `:target` セレクターで選択されます。
 
-<pre class="brush: html notranslate">&lt;section id="section2"&gt;Example&lt;/section&gt;</pre>
+```html
+<section id="section2">Example</section>
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="A_table_of_contents" name="A_table_of_contents">目次</h3>
+### 目次
 
-<p><code>:target</code> 擬似クラスは、目次を構成するためにリンクされたページの部分を強調表示するために使うことができます。</p>
+`:target` 擬似クラスは、目次を構成するためにリンクされたページの部分を強調表示するために使うことができます。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;h3&gt;目次&lt;/h3&gt;
-&lt;ol&gt;
- &lt;li&gt;&lt;a href="#p1"&gt;第1段落にジャンプ！&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="#p2"&gt;第2段落にジャンプ！&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="#nowhere"&gt;このリンクは対象がないので、
-   どこにも行きません。&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+```html
+<h3>目次</h3>
+<ol>
+ <li><a href="#p1">第1段落にジャンプ！</a></li>
+ <li><a href="#p2">第2段落にジャンプ！</a></li>
+ <li><a href="#nowhere">このリンクは対象がないので、
+   どこにも行きません。</a></li>
+</ol>
 
-&lt;h3&gt;My Fun Article&lt;/h3&gt;
-&lt;p id="p1"&gt;You can target &lt;i&gt;this paragraph&lt;/i&gt; using a
-  URL fragment. Click on the link above to try out!&lt;/p&gt;
-&lt;p id="p2"&gt;This is &lt;i&gt;another paragraph&lt;/i&gt;, also accessible
-  from the links above. Isn't that delightful?&lt;/p&gt;
-</pre>
+<h3>My Fun Article</h3>
+<p id="p1">You can target <i>this paragraph</i> using a
+  URL fragment. Click on the link above to try out!</p>
+<p id="p2">This is <i>another paragraph</i>, also accessible
+  from the links above. Isn't that delightful?</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">p:target {
+```css
+p:target {
   background-color: gold;
 }
 
@@ -72,45 +78,49 @@ p:target::before {
 /* 対象要素の中の i 要素にスタイルを適用 */
 p:target i {
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<div>{{EmbedLiveSample('A_table_of_contents', 500, 300)}}</div>
+{{EmbedLiveSample('A_table_of_contents', 500, 300)}}
 
-<h3 id="Pure-CSS_lightbox" name="Pure-CSS_lightbox">純粋な CSS のライトボックス</h3>
+### 純粋な CSS のライトボックス
 
-<p><code>:target</code> 擬似クラスを使用して JavaScript を使わずにライトボックスを作成することができます。この技術はページ内の最初は非表示の要素をリンクを作ることができることを利用しています。いったん対象となれば、 CSS で <code>display</code> を変更して表示させます。</p>
+`:target` 擬似クラスを使用して JavaScript を使わずにライトボックスを作成することができます。この技術はページ内の最初は非表示の要素をリンクを作ることができることを利用しています。いったん対象となれば、 CSS で `display` を変更して表示させます。
 
-<div class="note"><strong>注:</strong> <code>:target</code> 擬似クラスを使用した純粋な CSS のライトボックスのもっと完全な版は、 <a href="https://github.com/madmurphy/takefive.css/">GitHub で利用できます</a> (<a href="https://madmurphy.github.io/takefive.css/">デモ</a>)。</div>
+> **Note:** `:target` 擬似クラスを使用した純粋な CSS のライトボックスのもっと完全な版は、 [GitHub で利用できます](https://github.com/madmurphy/takefive.css/) ([デモ](https://madmurphy.github.io/takefive.css/))。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li&gt;&lt;a href="#example1"&gt;例1を開く&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#example2"&gt;例2を開く&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul>
+  <li><a href="#example1">例 1 を開く</a></li>
+  <li><a href="#example2">例 2 を開く</a></li>
+</ul>
 
-&lt;div class="lightbox" id="example1"&gt;
-  &lt;figure&gt;
-    &lt;a href="#" class="close"&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec felis enim, placerat id eleifend eu, semper vel sem.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
+<div class="lightbox" id="example1">
+  <figure>
+    <a href="#" class="close"></a>
+    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Donec felis enim, placerat id eleifend eu, semper vel sem.</figcaption>
+  </figure>
+</div>
 
-&lt;div class="lightbox" id="example2"&gt;
-  &lt;figure&gt;
-    &lt;a href="#" class="close"&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Cras risus odio, pharetra nec ultricies et,
+<div class="lightbox" id="example2">
+  <figure>
+    <a href="#" class="close"></a>
+    <figcaption>Cras risus odio, pharetra nec ultricies et,
       mollis ac augue. Nunc et diam quis sapien dignissim auctor.
-      Quisque quis neque arcu, nec gravida magna.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;</pre>
+      Quisque quis neque arcu, nec gravida magna.</figcaption>
+  </figure>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">/* 開いていないライトボックス */
+```css
+/* 開いていないライトボックス */
 .lightbox {
   display: none;
 }
@@ -168,47 +178,21 @@ p:target i {
   background-color: rgba(0,0,0,.7);
   content: "";
   cursor: default;
-}</pre>
+}
+```
 
-<h4 id="Result_2" name="Result_2">結果</h4>
+#### 結果
 
-<div>{{EmbedLiveSample('Pure-CSS_lightbox', 500, 220)}}</div>
+{{EmbedLiveSample('Pure-CSS_lightbox', 500, 220)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "browsers.html#selector-target", ":target")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>HTML 特有の意味論を定義。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-target-pseudo", ":target")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#target-pseudo", ":target")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>{{Compat("css.selectors.target")}}</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Selectors/Using_the_%3Atarget_pseudo-class_in_selectors">セレクターでの :target 擬似クラスの利用</a></li>
-</ul>
+- [セレクターでの :target 擬似クラスの利用](/ja/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors)
