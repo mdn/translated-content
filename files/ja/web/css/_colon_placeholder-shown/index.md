@@ -4,40 +4,43 @@ slug: Web/CSS/:placeholder-shown
 tags:
   - ':placeholder-shown'
   - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
-  - セレクター
   - 擬似クラス
+  - リファレンス
+  - セレクター
 browser-compat: css.selectors.placeholder-shown
 translation_of: Web/CSS/:placeholder-shown
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>:placeholder-shown</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a>で、<a href="/ja/docs/Web/HTML/Element/input#attr-placeholder">プレイスホルダー文字列</a>が表示されている {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素を表します。</p>
+**`:placeholder-shown`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、[プレイスホルダー文字列](/ja/docs/Web/HTML/Element/input#attr-placeholder)が表示されている {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素を表します。
 
-<pre class="brush: css no-line-numbers">/* プレイスホルダーが有効な要素を選択 */
+```css
+/* プレイスホルダーが有効な要素を選択 */
 :placeholder-shown {
   border: 2px solid silver;
-}</pre>
+}
+```
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
 {{CSSSyntax}}
 
-<h2 id="Example">例</h2>
+## 例
 
-<h3 id="Basic_example">基本的な例</h3>
+### 基本的な例
 
-<p>この例は、プレイスホルダーが表示されているときに特殊なフォントと境界線を適用します。</p>
+この例は、プレイスホルダーが表示されているときに特殊なフォントと境界線を適用します。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input placeholder="何か入力してください！"&gt;</pre>
+```html
+<input placeholder="何か入力してください！">
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">input {
+```css
+input {
   border: 1px solid black;
   padding: 3px;
 }
@@ -46,57 +49,65 @@ input:placeholder-shown {
   border-color: teal;
   color: purple;
   font-style: italic;
-}</pre>
+}
+```
 
-<h4 id="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Basic_example", 200, 80)}}</p>
+{{EmbedLiveSample("Basic_example", 200, 80)}}
 
-<h3 id="Overflowing_text">文字列があふれる場合</h3>
+### 文字列があふれる場合
 
-<p>スマートフォンのような狭い画面では、検索ボックスやその他の入力欄の幅はとても狭くなります。これにより、プレイスホルダーの文字列が望ましくない形で切り取られることがあります。 {{cssxref("text-overflow")}} プロパティでこの挙動を修正すると便利です。</p>
+スマートフォンのような狭い画面では、検索ボックスやその他の入力欄の幅はとても狭くなります。これにより、プレイスホルダーの文字列が望ましくない形で切り取られることがあります。 {{cssxref("text-overflow")}} プロパティでこの挙動を修正すると便利です。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input id="input1" placeholder="Name, Rank, and Serial Number"&gt;
-&lt;br&gt;&lt;br&gt;
-&lt;input id="input2" placeholder="Name, Rank, and Serial Number"&gt;</pre>
+```html
+<input id="input1" placeholder="Name, Rank, and Serial Number">
+<br><br>
+<input id="input2" placeholder="Name, Rank, and Serial Number">
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#input2:placeholder-shown {
+```css
+#input2:placeholder-shown {
   text-overflow: ellipsis;
-}</pre>
+}
+```
 
-<h4 id="Result_2">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Overflowing_text", 200, 80)}}</p>
+{{EmbedLiveSample("Overflowing_text", 200, 80)}}
 
-<h3 id="Customized_input_field">カスタマイズした入力欄</h3>
+### カスタマイズした入力欄
 
-<p>以下の例では部署名と ID コード欄をカスタムスタイルで強調します。</p>
+以下の例では部署名と ID コード欄をカスタムスタイルで強調します。
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;form id="test"&gt;
-  &lt;p&gt;
-    &lt;label for="name"&gt;Enter Student Name:&lt;/label&gt;
-    &lt;input id="name" placeholder="Student Name"/&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="branch"&gt;Enter Student Branch:&lt;/label&gt;
-    &lt;input id="branch" placeholder="Student Branch"/&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="sid"&gt;Enter Student ID:&lt;/label&gt;
-    &lt;input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/&gt;
-  &lt;/p&gt;
-  &lt;input type="submit"/&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="test">
+  <p>
+    <label for="name">Enter Student Name:</label>
+    <input id="name" placeholder="Student Name"/>
+  </p>
+  <p>
+    <label for="branch">Enter Student Branch:</label>
+    <input id="branch" placeholder="Student Branch"/>
+  </p>
+  <p>
+    <label for="sid">Enter Student ID:</label>
+    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
+  </p>
+  <input type="submit"/>
+</form>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[6]">input {
+```css
+input {
   background-color: #E8E8E8;
   color: black;
 }
@@ -105,24 +116,23 @@ input.studentid:placeholder-shown {
   background-color: yellow;
   color: red;
   font-style: italic;
-}</pre>
+}
+```
 
-<h4 id="Result_3">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Customized_input_field", 200, 180)}}</p>
+{{EmbedLiveSample("Customized_input_field", 200, 180)}}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{CSSxRef("::placeholder")}} 擬似要素はプレイスホルダー<em>自身</em>にスタイルを適用します。</li>
- <li>関連する HTML 要素: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}</li>
- <li><a href="/ja/docs/Learn/Forms">HTML フォーム</a></li>
-</ul>
+- {{CSSxRef("::placeholder")}} 擬似要素はプレイスホルダー*自身*にスタイルを適用します。
+- 関連する HTML 要素: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
+- [HTML フォーム](/ja/docs/Learn/Forms)
