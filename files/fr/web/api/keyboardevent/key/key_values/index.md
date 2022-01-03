@@ -4492,7 +4492,7 @@ Some keyboards include special keys for controlling Web browsers. Those keys fol
 
 These keys are found on the keyboard's numeric keypad. However, not all are present on every keyboard. Although typical numeric keypads have numeric keys from <kbd>0</kbd> to <kbd>9</kbd> (encoded as `"0"` through `"9"`), some multimedia keyboards include additional number keys for higher numbers.
 
-> **Note :**The <kbd>10</kbd> key, if present, generates events with the `key` value of `"0"`.
+> **Note :** The <kbd>10</kbd> key, if present, generates events with the `key` value of `"0"`.
 
 <table class="standard-table">
   <thead>
