@@ -1,108 +1,81 @@
 ---
 title: ':default'
-slug: 'Web/CSS/:default'
+slug: Web/CSS/:default
 tags:
+  - ':default'
   - CSS
-  - CSS 基本ユーザーインターフェイス
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
+  - フォーム
+  - レイアウト
+  - 擬似クラス
+  - リファレンス
   - セレクター
-  - 疑似クラス
-translation_of: 'Web/CSS/:default'
+  - ウェブ
+  - default
+browser-compat: css.selectors.default
+translation_of: Web/CSS/:default
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>:default</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a>で、関連する要素のグループ内で既定となっているフォーム上の要素を選択します。</p>
+**`:default`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、関連する要素のグループ内で既定となっているフォーム上の要素を選択します。
 
-<p>このセレクターが何に一致するかについては、 <a href="https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default">HTML Standard §4.16.3 Pseudo-classes</a> で定義されています。 — {{htmlelement("button")}}、 <code><a href="/ja/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>、 <code><a href="/ja/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code>、 {{htmlelement("option")}} 要素に一致させることができます。</p>
+このセレクターが何に一致するかについては、 [HTML Standard §4.16.3 Pseudo-classes](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default) で定義されています。 — {{htmlelement("button")}}、[`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox)、[`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio)、{{htmlelement("option")}} 要素に一致させることができます。
 
-<ul>
- <li>既定の option 要素は <code>selected</code> 属性が付いた最初のもの、または DOM 順で最初の有効な選択肢です。 <code>multiple</code> が付いた {{htmlelement("select")}} は、複数の <code>selected</code> がついた選択肢を持つことができますので、すべてが <code>:default</code> に一致します。</li>
- <li><code>&lt;input type="checkbox"&gt;</code> と <code>&lt;input type="radio"&gt;</code> は <code>checked</code> 属性があるときに一致します。</li>
- <li>{{htmlelement("button")}} は {{htmlelement("form")}} の <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#implicit-submission">既定の送信ボタン</a>である場合に一致します。フォームに所属する <code>&lt;button&gt;</code> のうち、 DOM 順で最初のものです。これはフォームを送信する {{htmlelement("input")}} 型、例えば <code>image</code> または <code>submit</code> にも適用されます。</li>
-</ul>
+- 既定の option 要素は `selected` 属性が付いた最初のもの、または DOM 順で最初の有効な選択肢です。 `multiple` が付いた {{htmlelement("select")}} は、複数の `selected` がついた選択肢を持つことができますので、すべてが `:default` に一致します。
+- `<input type="checkbox">` と `<input type="radio">` は `checked` 属性があるときに一致します。
+- {{htmlelement("button")}} は {{htmlelement("form")}} の [既定の送信ボタン](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#implicit-submission)である場合に一致します。フォームに所属する `<button>` のうち、 DOM 順で最初のものです。これはフォームを送信する {{htmlelement("input")}} 型、例えば `image` または `submit` にも適用されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;fieldset&gt;
-  &lt;legend&gt;Favorite season&lt;/legend&gt;
+```html
+<fieldset>
+  <legend>Favorite season</legend>
 
-  &lt;input type="radio" name="season" id="spring"&gt;
-  &lt;label for="spring"&gt;Spring&lt;/label&gt;
+  <input type="radio" name="season" id="spring">
+  <label for="spring">Spring</label>
 
-  &lt;input type="radio" name="season" id="summer" checked&gt;
-  &lt;label for="summer"&gt;Summer&lt;/label&gt;
+  <input type="radio" name="season" id="summer" checked>
+  <label for="summer">Summer</label>
 
-  &lt;input type="radio" name="season" id="fall"&gt;
-  &lt;label for="fall"&gt;Fall&lt;/label&gt;
+  <input type="radio" name="season" id="fall">
+  <label for="fall">Fall</label>
 
-  &lt;input type="radio" name="season" id="winter"&gt;
-  &lt;label for="winter"&gt;Winter&lt;/label&gt;
-&lt;/fieldset&gt;
-</pre>
+  <input type="radio" name="season" id="winter">
+  <label for="winter">Winter</label>
+</fieldset>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">input:default {
+```css
+input:default {
   box-shadow: 0 0 2px 1px coral;
 }
 
 input:default + label {
   color: coral;
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#selector-default', ':default')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#selector-default', ':default')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>HTML に関する意味付けと制約検証を定義。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#default-pseudo', ':default')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>変更なし。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("css.selectors.default")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Learn/Forms">ウェブフォーム — ユーザーデータでの作業</a></li>
- <li><a href="/ja/docs/Learn/Forms/Styling_web_forms">ウェブフォームのスタイル付け</a></li>
- <li>関連する HTML 要素: {{htmlelement("button")}}, <code><a href="/ja/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>, <code><a href="/ja/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code>, {{htmlelement("option")}}</li>
-</ul>
-</div>
+- [ウェブフォーム — ユーザーデータでの作業](/ja/docs/Learn/Forms)
+- [ウェブフォームのスタイル付け](/ja/docs/Learn/Forms/Styling_web_forms)
+- 関連する HTML 要素: {{htmlelement("button")}}, [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio), {{htmlelement("option")}}
