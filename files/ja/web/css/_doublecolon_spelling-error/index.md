@@ -1,70 +1,71 @@
 ---
 title: '::spelling-error'
-slug: 'Web/CSS/::spelling-error'
+slug: Web/CSS/::spelling-error
 tags:
   - CSS
-  - Experimental
-  - NeedsExample
-  - Pseudo-element
-  - Reference
-  - Web
-  - 疑似要素
-translation_of: 'Web/CSS/::spelling-error'
+  - 実験的
+  - 擬似要素
+  - リファレンス
+  - セレクター
+  - ウェブ
+browser-compat: css.selectors.spelling-error
+translation_of: Web/CSS/::spelling-error
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>::spelling-error</code></strong> <a href="/ja/docs/Web/CSS/Pseudo-elements">疑似要素</a>は、綴りが正しくないと{{glossary("user agent", "ユーザーエージェント")}}が判断したテキスト区間を示します。</p>
+**`::spelling-error`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、綴りが正しくないと{{glossary("user agent", "ユーザーエージェント")}}が判断したテキストの区間を示します。
 
-<pre class="brush: css no-line-numbers">::spelling-error {
-  color: red;
-}</pre>
+## 利用できるプロパティ
 
-<h2 id="Allowable_properties" name="Allowable_properties">利用できるプロパティ</h2>
+`::spelling-error` 擬似要素では、一部の CSS プロパティのみが利用できます。
 
-<p><code>::spelling-error</code> 擬似要素では、一部の CSS プロパティのみが利用できます。</p>
+- {{cssxref("color")}}
+- {{cssxref("background-color")}}
+- {{cssxref("cursor")}}
+- {{cssxref("caret-color")}}
+- {{cssxref("outline")}} およびその個別指定プロパティ
+- {{cssxref("text-decoration")}} および関連プロパティ
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("text-shadow")}}
 
-<ul>
- <li>{{cssxref("color")}}</li>
- <li>{{cssxref("background-color")}}</li>
- <li>{{cssxref("cursor")}}</li>
- <li>{{cssxref("caret-color")}}</li>
- <li>{{cssxref("outline")}} およびその個別指定プロパティ</li>
- <li>{{cssxref("text-decoration")}} および関連プロパティ</li>
- <li>{{cssxref("text-emphasis-color")}}</li>
- <li>{{cssxref("text-shadow")}}</li>
-</ul>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```css
+::spelling-error
+```
 
-<pre class="syntaxbox">::spelling-error</pre>
+## 例
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+### 文書の単純なスペルチェック
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Pseudo-Elements', '#selectordef-spelling-error', '::spelling-error')}}</td>
-   <td>{{Spec2('CSS4 Pseudo-Elements')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+この例では、最終的に対応しているブラウザーでは、表示されたスタイルでフラグ付きのスペルミスを強調表示します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+#### HTML
 
-<div>
-<p>{{Compat("css.selectors.spelling-error")}}</p>
-</div>
+```html
+<p contenteditable spellcheck="true">My friends are coegdfgfddffbgning to the party tonight.</p>
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+#### CSS
 
-<ul>
- <li>{{cssxref("::grammar-error")}}</li>
-</ul>
+```css
+::spelling-error  {
+  text-decoration: wavy red;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Simple_document_spell_check', '100%', 60)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{cssxref("::grammar-error")}}
