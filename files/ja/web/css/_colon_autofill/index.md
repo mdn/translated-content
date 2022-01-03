@@ -1,33 +1,72 @@
 ---
-title: ':-webkit-autofill'
+title: ':autofill'
 slug: Web/CSS/:autofill
 tags:
   - CSS
-  - Non-standard
-  - Reference
+  - 標準外
+  - リファレンス
   - 擬似クラス
-translation_of: Web/CSS/:-webkit-autofill
+browser-compat: css.selectors.autofill
+translation_of: Web/CSS/:autofill
 original_slug: Web/CSS/:-webkit-autofill
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}
 
-<p>CSS の <strong><code>:-webkit-autofill</code></strong> <a href="/ja/docs/Web/CSS/Pseudo-classes">疑似クラス</a>は、 {{HTMLElement("input")}} 要素の値がブラウザーによって自動補完されている時に一致します。</p>
+**`:autofill`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}} 要素の値がブラウザーによって自動補完された時に一致します。このクラスはユーザーがフィールドを編集すると一致しなくなります。
 
-<p class="note"><strong>メモ:</strong> 多くのブラウザーのユーザーエージェントスタイルシートでは、 <code>:-webkit-autofill</code> スタイル定義に <code>!important</code> を使用しており、 JavaScript によるハックで解決しない限り、ウェブページから上書きすることができません。</p>
+> **Note:** 多くのブラウザーのユーザーエージェントスタイルシートでは、 `:-webkit-autofill` スタイル定義に `!important` を使用しており、 JavaScript によるハックで解決しない限り、ウェブページから上書きすることができません。例えば、 Chrome では内部スタイルシートで次のようになっています。
+>
+> ```css
+> background-color: rgb(232, 240, 254) !important;
+> background-image: none !important;
+> color: -internal-light-dark(black, white) !important;
+> ```
+>
+> これは、 {{cssxref('background-color')}}, {{cssxref('background-image')}}, {{cssxref('color')}} に独自のルールを設定できないことを意味します。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 構文
 
-<p>どの仕様書でも定義されていません。</p>
+```css
+:autofill
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## 例
 
-<p>{{Compat("css.selectors.-webkit-autofill")}}</p>
+次の例は、 `:autofill` 擬似クラスを使用して、ブラウザーによって自動補完されたテキストフィールドの境界線を変更することを示しています。ブラウザーの互換性を保つために、 `:-webkit-autofill` と `:autofill` の両方を使用してください。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+```css
+input {
+  border: 3px solid grey;
+  border-radius: 3px;
+}
 
-<ul>
- <li><a href="https://code.google.com/p/chromium/issues/detail?id=46543">Chromium issue 46543: Auto-filled input text box yellow background highlight cannot be turned off!</a></li>
- <li><a href="https://bugs.webkit.org/show_bug.cgi?id=66032">WebKit bug 66032: Allow site authors to override autofilled fields' colors.</a></li>
- <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=740979">Mozilla bug 740979: implement <code>:-moz-autofill</code> pseudo-class on input elements with an autofilled value</a></li>
- <li><a href="https://wiki.csswg.org/spec/css4-ui#more-selectors">new css4-ui features - more selectors</a></li>
-</ul>
+input:-webkit-autofill {
+  border: 3px solid blue;
+}
+input:autofill {
+  border: 3px solid blue;
+}
+```
+
+```html
+<form method="post" action="">
+  <label for="email">Email</label> <input type="email" name="email" id="email" autocomplete="email">
+</form>
+```
+
+{{EmbedLiveSample('Examples')}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [Chromium issue 46543: Auto-filled input text box yellow background highlight cannot be turned off!](https://code.google.com/p/chromium/issues/detail?id=46543)
+- [WebKit bug 66032: Allow site authors to override autofilled fields' colors.](https://bugs.webkit.org/show_bug.cgi?id=66032)
+- [Mozilla bug 740979: implement `:-moz-autofill` pseudo-class on input elements with an autofilled value](https://bugzilla.mozilla.org/show_bug.cgi?id=740979)
+- [new css4-ui features - more selectors](https://wiki.csswg.org/spec/css4-ui#more-selectors)
