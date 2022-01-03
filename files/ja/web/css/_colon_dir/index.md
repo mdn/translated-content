@@ -4,107 +4,84 @@ slug: 'Web/CSS/:dir'
 tags:
   - BiDi
   - CSS
-  - Experimental
-  - Pseudo-class
-  - Reference
+  - 実験的
+  - 擬似クラス
+  - リファレンス
   - セレクター
-  - 疑似クラス
+browser-compat: css.selectors.dir
 translation_of: 'Web/CSS/:dir'
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>:dir()</code> は <a href="/ja/docs/Web/CSS">CSS</a> の</strong> <a href="/ja/docs/CSS/Web/Pseudo-classes">擬似クラス</a>で、中に含まれる文字列の方向に基づいて要素を選択します。</p>
+**`:dir()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、中に含まれる文字列の方向に基づいて要素を選択します。
 
-<pre class="brush: css no-line-numbers notranslate">/* 右から左への文字列がある要素すべてを選択 */
+```css
+/* 右から左への文字列がある要素すべてを選択 */
 :dir(rtl) {
   background-color: red;
-}</pre>
+}
+```
 
-<p><code>:dir()</code> 擬似クラスは文字方向の意味的な値、つまり、文書自身に設定されているもののみを使用します。スタイルによる文字方向、つまり、 {{cssxref("direction")}} のような CSS プロパティで設定された文字方向には対応しません。</p>
+`:dir()` 擬似クラスは書字方向の意味的な値、つまり、文書自体に設定されているもののみを使用します。スタイルによる書字方向、つまり、 {{cssxref("direction")}} のような CSS プロパティで設定された書字方向には対応しません。
 
-<div class="note">
-<p><strong>メモ:</strong> <code>:dir()</code> 擬似クラスは <code>[dir=…]</code> <a href="/ja/docs/Web/CSS/Attribute_selectors">属性セレクター</a> とは等価でないことに注意してください。後者は HTML の {{htmlattrxref("dir")}} 属性を選択しますが、これがない要素は、文字方向が親から継承されていても無視します。（同様に、 <code>[dir=rtl]</code> と <code>[dir=ltr]</code> は <code>auto</code> の値を選択しません。）それに対して、 <code>:dir()</code> は継承の場合も含め、{{glossary("user agent", "ユーザーエージェント")}} が計算した値で選択します。</p>
-</div>
+> **Note:** `:dir()` 擬似クラスは `[dir=…]` [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)と等価ではないことに注意してください。後者は HTML の {{htmlattrxref("dir")}} 属性を選択しますが、これがない要素は、書字方向が親から継承されていても無視します。（同様に、 `[dir=rtl]` と `[dir=ltr]` は `auto` の値に一致しません。）それに対して、 `:dir()` は継承された場合も含め、{{glossary("user agent", "ユーザーエージェント")}}が計算した値で選択します。
 
-<div class="note">
-<p><strong>メモ:</strong> HTML では、文字方向は {{htmlattrxref("dir")}} 属性で指定されます。他の文書タイプでは異なる方法があるかもしれません。</p>
-</div>
+> **Note:** HTML では、書字方向は {{htmlattrxref("dir")}} 属性で指定されます。他の文書型では異なる方法があるかもしれません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>:dir()</code> 擬似クラスは1つの引数を取り、対象としたい文字方向を指定します。</p>
+`:dir()` 擬似クラスは1つの引数を取り、対象としたい書字方向を指定します。
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code>ltr</code></dt>
- <dd>文字方向が左から右の要素を対象とします。</dd>
- <dt><code>rtl</code></dt>
- <dd>文字方向が右から左の要素を対象とします。</dd>
-</dl>
+- `ltr`
+  - : 書字方向が左書きの要素を対象とします。
+- `rtl`
+  - : 書字方向が右書きの要素を対象とします。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+### 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html; notranslate">&lt;div dir="rtl"&gt;
-  &lt;span&gt;test1&lt;/span&gt;
-  &lt;div dir="ltr"&gt;test2
-    &lt;div dir="auto"&gt;עִבְרִית&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div dir="rtl">
+  <span>test1</span>
+  <div dir="ltr">test2
+    <div dir="auto">עִבְרִית</div>
+  </div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">:dir(ltr) {
+```css
+:dir(ltr) {
   background-color: yellow;
 }
 
 :dir(rtl) {
   background-color: powderblue;
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{ EmbedLiveSample('Examples') }}</p>
+{{ EmbedLiveSample('Examples') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#selector-ltr', ':dir(ltr)')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#the-dir-pseudo', ':dir()')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("css.selectors.dir")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>言語に関連する擬似クラス: {{cssxref(":lang")}}, {{cssxref(":dir")}}</li>
-</ul>
+- 言語に関連する擬似クラス: {{cssxref(":lang")}}, {{cssxref(":dir")}}
+- HTML の {{htmlattrxref("lang")}} 属性
+- HTML の {{htmlattrxref("translate")}} 属性
