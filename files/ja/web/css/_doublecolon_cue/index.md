@@ -1,91 +1,96 @@
 ---
 title: '::cue'
-slug: 'Web/CSS/::cue'
+slug: Web/CSS/::cue
 tags:
   - '::cue'
   - CSS
-  - Media
-  - Pseudo-element
-  - Reference
-  - Selector
-  - WebVTT
-  - Webビデオテキストトラック
-  - cue
-  - ウェブ動画テキストトラック
-  - セレクター
   - メディア
   - 擬似要素
-translation_of: 'Web/CSS/::cue'
+  - リファレンス
+  - セレクター
+  - ウェブ動画テキストトラック
+  - WebVTT
+  - cue
+browser-compat: css.selectors.cue
+translation_of: Web/CSS/::cue
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>::cue</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Pseudo-elements">擬似要素</a>で、選択された要素内の <a href="/ja/docs/Web/API/WebVTT_API">WebVTT</a> キューに一致します。これにより、 VTT トラック付きのメディアで<a href="/ja/docs/Web/API/WebVTT_API#Styling_WebTT_cues">キャプションや他のキューをスタイル付けする</a>ことができます。</span></p>
+**`::cue`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、選択された要素内の [WebVTT](/ja/docs/Web/API/WebVTT_API) キューに一致します。これにより、 VTT トラック付きのメディアで[キャプションや他のキューをスタイル付けする](/ja/docs/Web/API/WebVTT_API#styling_webtt_cues)ことができます。
 
-<pre class="brush: css no-line-numbers notranslate">::cue {
+```css
+::cue {
   color: yellow;
   font-weight: bold;
-}</pre>
+}
+```
 
-<h2 id="Permitted_properties" name="Permitted_properties">利用可能なプロパティ</h2>
+このプロパティは、あたかも 1 つの部品であるかのように、一連のキュー全体に適用されます。 `background` とその個別指定だけは例外で、各キューに個別に適用されます。これは、ボックスが生成されて予期せずメディアの大きな領域を占めることを避けるためです。
 
-<p>セレクターにこの要素を含む規則では、以下の CSS プロパティしか使用することができません。</p>
-
-<ul>
- <li>{{CSSxRef("background")}} およびその個別指定プロパティ</li>
- <li>{{CSSxRef("color")}}</li>
- <li>{{CSSxRef("font")}} およびその個別指定プロパティ</li>
- <li>{{CSSxRef("line-height")}}</li>
- <li>{{CSSxRef("opacity")}}</li>
- <li>{{CSSxRef("outline")}} およびその個別指定プロパティ</li>
- <li>{{CSSxRef("ruby-position")}}</li>
- <li>{{CSSxRef("text-combine-upright")}}</li>
- <li>{{CSSxRef("text-decoration")}} およびその個別指定プロパティ</li>
- <li>{{CSSxRef("text-shadow")}}</li>
- <li>{{CSSxRef("visibility")}}</li>
- <li>{{CSSxRef("white-space")}}</li>
-</ul>
-
-<p>プロパティは、あたかも1つの部品であるかのように、一連のキュー全体に適用されます。 <code>background</code> とその個別指定だけは例外で、各キューに個別に適用されます。これは、ボックスが生成されて予期せずメディアの大きな領域を占めることを避けるためです。</p>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 {{CSSSyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 利用可能なプロパティ
 
-<p>次の CSS はキューのスタイルを設定し、テキストが白に、背景が半透明の黒い矩形になります。</p>
+セレクターにこの要素を含むルールでは、以下の CSS プロパティしか使用することができません。
 
-<pre class="brush: css notranslate">::cue {
+- [`background`](/ja/docs/Web/CSS/background)
+- [`background-attachment`](/ja/docs/Web/CSS/background-attachment)
+- [`background-clip`](/ja/docs/Web/CSS/background-clip)
+- [`background-color`](/ja/docs/Web/CSS/background-color)
+- [`background-image`](/ja/docs/Web/CSS/background-image)
+- [`background-origin`](/ja/docs/Web/CSS/background-origin)
+- [`background-position`](/ja/docs/Web/CSS/background-position)
+- [`background-repeat`](/ja/docs/Web/CSS/background-repeat)
+- [`background-size`](/ja/docs/Web/CSS/background-size)
+- [`color`](/ja/docs/Web/CSS/color)
+- [`font`](/ja/docs/Web/CSS/font)
+- [`font-family`](/ja/docs/Web/CSS/font-family)
+- [`font-size`](/ja/docs/Web/CSS/font-size)
+- [`font-stretch`](/ja/docs/Web/CSS/font-stretch)
+- [`font-style`](/ja/docs/Web/CSS/font-style)
+- [`font-variant`](/ja/docs/Web/CSS/font-variant)
+- [`font-weight`](/ja/docs/Web/CSS/font-weight)
+- [`line-height`](/ja/docs/Web/CSS/line-height)
+- [`opacity`](/ja/docs/Web/CSS/opacity)
+- [`outline`](/ja/docs/Web/CSS/outline)
+- [`outline-color`](/ja/docs/Web/CSS/outline-color)
+- [`outline-style`](/ja/docs/Web/CSS/outline-style)
+- [`outline-width`](/ja/docs/Web/CSS/outline-width)
+- [`ruby-position`](/ja/docs/Web/CSS/ruby-position)
+- [`text-combine-upright`](/ja/docs/Web/CSS/text-combine-upright)
+- [`text-decoration`](/ja/docs/Web/CSS/text-decoration)
+- [`text-decoration-color`](/ja/docs/Web/CSS/text-decoration-color)
+- [`text-decoration-line`](/ja/docs/Web/CSS/text-decoration-line)
+- [`text-decoration-style`](/ja/docs/Web/CSS/text-decoration-style)
+- [`text-decoration-thickness`](/ja/docs/Web/CSS/text-decoration-thickness)
+- [`text-shadow`](/ja/docs/Web/CSS/text-shadow)
+- [`visibility`](/ja/docs/Web/CSS/visibility)
+- [`white-space`](/ja/docs/Web/CSS/white-space)
+
+## 例
+
+### WebVTT のキューを黒地に白にする
+
+次の CSS はキューのスタイルを設定し、テキストが白に、背景が半透明の黒い矩形になります。
+
+```css
+::cue {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("WebVTT", "#the-cue-pseudo-element", "::cue")}}</td>
-   <td>{{Spec2("WebVTT")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.selectors.cue")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVTT_API">Web Video Tracks Format (WebVTT)</a></li>
- <li>{{HTMLElement("track")}}, {{HTMLElement("video")}}</li>
-</ul>
+- [ウェブ動画テキストトラックフォーマット (WebVTT)](/ja/docs/Web/API/WebVTT_API)
+- {{HTMLElement("track")}}, {{HTMLElement("video")}}
