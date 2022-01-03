@@ -1,128 +1,100 @@
 ---
 title: ':active'
-slug: 'Web/CSS/:active'
+slug: Web/CSS/:active
 tags:
   - CSS
-  - ウェブ
-  - セレクター
-  - リファレンス
   - レイアウト
-  - 疑似クラス
-translation_of: 'Web/CSS/:active'
+  - 擬似クラス
+  - リファレンス
+  - セレクター
+  - ウェブ
+browser-compat: css.selectors.active
+translation_of: Web/CSS/:active
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>:active</code></strong> <a href="/ja/docs/CSS/Pseudo-classes" title="Pseudo-classes">疑似クラス</a>は、ユーザーによってアクティブ化されている要素 (ボタンなど) を表します。</span>マウスを使用する場合は、「アクティブ化」とはふつう、第1ボタンを押し下げたときに始まります。</p>
+**`:active`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーによってアクティブ化されている要素 (ボタンなど) を表します。マウスを使用する場合は、「アクティブ化」とはふつう、主ボタンを押し下げたときに始まります。
 
-<pre class="brush: css no-line-numbers">/* アクティブ化されている &lt;a&gt; をすべて選択します */
+```css
+/* アクティブ化されている <a> をすべて選択します */
 a:active {
   color: red;
-}</pre>
+}
+```
 
-<p><code>:active</code> 疑似クラスは、 {{HTMLElement("a")}} 及び {{HTMLElement("button")}} 要素で使われます。この疑似クラスで他のよくあるターゲットとしては、アクティブ化される要素を<em>含む</em>要素や、関連付けられた {{HTMLElement("label")}} 要素を通してアクティブ化されるフォーム要素です。</p>
+`:active` 擬似クラスは、 {{HTMLElement("a")}} および {{HTMLElement("button")}} 要素で使われます。この擬似クラスで他のよくあるターゲットとしては、アクティブ化される要素を*含む*要素や、関連付けられた {{HTMLElement("label")}} 要素を通してアクティブ化されるフォーム要素です。
 
-<p><code>:active</code> 疑似クラスによって定義されたスタイルは、少なくとも同等の仕様を持つリンク関連の疑似クラス （{{cssxref(":link")}}、{{cssxref(":hover")}}、 {{cssxref(":visited")}}）によって上書きされます。適切にリンクにスタイルを適用するには、 <em>LVHA 順</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code> で定義されるように、他のすべてのリンク関連規則の後に <code>:active</code> 規則を置いてください。</p>
+`:active` 擬似クラスによって定義されたスタイルは、少なくとも同等の仕様を持つリンク関連の擬似クラス （{{cssxref(":link")}}、{{cssxref(":hover")}}、 {{cssxref(":visited")}}）によって上書きされます。適切にリンクにスタイルを適用するには、 _LVHA 順_: `:link` — `:visited` — `:hover` — `:active` で定義されるように、他のすべてのリンク関連ルールの後に `:active` ルールを置いてください。
 
-<div class="note"><strong>メモ:</strong> 複数ボタンのマウスを使うシステムでは、 CSS 3 は <code>:active</code> 擬似クラスは第1ボタン、つまり右手用のマウスではふつう一番左のボタンにのみ適用しなければならないと定義しています。</div>
+> **Note:** 複数ボタンのマウスを使うシステムでは、 CSS 3 は `:active` 擬似クラスは主ボタン、つまり右手用のマウスではふつう最も左のボタンにのみ適用しなければならないと定義しています。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="Active_links" name="Active_links">アクティブなリンク</h3>
+### アクティブなリンク
 
-<h4 id="HTML" name="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;この段落にはリンクが含まれています。
-  &lt;a href="#"&gt;このリンクはクリックすると赤色になります。&lt;/a&gt;
+```html
+<p>この段落にはリンクが含まれています。
+  <a href="#">このリンクはクリックすると赤色になります。</a>
   この段落は段落やリンクをクリックすると灰色になります。
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="CSS" name="CSS">CSS</h3>
+#### CSS
 
-<pre class="brush: css">a:link { color: blue; }          /* 未訪問リンク */
+```css
+a:link { color: blue; }          /* 未訪問リンク */
 a:visited { color: purple; }     /* 訪問済みリンク */
 a:hover { background: yellow; }  /* ホバー時 */
 a:active { color: red; }         /* アクティブなリンク */
 
-p:active { background: #eee; }   /* アクティブな段落 */</pre>
+p:active { background: #eee; }   /* アクティブな段落 */
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Active_links')}}</p>
+{{EmbedLiveSample('Active_links')}}
 
-<h3 id="Active_form_elements" name="Active_form_elements">フォーム要素をアクティブ化</h3>
+### フォーム要素をアクティブ化
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label for="my-button"&gt;My button: &lt;/label&gt;
-  &lt;button id="my-button" type="button"&gt;Try Clicking Me or My Label!&lt;/button&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label for="my-button">ボタン: </label>
+  <button id="my-button" type="button">ここかラベルをクリックしてみてください。</button>
+</form>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">form :active {
+```css
+form :active {
   color: red;
 }
 
 form button {
   background: white;
-}</pre>
+}
+```
 
-<h4 id="Result_2" name="Result_2">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Active_form_elements')}}</p>
+{{EmbedLiveSample('Active_form_elements')}}
 
-<h2 id="Specifications" name="Specifications"><span>仕様書</span></h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#selector-active', ':active')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#active-pseudo', ':active')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#useraction-pseudos', ':active')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':active')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#anchor-pseudo-classes', ':active')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("css.selectors.active")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>リンク関連の擬似クラス: {{cssxref(":link")}}, {{cssxref(":visited")}}, {{cssxref(":hover")}}</li>
-</ul>
+- リンク関連の擬似クラス: {{cssxref(":link")}}, {{cssxref(":visited")}}, {{cssxref(":hover")}}
