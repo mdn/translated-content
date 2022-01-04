@@ -1,35 +1,45 @@
 ---
 title: Truthy
 slug: Glossary/Truthy
-tags:
-  - Glossaire
-  - JavaScript
-  - Programmation
 translation_of: Glossary/Truthy
 original_slug: Glossaire/Truthy
 ---
-En {{Glossary("JavaScript")}}, une valeur `truthy` est une valeur qui est considérée comme vraie quand elle est évaluée dans un contexte {{Glossary("Boolean","booléen")}} . Toutes les valeurs sont `truthy` sauf si elles sont definies comme {{Glossary("Falsy","falsy")}} (c'est-à-dire, sauf pour `false`, 0, "", `null`, `undefined`, et `NaN`).
+En [JavaScript](/fr/docs/Glossary/JavaScript), une valeur **`truthy`** est une valeur qui est considérée comme vraie (`true`) quand elle est évaluée dans un contexte [booléen](/fr/docs/Glossary/Boolean). Toutes les valeurs sont `truthy` sauf si elles sont definies comme [`falsy`](/fr/docs/Glossary/Falsy) (c'est-à-dire, sauf pour `false`, `0`, `-0`, `0n`, `""`, `null`, `undefined` et `NaN`).
 
-{{Glossary("JavaScript")}} utilise la {{Glossary("Type_Conversion", "contrainte")}} de type dans un contexte booléen.
+[JavaScript](/fr/docs/Glossary/JavaScript) utilise la [contrainte de type](/fr/docs/Glossary/Type_coercion) dans un contexte booléen.
 
-Exemples de valeurs truthy en JavaScript (qui seront considérées comme vraies, ce qui exécutera le bloc if):
+Exemples de valeurs `truthy` en JavaScript (qui seront coercées en `true` dans un contexte booléen, ce qui exécutera le bloc `if`)&nbsp;:
 
 ```js
 if (true)
 if ({})
 if ([])
 if (42)
-if ("foo")
+if ("0")
+if ("false")
 if (new Date())
 if (-42)
+if (12n)
 if (3.14)
 if (-3.14)
 if (Infinity)
 if (-Infinity)
 ```
 
-## Voir aussi 
+### L'opérateur ET logique, &&
 
-- {{Glossary("Falsy")}}
-- {{Glossary("Type_Conversion", "Contrainte")}}
-- {{Glossary("Boolean","Booléen")}}
+Si la première valeur est `truthy`, [l'opérateur ET logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND) renvoie le deuxième opérande&nbsp;:
+
+```js
+true && "chien"
+// renvoie "chien"
+
+[] && "chien"
+// renvoie "chien"
+```
+
+## Voir aussi
+
+- [`Falsy`](/fr/docs/Glossary/Falsy)
+- [Contrainte de type](/fr/docs/Glossary/Type_coercion)
+- [Booléen](/fr/docs/Glossary/Boolean)
