@@ -1,131 +1,117 @@
 ---
 title: ':not()'
-slug: 'Web/CSS/:not'
+slug: Web/CSS/:not
 tags:
   - ':not()'
   - CSS
-  - Layout
-  - Negation
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-translation_of: 'Web/CSS/:not'
+  - レイアウト
+  - 否定
+  - 擬似クラス
+  - リファレンス
+  - セレクター
+  - ウェブ
+browser-compat: css.selectors.not
+translation_of: Web/CSS/:not
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>:not()</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a>で、列挙されたセレクターに一致しない要素を表します。特定の項目が選択されることを防ぐため、<em>否定擬似クラス (negation pseudo-class)</em> と呼ばれています。</p>
+**`:not()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、列挙されたセレクターに一致しない要素を表します。特定の項目が選択されることを防ぐため、否定擬似クラス (_negation pseudo-class_) と呼ばれています。
 
-<pre class="brush: css no-line-numbers notranslate">/* 段落以外の要素を選択 */
+```css
+/* 段落以外の要素を選択 */
 :not(p) {
   color: blue;
-}</pre>
+}
+```
 
-<p><code>:not()</code> 擬似クラスには、使用する前に知っておいた方が良い<a href="/ja/docs/Web/CSS/:not#Description">クセやコツ、予想外の結果</a>がいくつかあります。</p>
+`:not()` 擬似クラスには、使用する前に知っておいた方が良い[クセやコツ、予想外の結果](#解説)がいくつかあります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>:not()</code> 擬似クラスは引数として、1つまたは複数のセレクターをカンマで区切ったものを要求します。リストには否定セレクターや<a href="/ja/docs/Web/CSS/Pseudo-elements">擬似要素</a>を含めることはできません。</p>
-
-<div class="warning">
-<p>複数のセレクターを指定することは実験的な機能で、広くは対応されていません。</p>
-</div>
+`:not()` 擬似クラスは引数として、1つまたは複数のセレクターをカンマで区切ったものを要求します。リストには否定セレクターや[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含めることはできません。
 
 {{csssyntax}}
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code>:not()</code> を使用する際のふつうではない効果や結果がいくつかありますので、使用する際には気を付けてください。</p>
+`:not()` を使用する際のふつうではない効果や結果がいくつかありますので、使用する際には気を付けてください。
 
-<ul>
- <li><code>:not</code> 擬似クラスは入れ子にすることができません。すなわち <code>:not(:not(...))</code> は無効です。</li>
- <li>擬似要素は単純セレクターではありませんので、 <code>:not()</code> で有効な引数にはなりません。従って、 <code>:not(p::before)</code> のようなセレクターは動作しません。</li>
- <li>この擬似クラスを使用して無意味なセレクターを書くことができます。例えば、 <code>:not(*)</code> は要素ではないすべての要素を選択するので、規則は適用されません。</li>
- <li>この擬似クラスは規則の<a href="/ja/docs/Web/CSS/Specificity">詳細度</a>を上げることができます。例えば、 <code>#foo:not(#bar)</code> は単純な <code>#foo</code> と同じ要素を選択しますが、詳細度はより高くなります。</li>
- <li><code>:not(.foo)</code> は <code>.foo</code> ではないすべての要素を選択するため、<em>{{HTMLElement("html")}} や {{HTMLElement("body")}} も選択します。</em></li>
- <li>このセレクターは1つの要素のみに適用されます。先祖要素を除外することはできません。例えば、 <code>body :not(table) a</code> はテーブル内のリンクにも適用されます。 {{HTMLElement("tr")}} がセレクターの <code>:not()</code> の部分に該当するからです。</li>
-</ul>
+- `:not` 擬似クラスは入れ子にすることができません。すなわち `:not(:not(...))` は無効です。
+- この擬似クラスを使用して無意味なセレクターを書くことができます。例えば、 `:not(*)` は要素ではないすべての要素を選択するので、ルールは適用されません。
+- この擬似クラスはルールの[詳細度](/ja/docs/Web/CSS/Specificity)を上げることができます。例えば、 `#foo:not(#bar)` は単純な `#foo` と同じ要素を選択しますが、詳細度はより高くなります。
+- `:not(.foo)` は `.foo` ではないすべての要素を選択するため、*{{HTMLElement("html")}} や {{HTMLElement("body")}} も*選択します。
+- このセレクターは 1 つの要素のみに適用されます。祖先要素を除外することはできません。例えば、 `body :not(table) a` はテーブル内のリンクにも適用されます。 {{HTMLElement("tr")}} がセレクターの `:not()` の部分に該当するからです。
+- 2 つのセレクターを同時に使用することは、まだすべてのブラウザーが対応しているわけではありません。例: `:not(.foo, .bar)`. より広く対応するためには、 `:not(.foo):not(.bar)` を使用することができます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### 基本的な一連の :not() の例
 
-<pre class="brush: html notranslate">&lt;p&gt;I am a paragraph.&lt;/p&gt;
-&lt;p class="fancy"&gt;I am so very fancy!&lt;/p&gt;
-&lt;div&gt;I am NOT a paragraph.&lt;/div&gt;
-</pre>
+#### HTML
 
-<h3 id="CSS">CSS</h3>
+```html
+<p>I am a paragraph.</p>
+<p class="fancy">I am so very fancy!</p>
+<div>I am NOT a paragraph.</div>
+<h2>
+  <span class="foo">foo inside h2</span>
+  <span class="bar">bar inside h2</span>
+</h2>
+```
 
-<pre class="brush: css notranslate">.fancy {
+#### CSS
+
+```css
+.fancy {
   text-shadow: 2px 2px 3px gold;
 }
 
-/* '.fancy' クラスの中にない &lt;p&gt; 要素 */
+/* '.fancy' クラスの中にない <p> 要素 */
 p:not(.fancy) {
   color: green;
 }
 
-/* &lt;p&gt; 要素ではない要素 */
+/* <p> 要素ではない要素 */
 body :not(p) {
   text-decoration: underline;
 }
 
-/* &lt;div&gt; または &lt;span&gt; 要素ではない要素 */
+/* <div> または <span> 要素ではない要素 */
 body :not(div):not(span) {
   font-weight: bold;
 }
 
-/* '.crazy' または '.fancy' ではない要素 */
-/* なお、この文法は十分に対応されていません。 */
-body :not(.crazy, .fancy) {
-  font-family: sans-serif;
-}</pre>
+/* <div> でも '.fancy' でもない要素 */
+/* なお、この文法は対応が充分ではありません。 */
+body :not(div, .fancy) {
+  text-decoration: overline underline;
+}
 
-<h3 id="Result" name="Result">結果</h3>
+/* <h2> の中にある要素で <span> に foo クラスでないもの */
+/* クラス付き要素のような複雑なセレクターは、まだ対応が充分ではありません。 */
+h2 :not(span.foo) {
+  color: red;
+}
+```
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+#### 結果
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{EmbedLiveSample('Basic_set_of_not_examples', '100%', 320)}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#negation', ':not()')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>引数で単純セレクター以外も許容数量に拡張。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#negation', ':not()')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Specifications}}
 
-<div>
-<p>{{Compat("css.selectors.not")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">擬似クラスと擬似要素</a></li>
- <li>関連する CSS 擬似クラス:
-  <ul>
-   <li>{{cssxref(":has", ":has()")}}</li>
-   <li>{{cssxref(":is", ":is()")}}</li>
-   <li>{{cssxref(":where", ":where()")}}</li>
-  </ul>
- </li>
-</ul>
-</div>
+## 関連情報
+
+- [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
+- [擬似クラスと擬似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- 関連する CSS 擬似クラス:
+
+  - {{cssxref(":has", ":has()")}}
+  - {{cssxref(":is", ":is()")}}
+  - {{cssxref(":where", ":where()")}}
