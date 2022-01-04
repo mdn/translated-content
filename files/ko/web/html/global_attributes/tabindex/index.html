@@ -24,7 +24,7 @@ translation_of: Web/HTML/Global_attributes/tabindex
   <p><strong>참고:</strong> 음의 값은 특정 이벤트에만 나타나는 요소에 유용합니다. 사용자는 키보드를 계속 눌러도 접근할 수 없으나, 스크립트에서는 {{domxref("HTMLOrForeignElement.focus", "focus()")}} 메서드를 호출해 포커스를 부여할 수 있기 때문입니다.</p>
   </div>
  </li>
- <li><code>tabindex="0"</code>은 기본값으로, 연속 키보드 탐색으로 요소에 접근할 수 있으며 문서 소스 코드의 순서에 따른다는 것을 나타냅니다. 양의 정숫값을 가진 요소가 존재할 경우 순서는 그 이후가 됩니다.</li>
+ <li>대화형 콘텐츠는 <code>tabindex="0"</code>이 기본값이고, 비 대화형 콘텐츠는 <code>tabindex="-1"</code>이 기본값입니다. 연속 키보드 탐색으로 요소에 접근할 수 있으며 문서 소스 코드의 순서에 따른다는 것을 나타냅니다. 양의 정숫값을 가진 요소가 존재할 경우 순서는 그 이후가 됩니다.</li>
  <li><strong>양의 정숫값</strong>은 요소를 연속 키보드 탐색으로 접근할 수 있으며, 그 순서는 해당 값으로 지정하겠다는 것을 뜻합니다. 즉, <code>tabindex="4"</code>인 요소는 <code>tabindex="5"</code>와 <code>tabindex="0"</code>인 요소 이전에, 그러나 <code>tabindex="3"</code>인 요소 이후에 접근할 수 있습니다. 다수의 요소가 하나의 값을 공유할 경우 그 안에서 문서 소스 코드의 순서를 따릅니다. 최댓값은 <code>32767</code>입니다.
   <div class="warning">
   <p>0보다 큰 <code>tabindex</code> 값을 피하세요. 접근성 보조기술 사용자의 페이지 탐색과 조작에 방해될 수 있습니다. 대신, 문서의 요소 순서를 논리적인 순서대로 배치하세요.</p>
