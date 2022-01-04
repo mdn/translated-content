@@ -1,112 +1,95 @@
 ---
 title: ':first-of-type'
-slug: 'Web/CSS/:first-of-type'
+slug: Web/CSS/:first-of-type
 tags:
   - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
+  - レイアウト
+  - 擬似クラス
+  - リファレンス
   - セレクター
-  - 疑似クラス
-translation_of: 'Web/CSS/:first-of-type'
+  - ウェブ
+browser-compat: css.selectors.first-of-type
+translation_of: Web/CSS/:first-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>:first-of-type</code></strong> <a href="/ja/docs/CSS/Pseudo-classes" title="Pseudo-classes">疑似クラス</a>は、兄弟要素のグループの中でその種類の最初の要素を表します。</p>
+**`:first-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中でその種類の最初の要素を表します。
 
-<pre class="brush: css no-line-numbers">/* 兄弟要素の中で最初の &lt;p&gt; 要素をすべて選択 */
+```
+/* 兄弟要素の中で最初の <p> 要素をすべて選択 */
 p:first-of-type {
   color: red;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>メモ:</strong> 当初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。</p>
-</div>
+> **Note:** 当初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Styling_the_first_paragraph" name="Styling_the_first_paragraph">最初の段落の整形</h3>
+### 最初の段落の整形
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h2&gt;Heading&lt;/h2&gt;
-&lt;p&gt;Paragraph 1&lt;/p&gt;
-&lt;p&gt;Paragraph 2&lt;/p&gt;</pre>
+```html
+<h2>Heading</h2>
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p:first-of-type {
+```css
+p:first-of-type {
   color: red;
   font-style: italic;
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Styling_the_first_paragraph')}}</p>
+{{EmbedLiveSample('Styling_the_first_paragraph')}}
 
-<h3 id="Nested_elements" name="Nested_elements">ネストした要素</h3>
+### 入れ子になった要素
 
-<p>この例は、どうやった入れ子になった要素を対象にするかを示します。なお、単純セレクターが書かれていない場合は、<a href="/ja/docs/Web/CSS/Universal_selectors">ユニバーサルセレクター</a> (<code>*</code>) が暗黙に含まれています。</p>
+この例は、どうやった入れ子になった要素を対象にするかを示します。なお、単純セレクターが書かれていない場合は、[ユニバーサルセレクター](/ja/docs/Web/CSS/Universal_selectors) (`*`) が暗黙に含まれています。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;div&gt;This `div` is first!&lt;/div&gt;
-  &lt;div&gt;This &lt;span&gt;nested `span` is first&lt;/span&gt;!&lt;/div&gt;
-  &lt;div&gt;This &lt;em&gt;nested `em` is first&lt;/em&gt;, but this &lt;em&gt;nested `em` is last&lt;/em&gt;!&lt;/div&gt;
-  &lt;div&gt;This &lt;span&gt;nested `span` gets styled&lt;/span&gt;!&lt;/div&gt;
-  &lt;b&gt;This `b` qualifies!&lt;/b&gt;
-  &lt;div&gt;This is the final `div`.&lt;/div&gt;
-&lt;/article&gt;
-</pre>
+```html
+<article>
+  <div>This `div` is first!</div>
+  <div>This <span>nested `span` is first</span>!</div>
+  <div>This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!</div>
+  <div>This <span>nested `span` gets styled</span>!</div>
+  <b>This `b` qualifies!</b>
+  <div>This is the final `div`.</div>
+</article>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">article :first-of-type {
+```css
+article :first-of-type {
   background-color: pink;
-}</pre>
+}
+```
 
-<h4 id="Result_2" name="Result_2">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Nested_elements', 500)}}</p>
+{{EmbedLiveSample('Nested_elements', 500)}}
 
-<h2 id="Specifications" name="Specifications"><span>仕様書</span></h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#first-of-type-pseudo', ':first-of-type')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>選択する要素に親を必要としないようにした。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#first-of-type-pseudo', ':first-of-type')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("css.selectors.first-of-type")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連項目</h2>
+## 関連情報
 
-<ul>
- <li>{{Cssxref(":first-child")}}, {{Cssxref(":last-of-type")}}, {{Cssxref(":nth-of-type")}}</li>
-</ul>
+- {{Cssxref(":first-child")}}, {{Cssxref(":last-of-type")}}, {{Cssxref(":nth-of-type")}}
