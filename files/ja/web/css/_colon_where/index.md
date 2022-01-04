@@ -1,71 +1,111 @@
 ---
 title: ':where()'
-slug: 'Web/CSS/:where'
+slug: Web/CSS/:where
 tags:
   - ':where'
   - CSS
-  - Experimental
+  - 実験的
   - NeedsBrowserCompatibility
   - NeedsContent
   - NeedsExample
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Selectors
-  - Web
-  - セレクター
   - 擬似クラス
-translation_of: 'Web/CSS/:where'
+  - リファレンス
+  - セレクター
+  - ウェブ
+browser-compat: css.selectors.where
+translation_of: Web/CSS/:where
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}
 
-<p><strong><code>:where()</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a>関数で、選択肢列挙を引数として取り、列挙されたセレクターのうちの何れかに当てはまるすべての要素を選択します。</p>
+**`:where()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターリストを引数として取り、列挙されたセレクターのうちの何れかに当てはまるすべての要素を選択します。
 
-<p><code>:where()</code> と {{CSSxRef(":is", ":is()")}} の違いは、 <code>:where()</code> は<a href="/ja/docs/Web/CSS/Specificity">詳細度</a>が常に 0 であるのに対して、 <code>:is()</code> は引数内で最も詳細度の高いセレクターの詳細度を取ります。</p>
+```css
+/* ヘッダー、メイン、フッターの何れかの中にある段落に
+   カーソルをかざしたときに選択 */
+:where(header, main, footer) p:hover {
+  color: red;
+  cursor: pointer;
+}
 
-<h2 id="Examples" name="Examples">例</h2>
+/* 上記のものは下記のものと同等です。 */
+header p:hover,
+main p:hover,
+footer p:hover {
+  color: red;
+  cursor: pointer;
+}
+```
 
-<h3 id="Comparing_where_and_is" name="Comparing_where_and_is">:where() と :is() の比較</h3>
+`:where()` と {{CSSxRef(":is", ":is()")}} の違いは、 `:where()` は[詳細度](/ja/docs/Web/CSS/Specificity)が常に 0 であるのに対して、 `:is()` は引数内で最も詳細度の高いセレクターの詳細度を取ります。
 
-<p>この例では <code>:where()</code> がどのように作用するのかを示し、 <code>:where()</code> と <code>:is()</code> の違いも説明しています。</p>
+### 寛容なセレクター解釈
 
-<p>以下のような HTML を想定してください。</p>
+仕様では、`:is()` と `:where()` が[寛容なセレクターリスト](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)を受け入れると定義されています。
 
-<pre class="brush: html notranslate">&lt;article&gt;
-  &lt;h2&gt;:is()-styled links&lt;/h2&gt;
-  &lt;section class="is-styling"&gt;
-    &lt;p&gt;Here is my main content. This &lt;a href="https://mozilla.org"&gt;contains a link&lt;/a&gt;.
-  &lt;/section&gt;
+CSS では、セレクターリストを使用する場合、いずれかのセレクターが無効であれば、リスト全体が無効であると判断されます。 `is()` や `:where()` を使用する場合、 1 つでも解釈に失敗するとセレクターリスト全体が無効とみなされるのではなく、不正確または対応していないセレクターは無視され、他のものが使用されます。
 
-  &lt;aside class="is-styling"&gt;
-    &lt;p&gt;Here is my aside content. This &lt;a href="https://developer.mozilla.org"&gt;also contains a link&lt;/a&gt;.
-  &lt;/aside&gt;
+```css
+:where(:valid, :unsupported) {
+  ...
+}
+```
 
-  &lt;footer class="is-styling"&gt;
-    &lt;p&gt;This is my footer, also containing &lt;a href="https://github.com/mdn"&gt;a link&lt;/a&gt;.
-  &lt;/footer&gt;
-&lt;/article&gt;
+Will still parse correctly and match `:valid` even in browsers which don't support `:unsupported`, whereas:
 
-&lt;article&gt;
-  &lt;h2&gt;:where()-styled links&lt;/h2&gt;
-  &lt;section class="where-styling"&gt;
-    &lt;p&gt;Here is my main content. This &lt;a href="https://mozilla.org"&gt;contains a link&lt;/a&gt;.
-  &lt;/section&gt;
+```css
+:valid, :unsupported {
+  ...
+}
+```
 
-  &lt;aside class="where-styling"&gt;
-    &lt;p&gt;Here is my aside content. This &lt;a href="https://developer.mozilla.org"&gt;also contains a link&lt;/a&gt;.
-  &lt;/aside&gt;
+Will be ignored in browsers which don't support `:unsupported` even if they support `:valid`.
 
-  &lt;footer class="where-styling"&gt;
-    &lt;p&gt;This is my footer, also containing &lt;a href="https://github.com/mdn"&gt;a link&lt;/a&gt;.
-  &lt;/footer&gt;
-&lt;/article&gt;</pre>
+## 例
 
-<p>このやや矛盾した例では、2つの記事があり、それぞれがセクション、脇、フッターを含んでいます。これらの記事は、子要素をマークするために使われるクラスによって異なります。</p>
+### :where() と :is() の比較
 
-<p>中のリンクの選択をより簡単にして、しかし区別できるようにするために、次のように <code>:is()</code> や <code>:where()</code> を使うことが<em>できます</em>。</p>
+この例では `:where()` がどのように作用するのかを示し、 `:where()` と `:is()` の違いも説明しています。
 
-<pre class="brush: css notranslate">html {
+以下のような HTML を想定してください。
+
+```html
+<article>
+  <h2>:is() でスタイル付けしたリンク</h2>
+  <section class="is-styling">
+    <p>こちらがメインコンテンツです。これは<a href="https://mozilla.org">リンクを含んでいます</a>。
+  </section>
+
+  <aside class="is-styling">
+    <p>こちらが脇コンテンツです。これも<a href="https://developer.mozilla.org">リンクを含んでいます</a>。
+  </aside>
+
+  <footer class="is-styling">
+    <p>こちらがフッターです。これも<a href="https://github.com/mdn">リンク</a>を含んでいます。
+  </footer>
+</article>
+
+<article>
+  <h2>:where() でスタイル付けしたリンク</h2>
+  <section class="where-styling">
+    <p>こちらがメインコンテンツです。これは<a href="https://mozilla.org">リンクを含んでいます</a>.
+  </section>
+
+  <aside class="where-styling">
+    <p>こちらが脇コンテンツです。これは<a href="https://developer.mozilla.org">also リンクを含んでいます</a>.
+  </aside>
+
+  <footer class="where-styling">
+    <p>こちらがフッターです。これも<a href="https://github.com/mdn">リンク</a>を含んでいます。
+  </footer>
+</article>
+```
+
+このやや矛盾した例では、2 つの記事があり、それぞれがセクション、脇、フッターを含んでいます。これらの記事は、子要素をマークするために使われるクラスによって異なります。
+
+中のリンクの選択をより簡単にして、しかし区別できるようにするために、次のように `:is()` や `:where()` を使うことができます。
+
+```css
+html {
   font-family: sans-serif;
   font-size: 150%;
 }
@@ -76,57 +116,39 @@ translation_of: 'Web/CSS/:where'
 
 :where(section.where-styling, aside.where-styling, footer.where-styling) a {
   color: orange;
-}</pre>
+}
+```
 
-<p>しかし、後からシンプルなセレクターを使ってフッターのリンクの色を上書きしたい場合はどうすればいいのでしょうか？</p>
+しかし、後からシンプルなセレクターを使ってフッターのリンクの色を上書きしたい場合はどうすればいいのでしょうか？
 
-<pre class="brush: css notranslate">footer a {
+```css
+footer a {
   color: blue;
-}</pre>
+}
+```
 
-<p>これは赤いリンクに作用しません。 <code>:is()</code> の中のセレクターは全体のセレクターの詳細度で算出され、クラスセレクターは要素セレクターよりも高い詳細度を持っているからです。</p>
+これは赤いリンクに作用しません。 `:is()` の中のセレクターは全体のセレクターの詳細度で算出され、クラスセレクターは要素セレクターよりも高い詳細度を持っているからです。
 
-<p>しかし、 <code>:where()</code> 内のセレクターは詳細度が 0 なので、オレンジ色のフッターリンクは単純セレクターによって上書きされてしまいます。
+しかし、 `:where()` 内のセレクターは詳細度が 0 なので、オレンジ色のフッターリンクは単純セレクターによって上書きされてしまいます。
 
-</p><p>結果は以下で見ることができます (ただし、現在のところ <code>:is()</code> と <code>:where()</code> は既定では Firefox Nightly のバージョン 77 以降では有効になっているだけで、他のバージョンの Firefox では <code>layout.css.is-where-selectors.enabled</code> の設定で隠されています)。</p>
+> **Note:** この例は GitHub からも見ることができます。 [is-where](https://mdn.github.io/css-examples/is-where/) を参照してください。
 
-<p><strong>注</strong>: この例は GitHub からも見ることができます。 <a href="https://mdn.github.io/css-examples/is-where/">is-where</a> を参照してください。</p>
+{{EmbedLiveSample('Examples', '100%', 600)}}
 
-<p>{{EmbedLiveSample('Examples', '100%', 600)}}</p>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 {{CSSSyntax}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#zero-matches", ":where()")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("css.selectors.where")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{CSSxRef(":is", ":is()")}} {{Experimental_Inline}}</li>
- <li><a href="/ja/docs/Web/CSS/Selector_list">選択子列挙</a></li>
- <li><a href="/ja/docs/Web/Web_Components">ウェブコンポーネント</a></li>
-</ul>
+- {{CSSxRef(":is", ":is()")}}
+- [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
+- [ウェブコンポーネント](/ja/docs/Web/Web_Components)
