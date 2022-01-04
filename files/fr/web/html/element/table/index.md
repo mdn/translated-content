@@ -44,7 +44,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
   - : Cet attribut entier définit, en pixels, la taille de la bordure entourant le tableau. S'il vaut 0, cela implique que l'attribut {{htmlattrxref("frame", "table")}} est vide.
 
-    > **Note :**Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Les propriétés CSS {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} et {{cssxref("border-style")}} devraient être utilisées à la place.
+    > **Note :** Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Les propriétés CSS {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} et {{cssxref("border-style")}} devraient être utilisées à la place.
 
 - {{htmlattrdef("cellpadding")}} {{Deprecated_inline}}
 

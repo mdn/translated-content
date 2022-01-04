@@ -33,7 +33,7 @@ Activer cette fonctionnalité pour votre site est simple : il faut juste retourn
 - `report-uri` {{ optional_inline() }}
   - : Si ce paramètre optionnel est spécifié, les échecs de validation sont notifiés à l'URL donnée.
 
-> **Note :** La spécification actuelle **impose** d'inclure au minimum une seconde clé dite de sauvegarde, qui n'est pas encore utilisée en production. Cela permet de changer de clé publique sans bloquer l'accès aux clients qui auraient déjà noté les clés épinglés. C'est important par exemple dans le cas où la clé actuellement utilisées serait compromise, ce qui forcerait l'utilisation d'une clé différente (la clé de sauvegarde dans ce cas).
+> **Note :** La spécification actuelle **impose** d'inclure au minimum une seconde clé dite de sauvegarde, qui n'est pas encore utilisée en production. Cela permet de changer de clé publique sans bloquer l'accès aux clients qui auraient déjà noté les clés épinglés. C'est important par exemple dans le cas où la clé actuellement utilisées serait compromise, ce qui forcerait l'utilisation d'une clé différente (la clé de sauvegarde dans ce cas).
 
 > **Note :** Firefox n'implémente pas encore les rapports de violation d'épinglage. Chrome les implémente à partie de la version 46.
 >
@@ -70,7 +70,7 @@ Dans cet exemple, **pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="**�
 
 Les étapes concrètes nécessaires pour délivrer l'en-tête HPKP dépendent du serveur web que vous utilisez.
 
-> **Note :** Ces exemples utilisent un a max-age de deux mois et incluent aussi tous les sous-domaines. Il est conseillé de vérifier que cela convient à votre serveur.
+> **Note :** Ces exemples utilisent un a max-age de deux mois et incluent aussi tous les sous-domaines. Il est conseillé de vérifier que cela convient à votre serveur.
 
 Inclure une ligne similaire à votre configuration activera HPKP, en remplaçant les valeurs en pointillé des lignes `pin-sha256="..." `:
 
