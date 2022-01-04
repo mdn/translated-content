@@ -12,9 +12,9 @@ translation_of: 'Web/CSS/:has'
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary"><strong><code>:has()</code></strong> は CSS の<a href="/ja/docs/Web/CSS/Pseudo-classes">疑似クラス</a>で、引数として渡されたセレクターに (指定された要素の {{cssxref(":scope")}} の相対で) 該当する要素が一つ以上の要素に一致することを表します。</span></p>
+<p><span class="seoSummary"><strong><code>:has()</code></strong> は CSS の<a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a>で、引数として渡されたセレクターに (指定された要素の {{cssxref(":scope")}} の相対で) 該当する要素が一つ以上の要素に一致することを表します。</span></p>
 
-<p><code>:has()</code> 疑似クラスは、セレクターの相対的なリストを引数に取ります。 CSS Selectors Level 4 仕様書よりも前の版では、 <code>:has</code> はスタイルシート内で使用することができず、 {{domxref("document.querySelector()")}} のような関数でのみ利用することができるという制限がありました (性能上の問題です)。そのように実装するブラウザーはなかったので、この制限は撤廃されました。</p>
+<p><code>:has()</code> 擬似クラスは、セレクターの相対的なリストを引数に取ります。 CSS Selectors Level 4 仕様書よりも前の版では、 <code>:has</code> はスタイルシート内で使用することができず、 {{domxref("document.querySelector()")}} のような関数でのみ利用することができるという制限がありました (性能上の問題です)。そのように実装するブラウザーはなかったので、この制限は撤廃されました。</p>
 
 <pre class="brush: css no-line-numbers">/* &lt;img&gt; 要素を直接中に含む &lt;a&gt; を選択する */
 /* なお、これはまだブラウザーが対応していません */
