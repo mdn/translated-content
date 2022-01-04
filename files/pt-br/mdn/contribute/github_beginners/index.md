@@ -370,54 +370,54 @@ Nós não achamos isto totalmente justo. O Git tem vários comandos que, pra ser
 
 Esta seção vai ser incrementada com o tempo, e incluir alguns comandos/sequências úteis para corrigir problemas comuns.
 
-### Reverting a change you made to a file that you haven't yet added to the commit list
+### Revertendo uma alteração feita em um arquivo que você ainda não tinha adicionado para a lista de commit
 
-If you've changed a file, but have not yet run the `git add file-path` command to add it to the commit list, you can revert it to the state it was when you first checked out the branch by running
-
-```bash
-git restore file-path
-```
-
-### Removing a file from the commit list
-
-If you've already run the `git add file-path` command to add a file to the commit list, but now want to remove it from the commit list, you can use the command
+Se você tiver alterado um arquivo, mas ainda não tiver rodado o comando `git add caminho-do-arquivo` para adicioná-lo na lista de commit, você pode revertê-lo para o estado em que estava quando você entrou na branch pela primeira vez rodando:
 
 ```bash
-git restore --staged file-path
+git restore caminho-do-arquivo
 ```
 
-### Reversing a commit
+### Removendo um arquivo da lista de commit
 
-If you've committed the commit list using `git commit -m 'my commit message'`, and not yet pushed it, but now realized that you put something in there that you want to remove, you can reverse your local commit using
+Se você já tiver rodado o comando `git add caminho-do-arquivo` para adicionar o arquivo na lista de commit, mas agora quer removê-lo da lista de commit, você pode usar o comando:
+
+```bash
+git restore --staged caminho-do-arquivo
+```
+
+### Revertendo um commit
+
+Se você tiver feito o commit da lista usando `git commit -m 'minha mensagem do commit'`, e ainda não tiver feito push, mas percebeu que você colocou algo nele que você quer remover, você pode reverter seu commit local usando
 
 ```bash
 git reset HEAD~1
 ```
 
-This will take it back to the state when the changes in that commit are not yet added to the commit list (you would need to git add them again after figuring out the problem). Note that this gets you back to the state before you started committing anything in this session. This won't help you if you need to do something more complex, like only revert the middle commit out of a set of three. We'll leave it there for this lesson.
+Isto fará com que volte para o estado de quando as mudanças nesse commit ainda não tinhando sido adicionadas a lista de commit (você teria que adicionar novamente depois de descobrir o problema). Note que isso te leva de volta para o estado antes de você fazer o commit de qualquer coisa nesta sessão. Isto não te ajudará se você precisar fazer algo mais complexo, como apenas reverter o commit intermediário de uma lista de três. Nós vamos deixar assim para essa lição.
 
-### Reversing a commit that has been pushed to the remote fork
+### Revertendo um commit que foi dado push para o fork remoto
 
-At this point, there is not really any going back, or rewinding. Instead, you need to push another commit to reverse the effects of the one you want to get rid of. You could do this manually using some of the tools we've already given you above, but there is a built-in command that makes this easier — `git revert`. This can be used to automatically create a commit that reverts changes back to the point you specify.
+Neste ponto, não existe nenhum retorno real, ou forma de rebobinar. Ao invés disso, você vai precisar dar push em outro commit para reverter os efeitos do que você quer tirar. Você pode fazer isto manualmente usando algumas das ferramentas que nós te demos acima, mas tem um comando já existente que facilita isto — `git revert`. Isto pode ser usado para criar automaticamente um commit que reverte mudanças de volta para o ponto que você especificar.
 
-1.  At its simplest, you can run the following command to create a commit that will get your remote branch back to the state you were in before you started committing:
+1.  Da forma mais simples, você pode rodar o comando a seguir para criar um comando que vai fazer a sua branch remota voltar ao estado inicial em que ela estava antes de você começar a commitar: 
 
     ```bash
     git revert HEAD
     ```
 
-2.  This will result in a commit message file being opened up in your default text editor that you need to check to make sure you are happy with it. Close this, and git will finalize creating the commit.
-3.  Now you just need to push it:
+2.  Isto vai resultar na abertura de uma mensagem de commit no seu editor padrão, a qual você precisa verificar se está como você gostaria. Feche-a, e o git vai finalizar criando o commit.
+3.  Agora você só precisar fazer o push:
 
     ```bash
     git push
     ```
 
-If you look at your remote fork's github.com page again, you'll see the commit that you wanted to reverse, plus the commit that reverses it.
+Se você olhar na página do github.com do seu fork remoto novamente, você verá o commit que você queria reverter, juntamente com o commit que reverte ele.
 
-> **Note:** Another way to handle getting rid of files that have ended up in pull requests that you don't want to be there is to use the GitHub UI. Go to your pull request's page on github.com, go to the "Files changed" tab, and find the file you want to remove from the pull request. At the top right of the file's box in the page there will be a "three dot" (`...`) menu. Press this button and choose "Delete file". In the confirmation page, enter a title for the new commit, make sure the "Commit directly..." checkbox is selected, and press the "Commit changes" button.
+> **Nota:** Outra forma de conseguir se livrar dos arquivos que acabaram entrando no seu pull request e que você não quer que estejam lá é usar a interface do Github. Vá para a página do seu pull request em github.com, vá até a aba "Arquivos alterados", e encontre o arquivo que você quer remover do seu pull request. No canto superior direito do da caixa do arquivo na página, você verá um menu "três pontos" (`...`). Pressione o botão e escolha "Deletar o arquivo". Na página de confirmação, insira um título para o novo commit, tenha certeza de que a caixa de seleção "Fazer commit diretamente..." esteja selecionada, e pressione o botão "Fazer o commit das mudanças".
 >
-> It is usually a good idea to get the rest of the pull request looking exactly how you want it before you make changes via the GitHub UI. If you do something like this and then end up having to make more changes, you'll need to remember to pull the changes you made to your remote branch down to your local branch (e.g. with `git pull`) before you can push more commits.
+> Geralmente é uma boa ideia deixar o resto do pull request exatamente da forma que você deseja antes de fazer as mudanças pela interface do GitHub. Se você fizer algo assim e acabar tendo que fazer mais mudanças, você vai precisar lembrar de puxar as mudanças que você fez para a sua branch remota para a sua branch local (e.g. com `git pull`) antes que você consiga subir mais commits.
 
 ### Quer ver mais?
 
