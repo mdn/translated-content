@@ -6,11 +6,11 @@ translation_of: Web/HTML/Element/u
 <div>{{HTMLRef}}</div>
 
 <div>
-<p><strong>HTML <code>&lt;u&gt;</code> 元素（表意不清标注元素）</strong>表示一个需要标注为非文本化（non-textual）的内联文本域。默认情况下渲染为一个实线下划线，可以用CSS替换。</p>
+<p><strong>HTML <code>&lt;u&gt;</code> 元素（表意不清标注元素）</strong>表示一个需要标注为非文本化（non-textual）的内联文本域。默认情况下渲染为一个实线下划线，可以用 CSS 替换。</p>
 </div>
 
 <div class="warning">
-<p>此元素以前在旧版本的HTML中称为“下划线”元素，但有时仍会以这种方式被滥用。要为文本加下划线，您应该应用包含CSS {{cssxref("text-decoration")}}属性设置为 <code>underline</code> 的样式。</p>
+<p>此元素以前在旧版本的 HTML 中称为 “下划线” 元素，但有时仍会以这种方式被滥用。要为文本加下划线，您应该应用包含 CSS {{cssxref("text-decoration")}}属性设置为 <code>underline</code> 的样式。</p>
 </div>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}</div>
@@ -87,14 +87,14 @@ translation_of: Web/HTML/Element/u
 
 <h3 id="表示拼写错误">表示拼写错误</h3>
 
-<p>此示例使用<code>&lt;u&gt;</code>元素和一些CSS来显示包含拼写错误的段落，其中错误以红色波浪下划线样式表示，这种情况通常用于此目的。</p>
+<p>此示例使用<code>&lt;u&gt;</code>元素和一些 CSS 来显示包含拼写错误的段落，其中错误以红色波浪下划线样式表示，这种情况通常用于此目的。</p>
 
 <h4 id="HTML">HTML</h4>
 
 <pre class="notranslate"><code>&lt;p&gt;This paragraph includes a &lt;u class="spelling"&gt;wrnogly&lt;/u&gt;
 spelled word.&lt;/p&gt;</code></pre>
 
-<p>在HTML中，我们看到 <code>&lt;u&gt;</code> 使用了一个类 <code>spelling</code>，用于表示“wrongly”一词的拼写错误。</p>
+<p>在 HTML 中，我们看到 <code>&lt;u&gt;</code> 使用了一个类 <code>spelling</code>，用于表示 “wrongly” 一词的拼写错误。</p>
 
 <h4 id="CSS">CSS</h4>
 
@@ -102,7 +102,7 @@ spelled word.&lt;/p&gt;</code></pre>
   text-decoration: red wavy underline;
 }</code></pre>
 
-<p>这个CSS表示当 <code>&lt;u&gt;</code> 元素使用类 <code>spelling</code> 进行样式化时，它的文本下面应该有一个红色的波浪下划线。这是拼写错误的常见样式。也可以使用另一种常见样式  <code>red dashed underline</code>.。</p>
+<p>这个 CSS 表示当 <code>&lt;u&gt;</code> 元素使用类 <code>spelling</code> 进行样式化时，它的文本下面应该有一个红色的波浪下划线。这是拼写错误的常见样式。也可以使用另一种常见样式  <code>red dashed underline</code>.。</p>
 
 <h4 id="结果">结果</h4>
 
@@ -146,7 +146,7 @@ Chicken Noodle Soup With Carrots</code></pre>
 
 <p>{{EmbedLiveSample("example-unstyled-cite", 650, 80)}}</p>
 
-<p>请注意， <code>&lt;cite&gt;</code> 元素的默认样式会以斜体显示文本。如果您愿意，可以使用CSS覆盖它：</p>
+<p>请注意， <code>&lt;cite&gt;</code> 元素的默认样式会以斜体显示文本。如果您愿意，可以使用 CSS 覆盖它：</p>
 
 <pre class="notranslate"><code>cite {
   font-style: normal;
