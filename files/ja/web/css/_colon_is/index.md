@@ -1,27 +1,25 @@
 ---
 title: ':is() (:matches(), :any())'
-slug: 'Web/CSS/:is'
+slug: Web/CSS/:is
 tags:
   - ':is'
   - CSS
-  - Experimental
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Selectors
-  - Web
+  - 実験的
+  - 擬似クラス
+  - リファレンス
+  - セレクター
+  - ウェブ
 translation_of: 'Web/CSS/:is'
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> <code>:matches()</code> は <code>:is()</code> に改名されました。 (<a href="https://github.com/w3c/csswg-drafts/issues/3258" style="white-space: nowrap;">CSSWG issue #3258</a>)</p>
-</div>
+> **Note:** `:matches()` は `:is()` に改名されました。 ([CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258))
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>:is()</code></strong> <a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a>関数は、セレクターのリストを引数に取り、リスト中のセレクターの何れか一つに当てはまる要素をすべて選択します。数多くのセレクターを小さくまとめて書くのに便利です。</p>
+**`:is()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターのリストを引数に取り、リスト中のセレクターの何れか一つに当てはまる要素をすべて選択します。数多くのセレクターを小さくまとめて書くのに便利です。
 
-<pre class="brush: css no-line-numbers notranslate">/* header, main, footer 要素の中の段落で
-   マウスポインタが通過中のものをすべて選択 */
+```css
+/* header, main, footer 要素の中の段落で
+   マウスポインターが通過中のものをすべて選択 */
 :is(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
@@ -34,13 +32,16 @@ footer p:hover {
   color: red;
   cursor: pointer;
 }
-</pre>
+```
 
-<p>なお、現在のところ、ブラウザーはこの機能を <code>:matches()</code> や、古いバージョンの Chrome, Firefox, Safari では、さらに古い接頭辞付きの擬似クラス — <code>:any()</code> で対応しています。 <code>:any()</code> は <code>:matches()</code>/<code>:is()</code> とまったく同じものとして動作しますが、ベンダー接頭辞が必要であり、<a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors">複合セレクター</a>に対応していません。</p>
+擬似要素は `:is()` のセレクターリストでは無効です。
 
-<p>後方互換性のために古い擬似クラスを使用することができます。</p>
+なお、現在のところ、ブラウザーはこの機能を `:matches()` や、古いバージョンの Chrome, Firefox, Safari では、さらに古い接頭辞付きの擬似クラス — `:any()` で対応しています。 `:any()` は `:matches()`/`:is()` とまったく同じものとして動作しますが、ベンダー接頭辞が必要であり、[複合セレクター](/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors)に対応していません。
 
-<pre class="brush: css no-line-numbers notranslate">/* -*-any() および :matches() と後方互換性のあるバージョン
+後方互換性のために古い擬似クラスを使用することができます。
+
+```css
+/* -*-any() および :matches() と後方互換性のあるバージョン
    (無効なセレクターがあるとルール全体が無効になるため、
    セレクターを単一のルールにグループ化することはできません。) */
 :-webkit-any(header, main, footer) p:hover {
@@ -55,46 +56,58 @@ footer p:hover {
   color: red;
   cursor: pointer;
 }
-</pre>
+```
 
-<h3 id="Forgiving_Selector_Parsing" name="Forgiving_Selector_Parsing">セレクターの解釈の許容</h3>
+### :is() と :where() の違い
 
-<p>仕様では <code>:is()</code> と <code>:where()</code> が<a href="https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list">省略可能なセレクターリスト</a>を受け入れることを定義しています。</p>
+この 2 つの違いは、 `:is()` がセレクター全体の詳細度にカウントされる（最も詳細な引数の詳細度を取る）のに対し、 [`:where()`](/ja/docs/Web/CSS/:where) は詳細度の値が 0 であることです。これは、 [`:where()` 参照ページの例](/ja/docs/Web/CSS/:where#examples)で実証されています。
 
-<p>CSS でセレクターリストを使用している場合、セレクターのどれかが無効な場合、リスト全体が無効とみなされます。 <code>:is()</code> や <code>:where()</code> を使用している場合、1 つでも解釈に失敗するとセレクターのリスト全体が無効とみなされるのではなく、不正なセレクターや対応していないセレクターは無視され、他のセレクターが使用されます。
 
-</p><pre class="brush: css notranslate">:is(:valid, :unsupported) {
+### セレクターの解釈の許容
+
+仕様では `:is()` と `:where()` が[省略可能なセレクターリスト](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)を受け入れることを定義しています。
+
+<p>CSS でセレクターリストを使用している場合、セレクターのどれかが無効な場合、リスト全体が無効とみなされます。 `:is()` や `:where()` を使用している場合、1 つでも解釈に失敗するとセレクターのリスト全体が無効とみなされるのではなく、不正なセレクターや対応していないセレクターは無視され、他のセレクターが使用されます。
+
+```css
+:is(:valid, :unsupported) {
   ...
-}</pre>
+}
+```
 
-<p><code>:unsupported</code> をに対応していないブラウザーでも、正しく解釈して <code>:valid</code> にマッチします。</p>
+`:unsupported` をに対応していないブラウザーでも、正しく解釈して `:valid` に一致します。
 
-<pre class="brush: css notranslate">:valid, :unsupported {
+```css
+:valid, :unsupported {
   ...
-}</pre>
+}
+```
 
-<p><code>:unupported</code> に対応していないブラウザーでは、 <code>:valid</code> に対応していても無視されます。</p>
+`:unupported` に対応していないブラウザーでは、 `:valid` に対応していても無視します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Cross-browser_example" name="Cross-browser_example">クロスブラウザーの例</h3>
+### クロスブラウザーの例
 
-<pre class="brush: html notranslate">&lt;header&gt;
-  &lt;p&gt;This is my header paragraph&lt;/p&gt;
-&lt;/header&gt;
+```html
+<header>
+  <p>This is my header paragraph</p>
+</header>
 
-&lt;main&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;p&gt;This is my first&lt;/p&gt;&lt;p&gt;list item&lt;/p&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;p&gt;This is my second&lt;/p&gt;&lt;p&gt;list item&lt;/p&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/main&gt;
+<main>
+  <ul>
+    <li><p>This is my first</p><p>list item</p></li>
+    <li><p>This is my second</p><p>list item</p></li>
+  </ul>
+</main>
 
-&lt;footer&gt;
-  &lt;p&gt;This is my footer paragraph&lt;/p&gt;
-&lt;/footer&gt;</pre>
+<footer>
+  <p>This is my footer paragraph</p>
+</footer>
+```
 
-<pre class="brush: css notranslate">:-webkit-any(header, main, footer) p:hover {
+```css
+:-webkit-any(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
 }
@@ -113,9 +126,10 @@ footer p:hover {
   color: red;
   cursor: pointer;
 }
-</pre>
+```
 
-<pre class="brush: js notranslate">let matchedItems;
+```js
+let matchedItems;
 
 try {
   matchedItems = document.querySelectorAll(':is(header, main, footer) p');
@@ -141,15 +155,17 @@ function applyHandler(elem) {
   elem.addEventListener('click', function(e) {
     alert('This paragraph is inside a ' + e.target.parentNode.nodeName);
   });
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Cross-browser_example", "100%", 300)}}</p>
+{{EmbedLiveSample("Cross-browser_example", "100%", 300)}}
 
-<h3 id="Simplifying_list_selectors" name="Simplifying_list_selectors">リストセレクターの簡略化</h3>
+### リストセレクターの簡略化
 
-<p><code>:is()</code> 擬似クラスは CSS セレクターをとても簡潔にすることができます。例えば以下の CSS の場合、</p>
+`:is()` 擬似クラスは CSS セレクターをとても簡潔にすることができます。例えば以下の CSS の場合、
 
-<pre class="brush: css notranslate">/* 3層（以上）の順序なしリストに四角形を使用 */
+```css
+/* 3 層（以上）の順序なしリストに四角形を使用 */
 ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
 ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
 ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
@@ -164,24 +180,27 @@ dir ol menu,  dir ul menu,  dir menu menu,  dir dir menu,
 dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
   list-style-type: square;
 }
-</pre>
+```
 
-<p>... これを次のように置き換えることができます。</p>
+... これを次のように置き換えることができます。
 
-<pre class="brush: css notranslate">/* 3層（以上）の順序なしリストに四角形を使用 */
+```css
+/* 3層（以上）の順序なしリストに四角形を使用 */
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) ul,
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) menu,
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) dir {
   list-style-type: square;
-}</pre>
+}
+```
 
-<h3 id="Simplifying_section_selectors" name="Simplifying_section_selectors">section セレクターの簡略化</h3>
+### section セレクターの簡略化
 
-<p><code>:is()</code> 擬似クラスは、 HTML5 の<a href="/ja/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">セクションと見出し</a>を扱うときに特に便利です。 {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} は互いによく入れ子になりますので、 <code>:is()</code> がないと、1つ1つを選択してスタイルを適用するのが難しくなります。</p>
+`:is()` 擬似クラスは、 HTML5 の[セクションと見出し](/ja/docs/Sections_and_Outlines_of_an_HTML5_document)を扱うときに特に便利です。 {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} は互いによく入れ子になりますので、 `:is()` がないと、 1 つ 1 つを選択してスタイルを適用するのが難しくなります。
 
-<p>例えば、 <code>:is()</code> を使わずに、異なる深さの {{HTMLElement("h1")}} 要素にスタイルを適用すると、とても複雑になります。</p>
+例えば、 `:is()` を使わずに、異なる深さの {{HTMLElement("h1")}} 要素にスタイルを適用すると、とても複雑になります。
 
-<pre class="brush: css notranslate">/* Level 0 */
+```css
+/* Level 0 */
 h1 {
   font-size: 30px;
 }
@@ -198,11 +217,12 @@ nav section h1, nav article h1, nav aside h1, nav nav h1 {
 }
 /* Level 3 */
 /* ... 考えたくありません! */
-</pre>
+```
 
-<p><code>:is()</code> を使用すると、ずっと簡単になります。</p>
+`:is()` を使用すると、ずっと簡単になります。
 
-<pre class="brush: css notranslate">/* Level 0 */
+```css
+/* Level 0 */
 h1 {
   font-size: 30px;
 }
@@ -221,43 +241,40 @@ h1 {
 :is(section, article, aside, nav) h1 {
   font-size: 15px;
 }
-</pre>
+```
 
-<h3 id="Difference_between_is_and_where" name="Difference_between_is_and_where">:is() と :where() の違い</h3>
+### :is() は擬似要素を選択しない
+The `:is()` pseudo-class does not match pseudo-elements. So rather than this:
 
-<p>この2つの違いは、 <code>:is()</code> がセレクター全体の詳細度にカウントされるのに対し、 {{CSSxRef(":where", ":where()")}} は詳細度の値が 0 であることです。これは、 <code>:where()</code> のリファレンスページにある<a href="/ja/docs/Web/CSS/:where#Examples">例</a>で示されています。</p>
+```css example-bad
+some-element:is(::before, ::after) {
+  display: block;
+}
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+instead do:
+
+```css example-good
+some-element::before,
+some-element::after {
+  display: block;
+}
+```
+
+## 構文
 
 {{CSSSyntax}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#matches-pseudo", ":is()")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.selectors.is")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{CSSxRef(":where", ":where()")}} - <code>:is()</code> と同様ですが、<a href="/ja/docs/Web/CSS/Specificity">詳細度</a>が0です。</li>
- <li><a href="/ja/docs/Web/CSS/Selector_list">セレクターリスト</a></li>
- <li><a href="/ja/docs/Web/Web_Components">ウェブコンポーネント</a></li>
-</ul>
+- {{CSSxRef(":where", ":where()")}} - `:is()` と同様ですが、[詳細度](/ja/docs/Web/CSS/Specificity)が 0 です。
+- [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
+- [ウェブコンポーネント](/ja/docs/Web/Web_Components)
