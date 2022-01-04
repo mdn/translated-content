@@ -817,12 +817,6 @@
       "mfuji09"
     ]
   },
-  "Glossary/Client_hints": {
-    "modified": "2020-03-27T14:30:49.281Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Glossary/Closure": {
     "modified": "2019-03-23T22:37:50.037Z",
     "contributors": [
@@ -35757,6 +35751,12 @@
       "mfuji09",
       "SphinxKnight",
       "yyss"
+    ]
+  },
+  "Web/HTTP/Client_hints": {
+    "modified": "2020-03-27T14:30:49.281Z",
+    "contributors": [
+      "Wind1808"
     ]
   },
   "Web/HTTP/Compression": {
