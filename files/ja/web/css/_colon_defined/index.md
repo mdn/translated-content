@@ -9,12 +9,12 @@ tags:
   - Reference
   - Web
   - セレクター
-  - 疑似クラス
+  - 擬似クラス
 translation_of: 'Web/CSS/:defined'
 ---
 <div>{{ CSSRef }}</div>
 
-<p><span class="seoSummary"><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>:defined</code></strong> <a href="/ja/docs/CSS/Pseudo-classes" title="Pseudo-classes">疑似クラス</a>は、定義されているすべての要素を表します。これにはブラウザーに組み込まれたすべての標準要素と、 ({{domxref("CustomElementRegistry.define()")}} メソッドを使用して) 定義に成功したカスタム要素が含まれます。</span></p>
+<p><span class="seoSummary"><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>:defined</code></strong> <a href="/ja/docs/CSS/Pseudo-classes" title="Pseudo-classes">擬似クラス</a>は、定義されているすべての要素を表します。これにはブラウザーに組み込まれたすべての標準要素と、 ({{domxref("CustomElementRegistry.define()")}} メソッドを使用して) 定義に成功したカスタム要素が含まれます。</span></p>
 
 <pre class="brush: css no-line-numbers">/* 定義されたすべての要素を選択 */
 :defined {
