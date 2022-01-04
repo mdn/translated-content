@@ -78,7 +78,7 @@ Vous pouvez intégrer l'image en utilisant son URL absolue, par exemple :
 
 Ce n'est pas trés efficace, cela fait travailler le navigateur plus qu'il ne devrait, il cherche l'adresse IP depuis le serveur DNS à chaque fois etc... Vous devriez autant que possible garder vos images du site sur le même serveur que la page HTML.
 
-> **Attention :** La plupart des images ont des droits d'auteur. N'affichez jamais une image sur votre site à moins que :
+> **Attention :** La plupart des images ont des droits d'auteur. N'affichez jamais une image sur votre site à moins que :
 >
 > 1\) Ce soit votre image (vous en êtes le créateur),
 > 2\) vous ayez reçu une permission explicite et écrite du propriètaire de l'image ou,

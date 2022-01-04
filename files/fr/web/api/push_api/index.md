@@ -36,7 +36,7 @@ Activer un service worker pour délivrer un message Push peut accroître l'utili
 
 > **Note :** Comme pour Gecko 44, le quota de messages Push par application n'est pas incrémenté quand une nouvelle notification se lance et qu'une autre est déjà visible, pendant une période de 3 secondes. Cela permet de gèrer le cas où une rafale de messages Push est reçue et qu'ils n'afficheraient pas tous une notification.
 
-> **Note :**: Chrome nécessite actuellement de configurer un projet sur [Google Cloud Messaging](https://developers.google.com/cloud-messaging/) pour envoyer des messages Push et utilise le numero du projet associé ainsi que la clé durant l'envoi des messages Push. Il requiert aussi un manifeste applicatif avec des paramètres spéciaux pour utiliser ce service. Nous espérons que cette restriction sera supprimée dans le futur..
+> **Note :** Chrome nécessite actuellement de configurer un projet sur [Google Cloud Messaging](https://developers.google.com/cloud-messaging/) pour envoyer des messages Push et utilise le numero du projet associé ainsi que la clé durant l'envoi des messages Push. Il requiert aussi un manifeste applicatif avec des paramètres spéciaux pour utiliser ce service. Nous espérons que cette restriction sera supprimée dans le futur..
 
 ## Interfaces
 

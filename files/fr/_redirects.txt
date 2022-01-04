@@ -1744,6 +1744,7 @@
 /fr/docs/Glossary/Accessibilité	/fr/docs/Glossary/Accessibility
 /fr/docs/Glossary/Attribut	/fr/docs/Glossary/Attribute
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS
+/fr/docs/Glossary/Client_hints	/fr/docs/Web/HTTP/Client_hints
 /fr/docs/Glossary/Gaia	/fr/docs/orphaned/Glossary/Gaia
 /fr/docs/Glossary/Gonk	/fr/docs/orphaned/Glossary/Gonk
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/orphaned/Glossary/Modern_web_apps

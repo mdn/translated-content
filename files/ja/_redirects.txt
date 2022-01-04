@@ -1887,6 +1887,7 @@
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser/Physics	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics
 /ja/docs/Glossary/AOM	/ja/docs/Glossary/Accessibility_tree
+/ja/docs/Glossary/Client_hints	/ja/docs/Web/HTTP/Client_hints
 /ja/docs/Glossary/Constant(定数)	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype

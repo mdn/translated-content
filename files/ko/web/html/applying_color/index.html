@@ -64,7 +64,7 @@ translation_of: Web/HTML/Applying_color
 
 <h3 id="테두리">테두리</h3>
 
-<p>모든 요소는 주위에 테두리를 가질 수 있습니다. 기본적인 테두리는 요소 콘텐츠의 모서리를 따라 그리는 선입니다. <span class="hidden">See {{SectionOnPage("/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} to learn about the relationship between elements and their borders, and the article <a href="/en-US/docs/Learn/CSS/Styling_boxes/Borders">Styling borders using CSS</a> to learn more about applying styles to borders.</span></p>
+<p>모든 요소는 주위에 테두리를 가질 수 있습니다. 기본적인 테두리는 요소 콘텐츠의 모서리를 따라 그리는 선입니다. <span class="hidden">See {{SectionOnPage("/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} to learn about the relationship between elements and their borders, and the article <a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Styling borders using CSS</a> to learn more about applying styles to borders.</span></p>
 
 <p>{{cssxref("border")}} 단축 속성을 사용하면 색은 물론 <a href="/ko/docs/Web/CSS/border-width">너비</a>와 <a href="/ko/docs/Web/CSS/border-style">스타일</a>(실선, 점선 등)같은 속성을 한 번에 설정할 수 있습니다.</p>
 
@@ -147,8 +147,8 @@ translation_of: Web/HTML/Applying_color
 <p>많은 경우, 디자이너와 아티스트는 HSL(색조/채도/명도) 모델을 사용한 색을 선호합니다. 웹에서 HSL 색상은 HSL 함수 표기법을 사용해 나타냅니다. CSS <code>hsl()</code> 함수의 사용법 자체는 <code>rgb()</code> 함수와 매우 유사합니다.</p>
 
 <div style="padding-bottom: 20px;">
-<figure style="width: 500px;"><img alt="HSL color cylinder" src="https://mdn.mozillademos.org/files/15445/1200px-HSL_color_solid_cylinder_alpha_lowgamma.png" style="height: 375px; width: 500px;">
-<figcaption><strong>그림 1. HSL 색 원기둥.</strong> Hue defines the actual color based on the position along a circular color wheel representing the colors of the visible spectrum. Saturation is a percentage of how much of the way between being a shade of gray and having the maximum possible amount of the given hue. As the value of luminance (or lightness) increases, the color transitions from the darkest possible to the brightest possible (from black to white). <a href="https://www.wikipedia.org/">Wikipedia</a>의 <a href="http://commons.wikimedia.org/wiki/User:SharkD">SharkD</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> 라이선스 아래에서 재배포.</figcaption>
+<figure style="width: 500px;"><img alt="HSL color cylinder" src="1200px-hsl_color_solid_cylinder_alpha_lowgamma.png">
+<figcaption><strong>그림 1. HSL 색 원기둥.</strong> Hue defines the actual color based on the position along a circular color wheel representing the colors of the visible spectrum. Saturation is a percentage of how much of the way between being a shade of gray and having the maximum possible amount of the given hue. As the value of luminance (or lightness) increases, the color transitions from the darkest possible to the brightest possible (from black to white). <a href="https://www.wikipedia.org/">Wikipedia</a>의 <a href="http://commons.wikimedia.org/wiki/User:SharkD">SharkD</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> 라이선스 아래에서 재배포.</figcaption>
 </figure>
 </div>
 
@@ -240,7 +240,7 @@ th {
 
 <p>Let's take a look at an example, starting by looking at the results we're trying to achieve:</p>
 
-<div>{{EmbedLiveSample("Specifying_colors_in_stylesheets", 650, 150)}}</div>
+<div>{{EmbedLiveSample("스타일_시트에_색_지정하기", 650, 150)}}</div>
 
 <h4 id="HTML">HTML</h4>
 
@@ -405,7 +405,7 @@ colorPicker.addEventListener("change", function(event) {
  <li>Browse web sites that let you look at lots of existing color palettes and images to find inspiration.</li>
 </ul>
 
-<p>When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the web site <a href="http://www.colorzilla.com/">ColorZilla</a> offers an extension (<a href="http://www.colorzilla.com/chrome">Chrome</a> / <a href="http://www.colorzilla.com/firefox">Firefox</a>) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.</p>
+<p>When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the web site <a href="https://www.colorzilla.com/">ColorZilla</a> offers an extension (<a href="https://www.colorzilla.com/chrome">Chrome</a> / <a href="https://www.colorzilla.com/firefox">Firefox</a>) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.</p>
 
 <div class="note">
 <p>The advantage to averaging colors can be that often what looks like a solid color is actually a surprisingly varied number of related colors all used in concert, blending to create a desired effect. Picking just one of these pixels can result in getting a color that on its own looks very out of place.</p>
@@ -466,23 +466,23 @@ colorPicker.addEventListener("change", function(event) {
 
 <p>Having selected our base color, we need to build out our palette. We decide to use <a href="http://www.paletton.com/">Paletton</a> to come up with the other colors we need. Upon opening Paletton, we see:</p>
 
-<p><img alt="Right after loading Paletton." src="https://mdn.mozillademos.org/files/15451/paletton1.png" style="height: 361px; width: 600px;"></p>
+<p><img alt="Right after loading Paletton." src="paletton1.png"></p>
 
 <p>Next, we enter our color's hex code (<code>D79C7A</code>) into the "Base RGB" box at the bottom-left corner of the tool:</p>
 
-<p><img alt="After entering base color" src="https://mdn.mozillademos.org/files/15453/paletton2.png" style="height: 361px; width: 600px;"></p>
+<p><img alt="After entering base color" src="paletton2.png"></p>
 
 <p>We now see a monochromatic palette based on the color we picked from the Mars photo. If you need a lot of related colors for some reason, those are likely to be good ones. But what we really want is an accent color. Something that will pop along side the base color. To find that, we click the "add complementary" toggle underneath the menu that lets you select the palette type (currently "Monochromatic"). Paletton computes an appropriate accent color; clicking on the accent color down in the bottom-right corner tells us that this color is <code>#508D7C</code>.</p>
 
-<p><img alt="Now with complementary colors included." src="https://mdn.mozillademos.org/files/15455/paletton3.png" style="height: 361px; width: 600px;"></p>
+<p><img alt="Now with complementary colors included." src="paletton3.png"></p>
 
 <p>If you're unhappy with the color that's proposed to you, you can change the color scheme, to see if you find something you like better. For example, if we don't like the proposed greenish-blue color, we can click the Triad color scheme icon, which presents us with the following:</p>
 
-<p><img alt="Triad color scheme selected" src="https://mdn.mozillademos.org/files/15457/paletton4.png" style="height: 361px; width: 600px;"></p>
+<p><img alt="Triad color scheme selected" src="paletton4.png"></p>
 
 <p>That greyish blue in the top-right looks pretty good. Clicking on it, we find that it's <code>#556E8D</code>. That would be used as the accent color, to be used sparingly to make things stand out, such as in headlines or in the highlighting of tabs or other indicators on the site:</p>
 
-<p><img alt="Triad color scheme selected" src="https://mdn.mozillademos.org/files/15459/paletton-color-detail.png" style="height: 370px; width: 526px;"></p>
+<p><img alt="Triad color scheme selected" src="paletton-color-detail.png"></p>
 
 <p>Now we have our base color and our accent. On top of that, we have a few complementary shades of each, just in case we need them for gradients and the like. The colors can then be exported in a number of formats so you can make use of them.</p>
 
