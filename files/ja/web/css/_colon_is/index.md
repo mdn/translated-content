@@ -9,7 +9,8 @@ tags:
   - リファレンス
   - セレクター
   - ウェブ
-translation_of: 'Web/CSS/:is'
+browser-compat: css.selectors.is
+translation_of: Web/CSS/:is
 ---
 {{CSSRef}}
 
