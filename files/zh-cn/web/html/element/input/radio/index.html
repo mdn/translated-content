@@ -53,9 +53,9 @@ translation_of: Web/HTML/Element/input/radio
 
 <h3 id="定义一个单选按钮组节">定义一个单选按钮组<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/radio$edit#Defining_a_radio_group">节</a></h3>
 
-<p>一个单选按钮组由具有相同 {{htmlattrxref("name", "input")}}属性的单选按钮组成。 一旦单选按钮组被建立, 选择那按钮组的任何单选按钮将会自动取消同组当前选择的任何按钮。</p>
+<p>一个单选按钮组由具有相同 {{htmlattrxref("name", "input")}}属性的单选按钮组成。 一旦单选按钮组被建立，选择那按钮组的任何单选按钮将会自动取消同组当前选择的任何按钮。</p>
 
-<p>你可以在一个页面上创建任何你喜欢的单选按钮组, 只要每一组都有一个独特的 <code>name</code>属性。</p>
+<p>你可以在一个页面上创建任何你喜欢的单选按钮组，只要每一组都有一个独特的 <code>name</code>属性。</p>
 
 <p>举个例子，如果你需要在表单中询问用户的首选联系方式，你可以创建三个 <code>name</code> 属性都为 <code>contact</code> 的单选按钮，不过一个按钮的 {{htmlattrxref("value", "input")}}属性为 <code>email</code> ，另一个的<code>value</code> 属性为 <code>phone</code>，还有一个的<code>value</code> 属性为 <code>mail</code>。用户不会看见 <code>value</code> 属性或 <code>name</code> 属性（除非你故意用代码显示它们）。</p>
 
@@ -94,7 +94,7 @@ translation_of: Web/HTML/Element/input/radio
 
 <p>当上面的表单在提交时选择了一个单选框，表单的数据就包括了<code>contact=<em>value</em></code>一行。例如，若用户点击 "Phone "单选框，然后提交表单，提交的数据中将包括<code>contact=phone</code>一行。</p>
 
-<p>如果你在HTML中忘记了value属性，那么提交的表单数据就会将该值分配到<code>on</code>上。在这种情况下，如果用户选中了 "Phone "选项并提交了表单，提交的表单数据将是<code>contact=on</code>，这并没有什么卵用。所以别忘了设置你的<code>value</code>属性！</p>
+<p>如果你在 HTML 中忘记了 value 属性，那么提交的表单数据就会将该值分配到<code>on</code>上。在这种情况下，如果用户选中了 "Phone "选项并提交了表单，提交的表单数据将是<code>contact=on</code>，这并没有什么卵用。所以别忘了设置你的<code>value</code>属性！</p>
 
 <p><strong>Note</strong>: 如果在提交表单时没有选择任何单选按钮，则提交的表格数据中根本不包括单选组，因为没有值要报告。</p>
 
