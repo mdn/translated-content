@@ -22,7 +22,7 @@ Le contenu dynamique qui s’actualise sans rechargement de la page est généra
 
   - : L’attribut `aria-controls=[LISTE_IDs]` est utilisé pour associer un contrôle avec les zones qu’il contrôle. Les zones sont identifiées comme un `ID` dans un élément {{ HTMLElement("div") }}, et plusieurs zones peuvent être associées à un unique contrôle, en séparant les identifiants des zones par un espace, par exemple : `aria-controls="maZoneID1 maZoneID2"`.
 
-    > **Attention :**Nous ne savons pas si `aria-controls` pour les zones « live » est utilisé dans des technologies d’assistance modernes, et si oui lesquelles. Des recherches sont nécessaires.
+    > **Attention :** Nous ne savons pas si `aria-controls` pour les zones « live » est utilisé dans des technologies d’assistance modernes, et si oui lesquelles. Des recherches sont nécessaires.
 
 Normalement, seul `aria-live="polite"` est utilisé. Toute zone recevant une mise à jour qu’il est important de faire suivre à l’utilisateur, mais pas au point de le déranger dans sa navigation, devrait recevoir cet attribut. Le lecteur d’écran lira les changements dès que l’utilisateur sera inoccupé.
 

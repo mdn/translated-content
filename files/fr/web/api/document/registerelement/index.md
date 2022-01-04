@@ -18,7 +18,7 @@ translation_of: Web/API/Document/registerElement
 
 La méthode **`Document.registerElement()`** permet d'enregistrer un nouvel [élément personnalisé](/fr/docs/Web/Web_Components/Custom_Elements) dans le navigateur, et retourne un constructeur pour ce nouvel élément.
 
-> **Note :** Il s'agit d'une technologie expérimentale. Le navigateur dans lequel vous l'utilisez doit être compatible avec les Composants Web. Voir [Activer les Composants Web dans Firefox](/fr/docs/Web/Web_Components#Activer_les_Web_Components_dans_Firefox).
+> **Note :** Il s'agit d'une technologie expérimentale. Le navigateur dans lequel vous l'utilisez doit être compatible avec les Composants Web. Voir [Activer les Composants Web dans Firefox](/fr/docs/Web/Web_Components#Activer_les_Web_Components_dans_Firefox).
 
 ## Syntaxe
 
