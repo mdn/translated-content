@@ -87,6 +87,17 @@ translation_of: Learn/Getting_started_with_the_web/How_the_Web_works
  <li>浏览器将数据包聚集成完整的网页然后将网页呈现给你（商品到了你的门口 —— 新东西，好棒！）。</li>
 </ol>
 
+<h2 id="解析组成文件的顺序">解析组成文件的顺序</h2>
+
+<p>当浏览器向服务器发送请求获取 HTML 文件时，HTML 文件通常包含 "link" 和 "script" 元素，这些元素分别指向了外部的 <a href="../../css/index.html">CSS</a> 样式表文件和 <a href="../../javascript/index.html">JavaScript</a> 脚本文件。了解这些文件被<a href="../../../web/performance/how_browsers_work/index.html">浏览器解析</a>的顺序是很重要的：</p>
+
+<ul>
+    <li>浏览器首先解析 HTML 文件，并从中识别出所有的 "link" 和 "script" 元素，获取它们指向的外部文件的链接。</li>
+    <li>继续解析 HTML 文件的同时，浏览器根据外部文件的链接向服务器发送请求，获取并解析 CSS 文件和 JavaScript 脚本文件。</li>
+    <li>接着浏览器会给解析后的 HTML 文件生成一个 <a href="../../../web/api/document_object_model/index.html">DOM</a> 树（在内存中），会给解析后的 CSS 文件生成一个 <a href="../../../glossary/cssom/index.html">CSSOM</a> 树（在内存中），并且会<a href="../../../web/performance/how_browsers_work/index.html">编译和执行</a>解析后的 JavaScript 脚本文件。</li>
+    <li>伴随着构建 DOM 树、应用 CSSOM 树的样式、以及执行 JavaScript 脚本文件，浏览器会在屏幕上绘制出网页的界面；用户看到网页界面也就可以跟网页进行交互了。</li>
+</ul>
+
 <h2 id="DNS解析">DNS解析</h2>
 
 <p>真正的网址看上去并不像你输入到地址框中的那样美好且容易记忆。它们是一串数字，像 <span style="line-height: 19.0909080505371px;">63.245.217.105。</span></p>
