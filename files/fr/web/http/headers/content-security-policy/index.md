@@ -41,7 +41,7 @@ Les directives de récupération (ou _fetch directives_ en anglais) contrôlent 
 - {{CSP("child-src")}}
   - : Définit les sources valides pour les [web workers](/fr/docs/Web/API/Web_Workers_API) et les éléments qui représentent des contextes de navigation imbriqués tels que {{HTMLElement("frame")}} et {{HTMLElement("iframe")}}.
 
-> **Attention :**Plutôt que la directive **`child-src`**, si vous souhaitez réguler les contextes de navigation imbriqués et les workers séparément, vous pouvez utiliser respectivement les directives {{CSP("frame-src")}} et {{CSP("worker-src")}}.
+> **Attention :** Plutôt que la directive **`child-src`**, si vous souhaitez réguler les contextes de navigation imbriqués et les workers séparément, vous pouvez utiliser respectivement les directives {{CSP("frame-src")}} et {{CSP("worker-src")}}.
 
 - {{CSP("connect-src")}}
   - : Restreint les URL qui peuvent être chargées via des scripts.

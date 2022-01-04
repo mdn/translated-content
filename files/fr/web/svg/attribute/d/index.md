@@ -85,7 +85,7 @@ Pour un {{SVGElement('glyph')}}, `d` est une chaîne de caractères qui contien
   </tbody>
 </table>
 
-> **Note :** Le point d'origine (coordonnée `0,0`) est généralement le point du _coin en haut à gauche_ du context. Néanmoins, l'élément {{SVGElement("glyph")}} a son point d'origine dans le coin en bas à gauche de son enveloppe.
+> **Note :** Le point d'origine (coordonnée `0,0`) est généralement le point du _coin en haut à gauche_ du context. Néanmoins, l'élément {{SVGElement("glyph")}} a son point d'origine dans le coin en bas à gauche de son enveloppe.
 
 ## missing-glyph
 
