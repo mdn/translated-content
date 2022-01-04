@@ -17,7 +17,7 @@ L'instruction **`if`** exécute une instruction si une condition donnée est vra
 
 ## Syntaxe
 
-    if (condition)
+    if (condition) {
       statement1
     } else {
       statement2

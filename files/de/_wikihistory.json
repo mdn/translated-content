@@ -3898,14 +3898,14 @@
       "axelrindle"
     ]
   },
-  "Web/API/WebSocket/extensions": {
-    "modified": "2020-10-15T22:23:14.946Z",
+  "Web/API/WebSocket/close_event": {
+    "modified": "2019-10-02T19:24:05.254Z",
     "contributors": [
       "axelrindle"
     ]
   },
-  "Web/API/WebSocket/onclose": {
-    "modified": "2019-10-02T19:24:05.254Z",
+  "Web/API/WebSocket/extensions": {
+    "modified": "2020-10-15T22:23:14.946Z",
     "contributors": [
       "axelrindle"
     ]

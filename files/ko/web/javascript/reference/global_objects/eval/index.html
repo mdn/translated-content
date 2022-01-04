@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/eval
 
 <h2 id="구문">구문</h2>
 
-<pre class="syntaxbox notranslate"><code>eval(<em>string</em>)</code></pre>
+<pre class="syntaxbox"><code>eval(<em>string</em>)</code></pre>
 
 <h3 id="매개변수">매개변수</h3>
 
@@ -42,19 +42,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/eval
 
 <p><code>eval()</code>의 인자가 문자열이 아니면 <code>eval()</code>은 인자를 그대로 반환합니다. 다음 예시에서, <code>String</code> 생성자가 명시된 경우 문자열을 계산하는 대신 <code>String</code> 객체를 반환합니다.</p>
 
-<pre class="brush:js notranslate">eval(new String("2 + 2")); // "2 + 2"를 포함한 String 객체를 반환
+<pre class="brush:js">eval(new String("2 + 2")); // "2 + 2"를 포함한 String 객체를 반환
 eval("2 + 2");             // 4를 반환
 </pre>
 
 <p><code>toString()</code>을 사용하는 일반적인 방식으로 제약을 피할 수 있습니다.</p>
 
-<pre class="brush:js notranslate">var expression = new String("2 + 2");
+<pre class="brush:js">var expression = new String("2 + 2");
 eval(expression.toString());            // 4를 반환
 </pre>
 
 <p><code>eval</code>을 직접 호출하지 않고 참조를 통해 <em>간접적으로</em> 사용한다면 <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2">ECMAScript 5부터는</a> 지역 범위가 아니라 전역 범위에서 동작합니다. 예를 들어 <code>eval()</code>로 함수를 선언하면 전역 함수가 되고, 실행되는 코드는 실행되는 위치의 지역 범위에 접근할 수 없습니다.</p>
 
-<pre class="notranslate"><code>function test() {
+<pre><code>function test() {
   var x = 2, y = 4;
   console.log(eval('x + y'));  // 직접 호출, 지역 범위 사용, 결과값은 6
   var geval = eval; // eval을 전역 범위로 호출하는 것과 같음

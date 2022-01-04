@@ -102,7 +102,7 @@ translation_of: Web/Security/Same-origin_policy
 <p>同源策略控制不同源之间的交互，例如在使用{{domxref("XMLHttpRequest")}} 或 {{htmlelement("img")}} 标签时则会受到同源策略的约束。这些交互通常分为三类：</p>
 
 <ul>
- <li>跨域<em><strong>写操作</strong>（Cross-origin writes）</em>一般是被允许的<em>。</em>例如链接（links），重定向以及表单提交。特定少数的HTTP请求需要添加 <a href="https://developer.mozilla.org/zh-CN/docs/HTTP/Access_control_CORS#Preflighted_requests" title="HTTP/Access_control_CORS#Preflighted_requests">preflight</a>。</li>
+ <li>跨域<em><strong>写操作</strong>（Cross-origin writes）</em>一般是被允许的<em>。</em>例如链接（links），重定向以及表单提交。特定少数的HTTP请求需要添加 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS#附带身份凭证的请求" title="HTTP/CORS#附带身份凭证的请求">preflight</a>。</li>
  <li>跨域<em><strong>资源嵌入</strong>（Cross-origin embedding）</em>一般是被允许（后面会举例说明）。</li>
  <li>跨域<em><strong>读操作</strong>（Cross-origin reads）</em>一般是不被允许的<em>，</em>但常可以通过内嵌资源来巧妙的进行读取访问。例如，你可以读取嵌入图片的高度和宽度，调用内嵌脚本的方法，或<a href="https://grepular.com/Abusing_HTTP_Status_Codes_to_Expose_Private_Information">availability of an embedded resource</a>.</li>
 </ul>
@@ -115,7 +115,7 @@ translation_of: Web/Security/Same-origin_policy
  <li>通过 {{htmlelement("img")}} 展示的图片。支持的图片格式包括PNG,JPEG,GIF,BMP,SVG,...</li>
  <li>通过 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 播放的多媒体资源。</li>
  <li>通过 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/object" title="HTML/Element/object">&lt;object&gt;</a></code>、 <a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/embed" title="HTML/Element/embed"><code>&lt;embed&gt;</code></a> 和 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/applet" title="HTML/Element/applet">&lt;applet&gt;</a></code> 嵌入的插件。</li>
- <li>通过 <code><a href="https://developer.mozilla.org/zh-CN/docs/CSS/@font-face" title="CSS/@font-face">@font-face</a></code> 引入的字体。一些浏览器允许跨域字体（ cross-origin fonts），一些需要同源字体（same-origin fonts）。</li>
+ <li>通过 <code><a href="https://developer.mozilla.org/zh-CN/docs/CSS/@font-face" title="CSS/@font-face">@font-face</a></code> 引入的字体。一些浏览器允许跨域字体（cross-origin fonts），一些需要同源字体（same-origin fonts）。</li>
  <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">通过</span></font> <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/iframe" title="HTML/Element/iframe">&lt;iframe&gt;</a></code> 载入的任何资源。站点可以使用 <a href="https://developer.mozilla.org/zh-CN/docs/HTTP/X-Frame-Options" title="HTTP/X-Frame-Options">X-Frame-Options</a> 消息头来阻止这种形式的跨域交互。</li>
 </ul>
 
@@ -250,7 +250,7 @@ translation_of: Web/Security/Same-origin_policy
 
 <h2 id="跨源数据存储访问">跨源数据存储访问</h2>
 
-<p>访问存储在浏览器中的数据，如 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/API/DOM/Storage">localStorage</a> 和 <a href="https://developer.mozilla.org/zh-CN/docs/IndexedDB">IndexedDB</a>，是以源进行分割。每个源都拥有自己单独的存储空间，一个源中的 JavaScript 脚本不能对属于其它源的数据进行读写操作。</p>
+<p>访问存储在浏览器中的数据，如 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/localStorage">localStorage</a> 和 <a href="https://developer.mozilla.org/zh-CN/docs/IndexedDB">IndexedDB</a>，是以源进行分割。每个源都拥有自己单独的存储空间，一个源中的 JavaScript 脚本不能对属于其它源的数据进行读写操作。</p>
 
 <p>{{glossary("Cookie", "Cookies")}}  使用不同的源定义方式。一个页面可以为本域和其父域设置 cookie，只要是父域不是公共后缀（public suffix）即可。Firefox 和 Chrome 使用 <a href="http://publicsuffix.org/">Public Suffix List</a> 检测一个域是否是公共后缀（public suffix）。Internet Explorer 使用其内部的方法来检测域是否是公共后缀。不管使用哪个协议（HTTP/HTTPS）或端口号，浏览器都允许给定的域以及其任何子域名(sub-domains) 访问 cookie。当你设置 cookie 时，你可以使用 <code>Domain</code>、<code>Path</code>、<code>Secure</code>、和 <code>HttpOnly</code> 标记来限定其可访问性。当你读取 cookie 时，你无法知道它是在哪里被设置的。 即使您只使用安全的 https 连接，您看到的任何 cookie 都有可能是使用不安全的连接进行设置的。</p>
 

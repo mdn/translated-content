@@ -560,7 +560,8 @@
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_atributo_aria-labelledby	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_atributo_aria-required	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_slider_role	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
-/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Utilizando_o_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
+/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role
+/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Utilizando_o_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role
 /pt-BR/docs/Web/Accessibility/ARIA/Guia_para_implementar_o_leitor_de_tela_ARIA	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 /pt-BR/docs/Web/Accessibility/ARIA/forms/Dicas_básicas_de_form	/pt-BR/docs/Web/Accessibility/ARIA/forms/Basic_form_hints
 /pt-BR/docs/Web/Acessibilidade	/pt-BR/docs/Web/Accessibility

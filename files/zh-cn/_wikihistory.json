@@ -22192,6 +22192,13 @@
       "en20"
     ]
   },
+  "Web/API/WebSocket/close_event": {
+    "modified": "2019-08-17T08:15:18.133Z",
+    "contributors": [
+      "lihuakkk",
+      "FlyingPig"
+    ]
+  },
   "Web/API/WebSocket/error_event": {
     "modified": "2020-10-15T22:32:26.989Z",
     "contributors": [
@@ -22214,30 +22221,7 @@
       "Firefox_mozilla"
     ]
   },
-  "Web/API/WebSocket/onclose": {
-    "modified": "2019-08-17T08:15:18.133Z",
-    "contributors": [
-      "lihuakkk",
-      "FlyingPig"
-    ]
-  },
-  "Web/API/WebSocket/onerror": {
-    "modified": "2020-10-15T22:12:36.891Z",
-    "contributors": [
-      "sntkwtjf",
-      "Firefox_mozilla",
-      "HIKALU-Z"
-    ]
-  },
-  "Web/API/WebSocket/onmessage": {
-    "modified": "2020-10-15T22:11:41.439Z",
-    "contributors": [
-      "hishark",
-      "caslt",
-      "Ray-Eldath"
-    ]
-  },
-  "Web/API/WebSocket/onopen": {
+  "Web/API/WebSocket/open_event": {
     "modified": "2020-10-15T22:12:40.029Z",
     "contributors": [
       "Mr.Chenzm",
@@ -47274,6 +47258,22 @@
       "lxyion",
       "acgeeker",
       "alayasix"
+    ]
+  },
+  "conflicting/Web/API/WebSocket/error_event": {
+    "modified": "2020-10-15T22:12:36.891Z",
+    "contributors": [
+      "sntkwtjf",
+      "Firefox_mozilla",
+      "HIKALU-Z"
+    ]
+  },
+  "conflicting/Web/API/WebSocket/message_event": {
+    "modified": "2020-10-15T22:11:41.439Z",
+    "contributors": [
+      "hishark",
+      "caslt",
+      "Ray-Eldath"
     ]
   },
   "conflicting/Web/API/Web_Storage_API": {
