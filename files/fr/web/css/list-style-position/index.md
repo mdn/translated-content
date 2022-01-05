@@ -14,7 +14,7 @@ Pour définir cette propriété, on pourra aussi utiliser la propriété raccour
 
 > **Note :** Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/display) vaut `list-item`). [Par défaut](https://www.w3.org/TR/html5/rendering.html#lists), cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Element/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Element/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Element/ul)).
 
-Une différence de comportement existe entre les navigateurs lorsqu'un élément de bloc est placé en premier au sein d'un élément de liste avec `list-style-position: inside`. Chrome et Safari placent l'élément sur la même ligne que la boîte du marqueur. En revanche, Firefox, Internet Explorer et Opera placent l'élément sur la ligne suivante. Voir {{bug("36854")}} pour plus d'informations.
+Une différence de comportement existe entre les navigateurs lorsqu'un élément de bloc est placé en premier au sein d'un élément de liste avec `list-style-position: inside`. Chrome et Safari placent l'élément sur la même ligne que la boîte du marqueur. En revanche, Firefox, Internet Explorer et Opera placent l'élément sur la ligne suivante. Voir [le bug 36854 de Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=36854) pour plus d'informations.
 
 ## Syntaxe
 
@@ -107,4 +107,6 @@ La propriété `list-style-position` est définie avec l'un des mots-clés suiva
 
 ## Voir aussi
 
-- [`list-style`](/fr/docs/Web/CSS/list-style), [`list-style-type`](/fr/docs/Web/CSS/list-style-type), [`list-style-image`](/fr/docs/Web/CSS/list-style-image)
+- [`list-style`](/fr/docs/Web/CSS/list-style)
+- [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
+- [`list-style-image`](/fr/docs/Web/CSS/list-style-image)

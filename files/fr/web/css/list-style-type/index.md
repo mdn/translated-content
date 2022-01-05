@@ -93,7 +93,7 @@ La propriété `list-style-type` peut être définie grâce à&nbsp;:
 - `armenian`
   - : La numérotation arménienne traditionnelle.
 - `bengali`, `-moz-bengali`
-  - : La numérotation bengali.
+  - : La numérotation bengalie.
 - `cambodian`/`khmer`
   - : La numérotation cambodgienne/khmer.
 - `cjk-earthly-branch`, `-moz-cjk-earthly-branch`
@@ -562,7 +562,7 @@ container.addEventListener("change", event => {
 
 #### Résultat
 
-{{EmbedLiveSample("", "600", "800")}}
+{{EmbedLiveSample("", "600", "850")}}
 
 ## Spécifications
 
@@ -574,4 +574,6 @@ container.addEventListener("change", event => {
 
 ## Voir aussi
 
-- [`list-style`](/fr/docs/Web/CSS/list-style), [`list-style-image`](/fr/docs/Web/CSS/list-style-image), [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
+- [`list-style`](/fr/docs/Web/CSS/list-style)
+- [`list-style-image`](/fr/docs/Web/CSS/list-style-image)
+- [`list-style-position`](/fr/docs/Web/CSS/list-style-position)

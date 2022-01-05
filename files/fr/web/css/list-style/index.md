@@ -156,4 +156,6 @@ Liste 2
 
 ## Voir aussi
 
-- [`list-style-type`](/fr/docs/Web/CSS/list-style-type), [`list-style-image`](/fr/docs/Web/CSS/list-style-image), [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
+- [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
+- [`list-style-image`](/fr/docs/Web/CSS/list-style-image)
+- [`list-style-position`](/fr/docs/Web/CSS/list-style-position)

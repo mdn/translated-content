@@ -57,7 +57,7 @@ La propriété `border-style` peut être définie avec une, deux, trois ou quatr
 - Avec **une valeur**, celle-ci s'applique aux **quatre côtés**.
 - Avec **deux valeurs**, la première s'applique aux côtés **haut et bas** et la seconde aux côtés **gauche et droit**.
 - Avec **trois valeurs**, la première s'applique au côté **haut**, la deuxième aux côtés **gauche et droit** puis la troisième au côté **bas**.
-- Avec **quatre valeurs**, les valeurs s'applique dans le sens des aiguilles d'une montre (la première sur le côté **haut**, la deuxième sur le côté **droit**, la troisième sur le côté **bas** et la quatrième sur le côté **gauche**).
+- Avec **quatre valeurs**, les valeurs s'appliquent dans le sens des aiguilles d'une montre (la première sur le côté **haut**, la deuxième sur le côté **droit**, la troisième sur le côté **bas** et la quatrième sur le côté **gauche**).
 
 Chacune des valeurs peut être un des mots-clés parmi la liste suivante.
 
@@ -68,9 +68,9 @@ Chacune des valeurs peut être un des mots-clés parmi la liste suivante.
   - : Un mot-clé qui décrit le style utilisé pour la bordure sur les côtés de la boîte. Ce mot-clé peut prendre l'une des valeurs suivantes&nbsp;:
 
     - `none`
-      - : L'effet obtenu est le même qu'avec `hidden`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie, la valeur calculée de [`border-width`](/fr/docs/Web/CSS/border-width) sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `none` a la priorité la plus *basse*&nbsp;; donc, si une autre bordure est définie et fusionne avec celle-ci, elle sera affichée.
+      - : L'effet obtenu est le même qu'avec `hidden`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie (avec [`background-image`](/fr/docs/Web/CSS/background-image)), la valeur calculée de [`border-width`](/fr/docs/Web/CSS/border-width) sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `none` a la priorité la plus *basse*&nbsp;; donc, si une autre bordure est définie et fusionne avec celle-ci, elle sera affichée.
     - `hidden`
-      - : L'effet obtenu est le même qu'avec `none`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie, la valeur calculée de [`border-width`](/fr/docs/Web/CSS/border-width) sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `hidden` a *la plus haute priorité* et donc si une autre bordure est définie et fusionne avec celle-ci, aucune ne sera affichée.
+      - : L'effet obtenu est le même qu'avec `none`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie  (avec [`background-image`](/fr/docs/Web/CSS/background-image)), la valeur calculée de [`border-width`](/fr/docs/Web/CSS/border-width) sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `hidden` a *la plus haute priorité* et donc si une autre bordure est définie et fusionne avec celle-ci, aucune ne sera affichée.
     - `dotted`
       - : Affiche une série de points ronds. L'espace entre ces points n'est pas défini par la spécification et est donc laissé à l'implémentation. Le rayon des points correspond à la moitié de [`border-width`](/fr/docs/Web/CSS/border-width).
     - `dashed`
@@ -86,7 +86,7 @@ Chacune des valeurs peut être un des mots-clés parmi la liste suivante.
     - `inset`
       - : La bordure crée un effet 3D qui donne l'impression que la boîte est renfoncée dans le document (l'effet obtenu est opposé à celui obtenu avec `outset`). Lorsqu'elle est appliquée sur une cellule de tableau et que [`border-collapse`](/fr/docs/Web/CSS/border-collapse) vaut `collapsed`, cette valeur se comporte comme `groove`.
     - `outset`
-      - : La bordure crée un effet 3D qui fait ressortir la boîte (l'effet est opposé à `inset`). Lorsqu'elle est utilisé sur une cellule de tableau avec [`border-collapse`](/fr/docs/Web/CSS/border-collapse) qui vaut `collapsed`, cette valeur se comporte comme `ridge`.
+      - : La bordure crée un effet 3D qui fait ressortir la boîte (l'effet est opposé à `inset`). Lorsqu'elle est utilisée sur une cellule de tableau avec [`border-collapse`](/fr/docs/Web/CSS/border-collapse) qui vaut `collapsed`, cette valeur se comporte comme `ridge`.
 
 ## Définition formelle
 
