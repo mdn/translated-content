@@ -5,12 +5,15 @@ translation_of: Web/HTTP/Status/403
 ---
 <div>{{HTTPSidebar}}</div>
 
-<div>El código de error de respuesta HTTP <strong><code>403 Forbidden</code></strong> indica que el servidor ha entendido nuestra petición, pero se niega a autorizarla.</div>
+<div>El error 403 o “<strong><code>403 Forbidden</code></strong>” es un código de respuesta HTTP que indica que el servidor ha recibido y ha entendido la petición, pero que no puede autorizar la respuesta.</div>
 
 <div> </div>
 
-<div>Este estado es similar a {{HTTPStatus("401")}}, pero en este caso, re-autenticarnos no provocará ninguna diferencia. El acceso está permanentemente prohibido y vinculado a la lógica de la aplicación (como un error de contraseña incorrecta).</div>
+<div>La diferencia entre el error {{HTTPStatus("401")}} y el error 403, es que el 401 normalmente se soluciona autentificándonos, mientras que el 403 suele ser causado por un problema real en la aplicación web o en el entorno (servidor o configuración del servidor).</div>
 
+<div> </div>
+
+<div>Un error 403 en una web no puede solucionarlo el usuario, sino que es el webmaster o administrador del servidor quien tiene que solucionarlo.</div>
 <h2 id="Estado">Estado</h2>
 
 <pre class="syntaxbox">403 Forbidden</pre>
@@ -46,4 +49,6 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 <ul>
  <li>{{HTTPStatus("401")}}</li>
+ <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP/1.1: Status Code Definitions<a/>
+ <a href="https://raiolanetworks.es/blog/error-403-forbidden/">Error 403: Acceso denegado o prohibido</a>
 </ul>
