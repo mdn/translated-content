@@ -16,7 +16,7 @@ browser-compat: html.elements.frameset
 
 L'élément HTML **`<frameset>`** est utilisé pour contenir les éléments [`<frame>`](/fr/docs/Web/HTML/Element/frame).
 
-> **Note :**L'utilisation de cadres étant désormais déconseillée au profit de l'utilisation de [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), cet élément n'est généralement pas utilisé par les sites web modernes.
+> **Note :** L'utilisation de cadres étant désormais déconseillée au profit de l'utilisation de [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), cet élément n'est généralement pas utilisé par les sites web modernes.
 
 ## Attributs
 
