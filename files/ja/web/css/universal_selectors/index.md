@@ -3,39 +3,42 @@ title: 全称セレクター
 slug: Web/CSS/Universal_selectors
 tags:
   - CSS
-  - Reference
-  - Selectors
+  - リファレンス
   - セレクター
+browser-compat: css.selectors.universal
 translation_of: Web/CSS/Universal_selectors
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS の<ruby><strong>全称セレクター</strong><rp> (</rp><rt>universal selector</rt><rp>) </rp></ruby> (<code>*</code>) は、すべての種類の要素にマッチします。</p>
+CSS の**全称セレクター** (universal selector) (`*`) は、すべての種類の要素に一致します。
 
-<pre class="brush: css no-line-numbers">/* すべての要素を選択 */
+```css
+/* すべての要素を選択 */
 * {
   color: green;
-}</pre>
+}
+```
 
-<p>CSS3 から、アスタリスクは{{cssxref("CSS_Namespaces", "名前空間")}}と組み合わせて使用できるようになりました。</p>
+全称セレクターは {{CSSXref("@namespace")}} を使用して名前空間を付けることができます。これは、複数の名前空間を含む文書、例えば HTML5 とインライン SVG または MathML、または複数の語彙が混在した XML などを扱うのに有用です。
 
-<ul>
- <li><code>ns|*</code> - 名前空間 <em>ns</em> の中ですべての要素にマッチします</li>
- <li><code>*|*</code> - すべての要素にマッチします</li>
- <li><code>|*</code> - 名前空間が宣言されていないすべての要素にマッチします</li>
-</ul>
+- `ns|*` - 名前空間 _ns_ の中ですべての要素に一致します
+- `*|*` - すべての要素に一致します
+- `|*` - 名前空間が宣言されていないすべての要素に一致します
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">* { <em>スタイルプロパティ</em> }</pre>
+```css
+* { スタイルプロパティ }
+```
 
-<p>アスタリスクは単純セレクターを伴う場合に省略可能です。たとえば、 <code>*.warning</code> と <code>.warning</code> は等価です。</p>
+アスタリスクは単純セレクターを伴う場合に省略可能です。たとえば、 `*.warning` と `.warning` は等価です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">* [lang^=en] {
+```css
+* [lang^=en] {
   color: green;
 }
 
@@ -51,54 +54,45 @@ translation_of: Web/CSS/Universal_selectors
   float: left
 }
 
-/* フロート要素の後の兄弟要素で自動的にフロートをクリアする */
+/* 浮動要素の後の兄弟要素で自動的に浮動を解除する */
 .floating + * {
   clear: left;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="warning"&gt;
-  &lt;span lang="en-us"&gt;A green span&lt;/span&gt; in a red paragraph.
-&lt;/p&gt;
-&lt;p id="maincontent" lang="en-gb"&gt;
-  &lt;span class="warning"&gt;A red span&lt;/span&gt; in a green paragraph.
-&lt;/p&gt;</pre>
+```html
+<p class="warning">
+  <span lang="en-us">A green span</span> in a red paragraph.
+</p>
+<p id="maincontent" lang="en-gb">
+  <span class="warning">A red span</span> in a green paragraph.
+</p>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+### 名前空間
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#the-universal-selector', 'universal selector')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#universal-selector', 'universal selector')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>名前空間に関する振る舞いを定義し、疑似要素の中でセレクターを省略できる旨を明記</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'selector.html#universal-selector', 'universal selector')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+この例では、セレクターは example 名前空間内の要素にのみ一致します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+```css
+@namespace example url(http://www.example.com);
+example|* { color: blue }
+```
 
-<p>{{Compat("css.selectors.universal")}}</p>
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)
+- [CSS の学習: セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
