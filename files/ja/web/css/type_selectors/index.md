@@ -5,79 +5,74 @@ tags:
   - CSS
   - HTML
   - Node
-  - Reference
-  - Selectors
+  - リファレンス
   - セレクター
+browser-compat: css.selectors.type
 translation_of: Web/CSS/Type_selectors
 ---
-<div>{{ CSSRef }}</div>
+{{CSSRef}}
 
-<p>CSS の<strong>要素型セレクター</strong> (type selector) は、ノード名で要素をマッチさせます。つまり、文書内にある指定された型の要素をすべて選択します。</p>
+CSS の**要素型セレクター** (type selector) は、ノード名で要素を一致させます。つまり、文書内にある指定された型の要素をすべて選択します。
 
-<pre class="brush: css no-line-numbers">/* すべての &lt;a&gt; 要素。 */
+```css
+/* すべての <a> 要素。 */
 a {
   color: red;
-}</pre>
+}
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+要素型セレクターは {{CSSXref("@namespace")}} を使用して名前空間を付けることができます。これは、複数の名前空間を含む文書、例えば HTML5 とインライン SVG または MathML、または複数の語彙が混在した XML などを扱うのに有用です。
 
-<pre class="syntaxbox">要素名 { <em>スタイルプロパティ</em> }
-</pre>
+- `ns|h1` - 名前空間 _ns_ の中で `<h1>` 要素に一致します
+- `*|h1` - `<h1>` 要素に一致します
+- `|h1` - 名前空間が宣言されていない `<h1>` 要素に一致します
 
-<h2 id="Example" name="Example">例</h2>
+## 構文
 
-<h3 id="CSS">CSS</h3>
+```css
+要素名 { スタイルプロパティ }
+```
 
-<pre class="brush: css">span {
+## 例
+
+### CSS
+
+```css
+span {
   background-color: skyblue;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span&gt;テキストを持つspanタグです。&lt;/span&gt;
-&lt;p&gt;テキストを持つpタグです。&lt;/p&gt;
-&lt;span&gt;追加のテキストを持つspanタグです。&lt;/span&gt;
-</pre>
+```html
+<span>テキストを持つ span です。</span>
+<p>テキストを持つ p です。</p>
+<span>追加のテキストを持つ span です。</span>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Example', '100%', 150)}}</p>
+{{EmbedLiveSample('Examples', '100%', 150)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+### 名前空間
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#type-selectors', 'Type (tag name) selector')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#type-selectors', 'type selectors')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'selector.html#type-selectors', 'type selectors')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#basic-concepts', 'type selectors')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+この例では、セレクターは example 名前空間内の `<h1>` 要素にのみ一致します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+```css
+@namespace example url(http://www.example.com);
+example|h1 { color: blue }
+```
 
-<p>{{Compat("css.selectors.type")}}</p>
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)
+- [CSS の学習: セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
