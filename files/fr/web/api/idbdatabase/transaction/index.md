@@ -170,7 +170,7 @@ var objectStore = transaction.objectStore("toDoList");
 // etc.
 ```
 
-> **Note :**Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
+> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
 
 ## Spécification
 
