@@ -18,7 +18,7 @@ Se você já está familiarizado com o básico de Git/GitHub, você provavelment
 
 A seguir estão os conceitos essenciais que você deve se familiarizar para tirar o melhor do Git e GitHub.
 
-- Git é uma ferramente de _sistema de controle de versão_ — uma classe de ferramentas essenciais em qualquer fluxo de trabalho de desenvolvimento. Ela permite que um grupo de desenvolvedores trabalhe na mesma base de código sem atrapalhar uns aos outros, permite que desenvolvedores voltem para estados anteriores no código se for necessário, e mais.
+- Git é uma ferramenta de _sistema de controle de versão_ — uma classe de ferramentas essenciais em qualquer fluxo de trabalho de desenvolvimento. Ela permite que um grupo de desenvolvedores trabalhe na mesma base de código sem atrapalhar uns aos outros, permite que desenvolvedores voltem para estados anteriores no código se for necessário, e mais.
 - GitHub é uma aplicação web que provê ferramentas úteis com base no Git para trabalhar com armazenamento de bases de código, assim como espaço para armazenar bases de código no servidor. Suas funcionalidades são similares a de outras aplicações, como [GitLab](https://about.gitlab.com/) ou [Bitbucket](https://bitbucket.org/).
 - Cada base de código é armazenada em um container chamado _repositório_, ou _repo_.
 - Fazer mudanças em um repositório involve, minimamente:
@@ -80,12 +80,12 @@ Vamos criar um fork do <https://github.com/mdn/content> agora mesmo; você defin
 
 Agora que você criou o fork do repo, é hora de clonar o fork localmente. Para fazer isto:
 
-1.  Vá para a página do fork em github.com (e.g. `https://github.com/<your-user-name>/content`). 
+1.  Vá para a página do fork em github.com (e.g. `https://github.com/<seu-nome-de-usuario>/content`). 
 2.  Clique no botão verde "Code" no topo da lista de arquivos. Algo similar ao popup abaixo deve aparecer:
 
     ![Janela popup mostrando uma URL para clonar junto com opções para abrir com o GitHub desktop e baixar o zip](code-popup.png)
 
-3.  Se você configurar a autenticação SSH como mostrado acima, clique na tab "SSH" e copie a URL `git@github.com:<your-user-name>/content.git` do campo de texto na caixa. Se você não configurou a autenticação SSH, ao invés disso copie a URL do campo de texto na tab "HTTPS", que deve ser parecida com esta: `https://github.com/<your-user-name>/content.git`.
+3.  Se você configurar a autenticação SSH como mostrado acima, clique na tab "SSH" e copie a URL `git@github.com:<seu-nome-de-usuario>/content.git` do campo de texto na caixa. Se você não configurou a autenticação SSH, ao invés disso copie a URL do campo de texto na tab "HTTPS", que deve ser parecida com esta: `https://github.com/<seu-nome-de-usuario>/content.git`.
 4.  Agora abra a linha de comando no seu computador, e navegue para o diretório que você configurou anteriormente para armazenar localmente os clones de repos usando o comando cd, e.g.
 
     ```bash
@@ -196,7 +196,7 @@ Para atualizar seu repo:
     git rebase mozilla/main
     ```
 
-3.  Finalmente, envie essas mudanças para a versão remota do seu fork usando:
+3.  Finalmente, suba essas mudanças para a versão remota do seu fork usando:
 
     ```bash
     git push
@@ -241,7 +241,7 @@ Para fazer isto, volte para o seu terminal e, tendo certeza que você está dent
 
 1.  Puxe as mudanças remotas para o seu clone local rodando o comando `git pull`
 2.  Entre a mensagem exibida, você deve ver as linhas `* [new branch] test-branch -> origin/test-branch`
-3.  Para mudar para sua branch (O que significa mudar do "main" para trabalhar na sua branch ao invés disso) rodando o comando `git switch test-branch`
+3.  Para mudar para sua branch (O que significa mudar do "main" para trabalhar na sua branch ao invés disso), rode o comando `git switch test-branch`
 
 Se você foi bem sucedido, o git deve te dizer algo como:
 
@@ -261,7 +261,7 @@ nothing to commit, working tree clean
 
 Isto parece certo. Nós estamos na branch "test-branch", e nós ainda não fizemos mudanças.
 
-## Adicionando, commitando e dando push
+## Adicionando, commitando e subindo
 
 Neste ponto você já está preparado para fazer alterações no repo que você está trabalhando — para corrigir um bug no MDN ou qualquer coisa que você esteja fazendo. No geral, vamos pular esta parte, já que esse não é o objetivo do tutorial. Se você quiser corrigir um problema real no MDN, vá e escolha um bug para corrigir da nossa [lista de issues de conteúdo](https://github.com/mdn/content/issues/), ou leia [Contribuindo para o MDN](/pt-BR/docs/MDN/Contribute) para mais orientações.
 
@@ -281,7 +281,7 @@ Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos
         no changes added to commit (use "git add" and/or "git commit -a")
     ```
 
-3.  Então, neste momento a mensagem está falando quais arquivos você modificou. A próxima etapa é "adicionar" eles, o que significa adicionar eles para uma lista de arquivos que você quer dar commit e então dar push nas alterações para o fork remoto. Para adicionar este arquivo para a lista de commit, digite o seguinte:
+3.  Então, neste momento a mensagem está falando quais arquivos você modificou. A próxima etapa é "adicionar" eles, o que significa adicionar eles para uma lista de arquivos que você quer dar commit e então subir as alterações para o fork remoto. Para adicionar este arquivo para a lista de commit, digite o seguinte:
 
     ```bash
     git add README.md
@@ -327,7 +327,7 @@ Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos
 
 A informação lida basicamente foi redefinida — está nos dizendo que não temos mudanças para fazer um commit, porque agora nós mandamos nossas mudanças anteriores para o sistema como um commit. A diferença chave de antes é a linha "Your branch is ahead of 'origin/test-branch' by 1 commit." (Sua branch está na frente de 'origin/test-branch' por 1 commit.) — nossa versão local da branch "test-branch" agora está a frente da versão remota de "test-branch" por um commit — em outras palavras, nós fizemos uma mudança localmente que a branch remota não tem.
 
-Vamos enviar nossa mudança local para a branch remota. Você pode fazer isto rodando o comando `git push` — tente isto agora. Se não tiver erros, você deve ter lido algo como isto:
+Vamos subir nossa mudança local para a branch remota. Você pode fazer isto rodando o comando `git push` — tente isto agora. Se não tiver erros, você deve ter lido algo como isto:
 
 ```plain
 Enumerating objects: 5, done.
@@ -345,7 +345,7 @@ To github.com:chrisdavidmills/content.git
 
 Neste momento, volte para a página do fork remoto em github.com. Você deve ver uma mensagem parecida com "Sua branch está 1 commit a frente de mdn:main." o que significa que o conteúdo do nosso fork tem uma mudança (commit) nela que não existe na branch "main" do mozilla.
 
-1.  Para enviar nossas mudanças para a cópia principal do repo, nós precisamos criar um pull request (PR). Isto pode ser feito facilmente usando o botão "Compare & pull request" que você deve ver no topo da lista de arquivos, uma vez que você tenha dado push na branch.
+1.  Para enviar nossas mudanças para a cópia principal do repo, nós precisamos criar um pull request (PR). Isto pode ser feito facilmente usando o botão "Compare & pull request" que você deve ver no topo da lista de arquivos, uma vez que você tenha subido alterações na branch.
 
     ![Banner com o texto test branch tem alterações recentes, e um botão com o texto comparar e criar um pull request](compare-and-pull-request.png)
 
@@ -360,11 +360,11 @@ Neste momento, volte para a página do fork remoto em github.com. Você deve ver
 
     Caso a equipe de revisão queira que você faça mudanças, eles vão te falar nos comentários do seu pull request (você deve receber uma notificação por email te avisando sobre isto).
 
-4.  Se você quiser fazer mais mudanças para o mesmo pull request que você já submeteu, você pode fazer isso fazendo mais commits na mesma branch local e então dando push conforme foi explicado anteriormente. Não há necessidade de criar um novo pull request. **Tenha certeza de estar fazendo as alterações na mesma branch de antes**
+4.  Se você quiser fazer mais mudanças para o mesmo pull request que você já submeteu, você pode fazer isso criando mais commits na mesma branch local e então dando push conforme foi explicado anteriormente. Não há necessidade de criar um novo pull request. **Tenha certeza de estar fazendo as alterações na mesma branch de antes**
 
 ## Solução de problemas
 
-O tutorial acima tem a intenção de te fornecer os fundamentos do git e do GitHub que você vai precisar para contribuir em um nível básico ao repos do GitHub. Esperamos que seja útil! Nós também gostaríamos de discutir o fato de que, apesar de ser o o sistema de controle de versão padrão da indústria para a indústria da web, o Git tem uma reputação meio mística/lendária de ser uma ferramenta dolorosa e difícil de aprender e usar.
+O tutorial acima tem a intenção de te fornecer os fundamentos do git e do GitHub que você vai precisar para contribuir em um nível básico ao repos do GitHub. Esperamos que seja útil! Nós também gostaríamos de discutir o fato de que, apesar de ser o sistema de controle de versão padrão da indústria para a web, o Git tem uma reputação meio mística/lendária de ser uma ferramenta dolorosa e difícil de aprender e usar.
 
 Nós não achamos isto totalmente justo. O Git tem vários comandos que, pra ser justo, as vezes parecem enigmáticos em seu uso, e realmente tem um longo período para dominar. Também é justo dizer que se você esquecer alguns dos comandos ou fizer as coisas na ordem errada, você pode se encontrar em uma bagunça interessante e difícil de resolver. Contudo, enquanto você tiver bons hábitos conforme os escritos acima, você não deve prolongar tanto o erro. Também vale mencionar que o Git é bem mais fácil de usar do que era há 10 anos atrás.
 
@@ -396,11 +396,11 @@ git reset HEAD~1
 
 Isto fará com que volte para o estado de quando as mudanças nesse commit ainda não tinhando sido adicionadas a lista de commit (você teria que adicionar novamente depois de descobrir o problema). Note que isso te leva de volta para o estado antes de você fazer o commit de qualquer coisa nesta sessão. Isto não te ajudará se você precisar fazer algo mais complexo, como apenas reverter o commit intermediário de uma lista de três. Nós vamos deixar assim para essa lição.
 
-### Revertendo um commit que foi dado push para o fork remoto
+### Revertendo um commit que foi subido para o fork remoto
 
-Neste ponto, não existe nenhum retorno real, ou forma de rebobinar. Ao invés disso, você vai precisar dar push em outro commit para reverter os efeitos do que você quer tirar. Você pode fazer isto manualmente usando algumas das ferramentas que nós te demos acima, mas tem um comando já existente que facilita isto — `git revert`. Isto pode ser usado para criar automaticamente um commit que reverte mudanças de volta para o ponto que você especificar.
+Neste ponto, não existe nenhum retorno real, ou forma de rebobinar. Ao invés disso, você vai precisar subir outro commit para reverter os efeitos do que você quer tirar. Você pode fazer isto manualmente usando algumas das ferramentas que nós te demos acima, mas tem um comando já existente que facilita isto — `git revert`. Ele pode ser usado para criar automaticamente um commit que reverte mudanças de volta para o ponto que você especificar.
 
-1.  Da forma mais simples, você pode rodar o comando a seguir para criar um comando que vai fazer a sua branch remota voltar ao estado inicial em que ela estava antes de você começar a commitar: 
+1.  Da forma mais simples, você pode rodar o comando a seguir para criar um commit que vai fazer a sua branch remota voltar ao estado inicial em que ela estava antes de você começar a commitar: 
 
     ```bash
     git revert HEAD
