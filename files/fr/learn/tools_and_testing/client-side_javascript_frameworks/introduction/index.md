@@ -263,7 +263,7 @@ You should seriously consider the support matrix and DSLs of a framework when ma
 | Vue       | IE9+                                | HTML-based    | HTML-based, JSX, Pug   |
 | Ember     | Modern (IE9+ in Ember version 2.18) | Handlebars    | Handlebars, TypeScript |
 
-> **Note :**: DSLs we've described as "HTML-based" do not have official names. They are not really true DSLs, but they are non-standard HTML, so we believe they are worth highlighting.
+> **Note :** DSLs we've described as "HTML-based" do not have official names. They are not really true DSLs, but they are non-standard HTML, so we believe they are worth highlighting.
 
 Citations for this table:
 
