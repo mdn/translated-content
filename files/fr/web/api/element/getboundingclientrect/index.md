@@ -1,28 +1,6 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
-tags:
-  - API
-  - Boundary
-  - Bounding
-  - Bounds
-  - CSSOM View
-  - Client
-  - Containing
-  - DOM
-  - Element
-  - Enclosing
-  - Method
-  - Méthode
-  - Minimum
-  - Rectangle
-  - Reference
-  - Smallest
-  - clientHeight
-  - getBoundingClientRect
-  - getClientRects
-  - offsetHeight
-  - scrollHeight
 translation_of: Web/API/Element/getBoundingClientRect
 ---
 {{APIRef("DOM")}}
@@ -92,7 +70,7 @@ for (let key in rect) {
 }
 ```
 
-{{EmbedLiveSample('Example', '100%', 640)}}
+{{EmbedLiveSample('Exemple', '100%', 640)}}
 
 Remarquez comme les `width`/`height` sont égales à
 `width`/`height` + `padding`.

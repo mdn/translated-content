@@ -253,7 +253,7 @@ selectElem.addEventListener("change", () => {
 
 #### Résultat
 
-{{EmbedLiveSample('comparaison_des_fonctions_de_transition', '100%', 300)}}
+{{EmbedLiveSample('Comparaison_des_fonctions_de_transition', '100%', 300)}}
 
 ### Exemples avec cubic-bezier()
 

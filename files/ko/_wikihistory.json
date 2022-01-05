@@ -303,12 +303,6 @@
       "enfroze"
     ]
   },
-  "Glossary/Client_hints": {
-    "modified": "2020-03-30T11:50:49.956Z",
-    "contributors": [
-      "oinochoe"
-    ]
-  },
   "Glossary/Compile": {
     "modified": "2019-10-29T10:03:26.609Z",
     "contributors": [
@@ -737,6 +731,13 @@
     "modified": "2019-11-17T11:56:15.038Z",
     "contributors": [
       "enfroze"
+    ]
+  },
+  "Glossary/Plugin": {
+    "modified": "2019-01-16T15:11:14.478Z",
+    "contributors": [
+      "teoli",
+      "Anonymous"
     ]
   },
   "Glossary/Polyfill": {
@@ -3162,13 +3163,6 @@
     "modified": "2019-04-07T22:34:47.827Z",
     "contributors": [
       "niceman114"
-    ]
-  },
-  "Plugins/Guide/Scripting_plugins": {
-    "modified": "2019-01-16T15:11:14.478Z",
-    "contributors": [
-      "teoli",
-      "Anonymous"
     ]
   },
   "Tools": {
@@ -6073,12 +6067,6 @@
       "ESnark"
     ]
   },
-  "Web/API/PhotoCapabilities": {
-    "modified": "2020-10-15T22:27:09.730Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/API/Plugin": {
     "modified": "2019-03-23T22:11:26.376Z",
     "contributors": [
@@ -8070,15 +8058,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property": {
-    "modified": "2019-03-23T23:41:42.325Z",
-    "contributors": [
-      "hjunshin",
-      "teoli",
-      "jaemin_jo",
-      "Ioseph"
-    ]
-  },
   "Web/CSS/CSS_Box_Model": {
     "modified": "2019-04-11T11:38:24.806Z",
     "contributors": [
@@ -8150,6 +8129,13 @@
     "modified": "2020-10-16T09:12:34.130Z",
     "contributors": [
       "DeadIntegral"
+    ]
+  },
+  "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
+    "modified": "2020-06-15T04:03:26.893Z",
+    "contributors": [
+      "lee.juyoung.1978",
+      "citrus.alice"
     ]
   },
   "Web/CSS/CSS_Device_Adaptation": {
@@ -8330,13 +8316,6 @@
       "alattalatta",
       "teoli",
       "Ioseph"
-    ]
-  },
-  "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
-    "modified": "2020-06-15T04:03:26.893Z",
-    "contributors": [
-      "lee.juyoung.1978",
-      "citrus.alice"
     ]
   },
   "Web/CSS/CSS_Logical_Properties": {
@@ -11357,6 +11336,12 @@
       "amorfati0310",
       "seungha-kim",
       "devcken"
+    ]
+  },
+  "Web/HTTP/Client_hints": {
+    "modified": "2020-03-30T11:50:49.956Z",
+    "contributors": [
+      "oinochoe"
     ]
   },
   "Web/HTTP/Compression": {
@@ -17531,6 +17516,12 @@
       "Saem"
     ]
   },
+  "conflicting/Web/API/ImageCapture/getPhotoCapabilities": {
+    "modified": "2020-10-15T22:27:09.730Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
   "conflicting/Web/API/RTCPeerConnection/RTCPeerConnection": {
     "modified": "2020-10-15T22:21:34.262Z",
     "contributors": [
@@ -17578,6 +17569,15 @@
     "contributors": [
       "teoli",
       "SpikeYou"
+    ]
+  },
+  "conflicting/Web/CSS/cursor": {
+    "modified": "2019-03-23T23:41:42.325Z",
+    "contributors": [
+      "hjunshin",
+      "teoli",
+      "jaemin_jo",
+      "Ioseph"
     ]
   },
   "conflicting/Web/Guide": {

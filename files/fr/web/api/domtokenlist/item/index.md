@@ -1,12 +1,6 @@
 ---
 title: DOMTokenList.item()
 slug: Web/API/DOMTokenList/item
-tags:
-  - API
-  - Chaînes de caractères
-  - DOM
-  - Listes
-  - Méthodes
 translation_of: Web/API/DOMTokenList/item
 ---
 {{APIRef("DOM")}}
@@ -47,7 +41,7 @@ span.textContent = item;
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Exemples', '100%', 60) }}
 
 ## Spécifications
 

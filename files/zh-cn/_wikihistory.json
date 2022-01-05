@@ -5309,6 +5309,13 @@
       "MartinJLiu"
     ]
   },
+  "MDN/Contribute/Markdown_in_MDN": {
+    "modified": "2020-09-30T15:32:47.524Z",
+    "contributors": [
+      "chrisdavidmills",
+      "shc0743"
+    ]
+  },
   "MDN/Guidelines": {
     "modified": "2020-09-30T15:32:46.472Z",
     "contributors": [
@@ -5319,13 +5326,6 @@
       "pixiu",
       "OlingCat",
       "Sheppy"
-    ]
-  },
-  "MDN/Guidelines/CSS_style_guide": {
-    "modified": "2020-09-30T15:32:47.524Z",
-    "contributors": [
-      "chrisdavidmills",
-      "shc0743"
     ]
   },
   "MDN/Guidelines/Does_this_belong_on_MDN": {
@@ -19903,12 +19903,6 @@
       "TimLuo465"
     ]
   },
-  "Web/API/ServiceWorkerGlobalScope/caches": {
-    "modified": "2020-10-28T03:25:10.149Z",
-    "contributors": [
-      "peter006qi"
-    ]
-  },
   "Web/API/ServiceWorkerRegistration": {
     "modified": "2019-03-23T22:12:58.327Z",
     "contributors": [
@@ -21068,7 +21062,7 @@
       "aimaoll"
     ]
   },
-  "Web/API/VisualViewport/onscroll": {
+  "Web/API/VisualViewport/scroll_event": {
     "modified": "2020-10-15T22:34:23.403Z",
     "contributors": [
       "penneix"
@@ -22198,6 +22192,13 @@
       "en20"
     ]
   },
+  "Web/API/WebSocket/close_event": {
+    "modified": "2019-08-17T08:15:18.133Z",
+    "contributors": [
+      "lihuakkk",
+      "FlyingPig"
+    ]
+  },
   "Web/API/WebSocket/error_event": {
     "modified": "2020-10-15T22:32:26.989Z",
     "contributors": [
@@ -22220,30 +22221,7 @@
       "Firefox_mozilla"
     ]
   },
-  "Web/API/WebSocket/onclose": {
-    "modified": "2019-08-17T08:15:18.133Z",
-    "contributors": [
-      "lihuakkk",
-      "FlyingPig"
-    ]
-  },
-  "Web/API/WebSocket/onerror": {
-    "modified": "2020-10-15T22:12:36.891Z",
-    "contributors": [
-      "sntkwtjf",
-      "Firefox_mozilla",
-      "HIKALU-Z"
-    ]
-  },
-  "Web/API/WebSocket/onmessage": {
-    "modified": "2020-10-15T22:11:41.439Z",
-    "contributors": [
-      "hishark",
-      "caslt",
-      "Ray-Eldath"
-    ]
-  },
-  "Web/API/WebSocket/onopen": {
+  "Web/API/WebSocket/open_event": {
     "modified": "2020-10-15T22:12:40.029Z",
     "contributors": [
       "Mr.Chenzm",
@@ -26023,14 +26001,6 @@
       "namklaw"
     ]
   },
-  "Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property": {
-    "modified": "2019-03-23T23:32:59.999Z",
-    "contributors": [
-      "xgqfrms-GitHub",
-      "teoli",
-      "ziyunfei"
-    ]
-  },
   "Web/CSS/CSS_Box_Alignment": {
     "modified": "2020-02-11T06:02:03.390Z",
     "contributors": [
@@ -26170,6 +26140,15 @@
     "modified": "2019-03-18T21:38:16.217Z",
     "contributors": [
       "ZZES_REN"
+    ]
+  },
+  "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
+    "modified": "2019-03-23T23:28:24.261Z",
+    "contributors": [
+      "Ende93",
+      "Jiang-Xuan",
+      "Jiasm",
+      "Nightingale"
     ]
   },
   "Web/CSS/CSS_Flexible_Box_Layout": {
@@ -26509,15 +26488,6 @@
     "contributors": [
       "freshSep",
       "Wenbin"
-    ]
-  },
-  "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
-    "modified": "2019-03-23T23:28:24.261Z",
-    "contributors": [
-      "Ende93",
-      "Jiang-Xuan",
-      "Jiasm",
-      "Nightingale"
     ]
   },
   "Web/CSS/CSS_Logical_Properties": {
@@ -47290,6 +47260,22 @@
       "alayasix"
     ]
   },
+  "conflicting/Web/API/WebSocket/error_event": {
+    "modified": "2020-10-15T22:12:36.891Z",
+    "contributors": [
+      "sntkwtjf",
+      "Firefox_mozilla",
+      "HIKALU-Z"
+    ]
+  },
+  "conflicting/Web/API/WebSocket/message_event": {
+    "modified": "2020-10-15T22:11:41.439Z",
+    "contributors": [
+      "hishark",
+      "caslt",
+      "Ray-Eldath"
+    ]
+  },
   "conflicting/Web/API/Web_Storage_API": {
     "modified": "2019-03-24T00:14:59.754Z",
     "contributors": [
@@ -47339,6 +47325,12 @@
     "modified": "2020-10-15T22:21:27.337Z",
     "contributors": [
       "AlexChao"
+    ]
+  },
+  "conflicting/Web/API/caches": {
+    "modified": "2020-10-28T03:25:10.149Z",
+    "contributors": [
+      "peter006qi"
     ]
   },
   "conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3": {
@@ -47514,6 +47506,14 @@
       "yeol",
       "teoli",
       "Chajn"
+    ]
+  },
+  "conflicting/Web/CSS/cursor": {
+    "modified": "2019-03-23T23:32:59.999Z",
+    "contributors": [
+      "xgqfrms-GitHub",
+      "teoli",
+      "ziyunfei"
     ]
   },
   "conflicting/Web/CSS/easing-function": {

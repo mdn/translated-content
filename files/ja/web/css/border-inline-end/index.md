@@ -3,10 +3,10 @@ title: border-inline-end
 slug: Web/CSS/border-inline-end
 tags:
   - CSS
-  - CSS Logical Property
+  - CSS 論理的プロパティ
   - CSS プロパティ
   - 実験的
-  - Reference
+  - リファレンス
   - border-inline
   - border-inline-end
   - border-inline-end-color
@@ -44,7 +44,7 @@ border-inline-end: revert;
 border-inline-end: unset;
 ```
 
-`border-inline-end` が対応付けられる物理的な境界は、書字方向やテキストの向きによって決まります。これは {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
+`border-inline-end` が対応づけられる物理的な境界は、書字方向やテキストの向きによって決まります。これは {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
 関連するプロパティとしては、 {{cssxref("border-block-start")}}、{{cssxref("border-block-end")}}、{{cssxref("border-inline-start")}} が要素の他の境界を定義します。
 
@@ -104,5 +104,5 @@ div {
 
 ## 関連情報
 
-- このプロパティは {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} のうちの 1 つに対応付けられます。
+- このプロパティは {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} のうちの 1 つに対応づけられます。
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

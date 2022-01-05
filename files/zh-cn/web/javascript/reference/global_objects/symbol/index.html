@@ -124,13 +124,25 @@ typeof symObj;  // "object"</pre>
 
 <p>所有 Symbols 继承自 {{jsxref("Symbol.prototype")}}.</p>
 
-<h3 id="属性">属性</h3>
+<h3 id="属性">实例属性</h3>
 
-<p>{{page('zh-CN/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Properties')}}</p>
+<dl>
+  <dt>{{jsxref("Symbol.prototype.description")}}</dt>
+  <dd>一个只读的字符串，意为对该 Symbol 对象的描述</dd>
+</dl>
 
-<h3 id="方法">方法</h3>
+<h3 id="方法">实例方法</h3>
 
-<p>{{page('zh-CN/Web/JavaScript/Reference/Global_Objects/Symbol/prototype','Methods')}}</p>
+<dl>
+  <dt>{{jsxref("Symbol.prototype.toSource")}}</dt>
+  <dd>返回该 Symbol 对象的源代码。该方法重写了 {{jsxref("Object.prototype.toSource")}} 方法</dd>
+  <dt>{{jsxref("Symbol.prototype.toString")}}</dt>
+  <dd>返回一个包含着该 Symbol 对象描述的字符串。该方法重写了 {{jsxref("Object.prototype.toString")}} 方法</dd>
+  <dt>{{jsxref("Symbol.prototype.valueOf")}}</dt>
+  <dd>返回该 Symbol 对象。该方法重写了 {{jsxref("Symbol.prototype.valueOf")}} 方法</dd>
+  <dt>{{jsxref("Symbol.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}</dt>
+  <dd>返回该 Symbol 对象。</dd>
+</dl>
 
 <h2 id="Examples" name="Examples">示例</h2>
 

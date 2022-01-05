@@ -1,19 +1,6 @@
 ---
 title: CanvasRenderingContext2D.quadraticCurveTo()
 slug: Web/API/CanvasRenderingContext2D/quadraticCurveTo
-tags:
-  - API
-  - Bézier
-  - Canevas
-  - Canvas
-  - CanvasRenderingContext2D
-  - Courbe
-  - Courbe de Bézier
-  - Courbe quadratique
-  - Courbe quadratique de Bézier
-  - Méthode
-  - Quadratique
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 ---
 {{APIRef}}
@@ -77,7 +64,7 @@ contexte2D.fill();
 
 Dans cet exemple, le point de contrôle est rouge et les points de départ et d'arrivée sont en bleu.
 
-{{EmbedLiveSample('How_quadraticCurveTo_works', 315, 165)}}
+{{EmbedLiveSample('Comment_quadraticCurveTo_fonctionne', 315, 165)}}
 
 ### Une courbe quadratique simple
 
@@ -105,7 +92,7 @@ contexte2D.stroke();
 
 #### Résultat
 
-{{EmbedLiveSample('A_simple_quadratic_curve', 700, 180)}}
+{{EmbedLiveSample('Une_courbe_quadratique_simple', 700, 180)}}
 
 ## Spécifications
 

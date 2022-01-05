@@ -1,10 +1,6 @@
 ---
 title: flex
 slug: Web/CSS/flex
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/flex
 ---
 {{CSSRef}}
@@ -111,7 +107,7 @@ Pour la plupart des cas, on utilisera une des valeurs suivantes : `auto`, `initi
 }
 ```
 
-{{EmbedLiveSample("description", "100%","370")}}
+{{EmbedLiveSample("Description", "100%","370")}}
 
 Par défaut, les éléments flexibles ne se rétrécissent pas en dessous de la taille minimale du contenu. Pour modifier ce comportement, il faudra paramétrer {{cssxref("min-width")}} ou {{cssxref("min-height")}}.
 

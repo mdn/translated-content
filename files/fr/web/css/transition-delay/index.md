@@ -1,11 +1,6 @@
 ---
 title: transition-delay
 slug: Web/CSS/transition-delay
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - Transitions
 translation_of: Web/CSS/transition-delay
 ---
 {{CSSRef}}
@@ -116,7 +111,7 @@ changeButton.addEventListener("click", change);
 
 #### Résultat
 
-{{EmbedLiveSample("exemple_illustrant_differentes_temporisations",275,200)}}
+{{EmbedLiveSample("Exemple_illustrant_différentes_temporisations",275,200)}}
 
 ## Spécifications
 

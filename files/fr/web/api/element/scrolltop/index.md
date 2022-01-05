@@ -1,11 +1,6 @@
 ---
 title: Element.scrollTop
 slug: Web/API/Element/scrollTop
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
 translation_of: Web/API/Element/scrollTop
 ---
 {{APIRef("DOM")}}
@@ -76,7 +71,7 @@ button.onclick = function () {
 
 ### Résultat
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Exemple")}}
 
 ## Spécifications
 

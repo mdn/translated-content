@@ -64,7 +64,7 @@ addRow('my-table');
 
 ### Résultat
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Exemple")}}
 
 ## Spécifications
 

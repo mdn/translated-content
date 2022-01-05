@@ -3,11 +3,10 @@ title: flex-shrink
 slug: Web/CSS/flex-shrink
 tags:
   - CSS
-  - CSS Flexible Boxes
-  - CSS Property
   - CSS フレックスボックス
+  - CSS プロパティ
   - NeedsContent
-  - Reference
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.flex-shrink
 translation_of: Web/CSS/flex-shrink
@@ -56,9 +55,9 @@ flex-shrink: unset;
 #### HTML
 
 ```html
-<p>全体の幅は 500px で、フレックスアイテムの flex-basis は 120px です。</p>
-<p>A、B、C には flex-shrink:1 が、D と E には flex-shrink:2 が設定されています。</p>
-<p>D と E の幅は他より狭くなります。</p>
+全体の幅は 500px で、フレックスアイテムの flex-basis は 120px です。
+A、B、C には flex-shrink:1 が、D と E には flex-shrink:2 が設定されています。
+D と E の幅は他より狭くなります。
 <div id="content">
   <div class="box" style="background-color:red;">A</div>
   <div class="box" style="background-color:lightblue;">B</div>

@@ -1,33 +1,31 @@
 ---
 title: scaleZ()
 slug: Web/CSS/transform-function/scaleZ()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/scaleZ()
+browser-compat: css.types.transform-function.scaleZ
 ---
 {{CSSRef}}
 
-La fonction **`scaleZ()`** modifie la coordonnée en Z de chaque point de l'élément avec un facteur multiplicateur donné. Si ce facteur vaut 1, l'opération appliqué sera l'identité. L'homothétie n'est pas isotropique et les angles de l'élément ne sont pas conservés. La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.
+La fonction **`scaleZ()`** modifie la coordonnée en Z de chaque point de l'élément avec un facteur multiplicateur donné. Si ce facteur vaut 1, l'opération appliquée sera l'identité. L'homothétie n'est pas isotropique et les angles de l'élément ne sont pas conservés. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
 {{EmbedInteractiveExample("pages/css/function-scaleZ.html")}}
 
 `scaleZ(sz)` est une notation raccourcie équivalente à `scale3d(1, 1, sz)`.
 
-`scaleZ(-1)` définit une symétrie axiale selon l'axe Z qui passe par l'origine (définie grâce à la propriété {{cssxref("transform-origin")}}).
+`scaleZ(-1)` définit une symétrie axiale selon l'axe Z qui passe par l'origine (définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin)).
 
 Dans les exemples interactifs ci-avant, `perspective: 500px;` a été utilisée afin de créer un espace en trois dimensions et `transform-style: preserve-3d` permet de positionner les éléments enfants dans cet espace 3D.
 
 ## Syntaxe
 
-    scaleZ(s)
+```css
+scaleZ(s)
+```
 
 ### Valeurs
 
 - `s`
-  - : Une valeur de type {{cssxref("&lt;number&gt;")}} qui représente le facteur d'échelle à appliquer sur la côte (coordonnées en Z) de chaque point de l'élément.
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente le facteur d'échelle à appliquer sur la côte (coordonnées en Z) de chaque point de l'élément.
 
 <table class="standard-table">
   <thead>
@@ -40,11 +38,11 @@ Dans les exemples interactifs ci-avant, `perspective: 500px;` a été utilisée 
   </thead>
   <tbody>
     <tr>
-      <td colspan="2" rowspan="2">
+      <td colspan="2">
         Cette transformation s'applique sur l'espace en trois dimensions et ne
         peut donc être représentée sous la forme d'une transformation plane.
       </td>
-      <td colspan="1" rowspan="2">
+      <td>
         <math
           ><mfenced
             ><mtable
@@ -55,7 +53,7 @@ Dans les exemples interactifs ci-avant, `perspective: 500px;` a été utilisée 
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td>
         <math
           ><mfenced
             ><mtable
@@ -78,28 +76,30 @@ Dans les exemples interactifs ci-avant, `perspective: 500px;` a été utilisée 
 ### HTML
 
 ```html
-<p>toto</p>
-<p class="translation">Translaté</p>
-<p class="homothetie">Échelle</p>
+<div>Normal</div>
+<div class="perspective">Avec translation</div>
+<div class="scaled-translated">Avec mise à l'échelle</div>
 ```
 
 ### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
 }
 
-.translation{
+.perspective {
   /* On ajoute une perspective pour créer un volume 3D */
-  transform: perspective(500px) translateZ(100px);
+  transform: perspective(400px) translateZ(-100px);
+  background-color: limegreen;
 }
 
-.homothetie{
+.scaled-translated {
   /* On ajoute une perspective pour créer un volume 3D */
-  transform: perspective(500px) scaleZ(2) translateZ(100px);
+  transform: perspective(400px) scaleZ(2) translateZ(-100px);
+  background-color: pink;
 }
 ```
 
@@ -109,18 +109,16 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS Transforms 2", "#funcdef-scalez", "scaleZ()")}} | {{Spec2("CSS Transforms 2")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- [`scaleX()`](</fr/docs/Web/CSS/transform-function/scaleX()>)
-- [`scaleY()`](</fr/docs/Web/CSS/transform-function/scaleY()>)
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
-- {{cssxref("transform-origin")}}
+- [`scaleX()`](/fr/docs/Web/CSS/transform-function/scaleX())
+- [`scaleY()`](/fr/docs/Web/CSS/transform-function/scaleY())
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`transform-origin`](/fr/docs/Web/CSS/transform-origin)

@@ -1,11 +1,6 @@
 ---
 title: mask-type
 slug: Web/CSS/mask-type
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - SVG
 translation_of: Web/CSS/mask-type
 ---
 {{CSSRef}}
@@ -72,7 +67,7 @@ La propriété `mask-type` est définie avec un mot-clé parmi ceux définis ci-
 
 #### Résultat
 
-{{EmbedLiveSample('setting_an_alpha_mask', '100%', '102')}}
+{{EmbedLiveSample('Définir_un_masque_alpha', '100%', '102')}}
 
 ### Définir un masque de luminance
 
@@ -106,7 +101,7 @@ La propriété `mask-type` est définie avec un mot-clé parmi ceux définis ci-
 
 #### Result
 
-{{EmbedLiveSample('setting_a_luminance_mask', '100%', '102')}}
+{{EmbedLiveSample('Définir_un_masque_de_luminance', '100%', '102')}}
 
 ## Spécifications
 

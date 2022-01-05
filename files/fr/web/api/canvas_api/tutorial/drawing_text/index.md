@@ -1,11 +1,6 @@
 ---
 title: Dessin de texte avec canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-tags:
-  - Canvas
-  - Graphismes
-  - HTML
-  - Tutoriels
 translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Dessin_de_texte_avec_canvas
 ---
@@ -42,7 +37,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_fillText_example", 310, 110)}}
+{{EmbedLiveSample("Un_exemple_fillText", 310, 110)}}
 
 ### Un exemple de strokeText
 
@@ -64,7 +59,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_strokeText_example", 310, 110)}}
+{{EmbedLiveSample("Un_exemple_de_strokeText", 310, 110)}}
 
 ## Style de texte
 
@@ -104,7 +99,7 @@ ctx.textBaseline = 'hanging';
 ctx.strokeText('Hello world', 0, 100);
 ```
 
-#### Playable code
+#### Code jouable
 
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
@@ -144,7 +139,7 @@ textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ## Mesures de texte avancées
 

@@ -1,11 +1,6 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
-tags:
-  - API
-  - IntersectionObserver
-  - Reference
-  - Web
 translation_of: Web/API/Intersection_Observer_API
 ---
 {{SeeCompatTable}}{{DefaultAPISidebar("Intersection Observer API")}}
@@ -276,7 +271,7 @@ function intersectionCallback(entries) {
 }
 ```
 
-{{EmbedLiveSample("exemple_de_seuil", 500, 500)}}
+{{EmbedLiveSample("Exemple_de_seuil", 500, 500)}}
 
 ## Interfaces
 

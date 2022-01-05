@@ -1,13 +1,6 @@
 ---
 title: DOMTokenList.entries()
 slug: Web/API/DOMTokenList/entries
-tags:
-  - API
-  - Chaînes de caractères
-  - DOM
-  - Itérateurs
-  - Listes
-  - Méthodes
 translation_of: Web/API/DOMTokenList/entries
 ---
 {{APIRef("DOM")}}
@@ -46,7 +39,7 @@ for(var value of iterator) {
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Exemples', '100%', 60) }}
 
 ## Spécifications
 

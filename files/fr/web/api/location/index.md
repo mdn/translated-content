@@ -1,13 +1,6 @@
 ---
 title: Location
 slug: Web/API/Location
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - JavaScript
-  - Location
-  - Reference
 translation_of: Web/API/Location
 ---
 {{APIRef("HTML DOM")}}
@@ -63,7 +56,7 @@ body {display:table-cell; text-align:center; vertical-align:middle; font-family:
 
 ### Result
 
-{{EmbedLiveSample('Anatomy_Of_Location')}}
+{{EmbedLiveSample('Anatomie_d\'une_Location')}}
 
 ## Propriétés
 

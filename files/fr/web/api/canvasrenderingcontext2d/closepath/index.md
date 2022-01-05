@@ -1,8 +1,6 @@
 ---
 title: CanvasRenderingContext2D.closePath()
 slug: Web/API/CanvasRenderingContext2D/closePath
-tags:
-  - Méthode
 translation_of: Web/API/CanvasRenderingContext2D/closePath
 ---
 {{APIRef}}
@@ -84,7 +82,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 400) }}
+{{ EmbedLiveSample('Code_jouable', 700, 400) }}
 
 ## Spécifications
 

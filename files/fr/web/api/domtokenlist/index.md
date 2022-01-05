@@ -1,13 +1,6 @@
 ---
 title: DOMTokenList
 slug: Web/API/DOMTokenList
-tags:
-  - API
-  - Chaînes de caractères
-  - DOM
-  - Interface
-  - Listes
-  - Marques
 translation_of: Web/API/DOMTokenList
 ---
 {{APIRef("DOM")}}
@@ -67,7 +60,7 @@ para.textContent = 'paragraph classList is "' + classes + '"';
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Exemples', '100%', 60) }}
 
 ## Découpage des espaces et suppression des doublons
 
@@ -86,7 +79,7 @@ span.textContent = 'span classList is "' + classes + '"';
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Trimming_of_whitespace_and_removal_of_duplicates', '100%', 60) }}
+{{ EmbedLiveSample('Découpage_des_espaces_et_suppression_des_doublons', '100%', 60) }}
 
 ## Spécifications
 

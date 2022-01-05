@@ -2,10 +2,11 @@
 title: AnalyserNode.minDecibels
 slug: Web/API/AnalyserNode/minDecibels
 translation_of: Web/API/AnalyserNode/minDecibels
+browser-compat: api.AnalyserNode.minDecibels
 ---
 {{ APIRef("Web Audio API") }}
 
-La propriété **`minDecibels`** de l'objet {{ domxref("AnalyserNode") }} est un nombre flottant à double précision représentant la puissance maximum de l'intervalle pour l'analyse des données FFT, pour une conversion vers des valeurs non signées ou des nombres flottants — en d'autres termes, elle spécifie la valeur minimum pour l'intervalle de résultats des méthodes `getFloatFrequencyData()` et `getByteFrequencyData()`.
+La propriété **`minDecibels`** de l'objet {{ domxref("AnalyserNode") }} est un nombre flottant à double précision représentant la puissance minimum de l'intervalle pour l'analyse des données FFT, pour une conversion vers des valeurs non signées ou des nombres flottants — en d'autres termes, elle spécifie la valeur minimum pour l'intervalle de résultats des méthodes `getFloatFrequencyData()` et `getByteFrequencyData()`.
 
 Sa valeur par défaut est `-100`.
 
@@ -69,9 +70,7 @@ dessiner();
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-maxDecibels', 'maxDecibels')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité navigateurs
 

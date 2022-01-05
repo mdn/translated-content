@@ -5,7 +5,7 @@ tags:
   - CSS
   - CSS プロパティ
   - CSS 表
-  - Reference
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.table-layout
 translation_of: Web/CSS/table-layout

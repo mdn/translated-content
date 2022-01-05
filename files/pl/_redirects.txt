@@ -1348,7 +1348,7 @@
 /pl/docs/Learn/JavaScript/Pierwsze_kroki/What_is_JavaScript	/pl/docs/Learn/JavaScript/First_steps/What_is_JavaScript
 /pl/docs/Learn/JavaScript/Pierwsze_kroki/Zmienne	/pl/docs/Learn/JavaScript/First_steps/Variables
 /pl/docs/Learn/Server-side/Express_Nodejs/Szkolenie_aplikacja_biblioteka	/pl/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
-/pl/docs/Liczniki_CSS	/pl/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/pl/docs/Liczniki_CSS	/pl/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /pl/docs/Lokalizacja	/pl/docs/Glossary/Localization
 /pl/docs/MDN/Contribute/Content	/pl/docs/MDN/Guidelines
 /pl/docs/MDN/Feedback	/pl/docs/MDN/Contribute/Feedback
@@ -1404,7 +1404,7 @@
 /pl/docs/Transformacje_XML_z_XSLT:Dokumentacja_XSLT_XPath	/pl/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
 /pl/docs/Transformacje_XML_z_XSLT:Przeczytaj_więcej	/pl/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
 /pl/docs/Tworzenie_wtyczek_OpenSearch_dla_Firefoksa	/pl/docs/Web/OpenSearch
-/pl/docs/Użycie_wartości_URL_dla_własności_cursor	/pl/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/pl/docs/Użycie_wartości_URL_dla_własności_cursor	/pl/docs/conflicting/Web/CSS/cursor
 /pl/docs/Web/API/AudioContext/createDynamicsCompressor	/pl/docs/Web/API/BaseAudioContext/createDynamicsCompressor
 /pl/docs/Web/API/Canvas_API/Tutorial/Optymalizacja_canvas	/pl/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /pl/docs/Web/API/Canvas_API/Tutorial/rysowanie_ksztaltow	/pl/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
@@ -1547,8 +1547,10 @@
 /pl/docs/Web/CSS/:first-node	/pl/docs/Web/CSS/:-moz-first-node
 /pl/docs/Web/CSS/:last-node	/pl/docs/Web/CSS/:-moz-last-node
 /pl/docs/Web/CSS/@-moz-document	/pl/docs/Web/CSS/@document
+/pl/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/pl/docs/conflicting/Web/CSS/cursor
 /pl/docs/Web/CSS/CSS_Colors	/pl/docs/Web/CSS/CSS_Color
 /pl/docs/Web/CSS/CSS_Colors/Narzedzie_doboru_kolorow	/pl/docs/Web/CSS/CSS_Colors/Color_picker_tool
+/pl/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/pl/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /pl/docs/Web/CSS/CSS_Reference	/pl/docs/Web/CSS/Reference
 /pl/docs/Web/CSS/CSS_Reference/Rozszerzenia_Mozilli	/pl/docs/Web/CSS/Mozilla_Extensions
 /pl/docs/Web/CSS/CSS_Selectors/Użycie_pseudoklasy_:target_w_selektorach	/pl/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
@@ -1577,7 +1579,7 @@
 /pl/docs/Web/CSS/Skrócone_deklaracje_CSS	/pl/docs/Web/CSS/Shorthand_properties
 /pl/docs/Web/CSS/Uzycie_zmiennych_CSS	/pl/docs/Web/CSS/Using_CSS_custom_properties
 /pl/docs/Web/CSS/Wartość_początkowa	/pl/docs/Web/CSS/initial_value
-/pl/docs/Web/CSS/cursor/Użycie_wartości_URL_dla_własności_cursor	/pl/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/pl/docs/Web/CSS/cursor/Użycie_wartości_URL_dla_własności_cursor	/pl/docs/conflicting/Web/CSS/cursor
 /pl/docs/Web/CSS/transform-function/matrix	/pl/docs/Web/CSS/transform-function/matrix()
 /pl/docs/Web/Dostępność	/pl/docs/Web/Accessibility
 /pl/docs/Web/Dostępność/An_overview_of_accessible_web_applications_and_widgets	/pl/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
@@ -1588,7 +1590,7 @@
 /pl/docs/Web/Guide/CSS/Sprawdzanie_media_queries	/pl/docs/Web/CSS/Media_Queries/Testing_media_queries
 /pl/docs/Web/Guide/HTML	/pl/docs/Learn/HTML
 /pl/docs/Web/Guide/HTML/Wprowadzenie	/pl/docs/Learn/HTML/Introduction_to_HTML
-/pl/docs/Web/Guide/Liczniki_CSS	/pl/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/pl/docs/Web/Guide/Liczniki_CSS	/pl/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /pl/docs/Web/HTML(PL)/Tryb_Zgodnosci_oraz_Tryb_Standardow	/pl/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /pl/docs/Web/HTML/Canvas	/pl/docs/Web/API/Canvas_API
 /pl/docs/Web/HTML/Elementy	/pl/docs/Web/HTML/Element

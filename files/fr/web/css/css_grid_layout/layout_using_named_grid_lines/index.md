@@ -286,7 +286,7 @@ On peut également utiliser le mot-clé `span`. Avec la règle suivante, le deux
 </div>
 ```
 
-{{EmbedLiveSample("une_grille_à_12_colonnes_avec_repeat", '500', '330')}}
+{{EmbedLiveSample("Une_grille_à_12_colonnes_avec_repeat", '500', '330')}}
 
 Si vous observez cette disposition grâce à l'outil de mise en évidence des grilles dans Firefox, vous verrez les différentes lignes et le placement des éléments sur ces lignes :
 
@@ -426,7 +426,7 @@ Pour placer ces éléments, on utilise la grille de la façon suivante :
 }
 ```
 
-{{ EmbedLiveSample('cadre_d_une_grille_à_12_colonnes', '500', '330') }}
+{{ EmbedLiveSample('Cadre_dune_grille_à_12_colonnes', '500', '330') }}
 
 Là encore, l'outil de mise en évidence de la grille permet de voir comment le placement fonctionne :
 

@@ -1,12 +1,6 @@
 ---
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
-tags:
-  - API
-  - API File
-  - Fichiers
-  - Méthode
-  - Reference
 translation_of: Web/API/FileReader/readAsDataURL
 ---
 {{APIRef("API File")}}
@@ -51,7 +45,7 @@ function previewFile() {
 
 ### Résultat en direct
 
-{{EmbedLiveSample("Example", "100%", 240)}}
+{{EmbedLiveSample("Exemple", "100%", 240)}}
 
 
 

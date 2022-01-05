@@ -1,12 +1,6 @@
 ---
 title: Les concepts de base des grilles CSS
 slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
-tags:
-  - CSS
-  - CSS Grids
-  - Grilles CSS
-  - Guide
-  - Intermédiaire
 translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 ---
@@ -135,7 +129,7 @@ Nous avons créé une grille avec trois pistes de 200 pixels de large. Chaque é
 }
 ```
 
-{{ EmbedLiveSample('grid_first', '610', '140') }}
+{{ EmbedLiveSample('Les_pistes', '610', '140') }}
 
 ### L'unité fr
 

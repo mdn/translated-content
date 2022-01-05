@@ -43,7 +43,7 @@ L'événement **dragstart** est déclenché lorsque l'utilisateur glisse un él�
 | `altKey` {{readonlyInline}}        | boolean                                          | `true` if the alt key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                             |
 | `metaKey` {{readonlyInline}}       | boolean                                          | `true` if the meta key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                            |
 
-## Exemple：dropzone
+## Exemple : dropzone
 
 ### HTML Content
 
@@ -134,7 +134,7 @@ L'événement **dragstart** est déclenché lorsque l'utilisateur glisse un él�
   }, false);
 ```
 
-{{ EmbedLiveSample('Example：dropzone') }}
+{{ EmbedLiveSample('Exemple_dropzone') }}
 
 ## Spécifications
 

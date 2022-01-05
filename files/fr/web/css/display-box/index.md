@@ -1,10 +1,6 @@
 ---
 title: <display-box>
 slug: Web/CSS/display-box
-tags:
-  - CSS
-  - Reference
-  - Type de donnée
 translation_of: Web/CSS/display-box
 ---
 {{CSSRef}}
@@ -78,7 +74,7 @@ Dans cet exemple, l'élément {{htmlelement("div")}} externe a une bordure rouge
 
 #### Résultat
 
-{{EmbedLiveSample("Display_contents", 300, 60)}}
+{{EmbedLiveSample("display_contents", 300, 60)}}
 
 ## Accessibilité
 

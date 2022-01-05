@@ -34,7 +34,7 @@ navigator.getBattery().then(function(battery) {
 });
 ```
 
-{{ EmbedLiveSample('Example', '100%', 30, '', 'Web/API/BatteryManager/level') }}
+{{ EmbedLiveSample('Exemple', '100%', 30, '', 'Web/API/BatteryManager/level') }}
 
 ## Spécifications
 

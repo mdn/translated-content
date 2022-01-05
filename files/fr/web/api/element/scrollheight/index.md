@@ -17,8 +17,6 @@ L'attribut en lecture seule **`element.scrollHeight`** est une mesure de la haut
 
 ## Exemple
 
-## Exemple
-
 Avec l'évènement {{domxref("GlobalEventHandlers/onscroll", "onscroll")}}, cette équivalence peut s'avérer utile afin de déterminer si un utilisateur a lu du texte ou non (voir aussi les propriétés {{domxref("element.scrollTop")}} et {{domxref("element.clientHeight")}}).
 
 La case à cocher de la démo est désactivée et ne peut être cochée tant que l'ensemble du contenu n'a pas défilé.

@@ -1,12 +1,6 @@
 ---
 title: Event.timeStamp
 slug: Web/API/Event/timeStamp
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Propriétés
-  - temps
 translation_of: Web/API/Event/timeStamp
 ---
 {{ApiRef("DOM")}}
@@ -49,7 +43,7 @@ document.body.addEventListener("keypress", getTime);
 
 ### Résultat
 
-{{EmbedLiveSample("Example", "100%", 100)}}
+{{EmbedLiveSample("Exemple", "100%", 100)}}
 
 ## Précision du temps réduite
 

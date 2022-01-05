@@ -1,11 +1,6 @@
 ---
 title: border-image
 slug: Web/CSS/border-image
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
 translation_of: Web/CSS/border-image
 ---
 {{CSSRef}}
@@ -81,7 +76,7 @@ On découpe l'image et on la répète pour remplir la zone entre les bordures.
 
 #### Résultat
 
-{{EmbedLiveSample('Utiliser_une_image_matricielle_répétée')}}
+{{EmbedLiveSample('Utiliser_une_image_matricielle_étirée')}}
 
 ### Utiliser un dégradé
 

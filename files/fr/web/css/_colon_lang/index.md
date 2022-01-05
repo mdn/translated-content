@@ -1,10 +1,6 @@
 ---
 title: ':lang'
 slug: Web/CSS/:lang
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:lang
 ---
 {{CSSRef}}
@@ -84,7 +80,7 @@ Dans cet exemple, la pseudo-classe `:lang` est utilisée pour faire correspondre
 
 ### Résultat
 
-{{EmbedLiveSample('Exemple', '350')}}
+{{EmbedLiveSample('Exemples', '350')}}
 
 ## Spécifications
 

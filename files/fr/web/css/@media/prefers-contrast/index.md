@@ -1,10 +1,6 @@
 ---
 title: prefers-contrast
 slug: Web/CSS/@media/prefers-contrast
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/prefers-contrast
 ---
 {{CSSRef}}{{SeeCompatTable}}{{draft}}
@@ -30,19 +26,23 @@ Par défaut, cet exemple présente un contraste trop faible pour la lisibilité.
 
 ### HTML
 
-    <div class="contrast">Une boîte avec un contraste faible.</div>
+```html
+<div class="contrast">Une boîte avec un contraste faible.</div>
+```
 
 ### CSS
 
-    .contrast {
-      color: grey;
-    }
+```css
+.contrast {
+  color: grey;
+}
 
-    @media (prefers-contrast: high) {
-      .contrast {
-        color: black;
-      }
-    }
+@media (prefers-contrast: high) {
+  .contrast {
+    color: black;
+  }
+}
+```
 
 ### Résultat
 

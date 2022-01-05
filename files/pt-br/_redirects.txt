@@ -560,7 +560,8 @@
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_atributo_aria-labelledby	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_atributo_aria-required	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_slider_role	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
-/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Utilizando_o_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
+/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role
+/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Utilizando_o_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role
 /pt-BR/docs/Web/Accessibility/ARIA/Guia_para_implementar_o_leitor_de_tela_ARIA	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 /pt-BR/docs/Web/Accessibility/ARIA/forms/Dicas_básicas_de_form	/pt-BR/docs/Web/Accessibility/ARIA/forms/Basic_form_hints
 /pt-BR/docs/Web/Acessibilidade	/pt-BR/docs/Web/Accessibility
@@ -580,6 +581,7 @@
 /pt-BR/docs/Web/CSS/CSS_Colors/seletor_de_cores	/pt-BR/docs/Web/CSS/CSS_Colors/Color_picker_tool
 /pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceitos_Basicos_do_Flexbox	/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /pt-BR/docs/Web/CSS/CSS_Images/Implementando_sprites_de_imagens_em_CSS	/pt-BR/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
+/pt-BR/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/pt-BR/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /pt-BR/docs/Web/CSS/CSS_Reference	/pt-BR/docs/Web/CSS/Reference
 /pt-BR/docs/Web/CSS/CSS_Reference/mix-blend-mode	/pt-BR/docs/Web/CSS/mix-blend-mode
 /pt-BR/docs/Web/CSS/CSS_Tipos	/pt-BR/docs/Web/CSS/CSS_Types

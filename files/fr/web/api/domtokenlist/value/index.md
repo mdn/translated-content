@@ -1,11 +1,6 @@
 ---
 title: DOMTokenList.value
 slug: Web/API/DOMTokenList/value
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Valeur
 translation_of: Web/API/DOMTokenList/value
 ---
 {{APIRef("DOM")}}
@@ -40,7 +35,7 @@ span.textContent = classes.value;
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Exemples', '100%', 60) }}
 
 ## Spécifications
 

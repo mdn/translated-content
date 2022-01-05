@@ -1,11 +1,6 @@
 ---
 title: Utilisation du DOM Level 1 Core du W3C
 slug: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
-tags:
-  - Arbre
-  - DOM
-  - Noeud
-  - Texte
 translation_of: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 original_slug: Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C
 ---
@@ -76,7 +71,7 @@ Supposons que l'auteur désire prendre le document présenté plus haut et chang
   }
 ```
 
-{{ EmbedLiveSample('A_simple_example', 800, 300) }}
+{{ EmbedLiveSample('Un_exemple_simple', 800, 300) }}
 
 Vous pouvez voir ce script dans [un exemple complet](http://www.mozilla.org/docs/dom/technote/intro/example.html).
 

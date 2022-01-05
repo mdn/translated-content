@@ -104,7 +104,7 @@ h1 {
 
 ### Résultat
 
-{{ EmbedLiveSample('Example', 560, 200) }}
+{{ EmbedLiveSample('Exemple', 560, 200) }}
 
 ## Spécifications
 

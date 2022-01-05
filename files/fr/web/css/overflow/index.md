@@ -1,11 +1,6 @@
 ---
 title: overflow
 slug: Web/CSS/overflow
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
 translation_of: Web/CSS/overflow
 ---
 {{CSSRef}}
@@ -146,7 +141,7 @@ p.auto {
 
 #### Résultat
 
-{{EmbedLiveSample("définir_différentes_valeurs_d_overflow_pour_le_texte", "600", "250")}}
+{{EmbedLiveSample("Exemples", "600", "250")}}
 
 ## Spécifications
 

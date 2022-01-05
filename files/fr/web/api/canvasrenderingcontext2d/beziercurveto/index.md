@@ -79,7 +79,7 @@ ctx.fill();
 
 Dans cet exemple, les points de contrôle sont rouges et les points de départ et d'arrivée sont bleus.
 
-{{EmbedLiveSample('how_beziercurveto_works', 315, 165)}}
+{{EmbedLiveSample('Fonctionnement_de_bezierCurveTo', 315, 165)}}
 
 ### Une courbe cubique de Bézier simple
 
@@ -107,7 +107,7 @@ contexte2D.stroke();
 
 #### Résultat
 
-{{EmbedLiveSample('a_simple_bezier_curve', 700, 180)}}
+{{EmbedLiveSample('Une_courbe_cubique_de_Bézier_simple', 700, 180)}}
 
 ## Spécifications
 

@@ -1197,9 +1197,9 @@
 /es/docs/Localización	/es/docs/Glossary/Localization
 /es/docs/MDN/Comenzando	/es/docs/MDN/Contribute/Getting_started
 /es/docs/MDN/Contribute/Content	/es/docs/MDN/Guidelines
-/es/docs/MDN/Contribute/Content/Content_blocks	/es/docs/MDN/Guidelines/CSS_style_guide
+/es/docs/MDN/Contribute/Content/Content_blocks	/es/docs/MDN/Contribute/Markdown_in_MDN
 /es/docs/MDN/Contribute/Guidelines	/es/docs/MDN/Guidelines
-/es/docs/MDN/Contribute/Guidelines/Content_blocks	/es/docs/MDN/Guidelines/CSS_style_guide
+/es/docs/MDN/Contribute/Guidelines/Content_blocks	/es/docs/MDN/Contribute/Markdown_in_MDN
 /es/docs/MDN/Contribute/Guidelines/Convenciones_y_definiciones	/es/docs/MDN/Guidelines/Conventions_definitions
 /es/docs/MDN/Contribute/Guidelines/Project:Guía_de_estilo	/es/docs/MDN/Guidelines/Writing_style_guide
 /es/docs/MDN/Contribute/Herramientas	/es/docs/MDN/Tools
@@ -1211,7 +1211,8 @@
 /es/docs/MDN/Contribute/Structures/Macros/Otras	/es/docs/MDN/Structures/Macros/Other
 /es/docs/MDN/Contribute/Structures/Tablas_de_compatibilidad	/es/docs/MDN/Structures/Compatibility_tables
 /es/docs/MDN/Enviar_feedback_sobre_MDN	/es/docs/MDN/Contribute/Feedback
-/es/docs/MDN/Guidelines/Content_blocks	/es/docs/MDN/Guidelines/CSS_style_guide
+/es/docs/MDN/Guidelines/CSS_style_guide	/es/docs/MDN/Contribute/Markdown_in_MDN
+/es/docs/MDN/Guidelines/Content_blocks	/es/docs/MDN/Contribute/Markdown_in_MDN
 /es/docs/MDN/Guidelines/Convenciones_y_definiciones	/es/docs/MDN/Guidelines/Conventions_definitions
 /es/docs/MDN/Guidelines/Project:Guía_de_estilo	/es/docs/MDN/Guidelines/Writing_style_guide
 /es/docs/MDN/Kuma	/es/docs/MDN/Yari
@@ -1502,7 +1503,7 @@
 /es/docs/Using_files_from_web_applications	/es/docs/Web/API/File/Using_files_from_web_applications
 /es/docs/Using_geolocation	/es/docs/Web/API/Geolocation_API
 /es/docs/Using_the_W3C_DOM_Level_1_Core	/es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
-/es/docs/Uso_de_URL_como_valor_de_la_propiedad_cursor	/es/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/es/docs/Uso_de_URL_como_valor_de_la_propiedad_cursor	/es/docs/conflicting/Web/CSS/cursor
 /es/docs/Web/API/API_de_almacenamiento_web	/es/docs/Web/API/Web_Storage_API
 /es/docs/Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web	/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
 /es/docs/Web/API/API_del_portapapeles	/es/docs/Web/API/Clipboard_API
@@ -1573,6 +1574,7 @@
 /es/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Wtilizando_texturas_en_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/es/docs/Web/API/WebSocket/onerror	/es/docs/Web/API/WebSocket/error_event
 /es/docs/Web/API/WebSockets_API/Escribiendo_servidor_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_server
 /es/docs/Web/API/WebSockets_API/Escribiendo_servidores_con_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
 /es/docs/Web/API/Web_Speech_API/Uso_de_la_Web_Speech_API	/es/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API
@@ -1610,6 +1612,7 @@
 /es/docs/Web/Accesibilidad/Understanding_WCAG/Teclado	/es/docs/Web/Accessibility/Understanding_WCAG/Keyboard
 /es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_atributo_aria-required	/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 /es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_rol_alertdialog	/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
+/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/es/docs/Web/Accessibility/ARIA/Roles/alert_role
 /es/docs/Web/Accessibility/ARIA/forms/Etiquetas_complejas	/es/docs/Web/Accessibility/ARIA/forms/Multipart_labels
 /es/docs/Web/Accessibility/ARIA/forms/alertas	/es/docs/Web/Accessibility/ARIA/forms/alerts
 /es/docs/Web/Accessibility/ARIA/forms/consejos_basicos_para_formularios	/es/docs/Web/Accessibility/ARIA/forms/Basic_form_hints
@@ -1641,6 +1644,7 @@
 /es/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
 /es/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /es/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+/es/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/es/docs/conflicting/Web/CSS/cursor
 /es/docs/Web/CSS/CSS_Colors	/es/docs/Web/CSS/CSS_Color
 /es/docs/Web/CSS/CSS_Colors/Herramienta_para_seleccionar_color	/es/docs/Web/CSS/CSS_Colors/Color_picker_tool
 /es/docs/Web/CSS/CSS_Flexible_Box_Layout/Casos_de_uso_tipicos_de_Flexbox.	/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
@@ -1699,7 +1703,7 @@
 /es/docs/Web/CSS/before	/es/docs/Web/CSS/::before
 /es/docs/Web/CSS/calc	/es/docs/Web/CSS/calc()
 /es/docs/Web/CSS/capacidad_de_animacion_de_propiedades_CSS	/es/docs/Web/CSS
-/es/docs/Web/CSS/cursor/Uso_de_URL_como_valor_de_la_propiedad_cursor	/es/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/es/docs/Web/CSS/cursor/Uso_de_URL_como_valor_de_la_propiedad_cursor	/es/docs/conflicting/Web/CSS/cursor
 /es/docs/Web/CSS/env	/es/docs/Web/CSS/env()
 /es/docs/Web/CSS/filter-function/blur	/es/docs/Web/CSS/filter-function/blur()
 /es/docs/Web/CSS/filter-function/brightness	/es/docs/Web/CSS/filter-function/brightness()

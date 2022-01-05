@@ -1,12 +1,6 @@
 ---
 title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
-tags:
-  - API
-  - DOM
-  - Document
-  - Insertion
-  - Méthode
 translation_of: Web/API/Document/caretRangeFromPoint
 ---
 {{APIRef("DOM")}}{{Non-standard_header}}
@@ -80,7 +74,7 @@ for (i=0 ; i < paragraphs.length; i++) {
 }
 ```
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/API/Document/caretRangeFromPoint') }}
+{{ EmbedLiveSample('Exemple', '', '', '', 'Web/API/Document/caretRangeFromPoint') }}
 
 ## Compatibilité des navigateurs
 

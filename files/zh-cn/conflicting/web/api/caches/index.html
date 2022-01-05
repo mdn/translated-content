@@ -1,0 +1,53 @@
+---
+title: ServiceWorkerGlobalScope.caches
+slug: conflicting/Web/API/caches
+translation_of: Web/API/ServiceWorkerGlobalScope/caches
+original_slug: Web/API/ServiceWorkerGlobalScope/caches
+---
+<p>{{APIRef("Service Workers API")}}</p>
+
+<p><strong><code>caches </code></strong>是一个 {{domxref("ServiceWorkerGlobalScope")}} 接口的只读属性，返回与当前service worker相关联的{{domxref("CacheStorage")}}对象。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox notranslate">var <em>myCacheStorage</em> = self.caches;
+</pre>
+
+<h3 id="返回值">返回值</h3>
+
+<p>一个 {{domxref("CacheStorage")}} 对象。</p>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">规范</th>
+   <th scope="col">状态</th>
+   <th scope="col">备注</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#global-caches', 'ServiceWorkerGlobalScope.caches')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<div>
+
+
+<p>{{Compat("api.ServiceWorkerGlobalScope.caches")}}</p>
+</div>
+
+<h2 id="参见">参见</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
+ <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
+ <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
+ <li>{{jsxref("Promise")}}</li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
+</ul>

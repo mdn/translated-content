@@ -1,11 +1,6 @@
 ---
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
-tags:
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
 {{APIRef}}
@@ -96,7 +91,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ### Exemple avec différentes formes
 
@@ -132,7 +127,7 @@ for (var i = 0; i < 4; i++) {
 }
 ```
 
-{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "canvas_arc.png") }}
+{{ EmbedLiveSample('Exemple_avec_différentes_formes', 160, 210, "canvas_arc.png") }}
 
 ## Spécifications
 

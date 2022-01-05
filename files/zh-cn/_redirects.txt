@@ -82,7 +82,7 @@
 /zh-CN/docs/CSS/calc	/zh-CN/docs/Web/CSS/calc()
 /zh-CN/docs/CSS/clip	/zh-CN/docs/Web/CSS/clip
 /zh-CN/docs/CSS/cursor	/zh-CN/docs/Web/CSS/cursor
-/zh-CN/docs/CSS/cursor/url	/zh-CN/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/zh-CN/docs/CSS/cursor/url	/zh-CN/docs/conflicting/Web/CSS/cursor
 /zh-CN/docs/CSS/display	/zh-CN/docs/Web/CSS/display
 /zh-CN/docs/CSS/flex-grow	/zh-CN/docs/Web/CSS/flex-grow
 /zh-CN/docs/CSS/float	/zh-CN/docs/Web/CSS/float
@@ -1109,7 +1109,7 @@
 /zh-CN/docs/Localization	/zh-CN/docs/Glossary/Localization
 /zh-CN/docs/MDN/CSS	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 /zh-CN/docs/MDN/Contribute/Content	/zh-CN/docs/MDN/Guidelines
-/zh-CN/docs/MDN/Contribute/Content/CSS_style_guide	/zh-CN/docs/MDN/Guidelines/CSS_style_guide
+/zh-CN/docs/MDN/Contribute/Content/CSS_style_guide	/zh-CN/docs/MDN/Contribute/Markdown_in_MDN
 /zh-CN/docs/MDN/Contribute/Content/Custom_macros	/zh-CN/docs/MDN/Structures/Macros/Commonly-used_macros
 /zh-CN/docs/MDN/Contribute/Content/Rules_Of_MDN_Documenting	/zh-CN/docs/MDN/Guidelines/Does_this_belong_on_MDN
 /zh-CN/docs/MDN/Contribute/Content/Style_guide	/zh-CN/docs/MDN/Guidelines/Writing_style_guide
@@ -1123,6 +1123,7 @@
 /zh-CN/docs/MDN/Contribute/Structures/Macros	/zh-CN/docs/MDN/Structures/Macros
 /zh-CN/docs/MDN/Feedback	/zh-CN/docs/MDN/Contribute/Feedback
 /zh-CN/docs/MDN/Getting_started	/zh-CN/docs/MDN/Contribute/Getting_started
+/zh-CN/docs/MDN/Guidelines/CSS_style_guide	/zh-CN/docs/MDN/Contribute/Markdown_in_MDN
 /zh-CN/docs/MDN/Guidelines/Rules_Of_MDN_Documenting	/zh-CN/docs/MDN/Guidelines/Does_this_belong_on_MDN
 /zh-CN/docs/MDN/Guidelines/Style_guide	/zh-CN/docs/MDN/Guidelines/Writing_style_guide
 /zh-CN/docs/MDN/JavaScript	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create
@@ -1214,7 +1215,6 @@
 /zh-CN/docs/Web/API/APIWwindow.sidebar	/zh-CN/docs/Web/API/Window/sidebar
 /zh-CN/docs/Web/API/AmbientLightSensor/reading	/zh-CN/docs/Web/API/AmbientLightSensor/illuminance
 /zh-CN/docs/Web/API/ArrayBuffer	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-/zh-CN/docs/Web/API/ArrayBufferView	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /zh-CN/docs/Web/API/AudioContext/createAnalyser	/zh-CN/docs/Web/API/BaseAudioContext/createAnalyser
 /zh-CN/docs/Web/API/AudioContext/createBiquadFilter	/zh-CN/docs/Web/API/BaseAudioContext/createBiquadFilter
 /zh-CN/docs/Web/API/AudioContext/createBuffer	/zh-CN/docs/Web/API/BaseAudioContext/createBuffer
@@ -1476,6 +1476,7 @@
 /zh-CN/docs/Web/API/Selection.isCollapsed	/zh-CN/docs/Web/API/Selection/isCollapsed
 /zh-CN/docs/Web/API/Selection.removeRange	/zh-CN/docs/Web/API/Selection/removeRange
 /zh-CN/docs/Web/API/Selection/从Document中删除	/zh-CN/docs/Web/API/Selection/deleteFromDocument
+/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/caches	/zh-CN/docs/conflicting/Web/API/caches
 /zh-CN/docs/Web/API/StorageEstimate	/zh-CN/docs/conflicting/Web/API/StorageManager/estimate
 /zh-CN/docs/Web/API/Streams_API/使用可读文件流	/zh-CN/docs/Web/API/Streams_API/Using_readable_streams
 /zh-CN/docs/Web/API/Streams_API/概念	/zh-CN/docs/Web/API/Streams_API/Concepts
@@ -1510,9 +1511,14 @@
 /zh-CN/docs/Web/API/URLUtils/search	/zh-CN/docs/Web/API/HTMLAnchorElement/search
 /zh-CN/docs/Web/API/URLUtils/toString	/zh-CN/docs/Web/API/HTMLAnchorElement/toString
 /zh-CN/docs/Web/API/URLUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
+/zh-CN/docs/Web/API/VisualViewport/onscroll	/zh-CN/docs/Web/API/VisualViewport/scroll_event
 /zh-CN/docs/Web/API/WebGLRenderingContext/多边形偏移(polygonOffset)	/zh-CN/docs/Web/API/WebGLRenderingContext/polygonOffset
 /zh-CN/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /zh-CN/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
+/zh-CN/docs/Web/API/WebSocket/onclose	/zh-CN/docs/Web/API/WebSocket/close_event
+/zh-CN/docs/Web/API/WebSocket/onerror	/zh-CN/docs/conflicting/Web/API/WebSocket/error_event
+/zh-CN/docs/Web/API/WebSocket/onmessage	/zh-CN/docs/conflicting/Web/API/WebSocket/message_event
+/zh-CN/docs/Web/API/WebSocket/onopen	/zh-CN/docs/Web/API/WebSocket/open_event
 /zh-CN/docs/Web/API/WebSocket/二进制类型	/zh-CN/docs/Web/API/WebSocket/binaryType
 /zh-CN/docs/Web/API/WebVR_API/WebVR_concepts	/zh-CN/docs/Web/API/WebVR_API/Concepts
 /zh-CN/docs/Web/API/Web_Audio_API/基于Web_Audio_API实现的音频可视化效果	/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
@@ -1715,6 +1721,7 @@
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/圆角边框发生器	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+/zh-CN/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/zh-CN/docs/conflicting/Web/CSS/cursor
 /zh-CN/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持	/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox	/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
@@ -1722,6 +1729,7 @@
 /zh-CN/docs/Web/CSS/CSS_Flow_Layout/在Flow中和Flow之外	/zh-CN/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/利用CSS网格布局实现常用布局	/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
+/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_conceptsjie	/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts
 /zh-CN/docs/Web/CSS/CSS_Logical_Properties/浮动和定位	/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 /zh-CN/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/zh-CN/docs/Web/XPath/Comparison_with_CSS_selectors
@@ -1751,7 +1759,7 @@
 /zh-CN/docs/Web/CSS/clamp	/zh-CN/docs/Web/CSS/clamp()
 /zh-CN/docs/Web/CSS/counter	/zh-CN/docs/Web/CSS/counter()
 /zh-CN/docs/Web/CSS/counters	/zh-CN/docs/Web/CSS/counters()
-/zh-CN/docs/Web/CSS/cursor/url	/zh-CN/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+/zh-CN/docs/Web/CSS/cursor/url	/zh-CN/docs/conflicting/Web/CSS/cursor
 /zh-CN/docs/Web/CSS/element	/zh-CN/docs/Web/CSS/element()
 /zh-CN/docs/Web/CSS/env	/zh-CN/docs/Web/CSS/env()
 /zh-CN/docs/Web/CSS/filter-function/blur	/zh-CN/docs/Web/CSS/filter-function/blur()
@@ -1892,7 +1900,7 @@
 /zh-CN/docs/Web/Guide/CSS	/zh-CN/docs/Learn/CSS
 /zh-CN/docs/Web/Guide/CSS/CSS_Image_Sprites	/zh-CN/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
 /zh-CN/docs/Web/Guide/CSS/Consistent_list_indentation	/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
-/zh-CN/docs/Web/Guide/CSS/Counters	/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/zh-CN/docs/Web/Guide/CSS/Counters	/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /zh-CN/docs/Web/Guide/CSS/Getting_started/Content	/zh-CN/docs/Learn/CSS/Howto/Generated_content
 /zh-CN/docs/Web/Guide/CSS/Getting_started/Media	/zh-CN/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
 /zh-CN/docs/Web/Guide/CSS/Getting_started/SVG_and_CSS	/zh-CN/docs/Web/SVG/Tutorial/SVG_and_CSS

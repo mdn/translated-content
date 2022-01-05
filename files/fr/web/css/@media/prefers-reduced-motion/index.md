@@ -1,13 +1,6 @@
 ---
 title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
-tags:
-  - '@media'
-  - Accessibility
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
 translation_of: Web/CSS/@media/prefers-reduced-motion
 ---
 {{CSSRef}}
@@ -104,7 +97,7 @@ Cet exemple possède une animation désagréable qui sera exécutée à moins d'
 
 ### Résultat
 
-{{EmbedLiveSample("example")}}
+{{EmbedLiveSample("Exemple")}}
 
 ## Spécifications
 

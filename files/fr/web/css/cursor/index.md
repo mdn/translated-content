@@ -1,17 +1,6 @@
 ---
 title: cursor
 slug: Web/CSS/cursor
-tags:
-  - Arrow
-  - CSS
-  - CSS Property
-  - Cursor
-  - Custom Cursor
-  - Reference
-  - UI
-  - mouse
-  - pointer
-  - recipe:css-property
 translation_of: Web/CSS/cursor
 browser-compat: css.properties.cursor
 ---
@@ -402,7 +391,7 @@ Pour plus d'informations, voir le tableau de compatibilité ci-après.
 
 ### Résultat
 
-{{EmbedLiveSample("examples")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 

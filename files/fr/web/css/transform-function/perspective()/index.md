@@ -1,21 +1,18 @@
 ---
 title: perspective()
 slug: Web/CSS/transform-function/perspective()
-tags:
-  - CSS
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/perspective()
+browser-compat: css.types.transform-function.perspective
 ---
 {{CSSRef}}
 
-La fonction **`perspective()`** définit la distance entre le plan d'équation z = 0 et l'œil de l'utilisateur afin de fournir une perspective aux éléments positionnés dans l'espace (3D). Chaque élément pour lequel z est positif apparaîtra plus grand et chaque élément pour lequel z est négatif apparaîtra plus petit. La « force » de cet effet est déterminée par la valeur de cette propriété. La valeur obtenue comme résultat de cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.
+La fonction **`perspective()`** définit la distance entre le plan d'équation z = 0 et l'œil de l'utilisateur afin de fournir une perspective aux éléments positionnés dans l'espace (3D). Chaque élément pour lequel z est positif apparaîtra plus grand et chaque élément pour lequel z est négatif apparaîtra plus petit. La « force » de cet effet est déterminée par la valeur de cette propriété. La valeur obtenue comme résultat de cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
-Le résultat de cette fonction est une valeur de type {{cssxref("&lt;transform-function&gt;")}}.
+Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
 {{EmbedInteractiveExample("pages/css/function-perspective.html")}}
 
-La fonction de transformation `perspective()`s'applique à l'élément qu'on veut transformer. En revanche, les propriétés {{cssxref('perspective')}} et {{cssxref('perspective-origin')}} s'appliquent sur l'élément parent de l'enfant qu'on veut placer dans un espace 3D.
+La fonction de transformation `perspective()`s'applique à l'élément qu'on veut transformer. En revanche, les propriétés [`perspective`](/fr/docs/Web/CSS/perspective) et [`perspective-origin`](/fr/docs/Web/CSS/perspective-origin) s'appliquent sur l'élément parent de l'enfant qu'on veut placer dans un espace 3D.
 
 ## Syntaxe
 
@@ -24,7 +21,7 @@ La fonction de transformation `perspective()`s'applique à l'élément qu'on veu
 ### Valeurs
 
 - _l_
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui définit la distance entre l'œil de l'utilisateur et le plan décrit par l'équation `z = 0`. Si la valeur est nulle ou négative, aucune perspective ne sera appliquée.
+  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) qui définit la distance entre l'œil de l'utilisateur et le plan décrit par l'équation `z = 0`. Si la valeur est nulle ou négative, aucune perspective ne sera appliquée.
 
 <table class="standard-table">
   <thead>
@@ -144,19 +141,17 @@ p + div {
 
 #### Résultat
 
-{{EmbedLiveSample('Appliquer_une_perspective_sur_un_objet_3D', '100%', '350', '', 'Web/CSS/transform-function/perspective')}}
+{{EmbedLiveSample('Appliquer_une_perspective_sur_un_objet_3D', '100%', '600')}}
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS Transforms 2", "#funcdef-perspective", "perspective()")}} | {{Spec2("CSS Transforms 2")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)

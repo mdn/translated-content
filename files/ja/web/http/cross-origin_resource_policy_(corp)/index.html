@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Cross-Origin_Resource_Policy_(CORP)
 
 <p class="summary"><strong>クロスオリジンリソースポリシー</strong>は {{HTTPHeader("Cross-Origin-Resource-Policy")}} ヘッダーによって設定されるポリシーで、ウェブサイトやアプリケーションが他のオリジンから (<code>&lt;script&gt;</code> や <code>&lt;img&gt;</code> などの要素を使用して発行された) 特定のリクエストに対する保護をオプトインすることで、 <a href="https://ja.wikipedia.org/wiki/Spectre">Spectre</a> のような投機的なサイドチャネル攻撃や、クロスサイトスクリプトインクルージョン攻撃を緩和することができます。</p>
 
-<p class="summary">CORP は既定で {{Glossary("same-origin policy")}} を超えた保護の追加レイヤーです。クロスオリジンリソースポリシーは、既定でクロスオリジンの読み込みを保護するメカニズムである、 <a href="https://fetch.spec.whatwg.org/#corb">クロスオリジンリソースブロッキング</a> (CORB)を補完します。</p>
+<p class="summary">CORP は既定で {{Glossary("same-origin policy")}} を超えた保護の追加レイヤーです。クロスオリジンリソースポリシーは、既定でクロスオリジンの読み込みを保護するメカニズムである、 <a href="https://fetch.spec.whatwg.org/#corb">クロスオリジンリードブロッキング</a> (CORB)を補完します。</p>
 
 <div class="blockIndicator note">
 <p>このポリシーは、既定で CORS セーフリストメソッド／ヘッダーに対して発行される、<a href="https://fetch.spec.whatwg.org/#concept-request-mode"><samp>no-cors</samp></a> リクエストに対してのみ有効です。</p>

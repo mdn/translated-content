@@ -1,10 +1,6 @@
 ---
 title: API canvas
 slug: Web/API/Canvas_API
-tags:
-  - API
-  - Canvas
-  - Reference
 translation_of: Web/API/Canvas_API
 ---
 {{IncludeSubnav("/fr/docs/Jeux")}} {{CanvasSidebar}}
@@ -76,7 +72,7 @@ textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 360) }}
+{{ EmbedLiveSample('Code_jouable', 700, 360) }}
 
 ## Références
 

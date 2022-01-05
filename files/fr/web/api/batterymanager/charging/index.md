@@ -32,7 +32,7 @@ navigator.getBattery().then(function(battery) {
 });
 ```
 
-{{ EmbedLiveSample('Example', '100%', 30) }}
+{{ EmbedLiveSample('Exemple', '100%', 30) }}
 
 ## Spécifications
 

@@ -1,12 +1,6 @@
 ---
 title: Node.isEqualNode()
 slug: Web/API/Node/isEqualNode
-tags:
-  - API
-  - Comparaison
-  - DOM
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/Node/isEqualNode
 ---
 {{APIRef("DOM")}}
@@ -59,7 +53,7 @@ output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) 
 
 ### Résultats
 
-{{ EmbedLiveSample('Example', 480) }}
+{{ EmbedLiveSample('Exemple', 480) }}
 
 ## Spécifications
 

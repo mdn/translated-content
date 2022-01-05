@@ -1,17 +1,6 @@
 ---
 title: CanvasRenderingContext2D.setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Lignes
-  - Modèle
-  - Méthodes
-  - Pointillés
-  - Reference
-  - patterns
-  - setLineDash
 translation_of: Web/API/CanvasRenderingContext2D/setLineDash
 ---
 {{APIRef}}
@@ -114,7 +103,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 10, 410) }}
+{{ EmbedLiveSample('Code_jouable', 10, 410) }}
 
 ## Spécifications
 

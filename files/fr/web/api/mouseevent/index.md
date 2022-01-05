@@ -1,14 +1,6 @@
 ---
 title: MouseEvent
 slug: Web/API/MouseEvent
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - Référence(2)
-  - Souris
-  - évènements
 translation_of: Web/API/MouseEvent
 ---
 {{APIRef("DOM Events")}}
@@ -148,7 +140,7 @@ document.getElementById("button").addEventListener('click', simulateClick);
 
 Cliquez sur le bouton pour voir comment l'exemple fonctionne :
 
-{{ EmbedLiveSample('Example', '', '', '') }}
+{{ EmbedLiveSample('Exemple', '', '', '') }}
 
 ## Spécifications
 

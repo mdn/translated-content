@@ -1,11 +1,6 @@
 ---
 title: hanging-punctuation
 slug: Web/CSS/hanging-punctuation
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/hanging-punctuation
 ---
 {{CSSRef}}{{SeeCompatTable}}
@@ -97,7 +92,7 @@ p {
 
 ### Résultat
 
-{{EmbedLiveSample('Exemple')}}
+{{EmbedLiveSample('Exemples')}}
 
 ## Spécifications
 

@@ -1,11 +1,6 @@
 ---
 title: '-webkit-text-security'
 slug: Web/CSS/-webkit-text-security
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-text-security
 ---
 {{CSSRef}} {{Non-standard_header}}
@@ -42,7 +37,7 @@ input {
 
 ### Résultat
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 

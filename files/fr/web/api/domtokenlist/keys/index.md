@@ -1,15 +1,6 @@
 ---
 title: DOMTokenList.keys()
 slug: Web/API/DOMTokenList/keys
-tags:
-  - API
-  - Boucle
-  - Clés
-  - DOM
-  - Itérateur
-  - Listes
-  - Méthodes
-  - for of
 translation_of: Web/API/DOMTokenList/keys
 ---
 {{APIRef("DOM")}}
@@ -52,7 +43,7 @@ for(var value of iterator) {
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Exemples', '100%', 60) }}
 
 ## Spécifications
 

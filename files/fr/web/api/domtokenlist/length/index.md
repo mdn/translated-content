@@ -1,12 +1,6 @@
 ---
 title: DOMTokenList.length
 slug: Web/API/DOMTokenList/length
-tags:
-  - API
-  - DOM
-  - Listes
-  - Longueur
-  - Propriétés
 translation_of: Web/API/DOMTokenList/length
 ---
 {{APIRef("DOM")}}
@@ -43,7 +37,7 @@ span.textContent = 'classList length = ' + length;
 
 La sortie ressemble à ceci :
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Exemples', '100%', 60) }}
 
 ## Spécifications
 

@@ -1,10 +1,6 @@
 ---
 title: text-overflow
 slug: Web/CSS/text-overflow
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/text-overflow
 ---
 {{CSSRef}}
@@ -77,8 +73,6 @@ Chacune des valeurs se compose :
 
 ## Exemples
 
-## Examples
-
 ### Syntaxe avec une valeur
 
 Cet exemple illustre différentes valeurs pour `text-overflow`, appliquée à un paragraphe, pour des textes écrits de gauche à droite et de droite à gauche.
@@ -149,7 +143,7 @@ body {
 
 #### Résultat
 
-{{EmbedLiveSample('one-value_syntax', 600, 320)}}
+{{EmbedLiveSample('Syntaxe_avec_une_valeur', 600, 320)}}
 
 ### Syntaxe avec deux valeurs
 
@@ -211,7 +205,7 @@ for (let para of paras) {
 
 #### Résultat
 
-{{EmbedLiveSample('two-value_syntax', 600, 360)}}
+{{EmbedLiveSample('Syntaxe_avec_deux_valeurs', 600, 360)}}
 
 ## Spécifications
 

@@ -1,14 +1,6 @@
 ---
 title: DOMTokenList.forEach()
 slug: Web/API/DOMTokenList/forEach
-tags:
-  - API
-  - Boucle
-  - Chaînes de caractères
-  - DOM
-  - Itérateurs
-  - Méthodes
-  - Pour chaque
 translation_of: Web/API/DOMTokenList/forEach
 ---
 {{APIRef("DOM")}}
@@ -67,7 +59,7 @@ classes.forEach(
 
 ### Résultat
 
-{{ EmbedLiveSample('Example', '100%', 60) }}
+{{ EmbedLiveSample('Exemple', '100%', 60) }}
 
 ## Spécifications
 

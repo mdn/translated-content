@@ -1,10 +1,6 @@
 ---
 title: content
 slug: Web/CSS/content
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/content
 ---
 {{CSSRef}}
@@ -161,7 +157,7 @@ a::before{
 
 {{EmbedLiveSample('Utiliser_les_classes', 300, 200)}}
 
-### Utiliser les attributs d’image et d’élément
+### Utiliser les attributs d'image et d'élément
 
 Dans cet exemple, on insère une image avant chaque lien et on ajoute son identifiant après.
 
@@ -201,7 +197,7 @@ li {
 
 #### Résultat
 
-{{EmbedLiveSample("Utiliser_les_attributs_d’images_et_d’élément", '100%', 160)}}
+{{EmbedLiveSample("Utiliser_les_attributs_dimage_et_délément", '100%', 160)}}
 
 ### Remplacer un élément
 

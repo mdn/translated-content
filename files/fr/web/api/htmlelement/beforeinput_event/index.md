@@ -68,7 +68,7 @@ function updateValue(e) {
 
 ### Résultat
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 

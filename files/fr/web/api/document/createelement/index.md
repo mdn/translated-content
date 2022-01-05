@@ -1,13 +1,6 @@
 ---
 title: document.createElement
 slug: Web/API/Document/createElement
-tags:
-  - API
-  - Création
-  - DOM
-  - Document
-  - Elements
-  - Méthodes
 translation_of: Web/API/Document/createElement
 ---
 {{APIRef("DOM")}}
@@ -68,7 +61,7 @@ function addElement () {
 }
 ```
 
-{{EmbedLiveSample("Basic_example", 500, 50)}}
+{{EmbedLiveSample("Exemple_de_base", 500, 50)}}
 
 ### Exemple de composant web
 

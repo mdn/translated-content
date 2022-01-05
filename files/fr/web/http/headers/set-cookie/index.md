@@ -99,7 +99,7 @@ Pour plus d'information, voir le [guide sur les cookies HTTP](/fr/docs/Web/HTTP/
 
   - : Un cookie sécurisé est envoyé uniquement si la requête est faite en `https:` (sauf pour _localhost_). Cependant des informations confidentielles ne devraient jamais être enregistrées dans un cookie classique, en effet le mécanique est non sécurisé et ne chiffre aucune information.
 
-    > **Note :** Les sites non sécurisés (`http:`) ne peuvent plus définir des cookies ``Secure désormais (depuis Chrome 52+ et Firefox 52+). Depuis Firefox 75, cette restriction ne s'applique pas pour _localhost_.
+    > **Note :** Les sites non sécurisés (`http:`) ne peuvent plus définir des cookies `Secure` désormais (depuis Chrome 52+ et Firefox 52+). Depuis Firefox 75, cette restriction ne s'applique pas pour _localhost_.
 
 - `HttpOnly` {{optional_inline}}
   - : Empêche JavaScript d'accéder au cookie; par exemple, au travers de la propriété [`Document.cookie`](/fr/docs/Web/API/Document/cookie), de l'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) ou de l'API [`Request`](/fr/docs/Web/API/Request). Cela protège des attaques _cross-site scripting_ ([XSS](/fr/docs/Glossary/XSS)).

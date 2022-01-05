@@ -48,7 +48,7 @@ translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 
 <p>Web Audio API로 무엇인가를 하기 위해서는 오디오 컨텍스트의 인스턴스를 생성할 필요가 있습니다. 이는 우리에게 API의 모든 기능에 접근할 수 있게 합니다.</p>
 
-<pre class="brush: js">// for legacy browsers
+<pre class="brush: js">// 레거시 브라우저를 위해
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 
 const audioContext = new AudioContext();
@@ -73,10 +73,10 @@ const audioContext = new AudioContext();
 
 <p>Web Audio API로 얻을 수 있는 모든 것을 사용하려면 이 요소에서 소스를 가져와 우리가 만든 컨텍스트에 연결해야 합니다. 운 좋게도 이걸 할 수 있는 메서드가 있습니다 — {{domxref("AudioContext.createMediaElementSource")}}입니다:</p>
 
-<pre class="brush: js">// get the audio element
+<pre class="brush: js">// 오디오 요소를 얻습니다
 const audioElement = document.querySelector('audio');
 
-// pass it into the audio context
+// 오디오 요소를 오디오 컨텍스트에 전달합니다
 const track = audioContext.createMediaElementSource(audioElement);
 </pre>
 
@@ -112,17 +112,17 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 <p>이제 우리는 재생과 정지 기능을 추가할 수 있습니다.</p>
 
-<pre class="brush: js">// select our play button
+<pre class="brush: js">// 재생 버튼을 선택합니다
 const playButton = document.querySelector('button');
 
 playButton.addEventListener('click', function() {
 
-    // check if context is in suspended state (autoplay policy)
+    // 컨텍스트가 연기된(suspended) 상태에 있는지 검사합니다 (자동 재생 정책)
     if (audioContext.state === 'suspended') {
         audioContext.resume();
     }
 
-    // play or pause track depending on state
+    // 상태에 따라 트랙을 재생하거나 정지합니다
     if (this.dataset.playing === 'false') {
         audioElement.play();
         this.dataset.playing = 'true';
@@ -180,7 +180,7 @@ volumeControl.addEventListener('input', function() {
 </pre>
 
 <div class="note">
-<p><strong>참고</strong>: 노드 객체의 값 (예: <code>GainNode.gain</code>)은 간단한 값이 아닙니다; 실제로는 {{domxref("AudioParam")}} 유형의 객체입니다 — 이것들은 매개변수라고 불립니다. 이것이 우리가 단순히 <code>gain</code>에 직접 값을 설정하기보다, <code>GainNode.gain</code>의 <code>value</code> 속성을 설정해야만 하는 이유입니다. 예를 들자면, 매개변수에 설정된 기간 동안 사이에 변화하는 특정한 값들의 집합을 전달하는 것을 감안하며, 이는 이것들이 더욱 유연하게 될 수 있게 합니다.</p>
+<p><strong>참고</strong>: 노드 객체의 값 (예: <code>GainNode.gain</code>)은 단순한 값이 아닙니다. 이 값은 실제로는 {{domxref("AudioParam")}} 유형의 객체입니다 — 이것은 파라미터라고 불립니다. 이것이 바로 <code>gain</code>에 직접 값을 설정하기보다, <code>GainNode.gain</code>의 <code>value</code> 속성을 설정해야 하는 이유입니다. 이렇게 함은 이 객체가 좀 더 유연해 질 수 있게 하는데, 예를 들자면 파라미터에 주어진 시간 사이에서 변화시킬 값들의 집합을 전달하는 것을 고려해 볼 수 있겠습니다.</p>
 </div>
 
 <p>좋습니다, 이제 사용자는 트랙의 볼륨을 업데이트할 수 있습니다! gain 노드는 만약 여러분이 무음 기능을 추가하기를 원한다면 사용하기에 완벽한 노드입니다.</p>

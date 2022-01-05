@@ -1,10 +1,6 @@
 ---
 title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
 translation_of: Web/API/CanvasRenderingContext2D/beginPath
 ---
 {{APIRef}}
@@ -100,7 +96,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('code_jouable', 700, 460) }}
+{{ EmbedLiveSample('Code_jouable', 700, 460) }}
 
 ## Spécifications
 

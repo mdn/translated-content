@@ -1,12 +1,8 @@
 ---
 title: rotateY()
 slug: Web/CSS/transform-function/rotateY()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/rotateY()
+browser-compat: css.types.transform-function.rotateY
 ---
 {{CSSRef}}
 
@@ -14,20 +10,24 @@ La fonction **`rotateY()`** définit une rotation, qui déplace l'élément auto
 
 {{EmbedInteractiveExample("pages/css/function-rotateY.html")}}
 
-L'axe de la rotation passe par l'origine du repère, définie par la propriété {{cssxref("transform-origin")}}.
+L'axe de la rotation passe par l'origine du repère, définie par la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin).
 
 `rotateY(a)` est une notation raccourcie, équivalente à `rotate3D(0, 1, 0, a)`.
 
-> **Note :** Contrairement aux rotations appliqués dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
+> **Note :** Contrairement aux rotations appliquées dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
 
 ## Syntaxe
 
-    rotateY(a)
+L'angle de la rotation appliquée par `rotateY()` est fourni par une valeur [`<angle>`](/fr/docs/Web/CSS/angle). Si cette valeur est positive, la rotation s'effectuera dans le sens horaire&nbsp;; si elle est négative, la rotation s'effectuera dans le sens anti-horaire.
+
+```css
+rotateY(a)
+```
 
 ### Valeurs
 
 - `a`
-  - : Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
+  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
 
 <table class="standard-table">
   <thead>
@@ -83,22 +83,22 @@ L'axe de la rotation passe par l'origine du repère, définie par la propriété
 ### HTML
 
 ```html
-<p>toto</p>
-<p class="transformation">truc</p>
+<div>Normal</div>
+<div class="rotated">Tourné</div>
 ```
 
 ### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
 }
 
-.transformation {
+.rotated {
   transform: rotateY(60deg);
-  background-color: blue;
+  background-color: pink;
 }
 ```
 
@@ -108,15 +108,13 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS Transforms 2", "#funcdef-rotatey", "rotateY()")}} | {{Spec2("CSS Transforms 2")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)

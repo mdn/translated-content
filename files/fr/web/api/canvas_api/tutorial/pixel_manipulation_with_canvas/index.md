@@ -95,7 +95,7 @@ Dans cet exemple, nous utilisons la méthode [getImageData() ](/fr/docs/Web/API/
     }
     canvas.addEventListener('mousemove', pick);
 
-{{ EmbedLiveSample('A_color_picker', 610, 240) }}
+{{ EmbedLiveSample('Une_pipette_à_couleur', 610, 240) }}
 
 ## Peinture des données pixel dans un contexte
 
@@ -166,7 +166,7 @@ function dessiner(img) {
 }
 ```
 
-{{ EmbedLiveSample('Grayscaling_and_inverting_colors', 330, 270) }}
+{{ EmbedLiveSample('Niveaux_de_gris_et_inversion_de_couleurs', 330, 270) }}
 
 ## Zoom et anticrénelage
 
@@ -233,7 +233,7 @@ function draw(img) {
 }
 ```
 
-{{ EmbedLiveSample('exemple_de_zoom', 620, 490) }}
+{{ EmbedLiveSample('Exemple_de_zoom', 620, 490) }}
 
 ## Sauvegarde des images
 

@@ -1,12 +1,6 @@
 ---
 title: Element.setAttribute()
 slug: Web/API/Element/setAttribute
-tags:
-  - API
-  - Attributs
-  - DOM
-  - Element
-  - Méthode
 translation_of: Web/API/Element/setAttribute
 ---
 {{APIRef("DOM")}}
@@ -63,7 +57,7 @@ Ceci démontre 2 choses :
 - le premier appel de `setAttribute()` ci-dessus montre la modification de la valeur de l'attribut `name` en "helloButton". Vous pouvez le voir en utilisant l'inspecteur de page de votre navigateur ([Chrome](https://developers.google.com/web/tools/chrome-devtools/inspect-styles), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/dom-explorer), [Firefox](/en-US/docs/Tools/Page_Inspector), [Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html)).
 - Pour définir la valeur d'un attribut booléen, tel que `disabled`, vous pouvez spécifier n'importe quelle valeur. Une chaîne vide ou le nom de l'attribut sont des valeurs recommandées. Tout ce qui compte est que si l'attribut est présent, quelle que soit sa valeur réelle, sa valeur est considérée comme `true` (_vraie_). L'absence de l'attribut signifie que sa valeur est `false` (_fausse_). En définissant la valeur de l'attribut `disabled` sur la chaîne vide (""), nous définissons `disabled` sur `true`, ce qui entraîne la désactivation du bouton.
 
-{{ EmbedLiveSample('Example', '300', '50') }}
+{{ EmbedLiveSample('Exemple', '300', '50') }}
 
 {{DOMAttributeMethods}}
 

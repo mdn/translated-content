@@ -7,6 +7,7 @@ tags:
   - Experimental
   - Interface
   - Reference
+browser-compat: api.OffscreenCanvas
 translation_of: Web/API/OffscreenCanvas
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
@@ -113,9 +114,7 @@ onmessage = function(evt) {
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#the-offscreencanvas-interface", "OffscreenCanvas")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

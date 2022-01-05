@@ -1,11 +1,6 @@
 ---
 title: '-moz-outline-radius-bottomright'
 slug: Web/CSS/-moz-outline-radius-bottomright
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-moz-outline-radius-bottomright
 ---
 {{Non-standard_header}}{{CSSRef}}
@@ -33,7 +28,7 @@ p {
 
 ### Résultat
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Exemples")}}
 
 > **Note :** Cette propriété étant spécifique à Firefox, l'exemple ci-avant ne fonctionnera pas dans un autre navigateur.
 

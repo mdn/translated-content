@@ -1,13 +1,6 @@
 ---
 title: CanvasRenderingContext2D.direction
 slug: Web/API/CanvasRenderingContext2D/direction
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/direction
 ---
 {{APIRef}} {{SeeCompatTable}}
@@ -96,7 +89,7 @@ textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
 ```
 
-{{EmbedLiveSample('code_jouable', 700, 360)}}
+{{EmbedLiveSample('Code_jouable', 700, 360)}}
 
 ## Spécifications
 

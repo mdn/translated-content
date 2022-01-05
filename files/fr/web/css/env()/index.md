@@ -1,13 +1,6 @@
 ---
 title: env()
 slug: Web/CSS/env()
-tags:
-  - CSS
-  - CSS Function
-  - CSS Variables
-  - Fonction
-  - Reference
-  - env()
 translation_of: Web/CSS/env()
 ---
 {{CSSRef}}
@@ -57,7 +50,7 @@ env(safe-area-inset-left, 1.4rem);
 
 {{csssyntax}}
 
-## Examples
+## Exemples
 
 Dans l'exemple qui suit, on utilise le deuxième paramètre de la notation fonctionnelle `env()` afin de fournir une valeur de recours lorsque la variable d'environnement n'est pas disponible.
 

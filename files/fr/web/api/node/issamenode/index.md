@@ -1,11 +1,6 @@
 ---
 title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/Node/isSameNode
 ---
 {{APIRef("DOM")}}
@@ -58,7 +53,7 @@ output.innerHTML += "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) 
 
 ### Résultats
 
-{{ EmbedLiveSample('Example', 480) }}
+{{ EmbedLiveSample('Exemple', 480) }}
 
 ## Spécifications
 
