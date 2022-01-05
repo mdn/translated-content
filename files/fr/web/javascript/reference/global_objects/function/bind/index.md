@@ -133,7 +133,7 @@ fleur.floraison();
 
 ### Les fonctions liées utilisées en tant que constructeurs
 
-> **Attention :** Cette section illustre des capacités marginales et des cas aux limites concernant l'usage de la méthode bind(). Les méthodes montrées ci-après ne sont pas les façons les plus propres de faire les choses et ne devraient pas être utilisées en production.
+> **Attention :** Cette section illustre des capacités marginales et des cas aux limites concernant l'usage de la méthode bind(). Les méthodes montrées ci-après ne sont pas les façons les plus propres de faire les choses et ne devraient pas être utilisées en production.
 
 Les fonctions liées sont automatiquement disponibles à l'usage pour toutes les instances initialisées avec l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}} sur la fonction cible. Quand une fonction liée est utilisée pour construire une valeur, le `this` fourni est ignoré. Cependant, les arguments fournis sont toujours préremplis lors de l'appel au constructeur :
 
