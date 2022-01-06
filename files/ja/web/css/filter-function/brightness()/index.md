@@ -3,68 +3,58 @@ title: brightness()
 slug: Web/CSS/filter-function/brightness()
 tags:
   - CSS
-  - CSS Function
-  - Filter Effects
-  - Function
-  - Reference
+  - CSS 関数
+  - フィルター効果
+  - 関数
+  - リファレンス
+browser-compat: css.types.filter-function.brightness
 translation_of: Web/CSS/filter-function/brightness()
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p><strong><code>brightness()</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の関数で、入力画像に線形乗算を適用し、明るく又は暗くします。その結果は {{cssxref("&lt;filter-function&gt;")}} です。</p>
+**`brightness()`** は [CSS](/ja/docs/Web/CSS) の関数で、入力画像に線形乗算を適用し、明るくしたり暗くしたりします。その結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
-<div>{{EmbedInteractiveExample("pages/css/function-brightness.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-brightness.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```css
+brightness(amount)
+```
 
-<pre class="syntaxbox notranslate">brightness(<var>amount</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `amount`
+  - : 結果の明るさで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `100%` 未満の値では画像が暗くなり、 `100%` を超える値では画像が明るくなります。 `0%` の値では画像が完全に黒くなり、 `100%` の値では入力が変更されないままになります。補間時の欠損値は `1` です。
 
-<dl>
- <dt><code><var>amount</var></code></dt>
- <dd>結果の明るさで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 <code>100%</code> 未満の値では画像が暗くなり、 <code>100%</code> を超える値では画像が明るくなります。 <code>0%</code> の値では画像が完全に黒くなり、 <code>100%</code> の値では入力が変更されないままになります。補間時の欠損値は <code>1</code> です。</dd>
-</dl>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### 数値とパーセント値を用いた brightness の設定
 
-<h3 id="Setting_brightness_using_numbers_and_percentages" name="Setting_brightness_using_numbers_and_percentages">数値とパーセント値を使用した brightness の設定</h3>
-
-<pre class="brush: css notranslate">brightness(0%)   /* 完全に黒 */
-brightness(0.4)  /* 明るさ40% */
+```css
+>brightness(0%)   /* 完全に黒 */
+brightness(0.4)  /* 明るさ 40% */
 brightness(1)    /* 効果なし */
-brightness(200%) /* 明るさ2倍 */</pre>
+brightness(200%) /* 明るさ 2 倍 */
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Filters 1.0', '#funcdef-filter-brightness', 'brightness()')}}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## ブラウザーの互換性
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>{{cssxref("filter-function/blur", "blur()")}}</li>
- <li>{{cssxref("filter-function/brightness", "brightness()")}}</li>
- <li>{{cssxref("filter-function/drop-shadow", "drop-shadow()")}}</li>
- <li>{{cssxref("filter-function/grayscale", "grayscale()")}}</li>
- <li>{{cssxref("filter-function/hue-rotate", "hue-rotate()")}}</li>
- <li>{{cssxref("filter-function/invert", "invert()")}}</li>
- <li>{{cssxref("filter-function/opacity", "opacity()")}}</li>
- <li>{{cssxref("filter-function/saturate", "saturate()")}}</li>
- <li>{{cssxref("filter-function/sepia", "sepia()")}}</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxref("filter-function/blur()", "blur()")}}
+- {{cssxref("filter-function/contrast()", "contrast()")}}
+- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
+- {{cssxref("filter-function/grayscale()", "grayscale()")}}
+- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
+- {{cssxref("filter-function/invert()", "invert()")}}
+- {{cssxref("filter-function/opacity()", "opacity()")}}
+- {{cssxref("filter-function/saturate()", "saturate()")}}
+- {{cssxref("filter-function/sepia()", "sepia()")}}
