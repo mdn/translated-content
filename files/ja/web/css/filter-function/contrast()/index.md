@@ -4,66 +4,57 @@ slug: Web/CSS/filter-function/contrast()
 tags:
   - CSS
   - CSS 関数
-  - Reference
   - フィルター効果
+  - 関数
+  - リファレンス
+browser-compat: css.types.filter-function.contrast
 translation_of: Web/CSS/filter-function/contrast()
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p><strong><code>contrast()</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の 関数で、入力画像のコントラストを調整します。結果は {{cssxref("&lt;filter-function&gt;")}} です。</p>
+**`contrast()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、入力画像のコントラストを調整します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
-<div>{{EmbedInteractiveExample("pages/css/function-contrast.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-contrast.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```css
+contrast(amount)
+```
 
-<pre class="syntaxbox notranslate">contrast(<var>amount</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `amount`
+  - : 結果のコントラストで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `100%` 未満の値ではコントラストが下がり、 `100%` を超える値ではコントラストが上がります。 `0%` の値では画像が完全に灰色になり、 `100%` の値では入力が変更されないままになります。補間時の欠損値は `1` です。
 
-<dl>
- <dt><code><var>amount</var></code></dt>
- <dd>結果のコントラストで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 <code>100%</code> 未満の値ではコントラストが下がり、 <code>100%</code> を超える値ではコントラストが上がります。 <code>0%</code> の値では画像が完全に灰色になり、 <code>100%</code> の値では入力が変更されないままになります。補間時の欠損値は <code>1</code> です。</dd>
-</dl>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### 数値とパーセント値を使用した contrast の設定
 
-<h3 id="Setting_contrast_using_numbers_and_percentages" name="Setting_contrast_using_numbers_and_percentages">数値とパーセント値を使用した contrast の設定</h3>
-
-<pre class="brush: css notranslate">contrast(0)     /* 完全な灰色 */
-contrast(65%)   /* 65%のコントラスト */
+```css
+contrast(0)     /* 完全な灰色 */
+contrast(65%)   /* 65% のコントラスト */
 contrast(1)     /* 効果なし */
-contrast(200%)  /* 2倍のコントラスト */</pre>
+contrast(200%)  /* 2 倍のコントラスト */
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Filters 1.0', '#funcdef-filter-contrast', 'contrast()')}}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## ブラウザーの互換性
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>{{cssxref("filter-function/blur", "blur()")}}</li>
- <li>{{cssxref("filter-function/brightness", "brightness()")}}</li>
- <li>{{cssxref("filter-function/drop-shadow", "drop-shadow()")}}</li>
- <li>{{cssxref("filter-function/grayscale", "grayscale()")}}</li>
- <li>{{cssxref("filter-function/hue-rotate", "hue-rotate()")}}</li>
- <li>{{cssxref("filter-function/invert", "invert()")}}</li>
- <li>{{cssxref("filter-function/opacity", "opacity()")}}</li>
- <li>{{cssxref("filter-function/saturate", "saturate()")}}</li>
- <li>{{cssxref("filter-function/sepia", "sepia()")}}</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxref("filter-function/blur()", "blur()")}}
+- {{cssxref("filter-function/brightness()", "brightness()")}}
+- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
+- {{cssxref("filter-function/grayscale()", "grayscale()")}}
+- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
+- {{cssxref("filter-function/invert()", "invert()")}}
+- {{cssxref("filter-function/opacity()", "opacity()")}}
+- {{cssxref("filter-function/saturate()", "saturate()")}}
+- {{cssxref("filter-function/sepia()", "sepia()")}}
