@@ -3,95 +3,86 @@ title: 列結合子
 slug: Web/CSS/Column_combinator
 tags:
   - CSS
-  - Experimental
-  - Reference
-  - Selectors
+  - 実験的
+  - リファレンス
   - セレクター
   - 表
+browser-compat: css.selectors.column
 translation_of: Web/CSS/Column_combinator
 ---
-<div>{{CSSRef("Selectors")}}{{Draft}}{{SeeCompatTable}}</div>
+{{CSSRef("Selectors")}}{{SeeCompatTable}}
 
-<p><ruby><strong>列結合子</strong><rp> (</rp><rt>column combinator</rt><rp>) </rp></ruby> (<code>||</code>) は、二つの CSS セレクターの間に配置されます。前者のセレクターに一致する列要素に所属する、後者のセレクターに一致する要素に一致します。</p>
+**列結合子** (column combinator, `||`) は、2 つの CSS セレクターの間に配置されます。前者のセレクターに一致する列要素に所属する、後者のセレクターに一致する要素に一致します。
 
-<pre class="brush: css">/* 表の "selected" クラスの列に所属するセル */
+```css
+/* 表の "selected" クラスの列に所属するセル */
 col.selected || td {
-  background: gray;
+  background: gray;
 }
-</pre>
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var>column-selector</var> || <var>cell-selector</var> {
-  <var>/* スタイルプロパティ */</var>
+```css
+column-selector || cell-selector {
+  /* スタイルプロパティ */
 }
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;table border="1"&gt;
-  &lt;colgroup&gt;
-    &lt;col span="2"/&gt;
-    &lt;col class="selected"/&gt;
-  &lt;/colgroup&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;A
-      &lt;td&gt;B
-      &lt;td&gt;C
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td colspan="2"&gt;D&lt;/td&gt;
-      &lt;td&gt;E&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;F&lt;/td&gt;
-      &lt;td colspan="2"&gt;G&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">col.selected || td {
-  background: gray;
-  color: white;
-  font-weight: bold;
-}</pre>
-
-<h3 id="Result" name="Result">結果</h3>
-
-<p>{{EmbedLiveSample("Examples", "100%")}}</p>
-
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-column-combinator", "column combinator")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
+```html
+<table border="1">
+  <colgroup>
+    <col span="2"/>
+    <col class="selected"/>
+  </colgroup>
+  <tbody>
+    <tr>
+      <td>A
+      <td>B
+      <td>C
+    </tr>
+    <tr>
+      <td colspan="2">D</td>
+      <td>E</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td colspan="2">G</td>
+    </tr>
+  </tbody>
 </table>
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+### CSS
 
-<p>{{Compat("css.selectors.column")}}</p>
+```css
+col.selected || td {
+  background: gray;
+  color: white;
+  font-weight: bold;
+}
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+### 結果
 
-<ul>
- <li>{{HTMLElement("col")}}</li>
- <li>{{HTMLElement("colgroup")}}</li>
- <li>{{CSSxRef("grid")}}</li>
-</ul>
+{{EmbedLiveSample("Examples", "100%")}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{HTMLElement("col")}}
+- {{HTMLElement("colgroup")}}
+- {{CSSxRef("grid")}}
+- {{CSSxRef(":nth-col")}}
+- {{CSSxRef(":nth-last-col")}}
