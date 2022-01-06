@@ -156,9 +156,9 @@ gods.forEach(function (eachName, index){
 <p><strong>Nota</strong>: Você pode encontrar a versão finalizada no GitHub (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js">veja aqui</a>, e também <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/">seja a execução</a>).</p>
 </div>
 
-<p>Aqui nós vemos <code>fetch</code><code>()</code> pegando um único parâmetro — a URL de um recurso que você quer pegar da rede — e retornando uma <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a>. A promise é um objeto que representa a conclusão ou falha da operação assíncrona. Ela represente um estado intermediário, por assim dizer. É praticamente o jetio do navegador de dizer "Eu prometo voltar para você com a resposta o mais rápido possível", daí o nome "promessa".</p>
+<p>Aqui nós vemos <code>fetch</code><code>()</code> pegando um único parâmetro — a URL de um recurso que você quer pegar da rede — e retornando uma <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a>. A promise é um objeto que representa a conclusão ou falha da operação assíncrona. Ela represente um estado intermediário, por assim dizer. É praticamente o jeito do navegador de dizer "Eu prometo voltar para você com a resposta o mais rápido possível", daí o nome "promessa".</p>
 
-<p>Você pode levar um tempo para se acostumar com esse conceito; Ele se parece um pouco com o {{interwiki("wikipedia", "Gato de Schrödinger")}} em ação. Nenhum dos possíveis resultados aconteceu ainda, então a operação fetch está esperando pelo resultado do navegador que vai completar a operação em algum ponto no futuro.</p>
+<p>Você pode levar um tempo para se acostumar com esse conceito. Ele se parece um pouco com o {{interwiki("wikipedia", "Gato de Schrödinger")}} em ação. Nenhum dos possíveis resultados aconteceu ainda, então a operação fetch está esperando pelo resultado do navegador que vai completar a operação em algum ponto no futuro.</p>
 
 <p>Nós temos três blocos de código encadeados ao fim do <code>fetch()</code>:</p>
 
@@ -190,7 +190,7 @@ gods.forEach(function (eachName, index){
 
 <h2 id="A_natureza_do_código_assíncrono">A natureza do código assíncrono</h2>
 
-<p>Vamos explorar um exemplo que ilustra a natureza do código assíncrono, mostrando o que pode acontecer quando nós não estamos cientes da ordem de execução e dos problemas em tentar tratar código async como código síncrono. O exemplo a seguir é muito similar ao que vimos antes (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync.html">veja aqui</a>, e <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html">a fonte</a>). Uma diferença e que nós icluimos um número de declarações {{domxref("console.log()")}} para ilustrar na ordem que você pensa que o código fosse executado.</p>
+<p>Vamos explorar um exemplo que ilustra a natureza do código assíncrono, mostrando o que pode acontecer quando nós não estamos cientes da ordem de execução e dos problemas em tentar tratar código async como código síncrono. O exemplo a seguir é muito similar ao que vimos antes (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync.html">veja aqui</a>, e <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html">a fonte</a>). Uma diferença e que nós icluímos um número de declarações {{domxref("console.log()")}} para ilustrar na ordem que você pensa que o código fosse executado.</p>
 
 <pre class="brush: js">console.log ('Starting');
 let image;
@@ -251,21 +251,21 @@ console.log("all done");</pre>
 
 <h2 id="Aprendizado_ativo_faça_tudo_async!">Aprendizado ativo: faça tudo async!</h2>
 
-<p>Faça que o exemplo problemático de <code>fetch()</code> imprima três mensagens <code>console.log()</code> na tela na ordem desejada, você pode fazer a útima declaração <code>console.log()</code> assíncrona também. Isso pode ser feito colocando ela em outro bloco <code>.then()</code> encadeamo no final do segundo bloco, ou por simplesmente movê-lo para dentro do segundo bloco <code>then()</code>.</p>
+<p>Para resolver o <code>fetch()</code> problematico e imprimir três mensagens <code>console.log()</code> na tela na ordem desejada, você pode fazer a útima declaração <code>console.log()</code> assíncrona também. Isso pode ser feito colocando ela em outro bloco <code>.then()</code> encadeado no final do segundo bloco, ou por simplesmente movê-lo para dentro do segundo bloco <code>then()</code>.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: If you get stuck, you can <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">find an answer here</a> (see it <a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">running live</a> also). You can also find a lot more information on promises in our <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a> guide, later on in the module.</p>
+<p><strong>Nota</strong>: Se você tiver dúvidas, pode encontrar uma resposta aqui (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">veja o exemplo</a>, e a <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">fonte</a>). Você também pode encontrar mais informações sobre promessas em nosso guia de <a href="/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises">Programação elegante com Promises</a>, ele será apresentado mais adiante neste módulo.</p>
 </div>
 
-<h2 id="Conclusion">Conclusion</h2>
+<h2 id="Conclusion">Conclusão</h2>
 
-<p>In its most basic form, JavaScript is a synchronous, blocking, single-threaded language, in which only one operation can be in progress at a time. But web browsers define functions and APIs that allow us to register functions that should not be executed synchronously, and should instead be invoked asynchronously when some kind of event occurs (the passage of time, the user's interaction with the mouse, or the arrival of data over the network, for example). This means that you can let your code do several things at the same time without stopping or blocking your main thread.</p>
+<p>Em sua forma mais básica, o JavaScript é uma linguagem síncrona, de bloqueio e de thread único, na qual apenas uma operação pode estar em andamento por vez. Mas os navegadores da web definem funções e APIs que nos permitem registrar funções que não devem ser executadas de forma síncrona e, em vez disso, devem ser invocadas de forma assíncrona quando ocorre algum tipo de evento (a passagem do tempo, a interação do usuário com o mouse ou a chegada de dados através da rede, por exemplo). Isso significa que você pode permitir que seu código faça várias coisas ao mesmo tempo sem interromper ou bloquear seu thread principal.</p>
 
-<p>Whether we want to run code synchronously or asynchronously will depend on what we're trying to do.</p>
+<p>A execução de um código de forma síncrona ou assíncrona, dependerá do que estamos tentando fazer.</p>
 
-<p>There are times when we want things to load and happen right away. For example when applying some user-defined styles to a webpage you'll want the styles to be applied as soon as possible.</p>
+<p>Há momentos em que queremos que as coisas carreguem e aconteçam imediatamente. Por exemplo, ao aplicar alguns estilos definidos pelo usuário a uma página da web, você deseja que os estilos sejam aplicados o mais rápido possível.</p>
 
-<p>If we're running an operation that takes time however, like querying a database and using the results to populate templates, it is better to push this off the main thread and complete the task asynchronously. Over time, you'll learn when it makes more sense to choose an asynchronous technique over a synchronous one.</p>
+<p>Se estivermos executando uma operação que leva tempo, no entanto, como consultar um banco de dados e usar os resultados para preencher os modelos, é melhor mover isso para fora do thread principal e concluir a tarefa de forma assíncrona. Com o tempo, você aprenderá quando faz mais sentido escolher uma técnica assíncrona em vez de uma síncrona.</p>
 
 <ul>
 </ul>
