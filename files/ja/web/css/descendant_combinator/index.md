@@ -3,105 +3,79 @@ title: 子孫結合子
 slug: Web/CSS/Descendant_combinator
 tags:
   - CSS
-  - Reference
-  - Selector
-  - Selectors
+  - リファレンス
+  - セレクター
+browser-compat: css.selectors.descendant
 translation_of: Web/CSS/Descendant_combinator
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p><ruby><strong>子孫結合子</strong><rp> (</rp><rt>descendant combinator</rt><rp>)</rp></ruby> — 通常は単一の空白文字 (<code> </code>) で表される — は2つの CSS セレクターを結合し、1つ目のセレクターに一致する要素が祖先 (親、親の親、親の親の親、など) となっている2つ目のセレクターに一致します。子孫結合子を利用したセレクターは<dfn>子孫セレクター</dfn>と呼ばれます。</p>
+**子孫結合子** (descendant combinator) — 通常は単一の空白文字 (` `) で表される — は 2 つの CSS セレクターを結合し、 1 つ目のセレクターに一致する要素が祖先 (親、親の親、親の親の親、など) となっている 2 つ目のセレクターに一致します。子孫結合子を利用したセレクターは _子孫セレクター_ と呼ばれます。
 
-<pre class="brush: css no-line-numbers notranslate">/* "my-things" リストの子孫のリスト項目 */
+```css
+/* "my-things" リストの子孫のリスト項目 */
 ul.my-things li {
   margin: 2em;
-}</pre>
+}
+```
 
-<p>子孫結合子は、技術的には他の結合子がない2つのセレクターの間にある1つ以上の {{Glossary("CSS")}} {{Glossary("Whitespace", "ホワイトスペース")}}文字 ― 空白文字や4種類の制御文字 (復帰、ページ送り、改行、タブ文字) のうちの1つ ― です。さらに、結合子としてのホワイトスペース文字には任意の数の CSS コメントを含めることができます。</p>
+子孫結合子は、技術的には他の結合子がない 2 つのセレクターの間にある 1 つ以上の {{Glossary("CSS")}} の{{Glossary("Whitespace", "ホワイトスペース")}}文字 ― 空白文字や 4 種類の制御文字 (復帰、ページ送り、改行、タブ文字) のうちの 1 つ ― です。さらに、結合子としてのホワイトスペース文字には任意の数の CSS コメントを含めることができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>セレクター1</var> <var>セレクター2</var> {
-  <var>/* プロパティ宣言 */</var>
-}</pre>
+```css
+セレクター1 セレクター2 {
+  /* プロパティ宣言 */
+}
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">li {
+```css
+li {
   list-style-type: disc;
 }
 
 li li {
   list-style-type: circle;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li&gt;
-    &lt;div&gt;Item 1&lt;/div&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Subitem A&lt;/li&gt;
-      &lt;li&gt;Subitem B&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;div&gt;Item 2&lt;/div&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Subitem A&lt;/li&gt;
-      &lt;li&gt;Subitem B&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-<h3 id="Result" name="Result">結果</h3>
-
-<p>{{EmbedLiveSample("Examples", "100%", 160)}}</p>
-
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#descendant-combinators", "descendant combinator")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#descendant-combinators", "descendant combinator")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "selector.html#descendant-selectors", "descendant selectors")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1", "#contextual-selectors", "contextual selectors")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("css.selectors.descendant")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
+```html
 <ul>
- <li><a href="/ja/docs/Web/CSS/Child_combinator">子結合子</a></li>
+  <li>
+    <div>Item 1</div>
+    <ul>
+     - Subitem A
+     - Subitem B
+    </ul>
+  </li>
+  <li>
+    <div>Item 2</div>
+    <ul>
+     - Subitem A
+     - Subitem B
+    </ul>
+  </li>
 </ul>
+```
+
+### 結果
+
+{{EmbedLiveSample("Examples", "100%", 160)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [子結合子](/ja/docs/Web/CSS/Child_combinator)
