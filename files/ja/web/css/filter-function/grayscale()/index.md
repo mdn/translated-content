@@ -3,40 +3,57 @@ title: grayscale()
 slug: Web/CSS/filter-function/grayscale()
 tags:
   - CSS
-  - CSS Function
   - CSS 関数
-  - Filter Effects
-  - Reference
   - フィルター効果
+  - 関数
+  - リファレンス
+browser-compat: css.types.filter-function.grayscale
 translation_of: Web/CSS/filter-function/grayscale()
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <code><strong>grayscale()</strong></code> 関数は、入力画像をグレースケールに変換します。結果は {{cssxref("&lt;filter-function&gt;")}} です。</p>
+**`grayscale()`** は [CSS](/ja/docs/Web/CSS) の関数は、入力画像をグレースケールに変換します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
-<div>{{EmbedInteractiveExample("pages/css/function-grayscale.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-grayscale.html")}}
 
-<p class="hidden">この対話型サンプルのソースファイルは GitHub リポジトリに格納されています。対話型サンプルプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```css
+grayscale(amount)
+```
 
-<pre class="syntaxbox notranslate">grayscale(<em>amount</em>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `amount`
+  - : 変換の度合いで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `100%` の値では完全にグレースケールになり、 `0%` の値では入力が変更されないままになります。 `0%` と `100%` の間の値は、効果の割合です。省略時の既定値は `1` です。補間時の欠損値は `0` です。
 
-<dl>
- <dt><code>amount</code></dt>
- <dd>変換の度合いで、 {{cssxref("&lt;number&gt;")}} 又は {{cssxref("&lt;percentage&gt;")}} で指定します。 <code>100%</code> の値では完全にグレースケールになり、 <code>0%</code> の値では入力が変更されないままになります。 <code>0%</code> と <code>100%</code> の間の値は、効果の割合です。補間時の欠損値は <code>0</code> です。</dd>
-</dl>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### grayscale() の正しい値の例
 
-<pre class="brush: css notranslate">grayscale(0)     /* 効果なし */
+```css
+grayscale(0)     /* 効果なし */
 grayscale(.7)    /* 70% グレースケール */
-grayscale(100%)  /* 完全なグレースケール */</pre>
+grayscale(100%)  /* 完全なグレースケール */
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 仕様書
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
-</ul>
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxref("filter-function/blur()", "blur()")}}
+- {{cssxref("filter-function/brightness()", "brightness()")}}
+- {{cssxref("filter-function/contrast()", "contrast()")}}
+- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
+- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
+- {{cssxref("filter-function/invert()", "invert()")}}
+- {{cssxref("filter-function/opacity()", "opacity()")}}
+- {{cssxref("filter-function/saturate()", "saturate()")}}
+- {{cssxref("filter-function/sepia()", "sepia()")}}
