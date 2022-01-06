@@ -3,89 +3,71 @@ title: 子結合子
 slug: Web/CSS/Child_combinator
 tags:
   - CSS
-  - Reference
-  - Selector
-  - Selectors
+  - リファレンス
+  - セレクター
+browser-compat: css.selectors.child
 translation_of: Web/CSS/Child_combinator
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p><ruby><strong>子結合子</strong><rp> (</rp><rt>child combinator</rt><rp>)</rp></ruby> (<code>&gt;</code>) は2つの CSS セレクターの間に配置されます。2つ目のセレクターが1つ目のセレクターの直接の子要素の場合にのみマッチします。</p>
+**子結合子** (child combinator) (`>``) は 2 つの CSS セレクターの間に配置されます。 2 つ目のセレクターが 1 つ目のセレクターの直接の子要素の場合にのみ一致します。
 
-<pre class="brush: css no-line-numbers notranslate">/* "my-things"クラスを持つリストの子要素であるリスト項目 */
-ul.my-things &gt; li {
+```css
+/* "my-things"クラスを持つリストの子要素であるリスト項目 */
+ul.my-things > li {
   margin: 2em;
-}</pre>
+}
+```
 
-<p>2つ目のセレクターに一致する要素は、1つ目のセレクターに一致する要素の直接の子要素でなければなりません。これは、<a href="/ja/docs/Web/CSS/Descendant_combinator">子孫結合子</a>が1つ目のセレクターに一致する要素が祖先に存在する2つ目のセレクターに一致するすべての要素に一致するのに比べて厳密です。</p>
+2 つ目のセレクターに一致する要素は、 1 つ目のセレクターに一致する要素の直接の子要素でなければなりません。これは、[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)が 1 つ目のセレクターに一致する要素が祖先が存在する 2 つ目のセレクターに一致するすべての要素に一致するのに比べて厳密です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">セレクター1 &gt; セレクター2 { <em>スタイルプロパティ</em> }
-</pre>
+```css
+セレクター1 > セレクター2 { スタイルプロパティ }
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">span {
-  background-color: white;
+```css
+span {
+  background-color: aqua;
 }
 
-div &gt; span {
-  background-color: DodgerBlue;
+div > span {
+  background-color: yellow;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;
-  &lt;span&gt;Span #1, in the div.
-    &lt;span&gt;Span #2, in the span that's in the div.&lt;/span&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-&lt;span&gt;Span #3, not in the div at all.&lt;/span&gt;
-</pre>
+```html
+<div>
+  <span>Span #1, in the div.
+    <span>Span #2, in the span that's in the div.</span>
+  </span>
+</div>
+<span>Span #3, not in the div at all.</span>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Examples", "100%", 100)}}</p>
+{{EmbedLiveSample("Examples", "100%", 100)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#child-combinators", "child combinator")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#child-combinators", "child combinators")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "selector.html#child-selectors", "child selectors")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                        | 状態                               | 備考             |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName("CSS4 Selectors", "#child-combinators", "child combinator")}}     | {{Spec2("CSS4 Selectors")}} |                     |
+| {{SpecName("CSS3 Selectors", "#child-combinators", "child combinators")}}     | {{Spec2("CSS3 Selectors")}} | 変更なし          |
+| {{SpecName("CSS2.1", "selector.html#child-selectors", "child selectors")}} | {{Spec2("CSS2.1")}}             | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.selectors.child")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/Descendant_combinator">子孫結合子</a></li>
-</ul>
+- [子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)
