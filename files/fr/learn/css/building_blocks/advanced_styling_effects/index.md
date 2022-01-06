@@ -1,21 +1,10 @@
 ---
 title: Effets de boîte avancés
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
-tags:
-  - Article
-  - Boîtes
-  - CSS
-  - Codage
-  - Débutant
-  - Filtres
-  - Modes de mélange de couleurs
-  - Stylisation
-  - effets
-  - ombres de boîtes
 translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
 original_slug: Apprendre/CSS/Building_blocks/Advanced_styling_effects
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
+{{LearnSidebar}}
 
 Cet article est une sorte de boîte à malices : elle introduit certaines des fonctions avancées disponibles pour styliser les boîtes, fonctions n'entrant pas dans catégories vues plus haut — comme les ombres, les mélanges de couleurs ou les filtres.
 
@@ -46,7 +35,7 @@ Cet article est une sorte de boîte à malices : elle introduit certaines des fo
 
 Revenons au module [Styling text](/fr/docs/Learn/CSS/Styling_text) — nous y avons vu la propriété {{cssxref("text-shadow")}} : elle permet d'appliquer une ou plusieurs ombres portées au texte d'un élément. Il existe une propriété équivalente pour les boîtes — {{cssxref("box-shadow")}} : elle applique une ou plusieurs ombres portées à une boîte d'élément réelle. Tout comme les ombres de texte, les ombres de boîtes sont bien prises en charge par les navigateurs, mais seulement au-delà de IE9. Les utilisateurs des anciennes versions d'IE pourraient être confrontés à l'absence d'ombres ; donc, testez simplement vos designs pour être sûr que le contenu reste lisible sans ombrage.
 
-Vous trouverez les exemples de cet article dans le fichier  [box-shadow.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html) également).
+Vous trouverez les exemples de cet article dans le fichier [box-shadow.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html) également).
 
 ### Ombre simple pour une boîte
 
@@ -68,7 +57,7 @@ p {
 article {
   max-width: 500px;
   padding: 10px;
-  color: white ;
+  color: white;
   text-align: center;
   background-color: red;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
@@ -81,7 +70,7 @@ article {
 
 donnent le résultat suivant :
 
-{{ EmbedLiveSample('Ombre_simple_pour_une_boîte', '100%', 100) }}
+{{ EmbedLiveSample('', '100%', 100) }}
 
 Notez les quatre éléments valeur de la propriété `box-shadow` :
 
@@ -125,7 +114,7 @@ article {
 
 Nous obtenons le résultat suivant :
 
-{{ EmbedLiveSample('Ombres_multiples_pour_une_boîte', '100%', 100) }}
+{{ EmbedLiveSample('', '100%', 100) }}
 
 Voici quelque chose d'amusant : nous créons une boîte avec une impression de relief avec plusieurs couches de couleur. Vous pouvez utiliser ce procédé d'autre manière, par exemple pour donner une apparence plus réaliste avec des ombres à partir de plusieurs sources de lumière.
 
@@ -165,19 +154,19 @@ button:active {
 
 Et voici le résultat :
 
-{{ EmbedLiveSample('Autres_fonctionnalités_des_ombres_de_boîtes', '100%', 70) }}
+{{ EmbedLiveSample('', '100%', 70) }}
 
 Ici, nous avons mis en place un style de bouton avec des états différents selon qu'il a le focus, qu'il est survolé par le pointeur de souris ou qu'il est actif. Le bouton est doté d'une simple ombre noire définie par défaut, plus deux ombres d'insertion, l'une claire et l'autre sombre, placées sur les coins opposés du bouton pour lui donner un bel effet d'ombrage.
 
 Lorsque le bouton est cliqué, l'état actif entraîne le remplacement de la première ombre de la boîte par une ombre d'insertion très sombre, donnant l'apparence que le bouton est enfoncé.
 
-> **Note :** il y a un autre élément qui peut être paramétré parmi les valeurs de `box-shadow`  — une autre valeur de longueur peut être facultativement définie juste avant la définition de la couleur : le **rayon de diffusion**. S'il est défini, l'ombre devient plus grande que la boîte originelle. Ce paramètre n'est pas couramment utilisé, mais il est bon de le signaler.
+> **Note :** il y a un autre élément qui peut être paramétré parmi les valeurs de `box-shadow` — une autre valeur de longueur peut être facultativement définie juste avant la définition de la couleur : le **rayon de diffusion**. S'il est défini, l'ombre devient plus grande que la boîte originelle. Ce paramètre n'est pas couramment utilisé, mais il est bon de le signaler.
 
 ## Filtres
 
-Les filtres des CSS s'appliquent aux éléments de la même manière qu'on applique un filtre à un calque dans un logiciel graphique comme Photoshop. Diverses options différentes sont disponibles :  vous pouvez en prendre connaissance plus en détail sur la page de référence {{cssxref("filter")}}. Dans cette section, nous vous expliquons la syntaxe et vous montrons à quel point les résultats peuvent être amusants.
+Les filtres des CSS s'appliquent aux éléments de la même manière qu'on applique un filtre à un calque dans un logiciel graphique comme Photoshop. Diverses options différentes sont disponibles : vous pouvez en prendre connaissance plus en détail sur la page de référence {{cssxref("filter")}}. Dans cette section, nous vous expliquons la syntaxe et vous montrons à quel point les résultats peuvent être amusants.
 
-Fondamentalement, un filtre peut être appliqué à n'importe quel élément, bloc ou en ligne — il suffit d'utiliser la propriété `filter` et lui donner une valeur de fonction de filtrage particulière. Certaines options de filtrage disponibles font des choses tout à fait similaires à d'autres fonctionnalités des CSS, par exemple `drop-shadow()` fonctionne de manière semblable à {{cssxref("box-shadow")}} ou {{cssxref("text-shadow")}}  et donne des effets analogues.  Mieux encore, les filtres travaillent sur les formes exactes du contenu à l'intérieur de la boîte, pas seulement la boîte elle-même comme un ensemble. Cela peut donner des choses plus jolies, même si ce n'est pas toujours ce que vous vouliez. Prenons un exemple simple pour illustrer ce qui précède :
+Fondamentalement, un filtre peut être appliqué à n'importe quel élément, bloc ou en ligne — il suffit d'utiliser la propriété `filter` et lui donner une valeur de fonction de filtrage particulière. Certaines options de filtrage disponibles font des choses tout à fait similaires à d'autres fonctionnalités des CSS, par exemple `drop-shadow()` fonctionne de manière semblable à {{cssxref("box-shadow")}} ou {{cssxref("text-shadow")}} et donne des effets analogues. Mieux encore, les filtres travaillent sur les formes exactes du contenu à l'intérieur de la boîte, pas seulement la boîte elle-même comme un ensemble. Cela peut donner des choses plus jolies, même si ce n'est pas toujours ce que vous vouliez. Prenons un exemple simple pour illustrer ce qui précède :
 
 Tout d'abord, un HTML simple :
 
@@ -193,7 +182,7 @@ Et maintenant un peu de CSS pour créer une ombre portée à chacun :
 p {
   margin: 1rem auto;
   padding: 20px;
-  text-align: center ;
+  text-align: center;
   width: 100px;
   border: 5px dashed red;
 }
@@ -208,37 +197,37 @@ p {
 }
 ```
 
-Vous obtiendrez le résultat suivant :
+Vous obtiendrez le résultat suivant :
 
-{{ EmbedLiveSample('Filtres', '100%', 200) }}
+{{ EmbedLiveSample('', '100%', 200) }}
 
 Comme vous pouvez le voir, l'ombre portée obtenue avec le filtre est une réplique de la forme exacte du texte et du tireté de l'encadrement. L'ombre de la boîte est celle du rectangle opaque du conteneur.
 
 Quelques autres points à noter :
 
 - Les filtres sont une fonctionnalité très récente — ils sont pris en charge dans la plupart des navigateurs modernes, y compris Microsoft Edge, mais ils ne sont pas du tout pris en charge dans Internet Explorer. Si vous utilisez des filtres dans vos designs, vous devrez vous assurer que le contenu reste utilisable sans filtres.
-- Comme vous pouvez le voir, nous avons inclus une version de la propriété `filter` préfixée par `-webkit-`. On appelle cela un {{glossary("Vendor Prefix")}} (préfixe fournisseur) : c'est parfois utilisé par un navigateur avant de rendre définitive l'implémentation d'une nouvelle fonctionnalité. Cela permet de la prendre en charge et de l'expérimenter sans entrer en conflit avec la version non préfixée. Les préfixes fournisseur ne sont pas destinés à être utilisés par les développeurs web, mais ils sont parfois utilisés dans les pages de production si ces fonctionnalités expérimentales sont vraiment désirées. Dans notre cas, la version `-webkit-` de la propriété est actuellement requise pour une prise en charge par Chrome/Safari/Opera, alors que Edge et Firefox utilisent la version finale non préfixée.
+- Comme vous pouvez le voir, nous avons inclus une version de la propriété `filter` préfixée par `-webkit-`. On appelle cela un {{glossary("Vendor Prefix")}} (préfixe fournisseur) : c'est parfois utilisé par un navigateur avant de rendre définitive l'implémentation d'une nouvelle fonctionnalité. Cela permet de la prendre en charge et de l'expérimenter sans entrer en conflit avec la version non préfixée. Les préfixes fournisseur ne sont pas destinés à être utilisés par les développeurs web, mais ils sont parfois utilisés dans les pages de production si ces fonctionnalités expérimentales sont vraiment désirées. Dans notre cas, la version `-webkit-` de la propriété est actuellement requise pour une prise en charge par Chrome/Safari/Opera, alors que Edge et Firefox utilisent la version finale non préfixée.
 
 > **Note :** Si vous décidez d'utiliser des préfixes dans votre code, assurez-vous d'inclure tous les préfixes requis ainsi que la version non préfixée, afin que le plus grand nombre possible de navigateurs puissent utiliser la fonction, et lorsque les navigateurs abandonneront plus tard les préfixes, ils pourront également utiliser la version non préfixée. Soyez également averti que ces caractéristiques expérimentales pourraient changer, de sorte que votre code pourrait casser. Il est vraiment préférable d'expérimenter avec ces fonctions jusqu'à ce que les préfixes soient supprimés.
 
-Vous pouvez voir d'autres exemples de filtres sur [filters.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/filters.html)).
+Vous pouvez voir d'autres exemples de filtres sur [filters.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/filters.html)).
 
 ## Modes de mélange de couleurs
 
-Les modes de mélanges de couleurs des CSS  permettent d'effectuer des combinaisons de formes et de couleurs entre deux éléments superposés — la couleur finale montrée pour chaque pixel est le résultat d'une combinaison de la couleur originale du pixel et de celle du pixel dans le calque de superposition. Ces modes de mélange sont des procédés familiers aux utilisateurs d'applications graphiques comme Photoshop.
+Les modes de mélanges de couleurs des CSS permettent d'effectuer des combinaisons de formes et de couleurs entre deux éléments superposés — la couleur finale montrée pour chaque pixel est le résultat d'une combinaison de la couleur originale du pixel et de celle du pixel dans le calque de superposition. Ces modes de mélange sont des procédés familiers aux utilisateurs d'applications graphiques comme Photoshop.
 
-Deux propriétés utilisent les modes de mélange de couleurs dans les CSS :
+Deux propriétés utilisent les modes de mélange de couleurs dans les CSS :
 
 - {{cssxref("background-blend-mode")}} qui mélange plusieurs images d'arrière‑plan et des couleurs sur un seul élément.
 - {{cssxref("mix-blend-mode")}} qui mélange les couleurs de l'élément auquel la propriété est appliquée avec un élément de superposition — à la fois le fond et le contenu.
 
-Vous trouverez beaucoup plus d'exemples de ce qui est disponible à la page [blend-modes.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html)  (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html)) et à la page de référence de {{cssxref("&lt;blend-mode&gt;")}}.
+Vous trouverez beaucoup plus d'exemples de ce qui est disponible à la page [blend-modes.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html)) et à la page de référence de {{cssxref("&lt;blend-mode&gt;")}}.
 
 > **Note :** Les modes de mélange sont aussi une toute nouvelle fonctionnalité un petit peu moins bien prise en charge que les filtres. Il n'y a pas de prise en charge encore dans Edge et Safari ne l'accepte que partiellement.
 
 ### background-blend-mode
 
-Regardons à nouveau des exemples pour mieux comprendre. D'abord, {{cssxref("background-blend-mode")}} — nous montrons une couple de simples éléments {{htmlelement("div")}} avec lesquels vous pourrez comparer l'original et la version avec mélange de couleurs :
+Regardons à nouveau des exemples pour mieux comprendre. D'abord, {{cssxref("background-blend-mode")}} — nous montrons une couple de simples éléments {{htmlelement("div")}} avec lesquels vous pourrez comparer l'original et la version avec mélange de couleurs :
 
 ```html
 <div>
@@ -247,7 +236,7 @@ Regardons à nouveau des exemples pour mieux comprendre. D'abord, {{cssxref("bac
 </div>
 ```
 
-Maintenant la CSS — nous ajoutons aux `<div>` une image d'arrière‑plan sur un fond vert :
+Maintenant la CSS — nous ajoutons aux `<div>` une image d'arrière‑plan sur un fond vert :
 
 ```css
 div {
@@ -256,7 +245,7 @@ div {
   padding: 10px;
   margin: 10px;
   display: inline-block;
-  background: url(https://mdn.mozillademos.org/files/13090/colorful-heart.png) no-repeat center 20px;
+  background: url(colorful-heart.png) no-repeat center 20px;
   background-color: green;
 }
 
@@ -265,13 +254,13 @@ div {
 }
 ```
 
-Le résultat obtenu est le suivant  — à gauche l'original et le mode mélange `multiply` à droite :
+Le résultat obtenu est le suivant — à gauche l'original et le mode mélange `multiply` à droite :
 
-{{ EmbedLiveSample('background-blend-mode', '100%', 200) }}
+{{ EmbedLiveSample('', '100%', 200) }}
 
 ### mix-blend-mode
 
-Voyons maintenant {{cssxref("mix-blend-mode")}}. Nous présentons les deux même `<div>`, mais chacun est posé sur un fond mauve pour montrer les effets du mélange :
+Voyons maintenant {{cssxref("mix-blend-mode")}}. Nous présentons les deux même `<div>`, mais chacun est posé sur un fond mauve pour montrer les effets du mélange :
 
 ```html
 <article>
@@ -315,7 +304,7 @@ article div:first-child {
   position: absolute;
   top: 10px;
   left: 0;
-  background: url(https://mdn.mozillademos.org/files/13090/colorful-heart.png) no-repeat center 20px;
+  background: url(colorful-heart.png) no-repeat center 20px;
   background-color: green;
 }
 
@@ -332,9 +321,9 @@ article div:last-child {
 }
 ```
 
-Nous obtenons le résultat suivant :
+Nous obtenons le résultat suivant :
 
-{{ EmbedLiveSample('mix-blend-mode', '100%', 200) }}
+{{ EmbedLiveSample('', '100%', 200) }}
 
 Vous voyez ici que `mix-blend-mode: multiply;` a mélangé non seulement les deux images d'arrière plan, mais également la couleur du `<div>` situé dessous.
 
@@ -342,7 +331,7 @@ Vous voyez ici que `mix-blend-mode: multiply;` a mélangé non seulement les deu
 
 ## -webkit-background-clip: text
 
-L'autre fonctionnalité naissante, que nous mentionnons brièvement avant de poursuivre (actuellement prise en charge par Chrome, Safari et Opera, en cours d'implémentation dans Firefox) est la valeur texte pour la propriété {{cssxref("background-clip")}}. Utilisée avec la fonctionnalité propriétaire `-webkit-text-fill-color: transparent;` cette fonction vous permet de découper les images d'arrière-plan à la forme du texte de l'élément, ce qui donne de jolis effets. Il ne s'agit pas d'une norme officielle, mais elle a été mise en œuvre sur plusieurs navigateurs, car elle est populaire et assez largement utilisée par les développeurs. Utilisées dans ce contexte, les deux propriétés nécessitent un préfixe fournisseur `-webkit-` même pour les navigateurs non-Webkit/Chrome :
+L'autre fonctionnalité naissante, que nous mentionnons brièvement avant de poursuivre (actuellement prise en charge par Chrome, Safari et Opera, en cours d'implémentation dans Firefox) est la valeur texte pour la propriété {{cssxref("background-clip")}}. Utilisée avec la fonctionnalité propriétaire `-webkit-text-fill-color: transparent;` cette fonction vous permet de découper les images d'arrière-plan à la forme du texte de l'élément, ce qui donne de jolis effets. Il ne s'agit pas d'une norme officielle, mais elle a été mise en œuvre sur plusieurs navigateurs, car elle est populaire et assez largement utilisée par les développeurs. Utilisées dans ce contexte, les deux propriétés nécessitent un préfixe fournisseur `-webkit-` même pour les navigateurs non-Webkit/Chrome :
 
 ```css
 .text-clip {
@@ -355,9 +344,9 @@ Alors pourquoi d'autres navigateurs ont-ils implémenté un préfixe `-webkit-` 
 
 Si vous voulez utiliser de telles fonctionnalités dans votre travail de production, assurez-vous de tester minutieusement tous les navigateurs et vérifiez que, lorsque ces fonctionnalités ne sont pas prises en charge , le site reste toujours utilisable.
 
-> **Note :** Pour un exemple de code complet avec `-webkit-background-clip: text`,  allez à la page [background-clip-text.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
+> **Note :** Pour un exemple de code complet avec `-webkit-background-clip: text`, allez à la page [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
 
-## Apprentissage actif : expérimenter certains effets
+## Apprentissage actif : expérimenter certains effets
 
 À votre tour, maintenant. Pour cet apprentissage actif, nous voulons que vous expérimentiez certains effets que nous avons vus ci-dessus avec le code fourni ci-dessous.
 
@@ -377,14 +366,14 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ l'exemple avec 
   margin: 10px;
   display: inline-block;
   background-color: red;
-  background: url(https://mdn.mozillademos.org/files/13090/colorful-heart.png) no-repeat center 20px,
+  background: url(colorful-heart.png) no-repeat center 20px,
               linear-gradient(to bottom right, #f33, #a33);
 } </textarea>
 
   <h2>Zone de rendu</h2>
   <div class="output" style="width: 90%;height: 15em;padding: 10px;border: 1px solid #0095dd;overflow:hidden;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Réinitialiser" style="margin: 10px 10px 0 0;">
+    <input id="reset" type="button" value="Réinitialiser" style="margin: 10px 10px 0 0;">
   </div>
 </div>
 ```
@@ -407,9 +396,9 @@ function drawOutput() {
 }
 
 reset.addEventListener("click", function() {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
 htmlInput.addEventListener("input", drawOutput);
@@ -417,20 +406,8 @@ cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_expérimenter_certains_effets', 700, 820) }}
+{{ EmbedLiveSample('', 700, 820) }}
 
 ## Résumé
 
 Nous espérons que vous avez trouvé cet article divertissant — s'amuser avec des jouets brillants l'est généralement et il est toujours intéressant de voir les types d'outils qui viennent d'être mis à disposition dans les navigateurs de pointe. Après avoir atteint la fin des articles sur les styles des boîtes, vous allez tester vos compétences en la matière avec nos évaluations.
-
-{{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
-
-## Dans ce module
-
-- [Le modèle de boîte : récapitulatif](/fr/Apprendre/CSS/styliser_boites/Box_model_recap)
-- [Arrière-plans](/fr/Apprendre/CSS/styliser_boites/Backgrounds)
-- [Encadrements](/fr/docs/Apprendre/CSS/styliser_boites/Borders)
-- [Mise en page des tableaux](/fr/Apprendre/CSS/styliser_boites/Styling_tables)
-- [Effets de boîte avancés](/fr/Apprendre/CSS/styliser_boites/Advanced_box_effects)
-- [Creation d'un en-tête de papier à lettre élégant](/fr/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
-- [Une boîte d'aspect rafraîchissant](/fr/Apprendre/CSS/styliser_boites/A_cool_looking_box)
