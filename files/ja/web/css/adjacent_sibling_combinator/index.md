@@ -3,81 +3,61 @@ title: 隣接兄弟結合子
 slug: Web/CSS/Adjacent_sibling_combinator
 tags:
   - CSS
-  - Reference
-  - Selectors
+  - NeedsMobileBrowserCompatibility
+  - リファレンス
   - セレクター
+browser-compat: css.selectors.adjacent_sibling
 translation_of: Web/CSS/Adjacent_sibling_combinator
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p><ruby><strong>隣接兄弟結合子</strong><rp> (</rp><rt>adjacent sibling combinator</rt><rp>)</rp></ruby> (<code>+</code>) は2つのセレクターを接続し、同じ親{{DOMxRef("element", "要素")}}の子同士であって、1つ目の要素の<em>直後</em>にある2つ目の要素を選択します。</p>
+**隣接兄弟結合子** (adjacent sibling combinator, `+`) は 2 つのセレクターを接続し、 2 つ目の要素が 1 つ目の要素の _直後_ にあって、両者が同じ親{{DOMxRef("element", "要素")}}の子同士である場合に一致します。
 
-<pre class="brush: css no-line-numbers">/* 画像の直後に来る段落 */
+```css
+/* 画像の直後に来る段落 */
 img + p {
   font-style: bold;
-}</pre>
+}
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">直前の要素 + 対象の要素 { <em>スタイルプロパティ</em> }
-</pre>
+```css
+直前の要素 + 対象の要素 { <em>スタイルプロパティ</em> }
+```
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">li:first-of-type + li {
+```css
+li:first-of-type + li {
   color: red;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two!&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-&lt;/ul&gt;</pre>
-
-<h3 id="Result">Result</h3>
-
-<p>{{EmbedLiveSample("Example", "100%", 100)}}</p>
-
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#adjacent-sibling-combinators", "next-sibling combinator")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>名前を「次の兄弟」結合子に変更。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#adjacent-sibling-combinators", "Adjacent sibling combinator")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "selector.html#adjacent-selectors", "Adjacent sibling selectors")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
-
-<p>{{Compat("css.selectors.adjacent_sibling")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
+```html
 <ul>
- <li><a href="/ja/docs/Web/CSS/General_sibling_combinator">一般兄弟結合子</a></li>
+  <li>One</li>
+  <li>Two!</li>
+  <li>Three</li>
 </ul>
+```
+
+### 結果
+
+{{EmbedLiveSample("Examples", "100%", 100)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [一般兄弟結合子](/ja/docs/Web/CSS/General_sibling_combinator)
