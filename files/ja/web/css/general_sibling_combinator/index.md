@@ -3,82 +3,67 @@ title: 一般兄弟結合子
 slug: Web/CSS/General_sibling_combinator
 tags:
   - CSS
-  - Reference
-  - Selectors
+  - リファレンス
   - セレクター
+browser-compat: css.selectors.general_sibling
 translation_of: Web/CSS/General_sibling_combinator
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p><strong>一般兄弟結合子</strong> (general sibling combinator, <code>~</code>) は2個のセレクターを結びつけます。右側のセレクタで選択される要素のうち、次の条件をともにみたすものを選択します。</p>
+**一般兄弟結合子** (general sibling combinator, `~`) は 2 個のセレクターを結びつけ、 1 つ目の要素の後に 2 つ目の要素のがあり（直後である必要はない）、かつ両者が同じ親{{Glossary("element", "要素")}}の子であるすべてのパターンに一致します。
 
-<p>まず、右側のセレクタで選択される要素が、左側のセレクタで選択される要素より後に現れることです。（直後である必要はありません）</p>
-
-<p>もうひとつは、これらの要素が同じ親要素（{{Glossary("element", "要素")}}）をもつことです。</p>
-
-<pre class="brush: css no-line-numbers notranslate">/* 任意の画像の兄弟で、
+```css
+/* 任意の画像の兄弟で、
    その画像より後方にある段落 */
 img ~ p {
   color: red;
-}</pre>
+}
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">先行する要素 ~ 選択される要素 { <em>スタイルプロパティ</em> }
-</pre>
+```css
+先行する要素 ~ 選択される要素 { スタイルプロパティ }
+```
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">p ~ span {
+```css
+p ~ span {
   color: red;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;span&gt;This is not red.&lt;/span&gt;
-&lt;p&gt;Here is a paragraph.&lt;/p&gt;
-&lt;code&gt;Here is some code.&lt;/code&gt;
-&lt;span&gt;And here is a red span!&lt;/span&gt;
-&lt;code&gt;More code...&lt;/code&gt;
-&lt;span&gt;And this is a red span!&lt;/span&gt;
-</pre>
+```html
+<span>This is not red.</span>
+<p>Here is a paragraph.</p>
+<code>Here is some code.</code>
+<span>And here is a red span!</span>
+<span>And this is a red span!</span>
+<code>More code...</code>
+<div> How are you? </div>
+<p> Whatever it may be, keep smiling. </p>
+<h1> Dream big </h1>
+<h2> that's all. </h2>
+<span>And yet again this is a red span!</span>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example", "100%", 120)}}</p>
+{{EmbedLiveSample("Examples", "auto", 300)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#general-sibling-combinators", "subsequent-sibling combinator")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>名前を"subsequent-sibling combinator"に変更。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#general-sibling-combinators", "general sibling combinator")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.selectors.general_sibling")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/Adjacent_sibling_combinator">隣接兄弟結合子</a></li>
-</ul>
+- [隣接兄弟結合子](/ja/docs/Web/CSS/Adjacent_sibling_combinator)
