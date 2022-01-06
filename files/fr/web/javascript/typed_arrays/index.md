@@ -8,7 +8,7 @@ original_slug: Web/JavaScript/Tableaux_typés
 
 Les **tableaux typés JavaScript** sont des objets semblables à des tableaux qui fournissent un mécanisme pour lire et écrire des données binaires brutes dans des tampons mémoires.
 
-Les objets [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) qui représentent des tableaux en JavaScript peuvent être agrandis ou réduits dynamiquement et permettent de stocker n'importe quelle valeur JavaScript. Afin que la manipulation de ces objets soit efficace, le moteur JavaScript applique un certain nombre d'optimisations. Cependant, avec les avancées réalisées (telles que les flux audio et vidéo avec WebRTC et les WebSockets), il devient nécessaire de pouvoir manipuler des données binaires brutes au sein de tableaux typés, c'est pour ça que ces objets ont été introduits. Chaque élément d'un tableau typé JavaScript est une valeur binaire exprimée sous l'un des format pris en charge (d'entiers représentés sur 8 bits jusqu'à des nombres flottants sur 64 bits).
+Les objets [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) qui représentent des tableaux en JavaScript peuvent être agrandis ou réduits dynamiquement et permettent de stocker n'importe quelle valeur JavaScript. Afin que la manipulation de ces objets soit efficace, le moteur JavaScript applique un certain nombre d'optimisations. Cependant, avec les avancées réalisées (telles que les flux audio et vidéo avec WebRTC et les WebSockets), il devient nécessaire de pouvoir manipuler des données binaires brutes au sein de tableaux typés, c'est pour ça que ces objets ont été introduits. Chaque élément d'un tableau typé JavaScript est une valeur binaire exprimée sous l'un des formats pris en charge (d'entiers représentés sur 8 bits jusqu'à des nombres flottants sur 64 bits).
 
 Ne pas confondre les tableaux typés et les tableaux «&nbsp;classiques&nbsp;» ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)). En effet, la méthode [`Array.isArray()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray) renverra `false` lorsqu'elle sera utilisée sur un tableau typé. De plus, certaines des méthodes des tableaux «&nbsp;classiques&nbsp;» ne sont pas disponibles pour les tableaux typés (par exemple `push` et `pop`).
 
@@ -63,7 +63,7 @@ Tout d'abord, il faut créer un tampon (<i lang="en">buffer</i>). Ici, on crée 
 let buffer = new ArrayBuffer(16);
 ```
 
-Grâce à cette instruction, on dispose désormaits d'un fragment de mémoire dont tous les octets sont pré-initialisés à 0. Si c'est déjà une bonne chose de faite, cela n'a pas grande utilité. On peut déjà confirmer que la longueur du tampon est bien celle spécifiée initialement&nbsp;:
+Grâce à cette instruction, on dispose désormais d'un fragment de mémoire dont tous les octets sont pré-initialisés à 0. Si c'est déjà une bonne chose de faite, cela n'a pas grande utilité. On peut déjà confirmer que la longueur du tampon est bien celle spécifiée initialement&nbsp;:
 
 ```js
 if (buffer.byteLength === 16) {
@@ -110,11 +110,11 @@ int16View[0] = 32;
 console.log("L'élément 0 du tableau 32 bits est désormais " + int32View[0]);
 ```
 
-Le résultat obtenu sera "L'élément 0 du tableau 32 bits est désormais 32". Autrement dit, les deux tableaux typés construits ne sont que des vues sur le même tampon de données. Ce genre de manipulation peut être effectuée avec n'importe quel [type de vue](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+Le résultat obtenu sera "L'élément 0 du tableau 32 bits est désormais 32". Autrement dit, les deux tableaux typés construits ne sont que des vues sur le même tampon de données. Ce genre de manipulation peut être effectué avec n'importe quel [type de vue](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
 ### Manipuler des structures de données complexes
 
-En combinant un même tampon et plusieurs vue de différents types, chacune commençant à un endroit différent dans le tampon, il est possible d'interagir avec des données qui représentent des objets contenant plusieurs types de données. Cela permet entre autres d'intéragir avec des structures de données complexes telles que [WebGL](/fr/docs/Web/API/WebGL_API), ou des fichiers de données.
+En combinant un même tampon et plusieurs vues de différents types, chacune commençant à un endroit différent dans le tampon, il est possible d'interagir avec des données qui représentent des objets contenant plusieurs types de données. Cela permet entre autres d'interagir avec des structures de données complexes telles que [WebGL](/fr/docs/Web/API/WebGL_API), ou des fichiers de données.
 
 Si on a cette structure C&nbsp;:
 
@@ -144,7 +144,7 @@ On peut ensuite accéder au montant lié à un utilisateur, par exemple, avec `v
 
 ### Convertir un tableau typé en un tableau normal
 
-Dans certains cas d'utilisation, après avoir traité un tableau typé, il peut être utile de convertir le tableau typé en un tableau normal ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) afin de bénificier des propriétés du prototype d'`Array`. Pour cela, on peut utiliser la méthode [`Array.from`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/from). Si `Array.from()` n'est pas disponible, on peut effectuer cette conversion de la façon suivante&nbsp;:
+Dans certains cas d'utilisation, après avoir traité un tableau typé, il peut être utile de convertir le tableau typé en un tableau normal ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) afin de bénéficier des propriétés du prototype d'`Array`. Pour cela, on peut utiliser la méthode [`Array.from`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/from). Si `Array.from()` n'est pas disponible, on peut effectuer cette conversion de la façon suivante&nbsp;:
 
 ```js
 const tableauType = new Uint8Array([1, 2, 3, 4]);
@@ -169,6 +169,6 @@ const tableauNormal = Array.prototype.slice.call(tableauType);
 ## Voir aussi
 
 - [Manipuler des chaînes encodées en base 64 avec des `ArrayBuffer`s ou des tableaux typés](/fr/docs/Glossary/Base64#annexe_décoder_une_chaîne_en_base64_en_un_objet_uint8array_ou_arraybuffer)
-- [Manipuler les pixels d'un canvas plus efficacement avec les tableaux typés](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays) (en anglais)
-- [Les tableaux typé&nbsp;: des données binaires arrivent dans le navigateur](https://www.html5rocks.com/en/tutorials/webgl/typed_arrays) (en anglais)
+- [Manipuler les pixels d'un canevas plus efficacement avec les tableaux typés](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays) (en anglais)
+- [Les tableaux typés&nbsp;: des données binaires arrivent dans le navigateur](https://www.html5rocks.com/en/tutorials/webgl/typed_arrays) (en anglais)
 - [Boutisme sur le glossaire MDN](/fr/docs/Glossary/Endianness)
