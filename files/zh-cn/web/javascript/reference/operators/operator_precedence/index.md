@@ -7,34 +7,37 @@ tags:
   - 优先级
 translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>运算符的优先级</strong>决定了表达式中运算执行的先后顺序。优先级高的运算符会作为优先级低的运算符的操作符。</p>
+**运算符的优先级**决定了表达式中运算执行的先后顺序。优先级高的运算符会作为优先级低的运算符的操作符。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-operatorprecedence.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-operatorprecedence.html")}}
 
+## 优先级和结合性
 
-<h2 id="Precedence_And_Associativity">优先级和结合性</h2>
+考虑由下面的表示法描述的表达式。其中，OP<sub>1</sub> 和 OP<sub>2</sub> 都是操作符的占位符。
 
-<p>考虑由下面的表示法描述的表达式。其中，OP<sub>1</sub> 和 OP<sub>2</sub> 都是操作符的占位符。</p>
+```js
+a OP1 b OP2 c
+```
 
-<pre class="brush: js">a OP<sub>1</sub> b OP<sub>2</sub> c</pre>
+如果 `OP1` 和 `OP2` 具有不同的优先级（见下表），则优先级最高的运算符先执行，不用考虑结合性。观察乘法如何具有比加法更高的优先级并首先执行，即使加法是首先写入代码的。
 
-<p>如果 <code>OP<sub>1</sub></code> 和 <code>OP<sub>2</sub></code> 具有不同的优先级（见下表），则优先级最高的运算符先执行，不用考虑结合性。观察乘法如何具有比加法更高的优先级并首先执行，即使加法是首先写入代码的。</p>
-
-<pre class="brush: js">console.log(3 + 10 * 2);   // 输出 23
+```js
+console.log(3 + 10 * 2);   // 输出 23
 console.log(3 + (10 * 2)); // 输出 23 因为这里的括号是多余的
 console.log((3 + 10) * 2); // 输出 26 因为括号改变了优先级
-</pre>
+```
 
-<p>左结合（左到右）相当于把左边的子表达式加上小括号 <code>(a OP b) OP c</code>，右结合（右到左）相当于 <code>a OP (b OP c)</code>。赋值运算符是右结合的，所以你可以这么写：</p>
+左结合（左到右）相当于把左边的子表达式加上小括号 `(a OP b) OP c`，右结合（右到左）相当于 `a OP (b OP c)`。赋值运算符是右结合的，所以你可以这么写：
 
-<pre class="brush: js">a = b = 5; // 相当于 a = (b = 5);
-</pre>
+```js
+a = b = 5; // 相当于 a = (b = 5);
+```
 
-<p>预期结果是 <code>a</code> 和 <code>b</code> 的值都会成为 5。这是因为赋值运算符的返回结果就是赋值运算符右边的那个值，具体过程是：首先 <code>b</code> 被赋值为 5，然后 <code>a</code> 也被赋值为 <code>b = 5</code> 的返回值，也就是 5。</p>
+预期结果是 `a` 和 `b` 的值都会成为 5。这是因为赋值运算符的返回结果就是赋值运算符右边的那个值，具体过程是：首先 `b` 被赋值为 5，然后 `a` 也被赋值为 `b = 5` 的返回值，也就是 5。
 
-<p>另一个例子是，只有幂运算符是右结合的，而其他算术运算符都是左结合的。有趣的是，无论结合性和优先级如何，求值顺序总是从左到右。</p>
+另一个例子是，只有幂运算符是右结合的，而其他算术运算符都是左结合的。有趣的是，无论结合性和优先级如何，求值顺序总是从左到右。
 
 <table class="standard-table">
     <tbody>
@@ -81,7 +84,7 @@ Evaluating the right side
     </tbody>
 </table>
 
-<p>当有多个具有相同优先级的运算符时，结合性的差异就会发挥作用。仅使用一个或多个不同优先级的运算符时，结合性不会影响输出，如上面的例子所示。在下面的示例中，观察使用多个相同运算符时结合性会如何影响输出。</p>
+当有多个具有相同优先级的运算符时，结合性的差异就会发挥作用。仅使用一个或多个不同优先级的运算符时，结合性不会影响输出，如上面的例子所示。在下面的示例中，观察使用多个相同运算符时结合性会如何影响输出。
 
 <table class="standard-table">
     <tbody>
@@ -150,43 +153,40 @@ Evaluating the right side
     </tbody>
 </table>
 
-<p>观察上面的代码片段，<code>6 / 3 / 2</code> 与
-    <code>(6 / 3) / 2</code> 是相同的，因为除法是左结合的。而幂运算符是右结合的，所以 <code>2 ** 3 ** 2</code> 与
-    <code>2 ** (3 ** 2)</code> 是相同的。因此，<code>(2 ** 3) ** 2</code> 会更改执行顺序，并导致输出上表中的 64。</p>
+观察上面的代码片段，`6 / 3 / 2` 与 `(6 / 3) / 2` 是相同的，因为除法是左结合的。而幂运算符是右结合的，所以 `2 ** 3 ** 2` 与 `2 ** (3 ** 2)` 是相同的。因此，`(2 ** 3) ** 2` 会更改执行顺序，并导致输出上表中的 64。
 
-<p>请记住，判断执行顺序的时候，优先级在结合性之前。所以，混合求除法和幂时，求幂会先于除法。例如，
-    <code>2 ** 3 / 3 ** 2</code> 的结果是 0.8888888888888888，因为它相当于
-    <code>(2 ** 3) / (3 ** 2)</code>。</p>
+请记住，判断执行顺序的时候，优先级在结合性之前。所以，混合求除法和幂时，求幂会先于除法。例如，`2 ** 3 / 3 ** 2` 的结果是 0.8888888888888888，因为它相当于 `(2 ** 3) / (3 ** 2)`。
 
-<h3 id="Note_on_grouping_and_short-circuiting">分组和短路的注意事项</h3>
+### 分组和短路的注意事项
 
-<p>在下表中，<strong>分组（Grouping）</strong>具有最高优先级。然而，这并不意味着总是优先对分组符号 <code>( … )</code> 内的表达式进行求值，尤其是涉及短路时。</p>
+在下表中，**分组（Grouping）** 具有最高优先级。然而，这并不意味着总是优先对分组符号 `( … )` 内的表达式进行求值，尤其是涉及短路时。
 
-<p>短路是条件求值的术语。例如，在表达式
-    <code>a &amp;&amp; (b + c)</code> 中，如果 <code>a</code> 为虚值（{{Glossary("falsy")}}），那么即使 <code>(b + c)</code> 在圆括号中，也不会被求值。我们可以说逻辑或运算符（“OR”）是“短路的”。除了逻辑或运算符外，其他短路运算符还包括逻辑与（“AND”）、空值合并、可选链和条件（三元）运算符。下面有更多例子：</p>
+短路是条件求值的术语。例如，在表达式 `a && (b + c)` 中，如果 `a` 为虚值（{{Glossary("falsy")}}），那么即使 `(b + c)` 在圆括号中，也不会被求值。我们可以说逻辑或运算符（“OR”）是“短路的”。除了逻辑或运算符外，其他短路运算符还包括逻辑与（“AND”）、空值合并、可选链和条件（三元）运算符。下面有更多例子：
 
-<pre class="brush: js">a || (b * c);  // 首先对 `a` 求值，如果 `a` 为真值则直接返回 `a`
-a &amp;&amp; (b &lt; c);  // 首先对 `a` 求值，如果 `a` 为虚值则直接返回 `a`
+```js
+a || (b * c);  // 首先对 `a` 求值，如果 `a` 为真值则直接返回 `a`
+a && (b < c);  // 首先对 `a` 求值，如果 `a` 为虚值则直接返回 `a`
 a ?? (b || c); // 首先对 `a` 求值，如果 `a` 不是 `null` 或 `undefined` 则直接返回 `a`
 a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` 则直接返回 `undefined`
-</pre>
+```
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush: js">3 &gt; 2 &amp;&amp; 2 &gt; 1
+```js
+3 > 2 && 2 > 1
 // 返回 true
 
-3 &gt; 2 &gt; 1
-// 返回 false，因为 3 &gt; 2 是 true，然后 true 会在比较运算符中
-// 被隐式转换为 1，因此 true &gt; 1 会变为 1 &gt; 1，结果是 false
-// 加括号可以更清楚：(3 &gt; 2) &gt; 1
-</pre>
+3 > 2 > 1
+// 返回 false，因为 3 > 2 是 true，然后 true 会在比较运算符中
+// 被隐式转换为 1，因此 true > 1 会变为 1 > 1，结果是 false
+// 加括号可以更清楚：(3 > 2) > 1
+```
 
-<h2 id="Table">汇总表</h2>
+## 汇总表
 
-<p>下面的表格将所有运算符按照优先级的不同从高（21）到低（1）排列。</p>
+下面的表格将所有运算符按照优先级的不同从高（19）到低（1）排列。
 
-<p>请注意，下表中故意不包含<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">展开语法（Spread syntax）</a> —— 原因可以引用<a href="https://stackoverflow.com/a/48656377">Stack Overflow 上的一个回答</a>，“<a href="https://stackoverflow.com/q/44934828/1048572">展开语法不是一个运算符</a>，因此没有优先级。它是数组字面量和函数调用（和对象字面量）语法的一部分。”</p>
+请注意，下表中故意不包含[展开语法（Spread syntax）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax) —— 原因可以引用[Stack Overflow 上的一个回答](https://stackoverflow.com/a/48656377)，“[展开语法不是一个运算符](https://stackoverflow.com/q/44934828/1048572)，因此没有优先级。它是数组字面量和函数调用（和对象字面量）语法的一部分。”
 
 <table class="fullwidth-table">
     <tbody>
@@ -197,19 +197,19 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
             <th>运算符</th>
         </tr>
         <tr>
-            <td>21</td>
+            <td>19</td>
             <td>{{jsxref("Operators/Grouping", "分组", "", 1)}}</td>
             <td>n/a（不相关）</td>
             <td><code>( … )</code></td>
         </tr>
         <tr>
-            <td rowspan="5">20</td>
-            <td>{{jsxref("Operators/Property_Accessors", "成员访问", "#Dot_notation", 1)}}</td>
+            <td rowspan="5">18</td>
+            <td>{{jsxref("Operators/Property_Accessors", "成员访问", "#点号表示法", 1)}}</td>
             <td>从左到右</td>
             <td><code>… . …</code></td>
         </tr>
         <tr>
-            <td>{{jsxref("Operators/Property_Accessors", "需计算的成员访问", "#Bracket_notation", 1)}}</td>
+            <td>{{jsxref("Operators/Property_Accessors", "需计算的成员访问", "#方括号表示法", 1)}}</td>
             <td>从左到右</td>
             <td><code>… [ … ]</code></td>
         </tr>
@@ -229,23 +229,23 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
             <td><code>?.</code></td>
         </tr>
         <tr>
-            <td>19</td>
+            <td>17</td>
             <td>{{jsxref("Operators/new","new")}}（无参数列表）</td>
             <td>从右到左</td>
             <td><code>new …</code></td>
         </tr>
         <tr>
-            <td rowspan="2">18</td>
-            <td>{{jsxref("Operators","后置递增","#Increment", 1)}}</td>
+            <td rowspan="2">16</td>
+            <td>{{jsxref("Operators","后置递增","#自增和自减", 1)}}</td>
             <td rowspan="2">n/a</td>
             <td><code>… ++</code></td>
         </tr>
         <tr>
-            <td>{{jsxref("Operators","后置递减","#Decrement", 1)}}</td>
+            <td>{{jsxref("Operators","后置递减","#自增和自减", 1)}}</td>
             <td><code>… --</code></td>
         </tr>
         <tr>
-            <td rowspan="10">17</td>
+            <td rowspan="10">15</td>
             <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_NOT">逻辑非 (!)</a></td>
             <td rowspan="10">从右到左</td>
             <td><code>! …</code></td>
@@ -263,11 +263,11 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
             <td><code>- …</code></td>
         </tr>
         <tr>
-            <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators#increment">前置递增</a></td>
+            <td>{{jsxref("Operators","前置递增","#自增和自减", 1)}}</td>
             <td><code>++ …</code></td>
         </tr>
         <tr>
-            <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators#decrement">前置递减</a></td>
+            <td>{{jsxref("Operators","前置递减","#自增和自减", 1)}}</td>
             <td><code>-- …</code></td>
         </tr>
         <tr>
@@ -287,13 +287,13 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
             <td><code>await …</code></td>
         </tr>
         <tr>
-            <td>16</td>
+            <td>14</td>
             <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation">幂 (**)</a></td>
             <td>从右到左</td>
             <td><code>… ** …</code></td>
         </tr>
         <tr>
-            <td rowspan="3">15</td>
+            <td rowspan="3">13</td>
             <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication">乘法 (*)</a></td>
             <td rowspan="3">从左到右</td>
             <td><code>… * …</code></td>
@@ -307,7 +307,7 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
             <td><code>… % …</code></td>
         </tr>
         <tr>
-            <td rowspan="2">14</td>
+            <td rowspan="2">12</td>
             <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition">加法 (+)</a></td>
             <td rowspan="2">从左到右</td>
             <td><code>… + …</code></td>
@@ -317,7 +317,7 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
             <td><code>… - …</code></td>
         </tr>
         <tr>
-            <td rowspan="3">13</td>
+            <td rowspan="3">11</td>
             <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Left_shift">按位左移 (&lt;&lt;)</a></td>
             <td rowspan="3">从左到右</td>
             <td><code>… &lt;&lt; …</code></td>
@@ -331,7 +331,7 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
             <td><code>… &gt;&gt;&gt; …</code></td>
         </tr>
         <tr>
-            <td rowspan="6">12</td>
+            <td rowspan="6">10</td>
             <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than">小于 (&lt;)</a></td>
             <td rowspan="6">从左到右</td>
             <td><code>… &lt; …</code></td>
@@ -357,7 +357,7 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
             <td><code>… instanceof …</code></td>
         </tr>
         <tr>
-            <td rowspan="4">11</td>
+            <td rowspan="4">9</td>
             <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality">相等 (==)</a></td>
             <td rowspan="4">从左到右</td>
             <td><code>… == …</code></td>
@@ -375,50 +375,49 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
             <td><code>… !== …</code></td>
         </tr>
         <tr>
-            <td>10</td>
+            <td>8</td>
             <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_AND">按位与 (&amp;)</a></td>
             <td>从左到右</td>
             <td><code>… &amp; …</code></td>
         </tr>
         <tr>
-            <td>9</td>
+            <td>7</td>
             <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR">按位异或 (^)</a></td>
             <td>从左到右</td>
             <td><code>… ^ …</code></td>
         </tr>
         <tr>
-            <td>8</td>
+            <td>6</td>
             <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_OR">按位或 (|)</a></td>
             <td>从左到右</td>
             <td><code>… | …</code></td>
         </tr>
         <tr>
-            <td>7</td>
+            <td>5</td>
             <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_AND">逻辑与 (&amp;&amp;)</a></td>
             <td>从左到右</td>
             <td><code>… &amp;&amp; …</code></td>
         </tr>
         <tr>
-            <td>6</td>
+            <td rowspan="2">4</td>
             <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR">逻辑或 (||)</a></td>
             <td>从左到右</td>
             <td><code>… || …</code></td>
         </tr>
         <tr>
-            <td>5</td>
             <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">空值合并 (??)</a></td>
             <td>从左到右</td>
             <td><code>… ?? …</code></td>
         </tr>
         <tr>
-            <td>4</td>
+            <td>3</td>
             <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">条件（三元）运算符</a></td>
             <td>从右到左</td>
             <td><code>… ? … : …</code></td>
         </tr>
         <tr>
-            <td rowspan="16">3</td>
-            <td rowspan="16"><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators#assignment_operators">赋值</a></td>
+            <td rowspan="16">2</td>
+            <td rowspan="16"><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators#赋值运算符">赋值</a></td>
             <td rowspan="16">从右到左</td>
             <td><code>… = …</code></td>
         </tr>
@@ -466,16 +465,6 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
         </tr>
         <tr>
             <td><code>… ??= …</code></td>
-        </tr>
-        <tr>
-            <td rowspan="2">2</td>
-            <td>{{jsxref("Operators/yield", "yield")}}</td>
-            <td rowspan="2">从右到左</td>
-            <td><code>yield …</code></td>
-        </tr>
-        <tr>
-            <td>{{jsxref("Operators/yield*", "yield*")}}</td>
-            <td><code>yield* …</code></td>
         </tr>
         <tr>
             <td>1</td>
