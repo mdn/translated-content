@@ -3,65 +3,57 @@ title: invert()
 slug: Web/CSS/filter-function/invert()
 tags:
   - CSS
-  - CSS Function
-  - Filter Effects
-  - Function
-  - Reference
+  - CSS 関数
+  - フィルター効果
+  - 関数
+  - リファレンス
+browser-compat: css.types.filter-function.invert
 translation_of: Web/CSS/filter-function/invert()
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p><strong><code>invert()</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の関数で、入力画像の色サンプルを反転します。結果は {{cssxref("&lt;filter-function&gt;")}} です。</p>
+**`invert()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、入力画像の色サンプルを反転します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
-<div>{{EmbedInteractiveExample("pages/css/function-invert.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-invert.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```css
+invert(amount)
+```
 
-<pre class="syntaxbox notranslate">invert(<var>amount</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `amount`
+  - : 変換の度合いで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `100%` の値では完全に反転され、 `0%` の値では入力が変更されないままになります。 `0%` と `100%` の間の値は、効果の割合です。補間時の欠損値は `0` です。
 
-<dl>
- <dt><code><var>amount</var></code></dt>
- <dd>変換の度合いで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 <code>100%</code> の値では完全に反転され、 <code>0%</code> の値では入力が変更されないままになります。 <code>0%</code> と <code>100%</code> の間の値は、効果の割合です。補間時の欠損値は <code>0</code> です。</dd>
-</dl>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### invert() の正しい値の例
 
-<pre class="brush: css notranslate">invert(0)     /* 効果なし */
+```css
+invert(0)     /* 効果なし */
 invert(.6)    /* 60% 反転 */
-invert(100%)  /* 完全に反転 */</pre>
+invert(100%)  /* 完全に反転 */
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Filters 1.0', '#funcdef-filter-invert', 'invert()')}}</td>
-   <td>{{Spec2('Filters 1.0')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## ブラウザーの互換性
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>{{cssxref("filter-function/blur", "blur()")}}</li>
- <li>{{cssxref("filter-function/brightness", "brightness()")}}</li>
- <li>{{cssxref("filter-function/contrast", "contrast()")}}</li>
- <li>{{cssxref("filter-function/drop-shadow", "drop-shadow()")}}</li>
- <li>{{cssxref("filter-function/grayscale", "grayscale()")}}</li>
- <li>{{cssxref("filter-function/hue-rotate", "hue-rotate()")}}</li>
- <li>{{cssxref("filter-function/opacity", "opacity()")}}</li>
- <li>{{cssxref("filter-function/saturate", "saturate()")}}</li>
- <li>{{cssxref("filter-function/sepia", "sepia()")}}</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxref("filter-function/blur()", "blur()")}}
+- {{cssxref("filter-function/brightness()", "brightness()")}}
+- {{cssxref("filter-function/contrast()", "contrast()")}}
+- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
+- {{cssxref("filter-function/grayscale()", "grayscale()")}}
+- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
+- {{cssxref("filter-function/opacity()", "opacity()")}}
+- {{cssxref("filter-function/saturate()", "saturate()")}}
+- {{cssxref("filter-function/sepia()", "sepia()")}}
