@@ -139,7 +139,7 @@ Basicamente, `setTimeout` precisa esperar que todo o código das mensagens enfil
 
 ### Múltiplos _runtimes_ comunicando-se em conjunto
 
-Um _web worker_ ou um `iframe` com uma diferente origem [(cross-origin)](/en-US/docs/Web/HTTP/CORS) tem seu próprio _stack_, _heap_ e _queue_ de messagens. Dois _runtimes_ distintos só podem se comunicar por meio do envio de mensagens via método [`postMessage`](/en-US/docs/Web/Window/postMessage). Este método adiciona uma mensagem ao outro _runtime_, se este escutar os eventos de `message`.
+Um _web worker_ ou um `iframe` com uma diferente origem [(cross-origin)](/pt-BR/docs/Web/HTTP/CORS) tem seu próprio _stack_, _heap_ e _queue_ de messagens. Dois _runtimes_ distintos só podem se comunicar por meio do envio de mensagens via método [`postMessage`](/pt-BR/docs/Web/API/Window/postMessage). Este método adiciona uma mensagem ao outro _runtime_, se este escutar os eventos de `message`.
 
 ## Sem bloqueio
 
