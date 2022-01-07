@@ -1,154 +1,158 @@
 ---
-title: Using shadow DOM
+title: shadow DOM 사용하기
 slug: Web/Web_Components/Using_shadow_DOM
 tags:
   - API
   - DOM
   - Guide
   - Web Components
-  - shadow
   - shadow dom
-  - 쉐도우 돔
-  - 웹 컴포넌트
-  - 웹컴포넌트
 translation_of: Web/Web_Components/Using_shadow_DOM
 ---
-<div>{{DefaultAPISidebar("Web Components")}}</div>
+{{DefaultAPISidebar("Web Components")}}
 
-<p class="summary">웹 컴포넌트의 중요한 측면은 캡슐화입니다. 마크업 구조, 스타일 그리고 동작을 페이지 내의 다른 코드와<br>
- 분리하고 숨긴채로 유지하여 서로 충돌하지 않으며, 코드가 좋고 깨끗하게 되도록 하는 중요한 측면입니다.<br>
- Shadow DOM API 는 이러한 캡슐화의 핵심이며, 숨겨지고 분리된 DOM 을 엘리먼트에 달 수 있는<br>
- 방법입니다. 현재 문서는 Shadow DOM 의 기본적인 사용을 다루고 있습니다.</p>
+웹 컴포넌트의 중요한 측면은 캡슐화입니다. 캡슐화를 통해 마크업 구조, 스타일, 동작을 숨기고 페이지의 다른 코드로부터의 분리하여 각기 다른 부분들이 충돌하지 않게 하고, 코드가 깔끔하게 유지될 수 있게 합니다. Shadow DOM API는 캡슐화의 핵심 파트이며, 숨겨진 분리된 DOM을 요소에 부착하는 방법을 제공합니다. 이 문서는 Shadow DOM 사용의 기본을 다룹니다.
 
-<div class="note">
-<p><strong>Note</strong>: Shadow DOM 은 Firefox (63 and onwards), Chrome, Opera, and Safari 에서 기본으로 지원되고 있습니다.  새로운 Chromium 기반의 Edge (75 and onwards) 또한 지원하고 있습니다. 그러나 구버전의 Edge 는 지원하지 않습니다.</p>
-</div>
+> **참고:** Shadow DOM은 Firefox (63 이상), Chrome, Opera, Safari에서 기본으로 지원됩니다. 새로운 Chromium 기반의 Edge (79 이상) 또한 Shadow DOM을 지원하나 구버전 Edge는 그렇지 않습니다.
 
-<h2 id="High-level_view">High-level view</h2>
+## 중요 내용 보기
 
-<p>This article assumes you are already familiar with the concept of the <a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM (Document Object Model)</a> — a tree-like structure of connected nodes that represents the different elements and strings of text appearing in a markup document (usually an HTML document in the case of web documents). As an example, consider the following HTML fragment:</p>
+이 문서는 여러분이 이미 [DOM (Document Object Model)](/en-US/docs/Web/API/Document_Object_Model/Introduction)의 개념에 익숙하다고 가정합니다. DOM이란 마크업 문서에서 나타나는 여러 가지 요소들과 텍스트 문자열을 나타내는 연결된 노드들의 트리같은 구조입니다 (웹 문서의 경우 보통 HTML 문서). 예제로서, 다음의 HTML fragment를 고려해 보세요.
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Simple DOM example&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-      &lt;section&gt;
-        &lt;img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."&gt;
-        &lt;p&gt;Here we will add a link to the &lt;a href="https://www.mozilla.org/"&gt;Mozilla homepage&lt;/a&gt;&lt;/p&gt;
-      &lt;/section&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple DOM example</title>
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+  </body>
+</html>
+```
 
-<p>This fragment produces the following DOM structure:</p>
+이 fragment는 다음의 DOM 구조를 생성합니다.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14559/dom-screenshot.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+![](dom-screenshot.png)
 
-<p><em>Shadow</em> DOM allows hidden DOM trees to be attached to elements in the regular DOM tree — this shadow DOM tree starts with a shadow root, underneath which can be attached to any elements you want, in the same way as the normal DOM.</p>
+_Shadow_ DOM은 숨겨진 DOM 트리가 통상적인 DOM 트리에 속한 요소에 부착될 수 있게 합니다. 이 shadow DOM 트리는 shadow root로부터 시작되어 원하는 모든 요소의 안에 부착될 수 있으며, 그 방법은 일반 DOM과 같습니다.
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15788/shadow-dom.png" style="height: 543px; width: 1138px;"></p>
+![document, shadow root, shadow host의 상호 작용을 보여주는 SVG 버전의 그림.](shadowdom.svg)
+Flattened Tree (for rendering): (렌더링을 위해) 평평해진 트리
 
-<p>There are some bits of shadow DOM terminology to be aware of:</p>
+알아야 할 조금의 shadow DOM 용어가 있습니다.
 
-<ul>
- <li><strong>Shadow host</strong>: The regular DOM node that the shadow DOM is attached to.</li>
- <li><strong>Shadow tree</strong>: The DOM tree inside the shadow DOM.</li>
- <li><strong>Shadow boundary</strong>: the place where the shadow DOM ends, and the regular DOM begins.</li>
- <li><strong>Shadow root</strong>: The root node of the shadow tree.</li>
-</ul>
+- **Shadow host**: shadow DOM이 부착되는 통상적인 DOM 노드.
+- **Shadow tree**: shadow DOM 내부의 DOM 트리.
+- **Shadow boundary**: shadow DOM이 끝나고, 통상적인 DOM이 시작되는 장소.
+- **Shadow root**: shadow 트리의 root 노드.
 
-<p>You can affect the nodes in the shadow DOM in exactly the same way as non-shadow nodes — for example appending children or setting attributes, styling individual nodes using element.style.foo, or adding style to the entire shadow DOM tree inside a {{htmlelement("style")}} element. The difference is that none of the code inside a shadow DOM can affect anything outside it, allowing for handy encapsulation.</p>
+비(非) shadow 노드와 정확히 같은 방법으로 shadow DOM 내의 노드에 영향을 미칠 수 있습니다. 예를 들자면 children을 append하거나, 특성을 설정하거나, element.style.foo를 사용해 각 노드를 꾸민다거나, {{htmlelement("style")}} 요소 내부에 있는 전체 shadow DOM 트리에 스타일을 추가하는 것이 있습니다. 차이는 shadow DOM 내부의 코드 중 아무 것도 shadow DOM 외부의 모든 것에 영향을 주지 않는다는 점인데, 이는 편리한 캡슐화를 가능케 합니다.
 
-<p>Note that the shadow DOM is not a new thing by any means — browsers have used it for a long time to encapsulate the inner structure of an element. Think for example of a {{htmlelement("video")}} element, with the default browser controls exposed. All you see in the DOM is the <code>&lt;video&gt;</code> element, but it contains a series of buttons and other controls inside its shadow DOM. The shadow DOM spec has made it so that you are allowed to actually manipulate the shadow DOM of your own custom elements.</p>
+shadow DOM이 어떤 방법으로든 새로운 것이 아니라는 것에 주목하세요. 브라우저들은 이것을 긴 시간동안 사용해오며 요소의 내부 구조를 캡슐화했습니다. 예를 들어 기본 브라우저 컨트롤이 노출된 {{htmlelement("video")}} 요소를 생각해 보세요. DOM에서 보이는 모든 것은 `<video>` 요소지만, 이것은 일련의 버튼들과 다른 컨트롤들을 이것의 shadow DOM 내부에 포함하고 있습니다. shadow DOM 명세서는 잘 만들어져 와서 여러분은 실제로 여러분만의 사용자 정의 요소의 shadow DOM을 조작할 수 있습니다.
 
-<h2 id="Basic_usage">Basic usage</h2>
+## 기본 사용법
 
-<p>You can attach a shadow root to any element using the {{domxref("Element.attachShadow()")}} method. This takes as its parameter an options object that contains one option — <code>mode</code> — with a value of <code>open</code> or <code>closed</code>:</p>
+{{domxref("Element.attachShadow()")}} 메서드를 사용하여 어떠한 요소에든 shadow root을 부착할 수 있습니다. 이 메서드는 매개변수로 하나의 옵션을 포함하는 옵션 객체를 취합니다. 그 옵션이란 `mode` 이며, `open` 혹은 `closed` 의 값을 가집니다.
 
-<pre class="brush: js notranslate">let shadow = elementRef.attachShadow({mode: 'open'});
-let shadow = elementRef.attachShadow({mode: 'closed'});</pre>
+```js
+let shadow = elementRef.attachShadow({mode: 'open'});
+let shadow = elementRef.attachShadow({mode: 'closed'});
+```
 
-<p><code>open</code> means that you can access the shadow DOM using JavaScript written in the main page context, for example using the {{domxref("Element.shadowRoot")}} property:</p>
+`open` 은 메인 페이지 맥락에서 작성된 JavaScript를 사용하여 shadow DOM에 접근할 수 있음을 의미합니다. 예를 들자면 {{domxref("Element.shadowRoot")}} 속성을 사용하여 접근할 수 있습니다.
 
-<pre class="brush: js notranslate">let myShadowDom = myCustomElem.shadowRoot;</pre>
+```js
+let myShadowDom = myCustomElem.shadowRoot;
+```
 
-<p>If you attach a shadow root to a custom element with <code>mode: closed</code> set, you won't be able to access the shadow DOM from the outside — <code>myCustomElem.shadowRoot</code> returns <code>null</code>. This is the case with built in elements that contain shadow DOMs, such as <code>&lt;video&gt;</code>.</p>
+만약 `mode: closed` 로 사용자 정의 요소에 shadow root을 부착했다면, 외부로부터 shadow DOM에 접근할 수 없을 것입니다. `myCustomElem.shadowRoot` 은 `null` 을 반환합니다. 이것은 `<video>` 와 같이 shadow DOM을 포함하고 있는 내장 요소들의 경우입니다.
 
-<div class="note">
-<p><strong>Note</strong>: As <a href="https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af">this blog post shows</a>, it is actually fairly easy to work around closed shadow DOMs, and the hassle to completely hide them is often more than it's worth.</p>
-</div>
+> **참고:** [이 블로그 글](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af)이 보여주듯, closed인 shadow DOM을 우회하는 것은 사실 상당히 쉽고, shadow DOM을 완전히 숨기기 위한 귀찮은 일은 종종 그 일의 가치보다 더 큽니다.
 
-<p>If you are attaching a shadow DOM to a custom element as part of its constructor (by far the most useful application of the shadow DOM), you would use something like this:</p>
+만약 shadow DOM을 사용자 정의 요소에 사용자 정의 요소 생성자의 일부로써 부착한다면 (단연코 shadow DOM의 가장 유용한 적용), 다음과 같이 할 것입니다.
 
-<pre class="brush: js notranslate">let shadow = this.attachShadow({mode: 'open'});</pre>
+```js
+let shadow = this.attachShadow({mode: 'open'});
+```
 
-<p>When you've attached a shadow DOM to an element, manipulating it is a matter of just using the same DOM APIs as you use for the regular DOM manipulation:</p>
+shadow DOM을 요소에 부착했을 때, shadow DOM을 조작하는 것은 단지 통상적인 DOM 조작에 사용되는 것과 같은 DOM API를 사용하는 것의 문제입니다.
 
-<pre class="brush: js notranslate">var para = document.createElement('p');
+```js
+let para = document.createElement('p');
 shadow.appendChild(para);
-// etc.</pre>
+// 등등
+```
 
-<h2 id="Working_through_a_simple_example">Working through a simple example</h2>
+## 간단한 예제 살펴보기
 
-<p>Now let's walk through a simple example to demonstrate the shadow DOM in action inside a custom element — <code><a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">&lt;popup-info-box&gt;</a></code> (see a <a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">live example</a> also). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information. To begin with, in our JavaScript file we define a class called <code>PopUpInfo</code>, which extends <code>HTMLElement</code>:</p>
+이제 사용자 정의 요소 내부에서 작동하는 shadow DOM을 시연하기 위한 간단한 예제 속으로 들어가 봅시다. [`<popup-info>`](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) ([작동 예제](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)도 볼 수 있습니다). 이것은 이미지 아이콘과 텍스트 문자열을 취하고, 아이콘을 페이지에 넣습니다. 아이콘이 포커스되었을 때, 이것은 텍스트를 팝업 정보 박스에 표시하여 추가적인 맥락 내 정보를 제공합니다. 우선, JavaScript 파일에서 `PopUpInfo` 라는 클래스를 정의하는데, 이 클래스는 `HTMLElement` 를 확장합니다.
 
-<pre class="brush: js notranslate">class PopUpInfo extends HTMLElement {
+```js
+class PopUpInfo extends HTMLElement {
   constructor() {
-    // Always call super first in constructor
+    // 항상 super를 생성자에서 먼저 호출합니다
     super();
 
-    // write element functionality in here
+    // 요소 기능을 여기 작성합니다
 
     ...
   }
-}</pre>
+}
+```
 
-<p>Inside the class definition we define the element's constructor, which defines all the functionality the element will have when an instance of it is instantiated.</p>
+클래스 정의 내부에서 요소의 생성자를 정의하는데, 이는 이 클래스의 인스턴스가 인스턴스화되었을 때 요소가 가질 모든 기능을 정의합니다.
 
-<h3 id="Creating_the_shadow_root">Creating the shadow root</h3>
+### shadow root 생성하기
 
-<p>We first attach a shadow root to the custom element:</p>
+첫번째로 shadow root을 사용자 정의 요소에 부착합니다.
 
-<pre class="brush: js notranslate">// Create a shadow root
-var shadow = this.attachShadow({mode: 'open'});</pre>
+```js
+// shadow root을 생성합니다
+let shadow = this.attachShadow({mode: 'open'});
+```
 
-<h3 class="brush: js" id="Creating_the_shadow_DOM_structure">Creating the shadow DOM structure</h3>
+### shadow DOM 구조를 생성합니다
 
-<p class="brush: js">Next, we use some DOM manipulation to create the element's internal shadow DOM structure:</p>
+다음으로, 몇 가지 DOM 조작을 사용하여 요소의 내부 shadow DOM 구조를 생성합니다.
 
-<pre class="brush: js notranslate">// Create spans
-var wrapper = document.createElement('span');
-wrapper.setAttribute('class','wrapper');
-var icon = document.createElement('span');
-icon.setAttribute('class','icon');
+```js
+// span들을 생성합니다
+let wrapper = document.createElement('span');
+wrapper.setAttribute('class', 'wrapper');
+let icon = document.createElement('span');
+icon.setAttribute('class', 'icon');
 icon.setAttribute('tabindex', 0);
-var info = document.createElement('span');
-info.setAttribute('class','info');
+let info = document.createElement('span');
+info.setAttribute('class', 'info');
 
-// Take attribute content and put it inside the info span
-var text = this.getAttribute('text');
+// 특성의 내용을 취하고 그것을 info span 내부에 넣습니다
+let text = this.getAttribute('data-text');
 info.textContent = text;
 
-// Insert icon
-var imgUrl;
+// 아이콘을 삽입합니다
+let imgUrl;
 if(this.hasAttribute('img')) {
   imgUrl = this.getAttribute('img');
 } else {
   imgUrl = 'img/default.png';
 }
-var img = document.createElement('img');
+let img = document.createElement('img');
 img.src = imgUrl;
 icon.appendChild(img);
-</pre>
+```
 
-<h3 class="brush: js" id="Styling_the_shadow_DOM">Styling the shadow DOM</h3>
+### shadow DOM 꾸미기
 
-<p class="brush: js">After that we create a {{htmlelement("style")}} element and populate it with some CSS to style it:</p>
+이후에 {{htmlelement("style")}} 요소를 생성하고 shadow DOM을 꾸미기 위한 몇 가지 CSS로 style 요소를 채웁니다.
 
-<pre class="brush: js notranslate">// Create some CSS to apply to the shadow dom
-var style = document.createElement('style');
+```js
+// shadow DOM에 적용할 몇 가지 CSS를 생성합니다
+let style = document.createElement('style');
 
 style.textContent = `
 .wrapper {
@@ -178,53 +182,56 @@ img {
 .icon:hover + .info, .icon:focus + .info {
   opacity: 1;
 }`;
+```
 
-</pre>
+### shadow DOM을 shadow root에 부착하기
 
-<h3 id="Attaching_the_shadow_DOM_to_the_shadow_root">Attaching the shadow DOM to the shadow root</h3>
+마지막 단계는 생성된 모든 요소를 shadow root에 부착하는 것입니다.
 
-<p>The final step is to attach all the created elements to the shadow root:</p>
-
-<pre class="brush: js notranslate">// attach the created elements to the shadow dom
+```js
+// 생성된 요소들을 shadow dom에 부착합니다
 shadow.appendChild(style);
 shadow.appendChild(wrapper);
 wrapper.appendChild(icon);
-wrapper.appendChild(info);</pre>
+wrapper.appendChild(info);
+```
 
-<h3 id="Using_our_custom_element">Using our custom element</h3>
+### 사용자 정의 요소 사용하기
 
-<p>Once the class is defined, using the element is as simple as defining it, and putting it on the page, as explained in <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a>:</p>
+한 번 클래스가 정의되고 나면, 요소를 사용하는 것은 요소를 정의하는 것과 페이지에 요소를 추가하는 것만큼이나 간단합니다. (페이지에 요소를 추가하는 것은 [사용자 정의 요소 사용하기](/ko/docs/Web/Web_Components/Using_custom_elements)에서 설명되었습니다).
 
-<pre class="brush: js notranslate">// Define the new element
-customElements.define('popup-info', PopUpInfo);</pre>
+```js
+// 새로운 요소를 정의합니다
+customElements.define('popup-info', PopUpInfo);
+```
 
-<pre class="brush: html notranslate">&lt;<span class="pl-ent">popup-info</span> <span class="pl-e">img</span>=<span class="pl-s"><span class="pl-pds">"</span>img/alt.png<span class="pl-pds">"</span></span> <span class="pl-e">text</span>=<span class="pl-s"><span class="pl-pds">"</span>Your card validation code (CVC) is an extra
+```html
+<popup-info img="img/alt.png" data-text="Your card validation code (CVC) is an extra
                                     security feature — it is the last 3 or 4
-                                    numbers on the back of your card.<span class="pl-pds">"</span></span>&gt;</pre>
+                                    numbers on the back of your card.">
+```
 
-<div>
-<h3 id="Internal_versus_external_styles">Internal versus external styles</h3>
+### 내부 스타일 대 외부 스타일
 
-<p>In the above example we apply style to the Shadow DOM using a {{htmlelement("style")}} element, but it is perfectly possible to do it by referencing an external stylesheet from a {{htmlelement("link")}} element instead.</p>
+위의 예제에서는 {{htmlelement("style")}} 요소를 사용하여 Shadow DOM에 스타일을 적용했지만, 대신 {{htmlelement("link")}} 요소로부터 외부 스타일시트를 참조함으로써 스타일을 적용하는 것도 완벽히 가능합니다.
 
-<p>For example, take a look at this code from our <a href="https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/">popup-info-box-external-stylesheet</a> example (see the <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js">source code</a>):</p>
+예를 들어, [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) 예제 ([소스 코드](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js)도 볼 수 있습니다) 의 코드를 확인해 보세요.
 
-<pre class="brush: js notranslate">// Apply external styles to the shadow dom
+```js
+// 외부 스타일을 shadow dom에 적용합니다
 const linkElem = document.createElement('link');
 linkElem.setAttribute('rel', 'stylesheet');
 linkElem.setAttribute('href', 'style.css');
 
-// Attach the created element to the shadow dom
-shadow.appendChild(linkElem);</pre>
+// 생성된 요소를 shadow dom에 적용합니다
+shadow.appendChild(linkElem);
+```
 
-<p>Note that {{htmlelement("link")}} elements do not block paint of the shadow root, so there may be a flash of unstyled content (FOUC) while the stylesheet loads.</p>
+{{htmlelement("link")}} 요소는 shadow root의 페인트를 막지 않아, 스타일시트가 로딩되는 동안 스타일되지 않은 내용의 번쩍임 (FOUC, flash of unstyled content) 이 있을 수 있다는 것에 주의하세요.
 
-<p>Many modern browsers implement an optimization for {{htmlelement("style")}} tags either cloned from a common node or that have identical text, to allow them to share a single backing stylesheet. With this optimization the performance of external and internal styles should be similar.</p>
+많은 모던 브라우저들은 공통 노드로부터 복제되었거나 동일한 텍스트를 가지고 있는 {{htmlelement("style")}} 태그에 대한 최적화를 구현하여 스타일 태그가 하나의 백업 스타일시트를 공유할 수 있게 합니다. 이 최적화로 인해 외부 스타일과 내부 스타일의 성능은 비슷할 것입니다.
 
-<h2 id="See_also">See also</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a></li>
- <li><a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a></li>
-</ul>
-</div>
+- [사용자 정의 요소 사용하기](/ko/docs/Web/Web_Components/Using_custom_elements)
+- [template와 slot 사용하기](/ko/docs/Web/Web_Components/Using_templates_and_slots)
