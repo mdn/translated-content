@@ -145,7 +145,7 @@ Um _web worker_ ou um `iframe` com uma diferente origem [(cross-origin)](/en-US/
 
 Uma propriedade muito interessante do modelo _event loop_ é que o JavaScript, ao contrário de muitas outras linguagens, nunca bloqueia. A manipulação de E/S (_I/O_) é tipicamente realizada através de eventos e _callbacks_. Portanto, quando uma aplicação está esperando pelo retorno de uma consulta do [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) ou de uma requisição [XHR](/en-US/docs/Web/API/XMLHttpRequest), ela ainda pode processar outras coisas, como as ações do usuário.
 
-Exceções de legado existem, como por exemplo, `alert` ou XHR síncrono, mas é considerado uma boa prática evitá-los. Tome cuidado, [exceções a exceção existem](http://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311) (mas geralmente são, mais do que qualquer coisa, _bugs_ de implementação).
+Exceções de legado existem, como por exemplo, `alert` ou XHR síncrono, mas é considerado uma boa prática evitá-los. Tome cuidado, [exceções a exceção existem](https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311) (mas geralmente são, mais do que qualquer coisa, _bugs_ de implementação).
 
 ## Veja também
 
