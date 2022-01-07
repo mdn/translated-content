@@ -1,255 +1,250 @@
 ---
-title: CSS 関数表記法
+title: CSS 関数記法
 slug: Web/CSS/CSS_Functions
 tags:
   - CSS
-  - CSS Data Type
-  - CSS Function
-  - Functional Notation
-  - Functions
-  - Reference
-  - Types
-  - data types
+  - CSS データ型
+  - CSS 関数
+  - 関数記法
+  - 関数
+  - リファレンス
+  - 型
+  - データ型
 translation_of: Web/CSS/CSS_Functions
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS 関数表記法</strong>は <a href="/ja/docs/Web/CSS/CSS_Values_and_Units">CSS 値</a>の一種で、より複雑なデータ型を表現したり、特別なデータ処理や計算を呼び出したりすることができます。</p>
+**CSS 関数記法**は [CSS 値](/ja/docs/Web/CSS/CSS_Values_and_Units)の一種で、より複雑なデータ型を表現したり、特別なデータ処理や計算を呼び出したりすることができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">selector {
+```css
+selector {
   property: functional-notation( [argument]? [, argument]! );
-}</pre>
+}
+```
 
-<p>構文は、<strong>関数表記の名前</strong>から始まり、左括弧 <code>(</code> で始まります。次に記法の引数が続き、関数は閉じ括弧 <code>)</code> で終わります。</p>
+構文は、**関数表記の名前**から始まり、左括弧 `(` で始まります。次に記法の引数が続き、関数は閉じ括弧 `)` で終わります。
 
-<p>関数は CSS のプロパティ値と同様の形式で複数の引数を取ることができます。ホワイトスペースは許可されていますが、括弧内では省略可能です。関数表記によって、複数の引数がカンマで区切られていたり、空白を使用していたりします。</p>
+関数は CSS のプロパティ値と同様の形式で複数の引数を取ることができます。ホワイトスペースは許可されていますが、括弧内では省略可能です。関数表記によって、複数の引数がカンマで区切られていたり、空白を使用していたりします。
 
-<h2 id="Index" name="Index">索引</h2>
+## 変換関数
 
-<p>一連の CSS 仕様書で定義されている関数表記は以下のとおりです。</p>
+これらの関数は、 CSS の {{cssxref("&lt;transform-function&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types) が {{cssxref("transform")}} の値として使用される際に用いられます。
 
-<div class="index"><span>A</span>
+- {{cssxref("transform-function/matrix()", "matrix()")}}
+  - : 二次元の同次変換行列を記述します。
+- {{cssxref("transform-function/matrix3d()", "matrix3d()")}}
+  - : 三次元の変換を 4 × 4 の同次行列で記述します。
+- {{cssxref("transform-function/perspective()", "perspective()")}}
+  - : ユーザーと z=0 平面との間の距離を設定します。
+- {{cssxref("transform-function/rotate()", "rotate()")}}
+  - : 要素を二次元平面上で特定の点を中心に回転します。
+- {{cssxref("transform-function/rotate3d()", "rotate3d()")}}
+  - : 要素を三次元空間で特定の軸を中心に回転します。
+- {{cssxref("transform-function/rotateX()", "rotateX()")}}
+  - : 要素を水平軸を中心に回転します。
+- {{cssxref("transform-function/rotateY()", "rotateY()")}}
+  - : 要素を垂直軸を中心に回転します。
+- {{cssxref("transform-function/rotateZ()", "rotateZ()")}}
+  - : 要素を Z 軸を中心に回転します。
+- {{cssxref("transform-function/scale()", "scale()")}}
+  - : 要素を二次元平面上で拡大または縮小します。
+- {{cssxref("transform-function/scale3d()", "scale3d()")}}
+  - : 要素を三次元空間で拡大または縮小します。
+- {{cssxref("transform-function/scaleX()", "scaleX()")}}
+  - : 要素を水平に拡大または縮小します。
+- {{cssxref("transform-function/scaleY()", "scaleY()")}}
+  - : 要素を垂直に拡大または縮小します。
+- {{cssxref("transform-function/scaleZ()", "scaleZ()")}}
+  - : 要素を Z 軸方向に拡大または縮小します。
+- {{cssxref("transform-function/skew()", "skew()")}}
+  - : 要素を二次元平面上で歪ませます。
+- {{cssxref("transform-function/skewX()", "skewX()")}}
+  - : 要素を水平方向に歪ませます。
+- {{cssxref("transform-function/skewY()", "skewY()")}}
+  - : 要素を垂直方向に歪ませます。
+- {{cssxref("transform-function/translate()", "translate()")}}
+  - : 要素を二次元平面上で平行移動させます。
+- {{cssxref("transform-function/translate3d()", "translate3d()")}}
+  - : 要素を三次元空間で平行移動させます。
+- {{cssxref("transform-function/translateX", "translateX()")}}
+  - : 要素を水平方向に平行移動させます。
+- {{cssxref("transform-function/translateY()", "translateY()")}}
+  - : 要素を垂直方向に平行移動させます。
+- {{cssxref("transform-function/translateZ()", "translateZ()")}}
+  - : 要素を Z 軸方向に平行移動させます。
 
-<ul>
- <li>{{CSSxRef("abs", "abs()")}} (math)</li>
- <li>{{CSSxRef("acos", "acos()")}} (math)</li>
- <li>{{CSSxRef("font-variant-alternates/annotation()", "annotation()")}} (font)</li>
- <li>{{CSSxRef("asin", "asin()")}} (math)</li>
- <li>{{CSSxRef("atan", "atan()")}} (math)</li>
- <li>{{CSSxRef("atan2", "atan2()")}} (math)</li>
- <li>{{CSSxRef("attr")}}</li>
-</ul>
-<span>B</span>
+## 数学関数
 
-<ul>
- <li>{{CSSxRef("filter-function/blur", "blur()")}} (filter)</li>
- <li>{{CSSxRef("filter-function/brightness", "brightness()")}} (filter)</li>
-</ul>
-<span>C</span>
+数学関数は、 CSS の数値を数式として記述することができるものです。
 
-<ul>
- <li>{{CSSxRef("calc")}} (math)</li>
- <li>{{CSSxRef("font-variant-alternates/character-variant()", "character-variant()")}} (font)</li>
- <li>{{CSSxRef("circle", "circle()")}} (shape)</li>
- <li>{{CSSxRef("clamp")}} (math)</li>
- <li>{{CSSxRef("color()")}} (colors)</li>
- <li>{{CSSxRef("conic-gradient")}}</li>
- <li>{{CSSxRef("cos", "cos()")}} (math)</li>
- <li>{{CSSxRef("counter")}}</li>
- <li>{{CSSxRef("counters")}}</li>
- <li>{{CSSxRef("filter-function/contrast", "contrast()")}} (filter)</li>
- <li>{{CSSxRef("cross-fade")}}</li>
- <li>{{CSSxRef("cubic-bezier", "cubic-bezier()")}}</li>
-</ul>
-<span>D</span>
+- {{cssxref("calc()")}}
+  - : CSS の数値に対して基本的な算術演算を行うことができる数学関数です。
+- {{cssxref("clamp()")}}
+  - : 最小値、中央値、最大値を取り、その中央値の計算を表す比較関数です。
+- {{cssxref("max()")}}
+  - : 値のリストの最大値を表す比較関数です。
+- {{cssxref("min()")}}
+  - : 値のリストの最小値を表す比較関数です。
+- {{cssxref("abs()")}} {{Experimental_Inline}}
+  - : 計算結果を受け取り、絶対値を返します。
+- {{cssxref("acos()")}} {{Experimental_Inline}}
+  - : An inverse trigonometric function the angle returned must be normalized to the range \[0deg, 180deg];.
+- {{cssxref("asin()")}} {{Experimental_Inline}}
+  - : An inverse trigonometric function the angle returned must be normalized to the range \[-90deg, 90deg].
+- {{cssxref("atan()")}} {{Experimental_Inline}}
+  - : An inverse trigonometric function the angle returned must be normalized to the range \[-90deg, 90deg].
+- {{cssxref("atan2()")}} {{Experimental_Inline}}
+  - : Contains two comma-separated calculations, A and B. A and B can resolve to any {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}}, or {{cssxref("&lt;percentage&gt;")}}, but must have the same type, or else the function is invalid.
+- {{cssxref("cos()")}} {{Experimental_Inline}}
+  - : Contains a single calculation which must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}.
+- {{cssxref("exp()")}} {{Experimental_Inline}}
+  - : Contains one calculation which must resolve to a {{cssxref("&lt;number&gt;")}}, and returns the same value as pow(e, A) as a {{cssxref("&lt;number&gt;")}}.
+- {{cssxref("hypot()")}} {{Experimental_Inline}}
+  - : Contains one or more comma-separated calculations, and returns the length of an N-dimensional vector with components equal to each of the calculations.
+- {{cssxref("log()")}} {{Experimental_Inline}}
+  - : Contains one or two calculations (representing the value to be logarithmed, and the base of the logarithm, defaulting to e), which must both resolve as a {{cssxref("&lt;number&gt;")}}, and returns the logarithm base B of the value A, as a {{cssxref("&lt;number&gt;")}}.
+- {{cssxref("mod()")}} {{Experimental_Inline}}
+  - : A modulus function that contains two calculations A and B, and returns the difference between A and the nearest integer multiple of B either above or below A.
+- {{cssxref("pow()")}} {{Experimental_Inline}}
+  - : Contains two comma-separated calculations A and B, both of which must resolve as a {{cssxref("&lt;number&gt;")}}, and returns the result of raising A to the power of B, returning the value as a {{cssxref("&lt;number&gt;")}}.
+- {{cssxref("rem()")}} {{Experimental_Inline}}
+  - : A modulus function that contains two calculations A and B, and returns the difference between A and the nearest integer multiple of B either above or below A.
+- {{cssxref("round()")}} {{Experimental_Inline}}
+  - : Contains an optional rounding strategy, and two calculations A and B, and returns the value of A, rounded according to the rounding strategy, to the nearest integer multiple of B either above or below A.
+- {{cssxref("sign()")}} {{Experimental_Inline}}
+  - : 計算結果を取り、数値が負であれば -1 を返し、数値が正であれば \+1 を返し、数値が 0⁺ であれば 0⁺ を返し、数値が 0⁻ であれば 0⁻ を返します。
+- {{cssxref("sin()")}} {{Experimental_Inline}}
+  - : Contains a single calculation which must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}.
+- {{cssxref("sqrt()")}} {{Experimental_Inline}}
+  - : Contains a single calculation which must resolve to a {{cssxref("&lt;number&gt;")}}, and returns the square root of the value as a {{cssxref("&lt;number&gt;")}}.
+- {{cssxref("tan()")}} {{Experimental_Inline}}
+  - : Contains a single calculation which must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}.
 
-<ul>
- <li>{{CSSxRef("device-cmyk", "device-cmyk()")}} (colors)</li>
- <li>{{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}} (filter)</li>
-</ul>
-<span>E</span>
+## フィルター関数
 
-<ul>
- <li>{{CSSxRef("element")}}</li>
- <li>{{CSSxRef("env")}}</li>
- <li>{{CSSxRef("ellipse", "ellipse()")}} (shape)</li>
- <li>{{CSSxRef("exp", "exp()")}} (math)</li>
-</ul>
-<span>F</span>
+**`<filter-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、入力画像の外見を変更することができるグラフィック効果を表します。 {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティで使用されます。
 
-<ul>
- <li>{{CSSxRef("fit-content")}}</li>
- <li>{{CSSxRef("format", "format()")}}</li>
-</ul>
-<span>G</span>
+- {{cssxref("filter-function/blur()", "blur()")}}
+  - : 画像をぼかします。
+- {{cssxref("filter-function/brightness()", "brightness()")}}
+  - : 画像を明るくしたり暗くしたりします。
+- {{cssxref("filter-function/contrast()", "contrast()")}}
+  - : 画像のコントラストを上げたり下げたりします。
+- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
+  - : 画像の背後にドロップシャドウを適用します。
+- {{cssxref("filter-function/grayscale()", "grayscale()")}}
+  - : 画像をグレイスケールに変換します。
+- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
+  - : 画像の色相を全体的に変更します。
+- {{cssxref("filter-function/invert()", "invert()")}}
+  - : 画像の色を反転させます。
+- {{cssxref("filter-function/opacity()", "opacity()")}}
+  - : 画像を半透明にします。
+- {{cssxref("filter-function/saturate()", "saturate()")}}
+  - : 入力画像の彩度を上げたり下げたりします。
+- {{cssxref("filter-function/sepia()", "sepia()")}}
+  - : 画像をセピア調に変換します。
 
-<ul>
- <li>{{CSSxRef("filter-function/grayscale", "grayscale()")}} (filter)</li>
-</ul>
-<span>H</span>
+## 色関数
 
-<ul>
- <li>{{CSSxRef("hsl", "hsl()")}} (colors)</li>
- <li>{{CSSxRef("hsla", "hsla()")}} (colors)</li>
- <li>{{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}} (filter)</li>
- <li>{{CSSxRef("hwb", "hwb()")}} (colors)</li>
- <li>{{CSSxRef("hypot", "hypot()")}} (math)</li>
-</ul>
-<span>I</span>
+様々な色の表現を指定する関数です。 {{cssxref("&lt;color_value&gt;","&lt;color&gt;")}} が有効な場所であればどこでも使用できます。
 
-<ul>
- <li>{{CSSxRef("imagefunction", "image()")}}</li>
- <li>{{CSSxRef("image-set")}}</li>
- <li>{{CSSxRef("inset()")}} (shape)</li>
- <li>{{CSSxRef("filter-function/invert", "invert()")}} (filter)</li>
-</ul>
-<span>L</span>
+- {{cssxref("color_value/color()", "color()")}} {{Experimental_Inline}}
+  - : （他のほとんどの色関数が操作する暗黙の sRGB 色空間ではなく）特定の指定された色空間で色を指定できるようにします。
+- {{cssxref("color_value/color-mix()", "color-mix()")}} {{Experimental_Inline}}
+  - : 2 つの {{cssxref("color_value","color")}} 値を受け取り、それらを指定された色空間で与えられた量だけ混合した結果を返します。
+- {{cssxref("color_value/color-contrast()", "color-contrast()")}} {{Experimental_Inline}}
+  - : {{cssxref("color_value","color")}} 値を受け取り、他の {{cssxref("color_value", "color")}} 値のリストと比較し、リストの中から最もコントラストの強いものを選択します。
+- {{cssxref("color_value/device-cmyk()", "device-cmyk()")}} {{Experimental_Inline}}
+  - : CMYK 色をデバイスに依存しない方法で表現するために使用します。
+- {{cssxref("color_value/hsl()", "hsl()")}}
+  - : HSL カラーモデルは、色相、彩度、明度の各成分によって色を定義します。オプションのアルファ成分は、色の透明度を表します。
+- {{cssxref("color_value/hsla()", "hsla()")}}
+  - : HSL カラーモデルは、色相、彩度、明度の各成分によって色を定義します。オプションのアルファ成分は、色の透明度を表します。
+- {{cssxref("color_value/hwb()", "hwb()")}} {{Experimental_Inline}}
+  - : HWB (Hue-Whiteness-Blackness の略) も HSL と同様に色を指定する方法の一つです。
+- {{cssxref("color_value/lab()", "lab()")}} {{Experimental_Inline}}
+  - : Lab カラーはデバイスに依存せず、色の物理的な測定値を規定するものです。
+- {{cssxref("color_value/lch()", "lch()")}} {{Experimental_Inline}}
+  - : LCH カラーはデバイスに依存せず、彩度と色相の極座標で色を指定します。
+- {{cssxref("color_value/rgb()", "rgb()")}}
+  - : RGB カラーモデルは、赤、緑、青の 3 つの成分によって色を定義します。オプションのアルファ成分は、色の透明度を表します。
+- {{cssxref("color_value/rgba()", "rgba()")}}
+  - : RGB カラーモデルは、赤、緑、青の 3 つの成分によって色を定義します。アルファ成分は、色の透明度を表します。
 
-<ul>
- <li>{{CSSxRef("lab", "lab()")}} (colors)</li>
- <li>{{CSSxRef("lch", "lch()")}} (colors)</li>
- <li>{{CSSxRef("leader", "leader()")}}</li>
- <li>{{CSSxRef("linear-gradient")}}</li>
- <li>{{CSSxRef("local", "local()")}}</li>
- <li>{{CSSxRef("log", "log()")}} (math)</li>
-</ul>
-<span>M</span>
+## 画像関数
 
-<ul>
- <li>{{CSSxRef("transform-function/matrix", "matrix()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/matrix3d", "matrix3d()")}} (transform)</li>
- <li>{{CSSxRef("max")}} (math)</li>
- <li>{{CSSxRef("min")}} (math)</li>
- <li>{{CSSxRef("minmax")}} (math)</li>
- <li>{{CSSxRef("mod", "mod()")}} (math)</li>
-</ul>
-<span>O</span>
+これらの関数は、プロパティの値として {{cssxref("&lt;image&gt;")}} が有効な場所ならばどこでも使用できます。
 
-<ul>
- <li>{{CSSxRef("filter-function/opacity", "opacity()")}} (filter)</li>
- <li>{{CSSxRef("font-variant-alternates/ornaments()", "ornaments()")}} (font)</li>
-</ul>
-<span>P</span>
+- {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}
+  - : 扇形グラデーションは、円を描くように徐々に色を変化させます。
+- {{cssxref("image/image()","image()")}} {{Experimental_Inline}}
+  - : {{cssxref("&lt;image&gt;")}} を {{cssxref("url()")}} 関数と同様の方法で定義しますが、画像の方向の指定、優先画像に対応していない場合の代替画像の指定などの機能を追加しています。
+- {{cssxref("image/image-set()","image-set()")}} {{Experimental_Inline}}
+  - : 主に高ピクセル密度の画面のために、与えられたセットの中から最も適切な CSS 画像をブラウザーに選択させる方法です。
+- {{cssxref("gradient/linear-gradient()","linear-gradient()")}}
+  - : 線形グラデーションは、想像上の線に沿って徐々に色を変化させます。
+- {{cssxref("gradient/radial-gradient()","radial-gradient()")}}
+  - : 放射グラデーションは、中心点（原点）から徐々に色を変化させていきます。
+- {{cssxref("gradient/repeating-linear-gradient()","repeating-linear-gradiant()")}}
+  - : `linear-gradient()` に似ていて、同じ引数を取りますが、コンテナー全体を覆うように、すべての方向に無限に色停止点を繰り返します。
+- {{cssxref("gradient/repeating-radial-gradient()","repeating-radial-gradient()")}}
+  - : `radial-gradient()` に似ていて、同じ引数を取りますが、コンテナー全体を覆うように、すべての方向に無限に色停止点を繰り返します。
+- {{cssxref("gradient/repeating-conic-gradient()","repeat-conic-gradiant()")}}
+  - : `conic-gradient()` に似ていて、同じ引数を取りますが、コンテナー全体を覆うように、すべての方向に無限に色停止点を繰り返します。
 
-<ul>
- <li>{{CSSxRef("paint")}}</li>
- <li>{{CSSxRef("path", "path()")}} (shape)</li>
- <li>{{CSSxRef("transform-function/perspective", "perspective()")}} (transform)</li>
- <li>{{CSSxRef("polygon", "polygon()")}} (shape)</li>
- <li>{{CSSxRef("pow", "pow()")}} (math)</li>
-</ul>
-<span>R</span>
+## カウンター関数
 
-<ul>
- <li>{{CSSxRef("radial-gradient")}}</li>
- <li>{{CSSxRef("rem", "rem()")}} (math)</li>
- <li>{{CSSxRef("repeat")}}</li>
- <li>{{CSSxRef("repeating-linear-gradient")}}</li>
- <li>{{CSSxRef("repeating-radial-gradient")}}</li>
- <li>{{CSSxRef("repeating-conic-gradient")}}</li>
- <li>rgb() (colors)</li>
- <li>rgba() (colors)</li>
- <li>{{CSSxRef("transform-function/rotate", "rotate()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/rotate3d", "rotate3d()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/rotateX", "rotateX()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/rotateY", "rotateY()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/rotateZ", "rotateZ()")}} (transform)</li>
- <li>{{CSSxRef("round", "round()")}} (math)</li>
-</ul>
-<span>S</span>
+カウンター関数は一般に {{cssxref("content")}} プロパティと共に使われますが、理論的には {{cssxref("&lt;string&gt;")}} に対応しているところならば使用することができます。
 
-<ul>
- <li>{{CSSxRef("filter-function/saturate", "saturate()")}} (filter)</li>
- <li>{{CSSxRef("transform-function/scale", "scale()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/scale3d", "scale3d()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/scaleX", "scaleX()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/scaleY", "scaleY()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/scaleZ", "scaleZ()")}} (transform)</li>
- <li>{{CSSxRef("filter-function/sepia", "sepia()")}} (filter)</li>
- <li>{{CSSxRef("sign", "sign()")}} (math)</li>
- <li>{{CSSxRef("sin", "sin()")}} (math)</li>
- <li>{{CSSxRef("transform-function/skew", "skew()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/skewX", "skewX()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/skewY", "skewY()")}} (transform)</li>
- <li>{{CSSxRef("sqrt", "sqrt()")}} (math)</li>
- <li>{{CSSxRef("steps", "steps()")}}</li>
- <li>{{CSSxRef("font-variant-alternates/styleset()", "styleset()")}} (font)</li>
- <li>{{CSSxRef("font-variant-alternates/stylistic()", "stylistic()")}} (font)</li>
- <li>{{CSSxRef("font-variant-alternates/swash()", "swash()")}} (font)</li>
- <li>{{CSSxRef("symbols", "symbols()")}}</li>
-</ul>
-<span>T</span>
+- {{cssxref("counter()")}}
+  - : その名前のカウンターが存在すれば、現在の値を示す文字列を返します。
+- {{cssxref("counters()")}}
+  - : 入れ子のカウンターを有効にし、指定されたカウンターが存在すれば、その現在の値を表す文字列を連結して返します。
 
-<ul>
- <li>{{CSSxRef("tan", "tan()")}} (math)</li>
- <li>{{CSSxRef("target-counter", "target-counter()")}}</li>
- <li>{{CSSxRef("target-counters", "target-counters()")}}</li>
- <li>{{CSSxRef("target-text", "target-text()")}}</li>
- <li>{{CSSxRef("toggle", "toggle()")}}</li>
- <li>{{CSSxRef("transform-function/translate", "translate()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/translate3d", "translate3d()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/translateX", "translateX()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/translateY", "translateY()")}} (transform)</li>
- <li>{{CSSxRef("transform-function/translateZ", "translateZ()")}} (transform)</li>
-</ul>
-<span>U</span>
+## フォント関数
 
-<ul>
- <li>{{CSSxRef("url()", "url()")}}</li>
-</ul>
-<span>V</span>
+{{cssxref("font-variant-alternates")}} プロパティは代替字形の使用を制御し、以下の関数がこのプロパティの値になります。
 
-<ul>
- <li>{{CSSxRef("var")}}</li>
-</ul>
-</div>
+- {{cssxref("font-variant-alternates/stylistic()", "stylistic()")}}
+  - : This function enables stylistic alternates for individual characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `salt`, like `salt 2`.
+- {{cssxref("font-variant-alternates/styleset()", "styleset()")}}
+  - : This function enables stylistic alternatives for sets of characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `ssXY`, like `ss02`.
+- {{cssxref("font-variant-alternates/character-variant()", "character-variant()")}}
+  - : This function enables specific stylistic alternatives for characters. It is similar to `styleset()`, but doesn't create coherent glyphs for a set of characters; individual characters will have independent and not necessarily coherent styles. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `cvXY`, like `cv02`.
+- {{cssxref("font-variant-alternates/swash()", "swash()")}}
+  - : This function enables [swash](https://en.wikipedia.org/wiki/Swash_%28typography%29) glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType values `swsh` and `cswh`, like `swsh 2` and `cswh 2`.
+- {{cssxref("font-variant-alternates/ornaments()", "ornaments()")}}
+  - : This function enables ornaments, like [fleurons](https://en.wikipedia.org/wiki/Fleuron_%28typography%29) and other dingbat glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `ornm`, like `ornm 2`.
+- {{cssxref("font-variant-alternates/annotation()", "annotation()")}}
+  - : This function enables annotations, like circled digits or inverted characters. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `nalt`, like `nalt 2`.
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## シェイプ関数
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Values")}}</td>
-   <td>{{Spec2("CSS4 Values")}}</td>
-   <td><code>toggle()</code>, <code>attr()</code>, <code>calc()</code>, <code>min()</code>, <code>max()</code>, <code>clamp()</code>, <code>round()</code>, <code>mod()</code>, <code>rem()</code>, <code>mod()</code>, <code>sin()</code>, <code>cos()</code>, <code>tan()</code>, <code>asin()</code>, <code>acos()</code>, <code>atan()</code>, <code>atan2()</code>, <code>pow()</code>, <code>sqrt()</code>, <code>hypot()</code>, <code>log()</code>, <code>exp()</code>, <code>abs()</code>, <code>sign()</code> の関数表記を追加。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Values")}}</td>
-   <td>{{Spec2("CSS3 Values")}}</td>
-   <td><code>calc()</code> の関数表記を追加。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Colors")}}</td>
-   <td>{{Spec2("CSS4 Colors")}}</td>
-   <td><code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code> の関数表記にカンマなしの構文を追加。<br>
-    <code>rgb()</code> と <code>hsl()</code> にアルファ値を許可し、 <code>rgba()</code> と <code>hsla()</code> をそれらの (非推奨の) 別名とした。<br>
-    <code>hwb()</code>, <code>device-cmyk()</code>, <code>color()</code> 関数を追加。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Colors")}}</td>
-   <td>{{Spec2("CSS3 Colors")}}</td>
-   <td><code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code> の関数表記を追加。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Images")}}</td>
-   <td>{{Spec2("CSS4 Images")}}</td>
-   <td><code>element()</code>, <code>image()</code>, <code>image-set()</code>, <code>conic-gradient()</code> の関数表記を追加。</td>
-  </tr>
- </tbody>
-</table>
+以下の関数は {{cssxref("&lt;basic-shape&gt;")}} データ型の値として使用することができ、これは {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}} の各プロパティで使用されます。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+- {{cssxref("basic-shape/circle()","circle()")}}
+  - : 円を定義します。
+- {{cssxref("basic-shape/ellipse()","ellipse()")}}
+  - : 楕円を定義します。
+- {{cssxref("basic-shape/inset()","inset()")}}
+  - : 内部の長方形を定義します。
+- {{cssxref("basic-shape/polygon()","polygon()")}}
+  - : 多角形を定義します。
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Values_and_Units">CSS 値と単位</a></li>
- <li><a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS 入門: 値と単位</a></li>
-</ul>
+## 仕様書
+
+| 仕様書                        | 状態                           | 備考                                                                                                                                                                                                                                                               |
+| ------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("CSS4 Values")}} | {{Spec2("CSS4 Values")}} | `toggle()`, `attr()`, `calc()`, `min()`, `max()`, `clamp()`, `round()`, `mod()`, `rem()`, `mod()`, `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`, `pow()`, `sqrt()`, `hypot()`, `log()`, `exp()`, `abs()`, `sign()` の関数表記を追加。 |
+| {{SpecName("CSS3 Values")}} | {{Spec2("CSS3 Values")}} | `calc()` の関数表記を追加。 |
+| {{SpecName("CSS4 Colors")}} | {{Spec2("CSS4 Colors")}} | `rgb()`, `rgba()`, `hsl()`, `hsla()` の関数表記にカンマなしの構文を追加。 `rgb()` と `hsl()` にアルファ値を許可し、 `rgba()` と `hsla()` をそれらの (非推奨の) 別名とした。 `hwb()`, `device-cmyk()`, `color()` 関数を追加。 |
+| {{SpecName("CSS3 Colors")}} | {{Spec2("CSS3 Colors")}} | `rgba()`, `hsl()`, `hsla()` の関数表記を追加。 |
+| {{SpecName("CSS4 Images")}} | {{Spec2("CSS4 Images")}} | `element()`, `image()`, `image-set()`, `conic-gradient()` の関数表記を追加。 |
+
+## 関連情報
+
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS 入門: 値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
