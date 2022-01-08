@@ -1,41 +1,48 @@
 ---
 title: SpeechSynthesis.getVoices()
 slug: Web/API/SpeechSynthesis/getVoices
+tags:
+  - API
+  - Method
+  - Reference
+  - SpeechSynthesis
+  - Web Speech API
+  - getVoices
+  - speech
+  - synthesis
 translation_of: Web/API/SpeechSynthesis/getVoices
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}
 
-<p>The <code><strong>getVoices()</strong></code> method of the {{domxref("SpeechSynthesis")}} interface returns a list of {{domxref("SpeechSynthesisVoice")}} objects representing all the available voices on the current device.</p>
+{{domxref("SpeechSynthesis")}} 接口的 **`getVoices()`** 方法返回一个 {{domxref("SpeechSynthesisVoice")}} 列表，用于表示当前设备上所有可用的语音。
 
-<h2 id="Syntax">Syntax</h2>
+## 语法
 
-<pre class="syntaxbox">speechSynthesisInstance.getVoices();
-</pre>
+```js
+getVoices()
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>None.</p>
+无。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个类型为{{domxref("SpeechSynthesisVoice")}} 的数组（array）列表（list）。</p>
+返回一个类型为 {{domxref("SpeechSynthesisVoice")}} 的数组（array）列表（list）。
 
-<div class="note">
-<p><strong>Note</strong>: 使用此方法会返回存在错误规范的<code>SpeechSynthesisVoiceList</code> 对象, 可能已被从现有规范中移除。</p>
-</div>
+## 示例
 
-<h2 id="示例">示例</h2>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">function populateVoiceList() {
+```js
+function populateVoiceList() {
   if(typeof speechSynthesis === 'undefined') {
     return;
   }
 
-  voices = speechSynthesis.getVoices();
+  var voices = speechSynthesis.getVoices();
 
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(var i = 0; i < voices.length; i++) {
     var option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
 
@@ -50,44 +57,27 @@ translation_of: Web/API/SpeechSynthesis/getVoices
 }
 
 populateVoiceList();
-if (typeof speechSynthesis !== 'undefined' &amp;&amp; speechSynthesis.onvoiceschanged !== undefined) {
+if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;select id="voiceSelect"&gt;&lt;/select&gt;
-</pre>
+```html
+<select id="voiceSelect"></select>
+```
 
-<p>{{EmbedLiveSample("Example", 400, 25)}}</p>
+{{EmbedLiveSample("示例", 400, 25)}}
 
-<h2 id="Specifications">Specifications</h2>
+## 规范
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#dfn-ttsgetvoices', 'getVoices()')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat}}
 
+## 参见
 
-<p>{{Compat("api.SpeechSynthesis.getVoices")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API)
