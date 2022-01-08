@@ -53,6 +53,7 @@ The review teams for each locale are:
 - Korea (`ko`) content — the
 [@yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko)
   team, which consists of:
+  - [@cos18](https://github.com/cos18)
   - [@yechoi42](https://github.com/yechoi42)
   - [@GwangYeol-Im](https://github.com/GwangYeol-Im)
   - [@pje1740](https://github.com/pje1740)
