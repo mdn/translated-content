@@ -45,9 +45,9 @@ function catName(name) {
 
 <p>巻き上げはその他のデータ型や変数でも同様に動作します。変数は定義の前に初期化して使うことができます。しかし初期化しないと使うことができません。</p>
 
-<h3 id="Only_declarations_are_hoisted" name="Only_declarations_are_hoisted">定義のみが巻き上げられる</h3>
+<h3 id="Only_declarations_are_hoisted" name="Only_declarations_are_hoisted">宣言のみが巻き上げられる</h3>
 
-<p>JavaScript では定義のみが巻き上げられ、初期化はそうでありません。変数が使用された後に定義や初期化された場合、値は undefined になります。例えば次のようになります。</p>
+<p>JavaScript では宣言のみが巻き上げられ、初期化はそうでありません。変数が使用された後に宣言や初期化された場合、値は undefined になります。例えば次のようになります。</p>
 
 <pre class="brush: js notranslate">console.log(num); // undefined を返す。宣言のみが巻き上げられ、この段階では初期化が行われないため
 var num; // 宣言
