@@ -139,13 +139,13 @@ clearInterval(myInterval);</pre>
 
 <p>Com tudo isso dito, nós temos um desafio para você. Faça uma cópia do nosso exemplo <code><a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">setInterval-clock.html</a></code>, e o modifique para criar seu próprio cronômetro.</p>
 
-<p>Você precisa mostrar um tempo na tela como antes, mas nesse ememplo você vai precisar de:</p>
+<p>Você precisa mostrar um tempo na tela como antes, mas nesse exemplo você vai precisar de:</p>
 
 <ul>
- <li>Um botão de início para fazer o cronômetro começar a contar.</li>
- <li>Um botâo de parar para parar ou pausar o tempo.</li>
+ <li>Um botão de "início" para fazer o cronômetro começar a contar.</li>
+ <li>Um botão de "parar" para parar ou pausar o tempo.</li>
  <li>Um botão de "reset" para resetar o tempo em 0.</li>
- <li>O display do tempo para mostrar o número de sgundos passados.</li>
+ <li>O display do tempo para mostrar o número de segundos passados.</li>
 </ul>
 
 <p>Here's a few hints for you:</p>
@@ -251,7 +251,7 @@ alert('Hello');</pre>
 
 draw();</pre>
 
-<p>A ideia é definir uma função em que sua animação é atualizada (e.g. seus spritas se movem, a pontuação é atuializada, dados são recarregados, etc). Depois, você inicia o processo. No final do bloco da função você chama  <code>requestAnimationFrame()</code> com a referência da função passada como parâmetro, e isso instrui o navegador a chamar a função de novo na próxima renovação. Isso é executado continuamente, já que o código está chamando <code>requestAnimationFrame()</code> recursivamente.</p>
+<p>A ideia é definir uma função em que sua animação é atualizada (e.g. seus spritas se movem, a pontuação é atualizada, dados são recarregados, etc). Depois, você inicia o processo. No final do bloco da função você chama  <code>requestAnimationFrame()</code> com a referência da função passada como parâmetro, e isso instrui o navegador a chamar a função de novo na próxima renovação. Isso é executado continuamente, já que o código está chamando <code>requestAnimationFrame()</code> recursivamente.</p>
 
 <div class="blockIndicator note">
 <p><strong>Nota</strong>: Se você quer realizar algum tipo de animação na DOM constantemente, <a href="/en-US/docs/Web/CSS/CSS_Animations">Animações CSS</a> são provavelemente mais rápidas. elas são calculadas diretamente pelo código interno do navegador, ao invés de JavaScript.</p>
