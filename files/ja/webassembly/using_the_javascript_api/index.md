@@ -1,283 +1,290 @@
 ---
-title: WebAssembly JavaScript API を使用する
+title: WebAssembly JavaScript API の使用
 slug: WebAssembly/Using_the_JavaScript_API
+tags:
+  - API
+  - 開発ツール
+  - JavaScript
+  - WebAssembly
+  - コンパイル
+  - インスタンス化
+  - メモリー
+  - テーブル
 translation_of: WebAssembly/Using_the_JavaScript_API
 ---
-<div>{{WebAssemblySidebar}}</div>
+{{WebAssemblySidebar}}
 
-<p class="summary">これまでに <a href="/ja/docs/WebAssembly/C_to_wasm">Emscriptenのようなツールを使用して他の言語からモジュールをコンパイルしたり</a>、<a href="/ja/docs/WebAssembly/Loading_and_running">あなた自身のコードをロードして実行しました</a>。次のステップは他のWebAssembly JavaScript APIの使い方について学ぶことです。この記事ではあなたが知る必要があることを説明します。</p>
+これまでに [Emscripten などのツールを使用して他の言語からモジュールをコンパイルしたり](/ja/docs/WebAssembly/C_to_wasm)、[自分自身のコードを読み込んでして実行したりしました](/ja/docs/WebAssembly/Loading_and_running)。次のステップは他の WebAssembly JavaScript API の使い方について学ぶことです。この記事では知る必要があることを説明します。
 
-<div class="note">
-<p><strong>注</strong>: もし、この記事で説明している基本的なコンセプトがよくわからない場合、<a href="/ja/docs/WebAssembly/Concepts">WebAssemblyのコンセプト</a> をはじめに読んでからこの記事に戻ってきてください。</p>
+> **Note:** もし、この記事で説明している基本的な概念がよくわからない場合、 [WebAssembly の概要](/ja/docs/WebAssembly/Concepts)を先に読んでからこの記事に戻ってきてください。
+
+## シンプルな例
+
+WebAssembly JavaScript API の使用方法と、wasm モジュールを読み込んでウェブページ内で使用する方法を、ステップバイステップの例を通して実行してみましょう。
+
+> **Note:** サンプルコードは [webassembly-examples](https://github.com/mdn/webassembly-examples) GitHub リポジトリーから参照してください。
 </div>
 
-<h2 id="シンプルな例">シンプルな例</h2>
+### 例の準備
 
-<p>WebAssembly JavaScript API の使用方法と、wasm モジュールをロードしてウェブページ内で使用する方法をステップ・バイ・ステップの例を通して実行してみましょう。</p>
+1.  まずは、 wasm モジュールが必要です! [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) をコピーしてローカルマシンの新しいディレクトリーの中に保存してください。
+2.  次に、 wasm ファイルと同じディレクトリーに `index.html` という名前でシンプルな HTML ファイルを作成しましょう（簡単に利用できるテンプレートを持っていないのであれば、[単純なテンプレート](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)が利用できます）。
+3.  ここで、何が起こっているのか理解を助けるために、 wasm モジュールのテキスト表現を見てみましょう（[WebAssembly フォーマットから wasm への変換](/ja/docs/WebAssembly/Text_format_to_wasm)も参照してください）。
 
-<div class="note">
-<p><strong>注</strong>: サンプルコードは <a href="https://github.com/mdn/webassembly-examples">webassembly-examples</a> GitHub レポジトリから参照してください。</p>
-</div>
+    ```js
+    (module
+      (func $i (import "imports" "imported_func") (param i32))
+      (func (export "exported_func")
+        i32.const 42
+        call $i))
+    ```
 
-<h3 id="例を準備する">例を準備する</h3>
+4.  2 行目に 2 階層の名前空間を持つインポートの宣言があります。 — 内部関数 `$i` は `imports.imported_func` からインポートされています。wasm モジュールにインポートするオブジェクトを記述するときに、この 2 階層の名前空間を JavaScript に反映させる必要があります。 `<script></script>` 要素を HTML 内に作成して、次のコードを追加してください。
 
-<ol>
- <li>まずは、wasm モジュールが必要です! <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm">simple.wasm</a> をコピーしてローカルマシンの新しいディレクトリの中に保存します。</li>
- <li>次に、使用しているブラウザが WebAssembly に対応しているか確認します。Firefox 52+ と Chrome 57+ では WebAssembly がデフォルトで有効になっています。</li>
- <li>次に、wasm ファイルと同じディレクトリに <code>index.html</code> という名前でシンプルな HTML ファイルを作成しましょう (もしも簡単に利用できるテンプレートを持っていない場合、<a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">simple template</a> を使用できます) 。</li>
- <li>ここで、何が起こっているのか理解を助けるために、wasm モジュールのテキスト表現を見てみましょう (<a href="/ja/docs/WebAssembly/Text_format_to_wasm">テキストフォーマットから wasm に変換する</a> も参照してください):
-  <pre>(module
-  (func $i (import "imports" "imported_func") (param i32))
-  (func (export "exported_func")
-    i32.const 42
-    call $i))</pre>
- </li>
- <li>2行目に2階層の名前空間を持つインポートの宣言があります — 内部関数 <code>$i</code> は <code>imports.imported_func</code> からインポートされています。wasm モジュールにインポートするオブジェクトを記述するときに、この2階層の名前空間を JavaScript に反映させる必要があります。<code>&lt;script&gt;&lt;/script&gt;</code> 要素を HTML 内に作成して、次のコードを追加します:
-  <pre class="brush: js">var importObject = {
-  imports: {
-      imported_func: function(arg) {
-        console.log(arg);
-      }
-    }
-  };</pre>
- </li>
-</ol>
+    ```js
+    var importObject = {
+      imports: { imported_func: arg => console.log(arg) }
+    };
+    ```
 
-<p>上で説明したように、 <code>imports.imported_func</code> でインポート機能を利用できます。</p>
+### WebAssembly モジュールをストリーミングする
 
-<div class="note">
-<p><strong>注</strong>: <a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">ES6のアローファンクション</a> を使用するとより簡潔に書くことができます:</p>
+Firefox 58 の新機能として、 WebAssembly モジュールを基礎となるソースから直接コンパイルおよびインスタンス化する機能があります。これは {{jsxref("WebAssembly.compileStreaming()")}} と {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用して実現します。これらのメソッドは、バイトコードを直接 `Module`/`Instance` インスタンスに変換することができるので、{{domxref("Response")}} を {{jsxref("ArrayBuffer")}} に別途格納する必要がないため、ストリーミングではない対応するメソッドよりも簡単になっています。
 
-<pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };</pre>
-</div>
+この例（GitHub の [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) デモや、[ライブ版](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)も参照してください）では、 `instantiateStreaming()` を使って wasm モジュールを取得し、そこに JavaScript 関数をインポートしてコンパイルしてインスタンス化し、そのエクスポート関数にアクセスするまで、すべて一度に行っています。
 
-<p>スタイルはあなたが好きなものを選んでください。</p>
+スクリプトに以下の 1 ブロックを加えてください。
 
-<h3 id="wasm_モジュールをロードして使用する">wasm モジュールをロードして使用する</h3>
-
-<p>インポートオブジェクトを用意して、wasm ファイルをフェッチして、ArrayBuffer に変換して、その後にエクスポートされた関数を使用します。</p>
-
-<p>スクリプトに次のコードを追加します。以下は最初のブロックです:</p>
-
-<pre class="brush: js">fetch('simple.wasm').then(response =&gt;
-  response.arrayBuffer()
-).then(bytes =&gt;
-  WebAssembly.instantiate(bytes, importObject)
-).then(results =&gt; {
-  results.instance.exports.exported_func();
-});</pre>
-
-<div class="note">
-<p><strong>注</strong>: <a href="/ja/docs/WebAssembly/Loading_and_running">WebAssemblyコードのロードと実行</a> でどのように機能するか詳しく説明しました。自信が無い場合、思い出すために参照してください。</p>
-</div>
-
-<p>この結果、エクスポートされた WebAssembly 関数 <code>exported_func</code> を呼び出すとインポートされた JavaScript 関数 <code>imported_func</code> が呼び出され、WebAssembly インスタンス内の提供される値 (42) がコンソールに表示されます。コード例を保存して WebAssembly をサポートするブラウザで読み込むと 実際に動作が確認できるでしょう!</p>
-
-<div class="note">
-<p><strong>注</strong>: WebAssembly は Firefox 52+ と Chrome 57+/最新のOpera でデフォルトで有効になっています (Firefox 47+ で <em>about:config</em> で <code>javascript.options.wasm</code> フラグを有効化するか、Chrome (51+) と Opera (38+) で <em>chrome://flags</em> の <em>Experimental WebAssembly</em> フラグを有効化することによって動作させることができます)</p>
-</div>
-
-<p>これは複雑で長い例のほんの一部ですが、ウェブアプリケーション内でどのように JavaScript と WebAssembly を並行して動作させることができるかを説明しています。別の場所でも言及していますが、WebAssembly は JavaScript の置き換えを目指しているわけではありません。両方が協力して、お互いの強みを活かすことができます。</p>
-
-<h3 id="デベロッパーツールで_wasm_を見る">デベロッパーツールで wasm を見る</h3>
-
-<p>Firefox 54+ では、デベロッパーツールのデバッガパネルでウェブページに含まれる wasm コードのテキスト表現を表示する機能があります。これを表示するためには、デバッガパネルに移動して、“xxx &gt; wasm” エントリをクリックしてください。</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14655/wasm-debugger-output.png" style="display: block; height: 354px; margin: 0px auto; width: 1026px;"></p>
-
-<p>Firefox で、WebAssembly をテキストとして表示することに加えて、開発者は WebAssembly のテキスト表現を使用してすぐにデバッグを開始することができます (ブレークポイント、コールスタックの検査、ステップ実行など) 。<span class="watch-title" dir="ltr" id="eow-title" title="WebAssembly debugging with Firefox DevTools"><a href="https://www.youtube.com/watch?v=R1WtBkMeGds">WebAssembly debugging with Firefox DevTools</a> </span>の動画を参照してください。</p>
-
-<h3 id="WebAssembly_モジュールのストリーミング">WebAssembly モジュールのストリーミング</h3>
-
-<p>Firefox 58からソース (wasm) から WebAssembly モジュールをコンパイル、インスタンス化する機能が新しく追加されました。これは、 {{jsxref("WebAssembly.compileStreaming()")}} 、 {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用して実現されます。これらのメソッドは、バイトコードを直接 <code>Module</code>/<code>Instance</code> インスタンスに変換することができます。 {{domxref("Response")}} を一旦 {{domxref("ArrayBuffer")}} にするステップを省略できるので、非ストリーミングなメソッドよりもシンプルになるでしょう。</p>
-
-<p>次の例 (Github上のデモ <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html">compile-streaming.html</a> と、<a href="https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html">動作例</a> を参照してください) では、ソースから直接 .wasm モジュールをストリームして、 {{jsxref("WebAssembly.Module")}} オブジェクトにコンパイルしています。<code>compileStreaming()</code>  関数は {{domxref("Response")}} オブジェクトを渡すプロミスを受け取るので、直接 {{domxref("WindowOrWorkerGlobalScope.fetch()")}} の呼び出し結果を渡すことができます。</p>
-
-<pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
-
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(module =&gt; WebAssembly.instantiate(module, importObject))
-.then(instance =&gt; instance.exports.exported_func());
-</pre>
-
-<p>結果として受け取ったモジュールインスタンスはその後 {{jsxref("WebAssembly.instantiate()")}} を使用してインスタンス化され、エクスポートされた関数が実行されます。</p>
-
-<p>次の例 (Github上のデモ <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html">instantiate-streaming.html</a> と、 <a href="https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html">動作例</a> を参照してください) は結果的には同じになりますが、 <code>instantiateStreaming()</code> を使用してインスタンス化のステップを別々にする必要をなくしています。</p>
-
-<pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
-
+```js
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj =&gt; obj.instance.exports.exported_func());</pre>
+.then(obj => obj.instance.exports.exported_func());
+```
 
-<h2 id="メモリ">メモリ</h2>
+この結果、エクスポートした WebAssembly の `exported_func` 関数を呼び出し、インポートした JavaScript の `imported_func` 関数を呼び出し、WebAssembly インスタンスの中で提供した値 (42) をコンソールに記録することになりました。サンプルのコードを保存して、WebAssembly に対応しているブラウザーで読み込むと、これが実際に動作しているのがわかります。
 
-<p>WebAssembly の低レベルのメモリモデルでは、メモリはモジュール内で <a href="http://webassembly.org/docs/semantics/#linear-memory-accesses">ロード、ストア命令</a> を使用して読み書きされ る<a href="http://webassembly.org/docs/semantics/#linear-memory">線形メモリ</a> と呼ばれる型のない連続したバイト列として表現されます。このメモリモデルでは、任意のロード、ストア命令は線形メモリ全体の任意のバイトにアクセスすることができます。これはポインタなどの C/C++ の概念を忠実に表現するために必要なものです。</p>
+> **Note:** これは複雑で長い例のほんの一部ですが、ウェブアプリケーション内で WebAssembly をどのように JavaScript と組み合わせて動作させることができるかを説明しています。別の場所でも言及していますが、 WebAssembly は JavaScript の置き換えを目指しているわけではありません。両方が協力して、お互いの強みを活かすことができます。
 
-<p>ただし、ネイティブの C/C++ プログラムでは使用可能なメモリ範囲がプロセス全体に及ぶ一方、個別の WebAssembly Instance がアクセス可能なメモリは、特定の WebAssembly Memory オブジェクトの (潜在的にとても小さい) 範囲だけになります。これにより単一のウェブアプリケーションで複数の独立した (WebAssembly を内部的に使用している) ライブラリが完全に分離された別々のメモリを持つことができます。</p>
+### ストリーミングせずに wasm モジュールを読み込む
 
-<p>JavaScript では、Memory インスタンスはリサイズ可能な ArrayBuffer とみなすことができます。ArrayBuffer と同様に、単一のウェブアプリケーションで多くの独立した Memory オブジェクトを作成することができます。Memory オブジェクトは初期サイズと最大サイズ (オプショナル) を指定して、{{jsxref("WebAssembly.Memory()")}} コンストラクタから作成することができます。</p>
+上記のようなストリーミングメソッドを使用できない、または使用したくない場合は、代わりにストリーミングメソッドではない {{jsxref("WebAssembly.compile")}} / {{jsxref("WebAssembly.instantiate")}} を使用することができます。
 
-<p>簡単な例を見て探索を始めましょう。</p>
+これらのメソッドはバイトコードに直接アクセスしないので、 wasm モジュールをコンパイル/インスタンス化する前にレスポンスを {{jsxref("ArrayBuffer")}} に変換する余分な手順が必要になります。
 
-<ol>
- <li>
-  <p><code>memory.html</code> という名前の新しいシンプルな HTMLページ を作成します (<a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">simple template</a> をコピーしてください) 。<code>&lt;script&gt;&lt;/script&gt;</code> をページに追加します。</p>
- </li>
- <li>
-  <p>Memory インスタンスを作成するために次の1行をスクリプトに追加します:</p>
+同等のコードは次のようになります。
 
-  <pre class="brush: js">var memory = new WebAssembly.Memory({initial:10, maximum:100});</pre>
+```js
+fetch('simple.wasm').then(response =>
+  response.arrayBuffer()
+).then(bytes =>
+  WebAssembly.instantiate(bytes, importObject)
+).then(results => {
+  results.instance.exports.exported_func();
+});
+```
 
-  <p><code>initial</code> と <code>maximum</code> は WebAssembly ページを1単位 (64KBに固定されています) とします。上の例では、Memory インスタンスは初期サイズが640KB、最大サイズが6.4MBを意味しています。</p>
+### 開発者ツールで wasm を見る
 
-  <p>WebAssembly Memory が持つバイト列は ArrayBuffer として buffer ゲッター/セッターから公開されています。例えば、線形メモリの先頭ワードに直接、42を書きこむにはこのようにします:</p>
+Firefox 54 以降では、開発者ツールのデバッガーパネルでウェブページに含まれる wasm コードのテキスト表現を表示する機能があります。これを表示するためには、デバッガーパネルに移動して、“wasm://” 項目をクリックしてください。
 
-  <pre class="brush: js">new Uint32Array(memory.buffer)[0] = 42;</pre>
+![](wasm-debug.png)
 
-  <p>その後に同じ値を返すことができます:</p>
+WebAssembly をテキストとして表示するだけでなく、 WebAssembly のテキスト表現を使用してすぐにデバッグを開始することができます (ブレークポイント、コールスタックの検査、ステップ実行など) 。 [Firefox 開発者ツールでの WebAssembly のデバッグ](https://www.youtube.com/watch?v=R1WtBkMeGds)の動画を参照してください。
 
-  <pre class="brush: js">new Uint32Array(memory.buffer)[0]</pre>
- </li>
- <li>
-  <p>デモで試してみましょう。これまでに追加した内容を保存してブラウザで読み込んだ後、JavaScript コンソールで上の2行を入力してみてください。</p>
- </li>
-</ol>
+## メモリー
 
-<h3 id="メモリを拡張する">メモリを拡張する</h3>
+WebAssembly の低レベルのメモリーモデルでは、メモリーは[線形メモリー](https://webassembly.org/docs/semantics/#linear-memory) と呼ばれる型のない連続したバイト列として表現され、モジュール内の[ロード、ストア命令](https://webassembly.org/docs/semantics/#linear-memory-accesses)を使用して読み書きされます。このメモリーモデルでは、任意のロード、ストア命令は線形メモリー全体の任意のバイトにアクセスすることができます。これはポインターなどの C/C++ の概念を忠実に表現するために必要なものです。
 
-<p>Memory インスタンスは {{jsxref("Memory.prototype.grow()")}} を呼び出すことで拡張することができます。引数は WebAssembly ページ単位で指定します:</p>
+しかし、利用可能なメモリ範囲がプロセス全体に及ぶネイティブの C/C++ プログラムとは異なり、特定の WebAssembly インスタンスがアクセスできるメモリーは、 WebAssembly Memory オブジェクトが含む特定の（潜在的に非常に小さな）範囲に制限されています。これにより、単一のウェブアプリで複数の独立したライブラリー（それぞれが内部で WebAssembly を使用している）を使用し、互いに完全に分離された個別のメモリーを持つことができます。さらに、新しい実装では[共有メモリー](/ja/docs/WebAssembly/Understanding_the_text_format#共有メモリー)を作成することもでき、これは [`postMessage()`](/ja/docs/Web/API/Window/postMessage) によってウィンドウとワーカーコンテキスト間で転送して複数の場所で使用することが可能です。
 
-<pre class="brush: js">memory.grow(1);</pre>
+JavaScript では、Memory インスタンスはリサイズ可能な  [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (または共有メモリーの場合は [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)) とみなすことができます。`ArrayBuffer` と同様に、単一のウェブアプリケーションで多くの独立した Memory オブジェクトを作成することができます。Memory オブジェクトは初期サイズと最大サイズ (省略可) を指定して、{{jsxref("WebAssembly.Memory()")}} コンストラクターから作成することができます。
 
-<p>Memory インスタンスの作成時に最大値が指定していて、この最大値を超えて拡張しようとすると {{jsxref("WebAssembly.RangeError")}} 例外がスローされます。エンジンは提供された上限を利用してメモリを事前に確保しておくことで、より効率的なリサイズが可能になります。</p>
+簡単な例を見ながら、探索を始めましょう。
 
-<p>注: {{domxref("ArrayBuffer")}} の byteLength はイミュータブルであるため、 {{jsxref("Memory.prototype.grow()")}} 操作が成功した後、buffer ゲッターは新しい (新しい byteLength で) ArrayBufferを返します。そして、前の ArrayBuffer は「切り離された状態」になるか、メモリから切り離されます。</p>
+1.  もう 1 つのシンプルな HTML ページを（[単純なテンプレート](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)をコピーして）作成し、 `memory.html` という名前を付けてください。このページに `<script></script>` 要素を追加してください。
+2.  Memory インスタンスを作成するために、次の行をスクリプトに追加します。
 
-<p>関数と同様に、線形メモリはモジュール内で定義することもインポートすることもできます。同じようにモジュールは任意でメモリをエクスポートすることも可能です。これは JavaScript が WebAssembly インスタンスに対して新しく作成した <code>WebAssembly.Memory</code> をインポートで渡したり、Memory のエクスポートから (<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">Instance.prototype.exports</a></code> <code>を介して</code>) 受け取れることを意味しています。</p>
+    ```js
+    var memory = new WebAssembly.Memory({initial:10, maximum:100});
+    ```
 
-<h3 id="より複雑なメモリの例">より複雑なメモリの例</h3>
+    `initial` と `maximum` の単位は WebAssembly ページです。これらは 64KB に固定されています。上の例では、Memory インスタンスは初期サイズが 640KB、最大サイズが 6.4MB であることを意味しています。
 
-<p>より複雑な例 (整数の配列を合計するWebAssemblyモジュール) で、上で言っていることを明確にしましょう。例は <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm">memory.wasm</a> を参照してください。</p>
+    WebAssembly Memory が持つバイト列は ArrayBuffer として buffer ゲッター/セッターから公開されています。例えば、線形メモリーの先頭ワードに直接、 42 を書き込むには次のようにします。
 
-<ol>
- <li>
-  <p><code>memory.wasm</code> のコピーを以前と同じディレクトリにコピーします。</p>
+    ```js
+    new Uint32Array(memory.buffer)[0] = 42;
+    ```
 
-  <div class="note">
-  <p><span style="font-size: 14px;"><strong>注</strong></span>: モジュールのテキスト表現は <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat">memory.wat</a> を参照してください。</p>
-  </div>
- </li>
- <li>
-  <p><code>memory.html</code> サンプルファイルに戻って、以前と同じように wasm モジュールをフェッチ、コンパイル、インスタンス化します (以下をスクリプトに追加してください):</p>
+    その後で同じ値を返すことができます。
 
-  <pre class="brush: js">fetch('memory.wasm').then(response =&gt;
-  response.arrayBuffer()
-).then(bytes =&gt;
-  WebAssembly.instantiate(bytes)
-).then(results =&gt; {
-  // add your code here
-});</pre>
- </li>
- <li>
-  <p>このモジュールはモジュール内部のメモリをエクスポートします。instance という名前でモジュールのInstanceが取得され、エクスポートされた関数 <code>accumulate()</code> を使用してモジュールの線形メモリ (<code>mem</code>) に直接入力された配列を合計する事ができます。指定された場所に、次のコードを追加してみましょう:</p>
+    ```js
+    new Uint32Array(memory.buffer)[0]
+    ```
 
-  <pre class="brush: js">var i32 = new Uint32Array(results.instance.exports.mem.buffer);
-for (var i = 0; i &lt; 10; i++) {
-  i32[i] = i;
+3.  デモで試してみましょう。これまでに追加した内容を保存してブラウザーで読み込んだ後、JavaScript コンソールで上の 2 行を入力してみてください。
+ 
+### メモリーの拡張
+
+Memory インスタンスは {{jsxref("Memory.prototype.grow()")}} を呼び出すことで拡張することができます。引数は WebAssembly ページ単位で指定します。
+
+```js
+memory.grow(1);
+```
+
+Memory インスタンスの作成時に最大値が指定していて、この最大値を超えて拡張しようとすると {{jsxref("WebAssembly.RangeError")}} 例外が発生します。エンジンは提供された上限を利用してメモリーを事前に確保しておくことで、より効率的なリサイズが可能になります。
+
+注: {{jsxref("ArrayBuffer")}} の byteLength は変更不可であるため、 {{jsxref("Memory.prototype.grow()")}} 操作が成功した後、buffer ゲッターは新しい (新しい byteLength で) ArrayBufferを返します。そして、前の ArrayBuffer は「切り離された状態」になるか、メモリーから切り離されます。
+
+関数と同様に、線形メモリーはモジュール内で定義することもインポートすることもできます。同じようにモジュールは任意でメモリーをエクスポートすることも可能です。これは JavaScript が WebAssembly インスタンスに対して新しく作成した `WebAssembly.Memory` をインポートで渡したり、Memory のエクスポートから ([`Instance.prototype.exports`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) を介して) 受け取れることを意味しています。
+
+### より複雑なメモリーの例
+
+より複雑なメモリの例を見て、上記のことを明確にしましょう。先に定義したメモリーインスタンスをインポートし、それを整数の配列で埋め込んで、それらを合計する WebAssembly モジュールです。これは [memory.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm) で見ることができます。
+
+1.  `memory.wasm` のローカルコピーを以前と同じディレクトリーに作成します。
+
+    > **Note:** モジュールのテキスト表現は [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat) を参照してください。
+
+2.  `memory.html` サンプルファイルに戻って、以前と同じように wasm モジュールを読み取り、コンパイル、インスタンス化します。以下のものをスクリプトの最後に追加してください。
+
+    ```js
+    WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
+    .then(results => {
+      // ここにコードを追加
+    });
+    ```
+
+3.  このモジュールはモジュール内部のメモリーをエクスポートします。 instance という名前でモジュールの Instance が取得され、エクスポートされた関数 `accumulate()` を使用してモジュールの線形メモリー (`mem`) に直接入力された配列を合計する事ができます。指定された場所に、次のコードを追加してみましょう。
+
+    ```js
+    var i32 = new Uint32Array(memory.buffer);
+
+    for (var i = 0; i < 10; i++) {
+      i32[i] = i;
+    }
+
+    var sum = results.instance.exports.accumulate(0, 10);
+    console.log(sum);
+    ```
+
+Memory オブジェクト自体でなく、Memory オブジェクトの buffer ([`Memory.prototype.buffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)) から {{domxref("Uint32Array")}} ビューを作成していることに注意してください。
+
+メモリーのインポートは関数のインポートと同じように機能します。JavaScript 関数の代わりに Memory オブジェクトを渡すだけです。メモリーのインポートは 2 つの理由で役に立ちます。
+
+- モジュールをコンパイルする前、もしくは並行して、メモリーの初期コンテンツを JavaScript で読み取り、または作成することができます。
+- 単一の Memory オブジェクトを複数のモジュールインスタンスにインポートすることができます。これは WebAssembly で動的リンクを実装するための重要な構成要素です。
+
+> **Note:** 完全なデモは [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) を参照してください。
+
+## テーブル
+
+WebAssembly Table は JavaScript と WebAssembly コードの両方でアクセスできるリサイズ可能な [参照](https://en.wikipedia.org/wiki/Reference_(computer_science)) の型付き配列です。Memory はリサイズ可能な生のバイト列を提供しますが、参照はエンジンに保証された値（このバイト列は安全性、移植性、安定性の理由からコンテンツによって直接読み書きしてはいけない）であるため、参照を格納するために使用することは安全ではありません。
+
+テーブルは要素の型を持ち、テーブルに格納できる参照の型が制限されます。WebAssembly の現バージョンでは WebAssembly コード内で必要な参照の型は関数型の1つだけです。そして、これが唯一の正しい要素の型となります。将来のバージョンでは、さらに多くの要素の型が追加される予定です。
+
+関数参照は関数ポインターを持つ C/C++ のような言語をコンパイルするために必要です。C/C++ のネイティブ実装では、関数ポインターはプロセスの仮想アドレス空間内の関数のコードの生のアドレスで表現されるため、安全性の理由から線形メモリーに直接格納することはできません。代わりに、関数参照はテーブルに格納されます。整数値のインデックスは線形メモリーに格納することができます。
+
+関数ポインターを呼び出すときは、WebAssembly を呼び出す側でインデックスを指定します。インデックスを付けたり、インデックス付けされた関数参照を呼び出す前に安全な境界のチェックをすることができます。したがって、テーブルは現在、安全かつ移植可能に低レベルのプログラミング言語の機能をコンパイルするために使用される、低レベルのプリミティブです。
+
+テーブルは [Table.prototype.set()](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set)` を通してテーブル内の値を1つ更新することができます。さらに、[`Table.prototype.grow()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow) でテーブルに格納できる値の数を増やすことができます。時間の経過とともに間接呼び出しされる関数を変更することを許容し、これは [動的リンク技術](http://webassembly.org/docs/dynamic-linking/) のために必要なものです。変化した値に対してJavaScriptでは [Table.prototype.get()](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get)` を通してすぐにアクセスできます。wasm モジュールからも同様です。
+
+### テーブルの例
+
+テーブルのシンプルな例を見てみましょう。紹介する WebAssembly モジュールは2つの要素 (要素0は13、要素1は42を返します) を持つテーブルをエクスポートするものです。モジュールは [table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm) から見つけられます。
+
+1.  `table.wasm` をローカルの新しいディレクトリーにコピーします。
+
+    > **Note:** このモジュールのテキスト表現は [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) を参照してください。
+
+2.  [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) を `table.html` という名前で同じディレクトリーにコピーします。
+3.  前と同じように、wasm モジュールを読み取り、コンパイル、インスタンス化します。次のコードを HTML の body の末尾の {{htmlelement("script")}} 要素に追加してください。
+
+    ```js
+    WebAssembly.instantiateStreaming(fetch('table.wasm'))
+    .then(function(results) {
+      // add code here
+    });
+    ```
+
+4.  今度はテーブル内のデータにアクセスしてみましょう。コードの指定された場所に次の行を追加してください。
+
+    ```js
+    var tbl = results.instance.exports.tbl;
+    console.log(tbl.get(0)());  // 13
+    console.log(tbl.get(1)());  // 42
+    ```
+
+このコードはテーブルに格納されている各関数参照に順番にアクセスし、内包した値をコンソールに書き出すためにインスタンス化します。 [`Table.prototype.get()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) で各関数参照を取得した後、関数を実行するためには括弧を追加することに注意してください。
+
+> **Note:** 完全なデモは [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)) を参照してください。
+
+## グローバル値
+
+WebAssembly はグローバル変数のインスタンスを作成する機能を持っており、 JavaScript の両方からアクセスでき、1 つ以上の {{jsxref("WebAssembly.Module")}} インスタンスにわたってインポート/エクスポートが可能です。これにより、複数のモジュールを動的にリンクすることができるので、非常に便利です。
+
+JavaScript の内部から WebAssembly のグローバルインスタンスを作成するには、次のような {{jsxref("WebAssembly.Global()")}} コンストラクタを使用します。
+
+```js
+const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
+```
+
+これは 2 つの引数を取ることがわかります。
+
+- グローバル変数について記述した 2 つのプロパティを含むオブジェクトです。
+
+  - `value`: データ型は、 WebAssembly モジュールで受け入れられるもの (`i32`, `i64`, `f32`, `f64`) ならばどれでも構いません。
+  - `mutable`: 論理値で、値が変更可能かどうかを定義します。
+
+- 変数の実際の値を含む値。これは、指定されたデータ型と一致している限り、どのような値でもよい。
+
+では、これをどう使うのでしょうか。次の例では、値を 0 とする mutable 型の `i32` としてグローバルを定義しています。
+
+次に、グローバル変数の値を変更してみます。最初は `Global.value` を使用して `42` に設定し、それから `global.wasm` モジュールからエクスポートされた `incGlobal()` 関数を使用して 43 にします（この関数は、指定された値に何でも 1 を加算し、新しい値を返します）。
+
+```js
+const output = document.getElementById('output');
+
+function assertEq(msg, got, expected) {
+    output.innerHTML += `Testing ${msg}: `;
+    if (got !== expected)
+        output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
+    else
+        output.innerHTML += `SUCCESS! Got: ${got}<br>`;
 }
 
-var sum = results.instance.exports.accumulate(0, 10);
-console.log(sum);</pre>
- </li>
-</ol>
+assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
 
-<p>Memoryオブジェクト自体でなく、Memory オブジェクトの buffer (<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer">Memory.prototype.buffer</a></code>) から {{domxref("Uint32Array")}} ビューを作成していることに注意してください。</p>
+const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
 
-<p>メモリのインポートは関数のインポートと同じように機能します。JavaScript 関数の代わりに Memory オブジェクトを渡すだけです。メモリのインポートは2つの理由で役に立ちます:</p>
+WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
+.then(({instance}) => {
+    assertEq("getting initial value from wasm", instance.exports.getGlobal(), 0);
+    global.value = 42;
+    assertEq("getting JS-updated value from wasm", instance.exports.getGlobal(), 42);
+    instance.exports.incGlobal();
+    assertEq("getting wasm-updated value from JS", global.value, 43);
+});
+```
 
-<ul>
- <li>モジュールをコンパイルする前、もしくは並行して、メモリの初期コンテンツをJavaScriptでフェッチ、または作成することができます。</li>
- <li>単一の Memory オブジェクトを複数のモジュールインスタンスにインポートすることができます。これは WebAssembly で動的リンクを実装するための重要な構成要素です。</li>
-</ul>
+> **Note:** [GitHub の動作例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) を見ることができます。[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html)も見てください。
 
-<div class="note">
-<p><strong>注</strong>: 完全なデモは <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html">memory.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/memory.html">動作例</a>) を参照してください。このバージョンでは <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code> 関数を使用しています。</p>
-</div>
+## 多重性
 
-<h2 id="テーブル">テーブル</h2>
+ここまで、主な WebAssembly の構成要素のデモを見てきましたが、これは多重性の概念に触れるのによい機会です。これはアーキテクチャ効率の点で多くの進歩がもたらされます:
 
-<p>WebAssembly Table は JavaScript と WebAssembly コードの両方でアクセスできるリサイズ可能な <a href="https://en.wikipedia.org/wiki/Reference_(computer_science)">参照</a> の型付き配列です。Memory はリサイズ可能な生のバイト列を提供しますが、参照はエンジンに保証された値(このバイト列は安全性、移植性、安定性の理由からコンテンツによって直接読み書きしてはいけない)であるため、参照を格納するために使用することは安全ではありません。</p>
+- 1 つの関数が N 個のクロージャを生成するのと同様に、 1 つのモジュールは N 個のインスタンスを持つことができます。
+- 1 つのモジュールインスタンスは 0 から 1 つのメモリーインスタンスを持つことができ、それが「アドレス空間」を提供します。 WebAssembly の将来のバージョンでは、 1 つのモジュールが 0 から N 個のメモリーインスタンスを許容する可能性があります ([Multiple Tables and Memories](https://webassembly.org/docs/future-features/#multiple-tables-and-memories) を参照) 。
+- 1 つのモジュールインスタンスは 0 から 1 つのテーブルインスタンスを持つことができます。これはインスタンスの「関数アドレス空間」で、 C 言語の関数ポインターを実装するために使用されます。 WebAssembly の将来のバージョンでは 1 つのモジュールにつき 0 から N 個のメモリーインスタンスを許容する可能性があります。
+- 1 つのメモリーやテーブルを 0 から N 個のモジュールから使用することができます。複数のインスタンス全てが同じアドレス空間を共有でき、[動的リンク](http://webassembly.org/docs/dynamic-linking) が可能です。
 
-<p>テーブルは要素の型を持ち、テーブルに格納できる参照の型が制限されます。WebAssembly の現バージョンでは WebAssembly コード内で必要な参照の型は関数型の1つだけです。そして、これが唯一の正しい要素の型となります。将来のバージョンでは、さらに多くの要素の型が追加される予定です。</p>
+多重性については、「WebAssembly テキスト形式を理解」の記事で多重性の働きについてみることができます。その中の[テーブルの変更と動的リンク](/ja/docs/WebAssembly/Understanding_the_text_format#テーブルの変更と動的リンク)を参照してください。
 
-<p>関数参照は関数ポインタを持つ C/C++ のような言語をコンパイルするために必要です。C/C++ のネイティブ実装では、関数ポインタはプロセスの仮想アドレス空間内の関数のコードの生のアドレスで表現されるため、安全性の理由から線形メモリに直接格納することはできません。代わりに、関数参照はテーブルに格納されます。整数値のインデックスは線形メモリに格納することができます。</p>
+## まとめ
 
-<p>関数ポインタを呼び出すときは、WebAssembly を呼び出す側でインデックスを指定します。インデックスを付けたり、インデックス付けされた関数参照を呼び出す前に安全な境界のチェックをすることができます。したがって、テーブルは現在、安全かつ移植可能に低レベルのプログラミング言語の機能をコンパイルするために使用される、低レベルのプリミティブです。</p>
+この記事では WebAssembly JavaScript API の基本的な使い方について説明しました。WebAssembly モジュールを JavaScript のコンテキストに組み込む方法、その関数を使えるようすること、JavaScript でのメモリーとテーブルの使い方について。さらに、多重性の概念についても触れました。
 
-<p>テーブルは <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set">Table.prototype.set()</a></code> <code>を通してテーブル内の値を1つ更新することができます。さらに、</code><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow">Table.prototype.grow()</a></code> でテーブルに格納できる値の数を増やすことができます。時間の経過とともに間接呼び出しされる関数を変更することを許容し、これは <a href="http://webassembly.org/docs/dynamic-linking/">動的リンク技術</a> のために必要なものです。変化した値に対してJavaScriptでは <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> を通してすぐにアクセスできます。wasm モジュールからも同様です。</p>
+## 関連情報
 
-<h3 id="テーブルの例">テーブルの例</h3>
-
-<p>テーブルのシンプルな例を見てみましょう。紹介する WebAssembly モジュールは2つの要素 (要素0は13、要素1は42を返します) を持つテーブルをエクスポートするものです。モジュールは <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm">table.wasm</a> から見つけられます。</p>
-
-<ol>
- <li>
-  <p><code>table.wasm</code> をローカルの新しいディレクトリにコピーします。</p>
-
-  <div class="note">
-  <p><strong>注</strong>: このモジュールのテキスト表現は <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat">table.wat</a> を参照してください。</p>
-  </div>
- </li>
- <li>
-  <p><a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">HTML template</a> を <code>table.html</code> という名前で同じディレクトリにコピーします。</p>
- </li>
- <li>
-  <p>前と同じように、wasm モジュールをフェッチ、コンパイル、インスタンス化します。次のコードを HTML の body の末尾の {{htmlelement("script")}} 要素に追加します:</p>
-
-  <pre class="brush: js">fetch('table.wasm').then(response =&gt;
-  response.arrayBuffer()
-).then(bytes =&gt;
-  WebAssembly.instantiate(bytes)
-).then(results =&gt; {
-  // add your code here
-});</pre>
- </li>
- <li>
-  <p>今度はテーブル内のデータにアクセスしてみましょう。コードの指定された場所に次の行を追加します:</p>
-
-  <pre class="brush: js">var tbl = results.instance.exports.tbl;
-console.log(tbl.get(0)());  // 13
-console.log(tbl.get(1)());  // 42</pre>
- </li>
-</ol>
-
-<p>このコードはテーブルに格納されている各関数参照に順番にアクセスし、内包した値をコンソールに書き出すためにインスタンス化します。<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> で各関数参照を取得した後、関数を実行するためには括弧を追加することに注意してください。</p>
-
-<div class="note">
-<p><strong>注</strong>: 完全なデモは <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html">table.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/table.html">動作例</a>) を参照してください。このバージョンでは <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code> 関数を使用しています。</p>
-</div>
-
-<h2 id="重複度">重複度</h2>
-
-<p>ここでは、主な WebAssembly の構成要素のデモを見てきました。これは重複度の概念に言及するのに適しています。これはアーキテクチャ効率の点で多くの進歩がもたらされます:</p>
-
-<ul>
- <li>1つの関数がN個のクロージャを生成するのと同じく、1つのモジュールはN個のインスタンスを持つことができます。</li>
- <li>1つのモジュールインスタンスは0から1つのメモリインスタンスを持つことができます。これは"アドレス空間"を提供します。WebAssembly の将来のバージョンでは1モジュールにつき0からN個のメモリインスタンスを許容する可能性があります (<a href="http://webassembly.org/docs/future-features/#multiple-tables-and-memories">Multiple Tables and Memories</a> を参照してください) 。</li>
- <li>1つのモジュールインスタンスは0から1つのテーブルインスタンスを持つことができます。これはインスタンスの"関数アドレス空間"で、C言語の関数ポインタを実装するために使用されます。WebAssembly の将来のバージョンでは1モジュールにつき0からN個のメモリインスタンスを許容する可能性があります。</li>
- <li>1つのメモリ、テーブルは0からN個のモジュールから使用することができます。複数のインスタンス全てが同じアドレス空間を共有でき、これは <a href="http://webassembly.org/docs/dynamic-linking">動的リンク</a> を可能にします。</li>
-</ul>
-
-<p>Understanding text format article の記事で重複度の働きについてみることができます。その中の Mutating tables and dynamic linking の章を見てください (TBD)。</p>
-
-<h2 id="まとめ">まとめ</h2>
-
-<p>この記事では WebAssembly JavaScript API の基本的な使い方について説明しました。WebAssembly モジュールを JavaScript のコンテキストに組み込む方法、その関数を使えるようすること、JavaScript でのメモリとテーブルの使い方について。さらに、多重度の概念についても触れました。</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a href="http://webassembly.org/">webassembly.org</a></li>
- <li><a href="/ja/docs/WebAssembly/Concepts">WebAssembly のコンセプト</a></li>
- <li><a href="https://research.mozilla.org/webassembly/">WebAssembly on Mozilla Research</a></li>
-</ul>
+- [webassembly.org](https://webassembly.org/)
+- [WebAssembly の概要](/ja/docs/WebAssembly/Concepts)
+- [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)
