@@ -5,133 +5,122 @@ tags:
   - API
   - DOM
   - Element
-  - Event
+  - イベント
   - Focus
   - FocusEvent
-  - Reference
-  - イベント
+  - リファレンス
+browser-compat: api.Element.focus_event
 translation_of: Web/API/Element/focus_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>focus</code></strong> イベントは、要素がフォーカスを受け取ったときに発生します。このイベントと {{domxref("Element/focusin_event", "focusin")}} との違いは、 <code>focusin</code> がバブリングを行うのに対し <code>focus</code> は行わないことです。</p>
+**`focus`** イベントは、要素がフォーカスを受け取ったときに発生します。このイベントと {{domxref("Element/focusin_event", "focusin")}} との違いは、 `focusin` がバブリングするのに対し `focus` はしないことです。
 
-<p><code>focus</code> の反対は {{domxref("Element/blur_event", "blur")}} です。</p>
+`focus` の反対は {{domxref("Element/blur_event", "blur")}} です。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>いいえ</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{DOMxRef("FocusEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers/onfocus", "onfocus")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">同期 / 非同期</th>
-   <td>同期</td>
-  </tr>
-  <tr>
-   <th scope="row">Composed</th>
-   <td>はい</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{DOMxRef("FocusEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onfocus", "onfocus")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">同期 / 非同期</th>
+      <td>同期</td>
+    </tr>
+    <tr>
+      <th scope="row">Composed</th>
+      <td>はい</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Simple_example" name="Simple_example">簡単な例</h3>
+### 簡単な例
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;form id="form"&gt;
-  &lt;input type="text" placeholder="text input"&gt;
-  &lt;input type="password" placeholder="password"&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="form">
+  <input type="text" placeholder="text input">
+  <input type="password" placeholder="password">
+</form>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const password = document.querySelector('input[type="password"]');
+```js
+const password = document.querySelector('input[type="password"]');
 
-password.addEventListener('focus', (event) =&gt; {
+password.addEventListener('focus', (event) => {
   event.target.style.background = 'pink';
 });
 
-password.addEventListener('blur', (event) =&gt; {
+password.addEventListener('blur', (event) => {
   event.target.style.background = '';
-});</pre>
+});
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Simple_example", '100%', '50px')}}</p>
+{{EmbedLiveSample("Simple_example", '100%', '50px')}}
 
-<h3 id="Event_delegation" name="Event_delegation">イベント委譲</h3>
+### イベント委譲
 
-<p>このイベントのイベント委譲を実装する方法は二つあります。 {{Event("focusout")}} イベントを使用するか、 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} の <code>useCapture</code> 引数に <code>true</code> を設定するかです。</p>
+このイベントのイベント委譲を実装する方法は二つあります。 {{domxref("Element/focusin_event", "focusin")}} イベントを使用するか、 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} の `useCapture` 引数に `true` を設定するかです。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;form id="form"&gt;
-  &lt;input type="text" placeholder="text input"&gt;
-  &lt;input type="password" placeholder="password"&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="form">
+  <input type="text" placeholder="text input">
+  <input type="password" placeholder="password">
+</form>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const form = document.getElementById('form');
+```js
+const form = document.getElementById('form');
 
-form.addEventListener('focus', (event) =&gt; {
+form.addEventListener('focus', (event) => {
   event.target.style.background = 'pink';
 }, true);
 
-form.addEventListener('blur', (event) =&gt; {
+form.addEventListener('blur', (event) => {
   event.target.style.background = '';
-}, true);</pre>
+}, true);
+```
 
-<h4 id="Result_2" name="Result_2">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Event_delegation", '100%', '50px')}}</p>
+{{EmbedLiveSample("Event_delegation", '100%', '50px')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("UI Events", "#event-type-focus")}}</td>
-   <td>{{Spec2("UI Events")}}</td>
-   <td>Added info that this event is composed.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Events", "#event-type-focus")}}</td>
-   <td>{{Spec2("DOM3 Events")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Element.focus_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>関連イベント: {{domxref("Element/blur_event", "blur")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}}</li>
- <li><code>Window</code> を対象としたこのイベント: {{domxref("Window/focus_event", "focus")}} イベント</li>
-</ul>
+- 関連イベント: {{domxref("Element/blur_event", "blur")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}}
+- `Window` を対象としたこのイベント: {{domxref("Window/focus_event", "focus")}} イベント
+- [Focusing: focus/blur](https://javascript.info/focus-blur)
