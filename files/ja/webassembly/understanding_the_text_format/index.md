@@ -1,241 +1,258 @@
 ---
-title: WebAssembly テキストフォーマットを理解する
+title: WebAssembly テキスト形式の理解
 slug: WebAssembly/Understanding_the_text_format
 tags:
-  - Functions
+  - 関数
   - JavaScript
-  - S-expressions
+  - S 式
   - WebAssembly
-  - calls
-  - memory
-  - shared address
-  - table
-  - text format
+  - 呼び出し
+  - メモリー
+  - 共有アドレス
+  - テーブル
+  - テキスト形式
   - was
   - wasm
 translation_of: WebAssembly/Understanding_the_text_format
 ---
-<div>{{WebAssemblySidebar}}</div>
+{{WebAssemblySidebar}}
 
-<p class="summary">人間が WebAssembly を読んだり編集するための wasm バイナリ形式のテキスト表現が存在します。これはテキストエディター、ブラウザーの開発者ツールなどで見せるために設計された中間表現です。この記事では、テキスト形式のしくみ、生の構文、および元のバイトコードの表現との関係 (と JavaScript で wasm を表現したラッパーオブジェクト) について説明します。</p>
+WebAssembly を人間が読んだり編集したりできるようにするため、 wasm バイナリー形式にはテキスト表現が存在します。これはテキストエディター、ブラウザーの開発者ツールなどで見せるために設計された中間表現です。この記事では、テキスト形式のしくみ、生の構文、および元のバイトコードの表現との関係 (と JavaScript で wasm を表現したラッパーオブジェクト) について説明します。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: この記事は、あなたがウェブ開発者で wasm モジュールをページにロードしてコード内で使用するだけなら過剰なものかもしれません (<a href="/ja/docs/WebAssembly/Using_the_JavaScript_API">WebAssembly JavaScript API を使用する</a> を参照)。しかし、例えば、パフォーマンスを最適化するために wasm モジュールを書きたいときや、あなた自身で WebAssembly コンパイラを作るときに役に立ちます。</p>
-</div>
+> **Note:** この記事は、あなたがウェブ開発者で wasm モジュールをページに読み込んでコード内で使用するだけなら過剰なものかもしれません ([WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)を参照)。しかし、例えば、パフォーマンスを最適化するために wasm モジュールを書きたいときや、あなた自身で WebAssembly コンパイラを作るときには役に立ちます。
 
-<h2 id="S-expressions" name="S-expressions">S 式</h2>
+## S 式
 
-<p>バイナリ、テキスト形式の両方で、 WebAssembly の基本的なコードの単位はモジュールです。テキスト形式ではモジュールは1つの大きなS式として表現されます。S式はツリー構造を表現するための非常に古くてシンプルなテキスト形式で、モジュールはモジュールの構造とそのコードを記述するノードツリーとして考えることができます。しかし、プログラミング言語の AST (抽象構文木) とは異なり、WebAssembly のツリーはかなり平坦で、ほとんどは命令の列で構成されています。</p>
+バイナリー、テキスト形式どちらでも、 WebAssembly の基本的なコードの単位はモジュールです。テキスト形式ではモジュールは 1 つの大きな S 式として表現されます。 S 式はツリー構造を表現するための非常に古くてシンプルなテキスト形式で、モジュールをその構造とそのコードを記述するノードツリーとして考えることができます。しかし、プログラミング言語の AST (抽象構文木) とは異なり、　WebAssembly のツリーはかなり平坦で、ほとんどは命令の列で構成されています。
 
-<p>はじめに、 S 式がどういうものか見てみましょう。ツリー内の各ノードは1組の括弧内に入れられます — <code>( ... )</code>。 括弧内の最初のラベルは、それがどのノードタイプかを示し、スペースで区切られた属性、または子ノードのリストが続きます。次のコードは WebAssembly の S 式を意味します:</p>
+はじめに、 S 式がどういうものか見てみましょう。ツリー内の各ノードは `( ... )` のように 1 組の括弧内に入れられます。 括弧内の最初のラベルは、それがどのノードタイプかを示し、スペースで区切られた属性、または子ノードのリストが続きます。次のコードは WebAssembly の S 式を意味します。
 
-<pre class="brush: wasm; no-line-numbers notranslate">(module (memory 1) (func))</pre>
+```wasm
+(module (memory 1) (func))
+```
 
-<p>ルートノード "module" と2つの子ノード、"1" を属性に持つ "memory" ノード、"func" ノードを表します。これらのノードが実際にどういう意味なのかを見ていきましょう。</p>
+ルートノード "module" と 2 つの子ノード、 "1" を属性に持つ "memory" ノード、"func" ノードを表します。これらのノードが実際にどういう意味なのかを見ていきましょう。
 
-<h3 id="The_simplest_module" name="The_simplest_module">最もシンプルなモジュール</h3>
+### 最もシンプルなモジュール
 
-<p>最もシンプルで短い実行可能な wasm モジュールから始めてみましょう。</p>
+最もシンプルで短い実行可能な wasm モジュールから始めてみましょう。
 
-<pre class="brush: wasm; no-line-numbers notranslate">(module)</pre>
+```wasm
+(module)
+```
 
-<p>このモジュールは完全に空ですが、モジュールとしては有効です。</p>
+このモジュールは完全に空ですが、モジュールとしては有効です。
 
-<p>いま、このモジュールをバイナリに変換すると (<a href="/ja/docs/WebAssembly/Text_format_to_wasm">WebAssembly テキストフォーマットから wasm に変換する</a> を参照) 、 <a href="http://webassembly.org/docs/binary-encoding/#high-level-structure">バイナリ形式</a> で記述された8バイトのモジュールヘッダーだけになります:</p>
+いま、このモジュールをバイナリーに変換すると ([WebAssembly テキスト形式から wasm に変換する](/ja/docs/WebAssembly/Text_format_to_wasm) を参照) 、 [バイナリー形式](http://webassembly.org/docs/binary-encoding/#high-level-structure) で記述された 8 バイトのモジュールヘッダーだけになります。
 
-<pre class="brush: wasm; no-line-numbers notranslate">0000000: 0061 736d              ; WASM_BINARY_MAGIC
-0000004: 0100 0000              ; WASM_BINARY_VERSION</pre>
+```wasm
+0000000: 0061 736d              ; WASM_BINARY_MAGIC
+0000004: 0100 0000              ; WASM_BINARY_VERSION
+```
 
-<h3 id="Adding_functionality_to_your_module" name="Adding_functionality_to_your_module">モジュールに機能を追加する</h3>
+### モジュールに機能を追加する
 
-<p>Ok、これは全然面白くないですね。モジュールに実行可能なコードを追加していきましょう。</p>
+はい、これは全然面白くないですね。モジュールに実行可能なコードを追加していきましょう。
 
-<p>全ての WebAssembly モジュール内のコードは次の擬似コード構造を持つ関数にグループ化されます:</p>
+すべての WebAssembly モジュール内のコードは次の疑似コード構造を持つ関数にグループ化されます:
 
-<pre class="brush: wasm; no-line-numbers notranslate">( func &lt;signature&gt; &lt;locals&gt; &lt;body&gt; )</pre>
+```wasm
+( func <signature> <locals> <body> )
+```
 
-<ul>
- <li><strong>signature</strong> は関数が何を受け取る (引数) かと何を返す (返値) かを宣言します。</li>
- <li><strong>locals</strong> は JavaScript でいうと変数のようなものですが、明示的な型が宣言されます。</li>
- <li><strong>body</strong> は線形の低レベルな命令列です。</li>
-</ul>
+- **signature** は関数が何を受け取る (引数) かと何を返す (返値) かを宣言します。
+- **locals** は JavaScript でいうと変数のようなものですが、明示的な型が宣言されます。
+- **body** は線形の低レベルな命令のリストです。
 
-<p>S式であるために違って見えますが、これは、他の言語の関数に似ています。</p>
+S 式であるために違って見えますが、これは、他の言語の関数に似ています。
 
-<h2 id="Signatures_and_parameters" name="Signatures_and_parameters">シグネチャと引数</h2>
+## シグネチャと引数
 
-<p>シグネチャは返値の型宣言のリストが後に続く、引数の型宣言のシーケンスです。ここで注目すべきは:</p>
+シグネチャは、返値の型宣言のリストが後に続く、引数の型宣言の並びです。ここで注目すべきは次の点です。
 
-<ul>
- <li>
-  <p class="syntaxbox">結果がない場合、関数は何も返しません。</p>
- </li>
- <li>現在は、最大で1つの返値を返すことができますが、<a href="https://webassembly.org/docs/future-features#multiple-return">任意の数に緩和される予定</a> です。</li>
-</ul>
+- `(result)` がない場合、その関数は何も返さないということです。
+- 現在は、最大で 1 つの返値の型を指定することができますが、任意の数に[緩和される予定](https://github.com/WebAssembly/spec/blob/master/proposals/multi-value/Overview.md)です。
 
-<p>各引数は明示的に宣言された型を持ちます。wasm では現在4つの型が有効です:</p>
+それぞれの引数には、明示的に型を宣言します。 wasm は現在 4 つの数値型を利用できます（さらに参照型もあります。以下の{{anch("参照型") }}の項を参照してください）。
 
-<ul>
- <li><code>i32</code>: 32ビット整数</li>
- <li><code>i64</code>: 64ビット整数</li>
- <li><code>f32</code>: 32ビット浮動小数点数</li>
- <li><code>f64</code>: 64ビット浮動小数点数</li>
-</ul>
+- `i32`: 32 ビット整数
+- `i64`: 64 ビット整数
+- `f32`: 32 ビット浮動小数点数
+- `f64`: 64 ビット浮動小数点数
 
-<p>単体の引数は <code>(param i32)</code> 、返値は <code>(result i32)</code> のように書きます。したがって、2つの32ビット整数を引数にとり、64ビット浮動小数点数を返すバイナリ関数は次のように記述します:</p>
+単体の引数は `(param i32)` 、返値は `(result i32)` のように記述します。したがって、 2 つの 32 ビット整数を引数にとり、 64 ビット浮動小数点数を返すバイナリー関数は次のように記述します。
 
-<pre class="brush: wasm; no-line-numbers notranslate">(func (param i32) (param i32) (result f64) ... )</pre>
+```wasm
+(func (param i32) (param i32) (result f64) ... )
+```
 
-<p>シグネチャのあとに型付けされたローカル変数のリストが続きます (例: <code>(local i32)</code>) 。 引数は基本的には呼び出し元から渡された、対応する引数の値で初期化された、ただのローカル変数です。</p>
+シグネチャのあとに、型付けされたローカル変数のリストが続きます (例: `(local i32)`) 。引数は基本的に、呼び出し元から渡された対応する引数の値で初期化される単なるローカル変数です。
 
-<h2 id="Getting_and_setting_locals_and_parameters" name="Getting_and_setting_locals_and_parameters">ローカル変数と引数を取得/設定する</h2>
+## ローカル変数と引数を取得/設定する
 
-<p>ローカル変数と引数は関数本体から <code>local.get</code> と <code>local.set</code> 命令を使用して読み書きすることができます。</p>
+ローカル変数と引数は関数本体から `local.get` と `local.set` 命令を使用して読み書きすることができます。
 
-<p><code>local.get</code>/<code>local.get</code> コマンドは数値のインデックスから取得/設定される項目を参照します。最初に引数が宣言順に、その後に、ローカル変数が宣言順に参照されます。次の関数を見てください:</p>
+`local.get`/`local.get` コマンドは数値のインデックスから取得/設定される項目を参照します。最初に引数が宣言順に、その後に、ローカル変数が宣言順に参照されます。次の関数を見てください。
 
-<pre class="brush: wasm; no-line-numbers notranslate">(func (param i32) (param f32) (local f64)
+```wasm
+(func (param i32) (param f32) (local f64)
   local.get 0
   local.get 1
-  local.get 2)</pre>
+  local.get 2)
+```
 
-<p>命令 <code>local.get 0</code> は i32 の引数, <code>local.get 1</code> は f32 の引数、そして <code>local.get 2</code> は f64 のローカル変数を取得します。</p>
+命令 `local.get 0` は i32 の引数, `local.get 1` は f32 の引数、そして `local.get 2` は f64 のローカル変数を取得します。
 
-<p>ここで別の問題があります。数値のインデックスを使用して項目を参照すると、混乱したり、困ってしまうことがあります。そこで、テキストフォーマットでは、単純に型宣言の直前に (<code>$</code>) をプレフィックスとして付けた名前を、引数、ローカル変数や他の多くの項目につけることができます。</p>
+ここで別の問題があります。数値のインデックスを使用して項目を参照すると、混乱したり、困ってしまうことがあります。そこで、テキスト形式では、単純に型宣言の直前に (`$`) を接頭辞として付けた名前を、引数、ローカル変数や他の多くの項目につけることができます。
 
-<p>したがって、上記のシグネチャを次のように書き直すことができます:</p>
+したがって、上記のシグネチャを次のように書き直すことができます。
 
-<pre class="brush: wasm; no-line-numbers notranslate">(func (param $p1 i32) (param $p2 f32) (local $loc f64) …)</pre>
+```wasm
+(func (param $p1 i32) (param $p2 f32) (local $loc f64) …)
+```
 
-<p>そして、<code>local.get 0</code> の代わりに <code>local.get $p1</code> と書くことができるようになります (このテキストがバイナリに変換されたとき、バイナリには整数値だけが残されることに注意してください) 。</p>
+そして、`local.get 0` の代わりに `local.get $p1` と書くことができるようになります（このテキストがバイナリーに変換されたとき、バイナリーには整数値だけが残されることに注意してください）。
 
-<h2 id="Stack_machines" name="Stack_machines">スタックマシン</h2>
+## スタックマシン
 
-<p>関数本体を書く前に、もう1つ、スタックマシンについて話をする必要があります。ブラウザはそれを更に効率的な形にコンパイルしますが、wasm の実行はスタックマシンとして定義されます。スタックマシンの基本的なアイデアは全ての命令がスタックから特定の数の <code>i32</code>/<code>i64</code>/<code>f32</code>/<code>f64</code> 値をプッシュ、ポップするようにすることです。</p>
+関数本体を書く前に、もう 1 つ、**スタックマシン**について話をする必要があります。ブラウザーはそれを更に効率的な形にコンパイルしますが、wasm の実行はスタックマシンとして定義されます。スタックマシンの基本的な考え方は、すべての命令がスタックから特定の数の `i32`/`i64`/`f32`/`f64` 値をプッシュ、ポップするようにすることです。
 
-<p>例えば、 <code>local.get</code> はローカル変数の値をスタックにプッシュするように定義されます。そして、<code>i32.add</code> は2つの <code>i32</code> 値 (スタックにプッシュされた前の2つの値を暗黙的に取得します) をポップし、合計を計算して (2^32 の剰余として) 結果の i32 値をプッシュします。</p>
+例えば、 `local.get` はローカル変数の値をスタックにプッシュするように定義されます。そして、`i32.add` は2つの `i32` 値 (スタックにプッシュされた前の2つの値を暗黙的に取得します) をポップし、合計を計算して (2^32 の剰余として) 結果の i32 値をプッシュします。
 
-<p>関数が呼び出されたとき、空のスタックから開始され、徐々に積まれてゆき、本体の命令が実行されると空になります。例として、次の関数の実行後について見てみましょう:</p>
+関数が呼び出されたとき、空のスタックから開始され、徐々に積まれてゆき、本体の命令が実行されると空になります。例として、次の関数の実行後について見てみましょう。
 
-<pre class="brush: wasm; notranslate">(func (param $p i32)
+```wasm
+(func (param $p i32)
   (result i32)
   local.get $p
   local.get $p
-  i32.add)</pre>
+  i32.add)
+```
 
-<p>スタックには <code>i32.add</code> よって処理された式 (<code>$p + $p</code>) の結果として、ただ1つの <code>i32</code> 値が積まれています。<font face="consolas, Liberation Mono, courier, monospace">関数の返値はスタックに残った最後の値になります。</font></p>
+スタックには `i32` という値 1 つだけが入っています。これは式 (`$p + $p`) が `i32.add` よって処理された結果です。関数の返値はスタックに残った最後の値になります。
 
-<p>WebAssembly のバリデーションルールはスタックが正確に一致することを保証します。もし、<code>(result f32)</code> と宣言した場合、最終的にスタックに1つだけ <code>f32</code> 値が積まれている状態である必要があります。結果の型がない場合は、スタックは空でなければなりません。</p>
+WebAssembly のバリデーションルールはスタックが正確に一致することを保証します。もし、`(result f32)` と宣言した場合、最終的にスタックに1つだけ `f32` 値が積まれている状態である必要があります。結果の型がない場合は、スタックは空でなければなりません。
 
-<h2 id="Our_first_function_body" name="Our_first_function_body">はじめての関数本体</h2>
+## はじめての関数本体
 
-<p>前述の通り、関数本体は関数が呼び出された後に続く単純な命令列です。 これまでに学んだことと一緒にして、最終的にはシンプルな関数を含むモジュールを定義することができるようになります:</p>
+前述の通り、関数本体は関数が呼び出された後に続く単純な命令列です。 これまでに学んだことと共に、最終的にはシンプルな関数を含むモジュールを定義することができるようになります。
 
-<pre class="brush: wasm; notranslate">(module
+```wasm
+(module
   (func (param $lhs i32) (param $rhs i32) (result i32)
     local.get $lhs
     local.get $rhs
-    i32.add))</pre>
+    i32.add))
+```
 
-<p>この関数は2つの引数を受け取って、それらを足して、その結果を返します。</p>
+この関数は 2 つの引数を受け取って、それらを足して、その結果を返します。
 
-<p>関数本体に置けるものはもっとたくさんありますが、いまはシンプルなもので始めます。進むにつれてもっと多くの例を見ていきます。全ての有効なオペコードのリストについては <a href="http://webassembly.org/docs/semantics/">webassembly.org Semantics reference</a> を調べてみてください。</p>
+関数本体に置けるものはもっとたくさんありますが、いまはシンプルなもので始めます。進むにつれてもっと多くの例を見ていきます。すべての有効なオペコードのリストについては [webassembly.org Semantics reference](https://webassembly.github.io/spec/core/exec/index.html) を調べてみてください。
 
-<h3 id="Calling_the_function" name="Calling_the_function">関数を呼び出す</h3>
+### 関数を呼び出す
 
-<p>私達が定義した関数は自身では大したことはしません。いまはそれを呼び出す必要があります。どのようにすればよいでしょうか? ES2015 モジュールのように、wasm 関数はモジュール内の <code>export</code> ステートメントによって明示的にエクスポートしなくてはいけません。</p>
+定義した関数は自身では大したことをしません。いまはそれを呼び出す必要があります。どのようにすればよいでしょうか。 ES2015 モジュールのように、wasm 関数はモジュール内の `export` ステートメントによって明示的にエクスポートしなければなりません。
 
-<p>ローカル変数と同じように、関数もデフォルトではインデックスで識別されますが、便宜上の関数名を付けることができます。<code>func</code> キーワードの直後にドル記号で始まる名前を付けてみましょう。</p>
+ローカル変数と同じように、関数も既定ではインデックスで識別されますが、便宜上の関数名を付けることができます。 `func` キーワードの直後にドル記号で始まる名前を付けてみましょう。
 
-<pre class="brush: wasm; no-line-numbers notranslate">(func $add … )</pre>
+```wasm
+(func $add … )
+```
 
-<p>ここでエクスポート宣言を追加する必要があります。次のようになります:</p>
+ここでエクスポート宣言を追加する必要があります。次のようになります。
 
-<pre class="brush: wasm; no-line-numbers notranslate">(export "add" (func $add))</pre>
+```wasm
+(export "add" (func $add))
+```
 
-<p>ここで <code>add</code> は JavaScript で認識される関数名であるのに対して、<code>$add</code> はモジュール内の、どの WebAssembly 関数をエクスポートするのかを選択します。</p>
+ここで `add` は JavaScript で認識される関数名であるのに対して、`$add` はモジュール内の、どの WebAssembly 関数をエクスポートするのかを選択します。
 
-<p>最終的なモジュール (いまのところ) は次のようになります:</p>
+（今のところ）最終的なモジュールは次のようになります。
 
-<pre class="brush: wasm; notranslate">(module
+```wasm
+(module
   (func $add (param $lhs i32) (param $rhs i32) (result i32)
     local.get $lhs
     local.get $rhs
     i32.add)
   (export "add" (func $add))
-)</pre>
+)
+```
 
-<p>例に従うなら、上のモジュールを <code>add.wat</code> という名前で保存して、wabt を使用して (詳細は <a href="/ja/docs/WebAssembly/Text_format_to_wasm">WebAssembly テキストフォーマットから wasm に変換する</a> を参照してください) 、<code>add.wasm</code> というファイルに変換します。</p>
+例に従うなら、上のモジュールを `add.wat` という名前で保存して、wabt を使用して（詳細は [WebAssembly テキスト形式から wasm に変換する](/ja/docs/WebAssembly/Text_format_to_wasm) を参照してください）、`add.wasm` というファイルに変換します。
 
-<p>次に、 <code>addCode</code> という名前の型付き配列にバイナリをロードし (<a href="/ja/docs/WebAssembly/Loading_and_running">WebAssembly コードのロードと実行</a> で説明されています) 、コンパイル、インスタンス化して、JavaScript で <code>add</code> 関数を実行します (<code>add()</code> はインスタンスの <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">exports</a></code> プロパティから見つけることができます):</p>
+次に、 `addCode` という名前の型付き配列にバイナリー読み込み（[WebAssembly コードのロードと実行](/ja/docs/WebAssembly/Loading_and_running) で説明されています）、コンパイル、インスタンス化して、JavaScript で `add` 関数を実行します（`add()` はインスタンスの [`exports`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) プロパティから見つけることができます）。
 
-<pre class="brush: js; notranslate">WebAssembly.instantiateStreaming(fetch('add.wasm'))
-  .then(obj =&gt; {
-    console.log(obj.instance.exports.add(1, 2));  // "3"
-  });</pre>
+```js
+WebAssembly.instantiateStreaming(fetch('add.wasm'))
+  .then(obj => {
+    console.log(obj.instance.exports.add(1, 2));  // "3"
+  });
+```
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: この例は GitHub の<a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html">add.html</a> (<a href="https://mdn.github.io/webassembly-examples/understanding-text-format/add.html">動作例</a>) にあります。関数のインスタンス化についての詳細は {{JSxRef("WebAssembly.instantiateStreaming()")}} も合わせて参照してください。</p>
-</div>
+> **Note:** この例は GitHub の[add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)) にあります。関数のインスタンス化についての詳細は {{JSxRef("WebAssembly.instantiateStreaming()")}} も合わせて参照してください。
 
-<h2 id="Exploring_fundamentals" name="Exploring_fundamentals">基礎を探る</h2>
+## 基礎を探る
 
-<p>ここでは実際の基本的な例を取り上げてから、いくつかの高度な機能について見てみましょう。</p>
+ここでは実際の基本的な例を取り上げてから、いくつかの高度な機能について見てみましょう。
 
-<h3 id="Calling_functions_from_other_functions_in_the_same_module" name="Calling_functions_from_other_functions_in_the_same_module">同じモジュールの他の関数から関数を呼び出す</h3>
+### 同じモジュールの他の関数から関数を呼び出す
 
-<p><code>call</code> 命令はインデックスか名前を指定して単一の関数を呼び出します。例えば、次のモジュールには2つの関数が含まれています。1つ目はただ42を返すだけ、もう1つは1つ目のものに1を足した値を返します:</p>
+`call` 命令はインデックスか名前を指定して単一の関数を呼び出します。例えば、次のモジュールには 2 つの関数が含まれています。 1 つ目はただ 42 を返すだけ、もう 1 つは 1 つ目のものに 1 を足した値を返します。
 
-<pre class="brush: wasm; notranslate">(module
+```wasm
+(module
   (func $getAnswer (result i32)
     i32.const 42)
   (func (export "getAnswerPlus1") (result i32)
     call $getAnswer
     i32.const 1
-    i32.add))</pre>
+    i32.add))
+```
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: <code>i32.const</code> は32ビット整数を定義してスタックにプッシュするだけです。 <code>i32</code> 以外の有効な型に変えて、const の値を好きなものに変えることができます (ここでは <code>42</code> に設定しました)。</p>
-</div>
+> **Note:** `i32.const` は 32 ビット整数を定義してスタックにプッシュするだけです。 `i32` 以外の有効な型に変えて、 const の値を好きなものに変えることができます（ここでは `42` に設定しました）。
 
-<p>この例で、あなたは <code>func</code> の直後に宣言された <code>(export "getAnswerPlus1")</code> セクションに気づくでしょう。これはこの関数をエクスポートするための宣言をして、さらにそれに名前をつけるために使用するショートカットです。</p>
+この例で、 `func` の直後に宣言された `(export "getAnswerPlus1")` セクションに気づくでしょう。これはこの関数をエクスポートするための宣言をして、さらにそれに名前をつけるために使用するショートカットです。
 
-<p>これは、上で行ったように、モジュール内の関数外の別の場所で、関数ステートメントと分けて定義するのと同等の機能です。</p>
+これは、上で行ったように、モジュール内の関数外の別の場所で、関数ステートメントと分けて定義するのと同等の機能です。
 
-<pre class="brush: wasm; no-line-numbers notranslate">(export "getAnswerPlus1" (func $functionName))</pre>
+```wasm
+(export "getAnswerPlus1" (func $functionName))
+```
 
-<p>上のモジュールを呼び出す JavaScript コードは次のようになります:</p>
+上のモジュールを呼び出す JavaScript コードは次のようになります。
 
-<pre class="brush: js; notranslate">WebAssembly.instantiateStreaming(fetch('call.wasm'))
- .then(obj =&gt; {
-    console.log(obj.instance.exports.getAnswerPlus1());  // "43"
-  });</pre>
+```js
+WebAssembly.instantiateStreaming(fetch('call.wasm'))
+ .then(obj => {
+    console.log(obj.instance.exports.getAnswerPlus1());  // "43"
+  });
+```
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: この例は GitHub の <a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/call.html">call.html</a> (<a href="https://mdn.github.io/webassembly-examples/understanding-text-format/call.html">動作例</a>) から参照してください。また、 <code>fetchAndInstantiate()</code> のソースは <code>wasm-utils.js</code> を参照してください。</p>
-</div>
+### JavaScript から関数をインポートする
 
-<h3 id="Importing_functions_from_JavaScript" name="Importing_functions_from_JavaScript">JavaScript から関数をインポートする</h3>
+すでに、JavaScript から WebAssembly 関数を呼び出すことについては確認しましたが、WebAssembly から JavaScript 関数を呼び出すことについてはどうでしょうか? WebAssembly は実際に JavaScript のビルトインの情報を持っていませんが、JavaScript か wasm 関数をインポートするための一般的な方法があります。例を見てみましょう。
 
-<p>すでに、JavaScript から WebAssembly 関数を呼び出すことについては確認しましたが、WebAssembly から JavaScript 関数を呼び出すことについてはどうでしょうか? WebAssembly は実際に JavaScript のビルトインの情報を持っていませんが、JavaScript か wasm 関数をインポートするための一般的な方法があります。例を見てみましょう:</p>
-
-<pre class="brush: wasm; notranslate">(module
+```wasm
+(module
   (import "console" "log" (func $log (param i32)))
   (func (export "logIt")
     i32.const 13
-    call $log))</pre>
+    call $log))
+```
 
-<p>WebAssembly は2階層の名前空間のインポートステートメントを持ちます。ここでは、<code>console</code> モジュールから <code>log</code> 関数をインポートすることを要求しています。また、エクスポートされた <code>logIt</code> 関数から、上で紹介した <code>call</code> 命令を使用して、インポートされた関数を呼ぶ出すことができます。</p>
+WebAssembly は 2 階層の名前空間のインポート文を持っています。ここでは、`console` モジュールから `log` 関数をインポートすることを要求しています。また、エクスポートされた `logIt` 関数から、上で紹介した `call` 命令を使用して、インポートされた関数を呼ぶ出すことができます。
 
-<p>インポートされた関数は通常の関数と同じようなものです。WebAssembly のバリデーションによって静的にチェックするシグネチャを持ち、インデックスか名前を付けて呼び出すことができます。</p>
+インポートされた関数は通常の関数と同じようなものです。WebAssembly のバリデーションによって静的にチェックするシグネチャを持ち、インデックスか名前を付けて呼び出すことができます。
 
-<p>JavaScript 関数にはシグネチャの概念がないため、インポート宣言のシグネチャに関係なく、どの JavaScript 関数も渡すことができます。モジュールがインポート宣言をすると、 {{jsxref("WebAssembly.instantiate()")}} を呼び出す側は、対応したプロパティを持ったインポートオブジェクトを渡す必要があります。</p>
+JavaScript 関数にはシグネチャの概念がないため、インポート宣言のシグネチャに関係なく、どの JavaScript 関数も渡すことができます。モジュールがインポート宣言をすると、 {{jsxref("WebAssembly.instantiate()")}} を呼び出す側は、対応したプロパティを持ったインポートオブジェクトを渡す必要があります。
 
-<p>上の場合、 <code>importObject.console.log</code> が JavaScript 関数であるようなオブジェクト(<code>importObject</code> と呼びましょう) が必要になります。</p>
+上の場合、 `importObject.console.log` が JavaScript 関数であるようなオブジェクト(`importObject` と呼びましょう) が必要になります。
 
-<p>これは次のようになります。</p>
+これは次のようになります。
 
-<pre class="brush: js; notranslate">var importObject = {
+```js
+var importObject = {
   console: {
     log: function(arg) {
       console.log(arg);
@@ -244,122 +261,130 @@ translation_of: WebAssembly/Understanding_the_text_format
 };
 
 WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
-  .then(obj =&gt; {
-    obj.instance.exports.logIt();
-  });</pre>
+  .then(obj => {
+    obj.instance.exports.logIt();
+  });
+```
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: この例は GitHub の <a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html">logger.html</a> (<a href="https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html">動作例</a>)を参照してください。</p>
-</div>
+> **Note:** この例は GitHub の [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html))を参照してください。
 
-<h3 id="WebAssembly_でのグローバルの宣言">WebAssembly でのグローバルの宣言</h3>
+### WebAssembly でのグローバルの宣言
 
-<p>WebAssembly には、 JavaScript からアクセス可能なグローバル変数インスタンスを作成する機能と、1つ以上の {{JSxRef("WebAssembly.Module")}} インスタンスにまたがってインポート/エクスポート可能なグローバル変数インスタンスを作成する機能があります。これは、複数のモジュールを動的にリンクすることができるので、非常に便利です。</p>
+WebAssembly には、 JavaScript からアクセス可能なグローバル変数インスタンスを作成する機能と、 1 つ以上の {{JSxRef("WebAssembly.Module")}} インスタンスにまたがってインポート/エクスポート可能なグローバル変数インスタンスを作成する機能があります。これは、複数のモジュールを動的にリンクすることができるので、とても便利です。
 
-<p>WebAssembly のテキスト形式では、次のようになります (GitHub のリポジトリにある <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.wat">global.wat</a> を参照してください。JavaScript の例は <a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html">global.html</a> も参照してください)。</p>
+WebAssembly のテキスト形式では、次のようになります (GitHub のリポジトリにある [global.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.wat) を参照してください。JavaScript の例は [global.html](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) も参照してください)。
 
-<pre class="brush: wasm; notranslate">(module
+```wasm
+(module
    (global $g (import "js" "global") (mut i32))
    (func (export "getGlobal") (result i32)
         (global.get $g))
    (func (export "incGlobal")
         (global.set $g
             (i32.add (global.get $g) (i32.const 1))))
-)</pre>
+)
+```
 
-<p>これは、キーワード <code>global</code> を使用してグローバルな値を指定していることと、値のデータ型と一緒にキーワード <code>mut</code> を指定して変更可能にしたい場合に指定していることを除いて、以前に見たものと似ています。</p>
+これは、キーワード `global` を使用してグローバルな値を指定していることと、値のデータ型と一緒にキーワード `mut` を指定して変更可能にしたい場合に指定していることを除いて、以前に見たものと似ています。
 
-<p>JavaScript を使用して同等の値を作成するには、 {{JSxRef("WebAssembly.Global()")}} コンストラクターを使用してください。</p>
+JavaScript を使用して同等の値を作成するには、 {{JSxRef("WebAssembly.Global()")}} コンストラクターを使用してください。
 
-<pre class="brush: js; no-line-numbers notranslate">const global = new WebAssembly.Global({value: "i32", mutable: true}, 0);</pre>
+```js
+const global = new WebAssembly.Global({value: "i32", mutable: true}, 0);
+```
 
-<h3 id="WebAssembly_Memory" name="WebAssembly_Memory">WebAssembly メモリ</h3>
+### WebAssembly メモリー
 
-<p>上の例はとてもひどいロギング関数です。たった1つの整数値を表示するだけです! 文字列を表示するためにはどうしたらよいでしょうか? 文字列やさらに複雑なデータ型を扱うために WebAssembly は <strong>メモリ</strong> を提供します。WebAssembly によると、メモリは徐々に拡張することのできるただの大きなバイト列です。WebAssembly には <a href="http://webassembly.org/docs/semantics/#linear-memory">線形メモリ</a> から読み書きするための <code>i32.load</code> や <code>i32.store</code> のような命令を持っています。</p>
+上の例はとてもひどいロギング関数です。たった 1 つの整数値を表示するだけです。文字列を表示するためにはどうしたらよいでしょうか? 文字列やさらに複雑なデータ型を扱うために WebAssembly は **メモリー** を提供します（WebAssembly のより新しい実装では、{{anch("参照型")}}もあります）。 WebAssembly では、メモリーは徐々に拡張することのできるただの大きなバイト列です。 WebAssembly は `i32.load` や `i32.store` のような命令を持っており、それで[線形メモリー](http://webassembly.org/docs/semantics/#linear-memory)を読み書きします。
 
-<p>JavaScript から見ると、メモリは全て1つの大きな (リサイズ可能な) {{domxref("ArrayBuffer")}} の内部にあるように見えます。それはまさに、asm.js とともに動かさなければならないもの全てです (ただしリサイズは出来ません。asm.js の <a href="http://asmjs.org/spec/latest/#programming-model">プログラミングモデル</a> を参照してください) 。</p>
+JavaScript から見ると、メモリーはすべて 1 つの大きな (リサイズ可能な) {{jsxref("ArrayBuffer")}} の内部にあるように見えます。それはまさに、asm.js とともに動かさなければならないものすべてです (ただしリサイズは出来ません。asm.js の [プログラミングモデル](http://asmjs.org/spec/latest/#programming-model) を参照してください) 。
 
-<p>したがって、文字列は線形メモリ内部のどこかに存在するただのバイト列です。適切なバイト列の文字列をメモリに書き込んだとしましょう。その文字列をどのように JavaScript に渡すのでしょうか?</p>
+したがって、文字列は線形メモリー内部のどこかに存在するただのバイト列です。適切なバイト列の文字列をメモリーに書き込んだとしましょう。その文字列をどのように JavaScript に渡すのでしょうか?
 
-<p>鍵は {{jsxref("WebAssembly.Memory()")}} インターフェースを使用して JavaScript から WebAssembly の線形メモリを作成し、関連するインスタンスメソッドを使用して既存の Memory インスタンス (現在は1モジュールごとに1つだけ持つことができます) にアクセスできることです。Memory インスタンスは <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer">buffer</a></code> ゲッターを持ち、これは線形メモリ全体を指し示す ArrayBuffer を返します。</p>
+鍵は {{JSxRef("WebAssembly.Memory()")}} インターフェースを使用して JavaScript から WebAssembly の線形メモリーを作成し、関連するインスタンスメソッドを使用して既存の Memory インスタンス (現在は 1 モジュールごとに 1 つだけ持つことができます) にアクセスできることです。Memory インスタンスは [`buffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) ゲッターを持ち、これは線形メモリー全体を指し示す ArrayBuffer を返します。
 
-<p>Memory インスタンスは、例えば JavaScript から <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow">Memory.grow()</a></code> メソッドを使用して拡張することもできます。拡張したとき、<code>ArrayBuffer</code> はサイズを変更することができないため、現在の <code>ArrayBuffer</code> は切り離され、新しく作成された、より大きな <code>ArrayBuffer</code> を指し示すようになります。これは、JavaScript に文字列を渡すために必要なことは、線形メモリ内での文字列のオフセットと長さを指定する方法を渡すことだけであることを意味します。</p>
+Memory インスタンスは、例えば JavaScript から [`Memory.grow()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow) メソッドを使用して拡張することもできます。拡張したとき、`ArrayBuffer` はサイズを変更することができないため、現在の `ArrayBuffer` は切り離され、新しく作成された、より大きな `ArrayBuffer` を指し示すようになります。これは、JavaScript に文字列を渡すために必要なことは、線形メモリー内での文字列のオフセットと長さを指定する方法を渡すことだけであることを意味します。
 
-<p>文字列自身に文字列の長さの情報をエンコードするさまざまな方法 (例えば、C言語の文字列) がありますが、簡単にするためにここではオフセットと長さの両方を引数として渡します:</p>
+文字列自身に文字列の長さの情報をエンコードするさまざまな方法 (例えば、 C 言語の文字列) がありますが、簡単にするためにここではオフセットと長さの両方を引数として渡します。
 
-<pre class="brush: wasm; no-line-numbers notranslate">(import "console" "log" (func $log (param i32) (param i32)))</pre>
+```wasm
+(import "console" "log" (func $log (param i32) (param i32)))
+```
 
-<p>JavaScript 側では、バイト列を簡単に JavaScript 文字列にデコードするために <a href="/ja/docs/Web/API/TextDecoder">TextDecoder API</a> を使用することができます (ここでは <code>utf8</code> を指定していますが、他の多くのエンコーディングをサポートしています) 。</p>
+JavaScript 側では、バイト列を簡単に JavaScript 文字列にデコードするために [TextDecoder API](/ja/docs/Web/API/TextDecoder) を使用することができます (ここでは `utf8` を指定していますが、他の多くのエンコーディングに対応しています) 。
 
-<pre class="brush: js; notranslate">function consoleLogString(offset, length) {
+```js
+function consoleLogString(offset, length) {
   var bytes = new Uint8Array(memory.buffer, offset, length);
   var string = new TextDecoder('utf8').decode(bytes);
   console.log(string);
-}</pre>
+}
+```
 
-<p>最後のに欠けているのは、 <code>consoleLogString</code> が WebAssembly の <code>memory</code> にアクセスできる場所です。このあたり WebAssembly は柔軟です。JavaScript から <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory">Memory</a></code> オブジェクトを作成して WebAssembly モジュールでメモリをインポートするか、WebAssembly モジュールでメモリを作成して JavaScript で使用するためにエクスポートすることができます。</p>
+最後のに欠けているのは、 `consoleLogString` が WebAssembly の `memory` にアクセスする場所です。このあたり WebAssembly は柔軟です。JavaScript から [`Memory`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) オブジェクトを作成して WebAssembly モジュールでメモリーをインポートするか、WebAssembly モジュールでメモリーを作成して JavaScript で使用するためにエクスポートすることができます。
 
-<p>簡単にするために、JavaScript で作成したメモリを WebAssembly にインポートしてみましょう。<code>import</code> ステートメントは次のようになります。</p>
+簡単にするために、JavaScript で作成したメモリーを WebAssembly にインポートしてみましょう。`import` ステートメントは次のようになります。
 
-<pre class="brush: wasm; no-line-numbers notranslate">(import "js" "mem" (memory 1))</pre>
+```wasm
+(import "js" "mem" (memory 1))
+```
 
-<p><code>1</code> はインポートされたメモリに少なくとも1ページ分のメモリが必要であることを示します(WebAssembly では1ページを 64KB と定義しています)。</p>
+`1` はインポートされたメモリーに少なくとも 1 ページ分のメモリーが必要であることを示します(WebAssembly では 1 ページを 64KB と定義しています)。
 
-<p>文字列 "Hi" を出力する完全なモジュールを見てみましょう。通常のコンパイルされたCのプログラムでは文字列にメモリを割り当てる関数を呼び出しますが、ここでは独自のアセンブリを書くだけで、全ての線形メモリを所有しているので、<code>data</code> セクションを使用してグローバルメモリに文字列の内容を書きこむことができます。データセクションではインスタンス化時にオフセットを指定してバイト列の文字列を書きこむことができます。これはネイティブの実行可能形式の <code>.data</code> セクションに似ています。</p>
+文字列 "Hi" を出力する完全なモジュールを見てみましょう。通常のコンパイルされた C のプログラムでは文字列にメモリーを割り当てる関数を呼び出しますが、ここでは独自のアセンブリーを書くだけで、すべての線形メモリーを所有しているので、 `data` セクションを使用してグローバルメモリーに文字列の内容を書きこむことができます。データセクションではインスタンス化時にオフセットを指定してバイト列の文字列を書きこむことができます。これはネイティブの実行可能形式の `.data` セクションに似ています。
 
-<p>最終的な wasm モジュールは次のようになります。</p>
+最終的な wasm モジュールは次のようになります。
 
-<pre class="brush: wasm; notranslate">(module
+```wasm
+(module
   (import "console" "log" (func $log (param i32 i32)))
   (import "js" "mem" (memory 1))
   (data (i32.const 0) "Hi")
   (func (export "writeHi")
     i32.const 0  ;; pass offset 0 to log
     i32.const 2  ;; pass length 2 to log
-    call $log))</pre>
+    call $log))
+```
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: 上記の2重のセミコロン構文 (<code>;;</code>) は WebAssembly ファイル内でコメントを書くためのものです。</p>
-</div>
+> **Note:** 上記の 2 重のセミコロン構文 (`;;`) は WebAssembly ファイル内でコメントを書くためのものです。
 
-<p>ここで、JavaScript から 1ページ分のサイズを持つ Memory を作成してそれに渡すことができます。結果としてコンソールに "Hi" と出力されます:</p>
+ここで、JavaScript から  1 ページ分のサイズを持つ Memory を作成してそれに渡すことができます。結果としてコンソールに "Hi" と出力されます。
 
-<pre class="brush: js; notranslate">var memory = new WebAssembly.Memory({initial:1});
+```js
+var memory = new WebAssembly.Memory({initial:1});
 
 var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
 WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
-  .then(obj =&gt; {
-    obj.instance.exports.writeHi();
-  });</pre>
+  .then(obj => {
+    obj.instance.exports.writeHi();
+  });
+```
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: 完全なソースは GitHub の <a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html">logger2.html</a> (<a href="https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html">動作例</a>) を参照してください。</p>
-</div>
+> **Note:** 完全なソースは GitHub の [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)) を参照してください。
 
-<h3 id="WebAssembly_tables" name="WebAssembly_tables">WebAssembly テーブル</h3>
+### WebAssembly テーブル
 
-<p>WebAssembly テキストフォーマットのツアーを終了するために、WebAssemblyで最も複雑でしばしば混乱する部分 (<strong>テーブル</strong>) を見てみましょう。テーブルは基本的に WebAssembly コードからインデックスでアクセスできるリサイズ可能な参照の配列です。</p>
+WebAssembly テキスト形式のツアーを終了するために、 WebAssembly で最も複雑でしばしば混乱する部分 (**テーブル**) を見てみましょう。テーブルは基本的に WebAssembly コードからインデックスでアクセスできるリサイズ可能な参照の配列です。
 
-<p>なぜテーブルが必要なのかを見るために、最初に観察する必要があります。さきほど見た <code>call</code> 命令 ({{anch("同じモジュールの他の関数から関数を呼び出す")}} を参照) は静的な関数インデックスをとり、結果として1つの関数しか呼び出せません。しかし、呼び出し先がランタイム値の場合はどうなるでしょうか?</p>
+なぜテーブルが必要なのかを見るために、最初に観察する必要があります。さきほど見た `call` 命令 ({{anch("同じモジュールの他の関数から関数を呼び出す")}} を参照) は静的な関数インデックスをとり、結果として 1 つの関数しか呼び出せません。しかし、呼び出し先がランタイム値の場合はどうなるでしょうか。
 
-<ul>
- <li>JavaScript ではこれは常に見えます。関数はファーストクラスの値です。</li>
- <li>C/C++ では関数ポインタで見ることができます。</li>
- <li>C++ では仮想関数で見ることができます。</li>
-</ul>
+- JavaScript ではこれは常に見えます。関数は第一級の値です。
+- C/C++ では関数ポインターで見ることができます。
+- C++ では仮想関数で見ることができます。
 
-<p>WebAssembly にはこれを実現するための一種の呼び出し命令が必要だったため、動的な関数をオペランドに受け取る <code>call_indirect</code> を与えました。問題は WebAssembly ではオペランドに指定できる型が (現在) <code>i32</code>/<code>i64</code>/<code>f32</code>/<code>f64</code> だけなことです。</p>
+WebAssembly にはこれを実現するための一種の呼び出し命令が必要だったため、動的な関数をオペランドに受け取る `call_indirect` を与えました。問題は WebAssembly ではオペランドに指定できる型が (現在) `i32`/`i64`/`f32`/`f64` だけであることです。
 
-<p>WebAssembly は <code>anyfunc</code> 型 (任意のシグニチャの関数を保持できるため "any") を追加することができましたが、あいにくセキュリティ上の理由から <code>anyfunc</code> 型は線形メモリに格納できませんでした。線形メモリは格納された値の生の内容をバイト列として公開し、これによって wasm コンテンツが生の関数ポインタを自由に観察できて破損させることができてしまいます。これはウェブ上では許可できません。</p>
+WebAssembly は `anyfunc` 型 (任意のシグニチャの関数を保持できるため "any") を追加することができましたが、あいにくセキュリティ上の理由から `anyfunc` 型は線形メモリーに格納できませんでした。線形メモリーは格納された値の生の内容をバイト列として公開し、これによって wasm コンテンツが生の関数ポインターを自由に観察できて破損させることができてしまいます。これはウェブ上では許可できません。
 
-<p>解決方法は関数参照をテーブルに格納し、代わりにテーブルのインデックスを渡すことでした。これは単なる i32 値です。<code>call_indirect</code> のオペランドは単純に i32 のインデックス値にすることができます。</p>
+解決方法は関数参照をテーブルに格納し、代わりにテーブルのインデックスを渡すことでした。これは単なる i32 値です。`call_indirect` のオペランドは単純に i32 のインデックス値にすることができます。
 
-<h4 id="wasm_でテーブルを定義する">wasm でテーブルを定義する</h4>
+#### wasm でテーブルを定義する
 
-<p>どのようにしてテーブルに wasm 関数を配置するのでしょうか? <code>data</code> セクションを使用して線形メモリの領域をバイト列で初期化するのと同じように、<code>elem</code> セクションを使用してテーブルの領域を関数の列で初期化することが出来ます:</p>
+どのようにしてテーブルに wasm 関数を配置するのでしょうか。 `data` セクションを使用して線形メモリーの領域をバイト列で初期化するのと同じように、`elem` セクションを使用してテーブルの領域を関数の列で初期化することが出来ます:
 
-<pre class="brush: wasm; notranslate">(module
+```wasm
+(module
   (table 2 funcref)
   (elem (i32.const 0) $f1 $f2)
   (func $f1 (result i32)
@@ -367,22 +392,20 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
   (func $f2 (result i32)
     i32.const 13)
   ...
-)</pre>
+)
+```
 
-<ul>
- <li><code>(table 2 anyfunc)</code> で、2 はテーブルの初期サイズ (2つの参照を格納できることを意味します) で、<code>anyfunc</code> はこれらの参照の要素型が「任意のシグニチャの関数」であることを宣言します。WebAssembly の現在のバージョンではこの型だけが要素型として許されますが、要素型は将来的にさらに追加される予定です。</li>
- <li>関数 (<code>func</code>) セクションは他の宣言された wasm 関数と同様です。これらはテーブルで参照する関数です (上の例ではそれぞれは定数を返すだけです) 。セクションが宣言された順序は重要ではないことに注意してください。関数はどこででも宣言できて <code>elem</code> セクションから参照することができます。</li>
- <li><code>elem</code> セクションはモジュール内の関数のサブセットをリスト化することができます (任意の順で並べることができ、重複を許容します) 。これは参照された順序でテーブルに参照される関数のリストです。</li>
- <li><code>elem</code> セクション内の <code>(i32.const 0)</code> 値はオフセットです。これはセクションの先頭で宣言する必要があります。これはテーブルに関数参照を追加するインデックスの開始位置を指定します。ここでは 0 と テーブルのサイズとして 2 (上記参照) を指定していますので、2つの参照はインデックスが 0 と 1 の部分に書き込まれます。もしオフセットを 1 にして書き込みたければ、 <code>(i32.const 1)</code> と記述してテーブルのサイズを 3 にする必要があります。</li>
-</ul>
+- `(table 2 anyfunc)` で、2 はテーブルの初期サイズ (2つの参照を格納できることを意味します) で、`anyfunc` はこれらの参照の要素型が「任意のシグニチャの関数」であることを宣言します。WebAssembly の現在のバージョンではこの型だけが要素型として許されますが、要素型は将来的にさらに追加される予定です。
+- 関数 (`func`) セクションは他の宣言された wasm 関数と同様です。これらはテーブルで参照する関数です (上の例ではそれぞれは定数を返すだけです) 。セクションが宣言された順序は重要ではないことに注意してください。関数はどこででも宣言できて `elem` セクションから参照することができます。
+- `elem` セクションはモジュール内の関数のサブセットをリスト化することができます (任意の順で並べることができ、重複を許容します) 。これは参照された順序でテーブルに参照される関数のリストです。
+- `elem` セクション内の `(i32.const 0)` 値はオフセットです。これはセクションの先頭で宣言する必要があります。これはテーブルに関数参照を追加するインデックスの開始位置を指定します。ここでは 0 と テーブルのサイズとして 2 (上記参照) を指定していますので、2つの参照はインデックスが 0 と 1 の部分に書き込まれます。もしオフセットを 1 にして書き込みたければ、 `(i32.const 1)` と記述してテーブルのサイズを 3 にする必要があります。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: 初期化されていない要素はデフォルトの throw-on-call 値が与えられます。</p>
-</div>
+> **Note:** 初期化されていない要素はデフォルトの throw-on-call 値が与えられます。
 
-<p>JavaScript で同じようなテーブルのインスタンスを作成する場合、次のようになります:</p>
+JavaScript で同じようなテーブルのインスタンスを作成する場合、次のようになります。
 
-<pre class="brush: js; notranslate">function() {
+```js
+function() {
   // table section
   var tbl = new WebAssembly.Table({initial:2, element:"funcref"});
 
@@ -393,39 +416,45 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
   // elem section
   tbl.set(0, f1);
   tbl.set(1, f2);
-};</pre>
+};
+```
 
-<h4 id="Using_the_table" name="Using_the_table">テーブルを使用する</h4>
+#### テーブルを使用する
 
-<p>先に進みましょう。いま、何らかの形で使用するために必要なテーブルを定義しました。このコードのセクションで使ってみましょう:</p>
+先に進みましょう。いま、何らかの形で使用するために必要なテーブルを定義しました。このコードのセクションで使ってみましょう。
 
-<pre class="brush: wasm; notranslate">(type $return_i32 (func (result i32))) ;; if this was f32, type checking would fail
+```wasm
+(type $return_i32 (func (result i32))) ;; if this was f32, type checking would fail
 (func (export "callByIndex") (param $i i32) (result i32)
   local.get $i
-  call_indirect (type $return_i32))</pre>
+  call_indirect (type $return_i32))
+```
 
-<ul>
- <li><code>(type $return_i32 (func (result i32)))</code> ブロックで参照名を持つ型を指定します。この型は後でテーブルの関数参照呼び出しの型チェックを行うときに使用されます。ここでは、参照が1つの <code>i32</code> を返す関数である必要があると言っています。</li>
- <li>次に、<code>callByIndex</code> としてエクスポートされる関数を定義します。引数として1つの <code>i32</code> をとり、引数名として <code>$i</code> が指定されています。</li>
- <li>関数内部でスタックに値を1つ追加します。値は引数 <code>$i</code> のものが渡されます。</li>
- <li>最後に、テーブルから関数を呼び出すために <code>call_indirect</code> を使用します。これは暗黙的に <code>$i</code> の値をスタックからポップします。この結果、<code>callByIndex</code> 関数はテーブルの <code>$i</code> 番目の関数を呼び出します。</li>
-</ul>
+- `(type $return_i32 (func (result i32)))` ブロックで参照名を持つ型を指定します。この型は後でテーブルの関数参照呼び出しの型チェックを行うときに使用されます。ここでは、参照が1つの `i32` を返す関数である必要があると言っています。
+- 次に、`callByIndex` としてエクスポートされる関数を定義します。引数として1つの `i32` をとり、引数名として `$i` が指定されています。
+- 関数内部でスタックに値を1つ追加します。値は引数 `$i` のものが渡されます。
+- 最後に、テーブルから関数を呼び出すために `call_indirect` を使用します。これは暗黙的に `$i` の値をスタックからポップします。この結果、`callByIndex` 関数はテーブルの `$i` 番目の関数を呼び出します。
 
-<p><code>call_indirect</code> の引数はコマンド呼び出しの前に置く代わりに、次のように明示的に宣言することもできます:</p>
+`call_indirect` の引数はコマンド呼び出しの前に置く代わりに、次のように明示的に宣言することもできます:
 
-<pre class="brush: wasm; no-line-numbers notranslate">(call_indirect (type $return_i32) (local.get $i))</pre>
+```wasm
+(call_indirect (type $return_i32) (local.get $i))
+```
 
-<p>より高級な、JavaScript のような表現力の高い言語では、関数を含む配列 (あるいはオブジェクトかもしれません) で同じことができることが想像できますよね。擬似コードだとこれは <code>tbl[i]()</code> のようになります。</p>
+より高級な、JavaScript のような表現力の高い言語では、関数を含む配列 (あるいはオブジェクトかもしれません) で同じことができることが想像できますよね。擬似コードだとこれは `tbl[i]()` のようになります。
 
-<p>型チェックの話に戻ります。WebAssembly は型チェックされていて、<code>anyfunc</code> は「任意の関数シグネチャ」を意味するので、呼び出し先の (推定される) シグネチャを指定する必要があります。そのため、プログラムに関数が <code>i32</code> を返すはずだ、と知らせるために <code>$return_i32</code> 型を指定しています。もし呼び出し先のシグネチャがマッチしない (代わりに <code>f32</code> が返されるような) 場合は {{jsxref("WebAssembly.RuntimeError")}} 例外がスローされます。</p>
+型チェックの話に戻ります。WebAssembly は型チェックされていて、 `funcref`  は「任意の関数シグネチャ」を意味するので、呼び出し先の (推定される) シグネチャを指定する必要があります。そのため、 `$return_i32` 型を指定することで、プログラムに関数が `i32` を返すはずだと知らせます。もし呼び出し先のシグネチャが一致しない (代わりに `f32` が返されるような) 場合は {{JSxRef("WebAssembly.RuntimeError")}} 例外が発生します。
 
-<p>さて、呼び出しを行うときにどのようにテーブルに <code>call_indirect</code> をリンクさせているのでしょうか? 答えは、現在モジュールインスタンスごとに1つのテーブルしか許容されないため、<code>call_indirect</code> はそれを暗黙的に呼び出します。将来的に複数のテーブルを持てるようになったとき、以下の行のように、何らかのテーブル識別子を指定する必要があるでしょう。</p>
+さて、呼び出しを行うときにどのようにテーブルに `call_indirect` をリンクさせているのでしょうか? 答えは、現在モジュールインスタンスごとに1つのテーブルしか許容されないため、`call_indirect` はそれを暗黙的に呼び出します。将来的に複数のテーブルを持てるようになったとき、以下の行のように、何らかのテーブル識別子を指定する必要があるでしょう。
 
-<pre class="brush: wasm; no-line-numbers notranslate">call_indirect $my_spicy_table (type $i32_to_void)</pre>
+```wasm
+call_indirect $my_spicy_table (type $i32_to_void)
+```
 
-<p>完全なモジュールは次のようになります。例は <a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.wat">wasm-table.wat</a> を参照してください:</p>
+完全なモジュールは次のようになります。例は [wasm-table.wat](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.wat) を参照してください:
 
-<pre class="brush: wasm; notranslate">(module
+```wasm
+(module
   (table 2 funcref)
   (func $f1 (result i32)
     i32.const 42)
@@ -436,49 +465,51 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
   (func (export "callByIndex") (param $i i32) (result i32)
     local.get $i
     call_indirect (type $return_i32))
-)</pre>
+)
+```
 
-<p>次の JavaScript を使用してウェブページに読み込んでみましょう:</p>
+次の JavaScript を使用してウェブページに読み込んでみましょう。
 
-<pre class="brush: js; notranslate">WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
-  .then(obj =&gt; {
-    console.log(obj.instance.exports.callByIndex(0)); // returns 42
-    console.log(obj.instance.exports.callByIndex(1)); // returns 13
-    console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
-  });</pre>
+```js
+WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
+  .then(obj => {
+    console.log(obj.instance.exports.callByIndex(0)); // returns 42
+    console.log(obj.instance.exports.callByIndex(1)); // returns 13
+    console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
+  });
+```
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> 例は GitHub の <a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html">wasm-table.html</a> (<a href="https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html">動作例</a>) を参照してください。</p>
-</div>
+> **Note:** 例は GitHub の [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)) を参照してください。
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> Memory と同じように Table も JavaScript から作成すること (<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table">WebAssembly.Table()</a></code> を参照) 、別の wasm モジュール間でインポートすることができます。</p>
-</div>
+> **Note:** Memory と同じように Table も JavaScript から作成すること ([`WebAssembly.Table()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table) を参照) 、別の wasm モジュール間でインポートすることができます。
 
-<h3 id="Mutating_tables_and_dynamic_linking" name="Mutating_tables_and_dynamic_linking">テーブルの変更と動的リンク</h3>
+### テーブルの変更と動的リンク
 
-<p>JavaScript は関数参照にフルアクセスできるため、Table オブジェクトは JavaScript から <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow">grow()</a></code>, <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">get()</a></code> や <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set">set()</a></code> メソッドを使用して変更することができます。WebAssembly が <a href="http://webassembly.org/docs/gc/">参照型</a> を得たとき、WebAssembly コードは <code>get_elem</code>/<code>set_elem</code> 命令を使用してテーブル自身を変更することができるようになるでしょう。</p>
+JavaScript は関数参照にフルアクセスできるため、 Table オブジェクトは JavaScript から [`grow()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get), [`set()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) メソッドを使用して変更することができます。また、 WebAssembly のコード自体も、{{anch("参照型")}}の一部として追加された `table.get` や `table.set` などの命令を使ってテーブルを操作することが可能です。
 
-<p>テーブルは変更可能であるため、それらは複雑なロード時、実行時の <a href="http://webassembly.org/docs/dynamic-linking">動的リンクスキーム</a> の実装で使用することができます。プログラムが動的にリンクされたとき、複数のインスタンスで同じメモリとテーブルを共有することができます。これは複数のコンパイル済み <code>.dll</code> が単一のプロセスのアドレス空間を共有するネイティブアプリケーションと対称的です。</p>
+テテーブルは変更可能であるため、高度な読み込み時および実行時の[動的リンクスキーム](https://webassembly.org/docs/dynamic-linking)の実装に使用することができます。プログラムが動的にリンクされたとき、複数のインスタンスで同じメモリーとテーブルを共有することができます。これは複数のコンパイル済み `.dll` が単一のプロセスのアドレス空間を共有するネイティブアプリケーションと対称的です。
 
-<p>この動作を確認するために、Memory オブジェクトと Table オブジェクトを含む単一のインポートオブジェクトを作成し、同じインポートオブジェクトを複数の <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">instantiate()</a></code> の呼び出しで渡してみましょう。</p>
+この動作を確認するために、Memory オブジェクトと Table オブジェクトを含む単一のインポートオブジェクトを作成し、同じインポートオブジェクトを複数の [`instantiate()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) の呼び出しで渡してみましょう。
 
-<p><code>.wat</code> ファイルの例は次のようになります。</p>
+`.wat` ファイルの例は次のようになります。
 
-<p><code>shared0.wat</code>:</p>
+`shared0.wat`:
 
-<pre class="brush: wasm; notranslate">(module
+```wasm
+(module
   (import "js" "memory" (memory 1))
   (import "js" "table" (table 1 funcref))
   (elem (i32.const 0) $shared0func)
   (func $shared0func (result i32)
    i32.const 0
    i32.load)
-)</pre>
+)
+```
 
-<p><code>shared1.wat</code>:</p>
+`shared1.wat`:
 
-<pre class="brush: wasm; notranslate">(module
+```wasm
+(module
   (import "js" "memory" (memory 1))
   (import "js" "table" (table 1 funcref))
   (type $void_to_i32 (func (result i32)))
@@ -488,30 +519,28 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
    i32.store  ;; store 42 at address 0
    i32.const 0
    call_indirect (type $void_to_i32))
-)</pre>
+)
+```
 
-<p>These work as follows:</p>
+これらは次のように動作します。
 
-<ol>
- <li>関数 <code>shared0func</code> は <code>shared0.wat</code> で定義され、インポートされたテーブルに格納されます。</li>
- <li>この関数は定数値 <code>0</code> を作成して、次に <code>i32.load</code> コマンドを使用して指定したメモリのインデックスから値をロードします。そのインデックスは <code>0</code> になります 。先と同様に、前の値をスタックから暗黙的にポップします。つまり、<code>shared0func</code> はメモリのインデックス <code>0</code> の位置に格納された値をロードして返します。</li>
- <li><code>shared1.wat</code> では、 <code>doIt</code> という関数をエクスポートします。この関数は2つの定数値 <code>0</code> と <code>42</code> を作成して <code>i32.store</code> を呼び出して、インポートされたメモリの指定したインデックスに指定した値を格納します。ここでも、これらの値はスタックから暗黙的にポップされます。したがって、結果的にメモリのインデックスが <code>0</code> の位置に、値として <code>42</code> が格納されます。</li>
- <li>関数の最後では、定数値 <code>0</code> を作成し、テーブルのインデックスが 0 の位置にある関数を呼び出します。これは <code>shared0func</code> で、先に <code>shared0.wat</code> の <code>elem</code> ブロックで格納されたものです。</li>
- <li>呼び出されたとき、<code>shared0func</code> は <code>shared1.wat</code> 内で <code>i32.store</code> コマンドを使用してメモリに格納された 42 をロードします。</li>
-</ol>
+1.  関数 `shared0func` は `shared0.wat` で定義され、インポートされたテーブルに格納されます。
+2.  この関数は定数値 `0` を作成して、次に `i32.load` コマンドを使用して指定したメモリーのインデックスから値をロードします。そのインデックスは `0` になります 。先と同様に、前の値をスタックから暗黙的にポップします。つまり、`shared0func` はメモリーのインデックス `0` の位置に格納された値をロードして返します。
+3.  `shared1.wat` では、 `doIt` という関数をエクスポートします。この関数は2つの定数値 `0` と `42` を作成して `i32.store` を呼び出して、インポートされたメモリーの指定したインデックスに指定した値を格納します。ここでも、これらの値はスタックから暗黙的にポップされます。したがって、結果的にメモリーのインデックスが `0` の位置に、値として `42` が格納されます。
+4.  関数の最後では、定数値 `0` を作成し、テーブルのインデックスが 0 の位置にある関数を呼び出します。これは `shared0func` で、先に `shared0.wat` の `elem` ブロックで格納されたものです。
+5.  呼び出されたとき、`shared0func` は `shared1.wat` 内で `i32.store` コマンドを使用してメモリーに格納された 42 をロードします。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: 上の式はスタックから値を暗黙的にポップしますが、代わりにコマンド呼び出しの中で明示的に宣言することができます:</p>
+> **Note:** 上の式はスタックから値を暗黙的にポップしますが、代わりにコマンド呼び出しの中で明示的に宣言することができます。
+>
+> ```wasm
+> (i32.store (i32.const 0) (i32.const 42))
+> (call_indirect (type $void_to_i32) (i32.const 0))
+> ```
 
-<pre class="brush: wasm; no-line-numbers notranslate" style="margin-bottom: 0;">(i32.store (i32.const 0) (i32.const 42))
-(call_indirect (type $void_to_i32) (i32.const 0))</pre>
+アセンブリーに変換した後、次のコードで JavaScript 内で `shared0.wasm` と `shared1.wasm` を使用します:
 
-<div class="hidden"></div>
-</div>
-
-<p>アセンブリに変換した後、次のコードで JavaScript 内で <code>shared0.wasm</code> と <code>shared1.wasm</code> を使用します:</p>
-
-<pre class="brush: js; notranslate">var importObj = {
+```js
+var importObj = {
   js: {
     memory : new WebAssembly.Memory({ initial: 1 }),
     table : new WebAssembly.Table({ initial: 1, element: "funcref" })
@@ -519,44 +548,106 @@ WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
 };
 
 Promise.all([
-  WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
-  WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
+  WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
+  WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
 ]).then(function(results) {
-  console.log(results[1].instance.exports.doIt());  // prints 42
-});</pre>
+  console.log(results[1].instance.exports.doIt());  // prints 42
+});
+```
 
-<p>コンパイルされた各モジュールは同じメモリとテーブルオブジェクトをインポートし、その結果同じ線形メモリとテーブルの「アドレス空間」を共有することができます。</p>
+コンパイルされた各モジュールは同じメモリーとテーブルオブジェクトをインポートし、その結果同じ線形メモリーとテーブルの「アドレス空間」を共有することができます。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: 例は GitHub の <a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html">shared-address-space.html</a> (<a href="https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html">動作例</a>) を参照してください。</p>
-</div>
+> **Note:** 例は GitHub の [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)) を参照してください。
 
-<h2 id="Multi-value_WebAssembly" name="Multi-value_WebAssembly">WebAssembly の複数値</h2>
+## 大規模メモリー操作
 
-<p>もっと最近になって (例えば <a href="/ja/docs/Mozilla/Firefox/Releases/78">Firefox 78</a>) 言語に追加されたものが WebAssembly 複数値であり、これは、WebAssembly 関数が複数の値を返すことができるようになり、一連の命令が複数のスタック値を消費して生成することができるようになったことを意味します。</p>
+大規模メモリー操作は、言語へ新しく追加されたものです（例えば [Firefox 79](/ja/docs/Mozilla/Firefox/Releases/79)）。コピーや初期化などのバルクメモリ操作のために 7 つの新しい組み込み操作が提供されており、 WebAssembly が `memcpy` や `memmove` などのネイティブ関数を、より効率的でパフォーマンスの高い方法でモデル化できるようにします。
 
-<p>執筆時点 (2020年6月) において、これは初期段階であり、利用可能な多値命令は、それ自体が複数の値を返す関数の呼び出しのみです。例を示します。</p>
+新しい操作は次の通りです。
 
-<pre class="brush: wasm; notranslate">(module
+- `data.drop`: データセグメント内のデータを無効にします。
+- `elem.drop`: 要素セグメント内のデータを無効にします。
+- `memory.copy`: 線形メモリーの一範囲を他へコピーします。
+- `memory.fill`: 線形メモリーの一範囲を指定した値で埋めます。
+- `memory.init`: データセグメントから範囲をコピーします。
+- `table.copy`: テーブルの一範囲から他へコピーします。
+- `table.init`: 要素セグメントから範囲をコピーします。
+
+> **Note:** 詳しい情報は [Bulk Memory Operations and Conditional Segment Initialization](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md) の提案にあります。
+
+## 参照型
+
+[参照型の提案](https://github.com/WebAssembly/reference-types/blob/master/proposals/reference-types/Overview.md) ([Firefox 79](/ja/docs/Mozilla/Firefox/Releases/79) で対応) では、主に 2 つのことを提供しています。
+
+- 新しい型である `externref` は、文字列、DOM 参照、オブジェクトなど、あらゆる JavaScript の値を保持することができます。 WebAssembly の観点からは `externref` は不透明です。wasm モジュールはこれらの値にアクセスして操作することができず、代わりに値を受け取って送り返すことだけができます。しかし、これは wasm モジュールが JavaScript の関数や DOM API などを呼び出したり、ホスト環境との相互運用を容易にするために非常に有用です。`externref` は値型とテーブル要素に使用することができます。
+- JavaScript API 経由ではなく、wasm モジュールが直接 {{anch("WebAssembly テーブル")}}を操作できるようにするための新しい命令がいくつか追加されました。
+
+> **Note:** [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) のドキュメントには、 `externref` を Rust で利用する方法について、いくつかの有用な情報が含まれています。
+
+## WebAssembly の複数値
+
+もっと最近になって (例えば [Firefox 78](/ja/docs/Mozilla/Firefox/Releases/78)) 言語に追加されたものが WebAssembly 複数値です。これは、WebAssembly 関数が複数の値を返すことができるようになり、一連の命令が複数のスタック値を消費して生成することができるようになったことを意味します。
+
+執筆時点 (2020 年 6 月) において、これは初期段階であり、利用可能な多値命令は、それ自体が複数の値を返す関数の呼び出しのみです。例を示します。
+
+```wasm
+(module
   (func $get_two_numbers (result i32 i32)
     i32.const 1
     i32.const 2
   )
-  (func (export "add_to_numbers") (result i32)
+  (func (export "add_two_numbers") (result i32)
     call $get_two_numbers
     i32.add
   )
-)</pre>
+)
+```
 
-<p>しかし、これはより有用な命令タイプやその他のものへの道を開くことになるでしょう。これまでの進捗状況や、これがどのように動作するかについては、 Nick Fitzgerald の <a href="https://hacks.mozilla.org/2019/11/multi-value-all-the-wasm/">Multi-Value All The Wasm!</a> を参照してください。</p>
+しかし、これはより有用な命令タイプやその他のものへの道を開くことになるでしょう。これまでの進捗状況や、これがどのように動作するかについては、 Nick Fitzgerald の [Multi-Value All The Wasm!](https://hacks.mozilla.org/2019/11/multi-value-all-the-wasm/) を参照してください。
 
-<h2 id="Summary" name="Summary">まとめ</h2>
+## WebAssembly スレッド
 
-<p>これで、WebAssembly テキストフォーマットの主要コンポーネントとそれらが WebAssembly JS API にどのように反映されるのかの高レベルなツアーが完了しました。</p>
+WebAssembly スレッド ([Firefox 79](/ja/docs/Mozilla/Firefox/Releases/79) 以降で対応) は、 WebAssembly Memory オブジェクトを別なウェブワーカー内で動作している複数の WebAssembly インスタンスで共有できるものであり、 JavaScript の [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) と似たような形のものです。これにより、ワーカー間の非常に高速な通信が可能になり、ウェブアプリケーションのパフォーマンスが大幅に向上します。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+スレッドの提案は、共有メモリーと不可分メモリーアクセスの 2 つの部分からなります。
 
-<ul>
- <li>この記事に含まれなかった主なものは、関数本体で現れる全ての命令の包括的なリストです。各命令の処理は <a href="http://webassembly.org/docs/semantics">WebAssembly のセマンティックス</a> を参照してください。</li>
- <li>スペックインタプリタによって実装された <a href="https://github.com/WebAssembly/spec/blob/master/interpreter/README.md#s-expression-syntax">テキストフォーマットの文法</a> も参照してください。</li>
-</ul>
+### 共有メモリー
+
+上記のように、共有の WebAssembly [`Memory`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) オブジェクトを作成することが可能です。これは、 [`postMessage()`](/ja/docs/Web/API/Window/postMessage) を使用してウィンドウとワーカーのコンテキスト間で、 [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) と同じ方法で転送されるものです。
+
+JavaScript API 側では、[`WebAssembly.Memory()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) コンストラクタの初期化オブジェクトに `shared` プロパティを追加し、 `true` に設定すると共有メモリを作成するようになりました。
+
+```js
+let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
+```
+
+メモリーの [`buffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) プロパティは `SharedArrayBuffer` を返すようになり、普通の `ArrayBuffer` ではなくなりました。
+
+```js
+memory.buffer // returns SharedArrayBuffer
+```
+
+テキスト形式の上では、 `shared` キーワードを使って、次のように共有メモリーを作成することができます。
+
+```wasm
+(memory 1 2 shared)
+```
+
+共有されていないメモリーと異なり、共有メモリーは JavaScript API のコンストラクターと wasm のテキスト形式の両方で「最大」サイズを指定する必要があります。
+
+> **Note:** 詳しくは、 [WebAssembly のスレッド提案](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md)にたくさん載っています。
+
+### 不可分メモリーアクセス
+
+ミューテックスや条件変数など、より高度な機能を実装するために使用できる新しい wasm 命令が多数追加されました。[ここにリストアップされています](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses)。これらの命令は、 Firefox 80 の時点で共有でないメモリー上で許可されています。
+
+> **Note:** [Emscripten Pthreads support page](https://emscripten.org/docs/porting/pthreads.html) で、 Emscripten の新機能を利用する方法を紹介しています。
+
+## まとめ
+
+これで、WebAssembly テキスト形式の主要コンポーネントとそれらが WebAssembly JS API にどのように反映されるのかの高レベルなツアーが完了しました。
+
+## 関連情報
+
+- この記事に含まれなかった主なものは、関数本体で現れるすべての命令の包括的なリストです。各命令の処理は [WebAssembly のセマンティックス](http://webassembly.org/docs/semantics) を参照してください。
+- スペックインタプリターによって実装された[テキスト形式の文法](https://github.com/WebAssembly/spec/blob/master/interpreter/README.md#s-expression-syntax)も参照してください。
