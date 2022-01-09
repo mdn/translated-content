@@ -28,7 +28,7 @@ selector {
 
 関数は CSS のプロパティ値と同様の形式で複数の引数を取ることができます。ホワイトスペースは許可されていますが、括弧内では省略可能です。関数表記によって、複数の引数がカンマで区切られていたり、空白を使用していたりします。
 
-## 変換関数
+## 座標変換関数
 
 これらの関数は、 CSS の {{cssxref("&lt;transform-function&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types) が {{cssxref("transform")}} の値として使用される際に用いられます。
 
@@ -194,6 +194,12 @@ selector {
   - : `radial-gradient()` に似ていて、同じ引数を取りますが、コンテナー全体を覆うように、すべての方向に無限に色停止点を繰り返します。
 - {{cssxref("gradient/repeating-conic-gradient()","repeat-conic-gradiant()")}}
   - : `conic-gradient()` に似ていて、同じ引数を取りますが、コンテナー全体を覆うように、すべての方向に無限に色停止点を繰り返します。
+- {{cssxref("cross-fade()")}}
+  - : 2 枚以上の画像を所定の透過度で合成するために使用することができます。
+- {{cssxref("element()")}}
+  - : 任意の HTML 要素から生成された \<image> 値を定義します。
+- {{cssxref("paint()")}}
+  - : PaintWorklet で生成された \<image> の値を定義します。
 
 ## カウンター関数
 
@@ -203,6 +209,8 @@ selector {
   - : その名前のカウンターが存在すれば、現在の値を示す文字列を返します。
 - {{cssxref("counters()")}}
   - : 入れ子のカウンターを有効にし、指定されたカウンターが存在すれば、その現在の値を表す文字列を連結して返します。
+- {{cssxref("symbols()")}}
+  - : カウンターのスタイルをインラインで、直接定義することができます。
 
 ## フォント関数
 
@@ -223,7 +231,7 @@ selector {
 
 ## シェイプ関数
 
-以下の関数は {{cssxref("&lt;basic-shape&gt;")}} データ型の値として使用することができ、これは {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}} の各プロパティで使用されます。
+以下の関数は {{cssxref("&lt;basic-shape&gt;")}} データ型の値として使用することができます。これは {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}} の各プロパティで使用されます。
 
 - {{cssxref("basic-shape/circle()","circle()")}}
   - : 円を定義します。
@@ -233,6 +241,32 @@ selector {
   - : 内部の長方形を定義します。
 - {{cssxref("basic-shape/polygon()","polygon()")}}
   - : 多角形を定義します。
+- {{cssxref("path()")}}
+  - : SVG パス文字列を受け取り、シェイプを描画できるようにするために使用されます。
+
+## 参照関数
+
+以下の関数は、他の場所で定義された値をプロパティの値として参照するために使用されます。
+
+- {{cssxref("attr()")}}
+  - : 選択された要素の属性の値を受け取り、スタイルシートの中で使うために使用されます。
+- {{cssxref("env()")}}
+  - : ユーザーエージェントが定義した環境変数の値を CSS に挿入するために使用することができます。
+- {{cssxref("url()")}}
+  - : 値としてファイルを含めるために使用します。
+- {{cssxref("var()")}}
+  - : 他のプロパティの値の一部に代わってカスタムプロパティの値を挿入できます。
+
+## CSS グリッド関数
+
+以下の関数は、CSS グリッドを定義するために使用されます。
+
+- {{cssxref("fit-content()")}}
+  - : 指定された寸法を `min(max-content, max(min-content, 引数))` の式に従って有効な範囲の寸法に収めます。
+- {{cssxref("minmax()")}}
+  - : 指定された寸法を `min(max-content, max(min-content, 引数))` の式に従って有効な範囲の寸法に収めます。
+- {{cssxref("repeat()")}}
+  - : 指定された寸法を `min(max-content, max(min-content, 引数))` の式に従って有効な範囲の寸法に収めます。
 
 ## 仕様書
 
