@@ -3,71 +3,78 @@ title: 'Window: focus イベント'
 slug: Web/API/Window/focus_event
 tags:
   - API
-  - Event
+  - イベント
   - Focus
   - FocusEvent
-  - Reference
-  - Web
+  - リファレンス
+  - ウェブ
   - Window
   - onfocus
-  - イベント
+browser-compat: api.Window.focus_event
 translation_of: Web/API/Window/focus_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>focus</code></strong> イベントは、要素がフォーカスを取得したときに発生します。</p>
+**`focus`** イベントは、要素がフォーカスを受け取ったときに発生します。
 
-<p><code>focus</code> の反対は {{domxref("Window/blur_event", "blur")}} です。</p>
+`focus` の反対は {{domxref("Window/blur_event", "blur")}} です。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th>キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th>インターフェイス</th>
-   <td>{{DOMxRef("FocusEvent")}}</td>
-  </tr>
-  <tr>
-   <th>イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers/onfocus", "onfocus")}}</td>
-  </tr>
-  <tr>
-   <th>同期 / 非同期</th>
-   <td>同期</td>
-  </tr>
-  <tr>
-   <th>Composed</th>
-   <td>はい</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th>キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th>インターフェイス</th>
+      <td>{{DOMxRef("FocusEvent")}}</td>
+    </tr>
+    <tr>
+      <th>イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onfocus", "onfocus")}}
+      </td>
+    </tr>
+    <tr>
+      <th>同期 / 非同期</th>
+      <td>同期</td>
+    </tr>
+    <tr>
+      <th>Composed</th>
+      <td>はい</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Live_example" name="Live_example">ライブデモ</h3>
+### ライブデモ
 
-<p>この例ではフォーカスを失ったときに文書の外見を変更します。 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} を使用して <code>focus</code> および {{domxref("Window/blur_event", "blur")}} イベントを監視します。</p>
+この例ではフォーカスを失ったときに文書の外見を変更します。 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} を使用して `focus` および {{domxref("Window/blur_event", "blur")}} イベントを監視します。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p id="log"&gt;Click on this document to give it focus.&lt;/p&gt;</pre>
+```html
+<p id="log">Click on this document to give it focus.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.paused {
+```css
+.paused {
   background: #ddd;
   color: #555;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">function pause() {
+```js
+function pause() {
   document.body.classList.add('paused');
   log.textContent = 'FOCUS LOST!';
 }
@@ -80,43 +87,22 @@ function play() {
 const log = document.getElementById('log');
 
 window.addEventListener('blur', pause);
-window.addEventListener('focus', play);</pre>
+window.addEventListener('focus', play);
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Live_example")}}</p>
+{{EmbedLiveSample("Live_example")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("UI Events", "#event-type-focus")}}</td>
-   <td>{{Spec2("UI Events")}}</td>
-   <td>Added info that this event is composed.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Events", "#event-type-focus")}}</td>
-   <td>{{Spec2("DOM3 Events")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Window.focus_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>関連イベント: {{domxref("Window/blur_event", "blur")}}</li>
- <li><code>Element</code> を対象としたこのイベント: {{domxref("Element/focus_event", "focus")}} イベント</li>
-</ul>
+- 関連イベント: {{domxref("Window/blur_event", "blur")}}
+- `Element` を対象としたこのイベント: {{domxref("Element/focus_event", "focus")}} イベント
