@@ -5,60 +5,43 @@ tags:
   - JavaScript
   - Number
   - プロパティ
+browser-compat: javascript.builtins.Number.MIN_VALUE
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number.MIN_VALUE</code></strong> プロパティは、 JavaScript において表すことが可能な最小の正の数値です。</p>
+**`Number.MIN_VALUE`** プロパティは、 JavaScript において表すことが可能な最小の正の数値です。
 
-<div>{{EmbedInteractiveExample("pages/js/number-min-value.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-min-value.html")}}{{js_property_attributes(0, 0, 0)}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 解説
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+`Number.MIN_VALUE` プロパティは、浮動小数点の精度で表すことができる最小の正の数です（最も小さな負の数ではありません）。言い換えれば、最も 0 に近い数です。これはおよそ `5E-324`です。 ECMAScript の仕様書では、実装が対応する必要のある精度を定義していません。代わりに仕様書では、「その実装で実際に表すことができる、 0 ではない最も小さな正の数でなければならない」とあります。しかし実際には、ブラウザーと Node.js の精度は `2^-1074` です。
 
-<h2 id="Description" name="Description">解説</h2>
+`MIN_VALUE` は {{jsxref("Number")}} オブジェクトの静的なプロパティですので、 生成した {{jsxref("Number")}} オブジェクトのプロパティとしてではなく、常に `Number.MIN_VALUE` として使用してください。
 
-<p><code>MIN_VALUE</code> プロパティは JavaScript が表すことができる、0 に最も近い数であり、最大の負の数ではありません。</p>
+## 例
 
-<p><code>Number.MIN_VALUE</code> は <code>5e-324</code>、すなわち浮動小数点の精度で表すことができる最も小さな正の数、つまり 0 にできるだけ違い数です。 <code>MIN_VALUE</code> より小さな値 ("アンダーフローする値") は 0 に変換されます。</p>
+### MIN_VALUE の使用
 
-<p><code>MIN_VALUE</code> は {{jsxref("Number")}} オブジェクトの静的なプロパティですので、 生成した {{jsxref("Number")}} オブジェクトのプロパティとしてではなく、常に <code>Number.MIN_VALUE</code> として使用してください。</p>
+以下のコードは、2 つの数値を割り算しています。その結果が `MIN_VALUE` より大きいか等しい場合は、`func1` 関数が呼び出されます。それ以外の場合は、`func2` 関数が呼び出されます。
 
-<h2 id="Examples" name="Examples">例</h2>
-
-<h3 id="Using_MIN_VALUE" name="Using_MIN_VALUE">MIN_VALUE の使用</h3>
-
-<p>以下のコードは、2 つの数値を割り算しています。その結果が <code>MIN_VALUE</code> より大きいか等しい場合は、<code>func1</code> 関数が呼び出されます。それ以外の場合は、<code>func2</code> 関数が呼び出されます。</p>
-
-<pre class="brush: js notranslate">if (num1 / num2 &gt;= Number.MIN_VALUE) {
+```js
+if (num1 / num2 >= Number.MIN_VALUE) {
   func1();
 } else {
   func2();
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.min_value', 'Number.MIN_VALUE')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Number.MIN_VALUE")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Number.MAX_VALUE")}}</li>
-</ul>
+- {{jsxref("Number.MAX_VALUE")}}
