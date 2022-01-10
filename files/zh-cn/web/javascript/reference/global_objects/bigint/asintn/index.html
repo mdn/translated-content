@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>BigInt.asIntN</code></strong> 静态方法将 <code>BigInt</code> 值转换为一个 -<code>2<sup>width-1</sup></code> 与 <code>2<sup>width-1</sup>-1</code> 之间的有符号整数。</p>
+<p><strong><code>BigInt.asIntN</code></strong> 静态方法将 <code>BigInt</code> 值转换为一个 -<code>2^(width-1)</code> 与 <code>2^(width-1)-1</code> 之间的有符号整数。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/bigint-asintn.html")}}</div>
 
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 
 <h3 id="返回值">返回值</h3>
 
-<p><code>bigint</code> 模(modulo) 2<sup><code>width</code></sup> 作为有符号整数的值。</p>
+<p><code>bigint</code> 模(modulo) <code>2^width</code> 作为有符号整数的值。</p>
 
 <h2 id="例子">例子</h2>
 
