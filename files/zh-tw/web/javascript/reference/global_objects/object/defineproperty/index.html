@@ -156,7 +156,7 @@ Object.defineProperty(o, 'conflict', {
 
 <p>如果該屬性已經存在, <code>Object.defineProperty()</code> 將會根據描述符內的值和物件當前的 configuration 來修改屬性。 如果舊的描述符之 <code>configurable</code> 的特徵為 false (屬性為 “non-configurable”), 那除了 <code>writable</code> 之外的特徵都將無法修改。 在這個情況，也不可能在 data 和 accessor 屬性類型中來回切換。</p>
 
-<p>如果有一個屬性是 non-configurable, 那它的 <code>writable</code> 特徵只能被改變為 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">false</span></font>.</p>
+<p>如果有一個屬性是 non-configurable, 那它的 <code>writable</code> 特徵只能被改變為 <font face="consolas, Liberation Mono, courier, monospace">false</font>.</p>
 
 <p>若嘗試改變 non-configurable property attributes，將會丟出一個 {{jsxref("TypeError")}}，除非當前之值與新值相同。</p>
 
