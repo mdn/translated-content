@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 
 <p>要用哪個操作取決於你要哪種類型的比較。</p>
 
-<p>簡單來說，一般相等會將型別一致化後比較；嚴格相等則不會（也就是說若型別不同，就會回傳 fasle）；<code>Object.is</code> 會和嚴格相等做同樣的事，但會將 <code>NaN</code>、<code>-0<font face="Open Sans, Arial, sans-serif"> 和 </font></code><code>+0 </code>獨立處理，因此這三個不會相等，而 <code>Object.is(NaN, NaN)</code> 則會回傳 true 。（用一般相等或嚴格相等比較兩個 <code>NaN</code> 時會回傳 <code>false</code> ，因為 IEEE 754 如此規範。） 切記，這三種判斷必須考慮原型，因為他們在設計上不被考慮為相等。對於任何非原型物件 x、y，即使他們有著相同結構，但如果是不同物件，比較就會是 false。</p>
+<p>簡單來說，一般相等會將型別一致化後比較；嚴格相等則不會（也就是說若型別不同，就會回傳 fasle）；<code>Object.is</code> 會和嚴格相等做同樣的事，但會將 <code>NaN</code>、<code>-0 和 </code><code>+0 </code>獨立處理，因此這三個不會相等，而 <code>Object.is(NaN, NaN)</code> 則會回傳 true 。（用一般相等或嚴格相等比較兩個 <code>NaN</code> 時會回傳 <code>false</code> ，因為 IEEE 754 如此規範。） 切記，這三種判斷必須考慮原型，因為他們在設計上不被考慮為相等。對於任何非原型物件 x、y，即使他們有著相同結構，但如果是不同物件，比較就會是 false。</p>
 
 <h2 id="嚴格相等（）">嚴格相等（<code>===</code>）</h2>
 
@@ -132,7 +132,7 @@ console.log(obj === undefined); // false
 
 <p>根據上表， <code>ToNumber(A)</code> 嘗試在比較前轉換成一個數字。 這等同 <code>+A</code> （單 + 運算子）。<code>ToPrimitive(A)</code> 嘗試從物件轉換成原生值，透過嘗試對 A 使用 <code>A.toString</code> 和 <code>A.valueOf</code> 方法。</p>
 
-<p>一般來說，根據 ECMAScript 規範，所有物件應該不等於 <code>undefined</code> 和 <code>null</code>。但大多數瀏覽器允許很小部分的物件（尤其是所有頁面的 <code>document.all</code> 物件）在某些情況下<em>當成</em> <code>undefined</code>。一般相等是其中一種：當 A 是個被<em>模擬</em> 成 <code>undefined </code>的物件<code><font face="Open Sans, Arial, sans-serif">，</font></code><code>null == A</code> 和 <code>undefined == A</code> 會是 true。而在其他情況下物件不會等同於 <code>undefined</code> 或 <code>null。</code></p>
+<p>一般來說，根據 ECMAScript 規範，所有物件應該不等於 <code>undefined</code> 和 <code>null</code>。但大多數瀏覽器允許很小部分的物件（尤其是所有頁面的 <code>document.all</code> 物件）在某些情況下<em>當成</em> <code>undefined</code>。一般相等是其中一種：當 A 是個被<em>模擬</em> 成 <code>undefined </code>的物件<code>，</code><code>null == A</code> 和 <code>undefined == A</code> 會是 true。而在其他情況下物件不會等同於 <code>undefined</code> 或 <code>null。</code></p>
 
 <pre class="brush: js">var num = 0;
 var obj = new String("0");

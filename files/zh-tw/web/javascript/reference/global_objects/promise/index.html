@@ -94,7 +94,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 
 <h2 id="建立_Promise">建立 Promise</h2>
 
-<p><code><font face="Open Sans, arial, x-locale-body, sans-serif">一個</font></code> <code>Promise</code> 物件透過 <code>new</code> 及其建構式建立。這個建構式接收一個叫作”執行器函式（executor function）“的引數。此函式接收兩個函式作為引數。第一個函式（<code>resolve）</code>在非同步作業成功完成時，以該作業之結果值被呼叫。第二個函式（<code>reject</code>）在作業失敗時，以失敗訊息，通常是一個 error object，被呼叫。</p>
+<p>一個 <code>Promise</code> 物件透過 <code>new</code> 及其建構式建立。這個建構式接收一個叫作”執行器函式（executor function）“的引數。此函式接收兩個函式作為引數。第一個函式（<code>resolve）</code>在非同步作業成功完成時，以該作業之結果值被呼叫。第二個函式（<code>reject</code>）在作業失敗時，以失敗訊息，通常是一個 error object，被呼叫。</p>
 
 <pre class="brush: js">const myFirstPromise = new Promise((resolve, reject) =&gt; {
   // 執行一些非同步作業，最終呼叫:
