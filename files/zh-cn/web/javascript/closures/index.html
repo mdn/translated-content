@@ -73,7 +73,7 @@ console.log(add10(2)); // 12
 
 <p><code>add5</code> 和 <code>add10</code> 都是闭包。它们共享相同的函数定义，但是保存了不同的词法环境。在 <code>add5</code> 的环境中，<code>x</code> 为 5。而在 <code>add10</code> 中，<code>x</code> 则为 10。</p>
 
-<h2 id="Practical_closures" name="Practical_closures">实用的闭包</h2>
+<h2 id="Practical_closures">实用的闭包</h2>
 
 <p>闭包很有用，因为它允许将函数与其所操作的某些数据（环境）关联起来。这显然类似于面向对象编程。在面向对象编程中，对象允许我们将某些数据（对象的属性）与一个或者多个方法相关联。</p>
 
@@ -126,7 +126,7 @@ document.getElementById('size-16').onclick = size16;
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/cubr4hs0/","","200")}}</p>
 
-<h2 id="Emulating_private_methods_with_closures" name="Emulating_private_methods_with_closures">用闭包模拟私有方法</h2>
+<h2 id="Emulating_private_methods_with_closures">用闭包模拟私有方法</h2>
 
 <p>编程语言中，比如 Java，是支持将方法声明为私有的，即它们只能被同一个类中的其它方法所调用。</p>
 
@@ -207,7 +207,7 @@ console.log(Counter2.value()); /* logs 0 */
 <p>以这种方式使用闭包，提供了许多与面向对象编程相关的好处 —— 特别是数据隐藏和封装。</p>
 </div>
 
-<h2 id="Creating_closures_in_loops_A_common_mistake" name="Creating_closures_in_loops_A_common_mistake">在循环中创建闭包：一个常见错误</h2>
+<h2 id="Creating_closures_in_loops_A_common_mistake">在循环中创建闭包：一个常见错误</h2>
 
 <p>在 ECMAScript 2015 引入 <a href="/en-US/docs/JavaScript/Reference/Statements/let" title="let"><code>let</code> 关键字</a> 之前，在循环中有一个常见的闭包创建问题。参考下面的示例：</p>
 
@@ -351,7 +351,7 @@ function setupHelp() {
 
 setupHelp();</pre>
 
-<h2 id="Performance_considerations" name="Performance_considerations">性能考量</h2>
+<h2 id="Performance_considerations">性能考量</h2>
 
 <p>如果不是某些特定任务需要使用闭包，在其它函数中创建函数是不明智的，因为闭包在处理速度和内存消耗方面对脚本性能具有负面影响。</p>
 

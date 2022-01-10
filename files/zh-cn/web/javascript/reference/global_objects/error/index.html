@@ -11,11 +11,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error
 
 <p>通过<strong>Error</strong>的构造器可以创建一个错误对象。当运行时错误产生时，Error的实例对象会被抛出。Error对象也可用于用户自定义的异常的基础对象。下面列出了各种内建的标准错误类型。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="brush: js">new Error([<em>message</em>[, <em>fileName</em>[,<em>lineNumber</em>]]])</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>message</code></dt>
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error
  <dd>可选。被创建的Error对象的lineNumber属性值。默认是调用Error构造器代码所在的文件的行号。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>当代码运行时的发生错误，会创建新的<code>Error</code> 对象，并将其抛出。</p>
 
@@ -47,7 +47,7 @@ const x = Error('I was created using a function call!');
 ​​​​// has the same functionality as this:
 const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 
-<h3 id="Error_types" name="Error_types">Error 类型</h3>
+<h3 id="Error_types">Error 类型</h3>
 
 <p>除了通用的Error构造函数外，JavaScript还有6个其他类型的错误构造函数。更多客户端异常,详见 <a href="/en/JavaScript/Guide/Statements#Exception_Handling_Statements" title="en/JavaScript/Guide/Statements#Exception Handling Statements">Exception Handling Statements</a>。</p>
 
@@ -83,18 +83,18 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
  <dd>创建一个error实例，表示错误的原因：给 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}或  {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}传递的参数无效。</dd>
 </dl>
 
-<h2 id="Properties" name="Properties">属性</h2>
+<h2 id="Properties">属性</h2>
 
 <dl>
  <dt>{{jsxref("Error.prototype")}}</dt>
  <dd>允许添加属性到<code>Error</code>实例。</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
 <p>全局<code>Error</code>对象自身不包含任何方法,但从原型链中继承了一些方法.</p>
 
-<h2 id="Error_instances" name="Error_instances"><code>Error</code> 实例</h2>
+<h2 id="Error_instances"><code>Error</code> 实例</h2>
 
 <div>
 <p>{{page('en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Description')}}</p>
@@ -108,9 +108,9 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 <p>{{page('en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods')}}</p>
 </div>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
-<h3 id="Example_Throwing_a_generic_error" name="Example:_Throwing_a_generic_error">抛出一个基本错误</h3>
+<h3 id="Example_Throwing_a_generic_error">抛出一个基本错误</h3>
 
 <p>通常你会使用{{jsxref("Statements/throw", "throw")}}关键字来抛出你创建的Error对象。可以使用 {{jsxref("Statements/try...catch", "try...catch")}} 结构来处理异常:</p>
 
@@ -121,7 +121,7 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 }
 </pre>
 
-<h3 id="Example_Handling_a_specific_error" name="Example:_Handling_a_specific_error">处理一个特定错误</h3>
+<h3 id="Example_Handling_a_specific_error">处理一个特定错误</h3>
 
 <p>你可以通过判断异常的类型来特定处理某一类的异常,即判断 {{jsxref("Object.prototype.constructor", "constructor")}} 属性，当使用现代Javascript引擎时,可使用{{jsxref("Operators/instanceof", "instanceof")}} 关键字：</p>
 
@@ -248,7 +248,7 @@ try {
 
 <div>{{Compat("javascript.builtins.Error")}}</div>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Error.prototype")}}</li>

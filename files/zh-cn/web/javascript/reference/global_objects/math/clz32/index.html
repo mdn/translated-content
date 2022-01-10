@@ -5,16 +5,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
 ---
 <div>{{JSRef("Global_Objects", "Math")}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><code><strong>Math.clz32() </strong></code>函数返回一个数字在转换成 32 无符号整形数字的二进制形式后, 开头的 0 的个数, 比如 <code>1000000</code> 转换成 32 位无符号整形数字的二进制形式后是 <code>00000000000011110100001001000000</code>, 开头的 0 的个数是 12 个, 则 <code>Math.clz32(1000000)</code> 返回 <code>12</code>.</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Math.clz32 (x)
 </code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt>x</dt>
@@ -45,7 +45,7 @@ Math.clz32(true)             // 31
 Math.clz32(3.5)              // 30
 </pre>
 
-<h2 id="Compatibility" name="Compatibility">计算前导1的个数</h2>
+<h2 id="Compatibility">计算前导1的个数</h2>
 
 <p>目前javascript尚未提供<code>Math.clon</code>函数来计算前导1的个数（之所以叫“clon”而非“clo”，是因为“clo”与“clz”太过相似，特别对那些母语不是英语的人来说），但是你可以通过将一个数取反并将其作为<code>Math.clz32</code>的参数来实现clon函数。其中的原理非常简单，因为对1取反是0，反之亦然，所以用<code>Math.clz32</code>计算前导0的个数就变成计算前导1的个数。</p>
 
@@ -122,7 +122,7 @@ function ctron(integer){ // 计算尾随1个数
 var ctrz = countTrailsMethods.a;
 var ctron = countTrailsMethods.b;</pre>
 
-<h2 id="Compatibility" name="Compatibility">Polyfill</h2>
+<h2 id="Compatibility">Polyfill</h2>
 
 <p>这个polyfill效率最高。</p>
 
@@ -157,7 +157,7 @@ var ctron = countTrailsMethods.b;</pre>
 
 <p>{{Compat("javascript.builtins.Math.clz32")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Math")}}</li>

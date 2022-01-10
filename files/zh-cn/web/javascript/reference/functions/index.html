@@ -59,11 +59,11 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <p>在函数执行时，<a href="/zh-cn/JavaScript/Reference/Operators/this" title="this"><code>this</code> 关键字</a>并不会指向正在运行的函数本身，而是指向调用该函数的对象。所以，如果你想在函数内部获取函数自身的引用，只能使用函数名或者使用<a href="/zh-cn/JavaScript/Reference/Functions_and_function_scope/arguments/callee" title="zh-cn/Core_JavaScript_1.5_Reference/Functions_and_function_scope/arguments/callee">arguments.callee</a>属性(<u><a href="/zh-cn/JavaScript/Strict_mode" title="https://developer.mozilla.org/zh-cn/JavaScript/Strict_mode">严格模式</a></u>下不可用)，如果该函数是一个匿名函数,则你只能使用后者。</p>
 
-<h2 id="Defining_functions" name="Defining_functions">函数定义</h2>
+<h2 id="Defining_functions">函数定义</h2>
 
 <p>定义函数有多种方法:</p>
 
-<h3 id="The_function_declaration_.28function_statement.29" name="The_function_declaration_.28function_statement.29">函数声明 (函数语句)</h3>
+<h3 id="The_function_declaration_.28function_statement.29">函数声明 (函数语句)</h3>
 
 <p>有一个特殊的语法来声明函数(查看<a href="/zh-cn/JavaScript/Reference/Statements/function" title="zh-cn/Core_JavaScript_1.5_Reference/Statements/function">函数语句</a>了解详情)：</p>
 
@@ -85,7 +85,7 @@ translation_of: Web/JavaScript/Reference/Functions
  <dd>组成函数体的声明语句。</dd>
 </dl>
 
-<h3 id="The_function_expression_.28function_operator.29" name="The_function_expression_.28function_operator.29">函数表达式 (<code>function</code> expression)</h3>
+<h3 id="The_function_expression_.28function_operator.29">函数表达式 (<code>function</code> expression)</h3>
 
 <p>函数表达式和函数声明非常相似，它们甚至有相同的语法（查看<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/function">函数表达式</a>了解详情）。一个函数表达式可能是一个更大的表达式的一部分。可以定义函数“名字”（例如可以在调用堆栈时使用）或者使用“匿名”函数。函数表达式不会提升，所以不能在定义之前调用。</p>
 

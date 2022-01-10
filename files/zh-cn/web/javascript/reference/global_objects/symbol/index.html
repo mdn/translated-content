@@ -17,18 +17,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Symbol(<em>[description]</em>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>description</code> {{optional_inline}}</dt>
  <dd>可选的，字符串类型。对symbol的描述，可用于调试但不是访问symbol本身。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>直接使用<code>Symbol()</code>创建新的symbol类型，并用一个可选的字符串作为其描述。</p>
 
@@ -62,7 +62,7 @@ typeof symObj;  // "object"</pre>
 
 <p>{{jsxref("Object.getOwnPropertySymbols()")}} 方法让你在查找一个给定对象的符号属性时返回一个symbol类型的数组。注意，每个初始化的对象都是没有自己的symbol属性的，因此这个数组可能为空，除非你已经在对象上设置了symbol属性。</p>
 
-<h2 id="Properties" name="Properties">属性</h2>
+<h2 id="Properties">属性</h2>
 
 <dl>
  <dt><code>Symbol.length</code></dt>
@@ -111,7 +111,7 @@ typeof symObj;  // "object"</pre>
  <dd>用于对象的默认描述的字符串值。被 {{jsxref("Object.prototype.toString()")}} 使用。</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
 <dl>
  <dt>{{jsxref("Symbol.for()", "Symbol.for(key)")}}</dt>
@@ -120,7 +120,7 @@ typeof symObj;  // "object"</pre>
  <dd>从全局symbol注册表中，为给定的symbol检索一个共享的?symbol key。</dd>
 </dl>
 
-<h2 id="Boolean_instances" name="Boolean_instances">Symbol 原型</h2>
+<h2 id="Boolean_instances">Symbol 原型</h2>
 
 <p>所有 Symbols 继承自 {{jsxref("Symbol.prototype")}}.</p>
 
@@ -144,9 +144,9 @@ typeof symObj;  // "object"</pre>
   <dd>返回该 Symbol 对象。</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Creating_Boolean_objects_with_an_initial_value_of_false" name="Creating_Boolean_objects_with_an_initial_value_of_false">对 symbol 使用 typeof 运算符</h3>
+<h3 id="Creating_Boolean_objects_with_an_initial_value_of_false">对 symbol 使用 typeof 运算符</h3>
 
 <p> {{jsxref("Operators/typeof", "typeof")}}运算符能帮助你识别 symbol 类型</p>
 

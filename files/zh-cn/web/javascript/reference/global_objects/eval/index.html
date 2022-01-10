@@ -58,7 +58,7 @@ eval(expression.toString());
 <code>  (0, eval)('x + y'); // 另一个间接调用的例子
 ​</code>}</pre>
 
-<h2 id="Don.27t_use_eval.21" name="Don.27t_use_eval.21">永远不要使用 <code>eval</code>！</h2>
+<h2 id="Don.27t_use_eval.21">永远不要使用 <code>eval</code>！</h2>
 
 <p><code>eval()</code> 是一个危险的函数， 它使用与调用者相同的权限执行代码。如果你用 <code>eval()</code> 运行的字符串代码被恶意方（不怀好意的人）修改，您最终可能会在您的网页/扩展程序的权限下，在用户计算机上运行恶意代码。更重要的是，第三方代码可以看到某一个 <code>eval()</code> 被调用时的作用域，这也有可能导致一些不同方式的攻击。相似的 {{jsxref("Global_Objects/Function", "Function")}} 就不容易被攻击。</p>
 

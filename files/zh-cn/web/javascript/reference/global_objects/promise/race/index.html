@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 
 <div>{{EmbedInteractiveExample("pages/js/promise-race.html")}}</div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><var>Promise.race(iterable)</var>;</pre>
 
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 
 <p>一个<strong>待定的</strong> {{jsxref("Promise")}} 只要给定的迭代中的一个promise解决或拒绝，就采用第一个promise的值作为它的值，从而<strong>异步</strong>地解析或拒绝（一旦堆栈为空）。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>race</code> 函数返回一个 <code>Promise</code>，它将与第一个传递的 promise 相同的完成方式被完成。它可以是完成（ resolves），也可以是失败（rejects），这要取决于第一个完成的方式是两个中的哪个。</p>
 

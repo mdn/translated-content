@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 
 <p><strong>catch()</strong> 方法返回一个<a href="/zh-CN/docs/Web/API/Promise">Promise</a>，并且处理拒绝的情况。它的行为与调用{{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} 相同。 (事实上, calling <code>obj.catch(onRejected)</code> 内部calls <code>obj.then(undefined, onRejected)</code>).</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><var>p.catch(onRejected)</var>;
 
@@ -34,7 +34,7 @@ p.catch(function(reason) {
  </dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>catch </code>方法可以用于您的promise组合中的错误处理。</p>
 

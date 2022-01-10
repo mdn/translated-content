@@ -115,9 +115,9 @@ var re = /\w+/;</pre>
  <dd>返回表示指定对象的字符串。重写{{jsxref("Object.prototype.toString()")}}方法。</dd>
 </dl>
 
-<h2 id="Syntax" name="Syntax">示例</h2>
+<h2 id="Syntax">示例</h2>
 
-<h3 id="Using_a_regular_expression_to_change_data_format" name="Using_a_regular_expression_to_change_data_format">使用正则改变数据结构</h3>
+<h3 id="Using_a_regular_expression_to_change_data_format">使用正则改变数据结构</h3>
 
 <p>下例使用  {{jsxref("Global_Objects/String", "String")}} 的 {{jsxref("String.prototype.replace()", "replace()")}} 方法去匹配姓名 <em>first last </em>输出新的格式 <em>last</em>, <em>first</em>。</p>
 
@@ -152,7 +152,7 @@ s.match(/yes.*day/);
 s.match(/yes[^]*day/);
 // Returns 'yes\nmake my day'</pre>
 
-<h3 id="Using_a_regular_expression_with_the_sticky_flag" name="Using_a_regular_expression_with_the_sticky_flag">使用带有 sticky 标志的正则表达式</h3>
+<h3 id="Using_a_regular_expression_with_the_sticky_flag">使用带有 sticky 标志的正则表达式</h3>
 
 <p>带有{{JSxRef("Global_Objects/RegExp/sticky", "sticky")}}标志的正则表达式将会从源字符串的{{jsxref("RegExp.prototype.lastIndex")}}位置开始匹配，也就是进行“粘性匹配”。</p>
 
@@ -179,7 +179,7 @@ while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
 
 <p>如果使用带有全局标志<code>g</code>的正则表达式<code>re</code>，就会捕获字符串中的所有6个数字，而非3个</p>
 
-<h3 id="Browser_Compatibility" name="Browser_Compatibility">使用正则表达式和 Unicode 字符</h3>
+<h3 id="Browser_Compatibility">使用正则表达式和 Unicode 字符</h3>
 
 <p>正如上面表格提到的，<code>\w</code> 或 <code>\W</code> 只会匹配基本的 ASCII 字符；如 <code>a</code> 到 <code>z</code>、 <code>A</code> 到 <code>Z</code>、 <code>0</code> 到 <code>9</code> 及 <code>_</code>。</p>
 
@@ -240,7 +240,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
+<h2 id="Browser_Compatibility">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.builtins.RegExp")}}</p>
 

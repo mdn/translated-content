@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Statements/with
 
 <div><strong>with语句 </strong>扩展一个语句的作用域链。</div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">with (expression) {
     <em>statement</em>
@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Statements/with
  <dd>任何语句。要执行多个语句，请使用一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/block">块</a>语句 ({ ... })对这些语句进行分组。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>JavaScript查找某个未使用命名空间的变量时，会通过作用域链来查找，作用域链是跟执行代码的context或者包含这个变量的函数有关。'with'语句将某个对象添加到作用域链的顶部，如果在statement中有某个未使用命名空间的变量，跟作用域链中的某个属性同名，则这个变量将指向这个属性值。如果沒有同名的属性，则将拋出{{jsxref("ReferenceError")}}异常。</p>
 
@@ -63,9 +63,9 @@ translation_of: Web/JavaScript/Reference/Statements/with
 <p>如果是在ECMAScript 5环境调用<code>f([1,2,3], obj)</code>，则<code>with</code>语句中变量<code>values</code>将指向函数的第二个参数<code>values</code>。但是，ECMAScript 6标准给<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype">Array.prototype</a></code>添加了一个新属性<code>values</code>，所有数组实例将继承这个属性。所以在ECMAScript 6环境中，<code>with</code>语句中变量<code>values</code>将指向<code>[1,2,3].values</code>。</p>
 </div>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Using_with" name="Example:_Using_with">Example: Using <code>with</code></h3>
+<h3 id="Example_Using_with">Example: Using <code>with</code></h3>
 
 <p>下面的<code>with</code>语句指定<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math" title="JavaScript/Reference/Global_Objects/Math">Math</a></code>对象作为默认对象。<code>with</code>语句里面的变量，分別指向<code>Math</code>对象的<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" title="JavaScript/Reference/Global_Objects/Math/PI"><code>PI</code></a> 、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos" title="JavaScript/Reference/Global_Objects/Math/cos">cos</a>和</code><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="JavaScript/Reference/Global_Objects/Math/sin">sin</a></code>函数，不用在前面添加命名空间。后续所有引用都指向<code>Math</code>对象。</p>
 
@@ -119,7 +119,7 @@ with (Math) {
 
 <p>{{Compat("javascript.statements.with")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Statements/block", "block")}}</li>

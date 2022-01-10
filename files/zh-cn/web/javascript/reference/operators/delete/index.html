@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Operators/delete
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">delete <em>expression</em>
 </pre>
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Operators/delete
 delete <em>object</em>['<em>property</em>']
 </pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>object</code></dt>
@@ -49,7 +49,7 @@ delete <em>object</em>['<em>property</em>']
 
 <p>在<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">严格模式</a>下，如果是属性是一个自己不可配置的属性，会抛出{{jsxref("TypeError")}}。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>与通常的看法不同，<code>delete</code>操作符与直接释放内存<strong>无关</strong>。内存管理 通过断开引用来间接完成的，查看<a href="/zh-CN/docs/Web/JavaScript/Memory_Management">内存管理</a>页可了解详情。</p>
 
@@ -234,7 +234,7 @@ delete Foo.prototype.bar; //true
 console.log(foo.bar);    //undefined
 </pre>
 
-<h3 id="Deleting_array_elements" name="Deleting_array_elements">删除数组元素</h3>
+<h3 id="Deleting_array_elements">删除数组元素</h3>
 
 <p>当你删除一个数组元素时，数组的长度不受影响。即便你删除了数组的最后一个元素也是如此。</p>
 
@@ -289,7 +289,7 @@ console.log(trees); // ["redwood", "bay", "cedar", "maple"]
 
 <p>如果您想在跨浏览器的环境中使用有序的关联数组，请使用{{jsxref("Map")}}对象（如果有），或使用两个单独的数组来模拟（一个用于键，另一个用于 值），或者建立一个由单一属性的对象组成的数组等。</p>
 
-<h2 id="See_also" name="See_also">参见</h2>
+<h2 id="See_also">参见</h2>
 
 <ul>
  <li><a href="http://perfectionkills.com/understanding-delete/">深入分析 delete</a></li>

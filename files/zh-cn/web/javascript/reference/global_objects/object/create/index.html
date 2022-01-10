@@ -16,11 +16,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <div>{{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}</div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre>Object.create(<var>proto，[</var><var>propertiesObject</var>])</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>proto</code></dt>
@@ -29,15 +29,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
  <dd>可选。需要传入一个对象，该对象的属性类型参照{{jsxref("Object.defineProperties()")}}的第二个参数。如果该参数被指定且不为 {{jsxref("undefined")}}，该传入对象的自有可枚举属性(即其自身定义的属性，而不是其原型链上的枚举属性)将为新创建的对象添加指定的属性值和对应的属性描述符。</dd>
 </dl>
 
-<h3 id="Parameters" name="Parameters">返回值</h3>
+<h3 id="Parameters">返回值</h3>
 
 <p>一个新对象，带着指定的原型对象和属性。</p>
 
-<h3 id="Description" name="Description">例外</h3>
+<h3 id="Description">例外</h3>
 
 <p>如果<code>proto</code>参数不是 {{jsxref("null")}} 或非原始包装对象，则抛出一个 {{jsxref("TypeError")}} 异常。</p>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
 <h3 id="用_Object.create实现类式继承">用 <code>Object.create</code>实现类式继承</h3>
 
@@ -213,7 +213,7 @@ o2 = Object.create({}, {
 
 <p>{{Compat("javascript.builtins.Object.create")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Object.defineProperty")}}</li>

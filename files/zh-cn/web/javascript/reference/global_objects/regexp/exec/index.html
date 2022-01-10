@@ -22,18 +22,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><var>regexObj</var>.exec(<var>str</var>)</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>str</code></dt>
  <dd>要匹配正则表达式的字符串。</dd>
 </dl>
 
-<h3 id="Description" name="Description">返回值</h3>
+<h3 id="Description">返回值</h3>
 
 <p>如果匹配成功，<code>exec()</code> 方法返回一个数组（包含额外的属性 <code>index</code> 和 <code>input</code> ，参见下方表格），并更新正则表达式对象的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 属性。完全匹配成功的文本将作为返回数组的第一项，从第二项起，后续每项都对应正则表达式内捕获括号里匹配成功的文本。</p>
 

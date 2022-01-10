@@ -17,11 +17,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>func</em>.apply(<em>thisArg</em><em>, [</em><em>argsArray</em>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>thisArg</code></dt>
@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 <p>调用有指定<code><strong>this</strong></code>值和参数的函数的结果。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>在调用一个存在的函数时，你可以为其指定一个 <code>this</code> 对象。 <code>this</code> 指当前对象，也就是正在调用这个函数的对象。 使用 <code>apply</code>， 你可以只写一次这个方法然后在另一个对象中继承它，而不用在新对象中重复写该方法。</p>
 
@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 <p>需要注意：Chrome 14 以及 Internet Explorer 9 仍然不接受类数组对象。如果传入类数组对象，它们会抛出异常。</p>
 </div>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <h3 id="用_apply_将数组各项添加到另一个数组">用 <code>apply</code> 将数组各项添加到另一个数组</h3>
 
@@ -64,7 +64,7 @@ array.push.apply(array, elements);
 console.info(array); // ["a", "b", 0, 1, 2]
 </pre>
 
-<h3 id="apply_and_built-in_functions" name="apply_and_built-in_functions">使用<code>apply</code>和内置函数</h3>
+<h3 id="apply_and_built-in_functions">使用<code>apply</code>和内置函数</h3>
 
 <p>对于一些需要写循环以遍历数组各项的需求，我们可以用<code>apply</code>完成以避免循环。</p>
 
@@ -106,7 +106,7 @@ for (var i = 0; i &lt; numbers.length; i++) {
 var min = minOfArray([5, 6, 2, 3, 7]);
 </pre>
 
-<h3 id="Using_apply_to_chain_constructors" name="Using_apply_to_chain_constructors">使用apply来链接构造器</h3>
+<h3 id="Using_apply_to_chain_constructors">使用apply来链接构造器</h3>
 
 <p>你可以使用apply来链接一个对象<a href="/zh-CN/docs/JavaScript/Reference/Operators/new" title="JavaScript/Reference/Operators/new">构造器</a>，类似于Java。在接下来的例子中我们会创建一个全局<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function" title="JavaScript/Reference/Global_Objects/Function"><code>Function</code></a> 对象的construct方法 ，来使你能够在构造器中使用一个类数组对象而非参数列表。</p>
 
@@ -204,7 +204,7 @@ console.log(myInstance.constructor);              // logs "MyConstructor"
 
 <p>{{Compat("javascript.builtins.Function.apply")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Functions_and_function_scope/arguments", "arguments ")}} object</li>
