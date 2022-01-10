@@ -2,50 +2,55 @@
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
 tags:
-  - DataTransfer.clearData()
+  - API
+  - DataTransfer
+  - HTML DOM
+  - Method
+  - Reference
+  - clearData
+  - drag and drop
 translation_of: Web/API/DataTransfer/clearData
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p><strong><code>DataTransfer.clearData()</code></strong> 方法删除给定类型的拖动操作的{{domxref("DataTransfer","drag data")}}。如果给定类型的数据不存在，则此方法不执行任何操作。</p>
+**`DataTransfer.clearData()`** 方法删除给定类型的拖动操作的 {{domxref("DataTransfer","drag data")}}。如果给定类型的数据不存在，则此方法不执行任何操作。
 
-<p class="note">如果没有参数调用此方法，或者格式为空 ，则将删除所有类型的数据。</p>
+如果调用此方法时没有传入参数，或者参数为空{{domxref("DOMString","字符串")}}，则将删除所有类型的数据。
 
-<p>此方法不会从拖动操作中删除文件，因此如果有任何文件包含在对象的{{domxref("DataTransfer.types")}}列表中，仍然可能有一个类型为“Files”的条目在拖动。 </p>
+此方法不会从拖动操作中删除文件，因此如果有任何文件包含在对象的 {{domxref("DataTransfer.types")}} 列表中，仍然可能有一个类型为“Files”的条目在拖动。
 
-<div class="note">
-<p>该方法只能在{{event("dragstart")}} 事件的处理程序中使用，因为这是拖动操作的数据存储只能写入的时间。</p>
-</div>
+> **备注：** 该方法只能在 {{event("dragstart")}} 事件的处理程序中使用，因为这是拖动操作的数据存储唯一能写入的时间。
 
-<h2 id="句法">句法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>DataTransfer</var>.clearData([<em>format</em>]);
-</pre>
+```js
+DataTransfer.clearData([format]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>format</code> {{optional_inline}}</dt>
- <dd>一个 {{domxref("DOMString","string")}}指定要删除的数据类型。如果此参数为空字符串或未提供，则将删除所有类型的数据。</dd>
-</dl>
+- `format` {{optional_inline}}
+  - : 一个 {{domxref("DOMString","string")}} 指定要删除的数据类型。如果此参数为空字符串或未提供，则将删除所有类型的数据。
 
-<h2 id="范例">范例</h2>
+## 示例
 
-<p>这个例子显示了使用{{domxref("DataTransfer")}}对象的{{domxref("DataTransfer.getData()","getData()")}}, {{domxref("DataTransfer.setData()","setData()")}} 和{{domxref("DataTransfer.clearData()","clearData()")}} 和</p>
+这个例子显示了使用 {{domxref("DataTransfer")}} 对象的 {{domxref("DataTransfer.getData()","getData()")}}、{{domxref("DataTransfer.setData()","setData()")}} 以及 {{domxref("DataTransfer.clearData()","clearData()")}} 方法。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span class="tweaked" id="source" draggable="true"&gt;
+```html
+<span class="tweaked" id="source" draggable="true">
   Select this element, drag it to the Drop Zone and then release the selection to move the element.
-&lt;/span&gt;
-&lt;span class="tweaked" id="target"&gt;Drop Zone&lt;/span&gt;
-&lt;div&gt;Status: &lt;span id="status"&gt;Drag to start&lt;/span&gt;&lt;/div&gt;
-&lt;div&gt;Data is: &lt;span id="data"&gt;uninitialized&lt;/span&gt;&lt;/div&gt;
-</pre>
+</span>
+<span class="tweaked" id="target">Drop Zone</span>
+<div>Status: <span id="status">Drag to start</span></div>
+<div>Data is: <span id="data">uninitialized</span></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span.tweaked {
+```css
+span.tweaked {
   display: inline-block;
   margin: 1em 0;
   padding: 1em 2em;
@@ -59,11 +64,12 @@ translation_of: Web/API/DataTransfer/clearData
 #target {
   border: 1px solid black;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">window.addEventListener('DOMContentLoaded', function () {
+```js
+window.addEventListener('DOMContentLoaded', function () {
   // Select HTML elements
   var draggable = document.getElementById('source');
   var dropable = document.getElementById('target');
@@ -79,7 +85,7 @@ translation_of: Web/API/DataTransfer/clearData
   dropable.addEventListener('drop', dropHandler);
 
   function dragStartHandler (event) {
-    status.innerHTML = 'Drag in process';
+    status.textContent = 'Drag in process';
 
     // Change target element's border to signify drag has started
     event.currentTarget.style.border = '1px dashed blue';
@@ -92,15 +98,15 @@ translation_of: Web/API/DataTransfer/clearData
     // Set the drag's format and data (use event target's id for data)
     event.dataTransfer.setData('text/plain', event.target.id);
 
-    data.innerHTML = event.dataTransfer.getData('text/plain');
+    data.textContent = event.dataTransfer.getData('text/plain');
   }
 
   function dragEndHandler (event) {
     if (!dropped) {
-      status.innerHTML = 'Drag canceled';
+      status.textContent = 'Drag canceled';
     }
 
-    data.innerHTML = event.dataTransfer.getData('text/plain') || 'empty';
+    data.textContent = event.dataTransfer.getData('text/plain') || 'empty';
 
     // Change border to signify drag is no longer in process
     event.currentTarget.style.border = '1px solid black';
@@ -116,13 +122,13 @@ translation_of: Web/API/DataTransfer/clearData
   }
 
   function dragOverHandler (event) {
-    status.innerHTML = 'Drop available';
+    status.textContent = 'Drop available';
 
     event.preventDefault();
   }
 
   function dragLeaveHandler (event) {
-    status.innerHTML = 'Drag in process (drop was available)';
+    status.textContent = 'Drag in process (drop was available)';
 
     event.preventDefault();
   }
@@ -130,7 +136,7 @@ translation_of: Web/API/DataTransfer/clearData
   function dropHandler (event) {
     dropped = true;
 
-    status.innerHTML = 'Drop done';
+    status.textContent = 'Drop done';
 
     event.preventDefault();
 
@@ -143,95 +149,25 @@ translation_of: Web/API/DataTransfer/clearData
 
     // Change CSS styles and displayed text
     element.style.cssText = 'border: 1px solid black;display: block; color: red';
-    element.innerHTML = "I'm in the Drop Zone!";
+    element.textContent = "I'm in the Drop Zone!";
   }
 })
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example', 300, 250)}}</p>
+{{EmbedLiveSample('示例', 300, 250)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{CompatibilityTable}}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>10</td>
-   <td>12</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
+## 参见
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatIE("10")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="也可以看看">也可以看看</h2>
-
-<p>{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}</p>
+- [Drag and drop](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Dragging and Dropping Multiple Items](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
