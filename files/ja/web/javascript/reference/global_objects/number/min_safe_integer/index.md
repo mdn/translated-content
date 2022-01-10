@@ -5,7 +5,7 @@ tags:
   - ECMAScript 2015
   - JavaScript
   - Number
-  - Property
+  - プロパティ
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 ---
 <div>{{JSRef}}</div>

@@ -3,9 +3,9 @@ title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 tags:
   - JavaScript
-  - Method
+  - メソッド
   - Number
-  - Reference
+  - リファレンス
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
 <div>{{JSRef}}</div>

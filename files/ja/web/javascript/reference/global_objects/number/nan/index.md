@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 tags:
   - JavaScript
   - Number
-  - Property
+  - プロパティ
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/NaN
 ---
 <div>{{JSRef}}</div>

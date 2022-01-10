@@ -4,8 +4,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 tags:
   - JavaScript
   - Number
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
 <div>{{JSRef}}</div>

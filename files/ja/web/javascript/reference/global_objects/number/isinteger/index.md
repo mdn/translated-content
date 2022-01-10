@@ -3,9 +3,9 @@ title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 tags:
   - JavaScript
-  - Method
+  - メソッド
   - Number
-  - Reference
+  - リファレンス
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
 <div>{{JSRef}}</div>
