@@ -196,7 +196,7 @@ myFirstPromise.then(function(successMessage){
 
 <h3 id="高级示例">高级示例</h3>
 
-<pre class="brush: html hidden">&lt;button id="btn"&gt;Make a promise!&lt;/button&gt;
+<pre class="brush: html">&lt;button id="btn"&gt;Make a promise!&lt;/button&gt;
 &lt;div id="log"&gt;&lt;/div&gt;
 </pre>
 
@@ -247,7 +247,7 @@ function testPromise() {
         ') Promise made (&lt;small&gt;同步代码结束&lt;/small&gt;)&lt;br/&gt;');
 }</pre>
 
-<pre class="brush:js hidden">if ("Promise" in window) {
+<pre class="brush:js">if ("Promise" in window) {
   let btn = document.getElementById("btn");
   btn.addEventListener("click",testPromise);
 } else {
