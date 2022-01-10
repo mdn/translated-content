@@ -59,7 +59,7 @@ var c = new C(); // logs class C{constructor(){console.log(new.target);}}
 var d = new D(); // logs class D extends C{constructor(){super();}}
 </pre>
 
-<p class="summary">从上面类 C 和 D 的例子可以看出来，new.target 指向的是初始化类的类定义。比如当 D 通过 new 初始化的时候，打印出了 D 的类定义，C 的例子与之类似，打印出的是 C 的类定义。</p>
+<p>从上面类 C 和 D 的例子可以看出来，new.target 指向的是初始化类的类定义。比如当 D 通过 new 初始化的时候，打印出了 D 的类定义，C 的例子与之类似，打印出的是 C 的类定义。</p>
 
 <h2 id="规范">规范</h2>
 
