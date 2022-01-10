@@ -24,15 +24,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <dl>
  <dt><code>begin</code> {{optional_inline}}</dt>
- <dd>自哪一個索引（起始為 0）開始提取拷貝。</dd>
- <dd>可使用負數索引，表示由陣列的最末項開始提取。<code>slice(-2)</code> 代表拷貝陣列中的最後兩個元素。</dd>
- <dd>假如 <code>begin</code> 為 undefined，則 <code>slice</code> 會從索引 <code>0</code> 開始提取。</dd>
+ <dd>自哪一個索引（起始為 0）開始提取拷貝。可使用負數索引，表示由陣列的最末項開始提取。<code>slice(-2)</code> 代表拷貝陣列中的最後兩個元素。假如 <code>begin</code> 為 undefined，則 <code>slice</code> 會從索引 <code>0</code> 開始提取。</dd>
  <dt><code>end</code> {{optional_inline}}</dt>
- <dd>至哪一個索引（起始為 0）<em>之前</em>停止提取。<code>slice</code> 提取但不包含至索引 <code>end</code>。</dd>
- <dd>舉例來說，<code>slice(1,4)</code> 提取了陣列中第二個元素至第四個元素前為止（元素索引 1、2 以及 3）來拷貝。</dd>
- <dd>可使用負數索引，表示由陣列的最末項開始提取。<code>slice(2,-1)</code> 代表拷貝陣列中第三個元素至倒數第二個元素。</dd>
- <dd>若省略了 <code>end</code>，則 <code>slice</code> 會提取至陣列的最後一個元素（<code>arr.length</code>）。</dd>
- <dd>假如 <code>end</code> 大於陣列的長度，<code>slice</code> 會提取至陣列的最後一個元素（<code>arr.length</code>）。</dd>
+ <dd>至哪一個索引（起始為 0）<em>之前</em>停止提取。<code>slice</code> 提取但不包含至索引 <code>end</code>。舉例來說，<code>slice(1,4)</code> 提取了陣列中第二個元素至第四個元素前為止（元素索引 1、2 以及 3）來拷貝。可使用負數索引，表示由陣列的最末項開始提取。<code>slice(2,-1)</code> 代表拷貝陣列中第三個元素至倒數第二個元素。若省略了 <code>end</code>，則 <code>slice</code> 會提取至陣列的最後一個元素（<code>arr.length</code>）。假如 <code>end</code> 大於陣列的長度，<code>slice</code> 會提取至陣列的最後一個元素（<code>arr.length</code>）。</dd>
 </dl>
 
 <h3 id="回傳值">回傳值</h3>
