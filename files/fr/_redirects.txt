@@ -1650,7 +1650,7 @@
 /fr/docs/Glossaire/Texte_brut	/fr/docs/Glossary/Plaintext
 /fr/docs/Glossaire/Three_js	/fr/docs/Glossary/Three_js
 /fr/docs/Glossaire/Time_to_interactive	/fr/docs/Glossary/Time_to_interactive
-/fr/docs/Glossaire/Transmission_Control_Protocol_(TCP)	/fr/docs/Glossary/Transmission_Control_Protocol_(TCP)
+/fr/docs/Glossaire/Transmission_Control_Protocol_(TCP)	/fr/docs/conflicting/Glossary/TCP
 /fr/docs/Glossaire/Tree_shaking	/fr/docs/Glossary/Tree_shaking
 /fr/docs/Glossaire/Tri_par_cartes	/fr/docs/Glossary/Card_sorting
 /fr/docs/Glossaire/Trident	/fr/docs/Glossary/Trident
@@ -1750,6 +1750,7 @@
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/orphaned/Glossary/Modern_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
 /fr/docs/Glossary/Origine	/fr/docs/Glossary/Origin
+/fr/docs/Glossary/Transmission_Control_Protocol_(TCP)	/fr/docs/conflicting/Glossary/TCP
 /fr/docs/Guide_JavaScript_1.5/Aperçu_de_JavaScript	/fr/docs/conflicting/Web/JavaScript/Guide/Introduction_6f341ba6db4b060ccbd8dce4a0d5214b
 /fr/docs/Guide_JavaScript_1.5/Boucles/L'instruction_break	/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /fr/docs/Guide_JavaScript_1.5/Boucles/L'instruction_do...while	/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling

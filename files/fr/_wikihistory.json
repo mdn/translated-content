@@ -2971,12 +2971,6 @@
       "Voulto"
     ]
   },
-  "Glossary/Transmission_Control_Protocol_(TCP)": {
-    "modified": "2019-09-13T20:23:27.919Z",
-    "contributors": [
-      "estelle"
-    ]
-  },
   "Glossary/Tree_shaking": {
     "modified": "2019-03-18T21:45:48.808Z",
     "contributors": [
@@ -42417,6 +42411,12 @@
     "contributors": [
       "loella16",
       "xdelatour"
+    ]
+  },
+  "conflicting/Glossary/TCP": {
+    "modified": "2019-09-13T20:23:27.919Z",
+    "contributors": [
+      "estelle"
     ]
   },
   "conflicting/Learn": {

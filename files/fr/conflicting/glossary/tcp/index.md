@@ -1,6 +1,6 @@
 ---
 title: Transmission Control Protocol (TCP)
-slug: Glossary/Transmission_Control_Protocol_(TCP)
+slug: conflicting/Glossary/TCP
 tags:
   - Glossary
   - Networking
@@ -11,7 +11,7 @@ tags:
   - TLS
   - Web Performance
 translation_of: Glossary/Transmission_Control_Protocol_(TCP)
-original_slug: Glossaire/Transmission_Control_Protocol_(TCP)
+original_slug: Glossary/Transmission_Control_Protocol_(TCP)
 ---
 TCP (Transmission Control Protocol) est un protocole hôte à hôte de la couche transport permettant la communication en mode connexion entre deux ordinateurs sur un réseau IP. TCP utilise des ports virtuels pour créer une connexion virtuelle de bout en bout capable de réutiliser les connexions physiques entre deux ordinateurs. TCP encapsule les données de protocole de niveau supérieur telles que {{glossary('HTTP')}} et, {{glossary('SMTP')}} (email).
 

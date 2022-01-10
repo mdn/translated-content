@@ -210,13 +210,14 @@
 /ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기	/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 /ko/docs/Glossary/Client_hints	/ko/docs/Web/HTTP/Client_hints
 /ko/docs/Glossary/Header	/ko/docs/Glossary/HTTP_header
+/ko/docs/Glossary/Transmission_Control_Protocol_(TCP)	/ko/docs/conflicting/Glossary/TCP
 /ko/docs/Glossary/동적_프로그래밍_언어	/ko/docs/Glossary/Dynamic_programming_language
 /ko/docs/Glossary/배열	/ko/docs/Glossary/array
 /ko/docs/Glossary/불린	/ko/docs/Glossary/Boolean
 /ko/docs/Glossary/브라우저-컨텍스트	/ko/docs/Glossary/Browsing_context
 /ko/docs/Glossary/스코프	/ko/docs/Glossary/Scope
 /ko/docs/Glossary/식별자	/ko/docs/Glossary/Identifier
-/ko/docs/Glossary/전송_제어_프로토콜_(TCP)	/ko/docs/Glossary/Transmission_Control_Protocol_(TCP)
+/ko/docs/Glossary/전송_제어_프로토콜_(TCP)	/ko/docs/conflicting/Glossary/TCP
 /ko/docs/Glossary/캐시	/ko/docs/Glossary/Cache
 /ko/docs/HTML	/ko/docs/Web/HTML
 /ko/docs/HTML/Block-level_elements	/ko/docs/Web/HTML/Block-level_elements

@@ -956,12 +956,6 @@
       "enfroze"
     ]
   },
-  "Glossary/Transmission_Control_Protocol_(TCP)": {
-    "modified": "2020-01-12T14:32:05.700Z",
-    "contributors": [
-      "doong-jo"
-    ]
-  },
   "Glossary/Truthy": {
     "modified": "2020-08-26T22:21:21.196Z",
     "contributors": [
@@ -17377,6 +17371,12 @@
     "modified": "2019-03-18T21:28:25.734Z",
     "contributors": [
       "limkukhyun"
+    ]
+  },
+  "conflicting/Glossary/TCP": {
+    "modified": "2020-01-12T14:32:05.700Z",
+    "contributors": [
+      "doong-jo"
     ]
   },
   "conflicting/Learn": {
