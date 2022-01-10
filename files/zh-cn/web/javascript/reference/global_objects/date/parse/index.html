@@ -70,26 +70,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 <p>但是， 在如 ECMA-262 规范中定义的情况，如果因为无效值而导致日期字符串不能被识别为 ISO 格式时，根据浏览器和给定的值不同，返回值可以是，也可以不是 {{jsxref("NaN")}} 。比如：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// 包含无效值的非 ISO 格式字符串
-new Date('23/25/2014');</code></pre>
+<pre class="brush: js line-numbers  language-js">// 包含无效值的非 ISO 格式字符串
+new Date('23/25/2014');</pre>
 
 <p>在 Firefox 30 中会被识别为本地时区的2015年12月25日，而在 Safari 7 中则是无效日期。但是，如果字符串被识别为 ISO 格式并且包含无效值，则在所有遵循 ES5 或者更新标准的浏览器中都会返回 {{jsxref("NaN")}} 。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// 包含无效值的 ISO 格式字符串
+<pre class="brush: js line-numbers  language-js">// 包含无效值的 ISO 格式字符串
 new Date('2014-25-23').toISOString();
-// 在所有遵循 ES5的浏览器中返回 "RangeError: invalid date"</code></pre>
+// 在所有遵循 ES5的浏览器中返回 "RangeError: invalid date"</pre>
 
 <p>SpiderMonkey 的引擎策略可以在 <a href="http://mxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889"><code>jsdate.cpp</code></a>  中找到。字符串 <code>"10 06 2014"</code>  可以作为非 ISO 格式字符串使用自定义处理方式的例子。参见这篇关于解析如何进行的<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6">粗略纲要</a>。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">new Date('10 06 2014');</code></pre>
+<pre class="brush: js line-numbers  language-js">new Date('10 06 2014');</pre>
 
 <p>将会被解析为本地时间 2014年10月6日，而不是6月10日。另一个例子</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">new Date('foo-bar 2014').toString();
+<pre class="brush: js line-numbers  language-js">new Date('foo-bar 2014').toString();
 // 返回: "Invalid Date"
 
 Date.parse('foo-bar 2014');
-// 返回: NaN</code></pre>
+// 返回: NaN</pre>
 
 <h2 id="Examples" name="Examples">例子</h2>
 
@@ -97,7 +97,7 @@ Date.parse('foo-bar 2014');
 
 <p>如果 <code>IPOdate</code> 是一个已经存在的 {{jsxref("Date")}} 对象，则可以把其设置为本地时间 1995年8月9日。如下：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">IPOdate.setTime(Date.parse('Aug 9, 1995'));</code></pre>
+<pre class="brush: js line-numbers  language-js">IPOdate.setTime(Date.parse('Aug 9, 1995'));</pre>
 
 <p>其他一些解析非标准格式日期的例子：</p>
 

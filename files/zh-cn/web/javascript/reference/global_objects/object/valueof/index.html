@@ -147,7 +147,7 @@ console.log( str2.valueOf() === str2 );   // false</pre>
 
 <h3 id="改写_.prototype.valueof">改写 .prototype.valueof</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function MyNumberType(n) {
+<pre class="brush: js line-numbers  language-js">function MyNumberType(n) {
     this.number = n;
 }
 
@@ -156,7 +156,7 @@ MyNumberType.prototype.valueOf = function() {
 };
 
 var myObj = new MyNumberType(4);
-myObj + 3; // 7</code></pre>
+myObj + 3; // 7</pre>
 
 <h2 id="规范">规范</h2>
 

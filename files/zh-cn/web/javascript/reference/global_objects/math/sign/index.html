@@ -50,12 +50,12 @@ Math.sign();      // NaN
 
 <h2 id="Compatibility" name="Compatibility">Polyfill</h2>
 
-<pre class="brush: js  language-js"><code class="language-js">function sign(x) {
+<pre class="brush: js  language-js">function sign(x) {
     x = +x ;// convert to a number
     if (x === 0 || isNaN(x))
         return x;
     return x &gt; 0 ? 1 : -1;
-}</code></pre>
+}</pre>
 
 <p> </p>
 
