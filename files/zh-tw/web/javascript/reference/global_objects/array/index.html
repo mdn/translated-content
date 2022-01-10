@@ -111,8 +111,7 @@ new Array(<var>arrayLength</var>)</pre>
 
 <dl>
  <dt><code>element<em>N</em></code></dt>
- <dd>除了只傳遞一個參數給 <code>Array</code> 構造函數，且該參數為一個數字的情況（詳見下方的 arrayLength 參數），JavaScript 陣列會以傳入的元素進行初始化。</dd>
- <dd>請注意，這種特殊情況僅適用於以 <code>Array </code>構造函數建立的 JavaScript 陣列，而不適用於以括號語法建立的陣列常值（Array Literals）。</dd>
+ <dd>除了只傳遞一個參數給 <code>Array</code> 構造函數，且該參數為一個數字的情況（詳見下方的 arrayLength 參數），JavaScript 陣列會以傳入的元素進行初始化。請注意，這種特殊情況僅適用於以 <code>Array </code>構造函數建立的 JavaScript 陣列，而不適用於以括號語法建立的陣列常值（Array Literals）。</dd>
  <dt><code>arrayLength</code></dt>
  <dd>如果傳遞給 <code>Array</code> 構造函數的唯一參數是 0 和 2^32 - 1（含）之間的整數，將回傳一個新的 JavaScript 陣列，其長度被設定為這個數字。如果參數是任何其他數值，將拋出 {{jsxref("RangeError")}} 異常。</dd>
 </dl>

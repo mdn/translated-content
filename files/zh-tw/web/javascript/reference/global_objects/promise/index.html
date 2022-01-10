@@ -66,14 +66,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
  <dd>回傳一個 promise，當在引數 iterable 中所有 promises 都被實現時被實現，或在引數 iterable 中有一個 promise 被拒絕時立刻被拒絕。若回傳的 promise 被實現，它將以一個實現值的陣列被實現，其順序與 iterable 中的 promises 相同。若回傳的 promise 被拒絕，它將以失敗訊息被拒絕，此訊息來自第一個在 iterable 中被拒絕的 promise。這個方法在聚集許多 promises 的結果時很有效。</dd>
  <dt>{{jsxref("Promise.race", "Promise.race(iterable)")}}</dt>
  <dd>回傳一個被實現或拒絕的 promise，當 iterable 中有一個 promise 被實現或拒絕時。</dd>
-</dl>
-
-<dl>
  <dt>{{jsxref("Promise.reject", "Promise.reject(reason)")}}</dt>
  <dd>回傳一個以失敗訊息拒絕的 <code>promise</code>。</dd>
-</dl>
-
-<dl>
  <dt>{{jsxref("Promise.resolve", "Promise.resolve(value)")}}</dt>
  <dd>回傳一個以 value 實現的 <code>promise</code>。若該值為 thenable (i.e. 具有 <code>then</code> 方法)，回傳的 promise 將跟隨（follow）之，採用她的最終狀態； 在其他情形回傳的 promise 將以 value 被實現。一般來說，當您不知道 value 是否為 promise，使用 {{jsxref("Promise.resolve", "Promise.resolve(value)")}}，將回傳值以 promise 作處理。</dd>
 </dl>
