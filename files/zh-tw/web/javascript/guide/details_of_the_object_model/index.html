@@ -571,7 +571,7 @@ Employee.prototype.name = "Unknown";
 
 <p>JavaScript 的屬性查找機制首先在物件自身的屬性中查找，如果指定的屬性名稱沒有找到，將在物件的特殊屬性 <code>__proto__</code> 中查找。這個過程是遞迴的；被稱為“在原型鏈中查找”。</p>
 
-<p>特殊的 <code>__proto__</code> 屬性是在構建物件時設置的；設置為建構函數的 <code>prototype</code> 屬性的值。所以運算式 <code>new Foo()</code> 將創建一個物件，其 <code>__proto__ == <code class="moz-txt-verticalline">Foo.prototype</code></code>。因而，修改 <code class="moz-txt-verticalline">Foo.prototype</code> 的屬性，將改變所有通過 <code>new Foo()</code> 創建的物件的屬性的查找。</p>
+<p>特殊的 <code>__proto__</code> 屬性是在構建物件時設置的；設置為建構函數的 <code>prototype</code> 屬性的值。所以運算式 <code>new Foo()</code> 將創建一個物件，其 <code>__proto__ == <code>Foo.prototype</code></code>。因而，修改 <code>Foo.prototype</code> 的屬性，將改變所有通過 <code>new Foo()</code> 創建的物件的屬性的查找。</p>
 
 <p>每個物件都有一個 <code>__proto__</code> 物件屬性（除了 <code>Object）；每個函數都有一個</code> <code>prototype</code> 物件屬性。因此，通過“原型繼承（prototype inheritance）”，物件與其它物件之間形成關係。通過比較物件的 <code>__proto__</code> 屬性和函數的 <code>prototype</code> 屬性可以檢測物件的繼承關係。JavaScript 提供了便捷方法：<code>instanceof</code> 操作符可以用來將一個物件和一個函數做檢測，如果物件繼承自函數的原型，則該操作符返回真。例如：</p>
 
