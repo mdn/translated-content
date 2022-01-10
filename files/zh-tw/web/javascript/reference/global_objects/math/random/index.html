@@ -10,8 +10,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 
 <p>函數 <strong><code>Math.random()</code></strong> 會回傳一個偽隨機小數 (pseudo-random) 介於0到1之間(包含 0，不包含1) ，大致符合數學與統計上的均勻分佈 (uniform distribution) ，您可以選定想要的數字區間，它會透過演算法被產生並且不允許使用者自行跳選或重設成特定數字。{{EmbedInteractiveExample("pages/js/math-random.html")}}</p>
 
-<div class="note">
-<p><code>Math.random()</code> 所產生的偽隨機小數不符合加密學安全性要求。<em>請勿使用於任何加密、資安相關領域。</em></p>
+<div class="notecard note">
+<p><strong>備註：</strong><code>Math.random()</code> 所產生的偽隨機小數不符合加密學安全性要求。<em>請勿使用於任何加密、資安相關領域。</em></p>
 
 <p><em>如有加密需求建議參考Web Crypto API</em><a href="/en-US/docs/Web/API/RandomSource/getRandomValues" title="The documentation about this has not yet been written; please consider contributing!"><code>window.crypto.getRandomValues()</code></a></p>
 </div>
@@ -55,8 +55,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 }
 </pre>
 
-<div class="note">
-<p>It might be tempting to use <code>Math.round()</code> to accomplish that, but doing so would cause your random numbers to follow a non-uniform distribution, which may not be acceptable for your needs.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> might be tempting to use <code>Math.round()</code> to accomplish that, but doing so would cause your random numbers to follow a non-uniform distribution, which may not be acceptable for your needs.</p>
 </div>
 
 <h3 id="Getting_a_random_integer_between_two_values_inclusive">Getting a random integer between two values, inclusive</h3>
@@ -69,24 +69,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }</pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.random', 'Math.random')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{Compat("javascript.builtins.Math.random")}}</p>
+{{Compat}}
 
-<h2 class="countTop" id="其他參考資料">其他參考資料</h2>
+<h2 id="其他參考資料">其他參考資料</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/RandomSource/getRandomValues" title="The documentation about this has not yet been written; please consider contributing!"><code>window.crypto.getRandomValues()</code></a></li>

@@ -69,7 +69,7 @@ Object.defineProperties(obj, {
 
 <p>Assuming a pristine execution environment with all names and properties referring to their initial values, <code>Object.defineProperties</code> is almost completely equivalent (note the comment in <code>isCallable</code>) to the following reimplementation in JavaScript:</p>
 
-<pre class="brush: js;highlight:[8]">function defineProperties(obj, properties) {
+<pre class="brush: js">function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
@@ -131,82 +131,13 @@ Object.defineProperties(obj, {
 }
 </pre>
 
-<h2 id="規格">規格</h2>
+<h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">註記</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.7', 'Object.defineProperties')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.8.5</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.defineproperties', 'Object.defineProperties')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div>
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>{{CompatChrome("5")}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatOpera("11.60")}}</td>
-   <td>{{CompatSafari("5")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div>
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoMobile("2")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile("11.5")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="參閱">參閱</h2>
 

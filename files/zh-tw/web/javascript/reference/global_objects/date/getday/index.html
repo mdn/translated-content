@@ -29,8 +29,8 @@ var weekday = Xmas95.getDay();
 console.log(weekday); // 1
 </pre>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> 如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}加上<code>options</code>參數來獲取星期幾全名。使使用此方法能輕鬆做出各種國際語言：</p>
+<div class="notecard note">
+<p><strong>備註：</strong>如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}加上<code>options</code>參數來獲取星期幾全名。使使用此方法能輕鬆做出各種國際語言：</p>
 
 <pre class="brush: js">var options = { weekday: 'long'};
 console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));

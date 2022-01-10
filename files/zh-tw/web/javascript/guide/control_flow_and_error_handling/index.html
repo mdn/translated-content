@@ -229,7 +229,9 @@ throw true;       // True/False
 throw {toString: function() { return "我是物件!"; } };
 </pre>
 
-<div class="note"><strong>備註：</strong>您可以在拋出例外時指定物件。 然後，可以在 catch 區塊中引用對象的屬性。</div>
+<div class="notecard note">
+  <p><strong>備註：</strong>您可以在拋出例外時指定物件。 然後，可以在 catch 區塊中引用對象的屬性。</p>
+</div>
 
 <pre class="brush: js">// 創建類型爲 UserException 的物件
 function UserException(message) {
@@ -398,7 +400,7 @@ catch (e) {
  <li><em>settled</em>：已完成，表示 Promise 狀態為已實現或已拒絕，但不是等待中。</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8633/promises.png" style="height: 297px; width: 801px;"></p>
+<p><img alt="promises" src="https://mdn.mozillademos.org/files/8633/promises.png"></p>
 
 <h3 id="使用_XHR_載入圖檔">使用 XHR 載入圖檔</h3>
 

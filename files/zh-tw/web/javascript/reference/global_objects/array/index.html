@@ -215,12 +215,12 @@ var myArray = myRe.exec('cdbBdbsbz');
 
 <p>這項比對結果的屬性與元素參考如下：</p>
 
-<table class="fullwidth-table">
+<table>
  <tbody>
   <tr>
-   <td class="header">屬性/元素</td>
-   <td class="header">說明</td>
-   <td class="header">範例</td>
+   <th>屬性/元素</th>
+   <th>說明</th>
+   <th>範例</th>
   </tr>
   <tr>
    <td><code>input</code></td>
@@ -292,8 +292,8 @@ var myArray = myRe.exec('cdbBdbsbz');
 
 <h2 id="Array_泛型方法"><code>Array</code> 泛型方法</h2>
 
-<div class="warning">
-<p><strong>泛型陣列並非標準且已被棄用，將會在不久之後被去除。</strong> </p>
+<div class="notecard warning">
+<p><strong>警告：</strong>泛型陣列並非標準且已被棄用，將會在不久之後被去除。</p>
 </div>
 
 <p>有時你想將陣列方法用於字串或其他類陣列物件（像是函數 {{jsxref("Functions/arguments", "arguments", "", 1)}}）。藉此操作，你將此字串視為由字元組成的陣列（反之為將其他非陣列視為物件）。如範例，若要確認字串中的每個字元是不是字母，你可能會這樣寫：</p>

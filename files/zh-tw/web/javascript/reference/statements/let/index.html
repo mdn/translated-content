@@ -165,8 +165,8 @@ let i = 10;</pre>
 
 <h3 id="Another_example_of_temporal_dead_zone_combined_with_lexical_scoping">Another example of temporal dead zone combined with lexical scoping</h3>
 
-<p>Due to lexical scoping, the identifier<strong> "foo"</strong> inside the expression <code>(foo + 55)</code> evaluates to the <u>if block's foo</u>, and <strong>not</strong> the <u>overlying variable foo</u> with the value of 33.<br>
- In that very line, the <u>if block's "foo"</u> has already been created in the lexical environment, but has not yet reached (and <strong>terminated</strong>) its initialization (which is part of the statement itself): it's still in the temporal dead zone.</p>
+<p>Due to lexical scoping, the identifier<strong> "foo"</strong> inside the expression <code>(foo + 55)</code> evaluates to the <em>if block's foo</em>, and <strong>not</strong> the <em>overlying variable foo</em> with the value of 33.<br>
+ In that very line, the <em>if block's "foo"</em> has already been created in the lexical environment, but has not yet reached (and <strong>terminated</strong>) its initialization (which is part of the statement itself): it's still in the temporal dead zone.</p>
 
 <pre class="brush: js example-bad">function test(){
    var foo = 33;
@@ -176,7 +176,7 @@ let i = 10;</pre>
 }
 test();</pre>
 
-<p>This phenomenon may confuse you in a situation like the following. The instruction <code>let n of n.a</code> is already inside the private scope of the <u>for loop's block</u>, hence the identifier<strong> "n.a"</strong> is resolved to the property 'a' of the <u>'n' object located in the first part of the instruction itself</u> ("let n"), which is still in the temporal dead zone since its declaration statement has not been reached and <strong>terminated</strong>.</p>
+<p>This phenomenon may confuse you in a situation like the following. The instruction <code>let n of n.a</code> is already inside the private scope of the <em>for loop's block</em>, hence the identifier<strong> "n.a"</strong> is resolved to the property 'a' of the <em>'n' object located in the first part of the instruction itself</em> ("let n"), which is still in the temporal dead zone since its declaration statement has not been reached and <strong>terminated</strong>.</p>
 
 <pre class="brush: js example-bad">function go(n) {
   // n here is defined!
