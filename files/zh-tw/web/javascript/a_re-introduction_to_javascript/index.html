@@ -167,7 +167,7 @@ true
 var name = "simon";
 </pre>
 
-<p>如果你宣告一個變數但不指定任何值，其型態便為 <code>undefined</code> （未定義）。 <span class="comment">應該注意關於 JS 的區塊不會構成新變數作用域</span></p>
+<p>如果你宣告一個變數但不指定任何值，其型態便為 <code>undefined</code> （未定義）。 應該注意關於 JS 的區塊不會構成新變數作用域</p>
 
 <h3 id=".E9.81.8B.E7.AE.97.E5.AD.90" name=".E9.81.8B.E7.AE.97.E5.AD.90">運算子</h3>
 
@@ -709,7 +709,7 @@ Person.prototype.fullNameReversed = function() {
 }
 </pre>
 
-<p>Person.prototype 是一個由所有 Person 物件共享的物件。他將產生一個可供查看的關係鍊 (有個特殊的名字 <span style="color: #0000cd;">prototype chain</span>)。任何時候當我們想要使用某個不在 Person 中定義的 property 時，JavaScript 就會到 Person.prototype 裡頭尋找。因此， Person.prototype 就成為一個所有 Person 物件共用且可視的一個共享空間(物件)。這是一個提供強大工具，允許你可以在執行的任何一刻增加物件的相關函式。</p>
+<p>Person.prototype 是一個由所有 Person 物件共享的物件。他將產生一個可供查看的關係鍊 (有個特殊的名字 prototype chain)。任何時候當我們想要使用某個不在 Person 中定義的 property 時，JavaScript 就會到 Person.prototype 裡頭尋找。因此， Person.prototype 就成為一個所有 Person 物件共用且可視的一個共享空間(物件)。這是一個提供強大工具，允許你可以在執行的任何一刻增加物件的相關函式。</p>
 
 <pre class="brush: js">&gt; s = new Person("Simon", "Willison");
 &gt; s.firstNameCaps();
@@ -764,7 +764,7 @@ desrever eb won nac sihT
 }
 </pre>
 
-<p>當我們這樣做時，並不會產生一個類似於 new() 的函式在 prototype 中。此外，apply() 有一個姊妹函式叫做 <span style="color: #0000cd;">call</span><span style="color: #000000;">，差異在於 call() 接受一個可被擴展的參數串列而非一個陣列。</span></p>
+<p>當我們這樣做時，並不會產生一個類似於 new() 的函式在 prototype 中。此外，apply() 有一個姊妹函式叫做 call，差異在於 call() 接受一個可被擴展的參數串列而非一個陣列。</p>
 
 <pre class="brush: js">function lastNameCaps() {
     return this.last.toUpperCase();
@@ -833,7 +833,7 @@ y(7)
  <li>記憶體釋放：當沒有參照可以指向該物件時</li>
 </ol>
 
-<p>當瀏覽器在執行的時候，需要維護來自<span style="color: #0000cd;"> DOM</span> 的大量物件。IE 使用自己的垃圾回收機制，而這個管理機制和 JavaScript 的不同－－這就造成了記憶體流失。</p>
+<p>當瀏覽器在執行的時候，需要維護來自 DOM 的大量物件。IE 使用自己的垃圾回收機制，而這個管理機制和 JavaScript 的不同－－這就造成了記憶體流失。</p>
 
 <p>在我們這裡的例子中，記憶體流失源自於環狀的相互參照 (circular reference)－－ JavaScript 物件及原生物件之間的相互參照。以下面的程式為例：</p>
 
