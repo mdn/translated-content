@@ -18,12 +18,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 
 
-<h2 id="Syntax" name="Syntax">語法</h2>
+<h2 id="Syntax">語法</h2>
 
 <pre class="syntaxbox"><var>arr</var>.sort(<var>[compareFunction]</var>)
 </pre>
 
-<h3 id="Parameters" name="Parameters">參數</h3>
+<h3 id="Parameters">參數</h3>
 
 <dl>
  <dt><code>compareFunction</code> {{optional_inline}}</dt>
@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 <p>排序後的陣列。請注意此為<em><a href="https://zh.wikipedia.org/wiki/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地（in place）</a></em>進行排序過的陣列，並且不是原陣列的拷貝。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>如果 <code>compareFunction</code> 沒有被應用，元素將被轉換為字串並以 Unicode 編碼位置進行比較來排序。舉例來說，"Banana" 會被排在 "cherry" 之前。在數值排序中，9 排在 80 前面，但因為數字被轉換成字串，在 Unicode 順序中 "80" 會在 "9" 的前面。</p>
 
@@ -112,7 +112,7 @@ items.sort(function(a, b) {
 
 <h2 id="範例">範例</h2>
 
-<h3 id="Example:_Creating.2C_displaying.2C_and_sorting_an_array" name="Example:_Creating.2C_displaying.2C_and_sorting_an_array">建立、顯示及排序一個陣列</h3>
+<h3 id="Example:_Creating.2C_displaying.2C_and_sorting_an_array">建立、顯示及排序一個陣列</h3>
 
 <p>下列範例建立了四個陣列並顯示其原本陣列內容、再進行排序。數字陣列先不使用比較函式（compare function）來排序，接著才依據比較函式進行排序。</p>
 
@@ -159,7 +159,7 @@ Sorted without a compare function: 1,200,40,5,700,80,9
 Sorted with compareNumbers: 1,5,9,40,80,200,700
 </pre>
 
-<h3 id="Example:_Sorting_non-ASCII_characters" name="Example:_Sorting_non-ASCII_characters">排序非 ASCII 字元</h3>
+<h3 id="Example:_Sorting_non-ASCII_characters">排序非 ASCII 字元</h3>
 
 <p>為了排列非 ASCII 字元，即重音節字元（e、é、è、a、ä 等等），非英語字串：利用 {{jsxref("String.localeCompare")}}。此函式將比較這些字元，所以結果將會顯示正確的順序。</p>
 
@@ -171,7 +171,7 @@ items.sort(function (a, b) {
 // items is ['adieu', 'café', 'cliché', 'communiqué', 'premier', 'réservé']
 </pre>
 
-<h3 id="Example:_Sorting_maps" name="Example:_Sorting_maps">排序 map</h3>
+<h3 id="Example:_Sorting_maps">排序 map</h3>
 
 <p><code>compareFunction</code> 可以被陣列中的各個元素多次呼叫。依據 <code>compareFunction</code> 的特性，這將會產生大量運算。越多元素要排序 <code>compareFunction</code> 就越多工作要做，因此選擇使用 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> 來排列也就是一個更明智的選擇。作法為先迭代陣列一次來取得排序時所需的值至暫時的陣列，並對此臨時陣列進行排序。然後再迭代臨時陣列來將正確順序之值放入原始陣列中。</p>
 
@@ -200,7 +200,7 @@ var result = mapped.map(function(el){
 });
 </pre>
 
-<h2 id="Specifications" name="Specifications">規範</h2>
+<h2 id="Specifications">規範</h2>
 
 <table class="standard-table">
  <tbody>
@@ -232,7 +232,7 @@ var result = mapped.map(function(el){
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">瀏覽器相容性</h2>
+<h2 id="Browser_compatibility">瀏覽器相容性</h2>
 
 <div>
 
@@ -240,7 +240,7 @@ var result = mapped.map(function(el){
 <p>{{Compat("javascript.builtins.Array.sort")}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">參見</h2>
+<h2 id="See_also">參見</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.reverse()")}}</li>

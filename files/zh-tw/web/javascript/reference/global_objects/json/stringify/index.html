@@ -76,7 +76,7 @@ JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: {
 
 </pre>
 
-<h3 id="The_replacer_parameter"><a name="The replacer parameter"></a>The <code>replacer</code> parameter</h3>
+<h3 id="The_replacer_parameter"><a></a>The <code>replacer</code> parameter</h3>
 
 <p>The <code>replacer</code> parameter can be either a function or an array. As a function, it takes two parameters, the key and the value being stringified. The object in which the key was found is provided as the replacer's <code>this</code> parameter. Initially it gets called with an empty key representing the object being stringified, and it then gets called for each property on the object or array being stringified. It should return the value that should be added to the JSON string, as follows:</p>
 
@@ -113,7 +113,7 @@ JSON.stringify(foo, replacer);
 // '{"week":45,"month":7}', only keep "week" and "month" properties
 </pre>
 
-<h3 id="The_space_argument"><a name="The space argument"></a>The <code>space</code> argument</h3>
+<h3 id="The_space_argument"><a></a>The <code>space</code> argument</h3>
 
 <p>The <code>space</code> argument may be used to control spacing in the final string. If it is a number, successive levels in the stringification will each be indented by this many space characters (up to 10). If it is a string, successive levels will be indented by this string (or the first ten characters of it).</p>
 
