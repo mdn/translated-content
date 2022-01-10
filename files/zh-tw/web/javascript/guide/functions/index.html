@@ -72,11 +72,7 @@ y = mycar.make;     // y 的值還是 "Honda" </pre>
 <pre class="brush: js">var square = function(number) {return number * number};
 var x = square(4) //x 的值為 16</pre>
 
-<div class="almost_half_cell" id="gt-res-content">
 <div>必要時，函式名稱可與函式表達式同時存在，並且可以用於在函式內部代指其本身(遞迴)：</div>
-
-<div> </div>
-</div>
 
 <pre class="brush: js">var factorial = function fac(n) {return n&lt;2 ? 1 : n*fac(n-1)};
 
@@ -150,7 +146,7 @@ e = factorial(5); // e gets the value 120
 
 <p>There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime. It turns out that functions are, themselves, objects, and these objects in turn have methods (see the <a href="/en-US/docs/JavaScript/Guide/Obsolete_Pages/Predefined_Core_Objects/Function_Object" title="Function Object"><code>Function</code> object</a>). One of these, the <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/apply" title="apply"><code>apply()</code></a> method, can be used to achieve this goal.</p>
 
-<h2 class="deki-transform" id="Function_scope">Function scope</h2>
+<h2 id="Function_scope">Function scope</h2>
 
 <p>Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function. However, a function can access all variables and functions defined inside the scope in which it is defined. In other words, a function defined in the global scope can access all variables defined in the global scope. A function defined inside another function can also access all variables defined in it's parent function and any other variable to which the parent function has access.</p>
 

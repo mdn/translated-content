@@ -20,12 +20,12 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 
 <h2 id="描述">描述</h2>
 
-<div class="blockIndicator note">
-<p>Note: 如果你有在使用 ES6 語法，建議參考<a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters">其餘參數</a>。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>如果你有在使用 ES6 語法，建議參考<a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters">其餘參數</a>。</p>
 </div>
 
-<div class="blockIndicator note">
-<p>Note: 「類陣列 (Array-like)」 的意思是 <code>arguments</code> 一樣擁有 <code>length</code>這項屬性，以及從 0 開始的索引，但是它沒有陣列內建的方法像是 <code>forEach()</code> ，或是 <code>map()</code> 。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>「類陣列 (Array-like)」 的意思是 <code>arguments</code> 一樣擁有 <code>length</code>這項屬性，以及從 0 開始的索引，但是它沒有陣列內建的方法像是 <code>forEach()</code> ，或是 <code>map()</code> 。</p>
 </div>
 
 <p>The <code>arguments</code> object is a local variable available within all (non-arrow) functions. You can refer to a function's arguments within the function by using the <code>arguments</code> object. This object contains an entry for each argument passed to the function, the first entry's index starting at 0.</p>
@@ -52,8 +52,8 @@ var args = [].slice.call(arguments);
 const args = Array.from(arguments);
 </pre>
 
-<div class="warning">
-<p class="brush: js">Using slice on arguments prevents optimizations in some JavaScript engines (V8 for example - <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">more information</a>). If you care for them, try constructing a new array by iterating through the arguments object instead. An alternative would be to use the despised <code>Array</code> constructor as a function:</p>
+<div class="notecard warning">
+<p><strong>警告：</strong>Using slice on arguments prevents optimizations in some JavaScript engines (V8 for example - <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">more information</a>). If you care for them, try constructing a new array by iterating through the arguments object instead. An alternative would be to use the despised <code>Array</code> constructor as a function:</p>
 
 <pre class="brush: js">var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));</pre>
 </div>
