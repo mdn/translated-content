@@ -13,10 +13,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 
 <div>{{EmbedInteractiveExample("pages/js/promise-constructor.html")}}</div>
 
-
-
-<p class="hidden">The source for this interactive demo is stored in a GitHub repository. If you'd like to contribute to the interactive demo project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-
 <h2 id="語法">語法</h2>
 
 <pre class="brush: js">new Promise( /* executor */ function(resolve, reject) { ... } );</pre>
@@ -139,7 +135,7 @@ myFirstPromise.then((successMessage) =&gt; {
 
 <h3 id="進階範例">進階範例</h3>
 
-<pre class="brush: html hidden">&lt;button id="btn"&gt;Make a promise!&lt;/button&gt;
+<pre class="brush: html">&lt;button id="btn"&gt;Make a promise!&lt;/button&gt;
 &lt;div id="log"&gt;&lt;/div&gt;
 </pre>
 
@@ -193,7 +189,7 @@ function testPromise() {
 
 <p><sub>*譯註：resolver function 即 executor function。</sub></p>
 
-<pre class="brush:js hidden">if ("Promise" in window) {
+<pre class="brush:js">if ("Promise" in window) {
   let btn = document.getElementById("btn");
   btn.addEventListener("click",testPromise);
 } else {
