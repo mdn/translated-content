@@ -60,7 +60,7 @@ foo = true;  // foo is a Boolean now
 
 <h3 id="数字类型">数字类型</h3>
 
-<p>根据 ECMAScript 标准，JavaScript 中只有一种数字类型：基于 IEEE 754 标准的双精度 64 位二进制格式的值（-(2<sup>53</sup> -1) 到 2<sup>53</sup> -1）。<strong>它并没有为整数给出一种特定的类型</strong>。除了能够表示浮点数外，还有一些带符号的值：<code>+Infinity</code>，<code>-Infinity</code> 和 <code>NaN</code> (非数值，Not-a-Number)。</p>
+<p>根据 ECMAScript 标准，JavaScript 中只有一种数字类型：基于 IEEE 754 标准的双精度 64 位二进制格式的值（-(2^53 -1) 到 2^53 -1）。<strong>它并没有为整数给出一种特定的类型</strong>。除了能够表示浮点数外，还有一些带符号的值：<code>+Infinity</code>，<code>-Infinity</code> 和 <code>NaN</code> (非数值，Not-a-Number)。</p>
 
 <p>要检查值是否大于或小于 <code>+/-Infinity</code>，你可以使用常量 {{jsxref("Number.MAX_VALUE")}} 和 {{jsxref("Number.MIN_VALUE")}}。另外在 ECMAScript 6 中，你也可以通过 {{jsxref("Number.isSafeInteger()")}} 方法还有 {{jsxref("Number.MAX_SAFE_INTEGER")}} 和 {{jsxref("Number.MIN_SAFE_INTEGER")}} 来检查值是否在双精度浮点数的取值范围内。 超出这个范围，JavaScript 中的数字不再安全了，也就是只有 second mathematical interger 可以在 JavaScript 数字类型中正确表现。</p>
 

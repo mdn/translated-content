@@ -37,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 <h3 id="返回补充字符">返回补充字符</h3>
 
-<p>在 UTF-16 中，绝大部分常用的字符可以用一个 16 位的值表示（即一个代码单元）。然而，有一类字符叫 Base Multilingual Plane (BMP)，是所有可寻址的 Unicode 码点的 <sup>1</sup>/<sub>17</sub><sup>th</sup>。剩下的码点，从范围 <code>65536</code> (<code>0x010000</code>) 到 <code>1114111</code> (<code>0x10FFFF</code>) 被称之为补充字符。在 UTF-16 中，补充字符也叫代理（surrogates），用两个 16 位代码单元表示，它是有目的被保留下来的。两个代理（surrogates）形成一个有效组合，也叫代理对，可以用来表示一个补充字符。</p>
+<p>在 UTF-16 中，绝大部分常用的字符可以用一个 16 位的值表示（即一个代码单元）。然而，有一类字符叫 Base Multilingual Plane (BMP)，是所有可寻址的 Unicode 码点的 1/17th。剩下的码点，从范围 <code>65536</code> (<code>0x010000</code>) 到 <code>1114111</code> (<code>0x10FFFF</code>) 被称之为补充字符。在 UTF-16 中，补充字符也叫代理（surrogates），用两个 16 位代码单元表示，它是有目的被保留下来的。两个代理（surrogates）形成一个有效组合，也叫代理对，可以用来表示一个补充字符。</p>
 
 <p>因为 <code>fromCharCode()</code> 只作用于 16 位的值 (跟 <code>\u</code> 转义序列一样)，为了返回一个补充字符，一个代理对是必须的。例如，<code>String.fromCharCode(0xD83C, 0xDF03)</code> 和 <code>\uD83C\uDF03</code> 返回码点 <code>U+1F303</code> "Night with Stars"。</p>
 
