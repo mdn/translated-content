@@ -5,77 +5,62 @@ tags:
   - JavaScript
   - Number
   - プロパティ
+  - リファレンス
+browser-compat: javascript.builtins.Number.POSITIVE_INFINITY
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number.POSITIVE_INFINITY</code></strong> プロパティは正の無限大を表す値です。</p>
+**`Number.POSITIVE_INFINITY`** プロパティは正の無限大を表す値です。
 
-<div>{{EmbedInteractiveExample("pages/js/number-positive-infinity.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-positive-infinity.html")}}{{js_property_attributes(0, 0, 0)}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 解説
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+`Number.POSITIVE_INFINITY` の値はグローバルオブジェクトの {{jsxref("Infinity")}} プロパティの値と同じです。
 
-<h2 id="Description" name="Description">解説</h2>
+この値は数学的な無限大とは少々異なった振る舞いをします。
 
-<p><code>Number.POSITIVE_INFINITY</code> の値はグローバルオブジェクトの {{jsxref("Infinity")}} プロパティの値と同じです。</p>
+- `POSITIVE_INFINITY` も含む任意の正の値と、 `POSITIVE_INFINITY` の積は `POSITIVE_INFINITY` になります。
+- {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} も含む任意の負の値と、 `POSITIVE_INFINITY` の積は {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} になります。
+- 任意の正の数を `POSITIVE_INFINITY` で割った商は、+0 になります。
+- 任意の負の数を `POSITIVE_INFINITY` で割った商は、-0 になります。
+- 零 と `POSITIVE_INFINITY` の積は {{jsxref("NaN")}} になります。
+- {{jsxref("NaN")}} と `POSITIVE_INFINITY` の積は {{jsxref("NaN")}} になります。
+- `POSITIVE_INFINITY` を {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} を除く、任意の負の値で割った商は {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} になります。
+- `POSITIVE_INFINITY` を `POSITIVE_INFINITY` を除く、任意の正の値で割った商は `POSITIVE_INFINITY` になります。
+- `POSITIVE_INFINITY` を {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} と `POSITIVE_INFINITY` のどちらかで割った商は {{jsxref("NaN")}} になります。
+- `Number.POSITIVE_INFINITY > x` は任意の数 _x_ が `POSITIVE_INFINITY` でない場合に true になります。
 
-<p>この値は数学的な無限大とは少々異なった振る舞いをします。</p>
+成功した場合に有限数を返す関数がエラーである状態を示すために、`Number.POSITIVE_INFINITY` プロパティを使いたいかもしれません。しかし、そのような場合は、 {{jsxref("isFinite")}} の方がより適しているであろうことに留意してください。
 
-<ul>
- <li><code>POSITIVE_INFINITY</code> も含む任意の正の値と、 <code>POSITIVE_INFINITY</code> の積は <code>POSITIVE_INFINITY</code> になります。</li>
- <li>{{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} も含む任意の負の値と、 <code>POSITIVE_INFINITY</code> の積は {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} になります。</li>
- <li>任意の正の数を <code>POSITIVE_INFINITY</code> で割った商は、+0 になります。</li>
- <li>任意の負の数を <code>POSITIVE_INFINITY</code> で割った商は、-0 になります。</li>
- <li>零 と <code>POSITIVE_INFINITY</code> の積は {{jsxref("NaN")}} になります。</li>
- <li>{{jsxref("NaN")}} と <code>POSITIVE_INFINITY</code> の積は {{jsxref("NaN")}} になります。</li>
- <li><code>POSITIVE_INFINITY</code> を {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} を除く、任意の負の値で割った商は {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} になります。</li>
- <li><code>POSITIVE_INFINITY</code> を <code>POSITIVE_INFINITY</code> を除く、任意の正の値で割った商は <code>POSITIVE_INFINITY</code> になります。</li>
- <li><code>POSITIVE_INFINITY</code> を {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} と <code>POSITIVE_INFINITY</code> のどちらかで割った商は {{jsxref("NaN")}} になります。</li>
-</ul>
+`POSITIVE_INFINITY` は {{jsxref("Number")}} の静的プロパティですので、作成した {{jsxref("Number")}} オブジェクトのプロパティとしてではなく、常に `Number.POSITIVE_INFINITY` として扱ってください。
 
-<p>成功した場合に有限数を返す関数がエラーである状態を示すために、<code>Number.POSITIVE_INFINITY</code> プロパティを使いたいかもしれません。しかし、そのような場合は、 {{jsxref("isFinite")}} の方がより適しているであろうことに留意してください。</p>
+## 例
 
-<p><code>POSITIVE_INFINITY</code> は {{jsxref("Number")}} の静的プロパティですので、作成した {{jsxref("Number")}} オブジェクトのプロパティとしてではなく、常に <code>Number.POSITIVE_INFINITY</code> として扱ってください。</p>
+### POSITIVE_INFINITY の使用
 
-<h2 id="Examples" name="Examples">例</h2>
+以下の例では、変数 `bigNumber` に最大値よりも大きな値が代入されています。{{jsxref("Statements/if...else", "if")}} ステートメントが実行されるとき、`bigNumber` は `Infinity` の値を持つので、処理が継続する前に `bigNumber` により扱いやすい値がセットされます。
 
-<h3 id="Using_POSITIVE_INFINITY" name="Using_POSITIVE_INFINITY">POSITIVE_INFINITY の使用</h3>
-
-<p>以下の例では、変数 <code>bigNumber</code> に最大値よりも大きな値が代入されています。{{jsxref("Statements/if...else", "if")}} ステートメントが実行されるとき、<code>bigNumber</code> は <code>Infinity</code> の値を持つので、処理が継続する前に <code>bigNumber</code> により扱いやすい値がセットされます。</p>
-
-<pre class="brush: js notranslate">var bigNumber = Number.MAX_VALUE * 2;
+```js
+var bigNumber = Number.MAX_VALUE * 2;
 
 if (bigNumber == Number.POSITIVE_INFINITY) {
   bigNumber = returnFinite();
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.positive_infinity', 'Number.POSITIVE_INFINITY')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Number.POSITIVE_INFINITY")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.isFinite()")}}</li>
- <li>{{jsxref("Infinity")}}</li>
- <li>{{jsxref("isFinite", "isFinite()")}}</li>
-</ul>
+- {{jsxref("Number.NEGATIVE_INFINITY")}}
+- {{jsxref("Number.isFinite()")}}
+- {{jsxref("Infinity")}}
+- {{jsxref("isFinite", "isFinite()")}}
