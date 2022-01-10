@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Guide/Functions
 
 <p>例如，以下的程式碼定義了一個名為square的簡單函式:</p>
 
-<div style="margin-right: 270px;">
+<div>
 <pre class="brush: js">function square(number) {
   return number * number;
 }
@@ -69,23 +69,23 @@ y = mycar.make;     // y 的值還是 "Honda" </pre>
 
 <p>儘管上述函式定義都是用的是陳述式，函式也同樣可以由函式表達式來定義。這樣的函式可以是匿名的；它不必有名稱。例如，上面提到的函式square也可這樣來定義：</p>
 
-<pre class="brush: js" style="font-size: 14px;">var square = function(number) {return number * number};
+<pre class="brush: js">var square = function(number) {return number * number};
 var x = square(4) //x 的值為 16</pre>
 
 <div class="almost_half_cell" id="gt-res-content">
-<div dir="ltr" style="zoom: 1;">必要時，函式名稱可與函式表達式同時存在，並且可以用於在函式內部代指其本身(遞迴)：</div>
+<div dir="ltr">必要時，函式名稱可與函式表達式同時存在，並且可以用於在函式內部代指其本身(遞迴)：</div>
 
-<div dir="ltr" style="zoom: 1;"> </div>
+<div dir="ltr"> </div>
 </div>
 
-<pre class="brush: js" style="font-size: 14px;">var factorial = function fac(n) {return n&lt;2 ? 1 : n*fac(n-1)};
+<pre class="brush: js">var factorial = function fac(n) {return n&lt;2 ? 1 : n*fac(n-1)};
 
 console.log(factorial(3));
 </pre>
 
 <p>函式表達式在將函式作為一個參數傳遞給其它函式時十分方便。下面的例子展示了一個叫map的函式如何​​被定義，而後呼叫一個匿名函式作為其第一個參數：</p>
 
-<pre class="brush: js" style="font-size: 14px;">function map(f,a) {
+<pre class="brush: js">function map(f,a) {
   var result = [], // Create a new Array
       i;
   for (i = 0; i != a.length; i++)
@@ -96,11 +96,11 @@ console.log(factorial(3));
 
 <p>下面的程式碼呼叫map函式並將一個匿名函式傳入作為第一個參數:</p>
 
-<pre class="brush: js" style="font-size: 14px;">map(function(x) {return x * x * x}, [0, 1, 2, 5, 10]);
+<pre class="brush: js">map(function(x) {return x * x * x}, [0, 1, 2, 5, 10]);
 // 結果會回傳 [0, 1, 8, 125, 1000]
 </pre>
 
-<p>除了上述的定義方式以外，我們也可以透過 <a href="/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Function_Object" style="line-height: 1.572;" title="en-US/docs/JavaScript/Guide/Predefined Core Objects#Function Object"><code>Function</code> constructor</a> 來定義, 類似 <a href="/en-US/docs/JavaScript/Guide/Functions#eval_Function" style="line-height: 1.572;" title="en-US/docs/JavaScript/Guide/Functions#eval_Function"><code>eval()</code></a>.</p>
+<p>除了上述的定義方式以外，我們也可以透過 <a href="/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Function_Object" title="en-US/docs/JavaScript/Guide/Predefined Core Objects#Function Object"><code>Function</code> constructor</a> 來定義, 類似 <a href="/en-US/docs/JavaScript/Guide/Functions#eval_Function" title="en-US/docs/JavaScript/Guide/Functions#eval_Function"><code>eval()</code></a>.</p>
 
 <h2 id="呼叫函式">呼叫函式</h2>
 
