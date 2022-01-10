@@ -6,62 +6,50 @@ tags:
   - JavaScript
   - Number
   - プロパティ
+  - ポリフィル
+browser-compat: javascript.builtins.Number.EPSILON
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number.EPSILON</code></strong> プロパティは、1 から 1 より大きな浮動小数点の最小値の差を表します。</p>
+**`Number.EPSILON`** プロパティは、1 から 1 より大きな浮動小数点の最小値の差を表します。
 
-<p>この静的なプロパティにアクセスするために {{jsxref("Number")}} オブジェクトを生成する必要はありません (<code>Number.EPSILON</code> を使用してください)。</p>
+この静的なプロパティにアクセスするために {{jsxref("Number")}} オブジェクトを生成する必要はありません (`Number.EPSILON` を使用してください)。
 
-<div>{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}{{js_property_attributes(0, 0, 0)}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 解説
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+`EPSILON` プロパティは およそ `2.2204460492503130808472633361816E-16`、または `2^-52` の値を持っています。
 
-<h2 id="Description" name="Description">解説</h2>
+## 例
 
-<p><code>EPSILON</code> プロパティは およそ <code>2.2204460492503130808472633361816E-16</code>、または <code>2<sup>-52</sup></code> の値を持っています。</p>
+### 同等性のテスト
 
-<h2 id="Examples" name="Examples">例</h2>
-
-<h3 id="Testing_equality" name="Testing_equality">同等なことをテストする</h3>
-
-<pre class="brush: js notranslate">x = 0.2;
+```js
+x = 0.2;
 y = 0.3;
 z = 0.1;
-equal = (Math.abs(x - y + z) &lt; Number.EPSILON);
-</pre>
+equal = (Math.abs(x - y + z) < Number.EPSILON);
+```
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## ポリフィル
 
-<pre class="brush: js notranslate">if (Number.EPSILON === undefined) {
+```js
+if (Number.EPSILON === undefined) {
     Number.EPSILON = Math.pow(2, -52);
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.epsilon', 'Number.EPSILON')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Number.EPSILON")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>所属先の {{jsxref("Number")}} オブジェクト</li>
-</ul>
+- `Number.EPSILON` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#ecmascript-number) で利用できます
+- 所属先の {{jsxref("Number")}} オブジェクト
