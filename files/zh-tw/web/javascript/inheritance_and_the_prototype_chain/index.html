@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 
 <p>以下是嘗試存取屬性時會發生的事：</p>
 
-<pre class="brush: js notranslate">// 利用含有 a 與 b 屬性的 f 函式，建立一個 o 物件：
+<pre class="brush: js">// 利用含有 a 與 b 屬性的 f 函式，建立一個 o 物件：
 let f = function () {
    this.a = 1;
    this.b = 2;
@@ -74,7 +74,7 @@ console.log(o.d); // undefined
 
 <p>當繼承函式執行時，<a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> 值指向繼承的物件，而不是在函式內擁有屬性的原型物件。</p>
 
-<pre class="brush: js notranslate">var o = {
+<pre class="brush: js">var o = {
   a: 2,
   m: function() {
     return this.a + 1;
@@ -98,7 +98,7 @@ console.log(p.m()); // 5
 
 <h3 id="含有語法結構的物件">含有語法結構的物件</h3>
 
-<pre class="brush: js notranslate">var o = {a: 1};
+<pre class="brush: js">var o = {a: 1};
 
 // 新建的 o 有個自己的 [[Prototype]] 稱為 Object.prototype
 // o 自己並沒有稱為「hasOwnProperty」的屬性
@@ -125,7 +125,7 @@ function f() {
 
 <p>JavaScript 建構子，就、只、是、個、被 <a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/new">new 運算子</a>呼叫的函式。</p>
 
-<pre class="brush: js notranslate">function Graph() {
+<pre class="brush: js">function Graph() {
   this.vertices = [];
   this.edges = [];
 }
@@ -145,7 +145,7 @@ var g = new Graph();
 
 <p>ECMAScript 5 引入了新方法：{{jsxref("Object.create()")}}。呼叫這個方法就可以建立新的物件。這個物件的原型，為函式的第一個參數。</p>
 
-<pre class="brush: js notranslate">var a = {a: 1};
+<pre class="brush: js">var a = {a: 1};
 // a ---&gt; Object.prototype ---&gt; null
 
 var b = Object.create(a);
@@ -165,7 +165,7 @@ console.log(d.hasOwnProperty);
 
 <p>ECMAScript 2015 引入了新的<a href="/zh-TW/docs/Web/JavaScript/Reference/Classes">類別</a>實做。儘管對那些基於類別的開發者來說，這種結構體令他們感到熟悉，它們依舊不一樣。JavaScript 依舊是基於原型的。新的關鍵字包括 {{jsxref("Statements/class", "class")}}、{{jsxref("Classes/constructor", "constructor")}}、{{jsxref("Classes/static", "static")}}、{{jsxref("Classes/extends", "extends")}}、{{jsxref("Operators/super", "super")}}。</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 
 class Polygon {
   constructor(height, width) {
@@ -198,7 +198,7 @@ var square = new Square(2);
 
 <p>要檢查物件<em>本身</em>有沒有指定的屬性、也不需要查找整個原型鏈時，你必須使用由 <code>Object.prototype</code> 繼承的 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"><code>hasOwnProperty</code></a> 方法。</p>
 
-<pre class="brush: js notranslate">console.log(g.hasOwnProperty('vertices'));
+<pre class="brush: js">console.log(g.hasOwnProperty('vertices'));
 // true
 
 console.log(g.hasOwnProperty('nope'));
@@ -227,7 +227,7 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
 
 <p><code>B</code> 要繼承自 <code>A</code>：</p>
 
-<pre class="brush: js notranslate">function A(a) {
+<pre class="brush: js">function A(a) {
   this.varA = a;
 }
 
@@ -291,17 +291,17 @@ b.doSomething();
 
 <p>因此當你：</p>
 
-<pre class="brush: js notranslate">var o = new Foo();</pre>
+<pre class="brush: js">var o = new Foo();</pre>
 
 <p>JavaScript 其實會：</p>
 
-<pre class="brush: js notranslate">var o = new Object();
+<pre class="brush: js">var o = new Object();
 o.[[Prototype]] = Foo.prototype;
 Foo.call(o);</pre>
 
 <p>或偶爾這樣：</p>
 
-<pre class="brush: js notranslate">o.someProp;</pre>
+<pre class="brush: js">o.someProp;</pre>
 
 <p>時，它檢查了 <code>o</code> 有沒有 <code>someProp</code> 屬性。如果沒有，就檢查 <code>Object.getPrototypeOf(o).someProp</code>；再沒有就檢查 <code>Object.getPrototypeOf(Object.getPrototypeOf(o)).someProp</code>，依此類推。</p>
 

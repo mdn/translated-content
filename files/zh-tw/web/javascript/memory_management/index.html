@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Memory_Management
 
 <p>為了不讓開發者對配置感到困擾，JavaScript 會在宣告值的同時完成記憶體配置</p>
 
-<pre class="brush: js notranslate">var n = 123; // 配置一記憶體空間給數字
+<pre class="brush: js">var n = 123; // 配置一記憶體空間給數字
 var s = 'azerty'; // 配置記憶體空間給字串
 
 var o = {
@@ -57,13 +57,13 @@ someElement.addEventListener('click', function() {
 
 <p>有些函式呼叫後產生物件配置。</p>
 
-<pre class="brush: js notranslate">var d = new Date(); // 配置一個日期物件
+<pre class="brush: js">var d = new Date(); // 配置一個日期物件
 
 var e = document.createElement('div'); // 配置一個 DOM 物件</pre>
 
 <p>有些方法配置新的值或物件：</p>
 
-<pre class="brush: js notranslate">var s = 'azerty';
+<pre class="brush: js">var s = 'azerty';
 var s2 = s.substr(0, 3); // s2 是一個新字串
 // 因為字串是一種不可變的值，
 // JavaScript 會決定不分配新的記憶體，
@@ -104,7 +104,7 @@ var a3 = a.concat(a2);
 
 <h4 id="範例">範例</h4>
 
-<pre class="brush: js notranslate">var o = {
+<pre class="brush: js">var o = {
   a: {
     b: 2
   }
@@ -135,7 +135,7 @@ oa = null; // 現在把 oa 變成 null
 
 <p>當涉及到循環時有一個限制。在下面的例子中，創造兩個物件並相互參考，從而製作一個循環。當呼叫函式時，他們應該超出作用範圍，因此他們實際上是無用且可釋放。但垃圾回收參考計數演算法會認為，兩個物件都至少被參考一次，因此兩個都是不能被回收的。</p>
 
-<pre class="brush: js notranslate">function f() {
+<pre class="brush: js">function f() {
   var o = {};
   var o2 = {};
   o.a = o2; // o 參考 o2
@@ -151,7 +151,7 @@ f();
 
 <p>Internet Explorer 6和7有一個DOM物件的垃圾回收參考計數。循環是一個造成記憶體洩漏(memory leaks)的常見問題：</p>
 
-<pre class="brush: js notranslate">var div;
+<pre class="brush: js">var div;
 window.onload = function() {
   div = document.getElementById('myDivElement');
   div.circularReference = div;
@@ -193,7 +193,7 @@ window.onload = function() {
 
 <p>We can also expose the garbage collector for debugging memory issues using a flag and the <a href="https://nodejs.org/en/docs/guides/debugging-getting-started/">Chrome Debugger</a>:</p>
 
-<pre class="notranslate">node --expose-gc --inspect index.js</pre>
+<pre>node --expose-gc --inspect index.js</pre>
 
 <h2 id="可以參考">可以參考</h2>
 

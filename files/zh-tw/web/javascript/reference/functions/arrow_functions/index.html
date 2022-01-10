@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 
 <h2 id="基本語法">基本語法</h2>
 
-<pre class="syntaxbox notranslate">(參數1, 參數2, …, 參數N) =&gt; { 陳述式; }
+<pre class="syntaxbox">(參數1, 參數2, …, 參數N) =&gt; { 陳述式; }
 
 (參數1, 參數2, …, 參數N) =&gt; 表示式;
 // 等相同(參數1, 參數2, …, 參數N) =&gt; { return 表示式; }
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 
 <h2 id="進階語法">進階語法</h2>
 
-<pre class="syntaxbox notranslate">// 用大括號將內容括起來，返回一個物件字面值表示法：
+<pre class="syntaxbox">// 用大括號將內容括起來，返回一個物件字面值表示法：
 params =&gt; ({foo: bar})
 
 // 支援<a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters">其餘參數</a>與<a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters">預設參數</a>
@@ -46,7 +46,7 @@ var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) =&gt; a + b + c; f(); // 6
 
 <h3 id="更短的函式寫法">更短的函式寫法</h3>
 
-<pre class="brush: js notranslate">var elements = [
+<pre class="brush: js">var elements = [
   'Hydrogen',
   'Helium',
   'Lithium',
@@ -96,7 +96,7 @@ elements.map(({ length }) =&gt; length); // [8, 6, 7, 9]
 
 <p>事實證明這對物件導向程式設計來說並不理想。</p>
 
-<pre class="brush: js notranslate">function Person() {
+<pre class="brush: js">function Person() {
   // Person() 建構式將 this 定義為它自己的一個實體
   this.age = 0;
 
@@ -112,7 +112,7 @@ var p = new Person();</pre>
 
 <p>在 ECMAScript 3/5 裡面，有關 <code>this</code> 的問題，可以透過指派 <code>this</code> 值給可以關閉的變數解決。</p>
 
-<pre class="brush: js notranslate">function Person() {
+<pre class="brush: js">function Person() {
   var self = this; // 有些人喜歡 `that` 而不是 `self`.
                    // 選好一種取法後始終如一
   self.age = 0;
@@ -129,7 +129,7 @@ var p = new Person();</pre>
 
 <p>因此，在以下程式碼內，傳遞給 <code>setInterval</code> 的 箭頭函式中的<code>this</code> ，會與封閉函式的 <code>this</code> 值相同：</p>
 
-<pre class="brush: js notranslate">function Person(){
+<pre class="brush: js">function Person(){
   this.age = 0;
 
   setInterval(() =&gt; {
@@ -143,7 +143,7 @@ var p = new Person();</pre>
 
 <p>由於 <code>this</code> 變數具有詞彙上綁定意義，所以<a href="/zh-TW/docs/Web/JavaScript/Reference/Strict_mode">嚴格模式</a>的宣告對 <code>this</code> 的作用將被忽略。</p>
 
-<pre class="brush: js notranslate">var f = () =&gt; {'use strict'; return this};
+<pre class="brush: js">var f = () =&gt; {'use strict'; return this};
 f() === window; // 或是 global 物件</pre>
 
 <p>但嚴格模式的其他作用依舊存在。</p>
@@ -152,7 +152,7 @@ f() === window; // 或是 global 物件</pre>
 
 <p>由於箭頭函式並沒有自己的 <code>this</code>，所以透過 <code>call()</code> 或 <code>apply()</code> 呼叫箭頭函式只能傳入參數。<code>thisArg</code> 將會被忽略。</p>
 
-<pre class="brush: js notranslate">var adder = {
+<pre class="brush: js">var adder = {
   base : 1,
   add : function(a) {
     var f = v =&gt; v + this.base;
@@ -174,7 +174,7 @@ console.log(adder.addThruCall(1)); // 依舊顯示 2
 
 <p>箭頭函式並沒有自己的 <a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code> 物件</a>。所以在此例中，<code>arguments</code> 只是參考到 enclosing 作用域裡面的相同變數：</p>
 
-<pre class="brush: js notranslate">var arguments = [1, 2, 3];
+<pre class="brush: js">var arguments = [1, 2, 3];
 var arr = () =&gt; arguments[0];
 
 arr(); // 1
@@ -188,7 +188,7 @@ foo(1); // 2</pre>
 
 <p>大多時候，使用<a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters">其餘參數</a> 是取代 <code>arguments</code> 物件的較好方式。</p>
 
-<pre class="brush: js notranslate">function foo(n) {
+<pre class="brush: js">function foo(n) {
   var f = (...args) =&gt; args[0] + n;
   return f(10);
 }
@@ -199,7 +199,7 @@ foo(1); // 11</pre>
 
 <p>如同前述，箭頭函式運算式最適合用在非方法的函式。來看看如果要把它們當成方法來用，會發生什麼事：</p>
 
-<pre class="brush: js notranslate"><code>'use strict';
+<pre class="brush: js"><code>'use strict';
 var obj = {
   i: 10,
   b: () =&gt; console.log(this.i, this),
@@ -212,7 +212,7 @@ obj.c(); // 印出 10, Object {...}</code></pre>
 
 <p>箭頭函式並沒有自己的 <code>this</code>。另一個例子與 {{jsxref("Object.defineProperty()")}} 有關：</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 
 var obj = {
   a: 10
@@ -230,14 +230,14 @@ Object.defineProperty(obj, 'b', {
 
 <p>箭頭函式不可作為建構式使用；若使用於建構式，會在使用 <code>new</code> 時候拋出錯誤。</p>
 
-<pre class="brush: js notranslate">var Foo = () =&gt; {};
+<pre class="brush: js">var Foo = () =&gt; {};
 var foo = new Foo(); // TypeError: Foo is not a constructor</pre>
 
 <h3 id="使用_prototype_屬性">使用 <code>prototype</code> 屬性</h3>
 
 <p>箭頭函式並沒有原型（<code>prototype</code>）屬性。</p>
 
-<pre class="brush: js notranslate">var Foo = () =&gt; {};
+<pre class="brush: js">var Foo = () =&gt; {};
 console.log(Foo.prototype); // undefined
 </pre>
 
@@ -251,21 +251,21 @@ console.log(Foo.prototype); // undefined
 
 <p>在 concise body 裡面只需要輸入運算式，就會附上內建的回傳。在 block body 裡面就必須附上明確的 <code>return</code> 宣告。</p>
 
-<pre class="brush: js notranslate"><code>var func = x =&gt; x * x;                  // concise 語法會內建 "return"
+<pre class="brush: js"><code>var func = x =&gt; x * x;                  // concise 語法會內建 "return"
 var func = (x, y) =&gt; { return x + y; }; // block body 需要明確的 "return"</code></pre>
 
 <h2 id="回傳物件字面值">回傳物件字面值</h2>
 
 <p>請注意只使用 <code>params =&gt; {object:literal}</code> 並不會按照期望般回傳物件字面值（object literal）。</p>
 
-<pre class="brush: js notranslate"><code>var func = () =&gt; { foo: 1 };               // Calling func() returns undefined!
+<pre class="brush: js"><code>var func = () =&gt; { foo: 1 };               // Calling func() returns undefined!
 var func = () =&gt; { foo: function() {} };   // SyntaxError: Unexpected token (</code></pre>
 
 <p>因為在大括弧（<code>{}</code>）裡面的文字會被解析為有序宣告（例如 <code>foo</code> 會被當作標記（label）、而不是物件的 key ）</p>
 
 <p>要記得把物件字面值包在圓括弧內。</p>
 
-<pre class="brush: js notranslate"><code>var func = () =&gt; ({foo: 1});
+<pre class="brush: js"><code>var func = () =&gt; ({foo: 1});
 var func = () =&gt; ({ foo: function() {} }); </code>
 </pre>
 
@@ -273,14 +273,14 @@ var func = () =&gt; ({ foo: function() {} }); </code>
 
 <p>箭頭函式不可以在參數及箭頭間包含換行。</p>
 
-<pre class="brush: js notranslate"><code>var func = ()
+<pre class="brush: js"><code>var func = ()
            =&gt; 1; // SyntaxError: expected expression, got '=&gt;'</code></pre>
 
 <h2 id="Parsing_order">Parsing order</h2>
 
 <p>箭頭函式的箭頭儘管不是操作符，但藉著<a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">運算子優先等級</a>，箭頭函式有著和普通函式不相同的特殊解析規則。</p>
 
-<pre class="brush: js notranslate"><code>let callback;
+<pre class="brush: js"><code>let callback;
 
 callback = callback || function() {}; // ok
 callback = callback || () =&gt; {};      // SyntaxError: invalid arrow-function arguments
@@ -288,7 +288,7 @@ callback = callback || (() =&gt; {});    // ok</code></pre>
 
 <h2 id="更多範例">更多範例</h2>
 
-<pre class="brush: js notranslate">// 回傳 undefined 的箭頭函式
+<pre class="brush: js">// 回傳 undefined 的箭頭函式
 let empty = () =&gt; {};
 
 (() =&gt; "foobar")() // 回傳 "foobar"
