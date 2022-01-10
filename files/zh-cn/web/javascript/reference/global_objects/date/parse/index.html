@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <p>显式调用：</p>
 
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 <pre class="syntaxbox"><code>new Date(<var>dateString</var>).getTime()</code>
 </pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>dateString</code></dt>
@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
  <dd>一个表示从1970-1-1 00:00:00 UTC到给定日期字符串所表示时间的毫秒数的数值。如果参数不能解析为一个有效的日期，则返回{{jsxref("NaN")}}。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>parse</code> 方法接受一个日期字符串（例如 "<code>Dec 25, 1995</code>"），并返回从1970-1-1 00:00:00 UTC到该日期字符串所表示日期的毫秒数。该方法在基于字符串值设置日期值时很有用，例如结合使用{{jsxref("Global_Objects/Date/setTime", "setTime()")}} 方法和 {{jsxref("Global_Objects/Date", "Date()")}} 构造函数。</p>
 
@@ -60,7 +60,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 <p>由于 <code>parse()</code> 是 {{jsxref("Date")}} 的一个静态方法 , 所以应该使用 <code>Date.parse()</code> 来调用，而不是作为 {{jsxref("Date")}} 的实例方法。</p>
 
-<h3 id="Differences in assumed time-zone" name="Differences in assumed time-zone">默认时区的区别</h3>
+<h3 id="Differences in assumed time-zone">默认时区的区别</h3>
 
 <p>当输入为 "<code>March 7, 2014</code>" 时， <code>parse()</code>  将默认使用本地时区。但如果使用 ISO  格式如 <code>"2014-03-07"</code> ，则会被默认为 UTC (ES5 和 ECMAScript 2015) 时区。  因此除非系统本地时区为 UTC，由这些字符串解析出的 {{jsxref("Date")}}  对象可能会因为 ECMAScript  版本不同而代表不同的时间。这意味着两个看起来等效的字符串可能因为它们的格式不同而被转换成不同的值。</p>
 
@@ -91,9 +91,9 @@ new Date('2014-25-23').toISOString();
 Date.parse('foo-bar 2014');
 // 返回: NaN</pre>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
-<h3 id="Example:_Using_parse" name="Example:_Using_parse">例子：使用 <code>Date.parse()</code></h3>
+<h3 id="Example:_Using_parse">例子：使用 <code>Date.parse()</code></h3>
 
 <p>如果 <code>IPOdate</code> 是一个已经存在的 {{jsxref("Date")}} 对象，则可以把其设置为本地时间 1995年8月9日。如下：</p>
 
@@ -169,11 +169,11 @@ Date.parse('foo-bar 2014');
 
 <p>{{Compat("javascript.builtins.Date.parse")}}</p>
 
-<h2 id="See_also" name="See_also">兼容性提示</h2>
+<h2 id="See_also">兼容性提示</h2>
 
 <p>Firefox 49 {{geckoRelease(49)}} 修改了解析2位数年份的方式，从和 Internet Explorer 一致改为和 Google Chrome  浏览器一致。现在，2位数的年份小于等于 <code>50</code>  的将会被解析为21世纪的年份。比如， <code>04/16/17</code> ，在之前会被解析为 1917年4月16日，现在将被解析为 2017年4月16日。为了避免任何可能的同步问题或者有歧义的年份，推荐使用 ISO 8601 格式如 "2017-04-16" ({{bug(1265136)}})。</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Date.UTC()")}}</li>

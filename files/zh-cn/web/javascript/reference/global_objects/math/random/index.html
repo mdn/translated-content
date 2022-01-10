@@ -19,15 +19,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 <p><code>Math.random()</code> <em>不能</em>提供像密码一样安全的随机数字。不要使用它们来处理有关安全的事情。使用Web Crypto API 来代替, 和更精确的{{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}} 方法.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Math.random()</code></pre>
 
-<h3 id="Parameters" name="Parameters">返回值</h3>
+<h3 id="Parameters">返回值</h3>
 
 <p>一个浮点型伪随机数字，在<code>0</code>（包括0）和<code>1</code>（不包括）之间。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <p>请注意, 由于 JavaScript 中的数字是 IEEE 754 浮点数字，具有最近舍入（ round-to-nearest-even）的行为, 因此以下函数的范围 (不包括<code>Math.random()</code> 本身) 并不准确。如果选择了非常大的边界 (2<sup>53</sup> 或更高), 在极罕见的情况下会计算通常-排除（usually-excluded）的上界。（注：round-to-nearest-even采用最近舍入的去偶数舍入的方式，对.5的舍入上，采用取偶数的方式）</p>
 

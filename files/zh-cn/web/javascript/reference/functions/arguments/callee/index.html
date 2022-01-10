@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Functions/arguments/callee
 
 <p><code><strong>arguments.callee </strong></code>属性包含当前正在执行的函数。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><strong><code>callee</code></strong> 是 <code>arguments</code> 对象的一个属性。它可以用于引用该函数的函数体内当前正在执行的函数。这在函数的名称是未知时很有用，例如在没有名称的函数表达式 (也称为“匿名函数”)内。</p>
 
@@ -82,9 +82,9 @@ sillyFunction();</pre>
 
 <p>如果 JavaScript 解释器不能保证所有提供的参数数量在被调用的时候都存在，那么它需要在行内代码插入检查，或者不能内联这个函数。现在在这个特殊例子里一个智能的解释器应该能重排检查而更优，并检查任何将不用到的值。然而在许多的情况里那是不可能的，也因此它不能够内联。 </p>
 
-<h2 id="Example.3A_Using_arguments.callee_in_an_anonymous_recursive_function" name="Example.3A_Using_arguments.callee_in_an_anonymous_recursive_function">例子</h2>
+<h2 id="Example.3A_Using_arguments.callee_in_an_anonymous_recursive_function">例子</h2>
 
-<h3 id="Example.3A_Using_arguments.callee_in_an_anonymous_recursive_function" name="Example.3A_Using_arguments.callee_in_an_anonymous_recursive_function">在匿名递归函数中使用 <code>arguments.callee</code></h3>
+<h3 id="Example.3A_Using_arguments.callee_in_an_anonymous_recursive_function">在匿名递归函数中使用 <code>arguments.callee</code></h3>
 
 <p>递归函数必须能够引用它本身。很典型的，函数通过自己的名字调用自己。然而，匿名函数 (通过 <a href="/en-US/docs/JavaScript/Reference/Operators/function" title="JavaScript/Reference/Operators/Special/function">函数表达式</a> 或者 <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function" title="JavaScript/Reference/Global_Objects/Function">函数构造器 </a>创建</code>) 没有名称。因此如果没有可访问的变量指向该函数，唯一能引用它的方式就是通过 <code>arguments.callee</code>。</p>
 

@@ -15,11 +15,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}</div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre><var>regexObj</var>.test(str)</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>str</code></dt>
@@ -30,13 +30,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 <p>如果正则表达式与指定的字符串匹配 ，返回<code>true</code>；否则<code>false</code>。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>当你想要知道一个正则表达式是否与指定的字符串匹配时，就可以使用 <code>test()</code>（类似于<code> </code> {{jsxref("String.prototype.search()")}} 方法），差别在于test返回一个布尔值，而 search 返回索引（如果找到）或者-1（如果没找到）；若想知道更多信息（然而执行比较慢），可使用{{jsxref("RegExp.prototype.exec()", "exec()")}} 方法（类似于 {{jsxref("String.prototype.match()")}} 方法）。 和 {{jsxref("RegExp.prototype.exec()", "exec()")}} (或者组合使用),一样，在相同的全局正则表达式实例上多次调用<code><code>test</code></code>将会越过之前的匹配。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Using_test" name="Example:_Using_test">使用 <code>test()</code></h3>
+<h3 id="Example_Using_test">使用 <code>test()</code></h3>
 
 <p>一个简单的例子，测试 "hello" 是否包含在字符串的最开始，返回布尔值。</p>
 

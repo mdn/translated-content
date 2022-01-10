@@ -13,11 +13,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 
 <p>{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>isNaN(value)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>value</code></dt>
@@ -28,13 +28,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 
 <p>如果给定值为 {{jsxref("NaN")}}则返回值为<code>true</code>；否则为<code>false</code>。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<h3 id="The_necessity_of_an_isNaN_function" name="The_necessity_of_an_isNaN_function"><code>isNaN</code> 函数的必要性</h3>
+<h3 id="The_necessity_of_an_isNaN_function"><code>isNaN</code> 函数的必要性</h3>
 
 <p>与 JavaScript 中其他的值不同，{{jsxref("Global_Objects/NaN", "NaN")}}不能通过相等操作符（== 和 ===）来判断 ，因为 <code>NaN == NaN</code> 和 <code>NaN === NaN</code> 都会返回 <code>false</code>。 因此，<code>isNaN</code> 就很有必要了。</p>
 
-<h3 id="Origin_of_NaN_values" name="Origin_of_NaN_values"><code>NaN值</code>的产生</h3>
+<h3 id="Origin_of_NaN_values"><code>NaN值</code>的产生</h3>
 
 <p>当算术运算返回一个未定义的或无法表示的值时，<code>NaN</code>就产生了。但是，<code>NaN</code>并不一定用于表示某些值超出表示范围的情况。将某些不能强制转换为数值的非数值转换为数值的时候，也会得到<code>NaN</code>。</p>
 
@@ -53,7 +53,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
     return n !== n;
 };</pre>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <pre class="brush: js">isNaN(NaN);       // true
 isNaN(undefined); // true

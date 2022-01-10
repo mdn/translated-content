@@ -13,11 +13,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 
 <p><code><strong>Object.isFrozen()</strong></code>方法判断一个对象是否被{{jsxref("Object.freeze()", "冻结", "", 1)}}。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Object.isFrozen(<var>obj</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>obj</code></dt>
@@ -28,11 +28,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
  <dd>表示给定对象是否被冻结的{{jsxref("Boolean")}}。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>一个对象是冻结的是指它不可{{jsxref("Object.isExtensible", "扩展")}}，所有属性都是不可配置的，且所有数据属性（即没有getter或setter组件的访问器的属性）都是不可写的。</p>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
 <pre class="brush: js">// 一个对象默认是可扩展的,所以它也是非冻结的.
 Object.isFrozen({}); // === false
@@ -140,7 +140,7 @@ Object.isFrozen(1);
 
 <p>{{Compat("javascript.builtins.Object.isFrozen")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Object.freeze()")}}</li>

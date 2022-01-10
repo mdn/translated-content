@@ -18,13 +18,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre><var>var new_array = arr</var>.map(function <var>callback(currentValue[, index[, array]]) {
  // Return element for new_array </var>
 <var>}</var>[, <var>thisArg</var>])</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <p>一个由原数组每个元素执行回调函数的结果组成的新数组。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>map</code> 方法会给原数组中的每个元素都按顺序调用一次  <code>callback</code> 函数。<code>callback</code> 每次执行后的返回值（包括 {{jsxref("undefined")}}）组合起来形成一个新数组。 <code>callback</code> 函数只会在有值的索引上被调用；那些从来没被赋过值或者使用 <code>delete</code> 删除的索引则不会被调用。</p>
 
@@ -62,9 +62,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <p>根据规范中定义的算法，如果被map调用的数组是离散的，新数组将也是离散的保持相同的索引为空。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Mapping_an_array_of_numbers_to_an_array_of_square_roots" name="Example:_Mapping_an_array_of_numbers_to_an_array_of_square_roots">求数组中每个元素的平方根</h3>
+<h3 id="Example_Mapping_an_array_of_numbers_to_an_array_of_square_roots">求数组中每个元素的平方根</h3>
 
 <p>下面的代码创建了一个新数组，值为原数组中对应数字的平方根。</p>
 
@@ -94,7 +94,7 @@ var reformattedArray = kvArray.map(function(obj) {
 //  {key: 3, value: 30}]
 </pre>
 
-<h3 id="Example_Pluralizing_the_words_.28strings.29_in_an_array" name="Example:_Pluralizing_the_words_.28strings.29_in_an_array">使用一个包含一个参数的函数来mapping(构建)一个数字数组</h3>
+<h3 id="Example_Pluralizing_the_words_.28strings.29_in_an_array">使用一个包含一个参数的函数来mapping(构建)一个数字数组</h3>
 
 <p>下面的代码表示了当函数需要一个参数时map的工作方式。当map循环遍历原始数组时，这个参数会自动被分配成数组中对应的每个元素。</p>
 
@@ -106,7 +106,7 @@ var doubles = numbers.map(function(num) {
 // doubles数组的值为： [2, 8, 18]
 // numbers数组未被修改： [1, 4, 9]</pre>
 
-<h3 id="Example_using_map_generically" name="Example:_using_map_generically">一般的<code>map</code> 方法</h3>
+<h3 id="Example_using_map_generically">一般的<code>map</code> 方法</h3>
 
 <p>下面的例子演示如何在一个 {{jsxref("String")}}  上使用 map 方法获取字符串中每个字符所对应的 ASCII 码组成的数组：</p>
 
@@ -334,7 +334,7 @@ if (!Array.prototype.map) {
 <p>{{Compat("javascript.builtins.Array.map")}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.forEach()")}}</li>

@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 
 <p>{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <div class="blockIndicator note">
 <p><strong>Note:</strong> If you're writing ES6 compatible code, then <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameters</a> should be preferred.</p>
@@ -88,7 +88,7 @@ number
 <pre class="brush: js">var args = Array.from(arguments);
 var args = [...arguments];</pre>
 
-<h2 id="Properties" name="Properties">属性</h2>
+<h2 id="Properties">属性</h2>
 
 <dl>
  <dt><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee" title="JavaScript/Reference/Functions_and_function_scope/arguments/callee">arguments.callee</a></code></dt>
@@ -109,7 +109,7 @@ var args = [...arguments];</pre>
 <p>注意: 在严格模式下，<code>arguments</code>对象已与过往不同。<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator">arguments[@@iterator]</a></code>不再与函数的实际形参之间共享，同时caller属性也被移除。</p>
 </div>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
 <h3 id="遍历参数求和">遍历参数求和</h3>
 
@@ -125,7 +125,7 @@ add()                           // 0
 add(1)                          // 1
 add(1,2,3,4);                   // 10</pre>
 
-<h3 id="Example_Defining_function_that_concatenates_several_strings" name="Example:_Defining_function_that_concatenates_several_strings">定义连接字符串的函数</h3>
+<h3 id="Example_Defining_function_that_concatenates_several_strings">定义连接字符串的函数</h3>
 
 <p>这个例子定义了一个函数来连接字符串。这个函数唯一正式声明了的参数是一个字符串，该参数指定一个字符作为衔接点来连接字符串。该函数定义如下：</p>
 
@@ -145,7 +145,7 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 // returns "sage. basil. oregano. pepper. parsley"
 myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 
-<h3 id="Example_Defining_a_function_that_creates_HTML_lists" name="Example:_Defining_a_function_that_creates_HTML_lists">定义创建HTML列表的方法</h3>
+<h3 id="Example_Defining_a_function_that_creates_HTML_lists">定义创建HTML列表的方法</h3>
 
 <p>这个例子定义了一个函数通过一个字符串来创建HTML列表。这个函数唯一正式声明了的参数是一个字符。当该参数为 "<code>u</code>" 时，创建一个无序列表 (项目列表)；当该参数为 "<code>o</code>" 时，则创建一个有序列表 (编号列表)。该函数定义如下：</p>
 
@@ -259,7 +259,7 @@ func(); // undefined
 
 <p>{{Compat("javascript.functions.arguments")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Function")}}</li>

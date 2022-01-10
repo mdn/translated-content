@@ -5,22 +5,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 ---
 <div>{{JSRef("Global_Objects", "Number")}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><strong><code>toExponential()</code></strong> 方法以指数表示法返回该数值字符串表示形式。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>numObj</em>.toExponential(<em>fractionDigits</em>)</code></pre>
 
-<h3 id="Parameter" name="Parameter">参数</h3>
+<h3 id="Parameter">参数</h3>
 
 <dl>
  <dt>fractionDigits</dt>
  <dd>可选。一个整数，用来指定小数点后有几位数字。默认情况下用尽可能多的位数来显示数字。</dd>
 </dl>
 
-<h3 id="Returns" name="Returns">返回值</h3>
+<h3 id="Returns">返回值</h3>
 
 <p>一个用幂的形式 (科学记数法) 来表示{{jsxref("Number")}} 对象的字符串。小数点后以fractionDigits 提供的值来四舍五入。如果 <code>fractionDigits</code> 参数被忽略了，小数点后的将尽可能用最多的位数来表示该数值。</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 
 <p>如果一个数值的小数位数多余 <code>fractionDigits</code> 参数所提供的，则该数值将会在 <code>fractionDigits</code> 指定的小数位数处四舍五入。可以查看 {{jsxref("Number.toFixed", "toFixed()")}} 方法描述中关于四舍五入的讨论，同样应用于 <code>toExponential() </code>方法。</p>
 
-<h3 id="Throws" name="Throws">异常</h3>
+<h3 id="Throws">异常</h3>
 
 <dl>
  <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
  <dd>如果该方法在一个非数值类型对象上调用。</dd>
 </dl>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <pre class="brush:js">var numObj = 77.1234;
 
@@ -133,7 +133,7 @@ alert("77 .toExponential() is " + 77 .toExponential()); //输出 7.7e+1</pre>
 </table>
 </div>
 
-<h2 id="See_Also" name="See_Also">相关链接</h2>
+<h2 id="See_Also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Number.prototype.toFixed()")}}</li>

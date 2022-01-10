@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 
 <p>{{EmbedInteractiveExample("pages/js/object-getprototypeof.html")}}</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <pre class="brush: js">var proto = {};
 var obj = Object.create(proto);
@@ -65,7 +65,7 @@ Object.prototype === Object.getPrototypeOf( obj );              // true
 
 Object.prototype === Object.getPrototypeOf( {} );               // true</pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>在 ES5 中，如果参数不是一个对象类型，将抛出一个{{jsxref("TypeError")}}异常。在 ES2015 中，参数会被强制转换为一个 {{jsxref("Object")}}<strong>。</strong></p>
 
@@ -109,7 +109,7 @@ Object.getPrototypeOf('foo');
 
 <p>即使旧版本Opera不支持<code>Object.getPrototypeOf()</code>，Opera 10.50之后还支持非标准的 {{jsxref("Object.proto", "__proto__")}}属性。</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Object.prototype.isPrototypeOf")}}</li>

@@ -10,11 +10,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 
 <div>{{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}</div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>str</em>.match(regexp)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>regexp</code></dt>
@@ -42,11 +42,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
  <dd>一个{{jsxref("Array")}}，其内容取决于global（<code>g</code>）标志的存在与否，如果未找到匹配则为{{jsxref("null")}}。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>如果正则表达式不包含 <code>g </code>标志，<code>str.match()</code> 将返回与 {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}. 相同的结果。</p>
 
-<h3 id="Notes" name="Notes">参看：<code>RegExp</code> 方法</h3>
+<h3 id="Notes">参看：<code>RegExp</code> 方法</h3>
 
 <ul>
  <li>如果你需要知道一个字符串是否与一个正则表达式匹配 {{jsxref("RegExp")}} ，可使用 {{jsxref("RegExp.prototype.test()", "RegExp.test()")}} 。</li>
@@ -54,9 +54,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
  <li>如果你想要获得捕获组，并且设置了全局标志，你需要用 {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}  或者 {{jsxref("String.prototype.matchAll()", " String.prototype.matchAll()")}}</li>
 </ul>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Using_match" name="Example:_Using_match">例子：使用 <code>match</code></h3>
+<h3 id="Example_Using_match">例子：使用 <code>match</code></h3>
 
 <p>在下例中，使用 <code>match</code> 查找 "<code>Chapter</code>" 紧跟着 1 个或多个数值字符，再紧跟着一个小数点和数值字符 0 次或多次。正则表达式包含 <code>i</code> 标志，因此大小写会被忽略。</p>
 
@@ -78,7 +78,7 @@ console.log(found);
 // 'index' 属性(22) 是整个匹配从零开始的索引。
 // 'input' 属性是被解析的原始字符串。</pre>
 
-<h3 id="Example_Using_global_and_ignore_case_flags_with_match" name="Example:_Using_global_and_ignore_case_flags_with_match">例子：<code>match</code> 使用全局（global）和忽略大小写（ignore case）标志</h3>
+<h3 id="Example_Using_global_and_ignore_case_flags_with_match">例子：<code>match</code> 使用全局（global）和忽略大小写（ignore case）标志</h3>
 
 <p>下例展示了 <code>match</code> 使用 global 和 ignore case 标志。A-E、a-e 的所有字母将会作为一个数组的元素返回。</p>
 
@@ -204,7 +204,7 @@ str3.match(null);       // 返回["null"]</pre>
  <li>从 Gecko 49 {{geckoRelease(49)}} 开始 ， 不再支持非标准的标志参数 ({{bug(1108382)}}).</li>
 </ul>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("RegExp")}}</li>

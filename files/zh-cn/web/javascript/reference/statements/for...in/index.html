@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <p><strong><code>for...in</code>语句</strong>以任意顺序遍历一个对象的除<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a>以外的<a href="/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">可枚举</a>属性，包括继承的可枚举属性。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre>for (<var>variable</var> in <var>object</var>)
   statement</pre>
@@ -37,13 +37,13 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <p>如果你只要考虑对象本身的属性，而不是它的原型，那么使用 {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}} 或执行 {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} 来确定某属性是否是对象本身的属性（也能使用{{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable")}}）。或者，如果你知道不会有任何外部代码干扰，您可以使用检查方法扩展内置原型。</p>
 
-<h2 id="Example" name="Example">为什么用for ... in?</h2>
+<h2 id="Example">为什么用for ... in?</h2>
 
 <p><code>for ... in</code>是为遍历对象属性而构建的，不建议与数组一起使用，数组可以用<code>Array.prototype.forEach()</code>和<code>for ... of</code>，那么<code>for ... in</code>的到底有什么用呢？</p>
 
 <p>它最常用的地方应该是用于调试，可以更方便的去检查对象属性（通过输出到控制台或其他方式）。尽管对于处理存储数据，数组更实用些，但是你在处理有<code>key-value</code>数据（比如属性用作“键”），需要检查其中的任何键是否为某值的情况时，还是推荐用<code>for ... in</code>。</p>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <p>下面的函数接受一个对象作为参数。被调用时迭代传入对象的所有可枚举属性然后返回一个所有属性名和其对应值的字符串。</p>
 
