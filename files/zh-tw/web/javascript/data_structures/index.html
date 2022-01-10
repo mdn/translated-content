@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Data_structures
 
 <p>JavaScript 是弱型別，也能說是動態的程式語言。這代表你不必特別宣告變數的型別。程式在運作時，型別會自動轉換。這也代表你可以以不同的型別使用同一個變數。</p>
 
-<pre class="brush: js notranslate">var foo = 42;    // foo 目前是數字
+<pre class="brush: js">var foo = 42;    // foo 目前是數字
 var foo = 'bar'; // foo 目前是字串
 var foo = true;  // foo 目前是布林值
 </pre>
@@ -59,7 +59,7 @@ var foo = true;  // foo 目前是布林值
 
 <p>The number type has only one integer that has two representations: 0 is represented as -0 and +0. ("0" is an alias for +0). In the praxis, this has almost no impact. For example <code>+0 === -0</code> is <code>true</code>. However, you are able to notice this when you divide by zero:</p>
 
-<pre class="brush: js notranslate">&gt; 42 / +0
+<pre class="brush: js">&gt; 42 / +0
 Infinity
 &gt; 42 / -0
 -Infinity

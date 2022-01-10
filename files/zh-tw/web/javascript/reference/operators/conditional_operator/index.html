@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 
 <h2 id="語法">語法</h2>
 
-<pre class="syntaxbox notranslate"><var>condition</var> ? <var>exprIfTrue</var> : <var>exprIfFalse</var></pre>
+<pre class="syntaxbox"><var>condition</var> ? <var>exprIfTrue</var> : <var>exprIfFalse</var></pre>
 
 <h3 id="參數">參數</h3>
 
@@ -32,14 +32,14 @@ translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 
 <p>一個簡單的範例:</p>
 
-<pre class="brush: js notranslate">var age = 26;
+<pre class="brush: js">var age = 26;
 var beverage = (age &gt;= 21) ? "Beer" : "Juice";
 console.log(beverage); // "Beer"
 </pre>
 
 <p>一個常用來處理 <code>null</code> 的用法 : </p>
 
-<pre class="brush: js notranslate">function greeting(person) {
+<pre class="brush: js">function greeting(person) {
     var name = person ? person.name : "stranger";
     return "Howdy, " + name;
 }
@@ -52,7 +52,7 @@ console.log(greeting(null));             // "Howdy, stranger"
 
 <p>條件 (三元) 運算子是右相依性的 (right-associative), 代表他可以以下面的方式鏈結 , 類似於 <code>if … else if … else if … else</code> 的鏈結方法 :</p>
 
-<pre class="brush: js notranslate">function example(…) {
+<pre class="brush: js">function example(…) {
     return condition1 ? value1
          : condition2 ? value2
          : condition3 ? value3
