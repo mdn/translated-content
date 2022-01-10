@@ -53,7 +53,7 @@ var foo = true;  // foo 目前是布林值
 
 <h3 id="數字型別">數字型別</h3>
 
-<p>根據 ECMAScript 標準，數字型別只有一種：<a href="https://zh.wikipedia.org/wiki/%E9%9B%99%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8">雙精度 64 位元二進制格式 IEEE 754 值</a>（在 -(2<sup>53</sup> -1) and 2<sup>53</sup> -1 之間的數字）。<strong>而整數並沒有指定的型別</strong>。數字除了能代表浮點數以外，還有三個符號值：<code>+Infinity</code>、<code>-Infinity</code>、<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a>（not-a-number，非數字）。</p>
+<p>根據 ECMAScript 標準，數字型別只有一種：<a href="https://zh.wikipedia.org/wiki/%E9%9B%99%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8">雙精度 64 位元二進制格式 IEEE 754 值</a>（在 -(2^53 -1) and 2^53 -1 之間的數字）。<strong>而整數並沒有指定的型別</strong>。數字除了能代表浮點數以外，還有三個符號值：<code>+Infinity</code>、<code>-Infinity</code>、<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a>（not-a-number，非數字）。</p>
 
 <p>要檢查在 <code>+/-Infinity</code> 內可用的最大值或最小值，可以用 {{jsxref("Number.MAX_VALUE")}} 或 {{jsxref("Number.MIN_VALUE")}} 常數。從 ECMAScript 6 開始，也可以透過 {{jsxref("Number.isSafeInteger()")}}、{{jsxref("Number.MAX_SAFE_INTEGER")}}、{{jsxref("Number.MIN_SAFE_INTEGER")}} 檢查某數字是否為雙精度浮點值之間。Beyond this range, integers in JavaScript are not safe anymore and will be a double-precision floating point approximation of the value.</p>
 

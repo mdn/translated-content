@@ -14,9 +14,9 @@ items.length;
 
 <h2 id="描述">描述</h2>
 
-<p><code>length</code> 屬性的值必為一正整數，其值必介於 0 ～ 2<sup>32</sup> (不包含)之間.</p>
+<p><code>length</code> 屬性的值必為一正整數，其值必介於 0 ～ 2^32 (不包含)之間.</p>
 
-<pre class="brush: js">var namelistA = new Array(4294967296); //2<sup>32</sup><sup> = </sup>4294967296
+<pre class="brush: js">var namelistA = new Array(4294967296); //2^32 = 4294967296
 var namelistC = new Array(-100) //負數
 
 console.log(namelistA.length); //RangeError: Invalid array length
@@ -25,7 +25,7 @@ console.log(namelistC.length); //RangeError: Invalid array length
 
 
 var namelistB = [];
-namelistB.length = Math.pow(2,32)-1; //將長度設定介於 0 ~ 2<sup>32 </sup>-1
+namelistB.length = Math.pow(2,32)-1; //將長度設定介於 0 ~ 2^32 -1
 console.log(namelistB.length);
 
 //4294967295</pre>
