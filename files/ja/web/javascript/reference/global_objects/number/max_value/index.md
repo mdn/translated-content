@@ -6,59 +6,44 @@ tags:
   - Number
   - プロパティ
   - リファレンス
+browser-compat: javascript.builtins.Number.MAX_VALUE
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number.MAX_VALUE</code></strong> プロパティは、 JavaScript において表すことが可能な最大の数値です。</p>
+**`Number.MAX_VALUE`** プロパティは、 JavaScript において表すことが可能な最大の数値です。
 
-<div>{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}{{js_property_attributes(0, 0, 0)}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 解説
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+`MAX_VALUE` プロパティはおよそ `1.79E+308`、または 2^1024 の値です。`MAX_VALUE` よりも大きな数値は {{jsxref("Infinity")}} で表されます。
 
-<h2 id="Description" name="Description">解説</h2>
+`MAX_VALUE` は {{jsxref("Number")}} オブジェクトの静的なプロパティですので、 生成した {{jsxref("Number")}} オブジェクトのプロパティとしてではなく、常に `Number.MAX_VALUE` として使用してください。
 
-<p><code>MAX_VALUE</code> プロパティはおよそ <code>1.79E+308</code>、または 2<sup>1024</sup> の値です。<code>MAX_VALUE</code> よりも大きな数値は {{jsxref("Infinity")}} で表されます。</p>
+## 例
 
-<p><code>MAX_VALUE</code> は {{jsxref("Number")}} オブジェクトの静的なプロパティですので、 生成した {{jsxref("Number")}} オブジェクトのプロパティとしてではなく、常に <code>Number.MAX_VALUE</code> として使用してください。</p>
+### MAX_VALUE の使用
 
-<h2 id="Examples" name="Examples">例</h2>
+以下のコードは、2 つの数値を掛け算しています。その結果が `MAX_VALUE` より小さいか等しい場合は、`func1` 関数が呼び出されます。それ以外の場合は、`func2` 関数が呼び出されます。
 
-<h3 id="Using_MAX_VALUE" name="Using_MAX_VALUE">MAX_VALUE の使用</h3>
-
-<p>以下のコードは、2 つの数値を掛け算しています。その結果が <code>MAX_VALUE</code> より小さいか等しい場合は、<code>func1</code> 関数が呼び出されます。それ以外の場合は、<code>func2</code> 関数が呼び出されます。</p>
-
-<pre class="brush: js notranslate">if (num1 * num2 &gt;= Number.MAX_VALUE) {
+```js
+if (num1 * num2 <= Number.MAX_VALUE) {
   func1();
 } else {
   func2();
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.max_value', 'Number.MAX_VALUE')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Number.MAX_VALUE")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Number.MIN_VALUE")}}</li>
- <li>所属先の {{jsxref("Number")}} オブジェクト</li>
-</ul>
+- {{jsxref("Number.MIN_VALUE")}}
+- 所属先の {{jsxref("Number")}} オブジェクト
