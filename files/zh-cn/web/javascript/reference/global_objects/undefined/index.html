@@ -101,9 +101,9 @@ if(y === undefined) {                // ReferenceError: y is not defined
 
 <p>但是，技术方面看来这样的使用方法应该被避免。JavaScript是一个静态作用域语言，所以，一个变量是否被声明可以通过看它是否在一个封闭的上下文中被声明。唯一的例外是全局作用域，但是全局作用域是被绑定在全局对象上的，所以要检查一个变量是否在全局上下文中存在可以通过检查全局对象上是否存在这个属性（比如使用{{jsxref("Operators/in", "in")}}操作符）。</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">if ('x' in window) {
+<pre class="brush: js line-numbers language-js">if ('x' in window) {
   // 只有x被全局性的定义 才会这行这些语句
-}</code></pre>
+}</pre>
 
 <h3 id="Void操作符和undefined">Void操作符和undefined</h3>
 

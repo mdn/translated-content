@@ -600,7 +600,7 @@ Employee.prototype.name = "Unknown";
 
 <p>JavaScript 的属性查找机制首先在对象自身的属性中查找，如果指定的属性名称没有找到，将在对象的特殊属性 <code>__proto__</code> 中查找。这个过程是递归的；被称为“在原型链中查找”。</p>
 
-<p>特殊的 <code>__proto__</code> 属性是在构建对象时设置的；设置为构造器的 <code>prototype</code> 属性的值。所以表达式 <code>new Foo()</code> 将创建一个对象，其 <code>__proto__ == <code class="moz-txt-verticalline">Foo.prototype</code></code>。因而，修改 <code class="moz-txt-verticalline">Foo.prototype</code> 的属性，将改变所有通过 <code>new Foo()</code> 创建的对象的属性的查找。</p>
+<p>特殊的 <code>__proto__</code> 属性是在构建对象时设置的；设置为构造器的 <code>prototype</code> 属性的值。所以表达式 <code>new Foo()</code> 将创建一个对象，其 <code>__proto__ == <code>Foo.prototype</code></code>。因而，修改 <code>Foo.prototype</code> 的属性，将改变所有通过 <code>new Foo()</code> 创建的对象的属性的查找。</p>
 
 <p>每个对象都有一个 <code>__proto__</code> 对象属性（除了 <code>Object）；每个函数都有一个</code> <code>prototype</code> 对象属性。因此，通过“原型继承”，对象与其它对象之间形成关系。通过比较对象的 <code>__proto__</code> 属性和函数的 <code>prototype</code> 属性可以检测对象的继承关系。JavaScript 提供了便捷方法：<code>instanceof</code> 操作符可以用来将一个对象和一个函数做检测，如果对象继承自函数的原型，则该操作符返回真。例如：</p>
 

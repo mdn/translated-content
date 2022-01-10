@@ -63,10 +63,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 
 <p>下面的示例（请参见GitHub上的<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html">Instantiate-streaming.html</a>演示，并查看<a href="https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html">在线演示</a>）直接从流式底层源传输.wasm模块，然后对其进行编译和实例化，并通过<code>ResultObject</code>实现promise。 由于<code>instantiateStreaming()</code>函数接受对 {{domxref("Response")}} 对象的promise，因此您可以直接向其传递{{domxref("WindowOrWorkerGlobalScope.fetch()")}}调用，然后它将把返回的response传递给随后的函数。</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
+<pre class="brush: js line-numbers language-js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
 
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj =&gt; obj.instance.exports.exported_func())</code></pre>
+.then(obj =&gt; obj.instance.exports.exported_func())</pre>
 
 <p>返回的<code>ResultObject</code>实例的成员可以被随后访问到，可以调用实例中被导出的方法。</p>
 

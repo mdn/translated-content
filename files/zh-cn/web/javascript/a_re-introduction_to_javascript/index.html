@@ -90,8 +90,8 @@ parseInt("010", 10); // 10
 
 <p>一些老版本的浏览器会将首字符为“0”的字符串当做八进制数字，2013 年以前的 JavaScript 实现会返回一个意外的结果：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">parseInt("010");  //  8
-parseInt("0x10"); // 16</code></pre>
+<pre class="brush: js line-numbers  language-js">parseInt("010");  //  8
+parseInt("0x10"); // 16</pre>
 
 <p>这是因为字符串以数字 0 开头，{{jsxref("Global_Objects/parseInt", "parseInt()")}}函数会把这样的字符串视作八进制数字；同理，0x开头的字符串则视为十六进制数字。</p>
 
@@ -104,9 +104,9 @@ parseInt("0x10"); // 16</code></pre>
 
 <p>一元运算符 + 也可以把数字字符串转换成数值：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">+ "42";   // 42
+<pre class="brush: js line-numbers  language-js">+ "42";   // 42
 + "010";  // 10
-+ "0x10"; // 16</code></pre>
++ "0x10"; // 16</pre>
 
 <p>如果给定的字符串不存在数值形式，函数会返回一个特殊的值 {{jsxref("NaN")}}（Not a Number 的缩写）：</p>
 
@@ -190,23 +190,23 @@ Boolean(234); // true
 
 <p><code><strong>let</strong></code> 语句声明一个块级作用域的本地变量，并且可选的将其初始化为一个值。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">let a;
-let name = 'Simon';</code></pre>
+<pre class="brush: js line-numbers  language-js">let a;
+let name = 'Simon';</pre>
 
 <p>下面是使用  <code><strong>let</strong></code> 声明变量作用域的例子：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// myLetVariable 在这里 *不能* 被引用
+<pre class="brush: js line-numbers  language-js">// myLetVariable 在这里 *不能* 被引用
 
 for (let myLetVariable = 0; myLetVariable &lt; 5; myLetVariable++) {
   // myLetVariable 只能在这里引用
 }
 
-// myLetVariable 在这里 *不能* 被引用</code></pre>
+// myLetVariable 在这里 *不能* 被引用</pre>
 
 <p><code><strong>const</strong></code> 允许声明一个不可变的常量。这个常量在定义域内总是可见的。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">const Pi = 3.14; // 设置 Pi 的值
-Pi = 1; // 将会抛出一个错误因为你改变了一个常量的值。</code></pre>
+<pre class="brush: js line-numbers  language-js">const Pi = 3.14; // 设置 Pi 的值
+Pi = 1; // 将会抛出一个错误因为你改变了一个常量的值。</pre>
 
 <p><code><strong>var</strong></code> 是最常见的声明变量的关键字。它没有其他两个关键字的种种限制。这是因为它是传统上在 JavaScript 声明变量的唯一方法。使用 <strong><code>var</code></strong> 声明的变量在它所声明的整个函数都是可见的。</p>
 
@@ -216,13 +216,13 @@ var name = "simon";
 
 <p>一个使用  <strong><code>var</code> </strong>声明变量的语句块的例子：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// myVarVariable在这里 *能* 被引用
+<pre class="brush: js line-numbers  language-js">// myVarVariable在这里 *能* 被引用
 
 for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
-  // myVarVariable 整个</code>函数<code class="language-js">中都能被引用
+  // myVarVariable 整个函数中都能被引用
 }
 
-// myVarVariable 在这里 *能* 被引用</code></pre>
+// myVarVariable 在这里 *能* 被引用</pre>
 
 <p>如果声明了一个变量却没有对其赋值，那么这个变量的类型就是 <code>undefined</code>。</p>
 
@@ -302,15 +302,15 @@ do {
 
 <p>JavaScript 也还包括其他两种重要的 for 循环： <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for</code>...<code>of</code></a></p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">for (let value of array) {
+<pre class="brush: js line-numbers  language-js">for (let value of array) {
   // do something with value
-}</code></pre>
+}</pre>
 
 <p>和 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for</code>...<code>in</code></a> ：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">for (let property in object) {
+<pre class="brush: js line-numbers  language-js">for (let property in object) {
   // do something with object property
-}</code></pre>
+}</pre>
 
 <p><code>&amp;&amp;</code> 和 <code>||</code> 运算符使用短路逻辑（short-circuit logic），是否会执行第二个语句（操作数）取决于第一个操作数的结果。在需要访问某个对象的属性时，使用这个特性可以事先检测该对象是否为空：</p>
 
@@ -432,12 +432,12 @@ var name = obj.name;
 
 <p>和：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// 括号表示法(bracket notation)
+<pre class="brush: js line-numbers  language-js">// 括号表示法(bracket notation)
 obj['name'] = 'Simon';
 var name = obj['name'];
 // can use a variable to define a key
 var user = prompt('what is your key?')
-obj[user] = prompt('what is its value?')</code></pre>
+obj[user] = prompt('what is its value?')</pre>
 
 <p>这两种方法在语义上也是相同的。第二种方法的优点在于属性的名称被看作一个字符串，这就意味着它可以在运行时被计算，缺点在于这样的代码有可能无法在后期被解释器优化。它也可以被用来访问某些以<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">预留关键字</a>作为名称的属性的值：</p>
 

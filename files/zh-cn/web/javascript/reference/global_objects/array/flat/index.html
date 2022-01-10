@@ -78,16 +78,14 @@ const flattened = arr =&gt; [].concat(...arr);</code></pre>
 
 <h3 class="brush: js" id="reduce_concat_isArray_recursivity">reduce + concat + isArray + recursivity</h3>
 
-<pre class="brush: js"><code>// 使用 reduce、concat 和递归展开无限多层嵌套的数组
-var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
-</code>
-<code class="language-js">function flatDeep(arr, d = 1) {
+<pre class="brush: js">// 使用 reduce、concat 和递归展开无限多层嵌套的数组
+  var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
+function flatDeep(arr, d = 1) {
    return d &gt; 0 ? arr.reduce((acc, val) =&gt; acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
                 : arr.slice();
-};</code>
-<code>
+};
 flatDeep(arr1, Infinity);
-// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]</code></pre>
+// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]</pre>
 
 <h3 id="forEachisArraypushrecursivity">forEach+isArray+push+recursivity</h3>
 

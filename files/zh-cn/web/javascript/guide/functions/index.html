@@ -85,7 +85,7 @@ console.log(factorial(3));
 
 <p>下面的代码：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function map(f, a) {
+<pre class="brush: js line-numbers  language-js">function map(f, a) {
   let result = []; // 创建一个数组
   let i; // 声明一个值，用来循环
   for (i = 0; i != a.length; i++)
@@ -97,7 +97,7 @@ const f = function(x) {
 }
 let numbers = [0,1, 2, 5,10];
 let cube = map(f,numbers);
-console.log(cube);</code></pre>
+console.log(cube);</pre>
 
 <p>返回 [0, 1, 8, 125, 1000]。</p>
 
@@ -136,11 +136,11 @@ function square(n) { return n*n }
 <p><strong>提示：</strong>注意只有使用如上的语法形式（即 <code>function funcName(){}</code>）才可以。而下面的代码是无效的。就是说，函数提升仅适用于函数声明，而不适用于函数表达式。</p>
 </div>
 
-<pre class="brush: js example-bad line-numbers  language-js"><code class="language-js">console.log(square); // square is hoisted with an initial value undefined.
+<pre class="brush: js example-bad line-numbers  language-js">console.log(square); // square is hoisted with an initial value undefined.
 console.log(square(5)); // Uncaught TypeError: square is not a function
 const square = function (n) {
   return n * n;
-}</code></pre>
+}</pre>
 
 <p>函数的参数并不局限于字符串或数字。你也可以将整个对象传递给函数。函数 <code>show_props</code>（其定义参见 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties" title="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties">用对象编程</a>）就是一个将对象作为参数的例子。</p>
 
@@ -468,7 +468,7 @@ getCode();    // Returns the secret code
 
 <p>例如，设想有一个用来连接字符串的函数。唯一事先确定的参数是在连接后的字符串中用来分隔各个连接部分的字符（译注：比如例子里的分号“；”）。该函数定义如下：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function myConcat(separator) {
+<pre class="brush: js line-numbers  language-js">function myConcat(separator) {
    var result = ''; // 把值初始化成一个字符串，这样就可以用来保存字符串了！！
    var i;
    // iterate through arguments
@@ -476,7 +476,7 @@ getCode();    // Returns the secret code
       result += arguments[i] + separator;
    }
    return result;
-}</code></pre>
+}</pre>
 
 <p>你可以给这个函数传递任意数量的参数，它会将各个参数连接成一个字符串“列表”：</p>
 
@@ -544,7 +544,7 @@ console.log(arr); // [2, 4, 6]</pre>
 
 <p>在一些函数模式中，更简洁的函数很受欢迎。对比一下：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var a = [
+<pre class="brush: js line-numbers  language-js">var a = [
   "Hydrogen",
   "Helium",
   "Lithium",
@@ -557,13 +557,13 @@ console.log(a2); // logs [ 8, 6, 7, 9 ]
 
 var a3 = a.map( s =&gt; s.length );
 
-console.log(a3); // logs [ 8, 6, 7, 9 ]</code></pre>
+console.log(a3); // logs [ 8, 6, 7, 9 ]</pre>
 
 <h3 id="this_的词法"><code>this</code> 的词法</h3>
 
 <p>在箭头函数出现之前，每一个新函数都重新定义了自己的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a> 值（在构造函数中是一个新的对象；在严格模式下是未定义的；在作为“对象方法”调用的函数中指向这个对象；等等）。以面向对象的编程风格，这样着实有点恼人。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function Person() {
+<pre class="brush: js line-numbers  language-js">function Person() {
   // 构造函数Person()将`this`定义为自身
   this.age = 0;
 
@@ -575,11 +575,11 @@ console.log(a3); // logs [ 8, 6, 7, 9 ]</code></pre>
   }, 1000);
 }
 
-var p = new Person();</code></pre>
+var p = new Person();</pre>
 
 <p>在ECMAScript 3/5里，通过把<code>this</code>的值赋值给一个变量可以修复这个问题。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function Person() {
+<pre class="brush: js line-numbers  language-js">function Person() {
   var self = this; // 有的人习惯用`that`而不是`self`，
                    // 无论你选择哪一种方式，请保持前后代码的一致性
   self.age = 0;
@@ -588,13 +588,13 @@ var p = new Person();</code></pre>
     // 以下语句可以实现预期的功能
     self.age++;
   }, 1000);
-}</code></pre>
+}</pre>
 
 <p>另外，创建一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">约束函数</a>可以使得 <code>this</code>值被正确传递给 <code>growUp()</code> 函数。</p>
 
 <p>箭头函数捕捉闭包上下文的<code>this</code>值，所以下面的代码工作正常。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function Person(){
+<pre class="brush: js line-numbers  language-js">function Person(){
   this.age = 0;
 
   setInterval(() =&gt; {
@@ -602,7 +602,7 @@ var p = new Person();</code></pre>
   }, 1000);
 }
 
-var p = new Person();</code></pre>
+var p = new Person();</pre>
 
 <h2 id="预定义函数">预定义函数</h2>
 

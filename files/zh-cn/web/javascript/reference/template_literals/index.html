@@ -170,14 +170,14 @@ tag`string text line 1 \n string text line 2`;
 
 <p>另外，使用{{jsxref("String.raw()")}} 方法创建原始字符串和使用默认模板函数和字符串连接创建是一样的。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var str = String.raw`Hi\n${2+3}!`;var`Hi\n${2+3}
+<pre class="brush: js line-numbers  language-js">var str = String.raw`Hi\n${2+3}!`;var`Hi\n${2+3}
 // "Hi\\n5!"
 
 str.length;.
 // 6
 
 str.split('').join(',');.
-// "H,i,\\,n,5,!"</code>
+// "H,i,\\,n,5,!"
 </pre>
 
 <h3 id="带标签的模版字面量及转义序列">带标签的模版字面量及转义序列</h3>

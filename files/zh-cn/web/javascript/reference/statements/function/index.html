@@ -96,23 +96,23 @@ if (true) {
 
 <p>JavaScript 中的<strong>函数声明</strong>被提升到了<strong>函数定义</strong>。你可以在函数声明之前使用该函数:</p>
 
-<pre class="brush: js  language-js"><code class="language-js">hoisted(); // logs "foo"
+<pre class="brush: js  language-js">hoisted(); // logs "foo"
 
 function hoisted() {
   console.log('foo');
-}</code>
+}
 </pre>
 
 <div class="note">
 <p>注意 :<strong>函数表达式</strong>{{jsxref("Operators/function", "function expressions")}} 不会被提升:</p>
 </div>
 
-<pre class="brush: js  language-js"><code class="language-js">notHoisted(); // TypeError: notHoisted is not a function
+<pre class="brush: js  language-js">notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function() {
   console.log('bar');
 };
-</code></pre>
+</pre>
 
 <h2 id="Examples" name="Examples">示例</h2>
 
@@ -120,9 +120,9 @@ var notHoisted = function() {
 
 <p>下面的代码声明了一个函数,该函数返回了销售的总金额, 参数是产品a,b,c分别的销售的数量.</p>
 
-<pre class="brush: js  language-js"><code class="language-js">function calc_sales(units_a, units_b, units_c) {functionfunctionfunctionfunctionfunctionfunctionfunctionfunctionfunctionfunctionfunction
+<pre class="brush: js  language-js">function calc_sales(units_a, units_b, units_c) {functionfunctionfunctionfunctionfunctionfunctionfunctionfunctionfunctionfunctionfunction
    return units_a*79 + units_b * 129 + units_c * 699;
-}</code></pre>
+}</pre>
 
 <h2 id="规范">规范</h2>
 

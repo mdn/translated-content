@@ -150,9 +150,9 @@ typeof symObj;  // "object"</pre>
 
 <p> {{jsxref("Operators/typeof", "typeof")}}运算符能帮助你识别 symbol 类型</p>
 
-<pre class="brush: js"><code class="language-js">typeof Symbol() === 'symbol'
+<pre class="brush: js">typeof Symbol() === 'symbol'
 typeof Symbol('foo') === 'symbol'
-typeof Symbol.iterator === 'symbol'</code>
+typeof Symbol.iterator === 'symbol'
 </pre>
 
 <h3 id="Symbol_类型转换">Symbol 类型转换</h3>
@@ -170,7 +170,7 @@ typeof Symbol.iterator === 'symbol'</code>
 
 <p>Symbols 在 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> 迭代中不可枚举。另外，{{jsxref("Object.getOwnPropertyNames()")}} 不会返回 symbol 对象的属性，但是你能使用 {{jsxref("Object.getOwnPropertySymbols()")}} 得到它们。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var obj = {};
+<pre class="brush: js line-numbers  language-js">var obj = {};
 
 obj[Symbol("a")] = "a";
 obj[Symbol.for("b")] = "b";
@@ -179,14 +179,14 @@ obj.d = "d";
 
 for (var i in obj) {
    console.log(i); // logs "c" and "d"
-}</code></pre>
+}</pre>
 
 <h3 id="Symbols_与_JSON.stringify">Symbols 与 <code>JSON.stringify()</code></h3>
 
 <p>当使用 JSON.stringify() 时，以 symbol 值作为键的属性会被完全忽略：</p>
 
-<pre class="brush: js"><code class="language-js">JSON.stringify({[Symbol("foo")]: "foo"});
-// '{}'</code></pre>
+<pre class="brush: js">JSON.stringify({[Symbol("foo")]: "foo"});
+// '{}'</pre>
 
 <p>更多细节，请看 {{jsxref("JSON.stringify()")}}。</p>
 
@@ -194,10 +194,10 @@ for (var i in obj) {
 
 <p>当一个 Symbol 包装器对象作为一个属性的键时，这个对象将被强制转换为它包装过的 symbol 值：</p>
 
-<pre class="brush: js"><code class="language-js">var sym = Symbol("foo");
+<pre class="brush: js">var sym = Symbol("foo");
 var obj = {[sym]: 1};
 obj[sym];            // 1
-obj[Object(sym)];    // still 1</code></pre>
+obj[Object(sym)];    // still 1</pre>
 
 <h2 id="规范">规范</h2>
 

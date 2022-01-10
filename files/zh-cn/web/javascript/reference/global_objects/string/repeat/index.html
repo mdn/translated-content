@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 
 <p>此方法已添加到 ECMAScript 2015 规范中，并且可能尚未在所有 JavaScript 实现中可用。然而，你可以使用以下代码段对 String.prototype.repeat() 进行填充：</p>
 
-<pre class="brush: js  language-js"><code class="language-js">if (!String.prototype.repeat) {
+<pre class="brush: js  language-js">if (!String.prototype.repeat) {
   String.prototype.repeat = function(count) {
     'use strict';
     if (this == null) {
@@ -83,7 +83,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
     }
     return rpt;
   }
-}</code></pre>
+}</pre>
 
 
 <h2 id="Examples" name="Examples">示例</h2>
