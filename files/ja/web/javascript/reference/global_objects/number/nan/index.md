@@ -5,57 +5,45 @@ tags:
   - JavaScript
   - Number
   - プロパティ
+browser-compat: javascript.builtins.Number.NaN
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/NaN
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number.NaN</code></strong> は<ruby>非数<rp> (</rp><rt>Not-A-Number</rt><rp>) </rp></ruby>を表す値です。これは {{jsxref("NaN")}} と同じです。</p>
+**`Number.NaN`** は非数 (Not-A-Number) を表す値です。 {{jsxref("NaN")}} と同じです。
 
-<div>{{EmbedInteractiveExample("pages/js/number-nan.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-nan.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+この静的プロパティにアクセスするために {{jsxref("Number")}} オブジェクトを生成する必要はありません (`Number.NaN` を使用してください)。
 
-<p>この静的プロパティにアクセスするために {{jsxref("Number")}} オブジェクトを生成する必要はありません (<code>Number.NaN</code> を使用してください)。</p>
+{{js_property_attributes(0, 0, 0)}}
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### 値が数値であるかどうかのチェック
 
-<h3 id="Checking_whether_values_are_numeric" name="Checking_whether_values_are_numeric">値が数値であるかどうかのチェック</h3>
-
-<pre class="brush: js notranslate">function sanitise(x) {
+```js
+function sanitise(x) {
   if (isNaN(x)) {
     return Number.NaN;
   }
   return x;
-}</pre>
+}
+```
 
-<h3 id="Testing_against_NaN" name="Testing_against_NaN">NaN に対するテスト</h3>
+### NaN に対するテスト
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN#Testing_against_NaN">NaN に対するテスト</a>を <code>NaN</code> のページで参照してください。</p>
+[NaN に対するテスト](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN#testing_against_nan)を `NaN` のページで参照してください。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.nan', 'Number.NaN')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Number.NaN")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>グローバル {{jsxref("NaN")}} オブジェクト</li>
- <li>{{jsxref("Number")}} オブジェクトに所属しています。</li>
-</ul>
+- グローバル {{jsxref("NaN")}} オブジェクト
+- 所属先の {{jsxref("Number")}} オブジェクト
