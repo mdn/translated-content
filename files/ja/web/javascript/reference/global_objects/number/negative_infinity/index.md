@@ -4,8 +4,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 tags:
   - JavaScript
   - Number
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 ---
 <div>{{JSRef}}</div>

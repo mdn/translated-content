@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 tags:
   - ECMAScript 2015
   - JavaScript
-  - Method
+  - メソッド
   - Number
   - メソッド
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat

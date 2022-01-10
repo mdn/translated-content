@@ -3,10 +3,10 @@ title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 tags:
   - JavaScript
-  - Method
+  - メソッド
   - Number
   - Prototype
-  - Reference
+  - リファレンス
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ---
 <div>{{JSRef}}</div>
