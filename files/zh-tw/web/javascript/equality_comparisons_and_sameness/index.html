@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 
 <ul>
  <li>一般相等 (<code>==</code>)</li>
- <li>嚴格相等 (<code style="font-weight: 700; font-style: normal;">===</code>)：被用於 <code style="font-weight: 700; font-style: normal;">Array.prototype.indexOf</code>、 <code style="font-weight: 700; font-style: normal;">Array.prototype.lastIndexOf </code>和 <code style="font-weight: 700; font-style: normal;">case</code>-matching </li>
+ <li>嚴格相等 (<code>===</code>)：被用於 <code>Array.prototype.indexOf</code>、 <code>Array.prototype.lastIndexOf </code>和 <code>case</code>-matching </li>
  <li>零值相等：被用於 <code>%TypedArray%</code> 和 <code>ArrayBuffer</code> 建構子，以及 <code>Map</code> 和 <code>Set</code> 運算子，還有將在 ES2016 新增的 <code>String.prototype.includes。</code></li>
  <li>同值相等： 用在除上面提及的所有情況。</li>
 </ul>
@@ -58,74 +58,74 @@ console.log(obj === undefined); // false
  <thead>
   <tr>
    <th scope="row"></th>
-   <th colspan="7" scope="col" style="text-align: center;">比較值 B</th>
+   <th colspan="7" scope="col">比較值 B</th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <th scope="row"></th>
    <td></td>
-   <td style="text-align: center;">Undefined</td>
-   <td style="text-align: center;">Null</td>
-   <td style="text-align: center;">Number</td>
-   <td style="text-align: center;">String</td>
-   <td style="text-align: center;">Boolean</td>
-   <td style="text-align: center;">Object</td>
+   <td>Undefined</td>
+   <td>Null</td>
+   <td>Number</td>
+   <td>String</td>
+   <td>Boolean</td>
+   <td>Object</td>
   </tr>
   <tr>
    <th colspan="1" rowspan="6" scope="row">比較值 A</th>
    <td>Undefined</td>
-   <td style="text-align: center;"><code>true</code></td>
-   <td style="text-align: center;"><code>true</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td>Null</td>
-   <td style="text-align: center;"><code>true</code></td>
-   <td style="text-align: center;"><code>true</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td>Number</td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>A === B</code></td>
-   <td style="text-align: center;"><code>A === ToNumber(B)</code></td>
-   <td style="text-align: center;"><code>A === ToNumber(B)</code></td>
-   <td style="text-align: center;"><code>A == ToPrimitive(B)</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>A === B</code></td>
+   <td><code>A === ToNumber(B)</code></td>
+   <td><code>A === ToNumber(B)</code></td>
+   <td><code>A == ToPrimitive(B)</code></td>
   </tr>
   <tr>
    <td>String</td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>ToNumber(A) === B</code></td>
-   <td style="text-align: center;"><code>A === B</code></td>
-   <td style="text-align: center;"><code>ToNumber(A) === ToNumber(B)</code></td>
-   <td style="text-align: center;"><code>A == ToPrimitive(B)</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>ToNumber(A) === B</code></td>
+   <td><code>A === B</code></td>
+   <td><code>ToNumber(A) === ToNumber(B)</code></td>
+   <td><code>A == ToPrimitive(B)</code></td>
   </tr>
   <tr>
    <td>Boolean</td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>ToNumber(A) === B</code></td>
-   <td style="text-align: center;"><code>ToNumber(A) === ToNumber(B)</code></td>
-   <td style="text-align: center;"><code>A === B</code></td>
-   <td style="text-align: center;"><code>ToNumber(A) == ToPrimitive(B)</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>ToNumber(A) === B</code></td>
+   <td><code>ToNumber(A) === ToNumber(B)</code></td>
+   <td><code>A === B</code></td>
+   <td><code>ToNumber(A) == ToPrimitive(B)</code></td>
   </tr>
   <tr>
    <td>Object</td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>ToPrimitive(A) == B</code></td>
-   <td style="text-align: center;"><code>ToPrimitive(A) == B</code></td>
-   <td style="text-align: center;"><code>ToPrimitive(A) == ToNumber(B)</code></td>
-   <td style="text-align: center;"><code>A === B</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>ToPrimitive(A) == B</code></td>
+   <td><code>ToPrimitive(A) == B</code></td>
+   <td><code>ToPrimitive(A) == ToNumber(B)</code></td>
+   <td><code>A === B</code></td>
   </tr>
  </tbody>
 </table>
@@ -192,181 +192,181 @@ function attemptMutation(v)
  <caption>Sameness Comparisons</caption>
  <thead>
   <tr>
-   <th scope="col" style="text-align: center;">x</th>
-   <th scope="col" style="text-align: center;">y</th>
-   <th scope="col" style="width: 10em; text-align: center;"><code>==</code></th>
-   <th scope="col" style="width: 10em; text-align: center;"><code>===</code></th>
-   <th scope="col" style="width: 10em; text-align: center;"><code>Object.is</code></th>
+   <th scope="col">x</th>
+   <th scope="col">y</th>
+   <th scope="col"><code>==</code></th>
+   <th scope="col"><code>===</code></th>
+   <th scope="col"><code>Object.is</code></th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <td><code>undefined</code></td>
    <td><code>undefined</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
   </tr>
   <tr>
    <td><code>null</code></td>
    <td><code>null</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
   </tr>
   <tr>
    <td><code>true</code></td>
    <td><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
   </tr>
   <tr>
    <td><code>false</code></td>
    <td><code>false</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
   </tr>
   <tr>
    <td><code>"foo"</code></td>
    <td><code>"foo"</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
   </tr>
   <tr>
    <td><code>{ foo: "bar" }</code></td>
    <td><code>x</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
   </tr>
   <tr>
    <td><code>0</code></td>
    <td><code>0</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
   </tr>
   <tr>
    <td><code>+0</code></td>
    <td><code>-0</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>0</code></td>
    <td><code>false</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>""</code></td>
    <td><code>false</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>""</code></td>
    <td><code>0</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>"0"</code></td>
    <td><code>0</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>"17"</code></td>
    <td><code>17</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>[1,2]</code></td>
    <td><code>"1,2"</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>new String("foo")</code></td>
    <td><code>"foo"</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>null</code></td>
    <td><code>undefined</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>null</code></td>
    <td><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>undefined</code></td>
    <td><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>{ foo: "bar" }</code></td>
    <td><code>{ foo: "bar" }</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>new String("foo")</code></td>
    <td><code>new String("foo")</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>0</code></td>
    <td><code>null</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>0</code></td>
    <td><code>NaN</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>"foo"</code></td>
    <td><code>NaN</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>NaN</code></td>
    <td><code>NaN</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>true</code></td>
   </tr>
  </tbody>
 </table>
