@@ -1,53 +1,93 @@
 ---
-title: MouseEvent.which
+title: UIEvent.which
 slug: Web/API/UIEvent/which
 tags:
   - API
-  - DOM Events
-  - MouseEvent
-  - Non-standard
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/MouseEvent/which
+  - DOM
+  - UIEvent
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+browser-compat: api.UIEvent.which
+translation_of: Web/API/UIEvent/which
 original_slug: Web/API/MouseEvent/which
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{ APIRef("DOM Events") }} {{Non-standard_header}}
 
-<p>{{Non-standard_header}}</p>
+**`UIEvent.which`** は {{domxref("UIEvent")}} インターフェイスの読み取り専用プロパティで、マウスの押されたボタンを示す数値、`keyCode` の数値、キーボードで押されたキーの文字コード (`charCode`) のいずれかを返します。
 
-<p><strong><code>MouseEvent.which</code></strong> プロパティはマウスのボタンを押下したことを示す読み取り専用のプロパティです。このプロパティの標準的な代替は {{ domxref("MouseEvent.button") }} 及び {{ domxref("MouseEvent.buttons") }}です。</p>
+## 値
 
-<h2 id="構文">構文</h2>
+### {{domxref("KeyboardEvent")}} の値 {{non-standard_inline}}
 
-<pre class="syntaxbox">var <em>buttonPressed</em> = <em>instanceOfMouseEvent</em>.which
-</pre>
+`event.which` は、英数字キーと非英数字キーのどちらが押されたかに応じて、押された特定のキーに対する数値のコードを含んでいます。
+詳しくは非推奨の {{domxref("KeyboardEvent.charCode")}} と {{domxref("KeyboardEvent.keyCode")}} を参照してください。
 
-<h3 id="戻り値">戻り値</h3>
+> **Note:** 新しいコードでは {{domxref("KeyboardEvent.key")}} または {{domxref("KeyboardEvent.code")}} を検討してください。
 
-<p>押下したボタンを示す数値型:</p>
+### {{domxref("MouseEvent")}} の値 {{non-standard_inline}}
 
-<ul>
- <li><code>0</code>: No button</li>
- <li><code>1</code>: 左ボタン</li>
- <li><code>2</code>: 中央ボタン</li>
- <li><code>3</code>: 右ボタン</li>
-</ul>
+押されたボタンを表す数値型です。
 
-<p>左利き用に設定されたマウスの場合、ボタンの動作は逆になります。この場合、値は右から左に読み取られます。</p>
+- `0`: No button
+- `1`: 左ボタン
+- `2`: 中央ボタン
+- `3`: 右ボタン
 
-<h2 id="仕様">仕様</h2>
+左利き用に設定されたマウスの場合、ボタンの動作は逆になります。この場合、値は右から左に読み取られます。
 
-<p>仕様はありません。</p>
-
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+> **Note:** 新しいコードでは {{domxref("MouseEvent.button")}} を検討してください。
 
 
+## 例
 
-<p>{{Compat("api.MouseEvent.which")}}</p>
+```html
+<html>
+<head>
+<title>charCode/keyCode/which example</title>
 
-<h2 id="関連">関連</h2>
+<script type="text/javascript">
 
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
-</ul>
+function showKeyPress(evt) {
+alert("onkeypress handler: \n"
+      + "keyCode property: " + evt.keyCode + "\n"
+      + "which property: " + evt.which + "\n"
+      + "charCode property: " + evt.charCode + "\n"
+      + "Character Key Pressed: "
+      + String.fromCharCode(evt.charCode) + "\n"
+     );
+}
+
+function keyDown(evt) {
+alert("onkeydown handler: \n"
+      + "keyCode property: " + evt.keyCode + "\n"
+      + "which property: " + evt.which + "\n"
+     );
+}
+
+</script>
+</head>
+
+<body
+ onkeypress="showKeyPress(event);"
+ onkeydown="keyDown(event);"
+>
+
+<p>Please press any key.</p>
+
+</body>
+</html>
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("KeyboardEvent")}}
+- {{domxref("MouseEvent")}}
