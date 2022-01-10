@@ -45,7 +45,7 @@ var copy = Object.assign({}, obj);
 console.log(copy); // { a: 1 }
 </pre>
 
-<h3 id="Deep_Clone" name="Deep_Clone">警告:非深層複製</h3>
+<h3 id="Deep_Clone">警告:非深層複製</h3>
 
 <p>深層複製(deep clone)需要使用其他的替代方案，因為 <code>Object.assign()</code> 僅複製屬性值。若來源物件的值參照到一個子物件，它只會複製該子物件的參照。</p>
 
