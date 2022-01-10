@@ -15,8 +15,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 
 <div>{{EmbedInteractiveExample("pages/js/promise-then.html")}}</div>
 
-<p class="hidden">The source for this interactive demo is stored in a GitHub repository. If you'd like to contribute to the interactive demo project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-
 <div class="note">
 <p>注意：如果忽略针对某个状态的回调函数参数，或者提供非函数 (nonfunction) 参数，那么 <code>then</code> 方法将会丢失关于该状态的回调函数信息，但是并不会产生错误。如果调用 <code>then</code> 的 <code>Promise</code> 的状态（fulfillment 或 rejection）发生改变，但是 <code>then</code> 中并没有关于这种状态的回调函数，那么 <code>then</code> 将创建一个没有经过回调函数处理的新 <code>Promise</code> 对象，这个新 <code>Promise</code> 只是简单地接受调用这个 <code>then</code> 的原 <code>Promise</code> 的终态作为它的终态。</p>
 </div>
