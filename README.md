@@ -94,7 +94,7 @@ Now you need to fork and clone both the
    (the `.env` file will be created for you if it does not already exist.)
 
 1. Now you’ve got this set up, enter the command `yarn start` to begin the local
-   testing server running at `localhost:5000`.
+   testing server running at `localhost:5042`.
 
 ### Working in the translated-content repo
 
@@ -104,7 +104,7 @@ then:
 1. Create a new branch to make your changes in.
 
 1. Switch to your new branch and make the changes you want to make. You can keep
-   going back to `localhost:5000/<your_locale>` (e.g. `localhost:5000/fr` for
+   going back to `localhost:5042/<your_locale>` (e.g. `localhost:5042/fr` for
    French) to test your changes and make sure the content looks how you want it
    to look.
 

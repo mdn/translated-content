@@ -29,7 +29,7 @@ Une fois que vous avez trouvé la source à modifier, rendez-vous sur notre fich
 
 ### Prévisualiser vos modifications
 
-SI vous modifiez la page en local, vous pouvez voir à quoi ressembleront vos modifications en allant sur le dossier du dépôt nommé <i lang="en">content</i>, en exécutant la commande CLI `yarn start`, puis en vous rendant à l'URL `localhost:5000` dans votre navigateur, et enfin en retrouvant la page sur laquelle vous travaillez. Pour la trouver plus facilement, utilisez la boîte de recherche. La page que vous prévisualisez sera rafraîchie automatiquement au fur et à mesure que vous modifiez son code source.
+SI vous modifiez la page en local, vous pouvez voir à quoi ressembleront vos modifications en allant sur le dossier du dépôt nommé <i lang="en">content</i>, en exécutant la commande CLI `yarn start`, puis en vous rendant à l'URL `localhost:5042` dans votre navigateur, et enfin en retrouvant la page sur laquelle vous travaillez. Pour la trouver plus facilement, utilisez la boîte de recherche. La page que vous prévisualisez sera rafraîchie automatiquement au fur et à mesure que vous modifiez son code source.
 
 ### Ajouter des pièces jointes
 
