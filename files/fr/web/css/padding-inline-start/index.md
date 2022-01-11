@@ -99,4 +99,6 @@ div {
   - [`padding-bottom`](/fr/docs/Web/CSS/padding-bottom)
   - [`padding-left`](/fr/docs/Web/CSS/padding-left)
 
-- [`writing-mode`](/fr/docs/Web/CSS/writing-mode), [`direction`](/fr/docs/Web/CSS/direction), [`text-orientation`](/fr/docs/Web/CSS/text-orientation)
+- [`writing-mode`](/fr/docs/Web/CSS/writing-mode)
+- [`direction`](/fr/docs/Web/CSS/direction)
+- [`text-orientation`](/fr/docs/Web/CSS/text-orientation)

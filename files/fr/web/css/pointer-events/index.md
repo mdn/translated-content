@@ -6,7 +6,7 @@ browser-compat: css.properties.pointer-events
 ---
 {{CSSRef}}
 
-La propriété [CSS](fr/docs/Web/CSS) **`pointer-events`** permet aux auteurs de contrôler les circonstances dans lesquelles un élément graphique peut être [une cible](/fr/docs/Web/API/Event/target), c'est-à-dire recevoir des événements de la souris, du pointeur ou du doigt.
+La propriété [CSS](fr/docs/Web/CSS) **`pointer-events`** permet de contrôler les circonstances dans lesquelles un élément graphique peut être [une cible](/fr/docs/Web/API/Event/target), c'est-à-dire recevoir des évènements de la souris, du pointeur ou du doigt.
 
 {{EmbedInteractiveExample("pages/css/pointer-events.html")}}
 
@@ -41,7 +41,7 @@ La propriété `pointer-events` est définie grâce à un mot-clé parmi ceux de
 - `none`
   - : L'élément ne sera jamais [la cible](/fr/docs/Web/API/Event/target) d'événements de pointeur. Toutefois, les événements peuvent atteindre les éléments qui sont des descendants si ceux-ci ont une autre valeur pour `pointer-events`. Sous ces circonstances, les événements déclencheront les gestionnaires d'événement sur l'élément parent jusqu'à/depuis l'élément descendant lors de la phase de capture/[bouillonnement](/fr/docs/Web/API/Event/bubbles) de l'événement.
 
-#### Valeurs uniquement utilisables avec SVG (expérimental en HTML)
+#### Valeurs uniquement utilisables avec SVG (expérimentales en HTML)
 
 - `visiblePainted`
   - : SVG uniquement (expérimental en HTML). L'élément ne peut être la cible d'un événement de pointeur que si la propriété `visibility` vaut `visible` et lorsque le pointeur est au-dessus de l'intérieur de l'élément et que la valeur de la propriété `fill` n'est pas `none` ou lorsque le pointeur de la souris est au-dessus du contour de l'élément et que la valeur de la propriété `stroke` n'est pas `none`.
@@ -64,13 +64,11 @@ La propriété `pointer-events` est définie grâce à un mot-clé parmi ceux de
 
 Lorsque cette propriété n'est pas définie pour le contenu SVG, on aura le même effet qu'avec la valeur `visiblePainted`. 
 
-Lorsqu'on utilise la valeur `none`, cela indique que l'élément ne peut pas recevoir d'événement de pointeur mais également qu'on peut passer «&nbsp;au travers&nbsp;» de l'élément pour atteindre des contrôles qui pourraient être «&nbsp;en-dessous/derrière&nbsp;».
+Lorsqu'on utilise la valeur `none`, cela indique que l'élément ne peut pas recevoir d'événement de pointeur mais également qu'on peut passer «&nbsp;au travers&nbsp;» de l'élément pour atteindre des contrôles qui pourraient être «&nbsp;en dessous/derrière&nbsp;».
 
-L'utilisation de `pointer-events` peut empêcher que des événements soient directement déclenchés sur l'élément avec les pointeurs. Cela *ne signifie en aucun cas* que les gestionnaires d'événement de cet élément ne pourront pas être déclenchés&nbsp;! Si l'un des éléments descendants possède une valeur explicite de `pointer-events` qui lui *permet* de recevoir des événements de pointeur, les événements qui parcourent les ancêtres pourront déclencher les gestionnaires d'événements associés. Bien entendu, tout pointage qui a lieu sur un endroit de l'écran qui est couvert par le parent, mais pas par l'élément descendant, ne déclenchera pas d'événement. L'événement passera «&nbsp;au travers&nbsp;» du parent et ciblera le contenu qui est en-dessous.
+L'utilisation de `pointer-events` peut empêcher que des événements soient directement déclenchés sur l'élément avec les pointeurs. Cela *ne signifie en aucun cas* que les gestionnaires d'événement de cet élément ne pourront pas être déclenchés&nbsp;! Si l'un des éléments descendants possède une valeur explicite de `pointer-events` qui lui *permet* de recevoir des événements de pointeur, les événements qui parcourent les ancêtres pourront déclencher les gestionnaires d'événements associés. Bien entendu, tout pointage qui a lieu sur un endroit de l'écran qui est couvert par le parent, mais pas par l'élément descendant, ne déclenchera pas d'événement. L'événement passera «&nbsp;au travers&nbsp;» du parent et ciblera le contenu qui est en dessous.
 
 Les éléments avec `pointer-events: none` continueront de recevoir le focus via la navigation au clavier avec la touche <kbd>Tab</kbd>.
-
-Nous aimerions donner un contrôle plus fin (avec des valeurs autres que `auto` et `none`) en HTML qui permettra de définir quelles parties d'un élément peuvent recevoir des événements de pointeur, ainsi que quand. Aidez-nous à déterminer comment développer davantage `pointer-events` en HTML en ajoutant à la section <i lang="en">Use Cases</i> de [cette page wiki (en anglais)](https://wiki.mozilla.org/SVG:pointer-events) ce que vous aimeriez accomplir avec cette propriété (vous n'êtes pas obligé de la formater joliment).
 
 ## Définition formelle
 
@@ -94,21 +92,21 @@ img {
 
 ### Désactiver les événements de pointeur pour un lien
 
-Dans l'exemple qui suit, on désactive les événements de pointeur pour le lien http\://exemple.com.
+Dans l'exemple qui suit, on désactive les événements de pointeur pour le lien http\://example.com.
 
 #### HTML
 
 ```html
 <ul>
   <li><a href="https://developer.mozilla.org">MDN</a></li>
-  <li><a href="http://exemple.com">exemple.com</a></li>
+  <li><a href="http://example.com">example.com</a></li>
 </ul>
 ```
 
 #### CSS
 
 ```css
-a[href="http://exemple.com"] {
+a[href="http://example.com"] {
   pointer-events: none;
 }
 ```
@@ -121,7 +119,7 @@ a[href="http://exemple.com"] {
 
 {{Specifications}}
 
-Bien que l'extension de `pointer-events` au contenu HTML soit inclue dans les premières ébauches du niveau 3 du module <i lang="en">CSS Basic User Interface</i>, elle a été reportée à la spécification de niveau 4.
+Bien que l'extension de `pointer-events` au contenu HTML soit incluse dans les premières ébauches du niveau 3 du module <i lang="en">CSS Basic User Interface</i>, elle a été reportée à la spécification de niveau 4.
 
 ## Compatibilité des navigateurs
 
@@ -133,4 +131,5 @@ Bien que l'extension de `pointer-events` au contenu HTML soit inclue dans les pr
 - L'attribut SVG [`visibility`](/fr/docs/Web/SVG/Attribute/visibility)
 - [Spécification WebKit pour étendre la propriété `pointer-events` (en anglais)](https://webkit.org/specs/PointerEventsProperty.html) au contenu (X)HTML
 - La propriété [`user-select`](/fr/docs/Web/CSS/user-select) qui contrôle lorsque l'utilisateur peut sélectionner du texte
+- [La page du wiki de Mozilla pour recenser les cas d'usage nécessitant l'extension des valeurs implémentées pour HTML](https://wiki.mozilla.org/SVG:pointer-events)
 
