@@ -6,40 +6,41 @@ tags:
   - メソッド
   - Number
   - リファレンス
+  - ポリフィル
+browser-compat: javascript.builtins.Number.isInteger
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number.isInteger()</code></strong> メソッドは渡された値が整数かどうかを判定します。</p>
+**`Number.isInteger()`** メソッドは、渡された値が整数かどうかを判定します。
 
-<div>{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+Number.isInteger(value)
+```
 
-<pre class="syntaxbox notranslate">Number.isInteger(<var>value</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `value`
+  - : 整数かどうかを判定される値です。
 
-<dl>
- <dt><code><var>value</var></code></dt>
- <dd>整数かどうかを判定される値です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+渡された値が整数かどうかを示す論理値です。
 
-<p>渡された値が整数かどうかを示す {{jsxref("Boolean")}} です。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+指定された値が整数の場合は `true` を返し、そうでない場合は `false` を返します。{{jsxref("NaN")}} もしくは {{jsxref("Infinity")}} の場合も `false` を返します。このメソッドは整数として表すことができる浮動小数点数も `true` を返します。
 
-<p>指定された値が整数の場合は <code>true</code> を返し、そうでない場合は <code>false</code> を返します。{{jsxref("NaN")}} もしくは {{jsxref("Infinity")}} の場合も <code>false</code> を返します。</p>
+## 例
 
-<h2 id="Example" name="Example">例</h2>
+### isInteger の使用
 
-<h3 id="Using_isInteger" name="Using_isInteger">isInteger の使用</h3>
-
-<pre class="brush: js notranslate">Number.isInteger(0);         // true
+```js
+Number.isInteger(0);         // true
 Number.isInteger(1);         // true
 Number.isInteger(-100000);   // true
 Number.isInteger(99999999999999999999999); // true
@@ -58,38 +59,17 @@ Number.isInteger([1]);       // false
 Number.isInteger(5.0);       // true
 Number.isInteger(5.000000000000001); // false
 Number.isInteger(5.0000000000000001); // true
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## 仕様書
 
-<pre class="brush: js notranslate">Number.isInteger = Number.isInteger || function(value) {
-  return typeof value === 'number' &amp;&amp;
-    isFinite(value) &amp;&amp;
-    Math.floor(value) === value;
-};
-</pre>
+{{Specifications}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## ブラウザーの互換性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.isinteger', 'Number.isInteger')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## 関連情報
 
-<p>{{Compat("javascript.builtins.Number.isInteger")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>このメソッドが所属している {{jsxref("Number")}} オブジェクト。</li>
-</ul>
+- `Number.isInteger` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#ecmascript-number) で利用できます
+- このメソッドが所属している {{jsxref("Number")}} オブジェクト。
