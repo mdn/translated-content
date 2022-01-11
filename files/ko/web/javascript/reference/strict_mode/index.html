@@ -215,7 +215,7 @@ eval("var y; delete y;"); // !!! syntax error</pre>
 
 <h3 id="eval_과_arguments_를_더_간단하게_하기"><code>eval</code> 과 <code>arguments</code> 를 더 간단하게 하기</h3>
 
-<p>엄격모드는 <code>arguments</code> 와 <code>evel</code> 을 덜 기괴하고 마법적으로 만듭니다. 둘은 일반 코드에서 상당히 많은 마법적인 동작들을 갖고 있습니다: 바인딩을 추가하거나 삭제하고 바인딩 값을 변경하기위한 <code>eval</code>, 명명된 인수를 앨리어스하는 인덱싱된 프로퍼티 <code>arguments</code>. 엄격모드는 ECMAScript 의 미래 버전까지는 모든 수정이 이루지지는 않겠지만 <code>eval</code> 과 <code>arguments</code> 를 키워드로 다루기 위한 훌륭한 큰 걸음을 내딛었습니다.</p>
+<p>엄격모드는 <code>arguments</code> 와 <code>eval</code> 을 덜 기괴하고 마법적으로 만듭니다. 둘은 일반 코드에서 상당히 많은 마법적인 동작들을 갖고 있습니다: 바인딩을 추가하거나 삭제하고 바인딩 값을 변경하기위한 <code>eval</code>, 명명된 인수를 앨리어스하는 인덱싱된 프로퍼티 <code>arguments</code>. 엄격모드는 ECMAScript 의 미래 버전까지는 모든 수정이 이루지지는 않겠지만 <code>eval</code> 과 <code>arguments</code> 를 키워드로 다루기 위한 훌륭한 큰 걸음을 내딛었습니다.</p>
 
 <p>첫째로, 변수명 eval 과 arguments 는 언어 문법에 바운드되거나 할당될 수 없습니다. 다음 시도들은 모두 구문 에러입니다.</p>
 
