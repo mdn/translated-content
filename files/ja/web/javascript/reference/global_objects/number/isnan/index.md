@@ -25,7 +25,7 @@ Number.isNaN(value)
 
 ### 引数
 
-- `<var>value</var>`
+- `value`
   - : {{jsxref("NaN")}} かどうかテストされる値です。
 
 ### 返値
