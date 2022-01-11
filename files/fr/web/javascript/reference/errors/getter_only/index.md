@@ -1,85 +1,93 @@
 ---
-title: 'TypeError: setting a property that has only a getter'
+title: 'TypeError: setting getter-only property "x"'
 slug: Web/JavaScript/Reference/Errors/Getter_only
 tags:
-  - Erreurs
+  - Error
+  - Errors
   - JavaScript
-  - Mode strict
+  - Strict Mode
   - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Getter_only
-original_slug: Web/JavaScript/Reference/Erreurs/Getter_only
 ---
 {{jsSidebar("Errors")}}
 
-## Message
+A exceção apenas do modo [strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) do Javascript "setting getter-only property" ocorre quando é feita a tentativa de definir um novo valor para uma propriedade para qual apenas um [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) está especificado.
 
-    TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
-    TypeError: setting getter-only property "x" (Firefox)
-    TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
+## Mensagem
 
-## Type d'erreur
+```js
+TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
+TypeError: setting getter-only property "x" (Firefox)
+TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
+```
 
-{{jsxref("TypeError")}}, uniquement en [mode strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+## Tipo de Erro
 
-## Quel est le problème ?
+{{jsxref("TypeError")}} no [modo strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) apenas.
 
-On essaie de fournir une nouvelle valeur pour une propriété qui ne dispose que d'un [accesseur](/fr/docs/Web/JavaScript/Reference/Fonctions/get). Ceci échouera en mode non-strict mais lèvera une exception {{jsxref("TypeError")}} en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
+## O que deu errado?
 
-## Exemples
+Tem uma tentativa de definir um novo valor para uma propriedade para qual apenas um [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) está especificado.
+Isto será silenciosamente ignorado no modo non-strict, enquanto vai lançar um {{jsxref("TypeError")}} no [modo strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode).
 
-Dans l'exemple qui suit, on voit comment créer un accesseur sur une propriété. En revanche, dans la définition de l'objet, on n'inclut aucun [mutateur](/fr/docs/Web/JavaScript/Reference/Fonctions/set) et une exception `TypeError` sera déclenchée lorsqu'on voudra modifier la propriété `temperature` pour la passer à `30`. Pour plus de détails, on pourra consulter la page {{jsxref("Object.defineProperty()")}}.
+## Exemplos
+
+### Propriedades sem setter
+
+O exemplo abaixo mostra como definir um getter para uma propriedade. Isso não especifica um [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set), então um 
+`TypeError` vai ser lançado quando for feita a tentativa de definir a propriedade `temperatura` para `30`. Para mais detalhes veja também a página {{jsxref("Object.defineProperty()")}}.
 
 ```js example-bad
 "use strict";
 
-function Archiver() {
-  var temperature = null;
-  Object.defineProperty(this, 'temperature', {
+function Arquivo() {
+  var temperatura = null;
+  Object.defineProperty(this, 'temperatura', {
     get: function() {
       console.log('get!');
-      return temperature;
+      return temperatura;
     }
   });
 }
 
-var arc = new Archiver();
-arc.temperature; // 'get!'
+var arq = new Arquivo();
+arq.temperatura; // 'get!'
 
-arc.temperature = 30;
-// TypeError: setting a property that has only a getter
+arq.temperatura = 30;
+// TypeError: setting getter-only property "temperatura"
 ```
 
-Pour corriger cette erreur, soit on retire la ligne 16 (où on tente de modifier la propriété) soit on implémente un mutateur, comme ceci :
+Para corrigir este erro, você vai ter que remover a linha 16, onde é feita a tentativa de definir a propriedade temperatura,
+ou você vai precisar implementar um [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set) para a propriedade, desta forma, por exemplo:
 
 ```js example-good
 "use strict";
 
-function Archiver() {
-  var temperature = null;
-  var archive = [];
+function Arquivo() {
+  var temperatura = null;
+  var arquivo = [];
 
-  Object.defineProperty(this, 'temperature', {
+  Object.defineProperty(this, 'temperatura', {
     get: function() {
       console.log('get!');
-      return temperature;
+      return temperatura;
     },
     set: function(value) {
-      temperature = value;
-      archive.push({ val: temperature });
+      temperatura = value;
+      arquivo.push({ val: temperatura });
     }
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArquivo = function() { return arquivo; };
 }
 
-var arc = new Archiver();
-arc.temperature; // 'get!'
-arc.temperature = 11;
-arc.temperature = 13;
-arc.getArchive(); // [{ val: 11 }, { val: 13 }]
+var arq = new Arquivo();
+arq.temperatura; // 'get!'
+arq.temperatura = 11;
+arq.temperatura = 13;
+arq.getArquivo(); // [{ val: 11 }, { val: 13 }]
 ```
 
-## Voir aussi
+## Veja também
 
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineProperties()")}}
