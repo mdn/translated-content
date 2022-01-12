@@ -247,7 +247,7 @@ export class ItemComponent {
 
 Двойные фигурные скобки, `\{{}}`, в `<h2>` интерполируют длину массива `items` и отображает её.
 
-`<span>` в `<h2>` использует `*ngIf` и `else` чтобы определить, должен `<h2>` отображать строку "item" или "items".
+`<span>` в `<h2>` использует `*ngIf` и `else` чтобы определить, должен ли `<h2>` отображать строку "item" или "items".
 Если в списке всего один элемент, `<span>` будет содержать строку "item".
 В противном случае, if the length of the `items` array is anything other than `1`, the `<ng-template>`, which we've named `elseBlock`, with the syntax `#elseBlock`, отображается вместо `<span>`.
 Angular позволяет использовать `<ng-template>`, если вы не хотите, чтобы контент отображался по умолчанию.
