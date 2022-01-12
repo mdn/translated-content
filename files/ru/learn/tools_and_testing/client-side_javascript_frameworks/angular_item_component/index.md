@@ -395,7 +395,7 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 
 ## Резюме
 
-Теперь у вас должен быть стилизованный Angular-компонент приложения списка дел, позволяющий добавлять, редактировать и удалять компоненты.
+Теперь у вас должен быть стилизованный Angular-компонент приложения списка дел, позволяющий добавлять, редактировать и удалять элементы.
 Следующий шаг — добавление фильтрации, чтобы можно было просматривать элементы соответствующие определенным критериям.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
