@@ -288,7 +288,7 @@ Angular позволяет использовать `<ng-template>`, если в
 }
 
 .btn {
-  /* menu buttons flexbox styles */
+  /* flexbox стили для кнопок меню */
   flex-basis: 49%;
 }
 
@@ -337,10 +337,10 @@ Angular позволяет использовать `<ng-template>`, если в
   margin: 1rem 0;
 }
 
-/* Custom checkboxes
-Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-buttons-and-checkboxes */
+/* Пользовательские чекбоксы
+Адаптировано из https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-buttons-and-checkboxes */
 
-/* Base for label styling */
+/* Основа для стилизации лэйбла */
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
   position: absolute;
@@ -353,7 +353,7 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   cursor: pointer;
 }
 
-/* checkbox aspect */
+/* чекбокс */
 [type="checkbox"]:not(:checked) + label:before,
 [type="checkbox"]:checked + label:before {
   content: '';
@@ -364,7 +364,7 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   background: #fff;
 }
 
-/* checked mark aspect */
+/* галочка для чекбокса */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
   content: '\2713\0020';
@@ -376,7 +376,7 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   transition: all .2s;
   font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
 }
-/* checked mark aspect changes */
+/* изменение галочки чекбокса */
 [type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
   transform: scale(0);
@@ -386,7 +386,7 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   transform: scale(1);
 }
 
-/* accessibility */
+/* доступность */
 [type="checkbox"]:checked:focus + label:before,
 [type="checkbox"]:not(:checked):focus + label:before {
   border: 2px dotted blue;
