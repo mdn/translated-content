@@ -19,7 +19,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Компоненты предоставляют способ для организации вашего приложения. В этой статье описывается создание компонента для обработки отдельных элементов в списке и добавление функций проверки, редактирования и удаления. 
+Компоненты представляют способ для организации вашего приложения. В этой статье описывается создание компонента для обработки отдельных элементов в списке и добавление функций проверки, редактирования и удаления. 
 
 <table>
   <tbody>
