@@ -453,4 +453,4 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   - [Стилизация Angular-приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
   - [Создание компонента элемента (item component)](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
   - [Фильтрация списка дел](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Сборка Angular приложений и другие ресурсы](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+  - [Сборка Angular-приложений и другие ресурсы](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
