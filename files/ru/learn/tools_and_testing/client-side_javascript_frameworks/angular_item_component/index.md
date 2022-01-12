@@ -232,7 +232,7 @@ export class ItemComponent {
 ```
 
 Чтобы использовать селектор `ItemComponent` в `AppComponent`, добавьте элемент `<app-item>`, что соответствует селектору, добавленному в класс компонента, в `app.component.html`.
-Замените текущий неупорядоченный список в `app.component.html` обновленной версией:
+Замените текущий неупорядоченный список в `app.component.html` обновлённой версией:
 
 ```html
 <h2>\{{items.length}} <span *ngIf="items.length === 1; else elseBlock">item</span>
