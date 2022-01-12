@@ -231,7 +231,7 @@ export class ItemComponent {
 })
 ```
 
-Чтобы использовать селектор `ItemComponent` в `AppComponent`, добавьте элемент `<app-item>`, что соответствует селектору добавленную в класс компонента, в `app.component.html`.
+Чтобы использовать селектор `ItemComponent` в `AppComponent`, добавьте элемент `<app-item>`, что соответствует селектору, добавленному в класс компонента, в `app.component.html`.
 Замените текущий неупорядоченный список в `app.component.html` обновленной версией:
 
 ```html
