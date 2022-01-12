@@ -162,7 +162,7 @@ remove(item) {
 
 Чтобы использовать интерфейс `ItemComponent`, вы должны добавить логику к компоненту, такую как функции и способы ввода и вывода данных.
 
-В `item.component.ts`, отредактируйте JavaScript-импорты так:
+В `item.component.ts` отредактируйте JavaScript-импорты так:
 
 ```js
 import { Component, Input, Output, EventEmitter } from '@angular/core';
