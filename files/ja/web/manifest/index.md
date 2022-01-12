@@ -2,43 +2,37 @@
 title: ウェブアプリマニフェスト
 slug: Web/Manifest
 tags:
-  - App
-  - PWA
-  - Reference
   - アプリ
-  - ウェブ
   - マニフェスト
+  - PWA
+  - プログレッシブウェブアプリ
   - リファレンス
+  - ウェブ
 translation_of: Web/Manifest
 ---
-<div>{{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}</div>
+{{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
-<div>{{SeeCompatTable}}</div>
+**ウェブアプリマニフェスト**は、[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) と呼ばれる一連のウェブ技術の一部であり、アプリストアを通さずに端末のホーム画面にインストールすることができるものです。単純なホーム画面リンクやブックマークを持つ通常のウェブアプリとは異なり、 PWA は事前にダウンロードしてオフラインでも動作するだけでなく、通常の [Web API](/ja/docs/Web/API) を使用することもできます。
 
-<p><strong>ウェブアプリマニフェスト</strong>は、<a href="/ja/docs/Web/Progressive_web_apps">プログレッシブウェブアプリ</a> (PWA) と呼ばれる一連のウェブ技術の一部であり、アプリストアを通さずに端末のホーム画面にインストールすることができるものです。単純なホームスクリーンリンクやブックマークを持つ通常のウェブアプリとは異なり、 PWA は事前にダウンロードしてオフラインでも動作するだけでなく、通常の <a href="/ja/docs/Web/API">Web API</a> を使用することもできます。</p>
+ウェブアプリマニフェストは、ウェブアプリケーションについて、ウェブアプリをダウンロードしたり、ユーザーにネイティブアプリと同じように見せる（例えば、端末のホーム画面にインストールされ、ユーザーに素早いアクセスと豊かな操作性を提供するなどの）ために必要なの情報を {{Glossary("JSON")}} テキストファイルで提供します。 PWA のマニフェストには、その名前、作者、アイコン、バージョン、説明、および (他のものの中で特に) 必要なすべてのリソースのリストが含まれています。
 
-<p>ウェブアプリマニフェストは、ウェブアプリケーションについて、ウェブアプリをダウンロードしたり、ユーザーにネイティブアプリと同じように見せる (例えば、端末のホーム画面にインストールされ、ユーザーに素早いアクセスと豊かな操作性を提供するなどの) ために必要なの情報を {{Glossary("JSON")}} テキストファイルで提供します。 PWA のマニフェストには、その名前、作者、アイコン、バージョン、説明、および (他のものの中で特に) 必要なすべてのリソースのリストが含まれています。</p>
+## メンバー
 
-<div class="hidden">
-<p>PWA のマニフェストにはコメントが入れられるのでしょうか？<br>
- これは {{Glossary("JSON")}} 形式のファイルですが、一つ例外があります。 "<code>//</code>" 形式のコメントを入れることができます。</p>
-</div>
+ウェブマニフェストには、以下のキーを設定することができます。それぞれのリンクをクリックすると詳細情報を見ることができます。
 
-<h2 id="メンバー">メンバー</h2>
+{{ListSubpages("/ja/docs/Web/Manifest")}}
 
-<p>ウェブマニフェストは以下のキーを含むことができます。それぞれのリンクをクリックすると詳細情報を見ることができます。</p>
+## マニフェストの例
 
-<p>{{ListSubpages("/ja/docs/Web/Manifest")}}</p>
-
-<h2 id="Example_manifest" name="Example_manifest">マニフェストの例</h2>
-
-<pre class="brush: json">{
+```json
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
   "name": "HackerWeb",
   "short_name": "HackerWeb",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
-  "description": "A simply readable Hacker News app.",
+  "description": "読むことができるハッカーニュースアプリです。",
   "icons": [{
     "src": "images/touch/homescreen48.png",
     "sizes": "48x48",
@@ -68,49 +62,43 @@ translation_of: Web/Manifest
     "platform": "play",
     "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
   }]
-}</pre>
+}
+```
 
-<h2 id="Deploying_a_manifest_with_the_link_tag" name="Deploying_a_manifest_with_the_link_tag">マニフェストの展開</h2>
+## マニフェストの展開<
 
-<p>ウェブアプリマニフェストは、文書の {{HTMLElement("head")}} 内にある {{HTMLElement("link")}} 要素を使用して HTML ページから展開されます。</p>
+ウェブアプリマニフェストは、文書の {{HTMLElement("head")}} 内の {{HTMLElement("link")}} 要素を使用して HTML ページから展開されます。
 
-<pre class="brush: html">&lt;link rel="manifest" href="/manifest.webmanifest"&gt;</pre>
+```html
+<link rel="manifest" href="manifest.json">
+```
 
-<div class="note">
-<p><strong>注</strong>: <code>.webmanifest</code> の拡張子が仕様書の <a href="https://w3c.github.io/manifest/#media-type-registration">Media type registration</a> の節で指定されています (マニフェストファイルのレスポンスは <code>Content-Type: application/manifest+json</code> を返してください)。ブラウザーは一般に <code>.json</code> (<code>Content-Type: application/json</code>) のような他の適切な拡張子でもマニフェストに対応します。</p>
-</div>
+`.webmanifest` の拡張子が仕様書の [Media type registration](https://w3c.github.io/manifest/#media-type-registration) の節で指定されています（マニフェストファイルのレスポンスは `Content-Type: application/manifest+json` を返してください）。ブラウザーは一般に `.json` (`Content-Type: application/json`) のような他の適切な拡張子でもマニフェストに対応します。
 
-<div class="note">
-<p><strong>注</strong>: マニフェストのアクセスに資格情報が必要な場合は、マニフェストファイルが現在のページと同じオリジンにあったとしても、 {{domxref("HTML/CORS_settings_attributes", "crossorigin")}} 属性を <code>use-credentials</code> に設定する必要があります。</p>
-</div>
+マニフェストへのアクセスに資格情報が必要な場合は、マニフェストファイルが現在のページと同じオリジンにあったとしても、 [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性を `use-credentials` に設定する必要があります。
 
-<h2 id="Splash_screens" name="Splash_screens">スプラッシュ画面</h2>
+```html
+<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+```
 
-<p>Chrome 47 以降では、ホーム画面からサイトが起動されるとスプラッシュ画面が表示されます。スプラッシュ画面はウェブアプリマニフェストのプロパティから、具体的には以下のように自動生成されます。</p>
+## スプラッシュ画面
 
-<ul>
- <li><code><a href="/ja/docs/Web/Manifest/name">name</a></code></li>
- <li><code><a href="/ja/docs/Web/Manifest/background_color">background_color</a></code></li>
- <li><code><a href="/ja/docs/Web/Manifest/icons">icons</a></code> の配列中のアイコンで、端末の 128dpi に最も近いもの。
-</li></ul>
+一部のブラウザー（例えば Chrome 47 以降）では、ホーム画面からサイトが起動されるとスプラッシュ画面が表示されます。スプラッシュ画面はウェブアプリマニフェストのプロパティから、具体的には以下のように自動生成されます。
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+- [`name`](/ja/docs/Web/Manifest/name)
+- [`background_color`](/ja/docs/Web/Manifest/background_color)
+- [`icons`](/ja/docs/Web/Manifest/icons) の配列中のアイコンで、端末の 128dpi に最も近いもの。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Manifest")}}</td>
-   <td>{{Spec2("Manifest")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+| 仕様書                                      |
+| -------------------------------------------------- |
+| [Web App Manifest](https://w3c.github.io/manifest) |
 
-<p>{{Compat("html.manifest")}}</p>
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [プログレッシブウェブアプリ (PWA)](/ja/docs/Web/Progressive_web_apps)
