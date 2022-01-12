@@ -124,7 +124,7 @@ greetUser("Veronica");</pre>
  <dt>Window 事件循环</dt>
  <dd>window 事件循环驱动所有同源的窗口 (though there are further limits to this as described elsewhere in this article XXXX ????).</dd>
  <dt>Worker 事件循环</dt>
- <dd>worker 事件循环顾名思义就是驱动 worker 的事件循环。这包括了所有种类的 worker：最基本的 <a href="/en-US/docs/Web/API/Web_Workers_API">web worker</a> 以及 <a href="/en-US/docs/Web/API/SharedWorker">shared worker</a> 和 <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>。 Worker 被放在一个或多个独立于 “主代码” 的代理中。浏览器可能会用单个或多个事件循环来处理给定类型的所有 workder。</dd>
+ <dd>worker 事件循环顾名思义就是驱动 worker 的事件循环。这包括了所有种类的 worker：最基本的 <a href="/en-US/docs/Web/API/Web_Workers_API">web worker</a> 以及 <a href="/en-US/docs/Web/API/SharedWorker">shared worker</a> 和 <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>。 Worker 被放在一个或多个独立于 “主代码” 的代理中。浏览器可能会用单个或多个事件循环来处理给定类型的所有 worker。</dd>
  <dt>Worklet 事件循环</dt>
  <dd><a href="/en-US/docs/Web/API/Worklet">worklet</a> 事件循环用于驱动运行 worklet 的代理。这包含了 {{domxref("Worklet")}}、{{domxref("AudioWorklet")}} 以及 {{domxref("PaintWorklet")}}。</dd>
 </dl>
