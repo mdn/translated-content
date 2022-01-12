@@ -49,7 +49,7 @@ ng generate component item
 Имя папки и компонента будет `item`.
 Вы можете найти дирректорию `item` внутри папки `app`.
 
-Как и в случае с `AppComponent`, `ItemComponent` состоит из следующих файлах:
+Как и в случае с `AppComponent`, `ItemComponent` состоит из следующих файлов:
 
 - `item.component.html` для HTML
 - `item.component.ts` для логики
