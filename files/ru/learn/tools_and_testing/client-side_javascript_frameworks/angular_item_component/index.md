@@ -155,7 +155,7 @@ remove(item) {
 }
 ```
 
-Метод `remove()` использует JavaScript-метод `Array.splice()` для удаления одного элемента начиная с индекса, который возвращает метод `indexOf`.
+Метод `remove()` использует JavaScript-метод `Array.splice()` для удаления одного элемента, начиная с индекса, который возвращает метод `indexOf`.
 Чтобы узнать больше о методе `splice()`, посмотрите статью на MDN [`Array.prototype.splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
 
 ## Добавление логики в ItemComponent
