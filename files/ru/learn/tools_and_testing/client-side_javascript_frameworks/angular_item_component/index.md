@@ -444,7 +444,7 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   - [Продвинутый Svelte: реактивность, жизненный цикл, доступность](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
   - [Работа хранилищами в Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
   - [Поддержка TypeScript в Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Развертывание и следующие шаги](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+  - [Развёртывание и следующие шаги](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
 
 - Angular
 
