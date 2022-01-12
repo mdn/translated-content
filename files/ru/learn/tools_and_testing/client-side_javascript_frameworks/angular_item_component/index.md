@@ -26,7 +26,7 @@ tags:
     <tr>
       <th scope="row">Необходимые условия:</th>
       <td>
-        Понимание основ <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, и <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>, знание <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">терминала/командной строки
+        Понимание основ <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a> и <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> знание <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">терминала/командной строки
       </td>
     </tr>
     <tr>
