@@ -417,7 +417,7 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 - Ember
 
   - [Начало работы с Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Структура Ember приложения и компоненты](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Структура Ember-приложения и компоненты](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
   - [Интерактивность Ember: события, классы и состояние](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
   - [Интерактивность Ember: функциональность подвала, условная отрисовка](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
   - [Маршрутизация в Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
