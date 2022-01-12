@@ -408,7 +408,7 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 
   - [Начало работы с React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
   - [Начало создания приложения списка дел с React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Компоненты React приложения](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [Компоненты React-приложения](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - [Интерактивность React: события и состояние](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
   - [Интерактивность React: редактирование, фильтрация, условная отрисовка](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
   - [Доступность в React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
