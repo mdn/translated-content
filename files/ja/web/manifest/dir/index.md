@@ -2,84 +2,55 @@
 title: dir
 slug: Web/Manifest/dir
 tags:
-  - Manifest
-  - Web
-  - dir
   - マニフェスト
+  - ウェブ
+  - dir
+browser-compat: html.manifest.dir
 translation_of: Web/Manifest/dir
 ---
-<div>{{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}</div>
+{{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">型</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">必須</th>
-   <td>いいえ</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">型</th>
+      <td>`String`</td>
+    </tr>
+    <tr>
+      <th scope="row">必須</th>
+      <td>いいえ</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>マニフェストの書字方向に対応しているメンバーを表示するための基本的な方向です。 <code><a href="./lang">lang</a></code> メンバーと共に、右書きの言語を正しく表示するのに役立ちます。</p>
+マニフェストの書字方向に対応しているメンバーを表示するための基本的な方向です。 [`lang`](/ja/docs/Web/Manifest/lang) メンバーと共に、右書きの言語を正しく表示するのに役立ちます。
 
-<p><code>dir</code> メンバーには、次の値のうちの一つを設定することができます。</p>
+`dir` メンバーには、次の値のうちの一つを設定することができます。
 
-<ul>
- <li><code>auto</code> — ユーザーエージェントが判断した書字方向</li>
- <li><code>ltr</code> — 左書き (left to right)</li>
- <li><code>rtl</code> — 右書き (right to left)</li>
-</ul>
+- `auto` — ユーザーエージェントが判断した書字方向
+- `ltr` — 左書き (left to right)
+- `rtl` — 右書き (right to left)
 
-<p><dfn>書字方向に対応しているメンバー</dfn>は以下の通りです。</p>
+*書字方向に対応しているメンバー*は以下の通りです。
 
-<ul>
- <li><code><a href="./name">name</a></code></li>
- <li><code><a href="./short_name">short_name</a></code></li>
- <li><code><a href="./description">description</a></code></li>
-</ul>
+- [`name`](/ja/docs/Web/Manifest/name)
+- [`short_name`](/ja/docs/Web/Manifest/short_name)
+- [`description`](/ja/docs/Web/Manifest/description)
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: この値が省略されたり <code>auto</code> に設定されていたりした場合は、ブラウザーは <a href="/ja/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm">Unicode 双方向アルゴリズム</a>を使用してテキストの書字方向に最適な推測を行います。</p>
-</div>
+> **Note:** この値が省略されたり `auto` に設定されていたりした場合は、ブラウザーは [Unicode 双方向アルゴリズム](/ja/docs/Web/Guide/Unicode_Bidirectional_Text_Algorithm)を使用してテキストの書字方向に最適な推測を行います。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: json" dir="rtl"><code>"dir": "rtl",
+```json
+"dir": "rtl",
 "lang": "ar",
-"short_name": "!أنا من التطبيق"</code></pre>
+"short_name": "!أنا من التطبيق"
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-   <th scope="col">フィードバック</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <p>{{SpecName('Manifest', '#dir-member', 'dir')}}</p>
-   </td>
-   <td>
-    <p>{{Spec2('Manifest')}}</p>
-   </td>
-   <td>
-    <p>初回定義</p>
-   </td>
-   <td>
-    <p><a href="https://github.com/w3c/manifest/issues/">Web App Manifest Working Group drafts</a></p>
-   </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.manifest.dir")}}</p>
+{{Compat}}
