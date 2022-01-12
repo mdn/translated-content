@@ -3,7 +3,7 @@ title: SharedArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
 tags:
   - JavaScript
-  - Property
+  - プロパティ
   - 共有メモリー
   - SharedArrayBuffer
   - 型付き配列
