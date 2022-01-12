@@ -221,7 +221,7 @@ export class ItemComponent {
 
 Чтобы использовать `ItemComponent` в `AppComponent`, вставьте селектор `ItemComponent` в шаблон `AppComponent`.
 В Angular селектор компонента указывается в метаданных декоратора `@Component()`.
-В это примере селектор это `app-item`:
+В этом примере селектор это `app-item`:
 
 ```js
 @Component({
