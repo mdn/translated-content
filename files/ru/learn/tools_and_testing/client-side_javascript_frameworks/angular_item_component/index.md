@@ -429,7 +429,7 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   - [Создание вашего первого компонента Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
   - [Отрисовка списка Vue компонентов](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
   - [Добавление новой формы во Vue: события, методы, и модели](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Стилизация Vue компонентов с CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Стилизация Vue-компонентов с CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
   - [Использование вычисляемых свойств во Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
   - [Условная отрисовка во Vue: Редактирование существующих дел](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
   - [Управление фокусом во Vue с помощью refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
