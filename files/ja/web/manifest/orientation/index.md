@@ -44,37 +44,14 @@ translation_of: Web/Manifest/orientation
 
 ## 例
 
-<pre class="brush: json">  "orientation": "portrait-primary"</pre>
+```json
+"orientation": "portrait-primary"
+```
 
 ## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-   <th scope="col">フィードバック</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    {{SpecName('Manifest', '#orientation-member', 'orientation')}}
-   </td>
-   <td>
-    {{Spec2('Manifest')}}
-   </td>
-   <td>
-    初回定義
-   </td>
-   <td>
-    [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/)
-   </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.manifest.orientation")}}
+{{Compat}}
