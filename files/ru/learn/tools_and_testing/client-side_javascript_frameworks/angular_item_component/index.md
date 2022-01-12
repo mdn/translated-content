@@ -249,7 +249,7 @@ export class ItemComponent {
 
 `<span>` в `<h2>` использует `*ngIf` и `else` чтобы определить, должен ли `<h2>` отображать строку "item" или "items".
 Если в списке всего один элемент, `<span>` будет содержать строку "item".
-В противном случае, if the length of the `items` array is anything other than `1`, the `<ng-template>`, which we've named `elseBlock`, with the syntax `#elseBlock`, отображается вместо `<span>`.
+В противном случае, если длина массива `items` будет отличаться от `1`, то вместо `<span>` отобразится шаблон `<ng-template>`, который мы назвали `elseBlock`с помощью синтаксиса `#elseBlock`.
 Angular позволяет использовать `<ng-template>`, если вы не хотите, чтобы контент отображался по умолчанию.
 В таком случае, когда длина массива `items` не `1`, `*ngIf` отображает `elseBlock` а не `<span>`.
 
