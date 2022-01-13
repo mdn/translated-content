@@ -22,9 +22,10 @@ of active locales is:
 - `pt-BR`
 - `ru`
 - `zh` (`zh-CN` and `zh-TW`)
+- `es`
 
 If you want to just find a task and jump in, search by the labels `l10n-fr`,
-`l10n-ja`, `l10n-ko`, `l10n-pt-br`, `l10n-ru`, and `l10n-zh` in this repo’s
+`l10n-ja`, `l10n-ko`, `l10n-pt-br`, `l10n-ru`, `l10n-zh` and `l10n-es` in this repo’s
 [issues list](https://github.com/mdn/translated-content/issues),
 or the main [content repo issues](https://github.com/mdn/content/issues)
 
