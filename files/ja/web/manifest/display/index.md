@@ -14,7 +14,7 @@ translation_of: Web/Manifest/display
   <tbody>
     <tr>
       <th scope="row">型</th>
-      <td>`String`</td>
+      <td><code>String</code></td>
     </tr>
     <tr>
       <th scope="row">必須</th>
@@ -37,7 +37,7 @@ translation_of: Web/Manifest/display
   <thead>
     <tr>
       <th scope="col">表示モード</th>
-      <th scope="col">解説</th>
+      <th scope="col">説明</th>
       <th scope="col">代替表示モード</th>
     </tr>
   </thead>
