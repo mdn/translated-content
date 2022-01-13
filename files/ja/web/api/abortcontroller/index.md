@@ -14,9 +14,9 @@ browser-compat: api.AbortController
 
 **`AbortController`** インターフェースは一つ以上のリクエストをいつでも中断することを可能にするコントローラーオブジェクトを表します。
 
-{{domxref("AbortController.AbortController()")}}コンストラクタを使うことで `AbortController` オブジェクトを新しく作ることができます。DOMリクエストとの送信は、AbortSignalオブジェクトを使って行われます。
+{{domxref("AbortController.AbortController()")}} コンストラクターを使うことで `AbortController` オブジェクトを新しく作ることができます。 DOM リクエストとの送信は、 AbortSignal オブジェクトを使って行われます。
 
-## コンストラクタ
+## コンストラクター
 
 - {{domxref("AbortController()")}}
   - : 新しい `AbortController` オブジェクトインスタンスを生成します。
@@ -24,20 +24,20 @@ browser-compat: api.AbortController
 ## プロパティ
 
 - {{domxref("AbortController.signal")}} {{readonlyInline}}
-  - : {{domxref("AbortSignal")}}AbortSignalオブジェクトのインスタンスを返します。 このオブジェクトは、DOMリクエストの送信や中断に使用します。
+  - : {{domxref("AbortSignal")}} オブジェクトのインスタンスを返します。 このオブジェクトは、 DOM リクエストの送信や中断に使用します。
 
 ## メソッド
 
 - {{domxref("AbortController.abort()")}}
-  - : DOMリクエストが完了する前に中断します。 これは、[fetchリクエスト](/ja/docs/Web/API/fetch)、あらゆるレスポンスボディの消費、およびストリームを中断できます。
+  - : DOM リクエストが完了する前に中断します。 これは、 [fetch リクエスト](/ja/docs/Web/API/fetch) 、あらゆるレスポンスボディの消費、およびストリームを中断できます。
 
 ## 例
 
 この後の短いコードで、[Fetch API](/ja/docs/Web/API/Fetch_API) を使用してビデオをダウンロードします。
 
-まず {{domxref("AbortController.AbortController","AbortController()")}} コンストラクターを使ってコントローラーを生成し、{{domxref("AbortController.signal")}} プロパティを使用して関連する {{domxref("AbortSignal")}} オブジェクトへの参照を取得します。
+まず {{domxref("AbortController.AbortController","AbortController()")}} コンストラクターを使ってコントローラーを生成し、 {{domxref("AbortController.signal")}} プロパティを使用して関連する {{domxref("AbortSignal")}} オブジェクトへの参照を取得します。
 
-[読み込みリクエスト](/ja/docs/Web/API/fetch) が初期化すると、リクエストのオプションオブジェクト (下記 `{signal}` を参照) の内部のオプションとして `AbortSignal` を渡します。これによりシグナルと読み込みリクエストのコントローラーは関連付き、{{domxref("AbortController.abort()")}} を呼び出すことで下記の 2 つ目のイベントリスナーに見られるように中断が許可されます。
+[読み込みリクエスト](/ja/docs/Web/API/fetch) が初期化すると、リクエストのオプションオブジェクト (下記 `{signal}` を参照) の内部のオプションとして `AbortSignal` を渡します。これによりシグナルと読み込みリクエストのコントローラーは関連付き、 {{domxref("AbortController.abort()")}} を呼び出すことで下記の 2 つ目のイベントリスナーに見られるように中断が許可されます。
 
 ```js
 var controller = new AbortController();
