@@ -7,193 +7,241 @@ tags:
   - 语言特性
 translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
-<div>{{JsSidebar("Classes")}}</div>
+{{JsSidebar("Classes")}}
 
-<p>类属性在默认情况下是公共的，可以被外部类检测或修改。在<a href="https://github.com/tc39/proposal-class-fields">ES2020 实验草案</a> 中，增加了定义私有类字段的能力，写法是使用一个#作为前缀。</p>
+类属性在默认情况下是{{jsxref('Classes/Public_class_fields','公有')}}的，但可以使用增加哈希前缀 `#` 的方法来定义私有类字段，这一隐秘封装的类特性由 JavaScript 自身强制执行。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js notranslate">class ClassWithPrivateField {
-  #privateField
+```js
+class ClassWithPrivateField {
+  #privateField;
 }
 
 class ClassWithPrivateMethod {
   #privateMethod() {
-    return 'hello world'
- }
+    return 'hello world';
+  }
 }
 
 class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
-}
-</pre>
-
-<h2 id="例子"> 例子</h2>
-
-<h3 id="私有静态字段">私有静态字段</h3>
-
-<p>私有字段可以被类的构造方法（constructor）从内部声明。</p>
-
-<p>静态变量只能被静态方法调用的限制仍然成立。</p>
-
-<pre class="brush: js notranslate">class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
-
-  static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
-  }
+  static #PRIVATE_STATIC_FIELD;
 }
 
-assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)</pre>
-
-<p>在类评估时，私有静态字段被添加到类构造函数中。</p>
-
-<p>私有静态字段有一个来源限制， 只有定义该私有静态字段的类能访问该字段。</p>
-
-<p>这可能会导致：当使用<strong><code>this</code></strong>时出现意想不到的行为。</p>
-
-<pre class="brush: js notranslate">class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
-
-  static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42
-    return this.#PRIVATE_STATIC_FIELD
-  }
+class ClassWithPrivateStaticMethod {
+  static #privateStaticMethod() {
+    return 'hello world';
+  }
 }
+```
 
-class SubClass extends BaseClassWithPrivateStaticField { }
+## 示例
 
-assertThrows(() =&gt; SubClass.basePublicStaticMethod(), TypeError)
-</pre>
+### 私有字段
 
-<h3 id="私有实例字段">私有实例字段</h3>
+私有字段包括私有实例字段和私有静态字段。
 
-<p>私有实例字段使用 <strong>＃名称</strong>（发音为“哈希名称”）声明，这些名称以 <code>#</code>开头。  <code>#</code>是名称本身的一部分， 声明和访问时也需要加上。</p>
+#### 私有实例字段
 
-<p>封装由语言强制执行。 从作用域之外引用＃名称是语法错误。</p>
+私有实例字段使用 `#名称`（发音为“哈希名称”）声明，这些名称以 `#` 开头。即 `#` 是名称本身的一部分，声明和访问时也需要加上。私有字段在类声明的构造方法中就可被访问。
 
-<pre class="brush: js notranslate">class ClassWithPrivateField {
-  #privateField
+从作用域之外引用 `#` 名称、内部在位声明的情况下引用私有字段、或尝试使用 `delete` 移除声明的字段都会抛出语法错误。
 
-  constructor() {
-    this.#privateField = 42
-    this.#randomField = 666 // Syntax error
-  }
+```js example-bad
+class ClassWithPrivateField {
+  #privateField;
+
+  constructor() {
+    this.#privateField = 42;
+    delete this.#privateField;   // 语法错误
+    this.#undeclaredField = 444; // 语法错误
+  }
 }
 
 const instance = new ClassWithPrivateField()
-instance.#privateField === 42 // Syntax error
-</pre>
+instance.#privateField === 42;   // 语法错误
+```
 
-<h3 id="私有方法">私有方法</h3>
+> **备注：** 可以使用 [`in`](/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 运算符检查私有字段（或私有方法）是否存在。当私有字段或私有方法存在时，运算符返回 `true`，否则返回 `false`。
 
-<h4 id="私有静态方法">私有静态方法</h4>
+类似于公有字段，私有字段在构造（construction）基类或调用子类的 `super()` 方法时被添加到类实例中。
 
-<p>像它们的公有等价方法一样，私有静态方法是在类本身而非类的实例上调用的。 像私有静态字段一样，只能从类声明内部访问它们。</p>
+```js
+class ClassWithPrivateField {
+  #privateField;
 
-<p>私有静态方法可能是生成器方法，异步方法和异步生成器方法。</p>
-
-<pre class="brush: js notranslate">class ClassWithPrivateStaticMethod {
-    static #privateStaticMethod() {
-        return 42
-    }
-
-    static publicStaticMethod1() {
-        return ClassWithPrivateStaticMethod.#privateStaticMethod();
-    }
-
-    static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-    }
+  constructor() {
+    this.#privateField = 42;
+  }
 }
 
-assert(ClassWithPrivateStaticField.publicStaticMethod1() === 42);
-assert(ClassWithPrivateStaticField.publicStaticMethod2() === 42);
-</pre>
+class SubClass extends ClassWithPrivateField {
+  #subPrivateField;
 
-<p>使用<strong><code>this</code></strong>可能会导致意想不到的行为（因为<code>this</code>绑定规则适用）。</p>
+  constructor() {
+    super();
+    this.#subPrivateField = 23;
+  }
+}
 
-<pre class="brush: js notranslate">class Base {
-    static #privateStaticMethod() {
-        return 42;
-    }
-    static publicStaticMethod1() {
-        return Base.#privateStaticMethod();
-    }
-    static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-    }
+new SubClass();
+// SubClass {#privateField: 42, #subPrivateField: 23}
+```
+
+#### 私有静态字段
+
+私有静态字段在解析类结构时被添加到类的构造方法（constructor）中。且静态变量只能被静态方法调用的限制仍然成立。
+
+```js
+class ClassWithPrivateStaticField {
+  static #PRIVATE_STATIC_FIELD;
+
+  static publicStaticMethod() {
+    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
+    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
+  }
+}
+
+console.log(ClassWithPrivateStaticField.publicStaticMethod() === 42);
+// true
+```
+
+私有静态字段有一个来源限制：只有定义该私有静态字段的类能访问该字段。使用 **`this`** 可能会出现意想不到的行为。在下方的例子中，`this` 是 `SubClass` 类（而不是 `BaseClassWithPrivateStaticField` 类）的引用，所以尝试调用 `SubClass.basePublicStaticMethod()` 会抛出 `TypeError`。
+
+```js
+class BaseClassWithPrivateStaticField {
+  static #PRIVATE_STATIC_FIELD;
+
+  static basePublicStaticMethod() {
+    this.#PRIVATE_STATIC_FIELD = 42;
+    return this.#PRIVATE_STATIC_FIELD;
+  }
+}
+
+class SubClass extends BaseClassWithPrivateStaticField { };
+
+let error = null;
+
+try {
+  SubClass.basePublicStaticMethod()
+} catch(e) { error = e};
+
+console.log(error instanceof TypeError);
+// true
+console.log(error);
+// TypeError: Cannot write private member #PRIVATE_STATIC_FIELD
+// to an object whose class did not declare it
+```
+
+### 私有方法
+
+#### 私有实例方法
+
+私有实例方法是类实例上可用的方法，它们的访问方式与私有实例字段相同。
+
+```js
+class ClassWithPrivateMethod {
+  #privateMethod() {
+    return 'hello world';
+  }
+
+  getPrivateMessage() {
+    return this.#privateMethod();
+  }
+}
+
+const instance = new ClassWithPrivateMethod();
+console.log(instance.getPrivateMessage());
+// hello world
+```
+
+私有实例方法可以是生成器方法、异步方法或异步生成器方法，也可以是私有的 getter 和 setter。
+
+```js
+class ClassWithPrivateAccessor {
+  #message;
+
+  get #decoratedMessage() {
+    return `🎬${this.#message}🛑`;
+  }
+  set #decoratedMessage(msg) {
+    this.#message = msg;
+  }
+
+  constructor() {
+    this.#decoratedMessage = 'hello world';
+    console.log(this.#decoratedMessage);
+  }
+}
+
+new ClassWithPrivateAccessor();
+// 🎬hello world🛑
+```
+
+#### 私有静态方法
+
+像它们的公有等价方法一样，私有静态方法是在类本身而非类的实例上调用的。像私有静态字段一样，只能从类声明内部访问它们。
+
+```js
+class ClassWithPrivateStaticMethod {
+  static #privateStaticMethod() {
+    return 42;
+  }
+
+  static publicStaticMethod1() {
+    return ClassWithPrivateStaticMethod.#privateStaticMethod();
+  }
+
+  static publicStaticMethod2() {
+    return this.#privateStaticMethod();
+  }
+}
+
+console.log(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
+// true
+console.log(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
+// true
+```
+
+私有静态方法可以是生成器方法，异步方法或异步生成器方法。
+
+前面提到的私有静态字段的限制同样适用于私有静态方法。同样地，使用 **`this`** 可能会出现意想不到的行为。在下方的例子中，`this` 是 `Derived` 类（而不是 `Base` 类）的引用，所以尝试调用 `Derived.publicStaticMethod2()` 会抛出 `TypeError`。
+
+```js
+class Base {
+  static #privateStaticMethod() {
+    return 42;
+  }
+  static publicStaticMethod1() {
+    return Base.#privateStaticMethod();
+  }
+  static publicStaticMethod2() {
+    return this.#privateStaticMethod();
+  }
 }
 
 class Derived extends Base {}
 
-console.log(Derived.publicStaticMethod1()); // 42
-console.log(Derived.publicStaticMethod2()); // TypeError
-</pre>
+console.log(Derived.publicStaticMethod1());
+// 42
+console.log(Derived.publicStaticMethod2());
+// TypeError: Cannot read private member #privateStaticMethod
+// from an object whose class did not declare it
+```
 
-<h4 id="私有实例方法">私有实例方法</h4>
+## 规范
 
-<p>私有实例方法是类实例上可用的方法，它们的访问方式与私有实例字段相同。</p>
+{{Specifications("javascript.classes")}}
 
-<pre class="brush: js notranslate">class ClassWithPrivateMethod {
-  #privateMethod() {
-    return 'hello world'
-  }
+## 浏览器兼容性
 
-  getPrivateMessage() {
-      return this.#privateMethod()
-  }
-}
+{{Compat("javascript.classes")}}
 
-const instance = new ClassWithPrivateMethod()
-console.log(instance.getPrivateMessage())
-// expected output: "hello worl​d"</pre>
+## 参见
 
-<p>私有实例方法可以是生成器方法，异步方法或异步生成器方法。 私有的getter和setter也是可能的：</p>
-
-<pre class="brush: js notranslate">class ClassWithPrivateAccessor {
-  #message
-
-  get #decoratedMessage() {
-    return `✨${this.#message}✨`
-  }
-  set #decoratedMessage(msg) {
-    this.#message = msg
-  }
-
-  constructor() {
-    this.#decoratedMessage = 'hello world'
-    console.log(this.#decoratedMessage)
-  }
-}
-
-new ClassWithPrivateAccessor();
-// expected output: "✨hello worl​d✨"
-</pre>
-
-<h2 id="规范">规范</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Public and private instance fields', '#prod-FieldDefinition', 'FieldDefinition')}}</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<p>{{Compat("javascript.classes.private_class_fields")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields">Public class fields</a></li>
- <li><a href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">The Semantics of All JS Class Elements</a></li>
-</ul>
+- [Working with private class features](/en-US/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features)
+- [Public class fields](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- [The
+  Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+- [Public and private class fields](https://v8.dev/features/class-fields)
+  article at the v8.dev site
