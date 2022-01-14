@@ -67,11 +67,11 @@ function fetchVideo() {
 
 GitHub で完全に動作する例を見ることができます — [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) (または、[実際に動作する様子](https://mdn.github.io/dom-examples/abort-api/)) を参照してください。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 
