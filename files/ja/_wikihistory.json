@@ -28989,12 +28989,6 @@
       "haccy"
     ]
   },
-  "Web/CSS/List_of_Proprietary_CSS_Features": {
-    "modified": "2019-03-18T21:33:15.134Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/CSS/Media_Queries/Testing_media_queries": {
     "modified": "2020-10-15T21:07:28.863Z",
     "contributors": [
@@ -48607,6 +48601,12 @@
       "siokoshou",
       "ethertank",
       "sosleepy"
+    ]
+  },
+  "conflicting/Web/CSS/Reference": {
+    "modified": "2019-03-18T21:33:15.134Z",
+    "contributors": [
+      "mfuji09"
     ]
   },
   "conflicting/Web/CSS/cursor": {

@@ -1,12 +1,12 @@
 ---
 title: Liste de fonctionnalités CSS propriétaires
-slug: Web/CSS/List_of_Proprietary_CSS_Features
+slug: conflicting/Web/CSS/Reference
 tags:
   - CSS
   - Draft
   - NeedsContent
 translation_of: Web/CSS/List_of_Proprietary_CSS_Features
-original_slug: Web/CSS/Liste_de_Fonctionnalités_CSS_Propriétaires
+original_slug: Web/CSS/List_of_Proprietary_CSS_Features
 ---
 {{CSSRef}}{{Draft}}
 

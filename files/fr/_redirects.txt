@@ -4109,7 +4109,8 @@
 /fr/docs/Web/CSS/Layout_cookbook/Navigation_Breadcrumb	/fr/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 /fr/docs/Web/CSS/Layout_cookbook/Navigation_segmentée	/fr/docs/Web/CSS/Layout_cookbook/Split_Navigation
 /fr/docs/Web/CSS/Les_variables_CSS	/fr/docs/Web/CSS/Using_CSS_custom_properties
-/fr/docs/Web/CSS/Liste_de_Fonctionnalités_CSS_Propriétaires	/fr/docs/Web/CSS/List_of_Proprietary_CSS_Features
+/fr/docs/Web/CSS/List_of_Proprietary_CSS_Features	/fr/docs/conflicting/Web/CSS/Reference
+/fr/docs/Web/CSS/Liste_de_Fonctionnalités_CSS_Propriétaires	/fr/docs/conflicting/Web/CSS/Reference
 /fr/docs/Web/CSS/Liste_propriétés_CSS_animées	/fr/docs/Web/CSS/CSS_animated_properties
 /fr/docs/Web/CSS/Mode_de_mise_en_page	/fr/docs/Web/CSS/Layout_mode
 /fr/docs/Web/CSS/Modèle_de_boîte	/en-US/docs/Learn/CSS/Building_blocks/The_box_model
