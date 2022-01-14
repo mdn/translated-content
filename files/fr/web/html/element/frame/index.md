@@ -1,22 +1,14 @@
 ---
-title: '<frame> : l''élément représentant une zone particulière'
+title: '<frame>'
 slug: Web/HTML/Element/frame
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/frame
 browser-compat: html.elements.frame
 ---
-{{HTMLRef}}
+{{HTMLRef}}{{deprecated_header}}
 
-> **Attention :** Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.
+L'élément [HTML](/fr/docs/Web/HTML) **`<frame>`** définit une zone particulière dans laquelle un autre document HTML est affiché. Une `<frame>` (un «&nbsp;cadre&nbsp;» en français) doit être utilisée dans un élément [`<frameset>`](/fr/docs/Web/HTML/Element/frameset).
 
-L'élément HTML **`<frame>`** définit une zone particulière dans laquelle un autre document HTML est affiché. Une `<frame>` (un « cadre ») doit être utilisée dans un élément [`<frameset>`](/fr/docs/Web/HTML/Element/frameset).
-
-Utiliser l'élément `<frame>` est déconseillé en raison de certains inconvénients tels que des problèmes de performance, et un manque d'accessibilité pour les utilisateurs de lecteurs d'écran.
+Utiliser l'élément `<frame>` est déconseillé en raison de certains inconvénients tels que des problèmes de performance et un manque d'accessibilité pour les utilisateurs de lecteurs d'écran. Utilisez plutôt l'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
 
 ## Attributs
 
@@ -29,7 +21,7 @@ Comme tous les autres éléments HTML, cet élément prend en charge les [attrib
 - `noresize`
   - : Cet attribut empêche aux utilisateurs de redimensionner les frames.
 - `scrolling`
-  - : Cet attribut définit l'existence des barres de défilement. Si cet attribut n'est pas utilisé, le navigateur mettre une barre de défilement si nécessaire. Il y a deux options : `yes` pour afficher les barres de défilement même quand ce n'est pas nécessaire, et `no` pour ne pas afficher les barres de défilement même quand c'est nécessaire.
+  - : Cet attribut définit l'existence des barres de défilement. Si cet attribut n'est pas utilisé, le navigateur mettre une barre de défilement si nécessaire. Il y a deux options&nbsp;: `yes` pour afficher les barres de défilement même quand ce n'est pas nécessaire, et `no` pour ne pas afficher les barres de défilement même quand c'est nécessaire.
 - `marginheight`
   - : Cet attribut définit la hauteur des marges entre les frames.
 - `marginwidth`
