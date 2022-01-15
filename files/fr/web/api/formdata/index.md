@@ -6,7 +6,7 @@ browser-compat: api.FormData
 ---
 {{APIRef("XMLHttpRequest")}}
 
-L'interface **`FormData`** permet de construire facilement un ensemble de paires clé/valeur représentant les champs du formulaire et leurs valeurs, qui peuvent ensuite être facilement envoyées en utilisant la méthode [`XMLHttpRequest.send()`](/fr/docs/Web/API/XMLHttpRequest/send) de l'objet `XMLHttpRequest`. Il utilise le même format qu'utilise un formulaire si le type d'encodage est mis à `"multipart/form-data"`.
+L'interface **`FormData`** permet de construire facilement un ensemble de paires clé/valeur représentant les champs du formulaire et leurs valeurs, qui peuvent ensuite être facilement envoyées en utilisant la méthode [`XMLHttpRequest.send()`](/fr/docs/Web/API/XMLHttpRequest/send) de l'objet `XMLHttpRequest`. Elle utilise le même format qu'utilise un formulaire si le type d'encodage est mis à `"multipart/form-data"`.
 
 Vous pouvez également le passer directement au constructeur [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams) si vous souhaitez générer des paramètres de requête de la même manière qu'un [`<form>`](/fr/docs/Web/HTML/Element/Form) le ferait s'il utilisait une simple soumission `GET`.
 
@@ -26,7 +26,7 @@ Un objet implémentant `FormData` peut être utilisé directement dans une struc
 - [`FormData.delete()`](/fr/docs/Web/API/FormData/delete)
   - : Supprime une paire clé/valeur d'un objet `FormData`.
 - [`FormData.entries()`](/fr/docs/Web/API/FormData/entries)
-  - : Renvoie un [`itérateur`](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) permettant de passer en revue toutes les paires clé/valeur contenues dans cet objet.
+  - : Renvoie un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) permettant de passer en revue toutes les paires clé/valeur contenues dans cet objet.
 - [`FormData.get()`](/fr/docs/Web/API/FormData/get)
   - : Renvoie la première valeur associée à une clé donnée à partir d'un objet `FormData`.
 - [`FormData.getAll()`](/fr/docs/Web/API/FormData/getAll)
@@ -34,11 +34,11 @@ Un objet implémentant `FormData` peut être utilisé directement dans une struc
 - [`FormData.has()`](/fr/docs/Web/API/FormData/has)
   - : Renvoie un booléen indiquant si un objet `FormData` contient une certaine clé.
 - [`FormData.keys()`](/fr/docs/Web/API/FormData/keys)
-  - : Renvoie un [`itérateur`](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) permettant de parcourir toutes les clés des paires clé/valeur contenues dans cet objet.
+  - : Renvoie un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) permettant de parcourir toutes les clés des paires clé/valeur contenues dans cet objet.
 - [`FormData.set()`](/fr/docs/Web/API/FormData/set)
   - : Définit une nouvelle valeur pour une clé existante dans un objet `FormData`, ou ajoute la clé/valeur si elle n'existe pas encore.
 - [`FormData.values()`](/fr/docs/Web/API/FormData/values)
-  - : Renvoie un [`itérateur`](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) permettant de parcourir toutes les valeurs contenues dans cet objet.
+  - : Renvoie un [itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) permettant de parcourir toutes les valeurs contenues dans cet objet.
 
 ## Spécifications
 
