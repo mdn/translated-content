@@ -1,74 +1,74 @@
 ---
-title: Fetch の基本コンセプト
+title: Fetch の基本概念
 slug: Web/API/Fetch_API/Basic_concepts
 tags:
   - API
   - Fetch
   - Fetch API
   - XMLHttpRequest
-  - concept
+  - 概念
   - guard
   - request
 translation_of: Web/API/Fetch_API/Basic_concepts
 ---
-<p>{{DefaultAPISidebar("Fetch API")}}{{draft}}</p>
+{{DefaultAPISidebar("Fetch API")}}{{draft}}
 
-<div class="summary">
-<p><a href="/ja/docs/Web/API/Fetch_API">Fetch</a> は、(ネットワークを超えて)リソースを取得するインターフェイスを提供します。 {{domxref("XMLHttpRequest")}} を使っていた人には馴染み深いでしょうが、より拡張可能で効果的な機能があります。この記事は、Fetch API の基本コンセプトのいくつかを説明します。</p>
-</div>
+[Fetch](/ja/docs/Web/API/Fetch_API) は、（ネットワーク越しの場合も含めて）リソースを取得するインターフェイスを提供します。 {{domxref("XMLHttpRequest")}} を使っていた人にはなじみ深いでしょうが、より強力で柔軟な機能を提供します。この記事では、 Fetch API の基本概念のいくつかを説明します。
 
-<div class="note">
-<p>この記事は随時加筆されます。より良い説明が必要な Fetch コンセプトを見つけた場合、<a href="https://discourse.mozilla-community.org/c/mdn">MDN ディスカッションフォーラム</a> か <a href="https://wiki.mozilla.org/Matrix">Matrix</a> の <a href="https://chat.mozilla.org/#/room/#mdn:mozilla.org">MDN WebDocs</a> ルームで誰かに知らせてください。</p>
-</div>
+> **Note:** この記事は随時加筆されます。より良い説明が必要な Fetch 概念を見つけた場合、[MDN ディスカッションフォーラム](https://discourse.mozilla-community.org/c/mdn) か [Matrix](https://wiki.mozilla.org/Matrix) の [MDN Web Docs](https://chat.mozilla.org/#/room/#mdn:mozilla.org) ルームで誰かに知らせてください。
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>Fetch の核心はインターフェイスの抽象化であり、HTTP {{domxref("Request")}}、{{domxref("Response")}}、{{domxref("Headers")}}、{{domxref("Body")}} のペイロード、そして非同期リソースリクエストの初期化のための {{domxref("GlobalFetch.fetch","global fetch")}} メソッドがその対象です。HTTP の主要コンポーネントが JavaScript オブジェクトとして抽象化されているため、他の API からそれらの機能を利用しやすくなっています。</p>
+Fetch の核心はインターフェイスの抽象化であり、HTTP のリクエスト ({{domxref("Request")}})、レスポンス ({{domxref("Response")}})、ヘッダー ({{domxref("Headers")}}) を抽象化するインターフェイスであり、非同期のリソースのリクエストを行うための {{domxref("fetch()")}} メソッドで行います。 HTTP の主要部分が JavaScript オブジェクトとして抽象化されているため、他の API からそれらの機能を利用しやすくなっています。
 
-<p><a href="/ja/docs/Web/API/ServiceWorker_API">Service Worker</a> は Fetch を多用する API の一例です。</p>
+[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)は、 Fetch を多用する API の一例です。
 
-<p>Fetch はそれらのリクエストの非同期な性質をもう一歩先へ進めるものです。API は完全に {{jsxref("Promise")}} ベースです。</p>
+Fetch はそれらのリクエストの非同期な性質をもう一歩先へ進めるものです。 API は完全に {{jsxref("Promise")}} ベースです。
 
-<h2 id="ガード">ガード</h2>
+## ガード
 
-<p>ガードは {{domxref("Headers")}} オブジェクトの機能で、ヘッダーが使用されている場所に応じて <code>immutable</code>、<code>request</code>、<code>request-no-cors</code>、<code>response</code>、<code>none</code> の値をとります。</p>
+ガードは {{domxref("Headers")}} オブジェクトの機能で、ヘッダーが使用されている場所に応じて `immutable`, `request`, `request-no-cors`, `response`, `none` のいずれかの値を取ります。
 
-<p>{{domxref("Headers.Headers","Headers()")}} の {{glossary("constructor", "コンストラクター")}} を使用して新しい {{domxref("Headers")}} オブジェクトが生成されるとき、ガードは <code>none</code> に設定されます（既定の動作）。{{domxref("Request")}} オブジェクトか {{domxref("Response")}} オブジェクトが生成された場合、関連づけられた {{domxref("Headers")}} オブジェクトのガードは下記のとおり設定されます：</p>
+新しい {{domxref("Headers")}} オブジェクトが {{domxref("Headers.Headers","Headers()")}} {{glossary("constructor", "コンストラクター")}}を使用してが生成されるとき、ガードは `none` （既定値）に設定されます。{{domxref("Request")}} または {{domxref("Response")}} オブジェクトが生成された場合、関連づけられた {{domxref("Headers")}} オブジェクトのガードは下記のとおり設定されます。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="row">新しいオブジェクト型</th>
-   <th scope="col">コンストラクター</th>
-   <th scope="col">関連する {{domxref("Headers")}} オブジェクトのガード設定</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td rowspan="2">{{domxref("Request")}}</td>
-   <td>{{domxref("Request.Request","Request()")}}</td>
-   <td><code>request</code></td>
-  </tr>
-  <tr>
-   <td><code>no-cors</code> の {{domxref("Request.mode","mode")}} を設定した {{domxref("Request.Request","Request()")}}</td>
-   <td><code>request-no-cors</code></td>
-  </tr>
-  <tr>
-   <td rowspan="2">{{domxref("Response")}}</td>
-   <td>{{domxref("Response.Response","Response()")}}</td>
-   <td><code>response</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("Response.error","error()")}} メソッドか {{domxref("Response.redirect","redirect()")}} メソッド</td>
-   <td><code>immutable</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="row">新しいオブジェクト型</th>
+      <th scope="col">コンストラクター</th>
+      <th scope="col">
+        関連する {{domxref("Headers")}} オブジェクトのガード設定
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">{{domxref("Request")}}</td>
+      <td>{{domxref("Request.Request","Request()")}}</td>
+      <td><code>request</code></td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("Request.Request","Request()")}} で {{domxref("Request.mode","mode")}} に <code>no-cors</code> を設定したもの
+      </td>
+      <td><code>request-no-cors</code></td>
+    </tr>
+    <tr>
+      <td rowspan="2">{{domxref("Response")}}</td>
+      <td>{{domxref("Response.Response","Response()")}}</td>
+      <td><code>response</code></td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("Response.error","error()")}} または {{domxref("Response.redirect","redirect()")}} メソッド
+      </td>
+      <td><code>immutable</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>ヘッダーのガードは、ヘッダーのコンテンツを変更する {{domxref("Headers.set","set()")}} メソッドと {{domxref("Headers.delete","delete()")}} メソッド、{{domxref("Headers.append","append()")}} メソッドに影響します。ガードが <code>immutable</code> の {{domxref("Headers")}} を修正しようとした場合、 <code>TypeError</code> をスローします。しかし、次の場合は動作します：</p>
+ヘッダーのガードは、ヘッダーの内容を変更する {{domxref("Headers.set","set()")}}、 {{domxref("Headers.delete","delete()")}}、{{domxref("Headers.append","append()")}} の各メソッドに影響します。 {{domxref("Headers")}} のガードが `immutable` の場合、変更しようとすると `TypeError` が発生します。しかし、次の場合は動作します。
 
-<ul>
- <li>ガードが <code title="">request</code> で、ヘッダーの <var>name</var> が {{Glossary("forbidden header name")}} ではない場合。</li>
- <li>ガードが <code title="">request-no-cors</code> で、ヘッダーの <var>name</var>/<var>value</var> が {{Glossary("simple header")}} の場合。</li>
- <li>ガードが <code title="">response</code> で、ヘッダーの <var>name</var> が {{Glossary("forbidden response header name")}} ではない場合。</li>
-</ul>
+- ガードが `request` で、ヘッダーの _name_ が{{Glossary("forbidden header name", "禁止ヘッダー名")}} ではない場合。
+- ガードが `request-no-cors` で、ヘッダーの _name_/_value_ が{{Glossary("simple header", "単純ヘッダー")}}である場合。
+- ガードが `response` で、ヘッダーの _name_ が{{Glossary("forbidden response header name", "禁止レスポンスヘッダー名")}}ではない場合。
