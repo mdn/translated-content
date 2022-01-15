@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Status/416
 ---
 {{HTTPSidebar}}
 
-Le code de réponse d'erreur HTTP **`416`\*\***` Range Not Satisfiable`\*\* indique que le serveur ne peut pas servir les plages demandées. L'explication la plus probable est que le document ne contient pas de telles plages, ou que la valeur de l'en-tête {{HTTPHeader("Range")}} n'a aucun sens bien que sa syntaxe soit correcte.
+Le code de réponse d'erreur HTTP **`416 Range Not Satisfiable`** indique que le serveur ne peut pas servir les plages demandées. L'explication la plus probable est que le document ne contient pas de telles plages, ou que la valeur de l'en-tête {{HTTPHeader("Range")}} n'a aucun sens bien que sa syntaxe soit correcte.
 
 Le message de réponse  `416` contient un en-tête {{HTTPHeader("Content-Range")}} qui indique une plage qui n'est pas satisfaite (représentée par `'*'`) suivie par `'/'` puis la ressource courante (par exemple `Content-Range: */12777`).
 

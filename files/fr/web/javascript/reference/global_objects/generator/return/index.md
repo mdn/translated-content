@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Generator/return
 ---
 {{JSRef}}
 
-La méthode **`return`\*\***`()`\*\* renvoie la valeur fournie et termine le générateur.
+La méthode **`return()`** renvoie la valeur fournie et termine le générateur.
 
 ## Syntaxe
 

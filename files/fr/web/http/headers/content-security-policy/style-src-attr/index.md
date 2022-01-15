@@ -18,7 +18,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/style-src-attr
 ---
 {{HTTPSidebar}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style`\*\***`-src-attr`\*\* spécifie les sources valides pour des feuilles de styles appliquées à des éléments individuels du DOM par l'attribut `style`.
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src-attr`** spécifie les sources valides pour des feuilles de styles appliquées à des éléments individuels du DOM par l'attribut `style`.
 
 <table class="properties">
   <tbody>

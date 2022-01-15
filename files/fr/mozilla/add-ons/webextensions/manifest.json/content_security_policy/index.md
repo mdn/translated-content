@@ -128,7 +128,7 @@ La directive inclut le mot-clé non pris en charge `'unsafe-inline'` :
 "content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self'"
 ```
 
-1\. _Note : l\*\*es exemples valides montrent l’utilisation correcte des clés dans CSP. Toutefois, les extensions avec_ _`'unsafe-eval'`, `'unsafe-inline'`, des blobs, des scripts ou des sources distantes dans leur CSP ne sont pas autorisées à être répertoriées sur addons.mozilla.org en raison de problèmes de sécurité majeurs._
+1\. _Note : les exemples valides montrent l’utilisation correcte des clés dans CSP. Toutefois, les extensions avec_ _`'unsafe-eval'`, `'unsafe-inline'`, des blobs, des scripts ou des sources distantes dans leur CSP ne sont pas autorisées à être répertoriées sur addons.mozilla.org en raison de problèmes de sécurité majeurs._
 
 ## Compatibilité des navigateurs
 

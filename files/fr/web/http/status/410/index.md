@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Status/410
 ---
 {{HTTPSidebar}}
 
-Le code de réponse d'erreur HyperText Transfer Protocol (HTTP) **`410`\*\***` Gone`\*\* est une erreur client qui indique que l'accès à la ressource visée n'est plus disponible sur le serveur d'origine et que cet état est susceptible d'être définitif.
+Le code de réponse d'erreur HyperText Transfer Protocol (HTTP) **`410 Gone`** est une erreur client qui indique que l'accès à la ressource visée n'est plus disponible sur le serveur d'origine et que cet état est susceptible d'être définitif.
 
 Si vous ne savez pas si cette absence est temporaire ou permanente, il est préférable de renvoyer un code de statut {{HTTPStatus(404)}}.
 

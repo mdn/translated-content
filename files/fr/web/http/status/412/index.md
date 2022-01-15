@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Status/412
 ---
 {{HTTPSidebar}}
 
-Le code de réponse d'erreur HTTP **`412`\*\***` Precondition Failed`\*\* indique que l'accès à la ressource visée a été refusé. Cela arrive avec les requêtes conditionnelles lorsque les méthodes utilisées ne sont pas  {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}} et que la condition définie par les en-têtes  {{HTTPHeader("If-Unmodified-Since")}} ou {{HTTPHeader("If-None-Match")}} n'est pas respectée. Dans ce cas, la requête, généralement un téléversement ou une modification d'une ressource, ne peut être appliquée et ce code de réponse d'erreur est renvoyé.
+Le code de réponse d'erreur HTTP **`412 Precondition Failed`** indique que l'accès à la ressource visée a été refusé. Cela arrive avec les requêtes conditionnelles lorsque les méthodes utilisées ne sont pas  {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}} et que la condition définie par les en-têtes  {{HTTPHeader("If-Unmodified-Since")}} ou {{HTTPHeader("If-None-Match")}} n'est pas respectée. Dans ce cas, la requête, généralement un téléversement ou une modification d'une ressource, ne peut être appliquée et ce code de réponse d'erreur est renvoyé.
 
 ## Statut
 

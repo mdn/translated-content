@@ -436,7 +436,7 @@ De plus, avec notre exemple, nous n'utilisons que trois propriétés CSS. Imagin
 
 Nous vous aiderons à comprendre quelles sont les propriétés qui conviennent dans l'article suivant : [Tableau de compatibilité des propriétés entre les widgets de formulaire](/fr/docs/Properties_compatibility_table_for_forms_widgets "/en-US/docs/Properties_compatibility_table_for_forms_widgets").
 
-## Vers des formulaires plus sympas : bibliothèques utiles et\*\* **« **polyfill » (prothèses d'émulation)\*\*
+## Vers des formulaires plus sympas : bibliothèques utiles et « polyfill » (prothèses d'émulation)
 
 Bien que les CSS soient assez expressives pour les cases à cocher et les boutons radio, c'est loin d'être vrai pour les widgets plus avancés. Même si certaines choses sont possibles avec l'élément {{HTMLElement("select")}}, le widget `file` ne peut pas être stylisé du tout. Il en est de même pour le sélecteur de date, etc.
 

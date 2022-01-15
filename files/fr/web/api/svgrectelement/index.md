@@ -30,7 +30,7 @@ _Cette interface hérite aussi des propriétés de_ _{{domxref("SVGGeometryEleme
 
 ## Méthode
 
-_Cette interface n'implémente pas de méthodes spécifiques mais elle hérite des méthodes parentes de _{{domxref("SVGGeometryElement")}}\*\*.
+_Cette interface n'implémente pas de méthodes spécifiques mais elle hérite des méthodes parentes de _{{domxref("SVGGeometryElement")}}.
 
 ## Spécifications
 

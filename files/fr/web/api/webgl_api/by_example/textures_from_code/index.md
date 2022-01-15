@@ -15,11 +15,11 @@ original_slug: Web/API/WebGL_API/By_example/Générer_des_textures_avec_du_code
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex","Apprendre/WebGL/Par_exemple/Les_textures_vidéos")}}
 
-Dans cet article, on illustre simplement comment générer des textures procédurales avec des fragments de _shader\*\*s_.
+Dans cet article, on illustre simplement comment générer des textures procédurales avec des fragments de _shaders_.
 
 {{EmbedLiveSample("Dessiner_des_textures_avec_du_code",660,350)}}
 
-### Dessiner des textures avec du  code
+### Dessiner des textures avec du code
 
 Il est possible d'appliquer des textures en effectuant des calculs pour chaque pixel du fragment de _shader_.
 

@@ -212,7 +212,7 @@ Ici, nous pouvons obtenir des informations très utiles.
 
 1.  Développez la portée `showHeroes` — vous pouvez voir depuis celle-ci que la variable heroes n'est pas définie, indiquant qu'accèder à la propriété `members` de `jsonObj` (première ligne de la fonction) ne marche pas.
 2.  Vous pouvez également voir que la variable `jsonObj` stock une chaîne de caractères, pas un objet JSON.
-3.  En examinant plus loin la pile d'exécutuion, cliquez sur `request.onload` dans la section _Pile d'exécution_. La vue va se mettre à jour pour afficher la fonction `request.onload` dans le panneau central, et sa portée dans la section _Portée\*\*s_.
+3.  En examinant plus loin la pile d'exécutuion, cliquez sur `request.onload` dans la section _Pile d'exécution_. La vue va se mettre à jour pour afficher la fonction `request.onload` dans le panneau central, et sa portée dans la section _Portées_.
 4.  Maintenant si vous développez la portée de `request.onload`, vous verrez que la variable `superHeroes` est également une chaîne de caractères, pas un objet. C'est la solution — notre appel [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) retourne le JSON comme du texte, pas comme du JSON.
 
 > **Note :** Nous aimerions que vous essayez de résoudre ce problème par vous-même. Pour vous donner un indice, vous avez le choix entre [tell the XMLHttpRequest object explicitly to return JSON format](/fr/docs/Web/API/XMLHttpRequest/responseType), ou [conversion entre objet et texte](/fr/docs/Learn/JavaScript/Objects/JSON#Convertion_entre_objets_et_textes) après l'arrivée de la réponse. Si vous restez bloqué, consultez notre exemple [fixed-ajax.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fixed-ajax.html).

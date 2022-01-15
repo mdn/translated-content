@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillRect
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.fillRect()`\*_ de l'API 2D des Canvas dessine un rectangle plein aux coordonnées _(x, y)*, aux dimensions déterminées par *largeur* et *hauteur\* et au style déterminé par l'attribut `fillStyle`.
+La méthode **`CanvasRenderingContext2D.fillRect()`** de l'API 2D des Canvas dessine un rectangle plein aux coordonnées _(x, y)_, aux dimensions déterminées par *largeur* et *hauteur* et au style déterminé par l'attribut `fillStyle`.
 
 ## Syntaxe
 

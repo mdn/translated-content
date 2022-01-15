@@ -97,9 +97,9 @@ Vous souhaiterez parfois utiliser un template HTML personnalisé. Voyons comment
 
 4.  Maintenant, lançons l'exemple. La commande ci-dessus aura généré hello2.html, qui aura à peu près le même contenu que le template avec un peu de code "glue" pour charger le code wasm généré, l'exéuter, etc. Ouvrez-le dans votre navigateur et vous verrez quasiment la même chose qu'avec notre dernier exemple.
 
-> **Note :** Vous pouvez spécifier, comme sortie, juste le fichier\* JavaScript "glue" au lieu de la sortie HTML en specifiant un fichier .js au lieu d'un fichier HTML dans le flag`-o` . Par exemple: `emcc -o hello2.js hello2.c -O3 -s WASM=1`. Vous pouevz ensuite votre propre fichier HTML à partir de rien bien que ce soit une approche plus compliquée. Il est généralement plus simple d'utiliser le template HTML fournit.
+> **Note :** Vous pouvez spécifier, comme sortie, juste le fichier JavaScript "glue" au lieu de la sortie HTML en specifiant un fichier .js au lieu d'un fichier HTML dans le flag`-o` . Par exemple: `emcc -o hello2.js hello2.c -O3 -s WASM=1`. Vous pouevz ensuite votre propre fichier HTML à partir de rien bien que ce soit une approche plus compliquée. Il est généralement plus simple d'utiliser le template HTML fournit.
 >
-> \* Emscripten necessite une grande variété de code Javascript "glue" pour gérer les allocations memoire, les fuites memoires et bien d'autres problèmes.
+> Emscripten necessite une grande variété de code Javascript "glue" pour gérer les allocations memoire, les fuites memoires et bien d'autres problèmes.
 
 ### Appeler une fonction personnalisée définie en C
 

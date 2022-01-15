@@ -370,7 +370,7 @@ bouton.addEventListener('click', function() {
 
     1.  Nous commençons le compteur à `0`, exécutons la boucle jusqu'à ce que le compteur ne soit plus inférieur à `contacts.length`, et incrémentons `i` par 1 après chaque itération de la boucle.
     2.  À l'intérieur de la boucle, nous divisons d'abord le contact actuel (`contacts[i]`) au caractère deux-points et stockons les deux valeurs résultantes dans un tableau appelé `splitContact`.
-    3.  Nous utilisons ensuite une instruction conditionnelle pour tester si `splitContact[0] `(le nom du contact) est égal au `searchName` entré. Si c'est le cas, nous introduisons une `string / chaîne de caractère`\*\* \*\*dans le paragraphe pour indiquer quel est le numéro du contact et utiliser `break` pour terminer la boucle.
+    3.  Nous utilisons ensuite une instruction conditionnelle pour tester si `splitContact[0] `(le nom du contact) est égal au `searchName` entré. Si c'est le cas, nous introduisons une `string / chaîne de caractère` dans le paragraphe pour indiquer quel est le numéro du contact et utiliser `break` pour terminer la boucle.
 
 5.  Si le nom du contact ne correspond pas à la recherche entrée, le texte du paragraphe est défini sur "Contact not found." et la boucle continue son itération.
 

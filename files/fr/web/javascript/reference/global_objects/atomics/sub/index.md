@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/sub
 ---
 {{JSRef}}
 
-La méthode statique **`Atomics`\*\***`.sub()`\*\* permet de soustraire une valeur donnée à une position donnée du tableau partagé. Elle renvoie l'ancienne valeur qui était contenue dans le tableau avant l'opération. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
+La méthode statique **`Atomics.sub()`** permet de soustraire une valeur donnée à une position donnée du tableau partagé. Elle renvoie l'ancienne valeur qui était contenue dans le tableau avant l'opération. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
 {{EmbedInteractiveExample("pages/js/atomics-sub.html")}}
 

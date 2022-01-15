@@ -16,7 +16,7 @@ translation_of: Web/API/CanvasRenderingContext2D/getImageData
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.getImageData()`\*_ de l'API Canvas 2D retourne un  objet {{domxref("ImageData")}} représentant les données de pixels sous-jacentes pour la zone du canevas désigné par le rectangle qui commence aux positions _(sx, sy)* et qui possède des attributs : *largeur (sw*) et *hauteur* (*sh)\*. Cette méthode n'est pas affectée par la matrice de transformation du canevas.
+La méthode **`CanvasRenderingContext2D.getImageData()`** de l'API Canvas 2D retourne un  objet {{domxref("ImageData")}} représentant les données de pixels sous-jacentes pour la zone du canevas désigné par le rectangle qui commence aux positions _(sx, sy)_ et qui possède des attributs : *largeur (sw) et hauteur (sh)*. Cette méthode n'est pas affectée par la matrice de transformation du canevas.
 
 Les pixels en dehors de la zone de canevas sont présents sous forme de valeurs noires transparentes dans les données d'image renvoyées.
 
@@ -29,11 +29,11 @@ Les pixels en dehors de la zone de canevas sont présents sous forme de valeurs 
 - `sx`
   - : La coordonnée x du coin supérieur gauche du rectangle à partir duquel _ImageData_ sera extrait.
 - `sy`
-  - : La coordonnée y du coin supérieur gauche du rectangle à partir duquel \*ImageData\***\* \*** sera extrait.
+  - : La coordonnée y du coin supérieur gauche du rectangle à partir duquel *ImageData* sera extrait.
 - `sw`
-  - : La largeur du rectangle à partir duquel \*ImageData** \***sera extrait.
+  - : La largeur du rectangle à partir duquel *ImageData* sera extrait.
 - `sh`
-  - : La hauteur du rectangle à partir duquel \*ImageData** \***sera extrait.
+  - : La hauteur du rectangle à partir duquel *ImageData* sera extrait.
 
 ### Valeur retournée
 
