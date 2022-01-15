@@ -67,9 +67,9 @@ Si on veut utiliser la valeur `DENY`, on pourra utiliser ceci dans la configurat
 Header set X-Frame-Options "DENY"
 ```
 
-### Configurer NGINX
+### Configurer nginx
 
-Avec NGINX, on pourra ajouter la ligne suivante à la configuration HTTP, serveur ou à la configuration de l'emplacement (<i lang="en">location</i>)&nbsp;:
+Avec nginx, on pourra ajouter la ligne suivante à la configuration HTTP, serveur ou à la configuration de l'emplacement (<i lang="en">location</i>)&nbsp;:
 
 ```
 add_header X-Frame-Options SAMEORIGIN always;

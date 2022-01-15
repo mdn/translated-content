@@ -8,7 +8,7 @@ browser-compat: html.elements.frame
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<frame>`** définit une zone particulière dans laquelle un autre document HTML est affiché. Une `<frame>` (un «&nbsp;cadre&nbsp;» en français) doit être utilisée dans un élément [`<frameset>`](/fr/docs/Web/HTML/Element/frameset).
 
-Utiliser l'élément `<frame>` est déconseillé en raison de certains inconvénients tels que des problèmes de performance et un manque d'accessibilité pour les utilisateurs de lecteurs d'écran. Utilisez plutôt l'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
+Utiliser l'élément `<frame>` est déconseillé en raison de certains inconvénients tels que des problèmes de performance et un manque d'accessibilité pour les personnes utilisant des lecteurs d'écran. Utilisez plutôt l'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
 
 ## Attributs
 
@@ -21,7 +21,7 @@ Comme tous les autres éléments HTML, cet élément prend en charge les [attrib
 - `noresize`
   - : Cet attribut empêche aux utilisateurs de redimensionner les frames.
 - `scrolling`
-  - : Cet attribut définit l'existence des barres de défilement. Si cet attribut n'est pas utilisé, le navigateur mettre une barre de défilement si nécessaire. Il y a deux options&nbsp;: `yes` pour afficher les barres de défilement même quand ce n'est pas nécessaire, et `no` pour ne pas afficher les barres de défilement même quand c'est nécessaire.
+  - : Cet attribut définit l'existence des barres de défilement. Si cet attribut n'est pas utilisé, le navigateur mettre une barre de défilement si nécessaire. Il y a deux options&nbsp;: `"yes"` pour afficher les barres de défilement même quand ce n'est pas nécessaire, et `"no"` pour ne pas afficher les barres de défilement même quand c'est nécessaire.
 - `marginheight`
   - : Cet attribut définit la hauteur des marges entre les frames.
 - `marginwidth`
