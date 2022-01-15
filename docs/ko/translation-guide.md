@@ -226,7 +226,7 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 | Aliasing | 별칭 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
 | Brief history | 간략한 역사 | [링크](https://developer.mozilla.org/ko/docs/Glossary/HTML#%EA%B0%84%EB%9E%B5%ED%95%9C_%EC%97%AD%EC%82%AC) |
 | Browser compatibility | 브라우저 호환성 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
-| Browser support | 브라우저 지원 | [링크](http://localhost:5000/en-us/docs/Web/API/Web_Audio_API/Using_IIR_filters#browser_support) |
+| Browser support | 브라우저 지원 | [링크](http://localhost:5042/en-us/docs/Web/API/Web_Audio_API/Using_IIR_filters#browser_support) |
 | Concept | 개념 | |
 | Conclusion | 결론 | |
 | Contact us | 문의하기 | |
@@ -258,7 +258,7 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
 | Compatibility notes | 호환성 참고 사항 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
-| Parameters | 매개변수 | [링크](http://localhost:5000/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode#parameters) |
+| Parameters | 매개변수 | [링크](http://localhost:5042/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode#parameters) |
 | Value | 값 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
 
 ## 안내 문구

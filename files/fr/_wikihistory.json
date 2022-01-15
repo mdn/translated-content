@@ -2971,12 +2971,6 @@
       "Voulto"
     ]
   },
-  "Glossary/Transmission_Control_Protocol_(TCP)": {
-    "modified": "2019-09-13T20:23:27.919Z",
-    "contributors": [
-      "estelle"
-    ]
-  },
   "Glossary/Tree_shaking": {
     "modified": "2019-03-18T21:45:48.808Z",
     "contributors": [
@@ -22164,14 +22158,6 @@
       "Fredchat"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role": {
-    "modified": "2019-03-23T23:16:30.067Z",
-    "contributors": [
-      "hmore",
-      "BenoitL",
-      "Fredchat"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role": {
     "modified": "2019-03-23T23:14:00.888Z",
     "contributors": [
@@ -22352,6 +22338,14 @@
     "modified": "2019-03-23T22:44:02.313Z",
     "contributors": [
       "paul.bignier"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/alert_role": {
+    "modified": "2019-03-23T23:16:30.067Z",
+    "contributors": [
+      "hmore",
+      "BenoitL",
+      "Fredchat"
     ]
   },
   "Web/Accessibility/ARIA/Roles/button_role": {
@@ -25400,13 +25394,6 @@
       "SphinxKnight",
       "teoli",
       "FredB"
-    ]
-  },
-  "Web/CSS/List_of_Proprietary_CSS_Features": {
-    "modified": "2019-04-06T13:18:27.677Z",
-    "contributors": [
-      "SphinxKnight",
-      "xdelatour"
     ]
   },
   "Web/CSS/Media_Queries": {
@@ -42419,6 +42406,12 @@
       "xdelatour"
     ]
   },
+  "conflicting/Glossary/TCP": {
+    "modified": "2019-09-13T20:23:27.919Z",
+    "contributors": [
+      "estelle"
+    ]
+  },
   "conflicting/Learn": {
     "modified": "2020-07-16T22:22:13.196Z",
     "contributors": [
@@ -43331,6 +43324,13 @@
     "contributors": [
       "Fredchat",
       "Kyodev"
+    ]
+  },
+  "conflicting/Web/CSS/Reference": {
+    "modified": "2019-04-06T13:18:27.677Z",
+    "contributors": [
+      "SphinxKnight",
+      "xdelatour"
     ]
   },
   "conflicting/Web/CSS/border-collapse": {

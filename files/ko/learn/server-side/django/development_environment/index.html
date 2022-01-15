@@ -202,7 +202,7 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <h4 id="우분투_가상_환경_셋업">우분투 가상 환경 셋업</h4>
 
-<p>파이썬과 pip를 설치한 후에 (virtualenv를 포함하는)virtualenvwrapper를 설치할 수 있습니다. 공식 설치 가이드는 <a href="http://virtualenvwrapper.readthedocs.io/en/latest/install.html">여기</a>엣서 찾을 수 있습니다. 아니면 아래 설명을 따라오세요.</p>
+<p>파이썬과 pip를 설치한 후에 (virtualenv를 포함하는)virtualenvwrapper를 설치할 수 있습니다. 공식 설치 가이드는 <a href="http://virtualenvwrapper.readthedocs.io/en/latest/install.html">여기</a>에서 찾을 수 있습니다. 아니면 아래 설명을 따라오세요.</p>
 
 <p>pip3를 사용해서 그 도구를 설치하세요:</p>
 
@@ -318,28 +318,28 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 <p>이제 당신은 가상환경내에 있으며 장고를 설치하고 개발을 시작할 수 있습니다.</p>
 
 <div class="note">
-<p><strong>주의</strong>: 이 시점부터 이 기사 ( 정확히는 이 모듈)에서 실행되는 모든 명령은 위에서 우리가 설정한 파이썬 가상환경내에서 실행되는 것으로 간주합니다.</p>
+<p><strong>주의</strong>: 이 시점부터 이 기사 (정확히는 이 모듈)에서 실행되는 모든 명령은 위에서 우리가 설정한 파이썬 가상환경내에서 실행되는 것으로 간주합니다.</p>
 </div>
 
 <h3 id="가상_환경_사용하기">가상 환경 사용하기</h3>
 
-<p>당신이 알아야 하는 명령이 몇 가지 더 있다.(도구 문서에는 더 많이 있긴하지만, 아래 명령이 꾸준히 사용하게될 명령들이다):</p>
+<p>당신이 알아야 하는 명령이 몇 가지 더 있습니다.(도구 문서에는 더 많이 있긴하지만, 아래 명령이 꾸준히 사용하게될 명령들입니다):</p>
 
 <ul>
- <li><code>deactivate</code> — 활성화된 파이썬 가상 환경을 비활성화한다</li>
- <li><code>workon</code> — 사용가능한 가상 환경 목록을 보여준다</li>
- <li><code>workon name_of_environment</code> — 특정 파이썬 가상 환경을 활성화한다</li>
- <li><code>rmvirtualenv name_of_environment</code> — 특정 환경을 제거한다.</li>
+ <li><code>deactivate</code> — 활성화된 파이썬 가상 환경을 비활성화합니다.</li>
+ <li><code>workon</code> — 사용가능한 가상 환경 목록을 보여줍니다.</li>
+ <li><code>workon name_of_environment</code> — 특정 파이썬 가상 환경을 활성화합니다.</li>
+ <li><code>rmvirtualenv name_of_environment</code> — 특정 환경을 제거합니다.</li>
 </ul>
 
 <h2 id="장고_설치하기">장고 설치하기</h2>
 
-<p>일단 가상 환경을 하나 생성하고, 진입하기 위해 <code>workon</code> 을 호출하면 장고를 설치하기 위해 pip3를 사용할 수 있다. </p>
+<p>일단 가상 환경을 하나 생성하고, 진입하기 위해 <code>workon</code> 을 호출하면 장고를 설치하기 위해 pip3를 사용할 수 있습니다.</p>
 
 <pre class="brush: bash notranslate">pip3 install django
 </pre>
 
-<p>아래 명령을 실행하여 장고가 설치되었는지 테스트할 수 있다 (이 명령은 단지 파이썬이 django 모듈을 찾을 수 있는지 테스트한다):</p>
+<p>아래 명령을 실행하여 장고가 설치되었는지 테스트할 수 있습니다. (이 명령은 단지 파이썬이 django 모듈을 찾을 수 있는지 테스트합니다.):</p>
 
 <pre class="brush: bash notranslate"># Linux/macOS X
 python3 -m django --version

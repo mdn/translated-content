@@ -412,7 +412,7 @@ Il est nécessaire de prévoir quelques étapes préparatoires avant le téléch
 5.  L'objet `FileReader` est utilisé pour la conversion du fichier en chaîne binaire.
 6.  La fonction `send()` du  XMLHttpRequest est appelée en dernier pour télécharger le contenu du fichier complètement chargé.
 
-> **Note :** la méthode non standard `sendAsBinary` utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31 {{ geckoRelease(31) }} ; utilisez plutôt la méthode standard `send(Blob data)`.
+> **Note :** la méthode non standard `sendAsBinary` utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31 {{ geckoRelease(31) }} ; utilisez plutôt la méthode standard `send(Blob data)`.
 
 ### Gérer le processus de téléchargement d'un fichier de manière asynchrone
 

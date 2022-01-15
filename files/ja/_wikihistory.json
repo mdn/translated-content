@@ -817,12 +817,6 @@
       "mfuji09"
     ]
   },
-  "Glossary/Client_hints": {
-    "modified": "2020-03-27T14:30:49.281Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Glossary/Closure": {
     "modified": "2019-03-23T22:37:50.037Z",
     "contributors": [
@@ -26314,12 +26308,6 @@
       "davidbrouillette"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role": {
-    "modified": "2019-03-18T21:24:32.583Z",
-    "contributors": [
-      "8845musign"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role": {
     "modified": "2019-03-18T21:10:44.737Z",
     "contributors": [
@@ -28999,12 +28987,6 @@
       "Marsf",
       "Taken",
       "haccy"
-    ]
-  },
-  "Web/CSS/List_of_Proprietary_CSS_Features": {
-    "modified": "2019-03-18T21:33:15.134Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "Web/CSS/Media_Queries/Testing_media_queries": {
@@ -35763,6 +35745,12 @@
       "mfuji09",
       "SphinxKnight",
       "yyss"
+    ]
+  },
+  "Web/HTTP/Client_hints": {
+    "modified": "2020-03-27T14:30:49.281Z",
+    "contributors": [
+      "Wind1808"
     ]
   },
   "Web/HTTP/Compression": {
@@ -48592,6 +48580,12 @@
       "Wind1808"
     ]
   },
+  "conflicting/Web/Accessibility/ARIA/Roles/alert_role": {
+    "modified": "2019-03-18T21:24:32.583Z",
+    "contributors": [
+      "8845musign"
+    ]
+  },
   "conflicting/Web/CSS/CSS_Scroll_Snap": {
     "modified": "2020-02-21T23:37:52.316Z",
     "contributors": [
@@ -48607,6 +48601,12 @@
       "siokoshou",
       "ethertank",
       "sosleepy"
+    ]
+  },
+  "conflicting/Web/CSS/Reference": {
+    "modified": "2019-03-18T21:33:15.134Z",
+    "contributors": [
+      "mfuji09"
     ]
   },
   "conflicting/Web/CSS/cursor": {

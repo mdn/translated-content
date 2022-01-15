@@ -3,12 +3,12 @@ title: paint()
 slug: Web/CSS/image/paint()
 tags:
   - CSS
-  - CSS Function
+  - CSS 関数
   - CSS4-images
-  - Function
+  - 関数
   - Houdini
-  - Reference
-  - Web
+  - リファレンス
+  - ウェブ
 browser-compat: css.types.image.paint
 translation_of: Web/CSS/image/paint()
 original_slug: Web/CSS/paint()
@@ -32,11 +32,12 @@ paint(workletName, parameters)
 
 ## 例
 
-<h3 id="Basic_usage_example">基本的な使用例</h3>
+### 基本的な使用例
 
-CSS の paint() 関数で追加の引数を渡すことができます。この例では、二つの引数を渡しています。リストアイテムのグループの背景画像が塗りつぶしか輪郭線だけかと、輪郭線の太さです。
+CSS の paint() 関数で追加の引数を渡すことができます。この例では、 2 つの引数を渡しています。リストアイテムのグループの背景画像が塗りつぶしか輪郭線だけかと、輪郭線の太さです。
 
 ```html hidden
+<ul>
     <li>item 1</li>
     <li>item 2</li>
     <li>item 3</li>
@@ -83,7 +84,7 @@ li:nth-of-type(3n+1) {
 
 boxColor を定義しているセレクターブロックにカスタムプロパティを設定しました。カスタムプロパティは PaintWorklet にアクセスすることができます。
 
-{{EmbedLiveSample("Basic_usage_example", 300, 300)}}
+{{EmbedLiveSample("Examples", 300, 300)}}
 
 ## 仕様書
 

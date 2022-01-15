@@ -38,7 +38,7 @@ translation_of: Web/HTML/Element/audio
   <dt><code>anonymous</code></dt>
   <dd>在发送跨域请求时不携带验证信息。换句话说，浏览器在发送<code>Origin:</code> HTTP 请求首部时将不携带 cookie、 X.509 安全令牌、也不会执行任何 HTTP 基本认证。如果服务器没有给予源站信任（也就是说没有设置 <code>Access-Control-Allow-Origin:</code> 响应首部），那么图片就被认为是污染的，它就会被限制使用。</dd>
   <dt><code>use-credentials</code></dt>
-  <dd>在发送跨域请求时不携带验证信息。换句话说，在发送<code>Origin:</code> HTTP 请求首部时将携带 cookie、安全令牌、并且执行 HTTP 基本认证。如果服务器没有给予源站信任（通过设置<code>Access-Control-Allow-Credentials:</code> 响应首部）那么图片就被认为是污染的，它就会被限制使用。</dd>
+  <dd>在发送跨域请求时携带验证信息。换句话说，在发送<code>Origin:</code> HTTP 请求首部时将携带 cookie、安全令牌、并且执行 HTTP 基本认证。如果服务器没有给予源站信任（通过设置<code>Access-Control-Allow-Credentials:</code> 响应首部）那么图片就被认为是污染的，它就会被限制使用。</dd>
  </dl>
  在未指定时，资源将不通过 CORS 请求来获取（也就是不发送 <code>Origin: </code>请求首部），以保护 {{HTMLElement('canvas')}}  元素中未污染的内容。如果验证失败，它会表现的好像 <strong>anonymous </strong>选项是选中的。查看 <a href="/zh-CN/docs/HTML/CORS_settings_attributes">CORS settings attributes</a> 来获取更多信息。</dd>
  <dt>{{htmlattrdef("currentTime")}}</dt>

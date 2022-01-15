@@ -68,7 +68,7 @@ Content-Length: 1024
 
 <pre>curl http://www.example.com -i -H "Range: bytes=0-50, 100-150"</pre>
 
-<p>服务器返回206 Partial Content状态码和Content-Type：multipart/byteranges; boundary=3d6b6a416f9b5头部，Content-Type：multipart/byteranges表示这个响应有多个byterange。每一部分byterange都有他自己的Centen-type头部和Content-Range，并且使用boundary参数对body进行划分。</p>
+<p>服务器返回206 Partial Content状态码和Content-Type：multipart/byteranges; boundary=3d6b6a416f9b5头部，Content-Type：multipart/byteranges表示这个响应有多个byterange。每一部分byterange都有他自己的Content-type头部和Content-Range，并且使用boundary参数对body进行划分。</p>
 
 <pre>HTTP/1.1 206 Partial Content
 Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5

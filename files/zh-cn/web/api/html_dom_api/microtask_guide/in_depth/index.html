@@ -124,7 +124,7 @@ greetUser("Veronica");</pre>
  <dt>Window 事件循环</dt>
  <dd>window 事件循环驱动所有同源的窗口 (though there are further limits to this as described elsewhere in this article XXXX ????).</dd>
  <dt>Worker 事件循环</dt>
- <dd>worker 事件循环顾名思义就是驱动 worker 的事件循环。这包括了所有种类的 worker：最基本的 <a href="/en-US/docs/Web/API/Web_Workers_API">web worker</a> 以及 <a href="/en-US/docs/Web/API/SharedWorker">shared worker</a> 和 <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>。 Worker 被放在一个或多个独立于 “主代码” 的代理中。浏览器可能会用单个或多个事件循环来处理给定类型的所有 workder。</dd>
+ <dd>worker 事件循环顾名思义就是驱动 worker 的事件循环。这包括了所有种类的 worker：最基本的 <a href="/en-US/docs/Web/API/Web_Workers_API">web worker</a> 以及 <a href="/en-US/docs/Web/API/SharedWorker">shared worker</a> 和 <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>。 Worker 被放在一个或多个独立于 “主代码” 的代理中。浏览器可能会用单个或多个事件循环来处理给定类型的所有 worker。</dd>
  <dt>Worklet 事件循环</dt>
  <dd><a href="/en-US/docs/Web/API/Worklet">worklet</a> 事件循环用于驱动运行 worklet 的代理。这包含了 {{domxref("Worklet")}}、{{domxref("AudioWorklet")}} 以及 {{domxref("PaintWorklet")}}。</dd>
 </dl>
@@ -166,7 +166,7 @@ greetUser("Veronica");</pre>
 
 <p>微任务是另一种解决该问题的方案，通过将代码安排在下一次事件循环开始之前运行而不是必须要等到下一次开始之后才执行，这样可以提供一个更好的访问级别。</p>
 
-<p>微任务队列已经存在有一段时间了，但之前它仅仅被内部使用来驱动诸如 promise 这些。<code>queueMicrotask()</code>的加入可以让开发者创建一个统一的微任务队列，它能够在任何时候即便是当 JavaScript 执行上下文栈中没有执行上下文剩余时也可以将代码安排在一个安全的时间运行。 在多个实例、所有浏览器以及运行时中，一个标准的微任务队列机都制意味着这些微任务可以非常可靠的以相同的顺序执行，从而避免一些潜在的难以发现的错误。</p>
+<p>微任务队列已经存在有一段时间了，但之前它仅仅被内部使用来驱动诸如 promise 这些。<code>queueMicrotask()</code>的加入可以让开发者创建一个统一的微任务队列，它能够在任何时候即便是当 JavaScript 执行上下文栈中没有执行上下文剩余时也可以将代码安排在一个安全的时间运行。 在多个实例、所有浏览器以及运行时中，一个标准的微任务队列机制意味着这些微任务可以非常可靠的以相同的顺序执行，从而避免一些潜在的难以发现的错误。</p>
 
 <h2 id="更多">更多</h2>
 

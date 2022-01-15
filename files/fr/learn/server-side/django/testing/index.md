@@ -133,7 +133,7 @@ Django utilise le [built-in test discovery](https://docs.python.org/3/library/u
 
 Créez une structure de fichier comme montré ci-dessus, dans votre projet _LocalLibrary_. Le ficheir **\_\_init\_\_.py** doit être vide (il dit simplement à Python que ce répertoire est un package). Vous pouvez créer les trois fichiers de test en copiant et renommant le fichier de test du squelette **/catalog/tests.py**.
 
-> **Note :** le fichier de test du squelette **/catalog/tests.py** a été créé automatiquement quand nous avons [construit le squelette du site web Django](/fr/docs/Learn/Server-side/Django/skeleton_website). Il est parfaitement "légal" de mettre tous vos tests dedans, mais si vous testez correctement, vous allez rapidement vous retrouver avec un fichier de test énorme et impossible à gérer.
+> **Note :** le fichier de test du squelette **/catalog/tests.py** a été créé automatiquement quand nous avons [construit le squelette du site web Django](/fr/docs/Learn/Server-side/Django/skeleton_website). Il est parfaitement "légal" de mettre tous vos tests dedans, mais si vous testez correctement, vous allez rapidement vous retrouver avec un fichier de test énorme et impossible à gérer.
 >
 > Supprimez le fichier de squelette, car nous n'en aurons plus besoin.
 

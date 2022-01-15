@@ -1140,8 +1140,6 @@
 /ja/docs/DOM/EventTarget.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
 /ja/docs/DOM/File.fileName	/ja/docs/conflicting/Web/API/File/name
 /ja/docs/DOM/File.fileSize	/ja/docs/conflicting/Web/API/Blob/size
-/ja/docs/DOM/File.getAsBinary	/ja/docs/Web/API/File/getAsBinary
-/ja/docs/DOM/File.getAsText	/ja/docs/Web/API/File/getAsText
 /ja/docs/DOM/File.lastModifiedDate	/ja/docs/Web/API/File/lastModifiedDate
 /ja/docs/DOM/File.name	/ja/docs/Web/API/File/name
 /ja/docs/DOM/File.size	/ja/docs/Web/API/Blob/size
@@ -1887,6 +1885,7 @@
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser/Physics	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics
 /ja/docs/Glossary/AOM	/ja/docs/Glossary/Accessibility_tree
+/ja/docs/Glossary/Client_hints	/ja/docs/Web/HTTP/Client_hints
 /ja/docs/Glossary/Constant(定数)	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
@@ -3090,8 +3089,6 @@
 /ja/docs/Web/API/FetchEvent_clone	/ja/docs/Web/API/FetchEvent
 /ja/docs/Web/API/File.fileName	/ja/docs/conflicting/Web/API/File/name
 /ja/docs/Web/API/File.fileSize	/ja/docs/conflicting/Web/API/Blob/size
-/ja/docs/Web/API/File.getAsBinary	/ja/docs/Web/API/File/getAsBinary
-/ja/docs/Web/API/File.getAsText	/ja/docs/Web/API/File/getAsText
 /ja/docs/Web/API/File.name	/ja/docs/Web/API/File/name
 /ja/docs/Web/API/File.size	/ja/docs/Web/API/Blob/size
 /ja/docs/Web/API/File.type	/ja/docs/Web/API/Blob/type
@@ -3584,6 +3581,7 @@
 /ja/docs/Web/API/window.unescape	/ja/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /ja/docs/Web/API/window.updateCommands	/ja/docs/Web/API/Window/updateCommands
 /ja/docs/Web/API/window.window	/ja/docs/Web/API/Window/window
+/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/ja/docs/conflicting/Web/Accessibility/ARIA/Roles/alert_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/ja/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/ja/docs/Web/Accessibility/ARIA/Roles/button_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role	/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role
@@ -3691,6 +3689,7 @@
 /ja/docs/Web/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/Web/CSS/Getting_started/What_is_CSS	/ja/docs/Learn/CSS/First_steps/How_CSS_works
+/ja/docs/Web/CSS/List_of_Proprietary_CSS_Features	/ja/docs/conflicting/Web/CSS/Reference
 /ja/docs/Web/CSS/Media	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/Media/Visual	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/Motion_Path	/ja/docs/Web/CSS/CSS_Motion_Path

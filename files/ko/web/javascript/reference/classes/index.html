@@ -24,12 +24,14 @@ translation_of: Web/JavaScript/Reference/Classes
 
 <h4 id="Hoisting">Hoisting</h4>
 
-<p><strong>함수 선언</strong>과 <strong>클래스 선언</strong>의 중요한 차이점은 함수 선언의 경우 {{Glossary("Hoisting", "호이스팅")}}이 일어나지만, 클래스 선언은 그렇지 않다는 것입니다. 클래스를 사용하기 위해서는 클래스를 먼저 선언 해야 합니다. 그렇지 않으면, 다음 코드는 {{jsxref("ReferenceError")}}를 던질 것입니다. :</p>
+<p><strong>함수 선언</strong>과 <strong>클래스 선언</strong>의 중요한 차이점은 험수의 경우 정의하기 하기 전에 호출할 수 있지만, 클래스는 반드시 정의한 뒤에 사용할 수 있다는 점입니다. 다음 코드는 {{jsxref("ReferenceError")}}를 던질 것입니다.</p>
 
 <pre class="brush: js example-bad notranslate">const p = new Rectangle(); // ReferenceError
 
 class Rectangle {}
 </pre>
+
+<p>예외가 발생하는 이유는 클래스가 {{Glossary("Hoisting", "호이스팅")}}될 때 초기화는 되지 않기 때문입니다.</p>
 
 <h3 id="Class_표현식">Class 표현식</h3>
 

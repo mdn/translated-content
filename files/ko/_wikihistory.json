@@ -303,12 +303,6 @@
       "enfroze"
     ]
   },
-  "Glossary/Client_hints": {
-    "modified": "2020-03-30T11:50:49.956Z",
-    "contributors": [
-      "oinochoe"
-    ]
-  },
   "Glossary/Compile": {
     "modified": "2019-10-29T10:03:26.609Z",
     "contributors": [
@@ -960,12 +954,6 @@
     "contributors": [
       "alattalatta",
       "enfroze"
-    ]
-  },
-  "Glossary/Transmission_Control_Protocol_(TCP)": {
-    "modified": "2020-01-12T14:32:05.700Z",
-    "contributors": [
-      "doong-jo"
     ]
   },
   "Glossary/Truthy": {
@@ -11344,6 +11332,12 @@
       "devcken"
     ]
   },
+  "Web/HTTP/Client_hints": {
+    "modified": "2020-03-30T11:50:49.956Z",
+    "contributors": [
+      "oinochoe"
+    ]
+  },
   "Web/HTTP/Compression": {
     "modified": "2020-11-24T03:58:08.551Z",
     "contributors": [
@@ -17377,6 +17371,12 @@
     "modified": "2019-03-18T21:28:25.734Z",
     "contributors": [
       "limkukhyun"
+    ]
+  },
+  "conflicting/Glossary/TCP": {
+    "modified": "2020-01-12T14:32:05.700Z",
+    "contributors": [
+      "doong-jo"
     ]
   },
   "conflicting/Learn": {
