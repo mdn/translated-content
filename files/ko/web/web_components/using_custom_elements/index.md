@@ -1,248 +1,265 @@
 ---
-title: 커스텀 엘리먼트 사용하기
+title: 사용자 정의 요소 사용하기
 slug: Web/Web_Components/Using_custom_elements
 tags:
   - Classes
   - Guide
   - HTML
   - Web Components
+  - autonomous
+  - custom elements
+  - customized
 translation_of: Web/Web_Components/Using_custom_elements
 ---
-<div>{{DefaultAPISidebar("Web Components")}}</div>
+{{DefaultAPISidebar("Web Components")}}
 
-<p class="summary">웹 컴포넌트 표준의 주요 기능 중 하나는 HTML 페이지에 커스텀 페이지 기능을 함께 제공하는 엘리먼트의 길고 중첩된 묶음을 만드는 것보다 사용자의 기능이 캡슐화된 커스텀 엘리먼트를 생성하는 기능입니다. 이 문서는 HTML 커스텀 엘리먼트의 사용을 소개합니다.</p>
+웹 컴포넌트 표준의 주요 기능 중 하나는 사용자 정의 페이지 기능을 제공하는 길고 중첩된 요소들의 묶음으로 만족하는 것보다는, HTML 페이지에서 기능을 캡슐화하는 사용자 정의 요소를 생성하는 능력입니다. 이 문서는 Custom Elements API의 사용을 소개합니다.
 
-<div class="note">
-<p><strong>노트</strong>: 커스텀 엘리먼트는 크롬과 오페라에서 기본으로 제공됩니다. 최근에는 사용자가 두 브라우저에서  <code>dom.webcomponents.shadowdom.enabled</code> 과 <code>dom.webcomponents.customelements.enabled</code> 를 <code>true</code> 로 설정하면 사용가능합니다. 파이어폭스는 버전 60/61에서 기본으로 사용할 수 있도록 계획되었습니다. 사파리는 지금까지 <a href="https://w3c.github.io/webcomponents/spec/custom/#autonomous-custom-element">Autonomous custom elements</a>만을 제공하고 엣지 또한 잘 구현되어 있습니다.</p>
-</div>
+## 중요 내용 보기
 
-<h2 id="중요내용_보기">중요내용 보기</h2>
+웹 document의 사용자 정의 요소의 컨트롤러는 {{domxref("CustomElementRegistry")}} 객체입니다. 이 객체는 페이지에 사용자 정의 요소를 등록할 수 있게 하고, 어떤 사용자 정의 요소가 등록되었는지 등에 대한 정보를 반환합니다.
 
-<p>웹 document의 커스텀 엘리먼트의 컨트롤러는 {{domxref("CustomElementRegistry")}} 오브젝트입니다. 이 오브젝트는 사용자가 페이지에서 커스텀 엘리먼트를 등록하도록 하며 등록된 커스텀 컴포넌트의 정보 등을 리턴합니다.</p>
+페이지에 사용자 정의 요소를 등록하는 방법은 {{domxref("CustomElementRegistry.define()")}} 메서드를 사용하는 것입니다. 이 메서드는 인자로 다음을 취합니다.
 
-<p>페이지에 커스텀 엘리먼트를 등록하려면 {{domxref("CustomElementRegistry.define()")}} 메소드를 사용하십시오. 이 메소드는 다음과 같은 인자들을 사용합니다. </p>
+- {{domxref("DOMString")}}은 요소에 주는 이름을 나타냅니다. 사용자 정의 요소의 이름은 [대시가 사용되는 것을 요구](https://html.spec.whatwg.org/#valid-custom-element-name)한다는 것에 주의하세요 (kebab-case). 이름은 하나의 단어일 수 없습니다.
+- 요소의 동작을 정의하는 [class](/ko/docs/Web/JavaScript/Reference/Classes) 객체.
+- {{optional_inline}} `extends` 속성을 포함하는 옵션 객체인데, 이는 이 요소가 상속받는 내장 요소가 있다면, 그 내장 요소를 명시합니다 (오직 사용자 정의된 내장 요소에만 관계있습니다. 아래의 정의를 보세요).
 
-<ul>
- <li>{{domxref("DOMString")}} 은 사용자가 엘리먼트에게 전달하려는 이름을 나타냅니다. 커스텀 엘리먼트 이름들은 <a href="https://stackoverflow.com/questions/22545621/do-custom-elements-require-a-dash-in-their-name">dash('-')가 포함된 이름을 사용하도록</a> 주의하십시오. 이 이름들은 한 단어가 될 수 없습니다. (예 : custom-my-element)  </li>
- <li>엘리먼트의 행위가 정의된 <a href="/en-US/docs/Web/JavaScript/Reference/Classes">class</a> 오브젝트.</li>
- <li>선택적으로, 커스텀 엘리먼트는 특정 내장 엘리먼트를 상속받도록 지정할 수 있는 옵션 객체   <code>extends</code> 속성을 포함합니다.</li>
-</ul>
+예를 들어, 사용자 정의 [단어 카운트 요소](https://mdn.github.io/web-components-examples/word-count-web-component/)를 다음과 같이 정의할 수 있습니다.
 
-<p>예를 들면, 우리는 커스텀 <a href="https://mdn.github.io/web-components-examples/word-count-web-component/">word-count element</a> 를 아래와 같이 정의할 수 있습니다 :</p>
+```js
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<pre class="brush: js notranslate">customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+이 요소는 `word-count` 라고 불리며, 이것의 클래스 객체는 `WordCount` 이고, 이것은 {{htmlelement("p")}}요소를 확장합니다.
 
-<p>이 엘리먼트는 <code>word-count</code> 로 불리며 클래스 오브젝트는 <code>WordCount</code> 입니다. 또한 {{htmlelement("p")}} 엘리먼트를 상속받습니다.</p>
+사용자 정의 요소의 클래스 객체는 표준 ES 2015 class 구문을 사용하여 작성됩니다. 에를 들어, `WordCount` 는 다음과 같이 구조화될 수 있습니다.
 
-<p>커스텀 엘리먼트의 클래스 오브젝트는 표준 ES 2015 클래스 문법으로 작성됩니다. 예를 들면, <code>WordCount</code> 는 다음과 같은 구조입니다 :</p>
-
-<pre class="brush: js notranslate">class WordCount extends HTMLParagraphElement {
+```js
+class WordCount extends HTMLParagraphElement {
   constructor() {
-    // 항상 생성자에서 super는 처음으로 호출됩니다
+    // 항상 super를 생성자에서 먼저 호출합니다
     super();
-
-    // 엘리먼트의 기능들은 여기에 작성합니다.
-
+    // 요소 기능은 여기 작성됩니다
     ...
   }
-}</pre>
+}
+```
 
-<p>위의 예제는 매우 간단하지만, 더 많은 것들을 할 수 있습니다. 특정 지점에서 실행되는 생성자 내부에서 특정 지점에서 실행하는 생명주기 콜백을 정의할 수 있습니다. 예를 들면, <code>connectedCallback</code> 은 커스텀 엘리먼트가 document의 DOM에 연결될 때마다 호출되는 반면, <code>attributeChangedCallback</code>은 커스텀 엘리먼트의 애트리뷰트가 추가, 제거 또는 변경될때 호출됩니다.</p>
+이것은 단순히 간단한 예제이지만, 여기서 할 수 있는 더 많은 것이 있습니다. 클래스 내부에서 특정한 생명 주기 콜백을 정의할 수 있는데, 이 콜백은 요소의 생명 주기의 특정한 지점에서 실행됩니다. 예를 들어, `connectedCallback` 은 사용자 정의 요소가 문서에 연결된 요소에 추가될 때마다 호출되는 반면, `attributeChangedCallback` 은 사용자 정의 요소의 특성 중 하나가 추가되거나, 제거되거나, 변경될 때 호출됩니다.
 
-<p>아래의 {{anch("Using the lifecycle callbacks")}} 부분에서 이러한 부분을 더 배울 수 있습니다.</p>
+아래의 {{anch("생명 주기 콜백 사용하기")}} 섹션에서 더 많은 것을 배울 수 있습니다.
 
-<p>커스텀 엘리먼트에는 두 종류가 있습니다:</p>
+두 종류의 사용자 정의 요소가 있습니다.
 
-<ul>
- <li><strong>Autonomous custom elements</strong> are standalone — they don't inherit from standard HTML elements. You use these on a page by literally writing them out as an HTML element. For example <code>&lt;popup-info&gt;</code>, or <code>document.createElement("popup-info")</code>.</li>
- <li><strong>Customized built-in elements</strong> inherit from basic HTML elements. To create one of these, you have to specify which element they extend (as implied in the examples above), and they are used by writing out the basic element but specifying the name of the custom element in the {{htmlattrxref("is")}} attribute (or property). For example <code>&lt;p is="word-count"&gt;</code>, or <code>document.createElement("p", { is: "word-count" })</code>.</li>
-</ul>
+- **독립적인 사용자 정의 요소**는 독립적입니다. 이 유형의 요소는 표준 HTML 요소를 상속받지 않습니다. 이러한 요소는 페이지에서 말 그대로 HTML 요소로 작성됨으로써 사용됩니다. 예를 들어 `<popup-info>`, 혹은 `document.createElement("popup-info")`.
+- **사용자 정의된 내장 요소**는 기본 HTML 요소를 상속받습니다. 이러한 요소를 생성하기 위해서는, (위의 예제에서 암시되었듯이) 어떤 요소를 이것이 확장하는지 명시해야 하며, 이러한 요소는 기본 요소를 작성함으로써 사용되나 {{htmlattrxref("is")}} 특성 (혹은 속성) 에 사용자 정의 요소의 이름을 명시해야 합니다. 예를 들어 `<p is="word-count">`, 혹은 `document.createElement("p", { is: "word-count" })`.
 
-<h2 id="Working_through_some_simple_examples">Working through some simple examples</h2>
+## 몇 가지 간단한 예제 살펴보기
 
-<p>At this point, let's go through some more simple examples to show you how custom elements are created in more detail.</p>
+이 지점에서, 어떻게 사용자 정의 요소가 생성되는지를 자세히 보여주는 몇 가지 간단한 예제를 살펴봅시다.
 
-<h3 id="Autonomous_custom_elements">Autonomous custom elements</h3>
+### 독립적인 사용자 정의 요소
 
-<p>Let's have a look at an example of an autonomous custom element — <code><a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">&lt;popup-info-box&gt;</a></code> (see a <a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">live example</a>). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information.</p>
+독립적인 사용자 정의 요소의 예제를 살펴봅시다. [`<popup-info-box>`](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) ([작동 예제](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)도 볼 수 있습니다). 이것은 이미지 아이콘과 텍스트 문자열을 취하고, 아이콘을 페이지에 넣습니다. 아이콘이 포커스되었을 때, 이것은 텍스트를 팝업 정보 박스에 표시하여 추가적인 맥락 내 정보를 제공합니다.
 
-<p>To begin with, the JavaScript file defines a class called <code>PopUpInfo</code>, which extends {{domxref("HTMLElement")}}. Autonomous custom elements nearly always extend <code>HTMLElement</code>.</p>
+우선, JavaScript 파일에서 `PopUpInfo` 라는 클래스를 정의하는데, 이 클래스는 포괄적인 {{domxref("HTMLElement")}} 클래스를 확장합니다.
 
-<pre class="brush: js notranslate">class PopUpInfo extends HTMLElement {
+```js
+class PopUpInfo extends HTMLElement {
   constructor() {
-    // Always call super first in constructor
+    // 항상 super를 생성자에서 먼저 호출합니다
     super();
-
-    // write element functionality in here
-
+    // 요소 기능을 여기 작성합니다
     ...
   }
-}</pre>
+}
+```
 
-<p>The preceding code snippet contains the {{jsxref("Classes.constructor","constructor")}} definition for the class, which always starts by calling <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super()</a></code> so that the correct prototype chain is established.</p>
+앞선 코드 스니펫은 클래스에 대한 [`constructor()`](/ko/docs/Web/JavaScript/Reference/Classes/constructor) 정의를 포함하고 있는데, 이는 항상 [`super()`](/ko/docs/Web/JavaScript/Reference/Operators/super)를 호출함으로써 시작하여 올바른 프로토타입 체인이 확립되도록 합니다.
 
-<p>Inside the constructor, we define all the functionality the element will have when an instance of it is instantiated. In this case we attach a shadow root to the custom element, use some DOM manipulation to create the element's internal shadow DOM structure — which is then attached to the shadow root — and finally attach some CSS to the shadow root to style it.</p>
+생성자 내부에서, 클래스의 인스턴스가 인스턴스화되었을 때 요소가 가질 모든 기능을 정의합니다. 이 경우 우리는 shadow root을 사용자 정의 요소에 부착하고, 몇 가지 DOM 조작을 사용하여 요소의 내부 shadow DOM 구조를 생성하는데, 이는 그리고서 shadow root에 부착됩니다. 그리고 마지막으로 몇 가지 CSS를 shadow root에 부착하여 shadow DOM을 꾸밉니다.
 
-<pre class="brush: js notranslate">// Create a shadow root
-var shadow = this.attachShadow({mode: 'open'});
-
-// Create spans
-var wrapper = document.createElement('span');
+```js
+// shadow root을 생성합니다
+this.attachShadow({mode: 'open'}); // 'this.shadowRoot'을 설정하고 반환합니다
+// (중첩된) span 요소들을 생성합니다
+const wrapper = document.createElement('span');
 wrapper.setAttribute('class','wrapper');
-var icon = document.createElement('span');
+const icon = wrapper.appendChild(document.createElement('span'));
 icon.setAttribute('class','icon');
 icon.setAttribute('tabindex', 0);
-var info = document.createElement('span');
+// 정의된 특성으로부터의 아이콘 혹은 기본 아이콘을 삽입합니다
+const img = icon.appendChild(document.createElement('img'));
+img.src = this.hasAttribute('src') ? this.getAttribute('src') : 'img/default.png';
+const info = wrapper.appendChild(document.createElement('span'));
 info.setAttribute('class','info');
-
-// Take attribute content and put it inside the info span
-var text = this.getAttribute('text');
-info.textContent = text;
-
-// Insert icon
-var imgUrl;
-if(this.hasAttribute('img')) {
-  imgUrl = this.getAttribute('img');
-} else {
-  imgUrl = 'img/default.png';
-}
-var img = document.createElement('img');
-img.src = imgUrl;
-icon.appendChild(img);
-
-// Create some CSS to apply to the shadow dom
-var style = document.createElement('style');
-
+// 특성의 내용을 취하고 그것을 info span 내부에 넣습니다
+info.textContent = this.getAttribute('data-text');
+// shadow dom에 적용할 몇 가지 CSS를 생성합니다
+const style = document.createElement('style');
 style.textContent = '.wrapper {' +
-// CSS truncated for brevity
+// 간결함을 위해 CSS 생략됨
+// 생성된 요소들을 shadow DOM에 부착합니다
+this.shadowRoot.append(style,wrapper);
+```
 
-// attach the created elements to the shadow dom
+마지막으로, `CustomElementRegistry` 에 사용자 정의 요소를 앞에서 언급된 `define()` 메서드를 사용해 등록합니다. 매개변수에서 요소의 이름과, 그리고 나서 요소의 기능을 정의하는 클래스명을 명시합니다.
 
-shadow.appendChild(style);
-shadow.appendChild(wrapper);
-wrapper.appendChild(icon);
-wrapper.appendChild(info);</pre>
+```js
+customElements.define('popup-info', PopUpInfo);
+```
 
-<p>Finally, we register our custom element on the <code>CustomElementRegistry</code> using the <code>define()</code> method we mentioned earlier — in the parameters we specify the element name, and then the class name that defines its functionality:</p>
+이 요소는 이제 페이지에서 사용 가능합니다. HTML 전체에서, 요소를 다음과 같이 사용합니다.
 
-<pre class="brush: js notranslate">customElements.define('popup-info', PopUpInfo);</pre>
-
-<p>It is now available to use on our page. Over in our HTML, we use it like so:</p>
-
-<pre class="brush: html notranslate">&lt;popup-info img="img/alt.png" text="Your card validation code (CVC)
+```html
+<popup-info img="img/alt.png" data-text="Your card validation code (CVC)
   is an extra security feature — it is the last 3 or 4 numbers on the
-  back of your card."&gt;</pre>
+  back of your card."></popup-info>
+```
 
-<div class="note">
-<p><strong>Note</strong>: You can see the <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js">full JavaScript source</a> code here.</p>
-</div>
+> **참고:** [전체 JavaScript 소스 코드](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js)를 여기서 확인할 수 있습니다.
+### 내부 스타일 대 외부 스타일
 
-<h3 id="Customized_built-in_elements">Customized built-in elements</h3>
+상기의 예제에서 {{htmlelement("style")}} 요소가 사용되어 Shadow DOM에 스타일을 적용했으나, 대신 {{htmlelement("link")}} 요소로부터 외부 스타일시트를 참조함으로써 스타일을 적용하는 것도 완벽히 가능합니다.
 
-<p>Now let's have a look at another customized built in element example — <a href="https://github.com/mdn/web-components-examples/tree/master/expanding-list-web-component">expanding-list</a> (<a href="https://mdn.github.io/web-components-examples/expanding-list-web-component/">see it live also</a>). This turns any unordered list into an expanding/collapsing menu.</p>
+예를 들자면, [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) 예제에서 이 코드를 확인해 보세요 ([소스 코드](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js)도 볼 수 있습니다).
 
-<p>First of all, we define our element's class, in the same manner as before:</p>
+```js
+// 외부 스타일을 shadow dom에 적용하기
+const linkElem = document.createElement('link');
+linkElem.setAttribute('rel', 'stylesheet');
+linkElem.setAttribute('href', 'style.css');
+// 생성된 요소를 shadow dom에 부착하기
+shadow.appendChild(linkElem);
+```
 
-<pre class="brush: js notranslate">class ExpandingList extends HTMLUListElement {
+{{htmlelement("link")}} 요소는 shadow root의 페인트를 막지 않아, 스타일시트가 로딩되는 동안 스타일되지 않은 내용의 번쩍임 (FOUC, flash of unstyled content) 이 있을 수 있다는 점에 주의하세요.
+
+많은 모던 브라우저들은 공통 노드로부터 복제되었거나 동일한 텍스트를 가지고 있는 {{htmlelement("style")}} 태그에 대한 최적화를 구현하여 스타일 태그가 하나의 백업 스타일시트를 공유할 수 있게 합니다. 이 최적화로 인해 외부 스타일과 내부 스타일의 성능은 비슷할 것입니다.
+
+### 사용자 정의된 내장 요소
+
+이제 사용자 정의된 요소 예제를 살펴봅시다. [expanding-list](https://github.com/mdn/web-components-examples/tree/master/expanding-list-web-component) ([작동 예제](https://mdn.github.io/web-components-examples/expanding-list-web-component/)도 확인해 보세요). 이것은 정렬되지 않은 리스트를 확장/축소 메뉴로 바꿔 줍니다.
+
+우선, 요소의 클래스를 이전과 같은 방식으로 정의합니다.
+
+```js
+class ExpandingList extends HTMLUListElement {
   constructor() {
-    // Always call super first in constructor
+    // 항상 super를 생성자에서 먼저 호출합니다
     super();
-
-    // write element functionality in here
-
+    // 요소 기능을 여기 작성합니다
     ...
   }
-}</pre>
+}
+```
 
-<p>We will not explain the element functionality in any detail here, but you can discover how it works by checking out the source code. The only real difference here is that our element is extending the {{domxref("HTMLUListElement")}} interface, and not {{domxref("HTMLElement")}}. So it has all the characteristics of a {{htmlelement("ul")}} element with the functionality we define built on top, rather than being a standalone element. This is what makes it a customized built-in, rather than an autonomous element.</p>
+요소 기능을 여기서는 자세히 설명하지 않을 것이지만, 소스 코드를 확인해서 어떻게 작동하는지 발견할 수 있을 것입니다. 여기서의 차이는 이 요소가 {{domxref("HTMLElement")}}가 아니라, {{domxref("HTMLUListElement")}} 인터페이스를 확장한다는 것입니다. 그래서 이 요소는 독립된 요소이기보다는 {{htmlelement("ul")}} 요소의 모든 특성을 가지고 있으며 그 위에 우리가 정의한 기능 또한 가지고 있습니다. 이것이 이 요소를 독립적인 요소보다는 사용자 정의된 내장 요소로 만들어주는 것입니다.
 
-<p>Next, we register the element using the <code>define()</code> method as before, except that this time it also includes an options object that details what element our custom element inherits from:</p>
+다음으로, 전과 같이 `define()` 메서드를 사용하여 요소를 등록하나, 이번엔 이 사용자 정의 요소가 어떤 요소를 상속받는지를 나타내는 옵션 객체를 포함합니다.
 
-<pre class="brush: js notranslate">customElements.define('expanding-list', ExpandingList, { extends: "ul" });</pre>
+```js
+customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+```
 
-<p>Using the built-in element in a web document also looks somewhat different:</p>
+웹 document에서 이 내장 요소를 사용하는 것은 또한 어느 정도 다르게 보입니다.
 
-<pre class="brush: html notranslate">&lt;ul is="expanding-list"&gt;
+```html
+<ul is="expanding-list">
 
   ...
 
-&lt;/ul&gt;</pre>
-
-<p>You use a <code>&lt;ul&gt;</code> element as normal, but specify the name of the custom element inside the <code>is</code> attribute.</p>
-
-<div class="note">
-<p><strong>Note</strong>: Again, you can see the full <a href="https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js">JavaScript source code</a> here.</p>
-</div>
-
-<h2 id="Using_the_lifecycle_callbacks">Using the lifecycle callbacks</h2>
-
-<p>You can define several different callbacks inside a custom element's constructor, which fire at different points in the element's lifecycle:</p>
-
-<ul>
- <li><code>connectedCallback</code>: Invoked when the custom element is first connected to the document's DOM.</li>
- <li><code>disconnectedCallback</code>: Invoked when the custom element is disconnected from the document's DOM.</li>
- <li><code>adoptedCallback</code>: Invoked when the custom element is moved to a new document.</li>
- <li><code>attributeChangedCallback</code>: Invoked when one of the custom element's attributes is added, removed, or changed.</li>
 </ul>
+```
 
-<p>Let's look at an example of these in use. The code below is taken from the <a href="https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks">life-cycle-callbacks</a> example (<a href="https://mdn.github.io/web-components-examples/life-cycle-callbacks/">see it running live</a>). This is a trivial example that simply generates a colored square of a fixed size on the page. The custom element looks like this:</p>
+`<ul>` 요소를 평범하게 사용하나, `is` 특성 내부에 사용자 정의 요소의 이름을 명시합니다.
 
-<pre class="brush: html notranslate">&lt;custom-square l="100" c="red"&gt;&lt;/custom-square&gt;</pre>
+> **참고:** [전체 JavaScript 소스 코드](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js)를 확인해볼 수 있습니다.
+## 생명 주기 콜백 사용하기
 
-<p>The class constructor is really simple — here we attach a shadow DOM to the element, then attach empty {{htmlelement("div")}} and {{htmlelement("style")}} elements to the shadow root:</p>
+몇 가지 다른 콜백을 사용자 정의 요소의 클래스 정의 내부에 정의할 수 있는데, 이 콜백들은 요소의 생명 주기의 각기 다른 지점에서 발생됩니다.
 
-<pre class="brush: js notranslate">var shadow = this.attachShadow({mode: 'open'});
+- `connectedCallback`: 사용자 정의 요소가 문서에 연결된 요소에 추가될 때마다 호출됩니다. 이것은 노드가 이동될 때마다 발생할 것이며, 요소의 내용이 완전히 해석되기 전에 발생할 지도 모릅니다.
 
-var div = document.createElement('div');
-var style = document.createElement('style');
+  > **참고:** `connectedCallback` 은 요소가 더 이상 연결되지 않았을 때 호출될 수도 있으므로, 확실하게 하기 위해선 {{domxref("Node.isConnected")}}를 사용하세요.
+- `disconnectedCallback`: 사용자 정의 요소가 document의 DOM에서 연결 해제되었을 때마다 호출됩니다.
+- `adoptedCallback`: 사용자 정의 요소가 새로운 document로 이동되었을 때마다 호출됩니다.
+- `attributeChangedCallback`: 사용자 정의 요소의 특성들 중 하나가 추가되거나, 제거되거나, 변경될 때마다 호출됩니다. 어떤 특성이 변경에 대해 알릴지는 static get `observedAttributes` 메서드에서 명시됩니다.
+
+이것들의 사용례를 봅시다. 아래의 코드는 [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks) 예제에서 취해졌습니다 ([작동 예제](https://mdn.github.io/web-components-examples/life-cycle-callbacks/)도 볼 수 있습니다). 이것은 페이지에 고정된 크기의 색이 칠해진 사각형을 생성하는 작은 예제입니다. 사용자 정의 요소는 다음과 같이 생겼습니다.
+
+```html
+<custom-square l="100" c="red"></custom-square>
+```
+
+클래스 생성자는 정말로 간단합니다. shadow DOM을 요소에 부착하고, 빈 {{htmlelement("div")}} 와 {{htmlelement("style")}} 요소를 shadow root에 부착합니다.
+
+```js
+const shadow = this.attachShadow({mode: 'open'});
+const div = document.createElement('div');
+const style = document.createElement('style');
 shadow.appendChild(style);
-shadow.appendChild(div);</pre>
+shadow.appendChild(div);
+```
 
-<p>The key function in this example is <code>updateStyle()</code> — this takes an element, gets its shadow root, finds its <code>&lt;style&gt;</code> element, and adds {{cssxref("width")}}, {{cssxref("height")}}, and {{cssxref("background-color")}} to the style.</p>
+이 예제에서의 핵심 함수는 `updateStyle()` 입니다. 이 함수는 요소를 취하고, 요소의 shadow root을 얻고, shadow root의 `<style>` 요소를 찾고, {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("background-color")}}를 스타일에 추가합니다.
 
-<pre class="brush: js notranslate">function updateStyle(elem) {
-  var shadow = elem.shadowRoot;
-  var childNodes = shadow.childNodes;
-  for(var i = 0; i &lt; childNodes.length; i++) {
-    if(childNodes[i].nodeName === 'STYLE') {
-      childNodes[i].textContent = 'div {' +
-                          ' width: ' + elem.getAttribute('l') + 'px;' +
-                          ' height: ' + elem.getAttribute('l') + 'px;' +
-                          ' background-color: ' + elem.getAttribute('c');
-    }
-  }
-}</pre>
+```js
+function updateStyle(elem) {
+  const shadow = elem.shadowRoot;
+  shadow.querySelector('style').textContent = `
+    div {
+      width: ${elem.getAttribute('l')}px;
+      height: ${elem.getAttribute('l')}px;
+      background-color: ${elem.getAttribute('c')};
+    }
+  `;
+}
+```
 
-<p>The actual updates are all handled by the life cycle callbacks, which are placed inside the constructor. The <code>connectedCallback()</code> runs when the element is added to the DOM — here we run the <code>updateStyle()</code> function to make sure the square is styled as defined in its attributes:</p>
+실제 갱신은 모두 생명 주기 콜백에 의해 다뤄지는데, 이 콜백들은 클래스 정의 내부에 메서드로 위치합니다. `connectedCallback()` 은 요소가 DOM에 추가될 때마다 실행됩니다. 여기서 `updateStyle()` 함수가 실행되어 사각형이 이것의 특성에 정의된 대로 꾸며지도록 합니다.
 
-<pre class="brush: js notranslate">connectedCallback() {
+```js
+connectedCallback() {
   console.log('Custom square element added to page.');
   updateStyle(this);
-}</pre>
+}
+```
 
-<p>the <code>disconnectedCallback()</code> and <code>adoptedCallback()</code> callbacks log simple messages to the console to inform us when the element is either removed from the DOM, or moved to a different page:</p>
+`disconnectedCallback()` 과 `adoptedCallback()` 콜백은 콘솔에 간단한 메시지를 로그하여 언제 요소가 DOM에서 제거되었는지, 혹은 다른 페이지로 이동되었는지를 알립니다.
 
-<pre class="brush: js notranslate">disconnectedCallback() {
+```js
+disconnectedCallback() {
   console.log('Custom square element removed from page.');
 }
-
 adoptedCallback() {
   console.log('Custom square element moved to new page.');
-}</pre>
+}
+```
 
-<p>The <code>attributeChangedCallback()</code> callback is run whenever one of the element's attributes is changed in some way. As you can see from its properties, it is possible to act on attributes individually, looking at their name, and old and new attribute values. In this case however, we are just running the <code>updateStyle()</code> function again to make sure that the square's style is updated as per the new values:</p>
+`attributeChangedCallback()` 은 요소의 특성 중 하나가 어떠한 방식으로 변경될 때마다 실행됩니다. 이 콜백의 매개변수에서 볼 수 있다시피, 특성의 이름, 이전 값, 새로운 값을 보고 특성의 변경 사항에 개별적으로 대응하는 게 가능합니다. 그러나, 이번 경우에는 개별적으로 대응하지 않고, 사각형의 스타일이 새로운 값에 따라 갱신될 수 있도록 단순히 `updateStyle()` 함수를 다시 호출합니다.
 
-<pre class="brush: js notranslate">attributeChangedCallback(name, oldValue, newValue) {
+```js
+attributeChangedCallback(name, oldValue, newValue) {
   console.log('Custom square element attributes changed.');
   updateStyle(this);
-}</pre>
+}
+```
 
-<p>Note that to get the <code>attributeChangedCallback()</code> callback to fire when an attribute changes, you have to observe the attributes. This is done by calling the <code>observedAttributes()</code> getter inside the constructor, including inside it a <code>return</code> statement that returns an array containing the names of the attributes you want to observe:</p>
+`attributeChangedCallback()` 콜백이 특성이 변경되었을 때 발생되기 하기 위해서는, 해당 특성을 관찰해야만 합니다. 이 작업은 `static get observedAttributes()` 메서드를 사용자 정의 요소 클래스 내부에 명시함으로써 이루어집니다. 이 메서드는 관찰하기를 원하는 특성들의 이름을 포함하는 배열을 `return` 해야 합니다.
 
-<pre class="brush: js notranslate">static get observedAttributes() {return ['w', 'l']; }</pre>
+```js
+static get observedAttributes() { return ['c', 'l']; }
+```
 
-<p>This is placed right at the top of the constructor, in our example.</p>
+이 예제에서 이 메서드는 생성자의 바로 위에 위치해 있습니다.
 
-<div class="note">
-<p><strong>Note</strong>: Find the <a href="https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js">full JavaScript source</a> here.</p>
-</div>
+> **참고:** [전체 JavaScript 소스 코드](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js)를 확인해 보세요.
+## 트랜스파일러 대 클래스
+
+ES2015 class는 레거시 브라우저를 목표로 하는 Babel 6 또는 TypeScript 에서 신뢰할만하게 트랜스파일될 수 없다는 점에 주의하세요. Babel 7을 사용하거나 Babel 6에 대해서 [babel-plugin-transform-builtin-classes](https://www.npmjs.com/package/babel-plugin-transform-builtin-classes)를 사용할 수 있고, 레거시 대신에 TypeScript의 ES2015를 목표로 할 수 있습니다.
+
+## 라이브러리
+
+사용자 정의 요소를 생성할 때 추상화의 단계를 올리는 것을 목표로 하는 웹 컴포넌트를 기반으로 하는 몇 가지의 라이브러리들이 있습니다. 이러한 라이브러리에는 [FASTElement](https://www.fast.design/docs/fast-element/getting-started), [snuggsi](https://github.com/devpunks/snuggsi), [X-Tag](https://x-tag.github.io/), [Slim.js](https://slimjs.com/), [Lit](https://lit.dev/), [Smart](https://www.htmlelements.com/), [Stencil](https://stenciljs.com), [hyperHTML-Element](https://github.com/WebReflection/hyperHTML-Element), [DataFormsJS](https://www.dataformsjs.com/), [Custom-Element-Builder](https://tmorin.github.io/ceb/)가 있습니다.
