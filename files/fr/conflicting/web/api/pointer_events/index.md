@@ -1,9 +1,8 @@
 ---
 title: Gérer à la fois événement tactile et événement de la souris
-slug: Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
+slug: conflicting/Web/API/Pointer_events
 translation_of: Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
-original_slug: >-
-  Web/Guide/DOM/Events/Touch_events/Gérer_à_la_fois_événement_tactile_et_événement_de_la_souris
+original_slug: Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
 ---
 {{DefaultAPISidebar("Touch Events")}}
 

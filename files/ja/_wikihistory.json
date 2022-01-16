@@ -22513,13 +22513,6 @@
       "Potappo"
     ]
   },
-  "Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent": {
-    "modified": "2019-03-18T20:45:32.564Z",
-    "contributors": [
-      "mfuji09",
-      "YuichiNukiyama"
-    ]
-  },
   "Web/API/TrackEvent": {
     "modified": "2020-10-15T22:19:11.950Z",
     "contributors": [
@@ -48507,6 +48500,13 @@
     "modified": "2019-03-18T21:40:37.855Z",
     "contributors": [
       "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/Pointer_events": {
+    "modified": "2019-03-18T20:45:32.564Z",
+    "contributors": [
+      "mfuji09",
+      "YuichiNukiyama"
     ]
   },
   "conflicting/Web/API/StorageManager/estimate": {

@@ -3723,6 +3723,7 @@
 /fr/docs/Web/API/ServiceWorkerState	/fr/docs/orphaned/Web/API/ServiceWorkerState
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/conflicting/Web/API/Window/localStorage
 /fr/docs/Web/API/StorageEstimate	/fr/docs/conflicting/Web/API/StorageManager/estimate
+/fr/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/fr/docs/conflicting/Web/API/Pointer_events
 /fr/docs/Web/API/ULongRange	/fr/docs/conflicting/Web/API/MediaTrackConstraints
 /fr/docs/Web/API/URL.createObjectURL	/fr/docs/Web/API/URL/createObjectURL
 /fr/docs/Web/API/URLUtilsReadOnly	/fr/docs/orphaned/Web/API/URLUtilsReadOnly
@@ -4356,7 +4357,7 @@
 /fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events	/fr/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /fr/docs/Web/Guide/DOM/Events/Les_données_d_orientation_et_de_mouvement_expliquées	/fr/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained
 /fr/docs/Web/Guide/DOM/Events/Touch_events	/fr/docs/Web/API/Touch_events
-/fr/docs/Web/Guide/DOM/Events/Touch_events/Gérer_à_la_fois_événement_tactile_et_événement_de_la_souris	/fr/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
+/fr/docs/Web/Guide/DOM/Events/Touch_events/Gérer_à_la_fois_événement_tactile_et_événement_de_la_souris	/fr/docs/conflicting/Web/API/Pointer_events
 /fr/docs/Web/Guide/DOM/Manipuler l'historique du navigateur	/fr/docs/Web/API/History_API
 /fr/docs/Web/Guide/DOM/Manipuler l'historique du navigateur/Example	/fr/docs/Web/API/History_API/Example
 /fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur	/fr/docs/Web/API/History_API

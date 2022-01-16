@@ -19566,12 +19566,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent": {
-    "modified": "2019-03-18T21:33:21.001Z",
-    "contributors": [
-      "CharlotteW"
-    ]
-  },
   "Web/API/Transferable": {
     "modified": "2020-10-15T21:33:28.712Z",
     "contributors": [
@@ -43067,6 +43061,12 @@
     "modified": "2020-10-15T22:15:37.132Z",
     "contributors": [
       "SphinxKnight"
+    ]
+  },
+  "conflicting/Web/API/Pointer_events": {
+    "modified": "2019-03-18T21:33:21.001Z",
+    "contributors": [
+      "CharlotteW"
     ]
   },
   "conflicting/Web/API/Selection": {
