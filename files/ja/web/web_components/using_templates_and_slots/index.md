@@ -1,35 +1,50 @@
 ---
-title: template と slot の使い方
+title: テンプレートとスロットの使用
 slug: Web/Web_Components/Using_templates_and_slots
+tags:
+  - Template
+  - ウェブコンポーネント
+  - シャドウ DOM
+  - slot
+  - スロット
 translation_of: Web/Web_Components/Using_templates_and_slots
 ---
-<div>{{DefaultAPISidebar("Web Components")}}</div>
+{{DefaultAPISidebar("Web Components")}}
 
-<p class="summary">この記事では shadow DOM で使われる {{htmlelement("template")}} と {{htmlelement("slot")}} 要素の使い方を説明します。</p>
+この記事では、{{htmlelement("template")}} と {{htmlelement("slot")}} 要素を使用して柔軟なテンプレートを作成し、それをウェブコンポーネントのシャドウ DOM を表示するために使用する方法について説明します。
 
-<h2 id="テンプレートの真実">テンプレートの真実</h2>
+## テンプレートの真実
 
-<p>あるWebページ上で同じ構造を繰り返し使用する必要がある場合、同じ実装を繰り返し書くよりも、テンプレートのようなものを作って利用する方が合理的でしょう。これは以前から可能でしたが、{{htmlelement("template")}} 要素より簡単に使えるようになりました。 この要素と中身は DOM 上ではレンダリングされませんが、JavaScript から参照することができます。</p>
+ウェブページで同じマークアップ構造を繰り返し再利用する必要がある場合、同じ構造を何度も繰り返すよりも、何らかのテンプレートを使用する方が理にかなっています。
+これは以前から可能でしたが、HTML の {{htmlelement("template")}} 要素によって、かなり容易になりました（最近のブラウザーはよく対応しています）。
+この要素とその内容は DOM 内で描画されませんが、JavaScript を使って参照することは可能です。
 
-<p>以下の簡単なサンプルを見てみましょう。</p>
+簡単な例を見てみましょう。
 
-<pre class="brush: html">&lt;template id="my-paragraph"&gt;
-  &lt;p&gt;My paragraph&lt;/p&gt;
-&lt;/template&gt;</pre>
+```html
+<template id="my-paragraph">
+  <p>My paragraph</p>
+</template>
+```
 
-<p>テンプレートの内部はページには表示されません。以下のコードのようにJavaScript を用いて参照を取り DOM に追加するとページ上に表示できます。</p>
+これはページ上に表示されず、以下のようなコードで JavaScript で参照を取得し、 DOM に追加することで表示されます。
 
-<pre class="brush: js">let template = document.getElementById('my-paragraph');
+```js
+let template = document.getElementById('my-paragraph');
 let templateContent = template.content;
-document.body.appendChild(templateContent);</pre>
+document.body.appendChild(templateContent);
+```
 
-<p>つまらない例ですがすでに有用性は見えてきたでしょう。</p>
+つまらない例ですが、すでに有用性は見えてきたでしょう。
 
-<h2 id="Web_Componentsを利用したテンプレートの使用">Web Componentsを利用したテンプレートの使用</h2>
+## ウェブコンポーネントを用いたテンプレートの使用
 
-<p>テンプレートはそれ自身でも有用ですが web コンポーネントと共に使用することでより上手く使えます。テンプレートを shadow DOM として活用する web コンポーネントを <code>&lt;my-paragraph&gt;</code> と名付け定義しましょう。</p>
+テンプレートはそれ自体でも便利ですが、ウェブコンポーネントと組み合わせるとさらに効果的です。
+テンプレートをシャドウ DOM の内容として使用するウェブコンポーネントを定義してみましょう。
+同様に `<my-paragraph>` と呼ぶことにします。
 
-<pre class="brush: js">customElements.define('my-paragraph',
+```js
+customElements.define('my-paragraph',
   class extends HTMLElement {
     constructor() {
       super();
@@ -38,92 +53,104 @@ document.body.appendChild(templateContent);</pre>
 
       const shadowRoot = this.attachShadow({mode: 'open'})
         .appendChild(templateContent.cloneNode(true));
+    }
   }
-})</pre>
+);
+```
 
-<p>ここで、テンプレートの内容を使用するために {{domxref("Node.cloneNode()")}} を使用してクローンしたものを shadow root に追加していることに注意してください。</p>
+ここで、テンプレートの内容を使用するために {{domxref("Node.cloneNode()")}} メソッドを使用して複製したものをシャドウルートに追加していることに注意してください。
 
-<p>テンプレートの内容を shadow DOM に追加しているので、テンプレートの内部に {{htmlelement("style")}} 要素を用意しスタイルを含むことができます。このスタイルはカスタム要素の内部でカプセル化されます。これは通常の DOM に追加するだけでは正しく動きません。</p>
+また、その内容をシャドウ DOM に追加しているため、テンプレート内のスタイル情報を {{htmlelement("style")}} 要素に含めることができ、それがカスタム要素内にカプセル化されます。
+これは、単に標準 DOM に追加しただけでは機能しません。
 
-<p>したがって、例えば</p>
+したがって、例えば
 
-<pre class="brush: html">&lt;template id="my-paragraph"&gt;
-  &lt;style&gt;
+```html
+<template id="my-paragraph">
+  <style>
     p {
       color: white;
       background-color: #666;
       padding: 5px;
     }
-  &lt;/style&gt;
-  &lt;p&gt;My paragraph&lt;/p&gt;
-&lt;/template&gt;</pre>
+  </style>
+  <p>My paragraph</p>
+</template>
+```
 
-<p>こうすれば HTML ドキュメントに以下を追加することで使用できます。</p>
+HTML 文書に次のように追加するだけで利用できるようになりました。
 
-<pre class="brush: html">&lt;my-paragraph&gt;&lt;/my-paragraph&gt;
-</pre>
+```html
+<my-paragraph></my-paragraph>
+```
 
-<div class="note">
-<p><strong>注意:</strong> テンプレートはブラウザでよくサポートされています。Shadow DOM APIはデフォルトのFirefox (バージョン63以降) 、Chrome、OperaそしてSafariでサポートされています。Edgeでも現在開発が行われています。</p>
-</div>
+> **Note:** テンプレートはブラウザーの対応が進んでいます。 Shadow DOM API は既定で、 Firefox (バージョン 63 以降) 、Chrome、Opera、Safari、Edge (バージョン 79 以降) で対応しています。
 
-<h2 id="スロットによる柔軟性の強化">スロットによる柔軟性の強化</h2>
+## スロットによる柔軟性の強化
 
-<p>ここまでのサンプルでは高々1種類のテキストを表示できるのみで、普通の paragraph よりも使えません。{{htmlelement("slot")}} 要素を用いることで、各要素のインスタンスに異なるテキストを表示させることができます。{{htmlelement("slot")}}  は {{htmlelement("template")}} よりサポートが限られており、Chrome 53以降、Opera 40以降、Safari 10以降、Firefox 59以降で実装されていますが、Edge ではまだサポートされていません。slot はその <code>name</code> 属性で区別されており、template の中で任意のマークアップで slot の内容のデフォルト値を埋めることができます。</p>
+ここまではいいのですが、この要素はあまり柔軟ではありません。
+中には高々 1 つのテキストを表示できるだけなので、現時点では通常の段落よりも有用ではありません。 {{htmlelement("slot")}} 要素を使用することで、各要素インスタンスに異なるテキストを表示することを宣言的に行えるようにすることができます。
+これは {{htmlelement("template")}} よりも対応が限定されており、Chrome 53, Opera 40, Safari 10, Firefox 59, Edge 79 から利用可能です。
 
-<p>上記の例に slot を追加することを考えます。パラグラフの要素を以下のように書くことができます。</p>
+スロットは `name` 属性で識別され、テンプレート内にプレイスホルダーを定義することができます。このプレースホルダーは、その要素がマークアップで使用されたときに、任意のマークアップフラグメントで埋められるようになります。
 
-<pre class="brush: html">&lt;p&gt;&lt;slot name="my-text"&gt;デフォルトテキスト&lt;/slot&gt;&lt;/p&gt;</pre>
+ですから、この些細な例にスロットを追加したい場合、テンプレートの段落要素を次のように更新してください。
 
-<p>slot の内容が定義されていない場合や、ブラウザが slot をサポートしていな場合は <code>&lt;my-paragraph&gt;</code> は fallback コンテンツを保持し、このサンプルの場合では "デフォルトテキスト" を表示させることになります。</p>
+```html
+<p><slot name="my-text">既定のテキスト</slot></p>
+```
 
-<p>内容を定義したい slot の名前を {{htmlattrxref("slot")}} 属性に設定した要素を <code>&lt;my-paragraph&gt;</code> の中に用意すると、その中身が slot の内容になります。中身は HTML 構造を持つ任意のもので埋めることができます。</p>
+マークアップに要素が含まれるときにスロットの内容が定義されていない場合、またはブラウザーがスロットに対応していない場合、 `<my-paragraph>` はに単に代替内容である「既定のテキスト」が入ります。
 
-<pre class="brush: html">&lt;my-paragraph&gt;
-  &lt;span slot="my-text"&gt;新しいテキストを代入します&lt;/span&gt;
-&lt;/my-paragraph&gt;</pre>
+スロットの内容を定義するために、`<my-paragraph>` 要素の中に HTML 構造を入れ、 {{htmlattrxref("slot")}} 属性の値が埋めたいスロットの名前と同じになるようにします。前と同じように、これは好きなものを指定できます。
 
-<p>以下のようにも設定できます。</p>
+```html
+<my-paragraph>
+  <span slot="my-text">別なテキストを入れましょう。</span>
+</my-paragraph>
+```
 
-<pre class="brush: html">&lt;my-paragraph&gt;
-  &lt;ul slot="my-text"&gt;
-    &lt;li&gt;新しいテキストを代入します&lt;/li&gt;
-    &lt;li&gt;リストも代入できます&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/my-paragraph&gt;
-</pre>
+以下のようにも設定できます。
 
-<div class="note">
-<p><strong>注意:</strong> スロットに挿入できるのは {{domxref("Slotable")}} な要素に限られます; 要素がスロットに挿入されたとき、<em>slotted</em> と呼ばれます。</p>
-</div>
+```html
+<my-paragraph>
+  <ul slot="my-text">
+    <li>別なテキストを入れましょう。</li>
+    <li>リストの中です。</li>
+  </ul>
+</my-paragraph>
+```
 
-<p>簡単なサンプルでの説明は以上です。他にも実装してみたい場合は、<a href="https://github.com/mdn/web-components-examples/tree/master/simple-template">GitHub上のサンプルコード</a>をご利用ください(<a href="https://mdn.github.io/web-components-examples/simple-template/">実行例</a>)。</p>
+> **Note:** スロットに挿入できるのは _Slotable_ な要素に限られます; 要素がスロットに挿入されたとき、_slotted_ と呼ばれます。
 
-<h2 id="より踏み込んだ例">より踏み込んだ例</h2>
+> **Note:** 無名の {{HTMLElement("slot")}} には、カスタム要素のトップレベルの子ノードのうち {{htmlattrxref("slot")}} 属性を持たないすべてのノードが入ります。これにはテキストノードも含まれます。
 
-<p>他の例もみてみましょう。</p>
+簡単な例での説明は以上です。
+もっと実行してみたい場合は、 [GitHub 上にあります](https://github.com/mdn/web-components-examples/tree/master/simple-template) ([ライブ実行版](https://mdn.github.io/web-components-examples/simple-template/)もあります)。
 
-<p>これからのコードは {{htmlelement("slot")}} を {{htmlelement("template")}} と共に使用する方法の例です。以下の2点を目指す JavaScript です。</p>
+<h2 id="A_more_involved_example">より踏み込んだ例</h2>
 
-<ul>
- <li><a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> の中で <strong><code>&lt;element-details&gt;</code></strong> 要素を <a href="/ja/docs/Web/HTML/Element/slot#named-slot">slot</a> を用いて作ること。</li>
- <li><strong><code>&lt;element-details&gt;</code></strong> 要素を、その <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> と一緒にレンダリングされるように作ること。つまり、要素の内容が <a href="/ja/docs/Web/HTML/Element/slot#named-slot">slots</a> の中身に代入されるようになります。</li>
-</ul>
+記事の最後に、もう少し本格的なものを見てみましょう。
 
-<p>{{htmlelement("slot")}} 要素は {{htmlelement("template")}} 要素なしで使用することが可能です。例えば、 {{HTMLElement("div")}} 要素の中で宣言しても Shadow DOM で使用した場合と同様にプレースホルダーとしての役割は果たします。しかし、{{HTMLElement("template")}} 要素の中で使用する方がより一般的で実用的です。</p>
+以下の一連のコードは、 {{HTMLElement("slot")}} を {{HTMLElement("template")}} と若干の JavaScript と組み合わせて使用する方法を示すコードスニペットです。
 
-<p>テンプレートを利用したコンテナの目的は {{HTMLElement("template")}} を使用することで意味的にわかりやすくすることです。さらに、{{HTMLElement("template")}} の中には {{HTMLElement("td")}} など直接追加して良い要素があり、これらは {{HTMLElement("div")}} 要素の中に追加された場合は消えます。</p>
+- **`<element-details>`** 要素を[名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot)付きで[シャドウルート](/ja/docs/Web/API/ShadowRoot)の中に作成する
+- **`<element-details>`** 要素を、文書内で使用されたとき、要素の内容とその[シャドウルート](/ja/docs/Web/API/ShadowRoot)の内容を組み合わせてレンダリングされるように設計します。つまり、要素の内容の断片は、その[シャドウルート](/ja/docs/Web/HTML/Element/slot#named-slot) の中で[名前付きスロット](/ja/docs/Web/API/ShadowRoot)を埋めるために使用されます。
 
-<div class="note">
-<p>注意: element-detailsの完全なコードは<a href="https://github.com/mdn/web-components-examples/tree/master/element-details">ここ</a>から見ることができます (<a href="https://mdn.github.io/web-components-examples/element-details/">実行例</a>)。</p>
-</div>
+なお、 {{HTMLElement("slot")}} 要素は技術的には、 {{HTMLElement("template")}} 要素なしで、例えば、通常の {{HTMLElement("div")}} 要素内で使うことも可能であり、それでもシャドウ DOM 内容に対して {{HTMLElement("slot")}} のプレースホルダー機能を活用することができますし、そうすれば、最初にテンプレート要素の `content` プロパティにアクセス（してそれを複製）する必要があるという小さなトラブルも実際に避けることができます。
+しかし、一般的には {{HTMLElement("template")}} 要素内にスロットを追加する方がより実用的です。なぜなら、既にレンダリングされた要素に基づいてパターンを定義する必要があることはほとんどないからです。
 
-<h3 id="template_をスロットと共に作る">template をスロットと共に作る</h3>
+また、まだレンダリングされていない場合でも、 {{HTMLElement("template")}} を使用することで、テンプレートとしてのコンテナーの目的がより意味的に明確になるはずです。また、 {{HTMLElement("template")}} には、 {{HTMLElement("td")}} のような、 {{HTMLElement("div")}} に追加すると消えてしまうような項目を直接追加することができます。
 
-<p>まず最初に{{htmlelement("template")}} 要素の中に {{htmlelement("slot")}} 要素を作成し、新しい "element-details-template" と名付けた<a href="/ja/docs/Web/API/DocumentFragment">フラグメント</a>を作ります。</p>
+> **Note:** 完全な例は [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) で ([ライブ実行版](https://mdn.github.io/web-components-examples/element-details/)も) 参照することができます。
 
-<pre class="brush: html">&lt;template id="element-details-template"&gt;
-  &lt;style&gt;
+### template をスロットと共に作成
+
+まず最初に {{HTMLElement("slot")}} 要素を {{HTMLElement("template")}} 要素の中に作成し、[名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot)を含んだ新しい "element-details-template" という[文書フラグメント](/ja/docs/Web/API/DocumentFragment)を作成します。
+
+```html
+<template id="element-details-template">
+  <style>
   details {font-family: "Open Sans Light",Helvetica,Arial}
   .name {font-weight: bold; color: #217ac0; font-size: 120%}
   h4 { margin: 10px 0 -8px 0; }
@@ -132,193 +159,111 @@ document.body.appendChild(templateContent);</pre>
   h4 span { color: white }
   .attributes { margin-left: 22px; font-size: 90% }
   .attributes p { margin-left: 16px; font-style: italic }
-  &lt;/style&gt;
-  &lt;details&gt;
-    &lt;summary&gt;
-      &lt;span&gt;
-        &lt;code class="name"&gt;&amp;lt;&lt;slot name="element-name"&gt;NEED NAME&lt;/slot&gt;&amp;gt;&lt;/code&gt;
-        &lt;i class="desc"&gt;&lt;slot name="description"&gt;NEED DESCRIPTION&lt;/slot&gt;&lt;/i&gt;
-      &lt;/span&gt;
-    &lt;/summary&gt;
-    &lt;div class="attributes"&gt;
-      &lt;h4&gt;&lt;span&gt;Attributes&lt;/span&gt;&lt;/h4&gt;
-      &lt;slot name="attributes"&gt;&lt;p&gt;None&lt;/p&gt;&lt;/slot&gt;
-    &lt;/div&gt;
-  &lt;/details&gt;
-  &lt;hr&gt;
-&lt;/template&gt;
-</pre>
+  </style>
+  <details>
+    <summary>
+      <span>
+        <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
+        <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+      </span>
+    </summary>
+    <div class="attributes">
+      <h4><span>Attributes</span></h4>
+      <slot name="attributes"><p>None</p></slot>
+    </div>
+  </details>
+  <hr>
+</template>
+```
 
-<p>この {{HTMLElement("template")}} 要素にはいくつかの機能があります。</p>
+この {{HTMLElement("template")}} 要素にはいくつかの特徴があります。
 
-<ul>
- <li>{{HTMLElement("template")}} には {{HTMLElement("style")}} 要素が実装されており、{{HTMLElement("template")}} が作るフラグメントの中のみに適応されるCSSスタイルを定義できます。 </li>
- <li>{{HTMLElement("template")}} は {{htmlelement("slot")}} を使用しており、それぞれの {{htmlattrxref("name", "slot")}} 属性は以下のように定義されています。
-  <ul>
-   <li><code>&lt;slot name="element-name"&gt;</code></li>
-   <li><code>&lt;slot name="description"&gt;</code></li>
-   <li><code>&lt;slot name="attributes"&gt;</code></li>
-  </ul>
- </li>
- <li>{{HTMLElement("template")}} の中で各 <a href="/ja/docs/Web/HTML/Element/slot#named-slot">slot</a> は{{HTMLElement("details")}} 要素の中に実装されています。</li>
-</ul>
+- {{HTMLElement("template")}} には {{HTMLElement("style")}} 要素があり、 {{HTMLElement("template")}} が生成する文書の断片だけを対象とした CSS スタイルの集合を持ちます。
+- {{HTMLElement("template")}} は {{HTMLElement("slot")}} とその {{htmlattrxref("name", "slot")}} 属性を用いて、 3 つの[名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot) を生成しています。
 
-<h3 id="&lt;template>_から_&lt;element-details>_要素を作る">&lt;template&gt; から &lt;element-details&gt; 要素を作る</h3>
+  - `<slot name="element-name">`
+  - `<slot name="description">`
+  - `<slot name="attributes">`
 
-<p>次に <strong><code>&lt;element-details&gt;</code></strong> と名付けた新しいカスタム要素を作りましょう。 上で確認した簡単な例と同様に、{{DOMXref("Element.attachShadow")}} を利用してカスタム要素に <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> を追加します。</p>
+- {{HTMLElement("template")}} には[名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot)を {{HTMLElement("details")}} 要素の中に持ちます。
 
-<pre class="brush: js">customElements.define('element-details',
+### 新しい \<element-details> 要素を \<template> から生成
+
+次に、 **`<element-details>`** という名前の新しいカスタム要素を生成して、 {{DOMXref("Element.attachShadow")}} でその[シャドウルート](/ja/docs/Web/API/ShadowRoot)として追加し、上記の {{HTMLElement("template")}} 要素で生成した文書の断片を取り付けてみましょう。
+これは、先ほどの簡単な例で見たのとまったく同じパターンを使っています。
+
+```js
+customElements.define('element-details',
   class extends HTMLElement {
     constructor() {
       super();
-      var template = document
+      const template = document
         .getElementById('element-details-template')
         .content;
       const shadowRoot = this.attachShadow({mode: 'open'})
         .appendChild(template.cloneNode(true));
-  }
-})
-</pre>
+    }
+  }
+);
+```
 
-<h3 id="名前付きスロットと共に_&lt;element-details>_要素を使う">名前付きスロットと共に &lt;element-details&gt; 要素を使う</h3>
+### \<element-details> カスタム要素を名前付きスロットと共に使用する
 
-<p>では <strong><code>&lt;element-details&gt;</code></strong> 要素を実際に使ってみましょう。 </p>
+では、 **`<element-details>`** 要素を文書内で実際に使ってみましょう。
 
-<pre class="brush: html">&lt;element-details&gt;
-  &lt;span slot="element-name"&gt;slot&lt;/span&gt;
-  &lt;span slot="description"&gt;A placeholder inside a web
+```html
+<element-details>
+  <span slot="element-name">slot</span>
+  <span slot="description">A placeholder inside a web
     component that users can fill with their own markup,
     with the effect of composing different DOM trees
-    together.&lt;/span&gt;
-  &lt;dl slot="attributes"&gt;
-    &lt;dt&gt;name&lt;/dt&gt;
-    &lt;dd&gt;The name of the slot.&lt;/dd&gt;
-  &lt;/dl&gt;
-&lt;/element-details&gt;
+    together.</span>
+  <dl slot="attributes">
+    <dt>name</dt>
+    <dd>The name of the slot.</dd>
+  </dl>
+</element-details>
 
-&lt;element-details&gt;
-  &lt;span slot="element-name"&gt;template&lt;/span&gt;
-  &lt;span slot="description"&gt;A mechanism for holding client-
+<element-details>
+  <span slot="element-name">template</span>
+  <span slot="description">A mechanism for holding client-
     side content that is not to be rendered when a page is
     loaded but may subsequently be instantiated during
-    runtime using JavaScript.&lt;/span&gt;
-&lt;/element-details&gt;
-</pre>
+    runtime using JavaScript.</span>
+</element-details>
+```
 
-<p>このコードについて以下の点に注意してください。</p>
+このコードについて以下の点に注意してください。
 
-<ul>
- <li>２つの <strong><code>&lt;element-details&gt;</code></strong> 要素が使用されており、いずれも {{htmlattrxref("slot")}} 属性を <code>"element-name"</code> および <code>"description"</code> と指定することで対応する <a href="/ja/docs/Web/HTML/Element/slot#named-slot">slot</a> を参照しています。</li>
- <li>1つ目の <strong><code>&lt;element-details&gt;</code></strong> 要素でのみ <code>"attributes"</code> と名付けられた <a href="/ja/docs/Web/HTML/Element/slot#named-slot">slot</a> を参照しています。2個目の <code><strong>&lt;element-details</strong>&gt;</code> 要素では参照していません。</li>
- <li>1つ目の <code>&lt;<strong>element-details&gt;</strong></code> 要素は {{HTMLElement("dl")}} 要素を用いて <code>"attributes"</code> と名付けられた <a href="/ja/docs/Web/HTML/Element/slot#named-slot">slot</a> を参照しています。</li>
-</ul>
+- このスニペットには **`<element-details>`** 要素が 2 つあり、どちらも {{htmlattrxref("slot")}} 属性を使って `<element-details>` の[シャドウルート](/ja/docs/Web/API/ShadowRoot)に置いた[名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot)の `"element-name"` と `"description"` を参照しています。
+- これら 2 つの **`<element-details>`** 要素のうち最初のものだけが `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot) を参照しています。 2 番目の `<element-details>` 要素は `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot) への参照を欠いています。
+- 最初の `<element-details>` 要素は `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot) を {{HTMLElement("dt")}} と {{HTMLElement("dd")}} 子要素を使って参照しています。
 
-<h3 id="スタイルを追加する">スタイルを追加する</h3>
+### 最後に多少のスタイルを追加
 
-<p>最後にもう少しCSSスタイルを追加します。これは、1個目の <code>&lt;element-details&gt;</code> の中で使われている {{HTMLElement("dl")}}、{{HTMLElement("dt")}}、{{HTMLElement("dd")}} 要素のために用意されています。 </p>
+最後に若干の CSS スタイルを、文書中の {{HTMLElement("dl")}}、{{HTMLElement("dt")}}、{{HTMLElement("dd")}} の各要素に追加ししす。
 
-<pre class="brush: css">  dl { margin-left: 6px; }
+```css
+  dl { margin-left: 6px; }
   dt { font-weight: bold; color: #217ac0; font-size: 110% }
   dt { font-family: Consolas, "Liberation Mono", Courier }
   dd { margin-left: 16px }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: css">body { margin-top: 47px }</pre>
-</div>
+```css hidden
+body { margin-top: 47px }
+```
 
-<h3 id="結果">結果</h3>
+### 結果
 
-<p>以上のコードを繋げてどのような結果がレンダリングされるかを確認しましょう。</p>
+以上のコードを繋げてどのような結果がレンダリングされるかを確認しましょう。
 
-<p>{{ EmbedLiveSample('full_example', '300','400','https://mdn.mozillademos.org/files/14553/element-details.png','') }}</p>
+{{ EmbedLiveSample('A_more_involved_example', '300','400','element-details.png','') }}
 
-<p>以下のことに着目してください。</p>
+このレンダリング結果について、以下の点に注意してください。
 
-<ul>
- <li>ドキュメント内で <strong><code>&lt;element-details&gt;</code></strong> 要素のインスタンスは {{HTMLElement("details")}} 要素を直接使用しませんが、 <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> が {{HTMLElement("details")}} を生成することでレンダリングされます。</li>
- <li>レンダリングされた {{HTMLElement("details")}} の出力結果で、<strong><code>&lt;element-details&gt;</code></strong> 要素のコンテンツは <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> から<a href="/ja/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>を埋め込みます。言い換えれば、<strong><code>&lt;element-details&gt;</code></strong> 要素のDOMツリーは <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> のコンテンツと共に構成されます。</li>
- <li>両方の <strong><code>&lt;element-details&gt;</code></strong> 要素おいて、<code>"attributes"</code> 名前付きスロットが配置される前に、 <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> から自動的に <strong>Attributes </strong>見出しは自動的に追加されます。</li>
- <li>最初の <strong><code>&lt;element-details&gt;</code></strong> は <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> から<a href="/ja/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>を明示的に参照している {{HTMLElement("dl")}} 要素を持つため、{{HTMLElement("dl")}} のコンテンツは  <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> から <code>"attributes"</code> <a href="/ja/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>を置き換えています。</li>
- <li>二つ目の <strong><code>&lt;element-details&gt;</code></strong> は <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> から<a href="/ja/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>を明示的に参照していないため、<a href="/ja/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>のコンテンツは <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> のデフォルトのコンテンツが埋め込まれます。</li>
-</ul>
-
-<div class="hidden">
-<h5 id="full_example">full example</h5>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;slot example&lt;/title&gt;
-    &lt;style&gt;
-
-      dl { margin-left: 6px; }
-      dt { font-weight: bold; color: #217ac0; font-size: 110% }
-      dt { font-family: Consolas, "Liberation Mono", Courier }
-      dd { margin-left: 16px }
-
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;template id="element-details-template"&gt;
-      &lt;style&gt;
-      details {font-family: "Open Sans Light",Helvetica,Arial}
-      .name {font-weight: bold; color: #217ac0; font-size: 120%}
-      h4 { margin: 10px 0 -8px 0; }
-      h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
-      h4 span { border: 1px solid #cee9f9; border-radius: 4px }
-      h4 span { color: white }
-      .attributes { margin-left: 22px; font-size: 90% }
-      .attributes p { margin-left: 16px; font-style: italic }
-      &lt;/style&gt;
-      &lt;details&gt;
-        &lt;summary&gt;
-          &lt;span&gt;
-            &lt;code class="name"&gt;&amp;lt;&lt;slot name="element-name"&gt;NEED NAME&lt;/slot&gt;&amp;gt;&lt;/code&gt;
-            &lt;i class="desc"&gt;&lt;slot name="description"&gt;NEED DESCRIPTION&lt;/slot&gt;&lt;/i&gt;
-          &lt;/span&gt;
-        &lt;/summary&gt;
-        &lt;div class="attributes"&gt;
-          &lt;h4&gt;&lt;span&gt;Attributes&lt;/span&gt;&lt;/h4&gt;
-          &lt;slot name="attributes"&gt;&lt;p&gt;None&lt;/p&gt;&lt;/slot&gt;
-        &lt;/div&gt;
-      &lt;/details&gt;
-      &lt;hr&gt;
-    &lt;/template&gt;
-
-    &lt;element-details&gt;
-      &lt;span slot="element-name"&gt;slot&lt;/span&gt;
-      &lt;span slot="description"&gt;A placeholder inside a web
-        component that users can fill with their own markup,
-        with the effect of composing different DOM trees
-        together.&lt;/span&gt;
-      &lt;dl slot="attributes"&gt;
-        &lt;dt&gt;name&lt;/dt&gt;
-        &lt;dd&gt;The name of the slot.&lt;/dd&gt;
-      &lt;/dl&gt;
-    &lt;/element-details&gt;
-
-    &lt;element-details&gt;
-      &lt;span slot="element-name"&gt;template&lt;/span&gt;
-      &lt;span slot="description"&gt;A mechanism for holding client-
-        side content that is not to be rendered when a page is
-        loaded but may subsequently be instantiated during
-        runtime using JavaScript.&lt;/span&gt;
-    &lt;/element-details&gt;
-
-    &lt;script&gt;
-    customElements.define('element-details',
-      class extends HTMLElement {
-        constructor() {
-          super();
-          const template = document
-            .getElementById('element-details-template')
-            .content;
-          const shadowRoot = this.attachShadow({mode: 'open'})
-            .appendChild(template.cloneNode(true));
-        }
-      })
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>
+- 文書内で **`<element-details>`** 要素のインスタンスは {{HTMLElement("details")}} 要素を直接使用しませんが、 {{HTMLElement("details")}} を[シャドウルート](/ja/docs/Web/API/ShadowRoot)が表示させることでレンダリングされます。
+- レンダリングされた {{HTMLElement("details")}} の出力結果で、**`<element-details>`** 要素の内容は[名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot)を[シャドウルート](/ja/docs/Web/API/ShadowRoot)から埋め込みます。言い換えれば、 **`<element-details>`** 要素の DOM ツリーは[シャドウルート](/ja/docs/Web/API/ShadowRoot)の内容と共に構成されます。
+- 両方の **`<element-details>`** 要素おいて、 **Attributes** の見出しは[シャドウルート](/ja/docs/Web/API/ShadowRoot)から `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot)の位置の前に、自動的に追加されます。
+- 最初の **`<element-details>`** は[シャドウルート](/ja/docs/Web/API/ShadowRoot)から[名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot)を明示的に参照している {{HTMLElement("dl")}} 要素を持つため、{{HTMLElement("dl")}} の内容は [シャドウルート](/ja/docs/Web/API/ShadowRoot)から `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot)を置き換えています。
+- 2 つ目の **`<element-details>`** は[シャドウルート](/ja/docs/Web/API/ShadowRoot)から[名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot)を明示的に参照していないため、[名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot)の内容は[シャドウルート](/ja/docs/Web/API/ShadowRoot)の既定の内容が埋め込まれます。
