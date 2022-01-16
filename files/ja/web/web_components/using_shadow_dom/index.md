@@ -1,142 +1,157 @@
 ---
-title: shadow DOM の使い方
+title: シャドウ DOM の使用
 slug: Web/Web_Components/Using_shadow_DOM
+tags:
+  - API
+  - DOM
+  - ガイド
+  - ウェブコンポーネント
+  - シャドウ DOM
 translation_of: Web/Web_Components/Using_shadow_DOM
 ---
-<div> {{DefaultAPISidebar("Web Components")}}</div>
+{{DefaultAPISidebar("Web Components")}}
 
-<p class="summary">Web コンポーネントにおいてカプセル化 (構造やスタイル、挙動を隠し、同じページの他のコードと分離すること) は重要です。これにより他の場所でのクラッシュを防ぎ、またコードが綺麗になります。Shadow DOM API はこの隠され分離された DOM を付加するための方法を提供しています。この記事では Shadow DOM を使う基本を記述しています。</p>
+ウェブコンポーネントにおける重要な側面の一つが、カプセル化です。マークアップ構造、スタイル、動作を隠蔽し、コード上の他のコードから分離することで、他の部分でクラッシュすることを防ぎ、コードをきれいにしておくことができます。シャドウ DOM API はこの主要部分であり、隠蔽され分離された DOM を要素に取り付けるための方法を提供しています。この記事ではシャドウ DOM を使う基本を記述しています。
 
-<div class="note">
-<p><strong>Note</strong>: Shadow DOM は Firefox (version 63以降)、Chrome、Opera、そして Safari でサポートされています。 Chromiumベースの新しいEdge(75以降)もサポートしています。旧Edgeはサポートしていません。</p>
-</div>
+> **Note:** シャドウ DOM は Firefox (バージョン 63 以降)、Chrome、Opera、 Safari が対応しています。 Chromium ベースの新しい Edge （75 以降）も対応しています。古い Edge は対応していません。
 
-<h2 id="High-level_view">High-level view</h2>
+## 高水準のビュー
 
-<p>この記事では <a href="/ja/docs/Web/API/Document_Object_Model/Introduction">DOM (Document Object Model)</a> —ドキュメントにある要素やテキストを表現するノードによって構成された木構造 — に親しんでいる前提で説明します。例として以下の HTML フラグメントを考えます。 </p>
+この記事は、すでにあなたが [DOM (Document Object Model)](/ja/docs/Web/API/Document_Object_Model/Introduction) の概念を理解していることを想定しています。これはツリー上の構造で、接続されたノードがマークアップ文書（ウェブ文書の場合は通常 HTML 文書）に現れるさまざまな要素や文字列を表します。例として、以下のような HTML の断片を考えてみましょう。
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Simple DOM example&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-      &lt;section&gt;
-        &lt;img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."&gt;
-        &lt;p&gt;Here we will add a link to the &lt;a href="https://www.mozilla.org/"&gt;Mozilla homepage&lt;/a&gt;&lt;/p&gt;
-      &lt;/section&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple DOM example</title>
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+  </body>
+</html>
+```
 
-<p>このフラグメントによって以下のような DOM 構造が構成されます。</p>
+この断片によって以下のような DOM 構造が構成されます。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14559/dom-screenshot.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+![](dom-screenshot.png)
 
-<p><em>Shadow</em> DOM により、通常の DOM ツリーの要素の下に DOM ツリーを追加し隠すことができます。shadow DOM ツリーは shadow root を根とし、その下には普通の DOM ツリーと同様に任意の要素を追加できます。</p>
+_シャドウ_ DOM により、通常の DOM ツリーの要素の下に隠れた DOM ツリーを取り付けることができます。このシャドウ DOM ツリーはシャドウルートから始まり、その下には普通の DOM ツリーと同様に任意の要素を追加することができます。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15788/shadow-dom.png" style="height: 543px; width: 1138px;"></p>
+![文書、シャドウルート、シャドウホストの相互作用を示す図の SVG 版。](shadowdom.svg)
 
-<p>以下に shadow DOM における用語を定義します。</p>
+以下にシャドウ DOM における用語を定義します。
 
-<ul>
- <li><strong>Shadow host</strong>: shadow DOM が追加された、通常の DOM ノード</li>
- <li><strong>Shadow tree</strong>: shadow DOM の中にある DOM ツリー</li>
- <li><strong>Shadow boundary</strong>: shadow DOM と通常の DOM の境界</li>
- <li><strong>Shadow root</strong>: shadow ツリーの根ノード</li>
-</ul>
+- **シャドウホスト**: シャドウ DOM が取り付けられた、通常の DOM ノード
+- **シャドウツリー**: シャドウ DOM の中にある DOM ツリー
+- **シャドウ境界**: シャドウ DOM と通常の DOM の境界
+- **シャドウルート**: シャドウツリーの根ノード
 
-<p>shadow DOM 内のノードは、子ノードを追加したり属性付けをしたり、個々のノードのスタイルを element.style.foo と定めたり shadow DOM ツリー全体のスタイルを {{htmlelement("style")}} 要素で定めたりなど、通常の DOM のノードと同様に制御できます。ただし、shadow DOM の内部コードによって外部を制御することは出来ません。 </p>
+シャドウ DOM 内のノードには、シャドウでないノードと全く同じように影響を与えることができます。たとえば、子を追加したり、属性を設定したり、element.style.foo を使用して個々のノードのスタイルを設定したり、 {{htmlelement("style")}} 要素内でシャドウ DOM ツリー全体へのスタイルを追加したりすることができます。違いは、シャドウ DOM 内のどのコードもその外の何かに影響を与えることができず、便利なカプセル化ができることです。
 
-<p>shadow DOM は全く新しいものではなく、例えばブラウザにおいて要素の内部構造をカプセル化するために長年使用されていました。 {{htmlelement("video")}} 要素の例を考えます。DOM で見えるものは <code>&lt;video&gt;</code> 要素のみですが、その shadow DOM の内部ではたくさんのボタンや他の制御コードが含まれています。shadow DOM スペックができたことにより、この機能を実際に操作しカスタム要素で shadow DOM を作ることができるようになりました。 </p>
+なお、シャドウ DOM は決して新しいものではありません。ブラウザーは長い間、要素の内部構造をカプセル化するためにこれを使用してきました。例えば、既定のブラウザーコントロールが公開されている {{htmlelement("video")}} 要素を思い浮かべてください。 DOM には `<video>` 要素しか表示されませんが、そのシャドウ DOM の内部には、一連のボタンやその他のコントロールが含まれています。 Shadow DOM 仕様により、独自のカスタム要素のシャドウ DOM を実際に操作することができるようになりました。
 
-<h2 id="基本的な使い方">基本的な使い方</h2>
+## 基本的な使い方
 
-<p>shadow root は {{domxref("Element.attachShadow()")}} メソッドを利用して任意の要素に追加することができます。このメソッドではパラメータとして <code>mode</code> オプションを <code>open</code> または <code>closed</code> の値で取ります。 </p>
+任意の要素にシャドウルートを取り付けるには {{domxref("Element.attachShadow()")}} メソッドを使用します。このメソッドはオプションオブジェクトを引数として取り、その中にはオプションが 1 つ、 `mode` オプションを `open` または `closed` の値で取ります。
 
-<pre class="brush: js">let shadow = elementRef.attachShadow({mode: 'open'});
-let shadow = elementRef.attachShadow({mode: 'closed'});</pre>
+```js
+let shadow = elementRef.attachShadow({mode: 'open'});
+let shadow = elementRef.attachShadow({mode: 'closed'});
+```
 
-<p><code>open</code> の場合は shadow DOM の内部にメインページに書かれた JavaScript からアクセスできます。以下のように {{domxref("Element.shadowRoot")}} プロパティを利用してアクセスできます。</p>
+`open` の場合は、シャドウ DOM にメインページに書かれた JavaScript からアクセスできます。以下のように {{domxref("Element.shadowRoot")}} プロパティを利用してアクセスできます。
 
-<pre class="brush: js">let myShadowDom = myCustomElem.shadowRoot;</pre>
+```js
+let myShadowDom = myCustomElem.shadowRoot;
+```
 
-<p>shadow root を <code>mode: closed</code> で追加した場合、外部から shadow DOM にアクセス出来ず、<code>myCustomElem.shadowRoot</code> は <code>null</code> を返します。<code>&lt;video&gt;</code> などの shadow DOM を含む既成の要素は <code>closed</code> になっています。</p>
+シャドウルートを `mode: closed` で取り付けた場合、外部からシャドウ DOM にアクセスすることができません。 `myCustomElem.shadowRoot` は `null` を返します。シャドウ DOM を含む既成の要素、例えば `<video>` などは `closed` になっています。
 
-<div class="note">
-<p><strong>Note</strong>: <a href="https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af">このブログ記事を見るに</a>、実はclosed shadow DOMを回避するのはそんなに難しいことではなく、また、これを完全に隠すことはその価値の割には面倒です。</p>
-</div>
+> **Note:** [このブログ記事](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af)を見ると、実は closed のシャドウ DOM を回避するのはさほど難しいことではなく、また、これを完全に隠すことはその価値の割には面倒です。
 
-<p>shadow DOM をコンストラクタの一部としてカスタム要素に追加することを考えます。</p>
+シャドウ DOM をカスタム要素のコンストラクターの一部として取り付けた場合（シャドウ DOM の最も有用な用途です）、次のような方法を使用することになります。
 
-<pre class="brush: js">let shadow = this.attachShadow({mode: 'open'});</pre>
+```js
+let shadow = this.attachShadow({mode: 'open'});
+```
 
-<p>shadow DOM は、通常の DOM の操作に使われる DOM API で操作することができます。</p>
+シャドウ DOM を要素に取り付けた場合、その操作は通常の DOM 操作と同じ DOM API を使うだけでよいのです。
 
-<pre class="brush: js">var para = document.createElement('p');
+```js
+let para = document.createElement('p');
 shadow.appendChild(para);
-// etc.</pre>
+// etc.
+```
 
-<h2 id="実用例">実用例</h2>
+## 簡単な例を一通り扱う
 
-<p>カスタム要素内のシンプルなshadow DOM を見てみましょう — <code><a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">&lt;popup-info-box&gt;</a></code> (<a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">実行例</a>)。このタグはイメージアイコンとテキストを取り、アイコンをページに埋め込みます。アイコンがフォーカスされるとポップアップが表示され、さらなる情報を提供します。<br>
- まずは <code>HTMLElement</code> を拡張して <code>PopUpInfo</code> というクラスを定義します。</p>
+カスタム要素内のシンプルなシャドウ DOM を見てみましょう。 [`<popup-info>`](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) ([ライブ例](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)を参照)です。この要素は画像アイコンとテキストを取り、アイコンをページに埋め込みます。アイコンがフォーカスされるとポップアップが表示され、さらなる情報を提供します。まずは `HTMLElement` を拡張して `PopUpInfo` というクラスを定義します。
 
-<pre class="brush: js">class PopUpInfo extends HTMLElement {
+```js
+class PopUpInfo extends HTMLElement {
   constructor() {
-    // Always call super first in constructor
+    // コンストラクターでは常に super を最初に呼び出してください
     super();
 
-    // write element functionality in here
+    // ここに要素の機能を記述します
 
     ...
   }
-}</pre>
+}
+```
 
-<p>クラス定義の際、インスタンスが初期化された時に用意されるあらゆる関数を定義したコンストラクタを定義します。</p>
+クラス定義の中で、要素のコンストラクターを定義し、その中で要素のインスタンスが生成されたときに、その要素が持つすべての機能を定義します。
 
-<h3 id="shadow_root_の作成">shadow root の作成</h3>
+### シャドウルートの作成
 
-<p>最初に shadow root をカスタム要素に追加します。</p>
+最初にシャドウルートをカスタム要素に追加します。
 
-<pre class="brush: js">// Create a shadow root
-var shadow = this.attachShadow({mode: 'open'});</pre>
+```js
+// シャドウルートを生成
+let shadow = this.attachShadow({mode: 'open'});
+```
 
-<h3 class="brush: js" id="shadow_DOM_構造の作成">shadow DOM 構造の作成</h3>
+### シャドウ DOM 構造の作成
 
-<p class="brush: js">次に shadow DOM 構造を作ります。</p>
+次に、いくつかの DOM 操作を使用して、要素の内部シャドウ DOM 構造を作成します。
 
-<pre class="brush: js">// Create spans
-var wrapper = document.createElement('span');
-wrapper.setAttribute('class','wrapper');
-var icon = document.createElement('span');
-icon.setAttribute('class','icon');
+```js
+// spans の生成
+let wrapper = document.createElement('span');
+wrapper.setAttribute('class', 'wrapper');
+let icon = document.createElement('span');
+icon.setAttribute('class', 'icon');
 icon.setAttribute('tabindex', 0);
-var info = document.createElement('span');
-info.setAttribute('class','info');
+let info = document.createElement('span');
+info.setAttribute('class', 'info');
 
-// Take attribute content and put it inside the info span
-var text = this.getAttribute('text');
+// 属性の中身を取得し、 info の span の中に入れる
+let text = this.getAttribute('data-text');
 info.textContent = text;
 
-// Insert icon
-var imgUrl;
+// アイコンを挿入
+let imgUrl;
 if(this.hasAttribute('img')) {
   imgUrl = this.getAttribute('img');
 } else {
   imgUrl = 'img/default.png';
 }
-var img = document.createElement('img');
+let img = document.createElement('img');
 img.src = imgUrl;
 icon.appendChild(img);
-</pre>
+```
 
-<h3 class="brush: js" id="shadow_DOM_のスタイル">shadow DOM のスタイル</h3>
+### シャドウ DOM のスタイル付け
 
 <p class="brush: js">そのあと、 {{htmlelement("style")}} 要素を作り CSS でスタイルを付けます。</p>
 
-<pre class="brush: js">// Create some CSS to apply to the shadow dom
-var style = document.createElement('style');
+```js
+// CSS を生成してシャドウ DOM に適用
+let style = document.createElement('style');
 
 style.textContent = `
 .wrapper {
@@ -166,53 +181,56 @@ img {
 .icon:hover + .info, .icon:focus + .info {
   opacity: 1;
 }`;
+```
 
-</pre>
+### シャドウ DOM をシャドウルートに追加
 
-<h3 id="shadow_DOM_を_shadow_root_に追加">shadow DOM を shadow root に追加</h3>
+最後のステップは、生成した要素すべてをシャドウルートに取り付けることです。
 
-<p>最後に作成した全ての要素を shadow root に追加します。</p>
-
-<pre class="brush: js">// attach the created elements to the shadow dom
+```js
+// 生成した要素をシャドウ DOM に取り付ける
 shadow.appendChild(style);
 shadow.appendChild(wrapper);
 wrapper.appendChild(icon);
-wrapper.appendChild(info);</pre>
+wrapper.appendChild(info);
+```
 
-<h3 id="カスタム要素の使用">カスタム要素の使用</h3>
+### カスタム要素の使用
 
-<p>クラスを定義すると、定義したようにカスタム要素を使用することができます。(<a href="/ja/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a>)</p>
+一度クラスを定義すれば、[カスタム要素の使用](/ja/docs/Web/Web_Components/Using_custom_elements)で説明したように、その要素を定義し、ページに配置するだけで簡単に使用できるようになります。
 
-<pre class="brush: js">// Define the new element
-customElements.define('popup-info', PopUpInfo);</pre>
+```js
+// 新しい要素を定義
+customElements.define('popup-info', PopUpInfo);
+```
 
-<pre class="brush: html">&lt;<span class="pl-ent">popup-info</span> <span class="pl-e">img</span>=<span class="pl-s"><span class="pl-pds">"</span>img/alt.png<span class="pl-pds">"</span></span> <span class="pl-e">text</span>=<span class="pl-s"><span class="pl-pds">"</span>Your card validation code (CVC) is an extra
+```html
+<popup-info img="img/alt.png" data-text="Your card validation code (CVC) is an extra
                                     security feature — it is the last 3 or 4
-                                    numbers on the back of your card.<span class="pl-pds">"</span></span>&gt;</pre>
+                                    numbers on the back of your card.">
+```
 
-<div>
-<h3 id="内部スタイル_vs_外部スタイル">内部スタイル vs 外部スタイル</h3>
+### 内部スタイルと外部スタイル
 
-<p>上述の例では{{htmlelement("style")}}要素を用いてShadow DOMにスタイルを適用しましたが、代わりに{{htmlelement("link")}}要素で外部のスタイルシートを参照することでも完全に実現できます。</p>
+上記の例では {{htmlelement("style")}} 要素を用いてシャドウ DOM にスタイルを適用しましたが、代わりに完全に {{htmlelement("link")}} 要素から外部スタイルシートを参照することが可能です。
 
-<p>例として、<a href="https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/">popup-info-box-external-stylesheet</a> の例を見てください。(<a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js">ソースコード</a>)</p>
+例えば、 [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) のコードを少し見てみましょう（[ソースコード](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js)はこちら）。
 
-<pre>// Apply external styles to the shadow dom
+```js
+// 外部スタイルシートをシャドウ DOM に適用
 const linkElem = document.createElement('link');
 linkElem.setAttribute('rel', 'stylesheet');
 linkElem.setAttribute('href', 'style.css');
 
-// Attach the created element to the shadow dom
-shadow.appendChild(linkElem);</pre>
+// 生成された要素をシャドウ DOM に添付
+shadow.appendChild(linkElem);
+```
 
-<p> {{htmlelement("link")}}要素がshadow rootの描画をブロックしないため、スタイルシートがロードされている間flash of unstyled content(FOUC)が起こりうることに注意してください。</p>
+なお、 {{htmlelement("link")}} 要素はシャドウルートの描画をブロックしないので、スタイルシートのロード中にスタイル付けされていないコンテンツ (FOUC) が一瞬表示されるかもしれないことに注意してください。
 
-<p>多くのモダンブラウザは、共通ノードからコピーされた、または同一のテキストを持つ {{htmlelement("style")}}タグの最適化を実装して、単一のバッキングスタイルシートを共有できるようにしています。この最適化により、外部スタイルと内部スタイルのパフォーマンスは同様になります。</p>
+最近のブラウザーの多くは、共通のノードからクローンされた、あるいは同一のテキストを持つ {{htmlelement("style")}} タグに対して、単一のバッキングスタイルシートを共有できるようにする最適化を実装しています。この最適化によって、外部スタイルでも内部スタイルでも性能は同程度になるはずです。
 
-<h2 id="参考">参考</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a></li>
- <li><a href="/ja/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a></li>
-</ul>
-</div>
+- [カスタム要素の使用](/ja/docs/Web/Web_Components/Using_custom_elements)
+- [テンプレートとスロットの使用](/ja/docs/Web/Web_Components/Using_templates_and_slots)
