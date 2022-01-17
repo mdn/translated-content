@@ -4,41 +4,41 @@ slug: Web/API/CustomElementRegistry
 tags:
   - API
   - CustomElementRegistry
-  - Experimental
-  - Interface
-  - Landing
-  - Webコンポーネント
-  - custom elements
-  - レファレンス
-  - 試験的
+  - 実験的
+  - インターフェイス
+  - リファレンス
+  - ウェブコンポーネント
+  - カスタム要素
+browser-compat: api.CustomElementRegistry
 translation_of: Web/API/CustomElementRegistry
 ---
-<p>{{DefaultAPISidebar("Web Components")}}</p>
+{{DefaultAPISidebar("Web Components")}}
 
-<p><span class="seoSummary"><strong><code>CustomElementRegistry</code></strong> インターフェイスはカスタムエレメントの登録と、登録された要素を紹介するためのメソッドを提供します。このインスタンスを取得するには、{{domxref("window.customElements")}} プロパティを使います。 </span></p>
+**`CustomElementRegistry`** インターフェイスは、カスタム要素の登録と、登録された要素を照会するためのメソッドを提供します。このインスタンスを取得するには、{{domxref("window.customElements")}} プロパティを使用してください。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("CustomElementRegistry.define()")}}</dt>
- <dd>新しい<a href="/ja/docs/Web/Web_Components/Using_custom_elements">カスタムエレメント</a>を定義。</dd>
- <dt>{{domxref("CustomElementRegistry.get()")}}</dt>
- <dd>指定されたカスタムエレメントへのコンストラクタか、またはカスタムエレメントが定義されていない場合は <code>undefined</code> を返す。</dd>
- <dt>{{domxref("CustomElementRegistry.whenDefined()")}}</dt>
- <dd>名前を与えられたカスタムエレメントが定義されたとき、空の {{jsxref("Promise", "promise")}}（resolves）を返す。もしそのようなカスタムエレメントが既に定義されていた場合、返された promise は即座に fulfill状態になります。</dd>
-</dl>
+- {{domxref("CustomElementRegistry.define()")}}
+  - : 新しい[カスタム要素](/ja/docs/Web/Web_Components/Using_custom_elements)を定義します。
+- {{domxref("CustomElementRegistry.get()")}}
+  - : 名前付きカスタム要素のコンストラクターを返します。カスタム要素が定義されていない場合は {{jsxref("undefined")}} を返します。
+- {{domxref("CustomElementRegistry.upgrade()")}}
+  - : シャドウルートに接続する前であっても、直接カスタム要素をアップグレードします。
+- {{domxref("CustomElementRegistry.whenDefined()")}}
+  - : 指定された名前でカスタム要素が定義されたときに解決する空の{{jsxref("Promise", "プロミス", "", 1)}}を返します。そのようなカスタム要素が既に定義されていた場合、返されたプロミスは即座に履行状態になります。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>以下のコードは我々の <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> という例 (<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">こちらのライブデモを見てください</a>) から持ってきています。メモ: クラスを生成した後カスタムエレメント定義するための {{domxref("CustomElementRegistry.define()")}} メソッドの使用方法。</p>
+以下のコードは [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) という例 ([ライブデモも見てください](https://mdn.github.io/web-components-examples/word-count-web-component/)) から持ってきています。カスタム要素のクラスを作成した後に、 {{domxref("CustomElementRegistry.define()")}} メソッドを使用してカスタム要素を定義していることに注意してください。
 
-<pre class="brush: js">// 要素のクラスを生成
+```js
+// 要素のクラスを作成
 class WordCount extends HTMLParagraphElement {
   constructor() {
-    // コンストラクタ内ではまずはじめに必ず super をコールする
+    // コンストラクターでは常に super を最初に呼び出してください
     super();
 
-    // 親要素の要素内の count というワード
+    // 要素の親要素の語数を数える
     var wcParent = this.parentNode;
 
     function countWords(node){
@@ -48,18 +48,17 @@ class WordCount extends HTMLParagraphElement {
 
     var count = 'Words: ' + countWords(wcParent);
 
-    // shadow root を生成
+    // シャドウルートを生成
     var shadow = this.attachShadow({mode: 'open'});
 
-    // テキストノードを生成し、count というワードを追加
+    // テキストノードを生成し、語数を追加
     var text = document.createElement('span');
     text.textContent = count;
 
-    // shadow root に追加
+    // シャドウルートに追加
     shadow.appendChild(text);
 
-
-    // 要素のコンテンツが変化した時、count を更新
+    // 要素の内容が変化したとき、語数を更新
     setInterval(function() {
       var count = 'Words: ' + countWords(wcParent);
       text.textContent = count;
@@ -69,33 +68,15 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // 新しい要素を定義
-customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<div class="note">
-<p>メモ: CustomElementsRegistry は {{domxref("Window.customElements")}} プロパティを通して利用可能です。</p>
-</div>
+> **Note:** CustomElementsRegistry は {{domxref("Window.customElements")}} プロパティを通して利用可能です。
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "custom-elements.html#customelementregistry", "CustomElementRegistry")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-
-
-
-
-<p>{{Compat("api.CustomElementRegistry")}}</p>
+{{Compat}}
