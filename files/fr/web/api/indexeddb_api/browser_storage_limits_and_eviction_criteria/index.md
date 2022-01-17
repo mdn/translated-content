@@ -58,7 +58,7 @@ Chaque type de stockage représente un référentiel distinct, voici la cartogra
 
 > **Note :** Depuis l'introduction de l' [API Storage](/en-US/docs/Web/API/Storage_API) , le dossier "permanent" peut être considéré comme obsolète, il n'est plus utilisé que pour les bases de données de type persistant IndexedDB. Peu importe le mode, "best-effort" _(meilleur effort)_ ou "persistant", les données sont stockées sous `<profile>/storage/default`.
 
-> **Note :** Dans Firefox, vous pouvez trouver votre dossier profil en entrant : `support` dans la barre d'URL et en appuyant sur le bouton _Show in.._. _(\*\*Afficher dans ...)_ (par exemple, _"Show in Finder"_ sur Mac OS X) à côté du titre _"Profile Folder" (\*\*dossier de profil)_ .
+> **Note :** Dans Firefox, vous pouvez trouver votre dossier profil en entrant : `support` dans la barre d'URL et en appuyant sur le bouton _Show in.._. _(Afficher dans ...)_ (par exemple, _"Show in Finder"_ sur Mac OS X) à côté du titre _"Profile Folder" (dossier de profil)_ .
 
 > **Note :** Si vous regardez dans votre profil les répertoires de données stockées, vous pouvez voir un quatrième dossier : `persistent` . À la base, le dossier `persistent` a été renommé `permanent,` il y a quelques temps, pour faciliter les mises à niveau / migrations.
 
@@ -68,7 +68,7 @@ Chaque type de stockage représente un référentiel distinct, voici la cartogra
 
 L'espace de stockage maximal du navigateur est dynamique  — il est basé sur la taille de votre disque dur. La limite globale est calculée sur la base de 50% de l'espace disque libre. Dans Firefox, un outil interne du navigateur appelé " Quota Manager " _(gestionnaire de quotas)_ surveille la quantité d'espace disque utilisée par chaque origine et supprime les données si nécessaire.
 
-Donc, si votre disque dur est de 500 Go, le stockage total d'un navigateur est de 250 Go. S'il est dépassé, une procédure appelée **"origin eviction"** _(\*\*éviction d'origine)_ entre en jeu, en supprimant la valeur totale de l'origine jusqu'à ramener le niveau de stockage en-dessous de la limite. La suppression d'une base de données d'origine peut entraîner des problèmes d'incohérence.
+Donc, si votre disque dur est de 500 Go, le stockage total d'un navigateur est de 250 Go. S'il est dépassé, une procédure appelée **"origin eviction"** _(éviction d'origine)_ entre en jeu, en supprimant la valeur totale de l'origine jusqu'à ramener le niveau de stockage en-dessous de la limite. La suppression d'une base de données d'origine peut entraîner des problèmes d'incohérence.
 
 Il y a aussi une autre limite appelée **group limit** — ceci est défini comme 20% de la limite globale. Chaque origine fait partie d'un groupe (groupe d'origines). Il existe un groupe pour chaque domaine eTLD + 1.
 

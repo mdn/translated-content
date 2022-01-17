@@ -9,7 +9,7 @@ translation_of: Web/HTTP/Status/304
 ---
 {{HTTPSidebar}}
 
-Le code de réponse de redirection **`304`\*\***` Not Modified`\*_ indique qu'il n'y a pas besoin de retransmettre les ressources demandées. C'est une redirection implicite vers une ressource mise en cache. Cela survient lorsque la méthode de requête est _{{glossary("safe")}}\* (par exemple une requête {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}), ou lorsque la requête est conditionnelle et utilise l'en-tête {{HTTPHeader("If-None-Match")}} ou {{HTTPHeader("If-Modified-Since")}}.
+Le code de réponse de redirection **`304 Not Modified`** indique qu'il n'y a pas besoin de retransmettre les ressources demandées. C'est une redirection implicite vers une ressource mise en cache. Cela survient lorsque la méthode de requête est {{glossary("safe")}} (par exemple une requête {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}), ou lorsque la requête est conditionnelle et utilise l'en-tête {{HTTPHeader("If-None-Match")}} ou {{HTTPHeader("If-Modified-Since")}}.
 
 La réponse {{HTTPStatus("200")}} `OK` équivalente aurait inclus les en-têtes {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, et {{HTTPHeader("Vary")}}.
 

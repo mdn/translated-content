@@ -5,7 +5,7 @@ translation_of: Web/API/Document/onfullscreenchange
 ---
 {{ApiRef("Fullscreen API")}}
 
-La propriété **`Document`\*\***`.onfullscreenchange` \*\*est un gestionnaire d'événement pour l'événement {{event("fullscreenchange")}} qui est lancé lorsque le document entre ou sort du mode plein écran.
+La propriété **`Document.onfullscreenchange`** est un gestionnaire d'événement pour l'événement {{event("fullscreenchange")}} qui est lancé lorsque le document entre ou sort du mode plein écran.
 
 ## Syntaxe
 

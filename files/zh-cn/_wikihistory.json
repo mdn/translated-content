@@ -20645,13 +20645,6 @@
       "meteorlxy"
     ]
   },
-  "Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent": {
-    "modified": "2019-08-24T04:59:47.192Z",
-    "contributors": [
-      "ouxuwen",
-      "meteorlxy"
-    ]
-  },
   "Web/API/Touch_events/Using_Touch_Events": {
     "modified": "2019-03-23T22:09:03.982Z",
     "contributors": [
@@ -47195,6 +47188,13 @@
       "teoli",
       "ziyunfei",
       "AlexChao"
+    ]
+  },
+  "conflicting/Web/API/Pointer_events": {
+    "modified": "2019-08-24T04:59:47.192Z",
+    "contributors": [
+      "ouxuwen",
+      "meteorlxy"
     ]
   },
   "conflicting/Web/API/Push_API": {

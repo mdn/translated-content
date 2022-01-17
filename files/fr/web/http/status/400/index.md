@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Status/400
 ---
 {{HTTPSidebar}}
 
-Le code de statut de réponse HTTP **`400`\*\***` Bad Request`\*\* indique que le serveur ne peut pas comprendre la requête en raison d'une syntaxe invalide. Le client ne devrait pas répéter la requête sans modification.
+Le code de statut de réponse HTTP **`400 Bad Request`** indique que le serveur ne peut pas comprendre la requête en raison d'une syntaxe invalide. Le client ne devrait pas répéter la requête sans modification.
 
 ## Statut
 

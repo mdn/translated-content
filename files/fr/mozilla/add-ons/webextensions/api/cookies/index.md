@@ -83,7 +83,7 @@ Lorsque l'isolation de la première partie est désactivée, le paramètre `firs
 - {{WebExtAPIRef("cookies.CookieStore")}}
   - : Représente un cookie store dans le navigateur.
 - {{WebExtAPIRef("cookies.OnChangedCause")}}
-  - : Représente la raison pour laquelle un cookie a été modifié.\*\*\*
+  - : Représente la raison pour laquelle un cookie a été modifié.
 - {{WebExtAPIRef("cookies.SameSiteStatus")}}
   - : Représente le même statut du cookie sur le site.
 

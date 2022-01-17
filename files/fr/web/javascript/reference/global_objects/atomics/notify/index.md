@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/notify
 ---
 {{JSRef}}
 
-La méthode statique **`Atomics`\*\***`.notify()`\*\* permet de réveiller des agents dormants qui sont dans la file d'attente.
+La méthode statique **`Atomics.notify()`** permet de réveiller des agents dormants qui sont dans la file d'attente.
 
 > **Note :** Cette opération ne fonctionne que sur un tableau typé partagé de type {{jsxref("Int32Array")}}.
 

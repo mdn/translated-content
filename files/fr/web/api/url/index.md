@@ -9,7 +9,7 @@ translation_of: Web/API/URL
 ---
 {{ApiRef("URL API")}}
 
-L'interface **`URL`\*\*** \*\*représente un objet qui fournit des méthodes statiques utilisées pour créer des URL d'objet.
+L'interface **`URL`** représente un objet qui fournit des méthodes statiques utilisées pour créer des URL d'objet.
 
 Lors de l'utilisation d'un agent utilisateur dans lequel aucun constructeur n'a encore été implémenté, il est possible d'accéder à un objet en utilisant les propriétés {{domxref("Window.URL")}} (préfixées sur un navigateur basé sur Webkit tel que `Window.webkitURL`).
 
@@ -104,7 +104,7 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 
 ## Méthodes
 
-*L'interface `URL` *implémente les méthodes définies dans _{{domxref("URLUtils")}}._
+L'interface `URL` implémente les méthodes définies dans _{{domxref("URLUtils")}}._
 
 - {{domxref("URLUtils.toString()")}}
   - : Retourne une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant l'URL entière. C'est un synonyme de {{domxref("URLUtils.href")}}, mais il ne peut pas être utilisé pour modifier la valeur.

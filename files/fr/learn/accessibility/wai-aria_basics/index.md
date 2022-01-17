@@ -81,7 +81,7 @@ Un point important sur les attributs WAI-ARIA est qu'ils n'affectent en rien la 
 
 > **Note :** Vous pouvez trouver une liste utile de tous les rôles ARIA et de leurs utilisations, avec des liens vers des informations supplémentaires, dans les spécifications WAI-ARIA — voir la [définition des rôles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions).
 >
-> La spécification contient également une liste de toutes les propriétés et de tous les états, avec des liens vers des informations complémentaires - voir  [Définitions des états et des propriétés (tous les attributs aria- \*)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
+> La spécification contient également une liste de toutes les propriétés et de tous les états, avec des liens vers des informations complémentaires - voir  [Définitions des états et des propriétés (tous les attributs aria-*)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
 
 ### Où WAI-ARIA est supporté?
 

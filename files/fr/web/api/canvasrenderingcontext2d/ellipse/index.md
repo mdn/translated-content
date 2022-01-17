@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/ellipse
 ---
 {{APIRef}} {{SeeCompatTable}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.ellipse()`\*_ de l'API Canvas 2D ajoute une ellipse au trajet, centrée en _(x, y),* les rayons *rayonX* et *rayonY* commençant à *angleDeDébut* et se terminant à *angleDeFin,* en allant dans le sens indiqué par *antiHoraire\* (par défaut, horaire).
+La méthode **`CanvasRenderingContext2D.ellipse()`** de l'API Canvas 2D ajoute une ellipse au trajet, centrée en _(x, y)_, les rayons *rayonX* et *rayonY* commençant à *angleDeDébut* et se terminant à *angleDeFin* en allant dans le sens indiqué par *antiHoraire* (par défaut, horaire).
 
 ## Syntaxe
 

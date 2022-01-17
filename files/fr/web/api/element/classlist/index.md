@@ -12,7 +12,7 @@ translation_of: Web/API/Element/classList
 ---
 {{APIRef("DOM")}}
 
-La propriété en lecture seule** \*\***`Element.classList`\*\* retourne une collection directe  {{domxref("DOMTokenList")}} des attributs de classe de l'élément.
+La propriété en lecture seule **`Element.classList`** retourne une collection directe  {{domxref("DOMTokenList")}} des attributs de classe de l'élément.
 
 L'utilisation de `classList` est une alternative à la propriété {{domxref("element.className")}} qui renvoie une chaine composée de la liste des classes, séparées par des espaces.
 

@@ -41,7 +41,7 @@ Utilitaires liés à votre extension. Obtenez des URL vers des packages de resso
 - {{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}}
   - : Récupère l'état de l'accès de l'extension en mode navigation privée (déterminé par la case à cocher "Autorisé dans navigation privée").
 - {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}}
-  - : Récupère l'état de l'accès de l'extension au schéma 'file://' (déterminé par la case à cocher 'Autoriser l'accès aux URL des fichiers').\*\*\*
+  - : Récupère l'état de l'accès de l'extension au schéma 'file://' (déterminé par la case à cocher 'Autoriser l'accès aux URL des fichiers').
 - {{WebExtAPIRef("extension.sendRequest()")}} {{deprecated_inline}}
   - : Envoie une seule requête aux autres écouteurs de l'extension.
 - {{WebExtAPIRef("extension.setUpdateUrlData()")}}

@@ -3257,6 +3257,7 @@
 /ja/docs/Web/API/StorageEstimate/quota	/ja/docs/conflicting/Web/API/StorageManager/estimate_78aa4ffd4dfacc8f94d5c05d150d36ac
 /ja/docs/Web/API/StorageEstimate/usage	/ja/docs/conflicting/Web/API/StorageManager/estimate_9ffeea37c30a26922d3f1621912db8d8
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
+/ja/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ja/docs/conflicting/Web/API/Pointer_events
 /ja/docs/Web/API/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/Web/API/UserProximityEvent/near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/Web/API/VRDevice	/ja/docs/Web/API/VRDisplay
@@ -3913,7 +3914,7 @@
 /ja/docs/Web/Guide/CSS/Using_multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/Web/Guide/DOM	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/Guide/DOM/Events/Touch_events	/ja/docs/Web/API/Touch_events
-/ja/docs/Web/Guide/DOM/Events/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ja/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
+/ja/docs/Web/Guide/DOM/Events/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ja/docs/conflicting/Web/API/Pointer_events
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history	/ja/docs/Web/API/History_API
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example	/ja/docs/Web/API/History_API/Example
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history/Working_with_the_History_API	/ja/docs/Web/API/History_API/Working_with_the_History_API

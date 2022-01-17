@@ -5,7 +5,7 @@ translation_of: Web/API/TransitionEvent
 ---
 {{APIRef("CSSOM")}} {{SeeCompatTable}}
 
-L' **`Transition`\*\***`Event`\*\*interface représente des événements fournissant des informations relatives aux [transitions](/en-US/docs/Web/Guide/CSS/Using_CSS_transitions) .
+L'interface **`TransitionEvent`** représente des événements fournissant des informations relatives aux [transitions](/en-US/docs/Web/Guide/CSS/Using_CSS_transitions) .
 
 ## Propriétés
 

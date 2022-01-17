@@ -9,7 +9,7 @@ translation_of: Web/API/AnalyserNode
 ---
 {{APIRef("Web Audio API")}}
 
-L' interface **`AnalyserNode`\*\*** \*\*représente un noeud capable de fournir en temps réel des informations d'analyse de la fréquence et du domaine temporel. C'est un {{domxref("AudioNode")}} qui transmet le flux audio inchangé depuis l'entrée vers la sortie, mais permet de capturer les données générées pour les traiter et/ou les visualiser.
+L' interface **`AnalyserNode`** représente un noeud capable de fournir en temps réel des informations d'analyse de la fréquence et du domaine temporel. C'est un {{domxref("AudioNode")}} qui transmet le flux audio inchangé depuis l'entrée vers la sortie, mais permet de capturer les données générées pour les traiter et/ou les visualiser.
 
 Il a exactement une entrée et une sortie. Le noeud fonctionne même si la sortie n'est pas connectée.
 

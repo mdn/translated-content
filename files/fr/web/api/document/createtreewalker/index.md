@@ -140,9 +140,9 @@ La méthode de création **`Document.createTreeWalker()`** renvoie un nouvel obj
       </tbody>
     </table>
 
-- _filter _{{optional_inline}}\*\*
+- _filter _{{optional_inline}}
   - : est un {{domxref("NodeFilter")}} (_filtre de noeud_) facultatif, c'est à dire un objet avec une méthode `acceptNode` appelé par {{domxref("TreeWalker")}} pour déterminer s'il doit accepter ou non un nœud qui a passé le test `whatToShow`.
-- _entityReferenceExpansion _{{optional_inline}}\*\* _{{obsolete_inline}}_
+- _entityReferenceExpansion _{{optional_inline}} _{{obsolete_inline}}_
   - : est un {{domxref("Boolean")}} (_booléen_) indiquant si, lors de la suppression d'une {{domxref("EntityReference")}}, son sous-arbre doit être supprimé en même temps.
 
 ## Exemple

@@ -1496,6 +1496,7 @@
 /zh-CN/docs/Web/API/Touch.screenX	/zh-CN/docs/Web/API/Touch/screenX
 /zh-CN/docs/Web/API/Touch.screenY	/zh-CN/docs/Web/API/Touch/screenY
 /zh-CN/docs/Web/API/TouchEvent.changedTouches	/zh-CN/docs/Web/API/TouchEvent/changedTouches
+/zh-CN/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/zh-CN/docs/conflicting/Web/API/Pointer_events
 /zh-CN/docs/Web/API/UIEvent/pageX	/zh-CN/docs/conflicting/Web/API/MouseEvent/pageX
 /zh-CN/docs/Web/API/UIEvent/pageY	/zh-CN/docs/conflicting/Web/API/MouseEvent/pageY
 /zh-CN/docs/Web/API/UIEvent/视图	/zh-CN/docs/Web/API/UIEvent/view

@@ -154,7 +154,7 @@ Plusieurs autres optimisations sont possibles et cela dépend vraiment de ce que
 
 Vous aurez besoin de faire un choix difficile concernant votre boucle principale: comment simuler l'évolution du temps. Si vous désirez un contrôle par image alors vous aurez besoin de déterminer combien sera-t-il nécessaire à votre jeu d'être remis à jour et dessiné. Vous pourriez même vouloir une mise à jour et dessiner à différents taux (de rafraîchissement). Vous aurez aussi besoin de considérer combien comment votre jeu échouera gracieusement si le système de l'utilisateur ne peut soutenir la charge de travail. Commençons par considérer que vous serez capables de gérer les entrées de l'utilisateur et de mettre à jour l'état du jeu à chaque fois que vous dessinez. Nous ramifierons après.
 
-**\*Note**:\* Changer la manière dont votre boucle principale gère le temps est un cauchemar de débuggage, partout. Pensez à vos besoins, précautionneusement, avant de travailler sur votre boucle principale.
+**Note :** Changer la manière dont votre boucle principale gère le temps est un cauchemar de débuggage, partout. Pensez à vos besoins, précautionneusement, avant de travailler sur votre boucle principale.
 
 ### De quoi les jeux dans le navigateur devraient avoir l'air
 
