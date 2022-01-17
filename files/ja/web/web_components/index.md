@@ -118,7 +118,7 @@ translation_of: Web/Web_Components
   - : HTML の断片を含みますが、最初に文書を読み込んだときにはレンダリングされず、実行時に　JavaScript を使って表示することができます。関連する DOM インターフェイスは {{domxref("HTMLTemplateElement")}} です。
 - {{htmlelement("slot")}}
   - : ウェブコンポーネント内のプレースホルダーで、独自のマークアップで埋めることができます。これにより、別の DOM ツリーを生成し、それらを一緒に表示することができます。関連する DOM インターフェイスは {{domxref("HTMLSlotElement")}} です。
-- [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) グローバル HTML 属性
+- [`slot`](/ja/docs/Web/HTML/Global_attributes/slot) グローバル HTML 属性
   - : シャドウ DOM のシャドウツリーにあるスロットを要素に割り当てます。
 - {{domxref("Element.assignedSlot")}}
   - : 読み取り専用の属性で、この要素が挿入される {{htmlelement("slot")}} の参照を返します。
