@@ -1,218 +1,174 @@
 ---
-title: Web Components
+title: ウェブコンポーネント
 slug: Web/Web_Components
 tags:
-  - Landing
-  - NeedsTranslation
-  - TopicStub
-  - Web Components
+  - コンポーネント
+  - HTML インポート
+  - JavaScript
+  - ランディング
+  - 概要
+  - Template
+  - ウェブ記事
+  - ウェブコンポーネント
+  - ウェブ開発
+  - カスタム要素
+  - シャドウ DOM
+  - slot
 translation_of: Web/Web_Components
 ---
-<p>{{DefaultAPISidebar("Web Components")}}</p>
+{{DefaultAPISidebar("Web Components")}}
 
-<div class="summary">
-<p>Web Components は、再利用可能なカスタム要素を作成し、ウェブアプリの中で利用するための、一連のテクノロジーです。コードの他の部分から独立した、カプセル化された機能を使って実現します。 </p>
-</div>
+ウェブコンポーネントは、再利用可能なカスタム要素を作成し、ウェブアプリの中で利用するための、一連のテクノロジーです。コードの他の部分から独立した、カプセル化された機能を使って実現します。
 
-<h2 id="概念と使用法">概念と使用法</h2>
+## 概念と使用法
 
+開発者ならご存知でしょうが、可能な限りコードを再利用することは良い考えです。しかしこれは、以前から、カスタムのマークアップ構造にとって、それほど簡単なことではありませんでした。複雑な HTML (と一連のスタイルやスクリプト) を考えてみて下さい。ときに、カスタム UI の制御をレンダリングするために、コードを書かなければなりません。それに、注意していないと、それらの制御をどう使い回すかで、ページが複雑なものになってしまいます。
 
+ウェブコンポーネントは、上記の問題の解決を目指しています。 ウェブコンポーネントは、3 つの主要な技術からなり、それらを組み合わせて、多目的なカスタム要素を作成します。カプセル化された機能を使うことで、コードの重複を恐れることなく、どこでも再利用することができます。
 
-<p>開発者ならご存知でしょうが、可能な限りコードを再利用することは良い考えです。しかしこれは、以前から、カスタムのマークアップ構造にとって、それほど簡単なことではありませんでした。複雑な HTML (と一連のスタイルやスクリプト) を考えてみて下さい。ときに、カスタム UI の制御をレンダリングするために、コードを書かなければなりません。それに、注意していないと、それらの制御をどう使い回すかで、ページが複雑なものになってしまいます。</p>
+- **カスタム要素**: カスタム要素とその動作を定義するための、一連の JavaScript API です。以降、ユーザーインターフェイスの中で好きなだけ使用することができます。
+- **シャドウ DOM**: カプセル化された「シャドウ」 DOM ツリーを要素に紐付け、関連する機能を制御するための、一連の JavaScript API です。シャドウ DOM ツリーは、メイン文書の DOM とは別にレンダリングされます。こうして、要素の機能を公開せずに済み、文書の他の部分との重複を恐れることなく、スクリプト化やスタイル化できます。
+- **HTML テンプレート**: {{HTMLElement("template")}} と {{HTMLElement("slot")}} 要素によって、レンダリングされたページ内に表示されないマークアップのテンプレートを書くことができます。カスタム要素の構造体の基礎として、それらを何度も再利用できます。
 
-<p>Web Components は、上記の問題の解決を目指しています。 Web Components は、3 つの主要な技術からなり、それらを組み合わせて、多目的なカスタム要素を作成します。カプセル化された機能を使うことで、コードの重複を恐れることなく、どこでも再利用することができます。</p>
+ウェブコンポーネントを実装する基本的な流れは、以下に挙げてある通りです。
 
-<ul>
- <li><strong>カスタム要素:</strong> カスタム要素とその動作を定義するための、一連の JavaScript API です。以降、ユーザーインターフェースの中で好きなだけ使用することができます。</li>
- <li><strong>Shadow DOM:</strong> カプセル化された "Shadow" DOM ツリーを要素に紐付け、関連する機能を制御するための、一連の JavaScript API です。 Shadow DOM ツリーは、メインドキュメントの DOM とは別にレンダリングされます。こうして、要素の機能を公開せずに済み、ドキュメントの他の部分との重複を恐れることなく、スクリプト化やスタイル化できます。</li>
- <li><strong>HTML テンプレート:</strong> {{HTMLElement("template")}} と {{HTMLElement("slot")}} 要素によって、レンダリングされたページ内に表示されないマークアップのテンプレートを書くことができます。カスタム要素の構造体の基礎として、それらを何度も再利用できます。</li>
-</ul>
+1.  ウェブコンポーネントの機能を明示したクラスもしくは関数を作成します。クラスを使用するなら、ECMAScript 2015 のクラス構文に従ってください。 (詳細は[クラス](/ja/docs/Web/JavaScript/Reference/Classes)を参照してください。)
+2.  新しく作成したカスタム要素を登録します。{{domxref("CustomElementRegistry.define()")}} メソッドに、要素の名前、機能が明示されているクラスもしくは関数、またオプションでどの要素を継承するかを渡して下さい。
+3.  必要なら {{domxref("Element.attachShadow()")}} メソッドを使って、シャドウ DOM をカスタム要素に紐付けます。通常の DOM メソッドを使って、子要素やイベントリスナーなどをシャドウ DOM に追加して下さい。
+4.  必要なら {{htmlelement("template")}} と {{htmlelement("slot")}} を使って、HTML テンプレートを定義します。通常の DOM メソッドを再度使って、テンプレートをクローンし、シャドウ DOM に紐付けてください。
+5.  ページ内のお好きな場所で、通常の HTML 要素のように、カスタム要素を使って下さい。
 
-<p>Web Component を実装する基本的な流れは、以下に挙げてある通りです。</p>
+## チュートリアル
 
-<ol>
- <li>Web Component の機能を明示したクラスもしくは関数を作成します。クラスを使用するなら、ECMAScript 2015 のクラスの文法に従って下さい。 (詳細は<a href="/ja/docs/Web/JavaScript/Reference/Classes">クラス</a>を参照して下さい。)</li>
- <li>新しく作成したカスタム要素を登録します。{{domxref("CustomElementRegistry.define()")}} メソッドに、要素の名前、機能が明示されているクラスもしくは関数、またオプションでどの要素を継承するかを渡して下さい。</li>
- <li>必要なら、{{domxref("Element.attachShadow()")}} メソッドを使って、Shadow DOM をカスタム要素に紐付けます。通常の DOM メソッドを使って、子要素やイベントリスナーなどをShadow DOM に追加して下さい。</li>
- <li>必要なら、{{htmlelement("template")}} と {{htmlelement("slot")}} を使って、HTML テンプレートを定義します。通常の DOM メソッドを再度使って、テンプレートをクローンし、Shadow DOM に紐付けてください。</li>
- <li>ページ内のお好きな場所で、通常の HTML 要素のように、カスタム要素を使って下さい。</li>
-</ol>
-
-<h2 id="チュートリアル">チュートリアル</h2>
-
-<dl>
- <dt><a href="/ja/docs/Web/Web_Components/Using_custom_elements">カスタム要素を使ってみよう</a></dt>
- <dd>単純な Web Component を作成するために、カスタム要素の機能の使い方を紹介したガイドラインです。それ以外にも、ライフサイクルコールバックやその他の高度な機能の中を覗いていきます。</dd>
- <dt><a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM を使ってみよう</a></dt>
- <dd>Shadow DOM の基礎を眺めるガイドラインです。 Shadow DOM を要素にどう紐付けるか、Shadow DOM ツリーにどう追加するか、どうスタイルするかなどを紹介しています。</dd>
- <dt><a href="/ja/docs/Web/Web_Components/Using_templates_and_slots">テンプレートとスロットを使ってみよう</a></dt>
- <dd>{{htmlelement("template")}} と {{htmlelement("slot")}} 要素を使って、再利用可能な HTML 構造体の定義と使用方法を紹介したガイドラインです。 </dd>
+- [カスタム要素の使用](/ja/docs/Web/Web_Components/Using_custom_elements)
+  - : 単純なウェブコンポーネントを作成するために、カスタム要素の機能の使い方を紹介したガイドです。それ以外にも、ライフサイクルコールバックやその他の高度な機能の中を覗いていきます。
+- [シャドウ DOM の使用](/ja/docs/Web/Web_Components/Using_shadow_DOM)
+  - : シャドウ DOM の基礎を眺めるガイドです。シャドウ DOM を要素にどう紐付けるか、シャドウ DOM ツリーにどう追加するか、どうスタイル付けするかなどを紹介しています。
+- [テンプレートとスロットの使用](/ja/docs/Web/Web_Components/Using_templates_and_slots)
+  - : {{htmlelement("template")}} と {{htmlelement("slot")}} 要素を使って、再利用可能な HTML 構造体の定義と使用方法を紹介したガイドです。
 </dl>
 
-<h2 id="リファレンス">リファレンス</h2>
+## リファレンス
 
-<h3 id="カスタム要素">カスタム要素</h3>
+### カスタム要素
 
-<dl>
- <dt>{{domxref("CustomElementRegistry")}}</dt>
- <dd>カスタム要素に関わる機能が含まれています。中でも注目すべきは、 {{domxref("CustomElementRegistry.define()")}} メソッドで、新しいカスタム要素を登録するために用います。それにより、カスタム要素をドキュメント内で使用できるようになります。</dd>
- <dt>{{domxref("Window.customElements")}}</dt>
- <dd><code>CustomElementRegistry</code> オブジェクトへの参照を返します。</dd>
- <dt><a href="/ja/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks">Life cycle callbacks</a></dt>
- <dd>カスタム要素のクラス定義の中で定義された特別なコールバック関数で、挙動に影響を与えます。
- <ul>
-  <li><code>connectedCallback</code>: カスタム要素がドキュメントの DOM に初めて接続したときに呼び出されます。</li>
-  <li><code>disconnectedCallback</code>: カスタム要素がドキュメントの DOM から切断されたときに呼び出されます。</li>
-  <li><code>adoptedCallback</code>: カスタム要素が新しいドキュメントに移動したときに呼び出されます。</li>
-  <li><code>attributeChangedCallback</code>: カスタム要素の属性のひとつが追加、削除、もしくは変更されたときに呼び出されます。</li>
- </ul>
- </dd>
- <dd>
- <ul>
- </ul>
- </dd>
-</dl>
+- {{domxref("CustomElementRegistry")}}
+  - : カスタム要素に関わる機能が含まれています。中でも注目すべきは、 {{domxref("CustomElementRegistry.define()")}} メソッドで、新しいカスタム要素を登録するために用います。それにより、カスタム要素を文書内で使用できるようになります。
+- {{domxref("Window.customElements")}}
+  - : `CustomElementRegistry` オブジェクトへの参照を返します。
+- [ライフサイクルコールバック](/ja/docs/Web/Web_Components/Using_custom_elements#ライフサイクルコールバックの使用)
 
-<dl>
- <dt>カスタムビルトイン要素を作成するための拡張機能</dt>
- <dd>
- <ul>
-  <li>{{htmlattrxref("is")}} グローバル HTML 属性: 標準の HTML 要素が、カスタムビルトイン要素のように振る舞うべきかを指定できます。</li>
-  <li>{{domxref("Document.createElement()")}} メソッドの "is" オプション: カスタムビルトイン要素のように振る舞う標準の HTML 要素のインスタンスを作成できます。</li>
- </ul>
- </dd>
- <dt>CSS の擬似クラス</dt>
- <dd>カスタム要素に関連する擬似クラス:
- <ul>
-  <li>{{cssxref(":defined")}}: ビルトイン要素と <code>CustomElementRegistry.define()</code> で定義されるカスタム要素を含む、あらゆる定義済みの要素にマッチします。</li>
-  <li>{{cssxref(":host")}}: 使われている CSS を含む、<a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> のシャドーホストを選択します。</li>
-  <li>{{cssxref(":host()")}}: 使われている CSS を含む、<a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> のシャドーホストを選択します。 (Shadow DOM の内側からカスタム要素を選択することができます。) ただし、関数のパラメータとして渡されるセレクタがシャドーホストに一致している場合に限ります。</li>
-  <li>{{cssxref(":host-context()")}}: 使われている CSS を含む、<a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> のシャドーホストを選択します。 (Shadow DOM の内側からカスタム要素を選択することができます。) ただし、関数のパラメータとして渡されるセレクタが DOM 階層内のシャドーホストの先祖要素に一致している場合に限ります。</li>
- </ul>
- </dd>
-</dl>
+  - : カスタム要素のクラス定義の中で定義された特別なコールバック関数で、挙動に影響を与えます。
 
-<h3 id="Shadow_DOM">Shadow DOM</h3>
+    - `connectedCallback`: カスタム要素が文書の DOM に初めて接続したときに呼び出されます。
+    - `disconnectedCallback`: カスタム要素が文書の DOM から切断されたときに呼び出されます。
+    - `adoptedCallback`: カスタム要素が新しい文書に移動したときに呼び出されます。
+    - `attributeChangedCallback`: カスタム要素の属性のひとつが追加、削除、もしくは変更されたときに呼び出されます。
 
-<dl>
- <dt>{{domxref("ShadowRoot")}}</dt>
- <dd>Represents the root node of a shadow DOM subtree.</dd>
- <dt>{{domxref("DocumentOrShadowRoot")}}</dt>
- <dd>A mixin defining features that are available across document and shadow roots.</dd>
- <dt>{{domxref("Element")}} extensions</dt>
- <dd>Extensions to the <code>Element</code> interface related to shadow DOM:
- <ul>
-  <li>The {{domxref("Element.attachShadow()")}} method attaches a shadow DOM tree to the specified element.</li>
-  <li>The {{domxref("Element.shadowRoot")}} property returns the shadow root attached to the specified element, or <code>null</code> if there is no shadow root attached.</li>
- </ul>
- </dd>
- <dt>Relevant {{domxref("Node")}} additions</dt>
- <dd>Additions to the <code>Node</code> interface relevant to shadow DOM:
- <ul>
-  <li>The {{domxref("Node.getRootNode()")}} method returns the context object's root, which optionally includes the shadow root if it is available.</li>
-  <li>The {{domxref("Node.isConnected")}} property returns a boolean indicating whether or not the Node is connected (directly or indirectly) to the context object, e.g. the {{domxref("Document")}} object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.</li>
- </ul>
- </dd>
- <dt>{{domxref("Event")}} extensions</dt>
- <dd>Extensions to the <code>Event</code> interface related to shadow DOM:
- <ul>
-  <li>{{domxref("Event.composed")}}: Returns a {{jsxref("Boolean")}} which indicates whether the event will propagate across the shadow DOM boundary into the standard DOM (<code>true</code>), or not  (<code>false</code>).</li>
-  <li>{{domxref("Event.composedPath")}}: Returns the event’s path (objects on which listeners will be invoked). This does not include nodes in shadow trees if the shadow root was created with {{domxref("ShadowRoot.mode")}} closed.</li>
- </ul>
- </dd>
-</dl>
+- カスタム組み込み要素を作成するための拡張機能
 
-<h3 id="HTML_templates">HTML templates</h3>
+  - : 以下の拡張機能が定義されています。
 
-<dl>
- <dt>{{htmlelement("template")}}</dt>
- <dd>Contains an HTML fragment that is not rendered when a containing document is initially loaded, but can be displayed at runtime using JavaScript, mainly used as the basis of custom element structures. The associated DOM interface is {{domxref("HTMLTemplateElement")}}.</dd>
- <dt>{{htmlelement("slot")}}</dt>
- <dd>A placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together. The associated DOM interface is {{domxref("HTMLSlotElement")}}.</dd>
- <dt>The <code><a href="/ja/docs/Web/HTML/Global_attributes/slot">slot</a></code> global HTML attribute</dt>
- <dd>Assigns a slot in a shadow DOM shadow tree to an element.</dd>
- <dt>{{domxref("Slotable")}}</dt>
- <dd>A mixin implemented by both {{domxref("Element")}} and {{domxref("Text")}} nodes, defining features that allow them to become the contents of an {{htmlelement("slot")}} element. The mixin defines one attribute, {{domxref("Slotable.assignedSlot")}}, which returns a reference to the slot the node is inserted in.</dd>
-</dl>
+    - {{htmlattrxref("is")}} グローバル HTML 属性: 標準の HTML 要素が、カスタム組み込み要素のように振る舞うべきかを指定できます。
+    - {{domxref("Document.createElement()")}} メソッドの "is" オプション: カスタム組み込み要素のように振る舞う標準の HTML 要素のインスタンスを作成できます。
 
-<dl>
- <dt>{{domxref("Element")}} extensions</dt>
- <dd>Extensions to the <code>Element</code> interface related to slots:
- <ul>
-  <li>{{domxref("Element.slot")}}: Returns the name of the shadow DOM slot attached to the element.</li>
- </ul>
- </dd>
- <dt>CSS pseudo-elements</dt>
- <dd>Pseudo-elements relating specifically to slots:
- <ul>
-  <li>{{cssxref("::slotted")}}: Matches any content that is inserted into a slot.</li>
- </ul>
- </dd>
- <dt>The {{event("slotchange")}} event</dt>
- <dd>Fired on an {{domxref("HTMLSlotElement")}} instance ({{htmlelement("slot")}} element) when the node(s) contained in that slot change.</dd>
-</dl>
+- CSS の擬似クラス
 
-<h2 id="例">例</h2>
+  - : カスタム要素に関連する擬似クラスです。
 
-<p><a href="https://github.com/mdn/web-components-examples">web-components-examples</a> の GitHub レポジトリに、いくつかの例を用意してあります。時間とともに、より多くの例が追加されることでしょう。</p>
+    - {{cssxref(":defined")}}: 組み込み要素と `CustomElementRegistry.define()` で定義されるカスタム要素を含む、あらゆる定義済みの要素に一致します。
+    - {{cssxref(":host")}}: 使われている CSS を含む、[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) のシャドウホストを選択します。
+    - {{cssxref(":host()")}}: 使われている CSS を含む、[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) のシャドウホストを選択します。 (シャドウ DOM の内側からカスタム要素を選択することができます。) ただし、関数の引数として渡されるセレクターがシャドウホストに一致している場合に限ります。
+    - {{cssxref(":host-context()")}}: 使われている CSS を含む、[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) のシャドウホストを選択します。 (シャドウ DOM の内側からカスタム要素を選択することができます。) ただし、関数の引数として渡されるセレクターが DOM 階層内のシャドウホストの先祖要素に一致している場合に限ります。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+- CSS 擬似要素
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG","scripting.html#the-template-element","&lt;template&gt; element")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>{{HTMLElement("template")}} の定義です。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG","custom-elements.html#custom-elements","custom elements")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td><a href="/ja/docs/Web/Web_Components/Using_custom_elements">HTML Custom Elements</a> の定義です。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG","#shadow-trees","shadow trees")}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td><a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> の定義です。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML Imports", "", "")}}</td>
-   <td>{{Spec2("HTML Imports")}}</td>
-   <td><a href="/ja/docs/Web/Web_Components/HTML_Imports">HTML Imports</a> の最初の定義です。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Shadow DOM", "", "")}}</td>
-   <td>{{Spec2("Shadow DOM")}}</td>
-   <td><a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> の最初の定義です。</td>
-  </tr>
- </tbody>
-</table>
+  - : カスタム要素に関連する擬似要素です。
 
-<h2 id="ブラウザのサポート">ブラウザのサポート</h2>
+    - {{cssxref("::part")}}: [シャドウツリー](/ja/docs/Web/Web_Components/Using_shadow_DOM)内にある要素で、一致する {{HTMLAttrxRef("part")}} 属性を持つものを表します。
 
+### シャドウ DOM
 
+- {{domxref("ShadowRoot")}}
+  - : シャドウ DOM サブツリーのルートノードを表します。
+- {{domxref("Element")}} の拡張
 
-<p>一般に、</p>
+  - : シャドウ DOM に関する `Element` インターフェイスの拡張です。
 
-<ul>
- <li>Web Components は、Firefox (バージョン 63、現在のところ <a href="https://www.mozilla.org/en-GB/firefox/developer/">開発者エディション</a>)、Chrome そして Opera でサポートされています。 </li>
- <li>Safari では、いくつかの Web Components の機能がサポートされていますが、上記のブラウザほどではありません。</li>
- <li>Edge では、現在実装中です。</li>
-</ul>
+    - {{domxref("Element.attachShadow()")}} メソッドは、シャドウ DOM ツリーを指定された要素に取り付けます。
+    - {{domxref("Element.shadowRoot")}} プロパティは、指定された要素に取り付けられたシャドウルートを返します。取り付けられているシャドウルートがない場合は `null` を返します。
 
-<p>特定の機能のブラウザでの実装状況は、上記のページを調べるようにして下さい。</p>
+- 関連する {{domxref("Node")}} への追加
 
+  - : シャドウ DOM に関する `Node` インターフェイスへの追加事項です。
 
+    - {{domxref("Node.getRootNode()")}} メソッドは、そのコンテキストオブジェクトのルートを返します。存在する場合はシャドウルートを含みます。
+    - {{domxref("Node.isConnected")}} プロパティは論理値を返し、そのノードがそのコンテキストオブジェクト（通常の DOM であれば {{domxref("Document")}} オブジェクト、シャドウ DOM であれば {{domxref("ShadowRoot")}}）に接続されているかどうかを示します。
 
-<h2 id="参考">参考</h2>
+- {{domxref("Event")}} の拡張
 
-<ul>
- <li><a href="https://www.webcomponents.org/">webcomponents.org</a> — site featuring web components examples, tutorials, and other information.</li>
- <li><a href="https://www.polymer-project.org/">Polymer</a> — Google's web components framework — a set of polyfills, enhancements, and examples. Currently the easiest way to use web components cross-browser.</li>
- <li><a href="https://github.com/slimjs/slim.js">Slim.js</a> — Open source web components library — a high-performant library for rapid and easy component authoring; extensible and pluggable and cross-framework compatible. </li>
-</ul>
+  - : シャドウ DOM に関する `Event` インターフェイスの拡張です。
+
+    - {{domxref("Event.composed")}}: このイベントがシャドウ DOM 境界を超えて標準 DOM にまで電波する場合は `true`、そうでなければ `false` を返します。
+    - {{domxref("Event.composedPath")}}: イベントのパス（リスナーが呼び出されたオブジェクト）を返します。 {{domxref("ShadowRoot.mode")}} が closed でシャドウルートが生成された場合、シャドウツリー内のノードは含まれません。
+
+### HTML テンプレート
+
+- {{htmlelement("template")}}
+  - : HTML の断片を含みますが、最初に文書を読み込んだときにはレンダリングされず、実行時に　JavaScript を使って表示することができます。関連する DOM インターフェイスは {{domxref("HTMLTemplateElement")}} です。
+- {{htmlelement("slot")}}
+  - : ウェブコンポーネント内のプレースホルダーで、独自のマークアップで埋めることができます。これにより、別の DOM ツリーを生成し、それらを一緒に表示することができます。関連する DOM インターフェイスは {{domxref("HTMLSlotElement")}} です。
+- [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) グローバル HTML 属性
+  - : シャドウ DOM のシャドウツリーにあるスロットを要素に割り当てます。
+- {{domxref("Element.assignedSlot")}}
+  - : 読み取り専用の属性で、この要素が挿入される {{htmlelement("slot")}} の参照を返します。
+- {{domxref("Text.assignedSlot")}}
+  - : 読み取り専用の属性で、このテキストノードが挿入される {{htmlelement("slot")}} の参照を返します。
+- {{domxref("Element")}} の拡張
+
+  - : スロットに関する `Element` インターフェイスの拡張です。
+
+    - {{domxref("Element.slot")}}: この要素に取り付けられたシャドウ DOM スロットの名前を返します。
+
+- CSS 擬似要素
+
+  - : スロットに特化した擬似要素です。
+
+    - {{cssxref("::slotted")}}: スロットに挿入されたコンテンツに一致します。
+
+- {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} イベント
+  - : {{domxref("HTMLSlotElement")}} のインスタンス ({{htmlelement("slot")}} 要素) において、そのスロットに含まれるノードが変化したときに発行されます。
+
+## 例
+
+[web-components-examples](https://github.com/mdn/web-components-examples) の GitHub リポジトリーに、いくつかの例を用意してあります。時間とともに、より多くの例が追加されることでしょう。
+
+## 仕様書
+
+### `template` 要素とカスタム要素
+
+{{Specifications("html.elements.template")}}
+
+### シャドウ DOM
+
+{{Specifications("api.ShadowRoot")}}
+
+## ブラウザーの互換性
+
+一般に、
+
+- ウェブコンポーネントは、Firefox (バージョン 63)、Chrome、Opera、Edge (バージョン 79) が既定で対応しています。
+- Safari では、いくつかのウェブコンポーネントの機能に対応していますが、上記のブラウザーよりも限定的です。
+
+特定の機能についてのブラウザーの対応状況は、上記のページを調べて下さい。
+
+## 関連情報
+
+- [Open Web Components](https://open-wc.org/) — Guides, tools and libraries for developing web components.
+- [DataFormsJS](https://www.dataformsjs.com/) — Open source web components library — Set of Web Components that can be used to build Single Page Apps (SPA), Display JSON data from API’s and Web Services, and bind data to different elements on screen. All Web Components are plain JavaScript and require no build process.
+- [FAST](https://fast.design/) is a web component library built by Microsoft which offers several packages to leverage depending on your project needs. [Fast Element](https://github.com/microsoft/fast/tree/master/packages/web-components/fast-element) is a lightweight means to easily build performant, memory-efficient, standards-compliant Web Components. [Fast Foundation](https://github.com/microsoft/fast/tree/master/packages/web-components/fast-foundation) is a library of Web Component classes, templates, and other utilities built on fast-element intended to be composed into registered Web Components.
+- [Hybrids](https://github.com/hybridsjs/hybrids) — Open source web components library, which favors plain objects and pure functions over `class` and `this` syntax. It provides a simple and functional API for creating custom elements.
+- [Lit](https://lit.dev/) — Google's web components library, the core of which is a component base class designed to reduce boilerplate while providing reactive state, scoped styles, and a declarative template system.
+- [Snuggsi](https://github.com/devpunks/snuggsi#readme) — Easy Web Components in \~1kB _Including polyfill_ — All you need is a browser and basic understanding of HTML, CSS, and JavaScript classes to be productive.
+- [Slim.js](https://github.com/slimjs/slim.js) — Open source web components library — a high-performant library for rapid and easy component authoring; extensible and pluggable and cross-framework compatible.
+- [Stencil](https://stenciljs.com/) — Toolchain for building reusable, scalable design systems in web components.
