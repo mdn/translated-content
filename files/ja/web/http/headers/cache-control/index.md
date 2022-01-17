@@ -13,7 +13,7 @@ translation_of: Web/HTTP/Headers/Cache-Control
 
 {{HTTPSidebar}}
 
-HTTP ヘッダーフィールドの **`Cache-Control`** には、ブラウザーや共有キャッシュ (Proxy, CDN など) の [キャッシュ](/en-US/docs/Web/HTTP/Caching) を制御するためのディレクティブ (指示) が、リクエストとレスポンスの両方に含まれています。
+HTTP ヘッダーフィールドの **`Cache-Control`** には、ブラウザーや共有キャッシュ (Proxy, CDN など) の [キャッシュ](/ja/docs/Web/HTTP/Caching) を制御するためのディレクティブ (指示) が、リクエストとレスポンスの両方に含まれています。
 
 <table class="properties">
   <tbody>
@@ -443,7 +443,7 @@ Cache-Control: max-age=0, must-revalidate
 
 ## See also
 
-- [HTTP Caching FAQ](/en-US/docs/Web/HTTP/Caching)
+- [HTTP Caching FAQ](/ja/docs/Web/HTTP/Caching)
 - [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
 - [Caching best practices & max-age gotchas](https://jakearchibald.com/2016/caching-best-practices/)
 - [Cache-Control for Civilians](https://csswizardry.com/2019/03/cache-control-for-civilians/)
