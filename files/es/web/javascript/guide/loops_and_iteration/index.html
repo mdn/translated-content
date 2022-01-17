@@ -312,13 +312,13 @@ car.model = Mustang
 
 <h2 id="Declaración_for...of">Declaración <code>for...of</code></h2>
 
-<p>La declaración {{JSxRef("Sentencias/for...of", "for...of")}} crea un bucle que se repite sobre {{JSxRef("../Guide/iterable", "objetos iterables")}} (incluidos {{JSxRef("Array")}}, {{JSxRef("Map")}}, {{JSxRef("Set")}}, objetos {{JSxRef("Funciones/arguments", "arguments")}} y así sucesivamente), invocando un gancho de iteración personalizado con declaraciones que se ejecutarán para el valor de cada distinta propiedad.</p>
+<p>La declaración {{JSxRef("Sentencias/for...of", "for...of")}} crea un bucle que se repite sobre {{JSxRef("../Guide/iterable", "objetos iterables")}} (incluidos {{JSxRef("Array")}}, {{JSxRef("Map")}}, {{JSxRef("Set")}}, objetos {{JSxRef("Funciones/arguments", "arguments")}} y así sucesivamente), invocando un bucle de iteración personalizado con declaraciones que se ejecutarán para el valor de cada distinta propiedad.</p>
 
-<pre class="syntaxbox notranslate">para (<em>variable</em> of <em>objeto</em>)
+<pre class="syntaxbox notranslate">for (<em>variable</em> of <em>objeto</em>)
   <em>expresión</em>
 </pre>
 
-<p>El siguiente ejemplo muestra la diferencia entre un bucle for<code>...in</code> y un bucle {{JSxRef("Sentencias/for...in", "for...in")}}. Mientras que <code>for...in</code> itera sobre los nombres de propiedad, <code>for...of</code> itera sobre los valores de propiedad:</p>
+<p>El siguiente ejemplo muestra la diferencia entre un bucle <code>for...of</code> y un bucle {{JSxRef("Sentencias/for...in", "for...in")}}. Mientras que <code>for...in</code> itera sobre los nombres de propiedad, <code>for...of</code> itera sobre los valores de propiedad:</p>
 
 <pre class="brush:js notranslate">const arr = [3, 5, 7];
 arr.foo = 'hola';
