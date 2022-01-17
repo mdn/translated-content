@@ -4,105 +4,91 @@ slug: Web/API/CustomElementRegistry/whenDefined
 tags:
   - API
   - CustomElementRegistry
-  - Method
-  - Reference
-  - Web Components
-  - custom elements
+  - メソッド
+  - リファレンス
+  - ウェブコンポーネント
+  - カスタム要素
   - whenDefined
 translation_of: Web/API/CustomElementRegistry/whenDefined
 ---
-<p>{{APIRef("CustomElementRegistry")}}</p>
+{{APIRef("CustomElementRegistry")}}
 
-<p><span class="seoSummary">{{domxref("CustomElementRegistry")}} インターフェイスの <code><strong>whenDefined()</strong></code> メソッドは、指定した名前のエレメントが定義されたときに解決される {{jsxref("Promise")}} を返します。</span></p>
+**`whenDefined()`** は {{domxref("CustomElementRegistry")}} インターフェイスのメソッドで、指定した名前の要素が定義されたときに解決されるプロミス ({{jsxref("Promise")}}) を返します。</span>
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">Promise&lt;&gt; customElements.whenDefined(<em>name</em>);</pre>
+```js
+customElements.whenDefined(name): Promise<CustomElementConstructor>;
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt>name</dt>
- <dd>カスタムエレメントの名前。</dd>
-</dl>
+- name
+  - : カスタム要素の名前。
 
-<h3 id="返り値">返り値</h3>
+### 返値
 
-<p>カスタムエレメントが定義されたとき、{{jsxref("Promise")}} は {{jsxref("undefined")}} に解決します。カスタムエレメントがすでに定義済みであった場合、promise は即座に解決されます。</p>
+指定された名前の[カスタム要素](/ja/docs/Web/API/Window/customElements)が定義された時に、[カスタム要素](/ja/docs/Web/API/Window/customElements)のコンストラクターで履行されるプロミス ({{jsxref("Promise")}}) です。（そのような[カスタム要素](/ja/docs/Web/API/Window/customElements)が既に定義されている場合、返されるプロミスは直ちに履行されます。）
 
-<dl>
-</dl>
+## 例外
 
-<h3 id="例外">例外</h3>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">例外</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>SyntaxError</code></td>
-   <td>与えられた名前が<a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">有効なカスタムエレメントの名前</a>出ない場合、promise は <code>SyntaxError</code> で reject します。</td>
-  </tr>
- </tbody>
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">例外</th>
+      <th scope="col">説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>SyntaxError</code></td>
+      <td>
+        指定された名前が<a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">有効なカスタム要素名</a>でなかった場合、プロミスは <code>SyntaxError</code> で拒否されます。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="例">例</h2>
+## 例
 
-<p>以下の例では、<code>whenDefined()</code> を用いてメニューを生成するカスタムエレメントが定義されたタイミングを検出しています。実際にメニューコンテンツの表示準備が完了するまでは、メニューはプレースホルダーのコンテンツを表示します。</p>
+以下の例では、 `whenDefined()` を用いてメニューを生成するカスタム要素が定義されたタイミングを検出しています。実際にメニューコンテンツの表示準備が完了するまでは、メニューはプレースホルダーのコンテンツを表示します。
 
-<pre class="brush: html">&lt;nav id="menu-container"&gt;
-  &lt;div class="menu-placeholder"&gt;読み込み中...&lt;/div&gt;
-  &lt;nav-menu&gt;
-    &lt;menu-item&gt;Item 1&lt;/menu-item&gt;
-    &lt;menu-item&gt;Item 2&lt;/menu-item&gt;
+```html
+<nav id="menu-container">
+  <div class="menu-placeholder">Loading...</div>
+  <nav-menu>
+    <menu-item>Item 1</menu-item>
+    <menu-item>Item 2</menu-item>
      ...
-    &lt;menu-item&gt;Item N&lt;/menu-item&gt;
-  &lt;/nav-menu&gt;
-&lt;/nav&gt;
-</pre>
+    <menu-item>Item N</menu-item>
+  </nav-menu>
+</nav>
+```
 
-<pre class="brush: js">const container = document.getElementById('menu-container');
+```js
+const container = document.getElementById('menu-container');
 const placeholder = container.querySelector('.menu-placeholder');
-// まだ定義されていないメニューの子供を取得する
+// まだ定義されていないメニューの子を取得する
 const undefinedElements = container.querySelectorAll(':not(:defined)');
 
-const promises = [...undefinedElements].map(
-  button =&gt; customElements.whenDefined(button.localName)
-);
+async function removePlaceholder(){
+  const promises = [...undefinedElements].map(
+    button => customElements.whenDefined(button.localName)
+  );
 
-// すべての子供が更新されるまで待ち、
-// プレースホルダーを削除する。
-await Promise.all(promises);
-container.removeChild(placeholder);
-</pre>
+  // すべての子がアップグレードされるまで待つ
+  await Promise.all(promises);
+  // それからプレースホルダーを削除
+  container.removeChild(placeholder);
+}
 
-<h2 id="仕様">仕様</h2>
+removePlaceholder();
+```
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-customelementregistry-whendefined", "customElements.whenDefined()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+{{Specifications}}
 
-<div>
-<div>
+## ブラウザーの互換性
 
-
-<p>{{Compat("api.CustomElementRegistry.whenDefined")}}</p>
-</div>
-</div>
+{{Compat}}
