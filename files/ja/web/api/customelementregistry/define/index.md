@@ -1,88 +1,77 @@
 ---
 title: CustomElementRegistry.define()
 slug: Web/API/CustomElementRegistry/define
+tags:
+  - API
+  - CustomElementRegistry
+  - メソッド
+  - リファレンス
+  - ウェブコンポーネント
+  - カスタム要素
+  - define
+browser-compat: api.CustomElementRegistry.define
 translation_of: Web/API/CustomElementRegistry/define
 ---
-<p>{{APIRef("CustomElementRegistry")}}</p>
+{{APIRef("CustomElementRegistry")}}
 
-<p>{{domxref("CustomElementRegistry")}} インターフェイスの <code><strong>define()</strong></code> メソッドは、新しいカスタムエレメントを定義します。</p>
+**`define()`** は {{domxref("CustomElementRegistry")}} インターフェイスのメソッドで、新しいカスタム要素を定義します。
 
-<p>作成することができるのは、次の2種類のカスタムエレメントです。</p>
+作成することができるのは、次の 2 種類のカスタム要素です。
 
-<ul>
- <li><strong>自律的カスタムエレメント (Autonomous custom element)</strong>: スタンドアロンの独立したエレメントで、ビルトインの HTML 要素を継承していません。</li>
- <li><strong>カスタムビルトインエレメント (Customized built-in element)</strong>: ビルトインの HTML 要素を継承し、拡張を加えたエレメントです。</li>
-</ul>
+- **自律カスタム要素** (Autonomous custom element): 独立した要素です。組み込みの HTML 要素を継承していません。
+- **カスタム組み込み要素** (Customized built-in element): 組み込みの HTML 要素を継承し、拡張した要素です。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">customElements.define(<em>name</em>, <em>constructor</em>, <em>options</em>);
-</pre>
+```js
+customElements.define(name, constructor, options);
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### 引数
 
-<dl>
- <dt>name</dt>
- <dd>新しいカスタムエレメントの名前。カスタムエレメントの名前には、少なくとも1つのハイフンが含まれなければならないことに注意してください。</dd>
- <dt>constructor</dt>
- <dd>新しいカスタムエレメントのコンストラクタ</dd>
- <dt>options {{optional_inline}}</dt>
- <dd>エレメントの定義の仕方を制御するオブジェクト。現在は、次の1つのオプションのみサポートされています。
- <ul>
-  <li><code>extends</code>: 拡張するビルトイン要素の名前を示す文字列。<em>カスタムビルトインエレメント</em>を作成するのに使われる。</li>
- </ul>
- </dd>
-</dl>
+- name
+  - : 新しいカスタム要素の名前です。カスタム要素の名前は、少なくとも 1 つのハイフンを含まなければならないことに注意してください。
+- constructor
+  - : 新しいカスタム要素のコンストラクターです。
+- options {{optional_inline}}
 
-<h3 id="返り値">返り値</h3>
+  - : 要素の定義の仕方を制御するオブジェクト。現在は、次の 1 つのオプションのみに対応しています。
 
-<p>なし。</p>
+ - `extends`: 拡張する組み込み要素の名前を示す文字列。*カスタム組み込み要素*を作成するのに使われる。
 
-<h3 id="例外">例外</h3>
+### 返値
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">例外</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>NotSupportedError</code></td>
-   <td>The {{domxref("CustomElementRegistry")}} already contains an entry with the same name or the same constructor (or is otherwise already defined), or <code>extends</code> is specified and it is a <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">valid custom element name</a>, or <code>extends</code> is specified but the element it is trying to extend is an unknown element.</td>
-  </tr>
-  <tr>
-   <td><code>SyntaxError</code></td>
-   <td>The provided name is not a <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">valid custom element name</a>.</td>
-  </tr>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>The referenced constructor is not a constructor.</td>
-  </tr>
- </tbody>
-</table>
+なし。
 
-<div class="note">
-<p><strong>注意</strong>: <code>NotSupportedError</code> 例外が多く発生する場合、<code>define()</code> が失敗しているように思えるかもしれませんが、多くの場合 {{domxref("Element.attachShadow()")}} に問題があります。</p>
-</div>
+### 例外
 
-<h2 id="例">例</h2>
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : {{domxref("CustomElementRegistry")}} に既に同じ名前の項目または同じコンストラクターが含まれている（または既に定義されている）、または <code>extends</code> で[有効なカスタム要素名](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)が指定されていた場合、または <code>extends</code> で未知の要素を拡張しようとした場合に発生します。
+- `SyntaxError` {{domxref("DOMException")}}
+  - : 指定された名前が[有効なカスタム要素名](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)ではなかった場合に発生します。
+- `TypeError` {{domxref("DOMException")}}
+  - : 参照されたコンストラクターがコンストラクターではなかった場合に発生します。
 
-<h3 id="自律的カスタムエレメント_(Autonomous_custom_element)">自律的カスタムエレメント (Autonomous custom element)</h3>
+> **Note:** `NotSupportedError` 例外が多く発生する場合、 `define()` が失敗しているように思えるかもしれませんが、多くの場合は {{domxref("Element.attachShadow()")}} に問題があります。
 
-<p>The following code is taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">popup-info-box-web-component</a> example (<a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">see it live also</a>).</p>
+## 例
 
-<pre class="brush: js">// Create a class for the element
+### 自律カスタム要素
+
+以下のコードは [popup-info-box-web-component](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component)
+の例から取ったものです ([ライブでもご覧ください](https://mdn.github.io/web-components-examples/popup-info-box-web-component/))。
+
+```js
+// 要素のクラスを作成
 class PopUpInfo extends HTMLElement {
   constructor() {
-    // Always call super first in constructor
+    // コンストラクターでは常に super を最初に呼び出す
     super();
 
-    // Create a shadow root
+    // シャドウルートを生成
     var shadow = this.attachShadow({mode: 'open'});
 
-    // Create spans
+    // span を生成
     var wrapper = document.createElement('span');
     wrapper.setAttribute('class','wrapper');
     var icon = document.createElement('span');
@@ -91,11 +80,11 @@ class PopUpInfo extends HTMLElement {
     var info = document.createElement('span');
     info.setAttribute('class','info');
 
-    // Take attribute content and put it inside the info span
+    // 属性の中身を取り出し、 info の span の中に入れる
     var text = this.getAttribute('text');
     info.textContent = text;
 
-    // Insert icon
+    // アイコンを挿入
     var imgUrl;
     if(this.hasAttribute('img')) {
       imgUrl = this.getAttribute('img');
@@ -106,7 +95,7 @@ class PopUpInfo extends HTMLElement {
     img.src = imgUrl;
     icon.appendChild(img);
 
-    // Create some CSS to apply to the shadow dom
+    // いくらかの CSS を生成してシャドウ DOM に適用
     var style = document.createElement('style');
 
     style.textContent = '.wrapper {' +
@@ -137,7 +126,7 @@ class PopUpInfo extends HTMLElement {
                             'opacity: 1;' +
                           '}';
 
-    // attach the created elements to the shadow dom
+    // 生成された要素をシャドウ DOM に取り付ける
 
     shadow.appendChild(style);
     shadow.appendChild(wrapper);
@@ -146,29 +135,31 @@ class PopUpInfo extends HTMLElement {
   }
 }
 
-// Define the new element
+// 新しい要素を定義
 customElements.define('popup-info', PopUpInfo);
-</pre>
+```
 
-<pre class="brush: html">&lt;popup-info img="img/alt.png" text="Your card validation code (CVC) is an extra
+```html
+<popup-info img="img/alt.png" text="Your card validation code (CVC) is an extra
                                     security feature — it is the last 3 or 4
-                                    numbers on the back of your card."&gt;</pre>
+                                    numbers on the back of your card.">
+```
 
-<div class="note">
-<p><strong>注意</strong>: Constructors for autonomous custom elements must extend {{domxref("HTMLElement")}}.</p>
-</div>
+> **Note:** 自律カスタム要素のコンストラクターは {{domxref("HTMLElement")}} を継承していなければなりません。
 
-<h3 id="カスタムビルトインエレメント">カスタムビルトインエレメント</h3>
+### カスタム組み込み要素
 
-<p>The following code is taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> example (<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">see it live also</a>).</p>
+以下のコードは [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component)
+の例から取ったものです ([ライブでもご覧ください](https://mdn.github.io/web-components-examples/word-count-web-component/))。
 
-<pre class="brush: js">// Create a class for the element
+```js
+// 要素のクラスを作成
 class WordCount extends HTMLParagraphElement {
   constructor() {
-    // Always call super first in constructor
+    // コンストラクターでは常に super を最初に呼び出す
     super();
 
-    // count words in element's parent element
+    // 要素の親要素の語数を数える
     var wcParent = this.parentNode;
 
     function countWords(node){
@@ -176,54 +167,57 @@ class WordCount extends HTMLParagraphElement {
       return text.split(/\s+/g).length;
     }
 
-    var count = 'Words: ' + countWords(wcParent);
+    var count = '語数: ' + countWords(wcParent);
 
-    // Create a shadow root
+    // シャドウルートを生成
     var shadow = this.attachShadow({mode: 'open'});
 
-    // Create text node and add word count to it
+    // テキストノードを生成し、語数を追加
     var text = document.createElement('span');
     text.textContent = count;
 
-    // Append it to the shadow root
+    // シャドウルートに追加
     shadow.appendChild(text);
 
-
-    // Update count when element content changes
+    // 要素の内容が変化した際に語数を更新
     setInterval(function() {
-      var count = 'Words: ' + countWords(wcParent);
+      var count = '語数: ' + countWords(wcParent);
       text.textContent = count;
     }, 200)
 
   }
 }
 
-// Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+// 新しい要素を定義
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<pre class="brush: html">&lt;p is="word-count"&gt;&lt;/p&gt;</pre>
+```html
+<p is="word-count"></p>
+```
 
-<h2 id="仕様">仕様</h2>
+### シャドウルートを取り付けられないようにする要素の作成
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "custom-elements.html#dom-customelementregistry-define", "customElements.define()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+要素に使用されているクラスが、文字列 \`shadow\` を返す静的プロパティ `disabledFeatures` を含んでいる場合、 {{domxref("Element.attachShadow()")}} は {{domxref("DOMException")}} の `NotSupportedError` を返すようになります。
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+```js
+class PopUpInfo extends HTMLElement {
+  static get disabledFeatures() { return ['shadow']; }
 
-<div>
+  constructor() {
+    super();
 
+    var shadow = this.attachShadow({mode: 'open'});
+    // これは要素が定義されたときにエラーが発生するようになります。
+  }
+}
 
-<p>{{Compat("api.CustomElementRegistry.define")}}</p>
-</div>
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
