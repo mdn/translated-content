@@ -4,36 +4,32 @@ slug: Web/API/Window/customElements
 tags:
   - API
   - CustomElementRegistry
-  - Webコンポーネント
-  - Window
-  - custom elements
-  - customElements
   - プロパティ
   - リファレンス
+  - ウェブコンポーネント
+  - Window
+  - カスタム要素
+  - customElements
+browser-compat: api.Window.customElements
 translation_of: Web/API/Window/customElements
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary">{{domxref("Window")}} インターフェイスの読み取り専用 <code>customElements</code> プロパティは、 新しい<a href="/ja/docs/Web/Web_Components/Using_custom_elements">カスタムエレメント</a>を登録し、かつ以前に登録したカスタムエレメントに関する情報を取得する事ができる {{domxref("CustomElementRegistry")}} オブジェクトへのリファレンスを返します。</span></p>
+**`customElements`** は {{domxref("Window")}} インターフェイスの読み取り専用プロパティで、 {{domxref("CustomElementRegistry")}} オブジェクトへのリファレンスを返します。これにより、新しい[カスタム要素](/ja/docs/Web/Web_Components/Using_custom_elements)を登録したり、以前に登録したカスタム要素に関する情報を取得したりすることができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 例
 
-<pre class="brush: js">let customElementRegistry = window.customElements;</pre>
+このプロパティが使われている最も一般的な例は、新しいカスタム要素を定義・登録するために {{domxref("CustomElementRegistry.define()")}} メソッドにアクセスすることです。例えば次のようにします。
 
-<h3 id="戻り値">戻り値</h3>
+```js
+let customElementRegistry = window.customElements;
+customElementRegistry.define('my-custom-element', MyCustomElement);
+```
 
-<p>{{domxref("CustomElementRegistry")}} オブジェクトは現在の window の カスタムエレメントレジストリ を表すインスタンスです。</p>
+しかし、ふつうは以下のように短縮します。
 
-<h2 id="Examples" name="Examples">例</h2>
-
-<p>このプロパティが使われている最も一般的な例は、新しいカスタムエレメントを定義・登録するために {{domxref("CustomElementRegistry.define()")}} メソッドにアクセスすることです, 例えば:</p>
-
-<pre class="brush: js">let customElementRegistry = window.customElements;
-customElementRegistry.define('my-custom-element', MyCustomElement);</pre>
-
-<p>しかし、通常は以下のように短縮されます:</p>
-
-<pre class="brush: js">customElements.define('element-details',
+```js
+customElements.define('element-details',
   class extends HTMLElement {
     constructor() {
       super();
@@ -42,32 +38,17 @@ customElementRegistry.define('my-custom-element', MyCustomElement);</pre>
         .content;
       const shadowRoot = this.attachShadow({mode: 'open'})
         .appendChild(template.cloneNode(true));
+    }
   }
-});</pre>
+);
+```
 
-<p>我々の <a href="https://github.com/mdn/web-components-examples/">web-components-examples</a> リポジトリにより多くの使用例がありますのでご参照ください。</p>
+[web-components-examples](https://github.com/mdn/web-components-examples/) リポジトリーにより多くの使用例がありますので参照してください。
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "custom-elements.html#dom-window-customelements", "window.customElements")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.Window.customElements")}}</p>
-</div>
+{{Compat}}
