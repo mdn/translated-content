@@ -411,7 +411,7 @@ let allbooks = friends.reduce(function(previousValue, currentValue) {
 
 ### 配列内の重複要素を除去する
 
-> **Note:** {{jsxref("Set")}} と {{jsxref("Array.from()")}} に対応している環境を使っている場合は、`let orderedArray = Array.from(new Set(myArray))` を使うことで重複要素を除去された配列を取得することができます。
+> **Note:** {{jsxref("Set")}} と {{jsxref("Array.from()")}} に対応している環境を使っている場合は、`let arrayWithNoDuplicates = Array.from(new Set(myArray))` を使うことで重複要素を除去された配列を取得することができます。
 
 ```js
 let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
