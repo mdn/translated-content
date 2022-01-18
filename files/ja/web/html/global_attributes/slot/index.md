@@ -2,47 +2,28 @@
 title: slot
 slug: Web/HTML/Global_attributes/slot
 tags:
-  - Global attributes
+  - グローバル属性
   - HTML
-  - Reference
+  - リファレンス
+browser-compat: html.global_attributes.slot
 translation_of: Web/HTML/Global_attributes/slot
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<p><strong><code>slot</code></strong> は<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>で、<a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">シャドウ DOM</a> のシャドウツリー内にあるスロットをある要素に割り当てます。 <code>slot</code> 属性をもつ要素は、{{htmlattrxref("name", "slot")}} 属性の値がその <code>slot</code> 属性の値と一致する {{HTMLElement("slot")}} 要素により生成されたスロットに割り当てられます。</p>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>例えば、<a href="/ja/docs/Web/Web_Components/Using_templates_and_slots">テンプレートとスロットの使用</a>ガイドをみてください。</p>
+**`slot`** は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) のシャドウツリー内にあるスロットを、ある要素に割り当てます。 `slot` 属性をもつ要素には、 {{HTMLElement("slot")}} 要素に {{htmlattrxref("name", "slot")}} 属性の値を指定することで生成されたスロット
+の値がその `slot` 属性の値と一致する生成されたスロットに割り当てられます。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+例については、[テンプレートとスロットの使用](/ja/docs/Web/Web_Components/Using_templates_and_slots)ガイドを参照してください。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "dom.html#attr-slot", "slot attribute")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', "#dom-element-slot", "slot attribute")}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("html.global_attributes.slot")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li>すべての<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a></li>
-</ul>
+## 関連情報
+
+- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
