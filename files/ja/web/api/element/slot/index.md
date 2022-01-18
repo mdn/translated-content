@@ -1,60 +1,56 @@
 ---
 title: Element.slot
 slug: Web/API/Element/slot
+tags:
+  - API
+  - Element
+  - プロパティ
+  - リファレンス
+  - シャドウ DOM
+  - slot
+browser-compat: api.Element.slot
 translation_of: Web/API/Element/slot
 ---
-<p>{{APIRef("Shadow DOM")}}</p>
+{{APIRef("Shadow DOM")}}
 
-<p>{{domxref("Element")}} インターフェースの <strong><code>slot</code></strong> プロパティは shadow DOM slot の名前を返します。</p>
+**`slot`** は {{domxref("Element")}} インターフェイスのプロパティで、この要素が挿入されたシャドウ DOM のスロットの名前を返します。
 
-<p>slot は、<a href="/ja/docs/Web/Web_Components">web コンポーネント</a> の中にユーザーが任意のマークアップを代入できる要素を提供します (<a href="/ja/docs/Web/Web_Components/Using_templates_and_slots">template と slot の使い方</a> により詳しい説明があります)。</p>
+スロットは[ウェブコンポーネント](/ja/docs/Web/Web_Components)内のプレースホルダーで、ユーザーが独自のマークアップで埋めることができます（詳しくは、[テンプレートとスロットの使用](/ja/docs/Web/Web_Components/Using_templates_and_slots)をご覧ください）。
 
-<h2 id="Syntax">Syntax</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>aString</em> = <em>element</em>.slot
-<em>element</em>.slot = <em>aString</em>
-</pre>
+```js
+var aString = element.slot
+element.slot = aString
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>{{domxref("DOMString")}}</p>
+{{domxref("DOMString")}} です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p><a href="https://github.com/mdn/web-components-examples/tree/master/simple-template">templateのサンプル</a> (<a href="https://mdn.github.io/web-components-examples/simple-template/">実行例</a>)では、<code>&lt;</code><code>my-paragraph&gt;</code> と名付けた簡単なカスタム要素を作っています。このカスタム要素には、shadow root が付いており、<code>my-text</code> と名付けられた slot 要素が含まれています。</p>
+[simple-template の例](https://github.com/mdn/web-components-examples/tree/master/simple-template) ([ライブで見る](https://mdn.github.io/web-components-examples/simple-template/)) では、`<my-paragraph>` という些細なカスタム要素の例を作りました。この要素にはシャドウルートが取り付けられ、次に `my-text` というスロットを含むテンプレートの内容を使って入力されるようになっています。
 
-<p><code>&lt;my-paragraph&gt;</code> がドキュメントの中で利用された時、その内部で <code><a href="/ja/docs/Web/HTML/Global_attributes/slot">slot</a></code> 属性を <code>my-text</code> に設定した要素を作ることで、slot の内容を変更することができます。 </p>
+文書内で `<my-paragraph>` が使用されると、スロットは `my-text` という値を持つ [`slot`](/ja/docs/Web/HTML/Global_attributes/slot) 属性を持つ要素内に含めることによって、 slotable 要素によって生成されることになります。以下はそのような例です。
 
-<pre class="brush: html">&lt;my-paragraph&gt;
-  &lt;span slot="my-text"&gt;新しいテキストを代入します&lt;/span&gt;
-&lt;/my-paragraph&gt;</pre>
+```html
+<my-paragraph>
+  <span slot="my-text">別なテキストにしましょう。</span>
+</my-paragraph>
+```
 
-<p>JavaScript ファイルで {{htmlelement("span")}} への参照を取得すると、対応する <code>&lt;slot&gt;</code> の名前を取得できます。 </p>
+JavaScript ファイルで {{htmlelement("span")}} への参照を取得すると、対応する `<slot>` の名前が取得できます。
 
-<pre class="brush: js">let slottedSpan = document.querySelector('my-paragraph span')
-console.log(slottedSpan.slot); // <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">'my-text' と表示されます</span></span></span></span></pre>
+```js
+let slottedSpan = document.querySelector('my-paragraph span')
+console.log(slottedSpan.slot); // 'my-text' と表示
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-element-slot','slot')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.Element.slot")}}</p>
-</div>
+{{Compat}}
