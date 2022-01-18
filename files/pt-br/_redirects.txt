@@ -69,9 +69,9 @@
 /pt-BR/docs/Aprender/JavaScript/Objetos	/pt-BR/docs/Learn/JavaScript/Objects
 /pt-BR/docs/Aprender/JavaScript/Objetos/Adding_bouncing_balls_features	/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features
 /pt-BR/docs/Aprender/JavaScript/Objetos/Básico	/pt-BR/docs/Learn/JavaScript/Objects/Basics
-/pt-BR/docs/Aprender/JavaScript/Objetos/Herança	/pt-BR/docs/Learn/JavaScript/Objects/Inheritance
+/pt-BR/docs/Aprender/JavaScript/Objetos/Herança	/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /pt-BR/docs/Aprender/JavaScript/Objetos/JSON	/pt-BR/docs/Learn/JavaScript/Objects/JSON
-/pt-BR/docs/Aprender/JavaScript/Objetos/Object-oriented_JS	/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS
+/pt-BR/docs/Aprender/JavaScript/Objetos/Object-oriented_JS	/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /pt-BR/docs/Aprender/JavaScript/Objetos/Object_building_practice	/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice
 /pt-BR/docs/Aprender/JavaScript/Objetos/Object_prototypes	/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes
 /pt-BR/docs/Aprender/Learning_and_getting_help	/pt-BR/docs/Learn/Learning_and_getting_help
@@ -399,6 +399,8 @@
 /pt-BR/docs/Learn/JavaScript/First_steps/O_que_e_JavaScript	/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript
 /pt-BR/docs/Learn/JavaScript/First_steps/Teste_suas_habilidades:_variaveis	/pt-BR/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables
 /pt-BR/docs/Learn/JavaScript/First_steps/Variáveis	/pt-BR/docs/Learn/JavaScript/First_steps/Variables
+/pt-BR/docs/Learn/JavaScript/Objects/Inheritance	/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS	/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /pt-BR/docs/Learn/Server-side/Django/Hospedagem	/pt-BR/docs/Learn/Server-side/Django/Deployment
 /pt-BR/docs/Learn/Server-side/Django/Introdução	/pt-BR/docs/Learn/Server-side/Django/Introduction
 /pt-BR/docs/Learn/Server-side/Django/Sessões	/pt-BR/docs/Learn/Server-side/Django/Sessions

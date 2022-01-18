@@ -5125,7 +5125,7 @@
       "mouffy"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-07-16T22:32:13.707Z",
     "contributors": [
       "franssu",
@@ -5149,22 +5149,6 @@
       "manuwhat",
       "sebastien_colbe",
       "darthyoh"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-07-16T22:32:05.419Z",
-    "contributors": [
-      "grandoc",
-      "FloppyJunior",
-      "vacarme",
-      "zoora",
-      "Jetinho",
-      "elWombator",
-      "manuwhat",
-      "antoninha",
-      "LDCL",
-      "Alpha",
-      "SphinxKnight"
     ]
   },
   "Learn/JavaScript/Objects/Object_building_practice": {
@@ -42751,6 +42735,22 @@
       "Veltarn",
       "kai23",
       "Goofy"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-07-16T22:32:05.419Z",
+    "contributors": [
+      "grandoc",
+      "FloppyJunior",
+      "vacarme",
+      "zoora",
+      "Jetinho",
+      "elWombator",
+      "manuwhat",
+      "antoninha",
+      "LDCL",
+      "Alpha",
+      "SphinxKnight"
     ]
   },
   "conflicting/Learn_370bfb0fa23e42f4384f010341852c43": {

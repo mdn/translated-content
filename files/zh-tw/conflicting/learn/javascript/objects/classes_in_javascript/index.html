@@ -1,0 +1,278 @@
+---
+title: 初學者應知道的物件導向 JavaScript
+slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
+translation_of: Learn/JavaScript/Objects/Object-oriented_JS
+original_slug: Learn/JavaScript/Objects/Object-oriented_JS
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}</div>
+
+<p class="summary">在看完了基本概念之後，接著要說明物件導向 JavaScript (OOJS)。本文將概述物件導向程式設計 (OOP) 的理論，另說明 JavaScript 是如何透過建構子函式來模擬物件類別，又是如何建立物件實體 (Instance)。</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">必備條件：</th>
+   <td>基本的電腦素養、已初步了解 HTML 與 CSS、熟悉 JavaScript (參閱〈<a href="/zh-TW/docs/Learn/JavaScript/First_steps">First steps</a>〉與〈<a href="/zh-TW/docs/Learn/JavaScript/Building_blocks">Building blocks</a>〉以及 OOJS 基礎概念 (參閱〈<a href="/zh-TW/docs/Learn/JavaScript/Object-oriented/Introduction">物件基礎概念</a>〉。</td>
+  </tr>
+  <tr>
+   <th scope="row">主旨：</th>
+   <td>了解物件導向程式設計的基本理論、其與 JavaScript (幾乎所有東西都是物件) 之間的關係、應如何寫出建構子與物件實體。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="基本物件導向程式設計">基本物件導向程式設計</h2>
+
+<p>最先，讓我們從簡單、高層次的視角來看物件導向程式設計 (Object-oriented programming；OOP) 最基本的概念。我們說簡單是因為 OOP 很容易變得複雜，就算現在就設法完整解釋，也可能讓大家越來越混亂。OOP 基本概念是：採用物件（objects）來模塑真實的實物世界：也就是在程式中的呈現是透過 objects 來塑造其模型，且＼或提供簡單方式存取其「難以或不可能採用的功能」。</p>
+
+<p>物件可裝載相關的資料與程式碼，資料部分是你塑造某個模型的資訊，而程式碼部分則用是操作行為(<strong>Method</strong>)實現。Object data  -- 函式部分通常也使用 ---可工整地儲存 (正式一點應該是<strong>封裝 Encapsulated</strong>) 在物件包裹(這個包裹有特定的稱呼方式，有時候即所謂的<strong>命名空間 Namespace</strong>) ，使其能輕鬆地建構性存取。物件也常作為「資料儲存 (Datastore)，促成簡易實現跨網傳送。</p>
+
+<h3 id="定義物件範本">定義物件範本</h3>
+
+<p>我們先找個簡單程式，如同學校裡用來顯示師生資訊的程式。本文只是要了解一般的 OOP 理論，並非以特定程式語言為出發點。</p>
+
+<p>我們先拿<a href="/zh-TW/docs/Learn/JavaScript/Objects/Basics">第一篇物件文章</a>中的「Person」物件類型為範例，其中定義了一個人的一般資料與功能。其實有很多資訊可助你了解一個人 (像是住址、身高、鞋子尺寸、DNA、護照號碼、明顯的人格特質等......)，但我們這裡只列出了姓名、年齡、性別、興趣。我們另希望根據這些資料寫出簡介，初步了解這個人。上述這些即所謂的「<strong>抽象 (Abstraction)」</strong>。為某個複雜東西建立簡單的模型，藉以代表其最重要的概念或特質，且該模型建立方式極易於搭配我們的程式設計用途。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13889/person-diagram.png" style="display: block; height: 219px; margin: 0px auto; width: 610px;"></p>
+
+<h3 id="建立實際物件">建立實際物件</h3>
+
+<p>我們可從這個「類別」建立<strong>物件實體 (Object instance)</strong> — 即該物件包含了類別中所定義的資料與功能。而「Person」類別可設定出幾個實際的人物：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13889/person-diagram.png" style="display: block; height: 219px; margin: 0px auto; width: 610px;"></p>
+
+<p>在根據類別建立物件實體時，就是執行類別的「<strong>建構子 (Constructor) 函式</strong>」所建立。而這個「根據類別來建立物件實體」的過程即稱為「<strong>實體化 (Instantiation)」</strong>。物件實體就是從類別實體化而來。</p>
+
+<h3 id="特殊類別">特殊類別</h3>
+
+<p>如果我們不要一般人物，而想建立老師與學生這類比較特定類型的人物。在 OOP 中，我們可根據其他類別建立新的類別。新的子類別則可<strong>繼承 (Inherit) </strong>其<strong>母類別</strong>的資料與程式碼特性。你可重複使用所有物件類型共有的功能，而不需再複製之。若功能需與類別有所差異，則可直接於其上定義特殊功能。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
+
+<p>這樣很方便。因為老師與學生也同樣使用了如姓名、性別、年齡等的共通特性，所以只要定義這些特性 1 次即可。你也可以分別在不同的類別中定義相同特性，各個特性的定義就置於不同的命名空間中。舉例來說，學生的打招呼方式可以是「Yo, I'm [firstName]」；老師的招呼方式就正式一點，如「Hello, my name is [Prefix] [lastName]」。</p>
+
+<div class="note">
+<p><strong>注意：</strong>所謂的<strong>「多型 (Polymorphism)」</strong>，即是用多個物件類別建置相同功能。</p>
+</div>
+
+<p>現在你可根據子類別來建立物件實例了。例如：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13885/MDN-Graphics-instantiation-teacher-3.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
+
+<p>本文後面將講解應如何將 OOP 理論實際用於 JavaScript 中。</p>
+
+<h2 id="建構子與物件實例">建構子與物件實例</h2>
+
+<p>JavaScript 使用稱為建構子函式（<strong>constructor function</strong>）的特殊函式，定義物件與功能。開發者常常會不知道到底需建立多少物件，這時建構子可讓你高效率建立所需物件，並依需要為其添加資料與函式。</p>
+
+<p>在新的物件實例透過建構子函式產生後，其核心將透過一種稱為<strong>原型鏈</strong>（Prototype chain，由原型定義，可參閱 <a href="/zh-TW/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a>）的參照鏈連在一起。</p>
+
+<p>接著就在 JS 中，透過建構子建立類別及其物件實例。首先請你先在本端磁碟中再另外複製一份前面文章提過的 <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html">oojs.html</a> 檔案。</p>
+
+<h3 id="簡易範例">簡易範例</h3>
+
+<ol>
+ <li>先看看該如何用一般函式定義一個人。將下列函式加到 <code>script</code> 元素裡面：
+
+  <pre class="brush: js">function createNewPerson(name) {
+  var obj = {};
+  obj.name = name;
+  obj.greeting = function () {
+    alert('Hi! I\'m ' + this.name + '.');
+  }
+  return obj;
+}</pre>
+ </li>
+ <li>呼叫此函式之後即可建立新的 1 個人，另在瀏覽器的 JavaScript 主控台中測試下列程式碼：
+  <pre class="brush: js">var salva = createNewPerson('salva');
+salva.name;
+salva.greeting();</pre>
+  目前為止沒什麼問題，但有點囉嗦。如果早知道要建立物件的話，又何必要建立新的空白物件再回傳呢？幸好 JavaScript 透過建構子函式提供了方便的捷徑。現在就來試試看！</li>
+ <li>用下列程式碼替代之前的函式：
+  <pre class="brush: js">function Person(name) {
+  this.name = name;
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  };
+}</pre>
+ </li>
+</ol>
+
+<p>建構子也就是 JavaScript 版本的「類別」之一。你可以注意到，除了無法回傳任何數值或明確建立物件之外，建構子其實已具備函式中的所有功能，並已基本定義了屬性與函式 (Method)。你也能看到這裡同樣用了「<code>this</code>」關鍵字，即不論何時建立了這裡的任一物件實例，物件的「<code>name</code>」屬性均同等於「傳送至建構子呼叫的名稱值」；且 <code>greeting()</code> 函式也會使用相同「傳送至建構子呼叫的名稱值」。</p>
+
+<div class="note">
+<p><strong>注意：</strong>建構子函式名稱往往以大寫字母起頭，如此可方便你在程式碼中找出建構子函式。</p>
+</div>
+
+<p>我們又該如何呼叫建構子以建立物件呢？</p>
+
+<ol>
+ <li>將下列程式碼加到目前的程式碼之下：
+  <pre class="brush: js">var person1 = new Person('Bob');
+var person2 = new Person('Sarah');</pre>
+ </li>
+ <li>儲存程式碼並在瀏覽器中重新載入，試著將下列程式碼輸入到文字輸入畫面中：
+  <pre class="brush: js">person1.name
+person1.greeting()
+person2.name
+person2.greeting()</pre>
+ </li>
+</ol>
+
+<p>現在你應該能在頁面上看到兩組新物件，且各自以不同的命名空間儲存。若要存取其屬性與函式，就要以 <code>person1</code> 或 <code>person2</code> 開始呼叫。這些物件均完整封包，不致與其他功能衝突；但仍具備相同的 <code>name</code> 屬性與 <code>greeting()</code> 函式。另請注意，物件均使用當初建立時所各自指派的 <code>name</code> 值；這也是「<code>this</code>」如此重要的原因之一，以確保物件可使用自己的值而不致混淆其他數值。</p>
+
+<p>再看一次建構子呼叫：</p>
+
+<pre class="brush: js">var person1 = new Person('Bob');
+var person2 = new Person('Sarah');</pre>
+
+<p>這裡用了「<code>new</code>」關鍵字告知瀏覽器「我們要建立新的物件實例」，並接著在函式名稱之後的括號內傳入函式所需要的參數，並將結果儲存於變數之中 — 相當類似普通函式被呼叫的方式 。各個實例均根據此定義所建立：</p>
+
+<pre class="brush: js">function Person(name) {
+  this.name = name;
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  };
+}</pre>
+
+<p>在建立新的物件之後，<code>person1</code> 與 <code>person2</code> 的變數將有效率地納入下列物件：</p>
+
+<pre class="brush: js">{
+  name : 'Bob',
+  greeting : function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  }
+}
+
+{
+  name : 'Sarah',
+  greeting : function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  }
+}</pre>
+
+<p>剛剛說的「有效率」，是因為實際功能仍定義於類別中，而非物件實例之中。這情況與我們稍早談過的物件實字 (Object literal) 相反。</p>
+
+<h3 id="建立完整的建構子">建立完整的建構子</h3>
+
+<p>上面不過是入門的簡單範例。接著繼續建立最後的 <code>Person()</code> 建構子。</p>
+
+<ol>
+ <li>將截至目前為止的程式碼移除，加入下列取代用的建構子。原則上與簡易範例完全一樣，只是比較複雜一點：
+  <pre class="brush: js">function Person(first, last, age, gender, interests) {
+  this.name = {
+    first,
+    last
+  };
+  this.age = age;
+  this.gender = gender;
+  this.interests = interests;
+  this.bio = function() {
+    alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+  };
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name.first + '.');
+  };
+};</pre>
+ </li>
+ <li>再接著加入下列程式碼，就可建立物件實例：
+  <pre class="brush: js">var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
+ </li>
+</ol>
+
+<p>現在可存取我們為第一個物件所定義的屬性與函式：</p>
+
+<pre class="brush: js">person1['age']
+person1.interests[1]
+person1.bio()
+// etc.</pre>
+
+<div class="note">
+<p><strong>注意：</strong>如果你到這裡有點吃力，請先比較自己與我們的程式碼。可參閱 <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html">oojs-class-finished.html</a> (也可<a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html">看實際執行的情況</a>)。</p>
+</div>
+
+<h3 id="進階習題">進階習題</h3>
+
+<p>在開始之前，先試著自己添加更多物件建立程式碼，再針對產生的物件實例取得並設定其成員。</p>
+
+<p>此外，原來的 <code>bio()</code> 函式其實有點問題。即使你的「人」是女性，其輸出一定會有「He」這個代名詞。而且即使 <code>interests</code> 陣列中列出超過 2 個以上的「興趣」，這個 bio 函式也只會有 2 個興趣。你能試著在類別定義 (建構子) 中修正這個問題嗎？你可在建構子中放入任何你喜歡的程式碼 (但可能會需要幾個 conditionals 搭配 1 個迴圈)。想想應如何根據性別以及列出的興趣 (1 或 2 個以上)，建構出不同的程式碼。</p>
+
+<div class="note">
+<p><strong>注意：</strong>如果你卡在這裡，我們也在 <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">GitHub repo 上提供了解答</a> (<a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">立刻觀看</a>)。先試著自己解決問題吧！</p>
+</div>
+
+<h2 id="建立物件實例的其他方法">建立物件實例的其他方法</h2>
+
+<p>目前解釋了 2 種建立物件實例的方法 — <a href="/zh-TW/docs/Learn/JavaScript/Objects/Basics#Object_basics">宣告物件實字</a>，以及使用建構子函式。</p>
+
+<p>當然還有別的方法，但我們希望你先熟悉此 2 種方法，以免你日後的 Web 旅程上會再遇到。</p>
+
+<h3 id="Object_建構子">Object() 建構子</h3>
+
+<p>首先可使用 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object">Object()</a></code> 建構子建立新的物件。沒錯，即使是泛型物件 (Generic object) 也具備建構子，可用以產生空白物件。</p>
+
+<ol>
+ <li>將下列輸入瀏覽器的 JavaScript 主控台內：
+  <pre class="brush: js">var person1 = new Object();</pre>
+ </li>
+ <li>如此會在 <code>person1</code> 變數中儲存 1 組空白物件。接著可透過點 (dot-) 或括弧記法 (bracket notation) 為此物件新增屬性與函式。如下列範例：
+  <pre class="brush: js">person1.name = 'Chris';
+person1['age'] = 38;
+person1.greeting = function() {
+  alert('Hi! I\'m ' + this.name + '.');
+}</pre>
+ </li>
+ <li>你可將一組物件實字傳送給 <code>Object()</code> 建構子作為參數，藉以預先填入屬性＼函式。如下所示：
+  <pre class="brush: js">var person1 = new Object({
+  name : 'Chris',
+  age : 38,
+  greeting : function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  }
+});</pre>
+ </li>
+</ol>
+
+<h3 id="使用_create_函式">使用 create() 函式</h3>
+
+<p>建構子可以幫助你保持程式的可讀性 — 你可以將建構子建立在同一個地方，並根據需求從這些建構子中建立物件實例，這樣做可以讓你清楚地得知它們的來源。</p>
+
+<p>不過，有些人偏好建立物件實例，而不先做建構子，尤其是他們的物件不會用很多實例時。JavaScript 有個稱作 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> 的內建函式能讓你這麼做。有了它，你就能根據現有物件，建立新的物件。</p>
+
+<ol>
+ <li>在 JavaScript 主控台裡測試：
+  <pre class="brush: js">var person2 = Object.create(person1);</pre>
+ </li>
+ <li>再測試以下：
+  <pre class="brush: js">person2.name
+person2.greeting()</pre>
+ </li>
+</ol>
+
+<p>你會看到 <code>person2</code> 是根據 <code>person1</code> 所建立：它具備了相同的屬性以及可用的函式。</p>
+
+<p><code>create()</code> 的其中一個限制，就是 IE8 並不支援。因此，如果你需要支援舊版瀏覽器，建構子會比較有用。</p>
+
+<p>我們後續會再說明 <code>create()</code> 的效果。</p>
+
+<h2 id="總結">總結</h2>
+
+<p>本文簡略說明了 OO 理論，雖然還沒全部講完，至少也讓你初步了解到本文所要闡述的重點。此外，我們已經開始說明 JavaScript 與 OO 之間的關係、其與「傳統 OO」之間的差異、使用建構子於 JavaScript 中實作類別的方法，以及其他產生物件實例的方式。</p>
+
+<p>下一篇文章將說明 JavaScript 物件原型。</p>
+
+<p>{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}</p>
+
+<h2 id="In_this_module">In this module</h2>
+
+<ul>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Objects/Object_building_practice">Object building practice</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Adding features to our bouncing balls demo</a></li>
+</ul>

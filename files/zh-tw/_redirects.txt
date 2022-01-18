@@ -440,6 +440,8 @@
 /zh-TW/docs/Learn/JavaScript/First_steps/有用的字符串方法	/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods
 /zh-TW/docs/Learn/JavaScript/First_steps/變數	/zh-TW/docs/Learn/JavaScript/First_steps/Variables
 /zh-TW/docs/Learn/JavaScript/First_steps/陣列	/zh-TW/docs/Learn/JavaScript/First_steps/Arrays
+/zh-TW/docs/Learn/JavaScript/Objects/Inheritance	/zh-TW/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS	/zh-TW/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /zh-TW/docs/Learn/JavaScript/如何運用	/zh-TW/docs/Learn/JavaScript/Howto
 /zh-TW/docs/Learn/JavaScript/第一步	/zh-TW/docs/Learn/JavaScript/First_steps
 /zh-TW/docs/Learn/Performance/多媒體	/zh-TW/docs/Learn/Performance/Multimedia

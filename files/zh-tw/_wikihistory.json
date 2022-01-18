@@ -1668,7 +1668,7 @@
       "MashKao"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-07-16T22:32:17.083Z",
     "contributors": [
       "tangerine1202",
@@ -1680,17 +1680,6 @@
   "Learn/JavaScript/Objects/JSON": {
     "modified": "2020-07-16T22:32:30.018Z",
     "contributors": [
-      "roycrxtw",
-      "MashKao"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-07-16T22:32:09.821Z",
-    "contributors": [
-      "DahisC",
-      "tangerine1202",
-      "iigmir",
-      "cjchng",
       "roycrxtw",
       "MashKao"
     ]
@@ -7977,6 +7966,17 @@
       "nightsnow0918",
       "irvinfly",
       "sailplaneTW"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-07-16T22:32:09.821Z",
+    "contributors": [
+      "DahisC",
+      "tangerine1202",
+      "iigmir",
+      "cjchng",
+      "roycrxtw",
+      "MashKao"
     ]
   },
   "conflicting/Learn/Server-side/Django": {

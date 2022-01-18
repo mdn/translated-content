@@ -377,6 +377,7 @@
 /de/docs/Learn/JavaScript/First_steps/Erster_Blick	/de/docs/Learn/JavaScript/First_steps/A_first_splash
 /de/docs/Learn/JavaScript/First_steps/Was_ist_JavaScript	/de/docs/Learn/JavaScript/First_steps/What_is_JavaScript
 /de/docs/Learn/JavaScript/First_steps/lustige_geschichten_generator	/de/docs/Learn/JavaScript/First_steps/Silly_story_generator
+/de/docs/Learn/JavaScript/Objects/Object-oriented_JS	/de/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /de/docs/Learn/Server-side/Erste_Schritte	/de/docs/Learn/Server-side/First_steps
 /de/docs/Lokalisierung	/de/docs/Glossary/Localization
 /de/docs/MDN/Contribute/Structures	/de/docs/MDN/Structures

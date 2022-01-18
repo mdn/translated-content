@@ -1454,18 +1454,18 @@
       "22tcp"
     ]
   },
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-07-16T22:32:04.669Z",
+    "contributors": [
+      "Timbuktu1982",
+      "bluefor2"
+    ]
+  },
   "Learn/JavaScript/Objects/JSON": {
     "modified": "2020-07-16T22:32:24.377Z",
     "contributors": [
       "MuellerRi",
       "DirkMassmann"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-07-16T22:32:04.669Z",
-    "contributors": [
-      "Timbuktu1982",
-      "bluefor2"
     ]
   },
   "Learn/JavaScript/Objects/Object_prototypes": {
