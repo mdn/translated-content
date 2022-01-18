@@ -2,60 +2,57 @@
 title: Node.getRootNode()
 slug: Web/API/Node/getRootNode
 tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
-  - getRootNode
   - メソッド
+  - リファレンス
+browser-compat: api.Node.getRootNode
 translation_of: Web/API/Node/getRootNode
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>getRootNode()</code></strong> は {{domxref("Node")}} インターフェイスのメソッドで、そのコンテキストのオブジェクトのルート、利用できる場合はオプションでシャドウルートを含んだものを返します。</p>
+**`getRootNode()`** は {{domxref("Node")}} インターフェイスのメソッドで、そのコンテキストのオブジェクトのルート、利用できる場合はオプションでシャドウルートを含んだものを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>root</em> = <em>node</em>.getRootNode(<em>options</em>);</pre>
+```js
+getRootNode();
+getRootNode(options);
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>ルートノードを取得するためのオプションを設定するオブジェクトです。利用可能なオプションは次の通りです。
- <ul>
-  <li><code>composed</code>: {{jsxref('Boolean')}} 値で、シャドウルートを返すか (<code>false</code>、既定値)、またはシャドウルートを越えたルートノードを返すか (<code>true</code>) を示します。</li>
- </ul>
- </dd>
-</dl>
+- `options` {{optional_inline}}
 
-<h3 id="Returns" name="Returns">返値</h3>
+  - : ルートノードを取得するためのオプションを設定するオブジェクトです。利用可能なオプションは次の通りです。
 
-<p>{{domxref('Node')}} を継承したオブジェクトです。これはどこで <code>getRootNode()</code> を呼び出したかによって異なる形になります。例えば、</p>
+    - `composed`: 論理値で、シャドウルートを返すか (`false`、既定値)、またはシャドウルートを越えたルートノードを返すか (`true`) を示します。
 
-<ul>
- <li>標準のウェブページ内の要素に対して呼び出した場合は、ページ全体を表す {{domxref("HTMLDocument")}} オブジェクトを返します。</li>
- <li>シャドウ DOM の中の要素に対して呼び出した場合は、関連する {{domxref("ShadowRoot")}} オブジェクトを返します。</li>
-</ul>
+### 返値
 
-<h2 id="Examples" name="Examples">例</h2>
+{{domxref('Node')}} を継承したオブジェクトです。これはどこで `getRootNode()` を呼び出したかによって異なる形になります。例えば、
 
-<p>最初に、 HTML/document ノードの参照を返す単純な例です。</p>
+- 標準のウェブページ内の要素に対して呼び出した場合は、ページ全体を表す {{domxref("HTMLDocument")}} オブジェクトを返します。
+- シャドウ DOM の中の要素に対して呼び出した場合は、関連する {{domxref("ShadowRoot")}} オブジェクトを返します。
 
-<pre class="brush: js">rootNode = node.getRootNode();</pre>
+## 例
 
-<p>この例はもっと複雑で、通常のルートを返す場合と、シャドウルートを含むルートの違いを示します。 (<a href="https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html">ソースコード全体</a>を見てください。)</p>
+最初に、 HTML/document ノードの参照を返す単純な例です。
 
-<pre class="brush: html">&lt;!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html --&gt;
-&lt;div class="js-parent"&gt;
-  &lt;div class="js-child"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="js-shadowHost"&gt;&lt;/div&gt;
-&lt;script&gt;
-  // Chrome 54+，Opera 41+ で動作
+```js
+rootNode = node.getRootNode();
+```
 
-  var parent = document.querySelector('.js-parent'),
+この例はもっと複雑で、通常のルートを返す場合と、シャドウルートを含むルートの違いを示します。 ([ソースコード全体](https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html)を見てください。)
+
+```html
+<!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html -->
+<div class="js-parent">
+  <div class="js-child"></div>
+</div>
+<div class="js-shadowHost"></div>
+<script>
+  // Chrome 54 以降, Opera 41 以降で動作
+
+  const parent = document.querySelector('.js-parent'),
       child = document.querySelector('.js-child'),
       shadowHost = document.querySelector('.js-shadowHost');
 
@@ -63,36 +60,22 @@ translation_of: Web/API/Node/getRootNode
   console.log(child.getRootNode().nodeName); // #document
 
   // ShadowRoot の生成
-  var shadowRoot = shadowHost.attachShadow({mode:'open'});
-  shadowRoot.innerHTML = '&lt;style&gt;div{background:#2bb8aa;}&lt;/style&gt;'
-      + '&lt;div class="js-shadowChild"&gt;content&lt;/div&gt;';
-  var shadowChild = shadowRoot.querySelector('.js-shadowChild');
+  const shadowRoot = shadowHost.attachShadow({mode:'open'});
+  shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style>'
+      + '<div class="js-shadowChild">content</div>';
+  const shadowChild = shadowRoot.querySelector('.js-shadowChild');
 
   // 合成の既定値は false
   console.log(shadowChild.getRootNode() === shadowRoot); // true
   console.log(shadowChild.getRootNode({composed:false}) === shadowRoot); // true
   console.log(shadowChild.getRootNode({composed:true}).nodeName); // #document
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-node-getrootnode','getRootNode()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Node.getRootNode")}}</p>
+{{Compat}}
