@@ -3,39 +3,42 @@ title: ShadowRoot.innerHTML
 slug: Web/API/ShadowRoot/innerHTML
 tags:
   - API
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
   - ShadowRoot
   - innerHTML
-  - shadow dom
-  - プロパティ
+  - シャドウ DOM
+browser-compat: api.ShadowRoot.innerHTML
 translation_of: Web/API/ShadowRoot/innerHTML
 ---
-<div>{{APIRef("Shadow DOM")}}</div>
+{{APIRef("Shadow DOM")}}
 
-<p><strong><code>innerHTML</code></strong> は {{domxref("ShadowRoot")}} インターフェイスのプロパティで、 <code>ShadowRoot</code> の内部の DOM ツリーに対する参照を設定したり返したりします。</p>
+**`innerHTML`** は {{domxref("ShadowRoot")}} インターフェイスのプロパティで、 `ShadowRoot` の内部の DOM ツリーに対する参照を設定したり返したりします。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>domString</em> = <em>shadowRoot</em>.innerHTML
-<em>shadowRoot</em>.innerHTML = <em>domString</em>
-</pre>
+```js
+var domString = shadowRoot.innerHTML
+shadowRoot.innerHTML = domString
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{domxref("DOMString")}} です。</p>
+{{domxref("DOMString")}} です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">let customElem = document.querySelector('my-shadow-dom-element');
+```js
+let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
 
-shadow.innerHTML = '&lt;strong&gt;This element should be more important!&lt;/strong&gt;';</pre>
+shadow.innerHTML = '<strong>This element should be more important!</strong>';
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<p>このプロパティはまだどの仕様書でも定義されていません。定義には <a href="https://github.com/w3c/DOM-Parsing/issues/21">この仕様書の問題</a>を参照してください。</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ShadowRoot.innerHTML")}}</p>
+{{Compat}}
