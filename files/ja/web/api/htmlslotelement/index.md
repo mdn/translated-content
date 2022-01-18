@@ -1,61 +1,58 @@
 ---
 title: HTMLSlotElement
 slug: Web/API/HTMLSlotElement
+tags:
+  - API
+  - HTMLSlotElement
+  - インターフェイス
+  - リファレンス
+  - シャドウ DOM
+browser-compat: api.HTMLSlotElement
 translation_of: Web/API/HTMLSlotElement
 ---
-<p>{{APIRef('Web Components')}}</p>
+{{APIRef('Web Components')}}
 
-<p><strong><code>HTMLSlotElement</code></strong> は <a href="/ja/docs/Web/Web_Components/Shadow_DOM">Shadow DOM API</a> のインターフェイスで、 {{HTMLElement("slot")}} 要素の名前とこの要素に割り当てられたノードにアクセスできます。</p>
+**`HTMLSlotElement`** は [Shadow DOM API](/en-US/docs/Web/Web_Components/Using_shadow_DOM) のインターフェイスで、 HTML の {{HTMLElement("slot")}} 要素の名前と割り当てられたノードにアクセスできるようにします。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref('HTMLSlotElement.name')}}</dt>
- <dd>{{domxref("DOMString")}}: スロットの名前を取得または設定する際に使えます。</dd>
-</dl>
+- {{domxref('HTMLSlotElement.name')}}
+  - : {{domxref("DOMString","文字列","",1)}}で、スロットの名前を取得または設定するために使用します。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref('HTMLSlotElement.assignedNodes()')}}</dt>
- <dd>このスロットに割り当てられた一連のノードを返し、 <code>flatten</code> オプションが <code>true</code> に設定されていた場合は、このスロットの子孫である他のスロットに割り当てられたノードも返します。割り当てられたノードが見つからない場合は、スロットの代替コンテンツを返します。</dd>
- <dt>{{domxref('HTMLSlotElement.assignedElements()')}}</dt>
- <dd>このスロットに割り当てられた一連の要素を返します (それ以外のノードは返しません)。 <code>flatten</code> オプションが <code>true</code> に設定されていた場合は、このスロットの子孫である他のスロットに割り当てられた要素も返します。割り当てられたノードが見つからない場合は、スロットの代替コンテンツを返します。</dd>
-</dl>
+- {{domxref('HTMLSlotElement.assign()')}}
+  - : このスロットに手動で割り当てられたノードを、指定されたノードに設定します。
+- {{domxref('HTMLSlotElement.assignedNodes()')}}
+  - : このスロットに割り当てられた一連のノードを返し、 `flatten` オプションが `true` に設定されていた場合は、このスロットの子孫である他のスロットに割り当てられたノードも返します。割り当てられたノードが見つからない場合は、スロットの代替コンテンツを返します。
+- {{domxref('HTMLSlotElement.assignedElements()')}}
+  - : このスロットに割り当てられた一連の要素を返します (それ以外のノードは返しません)。 `flatten` オプションが `true` に設定されていた場合は、このスロットの子孫である他のスロットに割り当てられた要素も返します。割り当てられたノードが見つからない場合は、スロットの代替コンテンツを返します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## イベント
 
-<p>以下のスニペットは、 <a href="https://github.com/mdn/web-components-examples/tree/master/slotchange">slotchange の例</a> (<a href="https://mdn.github.io/web-components-examples/slotchange/">ライブで確認</a>) からとりました。</p>
+- {{domxref('HTMLSlotElement.slotchange_event', 'slotchange')}}
+  - : スロットに含まれるノードが変更されたときに `HTMLSlotElement` インスタンス ([`<slot>`](/en-US/docs/Web/HTML/Element/slot "<slot> は HTML の要素 — ウェブコンポーネント技術の一部 — は、ウェブコンポーネント内で別な DOM ツリーを構築し、いっしょに表示することができる独自のマークアップを入れることができるプレイスホルダーです。") 要素) に発生します。
 
-<pre class="brush: js">let slots = this.shadowRoot.querySelectorAll('slot');
+## 例
+
+以下のスニペットは、 [slotchange の例](https://github.com/mdn/web-components-examples/tree/master/slotchange)からとりました  ([ライブでも確認](https://mdn.github.io/web-components-examples/slotchange/))。
+
+```js
+let slots = this.shadowRoot.querySelectorAll('slot');
 slots[1].addEventListener('slotchange', function(e) {
   let nodes = slots[1].assignedNodes();
   console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
-});</pre>
+});
+```
 
-<p>ここではすべてのスロットの参照を取得し、テンプレート内の2番目のスロットに slotchange イベントリスナーを追加します。 — これが例の中でコンテンツの変更を追跡します。</p>
+ここではすべてのスロットの参照を取得し、テンプレート内の 2 番目のスロットに slotchange イベントリスナーを追加します。 — これが例の中でコンテンツの変更を追跡します。
 
-<p>スロットの変更の中で要素が挿入されるたびに、コンソールにどのスロットが変更されたか、スロット内の新しいノードは何であるかをログ出力します。</p>
+スロットの変更の中で要素が挿入されるたびに、コンソールにどのスロットが変更されたか、スロット内の新しいノードは何であるかをログ出力します。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','scripting.html#htmlslotelement','HTMLSlotElement')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.HTMLSlotElement")}}</p>
+{{Compat}}
