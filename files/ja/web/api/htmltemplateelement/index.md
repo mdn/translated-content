@@ -1,51 +1,37 @@
 ---
 title: HTMLTemplateElement
 slug: Web/API/HTMLTemplateElement
+tags:
+  - API
+  - HTML DOM
+  - HTMLTemplateElement
+  - インターフェイス
+  - リファレンス
+  - ウェブコンポーネント
+browser-compat: api.HTMLTemplateElement
 translation_of: Web/API/HTMLTemplateElement
 ---
-<div>{{APIRef("Web Components")}}</div>
+{{APIRef("Web Components")}}
 
-<p><code><strong>HTMLTemplateElement</strong></code> インターフェースは HTML の {{HTMLElement("template")}} 要素のコンテンツにアクセスします。</p>
+`HTMLTemplateElement` インターフェイスは、 HTML の {{HTMLElement("template")}} 要素の内容にアクセスできるようにします。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<p><em>このインターフェースは {{domxref("HTMLElement")}} のプロパティを継承しています。</em></p>
+_このインターフェイスは {{domxref("HTMLElement")}} のプロパティを継承しています。_
 
-<dl>
- <dt>{{domxref("HTMLTemplateElement.content")}}{{readonlyinline}}</dt>
- <dd>{{domxref("DocumentFragment")}}: {{HTMLElement("template")}} 要素のテンプレートコンテンツを返します。</dd>
-</dl>
+- {{domxref("HTMLTemplateElement.content", "content")}} {{readonlyinline}}
+  - : 読み取り専用の {{domxref("DocumentFragment")}} で、 {{HTMLElement("template")}} 要素のテンプレートの内容を表す DOM サブツリーを返します。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<p><em>このインターフェースは {{domxref("HTMLElement")}} のプロパティを継承しています。</em></p>
+_このインターフェイスは {{domxref("HTMLElement")}} のプロパティを継承しています。_
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','scripting.html#htmltemplateelement','HTMLTemplateElement interface')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C','scripting-1.html#htmltemplateelement','HTMLTemplateElement interface')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.HTMLTemplateElement")}}</p>
+{{Compat}}
