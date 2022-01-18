@@ -4,106 +4,92 @@ slug: Web/API/Element/attachShadow
 tags:
   - API
   - Element
-  - Method
-  - Reference
-  - attachShadow
-  - shadow dom
   - メソッド
+  - リファレンス
+  - attachShadow
+  - シャドウ DOM
+browser-compat: api.Element.attachShadow
 translation_of: Web/API/Element/attachShadow
 ---
-<div>{{APIRef('Shadow DOM')}}</div>
+{{APIRef('Shadow DOM')}}
 
-<p><strong><code>Element.attachShadow()</code></strong> メソッドは、シャドウ DOM ツリーを特定の要素に追加し、そのシャドウルート ({{domxref("ShadowRoot")}}) への参照を返します。</p>
+**`Element.attachShadow()`** メソッドは、シャドウ DOM ツリーを特定の要素に追加し、そのシャドウルート ({{domxref("ShadowRoot")}}) への参照を返します。
 
-<h2 id="Elements_you_can_attach_a_shadow_to" name="Elements_you_can_attach_a_shadow_to">シャドウツリーを追加できる要素</h2>
+## シャドウツリーを追加できる要素
 
-<p>シャドウルートは全ての要素に追加できるわけではありません。 ({{htmlelement("a")}} など) セキュリティ上の理由でシャドウ DOM を持てないものもあります。以下にシャドウルートを追加<strong>できる</strong>要素を列挙します。</p>
+シャドウルートはすべての要素に追加できるわけではありません。セキュリティ上の理由でシャドウ DOM を持てないものもあります（{{htmlelement("a")}} など）。
 
-<ul>
- <li>任意のカスタム要素で<a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">有効な名前</a>を持つもの</li>
- <li>{{htmlelement("article")}}</li>
- <li>{{htmlelement("aside")}}</li>
- <li>{{htmlelement("blockquote")}}</li>
- <li>{{htmlelement("body")}}</li>
- <li>{{htmlelement("div")}}</li>
- <li>{{htmlelement("footer")}}</li>
- <li>{{htmlelement("h1")}}</li>
- <li>{{htmlelement("h2")}}</li>
- <li>{{htmlelement("h3")}}</li>
- <li>{{htmlelement("h4")}}</li>
- <li>{{htmlelement("h5")}}</li>
- <li>{{htmlelement("h6")}}</li>
- <li>{{htmlelement("header")}}</li>
- <li>{{htmlelement("main")}}</li>
- <li>{{htmlelement("nav")}}</li>
- <li>{{htmlelement("p")}}</li>
- <li>{{htmlelement("section")}}</li>
- <li>{{htmlelement("span")}}</li>
-</ul>
+以下にシャドウルートを追加**できる**要素を列挙します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+- 任意の自律カスタム要素で[有効な名前](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)を持つもの
+- {{htmlelement("article")}}
+- {{htmlelement("aside")}}
+- {{htmlelement("blockquote")}}
+- {{htmlelement("body")}}
+- {{htmlelement("div")}}
+- {{htmlelement("footer")}}
+- {{htmlelement("h1")}}
+- {{htmlelement("h2")}}
+- {{htmlelement("h3")}}
+- {{htmlelement("h4")}}
+- {{htmlelement("h5")}}
+- {{htmlelement("h6")}}
+- {{htmlelement("header")}}
+- {{htmlelement("main")}}
+- {{htmlelement("nav")}}
+- {{htmlelement("p")}}
+- {{htmlelement("section")}}
+- {{htmlelement("span")}}
 
-<pre class="syntaxbox">var <var>shadowroot</var> = <var>element</var>.attachShadow(<var>shadowRootInit</var>);
-</pre>
+## 構文
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+```js
+attachShadow(init)
+```
 
-<dl>
- <dt><code><var>shadowRootInit</var></code></dt>
- <dd><code>ShadowRootInit</code> ディクショナリで、以下のプロパティを含みます。
- <dl>
-  <dt><code>mode</code></dt>
-  <dd>
-  <p>文字列で、シャドウ DOM ツリーの<em>カプセル化モード</em>を指定します。以下のうちの一つを取ります。</p>
+### 引数
 
-  <ul>
-   <li><code>open</code>: シャドウルートに外部の JavaScript からアクセスできます。例えば、 {{domxref("Element.shadowRoot")}} を使ってアクセスできます。<br>
+- `init`
 
-    <pre>element.shadowRoot; // ShadowRoot オブジェクトを返します</pre>
-   </li>
-   <li><code>closed</code>: シャドウルートに外部の JavaScript からアクセスできません。<br>
+  - : 以下のフィールドを含むオブジェクトです。
 
-    <pre>element.shadowRoot; // null を返します
-</pre>
-   </li>
-  </ul>
-  </dd>
-  <dt><code>delegatesFocus</code></dt>
-  <dd>真偽値で、 <code>true</code> に設定された場合、フォーカス可能性に関するカスタム要素の問題を緩和します。シャドウ DOM のフォーカスができない部分がクリックされた場合、最初のフォーカス可能な部分がフォーカスを得て、シャドウホストは <code>:focus</code> のスタイルを利用することができます。</dd>
- </dl>
- </dd>
-</dl>
+    - `mode`
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+      - : 文字列で、シャドウ DOM ツリーの*カプセル化モード*を指定します。以下のうちの一つを取ります。
 
-<p>{{domxref("ShadowRoot")}} オブジェクトです。</p>
+        - `open`: シャドウルートの要素には、例えば {{domxref("Element.shadowRoot")}} を使用して、ルートの外部の JavaScript からアクセスできます。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+          ```js
+          element.shadowRoot; // ShadowRoot オブジェクトを返す
+          ```
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">例外</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>shadow root を追加しようとしている要素は、すでに shadow host です。</td>
-  </tr>
-  <tr>
-   <td><code>NotSupportedError</code></td>
-   <td>shadow root を追加しようとしている要素は、HTML の名前空間外であるか、shadow DOM を持てない要素です(上記の通り)。</td>
-  </tr>
- </tbody>
-</table>
+        - `closed`: 閉じたシャドウルートに対する外部の JavaScript からのアクセスを拒否します。
 
-<h2 id="Examples" name="Examples">例</h2>
+          ```js
+          element.shadowRoot; // null を返す
+          ```
 
-<p>以下の例は <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> のデモを使用しています(<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">実行例</a>)。 <code>attachShadow()</code> はコードの真ん中付近で shadow root を作るために使用されています。その後カスタム要素を追加しています。</p>
+    - `delegatesFocus`
+      - : 論理値で、 `true` に設定された場合、フォーカス可能性に関するカスタム要素の問題を緩和します。シャドウ DOM のフォーカスができない部分がクリックされた場合、最初のフォーカス可能な部分がフォーカスを得て、シャドウホストは `:focus` のスタイルを利用することができます。
 
-<pre class="brush: js">// Create a class for the element
+### 返値
+
+{{domxref("ShadowRoot")}} オブジェクトです。
+
+### 例外
+
+- `InvalidStateError`
+  - : 取り付けようとしている要素が既にシャドウホストである場合。
+- `NotSupportedError`
+  - : シャドウルートを HTML 名前空間外の要素に取り付けようとした場合、シャドウを取り付けられない要素であった場合、要素の定義で静的プロパティ `disabledFeatures` が `"shadow"` の値であった場合。
+
+## 例
+
+以下の例は [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) のデモを使用しています([実行例](https://mdn.github.io/web-components-examples/word-count-web-component/))。 
+コードの途中で `attachShadow()` を使ってシャドウルートを作成し、そこにカスタム要素の中身を取り付けているのがわかると思います。
+
+```js
+// Create a class for the element
 class WordCount extends HTMLParagraphElement {
   constructor() {
     // Always call super first in constructor
@@ -114,7 +100,7 @@ class WordCount extends HTMLParagraphElement {
 
     function countWords(node){
       var text = node.innerText || node.textContent
-      return text.split(/\s+/g).length;
+      return text.trim().split(/\s+/g).length;
     }
 
     var count = 'Words: ' + countWords(wcParent);
@@ -138,27 +124,17 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-attachshadow', 'attachShadow()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Element.attachShadow")}}</p>
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("ShadowRoot.delegatesFocus")}}
