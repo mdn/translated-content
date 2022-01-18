@@ -2,32 +2,39 @@
 title: Element.shadowRoot
 slug: Web/API/Element/shadowRoot
 tags:
+  - API
+  - Element
   - プロパティ
   - リファレンス
-  - 要素
-  - 試験的
+  - ShadowRoot
+  - シャドウ DOM
+browser-compat: api.Element.shadowRoot
 translation_of: Web/API/Element/shadowRoot
 ---
-<p>{{APIRef('Shadow DOM')}} {{SeeCompatTable}}{{draft}}</p>
+{{APIRef("Shadow DOM")}}
 
-<p>読み取り専用のプロパティである<code>Element.shadowRoot</code>は、そのエレメントによってホストされたshadow rootへの読み取りアクセスを提供します。既に存在している要素にshadow rootを追加する場合は {{domxref('Element.attachShadow')}} を使用してください。</p>
+`Element.shadowRoot` は読み取り専用のプロパティで、その要素がホストになっているシャドウルートを表します。
 
-<h2 id="Syntax" name="Syntax">文法</h2>
+既に存在している要素にシャドウルートを追加するには {{DOMxRef("Element.attachShadow()")}} を使用してください。
 
-<pre class="syntaxbox">var <em>shadowroot =</em><em> element</em>.shadowRoot;
-</pre>
+## 構文
 
-<h3 id="値">値</h3>
+```js
+var shadowroot = element.shadowRoot;
+```
 
-<p>{{domxref('ShadowRoot')}} オブジェクトです。 アタッチされた時の{{DOMxRef("ShadowRoot.mode", "mode")}} に <code>closed</code> が指定された場合には  <code>null</code> となります。</p>
+### 値
 
-<h2 id="Examples">Examples</h2>
+{{DOMxRef("ShadowRoot")}} オブジェクトインスタンス、またはシャドウルートが {{DOMxRef("ShadowRoot.mode", "mode")}} に `closed` を設定されて取り付けられた場合は `null` です（詳しくは {{DOMxRef("Element.attachShadow()")}} を参照してください）。
 
-<p>The following snippets are taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks">life-cycle-callbacks</a> example (<a href="https://mdn.github.io/web-components-examples/life-cycle-callbacks">see it live also</a>), which creates an element that displays a square of a size and color specified in the element's attributes.</p>
+## 例
 
-<p>Inside the <code>&lt;custom-square&gt;</code> element's class definition we include some life cycle callbacks that make a call to an external function, <code>updateStyle()</code>, which actually applies the size and color to the element. You'll see that we are passing it <code>this</code> (the custom element itself) as a parameter.</p>
+次のスニペットは [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks) の例から取ったものです ([ライブで確認](https://mdn.github.io/web-components-examples/life-cycle-callbacks))。その要素の属性で指定された大きさと色の正方形を表示する要素を生成します。
 
-<pre class="brush: js">connectedCallback() {
+`<custom-square>` 要素のクラス定義の中に、外部関数である `updateStyle()` を呼び出すライフサイクルコールバックをいくつか入れて、実際にサイズと色を要素に適用しています。引数として `this` （カスタム要素そのもの）を渡していることが分かるでしょう。
+
+```js
+connectedCallback() {
   console.log('Custom square element added to page.');
   updateStyle(this);
 }
@@ -35,52 +42,38 @@ translation_of: Web/API/Element/shadowRoot
 attributeChangedCallback(name, oldValue, newValue) {
   console.log('Custom square element attributes changed.');
   updateStyle(this);
-}</pre>
+}
+```
 
-<p>In the <code>updateStyle()</code> function itself, we get a reference to the shadow DOM using {{domxref("Element.shadowRoot")}}. From here we use standard DOM traversal techniques to find the {{htmlelement("style")}} element inside the shadow DOM and then update the CSS found inside it:</p>
+`updateStyle()` 関数自体で、{{domxref("Element.shadowRoot")}} を使用してシャドウ DOM への参照を取得します。ここから標準的な DOM 走査技術を使用して、シャドウ DOM 内の {{htmlelement("style")}} 要素を見つけ、その中にある CSS を更新します。
 
-<pre class="brush: js">function updateStyle(elem) {
-  const shadow = elem.shadowRoot;
-  const childNodes = Array.from(shadow.childNodes);
+```js
+function updateStyle(elem) {
+  const shadow = elem.shadowRoot;
+  const childNodes = Array.from(shadow.childNodes);
 
-  childNodes.forEach(childNode =&gt; {
-    if (childNode.nodeName === 'STYLE') {
-      childNode.textContent = `
-        div {
-          width: ${elem.getAttribute('l')}px;
-          height: ${elem.getAttribute('l')}px;
-          background-color: ${elem.getAttribute('c')};
-        }
-      `;
-    }
-  });
-}</pre>
+  childNodes.forEach(childNode => {
+    if (childNode.nodeName === 'STYLE') {
+      childNode.textContent = `
+        div {
+          width: ${elem.getAttribute('l')}px;
+          height: ${elem.getAttribute('l')}px;
+          background-color: ${elem.getAttribute('c')};
+        }
+      `;
+    }
+  });
+}
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">注脚</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-shadowroot', 'shadowRoot')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.Element.shadowRoot")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>{{DOMxRef("Element.openOrClosedShadowRoot")}} {{non-standard_inline}}</li>
-</ul>
+- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{non-standard_inline}}
