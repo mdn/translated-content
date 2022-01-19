@@ -1187,6 +1187,8 @@
 /es/docs/Learn/JavaScript/First_steps/Prueba_tus_habilidades:_Strings	/es/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings
 /es/docs/Learn/JavaScript/First_steps/Qué_es_JavaScript	/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript
 /es/docs/Learn/JavaScript/Objects/Ejercicio_práctico_de_construcción_de_objetos	/es/docs/Learn/JavaScript/Objects/Object_building_practice
+/es/docs/Learn/JavaScript/Objects/Inheritance	/es/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/es/docs/Learn/JavaScript/Objects/Object-oriented_JS	/es/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /es/docs/Learn/Server-side/Django/Introducción	/es/docs/Learn/Server-side/Django/Introduction
 /es/docs/Learn/Server-side/Primeros_pasos	/es/docs/Learn/Server-side/First_steps
 /es/docs/Learn/Server-side/Primeros_pasos/Introducción	/es/docs/Learn/Server-side/First_steps/Introduction

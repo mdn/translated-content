@@ -2144,7 +2144,7 @@
       "dsma73"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-07-16T22:32:15.138Z",
     "contributors": [
       "youngdeok",
@@ -2162,15 +2162,6 @@
       "bjnhur",
       "JaeWorld",
       "ahnzaz"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-07-16T22:32:06.697Z",
-    "contributors": [
-      "alattalatta",
-      "beowolf9",
-      "lunarlit",
-      "dsma73"
     ]
   },
   "Learn/JavaScript/Objects/Object_prototypes": {
@@ -17474,6 +17465,15 @@
       "rinuel",
       "teoli",
       "JaehaAhn"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-07-16T22:32:06.697Z",
+    "contributors": [
+      "alattalatta",
+      "beowolf9",
+      "lunarlit",
+      "dsma73"
     ]
   },
   "conflicting/MDN/Tools": {

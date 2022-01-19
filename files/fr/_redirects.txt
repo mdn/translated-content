@@ -3001,8 +3001,10 @@
 /fr/docs/Learn/JavaScript/First_steps/methode_chaine_utile	/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods
 /fr/docs/Learn/JavaScript/First_steps/tableaux	/fr/docs/Learn/JavaScript/First_steps/Arrays
 /fr/docs/Learn/JavaScript/Objects/Ajouter_des_fonctionnalités_à_notre_démo_de_balles_rebondissantes	/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features
-/fr/docs/Learn/JavaScript/Objects/Heritage	/fr/docs/Learn/JavaScript/Objects/Inheritance
-/fr/docs/Learn/JavaScript/Objects/JS_orienté-objet	/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS
+/fr/docs/Learn/JavaScript/Objects/Heritage	/fr/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/fr/docs/Learn/JavaScript/Objects/Inheritance	/fr/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/fr/docs/Learn/JavaScript/Objects/JS_orienté-objet	/fr/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
+/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS	/fr/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /fr/docs/Learn/JavaScript/Objects/Prototypes_Objet	/fr/docs/Learn/JavaScript/Objects/Object_prototypes
 /fr/docs/Learn/JavaScript/Objects/la_construction_d_objet_en_pratique	/fr/docs/Learn/JavaScript/Objects/Object_building_practice
 /fr/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/fr/docs/Web/Performance/How_browsers_work

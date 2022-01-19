@@ -4716,7 +4716,7 @@
       "supermanbin"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-07-30T15:02:15.810Z",
     "contributors": [
       "Damoness",
@@ -4751,31 +4751,6 @@
       "1013940326",
       "xgqfrms-GitHub",
       "VtanSen"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-11-05T13:41:11.779Z",
-    "contributors": [
-      "ceociocto",
-      "Jepson",
-      "ChongyouXu",
-      "九千鸦",
-      "Catherine-G",
-      "voidxiaobei",
-      "oceanMIH",
-      "WindLo",
-      "real-Row",
-      "GKilyar",
-      "Ray-Eldath",
-      "HYdragon",
-      "GloryChou",
-      "1013940326",
-      "Viki-Zhang",
-      "Leivy",
-      "breakair",
-      "zhangyangcisco",
-      "cylmemory",
-      "keyulin"
     ]
   },
   "Learn/JavaScript/Objects/Object_building_practice": {
@@ -46760,6 +46735,31 @@
       "yimity",
       "shiyutang",
       "xcffl"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-11-05T13:41:11.779Z",
+    "contributors": [
+      "ceociocto",
+      "Jepson",
+      "ChongyouXu",
+      "九千鸦",
+      "Catherine-G",
+      "voidxiaobei",
+      "oceanMIH",
+      "WindLo",
+      "real-Row",
+      "GKilyar",
+      "Ray-Eldath",
+      "HYdragon",
+      "GloryChou",
+      "1013940326",
+      "Viki-Zhang",
+      "Leivy",
+      "breakair",
+      "zhangyangcisco",
+      "cylmemory",
+      "keyulin"
     ]
   },
   "conflicting/Learn/Server-side/Django": {

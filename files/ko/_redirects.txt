@@ -314,6 +314,8 @@
 /ko/docs/Learn/HTML/Howto/데이터_속성_사용하기	/ko/docs/Learn/HTML/Howto/Use_data_attributes
 /ko/docs/Learn/HTML/Multimedia_and_embedding/ideo_and_audio_content	/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ko/docs/Learn/JavaScript/Building_blocks/조건문	/ko/docs/Learn/JavaScript/Building_blocks/conditionals
+/ko/docs/Learn/JavaScript/Objects/Inheritance	/ko/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/ko/docs/Learn/JavaScript/Objects/Object-oriented_JS	/ko/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ko/docs/Learn/JavaScript/Objects/얼마나_이해했는지_확인해보자:_JSON	/ko/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON
 /ko/docs/Learn/Server-side/Express_Nodejs/개발_환경	/ko/docs/Learn/Server-side/Express_Nodejs/development_environment
 /ko/docs/Learn/Server-side/Express_Nodejs/스켈레톤_웹사이트	/ko/docs/Learn/Server-side/Express_Nodejs/skeleton_website

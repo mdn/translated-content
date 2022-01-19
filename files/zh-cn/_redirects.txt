@@ -1096,6 +1096,8 @@
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/在网页中添加矢量图形	/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 /zh-CN/docs/Learn/JavaScript/First_steps/变量	/zh-CN/docs/Learn/JavaScript/First_steps/Variables
 /zh-CN/docs/Learn/JavaScript/First_steps/第一点	/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash
+/zh-CN/docs/Learn/JavaScript/Objects/Inheritance	/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS	/zh-CN/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /zh-CN/docs/Learn/JavaScript/Objects/向“弹跳球”演示程序添加新功能	/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features
 /zh-CN/docs/Learn/JavaScript/Objects/测试你的技能:面向对象的Javascript	/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
 /zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍	/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
