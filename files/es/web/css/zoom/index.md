@@ -14,8 +14,7 @@ translation_of: Web/CSS/zoom
 
 La propiedad [CSS](/es/docs/Web/CSS) no estándarizada **`zoom`**
 se puede usar para controlar el aumento de escala de un elemento.
-En la medida de lo posible se deben usar
-[Transformaciones CSS](/es/docs/Web/CSS/CSS_Transforms) en vez de esta propiedad.
+En la medida de lo posible se deben usar [transform: scale()](/es/docs/Web/CSS/transform-function/scale()) en vez de esta propiedad.
 
 ```css
 /* Keyword values */
@@ -44,21 +43,9 @@ zoom: unset;
   - : Dibuja el elemento con su tamaño normal.
 - `reset` {{non-standard_inline}}
 
-  - : No cambia la escala del elemento (por ejemplo al presionar
-    <kbd>Ctrl</kbd>
-
-    \-
-
-    <kbd>-</kbd>
-
-    or
-
-    <kbd>Ctrl</kbd>
-
-    \+
-
-    <kbd>+</kbd>
-    ) si el usuario aplica `non-pinch-zooming`.
+  - : No cambia la escala del elemento (por ejemplo al presionar `<kbd>Ctrl</kbd>  \+  <kbd>-</kbd>` o `<kbd>Ctrl</kbd>  \+ <kbd>+</kbd>` )
+   
+  - si el usuario aplica `non-pinch-zooming`.
     Sólo soportado por WebKit (y posiblemente Blink).
 
 - {{cssxref("&lt;percentage&gt;")}}
