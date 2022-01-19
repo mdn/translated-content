@@ -3,139 +3,163 @@ title: zoom
 slug: Web/CSS/zoom
 tags:
   - CSS
-  - NeedsBrowserCompatibility
-  - NeedsLiveSample
-  - NeedsMobileBrowserCompatibility
-  - No estandar
   - Propiedad CSS
+  - No estandar
   - Referencia
+  - recipe:css-property
 translation_of: Web/CSS/zoom
 ---
-<p>{{ CSSRef() }}</p>
 
-<p>{{ Non-standard_header() }}</p>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+La propiedad [CSS](/es/docs/Web/CSS) no estándarizada **`zoom`**
+se puede usar para controlar el aumento de escala de un elemento.
+En la medida de lo posible se deben usar
+[Transformaciones CSS](/es/docs/Web/CSS/CSS_Transforms) en vez de esta propiedad.
 
-<p>La propiedad CSS no estándar  <code>zoom</code>  se puede usar para controlar el aumento de escala de un lemento. En la medida de lo posible deben usarse <a href="/es/docs/Web/CSS/CSS_Transforms">Transformaciones CSS</a> en vez de esta propiedad..</p>
+```css
+/* Keyword values */
+zoom: normal;
+zoom: reset;
 
-<table>
- <tbody>
-  <tr>
-   <th>Valor inicial</th>
-   <td><code>normal</code></td>
-  </tr>
-  <tr>
-   <th>Se aplica a:</th>
-   <td>all elements</td>
-  </tr>
-  <tr>
-   <th>Heredado</th>
-   <td>no</td>
-  </tr>
-  <tr>
-   <th>Medio</th>
-   <td>visual</td>
-  </tr>
- </tbody>
-</table>
+/* <percentage> values */
+zoom: 50%;
+zoom: 200%;
 
-<p>{{cssinfo}}</p>
+/* <number> values */
+zoom: 1.1;
+zoom: 0.7;
 
-<h2 id="Síntaxis">Síntaxis</h2>
+/* Global values */
+zoom: inherit;
+zoom: initial;
+zoom: unset;
+```
 
-<h3 id="Valores">Valores</h3>
+## Sintaxis
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Dibuja el elemento con su tamaño normal.</dd>
- <dt><code>reset</code> {{non-standard_inline}}</dt>
- <dd>Si el usuario aplica un cambio de escala no basado en presionar  (por ejemplo al presionar Ctrl+ o Ctrl-) al documento no cambia la escala del elemento. Sólo soportado por WebKit (y posiblemente Blink).</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Factor de Zoom. <code>100%</code> es a tamaño <code>normal</code>. Valores superiores a 100% aumentan y valores inferiores al 100% encogen el elemento.</dd>
- <dt>{{cssxref("&lt;number&gt;")}}</dt>
- <dd>Factor de Zoom. Equivalente al porcentaje correspondiente (<code>1.0</code> = <code>100%</code> = <code>normal</code>). Valores mayores de <code>1.0</code> aumentarán el tamaño. Valores menores de  <code>1.0</code> encogerán.</dd>
-</dl>
+### Valores
 
-<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
+- `normal`
+  - : Dibuja el elemento con su tamaño normal.
+- `reset` {{non-standard_inline}}
 
-<pre class="syntaxbox">normal | reset | <a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a> | <a href="/en-US/docs/Web/CSS/percentage">&lt;percentage&gt;</a>
-</pre>
+  - : No cambia la escala del elemento (por ejemplo al presionar
+    <kbd>Ctrl</kbd>
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+    \-
 
-<p>Esta propiedad no es estándar y tiene su origen en Internet Explorer. Microsoft tiene una <a href="https://msdn.microsoft.com/es/library/ms531189(v=vs.85).aspx"> descripción en MSDN</a>. Apple tiene <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15">una descripción en la Referencia CSS de Safari</a>. Rossen Atanassov, de Microsoft, tiene <a href="http://cdn.rawgit.com/atanassov/css-zoom/master/Overview.html">una propuesta de borrador no oficial de la especificación en GitHub</a></p>
+    <kbd>-</kbd>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con los distintos navegadores</h2>
+    or
 
-<p>{{ CompatibilityTable() }}</p>
+    <kbd>Ctrl</kbd>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatNo() }} [1]</td>
-   <td>5.5</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>4.0</td>
-  </tr>
-  <tr>
-   <td>valor de reseteo</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+    \+
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }} [1]</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Valor de reseteo</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+    <kbd>+</kbd>
+    ) si el usuario aplica `non-pinch-zooming`.
+    Sólo soportado por WebKit (y posiblemente Blink).
 
-<p>[1]: {{bug(390936, 'summary')}}</p>
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Factor de Zoom. `100%` es a tamaño `normal`. Valores superiores a ` 100%` aumentan y valores inferiores al `100%` encogen el elemento.
+- {{cssxref("&lt;number&gt;")}}
+  - : Factor de Zoom. Equivalente al porcentaje correspondiente (`1.0` = `100%` = `normal`). Valores mayores de `1.0` aumentarán el tamaño. Valores menores de `1.0` encogerán.
 
-<h2 id="Ver_además">Ver además</h2>
+## Definición Formal
 
-<ul>
- <li><a href="https://css-tricks.com/almanac/properties/z/zoom/"><code>zoom</code> Post en el Almanaque de CSS-Tricks</a></li>
-</ul>
+{{cssinfo}}
+
+## Sintaxis Formal
+
+{{csssyntax}}
+
+## Ejemplos
+
+### Primer ejemplo
+
+#### HTML
+
+```html
+<p class="small">Small</p>
+<p class="normal">Normal</p>
+<p class="big">Big</p>
+```
+
+#### CSS
+
+```css
+p.small {
+  zoom: 75%;
+}
+p.normal {
+  zoom: normal;
+}
+p.big {
+  zoom: 2.5;
+}
+p {
+  display: inline-block;
+}
+p:hover {
+  zoom: reset;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('First_example')}}
+
+### Segundo ejemplo
+
+#### HTML
+
+```html
+<div id="a" class="circle"></div>
+<div id="b" class="circle"></div>
+<div id="c" class="circle"></div>
+```
+
+#### CSS
+
+```css
+div.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  zoom: 1.5;
+}
+div#a {
+  background-color: gold;
+  zoom: normal;
+}
+div#b {
+  background-color: green;
+  zoom: 200%;
+}
+div#c {
+  background-color: blue;
+  zoom: 2.9;
+}
+```
+
+#### Resultado
+
+{{EmbedLiveSample('Second_example')}}
+
+## Especificaciones
+
+Esta propiedad no es estándar y tiene su origen en Internet Explorer.
+Apple tiene [una descripción en la Referencia CSS de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15).
+
+## Compatibilidad del navegador
+
+{{Compat}}
+
+## Ver además
+
+- [Artículo de `zoom` en la página de CSS-Tricks](https://css-tricks.com/almanac/properties/z/zoom/)
+- [Bug 390936: Implementar la propiedad `zoom` de Internet Explorer para CSS](https://bugzilla.mozilla.org/show_bug.cgi?id=390936) en el rastreador de problemas de Firefox Bugzilla.
