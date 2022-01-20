@@ -44,7 +44,6 @@ tags:
 ### RTSP
 
 > **备注：** 实时流协议(RTSP)控制媒体在两端传输的会话，且同时使用实时传输协议(RTP)和实时控制协议(RTCP)来传输媒体流。将RTP与RTCP结合使用可以实现自适应流。目前大部分浏览器还无法原生支持，但请留意 [Firefox OS 1.3 支持RTSP](https://www.mozilla.org/en-US/firefox/os/notes/1.3/)。
-
 > 某些厂商实现了专有的传输协议，类似RealNetworks以及他们的真实数据传输(RDT)。
 
 ### RTSP 2.0
