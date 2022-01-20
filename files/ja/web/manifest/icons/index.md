@@ -84,10 +84,11 @@ translation_of: Web/Manifest/icons
           画像の目的を定義します。例えば、画像がホスト OS の特定の場面で、特別な目的を果たすことを意図している場合などです (すなわち、よりよく統合するため)。
         </p>
         <p>
-          <a href="https://w3c.github.io/manifest/#purpose-member"><code>purpose</code></a> は以下の値を1つ以上、空白で区切って指定することができます。
+          <a href="https://w3c.github.io/manifest/#purpose-member"><code>purpose</code></a> は以下の値を 1 つ以上、空白で区切って指定することができます。
         </p>
         <ul>
-          <li><code>monochrome</code>: ユーザーエージェントは、このアイコンを、<a href="https://w3c.github.io/manifest/#monochrome-icons-and-solid-fills">塗りつぶしのあるモノクロのアイコン</a>が必要なときに表示することができます。アイコンの色情報は破棄され、アルファデータのみが使用されます。アルファデータのみが使用されます。このアイコンは、ユーザーエージェントが塗りつぶしのマスクのように使うことができます。
+          <li>
+            <code>monochrome</code>: ユーザーエージェントは、このアイコンを、 <a href="https://w3c.github.io/manifest/#monochrome-icons-and-solid-fills">塗りつぶしのあるモノクロのアイコン</a>が必要なときに表示することができます。アイコンの色情報は破棄され、アルファデータのみが使用されます。アルファデータのみが使用されます。このアイコンは、ユーザーエージェントが塗りつぶしのマスクのように使うことができます。
           </li>
           <li>
             <code>maskable</code>:  画像が<a href="https://w3c.github.io/manifest/#icon-masks">アイコンのマスクと安全領域</a>に配慮して設計されており、画像の安全領域外の部分をユーザーエージェントが無視したりマスクしたりしても安全になるようになっています。
