@@ -2,191 +2,143 @@
 title: flex-wrap
 slug: Web/CSS/flex-wrap
 tags:
-  - CSS3
-  - Default value
-  - Flex
-  - flex-wrap
+  - CSS
+  - CSS Flexible Boxes
+  - CSS Property
+  - Reference
+  - recipe:css-property
 translation_of: Web/CSS/flex-wrap
 ---
-<p>{{ CSSRef("CSS Flexible Boxes") }}</p>
+{{CSSRef}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><a href="/zh-CN/docs/CSS" title="CSS">CSS</a> <strong><code>flex-wrap</code></strong> 指定 flex 元素单行显示还是多行显示 。如果允许换行，这个属性允许你控制行的堆叠方向。</p>
+[CSS](/zh-CN/docs/Web/CSS) 的 **`flex-wrap`** 属性指定 flex 元素单行显示还是多行显示。如果允许换行，这个属性允许你控制行的堆叠方向。
 
-<p>{{cssinfo}}</p>
+{{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
-<p>参考 <a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" title="使用 CSS 弹性盒子">使用 CSS 弹性盒子</a> 查看更多的属性和信息</p>
+参考 [flex 布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) 查看更多的属性和信息。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:css">flex-wrap: nowrap;  /* Default value */
+```css
+flex-wrap: nowrap; /* Default value */
 flex-wrap: wrap;
 flex-wrap: wrap-reverse;
 
 /* Global values */
 flex-wrap: inherit;
 flex-wrap: initial;
+flex-wrap: revert;
 flex-wrap: unset;
-</pre>
+```
 
-<h3 id="取值">取值</h3>
+`flex-wrap` 属性可指定为以下取值列表中的任意一个关键字。
 
-<p>下面这些值是可以接受的:</p>
+### 取值
 
-<dl>
- <dt><code>nowrap</code></dt>
- <dd>flex 的元素被摆放到到一行，这可能导致溢出 flex 容器。 <strong>cross-start</strong>  会根据 {{cssxref("flex-direction")}} 的值 相当于 <strong>start</strong> 或 <strong>before</strong>。</dd>
- <dt><code>wrap</code></dt>
- <dd>flex 元素 被打断到多个行中。<strong>cross-start</strong> 会根据 {{cssxref("flex-direction")}} 的值选择等于<strong>start</strong> 或<strong>before</strong>。<strong>cross-end</strong> 为确定的 <strong>cross-start</strong> 的另一端。</dd>
- <dt><code>wrap-reverse</code></dt>
- <dd>和 wrap 的行为一样，但是 <strong>cross-start</strong> 和 <strong>cross-end </strong>互换。</dd>
- <dt>
- <h3 id="语法格式">语法格式</h3>
- </dt>
-</dl>
+`flex-wrap` 属性接受以下取值：
+
+- `nowrap`
+  - : flex 的元素被摆放到到一行，这可能导致 flex 容器溢出。**cross-start** 会根据 {{cssxref("flex-direction")}} 的值等价于 **start** 或 **before**。为该属性的默认值。
+- wrap
+  - : flex 元素 被打断到多个行中。**cross-start** 会根据 {{cssxref("flex-direction")}} 的值等价于 **start** 或**before**。**cross-end** 为确定的 **cross-start** 的另一端。
+- `wrap-reverse`
+  - : 和 wrap 的行为一样，但是 **cross-start** 和 **cross-end** 互换。
+
+### 形式定义
+
+{{cssinfo}}
+
+### 形式语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### 设置 flex 容器堆叠形式
 
-<pre><code>&lt;h4&gt;This is an example for flex-wrap:wrap &lt;/h4&gt;
-&lt;div class="content"&gt;
-  &lt;div class="red"&gt;1&lt;/div&gt;
-  &lt;div class="green"&gt;2&lt;/div&gt;
-  &lt;div class="blue"&gt;3&lt;/div&gt;
-&lt;/div&gt;
-&lt;h4&gt;This is an example for flex-wrap:nowrap &lt;/h4&gt;
-&lt;div class="content1"&gt;
-  &lt;div class="red"&gt;1&lt;/div&gt;
-  &lt;div class="green"&gt;2&lt;/div&gt;
-  &lt;div class="blue"&gt;3&lt;/div&gt;
-&lt;/div&gt;
-&lt;h4&gt;This is an example for flex-wrap:wrap-reverse &lt;/h4&gt;
-&lt;div class="content2"&gt;
-  &lt;div class="red"&gt;1&lt;/div&gt;
-  &lt;div class="green"&gt;2&lt;/div&gt;
-  &lt;div class="blue"&gt;3&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+#### HTML
 
-<h3 id="CSS">CSS</h3>
+```html
+<h4>这是一个关于 flex-wrap:wrap 的例子</h4>
+<div class="content">
+  <div class="red">1</div>
+  <div class="green">2</div>
+  <div class="blue">3</div>
+</div>
+<h4>这是一个关于 flex-wrap:nowrap 的例子</h4>
+<div class="content1">
+  <div class="red">1</div>
+  <div class="green">2</div>
+  <div class="blue">3</div>
+</div>
+<h4>这是一个关于 flex-wrap:wrap-reverse 的例子</h4>
+<div class="content2">
+  <div class="red">1</div>
+  <div class="green">2</div>
+  <div class="blue">3</div>
+</div>
+```
 
-<pre><code>/* Common Styles */
+#### CSS
+
+```css
+/* Common Styles */
 .content,
 .content1,
 .content2 {
-    color: #fff;
-    font: 100 24px/100px sans-serif;
-    height: 150px;
-    text-align: center;
+  color: #fff;
+  font: 100 24px/100px sans-serif;
+  height: 150px;
+  width: 897px;
+  text-align: center;
 }
 
 .content div,
 .content1 div,
 .content2 div {
-    height: 50%;
-    width: 50%;
+  height: 50%;
+  width: 300px;
 }
 .red {
-    background: orangered;
+  background: orangered;
 }
 .green {
-    background: yellowgreen;
+  background: yellowgreen;
 }
 .blue {
-    background: steelblue;
+  background: steelblue;
 }
 
 /* Flexbox Styles */
 .content {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .content1 {
-    display: flex;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .content2 {
-    display: flex;
-    flex-wrap: wrap-reverse;
-}</code></pre>
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+```
 
-<h3 id="结果">结果</h3>
+#### 结果
 
-<p>{{ EmbedLiveSample('Examples', '700px', '700px', '', 'Web/CSS/flex-wrap') }}</p>
+{{EmbedLiveSample('设置_flex_容器堆叠形式', '700px', '700px')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>规范</th>
-   <th>状态</th>
-   <th>备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap') }}</td>
-   <td>{{ Spec2('CSS3 Flexbox') }}</td>
-   <td>                    </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>28.0</td>
-   <td>29.0</td>
-   <td>12.0</td>
-   <td>11.0<sup>[1]</sup></td>
-   <td>17.0</td>
-   <td>9.0</td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox for Android (Gecko)</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>52.0</td>
-   <td>4.4</td>
-   <td>12.0</td>
-   <td>11.0</td>
-   <td>12.1</td>
-   <td>9.2</td>
-  </tr>
- </tbody>
-</table>
+## 参见
 
-<h2 id="参考">参考</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" title="使用 CSS 弹性盒子">使用 CSS 弹性盒<br>
-  子</a></li>
-</ul>
+- CSS 弹性盒子指南：[flex 布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- CSS 弹性盒子指南：[掌握弹性物件的包装](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
