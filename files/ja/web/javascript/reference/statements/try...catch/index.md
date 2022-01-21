@@ -2,86 +2,80 @@
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
 tags:
-  - Exception
+  - 例外
   - JavaScript
-  - Language feature
-  - Statement
+  - 言語機能
+  - 文
+browser-compat: javascript.statements.try_catch
 translation_of: Web/JavaScript/Reference/Statements/try...catch
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>try...catch</code></strong> 文は、試す文のブロックをマークし、例外が発生したときの応答を指定します。</p>
+**`try...catch`** 文は、試す文のブロックをマークし、例外が発生したときの応答を指定します。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、<a>https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="syntaxbox notranslate">try {
-  <em>try_statements</em>
+```js
+try {
+  try_statements
 }
-[catch [(<em>exception_var</em>)] {
-  <em>catch_statements</em>
-}]
-[finally {
-  <em>finally_statements</em>
-}]
-</pre>
+catch (exception_var) {
+  catch_statements
+}
+finally {
+  finally_statements
+}
+```
 
-<dl>
- <dt><code><em>try_statements</em></code></dt>
- <dd>実行される文です。</dd>
+- `try_statements`
+  - : 実行される文です。
+- `catch_statements`
+  - : `try` ブロックの中で例外が発生した場合に実行される文です。
+- `exception_var`
+  - : 関連する `catch` 節に対して例外オブジェクトを保持する識別子です。
+- `finally_statements`
+  - : `try` 文が完了した後に実行される文です。これらの文は、例外が発生されたり捕捉されたりしたかどうかに関係なく実行されます。
 
- <dt><code><em>catch_statements</em></code></dt>
- <dd><code>try</code> ブロックの中で例外が発生した場合に実行される文です。</dd>
+## 解説
 
- <dt><code><em>exception_var</em></code></dt>
- <dd>関連する <code>catch</code> 節に対して例外オブジェクトを保持する識別子です。</dd>
+`try` 文は、1 つ以上の文を含む `try` ブロックにより構成されます。文が 1 つであっても、常に `{}` を使用する必要があります。1 つ以上の `catch` ブロック、または `finally` ブロックが存在する必要があります。すなわち、`try` 文には 3 つの形態があります。
 
- <dt><code><em>finally_statements</em></code></dt>
- <dd><code>try</code> 文が完了した後に実行される文です。これらの文は、例外が発生されたり捕捉されたりしたかどうかに関係なく実行されます。</dd>
-</dl>
+- `try...catch`
+- `try...finally`
+- `try...catch...finally`
 
-<h2 id="Description" name="Description">解説</h2>
+`catch` ブロックは、例外が `try` ブロックの中で発生した場合に何をするかを指定する文を含みます。`try` ブロック内 (または `try` ブロック内から呼び出された関数の中) のいずれかの文で例外が発生した場合は、制御は即座に `catch` ブロックへ移ります。`try` ブロックの中で例外が発生しなかった場合は、`catch` ブロックは飛ばされます。
 
-<p><code>try</code> 文は、1 つ以上の文を含む <code>try</code> ブロックにより構成されます。文が 1 つであっても、常に <code>{}</code> を使用する必要があります。1 つ以上の <code>catch</code> ブロック、または <code>finally</code> ブロックが存在する必要があります。すなわち、<code>try</code> 文には 3 つの形態があります。</p>
+`finally` ブロックは、`try` ブロックおよび `catch` ブロックの実行が完了した後で実行されます。これは常に実行され、例外が発生したかどうか、捕捉されたかどうかには関係ありません。
 
-<ul>
- <li><code>try...catch</code></li>
- <li><code>try...finally</code></li>
- <li><code>try...catch...finally</code></li>
-</ul>
+1 つ以上の `try` 文を入れ子にする事ができます。内側の `try` 文が `catch` ブロックを持っていない場合、それを囲んでいる `try` 文の `catch` ブロックに入ります。
 
-<p><code>catch</code> ブロックは、例外が <code>try</code> ブロックの中で発生した場合に何をするかを指定する文を含みます。<code>try</code> ブロック内 (または <code>try</code> ブロック内から呼び出された関数の中) のいずれかの文で例外が発生した場合は、制御は即座に <code>catch</code> ブロックへ移ります。<code>try</code> ブロックの中で例外が発生しなかった場合は、<code>catch</code> ブロックは飛ばされます。</p>
+`try` を使用して JavaScript の例外を処理することもできます。 JavaScript の例外に関する情報は [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)を参照してください。
 
-<p><code>finally</code> ブロックは、<code>try</code> ブロックおよび <code>catch</code> ブロックの実行が完了した後で実行されます。これは常に実行され、例外が発生したかどうか、捕捉されたかどうかには関係ありません。</p>
+### 無条件の catch ブロック
 
-<p>1 つ以上の <code>try</code> 文を入れ子にする事ができます。内側の <code>try</code> 文が <code>catch</code> ブロックを持っていない場合、それを囲んでいる <code>try</code> 文の <code>catch</code> ブロックに入ります。</p>
+`catch` ブロックが使われている場合、`try` ブロックの中から任意の例外が発生すると、`catch` ブロックが実行されます。例えば、以下のコードで例外が発生すると、制御は `catch` ブロックへ移動します。
 
-<p><code>try</code> を使用して JavaScript の例外を処理することもできます。JavaScript の例外に関する情報は <a href="/ja/docs/Web/JavaScript/Guide">JavaScript ガイド</a>を参照してください。</p>
-
-<h3 id="Unconditional_catch-block" name="Unconditional_catch-block">無条件の catch ブロック</h3>
-
-<p><code>catch</code> ブロックが使われている場合、<code>try</code> ブロックの中から任意の例外が発生すると、<code>catch</code> ブロックが実行されます。例えば、以下のコードで例外が発生すると、制御は <code>catch</code> ブロックへ移動します。</p>
-
-<pre class="brush: js notranslate">try {
+```js
+try {
   throw 'myException'; // 例外を生成
-}
-catch (e) {
+} catch (e) {
   // 任意の例外を操作するための文
   logMyErrors(e); // エラーハンドラーに例外オブジェクトを渡します
 }
-</pre>
+```
 
-<p><code>catch</code> ブロックは例外の値を保持する識別子 (上記の例では <code>e</code>) を指定します。この値は <code>catch</code> ブロックの{{Glossary("Scope", "スコープ")}}内でのみ利用できます。</p>
+`catch` ブロックは例外の値を保持する識別子 (上記の例では `e`) を指定します。この値は `catch` ブロックの{{Glossary("Scope", "スコープ")}}内でのみ利用できます。
 
-<h3 id="Conditional_catch_clauses" name="Conditional_catch_clauses">条件付き catch ブロック</h3>
+### 条件付き catch ブロック
 
-<p>「条件付き <code>catch</code> ブロック」は、下記のように <code>try...catch</code> ブロックを <code>if...else if...else</code> 構造と組み合わせることで作成することができます。</p>
+「条件付き `catch` ブロック」は、下記のように `try...catch` ブロックを `if...else if...else` 構造と組み合わせることで作成することができます。
 
-<pre class="brush: js notranslate">try {
-  myroutine(); // 3 つの例外を投げる可能性があります
+```js
+try {
+  myroutine(); // 3 つの例外が発生する可能性があります
 } catch (e) {
   if (e instanceof TypeError) {
     // TypeError 例外を処理するための文
@@ -94,11 +88,12 @@ catch (e) {
     logMyErrors(e); // エラーハンドラーに例外オブジェクトを渡す
   }
 }
-</pre>
+```
 
-<p>よくある使用例としては、次のように想定済みの一部のエラーのみを捕捉 (および無視) し、それ以外の場合はエラーを送出し直す場合です。</p>
+よくある使用例としては、次のように想定済みの一部のエラーのみを捕捉 (および無視) し、それ以外の場合はエラーを送出し直す場合です。
 
-<pre class="brush: js notranslate">try {
+```js
+try {
   myRoutine();
 } catch (e) {
   if (e instanceof RangeError) {
@@ -107,13 +102,14 @@ catch (e) {
     throw e;  // エラーを変更しないまま送出し直す
   }
 }
-</pre>
+```
 
-<h3 id="The_exception_identifier" name="The_exception_identifier">例外識別子</h3>
+### 例外識別子
 
-<p>例外が <code>try</code> ブロックの中で投げられたときは、<em><code>exception_var</code></em> (たとえば、<code>catch (e)</code> における <code>e</code>) が例外の値を保持します。この識別子を使用して、発生した例外についての情報を取得することができます。この識別子は <code>catch</code> ブロックの{{Glossary("Scope", "スコープ")}}でのみ利用できます。例外の値が必要ない場合にはこれは省略できます。</p>
+例外が `try` ブロックの中で発生したときは、_`exception_var`_ (たとえば、`catch (e)` における `e`) が例外の値を保持します。この識別子を使用して、発生した例外についての情報を取得することができます。この識別子は `catch` ブロックの{{Glossary("Scope", "スコープ")}}でのみ利用できます。例外の値が必要ない場合にはこれは省略できます。
 
-<pre class="brush: js notranslate">function isValidJSON(text) {
+```js
+function isValidJSON(text) {
   try {
     JSON.parse(text);
     return true;
@@ -121,31 +117,32 @@ catch (e) {
     return false;
   }
 }
-</pre>
+```
 
-<h3 id="The_finally-block" name="The_finally-block">finally ブロック</h3>
+### finally ブロック
 
-<p><code>finally</code> ブロックには、<code>try</code> ブロックおよび <code>catch</code> ブロックを実行した後で、<code>try...catch...finally</code> の次の文が実行される前に実行される文が入ります。なお、<code>finally</code> ブロックは例外が発生するかどうかにかかわらず実行されます。また、例外が発生した場合、<code>finally</code> ブロックは例外を処理する <code>catch</code> ブロックがなくても実行されます。</p>
+`finally` ブロックには、`try` ブロックおよび `catch` ブロックを実行した後で、`try...catch...finally` の次の文が実行される前に実行される文が入ります。なお、`finally` ブロックは例外が発生するかどうかにかかわらず実行されます。また、例外が発生した場合、`finally` ブロックは例外を処理する `catch` ブロックがなくても実行されます。
 
-<p>次の例では <code>finally</code> ブロックの一つの使用例を示します。このコードはファイルを開き、それからファイルを使用する分を実行します。<code>finally</code> ブロックは、例外が発生したとしてもその後で確実にファイルを閉じるよう保証します。</p>
+次の例では `finally` ブロックの一つの使用例を示します。このコードはファイルを開き、それからファイルを使用する分を実行します。`finally` ブロックは、例外が発生したとしてもその後で確実にファイルを閉じるよう保証します。
 
-<pre class="brush: js notranslate">openMyFile();
+```js
+openMyFile();
 try {
   // リソースを結び付けます
   writeMyFile(theData);
-}
-finally {
+} finally {
   closeMyFile(); // リソースを常に閉じます
 }
-</pre>
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Nested_try-blocks" name="Nested_try-blocks">入れ子になった try ブロック</h3>
+### 入れ子になった try ブロック
 
-<p>最初に、次のもので何が起きるか見てみましょう。</p>
+最初に、次のもので何が起きるか見てみましょう。
 
-<pre class="brush: js notranslate">try {
+```js
+try {
   try {
     throw new Error('oops');
   } finally {
@@ -158,11 +155,12 @@ finally {
 // Output:
 // "finally"
 // "outer" "oops"
-</pre>
+```
 
-<p>ここで、既に内部の <code>try</code> ブロックに <code>catch</code> ブロックを追加しているので、既に例外を捕捉しています。</p>
+ここで、既に内部の `try` ブロックに `catch` ブロックを追加しているので、既に例外を捕捉しています。
 
-<pre class="brush: js notranslate">try {
+```js
+try {
   try {
     throw new Error('oops');
   } catch (ex) {
@@ -177,11 +175,12 @@ finally {
 // Output:
 // "inner" "oops"
 // "finally"
-</pre>
+```
 
-<p>そして、エラーを送りなおします。</p>
+そして、エラーを送りなおします。
 
-<pre class="brush: js notranslate">try {
+```js
+try {
   try {
     throw new Error('oops');
   } catch (ex) {
@@ -198,15 +197,17 @@ finally {
 // "inner" "oops"
 // "finally"
 // "outer" "oops"
-</pre>
+```
 
-<p>送り直されない限り、例外はどれでも最も内側の <code>catch</code> ブロックで一度だけ捕捉されます。もちろん、何らかの例外が「内側の」のブロックで発生した場合 (<code>catch</code> ブロックのコードで例外が発生することを行った場合)、「外側の」ブロックで捕捉されます。</p>
+送り直されない限り、例外はどれでも最も内側の `catch` ブロックで一度だけ捕捉されます。もちろん、何らかの例外が「内側の」のブロックで発生した場合 (`catch` ブロックのコードで例外が発生することを行った場合)、「外側の」ブロックで捕捉されます。
 
-<h3 id="Returning_from_a_finally_block" name="Returning_from_a_finally_block">finally ブロックからの return</h3>
+### finally ブロックからの return
 
-<p><code>finally</code> ブロックが値を返した場合、<code>try</code> ブロックや <code>catch</code> ブロックの <code>return</code> 文に関係なく、その値が <code>try-catch-finally</code> 全体の返値になります。これは <code>catch</code> ブロック内で送出された例外も含みます。</p>
+`finally` ブロックが値を返す場合、その値が `try-catch-finally` 全体の返値になり、 `try` ブロックや `catch` ブロックの `return` 文に関係なくなります。
+これは `catch` ブロック内で例外が発生した場合も含まれます。
 
-<pre class="brush: js notranslate">(function() {
+```js
+(function() {
   try {
     try {
       throw new Error('oops');
@@ -222,36 +223,22 @@ finally {
   }
 })();
 
-// Output:
+// 出力結果:
 // "inner" "oops"
-// "finally"</pre>
+// "finally"
+```
 
-<p>外側の "oops" は <code>finally</code> ブロックに return があるため送出されません。同じことが、<code>catch</code> ブロックから返されているそのほかの値にも適用されます。</p>
+外側の "oops" は `finally` ブロックに return があるため送出されません。同じことが、`catch` ブロックから返されているそのほかの値にも適用されます。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-try-statement', 'try statement')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("javascript.statements.try_catch")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("Statements/throw", "throw")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Statements/throw", "throw")}}
