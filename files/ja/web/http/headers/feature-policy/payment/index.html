@@ -2,34 +2,32 @@
 title: 'Feature-Policy: payment'
 slug: Web/HTTP/Headers/Feature-Policy/payment
 tags:
-  - Directive
-  - Feature Policy
+  - ディレクティブ
+  - 機能ポリシー
   - Feature-Policy
   - HTTP
   - Payment Request API
   - Payments API
-  - Reference
+  - リファレンス
   - 決済 API
 translation_of: Web/HTTP/Headers/Feature-Policy/payment
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p><span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーフィールドにおける <code>payment</code> ディレクティブは、現在の文書が <a href="/ja/docs/Web/API/Payment_Request_API">Payment Request API</a> を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{DOMxRef("PaymentRequest()")}} コンストラクターで {{exception("SyntaxError")}} 例外が発生します。</span></p>
+<span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーフィールドにおける `payment` ディレクティブは、現在の文書が [Payment Request API](/ja/docs/Web/API/Payment_Request_API) を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{DOMxRef("PaymentRequest()")}} コンストラクターで {{exception("SyntaxError")}} 例外が発生します。</span>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 <pre class="syntaxbox notranslate">Feature-Policy: payment &lt;allowlist&gt;;</pre>
 
-<dl>
- <dt>&lt;allowlist&gt;</dt>
+ - \<allowlist>
  <dd>{{page("/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}</dd>
-</dl>
 
-<h2 id="Default_policy" name="Default_policy">既定のポリシー</h2>
+## 既定のポリシー
 
-<p><code>payment</code> 機能の既定の許可リストの値は <code>'self'</code> です。</p>
+`payment` 機能の既定の許可リストの値は `'self'` です。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
 <table class="standard-table">
  <thead>
@@ -43,7 +41,7 @@ translation_of: Web/HTTP/Headers/Feature-Policy/payment
   <tr>
    <td>{{SpecName('Payment')}}</td>
    <td>{{Spec2('Payment')}}</td>
-   <td>See <a href="https://w3c.github.io/payment-request/#feature-policy">Section 16. Feature Policy integration</a>.</td>
+   <td>See [Section 16. Feature Policy integration](https://w3c.github.io/payment-request/#feature-policy).</td>
   </tr>
   <tr>
    <td>{{SpecName('Feature Policy')}}</td>
@@ -53,14 +51,12 @@ translation_of: Web/HTTP/Headers/Feature-Policy/payment
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("http.headers.Feature-Policy.payment")}}</p>
+{{Compat("http.headers.Feature-Policy.payment")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPHeader("Feature-Policy")}} ヘッダーフィールド</li>
- <li><a href="/ja/docs/Web/HTTP/Feature_Policy">機能ポリシー</a></li>
- <li><a href="/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">機能ポリシーの使用</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} ヘッダーフィールド
+- [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)
+- [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
