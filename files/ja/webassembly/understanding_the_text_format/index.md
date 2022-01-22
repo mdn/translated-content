@@ -407,7 +407,7 @@ JavaScript で同じようなテーブルのインスタンスを作成する場
 ```js
 function() {
   // table section
-  var tbl = new WebAssembly.Table({initial:2, element:"funcref"});
+  var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
 
   // function sections:
   var f1 = ... /* some imported WebAssembly function */
@@ -543,7 +543,7 @@ JavaScript は関数参照にフルアクセスできるため、 Table オブ�
 var importObj = {
   js: {
     memory : new WebAssembly.Memory({ initial: 1 }),
-    table : new WebAssembly.Table({ initial: 1, element: "funcref" })
+    table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
   }
 };
 
