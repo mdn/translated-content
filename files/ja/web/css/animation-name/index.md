@@ -5,22 +5,23 @@ tags:
   - CSS
   - CSS アニメーション
   - CSS プロパティ
-  - Reference
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.animation-name
 translation_of: Web/CSS/animation-name
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>animation-name</code></strong> プロパティは、要素に適用される1つまたは複数のアニメーションを設定します。それぞれの名前はアニメーションシーケンスのプロパティ値を定義する {{cssxref("@keyframes")}} @-規則を設定します。</p>
+**`animation-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に適用される 1 つまたは複数のアニメーションを記述する {{cssxref("@keyframes")}} アットルールの名前を指定します。
 
-<div>{{EmbedInteractiveExample("pages/css/animation-name.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation-name.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
 
-<p>アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* 単一のアニメーション */
+```css
+/* 単一のアニメーション */
 animation-name: none;
 animation-name: test_05;
 animation-name: -specific;
@@ -31,61 +32,76 @@ animation-name: test1, animation4;
 animation-name: none, -moz-specific, sliding;
 
 /* グローバル値 */
-animation-name: <a href="/ja/docs/Web/CSS/initial">initial</a>
-animation-name: <a href="/ja/docs/Web/CSS/inherit">inherit</a>
-animation-name: <a href="/ja/docs/Web/CSS/unset">unset</a></pre>
+animation-name: initial;
+animation-name: inherit;
+animation-name: revert;
+animation-name: unset;
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>none</code></dt>
- <dd>キーフレームがないことを示す特別なキーワード。他の識別子の順序を変更せずにアニメーションを非アクティブにする、またはカスケードからのアニメーションを非アクティブにするために使用できます。</dd>
- <dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
- <dd>アニメーションを識別する名前です。識別子は大文字小文字の区別がない英文字 <code>a</code> から <code>z</code>、 数字 <code>0</code> から <code>9</code>、 アンダースコア (<code>_</code>)、 ダッシュ (<code>-</code>) から成ります。最初のダッシュ以外の文字は英文字でなければなりません。また、二重ダッシュは識別子の先頭では禁止されています。さらに、識別子は <code>none</code>, <code>unset</code>, <code>initial</code>, <code>inherit</code> であってはなりません。</dd>
-</dl>
+- `none`
+  - : キーフレームがないことを示す特別なキーワード。他の識別子の順序を変更せずにアニメーションを非アクティブにする、またはカスケードからのアニメーションを非アクティブにするために使用できます。
+- {{cssxref("&lt;custom-ident&gt;")}}
+  - : アニメーションを識別する名前です。識別子は大文字小文字の区別がない英文字 `a` から `z`、 数字 `0` から `9`、 アンダースコア (`_`)、 ダッシュ (`-`) から成ります。最初のダッシュ以外の文字は英文字でなければなりません。また、二重ダッシュは識別子の先頭では禁止されています。さらに、識別子は `none`, `unset`, `initial`, `inherit` であってはなりません。
 
-<div class="note">
-<p><strong>メモ</strong>: <code>animation-*</code> プロパティにコンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} プロパティで指定したアニメーションに割り当てられますが、いくつあるかによって異なる方法で割り当てられます。詳しくは、<a href="/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values">複数のアニメーションプロパティ値の設定</a>を参照してください。</p>
-</div>
+> **Note:** `animation-*` プロパティにコンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} プロパティで指定したアニメーションに割り当てられますが、いくつあるかによって異なる方法で割り当てられます。詳しくは、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)を参照してください。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p><a href="/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS/CSS animations">CSS アニメーション</a>を参照してください。</p>
+### animation-name が rotate であるアニメーション
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+#### HTML
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Animations', '#animation-name', 'animation-name')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+```html
+<div class="box"></div>
+```
 
-<p>{{cssinfo}}</p>
+#### CSS
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+```css
+.box {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  animation-name: rotate;
+  animation-duration: 0.7s;
+}
 
-<div>
-<p>{{Compat("css.properties.animation-name")}}</p>
-</div>
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+#### 結果
 
-<ul>
- <li><a href="/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">CSS アニメーションの使用</a></li>
- <li>JavaScript {{domxref("AnimationEvent")}} API</li>
-</ul>
+{{EmbedLiveSample("Examples","100%","250")}}
+
+例については[CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)を参照してください。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- JavaScript {{domxref("AnimationEvent")}} API
