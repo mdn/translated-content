@@ -2,47 +2,40 @@
 title: 'Feature-Policy: camera'
 slug: Web/HTTP/Headers/Feature-Policy/camera
 tags:
+  - ディレクティブ
+  - 機能ポリシー
   - Feature-Policy
   - HTTP
   - リファレンス
   - camera
-  - ディレクティブ
-  - 機能ポリシー
+  - 実験的
+browser-compat: http.headers.Feature-Policy.camera
 translation_of: Web/HTTP/Headers/Feature-Policy/camera
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-<span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `camera` ディレクティブは、現在の文書が動画入力機器を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("MediaDevices.getUserMedia()")}} から返却された {{jsxref("Promise")}} が `NotAllowedError` で拒否されます。</span>
+HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `camera` ディレクティブは、現在の文書が動画入力機器を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("MediaDevices.getUserMedia()")}} から返却された {{jsxref("Promise")}} が `NotAllowedError` で拒否されます。
 
 ## 構文
 
-<pre class="syntaxbox">Feature-Policy: camera &lt;allowlist&gt;;</pre>
+```
+Feature-Policy: camera <allowlist>;
+```
 
- <dt>&lt;allowlist&gt;</dt>
+ - \<allowlist>
   - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
+
+## 既定のポリシー
+
+`camera` の許可リストの既定値は `'self'` です。
 
 ## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Feature Policy')}}</td>
-   <td>{{Spec2('Feature Policy')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-{{Compat("http.headers.Feature-Policy.camera")}}
+{{Compat}}
 
 ## 関連情報
 
