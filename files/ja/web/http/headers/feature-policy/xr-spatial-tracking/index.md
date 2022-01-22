@@ -1,69 +1,47 @@
 ---
-title: 'Feature-Policy: vr'
+title: 'Feature-Policy: xr-spatial-tracking'
 slug: Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 tags:
-  - Directive
-  - Feature Policy
+  - ディレクティブ
+  - 機能ポリシー
   - Feature-Policy
   - HTTP
-  - Reference
-  - WebVR
-translation_of: Web/HTTP/Headers/Feature-Policy/vr
+  - リファレンス
+  - xr-spatial-tracking
+  - 実験的
+browser-compat: http.headers.Feature-Policy.xr-spatial-tracking
+translation_of: Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 original_slug: Web/HTTP/Headers/Feature-Policy/vr
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}}{{SeeCompatTable}}
 
-<p class="warning"><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> は <a href="/ja/docs/Web/API/WebXR_API">WebXR Device API</a> で置き換えられ、ウェブプラットフォームから削除されつつあるところです。代わりに WebXR Device API のための機能識別子 {{HTTPHeader("Feature-Policy/xr-spatial-tracking","xr-spatial-tracking")}} を使用してください。</p>
+HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `xr-spatial-tracking` ディレクティブは、現在の文書が [WebXR Device API](/ja/docs/Web/API/WebXR_Device_API) を使用することを許可するかどうかを制御します。このポリシーは、 {{DOMxRef("XRSystem/requestSession","navigator.xr.requestSession()")}} が空間追跡を必要とする {{DOMxRef("XRSession")}} を返すことができるかどうか、またユーザーエージェントが {{DOMxRef("XRSystem/isSessionSupported","navigator.xr.isSessionSupported()")}} と {{domxref("MediaDevices/devicechange_event", "devicechange")}} イベントを通じて空間追跡をサポートするセッションへのサポートを {{DOMxRef("Navigator.xr","navigator.xr")}} オブジェクトで示せるかどうかを制御します。
 
-<p><span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける <code>vr</code> ディレクティブは、現在の文書が <a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{DOMxRef("Navigator.getVRDisplays","Navigator.getVRDisplays()")}} から返却された {{JSxRef("Promise")}} が {{DOMxRef("DOMException")}} で拒否されます。</span></p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```
+Feature-Policy: xr-spatial-tracking <allowlist>;
+```
 
-<pre class="syntaxbox notranslate">Feature-Policy: vr &lt;allowlist&gt;;</pre>
+- \<allowlist>
+  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
 
-<dl>
- <dt>&lt;allowlist&gt;</dt>
- <dd>{{page("/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}</dd>
-</dl>
+## 既定のポリシー
 
-<h2 id="Default_policy" name="Default_policy">既定のポリシー</h2>
+既定の許可リストは `'self'` です。
 
-<p>既定の許可リストは <code>'self'</code> です。</p>
-&lt;
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{Specifications}}
 
-<table class="standard-table">
-<thead>
- <tr>
-  <th scope="col">仕様書</th>
-  <th scope="col">状態</th>
-  <th scope="col">備考</th>
- </tr>
-</thead>
-<tbody>
- <tr>
-  <td><a href="https://immersive-web.github.io/webxr/#feature-policy">WebXR Device API</a></td>
-  <td>編集者草稿</td>
-  <td>この仕様書における 'xr' の定義</td>
- </tr>
- <tr>
-  <td>{{SpecName('Feature Policy')}}</td>
-  <td>{{Spec2('Feature Policy')}}</td>
-  <td>初回定義</td>
- </tr>
-</tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-<p>{{Compat("http.headers.Feature-Policy.vr")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{HTTPHeader("Feature-Policy/xr-spatial-tracking","Feature-Policy: xr-spatial-tracking")}}</li>
- <li>{{HTTPHeader("Feature-Policy")}} ヘッダー</li>
- <li><a href="/ja/docs/Web/HTTP/Feature_Policy">機能ポリシー</a></li>
- <li><a href="/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">機能ポリシーの使用</a></li>
-</ul>
+- [WebXR Device API](/ja/docs/Web/API/WebXR_Device_API)
+- {{DOMxRef("XRSystem/requestSession","navigator.xr.requestSession()")}}, {{DOMxRef("XRSystem/isSessionSupported","navigator.xr.isSessionSupported()")}}, {{DOMxRef("Navigator.xr","navigator.xr")}} の {{domxref("MediaDevices/devicechange_event", "devicechange")}} イベント
+- {{HTTPHeader("Feature-Policy")}} ヘッダー
+- [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)
+- [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
