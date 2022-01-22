@@ -37,5 +37,5 @@ Feature-Policy: ambient-light-sensor <allowlist>;
 ## 関連情報
 
 - {{HTTPHeader('Feature-Policy')}} ヘッダー
-- [機能ポリシー](/en-US/docs/Web/HTTP/Feature_Policy)
-- [機能ポリシーの使用](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)
+- [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
