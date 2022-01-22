@@ -28,7 +28,7 @@ Feature-Policy: document-domain <allowlist>;
 
 ## 既定のポリシー
 
-Default allow list for `document-domain` is `*`.
+`document-domain` の既定の許可リストは `*` です。
 
 ## 仕様書
 
