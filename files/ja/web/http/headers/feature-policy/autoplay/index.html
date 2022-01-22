@@ -4,28 +4,26 @@ slug: Web/HTTP/Headers/Feature-Policy/autoplay
 tags:
   - Feature-Policy
   - HTTP
-  - Reference
+  - リファレンス
   - autoplay
   - ディレクティブ
   - 機能ポリシー
 translation_of: Web/HTTP/Headers/Feature-Policy/autoplay
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p><span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける <code>autoplay</code> ディレクティブは、現在の文書で {{domxref("HTMLMediaElement")}} インターフェイスによってメディアの自動再生をリクエストすることを許可するかどうかを制御します。</span>このポリシーが有効であれば、 {{domxref("HTMLMediaElement.play()")}} から返却された {{jsxref("Promise")}} が <code>DOMException</code> で拒否されます。 {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素の {{htmlattrxref("autoplay", "audio")}} 属性は無視されます。</p>
+<span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `autoplay` ディレクティブは、現在の文書で {{domxref("HTMLMediaElement")}} インターフェイスによってメディアの自動再生をリクエストすることを許可するかどうかを制御します。</span>このポリシーが有効であれば、 {{domxref("HTMLMediaElement.play()")}} から返却された {{jsxref("Promise")}} が `DOMException` で拒否されます。 {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素の {{htmlattrxref("autoplay", "audio")}} 属性は無視されます。
 
-<p>自動再生や自動再生ブロックの詳細については、 <a href="/ja/docs/Web/Media/Autoplay_guide">メディアおよび Web Audio API の自動再生ガイド</a> の記事を参照してください。</p>
+自動再生や自動再生ブロックの詳細については、 [メディアおよび Web Audio API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide) の記事を参照してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 <pre class="syntaxbox">Feature-Policy: autoplay &lt;allowlist&gt;;</pre>
 
-<dl>
  <dt>&lt;allowlist&gt;</dt>
- <dd>{{page("/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}既定値は <code>'self'</code> です。</dd>
-</dl>
+ <dd>{{page("/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}既定値は `'self'` です。</dd>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
 <table class="standard-table">
  <thead>
@@ -46,12 +44,10 @@ translation_of: Web/HTTP/Headers/Feature-Policy/autoplay
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-<p>{{Compat("http.headers.Feature-Policy.autoplay")}}</p>
+{{Compat("http.headers.Feature-Policy.autoplay")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPHeader("Feature-Policy")}} ヘッダー</li>
- <li><a href="/ja/docs/Web/HTTP/Feature_Policy">機能ポリシー</a></li>
- <li><a href="/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">機能ポリシーの使用</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} ヘッダー
+- [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)
+- [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
