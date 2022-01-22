@@ -11,46 +11,44 @@ tags:
   - 機能ポリシー
 translation_of: Web/HTTP/Headers/Feature-Policy/fullscreen
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p><span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける <code>fullscreen</code> ディレクティブは、現在の文書が {{domxref('Element.requestFullScreen()')}} を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 返却された {{jsxref('Promise')}} が {{jsxref('TypeError')}} で拒否されます。</span></p>
+<span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `fullscreen` ディレクティブは、現在の文書が {{domxref('Element.requestFullScreen()')}} を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 返却された {{jsxref('Promise')}} が {{jsxref('TypeError')}} で拒否されます。</span>
 
-<p>既定では、最上位の文書およびその同じオリジンの子フレームが全画面モードを要求し、入ることができます。このディレクティブは別オリジンのフレームが全画面モードを使用することを許可したり拒否したりします。同じオリジンのフレームも含みます。</p>
+既定では、最上位の文書およびその同じオリジンの子フレームが全画面モードを要求し、入ることができます。このディレクティブは別オリジンのフレームが全画面モードを使用することを許可したり拒否したりします。同じオリジンのフレームも含みます。
 
 <div class="note">
-<p>このディレクティブと <code>allowfullscreen</code> が同じ <code>&lt;iframe&gt;</code> 要素に指定されていた場合、このディレクティブが優先します。</p>
+このディレクティブと `allowfullscreen` が同じ `&lt;iframe&gt;` 要素に指定されていた場合、このディレクティブが優先します。
 </div>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 <pre class="syntaxbox">Feature-Policy: fullscreen &lt;allowlist&gt;;</pre>
 
-<dl>
  <dt>&lt;allowlist&gt;</dt>
- <dd>{{page("/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}既定値は <code>'self'</code> です。</dd>
-</dl>
+  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
 
 <h2 id="Examples" name="Examples">例</h2>
 
 <h3 id="General_example" name="General_example">一般的な例</h3>
 
-<p>SecureCorp Inc. は、自分自身のオリジンおよびオリジンが <code>https://example.com</code> のものを除いてすべての Fullscreen API を無効にしたがっているとします。以下の機能ポリシーを設定する HTTP レスポンスヘッダーを配信することで実現できます。</p>
+SecureCorp Inc. は、自分自身のオリジンおよびオリジンが `https://example.com` のものを除いてすべての Fullscreen API を無効にしたがっているとします。以下の機能ポリシーを設定する HTTP レスポンスヘッダーを配信することで実現できます。
 
 <pre class="brush: bash">Feature-Policy: fullscreen 'self' https://example.com</pre>
 
 <h3 id="With_an_&lt;iframe>_element" name="With_an_&lt;iframe>_element">&lt;iframe&gt; 要素と</h3>
 
-<p>FastCorp Inc. は、特定の &lt;iframe&gt; を除いたすべての別オリジンの子フレームの <code>fullscreen</code> を無効にしたがっているとします。以下の機能ポリシーを設定する HTTP レスポンスヘッダーを配信することで実現できます。</p>
+FastCorp Inc. は、特定の &lt;iframe&gt; を除いたすべての別オリジンの子フレームの `fullscreen` を無効にしたがっているとします。以下の機能ポリシーを設定する HTTP レスポンスヘッダーを配信することで実現できます。
 
 <pre class="brush: bash">Feature-Policy: fullscreen 'self'</pre>
 
-<p>それから <code>&lt;iframe&gt;</code> 要素に {{HTMLElement('iframe','allow','#Attributes')}} 属性を含めます。</p>
+それから `&lt;iframe&gt;` 要素に {{HTMLElement('iframe','allow','#Attributes')}} 属性を含めます。
 
 <pre class="brush: html">&lt;iframe src="https://other.com/videoplayer" allow="fullscreen"&gt;&lt;/iframe&gt;</pre>
 
-<p>iframe の属性は、選択的に特定のフレームの機能を有効にし、その他はたとえそれらのフレームが同じオリジンからきた文書を含んでいても無効にします。</p>
+iframe の属性は、選択的に特定のフレームの機能を有効にし、その他はたとえそれらのフレームが同じオリジンからきた文書を含んでいても無効にします。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
 <table class="standard-table">
  <thead>
@@ -69,19 +67,17 @@ translation_of: Web/HTTP/Headers/Feature-Policy/fullscreen
   <tr>
    <td>{{SpecName('Fullscreen','#feature-policy-integration','Fullscreen')}}</td>
    <td>{{Spec2('Feature Policy')}}</td>
-   <td><code>fullscreen</code> ポリシーを定義</td>
+   <td>`fullscreen` ポリシーを定義</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-<p>{{Compat("http.headers.Feature-Policy.fullscreen")}}</p>
+{{Compat("http.headers.Feature-Policy.fullscreen")}}
 
 <h2 id="See_also">See also</h2>
 
-<ul>
- <li>{{HTTPHeader("Feature-Policy")}} ヘッダー</li>
- <li><a href="/ja/docs/Web/HTTP/Feature_Policy">機能ポリシー</a></li>
- <li><a href="/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">機能ポリシーの使用</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} ヘッダー
+- [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)
+- [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
