@@ -4,11 +4,12 @@ slug: Web/HTTP/Headers/Feature-Policy/encrypted-media
 tags:
   - ディレクティブ
   - EME
+  - 機能ポリシー
   - Feature-Policy
   - HTTP
   - リファレンス
-  - ディレクティブ
-  - 機能ポリシー
+  - Experimental
+browser-compat: http.headers.Feature-Policy.encrypted-media
 translation_of: Web/HTTP/Headers/Feature-Policy/encrypted-media
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}
@@ -17,42 +18,24 @@ HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `encrypted-me
 
 ## 構文
 
-<pre class="syntaxbox notranslate">Feature-Policy: encrypted-media &lt;allowlist&gt;;</pre>
+```
+Feature-Policy: encrypted-media <allowlist>;
+```
 
- <dt>&lt;allowlist&gt;</dt>
- <dd>{{page("/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}</dd>
+- \<allowlist>
+  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
 
 ## 既定のポリシー
 
-許可リストは `'self'` です。
+`encrypted-media` の既定の許可リストは `'self'` です。
 
 ## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Feature Policy")}}</td>
-   <td>{{Spec2("Feature Policy")}}</td>
-   <td>初回定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("EME","#feature-policy-integration","Feature Policy integration")}}</td>
-   <td>{{Spec2("EME")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Feature-Policy.encrypted-media")}}
+{{Compat}}
 
 ## 関連情報
 
