@@ -1,69 +1,67 @@
 ---
-title: 'Feature-Policy:geolocation'
+title: 'Feature-Policy: geolocation'
 slug: Web/HTTP/Headers/Feature-Policy/geolocation
 tags:
+  - 機能ポリシー
   - Geolocation
   - HTTP
-  - HTTP レスポンスヘッダー
   - ヘッダー
-  - 機能ポリシー
+  - 実験的
+browser-compat: http.headers.Feature-Policy.geolocation
 translation_of: Web/HTTP/Headers/Feature-Policy/geolocation
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-<span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `geolocation` ディレクティブは、現在の文書が {{domxref('Geolocation')}} インターフェイスを使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} および {{domxref('Geolocation.watchPosition','watchPosition()')}} を呼び出すと、関数のコールバックが呼び出され、 {{domxref('PositionError')}} コードが `PERMISSION_DENIED` になります。</span>
+HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `geolocation` ディレクティブは、現在の文書が {{domxref('Geolocation')}} インターフェイスを使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} および {{domxref('Geolocation.watchPosition','watchPosition()')}} を呼び出すと、関数のコールバックが呼び出され、 {{domxref('GeolocationPositionError')}} のコードが `PERMISSION_DENIED` になります。</span>
 
 既定では、 Geolocation API は最上位の文書およびその同じオリジンの子フレームの中で使用することができます。このディレクティブは別オリジンのフレームによる位置情報へのアクセスを許可したり拒否したりします。同じオリジンのフレームも含みます。
 
 ## 構文
 
-<pre class="syntaxbox">Feature-Policy: geolocation &lt;allowlist&gt;;</pre>
+```
+Feature-Policy: geolocation <allowlist>;
+```
 
- - \<allowlist>
+- \<allowlist>
   - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
+
+## 既定のポリシー
+
+`geolocation` の既定の許可リストは `'self'` です。
 
 ## 例
 
 ### 一般的な例
 
-SecureCorp Inc. は、自分自身のオリジンおよびオリジンが `https://example.com` のものを除いてすべての Geolocation API を無効にしたがっているとします。以下の機能ポリシーを設定する HTTP レスポンスヘッダーを配信することで実現できます。
+SecureCorp Inc. が、自分自身のオリジンおよびオリジンが `https://example.com` のものを除いてすべての Geolocation API を無効にしようとしているとします。以下の機能ポリシーを設定する HTTP レスポンスヘッダーを配信することで実現できます。
 
-<pre class="brush: bash">Feature-Policy: geolocation 'self' https://example.com</pre>
+```
+Feature-Policy: geolocation 'self' https://example.com
+```
 
-<h3 id="With_an_&lt;iframe>_element" name="With_an_&lt;iframe>_element">&lt;iframe&gt; 要素と</h3>
+### \<iframe> 要素と
 
-FastCorp Inc. は、特定の &lt;iframe&gt; を除いたすべての別オリジンの子フレームの `geolocation` を無効にしたがっているとします。以下の機能ポリシーを設定する HTTP レスポンスヘッダーを配信することで実現できます。
+FastCorp Inc. が、特定の \<iframe> を除いたすべての別オリジンの子フレームの `geolocation` を無効にしようとしているとします。以下の機能ポリシーを設定する HTTP レスポンスヘッダーを配信することで実現できます。
 
-<pre class="brush: bash">Feature-Policy: geolocation 'self'</pre>
+```
+Feature-Policy: geolocation 'self'
+```
 
-それから `&lt;iframe&gt;` 要素に {{HTMLElement('iframe','allow','#Attributes')}} 属性を含めます。
+それから {{HTMLElement('iframe','allow','#Attributes')}} 属性を `<iframe>` 要素に含めてください。
 
-<pre class="brush: html">&lt;iframe src="https://other.com/map" allow="geolocation"&gt;&lt;/iframe&gt;</pre>
+```html
+<iframe src="https://other.com/map" allow="geolocation"></iframe>
+```
 
-iframe の属性は、選択的に特定のフレームの機能を有効にし、その他はたとえそれらのフレームが同じオリジンからきた文書を含んでいても無効にします。
+興味深いことに、 `allow` 属性は、同じオリジンの文書を含むフレームであっても、あるフレームでは機能を有効にし、他のフレームでは機能を無効にするという選択をすることができます。
 
 ## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Feature Policy')}}</td>
-   <td>{{Spec2('Feature Policy')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-{{Compat("http.headers.Feature-Policy.geolocation")}}
+{{Compat}}
 
 ## 関連情報
 
