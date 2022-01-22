@@ -487,7 +487,7 @@ WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
 
 JavaScript は関数参照にフルアクセスできるため、 Table オブジェクトは JavaScript から [`grow()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get), [`set()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) メソッドを使用して変更することができます。また、 WebAssembly のコード自体も、{{anch("参照型")}}の一部として追加された `table.get` や `table.set` などの命令を使ってテーブルを操作することが可能です。
 
-テテーブルは変更可能であるため、高度な読み込み時および実行時の[動的リンクスキーム](https://webassembly.org/docs/dynamic-linking)の実装に使用することができます。プログラムが動的にリンクされたとき、複数のインスタンスで同じメモリーとテーブルを共有することができます。これは複数のコンパイル済み `.dll` が単一のプロセスのアドレス空間を共有するネイティブアプリケーションと対称的です。
+テーブルは変更可能であるため、高度な読み込み時および実行時の[動的リンクスキーム](https://webassembly.org/docs/dynamic-linking)の実装に使用することができます。プログラムが動的にリンクされたとき、複数のインスタンスで同じメモリーとテーブルを共有することができます。これは複数のコンパイル済み `.dll` が単一のプロセスのアドレス空間を共有するネイティブアプリケーションと対称的です。
 
 この動作を確認するために、Memory オブジェクトと Table オブジェクトを含む単一のインポートオブジェクトを作成し、同じインポートオブジェクトを複数の [`instantiate()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) の呼び出しで渡してみましょう。
 
