@@ -2,28 +2,33 @@
 title: 'Feature-Policy:microphone'
 slug: Web/HTTP/Headers/Feature-Policy/microphone
 tags:
+  - 機能ポリシー
   - Feature-Policy
   - HTTP
-  - HTTP レスポンスヘッダー
-  - microphone
   - ヘッダー
-  - 機能ポリシー
+  - microphone
+  - 実験的
+browser-compat: http.headers.Feature-Policy.microphone
 translation_of: Web/HTTP/Headers/Feature-Policy/microphone
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p><span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける <code>microphone</code> ディレクティブは、現在の文書がオーディオ入力端末を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("MediaDevices.getUserMedia()")}} で返却された {{jsxref('Promise')}} が <code>NotAllowedError</code> で拒否されます。</span></p>
+HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `microphone` ディレクティブは、現在の文書がオーディオ入力機器を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("MediaDevices.getUserMedia()")}} で返却された {{jsxref('Promise')}} が `NotAllowedError` で拒否されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">Feature-Policy: microphone &lt;allowlist&gt;;</pre>
+```
+Feature-Policy: microphone <allowlist>;
+```
 
-<dl>
- <dt>&lt;allowlist&gt;</dt>
- <dd>{{page("/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}既定値は <code>'self'</code> です。</dd>
-</dl>
+ - \<allowlist>
+  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 既定のポリシー
+
+`geolocation` の既定の許可リストは `'self'` です。
+
+## 仕様書
 
 <table class="standard-table">
  <thead>
@@ -44,12 +49,10 @@ translation_of: Web/HTTP/Headers/Feature-Policy/microphone
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-<p>{{Compat("http.headers.Feature-Policy.microphone")}}</p>
+{{Compat("http.headers.Feature-Policy.microphone")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPHeader("Feature-Policy")}} ヘッダー</li>
- <li><a href="/ja/docs/Web/HTTP/Feature_Policy">機能ポリシー</a></li>
- <li><a href="/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">機能ポリシーの使用</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} ヘッダー
+- [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)
+- [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
