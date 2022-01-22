@@ -4,26 +4,24 @@ slug: Web/HTTP/Headers/Feature-Policy/camera
 tags:
   - Feature-Policy
   - HTTP
-  - Reference
+  - リファレンス
   - camera
   - ディレクティブ
   - 機能ポリシー
 translation_of: Web/HTTP/Headers/Feature-Policy/camera
 ---
-<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p><span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける <code>camera</code> ディレクティブは、現在の文書が動画入力機器を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("MediaDevices.getUserMedia()")}} から返却された {{jsxref("Promise")}} が <code>NotAllowedError</code> で拒否されます。</span></p>
+<span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `camera` ディレクティブは、現在の文書が動画入力機器を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("MediaDevices.getUserMedia()")}} から返却された {{jsxref("Promise")}} が `NotAllowedError` で拒否されます。</span>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 <pre class="syntaxbox">Feature-Policy: camera &lt;allowlist&gt;;</pre>
 
-<dl>
  <dt>&lt;allowlist&gt;</dt>
- <dd>{{page("/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}既定値は <code>'self'</code> です。</dd>
-</dl>
+  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
 <table class="standard-table">
  <thead>
@@ -44,12 +42,10 @@ translation_of: Web/HTTP/Headers/Feature-Policy/camera
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-<p>{{Compat("http.headers.Feature-Policy.camera")}}</p>
+{{Compat("http.headers.Feature-Policy.camera")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPHeader("Feature-Policy")}} ヘッダー</li>
- <li><a href="/ja/docs/Web/HTTP/Feature_Policy">機能ポリシー</a></li>
- <li><a href="/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">機能ポリシーの使用</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} ヘッダー
+- [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)
+- [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
