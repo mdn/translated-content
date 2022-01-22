@@ -9,19 +9,22 @@ tags:
   - Payment Request API
   - Payments API
   - リファレンス
-  - 決済 API
+  - 実験的
+browser-compat: http.headers.Feature-Policy.payment
 translation_of: Web/HTTP/Headers/Feature-Policy/payment
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-<span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーフィールドにおける `payment` ディレクティブは、現在の文書が [Payment Request API](/ja/docs/Web/API/Payment_Request_API) を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{DOMxRef("PaymentRequest()")}} コンストラクターで {{exception("SyntaxError")}} 例外が発生します。</span>
+HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーフィールドにおける `payment` ディレクティブは、現在の文書が [Payment Request API](/ja/docs/Web/API/Payment_Request_API) を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{DOMxRef("PaymentRequest()")}} コンストラクターで {{exception("SyntaxError")}} 例外が発生します。
 
 ## 構文
 
-<pre class="syntaxbox notranslate">Feature-Policy: payment &lt;allowlist&gt;;</pre>
+```
+Feature-Policy: payment <allowlist>;
+```
 
- - \<allowlist>
- <dd>{{page("/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}</dd>
+- \<allowlist>
+  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
 
 ## 既定のポリシー
 
@@ -29,31 +32,14 @@ translation_of: Web/HTTP/Headers/Feature-Policy/payment
 
 ## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Payment')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>See [Section 16. Feature Policy integration](https://w3c.github.io/payment-request/#feature-policy).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Feature Policy')}}</td>
-   <td>{{Spec2('Feature Policy')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                         | 状態                        | 備考                                                                                                   |
+| ------------------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------ |
+| {{SpecName('Payment')}}        | {{Spec2('Payment')}}        | [Section 16. Feature Policy integration](https://w3c.github.io/payment-request/#feature-policy) を参照 |
+| {{SpecName('Feature Policy')}} | {{Spec2('Feature Policy')}} | 初回定義                                                                                               |
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Feature-Policy.payment")}}
+{{Compat}}
 
 ## 関連情報
 
