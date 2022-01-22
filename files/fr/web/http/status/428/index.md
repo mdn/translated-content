@@ -12,9 +12,9 @@ translation_of: Web/HTTP/Status/428
 
 Le code de statut de réponse HTTP **`428 Precondition Required`** indique que le serveur requiert que la requête soit [conditionnelle](/fr/docs/Web/HTTP/Conditional_requests).
 
-Généralement, cela signifie qu'il **manque** un en-tête de précondition, comme {{HTTPHeader("If-Match")}}.
+Généralement, cela signifie qu'il **manque** un en-tête de précondition, comme [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match).
 
-Lorsqu'un en-tête de précondition **ne correspond pas** à l'état du serveur, la réponse doit être {{HTTPStatus(412)}} `Precondition Failed`.
+Lorsqu'un en-tête de précondition **ne correspond pas** à l'état du serveur, la réponse doit être [`412 Precondition Failed`](/fr/docs/Web/HTTP/Status/412).
 
 ## Statut
 
@@ -29,5 +29,5 @@ Lorsqu'un en-tête de précondition **ne correspond pas** à l'état du serveur,
 ## Voir aussi
 
 - [Les requêtes conditionnelles en HTTP](/fr/docs/Web/HTTP/Conditional_requests)
-- {{HTTPHeader("If-Match")}}
-- {{HTTPStatus(412)}}
+- [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match)
+- [`412`](/fr/docs/Web/HTTP/Status/412)

@@ -1,30 +1,28 @@
 ---
 title: 303 See Other
 slug: Web/HTTP/Status/303
-tags:
-  - Code de statut
-  - HTTP
-  - Référence(2)
 translation_of: Web/HTTP/Status/303
+browser-compat: http.status.303
 ---
 {{HTTPSidebar}}
 
-Le code de statut de réponse de redirection **`303 See Other`**, généralement renvoyé comme résultat d'une opération {{HTTPMethod("PUT")}} ou {{HTTPMethod("POST")}}, indique que la redirection ne fait pas le lien vers la ressource nouvellement téléversé mais vers une autre page (par exemple une page de confirmation ou qui affiche l'avancement du téléversement). La méthode utilisée pour afficher la page redirigée est toujours {{HTTPMethod("GET")}}.
+Le code de statut de réponse de redirection **`303 See Other`**, généralement renvoyé comme résultat d'une opération [`PUT`](/fr/docs/Web/HTTP/Methods/PUT) ou [`POST`](/fr/docs/Web/HTTP/Methods/POST), indique que la redirection ne fait pas le lien vers la ressource nouvellement téléversé mais vers une autre page (par exemple une page de confirmation ou qui affiche l'avancement du téléversement). La méthode utilisée pour afficher la page redirigée est toujours [`GET`](/fr/docs/Web/HTTP/Methods/GET).
 
 ## Statut
 
-    303 See Other
+```
+303 See Other
+```
 
 ## Spécifications
 
-| Spécification                                            | Titre                                                         |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "303 See Other" , "6.4.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/status", "303")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{HTTPStatus("302")}} `Found`, la redirection temporaire.
+- [`302 Found`](/fr/docs/Web/HTTP/Status/302), la redirection temporaire.
+- [`307 Temporary Redirect`](/fr/docs/Web/HTTP/Status/307), l'équivalent de ce code de statut, mais qui ne change jamais la méthode utilisée.

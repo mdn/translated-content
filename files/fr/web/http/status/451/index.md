@@ -20,7 +20,7 @@ Le code de réponse d'erreur HTTP **`451 Unavailable For Legal Reasons`** indiqu
 
 Cet exemple de réponse est tiré de la RFC IETF (cf. ci-après), et contient une référence à {{interwiki("wikipedia", "Monty_Python's_Life_of_Brian", "<em>Monty Python : La Vie de Brian</em>")}}.
 
-Notez que l'en-tête {{HTTPHeader("Link")}} peut aussi contenir une relation  `rel="blocked-by"` identifiant l'entité responsable de l'indisponibilité de la ressource (par exemple le nom de la personne ou de l'organisation à l'origine de la demande légale ayant entraîné le retrait du contenu).
+Notez que l'en-tête [`Link`](/fr/docs/Web/HTTP/Headers/Link) peut aussi contenir une relation  `rel="blocked-by"` identifiant l'entité responsable de l'indisponibilité de la ressource (par exemple le nom de la personne ou de l'organisation à l'origine de la demande légale ayant entraîné le retrait du contenu).
 
     HTTP/1.1 451 Unavailable For Legal Reasons
     Link: <https://spqr.example.org/legislatione>; rel="blocked-by"

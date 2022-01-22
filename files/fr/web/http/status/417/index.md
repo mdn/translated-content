@@ -11,9 +11,9 @@ translation_of: Web/HTTP/Status/417
 ---
 {{HTTPSidebar}}
 
-Le code de réponse d'erreur HTTP **`417 Expectation Failed`** indique que les attentes indiquées par l'en-tête {{HTTPHeader ("Expect")}} n'ont pu être satisfaites.
+Le code de réponse d'erreur HTTP **`417 Expectation Failed`** indique que les attentes indiquées par l'en-tête [`Expect`](/fr/docs/Web/HTTP/Headers/Expect) n'ont pu être satisfaites.
 
-Voir la page sur l'en-tête {{HTTPHeader("Expect")}} pour plus de détails.
+Voir la page sur l'en-tête [`Expect`](/fr/docs/Web/HTTP/Headers/Expect) pour plus de détails.
 
 ## Statut
 
@@ -27,4 +27,4 @@ Voir la page sur l'en-tête {{HTTPHeader("Expect")}} pour plus de détails.
 
 ## Voir aussi
 
-- {{HTTPHeader("Expect")}}
+- [`Expect`](/fr/docs/Web/HTTP/Headers/Expect)

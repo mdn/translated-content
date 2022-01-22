@@ -14,7 +14,7 @@ Le code de statut de réponse HTTP **`414 URI Too Long`** indique que l'URI dema
 
 Il existe quelques rares cas de figure pour lesquels cela peut se produire :
 
-- un client a mal converti une requête {{HTTPMethod("POST")}} vers une requête {{HTTPMethod("GET")}} qui contient de nombreuses informations,
+- un client a mal converti une requête [`POST`](/fr/docs/Web/HTTP/Methods/POST) vers une requête [`GET`](/fr/docs/Web/HTTP/Methods/GET) qui contient de nombreuses informations,
 - un client est descendu dans une boucle de redirection (par exemple, un URI de redirection qui pointe vers un suffixe de lui-même),
 - un serveur est sous le coup d'une attaque par un client qui tente d'exploiter des failles de sécurité potentielles.
 

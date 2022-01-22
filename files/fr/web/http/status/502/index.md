@@ -29,4 +29,4 @@ Une {{interwiki("wikipedia", "Passerelle_(informatique)", "passerelle")}} peut f
 
 ## Voir aussi
 
-- {{HTTPStatus(504)}}
+- [`504`](/fr/docs/Web/HTTP/Status/504)

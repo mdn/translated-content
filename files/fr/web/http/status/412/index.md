@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Status/412
 ---
 {{HTTPSidebar}}
 
-Le code de réponse d'erreur HTTP **`412 Precondition Failed`** indique que l'accès à la ressource visée a été refusé. Cela arrive avec les requêtes conditionnelles lorsque les méthodes utilisées ne sont pas  {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}} et que la condition définie par les en-têtes  {{HTTPHeader("If-Unmodified-Since")}} ou {{HTTPHeader("If-None-Match")}} n'est pas respectée. Dans ce cas, la requête, généralement un téléversement ou une modification d'une ressource, ne peut être appliquée et ce code de réponse d'erreur est renvoyé.
+Le code de réponse d'erreur HTTP **`412 Precondition Failed`** indique que l'accès à la ressource visée a été refusé. Cela arrive avec les requêtes conditionnelles lorsque les méthodes utilisées ne sont pas  [`GET`](/fr/docs/Web/HTTP/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) et que la condition définie par les en-têtes  [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since) ou [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match) n'est pas respectée. Dans ce cas, la requête, généralement un téléversement ou une modification d'une ressource, ne peut être appliquée et ce code de réponse d'erreur est renvoyé.
 
 ## Statut
 
@@ -28,7 +28,7 @@ Le code de réponse d'erreur HTTP **`412 Precondition Failed`** indique que l'ac
 
 ## Voir aussi
 
-- {{HTTPStatus("304")}}
-- {{HTTPHeader("If-Unmodified-Since")}}
-- {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("428")}}
+- [`304 Not Modified`](/fr/docs/Web/HTTP/Status/304)
+- [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since)
+- [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match)
+- [`428`](/fr/docs/Web/HTTP/Status/428)

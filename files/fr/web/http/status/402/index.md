@@ -2,21 +2,26 @@
 title: 402 Payment Required
 slug: Web/HTTP/Status/402
 translation_of: Web/HTTP/Status/402
+browser-compat: http.status.402
 ---
-{{SeeCompatTable}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
-Le code de statut de réponse HTTP **`402 Payment Required`** est une erreur non standard réservée pour un usage futur.
+Le code de statut de réponse HTTP **`402 Payment Required`** est une erreur non standard réservée pour un usage futur.
 
-En général ce code indique que la requete ne peut pas etre traitée avant que le client fasse un paiement. Initialement il a été créé afin de permettre des (micro) paiements numériques et indiquerait que le contenu demandé n'est pas disponible avant que le client ne fasse un paiement. Cependant, aucune convention d'usage commune n'existe et différentes entités l'utilisent dans différents contextes.
+En général, ce code indique que la requete ne peut pas etre traitée avant que le client fasse un paiement. Initialement il a été créé afin de permettre des (micro) paiements numériques et indiquerait que le contenu demandé n'est pas disponible avant que le client ne fasse un paiement. Cependant, aucune convention d'usage commune n'existe et différentes entités l'utilisent dans différents contextes.
 
 ## Statut
 
-    402 Payment Required
+```
+402 Payment Required
+```
 
 ## Exemple de réponse
 
-    HTTP/1.1 402 Payment Required
-    Date: Wed, 21 Oct 2015 07:28:00 GMT
+```
+HTTP/1.1 402 Payment Required
+Date: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
 ## Spécifications
 
@@ -26,8 +31,8 @@ En général ce code indique que la requete ne peut pas etre traitée avant que 
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.status.402")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- [Authentification HTTP](/fr/docs/Web/HTTP/Authentication)

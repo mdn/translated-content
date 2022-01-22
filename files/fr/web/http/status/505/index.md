@@ -24,4 +24,4 @@ Le code de réponse HTTP d'erreur serveur **`505 HTTP Version Not Supported`** i
 
 ## Voir aussi
 
-- {{HTTPHeader("Upgrade")}}
+- [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade)
