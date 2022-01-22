@@ -2,33 +2,31 @@
 title: 'Feature-Policy: midi'
 slug: Web/HTTP/Headers/Feature-Policy/midi
 tags:
-  - Directive
+  - ディレクティブ
   - Feature-Policy
   - HTTP
   - MIDI
-  - Reference
+  - リファレンス
   - ディレクティブ
   - 機能ポリシー
 translation_of: Web/HTTP/Headers/Feature-Policy/midi
 ---
-<p>{{HTTPSidebar}}{{SeeCompatTable}}</p>
+{{HTTPSidebar}}{{SeeCompatTable}}
 
-<p><span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける <code>midi</code> ディレクティブは、現在の文書が <a href="/ja/docs/Web/API/Web_MIDI_API">Web MIDI API</a> を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("Navigator.requestMIDIAccess()")}} から返却された {{jsxref("Promise")}} が <code>DOMException</code> で拒否されます。</span></p>
+<span class="seoSummary">HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `midi` ディレクティブは、現在の文書が [Web MIDI API](/ja/docs/Web/API/Web_MIDI_API) を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("Navigator.requestMIDIAccess()")}} から返却された {{jsxref("Promise")}} が `DOMException` で拒否されます。</span>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 <pre class="syntaxbox notranslate">Feature-Policy: midi &lt;allowlist&gt;;</pre>
 
-<dl>
- <dt>&lt;allowlist&gt;</dt>
+ - \<allowlist>
  <dd>{{page("/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}</dd>
-</dl>
 
-<h2 id="Default_policy" name="Default_policy">既定のポリシー</h2>
+## 既定のポリシー
 
-<p>許可リストは <code>'self'</code> です。</p>
+許可リストは `'self'` です。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
 <table class="standard-table">
  <thead>
@@ -47,14 +45,12 @@ translation_of: Web/HTTP/Headers/Feature-Policy/midi
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("http.headers.Feature-Policy.midi")}}</p>
+{{Compat("http.headers.Feature-Policy.midi")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPHeader("Feature-Policy")}} ヘッダー</li>
- <li><a href="/ja/docs/Web/HTTP/Feature_Policy">機能ポリシー</a></li>
- <li><a href="/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">機能ポリシーの使用</a></li>
-</ul>
+- {{HTTPHeader("Feature-Policy")}} ヘッダー
+- [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)
+- [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
