@@ -1,5 +1,5 @@
 ---
-title: 'Feature-Policy:microphone'
+title: 'Feature-Policy: microphone'
 slug: Web/HTTP/Headers/Feature-Policy/microphone
 tags:
   - 機能ポリシー
@@ -30,26 +30,11 @@ Feature-Policy: microphone <allowlist>;
 
 ## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Feature Policy')}}</td>
-   <td>{{Spec2('Feature Policy')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-{{Compat("http.headers.Feature-Policy.microphone")}}
+{{Compat}}
 
 ## 関連情報
 
