@@ -4,68 +4,73 @@ slug: Web/CSS/zoom
 tags:
   - CSS
   - CSS プロパティ
-  - Microsoft 拡張
-  - Non-standard
-  - WebKit 拡張
-  - リファレンス
   - 標準外
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.zoom
 translation_of: Web/CSS/zoom
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p><span class="seoSummary"> <a href="/ja/docs/Web/CSS">CSS</a> の標準外の <strong><dfn><code>zoom</code></dfn></strong> プロパティは、要素の拡大率を制御するために使用することができます。</span>できれば、このプロパティの代わりに {{cssxref("transform-function/scale", "transform: scale()")}} を使用してください。ただし、 CSS 変換とは異なり、 <code>zoom</code> は要素のレイアウト時の大きさに影響します。</p>
+**_`zoom`_** は [CSS](/ja/docs/Web/CSS) の標準外のプロパティで、要素の拡大率を制御するために使用することができます。できれば、このプロパティの代わりに {{cssxref("transform-function/scale", "transform: scale()")}} を使用してください。ただし、 CSS 座標変換とは異なり、 `zoom` は要素のレイアウト時の大きさに影響します。
 
-<pre class="brush: css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 zoom: normal;
 zoom: reset;
 
-/* &lt;percentage&gt; 値 */
+/* <percentage> 値 */
 zoom: 50%;
 zoom: 200%;
 
-/* &lt;number&gt; 値 */
+/* <number> 値 */
 zoom: 1.1;
 zoom: 0.7;
 
 /* グローバル値 */
 zoom: inherit;
 zoom: initial;
-zoom: unset;</pre>
+zoom: unset;
+```
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+- `normal`
+  - : 要素を通常のサイズでレンダリングします。
+- `reset` {{non-standard_inline}}
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>要素を通常のサイズでレンダリングします。</dd>
- <dt><code>reset</code> {{non-standard_inline}}</dt>
- <dd>ユーザーが非ピンチベースのズームを利用したときは (たとえばキーボードで <kbd>Ctrl</kbd>-<kbd>-</kbd> または <kbd>Ctrl</kbd>+<kbd>+</kbd> のショートカット) 要素を拡大しない。 WebKit (とおそらく Blink) のみサポートされています。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>ズーム率です。 <code>100%</code> と <code>normal</code> は等価です。 <code>100%</code> よりも大きな値はズームイン、 <code>100%</code>よりも小さな値はズームアウトします。</dd>
- <dt>{{cssxref("&lt;number&gt;")}}</dt>
- <dd>ズーム率です。対応するパーセンテージ (<code>1.0</code> = <code>100%</code> = <code>normal</code>) に相当します。 <code>1.0</code> よりも大きな値はズームイン、 <code>1.0</code> よりも小さな値はズームアウトします。</dd>
-</dl>
+  - : ユーザーが非ピンチベースのズームを利用したときは (たとえばキーボードで <kbd>Ctrl</kbd>-<kbd>-</kbd> または <kbd>Ctrl</kbd>+<kbd>+</kbd> のショートカット) 要素を拡大しない。 WebKit (とおそらく Blink) のみ対応しています。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : ズーム率です。 `100%` と `normal` は等価です。 `100%` よりも大きな値はズームイン、 `100%`よりも小さな値はズームアウトします。
+- {{cssxref("&lt;number&gt;")}}
+  - : ズーム率です。対応するパーセンテージ (`1.0` = `100%` = `normal`) に相当します。 `1.0` よりも大きな値はズームイン、 `1.0` よりも小さな値はズームアウトします。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="First_example" name="First_example">最初の例</h3>
+### 最初の例
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="small"&gt;Small&lt;/p&gt;
-&lt;p class="normal"&gt;Normal&lt;/p&gt;
-&lt;p class="big"&gt;Big&lt;/p&gt;</pre>
+```html
+<p class="small">Small</p>
+<p class="normal">Normal</p>
+<p class="big">Big</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p.small {
+```css
+p.small {
   zoom: 75%;
 }
 p.normal {
@@ -80,23 +85,26 @@ p {
 p:hover {
   zoom: reset;
 }
-</pre>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('First_example')}}</p>
+{{EmbedLiveSample('First_example')}}
 
-<h3 id="Second_example" name="Second_example">2番目の例</h3>
+### 2 番目の例
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="a" class="circle"&gt;&lt;/div&gt;
-&lt;div id="b" class="circle"&gt;&lt;/div&gt;
-&lt;div id="c" class="circle"&gt;&lt;/div&gt;</pre>
+```html
+<div id="a" class="circle"></div>
+<div id="b" class="circle"></div>
+<div id="c" class="circle"></div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div.circle {
+```css
+div.circle {
   width: 25px;
   height: 25px;
   border-radius: 100%;
@@ -117,24 +125,22 @@ div#c {
   background-color: blue;
   zoom: 2.9;
 }
-</pre>
+```
 
-<h4 id="Result_2" name="Result_2">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Second_example')}}</p>
+{{EmbedLiveSample('Second_example')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<p>このプロパティは標準外であり、 Internet Explorer を起源としています。 Apple は <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15">Safari CSS Referenceで説明しています</a>。マイクロソフトの Rossen Atanassov は <a href="http://cdn.rawgit.com/atanassov/css-zoom/master/Overview.html">GitHubに非公式の仕様案を公開しています</a>。</p>
+標準には含まれていません。このプロパティは Internet Explorer を起源としています。 Apple は [Safari CSS Referenceで説明しています](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15)。マイクロソフトの Rossen Atanassov は [GitHub に非公式の仕様案を公開しています](https://cdn.rawgit.com/atanassov/css-zoom/master/Overview.html)。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.zoom")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>CSS-Tricks' CSS Almanac の <a href="https://css-tricks.com/almanac/properties/z/zoom/"><code>zoom</code> の記事</a></li>
- <li> <a href="/ja/docs/Web/CSS/@viewport/zoom"><code>zoom</code> ビューポート記述子</a>、 <a href="/ja/docs/Web/CSS/@viewport"><code>@viewport</code></a> で使用</li>
- <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=390936">Bug 390936: Implement Internet Explorer <code>zoom</code> property for CSS </a>on the Firefox issue tracker Bugzilla</li>
-</ul>
+- CSS-Tricks' CSS Almanac の [`zoom` の記事](https://css-tricks.com/almanac/properties/z/zoom/)
+-  `zoom` 記述子（[`@viewport`](/ja/docs/Web/CSS/@viewport) で使用）
+- [Bug 390936: Implement Internet Explorer `zoom` property for CSS](https://bugzilla.mozilla.org/show_bug.cgi?id=390936) on the Firefox issue tracker Bugzilla
