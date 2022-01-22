@@ -5,7 +5,7 @@ tags:
   - Feature-Policy
   - HTTP
   - Web Share
-  - Experimental
+  - 実験的
 browser-compat: http.headers.Feature-Policy.web-share
 translation_of: Web/HTTP/Headers/Feature-Policy/web-share
 ---
@@ -38,6 +38,6 @@ Feature-Policy: web-share <allowlist>;
 
 ## 関連情報
 
-- {{HTTPHeader('Feature-Policy')}} header
-- [機能ポリシー](/en-US/docs/Web/HTTP/Feature_Policy)
-- [機能ポリシーの使用](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- {{HTTPHeader('Feature-Policy')}} ヘッダー
+- [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)
+- [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
