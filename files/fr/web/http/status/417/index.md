@@ -1,12 +1,6 @@
 ---
 title: 417 Expectation Failed
 slug: Web/HTTP/Status/417
-tags:
-  - Client error
-  - Code de statut
-  - HTTP
-  - HTTP Status Code
-  - Reference
 translation_of: Web/HTTP/Status/417
 ---
 {{HTTPSidebar}}
@@ -17,13 +11,15 @@ Voir la page sur l'en-tête [`Expect`](/fr/docs/Web/HTTP/Headers/Expect) pour pl
 
 ## Statut
 
-    417 Expectation Failed
+```
+417 Expectation Failed
+```
 
 ## Spécifications
 
 | Spécification                                                        | Titre                                                         |
 | -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "417 Expectation Failed" , "6.5.14")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| [RFC 7231, section 6.5.14: 417 Expectation Failed](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.14) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Voir aussi
 

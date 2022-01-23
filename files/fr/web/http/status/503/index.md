@@ -1,11 +1,8 @@
 ---
 title: 503 Service Unavailable
 slug: Web/HTTP/Status/503
-tags:
-  - Code de statut
-  - Erreur serveur
-  - HTTP
 translation_of: Web/HTTP/Status/503
+browser-compat: http.status.503
 ---
 {{HTTPSidebar}}
 
@@ -17,18 +14,19 @@ Les en-têtes relatifs au cache qui sont envoyés avec cette réponse doivent ê
 
 ## Statut
 
-    503 Service Unavailable
+```
+503 Service Unavailable
+```
 
 ## Spécifications
 
-| Spécification                                                        | Titre                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "503 Service Unavailable" , "6.6.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/status", "503")}}
+{{Compat}}
 
 ## Voir aussi
 
 - [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After)
+- [HTTP/1.1&nbsp;: Définitions des codes de statut (en anglais)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)

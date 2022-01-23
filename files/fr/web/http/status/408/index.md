@@ -21,7 +21,7 @@ Cette réponse est plus utilisée depuis que certains navigateurs, comme Chrome,
 
 | Spécification                                                    | Titre                                                         |
 | ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "408 Request Timeout" , "6.5.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| [RFC 7231, section 6.5.7: 408 Request Timeout](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.7) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Voir aussi
 

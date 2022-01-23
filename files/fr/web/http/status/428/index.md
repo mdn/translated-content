@@ -1,11 +1,6 @@
 ---
 title: 428 Precondition Required
 slug: Web/HTTP/Status/428
-tags:
-  - Code de statut
-  - Erreur client
-  - HTTP
-  - Reference
 translation_of: Web/HTTP/Status/428
 ---
 {{HTTPSidebar}}
@@ -18,13 +13,15 @@ Lorsqu'un en-tête de précondition **ne correspond pas** à l'état du serveur,
 
 ## Statut
 
-    428 Precondition Required
+```
+428 Precondition Required
+```
 
 ## Spécifications
 
 | Spécification                                                        | Titre                        |
 | -------------------------------------------------------------------- | ---------------------------- |
-| {{RFC("6585", "428 Precondition Required" , "3")}} | Additional HTTP Status Codes |
+| [RFC 6585, section 3: 428 Precondition Required](https://datatracker.ietf.org/doc/html/rfc6585#section-3) | Additional HTTP Status Codes |
 
 ## Voir aussi
 

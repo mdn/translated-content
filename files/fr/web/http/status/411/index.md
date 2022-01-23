@@ -1,11 +1,6 @@
 ---
 title: 411 Length Required
 slug: Web/HTTP/Status/411
-tags:
-  - Code de statut
-  - Erreur client
-  - HTTP
-  - Reference
 translation_of: Web/HTTP/Status/411
 ---
 {{HTTPSidebar}}
@@ -16,13 +11,15 @@ On notera que, selon la spécification, lors de l'envoi de données en plusieurs
 
 ## Statut
 
-    411 Length Required
+```
+411 Length Required
+```
 
 ## Spécifications
 
 | Spécification                                                    | Titre                                                         |
 | ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "411 Length Required" , "6.5.10")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| [RFC 7231, section 6.5.10: 411 Length Required](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.10) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Voir aussi
 

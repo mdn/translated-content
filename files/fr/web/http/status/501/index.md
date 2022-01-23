@@ -1,12 +1,8 @@
 ---
 title: 501 Not Implemented
 slug: Web/HTTP/Status/501
-tags:
-  - Code de statut
-  - Erreur serveur
-  - HTTP
-  - Reference
 translation_of: Web/HTTP/Status/501
+browser-compat: http.status.501
 ---
 {{HTTPSidebar}}
 
@@ -18,14 +14,14 @@ Une erreur 501 ne peut pas être corrigée via le client (c'est-à-dire le navig
 
 ## Statut
 
-    501 Not Implemented
+```
+501 Not Implemented
+```
 
 ## Spécifications
 
-| Specification                                                    | Title                                                         |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "501 Not Implemented" , "6.6.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/status", "501")}}
+{{Compat}}

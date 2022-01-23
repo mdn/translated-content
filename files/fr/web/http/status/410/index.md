@@ -1,12 +1,8 @@
 ---
 title: 410 Gone
 slug: Web/HTTP/Status/410
-tags:
-  - Code de statut
-  - Erreur client
-  - HTTP
-  - Référence(2)
 translation_of: Web/HTTP/Status/410
+browser-compat: http.status.410
 ---
 {{HTTPSidebar}}
 
@@ -18,20 +14,19 @@ Si vous ne savez pas si cette absence est temporaire ou permanente, il est préf
 
 ## Statut
 
-    410 Gone
+```
+410 Gone
+```
 
 ## Spécifications
 
-| Spécification                                    | Titre                                                         |
-| ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "410 Gone" , "6.5.9")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-L'information ci-dessous provient du GitHub de MDN (<https://github.com/mdn/browser-compat-data>).
-
-{{Compat("http.status.410")}}
+{{Compat}}
 
 ## Voir aussi
 
 - [`404`](/fr/docs/Web/HTTP/Status/404)
+- [410 gone (en anglais)](https://www.exai.com/blog/410-gone-client-error)

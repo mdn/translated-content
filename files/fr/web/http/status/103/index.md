@@ -18,7 +18,7 @@ Le code de statut de réponse **`103 Early Hints`** est principalement utilisé 
 
 | Spécification                                | État     | Commentaire      |
 | -------------------------------------------- | -------- | ---------------- |
-| {{RFC(8297, "103 Early Hints")}} | IETF RFC | Première version |
+| [RFC 8297: 103 Early Hints](https://datatracker.ietf.org/doc/html/rfc8297) | IETF RFC | Première version |
 
 ## Compatibilité des navigateurs
 

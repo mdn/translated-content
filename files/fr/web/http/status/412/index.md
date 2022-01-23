@@ -1,12 +1,8 @@
 ---
 title: 412 Precondition Failed
 slug: Web/HTTP/Status/412
-tags:
-  - Code de statut
-  - Erreur
-  - HTTP
-  - Reference
 translation_of: Web/HTTP/Status/412
+browser-compat: http.status.412
 ---
 {{HTTPSidebar}}
 
@@ -14,17 +10,24 @@ Le code de réponse d'erreur HTTP **`412 Precondition Failed`** indique que l'ac
 
 ## Statut
 
-    412 Precondition Failed
+```
+412 Precondition Failed
+```
+
+## Exemples
+
+```
+ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+ETag: W/"0815"
+```
 
 ## Spécifications
 
-| Spécification                                                        | Titre                                                        |
-| -------------------------------------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "412 Precondition Failed" , "4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/status", "412")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,12 +1,8 @@
 ---
 title: 409 Conflict
 slug: Web/HTTP/Status/409
-tags:
-  - Code de statut
-  - Erreur client
-  - HTTP
-  - Reference
 translation_of: Web/HTTP/Status/409
+browser-compat: http.status.409
 ---
 {{HTTPSidebar}}
 
@@ -16,13 +12,17 @@ Les conflits se produisent généralement en réponse à une requête [`PUT`](/f
 
 ## Statut
 
-    409 Conflict
+```
+409 Conflict
+```
 
 ## Spécifications
 
-| Spécification                                            | Titre                                                         |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "409 Conflict" , "6.5.8")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

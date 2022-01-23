@@ -29,11 +29,11 @@ Connection: Upgrade
 
 | Spécification                                                        | Titre                                                         |
 | -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "101 Switching Protocol" , "6.2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| [RFC 7231, section 6.2.2: 101 Switching Protocol](https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.2) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Voir aussi
 
-- 
+- [Mécanisme de mise à jour du protocole](/fr/docs/Web/HTTP/Protocol_upgrade_mechanism)
 - [WebSockets](/fr/docs/WebSockets)
 - [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade)
 - [`426 Upgrade Required`](/fr/docs/Web/HTTP/Status/426)

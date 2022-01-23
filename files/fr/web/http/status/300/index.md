@@ -23,7 +23,7 @@ Consultez [cette page de w3.org à propos des réponses à choix multiples](http
 
 | Spécification                                                    | Titre                                                         |
 | ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "300 Multiple Choices" , "6.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| [RFC 7231, section 6.4.1: 300 Multiple Choices] | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Voir aussi
 

@@ -19,11 +19,11 @@ Le serveur doit générer un champ **`Allow`** dans le header en cas de réponse
 
 | Spécification                                                        | Titre                                                         |
 | -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "405 Method Not Allowed" , "6.5.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| [RFC 7231, section 6.5.5: 405 Method Not Allowed](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.5) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Voir aussi
 
 - [`Allow`](/fr/docs/Web/HTTP/Headers/Allow)
 - [HTTP/1.1&nbsp;: Définitions des codes de statut (en anglais)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
-- [How to Fix 405 Method Not Allowed (en anglais)](https://kinsta.com/blog/405-method-not-allowed-error/)
-- [Troubleshooting HTTP 405 (en anglais)](https://docs.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)
+- [Comment corriger l'erreur `405 Method Not Allowed`](https://kinsta.com/fr/blog/erreur-405-method-not-allowed/)
+- [Résoudre l'erreur HTTP 405](https://docs.microsoft.com/fr-fr/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)

@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Status
 ---
 {{HTTPSidebar}}
 
-Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/Web/HTTP) a été exécutée avec succès ou non. Les réponses sont regroupées en cinq classes:
+Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/Web/HTTP) a été exécutée avec succès ou non. Les réponses sont regroupées en cinq classes&nbsp;:
 
 1.  [Les réponses informatives](#réponses_informatives) (`100` - `199`),
 2.  [Les réponses de succès](#réponses_de_succès) (`200` - `299`),
@@ -17,12 +17,13 @@ Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/W
 
 - [`100 Continue`](/fr/docs/Web/HTTP/Status/100)
   - : Cette réponse intermédiaire indique que tout est OK pour le moment et que le client peut continuer sa requête ou l'ignorer si celle-ci est déjà finie.
-- [`101 Switching Protocol`](/fr/docs/Web/HTTP/Status/101)
+- [`101 Switching Protocols`](/fr/docs/Web/HTTP/Status/101)
   - : Ce code est envoyé en réponse à un en-tête de requête [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade) de la part du client et indique le protocole sur lequel passe le serveur.
 - [`102 Processing`](/fr/docs/Web/HTTP/Status/102) ([WebDAV](/fr/docs/Glossary/WebDAV))
-  - : Ce code indique que le serveur a reçu et est en train de traiter une la requête mais qu'une réponse n'est pas encore disponible.
+  - : Ce code indique que le serveur a reçu et est en train de traiter la requête mais qu'une réponse n'est pas encore disponible.
 - [`103 Early Hints`](/fr/docs/Web/HTTP/Status/103)
   - : Ce code de statut est conçu pour être utilisé avec l'en-tête [`Link`](/fr/docs/Web/HTTP/Headers/Link), ce qui permet à l'agent utilisateur de commencer [le préchargement](/fr/docs/Web/HTML/Link_types/preload) des ressources tandis que le serveur prépare une réponse.
+
 ## Réponses de succès
 
 - [`200 OK`](/fr/docs/Web/HTTP/Status/200)
@@ -88,7 +89,7 @@ Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/W
 - [`405 Method Not Allowed`](/fr/docs/Web/HTTP/Status/405)
   - : La méthode de la requête est connue du serveur mais n'est pas prise en charge pour la ressource cible. Par exemple, une API peut ne pas autoriser l'utilisation du verbe `DELETE` pour supprimer une ressource.
 - [`406 Not Acceptable`](/fr/docs/Web/HTTP/Status/406)
-  - : Cette réponse est envoyée quand le serveur web, après une [négociation de contenu géré par le serveur](/fr/docs/HTTP/Content_negotiation#Server-driven_negotiation), ne trouve rien qui satisfasse les critères donnés par l'agent utilisateur.
+  - : Cette réponse est envoyée quand le serveur web, après une [négociation de contenu géré par le serveur](/fr/docs/HTTP/Content_negotiation#la_négociation_de_contenu_gérée_par_le_serveur), ne trouve rien qui satisfasse les critères donnés par l'agent utilisateur.
 - [`407 Proxy Authentication Required`](/fr/docs/Web/HTTP/Status/407)
   - : Similaire au code `401`, sauf que l'authentification doit être effectuée au travers d'un proxy.
 - [`408 Request Timeout`](/fr/docs/Web/HTTP/Status/408)
@@ -108,7 +109,7 @@ Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/W
 - [`415 Unsupported Media Type`](/fr/docs/Web/HTTP/Status/415)
   - : Le format média des données demandées n'est pas supporté par le serveur, donc le serveur rejette la requête.
 - [`416 Range Not Satisfiable`](/fr/docs/Web/HTTP/Status/416)
-  - : La plage spécifiée par le champ d'en-tête `Range` de la requête ne peut pas être satisfaite ; il est possible que la plage excède la taille des données provenant de l'URI ciblé.
+  - : La plage spécifiée par le champ d'en-tête `Range` de la requête ne peut pas être satisfaite&nbsp;; il est possible que la plage excède la taille des données provenant de l'URI ciblé.
 - [`417 Expectation Failed`](/fr/docs/Web/HTTP/Status/417)
   - : Ce code de réponse signifie que les attentes indiquées par le champ d'en-tête de requête `Expect` n'ont pas pu être satisfaites par le serveur.
 - [`418 I'm a teapot`](/fr/docs/Web/HTTP/Status/418)

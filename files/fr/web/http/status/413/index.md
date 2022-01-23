@@ -1,11 +1,6 @@
 ---
 title: 413 Payload Too Large
 slug: Web/HTTP/Status/413
-tags:
-  - Code de statut
-  - Erreur client
-  - HTTP
-  - Reference
 translation_of: Web/HTTP/Status/413
 ---
 {{HTTPSidebar}}
@@ -14,13 +9,15 @@ Le code de statut de réponse **`413 Payload Too Large`** indique que la taille 
 
 ## Statut
 
-    413 Payload Too Large
+```
+413 Payload Too Large
+```
 
 ## Spécifications
 
 | Spécification                                                        | Titre                                                         |
 | -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "413 Payload Too Large" , "6.5.11")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| [RFC 7231, section 6.5.11: 413 Payload Too Large](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.11) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Voir aussi
 

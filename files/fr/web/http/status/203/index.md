@@ -19,7 +19,7 @@ La réponse 203 est similaire au code d'en-tête [`214` (Transformation Applied)
 
 | Spécification                                                                        | Titre                                                         |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "203 Non-Authoritative Information" , "6.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| [RFC 7231, section 6.3.4: 203 Non-Authoritative Information](https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.4) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Voir aussi
 

@@ -1,11 +1,6 @@
 ---
 title: 429 Too Many Requests
 slug: Web/HTTP/Status/429
-tags:
-  - Code de statut
-  - Erreur client
-  - HTTP
-  - Reference
 translation_of: Web/HTTP/Status/429
 ---
 {{HTTPSidebar}}
@@ -16,20 +11,26 @@ Un en-tête [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After) peut être in
 
 ## Statut
 
-    429 Too Many Requests
+```
+429 Too Many Requests
+```
 
 ## Exemple
 
-    HTTP/1.1 429 Too Many Requests
-    Content-Type: text/html
-    Retry-After: 3600
+```
+HTTP/1.1 429 Too Many Requests
+Content-Type: text/html
+Retry-After: 3600
+```
 
 ## Spécifications
 
 | Spécification                                                | Titre                        |
 | ------------------------------------------------------------ | ---------------------------- |
-| {{RFC("6585", "429 Too Many Requests" , "4")}} | Additional HTTP Status Codes |
+| [RFC 6585, section 4: 429 Too Many Requests](https://datatracker.ietf.org/doc/html/rfc6585#section-4) | Additional HTTP Status Codes |
 
 ## Voir aussi
 
 - [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After)
+- [HTTP/1.1&nbsp;: Définitions des codes de statut (en anglais)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [Solution en Python&nbsp;: comment éviter l'erreur HTTP 429 en Python (en anglais)](https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python)

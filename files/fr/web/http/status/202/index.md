@@ -17,7 +17,7 @@ Le code de statut de réponse HTTP **`202 Accepted`** indique que la requête a 
 
 | Spécification                                            | Titre                                                         |
 | -------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "202 Accepted" , "6.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| [RFC 7231, section 6.3.3: 202 Accepted](https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.3) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Voir aussi
 

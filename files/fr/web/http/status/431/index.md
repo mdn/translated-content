@@ -1,11 +1,6 @@
 ---
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Status/431
-tags:
-  - Code de statut
-  - Erreur client
-  - HTTP
-  - Reference
 translation_of: Web/HTTP/Status/431
 ---
 {{HTTPSidebar}}
@@ -16,14 +11,17 @@ Ce code peut être utilisé lorsque tous les champs sont trop grands ou qu'un se
 
 ## Statut
 
-    431 Request Header Fields Too Large
+```
+431 Request Header Fields Too Large
+```
 
 ## Spécifications
 
 | Spécification                                                                    | Titre                        |
 | -------------------------------------------------------------------------------- | ---------------------------- |
-| {{RFC("6585", "431 Request Header Fields Too Large" , "5")}} | Additional HTTP Status Codes |
+| [RFC 6585, section 5: 431 Request Header Fields Too Large](https://datatracker.ietf.org/doc/html/rfc6585#section-5) | Additional HTTP Status Codes |
 
 ## Voir aussi
 
-- {{Glossary("En-tête")}}
+- [`414 URI Too Long`](/fr/docs/Web/HTTP/Status/414)
+- [En-tête de requête](/fr/docs/Glossary/Request_header)
