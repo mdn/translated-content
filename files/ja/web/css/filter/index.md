@@ -93,7 +93,7 @@ filter: blur(5px)
 ```
 
 ```html hidden
-  <table class="standard-table">
+<table class="standard-table">
   <thead>
     <tr>
       <th style="text-align: left;" scope="col">Original image</th>
@@ -104,19 +104,19 @@ filter: blur(5px)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_2.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_2.jpeg" style="width: 100%;" /></td>
+      <td><img id="img1" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_2.jpeg" style="width: 100%;" /></td>
+      <td><img id="img2" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_2.jpeg" style="width: 100%;" /></td>
       <td>
         <div class="svg-container">
           <svg id="img3" overflow="visible" viewbox="0 0 212 161" color-interpolation-filters="sRGB">
             <filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%">
               <feGaussianBlur in="SourceGraphic" stdDeviation="3.5"/>
             </filter>
-            <image xlink:href="test_form_2.jpeg" filter="url(#svgBlur)" width="212px" height="161px"/>
+            <image xlink:href="/en-US/docs/Web/CSS/filter/test_form_2.jpeg" filter="url(#svgBlur)" width="212px" height="161px"/>
           </svg>
         </div>
       </td>
-      <td><img id="img4" class="internal default" src="test_form_2_s.jpg" style="width: 100%;" /></td>
+      <td><img id="img4" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_2_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
@@ -208,8 +208,8 @@ filter: brightness(2)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form.jpg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form.jpg" style="width: 100%;" /></td>
+      <td><img id="img1" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form.jpg" style="width: 100%;" /></td>
+      <td><img id="img2" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form.jpg" style="width: 100%;" /></td>
       <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 286 217" color-interpolation-filters="sRGB">
  <filter id="brightness">
     <feComponentTransfer>
@@ -218,9 +218,9 @@ filter: brightness(2)
         <feFuncB type="linear" slope="2"/>
     </feComponentTransfer>
   </filter>
-  <image xlink:href="test_form.jpg" filter="url(#brightness)" width="286px" height="217px" />
+  <image xlink:href="/en-US/docs/Web/CSS/filter/test_form.jpg" filter="url(#brightness)" width="286px" height="217px" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_s.jpg" style="width: 100%;" /></td>
+      <td><img id="img4" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
@@ -305,8 +305,8 @@ filter: contrast(200%)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_3.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_3.jpeg" style="width: 100%;" /></td>
+      <td><img id="img1" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_3.jpeg" style="width: 100%;" /></td>
+      <td><img id="img2" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_3.jpeg" style="width: 100%;" /></td>
       <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 240 151" color-interpolation-filters="sRGB">
  <filter id="contrast">
     <feComponentTransfer>
@@ -315,9 +315,9 @@ filter: contrast(200%)
       <feFuncB type="linear" slope="2" intercept="-0.5"/>
     </feComponentTransfer>
   </filter>
-  <image xlink:href="test_form_3.jpeg" filter="url(#contrast)" width="240px" height="151px" />
+  <image xlink:href="/en-US/docs/Web/CSS/filter/test_form_3.jpeg" filter="url(#contrast)" width="240px" height="151px" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_3_s.jpg" style="width: 100%;" /></td>
+      <td><img id="img4" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_3_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
@@ -414,13 +414,13 @@ filter: drop-shadow(16px 16px 10px black)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_4.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_4.jpeg" style="width: 100%;" /></td>
+      <td><img id="img1" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_4.jpeg" style="width: 100%;" /></td>
+      <td><img id="img2" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_4.jpeg" style="width: 100%;" /></td>
       <td>
         <div class="svg-container">
           <svg xmlns="http://www.w3.org/2000/svg" id="img3" overflow="visible" viewbox="0 0 213 161" color-interpolation-filters="sRGB">
             <defs>
-              <image id="MyImage" xlink:href="test_form_4.jpeg" width="213px" height="161px"/>
+              <image id="MyImage" xlink:href="/en-US/docs/Web/CSS/filter/test_form_4.jpeg" width="213px" height="161px"/>
             </defs>
             <filter id="drop-shadow" x="-50%" y="-50%" width="200%" height="200%">
               <feOffset dx="9" dy="9" in="SourceAlpha"/>
@@ -431,16 +431,16 @@ filter: drop-shadow(16px 16px 10px black)
           </svg>
         </div>
       </td>
-      <td><img id="img4" class="internal default" src="test_form_4_s.jpg" style="width: 100%;" /></td>
+      <td><img id="img4" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_4_s.jpg" style="width: 100%;" /></td>
     </tr>
     <tr>
-      <td><img alt="test_form_4 distorted border - Original image" id="img11" class="internal default" src="test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
-      <td><img alt="test_form_4 distorted border - Live example" id="img12" class="internal default" src="test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
+      <td><img alt="test_form_4 distorted border - Original image" id="img11" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
+      <td><img alt="test_form_4 distorted border - Live example" id="img12" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
       <td>
         <div class="svg-container">
           <svg xmlns="http://www.w3.org/2000/svg" id="img13" overflow="visible" viewbox="0 0 213 161" color-interpolation-filters="sRGB">
             <defs>
-              <image id="MyImage2" xlink:href="test_form_4_irregular-shape_opacity-gradient.png" width="213px" height="161px"/>
+              <image id="MyImage2" xlink:href="/en-US/docs/Web/CSS/filter/test_form_4_irregular-shape_opacity-gradient.png" width="213px" height="161px"/>
             </defs>
             <filter id="drop-shadow2" x="-50%" y="-50%" width="200%" height="200%">
               <feOffset dx="5" dy="5.5" in="SourceAlpha"/>
@@ -454,7 +454,7 @@ filter: drop-shadow(16px 16px 10px black)
           </svg>
         </div>
       </td>
-      <td><img alt="test_form_4 distorted border drop shadow - Static example" id="img14" class="internal default" src="test_form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /></td>
+      <td><img alt="test_form_4 distorted border drop shadow - Static example" id="img14" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
@@ -540,8 +540,8 @@ filter: grayscale(100%)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_5.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_5.jpeg" style="width: 100%;" /></td>
+      <td><img id="img1" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_5.jpeg" style="width: 100%;" /></td>
+      <td><img id="img2" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_5.jpeg" style="width: 100%;" /></td>
       <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 276 184" color-interpolation-filters="sRGB">
  <filter id="grayscale">
     <feColorMatrix type="matrix"
@@ -550,9 +550,9 @@ filter: grayscale(100%)
                        0.2126 0.7152 0.0722 0 0
                        0 0 0 1 0"/>
   </filter>
-  <image xlink:href="test_form_5.jpeg" filter="url(#grayscale)" width="276px" height="184px" />
+  <image xlink:href="/en-US/docs/Web/CSS/filter/test_form_5.jpeg" filter="url(#grayscale)" width="276px" height="184px" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_5_s.jpg" style="width: 100%;" /></td>
+      <td><img id="img4" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_5_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
@@ -625,16 +625,16 @@ filter: hue-rotate(90deg)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_6.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_6.jpeg" style="width: 100%;" /></td>
+      <td><img id="img1" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_6.jpeg" style="width: 100%;" /></td>
+      <td><img id="img2" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_6.jpeg" style="width: 100%;" /></td>
       <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 266 190" color-interpolation-filters="sRGB">
  <filter id="hue-rotate">
     <feColorMatrix type="hueRotate"
                values="90"/>
   </filter>
-  <image xlink:href="test_form_6.jpeg" filter="url(#hue-rotate)" width="266px" height="190px" />
+  <image xlink:href="/en-US/docs/Web/CSS/filter/test_form_6.jpeg" filter="url(#hue-rotate)" width="266px" height="190px" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_6_s.jpg" style="width: 100%;" /></td>
+      <td><img id="img4" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_6_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
@@ -715,8 +715,8 @@ filter: invert(100%)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_7.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_7.jpeg" style="width: 100%;" /></td>
+      <td><img id="img1" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_7.jpeg" style="width: 100%;" /></td>
+      <td><img id="img2" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_7.jpeg" style="width: 100%;" /></td>
       <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 183 276" color-interpolation-filters="sRGB">
  <filter id="invert">
     <feComponentTransfer>
@@ -725,9 +725,9 @@ filter: invert(100%)
         <feFuncB type="table" tableValues="1 0"/>
     </feComponentTransfer>
  </filter>
- <image xlink:href="test_form_7.jpeg" filter="url(#invert)" width="183px" height="276px" />
+ <image xlink:href="/en-US/docs/Web/CSS/filter/test_form_7.jpeg" filter="url(#invert)" width="183px" height="276px" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_7_s.jpg" style="width: 100%;" /></td>
+      <td><img id="img4" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_7_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
@@ -800,17 +800,17 @@ filter: opacity(50%)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_14.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_14.jpeg" style="width: 100%;" /></td>
+      <td><img id="img1" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_14.jpeg" style="width: 100%;" /></td>
+      <td><img id="img2" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_14.jpeg" style="width: 100%;" /></td>
       <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 276 183" color-interpolation-filters="sRGB">
  <filter id="opacity">
     <feComponentTransfer>
         <feFuncA type="table" tableValues="0 0.5">
     </feComponentTransfer>
  </filter>
- <image xlink:href="test_form_14.jpeg" filter="url(#opacity)" width="276px" height="183px" />
+ <image xlink:href="/en-US/docs/Web/CSS/filter/test_form_14.jpeg" filter="url(#opacity)" width="276px" height="183px" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_14_s.jpg" style="width: 100%;" /></td>
+      <td><img id="img4" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_14_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
@@ -883,16 +883,16 @@ filter: saturate(200%)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_9.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_9.jpeg" style="width: 100%;" /></td>
+      <td><img id="img1" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_9.jpeg" style="width: 100%;" /></td>
+      <td><img id="img2" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_9.jpeg" style="width: 100%;" /></td>
       <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 201 239" color-interpolation-filters="sRGB">
  <filter id="saturate">
     <feColorMatrix type="saturate"
                values="2"/>
  </filter>
- <image xlink:href="test_form_9.jpeg" filter="url(#saturate)" width="201px" height="239px" />
+ <image xlink:href="/en-US/docs/Web/CSS/filter/test_form_9.jpeg" filter="url(#saturate)" width="201px" height="239px" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_9_s.jpg" style="width: 100%;" /></td>
+      <td><img id="img4" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_9_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
@@ -965,8 +965,8 @@ filter: sepia(100%)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_12.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_12.jpeg" style="width: 100%;" /></td>
+      <td><img id="img1" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_12.jpeg" style="width: 100%;" /></td>
+      <td><img id="img2" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_12.jpeg" style="width: 100%;" /></td>
       <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 259 194" color-interpolation-filters="sRGB">
  <filter id="sepia">
     <feColorMatrix type="matrix"
@@ -975,9 +975,9 @@ filter: sepia(100%)
                        0.272 0.534 0.131 0 0
                        0 0 0 1 0"/>
  </filter>
- <image xlink:href="test_form_12.jpeg" filter="url(#sepia)" width="259px" height="194px" />
+ <image xlink:href="/en-US/docs/Web/CSS/filter/test_form_12.jpeg" filter="url(#sepia)" width="259px" height="194px" />
 </svg><div></td>
-      <td><img id="img4" class="internal default" src="test_form_12_s.jpg" style="width: 100%;" /></td>
+      <td><img id="img4" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_12_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
@@ -1049,9 +1049,9 @@ filter: contrast(175%) brightness(103%)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_8.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_8.jpeg" style="width: 100%;" /></td>
-      <td><img id="img4" class="internal default" src="test_form_8_s.jpg" style="width: 100%;" /></td>
+      <td><img id="img1" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_8.jpeg" style="width: 100%;" /></td>
+      <td><img id="img2" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_8.jpeg" style="width: 100%;" /></td>
+      <td><img id="img4" class="internal default" src="/en-US/docs/Web/CSS/filter/test_form_8_s.jpg" style="width: 100%;" /></td>
     </tr>
   </tbody>
 </table>
