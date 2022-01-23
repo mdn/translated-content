@@ -2,106 +2,114 @@
 title: Promise() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 tags:
-  - Constructor
+  - コンストラクター
   - JavaScript
   - Promise
-  - Reference
+  - リファレンス
+  - ポリフィル
+browser-compat: javascript.builtins.Promise.Promise
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Promise</code></strong> コンストラクターは、主にまだプロミスに対応していない関数をラップするために使用します。</p>
+**`Promise`** コンストラクターは、主にまだプロミスに対応していない関数をラップするために使用します。
 
-<div>{{EmbedInteractiveExample("pages/js/promise-constructor.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-constructor.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+new Promise(executor)
+```
 
-<pre class="syntaxbox notranslate">new Promise(<var>executor</var>)
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `executor`
 
-<dl>
- <dt><code><var>executor</var></code></dt>
- <dd>新しい <code>Promise</code> オブジェクトを構築する過程でコンストラクターによって呼び出される {{jsxref("function")}} です。 <code><var>executor</var></code> は結果をプロミスに結びつけるカスタムコードです。プログラマーが <code><var>executor</var></code> を書きます。この関数の形式は次のようなものであると期待されます。</dd>
- <dt>
- <pre class="brush: js notranslate">function(<var>resolutionFunc</var>, <var>rejectionFunc</var>){
-    // 通常、いくつかの非同期操作。
-}
-</pre>
- </dt>
- <dd>コンストラクターが新しい <code>Promise</code> オブジェクトを生成するとき、 <code><var>resolutionFunc</var></code> と <code><var>rejectionFunc</var></code> の一対の関数も生成します。これらは <code>Promise</code> オブジェクトに「結束」されます。従って、 <code><var>executor</var></code> の中のコードが何らかの操作を実行し、その操作の結果を (値が別の Promise オブジェクトでない場合) 「満足」または「拒否」として、それぞれ <code><var>resolutionFunc</var></code> または <code><var>rejectionFunc</var></code> のどちらかを呼び出すことで反映する機会を持っています。</dd>
- <dd><code><var>executor</var></code> は意味のある返値を持ちません。これは <code><var>resolutionFunc</var></code> または <code><var>rejectionFunc</var></code> を使用することの副作用を介して通信します。この副作用とは、 <code>Promise</code> が「解決済み」になることです。</dd>
- <dd>通常は、次のように動作します。 <code><var>executor</var></code> の内部の走査は非同期であり、コールバックを提供します。コールバックは <code><var>executor</var></code> のコード内で定義されます。コールバックは、 <code><var>resolutionFunc</var></code> を呼び出すことで終了します。 <code><var>resolutionFunc</var></code> の呼び出しには、引数 <code>value</code> が含まれます。 <code>value</code> は、結束された <code>Promise</code> オブジェクトに渡されます。 <code>Promise</code> オブジェクトは (非同期的に) それに関連付けられた任意の <code>.then()</code> を呼び出します。 <code>.then()</code> によって受け取った <code>value</code> は、 <code>handleFulfilled</code> の呼び出しに入力引数として渡されます (「連鎖したプロミス」の節を参照)。</dd>
- <dd>また、 <code><var>executor</var></code> はエラー時に <code><var>rejectionFunc</var></code> を呼び出す <code>try{} catch()</code> ブロックを含む可能性があります。</dd>
- <dd>これらの2つの関数の呼び出し形式は単純で、あらゆる型の引数を1つだけ取ります。もちろん、これらの関数の実際の名前は好きにしてよく、すなわち、 <code><var>executor</var></code> の引数として名づけます。どちらの関数も必要な時に呼び出すために使用します。</dd>
-</dl>
+  - : 新しい `Promise` オブジェクトを構築する過程でコンストラクターによって呼び出される関数 ({{jsxref("function")}}) です。 `executor` は結果をプロミスに結びつけるカスタムコードです。プログラマーが `executor` を書きます。この関数の形式は次のようなものであると期待されます。
 
-<dl>
- <dd>
- <pre class="brush: js notranslate">resolutionFunc(value) // 満足したときに呼び出される
-rejectionFunc(reason) // <em>拒否されたとき</em>に呼び出される</pre>
+    ```js
+        function(resolutionFunc, rejectionFunc){
+          // 通常は非同期操作です。
+        }
+    ```
 
- <p>返される <code>value</code> は、プロミスをチェーンに動的に挿入するために、別なプロミスオブジェクトにすることができます。</p>
- </dd>
-</dl>
+    `resolutionFunc` と `rejectionFunc` も関数で、実際には好きな名前を付けることができます。呼び出し形式は単純で、単一の任意の型の引数を受け付けます。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    <!-- prettier-ignore -->
+    ```js
+        resolutionFunc(value) // 解決した時に呼び出し
+        rejectionFunc(reason) // 拒否した時に呼び出し
+    ```
 
-<p><code>new</code> を通じて呼び出された場合、 <code>Promise</code> コンストラクターはプロミスオブジェクトを返します。このプロミスオブジェクトは、 <code><var>resolutionFunc</var></code> 関数または <code><var>rejectionFunc</var></code> 関数が呼び出されると「解決」になります。なお、 <code><var>resolutionFunc</var></code> または <code><var>rejectionFunc</var></code> を別な Promise オブジェクトを引数にして呼び出すと、これが「解決」であると言えますが、「満足」であるとは言えません。</p>
+    `resolutionFunc` の `value` 引数は他のプロミスオブジェクトにすることもでき、そうするとそのプロミスは[プロミス連鎖](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises)の中に動的に挿入されます。
 
-<h2 id="Examples" name="Examples">例</h2>
+    `executor` については、以下のことを理解することが重要です。
 
-<h3 id="Creating_a_new_Promise" name="Creating_a_new_Promise">新しい Promise の作成</h3>
+    - `executor` の返値は無視されます。
+    - `executor` の中でエラーが発生した場合、プロミスは拒否されます。
 
-<p><code>Promise</code> オブジェクトは <code>new</code> キーワードとコンストラクターで作成されます。コンストラクターは executor 関数と呼ばれる引数を取ります。 executor 関数は 2 つの関数を引数として取ります。1 つめの関数 (<code>resolve)</code> は非同期タスクが成功して完了した場合に呼び出され、タスクの結果を値として返します。2 つめの関数 (<code>reject</code>) はタスクが失敗した場合に呼び出され、失敗した理由 (典型的には error オブジェクト) を返します。</p>
+    つまり、 `executor` の中のコードが効果を発揮する仕組みは、次のようなものです。
 
-<pre class="brush: js; notranslate">const myFirstPromise = new Promise((resolve, reject) =&gt; {
-  // do something asynchronous which eventually calls either:
+    - コンストラクターが新しい `Promise` オブジェクトを生成した時点で、対応する `resolutionFunc` と `rejectionFunc` の一対の関数も生成されます。これらは `Promise` オブジェクトに「結束」されます。
+    - `executor` 内のコードは、何らかの操作を行う機会を得、その結果を（値が他の Promise オブジェクトでない場合）「解決済み」または「拒否済み」として反映し、それぞれ `resolutionFunc` または `rejectionFunc` を呼び出して終了します。
+    - つまり、`executor` 内のコードは、 `resolutionFunc` や `rejectionFunc` による副次的影響を介して通信を行います。その副次的影響とは、 `Promise` オブジェクトが「解決済み」または「拒否済み」になることです。
+
+    以上のことを踏まえて、典型的な流れをまとめてみました。
+
+    1.  `executor` の中の操作は非同期であり、コールバックを提供します。
+    2.  コールバックは `executor` コードの中で定義されます。
+    3.  コールバックは `resolutionFunc` を呼び出して終了します。
+    4.  `resolutionFunc` の呼び出しには `value` 引数が含まれます。
+    5.  `value` は繋がっている `Promise` オブジェクトに送り返されます。
+    6.  `Promise` オブジェクトは（非同期に）関連付けられた `.then(handleResolved)` を呼び出します。
+    7.  `.then(handleResolved)` から受け取った `value` は、 `handleResolved` の呼び出しで入力引数として渡されます（[プロミスの連鎖](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises)を参照してください）。
+
+### 返値
+
+`new` を通じて呼び出された場合、 `Promise` コンストラクターはプロミスオブジェクトを返します。このプロミスオブジェクトは、 `resolutionFunc` 関数または `rejectionFunc` 関数が呼び出されると「解決」になります。なお、 `resolutionFunc` または `rejectionFunc` を別な Promise オブジェクトを引数にして呼び出すと、これが「解決」であると言えますが、「満足」であるとは言えません。
+
+## 例
+
+### 新しい Promise の作成
+
+`Promise` オブジェクトは `new` キーワードとコンストラクターで作成されます。コンストラクターは「executor 関数」と呼ばれる引数を取ります。 これは 2 つの関数を引数として取ります。 1 つ目の関数 (`resolve`) は非同期タスクが成功して完了した場合に呼び出され、タスクの結果を値として返します。2 つ目の関数 (`reject`) はタスクが失敗した場合に呼び出され、失敗した理由（ふつうはエラーオブジェクト）を返します。
+
+```js
+const myFirstPromise = new Promise((resolve, reject) => {
+  // 次のどちらかを呼び出す非同期処理を行います。
   //
-  //   resolve(someValue)        // fulfilled
-  // or
-  //   reject("failure reason")  // rejected
+  //   resolve(someValue)        // 履行
+  // または
+  //   reject("failure reason")  // 拒否
 });
-</pre>
+```
 
-<h3 id="Making_functions_return_a_Promise" name="Making_functions_return_a_Promise">Promise を返す関数の作成</h3>
+### Promise を返す関数の作成
 
-<p>関数に Promise 機能を提供するには、次のように単に Promise を返すようにします。</p>
+関数にプロミス機能を提供するには、次のように単にプロミスを返すようにします。
 
-<pre class="brush: js; notranslate">function myAsyncFunction(url) {
-  return new Promise((resolve, reject) =&gt; {
+```js
+function myAsyncFunction(url) {
+  return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest()
     xhr.open("GET", url)
-    xhr.onload = () =&gt; resolve(xhr.responseText)
-    xhr.onerror = () =&gt; reject(xhr.statusText)
+    xhr.onload = () => resolve(xhr.responseText)
+    xhr.onerror = () => reject(xhr.statusText)
     xhr.send()
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise-constructor', 'Promise コンストラクター')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Promise.Promise")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Using_promises">Promise の使用</a></li>
-</ul>
+- `Promise` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise) で利用できます
+- [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)
