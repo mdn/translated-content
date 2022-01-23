@@ -4,86 +4,88 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 tags:
   - ECMAScript 2015
   - JavaScript
-  - Method
-  - Promise
-  - Reference
   - メソッド
+  - Promise
+  - リファレンス
+browser-compat: javascript.builtins.Promise.race
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Promise.race()</strong></code> メソッドは、反復可能オブジェクトの中の Promise のうちの1つが解決または拒否するとすぐに、その Promise の値または理由で解決または拒否する Promise を返します。</p>
+**`Promise.race()`** メソッドは、反復可能オブジェクトの中のプロミスのうちの 1 つが履行されるか拒否されると、そのプロミスの値または理由で履行または拒否されるプロミスを返します。
 
-<div>{{EmbedInteractiveExample("pages/js/promise-race.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-race.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+Promise.race(iterable);
+```
 
-<pre class="syntaxbox notranslate">Promise.race(<var>iterable</var>);</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `iterable`
+  - : 配列 ({{jsxref("Array")}}) などの反復可能なオブジェクト。[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)を確認してください。</dd>
 
-<dl>
- <dt><code>iterable</code></dt>
- <dd>{{jsxref("Array")}} のような反復可能なオブジェクト。 <a href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable</a> を確認してください。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+**待ち状態の** {{jsxref("Promise")}} で、反復可能オブジェクトの中で最初に履行または解決されたプロミスの値を**非同期に**産出します。
 
-<p><strong>待ち状態の</strong> {{jsxref("Promise")}} で、反復可能オブジェクトの中で最初に解決または拒否した Promise の値を<strong>非同期に</strong>産出します。</p>
+## 解説
 
-<h2 id="Description" name="Description">説明</h2>
+`race` 関数は、引数として渡された反復可能オブジェクトの中にある複数のプロミスの中で決定した最初のプロミスと同じ方法で決定される（同じ値を取る）プロミスを返します。
 
-<p><code>race</code> 関数は、引数として渡された反復可能オブジェクトの中にある複数の Promise の中で解決する最初の Promise と同じ方法で解決される (同じ値を取る) Promise を返します。</p>
+渡された反復可能オブジェクトが空の場合、返されるプロミスは永遠に待機状態のままです。
 
-<p>渡された反復可能オブジェクトが空の場合、返される Promise はずっと待ち状態のままです。</p>
+反復可能オブジェクトに 1 つ以上のプロミス以外の値やすでに決定済みのプロミスが含まれていた場合、 `Promise.race` は反復可能オブジェクトの中で見つけたこれらの値の内の最初の一つで解決します。
 
-<p>反復可能オブジェクトに1つ以上の Promise 以外の値やすでに解決済みの Promise が含まれていた場合、 <code>Promise.race</code> は反復可能オブジェクトの中で見つけたこれらの値の内の最初の一つで解決します。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### Promise.race の非同期性
 
-<h3 id="Asynchronicity_of_Promise.race" name="Asynchronicity_of_Promise.race">Promise.race の非同期性</h3>
+以下の例は、 `Promise.race` の非同期性を示しています。
 
-<p>以下の例は、 <code>Promise.race</code> の非同期性を示しています。</p>
-
-<pre class="brush: js notranslate">// we are passing as argument an array of promises that are already resolved,
-// to trigger Promise.race as soon as possible
+```js
+// Promise.rac eをできるだけ早く起動させるために、解決済みのプロミスの配列を
+// 引数として渡しています。
 var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
 
 var p = Promise.race(resolvedPromisesArray);
-// immediately logging the value of p
+// 直ちに p の値を出力
 console.log(p);
 
-// using setTimeout we can execute code after the stack is empty
+// setTimeout を使用すると、スタックが空になった後でコードが実行される
 setTimeout(function(){
-    console.log('the stack is now empty');
+    console.log('スタックが空です');
     console.log(p);
 });
 
 // logs, in order:
-// Promise { &lt;state&gt;: "pending" }
-// the stack is now empty
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: 33 }</pre>
+// Promise { <state>: "pending" }
+// スタックが空です
+// Promise { <state>: "fulfilled", <value>: 33 }
+```
 
-<p>空の反復可能オブジェクトを渡すと、無限に解決しない Promise が返されます。</p>
+空の反復可能オブジェクトを渡すと、無限に解決しないプロミスが返されます。
 
-<pre class="brush: js notranslate">var foreverPendingPromise = Promise.race([]);
+```js
+var foreverPendingPromise = Promise.race([]);
 console.log(foreverPendingPromise);
 setTimeout(function(){
-    console.log('the stack is now empty');
+    console.log('スタックが空です');
     console.log(foreverPendingPromise);
 });
 
-// logs, in order:
-// Promise { &lt;state&gt;: "pending" }
-// the stack is now empty
-// Promise { &lt;state&gt;: "pending" }
-</pre>
+// ログ（順番に）:
+// Promise { <state>: "pending" }
+// スタックが空です
+// Promise { <state>: "pending" }
+```
 
-<p>反復可能オブジェクトの中に1つ以上の Promise 以外の値や、すでに解決した Promise が含まれていると、 <code>Promise.race</code> は配列の中で見つかった最初のこれらの値で解決します。</p>
+反復可能オブジェクトの中に 1 つ以上のプロミス以外の値や、すでに解決したプロミスが含まれていると、 `Promise.race` は配列の中で見つかった最初のこれらの値で解決します。
 
-<pre class="brush: js notranslate">var foreverPendingPromise = Promise.race([]);
+```js
+var foreverPendingPromise = Promise.race([]);
 var alreadyFulfilledProm = Promise.resolve(100);
 
 var arr = [foreverPendingPromise, alreadyFulfilledProm, "non-Promise value"];
@@ -94,87 +96,117 @@ var p2 = Promise.race(arr2);
 console.log(p);
 console.log(p2);
 setTimeout(function(){
-    console.log('the stack is now empty');
+    console.log('スタックが空です');
     console.log(p);
     console.log(p2);
 });
 
-// logs, in order:
-// Promise { &lt;state&gt;: "pending" }
-// Promise { &lt;state&gt;: "pending" }
-// the stack is now empty
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: 100 }
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: "non-Promise value" }
-</pre>
+// ログ（順番に）
+// Promise { <state>: "pending" }
+// Promise { <state>: "pending" }
+// スタックが空です
+// Promise { <state>: "fulfilled", <value>: 100 }
+// Promise { <state>: "fulfilled", <value>: "non-Promise value" }
+```
 
-<h3 id="Promise.race_の使用_–_setTimeout_を使用した例">Promise.race の使用 – setTimeout を使用した例</h3>
+### Promise.race の使用 – setTimeout を使用した例
 
-<pre class="brush: js notranslate">var p1 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; resolve('one'), 500);
+```js
+var p1 = new Promise(function(resolve, reject) {
+    setTimeout(() => resolve('one'), 500);
 });
 var p2 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; resolve('two'), 100);
+    setTimeout(() => resolve('two'), 100);
 });
 
 Promise.race([p1, p2])
 .then(function(value) {
   console.log(value); // "two"
-  // Both fulfill, but p2 is faster
+  // 両方が履行されるが、 p2 の方が早い
 });
 
 var p3 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; resolve('three'), 100);
+    setTimeout(() => resolve('three'), 100);
 });
 var p4 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; reject(new Error('four')), 500);
+    setTimeout(() => reject(new Error('four')), 500);
 });
 
 Promise.race([p3, p4])
 .then(function(value) {
   console.log(value); // "three"
-  // p3 is faster, so it fulfills
-}, function(reason) {
+  // p3 の方が早いので、履行される
+}, function(error) {
   // Not called
 });
 
 var p5 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; resolve('five'), 500);
+    setTimeout(() => resolve('five'), 500);
 });
 var p6 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; reject(new Error('six')), 100);
+    setTimeout(() => reject(new Error('six')), 100);
 });
 
 Promise.race([p5, p6])
 .then(function(value) {
-  // Not called
+  // 呼び出されない
 }, function(error) {
   console.log(error.message); // "six"
-  // p6 is faster, so it rejects
+  // p6 の方が早いので、拒否される
 });
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+### Promise.any との比較
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.race', 'Promise.race')}}</td>
-  </tr>
- </tbody>
-</table>
+`Promise.race` は最初に決定された {{jsxref("Promise")}} を取ります。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+```js
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, 'one');
+});
 
-<p>{{Compat("javascript.builtins.Promise.race")}}</p>
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(reject, 100, 'two');
+});
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+Promise.race([promise1, promise2]).then((value) => {
+  console.log('succeeded with value:', value);
+}).catch((reason) => {
+  // Only promise1 is fulfilled, but promise2 is faster
+  console.log('failed with reason:', reason);
+});
+// 期待される出力: "failed with reason: two"
+```
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.all()")}}</li>
-</ul>
+{{jsxref("Promise.any")}} は最初に履行された {{jsxref("Promise")}} を取ります。
+
+```js
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, 'one');
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(reject, 100, 'two');
+});
+
+Promise.any([promise1, promise2]).then((value) => {
+  // promise1 のみが履行されるが、 promise2 の方が早く決定する
+  console.log('succeeded with value:', value);
+}).catch((reason) => {
+  console.log('failed with reason:', reason);
+});
+// 期待される出力: "succeeded with value: one"
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.all()")}}
