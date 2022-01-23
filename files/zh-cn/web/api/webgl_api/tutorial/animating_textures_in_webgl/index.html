@@ -101,7 +101,7 @@ function setupVideo(url) {
                 srcFormat, srcType, video);
 }</pre>
 
-<p><font><font>您之前已经看过此代码。</font><font>它与上一个示例中的image onload函数几乎相同-除非我们调用</font></font><code>texImage2D()</code><font><font>，而不是传递</font></font><code>Image</code><font><font>对象，而是传递</font></font>{{ HTMLElement("video") }}<font><font>元素。</font><font>WebGL知道如何拉出当前帧并将其用作纹理。</font></font></p>
+<p><font><font>您之前已经看过此代码。</font><font>它与上一个示例中的image onload函数几乎相同-除非我们调用</font></font><code>texImage2D()</code><font><font>，不是传递</font></font><code>Image</code><font><font>对象，而是传递</font></font>{{ HTMLElement("video") }}<font><font>元素。</font><font>WebGL知道如何拉出当前帧并将其用作纹理。</font></font></p>
 
 <p><font><font>然后，在</font></font><code>main()</code><font><font> 代替通话，以</font></font><code>loadTexture()</code><font><font>在前面的例子中，我们调用   </font></font><code>initTexture</code><code>()</code><font><font>之后</font></font><code>setupVideo()</code><font><font>。</font></font></p>
 
