@@ -52,9 +52,9 @@ _このインターフェイスは、親インターフェイスである {{domx
 - {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
   - : 直前の {{domxref("Element/mousemove_event", "mousemove")}} イベントの位置から相対的な、マウスポインターの Y 座標です。
 - {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}
-  - : 対象ノードのパディング境界の位置に対して相対的なマウスポインターの X 座標です。
+  - : 対象ノードのパディング辺の位置に対して相対的なマウスポインターの X 座標です。
 - {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}
-  - : 対象ノードのパディング境界の位置に対して相対的なマウスポインターの Y 座標です。
+  - : 対象ノードのパディング辺の位置に対して相対的なマウスポインターの Y 座標です。
 - {{domxref("MouseEvent.pageX")}} {{readonlyinline}}
   - : 文書全体に対して相対的な、マウスポインターの X 座標です。
 - {{domxref("MouseEvent.pageY")}} {{readonlyinline}}

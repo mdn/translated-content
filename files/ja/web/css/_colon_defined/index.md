@@ -13,7 +13,7 @@ translation_of: Web/CSS/:defined
 ---
 {{ CSSRef }}
 
-**`:defined`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/CSS/Pseudo-classes)で、定義されているすべての要素を表します。これにはブラウザーに組み込まれたすべての標準要素と、 ({{domxref("CustomElementRegistry.define()")}} メソッドを使用して) 定義に成功したカスタム要素が含まれます。
+**`:defined`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、定義されているすべての要素を表します。これにはブラウザーに組み込まれたすべての標準要素と、 ({{domxref("CustomElementRegistry.define()")}} メソッドを使用して) 定義に成功したカスタム要素が含まれます。
 
 ```css
 /* 定義されたすべての要素を選択 */
