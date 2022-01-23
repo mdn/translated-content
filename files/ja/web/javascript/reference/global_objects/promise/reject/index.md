@@ -4,69 +4,57 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 tags:
   - ECMAScript 2015
   - JavaScript
-  - Method
+  - メソッド
   - Promise
-  - Reference
+  - リファレンス
+browser-compat: javascript.builtins.Promise.reject
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Promise.reject()</code></strong> メソッドは、引数で与えられた理由でリジェクトされた <code>Promise</code> オブジェクトを返します。</p>
+**`Promise.reject()`** メソッドは、引数で与えられた理由で拒否された `Promise` オブジェクトを返します。
 
-<div>{{EmbedInteractiveExample("pages/js/promise-reject.html")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-reject.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+Promise.reject(reason);
+```
 
-<pre class="syntaxbox notranslate">Promise.reject(<var>reason</var>);</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `reason`
+  - : この `Promise` が拒否された理由です。
 
-<dl>
- <dt><code><var>reason</var></code></dt>
- <dd>この<code>Promise</code>オブジェクトのリジェクトされた理由</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられた理由で拒否された {{jsxref("Promise")}} です。
 
-<p>与えられた理由で拒否された {{jsxref("Promise")}} 。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+静的な `Promise.reject` 関数は拒否された `Promise` を返します。デバッグのために捕捉するエラーを選別したい場合は、 `reason` を `instanceof` {{jsxref("Error")}} にかけると良いでしょう。
 
-<p>静的な <code>Promise.reject</code> 関数は拒否された <code>Promise</code> を返します。デバッグのためにキャッチするエラーを選別したい場合は、 <code>reason</code> を <code>instanceof</code> {{jsxref("Error")}} にかけると良いでしょう。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### 静的な Promise.reject() メソッドの使用
 
-<h3 id="Using_the_static_Promise.reject_method" name="Using_the_static_Promise.reject_method">静的な Promise.reject() メソッドの使用</h3>
-
-<pre class="brush: js notranslate">Promise.reject(new Error('fail')).then(function() {
-  // ここは呼ばれません。
+```js
+Promise.reject(new Error('fail')).then(function() {
+  // 呼び出されない
 }, function(error) {
   console.error(error); // Stacktrace
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.reject', 'Promise.reject')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Promise.reject")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+- {{jsxref("Promise")}}
