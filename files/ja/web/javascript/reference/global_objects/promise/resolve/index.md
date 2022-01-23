@@ -4,82 +4,86 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 tags:
   - ECMAScript 2015
   - JavaScript
-  - Method
+  - メソッド
   - Promise
-  - Reference
+  - リファレンス
+browser-compat: javascript.builtins.Promise.resolve
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Promise.resolve()</code></strong> メソッドは、与えられた値で解決した {{jsxref("Promise")}} オブジェクトを返します。その値がプロミスであった場合は、そのプロミスが返されます。その値が thenable (すなわち {{jsxref("Promise.then", "\"then\" メソッド")}} を持っている場合) であれば、返されるプロミスは thenable を「追跡」し、その最終的な状態を採用します。それ以外の場合は、引数で満足したプロミスが返されます。この関数は複数階層のプロミス風オブジェクト (例えば、何かで解決するプロミスで解決するプロミス) を単一の階層に平坦化します。</p>
+**`Promise.resolve()`** メソッドは、与えられた値で解決した {{jsxref("Promise")}} オブジェクトを返します。その値がプロミスであった場合は、そのプロミスが返されます。その値が thenable (すなわち {{jsxref("Promise.then", "\"then\" メソッド")}} を持っている場合) であれば、返されるプロミスは thenable を「追跡」し、その最終的な状態を採用します。それ以外の場合は、引数で満足したプロミスが返されます。この関数は複数階層のプロミス風オブジェクト (例えば、何かで解決するプロミスで解決するプロミス) を単一の階層に平坦化します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">Promise.resolve(<var>value</var>);
-</pre>
+```js
+Promise.resolve(value);
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>value</var></code></dt>
- <dd>この <code>Promise</code> で解決する際の引数。解決するための <code>Promise</code> または thenable にすることもできます。</dd>
-</dl>
+- `value`
+  - : この `Promise` で解決する際の引数。解決するための `Promise` または thenable にすることもできます。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>与えられた値で解決された {{jsxref("Promise")}}、または value がプロミスオブジェクトであった場合、値として渡されたプロミスです。</p>
+与えられた値で解決された {{jsxref("Promise")}}、または value がプロミスオブジェクトであった場合、値として渡されたプロミスです。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p>静的な <code>Promise.resolve</code> 関数は、解決する <code>Promise</code> を返します。</p>
+静的な `Promise.resolve` 関数は、解決する `Promise` を返します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_the_static_Promise.resolve_method" name="Using_the_static_Promise.resolve_method">静的な Promise.resolve メソッドの使用</h3>
+### 静的な Promise.resolve メソッドの使用
 
-<pre class="brush: js notranslate">Promise.resolve('Success').then(function(value) {
+```js
+Promise.resolve('Success').then(function(value) {
   console.log(value); // "Success"
 }, function(value) {
-  // not called
+  // 呼び出されない
 });
-</pre>
+```
 
-<h3 id="Resolving_an_array" name="Resolving_an_array">配列で解決</h3>
+### 配列で解決
 
-<pre class="brush: js notranslate">var p = Promise.resolve([1,2,3]);
+```js
+var p = Promise.resolve([1,2,3]);
 p.then(function(v) {
   console.log(v[0]); // 1
 });
-</pre>
+```
 
-<h3 id="Resolving_another_Promise" name="Resolving_another_Promise">別の Promise で解決</h3>
+### 別の Promise で解決
 
-<pre class="brush: js notranslate">var original = Promise.resolve(33);
+```js
+var original = Promise.resolve(33);
 var cast = Promise.resolve(original);
 cast.then(function(value) {
-  console.log('value: ' + value);
+  console.log('value: ' + value);
 });
 console.log('original === cast ? ' + (original === cast));
 
-// ログの順番:
+// ログ（順番通り）:
 // original === cast ? true
 // value: 33
-</pre>
+```
 
-<p>ログの順番が反転するのは、 <code>then</code> ハンドラーが非同期に呼び出されるために発生します。 <code>then</code> がどのように動作するのかは<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value">こちら</a>を参照してください。</p>
+ログの順番が反転するのは、 `then` ハンドラーが非同期に呼び出されるために発生します。 `then` がどのように動作するのかは[こちら](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value)を参照してください。
 
-<h3 id="Resolving_thenables_and_throwing_Errors" name="Resolving_thenables_and_throwing_Errors">thenables で解決してエラーを発生させる</h3>
+### thenables で解決してエラーを発生させる
 
-<pre class="brush: js notranslate">// Resolving a thenable object
+```js
+// thenable オブジェクトを解決
 var p1 = Promise.resolve({
   then: function(onFulfill, onReject) { onFulfill('fulfilled!'); }
 });
-console.log(p1 instanceof Promise) // true, object casted to a Promise
+console.log(p1 instanceof Promise) // true、オブジェクトが Promise にキャストされた
 
 p1.then(function(v) {
     console.log(v); // "fulfilled!"
   }, function(e) {
-    // not called
+    // 呼び出されない
 });
 
 // Thenable throws before callback
@@ -91,7 +95,7 @@ var thenable = { then: function(resolve) {
 
 var p2 = Promise.resolve(thenable);
 p2.then(function(v) {
-  // not called
+  // 呼び出されない
 }, function(e) {
   console.error(e); // TypeError: Throwing
 });
@@ -107,31 +111,30 @@ var p3 = Promise.resolve(thenable);
 p3.then(function(v) {
   console.log(v); // "Resolving"
 }, function(e) {
-  // not called
+  // 呼び出されない
 });
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+> **Warning:** 自分自身に解決する thenable に対して `Promise.resolve()` を呼び出さないでください。これは無限にネストしたプロミスを平坦化しようとするため、無限の再帰を引き起こします。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.resolve', 'Promise.resolve')}}</td>
-  </tr>
- </tbody>
-</table>
+```js example-bad
+let thenable = {
+  then: (resolve, reject) => {
+    resolve(thenable)
+  }
+}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+Promise.resolve(thenable)  // 無限の再帰を引き起こす
+```
 
-<p>{{Compat("javascript.builtins.Promise.resolve")}}</p>
+## 仕様書
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Specifications}}
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{jsxref("Promise")}}
