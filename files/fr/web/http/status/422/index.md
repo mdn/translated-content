@@ -19,4 +19,4 @@ Le code de statut de réponse HTTP **`422 Unprocessable Entity`** indique que le
 
 | Spécification                                                        | Titre (en anglais)                                                    |
 | -------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| [RFC 4918, section 11.2: Unprocessable Entity](https://datatracker.ietf.org/doc/html/rfc4918#section-11.2) | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) |
+| [RFC 4918, section 11.2: 422 Unprocessable Entity](https://datatracker.ietf.org/doc/html/rfc4918#section-11.2) | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) |

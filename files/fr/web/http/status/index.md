@@ -89,7 +89,7 @@ Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/W
 - [`405 Method Not Allowed`](/fr/docs/Web/HTTP/Status/405)
   - : La méthode de la requête est connue du serveur mais n'est pas prise en charge pour la ressource cible. Par exemple, une API peut ne pas autoriser l'utilisation du verbe `DELETE` pour supprimer une ressource.
 - [`406 Not Acceptable`](/fr/docs/Web/HTTP/Status/406)
-  - : Cette réponse est envoyée quand le serveur web, après une [négociation de contenu géré par le serveur](/fr/docs/HTTP/Content_negotiation#la_négociation_de_contenu_gérée_par_le_serveur), ne trouve rien qui satisfasse les critères donnés par l'agent utilisateur.
+  - : Cette réponse est envoyée quand le serveur web, après une [négociation de contenu géré par le serveur](/fr/docs/Web/HTTP/Content_negotiation#la_négociation_de_contenu_gérée_par_le_serveur), ne trouve rien qui satisfasse les critères donnés par l'agent utilisateur.
 - [`407 Proxy Authentication Required`](/fr/docs/Web/HTTP/Status/407)
   - : Similaire au code `401`, sauf que l'authentification doit être effectuée au travers d'un proxy.
 - [`408 Request Timeout`](/fr/docs/Web/HTTP/Status/408)

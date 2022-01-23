@@ -17,7 +17,7 @@ Le serveur envoie alors une réponse avec un en-tête [`Upgrade`](/fr/docs/Web/H
 
 ## Exemples
 
-Les changements de protocole peuvent être utilisés avec [WebSockets](/fr/docs/WebSockets).
+Les changements de protocole peuvent être utilisés avec [WebSockets](/fr/docs/Web/API/WebSockets_API).
 
 ```
 HTTP/1.1 101 Switching Protocols
@@ -34,6 +34,6 @@ Connection: Upgrade
 ## Voir aussi
 
 - [Mécanisme de mise à jour du protocole](/fr/docs/Web/HTTP/Protocol_upgrade_mechanism)
-- [WebSockets](/fr/docs/WebSockets)
+- [WebSockets](/fr/docs/Web/API/WebSockets_API)
 - [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade)
 - [`426 Upgrade Required`](/fr/docs/Web/HTTP/Status/426)
