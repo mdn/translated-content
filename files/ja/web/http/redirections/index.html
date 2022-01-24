@@ -20,7 +20,7 @@ translation_of: Web/HTTP/Redirections
 
 <h2 id="Principle" name="Principle">原理</h2>
 
-<p>HTTP では、リダイレクトはリクエストに対して、サーバーが特別な<em>リダイレクト</em>レスポンスをという特別なレスポンスを送信することによって、サーバーがリダイレクトを発生させます。リダイレクトレスポンスは<a href="/ja/docs/Web/HTTP/Status">ステータスコード</a>が <code>3</code> で始まり、 {{ httpheader("Location") }} ヘッダーがリダイレクト先の URL を保持しています。</p>
+<p>HTTP では、リダイレクトはリクエストに対して、サーバーが特別な<em>リダイレクト</em>レスポンスを送信することによって、サーバーがリダイレクトを発生させます。リダイレクトレスポンスは<a href="/ja/docs/Web/HTTP/Status">ステータスコード</a>が <code>3</code> で始まり、 {{ httpheader("Location") }} ヘッダーがリダイレクト先の URL を保持しています。</p>
 
 <p>ブラウザーがリダイレクトを受け取ると、 <code>Location</code> ヘッダーで提供された新たな URL を使用して直ちに読み込みを行います。追加の往復によるパフォーマンスの低下の他に、ユーザーがリダイレクトに気づくことはほとんどありません。</p>
 
