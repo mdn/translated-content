@@ -41,3 +41,4 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 - {{HTTPStatus("401")}}
 - [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [Error 403 Forbidden: Qué es y cómo solucionarlo](https://www.lucushost.com/blog/error-403-forbidden/)
