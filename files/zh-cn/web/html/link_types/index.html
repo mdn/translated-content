@@ -27,21 +27,21 @@ translation_of: Web/HTML/Link_types
    <td><code>alternate</code></td>
    <td>
     <ul>
-     <li>如果是{{HTMLElement("link")}}元素，并且{{htmlattrxref("rel", "link")}}属性包括stylesheet, 则这个link定义为alternate样式表;那样的话 {{htmlattrxref("title", "link")}} 属性不能为空.</li>
-     <li>如果{{htmlattrxref("type","link")}}设置为<code>application/rss+xml</code>或者<code>application/atom+xml</code>, 则link被定义为<a href="/en-US/docs/RSS/Getting_Started/Syndicating">syndication feed</a>. 页面中第一个被定义的为默认的。</li>
-     <li>其它情况link定义为alternate页面:
+     <li>如果是{{HTMLElement("link")}}元素，并且{{htmlattrxref("rel", "link")}}属性包括 stylesheet，则这个 link 定义为 alternate 样式表;那样的话 {{htmlattrxref("title", "link")}} 属性不能为空。</li>
+     <li>如果{{htmlattrxref("type","link")}}设置为<code>application/rss+xml</code>或者<code>application/atom+xml</code>, 则 link 被定义为<a href="/en-US/docs/RSS/Getting_Started/Syndicating">syndication feed</a>. 页面中第一个被定义的为默认的。</li>
+     <li>其它情况 link 定义为 alternate 页面：
       <ul>
-       <li>另一种介质,例如手持设备(如果设置了 {{htmlattrxref("media","link")}} 属性),</li>
+       <li>另一种介质，例如手持设备 (如果设置了 {{htmlattrxref("media","link")}} 属性),</li>
        <li>另一种语言 (如果设置了{{htmlattrxref("hreflang","link")}} 属性),</li>
-       <li>另一种格式, 例如PDF (如果设置了{{htmlattrxref("type","link")}} 属性),</li>
-       <li>或者是以上这些的集合.</li>
+       <li>另一种格式，例如 PDF (如果设置了{{htmlattrxref("type","link")}} 属性),</li>
+       <li>或者是以上这些的集合。</li>
       </ul>
      </li>
     </ul>
 
-    <p>（译注：<font color="#000000"><font>link的alternate定义了一个可替换的样式表，它和第一个link元素同时使用，第一个定义了首选样式，而alternate则让用户可选择替换的样式。但这个替换操作需要 浏览器支持，但很多浏览器比如IE都是不支持的。</font></font></p>
+    <p>（译注：<font color="#000000"><font>link 的 alternate 定义了一个可替换的样式表，它和第一个 link 元素同时使用，第一个定义了首选样式，而 alternate 则让用户可选择替换的样式。但这个替换操作需要 浏览器支持，但很多浏览器比如 IE 都是不支持的。</font></font></p>
 
-    <p align="left"><font color="#000000"><font>所以使用到替换样式的网页，一般都用一些样式表切换的JS，让用户可以自由切换界面样式。这个应该大家都见过，一些网站会给网页定义多种配色。 稍高阶的一些，还可以利用 JS弄成随时间变化样式的，比如白天的时候显示成明色，晚上的时候显示成暗色。</font></font>）</p>
+    <p align="left"><font color="#000000"><font>所以使用到替换样式的网页，一般都用一些样式表切换的 JS，让用户可以自由切换界面样式。这个应该大家都见过，一些网站会给网页定义多种配色。 稍高阶的一些，还可以利用 JS 弄成随时间变化样式的，比如白天的时候显示成明色，晚上的时候显示成暗色。</font></font>）</p>
    </td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
    <td>
@@ -52,7 +52,7 @@ translation_of: Web/HTML/Link_types
    <td>
     <p><code>archives</code>{{obsolete_inline}}</p>
    </td>
-   <td>定义文档的超链接，该文档包含此文件的存档链接. 例如. 一个博客入口可以链接到每月索引页面。<br>
+   <td>定义文档的超链接，该文档包含此文件的存档链接。例如. 一个博客入口可以链接到每月索引页面。<br>
     <br>
     <strong>Note:</strong>虽然可以识别，但单数<code>archive</code>是不正确的，必须避免使用。</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
@@ -62,16 +62,16 @@ translation_of: Web/HTML/Link_types
    <td><code>author</code></td>
    <td>定义一个超链接到一个描述作者信息的页面或者提供一个方法联系作者。<br>
     <br>
-    <strong>Note:</strong> 这个方法可能是mailto:<font face="Consolas, Liberation Mono, Courier, monospace">邮箱链接</font>, 但不推荐这样，这样可能导致机器人发送大量的垃圾邮件到这个邮箱. 这种情况下，最好带一个包含联系方法的页面.。<br>
+    <strong>Note:</strong> 这个方法可能是 mailto:<font face="Consolas, Liberation Mono, Courier, monospace">邮箱链接</font>, 但不推荐这样，这样可能导致机器人发送大量的垃圾邮件到这个邮箱。这种情况下，最好带一个包含联系方法的页面.。<br>
     <br>
-    在{{HTMLElement("a")}}, {{HTMLElement("area")}} or{{HTMLElement("link")}} 标签的{{htmlattrxref("rev", "link")}}属性上，虽然能够识别 <code>made，但并不正确，应该用</code>{{htmlattrxref("rel", "link")}} 属性替换.</td>
+    在{{HTMLElement("a")}}, {{HTMLElement("area")}} or{{HTMLElement("link")}} 标签的{{htmlattrxref("rev", "link")}}属性上，虽然能够识别 <code>made，但并不正确，应该用</code>{{htmlattrxref("rel", "link")}} 属性替换。</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
    <td><em>None.</em></td>
   </tr>
   <tr>
    <td><code>bookmark</code></td>
-   <td>表明这个链接是一个固定链接，对于最近的{{HTMLElement("article")}} 祖先标签. 如果没有，则表最近的section标签<br>
-    bookmark允许标识一个包括多个文档的页面，例如每月汇总的博客页面，或者博客集合。</td>
+   <td>表明这个链接是一个固定链接，对于最近的{{HTMLElement("article")}} 祖先标签。如果没有，则表最近的 section 标签<br>
+    bookmark 允许标识一个包括多个文档的页面，例如每月汇总的博客页面，或者博客集合。</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
    <td>{{HTMLElement("link")}}</td>
   </tr>
@@ -79,14 +79,14 @@ translation_of: Web/HTML/Link_types
    <td><code>canonical</code></td>
    <td>
     <p>来自维基百科: <a href="https://en.wikipedia.org/wiki/Canonical_link_element">Canonical_link_element</a><br>
-     规范链接元素是一个HTML元素，它通过指定web页面的“规范”或“首选”版本作为搜索引擎优化的一部分，帮助网站管理员防止重复的内容问题。</p>
+     规范链接元素是一个 HTML 元素，它通过指定 web 页面的“规范”或“首选”版本作为搜索引擎优化的一部分，帮助网站管理员防止重复的内容问题。</p>
    </td>
    <td>{{HTMLElement("link")}}   </td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
   <tr>
    <td><code>dns-prefetch</code>{{experimental_inline}}</td>
-   <td>提示浏览器该资源需要在用户点击链接之前进行DNS查询和协议握手.</td>
+   <td>提示浏览器该资源需要在用户点击链接之前进行 DNS 查询和协议握手。</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
   </tr>
@@ -112,8 +112,8 @@ translation_of: Web/HTML/Link_types
    <td><code>help</code></td>
    <td>
     <ul>
-     <li>如果是一个{{HTMLElement("a")}} 或者 {{HTMLElement("area")}}标签, help表明这个链接，链接到一个关于父亲标签和它的后代的进一步帮助资源;</li>
-     <li>如果是一个{{HTMLElement("link")}}标签，help表明这个链接，链接到一个关于整个页面的进一步帮助资源.</li>
+     <li>如果是一个{{HTMLElement("a")}} 或者 {{HTMLElement("area")}}标签，help 表明这个链接，链接到一个关于父亲标签和它的后代的进一步帮助资源;</li>
+     <li>如果是一个{{HTMLElement("link")}}标签，help 表明这个链接，链接到一个关于整个页面的进一步帮助资源。</li>
     </ul>
    </td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
@@ -124,11 +124,11 @@ translation_of: Web/HTML/Link_types
    <td>
     <p>定义一个在用户界面上代表这个页面的资源，通常是一个图标（包括声音和图像）<br>
      <br>
-     {{htmlattrxref("media","link")}}, {{htmlattrxref("type","link")}} and {{htmlattrxref("sizes","link")}} 属性允许浏览器选择其上下文中最合适的图标.如果多种资源符合条件，浏览器会选择最后一个。</p>
+     {{htmlattrxref("media","link")}}, {{htmlattrxref("type","link")}} and {{htmlattrxref("sizes","link")}} 属性允许浏览器选择其上下文中最合适的图标。如果多种资源符合条件，浏览器会选择最后一个。</p>
 
-    <p>在树型序列中，由于这些属性只是提示, 并且这这些资源在进一步检查时可能是不适合的,浏览器可能选择另一个适合的.<br>
+    <p>在树型序列中，由于这些属性只是提示，并且这这些资源在进一步检查时可能是不适合的，浏览器可能选择另一个适合的。<br>
      <br>
-     <strong>Note:</strong> 苹果iOS不支持此链接类型, 也不支持 {{htmlattrxref("sizes","link")}}属性, 就像其他移动端浏览器一样，为了Web Clip或者启动点位符选择一个页面图标。分别可使用不是标准方法的<a href="http://edr.euro.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> 和<a href="http://edr.euro.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> 替代.<br>
+     <strong>Note:</strong> 苹果 iOS 不支持此链接类型，也不支持 {{htmlattrxref("sizes","link")}}属性，就像其他移动端浏览器一样，为了 Web Clip 或者启动点位符选择一个页面图标。分别可使用不是标准方法的<a href="http://edr.euro.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> 和<a href="http://edr.euro.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> 替代。<br>
      <br>
      <code><font face="Open Sans, Arial, sans-serif">在之前，经常可以看到</font>shortcut</code>,但他不是标准的，<strong>应该不再使用</strong>。</p>
    </td>
@@ -159,7 +159,7 @@ translation_of: Web/HTML/Link_types
    <td>
     <p>表明该超链接指向当前页面所在序列中的最后资源。</p>
 
-    <p><strong>Note:</strong>该序列中其他相关链接资源的link的type值是<code>first</code>, <code>prev</code>, <code>next。</code></p>
+    <p><strong>Note:</strong>该序列中其他相关链接资源的 link 的 type 值是<code>first</code>, <code>prev</code>, <code>next。</code></p>
 
     <p>虽然可以识别，但同义词<code>end</code>是不正确的，必须避免使用。</p>
    </td>
@@ -196,14 +196,14 @@ translation_of: Web/HTML/Link_types
    <td>
     <p>表明该超链接指向的是当前页面所在序列中的下一个资源。<br>
      <br>
-     <strong>注意：</strong>该序列中其他相关链接资源的link的type值是<code>first</code>, <code>prev</code>, <code>last。</code></p>
+     <strong>注意：</strong>该序列中其他相关链接资源的 link 的 type 值是<code>first</code>, <code>prev</code>, <code>last。</code></p>
    </td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
    <td><em>None.</em></td>
   </tr>
   <tr>
    <td><code>nofollow</code></td>
-   <td>表示本文档的作者不想宣传链接的文档，例如，它是不受控的，它是一个坏的例子或如果它们有商业关系（销售环节）。nofollow主要是被一些使用人气排名技术的搜索引擎所使用。</td>
+   <td>表示本文档的作者不想宣传链接的文档，例如，它是不受控的，它是一个坏的例子或如果它们有商业关系（销售环节）。nofollow 主要是被一些使用人气排名技术的搜索引擎所使用。</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
    <td>{{HTMLElement("link")}}</td>
   </tr>
@@ -212,9 +212,9 @@ translation_of: Web/HTML/Link_types
     <p><code>noopener</code></p>
    </td>
    <td>
-    <p>指示浏览器打开链接而不授予新的浏览上下文对打开它的文档的访问权限-通过在打开的窗口中不设置{{domxref("Window.opener")}}属性（返回null）。</p>
+    <p>指示浏览器打开链接而不授予新的浏览上下文对打开它的文档的访问权限 - 通过在打开的窗口中不设置{{domxref("Window.opener")}}属性（返回 null）。</p>
 
-    <p>当打开不受信任的链接时，这特别有用，以确保它们无法通过{{domxref("Window.opener")}}属性来篡改原始文档（有关更多详细信息，请参阅 <a href="https://mathiasbynens.github.io/rel-noopener/">About rel=noopener</a>），同时仍提供 Referer HTTP标头（除非也使用noreferrer）。</p>
+    <p>当打开不受信任的链接时，这特别有用，以确保它们无法通过{{domxref("Window.opener")}}属性来篡改原始文档（有关更多详细信息，请参阅 <a href="https://mathiasbynens.github.io/rel-noopener/">About rel=noopener</a>），同时仍提供 Referer HTTP 标头（除非也使用 noreferrer）。</p>
 
     <p>请注意，使用<code>noopener</code>时，在决定是否打开新窗口/选项卡方面，除<code>_top</code>，<code>_self</code>和<code>_parent</code> 以外的非空目标名称都被视为<code>_blank</code> 。</p>
    </td>
@@ -224,15 +224,15 @@ translation_of: Web/HTML/Link_types
   <tr>
    <td><code>noreferrer</code></td>
    <td>
-    <p>阻止浏览器导航到另一个页面时，通过Referer：HTTP header将该页面地址或任何其他值作为Referrer发送。<br>
-     （在Firefox 37之前的Firefox中，此功能仅在页面中找到的链接中有效。在UI中单击的链接（例如通过上下文菜单“在新选项卡中打开”）被忽略了）。</p>
+    <p>阻止浏览器导航到另一个页面时，通过 Referer：HTTP header 将该页面地址或任何其他值作为 Referrer 发送。<br>
+     （在 Firefox 37 之前的 Firefox 中，此功能仅在页面中找到的链接中有效。在 UI 中单击的链接（例如通过上下文菜单“在新选项卡中打开”）被忽略了）。</p>
    </td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
    <td>{{HTMLElement("link")}}</td>
   </tr>
   <tr>
    <td><code>opener</code> {{Experimental_Inline}}</td>
-   <td>恢复带有<code>target="_blank"</code>的链接上的隐式<code>rel="noopener"</code>添加（请参阅<a href="https://github.com/whatwg/html/issues/4078">相关的HMTL规范讨论</a>, <a href="https://trac.webkit.org/changeset/237144/webkit/">WebKit change</a>和<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1503681">Firefox bug discussion</a>）。</td>
+   <td>恢复带有<code>target="_blank"</code>的链接上的隐式<code>rel="noopener"</code>添加（请参阅<a href="https://github.com/whatwg/html/issues/4078">相关的 HMTL 规范讨论</a>, <a href="https://trac.webkit.org/changeset/237144/webkit/">WebKit change</a>和<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1503681">Firefox bug discussion</a>）。</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}},<br>
     {{HTMLElement("form")}}</td>
    <td>{{HTMLElement("link")}}</td>
@@ -241,9 +241,9 @@ translation_of: Web/HTML/Link_types
    <td><code>pingback</code><br>
      </td>
    <td>
-    <p>定义一个外部资源URI，以便在对该网页发表评论或引用时调用。 在 <a href="http://www.hixie.ch/specs/pingback/pingback">Pingback 1.0</a> 规范中定义了用于进行此类调用的协议。</p>
+    <p>定义一个外部资源 URI，以便在对该网页发表评论或引用时调用。 在 <a href="http://www.hixie.ch/specs/pingback/pingback">Pingback 1.0</a> 规范中定义了用于进行此类调用的协议。</p>
 
-    <p>注意：如果还存在X-Pingback：HTTP标头，则此标头优先于具有这种链接类型的{{HTMLElement("link")}}元素</p>
+    <p>注意：如果还存在 X-Pingback：HTTP 标头，则此标头优先于具有这种链接类型的{{HTMLElement("link")}}元素</p>
    </td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
@@ -259,7 +259,7 @@ translation_of: Web/HTML/Link_types
   <tr>
    <td><a href="/zh-CN/docs/Web/HTML/Link_types/prefetch"><code>prefetch</code></a></td>
    <td>提示浏览器提前加载链接的资源，因为它可能会被用户请求。
-    <p>建议浏览器提前获取链接的资源，因为它很可能会被用户请求。 从Firefox 44开始，考虑了{{HTMLAttrxRef("crossorigin", "link")}}属性的值，从而可以进行匿名预取。</p>
+    <p>建议浏览器提前获取链接的资源，因为它很可能会被用户请求。 从 Firefox 44 开始，考虑了{{HTMLAttrxRef("crossorigin", "link")}}属性的值，从而可以进行匿名预取。</p>
 
     <p>注意：<a href="/en-US/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a>详细说明了可以预取的链接以及替代方法。</p>
    </td>
@@ -300,7 +300,7 @@ translation_of: Web/HTML/Link_types
    <td>
     <p>表示超链接引用了一个文档，该文档的接口专门设计用于在此文档或站点及其资源中进行搜索。</p>
 
-    <p>如果将{{htmlattrxref("type","link")}}属性设置为<code>application/opensearchdescription+xml</code>，则该资源是<a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox">OpenSearch 插件</a>，可以轻松将其添加到Firefox或Internet Explorer等某些浏览器的界面中。</p>
+    <p>如果将{{htmlattrxref("type","link")}}属性设置为<code>application/opensearchdescription+xml</code>，则该资源是<a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox">OpenSearch 插件</a>，可以轻松将其添加到 Firefox 或 Internet Explorer 等某些浏览器的界面中。</p>
    </td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
    <td><em>None.</em></td>
@@ -320,7 +320,7 @@ translation_of: Web/HTML/Link_types
    <td>
     <p>表示超链接指向的资源更适合于辅助浏览上下文，如侧边栏。 没有此类上下文的浏览器将忽略此关键字。</p>
 
-    <p>虽然它曾经是HTML规范的一部分，但已从规范中删除，仅由Firefox 63之前的Firefox版本实现。</p>
+    <p>虽然它曾经是 HTML 规范的一部分，但已从规范中删除，仅由 Firefox 63 之前的 Firefox 版本实现。</p>
    </td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
    <td>{{HTMLElement("form")}}</td>
