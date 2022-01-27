@@ -86,7 +86,7 @@ Regardons maintenant quelques exemples concrets tirés de sites connus.
 
 ### Disposition à une colonne
 
-**[Invision](http://www.invisionapp.com/) **: un exemple de disposition classique à une colonne où toute l'information est présentée de façon linéaire sur une page.
+**[Invision](http://www.invisionapp.com/)&nbsp;:** un exemple de disposition classique à une colonne où toute l'information est présentée de façon linéaire sur une page.
 
 ![Example of a 1 column layout in the wild](screenshot-product.jpg)        ![1 column layout with header, main content, a stack of aside contents and a footer](screenshot-product-overlay.jpg)
 

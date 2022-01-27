@@ -23,7 +23,7 @@ La suite de cette page détaille ces problèmes ainsi que d'autres points d'inco
 
 ## Les API JavaScript
 
-### Les _callbacks_ et l'espace de noms chrome.\*
+### Les _callbacks_ et l'espace de noms chrome
 
 Dans Chrome, les extensions peuvent accéder aux API JavaScript privilégiées à l'aide de l'espace de noms `chrome` :
 

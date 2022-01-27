@@ -122,7 +122,7 @@ Avec cela en tête, commençons à voir comment définir et lancer des tests.
 
 Avant d'entrer dans le détail de "que tester", voyons d'abord brièvement _où_ et _comment_ les tests sont définis.
 
-Django utilise le [built-in test discovery](https://docs.python.org/3/library/unittest.html#unittest-test-discovery "(in Python v3.5)") du module unittest, qui va chercher des tests, sous le répertoire de travail actuel, dans tous les fichiers dont le nom contient le pattern **test\*.py**. Du moment que vous nommez vos fichiers de manière appropriée, vous pouvez utiliser n'importe quelle structure. Nous vous recommandons de créer un module pour coder vos tests, et d'avoir des fichiers distincts pour les modèles, les vues, les formulaires et tout autre type de code que vous avez besoin de tester. Par exemple :
+Django utilise le [built-in test discovery](https://docs.python.org/3/library/unittest.html#unittest-test-discovery "(in Python v3.5)") du module unittest, qui va chercher des tests, sous le répertoire de travail actuel, dans tous les fichiers dont le nom contient le pattern **test.py**. Du moment que vous nommez vos fichiers de manière appropriée, vous pouvez utiliser n'importe quelle structure. Nous vous recommandons de créer un module pour coder vos tests, et d'avoir des fichiers distincts pour les modèles, les vues, les formulaires et tout autre type de code que vous avez besoin de tester. Par exemple :
 
     catalog/
       /tests/
@@ -196,7 +196,7 @@ La manière la plus facile pour lancer tous les tests est d'utiliser la commande
 python3 manage.py test
 ```
 
-Cette commande va lancer la recherche de tous les fichiers ayant la forme **test\*.py** sous le répertoire courant, et lancer tous les tests définis, en utilisant les classes de base appropriées (ici nous avons un certain nombre de fichiers de test, mais pour le moment seul **/catalog/tests/test_models.py** contient des tests). Par défaut, chaque test ne fera de rapport qu'en cas d'échec, avec ensuite un résumé du test.
+Cette commande va lancer la recherche de tous les fichiers ayant la forme **test.py** sous le répertoire courant, et lancer tous les tests définis, en utilisant les classes de base appropriées (ici nous avons un certain nombre de fichiers de test, mais pour le moment seul **/catalog/tests/test_models.py** contient des tests). Par défaut, chaque test ne fera de rapport qu'en cas d'échec, avec ensuite un résumé du test.
 
 > **Note :** Si vous obtenez des erreurs telles que : `ValueError: Missing staticfiles manifest entry ...`, cela peut être dû au fait que le test ne lance pas *collectstatic* par défaut, et que votre application utilise une classe de storage qui le requiert (voyez [manifest_strict](https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict) pour plus d'information). Il y a plusieurs façons de remédier à ce problème - la plus facile est de lancer tout simplement *collectstatic* avant de lancer les tests :
 >

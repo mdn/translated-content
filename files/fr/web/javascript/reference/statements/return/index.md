@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Instructions/return
 ---
 {{jsSidebar("Statements")}}
 
-L'instruction **`return` **met fin à l'exécution d'une fonction et définit une valeur à renvoyer à la fonction appelante.
+L'instruction **`return`** met fin à l'exécution d'une fonction et définit une valeur à renvoyer à la fonction appelante.
 
 {{EmbedInteractiveExample("pages/js/statement-return.html")}}
 

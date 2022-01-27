@@ -69,7 +69,7 @@ La liste des URLs dont nous aurons besoin se résume à :
 - `catalog/books/` — Pour la liste des livres.
 - `catalog/authors/` — Pour la liste des auteurs.
 - `catalog/book/<id>` — Pour disposer du détail de chacun des livres mis en prêt et identifié par identifiant `<id>` unique (le troisième livre enregistré est consultable dans le détail via l'URL `/catalog/book/3`).
-- `catalog/author/<id>`\* *— De la même manière, le détail de chacun des auteurs enregistrés, identifié de la même manière par sa clé primaire *`<id>`\*.
+- `catalog/author/<id>` — De la même manière, le détail de chacun des auteurs enregistrés, identifié de la même manière par sa clé primaire *`<id>`*.
 
 Bien que les données dépendent du contenu de la base de données, les trois premières URLs retournent les résultats de requêtes sans informations supplémentaires ; c'est le cas de la page d'accueil qui donnera des décomptes de contenus et des pages sur la liste des livres ou des auteurs.
 
@@ -175,7 +175,7 @@ Nous aborderons plus en détail les aspects de gabarit et de contexte des variab
 
 Un gabarit est un fichier texte qui décrit la structure ou la mise en page d'un document (comme une page HTML) et qui utilise des emplacements réservés pour y insérer des informations issues de la base de données.
 
-Le cadriciel Django va rechercher automatiquement ces gabarits dans un répertoire nommé '**templates**' dans le dossier de l'application. Si vous reprenez la dernière ligne de la fonction `index()` dans l'exemple ci-dessus, la fonction `render()` a besoin du fichier **_index.html_** qui devrait être placé dans le dossier\* **\*/locallibrary/catalog/templates/**. Dans le cas contraire, cela génère une erreur car le fichier est considéré comme absent.
+Le cadriciel Django va rechercher automatiquement ces gabarits dans un répertoire nommé '**templates**' dans le dossier de l'application. Si vous reprenez la dernière ligne de la fonction `index()` dans l'exemple ci-dessus, la fonction `render()` a besoin du fichier **_index.html_** qui devrait être placé dans le dossie **/locallibrary/catalog/templates/**. Dans le cas contraire, cela génère une erreur car le fichier est considéré comme absent.
 
 Vous pouvez en faire l'expérience dès à présent, après avoir redémarré votre serveur local, en accédant à l'URL `127.0.0.1:8000` de votre navigateur. Une page d'erreur explicite s'affiche en indiquant un message du type : "`TemplateDoesNotExist at /catalog/`", ainsi que de nombreux détails sur l'enchaînement des fonctions aboutissant à cette erreur.
 
@@ -227,7 +227,7 @@ Nous allons nous appuyer sur le gabarit ci-dessous pour construire la page de ba
 
 > **Note :** Il y a aussi deux balises supplémentaires : `url` et `load static`. Elles seront étudiées dans le chapitre suivant.
 
-Créez un nouveau fichier nommé **_base_generic.html_ **dans le dossier **/locallibrary/catalog/templates/** (à créer aussi) et copiez-y le texte ci-dessous :
+Créez un nouveau fichier nommé **_base_generic.html_** dans le dossier **/locallibrary/catalog/templates/** (à créer aussi) et copiez-y le texte ci-dessous :
 
 ```html
 <!DOCTYPE html>

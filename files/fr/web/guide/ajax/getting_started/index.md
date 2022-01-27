@@ -10,7 +10,7 @@ Cet article vous guide à travers les bases d’AJAX et vous donne deux exemples
 
 ### Présentation d’AJAX
 
-AJAX est un raccourci pour **\*A**synchronous **J**avaScript **A**nd **X**ML\* (JavaScript asynchrone et XML) inventé par Jesse James Garrett. Pour simplifier, il s’agit d’employer l’objet [`XMLHttpRequest`](/fr/XMLHttpRequest "fr/XMLHttpRequest") pour communiquer avec des serveurs. Il peut envoyer et recevoir des informations sous différents formats, dont JSON, XML, HTML ou texte. Son principal attrait est sa nature « asynchrone » ce qui signifie qu’il peut communiquer avec le serveur, échanger des données et mettre à jour la page sans avoir à la recharger.
+AJAX est un raccourci pour **A**synchronous **J**avaScript **A**nd **X**ML (JavaScript asynchrone et XML) inventé par Jesse James Garrett. Pour simplifier, il s’agit d’employer l’objet [`XMLHttpRequest`](/fr/XMLHttpRequest "fr/XMLHttpRequest") pour communiquer avec des serveurs. Il peut envoyer et recevoir des informations sous différents formats, dont JSON, XML, HTML ou texte. Son principal attrait est sa nature « asynchrone » ce qui signifie qu’il peut communiquer avec le serveur, échanger des données et mettre à jour la page sans avoir à la recharger.
 
 Les deux principales fonctionnalités d’AJAX permettent de :
 

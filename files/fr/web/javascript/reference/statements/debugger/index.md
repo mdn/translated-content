@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Instructions/debugger
 ---
 {{jsSidebar("Statements")}}
 
-L'instruction **`debugger` **permet de faire appel à un outil de débogage (qui peut par exemple permettre de placer un point d'arrêt). Si cette fonctionnalité de débogage n'est pas disponible, l'instruction n'aura aucun effet.
+L'instruction **`debugger`** permet de faire appel à un outil de débogage (qui peut par exemple permettre de placer un point d'arrêt). Si cette fonctionnalité de débogage n'est pas disponible, l'instruction n'aura aucun effet.
 
 ## Syntaxe
 

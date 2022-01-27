@@ -178,7 +178,7 @@ li.special {
 }
 ```
 
-Cette syntaxe signifie "s'applique à tous les éléments `li` dont l'attribut `class` a la valeur `special`\* *". Cette règle ne s'applique alors plus à l'élément `<span>` ou à tout autre élément dont l'attribut `class` a la valeur `special`* *mais* \*qui n'est pas un `<li>.` Pour que la règle s'applique aussi au `<span>`  il faudrait l'ajouter dans la liste des sélecteurs :
+Cette syntaxe signifie "s'applique à tous les éléments `li` dont l'attribut `class` a la valeur `special`". Cette règle ne s'applique alors plus à l'élément `<span>` ou à tout autre élément dont l'attribut `class` a la valeur `special` mais qui n'est pas un `<li>.` Pour que la règle s'applique aussi au `<span>` il faudrait l'ajouter dans la liste des sélecteurs :
 
 ```css
 li.special,
