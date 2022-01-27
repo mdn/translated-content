@@ -3,33 +3,47 @@ title: counter-reset
 slug: Web/CSS/counter-reset
 tags:
   - CSS
-  - CSS プロパティ
+  - CSS カウンター
   - CSS リスト
-  - リファレンス
+  - CSS プロパティ
+  - recipe:css-property
+browser-compat: css.properties.counter-reset
 translation_of: Web/CSS/counter-reset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<a href="/ja/docs/Web/CSS">CSS</a> の **`counter-reset`** プロパティは、 <a href="/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters">CSS カウンター</a>を、与えられた値に初期化します。
+**`counter-reset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)を指定された値で初期化します。
+このプロパティは新しいカウンターや逆行カウンターを、指定された要素の指定された名前で生成します。
 
-<div>{{EmbedInteractiveExample("pages/css/counter-reset.html")}}</div>
+通常のカウンターは、初期値が 0 になっています。
+逆行カウンターはカウントダウンのためのものであり、既定の初期値は現在のレベルでの要素の数に設定されます。
+既定の初期値により、 2 つの最も一般的な数値のパターン、 1 から要素の数までのカウントアップと、要素の数から 1 までのカウントダウンを簡単に実装することができます。
 
-<p class="hidden">この対話型サンプルのソースファイルは GitHub リポジトリに格納されています。対話型サンプルプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+カウンターの値は CSS の {{cssxref("counter-increment")}} プロパティを使用して増加または減少させ、既存のカウンターの値は {{cssxref("counter-set")}} を使用して設定することができます。
 
-<div class="note">
-**メモ:** カウンターの値は CSS の {{cssxref("counter-increment")}} プロパティを使用して増加させたり減少させたりすることができます。
-</div>
+{{EmbedInteractiveExample("pages/css/counter-reset.html")}}
+
+独自に作成したカウンターに加え、このプロパティは（{{HTMLElement("ol")}} 要素で作成される）順序付きリストで使用される `list-item` カウンターもリセットすることができます。
+これらは独自に作成したカウンタと同じ動作をしますが、それぞれのリスト要素で自動的に 1 ずつ増加または減少する点が異なります。
+この動作は {{cssxref("counter-increment")}} で上書きすることができます。
 
 ## 構文
 
-<pre class="brush:css no-line-numbers">/* "my-counter" を 0 に設定 */
+```css
+/* "my-counter" を 0 に設定 */
 counter-reset: my-counter;
 
 /* "my-counter" を -1 に設定 */
-counter-reset: my-counter -1;
+counter-reset: my-counter -3;
 
-/* "counter1" を 1 に、 "counter2" を 4 に設定 */
-counter-reset: counter1 1 counter2 4;
+/* 逆行の "my-counter" を counter1" を 1 に、 "counter2" を 4 に設定 */
+counter-reset: reversed(my-counter);
+
+/* 逆行の "my-counter" を -1 に設定 */
+counter-reset: reversed(my-counter) -1;
+
+/* counter2 を 9 に、逆行の "counter1" と "counter3" をそれぞれ 1 と 4 に設定*/
+counter-reset: reversed(counter1) 1 counter2 9 reversed(counter3) 4;
 
 /* より詳細度が低い規則による値の初期化をキャンセル */
 counter-reset: none;
@@ -37,13 +51,18 @@ counter-reset: none;
 /* グローバル値 */
 counter-reset: inherit;
 counter-reset: initial;
+counter-reset: revert;
 counter-reset: unset;
-</pre>
+```
 
 `counter-reset` プロパティは、以下のうちの一つで指定します。
 
-- カウンターの名前を指定する `&lt;custom-ident&gt;` と、その後に任意で `&lt;integer&gt;`。名前又は名前と数値の組み合わせを空白で区切ることで、初期化させるカウンターを好きなだけ指定することができます。
+- `<custom-ident>` または `reversed(<custom-ident>)` でカウンターに名前を付けます。 `<integer>` を続けることもできます。
+  なお、 `reversed()` メソッドは「逆行」カウンターを生成するために使用することができます。
+  初期化するカウンターや逆行カウンターはいくつでも指定することができ、それぞれのカウンターとカウンター値の組は空白で区切ります。
 - キーワード値 `none`。
+
+`list-item` という名前の「暗黙的な」カウンターを使用すると、 {{HTMLElement("ol")}} を使用して生成される順序付きリストの番号付けを制御に使用することができます。
 
 ### 値
 
@@ -54,53 +73,54 @@ counter-reset: unset;
 - `none`
   - : カウンターの初期化は行われません。これはより詳細度の低い規則によって定義された `counter-reset` を上書きするために使用することができます。
 
+## 公式定義
+
+{{cssinfo}}
+
 ## 形式文法
 
 {{csssyntax}}
 
 ## 例
 
-<pre class="brush:css">h1 {
+以下の例はカウンターの初期化方法を紹介していますが、増加、減少、表示の方法は示していません。
+
+もっと完全な例は、 [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)を参照してください。
+
+### 名前付きカウンターの初期化
+
+```css
+h1 {
   counter-reset: chapter section 1 page;
   /* chapter と page カウンターを 0 に、
      section カウンターを 1 に設定します。 */
 }
-</pre>
+```
+
+### 逆行カウンター
+
+```css
+h1 {
+  counter-reset: reversed(chapter) reversed(section) 1 page;
+  /* chapter カウンターと section カウンターに逆行フラグを設定します。
+    chapter カウンターと page カウンターを 0 に、section カウンターを
+    1 に設定します */
+}
+```
 
 ## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Lists', '#counter-reset', 'counter-reset')}}</td>
-   <td>{{Spec2('CSS3 Lists')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#propdef-counter-reset', 'counter-reset')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-{{cssinfo}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-<div>
-{{Compat("css.properties.counter-reset")}}
-</div>
+{{Compat}}
 
 ## 関連情報
 
-- <a href="/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters">CSS カウンターの利用</a>
+- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
 - {{cssxref("counter-increment")}}
+- {{cssxref("counter-set")}}
 - {{cssxref("@counter-style")}}
+- {{cssxref("counter()")}} および {{cssxref("counters()")}} 関数
+- {{cssxref("content")}} プロパティ
