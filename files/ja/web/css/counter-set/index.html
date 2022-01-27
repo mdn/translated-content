@@ -8,12 +8,12 @@ tags:
   - CSS Property
 translation_of: Web/CSS/counter-set
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><a href="/ja/docs/Web/CSS">CSS</a>属性<strong><code>counter-set</code></strong>は，<a href="/ja/docs/Web/Guide/CSS/Counters">CSS計数</a>を指定した値に設定します。当属性は存在する計数を操作し，新しい計数を作成するのは指定された名前の計数が要素に未だ存在しない場合のみです。</span></p>
+<span class="seoSummary">[CSS](/ja/docs/Web/CSS)属性**`counter-set`**は，[CSS計数](/ja/docs/Web/Guide/CSS/Counters)を指定した値に設定します。当属性は存在する計数を操作し，新しい計数を作成するのは指定された名前の計数が要素に未だ存在しない場合のみです。</span>
 
 <div class="note">
-<p><strong>注意:</strong> 計数値の増減分にはCSS属性{{cssxref("counter-increment")}}を用いることもできます。</p>
+**注意:** 計数値の増減分にはCSS属性{{cssxref("counter-increment")}}を用いることもできます。
 </div>
 
 <h2 id="構文">構文</h2>
@@ -36,23 +36,19 @@ counter-set: initial;
 counter-set: unset;
 </pre>
 
-<p><code>counter-set</code>属性には次の内どれかを指定します。</p>
+`counter-set`属性には次の内どれかを指定します。
 
-<ul>
- <li>計数名<code>&lt;custom-ident&gt;</code>に引き続く任意の<code>&lt;integer&gt;</code>。指定できる計数の個数に制限はなく，それぞれを空白で区切って指定します。</li>
- <li>予約語<code>none</code>。</li>
-</ul>
+- 計数名`&lt;custom-ident&gt;`に引き続く任意の`&lt;integer&gt;`。指定できる計数の個数に制限はなく，それぞれを空白で区切って指定します。
+- 予約語`none`。
 
 <h3 id="値">値</h3>
 
-<dl>
- <dt>{{cssxref("custom-ident", "&lt;custom-ident&gt;")}}</dt>
- <dd>設定する計数名。</dd>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>この値が，〔当CSSが規則を適用する〕要素が現れる度に計数を設定します。指定なき場合の既定値は0です。指定した名前の計数が現在要素に存在しない場合，その要素に指定された名前の計数を初期値0で新たに作成します（ただし，作成の後，速やかに他の値に設定又は増分されます）。</dd>
- <dt><code>none</code></dt>
- <dd>いかなる計数の設定も行いません。より詳細度の低い規則で定めた<code>counter-set</code>を上書きするのに使えるでしょう。</dd>
-</dl>
+- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
+  - : 設定する計数名。
+- {{cssxref("&lt;integer&gt;")}}
+  - : この値が，〔当CSSが規則を適用する〕要素が現れる度に計数を設定します。指定なき場合の既定値は0です。指定した名前の計数が現在要素に存在しない場合，その要素に指定された名前の計数を初期値0で新たに作成します（ただし，作成の後，速やかに他の値に設定又は増分されます）。
+- `none`
+  - : いかなる計数の設定も行いません。より詳細度の低い規則で定めた`counter-set`を上書きするのに使えるでしょう。
 
 <h3 id="形式文法">形式文法</h3>
 
@@ -86,23 +82,21 @@ counter-set: unset;
  </tbody>
 </table>
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
 <h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
 <div>
 
 
-<p>{{Compat("css.properties.counter-set")}}</p>
+{{Compat("css.properties.counter-set")}}
 </div>
 
 <h2 id="関連項目">関連項目</h2>
 
-<ul>
- <li><a href="/ja/docs/CSS/Counters">CSSカウンタの使用</a></li>
- <li>{{cssxref("counter-increment")}}</li>
- <li>{{cssxref("counter-reset")}}</li>
- <li>{{cssxref("@counter-style")}}</li>
- <li>{{cssxref("counter")}}及び{{cssxref("counters")}}関数</li>
- <li>{{cssxref("content")}}属性</li>
-</ul>
+- [CSSカウンタの使用](/ja/docs/CSS/Counters)
+- {{cssxref("counter-increment")}}
+- {{cssxref("counter-reset")}}
+- {{cssxref("@counter-style")}}
+- {{cssxref("counter")}}及び{{cssxref("counters")}}関数
+- {{cssxref("content")}}属性
