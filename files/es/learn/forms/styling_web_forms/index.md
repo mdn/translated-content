@@ -45,73 +45,80 @@ En algunos elementos, simplemente no se puede utilizar CSS. Incluyendo a:
 * Elementos involucrados en la creación de widgets de selección como {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} y {{HTMLElement("datalist")}}.
 * {{HTMLElement("progress")}} y {{HTMLElement("meter")}}
 
-<h2 id="Estilizado_básico">Estilizado básico</h2>
+## Estilizado básico
 
-<p>Aplicar estilos a <a href="https://developer.mozilla.org/es/docs/Web/Guide/HTML/Forms/Styling_HTML_forms#El_bueno">elementos que son fáciles de estilizar</a> con CSS, no debería suponer ninguna dificultad ya que básicamente se comportan como cualquier otro elemento HTML. De todas formas, el agente de usuario de estilos para cada navegador puede mostrar pequeñas inconsistencias por lo que a continuación daremos algunos trucos para ayudar a aplicar estilos más cómodamente.</p>
+Aplicar estilos a [elementos que son fáciles de estilizar](https://developer.mozilla.org/es/docs/Web/Guide/HTML/Forms/Styling_HTML_forms#El_bueno) con CSS, no debería suponer ninguna dificultad ya que básicamente se comportan como cualquier otro elemento HTML. De todas formas, el agente de usuario de estilos para cada navegador puede mostrar pequeñas inconsistencias por lo que a continuación daremos algunos trucos para ayudar a aplicar estilos más cómodamente.
 
-<h3 id="Campos_de_búsqueda">Campos de búsqueda</h3>
+### Campos de búsqueda
 
-<p>Las cajas de búsqueda son el único tipo de campo de texto que pueden ofrecer más dificultad al aplicar estilos. En los navegadores basados en webkit (Chrome, Safari, etc.) se debe lidiar con la propiedad -webkit-. Discutiremos esta propiedad más tarde en el artículo: <a href="/en-US/docs/Advanced_styling_for_HTML_forms" style="line-height: 23.3333339691162px; text-decoration: underline;" title="/en-US/docs/Advanced_styling_for_HTML_forms">Advanced styling for HTML forms</a><span style="line-height: 23.3333339691162px;">.</span></p>
+Las cajas de búsqueda son el único tipo de campo de texto que pueden ofrecer más dificultad al aplicar estilos. En los navegadores basados en webkit (Chrome, Safari, etc.) se debe lidiar con la propiedad -webkit-. Discutiremos esta propiedad más tarde en el artículo: [Estilizado avanzado para formularios HTML](/en-US/docs/Advanced_styling_for_HTML_forms).
 
-<h4 id="Ejemplo">Ejemplo</h4>
+#### Ejemplo
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;input type="search"&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form>
+  <input type="search">
+</form>
+```
 
-<pre class="brush: css">input[type=search] {
+```css
+input[type=search] {
   border: 1px dotted #999;
   border-radius: 0;
 
   -webkit-appearance: none;
-}</pre>
+}
+```
 
-<p><img alt="This is a screenshot of a search filed on Chrome, with and without the use of -webkit-appearance" src="/files/4153/search-chrome-macos.png" style="border-style: solid; border-width: 1px; height: 107px; width: 179px;"></p>
+![Esta es una captura de pantalla de una búsqueda en Chrome, con y sin el uso de -webkit-appearance](search-chrome-macos.png)
 
-<p>En esta captura de pantalla pueden verse dos campos de búsqueda en Chrome, ambos campos tienen definido el borde como en nuestro ejemplo, pero el primero no utiliza -webkit- mientras que el segundo si lo hace con -webkit-appearance:none. Las diferencias son evidentes.</p>
+En esta captura de pantalla pueden verse dos campos de búsqueda en Chrome, ambos campos tienen definido el borde como en nuestro ejemplo, pero el primero no utiliza -webkit- mientras que el segundo si lo hace con -webkit-appearance:none. Las diferencias son evidentes.
 
-<h3 id="Fuentes_y_texto">Fuentes y texto</h3>
+### Fuentes y texto
 
-<p>Las fuentes y capacidades de texto de CSS  se pueden utilizar sin problemas en cualquier widget (y sí, se puede utilizar <a href="/es/docs/Web/CSS/@font-face">@font-face</a> en formularios). De todas formas, el comportamiento de los navegadores no es siempre consistente. Por defecto, algunos widgets no heredan <a href="/es/docs/Web/CSS/font-family">font-family</a> ni <a href="/es/docs/Web/CSS/font-size">font-size</a> de sus antecesores. Y muchos navegadores utilizan la apariencia por defecto. Para mantener la coherencia de los formularios con el resto de elementos se deben añadir las siguientes reglas a la hoja de estilos:</p>
+Las fuentes y capacidades de texto de CSS se pueden utilizar sin problemas en cualquier widget (y sí, se puede utilizar [@font-face](/es/docs/Web/CSS/@font-face) en formularios). De todas formas, el comportamiento de los navegadores no es siempre consistente. Por defecto, algunos widgets no heredan [font-family](/es/docs/Web/CSS/font-family) ni [font-size](/es/docs/Web/CSS/font-size) de sus antecesores. Y muchos navegadores utilizan la apariencia por defecto. Para mantener la coherencia de los formularios con el resto de elementos se deben añadir las siguientes reglas a la hoja de estilos:
 
-<pre class="brush: css">button, input, select, textarea {
+```css
+button, input, select, textarea {
   font-family : inherit;
   font-size   : 100%;
-}</pre>
+}
+```
 
-<p>La siguiente captura de pantalla muestra estas incosistencias; a la izquierda la apariencia por defecto en Firefox sobre Mac OS X, usando las fuentes por defecto de la plataforma. A la derecha los mismos elementos aplicando nuestras reglas de armonización de fuentes.</p>
+La siguiente captura de pantalla muestra estas incosistencias; a la izquierda la apariencia por defecto en Firefox sobre Mac OS X, usando las fuentes por defecto de la plataforma. A la derecha los mismos elementos aplicando nuestras reglas de armonización de fuentes.
 
-<p><img alt="This is a screenshot of the main form widgets on Firefox on Mac OSX, with and without font harmonization" src="/files/4157/font-firefox-macos.png" style="border-style: solid; border-width: 1px; height: 234px; width: 420px;"></p>
+![Esta es una captura de pantalla que muestra las inconsistencias relacionadas al uso de font-family](forms_fontfamily.png)
 
-<p>Hay muchas controversia sobre si los formularios tienen mejor aspecto usando los estilos por defecto del sistema o usando estilos personalizados que coincidan con el resto del contenido. Como diseñador del sitio o aplicación Web esta decisión  es suya.</p>
+Hay muchas controversia sobre si los formularios tienen mejor aspecto usando los estilos por defecto del sistema o usando estilos personalizados que coincidan con el resto del contenido. Como diseñador del sitio o aplicación Web esta decisión es suya.
 
-<h3 id="Modelo_de_cajas">Modelo de cajas</h3>
+### Modelo de cajas
 
-<p>Todos los campos de texto tienen soporte completo para las propiedades relacionadas con el modelo de cajas de CSS (<a href="/es/docs/Web/CSS/width">width</a>, <a href="/es/docs/Web/CSS/height">height</a>, <a href="/es/docs/Web/CSS/padding_paspartu">padding</a>, margin y <a href="/es/docs/CSS/border">border</a>). Igual que antes, los navegadores se remiten a los estilos por defecto del sistema cuando muestran estos widgets. A cada cual te corresponde el como combinarlos dentro del resto de contenido. Si  se quieres mantener el aspecto nativo de los widgets, entonces hay que afrontar pequeñas inconsistencias de tamaño.</p>
+Todos los campos de texto tienen soporte completo para las propiedades relacionadas con el modelo de cajas de CSS ([width](/es/docs/Web/CSS/width), [height](/es/docs/Web/CSS/height), [padding](/es/docs/Web/CSS/padding), margin y [border](/es/docs/CSS/border)). Igual que antes, los navegadores se remiten a los estilos por defecto del sistema cuando muestran estos widgets. A cada cual te corresponde el como combinarlos dentro del resto de contenido. Si  se quieres mantener el aspecto nativo de los widgets, entonces hay que afrontar pequeñas inconsistencias de tamaño.
 
-<p>Esto es porque cada widget tiene sus propias reglas para el orden, margen y padding. Por lo que si quieres darle el mismo tamaño a varios widgets diferentes se debe usar la propiedad box-sizing: </p>
+Esto es porque cada widget tiene sus propias reglas para el orden, margen y padding. Por lo que si quieres darle el mismo tamaño a varios widgets diferentes se debe usar la propiedad box-sizing: 
 
-<pre class="brush: css">input, textarea, select, button {
+```css
+input, textarea, select, button {
   width : 150px;
   margin: 0;
 
-  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
-     -moz-box-sizing: border-box; /* For legacy (Firefox &lt;29) Gecko based browsers */
+  -webkit-box-sizing: border-box; /* Para navegadores de legado basados en WebKit */
+     -moz-box-sizing: border-box; /* Para navegadores de legado (Firefox 29) basados en Gecko */
           box-sizing: border-box;
-}</pre>
+}
+```
 
-<p><img alt="This is a screenshot of the main form widgets on Chrome on Windows 7, with and without the use of box-sizing." src="/files/4161/size-chrome-win7.png" style="border-style: solid; border-width: 1px; height: 213px; width: 358px;"></p>
+![Esta es una captura de pantalla de los widgets de formulario en Chrome para Windows 7, con y sin el uso de box-sizing.](size-chrome-win7.png)
 
-<p>En la captura de pantalla de arriba, la columna la izquierda es sin utilizar box-sizing, mientras que la de la derecha usa esta propiedad con el valor border-box. Obsérvese cómo esto permite asegurar que todos los elementos ocupan la misma cantidad de espacio, independientemente de las reglas por defecto de la plataforma.</p>
+En la captura de pantalla de arriba, la columna la izquierda es sin utilizar box-sizing, mientras que la de la derecha usa esta propiedad con el valor border-box. Obsérvese cómo esto permite asegurar que todos los elementos ocupan la misma cantidad de espacio, independientemente de las reglas por defecto de la plataforma.
 
-<h3 id="Posicionado">Posicionado</h3>
+### Posicionado
 
-<p>El posicionado de formularios HTML <span style="line-height: 23.3333339691162px;">no es </span><span style="line-height: 1.5;">generalmente  un problema; sin embargo, hay dos elementos a los que prestar una especial atención:</span></p>
+El posicionado de formularios HTML no es generalmente  un problema; sin embargo, hay dos elementos a los que prestar una especial atención:
 
-<h4 id="legend">legend</h4>
+#### legend
 
-<p>El elemento <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend">legend </a>no tiene problemas de estilizado a excepción de las reglas de posición. En los navegadores el elemento <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend">legend </a>se posiciona encima del borde superior de su antecesor <a href="/es/docs/HTML/Elemento/fieldset">fieldset</a>. No existe ninguna posibilidad de colocarlo dentro del flujo HTML más allá del borde superior. Sin embargo se puede posicionar de forma relativa o absoluta mediante la propiedad position. En cualquier caso sigue siendo parte del borde de fieldset.</p>
+El elemento {{HTMLElement("legend")}} no tiene problemas de estilizado a excepción de las reglas de posición. En los navegadores el elemento `legend` se posiciona encima del borde superior de su antecesor {{HTMLElement("fieldset")}}. No existe ninguna posibilidad de colocarlo dentro del flujo HTML más allá del borde superior. Sin embargo se puede posicionar de forma relativa o absoluta mediante la propiedad position. En cualquier caso sigue siendo parte del borde de fieldset.
 
 <p>Debido a que el elemento legend es muy importante por razones de accesibilidad (esto es lo que leen las tecnologías de asistencia como parte de las etiquetas de cada elemento de formulario dentro del fieldset), bastante menudo se empareja con un título que se oculta pero siendo aun accesible, de la forma siguiente:</p>
 
