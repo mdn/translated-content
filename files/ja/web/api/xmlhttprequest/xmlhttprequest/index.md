@@ -3,55 +3,64 @@ title: XMLHttpRequest()
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
 tags:
   - API
-  - Reference
+  - コンストラクター
+  - XMLHttpRequest の作成
+  - データの読み取り
+  - Loading Data
+  - Reading Data
+  - リファレンス
+  - サーバーアクセス
   - XHR
   - XMLHttpRequest
-  - ウェブ
-  - コンストラクター
+browser-compat: api.XMLHttpRequest.XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/XMLHttpRequest
 ---
-<div>{{draft}}{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p><span class="seoSummary"><code><strong>XMLHttpRequest()</strong></code> コンストラクターは新しい {{domxref("XMLHttpRequest")}} を生成します。</span></p>
+**`XMLHttpRequest()`** コンストラクターは新しい {{domxref("XMLHttpRequest")}} を生成します。
 
-<p><code>XMLHttpRequest</code> の使用方法についての詳細は、 <a class="internal" href="/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">XMLHttpRequest の使用</a>を参照してください。</p>
+`XMLHttpRequest` の使用方法についての詳細は、 [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)を参照してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">const <var>request</var> = new XMLHttpRequest();
-</pre>
+```js
+const request = new XMLHttpRequest();
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>新しい {{domxref("XMLHttpRequest")}} オブジェクト。このオブジェクトは {{domxref("XMLHttpRequest.send", "send()")}} を呼び出してサーバーにリクエストを送る前に、少なくとも {{domxref("XMLHttpRequest.open", "open()")}} を呼び出して初期化をしなければなりません。</p>
+新しい {{domxref("XMLHttpRequest")}} オブジェクト。このオブジェクトは {{domxref("XMLHttpRequest.send", "send()")}} を呼び出してサーバーにリクエストを送る前に、少なくとも {{domxref("XMLHttpRequest.open", "open()")}} を呼び出して初期化をしなければなりません。
 
-<h2 id="Non-standard_Firefox_syntax" name="Non-standard_Firefox_syntax">標準外の Firefox の構文</h2>
+## 標準外の Firefox の構文
 
-<p>Firefox 16 ではコンストラクターに標準外の引数を追加して、匿名モードを有効にできるようにしました（{{Bug("692677")}} を参照）。 <code>mozAnon</code> フラグを <code>true</code> に設定することで、効率的に旧バージョンの XMLHttpRequest 仕様書で記述されていた <a href="http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest" title="see AnonXMLHttpRequest in the XMLHttpRequest specification"><code>AnonXMLHttpRequest()</code></a> コンストラクターに似せることができます。</p>
+Firefox 16 ではコンストラクターに標準外の引数を追加して、匿名モードを有効にできるようにしました（{{Bug("692677")}} を参照）。 `mozAnon` フラグを `true` に設定することで、効率的に旧バージョンの XMLHttpRequest 仕様書で記述されていた [`AnonXMLHttpRequest()`](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) コンストラクターに似せることができます。
 
-<pre class="syntaxbox">const <var>request</var> = new XMLHttpRequest(<var>paramsDictionary</var>);</pre>
+```js
+const request = new XMLHttpRequest(paramsDictionary);
+```
 
-<h3 id="Parameters_(non-standard)" name="Parameters_(non-standard)">引数 (標準外)</h3>
+### 引数 (標準外)
 
-<dl>
- <dt><code>objParameters</code> {{gecko_minversion_inline("16.0")}}</dt>
- <dd>設定できるフラグが2つあります。
- <dl>
-  <dt><code>mozAnon</code></dt>
-  <dd>論理型: このフラグを <code>true</code> に設定すると、ブラウザーがリソースを読み込むときに{{Glossary("origin", "オリジン")}}と<a href="http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials" title="XMLHttpRequest 仕様書の「ユーザー資格情報」の定義">ユーザー資格情報</a>を示しません。重要なことは、つまり明示的に setRequestHeader を使用して追加しない限り、{{Glossary("Cookie", "クッキー")}}が送信されないということです。</dd>
-  <dt><code>mozSystem</code></dt>
-  <dd>論理型: このフラグを <code>true</code> に設定すると、 {{Glossary("CORS")}} を使用してサーバーにオプトインを必要とせずにサイト間コネクションを作成できるようになります。<em><code>mozAnon: true</code>の設定が必要です。つまり、これはクッキーやその他のユーザー資格情報の送信と組み合わせることができません。これは特権を持つ (レビューされた) アプリのみで動作します ({{Bug("692677")}})。 Firefox に読み込まれた任意のウェブページでは動作しません。</em></dd>
- </dl>
- </dd>
-</dl>
+- `objParameters`
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+  - : 設定できるフラグが2つあります。
 
-<ul>
- <li><a href="/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">XMLHttpRequest の使用</a></li>
- <li><a href="/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">XMLHttpRequest における HTML の扱い</a></li>
-</ul>
+    - `mozAnon`
+      - : 論理型: このフラグを `true` に設定すると、ブラウザーがリソースを読み込むときに{{Glossary("origin", "オリジン")}}と[ユーザー資格情報](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials "XMLHttpRequest 仕様書の「ユーザー資格情報」の定義")を示しません。重要なことは、つまり明示的に setRequestHeader を使用して追加しない限り、{{Glossary("Cookie", "クッキー")}}が送信されないということです。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
