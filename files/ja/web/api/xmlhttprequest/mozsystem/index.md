@@ -3,16 +3,16 @@ title: XMLHttpRequest.mozSystem
 slug: Web/API/XMLHttpRequest/mozSystem
 tags:
   - AP
-  - Non-standard
-  - Property
-  - Reference
+  - 標準外
+  - プロパティ
+  - リファレンス
+  - 同一オリジンポリシー
   - XHR
   - XMLHttpRequest
-  - ame Origin Policy
   - mozSystem
-  - origin
+  - オリジン
 translation_of: Web/API/XMLHttpRequest/mozSystem
 ---
-<div>{{draft}}{{APIRef('XMLHttpRequest')}}</div>
+{{draft}}{{APIRef('XMLHttpRequest')}}
 
-<p><span class="seoSummary"><strong><code>mozSystem</code></strong> はブール値です。 true の場合、同じ発信元ポリシーはリクエストに適用されません。</span></p>
+**`mozSystem`** は論理値です。 true の場合、同じ発信元ポリシーはリクエストに適用されません。
