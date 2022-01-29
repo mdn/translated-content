@@ -1,85 +1,72 @@
 ---
 title: ProgressEvent
 slug: Web/API/ProgressEvent
+tags:
+  - API
+  - Interface
+  - 進捗イベント
+  - ProgressEvent
+  - Reference
+browser-compat: api.ProgressEvent
 translation_of: Web/API/ProgressEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>ProgressEvent</code></strong> インターフェースは (<code>XMLHttpRequest</code>、または {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("style")}} ,{{HTMLElement("link")}}のような基本的なリソースのロードなどの)のようなHTTPリクエストイベントの基本的なプロセスの進捗の進み具合を表示します。</p>
+**`ProgressEvent`** インターフェイスは、プロセスの進捗、例えば HTTP リクエスト（`XMLHttpRequest`、または {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("style")}}, {{HTMLElement("link")}} のような基本的なリソースの読み込み）などを計測するイベントを表します。
 
-<h2 id="コンストラクタ">コンストラクタ</h2>
+{{InheritanceDiagram}}
 
-<dl>
- <dt>{{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}}</dt>
- <dd>Creates a <code>ProgressEvent</code> event with the given parameters.</dd>
-</dl>
+## コンストラクター
 
-<h2 id="Properties">Properties</h2>
+- {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}}
+  - : 指定した引数で `ProgressEvent` イベントを作成します。
 
-<p><em>Also inherits properties from its parent {{domxref("Event")}}</em>.</p>
+## プロパティ
 
-<dl>
- <dt>{{domxref("ProgressEvent.lengthComputable")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("Boolean")}} flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.</dd>
- <dt>{{domxref("ProgressEvent.loaded")}} {{readonlyInline}}</dt>
- <dd>Is an <code>unsigned long long</code> representing the amount of work already performed by the underlying process. The ratio of work done can be calculated with the property and <code>ProgressEvent.total</code>. When downloading a resource using HTTP, this only represent the part of the content itself, not headers and other overhead.</dd>
- <dt>{{domxref("ProgressEvent.total")}} {{readonlyInline}}</dt>
- <dd>Is an <code>unsigned long long</code> representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this only represent the content itself, not headers and other overhead.</dd>
-</dl>
+_親である {{domxref("Event")}} から継承したプロパティもあります。_
 
-<h2 id="メソッド">メソッド</h2>
+- {{domxref("ProgressEvent.lengthComputable")}} {{readonlyInline}}
+  - : 論理値のフラグで、基礎となるプロセスで行われる作業の合計と、既に行われた作業の量が計算可能かどうかを示します。言い換えれば、進捗が測定可能かどうかを示します。
+- {{domxref("ProgressEvent.loaded")}} {{readonlyInline}}
+  - : 64 ビット符号なし整数値で、基礎となるプロセスで既に実行された作業の量を示す。行われた作業の比率は、 `total` でこのプロパティの値を割ることで計算できます。 HTTP を使用してリソースをダウンロードする場合、これは HTTP メッセージの本文のみをカウントし、ヘッダーやその他のオーバーヘッドは含まれません。
+- {{domxref("ProgressEvent.total")}} {{readonlyInline}}
+  - : 64 ビット符号なし整数で、基礎となるプロセスが実行中の作業の総量を表す。 HTTP でリソースをダウンロードする場合、これは `Content-Length` （メッセージの本文のサイズ）であり、ヘッダーやその他のオーバーヘッドは含まれません。
 
-<dl>
-</dl>
+## メソッド
 
-<p><em>Also inherits methods <em>from its parent {{domxref("Event")}}.</em></em></p>
+_親である {{domxref("Event")}} から継承したメソッドもあります。_
 
-<dl>
- <dt>{{domxref("ProgressEvent.initProgressEvent()")}} {{deprecated_inline}}{{non-Standard_inline}}</dt>
- <dd>Initializes a <code>ProgressEvent</code> created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent(\"ProgressEvent\")")}} method.</dd>
-</dl>
+- {{domxref("ProgressEvent.initProgressEvent()")}} {{deprecated_inline}}{{non-Standard_inline}}
+  - : 非推奨の {{domxref("Document.createEvent()", "Document.createEvent(\"ProgressEvent\")")}} メソッドを使用して生成された `ProgressEvent` を初期化します。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>The following example adds a <code>ProgressEvent</code> to a new {{domxref("XMLHTTPRequest")}} and uses it to display the status of the request.</p>
+以下の例は `ProgressEvent` を新しい {{domxref("XMLHTTPRequest")}} に追加し、リクエストの状態を表示するために使用します。
 
-<pre class="brush: js">  var progressBar = document.getElementById("p"),
-      client = new XMLHttpRequest()
-  client.open("GET", "magical-unicorns")
-  client.onprogress = function(pe) {
-    if(pe.lengthComputable) {
-      progressBar.max = pe.total
-      progressBar.value = pe.loaded
-    }
-  }
-  client.onloadend = function(pe) {
+```js
+var progressBar = document.getElementById("p"),
+    client = new XMLHttpRequest()
+client.open("GET", "magical-unicorns")
+client.onprogress = function(pe) {
+  if(pe.lengthComputable) {
+    progressBar.max = pe.total
     progressBar.value = pe.loaded
   }
-  client.send()</pre>
+}
+client.onloadend = function(pe) {
+  progressBar.value = pe.loaded
+}
+client.send()
+```
 
-<h2 id="仕様書">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Progress Events', '#interface-progressevent', 'ProgressEvent')}}</td>
-   <td>{{Spec2('Progress Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ProgressEvent")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## 関連情報
 
-<ul>
- <li>The {{domxref("Event")}} base interface.</li>
-</ul>
+- 基本インターフェイスの {{domxref("Event")}}
