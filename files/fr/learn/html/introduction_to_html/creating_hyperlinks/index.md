@@ -193,7 +193,7 @@ Il est facile de mettre des liens sur une page. Mais ce n'est pas suffisant. Nou
 
 Regardons un exemple particulier :
 
-**\*Bon** texte de lien:\* [Télécharger Firefox](https://firefox.com)
+**Bon** texte de lien&nbsp;: [Télécharger Firefox](https://firefox.com)
 
 ```html
 <p><a href="https://firefox.com/">
@@ -201,7 +201,7 @@ Regardons un exemple particulier :
 </a></p>
 ```
 
-**\*Mauvais** texte de lien :\* [Cliquer ici ](https://firefox.com/)pour télécharger Firefox
+**Mauvais** texte de lien&nbsp;: [Cliquer ici ](https://firefox.com/)pour télécharger Firefox
 
 ```html
 <p><a href="https://firefox.com/">

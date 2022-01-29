@@ -93,13 +93,11 @@ Notez, cependant, que beaucoup de conseils énumérés dans cette page sont des 
 
 ### Liens connexes
 
-\* [Optimisez vos pages avec Yslow](http://www.alsacreations.com/astuce/lire/527-optimisez-vos-pages-avec-yslow.html)
-    \* [Livre: "Speed Up Your Site" par Andy King](http://www.websiteoptimization.com/)
-    \*[ Site Optimization Tutorial ](http://webmonkey.wired.com/webmonkey/design/site_building/tutorials/tutorial2.html)(WebMonkey) (en anglais) 
-    \* [Best Practices for Speeding Up Your Web Site](http://developer.yahoo.com/performance/rules.html) (en anglais)
-
-
+- [Optimisez vos pages avec Yslow](http://www.alsacreations.com/astuce/lire/527-optimisez-vos-pages-avec-yslow.html)
+- [Livre&nbsp;: "Speed Up Your Site" par Andy King](http://www.websiteoptimization.com/)
+- [Site Optimization Tutorial (WebMonkey)](http://webmonkey.wired.com/webmonkey/design/site_building/tutorials/tutorial2.html) (en anglais)
+- [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html) (en anglais)
 
 **Document d'information d'origine**
 
-\* https\://developer.mozilla.org/en/Tips_for_Authoring_Fast-loading_HTML_Pages
+- https\://developer.mozilla.org/en/Tips_for_Authoring_Fast-loading_HTML_Pages

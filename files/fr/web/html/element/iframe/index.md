@@ -192,7 +192,7 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Globa
   - : L'espace, exprimé en pixels, entre le contenu du cadre et ses marges gauche et droite.
 - `scrolling` {{deprecated_inline}}
 
-  - : Un attribut à valeur contrainte qui indique si le navigateur doit afficher une barre de défilement (ou tout autre moyen de défilement) pour\* \*le cadre :
+  - : Un attribut à valeur contrainte qui indique si le navigateur doit afficher une barre de défilement (ou tout autre moyen de défilement) pour le cadre&nbsp;:
 
     - `auto` : la barre de défilement est uniquement affichée lorsque c'est nécessaire.
     - `yes` : la barre de défilement est toujours affichée.

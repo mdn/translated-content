@@ -10,7 +10,7 @@ translation_of: Web/API/UIEvent/detail
 ---
 {{APIRef("DOM Events")}}
 
-**`UIEvent.detail` **est une propriété en lecture seule, qui, lorsqu'elle ne vaut pas zéro, donne le nombre de clics courant (ou suivant en fonction de l'événement).
+**`UIEvent.detail`** est une propriété en lecture seule, qui, lorsqu'elle ne vaut pas zéro, donne le nombre de clics courant (ou suivant en fonction de l'événement).
 
 Pour les événements {{event("click")}} ou {{event("dblclick")}}, `UIEvent.detail` donne le nombre de clics courant.
 

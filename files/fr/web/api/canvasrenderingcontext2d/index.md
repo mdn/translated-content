@@ -130,7 +130,7 @@ The following methods can be used to manipulate paths of objects.
 - {{domxref("CanvasRenderingContext2D.ellipse()")}} {{experimental_inline}}
   - : Adds an ellipse to the path which is centered at *(x, y)* position with the radii *radiusX* and *radiusY* starting at *startAngle* and ending at *endAngle* going in the given direction by *anticlockwise* (defaulting to clockwise).
 - {{domxref("CanvasRenderingContext2D.rect()")}}
-  - : Creates a path for a rectangle at\* *position *(x, y)* with a size that is determined by *width* and *height\*.
+  - : Creates a path for a rectangle at position *(x, y)* with a size that is determined by *width* and *height*.
 
 ## Drawing paths
 

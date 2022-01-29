@@ -159,8 +159,8 @@ Ici, vous pouvez ajouter le texte que vous avez choisi lorsque vous avez décid�
 
 Une grande partie du contenu sur le Web est présente sous forme de listes. HTML a donc des éléments utilisés pour représenter ces listes. Le balisage des listes contient toujours au moins deux éléments. Les types de listes utilisés fréquemment sont les listes ordonnées et les listes non-ordonnées :
 
-1.  **Les listes non-ordonnées** sont des listes pour lesquelles l'ordre des éléments n'a pas d'importance (par exemple une liste d'emplettes). La balise utilisée pour ces listes est l'élément {{htmlelement("ul")}} (**ul** signifie **\*u**nordered **l**ist\* liste non-ordonnée en anglais)
-2.  **Les listes ordonnées** sont des listes pour lesquelles l'ordre des éléments est important (par exemple une recette). La balise utilisée pour ces listes est l'élément {{htmlelement("ol")}} (**ol** signifie **\*o**rdered **l**ist\* liste ordonnée en anglais)
+1.  **Les listes non-ordonnées** sont des listes pour lesquelles l'ordre des éléments n'a pas d'importance (par exemple une liste d'emplettes). La balise utilisée pour ces listes est l'élément {{htmlelement("ul")}} (**ul** signifie <i lang="en">**u**nordered **l**ist</i> liste non-ordonnée en anglais)
+2.  **Les listes ordonnées** sont des listes pour lesquelles l'ordre des éléments est important (par exemple une recette). La balise utilisée pour ces listes est l'élément {{htmlelement("ol")}} (**ol** signifie <i lang="en">**o**rdered **l**ist</i> liste ordonnée en anglais)
 
 Chaque élément d'une liste est balisé avec un élément {{htmlelement("li")}} (**l**ist **i**tem).
 
@@ -211,7 +211,7 @@ Les liens sont très importants, ce sont eux qui font que le web est une **_toil
 
 Attention à ne pas oublier la partie avec `https://` ou `http://` qui représente le _protocole_ utilisé, au début de l'adresse. Une fois que vous avez créé un lien, testez votre page et cliquez dessus pour vous assurer qu'il fonctionne correctement.
 
-> **Note :** `href` peut sembler un peu étrange à première vue. Une explication sur l'origine du nom pourra vous aider à mieux vous en souvenir : href correspond à **\*h**ypertext **ref**erence\* en anglais, ce qui signifie « référence hypertexte » en français.
+> **Note :** `href` peut sembler un peu étrange à première vue. Une explication sur l'origine du nom pourra vous aider à mieux vous en souvenir : href correspond à <i lang="en">**h**ypertext **ref**erence</i> en anglais, ce qui signifie « référence hypertexte » en français.
 
 Si ce n'est pas déjà fait, vous pouvez ajouter un lien sur votre page grâce à ces informations.
 
