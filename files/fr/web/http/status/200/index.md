@@ -1,37 +1,35 @@
 ---
 title: 200 OK
 slug: Web/HTTP/Status/200
-tags:
-  - Code de statut
-  - HTTP
 translation_of: Web/HTTP/Status/200
+browser-compat: http.status.200
 ---
 {{HTTPSidebar}}
 
 Le code de statut de réponse HTTP **`200 OK`** indique la réussite d'une requête. Une réponse 200 peut être mise en cache par défaut.
 
-La signification de la réussite dépend de la méthode de requête HTTP :
+La signification de la réussite dépend de la méthode de requête HTTP&nbsp;:
 
-- {{HTTPMethod("GET")}} : la ressource a été récupérée et est transmise dans le corps du message.
-- {{HTTPMethod("HEAD")}} : l'en-tête entier est dans le corps du message.
-- {{HTTPMethod("POST")}} : la ressource qui décrit le résultat d'une action est transmise dans le corps du message.
-- {{HTTPMethod("TRACE")}} : le corps du message contient le message de requête reçu par le serveur.
+- [`GET`](/fr/docs/Web/HTTP/Methods/GET)&nbsp;: la ressource a été récupérée et est transmise dans le corps du message.
+- [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD)&nbsp;: l'ensemble des en-têtes est présent dans la réponse, celle-ci n'a pas de corps.
+- [`POST`](/fr/docs/Web/HTTP/Methods/POST)&nbsp;: la ressource qui décrit le résultat d'une action est transmise dans le corps du message.
+- [`TRACE`](/fr/docs/Web/HTTP/Methods/TRACE)&nbsp;: le corps du message contient le message de requête reçu par le serveur.
 
-La plupart du temps, le résultat d'une requête réussie avec la méthode {{HTTPMethod("PUT")}} ou  {{HTTPMethod("DELETE")}} n'est pas `200` `OK` mais plutôt {{HTTPStatus("204")}} `No Content` (ou {{HTTPStatus("201")}} `Created` lorsque la ressource est envoyée pour la première fois).
+La plupart du temps, le résultat d'une requête réussie avec la méthode [`PUT`](/fr/docs/Web/HTTP/Methods/PUT) ou [`DELETE`](/fr/docs/Web/HTTP/Methods/DELETE) n'est pas `200` `OK` mais plutôt [`204 No Content`](/fr/docs/Web/HTTP/Status/204) (ou [`201 Created`](/fr/docs/Web/HTTP/Status/201) lorsque la ressource est envoyée pour la première fois).
 
 ## Statut
 
-    200 OK
+```
+200 OK
+```
 
 ## Spécifications
 
-| Spécification                                    | Titre                                                         |
-| ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "200 OK" , "6.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/status", "200")}}
+{{Compat}}
 
 ## Voir aussi
 
