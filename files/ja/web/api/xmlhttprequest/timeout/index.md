@@ -3,64 +3,49 @@ title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
 tags:
   - AJAX
-  - Reference
+  - 非同期 XHR
+  - 非同期 XMLHttpRequest
+  - プロパティ
+  - リファレンス
   - XHR
   - XMLHttpRequest
   - timeout
-  - プロパティ
-  - 非同期 XHR
-  - 非同期 XMLHttpRequest
+browser-compat: api.XMLHttpRequest.timeout
 translation_of: Web/API/XMLHttpRequest/timeout
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p><code><strong>XMLHttpRequest.timeout</strong></code> はリクエストが自動的に終了するまでの時間をミリ秒で示す <code>unsigned long</code> 型のプロパティです。既定値はタイムアウトが無いことを示す 0 に設定されています。 timeout は{{Glossary('document environment', '文書環境')}}で利用される同期型や <code>InvalidAccessError</code> の例外を投げる XMLHttpRequests に利用することはできません。タイムアウトとなった場合、 <a href="/ja/docs/Web/Events/timeout">timeout</a> イベントが発火します。 {{gecko_minversion_inline("12.0")}}</p>
+**`XMLHttpRequest.timeout`** は `unsigned long` 型で、リクエストが自動的に終了するまでの時間をミリ秒で示します。既定値は 0 で、タイムアウトが無いことを示します。 timeout は{{Glossary('document environment', '文書環境')}}で利用される同期 XMLHttpRequest や `InvalidAccessError` の例外を投げるものに使用することはできません。タイムアウトとなった場合、 [timeout](/ja/docs/Web/API/XMLHttpRequest/timeout_event) イベントが発行されます。
 
-<dl>
- <dd>
- <div class="note"><strong>メモ:</strong> timeout は自分のウィンドウを持つ場合に同期で利用することは認められていません。</div>
- </dd>
- <dd><a href="/ja/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#Example_using_a_timeout">非同期リクエストでの timeout の使用</a></dd>
-</dl>
+> **Note:** ウィンドウを持つ同期リクエストでは、タイムアウトを使用することはできません。
 
-<p>Internet Explorer においては、 timeout プロパティは <a href="/ja/docs/Web/API/XMLHttpRequest/open">open()</a> メソッドを呼んでから <a href="/ja/docs/Web/API/XMLHttpRequest/send">send()</a> メソッドを呼ぶまでの間しかセットすることはできません。</p>
+[非同期リクエストでのタイムアウトの使用](/ja/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#example_using_a_timeout)
 
-<h2 id="Example" name="Example">例</h2>
+Internet Explorer においては、 timeout プロパティは [open()](/ja/docs/Web/API/XMLHttpRequest/open) メソッドを呼び出してから [send()](/ja/docs/Web/API/XMLHttpRequest/send) メソッドを呼び出すまでの間しかセットすることはできません。
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+## 例
+
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
-xhr.timeout = 2000; // time in milliseconds
+xhr.timeout = 2000; // ミリ秒単位の時間
 
 xhr.onload = function () {
-  // Request finished. Do processing here.
+  // リクエスト完了。ここで処理を行います。
 };
 
 xhr.ontimeout = function (e) {
-  // XMLHttpRequest timed out. Do something here.
+  // XMLHttpRequest がタイムアウト。ここで何かを行います。
 };
 
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-timeout-attribute')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.XMLHttpRequest.timeout")}}</p>
+{{Compat}}
