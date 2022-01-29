@@ -16,7 +16,7 @@ translation_of: Web/API/XMLHttpRequest/loadstart_event
 ---
 {{APIRef}}
 
-**`loadstart`** イベントは、リクエストがデータを読み込み始めたときに発生します。
+**`loadstart`** イベントは、リクエストがデータを読み込み始めたときに発行されます。
 
 <table class="properties">
   <tbody>
