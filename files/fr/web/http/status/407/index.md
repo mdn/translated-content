@@ -6,7 +6,7 @@ browser-compat: http.status.407
 ---
 {{HTTPSidebar}}
 
-Le code de réponse d'erreur HTTP **`407 Proxy Authentication Required`** indique que la requête n'a pas été appliquée à cause d'un manque d'authentification pour un [`serveur proxy`](/fr/docs/Glossary/Proxy_server) situé entre le navigateur et le serveur qui peut accéder à la ressource demandée.
+Le code de réponse d'erreur HTTP **`407 Proxy Authentication Required`** indique que la requête n'a pas été appliquée à cause d'un manque d'authentification pour un [serveur mandataire (<i lang="en">proxy</i>)](/fr/docs/Glossary/Proxy_server) situé entre le navigateur et le serveur qui peut accéder à la ressource demandée.
 
 Ce code de statut est envoyé avec l'en-tête [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate) qui contient les informations décrivant la façon de s'authentifier correctement.
 

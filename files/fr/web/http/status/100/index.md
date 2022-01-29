@@ -8,7 +8,7 @@ browser-compat: http.status.100
 
 Le code de statut de réponse HTTP **`100 Continue`** indique que, jusqu'à présent, tout est normal (OK) et que le client doit poursuivre avec la requête ou l'ignorer si celle-ci est déjà finie.
 
-Afin que le serveur vérifie les en-têtes des requêtes, un client doit envoyer [`Expect`](/fr/docs/Web/HTTP/Headers/Expect)&nbsp;: `100-continue` comme en-tête dans la requête initiale et recevoir le code de statut `100 Continue` comme réponse avant d'envoyer le corps de la requête.
+Afin que le serveur vérifie les en-têtes de la requête, un client doit envoyer [`Expect`](/fr/docs/Web/HTTP/Headers/Expect)&nbsp;: `100-continue` comme en-tête dans la requête initiale et recevoir le code de statut `100 Continue` comme réponse avant d'envoyer le corps de la requête.
 
 ## Statut
 

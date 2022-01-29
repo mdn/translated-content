@@ -26,7 +26,7 @@ ErrorDocument 404 /notfound.html
 
 Vous pouvez aussi vous inspirer de [la page 404 de MDN](/fr/404).
 
-> **Note :** le style des pages 404 est [une source d'inspiration infinie](https://www.google.fr/search?q=awesome+404+pages), mais sachez qu'il existe également un [ensemble de meilleurs pratiques](https://alistapart.com/article/perfect404) pour que cette page particulière soit utile pour les utilisateurs.
+> **Note :** Le style des pages 404 est [une source d'inspiration infinie](https://www.google.fr/search?q=awesome+404+pages), mais sachez qu'il existe également un [ensemble de meilleurs pratiques](https://alistapart.com/article/perfect404) pour que cette page particulière soit utile pour les utilisateurs.
 
 ## Spécifications
 

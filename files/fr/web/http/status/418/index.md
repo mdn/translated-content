@@ -8,6 +8,8 @@ browser-compat: http.status.418
 
 Le statut erreur client HTTP **`418 I'm a teapot`** qui signifie «&nbsp;Je suis une théière&nbsp;» informe que le serveur refuse de préparer du café, car il s'agit d'une théière. Cette erreur est une référence au protocole «&nbsp;<i lang="en">Hyper Text Coffee Pot Control Protocol</i>&nbsp;» qui est le poisson d'avril des RFCs en 1998.
 
+Certains sites web utilisent ce code de réponse pour les requêtes qu'ils ne souhaitent pas traiter (par exemple des requêtes automatiques).
+
 ## Statut
 
 ```

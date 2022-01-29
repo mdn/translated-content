@@ -8,10 +8,10 @@ browser-compat: http.status.200
 
 Le code de statut de réponse HTTP **`200 OK`** indique la réussite d'une requête. Une réponse 200 peut être mise en cache par défaut.
 
-La signification de la réussite dépend de la méthode de requête HTTP&nbsp;
+La signification de la réussite dépend de la méthode de requête HTTP&nbsp;:
 
 - [`GET`](/fr/docs/Web/HTTP/Methods/GET)&nbsp;: la ressource a été récupérée et est transmise dans le corps du message.
-- [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD)&nbsp;: l'en-tête entier est dans le corps du message.
+- [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD)&nbsp;: l'ensemble des en-têtes est présent dans la réponse, celle-ci n'a pas de corps.
 - [`POST`](/fr/docs/Web/HTTP/Methods/POST)&nbsp;: la ressource qui décrit le résultat d'une action est transmise dans le corps du message.
 - [`TRACE`](/fr/docs/Web/HTTP/Methods/TRACE)&nbsp;: le corps du message contient le message de requête reçu par le serveur.
 

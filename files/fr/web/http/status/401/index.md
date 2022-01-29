@@ -6,11 +6,11 @@ browser-compat: http.status.401
 ---
 {{HTTPSidebar}}
 
-Le code de statut de réponse HTTP **`401 Unauthorized`** indique que la requête n'a pas été effectuée car il manque des informations d'authentification valides pour la ressource visée.
+Le code de statut de réponse HTTP **`401 Unauthorized`** indique que la requête n'a pas été effectuée, car il manque des informations d'authentification valides pour la ressource visée.
 
-Ce statut est envoyé avec un en-tête [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate) qui décrit la méthode pour s'authentifier correctement.
+Ce statut est envoyé avec un en-tête de réponse [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate) qui décrit la méthode pour s'authentifier correctement.
 
-Ce statut est similaire à [`403`](/fr/docs/Web/HTTP/Status/403) mais, dans ce cas, une authentification est possible.
+Ce statut est similaire à [`403`](/fr/docs/Web/HTTP/Status/403) mais, dans ce cas, une authentification est possible pour accéder à la ressource.
 
 ## Statut
 

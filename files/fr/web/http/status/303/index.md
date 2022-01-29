@@ -6,7 +6,7 @@ browser-compat: http.status.303
 ---
 {{HTTPSidebar}}
 
-Le code de statut de réponse de redirection **`303 See Other`**, généralement renvoyé comme résultat d'une opération [`PUT`](/fr/docs/Web/HTTP/Methods/PUT) ou [`POST`](/fr/docs/Web/HTTP/Methods/POST), indique que la redirection ne fait pas le lien vers la ressource nouvellement téléversé mais vers une autre page (par exemple une page de confirmation ou qui affiche l'avancement du téléversement). La méthode utilisée pour afficher la page redirigée est toujours [`GET`](/fr/docs/Web/HTTP/Methods/GET).
+Le code de statut de réponse de redirection **`303 See Other`**, généralement renvoyé comme résultat d'une opération [`PUT`](/fr/docs/Web/HTTP/Methods/PUT) ou [`POST`](/fr/docs/Web/HTTP/Methods/POST), indique que la redirection ne fait pas le lien vers la ressource nouvellement téléversée mais vers une autre page (par exemple une page de confirmation ou qui affiche l'avancement du téléversement). La méthode utilisée pour afficher la page redirigée est toujours [`GET`](/fr/docs/Web/HTTP/Methods/GET).
 
 ## Statut
 

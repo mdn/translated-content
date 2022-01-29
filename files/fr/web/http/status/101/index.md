@@ -5,9 +5,9 @@ translation_of: Web/HTTP/Status/101
 ---
 {{HTTPSidebar}}
 
-Le code de réponse HTTP **`101 Switching Protocol`** indique que le protocole a changé, comme demandé par le client via l'en-tête [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade).
+Le code de réponse HTTP **`101 Switching Protocol`** indique le protocole sur lequel le serveur a basculé, comme demandé par le client via l'en-tête de requête [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade).
 
-Le serveur envoie alors une réponse avec un en-tête [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade) qui indique le nouveau protocole utilisé. Ce processus est décrit dans l'article [Mécanisme de mise à jour du protocole](/fr/docs/Web/HTTP/Protocol_upgrade_mechanism).
+Le serveur envoie alors une réponse avec un en-tête de réponse [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade) qui indique le nouveau protocole utilisé. Ce processus est décrit dans l'article [Mécanisme de mise à jour du protocole](/fr/docs/Web/HTTP/Protocol_upgrade_mechanism).
 
 ## Statut
 

@@ -8,7 +8,7 @@ browser-compat: http.status.402
 
 Le code de statut de réponse HTTP **`402 Payment Required`** est une erreur non standard réservée pour un usage futur.
 
-En général, ce code indique que la requete ne peut pas etre traitée avant que le client fasse un paiement. Initialement il a été créé afin de permettre des (micro) paiements numériques et indiquerait que le contenu demandé n'est pas disponible avant que le client ne fasse un paiement. Cependant, aucune convention d'usage commune n'existe et différentes entités l'utilisent dans différents contextes.
+En général, ce code indique que la requête ne peut pas être traitée avant que le client effectue un paiement. Initialement, il a été créé afin de permettre des (micro) paiements numériques et indiquerait que le contenu demandé n'est pas disponible avant que le client ne fasse un paiement. Cependant, aucune convention d'usage commune n'existe et différentes entités l'utilisent dans différents contextes.
 
 ## Statut
 

@@ -9,7 +9,9 @@ Le code de statut de réponse HTTP **`408 Request Timeout`** indique que le serv
 
 Un serveur doit envoyer l'en-tête [`Connection`](/fr/docs/Web/HTTP/Headers/Connection) avec la valeur `close` en réponse, puisque `408` implique que le serveur a décidé de fermer la connexion plutôt que de continuer à attendre.
 
-Cette réponse est plus utilisée depuis que certains navigateurs, comme Chrome, Firefox 27+ ou IE9, utilisent le mécanisme HTTP de pré-connexion qui permet d'accélérer la navigation. On notera également que certains serveurs ferment purement et simplement la connexion, sans renvoyer ce message.
+Cette réponse est plus utilisée depuis que certains navigateurs, comme Chrome, Firefox 27+ ou IE9, utilisent le mécanisme HTTP de pré-connexion qui permet d'accélérer la navigation.
+
+> **Note :** Certains serveurs ferment purement et simplement la connexion, sans renvoyer ce message.
 
 ## Statut
 
