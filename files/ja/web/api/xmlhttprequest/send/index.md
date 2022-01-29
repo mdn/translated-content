@@ -5,70 +5,62 @@ tags:
   - AJAX
   - API
   - HTTP リクエスト
-  - Reference
+  - メソッド
+  - NeedsContent
+  - NeedsExample
+  - リファレンス
   - XHR
   - XHR リクエスト
   - XMLHttpRequest
   - send
-  - ウェブ
-  - メソッド
+browser-compat: api.XMLHttpRequest.send
 translation_of: Web/API/XMLHttpRequest/send
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p><span class="seoSummary">{{domxref("XMLHttpRequest")}} の <code><strong>send()</strong></code> メソッドは、リクエストをサーバーに送信します。</span>リクエストが非同期の場合 (これが既定)、このメソッドはリクエストが送信されるとすぐに戻り、結果はイベントを用いて配信されます。リクエストが同期の場合、このメソッドはレスポンスが到着するまで戻りません。</p>
+{{domxref("XMLHttpRequest")}} の **`send()`** メソッドは、リクエストをサーバーに送信します。
 
-<p><code>send()</code> はリクエストの本文を示す引数を一つ受け取ることができます。これは主に {{HTTPMethod("PUT")}} のようなリクエストに使用されます。リクエストメソッドが {{HTTPMethod("GET")}} 又は {{HTTPMethod("HEAD")}} であれば、 <code>body</code> 引数は無視され、リクエストの本文は <code>null</code> に設定されます。</p>
+リクエストが非同期の場合 (これが既定)、このメソッドはリクエストが送信されるとすぐに戻り、結果はイベントを用いて配信されます。リクエストが同期の場合、このメソッドはレスポンスが到着するまで戻りません。
 
-<p>{{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}} を使用して {{HTTPHeader("Accept")}} ヘッダーを設定しなかった場合、 <code>Accept</code> ヘッダーは <code>"*/*"</code> 型 (任意の型) が送信されます。</p>
+`send()` はリクエストの本文を示す引数を一つ受け取ることができます。これは主に {{HTTPMethod("PUT")}} のようなリクエストに使用されます。リクエストメソッドが {{HTTPMethod("GET")}} あｍたは {{HTTPMethod("HEAD")}} であれば、 `body` 引数は無視され、リクエストの本文は `null` に設定されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+{{HTTPHeader("Accept")}} ヘッダーを {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}} を使用して設定しなかった場合、 `Accept` ヘッダーは `"*/*"` 型 (任意の型) が送信されます。
 
-<pre class="syntaxbox"><var>XMLHttpRequest</var>.send(<var>body</var>)
-</pre>
+## 構文
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+```js
+XMLHttpRequest.send(body)
+```
 
-<dl>
- <dt><var>body</var> {{optional_inline}}</dt>
- <dd>XHR のリクエストの中で送られる本文データです。次のものが使用できます。
- <ul>
-  <li>{{domxref("Document")}}: 送信前にシリアライズされている場合。</li>
-  <li><code>BodyInit</code>: <a href="https://fetch.spec.whatwg.org/#bodyinit">Fetch の仕様書</a>によれば、 {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, {{domxref("USVString")}} 型のオブジェクトが利用できます。</li>
- </ul>
- body に値が設定されていない場合、既定値の <code>null</code> が使用されます。</dd>
-</dl>
+### 引数
 
-<p>バイナリコンテンツの送信 (例えばファイルのアップロード) の最適な方法は、 {{domxref("ArrayBufferView")}} または {{domxref("Blob")}} と <code>send()</code> メソッドを組み合わせることです。</p>
+- `body` {{optional_inline}}
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+  - : XHR のリクエストの中で送られる本文データです。次のものが使用できます。
 
-<p><code>undefined</code></p>
+    - {{domxref("Document")}}: 送信前にシリアライズされている場合。
+    - `BodyInit`: [Fetch の仕様書](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit)によれば、 {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} のオブジェクトが利用できます。
+    - `null`
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+    body に値が設定されていない場合、既定値の `null` が使用されます。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">例外</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>このリクエストに対してすでに <code>send()</code> が呼び出されているか、リクエストが完了している。</td>
-  </tr>
-  <tr>
-   <td><code>NetworkError</code></td>
-   <td>読み込むリソースの型が Blob であり、メソッドが <code>GET</code> ではない。</td>
-  </tr>
- </tbody>
-</table>
+バイナリコンテンツの送信 (例えばファイルのアップロード) の最適な方法は、 {{domxref("ArrayBufferView")}} または {{domxref("Blob")}} と `send()` メソッドを組み合わせることです。
 
-<h2 id="Example_GET" name="Example_GET">GET の例</h2>
+### 返値
 
-<pre class="brush: js"><code>var xhr = new XMLHttpRequest();
+`undefined`
+
+### 例外
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : このリクエストに対してすでに `send()` が呼び出されているか、リクエストが完了している。
+- `NetworkError` {{domxref("DOMException")}}
+  - : 読み込むリソースの型が Blob であり、メソッドが `GET` ではない。
+
+## GET の例
+
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 xhr.onload = function () {
@@ -77,55 +69,39 @@ xhr.onload = function () {
 
 xhr.send(null);
 // xhr.send('string');
-</code>// <code>xhr.send(new Blob());
+// xhr.send(new Blob());
 // xhr.send(new Int8Array());
-// xhr.send(document);</code>
-</pre>
+// xhr.send(document);
+```
 
-<h2 id="Example_POST" name="Example_POST">POST の例</h2>
+## POST の例
 
-<pre class="brush: js"><code>var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open("POST", '/server', true);
 
 //リクエストに従って正しいヘッダー情報を送信してください
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 xhr.onreadystatechange = function() { // 状態が変化すると関数が呼び出されます。
-    if (this.readyState === XMLHttpRequest.DONE &amp;&amp; this.status === 200) {
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
         // リクエストの終了。ここの処理を実行します。
     }
 }
-xhr.send("foo=bar&amp;lorem=ipsum");
+xhr.send("foo=bar&lorem=ipsum");
 // xhr.send(new Int8Array());
-// xhr.send(document);</code>
-</pre>
+// xhr.send(document);
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-send()-method', 'send()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<div>{{Compat("api.XMLHttpRequest.send")}}</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">XMLHttpRequest の使用</a></li>
- <li><a href="/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">XMLHttpRequest における HTML の扱い</a></li>
-</ul>
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
