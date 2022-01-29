@@ -3,59 +3,62 @@ title: 'XMLHttpRequest: loadstart イベント'
 slug: Web/API/XMLHttpRequest/loadstart_event
 tags:
   - API
-  - Event
-  - ProgressEvent
-  - Web
-  - XMLHttpRequest
-  - events
-  - loadstart
   - イベント
+  - NeedsCompatTable
+  - NeedsSpecTable
+  - ProgressEvent
   - ウェブ
+  - XMLHttpRequest
+  - イベント
+  - loadstart
+browser-compat: api.XMLHttpRequest.loadstart_event
 translation_of: Web/API/XMLHttpRequest/loadstart_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>loadstart</code></strong> イベントは、リクエストがデータを読み込み始めたときに発生します。</p>
+**`loadstart`** イベントは、リクエストがデータを読み込み始めたときに発生します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("ProgressEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("XMLHttpRequestEventTarget/onloadstart", "onloadstart")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("ProgressEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("XMLHttpRequestEventTarget/onloadstart", "onloadstart")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Live_example" name="Live_example">ライブデモ</h3>
+### ライブデモ
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="controls"&gt;
-    &lt;input class="xhr success" type="button" name="xhr" value="Click to start XHR (success)" /&gt;
-    &lt;input class="xhr error" type="button" name="xhr" value="Click to start XHR (error)" /&gt;
-    &lt;input class="xhr abort" type="button" name="xhr" value="Click to start XHR (abort)" /&gt;
-&lt;/div&gt;
+```html
+<div class="controls">
+    <input class="xhr success" type="button" name="xhr" value="Click to start XHR (success)" />
+    <input class="xhr error" type="button" name="xhr" value="Click to start XHR (error)" />
+    <input class="xhr abort" type="button" name="xhr" value="Click to start XHR (abort)" />
+</div>
 
-&lt;textarea readonly class="event-log"&gt;&lt;/textarea&gt;</pre>
+<textarea readonly class="event-log"></textarea>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">.event-log {
+```css hidden
+.event-log {
     width: 25rem;
     height: 4rem;
     border: 1px solid black;
@@ -67,12 +70,12 @@ input {
     width: 11rem;
     margin: .5rem;
 }
-</pre>
-</div>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const xhrButtonSuccess = document.querySelector('.xhr.success');
+```js
+const xhrButtonSuccess = document.querySelector('.xhr.success');
 const xhrButtonError = document.querySelector('.xhr.error');
 const xhrButtonAbort = document.querySelector('.xhr.abort');
 const log = document.querySelector('.event-log');
@@ -100,48 +103,32 @@ function runXHR(url) {
     return xhr;
 }
 
-xhrButtonSuccess.addEventListener('click', () =&gt; {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg');
+xhrButtonSuccess.addEventListener('click', () => {
+    runXHR('dgszyjnxcaipwzy.jpg');
 });
 
-xhrButtonError.addEventListener('click', () =&gt; {
+xhrButtonError.addEventListener('click', () => {
     runXHR('https://somewhere.org/i-dont-exist');
 });
 
-xhrButtonAbort.addEventListener('click', () =&gt; {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg').abort();
-});</pre>
+xhrButtonAbort.addEventListener('click', () => {
+    runXHR('dgszyjnxcaipwzy.jpg').abort();
+});
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '150px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '150px') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#event-xhr-loadstart')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.XMLHttpRequest.loadstart_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>関連イベント: {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}</li>
- <li><a href="/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress">進捗の監視</a></li>
-</ul>
+- 関連イベント: {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
+- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
