@@ -13,7 +13,7 @@ translation_of: Web/API/XMLHttpRequest/abort_event
 ---
 {{APIRef}}
 
-`abort` イベントは、例えばプログラムが {{domxref("XMLHttpRequest.abort()")}} を呼び出した時など、リクエストが中断されたときに発生します。
+`abort` イベントは、例えばプログラムが {{domxref("XMLHttpRequest.abort()")}} を呼び出した時など、リクエストが中断されたときに発行されます。
 
 <table class="properties">
   <tbody>
