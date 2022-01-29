@@ -2,80 +2,71 @@
 title: 'XMLHttp​Request: timeout イベント'
 slug: Web/API/XMLHttpRequest/timeout_event
 tags:
-  - Reference
+  - API
+  - Event
+  - リファレンス
   - XHR
   - XMLHttpRequest
-  - timeout
   - イベント
-  - タイムアウト
+  - timeout
+browser-compat: api.XMLHttpRequest.timeout_event
 translation_of: Web/API/XMLHttpRequest/timeout_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>timeout</strong></code> イベントは、設定された時間が経過し進捗が終了すると発生します。</p>
+**`timeout`** イベントは、設定された時間が経過し進捗が終了すると発行されます。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td>バブリング</td>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <td>キャンセル</td>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <td>インターフェイス</td>
-   <td>{{domxref("ProgressEvent")}}</td>
-  </tr>
-  <tr>
-   <td>イベントハンドラープロパティ</td>
-   <td>{{domxref("XMLHttpRequestEventTarget.ontimeout")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th>キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th>インターフェイス</th>
+      <td>{{domxref("ProgressEvent")}}</td>
+    </tr>
+    <tr>
+      <th>イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("XMLHttpRequestEventTarget.ontimeout")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js line-numbers  language-js">const client = new XMLHttpRequest();
+```js
+const client = new XMLHttpRequest();
 client.open('GET', 'http://www.example.org/example.txt');
-client.ontimeout = () =&gt; {
+client.ontimeout = () => {
     console.error('Timeout!!')
 };
 
-client.send();</pre>
+client.send();
+```
 
-<p>イベントハンドラーは {{domxref("EventTarget/addEventListener", "addEventListener()")}} メソッドを使用して設定することもできます。</p>
+イベントハンドラーは {{domxref("EventTarget/addEventListener", "addEventListener()")}} メソッドを使用して設定することもできます。
 
-<pre class="brush: js">client.addEventListener('timeout', () =&gt; {
+```js
+client.addEventListener('timeout', () => {
     console.error("Timeout!!");
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#event-xhr-timeout', 'timeout event')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.XMLHttpRequest.timeout_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("XMLHttpRequest")}}</li>
-</ul>
+- {{domxref("XMLHttpRequest")}}
