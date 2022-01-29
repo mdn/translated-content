@@ -21,7 +21,7 @@ translation_of: Web/API/XMLHttpRequest/timeout
 
 [非同期リクエストでのタイムアウトの使用](/ja/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#example_using_a_timeout)
 
-Internet Explorer においては、 timeout プロパティは [open()](/ja/docs/Web/API/XMLHttpRequest/open) メソッドを呼び出してから [send()](/ja/docs/Web/API/XMLHttpRequest/send) メソッドを呼び出すまでの間しかセットすることはできません。
+Internet Explorer においては、 timeout プロパティは [open()](/ja/docs/Web/API/XMLHttpRequest/open) メソッドを呼び出してから [send()](/ja/docs/Web/API/XMLHttpRequest/send) メソッドを呼び出すまでの間しか設定することはできません。
 
 ## 例
 
