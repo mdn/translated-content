@@ -3,41 +3,45 @@ title: XMLHttpRequest.getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
 tags:
   - API
-  - Fetch Headers
-  - Get Headers
+  - ヘッダーの読み取り
+  - ヘッダーの取得
   - HTTP
-  - HTTP Header
-  - Method
-  - Reference
-  - Response Header
+  - HTTP ヘッダー
+  - メソッド
+  - リファレンス
+  - レスポンスヘッダー
   - XHR
   - XMLHttpRequest
   - getAllResponseHeaders
+browser-compat: api.XMLHttpRequest.getAllResponseHeaders
 translation_of: Web/API/XMLHttpRequest/getAllResponseHeaders
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p><span class="seoSummary">{{domxref("XMLHttpRequest")}} の <strong><code>getAllResponseHeaders()</code></strong> メソッドは、すべてのレスポンスヘッダーを {{Glossary('CRLF')}} で区切った文字列として返し、レスポンスを受信していない場合は <code>null</code> を返します。</span>ネットワークエラーが発生した場合は、空文字列が返されます。</p>
+{{domxref("XMLHttpRequest")}} の **`getAllResponseHeaders()`** メソッドは、すべてのレスポンスヘッダーを {{Glossary('CRLF')}} で区切った文字列として返し、レスポンスを受信していない場合は `null` を返します。
 
-<div class="note">
-<p><strong>注:</strong> マルチパートリクエストでは、これはリクエストの元のチャンネルではなく、<em>現在の</em>部分を返します。</p>
-</div>
+ネットワークエラーが発生した場合は、空文字列が返されます。
 
-<h2 id="構文">構文</h2>
+> **Note:** マルチパートリクエストでは、これはリクエストの元のチャンネルではなく、*現在の*部分を返します。
 
-<pre class="syntaxbox notranslate">var headers = <var>XMLHttpRequest</var>.getAllResponseHeaders();</pre>
+## 構文
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+```js
+var headers = XMLHttpRequest.getAllResponseHeaders();
+```
 
-<p>なし。</p>
+### 引数
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+なし。
 
-<p>{{Glossary('CRLF')}} で区切ったすべてのレスポンスヘッダー (フィールド名が <code>Set-Cookie</code> または <code>Set-Cookie2</code> のものを除く) を表す {{domxref("ByteString")}}、またはレスポンスを受信していなければ <code>null</code> です。ネットワークエラーが発生した場合は、空文字列が返されます。</p>
+### 返値
 
-<p>生のヘッダー文字列がどのように見えるかの例です。</p>
+{{Glossary('CRLF')}} で区切ったすべてのレスポンスヘッダー (フィールド名が `Set-Cookie` または `Set-Cookie2` のものを除く) を表す文字列、またはレスポンスを受信していなければ `null` です。ネットワークエラーが発生した場合は、空文字列が返されます。
 
-<pre class="notranslate"><span class="punctuation token">date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
+生のヘッダー文字列がどのように見えるかの例です。
+
+```
+date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
 content-encoding: gzip\r\n
 x-content-type-options: nosniff\r\n
 server: meinheld/0.6.1\r\n
@@ -47,19 +51,19 @@ connection: keep-alive\r\n
 strict-transport-security: max-age=63072000\r\n
 vary: Cookie, Accept-Encoding\r\n
 content-length: 6502\r\n
-x-xss-protection: 1; mode=block\r\n</span></pre>
+x-xss-protection: 1; mode=block\r\n
+```
 
-<p>各行はキャリッジリターンとラインフィード文字 (<code>\r\n</code>) の両方で終わります。これらはそれぞれのヘッダーを区切る基本的なデリミターです。</p>
+各行はキャリッジリターンとラインフィード文字 (`\r\n`) の両方で終わります。これらはそれぞれのヘッダーを区切る基本的なデリミターです。
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: 最近のブラウザーでは、ヘッダー名は最新の仕様書にあるように、すべて小文字で返されます。</p>
-</div>
+> **Note:** 最近のブラウザーでは、ヘッダー名は最新の仕様書にあるように、すべて小文字で返されます。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例では、リクエストの {{event("readystatechange")}} イベントハンドラーである {{domxref("XMLHttpRequest.onreadystatechange")}} の中でヘッダーを調べます。このコードは生のヘッダー文字列を取得する方法、またそれを個別のヘッダーの配列に変換する方法、そして配列からヘッダー名とその値のマップを生成する方法を示しています。</p>
+この例では、リクエストの {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}} イベントハンドラーである {{domxref("XMLHttpRequest.onreadystatechange")}} の中でヘッダーを調べます。このコードは生のヘッダー文字列を取得する方法、またそれを個別のヘッダーの配列に変換する方法、そして配列からヘッダー名とその値のマップを生成する方法を示しています。
 
-<pre class="brush: html notranslate">var request = new XMLHttpRequest();
+```html
+var request = new XMLHttpRequest();
 request.open("GET", "foo.txt", true);
 request.send();
 
@@ -82,40 +86,26 @@ request.onreadystatechange = function() {
       headerMap[header] = value;
     });
   }
-}</pre>
+}
+```
 
-<p>いったんこれを行えば、次のようなことができます。</p>
+いったんこれを行えば、次のようなことができます。
 
-<pre class="brush: js notranslate">var contentType = headerMap["content-type"];</pre>
+```js
+var contentType = headerMap["content-type"];
+```
 
-<p>これは {{httpheader("Content-Type")}} ヘッダーの値を変数 <code>contentType</code> の中に入れます。</p>
+これは {{httpheader("Content-Type")}} ヘッダーの値を変数 `contentType` の中に入れます。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-getallresponseheaders()-method', 'getAllResponseHeaders()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>{{Compat("api.XMLHttpRequest.getAllResponseHeaders")}}</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">XMLHttpRequest の使用</a></li>
- <li>リクエストヘッダーの設定: {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}</li>
-</ul>
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- リクエストヘッダーの設定: {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}
