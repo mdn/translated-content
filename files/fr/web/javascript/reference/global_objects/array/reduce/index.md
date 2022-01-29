@@ -366,7 +366,7 @@ console.table(tableauSansDoublon); // [1, 2, 3, 4, 5, 6]
 
 ```js
 var tableauAvecDoublons = [1, 2, 3, 1, 4, 5, 4, 6];
-var tableauSansDoublon = tableauAvecDoublon.reduce(function (acc, valCourante) {
+var tableauSansDoublon = tableauAvecDoublons.reduce(function (acc, valCourante) {
   if(acc.indexOf(valCourante) === -1) {
     acc.push(valCourante);
   }
