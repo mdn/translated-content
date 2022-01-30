@@ -5,7 +5,7 @@ translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
-이 모듈에서 배운 지식들을 바탕으로 랜덤하게 꾸며진 이야기(silly stories)가 만들어지는 재미있는 앱을 만들어 볼거에요. 즐겨봅시다!!
+이 모듈에서 배운 지식들을 바탕으로 랜덤하게 꾸며진 이야기(silly stories)가 만들어지는 재미있는 앱을 만들어 볼거에요. 즐겨봅시다!
 
 <table class="learn-box standard-table">
   <tbody>
@@ -47,7 +47,7 @@ translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 
 이 스크린샷은 프로그램 출력의 예시 입니다:
 
-<img alt="" src="https://mdn.mozillademos.org/files/13667/assessment-1.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;">
+![](screen_shot_2018-09-19_at_10.01.38_am.png)
 
 더 많은 아이디어를 얻으려면, 완성된 예([have a look at the finished example](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/) )를 참고하세요(소스코드는 엿보기 없기!)
 
@@ -127,28 +127,12 @@ translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 
 ## 이 모듈에서
 
-- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)
-
-<div id="dicLayer" style=""><div id="dicLayerContents">&#x3C;dicword style="user-select: text;">What is JavaScript?&#x3C;/dicword>&#x3C;dicword style="user-select: text;">&#x3C;dicimg id="play" style="background-image: url(chrome-extension://bmbdcffdhebhecemcchbkfnjlmdiiepe/play.gif);">&#x3C;/dicimg> <input>Eng&#x3C;dicimg id="copy" style="background-image: url(chrome-extension://bmbdcffdhebhecemcchbkfnjlmdiiepe/copy.png);" title="copy">&#x3C;/dicimg>&#x3C;/dicword><br><br><br><br>자바 스크립트 란?</div><div id="dicLayerSub"></div></div>
-
-<div id="dicLayerLoader" style="top: 5596px; left: 281px;"></div>
-
-<div id="dicLayer"><div id="dicLayerContents"></div><div id="dicLayerSub"></div></div>
-
-<div id="dicRawData" class="hidden"></div>
-
-<div id="dicLayerLoader"></div>
-
-<div id="dicLayer"><div id="dicLayerContents"></div><div id="dicLayerSub"></div></div>
-
-<div id="dicRawData" class="hidden"></div>
-
-<div id="dicLayerLoader"></div>
+- [What is JavaScript?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [A first splash into JavaScript](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [What went wrong? Troubleshooting JavaScript](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [Storing the information you need — Variables](/ko/docs/Learn/JavaScript/First_steps/Variables)
+- [Basic math in JavaScript — numbers and operators](/ko/docs/Learn/JavaScript/First_steps/Math)
+- [Handling text — strings in JavaScript](/ko/docs/Learn/JavaScript/First_steps/Strings)
+- [Useful string methods](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [Arrays](/ko/docs/Learn/JavaScript/First_steps/Arrays)
+- [Assessment: Silly story generator](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)
