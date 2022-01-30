@@ -1,29 +1,38 @@
 ---
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
+tags:
+  - コンストラクター
+  - リファレンス
+browser-compat: api.EventTarget.EventTarget
 translation_of: Web/API/EventTarget/EventTarget
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>EventTarget()</strong></code> コンストラクタは新しい {{domxref("EventTarget")}} オブジェクトインスタンスをつくります。</p>
+**`EventTarget()`** コンストラクターは、新しい {{domxref("EventTarget")}} オブジェクトのインスタンスを作成します。
 
-<h2 id="構文">構文</h2>
+> **Note:** このコンストラクターを明示的に呼び出すことは、非常にまれです。ほとんどの場合、このコンストラクターは {{domxref("EventTarget")}} から派生したオブジェクトのコンストラクターの中で、 [`super`](/ja/docs/Web/JavaScript/Reference/Operators/super) キーワードによって使用されます。
 
-<pre class="syntaxbox">var <var>myEventTarget</var> = new EventTarget();</pre>
+## 構文
 
-<h3 id="引数">引数</h3>
+```js
+new EventTarget();
+```
 
-<p>なし。</p>
+### 引数
 
-<h3 id="戻り値">戻り値</h3>
+なし。
 
-<p>{{domxref("EventTarget")}} オブジェクトのインスタンス。</p>
+### 返値
 
-<h2 id="例">例</h2>
+{{domxref("EventTarget")}} オブジェクトのインスタンス。
 
-<pre class="brush: js" id="ct-20">class MyEventTarget extends EventTarget {
+## 例
+
+```js
+class MyEventTarget extends EventTarget {
   constructor(mySecret) {
-    super();
+    super();
     this._secret = mySecret;
   }
 
@@ -38,37 +47,17 @@ myEventTarget.addEventListener("foo", function(e) {
 
 let event = new CustomEvent("foo", { detail: 7 });
 myEventTarget.dispatchEvent(event);
-let newValue = myEventTarget.secret; // == 7</pre>
+let newValue = myEventTarget.secret; // == 7
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-eventtarget-eventtarget', 'EventTarget() constructor')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの実装状況">ブラウザの実装状況</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.EventTarget.EventTarget")}}</p>
-</div>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>{{domxref("EventTarget")}}</li>
-</ul>
-
-<p> </p>
+- {{domxref("EventTarget")}}
