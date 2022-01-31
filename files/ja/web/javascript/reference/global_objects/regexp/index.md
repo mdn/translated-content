@@ -53,7 +53,7 @@ let re = new RegExp('\\w+')
 
 ### Perl 風の RegExp プロパティ
 
-{{JSxRef("RegExp")}} のプロパティのいくつかは長い名前と短い（Perl 風の）名前があります。どちらの名前も同じ値を参照します。（Perl は JavaScript が正規表現をモデルにしたプログラミング言語です。）[非推奨の `RegExp` のプロパティ](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp_properties)も参照してください。
+{{JSxRef("RegExp")}} のプロパティのいくつかは長い名前と短い（Perl 風の）名前があります。どちらの名前も同じ値を参照します。（Perl は JavaScript が正規表現をモデルにしたプログラミング言語です。）[非推奨の `RegExp` のプロパティ](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp_のプロパティ)も参照してください。
 
 ## コンストラクター
 
