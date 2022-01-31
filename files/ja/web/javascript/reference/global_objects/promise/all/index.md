@@ -24,7 +24,7 @@ Promise.all(iterable);
 ### 引数
 
 - `iterable`
-  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)オブジェクト、例えば {{jsxref("Array")}} など。
+  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)オブジェクト、例えば {{jsxref("Array")}} など。
 
 ### 返値
 
