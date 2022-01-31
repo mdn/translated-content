@@ -4,6 +4,7 @@ slug: Glossary/CORS-safelisted_request_header
 tags:
   - CORS
   - Fetch
+translation_of: Glossary/CORS-safelisted_request_header
 ---
 
 Un [encabezado de solicitud incluido en la lista segura de CORS](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)
