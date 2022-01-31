@@ -77,19 +77,19 @@ console.log(factorial(3));
 
 <p>다음 코드에서, 함수 표현식으로 정의된 함수를 인자로 받아, 2번 째 인자인 배열의 모든 요소에 대해 그 함수를 실행합니다.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">map</span><span class="punctuation token">(</span>f<span class="punctuation token">,</span> a<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> result <span class="operator token">=</span> <span class="punctuation token">[</span><span class="punctuation token">]</span><span class="punctuation token">;</span> <span class="comment token">// Create a new Array</span>
-  <span class="keyword token">var</span> i<span class="punctuation token">;</span> <span class="comment token">// Declare variable</span>
-  <span class="keyword token">for</span> <span class="punctuation token">(</span>i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">!=</span> a<span class="punctuation token">.</span>length<span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span>
-    result<span class="punctuation token">[</span>i<span class="punctuation token">]</span> <span class="operator token">=</span> <span class="function token">f</span><span class="punctuation token">(</span>a<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">return</span> result<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-<span class="keyword token">var</span> f <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>x<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   <span class="keyword token">return</span> x <span class="operator token">*</span> x <span class="operator token">*</span> x<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-<span class="keyword token">var</span> numbers <span class="operator token">=</span> <span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">1</span><span class="punctuation token">,</span> <span class="number token">2</span><span class="punctuation token">,</span> <span class="number token">5</span><span class="punctuation token">,</span> <span class="number token">10</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> cube <span class="operator token">=</span> <span class="function token">map</span><span class="punctuation token">(</span>f<span class="punctuation token">,</span>numbers<span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>cube<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function map(f, a) {
+  var result = []; // Create a new Array
+  var i; // Declare variable
+  for (i = 0; i != a.length; i++)
+    result[i] = f(a[i]);
+      return result;
+}
+var f = function(x) {
+   return x * x * x;
+}
+var numbers = [0, 1, 2, 5, 10];
+var cube = map(f,numbers);
+console.log(cube);</code></pre>
 
 <p>함수는 [0, 1, 8, 125, 1000] 을 반환합니다.</p>
 
@@ -217,7 +217,7 @@ getScore(); // Returns "Chamahk scored 5"
  <li><code>foo()</code></li>
 </ol>
 
-<p>자신을 호출하는 함수를 <em>재귀 함수</em>라고 합니다. 어떤 면에서, 재귀는 루프와 유사합니다. 둘 다 동일한 코드를 여러 번 실행하고, 조건(<span class="atn">무한 루프</span><span class="atn">를 방지</span><span class="atn">하거나, 이</span><span> 경우에는</span> <span class="hps">오히려</span> <span class="atn hps">무한 재귀</span><span class="atn">하는)</span>을 요구합니다. 예를 들어, 다음 루프는:</p>
+<p>자신을 호출하는 함수를 <em>재귀 함수</em>라고 합니다. 어떤 면에서, 재귀는 루프와 유사합니다. 둘 다 동일한 코드를 여러 번 실행하고, 조건(무한 루프를 방지하거나, 이 경우에는 오히려 무한 재귀하는)을 요구합니다. 예를 들어, 다음 루프는:</p>
 
 <pre class="brush: js">var x = 0;
 while (x &lt; 10) { // "x &lt; 10" is the loop condition
@@ -354,7 +354,7 @@ A(1); // logs 6 (1 + 2 + 3)
 
 <h3 id="Name_conflicts">이름 충돌</h3>
 
-<p>클로저의 범위에서 두 개의 인수 또는 변수의 이름이 같은 경우, <em>이름 충돌</em>이 있습니다. 더 안쪽 범위가 우선순위를 갖습니다. 그래서 가장 바깥 범위는 우선순위가 가장 낮은 반면에, 가장 안쪽 범위는 가장 높은 우선순위를 갖습니다. 이것이 범위 체인(scope chaini)입니다. <span class="atn">체인에서</span> 첫번째는 <span class="hps">가장 안쪽</span> <span class="atn hps">범위</span><span>이고,</span> <span class="atn hps">마지막</span><span>은</span> <span class="atn hps">가장 바깥 쪽</span><span class="atn">의 범위입니다</span><span>.</span> <span class="hps">다음 사항을 고려하세요:</span></p>
+<p>클로저의 범위에서 두 개의 인수 또는 변수의 이름이 같은 경우, <em>이름 충돌</em>이 있습니다. 더 안쪽 범위가 우선순위를 갖습니다. 그래서 가장 바깥 범위는 우선순위가 가장 낮은 반면에, 가장 안쪽 범위는 가장 높은 우선순위를 갖습니다. 이것이 범위 체인(scope chaini)입니다. 체인에서 첫번째는 가장 안쪽 범위이고, 마지막은 가장 바깥 쪽의 범위입니다. 다음 사항을 고려하세요:</p>
 
 <pre class="brush: js">function outside() {
   var x = 10;
@@ -587,15 +587,15 @@ var p = new Person();</pre>
 
 <p>화살표 함수에는 <code>this;</code>가 없습니다. 화살표 함수를 포함하는 객체 값이 사용됩니다. 따라서 다음 코드에서 setInterval에 전달 된 함수 내의 this 값은 화살표 함수를 둘러싼 함수의 this와 같은 값을 갖습니다.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">Person</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">this</span><span class="punctuation token">.</span>age <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function Person() {
+  this.age = 0;
 
-  <span class="function token">setInterval</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-    <span class="keyword token">this</span><span class="punctuation token">.</span>age<span class="operator token">++</span><span class="punctuation token">;</span> <span class="comment token">// |this| properly refers to the person object</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="number token">1000</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+  setInterval(() =&gt; {
+    this.age++; // |this| properly refers to the person object
+  }, 1000);
+}
 
-<span class="keyword token">var</span> p <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Person</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+var p = new Person();</code></pre>
 
 <h2 id="미리_정의된_함수들">미리 정의된 함수들</h2>
 
