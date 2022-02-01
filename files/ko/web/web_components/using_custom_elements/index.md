@@ -87,6 +87,7 @@ class PopUpInfo extends HTMLElement {
 ```js
 // shadow root을 생성합니다
 this.attachShadow({mode: 'open'}); // 'this.shadowRoot'을 설정하고 반환합니다
+
 // (중첩된) span 요소들을 생성합니다
 const wrapper = document.createElement('span');
 wrapper.setAttribute('class','wrapper');
@@ -96,14 +97,17 @@ icon.setAttribute('tabindex', 0);
 // 정의된 특성으로부터의 아이콘 혹은 기본 아이콘을 삽입합니다
 const img = icon.appendChild(document.createElement('img'));
 img.src = this.hasAttribute('src') ? this.getAttribute('src') : 'img/default.png';
+
 const info = wrapper.appendChild(document.createElement('span'));
 info.setAttribute('class','info');
 // 특성의 내용을 취하고 그것을 info span 내부에 넣습니다
 info.textContent = this.getAttribute('data-text');
+
 // shadow dom에 적용할 몇 가지 CSS를 생성합니다
 const style = document.createElement('style');
 style.textContent = '.wrapper {' +
 // 간결함을 위해 CSS 생략됨
+
 // 생성된 요소들을 shadow DOM에 부착합니다
 this.shadowRoot.append(style,wrapper);
 ```
