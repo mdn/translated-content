@@ -4,32 +4,31 @@ slug: Web/CSS/-webkit-line-clamp
 tags:
   - '-webkit-line-clamp'
   - CSS
-  - CSS Property
-  - Non-standard
+  - CSS プロパティ
+  - 標準外
   - recipe:css-property
 browser-compat: css.properties.-webkit-line-clamp
 translation_of: Web/CSS/-webkit-line-clamp
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>-webkit-line-clamp</code></strong> は CSS のプロパティで、{{Glossary("block container", "ブロックコンテナー")}}のコンテンツを指定した行数に制限することができます。</p>
+**`-webkit-line-clamp`** は CSS のプロパティで、{{Glossary("block container", "ブロックコンテナー")}}の内容を指定した行数に制限することができます。
 
-<p>{{cssxref("display")}} プロパティに <code>-webkit-box</code> もしくは <code>-webkit-inline-box</code> が設定されており、かつ {{cssxref("box-orient")}} プロパティに <code>vertical</code> が設定されている組み合わせのときのみ使用できます。</p>
+{{cssxref("display")}} プロパティに `-webkit-box` もしくは `-webkit-inline-box` が設定されており、かつ {{cssxref("box-orient")}} プロパティに `vertical` が設定されている組み合わせのときのみ使用できます。
 
-<p>ほとんどの場合、 {{cssxref("overflow")}} に <code>hidden</code> を設定できます。そうしなければコンテンツはクリップされませんが、省略記号は指定した行数の後に表示されます。</p>
+ほとんどの場合、 {{cssxref("overflow")}} に `hidden` を設定できます。そうしなければ内容は切り取られませんが、省略記号は指定した行数の後に表示されます。
 
-<p>アンカー要素に適用したとき、切り捨てがテキストの途中で行われる場合があるかもしれませんが、必ずしも末尾で切り捨てが行われるとは限りません。</p>
+アンカー要素に適用すると、切り捨てがテキストの途中で行われる場合があるかもしれませんが、必ずしも末尾で切り捨てが行われるとは限りません。
 
-<div class="notecard note">
-<p><strong>メモ</strong>: このプロパティは元々 WebKit ブラウザでは実装されていますが、いくつかの問題があります。レガシーサポートのために標準化されました。 <a href="https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp">CSS Overflow Module Level 3</a> の仕様では、このプロパティを置き換えて問題を回避することを目的として {{cssxref("line-clamp")}} プロパティが定義されています。</p>
-</div>
+> **Note:** このプロパティは元々 WebKit ブラウザーで実装されていたものですが、いくつかの問題があります。レガシーサポートのために標準化されました。 [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) の仕様では、このプロパティを置き換えて問題を回避することを目的として {{cssxref("line-clamp")}} プロパティが定義されています。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush:css">/* キーワード値 */
+```css
+/* キーワード値 */
 -webkit-line-clamp: none;
 
-/* &lt;integer&gt; 値 */
+/* <integer> 値 */
 -webkit-line-clamp: 3;
 -webkit-line-clamp: 10;
 
@@ -37,74 +36,59 @@ translation_of: Web/CSS/-webkit-line-clamp
 -webkit-line-clamp: inherit;
 -webkit-line-clamp: initial;
 -webkit-line-clamp: unset;
-</pre>
+```
 
-<dl>
- <dt><code>none</code></dt>
- <dd>コンテンツの行数を制限しません。</dd>
- <dt>{{cssxref("integer")}}</dt>
- <dd>コンテンツを制限する行数を指定します。 0 より大きい値でなければなりません。</dd>
-</dl>
+- `none`
+  - : コンテンツの行数を制限しません。
+- {{cssxref("integer")}}
+  - : コンテンツを制限する行数を指定します。 0 より大きい値でなければなりません。
 
-<h2 id="Formal_definition">公式定義</h2>
+## 公式定義
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">形式文法</h2>
+## 形式文法
 
 {{CSSSyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="Truncating_a_paragraph">段落の切り捨て</h3>
+### 段落の切り捨て
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  In this example the &lt;code&gt;-webkit-line-clamp&lt;/code&gt; property is set to &lt;code&gt;3&lt;/code&gt;, which means the text is clamped after three lines.
+```html
+<p>
+  In this example the <code>-webkit-line-clamp</code> property is set to <code>3</code>, which means the text is clamped after three lines.
   An ellipsis will be shown at the point where the text is clamped.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 300px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
-}</pre>
+}
+```
 
-<h4 id="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Truncating_a_paragraph", "100%", "100")}}</p>
+{{EmbedLiveSample("Truncating_a_paragraph", "100%", "100")}}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Overflow", "#propdef--webkit-line-clamp", "-webkit-line-clamp")}}</td>
-   <td>{{Spec2("CSS3 Overflow")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="https://css-tricks.com/line-clampin/">Line Clampin’ (Truncating Multiple Line Text)</a></li>
- <li>{{cssxref("line-clamp")}}</li>
-</ul>
+- [Line Clampin’ (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
+- {{cssxref("line-clamp")}}
