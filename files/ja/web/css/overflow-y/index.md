@@ -3,25 +3,23 @@ title: overflow-y
 slug: Web/CSS/overflow-y
 tags:
   - CSS
-  - CSS Property
   - CSS プロパティ
   - CSS ボックスモデル
-  - Reference
-  - overflow
-  - 'recipe:css-property'
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.overflow-y
 translation_of: Web/CSS/overflow-y
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>overflow-y</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、ブロックレベル要素の内容が上下の境界からあふれた場合、どのように表示するのかを設定します。表示しないか、スクロールバーを表示するか、あふれさせるかを設定できます。</p>
+**`overflow-y`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロックレベル要素の内容が上下の境界からあふれた場合、どのように表示するのかを設定します。表示しないか、スクロールバーを表示するか、あふれさせるかを設定できます。
 
-<div>{{EmbedInteractiveExample("pages/css/overflow-y.html")}}</div>
+{{EmbedInteractiveExample("pages/css/overflow-y.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 overflow-y: visible;
 overflow-y: hidden;
 overflow-y: clip;
@@ -31,67 +29,73 @@ overflow-y: auto;
 /* グローバル値 */
 overflow-y: inherit;
 overflow-y: initial;
+overflow-y: revert;
 overflow-y: unset;
-</pre>
+```
 
-<p><code>overflow-y</code> プロパティは、以下の値の一覧のうち一つのキーワードで指定します。</p>
+`overflow-y` プロパティは、以下の値の一覧のうち一つのキーワードで指定します。
 
-<p>{{cssxref("overflow-x")}} が <code>hidden</code>, <code>scroll</code>, <code>auto</code> であり、このプロパティが <code>visible</code> (既定値) である場合は、暗黙的に <code>auto</code> と計算されます。</p>
+{{cssxref("overflow-x")}} が `hidden`, `scroll`, `auto` であり、このプロパティが `visible` (既定値) である場合は、暗黙的に `auto` と計算されます。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>内容は切り取られず、パディングボックスの上下の辺よりも外側に表示される可能性があります。</dd>
- <dt><code>hidden</code></dt>
- <dd>垂直方向にパディングボックスに合わせる必要がある場合は、内容を切り取ります。スクロールバーは表示されません。</dd>
- <dt><code>clip</code> {{experimental_inline}}</dt>
- <dd><code>hidden</code> と同様に、コンテンツは要素のパディングボックスに合わせて切り取られます。 <code>clip</code> と <code>hidden</code> の違いは、 <code>clip</code> キーワードがプログラム的なスクロールも含め、すべてのスクロールを禁止することです。ボックスはスクロールコンテナーにはならず、新しい整形コンテキストを始めることもありません。新しい整形コンテキストを始めたいのであれば、 {{cssxref("display", "display: flow-root", "#flow-root")}} を使用して実現することができます。</dd>
- <dt><code>scroll</code></dt>
- <dd>垂直方向にパディングボックスに合わせる必要がある場合は、内容を切り取ります。ブラウザーは内容が実際に切り取られるかどうかにかかわらず、スクロールバーを表示します。 (これは内容が変化したときにスクロールバーが表示されたり非表示になったりすることを防ぎます。) プリンターははみ出す内容を印刷するかもしれません。</dd>
- <dt><code>auto</code></dt>
- <dd>ユーザーエージェントに依存します。内容がパディングボックス内に収まる場合は <code>visible</code> と同じように表示されますが、新しいブロック整形コンテキストを生成します。内容があふれる場合、デスクトップブラウザーはスクロールバーを表示します。</dd>
-</dl>
+- `visible`
+  - : 内容は切り取られず、パディングボックスの上下の辺よりも外側に表示される可能性があります。
+- `hidden`
+  - : 垂直方向にパディングボックスに合わせる必要がある場合は、内容を切り取ります。スクロールバーは表示されません。
+- `clip` {{experimental_inline}}
+  - : `hidden` と同様に、コンテンツは要素のパディングボックスに合わせて切り取られます。 `clip` と `hidden` の違いは、 `clip` キーワードがプログラム的なスクロールも含め、すべてのスクロールを禁止することです。ボックスはスクロールコンテナーにはならず、新しい整形コンテキストを始めることもありません。新しい整形コンテキストを始めたいのであれば、 {{cssxref("display", "display: flow-root", "#flow-root")}} を使用して実現することができます。
+- `scroll`
+  - : 垂直方向にパディングボックスに合わせる必要がある場合は、内容を切り取ります。ブラウザーは内容が実際に切り取られるかどうかにかかわらず、スクロールバーを表示します。 (これは内容が変化したときにスクロールバーが表示されたり非表示になったりすることを防ぎます。) プリンターははみ出す内容を印刷するかもしれません。
+- `auto`
+  - : ユーザーエージェントに依存します。内容がパディングボックス内に収まる場合は `visible` と同じように表示されますが、新しいブロック整形コンテキストを生成します。内容があふれる場合、デスクトップブラウザーはスクロールバーを表示します。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### overflow-y の動作を設定
 
-<pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;overflow-y:hidden&lt;/code&gt; — ボックスの外側のテキストを隠す
-  &lt;div id="div1"&gt;
+#### HTML
+
+```html
+<ul>
+ - <code>overflow-y:hidden</code> — ボックスの外側のテキストを隠す
+  <div id="div1">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-y:scroll&lt;/code&gt; — 常にスクロールバーを表示
-  &lt;div id="div2"&gt;
+ - <code>overflow-y:scroll</code> — 常にスクロールバーを表示
+  <div id="div2">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-y:visible&lt;/code&gt; — 必要に応じてテキストをボックスの外に表示
-  &lt;div id="div3"&gt;
+ - <code>overflow-y:visible</code> — 必要に応じてテキストをボックスの外に表示
+  <div id="div3">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-y:auto&lt;/code&gt; — 多くのブラウザーでは &lt;code&gt;scroll&lt;/code&gt; と同じ
-  &lt;div id="div4"&gt;
+ - <code>overflow-y:auto</code> — 多くのブラウザーでは <code>scroll</code> と同じ
+  <div id="div4">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+    </div>
+  </li>
+</ul>
+```
 
-</pre>
+#### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css notranslate">#div1,
+```css
+#div1,
 #div2,
 #div3,
 #div4 {
@@ -104,41 +108,20 @@ overflow-y: unset;
 #div2 { overflow-y: scroll; margin-bottom: 12px;}
 #div3 { overflow-y: visible; margin-bottom: 120px;}
 #div4 { overflow-y: auto; margin-bottom: 120px;}
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<figure>
-<p>{{EmbedLiveSample("Example", "100%", "780")}}</p>
-</figure>
+{{EmbedLiveSample("Setting_overflow-y_behavior", "100%", "780")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Overflow', '#propdef-overflow-y', 'overflow-y') }}</td>
-   <td>{{ Spec2('CSS3 Overflow') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<div>{{cssinfo}}</div>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.overflow-y")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>関連する CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-x")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}</li>
-</ul>
+- 関連する CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-x")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
