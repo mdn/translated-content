@@ -72,7 +72,9 @@ class PopUpInfo extends HTMLElement {
   constructor() {
     // 항상 super를 생성자에서 먼저 호출합니다
     super();
+    
     // 요소 기능을 여기 작성합니다
+    
     ...
   }
 }
