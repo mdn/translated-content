@@ -138,6 +138,7 @@ customElements.define('popup-info', PopUpInfo);
 const linkElem = document.createElement('link');
 linkElem.setAttribute('rel', 'stylesheet');
 linkElem.setAttribute('href', 'style.css');
+
 // 생성된 요소를 shadow dom에 부착하기
 shadow.appendChild(linkElem);
 ```
