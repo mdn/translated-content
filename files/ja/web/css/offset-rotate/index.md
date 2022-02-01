@@ -3,29 +3,27 @@ title: offset-rotate
 slug: Web/CSS/offset-rotate
 tags:
   - CSS
-  - CSS Motion Path
-  - CSS Property
-  - CSS プロパティ
   - CSS モーションパス
-  - Experimental
-  - Reference
+  - CSS プロパティ
+  - 実験的
+  - リファレンス
   - offset-rotate
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.offset-rotate
 translation_of: Web/CSS/offset-rotate
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>offset-rotate</code></strong> は CSS のプロパティで、要素が {{cssxref("offset-path")}} に沿って配置された場合の向き/方向を定義します。</p>
+**`offset-rotate`** は CSS のプロパティで、要素が {{cssxref("offset-path")}} に沿って配置された場合の向き/方向を定義します。
 
-<div>{{EmbedInteractiveExample("pages/css/offset-rotate.html")}}</div>
+{{EmbedInteractiveExample("pages/css/offset-rotate.html")}}
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: 初期のころの仕様書では、このプロパティを <code>motion-rotation</code> と呼んでいました。</p>
-</div>
+> **Note:** 初期のころの仕様書では、このプロパティを `motion-rotation` と呼んでいました。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: css notranslate">/* パスの方向に従い、任意で角度を追加 */
+```css
+/* パスの方向に従い、任意で角度を追加 */
 offset-rotate: auto;
 offset-rotate: auto 45deg;
 
@@ -34,43 +32,48 @@ offset-rotate: reverse;
 
 /* パスの位置に関係なく、決められた回転を維持する */
 offset-rotate: 90deg;
-offset-rotate: .5turn;</pre>
+offset-rotate: .5turn;
 
-<dl>
- <dt><code><dfn>auto</dfn></code></dt>
- <dd>
- <p>要素は正方向の X 軸から見た {{cssxref("offset-path")}} 方向の角度で回転します。これが既定値です。</p>
- </dd>
- <dt><code>{{cssxref("&lt;angle&gt;")}}</code></dt>
- <dd>
- <p>要素は指定された回転角によって、時計方向に固定値で回転変換されます。</p>
- </dd>
- <dt><code><dfn>auto &lt;angle&gt;</dfn></code></dt>
- <dd>
- <p><code>auto</code> に {{cssxref("&lt;angle&gt;")}} が続いた場合、<span class="production" id="ref-for-angle-value①③" title="Expands to: turn | rad | grad | deg">その角度</span>が<code>auto</code>の計算値に加算されます。</p>
- </dd>
- <dt><code><dfn>reverse</dfn></code></dt>
- <dd>
- <p>要素は <code>auto</code> と同様に回転しますが、反対方向を向きます。 <code>auto 180deg</code> の値を指定したのと同等です。</p>
- </dd>
- <dd></dd>
-</dl>
+/* グローバル値 */
+offset-rotate: inherit;
+offset-rotate: initial;
+offset-rotate: revert;
+offset-rotate: unset;
+```
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+- `auto`
+  - : 要素は正方向の X 軸から見た {{cssxref("offset-path")}} 方向の角度で回転します。これが既定値です。
+- `{{cssxref("&lt;angle&gt;")}}`
+  - : 要素は指定された回転角によって、時計方向に固定値で回転変換されます。
+- `auto <angle>`
+  - : `auto` に {{cssxref("&lt;angle&gt;")}} が続いた場合、その角度が `auto` の計算値に加算されます。
+- `reverse`
+  - : 要素は `auto` と同様に回転しますが、反対方向を向きます。 `auto 180deg` の値を指定したのと同等です。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="HTML" name="HTML">HTML</h3>
+### オフセットパスに沿って要素の方向を設定
 
-<pre class="brush: html notranslate">&lt;div&gt;&lt;/div&gt;
-&lt;div&gt;&lt;/div&gt;
-&lt;div&gt;&lt;/div&gt;</pre>
+#### HTML
 
-<h3 id="CSS" name="CSS">CSS</h3>
+```html
+<div></div>
+<div></div>
+<div></div>
+```
 
-<pre class="brush: css notranslate">div {
+#### CSS
+
+```css
+div {
   width: 40px;
   height: 40px;
   background: #2BC4A2;
@@ -94,33 +97,25 @@ div:nth-child(3) {
   100% {
     offset-distance: 100%;
   }
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### 結果
 
-<p>{{EmbedLiveSample('Examples', '100%', '200')}}</p>
+{{EmbedLiveSample('Setting_element_orientation_along_its_offset_path', '100%', '200')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Motion Path Level 1', '#offset-rotate-property', 'offset-rotate')}}</td>
-   <td>{{Spec2('Motion Path Level 1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>{{cssinfo}}</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.offset-rotate")}}</p>
+## 関連情報
+
+- {{cssxref("offset")}}
+- {{cssxref("offset-anchor")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-path")}}
+- {{cssxref("offset-position")}}
