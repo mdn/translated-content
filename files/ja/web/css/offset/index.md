@@ -3,36 +3,34 @@ title: offset
 slug: Web/CSS/offset
 tags:
   - CSS
-  - CSS Motion Path
-  - CSS Property
-  - Experimental
-  - Reference
-  - 'recipe:css-shorthand-property'
+  - CSS モーションパス
+  - CSS プロパティ
+  - 実験的
+  - リファレンス
+  - recipe:css-shorthand-property
+browser-compat: css.properties.offset
 translation_of: Web/CSS/offset
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><strong><code>offset</code></strong> は CSS の<a href="/ja/docs/Web/CSS/Shorthand_properties">一括指定プロパティ</a>で、要素を定義された経路に沿って動かすのに必要なすべてのプロパティを設定します。</p>
+**`offset`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素を定義された経路に沿って動かすのに必要なすべてのプロパティを設定します。
 
-<div class="note">
-<p><strong>注</strong>: 仕様書の早期の版では、このプロパティを <code>motion</code> と呼んでいました。</p>
-</div>
+> **Note:** 仕様書の早期の版では、このプロパティを `motion` と呼んでいました。
 
-<h2 id="Constituent_properties" name="Constituent_properties">構成要素のプロパティ</h2>
+## 構成要素のプロパティ
 
-<p>このプロパティは以下の CSS プロパティの一括指定です。</p>
+このプロパティは以下の CSS プロパティの一括指定です。
 
-<ul>
- <li>{{cssxref("offset-anchor")}}</li>
- <li>{{cssxref("offset-distance")}}</li>
- <li>{{cssxref("offset-path")}}</li>
- <li>{{cssxref("offset-position")}}</li>
- <li>{{cssxref("offset-rotate")}}</li>
-</ul>
+- {{cssxref("offset-anchor")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-path")}}
+- {{cssxref("offset-position")}}
+- {{cssxref("offset-rotate")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: css notranslate">/* オフセット位置 */
+```css
+/* オフセット位置 */
 offset: auto;
 offset: 10px 30px;
 offset: none;
@@ -52,28 +50,36 @@ offset: url(circle.svg) 50px 20deg;
 offset: ray(45deg closest-side) / 40px 20px;
 offset: url(arc.svg) 2cm / 0.5cm 3cm;
 offset: url(arc.svg) 30deg / 50px 100px;
-</pre>
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+/* グローバル値 */
+offset: inherit;
+offset: initial;
+offset: revert;
+offset: unset;
+```
 
-<p>{{cssinfo}}</p>
+## 公式定義
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Animating_an_element_along_a_path" name="Animating_an_element_along_a_path">経路に沿って要素を動かす</h3>
+### 経路に沿って要素を動かす
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div id="offsetElement"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="offsetElement"></div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">@keyframes move {
+```css
+@keyframes move {
   from {
     offset-distance: 0%;
   }
@@ -90,31 +96,24 @@ offset: url(arc.svg) 30deg / 50px 100px;
   offset: path("M 100 100 L 300 100 L 200 300 z") auto;
   animation: move 3s linear infinite;
 }
-</pre>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Animating_an_element_along_a_path", 350, 350)}}</p>
+{{EmbedLiveSample("Animating_an_element_along_a_path", 350, 350)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>仕様書</th>
-   <th>状態</th>
-   <th>備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Motion Path Level 1', '#offset-shorthand', 'offset')}}</td>
-   <td>{{Spec2('Motion Path Level 1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.offset")}}</p>
+{{Compat}}
+
+## 関連情報
+
+- {{cssxref("offset-anchor")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-path")}}
+- {{cssxref("offset-position")}}
+- {{cssxref("offset-rotate")}}
