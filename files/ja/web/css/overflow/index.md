@@ -3,40 +3,34 @@ title: overflow
 slug: Web/CSS/overflow
 tags:
   - CSS
+  - CSS ボックスモデル
   - CSS プロパティ
-  - CSS 基本ボックスモデル
-  - Reference
-  - overflow
   - クリッピング
-  - スクロール
   - レイアウト
+  - リファレンス
+  - overflow
+  - recipe:css-shorthand-property
+  - スクロール
+browser-compat: css.properties.overflow
 translation_of: Web/CSS/overflow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <code>overflow</code> プロパティは、要素の内容が多すぎて<a href="/ja/docs/CSS/block_formatting_context">ブロック整形コンテキスト</a>に収まらない場合にどうするかを設定します。これは {{cssxref("overflow-x")}} および {{cssxref("overflow-y")}} の<a href="/ja/docs/Web/CSS/Shorthand_properties">一括指定</a>です。</p>
+`overflow` は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素のオーバーフロー時、すなわち、要素の内容が多すぎて[ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)に収まらない場合の望ましい動作を両方向について設定します。
 
-<div>{{EmbedInteractiveExample("pages/css/overflow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/overflow.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構成要素のプロパティ
 
-<p>選択肢としては、クリッピング、スクロールバーの表示、コンテナーの外側にはみ出して周囲の領域に表示するものがあります。</p>
+このプロパティは以下の CSS プロパティの一括指定です。
 
-<p>値を (既定値の) <code>visible</code> 以外の値に指定すると、新たな<a href="/ja/docs/CSS/block_formatting_context">ブロック整形コンテキスト</a>を生成します。これは技術的な理由で必要なものです。そうでなければ、もしスクロールする要素に浮動要素が交差している時、スクロールするごとに強制的に折り返し処理をやり直すことになり、スクロール操作が遅くなる原因になるからです。</p>
+- [`overflow-x`](/ja/docs/Web/CSS/overflow-x)
+- [`overflow-y`](/ja/docs/Web/CSS/overflow-y)
 
-<p><code>overflow</code> の効果を得るには、ブロックレベルコンテナーに高さ (<code>height</code> または <code>max-height</code>) を設定するか、 <code>white-space</code> を <code>nowrap</code> に設定することが必要です。</p>
+## 構文
 
-<div class="note">
-<p><strong>メモ</strong>: 一方の軸を<code>visible</code> (既定値) に設定して、もう一方を<em>他の</em>値に設定すると、 <code>visible</code> は <code>auto</code> として動作する結果になります。</p>
-</div>
-
-<div class="note">
-<p><strong>メモ</strong>: JavaScript の {{domxref("Element.scrollTop")}} プロパティは、 <code>overflow</code> が <code>hidden</code> に設定されている場合でも HTML 要素をスクロールさせるために使うことができます。</p>
-</div>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* キーワード値 */
+```css
+/* キーワード値 */
 overflow: visible;
 overflow: hidden;
 overflow: clip;
@@ -47,120 +41,146 @@ overflow: hidden visible;
 /* グローバル値 */
 overflow: inherit;
 overflow: initial;
+overflow: revert;
 overflow: unset;
-</pre>
+```
 
-<p><code>overflow</code> プロパティは、以下の値の一覧のうち一つまたは二つのキーワードで指定します。二つのキーワードが指定された場合、最初の値が <code>overflow-x</code> で、二つ目の値が <code>overflow-y</code> になります。それ以外の場合、 <code>overflow-x</code> および <code>overflow-y</code> は同じ値に設定されます。</p>
+`overflow` プロパティは、以下の値の一覧のうち一つまたは二つのキーワードで指定します。二つのキーワードが指定された場合、最初の値が `overflow-x` で、二つ目の値が `overflow-y` になります。それ以外の場合、 `overflow-x` および `overflow-y` は同じ値に設定されます。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>内容はクリッピングされず、パディングボックスの外側に表示されることがあります。</dd>
- <dt><code>hidden</code></dt>
- <dd>内容は、必要に応じてパディングボックスに合わせて切り取られます。スクロールバーは表示されず、ユーザーがスクロールできるようにするための対応 (ドラッグやスクロールホイールによる方法) もありません。内容はプログラム的に (例えば、 {{domxref("HTMLElement.offsetLeft", "offsetLeft")}} のようなプロパティの値を設定する方法などで) スクロールすることが<em>できます</em>ので、要素はスクロールコンテナーになります。</dd>
- <dt><code>clip</code></dt>
- <dd><code>hidden</code> と同様に、コンテンツは要素のパディングボックスに合わせて切り取られます。 <code>clip</code> と <code>hidden</code> の違いは、 <code>clip</code> キーワードがプログラム的なスクロールも含め、すべてのスクロールを禁止することです。ボックスはスクロールコンテナーにはならず、新しい整形コンテキストを始めることもありません。新しい整形コンテキストを始めたいのであれば、 {{cssxref("display", "display: flow-root", "#flow-root")}} を使用して実現することができます。</dd>
- <dt><code>scroll</code></dt>
- <dd>内容は、必要に応じてパディングボックスに合わせて切り取られます。コンテンツが変化したときに、スクロールバーが現れたり消えたりするのを防ぐため、ブラウザーは内容がクリッピングされるかどうかに関わらず、スクロールバーを常に表示します。プリンターはあふれた部分の内容を印刷する可能性があります。</dd>
- <dt><code>auto</code></dt>
- <dd>{{Glossary("user agent", "ユーザーエージェント")}}に依存します。内容がパディングボックス内に収まる場合は <code>visible</code> と同じように表示されますが、新しいブロック整形コンテキストを生成します。デスクトップブラウザーは内容があふれる場合、スクロールバーを表示します。</dd>
-</dl>
+- `visible`
+  - : 内容はクリッピングされず、パディングボックスの外側に表示されることがあります。
+- `hidden`
+  - : 内容は、必要に応じてパディングボックスに合わせて切り取られます。スクロールバーは表示されず、ユーザーがスクロールできるようにするための対応 (ドラッグやスクロールホイールによる方法) もありません。内容はプログラム的に (例えば、 {{domxref("HTMLElement.offsetLeft", "offsetLeft")}} のようなプロパティの値を設定する方法などで) スクロールすることが<em>できます</em>ので、要素はスクロールコンテナーになります。
+- `clip`
+  - : `hidden` と同様に、コンテンツは要素のパディングボックスに合わせて切り取られます。 `clip` と `hidden` の違いは、 `clip` キーワードがプログラム的なスクロールも含め、すべてのスクロールを禁止することです。ボックスはスクロールコンテナーにはならず、新しい整形コンテキストを始めることもありません。新しい整形コンテキストを始めたいのであれば、 {{cssxref("display", "display: flow-root", "#flow-root")}} を使用して実現することができます。
+- `scroll`
+  - : 内容は、必要に応じてパディングボックスに合わせて切り取られます。コンテンツが変化したときに、スクロールバーが現れたり消えたりするのを防ぐため、ブラウザーは内容がクリッピングされるかどうかに関わらず、スクロールバーを常に表示します。プリンターはあふれた部分の内容を印刷する可能性があります。
+- `auto`
+  - : {{Glossary("user agent", "ユーザーエージェント")}}に依存します。内容がパディングボックス内に収まる場合は `visible` と同じように表示されますが、新しいブロック整形コンテキストを生成します。デスクトップブラウザーは内容があふれる場合、スクロールバーを表示します。
 
-<dl>
- <dt><code>overlay</code> {{deprecated_inline}}</dt>
- <dd><code>auto</code> と同じ動作をしますが、場所を取る代わりに内容の先頭にスクロールバーを表示します。 WebKit ベース (例えば Safari) 及び Blink ベース (例えば Chrome 又は Opera) のブラウザーでのみ対応しています。</dd>
-</dl>
+- `overlay` {{deprecated_inline}}
+  - : `auto` と同じ動作をしますが、場所を取る代わりに内容の先頭にスクロールバーを表示します。 WebKit ベース (例えば Safari) 及び Blink ベース (例えば Chrome 又は Opera) のブラウザーでのみ対応しています。
 
-<h4 id="Mozilla_extensions" name="Mozilla_extensions">Mozilla 拡張</h4>
+#### Mozilla 拡張
 
-<dl>
- <dt><code>-moz-scrollbars-none</code> {{obsolete_inline}}<a href="#Deprecated">[1]</a></dt>
- <dd>代わりに <code>overflow:hidden</code> を使ってください。</dd>
- <dt><code>-moz-scrollbars-horizontal</code> {{deprecated_inline}}<a href="#Deprecated">[1]</a></dt>
- <dd>{{Cssxref("overflow-x")}} および {{Cssxref("overflow-y")}} を使用してください。</dd>
- <dt><code>-moz-scrollbars-vertical</code> {{deprecated_inline}}<a href="#Deprecated">[1]</a></dt>
- <dd>{{Cssxref("overflow-x")}} および {{Cssxref("overflow-y")}} を使用してください</dd>
- <dt><code>-moz-hidden-unscrollable</code> {{non-standard_inline}}</dt>
- <dd>内部使用、テーマ向けです。 XML のルート要素と <code>&lt;html&gt;</code>、 <code>&lt;body&gt;</code> が、矢印キーとマウスホイールでスクロールすることを禁止します。</dd>
-</dl>
+- `-moz-scrollbars-none` {{deprecated_inline}}
+  - : 代わりに `overflow: hidden` を使ってください。
+- `-moz-scrollbars-horizontal` {{deprecated_inline}}
+  - : `{{Cssxref("overflow-x")}}: scroll` および `{{Cssxref("overflow-y")}}: hidden`、または `overflow: scroll hidden` を代わりに使用してください。
+- `-moz-scrollbars-vertical` {{deprecated_inline}}
+  - : `{{Cssxref("overflow-x")}}: hidden` および `{{Cssxref("overflow-y")}}: scroll`、または `overflow: hidden scroll` を代わりに使用してください。
+- `-moz-hidden-unscrollable` {{deprecated_inline}}
+  - : 代わりに `overflow: clip` を使用してください。
 
-<p id="Deprecated">[1] Firefox 63 において、この機能は機能設定に隠されています。 about:config の中で <code>layout.css.overflow.moz-scrollbars.enabled</code> を <code>true</code> に設定してください。</p>
+Firefox 63 において、 `-moz-scrollbars-none`, `-moz-scrollbars-horizontal`, `-moz-scrollbars-vertical` は機能設定で隠されています。 about:config の中で `layout.css.overflow.moz-scrollbars.enabled` を `true` に設定してください。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 解説
+
+オーバーフローの選択肢としては、クリッピング、スクロールバーの表示、コンテナーの外側にはみ出して周囲の領域に表示するものがあります。
+
+値を (既定値の) `visible` 以外の値に指定すると、新たな[ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)を生成します。これは技術的な理由で必要なものです。そうでなければ、もしスクロールする要素に浮動要素が交差している時、スクロールするごとに強制的に折り返し処理をやり直すことになり、スクロール操作が遅くなる原因になるからです。
+
+`overflow` の効果を得るには、ブロックレベルコンテナーに高さ (`height` または `max-height`) を設定するか、 `white-space` を `nowrap` に設定することが必要です。
+
+一方の軸を`visible` (既定値) に設定して、もう一方を<em>他の</em>値に設定すると、 `visible` は `auto` として動作する結果になります。
+
+JavaScript の {{domxref("Element.scrollTop")}} プロパティは、 `overflow` が `hidden` に設定されている場合でも HTML 要素をスクロールさせるために使うことができます。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: css">p {
-  width: 12em;
-  height: 6em;
-  border: dotted;
-  overflow: visible; /* content is not clipped */
+### テキストに様々な overflow の値を設定
+
+#### HTML
+
+```html
+  <div>
+    <code>visible</code>
+    <p class="visible">
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    </p>
+  </div>
+
+  <div>
+    <code>hidden</code>
+    <p class="hidden">
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    </p>
+  </div>
+
+  <div>
+    <code>scroll</code>
+    <p class="scroll">
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    </p>
+  </div>
+
+  <div>
+    <code>auto</code>
+    <p class="auto">
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    </p>
+  </div>
+```
+
+#### CSS
+
+```css
+body {
+  display: flex;
+  justify-content: space-around;
 }
-</pre>
 
-<p style="overflow: visible; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>visible</code> (既定)<br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+div {
+  margin: 1em;
+  font-size: 1.2em;
+}
 
-<pre class="brush: css">p { overflow: hidden; /* スクロールバー表示なし */ }
-</pre>
+p {
+  width: 8em;
+  height: 5em;
+  border: dotted;
+}
 
-<p style="overflow: hidden; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: hidden</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+p.visible {
+  overflow: visible;
+}
 
-<pre class="brush: css">p { overflow: scroll; /* 常にスクロールバーを表示 */ }
-</pre>
+p.hidden {
+  overflow: hidden;
+}
 
-<p style="overflow: scroll; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: scroll</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+p.scroll {
+  overflow: scroll;
+}
 
-<pre class="brush: css">p { overflow: auto; /* 必要に応じてスクロールバーを追加 */ }
-</pre>
+p.auto {
+  overflow: auto;
+}
+```
 
-<p style="overflow: auto; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: auto</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+#### 結果
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{EmbedLiveSample("Setting_different_overflow_values_for_text", "600", "250")}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Overflow', '#propdef-overflow', 'overflow')}}</td>
-   <td>{{Spec2('CSS3 Overflow')}}</td>
-   <td>
-    <p>キーワードを一つだけではなく一つまたは二つで利用できるように構文を変更</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#propdef-overflow', 'overflow')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<p>{{cssinfo}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.overflow")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>関連 CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}</li>
-</ul>
+- 関連 CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-block")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
+- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_Overflow) および [スクロール可能なオーバーフローのデバッグ](/ja/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow)
