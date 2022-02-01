@@ -7,43 +7,45 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions
 original_slug: Web/JavaScript/Guide/정규식
 ---
-<div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}</div>
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
-<p >정규 표현식은 문자열에 나타는 특정 문자 조합과 대응시키기 위해 사용되는 패턴입니다. 자바스크립트에서, 정규 표현식 또한 객체입니다.  이 패턴들은 {{jsxref("RegExp")}}의 {{jsxref("RegExp.exec", "exec")}} 메소드와 {{jsxref("RegExp.test", "test")}} 메소드  ,그리고 {{jsxref("String")}}의  {{jsxref("String.match", "match")}}메소드 , {{jsxref("String.replace", "replace")}}메소드 , {{jsxref("String.search", "search")}}메소드 ,  {{jsxref("String.split", "split")}} 메소드와 함께 쓰입니다 . 이 장에서는 자바스크립트의 정규식에 대하여 설명합니다.</p>
+정규 표현식은 문자열에 나타는 특정 문자 조합과 대응시키기 위해 사용되는 패턴입니다. 자바스크립트에서, 정규 표현식 또한 객체입니다.  이 패턴들은 {{jsxref("RegExp")}}의 {{jsxref("RegExp.exec", "exec")}} 메소드와 {{jsxref("RegExp.test", "test")}} 메소드  ,그리고 {{jsxref("String")}}의  {{jsxref("String.match", "match")}}메소드 , {{jsxref("String.replace", "replace")}}메소드 , {{jsxref("String.search", "search")}}메소드 ,  {{jsxref("String.split", "split")}} 메소드와 함께 쓰입니다 . 이 장에서는 자바스크립트의 정규식에 대하여 설명합니다.
 
-<h2 id="정규_표현식_만들기">정규 표현식 만들기</h2>
+## 정규 표현식 만들기
 
-<p>(역주: 정규 표현식을 줄여서 '정규식'이라고 하기도 합니다. 아래 부분부터 '정규식'이라는 용어를 사용하겠습니다.)</p>
+(역주: 정규 표현식을 줄여서 '정규식'이라고 하기도 합니다. 아래 부분부터 '정규식'이라는 용어를 사용하겠습니다.)
 
-<p>정규식을 만드는 방법에는 두 가지가 있습니다.</p>
+정규식을 만드는 방법에는 두 가지가 있습니다.
 
-<p>정규식 리터럴(슬래쉬"/"로 감싸는 패턴)을 사용하는 방법은 다음과 같습니다.</p>
+정규식 리터럴(슬래쉬"/"로 감싸는 패턴)을 사용하는 방법은 다음과 같습니다.
 
-<pre class="brush: js">var re = /ab+c/;
-</pre>
+```js
+var re = /ab+c/;
+```
 
-<p>정규식 리터럴은 스크립트가 불러와질 때 컴파일됩니다. 만약 정규식이 상수라면, 이렇게 사용하는 것이 성능을 향상시킬 수 있습니다.</p>
+정규식 리터럴은 스크립트가 불러와질 때 컴파일됩니다. 만약 정규식이 상수라면, 이렇게 사용하는 것이 성능을 향상시킬 수 있습니다.
 
-<p>다른 방법으로는,  {{jsxref("RegExp")}} 객체의 생성자 함수를 호출하는 방법도 있습니다:</p>
+다른 방법으로는,  {{jsxref("RegExp")}} 객체의 생성자 함수를 호출하는 방법도 있습니다:
 
-<pre class="brush: js">var re = new RegExp("ab+c");
-</pre>
+```js
+var re = new RegExp("ab+c");
+```
 
-<p>생성자 함수를 사용하면 정규식이 실행 시점에 컴파일됩니다. 정규식의 패턴이 변경될 수 있는 경우, 혹은 사용자 입력과 같이 다른 출처로부터 패턴을 가져와야 하는 경우에는 생성자 함수를 사용하세요.</p>
+생성자 함수를 사용하면 정규식이 실행 시점에 컴파일됩니다. 정규식의 패턴이 변경될 수 있는 경우, 혹은 사용자 입력과 같이 다른 출처로부터 패턴을 가져와야 하는 경우에는 생성자 함수를 사용하세요.
 
-<h2 id="정규식_패턴_작성하기">정규식 패턴 작성하기</h2>
+## 정규식 패턴 작성하기
 
-<p>정규식 패턴은 <code>/abc/</code> 같이 단순 문자로 구성될 수도 있고, <code>/ab*c/</code> 또는 <code>/Chapter (\d+)\.\d*/</code>와 같이 단순 문자와 특수 문자의 조합으로 구성될 수도 있습니다. 마지막 예제는 기억장치처럼 쓰이는 괄호를 포함하고 있습니다. {{web.link("#.ED.8C.A8.ED.84.B4.ED.99.94.EB.90.9C_.EB.B6.80.EB.B6.84_.EB.AC.B8.EC.9E.90.EC.97.B4_.EC.9D.BC.EC.B9.98_.EC.82.AC.EC.9A.A9.ED.95.98.EA.B8.B0", "패턴화된 부분 문자열 일치 사용하기") }}에서 설명하는것 처럼 패턴에서 괄호를 포함한 부분은 나중에 사용하기 위하여 저장됩니다.</p>
+정규식 패턴은 `/abc/` 같이 단순 문자로 구성될 수도 있고, `/ab*c/` 또는 `/Chapter (\d+)\.\d*/`와 같이 단순 문자와 특수 문자의 조합으로 구성될 수도 있습니다. 마지막 예제는 기억장치처럼 쓰이는 괄호를 포함하고 있습니다. {{web.link("#.ED.8C.A8.ED.84.B4.ED.99.94.EB.90.9C_.EB.B6.80.EB.B6.84_.EB.AC.B8.EC.9E.90.EC.97.B4_.EC.9D.BC.EC.B9.98_.EC.82.AC.EC.9A.A9.ED.95.98.EA.B8.B0", "패턴화된 부분 문자열 일치 사용하기") }}에서 설명하는것 처럼 패턴에서 괄호를 포함한 부분은 나중에 사용하기 위하여 저장됩니다.
 
-<h3 id="단순_패턴_사용하기">단순 패턴 사용하기</h3>
+### 단순 패턴 사용하기
 
-<p>단순 패턴은 문자열을 있는 그대로 대응시키고자 할 때 사용됩니다. 예를 들어, <code>/abc/</code>라는 패턴은 문자열에서 정확히 'abc' 라는 문자들이 모두 함께 순서대로 나타나야 대응됩니다. 위의 패턴은 "Hi, do you know your abc's?" 와 "The latest airplane designs evolved from slabcraft." 두가지 예에서 부분 문자열 'abc'에 대응될 것입니다.  'Grab crab' 이라는 문자열에서 'ab c' 라는 부분 문자열을 포함하고 있지만, 'abc'를 정확하게 포함하고 있지 않기 때문에 대응되지 않습니다.</p>
+단순 패턴은 문자열을 있는 그대로 대응시키고자 할 때 사용됩니다. 예를 들어, `/abc/`라는 패턴은 문자열에서 정확히 'abc' 라는 문자들이 모두 함께 순서대로 나타나야 대응됩니다. 위의 패턴은 "Hi, do you know your abc's?" 와 "The latest airplane designs evolved from slabcraft." 두가지 예에서 부분 문자열 'abc'에 대응될 것입니다.  'Grab crab' 이라는 문자열에서 'ab c' 라는 부분 문자열을 포함하고 있지만, 'abc'를 정확하게 포함하고 있지 않기 때문에 대응되지 않습니다.
 
-<h3 id="특수_문자_사용하기">특수 문자 사용하기</h3>
+### 특수 문자 사용하기
 
-<p>검색에서 하나 이상의 b들을 찾거나, 혹은 공백을 찾는 것과 같이 '있는 그대로의 대응' 이상의 대응을 필요로 할 경우, 패턴에 특수한 문자를 포함시킵니다. 예를 들어, <code>/ab*c/</code> 패턴은  'a' 문자 뒤에 0개 이상의 'b' 문자(<code>*</code> 문자는 바로 앞의 문자가 0개 이상이라는 것을 의미합니다)가 나타나고 바로 뒤에 'c' 문자가 나타나는 문자 조합에 대응됩니다. 문자열 "cbbabbbbcdebc," 에서 위의 패턴은 부분 문자열 'abbbbc' 와 대응됩니다.</p>
+검색에서 하나 이상의 b들을 찾거나, 혹은 공백을 찾는 것과 같이 '있는 그대로의 대응' 이상의 대응을 필요로 할 경우, 패턴에 특수한 문자를 포함시킵니다. 예를 들어, `/ab*c/` 패턴은  'a' 문자 뒤에 0개 이상의 'b' 문자(`*` 문자는 바로 앞의 문자가 0개 이상이라는 것을 의미합니다)가 나타나고 바로 뒤에 'c' 문자가 나타나는 문자 조합에 대응됩니다. 문자열 "cbbabbbbcdebc," 에서 위의 패턴은 부분 문자열 'abbbbc' 와 대응됩니다.
 
-<p>아래 표는 정규식에서 사용되는 모든 특수문자 목록 및 그에 대한 설명입니다.</p>
+아래 표는 정규식에서 사용되는 모든 특수문자 목록 및 그에 대한 설명입니다.
 
 <table class="standard-table">
  <caption>정규식에서의 특수문자</caption>
@@ -318,259 +320,227 @@ original_slug: Web/JavaScript/Guide/정규식
  </tbody>
 </table>
 
-<p>사용자 입력을 이스케이프해서 정규식 내부에서 문자 그대로 취급해야 하는 경우, 간단히 치환을 하면 됩니다:</p>
+사용자 입력을 이스케이프해서 정규식 내부에서 문자 그대로 취급해야 하는 경우, 간단히 치환을 하면 됩니다:
 
-<pre class="brush: js">function escapeRegExp(string){
-  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&amp;"); // $&amp;는 일치한 전체 문자열을 의미합니다.
-}</pre>
+```js
+function escapeRegExp(string){
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $&는 일치한 전체 문자열을 의미합니다.
+}
+```
 
-<h3 id="괄호를_사용하기">괄호를 사용하기</h3>
+### 괄호를 사용하기
 
-<p>정규식 내부의 일부를 둘러싼 괄호는, 해당 부분에서 대응된 문자열을 기억하는 효과를 갖습니다. 기억된 문자열은 이후 {{ web.link("#.ED.8C.A8.ED.84.B4.ED.99.94.EB.90.9C_.EB.B6.80.EB.B6.84_.EB.AC.B8.EC.9E.90.EC.97.B4_.EC.9D.BC.EC.B9.98_.EC.82.AC.EC.9A.A9.ED.95.98.EA.B8.B0", "패턴화된 부분 문자열 일치 사용하기") }}에서 설명한 것처럼 다른 곳에서 사용하기 위하여 불러와질 수 있습니다.</p>
+정규식 내부의 일부를 둘러싼 괄호는, 해당 부분에서 대응된 문자열을 기억하는 효과를 갖습니다. 기억된 문자열은 이후 {{ web.link("#.ED.8C.A8.ED.84.B4.ED.99.94.EB.90.9C_.EB.B6.80.EB.B6.84_.EB.AC.B8.EC.9E.90.EC.97.B4_.EC.9D.BC.EC.B9.98_.EC.82.AC.EC.9A.A9.ED.95.98.EA.B8.B0", "패턴화된 부분 문자열 일치 사용하기") }}에서 설명한 것처럼 다른 곳에서 사용하기 위하여 불러와질 수 있습니다.
 
-<p>예를 들면, 패턴 <code>/Chapter (\d+)\.\d*/</code>는 패턴의 일부분이 기억될 거라는 사실을 나타냅니다. 이 패턴은 하나 이상의 숫자(<code>\d</code>는 숫자를 의미하고 <code>+</code>는 1개 이상을 의미합니다.) 이후에 하나의 소숫점(\가 앞에 붙은 소숫점은 문자 그대로의 문자 '.' 에 대응됨을 나타냅니다), 그뒤 0개 이상의 숫자(<code>\d</code> 는 숫자, <code>*</code> 는 0개 이상을 의미합니다.)가 뒤따라오는 'Chapter ' 문자열에 대응됩니다. 더해서, 괄호는 처음으로 일치하는 숫자 문자들을 기억하기 위하여 사용되었습니다.</p>
+예를 들면, 패턴 `/Chapter (\d+)\.\d*/`는 패턴의 일부분이 기억될 거라는 사실을 나타냅니다. 이 패턴은 하나 이상의 숫자(`\d`는 숫자를 의미하고 `+`는 1개 이상을 의미합니다.) 이후에 하나의 소숫점(\가 앞에 붙은 소숫점은 문자 그대로의 문자 '.' 에 대응됨을 나타냅니다), 그뒤 0개 이상의 숫자(`\d` 는 숫자, `*` 는 0개 이상을 의미합니다.)가 뒤따라오는 'Chapter ' 문자열에 대응됩니다. 더해서, 괄호는 처음으로 일치하는 숫자 문자들을 기억하기 위하여 사용되었습니다.
 
-<p>이 패턴은 "Open Chapter 4.3, paragraph 6"에 나타나며, '4'가 기억됩니다. 이 패턴은 "Chapter 3 and 4"에는 나타나지 않습니다. 왜냐하면 문자열이 '3'이후에 마침표를 가지고 있지 않기 때문입니다.</p>
+이 패턴은 "Open Chapter 4.3, paragraph 6"에 나타나며, '4'가 기억됩니다. 이 패턴은 "Chapter 3 and 4"에는 나타나지 않습니다. 왜냐하면 문자열이 '3'이후에 마침표를 가지고 있지 않기 때문입니다.
 
-<p>부분 문자열을 대응시키면서도 해당 부분을 기억하지 않으려면, 괄호의 첫머리에 <code>?:</code>패턴을 사용하세요. 예를 들어, <code>(?:\d+)</code>는 1개 이상의 숫자에 대응되지만 해당 문자들을 기억하지 않습니다.</p>
+부분 문자열을 대응시키면서도 해당 부분을 기억하지 않으려면, 괄호의 첫머리에 `?:`패턴을 사용하세요. 예를 들어, `(?:\d+)`는 1개 이상의 숫자에 대응되지만 해당 문자들을 기억하지 않습니다.
 
-<h2 id="정규식_사용하기">정규식 사용하기</h2>
+## 정규식 사용하기
 
-<p>정규식은 <code>RegExp,</code> <code>test,</code> <code>exec,</code> <code>String,</code> <code>match</code>, <code>replace</code>, <code>search</code>, <code>split</code> 메소드와 함께 쓰입니다. 이 메소드는 <a href="/en-US/docs/Web/JavaScript/Reference" title="en-US/docs/JavaScript/Reference">JavaScript reference</a>에서 잘 설명되어 있습니다.</p>
+정규식은 `RegExp,` `test,` `exec,` `String,` `match`, `replace`, `search`, `split` 메소드와 함께 쓰입니다. 이 메소드는 [JavaScript reference](/en-US/docs/Web/JavaScript/Reference "en-US/docs/JavaScript/Reference")에서 잘 설명되어 있습니다.
 
-<table class="standard-table">
- <caption>정규식에서 쓰이는 메소드</caption>
- <thead>
-  <tr>
-   <th scope="col">Method</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{jsxref("RegExp.exec", "exec")}}</td>
-   <td>대응되는 문자열을 찾는 <code style="font-style: normal;">RegExp</code> 메소드입니다. 정보를 가지고 있는 배열을 반환합니다. 대응되는 문자열을 찾지 못했다면 null을 반환합니다.</td>
-  </tr>
-  <tr>
-   <td>{{jsxref("RegExp.test", "test")}}</td>
-   <td>대응되는 문자열이 있는지 검사하는 <code style="font-style: normal;">RegExp</code><strong style="background-color: rgba(212, 221, 228, 0.14902); font-family: courier new,andale mono,monospace; font-weight: bold;"> </strong>메소드 입니다. true 나 false를 반환합니다.</td>
-  </tr>
-  <tr>
-   <td>{{jsxref("String.match", "match")}}</td>
-   <td>대응되는 문자열을 찾는 <code style="font-style: normal;">String</code> 메소드입니다. 정보를 가지고 있는 배열을 반환합니다. 대응되는 문자열을 찾지 못했다면 null을 반환합니다.</td>
-  </tr>
-  <tr>
-   <td>{{jsxref("String.search", "search")}}</td>
-   <td>
-    <p class="syntaxbox">대응되는 문자열이 있는지 검사하는 <code style="font-style: normal;">String</code><strong style="background-color: rgba(212, 221, 228, 0.14902); font-family: courier new,andale mono,monospace; font-weight: bold;"> </strong>메소드 입니다. 대응된 부분의 인덱스를 반환합니다. 대응되는 문자열을 찾지 못했다면 -1을 반환합니다.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{jsxref("String.replace", "replace")}}</td>
-   <td>대응되는 문자열을 찾아 다른 문자열로 치환하는 <code>String</code> 메소드입니다.</td>
-  </tr>
-  <tr>
-   <td>{{jsxref("String.split", "split")}}</td>
-   <td>정규식 혹은 문자열로 대상 문자열을 나누어 배열로 반환하는 <code>String</code> 메소드입니다.</td>
-  </tr>
- </tbody>
+| Method                                               | Description                                                                                                                                                                                                                                                                                                                                               |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("RegExp.exec", "exec")}}         | 대응되는 문자열을 찾는 <code style="font-style: normal;">RegExp</code><span style="background-color: rgba(212, 221, 228, 0.14902);"> 메소드입니다</span>. 정보를 가지고 있는 배열을 반환합니다. 대응되는 문자열을 찾지 못했다면 null을 반환합니다.                                                                                                        |
+| {{jsxref("RegExp.test", "test")}}         | 대응되는 문자열이 있는지 검사하는 <code style="font-style: normal;">RegExp</code><strong style="background-color: rgba(212, 221, 228, 0.14902); font-family: courier new,andale mono,monospace; font-weight: bold;"> </strong>메소드 입니다. true 나 false를 반환합니다.                                                                                  |
+| {{jsxref("String.match", "match")}}     | 대응되는 문자열을 찾는 <code style="font-style: normal;">String</code><span style="background-color: rgba(212, 221, 228, 0.14902);"> 메소드입니다</span>. 정보를 가지고 있는 배열을 반환합니다. 대응되는 문자열을 찾지 못했다면 null을 반환합니다.                                                                                                        |
+| {{jsxref("String.search", "search")}}     | <p class="syntaxbox">대응되는 문자열이 있는지 검사하는 <code style="font-style: normal;">String</code><strong style="background-color: rgba(212, 221, 228, 0.14902); font-family: courier new,andale mono,monospace; font-weight: bold;"> </strong>메소드 입니다. 대응된 부분의 인덱스를 반환합니다. 대응되는 문자열을 찾지 못했다면 -1을 반환합니다.</p> |
+| {{jsxref("String.replace", "replace")}} | 대응되는 문자열을 찾아 다른 문자열로 치환하는 `String` 메소드입니다.                                                                                                                                                                                                                                                                                      |
+| {{jsxref("String.split", "split")}}     | 정규식 혹은 문자열로 대상 문자열을 나누어 배열로 반환하는 `String` 메소드입니다.                                                                                                                                                                                                                                                                          |
+
+문자열 내부에 패턴과 대응되는 부분이 있는지 알고 싶다면, `test` 나 `search` 메소드를 사용하세요; 좀 더 많은 정보를 원하면 (대신 실행이 느림)  `exec` 나 `match` 메소드를 사용하세요. 만약 `exec` 나 `match` 메소드를 사용했는데 대응되는 부분이 있다면, 이 메소드는 배열을 반환하고 정규식 객체의 속성을 업데이트 합니다. 만약 대응되는 부분이 없다면, `exec` 메소드는 `null` 을 반환합니다. (즉, `false`와 같은 의미로 사용될 수 있습니다.).
+
+아래의 예에서는, 문자열 내부에서 대응되는 부분을 찾기 위해 `exec` 메소드를 사용했습니다.
+
+```js
+var myRe = /d(b+)d/g;
+var myArray = myRe.exec("cdbbdbsbz");
+```
+
+만약 정규식 속성에 접근할 필요가 없다면, 아래와 같이 `myArray`를 만드는 다른 방법도 있습니다:
+
+```js
+var myArray = /d(b+)d/g.exec("cdbbdbsbz");
+```
+
+문자열로부터 정규식을 만들고 싶다면, 이런 방법도 있습니다:
+
+```js
+var myRe = new RegExp("d(b+)d", "g");
+var myArray = myRe.exec("cdbbdbsbz");
+```
+
+위의 스크립트에서는, 대응되는 부분이 발견되었고 아래의 표에서 설명하는 대로 배열을 반환하며 속성을 갱신합니다.
+
+<table class="standard-table" style="height: 299px; width: 1168px">
+  <caption>
+    정규식 실행결과
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Object</th>
+      <th scope="col">Property or index</th>
+      <th scope="col">Description</th>
+      <th scope="col">In this example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="4"><code>myArray</code></td>
+      <td></td>
+      <td>대응된 문자열 및 기억한 모든 부분 문자열</td>
+      <td><code>['dbbd', 'bb', index: 1, input: 'cdbbdbsbz']</code></td>
+    </tr>
+    <tr>
+      <td><code>index</code></td>
+      <td>입력된 문자열에서 대응된 부분에 해당하는 인덱스 (0부터 시작)</td>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <td><code>input</code></td>
+      <td>입력된 원본 문자열</td>
+      <td><code>"cdbbdbsbz"</code></td>
+    </tr>
+    <tr>
+      <td><code>[0]</code></td>
+      <td>마지막으로 대응된 문자열</td>
+      <td><code>"dbbd"</code></td>
+    </tr>
+    <tr>
+      <td rowspan="2"><code>myRe</code></td>
+      <td><code>lastIndex</code></td>
+      <td>
+        다음 검색 시 검색을 시작할 인덱스 (이 속성은 g 옵션을 설정한 정규식에
+        대해서만 설정됩니다. 자세한 사항은
+        {{ web.link("#Advanced_searching_with_flags", "Advanced Searching With Flags") }}
+        부분을 참고하세요.)
+      </td>
+      <td><code>5</code></td>
+    </tr>
+    <tr>
+      <td><code>source</code></td>
+      <td>
+        패턴 문자열. 정규식이 생성될 때 갱신됩니다. 실행 시점에는 갱신되지
+        않습니다.
+      </td>
+      <td><code>"d(b+)d"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>문자열 내부에 패턴과 대응되는 부분이 있는지 알고 싶다면, <code>test</code> 나 <code>search</code> 메소드를 사용하세요; 좀 더 많은 정보를 원하면 (대신 실행이 느림)  <code>exec</code> 나 <code>match</code> 메소드를 사용하세요. 만약 <code>exec</code> 나 <code>match</code> 메소드를 사용했는데 대응되는 부분이 있다면, 이 메소드는 배열을 반환하고 정규식 객체의 속성을 업데이트 합니다. 만약 대응되는 부분이 없다면, <code>exec</code> 메소드는 <code>null</code> 을 반환합니다. (즉, <code>false</code>와 같은 의미로 사용될 수 있습니다.).</p>
+위 예제에서의 두 번째 형태처럼, 정규식 객체를 변수에 대입하지 않고도 사용할 수 있습니다. 하지만, 이렇게 하면 정규식 객체가 매번 새로 생성됩니다. 이러한 이유로, 만약 변수에 대입하지 않는 형태를 사용하는 경우 나중에 그 정규식의 속성에 접근할 수 없게 됩니다. 예를 들어, 이러한 스크립트가 있을 수 있습니다:
 
-<p>아래의 예에서는, 문자열 내부에서 대응되는 부분을 찾기 위해 <code>exec</code> 메소드를 사용했습니다.</p>
-
-<pre class="brush: js">var myRe = /d(b+)d/g;
-var myArray = myRe.exec("cdbbdbsbz");
-</pre>
-
-<p>만약 정규식 속성에 접근할 필요가 없다면, 아래와 같이 <code>myArray</code>를 만드는 다른 방법도 있습니다:</p>
-
-<pre class="brush: js">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
-</pre>
-
-<p>문자열로부터 정규식을 만들고 싶다면, 이런 방법도 있습니다:</p>
-
-<pre class="brush: js">var myRe = new RegExp("d(b+)d", "g");
-var myArray = myRe.exec("cdbbdbsbz");
-</pre>
-
-<p>위의 스크립트에서는, 대응되는 부분이 발견되었고 아래의 표에서 설명하는 대로 배열을 반환하며 속성을 갱신합니다.</p>
-
-<table class="standard-table" style="height: 299px; width: 1168px;">
- <caption>정규식 실행결과</caption>
- <thead>
-  <tr>
-   <th scope="col">Object</th>
-   <th scope="col">Property or index</th>
-   <th scope="col">Description</th>
-   <th scope="col">In this example</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td rowspan="4"><code>myArray</code></td>
-   <td></td>
-   <td>대응된 문자열 및 기억한 모든 부분 문자열</td>
-   <td><code>['dbbd', 'bb', index: 1, input: 'cdbbdbsbz']</code></td>
-  </tr>
-  <tr>
-   <td><code>index</code></td>
-   <td>입력된 문자열에서 대응된 부분에 해당하는 인덱스 (0부터 시작)</td>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <td><code>input</code></td>
-   <td>입력된 원본 문자열</td>
-   <td><code>"cdbbdbsbz"</code></td>
-  </tr>
-  <tr>
-   <td><code>[0]</code></td>
-   <td>마지막으로 대응된 문자열</td>
-   <td><code>"dbbd"</code></td>
-  </tr>
-  <tr>
-   <td rowspan="2"><code>myRe</code></td>
-   <td><code>lastIndex</code></td>
-   <td>다음 검색 시 검색을 시작할 인덱스 (이 속성은 g 옵션을 설정한 정규식에 대해서만 설정됩니다. 자세한 사항은 {{ web.link("#Advanced_searching_with_flags", "Advanced Searching With Flags") }} 부분을 참고하세요.)</td>
-   <td><code>5</code></td>
-  </tr>
-  <tr>
-   <td><code>source</code></td>
-   <td>패턴 문자열. 정규식이 생성될 때 갱신됩니다. 실행 시점에는 갱신되지 않습니다.</td>
-   <td><code>"d(b+)d"</code></td>
-  </tr>
- </tbody>
-</table>
-
-<p>위 예제에서의 두 번째 형태처럼, 정규식 객체를 변수에 대입하지 않고도 사용할 수 있습니다. 하지만, 이렇게 하면 정규식 객체가 매번 새로 생성됩니다. 이러한 이유로, 만약 변수에 대입하지 않는 형태를 사용하는 경우 나중에 그 정규식의 속성에 접근할 수 없게 됩니다. 예를 들어, 이러한 스크립트가 있을 수 있습니다:</p>
-
-<pre class="brush: js">var myRe = /d(b+)d/g;
+```js
+var myRe = /d(b+)d/g;
 var myArray = myRe.exec("cdbbdbsbz");
 console.log("The value of lastIndex is " + myRe.lastIndex);
 
 // "The value of lastIndex is 5"
-</pre>
+```
 
-<p>그러나, 만약 이러한 스크립트가 있으면:</p>
+그러나, 만약 이러한 스크립트가 있으면:
 
-<pre class="brush: js">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
+```js
+var myArray = /d(b+)d/g.exec("cdbbdbsbz");
 console.log("The value of lastIndex is " + /d(b+)d/g.lastIndex);
 
 // "The value of lastIndex is 0"
-</pre>
+```
 
-<p>두 구문에서의 <code>/d(b+)d/g</code> 는 서로 다른  정규식 객체이고, 따라서 별개의 <code>lastIndex</code> 속성을 갖게 됩니다. 정규식 객체의 속성을 사용해야 하는 경우라면, 먼저 변수에 대입하세요.</p>
+두 구문에서의 `/d(b+)d/g` 는 서로 다른  정규식 객체이고, 따라서 별개의 `lastIndex` 속성을 갖게 됩니다. 정규식 객체의 속성을 사용해야 하는 경우라면, 먼저 변수에 대입하세요.
 
-<h3 id="괄호로_둘러싼_패턴_사용하기">괄호로 둘러싼 패턴 사용하기</h3>
+### 괄호로 둘러싼 패턴 사용하기
 
-<p>정규식 패턴에 괄호를 사용하면, 그 부분을 별도로 대응시키면서 대응된 부분을 기억합니다. 예를 들면, <code>/a(b)c/</code> 는 'abc' 와 대응되면서 'b'를 기억합니다. 괄호로 감싸진 문자열을 불러오려면, 배열 요소 <code>[1]</code>, ..., <code>[n]</code> 를 사용하세요.</p>
+정규식 패턴에 괄호를 사용하면, 그 부분을 별도로 대응시키면서 대응된 부분을 기억합니다. 예를 들면, `/a(b)c/` 는 'abc' 와 대응되면서 'b'를 기억합니다. 괄호로 감싸진 문자열을 불러오려면, 배열 요소 `[1]`, ..., `[n]` 를 사용하세요.
 
-<p>괄호로 감쌀 수 있는 문자의 개수에는 제한이 없습니다. 반환된 배열은 찾아낸 모든 것들을 갖고 있습니다. 다음의 예는 괄호로 둘러싸진 부분이 어떻게 대응되는지 보여줍니다.</p>
+괄호로 감쌀 수 있는 문자의 개수에는 제한이 없습니다. 반환된 배열은 찾아낸 모든 것들을 갖고 있습니다. 다음의 예는 괄호로 둘러싸진 부분이 어떻게 대응되는지 보여줍니다.
 
-<p>다음의 예는 문자열 내부의 단어를 바꾸기 위해 {{jsxref("String.replace", "replace()")}} 메소드를 이용하고 있습니다. 치환 문자열로는 <code>$1</code> 과 <code>$2</code> 를 사용하고 있는데, 이는 각각 첫 번째와 두 번째 괄호가 쳐진 부분에 대응된 문자열을 가리킵니다.</p>
+다음의 예는 문자열 내부의 단어를 바꾸기 위해 {{jsxref("String.replace", "replace()")}} 메소드를 이용하고 있습니다. 치환 문자열로는 `$1` 과 `$2` 를 사용하고 있는데, 이는 각각 첫 번째와 두 번째 괄호가 쳐진 부분에 대응된 문자열을 가리킵니다.
 
-<pre class="brush: js">var re = /(\w+)\s(\w+)/;
+```js
+var re = /(\w+)\s(\w+)/;
 var str = "John Smith";
 var newstr = str.replace(re, "$2, $1");
 console.log(newstr);
 
 // "Smith, John"
-</pre>
+```
 
-<h3 id="플래그를_사용한_고급검색">플래그를 사용한 고급검색</h3>
+### 플래그를 사용한 고급검색
 
-<p>정규식은 여섯 개의 플래그를 설정해줄 수 있으며, 이를 통해 전역 검색 또는 대소문자 구분 없는 검색을 수행할 수 있습니다. 이 플래그들은 각기 사용될 수도 있고 함께 사용될 수도 있고 순서에 구분이 없습니다.</p>
+정규식은 여섯 개의 플래그를 설정해줄 수 있으며, 이를 통해 전역 검색 또는 대소문자 구분 없는 검색을 수행할 수 있습니다. 이 플래그들은 각기 사용될 수도 있고 함께 사용될 수도 있고 순서에 구분이 없습니다.
 
-<table class="standard-table">
- <caption>Regular expression flags</caption>
- <thead>
-  <tr>
-   <th scope="col">Flag</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>g</code></td>
-   <td>전역 검색</td>
-  </tr>
-  <tr>
-   <td>i</td>
-   <td>대소문자 구분 없는 검색</td>
-  </tr>
-  <tr>
-   <td>m</td>
-   <td>다중행(multi-line) 검색</td>
-  </tr>
-  <tr>
-   <td>s</td>
-   <td><code>.</code>에 개행 문자도 매칭(ES2018)</td>
-  </tr>
-  <tr>
-   <td>u</td>
-   <td>유니코드; 패턴을 유니코드 코드 포인트의 나열로 취급합니다.</td>
-  </tr>
-  <tr>
-   <td>y</td>
-   <td>"sticky" 검색을 수행. 문자열의 현재 위치부터 검색을 수행합니다. {{jsxref("RegExp.sticky", "sticky")}} 문서를 확인하세요.</td>
-  </tr>
- </tbody>
-</table>
+| Flag | Description                                                                                                                         |
+| ---- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `g`  | 전역 검색                                                                                                                           |
+| i    | 대소문자 구분 없는 검색                                                                                                             |
+| m    | 다중행(multi-line) 검색                                                                                                             |
+| s    | `.`에 개행 문자도 매칭(ES2018)                                                                                                      |
+| u    | 유니코드; 패턴을 유니코드 코드 포인트의 나열로 취급합니다.                                                                          |
+| y    | "sticky" 검색을 수행. 문자열의 현재 위치부터 검색을 수행합니다. {{jsxref("RegExp.sticky", "sticky")}} 문서를 확인하세요. |
 
-<p>정규식에 플래그를 포함시키려면, 아래 문법을 사용하세요:</p>
+정규식에 플래그를 포함시키려면, 아래 문법을 사용하세요:
 
-<pre class="brush: js">var re = /pattern/flags;
-</pre>
+```js
+var re = /pattern/flags;
+```
 
-<p>혹은 아래와 같이 할 수도 있습니다:</p>
+혹은 아래와 같이 할 수도 있습니다:
 
-<pre class="brush: js">var re = new RegExp("pattern", "flags");
-</pre>
+```js
+var re = new RegExp("pattern", "flags");
+```
 
-<p>이 플래그는 정규식에 합쳐지는 정보임을 기억하는게 좋습니다. 이것들은 나중에 추가되거나 제거될 수 없습니다.</p>
+이 플래그는 정규식에 합쳐지는 정보임을 기억하는게 좋습니다. 이것들은 나중에 추가되거나 제거될 수 없습니다.
 
-<p>예를 들어, <code>re = /\w+\s/g</code> 는 한 개 이상의 문자열 뒤에 공백이 하나 있는 패턴을 찾는 정규식을 생성합니다. 그리고 문자열 전체에 걸쳐 이 조합을 검색합니다.</p>
+예를 들어, `re = /\w+\s/g` 는 한 개 이상의 문자열 뒤에 공백이 하나 있는 패턴을 찾는 정규식을 생성합니다. 그리고 문자열 전체에 걸쳐 이 조합을 검색합니다.
 
-<pre class="brush: js">var re = /\w+\s/g;
+```js
+var re = /\w+\s/g;
 var str = "fee fi fo fum";
 var myArray = str.match(re);
 console.log(myArray);
 
 // ["fee ", "fi ", "fo "]
-</pre>
+```
 
-<p>아래 코드는:</p>
+아래 코드는:
 
-<pre class="brush: js">var re = /\w+\s/g;
-</pre>
+```js
+var re = /\w+\s/g;
+```
 
-<p>이렇게 바꿔쓸 수 있습니다:</p>
+이렇게 바꿔쓸 수 있습니다:
 
-<pre class="brush: js">var re = new RegExp("\\w+\\s", "g");
-</pre>
+```js
+var re = new RegExp("\\w+\\s", "g");
+```
 
-<p>그리고 똑같은 결과를 얻습니다.</p>
+그리고 똑같은 결과를 얻습니다.
 
-<p> <code>.exec()</code> 메소드를 사용할 때에는 '<strong><code>g</code></strong>' 플래그에 대한 동작이 다릅니다.  ("클래스"와 "인수"의 역할이 뒤바뀝니다:  <code>.match()</code>를 사용할 때는, string 클래스가 메소드를 갖고 정규식은 인수였던 것에 반해, <code>.exec()</code>를 사용할 때는 정규식이 메소드를 갖고 문자열이 인수가 됩니다. <em><code>str.match(re)</code></em> 과 <em><code>re.exec(str)</code></em>를 비교해보세요.)  '<code><strong>g</strong></code>' 플래그와  <strong><code>.exec()</code></strong> 메소드가 함께 사용되면 진행상황에 대한 정보가 반환됩니다.</p>
+`.exec()` 메소드를 사용할 때에는 '**`g`**' 플래그에 대한 동작이 다릅니다.  ("클래스"와 "인수"의 역할이 뒤바뀝니다:  `.match()`를 사용할 때는, string 클래스가 메소드를 갖고 정규식은 인수였던 것에 반해, `.exec()`를 사용할 때는 정규식이 메소드를 갖고 문자열이 인수가 됩니다. *`str.match(re)`* 과 *`re.exec(str)`*를 비교해보세요.)  '**`g`**' 플래그와  **`.exec()`** 메소드가 함께 사용되면 진행상황에 대한 정보가 반환됩니다.
 
-<pre><code>var xArray; while(xArray = re.exec(str)) console.log(xArray);
-// 다음과 같이 출력됩니다:
-// ["fee ", index: 0, input: "fee fi fo fum"]
-// ["fi ", index: 4, input: "fee fi fo fum"]
-// ["fo ", index: 7, input: "fee fi fo fum"]</code></pre>
+    var xArray; while(xArray = re.exec(str)) console.log(xArray);
+    // 다음과 같이 출력됩니다:
+    // ["fee ", index: 0, input: "fee fi fo fum"]
+    // ["fi ", index: 4, input: "fee fi fo fum"]
+    // ["fo ", index: 7, input: "fee fi fo fum"]
 
-<p><code>m</code> 플래그는 여러 줄의 입력 문자열이 실제로 여러 줄로서 다뤄져야 하는 경우에 쓰입니다. 만약 <code>m</code> 플래그가 사용되면, <code>^</code> 와 <code>$</code> 문자는 전체 문자열의 시작과 끝에 대응되는 것이 아니라 각 라인의 시작과 끝에 대응됩니다.</p>
+`m` 플래그는 여러 줄의 입력 문자열이 실제로 여러 줄로서 다뤄져야 하는 경우에 쓰입니다. 만약 `m` 플래그가 사용되면, `^` 와 `$` 문자는 전체 문자열의 시작과 끝에 대응되는 것이 아니라 각 라인의 시작과 끝에 대응됩니다.
 
-<h2 id="예시">예시</h2>
+## 예시
 
-<p>다음의 예는 정규 표현식의 몇 가지 사용법을 보여줍니다.</p>
+다음의 예는 정규 표현식의 몇 가지 사용법을 보여줍니다.
 
-<h3 id="입력_문자열에서_순서를_변경하기">입력 문자열에서 순서를 변경하기</h3>
+### 입력 문자열에서 순서를 변경하기
 
-<p>다음 예는 정규식의 , <code>string.split()과</code> <code>string.replace()</code>의 사용을 설명합니다. 그것은 공백, 탭과 정확히 하나의 세미콜론의 구분으로 이름(이름을 먼저)이 포함된 대략 형식의 입력 문자열을 정리합니다. 마지막으로, 순서(성을 먼저)를 뒤바꾸고 목록을 정렬합니다.</p>
+다음 예는 정규식의 , `string.split()과` `string.replace()`의 사용을 설명합니다. 그것은 공백, 탭과 정확히 하나의 세미콜론의 구분으로 이름(이름을 먼저)이 포함된 대략 형식의 입력 문자열을 정리합니다. 마지막으로, 순서(성을 먼저)를 뒤바꾸고 목록을 정렬합니다.
 
-<pre class="brush: js">// The name string contains multiple spaces and tabs,
+```js
+// The name string contains multiple spaces and tabs,
 // and may have multiple spaces between first and last names.
 var names = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ; Chris Hand ";
 
@@ -607,43 +577,44 @@ var bySurnameList = [];
 output.push("---------- After Split by Regular Expression");
 
 var i, len;
-for (i = 0, len = nameList.length; i &lt; len; i++){
+for (i = 0, len = nameList.length; i < len; i++){
   output.push(nameList[i]);
   bySurnameList[i] = nameList[i].replace(pattern, "$2, $1");
 }
 
 // Display the new array.
 output.push("---------- Names Reversed");
-for (i = 0, len = bySurnameList.length; i &lt; len; i++){
+for (i = 0, len = bySurnameList.length; i < len; i++){
   output.push(bySurnameList[i]);
 }
 
 // Sort by last name, then display the sorted array.
 bySurnameList.sort();
 output.push("---------- Sorted");
-for (i = 0, len = bySurnameList.length; i &lt; len; i++){
+for (i = 0, len = bySurnameList.length; i < len; i++){
   output.push(bySurnameList[i]);
 }
 
 output.push("---------- End");
 
 console.log(output.join("\n"));
-</pre>
+```
 
-<h3 id="입력을_확인하기_위해_특수_문자를_사용하기">입력을 확인하기 위해 특수 문자를 사용하기</h3>
+### 입력을 확인하기 위해 특수 문자를 사용하기
 
-<p>다음 예에서, 사용자는 전화번호를 입력 할 것으로 예상됩니다. 사용자가 "Check" 버튼을 누를 때, 스크립트는 번호의 유효성을 검사합니다. 번호가 유효한 경우(정규식에 의해 지정된 문자 시퀀스와 일치합니다), 스크립트는 사용자에게 감사하는 메시지와 번호를 확인하는 메시지를 나타냅니다. 번호가 유효하지 않은 경우, 스크립트는 전화번호가 유효하지 않다는 것을 사용자에게 알립니다.</p>
+다음 예에서, 사용자는 전화번호를 입력 할 것으로 예상됩니다. 사용자가 "Check" 버튼을 누를 때, 스크립트는 번호의 유효성을 검사합니다. 번호가 유효한 경우(정규식에 의해 지정된 문자 시퀀스와 일치합니다), 스크립트는 사용자에게 감사하는 메시지와 번호를 확인하는 메시지를 나타냅니다. 번호가 유효하지 않은 경우, 스크립트는 전화번호가 유효하지 않다는 것을 사용자에게 알립니다.
 
-<p>비 캡처링 괄호 <code>(?:</code> , 정규식은 세 자리 숫자를 찾습니다 <code>\d{3}</code> OR <code>|</code> 왼쪽 괄호<code>\(</code> 세 자리 숫자 다음에 <code>\d{3}</code>, 닫는 괄호 다음에 <code>\)</code>, (비 캡처링 괄호를 종료<code>)</code>) 안에, 하나의 대시, 슬래시, 또는 소수점을 다음과 같이 발견했을 때,  세 자리 숫자 다음에 <code>d{3}</code>, 대시의 기억 매치, 슬래시, 또는 소수점 다음에 <code>\1</code>, 네 자리 숫자 다음에 <code>\d{4}</code> 문자를 기억합니다<strong>([-\/\.])</strong>.</p>
+비 캡처링 괄호 `(?:` , 정규식은 세 자리 숫자를 찾습니다 `\d{3}` OR `|` 왼쪽 괄호`\(` 세 자리 숫자 다음에 `\d{3}`, 닫는 괄호 다음에 `\)`, (비 캡처링 괄호를 종료`)`) 안에, 하나의 대시, 슬래시, 또는 소수점을 다음과 같이 발견했을 때,  세 자리 숫자 다음에 `d{3}`, 대시의 기억 매치, 슬래시, 또는 소수점 다음에 `\1`, 네 자리 숫자 다음에 `\d{4}` 문자를 기억합니다**(\[-\\/\\.])**.
 
-<p>사용자가 &lt;Enter&gt; 키를 누를 때 활성화 <code>변경</code> 이벤트는 <code>RegExp.input</code>의 값을 설정합니다.</p>
+사용자가 \<Enter> 키를 누를 때 활성화 `변경` 이벤트는 `RegExp.input`의 값을 설정합니다.
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;
-    &lt;meta http-equiv="Content-Script-Type" content="text/javascript"&gt;
-    &lt;script type="text/javascript"&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <script type="text/javascript">
       var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
       function testInfo(phoneInput){
         var OK = re.exec(phoneInput.value);
@@ -652,16 +623,16 @@ console.log(output.join("\n"));
         else
           window.alert("Thanks, your phone number is " + OK[0]);
       }
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;Enter your phone number (with area code) and then click "Check".
-        &lt;br&gt;The expected format is like ###-###-####.&lt;/p&gt;
-    &lt;form action="#"&gt;
-      &lt;input id="phone"&gt;&lt;button onclick="testInfo(document.getElementById('phone'));"&gt;Check&lt;/button&gt;
-    &lt;/form&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </script>
+  </head>
+  <body>
+    <p>Enter your phone number (with area code) and then click "Check".
+        <br>The expected format is like ###-###-####.</p>
+    <form action="#">
+      <input id="phone"><button onclick="testInfo(document.getElementById('phone'));">Check</button>
+    </form>
+  </body>
+</html>
+```
 
-<p>{{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}</p>
+{{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
