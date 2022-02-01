@@ -1,0 +1,227 @@
+---
+title: 접근성 검사기
+slug: Tools/Accessibility_inspector
+tags:
+  - Accessibility
+  - Accessibility inspector
+  - Color blindness
+  - DevTools
+  - Guide
+  - Simulation
+  - Tools
+translation_of: Tools/Accessibility_inspector
+---
+<div>{{ToolsSidebar}}</div>
+
+<p class="summary">접근성 검사기는 접근성 트리를 통해  보조과학기술에 노출된 현재 페이지의 중요한 정보에 접근할 수 있는 수단을 제공해 빠진 부분 또는 주의가 필요한 부분을 확인할 수 있게 해줍니다. 이 글에서 접근성 검사기의 주요 기능들과 사용법에 관해서 설명합니다.</p>
+
+<h2 id="A_very_brief_guide_to_accessibility">접근성에 관한 (매우) 간단한 안내</h2>
+
+<p>접근성이란 웹사이트를 가능한 많은 사람이 사용할 수 있도록 만드는 방법입니다. 장애 여부나 사용하는 기기, 인터넷 속도, 지리적 위치와 같은 개인적 사유로 인해 정보에 접근할 수 있는 일이 일어나지 않도록 최선을 다하는 것이라고 할 수 있습니다. MDN 웹 문서의 <a href="/ko/docs/Web/Accessibility">접근성</a> 섹션에서 더 많은 정보를 확인할 수 있습니다.</p>
+
+<p>시각적 장애가 있는 사람들을 주요 대상으로 삼을 것입니다. 웹 브라우저에서 지원하는 <a href="https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/">접근성 APIs</a>를 이용해 페이지에 있는 각 요소가 어떤 역할을 하는지에 대한 정보를 노출하게 됩니다(텍스트인지, 버튼인지, 링크인지, 폼 요소인지 등등).</p>
+
+<p>시멘틱 DOM 요소들은 기본적으로 할당된 역할을 통해 어떤 목적을 가졌는지 나타낼 수 있습니다. 하지만 가끔씩 복잡한 커스텀 컨트롤을 만들기 위해 기본적으로 할당된 역할이 없어 목적을 나타내주지 못하는 비 시멘틱 마크업(예: {{htmlelement("div")}})을 이용해야 할 때가 있습니다. 이런 상황에서는 <a href="/ko/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> 역할 속성을 이용해 자신만의 역할을 제공할 수 있습니다.</p>
+
+<p> 브라우저 접근성 APIs에 노출되는 역할과 기타 정보들은 접근성 트리라는 계층적 구조를 통해 제공됩니다. 제한된 요소 셋과 다른 정보를 가지고 있다는 것만 제외하면 DOM 트리와 같습니다.</p>
+
+<p>스크린 리더와 같은 보조 과학 기술은 해당 정보들을 이용해 웹페이지에 무엇이 있는지 찾아내고, 사용자에게 무엇이 있는지 알려주고, 페이지와 상호작용할 수 있게 해줍니다. 접근성 분석기도 해당 정보를 이용해 중요한 개발자 도구의 접근성 디버깅 기능을 제공합니다.</p>
+
+<h2 id="Accessing_the_Accessibility_Inspector">접근성 검사기에 접근하기</h2>
+
+<p>개발자 도구를 처음 열면, 접근성 기능이 꺼져 있습니다(다른 브라우저 탭에서 이미 켜놨거나, 스크린 리더 사용자거나 테스터라 Firefox 접근성 엔진이 미리 켜져 있을 경우에는 켜져 있습니다).</p>
+
+<p>접근성 검사기는 다음과 같은 경우 기본적으로 켜집니다.(Firefox 79 이전 버전일 경우 따로 켜야 합니다):</p>
+
+<ul>
+ <li>메뉴의 <strong>더 많은 도구 &gt; 웹 개발자 도구</strong>를 선택 후 <strong>접근성</strong>을 선택합니다. </li>
+ <li>개발자 도구 툴박스의 <strong>접근성</strong> 탭을 선택합니다.</li>
+ <li>메인 브라우저 윈도우에서 우클릭 후, 콘텍스트 메뉴의 <strong>접근성 속성 검사</strong>를 선택합니다.</li>
+ <li><a href="/ko/docs/Tools/Page_Inspector">페이지 검사기</a>의 HTML 창의 아이템을 우클릭 후, 컨텍스트 메뉴의 <strong>접근성 속성 보기</strong>를 선택합니다.</li>
+</ul>
+
+<p>활성화가 되면, 개발자 도구의 툴박스를 끌 때까지 접근성 엔진이 실행됩니다.</p>
+
+<div class="notecard note">
+<p><strong>참고</strong>: 접근성 엔진은 접근성 기능이 켜져 있을 때 작동합니다. 기능을 켜는 것은 <a href="/ko/docs/Tools/Memory">메모리</a> 나 <a href="/ko/docs/Tools/Performance">성능</a>과 같은 다른 기능의 수치나 전체적인 브라우저 성능에 영향을 줄 수 있습니다.</div>
+
+<p>접근성 기능이 자동으로 켜지는 것을 원하지 않으면 <a href="https://support.mozilla.org/ko/kb/about-config-editor-firefox">설정 편집기</a> (<code>about:config</code> 창으로도 알려져 있습니다) 의 <code>devtools.accessibility.auto-init.enabled</code>값을 <code>False</code>로 설정합니다.</p>
+
+<p>접근성 설정을 완전히 끄고 싶으면 <a href="https://support.mozilla.org/ko/kb/about-config-editor-firefox">설정 편집기</a>의 <code>devtools.accessibility.enabled</code>값을 <code>False</code>로 설정합니다. 그러면 위의 접근성 검사기를 켜는 방법을 따라 해도 켜지지 않을 것입니다.</p>
+
+<h2 id="Features_of_the_Accessibility_panel">접근성 창의 기능</h2>
+
+<p>활성화된 접근성 창은 다음과 같습니다:</p>
+
+<p><img alt='"대비"와 "텍스트 라벨"이 있는 이슈 확인 툴바' src="accessibility-inspector-tabbing_order.png" style="border-style: solid; border-width: 1px;"></p>
+
+<p>왼쪽에는 현재 페이지의 접근성 트리에 있는 모든 항목 보여주는 트리 다이어그램이 있습니다. 자식이 있는 항목은 화살표가 있어 클릭 시 자식 항목을 보여줘 계층 구조 안쪽을 탐색할 수 있습니다. 각 항목은 다음과 같은 두 가지 속성을 가지고 있습니다:</p>
+
+<ul>
+ <li><em>Role</em> — 페이지 항목의 역할 (예: <code>pushbutton</code>, 또는 <code>footer</code>). 브라우저가 제공한 기본 역할이거나, WAI-ARIA <code>role</code> 속성이 제공한 역할일 수 있습니다.</li>
+ <li><em>Name</em> — 페이지 항목의 이름. 요소에 따라 다른 이름을 가집니다. 예를 들어 대부분의 텍스트 콘텐츠는 요소는 자신의 <code>textContent</code>를 이름으로 가지고, 폼 요소의 이름은 연관된 {{htmlelement("label")}}의 콘텐츠를 이름으로 가집니다.</li>
+</ul>
+
+<p>오른쪽에는 선택된 항목의 추가 정보를 볼 수 있습니다. 나열된 속성들은 다음과 같습니다:</p>
+
+<ul>
+ <li><em>name</em> — 상술한 것과 같이 항목의 이름입니다.</li>
+ <li><em>role</em> — 상술한 것과 같이 항목의 역할입니다.</li>
+ <li><em>actions</em> — 항목이 수행하는 동작의 목록입니다. 예를 들어 버튼은 "누르기"를, 링크는 "건너뛰기"를 가지고 있을 것입니다.</li>
+ <li><em>value</em> — 항목의 값입니다. 항목의 종류에 따라 다른 것을 의미할 수 있습니다. 예를 들어 폼 입력(역할: 입력)은 입력된 것을 값으로 가질 것이고, a 링크의 값은 <code>&lt;a&gt;</code> 요소의 <code>href</code>에 해당하는 URL을 가질 것입니다.</li>
+ <li><em>DOMNode</em> — 접근성 트리 내 항목의 DOM 노드 타입입니다. "목표" 아이콘을 클릭해 <a href="/ko/docs/Tools/Page_Inspector">페이지 검사기</a> 내의 노드를 선택할 수 있습니다. "타겟" 아이콘에 마우스를 올리면 페이지 콘텐츠의 DOM 노드가 강조됩니다.<br>
+  <img alt="목표 아이콘이 강조된 접근성 감사기의 DOM노드 항목" src="dom-node-target-icon.png"></li>
+ <li><em>description</em> — 주로 제목 속성의 콘텐츠로, 요소의 추가 설명을 제공합니다.</li>
+ <li><em>keyboardShortcut</em> — <code>accessKey</code> 속성에 명시된 요소를 실행시키기 위한 키보드 단축키입니다.</li>
+ <li><em>childCount</em> — 접근성 트리 계층 구조 항목의 자식 수입니다.</li>
+ <li><em>indexInParent</em> — 항목이 부모의 몇 번째 자식인지 표시합니다. 항목이 부모의 첫 자식이라면 0의 값을, 두 번째 자식이라면 1의 값을 가집니다.</li>
+ <li><em>states</em> — 현재 항목에 적용될 수 있는 접근성 관련 상태들의 목록입니다. 예를 들어 데모의 링크 중 하나는 초점 가능 여부, 연결됨, 선택 가능한 텍스트, 이해하기 힘든, 허용된, 예민함과 같은 값을 가질 수 있습니다. 내부 상태의 전체 목록은 <a href="/ko/docs/Web/Accessibility/AT-APIs/Gecko/States">Gecko 상태</a>에서 볼 수 있습니다.</li>
+ <li><em>relations</em> — 해당 항목과 다른 항목 간의 접근성 관련 관계의 목록입니다. 예를 들어 폼에서 입력 항목은 레이블 항목과 "~에 의해 분류된" 관계를 가질 수 있고, 결국 입력 항목과 "분류한"의 관계를 맺을 수 있습니다.</li>
+ <li><em>attributes</em> — 항목에 적용된 접근성 관련 속성의 목록입니다. 왼쪽 여백, 들여쓰기와 같은 스타일 관련된 항목이나 드래그 가능 여부, 단계(Heading의 경우 Heading의 단계) 접근성 정보에 유용한 상태도 포합됩니다. <a href="/ko/docs/Web/Accessibility/AT-APIs/Gecko/Attrs">Gecko 객체 속성</a>에서 전체 목록을 볼 수 있습니다.</li>
+</ul>
+
+<div class="note">
+<p><strong>참고</strong>: 보여주는 정보는 모든 플랫폼에서 동일합니다. 검사기는 플랫폼의 접근성 레이어가 아니라 Gecko의 접근성 트리를 보여줍니다.</p>
+</div>
+
+<h3 id="Keyboard_controls">키보드 조작</h3>
+
+<p><em>접근성</em> 탭은 전부 키보드 조작이 가능합니다:</p>
+
+<ul>
+ <li><em>문제 확인</em>, <em>시뮬레이트</em>, <em>탭 이동 순서 표시</em>, 왼쪽과 오른쪽 창을 탭을 통해 이동할 수 있습니다.</li>
+ <li>창 중 하나가 선택되면, 위아래 키를 통해서 항목을 위아래로 선택할 수 있고, 좌우 키를 통해서 확장 가능한 열을 열거나 닫을 수 있습니다(예; 접근성 트리의 다른 계층 단계).</li>
+</ul>
+
+<h3 id="Print_accessibility_tree_to_JSON">접근성 트리를 JSON으로 출력하기</h3>
+
+<p> 접근성 탭의 항목을 우클릭 후 <strong>JSON으로 출력</strong>을 선택해 접근성 트리의 콘텐츠를 JSON으로 출력할 수 있습니다.</p>
+
+<p><strong><img alt="왼쪽 창의 우클릭 후의 메뉴 JSON으로 출력하기 항목" src="accessibility-inspector-print_tree_to_json.png" style="border-style: solid; border-width: 1px;"></strong></p>
+
+<p>선택된 접근성 트리를 새 탭에서 JSON 뷰어로 볼 수 있습니다:</p>
+
+<p><img alt="" src="accessibility_json.png" style="display: block; margin: 0px auto;"></p>
+
+<p>필요할 경우 데이터를 복사하거나 저장할 수 있습니다. JSON 뷰어 내의 다른 탭에서 원본 JSON 데이터를 볼 수 있습니다.</p>
+
+<h3 id="Show_web_page_tabbing_order">페이지 탭 순서 보기</h3>
+
+<p> 마우스나 트랙패드로 페이지를 조작할 수 없는 사람들을 위해 <kbd>tab</kbd> 키를 이용해 페이지 내의 초점이 가능한 항목들을 이동할 수 있습니다(버튼, 링크, 폼 조작). 항목의 초점 순서는 키보드 사용자들이 웹 페이지를 올바르게 이동하게 할 수 있는 웹 접근성에서 가장 중요한 측면 중 하나입니다. 만약 탭 순서가 맞지 않으면 페이지는 매우 헷갈릴 것입니다.</p>
+
+<p>파이어폭스 84 이후 버전은 탭 순서를 시각적으로 덧씌울 수 있습니다. 페이지가 <kbd>tab</kbd> 키를 통해서 어떻게 보일지 높은 단계로 보여줘 요소를 탭으로 이동할 때의 문제를 더 효과적으로 보여줄 수 있습니다. 오버레이는 <strong>탭 이동 순서 표시</strong> 체크 박스를 통해서 켜고 끌 수 있습니다.</p>
+
+<p><img alt="탭 이동 순서가 표시된 접근성 검사기와 탭 순서가 보여지는 페이지." src="accessibility-inspector-show_tab_order.png" style="border-style: solid; border-width: 1px;"></p>
+
+<p>모든 초점 가능한 항목들은 숫자가 표시되어있고 선택된 초점 항목은 다른 색으로 강조되어 있습니다. 아래의 1번과 2번처럼 다른 요소에 의해 표시가 가려질 수도 있습니다.<br>
+ <img alt="초점 가능한 항목의 마커 중 일부가 가려진 페이지" src="accessibility-inspector-hidden_items.png"><br>
+ 항목이 선택될 경우 드러나게 됩니다.</p>
+
+<p><img alt="숨겨진 선택 가능한 항목이 선택되어 드러난 화면." src="accessibility-inspector-hidden_item_revealed.png"></p>
+
+<div class="notecard note">
+<p><strong>참고</strong>: 오버레이는 체크박스가 선택되었을 때의 탭 순서를 보여줍니다(동적이지 않습니다). 만약 사용자가 항목을 탭 순서에 더한다면(링크가 있는 시각적 요소를 여는 행위) 접근성 검사기가 다시 실행될 때까지 반영되지 않을 것입니다.</p>
+</div>
+
+<h3 id="Check_for_accessibility_issues">접근성 문제 확인하기</h3>
+
+<p><strong>접근성 문제 확인</strong> 옆의 상황에 맞는 메뉴를 클릭해 접근성 문제를 확인할 수 있습니다. 사용 가능한 메뉴 아이템은 다음과 같습니다:</p>
+
+<ul>
+ <li><strong>없음</strong> — 가능한 문제들을 표시하지 않습니다.</li>
+ <li><strong>모든 문제</strong> — 모든 종류의 문제를 확인합니다.</li>
+ <li><strong>대비</strong> — <a href="/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast">시각적 대비 문제</a>를 확인합니다.</li>
+ <li><strong>키보드</strong> — <a href="/ko/docs/Web/Accessibility/Understanding_WCAG/Keyboard">키보드 조작 문제</a>를 확인합니다.</li>
+ <li><strong>텍스트 레이블</strong> — <a href="/ko/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names">빠진 텍스트 레이블 문제</a>를 확인합니다.</li>
+</ul>
+
+<p>위의 메뉴 아이템 중 하나를 선택하면 Firefox는 선택된 종류의 문제를 탐색합니다. 문서의 복잡도에 따라서 몇 초가 걸릴 수 있습니다. 스캔이 완료되면 접근성 검사기의 왼쪽 창에는 해당 문제가 있는 항목들만 표시됩니다. 오른쪽 창에는 <em>체크</em> 세부 창이 선택된 노드의 상세 문제를 보여줍니다. 각 문제의 종류에는 <strong>더 알아보기</strong> 링크가 있어 <em>MDN 웹 문서</em>를 통해 추가 정보를 확인할 수 있습니다.</p>
+<p><br>
+ <img alt="접근성 검사기 - 문제 버튼의 드롭다운 메뉴를 보여줍니다." src="accessibility-inspector-check_for_issues.png" style="border-style: solid; border-width: 1px;"></p>
+
+<p>메뉴 아이템은 토글처럼 작동합니다. 해당 문제를 보기 위해 선택을 하고 다시 선택해 해당 문제를 보지 않습니다.</p>
+
+<p>트리를 둘러볼 때 특정 항목의 문제는 <em>체크</em> 세부 패널에 항상 표시됩니다. <strong>접근성 문제 확인</strong> 메뉴는 문제가 있는 항목들만 모아볼 수 있는 빠른 방법입니다.</p>
+
+<h3 id="Simulate">시뮬레이트</h3>
+
+<p>접근성 검사기(Firefox 70이상)는 <em>색각 이상</em>("색약"으로 잘 알려져 있습니다)과 <em>대비감도 이상</em>을 가진 사용자에게 페이지가 어떻게 보일지 보여주는 <a href="/ko/docs/Tools/Accessibility_inspector/Simulation">시뮬레이터</a> 기능을 제공합니다.</p>
+
+<h2 id="Notable_related_features">다른 중요한 기능</h2>
+
+<p>접근성 기능이 켜져 있으면 개발자 도구에 다음과 같은 유용한 기능들을 사용할 수 있습니다:</p>
+
+<h3 id="Context_menu_options">상황에 맞는 메뉴 설정</h3>
+
+<p>웹페이지의 UI를 우클릭하거나 페이지 분석기의 HTML 창을 우클릭하면 나타나는 상황에 맞는 메뉴에 선택지가 추가됩니다:</p>
+
+<p><img alt='"접근성 속성 검사"가 강조된 브라우저 창의 상황에 맞는 메뉴' src="web-page-context-menu.png" style="border-style: solid; border-width: 1px;"></p>
+
+<p><img alt='"접근성 속성 보기"가 강조된 DOM 검사기의 상황에 맞는 메뉴' src="dom-inspector-context-menu.png" style="border-style: solid; border-width: 1px;"></p>
+
+<p>상황에 맞는 메뉴에서 <em>접근성 속성 검사</em>나 <em>접근성 속성 보기</em>를 선택하면, <em>접근성</em> 창이 열리면서 해당 항목의 접근성 트리 항목을 보여줍니다.</p>
+
+<div class="note">
+<p><strong>참고</strong>: 몇몇 DOM 요소는 접근성 속성을 가지지 않습니다. 이럴 경우 <em>접근성 속성 검사</em>나 <em>접근성 속성 보기</em> 항목은 회색으로 표시됩니다.</p>
+</div>
+
+<h3 id="Highlighting_of_UI_items">UI 항목 강조하기</h3>
+
+<p>접근성 탭에서 접근성 항목에 마우스를 올리면 반투명한 강조 표시가 UI 항목에 표시됩니다. 항목의 역할, 이름, 대비 값이 작은 안내 바에 표시됩니다. 접근성 트리에 있는 항목이 실제 페이지의 UI 항목과 어떻게 연견되어 있는지 확인할 수 있습니다.</p>
+
+<p>다음 예시처럼 사진이 강조되어 있고 위에 있는 작은 안내 바에 역할, 이름인 "도로, 아스팔트, 하늘, 구름, 가을" 그리고 3.46의 대비 값을 볼 수 있습니다.</p>
+
+<p><img alt='페이지의 사진이 강조되어 있고 위에 있는 작은 안내 바에 역할, 이름인 "도로, 아스팔트, 하늘, 구름, 가을" 그리고 3.46의 대비 값이 적혀있다.' src="image_accessibility.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+
+<h4 id="Color_contrast">색 대비</h4>
+
+<p>명암비가 충분하지 않으면 시력이 낮거나 색맹같이 시각적 이상이 있는 사람들은 글을 읽기가 어렵기 때문에 명암비는 웹사이트의 컬러 팔레트를 디자인할 때 유용합니다. <a href="/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast">색 대비</a> 문서를 통해 적절한 명암비 값을 확인할 수 있습니다.</p>
+
+<p>예시:</p>
+
+<p><img alt="텍스트가 강조되어 있고 명암비가 AA WCAG값 이하라 색 대비에 경고 표시가 뜬 스크린샷" src="screen_shot_2019-01-29_at_10.11.13.png" style="display: block; margin: 0px auto;"></p>
+
+<p>위 사진의 명암비는 2.86이하이기 때문에 읽기에는 충분하지 않은 명암비일 수 있습니다. 충분한 명암비를 만족하지 못했을 경우 경고 표시가 뜹니다.</p>
+
+<p>파이어폭스 65부터는 그라데이션같이 복잡한 배경을 가진 텍스트의 경우에는 명암비의 값을 범위로 보여줍니다. 예를 들어:</p>
+
+<p><img alt="강조된 텍스트의 배경이 그라데이션이고 명암비 값이 AAA WCAG 가이드라인을 충족한 색 대비 스크린샷" src="screen_shot_2019-01-29_at_10.21.07.png" style="display: block; margin: 0px auto;"></p>
+
+<p>위 예에서 명암비는 4.75에서 5.98입니다. 숫자 뒤에 AAA와 체크 표시를 통해 4.5:1 이상의 명암비로 향상된 명암비 또는 AAA 단계의 기준을 만족한다는 것을 나타냅니다.</p>
+
+<p><a href="/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast">색 대비</a>에서 더 많은 정보를 찾아볼 수 있습니다.</p>
+
+<h3 id="Accessibility_picker">접근성 선택기</h3>
+
+<p><a href="/ko/docs/Tools/Page_Inspector/How_to/Select_an_element#with_the_node_picker">페이지 검사기</a>의 요소 선택기 버튼처럼, <em>접근성</em> 탭의 요소 선택기 버튼으로 페이지의 UI 항목에 마우스를 올리거나 클릭하는 방식으로 접근성 트리의 객체를 강조할 수 있습니다.</p>
+
+<p>접근성 탭 요소 선택기는 페이지 검사기의 HTML 창 선택기와 아래처럼 약간 다릅니다 :</p>
+
+<p><img alt="강조된 DOM 검사기 선택 버튼. 말풍선에 페이지에서 요소 고르기라고 써져있다" src="dom-inspector-picker.png" style="border-style: solid; border-width: 1px;"></p>
+
+<p><img alt="강조된 접근성 트리 검사기 선택 버튼. 말풍선에 페이지에서 접근성 객체  고르기라고 써져 있다" src="accessibility-inspector-picker.png" style="border-style: solid; border-width: 1px;"></p>
+
+<p>UI 항목을 클릭하면 접근성 객체가 접근성 트리에서 강조된 것을 볼 수 있습니다. 만약 <kbd>Shift</kbd>키를 누른 상태로 클릭을 하면 트리의 접근성 객체를 미리 보기 할 수 있습니다(객체의 속성 또한 오른쪽 창에 표시됩니다). 선택기가 종료되지 않거나 <kbd>Shift</kbd> 키를 뗄 때까지 계속해서 미리 보기를 할 수 있습니다.</p>
+
+<p>선택기가 활성화되어 있을 때 선택기 버튼을 다시 누르거나 <kbd>Esc</kbd> 키를 누르는 것으로 선택기를 종료할 수 있습니다.</p>
+
+<h2 id="Typical_use_cases">사용 예시</h2>
+
+<p>접근성 검사기는 접근성 문제를 한눈에 살펴보기 매우 편합니다. 먼저 적절한 텍스트 값이 없는 항목을 찾을 수 있습니다. 예를 들어 <code>alt</code> 텍스트가 없는 사진이나 <code>name</code> 속성에 <code>null</code> 값이 있는 것과 같은 적절한 라벨이 없는 폼 요소가 있습니다.</p>
+
+<p><img alt="UI에서 폼 입력이 강조되어 있고 접근성 검사기에서 name 속성이 null로 라벨이 없는 것을 알려주고 있는 스크린샷" src="use-case-no-label.png" style="border-style: solid; border-width: 1px;"></p>
+
+<p>또한 의미를 파악하기 매우 쉽습니다. 상황에 맞는 메뉴에서 <em>접근성 속성 검사</em>를 선택해 항목이 적절한 역할을 부여받았는지 확인할 수 있습니다(예: 버튼이 실제로 버튼으로 링크가 실제로 링크인지 확인하기).</p>
+
+<p><img alt="버튼처러 보이는 UI 요소지만 접근성 검사기의 정보에서는 버튼이 아니라 선택 요소이고 name 속성에 null이 나타나 있는 스크린샷" src="use-case-fake-button.png" style="border-style: solid; border-width: 1px;"></p>
+
+<h2 id="See_also">같이 보기</h2>
+
+<ul>
+ <li><a href="/ko/docs/Learn/Accessibility">접근성 사용 지침</a></li>
+ <li><a href="/ko/docs/Web/Accessibility">웹 접근성 둘러보기</a></li>
+ <li><a href="/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">현실적인 디버깅 정보</a></li>
+ <li><a href="/ko/docs/Web/Accessibility/Understanding_WCAG">WCAG 이해하기</a></li>
+ <li><a href="/ko/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA 기초</a></li>
+ <li><a href="https://www.smashingmagazine.com/2015/03/web-accessibility-with-accessibility-api/">Accessibility APIs: A Key To Web Accessibility</a> 저자: Léonie Watson</li>
+</ul>

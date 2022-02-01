@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/eval
 
 <h2 id="구문">구문</h2>
 
-<pre class="syntaxbox notranslate"><code>eval(<em>string</em>)</code></pre>
+<pre class="syntaxbox"><code>eval(<em>string</em>)</code></pre>
 
 <h3 id="매개변수">매개변수</h3>
 
@@ -42,19 +42,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/eval
 
 <p><code>eval()</code>의 인자가 문자열이 아니면 <code>eval()</code>은 인자를 그대로 반환합니다. 다음 예시에서, <code>String</code> 생성자가 명시된 경우 문자열을 계산하는 대신 <code>String</code> 객체를 반환합니다.</p>
 
-<pre class="brush:js notranslate">eval(new String("2 + 2")); // "2 + 2"를 포함한 String 객체를 반환
+<pre class="brush:js">eval(new String("2 + 2")); // "2 + 2"를 포함한 String 객체를 반환
 eval("2 + 2");             // 4를 반환
 </pre>
 
 <p><code>toString()</code>을 사용하는 일반적인 방식으로 제약을 피할 수 있습니다.</p>
 
-<pre class="brush:js notranslate">var expression = new String("2 + 2");
+<pre class="brush:js">var expression = new String("2 + 2");
 eval(expression.toString());            // 4를 반환
 </pre>
 
 <p><code>eval</code>을 직접 호출하지 않고 참조를 통해 <em>간접적으로</em> 사용한다면 <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2">ECMAScript 5부터는</a> 지역 범위가 아니라 전역 범위에서 동작합니다. 예를 들어 <code>eval()</code>로 함수를 선언하면 전역 함수가 되고, 실행되는 코드는 실행되는 위치의 지역 범위에 접근할 수 없습니다.</p>
 
-<pre class="notranslate"><code>function test() {
+<pre><code>function test() {
   var x = 2, y = 4;
   console.log(eval('x + y'));  // 직접 호출, 지역 범위 사용, 결과값은 6
   var geval = eval; // eval을 전역 범위로 호출하는 것과 같음
@@ -72,7 +72,7 @@ eval(expression.toString());            // 4를 반환
 
 <p><code>eval</code>을 사용하는 나쁜 코드:</p>
 
-<pre class="brush:js notranslate">function looseJsonParse(obj){
+<pre class="brush:js ">function looseJsonParse(obj){
     return eval(obj);
 }
 console.log(looseJsonParse(
@@ -82,7 +82,7 @@ console.log(looseJsonParse(
 
 <p><code>eval</code>이 없는 코드:</p>
 
-<pre class="brush:js notranslate">function looseJsonParse(obj){
+<pre class="brush:js ">function looseJsonParse(obj){
     return Function('"use strict";return (' + obj + ')')();
 }
 console.log(looseJsonParse(
@@ -92,7 +92,7 @@ console.log(looseJsonParse(
 
 <p>위의 두 코드는 얼핏 보면 같은 방식으로 실행되는 것처럼 보이지만, <code>eval</code>이 있는 코드가 훨씬 느립니다. 평가되는 객체의 <code>c: new Date()</code>를 주목하세요. <code>eval</code>이 없는 함수의 경우 이 객체는 전역 범위에서 평가되기 때문에 브라우저에서는 <code>Date</code>를 같은 이름의 지역 변수가 아니라 <code>window.Date</code>로 취급할 수 있습니다. 그러나 <code>eval()</code>을 사용하는 코드에서는 아래와 같은 경우도 존재할 수 있기 때문에 <code>Date</code>를 이렇게 취급할 수 없습니다.</p>
 
-<pre class="brush:js notranslate">function Date(n){
+<pre class="brush:js ">function Date(n){
     return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
 }
 function looseJsonParse(obj){
@@ -107,7 +107,7 @@ console.log(looseJsonParse(
 
 <p>만약 위의 상황에서 실제로 새로 선언한 <code>Date</code> 함수를 <code>Function()</code>에서 실행해야 하는 상황을 생각해 봅시다. 이렇게 되면 <code>eval()</code>로 돌아가야 할까요? 물론 아닙니다. 아래의 접근을 시도해 보세요.</p>
 
-<pre class="brush:js notranslate">function Date(n){
+<pre class="brush:js ">function Date(n){
     return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
 }
 function runCodeWithDateFunction(obj){
@@ -122,7 +122,7 @@ console.log(runCodeWithDateFunction(
 
 <p>위 코드는 삼중 중첩 함수를 사용하기 때문에 매우 비효율적으로 보일 수 있지만, 이 방법의 이점을 우선 살펴봅시다.</p>
 
-<p>1. <code>runCodeWithDateFunction</code>에 문자열로 전달된 코드를 최소화<sup>minify</sup>할 수 있다.</p>
+<p>1. <code>runCodeWithDateFunction</code>에 문자열로 전달된 코드를 최소화할 수 있다.</p>
 
 <p>2. Function call overhead is minimal, making the far smaller code size well worth the benefit</p>
 
@@ -132,7 +132,7 @@ console.log(runCodeWithDateFunction(
 
 <p>마지막으로 코드 최소화의 측면에서 살펴보면, 위와 같이 <code>Function()</code>을 사용했을 때는 아래의 최소화된 코드와 같이 함수의 인자 이름 역시 짧게 줄일 수 있으므로 runCodeWithDateFunction에 전달하는 코드 문자열을 더욱 효율적으로 줄일 수 있습니다.</p>
 
-<pre class="brush:js notranslate">console.log(Function('"use strict";return(function(a){return a(5)})')()(function(a){
+<pre class="brush:js ">console.log(Function('"use strict";return(function(a){return a(5)})')()(function(a){
 return"Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(" ")[a%7||0]}));</pre>
 
 <p>자주 쓰이는 용례에 대해서는 <code>eval()</code>이나 <code>Function()</code>보다 안전하고 빠른 대안도 존재합니다.</p>
@@ -141,29 +141,29 @@ return"Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(" ")[a%7|
 
 <p>속성명으로 속성을 찾는 데 <code>eval()</code>을 사용해서는 안 됩니다. 다음 예제와 같이 코드를 실행하기 전까지는 접근할 속성을 알 수 없는 상황을 생각해 봅시다. 이 상황은 <code>eval</code>로 처리할 수 있습니다.</p>
 
-<pre class="brush:js notranslate">var obj = { a: 20, b: 30 };
+<pre class="brush:js ">var obj = { a: 20, b: 30 };
 var propname = getPropName();  // "a" 또는 "b"를 반환
 
 eval( "var result = obj." + propname );
 </pre>
 
-<p>그러나 여기에서 <code>eval()</code>을 쓸 필요가 없고, 지양되어야 합니다. 그 대신 훨씬 빠르고 안전한 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors" title="JavaScript/Reference/Operators/Member_Operators">속성 접근자</a>를 사용하여야 합니다.</p>
+<p>그러나 여기에서 <code>eval()</code>을 쓸 필요가 없고, 지양되어야 합니다. 그 대신 훨씬 빠르고 안전한 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors">속성 접근자</a>를 사용하여야 합니다.</p>
 
-<pre class="brush:js notranslate">var obj = { a: 20, b: 30 };
+<pre class="brush:js ">var obj = { a: 20, b: 30 };
 var propname = getPropName();  // "a" 또는 "b"를 반환
 var result = obj[ propname ];  //  obj[ "a" ]는 obj.a와 동일함
 </pre>
 
 <p>이 방법으로 더 깊은 속성에도 접근할 수 있습니다. <code>eval()</code>을 사용한다면 다음과 같을 것입니다.</p>
 
-<pre class="notranslate"><code>var obj = {a: {b: {c: 0}}};
+<pre ><code>var obj = {a: {b: {c: 0}}};
 var propPath = getPropPath();  // "a.b.c"를 반환한다고 가정
 
 eval( 'var result = obj.' + propPath );</code></pre>
 
 <p>여기서 <code>eval()</code>의 사용을 피하려면 속성 경로를 <code><a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split">split</a></code>한 다음 순서대로 접근할 수도 있습니다.</p>
 
-<pre class="notranslate"><code>function getDescendantProp(obj, desc) {
+<pre ><code>function getDescendantProp(obj, desc) {
   var arr = desc.split('.');
   while (arr.length) {
     obj = obj[arr.shift()];
@@ -177,7 +177,7 @@ var result = getDescendantProp(obj, propPath);</code></pre>
 
 <p>속성에 값을 대입하는 것도 비슷하게 할 수 있습니다.</p>
 
-<pre class="notranslate"><code>function setDescendantProp(obj, desc, value) {
+<pre ><code>function setDescendantProp(obj, desc, value) {
   var arr = desc.split('.');
   while (arr.length &gt; 1) {
     obj = obj[arr.shift()];
@@ -194,27 +194,27 @@ var result = setDescendantProp(obj, propPath, 1);  // test.a.b.c의 값은 1로 
 
 <p>JavaScript의 <a href="http://en.wikipedia.org/wiki/First-class_function">함수는 1급 객체</a>이므로 다른 API에 함수를 인자로 전달할 수도 있고, 변수나 객체의 속성으로 대입할 수도 있습니다. 다수의 DOM API는 이 점을 염두에 두고 설계되므로, 다음과 같이 코드를 짜야 합니다.</p>
 
-<pre class="brush: js notranslate">// setTimeout(" ... ", 1000) 대신에
+<pre class="brush: js ">// setTimeout(" ... ", 1000) 대신에
 setTimeout(function() { ... }, 1000);
 
 // elt.setAttribute("onclick", "...") 대신에
 elt.addEventListener("click", function() { ... } , false); </pre>
 
-<p>또한 <a href="/en-US/docs/Web/JavaScript/Closures" title="JavaScript/Guide/Closures">클로저</a>를 이용해 문자열을 합치는 등의 연산 없이 매개변수화된 함수를 생성할 수 있습니다.</p>
+<p>또한 <a href="/en-US/docs/Web/JavaScript/Closures">클로저</a>를 이용해 문자열을 합치는 등의 연산 없이 매개변수화된 함수를 생성할 수 있습니다.</p>
 
 <h3 id="JSON_파싱_문자열을_JavaScript_객체로_변환">JSON 파싱 (문자열을 JavaScript 객체로 변환)</h3>
 
-<p><code>eval()</code>을 호출하려는 문자열에 코드가 아니라 데이터가 포함되어 있다면(예를 들어 <code>"[1, 2, 3]"</code>과 같은 배열), 대신 JavaScript의 문법 일부를 이용해 문자열로 데이터를 표현할 수 있는 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON" title="JSON">JSON</a>을 사용하는 것을 고려해 보세요. <a href="/en-US/docs/Downloading_JSON_and_JavaScript_in_extensions" title="Downloading_JSON_and_JavaScript_in_extensions">Downloading JSON and JavaScript in extensions</a>도 참고해 보세요.</p>
+<p><code>eval()</code>을 호출하려는 문자열에 코드가 아니라 데이터가 포함되어 있다면(예를 들어 <code>"[1, 2, 3]"</code>과 같은 배열), 대신 JavaScript의 문법 일부를 이용해 문자열로 데이터를 표현할 수 있는 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a>을 사용하는 것을 고려해 보세요. <a href="/en-US/docs/Downloading_JSON_and_JavaScript_in_extensions">Downloading JSON and JavaScript in extensions</a>도 참고해 보세요.</p>
 
-<p>JSON 문법은 JavaScript 문법에 비해 제약이 있기 때문에, 유효한 JavaScript 리터럴이 JSON으로 변환되지 않는 경우도 있습니다. 예를 들어, JSON에서는 배열이나 객체를 콤마로 끝낼 수 없고, 객체 리터럴에서 속성명(키)은 반드시  따옴표로 감싸야 합니다. 나중에 JSON으로 파싱할 문자열을 생성할 때는 JSON 직렬 변환기<sup>JSON serializer</sup>를 사용하여야 합니다.</p>
+<p>JSON 문법은 JavaScript 문법에 비해 제약이 있기 때문에, 유효한 JavaScript 리터럴이 JSON으로 변환되지 않는 경우도 있습니다. 예를 들어, JSON에서는 배열이나 객체를 콤마로 끝낼 수 없고, 객체 리터럴에서 속성명(키)은 반드시  따옴표로 감싸야 합니다. 나중에 JSON으로 파싱할 문자열을 생성할 때는 JSON 직렬 변환기를 사용하여야 합니다.</p>
 
 <h3 id="코드_대신_데이터_전달하기">코드 대신 데이터 전달하기</h3>
 
-<p>예를 들어, 웹 페이지의 내용을 추출하는 확장 프로그램은 JavaScript 코드 대신 <a href="/ko/docs/XPath" title="XPath">XPath</a>에 스크랩 규칙을 정의할 수 있습니다.</p>
+<p>예를 들어, 웹 페이지의 내용을 추출하는 확장 프로그램은 JavaScript 코드 대신 <a href="/ko/docs/XPath">XPath</a>에 스크랩 규칙을 정의할 수 있습니다.</p>
 
 <h3 id="제한된_권한으로_코드_실행하기">제한된 권한으로 코드 실행하기</h3>
 
-<p>제3자 코드를 실행해야 할 때는 제한된 권한으로 실행하는 것을 고려해야 합니다. 이는 주로 확장 프로그램이나 XUL 어플리케이션에 적용되며, 이때 <a href="/en-US/docs/Components.utils.evalInSandbox" title="Components.utils.evalInSandbox">Components.utils.evalInSandbox</a>를 사용할 수 있습니다.</p>
+<p>제3자 코드를 실행해야 할 때는 제한된 권한으로 실행하는 것을 고려해야 합니다. 이는 주로 확장 프로그램이나 XUL 어플리케이션에 적용되며, 이때 <a href="/en-US/docs/Components.utils.evalInSandbox">Components.utils.evalInSandbox</a>를 사용할 수 있습니다.</p>
 
 <h2 id="예제">예제</h2>
 
@@ -222,7 +222,7 @@ elt.addEventListener("click", function() { ... } , false); </pre>
 
 <p>아래 코드에서 <code>eval()</code>를 포함하는 문장은 모두 42를 반환합니다. 전자는 문자열 "<code>x + y + 1</code>"을, 후자는 문자열 "<code>42</code>"를 평가합니다.</p>
 
-<pre class="brush:js notranslate">var x = 2;
+<pre class="brush:js ">var x = 2;
 var y = 39;
 var z = "42";
 eval("x + y + 1"); // 42를 반환
@@ -233,14 +233,14 @@ eval(z);           // 42를 반환
 
 <p>다음 예제에서는 <code>eval()</code>을 사용하여 <code>str</code> 문자열을 평가합니다. 이 문자열은 <code>x</code>가 5이면 로그를 출력한 다음 <code>z</code>에 42를 할당하고, 그렇지 않으면 <code>z</code>에 0 을 할당하는 JavaScript 코드입니다. 두 번째 문장이 실행되면, <code>eval()</code>은 이 문장의 집합을 수행하고, <code>z</code>에 할당된 값을 반환합니다.</p>
 
-<pre class="brush:js notranslate">var x = 5;
+<pre class="brush:js ">var x = 5;
 var str = "if (x == 5) {console.log('z is 42'); z = 42;} else z = 0; ";
 
 console.log("z is ", eval(str));</pre>
 
 <p>여러 값을 정의할 경우 마지막 값을 반환합니다.</p>
 
-<pre class="notranslate"><code>var x = 5;
+<pre ><code>var x = 5;
 var str = "if (x == 5) {console.log('z is 42'); z = 42; x = 420; } else z = 0;";
 
 console.log('x is ', eval(str)); // z는 42, x는 420</code></pre>
@@ -249,7 +249,7 @@ console.log('x is ', eval(str)); // z는 42, x는 420</code></pre>
 
 <p><code>eval()</code> 은 마지막 표현식의 평가값을 반환합니다.</p>
 
-<pre class="brush:js notranslate">var str = "if ( a ) { 1+1; } else { 1+2; }";
+<pre class="brush:js ">var str = "if ( a ) { 1+1; } else { 1+2; }";
 var a = true;
 var b = eval(str);  // 2를 반환
 
@@ -262,15 +262,13 @@ console.log("b is : " + b);</pre>
 
 <h3 id="함수_정의_문자열로서의_eval_은_앞뒤를_와_로_감싸야_한다">함수 정의 문자열로서의 <code>eval</code> 은 앞뒤를 "("와 ")"로 감싸야 한다</h3>
 
-<pre class="brush:js notranslate">var fctStr1 = "function a() {}"
+<pre class="brush:js ">var fctStr1 = "function a() {}"
 var fctStr2 = "(function a() {})"
 var fct1 = eval(fctStr1)  // undefined를 반환
 var fct2 = eval(fctStr2)  // 함수를 반환
 </pre>
 
-<h2 id="sect1"></h2>
-
-<h2 id="브라우저_호환성"><span style="">브라우저 호환성</span></h2>
+<h2 id="브라우저_호환성">브라우저 호환성</h2>
 
 <p>{{Compat("javascript.builtins.eval")}}</p>
 

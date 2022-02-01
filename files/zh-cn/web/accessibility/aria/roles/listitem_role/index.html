@@ -1,0 +1,120 @@
+---
+title: 'ARIA: listitem role'
+slug: Web/Accessibility/ARIA/Roles/Listitem_role
+tags:
+- ARIA
+- ARIA Role
+- ARIA listitem
+- 可访问性
+- 无障碍
+- Reference
+- Role
+- listitem
+---
+<p>ARIA <code>listitem</code> 角色可用于标识项目列表中的项目。它通常与 <code>list</code> 角色结合使用，用于标识列表容器。</p>
+
+<pre class="brush: html">&lt;section role="list"&gt;
+  &lt;div role="listitem"&gt;List item 1&lt;/div&gt;
+  &lt;div role="listitem"&gt;List item 2&lt;/div&gt;
+  &lt;div role="listitem"&gt;List item 3&lt;/div&gt;
+&lt;/section&gt;
+</pre>
+
+<h2 id="Description">描述</h2>
+
+<p>任何由外部容器和内部元素列表组成的内容都可以分别使用 <code>list</code> 和 <code>listitem</code> 容器识别为辅助技术。</p>
+
+<p>关于应该使用哪些元素来标记 <code>list</code> 和 <code>listitem</code> 没有硬性规定，但是您应该确保 <code>listitem</code> 在列表的上下文中有意义，例如购物清单、食谱步骤、行车路线。</p>
+
+<div class="notecard warning">
+  <h4>警告</h4>
+  <p>如果可能，您应该使用适当的语义化 HTML 元素来标记 <code>list</code> 及其 <code>listitem</code>，如 {{HTMLElement("ul")}}、{{HTMLElement("ol")}} 和 {{HTMLElement("li")}}。有关完整示例，请参阅 {{anch("Best_practices", "最佳实践")}}。</p>
+</div>
+
+<h3 id="Associated_WAI-ARIA_Roles_States_and_Properties">关联的 WAI-ARIA 角色、状态和属性</h3>
+
+<dl>
+  <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></dt>
+  <dd><p>项目列表。角色为 <code>list</code> 的元素必须有一个或多个角色为 <code>listitem</code> 的元素作为子元素，一个或多个角色为 <code>group</code> 的元素具有一个或多个具有 <code>listitem</code> 角色的元素作为子元素。</p></dd>
+  <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></dt>
+  <dd><p>相关对象的集合，在嵌套在列表中时仅限于列表项，其重要性不足以在页面目录中拥有自己的位置。</p></dd>
+</dl>
+
+<h3 id="Keyboard_Interactions">键盘交互</h3>
+
+<p>无</p>
+
+<h3 id="Required_JavaScript_features">所需的 JavaScript 功能</h3>
+
+<p>无</p>
+
+<h2 id="Examples">示例</h2>
+
+<p><a href="https://www.scottohara.me/blog/2018/05/26/aria-lists.html">ARIA Lists</a> — Scott O'Hara 的一些有用的例子和想法</p>
+
+<h2 id="Best_practices">最佳实践</h2>
+
+<p>仅在必要时使用 <code>role="list"</code> 和 <code>role="listitem"</code>。例如，无法控制 HTML 但能够在之后动态使用 JavaScript 提升可访问性的时候。</p>
+
+<p>与 HTML {{HTMLElement("ol")}} 和 {{HTMLElement("ul")}} 不同，ARIA <code>list</code> 角色不区分有序列表和无序列表。如果可能，您应该使用适当的语义 HTML 元素来标记列表（{{HTMLElement("ol")}} 和 {{HTMLElement("ul")}}）和列表项（{{HTMLElement("li")}})。例如，我们上面的例子应该改写如下：</p>
+
+<pre class="brush: html">&lt;ul&gt;
+  &lt;li&gt;List item 1&lt;/li&gt;
+  &lt;li&gt;List item 2&lt;/li&gt;
+  &lt;li&gt;List item 3&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+<p>或者如果列表项的顺序很重要，则使用有序列表：</p>
+
+<pre class="brush: html">&lt;ol&gt;
+  &lt;li&gt;List item 1&lt;/li&gt;
+  &lt;li&gt;List item 2&lt;/li&gt;
+  &lt;li&gt;List item 3&lt;/li&gt;
+&lt;/ol&gt;</pre>
+
+<div class="notecard note">
+  <h4>注意</h4>
+  <p>ARIA <code>list</code> / <code>listitem</code> 角色不区分有序列表和无序列表。</p>
+</div>
+
+<div class="notecard note">
+  <h4>注意</h4>
+  <p>如果要标记将用作选项卡式界面的项目列表，则应改为使用 <code>tab</code>、<code>tabpanel</code> 和 <code>tablist</code> 角色。</p>
+</div>
+
+<h2 id="Specifications">规范</h2>
+
+<table>
+  <tbody>
+  <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+  </tr>
+  <tr>
+    <td>{{SpecName("ARIA","#listitem","listitem")}}</td>
+    <td>{{Spec2('ARIA')}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<h2 id="Screen_reader_support">屏幕阅读器支持</h2>
+
+<p>TBD</p>
+
+<h2 id="See_also">相关链接</h2>
+
+<ul>
+  <li><a href="https://wicg.github.io/aom/spec/">Accessibility Object Model</a></li>
+  <li><a href="https://w3c.github.io/html-aria/">ARIA in HTML</a></li>
+  <li>{{HTMLElement("ul")}}</li>
+  <li>{{HTMLElement("ol")}}</li>
+  <li>{{HTMLElement("li")}}</li>
+  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role">ARIA: list role</a></li>
+  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role" rel="nofollow">ARIA: group role</a></li>
+</ul>
+
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+  </ol>
+</section>

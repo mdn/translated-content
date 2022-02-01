@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
   <dt><code>index</code> {{optional_inline}}</dt>
   <dd>처리할 현재 요소의 인덱스.</dd>
   <dt><code>array</code> {{optional_inline}}</dt>
-  <dd><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">forEach()</span></font>를 호출한 배열.</dd>
+  <dd><code>forEach()</code>를 호출한 배열.</dd>
  </dl>
  </dd>
  <dt><code>thisArg</code> {{optional_inline}}</dt>
@@ -61,7 +61,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 <p><code>forEach()</code>로 처리할 요소의 범위는 최초 <code>callback</code> 호출 전에 설정됩니다. <code>forEach()</code> 호출을 시작한 뒤 배열에 추가한 요소는 <code>callback</code>이 방문하지 않습니다. 배열의 기존 요소값이 바뀐 경우, <code>callback</code>에 전달하는 값은 <code>forEach()</code>가 요소를 방문한 시점의 값을 사용합니다. 방문하기 전에 삭제한 요소는 방문하지 않습니다.</p>
 
-<p><code>forEach()</code>는 각 배열 요소에 대해 한 번씩 <code>callback</code> 함수를 실행합니다. {{jsxref("Array.prototype.map()", "map()")}}과 {{jsxref("Array.prototype.reduce()", "reduce()")}}와는 달리 {{jsxref("undefined")}}를 반환하기 때문에 메서드 체인의 중간에 사용할 수 없습니다. 대표적인 사용처는 메서드 체인 끝에서 부작용<sup>side effect</sup>을 실행하는 겁니다.</p>
+<p><code>forEach()</code>는 각 배열 요소에 대해 한 번씩 <code>callback</code> 함수를 실행합니다. {{jsxref("Array.prototype.map()", "map()")}}과 {{jsxref("Array.prototype.reduce()", "reduce()")}}와는 달리 {{jsxref("undefined")}}를 반환하기 때문에 메서드 체인의 중간에 사용할 수 없습니다. 대표적인 사용처는 메서드 체인 끝에서 부작용(side effect)을 실행하는 겁니다.</p>
 
 <p><code>forEach()</code>는 배열을 변형하지 않습니다. 그러나 <code>callback</code>이 변형할 수는 있습니다.</p>
 

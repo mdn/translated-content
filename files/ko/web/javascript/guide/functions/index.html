@@ -190,9 +190,9 @@ function getScore () {
 getScore(); // Returns "Chamahk scored 5"
 </pre>
 
-<h2 id="Scope_and_the_function_stack" name="Scope_and_the_function_stack">범위와 함수 스택</h2>
+<h2 id="Scope_and_the_function_stack">범위와 함수 스택</h2>
 
-<h3 id="Recursion" name="Recursion">재귀</h3>
+<h3 id="Recursion">재귀</h3>
 
 <p>함수는 자신을 참조하고 호출할 수 있습니다. 함수가 자신을 참조하는 방법은 세 가지가 있습니다.</p>
 
@@ -318,7 +318,7 @@ result = fn_inside(5); // returns 8
 result1 = outside(3)(5); // returns 8
 </pre>
 
-<h3 id="Efficiency_considerations" name="Efficiency_considerations">변수의 보존</h3>
+<h3 id="Efficiency_considerations">변수의 보존</h3>
 
 <p>중첩된 내부 함수가 반환될 때 외부 함수의 인수 <code>x</code>가 보존된다는 점을 알 수 있습니다. 클로저는 그것을 참조하는 모든 범위에서 인수와 변수를 보존해두어야 합니다. 매번 호출될 때마다 잠재적으로 다른 인수를 제공할 수 있기 때문에, 클로저는 외부 함수에 대하여 매번 새로 생성됩니다. 메모리는 그 무엇도 내부 함수에 접근하지 않을 때만 해제됩니다.</p>
 
@@ -352,7 +352,7 @@ A(1); // logs 6 (1 + 2 + 3)
 
 <p>그러나 역은 사실이 아닙니다. A는 C에 접근 할 수 없습니다. 왜냐하면 A는 B의 인수와 변수(C는 B변수)에 접근할수 없기 때문입니다. 그래서 C는 B에게만 사적으로 남게됩니다.</p>
 
-<h3 id="Name_conflicts" name="Name_conflicts">이름 충돌</h3>
+<h3 id="Name_conflicts">이름 충돌</h3>
 
 <p>클로저의 범위에서 두 개의 인수 또는 변수의 이름이 같은 경우, <em>이름 충돌</em>이 있습니다. 더 안쪽 범위가 우선순위를 갖습니다. 그래서 가장 바깥 범위는 우선순위가 가장 낮은 반면에, 가장 안쪽 범위는 가장 높은 우선순위를 갖습니다. 이것이 범위 체인(scope chaini)입니다. <span class="atn">체인에서</span> 첫번째는 <span class="hps">가장 안쪽</span> <span class="atn hps">범위</span><span>이고,</span> <span class="atn hps">마지막</span><span>은</span> <span class="atn hps">가장 바깥 쪽</span><span class="atn">의 범위입니다</span><span>.</span> <span class="hps">다음 사항을 고려하세요:</span></p>
 
@@ -418,7 +418,7 @@ pet.getSex();                   // male
 pet.getName();                  // Oliver
 </pre>
 
-<p>위 코드에서, 외부 함수의 'name' 이란 변수는 내부 함수에서 접근이 가능합니다. 그리고 그 내장 함수를 통하는 방법 말고는 내부 변수로 접근할 수 없습니다. 내부 함수의 내부 변수는 외부 인수와 변수를 안전하게 저장합니다. 내부 변수는 내부 함수가 작동하기 위해 '지속적'이고 '갭슐화된' 데이터를 보유합니다. 함수는 변수로 할당되거나, 이름을 가질 필요가 없습니다.</p>
+<p>위 코드에서, 외부 함수의 'name' 이란 변수는 내부 함수에서 접근이 가능합니다. 그리고 그 내장 함수를 통하는 방법 말고는 내부 변수로 접근할 수 없습니다. 내부 함수의 내부 변수는 외부 인수와 변수를 안전하게 저장합니다. 내부 변수는 내부 함수가 작동하기 위해 '지속적'이고 '캡슐화된' 데이터를 보유합니다. 함수는 변수로 할당되거나, 이름을 가질 필요가 없습니다.</p>
 
 <pre class="brush: js">var getCode = (function(){
   var secureCode = "0]Eal(eh&amp;2";    // A code we do not want outsiders to be able to modify...

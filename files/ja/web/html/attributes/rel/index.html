@@ -1,0 +1,419 @@
+---
+title: 'HTML attribute: rel'
+slug: Web/HTML/Attributes/rel
+tags:
+  - Attribute
+  - Attributes
+  - Constraint validation
+  - Link
+  - form
+  - rel
+translation_of: Web/HTML/Attributes/rel
+---
+<p>{{HTMLSidebar}}{{draft}}</p>
+
+<p class="summary"><strong><code>rel</code></strong> 属性は、リンク先のリソースと現在の文書との関係を定義します。 {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}}、{{htmlelement('form')}} で有効で、対応する値は属性が見つかった要素に依存します。</p>
+
+<p>関係の種類は <code>rel</code> 属性の値によって決まりますが、 <code>rel</code> 属性が存在する場合は、一連の固有のキーワードが順不同で空白で区切られたものであることが必要です。意味を表現しないクラス名とは異なり、 <code>rel</code> 属性は機械と人間の両方にとって意味のあるトークンを表現しなければなりません。現在、 <code>rel</code> 属性の値として登録されているのは、 <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">IANA link relation registry</a>、<a href="https://html.spec.whatwg.org/multipage/links.html#linkTypes">HTML Living Standard</a>、そして Living Standard が<a href="https://html.spec.whatwg.org/multipage/links.html#other-link-types">提案している</a> microformats wiki の自由に編集可能な <a href="https://microformats.org/wiki/existing-rel-values">existing-rel-values page</a> ページです。上記の 3 つの情報源のいずれにも存在しない <code>rel</code> 属性が使用された場合、 HTML バリデーター (<a href="https://validator.w3.org/">W3C Markup Validation Service</a> など) によっては警告を生成します。</p>
+
+<p>次の表は、既存のキーワードの中でも特に重要なものです。空白で区切られた値の中のすべてのキーワードは、その値の中で一意でなければなりません。</p>
+
+<table class="standard-table">
+	<caption><code>rel</code> 属性の値と、それぞれが関連する要素</caption>
+	<thead>
+		<tr>
+			<th><code>rel</code> の値</th>
+			<th>説明</th>
+			<th><code>{{htmlelement('link')}}</code></th>
+			<th><code>{{htmlelement('a')}}</code> および <code>{{htmlelement('area')}}</code></th>
+			<th><code>{{htmlelement('form')}}</code></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>{{anch("attr-alternate", "alternate")}}</code></td>
+			<td>現在の文書の別な表現。</td>
+			<td>リンク</td>
+			<td>リンク</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-author", "author")}}</code></td>
+			<td>現在の文書や記事の著者。</td>
+			<td>リンク</td>
+			<td>リンク</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-bookmark", "bookmark")}}</code></td>
+			<td>直近の祖先の章に対するパーマリンク。</td>
+			<td class="not-allowed">不許可</td>
+			<td>リンク</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-canonical", "canonical")}}</code></td>
+			<td>現在の文書の推奨 URL。</td>
+			<td>リンク</td>
+			<td class="not-allowed">不許可</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+		<tr>
+			<td><code><a href="/ja/docs/Web/HTML/Link_types/dns-prefetch">dns-prefetch</a></code></td>
+			<td>宛先リソースのオリジンに対する DNS 解決を先取りして行うようブラウザーに指示する</td>
+			<td>外部リソース</td>
+			<td class="not-allowed">不許可</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-external", "external")}}</code></td>
+			<td>参照先の文書は、現在の文書と同じサイトの一部ではありません。</td>
+			<td class="not-allowed">不許可</td>
+			<td>注釈</td>
+			<td>注釈</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-help", "help")}}</code></td>
+			<td>コンテンツに応じたヘルプにリンクします。</td>
+			<td>リンク</td>
+			<td>リンク</td>
+			<td>リンク</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-icon", "icon")}}</code></td>
+			<td>現在の文書を表すアイコンです。</td>
+			<td>外部リソース</td>
+			<td class="not-allowed">不許可</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-license", "license")}}</code></td>
+			<td>現在の文書のメインコンテンツが、参照先の文書で説明されている著作権ライセンスによってカバーされていることを示す。</td>
+			<td>リンク</td>
+			<td>リンク</td>
+			<td>リンク</td>
+		</tr>
+		<tr>
+			<td><code><a href="/ja/docs/Web/HTML/Link_types/manifest">manifest</a></code></td>
+			<td>ウェブアプリマニフェスト</td>
+			<td>リンク</td>
+			<td>不許可</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+		<tr>
+			<td><code><a href="/ja/docs/Web/HTML/Link_types/modulepreload">modulepreload</a></code></td>
+			<td>スクリプトを先取りして取得し、後で評価できるようにこの文書のモジュールマップに保存するようブラウザーに指示します。オプションで、モジュールの依存関係も読み取ることができます。</td>
+			<td>外部リソース</td>
+			<td class="not-allowed">不許可</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-next", "next")}}</code></td>
+			<td>現在の文書が一連の文書の一部であり、その中の次の文書が参照先の文書であることを示します。</td>
+			<td>リンク</td>
+			<td>リンク</td>
+			<td>リンク</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-nofollow", "nofollow")}}</code></td>
+			<td>現在の文書の原著者または発行者が、参照先の文書を支持していないことを示します。</td>
+			<td class="not-allowed">不許可</td>
+			<td>注釈</td>
+			<td>注釈</td>
+		</tr>
+		<tr>
+			<td><code><a href="/ja/docs/Web/HTML/Link_types/noopener">noopener</a></code></td>
+			<td>ハイパーリンクが補助的な閲覧コンテキストのいずれかを生成する (つまり、適切な <code>target</code> 属性値を持つ) 場合、補助的な閲覧コンテキストではない最上位の閲覧コンテキストを生成します。</td>
+			<td class="not-allowed">不許可</td>
+			<td>注釈</td>
+			<td>注釈</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-noreferrer", "noreferrer")}}</code></td>
+			<td><code>Referer</code> ヘッダーを含めません。さらに、 <code>noopener</code> と同じ効果もあります。</td>
+			<td class="not-allowed">不許可</td>
+			<td>注釈</td>
+			<td>注釈</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-opener", "opener")}}</code></td>
+			<td>ハイパーリンクによって、補助閲覧コンテキストではない最上位の閲覧コンテキストが生成される場合 (すなわち、 <code>target</code> 属性の値が "<code>_blank</code>" である場合)、補助閲覧コンテキストを生成します。</td>
+			<td class="not-allowed">不許可</td>
+			<td>注釈</td>
+			<td>注釈</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-pingback", "pingback")}}</code></td>
+			<td>現在の文書へのピンバックを処理するピンバックサーバーのアドレスを指定します。</td>
+			<td>外部リソース</td>
+			<td class="not-allowed">不許可</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+		<tr>
+			<td><code><a href="/ja/docs/Web/HTML/Link_types/preconnect">preconnect</a></code></td>
+			<td>ユーザーエージェントが対象となるリソースのオリジンへの接続を先読みすることを指定します。</td>
+			<td>外部リソース</td>
+			<td class="not-allowed">不許可</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+		<tr>
+			<td><code><a href="/ja/docs/Web/HTML/Link_types/prefetch">prefetch</a></code></td>
+			<td>ユーザーエージェントが、後続のナビゲーションに必要となる可能性の高いターゲットリソースを先取りしてキャッシュすることを指定します。</td>
+			<td>外部リソース</td>
+			<td class="not-allowed">不許可</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+		<tr>
+			<td><code><a href="/ja/docs/Web/HTML/Link_types/preload">preload</a></code></td>
+			<td><code><a href="as">as</a></code> 属性で指定された潜在的な距離 (および対応する距離に関連する優先度) に従って、ユーザーエージェントが現在のナビゲーションのためにターゲットリソースを先取りしてキャッシュしなければならないことを指定する。</td>
+			<td>外部リソース</td>
+			<td class="not-allowed">不許可</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+		<tr>
+			<td><code><a href="/ja/docs/Web/HTML/Link_types/prerender">prerender</a></code></td>
+			<td>ユーザーエージェントが、対象となるリソースを先取りして取得し、将来的に高速なレスポンスを実現するための処理を行うことを指定します。</td>
+			<td>外部リソース</td>
+			<td class="not-allowed">不許可</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-prev", "prev")}}</code></td>
+			<td>現在の文書が一連の文書の一部であり、その中の前の文書が参照先の文書であることを示します。</td>
+			<td>リンク</td>
+			<td>リンク</td>
+			<td>リンク</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-search", "search")}}</code></td>
+			<td>現在の文書とその関連ページを検索するのに使用できるリソースへのリンクを提供します。</td>
+			<td>リンク</td>
+			<td>リンク</td>
+			<td>リンク</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-stylesheet", "stylesheet")}}</code></td>
+			<td>スタイルシートをインポートします。</td>
+			<td>外部リソース</td>
+			<td class="not-allowed">不許可</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+		<tr>
+			<td><code>{{anch("attr-tag", "tag")}}</code></td>
+			<td>現在の文書に適用される (与えられたアドレスで識別される) タグを与えます。</td>
+			<td class="not-allowed">不許可</td>
+			<td>リンク</td>
+			<td class="not-allowed">不許可</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><code>rel</code> 属性は {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}}、{{htmlelement('form')}} の各要素に関連していますが、これらの要素のサブセットにのみ関連する値もあります。他の HTML キーワード属性の値と同様に、これらの値は大文字小文字の区別がありません。</p>
+
+<p><code>rel</code> rel属性には既定値がありません。属性が省略された場合や、属性の値がいずれも対応されていない場合、文書は宛先のリソースとの間にハイパーリンクがあるということ以外には、特に関係を持ちません。この場合、 {{htmlelement('link')}} と {{htmlelement('form')}} では、 <code>rel</code> 属性がない場合、キーワードがない場合、または上記のスペースで区切られたキーワードのうち 1 つ以上がない場合、その要素はいかなるリンクも生成しません。 {{htmlelement('a')}} と {{htmlelement('area')}} はリンクを生成しますが、関係は定義されません。</p>
+
+<h2 id="Values">値</h2>
+
+<dl>
+	<dt>{{htmlattrdef("alternate")}}</dt>
+	<dd>現在の文書の代替表現を示します。 {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}} で有効であり、意味は他の属性の値に依存します。
+	<ul>
+		<li><code>{{anch('stylesheet')}}</code> キーワードと共に <code>&lt;link&gt;</code> で使用された場合は、代替スタイルシートを生成します。
+		<pre class="brush:html">&lt;!-- 常設スタイルシート --&gt;
+&lt;link rel="stylesheet" href="default.css"&gt;
+&lt;!-- 代替スタイルシート --&gt;
+&lt;link rel="alternate stylesheet" href="highcontrast.css" title="High contrast"&gt;</pre>
+		</li>
+		<li>この文書の言語と異なる <a href="hreflang">hreflang</a> 属性と共に使用された場合は、翻訳版を表します。</li>
+		<li><a href="type">type</a> 属性と共に使用された場合は、属性によって、参照先の文書が異なるファイル形式のの同じコンテンツであることを示します。例えば、 <code>type="application/rss+xml"</code> とすると、シンジケーションフィードを参照するハイパーリンクが生成されます。
+		<pre class="brush:html">&lt;link rel="alternate" type="application/atom+xml" href="posts.xml" title="Blog"&gt;</pre>
+		</li>
+		<li><a href="hreflang">hreflang</a> と <a href="type">type</a> の両属性と共に使用された場合は、この文書の別の言語、他のメディア向けの別なファイル形式の版へのリンクを指定します。
+		<pre class="brush:html">&lt;link rel=alternate href="/fr/html/print" hreflang=fr type=text/html media=print title="French HTML (for printing)"&gt;
+&lt;link rel=alternate href="/fr/pdf" hreflang=fr type=application/pdf title="French PDF"&gt;</pre>
+		</li>
+	</ul>
+  <p class="note">メモ: 廃止された <code>rev="made"</code> は <code>rel="alternate"</code> として扱われます。</p>
+	</dd>
+	<dt>{{htmlattrdef("author")}}</dt>
+	<dd>現在の文書や記事の著者を示します。 {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}} 要素で使用された場合、 <code>author</code> キーワードはハイパーリンクを生成します。 {{htmlelement('a')}} と {{htmlelement('area')}} では、リンクされた文書 (または<code>mailto:</code>) が、最も近い祖先の {{htmlelement('article')}} があればその祖先の著者に関する情報を提供することを示し、そうでなければ文書全体を示します。 {{htmlelement('link')}} の場合は、文書全体の著者を表します。</dd>
+	<dt>{{htmlattrdef("bookmark")}}</dt>
+	<dd>{{htmlelement('a')}} および {{htmlelement('area')}} の <code>rel</code> 属性の値として使用されると、このブックマークは祖先のセクションに対して、 1 つ以上あれば最も近い祖先の {{htmlelement('article')}} または {{htmlelement('section')}} を、そうでなければ最も近い見出しの兄弟または祖先の子孫・・・というようにパーマリンクを提供します。</dd>
+	<dt>{{htmlattrdef("canonical")}}</dt>
+	<dd>{{htmlelement('link')}} で有効であり、現在の文書で推奨される URL を示します。検索エンジンで有用です。</dd>
+	<dt>{{htmlattrdef("dns-prefetch")}}</dt>
+	<dd>{{htmlelement('link')}} 要素が {{htmlelement('body')}} と {{htmlelement('head')}} の両方の中にある場合に関連し、ターゲットとなるリソースのオリジンに対する DNS 解決を先取りして実行するようブラウザーに指示します。ユーザーが必要とする可能性の高いリソースに有効で、ユーザーがリソースにアクセスする際に、ブラウザーが指定されたリソースのオリジンに対する DNS 解決を先取りして実行するため、待ち時間を短縮してパフォーマンスを向上させることができます。リソースヒントにある <a href="/ja/docs/Web/Performance/dns-prefetch">dns-prefetch</a> を参照してください。</dd>
+	<dt>{{htmlattrdef("external")}}</dt>
+	<dd>{{htmlelement('form')}}、{{htmlelement('a')}}、{{htmlelement('area')}} に関連し、参照先の文書が現在のサイトの一部ではないことを示します。属性セレクターと一緒に使うことで、外部リンクを現在のサイトから離れることをユーザーに示すようなスタイルにすることができます。</dd>
+	<dt>{{htmlattrdef("help")}}</dt>
+	<dd>{{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} に関連し、 <code>help</code> キーワードは、リンク先のコンテンツがコンテキスト依存のヘルプを提供することを示し、ハイパーリンクを定義している要素の親とその子のための情報を提供します。 <code>&lt;link&gt;</code> 内で使用された場合、ヘルプは文書全体を対象とします。 {{htmlelement('a')}} および {{htmlelement('area')}} に含まれていて対応している場合、既定のカーソルが <code>pointer</code> ではなく <code>help</code> になります。</dd>
+	<dt>{{htmlattrdef("icon")}}</dt>
+	<dd>
+	<p>{{htmlelement('link')}} と共に有効で、リンクされたリソースは、現在の文書の、ユーザーインターフェースでページを表現するためのリソースであるアイコンを表します。</p>
+
+	<p><code>icon</code> の値の最も一般的な用途はファビコンです。</p>
+
+	<pre class="brush: html">&lt;link rel="icon" href="favicon.ico"&gt;</pre>
+
+	<p>複数の <code>&lt;link rel="icon"&gt;</code> があった場合、ブラウザーはそれぞれの <a href="media"><code>media</code></a> 属性、<a href="type"><code>type</code></a> 属性、 <a href="sizes"><code>sizes</code></a> 属性を使って、最も適切なアイコンを選択します。複数のアイコンが同じように適切である場合は、最後のアイコンが使用されます。最も適切なアイコンが、対応していないファイル形式を使用しているなどの理由で不適切であることが後に判明した場合、ブラウザーは次に適切なアイコンを選択します。</p>
+
+	<div class="notecard note">
+	<p>Firefox 83 以前は <a href="/ja/docs/Web/HTML/Attributes/crossorigin">crossorigin</a> 属性が <code>rel="icon"</code> で対応していませんでしたが、 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1121645">Chrome でも未解決の問題があります</a>。</p>
+	</div>
+
+	<p><strong>メモ:</strong> Apple の iOS では、他のモバイルブラウザーのように、ウェブクリップやスタートアップのプレースホルダー用のウェブページのアイコンを選択するために、このリンク種別や <a href="sizes"><code>sizes</code></a> 属性を使用していません。代わりに、標準外の <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> および <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> をそれぞれ使用しています。</p>
+
+	<p class="note"><code>shortcut</code> リンク種別が <code>icon</code> の前に見られることが良くありますが、このリンク種別は適合するものではなく、無視されるので<strong>使用しないでください</strong>。</p>
+	</dd>
+	<dt>{{htmlattrdef("license")}}</dt>
+	<dd>
+	<p>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, {{HTMLElement("link")}} の各要素で有効である <code>license</code> の値は、ハイパーリンクがライセンス情報を記述した文書につながること、現在の文書のメインコンテンツが、参照された文書で記述された著作権ライセンスによってカバーされていることを示します。 {{HTMLElement("head")}} 要素内にない場合、規格では、文書の特定の部分に適用されるハイパーリンクか、文書全体に適用されるハイパーリンクかを区別していません。ページ上のデータのみがこれを示すことができます。</p>
+
+	<pre class="brush: html">&lt;link rel="license" href="#license"&gt;</pre>
+
+	<p><strong>メモ:</strong> 認識はされているものの、同義語の <code>copyright</code> は正しくないため使用しないでください。</p>
+	</dd>
+	<dt>{{htmlattrdef("manifest")}}</dt>
+	<dd><a href="/ja/docs/Web/Manifest">ウェブアプリマニフェスト</a>です。オリジンをまたいだ読み取りのための CORS プロトコルの使用に必要です。</dd>
+	<dt>{{htmlattrdef("modulepreload")}}</dt>
+	<dd>パフォーマンスの向上に役立ちます。文書内の {{htmlelement('link')}} に関連して、 <code>rel="modulepreload"</code> を設定すると、ブラウザーはスクリプト (および依存関係) を先取りして取得し、文書のモジュールマップに保存して後で評価するようになります。 <code>modulepreload</code> リンクは、モジュールが必ずしも必要になる前に、モジュールマップに準備された (評価されていない) モジュールでネットワークの取得を確実に行うことができます。<a href="/ja/docs/Web/HTML/Link_types/modulepreload">link types: <code>modulepreload</code></a> も参照してください。</dd>
+	<dt>{{htmlattrdef("next")}}</dt>
+	<dd>{{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}} に関連する <code>next</code> の値は、現在の文書が一連の文書の一部であり、次の文書が参照先の文書であることを示します。 <code>&lt;link&gt;</code> に含まれている場合、ブラウザーはその文書が次に取得されると仮定し、リソースのヒントとして扱うことができます。</dd>
+	<dt>{{htmlattrdef("nofollow")}}</dt>
+	<dd>{{htmlelement('form')}}, {{htmlelement('a')}}, {{htmlelement('area')}} に関連する <code>nofollow</code> キーワードは、サーチエンジンスパイダーにリンク関係を無視するよう指示します。 nofollow の関係は、現在の文書の所有者が、参照先の文書を支持していないことを示す場合があります。このキーワードは、検索エンジンオプティマイザーが、リンクファームがスパムページではないことを示すために使用します。</dd>
+	<dt>{{htmlattrdef("noopener")}}</dt>
+	<dd>{{htmlelement('form')}}, {{htmlelement('a')}}, {{htmlelement('area')}} に関連するもので、ハイパーリンクがそもそもこれらのいずれかを作成する (つまり、適切な <code>target</code> 属性値を持っている) 場合、補助的な閲覧コンテキストではない最上位の閲覧コンテキストを作成します。言い換えれば、 <code><a href="/ja/docs/Web/API/Window/opener">window.opener</a></code> が null で <code><a href="target">target</a>="_parent"</code> が設定されているかのようにリンクを動作させます。<br>
+	<br>
+	これは {{anch("opener")}} の逆です。</dd>
+	<dt>{{htmlattrdef("noreferrer")}}</dt>
+	<dd>{{htmlelement('form')}}, {{htmlelement('a')}}, {{htmlelement('area')}} に関連するもので、この値を含めると、リファラーを不明とし (<code>Referer</code> ヘッダーが含まれません)、あたかも <code>noopener</code> も設定されているかのように、最上位のの閲覧コンテキストが生成されます。</dd>
+	<dt>{{htmlattrdef("opener")}}</dt>
+	<dd>ハイパーリンクが最上位の閲覧コンテキストを生成し、それが補助的な閲覧コンテキストでない場合 (すなわち "<code>_blank</code>" が <code>target</code> 属性の値として設定されている場合)、補助的な閲覧コンテキストを生成します。事実上、 {{anch("noopener")}} の逆です。</dd>
+	<dt>{{htmlattrdef("pingback")}}</dt>
+	<dd>現在の文書へのピンバックを処理するピンバックサーバーのアドレスを与えます。</dd>
+	<dt>{{htmlattrdef("preconnect")}}</dt>
+	<dd>ユーザーエージェントが対象リソースのオリジンに先回りして接続することを指定します。</dd>
+	<dt>{{htmlattrdef("prefetch")}}</dt>
+	<dd>ユーザーエージェントが、後続のナビゲーションに必要となる可能性のあるターゲットリソースを先取りして取得し、キャッシュすることを指定します。</dd>
+	<dt>{{htmlattrdef("preload")}}</dt>
+	<dd><code><a href="as">as</a></code> 属性で指定された潜在的な方向 (および対応する方向に関連する優先度) に従って、ユーザーエージェントが現在のナビゲーションのためにターゲットリソースを先取りしてキャッシュする必要があることを指定します。</dd>
+	<dt>{{htmlattrdef("prerender")}}</dt>
+	<dd>ユーザーエージェントが先取りしてターゲットリソースを取得し、将来のより速いレスポンスに役立つ方法で処理することを指定します。</dd>
+	<dt>{{htmlattrdef("prev")}}</dt>
+	<dd>
+	<p>{{anch("next")}} キーワードと同様に、{{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}} に関連する <code>prev</code> の値は、現在の文書が一連の文書の一部であり、このリンクが一連の文書内の直前の文書を参照していることを示します。</p>
+
+	<p>メモ: 別名である <code>previous</code> は正しくないため使用しないでください。</p>
+	</dd>
+	<dt>{{htmlattrdef("search")}}</dt>
+	<dd>
+	<p>Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}} の各要素に関連する <code>search</code> キーワードは、ハイパーリンクが、現在の文書、サイト、および関連リソースでの検索のために特別に設計されたインターフェイスを持つ文書を参照していることを示し、検索に使用できるリソースへのリンクを提供します。</p>
+
+	<p><code><a href="type">type</a></code> 属性が <code>application/opensearchdescription+xml</code> に設定されている場合、そのリソースは、Firefox や Internet Explorer などの一部のブラウザーのインターフェイスに簡単に追加できる <a href="/ja/docs/Web/OpenSearch">OpenSearch</a> プラグインです。</p>
+	</dd>
+	<dt>{{htmlattrdef("stylesheet")}}</dt>
+	<dd>
+	<p>{{htmlelement('link')}} 要素で有効で、スタイルシートとして使われる外部リソースをインポートします。 <code><a href="type">type</a></code> 属性は <code>text/css</code> スタイルシートの場合は既定値となっているので必要ありません。 <code>text/css</code> 種類のスタイルシートでない場合は、 type を宣言するのがベストです。</p>
+
+	<p>この属性は、リンクがスタイルシートであることを定義しますが、他の属性や rel 値内の他のキーワードとの相互作用は、スタイルシートがダウンロードされるかどうかや使用されるかどうかに影響します。</p>
+
+	<p>{{anch('alternate')}} キーワードと一緒に使われると、代替のスタイルシートを定義します。この場合、空ではない <code><a href="type">title</a></code> を入れてください。</p>
+
+	<p>メディアが <code><a href="media">media</a></code> 属性の値と一致しない場合、外部スタイルシートは使用されず、ダウンロードもされません。</p>
+
+	<p>オリジンをまたいだ読み取りには CORS プロトコルが必要です。</p>
+	</dd>
+	<dt>{{htmlattrdef("tag")}}</dt>
+	<dd>{{htmlelement('a')}} と {{htmlelement('area')}} 要素で有効であり、現在の文書に適用される (指定されたアドレスで識別される) タグを与えます。タグの値は、リンク先の文書に適用されるタグを記述した文書を参照していることを示します。このリンク種別は、タグクラウド内のタグには適していません。タグクラウド内のタグは、複数のページに適用されるのに対し、 <code>rel</code> 属性の <code>tag</code> 値は単一の文書に適用されるからです。</dd>
+</dl>
+
+<h3 id="Non-standard_values">標準外の値</h3>
+
+<dl>
+	<dt>apple-touch-icon-precomposed</dt>
+	<dd>
+	<pre class="brush: html"> &lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
+  &lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/img/favicon144.e7e21ca263ca.png"&gt;
+  &lt;!-- iPhone with high-resolution Retina display: --&gt;
+  &lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/img/favicon114.d526f38b09c5.png"&gt;
+  &lt;!-- first- and second-generation iPad: --&gt;
+  &lt;link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/img/favicon72.cc65d1d762a0.png"&gt;
+  &lt;!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --&gt;
+  &lt;link rel="apple-touch-icon-precomposed" href="/static/img/favicon57.de33179910ae.png"&gt;
+  &lt;!-- basic favicon --&gt;
+  &lt;link rel="icon" href="/static/img/favicon32.7f3da72dcea1.png"&gt;</pre>
+	</dd>
+</dl>
+
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("html.elements.attributes.rel")}}</p>
+
+<h2 id="Specifications">仕様書</h2>
+
+<table class="standard-table">
+	<thead>
+		<tr>
+			<th scope="col">仕様書</th>
+			<th scope="col">状態</th>
+			<th scope="col">備考</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('HTML WHATWG', 'links.html#linkTypes', 'rel attribute')}}</td>
+			<td>{{Spec2('HTML WHATWG')}}</td>
+			<td><code>opener</code> を追加。<code>noopener</code> を <code>target="_blank"</code> の既定値とした。</td>
+		</tr>
+		<tr>
+			<td>{{SpecName('HTML5 W3C', 'links.html#linkTypes', 'rel attribute')}}</td>
+			<td>{{Spec2('HTML5 W3C')}}</td>
+			<td><code>tag</code>、<code>search</code>、<code>prefetch</code>、<code>noreferrer</code>、<code>nofollow</code>、<code>icon</code>、<code>author</code> を追加。<br>
+			<code>copyright</code> を <code>license</code> に改名。<br>
+			<code>start</code>、<code>chapter</code>、<code>section</code>、<code>subsection</code>、<code>appendix</code> を削除。</td>
+		</tr>
+		<tr>
+			<td>{{SpecName("Preload", "#x2.link-type-preload", "preload")}}</td>
+			<td>{{Spec2("Preload")}}</td>
+			<td><code>preload</code> を追加。</td>
+		</tr>
+		<tr>
+			<td>{{SpecName("Resource Hints", "#dfn-preconnect", "preconnect")}}</td>
+			<td>{{Spec2("Resource Hints")}}</td>
+			<td><code>dns-prefetch</code>、<code>preconnect</code>、<code>prerender</code> の値を追加。</td>
+		</tr>
+		<tr>
+			<td>{{SpecName("HTML4.01", "types.html#type-links", "link types")}}</td>
+			<td>{{Spec2("HTML4.01")}}</td>
+			<td><code>alternate</code>、<code>stylesheet</code>、<code>start</code>、<code>chapter</code>、<code>section</code>、<code>subsection</code>、<code>appendix</code>、<code>bookmark</code> を追加。<br>
+			<code>previous</code> を <code>prev</code> に改名。<br>
+			<code>top</code> と <code>search</code> を削除。</td>
+		</tr>
+		<tr>
+			<td>{{SpecName("HTML3.2", "#link", "&lt;link&gt;")}}</td>
+			<td>
+			<p>{{Spec2("HTML3.2")}}<span class="spec-Obsolete"> (廃止)</span></p>
+			</td>
+			<td><code>top</code>、<code>contents</code>、<code>index</code>、<code>glossary</code>、<code>copyright</code>、<code>next</code>、<code>previous</code>、<code>help</code>、<code>search</code> を追加。</td>
+		</tr>
+		<tr>
+			<td>{{RFC(1866, "HTML 2.0")}}</td>
+			<td>{{Spec2("HTML2.0")}}<span class="spec-Obsolete">(廃止)</span></td>
+			<td>初回定義。</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_compatibility_2">ブラウザーの互換性</h2>
+
+<p>{{Compat("html.elements.link.rel")}}</p>
+
+<h2 id="Accessibility_concerns">アクセシビリティの考慮</h2>
+
+<h2 id="See_also">関連情報</h2>
+
+<ul>
+	<li>{{domxref("HTMLLinkElement.relList")}}</li>
+	<li>{{domxref("HTMLAnchorElement.relList")}}</li>
+	<li>{{domxref("HTMLAreaElement.relList")}}</li>
+</ul>

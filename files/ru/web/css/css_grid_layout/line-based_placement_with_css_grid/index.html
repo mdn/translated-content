@@ -24,7 +24,7 @@ original_slug: >-
 <p><img alt="Our Grid highlighted in DevTools" src="https://mdn.mozillademos.org/files/14663/3_hilighted_grid.png" style="height: 296px; width: 900px;"></p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -42,14 +42,14 @@ original_slug: >-
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(3, 100px);
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -57,14 +57,14 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('A_basic_example', '300', '330') }}</p>
+<p>{{ EmbedLiveSample('Базовый_пример', '300', '330') }}</p>
 
 <h2 id="Позиционирование_элементов_по_номерам_линий">Позиционирование элементов по номерам линий</h2>
 
 <p>Мы можем воспользоваться размещением по линиям (line-based placement), чтобы расположить элементы на гриде. Например, нам нужно, чтобы первый элемент начинался от левого края и занимал один трек-колонку. Пусть он также начинается с первой строчной линии,  то есть, от верхнего края грида, и занимает пространство до четвёртой строчной линии.</p>
 
 <div id="Line_Number">
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-column-start: 1;
    grid-column-end: 2;
    grid-row-start: 1;
@@ -77,7 +77,7 @@ original_slug: >-
 <p>Задавая адреса для каждого элемента по отдельности, мы можем разместить все наши четыре элемента по колонкам и строкам. Заметьте, что при желании можно оставить ячейки пустыми. Одна из самых приятных вещей при работе с Grid Layout - возможность создавать негативное пространство (пустые области в макете) без кувырков через голову и прочих хаков.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -98,7 +98,7 @@ original_slug: >-
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -106,7 +106,7 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box2 {
+<pre class="brush: css">.box2 {
    grid-column-start: 3;
    grid-column-end: 4;
    grid-row-start: 1;
@@ -135,7 +135,7 @@ original_slug: >-
 <p>Мы написали много кода, чтобы разместить каждый элемент. Неудивительно, что существует <a href="/ru/docs/Web/CSS/Shorthand_properties">краткая форма записи свойств</a>. {{cssxref("grid-column-start")}} и {{cssxref("grid-column-end")}} могут быть объединены в одном {{cssxref("grid-column")}}, а {{cssxref("grid-row-start")}} и {{cssxref("grid-row-end")}} - в {{cssxref("grid-row")}}.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -156,7 +156,7 @@ original_slug: >-
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -164,7 +164,7 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-column: 1 / 2;
    grid-row: 1 / 4;
 }
@@ -191,7 +191,7 @@ original_slug: >-
 
 <div id="End_Lines">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -212,7 +212,7 @@ original_slug: >-
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -220,7 +220,7 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-column-start: 1;
    grid-row-start: 1;
    grid-row-end: 4;
@@ -248,7 +248,7 @@ original_slug: >-
 
 <div id="New_Shorthand">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -269,7 +269,7 @@ original_slug: >-
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -277,7 +277,7 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-column: 1 ;
    grid-row: 1 / 4;
 }
@@ -310,7 +310,7 @@ original_slug: >-
 </ul>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -331,7 +331,7 @@ original_slug: >-
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -339,7 +339,7 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-area: 1 / 1 / 4 / 2;
 }
 .box2 {
@@ -353,7 +353,7 @@ original_slug: >-
 }
 </pre>
 
-<p>{{ EmbedLiveSample('The_grid-area_property', '300', '330') }}</p>
+<p>{{ EmbedLiveSample('Свойство_grid-area', '300', '330') }}</p>
 
 <p>Порядок значений для <code>grid-area</code> может показаться немного странным, он противоположен тому порядку, в котором мы, например, записываем значения для сокращённых свойств margin и padding. Но сделано это потому, что грид работает с направлениями относительно потока, определёнными в спецификации CSS Writing Modes. В дальнейшем мы рассмотрим, как гриды взаимодействуют с режимами написания (writing modes), но пока давайте примем за данность, что мы имеем дело с концепцией четырёх направлений относительно потока:</p>
 
@@ -375,7 +375,7 @@ original_slug: >-
 <p>В примере ниже мы "перевернули" определение нашего грида, при размещении элементов задавая линии с конца, то есть, от правого и нижнего краёв.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -396,7 +396,7 @@ original_slug: >-
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -404,7 +404,7 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-column-start: -1;
    grid-column-end: -2;
    grid-row-start: -1;
@@ -430,13 +430,13 @@ original_slug: >-
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Counting_backwards', '300', '330') }}</p>
+<p>{{ EmbedLiveSample('Считая_с_конца', '300', '330') }}</p>
 
 <h3 id="Как_растянуть_элемент_на_длину_всего_грида">Как растянуть элемент на длину всего грида?</h3>
 
 <p>Возможность адресовать и первую, и последнюю линии грида становится крайне полезной, если нам нужно растянуть элемент на всю длину грида. Сделать это можно вот так:</p>
 
-<pre class="brush: css notranslate">.item {
+<pre class="brush: css">.item {
   grid-column: 1 / -1;
 }
 </pre>
@@ -448,7 +448,7 @@ original_slug: >-
 <p>Зазоры появляются только между треками и не добавляют пространство сверху, снизу, справа или слева грид-контейнеру. Мы можем добавить зазоры в предыдущий пример, дописав эти свойства грид-контейнеру.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -469,7 +469,7 @@ original_slug: >-
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -477,7 +477,7 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-column: 1 ;
    grid-row: 1 / 4;
 }
@@ -502,13 +502,13 @@ original_slug: >-
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Gutters_or_Alleys', '300', '350') }}</p>
+<p>{{ EmbedLiveSample('Зазоры_Gutters_или_аллеи_Alleys', '300', '350') }}</p>
 
 <h3 id="Сокращённая_запись_для_грид-зазоров">Сокращённая запись для грид-зазоров</h3>
 
 <p>Оба свойства также можно записать с помощью свойства-сокращения {{cssxref("grid-gap")}}. Если задать только одно значение, то оно определит размер зазоров и между колонками, и между строками. Если мы задаём два значения, то первое используется для <code>grid-row-gap</code> , а второе - для <code>grid-column-gap</code>.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
      display: grid;
      grid-template-columns: repeat(3, 1fr);
      grid-template-rows: repeat(3, 100px);
@@ -523,7 +523,7 @@ original_slug: >-
 <p>В дополнение к возможности обращаться к начальной и конечной линии по их номерам вы можете задать номер начальной линии, а после - количество треков, которые должен занять элемент.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -544,7 +544,7 @@ original_slug: >-
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -552,7 +552,7 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
   grid-column: 1;
   grid-row: 1 / span 3;
 }
@@ -570,11 +570,11 @@ original_slug: >-
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Using_the_span_keyword', '300', '330') }}</p>
+<p>{{ EmbedLiveSample('Использование_ключевого_слова_span', '300', '330') }}</p>
 
 <p>Ключевое слово  <code>span</code> также можно использовать в качестве значения <code>grid-row-start</code>/<code>grid-row-end</code> и<code>grid-column-start/grid-column-end</code>. Два примера ниже создают одну и ту же грид-область. В первом примере мы задаём начальную строчную линию, а после говорим свойству, отвечающему за конечную линию: эй, мы хотим занять под этот элемент три линии. В итоге, грид-область начинается с первой линии и занимает пространство до 4-ой.</p>
 
-<pre class="notranslate">.box1 {
+<pre>.box1 {
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: span 3;
@@ -583,7 +583,7 @@ original_slug: >-
 
 <p>Во втором примере поступим наоборот: зададим конечную строчную линию, а в значении свойства, отвечающего за начальную линию, напишем <code>span 3</code>. Это значит, что элемент должен занять три трека до заданной конечной линии. Грид-область начинается с линии 4 и занимает три трека до линии 1.</p>
 
-<pre class="notranslate">.box1 {
+<pre>.box1 {
     grid-column-start: 1;
     grid-row-start: span 3;
     grid-row-end: 4;
@@ -594,7 +594,7 @@ original_slug: >-
 
 <p>Также помните, что элементы на гриде могут перекрывать друг друга, если вы намеренно разместили их так, чтобы они друг друга перекрывали. Подобное поведение позволяет получить интересные эффекты, но, если вы некорректно задали начальные и конечные линии, результат может неприятно вас удивить. <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Highlighter</a> будет крайне полезен в процессе обучения, особенно, когда вы строите сложные гриды.</p>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
  <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>

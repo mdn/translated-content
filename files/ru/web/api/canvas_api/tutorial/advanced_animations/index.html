@@ -6,17 +6,17 @@ translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}</div>
 
 <div class="summary">
-<p><span class="notranslate">В предыдущей главе мы сделали несколько <a href="/ru/docs/Web/API/Canvas_API/Tutorial/Basic_animations">базовых анимаций</a> и узнали, как можно двигать вещи.</span> <span class="notranslate"> В этой части мы более подробно рассмотрим само движение и собираемся добавить некоторую физику, чтобы сделать наши анимации более продвинутыми.</span></p>
+<p><span>В предыдущей главе мы сделали несколько <a href="/ru/docs/Web/API/Canvas_API/Tutorial/Basic_animations">базовых анимаций</a> и узнали, как можно двигать вещи.</span> <span> В этой части мы более подробно рассмотрим само движение и собираемся добавить некоторую физику, чтобы сделать наши анимации более продвинутыми.</span></p>
 </div>
 
-<h2 id="Рисование_мяча"><span class="notranslate">Рисование мяча</span></h2>
+<h2 id="Рисование_мяча"><span>Рисование мяча</span></h2>
 
-<p><span class="notranslate">Мы собираемся использовать шар для наших анимационных исследований, поэтому давайте сначала нарисуем этот шар на </span><code> canvas</code><span class="notranslate">.</span> Нам нужен следующий код.</p>
+<p><span>Мы собираемся использовать шар для наших анимационных исследований, поэтому давайте сначала нарисуем этот шар на </span><code> canvas</code><span>.</span> Нам нужен следующий код.</p>
 
 <pre class="brush: html">&lt;canvas id="canvas" width="600" height="300"&gt;&lt;/canvas&gt;
 </pre>
 
-<p><span class="notranslate">Как обычно, нам нужен контекст рисования.</span> Чтобы нарисовать шар, мы создадим объект <code>ball</code>, который содержит свойства и метод <code>draw()</code> , чтобы нарисовать его на <code>canvas</code>.</p>
+<p><span>Как обычно, нам нужен контекст рисования.</span> Чтобы нарисовать шар, мы создадим объект <code>ball</code>, который содержит свойства и метод <code>draw()</code> , чтобы нарисовать его на <code>canvas</code>.</p>
 
 <pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
@@ -37,11 +37,11 @@ var ball = {
 
 ball.draw();</pre>
 
-<p><span class="notranslate">Здесь нет ничего особенного, шар на самом деле представляет собой простой круг и рисуется с помощью метода</span> {{domxref("CanvasRenderingContext2D.arc()", "arc()")}}.</p>
+<p><span>Здесь нет ничего особенного, шар на самом деле представляет собой простой круг и рисуется с помощью метода</span> {{domxref("CanvasRenderingContext2D.arc()", "arc()")}}.</p>
 
-<h2 id="Добавление_скорости"><span class="notranslate">Добавление скорости</span></h2>
+<h2 id="Добавление_скорости"><span>Добавление скорости</span></h2>
 
-<p>Теперь, когда у нас есть шар, мы готовы добавить базовую анимацию, как мы узнали из последней <a href="/ru/docs/Web/API/Canvas_API/Tutorial/Basic_animations">главы</a> этого урока. <span class="notranslate">Опять же,</span> {{domxref("window.requestAnimationFrame()")}} <span class="notranslate">помогает нам контролировать анимацию.</span> <span class="notranslate">Мяч перемещается, добавляя вектор скорости в положение.</span> <span class="notranslate">Для каждого кадра мы также</span> {{domxref("CanvasRenderingContext2D.clearRect", "очищаем", "", 1)}} <span class="notranslate"> холст, чтобы удалить старые круги из предыдущих кадров.</span></p>
+<p>Теперь, когда у нас есть шар, мы готовы добавить базовую анимацию, как мы узнали из последней <a href="/ru/docs/Web/API/Canvas_API/Tutorial/Basic_animations">главы</a> этого урока. <span>Опять же,</span> {{domxref("window.requestAnimationFrame()")}} <span>помогает нам контролировать анимацию.</span> <span>Мяч перемещается, добавляя вектор скорости в положение.</span> <span>Для каждого кадра мы также</span> {{domxref("CanvasRenderingContext2D.clearRect", "очищаем", "", 1)}} <span> холст, чтобы удалить старые круги из предыдущих кадров.</span></p>
 
 <pre class="brush: js; highlight:[8,9,24,25]">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
@@ -82,9 +82,9 @@ canvas.addEventListener('mouseout', function(e) {
 ball.draw();
 </pre>
 
-<h2 id="Границы"><span class="notranslate" style="background-color: #e6ecf9;">Границы</span></h2>
+<h2 id="Границы"><span style="background-color: #e6ecf9;">Границы</span></h2>
 
-<p><span class="notranslate">Без какого-либо граничного коллизионного тестирования наш мяч быстро выбегает из холста.</span> <span class="notranslate"> Нам нужно проверить, не находятся ли <code>x</code> и <code>y</code> положения шара вне размеров холста и не инвертируют направление векторов скорости.</span> <span class="notranslate"> Для этого мы добавим следующие проверки в метод <code>draw</code> :</span></p>
+<p><span>Без какого-либо граничного коллизионного тестирования наш мяч быстро выбегает из холста.</span> <span> Нам нужно проверить, не находятся ли <code>x</code> и <code>y</code> положения шара вне размеров холста и не инвертируют направление векторов скорости.</span> <span> Для этого мы добавим следующие проверки в метод <code>draw</code> :</span></p>
 
 <pre class="brush: js">if (ball.y + ball.vy &gt; canvas.height || ball.y + ball.vy &lt; 0) {
   ball.vy = -ball.vy;
@@ -93,9 +93,9 @@ if (ball.x + ball.vx &gt; canvas.width || ball.x + ball.vx &lt; 0) {
   ball.vx = -ball.vx;
 }</pre>
 
-<h3 id="Первое_демо"><span class="notranslate">Первое демо</span></h3>
+<h3 id="Первое_демо"><span>Первое демо</span></h3>
 
-<p><span class="notranslate">Посмотрим, как он выглядит в действии.</span> <span class="notranslate"> Переместите мышь на холст, чтобы запустить анимацию.</span></p>
+<p><span>Посмотрим, как он выглядит в действии.</span> <span> Переместите мышь на холст, чтобы запустить анимацию.</span></p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
@@ -149,7 +149,7 @@ canvas.addEventListener('mouseout', function(e) {
 ball.draw();</pre>
 </div>
 
-<p>{{EmbedLiveSample("First_demo", "610", "310")}}</p>
+<p>{{EmbedLiveSample("Первое_демо", "610", "310")}}</p>
 
 <h2 id="Ускорение">Ускорение</h2>
 
@@ -158,7 +158,7 @@ ball.draw();</pre>
 <pre class="brush: js">ball.vy *= .99;
 ball.vy += .25;</pre>
 
-<p><span class="notranslate">Это замедляет вертикальную скорость каждого кадра, так что мяч будет просто отскакивать от пола в конце.</span></p>
+<p><span>Это замедляет вертикальную скорость каждого кадра, так что мяч будет просто отскакивать от пола в конце.</span></p>
 
 <div class="hidden">
 <h6 id="Second_demo">Second demo</h6>
@@ -284,9 +284,9 @@ ball.draw();</pre>
 
 <p>{{EmbedLiveSample("Third_demo", "610", "310")}}</p>
 
-<h2 id="Добавление_управления_мышью"><span class="notranslate" style="background-color: #e6ecf9;">Добавление управления мышью</span></h2>
+<h2 id="Добавление_управления_мышью"><span style="background-color: #e6ecf9;">Добавление управления мышью</span></h2>
 
-<p>Чтобы получить некоторый контроль над мячом, мы можем заставить его следовать за нашей мышью, например, с помощью события<span class="notranslate"> <code><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=ru&amp;rurl=translate.google.com&amp;sl=en&amp;sp=nmt4&amp;tl=ru&amp;u=https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mousemove&amp;usg=ALkJrhhcJqJN-yKD36pH8RkWQhb3uewyBA">mousemove</a></code> .</span> <span class="notranslate"> Событие <code><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=ru&amp;rurl=translate.google.com&amp;sl=en&amp;sp=nmt4&amp;tl=ru&amp;u=https://developer.mozilla.org/en-US/docs/Web/Events/click&amp;usg=ALkJrhi9Rqodjh09zJQ7RSZkVNVqMZ5zhw">click</a></code></span> отпускает мяч и позволяет ему снова прыгать</p>
+<p>Чтобы получить некоторый контроль над мячом, мы можем заставить его следовать за нашей мышью, например, с помощью события<span> <code><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=ru&amp;rurl=translate.google.com&amp;sl=en&amp;sp=nmt4&amp;tl=ru&amp;u=https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mousemove&amp;usg=ALkJrhhcJqJN-yKD36pH8RkWQhb3uewyBA">mousemove</a></code> .</span> <span> Событие <code><a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=ru&amp;rurl=translate.google.com&amp;sl=en&amp;sp=nmt4&amp;tl=ru&amp;u=https://developer.mozilla.org/en-US/docs/Web/Events/click&amp;usg=ALkJrhi9Rqodjh09zJQ7RSZkVNVqMZ5zhw">click</a></code></span> отпускает мяч и позволяет ему снова прыгать</p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
@@ -358,9 +358,9 @@ canvas.addEventListener('mouseout', function(e) {
 ball.draw();
 </pre>
 
-<p><span class="notranslate">Переместите шар с помощью мыши и отпустите его одним щелчком.</span></p>
+<p><span>Переместите шар с помощью мыши и отпустите его одним щелчком.</span></p>
 
-<p>{{EmbedLiveSample("Adding_mouse_control", "610", "310")}}</p>
+<p>{{EmbedLiveSample("Добавление_управления_мышью", "610", "310")}}</p>
 
 <h2 id="Breakout(арканоид)">Breakout(арканоид)</h2>
 

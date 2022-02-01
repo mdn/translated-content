@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 <p>Объект <code><strong>arguments</strong></code> — это подобный массиву объект, который содержит аргументы, переданные в функцию.</p>
 
 <div class="blockIndicator note">
-<p><strong>Примечание:</strong> Если вы пишите ES6-совместимый код, то лучше использовать <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">rest параметры</a>.</p>
+<p><strong>Примечание:</strong> Если вы пишите ES6-совместимый код, то лучше использовать <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточные параметры</a>.</p>
 </div>
 
 <div class="blockIndicator note">
@@ -139,9 +139,9 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 
 */</pre>
 
-<h3 id="Оставшиеся_деструктурированные_и_параметры_по_умолчанию">Оставшиеся, деструктурированные и параметры по умолчанию</h3>
+<h3 id="Остаточные_деструктурированные_и_параметры_по_умолчанию">Остаточные, деструктурированные и параметры по умолчанию</h3>
 
-<p>Объект <code>arguments</code> может использоваться совместно с <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">оставшимися параметрами</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметрами по умолчанию </a>или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированными параметрами</a>.</p>
+<p>Объект <code>arguments</code> может использоваться совместно с <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточными параметрами</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметрами по умолчанию </a>или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированными параметрами</a>.</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">foo</span><span class="punctuation token">(</span><span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>args<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   <span class="keyword token">return</span> arguments<span class="punctuation token">;</span>
@@ -156,7 +156,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 <span class="punctuation token">}</span>
 <span class="function token">bar</span><span class="punctuation token">(</span><span class="number token">10</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// 10</span></code></pre>
 
-<p>В следующем примере возвращается 100, поскольку здесь нет <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">оставшихся параметров</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметров по умолчанию</a> или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированных параметров</a>:</p>
+<p>В следующем примере возвращается 100, поскольку здесь нет <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточных параметров</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметров по умолчанию</a> или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированных параметров</a>:</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">zoo</span><span class="punctuation token">(</span>a<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   arguments<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span> <span class="operator token">=</span> <span class="number token">100</span><span class="punctuation token">;</span>
@@ -164,7 +164,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 <span class="punctuation token">}</span>
 <span class="function token">zoo</span><span class="punctuation token">(</span><span class="number token">10</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// 100</span></code></pre>
 
-<p>На самом деле, если <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">оставшиеся параметры</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметры по умолчанию</a> или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированные параметры</a> не используются, формальные аргументы будут ссылаться на последние значения объекта <strong><code>arguments</code></strong>, при считывании значений формальных аргументов будут считаны последние данные из <strong><code>arguments</code></strong>, а при изменении значений формальных аргументов будет обновлён и объект <strong><code>arguments</code></strong>. Пример приведён в коде ниже:</p>
+<p>На самом деле, если <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточные параметры</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметры по умолчанию</a> или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированные параметры</a> не используются, формальные аргументы будут ссылаться на последние значения объекта <strong><code>arguments</code></strong>, при считывании значений формальных аргументов будут считаны последние данные из <strong><code>arguments</code></strong>, а при изменении значений формальных аргументов будет обновлён и объект <strong><code>arguments</code></strong>. Пример приведён в коде ниже:</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">func</span><span class="punctuation token">(</span>a<span class="punctuation token">,</span> b<span class="punctuation token">)</span> <span class="punctuation token">{</span>
     arguments<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span> <span class="operator token">=</span> <span class="number token">90</span><span class="punctuation token">;</span>
@@ -184,7 +184,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 
 <span class="function token">func</span><span class="punctuation token">(</span><span class="number token">3</span><span class="punctuation token">,</span> <span class="number token">4</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">//9, 99</span></code></pre>
 
-<p>Но в случае, когда применяются <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">оставшиеся параметры</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметры по умолчанию</a> или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированные параметры</a>, будет обработано нормальное поведение, как в случае <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметров по умолчанию</a>:</p>
+<p>Но в случае, когда применяются <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточные параметры</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметры по умолчанию</a> или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированные параметры</a>, будет обработано нормальное поведение, как в случае <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметров по умолчанию</a>:</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">func</span><span class="punctuation token">(</span>a<span class="punctuation token">,</span> b<span class="punctuation token">,</span> c<span class="operator token">=</span><span class="number token">9</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
     arguments<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span> <span class="operator token">=</span> <span class="number token">99</span><span class="punctuation token">;</span>
@@ -196,39 +196,11 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Изначальное определение. Реализовано в JavaScript 1.1</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p>{{Compat("javascript.functions.arguments")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

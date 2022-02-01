@@ -6,7 +6,7 @@ tags:
 translation_of: Glossary/Call_stack
 original_slug: Глоссарий/Call_stack
 ---
-<p><strong>Стек вызовов(call stack) </strong>- это механизм для интерпретаторов (таких как интерпретатор JavaScript в веб-браузере) для отслеживания текущего местонахождения интерпретатора в скрипте, который вызывает  несколько функций типа {{glossary("function","functions")}}, — какая из функций выполняется на данный момент, какие функции вызываются изнутри этой (выполняемой) функции, какая будет вызвана следующей и т. д.</p>
+<p><strong>Стек вызовов</strong> (<strong>call stack</strong>) - это механизм для интерпретаторов (таких как интерпретатор JavaScript в веб-браузере) для отслеживания текущего местонахождения интерпретатора в скрипте, который вызывает несколько {{glossary("function","функций")}}, — какая из функций выполняется на данный момент, какие функции вызываются изнутри этой (выполняемой) функции, какая будет вызвана следующей и т. д.</p>
 
 <ul>
  <li>Когда скрипт вызывает функцию, интерпретатор добавляет её в стек вызовов и потом начинает её обработку.</li>
@@ -17,12 +17,10 @@ original_slug: Глоссарий/Call_stack
 
 <h2 id="Пример">Пример</h2>
 
-<p> </p>
-
 <pre class="brush: js">function greeting() {
-   // [1] Some codes here
+   // [1] Some code here
    sayHi();
-   // [2] Some codes here
+   // [2] Some code here
 }
 function sayHi() {
    return "Hi!";
@@ -31,7 +29,7 @@ function sayHi() {
 // Invoke the `greeting` function
 greeting();
 
-// [3] Some codes here</pre>
+// [3] Some code here</pre>
 
 <p>Код выше будет выполнен следующим образом:</p>
 
@@ -87,17 +85,6 @@ greeting();
 <h3 id="Общие_знания">Общие знания</h3>
 
 <ul>
- <li>{{Interwiki("wikipedia", "Call stack")}} на Википедии</li>
-</ul>
-
-<section id="Quick_Links">
-<ul>
- <li><a href="/ru/docs/Glossary">MDN Web Docs Glossary</a>
-
-  <ul>
-   <li>{{Glossary("Call stack")}}</li>
-   <li>{{Glossary("Function")}}</li>
-  </ul>
- </li>
+ <li>{{Interwiki("wikipedia", "Стек вызовов")}} на Википедии</li>
 </ul>
 </section>

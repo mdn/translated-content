@@ -13,11 +13,11 @@ original_slug: Aprender/JavaScript/Objetos/Object_building_practice
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">Prerequisites:</th>
+   <th scope="row">Pré-requisitos:</th>
    <td>Conhecimentos básicos de informática, conhecimento básico de HTML e CSS, familiaridade com o básico de JavaScript (veja <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> e <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>) e o básico de OOJS (veja <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>).</td>
   </tr>
   <tr>
-   <th scope="row">Objective:</th>
+   <th scope="row">Objetivo:</th>
    <td>Adiquirir alguma prática no uso de objetos e técnicas de orientação a objetos num contexto real.</td>
   </tr>
  </tbody>
@@ -180,30 +180,31 @@ testBall.draw()</pre>
 <p>Agora vamos tornar isso divertido. Vamos começar a adicionar bolas à tela e a animá-las.</p>
 
 <ol>
- <li>Primeiro, precisamos de um lugar para armazenar todas as nossas bolas. O array a seguir fará esse trabalho — adicione-o ao final do seu código agora:
-  <pre class="brush: js">let balls = [];</pre>
+ <li>Primeiro, precisamos de criar um lugar para armazenar todas as nossas bolas e então preenche-lo. O código a seguir fará esse trabalho — adicione-o ao final do seu código agora:
+   <pre class="brush: js">let balls = [];
 
-  <p>Todos os programas que animam as coisas geralmente envolvem um loop de animação, que serve para atualizar as informações no programa e renderizar a visualização resultante em cada quadro da animação; esta é a base para a maioria dos jogos e outros programas.</p>
+while (balls.length < 25) {
+  let size = random(10,20);
+  let ball = new Ball(
+    // ball position always drawn at least one ball width
+    // away from the edge of the canvas, to avoid drawing errors
+    random(0 + size,width - size),
+    random(0 + size,height - size),
+    random(-7,7),
+    random(-7,7),
+    'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
+    size
+  );
+
+  balls.push(ball);
+}</pre>
+
+  <p>O laço <code>while</code> cria uma nova instância da nossa <code>Ball()</code> usando valores aleatórios gerados com nossa função <code>random()</code>, então a função <code>push()</code> coloca ela no final do nosso array de bolas, mas somente enquanto o número de bolas no array é menor que 25. Então quando nos tivermos 25 bolas na tela mais nenhuma bola aparece. Você pode tentar variar o número em <code>balls.length < 25</code> para obter mais ou menos bolas na tela. Dependendo de quanto poder de processamento seu computador/navegador tiver, especificar várias milhares de bolas pode diminuir bastante a velocidade da animação!</p>
  </li>
  <li>Adicione o seguinte ao final do seu código agora:
   <pre class="brush: js">function loop() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
   ctx.fillRect(0, 0, width, height);
-
-  while (balls.length &lt; 25) {
-    let size = random(10,20);
-    let ball = new Ball(
-      // ball position always drawn at least one ball width
-      // away from the edge of the canvas, to avoid drawing errors
-      random(0 + size,width - size),
-      random(0 + size,height - size),
-      random(-7,7),
-      random(-7,7),
-      'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
-      size
-    );
-    balls.push(ball);
-  }
 
   for (let i = 0; i &lt; balls.length; i++) {
     balls[i].draw();
@@ -213,12 +214,11 @@ testBall.draw()</pre>
   requestAnimationFrame(loop);
 }</pre>
 
-  <p>Nossa função <code>loop()</code> faz o seguinte:</p>
+  <p>Todos os programas que animam as coisas geralmente envolvem um loop de animação, que serve para atualizar as informações no programa e renderizar a visualização resultante em cada quadro da animação; esta é a base para a maioria dos jogos e outros programas. Nossa função <code>loop()</code> faz o seguinte:</p>
 
   <ul>
    <li>Define a cor de preenchimento da tela como preto semitransparente e desenha um retângulo com a cor em toda a largura e altura da tela, usando <code>fillRect()</code> (os quatro parâmetros fornecem uma coordenada de início e uma largura e altura para o retângulo desenhado ). Isso serve para encobrir o desenho do quadro anterior antes que o próximo seja desenhado. Se você não fizer isso, você verá apenas longas cobras se movimentando ao redor da tela, em vez de mover as bolas! A cor do preenchimento é definida como semitransparente, <code>rgba(0,0,0,0.25)</code>, para permitir que os poucos quadros anteriores brilhem levemente, produzindo as pequenas trilhas atrás das bolas à medida que elas se movem. Se você mudou 0,25 para 1, você não vai mais vê-los. Tente variar esse número para ver o efeito que ele tem.</li>
-   <li>Cria uma nova instância de nossa  <code>Ball()</code> usando valores aleatórios gerados com a nossa função  <code>random()</code> então <code>push()</code>para o final de nosso array de bolas, mas somente enquanto o número de bolas no array é menor que 25. Então quando temos 25 bolas na tela, não aparecem mais bolas. Você pode tentar variar o número em<code>balls.length &lt; 25</code> para obter mais ou menos bolas na tela. Dependendo de quanto poder de processamento seu computador / navegador possui, especificar vários milhares de bolas pode retardar bastante a animação!</li>
-   <li>Faz um loop em todas as <code>balls</code> no array de bolas e executa a função <code>draw()</code> e <code>update()</code> de cada bola para desenhar cada uma delas na tela, depois faz as atualizações necessárias para a posição e a velocidade no tempo para o próximo quadro.</li>
+   <li>Percorre todas as bolas no array <code>balls</code> e executa a função <code>draw()</code> e <code>update()</code> de cada bola para desenhar cada uma delas na tela, depois faz as atualizações necessárias para a posição e a velocidade a tempo para o próximo quadro.</li>
    <li>Executa a função novamente usando o método <code>requestAnimationFrame()</code> — quando esse método é executado constantemente e passa o mesmo nome de função, ele executará essa função um número definido de vezes por segundo para criar uma animação suave. Isso geralmente é feito de forma recursiva — o que significa que a função está chamando a si mesma toda vez que é executada, portanto, ela será executada repetidas vezes.</li>
   </ul>
  </li>

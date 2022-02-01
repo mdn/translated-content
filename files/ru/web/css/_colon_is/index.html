@@ -13,7 +13,7 @@ translation_of: 'Web/CSS/:is'
 
 <p>Заметьте, что в данный момент браузеры поддерживают её функциональность как <code>:matches()</code>, или даже как более старый, префиксный псевдокласс — <code>:any()</code>, включая старые версии Chrome, Firefox, и Safari. <code>:any()</code> работает точно таким же образом как и <code>:matches()</code>/<code>:is()</code>, за исключением того, что  <code>:any()</code> требует постановку префиксов и не поддерживает <a href="/ru/docs/Learn/CSS/Building_blocks/Селекторы">комплексные селекторы</a>.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Выбирает какой-либо абзац в шапке, основной части или подвале, который зависал */
+<pre class="brush: css no-line-numbers">/* Выбирает какой-либо абзац в шапке, основной части или подвале, который зависал */
 :is(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
@@ -52,7 +52,7 @@ footer p:hover {
 
 <h3 id="Кроссбраузерный_пример">Кроссбраузерный пример</h3>
 
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
   &lt;p&gt;Это мой параграф в шапке&lt;/p&gt;
 &lt;/header&gt;
 
@@ -67,7 +67,7 @@ footer p:hover {
   &lt;p&gt;Это мой параграф в подвале&lt;/p&gt;
 &lt;/footer&gt;</pre>
 
-<pre class="brush: css notranslate">:-webkit-any(header, main, footer) p:hover {
+<pre class="brush: css">:-webkit-any(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
 }
@@ -88,7 +88,7 @@ footer p:hover {
 }
 </pre>
 
-<pre class="brush: js notranslate">let matchedItems;
+<pre class="brush: js">let matchedItems;
 
 try {
   matchedItems = document.querySelectorAll(':is(header, main, footer) p');
@@ -116,13 +116,13 @@ function applyHandler(elem) {
   });
 }</pre>
 
-<p>{{EmbedLiveSample("Cross-browser_example", "100%", 300)}}</p>
+<p>{{EmbedLiveSample("Кроссбраузерный_пример", "100%", 300)}}</p>
 
 <h3 id="Упрощение_списка_селекторов">Упрощение списка селекторов</h3>
 
 <p>Псевдо-класс <code>:is()</code> может великолепно упрощать ваши CSS селекторы. К примеру, следующий CSS:</p>
 
-<pre class="brush: css notranslate">/* 3-уровневые (или более) неупорядоченные списки используют свойство square */
+<pre class="brush: css">/* 3-уровневые (или более) неупорядоченные списки используют свойство square */
 ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
 ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
 ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
@@ -141,7 +141,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 <p>... можно заменить на:</p>
 
-<pre class="brush: css notranslate">/* 3-уровневые (или более) неупорядоченные списки используют свойство square */
+<pre class="brush: css">/* 3-уровневые (или более) неупорядоченные списки используют свойство square */
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) ul,
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) menu,
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) dir {
@@ -154,7 +154,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 <p>К примеру, без <code>:is()</code>, стилизовать все {{HTMLElement("h1")}} элементы на разных уровнях может бы очень сложно:</p>
 
-<pre class="brush: css notranslate">/* Уровень 0 */
+<pre class="brush: css">/* Уровень 0 */
 h1 {
   font-size: 30px;
 }
@@ -175,7 +175,7 @@ nav section h1, nav article h1, nav aside h1, nav nav h1 {
 
 <p>Используя <code>:is()</code>, как видно, это гораздо легче:</p>
 
-<pre class="brush: css notranslate">/* Уровень 0 */
+<pre class="brush: css">/* Уровень 0 */
 h1 {
   font-size: 30px;
 }
@@ -199,13 +199,13 @@ h1 {
 
 <p>В отличие от <a href="/ru/docs/Web/CSS/Selector_list">списка селекторов</a>, псевдокласс <code>:is()</code> не аннулируется, когда из селекторов, попавший туда не поддерживается браузером.</p>
 
-<pre class="brush: css notranslate">:is(:valid, :unsupported) {
+<pre class="brush: css">:is(:valid, :unsupported) {
   ...
 }</pre>
 
 <p>Будет по прежнему определяться правильно и соответствовать <code>:valid</code> даже в браузерах, которые не поддерживают <code>:unsupported</code>, в то время как:</p>
 
-<pre class="brush: css notranslate">:valid, :unsupported {
+<pre class="brush: css">:valid, :unsupported {
   ...
 }</pre>
 
@@ -217,28 +217,13 @@ h1 {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#matches-pseudo", ":is()")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Браузерная совместимость</h2>
+<h2 id="Browser_compatibility">Браузерная совместимость</h2>
 
 
 
-<p>{{Compat("css.selectors.is")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

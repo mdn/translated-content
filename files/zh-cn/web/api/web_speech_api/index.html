@@ -22,7 +22,7 @@ translation_of: Web/API/Web_Speech_API
 <p>Web Speech API 使 Web 应用能够处理语音数据，该项 API 包含以下两个部分：</p>
 
 <ul>
- <li>语音识别通过 {{domxref("SpeechRecognition")}} 接口进行访问，它提供了识别从音频输入（通常是设备默认的语音识别服务）中识别语音情景的能力。一般来说，你将使用该接口的构造函数来构造一个新的 {{domxref("SpeechRecognition")}} 对象，该对象包含了一些列有效的对象处理函数来检测识别设备麦克风中的语音输入。{{domxref("SpeechGrammar")}} 接口则表示了你应用中想要识别的特定文法。文法则通过 <a href="http://www.w3.org/TR/jsgf/">JSpeech Grammar Format</a> (<strong>JSGF</strong>.) 来定义。</li>
+ <li>语音识别通过 {{domxref("SpeechRecognition")}} 接口进行访问，它提供了识别从音频输入（通常是设备默认的语音识别服务）中识别语音情景的能力。一般来说，你将使用该接口的构造函数来构造一个新的 {{domxref("SpeechRecognition")}} 对象，该对象包含了一系列有效的对象处理函数来检测识别设备麦克风中的语音输入。{{domxref("SpeechGrammar")}} 接口则表示了你应用中想要识别的特定文法。文法则通过 <a href="http://www.w3.org/TR/jsgf/">JSpeech Grammar Format</a> (<strong>JSGF</strong>.) 来定义。</li>
  <li>语音合成通过 {{domxref("SpeechSynthesis")}} 接口进行访问，它提供了文字到语音（TTS）的能力，这使得程序能够读出它们的文字内容（通常使用设备默认的语音合成器）。不同的声音类类型通过 {{domxref("SpeechSynthesisVoice")}} 对象进行表示，不同部分的文字则由 {{domxref("SpeechSynthesisUtterance")}} 对象来表示。你可以将它们传递给 {{domxref("SpeechSynthesis.speak()")}} 方法来产生语音。</li>
 </ul>
 

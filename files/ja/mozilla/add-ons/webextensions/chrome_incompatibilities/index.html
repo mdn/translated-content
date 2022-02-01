@@ -39,7 +39,7 @@ chrome<span class="punctuation token">.</span>cookies<span class="punctuation to
   logCookie
 <span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-<p>同様の WebExtensions API では<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise"> promises</a> を利用します:</p>
+<p>同様の WebExtensions API では<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise"> promises</a> を利用します:</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">logCookie</span><span class="punctuation token">(</span>c<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>c<span class="punctuation token">)</span><span class="punctuation token">;</span>
@@ -62,27 +62,27 @@ setCookie<span class="punctuation token">.</span><span class="function token">th
 
 <h3 id="Partially_supported_APIs" name="Partially_supported_APIs"><span class="short_text" id="result_box" lang="ja"><span>部分的にサポートされている API</span></span></h3>
 
-<p><span id="result_box" lang="ja"><span><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">ブラウザーの JavaScript API サポート</a>のページには、Firefox でサポートされているすべての API の互換性テーブルが含まれています。</span><span>特定の API アイテムのサポートに関する警告がある場合は、これらのテーブルにアスタリスク "*" が表示され、API アイテムのリファレンスページにその警告が説明されています。</span></span></p>
+<p><span id="result_box" lang="ja"><span><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">ブラウザーの JavaScript API サポート</a>のページには、Firefox でサポートされているすべての API の互換性テーブルが含まれています。</span><span>特定の API アイテムのサポートに関する警告がある場合は、これらのテーブルにアスタリスク "*" が表示され、API アイテムのリファレンスページにその警告が説明されています。</span></span></p>
 
 <p><span class="short_text" id="result_box" lang="ja"><span>このテーブルは、<a href="https://github.com/mdn/browser-compat-data">GitHub で JSON ファイル</a>として保存された互換性データから生成されます。</span></span></p>
 
 <p><span class="short_text" id="result_box" lang="ja"><span>このセクションの残りの部分では、テーブルにまだ取り込まれていない互換性の問題について説明します。</span></span></p>
 
-<h4 id="notifications" name="notifications"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></h4>
+<h4 id="notifications" name="notifications"><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></h4>
 
 <ul>
- <li><code>notifications.create()</code>の <code>"basic"</code> <code><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/API/notifications/TemplateType">type</a></code>を指定した場合の、 <code>iconUrl</code> は Firefox では任意です。Chrome では必須です。</li>
+ <li><code>notifications.create()</code>の <code>"basic"</code> <code><a href="/ja/Add-ons/WebExtensions/API/notifications/TemplateType">type</a></code>を指定した場合の、 <code>iconUrl</code> は Firefox では任意です。Chrome では必須です。</li>
  <li>通知<span class="short_text" id="result_box" lang="ja"><span>はユーザーがクリックするとすぐに消去されます。</span></span> <span class="short_text" id="result_box" lang="ja"><span>これは Chrome では当てはまりません。</span></span></li>
  <li><code>notifications.create()</code><span id="result_box" lang="ja"><span> を複数回連続して呼び出すと、Firefox が通知を一切表示しなくなることがあります。</span></span> <code>chrome.notifications.create() </code><span lang="ja"><span><code>のコールバック</code>関数内に入るまでの時間は、後続のスクリプトが実行されるまで待つほど十分な時間ではありません。</span></span></li>
 </ul>
 
-<h4 id="proxy" name="proxy"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy">proxy</a></h4>
+<h4 id="proxy" name="proxy"><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy">proxy</a></h4>
 
 <ul>
  <li><span class="short_text" id="result_box" lang="ja"><span>この API は Chrome API の設計とはまったく異なります。</span></span> <span id="result_box" lang="ja"><span>Chrome の API を使用すると、</span></span>拡張機能<span lang="ja"><span>で PAC ファイルを登録できますが、明示的なプロキシルールを定義することもできます。</span></span><span id="result_box" lang="ja"><span>これは拡張 PAC ファイルを使用しても可能であるため、この API は PAC ファイルのアプローチのみをサポートしています。</span></span> <span id="result_box" lang="ja"><span>この API は Chrome の <code>proxy</code> API と互換性がないため、この API は <code>browser</code> の名前空間でのみ使用できます。</span></span></li>
 </ul>
 
-<h4 id="tabs" name="tabs"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></h4>
+<h4 id="tabs" name="tabs"><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></h4>
 
 <ul>
  <li>
@@ -97,15 +97,15 @@ setCookie<span class="punctuation token">.</span><span class="function token">th
  <li><span id="result_box" lang="ja"><span>Firefox では、</span></span><code>beforeunload</code><span lang="ja"><span> イベントの後に </span></span><code>tabs.remove()</code><span lang="ja"><span> の promise が実行されますが、Chrome では コールバック が </span></span><code>beforeunload</code><span lang="ja"><span> を待ちません。</span></span></li>
 </ul>
 
-<h4 id="webRequest" name="webRequest"><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/API/webRequest">webRequest</a></h4>
+<h4 id="webRequest" name="webRequest"><a href="/ja/Add-ons/WebExtensions/API/webRequest">webRequest</a></h4>
 
 <ul>
  <li><span id="result_box" lang="ja"><span>Firefox では、元の URL が<code>http:</code>または<code>https:</code>を使用する場合にのみ、リクエストを</span></span><span lang="ja"><span>リダイレクトできます。</span></span></li>
  <li><span id="result_box" lang="ja"><span>Firefox では、システム要求（</span></span>拡張機能<span lang="ja"><span>のアップグレードや検索バーの提案など）でイベントが発生しません。</span></span> <span id="result_box" lang="ja"><span>Firefox 57以降では、Firefox はプロキシ認証のために</span></span>{{WebExtAPIRef("webRequest.onAuthRequired")}}<span lang="ja"><span>を遮断する必要がある拡張機能の例外を生成します。</span></span>{{WebExtAPIRef("webRequest.onAuthRequired")}}のドキュメントをご覧ください。</li>
- <li>Firefox では、拡張機能が外部URL (例 HTTPS) から<a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">拡張機能ページ</a>にリダイレクトする場合、拡張機能の manifest.json ファイルは、その拡張機能ページの URL を一覧にした <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a> キーを含むことが必須です。 その URL にあらゆるウェブサイトからリンクやリダイレクトされる可能性があり、拡張機能は、入力データ(例えば POST データ) を、ただ通常のウェブページがそうするように、アントラステッドなソースからとして取り扱うべきであるのに注意します。</li>
+ <li>Firefox では、拡張機能が外部URL (例 HTTPS) から<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">拡張機能ページ</a>にリダイレクトする場合、拡張機能の manifest.json ファイルは、その拡張機能ページの URL を一覧にした <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a> キーを含むことが必須です。 その URL にあらゆるウェブサイトからリンクやリダイレクトされる可能性があり、拡張機能は、入力データ(例えば POST データ) を、ただ通常のウェブページがそうするように、アントラステッドなソースからとして取り扱うべきであるのに注意します。</li>
 </ul>
 
-<h4 id="windows" name="windows"><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows">windows</a></h4>
+<h4 id="windows" name="windows"><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows">windows</a></h4>
 
 <ul>
  <li><span id="result_box" lang="ja"><span>Firefox では、</span></span><code>onFocusChanged</code><span lang="ja"><span> はフォーカス変更に対して複数回トリガされます。</span></span></li>
@@ -119,7 +119,7 @@ setCookie<span class="punctuation token">.</span><span class="function token">th
 
 <h4 id="Additional_incompatibilities" name="Additional_incompatibilities"><span class="short_text" id="result_box" lang="ja"><span>付加的な非互換性</span></span></h4>
 
-<p>Firefox は、バックグラウンドページからの<code><a href="https://developer.mozilla.org/ja/docs/Web/API/Window/alert">alert()</a></code>, <code><a href="https://developer.mozilla.org/ja/docs/Web/API/Window/confirm">confirm()</a></code> または <code><a href="https://developer.mozilla.org/ja/docs/Web/API/Window/prompt">prompt()</a></code>の使用をサポートしていません。</p>
+<p>Firefox は、バックグラウンドページからの<code><a href="/ja/docs/Web/API/Window/alert">alert()</a></code>, <code><a href="/ja/docs/Web/API/Window/confirm">confirm()</a></code> または <code><a href="/ja/docs/Web/API/Window/prompt">prompt()</a></code>の使用をサポートしていません。</p>
 
 <h4 id="web_accessible_resources" name="web_accessible_resources">web_accessible_resources</h4>
 
@@ -133,11 +133,11 @@ setCookie<span class="punctuation token">.</span><span class="function token">th
 
 <h4 id="Content_script_requests_happen_in_the_context_of_extension_not_content_page" name="Content_script_requests_happen_in_the_context_of_extension_not_content_page"><span class="short_text" id="result_box" lang="ja"><span>コンテンツスクリプトのリクエストは、コンテンツページではなく、拡張機能のコンテキストで発生する</span></span></h4>
 
-<p><span id="result_box" lang="ja"><span>chrome では、コンテンツスクリプトから<code>/api</code>のような相対URL にリクエストが呼び出されたとき（たとえば、</span></span><code><a href="https://developer.mozilla.org/ja/docs/Web/API/Fetch_API/Using_Fetch">fetch()</a></code><span lang="ja"><span>を使用して）、<code>https://example.com/api</code>に送信されます。</span></span><span id="result_box" lang="ja"><span>Firefox では、絶対URL を指定する必要があります。</span></span></p>
+<p><span id="result_box" lang="ja"><span>chrome では、コンテンツスクリプトから<code>/api</code>のような相対URL にリクエストが呼び出されたとき（たとえば、</span></span><code><a href="/ja/docs/Web/API/Fetch_API/Using_Fetch">fetch()</a></code><span lang="ja"><span>を使用して）、<code>https://example.com/api</code>に送信されます。</span></span><span id="result_box" lang="ja"><span>Firefox では、絶対URL を指定する必要があります。</span></span></p>
 
 <h2 id="manifest.json_keys" name="manifest.json_keys">manifest.json のキー</h2>
 
-<p><span id="result_box" lang="ja"><span>メインの</span></span><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json"> manifest.json</a><span lang="ja"><span> ページには、manifest.json のキーのブラウザーサポートを説明する表が含まれています。</span></span> <span id="result_box" lang="ja"><span>特定のキーのサポートに関する警告がある場合、表にアスタリスク "*"付きで示され、キーのリファレンスページには注意事項が説明されています。</span></span></p>
+<p><span id="result_box" lang="ja"><span>メインの</span></span><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json"> manifest.json</a><span lang="ja"><span> ページには、manifest.json のキーのブラウザーサポートを説明する表が含まれています。</span></span> <span id="result_box" lang="ja"><span>特定のキーのサポートに関する警告がある場合、表にアスタリスク "*"付きで示され、キーのリファレンスページには注意事項が説明されています。</span></span></p>
 
 <p><span class="short_text" id="result_box" lang="ja"><span>これらの表は、</span></span> <a href="https://github.com/mdn/browser-compat-data">GitHub で JSON ファイル</a><span class="short_text" lang="ja"><span>として保存された互換性データから生成されます。</span></span></p>
 

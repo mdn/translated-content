@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code>Object.entries(<var>obj</var>)</code></pre>
+<pre class="syntaxbox"><code>Object.entries(<var>obj</var>)</code></pre>
 
 <h3 id="Параметры">Параметры</h3>
 
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 
 <h2 id="Примеры">Примеры</h2>
 
-<pre class="brush: js notranslate">var obj = { foo: "bar", baz: 42 };
+<pre class="brush: js">var obj = { foo: "bar", baz: 42 };
 console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
 // массив как объект
@@ -49,7 +49,7 @@ console.log(Object.entries(my_obj)); // [ ['foo', 'bar'] ]
 // non-object argument will be coerced to an object
 console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]</pre>
 
-<pre class="notranslate"><code>// returns an empty array for any primitive type, since primitives have no own properties
+<pre><code>// returns an empty array for any primitive type, since primitives have no own properties
 console.log(Object.entries(100)); // [ ]
 
 // iterate through key-value gracefully
@@ -67,7 +67,7 @@ Object.entries(obj).forEach(([key, value]) =&gt; {
 
 <p>Конструктор {{jsxref("Map", "new Map()")}} принимает повторение <em>значений</em>. С <code>Object.entries </code>вы легко можете преобразовать {{jsxref("Object")}} в {{jsxref("Map")}}:</p>
 
-<pre class="brush: js notranslate">var obj = { foo: "bar", baz: 42 };
+<pre class="brush: js">var obj = { foo: "bar", baz: 42 };
 var map = new Map(Object.entries(obj));
 console.log(map); // Map { foo: "bar", baz: 42 }</pre>
 
@@ -75,7 +75,7 @@ console.log(map); // Map { foo: "bar", baz: 42 }</pre>
 
 <p>Используя <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%D0%A0%D0%B0%D0%B7%D0%B1%D0%BE%D1%80_%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%BE%D0%B2">метод Разбора Массивов</a> Вы можете легко итерировать объекты.</p>
 
-<pre class="notranslate"><code>const obj = { foo: 'bar', baz: 42 };
+<pre><code>const obj = { foo: 'bar', baz: 42 };
 Object.entries(obj).forEach(([key, value]) =&gt; console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"</code></pre>
 
 <h2 id="Полифил">Полифил</h2>
@@ -84,26 +84,13 @@ Object.entries(obj).forEach(([key, value]) =&gt; console.log(`${key}: ${value}`)
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.entries', 'Object.entries')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Пока не включена в официальный проект. Смотрите это  <a href="https://github.com/tc39/proposal-object-values-entries">предложение stage3</a> для проекта текста текущей спецификации</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 <div>
 <div>
-<p>{{Compat("javascript.builtins.Object.entries")}}</p>
+<p>{{Compat}}</p>
 </div>
 </div>
 

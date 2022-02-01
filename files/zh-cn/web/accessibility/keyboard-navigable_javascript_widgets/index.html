@@ -135,7 +135,7 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
  <li>更改之前被 focus 中元素的 tabindex 为“-1”.</li>
 </ol>
 
-<p>这里有个 <a class="external text" href="http://www.oaa-accessibility.org/example/40/" rel="nofollow" title="http://www.oaa-accessibility.org/example/40/">WAI-ARIA tree view</a> 的例子是使用这种方案的。</p>
+<p>这里有个 WAI-ARIA tree view 的例子是使用这种方案的。</p>
 
 <h5 id="提示">提示</h5>
 
@@ -153,7 +153,7 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 
 <p>这个办法包含绑定一个单独的事件句柄到容器窗口组件上，运用 <code>aria-activedescendent属性</code>来追踪一个 "虚拟" 焦点。（关于ARIA更多的信息, 查看 <a class="external text" href="../../../../An_Overview_of_Accessible_Web_Applications_and_Widgets" rel="nofollow" title="https://developer.mozilla.org/An_Overview_of_Accessible_Web_Applications_and_Widgets">overview of accessible web applications and widgets</a>.）</p>
 
-<p><code>aria-activedescendant</code> 属性用来标识拥有虚拟焦点的后代元素的 ID。在窗口容器的事件句柄里面在键盘和鼠标事件响应更新 <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">aria-activedescendant 值并且确保当前</span><span style="line-height: 1.5;">The event handler on the container must respond to key and mouse events by updating the value of </span><code style="font-size: 14px;">aria-activedescendant</code><span style="line-height: 1.5;"> and ensuring that the current item is styled appropriately (for example, with a border or background color). See the source code of this </span><a class="external text" href="http://www.oaa-accessibility.org/example/28/" rel="nofollow" style="line-height: 1.5;" title="http://www.oaa-accessibility.org/example/28/">ARIA radiogroup example</a><span style="line-height: 1.5;"> for a direct illustration of how this works.</span></p>
+<p><code>aria-activedescendant</code> 属性用来标识拥有虚拟焦点的后代元素的 ID。在窗口容器的事件句柄里面在键盘和鼠标事件响应更新 <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">aria-activedescendant 值并且确保当前</span><span style="line-height: 1.5;">The event handler on the container must respond to key and mouse events by updating the value of </span><code style="font-size: 14px;">aria-activedescendant</code><span style="line-height: 1.5;"> and ensuring that the current item is styled appropriately (for example, with a border or background color). </span></p>
 
 <h5 id="Tips">Tips</h5>
 

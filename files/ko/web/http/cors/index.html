@@ -6,18 +6,16 @@ tags:
   - HTTP
   - Same-origin policy
   - Security
-  - 'l10n:priority'
+  - l10n:priority
   - 교차 출처
   - 동일 출처
 translation_of: Web/HTTP/CORS
 ---
-<div>이에 대한 응답으로 서버는 Access-Control-Allow-Origin 헤더를 다시 보냅니다.{{HTTPSidebar}}</div>
-
 <p><strong>교차 출처 리소스 공유</strong>(Cross-Origin Resource Sharing, {{Glossary("CORS")}})는 추가 {{Glossary("HTTP")}} 헤더를 사용하여, 한 {{glossary("origin", "출처")}}에서 실행 중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여하도록 브라우저에 알려주는 체제입니다. 웹 애플리케이션은 리소스가 자신의 출처(도메인, 프로토콜, 포트)와 다를 때 교차 출처 HTTP 요청을 실행합니다.</p>
 
 <p>교차 출처 요청의 예시: <code>https://domain-a.com</code>의 프론트 엔드 JavaScript 코드가 {{domxref("XMLHttpRequest")}}를 사용하여 <code>https://domain-b.com/data.json</code>을 요청하는 경우.</p>
 
-<p>보안 상의 이유로, 브라우저는 스크립트에서 시작한 교차 출처 HTTP 요청을 제한합니다. 예를 들어, <code>XMLHttpRequest</code>와 <a href="/ko/docs/Web/API/Fetch_API">Fetch API</a>는 <a href="/ko/docs/Web/Security/Same-origin_policy">동일 출처 정책</a>을 따릅니다. 즉, 이 API를 사용하는 웹 애플리케이션은 자신의 출처와 동일한 리소스만 불러올 수 있으며, 다른 출처의 리소스를 불러오려면 그 출처에서 올바른 CORS 헤더를 포함한 응답을 반환해야 합니다.<img src="https://mdn.mozillademos.org/files/14295/CORS_principle.png"></p>
+<p>보안 상의 이유로, 브라우저는 스크립트에서 시작한 교차 출처 HTTP 요청을 제한합니다. 예를 들어, <code>XMLHttpRequest</code>와 <a href="/ko/docs/Web/API/Fetch_API">Fetch API</a>는 <a href="/ko/docs/Web/Security/Same-origin_policy">동일 출처 정책</a>을 따릅니다. 즉, 이 API를 사용하는 웹 애플리케이션은 자신의 출처와 동일한 리소스만 불러올 수 있으며, 다른 출처의 리소스를 불러오려면 그 출처에서 올바른 CORS 헤더를 포함한 응답을 반환해야 합니다.<img src="cors_principle.png"></p>
 
 <p>CORS 체제는 브라우저와 서버 간의 안전한 교차 출처 요청 및 데이터 전송을 지원합니다. 최신 브라우저는 <code>XMLHttpRequest</code> 또는 <a href="/ko/docs/Web/API/Fetch_API">Fetch</a>와 같은 API에서 CORS를 사용하여 교차 출처 HTTP 요청의 위험을 완화합니다.</p>
 
@@ -25,7 +23,7 @@ translation_of: Web/HTTP/CORS
 
 <p>모든 사람이요, 진짜로.</p>
 
-<p>명확히 말하자면, 이 글은 <strong>웹 관리자</strong>, <strong>서버 개발자 </strong>그리고 <strong>프론트엔드 개발자</strong>를 위한 것입니다. 최신 브라우저는 헤더와 정책 집행을 포함한 클라이언트 측 교차 출처 공유를 처리합니다. 그러나 CORS 표준에 맞춘다는 것은 서버에서도 새로운 요청과 응답 헤더를 처리해야 한다는 것입니다. 서버 개발자에게는 <a href="/en-US/docs/Web/HTTP/Server-Side_Access_Control">(PHP 코드 조각과 함께 하는) 서버 관점의 교차 출처 공유</a>를 다루고 있는 다른 글로 보충하면 도움이 될 것입니다.</p>
+<p>명확히 말하자면, 이 글은 <strong>웹 관리자</strong>, <strong>서버 개발자 </strong>그리고 <strong>프론트엔드 개발자</strong>를 위한 것입니다. 최신 브라우저는 헤더와 정책 집행을 포함한 클라이언트 측 교차 출처 공유를 처리합니다. 그러나 CORS 표준에 맞춘다는 것은 서버에서도 새로운 요청과 응답 헤더를 처리해야 한다는 것입니다. 서버 개발자에게는 <a href="/en-US/docs/Web/HTTP/CORS">(PHP 코드 조각과 함께 하는) 서버 관점의 교차 출처 공유</a>를 다루고 있는 다른 글로 보충하면 도움이 될 것입니다.</p>
 
 <h2 id="어떤_요청이_CORS를_사용하나요">어떤 요청이 CORS를 사용하나요?</h2>
 
@@ -53,11 +51,11 @@ translation_of: Web/HTTP/CORS
 
 <p>교차 출처 리소스 공유가 동작하는 방식을 보여주는 세 가지 시나리오를 제시하겠습니다. 모든 예제는 지원하는 브라우저에서 교차 출처 요청을 생성할 수 있는 {{domxref("XMLHttpRequest")}}를 사용합니다.</p>
 
-<p>서버 관점의 교차 출처 리소스 공유에 대한 논의는 (PHP 코드와 함께 하는) <a href="/en-US/docs/Web/HTTP/Server-Side_Access_Control">서버 사이드 접근 제어 (CORS)</a> 문서에서 확인할 수 있습니다.</p>
+<p>서버 관점의 교차 출처 리소스 공유에 대한 논의는 (PHP 코드와 함께 하는) <a href="/en-US/docs/Web/HTTP/CORS">서버 사이드 접근 제어 (CORS)</a> 문서에서 확인할 수 있습니다.</p>
 
 <h3 id="단순_요청Simple_requests">단순 요청(Simple requests)</h3>
 
-<p>일부요청은 <a href="/ko/docs/Web/HTTP/Access_control_CORS$edit#Preflighted_requests">CORS preflight</a> 를 트리거하지 않습니다. {{SpecName ( 'Fetch')}} 명세(CORS를 정의한)는 이 용어를 사용하지 않지만, 이 기사에서는 "simple requests"라고 하겠습니다. "simple requests"는 <strong>다음 조건을 모두 충족하는 요청입니다:</strong></p>
+<p>일부요청은 <a href="/ko/docs/Glossary/Preflight_request">CORS preflight</a> 를 트리거하지 않습니다. {{SpecName ( 'Fetch')}} 명세(CORS를 정의한)는 이 용어를 사용하지 않지만, 이 기사에서는 "simple requests"라고 하겠습니다. "simple requests"는 <strong>다음 조건을 모두 충족하는 요청입니다:</strong></p>
 
 <ul>
  <li>다음 중 하나의 메서드
@@ -111,7 +109,7 @@ xhr.send();</code></pre>
 
 <p>클라이언트와 서버간에 간단한 통신을 하고, CORS 헤더를 사용하여 권한을 처리합니다.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17214/simple-req-updated.png" style="height: 490px; width: 1023px;"></p>
+<p><img alt="" src="simple-req-updated.png"></p>
 
 <p>이 경우 브라우저가 서버로 전송하는 내용을 살펴보고, 서버의 응답을 확인합니다.</p>
 
@@ -145,7 +143,7 @@ Content-Type: application/xml
 
 <h3 id="프리플라이트_요청">프리플라이트 요청</h3>
 
-<p>"preflighted" request는 위에서 논의한 <a href="/ko/docs/Web/HTTP/Access_control_CORS$edit#Simple_requests">“simple requests”</a> 와는 달리, 먼저 {{HTTPMethod("OPTIONS")}} 메서드를 통해 다른 도메인의 리소스로 HTTP 요청을 보내 실제 요청이 전송하기에 안전한지 확인합니다. Cross-site 요청은 유저 데이터에 영향을 줄 수 있기 때문에 이와같이 미리 전송(preflighted)합니다.</p>
+<p>"preflighted" request는 위에서 논의한 <a href="/ko/docs/Web/HTTP/CORS#단순_요청simple_requests">“simple requests”</a> 와는 달리, 먼저 {{HTTPMethod("OPTIONS")}} 메서드를 통해 다른 도메인의 리소스로 HTTP 요청을 보내 실제 요청이 전송하기에 안전한지 확인합니다. Cross-site 요청은 유저 데이터에 영향을 줄 수 있기 때문에 이와같이 미리 전송(preflighted)합니다.</p>
 
 <p>다음은 preflighted 할 요청의 예제입니다.</p>
 
@@ -158,7 +156,7 @@ xhr.send('&lt;person&gt;&lt;name&gt;Arun&lt;/name&gt;&lt;/person&gt;');</code></
 
 <p>위의 예제는 <code>POST</code> 요청과 함께 함께 보낼 XML body를 만듭니다. 또한 비표준 HTTP <code>Ping-Other</code> 요청 헤더가 설정됩니다. 이러한 헤더는 HTTP/1.1의 일부가 아니지만 일반적으로 웹 응용 프로그램에 유용합니다. Content-Type 이 <code>application/xml</code>이고, 사용자 정의 헤더가 설정되었기 때문에 이 요청은 preflighted 처리됩니다.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16753/preflight_correct.png"></p>
+<p><img alt="" src="preflight_correct.png"></p>
 
 <p>(참고: 아래 설명 된 것처럼 실제 <code>POST</code> 요청에는 <code>Access-Control-Request-*</code> 헤더가 포함되지 않습니다. <code>OPTIONS</code> 요청에만 필요합니다.)</p>
 
@@ -290,7 +288,7 @@ function callOtherDomain() {
 
 <p>7행은 쿠키와 함께 호출하기위한 {{domxref("XMLHttpRequest")}} 의 플래그를 보여줍니다. 이 플래그는 <code>withCredentials</code> 라고 불리며 부울 값을 갖습니다. 기본적으로 호출은 쿠키 없이 이루어집니다. 이것은 simple <code>GET</code> request이기 때문에 preflighted 되지 않습니다. 그러나 브라우저는 {{HTTPHeader("Access-Control-Allow-Credentials")}}: <code>true</code> 헤더가 없는 응답을 <strong>거부합니다</strong>.<strong> </strong>따라서 호출된 웹 컨텐츠에 응답을 제공하지 <strong>않습니다</strong>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17213/cred-req-updated.png" style="height: 490px; width: 1023px;"></p>
+<p><img alt="" src="cred-req-updated.png"></p>
 
 <p>클라이언트와 서버간의 통신 예제는 다음과 같습니다.</p>
 
@@ -326,9 +324,19 @@ Content-Type: text/plain
 
 <p>10행에는 <code>http://bar.other</code>의 컨텐츠를 대상으로 하는 쿠키가 포함되어 있습니다. 하지만 17행의 {{HTTPHeader("Access-Control-Allow-Credentials")}}: <code>true</code> 로 응답하지 않으면, 응답은 무시되고 웹 컨텐츠는 제공되지 않습니다.</p>
 
-<h4 id="자격증명_요청_및_와일드카드Credentialed_requests_and_wildcards">자격증명 요청 및 와일드카드(Credentialed requests and wildcards)</h4>
+<h4 id="Preflight_requests_and_credentials">실행 전 요청 및 자격 증명</h4>
 
-<p>credentialed request 에 응답할 때 서버는 <code>Access-Control-Allow-Origin</code> 헤더 "<code>*</code>" 와일드카드를 사용하는 대신에 <strong>반드시</strong> 에 값을 지정해야 합니다.</p>
+<p>CORS 실행 전 요청에는 자격 증명이 포함되지 않아야 합니다. 실행 전 요청에 대한 <em>응답</em>은 <code>Access-Control-Allow-Credentials: true</code>를 지정하여 자격 증명으로 실제 요청을 수행할 수 있음을 나타내야 합니다.</p>
+
+<div class="notecard note">
+  <h4>참고</h4>
+  <p>일부 엔터프라이즈 인증 서비스는 {{SpecName("Fetch","#cors-protocol-and-credentials")}} 사양을 위반하여 실행 전 요청에서 TLS 클라이언트 인증서를 보내도록 요구합니다.</p>
+  <p>Firefox 87에서는 기본 설정을 지정하여 이 비준수 동작을 활성화할 수 있습니다: <code>network.cors_preflight.allow_client_cert</code>을 <code>true</code>로 설정 ({{bug(1511151)}}). Chromium 기반 브라우저는 현재 항상 CORS 실행 전 요청에서 TLS 클라이언트 인증서를 보냅니다(<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=775438">Chrome bug 775438</a>).</p>
+</div>
+
+<h4 id="Credentialed_requests_and_wildcards">자격증명 요청 및 와일드카드(Credentialed requests and wildcards)</h4>
+
+<p>자격 증명 요청에 응답할 때 서버는 <strong>반드시</strong> "<code>*</code>" 와일드카드를 지정하는 대신 <code>Access-Control-Allow-Origin</code> 헤더 값에 출처를 지정해야 합니다.</p>
 
 <p>위 예제의 요청 헤더에 <code>Cookie</code> 헤더가 포함되어 있기 때문에 <code>Access-Control-Allow-Origin</code> 헤더의 값이 "*"인 경우 요청이 실패합니다. 위 요청은 <code>Access-Control-Allow-Origin</code> 헤더가 "<code>*</code>" 와일드 카드가 아니라 "<code>http://foo.example</code>" 본래 주소이기 때문에 자격증명 인식 컨텐츠는 웹 호출 컨텐츠로 리턴됩니다.</p>
 
@@ -338,7 +346,7 @@ Content-Type: text/plain
 
 <p>CORS 응답에 설정된 쿠키에는 일반적인 third-party cookie 정책이 적용됩니다. 위의 예제는 <code>foo.example</code>에서 페이지를 불러지만 20행의 쿠키는 <code>bar.other</code> 가 전송합니다. 때문에 사용자의 브라우저 설정이 모든 third-party cookies를 거부하도록 되어 있다면, 이 쿠키는 저장되지 않습니다.</p>
 
-<h2 id="HTTP_응답_헤더">HTTP 응답 헤더</h2>
+<h2 id="The_HTTP_response_headers">HTTP 응답 헤더</h2>
 
 <p>이 섹션에서는 Cross-Origin 리소스 공유 명세에 정의된 대로 서버가 접근 제어 요청을 위해 보내는 HTTP 응답 헤더가 나열되어 있습니다. The previous section gives an overview of these in action.</p>
 

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
 <div>{{JSRef}}</div>
 
-<p><strong>Reflect</strong> - это встроенный объект, который предоставляет методы для перехватывания JavaScript операций. Эти методы аналогичны методам <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">proxy handler</a>`ов. <code>Reflect</code> - это не функциональный, а простой объект, он не является сконструированным.</p>
+<p><strong>Reflect</strong> - это встроенный объект, который предоставляет методы для перехватываемых JavaScript операций. Эти методы аналогичны методам <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">proxy handler</a>`ов. <code>Reflect</code> - это не функциональный, а простой объект, он не является сконструированным.</p>
 
 <h2 id="Описание">Описание</h2>
 
@@ -50,7 +50,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 
 <h3 id="Проверка_наличия_конкретных_свойств_у_объекта">Проверка наличия конкретных свойств у объекта</h3>
 
-<pre class="brush: js notranslate">const duck = {
+<pre class="brush: js">const duck = {
   name: 'Maurice',
   color: 'white',
   greeting: function() {
@@ -65,31 +65,18 @@ Reflect.has(duck, 'haircut');
 
 <h3 id="Возврат_собственных_ключей_объекта">Возврат собственных ключей объекта</h3>
 
-<pre class="brush: js notranslate">Reflect.ownKeys(duck);
+<pre class="brush: js">Reflect.ownKeys(duck);
 // [ "name", "color", "greeting" ]</pre>
 
 <h3 id="Добавление_нового_свойства_в_объект">Добавление нового свойства в объект</h3>
 
-<pre class="brush: js notranslate">Reflect.set(duck, 'eyes', 'black');
+<pre class="brush: js">Reflect.set(duck, 'eyes', 'black');
 // вернётся "true" если вызов успешен
 // объект "duck" теперь содержит свойство "eyes" со значением "black"</pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-reflect-object', 'Reflect')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 

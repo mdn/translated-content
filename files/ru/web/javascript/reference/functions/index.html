@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Functions
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>В общем случае, функция — это "подпрограмма", которую можно <em>вызывать</em> из внешнего (или внутреннего, в случае рекурсии) по отношению к функции кода. Как и сама программа, функция состоит из последовательности инструкций, называемой <em>телом функции.</em> Значения могут быть <em>переданы</em> в функцию, а функция <em>вернёт</em> значение.</p>
 
@@ -57,11 +57,11 @@ function myFunc(theObject) {
 
 <p><a href="/ru/docs/Web/JavaScript/Reference/Operators/this"><code>Ключевое слово this</code></a> не ссылается на функцию, которая выполняется в данный момент, поэтому вы должны обращаться к объектами Function по имени, даже внутри тела самой функции.</p>
 
-<h2 id="Defining_functions" name="Defining_functions">Определение функций</h2>
+<h2 id="Defining_functions">Определение функций</h2>
 
 <p>Есть несколько способов определить функцию:</p>
 
-<h3 id="The_function_declaration_.28function_statement.29" name="The_function_declaration_.28function_statement.29">Объявление функции (инструкция <code>function</code>)</h3>
+<h3 id="The_function_declaration_.28function_statement.29">Объявление функции (инструкция <code>function</code>)</h3>
 
 <p>Специальный синтаксис для объявления функций (более подробно: <a href="/ru/docs/Web/JavaScript/Reference/Statements/function">function statement</a>):</p>
 
@@ -85,7 +85,7 @@ function myFunc(theObject) {
  <dd>Инструкции, из которых состоит тело функции.</dd>
 </dl>
 
-<h3 id="The_function_expression_.28function_operator.29" name="The_function_expression_.28function_operator.29">Функция-выражение (оператор <code>function</code>)</h3>
+<h3 id="The_function_expression_.28function_operator.29">Функция-выражение (оператор <code>function</code>)</h3>
 
 <p>Функция-выражение похожа на определение функции и имеет такой же синтаксис (более подробно: <a href="/ru/docs/Web/JavaScript/Reference/Operators/function">function operator</a>):</p>
 
@@ -128,7 +128,7 @@ param =&gt; expression
  <dd>Если инструкций несколько, их нужно заключить в {}. Для одного выражения фигурных скобок не требуется, а результат этого выражения будет возвращён функцией (то есть<code> функция x =&gt; 3 + 8 вернёт 11).</code><code> </code></dd>
 </dl>
 
-<h3 id="The_Function_constructor" name="The_Function_constructor">Конструктор <code>Function</code></h3>
+<h3 id="The_Function_constructor">Конструктор <code>Function</code></h3>
 
 <div class="note">
 <p><strong>Примечание:</strong> Использовать конструктор Function не рекомендуется, так как он принимает тело функции в виде строки, а это может помешать оптимизациям, которые выполняют движки JavaScript, а также привести к другим проблемам.</p>
@@ -154,18 +154,18 @@ param =&gt; expression
 <h2 id="Параметры_функции">Параметры функции</h2>
 
 <div class="note">
-<p><strong>Примечание:</strong> Оставшиеся параметры и параметры по умолчанию <em>— это экспериментальная </em>технология, часть спецификации ECMAScript 6, и они пока ещё не получили широкой поддержки среди браузеров.</p>
+<p><strong>Примечание:</strong> Остаточные параметры и параметры по умолчанию <em>— это экспериментальная </em>технология, часть спецификации ECMAScript 6, и они пока ещё не получили широкой поддержки среди браузеров.</p>
 </div>
 
 <h3 id="Параметры_по_умолчанию">Параметры по умолчанию</h3>
 
 <p>Параметры функции по умолчанию позволяют инициализировать формальные параметры со значениями по умолчанию, если им не было передано значение, или было передано <code>undefined</code>. Подробнее о них можно узнать в статье <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">Параметры по умолчанию</a>.</p>
 
-<h3 id="Оставшиеся_параметры">Оставшиеся параметры</h3>
+<h3 id="Остаточные_параметры">Остаточные параметры</h3>
 
-<p>Синтаксис оставшихся параметров позволяет передать бесконечное число аргументов как массив. Подробности можно найти в статье <a href="/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters">Оставшиеся параметры</a>.</p>
+<p>Синтаксис оставшихся параметров позволяет передать бесконечное число аргументов как массив. Подробности можно найти в статье <a href="/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters">Остаточные параметры</a>.</p>
 
-<h2 id="The_arguments_object" name="The_arguments_object">Объект <code>arguments</code></h2>
+<h2 id="The_arguments_object">Объект <code>arguments</code></h2>
 
 <p>Внутри функции получить доступ к её аргументам можно через объект <a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>.</p>
 
@@ -202,7 +202,7 @@ param =&gt; expression
   bar() {}
 };</pre>
 
-<h2 id="Function_constructor_vs._function_declaration_vs._function_expression" name="Function_constructor_vs._function_declaration_vs._function_expression">Сравнение конструкторов <code>Function</code> с объявлением функций и функциями-выражениями</h2>
+<h2 id="Function_constructor_vs._function_declaration_vs._function_expression">Сравнение конструкторов <code>Function</code> с объявлением функций и функциями-выражениями</h2>
 
 <p>Посмотрите на следующие примеры:</p>
 
@@ -332,7 +332,7 @@ function a() {
 }
 </pre>
 
-<h2 id="Conditionally_defining_a_function" name="Conditionally_defining_a_function">Определение функции в зависимости от условия</h2>
+<h2 id="Conditionally_defining_a_function">Определение функции в зависимости от условия</h2>
 
 <p>Функции могут быть определены в зависимости от условий с помощью инструкции <code>function (разрешённое расширение стандарта</code> <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMA-262 Edition 3</a>) или конструктора <code>Function</code>. Обратите внимание, что подобные инструкции <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=609832">запрещены в ES5 strict</a>. Кроме того, эта возможность по-разному ведёт себя в разных браузерах, поэтому не стоит на неё рассчитывать.</p>
 
@@ -358,9 +358,9 @@ function a() {
 }
 </pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Returning_a_formatted_number" name="Example:_Returning_a_formatted_number">Пример: возврат отформатированного числа</h3>
+<h3 id="Example:_Returning_a_formatted_number">Пример: возврат отформатированного числа</h3>
 
 <p>Эта функция возвращает строку, содержащую число с заданным количеством нулей перед ним:</p>
 
@@ -382,7 +382,7 @@ result = padZeros(42,2); // возвращает "42"
 result = padZeros(5,4);  // возвращает "0005"
 </pre>
 
-<h3 id="Example:_Determining_whether_a_function_exists" name="Example:_Determining_whether_a_function_exists">Пример: существует ли функция</h3>
+<h3 id="Example:_Determining_whether_a_function_exists">Пример: существует ли функция</h3>
 
 <p>Можно определить, существует ли функция с помощью оператора <code>typeof</code>. В следующем примере проверяется, есть ли у объекта <code>window</code> функция <code>noFunc</code>. Если есть, то она вызывается; если нет, выполняется какое-то другое действие.</p>
 
@@ -397,36 +397,13 @@ result = padZeros(5,4);  // возвращает "0005"
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Релизовано в JavaScript 1.0</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-13', 'Function Definition')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Новое: стрелочные функции, генераторы, параметры по умолчанию, оставшиеся параметры</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a></li>

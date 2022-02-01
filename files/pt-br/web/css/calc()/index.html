@@ -115,7 +115,7 @@ width: calc(100% - 80px);
   width: var(--widthC);
 }</pre>
 
-<p>Depois que todas as variáveis forem expandidas, o valor de <code>widthC</code> será <code>calc( calc( 100px / 2) / 2)</code>, então quando for atribuído à propriedade de largura <code>.foo</code>, todos os <code>calc()</code> internos (não importa o qquão profundamente atribuídos) serão nivelados para apenas parênteses, de modo que o valor da propriedade <code>width</code> será eventualmente <code>calc( ( 100px / 2) / 2)</code>, i.e. <code>25px</code>. Resumindo: um <code>calc()</code> dentro de um <code>calc()</code> é idêntico à parênteses.</p>
+<p>Depois que todas as variáveis forem expandidas, o valor de <code>widthC</code> será <code>calc( calc( 100px / 2) / 2)</code>, então quando for atribuído à propriedade de largura <code>.foo</code>, todos os <code>calc()</code> internos (não importa o quão profundamente atribuídos) serão nivelados para apenas parênteses, de modo que o valor da propriedade <code>width</code> será eventualmente <code>calc( ( 100px / 2) / 2)</code>, i.e. <code>25px</code>. Resumindo: um <code>calc()</code> dentro de um <code>calc()</code> é idêntico à parênteses.</p>
 
 <h2 id="Questões_de_acessibilidade">Questões de acessibilidade</h2>
 

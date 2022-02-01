@@ -44,9 +44,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 
 <h2 id="폴리필">폴리필</h2>
 
-<p><code>repeat</code>은 ECMAScript 2015 명세에 추가됐습니다. 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 그러나 아래 코드를 포함하면 지원하지 않는 플랫폼에서도 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">repeat</span></font>을 사용할 수 있습니다.</p>
+<p><code>repeat</code>은 ECMAScript 2015 명세에 추가됐습니다. 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 그러나 아래 코드를 포함하면 지원하지 않는 플랫폼에서도 <code>repeat</code>을 사용할 수 있습니다.</p>
 
-<pre dir="rtl"><code>if (!String.prototype.repeat) {
+<pre class="brush: js"><code>if (!String.prototype.repeat) {
   String.prototype.repeat = function(count) {
     'use strict';
     if (this == null) {

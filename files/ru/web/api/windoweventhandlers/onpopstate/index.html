@@ -13,20 +13,20 @@ translation_of: Web/API/WindowEventHandlers/onpopstate
 <p><strong>Примечание:</strong>, просто вызов <code>history.pushState()</code> или <code>history.replaceState()</code> не вызовет событие <code>popstate</code>. Событие <code>popstate</code> срабатывает только тогда, когда происходят какие то действия в браузере, такие как нажатие кнопки "назад" (или вызов <code>history.back()</code> из JavaScript). Это событие срабатывает только когда пользователь переходит между двумя записями истории одного и того же документа.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">window.onpopstate = <var>funcRef</var>;
+<pre class="syntaxbox">window.onpopstate = <var>funcRef</var>;
 </pre>
 
 <ul>
  <li><code>funcRef</code> – функция обработчик.</li>
 </ul>
 
-<h2 id="The_popstate_event" name="The_popstate_event">Примеры</h2>
+<h2 id="The_popstate_event">Примеры</h2>
 
 <p>В качестве примера, страница <code>http://example.com/example.html</code>, исполняя нижеследующий код, сгенерирует всплывающие сообщения, как показано в комментариях:</p>
 
-<pre class="brush:js notranslate">window.onpopstate = function(event) {
+<pre class="brush:js">window.onpopstate = function(event) {
   alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
 };
 
@@ -40,7 +40,7 @@ history.go(2);  // alerts "location: http://example.com/example.html?page=3, sta
 
 <p>Обратите внимание, что даже несмотря на то, что первоначальная запись истории (для <code>http://example.com/example.html</code>) не имеет объекта события, связанного с ней, событие <code>popstate</code> всё равно произойдёт, когда мы активируем эту запись после второго вызова <code>history.back()</code>.</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <ul>
  <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate">HTML5 popstate event</a></li>
@@ -48,9 +48,9 @@ history.go(2);  // alerts "location: http://example.com/example.html?page=3, sta
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowEventHandlers.onpopstate")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("window.history")}}</li>

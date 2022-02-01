@@ -5,7 +5,7 @@ translation_of: Web/CSS/minmax()
 ---
 <p><code><strong>minmax</strong></code><strong><code>()</code></strong> это <a href="/en-US/docs/Web/CSS">CSS</a> ф<span id="result_box" lang="ru"><span>ункция, определяющая диапазон размеров, который больше или равен </span></span><var>min</var><span lang="ru"><span> и меньше или равен </span></span><var>max</var>. Используется в <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">CSS Grids</a>.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* &lt;inflexible-breadth&gt;, &lt;track-breadth&gt; values */
+<pre class="brush: css no-line-numbers">/* &lt;inflexible-breadth&gt;, &lt;track-breadth&gt; values */
 minmax(200px, 1fr)
 minmax(400px, 50%)
 minmax(30%, 300px)
@@ -64,7 +64,7 @@ minmax(auto, 300px)
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css; highlight[3] notranslate">#container {
+<pre class="brush: css; highlight[3]">#container {
   display: grid;
   grid-template-columns: minmax(max-content, 300px) minmax(200px, 1fr) 150px;
   grid-gap: 5px;
@@ -83,7 +83,7 @@ minmax(auto, 300px)
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;div id="container"&gt;
+<pre class="brush: html">&lt;div id="container"&gt;
   &lt;div&gt;
     Item as wide as the content,&lt;br/&gt;
     but at most 300 pixels.
@@ -98,32 +98,17 @@ minmax(auto, 300px)
 
 <h3 id="Результат">Результат</h3>
 
-<p>{{EmbedLiveSample("Example", "100%", 200)}}</p>
+<p>{{EmbedLiveSample("Пример", "100%", 200)}}</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Спецификация</th>
-   <th>Статус</th>
-   <th>Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Grid", "#valdef-grid-template-columns-minmax", "minmax()")}}</td>
-   <td>{{Spec2("CSS Grid")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
 
-<p>{{Compat("css.properties.grid-template-columns.minmax")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
@@ -132,7 +117,7 @@ minmax(auto, 300px)
  <li>Video tutorial: <em><a href="http://gridbyexample.com/video/series-minmax/">Introducing minmax()</a></em></li>
 </ul>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
  <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>

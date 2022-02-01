@@ -21,11 +21,11 @@ RangeError: Invalid array buffer length (Chrome)
 <p>다음과 같은 원인 때문이다:</p>
 
 <ul>
- <li>2<sup>32</sup>와 같거나 이보다 긴, 혹은 음수의 길이를 가진 {{jsxref("Array")}}나 {{jsxref("ArrayBuffer")}}를 생성했기 때문에, 혹은</li>
- <li>{{jsxref("Array")}} 속성을 2<sup>32</sup>와 같거나 이보다 긴 값으로 설정했기 때문이다.</li>
+ <li>2^32와 같거나 이보다 긴, 혹은 음수의 길이를 가진 {{jsxref("Array")}}나 {{jsxref("ArrayBuffer")}}를 생성했기 때문에, 혹은</li>
+ <li>{{jsxref("Array")}} 속성을 2^32와 같거나 이보다 긴 값으로 설정했기 때문이다.</li>
 </ul>
 
-<p><code>Array와 ArrayBuffer의 길이에 제한을 둔 이유는, Array나 ArrayBuffer의 length 속성은 사인되지 않은(unsigned) 32 비트 정수로 반영되기 때문이다.</code> 즉 <code>Array나 ArrayBuffer는 오직 0 ~ </code>2<sup>32</sup>-1 사이의 값만을 저장할 수 있다.</p>
+<p><code>Array와 ArrayBuffer의 길이에 제한을 둔 이유는, Array나 ArrayBuffer의 length 속성은 사인되지 않은(unsigned) 32 비트 정수로 반영되기 때문이다.</code> 즉 <code>Array나 ArrayBuffer는 오직 0 ~ </code>2^32-1 사이의 값만을 저장할 수 있다.</p>
 
 <p>Array의 length로 해석되는 첫번째 argument로서 문자열 표기를 통해 contructor를 사용하여 Array를 생성할 수 있다.</p>
 

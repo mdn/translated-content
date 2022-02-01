@@ -8,38 +8,38 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 <p>{{AddonSidebar}}</p>
 
-<p><span class="notranslate">Расширение состоит из набора файлов, упакованных для распространения и установки.</span> <span class="notranslate"> В этой статье мы быстро рассмотрим файлы, которые могут присутствовать в расширении.</span></p>
+<p><span>Расширение состоит из набора файлов, упакованных для распространения и установки.</span> <span> В этой статье мы быстро рассмотрим файлы, которые могут присутствовать в расширении.</span></p>
 
 <h2 id="manifest.json">manifest.json</h2>
 
-<p><span class="notranslate">Это единственный файл, который должен присутствовать в каждом расширении.</span> <span class="notranslate"> Он содержит основные метаданные, такие как его имя, версию и требуемые разрешения.</span> <span class="notranslate"> Он также предоставляет указатели на другие файлы в расширении.</span></p>
+<p><span>Это единственный файл, который должен присутствовать в каждом расширении.</span> <span> Он содержит основные метаданные, такие как его имя, версию и требуемые разрешения.</span> <span> Он также предоставляет указатели на другие файлы в расширении.</span></p>
 
-<p><span class="notranslate">Этот манифест также может содержать указатели на несколько других типов файлов:</span></p>
+<p><span>Этот манифест также может содержать указатели на несколько других типов файлов:</span></p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">Background pages</a>: <span class="notranslate">Реализует долгоиграющую логику.</span></li>
- <li><span class="notranslate">Иконки для расширения и любых кнопок, которые оно может определить.</span></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages">Sidebars, popups, and options pages</a>: <span class="notranslate">HTML-документы, которые предоставляют содержимое для различных компонентов пользовательского интерфейса.</span></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">Content scripts</a>: <span class="notranslate">JavaScript сценарии вашего расширения, которые будут исполняться на веб-страницах.</span></li>
+ <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">Background pages</a>: <span>Реализует долгоиграющую логику.</span></li>
+ <li><span>Иконки для расширения и любых кнопок, которые оно может определить.</span></li>
+ <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages">Sidebars, popups, and options pages</a>: <span>HTML-документы, которые предоставляют содержимое для различных компонентов пользовательского интерфейса.</span></li>
+ <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">Content scripts</a>: <span>JavaScript сценарии вашего расширения, которые будут исполняться на веб-страницах.</span></li>
  <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Web_accessible_resources">Web-accessible resources</a>: Делает контент вашего расширения видимым для веб-страниц и скриптов.</li>
 </ul>
 
 <p><br>
  <img alt="" src="https://mdn.mozillademos.org/files/13669/webextension-anatomy.png" style="display: block; height: 581px; margin-left: auto; margin-right: auto; width: 600px;"></p>
 
-<p><span class="notranslate">Для получения подробной информации см. справочную страницу </span> <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></p>
+<p><span>Для получения подробной информации см. справочную страницу </span> <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></p>
 
-<p><span class="notranslate">Помимо ссылок, указанных в манифесте, расширение может включать дополнительные</span> <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Extension_pages">веб-страницы расширения</a><span class="notranslate"> с поддерживающимися файлами.</span></p>
+<p><span>Помимо ссылок, указанных в манифесте, расширение может включать дополнительные</span> <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Extension_pages">веб-страницы расширения</a><span> с поддерживающимися файлами.</span></p>
 
 <h2 id="Фоновые_скрипты">Фоновые скрипты</h2>
 
-<p><span class="notranslate">Расширения часто должны поддерживать долгосрочное состояние или выполнять долгосрочные операции независимо от срока жизни любой конкретной веб-страницы или окна браузера.</span> <span class="notranslate"> Для этого нужны фоновые сценарии.</span></p>
+<p><span>Расширения часто должны поддерживать долгосрочное состояние или выполнять долгосрочные операции независимо от срока жизни любой конкретной веб-страницы или окна браузера.</span> <span> Для этого нужны фоновые сценарии.</span></p>
 
-<p><span class="notranslate">Фоновые сценарии загружаются сразу после загрузки расширения и остаются загруженными до тех пор, пока расширение не будет отключено или удалено.</span> <span class="notranslate"> вы можете использовать любой</span> <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/API">API расширений</a> <span class="notranslate">в сценарии, если вы запросили необходимые </span><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">разрешения</a>.</p>
+<p><span>Фоновые сценарии загружаются сразу после загрузки расширения и остаются загруженными до тех пор, пока расширение не будет отключено или удалено.</span> <span> вы можете использовать любой</span> <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/API">API расширений</a> <span>в сценарии, если вы запросили необходимые </span><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">разрешения</a>.</p>
 
 <h3 id="Спецификации_фоновых_скриптов">Спецификации фоновых скриптов</h3>
 
-<p><span class="notranslate">Вы можете включить фоновый скрипт, используя <code>background</code> ключ в «manifest.json»:</span></p>
+<p><span>Вы можете включить фоновый скрипт, используя <code>background</code> ключ в «manifest.json»:</span></p>
 
 <pre class="brush: json">// manifest.json
 
@@ -47,9 +47,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
   "scripts": ["background-script.js"]
 }</pre>
 
-<p><span class="notranslate">Вы можете указать несколько фоновых сценариев: если вы это сделаете, они выполняются в том же контексте, как и несколько сценариев, загруженных на одной веб-странице.</span></p>
+<p><span>Вы можете указать несколько фоновых сценариев: если вы это сделаете, они выполняются в том же контексте, как и несколько сценариев, загруженных на одной веб-странице.</span></p>
 
-<p>Вместо указания <span class="notranslate">несколько фоновых сценариев</span> вы можете указать фоновую страницу, которая так же преимущества поддержки ES6 модулей:</p>
+<p>Вместо указания <span>несколько фоновых сценариев</span> вы можете указать фоновую страницу, которая так же преимущества поддержки ES6 модулей:</p>
 
 <p style="margin-bottom: 0em;"><strong>manifest.json</strong></p>
 

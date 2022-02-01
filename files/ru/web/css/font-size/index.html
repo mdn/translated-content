@@ -3,7 +3,7 @@ title: font-size
 slug: Web/CSS/font-size
 tags:
   - CSS
-  - CSS свойства
+  - CSS-свойства
   - css шрифты
 translation_of: Web/CSS/font-size
 ---
@@ -15,7 +15,7 @@ translation_of: Web/CSS/font-size
 
 <p>{{EmbedInteractiveExample("pages/css/font-size.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="brush:css">/* значения в &lt;абсолютных размерах&gt; */
 font-size: xx-small;
@@ -50,7 +50,7 @@ font-size: unset;
  <li>Как <code>&lt;значение длины&gt;</code> или <code>&lt;процентное значение&gt;</code>, по отношению к размеру родительского элемента.</li>
 </ul>
 
-<h3 id="Values" name="Values">Значения</h3>
+<h3 id="Values">Значения</h3>
 
 <dl>
  <dt><code>xx-small, x-small, small, medium, large, x-large, xx-large</code></dt>
@@ -75,15 +75,15 @@ font-size: unset;
 
 {{csssyntax}}
 
-<h2 id="Possible_approaches" name="Possible_approaches">Возможные подходы</h2>
+<h2 id="Possible_approaches">Возможные подходы</h2>
 
 <p>Существуют разные способы задания размера шрифта. С помощью ключевых слов или с помощью числовых значений для размера пикселей или размера ems.  Выберите подходящий метод в зависимости от потребностей конкретной веб-страницы.</p>
 
-<h3 id="Keywords" name="Keywords">Ключевые слова</h3>
+<h3 id="Keywords">Ключевые слова</h3>
 
 <p>Keywords are a good way to set the size of fonts on the web. By setting a keyword font size on the body element, you can set relative font-sizing everywhere else on the page, giving you the ability to easily scale the font up or down on the entire page accordingly.</p>
 
-<h3 id="Pixels" name="Pixels">Pixels</h3>
+<h3 id="Pixels">Pixels</h3>
 
 <p>Setting the font size in pixel values (<code>px</code>) is a good choice when you need pixel accuracy. A px value is static. This is an OS-independent and cross-browser way of literally telling the browsers to render the letters at exactly the number of pixels in height that you specified. The results may vary slightly across browsers, as they may use different algorithms to achieve a similar effect.</p>
 
@@ -91,7 +91,7 @@ font-size: unset;
 
 <div class="note"><strong>Note:</strong> Defining font sizes in pixel is <em><a href="https://en.wikipedia.org/wiki/Web_accessibility">not accessible</a></em>, because the user cannot change the font size from the browser. (For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer.) Therefore, avoid using pixels for font sizes if you wish to create an inclusive design.</div>
 
-<h3 id="Ems" name="Ems">Ems</h3>
+<h3 id="Ems">Ems</h3>
 
 <p>Another way of setting the font size is with <code>em</code> values. The size of an <code>em</code> value is dynamic. When defining the <code>font-size</code> property, an em is equal to the size of the font that applies to the parent of the element in question. If you haven't set the font size anywhere on the page, then it is the browser default, which is probably 16px. So, by default 1em = 16px, and 2em = 32px. If you set a <code>font-size</code> of 20px on the body element, then 1em = 20px and 2em = 40px. Note that the value 2 is essentially a multiplier of the current em size.</p>
 
@@ -125,7 +125,7 @@ span {
 
 <p>Assuming that the browser's default <code>font-size</code> is 16px, the words "outer" would be rendered at 16px, but the word "inner" would be rendered at 25.6px. This is because the inner span's <code>font-size</code> is 1.6 em which is relative to its parent's <code>font-size</code>, which is in turn relative to its parent's <code>font-size</code>. This is often called <strong>compounding</strong>.</p>
 
-<h3 id="Rems" name="Rems">Rems</h3>
+<h3 id="Rems">Rems</h3>
 
 <p><code>rem</code> values were invented in order to sidestep the compounding problem. <code>rem</code> values are relative to the root <code>html</code> element, not the parent element. In other words, it lets you specify a font size in a relative fashion without being affected by the size of the parent, thereby eliminating compounding.</p>
 
@@ -147,9 +147,9 @@ span {
 
 <p>In this example, the words "outer inner outer" are all displayed at 16px (assuming that the browser's font-size has been left at the default value of 16px).</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_1" name="Example_1">Пример 1</h3>
+<h3 id="Example_1">Пример 1</h3>
 
 <pre class="brush: css">/* Set paragraph text to be very large. */
 p { font-size: xx-large }
@@ -185,46 +185,16 @@ span { font-size: 16px; }
 
 <h4 id="Live_Sample">Live Sample</h4>
 
-<p>{{EmbedLiveSample('%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80_2','600','200')}}</p>
+<p>{{EmbedLiveSample('Пример_2','600','200')}}</p>
 
-<h2 id="Notes" name="Notes">Примечание</h2>
+<h2 id="Notes">Примечание</h2>
 
 <p><code>em</code> and <code>ex</code> units on the {{Cssxref("font-size")}} property are relative to the parent element's font size (unlike all other properties, where they're relative to the font size on the element). This means <code>em</code> units and percentages do the same thing for {{Cssxref("font-size")}}.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'font-size')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Defines <code>font-size</code> as animatable.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font-size', 'font-size')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость браузеров</h2>
+<h2 id="Browser_compatibility">Совместимость браузеров</h2>
 
-<p>{{Compat("css.properties.font-size")}}</p>
+<p>{{Compat}}</p>

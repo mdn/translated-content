@@ -49,11 +49,11 @@ translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 <ol>
  <li>Для начала перейдите на ваш тестовый сайт и создайте папку с именем 'scripts' (без кавычек). Затем, в новой папке скриптов, которую вы только что создали, создайте новый файл с именем <code>main.js</code>. Сохраните его в вашей папке <code>scripts</code>.</li>
  <li>Далее перейдите в ваш <code>index.html</code> файл и введите следующий элемент на новой строке прямо перед закрывающим тегом <code>&lt;/body&gt;</code>:
-  <pre class="brush: html notranslate">&lt;script src="scripts/main.js"&gt;&lt;/script&gt;</pre>
+  <pre class="brush: html">&lt;script src="scripts/main.js"&gt;&lt;/script&gt;</pre>
  </li>
  <li> В основном этот код выполняет ту же работу, что и элемент {{htmlelement("link")}} для CSS — добавляет JavaScript на страницу, позволяя ему взаимодействовать с HTML (и CSS, и чем-нибудь ещё на странице).</li>
  <li>Теперь добавьте следующий код в файл <code>main.js</code>:
-  <pre class="brush: js notranslate">var myHeading = document.querySelector('h1');
+  <pre class="brush: js">var myHeading = document.querySelector('h1');
 myHeading.textContent = 'Hello world!';</pre>
  </li>
  <li>Теперь убедитесь, что HTML и JavaScript файлы сохранены, и загрузите <code>index.html</code> в браузере. Вы должны увидеть что-то вроде этого: <img alt="" src="hello-world.png" style="display: block; margin: 0px auto;"></li>
@@ -81,7 +81,7 @@ myHeading.textContent = 'Hello world!';</pre>
 
 <p>{{Glossary("Variable", "Переменные")}} — это контейнеры, внутри которых вы можете хранить значения. Вы начинаете с того, что объявляете переменную с помощью ключевого слова <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/var">var</a></code> <span class="tlid-translation translation" lang="ru"><span title="">(не рекомендуется, продолжайте читать, чтобы получить объяснения)</span></span> или <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, за которым следует любое имя, которым вы захотите её назвать:</p>
 
-<pre class="brush: js notranslate">let myVariable;</pre>
+<pre class="brush: js">let myVariable;</pre>
 
 <div class="note">
 <p><strong>Примечание</strong>: Точка с запятой в конце строки указывает, где заканчивается оператор; это абсолютно необходимо, когда вам нужно разделить оператора на одной строке. Однако некоторые люди считают, что хорошая практика - указывать их в конце каждого оператора. Существуют и другие правила, когда вы должны и не должны их использовать - смотрите более подробно в статье <a href="http://news.codecademy.com/your-guide-to-semicolons-in-javascript/">ваше руководство по точкам с запятой в JavaScript</a>.</p>
@@ -101,19 +101,19 @@ myHeading.textContent = 'Hello world!';</pre>
 
 <p>После объявления переменной вы можете присвоить ей значение:</p>
 
-<pre class="brush: js notranslate">myVariable = 'Bob';</pre>
+<pre class="brush: js">myVariable = 'Bob';</pre>
 
 <p>Вы можете сделать обе эти операции на одной и той же строке, если вы захотите:</p>
 
-<pre class="brush: js notranslate">var myVariable = 'Bob';</pre>
+<pre class="brush: js">var myVariable = 'Bob';</pre>
 
 <p>Вы можете получить значение, просто вызвав переменную по имени:</p>
 
-<pre class="brush: js notranslate">myVariable;</pre>
+<pre class="brush: js">myVariable;</pre>
 
 <p>После установки значения переменной  вы можете изменить его позже:</p>
 
-<pre class="notranslate">var myVariable = 'Bob';
+<pre>var myVariable = 'Bob';
 myVariable = 'Steve';</pre>
 
 <p>Обратите внимание, что переменные имеют разные <a href="/ru/docs/Web/JavaScript/Data_structures">типы данных</a>:</p>
@@ -162,15 +162,15 @@ myVariable = 'Steve';</pre>
 
 <h3 id="Комментарии">Комментарии</h3>
 
-<p>Комментарии - это, по сути, короткие фрагменты текста, которые могут быть добавлены в код, и которые игнорируются браузером. Вы можете поместить комментарии в JavaScript код, так же как вы делали это в CSS:</p>
+<p>Комментарии - это, по сути, короткие фрагменты текста, которые могут быть добавлены в код, и которые игнорируются браузером. Вы можете поместить комментарии в JavaScript-код, так же как вы делали это в CSS:</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Всё, что находится тут - комментарий.
 */</pre>
 
 <p>Если ваш комментарий не содержит переноса строк, то зачастую легче поставить две косые черты, как тут:</p>
 
-<pre class="brush: js notranslate" style="font-size: 14px;">// Это комментарий
+<pre class="brush: js" style="font-size: 14px;">// Это комментарий
 </pre>
 
 <h3 id="Операторы">Операторы</h3>
@@ -244,7 +244,7 @@ myVariable = 'Steve';</pre>
 
 <p>Условия — это кодовые структуры, которые позволяют вам проверять, истинно или ложно выражение, а затем выполнить другой код в зависимости от результата. Самая распространённая форма условия называется, <code>if ... else</code>. Например:</p>
 
-<pre class="brush: js notranslate">var iceCream = 'chocolate';
+<pre class="brush: js">var iceCream = 'chocolate';
 if (iceCream === 'chocolate') {
   alert('Yay, I love chocolate ice cream!');
 } else {
@@ -259,10 +259,10 @@ if (iceCream === 'chocolate') {
 
 <ol>
  <li>
-  <pre class="brush: js notranslate">var myVariable = document.querySelector('h1');</pre>
+  <pre class="brush: js">var myVariable = document.querySelector('h1');</pre>
  </li>
  <li>
-  <pre class="brush: js notranslate">alert('hello!');</pre>
+  <pre class="brush: js">alert('hello!');</pre>
  </li>
 </ol>
 
@@ -274,14 +274,14 @@ if (iceCream === 'chocolate') {
 
 <p>Хорошая новость заключается в том, что вы можете определить свои собственные функции — в следующем примере мы напишем простую функцию, которая принимает два числа в качестве аргументов и умножает их:</p>
 
-<pre class="brush: js notranslate">function multiply(num1,num2) {
+<pre class="brush: js">function multiply(num1,num2) {
   var result = num1 * num2;
   return result;
 }</pre>
 
 <p>Попробуйте запустить вышеупомянутую функцию в консоли, затем попробуйте изменить аргументы, например:</p>
 
-<pre class="brush: js notranslate">multiply(4,7);
+<pre class="brush: js">multiply(4,7);
 multiply(20,20);
 multiply(0.5,3);</pre>
 
@@ -291,9 +291,9 @@ multiply(0.5,3);</pre>
 
 <h3 id="События">События</h3>
 
-<p>Для создания действительной интерактивности на веб-сайте вам необходимы события. События — это структура, которая слушает то, что происходит в браузере, а затем позволяет вам запускать код в ответ на это. Наиболее очевидным является <a href="/ru/docs/Web/Events/click">событие клика</a>, которое вызывается браузером, когда мы щёлкаем по чему-то мышью. Для демонстрации этого события введите следующую команду в вашу консоль, а затем щёлкните по текущей веб-странице:</p>
+<p>Для создания действительной интерактивности на веб-сайте вам необходимы события. События — это структура, которая следит за тем, что происходит в браузере, а затем позволяет вам запускать код в ответ на это. Наиболее очевидным является <a href="/ru/docs/Web/Events/click">событие клика</a>, которое вызывается браузером, когда мы щёлкаем по чему-то мышью. Для демонстрации этого события введите следующую команду в вашу консоль, а затем щёлкните по текущей веб-странице:</p>
 
-<pre class="brush: js notranslate">document.querySelector('html').onclick = function() {
+<pre class="brush: js">document.querySelector('html').onclick = function() {
     alert('Ouch! Stop poking me!');
 }</pre>
 
@@ -301,11 +301,11 @@ multiply(0.5,3);</pre>
 
 <p>Обратите внимание, что</p>
 
-<pre class="brush: js notranslate">document.querySelector('html').onclick = function() {};</pre>
+<pre class="brush: js">document.querySelector('html').onclick = function() {};</pre>
 
 <p>эквивалентно</p>
 
-<pre class="brush: js notranslate">var myHTML = document.querySelector('html');
+<pre class="brush: js">var myHTML = document.querySelector('html');
 myHTML.onclick = function() {};</pre>
 
 <p>Просто так короче.</p>
@@ -323,7 +323,7 @@ myHTML.onclick = function() {};</pre>
  <li>Сохраните изображение в вашу папку <code>images</code>.</li>
  <li>Переименуйте это изображение в 'firefox2.png' (без кавычек).</li>
  <li>Перейдите в ваш файл <code>main.js</code> и введите следующий JavaScript. (Если ваш "hello world" JavaScript по-прежнему существует, удалите его.)
-  <pre class="brush: js notranslate">var myImage = document.querySelector('img');
+  <pre class="brush: js">var myImage = document.querySelector('img');
 
 myImage.onclick = function() {
     var mySrc = myImage.getAttribute('src');
@@ -356,21 +356,21 @@ myImage.onclick = function() {
 <ol>
  <li>В <code>index.html</code>, добавьте следующую строку перед элементом {{htmlelement("script")}}:
 
-  <pre class="brush: html notranslate">&lt;button&gt;Change user&lt;/button&gt;</pre>
+  <pre class="brush: html">&lt;button&gt;Change user&lt;/button&gt;</pre>
  </li>
  <li>В <code>main.js</code>, добавьте следующий код в конец файла, точно так, как написано - он захватит ссылки на новую кнопку и заголовок, и сохранит их в переменные:
-  <pre class="brush: js notranslate">var myButton = document.querySelector('button');
+  <pre class="brush: js">var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');</pre>
  </li>
  <li>Теперь добавьте следующую функцию для установки персонализированного приветствия - она ничего не будет делать, но мы будем использовать её позже:
-  <pre class="brush: js notranslate">function setUserName() {
+  <pre class="brush: js">function setUserName() {
   var myName = prompt('Please enter your name.');
   localStorage.setItem('name', myName);
   myHeading.<span class="pl-smi">textContent</span> = 'Mozilla is cool, ' + myName;
 }</pre>
   Эта функция содержит функцию <a href="/ru/docs/Web/API/Window.prompt"><code>prompt()</code></a>, которая вызывает диалоговое окно, немного похожее на <code>alert()</code> кроме того, что <code>prompt()</code> просит пользователя ввести некоторые данные, и сохраняет эти данные в переменной, после того как пользователь нажимает <strong>OK</strong>. В данном случае, мы просим пользователя ввести его имя. Далее, мы вызываем API под названием <code>localStorage</code>, который позволяет нам хранить данные в браузере и извлекать их позднее. Мы используем функцию <code>setItem()</code> из localStorage для создания и хранения данных в свойстве под названием <code>'name'</code>, и устанавливаем это значение в переменную <code>myName</code>, которая содержит имя введённое пользователем. В конце мы устанавливаем <code>textContent</code> заголовку в виде строки и имени пользователя.</li>
  <li>Затем добавьте блок <code>if ... else</code> - мы могли бы назвать это кодом инициализации, поскольку он структурирует приложение при его первой загрузке:
-  <pre class="brush: js notranslate">if(!localStorage.getItem('name')) {
+  <pre class="brush: js">if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   var storedName = localStorage.getItem('name');
@@ -378,7 +378,7 @@ var myHeading = document.querySelector('h1');</pre>
 }</pre>
   Этот блок сначала использует оператор отрицания (логическое НЕ, представленное в виде !) чтобы проверить, существуют ли данные в пункте <code>name</code>. Если нет, то функция <code>setUserName()</code> запускается для их создания. Если данные существуют (то есть, пользователь установил его во время предыдущего посещения), мы извлекаем сохранённое имя, с помощью <code>getItem()</code> и устанавливаем <code>textContent</code> заголовку в виде строки плюс имя пользователя, так же, как мы делали внутри <code>setUserName()</code>.</li>
  <li>Наконец, установите обработчик события <code>onclick</code> на кнопку. При нажатии кнопки запускается функция <code>setUserName()</code>. Это позволяет пользователю установить новое имя, всякий раз, когда он захочет, нажатием кнопки:
-  <pre class="brush: js notranslate">myButton.onclick = function() {
+  <pre class="brush: js">myButton.onclick = function() {
   setUserName();
 }
 </pre>

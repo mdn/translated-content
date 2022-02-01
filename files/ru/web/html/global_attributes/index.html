@@ -6,10 +6,10 @@ translation_of: Web/HTML/Global_attributes
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
 <div class="summary">
-<p><strong>Глобальные атрибуты </strong>—<strong> это атрибуты общие для всех HTML элементов</strong>; они могут использоваться всеми элементами, хотя на некоторые элементы могут не оказывать влияния.</p>
+<p><strong>Глобальные атрибуты </strong>—<strong> это атрибуты общие для всех HTML-элементов</strong>; они могут использоваться всеми элементами, хотя на некоторые элементы могут не оказывать влияния.</p>
 </div>
 
-<p>Глобальные атрибуты могут быть указаны для любых <a href="/ru/docs/Web/HTML/Element">элементов HTML</a>, <em>даже для тех, которые не указаны в стандарте.</em> Это значит, что все нестандартные элементы должны допускать эти атрибуты, даже если использование этих элементов означает, что документ больше не является HTML5-совместимым. Например, HTML5-совместимые браузеры скрывают содержимое, помеченное как <code>&lt;foo hidden&gt;...&lt;foo&gt;</code><code>, хотя </code><code>&lt;foo&gt;</code> не является верным HTML элементом.</p>
+<p>Глобальные атрибуты могут быть указаны для любых <a href="/ru/docs/Web/HTML/Element">элементов HTML</a>, <em>даже для тех, которые не указаны в стандарте.</em> Это значит, что все нестандартные элементы должны допускать эти атрибуты, даже если использование этих элементов означает, что документ больше не является HTML5-совместимым. Например, HTML5-совместимые браузеры скрывают содержимое, помеченное как <code>&lt;foo hidden&gt;...&lt;foo&gt;</code><code>, хотя </code><code>&lt;foo&gt;</code> не является верным HTML-элементом.</p>
 
 <p>В дополнение к <em>основным </em>для HTML глобальным атрибутам, также существуют следующие глобальные атрибуты:</p>
 
@@ -102,48 +102,11 @@ translation_of: Web/HTML/Global_attributes
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "dom.html#global-attributes", "Global attributes")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td><strong>temid</strong>, <strong>itemprop</strong>, <strong>itemref</strong>, <strong>itemscope</strong>, и <strong>itemtype</strong> были добавлены из последнего снимка — {{SpecName('HTML5.1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "dom.html#global-attributes", "Global attributes")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Снимок {{SpecName('HTML WHATWG')}}. <strong>spellcheck</strong>, <strong>draggable</strong> и <strong>dropzone</strong> были добавлены из {{SpecName('HTML5 W3C')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "dom.html#global-attributes", "Global attributes")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Снимок {{SpecName('HTML WHATWG')}}. Концепция глобальных атрибутов представлена начиная с {{SpecName("HTML4.01")}} и атрибуты <strong>dir</strong>, <strong>lang</strong>, <strong>style</strong>, <strong>id</strong>, <strong>class</strong>, <strong>tabindex</strong>, <strong>accesskey</strong> и <strong>title</strong> становятся глобальными.<br>
-    <strong>xml:lang</strong> который был частью XHTML, теперь также является частью HTML.<br>
-    Были добавлены <strong>hidden</strong>, <strong>data-*</strong>, <strong>contextmenu</strong>, <strong>contenteditable</strong> и <strong><strong>translate</strong></strong>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Глобальные атрибуты на определены. Некоторые атрибуты из тех, что стали глобальными в последующих спецификациях, определены в подмножестве элементов .<br>
-    <strong>class</strong> и <strong>style</strong> поддерживаются для всех элементов кроме {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} и {{HTMLElement("title")}}.<br>
-    <strong>dir</strong> поддерживается для всех элементов кроме {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}} и {{HTMLElement("script")}}.<br>
-    <strong>id</strong> поддерживается для всех элементов кроме {{HTMLElement("base")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} и {{HTMLElement("title")}}.<br>
-    <strong>lang</strong> поддерживается для всех элементов кроме {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}} и {{HTMLElement("script")}}.<br>
-    <strong>tabindex</strong> поддерживается только для {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}} и {{HTMLElement("textarea")}}.<br>
-    <strong>accesskey</strong> поддерживается только для {{ HTMLElement("a") }}, {{ HTMLElement("area") }}, {{ HTMLElement("button") }}, {{ HTMLElement("input") }}, {{ HTMLElement("label") }}, {{ HTMLElement("legend") }} и {{ HTMLElement("textarea") }}.<br>
-    <strong>title</strong> поддерживается для всех элементов кроме {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}} и {{HTMLElement("title")}}.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("html.global_attributes")}}</p>
+<p>{{Compat}}</p>
 
 <div id="compat-desktop"></div>
 

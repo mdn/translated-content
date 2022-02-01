@@ -26,7 +26,7 @@ translation_of: Web/API/GamepadButton
 
 <p>Приведённый код взят из моего<em> (автора статьи)</em> демо Gamepad API button (вы можете  <a href="http://chrisdavidmills.github.io/gamepad-buttons/">Посмотреть демо</a>, и <a href="https://github.com/chrisdavidmills/gamepad-buttons/tree/master">посмотреть исходники на GitHub</a>). Важно — в Chrome {{domxref("Navigator.getGamepads")}} необходимо установить префикс <code>webkit</code>, и значения кнопки будут представлять из себя массив дробных чисел, тогда как в  Firefox {{domxref("Navigator.getGamepads")}} нет необходимости устанавливать префикс, и значения будут представлять собой массив  объектов {{domxref("GamepadButton")}}; Свойство {{domxref("GamepadButton.value")}} или {{domxref("GamepadButton.pressed")}} необходимо для получения состояния кнопки, в зависимости от от типа кнопки. В данном простом примере обрабатывается оба вида кнопок.</p>
 
-<pre class="brush: js notranslate">function gameLoop() {
+<pre class="brush: js">function gameLoop() {
   if(navigator.webkitGetGamepads) {
     var gp = navigator.webkitGetGamepads()[0];
 
@@ -78,7 +78,7 @@ translation_of: Web/API/GamepadButton
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GamepadButton")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

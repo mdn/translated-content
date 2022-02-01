@@ -36,7 +36,7 @@ translation_of: Web/API/EventTarget/addEventListener
 
 <dl>
  <dt><code><var>type</var></code></dt>
- <dd>対象とする<a href="/en-US/docs/Web/Events">イベントの種類</a>を表す文字列</dd>
+ <dd>対象とする<a href="/ja/docs/Web/Events">イベントの種類</a>を表す文字列</dd>
  <dt><code><var>listener</var></code></dt>
  <dd>指定された型のイベントが発生するときに通知 ({{domxref("Event")}} インターフェースを実装しているオブジェクト) を受け取るオブジェクト。これは、 {{domxref("EventListener")}} インタフェースを実装するオブジェクト、あるいは、単純に、JavaScript の<a href="/ja/docs/Web/JavaScript/Guide/Functions">関数</a>でなければなりません。コールバックについて詳しくは、{{anch("The event listener callback", "イベントリスナーのコールバック")}}を参照してください。</dd>
  <dt><code><var>options</var></code> {{optional_inline}}</dt>
@@ -237,7 +237,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);
     &lt;a class="inner1" href="https://www.mozilla.org" target="_blank"&gt;
       inner1, passive &amp; preventDefault(which is not allowed)
     &lt;/a&gt;
-    &lt;a class="inner2" href="https://developer.mozilla.org/" target="_blank"&gt;
+    &lt;a class="inner2" href="/" target="_blank"&gt;
       inner2, none-passive &amp; preventDefault(not open new page)
     &lt;/a&gt;
   &lt;/div&gt;

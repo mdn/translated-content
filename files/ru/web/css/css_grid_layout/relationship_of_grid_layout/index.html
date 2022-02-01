@@ -22,7 +22,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <div id="onedtwod">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -40,7 +40,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two&lt;/div&gt;
    &lt;div&gt;Three&lt;/div&gt;
@@ -49,7 +49,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
    display: flex;
    flex-wrap: wrap;
 }
@@ -69,9 +69,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <p>В примере ниже мы создаём тот же самый макет, но используя гриды. На этот раз у нас три трека-колонки шириной в <code>1fr</code> . И при этом нам не требуется задавать какие-либо свойства дочерним элементам, потому что они самостоятельно занимают по одной ячейке созданного грида. Как видите, наши элементы лежат в жёсткой сетке и выравниваются и по строке, и по колонке. Поскольку у нас пять элементов, в результате мы получаем пустую ячейку в конце второй строки. </p>
 
-<div class="Two_Dimensional_With_Grid">
+<div id="Two_Dimensional_With_Grid">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -89,7 +89,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two&lt;/div&gt;
    &lt;div&gt;Three&lt;/div&gt;
@@ -98,7 +98,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
 }
@@ -133,7 +133,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 <p>В первом примере, использующем flexbox, у нас есть контейнер с тремя элементами. Для блока-обёртки wrapper установлено свойство {{cssxref("min-height")}}, и оно задаёт высоту flex-контейнера. Мы установили свойство {{cssxref("align-items")}} flex-контейнера в значение <code>flex-end</code> , поэтому элементы выравниваются по концу flex-контейнера. Мы также установили значение свойства {{cssxref("align-self")}} для <code>box1</code>  таким образом, что оно перезапишет поведение по умолчанию и заставит наш блок растянутся на всю высоту контейнера. Для <code>box2</code> свойство {{cssxref("align-self")}} установлено таким образом, что блок перепрыгнет в начало flex-контейнера.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -151,14 +151,14 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
    display: flex;
    align-items: flex-end;
    min-height: 200px;
@@ -171,14 +171,14 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Box_alignment', '300', '230') }}</p>
+<p>{{ EmbedLiveSample('Выравнивание_блоков', '300', '230') }}</p>
 
 <h3 id="Тем_временем_в_параллельной_вселенной_выравнивание_в_CSS_Гридах">Тем временем в параллельной вселенной: выравнивание в CSS Гридах</h3>
 
 <p>Второй пример использует грид, чтобы создать тот же самый макет, и на этот раз мы рассмотрим то, как свойства выравнивания блоков применяются к гридам. Вместо <code>flex-start</code> и <code>flex-end</code> мы задаём <code>start</code> и <code>end</code> . В случае с макетом на гридах мы выравниваем элементы внутри их грид-области, в данном примере - это одна единственная грид-ячейка, но в целом грид-область может состоять из нескольких грид-ячеек.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -196,14 +196,14 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
    display: grid;
    grid-template-columns: repeat(3,1fr);
    align-items: end;
@@ -216,7 +216,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Alignment_in_CSS_Grids', '200', '310') }}</p>
+<p>{{ EmbedLiveSample('Тем_временем_в_параллельной_вселенной_выравнивание_в_CSS_Гридах', '200', '310') }}</p>
 
 <h3 id="Единица_fr_и_flex-basis">Единица <code>fr</code> и <code>flex-basis</code></h3>
 
@@ -233,7 +233,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 <p>В примере ниже мы используем ключевое слово <code>auto-fill</code> вместо целого числа в repeat-нотации и задаём структуру треков размером в 200 пикселей. Это значит, что грид создаст столько треков-колонок размером в 200 пикселей, сколько их может разместиться в контейнере.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -251,27 +251,27 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two&lt;/div&gt;
    &lt;div&gt;Three&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
    display: grid;
    grid-template-columns: repeat(auto-fill, 200px);
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Auto-filling_grid_tracks', '500', '170') }}</p>
+<p>{{ EmbedLiveSample('Автозаполнение_грид-треков', '500', '170') }}</p>
 
 <h3 id="Переменное_количество_треков">Переменное количество треков</h3>
 
 <p>Давайте вспомним пример с flexbox, когда элементы, размер которых больше 200 пикселей, переходят на новую строку. Тот же самый эффект в гридах мы можем получить комбинируя <code>auto-fill</code> и функцию {{cssxref("minmax", "minmax()")}}. В примере ниже мы создаём автозаполненные треки с помощью <code>minmax</code>. Мы хотим, чтобы треки были как минимум 200 пикселей в ширину, это наше минимальное значение, а для максимального зададим <code>1fr</code>. В процессе, когда браузер вычисляет, сколько блоков в 200 пикселей может разместиться в контейнере - при этом учитывая грид-зазоры - он расценивает максимум <code>1fr</code> как инструкцию распределить оставшееся свободное пространство между этими блоками.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -289,20 +289,20 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div&gt;One&lt;/div&gt;
    &lt;div&gt;Two&lt;/div&gt;
    &lt;div&gt;Three&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 </pre>
 
-<p>{{ EmbedLiveSample('A_flexible_number_of_tracks', '500', '170') }}</p>
+<p>{{ EmbedLiveSample('Переменное_количество_треков', '500', '170') }}</p>
 
 <p>Собственно, теперь у нас есть возможность создавать гриды с переменным количеством или с переменным размером треков и при этом по-прежнему держать элементы в жёсткой сетке из строк и колонок.</p>
 
@@ -317,7 +317,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 <p>В примере ниже у нас есть блок-обёртка с четырьмя дочерними элементами. Третий элемент абсолютно позиционирован и одновременно размещён в гриде с помощью привязки к грид-линиям. У грид-контейнера <code>position:</code> <code>relative</code> , поэтому он становится контекстом позиционирования для нашего третьего элемента.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -335,7 +335,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;
@@ -346,7 +346,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
    display: grid;
    grid-template-columns: repeat(4,1fr);
    grid-auto-rows: 200px;
@@ -364,7 +364,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 }
 </pre>
 
-<p>{{ EmbedLiveSample('A_grid_container_as_containing_block', '500', '330') }}</p>
+<p>{{ EmbedLiveSample('Грид-контейнер_как_контейнерный_блок', '500', '330') }}</p>
 
 <p>Вы видите, что наш элемент занимает область от колоночной грид-линии 2 до колоночной грид-линии 4 и начинается после строчной линии 1. С помощью свойств left и top мы сдвигаем его относительно этой области. В то же время, он изымается из потока так же, как и любой другой элемент с абсолютным позиционированием, поэтому правила авторазмещения теперь помещают другие элементы на его место. Абсолютное позиционирование нашего элемент также не приводит к появлению новой строки.</p>
 
@@ -385,7 +385,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 <p>Задаём <code>.box3</code> свойство position в значении relative и затем перемещаем наш под-элемент с помощью свойств сдвига.  В данном случае контекстом позиционирования является грид-область.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -403,7 +403,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;One&lt;/div&gt;
    &lt;div class="box2"&gt;Two&lt;/div&gt;
    &lt;div class="box3"&gt;Three
@@ -415,7 +415,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
    display: grid;
    grid-template-columns: repeat(4,1fr);
    grid-auto-rows: 200px;
@@ -439,7 +439,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 }
 </pre>
 
-<p>{{ EmbedLiveSample('With_a_grid_area_as_the_parent', '500', '420') }}</p>
+<p>{{ EmbedLiveSample('А_что_если_родительский_элемент_-_это_грид-область', '500', '420') }}</p>
 
 <h2 id="Грид_и_display_contents">Грид и <code>display:</code> <code>contents</code></h2>
 
@@ -453,7 +453,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <div id="Display_Contents_Before">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -477,7 +477,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box box1"&gt;
        &lt;div class="nested"&gt;a&lt;/div&gt;
        &lt;div class="nested"&gt;b&lt;/div&gt;
@@ -490,7 +490,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-auto-rows: minmax(100px, auto);
@@ -509,7 +509,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <div id="Display_Contents_After">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -533,7 +533,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box box1"&gt;
        &lt;div class="nested"&gt;a&lt;/div&gt;
        &lt;div class="nested"&gt;b&lt;/div&gt;
@@ -546,7 +546,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-auto-rows: minmax(100px, auto);
@@ -567,7 +567,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <p>Как вы могли увидеть, CSS Grid Layout - это часть вашего инструментария. Не бойтесь смешивать его с другими методами создания макетов, чтобы получить различные эффекты. И не переключайтесь, дальше будет много интересного.</p>
 
-<section class="Quick_links" id="Quick_Links">
+<section id="Quick_links">
 <ol>
  <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
  <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>

@@ -1,0 +1,127 @@
+---
+title: WindowBase64.btoa()
+slug: Web/API/btoa
+tags:
+  - API
+  - Base-64
+  - Base64
+  - Method
+  - Reference
+  - Referencja
+  - WindowBase64
+translation_of: Web/API/WindowOrWorkerGlobalScope/btoa
+original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
+---
+<p>{{APIRef}}</p>
+<p>Tworzy string ASCII zakodowany w base-64 z ciągu ("string") danych binarnych.</p>
+<p>Metoda ta jednak nie nadaje się do konwertowania surowych ciągów <a href="http://www.unicode.org/standard/WhatIsUnicode.html">Unicode</a>! Zobacz sekcję Unicode poniżej.</p>
+<h2 id="Syntax" name="Syntax">Składnia</h2>
+<pre class="syntaxbox">var zakodowaneDane = window.btoa(<em>ciagDoZakodowania</em>);</pre>
+<h2 id="Example" name="Example">Przykład</h2>
+<pre class="brush:js">var zakodowaneDane = window.btoa("Hello, world"); // kodowanie ciągu
+var odkodowaneDane = window.atob(zakodowaneDane); // odkodowywanie ciągu ("Hello, world")
+</pre>
+<h2 id="Notes" name="Notes">Uwagi</h2>
+<p>Możesz używać tej metody do kodowania danych, które w innym wypadku mogą powodować problemy z komunikacją. Przekaż je, a następnie użyj metody <code><a href="/pl/docs/Web/API/WindowBase64.atob" title="DOM/window.atob">window.atob()</a></code> aby odkodować dane ponownie. Na przykład możesz zakodować znaki kontrolne takie jak ASCII o wartości od 0 do 31.</p>
+<p><code>btoa()</code> jest także dostępne dla komponentów XPCOM zaimplementowanych w JavaScript, nawet jeżeli <a href="/pl/docs/DOM/window" title="DOM/window"><code>window</code></a> nie jest globalnym obiektem w komponencie.</p>
+<h2 id="Ciągi_Unicode">Ciągi Unicode</h2>
+<p>W większości przeglądarek odwołanie się do <code>window.btoa()</code> z ciągiem Unicode spowoduje wystąpienie wyjątku <code>Character Out Of Range</code>.</p>
+<p>Aby tego uniknąć, rozważ ten model odnotowany przez <a class="external" href="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html">Johana Sundströma</a>:</p>
+<pre class="brush:js">function utf8_to_b64( str ) {
+    return window.btoa(encodeURIComponent( escape( str )));
+}
+
+function b64_to_utf8( str ) {
+    return unescape(decodeURIComponent(window.atob( str )));
+}
+
+// Usage:
+utf8_to_b64('✓ à la mode'); // JTI1dTI3MTMlMjUyMCUyNUUwJTI1MjBsYSUyNTIwbW9kZQ==
+b64_to_utf8('JTI1dTI3MTMlMjUyMCUyNUUwJTI1MjBsYSUyNTIwbW9kZQ=='); // "✓ à la mode"
+
+utf8_to_b64('I \u2661 Unicode!'); // SSUyNTIwJTI1dTI2NjElMjUyMFVuaWNvZGUlMjUyMQ==
+b64_to_utf8('SSUyNTIwJTI1dTI2NjElMjUyMFVuaWNvZGUlMjUyMQ=='); // "I ♡ Unicode!"
+
+</pre>
+<p>Lepszym, bardziej wiarygodnym i mniej wymagającym rozwiązaniem jest konwersja <code><a href="/pl/docs/Web/API/DOMString">DOMString</a></code> do ciągu zakodowanego w UTF-8 używając <a href="/pl/docs/Web/JavaScript/Typed_arrays">TypedArray</a>. W tym celu proszę zapoznać się z <a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8">tym akapitem</a>.</p>
+<h2 id="Browser_compatibility" name="Browser_compatibility">Specyfikacje</h2>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specyfikacja</th>
+   <th scope="col">Status</th>
+   <th scope="col">Komentarz</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Brak zmian od ostatniej migawki, {{SpecName("HTML5.1")}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>Migawka {{SpecName("HTML WHATWG")}}. Bez zmian.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5 W3C", "#dom-windowbase64-btoa", "WindowBase64.btoa()")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Migawka {{SpecName("HTML WHATWG")}}. Utworzenie <code>WindowBase64</code> (properties where on the target before it).</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Browser_compatibility" name="Browser_compatibility">Zgodność przeglądarek</h2>
+<div>
+ {{CompatibilityTable}}</div>
+<div id="compat-desktop">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Funkcja</th>
+    <th>Chrome</th>
+    <th>Firefox (Gecko)</th>
+    <th>Internet Explorer</th>
+    <th>Opera</th>
+    <th>Safari (WebKit)</th>
+   </tr>
+   <tr>
+    <td>Podstawowa obsługa</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatGeckoDesktop(1)}}[1]</td>
+    <td>10</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Funkcja</th>
+    <th>Android</th>
+    <th>Firefox Mobile (Gecko)</th>
+    <th>IE Mobile</th>
+    <th>Opera Mobile</th>
+    <th>Safari Mobile</th>
+   </tr>
+   <tr>
+    <td>Podstawowa obsługa</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatGeckoMobile(1)}}</td>
+    <td>{{CompatNo}}</td>
+    <td>{{CompatUnknown}}</td>
+    <td>{{CompatVersionUnknown}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<p>[1] <code>btoa()</code> jest także dostępna dla komponentów XPCOM zaimplementowanych w JavaScript, nawet jeżeli <code><a href="/pl/docs/DOM/window" lang="pl">window</a></code> nie jest globalnym obiektem w komponencie<code>.</code></p>
+<h2 id="See_also" name="See_also">Zobacz też</h2>
+<ul>
+ <li><a href="/Web/API/WindowBase64/Base64_encoding_and_decoding">Kodowanie i dekodowanie Base64</a></li>
+ <li><a href="/pl/docs/data_URIs"><code>data</code> URIs</a></li>
+ <li><a href="/pl/docs/Web/API/WindowBase64.atob"><code>window.atob()</code></a></li>
+</ul>

@@ -5,11 +5,11 @@ translation_of: Web/API/Window/getSelection
 ---
 <div>{{ ApiRef() }}</div>
 
-<h2 id="Summary" name="Summary">Коротко</h2>
+<h2 id="Summary">Коротко</h2>
 
 <p>Метод возвращает объект {{domxref("Selection")}}, представленный в виде диапазона текста, который пользователь выделил на странице.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>selection</em> = <em>window</em>.getSelection();</pre>
 
@@ -19,7 +19,7 @@ translation_of: Web/API/Window/getSelection
 
 <p>При добавлении в параметр пустую строку или воспользовавшись методом {{jsxref("Selection.toString()")}} вам вернут строку, которую выделил пользователь.</p>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush:js">function foo() {
     var selObj = window.getSelection();
@@ -28,7 +28,7 @@ translation_of: Web/API/Window/getSelection
     // вернёт диапазон Range
 }</pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <h3 id="String_representation_of_the_Selection_object">String representation of the Selection object</h3>
 
@@ -53,35 +53,15 @@ translation_of: Web/API/Window/getSelection
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Selection API", "#extensions-to-window-interface", "Window.getSelection()")}}</td>
-   <td>{{Spec2("Selection API")}}</td>
-   <td>Новая специф.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML Editing", "#dom-window-getselection", "Window.getSelection()")}}</td>
-   <td>{{Spec2("HTML Editing")}}</td>
-   <td>Начальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
 
-<p>{{Compat("api.Window.getSelection")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also"></h2>
+<h2 id="See_also"></h2>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Selection_API">Selection API</a></li>

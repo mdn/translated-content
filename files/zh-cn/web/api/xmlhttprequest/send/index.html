@@ -18,7 +18,7 @@ translation_of: Web/API/XMLHttpRequest/send
 <p>如果没有使用 {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}} 方法设置 {{HTTPHeader("Accept")}} 头部信息，则会发送带有 <code>"* / *"</code> 的{{HTTPHeader("Accept")}} 头部。</p>
 
 <div class="note">
-<p><strong>Note:</strong> 请注意不要使用一个简单的AarryBuffer对象作为参数，ArrayBuffer已经不再是ajax规范的一部分，请改用ArrayBufferView（有关信息请参考兼容性列表。）</p>
+<p><strong>Note:</strong> 请注意不要使用一个简单的ArrayBuffer对象作为参数，ArrayBuffer已经不再是ajax规范的一部分，请改用ArrayBufferView（有关信息请参考兼容性列表。）</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -92,7 +92,6 @@ xhr.send(null);
 // xhr.send('string');
 </code>// <code>xhr.send(new Blob());
 // xhr.send(new Int8Array());
-// xhr.send({ form: 'data' });
 // xhr.send(document);</code>
 </pre>
 
@@ -111,7 +110,6 @@ xhr.send("foo=bar&amp;lorem=ipsum");
 // xhr.send('string');
 </code>// <code>xhr.send(new Blob());
 // xhr.send(new Int8Array());
-// xhr.send({ form: 'data' });
 // xhr.send(document);</code>
 </pre>
 

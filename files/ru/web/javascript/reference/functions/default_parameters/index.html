@@ -14,14 +14,14 @@ translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 
 <p>{{EmbedInteractiveExample("pages/js/functions-default.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">function [<em>name</em>]([<em>param1</em>[ = defaultValue1 ][, ..., <em>paramN</em>[ = defaultValueN ]]]) {
    <em>statements</em>
 }
 </pre>
 
-<h2 id="Example" name="Example">Описание</h2>
+<h2 id="Example">Описание</h2>
 
 <p>В JavaScript параметры функции, которым при её вызове не передаются значения, принимают по умолчанию значение <code>{{jsxref("undefined")}}</code>. Однако в некоторых случаях может быть полезно задать иное значение по умолчанию. Именно для таких случаев предназначены параметры по умолчанию.</p>
 
@@ -117,7 +117,7 @@ callSomething(); // 2
 greet('David', 'Hi');  // ["David", "Hi", "Hi David"]
 greet('David', 'Hi', 'Happy Birthday!');  // ["David", "Hi", "Happy Birthday!"]</pre>
 
-<p>Следующий пример пример ещё раз иллюстрирует эту возможность, а также позволяет ещё раз сравнить два способа достижения одного и того же результата: с использованием инициализации параметров по умолчанию и без её использования:</p>
+<p>Следующий пример ещё раз иллюстрирует эту возможность, а также позволяет ещё раз сравнить два способа достижения одного и того же результата: с использованием инициализации параметров по умолчанию и без её использования:</p>
 
 <pre class="brush: js">function go() {
   return ":P"
@@ -191,26 +191,13 @@ f(); // 6</pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function-definitions', 'Определение функций')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.functions.default_parameters")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values" rel="external">Оригинальное предложение на ecmascript.org</a></li>

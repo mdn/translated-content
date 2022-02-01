@@ -38,7 +38,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>Элемент {{htmlelement("video")}}  позволяет вам вставлять видео достаточно легко. Очень простой пример выглядит так:</p>
 
-<pre class="brush: html notranslate">&lt;video src="rabbit320.webm" controls&gt;
+<pre class="brush: html">&lt;video src="rabbit320.webm" controls&gt;
   &lt;p&gt;Ваш браузер не поддерживает HTML5 видео. Используйте &lt;a href="rabbit320.webm"&gt;ссылку на видео&lt;/a&gt; для доступа.&lt;/p&gt;
 &lt;/video&gt;</pre>
 
@@ -97,7 +97,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>Так как мы это сделаем? Взгляните на следующий <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html">обновлённый пример</a> (и попробуйте <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html">живой пример</a>):</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
   &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
   &lt;source src="rabbit320.webm" type="video/webm"&gt;
   &lt;p&gt;Ваш браузер не поддерживает HTML5 видео. Вот &lt;a href="rabbit320.mp4"&gt;ссылка на видео&lt;/a&gt; взамен.&lt;/p&gt;
@@ -115,7 +115,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>Есть ряд других параметры, которые вы можете включить в HTML5 элемент <code>video</code>. Взгляните на наш третий пример:</p>
 
-<pre class="brush: html notranslate">&lt;video controls width="400" height="400"
+<pre class="brush: html">&lt;video controls width="400" height="400"
        autoplay loop muted
        poster="poster.png"&gt;
   &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
@@ -157,7 +157,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>Элемент {{htmlelement ("audio")}} работает точно так же, как элемент {{htmlelement ("video")}}, с несколькими небольшими отличиями, которые описаны ниже. Типичный пример может выглядеть так:</p>
 
-<pre class="brush: html notranslate">&lt;audio controls&gt;
+<pre class="brush: html">&lt;audio controls&gt;
   &lt;source src="viper.mp3" type="audio/mp3"&gt;
   &lt;source src="viper.ogg" type="audio/ogg"&gt;
   &lt;p&gt;Your browser doesn't support HTML5 audio. Here is a &lt;a href="viper.mp3"&gt;link to the audio&lt;/a&gt; instead.&lt;/p&gt;
@@ -209,7 +209,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>Типичный файл WebVTT будет выглядеть примерно так:</p>
 
-<pre class="eval line-numbers  language-html notranslate"><code class="language-html">WEBVTT
+<pre class="eval line-numbers  language-html"><code class="language-html">WEBVTT
 
 1
 00:00:22.230 --&gt; 00:00:24.606
@@ -231,7 +231,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <p>Вот пример:</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
     &lt;source src="example.mp4" type="video/mp4"&gt;
     &lt;source src="example.webm" type="video/webm"&gt;
     &lt;track kind="subtitles" src="subtitles_en.vtt" srclang="en"&gt;

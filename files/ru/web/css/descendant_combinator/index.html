@@ -5,16 +5,16 @@ translation_of: Web/CSS/Descendant_combinator
 ---
 <p><span class="s1">{{CSSRef("Selectors")}}</span></p>
 
-<h2 id="Summary" name="Summary">Описание</h2>
+<h2 id="Summary">Описание</h2>
 
 <p>Комбинатор<code> ␣</code> (пробел) представляет собой 2 или более селекторов, найдёт элементы соответствующие обоим селекторам. Селекторы по потомкам похожи на селекторы <a href="/ru/docs/Web/CSS/Child_selectors">дочерних элементов</a>, но они не учитывают вложенность элементов и применяют свои свойства ко всем элементам данного типа, находящимся внутри родительского элемента, независимо от глубины вложенности.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="eval">selector1 selector2 {<em>стили</em> }
 </pre>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush: css">span { background-color: white; }
 div span { background-color: DodgerBlue; }
@@ -32,38 +32,8 @@ div span { background-color: DodgerBlue; }
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификации</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#descendant-combinators', 'descendant combinator') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Selectors', '#descendant-combinators', 'descendant combinator') }}</td>
-   <td>{{ Spec2('CSS3 Selectors') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'selector.html#descendant-selectors', 'descendant selectors') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS1', '#contextual-selectors', 'contextual selectors') }}</td>
-   <td>{{ Spec2('CSS1') }}</td>
-   <td>Изначальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p>{{Compat("css.selectors.descendant")}}</p>
+<p>{{Compat}}</p>

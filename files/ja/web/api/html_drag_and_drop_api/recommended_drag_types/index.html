@@ -87,7 +87,7 @@ dt.setData("text/plain", "こんにちは、見知らぬ人");
 
 <h2 id="file" name="file">ファイルのドラッグ</h2>
 
-<p>ローカルのファイルは <code>application/x-moz-file</code> 型で、 <a href="/en/XPCOM_Interface_Reference/nsIFile" title="nsIFile">nsIFile</a> のオブジェクトとしてドラッグされます。特権を持っていない Web ページでは、この型のデータを取得することも変更することもできません。</p>
+<p>ローカルのファイルは <code>application/x-moz-file</code> 型で、 <a href="/ja/XPCOM_Interface_Reference/nsIFile" title="nsIFile">nsIFile</a> のオブジェクトとしてドラッグされます。特権を持っていない Web ページでは、この型のデータを取得することも変更することもできません。</p>
 
 <p>ファイルを文字列にはできないため、データを登録するには {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} メソッドを使用する必要があります。同様に、データを取得するには {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} メソッドを使わなくてはなりません。</p>
 
@@ -124,7 +124,7 @@ function doDrop(event) {
 
 <p>最新の仕様では、{{domxref("DataTransfer.types")}} は {{domxref("DOMStringList")}} ではなく、{{domxref("DOMString")}} で固定した配列を返すようになっています（これは Firefox 52 以上でサポートされています）。</p>
 
-<p>その結果、<a href="/docs/Web/API/Node/contains">contains</a> メソッドはもう機能しません。代わりに <a href="/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">includes</a> メソッドを使用し、以下のようなコードで特定の形式のデータが提供されているかどうかを確認する必要があります。</p>
+<p>その結果、<a href="/ja/docs/Web/API/Node/contains">contains</a> メソッドはもう機能しません。代わりに <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">includes</a> メソッドを使用し、以下のようなコードで特定の形式のデータが提供されているかどうかを確認する必要があります。</p>
 
 <pre class="brush: js notranslate">if ([...event.dataTransfer.types].includes('text/html')) {
   // 実行するコード
@@ -134,11 +134,11 @@ function doDrop(event) {
 
 <h2 id="image" name="image">画像のドラッグ</h2>
 
-<p>画像の直接のドラッグは一般的ではありません。そのため、Mozilla は Mac と Linux での画像の直接のドラッグをサポートしていません。その代わり、画像は通常その URL としてドラッグされます。そのためには、他の URL と同様に <code>text/uri-list</code> 型を使用します。データは、画像の URL、または画像がWeb上やディスク上に無い場合は <a href="/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">データ URL</a> である必要があります。</p>
+<p>画像の直接のドラッグは一般的ではありません。そのため、Mozilla は Mac と Linux での画像の直接のドラッグをサポートしていません。その代わり、画像は通常その URL としてドラッグされます。そのためには、他の URL と同様に <code>text/uri-list</code> 型を使用します。データは、画像の URL、または画像がWeb上やディスク上に無い場合は <a href="/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">データ URL</a> である必要があります。</p>
 
-<p>リンクと同様に、<code>text/plain</code> 型のデータには URL も含まれている必要があります。しかし、<a href="/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">データ URL</a> は通常のテキストの内容には有用ではないので、このような状況では <code>text/plain</code> 型のデータを除外した方がよいでしょう。</p>
+<p>リンクと同様に、<code>text/plain</code> 型のデータには URL も含まれている必要があります。しかし、<a href="/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">データ URL</a> は通常のテキストの内容には有用ではないので、このような状況では <code>text/plain</code> 型のデータを除外した方がよいでしょう。</p>
 
-<p>Chrome などの特権的なコードでは、画像の種類に応じて、<code>image/jpeg</code>、<code>image/png</code>、<code>image/gif</code> のいずれかの形式を使用することもできます。データは、<a href="/en/XPCOM_Interface_Reference/nsIInputStream" title="nsIInputStream">nsIInputStream</a> インターフェースを実装したオブジェクトでなければなりません。このストリームが読み込まれる時には、そのファイル形式での画像のデータビットを提供しなければなりません。</p>
+<p>Chrome などの特権的なコードでは、画像の種類に応じて、<code>image/jpeg</code>、<code>image/png</code>、<code>image/gif</code> のいずれかの形式を使用することもできます。データは、<a href="/ja/XPCOM_Interface_Reference/nsIInputStream" title="nsIInputStream">nsIInputStream</a> インターフェースを実装したオブジェクトでなければなりません。このストリームが読み込まれる時には、そのファイル形式での画像のデータビットを提供しなければなりません。</p>
 
 <p>画像がディスク上にある場合は、<code>application/x-moz-file</code> 型も含める必要があります。実際に、これは画像ファイルをドラッグする一般的なやり方です。</p>
 

@@ -45,7 +45,7 @@ translation_of: Web/API/Document/lastModified
 
 <h2 id="Notes" name="Notes">注</h2>
 
-<p><code>lastModified</code> は文字列なので、文書の更新日の比較には<em>簡単には</em>使用できないことに注意してください。こちらはいつページが変更されたかをアラートメッセージで表示する方法の例です (<a href="/en-US/docs/DOM/document.cookie">JavaScript cookies API</a> も参照)。</p>
+<p><code>lastModified</code> は文字列なので、文書の更新日の比較には<em>簡単には</em>使用できないことに注意してください。こちらはいつページが変更されたかをアラートメッセージで表示する方法の例です (<a href="/ja/docs/DOM/document.cookie">JavaScript cookies API</a> も参照)。</p>
 
 <pre class="brush: js notranslate">if (Date.parse(document.lastModified) &gt; parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0")) {
   document.cookie = "last_modif=" + Date.now() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" + location.pathname;

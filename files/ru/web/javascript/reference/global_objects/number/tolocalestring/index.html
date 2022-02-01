@@ -11,17 +11,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 ---
 <div>{{JSRef("Global_Objects", "Number")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>toLocaleString()</code></strong> возвращает строку с языкозависимым представлением числа.</p>
 
 <p>Новые аргументы <code>locales</code> и <code>options</code> позволяют приложениям определять язык, чьё поведение и соглашения по форматированию которого оно хочет использовать. В старых реализациях, игнорирующих аргументы <code>locales</code> и <code>options</code>, используемая локаль и форма возвращённой строки целиком зависит от реализации.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>numObj</var>.toLocaleString([<var>locales</var>[, <var>options</var>]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <p>Проверьте раздел <a href="#Browser_compatibility">Совместимость с браузерами</a>, чтобы увидеть, какие браузеры поддерживают аргументы <code>locales</code> и <code>options</code>, и <a href="#Example:_Checking_for_support_for_locales_and_options_arguments">Пример: проверка поддержки аргументов <code>locales</code> и <code>options</code></a> для определения этой возможности.</p>
 
@@ -31,9 +31,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parameters')}}</div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_toLocaleString" name="Example:_Using_toLocaleString">Пример: использование <code>toLocaleString</code></h3>
+<h3 id="Example_Using_toLocaleString">Пример: использование <code>toLocaleString</code></h3>
 
 <p>При базовом использовании без указания локали возвращается строка, отформатированная в соответствии с локалью и опциями по умолчанию.</p>
 
@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 console.log(number.toLocaleString()); // Отобразит '3,500' в локали U.S. English
 </pre>
 
-<h3 id="Example_Checking_for_support_for_locales_and_options_arguments" name="Example:_Checking_for_support_for_locales_and_options_arguments">Пример: проверка поддержки аргументов <code>locales</code> и <code>options</code></h3>
+<h3 id="Example_Checking_for_support_for_locales_and_options_arguments">Пример: проверка поддержки аргументов <code>locales</code> и <code>options</code></h3>
 
 <p>Аргументы <code>locales</code> и <code>options</code> поддерживаются ещё не всеми браузерами. Для проверки того, поддерживает ли их уже реализация, можно затребовать несуществующую метку языка и проверить, будет ли выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}:</p>
 
@@ -57,7 +57,7 @@ console.log(number.toLocaleString()); // Отобразит '3,500' в лока�
 }
 </pre>
 
-<h3 id="Example_Using_locales" name="Example:_Using_locales">Пример: использование аргумента <code>locales</code></h3>
+<h3 id="Example_Using_locales">Пример: использование аргумента <code>locales</code></h3>
 
 <p>Этот пример показывает некоторые локализованные числовые форматы. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент <code>locales</code>:</p>
 
@@ -89,7 +89,7 @@ console.log(number.toLocaleString(['ban', 'id']));
 // → 123.456,789
 </pre>
 
-<h3 id="Example_Using_options" name="Example:_Using_options">Пример: использование аргумента <code>options</code></h3>
+<h3 id="Example_Using_options">Пример: использование аргумента <code>options</code></h3>
 
 <p>Результат, предоставляемый методом <code>toLocaleString()</code>, может быть настроен с помощью аргумента <code>options</code>:</p>
 
@@ -111,46 +111,18 @@ console.log(number.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
 // → 1,23,000
 </pre>
 
-<h2 id="Performance" name="Performance">Производительность</h2>
+<h2 id="Performance">Производительность</h2>
 
 <p>При форматировании большого количества чисел лучшим вариантом будет создание объекта {{jsxref("Global_Objects/NumberFormat", "NumberFormat")}} и использование функции, предоставляемой его свойством {{jsxref("NumberFormat.format")}}.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.3', 'Number.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat("javascript.builtins.Number.toLocaleString")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Number.prototype.toString()")}}</li>

@@ -174,7 +174,7 @@ translation_of: Web/API/Web_Audio_API
  <dd>The <code>OfflineAudioCompletionEvent</code> represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{event("complete")}} event implements this interface.</dd>
 </dl>
 
-<h3 id="Audio_Workers" name="Audio_Workers">Audio Workers</h3>
+<h3 id="Audio_Workers">Audio Workers</h3>
 
 <p>Audio workers provide the ability for direct scripted audio processing to be done inside a <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">web worker</a> context, and are defined by a couple of interfaces (new as of 29th August 2014.) These are not implemented in any browsers yet. When implemented, they will replace {{domxref("ScriptProcessorNode")}}, and the other features discussed in the <a href="#Audio_processing_via_JavaScript">Audio processing via JavaScript</a> section above.</p>
 
@@ -187,7 +187,7 @@ translation_of: Web/API/Web_Audio_API
  <dd>This is an <code>Event</code> object that is dispatched to {{domxref("AudioWorkerGlobalScope")}} objects to perform processing.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Obsolete interfaces</h2>
+<h2 id="Example">Obsolete interfaces</h2>
 
 <p>The following interfaces were defined in old versions of the Web Audio API spec, but are now obsolete and have been replaced by other interfaces.</p>
 
@@ -198,13 +198,13 @@ translation_of: Web/API/Web_Audio_API
  <dd>Used to define a periodic waveform. This interface is obsolete, and has been replaced by {{domxref("PeriodicWave")}}.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <p>This example shows a wide variety of Web Audio API functions being used. You can see this code in action on the <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-o-matic</a> demo (also check out the <a href="https://github.com/mdn/voice-change-o-matic">full source code at Github</a>) — this is an experimental voice changer toy demo; keep your speakers turned down low when you use it, at least to start!</p>
 
 <p>The Web Audio API lines are highlighted; if you want to find more out about what the different methods, etc. do, have a search around the reference pages.</p>
 
-<pre class="brush: js; highlight:[1,2,9,10,11,12,36,37,38,39,40,41,62,63,72,114,115,121,123,124,125,147,151] notranslate">var audioCtx = new (window.AudioContext || window.webkitAudioContext)(); // define audio context
+<pre class="brush: js; highlight:[1,2,9,10,11,12,36,37,38,39,40,41,62,63,72,114,115,121,123,124,125,147,151]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)(); // define audio context
 // Webkit/blink browsers need prefix, Safari won't work without window.
 
 var voiceSelect = document.getElementById("voice"); // select box for selecting voice effect options
@@ -398,7 +398,7 @@ function voiceMute() { // toggle to mute and unmute sound
  <li><a href="https://github.com/mattlima/mooog">Mooog</a>: jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.</li>
 </ul>
 
-<section id="Quick_Links">
+<section id="Quick_links">
 <h3 id="Quicklinks">Quicklinks</h3>
 
 <ol>

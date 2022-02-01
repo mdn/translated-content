@@ -33,7 +33,7 @@ original_slug: Learn/CSS/CSS_layout/定位
  </tbody>
 </table>
 
-<h2 id="文档流">文档流</h2>
+<h2 id="basic-flow">文档流</h2>
 
 <p>定位是一个相当复杂的话题，所以我们深入了解代码之前，让我们审视一下布局理论，并让我们了解它的工作原理。</p>
 
@@ -74,7 +74,7 @@ span {
   border: 1px solid black;
 }</pre>
 
-<p>{{ EmbedLiveSample('文档流', '100%', 500) }}</p>
+<p>{{ EmbedLiveSample('basic-flow', '100%', 500) }}</p>
 
 <p>在我们阅读本文时，我们将多次重复这个例子，因为我们要展示不同定位选项的效果。</p>
 
@@ -115,7 +115,7 @@ span {
 
 <p>如果您在此阶段保存并刷新，则结果根本不会发生变化。那么如何修改元素的位置呢？ 您需要使用{{cssxref("top")}}，{{cssxref("bottom")}}，{{cssxref("left")}}和{{cssxref("right")}}属性 ，我们将在下一节中解释。</p>
 
-<h3 id="介绍_top_bottom_left_right">介绍 top, bottom, left,  right</h3>
+<h3 id="Introducing_top_bottom_left_and_right">介绍 top, bottom, left,  right</h3>
 
 <p>{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, 和 {{cssxref("right")}} 来精确指定要将定位元素移动到的位置。 要尝试这样做，请在CSS中的 <code>.positioned</code> 规则中添加以下声明：</p>
 
@@ -164,7 +164,7 @@ span {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('介绍_top_bottom_left_right', '100%', 500) }}</p>
+<p>{{ EmbedLiveSample('Introducing_top_bottom_left_and_right', '100%', 500) }}</p>
 
 <p>酷，是吗？ 好吧，所以这个结果这可能不是你期待的——为什么它移动到底部和右边，但我们指定顶部和左边？ 听起来不合逻辑，但这只是相对定位工作的方式——你需要考虑一个看不见的力，推动定位的盒子的一侧，移动它的相反方向。 所以例如，如果你指定 <code>top: 30px;</code>一个力推动框的顶部，使它向下移动30px。</p>
 
@@ -172,7 +172,7 @@ span {
 <p><strong>注意：</strong> 你可以在 <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html">2_relative-positioning.html</a></code> 查看这个例子 (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html">see source code</a>)。</p>
 </div>
 
-<h3 id="绝对定位">绝对定位</h3>
+<h3 id="Absolute_positioning">绝对定位</h3>
 
 <p>绝对定位带来了非常不同的结果。让我们尝试改变代码中的位置声明如下：</p>
 
@@ -216,7 +216,7 @@ span {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('绝对定位', '100%', 420) }}</p>
+<p>{{ EmbedLiveSample('Absolute_positioning', '100%', 450) }}</p>
 
 <p>首先，请注意，定位的元素应该在文档流中的间隙不再存在——第一和第三元素已经靠在一起，就像第二个元素不再存在！好吧，在某种程度上，这是真的。绝对定位的元素不再存在于正常文档布局流中。相反，它坐在它自己的层独立于一切。这是非常有用的：这意味着我们可以创建不干扰页面上其他元素的位置的隔离的UI功能 。例如，弹出信息框和控制菜单；翻转面板；可以在页面上的任何地方拖放的UI功能……</p>
 
@@ -234,7 +234,7 @@ span {
 <p><strong>注意：</strong>你可以在<code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html">3_absolute-positioning.html</a></code> 查看这个例子(<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html">see source code</a>)。</p>
 </div>
 
-<h3 id="定位上下文">定位上下文</h3>
+<h3 id="Positioning_contexts">定位上下文</h3>
 
 <p>哪个元素是绝对定位元素的“包含元素“？这取决于绝对定位元素的父元素的position属性。(参见 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block">Identifying the containing block</a>).</p>
 
@@ -283,7 +283,7 @@ span {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('定位上下文', '100%', 420) }}</p>
+<p>{{ EmbedLiveSample('Positioning_contexts', '100%', 420) }}</p>
 
 <p>定位的元素现在相对于{{htmlelement("body")}}元素。</p>
 
@@ -291,7 +291,7 @@ span {
 <p>注意：你可以在这里看到这个例子 <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html">4_positioning-context.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html">see source code</a>).</p>
 </div>
 
-<h3 id="介绍_z-index">介绍 z-index</h3>
+<h3 id="Introducing_z-index">介绍 z-index</h3>
 
 <p>所有这些绝对定位很有趣，但还有另一件事我们还没有考虑到 ——当元素开始重叠，什么决定哪些元素出现在其他元素的顶部？ 在我们已经看到的示例中，我们在定位上下文中只有一个定位的元素，它出现在顶部，因为定位的元素胜过未定位的元素。 当我们有不止一个的时候呢？</p>
 
@@ -362,7 +362,7 @@ p:nth-of-type(1) {
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('介绍_z-index', '100%', 400) }}</p>
+<p>{{ EmbedLiveSample('Introducing_z-index', '100%', 400) }}</p>
 
 <p>请注意，z-index只接受无单位索引值；你不能指定你想要一个元素是Z轴上23像素—— 它不这样工作。 较高的值将高于较低的值，这取决于您使用的值。 使用2和3将产生与300和40000相同的效果。</p>
 
@@ -370,7 +370,7 @@ p:nth-of-type(1) {
 <p><strong>注意：</strong>你可以在这里看到这个例子 <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html">5_z-index.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html">see source code</a>).</p>
 </div>
 
-<h3 id="固定定位">固定定位</h3>
+<h3 id="Fixed_positioning">固定定位</h3>
 
 <p>还有一种类型的定位覆盖——fixed。 这与绝对定位的工作方式完全相同，只有一个主要区别：绝对定位固定元素是相对于 {{htmlelement("html")}} 元素或其最近的定位祖先，而固定定位固定元素则是相对于浏览器视口本身。 这意味着您可以创建固定的有用的UI项目，如持久导航菜单。</p>
 
@@ -448,7 +448,7 @@ p:nth-of-type(1) {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('固定定位', '100%', 400) }}</p>
+<p>{{ EmbedLiveSample('Fixed_positioning', '100%', 400) }}</p>
 
 <div class="note">
 <p><strong>注意：</strong>你可以在这里看到这个例子<code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html">6_fixed-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html">see source code</a>).</p>
@@ -458,6 +458,7 @@ p:nth-of-type(1) {
 
 <p>还有一个可用的位置值称为 position: sticky，比起其他位置值要新一些。它基本上是相对位置和固定位置的混合体，它允许被定位的元素表现得像相对定位一样，直到它滚动到某个阈值点（例如，从视口顶部起1​​0像素）为止，此后它就变得固定了。例如，它可用于使导航栏随页面滚动直到特定点，然后粘贴在页面顶部。</p>
 
+<div id="Sticky_1">
 <div class="hidden">
 <h6 id="Sticky_positioning_example">Sticky positioning example</h6>
 
@@ -491,6 +492,7 @@ p:nth-of-type(1) {
   top: 30px;
   left: 30px;
 }</pre>
+</div>
 
 <p>{{ EmbedLiveSample('Sticky_1', '100%', 200) }}</p>
 
@@ -539,8 +541,9 @@ p:nth-of-type(1) {
 }
 </pre>
 
+<div id="Sticky_2">
 <div class="hidden">
-<pre class="notranslate">body {
+<pre class="brush:css notranslate">body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -557,7 +560,7 @@ dt {
 }
 </pre>
 
-<pre class="notranslate">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+<pre class="brush:html notranslate">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
 
 &lt;dl&gt;
     &lt;dt&gt;A&lt;/dt&gt;

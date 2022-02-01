@@ -26,7 +26,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 
 <p>Создайте новый каталог "requests". В нём создайте файл "manifest.json" со следующим содержимым:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "description": "Demonstrating webRequests",
   "manifest_version": 2,
   "name": "webRequest-demo",
@@ -44,7 +44,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 
 <p>Далее, создайте файл "background.js" со следующим содержимым:</p>
 
-<pre class="brush: js notranslate">function logURL(requestDetails) {
+<pre class="brush: js">function logURL(requestDetails) {
   console.log("Loading: " + requestDetails.url);
 }
 
@@ -65,7 +65,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Теперь давайте использовать <code>webRequest</code> для перенаправления HTTP-запросов. Во-первых, замените manifest.json на это:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
 
   "description": "Demonstrating webRequests",
   "manifest_version": 2,
@@ -88,7 +88,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Затем замените «background.js» следующим образом:</p>
 
-<pre class="brush: js notranslate">var pattern = "https://mdn.mozillademos.org/*";
+<pre class="brush: js">var pattern = "https://mdn.mozillademos.org/*";
 
 function redirect(requestDetails) {
   console.log("Redirecting: " + requestDetails.url);
@@ -121,7 +121,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 <p>Replace "background.js" with code like this:</p>
 
-<pre class="brush: js notranslate">var targetPage = "http://useragentstring.com/*";
+<pre class="brush: js">var targetPage = "http://useragentstring.com/*";
 
 var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 

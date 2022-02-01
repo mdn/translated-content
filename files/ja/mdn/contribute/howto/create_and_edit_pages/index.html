@@ -56,7 +56,7 @@ translation_of: MDN/Contribute/Howto/Create_and_edit_pages
 
 <h3 id="Attach_files" name="Attach_files">添付ファイル</h3>
 
-<p>ファイルを添付するには、特殊なユーザー権限が必要です。詳細は <a href="/en-US/docs/MDN/Contribute/Editor/Basics/Attachments">Attachments in the MDN editor</a> をご覧ください。そこにアップロード権限のリクエスト方法も書かれています。</p>
+<p>ファイルを添付するには、特殊なユーザー権限が必要です。詳細は <a href="/ja/docs/MDN/Contribute/Editor/Basics/Attachments">Attachments in the MDN editor</a> をご覧ください。そこにアップロード権限のリクエスト方法も書かれています。</p>
 
 <h3 id="Publish_Discard_or_Keep_editing" name="Publish_Discard_or_Keep_editing">公開、破棄、編集の続行</h3>
 
@@ -111,7 +111,7 @@ translation_of: MDN/Contribute/Howto/Create_and_edit_pages
 
 <p><em>別のページからリンクせずに新しいページを作成するには</em>、ブラウザの URL フィールドに一意のページ名を入力します。たとえば、次のように入力します。</p>
 
-<pre class="language-html notranslate">https://wiki.developer.mozilla.org/en-US/docs/FooBar</pre>
+<pre class="language-html notranslate">https://developer.mozilla.org/en-US/docs/FooBar</pre>
 
 <p>MDN は "FooBar" というタイトルの新しいページを作成し、エディターを開いて新しいページにコンテンツを追加することができます。エディターモードの使用方法については、この記事の「<a href="#Editing_an_existing_page">既存のページを編集する</a>」セクションを参照してください。</p>
 
@@ -122,7 +122,7 @@ translation_of: MDN/Contribute/Howto/Create_and_edit_pages
  <li>ブラウザーの URL 欄に下記のように入力する</li>
 </ol>
 
-<pre class="language-html notranslate">https://wiki.developer.mozilla.org/en-US/docs/new</pre>
+<pre class="language-html notranslate">https://developer.mozilla.org/en-US/docs/new</pre>
 
 <p>MDN は新しいページを作成し、エディターを開いて新しいページにコンテンツを追加することができます。エディターモードの使用方法については、この記事の「<a href="#Editing_an_existing_page">既存のページを編集する</a>」セクションを参照してください。</p>
 
@@ -159,18 +159,18 @@ translation_of: MDN/Contribute/Howto/Create_and_edit_pages
 
 <ol>
  <li>既存ページのテキスト内の (意味のある) どこかの場所に新しいページの名前を入力します。</li>
- <li>その名前をハイライトしてエディターツールバーから<strong>リンクアイコン (<img alt="" src="https://developer.mozilla.org/files/3810/link-icon.png" style="height: 28px; width: 29px;">) をクリック</strong>します。<strong>'Update Link'</strong> のダイアログが開き、 <strong>'Link To'</strong> 欄が強調されています。</li>
+ <li>その名前をハイライトしてエディターツールバーから<strong>リンクアイコン (<img alt="" src="/files/3810/link-icon.png" style="height: 28px; width: 29px;">) をクリック</strong>します。<strong>'Update Link'</strong> のダイアログが開き、 <strong>'Link To'</strong> 欄が強調されています。</li>
  <li>既定では URL 欄の最初に <strong>"/ja/docs/"</strong> が挿入されます。 "/ja/docs/" の後にページ名を入力します。ページ名はリンクテキストと同じである必要はありません。</li>
  <li><strong>OK</strong> をクリックしてリンクを作成、挿入します。</li>
 </ol>
 
-<p>ページがまだ存在しない場合、リンクは赤く表示されます。ページがすでに存在する場合、リンクは青く表示されます。新しいページを作成したいが、ページタイトルがすでに取られている場合、まずはすでにあるページの編集を助けたり改良したりするのがもっと意味があるのではないのかを確認してください。そうでない場合、新しいページに別の名前を考えてリンクを作成します。ガイドラインの <a href="https://developer.mozilla.org/Project:en/Page_Naming_Guide" title="Project:en/Page_Naming_Guide">page naming guide</a> を参照してください。</p>
+<p>ページがまだ存在しない場合、リンクは赤く表示されます。ページがすでに存在する場合、リンクは青く表示されます。新しいページを作成したいが、ページタイトルがすでに取られている場合、まずはすでにあるページの編集を助けたり改良したりするのがもっと意味があるのではないのかを確認してください。そうでない場合、新しいページに別の名前を考えてリンクを作成します。ガイドラインの <a href="/Project:en/Page_Naming_Guide" title="Project:en/Page_Naming_Guide">page naming guide</a> を参照してください。</p>
 
 <p>新しいページに中身を追加するには、 (エディターを保存して閉じた後に) 作成したばかりの赤いリンクをクリックします。新しいページがエディターモードで開かれて、書き始められます。エディターモードの使用については、この記事の<a href="#Editing_an_existing_page">既存のページを編集する</a>節を参照してください。</p>
 
 <h2 id="Refreshing_page_content" name="Refreshing_page_content">ページ内容の更新</h2>
 
-<p>KumaScript のマクロの MDN 対応や、他のページの内容の統合は、パフォーマンス上の理由でページをキャッシュする必要により妨げられることがあります。ページはソースから構築され、その出力は将来のリクエストのためにキャッシュされます。そのため、マクロ (テンプレート) や (<span class="templateLink"><code><a href="https://developer.mozilla.org/en-US/docs/Template:Page">Page</a></code></span> マクロを使用した) 統合はマクロやその出力、統合された素材の内容のその後の変更が反映されません。</p>
+<p>KumaScript のマクロの MDN 対応や、他のページの内容の統合は、パフォーマンス上の理由でページをキャッシュする必要により妨げられることがあります。ページはソースから構築され、その出力は将来のリクエストのためにキャッシュされます。そのため、マクロ (テンプレート) や (<span class="templateLink"><code><a href="/en-US/docs/Template:Page">Page</a></code></span> マクロを使用した) 統合はマクロやその出力、統合された素材の内容のその後の変更が反映されません。</p>
 
 <ul>
  <li>ページを手動で更新するには、ウェブブラウザーで強制的に再読み込みしてください。 MDN はこれを検知してページの再構築を起動し、更新されたマクロの出力や統合されたページ内容を引き出します。</li>

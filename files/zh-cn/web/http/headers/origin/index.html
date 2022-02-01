@@ -6,6 +6,14 @@ translation_of: Web/HTTP/Headers/Origin
 <div>{{HTTPSidebar}}</div>
 
 <p>请求首部字段 <strong><code>Origin</code></strong> 指示了请求来自于哪个站点。该字段仅指示服务器名称，并不包含任何路径信息。该首部用于 {{Glossary("CORS")}} 请求或者 {{HTTPMethod("POST")}} 请求。除了不包含路径信息，该字段与 {{HTTPHeader("Referer")}} 首部字段相似。</p>
+<div class="note notecard">
+ <p><strong>Note:&nbsp; </strong>基本上，浏览器会将Origin请求头添加到:</p>
+ <ul>
+   <li>所有的跨域请求</li>
+   <li>除GET或HEAD请求外的同源请求(即它们被添加到同源POST、OPTIONS、PUT、PATCH和DELETE请求中)</li>
+ </ul>
+ <p><strong>浏览器会将Origin请求头添加到所有跨域的请求中，除GET或HEAD请求外的同源请求。如果在no-cors模式下发出跨源GET或HEAD请求，则不会添加Origin头</strong></p>
+</div>
 
 <table class="properties">
  <tbody>

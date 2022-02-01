@@ -5,125 +5,129 @@ translation_of: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}</div>
 
-<p>In the various lessons so far you have come across a number of ways to size items on a web page using CSS. Understanding how big the different features in your design will be is important, and in this lesson we will summarize the various ways elements get a size via CSS and define a few terms around sizing that will help you in the future.</p>
+<p>В предыдущих уроках вы познакомились с некоторыми способами изменения размеров элементов на веб-странице с помощью CSS. Понимание того, насколько велики будут различные элементы в вашем дизайне — важно, и в этом уроке мы подведем итог по различным способам задания размеров элементов с помощью CSS и расскажем о некоторых терминах, связанных с размерами, которые помогут вам в будущем.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)</td>
+   <th scope="row">Необходимые условия:</th>
+   <td>Базовая компьютерная грамотность, <a href="https://developer.mozilla.org/ru-RU/Learn/Getting_started_with_the_web/Installing_basic_software">Установка базового ПО</a>, базовые знания <a href="https://developer.mozilla.org/ru-RU/Learn/Getting_started_with_the_web/Dealing_with_files">работы с файлами</a>, основы HTML (<a href="/ru-RU/docs/Learn/HTML/Introduction_to_HTML">Введение в HTML</a>), и общее представление о том, как работает CSS (<a href="/ru-RU/docs/Learn/CSS/First_steps">Введение в CSS</a>.)</td>
   </tr>
   <tr>
-   <th scope="row">Objective:</th>
-   <td>To understand the different ways we can size things in CSS.</td>
+   <th scope="row">Цель:</th>
+   <td>Изучить различные способы задания размеров объектов в CSS.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="The_natural_or_intrinsic_size_of_things">The natural or intrinsic size of things</h2>
+<h2 id="The_natural_or_intrinsic_size_of_things">Размер по умолчанию или внутренний размер</h2>
 
-<p>HTML Elements have a natural size, set before they are affected by any CSS. A straightforward example is an image. An image has a width and a height defined in the image file it is embedding into the page. This size is described as the <strong>intrinsic size</strong> — which comes from the image itself.</p>
+<p>Элементы HTML имеют размеры по умолчанию, заданные до того, как на них повлияет какое-либо правило CSS. Простой пример — изображение. Изображение имеет ширину и высоту, определенные в файле изображения. Этот размер называется — <strong>внутренний размер</strong>, он исходит из самого изображения.</p>
 
-<p>If you place an image on a page and do not change its height and width, either using attributes on the <code>&lt;img&gt;</code> tag or CSS, it will be displayed using that intrinsic size. We have given the image in the example below a border so that you can see the extent of the file.</p>
+<p>Если вы разместите изображение на странице и не измените его высоту и ширину, используя атрибуты тега <code>&lt;img&gt;</code> или CSS, оно будет отображаться с использованием этого внутреннего размера. В примере ниже, мы установили для изображения рамку, чтобы вы могли видеть размер файла.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/intrinsic-image.html", '100%', 600)}}</p>
 
-<p>An empty {{htmlelement("div")}} however, has no size of its own. If you add a {{htmlelement("div")}} to your HTML with no content, then give it a border as we did with the image, you will see a line on the page. This is the collapsed border on the element — there is no content to hold it open. In our example below, that border stretches to the width of the container, because it is a block level element, a behavior that should be starting to become familiar to you. It has no height (or size in the block dimension) because there is no content.</p>
+<p>С другой стороны, пустой {{htmlelement("div")}} не имеет собственного размера. Если вы добавите {{htmlelement("div")}} в свой HTML-код без содержимого, а затем установите для него рамку, как мы это делали с изображением, вы увидите линию на странице. Это схлопнувшиеся границы элемента — содержимое, которое могло бы удерживать ее в открытом состоянии, отсутствует. В нашем примере ниже эта граница растягивается на всю ширину контейнера, потому что это элемент блочный, поведение которого должно быть вам знакомо. У него нет высоты, потому что нет содержимого.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/intrinsic-text.html", '100%', 500)}}</p>
 
-<p>In the example above, try adding some text inside the empty element. The border now contains that text because the height of the element is defined by the content. Therefore the size of this <code>&lt;div&gt;</code> in the block dimension comes from the size of the content. Again, this is the intrinsic size of the element — its size is defined by its content.</p>
+<p>В приведенном выше примере попробуйте добавить текст внутри пустого элемента. Этот текст теперь становится охваченным границами, потому что высота элемента определяется содержимым. Следовательно, размер этого <code>&lt;div&gt;</code> устанавливается размером содержимого. Как и в предыдущем примере, этот размер является внутренним размером — размер элемента определяется размером его содержимого.</p>
 
-<h2 id="Setting_a_specific_size">Setting a specific size</h2>
+<h2 id="Setting_a_specific_size">Присваивание определенного размера</h2>
 
-<p>We can of course give elements in our design a specific size. When a size is given to an element (and the content of which then needs to fit into that size) we refer to it as an <strong>extrinsic size</strong>. Take our <code>&lt;div&gt;</code> from the example above — we can give it specific {{cssxref("width")}} and {{cssxref("height")}} values, and it will now have that size no matter what content is placed into it. As we discovered in <a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">our previous lesson on overflow</a>, a set height can cause content to overflow if there is more content than the element has space to fit inside it.</p>
+<p>Конечно, мы можем задать элементам нашей страницы определенный размер. Размер, который присваивается элементу (содержимое, которого затем должно соответствовать этому размеру), называется <strong>внешним размером</strong>. Возьмите наш <code>&lt;div&gt;</code> из примера выше и установите ему специальные значения {{cssxref("width")}} и {{cssxref("height")}} и теперь он будет иметь эти размеры, независимо от того, какого размера содержимое в него помещается. Как мы узнали в <a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">нашем предыдущем уроке о переполнении</a>, заданная высота блока может вызвать переполнение содержимого, если размер содержимого больше, чем внутреннее пространство элемента.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/height.html", '100%', 600)}}</p>
 
-<p>Due to this problem of overflow, fixing the height of elements with lengths or percentages is something we need to do very carefully on the web.</p>
+<p>Из-за этой проблемы перекрытия, жестко задавать высоту элементов с помощью длины или процентного соотношения — это то, что нужно делать с большой осторожностью.</p>
 
-<h3 id="Using_percentages">Using percentages</h3>
+<h3 id="Using_percentages">Использование процентного соотношения</h3>
 
-<p>In many ways percentages act like length units, and as we <a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#Percentages">discussed in the lesson on values and units</a>, they can often be used interchangeably with lengths. When using a percentage you need to be aware what it is a percentage <em>of</em>. In the case of a box inside another container, if you give the child box a percentage width it will be a percentage of the width of the parent container.</p>
+<p>Во многих отношениях проценты действуют как единицы длины, и, как мы <a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#Percentages">обсуждали в уроке, посвященном значениям и единицам</a>, они часто могут использоваться как взаимозаменяемые с длиной. При использовании процентов вы должны знать, <em>от чего этот процент рассчитывается</em>. В случае блока внутри другого блока, если вы зададите дочернему блоку процентную ширину, это будет процент от ширины родительского контейнера.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/percent-width.html", '100%', 600)}}</p>
 
-<p>This is because percentages resolve against the size of the containing block. With no percentage applied our <code>&lt;div&gt;</code> would take up 100% of the available space, as it is a block level element. If we give it a percentage width, this becomes a percentage of the space it would normally fill.</p>
+<p>Это потому, что проценты рассчитываются в зависимости от размера содержащего элемент блока. Если процентное соотношение не применяется, наш <code>&lt;div&gt;</code> будет занимать 100% доступного пространства, так как это элемент блочного типа. Если мы зададим ему ширину в процентах, он займет процент от пространства, которое он обычно заполняет.</p>
 
-<h3 id="Percentage_margins_and_padding">Percentage margins and padding</h3>
+<h3 id="Percentage_margins_and_padding">Margins и paddings в процентах</h3>
 
-<p>If you set <code>margins</code> and <code>padding</code> as a percentage you may notice some strange behavior. In the below example we have a box. We have given the inner box a {{cssxref("margin")}} of 10% and a {{cssxref("padding")}} of 10%. The padding and margin on the top and bottom of the box are the same size as the margin on the left and right.</p>
+<p>Если вы установите <code>margins</code> и <code>padding</code> в процентах, вы можете заметить странное поведение. В приведенном ниже примере у нас есть блок. Мы присвоили внутреннему блоку {{cssxref("margin")}} 10% и {{cssxref("padding")}} 10%. Padding и margin сверху и снизу имеют тот же размер, что и margins слева и справа.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/percent-mp.html", '100%', 700)}}</p>
 
-<p>You might expect for example the percentage top and bottom margins to be a percentage of the element's height, and the percentage left and right margins to be a percentage of the element's width. However, this is not the case!</p>
+<p>Например, вы можете ожидать, что процентное значение верхнего и нижнего margins будет в процентах от высоты элемента, а процентное левое и правое margins — в процентах от ширины элемента. Тем не менее, это не так!</p>
 
-<p>When you use margin and padding set in percentages, the value is calculated from the<strong> inline size</strong> — therefore the width when working in a horizontal language. In our example, all of the margins and padding are 10% of the width. This means you can have equal sized margins and padding all round the box. This is a fact worth remembering if you do use percentages in this way.</p>
+<p>При использовании margins и padding, заданных в процентах, значение рассчитывается на основе <strong>inline размера</strong> блока — следовательно, ширины при работе с горизонтальным языком. В нашем примере все поля и отступы составляют 10% width. Это означает, что вы будете иметь margins и padding одинакового размера по всему полю. Этот факт стоит запомнить, если вы действительно пользуетесь процентами.</p>
 
-<h2 id="min-_and_max-_sizes">min- and max- sizes</h2>
+<h2 id="min-_and_max-_sizes">Минимальные и максимальные размеры</h2>
 
-<p>In addition to giving things a fixed size, we can ask CSS to give an element a minimum or a maximum size. If you have a box that might contain a variable amount of content, and you always want it to be <em>at least</em> a certain height, you could set the {{cssxref("min-height")}} property on it. The box will always be at least this height, but will then grow taller if there is more content than the box has space for at its minimum height.</p>
+<p>Помимо возможности установить фиксированный размер, мы можем использовать CSS чтобы задать элементу минимальный или максимальный размер. Если у вас есть блок, который может содержать разное количество содержимого, и вы хотите, чтобы он всегда был определенной минимальной высоты, вы можете установить для него свойство {{cssxref("min-height")}}. Блок всегда будет минимальной заданной высоты, пока содержимого не станет больше, чем места в блоке.</p>
 
-<p>In the example below you can see two boxes, both with a defined height of 150 pixels. The box on the left is 150 pixels tall; the box on the right has content that needs more room, and so it has grown taller than 150 pixels.</p>
+<p>В приведенном ниже примере вы можете увидеть два блока, обоим задали минимальную высоту в 150 пикселей. Блок слева имеет высоту 150 пикселей несмотря на то что в нем нет текста. В блоке справа есть контент, которому нужно больше места, чем минимальная заданная высота, поэтому он увеличился.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/min-height.html", '100%', 800)}}</p>
 
-<p>This is very useful for dealing with variable amounts of content while avoiding overflow.</p>
+<p>Это очень полезно при работе с переменным объемом контента, избегая при этом переполнения.</p>
 
-<p>A common use of {{cssxref("max-width")}} is to cause images to scale down if there is not enough space to display them at their intrinsic width, while making sure they don't become larger than that width.</p>
+<p>Часто {{cssxref("max-width")}} применяют для уменьшения масштаба изображений, если недостаточно места для их отображения.</p>
 
-<p>As an example, if you were to set <code>width: 100%</code> on an image, and its intrinsic width was smaller than its container, the image would be forced to stretch and become larger, causing it to look pixellated. If its intrinsic width were larger than its container, it would overflow it. Neither case is likely to be what you want to happen.</p>
+<p>Например, если бы вы установили <code>width: 100%</code> для изображения, а его внутренняя ширина была меньше, чем его контейнер, изображение было бы вынуждено растягиваться и становиться больше, в результате чего оно выглядело бы пикселизированным.</p>
 
-<p>If you instead use <code>max-width: 100%</code>, the image is able to become smaller than its intrinsic size, but will stop at 100% of its size.</p>
+<p>Если бы вы вместо этого применили <code>max-width: 100%</code>%, и внутренняя ширина изображения была бы меньше, чем его контейнер, изображение не будет принудительно растягиваться и становиться больше, что предотвращает пикселизацию.</p>
 
-<p>In the example below we have used the same image twice. The first image has been given <code>width: 100%</code> and is in a container which is larger than it, therefore it stretches to the container width. The second image has <code>max-width: 100%</code> set on it and therefore does not stretch to fill the container. The third box contains the same image again, also with <code>max-width: 100%</code> set; in this case you can see how it has scaled down to fit into the box.</p>
+<p>В приведенном ниже примере мы использовали одно и то же изображение трижды. Первому изображению было задано <code>width: 100%</code> и оно находится в контейнере, который больше его ширины, поэтому он растягивается до ширины контейнера. Второму изображению задано <code>max-width: 100%</code>, изображение достигло 100% своей ширины не растягивается, чтобы заполнить контейнер. Третье поле снова содержит то же изображение, также с <code>max-width: 100%</code> в этом случае вы можете увидеть, как он уменьшилось, чтобы поместиться в контейнер.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/max-width.html", '100%', 800)}}</p>
 
-<p>This technique is used to make images <em>responsive</em>, so that when viewed on a smaller device they scale down appropriately. You should however not use this technique to load in really large images and then scale them down in the browser. Images should be appropriately sized to be no larger than they need to be for the largest size they are displayed in the design. Downloading overly large images will cause your site to become slow, and it can cost users more money if they are on a metered connection.</p>
+<p>Этот метод используется для создания <em>отзывчивых</em> изображений, чтобы при просмотре на меньшем устройстве они соответствующим образом уменьшались. Однако вам не следует использовать эту технику для загрузки действительно больших изображений с последующим их уменьшением в браузере. Изображения должны иметь соответствующий размер, чтобы быть не больше, чем они должны быть для самого большого размера, отображаемого в дизайне. Загрузка слишком больших изображений замедлит работу вашего сайта и может стоить пользователям больше денег, если они используют лимитированное соединение.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Find out more about <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">responsive image techniques</a>.</p>
+<p><strong>Примечание</strong>: Узнайте больше о <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">методах создания адаптивных изображений</a>.</p>
 </div>
 
-<h2 id="Viewport_units">Viewport units</h2>
+<h2 id="Viewport_units">Единицы вьюпорта</h2>
 
-<p>The viewport — which is the visible area of your page in the browser you are using to view a site — also has a size. In CSS we have units which relate to the size of the viewport — the <code>vw</code> unit for viewport width, and <code>vh</code> for viewport height. Using these units you can size something relative to the viewport of the user.</p>
+<p>Вьюпо́рт — это видимая область вашей страницы в браузере, который вы используете для просмотра сайта. В CSS у нас есть единицы измерения, которые относятся к размеру вьюпорта  — <code>vw</code> единицы ширины вьюпорта и <code>vh</code> высоты вьюпорта. Используя эти единицы измерения, вы можете изменять размер чего-либо относительно вьюпорта пользователя.</p>
 
-<p><code>1vh</code> is equal to 1% of the viewport height, and <code>1vw</code> is equal to 1% of the viewport width. You can use these units to size boxes, but also text. In the example below we have a box which is sized as 20vh and 20vw. The box contains a letter <code>A</code>, which has been given a {{cssxref("font-size")}} of 10vh.</p>
+<p><code>1vh</code> равен 1% от высоты вьюпорта и <code>1vw</code> равен 1% ширины вьюпорта. Вы можете использовать эти единицы измерения для размеров блоков, а также текста. В приведенном ниже примере у нас есть блок размером 20vh и 20vw. В блоке есть буква <code>A</code>, которой присвоено значение {{cssxref("font-size")}} 10vh.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/vw-vh.html", '100%', 600)}}</p>
 
-<p><strong>If you change the <code>vh</code> and <code>vw</code> values this will change the size of the box or font; changing the viewport size will also change their sizes because they are sized relative to the viewport. To see the example change when you change the viewport size you will need to load the example in a new browser window that you can resize (as the embedded <code>&lt;iframe&gt;</code> that contains the example shown above is its viewport). <a href="https://mdn.github.io/css-examples/learn/sizing/vw-vh.html">Open the example</a>, resize the browser window, and observe what happens to the size of the box and text.</strong></p>
+<p><strong>Если вы измените величину <code>vh</code> и <code>vw</code> — это изменит размер блока или шрифт; изменение размера вьюпорта также изменит их размеры, поскольку они имеют размер заданный относительно вьюпорта. Чтобы увидеть изменение примера при изменении размера вьюпорта, вам нужно будет загрузить пример в новое окно браузера, размер которого можно изменить (поскольку встроенное приложение <code>&lt;iframe&gt;</code>, содержащее показанный выше пример, является его окном просмотра).  <a href="https://mdn.github.io/css-examples/learn/sizing/vw-vh.html">Откройте пример</a>, измените размер окна браузера и посмотрите, что происходит с размером поля и текста.</strong></p>
 
-<p>Sizing things according to the viewport can be useful in your designs. For example, if you want a full page hero section to show before the rest of your content, making that part of your page 100vh high will push the rest of the content below the viewport, meaning that it will only appear once the document is scrolled.</p>
+<p>Размеры объектов задаваемые в соответствии с вьюпортом могут быть полезны в ваших проектах. Например, если вы хотите, чтобы основная секция отображалась перед остальным контентом, установите для этой части страницы высоту 100vh, это приведет к выталкиванию остального контента ниже видимой области, что означает, что он появится только после того, как страницу прокрутят вниз.</p>
 
-<h2 id="Summary">Summary</h2>
+<h2 id="Test_your_skills!">Проверьте свои навыки!</h2>
 
-<p>This lesson has given you a rundown of some key issues that you might run into when sizing things on the web. When you move onto <a href="/en-US/docs/Learn/CSS/CSS_layout">CSS Layout</a>, sizing will become very important in mastering the different layout methods, so it is worth understanding the concepts here before moving on.</p>
+<p>В этой статье мы рассмотрели многое, но можете ли вы вспомнить самую важную информацию? Вы можете найти дополнительные тесты, чтобы убедиться, что вы сохранили эту информацию, прежде чем двигаться дальше - см. <a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_tasks">Проверка своих навыков: задание размеров</a>.</p>
+
+<h2 id="Summary">Заключение</h2>
+
+<p>Этот урок дал вам краткое изложение некоторых ключевых проблем, с которыми вы можете столкнуться при определении размеров объектов в Интернете. Когда вы перейдете к <a href="/en-US/docs/Learn/CSS/CSS_layout">CSS раскладке</a>, изменение размеров станет очень важным для освоения различных методов раскладки, поэтому перед тем, как двигаться дальше, стоит разобраться в концепциях.</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}</p>
 
-<h2 id="In_this_module">In this module</h2>
+<h2 id="In_this_module">В этом модуле</h2>
 
 <ol>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Каскад и наследование</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors">Селекторы CSS</a>
   <ul>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Селекторы типа, класса и ID</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Селекторы атрибута</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Псевдоклассы и псевдоэлементы</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Комбинаторы</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/The_box_model">Блочная модель(The box model)</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Фон и границы</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Обработка разных направлений текста</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Overflowing_content">Переполнение содержимого</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Values_and_units">Значения и единицы измерения</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Размеры в CSS</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Элементы изображений, форм и медиа-элементы</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Styling_tables">Стилизация таблиц</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS">Отладка CSS</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Organizing">Организация вашей CSS</a></li>
 </ol>

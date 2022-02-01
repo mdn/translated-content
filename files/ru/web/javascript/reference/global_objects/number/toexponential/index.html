@@ -10,22 +10,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 ---
 <div>{{JSRef("Global_Objects", "Number")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>toExponential()</code></strong> возвращает строку, представляющую объект {{jsxref("Global_Objects/Number", "Number")}} в экспоненциальной записи.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>numObj</var>.toExponential([<var>fractionDigits</var>])</code></pre>
+<pre class="syntaxbox"><code><var>numObj</var>.toExponential([<var>fractionDigits</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>fractionDigits</code></dt>
  <dd>Необязательный параметр. Целое число, определяющее количество цифр после десятичной запятой. По умолчанию используется столько цифр, сколько необходимо для указания числа.</dd>
 </dl>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <p>Строка, представляющая объект {{jsxref("Global_Objects/Number", "Number")}} в экспоненциальной записи с одной цифрой перед десятичной запятой, округлённое до <code>fractionDigits</code> цифр после десятичной запятой. Если аргумент <code>fractionDigits</code> опущен, количество цифр после десятичной запятой по умолчанию устанавливается в количество цифр, необходимых для однозначного представления значения.</p>
 
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 
 <p>Если число имеет больше цифр, чем запрошено параметром <code>fractionDigits</code>, оно будет округлено к ближайшему числу, представляемому <code>fractionDigits</code> цифрами. Смотрите обсуждение округления в описании метода {{jsxref("Number.prototype.toFixed", "toFixed()")}}, которое так же применяется и к методу <code>toExponential()</code>.</p>
 
-<h3 id="Throws" name="Throws">Выбрасываемые исключения</h3>
+<h3 id="Throws">Выбрасываемые исключения</h3>
 
 <dl>
  <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
@@ -42,11 +42,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
  <dd>Если этот метод вызывается на объекте, не являющимся объектом {{jsxref("Global_Objects/Number", "Number")}}.</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_toExponential" name="Example:_Using_toExponential">Пример: использование <code>toExponential</code></h3>
+<h3 id="Example_Using_toExponential">Пример: использование <code>toExponential</code></h3>
 
-<pre class="brush: js notranslate">var numObj = 77.1234;
+<pre class="brush: js">var numObj = 77.1234;
 
 
 console.log(numObj.toExponential());  // выведет 7.71234e+1
@@ -56,38 +56,15 @@ console.log(77.1234.toExponential()); // выведет 7.71234e+1
 console.log(77 .toExponential());     // выведет 7.7e+1
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.6', 'Number.prototype.toExponential')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.toexponential', 'Number.prototype.toExponential')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Number.toExponential")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Number.prototype.toFixed()")}}</li>

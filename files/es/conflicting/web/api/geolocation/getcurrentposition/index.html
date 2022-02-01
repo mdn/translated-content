@@ -1,0 +1,110 @@
+---
+title: PositionOptions
+slug: conflicting/Web/API/Geolocation/getCurrentPosition
+tags:
+  - Geolocalización
+  - Interfaz
+  - Referencia
+translation_of: Web/API/PositionOptions
+original_slug: Web/API/PositionOptions
+---
+<p>{{APIRef("Geolocation API")}}</p>
+
+<p>La interfaz <strong><code>PositionOptions</code></strong> describe las opciones disponibles cuando invocamos el "backend" de geolocalización. El navegador no crea este objeto directamente: es el script que invoca quien lo crea y usa como un parámetro de {{domxref("Geolocation.getCurrentPosition()")}} y {{domxref("Geolocation.watchPosition()")}}.</p>
+
+<h2 id="Propiedades">Propiedades</h2>
+
+<p><em>La interfaz <code>PositionOptions</code> no hereda ninguna propiedad</em>.</p>
+
+<dl>
+ <dt>{{domxref("PositionOptions.enableHighAccuracy")}}</dt>
+ <dd>Es un {{domxref("Boolean")}} que indica que la aplicación quiere recibir los mejores resultados posibles. Si es <code>true</code> y si el dispositivo es capaz de proporcionar una posición más precisa, así lo hará. Ten en cuenta que esto puede resultar en tiempos de respuesta más lentos o en un incremento del uso de energía (con un chip GPS en un teléfono móvil por ejemplo). Por otro lado, si es <code>false</code> (el valor por defecto), el dispositivo tiene libertad para decidir ahorrar recursos respondiendo más rápido y/o usando menos energía.</dd>
+ <dt>{{domxref("PositionOptions.timeout")}}</dt>
+ <dd>Es un valor <code>long</code> positivo que representa el máximo período de tiempo (en millisegundos) que se le permite tomar al dispositivo para retornar a una posición. El valor por defecto es <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>, y significa que <code>getCurrentPosition()</code> no retornará hasta que esté disponible la posición.</dd>
+ <dt>{{domxref("PositionOptions.maximumAge")}}</dt>
+ <dd>Es un valor <code>long</code> positivo que indica la edad máxima en milisegundos de una posible posición "cacheada" que es aceptable retornar. Si es <code>0</code>, significa que el dispositivo no puede usar posiciones "cacheadas" y debe intentar conseguir la posición real actual. Si es <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code> el dispositivo debe retornar una posición previamente "cacheada" independientemente de su edad.</dd>
+</dl>
+
+<h2 id="Métodos">Métodos</h2>
+
+<p><em><em>La interfaz <code>PositionOptions</code> no implementa ni hereda ningún método<em>.</em></em></em></p>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Geolocation', '#positionoptions', 'PositionOptions')}}</td>
+   <td>{{Spec2('Geolocation')}}</td>
+   <td>Especificación inicial.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>5</td>
+   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
+   <td>9</td>
+   <td>10.60<br>
+    Removed in 15.0<br>
+    Reintroduced in 16.0</td>
+   <td>5</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatUnknown()}}</td>
+   <td>{{CompatUnknown()}}</td>
+   <td>{{CompatGeckoMobile("4")}}</td>
+   <td>{{CompatUnknown()}}</td>
+   <td>10.60</td>
+   <td>{{CompatUnknown()}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li><a href="/en-US/docs/WebAPI/Using_geolocation" title="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
+ <li>La interfaz {{domxref("Geolocation")}} que la usa.</li>
+</ul>

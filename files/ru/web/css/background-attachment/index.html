@@ -10,15 +10,15 @@ translation_of: Web/CSS/background-attachment
 ---
 <div>{{CSSRef}}</div>
 
-<h2 id="Summary" name="Summary">Краткое описание</h2>
+<h2 id="Summary">Краткое описание</h2>
 
 <p>Если указано {{Cssxref("background-image")}}, <a href="/en-US/docs/CSS" title="CSS">CSS</a> свойство <code>background-attachment</code> определяет, является ли позиция этого изображения фиксированной в области просмотра, или прокручивается вместе с содержащим его блоком.</p>
 
 <p>{{cssinfo}}</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="brush: css notranslate">/* Ключевые значения */
+<pre class="brush: css">/* Ключевые значения */
 background-attachment: scroll;
 background-attachment: fixed;
 background-attachment: local;
@@ -45,13 +45,13 @@ background-attachment: unset;</pre>
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <h3 id="Простой_пример">Простой пример</h3>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
@@ -60,7 +60,7 @@ background-attachment: unset;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush:css; highlight:[3]; notranslate">p {
+<pre class="brush:css; highlight:[3];">p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
   background-attachment: fixed;
 }
@@ -76,7 +76,7 @@ background-attachment: unset;</pre>
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
@@ -94,7 +94,7 @@ background-attachment: unset;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush:css; highlight:[3]; notranslate">p {
+<pre class="brush:css; highlight:[3];">p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
@@ -104,40 +104,15 @@ background-attachment: unset;</pre>
 
 <p>{{EmbedLiveSample("Поддержка_нескольких_фоновых_изображений")}}</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-attachment', 'background-attachment')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Сокращённое свойство было расширено для поддержки нескольких фонов и значения <code>local</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-attachment', 'background-attachment')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Никаких существенных изменений.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#background-attachment', 'background-attachment')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость браузеров</h2>
+<h2 id="Browser_compatibility">Совместимость браузеров</h2>
 
-<p>{{Compat("css.properties.background-attachment")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/CSS/Multiple_backgrounds" title="CSS/Multiple backgrounds">Несколько фонов</a></li>

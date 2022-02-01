@@ -21,7 +21,7 @@ translation_of: Web/API/XMLHttpRequest/onreadystatechange
 
 <p>Событие <code>readystatechange</code> не произойдёт если запрос <code>XMLHttpRequest</code> отменён методом <a href="/en-US/docs/Web/API/XMLHttpRequest/abort">abort()</a>.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>XMLHttpRequest</em>.onreadystatechange = <em>callback</em>;</pre>
 
@@ -31,7 +31,7 @@ translation_of: Web/API/XMLHttpRequest/onreadystatechange
  <li><code><em>callback</em></code> - это функция, которая будет вызываться при изменении свойства <code>readyState</code>.</li>
 </ul>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush: js">var xhr = new XMLHttpRequest(),
     method = "GET",
@@ -47,21 +47,8 @@ xhr.send();</pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#handler-xhr-onreadystatechange')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>Действующий стандарт WHATWG</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
 
-<p>{{Compat("api.XMLHttpRequest.onreadystatechange")}}</p>
+<p>{{Compat}}</p>

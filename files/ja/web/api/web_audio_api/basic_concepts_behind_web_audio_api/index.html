@@ -46,10 +46,10 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 <p>音声源はいくつかの方法で取得できます:</p>
 
 <ul>
- <li>JavaScript内部で(オシレーターのような)オディオノードにより、直接音声を生成。</li>
+ <li>JavaScript内部で(オシレーターのような)オーディオノードにより、直接音声を生成。</li>
  <li>未加工の PCM データから生成(この場合、該当オーディオコンテキストは、対応している音声フォーマット形式へのデコード手段を有しています)。</li>
  <li>({{HTMLElement("video")}} や {{HTMLElement("audio")}} のような)HTML media elements より取得。</li>
- <li>(webcam やマイクロフォンのような)<a href="https://developer.mozilla.org/ja/docs/Web/API/WebRTC_API">Web RTC</a> {{domxref("MediaStream")}} により直接取得。</li>
+ <li>(webcam やマイクロフォンのような)<a href="/ja/docs/Web/API/WebRTC_API">Web RTC</a> {{domxref("MediaStream")}} により直接取得。</li>
 </ul>
 
 <h2 id="Audio_data_whats_in_a_sample" name="Audio_data_whats_in_a_sample">オーディオデータ: サンプルとは？</h2>
@@ -91,7 +91,7 @@ var buffer = context.createBuffer(2, 22050, 44100);</pre>
  <br>
  第一に、人間の耳の<a href="https://en.wikipedia.org/wiki/Hearing_range">可聴範囲</a>は、大雑把に 20 から 20000Hz の範囲です。<a href="https://ja.wikipedia.org/wiki/%E6%A8%99%E6%9C%AC%E5%8C%96%E5%AE%9A%E7%90%86">Nyquist-Shannon のサンプリング定理</a>により、サンプリング周波数は再現したい最大周波数の 2倍以上でなくてはなりません。したがって、サンプリングレートは 40kHz以上でなくてはなりません。<br>
  <br>
- 第二に、シグナルはサンプリング前に、<a href="https://ja.wikipedia.org/wiki/%E6%8A%98%E3%82%8A%E8%BF%94%E3%81%97%E9%9B%91%E9%9F%B3">偽信号</a>の発生をさせないため、<a href="https://ja.wikipedia.org/wiki/%E3%83%AD%E3%83%BC%E3%83%91%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF">ローパスフリタリング</a>されていなければなりません。理想的ローパスフィルターが 20kHz以下の周波数を(減衰させずに)完璧に通し、20kHz以上の周波数を完璧に遮断する一方で、実際には、周波数が部分的に減衰する場所となる、<a href="https://en.wikipedia.org/wiki/Transition_band">トランジションバンド</a>が必要です。このバンドが広くなるにつれ、<a href="https://en.wikipedia.org/wiki/Anti-aliasing_filter">減衰フィルター</a>を作るのは簡単かつ効率的になります。44.1kHz サンプリング周波数は、2.05kHz のトランジションバンドを与えます。</p>
+ 第二に、シグナルはサンプリング前に、<a href="https://ja.wikipedia.org/wiki/%E6%8A%98%E3%82%8A%E8%BF%94%E3%81%97%E9%9B%91%E9%9F%B3">偽信号</a>の発生をさせないため、<a href="https://ja.wikipedia.org/wiki/%E3%83%AD%E3%83%BC%E3%83%91%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF">ローパスフィルタリング</a>されていなければなりません。理想的ローパスフィルターが 20kHz以下の周波数を(減衰させずに)完璧に通し、20kHz以上の周波数を完璧に遮断する一方で、実際には、周波数が部分的に減衰する場所となる、<a href="https://en.wikipedia.org/wiki/Transition_band">トランジションバンド</a>が必要です。このバンドが広くなるにつれ、<a href="https://en.wikipedia.org/wiki/Anti-aliasing_filter">減衰フィルター</a>を作るのは簡単かつ効率的になります。44.1kHz サンプリング周波数は、2.05kHz のトランジションバンドを与えます。</p>
 </div>
 
 <p>この呼び出しをする場合、チャンネル数2 のステレオバッファーを取得し、AudioContext 上で(非常に一般的で、通常のサウンドカードではほとんどはレートとなる)44100Hz にて再生される音源が、0.5秒間続きます: 22050 フレーム/44100Hz = 0.5 秒。</p>
@@ -203,7 +203,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
   <tr>
    <td><code>2</code> <em>(Stereo)</em></td>
    <td><code>1</code> <em>(Mono)</em></td>
-   <td><em>モノラルからステレオへのダウンミックス。</em>&gt;<br>
+   <td><em>モノラルからステレオへのダウンミックス。</em><br>
     (<code>L</code> と <code>R</code> の)両入力チャンネルは等しく結合され、単一出力チャンネル(<code>M</code>)になります。<br>
     <code>output.M = 0.5 * (input.L + input.R)</code></td>
   </tr>

@@ -1,5 +1,5 @@
 ---
-title: Hoisting
+title: 호이스팅
 slug: Glossary/Hoisting
 tags:
   - CodingScripting
@@ -7,67 +7,93 @@ tags:
   - JavaScript
 translation_of: Glossary/Hoisting
 ---
-<p>호이스팅(hoisting)은 <a href="http://www.ecma-international.org/ecma-262/6.0/index.html">ECMAScript® 2015 언어 명세</a> 및 그 이전 표준 명세에서 사용된 적이 없는 용어입니다. 호이스팅은 JavaScript에서 실행 콘텍스트(특히 생성 및 실행 단계)가 어떻게 동작하는가에 대한 일반적인 생각으로 여겨집니다. 하지만 호이스팅은 오해로 이어질 수 있습니다.</p>
+<p>JavaScript에서 <strong>호이스팅</strong>(hoisting)이란, 인터프리터가 변수와 함수의 메모리 공간을 선언 전에 미리 할당하는 것을 의미합니다. <code>var</code>로 선언한 변수의 경우 호이스팅 시 <code>undefined</code>로 변수를 초기화합니다. 반면 <code>let</code>과 <code>const</code>로 선언한 변수의 경우 호이스팅 시 변수를 초기화하지 않습니다.</p>
 
-<p>예를 들어, 호이스팅을 변수 및 함수 선언이 물리적으로 작성한 코드의 상단으로 옮겨지는 것으로 가르치지만, 실제로는 그렇지 않습니다. 변수 및 함수 선언은 <u>컴파일</u> 단계에서 메모리에 저장되지만, 코드에서 입력한 위치와 정확히 일치한 곳에 있습니다.</p>
+<p>호이스팅을 설명할 땐 주로 "변수의 선언과 초기화를 분리한 후, 선언만 코드의 최상단으로 옮기는" 것으로 말하곤 합니다. 따라서 변수를 정의하는 코드보다 사용하는 코드가 앞서 등장할 수 있습니다. 다만 선언과 초기화를 함께 수행하는 경우, 선언 코드까지 실행해야 변수가 초기화된 상태가 됨을 주의하세요.</p>
 
-<h2 id="Learn_more">Learn more</h2>
+<div class="notecard note">
+  <p><strong>참고:</strong> 호이스팅은 (<code>let</code>과 <code>const</code>를 포함한) <a href="https://www.ecma-international.org/ecma-262/6.0/index.html">ECMAScript® 2015 언어 명세</a> 이전의 표준 명세에는 나타나지 않았습니다. 당시에는 호이스팅이 JavaScript에서 실행 맥락, 특히 생성 및 실행 단계의 동작 방식을 설명하는 일반적인 방법이었습니다.</p>
+</div>
 
-<h3 id="기술_예제">기술 예제</h3>
+<h2 id="Technical_example">기술 예제</h2>
 
-<p>JavaScript가 어떤 코드 구분을 실행하기 전에 함수 선언을 메모리에 저장하는 방식의 장점 중 하나는 코드에서 선언하기 전에 함수를 사용할 수 있다는 것입니다. 예를 들어:</p>
+<p>JavaScript는 함수의 코드를 실행하기 전에 함수 선언에 대한 메모리부터 할당합니다. 덕분에 함수를 호출하는 코드를 함수 선언보다 앞서 배치할 수 있습니다. 예를 들어,</p>
 
-<pre class="brush: js">function catName(name) {
-  console.log("My cat's name is " + name);
+<pre class="brush: js">
+function catName(name) {
+  console.log("제 고양이의 이름은 " + name + "입니다");
 }
 
-catName("Tigger");
+catName("호랑이");
+
 /*
-위 코드의 결과는: "My cat's name is Tigger"
-*/</pre>
+결과: "제 고양이의 이름은 호랑이입니다"
+*/
+</pre>
 
-<p>위 코드 스니펫은 통상적으로 작동하는 코드를 작성하는 법에 관해 기술합니다. 이제, 함수를 작성하기 전에 함수를 호출하면 어떤 일이 있는지 살펴봅시다:</p>
+<p>위의 코드 조각이 일반적으로 코드를 작성하는 순서라면, 함수를 선언하기 전에 먼저 호출했을 때의 예제도 보겠습니다.</p>
 
-<pre class="brush: js">catName("Chloe");
+<pre class="brush: js">
+catName("클로이");
 
 function catName(name) {
-  console.log("My cat's name is " + name);
+  console.log("제 고양이의 이름은 " + name + "입니다");
 }
+
 /*
-위 코드의 결과는: "My cat's name is Chloe"
-*/</pre>
-
-<p>비록 함수를 작성하기 전에 함수를 호출하였지만, 코드는 여전히 동작합니다. 이는 JavaScript에서 컨텍스트 실행이 작동하는 방식 때문입니다.</p>
-
-<p>Hoisting은 다른 데이터 타입 및 변수와도 잘 작동합니다. 변수는 선언하기 전에 초기화하여 사용될 수 있습니다. 그러나 초기화 없이는 사용할 수 없습니다.</p>
-
-<h3 id="기술_예제_2">기술 예제</h3>
-
-<pre class="brush: js">num = 6;
-num + 7;
-var num;
-/* num이 선언되지 않더라도 에러를 내지 않습니다 */
-
+결과: "제 고양이의 이름은 클로이입니다"
+*/
 </pre>
 
-<p>JavaScript는 초기화가 아닌 선언만 끌어올립니다(hoist). 만약 변수를 선언한 뒤 나중에 초기화시켜 사용한다면, 그 값은 undefined로 지정됩니다. 아래 두 예제는 같은 동작을 보여줍니다.</p>
+<p>함수 호출이 함수 자체보다 앞서 존재하지만, 그럼에도 불구하고 이 코드 역시 동작합니다. 이것이 JavaScript에서 실행 맥락이 동작하는 방식입니다.</p>
 
-<pre class="brush: js">var x = 1; // x 초기화
-console.log(x + " " + y); // '1 undefined'
-var y = 2;
+<p>호이스팅은 다른 자료형과 변수에도 잘 작동합니다. 변수를 선언하기 전에 먼저 초기화하고 사용할 수 있는 것입니다.</p>
 
+<h3 id="Only_declarations_are_hoisted">선언만 호이스팅 대상</h3>
 
-// 아래 코드는 이전 코드와 같은 방식으로 동작합니다.
-var x = 1; // Initialize x
-var y; // Declare y
-console.log(x + " " + y); // '1 undefined'
-y = 2; // Initialize y
+<p>JavaScript는 초기화를 제외한 선언만 호이스팅합니다. 변수를 먼저 사용하고 그 후에 선언 및 초기화가 나타나면, 사용하는 시점의 변수는 기본 초기화 상태(<code>var</code> 선언 시 <code>undefined</code>, 그 외에는 초기화하지 않음)입니다. 예를 들어,</p>
+
+<pre class="brush: js">
+console.log(num); // 호이스팅한 var 선언으로 인해 undefined 출력
+var num; // 선언
+num = 6; // 초기화
 </pre>
 
-<h3 id="기술_레퍼런스">기술 레퍼런스</h3>
+<p>반면, 다음 예제는 선언 없이 초기화만 존재합니다. 따라서 호이스팅도 없고, 변수를 읽으려는 시도에서는 <code>ReferenceError</code> 예외가 발생합니다.</p>
+
+<pre class="brush: js">
+console.log(num); // ReferenceError
+num = 6; // 초기화</pre>
+
+<p>다음은 호이스팅을 보이는 더 많은 예제입니다.</p>
+
+<pre class="brush: js">
+// 예제 1
+// y만 호이스팅 대상
+
+x = 1; // x 초기화. x를 선언하지 않은 경우 선언. 그러나 명령문에 var가 없으므로 호이스팅이 발생하지 않음
+console.log(x + " " + y); // '1 undefined'
+// JavaScript는 선언만 호이스팅하므로, 윗줄의 y는 undefined
+var y = 2; // y를 선언하고 초기화
+
+// 예제 2
+// 호이스팅은 없지만, 변수 초기화는 (아직 하지 않은 경우) 변수 선언까지 병행하므로 변수를 사용할 수 있음
+
+a = '크랜'; // a 초기화
+b = '베리'; // b 초기화
+
+console.log(a + "" + b); // '크랜베리'</pre>
+
+<h3>let과 const 호이스팅</h3>
+
+<p><code>let</code>과 <code>const</code>로 선언한 변수도 호이스팅 대상이지만, <code>var</code>와 달리 호이스팅 시 <code>undefined</code>로 변수를 초기화하지는 않습니다. 따라서 변수의 초기화를 수행하기 전에 읽는 코드가 먼저 나타나면 예외가 발생합니다.</p>
+
+<p>더 많은 정보는 <a href="/ko/docs/Web/JavaScript/Reference/Statements/let#시간상_사각지대"><code>let</code> 문서의 "시간상 사각지대"</a>를 참고하세요.</p>
+
+<h3 id="see_also">같이 보기</h3>
 
 <ul>
- <li><a href="https://www.udemy.com/understand-javascript/">JavaScript: Understanding the Weird Parts</a> - Udemy.com 코스</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var statement</a> - MDN</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function">function statement</a> - MDN</li>
-</ul>
+  <li><a href="/ko/docs/Web/JavaScript/Reference/Statements/var"><code>var</code> 명령문</a> — MDN</li>
+  <li><a href="/ko/docs/Web/JavaScript/Reference/Statements/function"><code>function</code> 명령문</a> — MDN</li>
+ </ul>
+ 

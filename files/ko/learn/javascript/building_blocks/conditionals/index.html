@@ -1,5 +1,5 @@
 ---
-title: 판단을 만드세요 — 조건문
+title: 판단 내리기 — 조건문
 slug: Learn/JavaScript/Building_blocks/conditionals
 translation_of: Learn/JavaScript/Building_blocks/conditionals
 original_slug: Learn/JavaScript/Building_blocks/조건문
@@ -13,9 +13,9 @@ original_slug: Learn/JavaScript/Building_blocks/조건문
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">선행 조건:</th>
+   <th scope="row">필요한 사전 지식:</th>
    <td>
-    기본적인 컴퓨터 활용 능력, HTML, CSS, <a href="/ko/docs/Learn/JavaScript/First_steps">Javascript 첫 걸음</a>
+    기본적인 컴퓨터 활용 능력, HTML, CSS, <a href="/ko/docs/Learn/JavaScript/First_steps">Javascript 첫걸음</a>
    </td>
   </tr>
   <tr>
@@ -27,17 +27,17 @@ original_slug: Learn/JavaScript/Building_blocks/조건문
  </tbody>
 </table>
 
-<h2 id="You_can_have_it_on_one_condition..!">당신은 한 조건보다 우위에 있을 수 있습니다..!</h2>
+<h2 id="You_can_have_it_on_one_condition..!">여러분은 한 조건보다 우위에 있을 수 있습니다..!</h2>
 
 <p>사람(과 동물)은 항상 그들의 삶에 영향을 미치는 결정을, 작은 것(과자를 하나 먹을까? 두개 먹을까?)부터 큰 것(고향에 머물면서 아버지의 농장에서 일해야 할까? 아니면 천체물리학을 공부하러 미국으로 유학을 갈까?)까지 내립니다.</p>
 
 <p>조건문은 우리가, 반드시 내려져야 하는 선택에서부터 (예를 들자면, "쿠키 한 개 또는 두 개"), 그 선택들의 결과까지 (아마도 "쿠키 한 개를 먹는다" 의 결과는 "여전히 배가 고프다" 일지도 모르고, "쿠키 두 개를 먹는다" 의 결과는 "배부르다, 그러나 엄마가 쿠키를 다 먹었다고 나를 야단칠 것이다" 일지도 모릅니다), 그러한 의사 결정을 자바스크립트에서 표현할 수 있게 합니다.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13703/cookie-choice-small.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="cookie-choice-small.png" style="display: block; margin: 0 auto;"></p>
 
 <h2 id="if...else_statements">if ... else 문</h2>
 
-<p>당신이 자바스크립트에서 쓸 단연코 가장 일반적인 형태의 조건문을 살펴봅시다 — 변변찮은 <code><a href="/ko/docs/Web/JavaScript/Reference/Statements/if...else">if ... else</a></code><a href="/ko/docs/Web/JavaScript/Reference/Statements/if...else"> 문</a>입니다.</p>
+<p>여러분이 자바스크립트에서 쓸 단연코 가장 일반적인 형태의 조건문을 살펴봅시다 — 변변찮은 <code><a href="/ko/docs/Web/JavaScript/Reference/Statements/if...else">if ... else</a></code><a href="/ko/docs/Web/JavaScript/Reference/Statements/if...else"> 문</a>입니다.</p>
 
 <h3 id="Basic_if_..._else_syntax">기본 if ... else 문법</h3>
 
@@ -53,7 +53,7 @@ original_slug: Learn/JavaScript/Building_blocks/조건문
 
 <ol>
  <li>키워드 <code>if</code> 뒤에 괄호가 옵니다.</li>
- <li>시험할 조건은 괄호 안에 위치합니다 (전형적으로 "이 값은 다른 값보다 큰가?", 또는 "이 값은 존재하는가?"). 이 조건은 마지막 모듈에서 논의했던 비교 연산자(<a href="/ko/Learn/JavaScript/First_steps/Math#Comparison_operators">comparison operators</a>)를 사용할 것이고 <code>true</code>나  <code>false</code>를 리턴합니다.</li>
+ <li>시험할 조건은 괄호 안에 위치합니다 (전형적으로 "이 값은 다른 값보다 큰가?", 또는 "이 값은 존재하는가?"). 이 조건은 마지막 모듈에서 논의했던 비교 연산자(<a href="/ko/docs/Learn/JavaScript/First_steps/Math#comparison_operators">comparison operators</a>)를 사용할 것이고 <code>true</code>나  <code>false</code>를 리턴합니다.</li>
  <li>내부의 중괄호 안에 코드가 있습니다. — 이것은 우리가 좋아하는 어떤 코드든 될 수 있고, 오직 조건이 <code>true</code>를 반환하는 경우에만 실행됩니다.</li>
  <li>키워드 <code>else</code>.</li>
  <li>또 다른 중괄호 안에 더 많은 코드가 있습니다. — 이것은 우리가 좋아하는 어떤 코드든 될 수 있고, 오직 조건이 <code>true</code>가 아닌 경우에만 실행됩니다. — 또는 다른 말로 하자면, 조건이 <code>false</code>인 경우에만 실행됩니다.</li>
@@ -69,9 +69,9 @@ original_slug: Learn/JavaScript/Building_blocks/조건문
 
 실행할 다른 코드</pre>
 
-<p>하지만, 여기서 조심해야 할 점 — 위의 경우, 코드의 두 번째 블록은 조건문에 의해서 제어되지 않아서, 조건이 <code>true</code>나 <code>false</code>를 리턴하는 것에 관계없이 <strong>항상</strong> 동작합니다. 이것이 반드시 나쁜 것은 아니지만, 당신이 원하는 것이 아닐 지도 모릅니다. — 종종 당신은 둘 다가 아니라, 코드의 한 블럭 또는 다른 블럭을 실행하기를 원합니다.</p>
+<p>하지만, 여기서 조심해야 할 점 — 위의 경우, 코드의 두 번째 블록은 조건문에 의해서 제어되지 않아서, 조건이 <code>true</code>나 <code>false</code>를 리턴하는 것에 관계없이 <strong>항상</strong> 동작합니다. 이것이 반드시 나쁜 것은 아니지만, 여러분이 원하는 것이 아닐 지도 모릅니다. — 종종 여러분은 둘 다가 아니라, 코드의 한 블럭 또는 다른 블럭을 실행하기를 원합니다.</p>
 
-<p>마지막으로, 당신은 때때로 다음과 같이 짧은 스타일로 중괄호 없이 쓰여진 <code>if...else</code>를 보았을 지도 모릅니다:</p>
+<p>마지막으로, 여러분은 때때로 다음과 같이 짧은 스타일로 중괄호 없이 쓰여진 <code>if...else</code>를 보았을 지도 모릅니다:</p>
 
 <pre class="notranslate">if (조건) 만약 조건(condition)이 참일 경우 실행할 코드
 else 대신 실행할 다른 코드</pre>
@@ -94,7 +94,7 @@ if (shoppingDone === true) {
 <p>위 코드는 항상 <code>false</code>를 리턴하는 <code>shoppingDone</code>변수를 결과로 낳는데, 이는 우리의 불쌍한 아이에게 실망을 안겨주겠죠. 아이가 부모님과 함께 쇼핑을 간다면 부모님이 <code>shoppingDone</code>변수를 <code>true</code>로 설정하는 메커니즘을 제공하는 것은 우리에게 달렸습니다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: GitHub에서 예시를 더 볼 수 있습니다.  <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">이 예제의 완성 버전 on GitHub</a> (also see it <a href="http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">running live</a>.)</p>
+<p><strong>참고</strong>: GitHub에서 예시를 더 볼 수 있습니다.  <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">이 예제의 완성 버전 on GitHub</a> (also see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">running live</a>.)</p>
 </div>
 
 <h3 id="else_if">else if</h3>
@@ -147,12 +147,12 @@ function setWeather() {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: 또한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html">이 예제를 GitHub에서 찾을 수 있습니다</a>. (<a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html">see it running live</a> on there also.)</p>
+<p><strong>참고</strong>: 또한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html">이 예제를 GitHub에서 찾을 수 있습니다</a>. (<a href="https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html">see it running live</a> on there also.)</p>
 </div>
 
 <h3 id="A_note_on_comparison_operators">비교 연산자에 대한 메모</h3>
 
-<p>비교 연산자는 우리의 조건문 안의 조건을 테스트하는데 사용됩니다. 우리는 먼저 이전의 <a href="/ko/Learn/JavaScript/First_steps/Math#Comparison_operators">자바스크립트의 기본적인 연산 - 숫자와 연산자</a> 문서에서 비교 연산자를 봤습니다. 우리의 선택들은 다음과 같습니다:</p>
+<p>비교 연산자는 우리의 조건문 안의 조건을 테스트하는데 사용됩니다. 우리는 먼저 이전의 <a href="/ko/docs/Learn/JavaScript/First_steps/Math#comparison_operators">자바스크립트의 기본적인 연산 - 숫자와 연산자</a> 문서에서 비교 연산자를 봤습니다. 우리의 선택들은 다음과 같습니다:</p>
 
 <ul>
  <li><code>===</code>와 <code>!==</code> — 한 값이 다른 값과 같거나 다른지 테스트한다.</li>
@@ -161,7 +161,7 @@ function setWeather() {
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: 이것들에 대한 기억을 되살리기를 원하신다면 저 링크에 있는 것들을 다시 보세요.</p>
+<p><strong>참고</strong>: 이것들에 대한 기억을 되살리기를 원하신다면 저 링크에 있는 것들을 다시 보세요.</p>
 </div>
 
 <p>몇 번이고 다시 만날 boolean(<code>true</code>/<code>false</code>)값을 테스트하는 것과 일반적인 패턴에 대한 특별한 언급을 하고 싶었습니다. 어떠한 값들이든 <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code>이나 빈 문자열(<code>''</code>)이 아닌 값은 조건문으로 테스트되었을 때, 실제로는 <code>true</code>를 리턴하므로, 변수가 참인지 혹은 값이 존재하는지를 테스트하기 위해 변수 이름 그 자체를 사용할 수 있습니다. 예를 들어:</p>
@@ -201,7 +201,7 @@ if (shoppingDone) { // 명시적으로 '=== true'를 명시할 필요가 없습�
 
 <h3 id="Logical_operators_AND_OR_and_NOT">논리 연산자: AND, OR 그리고 NOT</h3>
 
-<p>만약 중첩된 <code>if...else</code>문을 작성 없이 다양한 조건을 테스트하길 원한다면 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Logical_Operators">논리 연산자</a>가 당신을 도와줄 수 있습니다. 조건 내에서 사용될 때, 처음의 두 가지는 다음을 합니다:</p>
+<p>만약 중첩된 <code>if...else</code>문을 작성 없이 다양한 조건을 테스트하길 원한다면 <a href="/en-US/docs/Web/JavaScript/Reference/Operators">논리 연산자</a>가 여러분을 도와줄 수 있습니다. 조건 내에서 사용될 때, 처음의 두 가지는 다음을 합니다:</p>
 
 <ul>
  <li><code>&amp;&amp;</code> — AND; 전체 표현식(expression)이 <code>true</code>를 리턴하기 위해 두 개 혹은 그 이상의 표현식이 개별적으로 <code>true</code>로 평가되도록 그 식들을 같이 연결할 수 있게 합니다.</li>
@@ -236,13 +236,13 @@ if (shoppingDone) { // 명시적으로 '=== true'를 명시할 필요가 없습�
 
 <p>위 예시에서, OR 문이 <code>true</code>를 리턴한다면, NOT 연산자는 전체 표현식이 <code>false</code>를 리턴하도록 부정할 것입니다.</p>
 
-<p>어떤 구조든지, 당신이 원하는 만큼 많은 논리 문(statement)을 결합할 수 있습니다. 다음 예시는 오직 두 OR 문 모두가 true를 리턴하면 내부의 코드를 실행하는데, 이는 전체의 AND 문이 true를 리턴할 것임을 의미합니다.</p>
+<p>어떤 구조든지, 여러분이 원하는 만큼 많은 논리 문(statement)을 결합할 수 있습니다. 다음 예시는 오직 두 OR 문 모두가 true를 리턴하면 내부의 코드를 실행하는데, 이는 전체의 AND 문이 true를 리턴할 것임을 의미합니다.</p>
 
 <pre class="brush: js notranslate">if ((x === 5 || y &gt; 3 || z &lt;= 10) &amp;&amp; (loggedIn || userName === 'Steve')) {
   // run the code
 }</pre>
 
-<p>조건문에서 논리적 OR 연산자를 사용할 때의 일반적인 실수는 당신이 검사하는 값의 변수를 한 번 명시하기(state)를 시도하고, 그리고 true를 리턴할 수 있는 값들의 목록을, <code>||</code> (OR) 연산자에 의해 분리하며 제공하는 것입니다. 예를 들자면:</p>
+<p>조건문에서 논리적 OR 연산자를 사용할 때의 일반적인 실수는 여러분이 검사하는 값의 변수를 한 번 명시하기(state)를 시도하고, 그리고 true를 리턴할 수 있는 값들의 목록을, <code>||</code> (OR) 연산자에 의해 분리하며 제공하는 것입니다. 예를 들자면:</p>
 
 <pre class="example-bad brush: js notranslate">if (x === 5 || 7 || 10 || 20) {
   // run my code
@@ -256,9 +256,9 @@ if (shoppingDone) { // 명시적으로 '=== true'를 명시할 필요가 없습�
 
 <h2 id="switch_statements">switch 문</h2>
 
-<p><code>if...else</code> 문은 조건문 코드가 잘 가능하게 하는 일을 하지만, 단점이 없지는 않습니다. 그 문은 두 가지 선택을 가지고 있고, 각각은 실행될 합리적인 양의 코드가 필요하고, 및/또는 그 조건이 복잡한 (예를 들자면, 다수의 논리 연산자) 경우에 주로 유용합니다. 당신이 단지 어떤 값의 선택에 변수를 설정하거나 조건에 달린 특정한 문(statement)을 출력하기를 원하는 경우에, 그 구문(syntax)은 다소 번거로울 수 있는데, 특히 당신이 다수의 선택을 가지고 있는 경우에 그렇습니다.</p>
+<p><code>if...else</code> 문은 조건문 코드가 잘 가능하게 하는 일을 하지만, 단점이 없지는 않습니다. 그 문은 두 가지 선택을 가지고 있고, 각각은 실행될 합리적인 양의 코드가 필요하고, 및/또는 그 조건이 복잡한 (예를 들자면, 다수의 논리 연산자) 경우에 주로 유용합니다. 여러분이 단지 어떤 값의 선택에 변수를 설정하거나 조건에 달린 특정한 문(statement)을 출력하기를 원하는 경우에, 그 구문(syntax)은 다소 번거로울 수 있는데, 특히 여러분이 다수의 선택을 가지고 있는 경우에 그렇습니다.</p>
 
-<p>그러한 경우에 <a href="/ko/docs/Web/JavaScript/Reference/Statements/switch"><code>switch</code>문</a>은 당신의 친구입니다. 이는 입력으로 하나의 표현식/값을 받고, 값과 일치하는 하나를 찾을 때까지 여러 항목을 살펴보고 그에 맞는 코드를 실행합니다. 당신에게 아이디어를 주기 위해, 여기 몇몇 많은 의사 코드가 있습니다:</p>
+<p>그러한 경우에 <a href="/ko/docs/Web/JavaScript/Reference/Statements/switch"><code>switch</code>문</a>은 여러분의 친구입니다. 이는 입력으로 하나의 표현식/값을 받고, 값과 일치하는 하나를 찾을 때까지 여러 항목을 살펴보고 그에 맞는 코드를 실행합니다. 여러분에게 아이디어를 주기 위해, 여기 몇몇 많은 의사 코드가 있습니다:</p>
 
 <pre class="notranslate">switch (expression) {
   case choice1:
@@ -288,7 +288,7 @@ if (shoppingDone) { // 명시적으로 '=== true'를 명시할 필요가 없습�
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: <code>default</code>를 반드시 포함하지 않아도 됩니다 — 만약 표현식이 미지의 값과 같게 되어버릴 수 있는 경우가 없다면 당신은 안전하게 이것을 생략할 수 있습니다. 그러나, 그 경우가 있다면, 당신은 미지의 경우를 다루기 위해 이것을 포함할 필요가 있습니다.</p>
+<p><strong>참고</strong>: <code>default</code>를 반드시 포함하지 않아도 됩니다 — 만약 표현식이 미지의 값과 같게 되어버릴 수 있는 경우가 없다면 여러분은 안전하게 이것을 생략할 수 있습니다. 그러나, 그 경우가 있다면, 여러분은 미지의 경우를 다루기 위해 이것을 포함할 필요가 있습니다.</p>
 </div>
 
 <h3 id="A_switch_example">A switch example</h3>
@@ -336,7 +336,7 @@ function setWeather() {
 <p>{{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: 또한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html">이 예제를 GitHub에서 찾을 수 있습니다</a>. (see it <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">running live</a> on there also.)</p>
+<p><strong>참고</strong>: 또한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html">이 예제를 GitHub에서 찾을 수 있습니다</a>. (see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">running live</a> on there also.)</p>
 </div>
 
 <h2 id="Ternary_operator">삼항연산자 </h2>
@@ -384,10 +384,10 @@ select.onchange = function() {
 <p>끝으로, 우리는 또한 삼항연산자를 포함하고 있는 함수의 실행을 제공하는 '<a href="/ko/docs/Web/API/GlobalEventHandlers/onchange">onchange</a>' 이벤트 리스너를 가지고 있습니다. 이것은 테스트 조건으로 시작합니다 — <code>select.value === 'black'</code>. 만약 이것이 <code>true</code>를 리턴하면, 우리는 검정과 하양의 매개변수를 지니고 있는 <code>update()</code>함수를 실행하는데, 이는 배경색은 검정으로 텍스트 색은 하양으로 되는 결과를 의미합니다. 만약 이것이 <code>false</code>를 리턴하면, 우리는 하양과 검정의 매개변수를 지니고 있는 <code>update()</code>함수를 실행하는데, 이는 사이트의 색상이 반전됐다는 것을 의미합니다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: 또한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">이 예제를 GitHub에서 찾을 수 있습니다</a>. (see it <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">running live</a> on there also.)</p>
+<p><strong>참고</strong>: 또한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">이 예제를 GitHub에서 찾을 수 있습니다</a>. (see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">running live</a> on there also.)</p>
 </div>
 
-<h2 id="Active_learning_A_simple_calendar">Active learning: 간단한 달력 만들기</h2>
+<h2 id="Active_learning_A_simple_calendar">직접 해보기: 간단한 달력 만들기</h2>
 
 <p>이 예제에서는 간단한 달력 어플리케이션을 만들어 볼 것입니다. 코드에는 다음과 같은 것들이 들어 있습니다.</p>
 
@@ -593,9 +593,9 @@ textarea.onkeyup = function(){
 
 <p>{{ EmbedLiveSample('Playable_code', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<h2 id="Active_learning_More_color_choices!">Active learning: 색깔 고르기</h2>
+<h2 id="Active_learning_More_color_choices!">직접 해보기: 색깔 고르기</h2>
 
-<p>이 예제에서는 위에서 봤던 삼항연산자 예제의 삼항연산자를 간단한 웹사이트에 더 많은 선택을 적용할 수 있게 하는 switch문으로 전환할 것입니다. {{htmlelement("select")}}을 보세요 — 이번에는 이것이 두 개의 테마 옵션을 가지고 있지 않고, 다섯 개를 가지고 있는 것을 보실 수 있을 것입니다. 당신은 <code>// ADD SWITCH STATEMENT</code> 주석 바로 밑에 추가할 필요가 있습니다:</p>
+<p>이 예제에서는 위에서 봤던 삼항연산자 예제의 삼항연산자를 간단한 웹사이트에 더 많은 선택을 적용할 수 있게 하는 switch문으로 전환할 것입니다. {{htmlelement("select")}}을 보세요 — 이번에는 이것이 두 개의 테마 옵션을 가지고 있지 않고, 다섯 개를 가지고 있는 것을 보실 수 있을 것입니다. 여러분은 <code>// ADD SWITCH STATEMENT</code> 주석 바로 밑에 추가할 필요가 있습니다:</p>
 
 <ul>
  <li>이것은 <code>choice</code> 변수를 이것의 입력 표현식으로 받아야 합니다.</li>
@@ -746,33 +746,33 @@ textarea.onkeyup = function(){
 
 <p>{{ EmbedLiveSample('Playable_code_2', '100%', 950, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<h2 id="Test_your_skills!">당신의 실력을 평가해 보세요!</h2>
+<h2 id="Test_your_skills!">실력을 평가해 보세요!</h2>
 
-<p>이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals">Test your skills: Conditionals</a>.</p>
+<p>이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — <a href="/ko/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals">실력을 평가해 보세요: 조건문</a>.</p>
 
 <h2 id="Conclusion">결론</h2>
 
-<p>그리고 이것이 당신이 지금 자바스크립트에서 알아야 할 조건문 구조에 대한 모든 것입니다! 저는 당신이 이 개념들을 이해했고 이 예제들을 쉽게 통과했을 것이라고 확신합니다; 만약 이해하지 못한 게 있으시다면, 자유롭게 이 문서를 다시 읽어 보시고, 도움이 필요하시다면 <a href="/en-US/Learn#Contact_us">contact us</a>를 방문해 보세요.</p>
+<p>그리고 이것이 여러분이 지금 자바스크립트에서 알아야 할 조건문 구조에 대한 모든 것입니다! 저는 여러분이 이 개념들을 이해했고 이 예제들을 쉽게 통과했을 것이라고 확신합니다; 만약 뭐든지 이해하지 못한 게 있다면, 자유롭게 이 문서를 다시 읽거나, <a href="/en-US/docs/Learn#contact_us">문의하기</a>에서 도움을 요청해 보세요.</p>
 
-<h2 id="See_also">더 보기</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
- <li><a href="/ko/Learn/JavaScript/First_steps/Math#Comparison_operators">비교 연산자(Comparison operators)</a></li>
- <li><a href="/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements">조건문 자세하게 살펴보기</a></li>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Statements/if...else">if...else 레퍼런스</a></li>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">삼항연산자 레퍼런스</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/First_steps/Math#comparison_operators">비교 연산자(Comparison operators)</a></li>
+ <li><a href="/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements">조건문 자세하게 살펴보기</a></li>
+ <li><a href="/ko/docs/Web/JavaScript/Reference/Statements/if...else">if...else 참고서</a></li>
+ <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">삼항연산자 참고서</a></li>
 </ul>
 
 <p>{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}</p>
 
-<h2 id="In_this_module">이 모듈에서는</h2>
+<h2 id="In_this_module">이 과정에서는</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">판단을 만드세요 — 조건문</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">반복문</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">함수 — 재사용 가능한 코드 블록</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">자신만의 함수 만들기</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">함수 반환 값</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">이벤트 입문</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">이미지 갤러리</a></li>
+ <li><strong>판단 내리기 — 조건문</strong></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Looping_code">반복문</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Functions">함수 — 코드 재사용</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">함수 만들기</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Return_values">함수 반환 값</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Events">이벤트 입문</a></li>
+ <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Image_gallery">이미지 갤러리</a></li>
 </ul>

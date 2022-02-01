@@ -17,11 +17,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <p>{{EmbedInteractiveExample("pages/js/array-map.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+<h2 id="Syntax">구문</h2>
 
 <pre class="syntaxbox"><code><var>arr</var>.map(<var>callback(currentValue</var>[, index[, array]])[, <var>thisArg</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">매개변수</h3>
+<h3 id="Parameters">매개변수</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -44,13 +44,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <p>배열의 각 요소에 대해 실행한 <code>callback</code>의 결과를 모은 새로운 배열.</p>
 
-<h2 id="Description" name="Description">설명</h2>
+<h2 id="Description">설명</h2>
 
 <p><code>map</code>은 <code>callback</code> 함수를 <strong>각각의 요소에 대해 한번씩 </strong>순서대로 불러 그 함수의 반환값으로 새로운 배열을 만듭니다. <code>callback</code> 함수는 ({{jsxref("undefined")}}도 포함해서) 배열 값이 들어있는 인덱스에 대해서만 호출됩니다. 즉, 값이 삭제되거나 아직 값이 할당/정의되지 않은 인덱스에 대해서는 호출되지 않습니다.</p>
 
-<p><code>callback</code> 함수는 호출될 때 대상 요소의 값, 그 요소의 인덱스, 그리고 <code>map</code>을 호출한 원본 배열<span style="font-family: courier,andale mono,monospace;"> </span>3개의 인수를 전달받습니다.</p>
+<p><code>callback</code> 함수는 호출될 때 대상 요소의 값, 그 요소의 인덱스, 그리고 <code>map</code>을 호출한 원본 배열 3개의 인수를 전달받습니다.</p>
 
-<p><code>thisArg</code> 매개변수가 <code>map</code>에 전달된 경우 <code>callback</code> 함수의 <code>this</code>값으로 사용됩니다. 그 외의 경우 {{jsxref("undefined")}}값이 <code>this</code> 값으로 사용됩니다.<font face="Consolas, Liberation Mono, Courier, monospace"> </font><code>callback</code> 함수에서 최종적으로 볼 수 있는 <code>this</code> 값은  <a href="/ko/docs/Web/JavaScript/Reference/Operators/this">함수 내 <code>this</code>를 정하는 일반적인 규칙</a>에 따라 결정됩니다.</p>
+<p><code>thisArg</code> 매개변수가 <code>map</code>에 전달된 경우 <code>callback</code> 함수의 <code>this</code>값으로 사용됩니다. 그 외의 경우 {{jsxref("undefined")}}값이 <code>this</code> 값으로 사용됩니다. <code>callback</code> 함수에서 최종적으로 볼 수 있는 <code>this</code> 값은  <a href="/ko/docs/Web/JavaScript/Reference/Operators/this">함수 내 <code>this</code>를 정하는 일반적인 규칙</a>에 따라 결정됩니다.</p>
 
 <p><code>map</code>은 호출한 배열의 값을 변형하지 않습니다. 단, <code>callback</code> 함수에 의해서 변형될 수는 있습니다.</p>
 
@@ -58,7 +58,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <p>명세서에 정의된 알고리즘으로 인해 <code>map</code>을 호출한 배열의 중간이 비어있는 경우, 결과 배열 또한 동일한 인덱스를 빈 값으로 유지합니다.</p>
 
-<h2 id="Examples" name="Examples">예제</h2>
+<h2 id="Examples">예제</h2>
 
 <h3 id="Example_Mapping_an_array_of_numbers_to_an_array_of_square_roots" name="Example:_Mapping_an_array_of_numbers_to_an_array_of_square_roots">배열에 들어있는 숫자들의 제곱근을 구하여 새로운 배열을 만들기</h3>
 
@@ -158,9 +158,9 @@ function returnInt(element) {
 ['1.1', '2.2e2', '3e300'].map(Number); // [1.1, 220, 3e+300]
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">폴리필</h2>
+<h2 id="Polyfill">폴리필</h2>
 
-<p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">map</span></font>은 ECMA-262 표준 제5판에 추가됐습니다. 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 플랫폼에서도 <code>map</code>을 사용할 수 있습니다. 아래 알고리즘은 {{jsxref("Object")}}, {{jsxref("TypeError")}}, {{jsxref("Array")}}가 변형되지 않고, <code>callback.call</code>의 계산 값이 원래의 {{jsxref("Function.prototype.call()")}}과 같은 경우 ECMA-262 제5판이 명시한 것과 동일합니다.</p>
+<p><code>map</code>은 ECMA-262 표준 제5판에 추가됐습니다. 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 플랫폼에서도 <code>map</code>을 사용할 수 있습니다. 아래 알고리즘은 {{jsxref("Object")}}, {{jsxref("TypeError")}}, {{jsxref("Array")}}가 변형되지 않고, <code>callback.call</code>의 계산 값이 원래의 {{jsxref("Function.prototype.call()")}}과 같은 경우 ECMA-262 제5판이 명시한 것과 동일합니다.</p>
 
 <pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.19
 // Reference: http://es5.github.io/#x15.4.4.19
@@ -253,7 +253,7 @@ if (!Array.prototype.map) {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">명세</h2>
+<h2 id="Specifications">명세</h2>
 
 <table class="standard-table">
  <tbody>
@@ -280,11 +280,11 @@ if (!Array.prototype.map) {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">브라우저 호환성</h2>
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
 
 <div>{{Compat("javascript.builtins.Array.map")}}</div>
 
-<h2 id="See_also" name="See_also">같이 보기</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.forEach()")}}</li>

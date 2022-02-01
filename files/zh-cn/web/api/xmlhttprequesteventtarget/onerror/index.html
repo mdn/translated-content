@@ -11,6 +11,8 @@ translation_of: Web/API/XMLHttpRequestEventTarget/onerror
 
 <p><strong><code>XMLHttpRequestEventTarget.onerror</code></strong> 是{{domxref("XMLHttpRequest")}} 事务由于错误而失败时调用的函数。</p>
 
+<p>请注意只有在网络层级出现错误时才会调用此函数。如果错误只出现在应用层（比如发送一个HTTP的错误码），这个方法将不会被调用。</p>
+
 <h2 id="Syntax" name="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>XMLHttpRequest</em>.onerror = <em>callback</em>;</pre>

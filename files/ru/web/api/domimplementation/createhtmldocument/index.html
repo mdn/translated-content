@@ -15,7 +15,7 @@ translation_of: Web/API/DOMImplementation/createHTMLDocument
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">const <var>newDoc</var> = document.implementation.createHTMLDocument(<var>title</var>)</pre>
+<pre class="syntaxbox">const <var>newDoc</var> = document.implementation.createHTMLDocument(<var>title</var>)</pre>
 
 <h3 id="Параметры">Параметры</h3>
 
@@ -30,7 +30,7 @@ translation_of: Web/API/DOMImplementation/createHTMLDocument
 
 <p>Вот HTML для этого примера:</p>
 
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;p&gt;Click &lt;a href="javascript:makeDocument()"&gt;here&lt;/a&gt; to create a new document and insert it below.&lt;/p&gt;
   &lt;iframe id="theFrame" src="about:blank" /&gt;
 &lt;/body&gt;
@@ -38,7 +38,7 @@ translation_of: Web/API/DOMImplementation/createHTMLDocument
 
 <p>Реализация JavaScript <code>makeDocument()</code> выглядит следующим образом:</p>
 
-<pre class="brush: js notranslate">function makeDocument() {
+<pre class="brush: js">function makeDocument() {
   let frame = document.getElementById("theFrame");
 
   let doc = document.implementation.createHTMLDocument("New Document");
@@ -69,7 +69,7 @@ translation_of: Web/API/DOMImplementation/createHTMLDocument
 
 <p>Возвращаемый документ предварительно сконструирован со следующим HTML-кодом:</p>
 
-<pre class="brush: html notranslate">&lt;!doctype html&gt;
+<pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;<var>title</var>&lt;/title&gt;
@@ -81,28 +81,13 @@ translation_of: Web/API/DOMImplementation/createHTMLDocument
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-domimplementation-createhtmldocument', 'DOMImplementation.createHTMLDocument')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Первоначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 
 
-<p>{{Compat("api.DOMImplementation.createHTMLDocument")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 <p><strong><code>String</code></strong> 전역 객체는 문자열(문자의 나열)의 생성자입니다.</p>
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+<h2 id="Syntax">구문</h2>
 
 <p>문자열 리터럴은 다음과 같은 형식을 사용합니다.</p>
 
@@ -127,9 +127,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 <p>두 예시 모두 동일한 문자열을 생성합니다.</p>
 
-<h2 id="Description" name="Description">설명</h2>
+<h2 id="Description">설명</h2>
 
-<p>문자열은 텍스트 형태로 표현될 수있는 데이터를 보관하는 데 유용합니다. 문자열에서 가장 많이 사용되는 작업들은 문자열의 길이를 확인하는 ({{jsxref("String.length", "length")}}), 문자열을 생성하고 연결하는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/String_Operators" title="JavaScript/Reference/Operators/String_Operators">+ 와 += 문자열 연산자</a>, 서브문자열(substring)이 있는지 확인하고, 있으면 위치를 확인하는 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 메서드, 서브문자열(substring)을 추출해내는 {{jsxref("String.prototype.substring()", "substring()")}} 메서드가 있습니다.</p>
+<p>문자열은 텍스트 형태로 표현될 수있는 데이터를 보관하는 데 유용합니다. 문자열에서 가장 많이 사용되는 작업들은 문자열의 길이를 확인하는 ({{jsxref("String.length", "length")}}), 문자열을 생성하고 연결하는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/String_Operators">+ 와 += 문자열 연산자</a>, 서브문자열(substring)이 있는지 확인하고, 있으면 위치를 확인하는 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 메서드, 서브문자열(substring)을 추출해내는 {{jsxref("String.prototype.substring()", "substring()")}} 메서드가 있습니다.</p>
 
 <h3 id="문자_접근">문자 접근</h3>
 
@@ -145,9 +145,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 <p>브라켓([ ]) 표기법을 사용하여 문자에 접근하는 경우 , 이러한 프로퍼티들에 새로운 값을 할당하거나 삭제할 수는 없습니다. 포함되어 있는 프로퍼티들은 작성할 수도, 수정할 수도 없습니다. (더 자세한 정보는 {{jsxref("Object.defineProperty()")}}를 참고 바랍니다 .)</p>
 
-<h3 id="Comparing_strings" name="Comparing_strings">문자열 비교</h3>
+<h3 id="Comparing_strings">문자열 비교</h3>
 
-<p>C 개발자는 문자열 비교를 위하여 <code><span style="font-family: courier new,andale mono,monospace;">strcmp()</span></code> 함수를 사용합니다. JavaScript에서는 단지 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" style="line-height: inherit;" title="JavaScript/Reference/Operators/Comparison_Operators">less-than와 greater-than 연산자</a>만을 사용하여 문자열을 비교할 수 있습니다<span style="line-height: inherit;"> </span><span style="line-height: inherit;">:</span></p>
+<p>C 개발자는 문자열 비교를 위하여 <code>strcmp()</code> 함수를 사용합니다. JavaScript에서는 단지 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">less-than와 greater-than 연산자</a>만을 사용하여 문자열을 비교할 수 있습니다:</p>
 
 <pre class="brush: js">var a = "a";
 var b = "b";
@@ -160,11 +160,11 @@ if (a &lt; b) { // true
 }
 </pre>
 
-<p>비슷한 결과를 얻을 수 있는 방법으로 <span style="font-family: courier new,andale mono,monospace;">String</span> 인스턴스에서 상속된 {{jsxref("String.prototype.localeCompare()", "localeCompare()")}} 메서드를 사용할 수 있습니다.</p>
+<p>비슷한 결과를 얻을 수 있는 방법으로 String 인스턴스에서 상속된 {{jsxref("String.prototype.localeCompare()", "localeCompare()")}} 메서드를 사용할 수 있습니다.</p>
 
 <h3 id="문자열_원형과_String_객체의_차이">문자열 원형과 <code>String</code> 객체의 차이</h3>
 
-<div>JavaScript는 <code>String</code> 오브젝트와 원형의 문자열을 다르게 취급한다는 것에 주의해야 합니다. ({{jsxref("Boolean")}}과 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects" title="JavaScript/Reference/Global_Objects/">숫자</a>의 true도 마찬가지입니다.)</div>
+<div>JavaScript는 <code>String</code> 오브젝트와 원형의 문자열을 다르게 취급한다는 것에 주의해야 합니다. ({{jsxref("Boolean")}}과 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects">숫자</a>의 true도 마찬가지입니다.)</div>
 
 <div> </div>
 
@@ -187,19 +187,19 @@ console.log(eval(s2));          // returns the string "2 + 2"
 
 <p>이러한 이유로, 비록 코드 상에서 원형 문자열을 사용하는 대신에 <code>String</code> 오브젝트를 사용하게 되면 코드가 손상될 수 있지만, 일반적인 개발자는 차이를 걱정할 필요는 없습니다.</p>
 
-<p><code>String</code><span style="line-height: inherit;"> 오브젝트는 언제든지 </span>{{jsxref("String.prototype.valueOf()", "valueOf()")}} <span style="line-height: inherit;"> 메서드로 원형에 대응하도록 전환할 수 있습니다.</span></p>
+<p><code>String</code> 오브젝트는 언제든지 </span>{{jsxref("String.prototype.valueOf()", "valueOf()")}} 메서드로 원형에 대응하도록 전환할 수 있습니다.</span></p>
 
 <pre class="brush: js">console.log(eval(s2.valueOf())); // returns the number 4
 </pre>
 
-<h2 id="Properties" name="Properties">속성</h2>
+<h2 id="Properties">속성</h2>
 
 <dl>
  <dt>{{jsxref("String.prototype")}}</dt>
  <dd>String 오브젝트는 프로퍼티의 추가가 가능합니다.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">메서드</h2>
+<h2 id="Methods">메서드</h2>
 
 <dl>
  <dt>{{jsxref("String.fromCharCode()")}}</dt>
@@ -216,15 +216,15 @@ console.log(eval(s2));          // returns the string "2 + 2"
 <p><strong><code>String</code> generic들은 비표준으로, 가까운 미래에 사라질 것입니다.</strong> 아래에서 제공하고 있는 방식을 사용하지 않으면, 브라우저들간의 호환성은 기대하기 어렵습니다. </p>
 </div>
 
-<p><code>String</code><span style="line-height: inherit;"> 인스턴스 메서드는 JavScript 1.6으로 Firefox에서(ECMAScript 표준에 속하지는 않지만) 어떤 오브젝트라도 String 메서드에 적용하여 String 오브젝트에서 사용가능합니다:</span></p>
+<p><code>String</code> 인스턴스 메서드는 JavScript 1.6으로 Firefox에서(ECMAScript 표준에 속하지는 않지만) 어떤 오브젝트라도 String 메서드에 적용하여 String 오브젝트에서 사용가능합니다:</p>
 
 <pre class="brush: js">var num = 15;
 console.log(String.replace(num, /5/, '2'));
 </pre>
 
-<p class="brush: js">{{jsxref("Global_Objects/Array", "Generics", "#Array_generic_methods", 1)}}은<span style="line-height: inherit;"> </span>{{jsxref("Global_Objects/Array", "Array")}}<span style="line-height: inherit;"> 메서드에도 사용 가능합니다.</span></p>
+<p>{{jsxref("Global_Objects/Array", "Generics", "#Array_generic_methods", 1)}}은 {{jsxref("Global_Objects/Array", "Array")}} 메서드에도 사용 가능합니다.</p>
 
-<h2 id="String_instances" name="String_instances"><code>String</code> 인스턴스</h2>
+<h2 id="String_instances"><code>String</code> 인스턴스</h2>
 
 <h3 id="속성">속성</h3>
 
@@ -252,7 +252,7 @@ for (var i = 0, n = inputValues.length; i &lt; n; ++i) {
 }
 </pre>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">명세</h2>
+<h2 id="Browser_Compatibility">명세</h2>
 
 <table class="standard-table">
  <tbody>
@@ -284,7 +284,7 @@ for (var i = 0, n = inputValues.length; i &lt; n; ++i) {
  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">브라우저 호환성</h2>
+<h2 id="Browser_Compatibility">브라우저 호환성</h2>
 
 
 

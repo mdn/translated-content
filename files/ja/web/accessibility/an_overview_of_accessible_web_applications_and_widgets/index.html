@@ -91,23 +91,15 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p>開発者は UI ウィジェット要素の状態を示すために ARIA のステートを使用して、ステートの変化に基づく視覚的外見の変更に (スクリプトを使用して要素のクラス名を変更するのではなく) CSS の属性セレクタを使用しましょう。</p>
 
-<p><em>注意: この例(</em><s><em><a class="external external-icon" href="http://www.oaa-accessibility.org/example/25/" rel="freelink">http://www.oaa-accessibility.org/example/25/</a></em></s><em>) はもう利用できません。状況が変わったので、W3C ARIA オーサリングプラクティスガイドの例</em> <em>(<a class="external external-icon" href="http://www.w3.org/TR/wai-aria-practices-1.1/examples/checkbox/checkbox-1/checkbox-1.html">www.w3.org/TR/wai-aria-practices-1.1/examples/checkbox/checkbox-1/checkbox-1.html</a>) を見てください。</em></p>
-
-<p><s>Open Ajax Alliance の Web サイトに、<a href="http://www.oaa-accessibility.org/example/25/">ARIA のステートに基づく CSS 属性セレクタの例</a>があります。この例では、動的なメニューシステムによる WYSIWYG エディタのインターフェイスを示しています。フォントフェイススなどのメニューで現在選択されている項目は、他のアイテムと視覚的に区別されます。例の中で関係する部分を、以下で説明します。</s></p>
-
-<p><s>この例でメニュー用の HTML は、例 1a で示す形式になっています。7 行目と 13　行目で、メニュー項目の選択状態を表すために <strong><code>aria-checked</code></strong> プロパティを使用していることに注意してください。</s></p>
-
-<p><s><em>例 1a: 選択可能なメニュー用の HTML (<a href="http://www.oaa-accessibility.org/example/25/" rel="freelink">http://www.oaa-accessibility.org/example/25/</a> をもとに改作)。</em></s></p>
-
 <h4 id="Visibility_changes" name="Visibility_changes">可視性の変化</h4>
 
 <p>コンテンツの可視性を変えるとき (例えば要素を隠したり表示したりする)、開発者は <strong><code>aria-hidden</code></strong> プロパティの値を変更するとよいでしょう。先に説明した手法を、<code>display:none</code> を使用して要素を視覚的に隠すという CSS を示すために使用しましょう。</p>
 
-<p>Open Ajax Alliance の Web サイトに、<a href="http://www.oaa-accessibility.org/example/39/">可視性の制御に <strong><code>aria-hidden</code></strong> を使用するツールチップの例</a>があります。この例では、入力フィールドに関する指示を収めたツールチップを持つシンプルな Web フォームの例を示しています。例の中で関係する部分を、以下で説明します。</p>
+<p>これは、可視性の制御に <strong><code>aria-hidden</code></strong> を使用するツールチップの例です。この例では、入力フィールドに関する指示を収めたツールチップを持つシンプルな Web フォームの例を示しています。例の中で関係する部分を、以下で説明します。</p>
 
 <p>この例でツールチップ用の HTML は、例 2a で示す形式になっています。9 行目で <strong><code>aria-hidden</code></strong> を <code>true</code> に設定しています。</p>
 
-<p><em>例 2a: ツールチップ用の HTML (<a href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a> をもとに改作)。</em></p>
+<p><em>例 2a: ツールチップ用の HTML</em></p>
 
 <pre class="brush: html">&lt;div class="text"&gt;
     &lt;label id="tp1-label" for="first"&gt;First Name:&lt;/label&gt;
@@ -123,7 +115,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p>このマークアップ用の CSS を例 2b で示します。ここでは独自のクラス名を使用せず、1 行目で <strong><code>aria-hidden</code></strong> 属性の状態のみを使用していることに注意してください。</p>
 
-<p><em>例 2b: 状態を示すための、属性セレクタ (<a href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a> より)。</em></p>
+<p><em>例 2b: 状態を示すための、属性セレクタ</em></p>
 
 <pre class="brush: css">div.tooltip[aria-hidden="true"] {
   display: none;
@@ -132,7 +124,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p><strong>&gt;<code>aria-hidden</code></strong> プロパティを更新するための JavaScript は、例 2c で示す形式になっています。このスクリプトは <strong>&gt;<code>aria-hidden</code></strong> 属性しか更新しないことに注意してください (2 行目)。独自のクラス名の追加や削除は不要です。</p>
 
-<p><em>例 2c: aria-hidden 属性を更新する JavaScript (<a href="http://www.oaa-accessibility.org/example/39/" rel="freelink">http://www.oaa-accessibility.org/example/39/</a> に基づく)。</em></p>
+<p><em>例 2c: aria-hidden 属性を更新する JavaScript</em></p>
 
 <pre class="brush: js">var showTip = function(el) {
   el.setAttribute('aria-hidden', 'false');

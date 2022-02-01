@@ -41,7 +41,7 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 
 <p>В <a href="/ru/docs/Glossary/Pseudocode">псевдокоде</a> это будет выглядеть следующим образом:</p>
 
-<pre class="notranslate">loop(food = 0; foodNeeded = 10) {
+<pre>loop(food = 0; foodNeeded = 10) {
   if (food = foodNeeded) {
     exit loop;
     // У нас достаточно еды, пора домой
@@ -64,7 +64,7 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -135,7 +135,7 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 
 <p>Вам необязательно понимать все части кода, но давайте посмотрим на место, где рисуются 100 кругов.</p>
 
-<pre class="brush: js notranslate">for (var i = 0; i &lt; 100; i++) {
+<pre class="brush: js">for (var i = 0; i &lt; 100; i++) {
   ctx.beginPath();
   ctx.fillStyle = 'rgba(255,0,0,0.5)';
   ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
@@ -151,7 +151,7 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 
 <p>Если бы мы не использовали циклы, нам бы пришлось повторить следующий код, для отрисовки каждого круга:</p>
 
-<pre class="brush: js notranslate">ctx.beginPath();
+<pre class="brush: js">ctx.beginPath();
 ctx.fillStyle = 'rgba(255,0,0,0.5)';
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ctx.fill();</pre>
@@ -162,7 +162,7 @@ ctx.fill();</pre>
 
 <p>Рассмотрим некоторые конкретные конструкции циклов. Первый вариант, который вы будете использовать чаще всего, это цикл <a href="/ru/docs/Web/JavaScript/Reference/Statements/for">for</a>. Он имеет следующий синтаксис:</p>
 
-<pre class="notranslate">for (initializer; exit-condition; final-expression) {
+<pre>for (initializer; exit-condition; final-expression) {
   // код для выполнения
 }</pre>
 
@@ -182,7 +182,7 @@ ctx.fill();</pre>
 
 <p>Посмотрим на пример, чтобы разобраться в этом более детально.</p>
 
-<pre class="brush: js notranslate">var cats = ['Билл', 'Макс', 'Пикси', 'Алиса', 'Жасмин'];
+<pre class="brush: js">var cats = ['Билл', 'Макс', 'Пикси', 'Алиса', 'Жасмин'];
 var info = 'Моих кошек зовут ';
 var para = document.querySelector('p');
 
@@ -197,7 +197,7 @@ para.textContent = info;</pre>
 <div class="hidden">
 <h6 id="Hidden_code_2">Hidden code 2</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -266,7 +266,7 @@ para.textContent = info;</pre>
 
 <p>В идеале мы хотим изменить конкатенацию на последней итерации цикла так, чтобы у нас не было запятой в конце предложения. Для этого нужно добавить условное выражение внутрь цикла <code>for</code> для обработки этого особого случая:</p>
 
-<pre class="brush: js notranslate">for (var i = 0; i &lt; cats.length; i++) {
+<pre class="brush: js">for (var i = 0; i &lt; cats.length; i++) {
   if (i === cats.length - 1) {
     info += 'и ' + cats[i] + '.';
   } else {
@@ -291,7 +291,7 @@ para.textContent = info;</pre>
 <p>Предположим, в массиве данных мы хотим найти имена контактов и телефонные номера, а вернуть только номер, который мы нашли.<br>
  Начнём с разметки HTML: поле {{htmlelement("input")}} позволяет нам ввести имя для поиска, элемент (кнопка) {{htmlelement("button")}} для подтверждения поиска, и элемент {{htmlelement("p")}} для отображения результата:</p>
 
-<pre class="brush: html notranslate">&lt;label for="search"&gt;Поиск по имени: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="search"&gt;Поиск по имени: &lt;/label&gt;
 &lt;input id="search" type="text"&gt;
 &lt;button&gt;Поиск&lt;/button&gt;
 
@@ -299,7 +299,7 @@ para.textContent = info;</pre>
 
 <p>Теперь в JavaScript:</p>
 
-<pre class="brush: js notranslate">var contacts = ['Григорий:2232322', 'Марина:3453456', 'Василий:7654322', 'Наталья:9998769', 'Диана:9384975'];
+<pre class="brush: js">var contacts = ['Григорий:2232322', 'Марина:3453456', 'Василий:7654322', 'Наталья:9998769', 'Диана:9384975'];
 var para = document.querySelector('p');
 var input = document.querySelector('input');
 var btn = document.querySelector('button');
@@ -322,7 +322,7 @@ btn.addEventListener('click', function() {
 <div class="hidden">
 <h6 id="Hidden_code_3">Hidden code 3</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -395,7 +395,7 @@ btn.addEventListener('click', function() {
 
 <p>Код HTML в основном такой же, как и в предыдущем примере — простой ввод текста и абзац для вывода.  JavaScript в основном такой же, хотя сам цикл немного другой:</p>
 
-<pre class="brush: js notranslate">var num = input.value;
+<pre class="brush: js">var num = input.value;
 
 for (var i = 1; i &lt;= num; i++) {
   var sqRoot = Math.sqrt(i);
@@ -411,7 +411,7 @@ for (var i = 1; i &lt;= num; i++) {
 <div class="hidden">
 <h6 id="Hidden_code_4">Hidden code 4</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -473,7 +473,7 @@ for (var i = 1; i &lt;= num; i++) {
 
 <p>Рассмотрим цикл <a href="/ru/docs/Web/JavaScript/Reference/Statements/while">while</a>. Синтаксис этого цикла выглядит так:</p>
 
-<pre class="notranslate">initializer
+<pre>initializer
 while (exit-condition) {
   // code to run
 
@@ -488,7 +488,7 @@ while (exit-condition) {
 
 <p>Посмотрим ещё раз пример со списком кошек с кодом переписанным под использование цикла <code>while:</code></p>
 
-<pre class="brush: js notranslate">var i = 0;
+<pre class="brush: js">var i = 0;
 
 while (i &lt; cats.length) {
   if (i === cats.length - 1) {
@@ -506,7 +506,7 @@ while (i &lt; cats.length) {
 
 <p>Цикл<strong> <a href="/ru/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a></strong> представляет собой вариацию структуры цикла <code>while</code>:</p>
 
-<pre class="notranslate">initializer
+<pre>initializer
 do {
   // code to run
 
@@ -519,7 +519,7 @@ do {
 
 <p>Перепишем наш пример с кошками, чтобы использовать цикл <code>do...while</code>:</p>
 
-<pre class="brush: js notranslate">var i = 0;
+<pre class="brush: js">var i = 0;
 
 do {
   if (i === cats.length - 1) {
@@ -568,7 +568,7 @@ do {
 <div class="hidden">
 <h6 id="Active_learning">Active learning</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 410px;overflow: auto;"&gt;
 
 &lt;/div&gt;
@@ -598,7 +598,7 @@ output.innerHTML = '';
 
 <p class="brush: js"></p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -626,7 +626,7 @@ body {
 
 <p class="brush: js"></p>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -740,7 +740,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Active_learning_2">Active learning 2</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 100px;overflow: auto;"&gt;
   &lt;p class="admitted"&gt;Пригласить: &lt;/p&gt;
   &lt;p class="refused"&gt;Не приглашать(!): &lt;/p&gt;
@@ -769,7 +769,7 @@ refused.textContent = 'Не приглашать(!): '
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -789,7 +789,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -875,13 +875,13 @@ textarea.onkeyup = function(){
 
 <p><strong><code>For</code></strong>:</p>
 
-<pre class="notranslate">for (initializer; exit-condition; final-expression) {
+<pre>for (initializer; exit-condition; final-expression) {
   // code to run
 }</pre>
 
 <p><strong><code>while</code></strong>:</p>
 
-<pre class="notranslate">initializer
+<pre>initializer
 while (exit-condition) {
   // code to run
 
@@ -890,7 +890,7 @@ while (exit-condition) {
 
 <p><strong><code>do...while</code></strong>:</p>
 
-<pre class="notranslate">initializer
+<pre>initializer
 do {
   // code to run
 

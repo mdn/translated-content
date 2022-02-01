@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
 
 <p>2개의 protocol이 있습니다 : <a href="#iterable">iterable protocol</a> 과 <a href="#iterator">iterator protocol</a>.</p>
 
-<h2 id="iterable" name="iterable">The iterable protocol</h2>
+<h2 id="iterable">The iterable protocol</h2>
 
 <p><strong>iterable</strong> protocol 은 JavaScript 객체들이, 예를 들어 {{jsxref("Statements/for...of", "for..of")}} 구조에서 어떠한 value 들이 loop 되는 것과 같은 iteration 동작을 정의하거나 사용자 정의하는 것을 허용합니다. 다른 type 들({{jsxref("Object")}} 와 같은)이 그렇지 않은 반면에, 어떤 built-in type 들은 {{jsxref("Array")}} 또는 {{jsxref("Map")}} 과 같은 default iteration 동작으로 <a href="#Builtin_iterables">built-in iterables</a> 입니다.</p>
 
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
 
 <p>어떠한 객체가 반복(Iterate)되어야 한다면 이 객체의 <code>@@iterator</code> 메소드가 인수없이 호출되고, 반환된 <strong>iterator</strong>는 반복을 통해서 획득할 값들을 얻을 때 사용됩니다.</p>
 
-<h2 id="iterator" name="iterator">The iterator protocol</h2>
+<h2 id="iterator">The iterator protocol</h2>
 
 <p><strong>iterator </strong>protocol 은 value( finite 또는 infinite) 들의 sequence 를 만드는 표준 방법을 정의합니다. </p>
 

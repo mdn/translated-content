@@ -51,7 +51,7 @@ arguments[2]
 var args = [].slice.call(arguments);
 </pre>
 
-<p><code>arguments</code>를 실제 <code>Array</code>로 변환하기 위해 ES2015의 {{jsxref("Array.from()")}} 메서드 또는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Spread_operator" title="spread operator">전개 연산자</a>를 사용할 수도 있습니다.</p>
+<p><code>arguments</code>를 실제 <code>Array</code>로 변환하기 위해 ES2015의 {{jsxref("Array.from()")}} 메서드 또는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Spread_operator">전개 연산자</a>를 사용할 수도 있습니다.</p>
 
 <pre class="brush: js">var args = Array.from(arguments);
 var args = [...arguments];
@@ -119,7 +119,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 
 <h3 id="나머지_기본_및_비구조화된_매개변수">나머지, 기본 및 비구조화된 매개변수</h3>
 
-<p><code>arguments</code> 객체는 <a href="/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters" title="rest parameters">나머지 매개변수</a>, <a href="/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters" title="default parameters">기본 매개변수</a> 또는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" title="destructured parameters">비구조화된 매개변수</a>와 함께 사용될 수 있습니다.</p>
+<p><code>arguments</code> 객체는 <a href="/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters">나머지 매개변수</a>, <a href="/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters">기본 매개변수</a> 또는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">비구조화된 매개변수</a>와 함께 사용될 수 있습니다.</p>
 
 <pre class="brush: js">function foo(...args) {
   return arguments;
@@ -127,7 +127,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 foo(1, 2, 3); // { "0": 1, "1": 2, "2": 3 }
 </pre>
 
-<p>그러나, 비엄격 함수에서는 <strong>mapped <code>arguments</code> 객체</strong>는 함수가 어떤 <a href="/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters" title="rest parameters">나머지 매개변수</a>, <a href="/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters" title="default parameters">기본 매개변수</a> 또는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" title="destructured parameters">비구조화된 매개변수</a>든 포함하지 <strong>않는</strong> 경우에만 제공됩니다. 예를 들어, 기본 매개변수를 사용하는 다음 함수에서는, 100 대신에 <code>10</code>이 반환됩니다:</p>
+<p>그러나, 비엄격 함수에서는 <strong>mapped <code>arguments</code> 객체</strong>는 함수가 어떤 <a href="/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters">나머지 매개변수</a>, <a href="/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters">기본 매개변수</a> 또는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">비구조화된 매개변수</a>든 포함하지 <strong>않는</strong> 경우에만 제공됩니다. 예를 들어, 기본 매개변수를 사용하는 다음 함수에서는, 100 대신에 <code>10</code>이 반환됩니다:</p>
 
 <pre class="brush: js">function bar(a=1) {
   arguments[0] = 100;
@@ -136,7 +136,7 @@ foo(1, 2, 3); // { "0": 1, "1": 2, "2": 3 }
 bar(10); // 10
 </pre>
 
-<p>이 예에서, 어떤 <a href="/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters" title="rest parameters">나머지 매개변수</a>, <a href="/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters" title="default parameters">기본 매개변수</a> 또는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" title="destructured parameters">비구조화된 매개변수</a>가 없는 경우에는, 100이 반환됩니다:</p>
+<p>이 예에서, 어떤 <a href="/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters">나머지 매개변수</a>, <a href="/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters">기본 매개변수</a> 또는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">비구조화된 매개변수</a>가 없는 경우에는, 100이 반환됩니다:</p>
 
 <pre class="brush: js">function zoo(a) {
   arguments[0] = 100;

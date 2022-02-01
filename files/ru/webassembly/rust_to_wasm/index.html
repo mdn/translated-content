@@ -36,7 +36,7 @@ translation_of: WebAssembly/Rust_to_wasm
 
 <p>Чтобы собрать наш пакет, вам понадобится дополнительный инструмент, <code>wasm-pack</code>. Он поможет нам скомпилировать наш код в WebAssembly и создаст правильный контейнер для нашего пакета для <code>npm</code>. Чтобы скачать и установить, введите в терминале следующую команду:</p>
 
-<pre class="brush: bash notranslate"><code class="shell language-shell">$ cargo install wasm-pack
+<pre class="brush: bash"><code class="shell language-shell">$ cargo install wasm-pack
 </code></pre>
 
 <h3 id="Установка_Node.js_и_получение_npm-аккаунта">Установка Node.js и получение npm-аккаунта</h3>
@@ -49,7 +49,7 @@ translation_of: WebAssembly/Rust_to_wasm
 
 <p>Дальше запустите в командой строке <code>npm adduser</code>:</p>
 
-<pre class="brush: bash notranslate"><code class="rust language-rust">&gt; npm adduser
+<pre class="brush: bash"><code class="rust language-rust">&gt; npm adduser
 Username: yournpmusername
 Password:
 Email: (this IS public) you@example.com
@@ -57,7 +57,7 @@ Email: (this IS public) you@example.com
 
 <p>Вам понадобится ввести своё пользовательское имя, пароль и email. Если все получится, вы увидите:</p>
 
-<pre class="brush: bash notranslate"><code>Logged in as yournpmusername on https://registry.npmjs.org/.
+<pre class="brush: bash"><code>Logged in as yournpmusername on https://registry.npmjs.org/.
 </code></pre>
 
 <p>Если что-то пойдёт не так, свяжитесь с командой npm, чтобы разобраться.</p>
@@ -66,13 +66,13 @@ Email: (this IS public) you@example.com
 
 <p>Хватит установок, давайте создадим новый пакет на Rust. Перейдите в любое место, где вы держите свои личные проекты, и сделайте следующее:</p>
 
-<pre class="brush: bash notranslate"><code class="shell language-shell">$ cargo new --lib hello-wasm
+<pre class="brush: bash"><code class="shell language-shell">$ cargo new --lib hello-wasm
      Создаст проектную библиотеку `hello-wasm`
 </code></pre>
 
 <p>Это создаст новую библиотеку в под-директории, называемой <code>hello-wasm</code>, со всем, что вам нужно:</p>
 
-<pre class="notranslate"><code class="shell language-shell">+-- Cargo.toml
+<pre><code class="shell language-shell">+-- Cargo.toml
 +-- src
     +-- lib.rs
 </code></pre>
@@ -81,7 +81,7 @@ Email: (this IS public) you@example.com
 
 <p>Дальше, Cargo сгенерировал кое-какой код для нас на Rust в <code>src/lib.rs</code>:</p>
 
-<pre class="notranslate"><code class="rust language-rust">#[cfg(test)]
+<pre><code class="rust language-rust">#[cfg(test)]
 mod tests {
     #[test]
     fn it_works() {
@@ -96,7 +96,7 @@ mod tests {
 
 <p>Вместо этого поместите этот код в <code>src/lib.rs</code>:</p>
 
-<pre class="notranslate"><code class="rust language-rust">extern crate wasm_bindgen;
+<pre><code class="rust language-rust">extern crate wasm_bindgen;
 
 use wasm_bindgen::prelude::*;
 
@@ -117,7 +117,7 @@ pub fn greet(name: &amp;str) {
 
 <p>Первая часть выглядит вот так:</p>
 
-<pre class="notranslate"><code class="rust language-rust">extern crate wasm_bindgen;
+<pre><code class="rust language-rust">extern crate wasm_bindgen;
 
 use wasm_bindgen::prelude::*;
 </code></pre>
@@ -138,7 +138,7 @@ use wasm_bindgen::prelude::*;
 
 <p>Следующая часть выглядит так:</p>
 
-<pre class="notranslate"><code class="rust language-rust">#[wasm_bindgen]
+<pre><code class="rust language-rust">#[wasm_bindgen]
 extern {
     pub fn alert(s: &amp;str);
 }
@@ -156,7 +156,7 @@ extern {
 
 <p>Финальная часть следующая:</p>
 
-<pre class="notranslate"><code class="rust language-rust">#[wasm_bindgen]
+<pre><code class="rust language-rust">#[wasm_bindgen]
 pub fn greet(name: &amp;str) {
     alert(&amp;format!("Hello, {}!", name));
 }
@@ -176,7 +176,7 @@ pub fn greet(name: &amp;str) {
 
 <p>Чтобы правильно скомпилить наш код, сначала нам надо сконфигурировать его с помощью <code>Cargo.toml</code>. Откройте этот файл и измените его так, чтобы он выглядел следующим образом:</p>
 
-<pre class="notranslate"><code class="toml language-toml">[package]
+<pre><code class="toml language-toml">[package]
 name = "hello-wasm"
 version = "0.1.0"
 authors = ["Your Name &lt;you@example.com&gt;"]
@@ -201,7 +201,7 @@ wasm-bindgen = "0.2"
 
 <p>Теперь, когда мы все установили, давайте соберём проект! Введите это в терминале:</p>
 
-<pre class="brush: bash notranslate"><code class="shell language-shell">$ wasm-pack build --scope mynpmusername
+<pre class="brush: bash"><code class="shell language-shell">$ wasm-pack build --scope mynpmusername
 </code></pre>
 
 <p>Здесь мы сделали несколько вещей (и они займут много времени, особенно если вы запустили <code>wasm-pack</code> впервые). Чтобы изучить их детальней, прочитайте <a href="https://hacks.mozilla.org/2018/04/hello-wasm-pack/">этот блог-пост на Mozilla Hacks</a>. Вкратце, <code>wasm-pack build</code>:</p>
@@ -224,7 +224,7 @@ wasm-bindgen = "0.2"
 
 <p>Давайте опубликуем наш новый пакет на npm:</p>
 
-<pre class="brush: bash notranslate"><code class="shell language-shell">$ cd pkg
+<pre class="brush: bash"><code class="shell language-shell">$ cd pkg
 $ npm publish --access=public
 </code></pre>
 
@@ -236,14 +236,14 @@ $ npm publish --access=public
 
 <p>Давайте выйдем из нашей папки <code>pkg</code> и создадим новую, <code>site</code>, чтобы попробовать в ней следующее:</p>
 
-<pre class="brush: bash notranslate"><code class="bash language-bash">$ cd ../..
+<pre class="brush: bash"><code class="bash language-bash">$ cd ../..
 $ mkdir site
 $ cd site
 </code></pre>
 
 <p>Создайте новый файл, <code>package.json</code>, и поместите в него следующий код:</p>
 
-<pre class="brush: json notranslate"><code class="json language-json">{
+<pre class="brush: json"><code class="json language-json">{
   "scripts": {
     "serve": "webpack-dev-server"
   },
@@ -262,7 +262,7 @@ $ cd site
 
 <p>Дальше нам нужно сконфигурировать Webpack. Создайте <code>webpack.config.js</code> и введите следующее:</p>
 
-<pre class="brush: js notranslate"><code class="javascript language-javascript">const path = require('path');
+<pre class="brush: js"><code class="javascript language-javascript">const path = require('path');
 module.exports = {
   entry: "./index.js",
   output: {
@@ -275,7 +275,7 @@ module.exports = {
 
 <p>Теперь нам нужен HTML-файл; создайте <code>index.html</code> и поместите в него:</p>
 
-<pre class="notranslate"><code class="html language-html">&lt;!DOCTYPE html&gt;
+<pre><code class="html language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -289,7 +289,7 @@ module.exports = {
 
 <p>Наконец, создайте <code>index.js</code>, на который мы сослались в HTML-файле, и вставьте:</p>
 
-<pre class="brush: js notranslate"><code class="javascript language-javascript">const js = import("./node_modules/@yournpmusername/hello-wasm/hello_wasm.js");
+<pre class="brush: js"><code class="javascript language-javascript">const js = import("./node_modules/@yournpmusername/hello-wasm/hello_wasm.js");
 js.then(js =&gt; {
   js.greet("WebAssembly");
 });
@@ -297,11 +297,11 @@ js.then(js =&gt; {
 
 <p>Заметьте, что вам нужно будет снова ввести ваше имя для npm.</p>
 
-<p>Так мы импортируем наш модуль из папки <code>node_modules</code>. Это не считается лучшей практикой, но это пример, так что пока сойдёт. Как только файл загрузится, он вызовет функцию <code>greet</code> из этого модуля, передав <code>"WebAssembly"</code>, как строку. Обратите внимание, что здесь нет ничего особенного, и всё же мы вызываем код на Rust! Насколько JavaScript код может судить, это просто обычный модуль.</p>
+<p>Так мы импортируем наш модуль из папки <code>node_modules</code>. Это не считается лучшей практикой, но это пример, так что пока сойдёт. Как только файл загрузится, он вызовет функцию <code>greet</code> из этого модуля, передав <code>"WebAssembly"</code>, как строку. Обратите внимание, что здесь нет ничего особенного, и всё же мы вызываем код на Rust! Насколько JavaScript-код может судить, это просто обычный модуль.</p>
 
 <p>Мы закончили! Давайте попробуем:</p>
 
-<pre class="brush: bash notranslate"><code class="shell language-shell">$ npm install
+<pre class="brush: bash"><code class="shell language-shell">$ npm install
 $ npm run serve
 </code></pre>
 

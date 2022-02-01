@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate" dir="rtl">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
+<pre class="syntaxbox">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
     <em>statements</em>
 }
 </pre>
@@ -38,9 +38,9 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <dl>
  <dt><code>statements</code></dt>
- <dd><font face="Consolas, Liberation Mono, Courier, monospace">함수본문을 구성하는 내용.</font></dd>
+ <dd>함수 본문을 구성하는 내용.</dd>
  <dt>
- <h3 id="반환_값"><font face="Consolas, Liberation Mono, Courier, monospace">반환 값</font></h3>
+ <h3 id="반환_값">반환 값</h3>
 
  <p>Promise : async 함수에 의해 반환 된 값으로 해결되거나 async함수 내에서 발생하는 캐치되지 않는 예외로 거부되는 값.</p>
  </dt>
@@ -63,13 +63,13 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <p>예를 들어</p>
 
-<pre class="notranslate">async function foo() {
+<pre >async function foo() {
     return 1
 }</pre>
 
 <p>위 코드는 아래와 같습니다.</p>
 
-<pre class="notranslate">function foo() {
+<pre >function foo() {
     return Promise.resolve(1)
 }</pre>
 
@@ -77,13 +77,13 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <p>예를 들어</p>
 
-<pre class="notranslate">async function foo() {
+<pre >async function foo() {
     await 1
 }</pre>
 
 <p>위 코드는 아래와 같습니다.</p>
 
-<pre class="notranslate">function foo() {
+<pre >function foo() {
     return Promise.resolve(1).then(() =&gt; undefined)
 }
 </pre>
@@ -92,7 +92,7 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <h3 id="Simple_example">Simple example</h3>
 
-<pre class="notranslate"><code>var resolveAfter2Seconds = function() {
+<pre ><code>var resolveAfter2Seconds = function() {
   console.log("starting slow promise");
   return new Promise(resolve =&gt; {
     setTimeout(function() {
@@ -169,7 +169,7 @@ setTimeout(parallel, 10000); // trully parallel: after 1 second, logs "fast", th
 <p>{{jsxref("Promise")}} 를 반환하는 API는 promise chain을 만들며 여러 파트의 함수로 나뉜다.<br>
  아래 코드를 보자.</p>
 
-<pre class="brush: js notranslate">function getProcessedData(url) {
+<pre class="brush: js ">function getProcessedData(url) {
   return downloadData(url) // returns a promise
     .catch(e =&gt; {
       return downloadFallbackData(url) // returns a promise
@@ -182,7 +182,7 @@ setTimeout(parallel, 10000); // trully parallel: after 1 second, logs "fast", th
 
 <p>위의 코드는 하나의 async함수로 아래와 같이 쓰여질 수도 있다.</p>
 
-<pre class="brush: js notranslate">async function getProcessedData(url) {
+<pre class="brush: js ">async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);

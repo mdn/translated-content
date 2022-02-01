@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 ---
 <p>{{JSRef}}</p>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>find()</strong></code> возвращает <strong>значение</strong> первого найденного в массиве элемента, которое удовлетворяет условию переданному в callback функции.  В противном случае возвращается {{jsxref("Global_Objects/undefined", "undefined")}}.</p>
 
@@ -24,11 +24,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 
 <p>Если вам нужно найти позицию элемента или наличие элемента в массиве, используйте {{jsxref("Array.prototype.indexOf()")}} или {{jsxref("Array.prototype.includes()")}} соответственно.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>arr</var>.find(<var>callback</var>[, <var>thisArg</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -50,7 +50,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 
 <p>Значение элемента из массива, если элемент прошёл проверку, иначе {{jsxref("undefined")}}.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>find</code> вызывает переданную функцию <code>callback</code> один раз для каждого элемента, присутствующего в массиве, до тех пор, пока она не вернёт <code>true</code>. Если такой элемент найден, метод <code>find</code> немедленно вернёт значение этого элемента. В противном случае, метод <code>find</code> вернёт {{jsxref("Global_Objects/undefined", "undefined")}}. До Firefox 34 функция <code>callback</code> не вызывалась для «дырок» в массивах (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1058394">bug 1058394</a>).</p>
 
@@ -62,9 +62,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 
 <p>Диапазон элементов, обрабатываемых методом <code>find</code>, устанавливается до первого вызова функции <code>callback</code>. Элементы, добавленные в массив после начала выполнения метода <code>find</code>, не будут посещены функцией <code>callback</code>. Если существующие, непосещение элементы массива изменяются функцией <code>callback</code>, их значения, переданные в функцию, будут значениями на тот момент времени когда метод <code>find</code> посетит их; удалённые элементы все ещё будут посещены. </p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Testing_size_of_all_array_elements" name="Example:_Testing_size_of_all_array_elements">Пример: поиск простого числа в массиве</h3>
+<h3 id="Example:_Testing_size_of_all_array_elements">Пример: поиск простого числа в массиве</h3>
 
 <p>Следующий пример находит в массиве положительных чисел элемент, являющийся простым числом (либо возвращает {{jsxref("Global_Objects/undefined", "undefined")}}, если в массиве нет простых чисел).</p>
 
@@ -82,7 +82,7 @@ console.log([4, 6, 8, 12].find(isPrime)); // undefined, не найдено
 console.log([4, 5, 8, 12].find(isPrime)); // 5
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Этот метод был добавлен в спецификации ECMAScript 6 и пока может быть недоступен во всех реализациях JavaScript. Однако, вы можете использовать следующий сниппет в качестве полифила:</p>
 
@@ -133,33 +133,15 @@ if (!Array.prototype.find) {
   });
 }</code></pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.find', 'Array.prototype.find')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.find', 'Array.prototype.find')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.Array.find")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.findIndex()")}} {{experimental_inline}}</li>

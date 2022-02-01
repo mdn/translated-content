@@ -3,41 +3,42 @@ title: '<bdo>: 双方向文字列上書き要素'
 slug: Web/HTML/Element/bdo
 tags:
   - BiDi
+  - 双方向テキスト
+  - 要素
   - HTML
   - HTML 文字レベルの意味付け
   - 'HTML:フローコンテンツ'
   - 'HTML:知覚可能コンテンツ'
   - 'HTML:記述コンテンツ'
-  - Reference
+  - 左書き
+  - リファレンス
+  - テキスト
+  - 右書き
+  - 書字方向
+  - テキスト描画
   - Web
   - ltr
   - rtl
-  - テキスト
-  - 右書き
-  - 左書き
-  - 書字方向
-  - 要素
+browser-compat: html.elements.bdo
 translation_of: Web/HTML/Element/bdo
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML の双方向文字列上書き要素</strong> (<code>&lt;bdo&gt;</code>) は、現在の文字列の方向を上書きし、中の文字列が異なる方向に描画されるようにします。</span></p>
+<p><strong><code>&lt;bdo&gt;</code></strong> は <a href="/ja/docs/Web/HTML">HTML</a> の要素で、現在のテキストの書字方向を上書きし、中のテキストが異なる書字方向で描画されるようにします。</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}</div>
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
-
-<p>文字列の文字は指定された方向の開始位置から描画されます。それぞれの文字の向きには影響を与えません (ですから、例えば、文字は裏返しにはなりません)。</p>
+<p>テキストの文字は指定された方向の開始位置から描画されます。それぞれの文字の向きには影響を与えません (ですから、例えば、文字は裏返しにはなりません)。</p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/ja/docs/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/HTML/Content_categories#Flow_content">フローコンテンツ</a>, <a href="/ja/docs/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>, 知覚可能コンテンツ</td>
+   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>, 知覚可能コンテンツ</td>
   </tr>
   <tr>
    <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/HTML/Content_categories#Phrasing_content">記述コンテンツ</a></td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a></td>
   </tr>
   <tr>
    <th scope="row">タグの省略</th>
@@ -45,7 +46,7 @@ translation_of: Web/HTML/Element/bdo
   </tr>
   <tr>
    <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>を受け入れるすべての要素</td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>を受け入れるすべての要素</td>
   </tr>
   <tr>
    <th scope="row">暗黙の ARIA ロール</th>
@@ -62,21 +63,21 @@ translation_of: Web/HTML/Element/bdo
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+<h2 id="Attributes">属性</h2>
 
-<p>この要素は<a href="/ja/docs/HTML/Global_attributes" title="HTML/Global attributes">グローバル属性</a>を持ちます。</p>
+<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。</p>
 
 <dl>
  <dt>{{htmlattrdef("dir")}}</dt>
- <dd>この要素の書字方向。以下の値を指定可能です。
+ <dd>この要素の内容において、テキストが描画される方向です。以下の値が指定可能です。
  <ul>
-  <li><code>ltr</code>: テキストを左から右へ (Left to Right) 向かわせることを意味する指定。</li>
-  <li><code>rtl</code>: テキストを右から左へ (Right to Left) 向かわせることを意味する指定。</li>
+  <li><code>ltr</code>: テキストを左から右へ (left-to-right) 向かわせることを意味する指定。</li>
+  <li><code>rtl</code>: テキストを右から左へ (right-to-left) 向かわせることを意味する指定。</li>
  </ul>
  </dd>
 </dl>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
 <pre class="brush: html">&lt;!-- 書字方向を切り替える --&gt;
 &lt;p&gt;This text will go left to right.&lt;/p&gt;
@@ -84,43 +85,24 @@ translation_of: Web/HTML/Element/bdo
 to left.&lt;/bdo&gt;&lt;/p&gt;
 </pre>
 
-<h3 id="Result" name="Result">結果</h3>
+<h3 id="Result">結果</h3>
 
 <p>{{EmbedLiveSample('Examples')}}</p>
 
-<h2 id="Notes" name="Notes">メモ</h2>
+<h2 id="Notes">メモ</h2>
 
 <p>HTML 4 の仕様では、この要素にイベントが指定されていません。イベントは XHTML で追加されました。これは、恐らく見落としでしょう。</p>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-bdo-element', '&lt;bdo&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-bdo-element', '&lt;bdo&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'dirlang.html#h-8.2.4', '&lt;bdo&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("html.elements.bdo")}}</p>
+<p>{{Compat}}</p>
+
+<h2 id="See_also">関連情報</h2>
+
+<ul>
+ <li>関連する HTML 要素: {{HTMLElement("bdi")}}</li>
+</ul>

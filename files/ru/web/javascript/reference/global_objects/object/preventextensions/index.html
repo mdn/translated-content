@@ -15,11 +15,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 
 <p>{{EmbedInteractiveExample("pages/js/object-preventextensions.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="brush: js"><code>Object.preventExtensions(<var>obj</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>obj</code></dt>
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 
 <p>Объект, который делается нерасширяемым.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Объект называется расширяемым, если к нему могут быть добавлены новые свойства. <code>Object.preventExtensions()</code> помечает объект как нерасширяемый, так что он никогда не будет иметь других свойств, кроме тех, что были у него на момент пометки его нерасширяемым. Обратите внимание, что, в общем случае, свойства нерасширяемого объекта всё ещё могут быть <em>удалены</em>. Попытка добавить новые свойства к нерасширяемому объекту потерпит неудачу, либо молча, либо с выбрасыванием исключения {{jsxref("Global_Objects/TypeError", "TypeError")}} (как правило, но не обязательно, это происходит в {{jsxref("Functions_and_function_scope/Strict_mode", "строгом режиме", "", 1)}}).</p>
 
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 
 <p>Если превратить расширяемый объект в нерасширяемый возможно, в ECMAScript 5 нет никакого способа сделать обратную операцию.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre class="brush: js">// Object.preventExtensions возвращает объект, который нужно сделать нерасширяемым.
 var obj = {};
@@ -72,7 +72,7 @@ var fixed = Object.preventExtensions({});
 fixed.__proto__ = { oh: 'hai' }; // выбросит TypeError
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p>В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет рассматриваться как простой нерасширяемый объект и метод его просто вернёт.</p>
 
@@ -83,33 +83,15 @@ TypeError: 1 is not an object // код ES5
 1                             // код ES6
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.10', 'Object.preventExtensions')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.preventextensions', 'Object.preventExtensions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Object.preventExtensions")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Object.isExtensible()")}}</li>

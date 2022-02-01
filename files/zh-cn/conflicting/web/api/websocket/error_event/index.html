@@ -1,0 +1,46 @@
+---
+title: WebSocket.onerror
+slug: conflicting/Web/API/WebSocket/error_event
+translation_of: Web/API/WebSocket/onerror
+original_slug: Web/API/WebSocket/onerror
+---
+<p>{{APIRef("Web Sockets API")}}</p>
+
+<p>The <strong><code>WebSocket.onerror</code></strong> property returns the event listener to be called when an error occurs. This is a simple event named "error".</p>
+
+<p>在 <strong><code>WebSocket.onerror </code></strong>属性中，你可以定义一个发生错误时执行的回调函数，此事件的事件名为"error"</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox"><em>WebSocket</em>.onerror = function(event) {
+  console.error("WebSocket error observed:", event);
+};</pre>
+
+<h2 id="值">值</h2>
+
+<p>An {{domxref("EventListener")}}.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-websocket-onerror', 'WebSocket: onerror')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+
+
+<p>{{Compat("api.WebSocket.onerror")}}</p>

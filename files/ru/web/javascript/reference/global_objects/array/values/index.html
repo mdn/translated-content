@@ -13,17 +13,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
 <div>{{JSRef("Global_Objects", "Array")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>values()</code></strong> возвращает новый объект итератора массива <strong><code>Array Iterator</code></strong>, содержащий значения для каждого индекса в массиве.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>arr</var>.values()</code></pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Iteration_using_for...of_loop" name="Example:_Iteration_using_for...of_loop">Пример: итерация через цикл <code>for...of</code></h3>
+<h3 id="Example:_Iteration_using_for...of_loop">Пример: итерация через цикл <code>for...of</code></h3>
 
 <pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr.values();
@@ -34,7 +34,7 @@ for (let letter of eArr) {
 }
 </pre>
 
-<h3 id="Example:_Alternative_iteration" name="Example:_Alternative_iteration">Пример: альтернативный способ итерации</h3>
+<h3 id="Example:_Alternative_iteration">Пример: альтернативный способ итерации</h3>
 
 <pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr.values();
@@ -45,33 +45,15 @@ console.log(eArr.next().value); // o
 console.log(eArr.next().value); // p
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.values', 'Array.prototype.values')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.values', 'Array.prototype.values')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.keys()")}}</li>

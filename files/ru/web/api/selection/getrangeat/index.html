@@ -13,12 +13,12 @@ translation_of: Web/API/Selection/getRangeAt
 
 <p>Метод <strong><code>Selection.getRangeAt()</code></strong> возвращает объект диапазона, который представляет один из диапазонов, выделенного на данный момент.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>range</em> = <em>sel</em>.getRangeAt(<em>index</em>)
 </pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><em><code>range</code></em></dt>
@@ -27,7 +27,7 @@ translation_of: Web/API/Selection/getRangeAt
  <dd>Индекс диапазона, начинающийся с нуля, который необходимо вернуть. Отрицательное значение или значение выше или равное {{domxref("Selection.rangeCount")}} приведёт к ошибке.</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre class="brush:js">var ranges = [];
 
@@ -43,26 +43,13 @@ for(var i = 0; i &lt; sel.rangeCount; i++) {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Editing', '#dom-selection-getrangeat', 'Selection.getRangeAt()')}}</td>
-   <td>{{Spec2('HTML Editing')}}</td>
-   <td>Первоначальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость</h2>
+<h2 id="Browser_compatibility">Совместимость</h2>
 
-<p>{{Compat("api.Selection.getRangeAt")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("Selection")}}, интерфейс, к которому принадлежит метод.</li>

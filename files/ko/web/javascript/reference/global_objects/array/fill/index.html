@@ -16,11 +16,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 
 <p>{{EmbedInteractiveExample("pages/js/array-fill.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+<h2 id="Syntax">구문</h2>
 
 <pre class="syntaxbox"><code><var>arr</var>.fill(<var>value</var>[, <var>start<var>[, <var>end</var>]])</var></var></code></pre>
 
-<h3 id="Parameters" name="Parameters">매개변수</h3>
+<h3 id="Parameters">매개변수</h3>
 
 <dl>
  <dt><code>value</code></dt>
@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 
 <p>변형한 배열.</p>
 
-<h2 id="Description" name="Description">설명 </h2>
+<h2 id="Description">설명 </h2>
 
 <p><code>fill</code> 메서드는 <code>value</code>, <code>start</code>, <code>end</code>의 3개 인자를 가집니다. <code>start</code>와 <code>end</code> 인자는 선택 사항으로써 기본값으로 각각 <code>0</code>과, <code>this</code> 객체의 <code>length</code>를 가집니다.</p>
 
@@ -47,7 +47,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 
 <p><code>value</code>에 객체를 받을 경우 그 참조만 복사해서 배열을 채웁니다.</p>
 
-<h2 id="Examples" name="Examples">예제</h2>
+<h2 id="Examples">예제</h2>
 
 <pre class="brush: js">[1, 2, 3].fill(4);               // [4, 4, 4]
 [1, 2, 3].fill(4, 1);            // [1, 4, 4]
@@ -65,7 +65,7 @@ var arr = Array(3).fill({}); // [{}, {}, {}]
 arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">폴리필</h2>
+<h2 id="Polyfill">폴리필</h2>
 
 <pre><code>if (!Array.prototype.fill) {
   Object.defineProperty(Array.prototype, 'fill', {
@@ -112,7 +112,7 @@ arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
   });
 }</code></pre>
 
-<h2 id="Specifications" name="Specifications">명세</h2>
+<h2 id="Specifications">명세</h2>
 
 <table class="standard-table">
  <tbody>
@@ -134,7 +134,7 @@ arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">브라우저 호환성</h2>
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
 
 <div>{{Compat("javascript.builtins.Array.fill")}}</div>
 

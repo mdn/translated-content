@@ -38,7 +38,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Во-первых, мы начнём с некоторого простого HTML — добавьте следующее в body вашего HTML, удалив всё что там было до этого:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 
 &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -50,7 +50,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>А теперь примените следующий CSS для вашего HTML (используя элемент {{htmlelement("style")}} или {{htmlelement("link")}} на отдельный файл <code>.css</code> — на ваше усмотрение):</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -67,7 +67,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Если вы сохраните и обновите сейчас, то <span class="tlid-translation translation" lang="ru"><span title="">вы увидите нечто похожее на то, чего ожидаете </span></span>— блок располагается выше текста, при нормальном потоке. Для того чтобы текст обтекал его вокруг добавьте два свойства к правилу <code>.box</code>:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   float: left;
   margin-right: 15px;
   width: 150px;
@@ -83,7 +83,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 <div class="hidden">
 <h6 id="Float_Example_1">Float Example 1</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 
 &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -94,7 +94,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -124,7 +124,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Добавьте класс <code>special</code> к первому параграфу текста, тот который непосредственно следует за обтекаемым блоком, далее добавьте следующие правила в ваш CSS. Они дадут нашему параграфу цвет фона.</p>
 
-<pre class="brush: css notranslate">.special {
+<pre class="brush: css">.special {
   background-color: rgb(79,185,227);
   padding: 10px;
   color: #fff;
@@ -137,7 +137,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 <div class="hidden">
 <h6 id="Float_Example_2">Float Example 2</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 
 &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -147,7 +147,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;    </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -183,7 +183,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Добавьте класс <code>cleared</code> ко второму параграфу после обтекаемого элемента в ваш HTML из предыдущего примера. Далее добавьте следующий CSS:</p>
 
-<pre class="brush: css notranslate">.cleared {
+<pre class="brush: css">.cleared {
   clear: left;
 }
 </pre>
@@ -192,7 +192,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 <div class="hidden">
 <h6 id="Float_Example_3">Float Example 3</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 
 &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -203,7 +203,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
     </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -247,7 +247,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Вы теперь знаете, как очистить что-либо следующее за обтекаемым элементом, но давайте посмотрим, что происходит если у вас имеется высокий обтекаемый объект и короткий параграф с блоком, оборачивающим оба элемента. Измените ваш документ так чтоб первый параграф и наш обтекаемый блок были обёрнуты в {{htmlelement("div")}} с классом <code>wrapper</code>.</p>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Float&lt;/div&gt;
 
   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.&lt;/p&gt;
@@ -256,7 +256,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>В вашем CSS добавьте следующее правило для класса <code>.wrapper</code> и обновите страницу:</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   background-color: rgb(79,185,227);
   padding: 10px;
   color: #fff;
@@ -264,7 +264,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>В добавок удалите класс <code>.cleared</code>:</p>
 
-<pre class="brush: css notranslate" id="ct-0">.cleared {
+<pre class="brush: css" id="ct-0">.cleared {
     clear: left;
 }</pre>
 
@@ -274,7 +274,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 <div class="hidden">
 <h6 id="Float_Example_4">Float Example 4</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 &lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -285,7 +285,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;    </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -321,19 +321,19 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Добавьте следующий CSS в наш пример:</p>
 
-<pre class="brush: css notranslate">.wrapper::after {
+<pre class="brush: css">.wrapper::after {
   content: "";
   clear: both;
   display: block;
 }</pre>
 
-<p>Теперь перезагрузите страницу и блок должен быть очищенным. <span class="tlid-translation translation" lang="ru"><span title="">По сути, это то же самое, как если бы вы добавили </span></span>HTML элемент такой как <code>&lt;div&gt;</code> ниже объекта и установили <code>clear: both</code>.</p>
+<p>Теперь перезагрузите страницу и блок должен быть очищенным. <span class="tlid-translation translation" lang="ru"><span title="">По сути, это то же самое, как если бы вы добавили </span></span>HTML-элемент такой как <code>&lt;div&gt;</code> ниже объекта и установили <code>clear: both</code>.</p>
 
 <div id="Float_5">
 <div class="hidden">
 <h6 id="Float_Example_5">Float Example 5</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 &lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -343,7 +343,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;      </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -383,7 +383,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Удалите clearfix CSS который вы добавляли в предыдущей секции и вместо него добавьте <code>overflow: auto</code> к правилу для обёртки. Блок снова должен быть очищен.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   background-color: rgb(79,185,227);
   padding: 10px;
   color: #fff;
@@ -394,7 +394,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 <div class="hidden">
 <h6 id="Float_Example_6">Float Example 6</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 &lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -404,7 +404,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;    </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -439,7 +439,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <p>Современный способ решения этой проблемы — это использование значения <code>flow-root</code> свойства <code>display</code>. Он существует только для создания BFC без использования хака — не будет возникать <span class="tlid-translation translation" lang="ru"><span title="">непреднамеренных </span></span>последствий, когда вы используете его. Удалите <code>overflow: auto</code> из вашего правила <code>.wrapper</code> и добавьте <code>display: flow-root</code>. <span class="tlid-translation translation" lang="ru"><span title="">Если предположить,</span></span> что у вас <a href="/en-US/docs/Web/CSS/display#Browser_compatibility">поддерживающий браузер</a>, блок будет очищаться.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   background-color: rgb(79,185,227);
   padding: 10px;
   color: #fff;
@@ -450,7 +450,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 <div class="hidden">
 <h6 id="Float_Example_7">Float Example 7</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 &lt;div class="wrapper"&gt;
   &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -460,7 +460,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;    </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;

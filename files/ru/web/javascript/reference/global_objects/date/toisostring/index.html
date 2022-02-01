@@ -12,17 +12,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>toISOString()</code></strong> возвращает строку в формате ISO (<a href="https://ru.wikipedia.org/wiki/ISO_8601">расширенный формат ISO 8601</a>), который можно описать следующим образом: <strong><code>YYYY-MM-DDTHH:mm:ss.sssZ</code></strong>. Часовой пояс всегда равен UTC, что обозначено суффиксом <code>"Z"</code>.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>dateObj</var>.toISOString()</code></pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_toISOString" name="Example:_Using_toISOString">Пример: использование метода <code>toISOString()</code></h3>
+<h3 id="Example:_Using_toISOString">Пример: использование метода <code>toISOString()</code></h3>
 
 <pre class="brush: js">var today = new Date('05 October 2011 14:48 UTC');
 
@@ -31,7 +31,7 @@ console.log(today.toISOString()); // вернёт 2011-10-05T14:48:00.000Z
 
 <p>Пример выше использует разбор нестандартного строкового значения, которое может разобраться некорректно в браузерах, отличных от Firefox.</p>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Этот метод был стандартизирован в ECMA-262 5-го издания. Отсутствие этого метода в движках, которые не были обновлены для его поддержки, можно обойти следующей прокладкой:</p>
 
@@ -60,33 +60,15 @@ console.log(today.toISOString()); // вернёт 2011-10-05T14:48:00.000Z
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.43', 'Date.prototype.toISOString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.8.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>

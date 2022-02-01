@@ -11,16 +11,16 @@ translation_of: Web/API/CanvasRenderingContext2D/bezierCurveTo
 ---
 <div>{{APIRef}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.bezierCurveTo()</code></strong>, предоставляемый Canvas 2D API, добавляет кубическую кривую Безье к контуру. Для построения требуются три точки. Первые две точки являются контрольными, а третья - конечной. Начальной точкой является последняя точка в текущем контуре, и она может быть изменена методом {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} перед созданием кривой Безье.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">void <var><em>ctx</em>.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);</var>
 </pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>cp1x</code></dt>
@@ -37,7 +37,7 @@ translation_of: Web/API/CanvasRenderingContext2D/bezierCurveTo
  <dd>Координата конечной точки по оси y.</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <h3 id="Использование_метода_bezierCurveTo">Использование метода <code>bezierCurveTo</code></h3>
 
@@ -116,28 +116,15 @@ window.addEventListener("load", drawCanvas);
 
 <p>{{ EmbedLiveSample('Практическое_применение_bezierCurveTo', 700, 360) }}</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-beziercurveto", "CanvasRenderingContext2D.beziercurveto")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.bezierCurveTo")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}</li>

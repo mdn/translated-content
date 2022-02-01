@@ -5,15 +5,17 @@ tags:
   - CodingScripting
   - Glossary
   - JavaScript
-  - 用語集
 translation_of: Glossary/Type
 ---
-<p><strong>型</strong> (または<em>データ型</em>) とは、どのような種類のデータや構造を格納できるかに影響を与える{{glossary("value", "値")}}の特性のことです。例えば、 JavaScript の<a href="/ja/docs/Web/JavaScript/Data_structures">データ型</a>についていえば、 {{jsxref("Boolean")}} は <code>true</code>/<code>false</code> の値しか保持しませんが、 {{jsxref("String")}} はテキスト文字列を保持し、 {{jsxref("Number")}} はあらゆる種類の数値を保持します。また、 JavaScript の型システムのもう一つの部分である<a href="/ja/docs/Web/JavaScript/Data_structures">構造化型</a>について言えば、コンストラクターなどを使用して構築されていると言えます。</p>
+<p><strong>型</strong> (または<em>データ型</em>) とは、どのような種類のデータや構造を格納できるかに影響を与える{{glossary("value", "値")}}の特性のことです。例えば、論理型 ({{Glossary("boolean")}}) の<a href="/ja/docs/Web/JavaScript/Data_structures">データ型</a>は常に <code>true</code> または <code>false</code> の値しか保持しませんが、 文字列型 ({{Glossary("string")}}) はテキスト文字列を保持し、数値型 ({{Glossary("number")}}) はあらゆる種類の数値を保持します。</p>
 
-<p>値のデータ型は、その値に対してどの操作が有効であるかにも影響します。例えば、整数には整数を乗算することができますが、文字列には乗算できません。これはデータ型間の比較にも役立つ知識です。また、同じ構造体であっても、<a href="/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">プロトタイプチェーン</a>の中には構造体を継承したものがあるかもしれないので、構造体間の比較は「簡単におこなえる」話題ではありません。</p>
+<p>値のデータ型は、その値に対してどの演算が有効であるかにも影響します。例えば、数値型の値は他の数値を乗算することができますが、文字列を乗算することは、その文字列に "2" など数値<em>しか</em>入っていなかった場合であってもできません。</p>
 
+<p>型は異なる値の比較においても有用な知識です。構造化型同士の比較は必ずしも簡単に仮定できるものではありません。前のデータ構造が同じであっても、<a href="/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">プロトタイプチェーン</a>の中に継承された構造がある可能性があるからです。</p>
 
-<section class="Quick_links" id="Quick_Links">
+<p>値の型が分からない場合は、 <a href="/ja/docs/Web/JavaScript/Reference/Operators/typeof"><code>typeof</code></a> 演算子で知ることができます。</p>
+
+<section id="Quick_links">
 <ol>
  <li><a href="/ja/docs/Glossary">用語集</a>
 

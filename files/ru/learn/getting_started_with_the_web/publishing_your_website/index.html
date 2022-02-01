@@ -117,20 +117,20 @@ translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 <ol>
  <li>Укажите в командной строке каталог <code>test-site</code> (или другое название каталога, содержащего ваш сайт). Для этого используйте команду <code>cd</code> (т.е. «change directory»). Вот то, что вы наберёте, если разместили свой веб-сайт в каталоге под названием <code>test-site</code> на рабочем столе:
 
-  <pre class="brush: bash notranslate">cd Desktop/test-site</pre>
+  <pre class="brush: bash">cd Desktop/test-site</pre>
  </li>
  <li>Когда командная строка указывает внутрь вашего каталога веб-сайта, введите следующую команду, которая сообщает инструменту <code>git</code>, чтобы он превратил каталог в репозиторий git:
-  <pre class="brush: bash notranslate">git init</pre>
+  <pre class="brush: bash">git init</pre>
  </li>
  <li>Далее вернёмся к сайту GitHub. На текущей странице вас интересует раздел "…or push an existing repository from the command line". Вы должны увидеть две строки кода в этом разделе. Скопируйте всю первую строку, вставьте её в командную строку и нажмите Enter. Команда должна выглядеть примерно так:
-  <pre class="brush: bash notranslate">git remote add origin https://github.com/bobsmith/bobsmith.github.io.git</pre>
+  <pre class="brush: bash">git remote add origin https://github.com/bobsmith/bobsmith.github.io.git</pre>
  </li>
  <li>Далее введите следующие две команды, нажимая Enter после каждой. Это подготовит код к загрузке на GitHub, и укажет Git управлять этими файлами.
-  <pre class="brush: bash notranslate">git add --all
+  <pre class="brush: bash">git add --all
 git commit -m 'adding my files to my repository'</pre>
  </li>
  <li>Наконец, загрузите код на GitHub - вернитесь на веб-страницу GitHub, на которой вы находились, и введите в терминал команду:
-  <pre class="brush: bash notranslate">git push -u origin master</pre>
+  <pre class="brush: bash">git push -u origin master</pre>
  </li>
  <li>Теперь, когда вы перейдёте по веб-адресу, созданному в GitHub, в новом окне браузера (<em>username.github.io</em>), вы увидите ваш сайт онлайн! Разошлите ссылку вашим друзьям, пусть оценят ваше мастерство.</li>
 </ol>
@@ -143,7 +143,7 @@ git commit -m 'adding my files to my repository'</pre>
 
 <p>Если вы хотите сделать больше изменений на своём тестовом сайте и загрузить их в GitHub, вам просто нужно внести изменения в свои файлы, как и раньше. Затем вам нужно ввести следующие команды (нажав Enter после каждого), чтобы вставить эти изменения в GitHub:</p>
 
-<pre class="notranslate">git add --all
+<pre>git add --all
 git commit -m 'another commit'
 git push</pre>
 

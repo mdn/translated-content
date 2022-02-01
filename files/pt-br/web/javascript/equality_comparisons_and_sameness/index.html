@@ -423,7 +423,7 @@ function attemptMutation(v)
  <dd>Cada um destes operadores usa o algoritmo ToInt32 internamente. Uma vez que existe apenas uma representação para 0 no tipo integer de 32 bits interno, -0 não vai sobreviver a uma ida e volta após uma operação inversa. Por exemplo, tanto <code>Object.is(~~(-0), -0)</code> e <code>Object.is(-0 &lt;&lt; 2 &gt;&gt; 2, -0)</code> avaliar como <code>false</code>.</dd>
 </dl>
 
-<p>Baseando-se em <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is</a></code> quando a sinalização de zeros não é levado em conta podem ser perigosos. Claro que, quando a intenção é fazer a distinção entre <code>-0</code> e <code>+0</code>, que faz exatamente o que é desejado.</p>
+<p>Baseando-se em <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is</a></code> quando a sinalização de zeros não é levado em conta podem ser perigosos. Claro que, quando a intenção é fazer a distinção entre <code>-0</code> e <code>+0</code>, isso faz exatamente o que é desejado.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 

@@ -15,11 +15,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <p>Метод <code><strong>Object.create()</strong></code> создаёт новый объект с указанным прототипом и свойствами.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code>Object.create(<var>proto</var>[, <var>propertiesObject</var>])</code></pre>
+<pre class="syntaxbox"><code>Object.create(<var>proto</var>[, <var>propertiesObject</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>proto</code></dt>
@@ -32,17 +32,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <p>Новый объект с заданным прототипом и свойствами</p>
 
-<h3 id="Throws" name="Throws">Выбрасываемые исключения</h3>
+<h3 id="Throws">Выбрасываемые исключения</h3>
 
 <p>Выбрасывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}, если параметр <code>proto</code> не является {{jsxref("Global_Objects/null", "null")}} или объектом (исключение составляют объекты-обёртки примитивных типов).</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example.3A_Classical_inheritance_with_Object.create" name="Example.3A_Classical_inheritance_with_Object.create()">Пример: классическое наследование с <code>Object.create()</code></h3>
+<h3 id="Example.3A_Classical_inheritance_with_Object.create">Пример: классическое наследование с <code>Object.create()</code></h3>
 
 <p>Ниже показан пример использования <code>Object.create()</code> для имитации классического наследования. Это пример одиночного наследования, поскольку только его поддерживает JavaScript.</p>
 
-<pre class="brush: js notranslate">// Shape — суперкласс
+<pre class="brush: js">// Shape — суперкласс
 function Shape() {
   this.x = 0;
   this.y = 0;
@@ -73,7 +73,7 @@ rect.move(1, 1); // выведет 'Фигура переместилась.'
 
 <p>Если вы хотите наследоваться от нескольких объектов, то это возможно сделать при помощи примесей.</p>
 
-<pre class="brush: js notranslate">function MyClass() {
+<pre class="brush: js">function MyClass() {
   SuperClass.call(this);
   OtherSuperClass.call(this);
 }
@@ -88,9 +88,9 @@ MyClass.prototype.myMethod = function() {
 
 <p>Функция примешивания должна копировать функции из прототипа суперкласса в прототип подкласса, она должна предоставляться пользователем. Примером примеси может служить функция <a href="http://api.jquery.com/jQuery.extend/">jQuery.extend()</a>.</p>
 
-<h3 id="Example.3A_Using_propertiesObject_argument_with_Object.create" name="Example.3A_Using_propertiesObject_argument_with_Object.create()">Пример: использование аргумента <code>propertiesObject</code> с <code>Object.create()</code></h3>
+<h3 id="Example.3A_Using_propertiesObject_argument_with_Object.create">Пример: использование аргумента <code>propertiesObject</code> с <code>Object.create()</code></h3>
 
-<pre class="brush: js notranslate">var o;
+<pre class="brush: js">var o;
 
 // создаём объект с нулевым прототипом
 o = Object.create(null);
@@ -155,11 +155,11 @@ o2 = Object.create({}, {
 });
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Для этого полифила необходима правильно работающая Object.prototype.hasOwnProperty.</p>
 
-<pre class="brush: js notranslate">if (typeof Object.create != 'function') {
+<pre class="brush: js">if (typeof Object.create != 'function') {
   // Этапы производства ECMA-262, издание 5, 15.2.3.5
   // Ссылка: http://es5.github.io/#x15.2.3.5
   Object.create = (function() {
@@ -204,33 +204,15 @@ o2 = Object.create({}, {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.5', 'Object.create')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.create', 'Object.create')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Object.create")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Object.defineProperty()")}}</li>

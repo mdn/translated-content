@@ -1,0 +1,65 @@
+---
+title: StorageEstimate.usage
+slug: conflicting/Web/API/StorageManager/estimate_9ffeea37c30a26922d3f1621912db8d8
+tags:
+  - API
+  - Reference
+  - Secure context
+  - Storage
+  - Storage API
+  - StorageEstimate
+  - Usage
+translation_of: Web/API/StorageEstimate/usage
+original_slug: Web/API/StorageEstimate/usage
+---
+<div>{{securecontext_header}}{{APIRef("Storage")}}</div>
+
+<p><span class="seoSummary">{{domxref("StorageEstimate")}} ディクショナリの <strong><code>usage</code></strong> プロパティは、{{domxref("StorageManager.estimate()")}} を呼ぶことで得られる、オリジンやウェブアプリが使用しているストレージ量の概算値です。</span> {{Glossary("user agent","ユーザーエージェント")}}がストレージ効率を改善するために圧縮、複製防止技術、および他の方法を使用することがあるため、値は概算値です。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox"><em>usage</em> = <em>StorageEstimate</em>.usage;
+</pre>
+
+<h3 id="Value" name="Value">値</h3>
+
+<p>アプリが現在使用しているストレージ容量の概算値を指定する数値。</p>
+
+<h2 id="Example" name="Example">例</h2>
+
+<p>{{page("/ja/docs/Web/API/StorageManager/estimate", "Example")}}</p>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Storage', '#site-storage-usage', 'usage')}}</td>
+   <td>{{Spec2('Storage')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+
+
+<p>{{Compat("api.StorageEstimate.usage")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Storage_API">Storage API</a></li>
+ <li>{{domxref("Navigator")}}</li>
+ <li>{{domxref("StorageManager")}}</li>
+ <li>{{domxref("StorageEstimate")}}</li>
+ <li>{{domxref("StorageEstimate.quota")}}</li>
+</ul>

@@ -10,9 +10,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 ---
 <div>
  {{JSRef("Global_Objects", "Object")}}</div>
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Возвращает ссылку на функцию {{jsxref("Global_Objects/Object", "Object")}}, создавшую прототип экземпляра. Обратите внимание, что значение этого свойства является ссылкой на саму функцию, а не строкой, содержащей имя функции. Для примитивных значений, вроде <code>1</code>, <code>true</code> или <code>"test"</code>, значение доступно только для чтения.</p>
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Все объекты наследуют свойство <code>constructor</code> из своего прототипа:</p>
 <pre class="brush: js">var o = {};
 o.constructor === Object; // true
@@ -23,8 +23,8 @@ a.constructor === Array; // true
 var n = new Number(3);
 n.constructor === Number; // true
 </pre>
-<h2 id="Examples" name="Examples">Примеры</h2>
-<h3 id="Example:_Displaying_the_constructor_of_an_object" name="Example:_Displaying_the_constructor_of_an_object">Пример: отображение конструктора объекта</h3>
+<h2 id="Examples">Примеры</h2>
+<h3 id="Example:_Displaying_the_constructor_of_an_object">Пример: отображение конструктора объекта</h3>
 <p>В следующем примере создаётся прототип <code>Tree</code> и объект этого типа <code>theTree</code>. Затем в примере отображается свойство <code>constructor</code> объекта <code>theTree</code>.</p>
 <pre class="brush: js">function Tree(name) {
   this.name = name;
@@ -38,7 +38,7 @@ console.log("theTree.constructor равен " + theTree.constructor);
   this.name = name;
 }
 </pre>
-<h3 id="Example:_Changing_the_constructor_of_an_object" name="Example:_Changing_the_constructor_of_an_object">Пример: изменение конструктора объекта</h3>
+<h3 id="Example:_Changing_the_constructor_of_an_object">Пример: изменение конструктора объекта</h3>
 <p>Следующий пример показывает, как изменить конструктор значений общих объектов. Не затрагиваются только значения <code>true</code>, <code>1</code> и <code>"тест"</code>, поскольку они имеют родные конструкторы только для чтения. Этот пример показывает, что полагаться на свойство <code>constructor</code> объекта не всегда безопасно.</p>
 <pre class="brush: js">function Type() {}
 
@@ -96,31 +96,8 @@ function String() {
     [native code]
 },false,тест
 </pre>
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализовано в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.1', 'Object.prototype.constructor')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Specifications">Спецификации</h2>
+{{Specifications}}
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <div>
 <p>{{Compat}}</p>

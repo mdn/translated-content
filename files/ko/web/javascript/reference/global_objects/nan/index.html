@@ -17,11 +17,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/NaN
 
 
 
-<h2 id="Description" name="Description">설명</h2>
+<h2 id="Description">설명</h2>
 
 <p><code>NaN</code>은 전역 객체의 속성입니다. 즉 전역 스코프의 변수입니다.</p>
 
-<p><code>NaN</code>의 초기값은 Not-A-Number(숫자가 아님)로, {{jsxref("Number.NaN")}}의 값과 같습니다. 최신 브라우저에서 <code style="font-style: normal;">NaN</code>은 설정 불가, 쓰기 불가 속성입니다. 그렇지 않다고 하더라도 덮어쓰는건 피하는게 좋습니다.</p>
+<p><code>NaN</code>의 초기값은 Not-A-Number(숫자가 아님)로, {{jsxref("Number.NaN")}}의 값과 같습니다. 최신 브라우저에서 <code>NaN</code>은 설정 불가, 쓰기 불가 속성입니다. 그렇지 않다고 하더라도 덮어쓰는건 피하는게 좋습니다.</p>
 
 <p><code>NaN</code>을 반환하는 연산에는 다섯 가지 종류가 있습니다.</p>
 
@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/NaN
 
 <p><code>NaN</code>은 다른 모든 값과 비교(<code>==</code>, <code>!=</code>, <code>===</code>, <code>!==</code>)했을 때 같지 않으며, 다른 NaN과도 같지 않습니다. NaN의 판별은 {{jsxref("Number.isNaN()")}} 또는 {{jsxref("Global_Objects/isNaN", "isNaN()")}}을 사용하면 제일 분명하게 수행할 수 있습니다. 아니면, 오로지 NaN만이 자기자신과 비교했을 때 같지 않음을 이용할 수도 있습니다.</p>
 
-<pre class="brush: js notranslate">NaN === NaN;        // false
+<pre class="brush: js ">NaN === NaN;        // false
 Number.NaN === NaN; // false
 isNaN(NaN);         // true
 isNaN(Number.NaN);  // true
@@ -52,13 +52,13 @@ valueIsNaN(Number.NaN); // true
 
 <p>그러나 <code>isNaN()</code>과 <code>Number.isNaN()</code>의 차이를 주의해야 합니다. <code>isNaN</code>은 현재 값이 <code>NaN</code>이거나, 숫자로 변환했을 때 <code>NaN</code>이 되면 참을 반환하지만, <code>Number.isNaN</code>은 현재 값이 <code>NaN</code>이어야만 참을 반환합니다.</p>
 
-<pre class="brush: js notranslate">isNaN('hello world'); // true
+<pre class="brush: js ">isNaN('hello world'); // true
 Number.isNaN('hello world'); // false
 </pre>
 
 <p>덧붙여서, 일부 배열 메서드는 NaN을 찾을 수 없습니다.</p>
 
-<pre class="brush: js notranslate">let arr = [2, 4, NaN, 12];
+<pre class="brush: js ">let arr = [2, 4, NaN, 12];
 arr.indexOf(NaN);                      // -1 (false)
 arr.includes(NaN);                     // true
 arr.findIndex(n =&gt; Number.isNaN(n));   // 2</pre>

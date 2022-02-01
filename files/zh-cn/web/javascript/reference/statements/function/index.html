@@ -53,7 +53,7 @@ translation_of: Web/JavaScript/Reference/Statements/function
 
 <h3 id="有条件的创建函数" style="line-height: 24px; font-size: 1.71428571428571rem;">有条件的创建函数</h3>
 
-<p>函数可以被有条件来声明，这意味着，函数声明可能出现在一个 if 语句里，但是，这种声明方式在不同的浏览器里可能有不同的效果。因此，不应该在生成环境代码中使用这种声明方式，应该使用函数表达式来代替。</p>
+<p>函数可以被有条件来声明，这意味着，函数声明可能出现在一个 if 语句里，但是，这种声明方式在不同的浏览器里可能有不同的效果。因此，不应该在生产环境代码中使用这种声明方式，应该使用函数表达式来代替。</p>
 
 <pre class="brush: js notranslate"><code>var hoisted = "foo" in this;
 console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);

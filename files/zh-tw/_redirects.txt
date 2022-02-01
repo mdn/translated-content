@@ -440,6 +440,8 @@
 /zh-TW/docs/Learn/JavaScript/First_steps/有用的字符串方法	/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods
 /zh-TW/docs/Learn/JavaScript/First_steps/變數	/zh-TW/docs/Learn/JavaScript/First_steps/Variables
 /zh-TW/docs/Learn/JavaScript/First_steps/陣列	/zh-TW/docs/Learn/JavaScript/First_steps/Arrays
+/zh-TW/docs/Learn/JavaScript/Objects/Inheritance	/zh-TW/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS	/zh-TW/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /zh-TW/docs/Learn/JavaScript/如何運用	/zh-TW/docs/Learn/JavaScript/Howto
 /zh-TW/docs/Learn/JavaScript/第一步	/zh-TW/docs/Learn/JavaScript/First_steps
 /zh-TW/docs/Learn/Performance/多媒體	/zh-TW/docs/Learn/Performance/Multimedia
@@ -512,6 +514,7 @@
 /zh-TW/docs/Using_files_from_web_applications	/zh-TW/docs/Web/API/File/Using_files_from_web_applications
 /zh-TW/docs/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API
 /zh-TW/docs/Web/API/Ambient_Light_Events	/zh-TW/docs/orphaned/Web/API/Ambient_Light_Events
+/zh-TW/docs/Web/API/AnimationEvent/initAnimationEvent	/zh-TW/docs/Web/API/AnimationEvent/AnimationEvent
 /zh-TW/docs/Web/API/Body	/zh-TW/docs/orphaned/Web/API/Body
 /zh-TW/docs/Web/API/Body/json	/zh-TW/docs/orphaned/Web/API/Body/json
 /zh-TW/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/zh-TW/docs/conflicting/Web/API/Canvas_API/Tutorial
@@ -543,6 +546,7 @@
 /zh-TW/docs/Web/API/Document_Object_Model/事件	/zh-TW/docs/orphaned/Web/API/Document_Object_Model/Events
 /zh-TW/docs/Web/API/ElementCSSInlineStyle/style	/zh-TW/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /zh-TW/docs/Web/API/Event/createEvent	/zh-TW/docs/Web/API/Document/createEvent
+/zh-TW/docs/Web/API/File/fileName	/zh-TW/docs/Web/API/File/name
 /zh-TW/docs/Web/API/Geolocation/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API
 /zh-TW/docs/Web/API/HTMLElement/dataset	/zh-TW/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /zh-TW/docs/Web/API/HTMLElement/style	/zh-TW/docs/orphaned/Web/API/ElementCSSInlineStyle/style
@@ -563,6 +567,10 @@
 /zh-TW/docs/Web/API/PositionError	/zh-TW/docs/Web/API/GeolocationPositionError
 /zh-TW/docs/Web/API/PositionError/code	/zh-TW/docs/Web/API/GeolocationPositionError/code
 /zh-TW/docs/Web/API/PositionError/message	/zh-TW/docs/Web/API/GeolocationPositionError/message
+/zh-TW/docs/Web/API/PositionOptions	/zh-TW/docs/conflicting/Web/API/Geolocation/getCurrentPosition_5852407122355d2ab39863042583c266
+/zh-TW/docs/Web/API/PositionOptions/enableHighAccuracy	/zh-TW/docs/conflicting/Web/API/Geolocation/getCurrentPosition
+/zh-TW/docs/Web/API/PositionOptions/maximumAge	/zh-TW/docs/conflicting/Web/API/Geolocation/getCurrentPosition_c2c285f72be001586cb95d7989ba1b54
+/zh-TW/docs/Web/API/PositionOptions/timeout	/zh-TW/docs/conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6
 /zh-TW/docs/Web/API/WebGL_API/Tutorial/WebGL入門	/zh-TW/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /zh-TW/docs/Web/API/Web_Video_Text_Tracks_Format	/zh-TW/docs/Web/API/WebVTT_API
 /zh-TW/docs/Web/API/Window.history	/zh-TW/docs/Web/API/Window/history
@@ -570,6 +578,8 @@
 /zh-TW/docs/Web/API/Window.requestAnimationFrame	/zh-TW/docs/Web/API/window/requestAnimationFrame
 /zh-TW/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/zh-TW/docs/conflicting/Web/OpenSearch
 /zh-TW/docs/Web/API/WindowBase64	/zh-TW/docs/conflicting/Web/API/WindowOrWorkerGlobalScope
+/zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/zh-TW/docs/Web/API/btoa
+/zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-TW/docs/Web/API/setInterval
 /zh-TW/docs/Web/API/WindowTimers	/zh-TW/docs/conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a
 /zh-TW/docs/Web/API/XMLHttpRequest/FormData	/zh-TW/docs/Web/API/FormData
 /zh-TW/docs/Web/API/document.createTreeWalker	/zh-TW/docs/Web/API/Document/createTreeWalker
@@ -595,6 +605,7 @@
 /zh-TW/docs/Web/CSS/彈頭	/zh-TW/docs/Web/CSS/box-sizing
 /zh-TW/docs/Web/CSS/繼承	/zh-TW/docs/Web/CSS/inheritance
 /zh-TW/docs/Web/CSS/語法	/zh-TW/docs/Web/CSS/Syntax
+/zh-TW/docs/Web/Demos_of_open_web_technologies	/zh-TW/docs/Web/Demos
 /zh-TW/docs/Web/Events/DOMContentLoaded	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
 /zh-TW/docs/Web/Events/abort	/zh-TW/docs/Web/API/HTMLMediaElement/abort_event
 /zh-TW/docs/Web/Events/click	/zh-TW/docs/Web/API/Element/click_event

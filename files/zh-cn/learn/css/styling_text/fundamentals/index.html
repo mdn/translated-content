@@ -65,7 +65,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>你可以在这找到完成版本 <a href="http://mdn.github.io/learning-area/css/styling-text/fundamentals/">finished example on Github</a> (也可以看源码 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html">the source code</a>.)</p>
 
-<h3 id="颜色">颜色</h3>
+<h3 id="Color">颜色</h3>
 
 <p>{{cssxref("color")}} 属性设置选中元素的前景内容的颜色 (通常指文本，不过也包含一些其他东西，或者是使用 {{cssxref("text-decoration")}} 属性放置在文本下方或上方的线 (underline overline)。</p>
 
@@ -90,7 +90,7 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;</pre>
 </div>
 
-<p>{{ EmbedLiveSample('颜色', '100%', 220) }}</p>
+<p>{{ EmbedLiveSample('Color', '100%', 230) }}</p>
 
 <h3 id="字体种类">字体种类</h3>
 
@@ -219,7 +219,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 <p><strong>注意</strong>: 有一些字体名称不止一个单词，比如<code>Trebuchet MS</code> ，那么就需要用引号包裹。</p>
 </div>
 
-<h4 id="一个使用_font-family_的例子">一个使用 font-family 的例子</h4>
+<h4 id="A_font-family_example">一个使用 font-family 的例子</h4>
 
 <p>让我们把它添加到之前的例子上，给段落一个 sans-serif 的字体。</p>
 
@@ -243,7 +243,7 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;</pre>
 </div>
 
-<p>{{ EmbedLiveSample('一个使用_font-family_的例子', '100%', 220) }}</p>
+<p>{{ EmbedLiveSample('A_font-family_example', '100%', 220) }}</p>
 
 <h3 id="字体大小">字体大小</h3>
 
@@ -264,7 +264,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>你需要将 em 的值设置为 20/24, 或者 <code>0.83333333em</code>. 这个计算可能比较复杂，所以当你设置的时候，你需要仔细一些。如果可以使用 rem 的话，那实现起来就变得简单不少，避免在可能的情况下设置容器元素的字体大小。</p>
 
-<h4 id="一个简单的_size_示例">一个简单的 size 示例</h4>
+<h4 id="A_simple_sizing_example">一个简单的 size 示例</h4>
 
 <p>当调整你的文本大小时，将文档(document)的基础  <code>font-size</code> 设置为10px往往是个不错的主意，这样之后的计算会变得简单，所需要的 (r)em 值就是想得到的像素的值除以 10，而不是 16。做完这个之后，你可以简单地调整在你的 HTML 中你想调整的不同类型文本的字体大小。在样式表的指定区域列出所有<code>font-size</code>的规则集是一个好主意，这样它们就可以很容易被找到。</p>
 
@@ -298,9 +298,9 @@ p {
   font-family: Helvetica, Arial, sans-serif;
 }</pre>
 
-<p>{{ EmbedLiveSample('字体大小', '100%', 220) }}</p>
+<p>{{ EmbedLiveSample('A_simple_sizing_example', '100%', 260) }}</p>
 
-<h3 id="字体样式，字体粗细，文本转换和文本装饰">字体样式，字体粗细，文本转换和文本装饰</h3>
+<h3 id="Font_style_font_weight_text_transform_and_text_decoration">字体样式，字体粗细，文本转换和文本装饰</h3>
 
 <p>CSS 提供了 4 种常用的属性来改变文本的样子：</p>
 
@@ -374,7 +374,7 @@ p {
   font-family: Helvetica, Arial, sans-serif;
 }</pre>
 
-<p>{{ EmbedLiveSample('字体样式，字体粗细，文本转换和文本装饰', '100%', 220) }}</p>
+<p>{{ EmbedLiveSample('Font_style_font_weight_text_transform_and_text_decoration', '100%', 260) }}</p>
 
 <h3 id="文字阴影">文字阴影</h3>
 
@@ -395,7 +395,7 @@ p {
 <p><strong>注意</strong>: 正偏移值可以向右移动阴影，但也可以使用负偏移值来左右移动阴影，例如 <code>-1px -1px</code>.</p>
 </div>
 
-<h4 id="多种阴影">多种阴影</h4>
+<h4 id="Hidden_example1">多种阴影</h4>
 
 <p>您可以通过包含以逗号分隔的多个阴影值，将多个阴影应用于同一文本，例如：</p>
 
@@ -443,7 +443,7 @@ p {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('多种阴影', '100%', 220) }}</p>
+<p>{{ EmbedLiveSample('Hidden_example1', '100%', 260) }}</p>
 
 <div class="note">
 <p><strong>注意</strong>: 你可以看到更多有趣的关于 <code>text-shadow</code> 使用的示例在 <a href="http://www.sitepoint.com/moonlighting-css-text-shadow/">Moonlighting with CSS text-shadow</a>.</p>
@@ -453,7 +453,7 @@ p {
 
 <p>有了基本的字体属性，我们来看看我们可以用来影响文本布局的属性。</p>
 
-<h3 id="文本对齐">文本对齐</h3>
+<h3 id="Text_alignment">文本对齐</h3>
 
 <p> {{cssxref("text-align")}} 属性用来控制文本如何和它所在的内容盒子对齐。可用值如下，并且在与常规文字处理器应用程序中的工作方式几乎相同：</p>
 
@@ -504,9 +504,9 @@ p {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('文本对齐', '100%', 220) }}</p>
+<p>{{ EmbedLiveSample('Text_alignment', '100%', 260) }}</p>
 
-<h3 id="行高">行高</h3>
+<h3 id="Hidden_example2">行高</h3>
 
 <p> {{cssxref("line-height")}} 属性设置文本每行之间的高，可以接受大多数单位 <a href="/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">length and size units</a>，不过也可以设置一个无单位的值，作为乘数，通常这种是比较好的做法。无单位的值乘以 {{cssxref("font-size")}} 来获得 <code>line-height</code>。当行与行之间拉开空间，正文文本通常看起来更好更容易阅读。推荐的行高大约是 1.5–2 (双倍间距。) 所以要把我们的文本行高设置为字体高度的1.5倍，你可以使用这个:</p>
 
@@ -553,9 +553,9 @@ p {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('行高', '100%', 250) }}</p>
+<p>{{ EmbedLiveSample('Hidden_example2', '100%', 300) }}</p>
 
-<h3 id="字母和单词间距">字母和单词间距</h3>
+<h3 id="Letter_and_word_spacing">字母和单词间距</h3>
 
 <p>{{cssxref("letter-spacing")}} 和 {{cssxref("word-spacing")}} 属性允许你设置你的文本中的字母与字母之间的间距、或是单词与单词之间的间距。你不会经常使用它们，但是可能可以通过它们，来获得一个特定的外观，或者让较为密集的文字更加可读。它们可以接受大多数单位 <a href="/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size">length and size units</a>.</p>
 
@@ -612,7 +612,7 @@ p {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('字母和字间距', '100%', 250) }}</p>
+<p>{{ EmbedLiveSample('Letter_and_word_spacing', '100%', 330) }}</p>
 
 <h3 id="其他一些值得看一下的属性">其他一些值得看一下的属性</h3>
 

@@ -7,7 +7,7 @@ translation_of: Web/API/Window/self
 
 <p>Свойство <code><strong>Window.self</strong></code> доступно только для чтения и возвращает объект window в виде объекта {{domxref("WindowProxy")}}. Для доступа к данному свойству возможно использовать точечную нотацию и объект <code>window</code> (<code>window.self</code>) или переменную <code>self</code>. Преимущество доступа через переменную <code>self</code> заключается в том, что её можно использовать в окружениях, в которых нет window, например {{domxref("Worker", "Web Workers")}}. Использование <code>self</code> даёт возможность обращаться к глобальному объекту не только в окружениях где есть window (в таком случае <code>self</code> эквивалентна <code>window.self</code>), но также в воркерах (в случае воркера <code>self</code> эквивалентна {{domxref("WorkerGlobalScope.self")}}).</p>
 
-<h2 id="Notes" name="Notes">Пример</h2>
+<h2 id="Notes">Пример</h2>
 
 <p>В следующем примере <code>window.self</code> точно также может быть заменено на <code>window</code>.</p>
 
@@ -26,7 +26,7 @@ var w4 = window.self;
 // Но только переменная w2 будет работать в workers
 </pre>
 
-<h2 id="Specification" name="Specification">Спецификации</h2>
+<h2 id="Specification">Спецификации</h2>
 
 <table class="standard-table">
  <tbody>
@@ -55,7 +55,7 @@ var w4 = window.self;
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Window.self")}}</p>
+<p>{{Compat}}</p>
 
 <p> </p>
 

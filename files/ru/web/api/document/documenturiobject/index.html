@@ -13,12 +13,12 @@ translation_of: Web/API/Document/documentURIObject
 
 <p>Привилегированный код должен быть осторожным не пытаясь получить или установить это свойство на объект с незапакованным  содержанием (e.g. on a <code>wrappedJSObject</code> of an <code><a href="/en/XPCNativeWrapper" title="en/XPCNativeWrapper">XPCNativeWrapper</a></code>). Смотрите {{ Bug(324464) }}' комментарии для детализации.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="eval">var <em>uri</em> = <em>doc</em>.documentURIObject;
 </pre>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="eval">// Проверка является ли этот URI scheme текущей вкладки Firefox - 'http',
 // предполагая что этот код выполняется в контексте  browser.xul
@@ -30,6 +30,6 @@ if (uriObj.schemeIs('http')) {
 }
 </pre>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <p>Не является частью спецификации.</p>

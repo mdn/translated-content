@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 <p>{{jsxref("String")}} 对象是对原始string类型的封装 .</p>
 
-<pre class="notranslate">const foo = new String('foo'); // 创建一个 String 对象
+<pre class="brush: js notranslate">const foo = new String('foo'); // 创建一个 String 对象
 console.log(foo); // 输出: [String: 'foo']
 typeof foo; // 返回 'object'</pre>
 
@@ -59,14 +59,14 @@ typeof foo; // 返回 'object'</pre>
 
 <p>除非必要, 应该尽量使用 String 字面值，因为String对象的某些行为可能并不与直觉一致。举例：</p>
 
-<pre class="notranslate">const firstString = '2 + 2'; //创建一个字符串字面量
+<pre class="brush: js notranslate">const firstString = '2 + 2'; //创建一个字符串字面量
 const secondString = new String('2 + 2'); // 创建一个字符串对象
 eval(firstString); // 返回数字 4
-eval(secondString); // 返回字符串 "2 + 2"</pre>
+eval(secondString); // 返回包含 "2 + 2" 的字符串对象</pre>
 
 <p><code>String</code> 对象有一个属性 <code>length</code>，标识了字符串中 UTF-16 的码点个数。举例，下面的代码把 13 赋值给了<code>helloLength</code>，因为 "Hello, World!" 包含 13 个字符，每个字符用一个 UTF-16 码点表示。你可以通过数组的方式访问每一个码点，但你不能修改每个字符，因为字符串是不变的类数组对象： </p>
 
-<pre class="notranslate">const hello = 'Hello, World!';
+<pre class="brush: js notranslate">const hello = 'Hello, World!';
 const helloLength = hello.length;
 hello[0] = 'L'; // 无效，因为字符串是不变的
 hello[0]; // 返回 "H"</pre>
@@ -171,19 +171,19 @@ string text line 2`);
 
 <p>为了在一般的字符串中嵌入表达式, 需要使用如下语法:</p>
 
-<pre class="notranslate">const five = 5;
+<pre class="brush: js notranslate">const five = 5;
 const ten = 10;
 console.log('Fifteen is ' + (five + ten) + ' and not ' + (2 * five + ten) + '.');
 // "Fifteen is 15 and not 20."</pre>
 
 <p>现在, 使用模板字符串, 可以使用语法糖让类似功能的实现代码更具可读性:</p>
 
-<pre class="notranslate">const five = 5;
+<pre class="brush: js notranslate">const five = 5;
 const ten = 10;
 console.log(`Fifteen is ${five + ten} and not ${2 * five + ten}.`);
 // "Fifteen is 15 and not 20."</pre>
 
-<p>更多信息, 请阅读 <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> 中的 <a href="/en-US/docs/Web/JavaScript/Reference/template_strings">Template strings</a>。</p>
+<p>更多信息, 请阅读 <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> 中的 <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template literals</a>。</p>
 
 <h2 id="国际化">国际化</h2>
 

@@ -13,7 +13,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 
 <h2 id="剖析一个国际化的_WebExtension">剖析一个国际化的 WebExtension</h2>
 
-<p>一个国际化的 WebExtension 与其他 WebExtension 一样可以包含各类功能，如<a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">后台脚本</a>、<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">内容脚本</a>等，但它也有些额外的部分，从而允许它适应不同的语言区域。目录树大致如下：</p>
+<p>一个国际化的 WebExtension 与其他 WebExtension 一样可以包含各类功能，如<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本">后台脚本</a>、<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">内容脚本</a>等，但它也有些额外的部分，从而允许它适应不同的语言区域。目录树大致如下：</p>
 
 <ul class="directory-tree">
  <li>webextension-根目录/
@@ -65,7 +65,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 <h2 id="在__locales_中提供本地化的字符串">在 _locales 中提供本地化的字符串</h2>
 
 <div class="pull-aside">
-<div class="moreinfo">你可以使用<a href="http://r12a.github.io/apps/subtags/">Language subtag lookup page</a>上的查找工具查询语言子标签。请注意，你需要搜索语言的英语名称。</div>
+<div class="moreinfo">你可以使用<a href="https://r12a.github.io/app-subtags/">Language subtag lookup page</a>上的查找工具查询语言子标签。请注意，你需要搜索语言的英语名称。</div>
 </div>
 
 <p>每个 i18n 系统都需要你提供想支持的各语言区域的已翻译字符串。 在 WebExtensions 中，这些字符串放在一个名为 <code>_locales</code> 的目录中，<code>_locales</code> 目录则位于扩展的根目录。每个语言区域都有一个名叫 <code>messages.json</code> 的文件，其中包含相应的字符串（在 WebExtension 中称作“消息”），这个文件放在 <code>_locales</code> 的子目录下，子目录以对应语言区域的语言子标签来命名。</p>
@@ -303,8 +303,13 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
  <tbody>
   <tr>
    <td><code>@@extension_id</code></td>
-   <td>扩展或应用的 ID；你可以使用该字符串构建 URL，用于扩展内部的资源。甚至未本地化的扩展也可以使用该消息。<br>
-    <strong>注意：</strong>该消息无法在 manifest 文件中使用。</td>
+   <td>
+    <p>扩展的 UUID。你可以使用该字符串构建 URL，用于扩展内部的资源。甚至未本地化的扩展也可以使用该消息。</p>
+
+    <p>该消息无法在 manifest 文件中使用。</p>
+
+    <p>此外，此 ID <em>不是</em> {{WebExtAPIRef("runtime.id")}} 返回的附加组件 ID，附加组件 ID 可以使用 manifest.json 中的 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a> 键进行设置。这是生成的、出现在附加组件 URL 中的 UUID。这意味着你不能将此值用作 {{WebExtAPIRef("runtime.sendMessage()")}} 的 <code>extensionId</code> 参数，也不能使用它检查 {{WebExtAPIRef("runtime.MessageSender")}} 对象的 id 属性。</p>
+   </td>
   </tr>
   <tr>
    <td><code>@@ui_locale</code></td>
@@ -367,7 +372,7 @@ padding-left: 1.5em;</pre>
 
 <h2 id="测试你的_WebExtension">测试你的 WebExtension</h2>
 
-<p>从 Firefox 45 开始，你可以临时安装磁盘上的 WebExtensions  — 另见<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Packaging_and_installation#Loading_from_disk">从磁盘加载。</a>按上述步骤操作，然后尝试我们的 <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> WebExtension。访问你喜欢的任何网站，然后点一下链接，查看是否有通知出现来显示所点击的链接网址。</p>
+<p>从 Firefox 45 开始，你可以临时安装磁盘上的 WebExtensions  — 另见<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_installation#loading_from_disk">从磁盘加载。</a>按上述步骤操作，然后尝试我们的 <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> WebExtension。访问你喜欢的任何网站，然后点一下链接，查看是否有通知出现来显示所点击的链接网址。</p>
 
 <p>接下来，将 Firefox 的语言区域更改为你想测试的扩展支持的某个语言区域。</p>
 

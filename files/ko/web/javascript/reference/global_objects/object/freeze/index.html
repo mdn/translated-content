@@ -23,11 +23,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 
 
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+<h2 id="Syntax">구문</h2>
 
 <pre class="syntaxbox">Object.freeze(<var>obj</var>)</pre>
 
-<h3 id="Parameters" name="Parameters">매개변수</h3>
+<h3 id="Parameters">매개변수</h3>
 
 <dl>
  <dt><code>obj</code></dt>
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 
 <p>함수로 전달된 객체.</p>
 
-<h2 id="Description" name="Description">설명</h2>
+<h2 id="Description">설명</h2>
 
 <p>동결 객체의 속성 집합에는 어떠한 것도 추가하거나 제거할 수 없으며, 그리 하려는 모든 시도는 조용히 넘어가거나, {{jsxref("TypeError")}} 예외가 발생하며 실패합니다. 예외 발생은 보통 {{jsxref("Strict_mode", "엄격 모드", "", 1)}}인 경우 발생하지만, 반드시 엄격 모드로만 제한되는 것은 아닙니다.</p>
 
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 
 <p><code>freeze()</code>는 함수에 전달한 객체를 그대로 반환하며, 동결된 객체 사본을 생성하는 것이 아닙니다.</p>
 
-<h2 id="Examples" name="Examples">예제</h2>
+<h2 id="Examples">예제</h2>
 
 <h3 id="객체_동결하기">객체 동결하기</h3>
 
@@ -181,7 +181,7 @@ obj2.internal.a = 'anotherValue'; // 비엄격 모드에서 조용하게 실패
 obj2.internal.a; // null
 </pre>
 
-<h2 id="Notes" name="Notes">사용 노트</h2>
+<h2 id="Notes">사용 노트</h2>
 
 <p>ES5에서는, 이 메소드에 대한 인자가 객체(원시형)가 아닐 경우, {{jsxref("TypeError")}}가 발생합니다. ES2015에서는, 비객체 인자가 동결된 평범한 객체인것처럼 다루어져 반환됩니다.</p>
 

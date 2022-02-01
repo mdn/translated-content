@@ -15,15 +15,15 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_usage
 <pre class="brush: html">&lt;canvas id="tutorial" width="150" height="150"&gt;&lt;/canvas&gt;
 </pre>
 
-<p>{{HTMLElement("canvas")}} は {{HTMLElement("img")}} と似ています。<code>src</code> 属性と <code>alt</code> 属性がない点が明確に異なりますが、{{htmlattrxref("width", "canvas")}} と {{htmlattrxref("height", "canvas")}} の属性がある点などは共通しています。 これらの属性は必ず指定しなければならないものではありません。このほかに様々な {{Glossary("DOM")}} <a href="/docs/Web/API/HTMLCanvasElement">属性</a>を利用できます。 <code>width</code> と <code>height</code> 属性が指定されなかった場合、canvas は幅 <strong>300 ピクセル</strong>、高さ <strong>150 ピクセル</strong>の要素として初期化されます。画面上の大きさは {{Glossary("CSS")}} によって変更できますが、その場合 canvas に描画される画像は CSS の指定に合わせて拡大 / 縮小されます。この際、元の画像のアスペクト比は考慮されないため、指定の仕方によっては画像が歪んで表示されます。</p>
+<p>{{HTMLElement("canvas")}} は {{HTMLElement("img")}} と似ています。<code>src</code> 属性と <code>alt</code> 属性がない点が明確に異なりますが、{{htmlattrxref("width", "canvas")}} と {{htmlattrxref("height", "canvas")}} の属性がある点などは共通しています。 これらの属性は必ず指定しなければならないものではありません。このほかに様々な {{Glossary("DOM")}} <a href="/ja/docs/Web/API/HTMLCanvasElement">属性</a>を利用できます。 <code>width</code> と <code>height</code> 属性が指定されなかった場合、canvas は幅 <strong>300 ピクセル</strong>、高さ <strong>150 ピクセル</strong>の要素として初期化されます。画面上の大きさは {{Glossary("CSS")}} によって変更できますが、その場合 canvas に描画される画像は CSS の指定に合わせて拡大 / 縮小されます。この際、元の画像のアスペクト比は考慮されないため、指定の仕方によっては画像が歪んで表示されます。</p>
 
 <div class="note">
 <p><strong>付記:</strong> 画像が歪んでいると感じた時は、<code>&lt;canvas&gt; </code>の <code>width</code> と <code>height</code> 属性の値を設定して、CSS によるサイズの変更をしないようにしましょう。</p>
 </div>
 
-<p><a href="/en-US/docs/Web/HTML/Global_attributes/id"><code>id</code></a> 属性は <a href="/docs/Web/HTML/Global_attributes">全ての要素が持つ属性</a> で <code>&lt;canvas&gt;</code> に固有なものではありません。これを利用することで、ユニークな ID を要素に持たせられます。ID を持たせることで、JavaScript の中から、その要素を探すのが簡単になります。</p>
+<p><a href="/ja/docs/Web/HTML/Global_attributes/id"><code>id</code></a> 属性は <a href="/ja/docs/Web/HTML/Global_attributes">全ての要素が持つ属性</a> で <code>&lt;canvas&gt;</code> に固有なものではありません。これを利用することで、ユニークな ID を要素に持たせられます。ID を持たせることで、JavaScript の中から、その要素を探すのが簡単になります。</p>
 
-<p><code>&lt;canvas&gt;</code> 要素は通常の画像と同じようにレイアウトされます。({{cssxref("margin")}} や {{cssxref("border")}}、 {{cssxref("background")}} といったルールも利用可能ですが、これらは実際に描画される画像には影響を与えません。スタイルが何も設定されていない場合、canvas は最初透明なものとして描画されます。スタイルとレイアウトに関しては<a href="/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">専用のページ</a>を設けています。詳細は、そちらをご覧ください。</p>
+<p><code>&lt;canvas&gt;</code> 要素は通常の画像と同じようにレイアウトされます。({{cssxref("margin")}} や {{cssxref("border")}}、 {{cssxref("background")}} といったルールも利用可能ですが、これらは実際に描画される画像には影響を与えません。スタイルが何も設定されていない場合、canvas は最初透明なものとして描画されます。スタイルとレイアウトに関しては<a href="/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">専用のページ</a>を設けています。詳細は、そちらをご覧ください。</p>
 
 <div id="section_2">
 <h3 id="代替コンテンツ">代替コンテンツ</h3>
@@ -43,7 +43,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_usage
 &lt;/canvas&gt;
 </pre>
 
-<p>使用するブラウザを変更するよう利用者に伝えることは、利用者のために全くなりません。どのような代替テキスト / コンテンツを設定するのが適切かは <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">make the canvas more accessible</a> をご覧ください。</p>
+<p>使用するブラウザを変更するよう利用者に伝えることは、利用者のために全くなりません。どのような代替テキスト / コンテンツを設定するのが適切かは <a href="/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">make the canvas more accessible</a> をご覧ください。</p>
 
 <h3 id="&lt;canvas>：閉じタグが必須です"><code>&lt;/canvas&gt;：</code>閉じタグが必須です</h3>
 

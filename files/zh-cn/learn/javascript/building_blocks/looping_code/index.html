@@ -312,21 +312,21 @@ para.textContent = info;</pre>
 
 <p>然后是JavaScript：</p>
 
-<pre class="brush: js">var contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-var para = document.querySelector('p');
-var input = document.querySelector('input');
-var btn = document.querySelector('button');
+<pre class="brush: js">const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+const para = document.querySelector('p');
+const input = document.querySelector('input');
+const btn = document.querySelector('button');
 
-btn.addEventListener('click', function(){
-  var searchName = input.value;
+btn.addEventListener('click', function() {
+  let searchName = input.value.toLowerCase();
   input.value = '';
   input.focus();
-  for (var i = 0; i &lt; contacts.length; i++) {
-    var splitContact = contacts[i].split(':');
-    if (splitContact[0] === searchName) {
+  for (let i = 0; i &lt; contacts.length; i++) {
+    let splitContact = contacts[i].split(':');
+    if (splitContact[0].toLowerCase() === searchName) {
       para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
       break;
-    } else {
+    } else if (i === contacts.length - 1) {
       para.textContent = 'Contact not found.';
     }
   }

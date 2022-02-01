@@ -1,6 +1,7 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
+browser-compat: javascript.builtins.String.replace
 translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 ---
 <div>{{JSRef}}</div>
@@ -95,7 +96,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
    <td><code>p1,<br>
     p2,<br>
     ...</code></td>
-   <td>윗쪽의 $n 표현식과 동일합니다. (<code>$1</code>은 <code>p1</code>, <code>$2</code>는 <code>p2</code>...) 예를 들어, 만약 정규표현식 <code>/(\a+)(\b+)/</code> 이 주어진다면<code><font face="Open Sans, Arial, sans-serif"> </font></code><code>p1</code>은 <code>\a+</code>와 매치되고 <code>p2</code>는 <code>\b+</code>와 매치됩니다.</td>
+   <td>윗쪽의 $n 표현식과 동일합니다. (<code>$1</code>은 <code>p1</code>, <code>$2</code>는 <code>p2</code>...) 예를 들어, 만약 정규표현식 <code>/(\a+)(\b+)/</code> 이 주어진다면<code>p1</code>은 <code>\a+</code>와 매치되고 <code>p2</code>는 <code>\b+</code>와 매치됩니다.</td>
   </tr>
   <tr>
    <td><code>offset</code></td>
@@ -277,18 +278,7 @@ console.log(retArr);
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
-<div> </div>
-
-<div id="compat-mobile">{{Compat("javascript.builtins.String.replace")}}</div>
-
-<h2 id="Firefox-specific_notes">Firefox-specific notes</h2>
-
-<ul>
- <li>Starting with Gecko 27 {{geckoRelease(27)}}, this method has been adjusted to conform with the ECMAScript specification. When <code>replace()</code> is called with a global regular expression, the {{jsxref("RegExp.lastIndex")}} property (if specified) will be reset to <code>0</code> ({{bug(501739)}}).</li>
- <li>Starting with Gecko 39 {{geckoRelease(39)}}, the non-standard <code>flags</code> argument is deprecated and throws a console warning ({{bug(1142351)}}).</li>
- <li>Starting with Gecko 47 {{geckoRelease(47)}}, the non-standard <code>flags</code> argument is no longer supported in non-release builds and will soon be removed entirely ({{bug(1245801)}}).</li>
- <li>Starting with Gecko 49 {{geckoRelease(49)}}, the non-standard <code>flags</code> argument is no longer supported ({{bug(1108382)}}).</li>
-</ul>
+<div>{{Compat}}</div>
 
 <h2 id="같이_보기">같이 보기</h2>
 

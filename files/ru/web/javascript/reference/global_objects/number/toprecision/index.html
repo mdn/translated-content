@@ -10,39 +10,39 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 ---
 <div>{{JSRef("Global_Objects", "Number")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>toPrecision()</code></strong> возвращает строку, представляющую объект {{jsxref("Global_Objects/Number", "Number")}} с указанной точностью.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>numObj</var>.toPrecision([<var>precision</var>])</code></pre>
+<pre class="syntaxbox"><code><var>numObj</var>.toPrecision([<var>precision</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>precision</code></dt>
  <dd>Необязательный параметр. Целое число, определяющее количество значащих цифр.</dd>
 </dl>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <p>Строка, представляющая объект {{jsxref("Global_Objects/Number", "Number")}} в записи с фиксированной запятой или в экспоненциальной записи, округлённое до <code>precision</code> значащих цифр. Смотрите обсуждение округления в описании метода {{jsxref("Number.prototype.toFixed", "toFixed()")}}, которое таким же образом применяется и к методу <code>toPrecision()</code>.</p>
 
 <p>Если аргумент <code>precision</code> опущен, поведение аналогично методу {{jsxref("Number.prototype.toString()")}}. Если он не является целым числом, он будет округлён к ближайшему целому числу.</p>
 
-<h3 id="Throws" name="Throws">Выбрасываемые исключения</h3>
+<h3 id="Throws">Выбрасываемые исключения</h3>
 
 <dl>
  <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
  <dd>Если параметр <code>precison</code> не находится в диапазоне от 1 до 100 (включительно), будет выброшено исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}. Также реализации могут поддерживать большие и меньшие значения. ECMA-262 требует точности только до 21 значащей цифры.</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_toPrecision" name="Example:_Using_toPrecision">Пример: использование <code>toPrecision</code></h3>
+<h3 id="Example_Using_toPrecision">Пример: использование <code>toPrecision</code></h3>
 
-<pre class="brush: js notranslate">var numObj = 5.123456;
+<pre class="brush: js">var numObj = 5.123456;
 
 console.log(numObj.toPrecision());    // выведет '5.123456'
 console.log(numObj.toPrecision(5));   // выведет '5.1235'
@@ -62,38 +62,15 @@ console<span class="punctuation token">.</span><span class="function token">log<
 console.log((1234.5).toPrecision(2)); // выведет '1.2e+3'
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.7', 'Number.prototype.toPrecision')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Number.toPrecision")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Number.prototype.toFixed()")}}</li>

@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Statements/import
 
 <p>语法</p>
 
-<pre class="syntaxbox notranslate">import <em>defaultExport</em> from "<em>module-name</em>";
+<pre class="syntaxbox brush: js notranslate">import <em>defaultExport</em> from "<em>module-name</em>";
 import * as <em>name</em> from "<em>module-name</em>";
 import { <em>export </em>} from "<em>module-name</em>";
 import { <em>export</em> as <em>alias </em>} from "<em>module-name</em>";
@@ -95,7 +95,7 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
 
 <p>整个模块仅为副作用（中性词，无贬义含义）而导入，而不导入模块中的任何内容（接口）。 这将运行模块中的全局代码, 但实际上不导入任何值。</p>
 
-<pre class="notranslate"><code>import '/modules/my-module.js';</code></pre>
+<pre class="brush: js notranslate">import '/modules/my-module.js';</pre>
 
 <h3 id="导入默认值">导入默认值</h3>
 
@@ -116,9 +116,9 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
 // specific, named imports
 </pre>
 
-<p>When importing a default export with {{anch("Dynamic Imports", "dynamic imports")}}, it works a bit differently. You need to destructure and rename the "default" key from the returned object.</p>
+<p>当用{{anch("动态导入")}}的方式导入默认导出时，其工作方式有所不同。你需要从返回的对象中解构并重命名 "default" 键。</p>
 
-<pre class="notranslate">(async () =&gt; {
+<pre class="brush: js notranslate">(async () =&gt; {
   if (somethingIsTrue) {
     const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
   }
@@ -140,15 +140,15 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
 
 <p>关键字import可以像调用函数一样来动态的导入模块。以这种方式调用，将返回一个 <code>promise</code>。</p>
 
-<pre class="brush: js notranslate"><code>import('/modules/my-module.js')
+<pre class="brush: js notranslate">import('/modules/my-module.js')
   .then((module) =&gt; {
     // Do something with the module.
-  });</code>
+  });
 </pre>
 
 <p>这种使用方式也支持 <code>await</code> 关键字。</p>
 
-<pre class="brush: js notranslate"><code>let module = await import('/modules/my-module.js');</code></pre>
+<pre class="brush: js notranslate">let module = await import('/modules/my-module.js');</pre>
 
 <h2 id="示例">示例</h2>
 
@@ -227,6 +227,6 @@ for (const link of document.querySelectorAll("nav &gt; a")) {
  <li>Limin Zhu, Brian Terlson and Microsoft Edge Team: <a href="https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/">Previewing ES6 Modules and more from ES2015, ES2016 and beyond</a></li>
  <li>Hacks blog post by Jason Orendorff: <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a></li>
  <li>Hacks blog post by Lin Clark: <a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules: A cartoon deep-dive</a></li>
- <li>Axel Rauschmayer's book: <a class="external" href="http://exploringjs.com/es6/ch_modules.html">"Exploring JS: Modules"</a></li>
+ <li>Axel Rauschmayer's book: <a class="external" href="https://exploringjs.com/es6/ch_modules.html">"Exploring JS: Modules"</a></li>
  <li>The Modern JavaScript Tutorial(javascript.info): <a class="external" href="https://javascript.info/import-export">Export and Import</a></li>
 </ul>

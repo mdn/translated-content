@@ -1,0 +1,47 @@
+---
+title: Window.mozAnimationStartTime
+slug: Web/API/Animation/startTime
+tags:
+  - >-
+    API  HTML DOM  NeedsExample  NeedsMarkupWork NeedsSpecTable  Property 
+    Reference  Window
+translation_of: Web/API/Window/mozAnimationStartTime
+original_slug: Web/API/Window/mozAnimationStartTime
+---
+<p>{{ APIRef() }}</p>
+
+<p>{{ gecko_minversion_header("2.0") }}{{ non-standard_header() }}</p>
+
+<h3 id="Summary">Summary</h3>
+
+<p>Возвращает время в миллисекундах с начала эпохи UNIX, начиная с которого анимации, начавшиеся в определённый момент, должны быть сочтены уже начавшимися. Это значение должно быть использовано вместо, например, <code><a href="/en/JavaScript/Reference/Global_Objects/Date/now" title="en/JavaScript/Reference/Global Objects/Date/now">Date.now()</a></code>, потому что оно будет тем же самым для анимаций, начавшихся в этом окне в течение этого интервала, позволяя им синхронизироваться между собой.</p>
+
+<p>Это также позволяет анимациям JavaScript оставаться синхронизированными с CSS переходами и SMIL анимациями, запущенными в течение того же интервала обновления.</p>
+
+<h3 id="Syntax">Syntax</h3>
+
+<pre class="eval"><em>time</em> = window.mozAnimationStartTime;
+</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<ul>
+ <li><em><code>time</code></em> это время в миллисекундах с начала эпохи UNIX, начиная с которого анимации для текущего окна принимаются уже начавшимися.</li>
+</ul>
+
+<h3 id="Specification">Specification</h3>
+
+<p>Not part of specification.</p>
+
+<h3 id="Browser_compatibility">Browser compatibility</h3>
+
+
+
+<p>{{Compat}}</p>
+
+<h3 id="See_also">See also</h3>
+
+<ul>
+ <li>{{ domxref("window.mozRequestAnimationFrame()") }}</li>
+ <li>{{ domxref("window.onmozbeforepaint") }}</li>
+</ul>

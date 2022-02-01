@@ -2328,7 +2328,7 @@
       "webfelipemaia"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-07-16T22:32:15.784Z",
     "contributors": [
       "WellingtonFR",
@@ -2341,14 +2341,6 @@
       "euvanribeiro",
       "WellingtonFR",
       "mateus1siqueira",
-      "greysonf"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-07-16T22:32:07.136Z",
-    "contributors": [
-      "rpizzolato",
-      "WellingtonFR",
       "greysonf"
     ]
   },
@@ -3627,13 +3619,6 @@
   },
   "Web/API/AnimationEvent/elapsedTime": {
     "modified": "2019-03-23T22:45:36.142Z",
-    "contributors": [
-      "teoli",
-      "takahan"
-    ]
-  },
-  "Web/API/AnimationEvent/initAnimationEvent": {
-    "modified": "2019-03-23T22:45:29.493Z",
     "contributors": [
       "teoli",
       "takahan"
@@ -6057,12 +6042,6 @@
       "rbertoche"
     ]
   },
-  "Web/API/PositionOptions": {
-    "modified": "2019-03-23T22:47:40.708Z",
-    "contributors": [
-      "victorkurauchi"
-    ]
-  },
   "Web/API/ProcessingInstruction": {
     "modified": "2019-03-18T21:38:06.302Z",
     "contributors": [
@@ -6650,13 +6629,6 @@
       "fabreu"
     ]
   },
-  "Web/API/Window/crypto": {
-    "modified": "2019-03-23T22:12:19.817Z",
-    "contributors": [
-      "Hikashii",
-      "AlexandreBarros"
-    ]
-  },
   "Web/API/Window/document": {
     "modified": "2019-03-23T22:49:44.918Z",
     "contributors": [
@@ -6743,12 +6715,6 @@
       "saulodecarlo",
       "teoli",
       "perrucho"
-    ]
-  },
-  "Web/API/Window/performance": {
-    "modified": "2019-03-23T22:44:28.136Z",
-    "contributors": [
-      "augustoclaro"
     ]
   },
   "Web/API/Window/popstate_event": {
@@ -6887,33 +6853,6 @@
       "Bzbarsky"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/atob": {
-    "modified": "2020-10-15T21:46:04.009Z",
-    "contributors": [
-      "mateusvelleda",
-      "joaoricardo_rm"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/clearTimeout": {
-    "modified": "2020-10-15T21:31:54.685Z",
-    "contributors": [
-      "GarkGarcia",
-      "teoli",
-      "Willkuns"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/fetch": {
-    "modified": "2019-03-23T22:06:21.567Z",
-    "contributors": [
-      "dowgssss"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/setInterval": {
-    "modified": "2020-10-15T22:16:56.864Z",
-    "contributors": [
-      "luan0ap"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2020-10-28T22:21:09.210Z",
     "contributors": [
@@ -7021,6 +6960,46 @@
       "trestini"
     ]
   },
+  "Web/API/atob": {
+    "modified": "2020-10-15T21:46:04.009Z",
+    "contributors": [
+      "mateusvelleda",
+      "joaoricardo_rm"
+    ]
+  },
+  "Web/API/clearTimeout": {
+    "modified": "2020-10-15T21:31:54.685Z",
+    "contributors": [
+      "GarkGarcia",
+      "teoli",
+      "Willkuns"
+    ]
+  },
+  "Web/API/crypto_property": {
+    "modified": "2019-03-23T22:12:19.817Z",
+    "contributors": [
+      "Hikashii",
+      "AlexandreBarros"
+    ]
+  },
+  "Web/API/fetch": {
+    "modified": "2019-03-23T22:06:21.567Z",
+    "contributors": [
+      "dowgssss"
+    ]
+  },
+  "Web/API/performance_property": {
+    "modified": "2019-03-23T22:44:28.136Z",
+    "contributors": [
+      "augustoclaro"
+    ]
+  },
+  "Web/API/setInterval": {
+    "modified": "2020-10-15T22:16:56.864Z",
+    "contributors": [
+      "luan0ap"
+    ]
+  },
   "Web/Accessibility": {
     "modified": "2019-09-09T14:18:55.700Z",
     "contributors": [
@@ -7060,13 +7039,6 @@
     "contributors": [
       "alisson-suzigan",
       "Sheppy"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role": {
-    "modified": "2019-03-23T22:50:52.511Z",
-    "contributors": [
-      "Aschlla",
-      "iCynthia"
     ]
   },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute": {
@@ -7112,6 +7084,13 @@
     "contributors": [
       "Painatalman",
       "rafaelcavalcante"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/alert_role": {
+    "modified": "2019-03-23T22:50:52.511Z",
+    "contributors": [
+      "Aschlla",
+      "iCynthia"
     ]
   },
   "Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ": {
@@ -7591,23 +7570,23 @@
       "francisco.hansen"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-image_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders": {
+    "modified": "2019-03-23T22:44:11.690Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
     "modified": "2019-05-06T10:31:39.391Z",
     "contributors": [
       "leodeJESUS",
       "Torto"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
     "modified": "2019-03-23T23:07:37.174Z",
     "contributors": [
       "Torto"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2019-03-23T22:44:11.690Z",
-    "contributors": [
-      "teoli"
     ]
   },
   "Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {
@@ -7665,6 +7644,14 @@
     "modified": "2019-03-23T22:43:56.221Z",
     "contributors": [
       "Sebastianz"
+    ]
+  },
+  "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
+    "modified": "2020-08-20T10:01:26.706Z",
+    "contributors": [
+      "felipecesr",
+      "cris-luz-07",
+      "jorgeclesio"
     ]
   },
   "Web/CSS/CSS_Display": {
@@ -7762,14 +7749,6 @@
     "modified": "2019-03-23T22:45:37.305Z",
     "contributors": [
       "teoli"
-    ]
-  },
-  "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
-    "modified": "2020-08-20T10:01:26.706Z",
-    "contributors": [
-      "felipecesr",
-      "cris-luz-07",
-      "jorgeclesio"
     ]
   },
   "Web/CSS/CSS_Positioning": {
@@ -7986,13 +7965,6 @@
       "diancabral",
       "teoli",
       "fvargaspf@gmail.com"
-    ]
-  },
-  "Web/CSS/Tools": {
-    "modified": "2019-03-23T23:07:41.210Z",
-    "contributors": [
-      "hlays",
-      "velvel53"
     ]
   },
   "Web/CSS/Type_selectors": {
@@ -8944,7 +8916,7 @@
       "jessuircleydson"
     ]
   },
-  "Web/Demos_of_open_web_technologies": {
+  "Web/Demos": {
     "modified": "2020-09-04T06:28:02.627Z",
     "contributors": [
       "gustavoSoriano",
@@ -16338,6 +16310,14 @@
       "augustowebd"
     ]
   },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-07-16T22:32:07.136Z",
+    "contributors": [
+      "rpizzolato",
+      "WellingtonFR",
+      "greysonf"
+    ]
+  },
   "conflicting/MDN/Contribute/Getting_started": {
     "modified": "2019-03-23T23:38:18.895Z",
     "contributors": [
@@ -16366,6 +16346,13 @@
     "modified": "2019-03-23T22:18:12.202Z",
     "contributors": [
       "RafaelGiordanno"
+    ]
+  },
+  "conflicting/Web/API/AnimationEvent/AnimationEvent": {
+    "modified": "2019-03-23T22:45:29.493Z",
+    "contributors": [
+      "teoli",
+      "takahan"
     ]
   },
   "conflicting/Web/API/Crypto/getRandomValues": {
@@ -16403,6 +16390,12 @@
     "modified": "2019-03-23T23:35:40.503Z",
     "contributors": [
       "teoli"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition": {
+    "modified": "2019-03-23T22:47:40.708Z",
+    "contributors": [
+      "victorkurauchi"
     ]
   },
   "conflicting/Web/API/GlobalEventHandlers/onscroll": {
@@ -16467,6 +16460,13 @@
     "contributors": [
       "Aschlla",
       "caio.rrs"
+    ]
+  },
+  "conflicting/Web/CSS": {
+    "modified": "2019-03-23T23:07:41.210Z",
+    "contributors": [
+      "hlays",
+      "velvel53"
     ]
   },
   "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox": {

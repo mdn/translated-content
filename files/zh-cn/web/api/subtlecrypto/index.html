@@ -28,8 +28,8 @@ translation_of: Web/API/SubtleCrypto
 <p>这些函数你可以用来实现系统中的隐私和身份验证等安全功能。<strong>SubtleCrypto </strong>API提供了如下加密函数：</p>
 
 <p>* <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/sign">sign()</a></code> 、 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/verify">verify()</a></code>: 创建和验证数字签名。<br>
- * <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt">encrypt()</a></code> and <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/decrypt">decrypt()</a></code>: 加密和解密数据。<br>
- * <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest">digest()</a></code>: create a fixed-length, collision-resistant digest of some data.</p>
+ * <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt">encrypt()</a></code> 和 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/decrypt">decrypt()</a></code>: 加密和解密数据。<br>
+ * <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest">digest()</a></code>：为数据生成一个定长的，防碰撞的消息摘要。</p>
 
 <h3 id="密钥管理功能">密钥管理功能</h3>
 
@@ -232,9 +232,9 @@ translation_of: Web/API/SubtleCrypto
 
 <dl>
  <dt>{{domxref("SubtleCrypto.encrypt()")}}</dt>
- <dd><code>以算法、密钥、</code>明文<code>为参数，返回一个包含加密数据的 </code>{{jsxref("Promise")}}对象。</dd>
+ <dd>以算法、密钥、明文为参数，返回一个包含加密数据的 {{jsxref("Promise")}} 对象。</dd>
  <dt>{{domxref("SubtleCrypto.decrypt()")}}</dt>
- <dd><code>以算法、密钥、</code>明文<code>为参数，返回一个包含解密数据的 </code>{{jsxref("Promise")}}对象。</dd>
+ <dd>以算法、密钥、密文为参数，返回一个包含解密数据的 {{jsxref("Promise")}} 对象。</dd>
  <dt>{{domxref("SubtleCrypto.sign()")}}</dt>
  <dd>以文本、算法和密码为参数，返回一个包含签名的 {{jsxref("Promise")}}。</dd>
  <dt>{{domxref("SubtleCrypto.verify()")}}</dt>

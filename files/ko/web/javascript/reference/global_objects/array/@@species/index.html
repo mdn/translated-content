@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 
 <pre class="brush: js">Array[Symbol.species]; // function Array()</pre>
 
-<p>파생 콜렉션 개체(예시: 사용자 설정 배열인 <code>MyArray</code>)에서, <code>MyArray</code> 종<sup>species</sup>은 <code>MyArray</code> 생성자입니다. 그러나 이 속성을 재정의하면 파생 클래스 메서드에서 상위 <code>Array</code> 객체를 반환할 수 있습니다.</p>
+<p>파생 콜렉션 개체(예시: 사용자 설정 배열인 <code>MyArray</code>)에서, <code>MyArray</code> 종(species)은 <code>MyArray</code> 생성자입니다. 그러나 이 속성을 재정의하면 파생 클래스 메서드에서 상위 <code>Array</code> 객체를 반환할 수 있습니다.</p>
 
 <pre class="brush: js">class MyArray extends Array {
   // MyArray species를 부모 Array 생성자로 재설정

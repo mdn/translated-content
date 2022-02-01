@@ -57,44 +57,24 @@ translation_of: Web/HTML/Element/output
 
 <p>Эта форма содержит слайдер, значение которого находится в пределах от 0 до 100, и элемент {{HTMLElement("input")}}, в который можно ввести второе значение. Два числа складываются и результат отображается в элементе <code>&lt;output&gt;</code> каждый раз, когда значение любого управляющего элемента меняется.</p>
 
-<pre class="brush: html notranslate">&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
+<pre class="brush: html">&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
   &lt;input type="range" name="b" value="50" /&gt; +
   &lt;input type="number" name="a" value="10" /&gt; =
   &lt;output name="result"&gt;60&lt;/output&gt;
 &lt;/form&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('Example')}}</p>
+<p>{{ EmbedLiveSample('Пример')}}</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-output-element', '&lt;output&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#the-output-element', '&lt;output&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
 
 
-<p>{{Compat("html.elements.output")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

@@ -10,46 +10,33 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 ---
 <div>{{JSRef("Global_Objects", "Number")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Константа <strong><code>Number.MIN_SAFE_INTEGER</code></strong> представляет минимальное безопасное целочисленное значение в JavaScript (<code>-(2<sup>53</sup> - 1)</code>).</p>
 
 <div>{{js_property_attributes(0, 0, 0)}}</div>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Константа <code>MIN_SAFE_INTEGER</code> имеет значение <code>-9007199254740991</code>. Смысл этого числа в том, что в JavaScript используется <a href="https://ru.wikipedia.org/wiki/Число_двойной_точности">формат чисел с плавающей запятой двойной точности</a>, как определено в стандарте <a href="https://ru.wikipedia.org/wiki/IEEE_754">IEEE 754</a>, а он может безопасно представлять числа только в диапазоне от <code>-(2<sup>53</sup> - 1)</code> до <code>2<sup>53</sup> - 1</code>.</p>
 
 <p>Поскольку <code>MIN_SAFE_INTEGER</code> является статическим свойством объекта {{jsxref("Global_Objects/Number", "Number")}}, вы всегда должны использовать его как <code>Number.MIN_SAFE_INTEGER</code>, а не как свойство созданного вами объекта {{jsxref("Global_Objects/Number", "Number")}}.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre class="brush: js">Number.MIN_SAFE_INTEGER // -9007199254740991
 -(Math.pow(2, 53) - 1)  // -9007199254740991
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Number.MAX_SAFE_INTEGER")}}</li>

@@ -25,7 +25,7 @@ translation_of: Web/API/Intersection_Observer_API/Timing_element_visibility
 
 <p>Структура Web-приложений не очень сложна. Мы будем использовать <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> для стилизации и макетирования, так что всё достаточно очевидно:</p>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;header&gt;
     &lt;h1&gt;A Fake Blog&lt;/h1&gt;
     &lt;h2&gt;Showing Intersection Observer in action!&lt;/h2&gt;
@@ -55,7 +55,7 @@ translation_of: Web/API/Intersection_Observer_API/Timing_element_visibility
 
 <p>Мы создаём стили для {{HTMLElement("body")}} и {{HTMLElement("main")}} так, чтобы определить фоновый цвет и сеточную систему.</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
   background-color: aliceblue;
 }
@@ -83,7 +83,7 @@ translation_of: Web/API/Intersection_Observer_API/Timing_element_visibility
 
 <p>Заголовок достаточно прост, так как в нашем примере он содержит небольшой текст.</p>
 
-<pre class="brush: css notranslate">header {
+<pre class="brush: css">header {
   grid-column: 1 / -1;
   grid-row: 1;
   background-color: aliceblue;
@@ -95,7 +95,7 @@ translation_of: Web/API/Intersection_Observer_API/Timing_element_visibility
 
 <p>Боковая панель используется для показа ссылок на другие страницы приложения. Ни одна из них не будет работать в нашем примере. Вся боковая панель нужна, чтобы просто приблизить внешний вид приложения к реальному блогу. Боковая панель создаётся с помощью элемента {{HTMLElement("aside")}}.</p>
 
-<pre class="brush: css notranslate">aside {
+<pre class="brush: css">aside {
   grid-column: 1;
   grid-row: 2;
   background-color: cornsilk;
@@ -120,7 +120,7 @@ aside ul li a {
 
 <p>Контент будет содержаться в элементе {{HTMLElement("main")}}.</p>
 
-<pre class="brush: css notranslate">main {
+<pre class="brush: css">main {
   grid-column: 2;
   grid-row: 2;
   margin: 0;
@@ -134,7 +134,7 @@ aside ul li a {
 
 <p>Каждая статья состоит из элемента {{HTMLElement("article")}}:</p>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   background-color: white;
   padding: 6px;
 }
@@ -153,7 +153,7 @@ article h2 {
 
 <p>Наконец, рекламные блоки. Нужно заметить, что каждый отдельный рекламный блок может изменять свои стили динамически (мы увидим это позже):</p>
 
-<pre class="brush: css notranslate">.ad {
+<pre class="brush: css">.ad {
   height: 96px;
   padding: 6px;
   border-color: #555;
@@ -185,9 +185,9 @@ article h2 {
 
 <h2 id="Совмещаем_с_JavaScript">Совмещаем с JavaScript</h2>
 
-<p>Перейдём к JavaScript коду, который всё оживит. Начнём с глобальных переменных:</p>
+<p>Перейдём к JavaScript-коду, который всё оживит. Начнём с глобальных переменных:</p>
 
-<pre class="brush: js notranslate">let contentBox;
+<pre class="brush: js">let contentBox;
 
 let nextArticleID = 1;
 let visibleAds = new Set();
@@ -217,7 +217,7 @@ let refreshIntervalID = 0;</pre>
 
 <p>Для первичного запуска приложения мы вызовем функцию <code>startup()</code>:</p>
 
-<pre class="brush: js notranslate">window.addEventListener("load", startup, false);
+<pre class="brush: js">window.addEventListener("load", startup, false);
 
 function startup() {
   contentBox = document.querySelector("main");
@@ -253,7 +253,7 @@ function startup() {
 
 <p>Давайте рассмотрим обработчик события {{event("visibilitychange")}}. Это событие срабатывает, когда документ становится видим или невидим. Как правило, это случается, когда пользователь переключается между табами. Так как Intersection Observer отслеживает только перекрытия элемента с корневым элементом, нам необходимо отдельно позаботиться о детекции видимости документа. Для этого мы используем <a href="/en-US/docs/Web/API/Page_Visibility_API">Page Visibility API</a>.</p>
 
-<pre class="brush: js notranslate">function handleVisibilityChange() {
+<pre class="brush: js">function handleVisibilityChange() {
   if (document.hidden) {
     if (!previouslyVisibleAds) {
       previouslyVisibleAds = visibleAds;
@@ -282,7 +282,7 @@ function startup() {
 
 <p>При каждой итерации в браузерном event loop, каждый наблюдатель  {{domxref("IntersectionObserver")}} проверяет, не прошёл ли какой-либо из элементов-целей через пороговые значения наблюдателя.  Для каждого наблюдателя список таких целей собирается в один список и отправляется в колбэк-функцию наблюдателя. Каждый элемент списка - это {{domxref("IntersectionObserverEntry")}} объект. В нашем приложении <code>intersectionCallback()</code> выглядит так:</p>
 
-<pre class="brush: js notranslate">function intersectionCallback(entries) {
+<pre class="brush: js">function intersectionCallback(entries) {
   entries.forEach(function(entry) {
     let adBox = entry.target;
 
@@ -308,7 +308,7 @@ function startup() {
 
 <p>Каждую секунду у нас срабатывает интервал <code>handleRefreshInterval()</code>, который мы задали в функции <code>startup()</code>. Главная задача этого интервала - обновлять таймеры каждую секунду и перерисовывать значение таймеров.</p>
 
-<pre class="brush: js notranslate">function handleRefreshInterval() {
+<pre class="brush: js">function handleRefreshInterval() {
   let redrawList = [];
 
   visibleAds.forEach(function(adBox) {
@@ -339,7 +339,7 @@ function startup() {
 
 <p>Ранее мы уже видели, что если нам нужно обновить общее время видимости рекламы - мы вызываем функцию <code>updateAdTimer()</code>. Эта функция принимает в качестве аргумента объект {{domxref("HTMLDivElement")}}.</p>
 
-<pre class="brush: js notranslate">function updateAdTimer(adBox) {
+<pre class="brush: js">function updateAdTimer(adBox) {
   let lastStarted = adBox.dataset.lastViewStarted;
   let currentTime = performance.now();
 
@@ -373,7 +373,7 @@ function startup() {
 
 <p>Внутри каждого рекламного блока мы отображаем текущее значение общего времени видимости в формате мин:сек. Для этого мы передаём в функцию <code>drawAdTimer</code> контейнер:</p>
 
-<pre class="brush: js notranslate">function drawAdTimer(adBox) {
+<pre class="brush: js">function drawAdTimer(adBox) {
   let timerBox = adBox.querySelector(".timer");
   let totalSeconds = adBox.dataset.totalViewTime / 1000;
   let sec = Math.floor(totalSeconds % 60);
@@ -390,7 +390,7 @@ function startup() {
 
 <p>Функция <code>buildContents()</code> вызывается при старте приложения. Она формирует тело статьи и добавляет рекламные блоки:</p>
 
-<pre class="brush: js notranslate">let loremIpsum = "&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing" +
+<pre class="brush: js">let loremIpsum = "&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing" +
   " elit. Cras at sem diam. Vestibulum venenatis massa in tincidunt" +
   " egestas. Morbi eu lorem vel est sodales auctor hendrerit placerat" +
   " risus. Etiam rutrum faucibus sem, vitae mattis ipsum ullamcorper" +
@@ -419,7 +419,7 @@ function buildContents() {
 
 <p>Для создания элемента статьи {{HTMLElement("article")}} и её содержимого мы используем функцию <code>createArticle()</code>, которая в качестве входных данных принимает строку-текст статьи.</p>
 
-<pre class="brush: js notranslate">function createArticle(contents) {
+<pre class="brush: js">function createArticle(contents) {
   let articleElem = document.createElement("article");
   articleElem.id = nextArticleID;
 
@@ -440,7 +440,7 @@ function buildContents() {
 
 <p>Функция <code>loadRandomAd()</code> имитирует загрузку рекламы и её добавление на страницу. Если вы не указываете значение для <code>replaceBox</code>, создаётся и применяется новый контейнер для рекламы. Если вы указали <code>replaceBox</code>, этот контейнер рассматривается, как уже существующий элемент. Вместо создания нового, существующий элемент изменяется, чтобы содержать актуальные данные. Это помогает избежать риска неэффективной перерисовки элементов, если вы сначала будете удалять элемент из DOM, а затем вставлять новый.</p>
 
-<pre class="brush: js notranslate">function loadRandomAd(replaceBox) {
+<pre class="brush: js">function loadRandomAd(replaceBox) {
   let ads = [
     {
       bgcolor: "#cec",
@@ -537,7 +537,7 @@ function buildContents() {
 
 <p>Наша {{anch("Handling intersection changes", "функция обработки перекрытия")}} отслеживает рекламные блоки. Когда они становятся на 100% и общее время их видимости достаточное для того, рекламный блок заменяется на новый. Когда это происходит, вызывается функция <code>replaceAd()</code>.</p>
 
-<pre class="brush: js notranslate">function replaceAd(adBox) {
+<pre class="brush: js">function replaceAd(adBox) {
   let visibleTime;
 
   updateAdTimer(adBox);

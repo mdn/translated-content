@@ -39,7 +39,7 @@ translation_of: Web/API/Element/mouseenter_event
 <div style="text-align: center;"><img alt="mouseover.png" class="default internal" src="/@api/deki/files/5909/=mouseover.png"></div>
 <span class="tlid-translation translation" lang="ru"><span title="">Одиночное событие наведения мыши</span></span> <code>mouseover</code> <span class="tlid-translation translation" lang="ru"><span title="">отправляется в самый глубокий элемент дерева DOM, затем оно всплывает в иерархии, пока не будет отменено обработчиком или не достигнет корня.</span></span></div>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">При наличии глубокой иерархии количество отправляемых </span></span>событий <code>mouseenter</code><span class="tlid-translation translation" lang="ru"><span title=""> может быть довольно большим и вызывать значительные проблемы с производительностью.</span> <span title="">В таких случаях лучше обрабатывать события </span></span><code>mouseover</code>.</p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">При наличии глубокой иерархии количество отправляемых </span></span>событий <code>mouseover</code><span class="tlid-translation translation" lang="ru"><span title=""> может быть довольно большим и вызывать значительные проблемы с производительностью.</span> <span title="">В таких случаях лучше обрабатывать события </span></span><code>mouseenter</code>.</p>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">В сочетании с соответствующим событием</span></span> <code>mouseleave</code> (<span class="tlid-translation translation" lang="ru"><span title="">которое запускается в элементе, когда мышь покидает область содержимого</span></span>), событие <code>mouseenter</code> <span class="tlid-translation translation" lang="ru"><span title="">действует очень похоже на псевдокласс</span></span> CSS {{cssxref(':hover')}}.</p>
 
@@ -53,7 +53,7 @@ translation_of: Web/API/Element/mouseenter_event
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id='mouseTarget'&gt;
+<pre class="brush: html">&lt;div id='mouseTarget'&gt;
  &lt;ul id="unorderedList"&gt;
   &lt;li&gt;No events yet!&lt;/li&gt;
  &lt;/ul&gt;
@@ -63,7 +63,7 @@ translation_of: Web/API/Element/mouseenter_event
 
 <p>Стилизация <code>div</code> чтобы сделать его более заметным.</p>
 
-<pre class="brush: css notranslate">#mouseTarget {
+<pre class="brush: css">#mouseTarget {
   box-sizing: border-box;
   width:15rem;
   border:1px solid #333;
@@ -71,7 +71,7 @@ translation_of: Web/API/Element/mouseenter_event
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var enterEventCount = 0;
+<pre class="brush: js">var enterEventCount = 0;
 var leaveEventCount = 0;
 const mouseTarget = document.getElementById('mouseTarget');
 const unorderedList = document.getElementById('unorderedList');
@@ -108,28 +108,11 @@ function addListItem(text) {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-mouseenter', 'mouseenter')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#event-type-mouseenter', 'mouseenter')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Element.mouseenter_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

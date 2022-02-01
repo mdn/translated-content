@@ -7,7 +7,7 @@ translation_of: Web/API/Window/scrollY
 
 <p class="syntaxbox"><code><strong>scrollY</strong></code> — свойство только для чтения интерфейса {{domxref("Window")}}. Возвращает число пикселей, на которое документ пролистали в данный момент по вертикали. В современных браузерах это значение является точным числом субпикселей, что означает отсутствие необходимости в полном значении количества пикселей. Вы можете получить количество  пикселей, пролистанных по горизонтали с помощью свойства {{domxref("Window.scrollX", "scrollX")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">var y = window.scrollY</pre>
 
@@ -21,7 +21,7 @@ translation_of: Web/API/Window/scrollY
 
 <p>Говоря технически, то <code>scrollY</code> возвращает Y-координату от верхнего края текущего окна просмотра ({{Glossary("viewport")}}). Если окна просмотра нет, то возвращаемое значение = 0.</p>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush:js">// проверить и перейти ко второй странице
 if (window.scrollY) {
@@ -30,7 +30,7 @@ if (window.scrollY) {
 
 window.scrollByPages(1);</pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p>Применяйте данное свойство для проверки, был ли пролистан документ, когда используете похожие функции для работы с пролистыванием, такие как {{domxref("window.scrollBy", "scrollBy()")}}, {{domxref("window.scrollByLines", "scrollByLines()")}}, or {{domxref("window.scrollByPages", "scrollByPages()")}}.</p>
 
@@ -47,7 +47,7 @@ var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documen
 var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
 </pre>
 
-<h2 id="Specification" name="Specification">Спецификации</h2>
+<h2 id="Specification">Спецификации</h2>
 
 <table class="standard-table">
  <thead>
@@ -68,9 +68,9 @@ var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documen
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Window.scrollY")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("window.scrollX")}}</li>

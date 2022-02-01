@@ -5,29 +5,29 @@ translation_of: Web/API/Element/scrollIntoView
 ---
 <div>{{ APIRef("DOM")}}</div>
 
-<p>Метод <code><strong>Element.scrollIntoView()</strong></code> интерфейса {{domxref("Element")}} прокручивает текущий контейнер родителя элемента, так, чтобы этот элемент, на котором был вызван <code>scrollIntoView()</code> был видим пользователю.</p>
+<p>Метод <code><strong>Element.scrollIntoView()</strong></code> интерфейса {{domxref("Element")}} прокручивает контейнер родителя элемента так, чтобы элемент, на котором был вызван <code>scrollIntoView()</code>, стал виден пользователю.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox">element.scrollIntoView(); // эквивалентно<code> element.scrollIntoView(true)
-</code>element.scrollIntoView(<em>alignToTop</em>); // аргумент типа Boolean
-element.scrollIntoView(<em>scrollIntoViewOptions</em>); // аргумент типа Object
+<pre class="syntaxbox">element.scrollIntoView();
+</code>element.scrollIntoView(alignToTop); // аргумент типа Boolean
+element.scrollIntoView(scrollIntoViewOptions); // аргумент типа Object
 </pre>
 
 <h3 id="Параметры">Параметры</h3>
 
 <dl>
  <dt><code>alignToTop</code> {{optional_inline}}</dt>
- <dd>Параметр типа {{jsxref("Boolean")}}, возможные значения:
+ <dd>Параметр типа {{jsxref("Boolean")}}:
  <ul>
-  <li> <code>true</code>,  верхняя граница элемента будет выровнена вверху видимой части окна прокручиваемой области. Соответствует <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>. Значение по умолчанию<strong>.</strong></li>
-  <li><code>false</code>, нижняя граница элемента будет выровнена внизу видимой части окна прокручиваемой области. Соответствует конфигурации <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code></li>
+  <li><code>true</code>, верхняя граница элемента будет выровнена по верху видимой области прокрутки. Соответствует <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>. Значение по умолчанию.</li>
+  <li><code>false</code>, нижняя граница элемента будет выровнена по низу видимой области прокрутки. Соответствует <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code></li>
  </ul>
  </dd>
  <dt><code>scrollIntoViewOptions</code> {{optional_inline}} {{experimental_inline}}</dt>
- <dd>Аргумент типа boolean или типа object со следующим набором опций:</dd>
+ <dd>Объект со следующими свойствами:</dd>
  <dt><code>behavior</code> {{optional_inline}}</dt>
- <dd>Определяет анимацию скролла. Принимает значение <code>"auto"</code> или <code>"smooth"</code>. По умолчанию <code>"auto"</code>.</dd>
+ <dd>Анимация прокрутки. Принимает значения <code>"auto"</code> или <code>"smooth"</code>. По умолчанию <code>"auto"</code>.</dd>
  <dt><code>block</code> {{optional_inline}}</dt>
  <dd>Вертикальное выравнивание.<br>
  Одно из значений: <code>"start"</code>, <code>"center"</code>, <code>"end"</code> или <code>"nearest"</code>. По умолчанию <code>"start"</code>.</dd>
@@ -84,26 +84,11 @@ btn.addEventListener('click', handleButtonClick);
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-element-scrollintoview", "Element.scrollIntoView()")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Initial Definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Element.scrollIntoView")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
