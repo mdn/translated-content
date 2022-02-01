@@ -2,452 +2,376 @@
 title: 字句文法
 slug: Web/JavaScript/Reference/Lexical_grammar
 tags:
+  - ガイド
   - JavaScript
-  - Keyword
-  - Lexical Grammar
-  - Literal
   - キーワード
-  - リテラル
   - 字句文法
+  - リテラル
+browser-compat: javascript.grammar
 translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
-<div>{{JsSidebar("More")}}</div>
+{{JsSidebar("More")}}
 
-<p>このページでは、 JavaScript の字句文法について説明します。 ECMAScript スクリプトのソーステキストは、左から右へスキャンされ、入力要素、すなわちトークン、制御文字、行末、コメント、{{glossary("whitespace", "ホワイトスペース")}}の並びに変換されます。 ECMAScript も、特定のキーワードとリテラルを定義しており、文を終了するにはセミコロンを自動挿入するためのルールがあります。</p>
+このページでは、 JavaScript の字句文法について説明します。 ECMAScript スクリプトのソーステキストは、左から右へスキャンされ、入力要素、すなわちトークン、制御文字、行末、コメント、[ホワイトスペース](/ja/docs/Glossary/Whitespace)の並びに変換されます。 ECMAScript も、特定のキーワードとリテラルを定義しており、文を終了するにはセミコロンを自動挿入するためのルールがあります。
 
-<h2 id="Control_characters" name="Control_characters">制御文字</h2>
+## 制御文字
 
-<p>制御文字は、視覚的表現を有していないものの、テキストの解釈を制御するために使用されます。</p>
+制御文字は、視覚的表現を有していないものの、テキストの解釈を制御するために使用されます。
 
-<table class="standard-table">
- <caption>Unicode の書式制御文字</caption>
- <thead>
-  <tr>
-   <th>コードポイント</th>
-   <th>名称</th>
-   <th>略語</th>
-   <th>説明</th>
-  </tr>
- </thead>
- <thead>
-  <tr>
-   <td><code>U+200C</code></td>
-   <td>ゼロ幅非接合子</td>
-   <td>&lt;ZWNJ&gt;</td>
-   <td>特定の言語において、合字に接合されることを防ぐために、文字の間に配置されます。(<a href="https://ja.wikipedia.org/wiki/%E3%82%BC%E3%83%AD%E5%B9%85%E9%9D%9E%E6%8E%A5%E5%90%88%E5%AD%90">Wikipedia</a>).</td>
-  </tr>
-  <tr>
-   <td><code>U+200D</code></td>
-   <td>ゼロ幅接合子</td>
-   <td>&lt;ZWJ&gt;</td>
-   <td>特定の言語において、通常は接合されない文字を、接合した形を使用して文字を表示するために文字間に配置されます。 (<a href="https://ja.wikipedia.org/wiki/%E3%82%BC%E3%83%AD%E5%B9%85%E6%8E%A5%E5%90%88%E5%AD%90">Wikipedia</a>)</td>
-  </tr>
-  <tr>
-   <td><code>U+FEFF</code></td>
-   <td>バイトオーダーマーク</td>
-   <td>&lt;BOM&gt;</td>
-   <td>スクリプトの先頭において、 Unicode を使用することと、そのテキストのバイト順をマークします。 (<a href="https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%83%9E%E3%83%BC%E3%82%AF">Wikipedia</a>).</td>
-  </tr>
- </thead>
-</table>
+| コードポイント | 名前                  | 略語 | 説明                                                                                                                                                                                                                    |
+| ---------- | --------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `U+200C`   | Zero width non-joiner | \<ZWNJ>      | 特定の言語において、合字に接合されることを防ぐために、文字の間に配置されます。([Wikipedia](https://ja.wikipedia.org/wiki/%E3%82%BC%E3%83%AD%E5%B9%85%E9%9D%9E%E6%8E%A5%E5%90%88%E5%AD%90)).                                                                   |
+| `U+200D`   | Zero width joiner     | \<ZWJ>       | 特定の言語において、通常は接合されない文字を、接合した形を使用して文字を表示するために文字間に配置されます。 ([Wikipedia](https://ja.wikipedia.org/wiki/%E3%82%BC%E3%83%AD%E5%B9%85%E6%8E%A5%E5%90%88%E5%AD%90)) |
+| `U+FEFF`   | Byte order mark       | \<BOM>       | 記述の先頭において、 Unicode を使用することと、そのテキストのバイト順をマークします。 ([Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%83%9E%E3%83%BC%E3%82%AF)).                                                                                  |
 
-<h2 id="White_space" name="White_space">ホワイトスペース</h2>
+## ホワイトスペース
 
-<p>{{glossary("whitespace", "ホワイトスペース")}}はソースのテキストの読みやすさを向上させ、トークンを互いに区別します。これらの文字は通常、コードの機能性には不要なものです。 <a href="http://en.wikipedia.org/wiki/Minification_%28programming%29">Minification tools</a> を使用して、転送する必要があるデータの量を削減するためにホワイトスペースを除去することがよく行われます。</p>
+[ホワイトスペース](/ja/docs/Glossary/Whitespace)はソースのテキストの読みやすさを向上させ、トークンを互いに区別します。これらの文字は通常、コードの機能性には不要なものです。よく [Minification tools](https://en.wikipedia.org/wiki/Minification_%28programming%29) を使用して、転送する必要があるデータの量を削減するためにホワイトスペースを除去します。
 
-<table class="standard-table">
- <caption>ホワイトスペース文字</caption>
- <thead>
-  <tr>
-   <th>コードポイント</th>
-   <th>名称</th>
-   <th>略語</th>
-   <th>説明</th>
-   <th>エスケープシーケンス</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>U+0009</td>
-   <td>文字単位のタブ</td>
-   <td>&lt;HT&gt;</td>
-   <td>水平タブ</td>
-   <td>\t</td>
-  </tr>
-  <tr>
-   <td>U+000B</td>
-   <td>行単位のタブ</td>
-   <td>&lt;VT&gt;</td>
-   <td>垂直タブ</td>
-   <td>\v</td>
-  </tr>
-  <tr>
-   <td>U+000C</td>
-   <td>フォームフィード</td>
-   <td>&lt;FF&gt;</td>
-   <td>改ページの制御文字 (<a href="http://en.wikipedia.org/wiki/Page_break#Form_feed">Wikipedia</a>).</td>
-   <td>\f</td>
-  </tr>
-  <tr>
-   <td>U+0020</td>
-   <td>空白</td>
-   <td>&lt;SP&gt;</td>
-   <td>通常の空白</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>U+00A0</td>
-   <td>ノーブレークスペース</td>
-   <td>&lt;NBSP&gt;</td>
-   <td>通常の空白だが、改行を行ってよい位置ではない</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>Others</td>
-   <td>他の Unicode の空白文字</td>
-   <td>&lt;USP&gt;</td>
-   <td><a href="http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode">Spaces in Unicode on Wikipedia</a></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| コードポイント | 名前                           | 略語 | 説明                                                                                               | エスケープシーケンス |
+| ---------- | ------------------------------ | ------------ | --------------------------------------------------------------------------------------------------------- | --------------- |
+| U+0009     | 文字単位のタブ           | \<HT>        | 水平タブ                                                                                     | \t              |
+| U+000B     | 行単位のタブ                | \<VT>        | 垂直タブ                                                                                       | \v              |
+| U+000C     | フォームフィード                      | \<FF>        | 改ページの制御文字 ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed))        | \f              |
+| U+0020     | 空白                          | \<SP>        | 通常の空白                                                                                              |                 |
+| U+00A0     | ノーブレークスペース                 | \<NBSP>      | 通常の空白だが、改行を行ってよい位置ではない                                                      |                 |
+| Others     | 他の Unicode の空白文字 | \<USP>       | [Spaces in Unicode on Wikipedia](https://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                 |
 
-<h2 id="Line_terminators" name="Line_terminators">行末文字</h2>
+## 行末文字
 
-<p>{{glossary("Whitespace", "ホワイトスペース")}}文字に加えて、行末文字もソースのテキストの読みやすさを改善するために使用されます。しかし、行末文字は JavaScript の実行に影響を与える場合があり、禁止されている場所もいくらかあります。行末文字は<a href="#Automatic_semicolon_insertion">自動的なセミコロンの挿入</a>の処理にも影響を与えます。行末文字は<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">正規表現</a>の <strong>\s</strong> クラスに一致します。</p>
+[ホワイトスペース](/ja/docs/Glossary/Whitespace)文字に加えて、行末文字もソースのテキストの読みやすさを改善するために使用されます。しかし、行末文字は JavaScript の実行に影響を与える場合があり、禁止されている場所もいくらかあります。行末文字は[自動的なセミコロンの挿入](#automatic_semicolon_insertion)の処理にも影響を与えます。行末文字は[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)の **\s** クラスに一致します。
 
-<p>以下の Unicode コードポイントのみが ECMAScript では行末文字として扱われ、他の改行文字はホワイトスペースとして扱われます (例えば、次の行、 NEL、 U+0085 はホワイトスペースと見なされます)。</p>
+以下の Unicode コードポイントのみが ECMAScript では行末文字として扱われ、他の改行文字はホワイトスペースとして扱われます (例えば、次の行、 NEL、 U+0085 はホワイトスペースと見なされます)。
 
-<table class="standard-table">
- <caption>行末文字</caption>
- <thead>
-  <tr>
-   <th>コードポイント</th>
-   <th>名称</th>
-   <th>略語</th>
-   <th>説明</th>
-   <th>エスケープシーケンス</th>
-  </tr>
- </thead>
- <thead>
- </thead>
- <tbody>
-  <tr>
-   <td>U+000A</td>
-   <td>ラインフィード</td>
-   <td>&lt;LF&gt;</td>
-   <td>UNIX システムでの改行文字です。</td>
-   <td>\n</td>
-  </tr>
-  <tr>
-   <td>U+000D</td>
-   <td>キャリッジリターン</td>
-   <td>&lt;CR&gt;</td>
-   <td>コモドールと初期の Mac システムでの改行文字です。</td>
-   <td>\r</td>
-  </tr>
-  <tr>
-   <td>U+2028</td>
-   <td>ラインセパレーター</td>
-   <td>&lt;LS&gt;</td>
-   <td><a href="http://en.wikipedia.org/wiki/Newline">Wikipedia</a></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>U+2029</td>
-   <td>改段落</td>
-   <td>&lt;PS&gt;</td>
-   <td><a href="http://en.wikipedia.org/wiki/Newline">Wikipedia</a></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| コードポイント | 名前                | 略語 | 説明                                            | エスケープシーケンス |
+| ---------- | ------------------- | ------------ | ------------------------------------------------------ | --------------- |
+| U+000A     | ラインフィード      | \<LF>        | UNIX システムでの改行文字です。                    | \n              |
+| U+000D     | キャリッジリターン  | \<CR>        | コモドールと初期の Mac システムでの改行文字です。 | \r              |
+| U+2028     | ラインセパレーター  | \<LS>        | [Wikipedia](https://en.wikipedia.org/wiki/Newline)     |                 |
+| U+2029     | 改段落              | \<PS>        | [Wikipedia](https://en.wikipedia.org/wiki/Newline)     |                 |
 
-<h2 id="Comments" name="Comments">コメント</h2>
+## コメント
 
-<p>コメントは、ヒント、メモ、提案、警告を JavaScript のコードに追加するために使用されます。これにより、コードがより読みやすく、より理解しやすいものなります。また、コードが実行されないよう無効にするために使用することができます。これは、貴重なデバッグツールになることがあります。</p>
+コメントは、ヒント、メモ、提案、警告を JavaScript のコードに追加するために使用されます。これにより、コードがより読みやすく、より理解しやすいものなります。また、コードが実行されないよう無効にするために使用することができます。これは、貴重なデバッグツールになることがあります。
 
-<p>JavaScript には、コード内にコメントを割り当てる方法が 2 つあります。</p>
+JavaScript には、コード内にコメントを割り当てる方法が 2 つあります。
 
-<p>一番目の方法は <code>//</code> コメントです。つまり、これは同じ行にある、その後のすべてのテキストをコメントにします。例えば、</p>
+1 番目の方法は `//` コメントです。つまり、これは同じ行にある、その後のすべてのテキストをコメントにします。例えば、
 
-<pre class="brush: js">function comment() {
+```js
+function comment() {
   // This is a one line JavaScript comment
   console.log('Hello world!');
 }
 comment();
-</pre>
+```
 
-<p>二番目の方法は <code>/* */</code> スタイルで、もっとずっと柔軟なものです。</p>
+2 番目の方法は `/* */` スタイルで、もっとずっと柔軟なものです。
 
-<p>例えば、単一行に利用した場合は次のようになります。</p>
+例えば、単一行に利用した場合は次のようになります。
 
-<pre class="brush: js">function comment() {
+```js
+function comment() {
   /* This is a one line JavaScript comment */
   console.log('Hello world!');
 }
-comment();</pre>
+comment();
+```
 
-<p>複数行のコメントも下記のように作成することができます。</p>
+複数行のコメントも下記のように作成することができます。
 
-<pre class="brush: js">function comment() {
+```js
+function comment() {
   /* This comment spans multiple lines. Notice
      that we don't need to end the comment until we're done. */
   console.log('Hello world!');
 }
-comment();</pre>
+comment();
+```
 
-<p>必要であれば、行の途中でコメントを使用することもできますが、これはコードが読みにくくなることがあるので注意が必要です。</p>
+必要であれば、行の途中でコメントを使用することもできますが、これはコードが読みにくくなることがあるので注意が必要です。
 
-<pre class="brush: js">function comment(x) {
+```js
+function comment(x) {
   console.log('Hello ' + x /* insert the value of x */ + ' !');
 }
-comment('world');</pre>
+comment('world');
+```
 
-<p>また、コードをコメントで囲むことで、コードが実行されないよう無効にすることができます。</p>
+また、コードをコメントで囲むことで、コードが実行されないよう無効にすることができます。
 
-<pre class="brush: js">function comment() {
+```js
+function comment() {
   /* console.log('Hello world!'); */
 }
-comment();</pre>
+comment();
+```
 
-<p>この場合、 <code>console.log()</code> の呼び出しはコメント内部にあるので、実行されることはありません。何行分のコードであっても、このようにして無効にすることができます。</p>
+この場合、 `console.log()` の呼び出しはコメント内部にあるので、実行されることはありません。何行分のコードであっても、このようにして無効にすることができます。
 
-<h2 id="Hashbang_comments" name="Hashbang_comments">ハッシュバンコメント</h2>
+## ハッシュバンコメント
 
-<p>特殊な三番目のコメントの構文である<strong>ハッシュバンコメント</strong>は、 ECMAScript で標準化の途中にあるものです (<a href="https://github.com/tc39/proposal-hashbang">Hashbang Grammar proposal</a> を参照してください)。</p>
+特殊な 3 番目のコメントの構文である**ハッシュバンコメント**は、 ECMAScript で標準化の途中にあるものです（[Hashbang Grammar proposal](https://github.com/tc39/proposal-hashbang) を参照してください）。
 
-<p>ハッシュバンコメントは、ちょうど単一行コメント (<code>//</code>) のように動作しますが、 <code>#!</code> で始まり、<strong>スクリプトやモジュールの絶対的な開始位置にある場合のみ有効</strong>です。 <code>#!</code> の前にホワイトスペースも許されないことに注意してください。このコメントは <code>#!</code> の後から最初の行の末尾までのすべての文字で構成されます。このコメントは1つだけが許可されます。</p>
+ハッシュバンコメントは、ちょうど単一行コメント (`//`) のように動作しますが、 `#!` で始まり、**スクリプトやモジュールの絶対的な開始位置にある場合のみ有効**です。 `#!` の前にホワイトスペースも許されないことに注意してください。このコメントは `#!` の後から最初の行の末尾までのすべての文字で構成されます。このコメントは 1 つだけが許可されます。
 
-<p>ハッシュバンコメントは、スクリプトを実行したい特定の JavaScript インタープリターへのパスを指定します。例えば次のようになります。</p>
+ハッシュバンコメントは、スクリプトを実行したい特定の JavaScript インタープリターへのパスを指定します。例えば次のようになります。
 
-<pre class="brush: js">#!/usr/bin/env node
+```js
+#!/usr/bin/env node
 
 console.log("Hello world");
-</pre>
+```
 
-<div class="blockIndicator note">
-<p><strong>メモ</strong>: JavaScript のハッシュバンコメントは、ファイルを正しいインタープリターで実行するために使用される <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">UNIX のシバン</a>を模倣したものです。</p>
-</div>
+> **Note:** JavaScript のハッシュバンコメントは、ファイルを正しいインタープリターで実行するために使用される [UNIX のシバン](https://en.wikipedia.org/wiki/Shebang_(Unix))を模倣したものです。
 
-<div class="blockIndicator warning">
-<p>ハッシュバンコメントの前に <a href="https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%83%9E%E3%83%BC%E3%82%AF">BOM</a> があってもブラウザーでは動作しますが、ハッシュバンのあるスクリプトで BOM を使用することは推奨されていません。 BOM は Unix/Linux でスクリプトを実行しようとすると動作しません。したがって、シェルから直接スクリプトを実行したい場合は BOM の付かない UTF-8 を使用してください。</p>
-</div>
+> **Warning:** スクリプトをシェル環境で直接実行できるようにしたい場合は、 [BOM](https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%83%9E%E3%83%BC%E3%82%AF) のない UTF-8 でエンコードしてください。ハッシュバンコメントの前に BOM があってもブラウザーでは動作しますが、ハッシュバンのあるスクリプトで BOM を使用することは推奨されていません。 BOM は Unix/Linux のシェル環境でスクリプトを実行しようとすると動作しません。したがって、シェル環境から直接スクリプトを実行したい場合は BOM のない UTF-8 を使用してください。
 
-<p><code>#!</code> の形のコメントは JavaScript インタープリターを指定するためにだけ使用してください。他の用途ではすべて <code>//</code> のコメント (または複数行コメント) を使用してください。</p>
+`#!` の形のコメントは JavaScript インタープリターを指定するためにだけ使用してください。他の用途ではすべて `//` のコメント (または複数行コメント) を使用してください。
 
-<h2 id="Keywords" name="Keywords">キーワード</h2>
+## キーワード
 
-<h3 id="Reserved_keywords_as_of_ECMAScript_2015" name="Reserved_keywords_as_of_ECMAScript_2015">ECMAScript 2015 における予約キーワード</h3>
+### ECMAScript 2015 における予約キーワード
 
-<ul class="threecolumns">
- <li>{{jsxref("Statements/break", "break")}}</li>
- <li>{{jsxref("Statements/switch", "case")}}</li>
- <li>{{jsxref("Statements/try...catch", "catch")}}</li>
- <li>{{jsxref("Statements/class", "class")}}</li>
- <li>{{jsxref("Statements/const", "const")}}</li>
- <li>{{jsxref("Statements/continue", "continue")}}</li>
- <li>{{jsxref("Statements/debugger", "debugger")}}</li>
- <li>{{jsxref("Statements/default", "default")}}</li>
- <li>{{jsxref("Operators/delete", "delete")}}</li>
- <li>{{jsxref("Statements/do...while", "do")}}</li>
- <li>{{jsxref("Statements/if...else", "else")}}</li>
- <li>{{jsxref("Statements/export", "export")}}</li>
- <li>{{jsxref("Statements/class", "extends")}}</li>
- <li>{{jsxref("Statements/try...catch", "finally")}}</li>
- <li>{{jsxref("Statements/for", "for")}}</li>
- <li>{{jsxref("Statements/function", "function")}}</li>
- <li>{{jsxref("Statements/if...else", "if")}}</li>
- <li>{{jsxref("Statements/import", "import")}}</li>
- <li>{{jsxref("Operators/in", "in")}}</li>
- <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
- <li>{{jsxref("Operators/new", "new")}}</li>
- <li>{{jsxref("Statements/return", "return")}}</li>
- <li>{{jsxref("Operators/super", "super")}}</li>
- <li>{{jsxref("Statements/switch", "switch")}}</li>
- <li>{{jsxref("Operators/this", "this")}}</li>
- <li>{{jsxref("Statements/throw", "throw")}}</li>
- <li>{{jsxref("Statements/try...catch", "try")}}</li>
- <li>{{jsxref("Operators/typeof", "typeof")}}</li>
- <li>{{jsxref("Statements/var", "var")}}</li>
- <li>{{jsxref("Operators/void", "void")}}</li>
- <li>{{jsxref("Statements/while", "while")}}</li>
- <li>{{jsxref("Statements/with", "with")}}</li>
- <li>{{jsxref("Operators/yield", "yield")}}</li>
-</ul>
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/switch", "case")}}
+- {{jsxref("Statements/try...catch", "catch")}}
+- {{jsxref("Statements/class", "class")}}
+- {{jsxref("Statements/const", "const")}}
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/debugger", "debugger")}}
+- {{jsxref("Statements/switch", "default")}}
+- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Statements/do...while", "do")}}
+- {{jsxref("Statements/if...else", "else")}}
+- {{jsxref("Statements/export", "export")}}
+- {{jsxref("Statements/class", "extends")}}
+- {{jsxref("Statements/try...catch", "finally")}}
+- {{jsxref("Statements/for", "for")}}
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Statements/if...else", "if")}}
+- {{jsxref("Statements/import", "import")}}
+- {{jsxref("Operators/in", "in")}}
+- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("Operators/new", "new")}}
+- {{jsxref("Statements/return", "return")}}
+- {{jsxref("Operators/super", "super")}}
+- {{jsxref("Statements/switch", "switch")}}
+- {{jsxref("Operators/this", "this")}}
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/try...catch", "try")}}
+- {{jsxref("Operators/typeof", "typeof")}}
+- {{jsxref("Statements/var", "var")}}
+- {{jsxref("Operators/void", "void")}}
+- {{jsxref("Statements/while", "while")}}
+- {{jsxref("Statements/with", "with")}}
+- {{jsxref("Operators/yield", "yield")}}
 
-<h3 id="Future_reserved_keywords" name="Future_reserved_keywords">今後の予約済みキーワード</h3>
+### 今後の予約キーワード
 
-<p>以下のものは、 ECMAScript の仕様によって今後のキーワードとして予約されています。これらは現時点では特別な機能を持っていませんが、将来は持つ可能性があるので、識別子として使用することはできません。</p>
+以下のものは、 ECMAScript の仕様によって今後のキーワードとして予約されています。これらは現時点では特別な機能を持っていませんが、将来は持つ可能性があるので、識別子として使用することはできません。
 
-<p>以下のものは常に予約されています。</p>
+以下のものは常に予約されています。
 
-<ul>
- <li><code>enum</code></li>
-</ul>
+- `enum`
 
-<p>以下のものは、 strict モードで遭遇した場合のみ予約語になります。</p>
+以下のものは、厳格モードで遭遇した場合のみ予約語になります。
 
-<ul class="threecolumns">
- <li><code>implements</code></li>
- <li><code>interface</code></li>
- <li>{{jsxref("Statements/let", "let")}}</li>
- <li><code>package</code></li>
- <li><code>private</code></li>
- <li><code>protected</code></li>
- <li><code>public</code></li>
- <li><code>static</code></li>
-</ul>
+- `implements`
+- `interface`
+- {{jsxref("Statements/let", "let")}}
+- `package`
+- `private`
+- `protected`
+- `public`
+- `static`
+- {{jsxref("Operators/yield", "yield")}}
 
-<p>以下のものは、モジュールコードで遭遇した場合のみ予約語になります。</p>
+以下のものは、モジュールコードで遭遇した場合のみ予約語になります。
 
-<ul>
- <li><code>await</code></li>
-</ul>
+- `await`
 
-<h4 id="Future_reserved_keywords_in_older_standards" name="Future_reserved_keywords_in_older_standards">旧仕様にあった今後の予約キーワード</h4>
+#### 旧仕様にあった今後の予約キーワード
 
-<p>以前の ECMAScript の仕様書 (ECMAScript 1 から 3 まで) では、以下のものが将来のキーワードとして予約されています。</p>
+以前の ECMAScript の仕様書 (ECMAScript 1 から 3 まで) では、以下のものが将来のキーワードとして予約されています。
 
-<ul class="threecolumns">
- <li><code>abstract</code></li>
- <li><code>boolean</code></li>
- <li><code>byte</code></li>
- <li><code>char</code></li>
- <li><code>double</code></li>
- <li><code>final</code></li>
- <li><code>float</code></li>
- <li><code>goto</code></li>
- <li><code>int</code></li>
- <li><code>long</code></li>
- <li><code>native</code></li>
- <li><code>short</code></li>
- <li><code>synchronized</code></li>
- <li><code>throws</code></li>
- <li><code>transient</code></li>
- <li><code>volatile</code></li>
-</ul>
+- `abstract`
+- `boolean`
+- `byte`
+- `char`
+- `double`
+- `final`
+- `float`
+- `goto`
+- `int`
+- `long`
+- `native`
+- `short`
+- `synchronized`
+- `throws`
+- `transient`
+- `volatile`
 
-<p>加えて、 <code>null</code>, <code>true</code>, <code>false</code> の各リテラルは、 ECMAScript では識別子として使用することができません。</p>
+加えて、 `null`, `true`, `false` の各リテラルは、 ECMAScript では識別子として使用することができません。
 
-<h3 id="Reserved_word_usage" name="Reserved_word_usage">予約語の使用</h3>
+### 予約語の使用
 
-<p>予約語は実際には (<em>IdentifierName</em> ではなく) 識別子にのみ適用されます。 <a href="http://es5.github.com/#A.1">es5.github.com/#A.1</a> に記載されているように、これらはすべて<em>IdentifierName</em> であり、<em>ReservedWord</em> を除外しません。</p>
+予約語は実際には (*IdentifierName* ではなく) 識別子にのみ適用されます。 [ECMAScript Lexical Grammar](https://tc39.es/ecma262/multipage/grammar-summary.html#sec-lexical-grammar) に記載されているように、これらはすべて *IdentifierName* であり、*ReservedWord* を除外しません。
 
-<pre class="brush: js">a.import
+```js
+a.import
 a['import']
 a = { import: 'test' }.
-</pre>
+```
 
-<p>一方、以下のものは<em>Identifier</em> であり、<em>IdentifierName</em> から予約語を除外したものであるからです。識別子は、<em>FunctionDeclaration</em>,<em>FunctionExpression</em>,<em>VariableDeclaration</em> などのために使用されます。 Identifiers は<em>FunctionDeclaration</em>,<em>FunctionExpression</em>,<em>VariableDeclaration</em> などについて使用されます。<em>IdentifierNames</em> は<em>MemberExpression</em>,<em>CallExpression</em> などについて使用されます。</p>
+一方、以下のものは _Identifier_ であり、_IdentifierName_ から予約語を除外したものであるからです。識別子は、_FunctionDeclaration_, _FunctionExpression_, _VariableDeclaration_ などのために使用されます。 _IdentifierNames_ は _MemberExpression_, _CallExpression_ などについて使用されます。
 
-<pre class="brush: js">function import() {} // 違反</pre>
+```js
+function import() {} // 違反
+```
 
-<h2 id="Literals" name="Literals">リテラル</h2>
+### 特別な意味を持つ識別子
 
-<h3 id="Null_literal" name="Null_literal">Null リテラル</h3>
+一部の識別子は、キーワードでなくても、あるコンテキストで特別な意味を持つことがあります。それらは以下の通りです。
 
-<p>詳細については {{jsxref("null")}} をご覧ください。</p>
+- {{jsxref("Functions/arguments", "arguments")}}
+- {{jsxref("Functions/get", "get")}}
+- {{jsxref("Functions/set", "set")}}
 
-<pre class="brush: js">null</pre>
+## リテラル
 
-<h3 id="Boolean_literal" name="Boolean_literal">真偽値リテラル</h3>
+### Null リテラル
 
-<p>詳細について、 {{jsxref("Boolean")}} をご覧ください。</p>
+詳細については {{jsxref("null")}} をご覧ください。
 
-<pre class="brush: js">true
-false</pre>
+```js
+null
+```
 
-<h3 id="Numeric_literals" name="Numeric_literals">数値リテラル</h3>
+### 論理値リテラル
 
-<p>{{jsxref("Number")}} および {{jsxref("BigInt")}} 型が数値リテラルを使用します。</p>
+詳細については[論理型](/ja/docs/Web/JavaScript/Data_structures#論理型_boolean)をご覧ください。
 
-<h4 id="Decimal" name="Decimal">10進数</h4>
+```js
+true
+false
+```
 
-<pre class="brush: js">1234567890
+### 数値リテラル
+
+[数値型](/ja/docs/Web/JavaScript/Data_structures#数値型_number) (Number) および[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型_bigint) (Number) が数値リテラルを使用します。
+
+#### 10 進数
+
+```js
+1234567890
 42
 
 // 先頭にゼロがあるものを使用する場合は注意してください
-0888 // 888 は10進数として解釈されます
-0777 // 8進数として解釈され、10進数では 511 です。
-</pre>
+0888 // 888 は 10 進数として解釈されます
+0777 // 8 進数として解釈され、 10 進数では 511 です。
+```
 
-<p>なお、10進数リテラルはゼロ (<code>0</code>) から始め、他の10進数の数字を続けることができますが、 <code>0</code> に続く数字がすべて8より小さい場合は、その数値が8進数として解釈されることに注意してください。 JavaScript では、この場合に例外が発生しませんので、 {{bug(957513)}} をご覧ください。 {{jsxref("parseInt", "parseInt()")}} についてのページもご覧ください。</p>
+なお、 10 進数リテラルはゼロ (`0`) から始め、他の 10 進数の数字を続けることができますが、 `0` に続く数字がすべて 8 より小さい場合は、その数値が 8 進数として解釈されることに注意してください。 JavaScript では、この場合に例外が発生しませんので、 {{bug(957513)}} をご覧ください。 {{jsxref("parseInt", "parseInt()")}} についてのページもご覧ください。
 
-<h4 id="Binary" name="Binary">2進数</h4>
+##### 指数
 
-<p>2進数の構文は、先頭のゼロに続いて小文字または大文字のラテン文字 "B" を使用します (<code>0b</code> または <code>0B</code>)。この構文は ECMAScript 2015 の新しい構文なので、下記のブラウザー互換性表をご覧ください。 <code>0b</code> の後の数字が 0 または 1 でない場合は、 {{jsxref("SyntaxError")}} が "Missing binary digits after 0b" の内容で発生します。</p>
+10 進数の指数リテラルは、 `beN` の書式で指定します。ここで `b` は基数（整数または浮動小数点）、その後に `e` 文字（セパレーターまたは指数記号として機能）、そして `N` は*指数*または*べき乗数* - 符号付き整数です（2019 ECMA-262 仕様に従います）。
 
-<pre class="brush: js">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+```js
+0e-5   // => 0
+0e+5   // => 0
+5e1    // => 50
+175e-2 // => 1.75
+1e3    // => 1000
+1e-3   // => 0.001
+```
+
+#### 2 進数
+
+2進数の構文は、先頭のゼロに続いて小文字または大文字のラテン文字 "B" を使用します (`0b` または `0B`)。この構文は ECMAScript 2015 の新しい構文なので、下記のブラウザー互換性表をご覧ください。 `0b` の後の数字が 0 または 1 でない場合は、 {{jsxref("SyntaxError")}} が "Missing binary digits after 0b" の内容で発生します。
+
+```js
+var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
+var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+```
 
-<h4 id="Octal" name="Octal">8進数</h4>
+#### 8 進数
 
-<p>8進数の構文は、先頭のゼロに続いて小文字または大文字のラテン文字"O" を使用します (<code>0o</code> または <code>0O</code>)。この構文は ECMAScript 2015 の新しい構文なので、下記のブラウザー互換性表をご覧ください。 <code>0o</code> の後の数字が範囲 (01234567) 外の場合、 {{jsxref("SyntaxError")}} が "Missing octal digits after 0o" の内容で発生します。</p>
+8進数の構文は、先頭のゼロに続いて小文字または大文字のラテン文字 "O" を使用します (`0o` または `0O`)。この構文は ECMAScript 2015 の新しい構文なので、下記のブラウザー互換性表をご覧ください。 `0o` の後の数字が範囲 (01234567) 外の場合、 {{jsxref("SyntaxError")}} が "Missing octal digits after 0o" の内容で発生します。
 
-<pre class="brush: js">var n = 0O755; // 493
+```js
+var n = 0O755; // 493
 var m = 0o644; // 420
 
 // ゼロだけで始めることもできます (上記の10進数についてのメモを参照)
 0755
 0644
-</pre>
+```
 
-<h4 id="Hexadecimal" name="Hexadecimal">16進数</h4>
+#### 16 進数
 
-<p>16進数の構文は、先頭のゼロに続いて小文字または大文字のラテン文字"X" を使用します (<code>0x</code> または <code>0X</code>)。 0x の後の数字が範囲 (0123456789ABCDEF) 外の場合、 {{jsxref("SyntaxError")}} が "Identifier starts immediately after numeric literal" の内容で発生します。</p>
+16 進数の構文は、先頭のゼロに続いて小文字または大文字のラテン文字 "X" を使用します (`0x` または `0X`)。 0x の後の数字が範囲 (0123456789ABCDEF) 外の場合、 {{jsxref("SyntaxError")}} が "Identifier starts immediately after numeric literal" の内容で発生します。
 
-<pre class="brush: js">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+```js
+0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
 0XA                 // 10
-</pre>
+```
 
-<h4 id="BigInt_literal" name="BigInt_literal">BigInt リテラル</h4>
+#### 長整数リテラル
 
-<p>{{jsxref("BigInt")}} 型は JavaScript のプリミティブな数値であり、自由な精度の整数を表すことができます。 BigInt リテラルは、整数の末尾に <code>n</code> を追加することで作成されます。</p>
+[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型_bigint) (BigInt) は JavaScript の数値プリミティブであり、自由な精度の整数を表すことができます。長整数リテラルは、整数の末尾に `n` を追加することで作成されます。
 
-<pre class="brush: js">123456789123456789n     (10進数)
-0o777777777777n         (8進数)
-0x123456789ABCDEFn      ("hex" または16進数)
-0b11101001010101010101n (2進数)
-</pre>
+```js
+123456789123456789n     // 123456789123456789
+0o777777777777n         // 68719476735
+0x123456789ABCDEFn      // 81985529216486895
+0b11101001010101010101n // 955733
+```
 
-<p>なお、先頭がゼロだけの8進数は <code>BigInt</code> では動作しません。</p>
+なお、先頭がゼロだけの 8 進数は `BigInt` では動作しません。
 
-<pre class="brush: js example-bad">// 0755n
-// SyntaxError: invalid BigInt syntax</pre>
+```js example-bad
+// 0755n
+// SyntaxError: invalid BigInt syntax
+```
 
-<p>8進数の <code>BigInt</code> 数値では、常にゼロの後に "o" (大文字でも小文字でも) を付けて使用してください。</p>
+8　進数の `BigInt` 数値では、常にゼロの後に "o" (大文字でも小文字でも) を付けて使用してください。
 
-<pre class="brush: js example-good">0o755n</pre>
+```js example-good
+0o755n
+```
 
-<p><code>BigInt</code> についての詳細な情報は、 <a href="/ja/docs/Web/JavaScript/Data_structures#BigInt_type">JavaScript データ構造</a>をご覧ください。</p>
+`BigInt` についての詳細な情報は、 [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures#長整数型_bigint)をご覧ください。
 
-<h4 id="Numeric_separators" name="Numeric_separators">数値の区切り文字</h4>
+#### 数値の区切り文字
 
-<p>数値リテラルの可読性を高めるために、アンダースコア (<code>_</code>, <code>U+005F</code>) を区切り文字として使用することができます。</p>
+数値リテラルの可読性を高めるために、アンダースコア (`_`, `U+005F`) を区切り文字として使用することができます。
 
-<pre class="brush: js">// 10進数の区切り文字
+```js
+// 10 進数の区切り文字
 1_000_000_000_000
 1_050.95
 
-// 2進数の区切り文字
+// 2 進数の区切り文字
 0b1010_0001_1000_0101
 
-// 8進数の区切り文字
+// 8 進数の区切り文字
 0o2_2_5_6
 
-// 16進数の区切り文字
+// 16 進数の区切り文字
 0xA0_B0_C0
 
 // BigInt の区切り文字
 1_000_000_000_000_000_000_000n
-</pre>
+```
 
-<p>なお、以下の制限があります。</p>
+なお、以下の制限があります。
 
-<pre class="brush: js example-bad">// 連続して2つ以上のアンダースコアは許可されていません
+```js example-bad
+// 連続して 2 つ以上のアンダースコアは許可されていません
 100__000; // SyntaxError
 
 // 数値リテラルの末尾に置くことは許可されていません
@@ -455,13 +379,14 @@ var m = 0o644; // 420
 
 // 先頭の 0 の後に使用することはできません
 0_1; // SyntaxError
-</pre>
+```
 
-<h3 id="Object_literals" name="Object_literals">オブジェクトリテラル</h3>
+### オブジェクトリテラル
 
-<p>詳細については、 {{jsxref("Object")}} と<a href="/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer">オブジェクト初期化子</a>をご覧ください。</p>
+詳細については、 {{jsxref("Object")}} と[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)をご覧ください。
 
-<pre class="brush: js">var o = { a: 'foo', b: 'bar', c: 42 };
+```js
+var o = { a: 'foo', b: 'bar', c: 42 };
 
 // ES2015 で導入された短縮表記
 var a = 'foo', b = 'bar', c = 42;
@@ -469,183 +394,161 @@ var o = {a, b, c};
 
 // 以前の表記
 var o = { a: a, b: b, c: c };
-</pre>
+```
 
-<h3 id="Array_literals" name="Array_literals">配列リテラル</h3>
+### 配列リテラル
 
-<p>詳細については {{jsxref("Array")}} をご覧ください。</p>
+詳細については {{jsxref("Array")}} をご覧ください。
 
-<pre class="brush: js">[1954, 1974, 1990, 2014]</pre>
+```js
+[1954, 1974, 1990, 2014]
+```
 
-<h3 id="String_literals" name="String_literals">文字列リテラル</h3>
+### 文字列リテラル
 
-<p>文字列リテラルは、単一引用符または二重引用符に囲まれた零個以上の Unicode コードポイントです。 Unicode コードポイントはエスケープシーケンスで表すこともできます。以下の引用符を閉じるコードポイントを除いて、すべてのコードポイントが文字列リテラルに現れることができます。</p>
+[文字列](/ja/docs/Web/JavaScript/Data_structures#文字列型_string)リテラルは、単一引用符または二重引用符に囲まれた零個以上の Unicode コードポイントです。 Unicode コードポイントはエスケープシーケンスで表すこともできます。以下の引用符を閉じるコードポイントを除いて、すべてのコードポイントが文字列リテラルに現れることができます。
 
-<ul>
- <li>U+005C \ (バックスラッシュ)</li>
- <li>U+000D &lt;CR&gt;,</li>
- <li>and U+000A &lt;LF&gt;.</li>
-</ul>
+- U+005C \ (バックスラッシュ)
+- U+000D \<CR>,
+- and U+000A \<LF>.
 
-<p><a href="https://github.com/tc39/proposal-json-superset">proposal to make all JSON text valid ECMA-262</a> より以前は、 U+2028 &lt;LS&gt; および U+2029 &lt;PS&gt; は文字列リテラル内にエスケープせずに現れることができませんでした。</p>
+[proposal to make all JSON text valid ECMA-262](https://github.com/tc39/proposal-json-superset) より以前は、 U+2028 \<LS> および U+2029 \<PS> は文字列リテラル内でエスケープせずに現れることができませんでした。
 
-<p>すべてのコードポイントが、エスケープシーケンスの形で現れることができます。文字列リテラルは ECMAScript の文字列値として評価されます。これらの String の値を生成する際に、 Unicode コードポイントは UTF-16 エンコードされます。</p>
+すべてのコードポイントが、エスケープシーケンスの形で現れることができます。文字列リテラルは ECMAScript の文字列値として評価されます。これらの文字列の値を生成する際に、 Unicode コードポイントは UTF-16 エンコードされます。
 
-<pre class="brush: js">'foo'
-"bar"</pre>
+```js
+'foo'
+"bar"
+```
 
-<h4 id="Hexadecimal_escape_sequences" name="Hexadecimal_escape_sequences">16進エスケープシーケンス</h4>
+#### 16 進エスケープシーケンス
 
-<p>16進エスケープシーケンスは <code>\x</code> に続いてちょうど2桁の16進数から成り、 0x0000 から 0x00FF までのコード単位またはコードポイントを表します。</p>
+16 進エスケープシーケンスは `\x` に続いてちょうど 2 桁の 16 進数から成り、 0x0000 から 0x00FF までのコード単位またはコードポイントを表します。
 
-<pre class="brush: js">'\xA9' // "©"
-</pre>
+```js
+'\xA9' // "©"
+```
 
-<h4 id="Unicode_escape_sequences" name="Unicode_escape_sequences">Unicode エスケープシーケンス</h4>
+#### Unicode エスケープシーケンス
 
-<p>Unicode エスケープシーケンスは <code>\u</code> に続いてちょうど4桁の16進数から成ります。これで UTF-16 エンコーディングのコード単位を表します。コードポイント U+0000 から U+FFFF までは、コード単位とコードポイントは等しくなります。コードポイント U+10000 から U+10FFFF までは、2つのエスケープシーケンスで2つのコード単位 (サロゲートペア) を表す必要があります。サロゲートペアはコードポイントで区別されます。</p>
+Unicode エスケープシーケンスは `\u` に続いてちょうど 4 桁の 16 進数から成ります。これで UTF-16 エンコーディングのコード単位を表します。コードポイント U+0000 から U+FFFF までは、コード単位とコードポイントは等しくなります。コードポイント U+10000 から U+10FFFF までは、 2 つのエスケープシーケンスで 2 つのコード単位 (サロゲートペア) を表す必要があります。サロゲートペアはコードポイントで区別されます。
 
-<p>See also {{jsxref("String.fromCharCode()")}} and {{jsxref("String.prototype.charCodeAt()")}}.</p>
+See also {{jsxref("String.fromCharCode()")}} and {{jsxref("String.prototype.charCodeAt()")}}.
 
-<pre class="brush: js">'\u00A9' // "©" (U+A9)</pre>
+```js
+'\u00A9' // "©" (U+A9)
+```
 
-<h4 id="Unicode_コードポイントエスケープ">Unicode コードポイントエスケープ</h4>
+#### Unicode コードポイントエスケープ
 
-<p>Unicode コードポイントエスケープは <code>\u{</code> に続いて16進数のコードポイントが続き、 <code>}</code> が続きます。16進数の値は 0 から 0x10FFFF までの範囲に含まれている必要があります。 U+10000 から U+10FFFF までの範囲のコードポイントを、サロゲートペアとして表す必要はありません。コードポイントエスケープは ECMAScript 2015 (ES6) で JavaScript に追加されました。</p>
+Unicode コードポイントエスケープは `\u{` に続いて 16 進数のコードポイントが続き、 `}` が続きます。 16 進数の値は 0 から 0x10FFFF までの範囲に含まれている必要があります。 U+10000 から U+10FFFF までの範囲のコードポイントを、サロゲートペアとして表す必要はありません。コードポイントエスケープは JavaScript に ECMAScript 2015 (ES6) で追加されました。
 
-<p>{{jsxref("String.fromCodePoint()")}} または {{jsxref("String.prototype.codePointAt()")}} もご覧ください。</p>
+{{jsxref("String.fromCodePoint()")}} または {{jsxref("String.prototype.codePointAt()")}} もご覧ください。
 
-<pre class="brush: js">'\u{2F804}' // CJK COMPATIBILITY IDEOGRAPH-2F804 (U+2F804)
+```js
+'\u{2F804}' // CJK COMPATIBILITY IDEOGRAPH-2F804 (U+2F804)
 
-// the same character represented as a surrogate pair
-'\uD87E\uDC04'</pre>
+// 同じ文字をサロゲートペアで表したもの
+'\uD87E\uDC04'
+```
 
-<h3 id="Regular_expression_literals" name="Regular_expression_literals">正規表現リテラル</h3>
+### 正規表現リテラル
 
-<p>詳細については {{jsxref("RegExp")}} を参照してください。</p>
+詳細については {{jsxref("RegExp")}} を参照してください。
 
-<pre class="brush: js">/ab+c/g
+```js
+/ab+c/g
 
 // 「空の」正規表現リテラル
 // 単一行コメントと区別するために、空のキャプチャしない
 // グループが必要です。
-/(?:)/</pre>
+/(?:)/
+```
 
-<h3 id="Template_literals" name="Template_literals">テンプレートリテラル</h3>
+### テンプレートリテラル
 
-<p>詳細について、<a href="/ja/docs/Web/JavaScript/Reference/template_strings">template strings</a> をご覧ください。</p>
+詳細について、[テンプレート文字列](/ja/docs/Web/JavaScript/Reference/Template_literals)をご覧ください。
 
-<pre class="brush: js">`string text`
+```js
+`string text`
 
 `string text line 1
  string text line 2`
 
 `string text ${expression} string text`
 
-tag `string text ${expression} string text`</pre>
+tag `string text ${expression} string text`
+```
 
-<h2 id="Automatic_semicolon_insertion" name="Automatic_semicolon_insertion">自動セミコロン挿入</h2>
+## 自動セミコロン挿入
 
-<p>一部の <a href="/ja/docs/Web/JavaScript/Reference/Statements">JavaScript 文</a>はセミコロンで終わる必要があります。したがって、自動セミコロン挿入 (ASI) の影響を受けます。:</p>
+一部の [JavaScript 文](/ja/docs/Web/JavaScript/Reference/Statements)はセミコロンで終わる必要があります。したがって、自動セミコロン挿入 (ASI) の影響を受けます。
 
-<ul>
- <li>空の文</li>
- <li><code>let</code>, <code>const</code>, 変数定義</li>
- <li><code>import</code>, <code>export</code>, モジュール宣言</li>
- <li>式の文</li>
- <li><code>debugger</code></li>
- <li><code>continue</code>, <code>break</code>, <code>throw</code></li>
- <li><code>return</code></li>
-</ul>
+- 空の文
+- `let`, `const`, 変数定義
+- `import`, `export`, モジュール宣言
+- 式の文
+- `debugger`
+- `continue`, `break`, `throw`
+- `return`
 
-<p>ECMAScript 仕様書は、<a href="https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion">セミコロン挿入の3つの規則</a>に言及しています。</p>
+ECMAScript 仕様書は、[セミコロン挿入の 3 つの規則](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion)に言及しています。
 
-<p>1. 文法上許されない位置で<a href="#Line_terminators">行末文字</a>または "}" に遭遇したとき、セミコロンが前に挿入されます。</p>
+1\. 文法上許されない位置で[行末文字](#行末文字)または "}" に遭遇したとき、セミコロンが前に挿入されます。
 
-<pre class="brush: js">{ 1 2 } 3
+```js
+{ 1
+2 } 3
 
 // 上記の文は、 ASI によって次のように変換されます
 
-{ 1 2 ;} 3;</pre>
+{ 1
+;2 ;} 3;
+```
 
-<p>2. トークンの入力ストリームの終末が検出され、パーサーが単一の入力ストリームを完全なプログラムとして解釈できない場合、末尾にセミコロンが挿入されます。</p>
+2\. トークンの入力ストリームの末尾が検出され、パーサーが単一の入力ストリームを完全なプログラムとして解釈できない場合、末尾にセミコロンが挿入されます。
 
-<p>ここで <code>++</code> は、変数 <code>b</code> に適用される <a href="/ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment">後置演算子</a>としては扱われません。というのも、行末文字が <code>b</code> と<code>++</code> の間に見られるからです。</p>
+ここで `++` は、変数 `b` に適用される[後置演算子](/ja/docs/Web/JavaScript/Reference/Operators#インクリメントとデクリメント)としては扱われません。というのも、行末文字が `b` と`++` の間に見られるからです。
 
-<pre class="brush: js">a = b
+```js
+a = b
 ++c
 
 // 上記の文は、 ASI によって次のように変換されます
 
 a = b;
 ++c;
-</pre>
+```
 
-<p>3. 文法上、成果が制限された文の直後に行末文字が来た時、末尾にセミコロンが挿入されます。以下の文が "no LineTerminator here" 規則を持っています。</p>
+3\. 文法上の制限付き生成物を含む文の後に行末文字が続いている場合、最後にセミコロンが挿入されます。以下の文が "no LineTerminator here" 規則を持っています。
 
-<ul>
- <li>後置演算子 (<code>++</code> および <code>--</code>)</li>
- <li><code>continue</code></li>
- <li><code>break</code></li>
- <li><code>return</code></li>
- <li><code>yield</code>, <code>yield*</code></li>
- <li><code>module</code></li>
-</ul>
+- 後置演算子 (`++` および `--`)
+- `continue`
+- `break`
+- `return`
+- `yield`, `yield*`
+- `module`
 
-<pre class="brush: js">return
+```js
+return
 a + b
 
 // 上記の文は、 ASI によって次のように変換されます
 
 return;
 a + b;
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## ブラウザーの互換性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>追加: 2進数リテラル と 8進数リテラル、 Unicode コードポイントエスケープ、テンプレート</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-7', 'Lexical Conventions')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2("ES1")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## 関連情報
 
-<p>{{Compat("javascript.grammar")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/">Jeff Walden: Binary and octal numbers</a></li>
- <li><a href="http://mathiasbynens.be/notes/javascript-escapes">Mathias Bynens: JavaScript character escape sequences</a></li>
- <li>{{jsxref("Boolean")}}</li>
- <li>{{jsxref("Number")}}</li>
- <li>{{jsxref("RegExp")}}</li>
- <li>{{jsxref("String")}}</li>
-</ul>
+- [Lexical grammar in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-language-lexical-grammar)
+- [Jeff Walden: Binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
+- [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
+- [論理型](/ja/docs/Web/JavaScript/Data_structures#論理型_boolean)
+- [数値型](/ja/docs/Web/JavaScript/Data_structures#数値型_number)
+- [文字列型](/ja/docs/Web/JavaScript/Data_structures#文字列型_string)
+- {{jsxref("RegExp")}}
