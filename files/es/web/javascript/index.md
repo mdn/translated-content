@@ -9,7 +9,7 @@ translation_of: Web/JavaScript
 ---
 {{JsSidebar}}
 
-**JavaScript** (**JS**) es un lenguaje de programación ligero, interpretado, o compilado [justo-a-tiempo](https://en.wikipedia.org/wiki/Just-in-time_compilation) (just-in-time) con {{Glossary("First-class Function", "funciones de primera clase")}}. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, y es usado en [muchos entornos fuera del navegador](https://en.wikipedia.org/wiki/JavaScript#Uses_outside_Web_pages), tal como {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) y [Adobe Acrobat](http://www.adobe.com/devnet/acrobat/javascript.html) JavaScript es un lenguaje de {{Glossary ("Prototype-based programming", "programación basada en prototipos")}}, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa (por ejemplo programación funcional). Lee más en [acerca de JavaScript](/es/docs/Web/JavaScript/About_JavaScript).
+**JavaScript** (**JS**) es un lenguaje de programación ligero, interpretado, o compilado [justo-a-tiempo](https://en.wikipedia.org/wiki/Just-in-time_compilation) (just-in-time) con {{Glossary("First-class Function", "funciones de primera clase")}}. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, y es usado en [muchos entornos fuera del navegador](https://en.wikipedia.org/wiki/JavaScript#Uses_outside_Web_pages), tal como {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) y [Adobe Acrobat](https://www.adobe.com/devnet/acrobat/javascript.html) JavaScript es un lenguaje de {{Glossary ("Prototype-based programming", "programación basada en prototipos")}}, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa (por ejemplo programación funcional). Lee más en [acerca de JavaScript](/es/docs/Web/JavaScript/About_JavaScript).
 
 Esta sección está dedicada al lenguaje JavaScript en sí, y no a las partes que son específicas de las páginas web u otros entornos host. Para información acerca de {{Glossary("API","APIs")}} específicas para páginas Web, consulta [APIs Web](/es/docs/Web/API ) y {{Glossary("DOM")}}.
 
@@ -21,7 +21,7 @@ No confundas JavaScript con el [lenguaje de programación Java](https://en.wikip
 >
 > Hemos reunido un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
 > 
-> [Empieza aquí](/docs/Learn/Front-end_web_developer)
+> [Empieza aquí](es/docs/Learn/Front-end_web_developer)
 > 
 
 ## Tutoriales
