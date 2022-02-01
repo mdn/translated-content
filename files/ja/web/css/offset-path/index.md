@@ -3,26 +3,26 @@ title: offset-path
 slug: Web/CSS/offset-path
 tags:
   - CSS
-  - CSS Motion Path
   - CSS モーションパス
-  - Experimental
-  - Motion Path
-  - Reference
+  - 実験的
+  - モーションパス
+  - リファレンス
   - motion-path
   - offset-path
-  - 'recipe:css-property'
-  - モーションパス
+  - recipe:css-property
+browser-compat: css.properties.offset-path
 translation_of: Web/CSS/offset-path
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p><strong><code>offset-path</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> のプロパティで、要素がたどる移動経路と、親コンテナーまたは SVG 座標系の中での要素の配置を指定します。</p>
+**`offset-path`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がたどる移動経路と、親コンテナーまたは SVG 座標系の中での要素の配置を指定します。
 
-<div>{{EmbedInteractiveExample("pages/css/offset-path.html")}}</div>
+{{EmbedInteractiveExample("pages/css/offset-path.html")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="brush:css notranslate">/* 既定値 */
+```css
+/* 既定値 */
 offset-path: none;
 
 /* 関数値 */
@@ -44,47 +44,96 @@ offset-path: stroke-box;
 /* グローバル値 */
 offset-path: inherit;
 offset-path: initial;
+offset-path: revert;
 offset-path: unset;
-</pre>
+```
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>ray()</code></dt>
- <dd>最大3つの値を取り、ボックスの位置から始まり、指定された角度で定義された方向に進む線分であるパスを定義します。定義は角度で、 CSS のグラデーションの角度と同様に、 <code>0deg</code> を上にして正の角度を時計回り方向に増加させます。続く寸法の値は CSS の半径方向のグラデーションの寸法の値に似ており、 <code>closest-side</code> から <code>farthest-corner</code> まで、そしてキーワード <code>contain</code> です。</dd>
- <dt><code>url()</code></dt>
- <dd>SVG 図形の ID の参照です。 -- <code>circle</code>, <code>ellipse</code>, <code>line</code>, <code>path</code>, <code>polygon</code>, <code>polyline</code>, <code>rect</code> -- のいずれかで、図形の形状をパスとして使用します。</dd>
- <dt><code>&lt;basic-shape&gt;</code></dt>
- <dd><a href="/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes">CSS シェイプ</a>、たとえば <code>circle()</code>, <code>ellipse()</code>, <code>inset()</code>, <code>polygon()</code>, <code>path()</code> を指定します。</dd>
- <dd>
- <dl>
-  <dt><code>path()</code></dt>
-  <dd>SVG 座標の構文で定義されたパス文字列です。</dd>
- </dl>
- </dd>
- <dt><code>none</code></dt>
- <dd>モーションパスを全く定義しません。</dd>
-</dl>
+- `ray()`
+  - : 最大 3 つの値を取り、ボックスの位置から始まり、指定された角度で定義された方向に進む線分であるパスを定義します。定義は角度で、 CSS のグラデーションの角度と同様に、 `0deg` を上にして正の角度を時計回り方向に増加させます。続く寸法の値は CSS の半径方向のグラデーションの寸法の値に似ており、 `closest-side` から `farthest-corner` まで、そしてキーワード `contain` です。
+- `url()`
+  - : SVG 図形の ID の参照です。 -- `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, `rect` -- のいずれかで、図形の形状をパスとして使用します。
+- `<basic-shape>`
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+  - : [CSS シェイプ](/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes)、たとえば `circle()`, `ellipse()`, `inset()`, `polygon()`, `path()` を指定します。
+
+    - `path()`
+    - : SVG 座標の構文で定義されたパス文字列です。
+
+- `none`
+  - : モーションパスを全く定義しません。
+
+## 解説
+
+このプロパティは、移動する要素がたどることができる経路を定義します。オフセットの経路は 1 つまたは複数のサブ経路で指定された経路か、スタイル付けされていない基本図形の形状で指定します。オフセット経路上の要素の正確な位置は、 {{cssxref("offset-distance")}} プロパティで決定されます。それぞれの図形または経路は、初期位置を {{cssxref("offset-distance")}} の `0` の計算値で定義し、オブジェクトの回転方向を指定する初期方向を初期位置にします。
+
+仕様書の初期の版では、このプロパティを `motion-path` と呼んでいました。これが `offset-path` と変更されたのは、このプロパティが動きではなく静的な位置を記述するからです。
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Description" name="Description">解説</h2>
+## 例
 
-<p>このプロパティは、移動する要素がたどることができる経路を定義します。オフセットの経路は1つまたは複数のサブ経路で指定された経路か、スタイル付けされていない基本図形の形状で指定します。オフセット経路上の要素の正確な位置は、 {{cssxref("offset-distance")}} プロパティで決定されます。それぞれの図形または経路は、初期位置を {{cssxref("offset-distance")}} の <code>0</code> の計算値で定義し、オブジェクトの回転方向を指定する初期方向を初期位置にします。</p>
+### offset-path を指定した要素のアニメーション
 
-<p><strong>注</strong>: 仕様書の初期の版では、このプロパティを <code>motion-path</code> と呼んでいました。It was changed to <code>offset-path</code> because the property describe static positions, not motion.</p>
+CSS コードサンプルの `offset-path` プロパティは、 SVG の `<path>` 要素と同じモーションパスを定義しています。このパスは、 SVG コードのレンダリングを見てもわかるように、煙突のある家の線画になっています。
 
-<h2 id="Examples" name="Examples">例</h2>
+#### SVG
 
-<p>以下の例は <a href="http://codepen.io/ericwilligers/pen/bwVkNa">CodePen</a> の例から抜粋しています。対応ブラウザーではライブ編集が可能です。</p>
+ハサミの上半分と下半分は、 `offset-path` で定義されたモーションパスの始点に沿って配置されていなければ、キャンバスの左上に表示されます。
 
-<p>CSS コードサンプルの <code>offset-path</code> プロパティは、 SVG の <code>&lt;path&gt;</code> 要素と同じモーションパスを定義しています。このパスは、 SVG コードのレンダリングを見てもわかるように、煙突のある家の線画になっています。</p>
+```html
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="700"
+     height="450"
+     viewBox="350 0 1400 900">
+  <title>House and Scissors</title>
+  <rect x="595"
+        y="423"
+        width="610"
+        height="377"
+        fill="blue" />
+  <polygon points="506,423 900,190 1294,423"
+           fill="yellow" />
+  <polygon points="993,245 993,190 1086,190 1086,300"
+           fill="red" />
+  <path id="house" d="M900,190 L993,245 V201 A11,11 0 0,1 1004,190 H1075 A11,11 0 0,1 1086,201 V300 L1294,423 H1216 A11,11 0 0,0 1205,434 V789 A11,11 0 0,1 1194,800 H606 A11,11 0 0,1 595,789 V434 A11,11 0 0,0 584,423 H506 L900,190"
+        fill="none"
+        stroke="black"
+        stroke-width="13"
+        stroke-linejoin="round"
+        stroke-linecap="round" />
+  <path id="firstScissorHalf" class="scissorHalf"
+        d="M30,0 H-10 A10,10 0 0,0 -20,10 A20,20 0 1,1 -40,-10 H20 A10,10 0 0,1 30,0 M-40,20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,20 M0,0"
+        transform="translate(0,0)"
+        fill="green"
+        stroke="black"
+        stroke-width="5"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        fill-rule="evenodd" />
+  <path id="secondScissorHalf" class="scissorHalf"
+        d="M30,0 H-10 A10,10 0 0,1 -20,-10 A20,20 0 1,0 -40,10 H20 A10,10 0 0,0 30,0 M-40,-20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,-20 M0,0"
+        transform="translate(0,0)"
+        fill="forestgreen"
+        stroke="black"
+        stroke-width="5"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        fill-rule="evenodd" />
+</svg>
+```
 
-<h3 id="CSS" name="CSS">CSS</h3>
+#### CSS
 
-<pre class="brush: css notranslate">.scissorHalf {
+```css
+.scissorHalf {
   offset-path: path('M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190');
   animation: followpath 4s linear infinite;
 }
@@ -94,95 +143,31 @@ offset-path: unset;
      motion-offset: 100%;
      offset-distance: 100%;
    }
-}</pre>
+}
+```
 
-<h3 id="SVG" name="SVG">SVG</h3>
+#### 結果
 
-<p>ハサミの上半分と下半分は、 <code>offset-path</code> で定義されたモーションパスの始点に沿って配置されていなければ、キャンバスの左上に表示されます。</p>
+{{EmbedLiveSample('Animating_an_element_with_offset-path', '100%', '450')}}
 
-<pre class="brush: html notranslate">&lt;svg xmlns="http://www.w3.org/2000/svg"
-     width="700"
-     height="450"
-     viewBox="350 0 1400 900"&gt;
-  &lt;title&gt;House and Scissors&lt;/title&gt;
-  &lt;rect x="595"
-        y="423"
-        width="610"
-        height="377"
-        fill="blue" /&gt;
-  &lt;polygon points="506,423 900,190 1294,423"
-           fill="yellow" /&gt;
-  &lt;polygon points="993,245 993,190 1086,190 1086,300"
-           fill="red" /&gt;
-  &lt;path id="house" d="M900,190 L993,245 V201 A11,11 0 0,1 1004,190 H1075 A11,11 0 0,1 1086,201 V300 L1294,423 H1216 A11,11 0 0,0 1205,434 V789 A11,11 0 0,1 1194,800 H606 A11,11 0 0,1 595,789 V434 A11,11 0 0,0 584,423 H506 L900,190"
-        fill="none"
-        stroke="black"
-        stroke-width="13"
-        stroke-linejoin="round"
-        stroke-linecap="round" /&gt;
-  &lt;path id="firstScissorHalf" class="scissorHalf"
-        d="M30,0 H-10 A10,10 0 0,0 -20,10 A20,20 0 1,1 -40,-10 H20 A10,10 0 0,1 30,0 M-40,20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,20 M0,0"
-        transform="translate(0,0)"
-        fill="green"
-        stroke="black"
-        stroke-width="5"
-        stroke-linejoin="round"
-        stroke-linecap="round"
-        fill-rule="evenodd" /&gt;
-  &lt;path id="secondScissorHalf" class="scissorHalf"
-        d="M30,0 H-10 A10,10 0 0,1 -20,-10 A20,20 0 1,0 -40,10 H20 A10,10 0 0,0 30,0 M-40,-20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,-20 M0,0"
-        transform="translate(0,0)"
-        fill="forestgreen"
-        stroke="black"
-        stroke-width="5"
-        stroke-linejoin="round"
-        stroke-linecap="round"
-        fill-rule="evenodd" /&gt;
-&lt;/svg&gt;</pre>
+## 仕様書
 
-<h3 id="Live_Result" name="Live_Result">ライブ結果</h3>
+{{Specifications}}
 
-<p>{{EmbedLiveSample('Examples', '100%', '450')}}</p>
+## ブラウザーの互換性
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{Compat}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>仕様書</th>
-   <th>状態</th>
-   <th>備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Motion Path Level 1', '#offset-path-property', 'offset-path')}}</td>
-   <td>{{Spec2('Motion Path Level 1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 関連情報
 
-<p>{{cssinfo}}</p>
+- {{cssxref("offset")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-rotate")}}
+- [SVG \<path>](/ja/docs/Web/SVG/Tutorial/Paths)
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+その他のデモ:
 
-<p>{{Compat("css.properties.offset-path")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{cssxref("offset")}}</li>
- <li>{{cssxref("offset-distance")}}</li>
- <li>{{cssxref("offset-rotation")}}</li>
- <li><a href="/ja/docs/Web/SVG/Tutorial/Paths">SVG &lt;path&gt; </a></li>
-</ul>
-
-<p>その他のデモ:</p>
-
-<ul>
- <li><a href="https://codepen.io/team/css-tricks/pen/WZdKMq">Examples of the various values</a></li>
- <li><a href="http://codepen.io/ericwilligers/pen/jrbJPp">Triangle</a></li>
- <li><a href="http://codepen.io/ericwilligers/pen/bwVkNa">Scissors</a></li>
- <li><a href="http://jsfiddle.net/ericwilligers/r1snqdan/">Eyes</a></li>
-</ul>
+- [Examples of the various values](https://codepen.io/team/css-tricks/pen/WZdKMq)
+- [Triangle](https://codepen.io/ericwilligers/pen/jrbJPp)
+- [Scissors](https://codepen.io/ericwilligers/pen/bwVkNa)
+- [Eyes](https://jsfiddle.net/ericwilligers/r1snqdan/)
