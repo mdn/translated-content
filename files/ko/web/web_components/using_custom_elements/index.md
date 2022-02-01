@@ -208,6 +208,7 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 
 ```js
 const shadow = this.attachShadow({mode: 'open'});
+
 const div = document.createElement('div');
 const style = document.createElement('style');
 shadow.appendChild(style);
