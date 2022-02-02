@@ -1,12 +1,13 @@
 ---
 title: '-webkit-print-color-adjust'
-slug: Web/CSS/-webkit-print-color-adjust
+slug: Web/CSS/print-color-adjust
 tags:
   - CSS
   - Non-standard
   - Propriété
   - Reference
 translation_of: Web/CSS/-webkit-print-color-adjust
+original_slug: Web/CSS/-webkit-print-color-adjust
 ---
 {{CSSRef}}{{Non-standard_header}}
 

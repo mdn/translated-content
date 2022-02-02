@@ -1,6 +1,6 @@
 ---
 title: color-adjust
-slug: Web/CSS/color-adjust
+slug: conflicting/Web/CSS/print-color-adjust
 tags:
   - CSS
   - Propriété
@@ -8,6 +8,7 @@ tags:
   - Web
   - color-adjust
 translation_of: Web/CSS/color-adjust
+original_slug: Web/CSS/color-adjust
 ---
 {{CSSRef}}
 

@@ -1,6 +1,6 @@
 ---
 title: '-webkit-print-color-adjust'
-slug: Web/CSS/-webkit-print-color-adjust
+slug: Web/CSS/print-color-adjust
 tags:
   - CSS
   - CSS プロパティ
@@ -8,8 +8,9 @@ tags:
   - 標準外
   - ウェブ
   - recipe:css-property
-browser-compat: css.properties.-webkit-print-color-adjust
 translation_of: Web/CSS/-webkit-print-color-adjust
+original_slug: Web/CSS/-webkit-print-color-adjust
+browser-compat: css.properties.-webkit-print-color-adjust
 ---
 {{CSSRef}}{{Non-standard_header}}
 
