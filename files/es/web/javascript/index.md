@@ -30,7 +30,7 @@ Aprende a programar en JavaScript con guías y tutoriales.
 
 ### Para completos principiantes
 
-Dirígete a nuestro tema del [Area de Aprendizaje JavaScript](/es/docs/Learn/JavaScript ) si quieres aprender JavaScript pero no tienes experiencia previa de JavaScript o programación. Los módulos completos disponibles allí son los siguientes:
+Dirígete a nuestro tema del [Area de Aprendizaje JavaScript](/es/docs/Learn/JavaScript) si quieres aprender JavaScript pero no tienes experiencia previa de JavaScript o programación. Los módulos completos disponibles allí son los siguientes:
 
 - [Primeros pasos en JavaScript](/es/docs/Learn/JavaScript/First_steps)
   - : Responde algunas preguntas fundamentales tales como "¿qué es JavaScript?", "¿cómo se ve?", y "¿qué puede hacer?", junto con la discusión de características clave de JavaScript, como variables, cadenas, números y arreglos.
