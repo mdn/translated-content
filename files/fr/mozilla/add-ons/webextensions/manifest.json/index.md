@@ -17,13 +17,13 @@ Le fichier `manifest.json` est le seul fichier que chaque extension utilisant le
 
 En utilisant `manifest.json`, vous spécifiez les métadonnées basiques de votre extension comme son nom et sa version, et des fonctionnalités de votre extension comme les scripts en arrière-plan (les scripts de contenu et les actions du navigateur).
 
-C'est un fichier au format [JSON](/fr/docs/Glossaire/JSON) à une exception près : il peut contenir des commentaires de type "`//`".
+C'est un fichier au format [JSON](/fr/docs/Glossary/JSON) à une exception près : il peut contenir des commentaires de type "`//`".
 
 ## List of manifest.json keys
 
 Les clés `manifest.json` sont listées ci-dessous:
 
-{{ListSubpages("/en-US/Add-ons/WebExtensions/manifest.json")}}
+{{ListSubpages("/fr/Add-ons/WebExtensions/manifest.json")}}
 
 ### Notes about manifest.json keys
 
@@ -45,7 +45,7 @@ Le bloc ci-dessous contient la syntaxe de base de certaines clés communes du ma
 
 > **Note :** Il ne s'agit pas d'un exemple à copier-coller. Le choix des clés dont vous aurez besoin dépend de l'extension que vous développez.
 
-Pour des exemples complets d'extensions, voir [Exemple d'extensions](/fr/Add-ons/WebExtensions/Examples).
+Pour des exemples complets d'extensions, voir [Exemple d'extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples).
 
 ```json
 {
