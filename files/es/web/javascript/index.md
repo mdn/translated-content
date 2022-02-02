@@ -112,6 +112,5 @@ Herramientas útiles para escribir y depurar tu código **JavaScript**.
   - : JSBin es una herramienta de depuración de desarrollo web colaborativo de código abierto.
 - [Codepen](https://codepen.io/) 
   - : Codepen es otra herramienta colaborativa de desarrollo web usada como un espacio para mostrar resultados en vivo.
- 
 - [StackBlitz](https://stackblitz.com/)
   - : StackBlitz es otra herramienta de depuración/visualización en línea, que puede alojar e implementar aplicaciones full-stack usando React, Angular, etc.
