@@ -95,12 +95,12 @@ Herramientas útiles para escribir y depurar tu código **JavaScript**.
 
 - [Herramientas para Desarrolladores de Firefox](/es/docs/Tools)
   - : [Consola Web](/es/docs/Tools/Web_Console), [Generador de Perfiles de JavaScript](/es/docs/Tools/Profiler), [Depurador](/es/docs/Tools/Debugger), y más.
-- [Javascripts Shells](/es/docs/Web/JavaScript/Shells)
-  - : Un shell de JavaScript te permite probar rápidamente fragmentos de código JavaScript.
+- [Consola de Javascript](/es/docs/Web/JavaScript/Shells)
+  - : Una consola de JavaScript te permite probar rápidamente fragmentos de código JavaScript.
 - [Aprende JavaScript](https://learnjavascript.online/)
-  - : Un excelente recurso para aspirantes a desarrollador web — Aprendr JavaScript en un entorno interactivo, con lecciones cortas y pruebas interactivas, guiado por una evaluación automatizada. Las primeras 40 lecciones son gratis, y el curso completo está disponible por un pequeño pago único.
+  - : Un excelente recurso para aspirantes a desarrollador web — Aprende JavaScript en un entorno interactivo, con lecciones cortas y pruebas interactivas, guiado por una evaluación automatizada. Las primeras 40 lecciones son gratis, y el curso completo está disponible por un pequeño pago único.
 - [TogetherJS](https://togetherjs.com/)
-  - : La colaboración hecha fácil. Al agregar TogetherJS a tu sitio web, ¡tus usuarios pueden ayudarse mutuamente en un sitio web en tiempo real!
+  - : Colaboración fácil. Al agregar TogetherJS a tu sitio web, ¡tus usuarios pueden ayudarse mutuamente en un sitio web en tiempo real!
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/javascript)
   - : Preguntas en Stack Overflow etiquetadas con "JavaScript".
 - [JSFiddle](https://jsfiddle.net/)
