@@ -75,11 +75,11 @@ Vea también: [El ejemplo en las especificaciones](https://dev.w3.org/2009/dap/s
 
 ## Especificaciones
 
-{{page("/en-US/docs/Web/API/BatteryManager","Specifications")}}
+{{Specifications}}
 
 ## Compatibilidad del Navegador
 
-{{page("/en-US/docs/Web/API/BatteryManager","Browser_compatibility")}}
+{{Compat}}
 
 ## Vea también
 
