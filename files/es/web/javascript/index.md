@@ -17,7 +17,7 @@ El estándar para JavaScript es [ECMAScript](/es/docs/Web/JavaScript/Language_Re
 
 No confundas JavaScript con el [lenguaje de programación Java](https://en.wikipedia.org/wiki/Java_(programming_language) ). Ambos "Java" y "JavaScript" son marcas o marcas registradas de Oracle en los Estados Unidos y otros países, Sin embargo, los dos lenguajes de programación tienen sintaxis, semántica y usos muy diferentes.
 
-> **Callout:** **Quieres transformarte en un desarrollador web front-end?**
+> **Observación:** **Quieres transformarte en un desarrollador web front-end?**
 >
 > Hemos reunido un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
 > 
