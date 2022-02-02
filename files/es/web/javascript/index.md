@@ -67,8 +67,8 @@ Dirígete a nuestro tema del [Area de Aprendizaje JavaScript](/es/docs/Learn/Jav
   - : Explicación de la herencia basada en prototipos ampliamente incomprendida y subestimada.
 - [Modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode)
   - : El modo estricto define que no puedes usar ninguna variable antes de iniciarla. Es una variable restringida de ECMAScript 5, para un rendimiento más rápido y una depuración más fácil.
-- [Arreglos escritos en JavaScript](/es/docs/Web/JavaScript/Typed_arrays)
-  - : Los arreglos escritos en JavaScript proveen un mecanismo para acceder a datos binarios sin formato.
+- [Arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Typed_arrays)
+  - : Los arreglos tipados en JavaScript proveen un mecanismo para acceder a datos binarios sin formato.
 - [Gestión de la Memoria](/es/docs/Web/JavaScript/Memory_Management)
   - : Ciclo de vida de la memoria y recolección de basura en JavaScript.
 - [Modelo de Concurrencia y Bucle de Eventos](/es/docs/Web/JavaScript/EventLoop)
@@ -78,7 +78,7 @@ Dirígete a nuestro tema del [Area de Aprendizaje JavaScript](/es/docs/Learn/Jav
 
 Consulta la documentación completa de la [referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
 
-- [Objectos Estándar](/es/docs/Web/JavaScript/Reference/Global_Objects)
+- [Objetos Estándar](/es/docs/Web/JavaScript/Reference/Global_Objects)
   - : Conoce los objectos estándar integrados {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}, y otros.
 - [Expresiones y operadores](/es/docs/Web/JavaScript/Reference/Operators)
   - : Aprende más sobre el comportamiento de los operadores de JavaScript {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}, el [operador de precedencia](/es/docs/Web/JavaScript/Reference/Operators/Operator_Precedence ), y más.
@@ -89,7 +89,6 @@ Consulta la documentación completa de la [referencia de JavaScript](/es/docs/We
 
 ## Herramientas &amp; recursos
 
-Herramientas útiles para escribir y depurar tu código **JavaScript**.
 Herramientas útiles para escribir y depurar tu código **JavaScript**.
 
 - [Herramientas para Desarrolladores de Firefox](/es/docs/Tools)
