@@ -88,7 +88,6 @@ Consulta la documentación completa de la [referencia de JavaScript](/es/docs/We
 - [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
   - : Aprende cómo trabajar con funciones de JavaScript para desarrollar tus aplicaciones.
 
-
 ## Herramientas &amp; recursos
 
 Herramientas útiles para escribir y depurar tu código **JavaScript**.
