@@ -1,84 +1,49 @@
 ---
-title: PositionError
+title: GeolocationPositionError
 slug: Web/API/GeolocationPositionError
 tags:
   - API
-  - Geolocation API
-  - Interface
-  - PositionError
-  - Secure context
+  - 位置情報 API
+  - GeolocationPositionError
+  - インターフェイス
+  - 安全なコンテキスト
+browser-compat: api.GeolocationPositionError
 translation_of: Web/API/GeolocationPositionError
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p><strong><code>PositionError</code></strong> インターフェイスは位置情報の取得時に発生したエラーの理由を表します。</p>
+**`GeolocationPositionError`** インターフェイスは位置情報の取得時に発生したエラーの理由を表します。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em><code>PositionError</code> インターフェイスが継承するプロパティはありません</em>。</p>
+_`PositionError` インターフェイスが継承するプロパティはありません。_
 
-<dl>
- <dt>{{domxref("PositionError.code")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd><code>unsigned short</code> 型のエラーコードを返します。エラーコードには以下の値が存在します:
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <th scope="col">値</th>
-    <th scope="col">定数</th>
-    <th scope="col">説明</th>
-   </tr>
-   <tr>
-    <td><code>1</code></td>
-    <td><code>PERMISSION_DENIED</code></td>
-    <td>このページにはアクセス許可がないため、位置情報の取得に失敗しました。</td>
-   </tr>
-   <tr>
-    <td><code>2</code></td>
-    <td><code>POSITION_UNAVAILABLE</code></td>
-    <td>少なくともひとつの位置情報ソースが内部的なエラーを返したため、位置情報の取得に失敗しました。</td>
-   </tr>
-   <tr>
-    <td><code>3</code></td>
-    <td><code>TIMEOUT</code></td>
-    <td>{{domxref("PositionOptions.timeout")}} によって指定された制限時間内に位置情報を取得することができませんでした。</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt>{{domxref("PositionError.message")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>人間が読める形のエラー詳細を {{domxref("DOMString")}} 型の文字列で返します。この文字列はデバッグ用のものであって直接ユーザーに見せるものではないと、仕様書では言及されています。</dd>
-</dl>
+- {{domxref("GeolocationPositionError.code")}} {{readonlyInline}} {{securecontext_inline}}
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+  - : `unsigned short` でエラーコードを表します。以下の値になる可能性があります。
 
-<p><em><code>PositionError</code> インターフェイスが実装・継承するメソッドはありません</em>。</p>
+    | 値 | 関連付けられた定数    | 説明                                                                                                                                                               |
+    | ----- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `1`   | `PERMISSION_DENIED`    | ページが許可を得ていないために、位置情報の取得に失敗しました。                                                               |
+    | `2`   | `POSITION_UNAVAILABLE` | 1 つ以上の位置の内部ソースが内部エラーを返したために、位置情報の取得に失敗しました。                                                    |
+    | `3`   | `TIMEOUT`              | 位置情報を取得するための制限時間が情報を取得する前に終了しました。 |
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+- {{domxref("GeolocationPositionError.message")}} {{readonlyInline}} {{securecontext_inline}}
+  - : エラーの詳細を説明する、人間が読める {{domxref("DOMString")}} を返します。仕様書の注では、主にデバッグ用途を想定しており、ユーザーインターフェースに直接表示されるものではないとしています。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation', '#position_error_interface', 'PositionError')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+## メソッド
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+_`GeolocationPositionError` インターフェイスが実装・継承しているメソッドはありません。_
 
-<p>{{Compat("api.GeolocationPositionError")}}</p>
+## 仕様書
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Specifications}}
 
-<ul>
- <li><a href="/ja/docs/WebAPI/Using_geolocation">Geolocation の利用</a></li>
- <li>{{domxref("Geolocation")}} インターフェイス</li>
-</ul>
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("Geolocation")}}
