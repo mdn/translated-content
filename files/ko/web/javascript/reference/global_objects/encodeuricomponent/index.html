@@ -58,7 +58,7 @@ console.log(encodeURIComponent(set3)); // %23
 console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (the space gets encoded as %20)
 </pre>
 
-<p><span id="result_box" lang="ko"><span>상위-하위 쌍을 이루지 않은 단일 대리 문자를 인코딩 시도하면 {{jsxref("URIError")}}가 발생합니다.</span></span></p>
+<p><span  lang="ko"><span>상위-하위 쌍을 이루지 않은 단일 대리 문자를 인코딩 시도하면 {{jsxref("URIError")}}가 발생합니다.</span></span></p>
 
 <pre class="brush: js">// high-low pair ok
 console.log(encodeURIComponent('\uD800\uDFFF'));
