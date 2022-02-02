@@ -72,7 +72,7 @@ navigator.getBattery().then(function(battery) {
 });
 ```
 
-Vea también: [El ejemplo en las especificaciones](https://w3c.github.io/battery/).
+Vea también: [El ejemplo en las especificaciones](https://www.w3.org/TR/battery-status/#examples).
 
 ## Especificaciones
 
