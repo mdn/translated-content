@@ -7,7 +7,7 @@ tags:
   - Firefox OS
   - Mobile
 translation_of: Web/API/Battery_Status_API
-original_slug: WebAPI/Estado_de_Bateria
+original_slug: Web/API/Estado_de_Bateria
 browser-compat: api.BatteryManager
 ---
 {{DefaultAPISidebar("Battery API")}}{{deprecated_header}}
