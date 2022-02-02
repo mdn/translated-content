@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/devtools
 
 Permet aux extensions d'interagir avec le {{Glossary("Developer Tools")}} du navigateur. Vous pouvez utiliser cette API pour créer des pages d'outils de développement, interagir avec la fenêtre qui est inspectée, inspecter l'utilisation du réseau de pages.
 
-Pour utiliser cette API, vous devez disposer de la [permission API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) `"devtools"` spécifiée dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json). Cette permission ne peut pas être facultative.
+Pour utiliser cette API, vous devez disposer de la [permission API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) `"devtools"` spécifiée dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json). Cette permission ne peut pas être facultative.
 
 ## Interfaces
 
