@@ -79,7 +79,6 @@ Dirígete a nuestro tema del [Area de Aprendizaje JavaScript](/es/docs/Learn/Jav
 
 Consulta la documentación completa de la [referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
 
-
 - [Objectos Estándar](/es/docs/Web/JavaScript/Reference/Global_Objects)
   - : Conoce los objectos estándar integrados {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}, y otros.
 - [Expresiones y operadores](/es/docs/Web/JavaScript/Reference/Operators)
