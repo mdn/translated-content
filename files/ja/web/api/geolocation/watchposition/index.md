@@ -4,43 +4,48 @@ slug: Web/API/Geolocation/watchPosition
 tags:
   - API
   - Geolocation
-  - Geolocation API
-  - Method
-  - Reference
-  - Secure context
+  - 位置情報 API
+  - メソッド
+  - リファレンス
+  - 安全なコンテキスト
+browser-compat: api.Geolocation.watchPosition
 translation_of: Web/API/Geolocation/watchPosition
 ---
-<p>{{securecontext_header}}{{ APIref("Geolocation API") }}</p>
+{{securecontext_header}}{{ APIref("Geolocation API") }}
 
-<p><span class="seoSummary">{{domxref("Geolocation")}} の <strong><code>watchPosition()</code></strong> メソッドは、端末の位置が変化するたびに自動的に呼び出されるハンドラー関数を登録するために用いられます。</span>また必要に応じてエラー処理コールバック関数を指定することができます。</p>
+{{domxref("Geolocation")}} の **`watchPosition()`** メソッドは、端末の位置が変化するたびに自動的に呼び出されるハンドラー関数を登録するために用いられます。また必要に応じてエラー処理コールバック関数を指定することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">navigator.geolocation.watchPosition(<var>success</var>[, <var>error</var>[, <var>options</var>]])</pre>
+```js
+navigator.geolocation.watchPosition(success)
+navigator.geolocation.watchPosition(success, error)
+navigator.geolocation.watchPosition(success, error, options)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>success</var></code></dt>
- <dd>コールバック関数で、 {{domxref("GeolocationPosition")}} オブジェクトを入力引数として受け取るものです。</dd>
- <dt><code><var>error</var></code> {{optional_inline}}</dt>
- <dd>任意のコールバック関数で、 {{domxref("GeolocationPositionError")}} オブジェクトを入力引数として受け取るものです。</dd>
- <dt><code><var>options</var></code> {{optional_inline}}</dt>
- <dd>任意の {{domxref("PositionOptions")}} オブジェクトで、位置を監視する構成オプションを提供します。</dd>
-</dl>
+- `success`
+  - : コールバック関数で、 {{domxref("GeolocationPosition")}} オブジェクトを入力引数として受け取るものです。
+- `error` {{optional_inline}}
+  - : 任意のコールバック関数で、 {{domxref("GeolocationPositionError")}} オブジェクトを入力引数として受け取るものです。
+- `options` {{optional_inline}}
+  - : 任意のオブジェクトで、位置を監視する構成オプションを提供します。
+    利用可能なオプションについての詳細は {{domxref("Geolocation.getCurrentPosition()")}} を参照してください。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>登録されたハンドラーを識別する ID を返します。この ID を {{domxref("Geolocation.clearWatch()")}} メソッドに渡してハンドラーの登録を解除することができます。</p>
+登録されたハンドラーを識別する ID を返します。この ID を {{domxref("Geolocation.clearWatch()")}} メソッドに渡してハンドラーの登録を解除することができます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js notranslate">var id, target, options;
+```js
+var id, target, options;
 
 function success(pos) {
   var crd = pos.coords;
 
-  if (target.latitude === crd.latitude &amp;&amp; target.longitude === crd.longitude) {
+  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
     console.log('Congratulations, you reached the target');
     navigator.geolocation.clearWatch(id);
   }
@@ -62,36 +67,19 @@ options = {
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);
-</pre>
+```
 
-<h2 id="Speicfications" name="Speicfications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation', '#dom-geolocation-watchposition', 'watchPosition()')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Geolocation.watchPosition")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Geolocation_API/Using">Geolocation API の使用</a></li>
- <li>所属するインターフェイス {{domxref("Geolocation")}} と、アクセス方法である {{domxref("NavigatorGeolocation.geolocation")}}。</li>
- <li>逆の操作: {{domxref("Geolocation.clearWatch()")}}</li>
- <li>類似のメソッド: {{domxref("Geolocation.getCurrentPosition()")}}</li>
-</ul>
+- [Geolocation API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- 所属するインターフェイス {{domxref("Geolocation")}} と、アクセス方法である {{domxref("Navigator.geolocation")}}。
+- 反対の操作: {{domxref("Geolocation.clearWatch()")}}
+- 類似のメソッド: {{domxref("Geolocation.getCurrentPosition()")}}
