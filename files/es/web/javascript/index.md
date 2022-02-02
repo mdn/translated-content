@@ -110,7 +110,6 @@ Herramientas útiles para escribir y depurar tu código **JavaScript**.
   - : Plunker es una comunidad en línea para crear, colaborar y compartir sus ideas de desarrollo web. Edita sus archivos JavaScript, CSS, HTML y obtén resultados en vivo y estructuras de archivos.
 - [JSBin](https://jsbin.com/)
   - : JSBin es una herramienta de depuración de desarrollo web colaborativo de código abierto.
- 
 - [Codepen](https://codepen.io/) 
   - : Codepen es otra herramienta colaborativa de desarrollo web usada como un espacio para mostrar resultados en vivo.
  
