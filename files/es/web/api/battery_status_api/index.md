@@ -8,6 +8,7 @@ tags:
   - Mobile
 translation_of: Web/API/Battery_Status_API
 original_slug: WebAPI/Estado_de_Bateria
+browser-compat: api.BatteryManager
 ---
 {{DefaultAPISidebar("Battery API")}}{{deprecated_header}}
 
@@ -18,7 +19,7 @@ La **API de Estado de Batería**, también conocida como "**Battery API**", prov
 ## Interfaces
 
 - {{domxref("BatteryManager")}}
-  - : Provee informacion acerca del nivel de carga de batería del sistema.
+  - : Provee información acerca del nivel de carga de batería del sistema.
 - {{domxref("navigator.getBattery()")}}{{readonlyInline}}
   - : Retorna una {{JSxRef("Promise")}} que se resuelve con un objeto {{DOMxRef("BatteryManager")}}.
 
@@ -71,7 +72,7 @@ navigator.getBattery().then(function(battery) {
 });
 ```
 
-Vea también: [El ejemplo en las especificaciones](https://dev.w3.org/2009/dap/system-info/battery-status.html#introduction).
+Vea también: [El ejemplo en las especificaciones](https://w3c.github.io/battery/).
 
 ## Especificaciones
 
