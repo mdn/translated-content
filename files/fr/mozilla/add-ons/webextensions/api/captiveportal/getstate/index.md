@@ -23,7 +23,7 @@ var state = browser.captivePortal.getState()
 
 ### Valeur retournée
 
-Une [Promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est remplie avec une chaîne de caractères contenant l'un des éléments suivants `unknown`, `not_captive`, `unlocked_portal`, ou `locked_portal`.
+Une [Promise](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est remplie avec une chaîne de caractères contenant l'un des éléments suivants `unknown`, `not_captive`, `unlocked_portal`, ou `locked_portal`.
 
 {{WebExtExamples}}
 
