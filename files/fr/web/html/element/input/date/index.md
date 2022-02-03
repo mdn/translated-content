@@ -466,4 +466,4 @@ daySelect.onchange = function() {
 - L'élément générique [`<input>`](/fr/docs/Web/HTML/Element/Input) et l'interface DOM qu'il implémente&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
 - [Un tutoriel sur les sélecteurs de date et d'heure](/fr/docs/Learn/Forms/Basic_native_form_controls)
 - [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Date_and_time_formats)
-- [La compatibilité des propriétés CSS pour les éléments de formulaire](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [La compatibilité des propriétés CSS pour les éléments de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
