@@ -3,38 +3,37 @@ title: GeolocationCoordinates.speed
 slug: Web/API/GeolocationCoordinates/speed
 tags:
   - API
-  - Geolocation API
+  - 位置情報 API
   - GeolocationCoordinates
-  - Property
-  - Secure context
+  - プロパティ
+  - 安全なコンテキスト
   - speed
 browser-compat: api.GeolocationCoordinates.speed
+translation_of: Web/API/GeolocationCoordinates/speed
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The **`GeolocationCoordinates.speed`** read-only property is a
-`double` representing the velocity of the device in meters per second. This
-value is `null` if the implementation is not able to measure it.
+**`GeolocationCoordinates.speed`** は読み取り専用のプロパティであり、 `double` 型で端末の移動速度をメートル毎秒で表します。実装でこれを計測することができなければ、この値は `null` になります。
 
-## Syntax
+## 構文
 
 ```js
 let speed = geolocationCoordinatesInstance.speed
 ```
 
-### Value
+### 値
 
-A `double` representing the velocity of the device in meters per second.
+`double` 型で端末の移動速度をメートル毎秒で表します。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("GeolocationCoordinates")}}
