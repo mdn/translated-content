@@ -39,7 +39,7 @@ navigator.getBattery().then(function(battery) {
 
     var cargando = battery.charging;
 
-    document.querySelector('#cargando').textContent = cargando ;
+    document.querySelector('#cargando').textContent = cargando;
 });
 ```
 
