@@ -3,44 +3,37 @@ title: GeolocationCoordinates.heading
 slug: Web/API/GeolocationCoordinates/heading
 tags:
   - API
-  - Geolocation API
+  - 位置情報 API
   - GeolocationCoordinates
-  - Property
-  - Secure context
+  - プロパティ
+  - 安全なコンテキスト
   - heading
 browser-compat: api.GeolocationCoordinates.heading
+translation_of: Web/API/GeolocationCoordinates/heading
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The **`GeolocationCoordinates.heading`** read-only property is
-a `double` representing the direction in which the device is traveling. This
-value, specified in degrees, indicates how far off from heading due north the device is.
-`Zero` degrees represents true north, and the direction is determined
-clockwise (which means that east is `90` degrees and west is `270`
-degrees). If {{domxref("GeolocationCoordinates.speed")}} is `0`,
-`heading` is
-[`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN). If
-the device is not able to provide heading information, this value is `null`.
+**`GeolocationCoordinates.heading`** は読み取り専用のプロパティであり、 `double` 値で端末の移動方向を表します。この値は角度で指定され、端末の移動方向が北向きからどれだけ角度があるかを示します。 `0` 度は真北を表し、そこから時計回りに指定します（すなわち、東は `90` 度で西は `270` 度になります）。 {{domxref("GeolocationCoordinates.speed")}} が `0` である場合、 `heading` は [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) になります。端末が移動方向の情報を提供できない場合、この値は `null` になります。
 
-## Syntax
+## 構文
 
 ```js
 let heading = geolocationCoordinatesInstance.heading
 ```
 
-### Value
+### 値
 
-A `double` representing the direction in which the device is traveling.
+`double` 値で端末の移動方向を表します。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("GeolocationCoordinates")}}
