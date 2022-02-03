@@ -3,40 +3,37 @@ title: GeolocationCoordinates.altitudeAccuracy
 slug: Web/API/GeolocationCoordinates/altitudeAccuracy
 tags:
   - API
-  - Geolocation API
+  - 位置情報 API
   - GeolocationCoordinates
-  - Property
-  - Secure context
+  - プロパティ
+  - 安全なコンテキスト
   - altitudeAccuracy
 browser-compat: api.GeolocationCoordinates.altitudeAccuracy
+translation_of: Web/API/GeolocationCoordinates/altitudeAccuracy
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The **`GeolocationCoordinates.altitudeAccuracy`** read-only
-property is a strictly positive `double` representing the accuracy, with a
-95% confidence level, of the `altitude` expressed in meters. This value is
-`null` if the implementation doesn't support measuring altitude.
+**`GeolocationCoordinates.altitudeAccuracy`** は読み取り専用のプロパティで、厳密な正の `double` 値で、信頼度 95% の `altitude` の精度をメートル単位で表します。実装が高度の計測に対応していない場合、この値は `null` になります。
 
-## Syntax
+## 構文
 
 ```js
 let altAcc = geolocationCoordinatesInstance.altitudeAccuracy
 ```
 
-### Value
+### 値
 
-A positive `double` representing the accuracy, with a 95% confidence level,
-of the `altitude` expressed in meters.
+正の `double` 値で、信頼度 95% の `altitude` の精度をメートル単位で表します。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("GeolocationCoordinates")}}
