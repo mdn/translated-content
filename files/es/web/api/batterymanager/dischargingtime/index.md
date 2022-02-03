@@ -13,15 +13,12 @@ tags:
 translation_of: Web/API/BatteryManager/dischargingTime
 browser-compat: api.BatteryManager.dischargingTime
 ---
-
 {{deprecated_header}}{{APIRef("Battery API")}}
 
 Indíca la cantidad de tiempo, en segundos,
 que restan antes de que la batería se descargue completamente.
 
-> **Nota:** Incluso si el tiempo devuelto es exacto al segundo,
-> los navegadores lo redondean a valor más alto.
-> intervalo (típicamente a los 15 minutos más cercanos) por razones de privacidad.
+> **Nota:** Incluso si el tiempo devuelto es exacto al segundo, los navegadores los redondean a un intervalo más alto (típicamente a los 15 minutos más cercanos) por razones de privacidad.
 
 ## Sintaxis
 
@@ -29,7 +26,7 @@ que restan antes de que la batería se descargue completamente.
 var time = battery.dischargingTime;
 ```
 
-Valor de retorno, `time` es el tiempo restante en segundos antes que la `batería`,
+Valor de retorno, `time` es el tiempo restante en segundos antes que la `battery`,
 que es un objeto {{domxref("BatteryManager")}},
 esté completamente descargada y el sistema se suspenda.
 Este valor es [`Infinito`](/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
@@ -47,14 +44,14 @@ o si el sistema es incapaz de calcular el tiempo de descarga.
 ### Contenido JavaScript
 
 ```js
-navigator.getBattery().then(function (battery) {
+navigator.getBattery().then(function(battery) {
   var time = battery.dischargingTime;
 
   document.querySelector("#dischargingTime").textContent = battery.dischargingTime;
 });
 ```
 
-{{ EmbedLiveSample('Example', '100%', 30) }}
+{{EmbedLiveSample('', '100%', 30)}}
 
 ## Especificaciones
 
@@ -68,3 +65,4 @@ navigator.getBattery().then(function (battery) {
 
 - {{domxref("BatteryManager")}}
 - {{domxref("Navigator.getBattery")}}
+
