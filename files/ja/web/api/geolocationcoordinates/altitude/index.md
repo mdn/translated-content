@@ -3,42 +3,39 @@ title: GeolocationCoordinates.altitude
 slug: Web/API/GeolocationCoordinates/altitude
 tags:
   - API
-  - Geolocation API
+  - 位置情報 API
   - GeolocationCoordinates
-  - Property
-  - Secure context
+  - プロパティ
+  - 安全なコンテキスト
   - altitude
 browser-compat: api.GeolocationCoordinates.altitude
+translation_of: Web/API/GeolocationCoordinates/altitude
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The **`GeolocationCoordinates.altitude`** read-only property is
-a `double` representing the altitude of the position in meters above the [WGS84](http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf)
-ellipsoid (which defines the nominal sea level surface). This value is `null`
-if the implementation cannot provide this data.
+**`GeolocationCoordinates.altitude`** は読み取り専用のプロパティであり、 `double` 値で、その位置の [WGS84](https://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf) 楕円体（公称海面水準を定義するもの）からの高度をメートル単位で表します。この値は、実装がこのデータを提供できない場合は `null` となります。
 
-## Syntax
+## 構文
 
 ```js
 let alt = geolocationCoordinatesInstance.altitude
 ```
 
-### Value
+### 値
 
-A `double` representing the altitude of the position in meters above the [WGS84](http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf)
-ellipsoid.
+`double` 値で、その位置の [WGS84](https://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf) 楕円体（公称海面レベルを定義するもの）からの高度をメートル単位で表します。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- The {{domxref("GeolocationCoordinates")}} interface it belongs to.
+- [位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- 所属先の {{domxref("GeolocationCoordinates")}} インターフェイス
 - [National
-  Imagery and Mapping Agency Technical Report 8350.2, Third Edition (WGS84)](http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf)
+  Imagery and Mapping Agency Technical Report 8350.2, Third Edition (WGS84)](https://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf)
