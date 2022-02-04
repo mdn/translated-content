@@ -1,6 +1,13 @@
 ---
 title: BatteryManager.onchargingchange
 slug: Web/API/BatteryManager/onchargingchange
+tags:
+  - API
+  - Battery API
+  - Event Handler
+  - NeedsMarkupWork
+  - Property
+  - Reference
 translation_of: Web/API/BatteryManager/onchargingchange
 browser-compat: api.BatteryManager.onchargingchange
 ---
