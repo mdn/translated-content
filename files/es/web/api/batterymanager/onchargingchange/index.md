@@ -23,8 +23,8 @@ Donde `battery` es un objeto {{domxref("BatteryManager")}}, y `funcRef` es una f
 ### Contenido HTML
 
 ```html
-<div id="nivel">(nivel de batería desconocido)</div>
-<div id="tiempodeCarga">(tiempo de carga desconocido)</div>
+<div id="level">(nivel de batería desconocido)</div>
+<div id="chargingTime">(tiempo de carga desconocido)</div>
 ```
 
 ### Contenido JavaScript
@@ -35,8 +35,8 @@ navigator.getBattery().then(function(battery) {
    battery.onchargingchange = chargingChange();
 
    function chargingChange() {
-      document.querySelector('#nivel').textContent = battery.level;
-      document.querySelector('#tiempodeCarga').textContent = battery.chargingTime;
+      document.querySelector('#level').textContent = battery.level;
+      document.querySelector('#chargingTime').textContent = battery.chargingTime;
    }
 });
 ```
