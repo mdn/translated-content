@@ -42,6 +42,8 @@ navigator.getBattery().then(function(battery) {
 });
 ```
 
+### Resultado
+
 {{EmbedLiveSample('', '100%', 40)}}
 
 ## Especificaciones
