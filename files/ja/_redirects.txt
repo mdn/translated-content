@@ -3282,6 +3282,9 @@
 /ja/docs/Web/API/VRLayer	/ja/docs/Web/API/VRLayerInit
 /ja/docs/Web/API/VRLayer/rightBounds	/ja/docs/Web/API/VRLayerInit/rightBounds
 /ja/docs/Web/API/VRLayer/source	/ja/docs/Web/API/VRLayerInit/source
+/ja/docs/Web/API/VideoTrackList/onaddtrack	/ja/docs/conflicting/Web/API/VideoTrackList/addtrack_event
+/ja/docs/Web/API/VideoTrackList/onchange	/ja/docs/conflicting/Web/API/VideoTrackList/change_event
+/ja/docs/Web/API/VideoTrackList/onremovetrack	/ja/docs/conflicting/Web/API/VideoTrackList/removetrack_event
 /ja/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ja/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ja/docs/Web/API/WebGL_API/Animating_textures_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
