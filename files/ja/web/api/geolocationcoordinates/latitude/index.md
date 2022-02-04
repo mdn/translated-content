@@ -3,36 +3,37 @@ title: GeolocationCoordinates.latitude
 slug: Web/API/GeolocationCoordinates/latitude
 tags:
   - API
-  - Geolocation API
+  - 位置情報 API
   - GeolocationCoordinates
-  - Property
-  - Secure context
+  - プロパティ
+  - 安全なコンテキスト
   - latitude
 browser-compat: api.GeolocationCoordinates.latitude
+translation_of: Web/API/GeolocationCoordinates/latitude
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The **`GeolocationCoordinates.latitude`** read-only property is a `double` representing the latitude of the position in decimal degrees.
+**`GeolocationCoordinates.latitude`** は読み取り専用のプロパティであり、 `double` 値でその位置の緯度を 10 進形式で表します。
 
-## Syntax
+## 構文
 
 ```js
 let lat = geolocationCoordinatesInstance.latitude
 ```
 
-### Value
+### 値
 
-A `double` representing the latitude of the position in decimal degrees.
+`double` 値でその位置の緯度を 10 進形式で表します。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("GeolocationCoordinates")}}
