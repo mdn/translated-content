@@ -1,91 +1,166 @@
 ---
 title: Element.querySelector()
 slug: Web/API/Element/querySelector
+tags:
+  - API
+  - CSS
+  - CSS セレクター
+  - DOM
+  - Element
+  - 要素
+  - Finding Elements
+  - Locating Elements
+  - メソッド
+  - リファレンス
+  - Searching Elements
+  - Selecting Elements
+  - セレクター
+  - querySelector
+browser-compat: api.Element.querySelector
 translation_of: Web/API/Element/querySelector
 ---
-<div>{{APIRef}}</div>
+{{APIRef("DOM")}}
 
-<p>対象要素の子孫の内、引数に指定したCSSセレクタにマッチする最初の要素を返します。</p>
+**`querySelector()`** は {{domxref("Element")}} インターフェイスのメソッドで、呼び出された要素の子孫要素の中で、指定されたセレクター群に一致する最初の要素を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var>element</var> = baseElement.querySelector(<em>selector</em>s);
-</pre>
+```js
+element = baseElement.querySelector(selectors);
+```
 
-<ul>
- <li><code>element</code>と<code>baseElement</code>は{{domxref("element")}}オブジェクトを表します。</li>
- <li><code>selectors</code>はマッチさせたい1つ以上の<a href="/ja/docs/Web/Guide/CSS/Getting_Started/Selectors">セレクタ</a>を表します。</li>
-</ul>
+### 引数
 
-<h2 id="Example" name="Example">例</h2>
+- `selectors`
+  - : その要素 ({{domxref("Element")}}) の子孫要素と照合する[セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)群です。これは有効な CSS 構文でなければならず、そうでない場合は `SyntaxError` 例外が発生します。このセレクター群に一致する最初の要素が返されます。
 
-<p>次の例では、type属性を持たないか､<span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;"><code>text/css</code>を<code>type</code>属性として持つ、ドキュメントボディーの中で</span>最初の<code style="font-style: normal;">style</code>要素が返却されます。</p>
+### 返値
 
-<pre class="brush:js">var el = document.body.querySelector("style[type='text/css'], style:not([type])");
-</pre>
+`baseElement` の子孫要素のうち、 `selectors` で指定されたセレクター群に一致するものを返します。照合の際には、 `baseElement` とその子孫を含む要素群の外にあるものも含めて、要素の階層全体を考慮します。言い換えると、 `selectors` はまず `baseElement` ではなく、文書全体に適用され、候補となる要素の初期リストが生成されます。その結果得られた要素が、 `baseElement` の子孫であるかどうかが調べられます。それらの残りの要素のうち、最初に一致したものが `querySelector()` メソッドによって返されます。
 
-<h2 id="Notes" name="Notes">注記</h2>
+一致するものが見つからなかったら、返値は `null` になります。
 
-<p>マッチする要素が無い場合は<code>nullを返します</code>。その他の場合は､最初にマッチした要素を返します。</p>
+### 例外
 
-<p>指定されたセレクタが不正である場合、例外「<code>SYNTAX_ERR</code>」がスローされます。</p>
+- `SyntaxError`
+  - : 指定された `selectors` が無効であった場合。
 
-<p>Throws a <code>SYNTAX_ERR</code> exception if the specified group of selectors is invalid.</p>
+## 例
 
-<p><span style="font-family: Courier New;"><span>querySelector()</span></span>はWebApps API仕様で定義されました。</p>
+いくつかの例を検討してみましょう。
 
-<p><code>querySelector</code>に渡す文字列はCSSの文法に則る必要があります。{{domxref("document.querySelector")}}で実例を見て下さい。</p>
+### 属性に特定の値を持つ特定の要素を探す
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+この最初の例では、 HTML 文書の本文内で type 属性がないか、 type 属性が "text/css" である要素のうち最初のものを返します。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Browser</th>
-   <th>Support</th>
-   <th>Notes</th>
-  </tr>
-  <tr>
-   <td>Internet Explorer</td>
-   <td>8</td>
-   <td>CSS 2.1 selectors only (IE8)</td>
-  </tr>
-  <tr>
-   <td>Firefox (Gecko)</td>
-   <td><strong>3.5</strong> (1.9.1)</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td>10</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Chrome</td>
-   <td>1</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>Safari (webkit)</td>
-   <td>3.2 (525.3)</td>
-   <td><a class="link-https" href="https://bugs.webkit.org/show_bug.cgi?id=16587">webk.it/16587</a></td>
-  </tr>
- </tbody>
-</table>
+```js
+var el = document.body.querySelector("style[type='text/css'], style:not([type])");
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+### :scope 擬似クラスを使用して直接の子を取得
 
-<ul>
- <li>{{spec("http://www.w3.org/TR/selectors-api/","Selectors API Level 1","rec")}}</li>
- <li>{{spec("http://www.w3.org/TR/selectors-api2/","Selectors API Level 2","wd")}}</li>
- <li>{{spec("http://dev.w3.org/2006/webapi/selectors-api2/","Selectors API Level 2","ed")}}</li>
-</ul>
+この例では {{cssxref(":scope")}} 擬似クラスを使用して、 `parentElement` 要素の直接の子を取得します。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+#### HTML
 
-<ul>
- <li><a dir="ltr" href="/ja/docs/DOM/Element.querySelectorAll"><code>element.querySelectorAll</code></a></li>
- <li><a href="/ja/docs/DOM/Document.querySelector"><code>document.querySelector</code></a></li>
- <li><a href="/ja/docs/DOM/Document.querySelectorAll"><code>document.querySelectorAll</code></a></li>
- <li><a href="/ja/docs/Code_snippets/QuerySelector">querySelectorのコードスニペット</a></li>
-</ul>
+```html
+<div>
+  <h6>ページタイトル</h6>
+  <div id="parent">
+    <span>愛は情け深い。</span>
+    <span>
+      <span>愛は忍耐強い。</span>
+    </span>
+    <span>
+      <span>愛は見返りを求めない。</span>
+    </span>
+  </div>
+</div>
+```
+
+#### CSS
+
+```css
+  span {
+    display:block;
+    margin-bottom: 5px;
+  }
+  .red span {
+    background-color: red;
+    padding:5px;
+  }
+```
+
+#### JavaScript
+
+```js
+  const parentElement = document.querySelector('#parent');
+  let allChildren = parentElement.querySelectorAll(":scope > span");
+  allChildren.forEach(item => item.classList.add("red"));
+```
+
+#### 結果
+
+{{ EmbedLiveSample('Get_direct_descendants_using_the_scope_pseudo-class', 600, 160) }}
+
+### 全体の階層数
+
+この例では、 `selectors` を適用する際に、文書全体の階層を考慮することを示しています。そのため、位置を照合する際には、指定した `baseElement` 以外のレベルも考慮されることになります。
+
+#### HTML
+
+```html
+<div>
+  <h5>オリジナルコンテンツ</h5>
+  <p>
+    内部の段落
+    <span>内部の span</span>
+    内部の段落
+  </p>
+</div>
+<div>
+  <h5>出力</h5>
+  <div id="output"></div>
+</div>
+```
+
+#### JavaScript
+
+```js
+var baseElement = document.querySelector("p");
+document.getElementById("output").innerHTML =
+  (baseElement.querySelector("div span").innerHTML);
+```
+
+#### 結果
+
+結果は次のようになります。
+
+{{ EmbedLiveSample('The_entire_hierarchy_counts', 600, 160) }}
+
+`"div span"` セレクターは、 `baseElement` の子ノードが {{HTMLElement("div")}} 要素を含んでいなくても、 {{HTMLElement("span")}} 要素に一致することに注目してください（これはまだ指定したセレクターに含まれています）。
+
+### それ以外の例
+
+`selectors` の適切な書式について、その他の例は {{domxref("Document.querySelector()")}} を参照してください。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- CSS ガイドの[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
+- MDN 学習領域の[属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+- {{domxref("Element.querySelectorAll()")}}
+- {{domxref("Document.querySelector()")}} および
+  {{domxref("Document.querySelectorAll()")}}
+- {{domxref("DocumentFragment.querySelector()")}} および
+  {{domxref("DocumentFragment.querySelectorAll()")}}
+- セレクターを取る他のメソッドOther: {{domxref("element.closest()")}} および
+  {{domxref("element.matches()")}}.
