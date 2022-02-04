@@ -24,7 +24,7 @@ var level = battery.level;
 Un valor de 0 significa que la `battery`, que es un objeto de tipo {{domxref("BatteryManager")}},
 está vacía y el sistema esta apunto de entrar en suspensión.
 Un valor de 1.0 significa que la `battery` está cargada al máximo.
-El valir 1.0 también nos indica que el sistema no puede determinar el nivel de carga de la batería o si no está alimentado por batería.
+El valor 1.0 también nos indica que el sistema no puede determinar el nivel de carga de la batería o si no está alimentado por batería.
 
 ## Example
 
