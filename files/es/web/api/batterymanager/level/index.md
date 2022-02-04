@@ -37,7 +37,7 @@ El valor 1.0 también nos indica que el sistema no puede determinar el nivel de 
 ### Contenido JavaScript
 
 ```js
-navigator.getBattery().then(function (battery) {
+navigator.getBattery().then(function(battery) {
   var level = battery.level;
 
   document.querySelector("#level").textContent = level;
