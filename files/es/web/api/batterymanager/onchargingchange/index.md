@@ -16,8 +16,7 @@ Especifica un evento que escucha para recibir eventos {{event("chargingchange")}
 battery.onchargingchange = funcRef
 ```
 
-Donde `battery` es un objeto {{domxref("BatteryManager")}}, y `funcRef` es una función para llamar cuando se produce el evento
-{{event("chargingchange")}}.
+Donde `battery` es un objeto {{domxref("BatteryManager")}}, y `funcRef` es una función para llamar cuando se produce el evento {{event("chargingchange")}}.
 
 ## Ejemplo
 
@@ -58,3 +57,4 @@ navigator.getBattery().then(function(battery) {
 
 - {{domxref("BatteryManager")}}
 - {{domxref("Navigator.getBattery")}}
+
