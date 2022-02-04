@@ -5,49 +5,43 @@ tags:
   - API
   - DOM
   - DocumentFragment
-  - Method
+  - メソッド
 browser-compat: api.DocumentFragment.querySelectorAll
+translation_of: Web/API/DocumentFragment/querySelectorAll
 ---
 {{ApiRef("DOM")}}
 
-The **`DocumentFragment.querySelectorAll()`** method returns a
-{{domxref("NodeList")}} of elements within the {{domxref("DocumentFragment")}} (using
-depth-first pre-order traversal of the document's nodes) that matches the specified
-group of selectors.
+**`DocumentFragment.querySelectorAll()`** メソッドは {{domxref("NodeList")}} で、 {{domxref("DocumentFragment")}} の中で指定されたセレクター群に一致する要素の一覧を（文書ノードの深さ優先前順走査 (depth-first pre-order traversal) を使用して）返します。
 
-If the selectors specified in parameter are invalid a {{domxref("DOMException")}} with
-a `SYNTAX_ERR` value is raised.
+引数で指定されたセレクターが無効であった場合、 {{domxref("DOMException")}} が `SYNTAX_ERR` の値で発生します。
 
-## Syntax
+## 構文
 
 ```js
 elementList = documentfragment.querySelectorAll(selectors);
 ```
 
-### Parameters
+### 引数
 
 - _selectors_
-  - : Is a {{domxref("DOMString")}} containing one or more CSS selectors separated by
-    commas.
+  - : {{domxref("DOMString")}} で、1 つ以上の CSS セレクターをカンマで区切って指定します。
 
-## Examples
+## 例
 
-This example returns a list of all `div` elements within the
-`DocumentFragment` with a class of either "`note`" or
-"`alert`":
+この例は、 `DocumentFragment` の中にあるすべての `div` 要素のうち、 "`note`" または "`alert`" クラスのついたものすべてのリストを返します。
 
 ```js
 var matches = documentfrag.querySelectorAll("div.note, div.alert");
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- The {{domxref("DocumentFragment")}} interface it belongs to.
+- 所属する {{domxref("DocumentFragment")}} インターフェイス
