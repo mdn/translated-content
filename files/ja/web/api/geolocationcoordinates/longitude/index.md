@@ -5,55 +5,40 @@ tags:
   - API
   - GPS
   - Geolocation
-  - Geolocation API
+  - 位置情報 API
   - GeolocationCoordinates
   - Global Positioning System
-  - Property
-  - Read-only
-  - Reference
-  - Secure context
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+  - 安全なコンテキスト
   - longitude
 browser-compat: api.GeolocationCoordinates.longitude
+translation_of: Web/API/GeolocationCoordinates/longitude
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The {{domxref("GeolocationCoordinates")}} interface's read-only
-**`longitude`** property is a double-precision floating point
-value which represents the longitude of a geographical position, specified in decimal
-degrees. Together with a {{domxref("DOMTimeStamp")}} indicating a time of measurement,
-the `GeolocationCoordinates` object is part of the
-{{domxref("GeolocationPosition")}} interface, which is the object type returned by
-Geolocation API functions that obtain and return a geographical position.
+{{domxref("GeolocationCoordinates")}} インターフェイスの **`longitude`** プロパティは読み取り専用であり、地理的な位置の経度 10 進数で表す倍精度浮動小数点値です。計測時刻を表す {{domxref("DOMTimeStamp")}} と共に、 `GeolocationCoordinates` オブジェクトは {{domxref("GeolocationPosition")}} インターフェイスの一部であり、地理位置を取得して返す位置情報 API 関数が返すオブジェクト型です。
 
-## Syntax
+## 構文
 
 ```js
 let longitude = geolocationCoordinatesInstance.longitude
 ```
 
-### Value
+### 値
 
-The value in `longitude` is the geographical longitude of the location on
-Earth described by the `Coordinates` object, in decimal degrees. The value is
-defined by the World Geodetic System 1984 specification (WGS 84).
+`longitude` の値は `Coordinates` オブジェクトによって記述された地球上の場所の地理的な経度を 10 進数で表したものです。この値は World Geodetic System 1984 仕様 (WGS 84) で定義されています。
 
-> **Note:** The zero meridian (also known as the prime meridian or the
-> reference meridian) is not precisely the same as the Greenwich meridian that most
-> people think of. It is, instead, the {{interwiki("wikipedia", "IERS Reference
-    Meridian")}}, which is located 5.3 {{interwiki("wikipedia", "arcseconds")}} (102
-> meters / 335 feet) east of the {{interwiki("wikipedia", "Greenwich meridian")}}. This
-> is the same standard used by the {{interwiki("wikipedia", "Global Positioning
-    System")}} (GPS).
+> **Note:** ゼロ子午線（本初子午線、基準子午線とも呼ばれる）は、多くの人が思い浮かべるグリニッジ子午線と正確には同じではありません。これは　{{interwiki("wikipedia", "IERS基準子午線", "IERS 基準子午線")}} であり、 5.3 {{interwiki("wikipedia", "度_(角度)", "秒")}} （102 メートル/335 フィート）だけ{{interwiki("wikipedia", "グリニッジ子午線")}}より東に位置しています。これは{{interwiki("wikipedia", "グローバル・ポジショニング・システム", "グローバルポジショニングシステム")}} (GPS) で使われている規格と同じものです。
 
-## Examples
+## 例
 
-In this simple example, we fetch the user's location and display the resulting
-coordinates once they're returned.
+この単純な例では、ユーザーの位置情報を取得し、その結果の座標を表示します。
 
 ### JavaScript
 
-The JavaScript code below creates an event listener so that when the user clicks on a
-button, the location information is retrieved and displayed.
+以下の JavaScript コードでは、ユーザーがボタンをクリックすると、位置情報を取得して表示するように、イベントリスナーを作成しています。
 
 ```js
 let button = document.getElementById("get-location");
@@ -71,57 +56,42 @@ button.addEventListener("click", function() {
 });
 ```
 
-After setting up variables to more conveniently reference the button element and the
-two elements into which the latitude and longitude will be drawn, the event listener is
-established by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}}
-on the {{HTMLElement("button")}} element. When the user clicks the button, we'll fetch
-and display the location information.
+ボタン要素と緯度経度が描画される 2 つの要素をより参照しやすくするための変数を設定した後、  {{domxref("EventTarget.addEventListener", "addEventListener()")}} を {{HTMLElement("button")}} 要素で呼び出してイベントリスナーを確立しています。ユーザーがボタンをクリックすると、位置情報を取得して表示するようにします。
 
-Upon receiving a {{event("click")}} event, we call
-{{domxref("Geolocation.getCurrentPosition", "getCurrentPosition()")}} to request the
-device's current position. This is an asynchronous request, so we provide a callback
-which receives as in put a {{domxref("GeolocationPosition")}} object describing the
-determined position.
+{{domxref("Element/click_event", "click")}} イベントを受信すると、{{domxref("Geolocation.getCurrentPosition", "getCurrentPosition()")}} を呼び出し、端末の現在位置を要求しています。これは非同期のリクエストなので、決定した位置を表す {{domxref("GeolocationPosition")}} オブジェクトを put で受け取るコールバックを用意します。
 
-From the `GeolocationPosition` object, we obtain the user's latitude and
-longitude using {{domxref("GeolocationCoordinates/latitude", "position.coords.latitude")}} and
-`position.coords.longitude` so we can update the displayed coordinates. The
-two {{HTMLElement("span")}} elements are updated to display the corresponding values
-after being converted to a value with two decimal places.
+`GeolocationPosition` オブジェクトから、 {{domxref("GeolocationCoordinates/latitude", "position.coords.latitude")}} と `position.coords.longitude` を用いてユーザーの緯度と経度を取得し、表示される座標を更新できるようにします。 2 つの{{HTMLElement("span")}}要素は、小数点以下2桁の値に変換された後、対応する値を表示するように更新されます。
 
 ### HTML
 
-The HTML used to present the results looks like this:
+結果を表示するための HTML は次のようになります。
 
 ```html
 <p>
-  Your location is <span id="latitude">0.00</span>°
-  latitude by <span id="longitude">0.00</span>° longitude.
+  あなたの位置は北緯 <span id="latitude">0.00</span>°
+  東経 <span id="longitude">0.00</span>° です。
 </p>
 <button id="get-location">
-  Get My Location
+  現在の位置を取得
 </button>
 ```
 
-### Result
+### 結果
 
-Take this example for a test drive here:
+この例を、ここで試しに実行してみてください。
 
 {{EmbedLiveSample("Examples", 600, 120)}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- The {{domxref("GeolocationCoordinates")}} interface it belongs to.
-- The {{domxref("GeolocationPosition")}} interface, which is the top-level interface
-  used to return geolocation data from the Geolocation API functions
-  {{domxref("Geolocation.getCurrentPosition()")}} and
-  {{domxref("Geolocation.watchPosition", "watchPosition()")}}.
+- [位置情報 API の使用](/ja/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- 所属先の {{domxref("GeolocationCoordinates")}} インターフェイス
+- {{domxref("GeolocationPosition")}} インターフェイス、位置情報 API の関数 {{domxref("Geolocation.getCurrentPosition()")}} および {{domxref("Geolocation.watchPosition", "watchPosition()")}} から位置情報データを返すために用いられる最上位のインターフェイス。
