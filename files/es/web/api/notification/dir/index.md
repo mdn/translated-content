@@ -30,7 +30,7 @@ Un {{domxref("DOMString")}} especifica la dirección del texto, los posibles val
 - `ltr`: El texto es desplegado de izquierda a derecha.
 - `rtl`: El texto es desplegado de derecha a izquierda.
 
-> **Nota:** La mayoría de los navegadores parecen ignorar las intrucciones explicitas ltr y rtl, y solo van a las proveídas por el navegador.
+> **Nota:** La mayoría de los navegadores parecen ignorar las intrucciones explicitas `ltr` y `rtl`, y solo van a las proveídas por el navegador.
 
 ## Ejemplos
 
