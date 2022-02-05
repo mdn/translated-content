@@ -1,47 +1,51 @@
 ---
 title: HTMLInputElement.mozGetFileNameArray()
 slug: Web/API/HTMLInputElement/mozGetFileNameArray
+tags:
+  - API
+  - HTML DOM
+  - HTMLInputElement
+  - メソッド
+  - NeedsBrowserCompatibility
+  - 標準外
+  - リファレンス
+browser-compat: api.HTMLInputElement.mozGetFileNameArray
 translation_of: Web/API/HTMLInputElement/mozGetFileNameArray
 ---
-<div>{{ APIRef("HTML DOM") }}{{Non-standard_header}}</div>
+{{ APIRef("HTML DOM") }}{{Non-standard_header}}
 
-<p><strong><code>HTMLInputElement.mozGetFileNameArray()</code></strong>メソッドはHTMLの<code>input</code>要素上でユーザーによって選択されたファイルの名前の配列を返します。</p>
+**`HTMLInputElement.mozGetFileNameArray()`** メソッドは、 HTML の `input` 要素上でユーザーによって選択されたファイルの名前の配列を返します。
 
-<div class="note"><strong>Note:</strong> このメソッドはGeckoに特有のものであり、他のブラウザでは利用できません。加えて、Webページで利用した場合にエラーが発生します。</div>
+> **Note:** このメソッドは Gecko に特有のものであり、他のブラウザーでは利用できません。加えて、ウェブページで利用した場合にエラーが発生します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">inputElement.mozGetFileNameArray(<em>aLength, aFileNames</em>);
-</pre>
+```js
+inputElement.mozGetFileNameArray(aLength, aFileNames);
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### 引数
 
-<dl>
- <dt><em>aLength</em></dt>
- <dd>If specified, will receive the number of file names in the returned array.</dd>
- <dt><em>aFileNames</em></dt>
- <dd>Is an array into which the file names are placed.</dd>
-</dl>
+- `aLength`
+  - : 指定された場合、返却される配列にあるファイル名の数を受け取ります。
+- `aFileNames`
+  - : ファイル名が配置される配列です。
 
-<ul>
-</ul>
+## 例
 
-<h2 id="Example" name="Example">例</h2>
-
-<pre class="brush:js">var numFiles = 0;
+```js
+var numFiles = 0;
 var fileArray = {};
 
 inputElement.mozGetFileNameArray(numFiles, fileArray);
-</pre>
+```
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## ブラウザーの互換性
 
-<p>Mozillaに特有のメソッドであり、どの仕様にも書かれていません。</p>
+{{Compat}}
 
-<h2 id="関連情報">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("input")}}</li>
- <li>{{domxref("HTMLInputElement")}}</li>
- <li>{{domxref("Input.mozSetFileNameArray")}}</li>
-</ul>
+- {{HTMLElement("input")}}
+- {{domxref("HTMLInputElement")}}
+- {{domxref("Input.mozSetFileNameArray")}}
