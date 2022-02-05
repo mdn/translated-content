@@ -1,138 +1,112 @@
 ---
-title: HTMLInputElement.webkitDirectory
-slug: Web/API/HTMLInputElement/webkitDirectory
+title: HTMLInputElement.webkitdirectory
+slug: Web/API/HTMLInputElement/webkitdirectory
 tags:
   - API
-  - File System API
-  - File and Directory Entries API
-  - Files
+  - ファイルシステム API
+  - ファイルとディレクトリー項目 API
+  - ファイル
   - HTML DOM
   - HTMLInputElement
-  - Non-standard
-  - Property
-  - Reference
+  - 標準外
+  - プロパティ
+  - リファレンス
   - Web
   - webkitdirectory
   - プロパティ
 translation_of: Web/API/HTMLInputElement/webkitdirectory
 ---
-<p>{{APIRef("HTML DOM")}}{{non-standard_header}}</p>
+{{APIRef("HTML DOM")}}{{non-standard_header}}
 
-<p><span class="seoSummary"><code><strong>HTMLInputElement.webkitDirectory</strong></code> プロパティで、 {{htmlattrxref("webkitdirectory", "input")}} という HTML 属性の値を反映し、 {{HTMLElement("input")}} 要素によってユーザーがファイルの代わりにディレクトリを選択できることを示します。ディレクトリが選択された場合、ディレクトリとその内容の階層構造が選択されたアイテムのセットに含まれます。選択されているファイルシステムのファイルアイテムは、 {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} を使用して受け取ることができます。</span></p>
+**`HTMLInputElement.webkitdirectory`** はプロパティで、 {{htmlattrxref("webkitdirectory", "input")}} という HTML 属性の値を反映し、 {{HTMLElement("input")}} 要素によってユーザーがファイルの代わりにディレクトリーを選択できることを示します。ディレクトリーが選択された場合、ディレクトリーとその内容の階層構造が選択されたアイテムのセットに含まれます。選択されているファイルシステムのファイルアイテムは、 {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} を使用して受け取ることができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"> <em>HTMLInputElement</em>.webkitdirectory = <em>boolValue</em></pre>
+```js
+ HTMLInputElement.webkitdirectory = boolValue
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>論理型で、 <code>true</code> は {{HTMLElement("input")}} 要素がディレクトリの身を選択することができることを、 <code>false</code> はファイルのみが選択できることを示します。</p>
+論理型で、 `true` は {{HTMLElement("input")}} 要素がディレクトリーのみを選択することができることを、 `false` はファイルのみが選択できることを示します。
 
-<h2 id="Understanding_the_results" name="Understanding_the_results">結果を理解する</h2>
+## 結果を理解する
 
-<p>ユーザーが選択を行った後、 <code>files</code> の中のそれぞれの {{domxref("File")}} オブジェクトは各自が {{domxref("File.webkitRelativePath")}} プロパティセットを持ち、ファイルが所在する位置が選択されたディレクトリの中の相対パスで設定されます。例えば、次のようなファイルシステムを考えてみてください。</p>
+ユーザーが選択を行った後、 `files` の中のそれぞれの {{domxref("File")}} オブジェクトは各自が {{domxref("File.webkitRelativePath")}} プロパティセットを持ち、ファイルが所在する位置が選択されたディレクトリーの中の相対パスで設定されます。例えば、次のようなファイルシステムを考えてみてください。
 
-<ul>
- <li>PhotoAlbums
-  <ul>
-   <li>Birthdays
-    <ul>
-     <li>Jamie's 1st birthday
-      <ul>
-       <li>PIC1000.jpg</li>
-       <li>PIC1004.jpg</li>
-       <li>PIC1044.jpg</li>
-      </ul>
-     </li>
-     <li>Don's 40th birthday
-      <ul>
-       <li>PIC2343.jpg</li>
-       <li>PIC2344.jpg</li>
-       <li>PIC2355.jpg</li>
-       <li>PIC2356.jpg</li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li>Vacations
-    <ul>
-     <li>Mars
-      <ul>
-       <li>PIC5533.jpg</li>
-       <li>PIC5534.jpg</li>
-       <li>PIC5556.jpg</li>
-       <li>PIC5684.jpg</li>
-       <li>PIC5712.jpg</li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+- PhotoAlbums
 
-<p>ユーザーが <code>PhotoAlbums</code> を選択すると、 files によって報告されるリストは上記のすべてのファイルに対する {{domxref("File")}} オブジェクトを含みます。 — しかし、ディレクトリは含みません。 <code>PIC2343.jpg</code> のエントリでは <code>webkitRelativePath</code> が <code>PhotoAlbums/Birthdays/Don's 40th birthday/PIC2343.jpg</code> となりますこれによって {{domxref("FileList")}} がフラットでも階層構造を知ることができます。</p>
+  - Birthdays
 
-<div class="note">
-<p><strong>メモ:</strong> <code>webkitRelativePath</code> の挙動は <em>Chromium &lt; 72</em> では異なります。詳しくは<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=124187">このバグ</a>を参照してください。</p>
-</div>
+    - Jamie's 1st birthday
 
-<h2 id="Example" name="Example">例</h2>
+      - PIC1000.jpg
+      - PIC1004.jpg
+      - PIC1044.jpg
 
-<p>この例では、ユーザーが1つまたは複数のディレクトリを選択することができるディレクトリピッカーが表示されます。 {{event("change")}} イベントが発生すると、選択されたディレクトリ階層ないのすべてのファイルを含むリストが生成され、表示されます。</p>
+    - Don's 40th birthday
 
-<h3 id="HTML_content">HTML content</h3>
+      - PIC2343.jpg
+      - PIC2344.jpg
+      - PIC2355.jpg
+      - PIC2356.jpg
 
-<pre class="brush: html">&lt;input type="file" id="filepicker" name="fileList" webkitdirectory multiple /&gt;
-&lt;ul id="listing"&gt;&lt;/ul&gt;</pre>
+  - Vacations
 
-<h3 id="JavaScript_content">JavaScript content</h3>
+    - Mars
 
-<pre class="brush: js">document.getElementById("filepicker").addEventListener("change", function(event) {
+      - PIC5533.jpg
+      - PIC5534.jpg
+      - PIC5556.jpg
+      - PIC5684.jpg
+      - PIC5712.jpg
+
+ユーザーが `PhotoAlbums` を選択すると、 files によって報告されるリストは上記のすべてのファイルに対する {{domxref("File")}} オブジェクトを含みます。 — しかし、ディレクトリーは含みません。 `PIC2343.jpg` の項目では `webkitRelativePath` が `PhotoAlbums/Birthdays/Don's 40th birthday/PIC2343.jpg` となります。これによって {{domxref("FileList")}} が平坦でも階層構造を知ることができます。
+
+> **Note:** `webkitRelativePath` の挙動は *Chromium 72 より前*では異なります。詳しくは[このバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=124187)を参照してください。
+
+## 例
+
+この例では、ユーザーが 1 つまたは複数のディレクトリーを選択することができるディレクトリーピッカーが表示されます。 {{domxref("HTMLElement/change_event", "change")}} イベントが発生すると、選択されたディレクトリー階層ないのすべてのファイルを含むリストが生成され、表示されます。
+
+### HTML コンテンツ
+
+```html
+<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+<ul id="listing"></ul>
+```
+
+### JavaScript コンテンツ
+
+```js
+document.getElementById("filepicker").addEventListener("change", function(event) {
   let output = document.getElementById("listing");
   let files = event.target.files;
 
-  for (let i=0; i&lt;files.length; i++) {
+  for (let i=0; i<files.length; i++) {
     let item = document.createElement("li");
     item.innerHTML = files[i].webkitRelativePath;
     output.appendChild(item);
   };
 }, false);
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('File System API', '#dom-htmlinputelement-webkitdirectory', 'webkitdirectory') }}</td>
-   <td>{{ Spec2('File System API') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p>This API has no official W3C or WHATWG specification.</p>
+この API は公式な W3C または WHATWG の仕様書にはありません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.HTMLInputElement.webkitdirectory")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
- <li>{{domxref("HTMLInputElement.webkitEntries")}}</li>
- <li>{{domxref("File.webkitRelativePath")}}</li>
-</ul>
+- [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
+- {{domxref("HTMLInputElement.webkitEntries")}}
+- {{domxref("File.webkitRelativePath")}}
