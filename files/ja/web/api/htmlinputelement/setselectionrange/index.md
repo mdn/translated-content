@@ -5,111 +5,82 @@ tags:
   - API
   - HTML DOM
   - HTMLInputElement
-  - Method
-  - Reference
-  - Text Field Selection API
+  - メソッド
+  - リファレンス
+  - テキスト欄選択 API
+browser-compat: api.HTMLInputElement.setSelectionRange
 translation_of: Web/API/HTMLInputElement/setSelectionRange
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLInputElement.setSelectionRange()</code></strong> 関数は{{HTMLElement("input")}}または、{{HTMLElement("textarea")}}要素に対して有効です。要素に対して任意の開始と末尾のポジションを設定することでテキストを選択状態にします。</p>
+**`HTMLInputElement.setSelectionRange()`** メソッドは、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の中で現在のテキストの選択範囲の開始位置と終了位置を設定します。
 
-<p>更に、より新しいブラウザでは選択する方向をも考慮する必要があります。つまり、ユーザーがクリックした後ドラッグして選択状態にする際のドラッグの方向が、はじめからなのか、おしりからなのか、考慮するということです。</p>
+オプションとして、新しいバージョンのブラウザーでは、選択が行われたとみなす方向を指定することができます。これにより、例えば、ユーザーが選択範囲を設定するのに、選択されたテキストの末尾から先頭に向けてクリックとドラッグが行われたことを示すことができます。
 
-<p>この関数はアップデートされ、<code>HTMLInputElement.selectionStart</code>, <code>selectionEnd</code>, and <code>selectionDirection</code>プロパティを一度に呼び出し更新することができます。</p>
+この関数は 1 回の呼び出しで、 `HTMLInputElement.selectionStart`, `selectionEnd`, `selectionDirection` の各プロパティを更新します。
 
-<p>Note that accordingly to the <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">WHATWG forms spec</a> <code>selectionStart</code>, <code>selectionEnd</code> properties and <code>setSelectionRange</code> method apply only to inputs of types text, search, URL, tel and password. Chrome, starting from version 33, throws an exception while accessing those properties and method on the rest of input types. For example, on input of type number: "Failed to read the 'selectionStart' property from 'HTMLInputElement': The input element's type ('number') does not support selection.".</p>
+[WHATWG フォーム仕様書](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)によると、 `selectionStart`, `selectionEnd` プロパティと `setSelectionRange` メソッドは、 text, search, URL, tel, password 型の入力欄にのみ適用されることに注意してください。 Chrome のバージョン 33 以降では、それ以外の入力型でこれらのプロパティとメソッドにアクセスすると例外が発生します。例えば、 `number` 型の入力欄では、 "Failed to read the 'selectionStart' property from 'HTMLInputElement': The input element's type ('number') does not support selection" （'HTMLInputElement' の 'selectionStart' プロパティを読み取りに失敗しました。この input 要素の入力型 ('number') は選択に対応していません）となります。
 
-<p> </p>
+input 要素の**すべて**のテキストを選択したい場合は、代わりに [HTMLInputElement.select()](/ja/docs/Web/API/HTMLInputElement/select) メソッドを使用してください。
 
-<h2 id="Syntax">Syntax</h2>
+## 構文
 
-<pre class="syntaxbox"><em>element</em>.setSelectionRange(<em>selectionStart</em>, <em>selectionEnd</em> [, <em>selectionDirection</em>]);
-</pre>
+```js
+element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### 引数
 
-<p><code>selectionEnd</code> が<code>selectionStart</code>より小さい場合、両方の値は<code>selectionEnd</code>として扱われます。</p>
+`selectionEnd` が `selectionStart` より小さい場合、両方の値は `selectionEnd` として扱われます。
 
-<dl>
- <dt><code>selectionStart</code></dt>
- <dd>0を基準とした選択状態の文字のインデックス。指定されたインデックスが文字の長さより長い場合は、文字の長さをインデックスに指定したものとみなされます。</dd>
- <dt><code>selectionEnd</code></dt>
- <dd>0を基準とした選択状態の最後の文字のインデックス。指定されたインデックスが文字の長さより長い場合は、文字の長さをインデックスに指定したものとみなされます。</dd>
- <dt><code>selectionDirection</code> {{optional_inline}}</dt>
- <dd>選択する際の方向を指定します。取りうる値は以下のとおりです。
- <ul>
-  <li><code>"forward"</code></li>
-  <li><code>"backward"</code></li>
-  <li><code>"none"</code> 選択する際の方向が指定されていない時です。デフォルト値になります。</li>
- </ul>
- </dd>
-</dl>
+- `selectionStart`
+  - : 選択する最初の文字の 0 から始まる位置です。位置が要素の値の長さよりも大きい場合は、要素の値の末尾の位置と見なされます。
+- `selectionEnd`
+  - : 選択する最後の文字の*次の* 0 から始まる位置です。位置が要素の長さよりも大きい場合は、要素の値の末尾の位置と見なされます。
+- `selectionDirection` {{optional_inline}}
 
-<h2 id="Example">Example</h2>
+  - : 選択が行われたと見なされる方向を示す文字列です。取りうる値は次の通りです。
 
-<p>サンプルの中のボタンをクリックすると、テキストボックスの３，４，５番目の文字が選択状態になります。 ("Mozilla"の"zil").</p>
+    - `"forward"`
+    - `"backward"`
+    - `"none"` 選択方向が不明または無関係な場合です。既定値です。
 
-<h3 id="HTML">HTML</h3>
+## 例
 
-<pre class="brush: html">&lt;input type="text" id="text-box" size="20" value="Mozilla"&gt;
-&lt;button onclick="selectText()"&gt;Select text&lt;/button&gt;
-</pre>
+この例の中のボタンをクリックすると、テキストボックスの 3、4、5 番目の文字（"Mozilla" の "zil"）が選択状態になります。
 
-<h3 id="JavaScript">JavaScript</h3>
+### HTML
 
-<pre class="brush: js">function selectText() {
+```html
+<input type="text" id="text-box" size="20" value="Mozilla">
+<button onclick="selectText()">テキストを選択</button>
+```
+
+### JavaScript
+
+```js
+function selectText() {
   const input = document.getElementById('text-box');
   input.focus();
   input.setSelectionRange(2, 5);
-}</pre>
+}
+```
 
-<h3 id="実行結果">実行結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "forms.html#dom-textarea/input-setselectionrange", "HTMLInputElement.setSelectionRange()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "forms.html#dom-textarea/input-setselectionrange", "HTMLInputElement.setSelectionRange()")}}</td>
-   <td>{{Spec2("HTML5.1")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "forms.html#dom-textarea/input-setselectionrange", "HTMLInputElement.setSelectionRange()")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.HTMLInputElement.setSelectionRange")}}</p>
-</div>
-
-<h2 id="参照">参照</h2>
-
-<ul>
- <li>{{HTMLElement("input")}}</li>
- <li>{{HTMLElement("textarea")}}</li>
- <li>{{domxref("HTMLInputElement")}}</li>
- <li>{{domxref("Selection")}}</li>
-</ul>
+- {{HTMLElement("input")}}
+- {{HTMLElement("textarea")}}
+- {{domxref("HTMLInputElement")}}
+- {{domxref("Selection")}}
