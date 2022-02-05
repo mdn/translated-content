@@ -1,26 +1,23 @@
 ---
 title: 425 Too Early
 slug: Web/HTTP/Status/425
-tags:
-  - Code de statut
-  - Erreur client
-  - HTTP
 translation_of: Web/HTTP/Status/425
+browser-compat: http.status.425
 ---
 {{SeeCompatTable}}{{HTTPSidebar}}
 
-Le code de réponse d’erreur HyperText Transfer Protocol (HTTP) **`425 Too Early`** signifie que le serveur refuse la requête qui a été récemment répétée par exemple de peur d’une attaque DDoS
+Le code de réponse d'erreur HTTP **`425 Too Early`** signifie que le serveur refuse la requête qui a été récemment répétée par exemple de peur d'une attaque par rejeu.
 
-## Status
+## Statut
 
-    425 Too Early
+```
+425 Too Early
+```
 
-## Specifications
+## Spécifications
 
-| Specification                                            | Title                    |
-| -------------------------------------------------------- | ------------------------ |
-| {{RFC("8470", "425: Early Data", "5.2")}} | Using Early Data in HTTP |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("http.status.425")}}
+{{Compat}}

@@ -2693,7 +2693,9 @@
 /ja/docs/Learn/HTML/Forms/Your_first_HTML_form	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/HTML/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form/Example
 /ja/docs/Learn/HTML/Introduction_to_HTML/高度なテキスト成型	/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-/ja/docs/Learn/JavaScript/Objects/継承	/ja/docs/Learn/JavaScript/Objects/Inheritance
+/ja/docs/Learn/JavaScript/Objects/Inheritance	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS	/ja/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
+/ja/docs/Learn/JavaScript/Objects/継承	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/非同期	/ja/docs/Learn/JavaScript/Asynchronous
 /ja/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/ja/docs/Web/Performance/How_browsers_work
 /ja/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry	/ja/docs/orphaned/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
@@ -3257,6 +3259,7 @@
 /ja/docs/Web/API/StorageEstimate/quota	/ja/docs/conflicting/Web/API/StorageManager/estimate_78aa4ffd4dfacc8f94d5c05d150d36ac
 /ja/docs/Web/API/StorageEstimate/usage	/ja/docs/conflicting/Web/API/StorageManager/estimate_9ffeea37c30a26922d3f1621912db8d8
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
+/ja/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ja/docs/conflicting/Web/API/Pointer_events
 /ja/docs/Web/API/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/Web/API/UserProximityEvent/near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/Web/API/VRDevice	/ja/docs/Web/API/VRDisplay
@@ -3279,6 +3282,9 @@
 /ja/docs/Web/API/VRLayer	/ja/docs/Web/API/VRLayerInit
 /ja/docs/Web/API/VRLayer/rightBounds	/ja/docs/Web/API/VRLayerInit/rightBounds
 /ja/docs/Web/API/VRLayer/source	/ja/docs/Web/API/VRLayerInit/source
+/ja/docs/Web/API/VideoTrackList/onaddtrack	/ja/docs/conflicting/Web/API/VideoTrackList/addtrack_event
+/ja/docs/Web/API/VideoTrackList/onchange	/ja/docs/conflicting/Web/API/VideoTrackList/change_event
+/ja/docs/Web/API/VideoTrackList/onremovetrack	/ja/docs/conflicting/Web/API/VideoTrackList/removetrack_event
 /ja/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ja/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ja/docs/Web/API/WebGL_API/Animating_textures_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
@@ -3623,6 +3629,7 @@
 /ja/docs/Web/CSS/-moz-zoom-out	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-ms-high-contrast	/ja/docs/Web/CSS/@media/-ms-high-contrast
 /ja/docs/Web/CSS/-ms-scroll-snap-type	/ja/docs/Web/CSS/scroll-snap-type
+/ja/docs/Web/CSS/-webkit-print-color-adjust	/ja/docs/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/:-moz-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/Web/CSS/:-ms-input-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/Web/CSS/:-webkit-autofill	/ja/docs/Web/CSS/:autofill
@@ -3689,6 +3696,7 @@
 /ja/docs/Web/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/Web/CSS/Getting_started/What_is_CSS	/ja/docs/Learn/CSS/First_steps/How_CSS_works
+/ja/docs/Web/CSS/List_of_Proprietary_CSS_Features	/ja/docs/conflicting/Web/CSS/Reference
 /ja/docs/Web/CSS/Media	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/Media/Visual	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/Motion_Path	/ja/docs/Web/CSS/CSS_Motion_Path
@@ -3726,6 +3734,7 @@
 /ja/docs/Web/CSS/box_model	/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /ja/docs/Web/CSS/calc	/ja/docs/Web/CSS/calc()
 /ja/docs/Web/CSS/clamp	/ja/docs/Web/CSS/clamp()
+/ja/docs/Web/CSS/color-adjust	/ja/docs/conflicting/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/conic-gradient	/ja/docs/Web/CSS/gradient/conic-gradient()
 /ja/docs/Web/CSS/conic-gradient()	/ja/docs/Web/CSS/gradient/conic-gradient()
 /ja/docs/Web/CSS/counter	/ja/docs/Web/CSS/counter()
@@ -3912,7 +3921,7 @@
 /ja/docs/Web/Guide/CSS/Using_multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/Web/Guide/DOM	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/Guide/DOM/Events/Touch_events	/ja/docs/Web/API/Touch_events
-/ja/docs/Web/Guide/DOM/Events/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ja/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
+/ja/docs/Web/Guide/DOM/Events/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ja/docs/conflicting/Web/API/Pointer_events
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history	/ja/docs/Web/API/History_API
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example	/ja/docs/Web/API/History_API/Example
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history/Working_with_the_History_API	/ja/docs/Web/API/History_API/Working_with_the_History_API

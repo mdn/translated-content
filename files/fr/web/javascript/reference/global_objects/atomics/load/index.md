@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/load
 ---
 {{JSRef}}
 
-La méthode statique **`Atomics`\*\***`.load()`\*\* renvoie une valeur située à une position donnée du tableau.
+La méthode statique **`Atomics.load()`** renvoie une valeur située à une position donnée du tableau.
 
 {{EmbedInteractiveExample("pages/js/atomics-load.html")}}
 

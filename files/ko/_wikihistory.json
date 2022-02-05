@@ -956,12 +956,6 @@
       "enfroze"
     ]
   },
-  "Glossary/Transmission_Control_Protocol_(TCP)": {
-    "modified": "2020-01-12T14:32:05.700Z",
-    "contributors": [
-      "doong-jo"
-    ]
-  },
   "Glossary/Truthy": {
     "modified": "2020-08-26T22:21:21.196Z",
     "contributors": [
@@ -2150,7 +2144,7 @@
       "dsma73"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-07-16T22:32:15.138Z",
     "contributors": [
       "youngdeok",
@@ -2168,15 +2162,6 @@
       "bjnhur",
       "JaeWorld",
       "ahnzaz"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-07-16T22:32:06.697Z",
-    "contributors": [
-      "alattalatta",
-      "beowolf9",
-      "lunarlit",
-      "dsma73"
     ]
   },
   "Learn/JavaScript/Objects/Object_prototypes": {
@@ -17379,6 +17364,12 @@
       "limkukhyun"
     ]
   },
+  "conflicting/Glossary/TCP": {
+    "modified": "2020-01-12T14:32:05.700Z",
+    "contributors": [
+      "doong-jo"
+    ]
+  },
   "conflicting/Learn": {
     "modified": "2020-07-16T22:22:13.258Z",
     "contributors": [
@@ -17474,6 +17465,15 @@
       "rinuel",
       "teoli",
       "JaehaAhn"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-07-16T22:32:06.697Z",
+    "contributors": [
+      "alattalatta",
+      "beowolf9",
+      "lunarlit",
+      "dsma73"
     ]
   },
   "conflicting/MDN/Tools": {

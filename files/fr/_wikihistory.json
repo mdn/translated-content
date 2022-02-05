@@ -2971,12 +2971,6 @@
       "Voulto"
     ]
   },
-  "Glossary/Transmission_Control_Protocol_(TCP)": {
-    "modified": "2019-09-13T20:23:27.919Z",
-    "contributors": [
-      "estelle"
-    ]
-  },
   "Glossary/Tree_shaking": {
     "modified": "2019-03-18T21:45:48.808Z",
     "contributors": [
@@ -5131,7 +5125,7 @@
       "mouffy"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-07-16T22:32:13.707Z",
     "contributors": [
       "franssu",
@@ -5155,22 +5149,6 @@
       "manuwhat",
       "sebastien_colbe",
       "darthyoh"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-07-16T22:32:05.419Z",
-    "contributors": [
-      "grandoc",
-      "FloppyJunior",
-      "vacarme",
-      "zoora",
-      "Jetinho",
-      "elWombator",
-      "manuwhat",
-      "antoninha",
-      "LDCL",
-      "Alpha",
-      "SphinxKnight"
     ]
   },
   "Learn/JavaScript/Objects/Object_building_practice": {
@@ -19572,12 +19550,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent": {
-    "modified": "2019-03-18T21:33:21.001Z",
-    "contributors": [
-      "CharlotteW"
-    ]
-  },
   "Web/API/Transferable": {
     "modified": "2020-10-15T21:33:28.712Z",
     "contributors": [
@@ -22739,14 +22711,6 @@
       "alhuno1"
     ]
   },
-  "Web/CSS/-webkit-print-color-adjust": {
-    "modified": "2020-10-15T21:28:10.335Z",
-    "contributors": [
-      "SphinxKnight",
-      "CuteRabbit",
-      "louuis"
-    ]
-  },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2019-04-26T02:53:32.938Z",
     "contributors": [
@@ -25402,13 +25366,6 @@
       "FredB"
     ]
   },
-  "Web/CSS/List_of_Proprietary_CSS_Features": {
-    "modified": "2019-04-06T13:18:27.677Z",
-    "contributors": [
-      "SphinxKnight",
-      "xdelatour"
-    ]
-  },
   "Web/CSS/Media_Queries": {
     "modified": "2019-06-03T14:19:49.928Z",
     "contributors": [
@@ -26825,12 +26782,6 @@
       "Fredchat",
       "Kyodev",
       "VincentN"
-    ]
-  },
-  "Web/CSS/color-adjust": {
-    "modified": "2020-10-15T22:07:37.043Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "Web/CSS/color_value": {
@@ -28847,6 +28798,14 @@
     "modified": "2020-10-15T21:46:27.417Z",
     "contributors": [
       "SphinxKnight"
+    ]
+  },
+  "Web/CSS/print-color-adjust": {
+    "modified": "2020-10-15T21:28:10.335Z",
+    "contributors": [
+      "SphinxKnight",
+      "CuteRabbit",
+      "louuis"
     ]
   },
   "Web/CSS/quotes": {
@@ -42419,6 +42378,12 @@
       "xdelatour"
     ]
   },
+  "conflicting/Glossary/TCP": {
+    "modified": "2019-09-13T20:23:27.919Z",
+    "contributors": [
+      "estelle"
+    ]
+  },
   "conflicting/Learn": {
     "modified": "2020-07-16T22:22:13.196Z",
     "contributors": [
@@ -42766,6 +42731,22 @@
       "Goofy"
     ]
   },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-07-16T22:32:05.419Z",
+    "contributors": [
+      "grandoc",
+      "FloppyJunior",
+      "vacarme",
+      "zoora",
+      "Jetinho",
+      "elWombator",
+      "manuwhat",
+      "antoninha",
+      "LDCL",
+      "Alpha",
+      "SphinxKnight"
+    ]
+  },
   "conflicting/Learn_370bfb0fa23e42f4384f010341852c43": {
     "modified": "2020-07-16T22:33:41.155Z",
     "contributors": [
@@ -43076,6 +43057,12 @@
       "SphinxKnight"
     ]
   },
+  "conflicting/Web/API/Pointer_events": {
+    "modified": "2019-03-18T21:33:21.001Z",
+    "contributors": [
+      "CharlotteW"
+    ]
+  },
   "conflicting/Web/API/Selection": {
     "modified": "2019-03-18T21:28:44.424Z",
     "contributors": [
@@ -43333,6 +43320,13 @@
       "Kyodev"
     ]
   },
+  "conflicting/Web/CSS/Reference": {
+    "modified": "2019-04-06T13:18:27.677Z",
+    "contributors": [
+      "SphinxKnight",
+      "xdelatour"
+    ]
+  },
   "conflicting/Web/CSS/border-collapse": {
     "modified": "2019-03-23T23:49:00.263Z",
     "contributors": [
@@ -43402,6 +43396,12 @@
     "contributors": [
       "mrstork",
       "ZorGleH"
+    ]
+  },
+  "conflicting/Web/CSS/print-color-adjust": {
+    "modified": "2020-10-15T22:07:37.043Z",
+    "contributors": [
+      "SphinxKnight"
     ]
   },
   "conflicting/Web/CSS/scroll-snap-type": {

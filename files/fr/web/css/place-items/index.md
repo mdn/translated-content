@@ -10,7 +10,7 @@ translation_of: Web/CSS/place-items
 ---
 {{CSSRef}}
 
-La propriété raccourcie **`place`\*\***`-items`\*\* définit les valeurs utilisées pour les propriétés {{cssxref("align-items")}} et {{cssxref("justify-items")}}. La première valeur fournie est utilisée pour `align-items` et la seconde est utilisée pour `justify-items`. S'il n'y a pas de seconde valeur fournie, c'est la première qui est reprise pour `justify-items`.
+La propriété raccourcie **`place-items`** définit les valeurs utilisées pour les propriétés {{cssxref("align-items")}} et {{cssxref("justify-items")}}. La première valeur fournie est utilisée pour `align-items` et la seconde est utilisée pour `justify-items`. S'il n'y a pas de seconde valeur fournie, c'est la première qui est reprise pour `justify-items`.
 
 {{EmbedInteractiveExample("pages/css/place-items.html")}}
 
@@ -55,7 +55,7 @@ place-items: unset;
     - Pour les dispositions en bloc, ce mot-clé est synonyme de `start`.
     - Pour les dispositions absolues, ce mot-clé se comporte comme `start` pour les éléments remplacés ou comme `stretch` pour tous les autres éléments.
     - Pour les cellules de tableaux, ce mot-clé n'a pas de sens et cette propriété est ignorée.
-    - Pour les dispositions utilisant des boîtes flexibles, ce mot-clé n'a pas de sens et cette propriété est ignorée*.*
+    - Pour les dispositions utilisant des boîtes flexibles, ce mot-clé n'a pas de sens et cette propriété est ignorée.
     - Pour les dispositions en grille, ce mot-clé se comporte comme `stretch` sauf pour les éléments qui ont des dimensions intrinsèques ou des contraintes de ratio, auquel cas cette valeur est synonyme de `start`.
 
 - `start`

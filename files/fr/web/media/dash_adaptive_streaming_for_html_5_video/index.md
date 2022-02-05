@@ -27,7 +27,7 @@ Pour commencer, il faut convertir la vidéo WebM en manifeste DASH avec les vid�
 
 ### 1. Utiliser un fichier WebM afin de créer une piste audio et plusieurs fichiers vidéo
 
-Dans les lignes d'exemple qui suivent, on utilise le fichier de départ** _in.video_**. Ce fichier peut être n'importe quel conteneur avec au moins un flux audio et un flux vidéo qui peut être décodé par ffmpeg.
+Dans les lignes d'exemple qui suivent, on utilise le fichier de départ **_in.video_**. Ce fichier peut être n'importe quel conteneur avec au moins un flux audio et un flux vidéo qui peut être décodé par ffmpeg.
 
 On créera la piste audio avec :
 

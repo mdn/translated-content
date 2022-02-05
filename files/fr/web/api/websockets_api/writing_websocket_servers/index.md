@@ -57,7 +57,7 @@ En sus, le serveur peut décider de proposer des extensions de protocoles ou des
 
 Ainsi si la clé (la valeur de l'entête du client) était "`dGhlIHNhbXBsZSBub25jZQ==`", le retour (_Accept \* dans la version d'origine du tutoriel_) sera : "`s3pPLMBiTxaQ9kYGzzhZRbK+xOo=`". Une fois que le serveur a envoyé les entêtes attendues, alors la poignée de mains est considérée comme effectuée et vous pouvez débuter l'échange de données !
 
-> **Note :** Le serveur peut envoyer à ce moment, d'autres entêtes comme par exemple Set-Cookie, ou demander une authenficiation ou encore une redirection via les codes standards HTTP et ce **\*avant** \*la fin du processus de poignée de main.
+> **Note :** Le serveur peut envoyer à ce moment, d'autres entêtes comme par exemple Set-Cookie, ou demander une authenficiation ou encore une redirection via les codes standards HTTP et ce **avant** la fin du processus de poignée de main.
 
 ### Suivre les clients confirmés 
 

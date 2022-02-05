@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/exchange
 ---
 {{JSRef}}
 
-La méthode statique **`Atomics`\*\***`.exchange()`\*\* permet d'enregistrer une valeur à une position donnée d'un tableau et de renvoyer l'ancienne valeur qui était contenue dans le tableau. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
+La méthode statique **`Atomics.exchange()`** permet d'enregistrer une valeur à une position donnée d'un tableau et de renvoyer l'ancienne valeur qui était contenue dans le tableau. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
 {{EmbedInteractiveExample("pages/js/atomics-exchange.html")}}
 

@@ -2328,7 +2328,7 @@
       "webfelipemaia"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-07-16T22:32:15.784Z",
     "contributors": [
       "WellingtonFR",
@@ -2341,14 +2341,6 @@
       "euvanribeiro",
       "WellingtonFR",
       "mateus1siqueira",
-      "greysonf"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-07-16T22:32:07.136Z",
-    "contributors": [
-      "rpizzolato",
-      "WellingtonFR",
       "greysonf"
     ]
   },
@@ -16316,6 +16308,14 @@
       "acaua",
       "FilipeLinhares",
       "augustowebd"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-07-16T22:32:07.136Z",
+    "contributors": [
+      "rpizzolato",
+      "WellingtonFR",
+      "greysonf"
     ]
   },
   "conflicting/MDN/Contribute/Getting_started": {

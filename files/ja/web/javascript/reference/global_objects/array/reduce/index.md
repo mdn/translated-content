@@ -16,47 +16,54 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/reduce
 ---
 {{JSRef}}
 
-**`reduce()`** メソッドは、配列のそれぞれの要素に対してユーザーが提供した「縮小」コールバック関数を呼び出します。その際、直前の要素における計算結果の返値を渡します。配列のすべての要素に対して縮小関数を実行した結果が単一の値が最終結果になります。
+**`reduce()`** メソッドは、配列のそれぞれの要素に対して、順番通りに、ユーザーが提供した「縮小」コールバック関数を呼び出します。その際、直前の要素における計算結果の返値を渡します。配列のすべての要素に対して縮小関数を実行した結果が単一の値が最終結果になります。
+
+コールバックの初回実行時には「直前の計算の返値」は存在しません。
+初期値が与えらえた場合は、代わりに使用されることがあります。
+そうでない場合は、配列の要素 0 が初期値として使用され、次の要素（0 の位置ではなく 1 の位置）から反復処理が開始されます。
 
 `reduce()` で一番わかりやすいのは、配列のすべての要素の和を返す場合でしょう。
 
-縮小関数は配列を要素ごとに走査し、それぞれの段階で、前の段階の結果に現在の配列の値を加えていきます (この結果は、それ以前のすべての段階を合算したものです)。
-
-次のインタラクティブサンプルで紹介します。
-
 {{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+
+縮小関数は配列を要素ごとに走査し、それぞれの段階で、前の段階の結果に現在の配列の値を加えていきます (この結果は、それ以前のすべての段階を合算したものです)。
 
 ## 構文
 
 ```js
 // アロー関数
-reduce((previousValue, currentValue) => { ... } )
-reduce((previousValue, currentValue, currentIndex) => { ... } )
-reduce((previousValue, currentValue, currentIndex, array) => { ... } )
-reduce((previousValue, currentValue, currentIndex, array) => { ... }, initialValue)
+reduce((previousValue, currentValue) => { /* ... */ } )
+reduce((previousValue, currentValue, currentIndex) => { /* ... */ } )
+reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ } )
+reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
 
 // コールバック関数
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
 
 // インラインコールバック関数
-reduce(function callbackFn(previousValue, currentValue) { ... })
-reduce(function callbackFn(previousValue, currentValue, currentIndex) { ... })
-reduce(function callbackFn(previousValue, currentValue, currentIndex, array){ ... })
-reduce(function callbackFn(previousValue, currentValue, currentIndex, array) { ... }, initialValue)
+reduce(function(previousValue, currentValue) { /* ... */ })
+reduce(function(previousValue, currentValue, currentIndex) { /* ... */ })
+reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
+reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ }, initialValue)
 ```
 
 ### 引数
 
 - `callbackFn`
   - : 4 つの引数を取る「縮小」関数です。
-    - *previousValue* (前回の `callbackfn` の呼び出し結果の値)
-    - *currentValue* (現在の要素の値)
-    - *currentIndex* (現在の位置) {{optional_inline}}
-    - *array* (走査する配列) {{optional_inline}}
+    - `previousValue`: 前回の `callbackFn` の呼び出し結果の値です。
+      初回の呼び出しでは `initalValue` が指定されていた場合はその値、そうでない場合は `array[0]` の値です。
+    - `currentValue`: 現在の要素の値です。
+      初回の呼び出しでは `initalValue` が指定された場合は `array[0]` の値であり、そうでない場合は `array[1]` の値です。
+    - `currentIndex`: 現在の位置です。
+      初回の呼び出しでは、 `initialValue` が指定された場合は `0`、そうでない場合は `1` です。
+    - `array`: 走査する配列です。
 
 - `initialValue` {{optional_inline}}
-  - : コールバックが初めて呼び出されたときの *previousValue* の初期値です。 `initialValue` が指定された場合は、 *currentValue* も配列の最初の値に初期化されます。 `initialValue` が指定され*なかった*場合、 *previousValue* は配列の最初の値で初期化され、 *currentValue* は配列の 2 番目の値で初期化されます。
+  - : コールバックが初めて呼び出されたときの *previousValue* の初期値です。
+    `initialValue` が指定された場合は、 `currentValue` も配列の最初の値に初期化されます。
+    `initialValue` が指定され*なかった*場合、 `previousValue` は配列の最初の値で初期化され、 `currentValue` は配列の 2 番目の値で初期化されます。
 
 ### 返値
 
@@ -64,7 +71,9 @@ reduce(function callbackFn(previousValue, currentValue, currentIndex, array) { .
 
 ### 例外
 
-{{jsxref("TypeError")}}: 配列に要素がなく、かつ `initialValue` が提供されなかった場合に発生します。
+- {{jsxref("TypeError")}}
+
+  - : 配列に要素がなく、かつ `initialValue` が提供されなかった場合に発生します。
 
 ## 解説
 
@@ -110,157 +119,161 @@ const getMax = (a, b) => Math.max(a, b);
 [      ].reduce(getMax);     // TypeError
 ```
 
-### reduce() の動作
+### 初期値がない場合の reduce() の動作
 
-`reduce()` を以下のように使うことを想像してください。
+下記のコードは、初期値がない場合に配列に `reduce()` を呼び出したときに何が起こるかを示します。
 
 ```js
-[0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, currentIndex, array) {
-  return previousValue + currentValue
-})
+const array = [15, 16, 17, 18, 19];
+
+function reducer(previous, current, index, array) {
+  const returns = previous + current;
+  console.log(`previous: ${previous}, current: ${current}, index: ${index}, returns: ${returns}`);
+  return returns;
+}
+
+array.reduce(reducer);
 ```
 
 コールバック関数は 4 回呼び出され、各回の引数の内容は以下のようになります。
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">
-				<code><var>callback</var></code> の反復処理
-			</th>
-			<th scope="col">
-				<code><var>previousValue</var></code>
-			</th>
-			<th scope="col">
-				<code><var>currentValue</var></code>
-			</th>
-			<th scope="col">
-				<code><var>currentIndex</var></code>
-			</th>
-			<th scope="col">
-				<code><var>array</var></code>
-			</th>
-			<th scope="col">返値</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th scope="row">初回の呼出し</th>
-			<td><code>0</code></td>
-			<td><code>1</code></td>
-			<td><code>1</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>1</code></td>
-		</tr>
-		<tr>
-			<th scope="row">2 回目の呼出し</th>
-			<td><code>1</code></td>
-			<td><code>2</code></td>
-			<td><code>2</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>3</code></td>
-		</tr>
-		<tr>
-			<th scope="row">3 回目の呼出し</th>
-			<td><code>3</code></td>
-			<td><code>3</code></td>
-			<td><code>3</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>6</code></td>
-		</tr>
-		<tr>
-			<th scope="row">4 回目の呼出し</th>
-			<td><code>6</code></td>
-			<td><code>4</code></td>
-			<td><code>4</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>10</code></td>
-		</tr>
-	</tbody>
+  <thead>
+    <tr>
+      <th scope="col">
+        <code><var>callback</var></code> の反復処理
+      </th>
+      <th scope="col">
+        <code><var>previousValue</var></code>
+      </th>
+      <th scope="col">
+        <code><var>currentValue</var></code>
+      </th>
+      <th scope="col">
+        <code><var>currentIndex</var></code>
+      </th>
+      <th scope="col">
+        <code><var>array</var></code>
+      </th>
+      <th scope="col">返値</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">初回の呼出し</th>
+      <td><code>15</code></td>
+      <td><code>16</code></td>
+      <td><code>1</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>31</code></td>
+    </tr>
+    <tr>
+      <th scope="row">2 回目の呼出し</th>
+      <td><code>31</code></td>
+      <td><code>17</code></td>
+      <td><code>2</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>48</code></td>
+    </tr>
+    <tr>
+      <th scope="row">3 回目の呼出し</th>
+      <td><code>48</code></td>
+      <td><code>18</code></td>
+      <td><code>3</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>66</code></td>
+    </tr>
+    <tr>
+      <th scope="row">4 回目の呼出し</th>
+      <td><code>66</code></td>
+      <td><code>19</code></td>
+      <td><code>4</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>85</code></td>
+    </tr>
+  </tbody>
 </table>
 
-`reduce()` の返値は、コールバック呼び出しの最後の返値である (`10`) となるでしょう。
+`reduce()` の返値は、コールバック呼び出しの最後の返値である (`85`) となるでしょう。
 
-通常の関数の代わりに{{jsxref("Functions/Arrow_functions", "アロー関数","",1)}}を指定することができます。下記のコードは上記のコードと同じ結果を返します。
 
-```js
-[0, 1, 2, 3, 4].reduce( (previousValue, currentValue, currentIndex, array) => previousValue + currentValue )
+### 初期値がある場合の reduce() の動作
+
+ここでは、同じアルゴリズムで同じ配列を減らしますが、 `reduce()` の 2 番目の引数として `10` という*初期値*を渡します。
 ```
 
-*initialValue* を `reduce()` の 2 つ目の引数に渡した場合は、結果は次のようになります。
-
 ```js
-[0, 1, 2, 3, 4].reduce((previousValue, currentValue, currentIndex, array) => {
-    return previousValue + currentValue
-}, 10)
+[15, 16, 17, 18, 19].reduce( (previousValue, currentValue, currentIndex, array) => previousValue + currentValue, 10 )
 ```
+
+コールバックは 5 回呼び出され、それぞれの呼び出しにおける引数と返値値は次のようになる。
 
 <table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">
-				<code><var>callback</var></code> の反復処理
-			</th>
-			<th scope="col">
-				<code><var>previousValue</var></code>
-			</th>
-			<th scope="col">
-				<code><var>currentValue</var></code>
-			</th>
-			<th scope="col">
-				<code><var>currentIndex</var></code>
-			</th>
-			<th scope="col">
-				<code><var>array</var></code>
-			</th>
-			<th scope="col">返値</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th scope="row">初回の呼出し</th>
-			<td><code>10</code></td>
-			<td><code>0</code></td>
-			<td><code>0</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>10</code></td>
-		</tr>
-		<tr>
-			<th scope="row">2 回目の呼出し</th>
-			<td><code>10</code></td>
-			<td><code>1</code></td>
-			<td><code>1</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>11</code></td>
-		</tr>
-		<tr>
-			<th scope="row">3 回目の呼出し</th>
-			<td><code>11</code></td>
-			<td><code>2</code></td>
-			<td><code>2</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>13</code></td>
-		</tr>
-		<tr>
-			<th scope="row">4 回目の呼出し</th>
-			<td><code>13</code></td>
-			<td><code>3</code></td>
-			<td><code>3</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>16</code></td>
-		</tr>
-		<tr>
-			<th scope="row">5 回目の呼出し</th>
-			<td><code>16</code></td>
-			<td><code>4</code></td>
-			<td><code>4</code></td>
-			<td><code>[0, 1, 2, 3, 4]</code></td>
-			<td><code>20</code></td>
-		</tr>
-	</tbody>
+  <thead>
+    <tr>
+      <th scope="col">
+        <code><var>callback</var></code> の反復処理
+      </th>
+      <th scope="col">
+        <code><var>previousValue</var></code>
+      </th>
+      <th scope="col">
+        <code><var>currentValue</var></code>
+      </th>
+      <th scope="col">
+        <code><var>currentIndex</var></code>
+      </th>
+      <th scope="col">
+        <code><var>array</var></code>
+      </th>
+      <th scope="col">返値</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">初回の呼出し</th>
+      <td><code>10</code></td>
+      <td><code>15</code></td>
+      <td><code>0</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>25</code></td>
+    </tr>
+    <tr>
+      <th scope="row">2 回目の呼出し</th>
+      <td><code>25</code></td>
+      <td><code>16</code></td>
+      <td><code>1</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>41</code></td>
+    </tr>
+    <tr>
+      <th scope="row">3 回目の呼出し</th>
+      <td><code>41</code></td>
+      <td><code>17</code></td>
+      <td><code>2</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>58</code></td>
+    </tr>
+    <tr>
+      <th scope="row">4 回目の呼出し</th>
+      <td><code>58</code></td>
+      <td><code>18</code></td>
+      <td><code>3</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>76</code></td>
+    </tr>
+    <tr>
+      <th scope="row">5 回目の呼出し</th>
+      <td><code>76</code></td>
+      <td><code>19</code></td>
+      <td><code>4</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>95</code></td>
+    </tr>
+  </tbody>
 </table>
 
-この場合の `reduce()` の返値は `20` となります。</p>
+この場合の `reduce()` の返値は `20` となります。
 
 ## 例
 
@@ -411,7 +424,7 @@ let allbooks = friends.reduce(function(previousValue, currentValue) {
 
 ### 配列内の重複要素を除去する
 
-> **Note:** {{jsxref("Set")}} と {{jsxref("Array.from()")}} に対応している環境を使っている場合は、`let orderedArray = Array.from(new Set(myArray))` を使うことで重複要素を除去された配列を取得することができます。
+> **Note:** {{jsxref("Set")}} と {{jsxref("Array.from()")}} に対応している環境を使っている場合は、`let arrayWithNoDuplicates = Array.from(new Set(myArray))` を使うことで重複要素を除去された配列を取得することができます。
 
 ```js
 let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
@@ -427,7 +440,7 @@ console.log(myArrayWithNoDuplicates)
 
 ### .filter().map() を .reduce() で置き換える
 
-{{jsxref("Array.filter()")}} を使用した後で {{jsxref("Array.map()")}} を使用すると配列を二度走査しますが、{{jsxref("Array.reduce()")}} では同じ効果を一度の操作で実現することができ、もっと効率的です。(for ループが好きなのであれば、{{jsxref("Array.forEach()")}} で一度の操作で filter と map を行うことができます)。
+{{jsxref("Array.filter()")}} を使用した後で {{jsxref("Array.map()")}} を使用すると配列を二度走査しますが、{{jsxref("Array.reduce()")}} では同じ効果を一度の操作で実現することができ、もっと効率的です。(`for` ループが好きなのであれば、{{jsxref("Array.forEach()")}} で一度の操作で filter と map を行うことができます)。
 
 ```js
 const numbers = [-5, 6, 2, 0,];
@@ -524,7 +537,7 @@ multiply24(10) // 240
 if (!Array.prototype.mapUsingReduce) {
   Array.prototype.mapUsingReduce = function(callback, initialValue) {
     return this.reduce(function(mappedArray, currentValue, currentIndex, array) {
-      mappedArray[index] = callback.call(initialValue, currentValue, currentIndex, array)
+      mappedArray[currentIndex] = callback.call(initialValue, currentValue, currentIndex, array)
       return mappedArray
     }, [])
   }

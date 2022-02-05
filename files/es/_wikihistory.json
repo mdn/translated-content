@@ -3249,7 +3249,7 @@
       "kevin-loal98"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-07-28T01:53:21.821Z",
     "contributors": [
       "Fernando-Funes",
@@ -3266,25 +3266,6 @@
       "jorgeCaster",
       "pmiranda-geo",
       "Enesimus"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-08-08T09:41:13.386Z",
-    "contributors": [
-      "Nachec",
-      "andyesp",
-      "Fernando-Funes",
-      "jhonarielgj",
-      "rimbener",
-      "ReneAG",
-      "EnekoOdoo",
-      "ivanagui2",
-      "cristianmarquezp",
-      "djdouta",
-      "paulaco",
-      "martinGerez",
-      "anyruizd",
-      "Michelangeur"
     ]
   },
   "Learn/JavaScript/Objects/Object_building_practice": {
@@ -9652,13 +9633,6 @@
       "pekechis"
     ]
   },
-  "Web/CSS/-webkit-print-color-adjust": {
-    "modified": "2019-03-23T22:35:50.908Z",
-    "contributors": [
-      "teoli",
-      "pekechis"
-    ]
-  },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2019-03-23T22:35:33.059Z",
     "contributors": [
@@ -12895,6 +12869,13 @@
       "teoli",
       "Mgjbot",
       "HenryGR"
+    ]
+  },
+  "Web/CSS/print-color-adjust": {
+    "modified": "2019-03-23T22:35:50.908Z",
+    "contributors": [
+      "teoli",
+      "pekechis"
     ]
   },
   "Web/CSS/quotes": {
@@ -21212,6 +21193,25 @@
       "arpunk",
       "inma_610",
       "StripTM"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-08-08T09:41:13.386Z",
+    "contributors": [
+      "Nachec",
+      "andyesp",
+      "Fernando-Funes",
+      "jhonarielgj",
+      "rimbener",
+      "ReneAG",
+      "EnekoOdoo",
+      "ivanagui2",
+      "cristianmarquezp",
+      "djdouta",
+      "paulaco",
+      "martinGerez",
+      "anyruizd",
+      "Michelangeur"
     ]
   },
   "conflicting/MDN/Contribute/Getting_started": {

@@ -20,7 +20,7 @@ Cet article fournit un exemple intéressant concret d'utilisation de l'élément
 
 ## Pourquoi ?
 
-Après avoir réalisé, à mon plus grand plaisir, que le sympathique élément `<canvas>` dont j'avais [entendu parler (en)](http://www.whatwg.org/specs/web-apps/current-work/#dynamic), non seulement allait être supporté par Firefox, mais était\* **\*déjà** supporté dans la version actuelle de Safari, je me devais de tenter une petite expérience.
+Après avoir réalisé, à mon plus grand plaisir, que le sympathique élément `<canvas>` dont j'avais [entendu parler (en)](http://www.whatwg.org/specs/web-apps/current-work/#dynamic), non seulement allait être supporté par Firefox, mais était **déjà** supporté dans la version actuelle de Safari, je me devais de tenter une petite expérience.
 
 La [présentation](/fr/docs/Web/HTML/Canvas) et le [tutoriel ](/fr/docs/Tutoriel_canvas)[](/fr/docs/Tutoriel_canvas)canvas que j'ai trouvé ici sur MDC sont excellents, mais personne n'a encore rien écrit sur l'animation, j'ai donc pensé porter un "raycaster" basique sur lequel j'avais travaillé il y a quelque temps, et voir quelle sorte de performance nous pouvions attendre d'un tampon de pixel écrit en JavaScript.
 

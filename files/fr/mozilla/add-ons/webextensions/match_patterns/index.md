@@ -95,7 +95,7 @@ La valeur du _chemin_ matches correspond à la chaîne de caractères qui est le
 
 Ni l'[identificateur de fragment d'URL](https://en.wikipedia.org/wiki/Fragment_identifier), ni le `#` qui le précède, ne sont considérés comme faisant partie du _chemin_.
 
-> **Note :** La chaîne de modèle de chemin d'accès ne doit pas inclure de numéro de port. Ajout d'un port, comme dans : _"http\://localhost:1234/\*"_ fait que le motif de match est ignoré. Cependant, "_http\://localhost:1234_" correspondra avec "\*http\://localhost/\*\*"
+> **Note :** La chaîne de modèle de chemin d'accès ne doit pas inclure de numéro de port. Ajout d'un port, comme dans : `http://localhost:1234/*` fait que le motif de match est ignoré. Cependant, `http://localhost:1234` correspondra avec `http://localhost/*`.
 
 ### \<all_urls>
 

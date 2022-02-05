@@ -51,7 +51,7 @@ Cette structure s'appelle **un ensemble de règles** (ou seulement « une règl
 - Sélecteur
   - : C'est le nom de l'élément HTML situé au début de l'ensemble de règles. Il permet de sélectionner les éléments sur lesquels appliquer le style souhaité (en l'occurence, les éléments `p`). Pour mettre en forme un élément différent, il suffit de changer le sélecteur.
 - Déclaration
-  - : C'est une règle simple comme `color: red;` qui détermine les **propriétés\*\*** \*\*de l'élément que l'on veut mettre en forme.
+  - : C'est une règle simple comme `color: red;` qui détermine les **propriétés** de l'élément que l'on veut mettre en forme.
 - Propriétés
   - : Les différentes façons dont on peut mettre en forme un élément HTML (dans ce cas, `color` est une propriété des éléments `p`). En CSS, vous choisissez les différentes propriétés que vous voulez utiliser dans une règle CSS.
 - Valeur de la propriété
@@ -144,7 +144,7 @@ Vous verrez rapidement qu'avec les CSS, tout tourne autour de boîtes : définir
 
 ![a big stack of boxes or crates sat on top of one another](boxes.jpg)
 
-C'est pour cette raison que l'architecture de CSS est principalement basée sur un _modèle de boîtes_.\* \*Chacun de ces blocs prend un certain espace sur la page, de cette façon :
+C'est pour cette raison que l'architecture de CSS est principalement basée sur un _modèle de boîtes_. Chacun de ces blocs prend un certain espace sur la page, de cette façon :
 
 - `padding`, l'espace autour, proche du contenu (par exemple, l'espace autour du texte d'un paragraphe) (en français, on pourrait traduire cela par du « remplissage » mais le terme _padding_ étant communément utilisé lorsqu'on parle de CSS, on continuera à utiliser ce terme)
 - `border`, la ligne qui est juste autour du _padding_ (en français cela correspond à la bordure)

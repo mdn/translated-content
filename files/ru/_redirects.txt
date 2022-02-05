@@ -223,11 +223,13 @@
 /ru/docs/Learn/How_the_Internet_works	/ru/docs/Learn/Common_questions/How_does_the_Internet_work
 /ru/docs/Learn/JavaScript/Asynchronous/Таймауты_и_интервалы	/ru/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 /ru/docs/Learn/JavaScript/Building_blocks/События	/ru/docs/Learn/JavaScript/Building_blocks/Events
+/ru/docs/Learn/JavaScript/Objects/Inheritance	/ru/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/ru/docs/Learn/JavaScript/Objects/Object-oriented_JS	/ru/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ru/docs/Learn/JavaScript/Объекты	/ru/docs/Learn/JavaScript/Objects
 /ru/docs/Learn/JavaScript/Объекты/Adding_bouncing_balls_features	/ru/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features
-/ru/docs/Learn/JavaScript/Объекты/Inheritance	/ru/docs/Learn/JavaScript/Objects/Inheritance
+/ru/docs/Learn/JavaScript/Объекты/Inheritance	/ru/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ru/docs/Learn/JavaScript/Объекты/JSON	/ru/docs/Learn/JavaScript/Objects/JSON
-/ru/docs/Learn/JavaScript/Объекты/Object-oriented_JS	/ru/docs/Learn/JavaScript/Objects/Object-oriented_JS
+/ru/docs/Learn/JavaScript/Объекты/Object-oriented_JS	/ru/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ru/docs/Learn/JavaScript/Объекты/Object_building_practice	/ru/docs/Learn/JavaScript/Objects/Object_building_practice
 /ru/docs/Learn/JavaScript/Объекты/Object_prototypes	/ru/docs/Learn/JavaScript/Objects/Object_prototypes
 /ru/docs/Learn/JavaScript/Объекты/Основы	/ru/docs/Learn/JavaScript/Objects/Basics
@@ -364,6 +366,7 @@
 /ru/docs/Web/API/PositionError	/ru/docs/Web/API/GeolocationPositionError
 /ru/docs/Web/API/PositionOptions	/ru/docs/conflicting/Web/API/Geolocation/getCurrentPosition
 /ru/docs/Web/API/RandomSource/getRandomValues	/ru/docs/Web/API/Crypto/getRandomValues
+/ru/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ru/docs/conflicting/Web/API/Pointer_events
 /ru/docs/Web/API/USB/onconnect	/ru/docs/Web/API/USB/connect_event
 /ru/docs/Web/API/USB/ondisconnect	/ru/docs/Web/API/USB/disconnect_event
 /ru/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context

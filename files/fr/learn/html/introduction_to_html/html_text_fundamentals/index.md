@@ -276,7 +276,7 @@ Les listes non-ordonnées sont utilisées pour représenter des listes d'éléme
     pain
     houmous
 
-Les listes non-ordonnées débutent par un élément {{htmlelement("ul")}} (**\*u**norderd **l**ist\*) qui enveloppe tous les éléments de la liste:
+Les listes non-ordonnées débutent par un élément {{htmlelement("ul")}} (**u**nordered **l**ist) qui enveloppe tous les éléments de la liste&nbsp;:
 
 ```html
 <ul>
@@ -287,7 +287,7 @@ houmous
 </ul>
 ```
 
-Chaque item est contenu dans un élément {{htmlelement("li")}} (**\*l**ist **i**tem\*):
+Chaque item est contenu dans un élément {{htmlelement("li")}} (**l**ist **i**tem)&nbsp;:
 
 ```html
 <ul>
@@ -437,7 +437,7 @@ Les listes ordonnées permettent de représenter des listes dans lesquelles l'or
     Tournez à gauche au troisième rond-point
     Roulez sur 300 mètres, l'école est sur votre droite
 
-Les balises suivent la même structure que pour les listes ordonnées, à cela près que la liste est contenue dans l'élément {{htmlelement("ol")}} (**\*o**rdered **l**ist\*), et non dans `<ul>`:
+Les balises suivent la même structure que pour les listes ordonnées, à cela près que la liste est contenue dans l'élément {{htmlelement("ol")}} (**o**rdered **l**ist), et non dans `<ul>`:
 
 ```html
 <ol>

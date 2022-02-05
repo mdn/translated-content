@@ -117,7 +117,7 @@ function updateClipboard(newClip) {
 
 > **Note :** Le nom de la permission `clipboard-write` n'est pas supporté actuellement dans Firefox - seulement les navigateurs Chromium.
 
-### \*\*\*Considérations spécifiques du navigateur
+### Considérations spécifiques du navigateur
 
 Le presse-papiers et les autres API impliquées ici évoluent rapidement, de sorte qu'il y a des variations entre les navigateurs quant à leur mode de fonctionnement.
 

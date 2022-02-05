@@ -39,14 +39,6 @@ Number.parseInt(string, radix)
 
 `radix` が `2` よりも小さいか `36` よりも大きい、または最初のホワイトスペース以外の文字が数値に変換できない場合は {{jsxref("NaN")}} が返されます。
 
-## ポリフィル
-
-```js
-if (Number.parseInt === undefined) {
-    Number.parseInt = window.parseInt
-}
-```
-
 ## 例
 
 ### Number.parseInt と parseInt

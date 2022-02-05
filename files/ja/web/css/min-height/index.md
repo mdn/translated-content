@@ -17,11 +17,11 @@ translation_of: Web/CSS/min-height
 ---
 {{CSSRef}}
 
-**`min-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最小幅を設定します。これは {{cssxref("height")}} プロパティの[使用値](/ja/docs/Web/CSS/used_value)が、`min-height` で指定した値を下回ることを防ぎます。
+**`min-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最小高を設定します。これは {{cssxref("height")}} プロパティの[使用値](/ja/docs/Web/CSS/used_value)が、`min-height` で指定した値を下回ることを防ぎます。
 
 {{EmbedInteractiveExample("pages/css/min-height.html")}}
 
-`min-height` の値が {{cssxref("max-height")}} および {{cssxref("height")}} の値より大きい場合は、`min-height` の値が要素の幅になります。
+`min-height` の値が {{cssxref("max-height")}} および {{cssxref("height")}} の値より大きい場合は、`min-height` の値が要素の高さになります。
 
 ## 構文
 

@@ -4716,7 +4716,7 @@
       "supermanbin"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-07-30T15:02:15.810Z",
     "contributors": [
       "Damoness",
@@ -4751,31 +4751,6 @@
       "1013940326",
       "xgqfrms-GitHub",
       "VtanSen"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-11-05T13:41:11.779Z",
-    "contributors": [
-      "ceociocto",
-      "Jepson",
-      "ChongyouXu",
-      "九千鸦",
-      "Catherine-G",
-      "voidxiaobei",
-      "oceanMIH",
-      "WindLo",
-      "real-Row",
-      "GKilyar",
-      "Ray-Eldath",
-      "HYdragon",
-      "GloryChou",
-      "1013940326",
-      "Viki-Zhang",
-      "Leivy",
-      "breakair",
-      "zhangyangcisco",
-      "cylmemory",
-      "keyulin"
     ]
   },
   "Learn/JavaScript/Objects/Object_building_practice": {
@@ -14073,12 +14048,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/GlobalEventHandlers/oncuechange": {
-    "modified": "2020-10-15T22:16:52.330Z",
-    "contributors": [
-      "c1er"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ondblclick": {
     "modified": "2019-03-24T00:18:08.191Z",
     "contributors": [
@@ -20421,6 +20390,12 @@
       "MCCF"
     ]
   },
+  "Web/API/TextTrack/cuechange_event": {
+    "modified": "2020-10-15T22:16:52.330Z",
+    "contributors": [
+      "c1er"
+    ]
+  },
   "Web/API/TimeRanges": {
     "modified": "2019-03-18T21:37:59.069Z",
     "contributors": [
@@ -20642,13 +20617,6 @@
   "Web/API/Touch_events/Multi-touch_interaction": {
     "modified": "2019-03-18T21:29:11.313Z",
     "contributors": [
-      "meteorlxy"
-    ]
-  },
-  "Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent": {
-    "modified": "2019-08-24T04:59:47.192Z",
-    "contributors": [
-      "ouxuwen",
       "meteorlxy"
     ]
   },
@@ -46769,6 +46737,31 @@
       "xcffl"
     ]
   },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-11-05T13:41:11.779Z",
+    "contributors": [
+      "ceociocto",
+      "Jepson",
+      "ChongyouXu",
+      "九千鸦",
+      "Catherine-G",
+      "voidxiaobei",
+      "oceanMIH",
+      "WindLo",
+      "real-Row",
+      "GKilyar",
+      "Ray-Eldath",
+      "HYdragon",
+      "GloryChou",
+      "1013940326",
+      "Viki-Zhang",
+      "Leivy",
+      "breakair",
+      "zhangyangcisco",
+      "cylmemory",
+      "keyulin"
+    ]
+  },
   "conflicting/Learn/Server-side/Django": {
     "modified": "2019-03-23T23:11:53.165Z",
     "contributors": [
@@ -47195,6 +47188,13 @@
       "teoli",
       "ziyunfei",
       "AlexChao"
+    ]
+  },
+  "conflicting/Web/API/Pointer_events": {
+    "modified": "2019-08-24T04:59:47.192Z",
+    "contributors": [
+      "ouxuwen",
+      "meteorlxy"
     ]
   },
   "conflicting/Web/API/Push_API": {

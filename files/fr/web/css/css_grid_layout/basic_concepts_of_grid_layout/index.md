@@ -394,7 +394,7 @@ Un élément peut s'étendre sur plusieurs cellules d'une rangée ou d'une colon
 
 ## Les gouttières
 
-Les _gouttière\*\*s_ entre les cellules sont définies à l'aide des propriétés {{cssxref("grid-column-gap")}} et {{cssxref("row-gap")}}, ou de la propriété raccourcie {{cssxref("gap")}}. Dans l'exemple ci-dessous nous créons une gouttière de dix pixels de large entre les colonnes, et une gouttière de 1em de hauteur entre les rangées.
+Les _gouttières_ entre les cellules sont définies à l'aide des propriétés {{cssxref("grid-column-gap")}} et {{cssxref("row-gap")}}, ou de la propriété raccourcie {{cssxref("gap")}}. Dans l'exemple ci-dessous nous créons une gouttière de dix pixels de large entre les colonnes, et une gouttière de 1em de hauteur entre les rangées.
 
 ```css
 .wrapper {

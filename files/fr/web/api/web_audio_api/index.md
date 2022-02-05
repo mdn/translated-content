@@ -40,37 +40,37 @@ Conteneurs et définitions qui donnent sa forme au graphe audio
 - {{domxref("AudioContext")}}
   - : Un objet **`AudioContext`** désigne un graphe de traitement audio construit à partir de modules reliés entre eux, chacun représenté par un noeud audio ({{domxref("AudioNode")}}). Le contexte audio contrôle la création des noeuds qu'il contient, ainsi que l'exécution du traitement audio, et du décodage. Il est nécessaire de créer un `AudioContext` avant de faire quoi que ce soit d'autre, puisque tout se passe dans un contexte.
 - {{domxref("AudioNode")}}
-  - : Un objet **`AudioNode`\*\*** \**est un module de traitement audio, tel qu'une *source audio* (c'est-à-dire un élément HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}}), une *destination audio*, un *module de traitement intermédiaire\* (par exemple un filtre {{domxref("BiquadFilterNode")}}), ou un contrôle du volume {{domxref("GainNode")}}).
+  - : Un objet **`AudioNode`** est un module de traitement audio, tel qu'une *source audio* (c'est-à-dire un élément HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}}), une *destination audio*, un module de traitement intermédiaire (par exemple un filtre {{domxref("BiquadFilterNode")}}), ou un contrôle du volume {{domxref("GainNode")}}).
 - {{domxref("AudioParam")}}
-  - : Un objet **`AudioParam`\*\*** \*\*est un paramètre audio, qui est lié à un {{domxref("AudioNode")}}. On peut lui assigner une valeur ou un changement de valeur, que l'on peut programmer à un moment spécifique et/ou selon un motif particulier.
+  - : Un objet **`AudioParam`** est un paramètre audio, qui est lié à un {{domxref("AudioNode")}}. On peut lui assigner une valeur ou un changement de valeur, que l'on peut programmer à un moment spécifique et/ou selon un motif particulier.
 - {{event("ended_(Web_Audio)", "ended")}} (event)
   - : L'évènement `ended` est diffusé lorsque la lecture s'arrête en arrivant à la fin d'un media.
 
 ### Définition des sources audio
 
 - {{domxref("OscillatorNode")}}
-  - : Un objet **`OscillatorNode`\*\*** \*\*est un module de traitement audio qui génère la création d'une onde sinusoïdale d'une certaine fréquence.
+  - : Un objet **`OscillatorNode`** est un module de traitement audio qui génère la création d'une onde sinusoïdale d'une certaine fréquence.
 - {{domxref("AudioBuffer")}}
   - : Un objet **`AudioBuffer`** est un petit morceau de contenu audio monté en mémoire. Il peut être créé à partir d'un fichier audio avec la méthode {{ domxref("AudioContext.decodeAudioData()") }}, ou à partir de données brutes en utilisant {{ domxref("AudioContext.createBuffer()") }}. Une fois décodé sous cette forme, la source audio peut être placée dans un {{ domxref("AudioBufferSourceNode") }}.
 - {{domxref("AudioBufferSourceNode")}}
   - : Un objet **`AudioBufferSourceNode`** est une source audio composée de données audio montées en mémoire dans un {{domxref("AudioBuffer")}}. C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
 - {{domxref("MediaElementAudioSourceNode")}}
-  - : Un objet **`MediaElementAudio`\*\***`SourceNode`\*\* est une source audio composée d'un élément  HTML5 {{ htmlelement("audio") }} ou {{ htmlelement("video") }}. C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
+  - : Un objet **`MediaElementAudio.SourceNode`** est une source audio composée d'un élément  HTML5 {{ htmlelement("audio") }} ou {{ htmlelement("video") }}. C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
 - {{domxref("MediaStreamAudioSourceNode")}}
-  - : Un objet **`MediaStreamAudio`\*\***`SourceNode`\*\* est une source audio composée d'un [WebRTC](/en-US/docs/WebRTC) {{domxref("MediaStream")}} (tel qu'une webcam ou un microphone). C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
+  - : Un objet **`MediaStreamAudio.SourceNode`** est une source audio composée d'un [WebRTC](/en-US/docs/WebRTC) {{domxref("MediaStream")}} (tel qu'une webcam ou un microphone). C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
 
 ### Définition des filtres d'effets audio
 
 - {{domxref("BiquadFilterNode")}}
-  - : Un objet **`BiquadFilterNode` **est un simple filtre de bas niveau. Il peut s'agir de différents types de filtres, contrôle du volume ou égaliseurs graphiques. Un `BiquadFilterNode` a toujours exactement une entrée et une sortie.
+  - : Un objet **`BiquadFilterNode`** est un simple filtre de bas niveau. Il peut s'agir de différents types de filtres, contrôle du volume ou égaliseurs graphiques. Un `BiquadFilterNode` a toujours exactement une entrée et une sortie.
 - {{domxref("ConvolverNode")}}
-  - : Un objet **`Convolver`\*\***`Node`\***\* **est un {{domxref("AudioNode")}} qui exécute une circonvolution linéaire sur un AudioBuffer donné, souvent utilisé pour créer un effet de réverbération.
+  - : Un objet **`Convolver.Node`** est un {{domxref("AudioNode")}} qui exécute une circonvolution linéaire sur un AudioBuffer donné, souvent utilisé pour créer un effet de réverbération.
 - {{domxref("DelayNode")}}
-  - : Un objet **`DelayNode`\*\*** \*\*est une ligne à retard numérique, c'est-à-dire un module de traitement automatique qui provoque un délai entre l'arrivée du son en entrée et sa propagation en sortie.
+  - : Un objet **`DelayNode`** est une ligne à retard numérique, c'est-à-dire un module de traitement automatique qui provoque un délai entre l'arrivée du son en entrée et sa propagation en sortie.
 - {{domxref("DynamicsCompressorNode")}}
   - : Un objet **`DynamicsCompressorNode`** permet un effet de compression, qui réduit le volume des parties les plus fortes du signal de façon à éviter les effets de clipping et la distortion qui peuvent se produire lorsque des sons multiples sont diffusés simultanément.
 - {{domxref("GainNode")}}
-  - : Un objet **`GainNode`\*\*** \** représente une modification du volume sonore. C'est un module de traitement audio qui provoque l'application d'un *gain\* aux données récupérées en entrée avant leur propagation vers la sortie.
+  - : Un objet **`GainNode`** représente une modification du volume sonore. C'est un module de traitement audio qui provoque l'application d'un *gain* aux données récupérées en entrée avant leur propagation vers la sortie.
 - {{domxref("WaveShaperNode")}}
   - : Un objet **`WaveShaperNode`** représente une distortion non linéaire. C'est un {{domxref("AudioNode")}} qui utilise une courbe pour appliquer au signal une distortion de mise en forme des ondes. En dehors de l'effet de distortion évident, il est souvent utilisé pour donner un caractère plus chaleureux au son.
 - {{domxref("PeriodicWave")}}
@@ -83,7 +83,7 @@ Une fois que le signal audio a été traité, ces interfaces définissent sa des
 - {{domxref("AudioDestinationNode")}}
   - : Un noeud **`AudioDestinationNode`** représente la destination finale d'une source audio source dans un contexte donné — en général les enceintes du matériel.
 - {{domxref("MediaStreamAudioDestinationNode")}}
-  - : Un noeud **`MediaStreamAudio`\*\***`DestinationNode`\*\* représente une destination audio constituée d'un {{domxref("MediaStream")}} [WebRTC](/en-US/docs/WebRTC) à une seule piste `AudioMediaStreamTrack`; il peut être utilisé de façon similaire à un {{domxref("MediaStream")}} obtenu avec {{ domxref("Navigator.getUserMedia") }}. C'est un {{domxref("AudioNode")}} qui se comporte comme une destination audio.
+  - : Un noeud **`MediaStreamAudio.DestinationNode`** représente une destination audio constituée d'un {{domxref("MediaStream")}} [WebRTC](/en-US/docs/WebRTC) à une seule piste `AudioMediaStreamTrack`; il peut être utilisé de façon similaire à un {{domxref("MediaStream")}} obtenu avec {{ domxref("Navigator.getUserMedia") }}. C'est un {{domxref("AudioNode")}} qui se comporte comme une destination audio.
 
 ### Analyse des données et visualisation
 
@@ -100,7 +100,7 @@ Une fois que le signal audio a été traité, ces interfaces définissent sa des
 ### Spatialisation audio
 
 - {{domxref("AudioListener")}}
-  - : Un objet **`AudioListener`\*\*** \*\*représente la position et l'orientation de l'unique personne écoutant la scene audio utilisée dans la spatialisation audio.
+  - : Un objet **`AudioListener`** représente la position et l'orientation de l'unique personne écoutant la scene audio utilisée dans la spatialisation audio.
 - {{domxref("PannerNode")}}
   - : Un noeud **`PannerNode`** représente le comportement d'un signal dans l'espace. C'est un module de traitement audio qui décrit sa position avec des coordonnées cartésiennes fondées sur la règle de la main droite; ses mouvements utilisent un vecteur de vélocité et sa directionnalité un cône de direction.
 
@@ -109,7 +109,7 @@ Une fois que le signal audio a été traité, ces interfaces définissent sa des
 > **Note :** Au jour de la publication de la spécification Web Audio API le 29 août 2014, ces fonctionnalités sont dépréciées, et seront bientôt remplacées par {{ anch("Audio_Workers") }}.
 
 - {{domxref("ScriptProcessorNode")}}
-  - : Un noeud **`ScriptProcessorNode`\*\*** \*\*permet de générer, traiter ou analyser du son avec JavaScript. C'est un module de traitement audio qui est lié à deux buffers, l'un en entrée, et l'autre en sortie. Un évènement implémentant {{domxref("AudioProcessingEvent")}} est envoyé à l'objet à chaque fois que le buffer d'entrée reçoit de nouvelles données, et le gestionnaire d'évènement prend fin lorsque les nouvelles données ont été communiquées au buffer de sortie.
+  - : Un noeud **`ScriptProcessorNode`** permet de générer, traiter ou analyser du son avec JavaScript. C'est un module de traitement audio qui est lié à deux buffers, l'un en entrée, et l'autre en sortie. Un évènement implémentant {{domxref("AudioProcessingEvent")}} est envoyé à l'objet à chaque fois que le buffer d'entrée reçoit de nouvelles données, et le gestionnaire d'évènement prend fin lorsque les nouvelles données ont été communiquées au buffer de sortie.
 - {{event("audioprocess")}} (event)
   - : L'évènement `audioprocess` est émis lorsque le buffer d'entrée d'un {{domxref("ScriptProcessorNode")}} de la Web Audio API est prêt à être traité.
 - {{domxref("AudioProcessingEvent")}}

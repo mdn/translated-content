@@ -25,7 +25,7 @@ Number.parseFloat(string)
 ### 매개변수
 
 - `string`
-  - : 파싱할 값입니다. 문자열이 아닐 경우 [`ToString`](https://tc39.es/ecma262/#sec-tostring) 추상 연산을 사용해 문자열로 변환합니다. 문자열의 선행 공백은 무시합니다.
+  - : 파싱할 값입니다. 문자열이 아닐 경우 [`ToString`](https://tc39.es/ecma262/#sec-tostring) 추상 연산을 사용해 문자열로 변환합니다. 문자열의 선행 {{glossary("whitespace", "공백")}}은 무시합니다.
 
 ### 반환 값
 

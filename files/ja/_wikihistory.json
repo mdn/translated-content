@@ -5531,7 +5531,7 @@
       "chameleonhead"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-12-12T19:47:14.522Z",
     "contributors": [
       "eldesh",
@@ -5552,19 +5552,6 @@
       "Uemmra3",
       "i12o",
       "r-tamura"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-12-06T14:17:48.495Z",
-    "contributors": [
-      "eldesh",
-      "silverskyvicto",
-      "mfuji09",
-      "JuthaDDA",
-      "Uemmra3",
-      "hamasaki",
-      "kenji-yamasaki",
-      "sii"
     ]
   },
   "Learn/JavaScript/Objects/Object_building_practice": {
@@ -22513,13 +22500,6 @@
       "Potappo"
     ]
   },
-  "Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent": {
-    "modified": "2019-03-18T20:45:32.564Z",
-    "contributors": [
-      "mfuji09",
-      "YuichiNukiyama"
-    ]
-  },
   "Web/API/TrackEvent": {
     "modified": "2020-10-15T22:19:11.950Z",
     "contributors": [
@@ -23201,24 +23181,6 @@
   },
   "Web/API/VideoTrackList/length": {
     "modified": "2020-10-15T22:19:20.445Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/VideoTrackList/onaddtrack": {
-    "modified": "2020-10-15T22:19:19.142Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/VideoTrackList/onchange": {
-    "modified": "2020-10-15T22:19:29.008Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/VideoTrackList/onremovetrack": {
-    "modified": "2020-10-15T22:19:28.819Z",
     "contributors": [
       "Wind1808"
     ]
@@ -26853,12 +26815,6 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/-webkit-print-color-adjust": {
-    "modified": "2020-10-15T22:16:00.721Z",
-    "contributors": [
-      "isudzumi"
-    ]
-  },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2019-04-25T10:41:36.517Z",
     "contributors": [
@@ -28989,12 +28945,6 @@
       "haccy"
     ]
   },
-  "Web/CSS/List_of_Proprietary_CSS_Features": {
-    "modified": "2019-03-18T21:33:15.134Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/CSS/Media_Queries/Testing_media_queries": {
     "modified": "2020-10-15T21:07:28.863Z",
     "contributors": [
@@ -30297,12 +30247,6 @@
       "sosleepy",
       "Level",
       "Marsf"
-    ]
-  },
-  "Web/CSS/color-adjust": {
-    "modified": "2020-10-15T22:13:00.476Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "Web/CSS/color_value": {
@@ -32257,6 +32201,12 @@
       "teoli",
       "ethertank",
       "sosleepy"
+    ]
+  },
+  "Web/CSS/print-color-adjust": {
+    "modified": "2020-10-15T22:16:00.721Z",
+    "contributors": [
+      "isudzumi"
     ]
   },
   "Web/CSS/quotes": {
@@ -48462,6 +48412,19 @@
       "momdo"
     ]
   },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-12-06T14:17:48.495Z",
+    "contributors": [
+      "eldesh",
+      "silverskyvicto",
+      "mfuji09",
+      "JuthaDDA",
+      "Uemmra3",
+      "hamasaki",
+      "kenji-yamasaki",
+      "sii"
+    ]
+  },
   "conflicting/MDN/Contribute/Markdown_in_MDN": {
     "modified": "2020-09-30T15:30:25.061Z",
     "contributors": [
@@ -48515,6 +48478,13 @@
       "e53e04ac"
     ]
   },
+  "conflicting/Web/API/Pointer_events": {
+    "modified": "2019-03-18T20:45:32.564Z",
+    "contributors": [
+      "mfuji09",
+      "YuichiNukiyama"
+    ]
+  },
   "conflicting/Web/API/StorageManager/estimate": {
     "modified": "2020-10-15T22:20:05.823Z",
     "contributors": [
@@ -48533,6 +48503,24 @@
     "modified": "2020-10-15T22:20:08.494Z",
     "contributors": [
       "Uemmra3",
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/VideoTrackList/addtrack_event": {
+    "modified": "2020-10-15T22:19:19.142Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/VideoTrackList/change_event": {
+    "modified": "2020-10-15T22:19:29.008Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/VideoTrackList/removetrack_event": {
+    "modified": "2020-10-15T22:19:28.819Z",
+    "contributors": [
       "Wind1808"
     ]
   },
@@ -48609,12 +48597,24 @@
       "sosleepy"
     ]
   },
+  "conflicting/Web/CSS/Reference": {
+    "modified": "2019-03-18T21:33:15.134Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
   "conflicting/Web/CSS/cursor": {
     "modified": "2020-12-06T14:47:19.654Z",
     "contributors": [
       "mfuji09",
       "ExE-Boss",
       "hommaam"
+    ]
+  },
+  "conflicting/Web/CSS/print-color-adjust": {
+    "modified": "2020-10-15T22:13:00.476Z",
+    "contributors": [
+      "mfuji09"
     ]
   },
   "conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {

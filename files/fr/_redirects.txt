@@ -1650,7 +1650,7 @@
 /fr/docs/Glossaire/Texte_brut	/fr/docs/Glossary/Plaintext
 /fr/docs/Glossaire/Three_js	/fr/docs/Glossary/Three_js
 /fr/docs/Glossaire/Time_to_interactive	/fr/docs/Glossary/Time_to_interactive
-/fr/docs/Glossaire/Transmission_Control_Protocol_(TCP)	/fr/docs/Glossary/Transmission_Control_Protocol_(TCP)
+/fr/docs/Glossaire/Transmission_Control_Protocol_(TCP)	/fr/docs/conflicting/Glossary/TCP
 /fr/docs/Glossaire/Tree_shaking	/fr/docs/Glossary/Tree_shaking
 /fr/docs/Glossaire/Tri_par_cartes	/fr/docs/Glossary/Card_sorting
 /fr/docs/Glossaire/Trident	/fr/docs/Glossary/Trident
@@ -1750,6 +1750,7 @@
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/orphaned/Glossary/Modern_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
 /fr/docs/Glossary/Origine	/fr/docs/Glossary/Origin
+/fr/docs/Glossary/Transmission_Control_Protocol_(TCP)	/fr/docs/conflicting/Glossary/TCP
 /fr/docs/Guide_JavaScript_1.5/Aperçu_de_JavaScript	/fr/docs/conflicting/Web/JavaScript/Guide/Introduction_6f341ba6db4b060ccbd8dce4a0d5214b
 /fr/docs/Guide_JavaScript_1.5/Boucles/L'instruction_break	/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /fr/docs/Guide_JavaScript_1.5/Boucles/L'instruction_do...while	/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
@@ -3000,8 +3001,10 @@
 /fr/docs/Learn/JavaScript/First_steps/methode_chaine_utile	/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods
 /fr/docs/Learn/JavaScript/First_steps/tableaux	/fr/docs/Learn/JavaScript/First_steps/Arrays
 /fr/docs/Learn/JavaScript/Objects/Ajouter_des_fonctionnalités_à_notre_démo_de_balles_rebondissantes	/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features
-/fr/docs/Learn/JavaScript/Objects/Heritage	/fr/docs/Learn/JavaScript/Objects/Inheritance
-/fr/docs/Learn/JavaScript/Objects/JS_orienté-objet	/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS
+/fr/docs/Learn/JavaScript/Objects/Heritage	/fr/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/fr/docs/Learn/JavaScript/Objects/Inheritance	/fr/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/fr/docs/Learn/JavaScript/Objects/JS_orienté-objet	/fr/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
+/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS	/fr/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /fr/docs/Learn/JavaScript/Objects/Prototypes_Objet	/fr/docs/Learn/JavaScript/Objects/Object_prototypes
 /fr/docs/Learn/JavaScript/Objects/la_construction_d_objet_en_pratique	/fr/docs/Learn/JavaScript/Objects/Object_building_practice
 /fr/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/fr/docs/Web/Performance/How_browsers_work
@@ -3722,6 +3725,7 @@
 /fr/docs/Web/API/ServiceWorkerState	/fr/docs/orphaned/Web/API/ServiceWorkerState
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/conflicting/Web/API/Window/localStorage
 /fr/docs/Web/API/StorageEstimate	/fr/docs/conflicting/Web/API/StorageManager/estimate
+/fr/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/fr/docs/conflicting/Web/API/Pointer_events
 /fr/docs/Web/API/ULongRange	/fr/docs/conflicting/Web/API/MediaTrackConstraints
 /fr/docs/Web/API/URL.createObjectURL	/fr/docs/Web/API/URL/createObjectURL
 /fr/docs/Web/API/URLUtilsReadOnly	/fr/docs/orphaned/Web/API/URLUtilsReadOnly
@@ -3902,6 +3906,7 @@
 /fr/docs/Web/CSS/-ms-scroll-snap-type	/fr/docs/conflicting/Web/CSS/scroll-snap-type
 /fr/docs/Web/CSS/-ms-user-select	/fr/docs/conflicting/Web/CSS/user-select
 /fr/docs/Web/CSS/-webkit-mask-image	/fr/docs/conflicting/Web/CSS/mask-image
+/fr/docs/Web/CSS/-webkit-print-color-adjust	/fr/docs/Web/CSS/print-color-adjust
 /fr/docs/Web/CSS/:-moz-placeholder	/fr/docs/Web/CSS/:placeholder-shown
 /fr/docs/Web/CSS/:-moz-ui-invalid	/fr/docs/Web/CSS/:user-invalid
 /fr/docs/Web/CSS/:-moz-ui-valid	/fr/docs/orphaned/Web/CSS/:-moz-ui-valid
@@ -4108,7 +4113,8 @@
 /fr/docs/Web/CSS/Layout_cookbook/Navigation_Breadcrumb	/fr/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 /fr/docs/Web/CSS/Layout_cookbook/Navigation_segmentée	/fr/docs/Web/CSS/Layout_cookbook/Split_Navigation
 /fr/docs/Web/CSS/Les_variables_CSS	/fr/docs/Web/CSS/Using_CSS_custom_properties
-/fr/docs/Web/CSS/Liste_de_Fonctionnalités_CSS_Propriétaires	/fr/docs/Web/CSS/List_of_Proprietary_CSS_Features
+/fr/docs/Web/CSS/List_of_Proprietary_CSS_Features	/fr/docs/conflicting/Web/CSS/Reference
+/fr/docs/Web/CSS/Liste_de_Fonctionnalités_CSS_Propriétaires	/fr/docs/conflicting/Web/CSS/Reference
 /fr/docs/Web/CSS/Liste_propriétés_CSS_animées	/fr/docs/Web/CSS/CSS_animated_properties
 /fr/docs/Web/CSS/Mode_de_mise_en_page	/fr/docs/Web/CSS/Layout_mode
 /fr/docs/Web/CSS/Modèle_de_boîte	/en-US/docs/Learn/CSS/Building_blocks/The_box_model
@@ -4181,6 +4187,7 @@
 /fr/docs/Web/CSS/auto	/fr/docs/conflicting/Web/CSS/width
 /fr/docs/Web/CSS/calc	/fr/docs/Web/CSS/calc()
 /fr/docs/Web/CSS/clamp	/fr/docs/Web/CSS/clamp()
+/fr/docs/Web/CSS/color-adjust	/fr/docs/conflicting/Web/CSS/print-color-adjust
 /fr/docs/Web/CSS/conic-gradient	/fr/docs/orphaned/Web/CSS/conic-gradient()
 /fr/docs/Web/CSS/conic-gradient()	/fr/docs/orphaned/Web/CSS/conic-gradient()
 /fr/docs/Web/CSS/counter	/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
@@ -4354,7 +4361,7 @@
 /fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events	/fr/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /fr/docs/Web/Guide/DOM/Events/Les_données_d_orientation_et_de_mouvement_expliquées	/fr/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained
 /fr/docs/Web/Guide/DOM/Events/Touch_events	/fr/docs/Web/API/Touch_events
-/fr/docs/Web/Guide/DOM/Events/Touch_events/Gérer_à_la_fois_événement_tactile_et_événement_de_la_souris	/fr/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
+/fr/docs/Web/Guide/DOM/Events/Touch_events/Gérer_à_la_fois_événement_tactile_et_événement_de_la_souris	/fr/docs/conflicting/Web/API/Pointer_events
 /fr/docs/Web/Guide/DOM/Manipuler l'historique du navigateur	/fr/docs/Web/API/History_API
 /fr/docs/Web/Guide/DOM/Manipuler l'historique du navigateur/Example	/fr/docs/Web/API/History_API/Example
 /fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur	/fr/docs/Web/API/History_API

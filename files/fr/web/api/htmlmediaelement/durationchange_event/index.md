@@ -3,7 +3,7 @@ title: 'HTMLMediaElement: durationchange'
 slug: Web/API/HTMLMediaElement/durationchange_event
 translation_of: Web/API/HTMLMediaElement/durationchange_event
 ---
-L'évènement **`durationchange` **est déclenché quand l'attribut de durée est mis à jour.
+L'évènement **`durationchange`** est déclenché quand l'attribut de durée est mis à jour.
 
 ## Informations générales
 

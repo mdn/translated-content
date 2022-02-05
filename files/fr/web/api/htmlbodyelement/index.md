@@ -10,7 +10,7 @@ translation_of: Web/API/HTMLBodyElement
 ---
 {{APIRef("HTML DOM")}}
 
-L'interface **`HTMLBodyElement` **des propriétés particulières (au-delà de celles de l'interface {{ domxref("HTMLElement") }} dont-elle hérite également) pour manipuler les éléments.
+L'interface **`HTMLBodyElement`** des propriétés particulières (au-delà de celles de l'interface {{ domxref("HTMLElement") }} dont-elle hérite également) pour manipuler les éléments.
 
 ## propriétés
 
@@ -31,11 +31,11 @@ _Propriétés hérite de son parent, {{domxref("HTMLElement")}} et de {{domxref(
 
 ## méthodes
 
-_Aucune méthode spécifique; méthodes hérite de ses parents, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}\*\*._
+_Aucune méthode spécifique; méthodes hérite de ses parents, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
 
 ## Les gestionnaires d'événements
 
-_Pas de gestionnaire d'événement spécifique; gestionnaires d'événements hérite de ses parents, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}\*\*._
+_Pas de gestionnaire d'événement spécifique; gestionnaires d'événements hérite de ses parents, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("WindowEventHandlers.onafterprint")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code d'appel lorsque l'événement {{event("afterprint")}} est déclenché.

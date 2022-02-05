@@ -308,7 +308,7 @@ Les propriétés suivantes peuvent être utilisées avec le préfixe `-webkit-` 
 - {{CSSxRef("-webkit-animation-name")}}
 - {{CSSxRef("-webkit-animation-play-state")}}
 - {{CSSxRef("-webkit-animation-timing-function")}}
-- {{CSSxRef("-webkit-appearance")}}\*
+- {{CSSxRef("-webkit-appearance")}}
 
 ### B
 
@@ -320,11 +320,11 @@ Les propriétés suivantes peuvent être utilisées avec le préfixe `-webkit-` 
 - {{CSSxRef("-webkit-border-bottom-right-radius")}}
 - {{CSSxRef("-webkit-border-image")}}
 - {{CSSxRef("-webkit-border-radius")}}
-- {{CSSxRef("-webkit-box-align")}}\*\*, \*\*\*
-- {{CSSxRef("-webkit-box-direction")}}\*\*, \*\*\*
-- {{CSSxRef("-webkit-box-flex")}}\*\*, \*\*\*
-- {{CSSxRef("-webkit-box-orient")}}\*\*, \*\*\*
-- {{CSSxRef("-webkit-box-pack")}}\*\*, \*\*\*
+- {{CSSxRef("-webkit-box-align")}}
+- {{CSSxRef("-webkit-box-direction")}}
+- {{CSSxRef("-webkit-box-flex")}}
+- {{CSSxRef("-webkit-box-orient")}}
+- {{CSSxRef("-webkit-box-pack")}}
 - {{CSSxRef("-webkit-box-shadow")}}
 - {{CSSxRef("-webkit-box-sizing")}}
 - {{CSSxRef("-webkit-border-top-left-radius")}}
@@ -349,12 +349,12 @@ Les propriétés suivantes peuvent être utilisées avec le préfixe `-webkit-` 
 
 - {{CSSxRef("-webkit-mask")}}
 - {{CSSxRef("-webkit-mask-clip")}}
-- {{CSSxRef("-webkit-mask-composite")}}\*
+- {{CSSxRef("-webkit-mask-composite")}}
 - {{CSSxRef("-webkit-mask-image")}}
 - {{CSSxRef("-webkit-mask-origin")}}
 - {{CSSxRef("-webkit-mask-position")}}
-- {{CSSxRef("-webkit-mask-position-x")}}\*\*
-- {{CSSxRef("-webkit-mask-position-y")}}\*\*
+- {{CSSxRef("-webkit-mask-position-x")}}
+- {{CSSxRef("-webkit-mask-position-y")}}
 - {{CSSxRef("-webkit-mask-repeat")}}
 - {{CSSxRef("-webkit-mask-size")}}
 
@@ -366,11 +366,11 @@ Les propriétés suivantes peuvent être utilisées avec le préfixe `-webkit-` 
 
 ### T
 
-- {{CSSxRef("-webkit-text-fill-color")}}\*\*
+- {{CSSxRef("-webkit-text-fill-color")}}
 - {{CSSxRef("-webkit-text-size-adjust")}}
-- {{CSSxRef("-webkit-text-stroke")}}\*\*
-- {{CSSxRef("-webkit-text-stroke-color")}}\*\*
-- {{CSSxRef("-webkit-text-stroke-width")}}\*\*
+- {{CSSxRef("-webkit-text-stroke")}}
+- {{CSSxRef("-webkit-text-stroke-color")}}
+- {{CSSxRef("-webkit-text-stroke-width")}}
 - {{CSSxRef("-webkit-transform")}}
 - {{CSSxRef("-webkit-transform-origin")}}
 - {{CSSxRef("-webkit-transition")}}
@@ -383,20 +383,18 @@ Les propriétés suivantes peuvent être utilisées avec le préfixe `-webkit-` 
 
 - {{CSSxRef("-webkit-user-select")}}
 
-\* Prise en charge avec les préfixes `-moz-` et `-webkit-` dans Firefox mais pas pris en charge sans préfixe. Microsoft Edge et IE Mobile prennent en charge cette propriété avec le préfixe `-webkit-` plutôt qu'avec `-ms-` à des fins d'interopérabilité.
-\*\* Ces valeurs sont prises en charges bien qu'elles ne soient pas standard et qu'elles ne soient pas en cours de standardisation.
-\*\*\* On privliégiera l'utilisation des propriétés `flex-box`.
+Prise en charge avec les préfixes `-moz-` et `-webkit-` dans Firefox mais pas pris en charge sans préfixe. Microsoft Edge et IE Mobile prennent en charge cette propriété avec le préfixe `-webkit-` plutôt qu'avec `-ms-` à des fins d'interopérabilité. Ces valeurs sont prises en charges bien qu'elles ne soient pas standard et qu'elles ne soient pas en cours de standardisation. On privliégiera l'utilisation des propriétés `flex-box`.
 
 ## Pseudo-classes
 
 - {{CSSxRef(":animating-full-screen-transition", ":-webkit-animating-full-screen-transition")}}
 - {{CSSxRef(":any()", ":-webkit-any()")}}
-- {{CSSxRef(":any-link", ":-webkit-any-link")}}\*
+- {{CSSxRef(":any-link", ":-webkit-any-link")}}
 - {{CSSxRef(":autofill",":-webkit-autofill")}}
 - {{CSSxRef(":autofill-strong-password",":-webkit-autofill-strong-password")}}
 - {{CSSxRef(":drag",":-webkit-drag")}}
 - {{CSSxRef(":full-page-media",":-webkit-full-page-media")}}
-- {{CSSxRef(":full-screen", ":-webkit-full-screen")}}\*
+- {{CSSxRef(":full-screen", ":-webkit-full-screen")}}
 - {{CSSxRef(":full-screen-ancestor",":-webkit-full-screen-ancestor")}}
 - {{CSSxRef(":full-screen-document",":-webkit-full-screen-document")}}
 - {{CSSxRef(":full-screen-controls-hidden",":-webkit-full-screen-controls-hidden")}}

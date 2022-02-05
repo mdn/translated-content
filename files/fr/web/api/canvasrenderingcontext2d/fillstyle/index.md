@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
 {{APIRef}}
 
-La propriété **`CanvasRenderingContext2D`\*\***`.fillStyle`\*\* de l'API Canvas 2D spécifie la couleur ou style à utiliser à l'intérieur des formes. La valeur par défaut est `#000` (black).
+La propriété **`CanvasRenderingContext2D.fillStyle`** de l'API Canvas 2D spécifie la couleur ou style à utiliser à l'intérieur des formes. La valeur par défaut est `#000` (black).
 
 Voir également le chapitre [Ajout de styles et de couleurs](/fr/docs/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs) dans le [Tutoriel canvas](/fr/docs/Tutoriel_canvas).
 

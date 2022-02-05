@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/scale
 ---
 {{APIRef}}
 
-La méhode **`CanvasRenderingContext2D`\*\***`.scale()`\*\* de l'API Canvas 2D ajoute une transformation de mise à l'échelle des unités du canevas, de x horizontalement et de y verticalement.
+La méhode **`CanvasRenderingContext2D.scale()`** de l'API Canvas 2D ajoute une transformation de mise à l'échelle des unités du canevas, de x horizontalement et de y verticalement.
 
 Par défaut, une unité sur le canevas est exactement un pixel. Si on applique, par exemple, un facteur d'échelle de 0,5, l'unité résultante deviendra 0,5 pixel et ainsi, les formes seront dessinées en taille moitié. De façon similaire, mettre le facteur d'échelle à 2,0 augmentera la taille de l'unité et une unité deviendra alors deux pixels. Cela aura pour résultat que les formes seront dessinées deux fois plus grandes.
 

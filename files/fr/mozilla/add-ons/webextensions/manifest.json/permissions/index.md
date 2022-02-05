@@ -154,7 +154,7 @@ Il existe deux permissions qui permettent aux extensions d'interagir avec le Pre
 - `clipboardWrite`: écrivez dans le presse-papiers à l'aide de {{DOMxRef("Clipboard.write()")}}, {{DOMxRef("Clipboard.writeText()")}}, `document.execCommand("copy")` ou `document.execCommand("cut")`
 - `clipboardRead`: lisez le presse-papiers à l'aide de  {{DOMxRef("Clipboard.read()")}}, {{DOMxRef("Clipboard.readText()")}} ou `document.execCommand("paste")`
 
-Voir [Intérargir avec le presse-papiers ](/fr/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)pour tous les détails de ce sujet.\*\*\*
+Voir [Intérargir avec le presse-papiers ](/fr/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)pour tous les détails de ce sujet.
 
 ## Stockage illimité
 

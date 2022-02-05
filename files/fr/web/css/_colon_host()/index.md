@@ -29,9 +29,9 @@ Le scénario principal pour utiliser cette fonction consiste à vouloir cibler u
 
 ## Exemples
 
-Les fragments de code suivants sont extraits du dépôt d'exemple [_host-selectors_](https://github.com/mdn/web-components-examples/tree/master/host-selectors)\* *([voir le résultat *live\*](https://mdn.github.io/web-components-examples/host-selectors/)).
+Les fragments de code suivants sont extraits du dépôt d'exemple [_host-selectors_](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([voir le résultat en direct](https://mdn.github.io/web-components-examples/host-selectors/)).
 
-Dans cet exemple, on dispose d'un élément personnalisé,  `<context-span>`, qui peut contenir du texte :
+Dans cet exemple, on dispose d'un élément personnalisé, `<context-span>`, qui peut contenir du texte :
 
 ```html
 <h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>

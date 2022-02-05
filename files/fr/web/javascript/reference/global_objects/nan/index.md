@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/NaN
 ---
 {{jsSidebar("Objects")}}
 
-La propriété globale **`NaN`** est une valeur utilisée pour représenter une quantité qui n'est pas un nombre (**\*N**ot **a** **N**umber\* en anglais).
+La propriété globale **`NaN`** est une valeur utilisée pour représenter une quantité qui n'est pas un nombre (**N**ot **a** **N**umber en anglais).
 
 {{js_property_attributes(0,0,0)}}
 

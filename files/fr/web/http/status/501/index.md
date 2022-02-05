@@ -1,31 +1,34 @@
 ---
 title: 501 Not Implemented
 slug: Web/HTTP/Status/501
-tags:
-  - Code de statut
-  - Erreur serveur
-  - HTTP
-  - Reference
 translation_of: Web/HTTP/Status/501
+browser-compat: http.status.501
 ---
 {{HTTPSidebar}}
 
-Le code de réponse HTTP d'erreur serveur **`501`\*\***` Not Implemented`\*\* indique que la méthode de la requête n'est pas prise en charge par le serveur et qu'elle ne peut donc pas être prise en compte. Les serveurs doivent nécessairement prendre en charge les méthodes {{HTTPMethod("GET")}} et {{HTTPMethod("HEAD")}} (pour lesquelles ils ne doivent donc pas renvoyer ce code).
+Le code de réponse HTTP d'erreur serveur **`501 Not Implemented`** indique que le serveur ne prend pas en charge les fonctionnalités nécessaires pour réaliser la requête.
 
-Une erreur 501 ne peut pas être corrigée via le client (c'est-à-dire le navigateur dans la plupart des cas). Il est nécessaire que cela soit corrigé sur le serveur web.
+Une telle réponse peut également contenir un en-tête [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After) indiquant au client le moment auquel revenir pour vérifier si la fonctionnalité est alors prise en charge.
 
-> **Note :** Par défaut, une réponse 501 peut être mise en cache.
+`501` est un code de réponse pertinent lorsque le serveur ne reconnaît pas la méthode utilisée pour la requête et qu'il n'est pas capable de la prendre en charge toute autre ressource. Les seules méthodes qu'un serveur doit nécessairement prendre en charge (et qui ne doivent donc pas renvoyer `501`) sont [`GET`](/fr/docs/Web/HTTP/Methods/GET) et [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD).
+
+Si le serveur connaît la méthode mais qu'il ne la prend pas en charge *intentionnellement*, le code de réponse approprié sera [`405 Method Not Allowed`](/fr/docs/Web/HTTP/Status/405).
+
+> **Note :**
+>
+> - Une erreur 501 ne peut pas être corrigée côté client (via son navigateur web par exemple), il faut un correctif côté serveur pour régler le problème.
+> - Une réponse avec le code 501 est mise en cache par défaut (c'est-à-dire, à moins que les en-têtes relatifs à la mise en cache fournissent d'autres instructions plus précises).
 
 ## Statut
 
-    501 Not Implemented
+```
+501 Not Implemented
+```
 
 ## Spécifications
 
-| Specification                                                    | Title                                                         |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "501 Not Implemented" , "6.6.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/status", "501")}}
+{{Compat}}

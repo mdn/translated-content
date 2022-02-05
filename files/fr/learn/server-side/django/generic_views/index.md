@@ -349,7 +349,7 @@ path('url/', views.my_reused_view, {'my_template_name': 'some_path'}, name='aurl
 path('anotherurl/', views.my_reused_view, {'my_template_name': 'another_path'}, name='anotherurl'),
 ```
 
-> **Note :** Les options supplémentaires aussi bien que les patterns capturés sont passés à la vue comme arguments _nommés_. Si vous utilisez le** \*\***même nom\*\* pour un pattern capturé et une option supplémentaire, alors seul la value du pattern capturé sera envoyé à la vue (la valeur spécifiée dans l'option supplémentaire sera abandonnée).
+> **Note :** Les options supplémentaires aussi bien que les patterns capturés sont passés à la vue comme arguments _nommés_. Si vous utilisez le **même nom** pour un pattern capturé et une option supplémentaire, alors seul la value du pattern capturé sera envoyé à la vue (la valeur spécifiée dans l'option supplémentaire sera abandonnée).
 
 ### Vue (basée sur classe)
 
@@ -562,8 +562,8 @@ Les liens de pagination sont affichés en bas de la page, avec les liens suivant
 
 Le challenge dans cet article consiste à créer les vues détail et liste nécessaires à l'achèvement du projet. Ces pages devront être accessibles aux URLs suivantes :
 
-- `catalog/authors/` — La liste de tous les auteurs.
-- `catalog/author/<id>`\* *— La vue détail pour un auteur précis, avec un champ clé-primaire appelé *`<id>`\*.
+- `catalog/authors/` — La liste de tous les auteurs.
+- `catalog/author/<id>` — La vue détail pour un auteur précis, avec un champ clé-primaire appelé *`<id>`*.
 
 Le code requis pour le mappeur d'URL et les vues sera virtuellement identique aux vues liste et détail du modèle `Book`, créées ci-dessus. Les templates seront différents, mais auront un comportement semblable.
 

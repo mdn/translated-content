@@ -31,7 +31,7 @@ flex-grow: revert;
 flex-grow: unset;
 ```
 
-`flex-grow` プロパティは単一の `[&lt;number&gt;](#&lt;number>)` として指定します。
+`flex-grow` プロパティは単一の `<number>` として指定します。
 
 ### 値
 

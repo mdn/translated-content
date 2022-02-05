@@ -3582,7 +3582,7 @@
       "superpuper32"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-10-17T04:55:20.992Z",
     "contributors": [
       "raylyanway",
@@ -3604,27 +3604,6 @@
       "boxa6",
       "Lirikklimov",
       "slychai85"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-11-28T15:15:40.063Z",
-    "contributors": [
-      "Tartalon",
-      "Viatcheslav-Malahov",
-      "wind-of",
-      "Detrimon",
-      "BadLame",
-      "ConstantineZz",
-      "ellegre",
-      "injashkin",
-      "NooNoo1337",
-      "Roman-Halenko",
-      "sergeomak",
-      "Elena_Petrenko",
-      "uandrew",
-      "slychai85",
-      "superpuper32",
-      "GennadyGlushenkov"
     ]
   },
   "Learn/JavaScript/Objects/Object_building_practice": {
@@ -10475,12 +10454,6 @@
       "nboldar",
       "vovchik-manko",
       "surrsoft"
-    ]
-  },
-  "Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent": {
-    "modified": "2020-08-27T17:02:59.997Z",
-    "contributors": [
-      "hisbvdis"
     ]
   },
   "Web/API/Touch_events/Using_Touch_Events": {
@@ -24045,6 +24018,27 @@
       "iegik"
     ]
   },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-11-28T15:15:40.063Z",
+    "contributors": [
+      "Tartalon",
+      "Viatcheslav-Malahov",
+      "wind-of",
+      "Detrimon",
+      "BadLame",
+      "ConstantineZz",
+      "ellegre",
+      "injashkin",
+      "NooNoo1337",
+      "Roman-Halenko",
+      "sergeomak",
+      "Elena_Petrenko",
+      "uandrew",
+      "slychai85",
+      "superpuper32",
+      "GennadyGlushenkov"
+    ]
+  },
   "conflicting/MDN/Contribute": {
     "modified": "2020-10-30T09:21:05.942Z",
     "contributors": [
@@ -24195,6 +24189,12 @@
     "modified": "2019-03-23T22:53:31.496Z",
     "contributors": [
       "AlexAlex"
+    ]
+  },
+  "conflicting/Web/API/Pointer_events": {
+    "modified": "2020-08-27T17:02:59.997Z",
+    "contributors": [
+      "hisbvdis"
     ]
   },
   "conflicting/Web/API/Push_API": {
