@@ -44,7 +44,7 @@ var options = {
 
 var n = new Notification('Notificación de prueba',options);
 
-console.log(n.dir) // Deberia retornar 'rtl'
+console.log(n.dir); // Deberia retornar 'rtl'
 ```
 
 ## Especificaciones
