@@ -69,14 +69,14 @@ translation_of: Web/API/HTMLInputElement/webkitdirectory
 
 この例では、ユーザーが 1 つまたは複数のディレクトリーを選択することができるディレクトリーピッカーが表示されます。 {{domxref("HTMLElement/change_event", "change")}} イベントが発生すると、選択されたディレクトリー階層ないのすべてのファイルを含むリストが生成され、表示されます。
 
-### HTML コンテンツ
+### HTML content
 
 ```html
 <input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
 <ul id="listing"></ul>
 ```
 
-### JavaScript コンテンツ
+### JavaScript content
 
 ```js
 document.getElementById("filepicker").addEventListener("change", function(event) {
