@@ -14048,12 +14048,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/GlobalEventHandlers/oncuechange": {
-    "modified": "2020-10-15T22:16:52.330Z",
-    "contributors": [
-      "c1er"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ondblclick": {
     "modified": "2019-03-24T00:18:08.191Z",
     "contributors": [
@@ -20394,6 +20388,12 @@
     "modified": "2020-02-27T01:42:43.987Z",
     "contributors": [
       "MCCF"
+    ]
+  },
+  "Web/API/TextTrack/cuechange_event": {
+    "modified": "2020-10-15T22:16:52.330Z",
+    "contributors": [
+      "c1er"
     ]
   },
   "Web/API/TimeRanges": {
