@@ -32,7 +32,7 @@ instanceOfFileReader.readAsArrayBuffer(blob);
 ### Parámetros
 
 - `blob`
-  - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
+  - : El {{domxref("Blob")}} o {{domxref("File")}} desde el que se leerá.
 
 ## Especificaciones
 
