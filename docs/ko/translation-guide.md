@@ -347,7 +347,7 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 
 | 용어 | 번역 | 기타 | 참고 링크 |
 | --- | --- | --- | ------ |
-| Argument | 인수 | | | 
+| Argument | 전달인자, 인수 | | [참고 링크](https://github.com/mdn/translated-content/pull/3888) | 
 | Blocking operation | 블로킹 연산 | | | 
 | Callback | 콜백 | | | 
 | Fulfilled | 이행(함) | | | 
