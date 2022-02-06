@@ -1,16 +1,12 @@
 ---
-title: Gouttière
+title: Gouttières
 slug: Glossary/Gutters
-tags:
-  - CSS
-  - Glossaire
-  - Grilles
 translation_of: Glossary/Gutters
 original_slug: Glossaire/Gutters
 ---
-**Les gouttières (**ou ruelles) sont l'espace entre les pistes de contenu. Elles peuvent être créées en CSS Grid Layout en utilisant les propriétés {{cssxref ("grid-column-gap")}}, {{cssxref ("grid-row-gap")}} ou {{cssxref ("grid-gap" )}}.
+**Les gouttières** (ou *ruelles*) sont l'espace entre les pistes de contenu. Elles peuvent être créées avec [les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout) en utilisant les propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap), [`row-gap`](/fr/docs/Web/CSS/row-gap) ou [`gap`](/fr/docs/Web/CSS/gap).
 
-Dans l'exemple ci-dessous  nous avons une grille de pistes de 3 colonnes et 2 rangées, avec 20 pixels d'écart entre les pistes de colonnes et `20 px` entre les pistes de lignes.
+Dans l'exemple ci-dessous, nous avons une grille de 3 colonnes et 2 rangées, avec 20 pixels d'écart entre les pistes de colonnes et `20px` entre les pistes de lignes.
 
 ## Exemple
 
@@ -35,38 +31,38 @@ Dans l'exemple ci-dessous  nous avons une grille de pistes de 3 colonnes et 2 r
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1.2fr);
+  grid-template-columns: repeat(3, 1.2fr);
   grid-auto-rows: 45%;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  column-gap: 20px;
+  row-gap: 20px;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+   <div>Un</div>
+   <div>Deux</div>
+   <div>Trois</div>
+   <div>Quatre</div>
+   <div>Cinq</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Exemple', '300', '280') }}
+{{EmbedLiveSample('', '300', '280')}}
 
-En terme de dimensionnement de la grille, l'écart agit comme une grille régulière, mais rien ne peut y être placé. L'écart agit comme si la ligne de grille à cet endroit avait gagné une taille supplémentaire, de sorte que tout élément de grille placé après cette ligne commence à la fin de l'écart.
+En termes de dimensionnement de la grille, l'écart agit comme une grille normale, mais rien ne peut y être placé. L'écart agit comme si la ligne de grille à cet endroit avait gagné une taille supplémentaire, de sorte que tout élément de grille placé après cette ligne commence à la fin de l'écart.
 
-Les propriétés de l'écart de grille ne sont pas la seule chose qui peut provoquer l'espacement des pistes. Les marges, le remplissage ou l'utilisation des propriétés de distribution d'espace pour [l'alignement des boîtes](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_bo%C3%AEtes_avec_les_grilles_CSS) peuvent tous contribuer à l'écart visible - donc les propriétés de l'écart de grille ne doivent pas être considérées comme égales à la taille de la gouttière, sauf si vous savez que votre conception n'a pas introduit d'espace supplémentaire avec l'une de ces méthodes.
+Les propriétés de l'écart de grille ne sont pas la seule chose qui peut provoquer l'espacement des pistes. Les marges, le remplissage ou l'utilisation des propriétés de distribution d'espace pour [l'alignement des boîtes](/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout) peuvent tous contribuer à l'écart visible — donc, les propriétés de l'écart de grille (`*-gap`) ne doivent pas être considérées comme égales à la taille de la gouttière, sauf si vous savez que votre conception n'a pas introduit d'espace supplémentaire avec l'une de ces méthodes.
 
-## En apprendre plus
+## Voir aussi
 
 ### Références de la propriété
 
-- {{cssxref("grid-column-gap")}}
-- {{cssxref("grid-row-gap")}}
-- {{cssxref("grid-gap")}}
+- [`column-gap`](/fr/docs/Web/CSS/column-gap)
+- [`row-gap`](/fr/docs/Web/CSS/row-gap)
+- [`gap`](/fr/docs/Web/CSS/gap)
 
 ### En lire plus
 
-- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)_
-- [Définition des gouttières _(gutters)_ dans la spécification des grilles CSS](https://drafts.csswg.org/css-grid/#gutters) (en)
+- Guide des grilles CSS&nbsp;: *[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)*
+- [Définition des gouttières (<i lang="en">gutters</i>) dans la spécification des grilles CSS (en anglais)](https://drafts.csswg.org/css-grid/#gutters)
