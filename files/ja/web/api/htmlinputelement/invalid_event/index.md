@@ -3,108 +3,86 @@ title: 'HTMLInputElement: invalid イベント'
 slug: Web/API/HTMLInputElement/invalid_event
 tags:
   - API
-  - Constraint Validation API
-  - Constraint validation
-  - Event
-  - Forms
-  - Reference
+  - 制約検証 API
+  - 制約検証
+  - イベント
+  - フォーム
+  - リファレンス
   - invalid
+browser-compat: api.HTMLInputElement.invalid_event
 translation_of: Web/API/HTMLInputElement/invalid_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><strong><code>invalid</code></strong> イベントは、送信可能な要素が制約の検証を受け、制約を満たしていない場合に発行されます。</p>
+**`invalid`** イベントは、送信可能な要素が制約の検証を受け、制約を満たしていない場合に発行されます。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.oninvalid")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>{{domxref("GlobalEventHandlers.oninvalid")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>このイベントは、送信時にフォームの問題の概要を表示するのに便利です。フォームが送信されると、 <code>invalid</code> イベントがそれぞれの妥当ではない状態にあるフォームコントロールで発生します。送信可能な要素が妥当であるかどうかは、その所有者である {{HtmlElement("form")}} を送信する前、またはその要素またはその所有者である <code>&lt;form&gt;</code> の <a href="/ja/docs/HTML/Forms_in_HTML#Constraint_Validation_API"><code>checkValidity()</code></a> メソッドが呼び出された後にチェックされます。</p>
+このイベントは、送信時にフォームの問題の概要を表示するのに便利です。フォームが送信されると、 `invalid` イベントがそれぞれの妥当ではない状態にあるフォームコントロールで発生します。送信可能な要素が妥当であるかどうかは、その所有者である {{HtmlElement("form")}} を送信する前、または [`checkValidity()`](/ja/docs/Learn/Forms#constraint_validation_api) メソッドがその要素またはその所有者である `<form>` に呼び出された後にチェックされます。
 
-<p>{{domxref("Element/blur_event", "blur")}} ではチェックが行われません。</p>
+{{domxref("Element/blur_event", "blur")}} ではチェックが行われません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例<
 
-<p>フォームが無効な値で送信された場合、送信可能な要素がチェックされ、エラーが見つかった場合、無効な要素で <code>invalid</code> イベントが発生します。この例では、入力に無効な値があったために <code>invalid</code> イベントが発生した場合、無効な値がログに記録されます。</p>
+フォームが無効な値で送信された場合、送信可能な要素がチェックされ、エラーが見つかった場合、無効な要素で `invalid` イベントが発生します。この例では、入力に無効な値があったために `invalid` イベントが発生した場合、無効な値がログに記録されます。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;form action="#"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;label&gt;Enter an integer between 1 and 10: &lt;input type="number" min="1" max="10" required&gt;&lt;/label&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;input type="submit" value="submit"&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/form&gt;&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<form action="#">
+  <ul>
+    <li><label>1 から 10 までの整数を入力してください: <input type="number" min="1" max="10" required></label></li>
+    <li><input type="submit" value="送信"></li>
+  </ul>
+</form><p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">const input = document.querySelector('input')
+```js
+const input = document.querySelector('input')
 const log = document.getElementById('log')
 
 input.addEventListener('invalid', logValue)
 
 function logValue(e) {
   log.textContent += e.target.value
-}</pre>
+}
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'forms.html#the-constraint-validation-api', 'Invalid event') }}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5.1', 'sec-forms.html#the-constraint-validation-api', 'Invalid event') }}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', 'forms.html#the-constraint-validation-api', 'Invalid event') }}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.HTMLInputElement.invalid_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>HTML の {{HtmlElement("form")}} element</li>
- <li>関連イベント: {{domxref("HTMLFormElement/submit_event", "submit")}}</li>
- <li>CSS の {{cssxref(":invalid")}} 擬似クラス</li>
-</ul>
+- HTML の {{HtmlElement("form")}} element
+- 関連イベント: {{domxref("HTMLFormElement/submit_event", "submit")}}
+- CSS の {{cssxref(":invalid")}} 擬似クラス
