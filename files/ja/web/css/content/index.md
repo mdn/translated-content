@@ -6,7 +6,7 @@ tags:
   - CSS カウンター
   - CSS プロパティ
   - 生成コンテンツ
-  - Reference
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.content
 translation_of: Web/CSS/content
@@ -23,6 +23,7 @@ content: none;
 /* <image> 値 */
 content: url("http://www.example.com/test.png");
 content: linear-gradient(#e66465, #9198e5);
+content: image-set("image1x.png" 1x, "image2x.png" 2x);
 
 /* 生成コンテンツの代替テキスト、レベル 3 の仕様書で追加 */
 content: url("http://www.example.com/test.png") / "This is the alt text";
@@ -100,7 +101,7 @@ CSS で生成されるコンテンツは、 [DOM](/ja/docs/Web/API/Document_Obje
 
 ## 例
 
-<h3 id="Headings_and_quotes">見出しと引用符</h3>
+### 見出しと引用符
 
 この例では引用部分の周りに引用符を挿入し、見出しの前に "Chapter" の語を追加します。
 
@@ -150,9 +151,9 @@ h1::before  {
 
 #### 結果
 
-<p>{{EmbedLiveSample('Headings_and_quotes', '100%', 200)}}
+{{EmbedLiveSample('Headings_and_quotes', '100%', 200)}}
 
-<h3 id="Image_combined_with_text">テキストと組み合わせる画像</h3>
+### テキストと組み合わせる画像
 
 この例はリンクの前に画像を挿入します。画像が見つからなければ、代わりにテキストを挿入します。
 
@@ -176,7 +177,7 @@ a::before {
 
 {{EmbedLiveSample('Image_combined_with_text', '100%', 60)}}
 
-<h3 id="Targeting_classes">クラスのターゲッティング</h3>
+### クラスのターゲッティング
 
 この例はリストの特定の項目の後に追加のテキストを挿入します。
 
@@ -207,13 +208,14 @@ a::before {
 
 {{EmbedLiveSample('Targeting_classes', '100%', 160)}}
 
-<h3 id="Images_and_element_attributes">画像および要素の属性</h3>
+### 画像および要素の属性
 
 この例はそれぞれのリンクの前に画像を挿入し、後に `id` 属性を追加します。
 
 #### HTML
 
 ```html
+<ul>
   <li><a id="moz" href="https://www.mozilla.org/">
     Mozilla Home Page</a></li>
   <li><a id="mdn" href="https://developer.mozilla.org/">
@@ -250,7 +252,7 @@ li {
 
 {{EmbedLiveSample('Images_and_element_attributes', '100%', 160)}}
 
-<h3 id="Element_replacement">要素の置き換え</h3>
+### 要素の置き換え
 
 この例は、要素の内容を画像で置き換えます。要素の内容を {{cssxref("url()")}} または {{cssxref("&lt;image&gt;")}} の値のどちらかで置き換えることができます。 `::before` または `::after` で追加された内容は、要素の中身が置き換えられるときは生成されません。
 
