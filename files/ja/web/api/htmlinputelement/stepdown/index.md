@@ -13,7 +13,7 @@ translation_of: Web/API/HTMLInputElement/stepDown
 ---
 {{APIRef("HTML DOM")}}
 
-**`HTMLInputElement.stepDown([n])`** メソッドは、 numeric 型の {{HTMLElement("input")}} 要素の値を
+**`HTMLInputElement.stepDown([n])`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を
 [`step`](/ja/docs/Web/HTML/Attributes/step) 属性の値、または引数として数値が渡された場合は step 属性の最大 `n` 倍の値だけ減少させるものです。
 
 このメソッドを呼び出すと、 {{htmlattrxref("value","input")}} は ({{htmlattrxref("step","input")}} \* n) だけ減少します。ここで、n は指定されなかった場合、既定で 1 となり、[`step`](/ja/docs/Web/HTML/Attributes/step) が指定されなかった場合、 `step` の既定値となります。
@@ -58,11 +58,11 @@ input2.stepDown();
 console.log(input2.value); // "16:45"
 ```
 
-このメソッドを呼び出すと、フォームコントロール内で設定された制約の範囲内で、 `step` 属性で指定された値に引数を掛けた値だけ、フォームコントロールの値を変更します。このメソッドは、値が [`min`](/ja/docs/Web/HTML/Attributes/min) を下回ったり、 [`step`](/ja/docs/Web/HTML/Attributes/step) 属性が設定する制約に逆らうようなことは起こりません。 `n` に負の値を指定すると、値が増加しますが、[`max`](/ja/docs/Web/HTML/Attributes/max) の値を超えて増加することはありません。
+このメソッドを呼び出すと、フォームコントロール内で設定された制約の範囲内で、 `step` 属性で指定された値に引数を掛けた値だけ、フォームコントロールの値を変更します。引数が渡されなかった場合の既定値は `1` です。このメソッドは、値が [`min`](/ja/docs/Web/HTML/Attributes/min) を下回ったり、 [`step`](/ja/docs/Web/HTML/Attributes/step) 属性が設定する制約に違反させるようなことはしません。 `n` に負の値を指定すると、値が増加しますが、[`max`](/ja/docs/Web/HTML/Attributes/max) の値を超えて増加することはありません。
 
 `stepDown()` メソッドを呼び出す前の値が無効であった場合、例えば `step` 属性で設定した制約に適合しない場合、 `stepDown()` メソッドを呼び出すと、フォームコントロールの制約に適合する値が返されます。
 
-フォームコントロールが時刻、日付、数値以外のもので、 `step` 属性に対応していない場合（上のテーブルに対応する入力型のリストを参照）、または `step` 値が `any` に設定されている場合、 `InvalidStateError` 例外が発生します。
+フォームコントロールが時刻、日付、数値以外のもので、 `step` 属性に対応していない場合（前述の入力型のリストを参照）、または `step` 値が `any` に設定されている場合、 `InvalidStateError` 例外が発生します。
 
 - {{domxref("HTMLInputElement.stepDown()")}}
 
@@ -95,7 +95,7 @@ element.stepDown( [ stepDecrement ] );
 
 ```html
 <p>
-  <label>0 から 400 までの 5 で割れる数を入力してください。
+  <label>0 から 400 までの 5 で割り切れる数を入力してください。
    <input type="number" step="5" id="theNumber" min="0" max="400">
   </label>
 </p>
