@@ -427,5 +427,5 @@ function populateYears() {
 - [Les formats de date et d'heure utilisés en HTML](/fr/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
 - [Un tutoriel à propos des sélecteurs de dates et d'heures](/fr/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
 - [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/Input/datetime-local), [`<input type="date">`](/fr/docs/Web/HTML/Element/Input/date), [`<input type="time">`](/fr/docs/Web/HTML/Element/Input/time), and [`<input type="week">`](/fr/docs/Web/HTML/Element/Input/week)
-- [La compatibilité des propriétés CSS pour les contrôles de formulaires](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [La compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
 
