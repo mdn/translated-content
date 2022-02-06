@@ -10,7 +10,6 @@ tags:
 browser-compat: api.BatteryManager.onlevelchange
 translation_of: Web/API/BatteryManager/onlevelchange
 ---
-
 {{deprecated_header}} {{APIRef("Battery API")}}
 
 La propiendad **`BatteryManager.onlevelchange`** especifica un detector
