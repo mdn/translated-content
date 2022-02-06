@@ -26,7 +26,6 @@ Le navigateur peut agrémenter le contrôle avec des flèches afin d'incrémente
     </tr>
     <tr>
       <td><strong>Attributs pris en charges</strong></td>
-      <td><strong>Attributs communs pris en charge</strong></td>
       <td><a href="/fr/docs/Web/HTML/Element/Input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-placeholder"><code>placeholder</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-readonly"><code>readonly</code></a></td>
     </tr>
     <tr>
@@ -42,7 +41,7 @@ Le navigateur peut agrémenter le contrôle avec des flèches afin d'incrémente
 
 ## Valeur
 
-Un nombre (cf. [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)) qui représente la valeur saisie dans le contrôle. Il est possible d'indiquer une valeur par défaut en utilisant l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value&nbsp;:
+Un nombre (cf. [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)) qui représente la valeur saisie dans le contrôle. Il est possible d'indiquer une valeur par défaut en utilisant l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value)&nbsp;:
 
 ```html
 <input id="number" type="number" value="42">
