@@ -42,7 +42,7 @@ var options = {
   dir: 'rtl'
 }
 
-var n = new Notification('Notificación de prueba',options);
+var n = new Notification('Notificación de prueba', options);
 
 console.log(n.dir); // Deberia retornar 'rtl'
 ```
