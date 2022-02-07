@@ -13,7 +13,7 @@ browser-compat: api.Notification.permission
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-La propiedad de solo lectura `permission` de la interfaz {{domxref("Notification")}} e indica el permiso concedido por el usuario al origen actual para mostrar notificaciones.
+La propiedad de solo lectura `permission` de la interfaz {{domxref("Notification")}} indica el permiso concedido por el usuario al origen actual para mostrar notificaciones web.
 
 ## Sintaxis
 
@@ -31,7 +31,7 @@ Una {{domxref("DOMString")}} representa el permiso actual. El valor puede ser:
 
 ## Ejemplos
 
-El siguiente código podría ser usado si quisieras pimero chequear si las notificaciones son soportadas, luego chequear si los permisos han sido concedidos al origen actual para enviar notificaciones, y luego solicitar permiso de ser requerido, antes de enviar una notificación.
+El siguiente código podría ser usado si quisieras primero comprobar si las notificaciones son soportadas, luego comprobar si los permisos han sido concedidos al origen actual para enviar notificaciones, y luego solicitar permiso de ser requerido, antes de enviar una notificación.
 
 ```js
 function notifyMe() {
