@@ -12,7 +12,7 @@ translation_of: Web/API/BatteryManager/onlevelchange
 ---
 {{deprecated_header}} {{APIRef("Battery API")}}
 
-La propiendad **`BatteryManager.onlevelchange`** especifica un detector
+La propiedad **`BatteryManager.onlevelchange`** especifica un detector
 de eventos para recibir eventos de {{event("levelchange")}}. Estos eventos ocurren
 cuando el {{domxref("BatteryManager.level", "level")}} de batería se actualiza.
 
