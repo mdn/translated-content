@@ -24,7 +24,9 @@ Indica la cantidad de tiempo, en segundos, que faltan para que la batería esté
 var time = battery.chargingTime;
 ```
 
-Cuando devuelve, `time` es el tiempo restante en segundos para que la batería
+
+La variable `time` recibe el tiempo restante en segundos para que la batería
+
 esté completamente cargada o 0 (cero) si la `battery` ya está completamente cargada.
 Si la batería está descargándose el valor es [`Infinity`](/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity).
 
