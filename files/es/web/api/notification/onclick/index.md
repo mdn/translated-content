@@ -1,6 +1,6 @@
 ---
 title: Notification.onclick
-slug: Web/API/notification/onclick
+slug: Web/API/Notification/onclick
 tags:
   - API
   - DOM
@@ -13,7 +13,7 @@ browser-compat: api.Notification.onclick
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-La propiedad `onclick` de la interfaz {{domxref("Notification")}} especifica un event listener para recibir eventos {{event("click")}}. Estos eventos ocurren cuando el usuario hace click sobre el {{domxref("Notification")}} mostrado.
+La propiedad `onclick` de la interfaz {{domxref("Notification")}} especifica un escuchador de eventos para recibir eventos {{event("click")}}. Estos eventos ocurren cuando el usuario hace click sobre el {{domxref("Notification")}} mostrado.
 
 ## Sintaxis
 
@@ -30,7 +30,7 @@ En el siguiente ejemplo, utilizamos un manejador `onclick` para abrir un sitio 
 
 ```js
 notification.onclick = function(event) {
-  event.preventDefault(); // Previene al buscador de mover el foco a la pestaña del Notification
+  event.preventDefault(); // Evita que el navegador enfoque la pestaña del Notification
   window.open('http://www.mozilla.org', '_blank');
 }
 ```
