@@ -42,7 +42,7 @@ instanceOfFileReader.readAsArrayBuffer(blob);
 
 {{Compat}}
 
-## Ver también
+## Véase también
 
 - {{domxref("FileReader")}}
 
