@@ -25,7 +25,7 @@ La ultima especificación ha actualizado este método a una sintaxis de tipo pro
 Notification.requestPermission().then(function(permission) { /* ... */ });
 ```
 
-Anteriormente, la sintaxis se basaba en un simple callback; esta versión ahora está obsoleta.
+Anteriormente, la sintaxis se basaba en un simple callback; esta versión ahora está obsoleta:
 
 ```js
 Notification.requestPermission(callback);
@@ -38,7 +38,7 @@ Notification.requestPermission(callback);
 
 ### Retorno
 
-Una {{jsxref("Promise")}} que se convierte en una {{domxref("DOMString")}} con el permiso escogido por el usuario. Los valores posibles para este son 
+Una {{jsxref("Promise")}} que se convierte en una {{domxref("DOMString")}} con el permiso escogido por el usuario. Los valores posibles para este son:
 
 - `granted`
 - `denied`
@@ -52,7 +52,7 @@ Asume este HTML básico:
 <button onclick="notifyMe()">Notify me!</button>
 ```
 
-Es posible enviar una notificacion de la siguiente forma - aqui presentamos un codigo bastante verboso y completo que podrias usar si quisieras primero comprobar si las notificaciones son soportadas, luego comprobar si el permiso ha sido concedido para el origen actual para enviar notificaciones y luego solicitar permiso de ser requerido, antes de enviar una notificación.
+Es posible enviar una notificacion de la siguiente forma - aqui presentamos un código bastante verboso y completo que podrias usar si quisieras primero comprobar si las notificaciones son soportadas, luego comprobar si el permiso ha sido concedido para el origen actual para enviar notificaciones y luego solicitar permiso de ser requerido, antes de enviar una notificación.
 
 ```js
 function notifyMe() {
@@ -77,13 +77,14 @@ function notifyMe() {
     });
   }
 
-  // Por último, si el usuario ha denegado el permiso, y quieres ser respetuoso, no hay necesidad de molestarlo.
+  // Por último, si el usuario ha denegado el permiso,
+  // y quiere ser respetuoso, no hay necesidad de molestarlo.
 }
 ```
 
 Ya no mostramos ejemplos corriendo en tiempo real en esta página, ya que Chrome y Firefox ya no conceden permisos de notificación para ser solicitados desde el origen {{htmlelement("iframe")}}, para seguir con otros navegadores. Para ver un ejemplo en acción, revisa nuestro [Ejemplo de lista de Todos](https://github.com/mdn/to-do-notifications/tree/gh-pages) (véase también [la app corriendo en vivo](https://mdn.github.io/to-do-notifications/).)
 
-> **Nota:** En el ejemplo de arriba generamos notificaciones en respuesta a una acción del usuario (hacer click en un botón). Esta no es la única mejor práctica — no deberias hacer spam a los usuarios con notificaciones que ellos no aceptaron — pero pronto los navegadores explicitamente deshabilitaran las notificaciones que no son ejecutadas en respuesta a una acción del usuario. Firefox ya está haciendo esto desde la version 72, por ejemplo.
+> **Nota:** En el ejemplo de arriba generamos notificaciones en respuesta a una acción del usuario (hacer click en un botón). Esta no es la única mejor práctica — no deberias hacer spam a los usuarios con notificaciones que ellos no aceptaron — pero pronto los navegadores explicitamente deshabilitaran las notificaciones que no son ejecutadas en respuesta a una acción del usuario. Firefox ya está haciendo esto desde la versión 72, por ejemplo.
 
 ## Especificaciones
 
@@ -96,3 +97,4 @@ Ya no mostramos ejemplos corriendo en tiempo real en esta página, ya que Chrome
 ## Véase también
 
 - [Usando la API de Notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+
