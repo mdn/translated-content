@@ -9633,13 +9633,6 @@
       "pekechis"
     ]
   },
-  "Web/CSS/-webkit-print-color-adjust": {
-    "modified": "2019-03-23T22:35:50.908Z",
-    "contributors": [
-      "teoli",
-      "pekechis"
-    ]
-  },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2019-03-23T22:35:33.059Z",
     "contributors": [
@@ -12876,6 +12869,13 @@
       "teoli",
       "Mgjbot",
       "HenryGR"
+    ]
+  },
+  "Web/CSS/print-color-adjust": {
+    "modified": "2019-03-23T22:35:50.908Z",
+    "contributors": [
+      "teoli",
+      "pekechis"
     ]
   },
   "Web/CSS/quotes": {

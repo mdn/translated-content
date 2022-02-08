@@ -3282,6 +3282,9 @@
 /ja/docs/Web/API/VRLayer	/ja/docs/Web/API/VRLayerInit
 /ja/docs/Web/API/VRLayer/rightBounds	/ja/docs/Web/API/VRLayerInit/rightBounds
 /ja/docs/Web/API/VRLayer/source	/ja/docs/Web/API/VRLayerInit/source
+/ja/docs/Web/API/VideoTrackList/onaddtrack	/ja/docs/conflicting/Web/API/VideoTrackList/addtrack_event
+/ja/docs/Web/API/VideoTrackList/onchange	/ja/docs/conflicting/Web/API/VideoTrackList/change_event
+/ja/docs/Web/API/VideoTrackList/onremovetrack	/ja/docs/conflicting/Web/API/VideoTrackList/removetrack_event
 /ja/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ja/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ja/docs/Web/API/WebGL_API/Animating_textures_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
@@ -3626,6 +3629,7 @@
 /ja/docs/Web/CSS/-moz-zoom-out	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-ms-high-contrast	/ja/docs/Web/CSS/@media/-ms-high-contrast
 /ja/docs/Web/CSS/-ms-scroll-snap-type	/ja/docs/Web/CSS/scroll-snap-type
+/ja/docs/Web/CSS/-webkit-print-color-adjust	/ja/docs/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/:-moz-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/Web/CSS/:-ms-input-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/Web/CSS/:-webkit-autofill	/ja/docs/Web/CSS/:autofill
@@ -3730,6 +3734,7 @@
 /ja/docs/Web/CSS/box_model	/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /ja/docs/Web/CSS/calc	/ja/docs/Web/CSS/calc()
 /ja/docs/Web/CSS/clamp	/ja/docs/Web/CSS/clamp()
+/ja/docs/Web/CSS/color-adjust	/ja/docs/conflicting/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/conic-gradient	/ja/docs/Web/CSS/gradient/conic-gradient()
 /ja/docs/Web/CSS/conic-gradient()	/ja/docs/Web/CSS/gradient/conic-gradient()
 /ja/docs/Web/CSS/counter	/ja/docs/Web/CSS/counter()

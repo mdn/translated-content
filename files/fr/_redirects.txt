@@ -3906,6 +3906,7 @@
 /fr/docs/Web/CSS/-ms-scroll-snap-type	/fr/docs/conflicting/Web/CSS/scroll-snap-type
 /fr/docs/Web/CSS/-ms-user-select	/fr/docs/conflicting/Web/CSS/user-select
 /fr/docs/Web/CSS/-webkit-mask-image	/fr/docs/conflicting/Web/CSS/mask-image
+/fr/docs/Web/CSS/-webkit-print-color-adjust	/fr/docs/Web/CSS/print-color-adjust
 /fr/docs/Web/CSS/:-moz-placeholder	/fr/docs/Web/CSS/:placeholder-shown
 /fr/docs/Web/CSS/:-moz-ui-invalid	/fr/docs/Web/CSS/:user-invalid
 /fr/docs/Web/CSS/:-moz-ui-valid	/fr/docs/orphaned/Web/CSS/:-moz-ui-valid
@@ -4186,6 +4187,7 @@
 /fr/docs/Web/CSS/auto	/fr/docs/conflicting/Web/CSS/width
 /fr/docs/Web/CSS/calc	/fr/docs/Web/CSS/calc()
 /fr/docs/Web/CSS/clamp	/fr/docs/Web/CSS/clamp()
+/fr/docs/Web/CSS/color-adjust	/fr/docs/conflicting/Web/CSS/print-color-adjust
 /fr/docs/Web/CSS/conic-gradient	/fr/docs/orphaned/Web/CSS/conic-gradient()
 /fr/docs/Web/CSS/conic-gradient()	/fr/docs/orphaned/Web/CSS/conic-gradient()
 /fr/docs/Web/CSS/counter	/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
