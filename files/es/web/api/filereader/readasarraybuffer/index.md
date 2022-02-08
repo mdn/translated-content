@@ -18,7 +18,7 @@ translation_of: Web/API/FileReader/readAsArrayBuffer
 El método **`readAsArrayBuffer()`** de la interfaz {{domxref("FileReader")}}
 se utiliza para comenzar a leer el contenido de un {{domxref("Blob")}}
 o {{domxref("File")}} especificado. Cuando la operación de lectura finaliza,
-el método {{domxref("FileReader.readyState","readyState")}} se convierte en `DONE`,
+la propiedad {{domxref("FileReader.readyState","readyState")}} se convierte en `DONE`,
 y se desencadena el evento {{domxref("FileReader/loadend_event", "loadend")}}. En ese momento,
 el atributo {{domxref("FileReader.result", "result")}} contiene
 un {{jsxref("ArrayBuffer")}} que representa los datos del archivo.
