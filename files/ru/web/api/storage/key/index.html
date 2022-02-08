@@ -11,7 +11,7 @@ translation_of: Web/API/Storage/key
 ---
 <p>{{APIRef()}}</p>
 
-<p>Метод key() интерфейса {{domxref("Storage")}} получает числовое значение n и возвращает имя n-ого ключа из хранилища.  Порядок ключей определяется браузером.</p>
+<p>Метод key() интерфейса {{domxref("Storage")}} получает числовое значение n и возвращает имя n-ого ключа из хранилища.  Порядок ключей определяется реализацией, поэтому лучше не полагаться на него</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -26,7 +26,7 @@ translation_of: Web/API/Storage/key
 
 <h3 id="Возвращает">Возвращает</h3>
 
-<p>{{domxref("DOMString")}} , содержащий имя ключа.</p>
+<p>{{domxref("DOMString")}} , содержащий имя ключа. Если этот индекс не найден, вернётся <em>null</em></p>
 
 <h2 id="Пример">Пример</h2>
 
@@ -39,25 +39,12 @@ translation_of: Web/API/Storage/key
 }</pre>
 
 <div class="note">
-<p><strong>Примечание</strong>: Реальный пример вы можете увидеть на <a href="https://github.com/mdn/web-storage-demo">Web Storage Demo</a>.</p>
+<p><strong>Примечание</strong>: Чтобы вживую посмотреть на работу функции, посетите страницу демонстрации <a href="https://github.com/mdn/web-storage-demo">Web Storage</a>.</p>
 </div>
 
-<h2 id="Стандарты">Стандарты</h2>
+<h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Стандарт</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage', '#dom-storage-key', 'key()')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
