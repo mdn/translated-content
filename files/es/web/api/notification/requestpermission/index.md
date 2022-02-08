@@ -36,7 +36,7 @@ Notification.requestPermission(callback);
 - `callback` {{optional_inline}} {{deprecated_inline}}
   - : Una callback opcional que es ejecutado con el valor del permiso. Obsoleto y reemplazado por el valor de retorno de la promesa.
 
-### Retorno
+### Valor de retorno
 
 Una {{jsxref("Promise")}} que se convierte en una {{domxref("DOMString")}} con el permiso escogido por el usuario. Los valores posibles para este son:
 
