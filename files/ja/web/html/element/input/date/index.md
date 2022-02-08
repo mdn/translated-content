@@ -69,7 +69,7 @@ translation_of: Web/HTML/Element/input/date
 
 ## 値
 
-入力欄に入力された日付を表す {{domxref("DOMString")}} です。日付は ISO8601 に従って書式化されており、これは [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)の[日付の文字列](/ja/docs/Web/HTML/Date_and_time_formats#Date_strings)で説明されています。
+入力欄に入力された日付を表す {{domxref("DOMString")}} です。日付は ISO8601 に従って書式化されており、これは [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)の[日付の文字列](/ja/docs/Web/HTML/Date_and_time_formats#date_strings)で説明されています。
 
 次のように、日付の入力欄の既定値を {{htmlattrxref("value", "input")}} 属性に設定することができます。
 
@@ -277,6 +277,8 @@ input:valid + span::after {
 ## 例
 
 この例では、日付を選択するユーザーインターフェイスの要素を 2 組作成します。ネイティブの `<input type="date">` による選択と、ネイティブの日付入力に対応していない古いブラウザー向けの、 3 つの {{htmlelement("select")}} 要素です。
+
+### 結果
 
 {{EmbedLiveSample('Examples', 600, 100)}}
 
