@@ -38,7 +38,7 @@ instanceOfFileReader.readAsArrayBuffer(blob);
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
 {{Compat}}
 
