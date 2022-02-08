@@ -31,7 +31,7 @@ Anteriormente, la sintaxis se basaba en un simple callback; esta versión ahora 
 Notification.requestPermission(callback);
 ```
 
- ### Parámetros
+### Parámetros
 
 - `callback` {{optional_inline}} {{deprecated_inline}}
   - : Una callback opcional que es ejecutado con el valor del permiso. Obsoleto y reemplazado por el valor de retorno de la promesa.
