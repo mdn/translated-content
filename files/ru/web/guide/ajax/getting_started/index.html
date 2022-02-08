@@ -185,8 +185,6 @@ httpRequest.send(null);
  <li><code>alertContents()</code> проверяет получен ли ответ и все ли с ним в порядке, после чего содержимое файла <code>test.html</code> выводится в диалоговом окне.</li>
 </ul>
 
-<p>Вы можете попробовать пример в действии <a class="external" href="http://www.akvi.ru/mozdev/httprequest_test.html" rel="follow">здесь</a>, а сам тестовый файл можно посмотреть <a class="external" href="http://www.akvi.ru/mozdev/test.html" rel="follow">здесь</a>.</p>
-
 <p><strong>Замечание</strong>: Строка <code>httpRequest.overrideMimeType('text/xml');</code> вызовет ошибки в консоли JavaScript в Firefox 1.5 или более позднем, как описано в <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=311724" rel="freelink">https://bugzilla.mozilla.org/show_bug.cgi?id=311724</a>, если страница вызванная с помощью XMLHttpRequest не является правильным XML (например, если это обычный текст). На самом деле это корректное поведение.</p>
 
 <p><strong>Замечание 2</strong>: Если вы посылаете запрос не на статический XML-файл, а на серверный скрипт, возвращающий XML, то нужно установить некоторые заголовки ответа, если вы планируете сделать вашу страницу работоспособной в Internet Explorer помимо Mozilla. Если вы не установите заголовок <code>Content-Type: application/xml</code>, IE будет сообщать об ошибке JavaScript, 'Object Expected', после строки, где вы пытаетесь получить доступ к XML элементу. Если вы не установите заголовок <code>Cache-Control: no-cache</code> броузер будет кешировать ответ и никогда не будет повторно отправлять запрос, что сделает отладку весьма «забавной».</p>
@@ -252,7 +250,7 @@ var root_node = xmldoc.getElementsByTagName('root').item(0);
 alert(root_node.firstChild.data);
 </pre>
 
-<p>Этот код берёт объект <code>XMLDocument</code>, возвращаемый <code>responseXML</code> и использует методы DOM для доступа к данным, содержащимся в документе XML. Посмотреть <code>test.xml</code> можно <a class="external" href="http://www.akvi.ru/mozdev/test.xml" rel="follow">здесь</a>, а обновлённый скрипт <a class="external" href="http://www.akvi.ru/mozdev/httprequest_test_xml.html" rel="follow">здесь</a>.</p>
+<p>Этот код берёт объект <code>XMLDocument</code>, возвращаемый <code>responseXML</code> и использует методы DOM для доступа к данным, содержащимся в документе XML.</p>
 
 <p>Чтобы узнать больше о методах DOM, посмотрите <a class="external" href="http://www.mozilla.org/docs/dom/">реализация DOM в Mozilla</a>.</p>
 
