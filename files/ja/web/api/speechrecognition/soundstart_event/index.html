@@ -1,6 +1,6 @@
 ---
-title: SpeechRecognition.onstart
-slug: Web/API/SpeechRecognition/onstart
+title: SpeechRecognition.onsoundstart
+slug: Web/API/SpeechRecognition/soundstart_event
 tags:
   - API
   - Experimental
@@ -8,24 +8,25 @@ tags:
   - Reference
   - SpeechRecognition
   - Web Speech API
-  - onstart
+  - onsoundstart
   - recognition
   - speech
-translation_of: Web/API/SpeechRecognition/onstart
+translation_of: Web/API/SpeechRecognition/onsoundstart
+original_slug: Web/API/SpeechRecognition/onsoundstart
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-<p>{{domxref("SpeechRecognition")}}インターフェイスの <strong><code>onstart</code></strong> プロパティは、現在の <code>SpeechRecognition</code> に関連する文法を認識する意図をもって、着信される音声を認識するサービスに接続された後 ({{event("start_(SpeechRecognition)","start")}}イベントが発生した時) に、実行するイベントハンドラーになります。</p>
+<p>{{domxref("SpeechRecognition")}}インターフェイスの <strong><code>onsoundstart</code></strong> プロパティは、何らかの音（認識できる音声、できない音声にかかわらず）が検出できた時に ({{event("soundstart")}}イベントが発生した時)、実行されるイベントハンドラーになります。</p>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre class="syntaxbox">mySpeechRecognition.onstart = function() { ... };
+<pre class="syntaxbox">mySpeechRecognition.onsoundstart = function() { ... };
 </pre>
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<pre class="brush: js">recognition.onstart = function() {
-  console.log('音声認識サービスに接続されました。');
+<pre class="brush: js">recognition.onsoundstart = function() {
+  console.log('音が検出できました。');
 }
 </pre>
 
@@ -39,7 +40,7 @@ translation_of: Web/API/SpeechRecognition/onstart
    <th scope="col">コメント</th>
   </tr>
   <tr>
-   <td>{{SpecName('Web Speech API', '#dfn-onstart', 'onstart')}}</td>
+   <td>{{SpecName('Web Speech API', '#dfn-onsoundstart', 'onsoundstart')}}</td>
    <td>{{Spec2('Web Speech API')}}</td>
    <td> </td>
   </tr>
@@ -51,7 +52,7 @@ translation_of: Web/API/SpeechRecognition/onstart
 <div>
 
 
-<p>{{Compat("api.SpeechRecognition.onstart")}}</p>
+<p>{{Compat("api.SpeechRecognition.onsoundstart")}}</p>
 </div>
 
 <h3 id="Firefox_OS_permissions" name="Firefox_OS_permissions">Firefox OS の権限</h3>

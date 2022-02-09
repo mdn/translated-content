@@ -3255,6 +3255,17 @@
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /ja/docs/Web/API/Slotable	/ja/docs/Web/API/Element
 /ja/docs/Web/API/SourceBufferList/SourceBuffer	/ja/docs/orphaned/Web/API/SourceBufferList/SourceBuffer
+/ja/docs/Web/API/SpeechRecognition/onaudioend	/ja/docs/Web/API/SpeechRecognition/audioend_event
+/ja/docs/Web/API/SpeechRecognition/onaudiostart	/ja/docs/conflicting/Web/API/SpeechRecognition/audiostart_event
+/ja/docs/Web/API/SpeechRecognition/onend	/ja/docs/Web/API/SpeechRecognition/end_event
+/ja/docs/Web/API/SpeechRecognition/onerror	/ja/docs/Web/API/SpeechRecognition/error_event
+/ja/docs/Web/API/SpeechRecognition/onnomatch	/ja/docs/Web/API/SpeechRecognition/nomatch_event
+/ja/docs/Web/API/SpeechRecognition/onresult	/ja/docs/Web/API/SpeechRecognition/result_event
+/ja/docs/Web/API/SpeechRecognition/onsoundend	/ja/docs/Web/API/SpeechRecognition/soundend_event
+/ja/docs/Web/API/SpeechRecognition/onsoundstart	/ja/docs/Web/API/SpeechRecognition/soundstart_event
+/ja/docs/Web/API/SpeechRecognition/onspeechend	/ja/docs/Web/API/SpeechRecognition/speechend_event
+/ja/docs/Web/API/SpeechRecognition/onspeechstart	/ja/docs/Web/API/SpeechRecognition/speechstart_event
+/ja/docs/Web/API/SpeechRecognition/onstart	/ja/docs/Web/API/SpeechRecognition/start_event
 /ja/docs/Web/API/StorageEstimate	/ja/docs/conflicting/Web/API/StorageManager/estimate
 /ja/docs/Web/API/StorageEstimate/quota	/ja/docs/conflicting/Web/API/StorageManager/estimate_78aa4ffd4dfacc8f94d5c05d150d36ac
 /ja/docs/Web/API/StorageEstimate/usage	/ja/docs/conflicting/Web/API/StorageManager/estimate_9ffeea37c30a26922d3f1621912db8d8

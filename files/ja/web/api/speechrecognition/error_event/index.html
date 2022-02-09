@@ -1,6 +1,6 @@
 ---
-title: SpeechRecognition.onsoundstart
-slug: Web/API/SpeechRecognition/onsoundstart
+title: SpeechRecognition.onerror
+slug: Web/API/SpeechRecognition/error_event
 tags:
   - API
   - Experimental
@@ -8,24 +8,27 @@ tags:
   - Reference
   - SpeechRecognition
   - Web Speech API
-  - onsoundstart
+  - onerror
   - recognition
   - speech
-translation_of: Web/API/SpeechRecognition/onsoundstart
+translation_of: Web/API/SpeechRecognition/onerror
+original_slug: Web/API/SpeechRecognition/onerror
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-<p>{{domxref("SpeechRecognition")}}インターフェイスの <strong><code>onsoundstart</code></strong> プロパティは、何らかの音（認識できる音声、できない音声にかかわらず）が検出できた時に ({{event("soundstart")}}イベントが発生した時)、実行されるイベントハンドラーになります。</p>
+<p>{{domxref("SpeechRecognition")}}インターフェイスの <strong><code>onerror</code></strong> プロパティは、音声の認識でエラーが発生した場合(<a href="/ja/docs/Web/Events/error_%28SpeechRecognitionError%29">error</a> イベントが発生した時) に、実行するイベントハンドラーになります。</p>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre class="syntaxbox">mySpeechRecognition.onsoundstart = function() { ... };
+<pre class="syntaxbox">mySpeechRecognition.onerror = function() { ... };
 </pre>
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<pre class="brush: js">recognition.onsoundstart = function() {
-  console.log('音が検出できました。');
+<pre class="brush: js">var recognition = new SpeechRecognition();
+
+recognition.onerror = function(event) {
+  console.log('音声を認識する際にエラーが発生しました：' + event.error);
 }
 </pre>
 
@@ -39,7 +42,7 @@ translation_of: Web/API/SpeechRecognition/onsoundstart
    <th scope="col">コメント</th>
   </tr>
   <tr>
-   <td>{{SpecName('Web Speech API', '#dfn-onsoundstart', 'onsoundstart')}}</td>
+   <td>{{SpecName('Web Speech API', '#dfn-onerror', 'onerror')}}</td>
    <td>{{Spec2('Web Speech API')}}</td>
    <td> </td>
   </tr>
@@ -51,7 +54,7 @@ translation_of: Web/API/SpeechRecognition/onsoundstart
 <div>
 
 
-<p>{{Compat("api.SpeechRecognition.onsoundstart")}}</p>
+<p>{{Compat("api.SpeechRecognition.onerror")}}</p>
 </div>
 
 <h3 id="Firefox_OS_permissions" name="Firefox_OS_permissions">Firefox OS の権限</h3>

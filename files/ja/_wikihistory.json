@@ -21864,6 +21864,13 @@
       "hamasaki"
     ]
   },
+  "Web/API/SpeechRecognition/audioend_event": {
+    "modified": "2020-10-15T22:14:18.025Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
   "Web/API/SpeechRecognition/audiostart_event": {
     "modified": "2020-10-15T22:00:38.746Z",
     "contributors": [
@@ -21878,6 +21885,20 @@
     "contributors": [
       "Uemmra3",
       "0505Keitan",
+      "takaneichinose"
+    ]
+  },
+  "Web/API/SpeechRecognition/end_event": {
+    "modified": "2020-10-15T22:14:17.843Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
+  "Web/API/SpeechRecognition/error_event": {
+    "modified": "2020-10-15T22:14:18.414Z",
+    "contributors": [
+      "Uemmra3",
       "takaneichinose"
     ]
   },
@@ -21909,80 +21930,17 @@
       "takaneichinose"
     ]
   },
-  "Web/API/SpeechRecognition/onaudioend": {
-    "modified": "2020-10-15T22:14:18.025Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onaudiostart": {
-    "modified": "2020-10-15T22:14:17.745Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onend": {
-    "modified": "2020-10-15T22:14:17.843Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onerror": {
-    "modified": "2020-10-15T22:14:18.414Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onnomatch": {
+  "Web/API/SpeechRecognition/nomatch_event": {
     "modified": "2020-10-15T22:14:18.219Z",
     "contributors": [
       "Uemmra3",
       "takaneichinose"
     ]
   },
-  "Web/API/SpeechRecognition/onresult": {
+  "Web/API/SpeechRecognition/result_event": {
     "modified": "2020-10-15T22:14:18.958Z",
     "contributors": [
       "yamachu",
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onsoundend": {
-    "modified": "2020-10-15T22:14:18.276Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onsoundstart": {
-    "modified": "2020-10-15T22:14:18.484Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onspeechend": {
-    "modified": "2020-10-15T22:14:18.567Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onspeechstart": {
-    "modified": "2020-10-15T22:14:19.731Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onstart": {
-    "modified": "2020-10-15T22:14:18.258Z",
-    "contributors": [
       "Uemmra3",
       "takaneichinose"
     ]
@@ -21994,8 +21952,43 @@
       "takaneichinose"
     ]
   },
+  "Web/API/SpeechRecognition/soundend_event": {
+    "modified": "2020-10-15T22:14:18.276Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
+  "Web/API/SpeechRecognition/soundstart_event": {
+    "modified": "2020-10-15T22:14:18.484Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
+  "Web/API/SpeechRecognition/speechend_event": {
+    "modified": "2020-10-15T22:14:18.567Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
+  "Web/API/SpeechRecognition/speechstart_event": {
+    "modified": "2020-10-15T22:14:19.731Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
   "Web/API/SpeechRecognition/start": {
     "modified": "2020-10-15T22:16:26.557Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
+  "Web/API/SpeechRecognition/start_event": {
+    "modified": "2020-10-15T22:14:18.258Z",
     "contributors": [
       "Uemmra3",
       "takaneichinose"
@@ -48483,6 +48476,13 @@
     "contributors": [
       "mfuji09",
       "YuichiNukiyama"
+    ]
+  },
+  "conflicting/Web/API/SpeechRecognition/audiostart_event": {
+    "modified": "2020-10-15T22:14:17.745Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
     ]
   },
   "conflicting/Web/API/StorageManager/estimate": {

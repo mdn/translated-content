@@ -1,6 +1,6 @@
 ---
-title: SpeechRecognition.onend
-slug: Web/API/SpeechRecognition/onend
+title: SpeechRecognition.onaudiostart
+slug: conflicting/Web/API/SpeechRecognition/audiostart_event
 tags:
   - API
   - Experimental
@@ -8,26 +8,27 @@ tags:
   - Reference
   - SpeechRecognition
   - Web Speech API
-  - onend
+  - onaudiostart
   - recognition
   - speech
-translation_of: Web/API/SpeechRecognition/onend
+translation_of: Web/API/SpeechRecognition/onaudiostart
+original_slug: Web/API/SpeechRecognition/onaudiostart
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-<p>{{domxref("SpeechRecognition")}}インターフェイスの <strong><code>onend</code></strong> プロパティは、音声認識のサービスが切断された後 ({{event("end_(SpeechRecognition)","end")}}イベントが発生した時) に、実行するイベントハンドラーになります。</p>
+<p>{{domxref("SpeechRecognition")}}インターフェイスの <strong><code>onaudiostart</code></strong> プロパティは、ユーザーエージェントが音声を取得し終えた時に ({{event("audiostart")}}イベントが発生した時) 、実行されるイベントハンドラーになります。</p>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre class="syntaxbox">mySpeechRecognition.onend = function() { ... };
+<pre class="syntaxbox">mySpeechRecognition.onaudiostart = function() { ... };
 </pre>
 
 <h2 id="Examples" name="Examples">例</h2>
 
 <pre class="brush: js">var recognition = new SpeechRecognition();
 
-recognition.onend = function() {
-  console.log('音声認識サービスが切断されました。');
+recognition.onaudiostart = function() {
+  console.log('音声認識は開始しました。');
 }
 </pre>
 
@@ -41,7 +42,7 @@ recognition.onend = function() {
    <th scope="col">コメント</th>
   </tr>
   <tr>
-   <td>{{SpecName('Web Speech API', '#dfn-onend', 'onend')}}</td>
+   <td>{{SpecName('Web Speech API', '#dfn-onaudiostart', 'onaudiostart')}}</td>
    <td>{{Spec2('Web Speech API')}}</td>
    <td> </td>
   </tr>
@@ -53,7 +54,7 @@ recognition.onend = function() {
 <div>
 
 
-<p>{{Compat("api.SpeechRecognition.onend")}}</p>
+<p>{{Compat("api.SpeechRecognition.onaudiostart")}}</p>
 </div>
 
 <h3 id="Firefox_OS_permissions" name="Firefox_OS_permissions">Firefox OS の権限</h3>

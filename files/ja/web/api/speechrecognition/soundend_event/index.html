@@ -1,6 +1,6 @@
 ---
-title: SpeechRecognition.onaudiostart
-slug: Web/API/SpeechRecognition/onaudiostart
+title: SpeechRecognition.onsoundend
+slug: Web/API/SpeechRecognition/soundend_event
 tags:
   - API
   - Experimental
@@ -8,26 +8,25 @@ tags:
   - Reference
   - SpeechRecognition
   - Web Speech API
-  - onaudiostart
+  - onsoundend
   - recognition
   - speech
-translation_of: Web/API/SpeechRecognition/onaudiostart
+translation_of: Web/API/SpeechRecognition/onsoundend
+original_slug: Web/API/SpeechRecognition/onsoundend
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-<p>{{domxref("SpeechRecognition")}}インターフェイスの <strong><code>onaudiostart</code></strong> プロパティは、ユーザーエージェントが音声を取得し終えた時に ({{event("audiostart")}}イベントが発生した時) 、実行されるイベントハンドラーになります。</p>
+<p>{{domxref("SpeechRecognition")}} インターフェイスの <strong><code>onsoundend</code></strong> プロパティは、何らかの音（認識できる音声、できない音声にかかわらず）が検出し終えた時に({{event("soundend")}} イベントが発生した時)、実行するイベントハンドラーになります。</p>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre class="syntaxbox">mySpeechRecognition.onaudiostart = function() { ... };
+<pre class="syntaxbox">mySpeechRecognition.onsoundend = function() { ... };
 </pre>
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<pre class="brush: js">var recognition = new SpeechRecognition();
-
-recognition.onaudiostart = function() {
-  console.log('音声認識は開始しました。');
+<pre class="brush: js">recognition.onsoundend = function() {
+  console.log('音の検出は終わりました。');
 }
 </pre>
 
@@ -41,7 +40,7 @@ recognition.onaudiostart = function() {
    <th scope="col">コメント</th>
   </tr>
   <tr>
-   <td>{{SpecName('Web Speech API', '#dfn-onaudiostart', 'onaudiostart')}}</td>
+   <td>{{SpecName('Web Speech API', '#dfn-onsoundend', 'onsoundend')}}</td>
    <td>{{Spec2('Web Speech API')}}</td>
    <td> </td>
   </tr>
@@ -53,7 +52,7 @@ recognition.onaudiostart = function() {
 <div>
 
 
-<p>{{Compat("api.SpeechRecognition.onaudiostart")}}</p>
+<p>{{Compat("api.SpeechRecognition.onsoundend")}}</p>
 </div>
 
 <h3 id="Firefox_OS_permissions" name="Firefox_OS_permissions">Firefox OS の権限</h3>
