@@ -1,94 +1,76 @@
 ---
-title: Console.log()
-slug: Web/API/Console/log
+title: console.log()
+slug: Web/API/console/log
 tags:
   - API
-  - console
+  - DOM
+  - Debugging
+  - HTML-tree
+  - Method
+  - Reference
+  - Web Development
   - console.log()
-  - 메소드
+  - difference
+  - web console
+browser-compat: api.console.log
 translation_of: Web/API/Console/log
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>Web Console에 메시지를 출력합니다.</p>
+**`console.log()`** 메서드는 웹 콘솔에 메시지를 출력합니다. 메시지는 단일 문자열(선택적 대체 값 포함)이거나 더 많은 JavaScript 객체중 하나일 수 있습니다.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">console.log(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.log(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+```js
+console.log(obj1 [, obj2, ..., objN]);
+console.log(msg [, subst1, ..., substN]);
+```
 
-<h2 id="매개_변수">매개 변수</h2>
+### 매개변수
 
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>출력할 자바스크립트 객체의 모음입니다. 각각의 자바스크립트 객체들의 문자열 표현은 순서가 있는 목록에 추가되며, 출력됩니다. </dd>
- <dt><code>msg</code></dt>
- <dd>0개 이상의 치환 문자열(ex:%d, %s)들을 포함하는 자바스크립트 문자열입니다.</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd><code>msg</code> 내의 치환 문자열들을 치환할 자바스크립트 객체들입니다. 이것은 추가적인 출력 형식 제어권을 제공합니다.</dd>
-</dl>
+- `obj1` ... `objN`
+  - : 출력할 JavaScript 객체 목록입니다. 이러한 각 객체의 문자열 표현은 입력한 순서대로 함께 출력됩니다. 최신 버전의 Chrome 및 Firefox에서, 콘솔에 기록되는 것은 객체에 대한 참조이며, `console.log()`를 호출하는 순간에 객체의 '값'이 반드시 필요한 것은 아닙니다.
+- `msg`
+  - : 0개 이상의 치환 문자열들을 포함하는 자바스크립트 문자열입니다.
+- `subst1` ... `substN`
+  - : `msg` 내의 치환 문자열들을 치환할 자바스크립트 객체들입니다. 출력 형식에 추가 제어를 할 수 있게 해줍니다.
 
-<p>자세한 내용은 {{domxref("console")}} 기록 문서에서 <a href="/en-US/docs/DOM/console#Outputting_text_to_the_console">Outputting text to the console</a>을 참조하십시오.</p>
+자세한 내용은 {{domxref("console")}} 문서의 [콘솔에 텍스트 출력](/ko/docs/Web/API/Console#콘솔에_텍스트_출력하기)을 참고하세요.
 
-<h2 id="명세">명세</h2>
+## log()와 dir()의 차이
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#consolelogobject--object-", "console.log()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+당신은 {{domxref("console.dir()")}}과 `console.log()`가 무엇이 다른지 궁금할 수 있습니다.
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+DOM 요소들을 콘솔로 보낼 때 Chrome에서 다른 유용한 차이점이 있습니다.
 
+![](dozdcyr.png)
 
+안내:
 
-<p>{{Compat("api.Console.log")}}</p>
+- `console.log`는 요소를 HTML과 같은 트리 구조로 출력합니다.
+- `console.dir`은 요소를 JSON과 같은 트리 구조로 출력합니다.
 
-<h2 id="console.dir()_과의_차이">console.dir() 과의 차이</h2>
+구체적으로, `console.log`는 DOM 요소에 대해 특별한 처리를 제공하지만 `console.dir`은 그렇지 않습니다. 이것은 종종 DOM JS 객체의 전체 표현을 보려고 할 때 유용합니다.
 
-<p>당신은 console.dir() 과 console.log() 가 무엇이 다른지 궁금할 수 있습니다.</p>
+이것과 다른 함수들에 대한 더 많은 정보는 [Chrome Console API reference](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject)에서 확인할 수 있습니다.
 
-<p>DOM 요소들을 콘솔로 보낼 때 Chrome에서 다른 유용한 차이점이 있습니다.</p>
+## 객체 로깅하기
 
-<p><img src="http://i.imgur.com/DozDcYR.png"></p>
+`console.log(obj)`를 사용하지 말고 `console.log(JSON.parse(JSON.stringify(obj)))`를 사용하시기 바랍니다.
 
-<p>안내:</p>
+이 방법은 여러분이 로그를 남길 당시의 `obj` 값을 보려고 사용했을 것입니다. 그러나 많은 브라우저가 값이 갱신 될때마다 끊임없이 바뀐 값을 보여줍니다. 이는 여러분이 원하는 방법이 아닐 것입니다.
 
-<ul>
- <li><code>console.log는 요소를 HTML과 같은 트리 구조로 출력합니다.</code></li>
- <li><code>console.dir은 요소를 JSON과 같은 트리 구조로 출력합니다.</code></li>
-</ul>
+## 명세
 
-<p>구체적으로, console.log는 DOM 요소에 대해 특별한 처리를 제공하지만 console.dir은 그렇지 않습니다. 이것은 종종 DOM JS 객체의 전체 표현을 보려고 할 때 유용합니다.</p>
+{{Specifications}}
 
-<p>이것과 다른 함수들에 대한 더 많은 정보가  <a href="https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject">Chrome Console API reference</a>에 있습니다.</p>
+## 브라우저 호환성
 
-<h2 id="객체_로깅하기">객체 로깅하기</h2>
+{{Compat}}
 
-<p><code>console.log(obj);</code>를 사용하지 말고 <br>
- <code>console.log(JSON.parse(JSON.stringify(obj)));</code>를 사용하시기 바랍니다.</p>
+## 같이 보기
 
-<p>이 방법은 여러분이 로그를 남길 당시의 <code>obj</code> 값을 보려고 사용했을겁니다. 그러나 많은 브라우저가 값이 갱신 될때마다 끊임없이 바뀐 값을 보여줍니다. 이는 여러분이 원하는 방법이 아닐겁니다.</p>
-
-<h2 id="참조">참조</h2>
-
-<ul>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
- <li><a href="http://getfirebug.com/wiki/index.php/Console_API">Firebug wiki: Console API</a> - Firebug supports additional features in its console.log() implementation, such as <a href="http://www.softwareishard.com/blog/firebug/firebug-tip-styled-logging/">styled logging</a>.</li>
- <li><a href="http://nodejs.org/docs/latest/api/console.html#console_console_log_data">NodeJS: Console API</a></li>
-</ul>
+- [MSDN: F12 도구 콘솔을 사용하여 오류 및 상태 보기](https://msdn.microsoft.com/library/gg589530)
+- [NodeJS: Console API](https://nodejs.org/docs/latest/api/console.html#console_console_log_data)

@@ -1,68 +1,56 @@
 ---
-title: Console.timeEnd()
-slug: Web/API/Console/timeEnd
+title: console.timeEnd()
+slug: Web/API/console/timeEnd
 tags:
-  - 디버깅
-  - 웹 개발
-  - 웹 콘솔
-  - 콘솔
-  - 타이머
+  - API
+  - DOM
+  - Debugging
+  - Method
+  - Web Development
+  - console
+  - web console
+browser-compat: api.console.timeEnd
 translation_of: Web/API/Console/timeEnd
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<div>이전에 {{domxref("console.time()")}}를 호출하여 시작된 타이머를 중지하고 <a href="/ko/docs/도구들/Web_Console">웹 콘솔</a>에 경과 시간을 밀리초 단위로 표시합니다.</div>
+**`console.timeEnd()`** 는 이전에 {{domxref("console.time()")}}를 호출하여 시작된 타이머를 중지합니다.
 
-<div> </div>
+자세한 내용과 예제는 [타이머](/ko/docs/Web/API/console#타이머)를 참조하세요.
 
-<div>자세한 내용과 예제는 <strong>콘솔</strong> 문서의 <a href="/ko/docs/Web/API/console#Timers">Timers</a>를 참조하세요.</div>
+{{AvailableInWorkers}}
 
-<div> </div>
+## 구문
 
-<p>{{AvailableInWorkers}}</p>
+```js
+console.timeEnd(label);
+```
 
-<h2 id="구문(Syntax)">구문(Syntax)</h2>
+### 매개변수
 
-<pre class="syntaxbox">console.timeEnd(<em>label</em>);
-</pre>
+- `label`
+  - : 중지할 타이머의 이름입니다. 중지되면 경과 시간이 [웹 콘솔](/ko/docs/Tools/Web_Console)에 자동으로 시간이 종료되었음을 알리는 표시와 함께 표시됩니다.
 
-<h3 id="매개_변수(Parameters)">매개 변수(Parameters)</h3>
+## 예제
 
-<dl>
- <dt><code>label</code></dt>
- <dd>중지할 타이머의 이름입니다. console.time()를 호출할 때의 이름을 사용하여 해당 타이머를 중지할 수 있는 식별자 역할을 합니다.</dd>
-</dl>
+```js
+console.time("answer time");
+alert("Click to continue");
+console.timeLog("answer time");
+alert("Do a bunch of other stuff...");
+console.timeEnd("answer time");
+```
 
-<h2 id="명세서(Specifications)">명세서(Specifications)</h2>
+위 예제의 출력은 사용자가 첫 번째 경고 상자를 닫는 데 걸린 시간과 사용자가 두 번째 경고를 닫는 데 걸린 시간을 보여줍니다.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#timeend", "console.timeEnd()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+![](timer_output.png)
 
-<h2 id="브라우저_호환성(Browser_compatibility)">브라우저 호환성(Browser compatibility)</h2>
+타이머 이름은 `timeLog()`를 사용하여 타이머 값을 기록할 때 표시되고 중지될 때 다시 표시됩니다. 또한 timeEnd()에 대한 호출에는 타이머가 더 이상 시간을 추적하지 않는다는 것을 분명히 하기 위해 "타이머 종료됨"이라는 추가 정보가 있습니다.
 
-<div>
+## 명세
 
+{{Specifications}}
 
-<p>{{Compat("api.Console.timeEnd")}}</p>
-</div>
+## 브라우저 호환성
 
-<h2 id="함께_보기(See_also)">함께 보기(See also)</h2>
-
-<ul>
- <li>{{domxref("console.time()")}}</li>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+{{Compat}}
