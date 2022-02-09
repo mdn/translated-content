@@ -1,5 +1,5 @@
 ---
-title: Déni de Service
+title: Déni de service
 slug: Glossary/Denial_of_Service
 translation_of: Glossary/Denial_of_Service
 original_slug: Glossaire/Déni_de_Service
