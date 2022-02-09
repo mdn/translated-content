@@ -122,3 +122,4 @@ function previewFiles() {
 
 - {{domxref("FileReader")}}
 - {{domxref("URL.createObjectURL()")}}
+
