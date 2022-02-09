@@ -5,51 +5,51 @@ tags:
   - 要素
   - フォーム
   - HTML
-  - HTML Input Types
+  - HTML 入力型
   - HTML フォーム
-  - HTML input
+  - HTML 入力
   - Input
   - 入力要素
   - 入力型
   - リファレンス
   - Time
+browser-compat: html.elements.input.input-time
 translation_of: Web/HTML/Element/input/time
 ---
+
 {{HTMLRef("Input_types")}}
 
-<span class="seoSummary">{{htmlelement("input")}} 要素の <strong>`time`</strong> 型は、ユーザーが簡単に時刻 (時と分、任意で秒) を入力できるように設計された入力欄を生成します。</span>
+{{htmlelement("input")}} 要素の **`time`** 型は、ユーザーが簡単に時刻 (時と分、任意で秒) を入力できるように設計された入力欄を生成します。
 
-コントロールのユーザーインターフェイスは、ブラウザーによってまちまちです。最近のブラウザーは対応が進んでおり、 Safari は有名なブラウザーの中で唯一実装していません。 Safari やその他の `&lt;time&gt;` に対応していないブラウザーでは、このコントロールは単純な `[&lt;input type="text"&gt;](/ja/docs/Web/HTML/Element/input/text)` に格下げされます。
+コントロールのユーザーインターフェイスは、ブラウザーによってまちまちです。最近のブラウザーは対応が進んでおり、 Safari は有名なブラウザーの中で唯一実装していません。対応していないブラウザーでは、このコントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされます。
 
 {{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) をクローンしてプルリクエストを送信してください。</div>
+## 外観
 
-<h2 id="Appearance" name="Appearance">外観</h2>
+### Chrome と Opera
 
-<h3 id="Chrome_and_Opera" name="Chrome_and_Opera">Chrome と Opera</h3>
+Chrome/Opera では、 `time` コントロールはシンプルで、時と分をオペレーティングシステムのロケールに従って 12 時制または 24 時制で入力するスロットと、現在選択中の部分を増減するための上下の矢印から成ります。コントロールの値を消去する "X" ボタンが提供されています。
 
-Chrome/Opera では、 `time` コントロールはシンプルで、時と分をオペレーティングシステムのロケールに従って12時制または24時制で入力するスロットと、現在選択中の部分を増減するための上下の矢印から成ります。コントロールの値を消去する "X" ボタンが提供されています。
+![Chrome の 12 時制の time input](chrome_time.png) 12-hour
 
-<img alt="Chrome の12時制の time input" src="https://mdn.mozillademos.org/files/16417/chrome_time.PNG" style="height: 30px; width: 93px;"> 12-hour
+![Chrome の 24 時制の time input](chrome-time.png) 24-hour
 
-<img alt="Chrome の24時制の time input" src="https://mdn.mozillademos.org/files/15399/chrome-time.png" style="height: 30px; width: 79px;"> 24-hour
+### Firefox
 
-<h3 id="Firefox">Firefox</h3>
+Firefox の `time` コントロールは Chrome のものとよく似ていますが、上下の矢印がありません。これも時刻の入力には、システムのロケールに従って 12 時制または 24 時制の書式を使用します。コントロールの値を消去するための "X" ボタンがあります。
 
-Firefox の `time` コントロールは Chrome のものとよく似ていますが、上下の矢印があります。これも時刻の入力には、システムのロケールに従って12時制または24時制の書式を使用します。コントロールの値を消去するための "X" ボタンがあります。
+![Firefox の 12 時制の time input](firefox-time.png) 12-hour
 
-<img alt="Firefox の12時制の time input" src="https://mdn.mozillademos.org/files/15403/firefox-time.png" style="height: 29px; width: 106px;"> 12-hour
+![Firefox の 24 時制の time input](firefox-time-24.png) 24-hour
 
-<img alt="Firefox の24時制の time input" src="https://mdn.mozillademos.org/files/16461/firefox-time-24.png" style="height: 29px; width: 80px;"> 24-hour
-
-<h3 id="Edge">Edge</h3>
+### Edge
 
 Edge の `time` コントロールはいくらかもっと精巧で、時と分を選択するスライドリールが開きます。 Chrome のように、時刻の入力にはシステムのロケールに従って12時制または24時制を使用します。
 
-<img alt="Edge の12時制の time input" src="https://mdn.mozillademos.org/files/16418/edge_time.PNG" style="display: block; height: 290px; width: 188px;"> 12-hour
+![Edge の 12 時制の time input](edge_time.png) 12-hour
 
-<img alt="Edge の24時制の time input" src="https://mdn.mozillademos.org/files/15401/edge-time.png" style="display: block; height: 290px; width: 129px;"> 24-hour
+![Edge の 24 時制の time input](edge-time.png) 24-hour
 
 <table class="properties">
  <tbody>
