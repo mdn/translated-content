@@ -1,14 +1,6 @@
 ---
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
-tags:
-  - API
-  - Base 64
-  - File API
-  - FileReader
-  - Files
-  - Method
-  - Reference
 translation_of: Web/API/FileReader/readAsDataURL
 browser-compat: api.FileReader.readAsDataURL
 ---
@@ -122,4 +114,3 @@ function previewFiles() {
 
 - {{domxref("FileReader")}}
 - {{domxref("URL.createObjectURL()")}}
-
