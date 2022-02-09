@@ -1,36 +1,44 @@
 ---
-title: Console.group()
-slug: Web/API/Console/group
+title: console.group()
+slug: Web/API/console/group
+tags:
+  - API
+  - DOM
+  - Debugging
+  - Method
+  - Web Development
+  - web console
+browser-compat: api.console.group
 translation_of: Web/API/Console/group
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p><a href="/en-US/docs/Tools/Web_Console">Web Console</a> log 에 새로운 인라인 그룹을 만듭니다. This indents all following output by an additional level, until {{domxref("console.groupEnd()")}} is called.</p>
+**`console.group()`** 메서드는 [웹 콘솔](/ko/docs/Tools/Web_Console) 로그에 새로운 인라인 그룹을 만듭니다. 이는 {{domxref("console.groupEnd()")}}가 호출될 때까지 모든 다음 출력을 추가 수준으로 들여씁니다.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre>console.group([label]);</pre>
+```js
+console.group([label]);
+```
 
-<h2 id="매개변수">매개변수</h2>
+## 매개변수
 
-<p> </p>
+- `label`
+  - : 그룹의 레이블입니다. 이 매개변수는 선택사항입니다. (Chrome 59에서 테스트됨) `console.groupEnd()`와 함께 작동하지 않습니다.
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Label for the group. Optional. (Chrome 59 tested) Does not work with <code>console.groupEnd()</code>.</dd>
-</dl>
+### 콘솔에서 그룹 사용하기
 
-<p>{{h3_gecko_minversion("Using groups in the console", "9.0")}}</p>
+중첩 그룹을 사용하여 관련 메시지를 시각적으로 연결하여 출력을 구성할 수 있습니다. 새 중첩 블록을 만들려면 `console.group()`을 호출하세요. `console.groupCollapsed()` 메서드와 비슷하지만 새 블록이 접혀 있고 이를 읽으려면 공개 버튼을 클릭해야 합니다.
 
-<p>You can use nested groups to help organize your output by visually associating related messages. To create a new nested block, call <code>console.group()</code>. The <code>console.groupCollapsed()</code> method is similar, but the new block is collapsed and requires clicking a disclosure button to read it.</p>
+> **참고:** Gecko 9부터 Gecko 51까지 `groupCollapsed()` 메소드는 `group()`과 동일했습니다.
+> 축소된 그룹은 Gecko 52부터 완전히 지원됩니다. {{bug("1088360")}}를 참조하세요.
 
-<p><strong>Note:</strong> From Gecko 9 until Gecko 51, the <code>groupCollapsed()</code> method was the same as <code>group()</code>. Collapsed groups are fully supported starting in Gecko 52. See {{bug("1088360")}}.</p>
+현재 그룹을 종료하려면 `console.groupEnd()`를 호출하세요. 예를 들어...
 
-<p>To exit the current group, call <code>console.groupEnd()</code>. For example, given this code:</p>
-
-<pre><code>console.log("This is the outer level");
+```js
+console.log("This is the outer level");
 console.group();
 console.log("Level 2");
 console.group();
@@ -39,45 +47,19 @@ console.warn("More of level 3");
 console.groupEnd();
 console.log("Back to level 2");
 console.groupEnd();
-console.log("Back to the outer level");</code></pre>
+console.log("Back to the outer level");
+```
 
-<p>The output looks like this:</p>
+실행 결과는 다음과 같습니다.
 
-<p><img alt="A screenshot of messages nested in the console output." src="https://developer.mozilla.org/@api/deki/files/6082/=nesting.png"></p>
+![A screenshot of messages nested in the console output.](nesting.png)
 
-<p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Using_groups_in_the_console">Using groups in the console</a> in the documentation of {{domxref("console")}} for more details.</p>
+자세한 내용은 {{domxref("console")}} 문서의 [콘솔 그룹 사용하기](/ko/docs/Web/API/console#콘솔_그룹_사용하기)를 참조하세요.
+ 
+## 명세
 
-<p> </p>
+{{Specifications}}
 
-<h2 id="설명">설명</h2>
+## 브라우저 호환성
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#group", "console.group()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-<p> </p>
-
-<p>{{Compat("api.Console.group")}}</p>
-
-<p> </p>
-
-<h2 id="더_보기">더 보기</h2>
-
-<ul>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+{{Compat}}

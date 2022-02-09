@@ -1,59 +1,47 @@
 ---
 title: console.debug()
-slug: Web/API/Console/debug
+slug: Web/API/console/debug
 tags:
   - API
+  - Debug
+  - Debugging
+  - Developer Tools
+  - Logging
   - Method
   - Reference
   - console
+  - log
+  - output
+  - print
+browser-compat: api.console.debug
 translation_of: Web/API/Console/debug
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p><strong><code>console.debug()</code></strong> 메서드는 메시지를 "디버그" 중요도로 콘솔에 출력합니다. 디버그 중요도 메시지는 별도 설정 없이는 보이지 않습니다.</p>
+**`console.debug()`** 메서드는 메시지를 "디버그" 중요도로 콘솔에 출력합니다. 디버그 중요도 메시지는 별도 설정 없이는 보이지 않습니다. 대부분의 경우 로그 수준은 콘솔 UI 내에서 구성됩니다. 이 로그 수준은 \`Debug\` 또는 \`Verbose\` 로그 수준에 해당할 수 있습니다.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">console.debug(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.debug(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+```js
+console.debug(obj1 [, obj2, ..., objN]);
+console.debug(msg [, subst1, ..., substN]);
+```
 
-<h3 id="매개변수">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>출력에 사용할 JavaScript 객체. 각각의 문자열 표현을 순서대로 출력합니다.</dd>
- <dt><code>msg</code></dt>
- <dd>0개 이상의 치환 문자열을 포함하는 JavaScript 문자열.</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd><code>msg</code> 매개변수의 치환 문자열에 대입할 JavaScript 객체.</dd>
-</dl>
+- `obj1` ... `objN`
+  - : 출력에 사용할 JavaScript 객체. 각각의 문자열 표현은 입력한 순서대로 함께 출력됩니다.
+- `msg`
+  - : 0개 이상의 치환 문자열을 포함하는 JavaScript 문자열. `subst1`부터 `substN`까지 순서대로 치환됩니다.
+- `subst1` ... `substN`
+  - : `msg` 매개변수의 치환 문자열에 대체할 JavaScript 객체. 출력 형식에 추가 제어를 할 수 있게 해줍니다. 치환 작동 방식에 대한 설명은 [문자열 치환 사용하기](/ko/docs/Web/API/console#문자열_치환_사용하기)를 참조하세요.
 
-<h2 id="명세">명세</h2>
+## 명세
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#debug", "console.debug()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<div>
-
-
-<p>{{Compat("api.Console.debug")}}</p>
-</div>
+{{Compat}}
