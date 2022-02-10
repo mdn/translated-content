@@ -1,12 +1,6 @@
 ---
 title: BatteryManager.onlevelchange
 slug: Web/API/BatteryManager/onlevelchange
-tags:
-  - API
-  - Battery API
-  - Event Handler
-  - Property
-  - Reference
 browser-compat: api.BatteryManager.onlevelchange
 translation_of: Web/API/BatteryManager/onlevelchange
 ---
@@ -61,7 +55,7 @@ navigator.getBattery().then(function(battery) {
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 
