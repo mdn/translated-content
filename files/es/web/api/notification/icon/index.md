@@ -2,6 +2,7 @@
 title: Notification.icon
 slug: Web/API/Notification/icon
 translation_of: Web/API/Notification/icon
+browser-compat: api.Notification.icon
 ---
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
