@@ -1215,6 +1215,7 @@
 /zh-CN/docs/WOFF	/zh-CN/docs/Web/Guide/WOFF
 /zh-CN/docs/Web-based_protocol_handlers	/zh-CN/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /zh-CN/docs/Web/API/APIWwindow.sidebar	/zh-CN/docs/Web/API/Window/sidebar
+/zh-CN/docs/Web/API/AbortSignal/onabort	/zh-CN/docs/Web/API/AbortSignal/abort_event
 /zh-CN/docs/Web/API/AmbientLightSensor/reading	/zh-CN/docs/Web/API/AmbientLightSensor/illuminance
 /zh-CN/docs/Web/API/ArrayBuffer	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-CN/docs/Web/API/AudioContext/createAnalyser	/zh-CN/docs/Web/API/BaseAudioContext/createAnalyser

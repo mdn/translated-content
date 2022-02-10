@@ -7377,16 +7377,16 @@
       "Feahter"
     ]
   },
+  "Web/API/AbortSignal/abort_event": {
+    "modified": "2020-10-15T22:01:12.039Z",
+    "contributors": [
+      "syhxczy"
+    ]
+  },
   "Web/API/AbortSignal/aborted": {
     "modified": "2020-10-15T22:01:06.083Z",
     "contributors": [
       "fengerzh"
-    ]
-  },
-  "Web/API/AbortSignal/onabort": {
-    "modified": "2020-10-15T22:01:12.039Z",
-    "contributors": [
-      "syhxczy"
     ]
   },
   "Web/API/Accelerometer": {

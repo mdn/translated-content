@@ -300,6 +300,7 @@
 /ru/docs/Tools/Производительность/Waterfall	/ru/docs/Tools/Performance/Waterfall
 /ru/docs/Using_Firefox_1.5_caching	/ru/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 /ru/docs/Using_files_from_web_applications	/ru/docs/Web/API/File/Using_files_from_web_applications
+/ru/docs/Web/API/AbortSignal/onabort	/ru/docs/conflicting/Web/API/AbortSignal/abort_event
 /ru/docs/Web/API/AudioContext.currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
 /ru/docs/Web/API/AudioContext/createPanner	/ru/docs/Web/API/BaseAudioContext/createPanner
 /ru/docs/Web/API/AudioContext/currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
