@@ -1,17 +1,8 @@
 ---
 title: Notification.icon
 slug: Web/API/Notification/icon
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - icon
 translation_of: Web/API/Notification/icon
 ---
-
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propiedad de solo lectura **`icon`** de la interfaz
