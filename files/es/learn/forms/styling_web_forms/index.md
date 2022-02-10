@@ -155,7 +155,7 @@ textarea {
 
 Vamos a ver un ejemplo de como aplicar estilo a un formulario HTML. Esto nos ayudará a tener las ideas más claras. A continuación construiremos el siguiente formulario de contacto de esta postal:
 
-![Esto queremos hacer con HTML y CSS](screenshot.png)
+![Esto queremos hacer con HTML y CSS](updated-form-screenshot.jpg)
 
 ### HTML
 
@@ -365,6 +365,6 @@ Y ¡listo! Sientase libre de probarlo usted mismo; como comprobará ¡esto funci
 
 ## Conclusión
 
-Como puede verse, mientras que queramos construir formularios solo con campos de texto y botones, es sencillo aplicarles estilos con CSS. Si desea saber más pequeños trucos de CSS que le hagan más fácil la vida al trabajar con formularios, echele un vistazo a la parte de formularios de [el proyecto normalize.css](http://necolas.github.com/normalize.css).
+Como puede verse, mientras que queramos construir formularios solo con campos de texto y botones, es sencillo aplicarles estilos con CSS. Si deseas saber más pequeños trucos de CSS que le hagan más fácil la vida al trabajar con formularios, echale un vistazo a la parte de formularios de [el proyecto normalize.css](http://necolas.github.com/normalize.css).
 
 En el próximo artículo, veremos como manejar widgets de formulario de la categoría de "el malo" y "el feo".
