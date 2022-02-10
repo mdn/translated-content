@@ -23,7 +23,7 @@ La interfaz **`CustomEvent`** representa eventos que son inicializados por una a
 _Esta interfaz hereda las propiedades de su padre, {{domxref("Event")}}._
 
 - {{domxref("CustomEvent.detail")}} {{readonlyinline}}
-  - : Regresa cualquier dato transmitido al inicializar el evento.
+  - : Devuelve cualquier dato pasado al inicializar el evento.
 
 ## Métodos
 
