@@ -1,12 +1,6 @@
 ---
 title: BatteryManager.chargingTime
 slug: Web/API/BatteryManager/chargingTime
-tags:
-  - API
-  - Battery
-  - Battery API
-  - Mobile
-  - Referencia
 translation_of: Web/API/BatteryManager/chargingTime
 browser-compat: api.BatteryManager.chargingTime
 ---
@@ -24,9 +18,7 @@ Indica la cantidad de tiempo, en segundos, que faltan para que la batería esté
 var time = battery.chargingTime;
 ```
 
-
-La variable `time` recibe el tiempo restante en segundos para que la batería
-
+La variable `time` es el tiempo restante en segundos para que la batería
 esté completamente cargada o 0 (cero) si la `battery` ya está completamente cargada.
 Si la batería está descargándose el valor es [`Infinity`](/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity).
 
