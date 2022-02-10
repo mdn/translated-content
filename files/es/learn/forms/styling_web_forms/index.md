@@ -122,71 +122,77 @@ El elemento {{HTMLElement("legend")}} no tiene problemas de estilizado a excepci
 
 <p>Debido a que el elemento legend es muy importante por razones de accesibilidad (esto es lo que leen las tecnologías de asistencia como parte de las etiquetas de cada elemento de formulario dentro del fieldset), bastante menudo se empareja con un título que se oculta pero siendo aun accesible, de la forma siguiente:</p>
 
-<h5 id="HTML">HTML</h5>
+##### HTML
 
-<pre class="brush: html">&lt;fieldset&gt;
-  &lt;legend&gt;Hi!&lt;/legend&gt;
-  &lt;h1&gt;Hello&lt;/h1&gt;
-&lt;/fieldset&gt;</pre>
+ ```html
+<fieldset>
+  <legend>Hi!</legend>
+  <h1>Hello</h1>
+</fieldset>
+```
 
-<h5 id="CSS">CSS</h5>
+##### CSS
 
-<pre class="brush: css">legend {
+```css
+legend {
   width: 1px;
   height: 1px;
   overflow: hidden;
-}</pre>
+}
+```
 
-<h4 id="textarea">textarea</h4>
+#### textarea
 
-<p>Por defecto, todos los navegadores consideran el elemento <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea </a>como un inline block alineado con la línea base del texto. Esto es algo que raramente es lo que en realidad se quiere. Para convertir este elemento de un inline-block a uno tipo block, se realiza bastante fácilmente utilizando la propiedad <a href="/es/docs/CSS/display">display</a>. Si lo que quieres es utilizarlo inline, es corriente cambiar la alineación vertical: </p>
+Por defecto, todos los navegadores consideran el elemento {{HTMLElement("textarea")}} como un inline block alineado con la línea base del texto. Esto es algo que raramente es lo que en realidad se quiere. Para convertir este elemento de un inline-block a uno tipo block, se realiza bastante fácilmente utilizando la propiedad [display](/es/docs/CSS/display). Si lo que quieres es utilizarlo inline, es corriente cambiar la alineación vertical:
 
-<pre class="brush: css">textarea {
+```css
+textarea {
   vertical-align: top;
-}</pre>
+}
+```
 
-<h2 id="Ejemplo_2">Ejemplo</h2>
+## Ejemplo
 
-<p>Vamos a ver un ejemplo de como aplicar estilo a un formulario HTML. Esto nos ayudará a tener las ideas más claras. A continuación construiremos el siguiente formulario de contacto de esta postal:</p>
+Vamos a ver un ejemplo de como aplicar estilo a un formulario HTML. Esto nos ayudará a tener las ideas más claras. A continuación construiremos el siguiente formulario de contacto de esta postal:
 
-<p><img alt="This is what we want to achieve with HTML and CSS" src="/files/4149/screenshot.png" style="border-style: solid; border-width: 1px; height: 249px; width: 370px;"></p>
+![Esto queremos hacer con HTML y CSS](screenshot.png)
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<p>El HTML  incluye poco más de lo que se utiliza en el primer artículo de <a href="/en-US/docs/HTML/Forms/My_first_HTML_form">esta guía</a>; apenas el título y algún ID más.</p>
+El HTML incluye poco más de lo que se utiliza en el primer artículo de [esta guía](/en-US/docs/HTML/Forms/My_first_HTML_form); apenas el título y algún ID más.
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;h1&gt;to: Mozilla&lt;/h1&gt;
+```html
+<form>
+  <h1>para: Mozilla</h1>
 
-  &lt;div id="from"&gt;
-    &lt;label for="name"&gt;from:&lt;/label&gt;
-    &lt;input type="text" id="name" name="user_name"&gt;
-  &lt;/div&gt;
+  <div id="remitente">
+    <label for="nombre">de:</label>
+    <input type="text" id="nombre" name="user_name">
+  </div>
 
-  &lt;div id="reply"&gt;
-    &lt;label for="mail"&gt;reply:&lt;/label&gt;
-    &lt;input type="email" id="mail" name="user_email"&gt;
-  &lt;/div&gt;
+  <div id="respuesta">
+    <label for="mail">respuesta::</label>
+    <input type="email" id="mail" name="user_email">
+  </div>
 
-  &lt;div id="message"&gt;
-    &lt;label for="msg"&gt;Your message:&lt;/label&gt;
-    &lt;textarea id="msg" name="user_message"&gt;&lt;/textarea&gt;
-  &lt;/div&gt;
+  <div id="mensaje">
+    <label for="msg">Tu mensaje:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </div>
 
-  &lt;div class="button"&gt;
-    &lt;button type="submit"&gt;Send your message&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+  <div class="button">
+    <button type="submit">Enviar tu mensaje</button>
+  </div>
+</form>
+```
 
 ### CSS
 
 ¡Aqui es donde empieza la diversión! Antes de empezar a codificar, necesitamos tres elementos adicionales:
 
-<ol>
- <li>El <a href="https://developer.mozilla.org/files/4151/background.jpg">fondo </a>de la postal</li>
- <li>Una fuente tipográfica: <a href="http://www.fontsquirrel.com/fonts/Secret-Typewriter" rel="external">la "Secret Typewriter" de fontsquirrel.com</a></li>
- <li>Una fuente manuscrita: <a href="http://www.fontsquirrel.com/fonts/Journal" rel="external">la "Journal" fde fontsquirrel.com</a></li>
-</ol>
+- El [fondo](https://developer.mozilla.org/files/4151/background.jpg) de la postal
+- Una fuente tipográfica: [la "Secret Typewriter" de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Secret-Typewriter)
+- Una fuente manuscrita: [la "Journal" de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Journal)
 
 Ahora podemos repasar el código. Primero preparamos las bases definiendo las reglas [@font-face](https://developer.mozilla.org/es/docs/Web/CSS/@font-face) y los elementos básicos de {{HTMLElement("form")}}.
 
@@ -226,7 +232,8 @@ form {
   margin : 0 auto;
 
   background: #FFF url(background.jpg);
-}```
+}
+```
 
 Ahora podemos posicionar los elementos, incluidos el título y los elementos del formulario.
 
@@ -239,19 +246,19 @@ h1 {
   font : 1em "typewriter", sans-serif;
 }
 
-#from {
+#remitente {
   position: absolute;
   left : 398px;
   top  : 235px;
 }
 
-#reply {
+#respuesta {
   position: absolute;
   left : 390px;
   top  : 285px;
 }
 
-#message {
+#mensaje {
   position: absolute;
   left : 20px;
   top  : 70px;
