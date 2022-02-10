@@ -72,7 +72,7 @@ Solamente hemos especificado el fin del estado de la animación, y el estado ini
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 
