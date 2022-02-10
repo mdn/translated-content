@@ -49,7 +49,7 @@ navigator.getBattery().then(function(battery) {
 
 ### Resultado
 
-{{EmbedLiveSample('', '100%', 40)}}
+{{EmbedLiveSample('Example', '100%', 40)}}
 
 ## Especificaciones
 
