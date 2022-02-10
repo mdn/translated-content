@@ -14,9 +14,9 @@ La **Spécificité** est le moyen par lequel les navigateurs décident quelles v
 
 ## Détermination de la spécificité
 
-La spécificité est l’importance donnée à une déclaration CSS, déterminée par le nombre de [types de sélecteur](#types-de-selecteurs) dans le sélecteur correspondant. Lorsque plusieurs déclarations ont une même spécificité, la dernière déclaration trouvée dans la CSS est appliquée à l’élément. La spécificité ne s’applique que lorsque le même élément est ciblé par plusieurs déclarations. Selon les règles CSS, [les éléments ciblés directement](#elements-cibles-directement-vs-styles-herites) seront toujours prioritaires par rapport aux règles héritées par un élément de leurs ancètres.
+La spécificité est l’importance donnée à une déclaration CSS, déterminée par le nombre de [types de sélecteur](#types_de_sélecteurs) dans le sélecteur correspondant. Lorsque plusieurs déclarations ont une même spécificité, la dernière déclaration trouvée dans la CSS est appliquée à l’élément. La spécificité ne s’applique que lorsque le même élément est ciblé par plusieurs déclarations. Selon les règles CSS, [les éléments ciblés directement](#éléments_ciblés_directement_vs_styles_hérités) seront toujours prioritaires par rapport aux règles héritées par un élément de leurs ancètres.
 
-> **Remarque&nbsp;:** [la proximité des éléments](#ignorance-de-la-proximite-dans-larborescence) dans l’arborescence du document n’a aucun effet sur la spécificité.
+> **Remarque&nbsp;:** [la proximité des éléments](#ignorance_de_la_proximité_dans_l’arborescence) dans l’arborescence du document n’a aucun effet sur la spécificité.
 
 ### Types de sélecteurs
 
@@ -145,7 +145,7 @@ Inclure une ID comme un sélecteur d’attribut au lieu d’un sélecteur d’ID
 
 ### Les exceptions :is() et :not()
 
-La pseudo-classe de correspondance {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} et la pseudo-classe de négation {{CSSxRef(":not", ":not()")}} _ne_ sont _pas_ considérées comme pseudo-classes dans le calcul de la spécificité. Mais les sélecteurs placés dans la pseudo-classe comptent comme des sélecteurs normaux lorsqu’on détermine le nombre de [types de sélecteurs](#types-de-selecteurs).
+La pseudo-classe de correspondance {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} et la pseudo-classe de négation {{CSSxRef(":not", ":not()")}} _ne_ sont _pas_ considérées comme pseudo-classes dans le calcul de la spécificité. Mais les sélecteurs placés dans la pseudo-classe comptent comme des sélecteurs normaux lorsqu’on détermine le nombre de [types de sélecteurs](#types_de_sélecteurs).
 
 Ce bout de CSS&hellip;
 
@@ -278,9 +278,9 @@ html h1 {
 
 {{EmbedLiveSample("Tree_proximity_ignorance")}}
 
-Cela est dû au fait que les deux déclarations ont le même nombre de [types de sélecteurs](#types-de-selecteurs), mais le sélecteur `html h1` est déclaré en dernier.
+Cela est dû au fait que les deux déclarations ont le même nombre de [types de sélecteurs](#types_de_sélecteurs), mais le sélecteur `html h1` est déclaré en dernier.
 
-### Éléments ciblés directement vs. styles hérités
+### Éléments ciblés directement vs styles hérités
 
 Les styles pour un élément directement ciblé prendront toujours le dessus sur les styles hérités, sans prise en compte de la spécificité de la règle héritée. Cette CSS&hellip;
 
