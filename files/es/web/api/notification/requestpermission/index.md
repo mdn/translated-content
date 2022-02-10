@@ -38,7 +38,7 @@ Notification.requestPermission(callback);
 
 ### Valor de retorno
 
-Una {{jsxref("Promise")}} que se convierte en una {{domxref("DOMString")}} con el permiso escogido por el usuario. Los valores posibles para este son:
+Una {{jsxref("Promise")}} que se convierte en una {{domxref("DOMString")}} con el permiso elegido por el usuario. Los valores posibles para este son:
 
 - `granted`
 - `denied`
@@ -49,10 +49,10 @@ Una {{jsxref("Promise")}} que se convierte en una {{domxref("DOMString")}} con e
 Asume este HTML básico:
 
 ```html
-<button onclick="notifyMe()">Notify me!</button>
+<button onclick="notifyMe()">¡Notifícame!</button>
 ```
 
-Es posible enviar una notificacion de la siguiente forma - aqui presentamos un código bastante verboso y completo que podrias usar si quisieras primero comprobar si las notificaciones son soportadas, luego comprobar si el permiso ha sido concedido para el origen actual para enviar notificaciones y luego solicitar permiso de ser requerido, antes de enviar una notificación.
+Es posible enviar una notificación de la siguiente forma: aquí presentamos un conjunto de código bastante detallado y completo que podrías usar si quisieras primero comprobar si las notificaciones son soportadas, luego comprobar si el permiso ha sido concedido para el origen actual para enviar notificaciones y luego solicitar permiso de ser requerido, antes de enviar una notificación.
 
 ```js
 function notifyMe() {
@@ -64,7 +64,7 @@ function notifyMe() {
   // Comprobamos si los permisos han sido concedidos anteriormente
   else if (Notification.permission === "granted") {
     // Si es correcto, lanzamos una notificación
-    var notification = new Notification("Hola!");
+    var notification = new Notification("¡Hola!");
   }
 
   // Si no, pedimos permiso para la notificación
@@ -72,7 +72,7 @@ function notifyMe() {
     Notification.requestPermission().then(function (permission) {
       // Si el usuario nos lo concede, creamos la notificación
       if (permission === "granted") {
-        var notification = new Notification("Hola!");
+        var notification = new Notification("¡Hola!");
       }
     });
   }
@@ -90,7 +90,7 @@ Ya no mostramos ejemplos corriendo en tiempo real en esta página, ya que Chrome
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 
