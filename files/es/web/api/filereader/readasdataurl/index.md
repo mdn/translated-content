@@ -22,7 +22,7 @@ instanceOfFileReader.readAsDataURL(blob);
 - `blob`
   - : El {{domxref("Blob")}} o {{domxref("File")}} desde el cual leer.
 
-## Ejemplo leyendo multiples archivos
+## Ejemplo
 
 ### HTML
 
@@ -40,7 +40,7 @@ function previewFile() {
   const reader = new FileReader();
 
   reader.addEventListener("load", function () {
-    // convierte el archivo imagen a una cadena de base64
+    // convierte la imagen a una cadena en base64
     preview.src = reader.result;
   }, false);
 
@@ -82,7 +82,7 @@ function previewFiles() {
         image.height = 100;
         image.title = file.name;
         image.src = this.result;
-        preview.appendChild( image );
+        preview.appendChild(image);
       }, false);
 
       reader.readAsDataURL(file);
@@ -100,13 +100,13 @@ function previewFiles() {
 > **Nota:** El constructor [`FileReader()`](/es/docs/Web/API/FileReader) no es soportado por Internet
 >  Explorer versión anterior a la 10. Para una completa compatibilidad de código puedes ver nuestra
 > [imagen previa para una posible solucion entre navegadores](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html). 
-> Véase también [este ejemplo más poderoso](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
+> Véase también [este ejemplo más completo](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 
