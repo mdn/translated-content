@@ -32,7 +32,6 @@ _Esta interfaz hereda las propiedades de su padre, {{domxref("Event")}}._
 - {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
   - : Inicializa un objeto `CustomEvent`. Si el evento ya ha sido enviado, este método no hace nada.
 
-
 ## Especificaciones
 
 {{Specifications}}
@@ -41,8 +40,8 @@ _Esta interfaz hereda las propiedades de su padre, {{domxref("Event")}}._
 
 {{Compat}}
 
-
 ## Ver también
 
 - {{domxref("Window.postMessage()")}}
-- [Creación y activación de eventos](/en-US/docs/Web/Events/Creating_and_triggering_events)
+- [Creación y activación de eventos](/es/docs/Web/Events/Creating_and_triggering_events)
+
