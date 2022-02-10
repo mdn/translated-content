@@ -26,7 +26,7 @@ Antes de que una aplicación pueda enviar una notificación, el usuario debe con
 
 Debido a los abusos de las notificaciones automáticas en el pasado, los navegadores web y los desarrolladores han comenzado a implementar estrategias para ayudar a mitigar este problema. Solo debe solicitar el consentimiento para mostrar notificaciones en respuesta a un gesto del usuario (por ejemplo, hacer clic en un botón). Esta no es solo la mejor práctica: no debe molestar a los usuarios con notificaciones que no aceptaron, sino que, en el futuro, los navegadores rechazarán explícitamente las solicitudes de permiso de notificación que no se activen en respuesta a un gesto del usuario. Firefox ya lo está haciendo desde la versión 72, por ejemplo, y Safari lo ha hecho durante algún tiempo.
 
-Además, en Chrome y Firefox no puede solicitar notificaciones a menos que el sitio sea un contexto seguro (es decir, HTTPS), y ya no puede permitir que se soliciten permisos de notificación desde {{htmlelement("iframe")}} de origen cruzado.
+Además, en Chrome y Firefox no puede solicitar notificaciones a menos que el sitio sea un contexto seguro (es decir, HTTPS), y ya no puede permitir que se soliciten permisos de notificación desde un {{htmlelement("iframe")}} de origen cruzado.
 
 ### Comprobación del estado actual de los permisos
 
