@@ -259,7 +259,7 @@ window.addEventListener('load', function () {
 
 {{Specifications("api.Notification")}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
 {{Compat("api.Notification")}}
 
