@@ -203,8 +203,6 @@ for (let para of paras) {
 
 {{Specifications}}
 
-A previous version of this interface reached the _Candidate Recommendation_ status. As some not-listed-at-risk features needed to be removed, the spec was demoted to the _Working Draft_ level, explaining why browsers implemented this property unprefixed, though not at the CR state.
-
 此接口的较早版本曾经被纳入 _候选_ 名单。 但由于需要对某些尚未列出的风险点进行删除工作，因此该规范已降级到 _工作草案_ 。所以说浏览器无前缀地实现此属性，但其却不在CR状态。
 
 ## 浏览器兼容性
