@@ -11,7 +11,7 @@ translation_of: Web/API/HTMLElement/offsetLeft
 
 Renvoie le nombre de pixels dont le
 _coin supérieur gauche_
-de l'élément courant est décalé vers là gauche au sein du nœud [`offsetParent`](fr/DOM/element.offsetParent).
+de l'élément courant est décalé vers la gauche au sein du nœud [`offsetParent`](fr/DOM/element.offsetParent).
 
 ### Syntaxe
 
@@ -21,7 +21,7 @@ de l'élément courant est décalé vers là gauche au sein du nœud [`offsetPar
 
 ### Note
 
-`offsetLeft` renvoie la position du coin supérieur gauche de l'élément ; pas nécessairement du « vrai » bord gauche de l'élément. C'est important pour les éléments **span** dans les textes continus qui s'étendent sur plusieurs lignes. Le span peut commencer au milieu de la page et continuer au début de la ligne suivante. La propriété `offsetLeft` fera référence au coin gauche de départ du span, pas le bord gauche du texte au début de la seconde ligne. Par conséquent, une boîte avec les valeurs left, top, width et height correspondant à `offsetLeft, offsetTop, offsetWidth` et `offsetHeight` ne contiendra pas forcément un span avec débordement de texte.
+`offsetLeft` renvoie la position du coin supérieur gauche de l'élément; pas nécessairement du « vrai » bord gauche de l'élément. C'est important pour les éléments **span** dans les textes continus qui s'étendent sur plusieurs lignes. Le span peut commencer au milieu de la page et continuer au début de la ligne suivante. La propriété `offsetLeft` fera référence au coin gauche de départ du span, pas le bord gauche du texte au début de la seconde ligne. Par conséquent, une boîte avec les valeurs left, top, width et height correspondant à `offsetLeft, offsetTop, offsetWidth` et `offsetHeight` ne contiendra pas forcément un span avec débordement de texte.
 
 ### Exemple
 
