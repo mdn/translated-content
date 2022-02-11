@@ -12,7 +12,7 @@ browser-compat: javascript.operators.logical_nullish_assignment
 ---
 {{jsSidebar("Operators")}}
 
-Оператор логического нулевого присваивания (`x ??= y`) присваивает значение переменной `x`, если она содержит {{Glossary("nullish", "близкое к null значение")}} (`null` или `undefined`).
+Оператор логического нулевого присваивания (`x ??= y`) присваивает значение переменной `x`, если она содержит {{Glossary("nullish", "похожее на null значение")}} (`null` или `undefined`).
 
 {{EmbedInteractiveExample("pages/js/expressions-logical-nullish-assignment.html")}}
 
@@ -70,6 +70,6 @@ config({}); // { duration: 100, speed: 25 }
 ## Смотрите также
 
 - [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
-- {{Glossary("Nullish")}}
-- {{Glossary("Truthy")}}
-- {{Glossary("Falsy")}}
+- {{Glossary("Nullish", "Похожее на null значение")}}
+- {{Glossary("Truthy", "Истиноподобное значение")}}
+- {{Glossary("Falsy", "Ложноподобное значение")}}
