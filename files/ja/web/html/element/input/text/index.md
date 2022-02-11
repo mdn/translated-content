@@ -25,7 +25,7 @@ translation_of: Web/HTML/Element/input/text
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value", "値")}}</strong></td>
+      <td><strong>{{anch("値")}}</strong></td>
       <td>
         テキスト入力欄に含まれる文字列を表す {{domxref("DOMString")}}。
       </td>
