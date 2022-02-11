@@ -31,8 +31,7 @@ animate(keyframes, options)
     siguientes opciones:
    
     - `id {{optional_inline}}`
-      - : Una propiedad única `animate()` para animar: una [`DOMString`](/es/docs/Web/API/DOMString) 
-      la cual hace referencia a la animación.
+      - : Una propiedad única `animate()` para animar: una [`DOMString`](/es/docs/Web/API/DOMString) la cual hace referencia a la animación.
 
 ### Valor de retorno
 
