@@ -11721,12 +11721,6 @@
       "forestbird"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2019-03-23T22:31:10.101Z",
-    "contributors": [
-      "fider"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T22:01:52.733Z",
     "contributors": [
@@ -11742,6 +11736,12 @@
     "contributors": [
       "ZaWertun",
       "sollerias",
+      "fider"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2019-03-23T22:31:10.101Z",
+    "contributors": [
       "fider"
     ]
   },

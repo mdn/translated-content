@@ -553,6 +553,7 @@
 /pt-BR/docs/Web/API/WindowTimers/clearTimeout	/pt-BR/docs/Web/API/clearTimeout
 /pt-BR/docs/Web/API/XMLHttpRequest/Requisicoes_sincronas_e_assincronas	/pt-BR/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 /pt-BR/docs/Web/API/XMLHttpRequest/Usando_XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+/pt-BR/docs/Web/API/XMLHttpRequest/onreadystatechange	/pt-BR/docs/Web/API/XMLHttpRequest/readystatechange_event
 /pt-BR/docs/Web/API/document.getElementById	/pt-BR/docs/Web/API/Document/getElementById
 /pt-BR/docs/Web/API/document.images	/pt-BR/docs/Web/API/Document/images
 /pt-BR/docs/Web/API/document.scripts	/pt-BR/docs/Web/API/Document/scripts

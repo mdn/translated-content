@@ -25508,10 +25508,9 @@
     ]
   },
   "Web/API/XMLHttpRequest/abort_event": {
-    "modified": "2020-10-15T22:11:45.049Z",
+    "modified": "2020-10-15T22:32:23.389Z",
     "contributors": [
-      "mfuji09",
-      "silverskyvicto"
+      "eltociear"
     ]
   },
   "Web/API/XMLHttpRequest/channel": {
@@ -25522,10 +25521,9 @@
     ]
   },
   "Web/API/XMLHttpRequest/error_event": {
-    "modified": "2020-10-15T22:11:42.787Z",
+    "modified": "2020-10-15T22:32:26.389Z",
     "contributors": [
-      "mfuji09",
-      "silverskyvicto"
+      "eltociear"
     ]
   },
   "Web/API/XMLHttpRequest/getAllResponseHeaders": {
@@ -25541,9 +25539,9 @@
     ]
   },
   "Web/API/XMLHttpRequest/load_event": {
-    "modified": "2020-10-15T22:15:45.232Z",
+    "modified": "2020-10-15T22:32:23.285Z",
     "contributors": [
-      "mfuji09"
+      "eltociear"
     ]
   },
   "Web/API/XMLHttpRequest/loadend_event": {
@@ -25553,10 +25551,9 @@
     ]
   },
   "Web/API/XMLHttpRequest/loadstart_event": {
-    "modified": "2020-10-15T22:11:44.150Z",
+    "modified": "2020-10-15T22:32:27.191Z",
     "contributors": [
-      "mfuji09",
-      "silverskyvicto"
+      "eltociear"
     ]
   },
   "Web/API/XMLHttpRequest/mozAnon": {
@@ -25589,13 +25586,6 @@
       "silverskyvicto"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2020-10-15T22:04:40.093Z",
-    "contributors": [
-      "eltociear",
-      "mfuji09"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T22:03:29.655Z",
     "contributors": [
@@ -25604,9 +25594,9 @@
     ]
   },
   "Web/API/XMLHttpRequest/progress_event": {
-    "modified": "2020-10-15T22:15:47.580Z",
+    "modified": "2020-10-15T22:32:24.380Z",
     "contributors": [
-      "mfuji09"
+      "eltociear"
     ]
   },
   "Web/API/XMLHttpRequest/readyState": {
@@ -25614,6 +25604,13 @@
     "contributors": [
       "mfuji09",
       "Uemmra3"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2020-10-15T22:04:40.093Z",
+    "contributors": [
+      "eltociear",
+      "mfuji09"
     ]
   },
   "Web/API/XMLHttpRequest/response": {
@@ -25694,36 +25691,6 @@
     "modified": "2020-10-15T22:32:23.587Z",
     "contributors": [
       "mpcjazz"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onabort": {
-    "modified": "2020-10-15T22:32:23.389Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onerror": {
-    "modified": "2020-10-15T22:32:26.389Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onload": {
-    "modified": "2020-10-15T22:32:23.285Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onloadstart": {
-    "modified": "2020-10-15T22:32:27.191Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onprogress": {
-    "modified": "2020-10-15T22:32:24.380Z",
-    "contributors": [
-      "eltociear"
     ]
   },
   "Web/API/XMLSerializer": {

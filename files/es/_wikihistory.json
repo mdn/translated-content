@@ -4743,6 +4743,12 @@
       "IngoBongo"
     ]
   },
+  "Web/API/Animation/cancel_event": {
+    "modified": "2019-03-23T22:05:09.237Z",
+    "contributors": [
+      "IngoBongo"
+    ]
+  },
   "Web/API/Animation/currentTime": {
     "modified": "2019-03-23T22:05:12.506Z",
     "contributors": [
@@ -4761,6 +4767,12 @@
       "IngoBongo"
     ]
   },
+  "Web/API/Animation/finish_event": {
+    "modified": "2019-03-23T22:05:11.188Z",
+    "contributors": [
+      "IngoBongo"
+    ]
+  },
   "Web/API/Animation/finished": {
     "modified": "2019-03-23T22:05:06.573Z",
     "contributors": [
@@ -4769,18 +4781,6 @@
   },
   "Web/API/Animation/id": {
     "modified": "2019-03-18T21:15:30.202Z",
-    "contributors": [
-      "IngoBongo"
-    ]
-  },
-  "Web/API/Animation/oncancel": {
-    "modified": "2019-03-23T22:05:09.237Z",
-    "contributors": [
-      "IngoBongo"
-    ]
-  },
-  "Web/API/Animation/onfinish": {
-    "modified": "2019-03-23T22:05:11.188Z",
     "contributors": [
       "IngoBongo"
     ]
@@ -9142,7 +9142,7 @@
       "darioperez"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
+  "Web/API/XMLHttpRequest/readystatechange_event": {
     "modified": "2019-03-23T22:20:14.868Z",
     "contributors": [
       "Sheppy",

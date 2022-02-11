@@ -1217,6 +1217,7 @@
 /zh-CN/docs/Web/API/APIWwindow.sidebar	/zh-CN/docs/Web/API/Window/sidebar
 /zh-CN/docs/Web/API/AbortSignal/onabort	/zh-CN/docs/Web/API/AbortSignal/abort_event
 /zh-CN/docs/Web/API/AmbientLightSensor/reading	/zh-CN/docs/Web/API/AmbientLightSensor/illuminance
+/zh-CN/docs/Web/API/Animation/oncancel	/zh-CN/docs/Web/API/Animation/cancel_event
 /zh-CN/docs/Web/API/ArrayBuffer	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-CN/docs/Web/API/AudioContext/createAnalyser	/zh-CN/docs/Web/API/BaseAudioContext/createAnalyser
 /zh-CN/docs/Web/API/AudioContext/createBiquadFilter	/zh-CN/docs/Web/API/BaseAudioContext/createBiquadFilter
@@ -1616,6 +1617,12 @@
 /zh-CN/docs/Web/API/WindowTimers/clearTimeout	/zh-CN/docs/Web/API/clearTimeout
 /zh-CN/docs/Web/API/XMLDocument.load	/zh-CN/docs/Web/API/XMLDocument/load
 /zh-CN/docs/Web/API/XMLHttpRequest/FormData	/zh-CN/docs/Web/API/FormData
+/zh-CN/docs/Web/API/XMLHttpRequest/onreadystatechange	/zh-CN/docs/Web/API/XMLHttpRequest/readystatechange_event
+/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onabort	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/abort_event
+/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onerror	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/error_event
+/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onload	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/load_event
+/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onloadstart	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/loadstart_event
+/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onprogress	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/progress_event
 /zh-CN/docs/Web/API/console.dir	/zh-CN/docs/Web/API/Console/dir
 /zh-CN/docs/Web/API/console.group	/zh-CN/docs/Web/API/Console/group
 /zh-CN/docs/Web/API/console.groupCollapsed	/zh-CN/docs/Web/API/Console/groupCollapsed

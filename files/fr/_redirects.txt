@@ -3824,6 +3824,8 @@
 /fr/docs/Web/API/WorkerGlobalScope/close	/fr/docs/conflicting/Web/API/DedicatedWorkerGlobalScope/close
 /fr/docs/Web/API/WorkerGlobalScope/onclose	/fr/docs/conflicting/Web/API/DedicatedWorkerGlobalScope/close_ad209d73ce2abfe0e3fe136acf40e5b4
 /fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+/fr/docs/Web/API/XMLHttpRequest/onreadystatechange	/fr/docs/Web/API/XMLHttpRequest/readystatechange_event
+/fr/docs/Web/API/XMLHttpRequestEventTarget/onload	/fr/docs/Web/API/XMLHttpRequest/load_event
 /fr/docs/Web/API/console.log	/fr/docs/Web/API/Console/log
 /fr/docs/Web/API/console.time	/fr/docs/Web/API/Console/time
 /fr/docs/Web/API/console.timeEnd	/fr/docs/Web/API/Console/timeEnd

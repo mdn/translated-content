@@ -7500,6 +7500,12 @@
       "WhiteMind"
     ]
   },
+  "Web/API/Animation/cancel_event": {
+    "modified": "2019-03-23T22:16:25.770Z",
+    "contributors": [
+      "micblo"
+    ]
+  },
   "Web/API/Animation/currentTime": {
     "modified": "2019-03-23T22:25:13.728Z",
     "contributors": [
@@ -7529,12 +7535,6 @@
     "modified": "2019-03-23T22:25:01.859Z",
     "contributors": [
       "jiangbai333"
-    ]
-  },
-  "Web/API/Animation/oncancel": {
-    "modified": "2019-03-23T22:16:25.770Z",
-    "contributors": [
-      "micblo"
     ]
   },
   "Web/API/Animation/play": {
@@ -24123,15 +24123,6 @@
       "tangzhe7"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2019-09-24T22:57:24.203Z",
-    "contributors": [
-      "Ende93",
-      "Koopos",
-      "Cmen",
-      "holynewbie"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-16T05:36:39.774Z",
     "contributors": [
@@ -24164,6 +24155,15 @@
     "contributors": [
       "zhangchen",
       "harryhao",
+      "holynewbie"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2019-09-24T22:57:24.203Z",
+    "contributors": [
+      "Ende93",
+      "Koopos",
+      "Cmen",
       "holynewbie"
     ]
   },
@@ -24289,37 +24289,6 @@
     "contributors": [
       "RainSlide",
       "rubyisapm"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onabort": {
-    "modified": "2020-10-15T22:25:54.233Z",
-    "contributors": [
-      "liushuyu"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onerror": {
-    "modified": "2020-10-15T22:08:29.854Z",
-    "contributors": [
-      "weiqinl"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onload": {
-    "modified": "2020-10-15T22:03:25.613Z",
-    "contributors": [
-      "evestorm"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onloadstart": {
-    "modified": "2020-10-15T22:09:01.294Z",
-    "contributors": [
-      "luxin88"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onprogress": {
-    "modified": "2020-10-15T21:53:38.407Z",
-    "contributors": [
-      "liushuyu",
-      "holynewbie"
     ]
   },
   "Web/API/XMLSerializer": {
@@ -47325,6 +47294,37 @@
     "modified": "2020-10-15T22:21:27.337Z",
     "contributors": [
       "AlexChao"
+    ]
+  },
+  "conflicting/Web/API/XMLHttpRequest/abort_event": {
+    "modified": "2020-10-15T22:25:54.233Z",
+    "contributors": [
+      "liushuyu"
+    ]
+  },
+  "conflicting/Web/API/XMLHttpRequest/error_event": {
+    "modified": "2020-10-15T22:08:29.854Z",
+    "contributors": [
+      "weiqinl"
+    ]
+  },
+  "conflicting/Web/API/XMLHttpRequest/load_event": {
+    "modified": "2020-10-15T22:03:25.613Z",
+    "contributors": [
+      "evestorm"
+    ]
+  },
+  "conflicting/Web/API/XMLHttpRequest/loadstart_event": {
+    "modified": "2020-10-15T22:09:01.294Z",
+    "contributors": [
+      "luxin88"
+    ]
+  },
+  "conflicting/Web/API/XMLHttpRequest/progress_event": {
+    "modified": "2020-10-15T21:53:38.407Z",
+    "contributors": [
+      "liushuyu",
+      "holynewbie"
     ]
   },
   "conflicting/Web/API/caches": {

@@ -21652,10 +21652,10 @@
       "Kalwyn"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2020-10-15T22:12:50.281Z",
+  "Web/API/XMLHttpRequest/load_event": {
+    "modified": "2020-10-15T22:31:14.653Z",
     "contributors": [
-      "AdminXVII"
+      "fatmalimem19"
     ]
   },
   "Web/API/XMLHttpRequest/open": {
@@ -21668,6 +21668,12 @@
     "modified": "2020-10-15T22:33:49.573Z",
     "contributors": [
       "devweb157"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2020-10-15T22:12:50.281Z",
+    "contributors": [
+      "AdminXVII"
     ]
   },
   "Web/API/XMLHttpRequest/response": {
@@ -21721,12 +21727,6 @@
     "contributors": [
       "Voulto",
       "devweb157"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onload": {
-    "modified": "2020-10-15T22:31:14.653Z",
-    "contributors": [
-      "fatmalimem19"
     ]
   },
   "Web/API/XMLSerializer": {

@@ -1510,6 +1510,8 @@
 /es/docs/Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web	/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
 /es/docs/Web/API/API_del_portapapeles	/es/docs/Web/API/Clipboard_API
 /es/docs/Web/API/Animation/Animación	/es/docs/Web/API/Animation/Animation
+/es/docs/Web/API/Animation/oncancel	/es/docs/Web/API/Animation/cancel_event
+/es/docs/Web/API/Animation/onfinish	/es/docs/Web/API/Animation/finish_event
 /es/docs/Web/API/Animation/terminado	/es/docs/Web/API/Animation/finished
 /es/docs/Web/API/Animation/tiempoActual	/es/docs/Web/API/Animation/currentTime
 /es/docs/Web/API/BatteryManager.charging	/es/docs/Web/API/BatteryManager/charging
@@ -1603,6 +1605,7 @@
 /es/docs/Web/API/WindowTimers/setInterval	/es/docs/Web/API/setInterval
 /es/docs/Web/API/WindowTimers/setTimeout	/es/docs/Web/API/setTimeout
 /es/docs/Web/API/XMLHttpRequest/FormData	/es/docs/Web/API/FormData
+/es/docs/Web/API/XMLHttpRequest/onreadystatechange	/es/docs/Web/API/XMLHttpRequest/readystatechange_event
 /es/docs/Web/API/event.defaultPrevented	/es/docs/Web/API/Event/defaultPrevented
 /es/docs/Web/API/event.which	/es/docs/Web/API/UIEvent/which
 /es/docs/Web/Accesibilidad	/es/docs/Web/Accessibility
@@ -2592,7 +2595,7 @@
 /es/docs/XMLHttpRequest/FormData	/es/docs/Web/API/FormData
 /es/docs/XMLHttpRequest/Using_XMLHttpRequest	/es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /es/docs/XMLHttpRequest/abort	/es/docs/Web/API/XMLHttpRequest/abort
-/es/docs/XMLHttpRequest/onreadystatechange	/es/docs/Web/API/XMLHttpRequest/onreadystatechange
+/es/docs/XMLHttpRequest/onreadystatechange	/es/docs/Web/API/XMLHttpRequest/readystatechange_event
 /es/docs/XPath	/es/docs/Web/XPath
 /es/docs/XPath/Ejes	/es/docs/Web/XPath/Axes
 /es/docs/XPath/Ejes/ancestor	/es/docs/Web/XPath/Axes/ancestor
