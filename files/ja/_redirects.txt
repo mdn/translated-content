@@ -82,8 +82,8 @@
 /ja/docs/API/Document/location	/ja/docs/Web/API/Document/location
 /ja/docs/API/Document/onafterscriptexecute	/ja/docs/Web/API/Document/onafterscriptexecute
 /ja/docs/API/Document/onbeforescriptexecute	/ja/docs/Web/API/Document/onbeforescriptexecute
-/ja/docs/API/Document/onfullscreenchange	/ja/docs/Web/API/Document/onfullscreenchange
-/ja/docs/API/Document/onfullscreenerror	/ja/docs/Web/API/Document/onfullscreenerror
+/ja/docs/API/Document/onfullscreenchange	/ja/docs/conflicting/Web/API/Document/fullscreenchange_event
+/ja/docs/API/Document/onfullscreenerror	/ja/docs/conflicting/Web/API/Document/fullscreenerror_event
 /ja/docs/API/Document/onselectionchange	/ja/docs/Web/API/GlobalEventHandlers/onselectionchange
 /ja/docs/API/Document/open	/ja/docs/Web/API/Document/open
 /ja/docs/API/Document/origin	/ja/docs/Web/API/Document/origin
@@ -3061,6 +3061,8 @@
 /ja/docs/Web/API/Document/defaultView/storage_event	/ja/docs/Web/API/Window/storage_event
 /ja/docs/Web/API/Document/domConfig	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/inputEncoding	/ja/docs/Web/API/Document/characterSet
+/ja/docs/Web/API/Document/onfullscreenchange	/ja/docs/conflicting/Web/API/Document/fullscreenchange_event
+/ja/docs/Web/API/Document/onfullscreenerror	/ja/docs/conflicting/Web/API/Document/fullscreenerror_event
 /ja/docs/Web/API/Document/onselectionchange	/ja/docs/Web/API/GlobalEventHandlers/onselectionchange
 /ja/docs/Web/API/DocumentOrShadowRoot/activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/Web/API/DocumentOrShadowRoot/caretPositionFromPoint	/ja/docs/Web/API/Document/caretPositionFromPoint

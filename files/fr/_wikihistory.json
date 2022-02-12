@@ -14208,12 +14208,6 @@
       "loella16"
     ]
   },
-  "Web/API/Document/onfullscreenchange": {
-    "modified": "2019-03-23T22:29:20.848Z",
-    "contributors": [
-      "Dwaaren"
-    ]
-  },
   "Web/API/Document/onoffline": {
     "modified": "2019-03-18T21:39:15.173Z",
     "contributors": [
@@ -42888,6 +42882,12 @@
     "contributors": [
       "loella16",
       "Alexgruissan"
+    ]
+  },
+  "conflicting/Web/API/Document/fullscreenchange_event": {
+    "modified": "2019-03-23T22:29:20.848Z",
+    "contributors": [
+      "Dwaaren"
     ]
   },
   "conflicting/Web/API/Document_Object_Model": {

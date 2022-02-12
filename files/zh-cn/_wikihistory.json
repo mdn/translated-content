@@ -11097,6 +11097,12 @@
       "zhaoshouxin"
     ]
   },
+  "Web/API/Document/fullscreenerror_event": {
+    "modified": "2019-04-27T09:18:56.721Z",
+    "contributors": [
+      "ZWkang"
+    ]
+  },
   "Web/API/Document/getElementById": {
     "modified": "2020-10-15T21:32:38.932Z",
     "contributors": [
@@ -11293,19 +11299,6 @@
       "teoli",
       "khalid32",
       "zhangyaochun1987"
-    ]
-  },
-  "Web/API/Document/onfullscreenchange": {
-    "modified": "2020-10-15T21:49:09.799Z",
-    "contributors": [
-      "gentlecoder",
-      "libmw"
-    ]
-  },
-  "Web/API/Document/onfullscreenerror": {
-    "modified": "2019-04-27T09:18:56.721Z",
-    "contributors": [
-      "ZWkang"
     ]
   },
   "Web/API/Document/onoffline": {
@@ -46841,6 +46834,13 @@
       "holynewbie",
       "Serifx",
       "yulifu"
+    ]
+  },
+  "conflicting/Web/API/Document/fullscreenchange_event": {
+    "modified": "2020-10-15T21:49:09.799Z",
+    "contributors": [
+      "gentlecoder",
+      "libmw"
     ]
   },
   "conflicting/Web/API/Document/hasFocus": {

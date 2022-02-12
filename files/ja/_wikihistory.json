@@ -12976,20 +12976,6 @@
       "ethertank"
     ]
   },
-  "Web/API/Document/onfullscreenchange": {
-    "modified": "2020-10-15T21:46:54.771Z",
-    "contributors": [
-      "mfuji09",
-      "yyss"
-    ]
-  },
-  "Web/API/Document/onfullscreenerror": {
-    "modified": "2020-10-15T21:46:52.945Z",
-    "contributors": [
-      "mfuji09",
-      "yyss"
-    ]
-  },
   "Web/API/Document/onoffline": {
     "modified": "2019-03-22T11:03:20.072Z",
     "contributors": [
@@ -48414,6 +48400,20 @@
     "modified": "2020-10-15T22:26:51.081Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Document/fullscreenchange_event": {
+    "modified": "2020-10-15T21:46:54.771Z",
+    "contributors": [
+      "mfuji09",
+      "yyss"
+    ]
+  },
+  "conflicting/Web/API/Document/fullscreenerror_event": {
+    "modified": "2020-10-15T21:46:52.945Z",
+    "contributors": [
+      "mfuji09",
+      "yyss"
     ]
   },
   "conflicting/Web/API/File/name": {

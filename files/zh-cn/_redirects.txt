@@ -1265,6 +1265,8 @@
 /zh-CN/docs/Web/API/Document/mozFullScreen	/zh-CN/docs/Web/API/Document/fullscreen
 /zh-CN/docs/Web/API/Document/mozFullScreenElement	/zh-CN/docs/Web/API/Document/fullscreenElement
 /zh-CN/docs/Web/API/Document/mozFullScreenEnabled	/zh-CN/docs/Web/API/Document/fullscreenEnabled
+/zh-CN/docs/Web/API/Document/onfullscreenchange	/zh-CN/docs/conflicting/Web/API/Document/fullscreenchange_event
+/zh-CN/docs/Web/API/Document/onfullscreenerror	/zh-CN/docs/Web/API/Document/fullscreenerror_event
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /zh-CN/docs/Web/API/Document/rouchmove_event	/zh-CN/docs/Web/API/Document/touchmove_event
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/activeElement	/zh-CN/docs/Web/API/Document/activeElement

@@ -1,7 +1,8 @@
 ---
 title: Document.onfullscreenchange
-slug: Web/API/Document/onfullscreenchange
+slug: conflicting/Web/API/Document/fullscreenchange_event
 translation_of: Web/API/Document/onfullscreenchange
+original_slug: Web/API/Document/onfullscreenchange
 ---
 {{ApiRef("Fullscreen API")}}
 
