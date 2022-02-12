@@ -12976,20 +12976,6 @@
       "ethertank"
     ]
   },
-  "Web/API/Document/onfullscreenchange": {
-    "modified": "2020-10-15T21:46:54.771Z",
-    "contributors": [
-      "mfuji09",
-      "yyss"
-    ]
-  },
-  "Web/API/Document/onfullscreenerror": {
-    "modified": "2020-10-15T21:46:52.945Z",
-    "contributors": [
-      "mfuji09",
-      "yyss"
-    ]
-  },
   "Web/API/Document/onoffline": {
     "modified": "2019-03-22T11:03:20.072Z",
     "contributors": [
@@ -21864,6 +21850,13 @@
       "hamasaki"
     ]
   },
+  "Web/API/SpeechRecognition/audioend_event": {
+    "modified": "2020-10-15T22:14:18.025Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
   "Web/API/SpeechRecognition/audiostart_event": {
     "modified": "2020-10-15T22:00:38.746Z",
     "contributors": [
@@ -21878,6 +21871,20 @@
     "contributors": [
       "Uemmra3",
       "0505Keitan",
+      "takaneichinose"
+    ]
+  },
+  "Web/API/SpeechRecognition/end_event": {
+    "modified": "2020-10-15T22:14:17.843Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
+  "Web/API/SpeechRecognition/error_event": {
+    "modified": "2020-10-15T22:14:18.414Z",
+    "contributors": [
+      "Uemmra3",
       "takaneichinose"
     ]
   },
@@ -21909,80 +21916,17 @@
       "takaneichinose"
     ]
   },
-  "Web/API/SpeechRecognition/onaudioend": {
-    "modified": "2020-10-15T22:14:18.025Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onaudiostart": {
-    "modified": "2020-10-15T22:14:17.745Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onend": {
-    "modified": "2020-10-15T22:14:17.843Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onerror": {
-    "modified": "2020-10-15T22:14:18.414Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onnomatch": {
+  "Web/API/SpeechRecognition/nomatch_event": {
     "modified": "2020-10-15T22:14:18.219Z",
     "contributors": [
       "Uemmra3",
       "takaneichinose"
     ]
   },
-  "Web/API/SpeechRecognition/onresult": {
+  "Web/API/SpeechRecognition/result_event": {
     "modified": "2020-10-15T22:14:18.958Z",
     "contributors": [
       "yamachu",
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onsoundend": {
-    "modified": "2020-10-15T22:14:18.276Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onsoundstart": {
-    "modified": "2020-10-15T22:14:18.484Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onspeechend": {
-    "modified": "2020-10-15T22:14:18.567Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onspeechstart": {
-    "modified": "2020-10-15T22:14:19.731Z",
-    "contributors": [
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/SpeechRecognition/onstart": {
-    "modified": "2020-10-15T22:14:18.258Z",
-    "contributors": [
       "Uemmra3",
       "takaneichinose"
     ]
@@ -21994,8 +21938,43 @@
       "takaneichinose"
     ]
   },
+  "Web/API/SpeechRecognition/soundend_event": {
+    "modified": "2020-10-15T22:14:18.276Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
+  "Web/API/SpeechRecognition/soundstart_event": {
+    "modified": "2020-10-15T22:14:18.484Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
+  "Web/API/SpeechRecognition/speechend_event": {
+    "modified": "2020-10-15T22:14:18.567Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
+  "Web/API/SpeechRecognition/speechstart_event": {
+    "modified": "2020-10-15T22:14:19.731Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
   "Web/API/SpeechRecognition/start": {
     "modified": "2020-10-15T22:16:26.557Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
+  "Web/API/SpeechRecognition/start_event": {
+    "modified": "2020-10-15T22:14:18.258Z",
     "contributors": [
       "Uemmra3",
       "takaneichinose"
@@ -23181,24 +23160,6 @@
   },
   "Web/API/VideoTrackList/length": {
     "modified": "2020-10-15T22:19:20.445Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/VideoTrackList/onaddtrack": {
-    "modified": "2020-10-15T22:19:19.142Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/VideoTrackList/onchange": {
-    "modified": "2020-10-15T22:19:29.008Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/VideoTrackList/onremovetrack": {
-    "modified": "2020-10-15T22:19:28.819Z",
     "contributors": [
       "Wind1808"
     ]
@@ -25533,10 +25494,9 @@
     ]
   },
   "Web/API/XMLHttpRequest/abort_event": {
-    "modified": "2020-10-15T22:11:45.049Z",
+    "modified": "2020-10-15T22:32:23.389Z",
     "contributors": [
-      "mfuji09",
-      "silverskyvicto"
+      "eltociear"
     ]
   },
   "Web/API/XMLHttpRequest/channel": {
@@ -25547,10 +25507,9 @@
     ]
   },
   "Web/API/XMLHttpRequest/error_event": {
-    "modified": "2020-10-15T22:11:42.787Z",
+    "modified": "2020-10-15T22:32:26.389Z",
     "contributors": [
-      "mfuji09",
-      "silverskyvicto"
+      "eltociear"
     ]
   },
   "Web/API/XMLHttpRequest/getAllResponseHeaders": {
@@ -25566,9 +25525,9 @@
     ]
   },
   "Web/API/XMLHttpRequest/load_event": {
-    "modified": "2020-10-15T22:15:45.232Z",
+    "modified": "2020-10-15T22:32:23.285Z",
     "contributors": [
-      "mfuji09"
+      "eltociear"
     ]
   },
   "Web/API/XMLHttpRequest/loadend_event": {
@@ -25578,10 +25537,9 @@
     ]
   },
   "Web/API/XMLHttpRequest/loadstart_event": {
-    "modified": "2020-10-15T22:11:44.150Z",
+    "modified": "2020-10-15T22:32:27.191Z",
     "contributors": [
-      "mfuji09",
-      "silverskyvicto"
+      "eltociear"
     ]
   },
   "Web/API/XMLHttpRequest/mozAnon": {
@@ -25614,13 +25572,6 @@
       "silverskyvicto"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2020-10-15T22:04:40.093Z",
-    "contributors": [
-      "eltociear",
-      "mfuji09"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T22:03:29.655Z",
     "contributors": [
@@ -25629,9 +25580,9 @@
     ]
   },
   "Web/API/XMLHttpRequest/progress_event": {
-    "modified": "2020-10-15T22:15:47.580Z",
+    "modified": "2020-10-15T22:32:24.380Z",
     "contributors": [
-      "mfuji09"
+      "eltociear"
     ]
   },
   "Web/API/XMLHttpRequest/readyState": {
@@ -25639,6 +25590,13 @@
     "contributors": [
       "mfuji09",
       "Uemmra3"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2020-10-15T22:04:40.093Z",
+    "contributors": [
+      "eltociear",
+      "mfuji09"
     ]
   },
   "Web/API/XMLHttpRequest/response": {
@@ -25719,36 +25677,6 @@
     "modified": "2020-10-15T22:32:23.587Z",
     "contributors": [
       "mpcjazz"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onabort": {
-    "modified": "2020-10-15T22:32:23.389Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onerror": {
-    "modified": "2020-10-15T22:32:26.389Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onload": {
-    "modified": "2020-10-15T22:32:23.285Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onloadstart": {
-    "modified": "2020-10-15T22:32:27.191Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onprogress": {
-    "modified": "2020-10-15T22:32:24.380Z",
-    "contributors": [
-      "eltociear"
     ]
   },
   "Web/API/XMLSerializer": {
@@ -26831,12 +26759,6 @@
     "modified": "2020-10-15T22:08:24.081Z",
     "contributors": [
       "mfuji09"
-    ]
-  },
-  "Web/CSS/-webkit-print-color-adjust": {
-    "modified": "2020-10-15T22:16:00.721Z",
-    "contributors": [
-      "isudzumi"
     ]
   },
   "Web/CSS/-webkit-tap-highlight-color": {
@@ -30273,12 +30195,6 @@
       "Marsf"
     ]
   },
-  "Web/CSS/color-adjust": {
-    "modified": "2020-10-15T22:13:00.476Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/CSS/color_value": {
     "modified": "2020-10-15T21:14:39.477Z",
     "contributors": [
@@ -32231,6 +32147,12 @@
       "teoli",
       "ethertank",
       "sosleepy"
+    ]
+  },
+  "Web/CSS/print-color-adjust": {
+    "modified": "2020-10-15T22:16:00.721Z",
+    "contributors": [
+      "isudzumi"
     ]
   },
   "Web/CSS/quotes": {
@@ -48480,6 +48402,20 @@
       "mfuji09"
     ]
   },
+  "conflicting/Web/API/Document/fullscreenchange_event": {
+    "modified": "2020-10-15T21:46:54.771Z",
+    "contributors": [
+      "mfuji09",
+      "yyss"
+    ]
+  },
+  "conflicting/Web/API/Document/fullscreenerror_event": {
+    "modified": "2020-10-15T21:46:52.945Z",
+    "contributors": [
+      "mfuji09",
+      "yyss"
+    ]
+  },
   "conflicting/Web/API/File/name": {
     "modified": "2020-09-25T16:45:23.436Z",
     "contributors": [
@@ -48509,6 +48445,13 @@
       "YuichiNukiyama"
     ]
   },
+  "conflicting/Web/API/SpeechRecognition/audiostart_event": {
+    "modified": "2020-10-15T22:14:17.745Z",
+    "contributors": [
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
   "conflicting/Web/API/StorageManager/estimate": {
     "modified": "2020-10-15T22:20:05.823Z",
     "contributors": [
@@ -48527,6 +48470,24 @@
     "modified": "2020-10-15T22:20:08.494Z",
     "contributors": [
       "Uemmra3",
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/VideoTrackList/addtrack_event": {
+    "modified": "2020-10-15T22:19:19.142Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/VideoTrackList/change_event": {
+    "modified": "2020-10-15T22:19:29.008Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/VideoTrackList/removetrack_event": {
+    "modified": "2020-10-15T22:19:28.819Z",
+    "contributors": [
       "Wind1808"
     ]
   },
@@ -48615,6 +48576,12 @@
       "mfuji09",
       "ExE-Boss",
       "hommaam"
+    ]
+  },
+  "conflicting/Web/CSS/print-color-adjust": {
+    "modified": "2020-10-15T22:13:00.476Z",
+    "contributors": [
+      "mfuji09"
     ]
   },
   "conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {

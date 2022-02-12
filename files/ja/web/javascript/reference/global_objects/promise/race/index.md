@@ -25,7 +25,7 @@ Promise.race(iterable);
 ### 引数
 
 - `iterable`
-  - : 配列 ({{jsxref("Array")}}) などの反復可能なオブジェクト。[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)を確認してください。</dd>
+  - : 配列 ({{jsxref("Array")}}) などの反復可能なオブジェクト。[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)を確認してください。</dd>
 
 ### 返値
 

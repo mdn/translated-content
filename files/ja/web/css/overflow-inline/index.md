@@ -55,7 +55,7 @@ overflow-inline: unset;
 
 ## 例
 
-<h3 id="Setting_inline_overflow_behavior">インライン方向のはみ出し動作の設定</h3>
+### インライン方向のはみ出し動作の設定
 
 #### HTML
 

@@ -4430,12 +4430,6 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/-webkit-print-color-adjust": {
-    "modified": "2019-03-23T22:42:45.125Z",
-    "contributors": [
-      "Sebastianz"
-    ]
-  },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2019-03-18T21:41:41.637Z",
     "contributors": [
@@ -7170,6 +7164,12 @@
     "contributors": [
       "SJW",
       "mrstork",
+      "Sebastianz"
+    ]
+  },
+  "Web/CSS/print-color-adjust": {
+    "modified": "2019-03-23T22:42:45.125Z",
+    "contributors": [
       "Sebastianz"
     ]
   },

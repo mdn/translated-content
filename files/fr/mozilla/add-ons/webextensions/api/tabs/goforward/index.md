@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/goForward
 
 Passez à la page suivante dans l'historique de l'onglet, si disponible.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -36,7 +36,7 @@ var goingForward = browser.tabs.goForward(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est tenue lorsque la navigation sur la page se termine.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est tenue lorsque la navigation sur la page se termine.
 
 ## Compatibilité du navigateur
 

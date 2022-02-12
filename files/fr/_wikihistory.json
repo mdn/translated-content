@@ -14208,12 +14208,6 @@
       "loella16"
     ]
   },
-  "Web/API/Document/onfullscreenchange": {
-    "modified": "2019-03-23T22:29:20.848Z",
-    "contributors": [
-      "Dwaaren"
-    ]
-  },
   "Web/API/Document/onoffline": {
     "modified": "2019-03-18T21:39:15.173Z",
     "contributors": [
@@ -21652,10 +21646,10 @@
       "Kalwyn"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2020-10-15T22:12:50.281Z",
+  "Web/API/XMLHttpRequest/load_event": {
+    "modified": "2020-10-15T22:31:14.653Z",
     "contributors": [
-      "AdminXVII"
+      "fatmalimem19"
     ]
   },
   "Web/API/XMLHttpRequest/open": {
@@ -21668,6 +21662,12 @@
     "modified": "2020-10-15T22:33:49.573Z",
     "contributors": [
       "devweb157"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2020-10-15T22:12:50.281Z",
+    "contributors": [
+      "AdminXVII"
     ]
   },
   "Web/API/XMLHttpRequest/response": {
@@ -21721,12 +21721,6 @@
     "contributors": [
       "Voulto",
       "devweb157"
-    ]
-  },
-  "Web/API/XMLHttpRequestEventTarget/onload": {
-    "modified": "2020-10-15T22:31:14.653Z",
-    "contributors": [
-      "fatmalimem19"
     ]
   },
   "Web/API/XMLSerializer": {
@@ -22709,14 +22703,6 @@
     "contributors": [
       "SphinxKnight",
       "alhuno1"
-    ]
-  },
-  "Web/CSS/-webkit-print-color-adjust": {
-    "modified": "2020-10-15T21:28:10.335Z",
-    "contributors": [
-      "SphinxKnight",
-      "CuteRabbit",
-      "louuis"
     ]
   },
   "Web/CSS/-webkit-tap-highlight-color": {
@@ -26792,12 +26778,6 @@
       "VincentN"
     ]
   },
-  "Web/CSS/color-adjust": {
-    "modified": "2020-10-15T22:07:37.043Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/CSS/color_value": {
     "modified": "2020-10-15T21:15:21.928Z",
     "contributors": [
@@ -28812,6 +28792,14 @@
     "modified": "2020-10-15T21:46:27.417Z",
     "contributors": [
       "SphinxKnight"
+    ]
+  },
+  "Web/CSS/print-color-adjust": {
+    "modified": "2020-10-15T21:28:10.335Z",
+    "contributors": [
+      "SphinxKnight",
+      "CuteRabbit",
+      "louuis"
     ]
   },
   "Web/CSS/quotes": {
@@ -42896,6 +42884,12 @@
       "Alexgruissan"
     ]
   },
+  "conflicting/Web/API/Document/fullscreenchange_event": {
+    "modified": "2019-03-23T22:29:20.848Z",
+    "contributors": [
+      "Dwaaren"
+    ]
+  },
   "conflicting/Web/API/Document_Object_Model": {
     "modified": "2019-03-23T23:53:23.967Z",
     "contributors": [
@@ -43402,6 +43396,12 @@
     "contributors": [
       "mrstork",
       "ZorGleH"
+    ]
+  },
+  "conflicting/Web/CSS/print-color-adjust": {
+    "modified": "2020-10-15T22:07:37.043Z",
+    "contributors": [
+      "SphinxKnight"
     ]
   },
   "conflicting/Web/CSS/scroll-snap-type": {

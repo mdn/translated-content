@@ -82,8 +82,8 @@
 /ja/docs/API/Document/location	/ja/docs/Web/API/Document/location
 /ja/docs/API/Document/onafterscriptexecute	/ja/docs/Web/API/Document/onafterscriptexecute
 /ja/docs/API/Document/onbeforescriptexecute	/ja/docs/Web/API/Document/onbeforescriptexecute
-/ja/docs/API/Document/onfullscreenchange	/ja/docs/Web/API/Document/onfullscreenchange
-/ja/docs/API/Document/onfullscreenerror	/ja/docs/Web/API/Document/onfullscreenerror
+/ja/docs/API/Document/onfullscreenchange	/ja/docs/conflicting/Web/API/Document/fullscreenchange_event
+/ja/docs/API/Document/onfullscreenerror	/ja/docs/conflicting/Web/API/Document/fullscreenerror_event
 /ja/docs/API/Document/onselectionchange	/ja/docs/Web/API/GlobalEventHandlers/onselectionchange
 /ja/docs/API/Document/open	/ja/docs/Web/API/Document/open
 /ja/docs/API/Document/origin	/ja/docs/Web/API/Document/origin
@@ -3061,6 +3061,8 @@
 /ja/docs/Web/API/Document/defaultView/storage_event	/ja/docs/Web/API/Window/storage_event
 /ja/docs/Web/API/Document/domConfig	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/inputEncoding	/ja/docs/Web/API/Document/characterSet
+/ja/docs/Web/API/Document/onfullscreenchange	/ja/docs/conflicting/Web/API/Document/fullscreenchange_event
+/ja/docs/Web/API/Document/onfullscreenerror	/ja/docs/conflicting/Web/API/Document/fullscreenerror_event
 /ja/docs/Web/API/Document/onselectionchange	/ja/docs/Web/API/GlobalEventHandlers/onselectionchange
 /ja/docs/Web/API/DocumentOrShadowRoot/activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/Web/API/DocumentOrShadowRoot/caretPositionFromPoint	/ja/docs/Web/API/Document/caretPositionFromPoint
@@ -3255,6 +3257,17 @@
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /ja/docs/Web/API/Slotable	/ja/docs/Web/API/Element
 /ja/docs/Web/API/SourceBufferList/SourceBuffer	/ja/docs/orphaned/Web/API/SourceBufferList/SourceBuffer
+/ja/docs/Web/API/SpeechRecognition/onaudioend	/ja/docs/Web/API/SpeechRecognition/audioend_event
+/ja/docs/Web/API/SpeechRecognition/onaudiostart	/ja/docs/conflicting/Web/API/SpeechRecognition/audiostart_event
+/ja/docs/Web/API/SpeechRecognition/onend	/ja/docs/Web/API/SpeechRecognition/end_event
+/ja/docs/Web/API/SpeechRecognition/onerror	/ja/docs/Web/API/SpeechRecognition/error_event
+/ja/docs/Web/API/SpeechRecognition/onnomatch	/ja/docs/Web/API/SpeechRecognition/nomatch_event
+/ja/docs/Web/API/SpeechRecognition/onresult	/ja/docs/Web/API/SpeechRecognition/result_event
+/ja/docs/Web/API/SpeechRecognition/onsoundend	/ja/docs/Web/API/SpeechRecognition/soundend_event
+/ja/docs/Web/API/SpeechRecognition/onsoundstart	/ja/docs/Web/API/SpeechRecognition/soundstart_event
+/ja/docs/Web/API/SpeechRecognition/onspeechend	/ja/docs/Web/API/SpeechRecognition/speechend_event
+/ja/docs/Web/API/SpeechRecognition/onspeechstart	/ja/docs/Web/API/SpeechRecognition/speechstart_event
+/ja/docs/Web/API/SpeechRecognition/onstart	/ja/docs/Web/API/SpeechRecognition/start_event
 /ja/docs/Web/API/StorageEstimate	/ja/docs/conflicting/Web/API/StorageManager/estimate
 /ja/docs/Web/API/StorageEstimate/quota	/ja/docs/conflicting/Web/API/StorageManager/estimate_78aa4ffd4dfacc8f94d5c05d150d36ac
 /ja/docs/Web/API/StorageEstimate/usage	/ja/docs/conflicting/Web/API/StorageManager/estimate_9ffeea37c30a26922d3f1621912db8d8
@@ -3282,6 +3295,9 @@
 /ja/docs/Web/API/VRLayer	/ja/docs/Web/API/VRLayerInit
 /ja/docs/Web/API/VRLayer/rightBounds	/ja/docs/Web/API/VRLayerInit/rightBounds
 /ja/docs/Web/API/VRLayer/source	/ja/docs/Web/API/VRLayerInit/source
+/ja/docs/Web/API/VideoTrackList/onaddtrack	/ja/docs/conflicting/Web/API/VideoTrackList/addtrack_event
+/ja/docs/Web/API/VideoTrackList/onchange	/ja/docs/conflicting/Web/API/VideoTrackList/change_event
+/ja/docs/Web/API/VideoTrackList/onremovetrack	/ja/docs/conflicting/Web/API/VideoTrackList/removetrack_event
 /ja/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ja/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ja/docs/Web/API/WebGL_API/Animating_textures_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
@@ -3347,7 +3363,13 @@
 /ja/docs/Web/API/WindowTimers/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/XMLHttpRequest/onreadystatechange	/ja/docs/Web/API/XMLHttpRequest/readystatechange_event
 /ja/docs/Web/API/XMLHttpRequest/openRequest	/ja/docs/orphaned/Web/API/XMLHttpRequest/openRequest
+/ja/docs/Web/API/XMLHttpRequestEventTarget/onabort	/ja/docs/Web/API/XMLHttpRequest/abort_event
+/ja/docs/Web/API/XMLHttpRequestEventTarget/onerror	/ja/docs/Web/API/XMLHttpRequest/error_event
+/ja/docs/Web/API/XMLHttpRequestEventTarget/onload	/ja/docs/Web/API/XMLHttpRequest/load_event
+/ja/docs/Web/API/XMLHttpRequestEventTarget/onloadstart	/ja/docs/Web/API/XMLHttpRequest/loadstart_event
+/ja/docs/Web/API/XMLHttpRequestEventTarget/onprogress	/ja/docs/Web/API/XMLHttpRequest/progress_event
 /ja/docs/Web/API/XRHandedness	/ja/docs/conflicting/Web/API/XRInputSource/handedness
 /ja/docs/Web/API/XRReferenceSpaceEventInit	/ja/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 /ja/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace	/ja/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
@@ -3626,6 +3648,7 @@
 /ja/docs/Web/CSS/-moz-zoom-out	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-ms-high-contrast	/ja/docs/Web/CSS/@media/-ms-high-contrast
 /ja/docs/Web/CSS/-ms-scroll-snap-type	/ja/docs/Web/CSS/scroll-snap-type
+/ja/docs/Web/CSS/-webkit-print-color-adjust	/ja/docs/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/:-moz-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/Web/CSS/:-ms-input-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/Web/CSS/:-webkit-autofill	/ja/docs/Web/CSS/:autofill
@@ -3730,6 +3753,7 @@
 /ja/docs/Web/CSS/box_model	/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /ja/docs/Web/CSS/calc	/ja/docs/Web/CSS/calc()
 /ja/docs/Web/CSS/clamp	/ja/docs/Web/CSS/clamp()
+/ja/docs/Web/CSS/color-adjust	/ja/docs/conflicting/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/conic-gradient	/ja/docs/Web/CSS/gradient/conic-gradient()
 /ja/docs/Web/CSS/conic-gradient()	/ja/docs/Web/CSS/gradient/conic-gradient()
 /ja/docs/Web/CSS/counter	/ja/docs/Web/CSS/counter()

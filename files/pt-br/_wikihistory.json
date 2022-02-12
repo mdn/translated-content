@@ -6920,13 +6920,6 @@
       "gustavobeavis"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2019-03-23T22:16:58.340Z",
-    "contributors": [
-      "brunoczim",
-      "gustavobeavis"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T22:03:41.298Z",
     "contributors": [
@@ -6938,6 +6931,13 @@
     "modified": "2019-05-15T10:26:01.821Z",
     "contributors": [
       "eduardovivi",
+      "gustavobeavis"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2019-03-23T22:16:58.340Z",
+    "contributors": [
+      "brunoczim",
       "gustavobeavis"
     ]
   },

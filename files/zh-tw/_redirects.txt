@@ -582,6 +582,7 @@
 /zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-TW/docs/Web/API/setInterval
 /zh-TW/docs/Web/API/WindowTimers	/zh-TW/docs/conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a
 /zh-TW/docs/Web/API/XMLHttpRequest/FormData	/zh-TW/docs/Web/API/FormData
+/zh-TW/docs/Web/API/XMLHttpRequest/onreadystatechange	/zh-TW/docs/Web/API/XMLHttpRequest/readystatechange_event
 /zh-TW/docs/Web/API/document.createTreeWalker	/zh-TW/docs/Web/API/Document/createTreeWalker
 /zh-TW/docs/Web/API/document.querySelector	/zh-TW/docs/Web/API/Document/querySelector
 /zh-TW/docs/Web/Apps/Progressive	/zh-TW/docs/Web/Progressive_web_apps
