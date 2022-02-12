@@ -5,16 +5,16 @@ translation_of: Learn/Forms/Styling_web_forms
 original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
 
-En este artículo aprenderemos como utilizar [CSS](/es/docs/Web/CSS) con formularios [HTML](/es/docs/Web/HTML) para hacerlos más atractivos. Aunque parezca extraño, esto es algo que puede llegar a ser complicado. Por razones históricas y técnicas, los widgets de formulario no suelen llevarse bien con CSS. Por este motivo, muchos desarrolladores prefieren [construir sus propios widgets](https://developer.mozilla.org/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets) para tener el control de su aspecto en vez de utilizar los nativos. De todas formas, con los navegadores modernos, los diseñadores web cada vez tienen más control sobre el diseño de los elementos de formulario. Vamos a profundizar en esto.
+En este artículo aprenderemos como utilizar [CSS](/es/docs/Web/CSS) con formularios [HTML](/es/docs/Web/HTML) para hacerlos más atractivos. Aunque parezca extraño, esto es algo que puede llegar a ser complicado. Por razones históricas y técnicas, los widgets de formulario no suelen llevarse bien con CSS. Por este motivo, muchos desarrolladores prefieren [construir sus propios widgets](/es/docs/Learn/Forms/How_to_build_custom_form_widgets) para tener el control de su aspecto en vez de utilizar los nativos. De todas formas, con los navegadores modernos, los diseñadores web cada vez tienen más control sobre el diseño de los elementos de formulario. Vamos a profundizar en esto.
 
 ## ¿Porqué es tan difícil aplicar estilos a formularios con CSS?
-En los principios de la Web —allá por 1995 — se añadieron los controles de formulario en la [2ª especificación HTML](http://www.ietf.org/rfc/rfc1866.txt). Debido a la complejidad de los widgets de formulario, los implementadores prefirieron dejar que el sistema operativo subyacente se encargara de su manejo y presentación.
+En los principios de la Web —allá por 1995 — se añadieron los controles de formulario en la [2ª especificación HTML](https://www.ietf.org/rfc/rfc1866.txt). Debido a la complejidad de los widgets de formulario, los implementadores prefirieron dejar que el sistema operativo subyacente se encargara de su manejo y presentación.
 
 Pocos años después, se creó **CSS y lo que era una necesidad técnica** — es decir, el uso de widgets nativos para implementar controles de formulario, empezó a requerir estilizado. Y en los primeros días de CSS, el estilizado de formularios no fue una prioridad.
 
 Por otra parte, como los usuarios estaban acostumbrados a la apariencia visual de sus plataformas respectivas, los fabricantes de navegadores fueron reacios a hacer que los controles de formularios pudieran recibir estilos.
 
-Hoy en día, ni siquiera uno solo de los navegadores actuales implementa **completamente** CSS 2.1. Afortunadamente, con el tiempo, los fabricantes de navegadores han ido mejorado su soporte a CSS para los elementos de formulario e, incluso considerando que su usabilidad tiene mala reputación, actualmente, ya se puede usar CSS para estilizar **[formularios HTML](https://developer.mozilla.org/es/docs/HTML/Forms)**
+Hoy en día, ni siquiera uno solo de los navegadores actuales implementa **completamente** CSS 2.1. Afortunadamente, con el tiempo, los fabricantes de navegadores han ido mejorado su soporte a CSS para los elementos de formulario e, incluso considerando que su usabilidad tiene mala reputación, actualmente, ya se puede usar CSS para estilizar **[formularios HTML](/es/docs/HTML/Forms)**
 
 ### No todos los widgets se crean igual con CSS
 Actualmente aun se encuentran dificultades cuando se utiliza CSS con formularios; estos problemas se pueden dividir en tres categorías.
@@ -34,7 +34,7 @@ Algunos elementos son más díficiles de estilizar, llegando a necesitar CSS com
 * Los botones de radio y "checkboxes".
 * `<input type="search">`
 
-Veremos como trabajar con estos casos específicos en el artículo [Estilizado avanzado para formularios HTML](/en-US/docs/Advanced_styling_for_HTML_forms).
+Veremos como trabajar con estos casos específicos en el artículo [Estilizado avanzado para formularios HTML](/es/docs/Learn/Forms/Advanced_styling_for_HTML_forms).
 
 #### Lo feo
 En algunos elementos, simplemente no se puede utilizar CSS. Incluyendo a:
@@ -47,11 +47,11 @@ En algunos elementos, simplemente no se puede utilizar CSS. Incluyendo a:
 
 ## Estilizado básico
 
-Aplicar estilos a [elementos que son fáciles de estilizar](https://developer.mozilla.org/es/docs/Web/Guide/HTML/Forms/Styling_HTML_forms#El_bueno) con CSS, no debería suponer ninguna dificultad ya que básicamente se comportan como cualquier otro elemento HTML. De todas formas, el agente de usuario de estilos para cada navegador puede mostrar pequeñas inconsistencias por lo que a continuación daremos algunos trucos para ayudar a aplicar estilos más cómodamente.
+Aplicar estilos a [elementos que son fáciles de estilizar](/es/docs/Learn/Forms/Styling_HTML_forms#El_bueno) con CSS, no debería suponer ninguna dificultad ya que básicamente se comportan como cualquier otro elemento HTML. De todas formas, el agente de usuario de estilos para cada navegador puede mostrar pequeñas inconsistencias por lo que a continuación daremos algunos trucos para ayudar a aplicar estilos más cómodamente.
 
 ### Campos de búsqueda
 
-Las cajas de búsqueda son el único tipo de campo de texto que pueden ofrecer más dificultad al aplicar estilos. En los navegadores basados en webkit (Chrome, Safari, etc.) se debe lidiar con la propiedad -webkit-. Discutiremos esta propiedad más tarde en el artículo: [Estilizado avanzado para formularios HTML](/en-US/docs/Advanced_styling_for_HTML_forms).
+Las cajas de búsqueda son el único tipo de campo de texto que pueden ofrecer más dificultad al aplicar estilos. En los navegadores basados en webkit (Chrome, Safari, etc.) se debe lidiar con la propiedad -webkit-. Discutiremos esta propiedad más tarde en el artículo: [Estilizado avanzado para formularios HTML](/es/docs/Advanced_styling_for_HTML_forms).
 
 #### Ejemplo
 
@@ -93,7 +93,7 @@ Hay muchas controversia sobre si los formularios tienen mejor aspecto usando los
 
 ### Modelo de cajas
 
-Todos los campos de texto tienen soporte completo para las propiedades relacionadas con el modelo de cajas de CSS ([width](/es/docs/Web/CSS/width), [height](/es/docs/Web/CSS/height), [padding](/es/docs/Web/CSS/padding), margin y [border](/es/docs/CSS/border)). Igual que antes, los navegadores se remiten a los estilos por defecto del sistema cuando muestran estos widgets. A cada cual te corresponde el como combinarlos dentro del resto de contenido. Si  se quieres mantener el aspecto nativo de los widgets, entonces hay que afrontar pequeñas inconsistencias de tamaño.
+Todos los campos de texto tienen soporte completo para las propiedades relacionadas con el modelo de cajas de CSS ([width](/es/docs/Web/CSS/width), [height](/es/docs/Web/CSS/height), [padding](/es/docs/Web/CSS/padding), margin y [border](/es/docs/Web/CSS/border)). Igual que antes, los navegadores se remiten a los estilos por defecto del sistema cuando muestran estos widgets. A cada cual te corresponde el como combinarlos dentro del resto de contenido. Si  se quieres mantener el aspecto nativo de los widgets, entonces hay que afrontar pequeñas inconsistencias de tamaño.
 
 Esto es porque cada widget tiene sus propias reglas para el orden, margen y padding. Por lo que si quieres darle el mismo tamaño a varios widgets diferentes se debe usar la propiedad box-sizing: 
 
@@ -288,7 +288,7 @@ input, textarea {
 }
 ```
 
-Cuando uno de estos campos recibe el foco, vamos a resaltarlo con un fondo transparente gris claro. Tome nota de que es importante añadir la propiedad [outline](https://developer.mozilla.org/es/docs/Web/CSS/outline) para quitar el resaltado de enfoque añadido por defecto por algunos navegadores.
+Cuando uno de estos campos recibe el foco, vamos a resaltarlo con un fondo transparente gris claro. Tome nota de que es importante añadir la propiedad [outline](/es/docs/Web/CSS/outline) para quitar el resaltado de enfoque añadido por defecto por algunos navegadores.
 
 ```css
 input:focus, textarea:focus {
@@ -309,7 +309,7 @@ input {
 }
 ```
 
-Los elementos {{HTMLElement("textare")}} se muestran por defecto como bloques, Las dos cosas importantes aquí son las propiedades [resize](https://developer.mozilla.org/es/docs/Web/CSS/resize) y [overflow]("https://developer.mozilla.org/es/docs/Web/CSS/overflow). Ya que nuestro `diseño` es de tamaño fijo, utilizaremos la propiedad `resize` para impedir que el usuario pueda cambiar el tamaño de los campos multilínea. La propiedad `overflow` se utiliza para que el campo se muestre de forma más consistente a través de diversos navegadores; algunos de ellos ponen por defecto esta propiedad en `auto`, pero en nuestro caso, es mejor asegurarse de que todos estén en `auto`.
+Los elementos {{HTMLElement("textarea")}} se muestran por defecto como bloques, Las dos cosas importantes aquí son las propiedades [resize](/es/docs/Web/CSS/resize) y [overflow](/es/docs/Web/CSS/overflow). Ya que nuestro `diseño` es de tamaño fijo, utilizaremos la propiedad `resize` para impedir que el usuario pueda cambiar el tamaño de los campos multilínea. La propiedad `overflow` se utiliza para que el campo se muestre de forma más consistente a través de diversos navegadores; algunos de ellos ponen por defecto esta propiedad en `auto`, pero en nuestro caso, es mejor asegurarse de que todos estén en `auto`.
 
 ```css
 textarea {
@@ -325,7 +325,7 @@ textarea {
 }
 ```
 
-El elemento {{HTMLElement("button")}} </code>se acomoda muy bien a CSS; se puede hacer lo que se quiera con el, ¡incluso utilizando [pseudo-elementos](https://developer.mozilla.org/es/docs/CSS/Pseudo-elements)!</p>
+El elemento {{HTMLElement("button")}} </code>se acomoda muy bien a CSS; se puede hacer lo que se quiera con el, ¡incluso utilizando [pseudo-elementos](/es/docs/CSS/Pseudo-elements)!</p>
 
 ```css
 button {
@@ -365,6 +365,6 @@ Y ¡listo! Sientase libre de probarlo usted mismo; como comprobará ¡esto funci
 
 ## Conclusión
 
-Como puede verse, mientras que queramos construir formularios solo con campos de texto y botones, es sencillo aplicarles estilos con CSS. Si deseas saber más pequeños trucos de CSS que le hagan más fácil la vida al trabajar con formularios, echale un vistazo a la parte de formularios de [el proyecto normalize.css](http://necolas.github.com/normalize.css).
+Como puede verse, mientras que queramos construir formularios solo con campos de texto y botones, es sencillo aplicarles estilos con CSS. Si deseas saber más pequeños trucos de CSS que le hagan más fácil la vida al trabajar con formularios, echale un vistazo a la parte de formularios de [el proyecto normalize.css](https://necolas.github.com/normalize.css).
 
 En el próximo artículo, veremos como manejar widgets de formulario de la categoría de "el malo" y "el feo".
