@@ -5499,12 +5499,6 @@
       "VerZsuT"
     ]
   },
-  "Web/API/AbortSignal/onabort": {
-    "modified": "2020-10-15T22:16:51.482Z",
-    "contributors": [
-      "VerZsuT"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2020-10-15T22:18:41.838Z",
     "contributors": [
@@ -11727,12 +11721,6 @@
       "forestbird"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2019-03-23T22:31:10.101Z",
-    "contributors": [
-      "fider"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T22:01:52.733Z",
     "contributors": [
@@ -11748,6 +11736,12 @@
     "contributors": [
       "ZaWertun",
       "sollerias",
+      "fider"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2019-03-23T22:31:10.101Z",
+    "contributors": [
       "fider"
     ]
   },
@@ -24086,6 +24080,12 @@
       "wbamberg",
       "fscholz",
       "Cyemka"
+    ]
+  },
+  "conflicting/Web/API/AbortSignal/abort_event": {
+    "modified": "2020-10-15T22:16:51.482Z",
+    "contributors": [
+      "VerZsuT"
     ]
   },
   "conflicting/Web/API/Canvas_API/A_basic_ray-caster": {

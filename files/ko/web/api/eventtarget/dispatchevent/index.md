@@ -2,54 +2,55 @@
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
 tags:
-  - API
-  - DOM
-  - DOM 엘리먼트 메소드
-  - Gecko
-  - 메소드
+  - Method
+  - Reference
+browser-compat: api.EventTarget.dispatchEvent
 translation_of: Web/API/EventTarget/dispatchEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
-영향을 받는 {{domxref("EventListener")}} 를 적절한 순서로 호출하는 지정된 {{domxref("EventTarget")}} 에서 {{domxref("Event")}} 를 (동기적으로) 디스패치합니다. 일반 이벤트 처리 규칙(capturing 과 선택적인 bubbling 단계를 포함해)은 `dispatchEvent()` 를 사용하여 수동으로 전달 된 이벤트에도 적용됩니다.
+{{domxref("EventTarget")}} 인터페이스의 **`dispatchEvent()`** 메서드는 `EventTarget` 객체로 {{domxref("Event")}}를 발송해서, 해당 이벤트에 대해 등록된 {{domxref("EventListener")}}들을 (동기적으로) 순서대로 호출합니다. `dispatchEvent()`를 통해 직접 발송한 이벤트에도 캡처링과 버블링 단계를 포함한 일반적인 이벤트 처리 규칙이 적용됩니다.
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+`dispatchEvent()` 호출은 이벤트 발송 과정의 마지막 단계입니다. 발송에 앞서 우선 {{domxref("Event/Event", "Event()")}} 생성자로 이벤트를 생성 및 초기화해야 합니다.
 
-    cancelled = !target.dispatchEvent(event)
+> **참고:** `dispatchEvent()` 사용 시, {{domxref("Event.target")}} 속성은 현재 `EventTarget`으로 초기화됩니다.
 
-### 파라미터
+브라우저가 발송하는 "네이티브" 이벤트는 [이벤트 루프](/ko/docs/Web/JavaScript/EventLoop)를 통해 비동기적으로 처리기들을 호출하지만, `dispatchEvent()`로 발송된 이벤트는 처리기를 동기적으로 호출합니다. 즉, 모든 적합한 처리기의 호출과 반환이 끝나야 `dispatchEvent()` 역시 반환합니다.
 
-- `event` 는 디스패치될 {{domxref("Event")}} 객체입니다.
-- `target` 은 {{domxref("Event", "", "target")}} 를 초기화하기 위해서 사용되고 어떤 이벤트 리스너를 호출할 것인지 결정합니다.
+## 구문
+
+```js
+dispatchEvent(event)
+```
+
+### 매개변수
+
+- `event`
+  - : 발송할 {{domxref("Event")}} 객체입니다. {{domxref("Event.target")}}은 현재 {{domxref("EventTarget")}}으로 설정됩니다.
 
 ### 반환 값
 
-- 적어도 하나의 이벤트 핸들러가 그 이벤트를 처리하면서  {{domxref("Event.preventDefault()")}} 를 호출하였다면 `false` 를 반환하고 그렇지 않으면 `true` 를 반환합니다.
+`event`가 취소 가능하고, 이벤트 처리기 중 하나에서 {{domxref("Event.preventDefault()")}}를 호출한 경우 `false`, 그 외에는 `true`.
 
-`dispatchEvent` 메서드는 그 이벤트의 타입이 메서드의 호출이전에 초기화되지 않았을 경우 `UNSPECIFIED_EVENT_TYPE_ERR` 에러를 발생시킵니다. 또는 이벤트의 타입이 `null` 이거나 공백 스트링을 경우에도 같은 에러를 발생시킵니다. 이벤트 핸들러에 의해 발생한 이벤트는 잡히지 않은 예외(uncaugt exceptions)로 보고가 되며 이벤트 핸들러는 내부 콜스택(nested callstack)에서 실행이 됩니다. 이는 곧 완료가 될 때까지 호출자(caller)를 막는 다는 뜻이고 예외들이 호출자(caller)에게 전파(propagate)되지 않음을 말합니다.
+### 예외
 
-<h2 id="Notes" name="Notes">노트</h2>
+- `InvalidStateError` {{domxref("DomException")}}
+  - : 이벤트 초기화 시 이벤트 유형을 지정하지 않은 경우 발생합니다.
 
-DOM에 의해 시작되고 [이벤트 루프](https://developer.mozilla.org/ko/docs/Web/JavaScript/EventLoop)를 통해 이벤트 핸들러를 비동기 적으로 호출하는 "네이티브" 이벤트와 달리 `dispatchEvent` 는 이벤트 핸들러를 동기적으로 호출합니다. `dispatchEvent` 를 호출 한 후 코드가 계속되기 전에 모든 해당 이벤트 핸들러가 실행되고 리턴됩니다.
+> **경고:** 이벤트 처리기에서 발생한 예외는 처리하지 않은 예외로 보고됩니다. 이벤트 처리기는 중첩 호출 스택에서 동작하므로, 실행이 끝날 때까지 호출자는 대기하지만, 예외는 호출자로 전파되지 않습니다.
 
-implementation's 이벤트 모델의 디스패치 이벤트에 사용되는 create-init-dispatch 프로세스의 마지막 단계입니다. 이벤트는 [Event 생성자](https://developer.mozilla.org/ko/docs/Web/API/Event/Event)를 사용하여 만들 수 있습니다.
+## 예외
 
-[Event 객체 레퍼런스](https://developer.mozilla.org/ko/docs/Web/API/Event "DOM/event")도 한번 확인해 보세요
+[이벤트 생성과 발동](/ko/docs/Web/Events/Creating_and_triggering_events)를 확인하세요.
 
-<h2 id="Example" name="Example">예시</h2>
+## 명세
 
-[이벤트 생성 및 트리거](https://developer.mozilla.org/ko/docs/Web/Guide/Events/Creating_and_triggering_events "/en-US/docs/Web/Guide/DOM/Events/Creating_and_triggering_events") 문서를 확인하세요.
+{{Specifications}}
 
-<h2 id="Specification" name="Specification">명세</h2>
+## 브라우저 호환성
 
-| 명세                                                                                                                     | 상태                             | 코멘트                         |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------ |
-| {{SpecName('DOM WHATWG', '#dom-eventtarget-dispatchevent', 'EventTarget.dispatchEvent()')}} | {{ Spec2('DOM WHATWG') }} | DOM 2 Events 명세의 초기 정의. |
+{{Compat}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">브라우저 호환성</h2>
+## See also
 
-
-
-
-
-{{Compat("api.EventTarget.dispatchEvent")}}
+- The [Event object reference](/en-US/docs/Web/API/Event)

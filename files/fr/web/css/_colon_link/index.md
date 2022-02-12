@@ -21,7 +21,7 @@ a:link {
 
 Afin que la mise en forme s'applique au mieux, la règle `:link` doit être placée avant les autres : `:link` — `:visited` — `:hover` — `:active`. La pseudo-classe {{cssxref(":focus")}} est habituellement placée juste avant ou juste après `:hover`, en fonction de l'effet désiré.
 
-> **Note :** On utilisera {{cssxref("any-link")}} pour sélectionner un élément qu'il ait été visité ou non.
+> **Note :** On utilisera {{cssxref(":any-link")}} pour sélectionner un élément qu'il ait été visité ou non.
 
 ## Syntaxe
 

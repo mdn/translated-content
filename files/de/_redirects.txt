@@ -483,6 +483,7 @@
 /de/docs/Web/CSS/-moz-user-select	/de/docs/Web/CSS/user-select
 /de/docs/Web/CSS/-webkit-mask-origin	/de/docs/Web/CSS/mask-origin
 /de/docs/Web/CSS/-webkit-mask-repeat	/de/docs/Web/CSS/mask-repeat
+/de/docs/Web/CSS/-webkit-print-color-adjust	/de/docs/Web/CSS/print-color-adjust
 /de/docs/Web/CSS/:-moz-placeholder	/de/docs/Web/CSS/:placeholder-shown
 /de/docs/Web/CSS/:-moz-ui-invalid	/de/docs/Web/CSS/:user-invalid
 /de/docs/Web/CSS/:-webkit-autofill	/de/docs/Web/CSS/:autofill

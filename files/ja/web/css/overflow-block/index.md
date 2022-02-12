@@ -53,7 +53,7 @@ overflow-block: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 

@@ -65,7 +65,6 @@ The review teams for each locale are:
   team, which consists of:
   - [@armanpwnz](https://github.com/armanpwnz)
   - [@captainspring](https://github.com/captainspring)
-  - [@mpstv](https://github.com/mpstv)
   - [@myshov](https://github.com/myshov)
   - [@Saionaro](https://github.com/Saionaro)
   - [@sashasushko](https://github.com/sashasushko)
