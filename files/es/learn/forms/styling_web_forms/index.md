@@ -4,6 +4,7 @@ slug: Learn/Forms/Styling_web_forms
 translation_of: Learn/Forms/Styling_web_forms
 original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
+{{LearnSidebar}}
 
 En este artículo aprenderemos como utilizar [CSS](/es/docs/Web/CSS) con formularios [HTML](/es/docs/Web/HTML) para hacerlos más atractivos. Aunque parezca extraño, esto es algo que puede llegar a ser complicado. Por razones históricas y técnicas, los widgets de formulario no suelen llevarse bien con CSS. Por este motivo, muchos desarrolladores prefieren [construir sus propios widgets](/es/docs/Learn/Forms/How_to_build_custom_form_widgets) para tener el control de su aspecto en vez de utilizar los nativos. De todas formas, con los navegadores modernos, los diseñadores web cada vez tienen más control sobre el diseño de los elementos de formulario. Vamos a profundizar en esto.
 
@@ -26,22 +27,21 @@ A algunos elementos se les puede dar estilo con pocos o ningún problema indepen
 * {{HTMLElement("fieldset")}}
 * {{HTMLElement("label")}}
 * Botones (tanto {{HTMLElement("input")}} y {{HTMLElement("button")}})
-* {{HTMLElement("label")}}
 * {{HTMLElement("output")}}
 
 #### Lo malo
 Algunos elementos son más díficiles de estilizar, llegando a necesitar CSS complejo o trucos muy específicos:
 * Los botones de radio y "checkboxes".
-* `<input type="search">`
+* [<input type="search">](/es/docs/Web/HTML/Element/input/search)
 
 Veremos como trabajar con estos casos específicos en el artículo [Estilizado avanzado para formularios HTML](/es/docs/Learn/Forms/Advanced_styling_for_HTML_forms).
 
 #### Lo feo
 En algunos elementos, simplemente no se puede utilizar CSS. Incluyendo a:
-* `<input type="color">`
-* Controles relacionados al tiempo como `<input type="datetime-local">`
-* `<input type="range">`
-* `<input type="file">`
+* [<input type="color">](/es/docs/Web/HTML/Element/input/color)
+* Controles relacionados al tiempo como [<input type="datetime-local">](/es/docs/Web/HTML/Element/input/datetime-local)
+* [<input type="range">](/es/docs/Web/HTML/Element/input/range)
+* [<input type="file">](/es/docs/Web/HTML/Element/input/file)
 * Elementos involucrados en la creación de widgets de selección como {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} y {{HTMLElement("datalist")}}.
 * {{HTMLElement("progress")}} y {{HTMLElement("meter")}}
 
