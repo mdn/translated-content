@@ -19,7 +19,7 @@ Hoy en día, ni siquiera uno solo de los navegadores actuales implementa **compl
 ### No todos los widgets se crean igual con CSS
 Actualmente aun se encuentran dificultades cuando se utiliza CSS con formularios; estos problemas se pueden dividir en tres categorías.
 
-#### El bueno
+#### Lo bueno
 A algunos elementos se les puede dar estilo con pocos o ningún problema independientemente de la plataforma. Entre estos se incluyen los siguientes elementos estructurales:
 
 * {{HTMLElement("form")}}
@@ -29,14 +29,14 @@ A algunos elementos se les puede dar estilo con pocos o ningún problema indepen
 * {{HTMLElement("label")}}
 * {{HTMLElement("output")}}
 
-#### El malo
+#### Lo malo
 Algunos elementos son más díficiles de estilizar, llegando a necesitar CSS complejo o trucos muy específicos:
 * Los botones de radio y "checkboxes".
 * `<input type="search">`
 
 Veremos como trabajar con estos casos específicos en el artículo [Estilizado avanzado para formularios HTML](/en-US/docs/Advanced_styling_for_HTML_forms).
 
-#### El feo
+#### Lo feo
 En algunos elementos, simplemente no se puede utilizar CSS. Incluyendo a:
 * `<input type="color">`
 * Controles relacionados al tiempo como `<input type="datetime-local">`
