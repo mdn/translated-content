@@ -42,7 +42,7 @@ El constructor [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/
 
 ### Creando un `ArrayBuffer`
 
-En este ejemplo, se crea un buffer de 8 bytes con una vista {{jsxref("Int21Array)}} consultando el buffer.
+En este ejemplo, se crea un buffer de 8 bytes con una vista {{jsxref("Int32Array")}} consultando el buffer.
 
 ```js
 const buffer = new ArrayBuffer(8);
