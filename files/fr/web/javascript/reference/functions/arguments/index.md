@@ -141,7 +141,7 @@ function liste(type) {
 Vous pouvez passer n'importe quel nombre d'arguments à cette fonction ; elle créera une liste du type indiqué en ajoutant chaque argument comme élément dans la liste. Exemple :
 
 ```js
-var listeHTML = liste("u", "Un", "Deux", "Trois");
+var listeHTML = liste("ul", "Un", "Deux", "Trois");
 
 /* listeHTML vaut  :
 
