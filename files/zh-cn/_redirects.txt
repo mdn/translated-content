@@ -1315,6 +1315,8 @@
 /zh-CN/docs/Web/API/Element/onbeforescriptexecute	/zh-CN/docs/Web/API/Document/onbeforescriptexecute
 /zh-CN/docs/Web/API/Element/oncopy	/zh-CN/docs/Web/API/HTMLElement/oncopy
 /zh-CN/docs/Web/API/Element/oncut	/zh-CN/docs/Web/API/HTMLElement/oncut
+/zh-CN/docs/Web/API/Element/onfullscreenchange	/zh-CN/docs/Web/API/Element/fullscreenchange_event
+/zh-CN/docs/Web/API/Element/onfullscreenerror	/zh-CN/docs/Web/API/Element/fullscreenerror_event
 /zh-CN/docs/Web/API/Element/onpaste	/zh-CN/docs/Web/API/HTMLElement/onpaste
 /zh-CN/docs/Web/API/Element/removeAttributre	/zh-CN/docs/Web/API/Element/removeAttribute
 /zh-CN/docs/Web/API/Event/CustomEvent	/zh-CN/docs/Web/API/CustomEvent
@@ -1590,6 +1592,8 @@
 /zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/conflicting/Web/API/Window
 /zh-CN/docs/Web/API/Window/mozAnimationStartTIme	/zh-CN/docs/Web/API/Animation/startTime
 /zh-CN/docs/Web/API/Window/onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload
+/zh-CN/docs/Web/API/Window/ongamepadconnected	/zh-CN/docs/conflicting/Web/API/Window/gamepadconnected_event
+/zh-CN/docs/Web/API/Window/ongamepaddisconnected	/zh-CN/docs/Web/API/Window/gamepaddisconnected_event
 /zh-CN/docs/Web/API/Window/onhashchange	/zh-CN/docs/Web/API/WindowEventHandlers/onhashchange
 /zh-CN/docs/Web/API/Window/onpopstate	/zh-CN/docs/Web/API/WindowEventHandlers/onpopstate
 /zh-CN/docs/Web/API/Window/onresize	/zh-CN/docs/Web/API/GlobalEventHandlers/onresize
