@@ -86,18 +86,17 @@ translation_of: Web/HTML/Element/input/tel
 
 list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち {{htmlattrxref("type", "input")}} と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
 
-
 ### maxlength
 
-ユーザーが電話番号フィールドに入力することができる（UTF-16 コード単位での）最大文字数です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、電話番号フィールドには最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
+ユーザーが電話番号欄に入力することができる（UTF-16 コード単位での）最大文字数です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
 フィールドに入力された長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。
 
 ### minlength
 
-ユーザーが電話番号フィールドに入力することができる（UTF-16 コード単位での）最小文字数です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、電話番号フィールドには最小文字数が設定されません。
+ユーザーが電話番号欄に入力することができる（UTF-16 コード単位での）最小文字数です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最小文字数が設定されません。
 
-入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、電話番号フィールドは[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。
+入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、電話番号欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。
 
 ### pattern
 
@@ -209,7 +208,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 `size` は、入力される電話番号の長さの制限とは別のものです。入力される電話番号の長さの最小値は {{htmlattrxref("minlength", "input")}} 属性で指定でき、同様に、入力される電話番号の長さの最大値は {{htmlattrxref("maxlength", "input")}} 属性で設定することができます。
 
-以下の例では、幅 20 文字の電話番号入力ボックスを作成し、入力内容は 9 文字以下、 14 文字以下であることを要求しています。
+以下の例では、幅 20 文字の電話番号入力ボックスを生成し、入力内容は 9 文字以上、 14 文字以下であることを要求しています。
 
 ```html
 <input id="telNo" name="telNo" type="tel"
@@ -233,7 +232,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 {{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}
 
-#### サジェスト値の提供
+#### 提案値の提供
 
 さらに一歩進んで、電話番号の既定値のリストを用意し、そこからユーザーが選択できるようにすることも可能です。これには {{htmlattrxref("list", "input")}} 属性を使用します。これはユーザーをこれらの選択肢に限定しませんが、よく使われる電話番号をより迅速に選択できるようにします。これは  {{htmlattrxref("autocomplete", "input")}} へのヒントも提供します。 `list` 属性は {{HTMLElement("datalist")}} 要素の ID を指定し、この要素は 1 つの提案値につき 1 つの {{HTMLElement("option")}} 要素を含んでおり、それぞれの `option` の `value` は電話番号入力ボックスの対応する提案値となっています。
 
