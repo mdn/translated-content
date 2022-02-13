@@ -174,7 +174,7 @@ On peut aussi embarquer directement le script du module dans le fichier HTML en 
 </script>
 ```
 
-Le script dans lequel on importe les fonctionnalités du module agira comme le script de plus haut niveau. Si ce dernier est absent, Firefox (par exemple) lèvera une erreur "SyntaxError: import declarations may only appear at top level of a module".
+Le script dans lequel on importe les fonctionnalités du module agira comme le script de plus haut niveau. Si ce dernier est absent, Firefox (par exemple) lèvera une erreur <q lang="en">SyntaxError: import declarations may only appear at top level of a module</q>.
 
 Les instructions `import` et `export` ne peuvent être utilisées qu'à l'intérieur de modules et pas depuis des scripts classiques.
 
@@ -270,7 +270,7 @@ import { name, draw, reportArea, reportPerimeter } from './modules/circle.js';
 import { name, draw, reportArea, reportPerimeter } from './modules/triangle.js';
 ```
 
-Le navigateur déclenchera une erreur telle que "_SyntaxError: redeclaration of import name_" (Firefox).
+Le navigateur déclenchera une erreur telle que <q lang="en">_SyntaxError: redeclaration of import name_</q> (Firefox).
 
 Pour éviter ce problème, on renomme les imports afin qu'ils soient uniques&nbsp;:
 
