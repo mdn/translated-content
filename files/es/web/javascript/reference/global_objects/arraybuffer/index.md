@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.ArrayBuffer
 
 El objeto **`ArrayBuffer`** se usa para representar un buffer genérico, de datos binarios crudos (raw) con una longitud específica.
 
-Es un arreglo de bytes, frecuentemente llamado de esta forma en otros lenguajes de programación. No se puede manipular directamente el contenido de un `ArrayBuffer`; en su lugar, se crea uno de los [objetos de arreglos tipados] (/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) o un objeto {{jsxref("DataView")}} que representa el buffer en un formato específico, y se usa para leer y escribir el contenido del buffer.
+Es un arreglo de bytes, frecuentemente llamado de esta forma en otros lenguajes de programación. No se puede manipular directamente el contenido de un `ArrayBuffer`; en su lugar, se crea uno de los [objetos de arreglos tipados](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) o un objeto {{jsxref("DataView")}} que representa el buffer en un formato específico, y se usa para leer y escribir el contenido del buffer.
 
 El constructor [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer) crea un nuevo `ArrayBuffer` de la longitud especificada en bytes. También se puede obtener un `ArrayBuffer` desde datos existentes, por ejemplo, desde una cadena de caracteres en [Base64](/es/docs/Glossary/Base64) o desde un archivo local.
 
