@@ -91,7 +91,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 - {{JSxRef("Atomics")}}
 - {{JSxRef("JSON")}}
 
-### Manejo de memoria
+### Gestión de memoria
 
 - {{JSxRef("WeakRef")}}
 - {{JsxRef("FinalizationRegistry")}}
@@ -137,7 +137,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 
 [Declaraciones y sentencias en JavaScript](/es/docs/Web/JavaScript/Reference/Statements)
 
-### Flujo de control
+### Control de flujo
 
 - {{jsxref("Statements/block", "Block", "", 1)}}
 - {{jsxref("Statements/Empty", "Empty statement", "", 1)}}
@@ -244,14 +244,14 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 - {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
 - {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
 
-### Operadores igualitarios
+### Operadores de igualdad
 
 - {{JSxRef("Operators/Equality", "==")}}
 - {{JSxRef("Operators/Inequality", "!=")}}
 - {{JSxRef("Operators/Strict_equality", "===")}}
 - {{JSxRef("Operators/Strict_inequality", "!==")}}
 
-### Operadores de desplazamiento bitwise
+### Operadores de desplazamiento bit a bit
 
 - {{JSxRef("Operators/Left_shift", "&lt;&lt;")}}
 - {{JSxRef("Operators/Right_shift", "&gt;&gt;")}}
@@ -269,7 +269,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 - {{JSxRef("Operators/Logical_OR", "||")}}
 - {{JSxRef("Operators/Nullish_coalescing_operator", "??")}}
 
-### Operadores condicionales (ternarios)
+### Operador condicional (ternario)
 
 - {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
 
@@ -307,7 +307,7 @@ Este capítulo documenta como trabajar con las [Funciones JavaScript](/es/docs/W
 - [Parámetros por defecto](/es/docs/Web/JavaScript/Reference/Functions/Default_parameters)
 - [Parámetros rest](/es/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
-## Páginas adiciones de referencia
+## Páginas adicionales de referencia
 
 - [Gramática léxica](/es/docs/Web/JavaScript/Reference/Lexical_grammar)
 - [Tipos de datos y estructuras](/es/docs/Web/JavaScript/Data_structures)
