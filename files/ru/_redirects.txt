@@ -379,6 +379,8 @@
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
 /ru/docs/Web/API/Window/crypto	/ru/docs/Web/API/crypto_property
 /ru/docs/Web/API/Window/mozAnimationStartTime	/ru/docs/Web/API/Animation/startTime
+/ru/docs/Web/API/Window/ongamepadconnected	/ru/docs/conflicting/Web/API/Window/gamepadconnected_event
+/ru/docs/Web/API/Window/ongamepaddisconnected	/ru/docs/conflicting/Web/API/Window/gamepaddisconnected_event
 /ru/docs/Web/API/Window/performance	/ru/docs/Web/API/performance_property
 /ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ru/docs/Glossary/Base64
 /ru/docs/Web/API/WindowBase64/btoa	/ru/docs/Web/API/btoa

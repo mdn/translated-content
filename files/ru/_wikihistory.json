@@ -11321,18 +11321,6 @@
       "timur-gilauri"
     ]
   },
-  "Web/API/Window/ongamepadconnected": {
-    "modified": "2020-11-17T12:43:15.635Z",
-    "contributors": [
-      "venanen"
-    ]
-  },
-  "Web/API/Window/ongamepaddisconnected": {
-    "modified": "2020-11-17T12:45:18.585Z",
-    "contributors": [
-      "venanen"
-    ]
-  },
   "Web/API/Window/onpaint": {
     "modified": "2019-03-23T22:08:47.903Z",
     "contributors": [
@@ -24239,6 +24227,18 @@
     "contributors": [
       "Steln",
       "akhabibullina"
+    ]
+  },
+  "conflicting/Web/API/Window/gamepadconnected_event": {
+    "modified": "2020-11-17T12:43:15.635Z",
+    "contributors": [
+      "venanen"
+    ]
+  },
+  "conflicting/Web/API/Window/gamepaddisconnected_event": {
+    "modified": "2020-11-17T12:45:18.585Z",
+    "contributors": [
+      "venanen"
     ]
   },
   "conflicting/Web/API/Window/localStorage": {

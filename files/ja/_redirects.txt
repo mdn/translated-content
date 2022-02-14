@@ -3083,6 +3083,8 @@
 /ja/docs/Web/API/Element/Activate_event	/ja/docs/Web/API/Element/DOMActivate_event
 /ja/docs/Web/API/Element/accessKey	/ja/docs/Web/API/HTMLElement/accessKey
 /ja/docs/Web/API/Element/name	/ja/docs/Web/API
+/ja/docs/Web/API/Element/onfullscreenchange	/ja/docs/conflicting/Web/API/Element/fullscreenchange_event
+/ja/docs/Web/API/Element/onfullscreenerror	/ja/docs/conflicting/Web/API/Element/fullscreenerror_event
 /ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/Web/API/Document/createEvent
 /ja/docs/Web/API/EventHandler	/ja/docs/Web/Events/Event_handlers
@@ -3328,6 +3330,8 @@
 /ja/docs/Web/API/Window/onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
 /ja/docs/Web/API/Window/ondeviceproximity	/ja/docs/orphaned/Web/API/Window/ondeviceproximity
 /ja/docs/Web/API/Window/onfocus	/ja/docs/Web/API/GlobalEventHandlers/onfocus
+/ja/docs/Web/API/Window/ongamepadconnected	/ja/docs/conflicting/Web/API/Window/gamepadconnected_event
+/ja/docs/Web/API/Window/ongamepaddisconnected	/ja/docs/conflicting/Web/API/Window/gamepaddisconnected_event
 /ja/docs/Web/API/Window/oninstall	/ja/docs/Web/API/Window/onappinstalled
 /ja/docs/Web/API/Window/onkeydown	/ja/docs/Web/API/GlobalEventHandlers/onkeydown
 /ja/docs/Web/API/Window/onkeyup	/ja/docs/Web/API/GlobalEventHandlers/onkeyup

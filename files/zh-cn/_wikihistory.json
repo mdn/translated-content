@@ -12143,6 +12143,19 @@
       "liuhe"
     ]
   },
+  "Web/API/Element/fullscreenchange_event": {
+    "modified": "2019-03-18T21:19:43.587Z",
+    "contributors": [
+      "Wyatt"
+    ]
+  },
+  "Web/API/Element/fullscreenerror_event": {
+    "modified": "2020-10-15T22:21:46.027Z",
+    "contributors": [
+      "kjyzly",
+      "LinChengDior"
+    ]
+  },
   "Web/API/Element/getAttribute": {
     "modified": "2019-04-29T04:23:55.908Z",
     "contributors": [
@@ -12430,19 +12443,6 @@
       "teoli",
       "khalid32",
       "ziyunfei"
-    ]
-  },
-  "Web/API/Element/onfullscreenchange": {
-    "modified": "2019-03-18T21:19:43.587Z",
-    "contributors": [
-      "Wyatt"
-    ]
-  },
-  "Web/API/Element/onfullscreenerror": {
-    "modified": "2020-10-15T22:21:46.027Z",
-    "contributors": [
-      "kjyzly",
-      "LinChengDior"
     ]
   },
   "Web/API/Element/openOrClosedShadowRoot": {
@@ -22901,6 +22901,12 @@
       "libin2866"
     ]
   },
+  "Web/API/Window/gamepaddisconnected_event": {
+    "modified": "2020-10-15T22:23:08.406Z",
+    "contributors": [
+      "AWhiteMouse"
+    ]
+  },
   "Web/API/Window/getComputedStyle": {
     "modified": "2020-10-15T21:29:18.864Z",
     "contributors": [
@@ -23158,18 +23164,6 @@
     "modified": "2020-06-28T00:52:25.247Z",
     "contributors": [
       "PengyaoZhang"
-    ]
-  },
-  "Web/API/Window/ongamepadconnected": {
-    "modified": "2020-10-15T22:22:28.465Z",
-    "contributors": [
-      "VoidRain"
-    ]
-  },
-  "Web/API/Window/ongamepaddisconnected": {
-    "modified": "2020-10-15T22:23:08.406Z",
-    "contributors": [
-      "AWhiteMouse"
     ]
   },
   "Web/API/Window/online_event": {
@@ -47270,6 +47264,12 @@
     "contributors": [
       "teoli",
       "ziyunfei"
+    ]
+  },
+  "conflicting/Web/API/Window/gamepadconnected_event": {
+    "modified": "2020-10-15T22:22:28.465Z",
+    "contributors": [
+      "VoidRain"
     ]
   },
   "conflicting/Web/API/Window/localStorage": {
