@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.ArrayBuffer
 ---
 {{JSRef}}
 
-El objeto **`ArrayBuffer`** se usa para representar un buffer genérico, de datos binarios crudos (raw) con una longitud específica.
+El objeto **`ArrayBuffer`** se usa para representar un buffer genérico, de datos binarios brutos con una longitud específica.
 
 Es un arreglo de bytes, frecuentemente llamado de esta forma en otros lenguajes de programación. No se puede manipular directamente el contenido de un `ArrayBuffer`; en su lugar, se crea uno de los [objetos de arreglos tipados](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) o un objeto {{jsxref("DataView")}} que representa el buffer en un formato específico, y se usa para leer y escribir el contenido del buffer.
 
@@ -31,12 +31,12 @@ El constructor [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/
 ## Propiedades de instancias
 
 - {{jsxref("ArrayBuffer.prototype.byteLength")}}
-  - : La longitud de solo lectura, en bytes, del `ArrayBuffer`. Está establecida cuando el array es construido y no puede ser cambiada.
+  - : Propiedad de solo lectura con la longitud en bytes del `ArrayBuffer`. Se establece cuando el arreglo es construido y no puede ser cambiada.
 
 ## Métodos de instancias
 
 - {{jsxref("ArrayBuffer.prototype.slice()")}}
-  - : Devuelve un nuevo `ArrayBuffer` que contiene una copia de los bytes de este `ArrayBuffer` desde el comienzo (inclusivo) `begin` hasta el fin (exclusivo) `end`. Si `begin` o `end` son negativos, esto se refiere a un indice desde el final del array, en lugar del comienzo.
+  - : Devuelve un nuevo `ArrayBuffer` que contiene una copia de los bytes de este `ArrayBuffer` desde el comienzo (inclusivo) `begin` hasta el fin (exclusivo) `end`. Si `begin` o `end` son negativos, esto se refiere a un índice desde el final del arreglo, en lugar del comienzo.
 
 ## Ejemplos
 
