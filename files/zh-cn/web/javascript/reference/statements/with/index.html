@@ -60,14 +60,14 @@ translation_of: Web/JavaScript/Reference/Statements/with
 }
 </pre>
 
-<p><font face="Open Sans, Arial, sans-serif">如果是在</font>ECMAScript 5环境调用<code>f([1,2,3], obj)</code>，则<code><font face="Open Sans, Arial, sans-serif">with</font></code>语句中变量<code>values</code>将指向函数的第二个参数<code>values</code>。但是，ECMAScript 6标准给<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype">Array.prototype</a></code>添加了一个新属性<code>values</code>，所有数组实例将继承这个属性。所以在ECMAScript 6环境中，<code><font face="Open Sans, Arial, sans-serif">with</font></code>语句中变量<code>values</code>将指向<code>[1,2,3].values</code>。</p>
+<p>如果是在ECMAScript 5环境调用<code>f([1,2,3], obj)</code>，则<code>with</code>语句中变量<code>values</code>将指向函数的第二个参数<code>values</code>。但是，ECMAScript 6标准给<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype">Array.prototype</a></code>添加了一个新属性<code>values</code>，所有数组实例将继承这个属性。所以在ECMAScript 6环境中，<code>with</code>语句中变量<code>values</code>将指向<code>[1,2,3].values</code>。</p>
 </div>
 
 <h2 id="Examples" name="Examples">示例</h2>
 
 <h3 id="Example_Using_with" name="Example:_Using_with">Example: Using <code>with</code></h3>
 
-<p>下面的<code>with</code>语句指定<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math" title="JavaScript/Reference/Global_Objects/Math">Math</a></code>对象作为默认对象。<code>with</code>语句里面的变量，分別指向<code>Math</code>对象的<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" title="JavaScript/Reference/Global_Objects/Math/PI"><code>PI</code></a> 、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos" title="JavaScript/Reference/Global_Objects/Math/cos">cos</a><font face="Open Sans, Arial, sans-serif">和</font></code><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="JavaScript/Reference/Global_Objects/Math/sin">sin</a></code>函数，不用在前面添加命名空间。后续所有引用都指向<code>Math</code>对象。</p>
+<p>下面的<code>with</code>语句指定<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math" title="JavaScript/Reference/Global_Objects/Math">Math</a></code>对象作为默认对象。<code>with</code>语句里面的变量，分別指向<code>Math</code>对象的<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" title="JavaScript/Reference/Global_Objects/Math/PI"><code>PI</code></a> 、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos" title="JavaScript/Reference/Global_Objects/Math/cos">cos</a>和</code><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="JavaScript/Reference/Global_Objects/Math/sin">sin</a></code>函数，不用在前面添加命名空间。后续所有引用都指向<code>Math</code>对象。</p>
 
 <pre class="brush:js notranslate">var a, x, y;
 var r = 10;

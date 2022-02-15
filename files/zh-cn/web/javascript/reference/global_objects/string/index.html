@@ -175,7 +175,7 @@ else
 
 <p>使用从字符串实例继承而来的 {{jsxref("String.localeCompare", "localeCompare")}} 方法也能达到同样的效果。 </p>
 
-<h3 id="基本字符串和字符串对象的区别">基本字符串和<font face="Consolas, Liberation Mono, Courier, monospace">字符串</font>对象的区别</h3>
+<h3 id="基本字符串和字符串对象的区别">基本字符串和字符串对象的区别</h3>
 
 <p>请注意区分 JavaScript 字符串对象和基本字符串值 . ( 对于 {{jsxref("Global_Objects/Boolean", "Boolean")}} 和{{jsxref("Global_Objects/Number", "Numbers")}} 也同样如此.)</p>
 
@@ -188,7 +188,7 @@ console.log(typeof s_prim); // Logs "string"
 console.log(typeof s_obj);  // Logs "object"
 </pre>
 
-<p>当使用 {{jsxref("Global_Objects/eval", "eval")}}时，基本字符串和<font face="Consolas, Liberation Mono, Courier, monospace">字符串</font>对象也会产生不同的结果。<code>eval</code> 会将基本字符串作为源代码处理; 而<font face="Consolas, Liberation Mono, Courier, monospace">字符串</font>对象则被看作对象处理, 返回对象。 例如：</p>
+<p>当使用 {{jsxref("Global_Objects/eval", "eval")}}时，基本字符串和字符串对象也会产生不同的结果。<code>eval</code> 会将基本字符串作为源代码处理; 而字符串对象则被看作对象处理, 返回对象。 例如：</p>
 
 <pre class="brush: js">s1 = "2 + 2";               // creates a string primitive
 s2 = new String("2 + 2");   // creates a String object

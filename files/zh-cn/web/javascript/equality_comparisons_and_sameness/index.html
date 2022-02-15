@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 
 <ul>
  <li>抽象（非严格）相等比较 (<code>==</code>)</li>
- <li>严格相等比较 (<code>===</code>): 用于<font face="consolas, Liberation Mono, courier, monospace"> </font> <code>Array.prototype.indexOf</code>, <code>Array.prototype.lastIndexOf</code>, 和 <code>case</code>-matching</li>
+ <li>严格相等比较 (<code>===</code>): 用于  <code>Array.prototype.indexOf</code>, <code>Array.prototype.lastIndexOf</code>, 和 <code>case</code>-matching</li>
  <li>同值零: 用于 <code>%TypedArray%</code> 和 <code>ArrayBuffer </code>构造函数、以及<code>Map</code>和<code>Set</code>操作, 并将用于 ES2016/ES7 中的<code>String.prototype.includes </code></li>
  <li>同值: 用于所有其他地方</li>
 </ul>
@@ -125,15 +125,15 @@ console.log(obj === undefined); // false
    <td style="text-align: center;"><code>ToNumber(A) === B</code></td>
    <td style="text-align: center;"><code>ToNumber(A) === ToNumber(B)</code></td>
    <td style="text-align: center;"><code>A === B</code></td>
-   <td style="text-align: center;">ToNumber(A) == ToPrimitive(B)</td>
+   <td style="text-align: center;"><code>ToNumber(A) == ToPrimitive(B)</code></td>
   </tr>
   <tr>
    <td>Object</td>
-   <td style="text-align: center;"><font face="Consolas, Liberation Mono, Courier, monospace">false</font></td>
-   <td style="text-align: center;"><font face="Consolas, Liberation Mono, Courier, monospace">false</font></td>
+   <td style="text-align: center;"><code>false</code></td>
+   <td style="text-align: center;"><code>false</code></td>
    <td style="text-align: center;"><code>ToPrimitive(A) == B</code></td>
    <td style="text-align: center;"><code>ToPrimitive(A) == B</code></td>
-   <td style="text-align: center;">ToPrimitive(A) == ToNumber(B)</td>
+   <td style="text-align: center;"><code>ToPrimitive(A) == ToNumber(B)</code></td>
    <td style="text-align: center;">
     <p><code>A === B</code></p>
    </td>

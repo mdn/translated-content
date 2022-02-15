@@ -49,7 +49,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
  <li><a href="/zh-CN/docs/Web/JavaScript/Guide/iterable">可迭代对象</a>（可以获取对象中的元素,如 Map和 Set 等）</li>
 </ul>
 
-<p><code>Array.from()</code> 方法有一个可选参数 <code>mapFn</code>，让你可以在最后生成的数组上再执行一次 {{jsxref("Array.prototype.map", "map")}} 方法后再返回。也就是说<code> Array.from(obj, mapFn, thisArg) </code>就相当于<code> Array.from(obj).map(mapFn, thisArg),</code> 除非创建的不是可用的中间数组。 这对一些数组的子类<code>,</code>如 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a><font face="Consolas, Liberation Mono, Courier, monospace"> 来说很重要,</font> 因为中间数组的值在调用 map() 时需要是适当的类型。</p>
+<p><code>Array.from()</code> 方法有一个可选参数 <code>mapFn</code>，让你可以在最后生成的数组上再执行一次 {{jsxref("Array.prototype.map", "map")}} 方法后再返回。也就是说<code> Array.from(obj, mapFn, thisArg) </code>就相当于<code> Array.from(obj).map(mapFn, thisArg),</code> 除非创建的不是可用的中间数组。 这对一些数组的子类<code>,</code>如 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a> 来说很重要, 因为中间数组的值在调用 map() 时需要是适当的类型。</p>
 
 <p><code>from()</code> 的 <code>length</code> 属性为 1 ，即 <code>Array.from.length === 1</code>。</p>
 

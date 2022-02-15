@@ -40,7 +40,7 @@ for (var [key, value] of sayings) {
 sayings.clear();
 sayings.size; // 0</pre>
 
-<h3 id="Object和Map的比较"><code><font face="Consolas, Liberation Mono, Courier, monospace">Object</font></code>和<code>Map</code>的比较</h3>
+<h3 id="Object和Map的比较"><code>Object</code>和<code>Map</code>的比较</h3>
 
 <p>一般地，{{jsxref("Object", "objects", "", 1)}}会被用于将字符串类型映射到数值。<code>Object</code>允许设置键值对、根据键获取值、删除键、检测某个键是否存在。而<code>Map</code>具有更多的优势。</p>
 
@@ -48,7 +48,7 @@ sayings.size; // 0</pre>
  <li><code>Object</code>的键均为<code>Strings</code>类型，在<code>Map</code>里键可以是任意类型。</li>
  <li>必须手动计算<code>Object</code>的尺寸，但是可以很容易地获取使用<code>Map</code>的尺寸。</li>
  <li><code>Map</code>的遍历遵循元素的插入顺序。</li>
- <li><code>Object</code>有原型，所以映射中有一些缺省的键。<font face="Open Sans, Arial, sans-serif">（</font>可以用 <code>map = Object.create(null) 回避</code>）。</li>
+ <li><code>Object</code>有原型，所以映射中有一些缺省的键。（可以用 <code>map = Object.create(null) 回避</code>）。</li>
 </ul>
 
 <p>这三条提示可以帮你决定用<code>Map</code>还是<code>Object</code>：</p>
@@ -131,7 +131,7 @@ mySet2 = new Set([1,2,3,4]);
 
 <h3 id="WeakSet对象"><code>WeakSet</code>对象</h3>
 
-<p>{{jsxref("WeakSet")}}对象是一组对象的集合。<code>WeakSet</code>中的对象不重复且不可枚举<font face="Consolas, Liberation Mono, Courier, monospace">。</font></p>
+<p>{{jsxref("WeakSet")}}对象是一组对象的集合。<code>WeakSet</code>中的对象不重复且不可枚举。</p>
 
 <p>与{{jsxref("Set")}}对象的主要区别有：</p>
 
