@@ -78,7 +78,7 @@ else
 }
 </pre>
 
-<p>不要将原始布尔值的<code>true</code>和<code>false</code>与<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>对象的真或假混淆。任何一个值，只要它不是 <code>undefined</code><font face="Open Sans, Arial, sans-serif">、</font><code>null</code>、 <code>0</code><font face="Open Sans, Arial, sans-serif">、</font><code>NaN</code>或空字符串（<code>""</code>），那么无论是任何对象，即使是值为假的Boolean对象，在条件语句中都为真。例如：</p>
+<p>不要将原始布尔值的<code>true</code>和<code>false</code>与<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>对象的真或假混淆。任何一个值，只要它不是 <code>undefined</code><font face="Open Sans, Arial, sans-serif">、</font><code>null</code>、<code>false</code>、 <code>0</code><font face="Open Sans, Arial, sans-serif">、</font><code>NaN</code>或空字符串（<code>""</code>），那么无论是任何对象，即使是值为假的Boolean对象，在条件语句中都为真。例如：</p>
 
 <pre class="brush: js">var b = new Boolean(false);
 if (b) //表达式的值为true
