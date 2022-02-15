@@ -18,16 +18,14 @@ translation_of: Web/JavaScript/Closures
 
 <p>请看下面的代码：</p>
 
-<div style="width: auto; overflow: hidden;">
 <pre class="brush: js">function init() {
-    var name = "Mozilla"; // name 是一个被 init 创建的局部变量
-    function displayName() { // displayName() 是内部函数，一个闭包
-        alert(name); // 使用了父函数中声明的变量
-    }
-    displayName();
+  var name = "Mozilla"; // name 是一个被 init 创建的局部变量
+  function displayName() { // displayName() 是内部函数，一个闭包
+      alert(name); // 使用了父函数中声明的变量
+  }
+  displayName();
 }
 init();</pre>
-</div>
 
 <p><code>init()</code> 创建了一个局部变量 <code>name</code> 和一个名为 <code>displayName()</code> 的函数。<code>displayName()</code> 是定义在 <code>init()</code> 里的内部函数，并且仅在 <code>init()</code> 函数体内可用。请注意，<code>displayName()</code> 没有自己的局部变量。然而，因为它可以访问到外部函数的变量，所以 <code>displayName()</code> 可以使用父函数 <code>init()</code> 中声明的变量 <code>name</code> 。</p>
 

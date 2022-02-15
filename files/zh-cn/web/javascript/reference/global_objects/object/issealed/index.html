@@ -68,7 +68,7 @@ Object.isFrozen(s2); // === false， 属性"p"可写
 var s3 = Object.seal({ get p() { return 0; } });
 Object.isFrozen(s3); // === true ，访问器属性不考虑可写不可写,只考虑是否可配置</pre>
 
-<h2 id="注意" style="margin-bottom: 20px; line-height: 30px;">注意</h2>
+<h2 id="注意">注意</h2>
 
 <p>在ES5中，如果这个方法的参数不是一个对象（一个原始类型），那么它会导致{{jsxref("TypeError")}}。在ES2015中，非对象参数将被视为是一个密封的普通对象，只返回<code>true</code>。</p>
 
@@ -78,7 +78,7 @@ Object.isFrozen(s3); // === true ，访问器属性不考虑可写不可写,只�
 Object.isSealed(1);
 // true                          (ES2015 code)</pre>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>

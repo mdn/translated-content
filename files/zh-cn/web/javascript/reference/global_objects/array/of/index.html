@@ -45,7 +45,7 @@ Array(1, 2, 3);    // [1, 2, 3]
 
 <h2 id="示例">示例</h2>
 
-<pre class="brush: js" style="font-size: 14px;">Array.of(1);         // [1]
+<pre class="brush: js">Array.of(1);         // [1]
 Array.of(1, 2, 3);   // [1, 2, 3]
 Array.of(undefined); // [undefined]
 </pre>
@@ -54,7 +54,7 @@ Array.of(undefined); // [undefined]
 
 <p>如果原生不支持的话，在其他代码之前执行以下代码会创建 <code>Array.of()</code> 。</p>
 
-<pre class="brush: js" style="font-size: 14px;">if (!Array.of) {
+<pre class="brush: js">if (!Array.of) {
   Array.of = function() {
     return Array.prototype.slice.call(arguments);
   };

@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox  language-html" style="margin-bottom: 0px; padding: 1em; border-left-width: 6px; border-left-style: solid; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; text-shadow: none; direction: ltr; white-space: normal; background-color: rgba(212, 221, 228, 0.498039);"><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr;"><em>dateObj</em>.getDay()</code>
+<pre class="syntaxbox  language-html"><code class="language-html"><em>dateObj</em>.getDay()</code>
 </pre>
 
 <h3 id="Description" name="Description">返回值</h3>
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 
 <p>下面第二条语句，基于{{jsxref("Date")}}对象 <code>Xmas95</code> 的值，把 1 赋值给 <code>weekday</code>。也就是说1995年12月25日是星期一。</p>
 
-<pre class="brush:js  language-js" style="padding: 1em 0px 1em 30px; border-left-width: 6px; border-left-style: solid; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; text-shadow: none; direction: ltr; white-space: normal; background-color: rgba(234, 239, 242, 0.247059);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; color: inherit; text-shadow: none; direction: ltr; white-space: pre;">var Xmas95 = new Date("December 25, 1995 23:15:30");
+<pre class="brush:js  language-js"><code class="language-js">var Xmas95 = new Date("December 25, 1995 23:15:30");
 var weekday = Xmas95.getDay();
 
 console.log(weekday); // 1</code></pre>
@@ -41,7 +41,7 @@ console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
 // Montag</code></pre>
 </div>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -73,11 +73,11 @@ console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.builtins.Date.getDay")}}</p>
 
-<h2 id="See_Also" name="See_Also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_Also" name="See_Also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>

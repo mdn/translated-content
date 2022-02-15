@@ -65,30 +65,16 @@ Object.prototype === Object.getPrototypeOf( obj );              // true
 
 Object.prototype === Object.getPrototypeOf( {} );               // true</pre>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 38px; background: 0px 0px;"> </div>
-
 <h2 id="Notes" name="Notes">Notes</h2>
 
-<p>在 ES5 中，如果参数不是一个对象类型，将抛出一个{{jsxref("TypeError")}}异常。在 ES2015 中，参数会被强制转换为一个 {{jsxref("Object")}}<strong style="font-weight: bold;">。</strong></p>
+<p>在 ES5 中，如果参数不是一个对象类型，将抛出一个{{jsxref("TypeError")}}异常。在 ES2015 中，参数会被强制转换为一个 {{jsxref("Object")}}<strong>。</strong></p>
 
 <pre class="brush: js">Object.getPrototypeOf('foo');
 // TypeError: "foo" is not an object (ES5 code)
 Object.getPrototypeOf('foo');
 // String.prototype                  (ES2015 code)</pre>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 38px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 57px; background: 0px 0px;"> </div>
-
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -129,7 +115,7 @@ Object.getPrototypeOf('foo');
  <li>{{jsxref("Object.prototype.isPrototypeOf")}}</li>
  <li>{{jsxref("Object.setPrototypeOf()")}}</li>
  <li>{{jsxref("Object.prototype.__proto__")}}</li>
- <li>John Resig's post on <a class="external external-icon" href="http://ejohn.org/blog/objectgetprototypeof/" style="white-space: pre-line;" title="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a></li>
+ <li>John Resig's post on <a class="external external-icon" href="http://ejohn.org/blog/objectgetprototypeof/" title="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a></li>
  <li>{{jsxref("Reflect.getPrototypeOf()")}}</li>
  <li>{{jsxref("AsyncFunction")}}</li>
 </ul>

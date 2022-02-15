@@ -49,37 +49,37 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 
 <h3 id="Error_types" name="Error_types">Error 类型</h3>
 
-<p>除了通用的Error构造函数外，JavaScript还有6个其他类型的错误构造函数。更多客户端异常,详见 <a href="/en/JavaScript/Guide/Statements#Exception_Handling_Statements" style="line-height: inherit;" title="en/JavaScript/Guide/Statements#Exception Handling Statements">Exception Handling Statements</a>。</p>
+<p>除了通用的Error构造函数外，JavaScript还有6个其他类型的错误构造函数。更多客户端异常,详见 <a href="/en/JavaScript/Guide/Statements#Exception_Handling_Statements" title="en/JavaScript/Guide/Statements#Exception Handling Statements">Exception Handling Statements</a>。</p>
 
 <dl>
- <dt><strong style="font-weight: bold;">{{jsxref("EvalError")}}</strong></dt>
+ <dt><strong>{{jsxref("EvalError")}}</strong></dt>
  <dd>创建一个error实例，表示错误的原因：与 {{jsxref("Global_Objects/eval", "eval()")}} 有关。</dd>
- <dt><strong style="font-weight: bold;">{{jsxref("InternalError")}} {{non-standard_inline}}</strong></dt>
+ <dt><strong>{{jsxref("InternalError")}} {{non-standard_inline}}</strong></dt>
  <dd>创建一个代表Javascript引擎内部错误的异常抛出的实例。 如: "递归太多".</dd>
 </dl>
 
 <dl>
- <dt><strong style="font-weight: bold;">{{jsxref("RangeError", "RangeError")}}</strong></dt>
+ <dt><strong>{{jsxref("RangeError", "RangeError")}}</strong></dt>
  <dd>创建一个error实例，表示错误的原因：数值变量或参数超出其有效范围。</dd>
 </dl>
 
 <dl>
- <dt><strong style="font-weight: bold;">{{jsxref("ReferenceError")}}</strong></dt>
+ <dt><strong>{{jsxref("ReferenceError")}}</strong></dt>
  <dd>创建一个error实例，表示错误的原因：无效引用。</dd>
 </dl>
 
 <dl>
- <dt><strong style="font-weight: bold;">{{jsxref("SyntaxError")}}</strong></dt>
+ <dt><strong>{{jsxref("SyntaxError")}}</strong></dt>
  <dd>创建一个error实例，表示错误的原因：{{jsxref("Global_Objects/eval", "eval()")}}在解析代码的过程中发生的语法错误。</dd>
 </dl>
 
 <dl>
- <dt><strong style="font-weight: bold;">{{jsxref("TypeError")}}</strong></dt>
+ <dt><strong>{{jsxref("TypeError")}}</strong></dt>
  <dd>创建一个error实例，表示错误的原因：变量或参数不属于有效类型。</dd>
 </dl>
 
 <dl>
- <dt><strong style="font-weight: bold;">{{jsxref("URIError")}}</strong></dt>
+ <dt><strong>{{jsxref("URIError")}}</strong></dt>
  <dd>创建一个error实例，表示错误的原因：给 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}或  {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}传递的参数无效。</dd>
 </dl>
 
@@ -141,7 +141,7 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 
 <p>你可能希望自定义基于Error的异常类型，使得你能够 throw new MyError() 并可以使用 <code>instanceof MyError</code> 来检查某个异常的类型. 这种需求的通用解决方法如下.</p>
 
-<div class="warning" style="font-size: 14px;">
+<div class="warning">
 <p>注意，在FireFox中抛出自定义类型的异常会显示不正确的行号和文件名。</p>
 </div>
 
@@ -170,49 +170,49 @@ try {
   console.log(e.message);  // 'custom message'
 }</pre>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 38px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 57px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 76px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 95px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 114px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 133px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 152px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 171px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 190px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 209px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 228px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 247px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 266px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 285px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 304px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 323px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 342px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 361px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 380px; background: 0px 0px;"></div>
+<div class="line-number"></div>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -244,11 +244,11 @@ try {
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <div>{{Compat("javascript.builtins.Error")}}</div>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">相关链接</h2>
+<h2 id="See_also" name="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Error.prototype")}}</li>

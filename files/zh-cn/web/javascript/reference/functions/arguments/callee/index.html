@@ -88,7 +88,7 @@ sillyFunction();</pre>
 
 <p>递归函数必须能够引用它本身。很典型的，函数通过自己的名字调用自己。然而，匿名函数 (通过 <a href="/en-US/docs/JavaScript/Reference/Operators/function" title="JavaScript/Reference/Operators/Special/function">函数表达式</a> 或者 <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function" title="JavaScript/Reference/Global_Objects/Function">函数构造器 </a>创建</code>) 没有名称。因此如果没有可访问的变量指向该函数，唯一能引用它的方式就是通过 <code>arguments.callee</code>。</p>
 
-<p>下面的例子定义了一个函数，按流程，定义并返回了一个阶乘函数。该例并不是很实用，并且几乎都能够用 <a href="/en-US/docs/JavaScript/Reference/Operators/function" style="line-height: 1.5;" title="JavaScript/Reference/Operators/Special/function">命名函数表达式</a> 实现同样结果的例子, and there are nearly no cases where the same result cannot be achieved with .</p>
+<p>下面的例子定义了一个函数，按流程，定义并返回了一个阶乘函数。该例并不是很实用，并且几乎都能够用 <a href="/en-US/docs/JavaScript/Reference/Operators/function" title="JavaScript/Reference/Operators/Special/function">命名函数表达式</a> 实现同样结果的例子, and there are nearly no cases where the same result cannot be achieved with .</p>
 
 <pre class="brush: js">function create() {
    return function(n) {

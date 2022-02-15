@@ -45,7 +45,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
  <h4 id="时间戳字符串">时间戳字符串</h4>
  </dt>
  <dt><code>dateString</code></dt>
- <dd>表示日期的字符串值。该字符串应该能被 {{jsxref("Date.parse()")}} 正确方法识别（即符合 <a href="http://tools.ietf.org/html/rfc2822#page-14" style="white-space: pre-line;">IETF-compliant RFC 2822 timestamps</a> 或 <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15">version of ISO8601</a>）。
+ <dd>表示日期的字符串值。该字符串应该能被 {{jsxref("Date.parse()")}} 正确方法识别（即符合 <a href="http://tools.ietf.org/html/rfc2822#page-14">IETF-compliant RFC 2822 timestamps</a> 或 <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15">version of ISO8601</a>）。
  <div class="note">
  <p><strong>注意:</strong> 由于浏览器之间的差异与不一致性，强烈不推荐使用<code>Date</code>构造函数来解析日期字符串 (或使用与其等价的<code>Date.parse</code>)。对 RFC 2822 格式的日期仅有约定俗成的支持。 对 ISO 8601 格式的支持中，仅有日期的串 (例如 "1970-01-01") 会被处理为 UTC 而不是本地时间，与其他格式的串的处理不同。</p>
  </div>

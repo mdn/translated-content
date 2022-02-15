@@ -128,7 +128,7 @@ parseInt(0.00000000000434, 10); // 非常小的数值变成 4</pre>
 
 <pre class="brush: js">parseInt("0e0",16);</pre>
 
-<h2 id="没有指定_radix_参数时的八进制解析" style="margin-bottom: 20px; line-height: 30px;">没有指定 <code>radix</code> 参数时的八进制解析</h2>
+<h2 id="没有指定_radix_参数时的八进制解析">没有指定 <code>radix</code> 参数时的八进制解析</h2>
 
 <p>尽管 ECMAScript 3 已经不赞成这种做法，且 ECMAScript 5 已经禁止了这种做法，但是仍然有很多实现环境仍然把以 0 开头的数值字符串（numeric string）解释为一个八进制数。下面的例子可能返回八进制的结果，也可能返回十进制的结果。<strong>总是指定一个基数（radix）可以避免这种不可靠的行为。</strong></p>
 
@@ -139,7 +139,7 @@ parseInt("08");
 // 0, '8' 不是八进制数字.
 </pre>
 
-<h3 id="ECMAScript_5_移除了八进制解析" style="line-height: 24px;">ECMAScript 5 移除了八进制解析</h3>
+<h3 id="ECMAScript_5_移除了八进制解析">ECMAScript 5 移除了八进制解析</h3>
 
 <p>ECMAScript 5 规范不再允许<code>parseInt</code>函数的实现环境把以<code>0</code>字符开始的字符串作为八进制数值。ECMAScript 5 陈述如下：</p>
 
@@ -149,7 +149,7 @@ parseInt("08");
 
 <p>直至2013年，很多实现环境并没有采取新的规范所规定的做法, 而且由于必须兼容旧版的浏览器，所以<strong>永远都要明确给出radix参数的值.</strong></p>
 
-<h2 id="一个更严格的解析函数" style="margin-bottom: 20px; line-height: 30px;">一个更严格的解析函数</h2>
+<h2 id="一个更严格的解析函数">一个更严格的解析函数</h2>
 
 <p>有时采用一个更严格的方法来解析整型值很有用。此时可以使用正则表达式：</p>
 

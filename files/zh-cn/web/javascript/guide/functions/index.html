@@ -370,7 +370,7 @@ A(1); // logs 6 (1 + 2 + 3)</pre>
 
 outside()(10); // returns 20 instead of 10</pre>
 
-<p>命名冲突发生在<code>return x</code>上，<code>inside</code>的参数<code>x</code>和<code>outside</code>变量<code>x</code>发生了冲突。这里的作用链域是{<code style="font-style: normal;">inside</code>, <code style="font-style: normal;">outside</code>, 全局对象}。因此<code>inside</code>的<code>x</code>具有最高优先权，返回了20（<code>inside</code>的<code>x</code>）而不是10（<code>outside</code>的<code>x</code>）。</p>
+<p>命名冲突发生在<code>return x</code>上，<code>inside</code>的参数<code>x</code>和<code>outside</code>变量<code>x</code>发生了冲突。这里的作用链域是{<code>inside</code>, <code>outside</code>, 全局对象}。因此<code>inside</code>的<code>x</code>具有最高优先权，返回了20（<code>inside</code>的<code>x</code>）而不是10（<code>outside</code>的<code>x</code>）。</p>
 
 <h2 id="闭包">闭包</h2>
 

@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 <p>在调用一个存在的函数时，你可以为其指定一个 <code>this</code> 对象。 <code>this</code> 指当前对象，也就是正在调用这个函数的对象。 使用 <code>apply</code>， 你可以只写一次这个方法然后在另一个对象中继承它，而不用在新对象中重复写该方法。</p>
 
-<p><code>apply</code> 与 {{jsxref("Function.call", "call()")}} 非常相似，不同之处在于提供参数的方式。<code style="font-size: 14px;">apply</code> 使用参数数组而不是一组参数列表。<code>apply</code> 可以使用数组字面量（array literal），如 <code>fun.apply(this, ['eat', 'bananas'])</code>，或数组对象， 如  <code>fun.apply(this, new Array('eat', 'bananas'))</code>。</p>
+<p><code>apply</code> 与 {{jsxref("Function.call", "call()")}} 非常相似，不同之处在于提供参数的方式。<code>apply</code> 使用参数数组而不是一组参数列表。<code>apply</code> 可以使用数组字面量（array literal），如 <code>fun.apply(this, ['eat', 'bananas'])</code>，或数组对象， 如  <code>fun.apply(this, new Array('eat', 'bananas'))</code>。</p>
 
 <p>你也可以使用 {{jsxref("Functions/arguments", "arguments")}}对象作为 <code>argsArray</code> 参数。 <code>arguments</code> 是一个函数的局部变量。 它可以被用作被调用对象的所有未指定的参数。 这样，你在使用apply函数的时候就不需要知道被调用对象的所有参数。 你可以使用arguments来把所有的参数传递给被调用对象。 被调用对象接下来就负责处理这些参数。</p>
 
@@ -131,7 +131,7 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 <p>使用闭包：</p>
 
-<pre class="brush: js" style="font-style: normal;">Function.prototype.construct = function(aArgs) {
+<pre class="brush: js">Function.prototype.construct = function(aArgs) {
   var fConstructor = this, fNewConstr = function() {
     fConstructor.apply(this, aArgs);
   };
@@ -139,7 +139,7 @@ var min = minOfArray([5, 6, 2, 3, 7]);
   return new fNewConstr();
 };</pre>
 
-<p class="brush: js" style="font-style: normal;">使用 Function 构造器：</p>
+<p class="brush: js">使用 Function 构造器：</p>
 
 <pre class="brush: js">Function.prototype.construct = function (aArgs) {
   var fNewConstr = new Function("");
@@ -168,7 +168,7 @@ console.log(myInstance.constructor);              // logs "MyConstructor"
 
 <div class="note"><strong>注意：</strong> 这个非native的<code>Function.construct</code>方法无法和一些native构造器（例如<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date" title="JavaScript/Reference/Global_Objects/Date"><code>Date</code></a>）一起使用。 在这种情况下你必须使用<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/bind#Bound_functions_used_as_constructors" title="JavaScript/Reference/Global_Objects/Function/bind#Bound_functions_used_as_constructors"><code>Function.bind</code></a>方法（例如，想象有如下一个数组要用在Date构造器中： <code>[2012, 11, 4]</code>；这时你需要这样写： <code>new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()</code> – -无论如何这不是最好的实现方式并且也许不该用在任何生产环境中).</div>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -200,11 +200,11 @@ console.log(myInstance.constructor);              // logs "MyConstructor"
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.builtins.Function.apply")}}</p>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_also" name="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Functions_and_function_scope/arguments", "arguments ")}} object</li>
