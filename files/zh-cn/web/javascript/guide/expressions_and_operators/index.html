@@ -136,22 +136,22 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <p>对于更复杂的赋值，<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解构赋值</a>语法是一个能从数组或对象对应的数组结构或对象字面量里提取数据的 Javascript 表达式。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> foo <span class="operator token">=</span> <span class="punctuation token">[</span><span class="string token">"one"</span><span class="punctuation token">,</span> <span class="string token">"two"</span><span class="punctuation token">,</span> <span class="string token">"three"</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var foo = ["one", "two", "three"];
 
-<span class="comment token">// 不使用解构</span>
-<span class="keyword token">var</span> one   <span class="operator token">=</span> foo<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> two   <span class="operator token">=</span> foo<span class="punctuation token">[</span><span class="number token">1</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> three <span class="operator token">=</span> foo<span class="punctuation token">[</span><span class="number token">2</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+// 不使用解构
+var one   = foo[0];
+var two   = foo[1];
+var three = foo[2];
 
-<span class="comment token">// 使用解构</span>
-<span class="keyword token">var</span> <span class="punctuation token">[</span>one<span class="punctuation token">,</span> two<span class="punctuation token">,</span> three<span class="punctuation token">]</span> <span class="operator token">=</span> foo<span class="punctuation token">;</span></code></pre>
+// 使用解构
+var [one, two, three] = foo;</code></pre>
 
 <h3 id="比较运算符">比较运算符</h3>
 
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较运算符</a>比较它的操作数并返回一个基于表达式是否为真的逻辑值。操作数可以是数字，字符串，逻辑，对象值。字符串比较是基于标准的字典顺序，使用Unicode值。在多数情况下，如果两个操作数不是相同的类型， JavaScript 会尝试转换它们为恰当的类型来比较。这种行为通常发生在数字作为操作数的比较。类型转换的例外是使用 <code>===</code> 和 <code>!==</code> 操作符，它们会执行严格的相等和不相等比较。这些运算符不会在检查相等之前转换操作数的类型。下面的表格描述了该示例代码中的各比较运算符</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> var1 <span class="operator token">=</span> <span class="number token">3;
-</span>var var2 <span class="operator token">=</span> <span class="number token">4</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var var1 = 3;
+var var2 = 4;</code></pre>
 
 <table class="standard-table">
  <caption>比较运算符</caption>
@@ -222,7 +222,7 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <h3 id="算术运算符">算术运算符</h3>
 
-<p>算术运算符使用数值(字面量或者变量)作为操作数并返回一个数值.标准的算术运算符就是加减乘除(+ - * /)。当操作数是浮点数时，这些运算符表现得跟它们在大多数编程语言中一样（特殊要注意的是，除零会产生{{jsxref("Infinity")}}）。<span style="line-height: 1.5;">例如：</span></p>
+<p>算术运算符使用数值(字面量或者变量)作为操作数并返回一个数值.标准的算术运算符就是加减乘除(+ - * /)。当操作数是浮点数时，这些运算符表现得跟它们在大多数编程语言中一样（特殊要注意的是，除零会产生{{jsxref("Infinity")}}）。例如：</p>
 
 <pre class="brush: js notranslate">1 / 2;  // 0.5
 1 / 2 == 1.0 / 2.0; // true
@@ -432,7 +432,7 @@ After:              10100000000000000110000000000001</code></pre>
 
 <h4 id="Bitwise_Shift_Operators" name="Bitwise_Shift_Operators">移位运算符</h4>
 
-<p><span style="line-height: 1.5;">移位运算符带两个操作数：</span>第一个是待移位的数，第二个是指定第一个数要被移多少位的数。移位的方向由运算符来控制.</p>
+<p>移位运算符带两个操作数：第一个是待移位的数，第二个是指定第一个数要被移多少位的数。移位的方向由运算符来控制.</p>
 
 <p>移位运算符把操作数转为32bit整数，然后得出一个与待移位数相同种类的值。</p>
 
@@ -551,7 +551,7 @@ var n3 = !"Cat"; // !t returns false
 
 <p>例如，</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"my "</span> <span class="operator token">+</span> <span class="string token">"string"</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// console logs the string "my string".</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">console.log("my " + "string"); // console logs the string "my string".</code></pre>
 
 <p>简写操作符 <code>+=</code> 也可以用来拼接字符串，例如：</p>
 
@@ -719,12 +719,12 @@ void expression
 
 <p>如下创建了一个超链接文本，当用户单击该文本时，不会有任何效果。</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>a</span> <span class="attr-name token">href</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>javascript:void(0)<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Click here to do nothing<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>a</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;a href="javascript:void(0)"&gt;Click here to do nothing&lt;/a&gt;</code></pre>
 
 <p>下面的代码创建了一个超链接，当用户单击它时，提交一个表单。</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>a</span> <span class="attr-name token">href</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>javascript:void(document.form.submit())<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-Click here to submit<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>a</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;a href="javascript:void(document.form.submit())"&gt;
+Click here to submit&lt;/a&gt;</code></pre>
 
 <h3 id="关系操作符">关系操作符</h3>
 
@@ -913,20 +913,20 @@ this.propertyName
 
 <p>分组操作符（）控制了表达式中计算的优先级. 举例来说, 你可以改变先乘除后加减的顺序，转而先计算加法。</p>
 
-<pre class="brush:js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> a <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> b <span class="operator token">=</span> <span class="number token">2</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> c <span class="operator token">=</span> <span class="number token">3</span><span class="punctuation token">;</span>
+<pre class="brush:js line-numbers  language-js notranslate"><code class="language-js">var a = 1;
+var b = 2;
+var c = 3;
 
-<span class="comment token">// 默认优先级</span>
-a <span class="operator token">+</span> b <span class="operator token">*</span> c     <span class="comment token">// 7</span>
-<span class="comment token">// 默认是这样计算的</span>
-a <span class="operator token">+</span> <span class="punctuation token">(</span>b <span class="operator token">*</span> c<span class="punctuation token">)</span>   <span class="comment token">// 7</span>
+// 默认优先级
+a + b * c     // 7
+// 默认是这样计算的
+a + (b * c)   // 7
 
-<span class="comment token">// 现在使加法优先于乘法</span>
-<span class="punctuation token">(</span>a <span class="operator token">+</span> b<span class="punctuation token">)</span> <span class="operator token">*</span> c   <span class="comment token">// 9</span>
+// 现在使加法优先于乘法
+(a + b) * c   // 9
 
-<span class="comment token">// 这等价于</span>
-a <span class="operator token">*</span> c <span class="operator token">+</span> b <span class="operator token">*</span> c <span class="comment token">// 9</span></code></pre>
+// 这等价于
+a * c + b * c // 9</code></pre>
 
 <h5 id="数值推导">数值推导</h5>
 
@@ -941,12 +941,12 @@ a <span class="operator token">*</span> c <span class="operator token">+</span> 
 
 <p>Comprehensions特性被许多编程语言所采用，该特性能够使你快速地通过一个已有的数组来创建出一个新的数组，比如：</p>
 
-<pre class="brush:js line-numbers  language-js notranslate"><code class="language-js"><span class="punctuation token">[</span><span class="keyword token">for</span> <span class="punctuation token">(</span>i <span class="keyword token">of</span> <span class="punctuation token">[</span> <span class="number token">1</span><span class="punctuation token">,</span> <span class="number token">2</span><span class="punctuation token">,</span> <span class="number token">3</span> <span class="punctuation token">]</span><span class="punctuation token">)</span> i<span class="operator token">*</span>i <span class="punctuation token">]</span><span class="punctuation token">;</span>
-<span class="comment token">// [ 1, 4, 9 ]</span>
+<pre class="brush:js line-numbers  language-js notranslate"><code class="language-js">[for (i of [ 1, 2, 3 ]) i*i ];
+// [ 1, 4, 9 ]
 
-<span class="keyword token">var</span> abc <span class="operator token">=</span> <span class="punctuation token">[</span> <span class="string token">"A"</span><span class="punctuation token">,</span> <span class="string token">"B"</span><span class="punctuation token">,</span> <span class="string token">"C"</span> <span class="punctuation token">]</span><span class="punctuation token">;</span>
-<span class="punctuation token">[</span><span class="keyword token">for</span> <span class="punctuation token">(</span>letters <span class="keyword token">of</span> abc<span class="punctuation token">)</span> letters<span class="punctuation token">.</span><span class="function token">toLowerCase</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-<span class="comment token">// [ "a", "b", "c" ]</span></code></pre>
+var abc = [ "A", "B", "C" ];
+[for (letters of abc) letters.toLowerCase()];
+// [ "a", "b", "c" ]</code></pre>
 
 <h3 id="左值表达式">左值表达式</h3>
 

@@ -54,13 +54,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 
 <h3 id="map_与_flatMap"><code>map()</code> 与 <code>flatMap()</code></h3>
 
-<pre class="brush: js notranslate">var arr1 = <span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>[</span></span><span class="constant decimal js numeric"><span>1</span></span><span class="comma delimiter js meta object"><span>,</span></span><span> </span><span class="brace js meta square"><span>2, 3, 4];
+<pre class="brush: js notranslate">var arr1 = [1, 2, 3, 4];
 
-arr1.map(</span></span></span></span></span>x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);</span></span></span></span></span>
+arr1.map(x =&gt; [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);
-// [2, 4, 6, 8]</span></span></span></span></span>
+arr1.flatMap(x =&gt; [x * 2]);
+// [2, 4, 6, 8]
 
 // <code>only one level is flatt</code><code>ened</code>
 arr1.flatMap(x =&gt; [[x * 2]]);

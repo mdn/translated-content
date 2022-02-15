@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Statements/function
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<h2 id="语法"><span style="font-size: 2.14285714285714rem;">语法</span></h2>
+<h2 id="语法">语法</h2>
 
 <pre class="eval notranslate">function <em>name</em>([<em>param</em>,[, <em>param</em>,[..., <em>param</em>]]]) {
    [<em>statements</em>]
@@ -98,31 +98,23 @@ if (true) {
 
 <p>JavaScript 中的<strong>函数声明</strong>被提升到了<strong>函数定义</strong>。你可以在函数声明之前使用该函数:</p>
 
-<pre class="brush: js  language-js notranslate"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="function token">hoisted<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span><span class="comment token"> // "foo"
+<pre class="brush: js  language-js notranslate"><code class="language-js" style="direction: ltr; white-space: pre;">hoisted(); // logs "foo"
 
-</span><span class="keyword token">function</span> <span class="function token">hoisted<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-     console<span class="punctuation token">.</span><span class="function token">log<span class="punctuation token">(</span></span><span class="string token">"foo"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}
-</span>
-<span class="comment token">/* equal to*/
-var </span><span class="function token">hoisted</span><span class="punctuation token">;</span><span class="comment token"> </span>
-
-<span class="function token">hoisted = </span><span class="keyword token">function</span><span class="function token"><span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log<span class="punctuation token">(</span></span><span class="string token">"foo"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}
-</span><span class="function token">hoisted<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// "foo" </span></code>
+function hoisted() {
+  console.log('foo');
+}</code>
 </pre>
 
 <div class="note">
 <p>注意 :<strong>函数表达式</strong>{{jsxref("Operators/function", "function expressions")}} 不会被提升:</p>
 </div>
 
-<pre class="brush: js  language-js notranslate"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="function token">notHoisted<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span><span class="comment token"> // TypeError: notHoisted is not a function
-</span>
-<span class="keyword token">var</span> notHoisted <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   console<span class="punctuation token">.</span><span class="function token">log<span class="punctuation token">(</span></span><span class="string token">"bar"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js  language-js notranslate"><code class="language-js" style="direction: ltr; white-space: pre;">notHoisted(); // TypeError: notHoisted is not a function
+
+var notHoisted = function() {
+  console.log('bar');
+};
+</code></pre>
 
 <h2 id="Examples" name="Examples">示例</h2>
 
@@ -130,9 +122,9 @@ var </span><span class="function token">hoisted</span><span class="punctuation t
 
 <p>下面的代码声明了一个函数,该函数返回了销售的总金额, 参数是产品a,b,c分别的销售的数量.</p>
 
-<pre class="brush: js  language-js notranslate"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token">function</span> <span class="function token">calc_sales<span class="punctuation token">(</span></span>units_a<span class="punctuation token">,</span> units_b<span class="punctuation token">,</span> units_c<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   <span class="keyword token">return</span> units_a<span class="operator token">*</span><span class="number token">79</span> <span class="operator token">+</span> units_b <span class="operator token">*</span> <span class="number token">129</span> <span class="operator token">+</span> units_c <span class="operator token">*</span> <span class="number token">699</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js  language-js notranslate"><code class="language-js" style="direction: ltr; white-space: pre;">function calc_sales(units_a, units_b, units_c) {functionfunctionfunctionfunctionfunctionfunctionfunctionfunctionfunctionfunctionfunction
+   return units_a*79 + units_b * 129 + units_c * 699;
+}</code></pre>
 
 <h2 id="规范" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">规范</h2>
 

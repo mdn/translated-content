@@ -29,9 +29,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
  <dd>一个回调函数，用于操作数组中的每个元素，它可接受四个参数：
  <dl>
   <dt><code>accumulator</code></dt>
-  <dd><span class="tlid-translation translation" lang="zh-CN"><span title="">累加器：</span></span>上一次调用回调函数时，回调函数返回的值。首次调用回调函数时，如果 <code>initialValue</code> 存在，<span class="tlid-translation translation" lang="zh-CN"><span title="">累加器</span></span>即为 <code>initialValue</code>，否则须为数组中的最后一个元素（详见下方 <code>initialValue</code> 处相关说明）。</dd>
+  <dd>累加器：上一次调用回调函数时，回调函数返回的值。首次调用回调函数时，如果 <code>initialValue</code> 存在，累加器即为 <code>initialValue</code>，否则须为数组中的最后一个元素（详见下方 <code>initialValue</code> 处相关说明）。</dd>
   <dt><code>currentValue</code></dt>
-  <dd><span class="tlid-translation translation" lang="zh-CN"><span title="">当前元素：</span></span>当前被处理的元素。</dd>
+  <dd>当前元素：当前被处理的元素。</dd>
   <dt><code>index</code>{{optional_inline}}</dt>
   <dd>数组中当前被处理的元素的索引。</dd>
   <dt><code>array</code>{{optional_inline}}</dt>
@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
  </dl>
  </dd>
  <dt><code>initialValue</code>{{optional_inline}} </dt>
- <dd><span class="tlid-translation translation" lang="zh-CN"><span title="">首次调用</span></span> <code>callback</code> 函数时，<span class="tlid-translation translation" lang="zh-CN"><span title="">累加器 </span></span> <code>accumulator</code> <span class="tlid-translation translation" lang="zh-CN"><span title="">的值</span></span>。如果未提供该初始值，则将使用数组中的最后一个元素，并跳过该元素。如果不给出初始值，则需保证数组不为空。<br>
+ <dd>首次调用 <code>callback</code> 函数时，累加器  <code>accumulator</code> 的值。如果未提供该初始值，则将使用数组中的最后一个元素，并跳过该元素。如果不给出初始值，则需保证数组不为空。<br>
  否则，在空数组上调用 <code>reduce</code> 或 <code>reduceRight</code> 且未提供初始值（例如 <code>[].reduce( (acc, cur, idx, arr) =&gt; {} )</code> ）的话，会导致类型错误 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value">TypeError: reduce of empty array with no initial value</a></code>。</dd>
  <dt>
  <h3 id="返回值">返回值</h3>

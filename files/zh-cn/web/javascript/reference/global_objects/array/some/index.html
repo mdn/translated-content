@@ -50,7 +50,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 
 <p><code>some()</code> 为数组中的每一个元素执行一次 <code>callback</code> 函数，直到找到一个使得 callback 返回一个“真值”（即可转换为布尔值 true 的值）。如果找到了这样一个值，<code>some()</code> 将会立即返回 <code>true</code>。否则，<code>some()</code> 返回 <code>false</code>。<code>callback</code> 只会在那些”有值“的索引上被调用，不会在那些被删除或从来未被赋值的索引上调用。</p>
 
-<p><code style="font-style: normal; line-height: 1.5;">callback</code><span style="line-height: 1.5;"> 被调用时传入三个参数：元素的值，元素的索引，被遍历的数组。</span></p>
+<p><code style="font-style: normal; line-height: 1.5;">callback</code> 被调用时传入三个参数：元素的值，元素的索引，被遍历的数组。</p>
 
 <p>如果一个<code>thisArg</code>参数提供给some()，它将被用作调用的 <code>callback</code>的 <code>this</code> 值。否则， 它的 <code>this</code> value将是 <code>undefined</code>。<code>this</code>的值最终通过callback来观察，根据 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for determining the <code>this</code> seen by a function</a>的this判定规则来确定。</p>
 

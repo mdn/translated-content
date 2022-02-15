@@ -88,7 +88,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 <h4 id="描述符默认值汇总">描述符默认值汇总</h4>
 
 <ul>
- <li>拥有布尔值的键 <code>configurable</code>、<code>enumerable</code> 和 <code>writable</code> 的默认值都是 <span style="font-family: courier new,andale mono,monospace; line-height: 1.5;"><code>false</code></span>。</li>
+ <li>拥有布尔值的键 <code>configurable</code>、<code>enumerable</code> 和 <code>writable</code> 的默认值都是 <code>false</code>。</li>
  <li>属性值和函数的键 <code>value</code>、<code>get</code> 和 <code>set</code> 字段的默认值为 <code>undefined</code>。</li>
 </ul>
 
@@ -172,11 +172,11 @@ Object.defineProperty(obj, "key", withValue("static"));
 
 <h2 id="示例">示例</h2>
 
-<p>如果你想了解如何使用 <code>Object.defineProperty</code> 方法和<em>类二进制标记</em>语法<span style="line-height: 1.5;">，可以看看</span>这些<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples" style="line-height: 1.5;">额外示例</a><span style="line-height: 1.5;">。</span></p>
+<p>如果你想了解如何使用 <code>Object.defineProperty</code> 方法和<em>类二进制标记</em>语法，可以看看这些<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples" style="line-height: 1.5;">额外示例</a>。</p>
 
 <h3 id="创建属性">创建属性</h3>
 
-<p>如果对象中不存在指定的属性，<span style="font-family: courier new,andale mono,monospace; line-height: 1.5;"><code>Object.defineProperty()</code></span> 会创建这个属性。当描述符中省略某些字段时，这些字段将使用它们的默认值。</p>
+<p>如果对象中不存在指定的属性，<code>Object.defineProperty()</code> 会创建这个属性。当描述符中省略某些字段时，这些字段将使用它们的默认值。</p>
 
 <pre class="brush: js notranslate">var o = {}; // 创建一个新对象
 

@@ -50,12 +50,12 @@ Math.sign();      // NaN
 
 <h2 id="Compatibility" name="Compatibility">Polyfill</h2>
 
-<pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">sign<span class="punctuation token">(</span></span>x<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    x <span class="operator token">=</span> <span class="operator token">+</span>x<span class="comment token"> ;// convert to a number
-</span>    <span class="keyword token">if</span> <span class="punctuation token">(</span>x <span class="operator token">===</span> <span class="number token">0</span> <span class="operator token">||</span> <span class="function token">isNaN<span class="punctuation token">(</span></span>x<span class="punctuation token">)</span><span class="punctuation token">)</span>
-        <span class="keyword token">return</span> x;
-    <span class="keyword token">return</span> x <span class="operator token">&gt;</span> <span class="number token">0</span> <span class="operator token">?</span> <span class="number token">1</span> <span class="punctuation token">:</span> <span class="operator token">-</span><span class="number token">1;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js  language-js"><code class="language-js">function sign(x) {
+    x = +x ;// convert to a number
+    if (x === 0 || isNaN(x))
+        return x;
+    return x &gt; 0 ? 1 : -1;
+}</code></pre>
 
 <p> </p>
 

@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
 <p>{{JSRef}}</p>
 
-<p><span style="line-height: inherit;">通过<strong>Error</strong>的构造器可以创建一个错误对象。当运行时错误产生时，Error的实例对象会被抛出。Error对象</span>也<span style="line-height: inherit;">可用于用户自定义的异常的基础对象。下面列出了各种内建的标准错误类型。</span></p>
+<p>通过<strong>Error</strong>的构造器可以创建一个错误对象。当运行时错误产生时，Error的实例对象会被抛出。Error对象也可用于用户自定义的异常的基础对象。下面列出了各种内建的标准错误类型。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
@@ -24,19 +24,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error
 
 <dl>
  <dt><code>fileName </code>{{non-standard_inline}}</dt>
- <dd>可选。被创建的<span style="font-family: monospace; line-height: inherit;">Error对象的fileName属性值。</span><span style="line-height: inherit;">默认是调用Error构造器代码所在的文件 的名字。</span></dd>
+ <dd>可选。被创建的Error对象的fileName属性值。默认是调用Error构造器代码所在的文件 的名字。</dd>
 </dl>
 
 <dl>
  <dt><code>lineNumber </code>{{non-standard_inline}}</dt>
- <dd>可选。被创建的<span style="font-family: monospace; line-height: inherit;">Error对象的lineNumber属性值。默认是</span><span style="line-height: inherit;">调用Error构造器代码所在的文件的行号</span><span style="font-family: monospace; line-height: inherit;">。</span></dd>
+ <dd>可选。被创建的Error对象的lineNumber属性值。默认是调用Error构造器代码所在的文件的行号。</dd>
 </dl>
 
 <h2 id="Description" name="Description">描述</h2>
 
 <p>当代码运行时的发生错误，会创建新的<code>Error</code> 对象，并将其抛出。</p>
 
-<p><span style="line-height: inherit;">该页面描述了Error对象自身的使用,以及其构造函数的使用</span><span style="line-height: inherit;">. 关于Error实例的内部属性和方法,请看</span> {{jsxref("Error.prototype")}}。</p>
+<p>该页面描述了Error对象自身的使用,以及其构造函数的使用. 关于Error实例的内部属性和方法,请看 {{jsxref("Error.prototype")}}。</p>
 
 <h3 id="作为函数使用">作为函数使用</h3>
 
@@ -49,7 +49,7 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 
 <h3 id="Error_types" name="Error_types">Error 类型</h3>
 
-<p>除了通用的<span style="font-family: courier new,andale mono,monospace; line-height: inherit;">Error构造函数外，</span>JavaScript<span style="font-family: courier new,andale mono,monospace; line-height: inherit;">还有6个其他类型的错误构造函数。更多客户端异常,详见</span><span style="line-height: inherit;"> </span><a href="/en/JavaScript/Guide/Statements#Exception_Handling_Statements" style="line-height: inherit;" title="en/JavaScript/Guide/Statements#Exception Handling Statements">Exception Handling Statements</a>。</p>
+<p>除了通用的Error构造函数外，JavaScript还有6个其他类型的错误构造函数。更多客户端异常,详见 <a href="/en/JavaScript/Guide/Statements#Exception_Handling_Statements" style="line-height: inherit;" title="en/JavaScript/Guide/Statements#Exception Handling Statements">Exception Handling Statements</a>。</p>
 
 <dl>
  <dt><strong style="font-weight: bold;">{{jsxref("EvalError")}}</strong></dt>
@@ -60,7 +60,7 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 
 <dl>
  <dt><strong style="font-weight: bold;">{{jsxref("RangeError", "RangeError")}}</strong></dt>
- <dd>创建一个error实例，表示错误的原因：<span style="line-height: inherit;">数值变量或参数超出其有效范围</span><span style="line-height: inherit;">。</span></dd>
+ <dd>创建一个error实例，表示错误的原因：数值变量或参数超出其有效范围。</dd>
 </dl>
 
 <dl>
@@ -70,7 +70,7 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 
 <dl>
  <dt><strong style="font-weight: bold;">{{jsxref("SyntaxError")}}</strong></dt>
- <dd>创建一个error实例，表示错误的原因：{{jsxref("Global_Objects/eval", "eval()")}}在解析代码的过程中发生的语法错误<span style="line-height: inherit;">。</span></dd>
+ <dd>创建一个error实例，表示错误的原因：{{jsxref("Global_Objects/eval", "eval()")}}在解析代码的过程中发生的语法错误。</dd>
 </dl>
 
 <dl>
@@ -80,7 +80,7 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 
 <dl>
  <dt><strong style="font-weight: bold;">{{jsxref("URIError")}}</strong></dt>
- <dd>创建一个error实例，表示错误的原因：给 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}<span style="line-height: inherit;">或 </span> {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}<span style="line-height: inherit;">传递的参数无效。</span></dd>
+ <dd>创建一个error实例，表示错误的原因：给 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}或  {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}传递的参数无效。</dd>
 </dl>
 
 <h2 id="Properties" name="Properties">属性</h2>

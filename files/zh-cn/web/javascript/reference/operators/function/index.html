@@ -36,13 +36,13 @@ translation_of: Web/JavaScript/Reference/Operators/function
 
 <h2 id="Description" name="Description">描述</h2>
 
-<p>函数表达式（function expression）非常类似于函数声明（function statement）<span style="line-height: 1.5;">（详情查看</span><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/function" style="line-height: 1.5;">函数声明</a><span style="line-height: 1.5;">）</span><span style="line-height: 1.5;">，并且两者拥有几乎相同的语法。</span><span style="line-height: 1.5;">函数表达式与函数声明的最主要区别是函数名称（</span><em>function name</em><span style="line-height: 1.5;">），在函数表达式中可省略它，从而创建匿名函数（</span><em>anonymous</em><span style="line-height: 1.5;"> functions）。</span>一个函数表达式可以被用作一个IIFE（Immediately Invoked Function Expression，即时调用的函数表达式），它一旦定义就运行。<span style="line-height: 1.5;">更多信息请查看</span><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope" style="line-height: 1.5;">函数</a><span style="line-height: 1.5;">。</span></p>
+<p>函数表达式（function expression）非常类似于函数声明（function statement）（详情查看<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/function" style="line-height: 1.5;">函数声明</a>），并且两者拥有几乎相同的语法。函数表达式与函数声明的最主要区别是函数名称（<em>function name</em>），在函数表达式中可省略它，从而创建匿名函数（<em>anonymous</em> functions）。一个函数表达式可以被用作一个IIFE（Immediately Invoked Function Expression，即时调用的函数表达式），它一旦定义就运行。更多信息请查看<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope" style="line-height: 1.5;">函数</a>。</p>
 
 <h3 id="函数表达式提升_(Function_expression_hoisting)"> 函数表达式提升 (Function expression hoisting)</h3>
 
 <p>JavaScript中的函数表达式没有提升,不像函数声明,你在定义函数表达式之前不能使用函数表达式:</p>
 
-<pre class="brush: js"><code><font color="#333333" face="Open Sans, arial, sans-serif" size="3"><span style="background-color: #ffffff; white-space: normal;"> </span></font>notHoisted(); // TypeError: notHoisted is not a function
+<pre class="brush: js"><code><font color="#333333" face="Open Sans, arial, sans-serif" size="3"> </font>notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function() {
    console.log('bar');

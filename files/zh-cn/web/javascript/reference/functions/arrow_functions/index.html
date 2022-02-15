@@ -96,7 +96,7 @@ elements.map(({ "length": lengthFooBArX }) =&gt; lengthFooBArX); // [8, 6, 7, 9]
 
 <ul>
  <li>如果该函数是一个构造函数，this指针指向一个新的对象</li>
- <li>在严格模式下的函数调用下，this指向<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">undefined</span></font></li>
+ <li>在严格模式下的函数调用下，this指向<font face="consolas, Liberation Mono, courier, monospace">undefined</font></li>
  <li>如果该函数是一个对象的方法，则它的this指针指向这个对象</li>
  <li>等等</li>
 </ul>
@@ -153,7 +153,7 @@ f() === window; // 或者 global</code></pre>
 
 <h4 id="通过_call_或_apply_调用">通过 call 或 apply 调用</h4>
 
-<p>由于 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">箭头函数没有自己的this指针</span></font>，通过 <code>call()</code><em> 或</em> <code>apply()</code> 方法调用一个函数时，只能传递参数（不能绑定this---译者注），他们的第一个参数会被忽略。（这种现象对于bind方法同样成立---译者注）</p>
+<p>由于 <font face="consolas, Liberation Mono, courier, monospace">箭头函数没有自己的this指针</font>，通过 <code>call()</code><em> 或</em> <code>apply()</code> 方法调用一个函数时，只能传递参数（不能绑定this---译者注），他们的第一个参数会被忽略。（这种现象对于bind方法同样成立---译者注）</p>
 
 <pre class="brush: js notranslate">var adder = {
   base : 1,

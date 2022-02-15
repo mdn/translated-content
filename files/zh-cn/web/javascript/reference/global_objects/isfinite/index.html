@@ -33,15 +33,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 
 <h2 id="Examples" name="Examples" style="margin-bottom: 20px; line-height: 30px;">示例</h2>
 
-<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; border-left-width: 6px; border-left-style: solid; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; direction: ltr; white-space: normal; text-shadow: none; background-color: rgba(234, 239, 242, 0.247059);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre; color: inherit; text-shadow: none;"><span class="function token">isFinite<span class="punctuation token" style="color: #999999;">(</span></span><span class="number token" style="color: #990055;">Infinity</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span> <span class="comment token" style="color: #708090; display: inherit;"> // false
-</span><span class="function token">isFinite<span class="punctuation token" style="color: #999999;">(</span></span><span class="number token" style="color: #990055;">NaN</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>      <span class="comment token" style="color: #708090; display: inherit;"> // false
-</span><span class="function token">isFinite<span class="punctuation token" style="color: #999999;">(</span></span><span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">-</span><span class="number token" style="color: #990055;">Infinity</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span><span class="comment token" style="color: #708090; display: inherit;"> // false
-</span>
-<span class="function token">isFinite<span class="punctuation token" style="color: #999999;">(</span></span><span class="number token" style="color: #990055;">0</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>        <span class="comment token" style="color: #708090; display: inherit;"> // true
-</span><span class="function token">isFinite<span class="punctuation token" style="color: #999999;">(</span></span><span class="number token" style="color: #990055;">2e64</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>     <span class="comment token" style="color: #708090; display: inherit;"> // true, 在更强壮的Number.isFinite(null)中将会得到false
-</span>
+<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; border-left-width: 6px; border-left-style: solid; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; direction: ltr; white-space: normal; text-shadow: none; background-color: rgba(234, 239, 242, 0.247059);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre; color: inherit; text-shadow: none;">isFinite(Infinity);  // false
+isFinite(NaN);       // false
+isFinite(-Infinity); // false
 
-<span class="function token">isFinite<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">"0"</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>      <span class="comment token" style="color: #708090; display: inherit;"> // true, 在更强壮的Number.isFinite('0')中将会得到false</span></code></pre>
+isFinite(0);         // true
+isFinite(2e64);      // true, 在更强壮的Number.isFinite(null)中将会得到false
+
+
+isFinite("0");       // true, 在更强壮的Number.isFinite('0')中将会得到false</code></pre>
 
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"> </div>
 

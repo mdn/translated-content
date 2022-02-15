@@ -45,7 +45,7 @@ var sym3 = Symbol('foo');
 
 <pre class="brush: js notranslate">var sym = new Symbol(); // TypeError</pre>
 
-<p>这会阻止创建一个显式的 Symbol 包装器对象而不是一个 Symbol 值。围绕原始数据类型创建一个显式包装器对象从 ECMAScript 6 开始不再被支持。 然而，现有的原始包装器对象，如 <code style="font-style: normal;">new Boolean</code>、<code style="font-style: normal;">new String</code>以及<span style="font-family: consolas,monaco,andale mono,monospace;"><code>new Number</code>，因为遗留原因仍可被创建。</span></p>
+<p>这会阻止创建一个显式的 Symbol 包装器对象而不是一个 Symbol 值。围绕原始数据类型创建一个显式包装器对象从 ECMAScript 6 开始不再被支持。 然而，现有的原始包装器对象，如 <code style="font-style: normal;">new Boolean</code>、<code style="font-style: normal;">new String</code>以及<code>new Number</code>，因为遗留原因仍可被创建。</p>
 
 <p>如果你真的想创建一个 <u>Symbol 包装器对象 </u>(<code>Symbol wrapper object</code>)，你可以使用 <code>Object()</code> 函数：</p>
 
@@ -150,9 +150,9 @@ typeof symObj;  // "object"</pre>
 
 <p> {{jsxref("Operators/typeof", "typeof")}}运算符能帮助你识别 symbol 类型</p>
 
-<pre class="brush: js notranslate"><code class="language-js"><span class="keyword token">typeof</span> <span class="function token">Symbol<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="operator token">==</span><span class="operator token">=</span> <span class="string token">'symbol'</span>
-<span class="keyword token">typeof</span> <span class="function token">Symbol<span class="punctuation token">(</span></span><span class="string token">'foo'</span><span class="punctuation token">)</span> <span class="operator token">==</span><span class="operator token">=</span> <span class="string token">'symbol'</span>
-<span class="keyword token">typeof</span> Symbol<span class="punctuation token">.</span>iterator <span class="operator token">==</span><span class="operator token">=</span> <span class="string token">'symbol'</span></code>
+<pre class="brush: js notranslate"><code class="language-js">typeof Symbol() === 'symbol'
+typeof Symbol('foo') === 'symbol'
+typeof Symbol.iterator === 'symbol'</code>
 </pre>
 
 <h3 id="Symbol_类型转换">Symbol 类型转换</h3>
@@ -170,23 +170,23 @@ typeof symObj;  // "object"</pre>
 
 <p>Symbols 在 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> 迭代中不可枚举。另外，{{jsxref("Object.getOwnPropertyNames()")}} 不会返回 symbol 对象的属性，但是你能使用 {{jsxref("Object.getOwnPropertySymbols()")}} 得到它们。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> obj <span class="operator token">=</span> <span class="punctuation token">{</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var obj = {};
 
-obj<span class="punctuation token">[</span><span class="function token">Symbol</span><span class="punctuation token">(</span><span class="string token">"a"</span><span class="punctuation token">)</span><span class="punctuation token">]</span> <span class="operator token">=</span> <span class="string token">"a"</span><span class="punctuation token">;</span>
-obj<span class="punctuation token">[</span>Symbol<span class="punctuation token">.</span><span class="keyword token">for</span><span class="punctuation token">(</span><span class="string token">"b"</span><span class="punctuation token">)</span><span class="punctuation token">]</span> <span class="operator token">=</span> <span class="string token">"b"</span><span class="punctuation token">;</span>
-obj<span class="punctuation token">[</span><span class="string token">"c"</span><span class="punctuation token">]</span> <span class="operator token">=</span> <span class="string token">"c"</span><span class="punctuation token">;</span>
-obj<span class="punctuation token">.</span>d <span class="operator token">=</span> <span class="string token">"d"</span><span class="punctuation token">;</span>
+obj[Symbol("a")] = "a";
+obj[Symbol.for("b")] = "b";
+obj["c"] = "c";
+obj.d = "d";
 
-<span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> i <span class="keyword token">in</span> obj<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>i<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// logs "c" and "d"</span>
-<span class="punctuation token">}</span></code></pre>
+for (var i in obj) {
+   console.log(i); // logs "c" and "d"
+}</code></pre>
 
 <h3 id="Symbols_与_JSON.stringify">Symbols 与 <code>JSON.stringify()</code></h3>
 
 <p>当使用 JSON.stringify() 时，以 symbol 值作为键的属性会被完全忽略：</p>
 
-<pre class="brush: js notranslate"><code class="language-js">JSON<span class="punctuation token">.</span><span class="function token">stringify</span><span class="punctuation token">(</span><span class="punctuation token">{</span><span class="punctuation token">[</span><span class="function token">Symbol</span><span class="punctuation token">(</span><span class="string token">"foo"</span><span class="punctuation token">)</span><span class="punctuation token">]</span><span class="punctuation token">:</span> <span class="string token">"foo"</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// '{}'</span></code></pre>
+<pre class="brush: js notranslate"><code class="language-js">JSON.stringify({[Symbol("foo")]: "foo"});
+// '{}'</code></pre>
 
 <p>更多细节，请看 {{jsxref("JSON.stringify()")}}。</p>
 
@@ -194,10 +194,10 @@ obj<span class="punctuation token">.</span>d <span class="operator token">=</spa
 
 <p>当一个 Symbol 包装器对象作为一个属性的键时，这个对象将被强制转换为它包装过的 symbol 值：</p>
 
-<pre class="brush: js notranslate"><code class="language-js"><span class="keyword token">var</span> sym <span class="operator token">=</span> <span class="function token">Symbol</span><span class="punctuation token">(</span><span class="string token">"foo"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> obj <span class="operator token">=</span> <span class="punctuation token">{</span><span class="punctuation token">[</span>sym<span class="punctuation token">]</span><span class="punctuation token">:</span> <span class="number token">1</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
-obj<span class="punctuation token">[</span>sym<span class="punctuation token">]</span><span class="punctuation token">;</span>            <span class="comment token">// 1</span>
-obj<span class="punctuation token">[</span><span class="function token">Object</span><span class="punctuation token">(</span>sym<span class="punctuation token">)</span><span class="punctuation token">]</span><span class="punctuation token">;</span>    <span class="comment token">// still 1</span></code></pre>
+<pre class="brush: js notranslate"><code class="language-js">var sym = Symbol("foo");
+var obj = {[sym]: 1};
+obj[sym];            // 1
+obj[Object(sym)];    // still 1</code></pre>
 
 <h2 id="规范">规范</h2>
 

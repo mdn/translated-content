@@ -109,7 +109,7 @@ if(input === undefined){
 }
 </pre>
 
-<p><code><span class="comment">The following is related to "Variables" section as potential values in assignment.</span>undefined</code> 值在布尔类型环境中会被当作 <code>false</code> 。例如，下面的代码将会执行函数 <code>myFunction</code>，因为数组 <code>myArray</code> 中的元素未被赋值：</p>
+<p><code>The following is related to "Variables" section as potential values in assignment.undefined</code> 值在布尔类型环境中会被当作 <code>false</code> 。例如，下面的代码将会执行函数 <code>myFunction</code>，因为数组 <code>myArray</code> 中的元素未被赋值：</p>
 
 <pre class="brush: js notranslate">var myArray = [];
 if (!myArray[0])   myFunction();
@@ -148,7 +148,7 @@ console.log(y); // ReferenceError: y 没有被声明</pre>
 
 <h3 id="变量提升">变量提升</h3>
 
-<p>JavaScript 变量的另一个不同寻常的地方是，你可以先使用变量稍后再声明变量而不会引发异常。这一概念称为变量提升；JavaScript 变量感觉上是被“提升”或移到了函数或语句的最前面。但是，提升后的变量将返回 <span style="font-family: courier new,andale mono,monospace;">undefined</span> 值。因此在使用或引用某个变量之后进行声明和初始化操作，这个被提升的变量仍将返回 undefined 值。</p>
+<p>JavaScript 变量的另一个不同寻常的地方是，你可以先使用变量稍后再声明变量而不会引发异常。这一概念称为变量提升；JavaScript 变量感觉上是被“提升”或移到了函数或语句的最前面。但是，提升后的变量将返回 undefined 值。因此在使用或引用某个变量之后进行声明和初始化操作，这个被提升的变量仍将返回 undefined 值。</p>
 
 <pre class="brush: js notranslate">/**
  * 例子1
@@ -219,7 +219,7 @@ var baz = function() {
 
 <h3 id="全局变量">全局变量</h3>
 
-<p><span class="comment">need links to pages discussing scope chains and the global object</span> 实际上，全局变量是<em>全局对象</em>的属性。在网页中，（译注：缺省的）全局对象是 <code>window</code> ，所以你可以用形如 <code>window.</code><em><code>variable</code> </em>的语法来设置和访问全局变量。</p>
+<p>need links to pages discussing scope chains and the global object 实际上，全局变量是<em>全局对象</em>的属性。在网页中，（译注：缺省的）全局对象是 <code>window</code> ，所以你可以用形如 <code>window.</code><em><code>variable</code> </em>的语法来设置和访问全局变量。</p>
 
 <p>因此，你可以通过指定 window 或 frame 的名字，在当前 window 或 frame 访问另一个 window 或 frame 中声明的变量。例如，在文档里声明一个叫 <code>phoneNumber</code> 的变量，那么你就可以在子框架里使用 <code>parent.phoneNumber</code> 的方式来引用它。</p>
 
@@ -402,7 +402,7 @@ console.log(a[0]); // 3</pre>
 
 <p>布尔类型有两种字面量：<code>true</code>和<code>false</code>。</p>
 
-<p>不要混淆作为布尔对象的真和假与布尔类型的原始值true和false。<span class="short_text" id="result_box" lang="zh-CN"><span>布尔对象是原始</span><span>布尔</span><span>数据类型的一个包装器</span><span>。参见</span></span><span class="short_text" id="result_box" lang="zh-CN"><span><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="zh-CN/docs/JavaScript/Guide/Predefined Core Objects#Boolean Object"> 布尔对象</a>。</span></span></p>
+<p>不要混淆作为布尔对象的真和假与布尔类型的原始值true和false。布尔对象是原始布尔数据类型的一个包装器。参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="zh-CN/docs/JavaScript/Guide/Predefined Core Objects#Boolean Object"> 布尔对象</a>。</p>
 
 <h3 id="整数_Integers">整数 (Integers)</h3>
 
@@ -411,10 +411,10 @@ console.log(a[0]); // 3</pre>
 <p>整数可以用十进制（基数为10）、十六进制（基数为16）、八进制（基数为8）以及二进制（基数为2）表示。</p>
 
 <ul>
- <li><span class="short_text" id="result_box" lang="zh-CN"><span>十进制整数字面量由一串数字序列组成</span><span>，且没有前缀</span><span>0</span><span>。</span></span></li>
- <li><span class="short_text" id="result_box" lang="zh-CN"><span>八进制的整数以 0（或</span></span>0O、0o）开头，<span class="short_text" lang="zh-CN"><span>只能包括</span><span>数字0-7</span><span>。</span></span></li>
- <li><span class="short_text" id="result_box" lang="zh-CN"><span>十六进制整数以0x（或0X）开头，</span><span>可以包含</span><span>数字（0-9）</span><span>和</span><span>字母 a~f 或 A~</span><span>F</span><span>。</span></span></li>
- <li><span class="short_text" id="result_box" lang="zh-CN"><span>二进制整数以0b（或0B）开头，只能包含数字</span><span>0和1。</span></span></li>
+ <li>十进制整数字面量由一串数字序列组成，且没有前缀0。</li>
+ <li>八进制的整数以 0（或0O、0o）开头，只能包括数字0-7。</li>
+ <li>十六进制整数以0x（或0X）开头，可以包含数字（0-9）和字母 a~f 或 A~F。</li>
+ <li>二进制整数以0b（或0B）开头，只能包含数字0和1。</li>
 </ul>
 
 <p>严格模式下，八进制整数字面量必须以0o或0O开头，而不能以0开头。</p>
@@ -431,7 +431,7 @@ console.log(a[0]); // 3</pre>
 <p>浮点数字面值可以有以下的组成部分：</p>
 
 <ul>
- <li><span class="short_text" id="result_box" lang="zh-CN"><span>一个十进制</span><span>整数，可以</span><span>带正负号（</span><span>即前缀</span><span class="atn">“+”</span><span class="atn">或“ - ”</span><span>）</span><span>，</span></span></li>
+ <li>一个十进制整数，可以带正负号（即前缀“+”或“ - ”），</li>
  <li>小数点（“.”），</li>
  <li>小数部分（由一串十进制数表示），</li>
  <li>指数部分。</li>
@@ -495,19 +495,19 @@ console.log(unusualPropertyNames["!"]); // Bang!</pre>
 
 <p>在ES2015，对象字面值扩展支持在创建时设置原型，简写了 foo: foo 形式的属性赋值，方法定义，支持父方法调用，以及使用表达式动态计算属性名。总之，这些也使对象字面值和类声明更加紧密地联系起来，让基于对象的设计从这些便利中更加受益。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> obj <span class="operator token">=</span> <span class="punctuation token">{</span>
-    <span class="comment token">// __proto__</span>
-    __proto__<span class="punctuation token">:</span> theProtoObj<span class="punctuation token">,</span>
-    <span class="comment token">// Shorthand for ‘handler: handler’</span>
-    handler<span class="punctuation token">,</span>
-    <span class="comment token">// Methods</span>
-    <span class="function token">toString</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-     <span class="comment token">// Super calls</span>
-     <span class="keyword token">return</span> <span class="string token">"d "</span> <span class="operator token">+</span> <span class="keyword token">super</span><span class="punctuation token">.</span><span class="function token">toString</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">,</span>
-    <span class="comment token">// Computed (dynamic) property names</span>
-    <span class="punctuation token">[</span> <span class="string token">'prop_'</span> <span class="operator token">+</span> <span class="punctuation token">(</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="number token">42</span><span class="punctuation token">)</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">]</span><span class="punctuation token">:</span> <span class="number token">42</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var obj = {
+    // __proto__
+    __proto__: theProtoObj,
+    // Shorthand for ‘handler: handler’
+    handler,
+    // Methods
+    toString() {
+     // Super calls
+     return "d " + super.toString();
+    },
+    // Computed (dynamic) property names
+    [ 'prop_' + (() =&gt; 42)() ]: 42
+};</code></pre>
 
 <p>请注意：</p>
 
@@ -523,7 +523,7 @@ console.log(foo["2"]); // two</pre>
 
 <p>一个正则表达式是字符被斜线（译注：正斜杠“/”）围成的表达式。下面是一个正则表达式文字的一个例子。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> re <span class="operator token">=</span> <span class="regex token">/ab+c/</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var re = /ab+c/;</code></pre>
 
 <h3 id="字符串字面量_String_literals">字符串字面量 (String literals)</h3>
 
@@ -669,7 +669,7 @@ console.log(quote);
 is broken \
 across multiple\
 lines."
-<span class="objectBox objectBox-text">console.log(str);</span>   // <span class="objectBox objectBox-text">this string is broken across multiplelines.</span>
+console.log(str);   // this string is broken across multiplelines.
 </pre>
 
 <p>Javascript没有“heredoc”语法，但可以用行末的换行符转义和转义的换行来近似实现 </p>

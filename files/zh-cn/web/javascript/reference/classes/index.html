@@ -143,7 +143,7 @@ console.log(Point.distance(p1, p2));
 
 <h3 id="用原型和静态方法绑定_this">用原型和静态方法绑定 this</h3>
 
-<p>当调用静态或原型方法时没有指定 <em>this </em>的值，那么方法内的 <em>this </em>值将被置为 <strong><code>undefined</code></strong>。即使你未设置 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">"use strict"</span></font> ，因为 <code>class</code> 体内部的代码总是在严格模式下执行。</p>
+<p>当调用静态或原型方法时没有指定 <em>this </em>的值，那么方法内的 <em>this </em>值将被置为 <strong><code>undefined</code></strong>。即使你未设置 <font face="consolas, Liberation Mono, courier, monospace">"use strict"</font> ，因为 <code>class</code> 体内部的代码总是在严格模式下执行。</p>
 
 <pre class="brush: js notranslate">class Animal {
   speak() {

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<p>The <code><strong>toLocaleTimeString()</strong></code> <span style="line-height: 1.5;">方法返回该日期对象时间部分的字符串，该字符串格式因不同语言而不同。新增的参数 </span><code style="font-style: normal; line-height: 1.5;">locales</code><span style="line-height: 1.5;"> 和 </span><code style="font-style: normal; line-height: 1.5;">options</code><span style="line-height: 1.5;"> 使程序能够指定使用哪种语言格式化规则，允许定制该方法的表现（behavior）。在旧版本浏览器中， </span><code style="font-style: normal; line-height: 1.5;">locales</code><span style="line-height: 1.5;"> 和 </span><code style="font-style: normal; line-height: 1.5;">options</code><span style="line-height: 1.5;"> 参数被忽略，使用的语言环境和返回的字符串格式是各自独立实现的。</span></p>
+<p>The <code><strong>toLocaleTimeString()</strong></code> 方法返回该日期对象时间部分的字符串，该字符串格式因不同语言而不同。新增的参数 <code style="font-style: normal; line-height: 1.5;">locales</code> 和 <code style="font-style: normal; line-height: 1.5;">options</code> 使程序能够指定使用哪种语言格式化规则，允许定制该方法的表现（behavior）。在旧版本浏览器中， <code style="font-style: normal; line-height: 1.5;">locales</code> 和 <code style="font-style: normal; line-height: 1.5;">options</code> 参数被忽略，使用的语言环境和返回的字符串格式是各自独立实现的。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}</div>
 
@@ -73,7 +73,7 @@ alert(date.toLocaleTimeString("ko-KR"));
 
 // Arabic in most Arabic speaking countries uses real Arabic digits
 alert(date.toLocaleTimeString("ar-EG"));
-// → "<span dir="rtl">٧:٠٠:٠٠ م</span>"
+// → "٧:٠٠:٠٠ م"
 
 // when requesting a language that may not be supported, such as
 // Balinese, include a fallback language, in this case Indonesian
