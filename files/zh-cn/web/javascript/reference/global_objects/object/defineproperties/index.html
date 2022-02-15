@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="notranslate"><code>Object.defineProperties(<var>obj</var>, <var>props</var>)</code></pre>
+<pre><code>Object.defineProperties(<var>obj</var>, <var>props</var>)</code></pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -63,7 +63,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 
 <h2 id="例子">例子</h2>
 
-<pre class="brush: js notranslate">var obj = {};
+<pre class="brush: js">var obj = {};
 Object.defineProperties(obj, {
   'property1': {
     value: true,
@@ -80,7 +80,7 @@ Object.defineProperties(obj, {
 
 <p>假设一个原始的执行环境，所有的名称和属性都引用它们的初始值，<code>Object.defineProperties</code>几乎完全等同于（注意<code>isCallable</code>中的注释）以下JavaScript中的重新实现：</p>
 
-<pre class="brush: js notranslate">function defineProperties(obj, properties) {
+<pre class="brush: js">function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);

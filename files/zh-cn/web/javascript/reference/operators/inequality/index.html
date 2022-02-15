@@ -18,13 +18,13 @@ translation_of: Web/JavaScript/Reference/Operators/Inequality
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">x != y</pre>
+<pre class="syntaxbox">x != y</pre>
 
 <h2 id="描述">描述</h2>
 
 <p>不等式运算符检查其操作数是否不相等。这是<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality">等于</a>运算符的取反，因此以下两行将始终给出相同的结果： </p>
 
-<pre class="brush: js notranslate">x != y
+<pre class="brush: js">x != y
 
 !(x == y)</pre>
 
@@ -32,17 +32,17 @@ translation_of: Web/JavaScript/Reference/Operators/Inequality
 
 <p>与等于运算符一样，不等于运算符将尝试转换和比较不同类型的操作数：</p>
 
-<pre class="brush: js notranslate">3 != "3"; // false</pre>
+<pre class="brush: js">3 != "3"; // false</pre>
 
 <p>为避免这种情况，并要求将不同类型视为不同，请使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality">严格的不等于</a>运算符：</p>
 
-<pre class="brush: js notranslate">3 !== "3"; // true</pre>
+<pre class="brush: js">3 !== "3"; // true</pre>
 
 <h2 id="例子">例子</h2>
 
 <h3 id="没有类型转换的比较">没有类型转换的比较</h3>
 
-<pre class="brush: js notranslate">1 != 2;              // true
+<pre class="brush: js">1 != 2;              // true
 "hello" != "hola";   // true
 
 1 != 1;              // false
@@ -50,7 +50,7 @@ translation_of: Web/JavaScript/Reference/Operators/Inequality
 
 <h3 id="与类型转换比较">与类型转换比较</h3>
 
-<pre class="brush: js notranslate">"1" !=  1;            // false
+<pre class="brush: js">"1" !=  1;            // false
 1 != "1";             // false
 0 != false;           // false
 0 != null;            // true
@@ -66,7 +66,7 @@ number1 != number2;   // true</pre>
 
 <h3 id="对象比较">对象比较</h3>
 
-<pre class="brush: js notranslate">const object1 = {"key": "value"}
+<pre class="brush: js">const object1 = {"key": "value"}
 const object2 = {"key": "value"};
 
 object1 != object2 // true

@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Statements/with
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate">with (expression) {
+<pre class="syntaxbox">with (expression) {
     <em>statement</em>
 }
 </pre>
@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Statements/with
 
 <p><strong>弊端：</strong><code>with</code>语句使得代码不易阅读，同时使得JavaScript编译器难以在作用域链上查找某个变量，难以决定应该在哪个对象上来取值。请看下面的例子：</p>
 
-<pre class="brush: js notranslate">function f(x, o) {
+<pre class="brush: js">function f(x, o) {
   with (o)
     print(x);
 }</pre>
@@ -53,7 +53,7 @@ translation_of: Web/JavaScript/Reference/Statements/with
 <p><strong>弊端：</strong>使用<code>with</code>语句的代码，无法向前兼容，特別是在使用一些原生数据类型的时候。看下面的例子：</p>
 
 <div>
-<pre class="brush:js notranslate">function f(foo, values) {
+<pre class="brush:js">function f(foo, values) {
     with (foo) {
         console.log(values)
     }
@@ -69,7 +69,7 @@ translation_of: Web/JavaScript/Reference/Statements/with
 
 <p>下面的<code>with</code>语句指定<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math" title="JavaScript/Reference/Global_Objects/Math">Math</a></code>对象作为默认对象。<code>with</code>语句里面的变量，分別指向<code>Math</code>对象的<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" title="JavaScript/Reference/Global_Objects/Math/PI"><code>PI</code></a> 、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos" title="JavaScript/Reference/Global_Objects/Math/cos">cos</a>和</code><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="JavaScript/Reference/Global_Objects/Math/sin">sin</a></code>函数，不用在前面添加命名空间。后续所有引用都指向<code>Math</code>对象。</p>
 
-<pre class="brush:js notranslate">var a, x, y;
+<pre class="brush:js">var a, x, y;
 var r = 10;
 
 with (Math) {

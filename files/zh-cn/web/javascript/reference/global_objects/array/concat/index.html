@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">var <var>new_array</var> = <var>old_array</var>.concat(<var>value1</var>[, <var>value2</var>[, ...[, <var>valueN</var>]]])</pre>
+<pre class="syntaxbox">var <var>new_array</var> = <var>old_array</var>.concat(<var>value1</var>[, <var>value2</var>[, ...[, <var>valueN</var>]]])</pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -53,7 +53,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 
 <p>以下代码将两个数组合并为一个新数组：</p>
 
-<pre class="brush: js notranslate">var alpha = ['a', 'b', 'c'];
+<pre class="brush: js">var alpha = ['a', 'b', 'c'];
 var numeric = [1, 2, 3];
 
 alpha.concat(numeric);
@@ -63,7 +63,7 @@ alpha.concat(numeric);
 
 <p>以下代码将三个数组合并为一个新数组：</p>
 
-<pre class="brush: js notranslate">var num1 = [1, 2, 3],
+<pre class="brush: js">var num1 = [1, 2, 3],
     num2 = [4, 5, 6],
     num3 = [7, 8, 9];
 
@@ -76,7 +76,7 @@ console.log(nums);
 
 <p>以下代码将三个值连接到数组：</p>
 
-<pre class="brush: js notranslate">var alpha = ['a', 'b', 'c'];
+<pre class="brush: js">var alpha = ['a', 'b', 'c'];
 
 var alphaNumeric = alpha.concat(1, [2, 3]);
 
@@ -87,7 +87,7 @@ console.log(alphaNumeric);
 
 <p>以下代码合并数组并保留引用：</p>
 
-<pre class="brush: js notranslate">var num1 = [[1]];
+<pre class="brush: js">var num1 = [[1]];
 var num2 = [2, [3]];
 var num3=[5,[6]];
 

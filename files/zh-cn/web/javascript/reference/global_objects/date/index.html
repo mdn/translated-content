@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">new Date();
+<pre class="syntaxbox">new Date();
 new Date(<var>value</var>);
 new Date(<var>dateString</var>);
 new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours</var> [, <var>minutes</var> [, <var>seconds</var> [, <var>milliseconds</var>]]]]]);</pre>
@@ -147,7 +147,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 <p><strong>注意:</strong> 由于浏览器差异和不一致性，强烈建议不要使用<code>Date</code>构造函数（和<code>Date.parse</code>，它们是等效的）解析日期字符串。</p>
 </div>
 
-<pre class="brush: js notranslate">var today = new Date();
+<pre class="brush: js">var today = new Date();
 var birthday = new Date('December 17, 1995 03:24:00');
 var birthday = new Date('1995-12-17T03:24:00');
 var birthday = new Date(1995, 11, 17);
@@ -158,7 +158,7 @@ var birthday = new Date(1995, 11, 17, 3, 24, 0);
 
 <p>为了创建和获取 0 到 99 之间的年份，应使用 {{jsxref("Date.prototype.setFullYear()")}} 和 {{jsxref("Date.prototype.getFullYear()")}} 方法。</p>
 
-<pre class="brush: js notranslate">var date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+<pre class="brush: js">var date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
 // 已弃用的方法, 同样将 98 映射为 1998
 date.setYear(98);           // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
@@ -172,7 +172,7 @@ date.setFullYear(98);       // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
 
 <p>由于不同日期、月份、年份长度的不同（日期长度不同来自夏令时的切换），使用大于秒、分钟、小时的单位表示经过的时间会遇到很多问题，在使用前需要经过详尽的调研。</p>
 
-<pre class="brush: js notranslate">// 使用 Date 对象
+<pre class="brush: js">// 使用 Date 对象
 var start = Date.now();
 
 // 调用一个消耗一定时间的方法：
@@ -180,7 +180,7 @@ doSomethingForALongTime();
 var end = Date.now();
 var elapsed = end - start; // 以毫秒计的运行时长</pre>
 
-<pre class="brush: js notranslate">// 使用内建的创建方法
+<pre class="brush: js">// 使用内建的创建方法
 var start = new Date();
 
 // 调用一个消耗一定时间的方法：
@@ -188,7 +188,7 @@ doSomethingForALongTime();
 var end = new Date();
 var elapsed = end.getTime() - start.getTime(); // 运行时间的毫秒值</pre>
 
-<pre class="brush: js notranslate" dir="ltr">// to test a function and get back its return
+<pre class="brush: js" dir="ltr">// to test a function and get back its return
 function printElapsedTime (fTest) {
     var nStartTime = Date.now(),
         vReturn = fTest(),
@@ -205,7 +205,7 @@ yourFunctionReturn = printElapsedTime(yourFunction);
 
 <h3 id="获取自_Unix_起始时间以来经过的秒数">获取自 Unix 起始时间以来经过的秒数</h3>
 
-<pre class="brush: js notranslate">var seconds = Math.floor(Date.now() / 1000);</pre>
+<pre class="brush: js">var seconds = Math.floor(Date.now() / 1000);</pre>
 
 <p>注意此处需要返回一个整数 （仅做除法得到的不是整数），并且需要返回实际已经经过的秒数（所以这里使用了{{jsxref("Math.floor()")}}而不是{{jsxref("Math.round()")}}).</p>
 

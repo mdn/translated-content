@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 
 <p>以下三种表达式都会创建相同的正则表达式：</p>
 
-<pre class="brush: js notranslate" style="font-size: 14px;">/ab+c/i; //字面量形式
+<pre class="brush: js" style="font-size: 14px;">/ab+c/i; //字面量形式
 new RegExp('ab+c', 'i'); // 首个参数为字符串模式的构造函数
 new RegExp(/ab+c/, 'i'); // 首个参数为常规字面量的构造函数</pre>
 
@@ -46,7 +46,7 @@ new RegExp(/ab+c/, 'i'); // 首个参数为常规字面量的构造函数</pre>
 
 <p>比如，以下是等价的：</p>
 
-<pre class="brush: js notranslate">var re = new RegExp("\\w+");
+<pre class="brush: js">var re = new RegExp("\\w+");
 var re = /\w+/;</pre>
 
 <h3 id="Perl-like_RegExp_属性">Perl-like RegExp 属性</h3>
@@ -123,7 +123,7 @@ var re = /\w+/;</pre>
 
 <p>在替换的文本中，脚本中使用 <code>$1</code> 和 <code>$2</code> 指明括号里先前的匹配.</p>
 
-<pre class="brush: js notranslate">let re = /(\w+)\s(\w+)/;
+<pre class="brush: js">let re = /(\w+)\s(\w+)/;
 let str = "John Smith";
 let newstr = str.replace(re, "$2, $1");
 console.log(newstr);
@@ -135,7 +135,7 @@ console.log(newstr);
 
 <p>对于不同的平台（Unix，Windows等等），其默认的行结束符是不一样的. 而下面的划分方式适用于所有平台。</p>
 
-<pre class="notranslate">let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
+<pre>let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
 let lines = text.split(/\r\n|\r|\n/)
 console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 </pre>
@@ -144,7 +144,7 @@ console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is t
 
 <h3 id="在多行文本中使用正则表达式">在多行文本中使用正则表达式</h3>
 
-<pre class="brush: js notranslate">let s = "Please yes\nmake my day!";
+<pre class="brush: js">let s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // Returns null
@@ -156,7 +156,7 @@ s.match(/yes[^]*day/);
 
 <p>带有{{JSxRef("Global_Objects/RegExp/sticky", "sticky")}}标志的正则表达式将会从源字符串的{{jsxref("RegExp.prototype.lastIndex")}}位置开始匹配，也就是进行“粘性匹配”。</p>
 
-<pre class="brush: js notranslate">let str = '#foo#'
+<pre class="brush: js">let str = '#foo#'
 let regex = /foo/y
 
 regex.lastIndex = 1
@@ -169,7 +169,7 @@ regex.lastIndex      // 0 (reset after match failure)</pre>
 
 <p>如果正则表达式有粘性 <code>y</code> 标志，下一次匹配一定在 <code>lastIndex</code> 位置开始；如果正则表达式有全局 <code>g</code> 标志，下一次匹配可能在 <code>lastIndex</code> 位置开始，也可能在这个位置的后面开始。</p>
 
-<pre class="brush: js notranslate">re = /\d/y;
+<pre class="brush: js">re = /\d/y;
 while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
 
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
@@ -187,7 +187,7 @@ while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
 
 <p>下例展示了怎样从一个单词中分离出 Unicode 字符。</p>
 
-<pre class="brush: js notranslate">let text = "Образец text на русском языке";
+<pre class="brush: js">let text = "Образец text на русском языке";
 let regex = /[\u0400-\u04FF]+/g;
 
 let match = regex.exec(text);
@@ -204,7 +204,7 @@ console.log(regex.lastIndex);  // prints "15"
 
 <h3 id="从_URL_中提取子域名">从 URL 中提取子域名</h3>
 
-<pre class="brush: js notranslate">var url = "http://xxx.domain.com";
+<pre class="brush: js">var url = "http://xxx.domain.com";
 console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
 
 </pre>
@@ -248,7 +248,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
 
 <p>Starting with Gecko 34 {{geckoRelease(34)}}, in the case of a capturing group with quantifiers preventing its exercise, the matched text for a capturing group is now <code>undefined</code> instead of an empty string:</p>
 
-<pre class="notranslate"><code>// Firefox 33 or older
+<pre><code>// Firefox 33 or older
 'x'.replace(/x(.)?/g, function(m, group) {
   console.log("'group:" + group + "'");
 }); // 'group:'

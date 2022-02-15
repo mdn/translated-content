@@ -14,14 +14,14 @@ original_slug: Web/JavaScript/Reference/Operators/按位与
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>a</var> &amp; <var>b</var></code>
+<pre class="syntaxbox"><code><var>a</var> &amp; <var>b</var></code>
 </pre>
 
 <h2 id="描述">描述</h2>
 
 <p>操作数被转换为32位整数，并由一系列位（0和1）表示。 超过32位的数字将丢弃其最高有效位。 例如，以下大于32位的整数将被转换为32位整数：</p>
 
-<pre class="brush: js notranslate">Before: 11100110111110100000000000000110000000000001
+<pre class="brush: js">Before: 11100110111110100000000000000110000000000001
 After:              10100000000000000110000000000001</pre>
 
 <p>第一个操作数中的每个位都与第二个操作数中的相应位配对：第一位到第一位，第二位到第二位，依此类推。</p>
@@ -62,7 +62,7 @@ After:              10100000000000000110000000000001</pre>
  </tbody>
 </table>
 
-<pre class="brush: js notranslate">.    9 (base 10) = 00000000000000000000000000001001 (base 2)
+<pre class="brush: js">.    9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
 14 &amp; 9 (base 10) = 00000000000000000000000000001000 (base 2) = 8 (base 10)
@@ -74,7 +74,7 @@ After:              10100000000000000110000000000001</pre>
 
 <h3 id="使用按位与">使用按位与</h3>
 
-<pre class="brush: js notranslate">// 5: 00000000000000000000000000000101
+<pre class="brush: js">// 5: 00000000000000000000000000000101
 // 2: 00000000000000000000000000000010
 5 &amp; 2; // 0</pre>
 

@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><em>arr</em>.findIndex(<em>callback</em>[, <em>thisArg</em>])</code></pre>
+<pre class="syntaxbox"><code><em>arr</em>.findIndex(<em>callback</em>[, <em>thisArg</em>])</code></pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -62,7 +62,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 <p>以下示例查找数组中素数的元素的索引（如果不存在素数，则返回-1）。</p>
 
-<pre class="brush: js notranslate">function isPrime(element, index, array) {
+<pre class="brush: js">function isPrime(element, index, array) {
   var start = 2;
   while (start &lt;= Math.sqrt(element)) {
     if (element % start++ &lt; 1) {
@@ -77,7 +77,7 @@ console.log([4, 6, 7, 12].findIndex(isPrime)); // 2</pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">// https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
+<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
 if (!Array.prototype.findIndex) {
   Object.defineProperty(Array.prototype, 'findIndex', {
     value: function(predicate) {

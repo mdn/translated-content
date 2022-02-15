@@ -19,11 +19,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 <p>[Symbol.split]指向‘aba’.split(/a/)</p>
 
-<pre class="brush: js notranslate">/a/[Symbol.split]('aba',3)</pre>
+<pre class="brush: js">/a/[Symbol.split]('aba',3)</pre>
 
 <p>"dayinlove".split(exp)调用[Symbol.split](str)处理，并把实参"dayinlove"传给形参str</p>
 
-<pre class="brush: js notranslate">var exp =  {
+<pre class="brush: js">var exp =  {
         pat:'in',
         [Symbol.split](str) {
           return str.split(this.pat);

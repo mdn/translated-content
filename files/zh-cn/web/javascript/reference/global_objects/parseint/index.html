@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">parseInt(<em>string</em>, <em>radix</em>);</pre>
+<pre class="syntaxbox">parseInt(<em>string</em>, <em>radix</em>);</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
  <li>第一个非空格字符不能转换为数字。</li>
 </ul>
 
-<pre class="notranslate">parseInt('123', 5) // 将'123'看作5进制数，返回十进制数38 =&gt; 1*5^2 + 2*5^1 + 3*5^0 = 38</pre>
+<pre>parseInt('123', 5) // 将'123'看作5进制数，返回十进制数38 =&gt; 1*5^2 + 2*5^1 + 3*5^0 = 38</pre>
 
 <h2 id="描述_2"><a id="描述" name="描述">描述</a></h2>
 
@@ -89,7 +89,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 
 <p>以下例子均返回<code>15</code>:</p>
 
-<pre class="brush: js notranslate">parseInt("0xF", 16);
+<pre class="brush: js">parseInt("0xF", 16);
 parseInt("F", 16);
 parseInt("17", 8);
 parseInt(021, 8);
@@ -105,13 +105,13 @@ parseInt("12", 13);</pre>
 
 <p>以下例子均返回 <code>NaN</code>:</p>
 
-<pre class="brush: js notranslate">parseInt("Hello", 8); // 根本就不是数值
+<pre class="brush: js">parseInt("Hello", 8); // 根本就不是数值
 parseInt("546", 2);   // 除了“0、1”外，其它数字都不是有效二进制数字
 </pre>
 
 <p>以下例子均返回 <code>-15</code>：</p>
 
-<pre class="brush: js notranslate">parseInt("-F", 16);
+<pre class="brush: js">parseInt("-F", 16);
 parseInt("-0F", 16);
 parseInt("-0XF", 16);
 parseInt(-15.1, 10);
@@ -124,19 +124,19 @@ parseInt("-12", 13);
 
 <p>下例中全部返回 <code>4</code>:</p>
 
-<pre class="brush: js notranslate">parseInt(4.7, 10);
+<pre class="brush: js">parseInt(4.7, 10);
 parseInt(4.7 * 1e22, 10); // 非常大的数值变成 4
 parseInt(0.00000000000434, 10); // 非常小的数值变成 4</pre>
 
 <p>下面的例子返回 <code>224</code></p>
 
-<pre class="brush: js notranslate">parseInt("0e0",16);</pre>
+<pre class="brush: js">parseInt("0e0",16);</pre>
 
 <h2 id="没有指定_radix_参数时的八进制解析" style="margin-bottom: 20px; line-height: 30px;">没有指定 <code>radix</code> 参数时的八进制解析</h2>
 
 <p>尽管 ECMAScript 3 已经不赞成这种做法，且 ECMAScript 5 已经禁止了这种做法，但是仍然有很多实现环境仍然把以 0 开头的数值字符串（numeric string）解释为一个八进制数。下面的例子可能返回八进制的结果，也可能返回十进制的结果。<strong>总是指定一个基数（radix）可以避免这种不可靠的行为。</strong></p>
 
-<pre class="brush: js notranslate">parseInt("0e0");
+<pre class="brush: js">parseInt("0e0");
 // 0
 
 parseInt("08");
@@ -157,7 +157,7 @@ parseInt("08");
 
 <p>有时采用一个更严格的方法来解析整型值很有用。此时可以使用正则表达式：</p>
 
-<pre class="brush: js notranslate">filterInt = function (value) {
+<pre class="brush: js">filterInt = function (value) {
   if(/^(\-|\+)?([0-9]+|Infinity)$/.test(value))
     return Number(value);
   return NaN;

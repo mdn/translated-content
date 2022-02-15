@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">new AggregateError(errors[, message])</pre>
+<pre class="syntaxbox">new AggregateError(errors[, message])</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -50,7 +50,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 
 <h3 id="捕获一个AggregateError">捕获一个AggregateError</h3>
 
-<pre class="brush: js; notranslate">Promise.any([
+<pre class="brush: js;">Promise.any([
   Promise.reject(new Error("some error")),
 ]).catch(e =&gt; {
   console.log(e instanceof AggregateError); // true
@@ -62,7 +62,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 
 <h3 id="创建一个AggregateError">创建一个AggregateError</h3>
 
-<pre class="brush: js; notranslate">try {
+<pre class="brush: js;">try {
   throw new AggregateError([
     new Error("some error"),
   ], 'Hello');

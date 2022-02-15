@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
+<pre class="syntaxbox">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
 <em>    statements </em>
 }
 </pre>
@@ -65,14 +65,14 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <p>例如，如下代码:</p>
 
-<pre class="syntaxbox notranslate">async function <var>foo</var>() {
+<pre class="syntaxbox">async function <var>foo</var>() {
    <var>return 1</var>
 }
 </pre>
 
 <p>等价于:</p>
 
-<pre class="syntaxbox notranslate">function <var>foo</var>() {
+<pre class="syntaxbox">function <var>foo</var>() {
    <var>return Promise.resolve(1)</var>
 }
 </pre>
@@ -81,14 +81,14 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <p>例如：</p>
 
-<pre class="syntaxbox notranslate">async function <var>foo</var>() {
+<pre class="syntaxbox">async function <var>foo</var>() {
    <var>await 1</var>
 }
 </pre>
 
 <p>等价于</p>
 
-<pre class="syntaxbox notranslate">function <var>foo</var>() {
+<pre class="syntaxbox">function <var>foo</var>() {
    <var>return Promise.resolve(1).then(() =&gt; undefined)</var>
 }
 </pre>
@@ -103,7 +103,7 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
  <li>一段时间后，同样当第二个promise完结的时候，<code>result2</code>将被赋值为<code>2</code>，之后函数将会正常同步执行，将默认返回<code>undefined</code> 。</li>
 </ol>
 
-<pre class="notranslate">async function <var>foo</var>() {
+<pre>async function <var>foo</var>() {
    const result1 = <var>await new Promise((resolve) =&gt; setTimeout(() =&gt; resolve('1')))
 </var>   const result2 = <var>await new Promise((resolve) =&gt; setTimeout(() =&gt; resolve('2')))</var>
 }
@@ -113,7 +113,7 @@ foo()</pre>
 
 <p>例如，在下面的代码中，在promise链上配置了<code>.catch</code>处理程序，将抛出未处理的promise错误。这是因为<code>p2</code>返回的结果不会被await处理。</p>
 
-<pre class="notranslate">async function <var>foo</var>() {
+<pre>async function <var>foo</var>() {
    const p1 = <var>new Promise((resolve) =&gt; setTimeout(() =&gt; resolve('1'), 1000))
 </var>   const p2 = <var>new Promise((_,reject) =&gt; setTimeout(() =&gt; reject('2'), 500))
    const results = [await p1, await p2] // 不推荐使用这种方式，请使用 Promise.all或者Promise.allSettled </var>
@@ -126,7 +126,7 @@ foo().catch(() =&gt; {}) // 捕捉所有的错误...</pre>
 
 <h3 id="简单例子">简单例子</h3>
 
-<pre class="brush: js notranslate">var resolveAfter2Seconds = function() {
+<pre class="brush: js">var resolveAfter2Seconds = function() {
   console.log("starting slow promise");
   return new Promise(resolve =&gt; {
     setTimeout(function() {
@@ -238,7 +238,7 @@ setTimeout(parallelPromise, 13000); // same as parallel
 
 <p>返回 {{jsxref("Promise")}}的 API 将会产生一个 promise 链，它将函数肢解成许多部分。例如下面的代码：</p>
 
-<pre class="brush: js notranslate">function getProcessedData(url) {
+<pre class="brush: js">function getProcessedData(url) {
   return downloadData(url) // 返回一个 promise 对象
     .catch(e =&gt; {
       return downloadFallbackData(url)  // 返回一个 promise 对象
@@ -250,7 +250,7 @@ setTimeout(parallelPromise, 13000); // same as parallel
 
 <p>可以重写为单个async函数：</p>
 
-<pre class="brush: js notranslate">async function getProcessedData(url) {
+<pre class="brush: js">async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
@@ -270,7 +270,7 @@ setTimeout(parallelPromise, 13000); // same as parallel
 
 <p>看下下面重写的上面代码，在<code>processDataInWorker</code>抛出异常时返回了null：</p>
 
-<pre class="notranslate"><code>async function getProcessedData(url) {
+<pre><code>async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);

@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.substring(<var>indexStart</var>[, <var>indexEnd</var>])</code></pre>
+<pre class="syntaxbox"><code><var>str</var>.substring(<var>indexStart</var>[, <var>indexEnd</var>])</code></pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 
 <p>下例使用 <code>substring</code> 输出字符串 "<code>Mozilla</code>" 中的字符：</p>
 
-<pre class="brush:js notranslate">var anyString = "Mozilla";
+<pre class="brush:js">var anyString = "Mozilla";
 
 // 输出 "Moz"
 console.log(anyString.substring(0,3));
@@ -73,7 +73,7 @@ console.log(anyString.substring(0,10));
 
 <p>下面一个例子运用了    String.length 属性去获取指定字符串的倒数元素。显然这个办法更容易记住，因为你不再像上面那个例子那样去记住起始位置和最终位置。</p>
 
-<pre class="brush: js notranslate"><code>// Displays 'illa' the last 4 characters
+<pre class="brush: js"><code>// Displays 'illa' the last 4 characters
 var anyString = 'Mozilla';
 var anyString4 = anyString.substring(anyString.length - 4);
 console.log(anyString4);</code>
@@ -87,7 +87,7 @@ console.log(anyString5);</pre>
 
 <p>下例替换了一个字符串中的子字符串。可以替换单个字符和子字符串。该例结尾调用的函数将 "<code>Brave New World</code>" 变成了 "<code>Brave New Web</code>"。</p>
 
-<pre class="brush:js notranslate">function replaceString(oldS, newS, fullS) {
+<pre class="brush:js">function replaceString(oldS, newS, fullS) {
 // Replaces oldS with newS in the string fullS
   for (var i = 0; i &lt; fullS.length; i++) {
     if (fullS.substring(i, i + oldS.length) == oldS) {
@@ -101,7 +101,7 @@ replaceString("World", "Web", "Brave New World");</pre>
 
 <p>需要注意的是，如果 <code>oldS</code> 是 <code>newS</code> 的子字符串将会导致死循环。例如，尝试把 "Web" 替换成 "OtherWorld"。一个更好的方法如下：</p>
 
-<pre class="brush:js notranslate">function replaceString(oldS, newS,fullS){
+<pre class="brush:js">function replaceString(oldS, newS,fullS){
   return fullS.split(oldS).join(newS);
 }</pre>
 

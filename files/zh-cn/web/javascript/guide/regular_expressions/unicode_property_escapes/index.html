@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escape
 
 <div class="hidden">The following section is also duplicated on <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">this cheatsheet</a>. Do not forget to edit it as well, thanks!</div>
 
-<pre class="brush: js notranslate">// Non-binary 属性
+<pre class="brush: js">// Non-binary 属性
 \p{<em>Unicode属性值</em>}
 \p{<em>Unicode属性名</em>=<em>Unicode属性值</em>}
 
@@ -66,7 +66,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escape
 
 <p>它们可匹配字母、数字、符号、标点符号、空格等等。一般类别详见 <a href="https://unicode.org/reports/tr18/#General_Category_Property">the Unicode specification</a>.</p>
 
-<pre class="brush: js notranslate">// finding all the letters of a text
+<pre class="brush: js">// finding all the letters of a text
 let story = "It’s the Cheshire Cat: now I shall have somebody to talk to.";
 
 // Most explicit form
@@ -88,7 +88,7 @@ story.match(/\p{Lu}|\p{Ll}|\p{Lt}|\p{Lm}|\p{Lo}/gu);
 
 <p>比如，<code>A</code> 属于 <code>拉丁文</code>，<code>ε</code> 属于<code>希腊(Greek)</code>文。</p>
 
-<pre class="brush: js notranslate">let mixedCharacters = "aεЛ";
+<pre class="brush: js">let mixedCharacters = "aεЛ";
 
 // Using the canonical "long" name of the script
 mixedCharacters.match(/\p{Script=Latin}/u); // a
@@ -104,7 +104,7 @@ mixedCharacters.match(/\p{Sc=Cyrillic}/u); // Л
 
 <p>某字符用于多种文字时，<code>Script</code> 优先匹配最主要使用那个字符的文字。如果想要根据非主要的文字进行匹配，我们可以使用 <code>Script_Extensions</code> 属性 (简写为<code>Scx</code>).</p>
 
-<pre class="brush: js notranslate">// ٢ is the digit 2 in Arabic-Indic notation
+<pre class="brush: js">// ٢ is the digit 2 in Arabic-Indic notation
 // while it is predominantly written within the Arabic script
 // it can also be written in the Thaana script
 
@@ -121,7 +121,7 @@ mixedCharacters.match(/\p{Sc=Cyrillic}/u); // Л
 
 <p>Unicode 属性转义 categories 包含更多字符， <code>\p{Letter}</code> 或 <code>\p{Number}</code> 将会适用于任何文字。</p>
 
-<pre class="brush: js notranslate">// Trying to use ranges to avoid \w limitations:
+<pre class="brush: js">// Trying to use ranges to avoid \w limitations:
 
 const nonEnglishText = "Приключения Алисы в Стране чудес";
 const regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;

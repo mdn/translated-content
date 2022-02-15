@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><em>str</em>.match(regexp)</code></pre>
+<pre class="syntaxbox"><code><em>str</em>.match(regexp)</code></pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -62,7 +62,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 
 <p>在下例中，使用 <code>match</code> 查找 "<code>Chapter</code>" 紧跟着 1 个或多个数值字符，再紧跟着一个小数点和数值字符 0 次或多次。正则表达式包含 <code>i</code> 标志，因此大小写会被忽略。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var str = 'For more information, see Chapter 3.4.5.1';
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var str = 'For more information, see Chapter 3.4.5.1';
 var re = /see (chapter \d+(\.\d)*)/i;
 var found = str.match(re);
 
@@ -84,7 +84,7 @@ console.log(found);
 
 <p>下例展示了 <code>match</code> 使用 global 和 ignore case 标志。A-E、a-e 的所有字母将会作为一个数组的元素返回。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 var regexp = /[A-E]/gi;
 var matches_array = str.match(regexp);
 
@@ -93,7 +93,7 @@ console.log(matches_array);
 
 <h3 id="使用match，不传参数"><code>使用match()，不传参数 </code></h3>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var str = "Nothing will come of nothing.";
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var str = "Nothing will come of nothing.";
 
 str.match();   // returns [""]</code></pre>
 
@@ -101,7 +101,7 @@ str.match();   // returns [""]</code></pre>
 
 <p>当参数是一个字符串或一个数字，它会使用new RegExp(obj)来隐式转换成一个 {{jsxref("RegExp")}}。如果它是一个有正号的正数，RegExp() 方法将忽略正号。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
     str2 = "My grandfather is 65 years old and My grandmother is 63 years old.",
     str3 = "The contract was declared null and void.";
 str1.match("number");   // "number" 是字符串。返回["number"]

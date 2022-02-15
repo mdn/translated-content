@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 
 <p>你可实现一个自定义的<code>instanceof</code> 行为，例如：</p>
 
-<pre class="brush: js notranslate">class MyArray {
+<pre class="brush: js">class MyArray {
   static [Symbol.hasInstance](instance) {
     return Array.isArray(instance);
   }

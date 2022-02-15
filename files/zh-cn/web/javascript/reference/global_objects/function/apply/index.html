@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><em>func</em>.apply(<em>thisArg</em><em>, [</em><em>argsArray</em>])</code></pre>
+<pre class="syntaxbox"><code><em>func</em>.apply(<em>thisArg</em><em>, [</em><em>argsArray</em>])</code></pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -58,7 +58,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 <p><code>apply</code>正派上用场！</p>
 
-<pre class="brush: js notranslate">var array = ['a', 'b'];
+<pre class="brush: js">var array = ['a', 'b'];
 var elements = [0, 1, 2];
 array.push.apply(array, elements);
 console.info(array); // ["a", "b", 0, 1, 2]
@@ -70,7 +70,7 @@ console.info(array); // ["a", "b", 0, 1, 2]
 
 <p>下面是示例，我们将用<code>Math.max</code>/<code>Math.min</code>求得数组中的最大/小值。</p>
 
-<pre class="brush: js notranslate">/* 找出数组中最大/小的数字 */
+<pre class="brush: js">/* 找出数组中最大/小的数字 */
 var numbers = [5, 6, 2, 3, 7];
 
 /* 使用Math.min/Math.max以及apply 函数时的代码 */
@@ -91,7 +91,7 @@ for (var i = 0; i &lt; numbers.length; i++) {
 
 <p>如果你的参数数组可能非常大，那么推荐使用下面这种混合策略：将数组切块后循环传入目标方法：</p>
 
-<pre class="brush: js notranslate">function minOfArray(arr) {
+<pre class="brush: js">function minOfArray(arr) {
   var min = Infinity;
   var QUANTUM = 32768;
 
@@ -110,7 +110,7 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 <p>你可以使用apply来链接一个对象<a href="/zh-CN/docs/JavaScript/Reference/Operators/new" title="JavaScript/Reference/Operators/new">构造器</a>，类似于Java。在接下来的例子中我们会创建一个全局<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function" title="JavaScript/Reference/Global_Objects/Function"><code>Function</code></a> 对象的construct方法 ，来使你能够在构造器中使用一个类数组对象而非参数列表。</p>
 
-<pre class="brush: js notranslate">Function.prototype.construct = function (aArgs) {
+<pre class="brush: js">Function.prototype.construct = function (aArgs) {
   var oNew = Object.create(this.prototype);
   this.apply(oNew, aArgs);
   return oNew;
@@ -122,7 +122,7 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 <p>Using {{jsxref("Object/__proto__", "Object.__proto__")}}:</p>
 
-<pre class="brush: js notranslate">Function.prototype.construct = function (aArgs) {
+<pre class="brush: js">Function.prototype.construct = function (aArgs) {
   var oNew = {};
   oNew.__proto__ = this.prototype;
   this.apply(oNew, aArgs);
@@ -131,7 +131,7 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 <p>使用闭包：</p>
 
-<pre class="brush: js notranslate" style="font-style: normal;">Function.prototype.construct = function(aArgs) {
+<pre class="brush: js" style="font-style: normal;">Function.prototype.construct = function(aArgs) {
   var fConstructor = this, fNewConstr = function() {
     fConstructor.apply(this, aArgs);
   };
@@ -141,7 +141,7 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 <p class="brush: js" style="font-style: normal;">使用 Function 构造器：</p>
 
-<pre class="brush: js notranslate">Function.prototype.construct = function (aArgs) {
+<pre class="brush: js">Function.prototype.construct = function (aArgs) {
   var fNewConstr = new Function("");
   fNewConstr.prototype = this.prototype;
   var oNew = new fNewConstr();
@@ -152,7 +152,7 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 <p>使用示例：</p>
 
-<pre class="brush: js notranslate">function MyConstructor (arguments) {
+<pre class="brush: js">function MyConstructor (arguments) {
     for (var nProp = 0; nProp &lt; arguments.length; nProp++) {
         this["property" + nProp] = arguments[nProp];
     }

@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">new ArrayBuffer(length)
+<pre class="syntaxbox">new ArrayBuffer(length)
 </pre>
 
 <h3 id="参数">参数</h3>
@@ -104,7 +104,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 <p>下面的例子创建了一个 8 字节的缓冲区，并使用一个 {{jsxref("Global_Objects/Int32Array", "Int32Array")}} 来引用它：</p>
 
-<pre class="notranslate"><code>var buffer = new ArrayBuffer(8);
+<pre><code>var buffer = new ArrayBuffer(8);
 var view   = new Int32Array(buffer);</code>
 </pre>
 
@@ -143,11 +143,11 @@ var view   = new Int32Array(buffer);</code>
 
 <p>从 ECMAScript 2015 开始，<code>ArrayBuffer</code> 对象需要用 {{jsxref("Operators/new", "new")}} 运算符创建。如果调用构造函数时没有使用 <code>new</code>，将会抛出 {{jsxref("TypeError")}}  异常。</p>
 
-<pre class="brush: js example-bad notranslate">var dv = ArrayBuffer(10);
+<pre class="brush: js example-bad">var dv = ArrayBuffer(10);
 // TypeError: calling a builtin ArrayBuffer constructor
 // without new is forbidden</pre>
 
-<pre class="brush: js example-good notranslate">var dv = new ArrayBuffer(10);</pre>
+<pre class="brush: js example-good">var dv = new ArrayBuffer(10);</pre>
 
 <h2 id="相关链接">相关链接</h2>
 

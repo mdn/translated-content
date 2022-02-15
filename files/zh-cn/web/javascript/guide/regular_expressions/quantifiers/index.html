@@ -85,14 +85,14 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
 
 <h3 id="重复模式">重复模式</h3>
 
-<pre class="brush: js notranslate">var wordEndingWithAs = /\w+a+/;
+<pre class="brush: js">var wordEndingWithAs = /\w+a+/;
 var delicateMessage = "This is Spartaaaaaaa";
 
 console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]</pre>
 
 <h3 id="计算字符集">计算字符集</h3>
 
-<pre class="brush: js notranslate">var singleLetterWord = /\b\w\b/g;
+<pre class="brush: js">var singleLetterWord = /\b\w\b/g;
 var notSoLongWord = /\b\w{1,6}\b/g;
 var loooongWord = /\b\w{13,}\b/g;
 
@@ -105,7 +105,7 @@ console.table(sentence.match(loooongWord));      // ["multiplication"]可选可�
 
 <h3 id="可选字符"> 可选字符</h3>
 
-<pre class="brush: js notranslate">var britishText = "He asked his neighbour a favour.";
+<pre class="brush: js">var britishText = "He asked his neighbour a favour.";
 var americanText = "He asked his neighbor a favor.";
 
 var regexpEnding = /\w+ou?r/g;
@@ -123,7 +123,7 @@ console.table(americanText.match(regexpEnding));
 
 <h3 id="贪婪_与_非贪婪的">贪婪 与 非贪婪的</h3>
 
-<pre class="brush: js notranslate">var text = "I must be getting somewhere near the centre of the earth.";
+<pre class="brush: js">var text = "I must be getting somewhere near the centre of the earth.";
 var greedyRegexp = /[\w ]+/;
 // [\w ]      a letter of the latin alphabet or a whitespace
 //      +     one or several times

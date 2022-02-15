@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Reference/Operators/相等
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">x == y
+<pre class="syntaxbox">x == y
 </pre>
 
 <h2 id="描述">描述</h2>
@@ -52,12 +52,12 @@ original_slug: Web/JavaScript/Reference/Operators/相等
 
 <h3 id="没有类型转换的比较">没有类型转换的比较</h3>
 
-<pre class="brush: js notranslate">1 == 1;              // true
+<pre class="brush: js">1 == 1;              // true
 "hello" == "hello";  // true</pre>
 
 <h3 id="与类型转换比较">与类型转换比较</h3>
 
-<pre class="brush: js notranslate">"1" ==  1;            // true
+<pre class="brush: js">"1" ==  1;            // true
 1 == "1";             // true
 0 == false;           // true
 0 == null;            // false
@@ -71,7 +71,7 @@ number1 == number2;   // false</pre>
 
 <h3 id="对象比较">对象比较</h3>
 
-<pre class="brush: js notranslate">const object1 = {"key": "value"}
+<pre class="brush: js">const object1 = {"key": "value"}
 const object2 = {"key": "value"};
 
 object1 == object2 // false
@@ -81,7 +81,7 @@ object2 == object2 // true</pre>
 
 <p>请注意，使用构造的字符串<code>new String()</code>是对象。如果将其中之一与字符串文字进行比较，则该<code>String</code>对象将被转换为字符串文字并对其内容进行比较。但是，如果两个操作数都是<code>String</code>对象，则将它们作为对象进行比较，并且必须引用相同的对象才能进行比较：</p>
 
-<pre class="brush: js notranslate">const string1 = "hello";
+<pre class="brush: js">const string1 = "hello";
 const string2 = String("hello");
 const string3 = new String("hello");
 const string4 = new String("hello");
@@ -94,7 +94,7 @@ console.log(string4 == string4); // true</pre>
 
 <h3 id="比较日期和字符串">比较日期和字符串</h3>
 
-<pre class="brush: js notranslate">const d = new Date('December 17, 1995 03:24:00');
+<pre class="brush: js">const d = new Date('December 17, 1995 03:24:00');
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
 console.log(d == s);    //true</pre>
 

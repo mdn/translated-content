@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">globalThis</pre>
+<pre class="syntaxbox">globalThis</pre>
 
 <h2 id="描述">描述</h2>
 
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 
 <p>在 <code>globalThis</code> 之前，获取某个全局对象的唯一方式就是 <code>Function('return this')()</code>，但是这在某些情况下会违反 <a href="/zh-CN/docs/Web/HTTP/CSP">CSP</a> 规则，所以，<a href="https://github.com/paulmillr/es6-shim">es6-shim</a> 使用了类似如下的方式：</p>
 
-<pre class="brush: js notranslate">var getGlobal = function () {
+<pre class="brush: js">var getGlobal = function () {
   if (typeof self !== 'undefined') { return self; }
   if (typeof window !== 'undefined') { return window; }
   if (typeof global !== 'undefined') { return global; }
@@ -62,7 +62,7 @@ if (typeof globals.setTimeout !== 'function') {
 
 <p>但是有了 <code>globalThis</code> 之后，只需要：</p>
 
-<pre class="brush: js notranslate">if (typeof globalThis.setTimeout !== 'function') {
+<pre class="brush: js">if (typeof globalThis.setTimeout !== 'function') {
   //  此环境中没有 setTimeout 方法！
 }</pre>
 

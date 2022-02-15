@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>var new_array = arr</var>.flatMap(function <var>callback(currentValue[, index[, array]]) {
+<pre class="syntaxbox"><var>var new_array = arr</var>.flatMap(function <var>callback(currentValue[, index[, array]]) {
     // return element for new_array
 }</var>[, <var>thisArg</var>])</pre>
 
@@ -54,7 +54,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 
 <h3 id="map_与_flatMap"><code>map()</code> 与 <code>flatMap()</code></h3>
 
-<pre class="brush: js notranslate">var arr1 = [1, 2, 3, 4];
+<pre class="brush: js">var arr1 = [1, 2, 3, 4];
 
 arr1.map(x =&gt; [x * 2]);
 // [[2], [4], [6], [8]]
@@ -70,7 +70,7 @@ arr1.flatMap(x =&gt; [[x * 2]]);
 
 <p>所以，为了更好的展示 flatMap 的作用，下面我们将包含几句话的数组拆分成单个词组成的新数组。</p>
 
-<pre class="notranslate"><code>let arr1 = ["it's Sunny in", "", "California"];
+<pre><code>let arr1 = ["it's Sunny in", "", "California"];
 
 arr1.map(x =&gt; x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
@@ -84,7 +84,7 @@ arr1.flatMap(x =&gt; x.split(" "));
 
 <p><code>flatMap</code> 能用于在map期间增删项目（也就是修改items的数量）。换句话说，它允许你遍历很多项使之成为另一些项（靠分别把它们放进去来处理），而不是总是一对一。 从这个意义上讲，它的作用类似于 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter</a>的对立面。只需返回一个1项元素数组以保留该项，返回一个多元素数组以添加项，或返回一个0项元素数组以删除该项。</p>
 
-<pre class="notranslate"><code>// Let's say we want to remove all the negative numbers and split the odd numbers into an even number and a 1
+<pre><code>// Let's say we want to remove all the negative numbers and split the odd numbers into an even number and a 1
 let a = [5, 4, -3, 20, 17, -33, -4, 18]
 //       |\  \  x   |  | \   x   x   |
 //      [4,1, 4,   20, 16, 1,       18]
@@ -101,7 +101,7 @@ a.flatMap( (n) =&gt;
 
 <h3 id="reduce_与_concat"><code>reduce()</code> 与 <code>concat()</code></h3>
 
-<pre class="notranslate"><code>var arr = [1, 2, 3, 4];
+<pre><code>var arr = [1, 2, 3, 4];
 
 arr.flatMap(x =&gt; [x, x * 2]);
 // is equivalent to

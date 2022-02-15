@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Operators/instanceof
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="notranslate"><code><em>object</em> instanceof <em>constructor</em></code></pre>
+<pre><code><em>object</em> instanceof <em>constructor</em></code></pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Operators/instanceof
 
 <p><code>instanceof</code> 运算符用来检测 <code>constructor.prototype </code>是否存在于参数 <code>object</code> 的原型链上。</p>
 
-<pre class="brush: js notranslate">// 定义构造函数
+<pre class="brush: js">// 定义构造函数
 function C(){}
 function D(){}
 
@@ -87,7 +87,7 @@ o3 instanceof C; // true 因为 C.prototype 现在在 o3 的原型链上
 
 <p>但是，使用对象文字符号创建的对象在这里是一个例外：虽然原型未定义，但 <code>instanceof Object</code> 返回 <code>true</code>。</p>
 
-<pre class="brush: js notranslate">var simpleStr = "This is a simple string";
+<pre class="brush: js">var simpleStr = "This is a simple string";
 var myString  = new String();
 var newStr    = new String("String created with constructor");
 var myDate    = new Date();
@@ -113,7 +113,7 @@ myDate instanceof String;   // 返回 false</pre>
 
 <p>下面的代码创建了一个类型 <code>Car</code>，以及该类型的对象实例 <code>mycar</code>. <code>instanceof</code> 运算符表明了这个 <code>mycar</code> 对象既属于 <code>Car</code> 类型，又属于 <code>Object</code> 类型。</p>
 
-<pre class="brush: js notranslate">function Car(make, model, year) {
+<pre class="brush: js">function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -128,13 +128,13 @@ var b = mycar instanceof Object; // 返回 true
 
 <p>要检测对象不是某个构造函数的实例时，你可以这样做</p>
 
-<pre class="brush: js notranslate">if (!(mycar instanceof Car)) {
+<pre class="brush: js">if (!(mycar instanceof Car)) {
   // Do something, like mycar = new Car(mycar)
 }</pre>
 
 <p>这和以下代码完全不同</p>
 
-<pre class="brush: js notranslate">if (!mycar instanceof Car)</pre>
+<pre class="brush: js">if (!mycar instanceof Car)</pre>
 
 <p>这段代码永远会得到 <code>false</code>（<code>!mycar</code> 将在 <code>instanceof</code> 之前被处理，所以你总是在验证一个布尔值是否是 <code>Car</code> 的一个实例）。</p>
 

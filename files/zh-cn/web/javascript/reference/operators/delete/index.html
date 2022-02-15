@@ -20,12 +20,12 @@ translation_of: Web/JavaScript/Reference/Operators/delete
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate">delete <em>expression</em>
+<pre class="syntaxbox">delete <em>expression</em>
 </pre>
 
 <p> <em>expression</em> 的计算结果应该是某个属性的引用，例如：</p>
 
-<pre class="syntaxbox notranslate">delete <em>object.property</em>
+<pre class="syntaxbox">delete <em>object.property</em>
 delete <em>object</em>['<em>property</em>']
 </pre>
 
@@ -72,7 +72,7 @@ delete <em>object</em>['<em>property</em>']
 
 <p>下面的代码块给出了一个简单的例子：</p>
 
-<pre class="brush: js notranslate">var Employee = {
+<pre class="brush: js">var Employee = {
   age: 28,
   name: 'abc',
   designation: 'developer'
@@ -89,14 +89,14 @@ console.log(delete Employee.salary); // returns true</pre>
 
 <p>当一个属性被设置为不可设置，delete操作将不会有任何效果，并且会返回false。在严格模式下会抛出语法错误（{{jsxref("SyntaxError")}}）。</p>
 
-<pre class="brush: js notranslate">var Employee = {};
+<pre class="brush: js">var Employee = {};
 Object.defineProperty(Employee, 'name', {configurable: false});
 
 console.log(delete Employee.name);  // returns false</pre>
 
 <p>{{jsxref("Statements/var","var")}}, {{jsxref("Statements/let","let")}}以及{{jsxref("Statements/const","const")}}创建的不可设置的属性不能被delete操作删除。</p>
 
-<pre class="brush: js notranslate">var nameOther = 'XYZ';
+<pre class="brush: js">var nameOther = 'XYZ';
 
 // 通过以下方法获取全局属性:
 Object.getOwnPropertyDescriptor(window, 'nameOther');
@@ -116,7 +116,7 @@ delete nameOther;   // return false</pre>
 
 <p>在严格模式下，如果对一个变量的直接引用、函数的参数或者函数名使用delete操作，将会抛出语法错误（{{jsxref("SyntaxError")}}）。因此，为避免严格模式下的语法错误，必须以<code>delete object.property</code>或<code>delete object['property']</code>的形式使用delete运算符。</p>
 
-<pre class="brush: js notranslate">Object.defineProperty(globalThis, 'variable1', { value: 10, configurable: true, });
+<pre class="brush: js">Object.defineProperty(globalThis, 'variable1', { value: 10, configurable: true, });
 Object.defineProperty(globalThis, 'variable2', { value: 10, configurable: false, });
 
 console.log(delete variable1); // true
@@ -125,7 +125,7 @@ console.log(delete variable1); // true
 console.log(delete variable2); // false
 </pre>
 
-<pre class="brush: js notranslate">function func(param) {
+<pre class="brush: js">function func(param) {
   // SyntaxError in strict mode.
   console.log(delete param); // false
 }
@@ -140,7 +140,7 @@ console.log(delete func); // false
 
 <p>任何使用var声明的变量都会被标记为不可设置的。在下面的例子中，salary是不可设置的以及不能被删除的。在非严格模式下，下面的delete操作将会返回false。</p>
 
-<pre class="brush: js notranslate">function Employee() {
+<pre class="brush: js">function Employee() {
   delete salary;
   var salary;
 }
@@ -149,7 +149,7 @@ Employee();</pre>
 
 <p>让我们来看看相同的代码在严格模式下会有怎样的表现。会抛出一个语法错误（ <code>SyntaxError）而不是返回false。</code></p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js">"use strict";
 
 function Employee() {
   delete salary;  // SyntaxError
@@ -167,7 +167,7 @@ delete DemoFunction; // SyntaxError</pre>
 
 <h2 id="示例">示例</h2>
 
-<pre class="brush: js notranslate">// 在全局作用域创建 adminName 属性
+<pre class="brush: js">// 在全局作用域创建 adminName 属性
 adminName = 'xyz';
 
 // 在全局作用域创建 empCount 属性
@@ -213,7 +213,7 @@ function f() {
 
 <p>在下面的示例中，我们删除一个对象的自己的属性，而原型链上具有相同名称的属性可用：</p>
 
-<pre class="brush: js notranslate">function Foo() {
+<pre class="brush: js">function Foo() {
   this.bar = 10;
 }
 
@@ -240,7 +240,7 @@ console.log(foo.bar);    //undefined
 
 <p>当用 <code>delete</code> 操作符删除一个数组元素时，被删除的元素已经不再属于该数组。下面的例子中用 <code>delete </code>删除了<code> trees[3]</code>。</p>
 
-<pre class="brush: js notranslate">var trees = ["redwood","bay","cedar","oak","maple"];
+<pre class="brush: js">var trees = ["redwood","bay","cedar","oak","maple"];
 delete trees[3];
 if (3 in trees) {
    // 这里不会执行
@@ -249,7 +249,7 @@ if (3 in trees) {
 
 <p>如果你想让一个数组元素继续存在但是其值是 <code>undefined</code>，那么可以使用将 <code>undefined</code> 赋值给这个元素而不是使用 <code>delete</code>。下面的例子中，trees[3] 被赋值为 <code>undefined</code>，但该元素仍然存在。</p>
 
-<pre class="brush: js notranslate">var trees = ["redwood","bay","cedar","oak","maple"];
+<pre class="brush: js">var trees = ["redwood","bay","cedar","oak","maple"];
 trees[3] = undefined;
 if (3 in trees) {
    // 这里会被执行
@@ -257,7 +257,7 @@ if (3 in trees) {
 
 <p>如果你想通过改变数组的内容来移除一个数组元素，请使用{{jsxref("Array.splice()", "splice()")}} 方法。在下面的例子中，通过使用{{jsxref("Array.splice()", "splice()")}}，将trees[3]从数组中移除。</p>
 
-<pre class="brush: js notranslate">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+<pre class="brush: js">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 trees.splice(3,1);
 console.log(trees); // ["redwood", "bay", "cedar", "maple"]
 </pre>

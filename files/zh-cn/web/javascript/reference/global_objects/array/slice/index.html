@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>arr</var>.slice([<var>begin</var>[, <var>end</var>]])</pre>
+<pre class="syntaxbox"><var>arr</var>.slice([<var>begin</var>[, <var>end</var>]])</pre>
 
 <h2 id="参数">参数</h2>
 
@@ -63,7 +63,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <h3 id="返回现有数组的一部分">返回现有数组的一部分</h3>
 
-<pre class="brush: js notranslate">var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+<pre class="brush: js">var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
 var citrus = fruits.slice(1, 3);
 
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
@@ -78,7 +78,7 @@ var citrus = fruits.slice(1, 3);
 
 <p>在下例中, <code>slice</code> 从 <code>myCar</code> 中创建了一个新数组<code>newCar</code>。两个数组都包含了一个 <code>myHonda</code> 对象的引用。当 <code>myHonda</code> 的 <code>color</code> 属性改变为 <code>purple</code>，则两个数组中的对应元素都会随之改变。</p>
 
-<pre class="brush: js notranslate">// 使用 slice 方法从 myCar 中创建一个 newCar。
+<pre class="brush: js">// 使用 slice 方法从 myCar 中创建一个 newCar。
 var myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } };
 var myCar = [myHonda, 2, "cherry condition", "purchased 1997"];
 var newCar = myCar.slice(0, 2);
@@ -100,7 +100,7 @@ console.log('newCar[0].color = ' + newCar[0].color);
 
 <p>上述代码输出：</p>
 
-<pre class="brush: js notranslate"> myCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2,
+<pre class="brush: js"> myCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2,
        'cherry condition', 'purchased 1997']
 newCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2]
  myCar[0].color = red
@@ -114,7 +114,7 @@ newCar[0].color = purple
 
 <p><code>slice</code> 方法可以用来将一个类数组（Array-like）对象/集合转换成一个新数组。你只需将该方法绑定到这个对象上。 一个函数中的  {{jsxref("Functions/arguments", "arguments")}} 就是一个类数组对象的例子。</p>
 
-<pre class="brush: js notranslate">function list() {
+<pre class="brush: js">function list() {
   return Array.prototype.slice.call(arguments);
 }
 
@@ -123,7 +123,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 <p>除了使用 <code>Array.prototype.slice.call(</code><code>arguments</code><code>)</code>，你也可以简单的使用 <code>[].slice.call(arguments)</code> 来代替。另外，你可以使用 <code>bind</code> 来简化该过程。</p>
 
-<pre class="brush: js notranslate">var unboundSlice = Array.prototype.slice;
+<pre class="brush: js">var unboundSlice = Array.prototype.slice;
 var slice = Function.prototype.call.bind(unboundSlice);
 
 function list() {
@@ -137,7 +137,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 <p>根据规范，使用 <code>Array.prototype.slice</code> 转换宿主对象（如 DOM 对象）时，不必遵循 Mozilla 的默认行为，即可以转化任何符合条件的伪数组宿主对象为数组，IE &lt; 9 没有遵循，而 IE9 + 遵循这个行为，但是稍加改造可以使其在跨浏览器使用时更可靠。只要其他现代浏览器继续支持该行为，目前 IE 9+、FireFox、Chrome、Safari 以及 Opera 都支持，开发者在使用下面代码时遍历 DOM 时就不会被该方法的字面意义误导，即 IE &lt; 9 不能转化 DOM Collections。开发者可以安全地根据语义知道该方法的实际上的标准行为。（下面的代码还修正了 IE 中 <code>slice()</code> 方法第二个参数不允许为显式的 {{jsxref("Global_Objects/null", "null")}}/{{jsxref("Global_Objects/undefined", "undefined")}} 值的问题，其他现代浏览器，包括 IE9+ 都允许）。</p>
 
-<pre class="brush: js notranslate">/**
+<pre class="brush: js">/**
  * Shim for "fixing" IE's lack of support (IE &lt; 9) for applying slice
  * on host objects like NamedNodeMap, NodeList, and HTMLCollection
  * (technically, since host objects have been implementation-dependent,

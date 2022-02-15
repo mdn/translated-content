@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Data_structures
 
 <p>JavaScript 是一种<strong>弱类型</strong>或者说<strong>动态</strong>语言。这意味着你不用提前声明变量的类型，在程序运行过程中，类型会被自动确定。这也意味着你可以使用同一个变量保存不同类型的数据：</p>
 
-<pre class="brush: js notranslate">var foo = 42;    // foo is a Number now
+<pre class="brush: js">var foo = 42;    // foo is a Number now
 foo = "bar"; // foo is a String now
 foo = true;  // foo is a Boolean now
 </pre>
@@ -66,7 +66,7 @@ foo = true;  // foo is a Boolean now
 
 <p>数字类型中只有一个整数有两种表示方法： 0 可表示为 -0 和 +0（"0" 是 +0 的简写）。 在实践中，这也几乎没有影响。 例如 <code>+0 === -0</code> 为真。 但是，你可能要注意除以0的时候：</p>
 
-<pre class="brush: js notranslate">42 / +0; // Infinity
+<pre class="brush: js">42 / +0; // Infinity
 42 / -0; // -Infinity
 </pre>
 
@@ -78,7 +78,7 @@ foo = true;  // foo is a Boolean now
 
 <p>通过使用常量{{jsxref("Number.MAX_SAFE_INTEGER")}}，您可以获得可以用数字递增的最安全的值。通过引入 BigInt，您可以操作超过{{jsxref("Number.MAX_SAFE_INTEGER")}}的数字。您可以在下面的示例中观察到这一点，其中递增{{jsxref("Number.MAX_SAFE_INTEGER")}}会返回预期的结果:</p>
 
-<pre class="notranslate"><code>&gt; const x = 2n ** 53n;
+<pre><code>&gt; const x = 2n ** 53n;
 9007199254740992n
 &gt; const y = x + 1n;
 9007199254740993n</code>

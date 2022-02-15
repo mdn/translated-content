@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Classes
 
 <p>定义类的一种方法是使用<strong>类声明</strong>。要声明一个类，你可以使用带有<code>class</code>关键字的类名（这里是“Rectangle”）。</p>
 
-<pre class="brush: js notranslate">class Rectangle {
+<pre class="brush: js">class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -37,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Classes
 
 <p><strong>函数声明</strong>和<strong>类声明</strong>之间的一个重要区别在于, 函数声明会{{Glossary("Hoisting", "提升")}}，类声明不会。你首先需要声明你的类，然后再访问它，否则类似以下的代码将抛出{{jsxref("ReferenceError")}}：</p>
 
-<pre class="brush: js example-bad notranslate">let p = new Rectangle(); // ReferenceError
+<pre class="brush: js example-bad">let p = new Rectangle(); // ReferenceError
 
 class Rectangle {}
 </pre>
@@ -46,7 +46,7 @@ class Rectangle {}
 
 <p><strong>类表达式</strong>是定义类的另一种方法。类表达式可以命名或不命名。命名类表达式的名称是该类体的局部名称。(不过，可以通过类的(而不是一个实例的) {{jsxref("Function.name", "name")}} 属性来检索它)。</p>
 
-<pre class="brush: js notranslate">// 未命名/匿名类
+<pre class="brush: js">// 未命名/匿名类
 let Rectangle = class {
   constructor(height, width) {
     this.height = height;
@@ -88,7 +88,7 @@ console.log(Rectangle.name);
 
 <p>参见<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions">方法定义</a>。</p>
 
-<pre class="brush: js notranslate">class Rectangle {
+<pre class="brush: js">class Rectangle {
     // constructor
     constructor(height, width) {
         this.height = height;
@@ -113,7 +113,7 @@ console.log(square.area);
 
 <p><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Classes/static">static</a></code> 关键字用来定义一个类的一个静态方法。调用静态方法不需要<a href="/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_object_(class_instance)">实例化</a>该类，但不能通过一个类实例调用静态方法。静态方法通常用于为一个应用程序创建工具函数。</p>
 
-<pre class="brush: js notranslate">class Point {
+<pre class="brush: js">class Point {
     constructor(x, y) {
         this.x = x;
         this.y = y;
@@ -145,7 +145,7 @@ console.log(Point.distance(p1, p2));
 
 <p>当调用静态或原型方法时没有指定 <em>this </em>的值，那么方法内的 <em>this </em>值将被置为 <strong><code>undefined</code></strong>。即使你未设置 <code>"use strict"</code> ，因为 <code>class</code> 体内部的代码总是在严格模式下执行。</p>
 
-<pre class="brush: js notranslate">class Animal {
+<pre class="brush: js">class Animal {
   speak() {
     return this;
   }
@@ -167,7 +167,7 @@ eat(); // undefined</pre>
 
 <p>严格模式下不会发生自动装箱，<em>this </em>值将保留传入状态。</p>
 
-<pre class="brush: js notranslate">function Animal() { }
+<pre class="brush: js">function Animal() { }
 
 Animal.prototype.speak = function() {
   return this;
@@ -189,7 +189,7 @@ eat(); // global object
 
 <p>实例的属性必须定义在类的方法里：</p>
 
-<pre class="notranslate"><code>class Rectangle {
+<pre><code>class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -199,7 +199,7 @@ eat(); // global object
 
 <p>静态的或原型的数据属性必须定义在类定义的外面。</p>
 
-<pre class="notranslate"><code>Rectangle.staticWidth = 20;
+<pre><code>Rectangle.staticWidth = 20;
 Rectangle.prototype.prototypeWidth = 25;</code>
 </pre>
 
@@ -213,7 +213,7 @@ Rectangle.prototype.prototypeWidth = 25;</code>
 
 <p>使用JavaScript字段声明语法，上面的示例可以写成：</p>
 
-<pre class="notranslate"><code>class Rectangle {
+<pre><code>class Rectangle {
   height = 0;
   width;
   constructor(height, width) {
@@ -231,7 +231,7 @@ Rectangle.prototype.prototypeWidth = 25;</code>
 
 <p>使用私有字段，可以按以下方式细化定义。</p>
 
-<pre class="notranslate"><code>class Rectangle {
+<pre><code>class Rectangle {
   #height = 0;
   #width;
   constructor(height, width) {
@@ -255,7 +255,7 @@ Rectangle.prototype.prototypeWidth = 25;</code>
 
 <p><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Classes/extends">extends</a></code> 关键字在 <em>类声明 </em>或 <em>类表达式 </em>中用于创建一个类作为另一个类的一个子类。</p>
 
-<pre class="brush: js notranslate">class Animal {
+<pre class="brush: js">class Animal {
   constructor(name) {
     this.name = name;
   }
@@ -283,7 +283,7 @@ d.speak();// 'Mitzie barks.'
 
 <p>也可以继承传统的基于函数的“类”：</p>
 
-<pre class="brush: js notranslate">function Animal (name) {
+<pre class="brush: js">function Animal (name) {
   this.name = name;
 }
 Animal.prototype.speak = function () {
@@ -302,7 +302,7 @@ d.speak();//Mitzie makes a noise.  Mitzie barks.</pre>
 
 <p>请注意，类不能继承常规对象（不可构造的）。如果要继承常规对象，可以改用{{jsxref("Object.setPrototypeOf()")}}：</p>
 
-<pre class="brush: js notranslate">var Animal = {
+<pre class="brush: js">var Animal = {
   speak() {
     console.log(this.name + ' makes a noise.');
   }
@@ -325,7 +325,7 @@ d.speak(); // Mitzie makes a noise.</pre>
 
 <p>例如，当使用像{{jsxref("Array.map", "map()")}}返回默认构造函数的方法时，您希望这些方法返回一个父<code>Array</code>对象，而不是<code>MyArray</code>对象。{{jsxref("Symbol.species")}} 符号可以让你这样做：</p>
 
-<pre class="brush: js notranslate">class MyArray extends Array {
+<pre class="brush: js">class MyArray extends Array {
   // Overwrite species to the parent Array constructor
   static get [Symbol.species]() { return Array; }
 }
@@ -342,7 +342,7 @@ console.log(mapped instanceof Array);
 
 <p><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/super">super</a></code> 关键字用于调用对象的父对象上的函数。</p>
 
-<pre class="brush: js notranslate">class Cat {
+<pre class="brush: js">class Cat {
   constructor(name) {
     this.name = name;
   }
@@ -366,7 +366,7 @@ class Lion extends Cat {
 
 <p>一个以超类作为输入的函数和一个继承该超类的子类作为输出可以用于在ECMAScript中实现混合：</p>
 
-<pre class="brush: js notranslate">var calculatorMixin = Base =&gt; class extends Base {
+<pre class="brush: js">var calculatorMixin = Base =&gt; class extends Base {
   calc() { }
 };
 
@@ -376,7 +376,7 @@ var randomizerMixin = Base =&gt; class extends Base {
 
 <p>使用 mix-ins 的类可以像下面这样写：</p>
 
-<pre class="brush: js notranslate">class Foo { }
+<pre class="brush: js">class Foo { }
 class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</pre>
 
 <h2 id="规范">规范</h2>

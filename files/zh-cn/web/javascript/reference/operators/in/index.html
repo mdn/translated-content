@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Operators/in
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><em>prop</em> in <em>object</em></pre>
+<pre class="syntaxbox"><em>prop</em> in <em>object</em></pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Operators/in
 
 <p>下面的例子演示了一些 <code>in</code> 运算符的用法。</p>
 
-<pre class="brush:js notranslate">// 数组
+<pre class="brush:js">// 数组
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 0 in trees        // 返回true
 3 in trees        // 返回true
@@ -58,7 +58,7 @@ var mycar = {make: "Honda", model: "Accord", year: 1998};
 
 <p><code>in</code>右操作数必须是一个对象值。例如，你可以指定使用<code>String</code>构造函数创建的字符串，但不能指定字符串文字。</p>
 
-<pre class="brush:js notranslate">var color1 = new String("green");
+<pre class="brush:js">var color1 = new String("green");
 "length" in color1 // 返回true
 var color2 = "coral";
 "length" in color2 // 报错(color2不是对象)
@@ -68,7 +68,7 @@ var color2 = "coral";
 
 <p>如果你使用 <code><a href="/zh-CN/docs/JavaScript/Reference/Operators/delete" title="zh-CN/docs/JavaScript/Reference/Operators/Special/delete">delete</a></code> 运算符删除了一个属性，则 <code>in</code> 运算符对所删除属性返回 <code>false</code>。</p>
 
-<pre class="brush:js notranslate">var mycar = {make: "Honda", model: "Accord", year: 1998};
+<pre class="brush:js">var mycar = {make: "Honda", model: "Accord", year: 1998};
 delete mycar.make;
 "make" in mycar;  // 返回false
 
@@ -79,12 +79,12 @@ delete trees[3];
 
 <p>如果你只是将一个属性的值赋值为{{jsxref("Global_Objects/undefined", "undefined")}}，而没有删除它，则 <code>in</code> 运算仍然会返回<code>true</code>。</p>
 
-<pre class="brush:js notranslate">var mycar = {make: "Honda", model: "Accord", year: 1998};
+<pre class="brush:js">var mycar = {make: "Honda", model: "Accord", year: 1998};
 mycar.make = undefined;
 "make" in mycar;  // 返回true
 </pre>
 
-<pre class="brush:js notranslate">var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
+<pre class="brush:js">var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 trees[3] = undefined;
 3 in trees; // 返回true
 </pre>
@@ -93,7 +93,7 @@ trees[3] = undefined;
 
 <p>如果一个属性是从原型链上继承来的，<code>in</code> 运算符也会返回 <code>true</code>。</p>
 
-<pre class="brush:js notranslate">"toString" in {}; // 返回true
+<pre class="brush:js">"toString" in {}; // 返回true
 </pre>
 
 <h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>

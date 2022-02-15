@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>referenceStr</var>.localeCompare(<var>compareString</var>[, <var>locales</var>[, <var>options</var>]])</code></pre>
+<pre class="syntaxbox"><code><var>referenceStr</var>.localeCompare(<var>compareString</var>[, <var>locales</var>[, <var>options</var>]])</code></pre>
 
 <h3 id="参数">参数</h3>
 
@@ -90,7 +90,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 <h3 id="使用_localeCompare">使用 <code>localeCompare()</code></h3>
 
-<pre class="brush: js notranslate">// The letter "a" is before "c" yielding a negative value
+<pre class="brush: js">// The letter "a" is before "c" yielding a negative value
 'a'.localeCompare('c');
 // -2 or -1 (or some other negative value)
 
@@ -107,7 +107,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 <p><code>locales</code> 和 <code>options</code> 参数还没有被所有浏览器所支持。检查是否被支持， 使用 "i" 参数 (a requirement that illegal language tags are rejected) 判断是否有异常 {{jsxref("RangeError")}}抛出:</p>
 
-<pre class="brush: js notranslate">function localeCompareSupportsLocales() {
+<pre class="brush: js">function localeCompareSupportsLocales() {
   try {
     'foo'.localeCompare​('bar', 'i');
   } catch (e) {
@@ -121,7 +121,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 <p>在不同的语言下 <code>localeCompare()</code> 所提供的结果是不一致的。 为了能让用户得到正确的比较值， 通过使用 <code>locales</code> 参数来提供要比较的语言 (and possibly some fallback languages) :</p>
 
-<pre class="brush: js notranslate">console.log('ä'.localeCompare('z', 'de')); // a negative value: in German, ä sorts with a
+<pre class="brush: js">console.log('ä'.localeCompare('z', 'de')); // a negative value: in German, ä sorts with a
 console.log('ä'.localeCompare('z', 'sv')); // a positive value: in Swedish, ä sorts after z
 </pre>
 
@@ -129,7 +129,7 @@ console.log('ä'.localeCompare('z', 'sv')); // a positive value: in Swedish, ä 
 
 <p><code>localeCompare()</code> 所提供的结果可以通过 <code>options</code> 参数来制定:</p>
 
-<pre class="brush: js notranslate">// in German, ä has a as the base letter
+<pre class="brush: js">// in German, ä has a as the base letter
 console.log('ä'.localeCompare('a', 'de', { sensitivity: 'base' })); // 0
 
 // in Swedish, ä and a are separate base letters

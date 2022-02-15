@@ -71,7 +71,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
 <h3 id="使用Set对象">使用<code>Set</code>对象</h3>
 
-<pre class="brush: js notranslate">let mySet = new Set();
+<pre class="brush: js">let mySet = new Set();
 
 mySet.add(1); // Set [ 1 ]
 mySet.add(5); // Set [ 1, 5 ]
@@ -102,7 +102,7 @@ console.log(mySet);
 
 <h3 id="迭代Set">迭代Set</h3>
 
-<pre class="brush: js notranslate">// 迭代整个set
+<pre class="brush: js">// 迭代整个set
 // 按顺序输出：1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
 for (let item of mySet) console.log(item);
 
@@ -147,7 +147,7 @@ mySet.forEach(function(value) {
 
 <h3 id="实现基本集合操作">实现基本集合操作</h3>
 
-<pre class="brush: js notranslate">function isSuperset(set, subset) {
+<pre class="brush: js">function isSuperset(set, subset) {
     for (let elem of subset) {
         if (!set.has(elem)) {
             return false;
@@ -208,7 +208,7 @@ difference(setA, setC);          // =&gt; Set [1, 2]
 
 <h3 id="Array_相关"> <code>Array</code> 相关</h3>
 
-<pre class="brush: js notranslate">let myArray = ["value1", "value2", "value3"];
+<pre class="brush: js">let myArray = ["value1", "value2", "value3"];
 
 // 用Set构造器将Array转换为Set
 let mySet = new Set(myArray);
@@ -221,7 +221,7 @@ console.log([...mySet]); // 与myArray完全一致
 
 <h3 id="数组去重">数组去重</h3>
 
-<pre class="brush: js notranslate">// Use to remove duplicate elements from the array
+<pre class="brush: js">// Use to remove duplicate elements from the array
 const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
 console.log([...new Set(numbers)])
 // [2, 3, 4, 5, 6, 7, 32]
@@ -229,7 +229,7 @@ console.log([...new Set(numbers)])
 
 <h3 id="String_相关"><code>String</code> 相关</h3>
 
-<pre class="brush: js notranslate">let text = 'India';
+<pre class="brush: js">let text = 'India';
 
 let mySet = new Set(text);  // Set {'I', 'n', 'd', 'i', 'a'}
 mySet.size;  // 5

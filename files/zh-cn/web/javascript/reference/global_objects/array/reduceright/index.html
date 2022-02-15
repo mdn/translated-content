@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>arr.reduceRight(callback(accumulator, currentValue[, index[, array]])[, initialValue])</var></pre>
+<pre class="syntaxbox"><var>arr.reduceRight(callback(accumulator, currentValue[, index[, array]])[, initialValue])</var></pre>
 
 <h3 id="参数">参数</h3>
 
@@ -55,7 +55,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 <p>可以像下面这样调用 <code>reduceRight</code> 的回调函数 <code>callback</code>：</p>
 
-<pre class="brush: js notranslate">array.reduceRight(function(accumulator, currentValue, index, array) {
+<pre class="brush: js">array.reduceRight(function(accumulator, currentValue, index, array) {
   // ...
 });</pre>
 
@@ -111,7 +111,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 <p>该函数的完整执行过程见下例：</p>
 
-<pre class="brush: js notranslate">[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
+<pre class="brush: js">[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
     return previousValue + currentValue;
 });
 </pre>
@@ -169,7 +169,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 <p>如果提供了一个 <code>initialValue</code> 参数，则结果如下：</p>
 
-<pre class="brush: js notranslate">[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
+<pre class="brush: js">[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
     return previousValue + currentValue;
 }, 10);
 </pre>
@@ -235,14 +235,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 <h3 id="求一个数组中所有值的和">求一个数组中所有值的和</h3>
 
-<pre class="brush: js notranslate">var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
+<pre class="brush: js">var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
   return a + b;
 });
 // sum is 6</pre>
 
 <h3 id="扁平化（flatten）一个二维数组">扁平化（flatten）一个二维数组</h3>
 
-<pre class="brush: js notranslate">var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
+<pre class="brush: js">var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
     return a.concat(b);
 }, []);
 // flattened is [4, 5, 2, 3, 0, 1]
@@ -250,7 +250,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 <h3 id="运行一个带有回调每个函数将其结果传给下一个的异步函数列表">运行一个带有回调每个函数将其结果传给下一个的异步函数列表</h3>
 
-<pre class="brush: js notranslate">const waterfall = (...functions) =&gt; (callback, ...args) =&gt;
+<pre class="brush: js">const waterfall = (...functions) =&gt; (callback, ...args) =&gt;
   functions.reduceRight(
     (composition, fn) =&gt; (...results) =&gt; fn(composition, ...results),
     callback
@@ -293,7 +293,7 @@ const computation2 = (input, callback) =&gt; {
 
 <h3 id="展示_reduce_与_reduceRight_之间的区别">展示 <code>reduce</code> 与 <code>reduceRight</code> 之间的区别</h3>
 
-<pre class="brush: js notranslate">var a = ['1', '2', '3', '4', '5'];
+<pre class="brush: js">var a = ['1', '2', '3', '4', '5'];
 var left  = a.reduce(function(prev, cur)      { return prev + cur; });
 var right = a.reduceRight(function(prev, cur) { return prev + cur; });
 
@@ -304,7 +304,7 @@ console.log(right); // "54321"</pre>
 
 <p>组合函数的概念简单，它只是简单地结合了多个函数。它是一个从右向左流动的函数，用上一个函数的输出调用每个函数。</p>
 
-<pre class="brush: js notranslate">/**
+<pre class="brush: js">/**
  * Function Composition is way in which result of one function can
  * be passed to another and so on.
  *
@@ -333,7 +333,7 @@ console.log(compose(inc, double)(2)); // 5</pre>
 
 <p><code>reduceRight</code> 被添加到 ECMA-262 标准第 5 版，因此它在某些实现环境中可能不被支持。把下面的代码添加到脚本开头可以解决此问题，从而允许在那些没有原生支持 <code>reduceRight</code> 的实现环境中使用它。</p>
 
-<pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.22
+<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.22
 // Reference: http://es5.github.io/#x15.4.4.22
 if ('function' !== typeof Array.prototype.reduceRight) {
   Array.prototype.reduceRight = function(callback /*, initialValue*/) {

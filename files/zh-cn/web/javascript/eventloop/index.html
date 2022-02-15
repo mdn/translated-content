@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/EventLoop
 
 <p>函数调用形成了一个由若干帧组成的栈。</p>
 
-<pre class="brush: js notranslate">function foo(b) {
+<pre class="brush: js">function foo(b) {
   let a = 10;
   return a + b + 11;
 }
@@ -57,7 +57,7 @@ console.log(bar(7)); // 返回 42</pre>
 
 <p>之所以称之为 <strong>事件循环</strong>，是因为它经常按照类似如下的方式来被实现：</p>
 
-<pre class="brush: js notranslate">while (queue.waitForMessage()) {
+<pre class="brush: js">while (queue.waitForMessage()) {
   queue.processNextMessage();
 }</pre>
 
@@ -77,7 +77,7 @@ console.log(bar(7)); // 返回 42</pre>
 
 <p>下面的例子演示了这个概念（<code>setTimeout</code> 并不会在计时器到期之后直接执行）：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">const s = new Date().getSeconds();
+<pre class="brush: js line-numbers  language-js"><code class="language-js">const s = new Date().getSeconds();
 
 setTimeout(function() {
   // 输出 "2"，表示回调函数并没有在 500 毫秒之后立即执行
@@ -99,7 +99,7 @@ while(true) {
 
 <p>基本上，<code>setTimeout</code> 需要等待当前队列中所有的消息都处理完毕之后才能执行，即使已经超出了由第二参数所指定的时间。</p>
 
-<pre class="brush: js notranslate">(function() {
+<pre class="brush: js">(function() {
 
   console.log('这是开始');
 
