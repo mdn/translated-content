@@ -30,9 +30,9 @@ translation_of: Web/CSS/@font-face
 ### 記述子
 
 - {{cssxref("@font-face/ascent-override", "ascent-override")}}
-  - : フォントのアセンダーの大きさを定義します。
+  - : フォントのアセンダーの寸法を定義します。
 - {{cssxref("@font-face/descent-override", "descent-override")}}
-  - : フォントのディセンダーの大きさを定義します。
+  - : フォントのディセンダーの寸法を定義します。
 - {{cssxref("@font-face/font-display", "font-display")}}
   - : フォントのダウンロードおよび準備状況に応じて、どのようにフォントフェイスを表示するかを特定します。
 - {{cssxref("@font-face/font-family", "font-family")}}
@@ -50,7 +50,7 @@ translation_of: Web/CSS/@font-face
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
   - : OpenType または TrueType フォントの種類を低レベルで制御するために、変化形の特徴を表す 4 文字の軸名を、種類の値と共に指定します。
 - {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
-  - : フォントの行間の大きさを定義します。
+  - : フォントの行間の寸法を定義します。
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}{{experimental_inline}}
   - : このフォントに関連するグリフのアウトラインとメトリックの倍率を定義します。これにより、同じフォントサイズでレンダリングしたときに、さまざまなフォントのデザインを調和させることが容易になります。
 - {{cssxref("@font-face/src", "src")}}
