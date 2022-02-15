@@ -13,8 +13,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 <p><code>Promise.any()</code> 接收一个{{JSxRef("Promise")}}可迭代对象，只要其中的一个 <code>promise</code> 成功，就返回那个已经成功的 <code>promise</code> 。如果可迭代对象中没有一个 <code>promise</code> 成功（即所有的 <code>promises</code> 都失败/拒绝），就返回一个失败的 <code>promise </code>和{{JSxRef("Global_Objects/AggregateError", "AggregateError")}}类型的实例，它是 {{JSxRef("Error")}} 的一个子类，用于把单一的错误集合在一起。本质上，这个方法和{{JSxRef("Promise.all()")}}是相反的。</p>
 
-<div class="blockIndicator warning">
-<p><strong>注意！</strong> <code>Promise.any()</code> 方法依然是实验性的，尚未被所有的浏览器完全支持。它当前处于 <a href="https://github.com/tc39/proposal-promise-any">TC39 第四阶段草案（Stage 4）</a></p>
+<div class="warning">
+<p><strong>警告：</strong><code>Promise.any()</code> 方法依然是实验性的，尚未被所有的浏览器完全支持。它当前处于 <a href="https://github.com/tc39/proposal-promise-any">TC39 第四阶段草案（Stage 4）</a></p>
 </div>
 
 <h2 id="语法">语法</h2>

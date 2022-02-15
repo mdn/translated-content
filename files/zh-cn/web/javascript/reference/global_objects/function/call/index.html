@@ -11,7 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 
 <p><code><strong>call()</strong></code> 方法使用一个指定的 <code>this</code> 值和单独给出的一个或多个参数来调用一个函数。</p>
 
-<div class="note"><strong>注意：</strong>该方法的语法和作用与 {{jsxref("Function.apply", "apply()")}} 方法类似，只有一个区别，就是 <code>call()</code> 方法接受的是<strong>一个参数列表</strong>，而 <code>apply()</code> 方法接受的是<strong>一个包含多个参数的数组</strong>。</div>
+<div class="note">
+<p><strong>备注：</strong>该方法的语法和作用与 {{jsxref("Function.apply", "apply()")}} 方法类似，只有一个区别，就是 <code>call()</code> 方法接受的是<strong>一个参数列表</strong>，而 <code>apply()</code> 方法接受的是<strong>一个包含多个参数的数组</strong>。</p>
+</div>
 
 <div>{{EmbedInteractiveExample("pages/js/function-call.html")}}</div>
 
@@ -114,7 +116,7 @@ function display() {
 display.call();  // sData value is Wisen</pre>
 
 <div class="note">
-<p><strong>注意：</strong>在严格模式下，<code>this</code> 的值将会是 <code>undefined</code>。见下文。</p>
+<p><strong>备注：</strong>在严格模式下，<code>this</code> 的值将会是 <code>undefined</code>。见下文。</p>
 </div>
 
 <pre class="brush: js">'use strict';

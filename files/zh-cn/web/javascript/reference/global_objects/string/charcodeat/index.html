@@ -39,8 +39,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
 <p>Unicode 码点（code points）的范围从 <code>0</code> 到 <code>1114111</code> <code>(0x10FFFF）</code>。开头的 128 个 Unicode 编码单元和 ASCII 字符编码一样。（关于 Unicode 的更多信息，可查看 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">JavaScript Guide</a>。）</p>
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong>，<code>charCodeAt</code> 总是返回一个小于 65,536 的值。这是因为高位编码单元（higher code point）使用一对（低位编码 lower valued）代理伪字符（"surrogate" pseudo-characters）来表示，从而构成一个真正的字符。</p>
+<div class="note">
+<p><strong>备注：</strong>，<code>charCodeAt</code> 总是返回一个小于 65,536 的值。这是因为高位编码单元（higher code point）使用一对（低位编码 lower valued）代理伪字符（"surrogate" pseudo-characters）来表示，从而构成一个真正的字符。</p>
 
 <p>因此，为了检查（或重现）<code>65536</code> 及以上编码字符的完整字符，需要在获取 <code>charCodeAt(i)</code> 的值的同时获取 <code>charCodeAt(i+1)</code> 的值（如同用两个字母操纵一个字符串），或者改为获取 <code>codePointAt(i)</code> 的值。参看下面例 2 和例 3。</p>
 </div>

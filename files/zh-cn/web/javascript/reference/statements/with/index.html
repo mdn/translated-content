@@ -7,7 +7,9 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/with
 ---
-<div class="warning">不建议使用<code>with</code>语句，因为它可能是混淆错误和兼容性问题的根源。有关详细信息，请参阅下面“描述”一节中的“语意不明的弊端”部分。</div>
+<div class="warning">
+<p><strong>警告：</strong>不建议使用<code>with</code>语句，因为它可能是混淆错误和兼容性问题的根源。有关详细信息，请参阅下面“描述”一节中的“语意不明的弊端”部分。</p>
+</div>
 
 <div>{{jsSidebar("Statements")}}</div>
 
@@ -31,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Statements/with
 
 <p>JavaScript查找某个未使用命名空间的变量时，会通过作用域链来查找，作用域链是跟执行代码的context或者包含这个变量的函数有关。'with'语句将某个对象添加到作用域链的顶部，如果在statement中有某个未使用命名空间的变量，跟作用域链中的某个属性同名，则这个变量将指向这个属性值。如果沒有同名的属性，则将拋出{{jsxref("ReferenceError")}}异常。</p>
 
-<div class="note">不推荐使用<code>with</code>，在 ECMAScript 5 <a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>中该标签已被禁止。推荐的替代方案是声明一个临时变量来承载你所需要的属性。</div>
+<div class="note"><p><strong>备注：</strong>不推荐使用<code>with</code>，在 ECMAScript 5 <a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>中该标签已被禁止。推荐的替代方案是声明一个临时变量来承载你所需要的属性。</p></div>
 
 <h3 id="性能方面的利与弊">性能方面的利与弊</h3>
 

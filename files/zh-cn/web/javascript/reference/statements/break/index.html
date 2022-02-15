@@ -68,7 +68,7 @@ switch (food) {
 
 <p>下面的代码中一起使用 <code>break</code> 语句和被标记的块语句。一个 <code>break</code> 语句必须内嵌在它引用的标记中。注意，<code>inner_block</code> 内嵌在 <code>outer_block</code> 中。</p>
 
-<pre class="brush:js;highlight:[1,3,5];">outer_block:{
+<pre class="brush:js;">outer_block:{
 
   inner_block:{
     console.log ('1');
@@ -84,7 +84,7 @@ switch (food) {
 
 <p>下面的代码同样使用了 <code>break</code> 语句和被标记的块语句，但是产生了一个语法错误，因为它的 <code>break</code> 语句在 <code>block_1</code> 中，但是引用了 <code>block_2</code>。<code>break</code> 语句必须内嵌在它引用的标签中。</p>
 
-<pre class="brush:js;highlight:[1,3,6];">block_1:{
+<pre class="brush:js;">block_1:{
   console.log ('1');
   break block_2;            // SyntaxError: label not found
 }

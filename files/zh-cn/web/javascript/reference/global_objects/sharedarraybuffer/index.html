@@ -18,8 +18,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 
 <p><strong><code>SharedArrayBuffer</code></strong> 对象用来表示一个通用的，固定长度的原始二进制数据缓冲区，类似于 {{jsxref("ArrayBuffer")}} 对象，它们都可以用来在共享内存（shared memory）上创建视图。与 <code>ArrayBuffer</code> 不同的是，<code><strong>SharedArrayBuffer</strong></code> 不能被分离。</p>
 
-<div class="blockIndicator note">
-<p>请注意，作为对<a href="https://meltdownattack.com/">Spectre</a>的响应，所有主流浏览器均默认于2018年1月5日禁用<code>SharedArrayBuffer</code>。 Chrome在启用了网站隔离功能的平台上的<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=821270">v67中重新启用</a>了该功能，以防止出现Spectre风格的漏洞。</p>
+<div class="note">
+  <p><strong>备注：</strong>作为对<a href="https://meltdownattack.com/">Spectre</a>的响应，所有主流浏览器均默认于2018年1月5日禁用<code>SharedArrayBuffer</code>。 Chrome在启用了网站隔离功能的平台上的<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=821270">v67中重新启用</a>了该功能，以防止出现Spectre风格的漏洞。</p>
 </div>
 
 <p>{{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html")}}</p>

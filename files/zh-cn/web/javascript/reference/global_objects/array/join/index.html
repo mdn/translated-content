@@ -23,18 +23,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 <dl>
  <dt><code>separator</code> {{optional_inline}}</dt>
  <dd>指定一个字符串来分隔数组的每个元素。如果需要，将分隔符转换为字符串。如果缺省该值，数组元素用逗号（<code>,</code>）分隔。如果<code>separator</code>是空字符串(<code>""</code>)，则所有元素之间都没有任何字符。</dd>
- <dt>
- <h3 id="返回值">返回值</h3>
- </dt>
- <dd>一个所有数组元素连接的字符串。如果 <code>arr.length</code><strong> </strong>为0，则返回空字符串。</dd>
 </dl>
+
+<h3 id="返回值">返回值</h3>
+
+<p>一个所有数组元素连接的字符串。如果 <code>arr.length</code><strong> </strong>为0，则返回空字符串。</p>
 
 <h2 id="Description">描述</h2>
 
 <p>所有的数组元素被转换成字符串，再用一个分隔符将这些字符串连接起来。</p>
 
-<div class="blockIndicator warning">
-<p>如果一个元素为 <code>undefined</code> 或 <code>null</code>，它会被转换为空字符串。</p>
+<div class="warning">
+<p><strong>警告：</strong>如果一个元素为 <code>undefined</code> 或 <code>null</code>，它会被转换为空字符串。</p>
 </div>
 
 <h2 id="Examples">示例</h2>

@@ -77,13 +77,13 @@ typeof symObj;  // "object"</pre>
 
 <dl>
  <dt>
- <h4 id="迭代_symbols">迭代 symbols {{jsxref("Symbol.iterator")}}</h4>
+  迭代 symbols {{jsxref("Symbol.iterator")}}
  </dt>
  <dd>一个返回一个对象默认迭代器的方法。被 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> 使用。</dd>
  <dt>{{jsxref("Symbol.asyncIterator")}} {{experimental_inline}}</dt>
  <dd>一个返回对象默认的异步迭代器的方法。被 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of">for await of</a></code> 使用。</dd>
  <dt>
- <h4 id="正则表达式_symbols">正则表达式 symbols {{jsxref("Symbol.match")}}</h4>
+  正则表达式 symbols {{jsxref("Symbol.match")}}
  </dt>
  <dd>一个用于对字符串进行匹配的方法，也用于确定一个对象是否可以作为正则表达式使用。被 {{jsxref("String.prototype.match()")}} 使用。</dd>
  <dt>{{jsxref("Symbol.replace")}}</dt>
@@ -93,7 +93,7 @@ typeof symObj;  // "object"</pre>
  <dt>{{jsxref("Symbol.split")}}</dt>
  <dd>一个在匹配正则表达式的索引处拆分一个字符串的方法.。被 {{jsxref("String.prototype.split()")}} 使用。</dd>
  <dt>
- <h4 id="其他_symbols">其他 symbols {{jsxref("Symbol.hasInstance")}}</h4>
+  其他 symbols {{jsxref("Symbol.hasInstance")}}
  </dt>
  <dd>一个确定一个构造器对象识别的对象是否为它的实例的方法。被 {{jsxref("Operators/instanceof", "instanceof")}} 使用。</dd>
  <dt>{{jsxref("Symbol.isConcatSpreadable")}}</dt>
@@ -167,7 +167,7 @@ typeof Symbol.iterator === 'symbol'
 
 <p>Symbols 在 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> 迭代中不可枚举。另外，{{jsxref("Object.getOwnPropertyNames()")}} 不会返回 symbol 对象的属性，但是你能使用 {{jsxref("Object.getOwnPropertySymbols()")}} 得到它们。</p>
 
-<pre class="brush: js line-numbers  language-js">var obj = {};
+<pre class="brush: js">var obj = {};
 
 obj[Symbol("a")] = "a";
 obj[Symbol.for("b")] = "b";

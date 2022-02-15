@@ -20,10 +20,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
  <dd>一个字符串，表示被查找的值。如果<code>searchValue</code>是空字符串，则返回<code>fromIndex</code>。</dd>
  <dt><code>fromIndex</code>{{optional_inline}}</dt>
  <dd>待匹配字符串searchValue的开头一位字符从 str的第fromIndex位开始向左回向查找。<code>fromIndex</code>默认值是 <code>+Infinity</code>。如果 <code>fromIndex &gt;= str.length</code> ，则会搜索整个字符串。如果 <code>fromIndex &lt; 0</code> ，则等同于 <code>fromIndex == 0</code>。</dd>
- <dt>
- <h3 id="返回值">返回值</h3>
- </dt>
 </dl>
+
+<h3 id="返回值">返回值</h3>
 
 <p>返回指定值最后一次出现的索引(该索引仍是以从左至右0开始记数的)，如果没找到则返回-1。</p>
 
@@ -41,8 +40,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 'canal'.lastIndexOf('', 2);   // returns 2</code>
 </pre>
 
-<div class="blockIndicator note">
-<p>Note: <code>'abab'.lastIndexOf('ab', 2)</code> 将返回 2 而不是 0, 因为fromIndex只限制待匹配字符串的开头。</p>
+<div class="note">
+<p><strong>备注：</strong><code>'abab'.lastIndexOf('ab', 2)</code> 将返回 2 而不是 0, 因为fromIndex只限制待匹配字符串的开头。</p>
 </div>
 
 <p>(例如'abadefgabm'.lastIndexOf('ab', 7) 返回7，虽然查找的'ab'中的b已经在 index=8的位置了从index=7的a处向左查找仍是能找到自身a加上其后连成ab，因为fromIndex指的是待匹配字符串的开头那一个)</p>
@@ -101,55 +100,7 @@ console.log("The index of 'new' from the end is " + anyString.lastIndexOf("new")
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div>
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div>
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

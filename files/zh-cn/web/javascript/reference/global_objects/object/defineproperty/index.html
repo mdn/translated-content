@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 <p>被传递给函数的对象。</p>
 
 <div class="note">
-<p>在ES6中，由于 Symbol类型的特殊性，用Symbol类型的值来做对象的key与常规的定义或修改不同，而<code>Object.defineProperty</code> 是定义key为Symbol的属性的方法之一。</p>
+<p><strong>备注：</strong>在ES6中，由于 Symbol类型的特殊性，用Symbol类型的值来做对象的key与常规的定义或修改不同，而<code>Object.defineProperty</code> 是定义key为Symbol的属性的方法之一。</p>
 </div>
 
 <h2 id="描述">描述</h2>
@@ -94,9 +94,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
 <h4 id="描述符可拥有的键值">描述符可拥有的键值</h4>
 
-<dl>
- <dt>
- <table class="standard-table">
+<table class="standard-table">
   <caption></caption>
   <tbody>
    <tr>
@@ -128,8 +126,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
    </tr>
   </tbody>
  </table>
- </dt>
-</dl>
 
 <p>如果一个描述符不具有 <code>value</code>、<code>writable</code>、<code>get</code> 和 <code>set</code> 中的任意一个键，那么它将被认为是一个数据描述符。如果一个描述符同时拥有 <code>value</code> 或 <code>writable</code> 和 <code>get</code> 或 <code>set</code> 键，则会产生一个异常。</p>
 

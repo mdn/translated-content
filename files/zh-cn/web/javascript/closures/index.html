@@ -167,7 +167,7 @@ console.log(Counter.value()); /* logs 1 */
 <p>这三个公共函数是共享同一个环境的闭包。多亏 JavaScript 的词法作用域，它们都可以访问 <code>privateCounter</code> 变量和 <code>changeBy</code> 函数。</p>
 
 <div class="note">
-<p>你应该注意到我们定义了一个匿名函数，用于创建一个计数器。我们立即执行了这个匿名函数，并将他的值赋给了变量<code>Counter</code>。我们可以把这个函数储存在另外一个变量<code>makeCounter</code>中，并用他来创建多个计数器。</p>
+<p><strong>备注：</strong>你应该注意到我们定义了一个匿名函数，用于创建一个计数器。我们立即执行了这个匿名函数，并将他的值赋给了变量<code>Counter</code>。我们可以把这个函数储存在另外一个变量<code>makeCounter</code>中，并用他来创建多个计数器。</p>
 </div>
 
 <pre class="brush: js">var makeCounter = function() {
@@ -204,7 +204,7 @@ console.log(Counter2.value()); /* logs 0 */
 <p>每次调用其中一个计数器时，通过改变这个变量的值，会改变这个闭包的词法环境。然而在一个闭包内对变量的修改，不会影响到另外一个闭包中的变量。</p>
 
 <div class="note">
-<p>以这种方式使用闭包，提供了许多与面向对象编程相关的好处 —— 特别是数据隐藏和封装。</p>
+<p><strong>备注：</strong>以这种方式使用闭包，提供了许多与面向对象编程相关的好处 —— 特别是数据隐藏和封装。</p>
 </div>
 
 <h2 id="Creating_closures_in_loops_A_common_mistake">在循环中创建闭包：一个常见错误</h2>

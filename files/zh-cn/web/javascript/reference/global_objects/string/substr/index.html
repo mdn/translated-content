@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
 <p>{{JSRef}}</p>
 
-<div class="warning">警告： 尽管 <code>String.prototype.substr(…)</code> 没有严格被废弃 (as in "removed from the Web standards"), 但它被认作是遗留的函数并且可以的话应该避免使用。它并非JavaScript核心语言的一部分，未来将可能会被移除掉。如果可以的话，使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring">substring()</a></code> 替代它.</div>
+<div class="warning"><p><strong>警告：</strong>尽管 <code>String.prototype.substr(…)</code> 没有严格被废弃 (as in "removed from the Web standards"), 但它被认作是遗留的函数并且可以的话应该避免使用。它并非JavaScript核心语言的一部分，未来将可能会被移除掉。如果可以的话，使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring">substring()</a></code> 替代它.</p></div>
 
 <p><code><strong>substr()</strong></code> 方法返回一个字符串中从指定位置开始到指定字符数的字符。</p>
 
@@ -103,57 +103,7 @@ if ('ab'.substr(-1) != 'b')
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div>
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div>
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p><strong>Note</strong>: Up to version 3.6, Firefox had a bug which caused <code>substr</code> to return empty result when an explicit <code>undefined</code> value was passed in as the <code>length</code>.</p>
+{{Compat}}
 
 <h2 id="See_also">相关链接</h2>
 

@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 
 <p>一个<code>isNaN</code>的 polyfill 可以理解为（这个polyfill利用了<code>NaN</code>自身永不相等于自身这一特征 ）：</p>
 
-<pre class="brush: js line-numbers  language-js">var isNaN = function(value) {
+<pre class="brush: js">var isNaN = function(value) {
     var n = Number(value);
     return n !== n;
 };</pre>

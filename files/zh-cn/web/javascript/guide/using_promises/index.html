@@ -36,13 +36,13 @@ createAudioFileAsync(audioSettings, successCallback, failureCallback)</pre>
 
 <p>如果函数 <code>createAudioFileAsync()</code> 被重写为返回 Promise 的形式，那么我们可以像下面这样简单地调用它：</p>
 
-<pre class="brush: js line-numbers  language-js">const promise = createAudioFileAsync(audioSettings);
+<pre class="brush: js">const promise = createAudioFileAsync(audioSettings);
 promise.then(successCallback, failureCallback);
 </pre>
 
 <p>或者简写为：</p>
 
-<pre class="brush: js line-numbers  language-js">createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
+<pre class="brush: js">createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
 </pre>
 
 <p>我们把这个称为 <em>异步函数调用</em>，这种形式有若干优点，下面我们将会逐一讨论。</p>
@@ -65,7 +65,7 @@ promise.then(successCallback, failureCallback);
 
 <p>见证奇迹的时刻：<code>then()</code> 函数会返回一个和原来不同的<strong>新的 Promise</strong>：</p>
 
-<pre class="brush: js line-numbers  language-js">const promise = doSomething();
+<pre class="brush: js">const promise = doSomething();
 const promise2 = promise.then(successCallback, failureCallback);
 </pre>
 

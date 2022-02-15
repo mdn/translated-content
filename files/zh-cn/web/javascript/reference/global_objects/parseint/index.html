@@ -26,8 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
  <dt><code>string</code></dt>
  <dd>要被解析的值。如果参数不是一个字符串，则将其转换为字符串(使用  <code><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-tostring">ToString</a> </code>抽象操作)。字符串开头的空白符将会被忽略。</dd>
  <dt><code><var>radix</var></code><var> {{optional_inline}}</var></dt>
- <dd>从 <code>2</code> 到 <code>36</code>，表示字符串的基数。例如指定 <code>16</code> 表示被解析值是十六进制数。请注意，10不是默认值！</dd>
- <dd class="blockIndicator warning">文章后面的<a href="#描述">描述</a>解释了当参数 <code>radix</code> 不传时该函数的具体行为。</dd>
+ <dd>从 <code>2</code> 到 <code>36</code>，表示字符串的基数。例如指定 <code>16</code> 表示被解析值是十六进制数。请注意，10不是默认值！文章后面的描述解释了当参数 <code>radix</code> 不传时该函数的具体行为。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -43,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 
 <pre>parseInt('123', 5) // 将'123'看作5进制数，返回十进制数38 =&gt; 1*5^2 + 2*5^1 + 3*5^0 = 38</pre>
 
-<h2 id="描述_2"><a>描述</a></h2>
+<h2 id="描述_2">描述</h2>
 
 <p><code>parseInt</code>函数将其第一个参数转换为一个字符串，对该字符串进行解析，然后返回一个整数或 <code>NaN</code>。</p>
 
@@ -72,8 +71,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 
 <p>要将一个数字转换为特定的 <code>radix</code> 中的字符串字段，请使用 <code>thatNumber.toString(radix)</code>函数。</p>
 
-<div class="blockIndicator warning">
-<p>{{jsxref("BigInt")}}。警告: <code>parseInt</code>将 {{jsxref("BigInt")}}转换为{{jsxref("Number")}}，并在这个过程中失去了精度。这是因为拖尾的非数字值，包括 "n"，会被丢弃。</p>
+<div class="warning">
+<p><strong>警告：</strong>{{jsxref("BigInt")}}。警告: <code>parseInt</code>将 {{jsxref("BigInt")}}转换为{{jsxref("Number")}}，并在这个过程中失去了精度。这是因为拖尾的非数字值，包括 "n"，会被丢弃。</p>
 </div>
 
 <h2 id="示例">示例</h2>

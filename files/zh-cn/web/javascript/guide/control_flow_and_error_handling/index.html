@@ -95,12 +95,13 @@ alert(x); // 输出的结果为 2
 
 <p>不建议在条件表达式中使用赋值语句，因为在快速查阅代码时容易把它看成等值比较。例如，不要使用下面的代码：</p>
 
-<div class="blockIndicator warning">
-<p>   if(x = y){</p>
-
-<p> /*  语句  */</p>
-
-<p>}</p>
+<div class="warning">
+<p><strong>警告：</strong></p>
+<pre class="brush: js">
+  if(x = y){
+    /*  语句  */
+  }
+</pre>
 </div>
 
 <p>如果你需要在条件表达式中使用赋值，通常在赋值语句前后额外添加一对括号。例如： </p>
@@ -231,9 +232,8 @@ throw {toString: function() { return "I'm an object!"; } };
 
 </pre>
 
-<div class="note"><strong>注意：</strong>你可以在抛出异常时声明一个对象。那你就可以在catch块中查询到对象的属性。
-
-
+<div class="note">
+  <p><strong>备注：</strong>你可以在抛出异常时声明一个对象。那你就可以在catch块中查询到对象的属性。</p>
 </div>
 
 <pre class="brush: js">// Create an object type UserException
@@ -406,7 +406,7 @@ catch (e) {
  <li><em>settled：</em>Promise 处于 fulfilled 或 rejected 二者中的任意一个状态, 不会是 pending。</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8633/promises.png" style="height: 297px; width: 801px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/8633/promises.png"></p>
 
 <h3 id="通过_XHR_加载图片">通过 XHR 加载图片</h3>
 

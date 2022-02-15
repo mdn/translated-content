@@ -61,7 +61,7 @@ translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 };</pre>
 
 <div class="note">
-<p><strong>注意：</strong>简写语法使用命名函数而不是匿名函数（如…<code>foo: function() {}</code>…）。命名函数可以从函数体调用（这对匿名函数是不可能的，因为没有标识符可以引用）。详细信息，请参阅{{jsxref("Operators/function","function","#Examples")}}。</p>
+<p><strong>备注：</strong>简写语法使用命名函数而不是匿名函数（如…<code>foo: function() {}</code>…）。命名函数可以从函数体调用（这对匿名函数是不可能的，因为没有标识符可以引用）。详细信息，请参阅{{jsxref("Operators/function","function","#Examples")}}。</p>
 </div>
 
 <h3 id="生成器方法">生成器方法</h3>
@@ -75,7 +75,7 @@ translation_of: Web/JavaScript/Reference/Functions/Method_definitions
  </li>
 </ul>
 
-<pre class="brush: js;highlight[12]">// 用有属性名的语法定义方法（ES6之前）：
+<pre class="brush: js">// 用有属性名的语法定义方法（ES6之前）：
 var obj2 = {
   g: function*() {
     var index = 0;
@@ -155,7 +155,7 @@ new obj.g; // TypeError: obj.g is not a constructor (changed in ES2016)
 
 <h3 id="简单示例">简单示例</h3>
 
-<pre class="brush: js;highlight[3]">var obj = {
+<pre class="brush: js">var obj = {
   a : "foo",
   b(){ return this.a; }
 };
@@ -166,7 +166,7 @@ console.log(obj.b()); // "foo"
 
 <p>该简写语法还支持计算的属性名称作为方法名。</p>
 
-<pre class="brush: js;highlight[4]">var bar = {
+<pre class="brush: js">var bar = {
   foo0: function() { return 0; },
   foo1() { return 1; },
   ['foo' + 2]() { return 2; }

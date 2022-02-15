@@ -66,8 +66,8 @@ let Rectangle = class Rectangle2 {
 console.log(Rectangle.name);
 // 输出: "Rectangle2"</pre>
 
-<div class="blockIndicator note">
-<p><strong>注意:</strong> 类<strong>表达式</strong>也同样受到<a href="/zh-CN/docs/Web/JavaScript/Reference/Classes$edit#Class_declarations">类声明</a>部分中提到的类型提升的限制。</p>
+<div class="note">
+<p><strong>备注：</strong> 类<strong>表达式</strong>也同样受到<a href="/zh-CN/docs/Web/JavaScript/Reference/Classes$edit#Class_declarations">类声明</a>部分中提到的类型提升的限制。</p>
 </div>
 
 <h2 id="类体和方法定义">类体和方法定义</h2>
@@ -205,8 +205,8 @@ Rectangle.prototype.prototypeWidth = 25;</code>
 
 <h3 id="字段声明">字段声明</h3>
 
-<div class="blockIndicator warning">
-<p>公共和私有字段声明是JavaScript标准委员会<a href="https://tc39.es/">TC39</a>提出的<a href="https://github.com/tc39/proposal-class-fields">实验性功能（第3阶段）</a>。浏览器中的支持是有限的，但是可以通过<a href="https://babeljs.io/">Babel</a>等系统构建后使用此功能。</p>
+<div class="warning">
+<p><strong>警告：</strong>公共和私有字段声明是JavaScript标准委员会<a href="https://tc39.es/">TC39</a>提出的<a href="https://github.com/tc39/proposal-class-fields">实验性功能（第3阶段）</a>。浏览器中的支持是有限的，但是可以通过<a href="https://babeljs.io/">Babel</a>等系统构建后使用此功能。</p>
 </div>
 
 <h4 id="公有字段声明">公有字段声明</h4>
@@ -243,8 +243,8 @@ Rectangle.prototype.prototypeWidth = 25;</code>
 
 <p>从类外部引用私有字段是错误的。它们只能在类里面中读取或写入。通过定义在类外部不可见的内容，可以确保类的用户不会依赖于内部，因为内部可能在不同版本之间发生变化。</p>
 
-<div class="blockIndicator note">
-<p>私有字段仅能在字段声明中预先定义。 </p>
+<div class="note">
+<p><strong>备注：</strong>私有字段仅能在字段声明中预先定义。 </p>
 </div>
 
 <p>私有字段不能通过在之后赋值来创建它们，这种方式只适用普通属性。</p>
@@ -424,9 +424,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</pre>
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-
-
-<p>{{Compat("javascript.classes")}}</p>
+{{Compat}}
 
 <h2 id="重新运行一个类定义">重新运行一个类定义</h2>
 

@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/EventLoop
 
 <h3 id="可视化描述">可视化描述</h3>
 
-<p style="text-align: center;"><img alt="Stack, heap, queue" src="https://mdn.mozillademos.org/files/17124/The_Javascript_Runtime_Environment_Example.svg" style="height: 271px; width: 295px;"></p>
+<p><img alt="Stack, heap, queue" src="https://mdn.mozillademos.org/files/17124/The_Javascript_Runtime_Environment_Example.svg"></p>
 
 <h3 id="栈">栈</h3>
 
@@ -77,7 +77,7 @@ console.log(bar(7)); // 返回 42</pre>
 
 <p>下面的例子演示了这个概念（<code>setTimeout</code> 并不会在计时器到期之后直接执行）：</p>
 
-<pre class="brush: js line-numbers  language-js">const s = new Date().getSeconds();
+<pre class="brush: js">const s = new Date().getSeconds();
 
 setTimeout(function() {
   // 输出 "2"，表示回调函数并没有在 500 毫秒之后立即执行

@@ -88,7 +88,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 <pre class="brush: js">myNumberType.valueOf()</pre>
 
 <div class="note">
-<p><strong>注意：</strong>字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}}方法转换，这与使用<code>valueOf</code>转换为原始字符串的{{jsxref("String")}}对象不同。所有对象都能转换成一个“<code>[object <em>类型</em>]</code>”这种格式的字符串。但是很多对象不能转换为数字，布尔或函数。</p>
+<p><strong>备注：</strong>字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}}方法转换，这与使用<code>valueOf</code>转换为原始字符串的{{jsxref("String")}}对象不同。所有对象都能转换成一个“<code>[object <em>类型</em>]</code>”这种格式的字符串。但是很多对象不能转换为数字，布尔或函数。</p>
 </div>
 
 <h2 id="示例">示例</h2>
@@ -147,7 +147,7 @@ console.log( str2.valueOf() === str2 );   // false</pre>
 
 <h3 id="改写_.prototype.valueof">改写 .prototype.valueof</h3>
 
-<pre class="brush: js line-numbers  language-js">function MyNumberType(n) {
+<pre class="brush: js">function MyNumberType(n) {
     this.number = n;
 }
 

@@ -52,8 +52,8 @@ browser-compat: javascript.builtins.Map
    <td>
     <p>一个 <code>Object</code> 有一个原型, 原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。</p>
 
-    <div class="blockIndicator note">
-    <p><strong>注意:</strong> 虽然 ES5 开始可以用 <code>Object.create(null)</code> 来创建一个没有原型的对象，但是这种用法不太常见。</p>
+    <div class="note">
+    <p><strong>备注：</strong>虽然 ES5 开始可以用 <code>Object.create(null)</code> 来创建一个没有原型的对象，但是这种用法不太常见。</p>
     </div>
    </td>
   </tr>
@@ -70,8 +70,8 @@ browser-compat: javascript.builtins.Map
    <td>
     <p>一个 <code>Object</code> 的键是无序的</p>
 
-    <div class="blockIndicator note">
-    <p>注意：自ECMAScript 2015规范以来，对象<em>确实</em>保留了字符串和Symbol键的创建顺序； 因此，在只有字符串键的对象上进行迭代将按插入顺序产生键。</p>
+    <div class="note">
+    <p><strong>备注：</strong>自ECMAScript 2015规范以来，对象<em>确实</em>保留了字符串和Symbol键的创建顺序； 因此，在只有字符串键的对象上进行迭代将按插入顺序产生键。</p>
     </div>
    </td>
   </tr>
@@ -238,8 +238,8 @@ console.log(clone.get(1)); // one
 console.log(original === clone); // false. 浅比较 不为同一个对象的引用
 </pre>
 
-<div class="blockIndicator note">
-<p>重要：请记住，<em>数据本身</em>未被克隆。</p>
+<div class="note">
+  <p><strong>备注：</strong>请记住，<em>数据本身</em>未被克隆。</p>
 </div>
 
 <p>Map对象间可以进行合并，但是会保持键的唯一性。</p>
@@ -289,7 +289,7 @@ console.log(merged.get(3)); // three</pre>
 
 <p>所以，你还是<em>可以这样做.</em>..</p>
 
-<pre class="syntaxbox example-bad brush js">let wrongMap = new Map()
+<pre class="brush: js example-bad">let wrongMap = new Map()
 wrongMap['bla'] = 'blaa'
 wrongMap['bla2'] = 'blaaa2'
 
@@ -298,13 +298,13 @@ console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
 
 <p>...但是，这样做的话，它的行为会不符合预期:</p>
 
-<pre class="syntaxbox example-bad brush js">wrongMap.has('bla')    // false
+<pre class="brush: js example-bad">wrongMap.has('bla')    // false
 wrongMap.delete('bla') // false
 console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }</pre>
 
 <p>无论如何，和正确用法比较起来，几乎没有什么不同: </p>
 
-<pre class="syntaxbox brush js example-good">let myMap = new Map()
+<pre class="brush: js example-good">let myMap = new Map()
 myMap.set('bla','blaa')
 myMap.set('bla2','blaa2')
 console.log(myMap)  // Map { 'bla' =&gt; 'blaa', 'bla2' =&gt; 'blaa2' }

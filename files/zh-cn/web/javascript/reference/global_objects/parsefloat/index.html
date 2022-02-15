@@ -28,9 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 <h3 id="返回值">返回值</h3>
 
-<dl>
- <dd>给定值被解析成浮点数。如果给定值不能被转换成数值，则会返回 {{jsxref("NaN")}}。</dd>
-</dl>
+<p>给定值被解析成浮点数。如果给定值不能被转换成数值，则会返回 {{jsxref("NaN")}}。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -55,7 +53,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 <p>下面的例子都返回<strong>3.14</strong></p>
 
-<pre class="brush: js line-numbers language-js">parseFloat(3.14);
+<pre class="brush: js">parseFloat(3.14);
 parseFloat('3.14');
 parseFloat('  3.14  ');
 parseFloat('314e-2');
@@ -74,7 +72,7 @@ parseFloat({ toString: function() { return "3.14" } });</pre>
 
 <p>以下例子均返回 <code>900719925474099300</code>，当整数太大以至于不能被转换时将失去精度。</p>
 
-<pre class="brush: js line-numbers language-js">parseFloat(900719925474099267n);
+<pre class="brush: js">parseFloat(900719925474099267n);
 parseFloat('900719925474099267n');</pre>
 
 <h2 id="规范">规范</h2>

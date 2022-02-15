@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 
 <h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox  language-html"><em>dateObj</em>.getDay()
+<pre class="brush: js"><em>dateObj</em>.getDay()
 </pre>
 
 <h3 id="Description">返回值</h3>
@@ -26,13 +26,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 
 <p>下面第二条语句，基于{{jsxref("Date")}}对象 <code>Xmas95</code> 的值，把 1 赋值给 <code>weekday</code>。也就是说1995年12月25日是星期一。</p>
 
-<pre class="brush:js  language-js">var Xmas95 = new Date("December 25, 1995 23:15:30");
+<pre class="brush:js">var Xmas95 = new Date("December 25, 1995 23:15:30");
 var weekday = Xmas95.getDay();
 
 console.log(weekday); // 1</pre>
 
-<div class="blockIndicator note">
-<p>注意：如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}与一个额外的<code>options</code> 参数，从而返回这天的全称（如<code>"Monday"</code>）.使用此方法，结果会更加国际化：</p>
+<div class="note">
+<p><strong>备注：</strong>如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}与一个额外的<code>options</code> 参数，从而返回这天的全称（如<code>"Monday"</code>）.使用此方法，结果会更加国际化：</p>
 
 <pre class="brush: js"><code>var options = { weekday: 'long'};
 console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));

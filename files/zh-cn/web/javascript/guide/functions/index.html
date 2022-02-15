@@ -85,7 +85,7 @@ console.log(factorial(3));
 
 <p>下面的代码：</p>
 
-<pre class="brush: js line-numbers  language-js">function map(f, a) {
+<pre class="brush: js">function map(f, a) {
   let result = []; // 创建一个数组
   let i; // 声明一个值，用来循环
   for (i = 0; i != a.length; i++)
@@ -133,10 +133,10 @@ function square(n) { return n*n }
 <p>函数域是指函数声明时的所在的地方，或者函数在顶层被声明时指整个程序。</p>
 
 <div class="note">
-<p><strong>提示：</strong>注意只有使用如上的语法形式（即 <code>function funcName(){}</code>）才可以。而下面的代码是无效的。就是说，函数提升仅适用于函数声明，而不适用于函数表达式。</p>
+<p><strong>备注：</strong>注意只有使用如上的语法形式（即 <code>function funcName(){}</code>）才可以。而下面的代码是无效的。就是说，函数提升仅适用于函数声明，而不适用于函数表达式。</p>
 </div>
 
-<pre class="brush: js example-bad line-numbers  language-js">console.log(square); // square is hoisted with an initial value undefined.
+<pre class="brush: js example-bad">console.log(square); // square is hoisted with an initial value undefined.
 console.log(square(5)); // Uncaught TypeError: square is not a function
 const square = function (n) {
   return n * n;
@@ -167,7 +167,7 @@ e = factorial(5); // 120赋值给e
 
 <p>还有其它的方式来调用函数。常见的一些情形是某些地方需要动态调用函数，或者函数的实参数量是变化的，或者调用函数的上下文需要指定为在运行时确定的特定对象。显然，函数本身就是对象，因此这些对象也有方法（参考{{jsxref("Function")}} ）。作为此中情形之一，{{jsxref("Function.apply", "apply()")}}方法可以实现这些目的。</p>
 
-<h2 class="deki-transform" id="函数作用域">函数作用域</h2>
+<h2 id="函数作用域">函数作用域</h2>
 
 <p>在函数内定义的变量不能在函数之外的任何地方访问，因为变量仅仅在该函数的域的内部有定义。相对应的，一个函数可以访问定义在其范围内的任何变量和函数。换言之，定义在全局域中的函数可以访问所有定义在全局域中的变量。在另一个函数中定义的函数也可以访问在其父函数中定义的所有变量和父函数有权访问的任何其他变量。</p>
 
@@ -442,8 +442,8 @@ pet.getName();                  // Oliver
 getCode();    // Returns the secret code
 </pre>
 
-<div class="blockIndicator note">
-<p>尽管有上述优点，使用闭包时仍然要小心避免一些陷阱。如果一个闭包的函数定义了一个和外部函数的某个变量名称相同的变量，那么这个闭包将无法引用外部函数的这个变量。</p>
+<div class="note">
+<p><strong>备注：</strong>尽管有上述优点，使用闭包时仍然要小心避免一些陷阱。如果一个闭包的函数定义了一个和外部函数的某个变量名称相同的变量，那么这个闭包将无法引用外部函数的这个变量。</p>
 
 <pre class="brush: js">var createPet = function(name) {  // Outer function defines a variable called "name"
   return {
@@ -468,7 +468,7 @@ getCode();    // Returns the secret code
 
 <p>例如，设想有一个用来连接字符串的函数。唯一事先确定的参数是在连接后的字符串中用来分隔各个连接部分的字符（译注：比如例子里的分号“；”）。该函数定义如下：</p>
 
-<pre class="brush: js line-numbers  language-js">function myConcat(separator) {
+<pre class="brush: js">function myConcat(separator) {
    var result = ''; // 把值初始化成一个字符串，这样就可以用来保存字符串了！！
    var i;
    // iterate through arguments
@@ -490,7 +490,9 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 </pre>
 
-<div class="note"><strong>提示：</strong><code>arguments</code>变量只是 <em>”</em><strong>类数组对象</strong>“，并不是一个数组。称其为类数组对象是说它有一个索引编号和<code>length</code>属性。尽管如此，它并不拥有全部的Array对象的操作方法。</div>
+<div class="note">
+<p><strong>备注：</strong><code>arguments</code>变量只是 <em>”</em><strong>类数组对象</strong>“，并不是一个数组。称其为类数组对象是说它有一个索引编号和<code>length</code>属性。尽管如此，它并不拥有全部的Array对象的操作方法。</p>
+</div>
 
 <p>更多信息请阅读JavaScript参考里的{{jsxref("Function")}}一文。</p>
 
@@ -544,7 +546,7 @@ console.log(arr); // [2, 4, 6]</pre>
 
 <p>在一些函数模式中，更简洁的函数很受欢迎。对比一下：</p>
 
-<pre class="brush: js line-numbers  language-js">var a = [
+<pre class="brush: js">var a = [
   "Hydrogen",
   "Helium",
   "Lithium",
@@ -563,7 +565,7 @@ console.log(a3); // logs [ 8, 6, 7, 9 ]</pre>
 
 <p>在箭头函数出现之前，每一个新函数都重新定义了自己的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a> 值（在构造函数中是一个新的对象；在严格模式下是未定义的；在作为“对象方法”调用的函数中指向这个对象；等等）。以面向对象的编程风格，这样着实有点恼人。</p>
 
-<pre class="brush: js line-numbers  language-js">function Person() {
+<pre class="brush: js">function Person() {
   // 构造函数Person()将`this`定义为自身
   this.age = 0;
 
@@ -579,7 +581,7 @@ var p = new Person();</pre>
 
 <p>在ECMAScript 3/5里，通过把<code>this</code>的值赋值给一个变量可以修复这个问题。</p>
 
-<pre class="brush: js line-numbers  language-js">function Person() {
+<pre class="brush: js">function Person() {
   var self = this; // 有的人习惯用`that`而不是`self`，
                    // 无论你选择哪一种方式，请保持前后代码的一致性
   self.age = 0;
@@ -594,7 +596,7 @@ var p = new Person();</pre>
 
 <p>箭头函数捕捉闭包上下文的<code>this</code>值，所以下面的代码工作正常。</p>
 
-<pre class="brush: js line-numbers  language-js">function Person(){
+<pre class="brush: js">function Person(){
   this.age = 0;
 
   setInterval(() =&gt; {

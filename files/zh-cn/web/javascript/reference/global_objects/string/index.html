@@ -118,7 +118,7 @@ new String(thing)</pre>
  </tbody>
 </table>
 
-<div class="note">和其他语言不同，javascript 的字符串不区分单引号和双引号，所以不论是单引号还是双引号的字符串，上面的转义字符都能运行 。</div>
+<div class="note"><p><strong>备注：</strong>和其他语言不同，javascript 的字符串不区分单引号和双引号，所以不论是单引号还是双引号的字符串，上面的转义字符都能运行 。</p></div>
 
 <h3 id="长字符串">长字符串</h3>
 
@@ -203,7 +203,9 @@ console.log(eval(s2));      // returns the string "2 + 2"
 <pre class="brush: js">console.log(eval(s2.valueOf())); // returns the number 4
 </pre>
 
-<div class="note"><strong>注意:</strong> 其他的将字符串对象转换成基本字符串的方法可以及参考 <a href="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView" title="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a>.</div>
+<div class="note">
+<p><strong>备注：</strong> 其他的将字符串对象转换成基本字符串的方法可以及参考 <a href="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView" title="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a>.</p>
+</div>
 
 <h2 id="属性">属性</h2>
 
@@ -231,7 +233,7 @@ console.log(eval(s2));      // returns the string "2 + 2"
 <h2 id="字符串泛型方法">字符串泛型方法</h2>
 
 <div class="warning">
-<p>字符串泛型是<strong>非标准的</strong>，<strong>已弃用</strong>，<strong>并且会在不远的</strong><strong>将来删除</strong>。注意，你不能依靠他们的跨浏览器，而不使用下面提供的垫片。</p>
+<p><strong>警告：</strong>字符串泛型是<strong>非标准的</strong>，<strong>已弃用</strong>，<strong>并且会在不远的</strong><strong>将来删除</strong>。注意，你不能依靠他们的跨浏览器，而不使用下面提供的垫片。</p>
 </div>
 
 <p>应该避免在 Javascript 1.6 （Firefox 浏览器的 JS 引擎）中使用（虽然也支持）将其他对象转化为字符的方法，因为方法并没有成为 ECMA 标准：</p>
@@ -293,57 +295,7 @@ for (let i = 0, n = inputValues.length; i &lt; n; ++i) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div>
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>0.2</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div>
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="sect1"></h2>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 
