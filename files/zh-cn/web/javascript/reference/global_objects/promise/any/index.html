@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 <h2 id="语法">语法</h2>
 
-<pre class="notranslate">Promise.any(<var>iterable</var>);</pre>
+<pre>Promise.any(<var>iterable</var>);</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -63,7 +63,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 <p>即使第一个返回的 promise 是失败的，<code>Promise.any()</code> 依然使用第一个成功状态的 promise 来返回。这与使用首个（无论 rejected 还是 fullfiled）promise 来返回的 {{jsxref("Promise.race()")}} 相反。</p>
 
-<pre class="brush: js notranslate">const pErr = new Promise((resolve, reject) =&gt; {
+<pre class="brush: js">const pErr = new Promise((resolve, reject) =&gt; {
   reject("总是失败");
 });
 
@@ -86,7 +86,7 @@ Promise.any([pErr, pSlow, pFast]).then((value) =&gt; {
 
 <p>如果没有 fulfilled (成功的) promise，<code>Promise.any()</code> 返回 {{jsxref("AggregateError")}} 错误。</p>
 
-<pre class="brush: js notranslate">const pErr = new Promise((resolve, reject) =&gt; {
+<pre class="brush: js">const pErr = new Promise((resolve, reject) =&gt; {
   reject('总是失败');
 });
 
@@ -100,7 +100,7 @@ Promise.any([pErr]).catch((err) =&gt; {
 
 <p>在这个例子，我们有一个获取图片并返回 blob 的函数，我们使用 <code>Promise.any()</code> 来获取一些图片并显示第一张有效的图片（即最先 resolved 的那个 promise）。</p>
 
-<pre class="brush: js notranslate">function fetchAndDecode(url) {
+<pre class="brush: js">function fetchAndDecode(url) {
   return fetch(url).then(response =&gt; {
     if(!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);

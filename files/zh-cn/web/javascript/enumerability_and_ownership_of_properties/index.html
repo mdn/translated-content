@@ -145,7 +145,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
  <li>使用 <code>SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});</code> 时将发生迭代操作。 (或使用 <code>filter()</code>、<code>map()</code> 等方法)</li>
 </ul>
 
-<pre class="brush: js notranslate">var SimplePropertyRetriever = {
+<pre class="brush: js">var SimplePropertyRetriever = {
     getOwnEnumerables: function(obj) {
         return this._getPropertyNames(obj, true, false, this._enumerable);
          // Or could use for..in filtered with hasOwnProperty or just this: return Object.keys(obj);

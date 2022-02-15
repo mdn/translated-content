@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>str</var>.padStart(<var>targetLength</var> [, <var>padString</var>])</pre>
+<pre class="syntaxbox"><var>str</var>.padStart(<var>targetLength</var> [, <var>padString</var>])</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -37,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 
 <h2 id="示例">示例</h2>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">'abc'.padStart(10);         // "       abc"
+<pre class="brush: js line-numbers  language-js"><code class="language-js">'abc'.padStart(10);         // "       abc"
 'abc'.padStart(10, "foo");  // "foofoofabc"
 'abc'.padStart(6,"123465"); // "123abc"
 'abc'.padStart(8, "0");     // "00000abc"
@@ -47,7 +47,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 
 <p>如果原生环境不支持该方法，在其他代码之前先运行下面的代码，将创建 <code>String.prototype.padStart()</code> 方法。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
 if (!String.prototype.padStart) {
     String.prototype.padStart = function padStart(targetLength,padString) {

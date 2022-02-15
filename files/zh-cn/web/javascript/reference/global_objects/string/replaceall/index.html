@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">const newStr = <var>str</var>.replaceAll(<var>regexp</var>|<var>substr</var>, <var>newSubstr</var>|<var>function</var>)</pre>
+<pre class="syntaxbox">const newStr = <var>str</var>.replaceAll(<var>regexp</var>|<var>substr</var>, <var>newSubstr</var>|<var>function</var>)</pre>
 
 <div class="blockIndicator note">
 <p>当使用一个 `regex`时，您必须设置全局（“ g”）标志，<br>
@@ -123,20 +123,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 
 <h3 id="使用_replaceAll">使用 replaceAll</h3>
 
-<pre class="brush: js notranslate">'aabbcc'.replaceAll('b', '.');
+<pre class="brush: js">'aabbcc'.replaceAll('b', '.');
 // 'aa..cc'</pre>
 
 <h3 id="非全局_regex_抛出">非全局 regex 抛出</h3>
 
 <p>使用正则表达式搜索值时，它必须是全局的。这将行不通：</p>
 
-<pre class="brush: js; example-bad notranslate">'aabbcc'.replaceAll(/b/, '.');
+<pre class="brush: js; example-bad">'aabbcc'.replaceAll(/b/, '.');
 TypeError: replaceAll must be called with a global RegExp
 </pre>
 
 <p>这将可以正常运行:</p>
 
-<pre class="brush: js; example-good notranslate">'aabbcc'.replaceAll(/b/g, '.');
+<pre class="brush: js; example-good">'aabbcc'.replaceAll(/b/g, '.');
 "aa..cc"
 </pre>
 

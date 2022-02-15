@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code>String.fromCharCode(<var>num1</var>[, ...[, <var>numN</var>]])</code></pre>
+<pre class="syntaxbox"><code>String.fromCharCode(<var>num1</var>[, ...[, <var>numN</var>]])</code></pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -49,7 +49,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 <p>在 UTF-16 中，BMP 字符使用一个代码单元：</p>
 
-<pre class="brush: js notranslate">String.fromCharCode(65, 66, 67);   // 返回 "ABC"
+<pre class="brush: js">String.fromCharCode(65, 66, 67);   // 返回 "ABC"
 String.fromCharCode(0x2014);       // 返回 "—"
 String.fromCharCode(0x12014);      // 也是返回 "—"; 数字 1 被剔除并忽略
 String.fromCharCode(8212);         // 也是返回 "—"; 8212 是 0x2014 的十进制表示
@@ -58,7 +58,7 @@ String.fromCharCode(8212);         // 也是返回 "—"; 8212 是 0x2014 的十
 <p><a href="https://asecuritysite.com/coding/asc2">完整的 UTF 16 表格</a>.<br>
  在 UTF-16 中，补充字符需要两个代码单元（即一个代理对）：</p>
 
-<pre class="brush: js notranslate">String.fromCharCode(0xD83C, 0xDF03); // Code Point U+1F303 "Night with
+<pre class="brush: js">String.fromCharCode(0xD83C, 0xDF03); // Code Point U+1F303 "Night with
 String.fromCharCode(55356, 57091);   // Stars" == "\uD83C\uDF03"
 
 String.fromCharCode(0xD834, 0xDF06, 0x61, 0xD834, 0xDF07); // "\uD834\uDF06a\uD834\uDF07"

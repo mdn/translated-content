@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.replace(<var>regexp</var>|<var>substr</var>, <var>newSubStr</var>|<var>function</var>)</code></pre>
+<pre class="syntaxbox"><code><var>str</var>.replace(<var>regexp</var>|<var>substr</var>, <var>newSubStr</var>|<var>function</var>)</code></pre>
 
 <h3 id="参数">参数</h3>
 
@@ -137,7 +137,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 
 <p>下面的例子将会使 <code>newString</code> 变成 <code>'abc - 12345 - #$*%'</code>：</p>
 
-<pre class="brush: js notranslate">function replacer(match, p1, p2, p3, offset, string) {
+<pre class="brush: js">function replacer(match, p1, p2, p3, offset, string) {
   // p1 is nondigits, p2 digits, and p3 non-alphanumerics
   return [p1, p2, p3].join(' - ');
 }
@@ -151,7 +151,7 @@ console.log(newString);  // abc - 12345 - #$*%
 
 <p>在下面的例子中，<code>replace()</code> 中使用了正则表达式及忽略大小写标示。</p>
 
-<pre class="brush: js notranslate">var str = 'Twas the night before Xmas...';
+<pre class="brush: js">var str = 'Twas the night before Xmas...';
 var newstr = str.replace(/xmas/i, 'Christmas');
 console.log(newstr);  // Twas the night before Christmas...
 </pre>
@@ -160,7 +160,7 @@ console.log(newstr);  // Twas the night before Christmas...
 
 <p>下面的例子中,正则表达式包含有全局替换(g)和忽略大小写(i)的选项,这使得replace方法用'oranges'替换掉了所有出现的"apples".</p>
 
-<pre class="brush: js notranslate">var re = /apples/gi;
+<pre class="brush: js">var re = /apples/gi;
 var str = "Apples are round, and apples are juicy.";
 var newstr = str.replace(re, "oranges");
 
@@ -172,7 +172,7 @@ console.log(newstr);
 
 <p>下面的例子演示了如何交换一个字符串中两个单词的位置，这个脚本使用$1 和 $2 代替替换文本。</p>
 
-<pre class="brush: js notranslate">var re = /(\w+)\s(\w+)/;
+<pre class="brush: js">var re = /(\w+)\s(\w+)/;
 var str = "John Smith";
 var newstr = str.replace(re, "$2, $1");
 // Smith, John
@@ -185,7 +185,7 @@ console.log(newstr);
 
 <p>在返回前，替换函数允许匹配片段作为参数，并且将它和连字符进行连接作为新的片段。</p>
 
-<pre class="brush: js notranslate">function styleHyphenFormat(propertyName) {
+<pre class="brush: js">function styleHyphenFormat(propertyName) {
   function upperToHyphenLower(match) {
     return '-' + match.toLowerCase();
   }
@@ -197,7 +197,7 @@ console.log(newstr);
 
 <p>因为我们想在最终的替换中进一步转变匹配结果，所以我们必须使用一个函数。这迫使我们在使用{{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}方法前进行评估。如果我们尝试不用一个函数进行匹配，那么使用{{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} 方法将不会有效。</p>
 
-<pre class="brush: js notranslate">var newString = propertyName.replace(/[A-Z]/g, '-' + '$&amp;'.toLowerCase());  // won't work
+<pre class="brush: js">var newString = propertyName.replace(/[A-Z]/g, '-' + '$&amp;'.toLowerCase());  // won't work
 </pre>
 
 <p>这是因为 <code>'$&amp;'.toLowerCase()</code> 会先被解析成字符串字面量（这会导致相同的'$&amp;')而不是当作一个模式。</p>
@@ -208,7 +208,7 @@ console.log(newstr);
 
 <p>正则表达式test检查任何数字是否以 F 结尾。华氏温度通过第二个参数p1进入函数。这个函数基于华氏温度作为字符串传递给f2c函数设置成摄氏温度。然后f2c()返回摄氏温度。这个函数与Perl的 s///e 标志相似。</p>
 
-<pre class="brush: js notranslate">function f2c(x)
+<pre class="brush: js">function f2c(x)
 {
   function convert(str, p1, offset, s)
   {
@@ -227,7 +227,7 @@ console.log(newstr);
 <p><strong>输入：</strong><br>
  一个由 x，- 和 _ 组成的字符串。</p>
 
-<pre class="notranslate">x-x_
+<pre>x-x_
 
 ---x---x---x---
 
@@ -240,7 +240,7 @@ _x_x___x___x___
 
 <p>一个数组对象。'x' 产生一个 'on' 状态，'-'（连接符）产生一个 'off' 状态，而 '_' （下划线）表示 'on' 状态的长度。</p>
 
-<pre class="brush: js notranslate">[
+<pre class="brush: js">[
   { on: true, length: 1 },
   { on: false, length: 1 },
   { on: true, length: 2 }
@@ -249,7 +249,7 @@ _x_x___x___x___
 
 <p>代码片段：</p>
 
-<pre class="brush: js notranslate">var str = 'x-x_';
+<pre class="brush: js">var str = 'x-x_';
 var retArr = [];
 str.replace(/(x_*)|(-)/g, function(match, p1, p2) {
   if (p1) { retArr.push({ on: true, length: p1.length }); }

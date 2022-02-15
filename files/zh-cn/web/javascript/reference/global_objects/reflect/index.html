@@ -55,7 +55,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 
 <h3 id="检测一个对象是否存在特定属性">检测一个对象是否存在特定属性</h3>
 
-<pre class="notranslate">const duck = {
+<pre>const duck = {
   name: 'Maurice',
   color: 'white',
   greeting: function() {
@@ -70,12 +70,12 @@ Reflect.has(duck, 'haircut');
 
 <h3 id="返回这个对象自身的属性">返回这个对象自身的属性</h3>
 
-<pre class="notranslate">Reflect.ownKeys(duck);
+<pre>Reflect.ownKeys(duck);
 // [ "name", "color", "greeting" ]</pre>
 
 <h3 id="为这个对象添加一个新的属性">为这个对象添加一个新的属性</h3>
 
-<pre class="notranslate">Reflect.set(duck, 'eyes', 'black');
+<pre>Reflect.set(duck, 'eyes', 'black');
 // returns "true" if successful
 // "duck" now contains the property "eyes: 'black'"</pre>
 

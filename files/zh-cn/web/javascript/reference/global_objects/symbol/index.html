@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code>Symbol(<em>[description]</em>)</code></pre>
+<pre class="syntaxbox"><code>Symbol(<em>[description]</em>)</code></pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -32,24 +32,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 
 <p>直接使用<code>Symbol()</code>创建新的symbol类型，并用一个可选的字符串作为其描述。</p>
 
-<pre class="brush: js notranslate">var sym1 = Symbol();
+<pre class="brush: js">var sym1 = Symbol();
 var sym2 = Symbol('foo');
 var sym3 = Symbol('foo');
 </pre>
 
 <p>上面的代码创建了三个新的symbol类型。 注意，<code>Symbol("foo")</code> 不会强制将字符串 “foo” 转换成symbol类型。它每次都会创建一个新的 symbol类型：</p>
 
-<pre class="brush: js notranslate">Symbol("foo") === Symbol("foo"); // false</pre>
+<pre class="brush: js">Symbol("foo") === Symbol("foo"); // false</pre>
 
 <p>下面带有 {{jsxref("Operators/new", "new")}} 运算符的语法将抛出 {{jsxref("TypeError")}} 错误：</p>
 
-<pre class="brush: js notranslate">var sym = new Symbol(); // TypeError</pre>
+<pre class="brush: js">var sym = new Symbol(); // TypeError</pre>
 
 <p>这会阻止创建一个显式的 Symbol 包装器对象而不是一个 Symbol 值。围绕原始数据类型创建一个显式包装器对象从 ECMAScript 6 开始不再被支持。 然而，现有的原始包装器对象，如 <code style="font-style: normal;">new Boolean</code>、<code style="font-style: normal;">new String</code>以及<code>new Number</code>，因为遗留原因仍可被创建。</p>
 
 <p>如果你真的想创建一个 <u>Symbol 包装器对象 </u>(<code>Symbol wrapper object</code>)，你可以使用 <code>Object()</code> 函数：</p>
 
-<pre class="brush: js notranslate">var sym = Symbol("foo");
+<pre class="brush: js">var sym = Symbol("foo");
 typeof sym;     // "symbol"
 var symObj = Object(sym);
 typeof symObj;  // "object"</pre>
@@ -150,7 +150,7 @@ typeof symObj;  // "object"</pre>
 
 <p> {{jsxref("Operators/typeof", "typeof")}}运算符能帮助你识别 symbol 类型</p>
 
-<pre class="brush: js notranslate"><code class="language-js">typeof Symbol() === 'symbol'
+<pre class="brush: js"><code class="language-js">typeof Symbol() === 'symbol'
 typeof Symbol('foo') === 'symbol'
 typeof Symbol.iterator === 'symbol'</code>
 </pre>
@@ -170,7 +170,7 @@ typeof Symbol.iterator === 'symbol'</code>
 
 <p>Symbols 在 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> 迭代中不可枚举。另外，{{jsxref("Object.getOwnPropertyNames()")}} 不会返回 symbol 对象的属性，但是你能使用 {{jsxref("Object.getOwnPropertySymbols()")}} 得到它们。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var obj = {};
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var obj = {};
 
 obj[Symbol("a")] = "a";
 obj[Symbol.for("b")] = "b";
@@ -185,7 +185,7 @@ for (var i in obj) {
 
 <p>当使用 JSON.stringify() 时，以 symbol 值作为键的属性会被完全忽略：</p>
 
-<pre class="brush: js notranslate"><code class="language-js">JSON.stringify({[Symbol("foo")]: "foo"});
+<pre class="brush: js"><code class="language-js">JSON.stringify({[Symbol("foo")]: "foo"});
 // '{}'</code></pre>
 
 <p>更多细节，请看 {{jsxref("JSON.stringify()")}}。</p>
@@ -194,7 +194,7 @@ for (var i in obj) {
 
 <p>当一个 Symbol 包装器对象作为一个属性的键时，这个对象将被强制转换为它包装过的 symbol 值：</p>
 
-<pre class="brush: js notranslate"><code class="language-js">var sym = Symbol("foo");
+<pre class="brush: js"><code class="language-js">var sym = Symbol("foo");
 var obj = {[sym]: 1};
 obj[sym];            // 1
 obj[Object(sym)];    // still 1</code></pre>

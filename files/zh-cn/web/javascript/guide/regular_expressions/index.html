@@ -21,14 +21,14 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <p>使用一个正则表达式字面量，其由包含在斜杠之间的模式组成，如下所示：</p>
 
-<pre class="brush: js notranslate">var re = /ab+c/;
+<pre class="brush: js">var re = /ab+c/;
 </pre>
 
 <p>脚本加载后，正则表达式字面量就会被编译。当正则表达式保持不变时，使用此方法可获得更好的性能。</p>
 
 <p>或者调用<code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp" title="zh-CN/docs/JavaScript/Reference/Global Objects/RegExp">RegExp</a></code>对象的构造函数，如下所示：</p>
 
-<pre class="brush: js notranslate">var re = new RegExp("ab+c");
+<pre class="brush: js">var re = new RegExp("ab+c");
 </pre>
 
 <p>在脚本运行过程中，用构造函数创建的正则表达式会被编译。如果正则表达式将会改变，或者它将会从用户输入等来源中动态地产生，就需要使用构造函数来创建正则表达式。</p>
@@ -384,7 +384,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <p>将用户输入转义为正则表达式中的一个字面字符串, 可以通过简单的替换来实现：</p>
 
-<pre class="brush: js notranslate">function escapeRegExp(string) {
+<pre class="brush: js">function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&amp;");
   //$&amp;表示整个被匹配的字符串
 }</pre>
@@ -451,13 +451,13 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <p>在接下来的例子中，脚本将使用exec方法在一个字符串中查找一个匹配。</p>
 
-<pre class="brush: js notranslate">var myRe = /d(b+)d/g;
+<pre class="brush: js">var myRe = /d(b+)d/g;
 var myArray = myRe.exec("cdbbdbsbz");
 </pre>
 
 <p>如果你不需要访问正则表达式的属性，这个脚本通过另一个方法来创建myArray：</p>
 
-<pre class="brush: js notranslate">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
+<pre class="brush: js">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
 // 和 "cdbbdbsbz".match(/d(b+)d/g); 相似。
 // 但是 "cdbbdbsbz".match(/d(b+)d/g) 输出数组 [ "dbbd" ]，
 // 而 /d(b+)d/g.exec('cdbbdbsbz') 输出数组 [ "dbbd", "bb", index: 1, input: "cdbbdbsbz" ].
@@ -466,7 +466,7 @@ var myArray = myRe.exec("cdbbdbsbz");
 
 <p>如果你想通过一个字符串构建正则表达式，那么这个脚本还有另一种方法：</p>
 
-<pre class="brush: js notranslate">var myRe = new RegExp("d(b+)d", "g");
+<pre class="brush: js">var myRe = new RegExp("d(b+)d", "g");
 var myArray = myRe.exec("cdbbdbsbz");
 </pre>
 
@@ -520,25 +520,25 @@ var myArray = myRe.exec("cdbbdbsbz");
 
 <p>如这个例子中的第二种形式所示，你可以使用对象初始器创建一个正则表达式实例，但不分配给变量。如果你这样做，那么，每一次使用时都会创建一个新的正则表达式实例。因此，如果你不把正则表达式实例分配给一个变量，你以后将不能访问这个正则表达式实例的属性。例如，假如你有如下脚本：</p>
 
-<pre class="brush: js notranslate">var myRe = /d(b+)d/g;
+<pre class="brush: js">var myRe = /d(b+)d/g;
 var myArray = myRe.exec("cdbbdbsbz");
 console.log("The value of lastIndex is " + myRe.lastIndex);
 </pre>
 
 <p>这个脚本输出如下：</p>
 
-<pre class="notranslate">The value of lastIndex is 5
+<pre>The value of lastIndex is 5
 </pre>
 
 <p>然而，如果你有如下脚本：</p>
 
-<pre class="brush: js notranslate">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
+<pre class="brush: js">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
 console.log("The value of lastIndex is " + /d(b+)d/g.lastIndex);
 </pre>
 
 <p>它显示为：</p>
 
-<pre class="notranslate">The value of lastIndex is 0
+<pre>The value of lastIndex is 0
 </pre>
 
 <p>当发生/d(b+)d/g使用两个不同状态的正则表达式对象，lastIndex属性会得到不同的值。如果你需要访问一个正则表达式的属性，则需要创建一个对象初始化生成器，你应该首先把它赋值给一个变量。</p>
@@ -551,7 +551,7 @@ console.log("The value of lastIndex is " + /d(b+)d/g.lastIndex);
 
 <p>下面的脚本使用replace()方法来转换字符串中的单词。在匹配到的替换文本中，脚本使用替代的$ 1,$ 2表示第一个和第二个括号的子字符串匹配。</p>
 
-<pre class="brush: js notranslate">var re = /(\w+)\s(\w+)/;
+<pre class="brush: js">var re = /(\w+)\s(\w+)/;
 var str = "John Smith";
 var newstr = str.replace(re, "$2, $1");
 console.log(newstr);
@@ -601,19 +601,19 @@ console.log(newstr);
 
 <p>为了在正则表达式中包含标志，请使用以下语法：</p>
 
-<pre class="brush: js notranslate">var re = /pattern/flags;
+<pre class="brush: js">var re = /pattern/flags;
 </pre>
 
 <p>或者</p>
 
-<pre class="brush: js notranslate">var re = new RegExp("pattern", "flags");
+<pre class="brush: js">var re = new RegExp("pattern", "flags");
 </pre>
 
 <p>值得注意的是，标志是一个正则表达式的一部分，它们在接下来的时间将不能添加或删除。</p>
 
 <p>例如，re = /\w+\s/g 将创建一个查找一个或多个字符后有一个空格的正则表达式，或者组合起来像此要求的字符串。</p>
 
-<pre class="brush: js notranslate">var re = /\w+\s/g;
+<pre class="brush: js">var re = /\w+\s/g;
 var str = "fee fi fo fum";
 var myArray = str.match(re);
 console.log(myArray);
@@ -623,19 +623,19 @@ console.log(myArray);
 
 <p>这段代码将输出 ["fee ", "fi ", "fo "]。在这个例子中，你可以将：</p>
 
-<pre class="brush: js notranslate">var re = /\w+\s/g;
+<pre class="brush: js">var re = /\w+\s/g;
 </pre>
 
 <p>替换成：</p>
 
-<pre class="brush: js notranslate">var re = new RegExp("\\w+\\s", "g");
+<pre class="brush: js">var re = new RegExp("\\w+\\s", "g");
 </pre>
 
 <p>并且能获取到相同的结果。</p>
 
 <p>使用<code>.exec()</code>方法时，与'<code>g</code>'标志关联的行为是不同的。 （“class”和“argument”的作用相反：在<code>.match()</code>的情况下，字符串类（或数据类型）拥有该方法，而正则表达式只是一个参数，而在<code>.exec()</code>的情况下，它是拥有该方法的正则表达式，其中字符串是参数。对比<em><code>str.match(re)</code></em>与<em><code>re.exec(str)</code></em> ), '<code>g</code>'标志与<code>.exec()</code>方法一起使用获得迭代进展。</p>
 
-<pre class="brush: js notranslate">var xArray; while(xArray = re.exec(str)) console.log(xArray);
+<pre class="brush: js">var xArray; while(xArray = re.exec(str)) console.log(xArray);
 // produces:
 // ["fee ", index: 0, input: "fee fi fo fum"]
 // ["fi ", index: 4, input: "fee fi fo fum"]
@@ -651,7 +651,7 @@ console.log(myArray);
 
 <p>以下例子解释了正则表达式的构成和 <code>string.split()</code> 以及 <code>string.replace()</code>的用途。它会整理一个只有粗略格式的含有全名（名字首先出现）的输入字符串，这个字符串被空格、换行符和一个分号分隔。最终，它会颠倒名字顺序（姓氏首先出现）和list的类型。</p>
 
-<pre class="brush: js notranslate">// 下面这个姓名字符串包含了多个空格和制表符，
+<pre class="brush: js">// 下面这个姓名字符串包含了多个空格和制表符，
 // 且在姓和名之间可能有多个空格和制表符。
 var names = "Orange Trump ;Fred Barney; Helen Rigby ; Bill Abel ; Chris Hand ";
 
@@ -716,7 +716,7 @@ console.log(output.join("\n"));
 
 <p>当用户按下 Enter 设置 RegExp.input，这些变化也能被激活。</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;

@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate">Object.getOwnPropertyDescriptor(<em>obj</em>, <em>prop</em>)</pre>
+<pre class="syntaxbox">Object.getOwnPropertyDescriptor(<em>obj</em>, <em>prop</em>)</pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -54,7 +54,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
 
 <h2 id="Examples" name="Examples">示例</h2>
 
-<pre class="brush: js notranslate">var o, d;
+<pre class="brush: js">var o, d;
 
 o = { get foo() { return 17; } };
 d = Object.getOwnPropertyDescriptor(o, "foo");
@@ -92,7 +92,7 @@ d = Object.getOwnPropertyDescriptor(o, "baz");
 
 <p>在 ES5 中，如果该方法的第一个参数不是对象（而是原始类型），那么就会产生出现 {{jsxref("TypeError")}}。而在 ES2015，第一个的参数不是对象的话就会被强制转换为对象。</p>
 
-<pre class="brush: js notranslate">Object.getOwnPropertyDescriptor('foo', 0);
+<pre class="brush: js">Object.getOwnPropertyDescriptor('foo', 0);
 // 类型错误: "foo" 不是一个对象  // ES5 code
 
 Object.getOwnPropertyDescriptor('foo', 0);

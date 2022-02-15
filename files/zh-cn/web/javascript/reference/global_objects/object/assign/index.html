@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code>Object.assign(<var>target</var>, ...<var>sources</var>)</code></pre>
+<pre class="syntaxbox"><code>Object.assign(<var>target</var>, ...<var>sources</var>)</code></pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -53,7 +53,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 <p>这个 <a href="/zh-CN/docs/Glossary/Polyfill">polyfill</a> 不支持 symbol 属性, 由于 ES5 中本来就不存在 symbols :</p>
 
-<pre class="notranslate">if (typeof Object.assign !== 'function') {
+<pre>if (typeof Object.assign !== 'function') {
   // Must be writable: true, enumerable: false, configurable: true
   Object.defineProperty(Object, "assign", {
     value: function assign(target, varArgs) { // .length of function is 2
@@ -87,7 +87,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 <h3 id="Example_Cloning_an_object" name="Example:_Cloning_an_object">复制一个对象</h3>
 
-<pre class="brush: js notranslate">const obj = { a: 1 };
+<pre class="brush: js">const obj = { a: 1 };
 const copy = Object.assign({}, obj);
 console.log(copy); // { a: 1 }
 </pre>
@@ -98,7 +98,7 @@ console.log(copy); // { a: 1 }
 
 <p>假如源值是一个对象的引用，它仅仅会复制其引用值。</p>
 
-<pre class="brush: js notranslate">const log = console.log;
+<pre class="brush: js">const log = console.log;
 
 function test() {
   'use strict';
@@ -139,7 +139,7 @@ test();
 
 <h3 id="Example_Merging_objects" name="Example:_Merging_objects">合并对象</h3>
 
-<pre class="brush: js notranslate">const o1 = { a: 1 };
+<pre class="brush: js">const o1 = { a: 1 };
 const o2 = { b: 2 };
 const o3 = { c: 3 };
 
@@ -150,7 +150,7 @@ console.log(o1);  // { a: 1, b: 2, c: 3 }, 注意目标对象自身也会改变�
 
 <h3 id="合并具有相同属性的对象">合并具有相同属性的对象</h3>
 
-<pre class="brush: js notranslate">const o1 = { a: 1, b: 1, c: 1 };
+<pre class="brush: js">const o1 = { a: 1, b: 1, c: 1 };
 const o2 = { b: 2, c: 2 };
 const o3 = { c: 3 };
 
@@ -161,7 +161,7 @@ console.log(obj); // { a: 1, b: 2, c: 3 }</pre>
 
 <h3 id="Example_Symbol_properties" name="Example:_Symbol_properties">拷贝 symbol 类型的属性</h3>
 
-<pre class="brush: js notranslate">const o1 = { a: 1 };
+<pre class="brush: js">const o1 = { a: 1 };
 const o2 = { [Symbol('foo')]: 2 };
 
 const obj = Object.assign({}, o1, o2);
@@ -170,7 +170,7 @@ Object.getOwnPropertySymbols(obj); // [Symbol(foo)]</pre>
 
 <h3 id="Example_Only_own_enumerable_properties" name="Example:_Only_own_enumerable_properties">继承属性和不可枚举属性是不能拷贝的</h3>
 
-<pre class="brush: js notranslate">const obj = Object.create({foo: 1}, { // foo 是个继承属性。
+<pre class="brush: js">const obj = Object.create({foo: 1}, { // foo 是个继承属性。
     bar: {
         value: 2  // bar 是个不可枚举属性。
     },
@@ -186,7 +186,7 @@ console.log(copy); // { baz: 3 }
 
 <h3 id="Example_Primitives" name="Example:_Primitives">原始类型会被包装为对象</h3>
 
-<pre class="brush: js notranslate">const v1 = "abc";
+<pre class="brush: js">const v1 = "abc";
 const v2 = true;
 const v3 = 10;
 const v4 = Symbol("foo")
@@ -198,7 +198,7 @@ console.log(obj); // { "0": "a", "1": "b", "2": "c" }</pre>
 
 <h3 id="Example_Exceptions" name="Example:_Exceptions">异常会打断后续拷贝任务</h3>
 
-<pre class="brush: js notranslate">const target = Object.defineProperty({}, "foo", {
+<pre class="brush: js">const target = Object.defineProperty({}, "foo", {
     value: 1,
     writable: false
 }); // target 的 foo 属性是个只读属性。
@@ -216,7 +216,7 @@ console.log(target.baz);  // undefined，第三个源对象更是不会被拷贝
 
 <h3 id="Example_Copy_accessors" name="Example:_Copy_accessors">拷贝访问器</h3>
 
-<pre class="brush: js notranslate">const obj = {
+<pre class="brush: js">const obj = {
   foo: 1,
   get bar() {
     return 2;
@@ -255,7 +255,7 @@ console.log(copy);
 
 <p>此{{Glossary("Polyfill","polyfill")}}不支持 symbol 属性，因为ES5 中根本没有 symbol ：</p>
 
-<pre class="brush: js notranslate">if (typeof Object.assign != 'function') {
+<pre class="brush: js">if (typeof Object.assign != 'function') {
   // Must be writable: true, enumerable: false, configurable: true
   Object.defineProperty(Object, "assign", {
     value: function assign(target, varArgs) { // .length of function is 2

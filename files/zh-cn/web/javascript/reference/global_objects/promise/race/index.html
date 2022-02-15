@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>Promise.race(iterable)</var>;</pre>
+<pre class="syntaxbox"><var>Promise.race(iterable)</var>;</pre>
 
 <h3 id="参数"><strong>参数</strong></h3>
 
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 
 <h3 id="Promise.race的异步性">Promise.race的异步性</h3>
 
-<pre class="brush: js notranslate">// we are passing as argument an array of promises that are already resolved,
+<pre class="brush: js">// we are passing as argument an array of promises that are already resolved,
 // to trigger Promise.race as soon as possible
 var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
 
@@ -61,7 +61,7 @@ setTimeout(function(){
 
 <h3 id="使用_Promise.race_–_setTimeout_的示例">使用 Promise.race –  setTimeout 的示例</h3>
 
-<pre class="brush: js notranslate">var p1 = new Promise(function(resolve, reject) {
+<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
     setTimeout(resolve, 500, "one");
 });
 var p2 = new Promise(function(resolve, reject) {

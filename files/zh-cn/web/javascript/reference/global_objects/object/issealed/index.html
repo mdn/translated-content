@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code>Object.isSealed(<em>obj</em>)</code></pre>
+<pre class="syntaxbox"><code>Object.isSealed(<em>obj</em>)</code></pre>
 
 <h3 id="参数">参数</h3>
 
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 
 <h2 id="Examples" name="Examples">例子</h2>
 
-<pre class="brush: js notranslate">// 新建的对象默认不是密封的.
+<pre class="brush: js">// 新建的对象默认不是密封的.
 var empty = {};
 Object.isSealed(empty); // === false
 
@@ -72,7 +72,7 @@ Object.isFrozen(s3); // === true ，访问器属性不考虑可写不可写,只�
 
 <p>在ES5中，如果这个方法的参数不是一个对象（一个原始类型），那么它会导致{{jsxref("TypeError")}}。在ES2015中，非对象参数将被视为是一个密封的普通对象，只返回<code>true</code>。</p>
 
-<pre class="brush: js notranslate">Object.isSealed(1);
+<pre class="brush: js">Object.isSealed(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isSealed(1);

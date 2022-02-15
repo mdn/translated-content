@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>str</var>.toUpperCase()</pre>
+<pre class="syntaxbox"><var>str</var>.toUpperCase()</pre>
 
 <h3 id="返回值">返回值</h3>
 
@@ -40,14 +40,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 <h3 id="基本用法">基本用法</h3>
 
-<pre class="brush: js notranslate">console.log('alphabet'.toUpperCase()); // 'ALPHABET'
+<pre class="brush: js">console.log('alphabet'.toUpperCase()); // 'ALPHABET'
 </pre>
 
 <h3 id="将非字符串类型的_this_（上下文）转为字符串">将非字符串类型的 <code>this</code> （上下文）转为字符串</h3>
 
 <p>此方法会将任何非字符串类型的值转为字符串， 当你将其上下文 <code>this</code> 值设置为非字符串类型</p>
 
-<pre class="brush: js notranslate">const a = String.prototype.toUpperCase.call({
+<pre class="brush: js">const a = String.prototype.toUpperCase.call({
   toString: function toString() {
     return 'abcdef';
   }

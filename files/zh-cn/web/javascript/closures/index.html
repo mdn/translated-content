@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Closures
 <p>请看下面的代码：</p>
 
 <div style="width: auto; overflow: hidden;">
-<pre class="brush: js notranslate">function init() {
+<pre class="brush: js">function init() {
     var name = "Mozilla"; // name 是一个被 init 创建的局部变量
     function displayName() { // displayName() 是内部函数，一个闭包
         alert(name); // 使用了父函数中声明的变量
@@ -37,7 +37,7 @@ init();</pre>
 
 <p>现在来考虑以下例子 ：</p>
 
-<pre class="brush: js notranslate">function makeFunc() {
+<pre class="brush: js">function makeFunc() {
     var name = "Mozilla";
     function displayName() {
         alert(name);
@@ -56,7 +56,7 @@ myFunc();</pre>
 
 <p>下面是一个更有意思的示例 — 一个 <code>makeAdder</code> 函数：</p>
 
-<pre class="brush: js notranslate">function makeAdder(x) {
+<pre class="brush: js">function makeAdder(x) {
   return function(y) {
     return x + y;
   };
@@ -85,7 +85,7 @@ console.log(add10(2)); // 12
 
 <p>假如，我们想在页面上添加一些可以调整字号的按钮。一种方法是以像素为单位指定 <code>body</code> 元素的 <code>font-size</code>，然后通过相对的 <code>em</code> 单位设置页面中其它元素（例如<code>header</code>）的字号：</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
 }
@@ -103,7 +103,7 @@ h2 {
 
 <p>以下是 JavaScript：</p>
 
-<pre class="brush: js notranslate">function makeSizer(size) {
+<pre class="brush: js">function makeSizer(size) {
   return function() {
     document.body.style.fontSize = size + 'px';
   };
@@ -116,12 +116,12 @@ var size16 = makeSizer(16);
 
 <p><code>size12</code>，<code>size14</code> 和 <code>size16</code> 三个函数将分别把 <code>body</code> 文本调整为 12，14，16 像素。我们可以将它们分别添加到按钮的点击事件上。如下所示：</p>
 
-<pre class="brush: js notranslate">document.getElementById('size-12').onclick = size12;
+<pre class="brush: js">document.getElementById('size-12').onclick = size12;
 document.getElementById('size-14').onclick = size14;
 document.getElementById('size-16').onclick = size16;
 </pre>
 
-<pre class="brush: html notranslate">&lt;a href="#" id="size-12"&gt;12&lt;/a&gt;
+<pre class="brush: html">&lt;a href="#" id="size-12"&gt;12&lt;/a&gt;
 &lt;a href="#" id="size-14"&gt;14&lt;/a&gt;
 &lt;a href="#" id="size-16"&gt;16&lt;/a&gt;
 </pre>
@@ -136,7 +136,7 @@ document.getElementById('size-16').onclick = size16;
 
 <p>下面的示例展现了如何使用闭包来定义公共函数，并令其可以访问私有函数和变量。这个方式也称为 <a class="external" href="http://www.google.com/search?q=javascript+module+pattern" title="http://www.google.com/search?q=javascript+module+pattern">模块模式（module pattern）：</a></p>
 
-<pre class="brush: js notranslate">var Counter = (function() {
+<pre class="brush: js">var Counter = (function() {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
@@ -172,7 +172,7 @@ console.log(Counter.value()); /* logs 1 */
 <p>你应该注意到我们定义了一个匿名函数，用于创建一个计数器。我们立即执行了这个匿名函数，并将他的值赋给了变量<code>Counter</code>。我们可以把这个函数储存在另外一个变量<code>makeCounter</code>中，并用他来创建多个计数器。</p>
 </div>
 
-<pre class="brush: js notranslate">var makeCounter = function() {
+<pre class="brush: js">var makeCounter = function() {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
@@ -213,13 +213,13 @@ console.log(Counter2.value()); /* logs 0 */
 
 <p>在 ECMAScript 2015 引入 <a href="/en-US/docs/JavaScript/Reference/Statements/let" title="let"><code>let</code> 关键字</a> 之前，在循环中有一个常见的闭包创建问题。参考下面的示例：</p>
 
-<pre class="brush: html notranslate">&lt;p id="help"&gt;Helpful notes will appear here&lt;/p&gt;
+<pre class="brush: html">&lt;p id="help"&gt;Helpful notes will appear here&lt;/p&gt;
 &lt;p&gt;E-mail: &lt;input type="text" id="email" name="email"&gt;&lt;/p&gt;
 &lt;p&gt;Name: &lt;input type="text" id="name" name="name"&gt;&lt;/p&gt;
 &lt;p&gt;Age: &lt;input type="text" id="age" name="age"&gt;&lt;/p&gt;
 </pre>
 
-<pre class="brush: js notranslate">function showHelp(help) {
+<pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -251,7 +251,7 @@ setupHelp();
 
 <p>解决这个问题的一种方案是使用更多的闭包：特别是使用前面所述的函数工厂：</p>
 
-<pre class="brush: js notranslate">function showHelp(help) {
+<pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -283,7 +283,7 @@ setupHelp();
 
 <p>另一种方法使用了匿名闭包：</p>
 
-<pre class="brush: js notranslate">function showHelp(help) {
+<pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -308,7 +308,7 @@ setupHelp();</pre>
 
 <p>如果不想使用过多的闭包，你可以用ES2015引入的let关键词：</p>
 
-<pre class="brush: js notranslate">function showHelp(help) {
+<pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -333,7 +333,7 @@ setupHelp();</pre>
 
 <p>另一个可选方案是使用 <code>forEach()</code>来遍历<code>helpText</code>数组并给每一个<code><a href="/zh-CN/docs/Web/HTML/Element/p" title="The HTML &lt;p> element represents a paragraph.">&lt;p&gt;</a></code>添加一个监听器，如下所示：</p>
 
-<pre class="brush: js notranslate">function showHelp(help) {
+<pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -361,7 +361,7 @@ setupHelp();</pre>
 
 <p>考虑以下示例：</p>
 
-<pre class="brush: js notranslate">function MyObject(name, message) {
+<pre class="brush: js">function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
   this.getName = function() {
@@ -376,7 +376,7 @@ setupHelp();</pre>
 
 <p>在上面的代码中，我们并没有利用到闭包的好处，因此可以避免使用闭包。修改成如下：</p>
 
-<pre class="brush: js notranslate">function MyObject(name, message) {
+<pre class="brush: js">function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
@@ -393,7 +393,7 @@ MyObject.prototype = {
 
 <p>但我们不建议重新定义原型。可改成如下例子：</p>
 
-<pre class="brush: js notranslate">function MyObject(name, message) {
+<pre class="brush: js">function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }

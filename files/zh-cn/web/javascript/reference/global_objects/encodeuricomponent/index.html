@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">encodeURIComponent(str);</pre>
+<pre class="syntaxbox">encodeURIComponent(str);</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 
 <p><code>encodeURIComponent</code> 转义除了如下所示外的所有字符：</p>
 
-<pre class="notranslate">不转义的字符：
+<pre>不转义的字符：
     A-Z a-z 0-9 <code>-</code> <code>_</code> <code>.</code> <code>!</code> <code>~</code> <code>*</code> <code>'</code> <code>(</code> <code>)</code></pre>
 
 <p><code>encodeURIComponent()</code> 和 <strong><code>encodeURI</code></strong> 有以下几个不同点：</p>
@@ -54,7 +54,7 @@ console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (the space gets encode
 
 <p>注意，如果试图编码一个非高-低位完整的代理字符，将会抛出一个 {{jsxref("URIError")}} 错误，例如：</p>
 
-<pre class="brush: js notranslate">// 高低位完整
+<pre class="brush: js">// 高低位完整
 alert(encodeURIComponent('\uD800\uDFFF'));
 
 // 只有高位，将抛出"URIError: malformed URI sequence"
@@ -69,7 +69,7 @@ alert(encodeURIComponent('\uDFFF')); </pre>
 
 <p>为了更严格的遵循 {{rfc("3986")}}（它保留 !, ', (, ), 和 *），即使这些字符并没有正式划定 URI 的用途，下面这种方式是比较安全的：</p>
 
-<pre class="brush: js notranslate">function fixedEncodeURIComponent (str) {
+<pre class="brush: js">function fixedEncodeURIComponent (str) {
   return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
     return '%' + c.charCodeAt(0).toString(16).toUpperCase();
   });
@@ -79,7 +79,7 @@ alert(encodeURIComponent('\uDFFF')); </pre>
 
 <p>下面这个例子提供了 UTF-8 下 {{HTTPHeader("Content-Disposition")}} 和 {{HTTPHeader("Link")}} 的服务器响应头信息的参数（例如 UTF-8 文件名)：</p>
 
-<pre class="brush: js notranslate">var fileName = 'my file(2).txt';
+<pre class="brush: js">var fileName = 'my file(2).txt';
 var header = "Content-Disposition: attachment; filename*=UTF-8''"
              + encodeRFC5987ValueChars(fileName);
 

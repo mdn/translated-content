@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="notranslate"><var>regexObj</var>.test(str)</pre>
+<pre><var>regexObj</var>.test(str)</pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 <p>一个简单的例子，测试 "hello" 是否包含在字符串的最开始，返回布尔值。</p>
 
-<pre class="brush: js notranslate">let str = 'hello world!';
+<pre class="brush: js">let str = 'hello world!';
 let result = /^hello/.test(str);
 console.log(result);
 // true
@@ -50,7 +50,7 @@ console.log(result);
 
 <p>下例打印一条信息，该信息内容取决于是否成功通过指定测试：</p>
 
-<pre class="brush: js notranslate">function testinput(re, str){
+<pre class="brush: js">function testinput(re, str){
     var midstring;
     if (re.test(str)) {
         midstring = " contains ";
@@ -67,7 +67,7 @@ console.log(result);
 
 <p>下面的实例表现了这种行为： </p>
 
-<pre class="brush: js notranslate">var regex = /foo/g;
+<pre class="brush: js">var regex = /foo/g;
 
 // regex.lastIndex is at 0
 regex.test('foo'); // true

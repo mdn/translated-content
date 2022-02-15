@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 
 <p>全等操作符比较两个值是否相等，两个被比较的值在比较前都不进行隐式转换。如果两个被比较的值具有不同的类型，这两个值是不全等的。否则，如果两个被比较的值类型相同，值也相同，并且都不是 number 类型时，两个值全等。最后，如果两个值都是 number 类型，当两个都不是 NaN，并且数值相同，或是两个值分别为 +0 和 -0 时，两个值被认为是全等的。</p>
 
-<pre class="brush: js notranslate">var num = 0;
+<pre class="brush: js">var num = 0;
 var obj = new String("0");
 var str = "0";
 var b = false;
@@ -145,7 +145,7 @@ console.log(obj === undefined); // false
 
 <p>一般而言，根据 ECMAScript 规范，所有的对象都与 <code>undefined </code>和 <code>null </code>不相等。但是大部分浏览器允许非常窄的一类对象（即，所有页面中的 <code>document.all </code>对象），在某些情况下，充当效仿 <code>undefined </code>的角色。相等操作符就是在这样的一个背景下。因此，<code>IsFalsy(A) </code>方法的值为 <code>true </code>，当且仅当 <code>A </code>效仿 <code>undefined</code>。在其他所有情况下，一个对象都不会等于 <code>undefined </code>或 <code>null</code>。</p>
 
-<pre class="brush: js notranslate">var num = 0;
+<pre class="brush: js">var num = 0;
 var obj = new String("0");
 var str = "0";
 var b = false;
@@ -170,7 +170,7 @@ console.log(obj == undefined);
 
 <p>同值相等解决了最后一个用例：确定两个值是否在任何情况下功能上是相同的。（这个用例演示了<a href="http://zh.wikipedia.org/zh-cn/%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99">里氏替换原则</a>的实例。）当试图对不可变（immutable）属性修改时发生出现的情况：</p>
 
-<pre class="brush: js notranslate">// 向 Nmuber 构造函数添加一个不可变的属性 NEGATIVE_ZERO
+<pre class="brush: js">// 向 Nmuber 构造函数添加一个不可变的属性 NEGATIVE_ZERO
 Object.defineProperty(Number, "NEGATIVE_ZERO",
                       { value: -0, writable: false, configurable: false, enumerable: false });
 
@@ -388,7 +388,7 @@ function attemptMutation(v)
  <dd>
  <p>显而易见，对<code>0一元负操作得到</code><code>-0</code>。但表达式的抽象化可能在你没有意识到得情况下导致-0延续传播。例如当考虑下例时:</p>
 
- <pre class="brush:js  language-js notranslate"><code class="language-js">let stoppingForce = obj.mass * -obj.velocity</code></pre>
+ <pre class="brush:js  language-js"><code class="language-js">let stoppingForce = obj.mass * -obj.velocity</code></pre>
 
  <div class="line-number" style="top: 0px;"></div>
 

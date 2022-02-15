@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>str</var>.includes(<var>searchString</var>[, <var>position</var>])</pre>
+<pre class="syntaxbox"><var>str</var>.includes(<var>searchString</var>[, <var>position</var>])</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -39,13 +39,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 
 <p><code>includes()</code> 方法是区分大小写的。例如，下面的表达式会返回 <strong><code>false</code></strong> ：</p>
 
-<pre class="notranslate"><code>'Blue Whale'.includes('blue'); // returns false</code></pre>
+<pre><code>'Blue Whale'.includes('blue'); // returns false</code></pre>
 
 <h2 id="兼容补丁">兼容补丁</h2>
 
 <p>这个方法已经被加入到 ECMAScript 6 标准中，但未必在所有的 JavaScript 实现中都可以使用。然而，你可以轻松地 polyfill 这个方法：</p>
 
-<pre class="notranslate"><code>if (!String.prototype.includes) {
+<pre><code>if (!String.prototype.includes) {
   String.prototype.includes = function(search, start) {
     'use strict';
     if (typeof start !== 'number') {
@@ -64,7 +64,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 
 <h3 id="使用_includes">使用 includes()</h3>
 
-<pre class="notranslate"><code>var str = 'To be, or not to be, that is the question.';
+<pre><code>var str = 'To be, or not to be, that is the question.';
 
 console.log(str.includes('To be'));       // true
 console.log(str.includes('question'));    // true

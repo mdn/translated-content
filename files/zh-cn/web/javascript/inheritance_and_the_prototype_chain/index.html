@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 
 <p>这里演示当尝试访问属性时会发生什么：</p>
 
-<pre class="brush: js notranslate">// 让我们从一个函数里创建一个对象o，它自身拥有属性a和b的：
+<pre class="brush: js">// 让我们从一个函数里创建一个对象o，它自身拥有属性a和b的：
 let f = function () {
    this.a = 1;
    this.b = 2;
@@ -96,7 +96,7 @@ console.log(o.d); // undefined
 
 <p>当继承的函数被调用时，<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a> 指向的是当前继承的对象，而不是继承的函数所在的原型对象。</p>
 
-<pre class="brush: js notranslate">var o = {
+<pre class="brush: js">var o = {
   a: 2,
   m: function(){
     return this.a + 1;
@@ -121,7 +121,7 @@ console.log(p.m()); // 5
 
 <p>正如之前提到的，在 JavaScript 中，函数（function）是允许拥有属性的。所有的函数会有一个特别的属性 —— <code>prototype</code> 。请注意，以下的代码是独立的（出于严谨，假定页面没有其他的JavaScript代码）。为了最佳的学习体验，我们强烈建议阁下打开浏览器的控制台（在Chrome和火狐浏览器中，按Ctrl+Shift+I即可），进入“console”选项卡，然后把如下的JavaScript代码复制粘贴到窗口中，最后通过按下回车键运行代码。</p>
 
-<pre class="brush: js notranslate">function doSomething(){}
+<pre class="brush: js">function doSomething(){}
 console.log( doSomething.prototype );
 // 和声明函数的方式无关，
 // JavaScript 中的函数永远有一个默认原型属性。
@@ -130,7 +130,7 @@ console.log( doSomething.prototype );</pre>
 
 <p>在控制台显示的JavaScript代码块中，我们可以看到doSomething函数的一个默认属性prototype。而这段代码运行之后，控制台应该显示类似如下的结果：</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
     constructor: ƒ doSomething(),
     __proto__: {
         constructor: ƒ Object(),
@@ -145,13 +145,13 @@ console.log( doSomething.prototype );</pre>
 
 <p>我们可以给doSomething函数的原型对象添加新属性，如下：</p>
 
-<pre class="brush: js notranslate">function doSomething(){}
+<pre class="brush: js">function doSomething(){}
 doSomething.prototype.foo = "bar";
 console.log( doSomething.prototype );</pre>
 
 <p>可以看到运行后的结果如下：</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
     foo: "bar",
     constructor: ƒ doSomething(),
     __proto__: {
@@ -169,7 +169,7 @@ console.log( doSomething.prototype );</pre>
 
 <p>请尝试运行以下代码：</p>
 
-<pre class="brush: js notranslate">function doSomething(){}
+<pre class="brush: js">function doSomething(){}
 doSomething.prototype.foo = "bar"; // add a property onto the prototype
 var doSomeInstancing = new doSomething();
 doSomeInstancing.prop = "some value"; // add a property onto the object
@@ -177,7 +177,7 @@ console.log( doSomeInstancing );</pre>
 
 <p>运行的结果类似于以下的语句。</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
     prop: "some value",
     __proto__: {
         foo: "bar",
@@ -204,7 +204,7 @@ console.log( doSomeInstancing );</pre>
 
 <p>让我们在控制台窗口中输入更多的代码，如下：</p>
 
-<pre class="brush: js notranslate">function doSomething(){}
+<pre class="brush: js">function doSomething(){}
 doSomething.prototype.foo = "bar";
 var doSomeInstancing = new doSomething();
 doSomeInstancing.prop = "some value";
@@ -217,7 +217,7 @@ console.log("doSomething.prototype.foo:  " + doSomething.prototype.foo);</pre>
 
 <p>结果如下：</p>
 
-<pre class="brush: js notranslate">doSomeInstancing.prop:      some value
+<pre class="brush: js">doSomeInstancing.prop:      some value
 doSomeInstancing.foo:       bar
 doSomething.prop:           undefined
 doSomething.foo:            undefined
@@ -228,7 +228,7 @@ doSomething.prototype.foo:  bar</pre>
 
 <h3 id="使用语法结构创建的对象">使用语法结构创建的对象</h3>
 
-<pre class="brush: js notranslate">var o = {a: 1};
+<pre class="brush: js">var o = {a: 1};
 
 // o 这个对象继承了 Object.prototype 上面的所有属性
 // o 自身没有名为 hasOwnProperty 的属性
@@ -258,7 +258,7 @@ function f(){
 
 <p>在 JavaScript 中，构造器其实就是一个普通的函数。当使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new 操作符</a> 来作用这个函数时，它就可以被称为构造方法（构造函数）。</p>
 
-<pre class="brush: js notranslate">function Graph() {
+<pre class="brush: js">function Graph() {
   this.vertices = [];
   this.edges = [];
 }
@@ -277,7 +277,7 @@ var g = new Graph();
 
 <p>ECMAScript 5 中引入了一个新方法：{{jsxref("Object.create()")}}。可以调用这个方法来创建一个新对象。新对象的原型就是调用 create 方法时传入的第一个参数：</p>
 
-<pre class="brush: js notranslate">var a = {a: 1};
+<pre class="brush: js">var a = {a: 1};
 // a ---&gt; Object.prototype ---&gt; null
 
 var b = Object.create(a);
@@ -295,7 +295,7 @@ console.log(d.hasOwnProperty); // undefined, 因为d没有继承Object.prototype
 
 <p>ECMAScript6 引入了一套新的关键字用来实现 <a href="/zh-CN/docs/Web/JavaScript/Reference/Classes">class</a>。使用基于类语言的开发人员会对这些结构感到熟悉，但它们是不同的。JavaScript 仍然基于原型。这些新的关键字包括 {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}，{{jsxref("Classes/static", "static")}}，{{jsxref("Classes/extends", "extends")}} 和 {{jsxref("Operators/super", "super")}}。</p>
 
-<pre class="brush: js notranslate">"use strict";
+<pre class="brush: js">"use strict";
 
 class Polygon {
   constructor(height, width) {
@@ -325,7 +325,7 @@ var square = new Square(2);</pre>
 
 <p>遍历对象的属性时，原型链上的<strong>每个</strong>可枚举属性都会被枚举出来。要检查对象是否具有自己定义的属性，而不是其原型链上的某个属性，则必须使用所有对象从 <code>Object.prototype</code> 继承的 <code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a></code> 方法。下面给出一个具体的例子来说明它：</p>
 
-<pre class="brush: js notranslate">console.log(g.hasOwnProperty('vertices'));
+<pre class="brush: js">console.log(g.hasOwnProperty('vertices'));
 // true
 
 console.log(g.hasOwnProperty('nope'));
@@ -365,7 +365,7 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
   <tr>
    <td>New-initialization</td>
    <td style="vertical-align: top;">
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -384,7 +384,7 @@ console.log(inst.bar_prop);</pre>
   <tr>
    <td>Object.create</td>
    <td style="vertical-align: top;">
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -400,7 +400,7 @@ console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -427,7 +427,7 @@ console.log(inst.bar_prop)</pre>
     <p>Object.setPrototypeOf</p>
    </td>
    <td style="vertical-align: top;">
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -445,7 +445,7 @@ console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -467,7 +467,7 @@ console.log(inst.bar_prop)</pre>
   <tr>
    <td>__proto__</td>
    <td style="vertical-align: top;">
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -483,7 +483,7 @@ console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 var inst = {
   __proto__: {
     bar_prop: "bar val",
@@ -517,17 +517,17 @@ console.log(inst.bar_prop)</pre>
 
 <p>因此，当你执行：</p>
 
-<pre class="brush: js notranslate">var o = new Foo();</pre>
+<pre class="brush: js">var o = new Foo();</pre>
 
 <p>JavaScript 实际上执行的是：</p>
 
-<pre class="brush: js notranslate">var o = new Object();
+<pre class="brush: js">var o = new Object();
 o.__proto__ = Foo.prototype;
 Foo.call(o);</pre>
 
 <p>（或者类似上面这样的），然后，当你执行：</p>
 
-<pre class="brush: js notranslate">o.someProp;</pre>
+<pre class="brush: js">o.someProp;</pre>
 
 <p>它检查 o 是否具有 <code>someProp</code> 属性。如果没有，它会查找 <code>Object.getPrototypeOf(o).someProp</code>，如果仍旧没有，它会继续查找 <code>Object.getPrototypeOf(Object.getPrototypeOf(o)).someProp</code>。</p>
 
@@ -543,7 +543,7 @@ Foo.call(o);</pre>
 
 <p><code>B</code> 继承自 <code>A</code>：</p>
 
-<pre class="brush: js notranslate">function A(a){
+<pre class="brush: js">function A(a){
   this.varA = a;
 }
 

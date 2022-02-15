@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="notranslate">Object.create(<var>proto，[</var><var>propertiesObject</var>])</pre>
+<pre>Object.create(<var>proto，[</var><var>propertiesObject</var>])</pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <p>下面的例子演示了如何使用<code>Object.create()</code>来实现类式继承。这是一个所有版本JavaScript都支持的单继承。</p>
 
-<pre class="brush: js notranslate">// Shape - 父类(superclass)
+<pre class="brush: js">// Shape - 父类(superclass)
 function Shape() {
   this.x = 0;
   this.y = 0;
@@ -77,7 +77,7 @@ rect.move(1, 1); // Outputs, 'Shape moved.'</pre>
 
 <p>如果你希望能继承到多个对象，则可以使用混入的方式。</p>
 
-<pre class="brush: js notranslate">function MyClass() {
+<pre class="brush: js">function MyClass() {
      SuperClass.call(this);
      OtherSuperClass.call(this);
 }
@@ -98,7 +98,7 @@ MyClass.prototype.myMethod = function() {
 
 <h3 id="使用_Object.create_的_propertyObject参数">使用 <code>Object.create</code> 的 <code>propertyObject</code>参数</h3>
 
-<pre class="brush: js notranslate">var o;
+<pre class="brush: js">var o;
 
 // 创建一个原型为null的空对象
 o = Object.create(null);
@@ -167,7 +167,7 @@ o2 = Object.create({}, {
 
 <p>请注意，尽管在 ES5 中 <code>Object.create</code>支持设置为<code>[[Prototype]]</code>为<code>null</code>，但因为那些ECMAScript5以前版本限制，此 polyfill 无法支持该特性。</p>
 
-<pre class="brush: js notranslate">if (typeof Object.create !== "function") {
+<pre class="brush: js">if (typeof Object.create !== "function") {
     Object.create = function (proto, propertiesObject) {
         if (typeof proto !== 'object' &amp;&amp; typeof proto !== 'function') {
             throw new TypeError('Object prototype may only be an Object: ' + proto);

@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre class="notranslate">for (<var>variable</var> in <var>object</var>)
+<pre>for (<var>variable</var> in <var>object</var>)
   statement</pre>
 
 <dl>
@@ -47,7 +47,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <p>下面的函数接受一个对象作为参数。被调用时迭代传入对象的所有可枚举属性然后返回一个所有属性名和其对应值的字符串。</p>
 
-<pre class="brush: js notranslate">var obj = {a:1, b:2, c:3};
+<pre class="brush: js">var obj = {a:1, b:2, c:3};
 
 for (var prop in obj) {
   console.log("obj." + prop + " = " + obj[prop]);
@@ -60,7 +60,7 @@ for (var prop in obj) {
 
 <p>下面的函数说明了{{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}}的用法：继承的属性不显示。</p>
 
-<pre class="brush: js notranslate">var triangle = {a: 1, b: 2, c: 3};
+<pre class="brush: js">var triangle = {a: 1, b: 2, c: 3};
 
 function ColoredTriangle() {
   this.color = 'red';
@@ -124,7 +124,7 @@ for (var prop in obj) {
 
 <p>在 SpiderMonkey 40 {{geckoRelease(40)}} 版本之前，可以在使用一个初始化表达式（<code>i=0</code>）在一个<code>for...in</code>循环中：</p>
 
-<pre class="brush: js example-bad notranslate">var obj = {a: 1, b: 2, c: 3};
+<pre class="brush: js example-bad">var obj = {a: 1, b: 2, c: 3};
 for (var i = 0 in obj) {
   console.log(obj[i]);
 }

@@ -13,13 +13,13 @@ translation_of: Web/JavaScript/Reference/Operators/Strict_inequality
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">x !== y</pre>
+<pre class="syntaxbox">x !== y</pre>
 
 <h2 id="描述">描述</h2>
 
 <p>严格不等式运算符检查其对象是否不相等。它是严格相等运算符的否定，因此下面两行总是会给出相同的结果:</p>
 
-<pre class="brush: js notranslate">x !== y
+<pre class="brush: js">x !== y
 
 !(x === y)</pre>
 
@@ -27,13 +27,13 @@ translation_of: Web/JavaScript/Reference/Operators/Strict_inequality
 
 <p>与严格相等运算符一样，严格不等运算符始终认为不同类型的对象是不同的:</p>
 
-<pre class="brush: js notranslate">3 !== "3"; // true</pre>
+<pre class="brush: js">3 !== "3"; // true</pre>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="比较相同类型的对象">比较相同类型的对象</h3>
 
-<pre class="brush: js notranslate">console.log("hello" !== "hello");   // false
+<pre class="brush: js">console.log("hello" !== "hello");   // false
 console.log("hello" !== "hola");    // true
 
 console.log(3 !== 3);               // false
@@ -46,7 +46,7 @@ console.log(null !== null);         // false</pre>
 
 <h3 id="比较不同类型的对象">比较不同类型的对象</h3>
 
-<pre class="brush: js notranslate">console.log("3" !== 3);           // true
+<pre class="brush: js">console.log("3" !== 3);           // true
 
 console.log(true !== 1);          // true
 
@@ -54,7 +54,7 @@ console.log(null !== undefined);  // true</pre>
 
 <h3 id="比较Object对象">比较Object对象</h3>
 
-<pre class="brush: js notranslate">const object1 = {
+<pre class="brush: js">const object1 = {
   name: "hello"
 }
 
