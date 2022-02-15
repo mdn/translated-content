@@ -136,7 +136,7 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <p>对于更复杂的赋值，<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解构赋值</a>语法是一个能从数组或对象对应的数组结构或对象字面量里提取数据的 Javascript 表达式。</p>
 
-<pre class="brush: js line-numbers  language-js">var foo = ["one", "two", "three"];
+<pre class="brush: js">var foo = ["one", "two", "three"];
 
 // 不使用解构
 var one   = foo[0];
@@ -150,7 +150,7 @@ var [one, two, three] = foo;</pre>
 
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较运算符</a>比较它的操作数并返回一个基于表达式是否为真的逻辑值。操作数可以是数字，字符串，逻辑，对象值。字符串比较是基于标准的字典顺序，使用Unicode值。在多数情况下，如果两个操作数不是相同的类型， JavaScript 会尝试转换它们为恰当的类型来比较。这种行为通常发生在数字作为操作数的比较。类型转换的例外是使用 <code>===</code> 和 <code>!==</code> 操作符，它们会执行严格的相等和不相等比较。这些运算符不会在检查相等之前转换操作数的类型。下面的表格描述了该示例代码中的各比较运算符</p>
 
-<pre class="brush: js line-numbers  language-js">var var1 = 3;
+<pre class="brush: js">var var1 = 3;
 var var2 = 4;</pre>
 
 <table class="standard-table">
@@ -217,7 +217,7 @@ var var2 = 4;</pre>
 </table>
 
 <div class="note">
-<p><strong>注意: </strong>（<strong>=&gt;</strong>） 不是运算符，而是<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>的标记符号 。</p>
+<p><strong>备注：</strong>（<strong>=&gt;</strong>） 不是运算符，而是<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>的标记符号 。</p>
 </div>
 
 <h3 id="算术运算符">算术运算符</h3>
@@ -376,12 +376,10 @@ var var2 = 4;</pre>
  <li>操作数被转换为32bit整數，以位序列（0和1组成）表示.若超過32bits，則取低位32bit，如下所示：</li>
 </ul>
 
-<dl>
- <dt>
- <pre><code>Before: 11100110111110100000000000000110000000000001
-After:              10100000000000000110000000000001</code></pre>
- </dt>
-</dl>
+<pre>
+  <code>Before: 11100110111110100000000000000110000000000001</code>
+  <code>After:              10100000000000000110000000000001</code>
+</pre>
 
 <ul>
  <li>第一个操作数的每一位都与第二个操作数的对应位组对: 第一位对应第一位,第二位对应第二位,以此类推.</li>
@@ -551,7 +549,7 @@ var n3 = !"Cat"; // !t returns false
 
 <p>例如，</p>
 
-<pre class="brush: js line-numbers  language-js">console.log("my " + "string"); // console logs the string "my string".</pre>
+<pre class="brush: js">console.log("my " + "string"); // console logs the string "my string".</pre>
 
 <p>简写操作符 <code>+=</code> 也可以用来拼接字符串，例如：</p>
 
@@ -719,11 +717,11 @@ void expression
 
 <p>如下创建了一个超链接文本，当用户单击该文本时，不会有任何效果。</p>
 
-<pre class="brush: html line-numbers  language-html">&lt;a href="javascript:void(0)"&gt;Click here to do nothing&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a href="javascript:void(0)"&gt;Click here to do nothing&lt;/a&gt;</pre>
 
 <p>下面的代码创建了一个超链接，当用户单击它时，提交一个表单。</p>
 
-<pre class="brush: html line-numbers  language-html">&lt;a href="javascript:void(document.form.submit())"&gt;
+<pre class="brush: html">&lt;a href="javascript:void(document.form.submit())"&gt;
 Click here to submit&lt;/a&gt;</pre>
 
 <h3 id="关系操作符">关系操作符</h3>
@@ -913,7 +911,7 @@ this.propertyName
 
 <p>分组操作符（）控制了表达式中计算的优先级. 举例来说, 你可以改变先乘除后加减的顺序，转而先计算加法。</p>
 
-<pre class="brush:js line-numbers  language-js">var a = 1;
+<pre class="brush:js">var a = 1;
 var b = 2;
 var c = 3;
 
@@ -941,7 +939,7 @@ a * c + b * c // 9</pre>
 
 <p>Comprehensions特性被许多编程语言所采用，该特性能够使你快速地通过一个已有的数组来创建出一个新的数组，比如：</p>
 
-<pre class="brush:js line-numbers  language-js">[for (i of [ 1, 2, 3 ]) i*i ];
+<pre class="brush:js">[for (i of [ 1, 2, 3 ]) i*i ];
 // [ 1, 4, 9 ]
 
 var abc = [ "A", "B", "C" ];

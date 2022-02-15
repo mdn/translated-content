@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 <p>几个月后，Microsoft 随 IE 3 发布推出了一个与之基本兼容的语言 JScript。又过了几个月，Netscape 将 JavaScript 提交至 <a href="http://www.ecma-international.org">Ecma International</a>（一个欧洲标准化组织）， {{Glossary("ECMAScript")}} 标准第一版便在 1997 年诞生了，随后在 1999 年以 <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 第三版</a>的形式进行了更新，从那之后这个标准没有发生过大的改动。由于委员会在语言特性的讨论上发生分歧，ECMAScript 第四版尚未推出便被废除，但随后于 2009 年 12 月发布的 ECMAScript 第五版引入了第四版草案加入的许多特性。第六版标准已经于 2015 年 6 月发布。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript 。</p>
+<p><strong>备注：</strong> 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript 。</p>
 </div>
 
 <p>与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo! 的 Widget 引擎，<a href="http://nodejs.org">Node.js</a> 之类的服务器端环境，NoSQL 数据库（如开源的 <a href="http://couchdb.apache.org">Apache CouchDB</a>）、嵌入式计算机，以及包括 <a href="http://www.gnome.org">GNOME</a> （注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。</p>
@@ -90,7 +90,7 @@ parseInt("010", 10); // 10
 
 <p>一些老版本的浏览器会将首字符为“0”的字符串当做八进制数字，2013 年以前的 JavaScript 实现会返回一个意外的结果：</p>
 
-<pre class="brush: js line-numbers  language-js">parseInt("010");  //  8
+<pre class="brush: js">parseInt("010");  //  8
 parseInt("0x10"); // 16</pre>
 
 <p>这是因为字符串以数字 0 开头，{{jsxref("Global_Objects/parseInt", "parseInt()")}}函数会把这样的字符串视作八进制数字；同理，0x开头的字符串则视为十六进制数字。</p>
@@ -104,7 +104,7 @@ parseInt("0x10"); // 16</pre>
 
 <p>一元运算符 + 也可以把数字字符串转换成数值：</p>
 
-<pre class="brush: js line-numbers  language-js">+ "42";   // 42
+<pre class="brush: js">+ "42";   // 42
 + "010";  // 10
 + "0x10"; // 16</pre>
 
@@ -143,7 +143,9 @@ isFinite("0"); // true
 // 如果是纯数值类型的检测，则返回 false：
 Number.isFinite("0"); // false</pre>
 
-<div class="note"><strong>备注：</strong> {{jsxref("Global_Objects/parseInt", "parseInt()")}} 和 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 函数会尝试逐个解析字符串中的字符，直到遇上一个无法被解析成数字的字符，然后返回该字符前所有数字字符组成的数字。但是运算符 "+"对字符串的转换方式与之不同， 只要字符串含有无法被解析成数字的字符，该字符串就将被转换成 <code>NaN</code>。可分别使用这两种方法解析“10.2abc”这一字符串，并比较得到的结果，来理解这两种方法的区别。</div>
+<div class="note">
+<p><strong>备注：</strong> {{jsxref("Global_Objects/parseInt", "parseInt()")}} 和 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 函数会尝试逐个解析字符串中的字符，直到遇上一个无法被解析成数字的字符，然后返回该字符前所有数字字符组成的数字。但是运算符 "+"对字符串的转换方式与之不同， 只要字符串含有无法被解析成数字的字符，该字符串就将被转换成 <code>NaN</code>。可分别使用这两种方法解析“10.2abc”这一字符串，并比较得到的结果，来理解这两种方法的区别。</p>
+</div>
 
 <h2 id="字符串">字符串</h2>
 
@@ -190,12 +192,12 @@ Boolean(234); // true
 
 <p><code><strong>let</strong></code> 语句声明一个块级作用域的本地变量，并且可选的将其初始化为一个值。</p>
 
-<pre class="brush: js line-numbers  language-js">let a;
+<pre class="brush: js">let a;
 let name = 'Simon';</pre>
 
 <p>下面是使用  <code><strong>let</strong></code> 声明变量作用域的例子：</p>
 
-<pre class="brush: js line-numbers  language-js">// myLetVariable 在这里 *不能* 被引用
+<pre class="brush: js">// myLetVariable 在这里 *不能* 被引用
 
 for (let myLetVariable = 0; myLetVariable &lt; 5; myLetVariable++) {
   // myLetVariable 只能在这里引用
@@ -205,7 +207,7 @@ for (let myLetVariable = 0; myLetVariable &lt; 5; myLetVariable++) {
 
 <p><code><strong>const</strong></code> 允许声明一个不可变的常量。这个常量在定义域内总是可见的。</p>
 
-<pre class="brush: js line-numbers  language-js">const Pi = 3.14; // 设置 Pi 的值
+<pre class="brush: js">const Pi = 3.14; // 设置 Pi 的值
 Pi = 1; // 将会抛出一个错误因为你改变了一个常量的值。</pre>
 
 <p><code><strong>var</strong></code> 是最常见的声明变量的关键字。它没有其他两个关键字的种种限制。这是因为它是传统上在 JavaScript 声明变量的唯一方法。使用 <strong><code>var</code></strong> 声明的变量在它所声明的整个函数都是可见的。</p>
@@ -216,7 +218,7 @@ var name = "simon";
 
 <p>一个使用  <strong><code>var</code> </strong>声明变量的语句块的例子：</p>
 
-<pre class="brush: js line-numbers  language-js">// myVarVariable在这里 *能* 被引用
+<pre class="brush: js">// myVarVariable在这里 *能* 被引用
 
 for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
   // myVarVariable 整个函数中都能被引用
@@ -302,13 +304,13 @@ do {
 
 <p>JavaScript 也还包括其他两种重要的 for 循环： <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for</code>...<code>of</code></a></p>
 
-<pre class="brush: js line-numbers  language-js">for (let value of array) {
+<pre class="brush: js">for (let value of array) {
   // do something with value
 }</pre>
 
 <p>和 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for</code>...<code>in</code></a> ：</p>
 
-<pre class="brush: js line-numbers  language-js">for (let property in object) {
+<pre class="brush: js">for (let property in object) {
   // do something with object property
 }</pre>
 
@@ -432,7 +434,7 @@ var name = obj.name;
 
 <p>和：</p>
 
-<pre class="brush: js line-numbers  language-js">// 括号表示法(bracket notation)
+<pre class="brush: js">// 括号表示法(bracket notation)
 obj['name'] = 'Simon';
 var name = obj['name'];
 // can use a variable to define a key
@@ -446,13 +448,13 @@ obj["for"] = 'Simon'; // 工作正常
 </pre>
 
 <div class="note">
-<p><strong>注意：</strong>从 ECMAScript 5 开始，预留关键字可以作为对象的属性名（reserved words may be used as object property names "in the buff"）。 这意味着当定义对象字面量时不需要用双引号了。参见 ES5 <a href="http://es5.github.io/#x7.6.1">Spec</a>.</p>
+<p><strong>备注：</strong>从 ECMAScript 5 开始，预留关键字可以作为对象的属性名（reserved words may be used as object property names "in the buff"）。 这意味着当定义对象字面量时不需要用双引号了。参见 ES5 <a href="http://es5.github.io/#x7.6.1">Spec</a>.</p>
 </div>
 
 <p>关于对象和原型的详情参见： <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">Object.prototype</a>. 解释对象原型和对象原型链可以参见：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">继承与原型链</a>。</p>
 
 <div class="note">
-<p><strong>注意：</strong>从 ECMAScript 2015 开始，对象键可以在创建时使用括号表示法由变量定义。{[phoneType]: 12345} 可以用来替换 <code>var userPhone = {}; userPhone[phoneType] = 12345</code> .</p>
+<p><strong>备注：</strong>从 ECMAScript 2015 开始，对象键可以在创建时使用括号表示法由变量定义。{[phoneType]: 12345} 可以用来替换 <code>var userPhone = {}; userPhone[phoneType] = 12345</code> .</p>
 </div>
 
 <h2 id="数组">数组</h2>
@@ -648,8 +650,8 @@ avg(2, 3, 4, 5); // 3.5</pre>
 avg(2, 3, 4, 5); // 3.5
 </pre>
 
-<div class="blockIndicator note">
-<p>在上面这段代码中，所有被传入该函数的参数都被变量 <strong>args </strong>所持有。</p>
+<div class="note">
+<p><strong>备注：</strong>在上面这段代码中，所有被传入该函数的参数都被变量 <strong>args </strong>所持有。</p>
 
 <p>需要注意的是，无论“剩余参数操作符”被放置到函数声明的哪里，它都会把除了自己之前的所有参数存储起来。比如函数：function avg(<strong>firstValue</strong>, ...args) 会把传入函数的第一个值存入 <strong>firstValue</strong>，其他的参数存入 <strong>args</strong>。这是虽然一个很有用的语言特性，却也会带来新的问题。<code>avg()</code> 函数只接受逗号分开的参数列表 -- 但是如果你想要获取一个数组的平均值怎么办？一种方法是将函数按照如下方式重写：</p>
 </div>
@@ -671,8 +673,8 @@ avgArray([2, 3, 4, 5]); // 3.5
 
 <p>传给 <code>apply()</code> 的第二个参数是一个数组，它将被当作 <code>avg()</code> 的参数列表使用，至于第一个参数 <code>null</code>，我们将在后面讨论。这也正说明了一个事实——函数也是对象。</p>
 
-<div class="blockIndicator note">
-<p>通过使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax">展开语法</a>，你也可以获得同样的效果。</p>
+<div class="note">
+<p><strong>备注：</strong>通过使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax">展开语法</a>，你也可以获得同样的效果。</p>
 
 <p>比如说：<code>avg(...numbers)</code></p>
 </div>
@@ -735,7 +737,9 @@ b; // 2
 
 <h2 id="自定义对象">自定义对象</h2>
 
-<div class="note"><strong>备注：</strong>关于 JavaScript 中面向对象编程更详细的信息，请参考 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">JavaScript 面向对象简介</a>。</div>
+<div class="note">
+<p><strong>备注：</strong>关于 JavaScript 中面向对象编程更详细的信息，请参考 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">JavaScript 面向对象简介</a>。</p>
+</div>
 
 <p>在经典的面向对象语言中，对象是指数据和在这些数据上进行的操作的集合。与 C++ 和 Java 不同，JavaScript 是一种基于原型的编程语言，并没有 class 语句，而是把函数用作类。那么让我们来定义一个人名对象，这个对象包括人的姓和名两个域（field）。名字的表示有两种方法：“名 姓（First Last）”或“姓, 名（Last, First）”。使用我们前面讨论过的函数和对象概念，可以像这样完成定义：</p>
 

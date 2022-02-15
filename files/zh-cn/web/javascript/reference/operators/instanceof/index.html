@@ -73,8 +73,12 @@ o3 instanceof C; // true 因为 C.prototype 现在在 o3 的原型链上
 
 <p>比如检测一个 <code>Nodes</code> 在另一个窗口中是不是 <code>SVGElement</code>，你可以使用<code>myNode instanceof myNode.ownerDocument.defaultView.SVGElement</code></p>
 
-<div class="note"><strong>Mozilla开发者注意:</strong><br>
-在代码中使用 XPCOM <code>instanceof </code>有特殊影响: 如果查询接口成功执行后，<code>obj instanceof </code><em><code>xpcomInterface</code></em> (e.g. <code>Components.interfaces.nsIFile</code>) 调用<code>obj.QueryInterface(<em>xpcomInterface</em>)</code> 并且返回 <code>true</code> 。这种调用的副作用是在一次成功的 <code>instanceof</code> 测试后，你可以在 <code>obj</code> 上使用<code>xpcomInterface</code> 的属性。这与标准的 <code>JavaScript</code> 全局变量不同，即使 <code>obj</code> 来自不同的作用域，<code>obj instanceof xpcomInterface</code> 也可以按预期产生作用。</div>
+<div class="note">
+<p>
+  <strong>备注：</strong>
+  在代码中使用 XPCOM <code>instanceof </code>有特殊影响: 如果查询接口成功执行后，<code>obj instanceof </code><em><code>xpcomInterface</code></em> (e.g. <code>Components.interfaces.nsIFile</code>) 调用<code>obj.QueryInterface(<em>xpcomInterface</em>)</code> 并且返回 <code>true</code> 。这种调用的副作用是在一次成功的 <code>instanceof</code> 测试后，你可以在 <code>obj</code> 上使用<code>xpcomInterface</code> 的属性。这与标准的 <code>JavaScript</code> 全局变量不同，即使 <code>obj</code> 来自不同的作用域，<code>obj instanceof xpcomInterface</code> 也可以按预期产生作用。
+</p>
+</div>
 
 <h2 id="Examples">示例</h2>
 

@@ -11,7 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 <p><strong><code>apply()</code></strong> 方法调用一个具有给定<code>this</code>值的函数，以及以一个数组（或<a href="/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">类数组对象</a>）的形式提供的参数。</p>
 
-<div class="note"><strong>注意：</strong>call()方法的作用和 apply() 方法类似，区别就是<code>call()</code>方法接受的是<strong>参数列表</strong>，而<code>apply()</code>方法接受的是<strong>一个参数数组</strong>。</div>
+<div class="note">
+<p><strong>备注：</strong>call()方法的作用和 apply() 方法类似，区别就是<code>call()</code>方法接受的是<strong>参数列表</strong>，而<code>apply()</code>方法接受的是<strong>一个参数数组</strong>。</p>
+</div>
 
 <div>{{EmbedInteractiveExample("pages/js/function-apply.html")}}</div>
 
@@ -45,7 +47,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 <p>从 ECMAScript 第5版开始，可以使用任何种类的类数组对象，就是说只要有一个 <code>length</code> 属性和<code>(0..length-1)</code>范围的整数属性。例如现在可以使用 {{domxref("NodeList")}} 或一个自己定义的类似 <code>{'length': 2, '0': 'eat', '1': 'bananas'}</code> 形式的对象。</p>
 
 <div class="note">
-<p>需要注意：Chrome 14 以及 Internet Explorer 9 仍然不接受类数组对象。如果传入类数组对象，它们会抛出异常。</p>
+<p><strong>备注：</strong> Chrome 14 以及 Internet Explorer 9 仍然不接受类数组对象。如果传入类数组对象，它们会抛出异常。</p>
 </div>
 
 <h2 id="Examples">示例</h2>
@@ -118,7 +120,7 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 </pre>
 
 <div class="note">
-<p><strong>注意:</strong> 上面使用的<code>Object.create()</code>方法相对来说比较新。另一种可选的方法，请考虑如下替代方法：</p>
+<p><strong>备注：</strong> 上面使用的<code>Object.create()</code>方法相对来说比较新。另一种可选的方法，请考虑如下替代方法：</p>
 
 <p>Using {{jsxref("Object/__proto__", "Object.__proto__")}}:</p>
 
@@ -166,7 +168,9 @@ console.log(myInstance instanceof MyConstructor); // logs "true"
 console.log(myInstance.constructor);              // logs "MyConstructor"
 </pre>
 
-<div class="note"><strong>注意：</strong> 这个非native的<code>Function.construct</code>方法无法和一些native构造器（例如<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date" title="JavaScript/Reference/Global_Objects/Date"><code>Date</code></a>）一起使用。 在这种情况下你必须使用<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/bind#Bound_functions_used_as_constructors" title="JavaScript/Reference/Global_Objects/Function/bind#Bound_functions_used_as_constructors"><code>Function.bind</code></a>方法（例如，想象有如下一个数组要用在Date构造器中： <code>[2012, 11, 4]</code>；这时你需要这样写： <code>new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()</code> – -无论如何这不是最好的实现方式并且也许不该用在任何生产环境中).</div>
+<div class="note">
+<p><strong>备注：</strong> 这个非native的<code>Function.construct</code>方法无法和一些native构造器（例如<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date" title="JavaScript/Reference/Global_Objects/Date"><code>Date</code></a>）一起使用。 在这种情况下你必须使用<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/bind#Bound_functions_used_as_constructors" title="JavaScript/Reference/Global_Objects/Function/bind#Bound_functions_used_as_constructors"><code>Function.bind</code></a>方法（例如，想象有如下一个数组要用在Date构造器中： <code>[2012, 11, 4]</code>；这时你需要这样写： <code>new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()</code> – -无论如何这不是最好的实现方式并且也许不该用在任何生产环境中).</p>
+</div>
 
 <h2 id="规范">规范</h2>
 

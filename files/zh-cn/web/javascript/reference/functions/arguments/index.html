@@ -21,12 +21,12 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 
 <h2 id="Description">描述</h2>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> If you're writing ES6 compatible code, then <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameters</a> should be preferred.</p>
+<div class="note">
+<p><strong>备注：</strong> If you're writing ES6 compatible code, then <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameters</a> should be preferred.</p>
 </div>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> “Array-like” means that <code>arguments</code> has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{JSxRef("Array")}}'s built-in methods like {{jsxref("Array.forEach", "forEach()")}} and {{jsxref("Array.map", "map()")}}. See <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments$edit#Description">§Description</a> for details.</p>
+<div class="note">
+<p><strong>备注：</strong> “Array-like” means that <code>arguments</code> has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{JSxRef("Array")}}'s built-in methods like {{jsxref("Array.forEach", "forEach()")}} and {{jsxref("Array.map", "map()")}}. See <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments$edit#Description">§Description</a> for details.</p>
 </div>
 
 <p><code>arguments</code>对象是所有（非箭头）函数中都可用的<strong>局部变量</strong>。你可以使用<code>arguments</code>对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引0处。例如，如果一个函数传递了三个参数，你可以以如下方式引用他们：</p>
@@ -51,7 +51,7 @@ const args = [...arguments];
 </pre>
 
 <div class="warning">
-<p>对参数使用slice会阻止某些JavaScript引擎中的优化 (比如 V8 - <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">更多信息</a>)。如果你关心性能，尝试通过遍历arguments对象来构造一个新的数组。另一种方法是使用被忽视的<code>Array</code>构造函数作为一个函数：</p>
+<p><strong>警告：</strong>对参数使用slice会阻止某些JavaScript引擎中的优化 (比如 V8 - <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">更多信息</a>)。如果你关心性能，尝试通过遍历arguments对象来构造一个新的数组。另一种方法是使用被忽视的<code>Array</code>构造函数作为一个函数：</p>
 
 <pre class="brush: js">var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
 </pre>
@@ -93,20 +93,14 @@ var args = [...arguments];</pre>
 <dl>
  <dt><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee" title="JavaScript/Reference/Functions_and_function_scope/arguments/callee">arguments.callee</a></code></dt>
  <dd>指向参数所属的当前执行的函数。</dd>
- <dt>
- </dt>
- <dd>
- <p>指向调用当前函数的函数。</p>
- </dd>
  <dt><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code></dt>
  <dd>传递给函数的参数数量。</dd>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator">arguments[@@iterator]</a></code></dt>
  <dd>返回一个新的{{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}} 对象，该对象包含参数中每个索引的值。</dd>
- <dt></dt>
 </dl>
 
-<div class="blockIndicator note">
-<p>注意: 在严格模式下，<code>arguments</code>对象已与过往不同。<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator">arguments[@@iterator]</a></code>不再与函数的实际形参之间共享，同时caller属性也被移除。</p>
+<div class="note">
+<p><strong>备注：</strong>在严格模式下，<code>arguments</code>对象已与过往不同。<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator">arguments[@@iterator]</a></code>不再与函数的实际形参之间共享，同时caller属性也被移除。</p>
 </div>
 
 <h2 id="Examples">例子</h2>
@@ -149,7 +143,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 
 <p>这个例子定义了一个函数通过一个字符串来创建HTML列表。这个函数唯一正式声明了的参数是一个字符。当该参数为 "<code>u</code>" 时，创建一个无序列表 (项目列表)；当该参数为 "<code>o</code>" 时，则创建一个有序列表 (编号列表)。该函数定义如下：</p>
 
-<pre class="brush:js  language-js">function list(type) {
+<pre class="brush:js">function list(type) {
   var result = "&lt;" + type + "l&gt;&lt;li&gt;";
   var args = Array.prototype.slice.call(arguments, 1);
   result += args.join("&lt;/li&gt;&lt;li&gt;");
@@ -160,7 +154,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 
 <p>你可以传递任意数量的参数到该函数，并将每个参数作为一个项添加到指定类型的列表中。例如：</p>
 
-<pre class="brush:js  language-js">var listHTML = list("u", "One", "Two", "Three");
+<pre class="brush:js">var listHTML = list("u", "One", "Two", "Three");
 
 /* listHTML is:
 
@@ -257,7 +251,7 @@ func(); // undefined
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<p>{{Compat("javascript.functions.arguments")}}</p>
+{{Compat}}
 
 <h2 id="See_also">相关链接</h2>
 

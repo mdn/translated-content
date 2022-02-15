@@ -39,8 +39,8 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <p>这的确有点简单，但是保持足够简单能够清晰地演示模块。</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 如果你想去下载这个例子在本地运行，你需要通过本地 web 服务器去运行。</p>
+<div class="note">
+<p><strong>备注：</strong>如果你想去下载这个例子在本地运行，你需要通过本地web 服务器去运行。</p>
 </div>
 
 <h2 id="基本的示例文件的结构">基本的示例文件的结构</h2>
@@ -53,8 +53,8 @@ modules/
     canvas.mjs
     square.mjs</pre>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 在这个指南的全部示例项目的文件结构是基本相同的； 需要熟悉上面的内容</p>
+<div class="note">
+<p><strong>备注：</strong>在这个指南的全部示例项目的文件结构是基本相同的； 需要熟悉上面的内容</p>
 </div>
 
 <p>modules 目录下的两个模块的描述如下:</p>
@@ -77,8 +77,8 @@ modules/
  </li>
 </ul>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 在原生JavaScript模块中, 扩展名 <code>.mjs</code> 非常重要，因为使用 MIME-type 为<code>javascript/esm</code> 来导入文件(其他的JavaScript 兼容 MIME-type 像 <code>application/javascript</code> 也可以), 它避免了严格的 MIME 类型检查错误，像 "The server responded with a non-JavaScript MIME type". 除此之外,  <code>.mjs</code> 的扩展名很明了(比如这个就是一个模块，而不是一个传统 JavaScript文件)，还能够和其他工具互相适用. 看这个 <a href="https://v8.dev/features/modules#mjs">Google's note for further details</a>.</p>
+<div class="note">
+<p><strong>备注：</strong>在原生JavaScript模块中, 扩展名 <code>.mjs</code> 非常重要，因为使用 MIME-type 为<code>javascript/esm</code> 来导入文件(其他的JavaScript 兼容 MIME-type 像 <code>application/javascript</code> 也可以), 它避免了严格的 MIME 类型检查错误，像 "The server responded with a non-JavaScript MIME type". 除此之外,  <code>.mjs</code> 的扩展名很明了(比如这个就是一个模块，而不是一个传统 JavaScript文件)，还能够和其他工具互相适用. 看这个 <a href="https://v8.dev/features/modules#mjs">Google's note for further details</a>.</p>
 </div>
 
 <h2 id=".mjs_与_.js"><code>.mjs</code> 与 <code>.js</code></h2>
@@ -151,8 +151,8 @@ export function draw(ctx, length, x, y, color) {
 
 <p>你可以在<code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.mjs</a></code>中看到这些。</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>:在一些模块系统中你可以忽略文件扩展名（比如<code>'/model/squre'</code> .这在原生JavaScript 模块系统中不工作。<s>此外，记住你需要包含最前面的正斜杠。  </s> （修订版 1889482）</p>
+<div class="note">
+<p><strong>备注：</strong>在一些模块系统中你可以忽略文件扩展名（比如<code>'/model/squre'</code> .这在原生JavaScript 模块系统中不工作。<del>此外，记住你需要包含最前面的正斜杠。</del> （修订版 1889482）</p>
 </div>
 
 <p>因为你导入了这些功能到你的脚本文件，你可以像定义在相同的文件中的一样去使用它。下面展示的是在 <code>main.mjs</code> 中的import 语句下面的内容。</p>
@@ -177,8 +177,8 @@ reportPerimeter(square1.length, reportList);
 
 <p>你只能在模块内部使用 <code>import</code> 和<code>export</code> 语句 ；不是普通脚本文件。</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 您还可以将模块导入内部脚本，只要包含 <code>type="module"</code>，例如 <code>&lt;script type="module"&gt; //include script here &lt;/script&gt;</code>.</p>
+<div class="note">
+<p><strong>备注：</strong>您还可以将模块导入内部脚本，只要包含 <code>type="module"</code>，例如 <code>&lt;script type="module"&gt; //include script here &lt;/script&gt;</code>.</p>
 </div>
 
 <h2 id="其他模块与标准脚本的不同">其他模块与标准脚本的不同</h2>
@@ -216,8 +216,8 @@ reportPerimeter(square1.length, reportList);
 
 <pre class="brush: js">import {default as randomSquare} from './modules/square.mjs';</pre>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 重命名导出项的as语法在下面的{{anch("Renaming imports and exports")}}部分中进行了说明。</p>
+<div class="note">
+<p><strong>备注：</strong>重命名导出项的as语法在下面的{{anch("Renaming imports and exports")}}部分中进行了说明。</p>
 </div>
 
 <h2 id="避免命名冲突">避免命名冲突</h2>
@@ -362,8 +362,8 @@ square1.reportPerimeter();</pre>
 <pre class="brush: js">export * from 'x.mjs'
 export { name } from 'x.mjs'</pre>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 这实际上是导入后跟导出的简写，即“我导入模块<code>x.mjs</code>，然后重新导出部分或全部导出”。</p>
+<div class="note">
+<p><strong>备注：</strong>这实际上是导入后跟导出的简写，即“我导入模块<code>x.mjs</code>，然后重新导出部分或全部导出”。</p>
 </div>
 
 <p>有关示例，请参阅我们的<a href="https://github.com/mdn/js-examples/tree/master/modules/module-aggregation">module-aggregation</a>。 在这个例子中（基于我们之前的类示例），我们有一个名为<code>shapes.mjs</code>的额外模块，它将<code>circle.mjs</code>，<code>square.mjs</code>和<code>riangle.mjs</code>中的所有功能聚合在一起。 我们还将子模块移动到名为shapes的modules目录中的子目录中。 所以模块结构现在是这样的：</p>
@@ -388,12 +388,12 @@ export { Circle } from '/js-examples/modules/module-aggregation/modules/shapes/c
 
 <p>它们从各个子模块中获取导出，并有效地从<code>shapes.mjs</code>模块中获取它们。</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 即使<code>shapes.mjs</code>文件位于 modules 目录中，我们仍然需要相对于模块根目录编写这些URL，因此需要<code>/modules/</code>。 这是使用JavaScript模块时混淆的常见原因。</p>
+<div class="note">
+<p><strong>备注：</strong>即使<code>shapes.mjs</code>文件位于modules目录中，我们仍然需要相对于模块根目录编写这些URL，因此需要<code>/modules/</code>。 这是使用JavaScript模块时混淆的常见原因。</p>
 </div>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: <code>shapes.mjs</code>中引用的导出基本上通过文件重定向，并且实际上并不存在，因此您将无法在同一文件中编写任何有用的相关代码。</p>
+<div class="note">
+<p><strong>备注：</strong><code>shapes.mjs</code>中引用的导出基本上通过文件重定向，并且实际上并不存在，因此您将无法在同一文件中编写任何有用的相关代码。</p>
 </div>
 
 <p>所以现在在<code>main.mjs</code> 文件中，我们可以通过替换来访问所有三个模块类</p>

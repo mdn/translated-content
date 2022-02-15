@@ -382,13 +382,12 @@ function attemptMutation(v)
 
 <p>这里是一个会区别对待-0和+0的内置方法和操作符不完全列表：</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29" title="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators"><code>- (一元负)</code></a></p>
-
 <dl>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29" title="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators"><code>- (一元负)</code></a></dt>
  <dd>
  <p>显而易见，对<code>0一元负操作得到</code><code>-0</code>。但表达式的抽象化可能在你没有意识到得情况下导致-0延续传播。例如当考虑下例时:</p>
 
- <pre class="brush:js  language-js">let stoppingForce = obj.mass * -obj.velocity</pre>
+ <pre class="brush:js">let stoppingForce = obj.mass * -obj.velocity</pre>
 
  <p>如果<code>obj.velocity</code>是<code>0</code> (或计算结果为<code>0</code>), <code>一个-0</code>就在上处产生并被赋值为<code>stoppingForce的值</code>.</p>
  </dd>

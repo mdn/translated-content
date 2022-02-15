@@ -15,8 +15,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 
 <div></div>
 
-<div class="blockIndicator warning">
-<p>警告：不要在解析为自身的thenable 上调用<code>Promise.resolve</code>。这将导致无限递归，因为它试图展平无限嵌套的promise。一个例子是将它与Angular中的异步管道一起使用。在<a href="https://angular.io/guide/template-syntax#avoid-side-effects">此处</a>了解更多信息。</p>
+<div class="warning">
+<p><strong>警告：</strong>不要在解析为自身的thenable 上调用<code>Promise.resolve</code>。这将导致无限递归，因为它试图展平无限嵌套的promise。一个例子是将它与Angular中的异步管道一起使用。在<a href="https://angular.io/guide/template-syntax#avoid-side-effects">此处</a>了解更多信息。</p>
 </div>
 <div>例如下例代码</div>
 <pre class="brush: js">
@@ -38,9 +38,7 @@ Promise.resolve(thenable)  //这会造成一个死循环
 
 <h3 id="参数">参数</h3>
 
-<dl>
- <dt>value</dt>
-</dl>
+<p>value</p>
 
 <p>将被<code>Promise</code>对象解析的参数，也可以是一个<code>Promise</code>对象，或者是一个thenable。</p>
 

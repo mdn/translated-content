@@ -121,7 +121,7 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
 <p>你可能希望自定义基于Error的异常类型，使得你能够 throw new MyError() 并可以使用 <code>instanceof MyError</code> 来检查某个异常的类型. 这种需求的通用解决方法如下.</p>
 
 <div class="warning">
-<p>注意，在FireFox中抛出自定义类型的异常会显示不正确的行号和文件名。</p>
+<p><strong>警告：</strong>注意，在FireFox中抛出自定义类型的异常会显示不正确的行号和文件名。</p>
 </div>
 
 <p>参考 <a href="http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript">"What's a good way to extend Error in JavaScript?" discussion on Stackoverflow</a>.</p>
@@ -148,48 +148,6 @@ try {
   console.log(e.name);     // 'MyError'
   console.log(e.message);  // 'custom message'
 }</pre>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
-
-<div class="line-number"></div>
 
 <h2 id="规范">规范</h2>
 

@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 
 <p>在构造一个函数的时候，函数参数必须为标记符。下面列举的函数声明都是无效的，因为它们在参数部分使用的是数值：</p>
 
-<pre class="brush: js example-bad highlight:[1,6,11]">function square(3) {
+<pre class="brush: js example-bad">function square(3) {
   return number * number;
 };
 // SyntaxError: missing formal parameter
@@ -47,7 +47,7 @@ function log({ obj: "value"}) {
 
 <p>需要在函数声明中使用标记符：</p>
 
-<pre class="brush: js example-good highlight:[1,5,9]">function square(number) {
+<pre class="brush: js example-good">function square(number) {
   return number * number;
 };
 

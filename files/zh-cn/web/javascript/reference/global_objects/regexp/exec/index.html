@@ -55,10 +55,10 @@ var result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
 <table class="fullwidth-table">
  <tbody>
   <tr>
-   <td class="header">对象</td>
-   <td class="header">属性/索引</td>
-   <td class="header">描述</td>
-   <td class="header">例子</td>
+   <th>对象</th>
+   <th>属性/索引</th>
+   <th>描述</th>
+   <th>例子</th>
   </tr>
   <tr>
    <td rowspan="4"><code>result</code></td>
@@ -137,8 +137,8 @@ while ((myArray = myRe.exec(str)) !== null) {
 Found ab. Next match starts at 9
 </pre>
 
-<div class="blockIndicator warning">
-<p>注意：不要把正则表达式字面量（或者{{jsxref("RegExp")}}构造器）放在 <code>while</code> 条件表达式里。由于每次迭代时 {{jsxref("RegExp.lastIndex", "lastIndex")}} 的属性都被重置，如果匹配，将会造成一个死循环。并且要确保使用了'g'标记来进行全局的匹配，否则同样会造成死循环。</p>
+<div class="warning">
+<p><strong>警告：</strong>不要把正则表达式字面量（或者{{jsxref("RegExp")}}构造器）放在 <code>while</code> 条件表达式里。由于每次迭代时 {{jsxref("RegExp.lastIndex", "lastIndex")}} 的属性都被重置，如果匹配，将会造成一个死循环。并且要确保使用了'g'标记来进行全局的匹配，否则同样会造成死循环。</p>
 </div>
 
 <h3 id="结合_RegExp_字面量使用_exec">结合 <code>RegExp</code> 字面量使用 <code>exec()</code></h3>

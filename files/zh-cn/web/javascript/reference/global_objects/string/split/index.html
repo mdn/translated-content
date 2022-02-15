@@ -23,8 +23,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 <pre class="syntaxbox"><code><em>str.split([separator[, limit]])</em></code>
 </pre>
 
-<div class="blockIndicator warning">
-<p>注意：如果使用空字符串(“)作为分隔符，则字符串不是在每个用户感知的字符(图形素集群)之间，也不是在每个Unicode字符(代码点)之间，而是在每个UTF-16代码单元之间。这会摧毁代理对。还请参见<a href="https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402">how do you get a string to a character array in javascript</a></p>
+<div class="warning">
+<p><strong>警告：</strong>如果使用空字符串(“)作为分隔符，则字符串不是在每个用户感知的字符(图形素集群)之间，也不是在每个Unicode字符(代码点)之间，而是在每个UTF-16代码单元之间。这会摧毁代理对。还请参见<a href="https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402">how do you get a string to a character array in javascript</a></p>
 </div>
 
 <h3 id="参数">参数</h3>
@@ -155,8 +155,8 @@ console.log(splits);  //["c", "c,", "c", "c", "c"]</code></pre>
 
 <h3 id="用split来颠倒字符串顺序">用split()来颠倒字符串顺序</h3>
 
-<div class="blockIndicator warning">
-<p>注意这并非一种很健壮的逆转字符串的方法:</p>
+<div class="warning">
+<p><strong>警告：</strong>注意这并非一种很健壮的逆转字符串的方法:</p>
 
 <pre><code>const str = 'asdfghjkl';
 const strReverse = str.split('').reverse().join(''); // 'lkjhgfdsa'

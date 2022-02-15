@@ -72,8 +72,8 @@ bigN * -1n
 
 <p><code>/</code> 操作符对于整数的运算也没问题。可是因为这些变量是 <code>BigInt</code> 而不是 <code>BigDecimal</code> ，该操作符结果会向零取整，也就是说不会返回小数部分。</p>
 
-<div class="blockIndicator warning">
-<p>当使用 <code>BigInt</code> 时，带小数的运算会被取整。</p>
+<div class="warning">
+<p><strong>警告：</strong>当使用 <code>BigInt</code> 时，带小数的运算会被取整。</p>
 </div>
 
 <pre class="brush: js">const expected = 4n / 2n;

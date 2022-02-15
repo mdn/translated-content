@@ -61,12 +61,12 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 
 <pre class="brush: js">let result = someInterface.customMethod?.();</pre>
 
-<div class="blockIndicator note">
-<p><strong>注意:</strong> 如果存在一个属性名且不是函数, 使用 <code>?.</code> 仍然会产生一个 {{JSxRef("TypeError")}} 异常 (<code>x.y</code><code> is not a function</code>).</p>
+<div class="note">
+<p><strong>备注：</strong>如果存在一个属性名且不是函数, 使用 <code>?.</code> 仍然会产生一个 {{JSxRef("TypeError")}} 异常 (<code>x.y</code><code> is not a function</code>).</p>
 </div>
 
-<div class="blockIndicator note">
-<p><strong>注意:</strong> 如果 <code>someInterface</code> 自身是 <code>null</code> 或者 <code>undefined</code> ，异常 {{JSxRef("TypeError")}} 仍会被抛出 <code>someInterface is null</code> 如果你希望允许 <code>someInterface</code> 也为 <code>null</code> 或者 <code>undefined</code> ，那么你需要像这样写 <code>someInterface?.customMethod?.()</code></p>
+<div class="note">
+<p><strong>备注：</strong>如果 <code>someInterface</code> 自身是 <code>null</code> 或者 <code>undefined</code> ，异常 {{JSxRef("TypeError")}} 仍会被抛出 <code>someInterface is null</code> 如果你希望允许 <code>someInterface</code> 也为 <code>null</code> 或者 <code>undefined</code> ，那么你需要像这样写 <code>someInterface?.customMethod?.()</code></p>
 </div>
 
 <h4 id="处理可选的回调函数或者事件处理器">处理可选的回调函数或者事件处理器</h4>

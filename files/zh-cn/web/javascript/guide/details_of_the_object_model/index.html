@@ -31,8 +31,8 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 
 <p>JavaScript 大体上与之类似，但并没有专门的<em>类定义</em>，你通过定义构造函数的方式来创建一系列有着特定初始值和方法的对象。任何JavaScript函数都可以被用作构造函数。你也可以使用 <code>new</code> 操作符来创建一个新对象。</p>
 
-<div class="blockIndicator note">
-<p><strong>提示：</strong>在ES6中引入了 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes">类定义</a> ，但它实际上是已有的原型继承方式的语法糖而已，并没有引入新的面向对象继承模型。</p>
+<div class="note">
+<p><strong>备注：</strong>在ES6中引入了 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes">类定义</a> ，但它实际上是已有的原型继承方式的语法糖而已，并没有引入新的面向对象继承模型。</p>
 </div>
 
 <h3 id="子类和继承">子类和继承</h3>
@@ -227,7 +227,7 @@ public class Engineer extends WorkerBee {
 <p>使用这些定义，您可以创建这些对象的实例，以获取其属性的默认值。下图说明了如何使用这些 JavaScript 定义创建新对象并显示新对象的属性值。</p>
 
 <div class="note">
-<p><strong>提示：</strong>实例在基于类的语言中具有特定的技术含义。在这些语言中，一个实例是一个类的单独实例化，与一个类本质上是不同的。在 JavaScript 中，“实例”没有这个技术含义，因为JavaScript在类和实例之间不存在这样的区别。然而，在讨论 JavaScript 时，可以非正式地使用“实例”来表示使用特定构造函数创建的对象。 所以，在这个例子中，你可以非正式地说<code>jane</code> 是 <code>Engineer</code>的一个实例。同样，虽然术语 parent，child，ancestor 和 descendant 在 JavaScript 中没有正式含义；你可以非正式地使用它们来引用原型链中较高或更低的对象。</p>
+<p><strong>备注：</strong>实例在基于类的语言中具有特定的技术含义。在这些语言中，一个实例是一个类的单独实例化，与一个类本质上是不同的。在 JavaScript 中，“实例”没有这个技术含义，因为JavaScript在类和实例之间不存在这样的区别。然而，在讨论 JavaScript 时，可以非正式地使用“实例”来表示使用特定构造函数创建的对象。 所以，在这个例子中，你可以非正式地说<code>jane</code> 是 <code>Engineer</code>的一个实例。同样，虽然术语 parent，child，ancestor 和 descendant 在 JavaScript 中没有正式含义；你可以非正式地使用它们来引用原型链中较高或更低的对象。</p>
 </div>
 
 <h3 id="用简单的定义创建对象">用简单的定义创建对象</h3>
@@ -310,14 +310,14 @@ mark.projects = ["navigator"];</pre>
 
 <p>只要 JavaScript 执行了该语句，则 <code>mark</code> 对象也将具有 <code>specialty</code> 属性，其值为 <code>"none"</code>。下图则表示了在 <code>Employee</code> 原型中添加该属性，然后在 <code>Engineer</code> 的原型中重载该属性的效果。</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4422/=figure8.4.png" style="height: 519px; width: 833px;"><br>
+<p><img alt="" class="internal" src="/@api/deki/files/4422/=figure8.4.png"><br>
  <small><strong>添加属性</strong></small></p>
 
 <h2 id="more_flexible_constructors">更灵活的构造器</h2>
 
 <p>到目前为止，本文所展示的构造函数都不能让你在创建新实例时为其制定属性值。其实我们也可以像 Java 一样，为构造器提供参数以初始化实例的属性值。下图展示了一种实现方式。</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4423/=figure8.5.png" style="height: 481px; width: 1012px;"><br>
+<p><img alt="" class="internal" src="/@api/deki/files/4423/=figure8.5.png"><br>
  <small><strong>Specifying properties in a constructor, take 1</strong></small></p>
 
 <p>下面的表格中罗列了这些对象在 Java 和 JavaScript 中的定义。</p>
@@ -420,7 +420,7 @@ public class Engineer extends WorkerBee {
 <p>JavaScript 的逻辑或操作符（<code>||</code>）会对第一个参数进行判断。如果该参数值运算后结果为真，则操作符返回该值。否则，操作符返回第二个参数的值。因此，这行代码首先检查 <code>name</code> 是否是对<code>name</code> 属性有效的值。如果是，则设置其为 <code>this.name</code> 的值。否则，设置 <code>this.name</code> 的值为空的字符串。尽管这种用法乍看起来有些费解，为了简洁起见，本章将使用这种习惯用法。</p>
 
 <div class="note">
-<p><strong>提示：</strong>如果调用构造函数时，指定了可以转换为 <code><code>false</code></code> 的参数（比如<code>0</code>和空字符串），结果可能出乎调用者意料。此时，将使用默认值（译注：不是指定的参数值 0 和 ""）。</p>
+<p><strong>备注：</strong>如果调用构造函数时，指定了可以转换为 <code><code>false</code></code> 的参数（比如<code>0</code>和空字符串），结果可能出乎调用者意料。此时，将使用默认值（译注：不是指定的参数值 0 和 ""）。</p>
 </div>
 
 <p>使用这些定义，当创建对象的实例时，可以为本地定义的属性指定值。你可以使用以下语句创建一个新的<code>Engineer</code>：</p>
@@ -440,7 +440,7 @@ jane.machine == "belau"
 
 <p>到目前为止，构造函数已经能够创建一个普通对象，然后为新对象指定本地的属性和属性值。您还可以通过直接调用原型链上的更高层次对象的构造函数，让构造器添加更多的属性。下图即实现了这一功能。</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4430/=figure8.6.png" style="height: 534px; width: 1063px;"><br>
+<p><img alt="" class="internal" src="/@api/deki/files/4430/=figure8.6.png"><br>
  <small><strong>Specifying properties in a constructor, take 2</strong></small></p>
 
 <p>我们来详细看一下这些定义。这是<code>Engineer</code>构造函数的新定义：</p>
@@ -636,7 +636,9 @@ chris.__proto__.__proto__.__proto__.__proto__.__proto__ == null;
 }
 </pre>
 
-<div class="note"><strong>Note:</strong> 在上面的实现中，检查对象的类型是否为 "xml" 的目的在于解决新近版本的 JavaScript 中表达 XML 对象的特异之处。如果您想了解其中琐碎细节，可以参考 {{ bug(634150) }}。</div>
+<div class="note">
+<p><strong>备注：</strong> 在上面的实现中，检查对象的类型是否为 "xml" 的目的在于解决新近版本的 JavaScript 中表达 XML 对象的特异之处。如果您想了解其中琐碎细节，可以参考 {{ bug(634150) }}。</p>
+</div>
 
 <div>使用上面定义的 instanceOf 函数，这些表达式为真：</div>
 

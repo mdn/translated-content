@@ -23,9 +23,8 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
 
  <p>译者注:下面这两种扩展的使用方式是language[-scripts][-region]-u-nu-* 和 language[-scripts][-region]-u-ca-* ,例如:zh-u-nu-hanidec(表示中文十进制数字) 和 zh-u-ca-chinese(表示中国日历,比如壬辰年冬月8日) ,也可以 nu 和 ca 组合使用 比如 使用 zh-u-ca-chinese-nu-hanidec 格式化Date.now()的返回值类似于"丙申年冬月九日"</p>
 
- <p><code>nu</code></p>
-
  <dl>
+  <dt><code>nu</code></dt>
   <dd>编号系统. 可能的值包括: <code>"arab"</code>, <code>"arabext"</code>, <code>"bali"</code>, <code>"beng"</code>, <code>"deva"</code>, <code>"fullwide"</code>, <code>"gujr"</code>, <code>"guru"</code>, <code>"hanidec"</code>, <code>"khmr"</code>, <code>"knda"</code>, <code>"laoo"</code>, <code>"latn"</code>, <code>"limb"</code>, <code>"mlym"</code>, <code>"mong"</code>, <code>"mymr"</code>, <code>"orya"</code>, <code>"tamldec"</code>, <code>"telu"</code>, <code>"thai"</code>, <code>"tibt"</code>.</dd>
   <dt><code>ca</code></dt>
   <dd>日历. 可能的值包括: <code>"buddhist"</code>, <code>"chinese"</code>, <code>"coptic"</code>, <code>"ethioaa"</code>, <code>"ethiopic"</code>, <code>"gregory"</code>, <code>"hebrew"</code>, <code>"indian"</code>, <code>"islamic"</code>, <code>"islamicc"</code>, <code>"iso8601"</code>, <code>"japanese"</code>, <code>"persian"</code>, <code>"roc"</code>.</dd>
@@ -79,7 +78,7 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
   <dd>时区名称的展现方式.可能的值有 <code>"short"</code>, <code>"long"</code>.</dd>
  </dl>
 
- <p class="noinclude">每个日期时间组件属性的默认值都是{{jsxref("undefined")}},但是若所有的组件属性都是{{jsxref("undefined")}},那么<code>year</code>, <code>month</code>, and <code>day</code> 的值就都被认为是"<code>numeric</code>".</p>
+ <p>每个日期时间组件属性的默认值都是{{jsxref("undefined")}},但是若所有的组件属性都是{{jsxref("undefined")}},那么<code>year</code>, <code>month</code>, and <code>day</code> 的值就都被认为是"<code>numeric</code>".</p>
  </dd>
 </dl>
 
@@ -226,55 +225,7 @@ console.log(date.toLocaleString('en-US', options));
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div>
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("24")}}</td>
-   <td>{{CompatGeckoDesktop("29")}}</td>
-   <td>{{CompatIE("11")}}</td>
-   <td>{{CompatOpera("15")}}</td>
-   <td>{{CompatSafari("10")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div>
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome("26")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatSafari("10")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

@@ -39,7 +39,7 @@ arr.length = arrayLength;
 </pre>
 
 <div class="note">
-<p><strong>注意: </strong>以上代码，数组长度（arrayLength）必须为一个数字（Number）。否则，将会创建一个只有单个（所输入的）元素的数组。 调用 <code>arr.length</code> 会返回数组长度，但是数组实际上包含了空的（<code>undefined</code>）元素。 因此在数组上使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> 循环，将不会返回任何的值 。</p>
+<p><strong>备注：</strong>以上代码，数组长度（arrayLength）必须为一个数字（Number）。否则，将会创建一个只有单个（所输入的）元素的数组。 调用 <code>arr.length</code> 会返回数组长度，但是数组实际上包含了空的（<code>undefined</code>）元素。 因此在数组上使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> 循环，将不会返回任何的值 。</p>
 </div>
 
 <p>除了如上所示创建新定义的变量，数组(array)也可以作为一个属性(property)分配给一个新的或者已存在的对象(object)：</p>
@@ -82,7 +82,7 @@ emp[2] = "August West";
 </pre>
 
 <div class="note">
-<p><strong>注意：</strong>如果你在以上代码中给数组操作符的是一个非整形数值，那么将作为一个代表数组的对象的属性(property)创建，而非作为数组的元素。</p>
+<p><strong>备注：</strong>如果你在以上代码中给数组操作符的是一个非整形数值，那么将作为一个代表数组的对象的属性(property)创建，而非作为数组的元素。</p>
 </div>
 
 <pre class="brush: js">var arr = [];
@@ -107,7 +107,7 @@ var myArray = ["Mango", "Apple", "Orange"]
 <p>你可以用 <code>myArray[0]</code>引用第一个元素，<code>myArray[1]</code>引用第二个元素。元素的索引是从<code>0</code>开始的。</p>
 
 <div class="note">
-<p><strong>注意：</strong>数组操作符（方括号 [ ]）也可以用来访问数组的属性(在 JavaScript 中，数组也是对象)。例如：</p>
+<p><strong>备注：</strong>数组操作符（方括号 [ ]）也可以用来访问数组的属性(在 JavaScript 中，数组也是对象)。例如：</p>
 </div>
 
 <pre class="brush: js">var arr = ["one", "two", "three"];
@@ -461,7 +461,7 @@ var interpolatedZeros = [c+'0' for (c of str) ].join(''); // 'a0b0c0d0e0f0'
 
 <p>为了实现最大的灵活性和效率，JavaScript类型数组被分解为缓冲(Buffer)和视图(views)。缓冲(由{{jsxref("ArrayBuffer")}} 实现)是代表数据块的对象，它没有格式可言，并没有提供任何机制来访问其内容。为了访问包含在缓冲区中的内存，您需要使用视图。视图提供了一个上下文，即数据类型、起始偏移量和元素数，这些元素将数据转换为实际类型数组。</p>
 
-<p><img alt="Typed arrays in an ArrayBuffer" src="https://mdn.mozillademos.org/files/8629/typed_arrays.png" style="height: 278px; width: 666px;"></p>
+<p><img alt="Typed arrays in an ArrayBuffer" src="https://mdn.mozillademos.org/files/8629/typed_arrays.png"></p>
 
 <h3 id="ArrayBuffer">ArrayBuffer</h3>
 

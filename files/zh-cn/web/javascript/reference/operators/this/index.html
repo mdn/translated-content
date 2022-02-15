@@ -42,8 +42,8 @@ this.b = "MDN";
 console.log(window.b)  // "MDN"
 console.log(b)         // "MDN"</pre>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> 你可以使用 {{jsxref("globalThis")}} 获取全局对象，无论你的代码是否在当前上下文运行。</p>
+<div class="note">
+<p><strong>备注：</strong>你可以使用 {{jsxref("globalThis")}} 获取全局对象，无论你的代码是否在当前上下文运行。</p>
 </div>
 
 <h3 id="函数上下文">函数上下文</h3>
@@ -72,7 +72,9 @@ f1() === globalThis;
 f2() === undefined; // true
 </pre>
 
-<div class="note">在第二个例子中，<code>this</code> 应是 <a href="/zh-CN/docs/Glossary/undefined">undefined</a>，因为 <code>f2</code> 是被直接调用的，而不是作为对象的属性或方法调用的（如 <code>window.f2()</code>）。有一些浏览器最初在支持<a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>时没有正确实现这个功能，于是它们错误地返回了<code>window</code>对象。</div>
+<div class="note">
+  <p><strong>备注：</strong>在第二个例子中，<code>this</code> 应是 <a href="/zh-CN/docs/Glossary/undefined">undefined</a>，因为 <code>f2</code> 是被直接调用的，而不是作为对象的属性或方法调用的（如 <code>window.f2()</code>）。有一些浏览器最初在支持<a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>时没有正确实现这个功能，于是它们错误地返回了<code>window</code>对象。</p>
+</div>
 
 <p>如果要想把 <code>this</code> 的值从一个环境传到另一个，就要用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a></code> 或者<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a></code> 方法，如下方的示例所示。</p>
 
@@ -94,8 +96,8 @@ f2() === undefined; // true
 
 new Example(); // ['constructor', 'first', 'second']</pre>
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong>静态方法不是 this 的属性，它们只是类自身的属性。</p>
+<div class="note">
+<p><strong>备注：</strong>静态方法不是 this 的属性，它们只是类自身的属性。</p>
 </div>
 
 <h3 id="派生类">派生类</h3>
@@ -104,7 +106,7 @@ new Example(); // ['constructor', 'first', 'second']</pre>
 
 <pre>this = new Base();</pre>
 
-<div class="blockIndicator warning">
+<div class="warning">
 <p><strong>警告：</strong>在调用 <code>super()</code> 之前引用 <code>this</code> 会抛出错误。</p>
 </div>
 
@@ -199,7 +201,7 @@ var foo = (() =&gt; this);
 console.log(foo() === globalObject); // true</pre>
 
 <div class="note">
-<p>注意：如果将<code>this</code>传递给<code>call</code>、<code>bind</code>、或者<code>apply</code>来调用箭头函数，它将被忽略。不过你仍然可以为调用添加参数，不过第一个参数（<code>thisArg</code>）应该设置为<code>null</code>。</p>
+<p><strong>备注：</strong>如果将<code>this</code>传递给<code>call</code>、<code>bind</code>、或者<code>apply</code>来调用箭头函数，它将被忽略。不过你仍然可以为调用添加参数，不过第一个参数（<code>thisArg</code>）应该设置为<code>null</code>。</p>
 </div>
 
 <pre class="brush: js">// 接着上面的代码
@@ -328,7 +330,7 @@ console.log(o.average, o.sum); // logs 2, 6
 <p>当一个函数用作构造函数时（使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new</a>关键字），它的<code>this</code>被绑定到正在构造的新对象。</p>
 
 <div class="note">
-<p>虽然构造函数返回的默认值是 <code>this</code> 所指的那个对象，但它仍可以手动返回其他的对象（如果返回值不是一个对象，则返回 <code>this</code> 对象）。</p>
+<p><strong>备注：</strong>虽然构造函数返回的默认值是 <code>this</code> 所指的那个对象，但它仍可以手动返回其他的对象（如果返回值不是一个对象，则返回 <code>this</code> 对象）。</p>
 </div>
 
 <pre class="brush: js">/*
@@ -443,8 +445,8 @@ bird.sayHi(); // Hello from Tweety
 bird.sayBye = car.sayBye;
 bird.sayBye();  // Bye from Ferrari</pre>
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong>类内部总是严格模式。调用一个 <code>this</code> 值为 undefined 的方法会抛出错误。</p>
+<div class="note">
+<p><strong>备注：</strong>类内部总是严格模式。调用一个 <code>this</code> 值为 undefined 的方法会抛出错误。</p>
 </div>
 
 <h2 id="规范">规范</h2>

@@ -357,7 +357,7 @@ console.log(a.length); // 1
 console.log(a[0]); // 3</pre>
 
 <div class="note">
-<p><strong>注意</strong><strong> </strong>这里的数组字面值也是一种对象初始化器。参考<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Working_with_Objects#Using_Object_Initializers" title="zh-CN/docs/JavaScript/Guide/Working with Objects#Using Object Initializers">对象初始化器的使用</a>。</p>
+<p><strong>备注：</strong><strong> </strong>这里的数组字面值也是一种对象初始化器。参考<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Working_with_Objects#Using_Object_Initializers" title="zh-CN/docs/JavaScript/Guide/Working with Objects#Using Object Initializers">对象初始化器的使用</a>。</p>
 </div>
 
 <p>若在顶层（全局）脚本里用字面值创建数组，JavaScript语言将会在每次对包含该数组字面值的表达式求值时解释该数组。另一方面，在函数中使用的数组，将在每次调用函数时都会被创建一次。</p>
@@ -376,7 +376,7 @@ console.log(a[0]); // 3</pre>
 <p>如果你在元素列表的尾部添加了一个逗号，它将会被忽略。在下面的例子中，数组的长度是3，并不存在myList[3]这个元素（译注：这是指数组的第4个元素噢，作者是在帮大家复习数组元素的排序命名方法）。元素列表中其它所有的逗号都表示一个新元素（的开始）。</p>
 
 <div class="note">
-<p><strong>注意：</strong>尾部的逗号在早期版本的浏览器中会产生错误，因而编程时的最佳实践方式就是移除它们。</p>
+<p><strong>备注：</strong>尾部的逗号在早期版本的浏览器中会产生错误，因而编程时的最佳实践方式就是移除它们。</p>
 </div>
 
 <p>(译注：而“现代”的浏览器似乎鼓励这种方式，这也很好解释原因。尾部逗号可以减少向数组的最后添加元素时，因为忘记为这最后一个元素加逗号 所造成的错误。)</p>
@@ -495,7 +495,7 @@ console.log(unusualPropertyNames["!"]); // Bang!</pre>
 
 <p>在ES2015，对象字面值扩展支持在创建时设置原型，简写了 foo: foo 形式的属性赋值，方法定义，支持父方法调用，以及使用表达式动态计算属性名。总之，这些也使对象字面值和类声明更加紧密地联系起来，让基于对象的设计从这些便利中更加受益。</p>
 
-<pre class="brush: js line-numbers  language-js">var obj = {
+<pre class="brush: js">var obj = {
     // __proto__
     __proto__: theProtoObj,
     // Shorthand for ‘handler: handler’
@@ -523,7 +523,7 @@ console.log(foo["2"]); // two</pre>
 
 <p>一个正则表达式是字符被斜线（译注：正斜杠“/”）围成的表达式。下面是一个正则表达式文字的一个例子。</p>
 
-<pre class="brush: js line-numbers  language-js">var re = /ab+c/;</pre>
+<pre class="brush: js">var re = /ab+c/;</pre>
 
 <h3 id="字符串字面量_String_literals">字符串字面量 (String literals)</h3>
 

@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox language-html">isFinite(<em>testValue</em>)</pre>
+<pre class="brush: js">isFinite(<em>testValue</em>)</pre>
 
 <h3 id="Parameters">参数</h3>
 
@@ -25,15 +25,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 
 <h3 id="Description">描述</h3>
 
-<dl>
- <dd>isFinite 是全局的方法，不与任何对象有关系。</dd>
-</dl>
+<p>isFinite 是全局的方法，不与任何对象有关系。</p>
 
 <p>你可以用这个方法来判定一个数字是否是有限数字。<code>isFinite</code> 方法检测它参数的数值。如果参数是 <code>NaN</code>，正无穷大或者负无穷大，会返回<code>false</code>，其他返回 <code>true</code>。</p>
 
 <h2 id="Examples">示例</h2>
 
-<pre class="brush: js  language-js">isFinite(Infinity);  // false
+<pre class="brush: js">isFinite(Infinity);  // false
 isFinite(NaN);       // false
 isFinite(-Infinity); // false
 
@@ -42,24 +40,6 @@ isFinite(2e64);      // true, 在更强壮的Number.isFinite(null)中将会得�
 
 
 isFinite("0");       // true, 在更强壮的Number.isFinite('0')中将会得到false</pre>
-
-<div class="line-number"> </div>
-
-<div class="line-number"> </div>
-
-<div class="line-number"> </div>
-
-<div class="line-number"> </div>
-
-<div class="line-number"> </div>
-
-<div class="line-number"> </div>
-
-<div class="line-number"> </div>
-
-<div class="line-number"> </div>
-
-<div class="line-number"> </div>
 
 <h2 id="规范">规范</h2>
 

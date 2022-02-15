@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 <p>JavaScript 对象是动态的属性“包”（指其自己的属性）。JavaScript 对象有一个指向一个原型对象的链。当试图访问一个对象的属性时，它不仅仅在该对象上搜寻，还会搜寻该对象的原型，以及该对象的原型的原型，依次层层向上搜索，直到找到一个名字匹配的属性或到达原型链的末尾。</p>
 
 <div class="note">
-<p>遵循ECMAScript标准，<code>someObject.[[Prototype]]</code> 符号是用于指向 <code>someObject</code> 的原型。从 ECMAScript 6 开始，<code>[[Prototype]]</code> 可以通过 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 访问器来访问。这个等同于 JavaScript 的非标准但许多浏览器实现的属性 <code>__proto__</code>。</p>
+<p><strong>备注：</strong>遵循ECMAScript标准，<code>someObject.[[Prototype]]</code> 符号是用于指向 <code>someObject</code> 的原型。从 ECMAScript 6 开始，<code>[[Prototype]]</code> 可以通过 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 访问器来访问。这个等同于 JavaScript 的非标准但许多浏览器实现的属性 <code>__proto__</code>。</p>
 
 <p>但它不应该与构造函数 <code>func</code> 的 <code>prototype</code> 属性相混淆。被构造函数创建的实例对象的 <code>[[Prototype]]</code> 指向 <code>func</code> 的 <code>prototype</code> 属性。<strong><code>Object.prototype</code> </strong>属性表示 {{jsxref("Object")}} 的原型对象。</p>
 </div>
@@ -533,8 +533,8 @@ Foo.call(o);</pre>
 
 <p>在使用原型继承编写复杂代码之前，理解原型继承模型是<strong>至关重要</strong>的。此外，请注意代码中原型链的长度，并在必要时将其分解，以避免可能的性能问题。此外，原生原型<strong>不应该</strong>被扩展，除非它是为了与新的 JavaScript 特性兼容。</p>
 
-<div class="standardNoteBlock note">
-<p><strong>译者注：</strong>在英文原版中，以下内容已被移除。保留仅作参考。</p>
+<div class="note">
+<p><strong>备注：</strong>在英文原版中，以下内容已被移除。保留仅作参考。</p>
 </div>
 
 <h2 id="示例">示例</h2>
