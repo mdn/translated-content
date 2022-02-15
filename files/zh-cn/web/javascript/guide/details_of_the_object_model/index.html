@@ -91,7 +91,7 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/3060/figure8.1.png"></p>
 
-<div style="display: table-cell; vertical-align: middle; padding: 10px;">
+<div>
 <ul>
  <li><code>Employee</code> 具有 <code>name</code> 属性（默认值为空的字符串）和 <code>dept</code> 属性（默认值为 "general"）。</li>
  <li><code>Manager</code> 是 <code>Employee</code>的子类。它添加了 <code>reports</code> 属性（默认值为空的数组，以 <code>Employee</code> 对象数组作为它的值）。</li>
@@ -279,7 +279,7 @@ var jane = new Engineer;
 
 <p>当 JavaScript 执行 <code>new</code> 操作符时，它会先创建一个普通对象，并将这个普通对象中的 [[prototype]] 指向 <code>WorkerBee.prototype</code> ，然后再把这个普通对象设置为执行 <code>WorkerBee</code> 构造函数时 <code>this</code>  的值。该普通对象的 [[Prototype]] 决定其用于检索属性的原型链。当构造函数执行完成后，所有的属性都被设置完毕，JavaScript 返回之前创建的对象，通过赋值语句将它的引用赋值给变量 <code>mark</code>。</p>
 
-<p>这个过程不会显式的将 <code style="font-size: 14px;">mark</code>所继承的原型链中的属性作为本地属性存放在 <code>mark</code> 对象中。当访问属性时，JavaScript 将首先检查对象自身中是否存在该属性，如果有，则返回该属性的值。如果不存在，JavaScript会检查原型链（使用内置的 [[Prototype]] ）。如果原型链中的某个对象包含该属性，则返回这个属性的值。如果遍历整条原型链都没有找到该属性，JavaScript 则认为对象中不存在该属性，返回一个 <code>undefined</code>。这样，<code>mark</code> 对象中将具有如下的属性和对应的值：</p>
+<p>这个过程不会显式的将 <code>mark</code>所继承的原型链中的属性作为本地属性存放在 <code>mark</code> 对象中。当访问属性时，JavaScript 将首先检查对象自身中是否存在该属性，如果有，则返回该属性的值。如果不存在，JavaScript会检查原型链（使用内置的 [[Prototype]] ）。如果原型链中的某个对象包含该属性，则返回这个属性的值。如果遍历整条原型链都没有找到该属性，JavaScript 则认为对象中不存在该属性，返回一个 <code>undefined</code>。这样，<code>mark</code> 对象中将具有如下的属性和对应的值：</p>
 
 <pre class="brush: js">mark.name = "";
 mark.dept = "general";

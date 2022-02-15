@@ -45,7 +45,7 @@ var sym3 = Symbol('foo');
 
 <pre class="brush: js">var sym = new Symbol(); // TypeError</pre>
 
-<p>这会阻止创建一个显式的 Symbol 包装器对象而不是一个 Symbol 值。围绕原始数据类型创建一个显式包装器对象从 ECMAScript 6 开始不再被支持。 然而，现有的原始包装器对象，如 <code style="font-style: normal;">new Boolean</code>、<code style="font-style: normal;">new String</code>以及<code>new Number</code>，因为遗留原因仍可被创建。</p>
+<p>这会阻止创建一个显式的 Symbol 包装器对象而不是一个 Symbol 值。围绕原始数据类型创建一个显式包装器对象从 ECMAScript 6 开始不再被支持。 然而，现有的原始包装器对象，如 <code>new Boolean</code>、<code>new String</code>以及<code>new Number</code>，因为遗留原因仍可被创建。</p>
 
 <p>如果你真的想创建一个 <u>Symbol 包装器对象 </u>(<code>Symbol wrapper object</code>)，你可以使用 <code>Object()</code> 函数：</p>
 
@@ -201,7 +201,7 @@ obj[Object(sym)];    // still 1</code></pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table" style="height: 143px; width: 640px;">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="col">标准</th>
@@ -235,5 +235,3 @@ obj[Object(sym)];    // still 1</code></pre>
  <li><a href="/en-US/docs/Web/JavaScript/Data_structures">Data types and data structures</a></li>
  <li><a href="https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/">"ES6 In Depth: Symbols"（深入ES6 Symbols ） on hacks.mozilla.org</a></li>
 </ul>
-
-<div class="itanywhere-activator" style="left: 41px; top: 3679px; display: none;" title="Google Translator Anywhere"></div>

@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox language-html" style="margin-bottom: 0px; padding: 1em; border-left-width: 6px; border-left-style: solid; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; direction: ltr; white-space: normal; text-shadow: none; background-color: rgba(212, 221, 228, 0.498039);">isFinite(<em>testValue</em>)</pre>
+<pre class="syntaxbox language-html">isFinite(<em>testValue</em>)</pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -31,9 +31,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 
 <p>你可以用这个方法来判定一个数字是否是有限数字。<code>isFinite</code> 方法检测它参数的数值。如果参数是 <code>NaN</code>，正无穷大或者负无穷大，会返回<code>false</code>，其他返回 <code>true</code>。</p>
 
-<h2 id="Examples" name="Examples" style="margin-bottom: 20px; line-height: 30px;">示例</h2>
+<h2 id="Examples" name="Examples">示例</h2>
 
-<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; border-left-width: 6px; border-left-style: solid; font-family: Consolas, Monaco, 'Andale Mono', monospace; font-size: 14px; direction: ltr; white-space: normal; text-shadow: none; background-color: rgba(234, 239, 242, 0.247059);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre; color: inherit; text-shadow: none;">isFinite(Infinity);  // false
+<pre class="brush: js  language-js"><code class="language-js">isFinite(Infinity);  // false
 isFinite(NaN);       // false
 isFinite(-Infinity); // false
 
@@ -43,25 +43,25 @@ isFinite(2e64);      // true, 在更强壮的Number.isFinite(null)中将会得�
 
 isFinite("0");       // true, 在更强壮的Number.isFinite('0')中将会得到false</code></pre>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"> </div>
+<div class="line-number"> </div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: 0px 0px;"> </div>
+<div class="line-number"> </div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 38px; background: 0px 0px;"> </div>
+<div class="line-number"> </div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 57px; background: 0px 0px;"> </div>
+<div class="line-number"> </div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 76px; background: 0px 0px;"> </div>
+<div class="line-number"> </div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 95px; background: 0px 0px;"> </div>
+<div class="line-number"> </div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 114px; background: 0px 0px;"> </div>
+<div class="line-number"> </div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 133px; background: 0px 0px;"> </div>
+<div class="line-number"> </div>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 152px; background: 0px 0px;"> </div>
+<div class="line-number"> </div>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -93,11 +93,11 @@ isFinite("0");       // true, 在更强壮的Number.isFinite('0')中将会得到
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.builtins.isFinite")}}</p>
 
-<h2 id="See_Also" name="See_Also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_Also" name="See_Also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Number.isFinite()")}}</li>

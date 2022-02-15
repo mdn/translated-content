@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 
 <h2 id="调用严格模式">调用严格模式</h2>
 
-<p>严格模式可以应用到整个脚本或个别函数中。不要在封闭大括弧 <code style="font-size: 14px;">{}</code> 内这样做，在这样的上下文中这么做是没有效果的。在 <code style="font-size: 14px;">eval</code> 、<code style="font-size: 14px;">Function</code> 、内联事件处理属性、  {{domxref("WindowTimers.setTimeout()")}} 方法中传入的脚本字符串，其行为类似于开启了严格模式的一个单独脚本，它们会如预期一样工作。</p>
+<p>严格模式可以应用到整个脚本或个别函数中。不要在封闭大括弧 <code>{}</code> 内这样做，在这样的上下文中这么做是没有效果的。在 <code>eval</code> 、<code>Function</code> 、内联事件处理属性、  {{domxref("WindowTimers.setTimeout()")}} 方法中传入的脚本字符串，其行为类似于开启了严格模式的一个单独脚本，它们会如预期一样工作。</p>
 
 <h3 id="为脚本开启严格模式">为脚本开启严格模式</h3>
 
@@ -72,7 +72,7 @@ function notStrict() {
 
 <p>严格模式同时改变了语法及运行时行为。变化通常分为这几类：将问题直接转化为错误（如语法错误或运行时错误）, 简化了如何为给定名称的特定变量计算，简化了 <code>eval</code> 以及 <code>arguments</code>, 将写"安全“JavaScript的步骤变得更简单，以及改变了预测未来ECMAScript行为的方式。</p>
 
-<h3 id="将过失错误转成异常" style="position: static;">将过失错误转成异常</h3>
+<h3 id="将过失错误转成异常">将过失错误转成异常</h3>
 
 <p>在严格模式下, 某些先前被接受的过失错误将会被认为是异常. JavaScript被设计为能使新人开发者更易于上手, 所以有时候会给本来错误操作赋予新的不报错误的语义(non-error semantics). 有时候这可以解决当前的问题, 但有时候却会给以后留下更大的问题. 严格模式则把这些失误当成错误, 以便可以发现并立即将其改正.</p>
 
@@ -247,7 +247,7 @@ var f = function() { return arguments.callee; };
 f(); // 抛出类型错误
 </pre>
 
-<h3 id="安全的_JavaScript" style="position: static;">"安全的" JavaScript</h3>
+<h3 id="安全的_JavaScript">"安全的" JavaScript</h3>
 
 <p>严格模式下更容易写出“安全”的JavaScript。现在有些网站提供了方式给用户编写能够被网站其他用户执行的JavaScript代码。在浏览器环境下，JavaScript能够获取用户的隐私信息，因此这类Javascript必须在运行前部分被转换成需要申请访问禁用功能的权限。没有很多的执行时检查的情况，Javascript的灵活性让它无法有效率地做这件事。一些语言中的函数普遍出现，以至于执行时检查他们会引起严重的性能损耗。做一些在严格模式下发生的小改动，要求用户提交的JavaScript开启严格模式并且用特定的方式调用，就会大大减少在执行时进行检查的必要。</p>
 
@@ -288,7 +288,7 @@ function fun(a, b) {
 fun(1, 2); // 不会暴露v（或者a，或者b）
 </pre>
 
-<h3 id="为未来的ECMAScript版本铺平道路" style="position: relative;">为未来的ECMAScript版本铺平道路</h3>
+<h3 id="为未来的ECMAScript版本铺平道路">为未来的ECMAScript版本铺平道路</h3>
 
 <p>未来版本的ECMAScript很有可能会引入新语法，ECMAScript5中的严格模式就提早设置了一些限制来减轻之后版本改变产生的影响。如果提早使用了严格模式中的保护机制，那么做出改变就会变得更容易。</p>
 

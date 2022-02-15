@@ -24,10 +24,8 @@ translation_of: Web/JavaScript/Guide/Working_with_Objects
 
 <p>一个 javascript 对象有很多属性。一个对象的属性可以被解释成一个附加到对象上的变量。对象的属性和普通的 javascript 变量基本没什么区别，仅仅是属性属于某个对象。属性定义了对象的特征(译注：动态语言面向对象的鸭子类型)。你可以通过点符号来访问一个对象的属性。</p>
 
-<div style="margin-right: 270px;">
 <pre class="brush: js">objectName.propertyName
 </pre>
-</div>
 
 <p>和其他 javascript 变量一样，对象的名字(可以是普通的变量)和属性的名字都是大小写敏感的。你可以在定义一个属性的时候就给它赋值。例如，我们创建一个myCar的对象然后给他三个属性，make，model，year。具体如下所示：</p>
 
@@ -70,16 +68,14 @@ console.log(myObj);
 
 <p>你也可以通过存储在变量中的字符串来访问属性：</p>
 
-<div style="width: auto;">
 <pre class="brush: js">var propertyName = "make";
-myCar[propertyName] = "Ford";
+  myCar[propertyName] = "Ford";
+  
+  propertyName = "model";
+  myCar[propertyName] = "Mustang";
+  </pre>
 
-propertyName = "model";
-myCar[propertyName] = "Mustang";
-</pre>
-</div>
-
-<p>你可以在  <a class="internal" href="/zh-CN/docs/JavaScript/Guide/Statements#for...in_Statement" style="line-height: 1.5;" title="zh-CN/docs/JavaScript/Guide/Statements#for...in Statement">for...in</a> 语句中使用方括号标记以枚举一个对象的所有属性。为了展示它如何工作，下面的函数当你将对象及其名称作为参数传入时，显示对象的属性：</p>
+<p>你可以在  <a class="internal" href="/zh-CN/docs/JavaScript/Guide/Statements#for...in_Statement" title="zh-CN/docs/JavaScript/Guide/Statements#for...in Statement">for...in</a> 语句中使用方括号标记以枚举一个对象的所有属性。为了展示它如何工作，下面的函数当你将对象及其名称作为参数传入时，显示对象的属性：</p>
 
 <pre class="brush: js">function showProps(obj, objName) {
   var result = "";
@@ -147,7 +143,7 @@ myCar.year = 1969
 
 
 
-<p>这里 <code>obj</code> 是新对象的名称，每一个 <code>property_<em>i</em></code> 是一个标识符（可以是一个名称、数字或字符串字面量），并且每个 <code>value_<em>i</em></code> 是一个其值将被赋予 property_<em>i </em>的表达式。<code style="font-style: normal; line-height: 1.5;">obj</code> 与赋值是可选的；如果你不需要在其他地方引用对象，你就不需要将它赋给一个变量。（注意在接受一条语句的地方，你可能需要将对象字面量括在括号里，从而避免将字面量与块语句相混淆）</p>
+<p>这里 <code>obj</code> 是新对象的名称，每一个 <code>property_<em>i</em></code> 是一个标识符（可以是一个名称、数字或字符串字面量），并且每个 <code>value_<em>i</em></code> 是一个其值将被赋予 property_<em>i </em>的表达式。<code>obj</code> 与赋值是可选的；如果你不需要在其他地方引用对象，你就不需要将它赋给一个变量。（注意在接受一条语句的地方，你可能需要将对象字面量括在括号里，从而避免将字面量与块语句相混淆）</p>
 
 <p>如果一个对象是通过在顶级脚本的对象初始化器创建的，则 JavaScript 在每次遇到包含该对象字面量的表达式时都会创建对象。同样的，在函数中的初始化器在每次函数调用时也会被创建。</p>
 
@@ -285,7 +281,7 @@ fish.displayType(); // Output:Fishes
 car1.color = "black";
 </pre>
 
-<p>参见 <a href="/zh-CN/docs/JavaScript/Reference" style="line-height: 1.5; text-decoration: underline;" title="zh-CN/docs/JavaScript/Reference">JavaScript Reference</a> 中 Function 对象的 <a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/prototype" style="line-height: 1.5;" title="zh-CN/docs/JavaScript/Reference/Global Objects/Function/prototype"><code>prototype</code> 属性</a> 。</p>
+<p>参见 <a href="/zh-CN/docs/JavaScript/Reference" title="zh-CN/docs/JavaScript/Reference">JavaScript Reference</a> 中 Function 对象的 <a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/prototype" title="zh-CN/docs/JavaScript/Reference/Global Objects/Function/prototype"><code>prototype</code> 属性</a> 。</p>
 
 <h2 id="定义方法">定义方法</h2>
 
@@ -306,7 +302,7 @@ var myObj = {
 };
 </pre>
 
-<p>这里 <code>objectName</code> 是一个已经存在的对象，<code>methodname</code> 是方法的名称，而 <code style="font-style: normal; line-height: 1.5;">function_name</code> 是函数的名称。</p>
+<p>这里 <code>objectName</code> 是一个已经存在的对象，<code>methodname</code> 是方法的名称，而 <code>function_name</code> 是函数的名称。</p>
 
 <p>你可以在对象的上下文中象这样调用方法：</p>
 
@@ -463,7 +459,7 @@ console.log(o.b) // Runs the getter, which yields a + 1 or 6
 
 <h2 id="删除属性">删除属性</h2>
 
-<p>你可以用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/delete">delete</a> 操作符删除一个<strong style="color: red;">不是继承而来</strong>的属性。下面的例子说明如何删除一个属性：</p>
+<p>你可以用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/delete">delete</a> 操作符删除一个<strong>不是继承而来</strong>的属性。下面的例子说明如何删除一个属性：</p>
 
 <pre class="brush: js">//Creates a new object, myobj, with two properties, a and b.
 var myobj = new Object;

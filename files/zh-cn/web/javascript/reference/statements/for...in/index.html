@@ -27,13 +27,13 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <h2 id="sect1"></h2>
 
-<h3 id="数组迭代和_for...in" style="line-height: 24px; font-size: 1.71428571428571rem;">数组迭代和 <code>for...in</code></h3>
+<h3 id="数组迭代和_for...in">数组迭代和 <code>for...in</code></h3>
 
 <div class="note">
 <p><strong>提示：</strong><code>for...in</code>不应该用于迭代一个关注索引顺序的 {{jsxref("Array")}}。</p>
 </div>
 
-<h3 id="仅迭代自身的属性" style="line-height: 24px; font-size: 1.71428571428571rem;">仅迭代自身的属性</h3>
+<h3 id="仅迭代自身的属性">仅迭代自身的属性</h3>
 
 <p>如果你只要考虑对象本身的属性，而不是它的原型，那么使用 {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}} 或执行 {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} 来确定某属性是否是对象本身的属性（也能使用{{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable")}}）。或者，如果你知道不会有任何外部代码干扰，您可以使用检查方法扩展内置原型。</p>
 

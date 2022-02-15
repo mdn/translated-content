@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 
 <p>以下三种表达式都会创建相同的正则表达式：</p>
 
-<pre class="brush: js" style="font-size: 14px;">/ab+c/i; //字面量形式
+<pre class="brush: js">/ab+c/i; //字面量形式
 new RegExp('ab+c', 'i'); // 首个参数为字符串模式的构造函数
 new RegExp(/ab+c/, 'i'); // 首个参数为常规字面量的构造函数</pre>
 
@@ -213,7 +213,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
 <p>使用浏览器内建的<a href="/en-US/docs/Web/API/URL_API">URL API</a>而非正则表达式来解析URL是更好的做法</p>
 </div>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>

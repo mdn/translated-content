@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<p><code><strong>toLocaleString()</strong></code> 方法返回该日期对象的字符串，该字符串格式因不同语言而不同。新增的参数 <code style="font-style: normal; line-height: 1.5;">locales</code> 和 <code style="font-style: normal; line-height: 1.5;">options</code> 使程序能够指定使用哪种语言格式化规则，允许定制该方法的表现（behavior）。在旧版本浏览器中， <code style="font-style: normal; line-height: 1.5;">locales</code> 和 <code style="font-style: normal; line-height: 1.5;">options</code> 参数被忽略，使用的语言环境和返回的字符串格式是各自独立实现的。</p>
+<p><code><strong>toLocaleString()</strong></code> 方法返回该日期对象的字符串，该字符串格式因不同语言而不同。新增的参数 <code>locales</code> 和 <code>options</code> 使程序能够指定使用哪种语言格式化规则，允许定制该方法的表现（behavior）。在旧版本浏览器中， <code>locales</code> 和 <code>options</code> 参数被忽略，使用的语言环境和返回的字符串格式是各自独立实现的。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}</div>
 
@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
-<p>查看<a href="#Browser_Compatibility" title="#Browser_Compatibility">浏览器兼容性</a>小节，看下哪些浏览器支持 <code style="font-style: normal;">locales</code> 和 <code style="font-style: normal;">options</code> 参数，还可以参看<a href="#Example:_Checking_for_support_for_locales_and_options_arguments">例子：检测 <code>locales</code> 和 <code>options</code> 参数支持情况</a>。</p>
+<p>查看<a href="#Browser_Compatibility" title="#Browser_Compatibility">浏览器兼容性</a>小节，看下哪些浏览器支持 <code>locales</code> 和 <code>options</code> 参数，还可以参看<a href="#Example:_Checking_for_support_for_locales_and_options_arguments">例子：检测 <code>locales</code> 和 <code>options</code> 参数支持情况</a>。</p>
 
 <p>{{page('zh-CN/docs/JavaScript/Reference/Global_Objects/DateTimeFormat','Parameters')}}</p>
 
@@ -42,7 +42,7 @@ date.toLocaleString();
 
 <h3 id="Example:_Checking_for_support_for_locales_and_options_arguments" name="Example:_Checking_for_support_for_locales_and_options_arguments">例子：检测 <code>locales</code> 和 <code>options</code> 参数支持情况</h3>
 
-<p><code style="font-style: normal;">locales</code> 和 <code style="font-style: normal;">options</code> 参数不是所有的浏览器都支持。为了检测一种实现环境（implementation）是否支持它们，可以使用不合法的语言标签，如果实现环境支持该参数，则会抛出一个 <code style="font-style: normal;">RangeError</code> 异常，反之会忽略参数。</p>
+<p><code>locales</code> 和 <code>options</code> 参数不是所有的浏览器都支持。为了检测一种实现环境（implementation）是否支持它们，可以使用不合法的语言标签，如果实现环境支持该参数，则会抛出一个 <code>RangeError</code> 异常，反之会忽略参数。</p>
 
 <pre class="brush: js">function toLocaleStringSupportsLocales() {
     try {
@@ -56,7 +56,7 @@ date.toLocaleString();
 
 <h3 id="Example:_Using_locales" name="Example:_Using_locales">例子：使用 <code>locales</code> 参数</h3>
 
-<p>下例展示了本地化日期格式的一些变化。为了在应用的用户界面得到某种语言的日期和时间格式，必须确保使用 <code style="font-style: normal;">locales</code> 参数指定了该语言（可能还需要设置某些回退语言）。</p>
+<p>下例展示了本地化日期格式的一些变化。为了在应用的用户界面得到某种语言的日期和时间格式，必须确保使用 <code>locales</code> 参数指定了该语言（可能还需要设置某些回退语言）。</p>
 
 <pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
@@ -90,7 +90,7 @@ alert(date.toLocaleString(["ban", "id"]));
 
 <h3 id="Example:_Using_options" name="Example:_Using_options">例子：使用 <code>options</code> 参数</h3>
 
-<p>可以使用 <code style="font-style: normal;">options </code>参数来自定义 <code style="font-style: normal;">toLocaleString</code> 方法返回的字符串。</p>
+<p>可以使用 <code>options </code>参数来自定义 <code>toLocaleString</code> 方法返回的字符串。</p>
 
 <pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
