@@ -1,11 +1,12 @@
 ---
 title: Document.scrollingElement
 slug: Web/API/Document/scrollingElement
+browser-compat: api.Document.scrollingElement
 translation_of: 'Web/API/Document/scrollingElement'
 ---
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`scrollingElement`** de l'interface [Document](/fr/web/api/document) renvoie une référence à l'[élément](/fr/web/api/element) qui fait défiler le document. En mode standard, il s'agit de l'élément racine du document, [document.documentElement](/fr/web/api/document/documentelement).
+La propriété en lecture seule **`scrollingElement`** de l'interface [`Document`](/fr/web/api/document) renvoie une référence à l'[élément](/fr/web/api/element) qui fait défiler le document. En mode standard, il s'agit de l'élément racine du document, [`document.documentElement`](/fr/web/api/document/documentelement).
 
 En mode quirks, l'attribut `scrollingElement` renvoie l'élément HTML `body` s'il existe et est [potentiellement défilable](https://drafts.csswg.org/cssom-view/#potentially-scrollable), sinon il renvoie null.
 
@@ -26,6 +27,6 @@ scrollElm.scrollTop = 0;
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilité du navigateur
 
 {{Compat}}
