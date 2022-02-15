@@ -10200,7 +10200,7 @@
       "gooshima"
     ]
   },
-  "Web/API/AudioScheduledSourceNode/onended": {
+  "Web/API/AudioScheduledSourceNode/ended_event": {
     "modified": "2019-03-23T23:09:21.353Z",
     "contributors": [
       "maruhiro",
@@ -10612,18 +10612,6 @@
   },
   "Web/API/BroadcastChannel/name": {
     "modified": "2020-10-15T22:19:53.534Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/BroadcastChannel/onmessage": {
-    "modified": "2020-10-15T22:19:53.795Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/BroadcastChannel/onmessageerror": {
-    "modified": "2020-10-15T22:19:54.709Z",
     "contributors": [
       "Wind1808"
     ]
@@ -48363,6 +48351,18 @@
       "mfuji09",
       "fscholz",
       "ethertank"
+    ]
+  },
+  "conflicting/Web/API/BroadcastChannel/message_event": {
+    "modified": "2020-10-15T22:19:53.795Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/BroadcastChannel/messageerror_event": {
+    "modified": "2020-10-15T22:19:54.709Z",
+    "contributors": [
+      "Wind1808"
     ]
   },
   "conflicting/Web/API/CredentialsContainer/create": {

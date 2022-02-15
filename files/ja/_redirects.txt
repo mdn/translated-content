@@ -3017,8 +3017,8 @@
 /ja/docs/Web/API/AbstractWorker/onerror	/ja/docs/Web/API/Worker/onerror
 /ja/docs/Web/API/Apps.mgmt.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/Apps.mgmt.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
-/ja/docs/Web/API/AudioBufferSourceNode.onended	/ja/docs/Web/API/AudioScheduledSourceNode/onended
-/ja/docs/Web/API/AudioBufferSourceNode/onended	/ja/docs/Web/API/AudioScheduledSourceNode/onended
+/ja/docs/Web/API/AudioBufferSourceNode.onended	/ja/docs/Web/API/AudioScheduledSourceNode/ended_event
+/ja/docs/Web/API/AudioBufferSourceNode/onended	/ja/docs/Web/API/AudioScheduledSourceNode/ended_event
 /ja/docs/Web/API/AudioBufferSourceNode/stop	/ja/docs/Web/API/AudioScheduledSourceNode/stop
 /ja/docs/Web/API/AudioContext.createScriptProcessor	/ja/docs/Web/API/BaseAudioContext/createScriptProcessor
 /ja/docs/Web/API/AudioContext/createAnalyser	/ja/docs/Web/API/BaseAudioContext/createAnalyser
@@ -3043,7 +3043,10 @@
 /ja/docs/Web/API/AudioContext/onstatechange	/ja/docs/Web/API/BaseAudioContext/onstatechange
 /ja/docs/Web/API/AudioContext/sampleRate	/ja/docs/Web/API/BaseAudioContext/sampleRate
 /ja/docs/Web/API/AudioContext/state	/ja/docs/Web/API/BaseAudioContext/state
+/ja/docs/Web/API/AudioScheduledSourceNode/onended	/ja/docs/Web/API/AudioScheduledSourceNode/ended_event
 /ja/docs/Web/API/Boolean	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+/ja/docs/Web/API/BroadcastChannel/onmessage	/ja/docs/conflicting/Web/API/BroadcastChannel/message_event
+/ja/docs/Web/API/BroadcastChannel/onmessageerror	/ja/docs/conflicting/Web/API/BroadcastChannel/messageerror_event
 /ja/docs/Web/API/ByteString	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /ja/docs/Web/API/CSSMatrix	/ja/docs/Web/API/DOMMatrix
 /ja/docs/Web/API/CSSStyleSheet.insertRule	/ja/docs/Web/API/CSSStyleSheet/insertRule

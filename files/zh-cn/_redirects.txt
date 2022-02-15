@@ -1240,6 +1240,8 @@
 /zh-CN/docs/Web/API/Blob.size	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/Blob.slice	/zh-CN/docs/Web/API/Blob/slice
 /zh-CN/docs/Web/API/Blob.type	/zh-CN/docs/Web/API/Blob/type
+/zh-CN/docs/Web/API/BroadcastChannel/onmessage	/zh-CN/docs/conflicting/Web/API/BroadcastChannel/message_event
+/zh-CN/docs/Web/API/BroadcastChannel/onmessageerror	/zh-CN/docs/conflicting/Web/API/BroadcastChannel/messageerror_event
 /zh-CN/docs/Web/API/ByteString	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /zh-CN/docs/Web/API/CSSStyleSheet.insertRule	/zh-CN/docs/Web/API/CSSStyleSheet/insertRule
 /zh-CN/docs/Web/API/CSS分页规则	/zh-CN/docs/Web/API/CSSPageRule
