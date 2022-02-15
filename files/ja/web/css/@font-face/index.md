@@ -162,7 +162,7 @@ translation_of: Web/CSS/@font-face
 
 ## 関連情報
 
-- [WOFF について](/ja/docs/WOFF)
+- [WOFF について](/ja/docs/Web/Guide/WOFF)
 - [FontSquirrel @font-face generator](https://www.fontsquirrel.com/tools/webfont-generator)
 - [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Font Library](https://fontlibrary.org/)
