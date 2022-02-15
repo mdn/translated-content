@@ -52,7 +52,7 @@ function previewFile() {
 
 ### Resultado
 
-{{EmbedLiveSample("", "100%", 240)}}
+{{EmbedLiveSample("Ejemplo", "100%", 240)}}
 
 ## Ejemplo leyendo multiples archivos
 
