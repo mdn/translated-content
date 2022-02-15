@@ -20,8 +20,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 <h3 id="参数">参数</h3>
 
 <dl>
- <dt><code>str</code></dt>
- <dd>String. URI 的组成部分。</dd>
+ <dt><code>uriComponent</code></dt>
+ <dd>一个 string、number、boolean、null，undefined 或者任何 object。在编码之前，uriComponent 参数会被转化为字符串。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -45,7 +45,7 @@ var set4 = "ABC abc 123"; // 字母数字字符和空格
 console.log(encodeURI(set1)); // ;,/?:@&amp;=+$
 console.log(encodeURI(set2)); // -_.!~*'()
 console.log(encodeURI(set3)); // #
-console.log(encodeURI(set4)); // ABC%20abc%20123 (the space gets encoded as %20)
+console.log(encodeURI(set4)); // ABC%20abc%20123 (空格被编码为 %20)
 
 console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24
 console.log(encodeURIComponent(set2)); // -_.!~*'()
@@ -77,7 +77,7 @@ alert(encodeURIComponent('\uDFFF')); </pre>
 
 <h2 id="示例">示例</h2>
 
-<p>下面这个例子提供了 UTF-8 下 <code>Content-Disposition</code> 和 <code>Link</code> 的服务器响应头信息的参数（例如 UTF-8 文件名)：</p>
+<p>下面这个例子提供了 UTF-8 下 {{HTTPHeader("Content-Disposition")}} 和 {{HTTPHeader("Link")}} 的服务器响应头信息的参数（例如 UTF-8 文件名)：</p>
 
 <pre class="brush: js notranslate">var fileName = 'my file(2).txt';
 var header = "Content-Disposition: attachment; filename*=UTF-8''"
@@ -90,12 +90,24 @@ console.log(header);
 function encodeRFC5987ValueChars (str) {
     return encodeURIComponent(str).
         // 注意，尽管 RFC3986 保留 "!"，但 RFC5987 并没有
-        // 所以我们并不需要过滤它
+        // 所以我们并不需要过滤它。
         replace(/['()]/g, escape). // i.e., %27 %28 %29
         replace(/\*/g, '%2A').
             // 下面的并不是 RFC5987 中 URI 编码必须的
             // 所以对于 |`^ 这3个字符我们可以稍稍提高一点可读性
         replace(/%(?:7C|60|5E)/g, unescape);
+}
+
+// 以下是上述功能的替换方案
+function encodeRFC5987ValueChars2(str) {
+  return encodeURIComponent(str).
+    // 注意，尽管 RFC3986 保留 "!"，但 RFC5987 并没有，
+    // 所以我们并不需要过滤它。
+    replace(/['()*]/g, c => "%" + c.charCodeAt(0).toString(16)). // i.e., %27 %28 %29 %2a (请注意，"*" 的有效编码是 %2A
+                                                                 // 这需要调用 toUpperCase() 方法来正确编码)
+    // 以下并不是 RFC5987 编码所必须的,
+    // 这样我们可以让 |`^ 在网络上获取更好的可读性
+    replace(/%(7C|60|5E)/g, (str, hex) => String.fromCharCode(parseInt(hex, 16)));
 }
 </pre>
 
