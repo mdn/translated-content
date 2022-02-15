@@ -24,19 +24,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <dl>
  <dt><code>begin</code> {{optional_inline}}</dt>
- <dd>提取起始处的索引（从 <code>0</code> 开始），从该索引开始提取原数组元素。</dd>
- <dd>如果该参数为负数，则表示从原数组中的倒数第几个元素开始提取，<code>slice(-2)</code> 表示提取原数组中的倒数第二个元素到最后一个元素（包含最后一个元素）。</dd>
- <dd>如果省略 <code>begin</code>，则 <code>slice</code> 从索引 <code>0</code> 开始。</dd>
- <dd>如果 <code>begin</code> 超出原数组的索引范围，则会返回空数组。</dd>
-</dl>
-
-<dl>
+ <dd>提取起始处的索引（从 <code>0</code> 开始），从该索引开始提取原数组元素。如果该参数为负数，则表示从原数组中的倒数第几个元素开始提取，<code>slice(-2)</code> 表示提取原数组中的倒数第二个元素到最后一个元素（包含最后一个元素）。如果省略 <code>begin</code>，则 <code>slice</code> 从索引 <code>0</code> 开始。如果 <code>begin</code> 超出原数组的索引范围，则会返回空数组。</dd>
  <dt><code>end</code> {{optional_inline}}</dt>
- <dd>提取终止处的索引（从 <code>0</code> 开始），在该索引处结束提取原数组元素。<code>slice</code> 会提取原数组中索引从 <code>begin</code> 到 <code>end</code> 的所有元素（包含 <code>begin</code>，但不包含 <code>end</code>）。</dd>
- <dd><code>slice(1,4)</code> 会提取原数组中从第二个元素开始一直到第四个元素的所有元素 （索引为 1, 2, 3的元素）。</dd>
- <dd>如果该参数为负数， 则它表示在原数组中的倒数第几个元素结束抽取。 <code>slice(-2,-1)</code> 表示抽取了原数组中的倒数第二个元素到最后一个元素（不包含最后一个元素，也就是只有倒数第二个元素）。</dd>
- <dd>如果 <code>end</code> 被省略，则 <code>slice</code> 会一直提取到原数组末尾。</dd>
- <dd>如果 <code>end</code> 大于数组的长度，<code>slice</code> 也会一直提取到原数组末尾。</dd>
+ <dd>提取终止处的索引（从 <code>0</code> 开始），在该索引处结束提取原数组元素。<code>slice</code> 会提取原数组中索引从 <code>begin</code> 到 <code>end</code> 的所有元素（包含 <code>begin</code>，但不包含 <code>end</code>）。<code>slice(1,4)</code> 会提取原数组中从第二个元素开始一直到第四个元素的所有元素 （索引为 1, 2, 3的元素）。如果该参数为负数， 则它表示在原数组中的倒数第几个元素结束抽取。 <code>slice(-2,-1)</code> 表示抽取了原数组中的倒数第二个元素到最后一个元素（不包含最后一个元素，也就是只有倒数第二个元素）。如果 <code>end</code> 被省略，则 <code>slice</code> 会一直提取到原数组末尾。如果 <code>end</code> 大于数组的长度，<code>slice</code> 也会一直提取到原数组末尾。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>

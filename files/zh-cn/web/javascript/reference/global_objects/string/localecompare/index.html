@@ -29,13 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
  <dt><code>compareString</code></dt>
  <dd>用来比较的字符串</dd>
  <dt><strong><code>locales</code></strong></dt>
- <dd>可选。 用来表示一种或多种语言或区域的一个符合 <a href="https://tools.ietf.org/html/rfc5646">BCP 47</a> 标准的字符串或一个字符串数组。 <code>locales</code>参数的一般形式与解释， 详情请参考 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation">Intl page</a>。 下列的 Unicode 扩展关键词是允许的：</dd>
- <dd><code><strong>co</strong></code></dd>
- <dd>为了某些地域多样的排序规则。可能的值包括： <code>"big5han"</code>, <code>"dict"</code>, <code>"direct"</code>, <code>"ducet"</code>, <code>"gb2312"</code>, <code>"phonebk"</code>, <code>"phonetic"</code>, <code>"pinyin"</code>, <code>"reformed"</code>, <code>"searchjl"</code>, <code>"stroke"</code>, <code>"trad"</code>, <code>"unihan"</code>。 <code>"standard"</code> 和<code>"search"</code> 这两个值是被忽略的; 它们被 <code>options</code> 的属性 <code>usage</code> 代替(往下看)。</dd>
- <dd><strong><code>kn</code></strong></dd>
- <dd>指定数值排序是否应该被使用， 像是这样 "1" &lt; "2" &lt; "10"。 可能的值是 <code>"true"</code> 和 <code>"false"</code>。 这个选项能被通过<code>options</code> 属性设置或通过 Unicode 扩展。 假如两个都被设置了， 则 <code>options</code> 优先。（<em>"<em>language</em>-<em>region</em>-u-kn-true|false"）</em></dd>
- <dd><strong><code>kf</code></strong></dd>
- <dd>指定是否优先对大写字母或小写字母排序。 可能的值有 <code>"upper"</code>, <code>"lower"</code>, 或 <code>"false"</code> (use the locale's default)。这个选项能被通过<code>options</code> 属性设置或通过 Unicode 扩展。假如两个都被设置了， 则 <code>options</code> 优先。<em>（"<em>language</em>-<em>region</em>-u-kf-upper|lower|false"）</em></dd>
+ <dd>可选。 用来表示一种或多种语言或区域的一个符合 <a href="https://tools.ietf.org/html/rfc5646">BCP 47</a> 标准的字符串或一个字符串数组。 <code>locales</code>参数的一般形式与解释， 详情请参考 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation">Intl page</a>。 下列的 Unicode 扩展关键词是允许的：<code><strong>co</strong></code>为了某些地域多样的排序规则。可能的值包括： <code>"big5han"</code>, <code>"dict"</code>, <code>"direct"</code>, <code>"ducet"</code>, <code>"gb2312"</code>, <code>"phonebk"</code>, <code>"phonetic"</code>, <code>"pinyin"</code>, <code>"reformed"</code>, <code>"searchjl"</code>, <code>"stroke"</code>, <code>"trad"</code>, <code>"unihan"</code>。 <code>"standard"</code> 和<code>"search"</code> 这两个值是被忽略的; 它们被 <code>options</code> 的属性 <code>usage</code> 代替(往下看)。<strong><code>kn</code></strong>指定数值排序是否应该被使用， 像是这样 "1" &lt; "2" &lt; "10"。 可能的值是 <code>"true"</code> 和 <code>"false"</code>。 这个选项能被通过<code>options</code> 属性设置或通过 Unicode 扩展。 假如两个都被设置了， 则 <code>options</code> 优先。（<em>"<em>language</em>-<em>region</em>-u-kn-true|false"）</em><strong><code>kf</code></strong>指定是否优先对大写字母或小写字母排序。 可能的值有 <code>"upper"</code>, <code>"lower"</code>, 或 <code>"false"</code> (use the locale's default)。这个选项能被通过<code>options</code> 属性设置或通过 Unicode 扩展。假如两个都被设置了， 则 <code>options</code> 优先。<em>（"<em>language</em>-<em>region</em>-u-kf-upper|lower|false"）</em></dd>
  <dt><code>options</code></dt>
  <dd>
  <p>可选。 支持下列的一些或全部属性的一个对象:</p>
@@ -65,14 +59,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
   <dt><code>caseFirst</code></dt>
   <dd>指定大小写有限排序. 可能的值有 <code>"upper"</code>, <code>"lower"</code>, or <code>"false"</code> (use the locale's default); 默认为 <code>"false"</code>. 这个选项能被通过<code>options</code> 属性设置或通过 Unicode 扩展。假如两个都被设置了， 则 <code>options</code> 优先。 实现不用必须支持这个属性.</dd>
  </dl>
- </dd>
- <dd>
+</dl>
+
+
  <h3 id="返回值"><strong>返回值</strong></h3>
 
  <p>如果引用字符存在于比较字符之前则为<strong>负数</strong>; 如果引用字符存在于比较字符之后则为<strong>正数</strong>; 相等的时候返回 <strong>0</strong> .</p>
- </dd>
- <dd>page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Collator', 'Parameters')}}</dd>
-</dl>
+
+ {{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Collator', 'Parameters')}}
 
 <h2 id="描述">描述</h2>
 

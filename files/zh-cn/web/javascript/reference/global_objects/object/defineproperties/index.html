@@ -22,8 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
  <dt><code>obj</code></dt>
  <dd>在其上定义或修改属性的对象。</dd>
  <dt><code>props</code></dt>
- <dd>要定义其可枚举属性或修改的属性描述符的对象。对象中存在的属性描述符主要有两种：数据描述符和访问器描述符（更多详情，请参阅{{jsxref("Object.defineProperty()")}}）。描述符具有以下键：</dd>
- <dd>
+ <dd>要定义其可枚举属性或修改的属性描述符的对象。对象中存在的属性描述符主要有两种：数据描述符和访问器描述符（更多详情，请参阅{{jsxref("Object.defineProperty()")}}）。描述符具有以下键：
  <dl>
   <dt><code>configurable</code></dt>
   <dd><code>true</code> 只有该属性描述符的类型可以被改变并且该属性可以从对应对象中删除。<br>
@@ -31,18 +30,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
   <dt><code>enumerable</code></dt>
   <dd><code>true</code> 只有在枚举相应对象上的属性时该属性显现。<br>
   <strong>默认为 <code>false</code></strong></dd>
- </dl>
-
- <dl>
   <dt><code>value</code></dt>
   <dd>与属性关联的值。可以是任何有效的JavaScript值（数字，对象，函数等）。<br>
   <strong>默认为 {{jsxref("undefined")}}.</strong></dd>
   <dt><code>writable</code></dt>
   <dd><code>true</code>只有与该属性相关联的值被{{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}改变时。<br>
   <strong>默认为 <code>false</code></strong></dd>
- </dl>
-
- <dl>
   <dt><code>get</code></dt>
   <dd>作为该属性的 getter 函数，如果没有 getter 则为{{jsxref("undefined")}}。函数返回值将被用作属性的值。<br>
   <strong>默认为 {{jsxref("undefined")}}</strong></dd>

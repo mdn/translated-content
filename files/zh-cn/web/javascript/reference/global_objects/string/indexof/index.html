@@ -28,13 +28,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 <dl>
  <dt><code>searchValue</code></dt>
- <dd>要被查找的字符串值。</dd>
- <dd>如果没有提供确切地提供字符串，<a href="https://tc39.github.io/ecma262/#sec-tostring"><var>searchValue</var> 会被强制设置为 <code>"undefined"</code></a>， 然后在当前字符串中查找这个值。</dd>
- <dd>举个例子：<code>'undefined'.indexOf()</code> 将会返回0，因为 <code>undefined</code> 在位置0处被找到，但是 <code>'undefine'.indexOf()</code> 将会返回 -1 ，因为字符串 <code>'undefined'</code> 未被找到。</dd>
+ <dd>要被查找的字符串值。如果没有提供确切地提供字符串，<a href="https://tc39.github.io/ecma262/#sec-tostring"><var>searchValue</var> 会被强制设置为 <code>"undefined"</code></a>， 然后在当前字符串中查找这个值。举个例子：<code>'undefined'.indexOf()</code> 将会返回0，因为 <code>undefined</code> 在位置0处被找到，但是 <code>'undefine'.indexOf()</code> 将会返回 -1 ，因为字符串 <code>'undefined'</code> 未被找到。</dd>
  <dt><code>fromIndex</code> {{optional_inline}}</dt>
- <dd>数字表示开始查找的位置。可以是任意整数，默认值为 <code>0</code>。</dd>
- <dd>如果 <code>fromIndex</code> 的值小于 <code>0</code>，或者大于 <code><var>str</var>.length</code> ，那么查找分别从 <code>0</code> 和<code><var>str</var>.length</code> 开始。（译者注：  <code>fromIndex</code> 的值小于 <code>0</code>，等同于为空情况； <code>fromIndex</code> 的值大于或等于 <code><var>str</var>.length</code> ，那么结果会直接返回 <code>-1</code> 。）</dd>
- <dd>举个例子，<code>'hello world'.indexOf('o', -5)</code> 返回 <code>4</code> ，因为它是从位置<code>0</code>处开始查找，然后 <code>o</code> 在位置<code>4</code>处被找到。另一方面，<code>'hello world'.indexOf('o', 11)</code> （或 <code>fromIndex</code> 填入任何大于<code>11</code>的值）将会返回 <code>-1</code> ，因为开始查找的位置<code>11</code>处，已经是这个字符串的结尾了。</dd>
+ <dd>数字表示开始查找的位置。可以是任意整数，默认值为 <code>0</code>。如果 <code>fromIndex</code> 的值小于 <code>0</code>，或者大于 <code><var>str</var>.length</code> ，那么查找分别从 <code>0</code> 和<code><var>str</var>.length</code> 开始。（译者注：  <code>fromIndex</code> 的值小于 <code>0</code>，等同于为空情况； <code>fromIndex</code> 的值大于或等于 <code><var>str</var>.length</code> ，那么结果会直接返回 <code>-1</code> 。）举个例子，<code>'hello world'.indexOf('o', -5)</code> 返回 <code>4</code> ，因为它是从位置<code>0</code>处开始查找，然后 <code>o</code> 在位置<code>4</code>处被找到。另一方面，<code>'hello world'.indexOf('o', 11)</code> （或 <code>fromIndex</code> 填入任何大于<code>11</code>的值）将会返回 <code>-1</code> ，因为开始查找的位置<code>11</code>处，已经是这个字符串的结尾了。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
