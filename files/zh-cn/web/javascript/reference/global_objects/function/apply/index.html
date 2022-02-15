@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 <p><strong><code>apply()</code></strong> 方法调用一个具有给定<code>this</code>值的函数，以及以一个数组（或<a href="/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">类数组对象</a>）的形式提供的参数。</p>
 
-<div class="note"><strong>注意：</strong><span style="line-height: 1.5;">call()方法的作用和 apply() 方法类似，区别就是<code>call()</code>方法接受的是<strong>参数列表</strong>，而<code>apply()</code>方法接受的是<strong>一个参数数组</strong>。</span></div>
+<div class="note"><strong>注意：</strong>call()方法的作用和 apply() 方法类似，区别就是<code>call()</code>方法接受的是<strong>参数列表</strong>，而<code>apply()</code>方法接受的是<strong>一个参数数组</strong>。</div>
 
 <div>{{EmbedInteractiveExample("pages/js/function-apply.html")}}</div>
 
@@ -36,9 +36,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 <h2 id="Description" name="Description">描述</h2>
 
-<p><span style="line-height: 1.5;">在调用一个存在的函数时，你可以为其指定一个 <code>this</code> 对象。 <code>this</code></span> <span style="line-height: 1.5;">指当前对象，也就是正在调用这个函数的对象。 使用 <code>apply</code>， 你可以只写一次这个方法然后在另一个对象中继承它，而不用在新对象中重复写该方法。</span></p>
+<p>在调用一个存在的函数时，你可以为其指定一个 <code>this</code> 对象。 <code>this</code> 指当前对象，也就是正在调用这个函数的对象。 使用 <code>apply</code>， 你可以只写一次这个方法然后在另一个对象中继承它，而不用在新对象中重复写该方法。</p>
 
-<p><code>apply</code> 与 {{jsxref("Function.call", "call()")}} 非常相似，不同之处在于提供参数的方式。<code style="font-size: 14px;">apply</code> 使用参数数组而不是一组参数列表。<code>apply</code> 可以使用数组字面量（array literal）<span style="line-height: 1.5;">，如 </span><code>fun.apply(this, ['eat', 'bananas'])</code><span style="line-height: 1.5;">，或数组对象，</span><span style="line-height: 1.5;"> 如  </span><code>fun.apply(this, new Array('eat', 'bananas'))</code><span style="line-height: 1.5;">。</span></p>
+<p><code>apply</code> 与 {{jsxref("Function.call", "call()")}} 非常相似，不同之处在于提供参数的方式。<code style="font-size: 14px;">apply</code> 使用参数数组而不是一组参数列表。<code>apply</code> 可以使用数组字面量（array literal），如 <code>fun.apply(this, ['eat', 'bananas'])</code>，或数组对象， 如  <code>fun.apply(this, new Array('eat', 'bananas'))</code>。</p>
 
 <p>你也可以使用 {{jsxref("Functions/arguments", "arguments")}}对象作为 <code>argsArray</code> 参数。 <code>arguments</code> 是一个函数的局部变量。 它可以被用作被调用对象的所有未指定的参数。 这样，你在使用apply函数的时候就不需要知道被调用对象的所有参数。 你可以使用arguments来把所有的参数传递给被调用对象。 被调用对象接下来就负责处理这些参数。</p>
 
@@ -108,7 +108,7 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 <h3 id="Using_apply_to_chain_constructors" name="Using_apply_to_chain_constructors">使用apply来链接构造器</h3>
 
-<p>你可以使用apply来链接一个对象<a href="/zh-CN/docs/JavaScript/Reference/Operators/new" title="JavaScript/Reference/Operators/new">构造器</a>，类似于Java。在接下来的例子中我们会创建一个全局<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function" title="JavaScript/Reference/Global_Objects/Function"><code>Function</code></a> <span style="color: #000000; display: inline !important; float: none; font-family: 'microsoft yahei'; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28.8px; text-align: left; text-indent: 0px; text-transform: none; white-space: normal;">对象的</span><span style="color: #000000; font-family: 'microsoft yahei'; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28.8px; text-align: left; text-indent: 0px; text-transform: none; white-space: normal;">construct</span><span style="color: #000000; font-family: 'microsoft yahei'; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 1.6; text-align: left; text-indent: 0px; text-transform: none; white-space: normal;">方法</span> ，来使你能够在构造器中使用一个类数组对象而非参数列表。</p>
+<p>你可以使用apply来链接一个对象<a href="/zh-CN/docs/JavaScript/Reference/Operators/new" title="JavaScript/Reference/Operators/new">构造器</a>，类似于Java。在接下来的例子中我们会创建一个全局<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function" title="JavaScript/Reference/Global_Objects/Function"><code>Function</code></a> 对象的construct方法 ，来使你能够在构造器中使用一个类数组对象而非参数列表。</p>
 
 <pre class="brush: js notranslate">Function.prototype.construct = function (aArgs) {
   var oNew = Object.create(this.prototype);

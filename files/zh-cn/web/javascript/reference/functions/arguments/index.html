@@ -156,24 +156,24 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 
 <p>这个例子定义了一个函数通过一个字符串来创建HTML列表。这个函数唯一正式声明了的参数是一个字符。当该参数为 "<code>u</code>" 时，创建一个无序列表 (项目列表)；当该参数为 "<code>o</code>" 时，则创建一个有序列表 (编号列表)。该函数定义如下：</p>
 
-<pre class="brush:js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">list<span class="punctuation token" style="color: #999999;">(</span></span>type<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
-  <span class="keyword token" style="color: #0077aa;">var</span> result <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="string token" style="color: #669900;">"&lt;"</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> type <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> <span class="string token" style="color: #669900;">"l&gt;&lt;li&gt;"</span><span class="punctuation token" style="color: #999999;">;</span>
-  <span class="keyword token" style="color: #0077aa;">var</span> args <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> Array<span class="punctuation token" style="color: #999999;">.</span>prototype<span class="punctuation token" style="color: #999999;">.</span>slice<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">call<span class="punctuation token" style="color: #999999;">(</span></span>arguments<span class="punctuation token" style="color: #999999;">,</span> <span class="number token" style="color: #990055;">1</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
-  result <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span><span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> args<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">join<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">"&lt;/li&gt;&lt;li&gt;"</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
-  result <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span><span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="string token" style="color: #669900;">"&lt;/li&gt;&lt;/"</span> <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> type <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">+</span> <span class="string token" style="color: #669900;">"l&gt;"</span><span class="punctuation token" style="color: #999999;">;</span><span class="comment token" style="color: #708090;"> // end list
-</span>
-  <span class="keyword token" style="color: #0077aa;">return</span> result<span class="punctuation token" style="color: #999999;">;</span>
-<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+<pre class="brush:js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;">function list(type) {
+  var result = "&lt;" + type + "l&gt;&lt;li&gt;";
+  var args = Array.prototype.slice.call(arguments, 1);
+  result += args.join("&lt;/li&gt;&lt;li&gt;");
+  result += "&lt;/li&gt;&lt;/" + type + "l&gt;"; // end list
+
+  return result;
+}</code></pre>
 
 <p>你可以传递任意数量的参数到该函数，并将每个参数作为一个项添加到指定类型的列表中。例如：</p>
 
-<pre class="brush:js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> listHTML <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="function token" style="color: #dd4a68;">list<span class="punctuation token" style="color: #999999;">(</span></span><span class="string token" style="color: #669900;">"u"</span><span class="punctuation token" style="color: #999999;">,</span> <span class="string token" style="color: #669900;">"One"</span><span class="punctuation token" style="color: #999999;">,</span> <span class="string token" style="color: #669900;">"Two"</span><span class="punctuation token" style="color: #999999;">,</span> <span class="string token" style="color: #669900;">"Three"</span><span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span>
+<pre class="brush:js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;">var listHTML = list("u", "One", "Two", "Three");
 
-<span class="comment token" style="color: #708090;">/* listHTML is:
+/* listHTML is:
 
 "&lt;ul&gt;&lt;li&gt;One&lt;/li&gt;&lt;li&gt;Two&lt;/li&gt;&lt;li&gt;Three&lt;/li&gt;&lt;/ul&gt;"
 
-*/</span></code>
+*/</code>
 </pre>
 
 <h3 id="剩余参数、默认参数和解构赋值参数">剩余参数、默认参数和解构赋值参数</h3>

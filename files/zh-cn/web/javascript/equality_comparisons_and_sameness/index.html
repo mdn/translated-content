@@ -168,7 +168,7 @@ console.log(obj == undefined);
 
 <h2 id="同值相等">同值相等</h2>
 
-<p>同值相等<span class="short_text" lang="zh-CN"><span>解决了</span><span class="alt-edited">最后一个用例</span><span>：</span><span>确定两个</span><span>值是否</span><span>在任何情况下</span><span>功能上</span><span>是相同的。</span></span>（这个用例演示了<a href="http://zh.wikipedia.org/zh-cn/%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99">里氏替换原则</a>的实例。）当试图对不可变（immutable）属性修改时发生出现的情况：</p>
+<p>同值相等解决了最后一个用例：确定两个值是否在任何情况下功能上是相同的。（这个用例演示了<a href="http://zh.wikipedia.org/zh-cn/%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99">里氏替换原则</a>的实例。）当试图对不可变（immutable）属性修改时发生出现的情况：</p>
 
 <pre class="brush: js notranslate">// 向 Nmuber 构造函数添加一个不可变的属性 NEGATIVE_ZERO
 Object.defineProperty(Number, "NEGATIVE_ZERO",
@@ -388,7 +388,7 @@ function attemptMutation(v)
  <dd>
  <p>显而易见，对<code>0一元负操作得到</code><code>-0</code>。但表达式的抽象化可能在你没有意识到得情况下导致-0延续传播。例如当考虑下例时:</p>
 
- <pre class="brush:js  language-js notranslate"><code class="language-js"><span class="keyword token">let</span> stoppingForce <span class="operator token">=</span> obj<span class="punctuation token">.</span>mass <span class="operator token">*</span> <span class="operator token">-</span>obj<span class="punctuation token">.</span>velocity</code></pre>
+ <pre class="brush:js  language-js notranslate"><code class="language-js">let stoppingForce = obj.mass * -obj.velocity</code></pre>
 
  <div class="line-number" style="top: 0px;"></div>
 

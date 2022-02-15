@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<p><code><strong>toLocaleString()</strong></code> <span style="line-height: 1.5;">方法返回该日期对象的字符串，该字符串格式因不同语言而不同。新增的参数 </span><code style="font-style: normal; line-height: 1.5;">locales</code><span style="line-height: 1.5;"> 和 </span><code style="font-style: normal; line-height: 1.5;">options</code><span style="line-height: 1.5;"> 使程序能够指定使用哪种语言格式化规则，允许定制该方法的表现（behavior）。在旧版本浏览器中， </span><code style="font-style: normal; line-height: 1.5;">locales</code><span style="line-height: 1.5;"> 和 </span><code style="font-style: normal; line-height: 1.5;">options</code><span style="line-height: 1.5;"> 参数被忽略，使用的语言环境和返回的字符串格式是各自独立实现的。</span></p>
+<p><code><strong>toLocaleString()</strong></code> 方法返回该日期对象的字符串，该字符串格式因不同语言而不同。新增的参数 <code style="font-style: normal; line-height: 1.5;">locales</code> 和 <code style="font-style: normal; line-height: 1.5;">options</code> 使程序能够指定使用哪种语言格式化规则，允许定制该方法的表现（behavior）。在旧版本浏览器中， <code style="font-style: normal; line-height: 1.5;">locales</code> 和 <code style="font-style: normal; line-height: 1.5;">options</code> 参数被忽略，使用的语言环境和返回的字符串格式是各自独立实现的。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}</div>
 
@@ -75,7 +75,7 @@ alert(date.toLocaleString("ko-KR"));
 
 // 大多数阿拉伯语国家的阿拉伯语使用阿拉伯数字
 alert(date.toLocaleString("ar-EG"));
-// → "<span dir="rtl">٢٠‏/١٢‏/٢٠١٢ ٥:٠٠:٠٠ ص</span>"
+// → "٢٠‏/١٢‏/٢٠١٢ ٥:٠٠:٠٠ ص"
 
 //在日本，应用可能想要使用日本日历,
 //2012 是平成24年（平成是是日本天皇明仁的年号,由1989年1月8日起开始计算直至现在）

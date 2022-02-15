@@ -53,7 +53,7 @@ console.log(valC); // 42</pre>
 //  foo is never assigned any value so it is still undefined
 let someDummyText = foo || 'Hello!';</pre>
 
-<p>然而，由于 <code>||</code> 是一个布尔逻辑运算符，左侧的操作数会被强制转换成布尔值用于求值。任何假值（<code>0</code>， <code>''</code>， <code>NaN</code>， <code>null</code>， <code>undefined</code>）都不会被返回。这导致如果你使用<code>0</code>，<code>''</code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">或</span></font><code>NaN</code>作为有效值，就会出现不可预料的后果。</p>
+<p>然而，由于 <code>||</code> 是一个布尔逻辑运算符，左侧的操作数会被强制转换成布尔值用于求值。任何假值（<code>0</code>， <code>''</code>， <code>NaN</code>， <code>null</code>， <code>undefined</code>）都不会被返回。这导致如果你使用<code>0</code>，<code>''</code><font face="Arial, x-locale-body, sans-serif">或</font><code>NaN</code>作为有效值，就会出现不可预料的后果。</p>
 
 <pre class="brush: js notranslate">let count = 0;
 let text = "";

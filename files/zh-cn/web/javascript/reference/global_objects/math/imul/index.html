@@ -45,7 +45,7 @@ Math.imul(0xfffffffe, 5) //-10
 
 <p>下面的 JavaScript 代码可以实现该函数:</p>
 
-<pre class="brush: js"><span style='background-color: transparent; font-family: consolas,"Liberation Mono",courier,monospace; font-size: 1rem; font-weight: inherit; letter-spacing: -0.00278rem; white-space: pre;'>if (!Math.imul) Math.imul = function(a, b) {</span>
+<pre class="brush: js">if (!Math.imul) Math.imul = function(a, b) {
   var aHi = (a &gt;&gt;&gt; 16) &amp; 0xffff;
   var aLo = a &amp; 0xffff;
   var bHi = (b &gt;&gt;&gt; 16) &amp; 0xffff;
@@ -57,7 +57,7 @@ Math.imul(0xfffffffe, 5) //-10
 
 <p>然而，下面的实现性能会更好一些。因为运行这段 polyfill 的浏览器很有可能会在内部使用浮点数，而不是整数表示 javascript 的 Number。</p>
 
-<pre class="brush: js"><span style='background-color: transparent; font-family: consolas,"Liberation Mono",courier,monospace; font-size: 1rem; font-weight: inherit; letter-spacing: -0.00278rem; white-space: pre;'>if (!Math.imul) Math.imul = function(opA, opB) {</span>
+<pre class="brush: js">if (!Math.imul) Math.imul = function(opA, opB) {
   opB |= 0; // ensure that opB is an integer. opA will automatically be coerced.
   // floating points give us 53 bits of precision to work with plus 1 sign bit
   // automatically handled for our convienence:

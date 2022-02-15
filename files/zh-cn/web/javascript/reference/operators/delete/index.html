@@ -287,7 +287,7 @@ console.log(trees); // ["redwood", "bay", "cedar", "maple"]
 
 <p>尽管ECMAScript使得对象的迭代顺序依赖于实现，但似乎所有主流浏览器都支持基于最早添加的属性（至少对于不在原型上的属性）的迭代顺序（译注：ES5 标准取消了属性遍历的顺序的规定）。但是，在 IE 中，使用 <code>delete</code> 删除一个属性后，奇怪的事情发生了。在IE中，如果被删除的属性重新被添加，那么遍历时，该属性的顺序会在上次删除前的那个位置,而不是出现在遍历的最后一个。</p>
 
-<p>如果您想在跨浏览器的环境中使用有序的关联数组，请使用{{jsxref("Map")}}对象（如果有），或使用两个单独的数组来模拟（一个用于键，另一个用于 值），或者建立<span class="short_text" id="result_box" lang="zh-CN"><span>一个</span><span>由单一</span><span>属性</span><span>的</span><span>对象组成的</span><span>数组</span></span>等。</p>
+<p>如果您想在跨浏览器的环境中使用有序的关联数组，请使用{{jsxref("Map")}}对象（如果有），或使用两个单独的数组来模拟（一个用于键，另一个用于 值），或者建立一个由单一属性的对象组成的数组等。</p>
 
 <h2 id="See_also" name="See_also">参见</h2>
 

@@ -99,7 +99,7 @@ var loooongWord = /\b\w{13,}\b/g;
 var sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
-console.table(sentence.match(notSoLongWord));    // <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-array"><span class="arrayLeftBracket">[ </span><span class="objectBox objectBox-string">"Why"</span>, <span class="objectBox objectBox-string">"do"</span>, <span class="objectBox objectBox-string">"I"</span>, <span class="objectBox objectBox-string">"have"</span>, <span class="objectBox objectBox-string">"to"</span>, <span class="objectBox objectBox-string">"learn"</span>, <span class="objectBox objectBox-string">"table"</span><span class="arrayRightBracket"> ]</span></span></span></span></span>
+console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "I", "have", "to", "learn", "table" ]
 console.table(sentence.match(loooongWord));      // ["multiplication"]可选可选字符
 </pre>
 

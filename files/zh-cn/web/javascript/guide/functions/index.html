@@ -468,15 +468,15 @@ getCode();    // Returns the secret code
 
 <p>例如，设想有一个用来连接字符串的函数。唯一事先确定的参数是在连接后的字符串中用来分隔各个连接部分的字符（译注：比如例子里的分号“；”）。该函数定义如下：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">myConcat</span><span class="punctuation token">(</span>separator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   <span class="keyword token">var</span> result <span class="operator token">=</span> <span class="string token">''</span><span class="punctuation token">;</span> <span class="comment token">// 把值初始化成一个字符串，这样就可以用来保存字符串了！！</span>
-   <span class="keyword token">var</span> i<span class="punctuation token">;</span>
-   <span class="comment token">// iterate through arguments</span>
-   <span class="keyword token">for</span> <span class="punctuation token">(</span>i <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> arguments<span class="punctuation token">.</span>length<span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      result <span class="operator token">+</span><span class="operator token">=</span> arguments<span class="punctuation token">[</span>i<span class="punctuation token">]</span> <span class="operator token">+</span> separator<span class="punctuation token">;</span>
-   <span class="punctuation token">}</span>
-   <span class="keyword token">return</span> result<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">function myConcat(separator) {
+   var result = ''; // 把值初始化成一个字符串，这样就可以用来保存字符串了！！
+   var i;
+   // iterate through arguments
+   for (i = 1; i &lt; arguments.length; i++) {
+      result += arguments[i] + separator;
+   }
+   return result;
+}</code></pre>
 
 <p>你可以给这个函数传递任意数量的参数，它会将各个参数连接成一个字符串“列表”：</p>
 

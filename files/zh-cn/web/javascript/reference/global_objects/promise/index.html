@@ -28,9 +28,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
  <li><em>已拒绝（rejected）</em>: 意味着操作失败。</li>
 </ul>
 
-<p>待定状态的 Promise 对象要么会通过一个值<em>被兑现（fulfilled）</em>，要么会通过一个原因（错误）<em>被拒绝（rejected）</em>。当这些情况之一发生时，我们用 promise 的 then 方法排列起来的相关处理程序就会被调用。如果 promise 在一个相应的处理程序被绑定时就已经被兑现或被拒绝了，那么这个处理程序就会被调用，因此<span style="line-height: 1.5;">在完成异步操作和绑定处理方法之间不会存在竞争状态。</span></p>
+<p>待定状态的 Promise 对象要么会通过一个值<em>被兑现（fulfilled）</em>，要么会通过一个原因（错误）<em>被拒绝（rejected）</em>。当这些情况之一发生时，我们用 promise 的 then 方法排列起来的相关处理程序就会被调用。如果 promise 在一个相应的处理程序被绑定时就已经被兑现或被拒绝了，那么这个处理程序就会被调用，因此在完成异步操作和绑定处理方法之间不会存在竞争状态。</p>
 
-<p>因为 <span style="font-family: consolas,monaco,andale mono,monospace;"><code>{{jsxref("Promise.then", "Promise.prototype.then")}}</code> </span>和  <code style="font-style: normal;">{{jsxref("Promise.catch", "Promise.prototype.catch")}}</code> 方法返回的是 promise， 所以它们可以被链式调用。</p>
+<p>因为 <code>{{jsxref("Promise.then", "Promise.prototype.then")}}</code> 和  <code style="font-style: normal;">{{jsxref("Promise.catch", "Promise.prototype.catch")}}</code> 方法返回的是 promise， 所以它们可以被链式调用。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/8633/promises.png" style="height: 297px; width: 801px;"></p>
 

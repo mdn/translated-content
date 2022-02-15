@@ -33,18 +33,18 @@ translation_of: Web/JavaScript/Reference/Statements/break
 
 <p>下面的函数里有个 <code>break</code> 语句，当 <code>i</code> 为 3 时，会中止 {{jsxref("Statements/while", "while")}} 循环，然后返回 3 * <code>x</code> 的值。</p>
 
-<pre class="brush: js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">testBreak</span><span class="punctuation token">(</span>x<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span>
+<pre class="brush: js notranslate"><code class="language-js">function testBreak(x) {
+  var i = 0;
 
-  <span class="keyword token">while</span> <span class="punctuation token">(</span>i <span class="operator token">&lt;</span> <span class="number token">6</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>i <span class="operator token">==</span> <span class="number token">3</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">break</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    i <span class="operator token">+</span><span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
+  while (i &lt; 6) {
+    if (i == 3) {
+      break;
+    }
+    i += 1;
+  }
 
-  <span class="keyword token">return</span> i <span class="operator token">*</span> x<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+  return i * x;
+}</code></pre>
 
 <h3 id="break_in_switch_statements">break in switch statements</h3>
 

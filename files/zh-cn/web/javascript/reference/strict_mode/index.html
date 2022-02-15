@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 
 <h2 id="调用严格模式">调用严格模式</h2>
 
-<p>严格模式可以应用到<span id="noHighlight_0.9206554004884853">整个脚本</span>或个别函数中。不要在封闭大括弧 <code style="font-size: 14px;">{}</code> 内这样做，在这样的上下文中这么做是没有效果的<span style="line-height: 1.5;">。</span>在 <code style="font-size: 14px;">eval</code><span style="line-height: 1.5;"> 、</span><code style="font-size: 14px;">Function</code><span style="line-height: 1.5;"> 、内联事件处理属性、 </span> {{domxref("WindowTimers.setTimeout()")}} 方法中传入的脚本字符串，其行为类似于开启了严格模式的一个单独脚本<span id="noHighlight_0.9206554004884853">，它们会</span>如预期一样工作。</p>
+<p>严格模式可以应用到整个脚本或个别函数中。不要在封闭大括弧 <code style="font-size: 14px;">{}</code> 内这样做，在这样的上下文中这么做是没有效果的。在 <code style="font-size: 14px;">eval</code> 、<code style="font-size: 14px;">Function</code> 、内联事件处理属性、  {{domxref("WindowTimers.setTimeout()")}} 方法中传入的脚本字符串，其行为类似于开启了严格模式的一个单独脚本，它们会如预期一样工作。</p>
 
 <h3 id="为脚本开启严格模式">为脚本开启严格模式</h3>
 
@@ -164,7 +164,7 @@ with (obj) { // !!! 语法错误
 }
 </pre>
 
-<p><span style="line-height: 1.5;">一种取代 </span><code>with</code>的简单方法<span style="line-height: 1.5;">是，将目标对象赋给一个短命名变量，然后访问这个变量上的相应属性</span><span style="line-height: 1.5;">.</span></p>
+<p>一种取代 <code>with</code>的简单方法是，将目标对象赋给一个短命名变量，然后访问这个变量上的相应属性.</p>
 
 <p>第二, <a class="external" href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/"><code>严格模式下的 eval 不再为上层范围(surrounding scope,注:包围eval代码块的范围)引入新变量</code></a>. 在正常模式下,  代码 <code>eval("var x;")</code> 会给上层函数(surrounding function)或者全局引入一个新的变量 <code>x</code> . 这意味着, 一般情况下,  在一个包含 <code>eval</code> 调用的函数内所有没有引用到参数或者局部变量的名称都必须在运行时才能被映射到特定的定义 (因为 <code>eval</code> 可能引入的新变量会覆盖它的外层变量). 在严格模式下 <code>eval</code> 仅仅为被运行的代码创建变量, 所以 <code>eval</code> 不会使得名称映射到外部变量或者其他局部变量:</p>
 
@@ -174,7 +174,7 @@ console.assert(x === 17);
 console.assert(evalX === 42);
 </pre>
 
-<p>相应的, 如果函数 <code>eval</code> 被在严格模式下的<span style="font-family: courier new,andale mono,monospace; line-height: normal;"><code>eval(...)</code>以表达式的形式调用时</span><span style="line-height: 1.5;">, 其代码会被当做严格模式下的代码执行. 当然也可以在代码中显式开启严格模式, 但这样做并不是必须的.</span></p>
+<p>相应的, 如果函数 <code>eval</code> 被在严格模式下的<code>eval(...)</code>以表达式的形式调用时, 其代码会被当做严格模式下的代码执行. 当然也可以在代码中显式开启严格模式, 但这样做并不是必须的.</p>
 
 <pre class="brush: js">function strict1(str) {
   "use strict";

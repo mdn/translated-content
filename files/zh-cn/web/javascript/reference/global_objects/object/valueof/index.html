@@ -149,16 +149,16 @@ console.log( str2.valueOf() === str2 );   // false</pre>
 
 <h3 id="改写_.prototype.valueof">改写 .prototype.valueof</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">MyNumberType</span><span class="punctuation token">(</span>n<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">this</span><span class="punctuation token">.</span>number <span class="operator token">=</span> n<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function MyNumberType(n) {
+    this.number = n;
+}
 
-MyNumberType<span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>valueOf <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">return</span> <span class="keyword token">this</span><span class="punctuation token">.</span>number<span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span>
+MyNumberType.prototype.valueOf = function() {
+    return this.number;
+};
 
-<span class="keyword token">var</span> myObj <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">MyNumberType</span><span class="punctuation token">(</span><span class="number token">4</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-myObj <span class="operator token">+</span> <span class="number token">3</span><span class="punctuation token">;</span> <span class="comment token">// 7</span></code></pre>
+var myObj = new MyNumberType(4);
+myObj + 3; // 7</code></pre>
 
 <h2 id="规范">规范</h2>
 

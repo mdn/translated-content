@@ -40,7 +40,7 @@ var obj = Reflect.construct(Foo, args); </pre>
 
 <h3 id="Reflect.construct_vs_Object.create"><code>Reflect.construct()</code> vs <code>Object.create()</code></h3>
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">在新语法</span></font>Reflect</code>出现之前，是通过明确指定构造函数和原型对象（ 使用{{jsxref("Object.create()")}}）来创建一个对象的。</p>
+<p><code><font face="Arial, x-locale-body, sans-serif">在新语法</font>Reflect</code>出现之前，是通过明确指定构造函数和原型对象（ 使用{{jsxref("Object.create()")}}）来创建一个对象的。</p>
 
 <pre class="brush: js notranslate">function OneClass() {
     this.name = 'one';
@@ -68,7 +68,7 @@ console.log(obj2 instanceof OtherClass); // true</pre>
 
 <p>虽然两种方式结果相同，但在创建对象过程中仍一点不同。 </p>
 
-<p><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">当使用</span></font><code>Object.create()</code>和{{jsxref("Function.prototype.apply()")}}时，如果不使用<code>new</code>操作符调用构造函数，构造函数内部的<code>new.target</code>值会指向<code>undefined</code>。</p>
+<p><font face="Arial, x-locale-body, sans-serif">当使用</font><code>Object.create()</code>和{{jsxref("Function.prototype.apply()")}}时，如果不使用<code>new</code>操作符调用构造函数，构造函数内部的<code>new.target</code>值会指向<code>undefined</code>。</p>
 
 <p>当调用<code>Reflect.construct()</code>来创建对象，<code>new.target</code>值会自动指定到<code>target</code>（或者newTarget，前提是newTarget指定了）。</p>
 
@@ -97,7 +97,7 @@ OneClass.apply(obj3, args);
 //     OneClass
 //     undefined</pre>
 
-<h2 id="举例"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 37.33327865600586px;"><strong>举例</strong></span></font></h2>
+<h2 id="举例"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><strong>举例</strong></font></h2>
 
 <h3 id="使用_Reflect.construct">使用 <code>Reflect.construct()</code></h3>
 

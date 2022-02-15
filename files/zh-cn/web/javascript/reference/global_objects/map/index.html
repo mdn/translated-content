@@ -157,7 +157,7 @@ myMap.get(function() {}); // undefined, 因为keyFunc !== function () {}</pre>
 
 <h3 id="将_NaN_作为_Map_的键">将 <code>NaN</code> 作为 <code>Map</code> 的键</h3>
 
-<p><code>NaN</code> 也可以作为<code>Map</code>对象的键。虽然 <code>NaN</code> 和任何值甚至和自己都不相等(<code>NaN !== NaN</code> 返回true)，但下面的例子表明，<code>NaN</code>作为Map的键来说是没有<span><span>区别的</span></span>:</p>
+<p><code>NaN</code> 也可以作为<code>Map</code>对象的键。虽然 <code>NaN</code> 和任何值甚至和自己都不相等(<code>NaN !== NaN</code> 返回true)，但下面的例子表明，<code>NaN</code>作为Map的键来说是没有区别的:</p>
 
 <pre class="brush: js">let myMap = new Map();
 myMap.set(NaN, "not a number");

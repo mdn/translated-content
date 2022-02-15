@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 
 <dl>
  <dt><code><var>radix</var></code><var> {{optional_inline}}</var></dt>
- <dd>从 <code>2</code> 到 <code>36</code>，表示字符串的基数。例如指定 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">16</span></font> 表示被解析值是十六进制数。请注意，10不是默认值！</dd>
+ <dd>从 <code>2</code> 到 <code>36</code>，表示字符串的基数。例如指定 <font face="consolas, Liberation Mono, courier, monospace">16</font> 表示被解析值是十六进制数。请注意，10不是默认值！</dd>
  <dd class="blockIndicator warning">文章后面的<a href="#描述">描述</a>解释了当参数 <code>radix</code> 不传时该函数的具体行为。</dd>
 </dl>
 
@@ -145,11 +145,11 @@ parseInt("08");
 
 <h3 id="ECMAScript_5_移除了八进制解析" style="line-height: 24px;">ECMAScript 5 移除了八进制解析</h3>
 
-<p>ECMAScript 5 规范不再允许<code>parseInt</code>函数的<span style="line-height: 19.0909080505371px;">实现环境把以<code>0</code>字符开始的字符串作为八进制数值</span>。ECMAScript 5 陈述如下：</p>
+<p>ECMAScript 5 规范不再允许<code>parseInt</code>函数的实现环境把以<code>0</code>字符开始的字符串作为八进制数值。ECMAScript 5 陈述如下：</p>
 
 <p>根据给定radix，<code>parseInt</code>函数产生一个由字符串参数内容解析过来的整数值。字符串中开头的空白会被忽略。如果radix没有指定或者为0，参数会被假定以10为基数来解析，如果数值以字符对0x或0X开头，会假定以16为基数来解析。</p>
 
-<p>这与<span style="line-height: 19.0909080505371px;">ECMAScript 3有所不同，ECMAScript 3仅仅是不提倡这种做法但并没有禁止这种做法。</span></p>
+<p>这与ECMAScript 3有所不同，ECMAScript 3仅仅是不提倡这种做法但并没有禁止这种做法。</p>
 
 <p>直至2013年，很多实现环境并没有采取新的规范所规定的做法, 而且由于必须兼容旧版的浏览器，所以<strong>永远都要明确给出radix参数的值.</strong></p>
 

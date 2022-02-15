@@ -125,7 +125,7 @@ export function draw(ctx, length, x, y, color) {
   };
 }</pre>
 
-<p>你能够导出函数，<code>var</code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">，</span></font><code>let</code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">，</span></font><code>const</code>, 和等会会看到的类。export要放在最外层；比如你不能够在函数内使用<code>export</code>。</p>
+<p>你能够导出函数，<code>var</code><font face="Arial, x-locale-body, sans-serif">，</font><code>let</code><font face="Arial, x-locale-body, sans-serif">，</font><code>const</code>, 和等会会看到的类。export要放在最外层；比如你不能够在函数内使用<code>export</code>。</p>
 
 <p>一个更方便的方法导出所有你想要导出的模块的方法是在模块文件的末尾使用一个export 语句， 语句是用花括号括起来的用逗号分割的列表。比如：</p>
 
@@ -139,7 +139,7 @@ export function draw(ctx, length, x, y, color) {
 
 <p>使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></code> 语句，然后你被花括号包围的用逗号分隔的你想导入的功能列表，然后是关键字from，然后是模块文件的路径。模块文件的路径是相对于站点根目录的相对路径，对于我们的<code>basic-modules</code> 应该是<code> /js-examples/modules/basic-modules</code>。</p>
 
-<p>当然，我们写的路径有一点不同---我们使用点语法意味 “当前路径”，跟随着包含我们想要找的文件的路径。这比每次都要写下整个相对路径要好得多，因为它更短，使得URL 可移植 ---如果在站点层中你把它移动到不同的路径下面仍然能够工作。<span style='background-color: #fff3d4; color: #333333; display: inline !important; float: none; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;'>（修订版 1889482）</span></p>
+<p>当然，我们写的路径有一点不同---我们使用点语法意味 “当前路径”，跟随着包含我们想要找的文件的路径。这比每次都要写下整个相对路径要好得多，因为它更短，使得URL 可移植 ---如果在站点层中你把它移动到不同的路径下面仍然能够工作。（修订版 1889482）</p>
 
 <p>那么看看例子吧：</p>
 
@@ -152,7 +152,7 @@ export function draw(ctx, length, x, y, color) {
 <p>你可以在<code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.mjs</a></code>中看到这些。</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>:在一些模块系统中你可以忽略文件扩展名（比如<code>'/model/squre'</code> .这在原生JavaScript 模块系统中不工作。<s>此外，记住你需要包含最前面的正斜杠。  </s> <span style='background-color: #fff3d4; color: #333333; display: inline !important; float: none; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;'>（修订版 1889482）</span></p>
+<p><strong>Note</strong>:在一些模块系统中你可以忽略文件扩展名（比如<code>'/model/squre'</code> .这在原生JavaScript 模块系统中不工作。<s>此外，记住你需要包含最前面的正斜杠。  </s> （修订版 1889482）</p>
 </div>
 
 <p>因为你导入了这些功能到你的脚本文件，你可以像定义在相同的文件中的一样去使用它。下面展示的是在 <code>main.mjs</code> 中的import 语句下面的内容。</p>

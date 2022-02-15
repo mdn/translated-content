@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 
 <p><code><strong>exec() </strong></code>方法在一个指定字符串中执行一个搜索匹配。返回一个结果数组或 {{jsxref("null")}}。</p>
 
-<p>在设置了 {{jsxref("RegExp.global", "global")}} 或 {{jsxref("RegExp.sticky", "sticky")}} 标志位的情况下（如 <code>/foo/g</code> or <code>/foo/y</code>），JavaScript {{jsxref("RegExp")}} 对象是<strong>有状态</strong>的。他们会将上次成功匹配后的位置记录在 <span style="font-size: 1rem; letter-spacing: -0.00278rem;">{{jsxref("RegExp.lastIndex", "lastIndex")}} 属性中。使用此特性，</span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">exec()</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> 可用来对单个字符串中的多次匹配结果进行逐条的遍历（包括捕获到的匹配），而相比之下， {{jsxref("String.prototype.match()")}} 只会返回匹配到的结果。</span></p>
+<p>在设置了 {{jsxref("RegExp.global", "global")}} 或 {{jsxref("RegExp.sticky", "sticky")}} 标志位的情况下（如 <code>/foo/g</code> or <code>/foo/y</code>），JavaScript {{jsxref("RegExp")}} 对象是<strong>有状态</strong>的。他们会将上次成功匹配后的位置记录在 {{jsxref("RegExp.lastIndex", "lastIndex")}} 属性中。使用此特性，<code style="font-size: 1rem; letter-spacing: -0.00278rem;">exec()</code> 可用来对单个字符串中的多次匹配结果进行逐条的遍历（包括捕获到的匹配），而相比之下， {{jsxref("String.prototype.match()")}} 只会返回匹配到的结果。</p>
 
 <p>如果你只是为了判断是否匹配（true或 false），可以使用 {{jsxref("RegExp.test()")}} 方法，或者 {{jsxref("String.search()")}} 方法。</p>
 
