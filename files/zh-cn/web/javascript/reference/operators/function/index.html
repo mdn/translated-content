@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Operators/function
 
 <p>JavaScript中的函数表达式没有提升,不像函数声明,你在定义函数表达式之前不能使用函数表达式:</p>
 
-<pre class="brush: js"><code><font color="#333333" face="Open Sans, arial, sans-serif" size="3"> </font>notHoisted(); // TypeError: notHoisted is not a function
+<pre class="brush: js"><code> notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function() {
    console.log('bar');

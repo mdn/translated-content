@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 
 <dl>
  <dt><code>executor</code></dt>
- <dd>这是一个双参函数，参数为<code>resolve<font face="Arial, x-locale-body, sans-serif">和</font>reject</code>。<code>Promise</code>的实现会立即执行<code>executor</code>，并传入<code>resolve<font face="Arial, x-locale-body, sans-serif">和</font>reject</code>函数（<code>Promise</code>构造器将会在返回新对象之前<code>executor</code>）。当<code>resolve</code>和<code>reject</code>函数被调用时，它们分别对promise执行<code>resolve</code>和<code>reject</code>。<code>executor</code>通常会触发一些异步运算，一旦运算成功完成，则<code>resolve</code>掉这个promise，如果出错则<code>reject</code>掉。如果<code>executor</code>函数执行时抛出异常，promise状态会变为<code>rejected</code>。<code>executor</code>的返回值也会被忽略。</dd>
+ <dd>这是一个双参函数，参数为<code>resolve和reject</code>。<code>Promise</code>的实现会立即执行<code>executor</code>，并传入<code>resolve和reject</code>函数（<code>Promise</code>构造器将会在返回新对象之前<code>executor</code>）。当<code>resolve</code>和<code>reject</code>函数被调用时，它们分别对promise执行<code>resolve</code>和<code>reject</code>。<code>executor</code>通常会触发一些异步运算，一旦运算成功完成，则<code>resolve</code>掉这个promise，如果出错则<code>reject</code>掉。如果<code>executor</code>函数执行时抛出异常，promise状态会变为<code>rejected</code>。<code>executor</code>的返回值也会被忽略。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
