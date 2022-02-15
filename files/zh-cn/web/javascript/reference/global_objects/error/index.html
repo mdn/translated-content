@@ -20,14 +20,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error
 <dl>
  <dt><code>message</code></dt>
  <dd>可选。人类可阅读的错误描述信息。</dd>
-</dl>
-
-<dl>
  <dt><code>fileName </code>{{non-standard_inline}}</dt>
  <dd>可选。被创建的Error对象的fileName属性值。默认是调用Error构造器代码所在的文件 的名字。</dd>
-</dl>
-
-<dl>
  <dt><code>lineNumber </code>{{non-standard_inline}}</dt>
  <dd>可选。被创建的Error对象的lineNumber属性值。默认是调用Error构造器代码所在的文件的行号。</dd>
 </dl>
@@ -56,29 +50,14 @@ const y = new Error('I was constructed via the "new" keyword!');</code></pre>
  <dd>创建一个error实例，表示错误的原因：与 {{jsxref("Global_Objects/eval", "eval()")}} 有关。</dd>
  <dt><strong>{{jsxref("InternalError")}} {{non-standard_inline}}</strong></dt>
  <dd>创建一个代表Javascript引擎内部错误的异常抛出的实例。 如: "递归太多".</dd>
-</dl>
-
-<dl>
  <dt><strong>{{jsxref("RangeError", "RangeError")}}</strong></dt>
  <dd>创建一个error实例，表示错误的原因：数值变量或参数超出其有效范围。</dd>
-</dl>
-
-<dl>
  <dt><strong>{{jsxref("ReferenceError")}}</strong></dt>
  <dd>创建一个error实例，表示错误的原因：无效引用。</dd>
-</dl>
-
-<dl>
  <dt><strong>{{jsxref("SyntaxError")}}</strong></dt>
  <dd>创建一个error实例，表示错误的原因：{{jsxref("Global_Objects/eval", "eval()")}}在解析代码的过程中发生的语法错误。</dd>
-</dl>
-
-<dl>
  <dt><strong>{{jsxref("TypeError")}}</strong></dt>
  <dd>创建一个error实例，表示错误的原因：变量或参数不属于有效类型。</dd>
-</dl>
-
-<dl>
  <dt><strong>{{jsxref("URIError")}}</strong></dt>
  <dd>创建一个error实例，表示错误的原因：给 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}或  {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}传递的参数无效。</dd>
 </dl>

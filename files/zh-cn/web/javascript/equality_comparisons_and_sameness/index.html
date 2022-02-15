@@ -392,36 +392,27 @@ function attemptMutation(v)
 
  <p>如果<code>obj.velocity</code>是<code>0</code> (或计算结果为<code>0</code>), <code>一个-0</code>就在上处产生并被赋值为<code>stoppingForce的值</code>.</p>
  </dd>
-</dl>
-
-<dl>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2"><code>Math.atan2</code></a></dt>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil"><code>Math.ceil</code></a></dt>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a></dt>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round"><code>Math.round</code></a></dt>
-</dl>
-
-<dl>
+ <dt>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2"><code>Math.atan2</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil"><code>Math.ceil</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round"><code>Math.round</code></a>
+ </dt>
  <dd>即使传入的参数中没有-0，这些方法的返回值都有可能是-0。例如当用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a>计算<code>-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>的任何负奇指数的幂都会得到<code>-0</code>。详情请参见这些方法各自的文档。</dd>
-</dl>
-
-<dl>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"><code>Math.floor</code></a></dt>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max"><code>Math.max</code></a></dt>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min"><code>Math.min</code></a></dt>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin"><code>Math.sin</code></a></dt>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt"><code>Math.sqrt</code></a></dt>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan"><code>Math.tan</code></a></dt>
-</dl>
-
-<dl>
+ <dt>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"><code>Math.floor</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max"><code>Math.max</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min"><code>Math.min</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin"><code>Math.sin</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt"><code>Math.sqrt</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan"><code>Math.tan</code></a>
+ </dt>
  <dd>当传入参数中有-0时，这些方法也可能返回-0。例如， <code>Math.min(-0, +0)</code> 得出 <code>-0</code>。详情请参见这些方法各自的文档。</dd>
-</dl>
-
-<dl>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">~</a></code></dt>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&lt;&lt;</a></code></dt>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&gt;&gt;</a></code></dt>
+ <dt>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"><code>~</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"><code>&lt;&lt;</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"><code>&gt;&gt;</code></a>
+ </dt>
  <dd>这些操作符内部都使用了ToInt32算法。因为内部32位整数类型只有一个0（没有符号区别），-0的符号在反操作后并不会保留下来。例如<code>Object.is(~~(-0), -0)</code>和<code>Object.is(-0 &lt;&lt; 2 &gt;&gt; 2, -0)</code> <code>都会得到false</code>.</dd>
 </dl>
 
