@@ -9,7 +9,7 @@ original_slug: Web/API/MediaStreamAudioSourceNode
 
 La interfaz **`MediaStreamAudioSourceNode`** es un tipo de {{domxref("AudioNode")}} que funciona como una fuente de audio cuyo contenido multimedia se recibe de un {{domxref("MediaStream")}} obtenido mediante WebRTC o las API de captura y transmisión de medios.
 
-Este medio podría ser de un micrófono (a través de {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}) o de un compañero remoto en una llamada WebRTC (usando pistas de audio {{domxref("RTCPeerConnection")}}).
+Este medio podría venir de un micrófono (a través de {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}) o de un compañero remoto en una llamada WebRTC (usando pistas de audio {{domxref("RTCPeerConnection")}}).
 
 Un `MediaStreamAudioSourceNode` no tiene entradas y exactamente una salida, y se crea mediante el método {{domxref("AudioContext.createMediaStreamSource()")}}.
 
