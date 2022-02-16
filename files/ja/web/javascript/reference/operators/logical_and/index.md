@@ -3,142 +3,162 @@ title: 論理積 (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
 tags:
   - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-  - 演算子
   - 言語機能
   - 論理演算子
+  - 演算子
+  - リファレンス
+browser-compat: javascript.operators.logical_and
 translation_of: Web/JavaScript/Reference/Operators/Logical_AND
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>論理積 (<code>&amp;&amp;</code>) 演算子 (論理結合) をオペランドの組み合わせに対して使用すると、すべてのオペランドが true である場合に true になります。一般的には {{jsxref("Boolean")}} (論理) 値で使用されます。その場合は論理値を返します。ただし <code>&amp;&amp;</code> 演算子は実際には指定されたオペランドのうち一つの値を返すので、この演算子が論理値以外で使用された場合は、論理値以外の値を返すことになります。</p>
+論理積 (`&&`) 演算子 (論理結合) を一組の論理型のオペランドに対して使用すると、すべてのオペランドが `true` である場合にのみ `true` になります。それ以外の場合は `false` になります。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}</div>
+一般的には、この演算子は左から右に向けて評価した際に最初の{{Glossary("falsy", "偽値")}}のオペランドに遭遇したときにはその値を、またはすべてが{{Glossary("truthy", "真値")}}であった場合は最後のオペランドの値を返します。
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><em>expr1</em> &amp;&amp; <em>expr2</em>
-</pre>
+```js
+expr1 && expr2
+```
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p><code>expr<strong>1</strong></code> が <code>true</code> に変換できる場合は <code>expr<strong>2</strong></code> を返し、それ以外の場合は <code>expr<strong>1</strong></code> を返します。</p>
+論理積 (`&&`) はオペランドを左から右に向けて評価し、遭遇した最初の{{Glossary("falsy", "偽値")}}のオペランドを直ちに返します。すべての値が{{Glossary("truthy", "真値")}}であった場合、最後のオペランドの値が返されます。
 
-<p>ある値が <code>true</code> に変換できる場合、その値は真値 ({{Glossary("truthy")}}) と呼ばれます。ある値が <code>false</code> に変換できる場合、その値は偽値 ({{Glossary("falsy")}}) と呼ばれます。</p>
+ある値が `true` に変換できる場合、その値は真値 ({{Glossary("truthy")}}) と呼ばれます。ある値が `false` に変換できる場合、その値は偽値 ({{Glossary("falsy")}}) と呼ばれます。
 
-<p>false に変換することができる式の例を示します。</p>
+false に変換することができる式の例を示します。
 
-<ul>
- <li><code>null</code></li>
- <li><code>NaN</code></li>
- <li><code>0</code></li>
- <li>空文字列 (<code>""</code> または <code>''</code> または <code>``</code>)</li>
- <li><code>undefined</code></li>
-</ul>
+- `false`
+- `null`
+- `NaN`
+- `0`
+- 空文字列 (`""` または `''` または ` `` `)
+- `undefined`
 
-<p><code>&amp;&amp;</code> 演算子では論理値以外のオペランドを使用することができますが、返値が常に <a href="/ja/docs/Web/JavaScript/Data_structures#Boolean_type">boolean プリミティブ</a>に変換することが可能であるため、論理演算子と見なすことができます。返値 (または一般的な式) を対応する論理値に明示的に変換するには、二重の<a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT">否定演算子</a>または {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。</p>
+論理積演算子は次のように、論理型でない値はそのまま温存して返します。
 
-<h3 id="Short-circuit_evaluation" name="Short-circuit_evaluation">短絡評価</h3>
+```js
+result = '' && 'foo';  // result には "" (空文字列) が代入される
+result = 2 && 0;       // result には 0 が代入される
+result = 'foo' && 4;   // result には 4 が代入される
+```
 
-<p>論理積の式は左から右へと評価され、下記の規則を使用して「短絡」評価が可能なように評価されます。</p>
+`&&` 演算子では論理値以外のオペランドを使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型_boolean)に変換することが可能であるため、論理演算子と見なすことができます。
+返値（または一般的な式）を対応する論理値に明示的に変換するには、二重の[否定演算子](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT)または {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
 
-<p><code>(偽値の式) &amp;&amp; <em>expr</em></code> は短絡評価で偽値の式に評価されます。</p>
+### 短絡評価
 
-<p>短絡とは、上記の <code><em>expr</em></code> の部分が<strong>評価されず</strong>、したがって、これを行うことの副作用が効果を及ぼさないことを意味します (例えば、 <code><em>expr</em></code> が関数呼び出しであった場合、この場所では呼び出されません)。これは、最初のオペランドが評価された時点で、すでに演算子の値が決定しているためです。例を示します。</p>
+論理積の式は短絡演算子です。
+各オペランドが論理値に変換されるとき、ある変換結果が `false` であった場合、論理積演算子は停止してその偽値のオペランドの元の値を返します。残りのオペランドは評価**されません**。
 
-<pre class="brush: js notranslate">function A(){ console.log('called A'); return false; }
-function B(){ console.log('called B'); return true; }
+以下の擬似コードを考えてみてください。
 
-console.log( A() &amp;&amp; B() );
-// 関数呼び出しによって "called A" がログ出力され、
-// それから false (演算子の結果の値) が出力されます。
-</pre>
+```
+(some falsy expression) && expr
+```
 
-<h3 id="Operator_precedence" name="Operator_precedence">演算子の優先順位</h3>
+`expr` の部分は**評価されません**。最初のオペランドである `(some falsy expression)` が{{Glossary("falsy", "偽値")}}と評価されるからです。
+`expr` が関数であった場合、その関数は呼び出されません。
+以下の例を参照してください。
 
-<p>以下の式は同じであるように見えるかもしれませんが、異なります。 <code>&amp;&amp;</code> 演算子は <code>||</code> 演算子よりも先に実行されるからです (<a href="/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">演算子の優先順位</a>を参照)。</p>
+```js
+function A() { console.log('called A'); return false; }
+function B() { console.log('called B'); return true; }
 
-<pre class="brush: js notranslate">true || false &amp;&amp; false      // true を返す。 &amp;&amp; が先に実行されるため
-(true || false) &amp;&amp; false    // false を返す。演算子の優先順位が適用されないため</pre>
+console.log( A() && B() );
+// 関数 A の呼び出しによって "called A" をログ出力し、
+// && が false に評価され（関数 A が false を返し）、それから false をコンソールに出力します。
+// 論理積演算子はここで短絡となり、関数 B は無視されます。
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+### 演算子の優先順位
 
-<h3 id="Using_AND" name="Using_AND">論理和の使用</h3>
+以下の式は同じであるように見えるかもしれませんが、異なります。 `&&` 演算子は `||` 演算子よりも先に実行されるからです（[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)を参照）。
 
-<p>以下のコードは <code>&amp;&amp;</code> (論理積) 演算子の例を示しています。</p>
+```js
+false || true && true            // true を返す
+true && (false || false)         // false を返す
+(2 == 3) || (4 < 0) && (1 == 1)  // false を返す
+```
 
-<pre class="brush: js notranslate">a1 = true  &amp;&amp; true       // t &amp;&amp; t returns true
-a2 = true  &amp;&amp; false      // t &amp;&amp; f returns false
-a3 = false &amp;&amp; true       // f &amp;&amp; t returns false
-a4 = false &amp;&amp; (3 == 4)   // f &amp;&amp; f returns false
-a5 = 'Cat' &amp;&amp; 'Dog'      // t &amp;&amp; t returns "Dog"
-a6 = false &amp;&amp; 'Cat'      // f &amp;&amp; t returns false
-a7 = 'Cat' &amp;&amp; false      // t &amp;&amp; f returns false
-a8 = ''    &amp;&amp; false      // f &amp;&amp; f returns ""
-a9 = false &amp;&amp; ''         // f &amp;&amp; f returns false</pre>
+## 例
 
-<h3 id="Conversion_rules_for_booleans" name="Conversion_rules_for_booleans">論理型の変換規則</h3>
+### 論理積の使用
 
-<h4 id="AND_から_OR_への変換">AND から OR への変換</h4>
+以下のコードは `&&` (論理積) 演算子の例を示しています。
 
-<p><strong>論理型</strong>に関する以下の操作は、</p>
+```js
+a1 = true  && true       // t && t は true を返す
+a2 = true  && false      // t && f は false を返す
+a3 = false && true       // f && t は false を返す
+a4 = false && (3 == 4)   // f && f は false を返す
+a5 = 'Cat' && 'Dog'      // t && t は "Dog" を返す
+a6 = false && 'Cat'      // f && t は false を返す
+a7 = 'Cat' && false      // t && f は false を返す
+a8 = ''    && false      // f && f は "" を返す
+a9 = false && ''         // f && f は false を返す
+```
 
-<pre class="brush: js notranslate">bCondition1 &amp;&amp; bCondition2</pre>
+### 論理型の変換規則
 
-<p>常に以下のものと等しくなります。</p>
+#### AND から OR への変換
 
-<pre class="brush: js notranslate">!(!bCondition1 || !bCondition2)</pre>
+**論理型**に関する以下の操作は、
 
-<h4 id="Converting_OR_to_AND" name="Converting_OR_to_AND">OR から AND への変換</h4>
+```js
+bCondition1 && bCondition2
+```
 
-<p><strong>論理型</strong>に関する以下の操作は、</p>
+常に以下のものと等しくなります。
 
-<pre class="brush: js notranslate">bCondition1 || bCondition2</pre>
+```js
+!(!bCondition1 || !bCondition2)
+```
 
-<p>常に以下のものと等しくなります。</p>
+#### OR から AND への変換
 
-<pre class="brush: js notranslate">!(!bCondition1 &amp;&amp; !bCondition2)</pre>
+**論理型**に関する以下の操作は、
 
-<h3 id="Removing_nested_parentheses" name="Removing_nested_parentheses">入れ子になった括弧の除去</h3>
+```js
+bCondition1 || bCondition2
+```
 
-<p>論理式は左から右に評価されるので、いくつかのルールに従って複雑な式から括弧を削除することは常に可能です。</p>
+常に以下のものと等しくなります。
 
-<p>以下の<strong>論理型</strong>に関する複合操作は、</p>
+```js
+!(!bCondition1 && !bCondition2)
+```
 
-<pre class="brush: js notranslate">bCondition1 || (bCondition2 &amp;&amp; bCondition3)</pre>
+### 入れ子になった括弧の除去
 
-<p>常に以下のものと等しくなります。</p>
+論理式は左から右に評価されるので、いくつかのルールに従って複雑な式から括弧を削除することは常に可能です。
 
-<pre class="brush: js notranslate">bCondition1 || bCondition2 &amp;&amp; bCondition3</pre>
+以下の**論理型**に関する複合操作は、
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+```js
+bCondition1 || (bCondition2 && bCondition3)
+```
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#prod-LogicalANDExpression', 'Logical AND expression')}}</td>
-  </tr>
- </tbody>
-</table>
+常に以下のものと等しくなります。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+```js
+bCondition1 || bCondition2 && bCondition3
+```
 
-<p>{{Compat("javascript.operators.logical_and")}}</p>
+## 仕様書
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Specifications}}
 
-<ul>
- <li>{{jsxref("Boolean")}}</li>
- <li>{{Glossary("Truthy")}}</li>
- <li>{{Glossary("Falsy")}}</li>
-</ul>
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{jsxref("Boolean")}}
+- {{Glossary("Truthy")}}
+- {{Glossary("Falsy")}}
