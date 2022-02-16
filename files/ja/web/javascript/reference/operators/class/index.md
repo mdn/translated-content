@@ -2,45 +2,45 @@
 title: クラス式
 slug: Web/JavaScript/Reference/Operators/class
 tags:
-  - Class
-  - Classes
-  - ECMAScript6
-  - Expression
+  - クラス
+  - ECMAScript 2015
+  - 式
   - JavaScript
-  - Operator
-  - Reference
+  - 言語機能
+  - 演算子
+  - リファレンス
+browser-compat: javascript.operators.class
 translation_of: Web/JavaScript/Reference/Operators/class
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><span class="seoSummary"><strong>クラス式</strong>は、 ECMAScript 2015 でクラスを定義する方法の 1 つです。{{jsxref("Operators/function", "関数式", "", "true")}}と同じように、クラス式は名前を付けることも付けないこともできます。名前を付ける場合、クラス名はクラス内部のみのローカルです。</span></p>
+**クラス式**は、 ECMAScript 2015 でクラスを定義する方法の 1 つです。{{jsxref("Operators/function", "関数式", "", "true")}}と同じように、クラス式は名前を付けることも付けないこともできます。名前を付けた場合、クラス名はクラス内部のみのローカルです。
 
-<p>JavaScript のクラスはプロトタイプベースの継承が使われます。</p>
+JavaScript のクラスはプロトタイプベースの継承が使われます。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-classexpression.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-classexpression.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+const MyClass = class [className] [extends otherClassName] {
+  // クラス本体
+}
+```
 
-<pre class="syntaxbox notranslate">const <var>MyClass</var> = class [<var>className</var>] [extends <var>otherClassName</var>] {
-    // クラス本体
-};</pre>
+## 解説
 
-<h2 id="Description" name="Description">説明</h2>
+クラス式の構文は、{{jsxref("Statements/class", "クラス宣言（文）", "", "true")}} と似ています。 `class` 文では、 `class` 式の本体が{{jsxref("Strict_mode", "厳格モード", "", 1)}}で実行されます。
 
-<p>クラス式の構文は、{{jsxref("Statements/class", "クラス宣言 (文)", "", "true")}} と似ています。 <code>class</code> 文では、 <code>class</code> 式の本体が{{jsxref("Strict_mode", "厳格モード", "", 1)}}で実行されます。</p>
+しかし、クラス式と{{jsxref("Statements/class", "クラス文", "", "true")}}ではいくつかの相違点があります。
 
-<p>しかし、クラス式と{{jsxref("Statements/class", "クラス文", "", "true")}}はいくつかの相違点があります。</p>
+- クラス式ではクラス名（「束縛識別子」 (binding identifier)）を省略できますが、{{jsxref("Statements/class", "クラス文", "", "true")}}では省略できません。
+- クラス式は {{jsxref("Global_Objects/SyntaxError", "SyntaxError")}} を**発生させずに**クラスを再宣言することができます。これは{{jsxref("Statements/class", "クラス文", "", "true")}}の場合はできません。
 
-<ul>
- <li>クラス式ではクラス名 ("<ruby>束縛識別子<rp> (</rp><rt>binding identifier</rt><rp>) </rp></ruby>") を省略できますが、{{jsxref("Statements/class", "クラス文", "", "true")}}では省略できません。</li>
- <li>クラス式は {{jsxref("Global_Objects/SyntaxError", "SyntaxError")}} <strong>を発生させずに</strong>クラスを再宣言することができます。これは{{jsxref("Statements/class", "クラス文", "", "true")}}の場合はできません。</li>
-</ul>
+`constructor` メソッドは省略可能です。クラス式で生成されたクラスは、常に {{jsxref("Operators/typeof", "typeof")}} が "`function`" の値を返します。
 
-<p><code>constructor</code> メソッドは省略可能です。クラス式で生成されたクラスは、常に {{jsxref("Operators/typeof", "typeof")}} が "<code>function</code>" の値を返します。</p>
-
-<pre class="brush: js notranslate">'use strict';
+```js
+'use strict';
 let Foo = class {};  // コンストラクタープロパティは省略可能
 Foo = class {};      // 再宣言が可能
 
@@ -49,16 +49,17 @@ typeof class {};        // "function" を返す
 
 Foo instanceof Object;   // true
 Foo instanceof Function; // true
-class Foo {}            // SyntaxError が発生 (クラス<em>宣言</em>は再宣言ができない)
-</pre>
+class Foo {}            // SyntaxError が発生 (クラス宣言は再宣言ができない)
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="A_simple_class_expression" name="A_simple_class_expression">簡単なクラス式</h3>
+### 簡単なクラス式
 
-<p>以下は、名前のない簡単なクラス式です。変数 <code>Foo</code> を使って参照できます。</p>
+以下は、名前のない簡単なクラス式です。変数 `Foo` を使って参照できます。
 
-<pre class="brush: js notranslate">const Foo = class {
+```js
+const Foo = class {
   constructor() {}
   bar() {
     return 'Hello World!';
@@ -68,13 +69,14 @@ class Foo {}            // SyntaxError が発生 (クラス<em>宣言</em>は再
 const instance = new Foo();
 instance.bar();  // "Hello World!"
 Foo.name;        // "Foo"
-</pre>
+```
 
-<h3 id="Named_class_expressions" name="Named_class_expressions">名前付きクラス式</h3>
+### 名前付きクラス式
 
-<p>クラス内部で現在のクラスを参照したい場合は、<em>名前付きクラス式</em>を作成してください。この名前は、そのクラス式自身のスコープ内だけで見ることができます。</p>
+クラス内部で現在のクラスを参照したい場合は、*名前付きクラス式*を作成してください。この名前は、そのクラス式自身のスコープ内だけで見ることができます。
 
-<pre class="brush: js notranslate">const Foo = class NamedFoo {
+```js
+const Foo = class NamedFoo {
   constructor() {}
   whoIsThere() {
     return NamedFoo.name;
@@ -84,31 +86,18 @@ const bar = new Foo();
 bar.whoIsThere();  // "NamedFoo"
 NamedFoo.name;     // ReferenceError: NamedFoo is not defined
 Foo.name;          // "NamedFoo"
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.operators.class")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Operators/function", "関数式", "", "true")}}</li>
- <li>{{jsxref("Statements/class", "クラス宣言", "", "true")}}</li>
- <li>{{jsxref("Classes", "クラス", "", "true")}}</li>
-</ul>
+- {{jsxref("Operators/function", "関数式", "", "true")}}
+- {{jsxref("Statements/class", "クラス宣言", "", "true")}}
+- {{jsxref("Classes", "クラス", "", "true")}}
