@@ -1,17 +1,16 @@
 ---
 title: CustomEvent
 slug: Web/API/CustomEvent
-tags:
-  - Interface
-  - Referencia
-browser-compat: api.CustomEvent
 translation_of: Web/API/CustomEvent
+browser-compat: api.CustomEvent
 ---
 {{APIRef("DOM")}}
 
 La interfaz **`CustomEvent`** representa eventos que son inicializados por una aplicación para cualquier propósito.
 
 {{AvailableInWorkers}}
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
@@ -44,4 +43,3 @@ _Esta interfaz hereda las propiedades de su padre, {{domxref("Event")}}._
 
 - {{domxref("Window.postMessage()")}}
 - [Creación y activación de eventos](/es/docs/Web/Events/Creating_and_triggering_events)
-
