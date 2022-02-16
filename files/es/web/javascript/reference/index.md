@@ -76,7 +76,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 - {{JSxRef("Float32Array")}}
 - {{JSxRef("Float64Array")}}
 
-### Colecciones en clave
+### Colecciones con campos clave
 
 - {{JSxRef("Map")}}
 - {{JSxRef("Set")}}
