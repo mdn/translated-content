@@ -19,7 +19,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 - {{JSxRef("NaN")}}
 - {{JSxRef("undefined")}}
 
-### Propiedades de funciones
+### Propiedades de tipo función
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
 - {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
