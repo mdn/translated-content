@@ -36,36 +36,36 @@ translation_of: Learn/JavaScript/Asynchronous/Async_await
 
 <p>Попробуйте выполнить в консоли браузера следующий код:</p>
 
-<pre class="brush: js notranslate">function hello() { return "Hello" };
+<pre class="brush: js">function hello() { return "Hello" };
 hello();</pre>
 
 <p>Функция возвращает "Hello" — ничего необычного, верно ?</p>
 
 <p>Но что если мы сделаем её асинхронной ? Проверим:</p>
 
-<pre class="brush: js notranslate">async function hello() { return "Hello" };
+<pre class="brush: js">async function hello() { return "Hello" };
 hello();</pre>
 
 <p>Как было сказано ранее, вызов асинхронной функции возвращает объект Promise.</p>
 
 <p>Вот пример с <a href="/en-US/docs/Web/JavaScript/Reference/Operators/async_function">async function expression</a>:</p>
 
-<pre class="brush: js notranslate">let hello = async function() { return "Hello" };
+<pre class="brush: js">let hello = async function() { return "Hello" };
 hello();</pre>
 
 <p>Также можно использовать стрелочные функции:</p>
 
-<pre class="brush: js notranslate">let hello = async () =&gt; { return "Hello" };</pre>
+<pre class="brush: js">let hello = async () =&gt; { return "Hello" };</pre>
 
 <p>Все они в общем случае делают одно и то же.</p>
 
 <p>Чтобы получить значение, которое возвращает Promise, мы как обычно можем использовать метод <code>.then()</code>:</p>
 
-<pre class="brush: js notranslate">hello().then((value) =&gt; console.log(value))</pre>
+<pre class="brush: js">hello().then((value) =&gt; console.log(value))</pre>
 
 <p>или ещё короче</p>
 
-<pre class="brush: js notranslate">hello().then(console.log)
+<pre class="brush: js">hello().then(console.log)
 </pre>
 
 <p>Итак, ключевое слово <code>async</code>, превращает обычную функцию в асинхронную и результат вызова функции оборачивает в Promise. Также асинхронная функция позволяет использовать в своём теле ключевое слово await, о котором далее.</p>
@@ -78,7 +78,7 @@ hello();</pre>
 
 <p>Небольшой пример:</p>
 
-<pre class="brush: js notranslate">async function hello() {
+<pre class="brush: js">async function hello() {
   return greeting = await Promise.resolve("Hello");
 };
 
@@ -90,7 +90,7 @@ hello().then(alert);</pre>
 
 <p>Давайте посмотрим на пример из предыдущей статьи:</p>
 
-<pre class="brush: js notranslate">fetch('coffee.jpg')
+<pre class="brush: js">fetch('coffee.jpg')
 .then(response =&gt; {
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
@@ -110,7 +110,7 @@ hello().then(alert);</pre>
 
 <p>К этому моменту вы должны понимать как работают Promises, чтобы понять все остальное. Давайте перепишем код используя async/await и оценим разницу.</p>
 
-<pre class="brush: js notranslate">async function myFetch() {
+<pre class="brush: js">async function myFetch() {
   let response = await fetch('coffee.jpg');
 
   if (!response.ok) {
@@ -134,7 +134,7 @@ myFetch()
 
 <p>Так как ключевое слово <code>async</code> заставляет функцию вернуть Promise, мы можем использовать гибридный подход:</p>
 
-<pre class="brush: js notranslate">async function myFetch() {
+<pre class="brush: js">async function myFetch() {
   let response = await fetch('coffee.jpg');
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
@@ -160,7 +160,7 @@ myFetch().then((blob) =&gt; {
  <br>
  Пример:</p>
 
-<pre class="brush: js notranslate">let response = await fetch('coffee.jpg');</pre>
+<pre class="brush: js">let response = await fetch('coffee.jpg');</pre>
 
 <p>Значение Promise, которое вернёт <code>fetch()</code> будет присвоено переменной <code>response</code> только тогда, когда оно будет доступно - парсер делает паузу на данной строке дожидаясь этого момента. Как только значение доступно, парсер переходит к следующей строке, в которой создаётся объект <code><a href="/en-US/docs/Web/API/Blob">Blob</a></code> из результата Promise. В этой строке, кстати, также используется <code>await</code>, потому что метод <code>.blob()</code> также возвращает Promise. Когда результат готов, мы возвращаем его наружу из <code>myFetch()</code>.</p>
 
@@ -175,7 +175,7 @@ myFetch().then((blob) =&gt; {
 
 <p>Мы можем использовать синхронную <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> структуру с <code>async</code>/<code>await</code>. Вот изменённая версия первого примера выше:</p>
 
-<pre class="brush: js notranslate">async function myFetch() {
+<pre class="brush: js">async function myFetch() {
   try {
     let response = await fetch('coffee.jpg');
 
@@ -199,7 +199,7 @@ myFetch();</pre>
 
 <p>Если вы хотите использовать гибридный подходы (пример выше), лучше использовать блок <code>.catch()</code> после блока <code>.then()</code> вот так:</p>
 
-<pre class="brush: js notranslate">async function myFetch() {
+<pre class="brush: js">async function myFetch() {
   let response = await fetch('coffee.jpg');
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
@@ -233,7 +233,7 @@ myFetch().then((blob) =&gt; {
 
 <p>Версия с async/await (смотрите <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-all-async-await.html">live demo</a> и <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-all-async-await.html">source code</a>), сейчас выглядит так:</p>
 
-<pre class="brush: js notranslate">async function fetchAndDecode(url, type) {
+<pre class="brush: js">async function fetchAndDecode(url, type) {
   let response = await fetch(url);
 
   let content;
@@ -282,7 +282,7 @@ displayContent()
 
 <p>Вы видите, что мы легко изменили <code>fetchAndDecode()</code> функцию в асинхронный вариант. Взгляните на строку с <code>Promise.all()</code>:</p>
 
-<pre class="brush: js notranslate">let values = await Promise.all([coffee, tea, description]);</pre>
+<pre class="brush: js">let values = await Promise.all([coffee, tea, description]);</pre>
 
 <p>С помощью <code>await</code> мы ждём массив результатов всех трёх Promises и присваиваем его в переменную <code>values</code>. Это асинхронный код, но он написан в синхронном стиле, за счёт чего он гораздо читабельнее.<br>
  <br>
@@ -306,7 +306,7 @@ displayContent()
 
 <p>Мы подготовили два примера  — <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html">slow-async-await.html</a> (см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html">source code</a>) и <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html">fast-async-await.html</a> (см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html">source code</a>). Они оба начинаются с функции возвращающей promise, имитирующей асинхронность процессов при помощи вызова <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code>:</p>
 
-<pre class="brush: js notranslate">function timeoutPromise(interval) {
+<pre class="brush: js">function timeoutPromise(interval) {
   return new Promise((resolve, reject) =&gt; {
     setTimeout(function(){
       resolve("done");
@@ -316,13 +316,13 @@ displayContent()
 
 <p>Далее в каждом примере есть асинхронная функция  <code>timeTest()</code> ожидающая три вызова <code>timeoutPromise()</code>:</p>
 
-<pre class="brush: js notranslate">async function timeTest() {
+<pre class="brush: js">async function timeTest() {
   ...
 }</pre>
 
 <p>В каждом примере функция записывает время начала исполнения и сколько времени понадобилось на исполнение  <code>timeTest()</code>  промисов, вычитая время в момент запуска функции из времени в момент разрешения промисов:</p>
 
-<pre class="brush: js notranslate">let startTime = Date.now();
+<pre class="brush: js">let startTime = Date.now();
 timeTest().then(() =&gt; {
   let finishTime = Date.now();
   let timeTaken = finishTime - startTime;
@@ -333,7 +333,7 @@ timeTest().then(() =&gt; {
 
 <p>В случае с медленным примером <code>slow-async-await.html</code>, <code>timeTest()</code> выглядит:</p>
 
-<pre class="brush: js notranslate">async function timeTest() {
+<pre class="brush: js">async function timeTest() {
   await timeoutPromise(3000);
   await timeoutPromise(3000);
   await timeoutPromise(3000);
@@ -343,7 +343,7 @@ timeTest().then(() =&gt; {
 
 <p>Во втором  <code>fast-async-await.html</code> примере, функция <code>timeTest()</code> выглядит как:</p>
 
-<pre class="brush: js notranslate">async function timeTest() {
+<pre class="brush: js">async function timeTest() {
   const timeoutPromise1 = timeoutPromise(3000);
   const timeoutPromise2 = timeoutPromise(3000);
   const timeoutPromise3 = timeoutPromise(3000);
@@ -365,7 +365,7 @@ timeTest().then(() =&gt; {
 
 <p>В качестве последнего замечания, вы можете использовать  <code>async</code>  перед методами классов или объектов, вынуждая их возвращать promises. А также  await внутри методов объявленных таким образом. Посмотрите на пример <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ECMAScript_2015_Classes">ES class code, который мы наблюдали в статье  object-oriented JavaScript</a>,  и сравните его с модифицированной (асинхронной) <code>async</code> версией ниже:</p>
 
-<pre class="brush: js notranslate">class Person {
+<pre class="brush: js">class Person {
   constructor(first, last, age, gender, interests) {
     this.name = {
       first,
@@ -389,7 +389,7 @@ let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);</pre>
 
 <p>Первый метод класса теперь можно использовать таким образом:</p>
 
-<pre class="brush: js notranslate">han.greeting().then(console.log);</pre>
+<pre class="brush: js">han.greeting().then(console.log);</pre>
 
 <h2 id="Browser_support_Поддержка_браузерами">Browser support (Поддержка браузерами)</h2>
 

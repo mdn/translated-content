@@ -36,17 +36,17 @@ p.finally(function() {
 <p><code>finally()</code> 方法非常類似於 <code>.then(onFinally, onFinally)</code> 的呼叫方式，但仍有一些差異：</p>
 
 <ul>
- <li><font><font>當建立行內的函數時，可以只傳遞一次，從而避免重複宣告或為它宣告變數。</font></font></li>
+ <li>當建立行內的函數時，可以只傳遞一次，從而避免重複宣告或為它宣告變數。</li>
  <li><code>finally</code> 的回呼函數並不會接收到任何引數，因其沒有可靠的方式來確認 promise 是被 fulfilled 還是 rejected 。它的使用情境僅適用於當你<em>不關心</em> rejection 的原因或 fulfillment 的值，因此無須提供。範例：
   <ul>
-   <li><font><font>與 </font></font><code>Promise.resolve(2).then(() =&gt; {}, () =&gt; {})</code><font><font>（將被 resolved 為</font></font><code>undefined</code><font><font>）不同，</font></font><code>Promise.resolve(2).finally(() =&gt; {})</code><font><font> 將被 resolved 為</font></font><code>2</code><font><font>。</font></font></li>
-   <li><font><font>同樣的，與 </font></font><code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code><font><font>（將 fulfilled 為</font></font><code>undefined</code><font><font>）不同，</font></font><code>Promise.reject(3).finally(() =&gt; {})</code><font><font> 將被 rejected 為</font></font><code>3</code><font><font>。</font></font></li>
+   <li>與 <code>Promise.resolve(2).then(() =&gt; {}, () =&gt; {})</code>（將被 resolved 為<code>undefined</code>）不同，<code>Promise.resolve(2).finally(() =&gt; {})</code> 將被 resolved 為<code>2</code>。</li>
+   <li>同樣的，與 <code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code>（將 fulfilled 為<code>undefined</code>）不同，<code>Promise.reject(3).finally(() =&gt; {})</code> 將被 rejected 為<code>3</code>。</li>
   </ul>
  </li>
 </ul>
 
-<div class="note">
-<p><strong>備註： </strong>在 finally 回呼中使用 throw （或回傳 rejected promise）會導致新的 promise 被 reject ， reject 的原因則是呼叫 throw() 時所指定的值。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>在 finally 回呼中使用 throw （或回傳 rejected promise）會導致新的 promise 被 reject ， reject 的原因則是呼叫 throw() 時所指定的值。</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
@@ -65,10 +65,6 @@ fetch(myRequest).then(function(response) {
   .finally(function() { isLoading = false; });
 
 </pre>
-
-<div class="hidden">
-<p>Please do not add polyfills on MDN pages. For more details, refer to: <a href="https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500">https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500</a></p>
-</div>
 
 <h2 id="Specifications">Specifications</h2>
 

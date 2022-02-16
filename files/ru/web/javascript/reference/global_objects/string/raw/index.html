@@ -14,11 +14,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/raw
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Статический метод <strong><code>String.raw()</code></strong> является теговой функцией для <a href="/ru/docs/Web/JavaScript/Reference/template_strings">шаблонных строк</a>; подобно префиксу <code>r</code> в Python или префиксу <code>@</code> в C# для строковых литералов, эта функция используется для получения необработанной строки из шаблона.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>
 String.raw(<var>callSite</var>, <var>...substitutions</var>)
@@ -26,7 +26,7 @@ String.raw(<var>callSite</var>, <var>...substitutions</var>)
 String.raw`templateString`
 </code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>callSite</code></dt>
@@ -37,22 +37,22 @@ String.raw`templateString`
  <dd><a href="/ru/docs/Web/JavaScript/Reference/template_strings">Шаблонная строка</a>, возможно с подстановками (<code>${...}</code>).</dd>
 </dl>
 
-<h3 id="Throws" name="Throws">Выбрасываемые исключения</h3>
+<h3 id="Throws">Выбрасываемые исключения</h3>
 
 <dl>
  <dt>{{jsxref("Global_Objects/TypeError", "TypeError")}}</dt>
  <dd>Если первый аргумент не является правильно сформированным объектом вызова, выбрасывается исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>В большинстве случаев метод <code>String.raw()</code> используется вместе с шаблонными строками. Первый синтаксис, показанный выше, используется редко, поскольку движок JavaScript будет вызывать метод с соответствующими аргументами, подобно другим <a href="/ru/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings">теговым функциям</a>.</p>
 
 <p>Метод <code>String.raw()</code> является единственной встроенной теговой функцией шаблонных строк, выступающей стандартной функцией по объединению их фрагментов. Вы и сами могли бы реализовать подобную функциональность на JavaScript.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_String.raw" name="Example:_String.raw">Пример: использование метода <code>String.raw()</code></h3>
+<h3 id="Example:_String.raw">Пример: использование метода <code>String.raw()</code></h3>
 
 <pre class="brush: js">String.raw`Привет\n${2+3}!`;
 // 'Привет\n5!', символ после 'Привет' не является символом новой строки,
@@ -75,28 +75,15 @@ String.raw({ raw: 'тест' }, 0, 1, 2);
 // 'т0е1с2т'
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.raw', 'String.raw')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Web/JavaScript/Reference/template_strings">Шаблонные строки</a></li>

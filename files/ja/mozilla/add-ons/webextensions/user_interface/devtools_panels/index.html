@@ -20,9 +20,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 
 <h2 id="Specifying_a_developer_tools_panel" name="Specifying_a_developer_tools_panel">開発ツールパネルを指定する</h2>
 
-<p>開発ツールパネルは <code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels">devtools.panels</a></code> API を使って追加され、特別な開発ツールページから順番に実行されます。</p>
+<p>開発ツールパネルは <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels">devtools.panels</a></code> API を使って追加され、特別な開発ツールページから順番に実行されます。</p>
 
-<p>開発ツールのページを追加するには、拡張機能の <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> に <code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a></code> キーを入れて、 拡張機能内のそのページの HTML ファイルの場所を与えます:</p>
+<p>開発ツールのページを追加するには、拡張機能の <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> に <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a></code> キーを入れて、 拡張機能内のそのページの HTML ファイルの場所を与えます:</p>
 
 <pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"devtools_page":</span> <span class="string token">"devtools-page.html"</span></code></pre>
 
@@ -51,7 +51,7 @@ browser.devtools.panels.create(
   newPanel.onHidden.addListener(handleHidden);
 });</pre>
 
-<p>拡張機能はインスペクターウィンドウの中で <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval"><code>devtools</code>.inspectedWindow.eval()</a></code> を使うか、バックグラウンドスクリプトからメッセージを渡してコンテンツスクリプトに挿入することで、コードを実行できます。この方法のより詳しくは <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">Extending the developer tools</a> を見てください。</p>
+<p>拡張機能はインスペクターウィンドウの中で <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval"><code>devtools</code>.inspectedWindow.eval()</a></code> を使うか、バックグラウンドスクリプトからメッセージを渡してコンテンツスクリプトに挿入することで、コードを実行できます。この方法のより詳しくは <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">Extending the developer tools</a> を見てください。</p>
 
 <h2 id="Examples" name="Examples">開発パネルのデザイン</h2>
 

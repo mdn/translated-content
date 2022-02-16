@@ -10,11 +10,11 @@ translation_of: Web/JavaScript/Guide/Numbers_and_dates
 
 <div>本章节介绍了在JavaScript中使用数字和日期来处理和执行计算的概念，对象和函数。</div>
 
-<p class="summary">本章节介绍如何掌握Javascript里的数字和日期类型</p>
+<p>本章节介绍如何掌握Javascript里的数字和日期类型</p>
 
 <h2 id="数字">数字</h2>
 
-<p>在 JavaScript 里面，数字均为双精度浮点类型（<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">double-precision 64-bit binary format IEEE 754</a>），即一个介于±2<sup>−1023</sup>和±2<sup>+1024</sup>之间的数字，或约为±10<sup>−308</sup>到±10<sup>+308</sup>，数字精度为53位。整数数值仅在±(2<sup>53 -</sup> 1)的范围内可以表示准确。</p>
+<p>在 JavaScript 里面，数字均为双精度浮点类型（<a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">double-precision 64-bit binary format IEEE 754</a>），即一个介于±2^−1023和±2^+1024之间的数字，或约为±10^−308到±10^+308，数字精度为53位。整数数值仅在±(2^53 - 1)的范围内可以表示准确。</p>
 
 <p>除了能够表示浮点数，数字类型也还能表示三种符号值: <code>+</code>{{jsxref("Infinity")}}（正无穷）、<code>-</code>{{jsxref("Infinity")}}（负无穷）和 {{jsxref("NaN")}} (not-a-number，非数字)。</p>
 
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Guide/Numbers_and_dates
 
 <h3 id="十进制数字Decimal_numbers">十进制数字(Decimal numbers)</h3>
 
-<pre class="brush: js notranslate">1234567890
+<pre class="brush: js">1234567890
 42
 // 以零开头的数字的注意事项：
 0888 // 888 将被当做十进制处理
@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Guide/Numbers_and_dates
 
 <p>二进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母B(<code>0b或者是0B</code>)。 假如0b后面的数字不是0或者1，那么就会提示这样的语法错误（ <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a>）：</code> "Missing binary digits after 0b(0b之后缺失二有效的二进制数据)"。</p>
 
-<pre class="brush: js notranslate">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+<pre class="brush: js">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
 var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
@@ -47,35 +47,35 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
 <p>八进制数字语法是以0为开头的。假如0后面的数字不在0到7的范围内，该数字将会被转换成十进制数字。</p>
 
-<pre class="brush: js notranslate">var n = 0755; // 493
+<pre class="brush: js">var n = 0755; // 493
 var m = 0644; // 420
 </pre>
 
 <p>在ECMAScript 5 严格模式下禁止使用八进制语法。八进制语法并不是ECMAScript 5规范的一部分，但是通过在八进制数字添加一个前缀0就可以被所有的浏览器支持：0644 === 420 而且 "\045" === "%"。在ECMAScript 6中使用八进制数字是需要给一个数字添加前缀"0o"。</p>
 
-<pre class="brush: js notranslate">var a = 0o10; // ES6 :八进制</pre>
+<pre class="brush: js">var a = 0o10; // ES6 :八进制</pre>
 
 <h3 id="十六进制Hexadecimal_numbers">十六进制(Hexadecimal numbers)</h3>
 
 <p>十六进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母X(<code>0x或者是0X</code>)。假如<code>0x</code>后面的数字超出规定范围(0123456789ABCDEF)，那么就会提示这样的语法错误(<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a>)：</code>"Identifier starts immediately after numeric literal".</p>
 
-<pre class="brush: js notranslate">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+<pre class="brush: js">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
 0XA                 // 10
 </pre>
 
 <h3 id="指数形式Exponentiation">指数形式(Exponentiation)</h3>
 
-<pre class="brush: js notranslate">1E3   // 1000
+<pre class="brush: js">1E3   // 1000
 2e6   // 2000000
 0.1e2 // 10
 </pre>
 
-<h2 id="数字对象"><font face="Consolas, Liberation Mono, Courier, monospace"><code>数字对象</code></font></h2>
+<h2 id="数字对象"><code>数字对象</code></h2>
 
 <p>内置的{{jsxref("Number")}}对象有一些有关数字的常量属性，如最大值、不是一个数字和无穷大的。你不能改变这些属性，但可以按下边的方式使用它们：</p>
 
-<pre class="brush: js notranslate">var biggestNum = Number.MAX_VALUE;
+<pre class="brush: js">var biggestNum = Number.MAX_VALUE;
 var smallestNum = Number.MIN_VALUE;
 var infiniteNum = Number.POSITIVE_INFINITY;
 var negInfiniteNum = Number.NEGATIVE_INFINITY;
@@ -206,16 +206,16 @@ var notANum = Number.NaN;
  </tbody>
 </table>
 
-<h2 id="数学对象（Math）"><font face="consolas, Liberation Mono, courier, monospace">数学对象（Math）</font></h2>
+<h2 id="数学对象（Math）">数学对象（Math）</h2>
 
 <p>对于内置的{{jsxref("Math")}}数学常项和函数也有一些属性和方法。 比方说， <code>Math对象的</code> <code>PI</code> 属性会有属性值 pi (3.141...)，你可以像这样调用它：</p>
 
-<pre class="brush: js notranslate">Math.PI // π
+<pre class="brush: js">Math.PI // π
 </pre>
 
 <p>同理，标准数学函数也是Math的方法。 这些包括三角函数​​，对数，指数，和其他函数。比方说你想使用三角函数 <code>sin</code>， 你可以这么写：</p>
 
-<pre class="brush: js notranslate">Math.sin(1.56)
+<pre class="brush: js">Math.sin(1.56)
 </pre>
 
 <p>需要注意的是Math的所有三角函数参数都是弧度制。</p>
@@ -302,7 +302,7 @@ var notANum = Number.NaN;
 
 <p>和其他对象不同，你不能够创建一个自己的Math对象。你只能使用内置的Math对象。</p>
 
-<h2 id="日期对象"><font face="Consolas, Liberation Mono, Courier, monospace">日期对象</font></h2>
+<h2 id="日期对象">日期对象</h2>
 
 <p>JavaScript没有日期数据类型。但是你可以在你的程序里使用 {{jsxref("Date")}} 对象和其方法来处理日期和时间。Date对象有大量的设置、获取和操作日期的方法。 它并不含有任何属性。</p>
 
@@ -312,7 +312,7 @@ var notANum = Number.NaN;
 
 <p>创建一个日期对象：</p>
 
-<pre class="brush: js notranslate">var dateObjectName = new Date([parameters]);
+<pre class="brush: js">var dateObjectName = new Date([parameters]);
 </pre>
 
 <p>这里的 dateObjectName 对象是所创建的Date对象的一个名字，它可以成为一个新的对象或者已存在的其他对象的一个属性。</p>
@@ -352,7 +352,7 @@ var notANum = Number.NaN;
 
 <p>例如, 假设你定义了如下日期：</p>
 
-<pre class="brush: js notranslate">var Xmas95 = new Date("December 25, 1995");
+<pre class="brush: js">var Xmas95 = new Date("December 25, 1995");
 </pre>
 
 <p>Then <code>Xmas95.getMonth()</code> 返回 11, and <code>Xmas95.getFullYear()</code> 返回 1995.</p>
@@ -361,7 +361,7 @@ var notANum = Number.NaN;
 
 <p>例如，以下代码展示了今年剩下的天数：</p>
 
-<pre class="brush: js notranslate">var today = new Date();
+<pre class="brush: js">var today = new Date();
 var endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // 设置日和月，注意，月份是0-11
 endYear.setFullYear(today.getFullYear()); // 把年设置为今年
 var msPerDay = 24 * 60 * 60 * 1000; // 每天的毫秒数
@@ -373,7 +373,7 @@ var daysLeft = Math.round(daysLeft); //返回今年剩下的天数
 
 <p>parse方法对于从日期字符串赋值给现有的Date对象很有用，例如：以下代码使用<code>parse</code>和<code>setTime</code>分配了一个日期值给<code>IPOdate</code>对象：</p>
 
-<pre class="brush: js notranslate">var IPOdate = new Date();
+<pre class="brush: js">var IPOdate = new Date();
 IPOdate.setTime(Date.parse("Aug 9, 1995"));
 </pre>
 
@@ -381,7 +381,7 @@ IPOdate.setTime(Date.parse("Aug 9, 1995"));
 
 <p>在下边的例子中，JSClock()函数返回了用数字时钟格式的时间：</p>
 
-<pre class="brush: js notranslate">function JSClock() {
+<pre class="brush: js">function JSClock() {
   var time = new Date();
   var hour = time.getHours();
   var minute = time.getMinutes();
@@ -396,12 +396,12 @@ IPOdate.setTime(Date.parse("Aug 9, 1995"));
 }
 </pre>
 
-<p><code>JSClock函数首先创建了一个叫做time的新的Date对象，因为没有参数，所以time代表了当前日期和时间。然后调用了</code><code>getHours</code>, <code>getMinutes以及getSeconds方法把当前的时分秒分别赋值给了hour</code>, <code>minute</code>,<code>second。</code></p>
+<p><code>JSClock</code>函数首先创建了一个叫做<code>time</code>的新的<code>Date</code>对象，因为没有参数，所以<code>time</code>代表了当前日期和时间。然后调用了<code>getHours</code>，<code>getMinutes</code>以及<code>getSeconds</code>方法把当前的时分秒分别赋值给了<code>hour</code>，<code>minute</code>，<code>second</code>。</p>
 
-<p>接下来的4句在time的基础上创建了一个字符串，第一句创建了一个变量temp，并通过一个条件表达式进行了赋值，如果小时大于12，就为 (<code>hour - 12</code>), 其他情况就为 hour, 除非 hour 为 0, 这种情况下，它会变成 12.</p>
+<p>接下来的4句在<code>time</code>的基础上创建了一个字符串，第一句创建了一个变量<code>temp</code>，并通过一个条件表达式进行了赋值，如果小时大于12，就为(<code>hour - 12</code>)，其他情况就为<code>hour</code>，除非<code>hour</code>为0，这种情况下，它会变成12。</p>
 
-<p>接下来的语句拼接了<code>minute</code>的值到<code>temp后。如果minute小于10，条件表达式就会在minute前边加个0，其他情况下加一个分号。然后按同样的方式在temp后拼接上了秒。</code></p>
+<p>接下来的语句拼接了<code>minute</code>的值到<code>temp</code>后。如果<code>minute</code>小于10，条件表达式就会在<code>minute</code>前边加个0，其他情况下加一个冒号。然后按同样的方式在<code>temp</code>后拼接上了秒。</p>
 
-<p>最后，如果hour是12或者更大，条件表达式会在temp后拼接"P.M."，否则拼接"A.M." 。</p>
+<p>最后，如果<code>hour</code>是12或者更大，条件表达式会在<code>temp</code>后拼接"P.M."，否则拼接"A.M."。</p>
 
 <p>{{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}</p>

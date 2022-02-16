@@ -10,26 +10,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
 ---
 <div>{{JSRef("Global_Objects", "Array")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>push()</strong></code> добавляет один или более элементов в конец массива и возвращает новую длину массива.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>arr</var>.push(<var>element1</var>, ..., <var>elementN</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>element<em>N</em></code></dt>
  <dd>Элементы, добавляемые в конец массива.</dd>
 </dl>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <p>Новое значение свойства {{jsxref("Array.length", "length")}} объекта, для которого был вызван данный метод.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>push</code> присоединяет значения к массиву.</p>
 
@@ -37,9 +37,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
 
 <p>Единственными родными массивоподобными объектами являются {{jsxref("Global_Objects/String", "строки", "", 1)}}, хотя к ним он не может быть применён, поскольку строки являются неизменяемыми.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Adding_elements_to_an_array" name="Example:_Adding_elements_to_an_array">Пример: добавление элементов в массив</h3>
+<h3 id="Example_Adding_elements_to_an_array">Пример: добавление элементов в массив</h3>
 
 <p>Следующий код создаёт массив <code>sports</code>, содержащий два элемента, а затем добавляет к нему ещё два элемента. Переменная <code>total</code> будет содержать новую длину массива.</p>
 
@@ -50,7 +50,7 @@ console.log(sports); // ['футбол', 'бейсбол', 'американск
 console.log(total);  // 4
 </pre>
 
-<h3 id="Example_Merging_two_arrays" name="Example:_Merging_two_arrays">Пример: слияние двух массивов</h3>
+<h3 id="Example_Merging_two_arrays">Пример: слияние двух массивов</h3>
 
 <p>В этом примере используется функция {{jsxref("Function.apply", "apply()")}} для помещения всех элементов из второго массива в первый.</p>
 
@@ -64,44 +64,21 @@ Array.prototype.push.apply(vegetables, moreVegs);
 console.log(vegetables); // ['пастернак', 'картошка', 'сельдерей', 'свёкла']
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.7', 'Array.prototype.push')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.push', 'Array.prototype.push')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div>
 <div>
 
 
-<p>{{Compat("javascript.builtins.Array.push")}}</p>
+<p>{{Compat}}</p>
 </div>
 </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.pop()")}}</li>

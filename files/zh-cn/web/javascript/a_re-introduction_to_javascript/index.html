@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 <p>几个月后，Microsoft 随 IE 3 发布推出了一个与之基本兼容的语言 JScript。又过了几个月，Netscape 将 JavaScript 提交至 <a href="http://www.ecma-international.org">Ecma International</a>（一个欧洲标准化组织）， {{Glossary("ECMAScript")}} 标准第一版便在 1997 年诞生了，随后在 1999 年以 <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 第三版</a>的形式进行了更新，从那之后这个标准没有发生过大的改动。由于委员会在语言特性的讨论上发生分歧，ECMAScript 第四版尚未推出便被废除，但随后于 2009 年 12 月发布的 ECMAScript 第五版引入了第四版草案加入的许多特性。第六版标准已经于 2015 年 6 月发布。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript 。</p>
+<p><strong>备注：</strong> 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript 。</p>
 </div>
 
 <p>与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo! 的 Widget 引擎，<a href="http://nodejs.org">Node.js</a> 之类的服务器端环境，NoSQL 数据库（如开源的 <a href="http://couchdb.apache.org">Apache CouchDB</a>）、嵌入式计算机，以及包括 <a href="http://www.gnome.org">GNOME</a> （注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。</p>
@@ -63,7 +63,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 
 <p>根据语言规范，JavaScript 采用“遵循 IEEE 754 标准的双精度 64 位格式”（"double-precision 64-bit format IEEE 754 values"）表示数字。——在JavaScript（除了{{jsxref("BigInt")}}）当中，<strong>并不存在整数/整型(Integer)。</strong>因此在处理如下的场景时候，您一定要小心：</p>
 
-<pre class="notranslate">console.log(3 / 2);             // 1.5,<em>not</em> 1
+<pre>console.log(3 / 2);             // 1.5,<em>not</em> 1
 console.log(Math.floor(3 / 2)); // 1
 </pre>
 
@@ -71,67 +71,67 @@ console.log(Math.floor(3 / 2)); // 1
 
 <p>当然，您也需要小心这种情况：</p>
 
-<pre class="brush: js notranslate">0.1 + 0.2 = 0.30000000000000004
+<pre class="brush: js">0.1 + 0.2 = 0.30000000000000004
 </pre>
 
 <p>在具体实现时，整数值通常被视为32位整型变量，在个别实现（如某些浏览器）中也以32位整型变量的形式进行存储，直到它被用于执行某些32位整型不支持的操作，这是为了便于进行位操作。</p>
 
 <p>JavaScript 支持标准的<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators">算术运算符</a>，包括加法、减法、取模（或取余）等等。还有一个之前没有提及的内置对象 {{jsxref("Math")}}（数学对象），用以处理更多的高级数学函数和常数：</p>
 
-<pre class="brush: js notranslate">Math.sin(3.5);
+<pre class="brush: js">Math.sin(3.5);
 var circumference = 2 * Math.PI * r;
 </pre>
 
 <p>你可以使用内置函数 {{jsxref("Global_Objects/parseInt", "parseInt()")}} 将字符串转换为整型。该函数的第二个可选参数表示字符串所表示数字的基（进制）：</p>
 
-<pre class="brush: js notranslate">parseInt("123", 10); // 123
+<pre class="brush: js">parseInt("123", 10); // 123
 parseInt("010", 10); // 10
 </pre>
 
 <p>一些老版本的浏览器会将首字符为“0”的字符串当做八进制数字，2013 年以前的 JavaScript 实现会返回一个意外的结果：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">parseInt("010");  //  8
-parseInt("0x10"); // 16</code></pre>
+<pre class="brush: js">parseInt("010");  //  8
+parseInt("0x10"); // 16</pre>
 
 <p>这是因为字符串以数字 0 开头，{{jsxref("Global_Objects/parseInt", "parseInt()")}}函数会把这样的字符串视作八进制数字；同理，0x开头的字符串则视为十六进制数字。</p>
 
 <p>如果想把一个二进制数字字符串转换成整数值，只要把第二个参数设置为 2 就可以了：</p>
 
-<pre class="brush: js notranslate">parseInt("11", 2); // 3
+<pre class="brush: js">parseInt("11", 2); // 3
 </pre>
 
 <p>JavaScript 还有一个类似的内置函数 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}，用以解析浮点数字符串，与{{jsxref("Global_Objects/parseInt", "parseInt()")}}不同的地方是，<code>parseFloat()</code> 只应用于解析十进制数字。</p>
 
 <p>一元运算符 + 也可以把数字字符串转换成数值：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">+ "42";   // 42
+<pre class="brush: js">+ "42";   // 42
 + "010";  // 10
-+ "0x10"; // 16</code></pre>
++ "0x10"; // 16</pre>
 
 <p>如果给定的字符串不存在数值形式，函数会返回一个特殊的值 {{jsxref("NaN")}}（Not a Number 的缩写）：</p>
 
-<pre class="brush: js notranslate">parseInt("hello", 10); // NaN
+<pre class="brush: js">parseInt("hello", 10); // NaN
 </pre>
 
 <p>要小心NaN：如果把 <code>NaN</code> 作为参数进行任何数学运算，结果也会是 <code>NaN</code>：</p>
 
-<pre class="brush: js notranslate">NaN + 5; //NaN
+<pre class="brush: js">NaN + 5; //NaN
 </pre>
 
 <p>可以使用内置函数 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN"><code>isNaN()</code></a> 来判断一个变量是否为 <code>NaN</code>：</p>
 
-<pre class="brush: js notranslate">isNaN(NaN); // true
+<pre class="brush: js">isNaN(NaN); // true
 </pre>
 
 <p>JavaScript 还有两个特殊值：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Infinity"><code>Infinity</code></a>（正无穷）和 <code>-Infinity</code>（负无穷）：</p>
 
-<pre class="brush: js notranslate">1 / 0; //  Infinity
+<pre class="brush: js">1 / 0; //  Infinity
 -1 / 0; // -Infinity
 </pre>
 
 <p>可以使用内置函数 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite"><code>isFinite()</code></a> 来判断一个变量是否是一个有穷数， 如果类型为<code>Infinity</code>, <code>-Infinity</code> 或 <code>NaN则返回false</code>：</p>
 
-<pre class="brush: js notranslate">isFinite(1/0); // false
+<pre class="brush: js">isFinite(1/0); // false
 isFinite(Infinity); // false
 isFinite(-Infinity); // false
 isFinite(NaN); // false
@@ -143,7 +143,9 @@ isFinite("0"); // true
 // 如果是纯数值类型的检测，则返回 false：
 Number.isFinite("0"); // false</pre>
 
-<div class="note"><strong>备注：</strong> {{jsxref("Global_Objects/parseInt", "parseInt()")}} 和 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 函数会尝试逐个解析字符串中的字符，直到遇上一个无法被解析成数字的字符，然后返回该字符前所有数字字符组成的数字。但是运算符 "+"对字符串的转换方式与之不同， 只要字符串含有无法被解析成数字的字符，该字符串就将被转换成 <code>NaN</code>。可分别使用这两种方法解析“10.2abc”这一字符串，并比较得到的结果，来理解这两种方法的区别。</div>
+<div class="note">
+<p><strong>备注：</strong> {{jsxref("Global_Objects/parseInt", "parseInt()")}} 和 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 函数会尝试逐个解析字符串中的字符，直到遇上一个无法被解析成数字的字符，然后返回该字符前所有数字字符组成的数字。但是运算符 "+"对字符串的转换方式与之不同， 只要字符串含有无法被解析成数字的字符，该字符串就将被转换成 <code>NaN</code>。可分别使用这两种方法解析“10.2abc”这一字符串，并比较得到的结果，来理解这两种方法的区别。</p>
+</div>
 
 <h2 id="字符串">字符串</h2>
 
@@ -153,12 +155,12 @@ Number.isFinite("0"); // false</pre>
 
 <p>通过访问字符串的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length"><code>length</code></a>（编码单元的个数）属性，可以得到它的长度。</p>
 
-<pre class="brush: js notranslate">"hello".length; // 5
+<pre class="brush: js">"hello".length; // 5
 </pre>
 
 <p>这是我们第一次碰到 JavaScript 对象。我们有没有提过你可以像  {{jsxref("Object", "object", "", 1)}}  一样使用字符串？是的，字符串也有 {{jsxref("String", "methods", "#Methods", 1)}}（方法）能让你操作字符串和获取字符串的信息。</p>
 
-<pre class="brush: js notranslate">"hello".charAt(0); // "h"
+<pre class="brush: js">"hello".charAt(0); // "h"
 "hello, world".replace("world", "mars"); // "hello, mars"
 "hello".toUpperCase(); // "HELLO"
 </pre>
@@ -176,7 +178,7 @@ Number.isFinite("0"); // false</pre>
 
 <p>也可以使用 <code>Boolean()</code> 函数进行显式转换：</p>
 
-<pre class="brush: js notranslate">Boolean(''); // false
+<pre class="brush: js">Boolean(''); // false
 Boolean(234); // true
 </pre>
 
@@ -190,39 +192,39 @@ Boolean(234); // true
 
 <p><code><strong>let</strong></code> 语句声明一个块级作用域的本地变量，并且可选的将其初始化为一个值。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">let a;
-let name = 'Simon';</code></pre>
+<pre class="brush: js">let a;
+let name = 'Simon';</pre>
 
 <p>下面是使用  <code><strong>let</strong></code> 声明变量作用域的例子：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// myLetVariable 在这里 *不能* 被引用
+<pre class="brush: js">// myLetVariable 在这里 *不能* 被引用
 
 for (let myLetVariable = 0; myLetVariable &lt; 5; myLetVariable++) {
   // myLetVariable 只能在这里引用
 }
 
-// myLetVariable 在这里 *不能* 被引用</code></pre>
+// myLetVariable 在这里 *不能* 被引用</pre>
 
 <p><code><strong>const</strong></code> 允许声明一个不可变的常量。这个常量在定义域内总是可见的。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">const Pi = 3.14; // 设置 Pi 的值
-Pi = 1; // 将会抛出一个错误因为你改变了一个常量的值。</code></pre>
+<pre class="brush: js">const Pi = 3.14; // 设置 Pi 的值
+Pi = 1; // 将会抛出一个错误因为你改变了一个常量的值。</pre>
 
 <p><code><strong>var</strong></code> 是最常见的声明变量的关键字。它没有其他两个关键字的种种限制。这是因为它是传统上在 JavaScript 声明变量的唯一方法。使用 <strong><code>var</code></strong> 声明的变量在它所声明的整个函数都是可见的。</p>
 
-<pre class="brush: js notranslate">var a;
+<pre class="brush: js">var a;
 var name = "simon";
 </pre>
 
 <p>一个使用  <strong><code>var</code> </strong>声明变量的语句块的例子：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// myVarVariable在这里 *能* 被引用
+<pre class="brush: js">// myVarVariable在这里 *能* 被引用
 
 for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
-  // myVarVariable 整个</code>函数<code class="language-js">中都能被引用
+  // myVarVariable 整个函数中都能被引用
 }
 
-// myVarVariable 在这里 *能* 被引用</code></pre>
+// myVarVariable 在这里 *能* 被引用</pre>
 
 <p>如果声明了一个变量却没有对其赋值，那么这个变量的类型就是 <code>undefined</code>。</p>
 
@@ -232,19 +234,19 @@ for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
 
 <p>JavaScript的算术操作符包括 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code> 和 <code>%</code> ——求余（<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#求余_%28%29">与模运算相同</a>）。赋值使用 <code>=</code> 运算符，此外还有一些复合运算符，如 <code>+=</code> 和 <code>-=</code>，它们等价于 <code>x = x <em>operator</em> y</code>。</p>
 
-<pre class="brush: js notranslate">x += 5; // 等价于 x = x + 5;
+<pre class="brush: js">x += 5; // 等价于 x = x + 5;
 </pre>
 
 <p>可以使用 <code>++</code> 和 <code>--</code> 分别实现变量的自增和自减。两者都可以作为前缀或后缀操作符使用。</p>
 
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#.E5.8A.A0.E6.B3.95_(.2B)"><code>+</code> 操作符</a>还可以用来连接字符串：</p>
 
-<pre class="brush: js notranslate">"hello" + " world"; // hello world
+<pre class="brush: js">"hello" + " world"; // hello world
 </pre>
 
 <p>如果你用一个字符串加上一个数字（或其他值），那么操作数都会被首先转换为字符串。如下所示：</p>
 
-<pre class="brush: js notranslate">"3" + 4 + 5; // 345
+<pre class="brush: js">"3" + 4 + 5; // 345
 3 + 4 + "5"; // 75
 </pre>
 
@@ -252,13 +254,13 @@ for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
 
 <p>JavaScript 中的<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较操作</a>使用 <code>&lt;</code>、<code>&gt;</code>、<code>&lt;=</code> 和 <code>&gt;=</code>，这些运算符对于数字和字符串都通用。相等的比较稍微复杂一些。由两个“<code>=</code>（等号）”组成的相等运算符有类型自适应的功能，具体例子如下：</p>
 
-<pre class="brush: js notranslate">123 == "123" // true
+<pre class="brush: js">123 == "123" // true
 1 == true; // true
 </pre>
 
 <p>如果在比较前不需要自动类型转换，应该使用由三个“<code>=</code>（等号）”组成的相等运算符：</p>
 
-<pre class="brush: js notranslate">1 === true; //false
+<pre class="brush: js">1 === true; //false
 123 === "123"; // false
 </pre>
 
@@ -270,7 +272,7 @@ for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
 
 <p>JavaScript 的控制结构与其他类 C 语言类似。可以使用 <code>if</code> 和 <code>else</code> 来定义条件语句，还可以连起来使用：</p>
 
-<pre class="brush: js notranslate">var name = "kittens";
+<pre class="brush: js">var name = "kittens";
 if (name == "puppies") {
   name += "!";
 } else if (name == "kittens") {
@@ -283,7 +285,7 @@ name == "kittens!!"; // true
 
 <p>JavaScript 支持 <code>while</code> 循环和 <code>do-while</code> 循环。前者适合常见的基本循环操作，如果需要循环体至少被执行一次则可以使用 <code>do-while</code>：</p>
 
-<pre class="brush: js notranslate">while (true) {
+<pre class="brush: js">while (true) {
   // 一个无限循环！
 }
 
@@ -295,41 +297,41 @@ do {
 
 <p>JavaScript 的 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for">for</a></code> 循环与 C 和 Java 中的相同：使用时可以在一行代码中提供控制信息。</p>
 
-<pre class="brush: js notranslate">for (var i = 0; i &lt; 5; i++) {
+<pre class="brush: js">for (var i = 0; i &lt; 5; i++) {
   // 将会执行五次
 }
 </pre>
 
 <p>JavaScript 也还包括其他两种重要的 for 循环： <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for</code>...<code>of</code></a></p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">for (let value of array) {
+<pre class="brush: js">for (let value of array) {
   // do something with value
-}</code></pre>
+}</pre>
 
 <p>和 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for</code>...<code>in</code></a> ：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">for (let property in object) {
+<pre class="brush: js">for (let property in object) {
   // do something with object property
-}</code></pre>
+}</pre>
 
 <p><code>&amp;&amp;</code> 和 <code>||</code> 运算符使用短路逻辑（short-circuit logic），是否会执行第二个语句（操作数）取决于第一个操作数的结果。在需要访问某个对象的属性时，使用这个特性可以事先检测该对象是否为空：</p>
 
-<pre class="brush: js notranslate">var name = o &amp;&amp; o.getName();
+<pre class="brush: js">var name = o &amp;&amp; o.getName();
 </pre>
 
 <p>或用于缓存值（当错误值无效时）：</p>
 
-<pre class="brush: js notranslate">var name = cachedName || (cachedName = getName());
+<pre class="brush: js">var name = cachedName || (cachedName = getName());
 </pre>
 
 <p>类似地，JavaScript 也有一个用于条件表达式的三元操作符：</p>
 
-<pre class="brush: js notranslate">var allowed = (age &gt; 18) ? "yes" : "no";
+<pre class="brush: js">var allowed = (age &gt; 18) ? "yes" : "no";
 </pre>
 
-<p>在需要多重分支时可以使用  <code>基于一个数字或字符串的switch</code> 语句：</p>
+<p>在需要多重分支时可以使用基于一个数字或字符串的 <code>switch</code> 语句：</p>
 
-<pre class="brush: js notranslate">switch(action) {
+<pre class="brush: js">switch(action) {
     case 'draw':
         drawIt();
         break;
@@ -343,7 +345,7 @@ do {
 
 <p>如果你不使用 <code>break</code> 语句，JavaScript 解释器将会执行之后 <code>case</code> 中的代码。除非是为了调试，一般你并不需要这个特性，所以大多数时候不要忘了加上 <code>break。</code></p>
 
-<pre class="brush: js notranslate">switch(a) {
+<pre class="brush: js">switch(a) {
     case 1: // 继续向下
     case 2:
         eatIt();
@@ -355,7 +357,7 @@ do {
 
 <p><code>default</code> 语句是可选的。<code>switch</code> 和 <code>case</code> 都可以使用需要运算才能得到结果的表达式；在 <code>switch</code> 的表达式和 <code>case</code> 的表达式是使用 <code>===</code> 严格相等运算符进行比较的：</p>
 
-<pre class="brush: js notranslate">switch(1 + 3){
+<pre class="brush: js">switch(1 + 3){
     case 2 + 2:
         yay();
         break;
@@ -382,19 +384,19 @@ do {
 
 <p>有两种简单方法可以创建一个空对象：</p>
 
-<pre class="brush: js notranslate">var obj = new Object();
+<pre class="brush: js">var obj = new Object();
 </pre>
 
 <p>和：</p>
 
-<pre class="brush: js notranslate">var obj = {};
+<pre class="brush: js">var obj = {};
 </pre>
 
 <p>这两种方法在语义上是相同的。第二种更方便的方法叫作“对象字面量（object literal）”法。这种也是 JSON 格式的核心语法，一般我们优先选择第二种方法。</p>
 
 <p>“对象字面量”也可以用来在对象实例中定义一个对象：</p>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
     name: "Carrot",
     _for: "Max",//'for' 是保留字之一，使用'_for'代替
     details: {
@@ -406,13 +408,13 @@ do {
 
 <p>对象的属性可以通过链式（chain）表示方法进行访问：</p>
 
-<pre class="brush: js notranslate">obj.details.color; // orange
+<pre class="brush: js">obj.details.color; // orange
 obj["details"]["size"]; // 12
 </pre>
 
 <p>下面的例子创建了一个对象原型，<code><strong>Person</strong></code>，和这个原型的实例，<strong><code>You</code></strong>。</p>
 
-<pre class="brush: js notranslate">function Person(name, age) {
+<pre class="brush: js">function Person(name, age) {
   this.name = name;
   this.age = age;
 }
@@ -425,34 +427,34 @@ var You = new Person('You', 24);
 
 <p>完成创建后，对象属性可以通过如下两种方式进行赋值和访问：</p>
 
-<pre class="brush: js notranslate">// 点表示法(dot notation)
+<pre class="brush: js">// 点表示法(dot notation)
 obj.name = 'Simon';
 var name = obj.name;
 </pre>
 
 <p>和：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">// 括号表示法(bracket notation)
+<pre class="brush: js">// 括号表示法(bracket notation)
 obj['name'] = 'Simon';
 var name = obj['name'];
 // can use a variable to define a key
 var user = prompt('what is your key?')
-obj[user] = prompt('what is its value?')</code></pre>
+obj[user] = prompt('what is its value?')</pre>
 
 <p>这两种方法在语义上也是相同的。第二种方法的优点在于属性的名称被看作一个字符串，这就意味着它可以在运行时被计算，缺点在于这样的代码有可能无法在后期被解释器优化。它也可以被用来访问某些以<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">预留关键字</a>作为名称的属性的值：</p>
 
-<pre class="brush: js notranslate">obj.for = 'Simon'; // 语法错误，因为 for 是一个预留关键字
+<pre class="brush: js">obj.for = 'Simon'; // 语法错误，因为 for 是一个预留关键字
 obj["for"] = 'Simon'; // 工作正常
 </pre>
 
 <div class="note">
-<p><strong>注意：</strong>从 ECMAScript 5 开始，预留关键字可以作为对象的属性名（reserved words may be used as object property names "in the buff"）。 这意味着当定义对象字面量时不需要用双引号了。参见 ES5 <a href="http://es5.github.io/#x7.6.1">Spec</a>.</p>
+<p><strong>备注：</strong>从 ECMAScript 5 开始，预留关键字可以作为对象的属性名（reserved words may be used as object property names "in the buff"）。 这意味着当定义对象字面量时不需要用双引号了。参见 ES5 <a href="http://es5.github.io/#x7.6.1">Spec</a>.</p>
 </div>
 
 <p>关于对象和原型的详情参见： <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">Object.prototype</a>. 解释对象原型和对象原型链可以参见：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">继承与原型链</a>。</p>
 
 <div class="note">
-<p><strong>注意：</strong>从 ECMAScript 2015 开始，对象键可以在创建时使用括号表示法由变量定义。{[phoneType]: 12345} 可以用来替换 <code>var userPhone = {}; userPhone[phoneType] = 12345</code> .</p>
+<p><strong>备注：</strong>从 ECMAScript 2015 开始，对象键可以在创建时使用括号表示法由变量定义。{[phoneType]: 12345} 可以用来替换 <code>var userPhone = {}; userPhone[phoneType] = 12345</code> .</p>
 </div>
 
 <h2 id="数组">数组</h2>
@@ -461,7 +463,7 @@ obj["for"] = 'Simon'; // 工作正常
 
 <p>创建数组的传统方法是：</p>
 
-<pre class="brush: js notranslate">var a = new Array();
+<pre class="brush: js">var a = new Array();
 a[0] = "dog";
 a[1] = "cat";
 a[2] = "hen";
@@ -470,13 +472,13 @@ a.length; // 3
 
 <p>使用数组字面量（array literal）法更加方便：</p>
 
-<pre class="brush: js notranslate">var a = ["dog", "cat", "hen"];
+<pre class="brush: js">var a = ["dog", "cat", "hen"];
 a.length; // 3
 </pre>
 
 <p>注意，<code>Array.length </code>并不总是等于数组中元素的个数，如下所示：</p>
 
-<pre class="brush: js notranslate">var a = ["dog", "cat", "hen"];
+<pre class="brush: js">var a = ["dog", "cat", "hen"];
 a[100] = "fox";
 a.length; // 101
 </pre>
@@ -485,40 +487,40 @@ a.length; // 101
 
 <p>如果试图访问一个不存在的数组索引，会得到 <code>undefined</code>：</p>
 
-<pre class="brush: js notranslate">typeof(a[90]); // undefined
+<pre class="brush: js">typeof(a[90]); // undefined
 </pre>
 
 <p>可以通过如下方式遍历一个数组：</p>
 
-<pre class="brush: js notranslate">for (var i = 0; i &lt; a.length; i++) {
+<pre class="brush: js">for (var i = 0; i &lt; a.length; i++) {
     // Do something with a[i]
 }
 </pre>
 
 <p>ES2015 引入了更加简洁的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for</code>...<code>of</code></a> 循环，可以用它来遍历可迭代对象，例如数组：</p>
 
-<pre class="brush: js notranslate">for (const currentValue of a) {
+<pre class="brush: js">for (const currentValue of a) {
   // Do something with currentValue
 }
 </pre>
 
 <p>遍历数组的另一种方法是使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> 循环， 然而这并不是遍历数组元素而是数组的索引。注意，如果哪个家伙直接向 <code>Array.prototype</code> 添加了新的属性，使用这样的循环这些属性也同样会被遍历。所以并不推荐使用这种方法遍历数组：</p>
 
-<pre class="brush: js notranslate">for (var i in a) {
+<pre class="brush: js">for (var i in a) {
   // 操作 a[i]
 }
 </pre>
 
 <p>ECMAScript 5 增加了另一个遍历数组的方法，<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach()</a></code>：</p>
 
-<pre class="brush: js notranslate">["dog", "cat", "hen"].forEach(function(currentValue, index, array) {
+<pre class="brush: js">["dog", "cat", "hen"].forEach(function(currentValue, index, array) {
   // 操作 currentValue 或者 array[index]
 });
 </pre>
 
 <p>如果想在数组后追加元素，只需要：</p>
 
-<pre class="brush: js notranslate">a.push(item);</pre>
+<pre class="brush: js">a.push(item);</pre>
 
 <p>除了 <code>forEach()</code> 和 <code>push()</code>，Array（数组）类还自带了许多方法。建议查看 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">Array 方法的完整文档</a>。</p>
 
@@ -591,7 +593,7 @@ a.length; // 101
 
 <p>学习 JavaScript 最重要的就是要理解对象和函数两个部分。最简单的函数就像下面这个这么简单：</p>
 
-<pre class="brush: js notranslate">function add(x, y) {
+<pre class="brush: js">function add(x, y) {
     var total = x + y;
     return total;
 }
@@ -601,19 +603,19 @@ a.length; // 101
 
 <p>已命名的参数更像是一个指示而没有其他作用。如果调用函数时没有提供足够的参数，缺少的参数会被 <code>undefined</code> 替代。</p>
 
-<pre class="brush: js notranslate">add(); // NaN
+<pre class="brush: js">add(); // NaN
 // 不能在 undefined 对象上进行加法操作
 </pre>
 
 <p>你还可以传入多于函数本身需要参数个数的参数：</p>
 
-<pre class="brush: js notranslate">add(2, 3, 4); // 5
+<pre class="brush: js">add(2, 3, 4); // 5
  // 将前两个值相加，4 被忽略了
 </pre>
 
 <p>这看上去有点蠢。函数实际上是访问了函数体中一个名为 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments"><code>arguments</code></a> 的内部对象，这个对象就如同一个类似于数组的对象一样，包括了所有被传入的参数。让我们重写一下上面的函数，使它可以接收任意个数的参数：</p>
 
-<pre class="brush: js notranslate">function add() {
+<pre class="brush: js">function add() {
     var sum = 0;
     for (var i = 0, j = arguments.length; i &lt; j; i++) {
         sum += arguments[i];
@@ -626,7 +628,7 @@ add(2, 3, 4, 5); // 14
 
 <p>这跟直接写成 <code>2 + 3 + 4 + 5</code> 也没什么区别。我们还是创建一个求平均数的函数吧：</p>
 
-<pre class="brush: js notranslate">function avg() {
+<pre class="brush: js">function avg() {
     var sum = 0;
     for (var i = 0, j = arguments.length; i &lt; j; i++) {
         sum += arguments[i];
@@ -637,7 +639,7 @@ avg(2, 3, 4, 5); // 3.5</pre>
 
 <p>这个就有用多了，但是却有些冗长。为了使代码变短一些，我们可以使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>来替换arguments的使用。在这方法中，我们可以传递任意数量的参数到函数中同时尽量减少我们的代码。这个<strong>剩余参数操作符</strong>在函数中以：<strong>...variable</strong> 的形式被使用，它将包含在调用函数时使用的未捕获整个参数列表到这个变量中。我们同样也可以将 <strong>for</strong> 循环替换为 <strong>for...of </strong> 循环来返回我们变量的值。</p>
 
-<pre class="brush: js notranslate">function avg(...args) {
+<pre class="brush: js">function avg(...args) {
   var sum = 0;
   for (let value of args) {
     sum += value;
@@ -648,13 +650,13 @@ avg(2, 3, 4, 5); // 3.5</pre>
 avg(2, 3, 4, 5); // 3.5
 </pre>
 
-<div class="blockIndicator note">
-<p>在上面这段代码中，所有被传入该函数的参数都被变量 <strong>args </strong>所持有。</p>
+<div class="note">
+<p><strong>备注：</strong>在上面这段代码中，所有被传入该函数的参数都被变量 <strong>args </strong>所持有。</p>
 
 <p>需要注意的是，无论“剩余参数操作符”被放置到函数声明的哪里，它都会把除了自己之前的所有参数存储起来。比如函数：function avg(<strong>firstValue</strong>, ...args) 会把传入函数的第一个值存入 <strong>firstValue</strong>，其他的参数存入 <strong>args</strong>。这是虽然一个很有用的语言特性，却也会带来新的问题。<code>avg()</code> 函数只接受逗号分开的参数列表 -- 但是如果你想要获取一个数组的平均值怎么办？一种方法是将函数按照如下方式重写：</p>
 </div>
 
-<pre class="brush: js notranslate">function avgArray(arr) {
+<pre class="brush: js">function avgArray(arr) {
     var sum = 0;
     for (var i = 0, j = arr.length; i &lt; j; i++) {
         sum += arr[i];
@@ -666,20 +668,20 @@ avgArray([2, 3, 4, 5]); // 3.5
 
 <p>但如果能重用我们已经创建的那个函数不是更好吗？幸运的是 JavaScript 允许你通过任意函数对象的 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply()</a></code> 方法来传递给它一个数组作为参数列表。</p>
 
-<pre class="brush: js notranslate">avg.apply(null, [2, 3, 4, 5]); // 3.5
+<pre class="brush: js">avg.apply(null, [2, 3, 4, 5]); // 3.5
 </pre>
 
 <p>传给 <code>apply()</code> 的第二个参数是一个数组，它将被当作 <code>avg()</code> 的参数列表使用，至于第一个参数 <code>null</code>，我们将在后面讨论。这也正说明了一个事实——函数也是对象。</p>
 
-<div class="blockIndicator note">
-<p>通过使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax">展开语法</a>，你也可以获得同样的效果。</p>
+<div class="note">
+<p><strong>备注：</strong>通过使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax">展开语法</a>，你也可以获得同样的效果。</p>
 
 <p>比如说：<code>avg(...numbers)</code></p>
 </div>
 
 <p>JavaScript 允许你创建匿名函数：</p>
 
-<pre class="brush: js notranslate">var avg = function() {
+<pre class="brush: js">var avg = function() {
     var sum = 0;
     for (var i = 0, j = arguments.length; i &lt; j; i++) {
         sum += arguments[i];
@@ -690,7 +692,7 @@ avgArray([2, 3, 4, 5]); // 3.5
 
 <p>这个函数在语义上与 <code>function avg()</code> 相同。你可以在代码中的任何地方定义这个函数，就像写普通的表达式一样。基于这个特性，有人发明出一些有趣的技巧。与 C 中的块级作用域类似，下面这个例子隐藏了局部变量：</p>
 
-<pre class="brush: js notranslate">var a = 1;
+<pre class="brush: js">var a = 1;
 var b = 2;
 (function() {
     var b = 3;
@@ -703,7 +705,7 @@ b; // 2
 
 <p>JavaScript 允许以递归方式调用函数。递归在处理树形结构（比如浏览器 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model">DOM</a>）时非常有用。</p>
 
-<pre class="brush: js notranslate">function countChars(elm) {
+<pre class="brush: js">function countChars(elm) {
     if (elm.nodeType == 3) { // 文本节点
         return elm.nodeValue.length;
     }
@@ -717,7 +719,7 @@ b; // 2
 
 <p>这里需要说明一个潜在问题——既然匿名函数没有名字，那该怎么递归调用它呢？在这一点上，JavaScript 允许你命名这个函数表达式。你可以命名立即调用的函数表达式（IIFE——Immediately Invoked Function Expression），如下所示：</p>
 
-<pre class="brush: js notranslate">var charsInBody = (function counter(elm) {
+<pre class="brush: js">var charsInBody = (function counter(elm) {
     if (elm.nodeType == 3) { // 文本节点
         return elm.nodeValue.length;
     }
@@ -735,11 +737,13 @@ b; // 2
 
 <h2 id="自定义对象">自定义对象</h2>
 
-<div class="note"><strong>备注：</strong>关于 JavaScript 中面向对象编程更详细的信息，请参考 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">JavaScript 面向对象简介</a>。</div>
+<div class="note">
+<p><strong>备注：</strong>关于 JavaScript 中面向对象编程更详细的信息，请参考 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">JavaScript 面向对象简介</a>。</p>
+</div>
 
 <p>在经典的面向对象语言中，对象是指数据和在这些数据上进行的操作的集合。与 C++ 和 Java 不同，JavaScript 是一种基于原型的编程语言，并没有 class 语句，而是把函数用作类。那么让我们来定义一个人名对象，这个对象包括人的姓和名两个域（field）。名字的表示有两种方法：“名 姓（First Last）”或“姓, 名（Last, First）”。使用我们前面讨论过的函数和对象概念，可以像这样完成定义：</p>
 
-<pre class="brush: js notranslate">function makePerson(first, last) {
+<pre class="brush: js">function makePerson(first, last) {
     return {
         first: first,
         last: last
@@ -758,7 +762,7 @@ personFullNameReversed(s); // "Willison, Simon"</pre>
 
 <p>上面的写法虽然可以满足要求，但是看起来很麻烦，因为需要在全局命名空间中写很多函数。既然函数本身就是对象，如果需要使一个函数隶属于一个对象，那么不难得到：</p>
 
-<pre class="brush: js notranslate">function makePerson(first, last) {
+<pre class="brush: js">function makePerson(first, last) {
     return {
         first: first,
         last: last,
@@ -776,7 +780,7 @@ s.fullNameReversed(); // Willison, Simon</pre>
 
 <p>上面的代码里有一些我们之前没有见过的东西：关键字 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a>。当使用在函数中时，<code>this</code> 指代当前的对象，也就是调用了函数的对象。如果在一个对象上使用<a href="https://developer.mozilla.org/en/JavaScript/Reference/Operators/Member_Operators">点或者方括号</a>来访问属性或方法，这个对象就成了 <code>this</code>。如果并没有使用“点”运算符调用某个对象，那么 <code>this</code> 将指向全局对象（global object）。这是一个经常出错的地方。例如：</p>
 
-<pre class="brush: js notranslate">s = makePerson("Simon", "Willison");
+<pre class="brush: js">s = makePerson("Simon", "Willison");
 var fullName = s.fullName;
 fullName(); // undefined undefined
 </pre>
@@ -785,7 +789,7 @@ fullName(); // undefined undefined
 
 <p>下面使用关键字 <code>this</code> 改进已有的 <code>makePerson</code>函数：</p>
 
-<pre class="brush: js notranslate">function Person(first, last) {
+<pre class="brush: js">function Person(first, last) {
     this.first = first;
     this.last = last;
     this.fullName = function() {
@@ -804,7 +808,7 @@ var s = new Person("Simon", "Willison");
 
 <p>我们的 Person 对象现在已经相当完善了，但还有一些不太好的地方。每次我们创建一个 Person 对象的时候，我们都在其中创建了两个新的函数对象——如果这个代码可以共享不是更好吗？</p>
 
-<pre class="brush: js notranslate">function personFullName() {
+<pre class="brush: js">function personFullName() {
     return this.first + ' ' + this.last;
 }
 function personFullNameReversed() {
@@ -820,7 +824,7 @@ function Person(first, last) {
 
 <p>这种写法的好处是，我们只需要创建一次方法函数，在构造函数中引用它们。那是否还有更好的方法呢？答案是肯定的。</p>
 
-<pre class="brush: js notranslate">function Person(first, last) {
+<pre class="brush: js">function Person(first, last) {
     this.first = first;
     this.last = last;
 }
@@ -836,7 +840,7 @@ Person.prototype.fullNameReversed = function() {
 
 <p>这个特性功能十分强大，JavaScript 允许你在程序中的任何时候修改原型（prototype）中的一些东西，也就是说你可以在运行时(runtime)给已存在的对象添加额外的方法：</p>
 
-<pre class="brush: js notranslate">s = new Person("Simon", "Willison");
+<pre class="brush: js">s = new Person("Simon", "Willison");
 s.firstNameCaps();  // TypeError on line 1: s.firstNameCaps is not a function
 
 Person.prototype.firstNameCaps = function() {
@@ -847,7 +851,7 @@ s.firstNameCaps(); // SIMON
 
 <p>有趣的是，你还可以给 JavaScript 的内置函数原型（prototype）添加东西。让我们给 <code>String</code> 添加一个方法用来返回逆序的字符串：</p>
 
-<pre class="brush: js notranslate">var s = "Simon";
+<pre class="brush: js">var s = "Simon";
 s.reversed(); // TypeError on line 1: s.reversed is not a function
 
 String.prototype.reversed = function() {
@@ -862,12 +866,12 @@ s.reversed(); // nomiS
 
 <p>定义新方法也可以在字符串字面量上用（string literal）。</p>
 
-<pre class="brush: js notranslate">"This can now be reversed".reversed(); // desrever eb won nac sihT
+<pre class="brush: js">"This can now be reversed".reversed(); // desrever eb won nac sihT
 </pre>
 
 <p>正如我前面提到的，原型组成链的一部分。那条链的根节点是 <code>Object.prototype</code>，它包括 <code>toString()</code> 方法——将对象转换成字符串时调用的方法。这对于调试我们的 <code>Person</code> 对象很有用：</p>
 
-<pre class="brush: js notranslate">var s = new Person("Simon", "Willison");
+<pre class="brush: js">var s = new Person("Simon", "Willison");
 s; // [object Object]
 
 Person.prototype.toString = function() {
@@ -878,7 +882,7 @@ s.toString(); // &lt;Person: Simon Willison&gt;
 
 <p>你是否还记得之前我们说的 <code>avg.apply()</code> 中的第一个参数 <code>null</code>？现在我们可以回头看看这个东西了。<code>apply()</code> 的第一个参数应该是一个被当作 <code>this</code> 来看待的对象。下面是一个 <code>new</code> 方法的简单实现：</p>
 
-<pre class="brush: js notranslate">function trivialNew(constructor, ...args) {
+<pre class="brush: js">function trivialNew(constructor, ...args) {
     var o = {}; // 创建一个对象
     constructor.apply(o, args);
     return o;
@@ -889,15 +893,15 @@ s.toString(); // &lt;Person: Simon Willison&gt;
 
 <p>因此，调用</p>
 
-<pre class="brush: js notranslate">var bill = trivialNew(Person, "William", "Orange");</pre>
+<pre class="brush: js">var bill = trivialNew(Person, "William", "Orange");</pre>
 
 <p>可认为和调用如下语句是等效的</p>
 
-<pre class="brush: js notranslate">var bill = new Person("William", "Orange");</pre>
+<pre class="brush: js">var bill = new Person("William", "Orange");</pre>
 
 <p><code>apply()</code> 有一个姐妹函数，名叫 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>call</code></a>，它也可以允许你设置 <code>this</code>，但它带有一个扩展的参数列表而不是一个数组。</p>
 
-<pre class="brush: js notranslate">function lastNameCaps() {
+<pre class="brush: js">function lastNameCaps() {
     return this.last.toUpperCase();
 }
 var s = new Person("Simon", "Willison");
@@ -911,7 +915,7 @@ s.lastNameCaps();
 
 <p>JavaScript 允许在一个函数内部定义函数，这一点我们在之前的 <code>makePerson()</code> 例子中也见过。关于 JavaScript 中的嵌套函数，一个很重要的细节是，它们可以访问父函数作用域中的变量：</p>
 
-<pre class="brush: js notranslate">function parentFunc() {
+<pre class="brush: js">function parentFunc() {
   var a = 1;
 
   function nestedFunc() {
@@ -929,7 +933,7 @@ s.lastNameCaps();
 
 <p>闭包是 JavaScript 中最强大的抽象概念之一——但它也是最容易造成困惑的。它究竟是做什么的呢？</p>
 
-<pre class="brush: js notranslate">function makeAdder(a) {
+<pre class="brush: js">function makeAdder(a) {
   return function(b) {
     return a + b;
   }
@@ -946,7 +950,7 @@ add20(7); // ?
 
 <p>这里发生的事情和前面介绍过的内嵌函数十分相似：一个函数被定义在了另外一个函数的内部，内部函数可以访问外部函数的变量。唯一的不同是，外部函数已经返回了，那么常识告诉我们局部变量“应该”不再存在。但是它们却仍然存在——否则 <code>adder</code> 函数将不能工作。也就是说，这里存在 <code>makeAdder</code> 的局部变量的两个不同的“副本”——一个是 <code>a</code> 等于 5，另一个是 <code>a</code> 等于 20。那些函数的运行结果就如下所示：</p>
 
-<pre class="brush: js notranslate">add5(6); // 返回 11
+<pre class="brush: js">add5(6); // 返回 11
 add20(7); // 返回 27
 </pre>
 

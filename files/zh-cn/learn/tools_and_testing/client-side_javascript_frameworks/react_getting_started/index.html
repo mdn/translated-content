@@ -235,11 +235,7 @@ import './App.css';</pre>
 
 <h3 id="App_组件"><code>App</code> 组件</h3>
 
-<div class="hidden">
-<p>在 import 所需资源之后，我们定义了一个名为 App 的函数，尽管大部分 JavaScript 社区推崇使用camel命名法，如：“helloWorld”。但React组件使用pascal变量命名法，如“HelloWorld”，来帮助用户辨认一个JSX元素是React组件而非普通的HTML标签。如果您将函数名“App”改为“app”，您的浏览器会显示错误。(时间不够，先翻译到这里了)</p>
-</div>
-
-<p>After the imports, we have a function named <code>App</code>. Whereas most of the JavaScript community prefers camel-case names like <code>helloWorld</code>, React components use pascal-case variable names, like <code>HelloWorld</code>, to make it clear that a given JSX element is a React component, and not a regular HTML tag. If you were to rename the <code>App</code> function to <code>app</code>, your browser would show you an error.</p>
+<p>在 import 所需资源之后，我们定义了一个名为 App 的函数，尽管大部分 JavaScript 社区推崇使用驼峰式命名法，如：“helloWorld”。但 React 组件使用帕斯卡命名法，如 “HelloWorld”，来帮助用户辨认一个 JSX 元素是 React 组件而非普通的 HTML 标签。如果您将函数名 “App” 改为 “app”，您的浏览器会显示错误。</p>
 
 <p>让我们进一步看下App方法。</p>
 
@@ -266,13 +262,11 @@ import './App.css';</pre>
 
 <p>App方法返回一个JSX表达式，这个表达式定义了浏览器最终要渲染的DOM。</p>
 
-<p>表达式中的元素就像以前写的HTML一样，都拥有属性。</p>
+<p>表达式中的元素就像以前写的HTML一样，都拥有属性，并且遵循 <code>attribute="value"</code> 的模式。 在第三行，开始标签 <code><a href="/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> 有着 <code>className</code> 属性。 这个属性与在HTML中的 <code><a href="/en-US/docs/Web/HTML/Global_attributes/class">class</a></code> 属性相同，但是由于JSX就是JavaScript, 我们不能使用 <code>class</code> 属性 - 这个是关键字，意味着JavaScript已经用它执行其它任务，使用 <code>class</code> 属性将会在我们的代码中产生冲突。由于同样的原因，一些其它的HTML属性在JSX中也有着不同的书写方式，当我们碰到它们时，我们将会详述。</p>
 
-<p>Some elements in the expression have attributes, which are written just like in HTML, following a pattern of <code>attribute="value"</code>. On line 3, the opening <code><a href="/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> tag has a <code>className</code> attribute. This the same as the <code><a href="/en-US/docs/Web/HTML/Global_attributes/class">class</a></code> attribute in HTML, but because JSX is JavaScript, we can't use the word <code>class</code> – it's reserved, meaning JavaScript already uses it for a specific purpose and it would cause problems here in our code. A few other HTML attributes are written differently in JSX than they are in HTML too, for the same kind of reason. We'll cover them as we encounter them.</p>
+<p>把第6行的 <code><a href="/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a></code> 标签内容改为 "Hello, world!" 并保存文件。你会发现这个改变也会立即在浏览器的<code>http://localhost:3000</code> 中同步渲染。 现在删掉 <code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> 标签并保存，"Learn React"链接也会同样被删除。</p>
 
-<p>Take a moment to change the <code><a href="/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a></code> tag on line 6 so that it reads "Hello, world!", then save your file. You'll notice that this change is immediately rendered in the development server running at <code>http://localhost:3000</code> in your browser. Now delete the <code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> tag and save; the "Learn React" link will be gone.</p>
-
-<p>Your <code>App</code> component should now look like this:</p>
+<p>你的 <code>App</code> 组件应该如下所示:</p>
 
 <pre class="brush: js notranslate">function App() {
   return (
@@ -287,13 +281,13 @@ import './App.css';</pre>
   );
 }</pre>
 
-<h3 id="Export_statements">Export statements</h3>
+<h3 id="Export_statements">Export 语句</h3>
 
-<p>At the very bottom of the <code>App.js</code> file, the statement <code>export default App</code> makes our <code>App</code> component available to other modules.</p>
+<p>在 <code>App.js</code> 文件的最底部,  <code>export default App</code> 语句使得 <code>App</code> 组件能被其它模块使用.</p>
 
 <h2 id="Interrogating_the_index">Interrogating the index</h2>
 
-<p>Let’s open <code>src/index.js</code>, because that's where the <code>App</code> component is being used. This file is the entry point for our app, and it initially looks like this:</p>
+<p>现在让我们打开 <code>src/index.js</code>, 因为这也是 <code>App</code> 组件被用到的地方。 这个文件是我们 app 的入口点，在一开始它如下所示</p>
 
 <pre class="brush: js notranslate">import React from 'react';
 import ReactDOM from 'react-dom';
@@ -308,24 +302,25 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();</pre>
 
-<p>As with <code>App.js</code>, the file starts by importing all the JS modules and other assets it needs to run. <code>src/index.css</code> holds global styles that are applied to our whole app. We can also see our <code>App</code> component imported here; it is made available for import thanks to the <code>export</code> statement at the bottom of <code>App.js</code>.</p>
+<p>就像 <code>App.js</code> 一样,这个文件一开始 import 了所有的 JS 模块和其它运行所需要的资源。<code>src/index.css</code>定义了运用于整个 app 的 global style。 我们可以看到我们的 <code>App</code> 组件也被 imported 了， 这是在 <code>App.js</code> 底部的语句让 import <code>App</code> 变得可行。</p>
 
-<p>Line 7 calls React’s <code>ReactDOM.render()</code> function with two arguments:</p>
+<p>第七行调用 React 的 <code>ReactDOM.render()</code> 函数，并传入两个参数：</p>
 
 <ul>
- <li>The component we want to render, <code>&lt;App /&gt;</code> in this case.</li>
- <li>The DOM element inside which we want the component to be rendered, in this case the element with an ID of <code>root</code>. If you look inside <code>public/index.html</code>, you'll see that this is a <code>&lt;div&gt;</code> element just inside the <code>&lt;body&gt;</code>.</li>
+ <li>我们想要渲染的组件, 在这个例子中是 <code>&lt;App /&gt;</code> .</li>
+
+ <li>我们想要渲染组件所在的 DOM 元素，在这个例子中是带着 <code>root</code> 标签的元素。 让我们看一下 <code>public/index.html</code> 的代码， 可以看到这有一个 <code>&lt;div&gt;</code> 元素 在 <code>&lt;body&gt;</code> 里。 </li>
 </ul>
 
-<p>All of this tells React that we want to render our React application with the <code>App</code> component as the root, or first component.</p>
+<p>上述所有都告诉 React 我们想把 <code>App</code> 组件作为 root 或者第一个组件来渲染我们的 React App。</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: In JSX, React components and HTML elements must have closing slashes. Writing just <code>&lt;App&gt;</code> or just <code>&lt;img&gt;</code> will cause an error.</p>
+<p><strong>注意</strong>: 在 JSX 中， React 组件和 HTML 元素必须有 closing slashes，如 <code>&lt;App /&gt;</code>， 如果我们写 <code>&lt;App&gt;</code> 或者 <code>&lt;img&gt;</code> 将会报错。</p>
 </div>
 
-<p><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> are interesting pieces of code that help application performance and allow features of your web applications to work offline, but they’re not in scope for this article. You can delete line 5, as well as lines 9 through 12.</p>
+<p><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> 能让我们的 App 离线运行，但它不在本篇文章的范围中，您可以删除第5行和第9到12行。</p>
 
-<p>Your final <code>index.js</code> file should look like this:</p>
+<p>您最终的 <code>index.js</code> 文件应该如下所示：</p>
 
 <pre class="brush: js notranslate">import React from 'react';
 import ReactDOM from 'react-dom';
@@ -336,17 +331,17 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 
 <h2 id="Variables_and_props">Variables and props</h2>
 
-<p>Next, we'll use a few of our JavaScript skills to get a bit more comfortable editing components and working with data in React. We'll talk about how variables are used inside JSX, and introduce props, which are a way of passing data into a component (which can then be accessed using variables).</p>
+<p>接下来，我们将使用一些 JavaScript 的技巧来让我们在 React 中编辑组件以及处理数据更加顺手。我们将讨论如何在 JSX 中 使用 variables， 并且介绍 props， props是我们用来往组件里传入数据的一种方法， 传入之后我们可以用 variable 访问传入的变量。</p>
 
 <h3 id="Variables_in_JSX">Variables in JSX</h3>
 
-<p>Back in <code>App.js</code>, let’s focus on line 9:</p>
+<p>回到 <code>App.js</code>, 让我们看一下第9行:</p>
 
 <pre class="brush: js notranslate">&lt;img src={logo} className="App-logo" alt="logo" /&gt;</pre>
 
-<p>Here, the <code>&lt;img /&gt;</code> tag's <code>src</code> attribute value is in curly braces. This is how JSX recognizes variables. React will see <code>{logo}</code>, know you are referring to the logo import on line 2 of our app, then retrieve the logo file and render it.</p>
+<p>可以看到，  <code>&lt;img /&gt;</code> 标签的 <code>src</code> 属性只值是在大括号中的 -- <code>{logo}</code>. 这是JSX 识别变量的方式。 React 将会识别 <code>{logo}</code>， 知道您在指在我们 app 第二行引入的 logo， 然后 React 会读取这个文件它并渲染。</p>
 
-<p>Let's try making a variable of our own. Before the return statement of <code>App</code>, add <code>const subject = 'React';</code>. Your <code>App</code> component should now look like this:</p>
+<p>让我们试着设置一个我们自己的变量，在 <code>App</code> return 之前， 添加 <code>const subject = 'React';</code>。 您的代码现在应该如下所示：</p>
 
 <pre class="brush: js notranslate">function App() {
   const subject = "React";
@@ -362,7 +357,7 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
   );
 }</pre>
 
-<p>Change line 8 to use our <code>subject</code> variable instead of the word "world", like this:</p>
+<p>把第8行的 "world" 替换成我们自己的变量  <code>subject</code> ，如下所示：</p>
 
 <pre class="brush: js notranslate">function App() {
   const subject = "React";
@@ -378,19 +373,19 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
   );
 }</pre>
 
-<p>When you save, your browser should display "Hello, React!" instead of "Hello, world!"</p>
+<p>当我们保存时， 浏览器将会显示 "Hello, React!"， 而不是 "Hello, world!"</p>
 
-<p>Variables are convenient, but the one we've just set doesn’t make great use of React's features. That's where props come in.</p>
+<p>变量十分方便，但是我们没有利用到 React 的特性， 接下来我们将介绍 Props。</p>
 
 <h3 id="Component_props">Component props</h3>
 
-<p>A <strong>prop</strong> is any data passed into a React component. Props are written inside component calls, and use the same syntax as HTML attributes — <code>prop="value"</code>. Let’s open <code>index.js</code> and give our <code>&lt;App/&gt;</code> call its first prop.</p>
+<p><strong>prop</strong> 是任何传入 React 组件的数据。Props 写在组件中，并且像 HTML 属性一样写成 <code>prop="value"</code>。 让我们打开 <code>index.js</code> 并且为我们的 <code>&lt;App/&gt;</code> 添加第一个 prop。</p>
 
-<p>Add a prop of <code>subject</code> to the <code>&lt;App/&gt;</code> component call, with a value of <code>Clarice</code>. When you are done, your code should look something like this:</p>
+<p>为 <code>&lt;App/&gt;</code> 组件添加一个叫 <code>subject</code> 并有着 <code>Clarice</code> 值的 prop。 当完成之后，您的代码应如下所示： </p>
 
 <pre class="brush: js notranslate">ReactDOM.render(&lt;App subject="Clarice" /&gt;, document.getElementById('root'));</pre>
 
-<p>Back in <code>App.js</code>, let's revisit the App function itself, which reads like this (with the <code>return</code> statement shortened for brevity):</p>
+<p> 回到 <code>App.js</code>， 代码应该如下所示 （return 中的内容省略了）
 
 <pre class="brush: js notranslate">function App() {
   const subject = "React";
@@ -399,7 +394,7 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
   );
 }</pre>
 
-<p>Change the signature of the <code>App</code> function so that it accepts <code>props</code> as a parameter. Just like any other parameter, you can put <code>props</code> in a <code>console.log()</code> to read it out to your browser's console. Go ahead and do that after your <code>subject</code> constant but before the <code>return</code> statement, like so:</p>
+<p>改变 <code>App</code> 的函数签名，让它接收 <code>props</code> 作为一个参数。 就像其它参数一样， 您可以把 <code>props</code> 放在 <code>console.log()</code> 中，让其在浏览器打印出来。 把它放在您的 <code>subject</code> 之后，以及 <code>return</code> 之前， 您的代码应如下所示：</p>
 
 <pre class="brush: js notranslate">function App(props) {
   const subject = "React";
@@ -409,13 +404,13 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
   );
 }</pre>
 
-<p>Save your file and check your browser's JavaScript console. You should see something like this logged:</p>
+<p>保存您的文件并检查您浏览器中的 JavaScript Console， 您将会发现如下所示的语句：</p>
 
 <pre class="brush: js notranslate">Object { subject: "Clarice" }</pre>
 
-<p>The object property <code>subject</code> corresponds to the <code>subject</code> prop we added to our <code>&lt;App /&gt;</code> component call, and the string <code>Clarice</code> corresponds to its value. Component props in React are always collected into objects in this fashion.</p>
+<p> 对象的 <code>subject</code> 属性与我们放入 <code>App</code> 函数签名的 prop 相对应，并且 <code>Clarice</code> 字符串与它的值相对应， 在 React 中的组件 props 总是用这种方式传入object 中。</p>
 
-<p>Now that <code>subject</code> is one of our props, let's utilize it in <code>App.js</code>. Change the <code>subject</code> constant so that, instead of defining it as the string <code>React</code>, you are reading the value of <code>props.subject</code>. You can also delete your <code>console.log()</code> if you want.</p>
+<p> 现在 <code>subject</code> 是我们的 props 之一了， 让我们在 <code>App.js</code> 中使用它。 用 <code>props.subject</code> 替代原本的 <code>React</code> 字符串， 如果你想的话，也可以删除 <code>console.log()</code>， 您的代码将如下所示：
 
 <pre class="brush: js notranslate">function App(props) {
   const subject = props.subject;
@@ -424,20 +419,21 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
   );
 }</pre>
 
-<p>When you save, the the app should now greet you with "Hello, Clarice!". If you return to <code>index.js</code>, edit the value of <code>subject</code>, and save, your text will change.</p>
+<p>当您保存之后， app 应该会输出 "Hello, Clarice!"。 如果您回到 <code>index.js</code>， 并且修改 <code>subject</code> 的值并保存， 您输出的字也会随之改变。 </p>
 
-<h2 id="Summary">Summary</h2>
+<h2 id="Summary">总结</h2>
 
-<p>This brings us to the end of our initial look at React, including how to install it locally, creating a starter app, and how the basics work. In the next article we'll start building our first proper application — a todo list. Before we do that, however, let's recap some of the things we’ve learned.</p>
 
-<p>In React:</p>
+<p>以上就是我们对 React 的初步认识， 包括如何在本地下载它， 创建一个初始 app， 以及一些基本的操作。 在下篇文章，我们将会开始创建我们的第一个 app -- 一个任务清单。在我们开始下篇文章之前，让我们先复习下我们现在所学的。</p>
+
+<p>在 React 中:</p>
 
 <ul>
- <li>Components can import modules they need, and must export themselves at the bottom of their files.</li>
- <li>Component functions are named with <code>PascalCase</code>.</li>
- <li>You can read JSX variables by putting them between curly braces, like <code>{so}</code>.</li>
- <li>Some JSX attributes are different to HTML attributes, so that they don't conflict with JavaScript reserved words. For example, <code>class</code> in HTML translates to <code>className</code> in JSX. Note that multi-word attributes are camel-cased.</li>
- <li>Props are written just like attributes inside component calls, and are passed into components.</li>
+ <li>组件可以 import 它们需要的模块，并且在文件底部将自身 export，以让其它组件使用。</li>
+ <li>组件是用 <code>PascalCase</code> 也就是帕斯卡命名法命名的。</li>
+ <li>通过把变量放在大括号中，您可以读取 JSX 的变量， 如<code>{so}</code> </li>
+ <li>一些 JSX 属性与 HTML 属性不相同，这样就不会与JavaScript的保留字相冲突，比如说，在 HTML 中的  <code>class</code> 会在 JSX 中转译为 <code>className</code>。 注意这些属性都是驼峰式命名的。</li>
+ <li>Props 就像属性一样写在组件里，并且传入组件。</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>

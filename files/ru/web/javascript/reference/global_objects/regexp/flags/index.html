@@ -16,23 +16,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 ---
 <div>{{JSRef("Global_Objects", "RegExp")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Свойство <strong><code>flags</code></strong> возвращает строку, состоящую из флагов текущего регулярного выражения.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Флаги в свойстве <code>flags</code> упорядочены по алфавиту (слева направо, то есть <code>"gimuy"</code>).</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_flags" name="Example:_Using_flags">Пример: использование свойства <code>flags</code></h3>
+<h3 id="Example:_Using_flags">Пример: использование свойства <code>flags</code></h3>
 
 <pre class="brush: js">/foo/ig.flags;   // "gi"
 /bar/myu.flags;  // "muy"
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <pre class="brush: js">if (RegExp.prototype.flags === undefined) {
   Object.defineProperty(RegExp.prototype, 'flags', {
@@ -44,28 +44,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-get-regexp.prototype.flags', 'RegExp.prototype.flags')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("RegExp.prototype.source")}}</li>

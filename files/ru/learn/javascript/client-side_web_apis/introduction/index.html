@@ -116,7 +116,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 
 <p>Так как же эти объекты взаимодействуют? Если вы посмотрите на наш пример <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html">maps-example.html</a> (<a href="http://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html">see it live also</a>), вы увидите следующий код:</p>
 
-<pre class="brush: js notranslate">navigator.geolocation.getCurrentPosition(function(position) {
+<pre class="brush: js">navigator.geolocation.getCurrentPosition(function(position) {
   var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
   var myOptions = {
     zoom: 8,
@@ -133,11 +133,11 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 
 <p>Во-первых, мы хотим использовать метод {{domxref("Geolocation.getCurrentPosition()")}}, чтобы получить текущее положение нашего устройства. Доступ к объекту браузера {{domxref("Geolocation")}} производится с помощью свойства {{domxref("Navigator.geolocation")}}, так что мы начнём с</p>
 
-<pre class="brush: js notranslate">navigator.geolocation.getCurrentPosition(function(position) { ... });</pre>
+<pre class="brush: js">navigator.geolocation.getCurrentPosition(function(position) { ... });</pre>
 
 <p>Это эквивалентно следующему коду</p>
 
-<pre class="brush: js notranslate">var myGeo = navigator.geolocation;
+<pre class="brush: js">var myGeo = navigator.geolocation;
 myGeo.getCurrentPosition(function(position) { ... });</pre>
 
 <p>Но мы можем использовать точки, чтобы связать доступ к свойствам/методам объекта в одно выражение, уменьшая количество строк в программе.</p>
@@ -150,22 +150,22 @@ myGeo.getCurrentPosition(function(position) { ... });</pre>
 
 <p>Такой подход, при котором функция вызывается только тогда, когда операция была завершена, очень распространён в JavaScript API — убедиться, что операция была завершена прежде, чем пытаться использовать данные, которые она возвращает, в другой операции. Такие операции также называют асинхронными операциями (<strong><a href="/en-US/docs/Glossary/Asynchronous">asynchronous</a> operations)</strong>. Учитывая, что получение данных геолокации производится из внешнего устройства (GPS-устройства или другого устройства геолокации), мы не можем быть уверены, что операция считывания будет завершена вовремя и мы сможем незамедлительно использовать возвращаемые ею данные. Поэтому такой код не будет работать:</p>
 
-<pre class="brush: js example-bad notranslate">var position = navigator.geolocation.getCurrentPosition();
+<pre class="brush: js example-bad">var position = navigator.geolocation.getCurrentPosition();
 var myLatitude = position.coords.latitude;</pre>
 
 <p>Если первая строка ещё не вернула результат, вторая вызовет ошибку из-за того, что данные геолокации ещё не стали доступны. По этой причине, API, использующие асинхронные операции, разрабатываются с использованием {{glossary("callback function")}}, или более современной системы <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">промисов</a>, которая появилась в ECMAScript 6 и широко используются в новых API.</p>
 
 <p>Мы совмещаем API Геолокации со сторонним API - Google Maps API, который используем для того, чтобы отметить расположение, возвращаемое  <code>getCurrentPosition()</code> , на Google Map. Чтобы Google Maps API стал доступен на нашей странице, мы включаем его в HTML документ:</p>
 
-<pre class="brush: html notranslate">&lt;script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"&gt;&lt;/script&gt;</pre>
+<pre class="brush: html">&lt;script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"&gt;&lt;/script&gt;</pre>
 
 <p>Чтобы использовать этот API, во-первых создадим объект <code>LatLng</code> с помощью конструктора <code>google.maps.LatLng()</code> , принимающим данные геолокации {{domxref("Coordinates.latitude")}} и {{domxref("Coordinates.longitude")}} :</p>
 
-<pre class="brush: js notranslate">var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);</pre>
+<pre class="brush: js">var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);</pre>
 
 <p>Этот объект сам является значением свойства <code>center</code> объекта настроек (options), который мы назвали <code>myOptions</code>. Затем мы создаём экземпляр объекта, представляющего нашу карту, вызывая конструктор <code>google.maps.Map()</code> и передавая ему два параметра — ссылку на элемент {{htmlelement("div")}}, на котором мы хотим отрисовывать карту (с ID <code>map_canvas</code>), и объект настроек (options), который мы определили выше.</p>
 
-<pre class="brush: js notranslate">var myOptions = {
+<pre class="brush: js">var myOptions = {
   zoom: 8,
   center: latlng,
   mapTypeId: google.maps.MapTypeId.TERRAIN,
@@ -193,19 +193,19 @@ var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
 
 <p>Найти точку входа Document Object Model (DOM) API ещё проще — при применении этого API используется объект {{domxref("Document")}}, или экземпляр элемента HTML, с которым вы хотите каким-либо образом взаимодействовать, к примеру:</p>
 
-<pre class="brush: js notranslate">var em = document.createElement('em'); // создаёт новый элемент em
+<pre class="brush: js">var em = document.createElement('em'); // создаёт новый элемент em
 var para = document.querySelector('p'); // ссылка на существующий элемент p
 em.textContent = 'Hello there!'; // присвоение текстового содержимого
 para.appendChild(em); // встроить em внутрь para</pre>
 
 <p>Точки входа других API немного сложнее, часто подразумевается создание особого контекста, в котором будет написан код API. Например, объект контекста Canvas API создаётся получением ссылки на элемент {{htmlelement("canvas")}}, на котором вы хотите рисовать, а затем необходимо вызвать метод {{domxref("HTMLCanvasElement.getContext()")}}:</p>
 
-<pre class="brush: js notranslate">var canvas = document.querySelector('canvas');
+<pre class="brush: js">var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext('2d');</pre>
 
 <p>Всё, что мы хотим сделать с canvas после этого, достигается вызовом свойств и методов объекта содержимого (content) (который является экземпляром {{domxref("CanvasRenderingContext2D")}}), например:</p>
 
-<pre class="brush: js notranslate">Ball.prototype.draw = function() {
+<pre class="brush: js">Ball.prototype.draw = function() {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -224,7 +224,7 @@ var ctx = canvas.getContext('2d');</pre>
 
 <p>Следующий код содержит простой пример использования событий:</p>
 
-<pre class="brush: js notranslate">var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+<pre class="brush: js">var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
@@ -260,7 +260,7 @@ request.onload = function() {
 
 <h2 id="Итоги">Итоги</h2>
 
-<p>На данном этапе, у вас должно сформироваться представление о том, что такое API, как они работают и как вы можете применить их в своём JavaScript коде. Вам наверняка не терпится начать делать по-настоящему интересные вещи с конкретными API, так вперёд! В следующий раз мы рассмотрим работу с документом с помощью Document Object Model (DOM).</p>
+<p>На данном этапе, у вас должно сформироваться представление о том, что такое API, как они работают и как вы можете применить их в своём JavaScript-коде. Вам наверняка не терпится начать делать по-настоящему интересные вещи с конкретными API, так вперёд! В следующий раз мы рассмотрим работу с документом с помощью Document Object Model (DOM).</p>
 
 <p>{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}</p>
 

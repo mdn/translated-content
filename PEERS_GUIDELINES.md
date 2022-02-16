@@ -53,8 +53,8 @@ The review teams for each locale are:
 - Korea (`ko`) content — the
 [@yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko)
   team, which consists of:
-  - [@yechoi42](https://github.com/yechoi42)
   - [@cos18](https://github.com/cos18)
+  - [@yechoi42](https://github.com/yechoi42)
   - [@GwangYeol-Im](https://github.com/GwangYeol-Im)
   - [@pje1740](https://github.com/pje1740)
   - [@nKiNk](https://github.com/nKiNk)
@@ -65,7 +65,6 @@ The review teams for each locale are:
   team, which consists of:
   - [@armanpwnz](https://github.com/armanpwnz)
   - [@captainspring](https://github.com/captainspring)
-  - [@mpstv](https://github.com/mpstv)
   - [@myshov](https://github.com/myshov)
   - [@Saionaro](https://github.com/Saionaro)
   - [@sashasushko](https://github.com/sashasushko)

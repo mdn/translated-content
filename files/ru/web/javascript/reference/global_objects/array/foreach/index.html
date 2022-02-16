@@ -20,13 +20,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 <p class="hidden">Источник этого интерактивного примера хранится в GitHub. Если вы хотите внести вклад в проект интерактивных примеров, пожалуйста, клонируйте <a href="https://github.com/mdn/interactive-examples"> https://github.com/mdn/interactive-examples</a> и отправьте нам pull request.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre><var>arr</var>.forEach(function <var>callback(currentValue, index, array) {
     //your iterator
 }</var>[, <var>thisArg</var>]);</pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -49,7 +49,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 <p>{{jsxref("undefined")}}.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>forEach()</code> выполняет функцию <code>callback</code> один раз для каждого элемента, находящегося в массиве в порядке возрастания. Она не будет вызвана для удалённых или пропущенных элементов массива. Однако, она будет вызвана для элементов, которые присутствуют в массиве и имеют значение {{jsxref("Global_Objects/undefined", "undefined")}}.</p>
 
@@ -84,9 +84,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 <p>Метод <code>forEach()</code> выполняет функцию <code>callback</code> один раз для каждого элемента массива; в отличие от методов {{jsxref("Array.prototype.every()", "every()")}} и {{jsxref("Array.prototype.some()", "some()")}}, он всегда возвращает значение {{jsxref("Global_Objects/undefined", "undefined")}}.</p>
 </div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="sparseArray" name="sparseArray">Нет операции для неинициализированных значений (разреженные массивы)</h3>
+<h3 id="sparseArray">Нет операции для неинициализированных значений (разреженные массивы)</h3>
 
 <pre class="brush: js">const arraySparse = [1,3,,7]
 let numCallbackRuns = 0
@@ -120,7 +120,7 @@ items.forEach(function(item){
 })
 </pre>
 
-<h3 id="Printing_the_contents_of_an_array" name="Printing_the_contents_of_an_array">Печать содержимого массива</h3>
+<h3 id="Printing_the_contents_of_an_array">Печать содержимого массива</h3>
 
 <div class="blockIndicator note">
 <p><strong>Примечание:</strong> Для отображения содержимого массива в консоли вы можете использовать <a href="/ru/docs/Web/API/Console/table" title="Отображает табличные данные в виде таблицы"><code>console.table()</code></a>, который выводит отформатированную версию массива.</p>
@@ -172,7 +172,7 @@ obj.sum
 <p><strong>Примечание:</strong> Если при передаче callback функции используется {{jsxref('Functions/Arrow_functions', 'выражение стрелочной функции')}}, параметр <code><var>thisArg</var></code> может быть опущен, так как все стрелочные функции лексически привязываются к значению{{jsxref("Operators/this", "this")}}.</p>
 </div>
 
-<h3 id="Breaking_a_loop" name="Breaking_a_loop">Прерывание цикла</h3>
+<h3 id="Breaking_a_loop">Прерывание цикла</h3>
 
 <p>Следующий код использует {{jsxref("Array.prototype.every()")}} для логирования содержимого массива и останавливается при превышении значением заданного порогового значения <code>THRESHOLD</code>.</p>
 
@@ -211,7 +211,7 @@ console.log('res:', res);
 // res: true
 </pre>
 
-<h3 id="An_object_copy_function" name="An_object_copy_function">Функция копирования объекта</h3>
+<h3 id="An_object_copy_function">Функция копирования объекта</h3>
 
 <p>Следующий код создаёт копию переданного объекта. Существует несколько способов создания копии объекта, и это один из них. Он позволяет понять, каким образом работает <code>Array.prototype.forEach()</code>, используя функции мета-свойств <code>Object.*</code> из ECMAScript 5.</p>
 
@@ -275,7 +275,7 @@ const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]]
 flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Метод <code>forEach()</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>forEach()</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; он предполагает, что {{jsxref("Object")}} и {{jsxref("TypeError")}} имеют свои первоначальные значения и что <code>callback.call</code> вычисляется в оригинальное значение {{jsxref("Function.prototype.call()")}}.</p>
 
@@ -340,40 +340,17 @@ if (!Array.prototype.forEach) {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.18', 'Array.prototype.forEach')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 <div>
-<p>{{Compat("javascript.builtins.Array.forEach")}}</p>
+<p>{{Compat}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.find()")}}</li>

@@ -48,7 +48,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Se
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Одно из применений универсального селектора состоит в том, чтобы облегчить чтение селекторов и сделать их более удобопонятными с точки зрения того, что они делают.</span></span> Например, если мы хотим выбрать элементы-потомки элемента <code>&lt;article&gt;</code>, которые являются первыми дочерними элементами своего родителя, включая дочерние элементы самого <code>&lt;article&gt;</code>, и сделать их шрифт жирным, мы могли бы использовать псевдокласс {{cssxref(":first-child")}}, который мы будем изучать в уроке о <a href="/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements">псевдоклассах и псевдо-элементах</a>, как селектор-потомок вместе с селектором элемента <code>&lt;article&gt;</code>: </p>
 
-<pre class="brush: css notranslate">article :first-child {
+<pre class="brush: css">article :first-child {
   font-weight: bold;
 }</pre>
 
@@ -56,7 +56,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Se
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Чтобы избежать этой путаницы, мы можем добавить универсальный селектор в псевдокласс</span></span> <code>:first-child</code> <span class="tlid-translation translation" lang="ru"><span title="">, чтобы было очевидно, что делает селектор.</span> <span title="">Он выбирает <em>любой</em> элемент, который является первым дочерним элементом элемента</span></span> <code>&lt;article&gt;</code> или <span class="tlid-translation translation" lang="ru"><span title="">первым дочерним элементом любого потомка</span></span> <span class="tlid-translation translation" lang="ru"><span title="">элемента</span></span> <code>&lt;article&gt;</code>:</p>
 
-<pre class="brush: css notranslate">article *:first-child {
+<pre class="brush: css">article *:first-child {
   font-weight: bold;
 } </pre>
 

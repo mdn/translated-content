@@ -9,7 +9,7 @@ translation_of: Web/API/DOMTokenList/replace
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><var>tokenList</var>.replace(<var>oldToken</var>, <var>newToken</var>);</pre>
+<pre class="syntaxbox"><var>tokenList</var>.replace(<var>oldToken</var>, <var>newToken</var>);</pre>
 
 <h3 id="Параметры">Параметры</h3>
 
@@ -34,11 +34,11 @@ translation_of: Web/API/DOMTokenList/replace
 
 <p>В HTML:</p>
 
-<pre class="brush: html notranslate">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
 
 <p>В JavaScript:</p>
 
-<pre class="brush: js notranslate">let span = document.querySelector("span");
+<pre class="brush: js">let span = document.querySelector("span");
 let classes = span.classList;
 
 let result = classes.replace("c", "z");
@@ -52,13 +52,13 @@ if (result) {
 
 <p><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Результат выглядит так:</span></span></span></p>
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+<p>{{ EmbedLiveSample('Примеры', '100%', 60) }}</p>
 
 <h2 id="Полифил">Полифил</h2>
 
 <p>Следующий полифил добавит метод replace в класс <code>DOMTokenList</code>.  Следующий код будет работать только с <strong>IE10-11</strong>. Чтобы использовать с более ранними версиями IE, обратитесь к полифилу по {{domxref("element.classList#Polyfill")}}</p>
 
-<pre class="brush: js notranslate"><code>DOMTokenList.prototype.replace = function (a, b) {
+<pre class="brush: js"><code>DOMTokenList.prototype.replace = function (a, b) {
     if (this.contains(a)) {
         this.add(b);
         this.remove(a);
@@ -69,27 +69,12 @@ if (result) {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-replace','replace()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Первоначальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 <div>
 
 
-<p>{{Compat("api.DOMTokenList.replace")}}</p>
+<p>{{Compat}}</p>
 </div>

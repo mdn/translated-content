@@ -10,11 +10,11 @@ original_slug: Web/API/Node/namespaceURI
 
 <p>Свойство <code><strong>Node.namespaceURI</strong></code> только для чтения, возвращает пространство имён URI узла или <code>null,</code> если узел не находится в пространстве имён (только для чтения). Хотя узел документа, возвращает пространство имён XML для текущего документа.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>namespace</em> = <em>node</em>.namespaceURI</pre>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <p>В этом сниппете, узел рассматривается для его <a href="/en-US/docs/DOM/Node.localName" title="DOM/Node.localName">localName</a> и его <code>namespaceURI</code>. Если <code>namespaceURI</code> возвращает XUL пространство имён и <code>localName</code> возвращая "browser", затем узел XUL согласует <code>&lt;browser/&gt;</code>.</p>
 
@@ -23,11 +23,11 @@ original_slug: Web/API/Node/namespaceURI
   // this is a XUL browser
 }</pre>
 
-<h2 id="Notes" name="Notes">Примечание</h2>
+<h2 id="Notes">Примечание</h2>
 
 <p>Это не вычисленное значение, которое является результатом поиска имён на основе проверки декларации в области пространства имён. Пространство имён URI узла заморожена в момент создания узла.</p>
 
-<p>В Firefox 3.5 и выше, пространство имён URI для HTML элементов в HTML документах это <code>null</code>. В более поздних версиях, в соответствии с HTML5, это <code><a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a></code> как в XHTML. {{gecko_minversion_inline("1.9.2")}}</p>
+<p>В Firefox 3.5 и выше, пространство имён URI для HTML-элементов в HTML документах это <code>null</code>. В более поздних версиях, в соответствии с HTML5, это <code><a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a></code> как в XHTML. {{gecko_minversion_inline("1.9.2")}}</p>
 
 <p>Для узлов любого <a href="/en-US/docs/DOM/Node.nodeType" title="DOM/Node/NodeType/Node.nodeType">nodeType</a> кроме <code>ELEMENT_NODE</code> и <code>ATTRIBUTE_NODE</code> значение <code>namespaceURI</code> всегда <code>null</code>.</p>
 
@@ -37,7 +37,7 @@ original_slug: Web/API/Node/namespaceURI
 
 <p>DOM не обрабатывает или не вынуждает проверять пространство имён как таковое. Приложения выше DOM, делают необходимые проверки. <span id="result_box" lang="ru"><span class="hps">Отметим также,</span> <span class="hps">что</span> <span class="hps">префикс пространства имён</span><span>,</span> <span class="hps">когда</span> <span class="hps">он связан с</span> <span class="hps">конкретным узлом</span><span>,</span> <span class="hps">не может быть изменён</span><span>.</span></span></p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-NodeNSname">DOM Level 2 Core: namespaceURI</a></li>

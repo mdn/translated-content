@@ -12,22 +12,22 @@ translation_of: Web/HTML/Element/picture
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML <code>&lt;picture&gt;</code> 元素</strong>通过包含零或多个 {{HTMLElement("source")}} 元素和一个 {{HTMLElement("img")}} 元素来为不同的显示/设备场景提供图像版本。浏览器会选择最匹配的子 <code>&lt;source&gt;</code> 元素，如果没有匹配的，就选择 <code>&lt;img&gt;</code> 元素的 {{htmlattrxref("src", "img")}} 属性中的URL。然后，所选图像呈现在&lt;img&gt;元素占据的空间中。</span></p>
+<p><span class="seoSummary"><strong>HTML <code>&lt;picture&gt;</code> 元素</strong>通过包含零或多个 {{HTMLElement("source")}} 元素和一个 {{HTMLElement("img")}} 元素来为不同的显示/设备场景提供图像版本。浏览器会选择最匹配的子 <code>&lt;source&gt;</code> 元素，如果没有匹配的，就选择 <code>&lt;img&gt;</code> 元素的 {{htmlattrxref("src", "img")}} 属性中的 URL。然后，所选图像呈现在&lt;img&gt;元素占据的空间中。</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}</div>
 
 <p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span title="">要决定加载哪个URL</span></span>，{{Glossary("user agent")}} 检查每个 <code>&lt;source&gt;</code> 的 {{htmlattrxref("srcset", "source")}}、{{htmlattrxref("media", "source")}} 和 {{htmlattrxref("type", "source")}} 属性<span class="tlid-translation translation" lang="zh-CN"><span title="">，来选择最匹配页面当前布局、显示设备特征等的兼容图像。</span></span></p>
+<p><span class="tlid-translation translation" lang="zh-CN"><span title="">要决定加载哪个 URL</span></span>，{{Glossary("user agent")}} 检查每个 <code>&lt;source&gt;</code> 的 {{htmlattrxref("srcset", "source")}}、{{htmlattrxref("media", "source")}} 和 {{htmlattrxref("type", "source")}} 属性<span class="tlid-translation translation" lang="zh-CN"><span title="">，来选择最匹配页面当前布局、显示设备特征等的兼容图像。</span></span></p>
 
 <p><code>&lt;picture&gt;</code> 的常见使用场景：</p>
 
 <ul>
- <li><span class="tlid-translation translation" lang="zh-CN"><span title="">艺术指导(</span></span>Art direction<span class="tlid-translation translation" lang="zh-CN"><span title="">) —— 针对不同 <code>media</code> 条件裁剪或修改图像</span></span></li>
+ <li><span class="tlid-translation translation" lang="zh-CN"><span title="">艺术指导 (</span></span>Art direction<span class="tlid-translation translation" lang="zh-CN"><span title="">) —— 针对不同 <code>media</code> 条件裁剪或修改图像</span></span></li>
  <li>遇到所有浏览器都不支持的特定格式时，提供不同的图像格式</li>
 </ul>
 
-<p>If providing higher-density versions of an image for high-DPI (Retina) display, use {{htmlattrxref("srcset", "img")}} on the <code>&lt;img&gt;</code> element instead. This lets browsers opt for lower-density versions in data-saving modes, and you don't have to write explicit <code>media</code> conditions.</p>
+<p>如果要为高 DPI (Retina) 显示提供更高像素密度的图像版本，请在 <code>&lt;img&gt;</code> 元素上使用 {{htmlattrxref("srcset", "img")}} 。这使得浏览器可以在节约流量模式下选择低像素密度版本，且不需要您编写明确的 <code>media</code> 条件。</p>
 
 <table class="properties">
  <tbody>
@@ -76,7 +76,7 @@ translation_of: Web/HTML/Element/picture
 
 <h3 id="media_属性"><code>media</code> 属性</h3>
 
-<p><code>media</code> 属性允许你提供一个用于给用户代理作为选择 {{HTMLElement("source")}} 元素的依据的媒体条件(media condition)（类似于媒体查询）。如果这个媒体条件匹配结果为 <code>false</code>，那么这个 {{HTMLElement("source")}} 元素会被跳过。</p>
+<p><code>media</code> 属性允许你提供一个用于给用户代理作为选择 {{HTMLElement("source")}} 元素的依据的媒体条件 (media condition)（类似于媒体查询）。如果这个媒体条件匹配结果为 <code>false</code>，那么这个 {{HTMLElement("source")}} 元素会被跳过。</p>
 
 <pre class="brush: html">&lt;picture&gt;
   &lt;source srcset="mdn-logo-wide.png" media="(min-width: 600px)"&gt;

@@ -11,22 +11,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
 <div>{{JSRef("Global_Objects", "Object")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <strong><code>Object.isExtensible()</code></strong> определяет, является ли объект расширяемым (то есть, можно ли к нему добавлять новые свойства).</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code>Object.isExtensible(<var>obj</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>obj</code></dt>
  <dd>Проверяемый объект.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Объекты являются расширяемыми по умолчанию: к ним можно добавлять новые свойства и (в движках, поддерживающих свойство {{jsxref("Object.proto", "__proto__")}}) их можно изменять. Объект может быть помечен, как не изменяемый с помощью методов {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}} или {{jsxref("Object.freeze()")}}.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 <pre class="brush: js">// Новые объекты являются расширяемыми.
 var empty = {};
 assert(Object.isExtensible(empty) === true);
@@ -44,7 +44,7 @@ var frozen = Object.freeze({});
 assert(Object.isExtensible(frozen) === false);
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 <p>В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет рассматриваться, как простой не расширяемый объект и метод просто вернёт <code>false</code>.</p>
 <pre class="brush: js">&gt; Object.isExtensible(1)
 TypeError: 1 is not an object // код ES5
@@ -53,7 +53,7 @@ TypeError: 1 is not an object // код ES5
 false                         // код ES6
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -74,10 +74,10 @@ false                         // код ES6
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Object.preventExtensions()")}}</li>
  <li>{{jsxref("Object.seal()")}}</li>

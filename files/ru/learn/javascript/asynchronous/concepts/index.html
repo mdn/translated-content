@@ -45,7 +45,7 @@ translation_of: Learn/JavaScript/Asynchronous/Concepts
 
 <p>В нашем <a href="https://github.com/mdn/learning-area/tree/master/javascript/asynchronous/introducing">simple-sync.html</a> примере (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync.html">see it running live</a>), добавим кнопке событие на клик, чтобы при нажатии на неё запускалась трудоёмкая операция (расчёт 10000000 дат, и вывод последней рассчитанной даты на консоль) после чего в DOM добавляется ещё один параграф:</p>
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
+<pre class="brush: js">const btn = document.querySelector('button');
 btn.addEventListener('click', () =&gt; {
   let myDate;
   for(let i = 0; i &lt; 10000000; i++) {
@@ -75,7 +75,7 @@ btn.addEventListener('click', () =&gt; {
  <li>Кнопка "Click me for alert", при нажатии показывает предупреждение.</li>
 </ul>
 
-<pre class="brush: js notranslate">function expensiveOperation() {
+<pre class="brush: js">function expensiveOperation() {
   for(let i = 0; i &lt; 1000000; i++) {
     ctx.fillStyle = 'rgba(0,0,255, 0.2)';
     ctx.beginPath();
@@ -102,24 +102,24 @@ alertBtn.addEventListener('click', () =&gt;
 
 <p>Под <strong>потоком,</strong> обычно, понимают одиночный процесс, который может использовать программа, для выполнения своих нужд. Каждый поток может выполнять только одну в текущий момент времени:</p>
 
-<pre class="notranslate">Task A --&gt; Task B --&gt; Task C</pre>
+<pre>Task A --&gt; Task B --&gt; Task C</pre>
 
 <p>Каждая задача будет выполнена последовательно; только когда текущая задача завершится, следующая сможет начаться.</p>
 
 <p>Как мы говорили выше, большинство компьютеров теперь имеют процессор с несколькими ядрами, т.е. могут выполнять несколько задач одновременно. Языки программирования, поддерживающие многопоточность, могут использовать несколько ядер, чтобы выполнять несколько задач одновременно:</p>
 
-<pre class="notranslate">Thread 1: Task A --&gt; Task B
+<pre>Thread 1: Task A --&gt; Task B
 Thread 2: Task C --&gt; Task D</pre>
 
 <h3 id="JavaScript_однопоточный">JavaScript однопоточный</h3>
 
 <p>JavaScript, традиционно для скриптовых языков, однопоточный. Даже, если есть несколько ядер, вы можете использовать их только для выполнения задач в одном потоке, называемом <strong>основной поток</strong>. Наш пример выше, выполняется следующим образом:</p>
 
-<pre class="notranslate">Main thread: Render circles to canvas --&gt; Display alert()</pre>
+<pre>Main thread: Render circles to canvas --&gt; Display alert()</pre>
 
-<p>В итоге, JavaScript получил несколько инструментов, которые могут помочь в решении подобных проблем. <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> позволяют вам обработать некоторый JavaScript код в отдельном потоке, который называется обработчик, таким образом вы можете запускать отдельные блоки JavaScript кода одновременно. В основном, вы будете использовать воркеры, чтобы запустить ресурсоёмкий процесс, отдельно от основного потока, чтобы не блокировать действия пользователя.</p>
+<p>В итоге, JavaScript получил несколько инструментов, которые могут помочь в решении подобных проблем. <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> позволяют вам обработать некоторый JavaScript-код в отдельном потоке, который называется обработчик, таким образом вы можете запускать отдельные блоки JavaScript-кода одновременно. В основном, вы будете использовать воркеры, чтобы запустить ресурсоёмкий процесс, отдельно от основного потока, чтобы не блокировать действия пользователя.</p>
 
-<pre class="notranslate">  Main thread: Task A --&gt; Task C
+<pre>  Main thread: Task A --&gt; Task C
 Worker thread: Expensive task B</pre>
 
 <p>Помня об этом, выполните наш следующий пример <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-worker.html">simple-sync-worker.html</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-worker.html">посмотреть пример в действии</a>), с открытой консолью. Это переписанный предыдущий пример, который теперь рассчитывает 10 миллионов дат в отдельном потоке обработчика. Теперь, когда вы нажимаете на кнопку, браузер может добавить новый элемент на страницу, до того как все даты будут посчитаны. Самая первая операция больше не блокирует выполнение следующей.</p>
@@ -130,18 +130,18 @@ Worker thread: Expensive task B</pre>
 
 <p>Следующая проблема заключается в том, что даже если код запущенный в воркере ничего не блокирует, он в целом остаётся синхронным. Это проблема появляется, когда какой-то функции требуются результаты выполнения нескольких предыдущих функций. Рассмотрим следующую диаграмму потоков:</p>
 
-<pre class="notranslate">Main thread: Task A --&gt; Task B</pre>
+<pre>Main thread: Task A --&gt; Task B</pre>
 
 <p>В этом примере, предположим Task A делает что-то вроде получения картинки с сервера а Task B затем делает что-нибудь с полученной картинкой, например, применяет к ней фильтр. Если запустить выполняться Task A и тут же попытаться выполнить Task B, то вы получите ошибку, поскольку картинка ещё не будет доступна.</p>
 
-<pre class="notranslate">  Main thread: Task A --&gt; Task B --&gt; |Task D|
+<pre>  Main thread: Task A --&gt; Task B --&gt; |Task D|
 Worker thread: Task C -----------&gt; |      |</pre>
 
 <p>Теперь, давайте предположим, что Task D использует результат выполнения обеих задач Task B и Task C. Если мы уверенны, что оба результата будут доступны одновременно, тогда не возникнет проблем, однако, часто это не так. Если Task D попытаться запустить, когда какого-то нужного ей результата ещё нет, выполнение закончится ошибкой.</p>
 
 <p>Чтобы избежать подобных проблем, браузеры позволяют нам выполнять определённые операции асинхронно. Такие возможности, как <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> позволяют запустить некоторую операцию (например, получение картинки с сервера), и затем подождать пока операция не вернёт результат, перед тем как начать выполнение другой задачи:</p>
 
-<pre class="notranslate">Main thread: Task A                   Task B
+<pre>Main thread: Task A                   Task B
     Promise:      |__async operation__|</pre>
 
 <p>Поскольку операция выполняется где-то отдельно, основной поток не блокируется, при выполнении асинхронных задач.</p>

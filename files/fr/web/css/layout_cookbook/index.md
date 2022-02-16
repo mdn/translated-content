@@ -1,0 +1,33 @@
+---
+title: CSS Layout cookbook
+slug: Web/CSS/Layout_cookbook
+tags:
+  - CSS
+  - Guide
+  - recettes
+translation_of: Web/CSS/Layout_cookbook
+---
+{{CSSRef}}
+
+Le livre de recettes CSS vise à illustrer différents motifs qu'on retrouve fréquemment sur le Web et qu'on pourrait souhaiter implémenter pour son propre site. En plus de fournir du code qui peut servir de point de départ, ces recettes mettent en avant les différents outils et dispositions qui peuvent être utilisées et les choix à effectuer lors du développement.
+
+> **Note :** Si vous débutez en CSS, nous vous conseillons de consulter [notre module sur l'apprentissage de la disposition en CSS](/fr/docs/Apprendre/CSS/CSS_layout). Ce guide vous fournira les informations de base pour comprendre le fonctionnement de chacune de ces recettes.
+
+## Les recettes
+
+| Recette                                                                                                  | Description                                                                                                                                                              | Méthodes de disposition utilisées                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Objets avec média](/fr/docs/Web/CSS/Layout_cookbook/Media_objects)                                      | Une boîte constituée de deux colonnes avec une image d'un côté et un texte descriptif de l'autre (par exemple un tweet ou une publication Facebook intégrée à une page). | [Grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout), {{cssxref("float")}} pour une méthode de recours, dimensionnement avec {{cssxref("fit-content")}} |
+| [Colonnes](/fr/docs/Web/CSS/Layout_cookbook/Disposition_en_colonnes)                                     | Comment choisir entre une disposition multi-colonnes, les boites flexibles (flexbox) ou les grilles CSS pour organiser des colonnes de contenu.                          | [Grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout), [Disposition multi-colonnes](/fr/docs/Web/CSS/CSS_Columns), [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout)     |
+| [Centrer un élément](/fr/docs/Web/CSS/Layout_cookbook/Centrer_un_element)                                | Comment centrer un élément horizontalement et verticalement.                                                                                                             | [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout), [Alignement des boîtes](/fr/docs/Web/CSS/CSS_Box_Alignment)                                                     |
+| [Bas de page adhérant](/fr/docs/Web/CSS/Layout_cookbook/Bas_de_page_adhérant)                            | Créer un pied de page qui se situe en bas du conteneur ou de la zone d'affichage (_viewport_) lorsque le contenu est plus petit que la zone ou le conteneur.             | [Grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout), [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout)                                                                 |
+| [Navigation segmentée](/fr/docs/Web/CSS/Layout_cookbook/Navigation_segmentée)                            | Un motif de navigation où certains liens sont séparés des autres.                                                                                                        | [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout), {{cssxref("margin")}}                                                                                    |
+| [Navigation avec un fil d'Ariane (_breadcrumb_)](/fr/docs/Web/CSS/Layout_cookbook/Navigation_Breadcrumb) | Créer une liste de liens qui permette au visiteur de naviguer selon la hiérarchie des pages.                                                                             | [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout)                                                                                                                  |
+| [Liste de groupes avec indicateurs](/fr/docs/Web/CSS/Layout_cookbook/Liste_groupes_avec_indicateurs)     | Afficher une liste d'éléments avec chacun un indicateur numérique.                                                                                                       | [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout), [Alignement des boîtes](/fr/docs/Web/CSS/CSS_Box_Alignment)                                                     |
+| [Pagination](/fr/docs/Web/CSS/Layout_cookbook/Pagination)                                                | Comment créer des liens pour différentes pages, ordonnées, de contenu (les résultats d'une recherche par exemple).                                                       | [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout), [Alignement des boîtes](/fr/docs/Web/CSS/CSS_Box_Alignment)                                                     |
+| [Carte](/fr/docs/Web/CSS/Layout_cookbook/Carte)                                                          | Un composant sous forme de carte. L'assemblage de tels composants formera une grille de cartes.                                                                          | [Grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout)                                                                                                                      |
+| [Envelopper une grille (_grid wrapper_)](/fr/docs/Web/CSS/Layout_cookbook/Grid_wrapper)                  | Comment aligner certains éléments au centre d'une grille et permettre à d'autres d'être alignés sur les bords.                                                           | [Grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout)                                                                                                                      |
+
+## Contribuer en créant une recette
+
+MDN est un wiki auquel vous pouvez contribuer, y compris en ajoutant une recette à celles-ci ! [Voir cette page](/fr/docs/Web/CSS/Layout_cookbook/Contribuer_à_une_recette) pour un modèle ainsi que les règles à suivre pour créer votre propre exemple.

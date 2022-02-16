@@ -9,11 +9,9 @@ translation_of: Web/JavaScript/Reference/Operators/Logical_NOT
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-logical-not.html", "shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">!<var>expr</var>
+<pre class="syntaxbox">!<var>expr</var>
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -40,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Operators/Logical_NOT
 
 <p>The following code shows examples of the <code>!</code> (logical NOT) operator.</p>
 
-<pre class="brush: js notranslate">n1 = !true               // !t returns false
+<pre class="brush: js">n1 = !true               // !t returns false
 n2 = !false              // !f returns true
 n3 = !''                 // !f returns true
 n4 = !'Cat'              // !t returns false</pre>
@@ -51,7 +49,7 @@ n4 = !'Cat'              // !t returns false</pre>
 
 <p>The same conversion can be done through the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} function.</p>
 
-<pre class="brush: js notranslate">n1 = !!true                   // !!truthy returns true
+<pre class="brush: js">n1 = !!true                   // !!truthy returns true
 n2 = !!{}                     // !!truthy returns true: <strong>any</strong> object is truthy...
 n3 = !!(new Boolean(false))   // ...even Boolean objects with a false <em>.valueOf()</em>!
 n4 = !!false                  // !!falsy returns false
@@ -62,11 +60,11 @@ n6 = !!Boolean(false)         // !!falsy returns false</pre>
 
 <p>The following operation involving <strong>booleans</strong>:</p>
 
-<pre class="brush: js notranslate">!!bCondition</pre>
+<pre class="brush: js">!!bCondition</pre>
 
 <p>is always equal to:</p>
 
-<pre class="brush: js notranslate">bCondition</pre>
+<pre class="brush: js">bCondition</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -98,7 +96,3 @@ n6 = !!Boolean(false)         // !!falsy returns false</pre>
  <li>{{Glossary("Truthy")}}</li>
  <li>{{Glossary("Falsy")}}</li>
 </ul>
-
-<p>
- <audio class="hidden"></audio>
-</p>

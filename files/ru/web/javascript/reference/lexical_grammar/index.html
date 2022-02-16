@@ -111,7 +111,7 @@ ECMAScript также определяет ключевые слова и лит
 
 <h2 id="Окончание_строк">Окончание строк</h2>
 
-<p>В дополнение к пробельным символам, символы окончания строк тоже используются для читабельности исходного кода. Однако, в некоторых случаях, символы окончания строк могут влиять на выполнение JavaScript кода, т.к. есть некоторые места, где они запрещены.</p>
+<p>В дополнение к пробельным символам, символы окончания строк тоже используются для читабельности исходного кода. Однако, в некоторых случаях, символы окончания строк могут влиять на выполнение JavaScript-кода, т.к. есть некоторые места, где они запрещены.</p>
 
 <p>Окончания строк также затрагивают процесс <a href="#Automatic_semicolon_insertion">автоматического проставления точки с запятой</a>. Также окончания строк попадают под условия <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">регулярных выражений</a> при поиске <strong>\s</strong> класса.</p>
 
@@ -166,7 +166,7 @@ ECMAScript также определяет ключевые слова и лит
 
 <p>Первый способ <code>//</code> комментарий; в этом случае весь текст в строке после двойного слеша будет комментарием, например:</p>
 
-<pre class="brush: js notranslate">function comment() {
+<pre class="brush: js">function comment() {
   // Это комментарий в строке
   console.log("Hello world!");
 }
@@ -177,7 +177,7 @@ comment();
 
 <p>Например, вы можете использовать его в одной строке:</p>
 
-<pre class="brush: js notranslate">function comment() {
+<pre class="brush: js">function comment() {
   /* Это однострочный комментарий */
   console.log("Hello world!");
 }
@@ -185,7 +185,7 @@ comment();</pre>
 
 <p>Либо вы можете сделать многострочный комментарий, как показано здесь:</p>
 
-<pre class="brush: js notranslate">function comment() {
+<pre class="brush: js">function comment() {
   /* Этот комментарий располагается на нескольких линиях.
      Обратите внимание, что вам не нужно обрывать комментарий, пока вы его не закончите*/
   console.log("Hello world!");
@@ -194,14 +194,14 @@ comment(); </pre>
 
 <p>Также, если пожелаете, то вы можете использовать такое комментирование посреди строки кода. Хотя это может ухудшить читабельность кода:</p>
 
-<pre class="brush: js notranslate">function comment(x) {
+<pre class="brush: js">function comment(x) {
   console.log("Hello " + x /* вставьте значение x */ + " !");
 }
 comment("world");</pre>
 
 <p>Чтобы отключить выполнение кода, просто оберните код в комментарий, как здесь:</p>
 
-<pre class="brush: js notranslate">function comment() {
+<pre class="brush: js">function comment() {
   /* console.log("Hello world!"); */
 }
 comment();</pre>
@@ -216,7 +216,7 @@ comment();</pre>
 
 <p>Шебанг комментарий определяет путь к  JavaScript интерпретатору, скрипт которого вы хотите выполнить. Пример, как это работает:</p>
 
-<pre class="brush: js notranslate">#!/usr/bin/env node
+<pre class="brush: js">#!/usr/bin/env node
 
 console.log("Hello world");
 </pre>
@@ -231,7 +231,7 @@ console.log("Hello world");
 
 <p>Для определения JavaScript интерпретатора используйте только <code>#!</code> . В любых других случаях используйте <code>//</code> (или многострочный комментарий).</p>
 
-<h2 id="Ключевые_слова"><a id="Keywords" name="Keywords"></a>Ключевые слова</h2>
+<h2 id="Ключевые_слова"><a id="Keywords"></a>Ключевые слова</h2>
 
 <h3 id="Зарезервированные_ключевые_слова_в_ECMAScript_2015">Зарезервированные ключевые слова в ECMAScript 2015</h3>
 
@@ -323,20 +323,20 @@ console.log("Hello world");
 
 <p>К тому же, литералы <code>null</code>, <code>true</code>, и <code>false</code> зарезервированы в ECMAScript для их обычной функциональности.</p>
 
-<h3 id="Reserved_word_usage" name="Reserved_word_usage"></h3>
+<h3 id="Reserved_word_usage"></h3>
 
-<h3 id="Reserved_word_usage" name="Reserved_word_usage">Использование зарезервированных слов</h3>
+<h3 id="Reserved_word_usage">Использование зарезервированных слов</h3>
 
 <p>Зарезервированные слова действительно применяются только к идентификаторам<strong> (vs. IdentifierNames)</strong>. Как описано в <a href="http://es5.github.com/#A.1">es5.github.com/#A.1</a>, это все имена IdentifierNames, которые не исключают зарезервированных слов.</p>
 
-<pre class="brush: js notranslate">a.import
+<pre class="brush: js">a.import
 a["import"]
 a = { import: "test" }.
 </pre>
 
 <p>С другой стороны, следующее выражение неправильно, т.к. Идентификатор <code>IdentifierName</code> не содержит зарезервированных слов. Идентификаторы используются для <code>FunctionDeclaration, FunctionExpression, VariableDeclaration</code> и т.п., в то время, как <code>IdentifierNames</code> используются для <code> MemberExpression, CallExpression</code> и т.п.</p>
 
-<pre class="brush: js notranslate">function import() {} // неправильно.</pre>
+<pre class="brush: js">function import() {} // неправильно.</pre>
 
 <h2 id="Литералы">Литералы</h2>
 
@@ -344,20 +344,20 @@ a = { import: "test" }.
 
 <p>Подробнее о <code>{{jsxref('Global_Objects/null','null')}}null</code>.</p>
 
-<pre class="brush: js notranslate">null</pre>
+<pre class="brush: js">null</pre>
 
 <h3 id="Литерал_Boolean">Литерал Boolean</h3>
 
 <p>Подробнее о <code>{{jsxref('Global_Objects/Boolean','Boolean')}}</code>.</p>
 
-<pre class="brush: js notranslate">true
+<pre class="brush: js">true
 false</pre>
 
 <h3 id="Литералы_чисел">Литералы чисел</h3>
 
 <h4 id="Decimal_десятичные_числа">Decimal (десятичные числа)</h4>
 
-<pre class="brush: js notranslate">1234567890
+<pre class="brush: js">1234567890
 42
 
 // Будьте осторожны с использованием нуля вначале числа:
@@ -372,7 +372,7 @@ false</pre>
 
 <p>Синтаксис двоичных чисел состоит из цифры ноль, за которой следует маленькая или большая латинская буква "B" (0b или 0B). Этот синтаксис новый и появился только в ECMAScript 2015, пожалуйста посмотрите таблицу совместимости с браузерами. Это может производить ошибку <code>{{jsxref('Global_Objects/SyntaxError','SyntaxError')}}</code>: "Missing binary digits after 0b", Если цифры не 0 или 1.</p>
 
-<pre class="brush: js notranslate">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+<pre class="brush: js">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
 var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
@@ -380,7 +380,7 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
 <p>Восьмеричный числовой синтаксис, который использует 0 с последующей, в нижнем или верхнем регистре, латинскую букву "О" (<code>0o</code> или <code>0O)</code>. Этот синтаксис появился в ECMAScript 2015, пожалуйста, посмотрите таблицу совместимости с браузерами. Это может производить ошибку <code>SyntaxError</code>: "Missing octal digits after 0o", если цифры не между 0 и 7.</p>
 
-<pre class="brush: js notranslate">var n = 0O755; // 493
+<pre class="brush: js">var n = 0O755; // 493
 var m = 0o644; // 420
 
 // Так же возможно с лидирующими нулями (см. заметку о десятичных дробях выше)
@@ -392,7 +392,7 @@ var m = 0o644; // 420
 
 <p>Шестнадцатеричный числовой синтаксис, который использует 0 с последующей, в нижнем или верхнем регистре, латинскую букву "X" (<code>0x</code> или <code>0X)</code>. Если числа после 0x вне диапазона (0123456789ABCDEF), то может последовать за этим {{jsxref("SyntaxError")}}: "Identifier starts immediately after numeric literal".</p>
 
-<pre class="brush: js notranslate">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+<pre class="brush: js">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
 0XA                 // 10
 </pre>
@@ -401,7 +401,7 @@ var m = 0o644; // 420
 
 <p>Смотрите также {{jsxref("Object")}} и {{jsxref('Operators/Object_initializer','Object initializer')}} для получения более подробной информации.</p>
 
-<pre class="brush: js notranslate">var o = { a: "foo", b: "bar", c: 42 };
+<pre class="brush: js">var o = { a: "foo", b: "bar", c: 42 };
 
 // сокращённая нотация. Появилась в ES2015
 var a = "foo", b = "bar", c = 42;
@@ -414,23 +414,23 @@ var o = { a: a, b: b, c: c };
 
 <p>Смотрите также {{jsxref("Array")}} для получения более подробной информации.</p>
 
-<pre class="brush: js notranslate">[1954, 1974, 1990, 2014]</pre>
+<pre class="brush: js">[1954, 1974, 1990, 2014]</pre>
 
 <h3 id="Литерал_String_Строка">Литерал String (Строка)</h3>
 
-<pre class="brush: js notranslate">'foo'
+<pre class="brush: js">'foo'
 "bar"</pre>
 
 <h4 id="Экранирование_шестнадцатеричной_последовательности">Экранирование шестнадцатеричной последовательности</h4>
 
-<pre class="brush: js notranslate">'\xA9' // "©"
+<pre class="brush: js">'\xA9' // "©"
 </pre>
 
 <h4 id="Экранирование_Юникод_символов">Экранирование Юникод символов</h4>
 
 <p>Для экранирования Юникод символов обязательно нужно указать по крайней мере 4 символа после \u.</p>
 
-<pre class="brush: js notranslate">'\u00A9' // "©"</pre>
+<pre class="brush: js">'\u00A9' // "©"</pre>
 
 <h4 id="Unicode_code_point_escapes">Unicode code point escapes</h4>
 
@@ -438,7 +438,7 @@ var o = { a: a, b: b, c: c };
 
 <p>See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.</p>
 
-<pre class="brush: js notranslate">'\u{2F804}'
+<pre class="brush: js">'\u{2F804}'
 
 // the same with simple Unicode escapes
 '\uD87E\uDC04'</pre>
@@ -447,7 +447,7 @@ var o = { a: a, b: b, c: c };
 
 <p>Смотрите также <code>{{jsxref('Global_Objects/RegExp','RegExp')}}</code> для получения более подробной информации.</p>
 
-<pre class="brush: js notranslate">/ab+c/g
+<pre class="brush: js">/ab+c/g
 
 // An "empty" regular expression literal
 // The empty non-capturing group is necessary
@@ -458,7 +458,7 @@ var o = { a: a, b: b, c: c };
 
 <p>Смотрите также {{jsxref('template_strings','template strings')}} для получения более подробной информации.</p>
 
-<pre class="brush: js notranslate">`string text`
+<pre class="brush: js">`string text`
 
 `string text line 1
  string text line 2`
@@ -485,7 +485,7 @@ tag `string text ${expression} string text`</pre>
 
 <p>1. Точка с запятой ставится до, когда ограничитель строки или "}" is encountered that is not allowed by the grammar.</p>
 
-<pre class="brush: js notranslate">{ 1 2 } 3
+<pre class="brush: js">{ 1 2 } 3
 
 // согласно ASI, будет преобразовано в
 
@@ -495,7 +495,7 @@ tag `string text ${expression} string text`</pre>
 
 <p>Here <code>++</code> is not treated as a {{jsxref('Operators/Arithmetic_Operators','postfix operator','Increment')}} applying to variable <code>b</code>, because a line terminator occurs between <code>b</code> and <code>++</code>.</p>
 
-<pre class="brush: js notranslate">a = b
+<pre class="brush: js">a = b
 ++c
 
 // согласно ASI, будет преобразовано в
@@ -515,7 +515,7 @@ a = b;
  <li><code>module</code></li>
 </ul>
 
-<pre class="brush: js notranslate">return
+<pre class="brush: js">return
 a + b
 
 // согласно ASI, будет преобразовано в
@@ -526,30 +526,7 @@ a + b;
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Первичное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-7', 'Lexical Conventions')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Добавлено: Двоичные и восьмеричные числовые литералы, Unicode code point escapes, Шаблоны</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 

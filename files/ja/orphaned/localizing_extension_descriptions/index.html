@@ -9,7 +9,7 @@ tags:
 original_slug: Localizing_extension_descriptions
 ---
 <h3 id="Gecko_1.9_.E3.81.AB.E3.81.8A.E3.81.91.E3.82.8B.E3.83.AD.E3.83.BC.E3.82.AB.E3.83.A9.E3.82.A4.E3.82.BA" name="Gecko_1.9_.E3.81.AB.E3.81.8A.E3.81.91.E3.82.8B.E3.83.AD.E3.83.BC.E3.82.AB.E3.83.A9.E3.82.A4.E3.82.BA">Gecko 1.9 におけるローカライズ</h3>
-<p>Gecko 1.9 には、アドオンの説明や他のメタデータのローカライズに関して、新しく、より強力な方法が盛り込まれています。各言語の説明はすべて、<code>em:localized</code> プロパティを使って <a href="/ja/Install_Manifests" title="ja/Install_Manifests">install.rdf</a> ファイルに書かれます。<code>em:localized</code> それぞれが、情報が使われるべきロケールを示す <code>em:locale</code> プロパティを少なくとも 1 つと、そのロケールの様々な文字列を持ちます。以下の例はこのデモです (ほとんどの一般的なマニフェストプロパティは簡潔にするため削除してあります)。</p>
+<p>Gecko 1.9 には、アドオンの説明や他のメタデータのローカライズに関して、新しく、より強力な方法が盛り込まれています。各言語の説明はすべて、<code>em:localized</code> プロパティを使って <a href="/ja/Install_Manifests">install.rdf</a> ファイルに書かれます。<code>em:localized</code> それぞれが、情報が使われるべきロケールを示す <code>em:locale</code> プロパティを少なくとも 1 つと、そのロケールの様々な文字列を持ちます。以下の例はこのデモです (ほとんどの一般的なマニフェストプロパティは簡潔にするため削除してあります)。</p>
 <pre>&lt;?xml version="1.0"?&gt;
 
 &lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -54,14 +54,14 @@ original_slug: Localizing_extension_descriptions
 <h3 id="Gecko_1.9_.E4.BB.A5.E5.89.8D.E3.81.AE.E3.83.AD.E3.83.BC.E3.82.AB.E3.83.A9.E3.82.A4.E3.82.BA" name="Gecko_1.9_.E4.BB.A5.E5.89.8D.E3.81.AE.E3.83.AD.E3.83.BC.E3.82.AB.E3.83.A9.E3.82.A4.E3.82.BA">Gecko 1.9 以前のローカライズ</h3>
 <p>Gecko 1.9 以前では、アドオン開発者は、Firefox や Thunderbird のようなツールキットベースのアプリケーションを対象とする拡張機能にローカライズされた説明を定義するためには以下のような特別な手順が必要でした。</p>
 <ul>
- <li>もしあなたが <a href="/ja/Localizing_an_extension#Localizing_strings_in_JavaScript_code" title="ja/Localizing_an_extension#Localizing_strings_in_JavaScript_code">ローカライズしたプロパティファイル</a> を作っていないのであれば、それを作ってください。他言語が正しく表示されるように、(BOM なしの)UTF-8 エンコードを使うことを忘れないでください。</li>
- <li>次の 1 行を、各言語のローカライズしたプロパティファイルに加えてください (EXTENSION_ID はあなたの拡張機能の ID (<a href="/ja/Install_Manifests" title="ja/Install_Manifests">install.rdf</a> の <code>&lt;em:id&gt;</code> にあります) に合わせてください。また、<var>LOCALIZED_DESCRIPTION</var> にはその言語での拡張機能の説明を入れてください)。
+ <li>もしあなたが <a href="/ja/Localizing_an_extension#Localizing_strings_in_JavaScript_code">ローカライズしたプロパティファイル</a> を作っていないのであれば、それを作ってください。他言語が正しく表示されるように、(BOM なしの)UTF-8 エンコードを使うことを忘れないでください。</li>
+ <li>次の 1 行を、各言語のローカライズしたプロパティファイルに加えてください (EXTENSION_ID はあなたの拡張機能の ID (<a href="/ja/Install_Manifests">install.rdf</a> の <code>&lt;em:id&gt;</code> にあります) に合わせてください。また、<var>LOCALIZED_DESCRIPTION</var> にはその言語での拡張機能の説明を入れてください)。
   <pre>extensions.EXTENSION_ID.description=LOCALIZED_DESCRIPTION</pre>
  </li>
 </ul>
 <ul>
- <li>もしあなたが <a href="/ja/Building_an_Extension#Defaults_Files" title="ja/Building_an_Extension#Defaults_Files">デフォルト設定ファイル</a> を作っていないのであれば、それを作ってください。</li>
- <li>次の 1 行を、デフォルト設定ファイルに加えてください (<var>EXTENSION_ID</var> は拡張機能の ID (<a href="/ja/Install_Manifests" title="ja/Install_Manifests">install.rdf</a> から)、<var>PATH_TO_LOCALIZATION_FILE</var> は上であなたが加えた、ローカライズしたプロパティファイルへの chrome パスです)。
+ <li>もしあなたが <a href="/ja/Building_an_Extension#Defaults_Files">デフォルト設定ファイル</a> を作っていないのであれば、それを作ってください。</li>
+ <li>次の 1 行を、デフォルト設定ファイルに加えてください (<var>EXTENSION_ID</var> は拡張機能の ID (<a href="/ja/Install_Manifests">install.rdf</a> から)、<var>PATH_TO_LOCALIZATION_FILE</var> は上であなたが加えた、ローカライズしたプロパティファイルへの chrome パスです)。
   <pre>pref("extensions.EXTENSION_ID.description", "PATH_TO_LOCALIZATION_FILE");</pre>
  </li>
 </ul>

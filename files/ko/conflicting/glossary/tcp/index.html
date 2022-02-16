@@ -1,0 +1,22 @@
+---
+title: 전송 제어 프로토콜
+slug: conflicting/Glossary/TCP
+tags:
+  - 전송 제어 프로토콜
+translation_of: Glossary/Transmission_Control_Protocol_(TCP)
+original_slug: Glossary/Transmission_Control_Protocol_(TCP)
+---
+<p>TCP (Transmission Control Protocol)는 IP 네트워크의 두 컴퓨터 간의 연결 지향 통신을 위한 전송 계층 호스트 간 프로토콜입니다. TCP는 가상 포트를 사용하여 두 컴퓨터 간의 물리적 연결을 재사용 할 수 있는 가상 종단 간 연결을 만듭니다. TCP는 {{glossary ( 'HTTP')}} 및 {{glossary ( 'SMTP')}} (email)과 같은 상위 레벨 프로토콜 데이터를 캡슐화합니다.</p>
+
+<h2 id="TCP_핸드_셰이크"><strong>TCP 핸드 셰이크</strong></h2>
+
+<p><strong>TCP 3 방향 핸드 셰이크</strong>는 TCP-핸드셰이크라고 불립니다, 3개의 메시지 핸드 셰이크 및 / 또는 SYN-SYN-ACK라고도 하는 TCP 3 방향 핸드 셰이크는 TCP가 IP 기반 네트워크를 통해 TCP / IP 연결을 설정하는 데 사용하는 방법입니다. TCP 세션을 신뢰하기 위해 TCP에 의해 전송된 세 가지 메시지는 SYN, SYN-ACK,  <strong>SYN</strong>chronize를 위한 ACK는 <strong>SYN</strong>chronize-<strong>ACK</strong>nowledgement 와 ACKnowledge의 별칭입니다. 세 가지 메시지 메커니즘은 정보를 앞뒤로 전달하려는 두 컴퓨터 용으로 설계되었으며 HTTP 브라우저 요청과 같은 데이터를 전송하기 전에 연결 매개 변수를 신뢰할 수 있습니다.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/Security/Transport_Layer_Security">Transport Layer Security (TLS) protocol</a></li>
+ <li>{{Glossary("HTTPS")}}</li>
+ <li><a href="/en-US/docs/Web/Performance/Populating_the_page:_how_browsers_work">How browsers work</a></li>
+ <li>{{Interwiki("wikipedia", "Transport Layer Security")}} on Wikipedia</li>
+</ul>

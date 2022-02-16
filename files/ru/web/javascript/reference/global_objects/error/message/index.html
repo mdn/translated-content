@@ -10,22 +10,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error/message
 ---
 <div>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Свойство <code><strong>message</strong></code> представляет человеко-читаемое описание ошибки.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Это свойство содержит краткое описание ошибки, если оно доступно или было установлено. <a href="/ru/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> широко использует свойство <code>message</code> для исключений. Свойство <code>message</code> в сочетании со свойством {{jsxref("Error.prototype.name", "name")}} используется методом {{jsxref("Error.prototype.toString()")}} для создания строкового представления ошибки.</p>
 <p>По умолчанию, свойство <code>message</code> является пустой строкой, но это поведение может быть переопределено для экземпляра путём указания сообщения первым аргументом в конструкторе объекта {{jsxref("Global_Objects/Error", "Error")}}.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Throwing_a_custom_error" name="Example:_Throwing_a_custom_error">Пример: выбрасывание собственной ошибки</h3>
+<h3 id="Example:_Throwing_a_custom_error">Пример: выбрасывание собственной ошибки</h3>
 <pre class="brush: js">var e = new Error('Невозможно разобрать входные данные');
 // e.message равно 'Невозможно разобрать входные данные'
 throw e;
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -51,10 +51,10 @@ throw e;
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Error.prototype.name")}}</li>
  <li>{{jsxref("Error.prototype.toString()")}}</li>

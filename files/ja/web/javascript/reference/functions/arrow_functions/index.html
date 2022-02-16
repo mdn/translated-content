@@ -217,7 +217,7 @@ console.log(result) // result 106
 var result = add.bind(obj) // "obj" としてスコープを確立
 console.log(result(1, 2, 3)) // result 106</pre>
 
-<p>アロー関数では、 <code>add</code> 関数は基本的に <code>window</code> (グローバル) スコープで作成されているので、 <code>this</code> は windows だと仮定されます。</p>
+<p>アロー関数では、 <code>add</code> 関数は基本的に <code>window</code> (グローバル) スコープで作成されているので、 <code>this</code> は window だと仮定されます。</p>
 
 <pre class="brush: js">// ----------------------
 // アロー関数の例

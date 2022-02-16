@@ -58,7 +58,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 250px;"&gt;
 &lt;/div&gt;
@@ -74,7 +74,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -94,7 +94,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -181,7 +181,7 @@ textarea.onkeyup = function(){
 
 <p>Есть несколько серьёзных {{anch("Проблемы безопасности", "Проблем безопасности")}} при использовании &lt;iframe&gt;, которые мы обсудим ниже, но это не значит, что вы не должны использовать их на своих сайтах - они просто требуют некоторых знаний и тщательного обдумывания. Давайте рассмотрим код немного подробнее. Скажем, вы хотите добавить глоссарий MDN на одну из своих веб-страниц. Вы можете попробовать что-то вроде этого:</p>
 
-<pre class="notranslate">&lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
+<pre>&lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
         width="100%" height="500" frameborder="0"
         allowfullscreen sandbox&gt;
   &lt;p&gt; &lt;a href="https://developer.mozilla.org/en-US/docs/Glossary"&gt;
@@ -324,7 +324,7 @@ textarea.onkeyup = function(){
 
 <p>Ниже представлен пример использования элемента {{htmlelement("embed")}} для вставки Flash-фильма (загляните на <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">live on Github</a>, а также на <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">check the source code</a>):</p>
 
-<pre class="brush: html notranslate">&lt;embed src="whoosh.swf" quality="medium"
+<pre class="brush: html">&lt;embed src="whoosh.swf" quality="medium"
        bgcolor="#ffffff" width="550" height="400"
        name="whoosh" align="middle" allowScriptAccess="sameDomain"
        allowFullScreen="false" type="application/x-shockwave-flash"
@@ -334,7 +334,7 @@ textarea.onkeyup = function(){
 
 <p>Давайте взглянем на пример <code>&lt;object&gt;</code> , встраивающего PDF в страницу (взгляните <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">live example</a> и <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">source code</a>):</p>
 
-<pre class="brush: html notranslate">&lt;object data="mypdf.pdf" type="application/pdf"
+<pre class="brush: html">&lt;object data="mypdf.pdf" type="application/pdf"
         width="800" height="1200" typemustmatch&gt;
   &lt;p&gt;You don't have a PDF plugin, but you can &lt;a href="mypdf.pdf"&gt;download the PDF file.&lt;/a&gt;&lt;/p&gt;
 &lt;/object&gt;</pre>

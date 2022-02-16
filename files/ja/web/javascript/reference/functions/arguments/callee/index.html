@@ -47,7 +47,7 @@ translation_of: Web/JavaScript/Reference/Functions/arguments/callee
     return !(n &gt; 1) ? 1 : arguments.callee(n - 1) * n;
 });</pre>
 
-<p>しかし、これは実際には本当に悪い解決法でした。これは (他の <code>arguments</code>、<code>callee</code>、<code>caller</code> の問題と組み合わさって)、一般的ば場合に、インライン化と末尾再帰が不可能になるからです (特定のケースではトレースなどを通じて実現できますが、最高のコードでも、不要な検査が入るために最適ではありません)。他の大きな問題として、再帰呼び出しにおいては <code>this</code> の値が別のものになるというものがあります。例を示します。</p>
+<p>しかし、これは実際には本当に悪い解決法でした。これは (他の <code>arguments</code>、<code>callee</code>、<code>caller</code> の問題と組み合わさって)、一般的な場合に、インライン化と末尾再帰が不可能になるからです (特定のケースではトレースなどを通じて実現できますが、最高のコードでも、不要な検査が入るために最適ではありません)。他の大きな問題として、再帰呼び出しにおいては <code>this</code> の値が別のものになるというものがあります。例を示します。</p>
 
 <pre class="brush: js">var global = this;
 

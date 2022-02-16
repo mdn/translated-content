@@ -14,15 +14,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 ---
 <div>{{JSRef("Global_Objects", "Array")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>copyWithin()</strong></code> копирует последовательность элементов массива внутри него в позицию, начинающуюся по индексу <code>target</code>. Копия берётся по индексам, задаваемым вторым и третьим аргументами <code>start</code> и <code>end</code>. Аргумент <code>end</code> является необязательным и по умолчанию равен длине массива.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>arr</var>.copyWithin(<var>target</var>, <var>start</var>[, <var>end</var> = this.length])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>target</code></dt>
@@ -30,10 +30,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
  <dt><code>start</code></dt>
  <dd>Начальный индекс позиции источника, откуда начинать копировать элементы.</dd>
  <dt><code>end</code></dt>
- <dd>Необязательный параметр. Конечный индекс позиции источника, где заканчивать копировать элементы.</dd>
+  <dd>Необязательный параметр. Конечный индекс позиции источника, где заканчивать копировать элементы, не включая элемент на позиции <code>end</code>.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Аргументы <code>target</code>, <code>start</code> и <code>end</code> приводятся к {{jsxref("Global_Objects/Number", "Number")}} и обрезаются до целых значений.</p>
 
@@ -41,7 +41,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 
 <p>Функция <code>copyWithin</code> намеренно является <em>обобщённой</em>, она не требует, чтобы значение <code>this</code> внутри неё было объектом {{jsxref("Global_Objects/Array", "Array")}}, и кроме того, функция <code>copyWithin</code> является <em>изменяющим методом</em>, она изменит объект <code>this</code> и вернёт его, а не просто вернёт копию.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre class="brush: js">[1, 2, 3, 4, 5].copyWithin(0, 3);
 // [4, 5, 3, 4, 5]
@@ -66,7 +66,7 @@ i32a.copyWithin(0, 2);
 // Int32Array [4, 2, 3, 4, 5]
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <pre class="brush: js">if (!Array.prototype.copyWithin) {
   Array.prototype.copyWithin = function(target, start/*, end*/) {
@@ -133,33 +133,15 @@ i32a.copyWithin(0, 2);
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.copyWithin', 'Array.prototype.copyWithin')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.copyWithin', 'Array.prototype.copyWithin')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/Array", "Array")}}</li>

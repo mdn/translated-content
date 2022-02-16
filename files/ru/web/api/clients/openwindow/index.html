@@ -22,7 +22,7 @@ translation_of: Web/API/Clients/openWindow
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">self.clients.openWindow(<em>url</em>).then(function(<em>windowClient</em>) {
+<pre class="syntaxbox">self.clients.openWindow(<em>url</em>).then(function(<em>windowClient</em>) {
   // Do something with your WindowClient
 });</pre>
 
@@ -41,7 +41,7 @@ translation_of: Web/API/Clients/openWindow
 
 <h2 id="Примеры">Примеры</h2>
 
-<pre class="brush: js notranslate">// Отправить уведомление в OS, если возможно
+<pre class="brush: js">// Отправить уведомление в OS, если возможно
 if (self.Notification.permission === 'granted') {
   const notificationObject = {
     body: 'Click here to view your messages.',
@@ -51,7 +51,7 @@ if (self.Notification.permission === 'granted') {
   self.registration.showNotification('You\'ve got messages!', notificationObject);
 }
 
-// Слушатель события клика по уведомлению
+// Обработчик события клика по уведомлению
 self.addEventListener('notificationclick', e =&gt; {
   // Закрываем всплывающее окно с уведомлением
   e.notification.close();
@@ -67,25 +67,12 @@ self.addEventListener('notificationclick', e =&gt; {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#clients-openwindow', 'Clients: openWindow')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузером">Совместимость с браузером</h2>
 
 <div>
 
 
-<p>{{Compat("api.Clients.openWindow")}}</p>
+<p>{{Compat}}</p>
 </div>

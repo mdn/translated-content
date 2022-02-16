@@ -5,13 +5,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Number.MAX_SAFE_INTEGER</code></strong> 常量表示在 JavaScript 中最大的安全整数（maxinum safe integer)（<code>2<sup>53</sup> - 1）。</code></p>
+<p><strong><code>Number.MAX_SAFE_INTEGER</code></strong> 常量表示在 JavaScript 中最大的安全整数（maxinum safe integer)（<code>2^53 - 1）。</code></p>
 
 <div>{{js_property_attributes(0, 0, 0)}}</div>
 
 <h2 id="描述">描述</h2>
 
-<p><code>MAX_SAFE_INTEGER 是一个值为 9007199254740991的常量。因为Javascript的数字存储使用了</code><a href="http://en.wikipedia.org/wiki/IEEE_floating_point">IEEE 754</a>中规定的<a href="https://zh.wikipedia.org/zh-cn/%E9%9B%99%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8">双精度浮点数</a>数据类型，而这一数据类型能够安全存储 <code>-(2<sup>53</sup> - 1)</code> 到 <code>2<sup>53</sup> - 1 之间的数值（包含边界值）。</code></p>
+<p><code>MAX_SAFE_INTEGER 是一个值为 9007199254740991的常量。因为Javascript的数字存储使用了</code><a href="http://en.wikipedia.org/wiki/IEEE_floating_point">IEEE 754</a>中规定的<a href="https://zh.wikipedia.org/zh-cn/%E9%9B%99%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8">双精度浮点数</a>数据类型，而这一数据类型能够安全存储 <code>-(2^53 - 1)</code> 到 <code>2^53 - 1 之间的数值（包含边界值）。</code></p>
 
 <p>这里安全存储的意思是指能够准确区分两个不相同的值，例如 <code>Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2 将得到 true的结果，而这在数学上是错误的，参考</code>{{jsxref("Number.isSafeInteger()")}}获取更多信息.</p>
 
@@ -47,55 +47,7 @@ Math.pow(2, 53) - 1     // 9007199254740991
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("34")}}</td>
-   <td>{{CompatGeckoDesktop("31")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>9.0.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("32")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

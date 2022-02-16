@@ -14,7 +14,7 @@ translation_of: Web/CSS/background-image
 
 <p>Свойство <a href="/ru/docs/CSS" title="/ru/docs/CSS">CSS</a>  <strong><code>background-image</code></strong> устанавливает одно или несколько фоновых изображений для элемента. Изображения рисуются в слоях контекстов наложения одно поверх другого. Первый слой выводится так, чтобы он был ближе всего к пользователю.</p>
 
-<p><a href="/ru/CSS/border" title="border">Границы</a> {{cssxref("border")}} элемента затем рисуются поверх них, и {{cssxref("background-color")}} рисуется под ними. То, как изображения отрисовываются относительно рамки и её границ, определяется CSS свойствами {{cssxref("background-clip")}} и {{cssxref("background-origin")}}.</p>
+<p><a href="/ru/CSS/border" title="border">Границы</a> {{cssxref("border")}} элемента затем рисуются поверх них, и {{cssxref("background-color")}} рисуется под ними. То, как изображения отрисовываются относительно рамки и её границ, определяется CSS-свойствами {{cssxref("background-clip")}} и {{cssxref("background-origin")}}.</p>
 
 <p>Если указанное изображение не может быть нарисовано (например, когда файл, определённый указанным URI, не может быть загружен), браузеры обрабатывают его так, как если бы оно было значением <code>none</code>.</p>
 
@@ -24,7 +24,7 @@ translation_of: Web/CSS/background-image
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="brush: css notranslate">background-image: none;
+<pre class="brush: css">background-image: none;
 background-image: url(http://www.example.com/bck.png);
 
 background-image: inherit;
@@ -45,13 +45,13 @@ background-image: inherit;
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Multiple_backgrounds_and_transparency" name="Multiple_backgrounds_and_transparency">Несколько фонов и прозрачность</h3>
+<h3 id="Multiple_backgrounds_and_transparency">Несколько фонов и прозрачность</h3>
 
 <p>Обратите внимание, что изображение звезды частично прозрачно и наложено на изображение кошки.</p>
 
 <h4 id="HTML_содержимое">HTML содержимое</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
     &lt;p class="catsandstars"&gt;
         This paragraph is full of cats&lt;br /&gt;and stars.
     &lt;/p&gt;
@@ -64,7 +64,7 @@ background-image: inherit;
 
 <h4 id="CSS_содержимое">CSS содержимое</h4>
 
-<pre class="brush: css notranslate">pre, p {
+<pre class="brush: css">pre, p {
     font-size: 1.5em;
     color: #FE7F88;
     background-color: transparent;
@@ -89,36 +89,11 @@ p {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#background-image', 'background-image')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Начиная с CSS2 Revision 1, свойство было расширено для поддержки нескольких фонов и любого типа данных CSS {{cssxref("&lt;image&gt;")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-image', 'background-image')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Начиная с CSS1, теперь описывается способ обработки изображений с внутренними размерами и без них.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#background-image', 'background-image')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
 
-<p>{{Compat("css.properties.background-image")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

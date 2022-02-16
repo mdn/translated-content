@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Classes
 
 <p>Первый способ определения класса — <strong>class declaration (</strong><em>объявление класса</em><strong>)</strong>. Для этого необходимо воспользоваться ключевым словом <code>class</code> и указать имя класса (в примере — «Rectangle»).</p>
 
-<pre class="brush: js notranslate"><code>class Rectangle {
+<pre class="brush: js"><code>class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -31,9 +31,9 @@ translation_of: Web/JavaScript/Reference/Classes
 
 <h4 id="Подъём_hoisting">Подъём (hoisting)</h4>
 
-<p>Разница между <em>объявлением функции</em> (<em>function declaration</em>) и <em>объявлением класса</em> (<em>class declaration</em>) в том, что <em>объявление функции</em> совершает подъём ({{Glossary("Hoisting", "hoisted")}}), в то время как <em>объявление класса</em> — нет. Поэтому вначале необходимо объявить ваш класс и только затем работать с ним, а код же вроде следующего сгенерирует исключение типа {{jsxref("ReferenceError")}}:</p>
+<p>Разница между <em>объявлением функции</em> (<em>function declaration</em>) и <em>объявлением класса</em> (<em>class declaration</em>) в том, что <em>объявление функции</em> совершает подъём ({{Glossary("Hoisting", "hoisting")}}), в то время как <em>объявление класса</em> — нет. Поэтому вначале необходимо объявить ваш класс и только затем работать с ним, а код же вроде следующего сгенерирует исключение типа {{jsxref("ReferenceError")}}:</p>
 
-<pre class="brush: js notranslate"><code>var p = new Rectangle(); // ReferenceError
+<pre class="brush: js"><code>var p = new Rectangle(); // ReferenceError
 
 class Rectangle {}</code></pre>
 
@@ -41,7 +41,7 @@ class Rectangle {}</code></pre>
 
 <p>Второй способ определения класса — <strong>class expression (</strong><em>выражение класса</em><strong>)</strong>. Можно создавать именованные и безымянные выражения. В первом случае имя выражения класса находится в локальной области видимости класса и может быть получено через свойства самого класса, а не его экземпляра.</p>
 
-<pre class="brush: js notranslate"><code>// безымянный
+<pre class="brush: js"><code>// безымянный
 var Rectangle = class {
   constructor(height, width) {
     this.height = height;
@@ -84,7 +84,7 @@ console.log(Rectangle.name);
 
 <p>Смотрите также <a href="/ru/docs/Web/JavaScript/Reference/Functions/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B8%D0%BD%D0%B8%D0%B5_%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%B2">определение методов</a>.</p>
 
-<pre class="brush: js notranslate"><code>class Rectangle {
+<pre class="brush: js"><code>class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -107,7 +107,7 @@ console.log(square.area); // 100</code></pre>
 
 <p>Ключевое слово <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/static">static</a></code>, определяет статический метод или свойства для класса. Статические методы и свойства вызываются без <a href="/ru/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Object_.28Class_Instance.29">инстанцирования</a> их класса, и <strong>не могут</strong> быть вызваны у экземпляров (<em>instance</em>) класса. Статические методы, часто используются для создания служебных функций для приложения, в то время как статические свойства полезны для кеширования в рамках класса, фиксированной конфигурации или любых других целей, не связанных с реплецированием данных между экземплярами.</p>
 
-<pre class="brush: js notranslate"><code>class Point {
+<pre class="brush: js"><code>class Point {
   constructor(x, y) {
     this.x = x;
     this.y = y;
@@ -136,7 +136,7 @@ console.log(Point.distance(p1, p2)); // 7.0710678118654755</code></pre>
 
 <p>Когда статический или прототипный метод вызывается без привязки к <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">this</span></font> объекта (или когда <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">this</span></font> является типом boolean, string, number, undefined, null), тогда <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">this</span></font> будет иметь значение <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">undefined</span></font> внутри вызываемой функции. Автоупаковка не будет произведена. Поведение будет таким же как если бы мы писали код в нестрогом режиме.</p>
 
-<pre class="brush: js notranslate"><code>class Animal {
+<pre class="brush: js"><code>class Animal {
   speak() {
     return this;
   }
@@ -156,7 +156,7 @@ eat(); // undefined</code></pre>
 
 <p>Если мы напишем этот же код используя классы основанные на функциях, тогда произойдёт автоупаковка основанная на значении <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">this</span></font>, в течение которого функция была вызвана. В строгом режиме автоупаковка не произойдёт - значение <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">this</span></font> останется прежним.</p>
 
-<pre class="brush: js notranslate"><code>function Animal() { }
+<pre class="brush: js"><code>function Animal() { }
 
 Animal.prototype.speak = function(){
   return this;
@@ -178,7 +178,7 @@ eat(); // глобальный объект (нестрогий режим)</cod
 
 <p>Свойства экземпляра должны быть определены в методе класса:</p>
 
-<pre class="notranslate">class Rectangle {
+<pre>class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -187,7 +187,7 @@ eat(); // глобальный объект (нестрогий режим)</cod
 
 <p>Статические (class-side) свойства и свойства прототипа должны быть определены за рамками тела класса:</p>
 
-<pre class="notranslate">Rectangle.staticWidth = 20;
+<pre>Rectangle.staticWidth = 20;
 Rectangle.prototype.prototypeWidth = 25;
 </pre>
 
@@ -201,7 +201,7 @@ Rectangle.prototype.prototypeWidth = 25;
 
 <p>Используя Javascript синтаксис определения полей, приведённый выше пример может быть изменён следующим образом:</p>
 
-<pre class="notranslate">class Rectangle {
+<pre>class Rectangle {
   height = 0;
   width;
   constructor(height, width) {
@@ -218,7 +218,7 @@ Rectangle.prototype.prototypeWidth = 25;
 
 <p>Предыдущий пример может быть изменён следующим образом, используя приватные поля:</p>
 
-<pre class="notranslate">class Rectangle {
+<pre>class Rectangle {
   #height = 0;
   #width;
   constructor(height, width) {
@@ -241,7 +241,7 @@ Rectangle.prototype.prototypeWidth = 25;
 
 <p>Ключевое слово <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/extends">extends</a></code> используется в <em>объявлениях классов</em> и <em>выражениях классов</em> для создания класса, дочернего относительно другого класса.</p>
 
-<pre class="brush: js notranslate"><code class="language-js">class Animal {
+<pre class="brush: js"><code class="language-js">class Animal {
   constructor(name) {
     this.name = name;
   }</code>
@@ -268,7 +268,7 @@ d.speak(); // Митци лает</code></pre>
 
 <p>Аналогичным образом можно расширять традиционные, основанные на функциях "классы":</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">function Animal (name) {
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function Animal (name) {
   this.name = name;
 }
 Animal.prototype.speak = function () {
@@ -288,7 +288,7 @@ d.speak(); // Митци лает
 
 <p>Обратите внимание, что классы не могут расширять обычные (non-constructible) объекты. Если вам необходимо создать наследование от обычного объекта, в качестве замены можно использовать {{jsxref("Object.setPrototypeOf()")}}:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var Animal = {
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var Animal = {
   speak() {
     console.log(</code>`${this.name} издаёт звук.`<code class="language-js">);
   }
@@ -312,7 +312,7 @@ d.speak(); // Митци издаёт звук.</code></pre>
 
 <p>Например, при использовании таких методов, как {{jsxref("Array.map", "map()")}}, который возвращает конструктор по умолчанию, вам хотелось бы, чтобы они возвращали родительский объект <code>Array</code> вместо объекта <code>MyArray</code>. Символ {{jsxref("Symbol.species")}} позволяет это реализовать:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">class MyArray extends Array {
+<pre class="brush: js line-numbers  language-js"><code class="language-js">class MyArray extends Array {
   // Изменить species на родительский конструктор Array
   static get [Symbol.species]() { return Array; }
 }
@@ -326,7 +326,7 @@ console.log(mapped instanceof Array);   // true</code></pre>
 
 <p>Ключевое слово <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/super">super</a></code> используется для вызова функций на родителе объекта.</p>
 
-<pre class="brush: js  language-js notranslate"><code class="language-js">class Cat {
+<pre class="brush: js  language-js"><code class="language-js">class Cat {
   constructor(name) {
     this.name = name;
   }
@@ -355,7 +355,7 @@ l.speak();
 
 <p>Для реализации mix-ins в ECMAScript можно использовать функцию, которая в качестве аргумента принимает родительский класс, а возвращает подкласс, его расширяющий:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var calculatorMixin = Base =&gt; class extends Base {
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var calculatorMixin = Base =&gt; class extends Base {
   calc() { }
 };
 
@@ -365,34 +365,16 @@ var randomizerMixin = Base =&gt; class extends Base {
 
 <p>Класс, использующий такие mix-ins, можно описать следующим образом:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">class Foo { }
+<pre class="brush: js line-numbers  language-js"><code class="language-js">class Foo { }
 class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</code></pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.classes")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Повторное_определение_класа">Повторное определение класа</h2>
 

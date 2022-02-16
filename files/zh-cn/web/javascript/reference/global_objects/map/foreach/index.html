@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Map.forEach
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary"><code><strong>forEach()</strong></code> 方法按照插入顺序依次对 <code>Map</code> 中每个键/值对执行一次给定的函数</span></p>
+<p><code><strong>forEach()</strong></code> 方法按照插入顺序依次对 <code>Map</code> 中每个键/值对执行一次给定的函数</p>
 
 <div>{{EmbedInteractiveExample("pages/js/map-prototype-foreach.html")}}</div>
 
@@ -22,7 +22,7 @@ browser-compat: javascript.builtins.Map.forEach
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>myMap</var>.forEach(<var>callback([<var>value</var>][,<var>key</var>][,<var>map</var>])[, <var>thisArg</var>])</var></code></pre>
+<pre class="syntaxbox"><code><var>myMap</var>.forEach(<var>callback([<var>value</var>][,<var>key</var>][,<var>map</var>])[, <var>thisArg</var>])</var></code></pre>
 
 <h3 id="参数">参数</h3>
 
@@ -72,7 +72,7 @@ browser-compat: javascript.builtins.Map.forEach
 
 <p>以下的代码在每行中打印一个 <code>Map</code> 对象中的元素</p>
 
-<pre class="brush:js notranslate">function logMapElements(value, key, map) {
+<pre class="brush:js">function logMapElements(value, key, map) {
     console.log(`map.get('${key}') = ${value}`)
 }
 new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements)

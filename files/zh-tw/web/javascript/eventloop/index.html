@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/EventLoop
 
 <h3 id="視覺化呈現（Visual_representation）">視覺化呈現（Visual representation）</h3>
 
-<p style="text-align: center;"><img alt="Stack, heap, queue" src="/files/4617/default.svg" style="height: 270px; width: 294px;"></p>
+<p><img alt="Stack, heap, queue" src="the_javascript_runtime_environment_example.svg" /></p>
 
 <h3 id="堆疊（Stack）">堆疊（Stack）</h3>
 
@@ -36,7 +36,7 @@ function bar(x) {
 console.log(bar(7));
 </pre>
 
-<p>當呼叫 <code><font face="Consolas, Liberation Mono, Courier, monospace">bar</font></code> 時，會產生一個含有 <code>bar</code> 的參數及區域變數的 frame，而在 <code><font face="Consolas, Liberation Mono, Courier, monospace">bar</font></code> 呼叫了 <code>foo</code> 時，含有 <code>foo</code> 參數及變數的第二個 frame 就會被置於堆疊的最上面。當 <code>foo</code> 回傳後，最上面的 frame 會被抽離堆疊（僅留下 <font face="Consolas, Liberation Mono, Courier, monospace"><code>bar</code></font> 的呼叫 frame）。然後當 bar 返回之後，堆疊就會清空。</p>
+<p>當呼叫 <code>bar</code> 時，會產生一個含有 <code>bar</code> 的參數及區域變數的 frame，而在 <code>bar</code> 呼叫了 <code>foo</code> 時，含有 <code>foo</code> 參數及變數的第二個 frame 就會被置於堆疊的最上面。當 <code>foo</code> 回傳後，最上面的 frame 會被抽離堆疊（僅留下 <code>bar</code> 的呼叫 frame）。然後當 bar 返回之後，堆疊就會清空。</p>
 
 <h3 id="堆積（Heap）">堆積（Heap）</h3>
 
@@ -66,11 +66,29 @@ console.log(bar(7));
 
 <p>瀏覽器中，會添加訊息是由於事件的觸動，以及伴隨著事件的監聽者。若是沒有事件監聽者，則該事件的觸動就不會形成訊息，例如說一個點擊的動作伴隨著點擊事件監聽者就會形成一個新的訊息，其他類事件亦然。</p>
 
-<p>呼叫 {{domxref("WindowTimers.setTimeout", "setTimeout")}} 時有兩個參數：第一個是會被加入到佇列中的訊息，第二個參數為延遲時間（預設為 0）。若無其他訊息在佇列中，則這個訊息會在設定的延遲後立刻被處理。但若佇列內有其他訊息，<code>setTimeout</code> 的訊息必須等到其他訊息處理完。因此第二個時間參數只能表示為最少時間，而不是一個精準的時間。</p>
+<p>呼叫 <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"><code>setTimeout</code></a> 時有兩個參數：第一個是會被加入到佇列中的訊息，第二個參數為延遲時間（預設為<code>0</code>）。若無其他訊息在佇列中，則這個訊息會在設定的延遲後立刻被處理。但若佇列內有其他訊息，<code>setTimeout</code> 的訊息必須等到其他訊息處理完。因此第二個時間參數只能表示為最少時間，而不是一個精準的時間。</p>
+
+<p>這裡有個示範此概念的例子（<code>setTimeout</code>在其計時器到期後不會立刻執行）：</p>
+
+<pre class="brush: js">
+  const s = new Date().getSeconds();
+
+  setTimeout(function() {
+    // prints out "2", meaning that the callback is not called immediately after 500 milliseconds.
+    console.log("Ran after " + (new Date().getSeconds() - s) + " seconds");
+  }, 500)
+
+  while (true) {
+    if (new Date().getSeconds() - s >= 2) {
+      console.log("Good, looped for 2 seconds")
+      break;
+    }
+  }
+</pre>
 
 <h3 id="零延遲（Zero_delays）">零延遲（Zero delays）</h3>
 
-<p>「零延遲」並非意味著回呼函式（callback function）會在 0 毫秒之後立刻執行。當使用延遲 0 毫秒參數來呼叫 {{domxref("WindowTimers.setTimeout", "setTimeout")}} 函式並非是程式會過了該段時間就會執行，而是會參考佇列中等待的訊息數量。<br>
+<p>「零延遲」並非意味著回呼函式（callback function）會在 0 毫秒之後立刻執行。當使用延遲 0 毫秒參數來呼叫 <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"><code>setTimeout</code></a> 函式並非是程式會過了該段時間就會執行，而是會參考佇列中等待的訊息數量。<br>
  在下面範例中，「this is just a message」會寫在 setTimeout 的回呼訊息被執行之前，因為該時間段參數是要求執行環境處理所需的最少等待時間，而非一個保證時間。</p>
 
 <pre class="brush: js">(function() {
@@ -100,10 +118,10 @@ console.log(bar(7));
 
 <h3 id="多個執行環境的互相溝通（Several_Runtime_communicating_together）">多個執行環境的互相溝通（Several Runtime communicating together）</h3>
 
-<p>Web worker 或是跨來源網域（cross-origin）的 <code>iframe</code> 都會有各自的堆疊、堆積及訊息佇列。兩個特定的執行環境只能透過 <a href="/zh-TW/docs/DOM/window.postMessage"><code>postMessage</code></a> 這個方法來溝通。如果一個執行環境有監聽 <code>message</code> 事件時，另一個執行環境便可透過這個方法來新增一個訊息到該執行環境中。</p>
+<p>Web worker 或是跨來源網域（cross-origin）的 <code>iframe</code> 都會有各自的堆疊、堆積及訊息佇列。兩個特定的執行環境只能透過 <a href="/en-US/docs/Web/API/Window/postMessage"><code>postMessage</code></a> 這個方法來溝通。如果一個執行環境有監聽 <code>message</code> 事件時，另一個執行環境便可透過這個方法來新增一個訊息到該執行環境中。</p>
 
 <h2 id="絕不阻塞（Never_blocking）">絕不阻塞（Never blocking）</h2>
 
 <p>事件循環這個模型有一個非常有趣的特色就是永不阻塞，這與其他語言不一樣。I/O 的處理通常會經由事件以及回呼函式實作，因此當一個程式正在等待 <a href="/zh-TW/docs/Web/API/IndexedDB_API">IndexedDB</a> 的查詢結果或是回傳 <a href="/zh-TW/docs/Web/API/XMLHttpRequest">XHR</a> 請求時，依舊可以執行其他像是使用者輸入的動作。</p>
 
-<p>例外（exceptions）永遠存在，像是 <code>alert</code> 或是同步的 XHR，但好的實作方式就是避開他們。另外要注意個是，<a href="http://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311">例外的例外一直是存在的</a>（但通常為實作時的錯誤而非其他情況）。</p>
+<p>例外（exceptions）永遠存在，像是 <code>alert</code> 或是同步的 XHR，但好的實作方式就是避開他們。另外要注意個是，<a href="https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311">例外的例外一直是存在的</a>（但通常為實作時的錯誤而非其他情況）。</p>

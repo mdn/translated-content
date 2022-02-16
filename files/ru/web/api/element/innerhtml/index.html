@@ -13,7 +13,7 @@ translation_of: Web/API/Element/innerHTML
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="brush: js notranslate">const <var>content</var> = <var>element</var>.innerHTML;
+<pre class="brush: js">const <var>content</var> = <var>element</var>.innerHTML;
 
 <var>element</var>.innerHTML = <var>htmlString</var>;
 </pre>
@@ -35,11 +35,11 @@ translation_of: Web/API/Element/innerHTML
 
 <p>Это свойство предоставляет простой способ полностью заменить содержимое элемента. Например, все содержимое элемента body может быть удалено:</p>
 
-<pre class="brush: js notranslate">document.body.innerHTML = "";  // Заменяет содержимое тела пустой строкой.</pre>
+<pre class="brush: js">document.body.innerHTML = "";  // Заменяет содержимое тела пустой строкой.</pre>
 
 <p>Свойство innerHTML многих типов элементов, включая {{HTMLElement("body")}} или {{HTMLElement("html")}}, могут быть возвращены или перемещены. Это может так же быть использовано для просмотра кода страницы, которая была изменена динамически:</p>
 
-<pre class="brush: js notranslate">// Скопируйте и вставьте в адресную строку в виде одной строки.
+<pre class="brush: js">// Скопируйте и вставьте в адресную строку в виде одной строки.
 javascript:"&lt;pre&gt;"+document.documentElement.innerHTML.replace(/&lt;/g,"&amp;lt;") + "&lt;/pre&gt;";
 </pre>
 
@@ -49,8 +49,8 @@ javascript:"&lt;pre&gt;"+document.documentElement.innerHTML.replace(/&lt;/g,"&am
 
 <p>Не редко можно увидеть использование InnerHTML для вставки текста в веб страницу. Это приводит к рискам безопасности.</p>
 
-<pre class="brush: js notranslate">const name = "John";
-// предполагая, что 'el' является HTML DOM элементом.
+<pre class="brush: js">const name = "John";
+// предполагая, что 'el' является HTML DOM-элементом.
 el.innerHTML = name; // безвредный в этом случае
 
 // ...
@@ -62,18 +62,18 @@ el.innerHTML = name; // безвредный в этом случае</pre>
 
 <p>Однако, есть способы запустить JavaScript без использования элементов {{HTMLElement("script")}}, так что есть риск безопасности всякий раз, когда вы используете innerHTML для набора строк, над которыми у вас нет контроля. Например:</p>
 
-<pre class="brush: js notranslate">const name = "&lt;img src='x' onerror='alert(1)'&gt;";
+<pre class="brush: js">const name = "&lt;img src='x' onerror='alert(1)'&gt;";
 el.innerHTML = name; // показывает alert</pre>
 
 <p>По этой причине,  рекомендуется не использовать innerHTML при вставке обычного текста; вместо этого, используйте {{domxref("node.textContent")}}. Это не интерпретирует отправленный контент как HTML, но вместо этого он вставляется как не обработанный текст. </p>
 
-<h2 id="Примеры">Примеры</h2>
+<h2 id="Пример">Пример</h2>
 
 <p>Этот пример использует <code>innerHTML</code> для создания механизма логирования сообщений внутри элемента на странице.</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">function log(msg) {
+<pre class="brush: js">function log(msg) {
   var logElem = document.querySelector(".log");
 
   var time = new Date();
@@ -87,7 +87,7 @@ log("Регистрация событий мыши внутри этого ко
 
 <p>Мы добавляем второй метод, который логирует информацию о событиях на основе {{domxref("MouseEvent")}} (например, {{event("mousedown")}}, {{event("click")}}, и {{event("mouseenter")}}):</p>
 
-<pre class="brush: js notranslate">function logEvent(event) {
+<pre class="brush: js">function logEvent(event) {
   var msg = "Event &lt;strong&gt;" + event.type + "&lt;/strong&gt; at &lt;em&gt;" +
             event.clientX + ", " + event.clientY + "&lt;/em&gt;";
   log(msg);
@@ -95,7 +95,7 @@ log("Регистрация событий мыши внутри этого ко
 
 <p>Затем мы используем этот обработчик событий на элементе, который содержит наше логирование, для каждого события мыши:</p>
 
-<pre class="brush: js notranslate">var boxElem = document.querySelector(".box");
+<pre class="brush: js">var boxElem = document.querySelector(".box");
 
 boxElem.addEventListener("mousedown", logEvent);
 boxElem.addEventListener("mouseup", logEvent);
@@ -107,7 +107,7 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
 
 <p>HTML довольно простой для нашего примера.</p>
 
-<pre class="brush: html notranslate">&lt;div class="box"&gt;
+<pre class="brush: html">&lt;div class="box"&gt;
   &lt;div&gt;&lt;strong&gt;Log:&lt;/strong&gt;&lt;/div&gt;
   &lt;div class="log"&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
@@ -118,7 +118,7 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
 
 <p>Для нашего примера используем следующие CSS стили.</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 600px;
   height: 300px;
   border: 1px solid black;
@@ -136,26 +136,11 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
 
 <p>В результате мы получаем такое содержимое. Вы можете видеть логи наводя мышь на элемент, кликая на него и так далее.</p>
 
-<p>{{EmbedLiveSample("Example", 640, 350)}}</p>
+<p>{{EmbedLiveSample("Пример", 640, 350)}}</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#widl-Element-innerHTML', 'Element.innerHTML')}}</td>
-   <td>{{Spec2('DOM Parsing')}}</td>
-   <td>Первоначальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

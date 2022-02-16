@@ -10,11 +10,9 @@ original_slug: Web/JavaScript/Reference/Operators/逻辑和
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>expr1</em> &amp;&amp; <em>expr2</em>
+<pre class="syntaxbox"><em>expr1</em> &amp;&amp; <em>expr2</em>
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -43,7 +41,7 @@ original_slug: Web/JavaScript/Reference/Operators/逻辑和
 
 <p>Short circuit means that the <code><em>expr</em></code> part above is <strong>not evaluated</strong>, hence any side effects of doing so do not take effect (e.g., if <code><em>expr</em></code> is a function call, the calling never takes place). This happens because the value of the operator is already determined after the evaluation of the first operand. See example:</p>
 
-<pre class="brush: js notranslate">function A(){ console.log('called A'); return false; }
+<pre class="brush: js">function A(){ console.log('called A'); return false; }
 function B(){ console.log('called B'); return true; }
 
 console.log( A() &amp;&amp; B() );
@@ -55,7 +53,7 @@ console.log( A() &amp;&amp; B() );
 
 <p>The following expressions might seem equivalent, but they are not, because the <code>&amp;&amp;</code> operator is executed before the <code>||</code> operator (see <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">operator precedence</a>).</p>
 
-<pre class="brush: js notranslate">true || false &amp;&amp; false      // returns true, because &amp;&amp; is executed first
+<pre class="brush: js">true || false &amp;&amp; false      // returns true, because &amp;&amp; is executed first
 (true || false) &amp;&amp; false    // returns false, because operator precedence cannot apply</pre>
 
 <h2 id="Examples">Examples</h2>
@@ -64,7 +62,7 @@ console.log( A() &amp;&amp; B() );
 
 <p>The following code shows examples of the <code>&amp;&amp;</code> (logical AND) operator.</p>
 
-<pre class="brush: js notranslate">a1 = true  &amp;&amp; true       // t &amp;&amp; t returns true
+<pre class="brush: js">a1 = true  &amp;&amp; true       // t &amp;&amp; t returns true
 a2 = true  &amp;&amp; false      // t &amp;&amp; f returns false
 a3 = false &amp;&amp; true       // f &amp;&amp; t returns false
 a4 = false &amp;&amp; (3 == 4)   // f &amp;&amp; f returns false
@@ -80,21 +78,21 @@ a9 = false &amp;&amp; ''         // f &amp;&amp; f returns false</pre>
 
 <p>The following operation involving <strong>booleans</strong>:</p>
 
-<pre class="brush: js notranslate">bCondition1 &amp;&amp; bCondition2</pre>
+<pre class="brush: js">bCondition1 &amp;&amp; bCondition2</pre>
 
 <p>is always equal to:</p>
 
-<pre class="brush: js notranslate">!(!bCondition1 || !bCondition2)</pre>
+<pre class="brush: js">!(!bCondition1 || !bCondition2)</pre>
 
 <h4 id="Converting_OR_to_AND">Converting OR to AND</h4>
 
 <p>The following operation involving <strong>booleans</strong>:</p>
 
-<pre class="brush: js notranslate">bCondition1 || bCondition2</pre>
+<pre class="brush: js">bCondition1 || bCondition2</pre>
 
 <p>is always equal to:</p>
 
-<pre class="brush: js notranslate">!(!bCondition1 &amp;&amp; !bCondition2)</pre>
+<pre class="brush: js">!(!bCondition1 &amp;&amp; !bCondition2)</pre>
 
 <h3 id="Removing_nested_parentheses">Removing nested parentheses</h3>
 
@@ -102,11 +100,11 @@ a9 = false &amp;&amp; ''         // f &amp;&amp; f returns false</pre>
 
 <p>The following composite operation involving <strong>booleans</strong>:</p>
 
-<pre class="brush: js notranslate">bCondition1 || (bCondition2 &amp;&amp; bCondition3)</pre>
+<pre class="brush: js">bCondition1 || (bCondition2 &amp;&amp; bCondition3)</pre>
 
 <p>is always equal to:</p>
 
-<pre class="brush: js notranslate">bCondition1 || bCondition2 &amp;&amp; bCondition3</pre>
+<pre class="brush: js">bCondition1 || bCondition2 &amp;&amp; bCondition3</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

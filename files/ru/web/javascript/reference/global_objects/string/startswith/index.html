@@ -12,15 +12,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>startsWith()</code></strong> помогает определить, начинается ли строка с символов указанных в скобках, возвращая, соответственно, <code>true</code> или <code>false</code>.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.startsWith(<var>searchString</var>[, <var>position</var>])</code></pre>
+<pre class="syntaxbox"><code><var>str</var>.startsWith(<var>searchString</var>[, <var>position</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>searchString</code></dt>
@@ -29,26 +29,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
  <dd>Необязательный параметр. Позиция в строке, с которой начинать поиск  <code>searchString</code>; по умолчанию 0.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Этот метод позволяет определять, начинается ли строка с указанных в скобках символов.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_startsWith" name="Example:_Using_startsWith">Пример: использование метода <code>startsWith()</code></h3>
+<h3 id="Example_Using_startsWith">Пример: использование метода <code>startsWith()</code></h3>
 
-<pre class="brush: js notranslate">var str = 'Быть или не быть, вот в чём вопрос.';
+<pre class="brush: js">var str = 'Быть или не быть, вот в чём вопрос.';
 
 console.log(str.startsWith('Быть'));        // true
 console.log(str.startsWith('не быть'));     // false
 console.log(str.startsWith('не быть', 9));  // true
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Этот метод был добавлен к спецификации ECMAScript 6 и может быть доступен ещё не во всех реализациях JavaScript. Однако, вы можете легко эмулировать этот метод при помощи следующего кода:</p>
 
-<pre class="brush: js notranslate">if (!String.prototype.startsWith) {
+<pre class="brush: js">if (!String.prototype.startsWith) {
   Object.defineProperty(String.prototype, 'startsWith', {
     enumerable: false,
     configurable: false,
@@ -61,13 +61,13 @@ console.log(str.startsWith('не быть', 9));  // true
 }
 </pre>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.String.startsWith")}}</p>
+<p>{{Compat}}</p>
 
 <div id="compat-mobile"></div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.endsWith()")}} {{experimental_inline}}</li>

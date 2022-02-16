@@ -5,7 +5,7 @@ translation_of: Web/API/Event/bubbles
 ---
 <p>{{ ApiRef("DOM") }}</p>
 
-<h3 id="Summary" name="Summary">Описание</h3>
+<h3 id="Summary">Описание</h3>
 
 <p>Указывает, является ли данное событие всплывающим внутри DOM.</p>
 
@@ -15,20 +15,20 @@ translation_of: Web/API/Event/bubbles
 
 <h3 id="Синтаксис">Синтаксис</h3>
 
-<pre class="notranslate">event.bubbles</pre>
+<pre>event.bubbles</pre>
 
 <p>Возвращает булево значение <code>true</code>, если событие является всплывающим внутри DOM.</p>
 
-<h3 id="Syntax" name="Syntax">Пример</h3>
+<h3 id="Syntax">Пример</h3>
 
-<pre class="eval notranslate"><em>var bool</em> = event.bubbles;
+<pre class="eval"><em>var bool</em> = event.bubbles;
 </pre>
 
 <p><code>bool</code> содержит <code>true</code> или <code>false</code> в зависимости от того, может событие быть всплывающим внутри DOM или нет</p>
 
-<h3 id="Example" name="Example">Пример</h3>
+<h3 id="Example">Пример</h3>
 
-<pre class="notranslate">function handleInput(e) {
+<pre>function handleInput(e) {
   // Проверяем всплывает ли событие и ...
   if (!e.bubbles) {
     // ... пропускаем событие сюда если нет

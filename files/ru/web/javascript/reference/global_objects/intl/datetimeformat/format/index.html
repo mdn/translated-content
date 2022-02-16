@@ -11,24 +11,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/form
 ---
 <div>{{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Свойство <strong><code>Intl.DateTimeFormat.prototype.format</code></strong> возвращает функцию-геттер, форматирующую дату согласно локали и параметрам форматирования соответствующего объекта {{jsxref("Global_Objects/DateTimeFormat", "DateTimeFormat")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code><var>dateTimeFormat</var>.format(<var>date</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>date</code></dt>
  <dd>Дата для форматирования.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Функция, возвращённая геттером <code>format</code>, форматирует дату согласно локали и параметрам форматирования соответствующего объекта {{jsxref("Global_Objects/DateTimeFormat", "DateTimeFormat")}}.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_format" name="Example:_Using_format">Пример: использование функции <code>format</code></h3>
+<h3 id="Example_Using_format">Пример: использование функции <code>format</code></h3>
 <p>Использование функции, возвращённой геттером <code>format</code>, для форматирования одной даты, здесь пример для сербского языка:</p>
 <pre class="brush: js">var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 var dateTimeFormat = new Intl.DateTimeFormat('sr-RS', options);
@@ -36,7 +36,7 @@ console.log(dateTimeFormat.format(new Date()));
 // → "недеља, 7. април 2013."
 </pre>
 
-<h3 id="Example_Using_format_with_map" name="Example:_Using_format_with_map">Пример: использование функции <code>format</code> вместе с <code>map</code></h3>
+<h3 id="Example_Using_format_with_map">Пример: использование функции <code>format</code> вместе с <code>map</code></h3>
 <p>Использование функции, возвращённой геттером <code>format</code>, для форматирования всех дат в массиве. Обратите внимание, что функция привязана к объекту {{jsxref("Global_Objects/DateTimeFormat", "DateTimeFormat")}}, из которого она была получена, так что её можно передавать в {{jsxref("Array.prototype.map()")}} напрямую.</p>
 <pre class="brush: js">var a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
 var options = { year: 'numeric', month: 'long' };
@@ -46,7 +46,7 @@ console.log(formatted.join('; '));
 // → "setembro de 2012; dezembro de 2012; abril de 2012"
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -62,10 +62,10 @@ console.log(formatted.join('; '));
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
  <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>

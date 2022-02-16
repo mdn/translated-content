@@ -10,15 +10,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 ---
 <div>{{JSRef("Global_Objects", "JSON")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>JSON.stringify()</code></strong> преобразует значение JavaScript в строку JSON, возможно с заменой значений, если указана функция замены, или с включением только определённых свойств, если указан массив замены.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>JSON.stringify(<var>value</var>[, <var>replacer</var>[, <var>space</var>]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>value</code></dt>
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
  <dd>Делает результат красиво отформатированным (расставляя пробелы).</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>JSON.stringify()</code> преобразует значение в представляющую его нотацию JSON со следующими оговорками:</p>
 
@@ -67,7 +67,7 @@ JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
 // '{}'
 </pre>
 
-<h3 id="space_argument" name="space_argument">Параметр <code>space</code></h3>
+<h3 id="space_argument">Параметр <code>space</code></h3>
 
 <p>Параметр <code>space</code> может использоваться для управления форматированием отступов в конечной строке. Если он числовой, каждый последующий уровень вложенности будет дополнен отступом из пробелов, количество которых соответствует уровню (вплоть до десятого уровня). Если он строковый, каждый последующий уровень вложенности будет предваряться этой строкой (или её первыми десятью символами).</p>
 
@@ -87,7 +87,7 @@ JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
 // }'
 </pre>
 
-<h3 id="toJSON_behavior" name="toJSON_behavior">Поведение метода <code>toJSON()</code></h3>
+<h3 id="toJSON_behavior">Поведение метода <code>toJSON()</code></h3>
 
 <p>Если преобразуемый в строку объект имеет свойство с именем <code>toJSON</code> и значением свойства, установленным в функцию, то этот метод <code>toJSON()</code> изменит стандартное поведение преобразования в JSON: вместо преобразования объекта будет использоваться значение, возвращаемое методом <code>toJSON()</code>. Например:</p>
 
@@ -105,7 +105,7 @@ JSON.stringify(obj);        // '"bar"'
 JSON.stringify({ x: obj }); // '{"x":"bar"}'
 </pre>
 
-<h3 id="Example_of_using_JSON.stringify_with_localStorage" name="Example_of_using_JSON.stringify_with_localStorage">Пример использования метода <code>JSON.stringify()</code> вместе с <code>localStorage</code></h3>
+<h3 id="Example_of_using_JSON.stringify_with_localStorage">Пример использования метода <code>JSON.stringify()</code> вместе с <code>localStorage</code></h3>
 
 <p>В случае, если вы хотите сохранить объект таким образом, чтобы его можно было восстановить даже после закрытия браузера, имеет смысл воспользоваться следующим примером, демонстрирующим применение метода <code>JSON.stringify()</code>:</p>
 
@@ -134,7 +134,7 @@ var restoredSession = JSON.parse(localStorage.getItem('session'));
 console.log(restoredSession);
 </pre>
 
-<h3 id="Example_of_using_replacer_parameter" name="Example_of_using_replacer_parameter">Пример использования параметра <code>replacer</code></h3>
+<h3 id="Example_of_using_replacer_parameter">Пример использования параметра <code>replacer</code></h3>
 
 <pre class="brush: js">var foo = { foundation: 'Mozilla', model: 'box', week: 45, transport: 'car', month: 7 };
 
@@ -149,39 +149,21 @@ JSON.stringify(foo, ['week', 'month']);
 // '{"week":45,"month":7}', сохранились только свойства week и month
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.12.3', 'JSON.stringify')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.7.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-json.stringify', 'JSON.stringify')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div>
 
 
-<p>{{Compat("javascript.builtins.JSON.stringify")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Web/JavaScript/Guide/Using_native_JSON">Использование родного объекта <code>JSON</code></a></li>

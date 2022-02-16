@@ -11,8 +11,6 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 
 <h2 id="类型">类型</h2>
 
-<div class="hidden">The following section is also duplicated on <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">this cheatsheet</a>. Do not forget to edit it as well, thanks!</div>
-
 <table class="standard-table">
  <thead>
   <tr>
@@ -48,8 +46,8 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
    <td>
     <p>一个否定的或被补充的字符集。也就是说，它匹配任何没有包含在括号中的字符。可以通过使用连字符来指定字符范围，但是如果连字符作为方括号中的第一个或最后一个字符出现，那么它将被视为作为普通字符包含在字符集中。例如，[^abc]和[^a-c]一样。它们最初匹配“bacon”中的“o”和“chop”中的“h”。</p>
 
-    <div class="blockIndicator note">
-    <p> ^ 字符也可以表示   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries">输入的起始</a></p>
+    <div class="note">
+    <p><strong>备注：</strong> ^ 字符也可以表示   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries">输入的起始</a></p>
     </div>
    </td>
   </tr>
@@ -94,7 +92,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 
 <h3 id="计算元音数">计算元音数</h3>
 
-<pre class="brush: js notranslate">var aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
+<pre class="brush: js">var aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
 var regexpVowels = /[aeiouy]/g;
 
 console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
@@ -102,7 +100,7 @@ console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
 
 <h3 id="使用_组">使用 组</h3>
 
-<pre class="brush: js notranslate">let personList = `First_Name: John, Last_Name: Doe
+<pre class="brush: js">let personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
 let regexpNames =  /First_Name: (\w+), Last_Name: (\w+)/mg;
@@ -114,7 +112,7 @@ do {
 
 <h3 id="使用命名组">使用命名组</h3>
 
-<pre class="brush: js notranslate">let users= `姓氏: 李, 名字: 雷
+<pre class="brush: js">let users= `姓氏: 李, 名字: 雷
 姓氏: 韩, 名字: 梅梅`;
 
 let regexpNames =  /姓氏: (?&lt;first&gt;.+), 名字: (?&lt;last&gt;.+)/mg;
@@ -127,8 +125,8 @@ do {
 // Hellow 李 雷
 // Hellow 韩 梅梅</pre>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> 并不是所有的浏览器都支持这个功能; 参考兼容表： <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility">compatibility table</a>.</p>
+<div class="note">
+<p><strong>备注：</strong> 并不是所有的浏览器都支持这个功能; 参考兼容表： <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility">compatibility table</a>.</p>
 </div>
 
 <h2 id="技术指标">技术指标</h2>

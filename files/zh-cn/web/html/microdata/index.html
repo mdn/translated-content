@@ -7,9 +7,9 @@ translation_of: Web/HTML/Microdata
 ---
 <h2 id="概要">概要</h2>
 
-<p>微数据是<a href="https://developer.mozilla.org/en-US/docs/Glossary/WHATWG">WHATWG</a> HTML标准的一部分，用于在网页上的现有内容中嵌套元数据。[1]搜索引擎，网络抓取工具和浏览器可以从网页中提取和处理微数据，并使用它为用户提供更丰富的浏览体验。搜索引擎从直接访问此结构化数据中受益匪浅，因为它允许搜索引擎了解网页上的信息并向用户提供更相关的结果。微数据使用支持词汇表来描述项目和名称 - 值对，以便为其属性赋值。与使用RDFa和微格式的类似方法相比，微数据试图提供一种使用机器可读标签注释HTML元素的简单方法。</p>
+<p>微数据是<a href="https://developer.mozilla.org/en-US/docs/Glossary/WHATWG">WHATWG</a> HTML 标准的一部分，用于在网页上的现有内容中嵌套元数据。[1] 搜索引擎，网络抓取工具和浏览器可以从网页中提取和处理微数据，并使用它为用户提供更丰富的浏览体验。搜索引擎从直接访问此结构化数据中受益匪浅，因为它允许搜索引擎了解网页上的信息并向用户提供更相关的结果。微数据使用支持词汇表来描述项目和名称 - 值对，以便为其属性赋值。与使用 RDFa 和微格式的类似方法相比，微数据试图提供一种使用机器可读标签注释 HTML 元素的简单方法。</p>
 
-<p>高级的微数据由一组name-value对组成。这些组称为项，每个name-value对都是一个属性。项目和属性由常规元素表示。</p>
+<p>高级的微数据由一组 name-value 对组成。这些组称为项，每个 name-value 对都是一个属性。项目和属性由常规元素表示。</p>
 
 <ul>
  <li>创建项目，请使用<strong>itemscope</strong>属性。</li>
@@ -18,13 +18,13 @@ translation_of: Web/HTML/Microdata
 
 <h2 id="词汇表">词汇表</h2>
 
-<p>谷歌和其他主要搜索引擎支持结构化数据的<a href="schema.org">Schema.org</a>词汇表。此词汇表定义了一组标准类型名称和属性名称，例如，<a href="http://schema.org/MusicEvent">Schema.org Music Event</a>表示音乐会表演，<a href="http://schema.org/startDate">startDate</a>和<a href="http://schema.org/location">location</a> 属性用于指定音乐会的关键细节。在这种情况下，<a href="http://schema.org/MusicEvent">Schema.org Music Event</a>将是<code>itemtype</code>和<code>startDate</code>使用的URL，而<code>location</code>将是<a href="http://schema.org/MusicEvent">Schema.org Music Event</a> 定义的<code>itemprop</code>。</p>
+<p>谷歌和其他主要搜索引擎支持结构化数据的<a href="schema.org">Schema.org</a>词汇表。此词汇表定义了一组标准类型名称和属性名称，例如，<a href="http://schema.org/MusicEvent">Schema.org Music Event</a>表示音乐会表演，<a href="http://schema.org/startDate">startDate</a>和<a href="http://schema.org/location">location</a> 属性用于指定音乐会的关键细节。在这种情况下，<a href="http://schema.org/MusicEvent">Schema.org Music Event</a>将是<code>itemtype</code>和<code>startDate</code>使用的 URL，而<code>location</code>将是<a href="http://schema.org/MusicEvent">Schema.org Music Event</a> 定义的<code>itemprop</code>。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 有关itemtype属性的更多信息，请访问<a href="http://schema.org/Thing">http://schema.org/Thing</a>。</p>
+<p><strong>注意：</strong> 有关 itemtype 属性的更多信息，请访问<a href="http://schema.org/Thing">http://schema.org/Thing</a>。</p>
 </div>
 
-<p>微数据词汇表提供了项目的语义或含义。 Web开发人员可以设计自定义词汇表或使用Web上可用的词汇表，例如广泛使用的<a href="http://schema.org">schema.org</a> 词汇表。 <a href="http://schema.org">schema.org</a> 提供了一组常用的标记词汇表。</p>
+<p>微数据词汇表提供了项目的语义或含义。 Web 开发人员可以设计自定义词汇表或使用 Web 上可用的词汇表，例如广泛使用的<a href="http://schema.org">schema.org</a> 词汇表。 <a href="http://schema.org">schema.org</a> 提供了一组常用的标记词汇表。</p>
 
 <p>常用词汇：</p>
 
@@ -47,19 +47,19 @@ translation_of: Web/HTML/Microdata
 
 <h2 id="本地化">本地化</h2>
 
-<p>在某些情况下，覆盖特定区域的搜索引擎可以提供微数据的本地特定扩展。例如，<a href="https://www.yandex.com/">Yandex</a>是俄罗斯的主要搜索引擎，支持微格式，如hCard（公司联系信息），hRecipe（食品配方），hReview（市场评论）和hProduct（产品数据），并提供自己的格式来定义术语和百科全书文章。这个扩展是为了解决西里尔字母和拉丁字母之间的音译问题。由于Schema词汇表的附加标记参数的实现，俄语网页中的信息索引变得更加成功。</p>
+<p>在某些情况下，覆盖特定区域的搜索引擎可以提供微数据的本地特定扩展。例如，<a href="https://www.yandex.com/">Yandex</a>是俄罗斯的主要搜索引擎，支持微格式，如 hCard（公司联系信息），hRecipe（食品配方），hReview（市场评论）和 hProduct（产品数据），并提供自己的格式来定义术语和百科全书文章。这个扩展是为了解决西里尔字母和拉丁字母之间的音译问题。由于 Schema 词汇表的附加标记参数的实现，俄语网页中的信息索引变得更加成功。</p>
 
 <h2 id="全局属性">全局属性</h2>
 
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemid">itemid </a>– 项的唯一全局标识符。</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop </a>– 用于向项添加属性。每个HTML元素都可以指定一个itemprop属性，其中itemprop由一个名称和值对组成。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop </a>– 用于向项添加属性。每个 HTML 元素都可以指定一个 itemprop 属性，其中 itemprop 由一个名称和值对组成。</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemref">itemref </a>– 不具有<code>itemscope</code>属性的元素的后代的属性可以使用<strong>itemref</strong>与项目相关联。 Itemref提供了元素id列表（而不是<code>itemids</code>）以及文档中其他位置的其他属性。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemref">itemref </a>– 不具有<code>itemscope</code>属性的元素的后代的属性可以使用<strong>itemref</strong>与项目相关联。 Itemref 提供了元素 id 列表（而不是<code>itemids</code>）以及文档中其他位置的其他属性。</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemscope">itemscope </a>– Itemscope（通常）与<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemtype">itemtype</a>一起使用，以指定块中包含的关于特定项目的HTML。 itemscope创建Item并定义与之关联的itemtype的范围。 itemtype是描述项及其属性上下文的词汇表（例如<a class="external external-icon" href="http://schema.org/">schema.org</a>）的有效URL。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemscope">itemscope </a>– Itemscope（通常）与<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemtype">itemtype</a>一起使用，以指定块中包含的关于特定项目的 HTML。 itemscope 创建 Item 并定义与之关联的 itemtype 的范围。 itemtype 是描述项及其属性上下文的词汇表（例如<a class="external external-icon" href="http://schema.org/">schema.org</a>）的有效 URL。</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemtype">itemtype </a>– 指定将用于在数据结构中定义itemprop（项属性）的词汇表的URL。 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemscope">Itemscope</a> 用于设置数据结构中按itemtype设置的词汇表的有效范围。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemtype">itemtype </a>– 指定将用于在数据结构中定义 itemprop（项属性）的词汇表的 URL。 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemscope">Itemscope</a> 用于设置数据结构中按 itemtype 设置的词汇表的有效范围。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -155,12 +155,12 @@ translation_of: Web/HTML/Microdata
 <p>{{ EmbedLiveSample('HTML', '', '100', '', 'Web/HTML/Microdata') }}</p>
 
 <div class="note">
-<p><strong>注意</strong>: 从HTML中提取微数据结构的便捷工具是Google的<a href="https://developers.google.com/structured-data/testing-tool/ Structured Data Testing Tool">Structured Data Testing Tool</a>。在上面显示的HTML上尝试一下。</p>
+<p><strong>注意</strong>: 从 HTML 中提取微数据结构的便捷工具是 Google 的<a href="https://developers.google.com/structured-data/testing-tool/ Structured Data Testing Tool">Structured Data Testing Tool</a>。在上面显示的 HTML 上尝试一下。</p>
 </div>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>在Firefox 16中支持，在Firefox 49中移除。</p>
+<p>在 Firefox 16 中支持，在 Firefox 49 中移除。</p>
 
 <h2 id="相关链接">相关链接</h2>
 

@@ -27,7 +27,7 @@ translation_of: Tools/Web_Console
 
 <p>{{EmbedYouTube("C6Cyrpkb25k")}}</p>
 
-<h2 id="Opening_the_Web_Console" name="Opening_the_Web_Console">Как открыть Веб Консоль</h2>
+<h2 id="Opening_the_Web_Console">Как открыть Веб Консоль</h2>
 
 <p>Чтобы открыть Веб-консоль, выберите «Веб-консоль» в меню (Веб-)разработка в Меню Firefox (или меню Инструменты, если вы настроили показывать панель меню или вы работаете на Mac OS X), или нажмите её комбинацию клавиш <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>K</kbd> (<kbd>Command</kbd><kbd>Option</kbd><kbd>K</kbd> в OS X).</p>
 
@@ -43,7 +43,7 @@ translation_of: Tools/Web_Console
  <li><a href="#message-display-pane" title="#message-display-pane">Поле вывода сообщений</a>: между панелью инструментов и командной строкой, занимая большую часть окна, располагается пространство, в которое Веб-консоль выводит сообщения.</li>
 </ul>
 
-<h2 id="Поле_вывода_сообщений"><a name="message-display-pane">Поле вывода сообщений</a></h2>
+<h2 id="Поле_вывода_сообщений"><a>Поле вывода сообщений</a></h2>
 
 <p>Большую часть Веб-консоли занимает поле вывода сообщений:</p>
 
@@ -190,13 +190,13 @@ translation_of: Tools/Web_Console
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/6367/web-console-reflow-synch.png" style="display: block; height: 51px; margin-left: auto; margin-right: auto; width: 554px;"> <span class="short_text" id="result_box" lang="ru"><span>Нажмите на ссылку</span><span>, чтобы открыть файл</span> <span>в</span></span> <a href="/ru/docs/Tools/Debugger">Debugger</a>.</p>
 
-<h4 id="Синхронные_и_асинхронные_переформатирования"><a name="synchronous-and-asynchronous-reflows"></a> <span class="short_text" id="result_box" lang="ru"><span>Синхронные</span> <span>и асинхронные</span> </span><span id="result_box" lang="ru"><span>переформатирования</span></span> <a name="synchronous-and-asynchronous-reflows"></a></h4>
+<h4 id="Синхронные_и_асинхронные_переформатирования"><a name="synchronous-and-asynchronous-reflows"></a> <span class="short_text" id="result_box" lang="ru"><span>Синхронные</span> <span>и асинхронные</span> </span><span id="result_box" lang="ru"><span>переформатирования</span></span> <a></a></h4>
 
 <p><span id="result_box" lang="ru"><span>Если</span> сделанное <span>изменение</span> <span>аннулирует</span> <span>текущую схему</span> <span>-</span> <span>например,</span> <span>окно браузера</span> <span>изменяется</span> <span>или</span> <span>некоторые</span> <span>JavaScript</span> <span>изменяют</span> <span>CSS</span> <span>элемент -</span> <span>макет</span> <span>не пересчитывается</span> <span>немедленно.</span> <span>Вместо</span></span><span lang="ru"> <span>переформатирования </span></span><span lang="ru"> <span>в асинхронном режиме</span><span>,</span> <span>в следующий</span> <span>раз браузер</span> <span>решает что это</span> <span>должно быть сделано</span> <span>(как правило</span><span>,</span> <span>в следующий</span> <span>раз браузер</span> <span>перекрашивается</span><span>)</span><span>.</span> <span>Таким образом,</span> <span>браузер может</span> <span>накопить</span> <span>коллекцию</span> <span>основанную на недействующих </span><span>изменениях</span> <span>и</span> <span>пересчитать</span> <span>их эффект</span> <span>сразу</span><span>.</span></span></p>
 
-<p><span id="result_box" lang="ru"><span>Тем не менее</span><span>,</span> <span>если</span> <span>какой-то</span> <span>JavaScript код</span> <span>читает что</span> <span>стиль</span><span> был изменён</span><span>,</span> <span>то</span> <span>браузер должен</span> <span>выполнить</span> <span>синхронное</span> <span>переформатирование</span></span><span lang="ru"><span> в порядке вычисленным расчётом стиля</span><span> чтобы вернуться</span><span>.</span> <span>Например</span><span>, код</span><span> как</span> <span>этот хочет  вызвать</span> <span>немедленное</span><span>,</span> <span>синхронное</span><span>,</span> </span><span id="result_box" lang="ru"><span>переформатирование</span></span><span lang="ru"><span>,</span> <span>когда вызовет</span></span> <code>window.getComputedStyle(thing).height</code>:</p>
+<p><span id="result_box" lang="ru"><span>Тем не менее</span><span>,</span> <span>если</span> <span>какой-то</span> <span>JavaScript-код</span> <span>читает что</span> <span>стиль</span><span> был изменён</span><span>,</span> <span>то</span> <span>браузер должен</span> <span>выполнить</span> <span>синхронное</span> <span>переформатирование</span></span><span lang="ru"><span> в порядке вычисленным расчётом стиля</span><span> чтобы вернуться</span><span>.</span> <span>Например</span><span>, код</span><span> как</span> <span>этот хочет  вызвать</span> <span>немедленное</span><span>,</span> <span>синхронное</span><span>,</span> </span><span id="result_box" lang="ru"><span>переформатирование</span></span><span lang="ru"><span>,</span> <span>когда вызовет</span></span> <code>window.getComputedStyle(thing).height</code>:</p>
 
-<pre class="brush: js notranslate">var thing = document.getElementById("the-thing");
+<pre class="brush: js">var thing = document.getElementById("the-thing");
 thing.style.display = "inline-block";
 var thingHeight = window.getComputedStyle(thing).height;</pre>
 
@@ -301,12 +301,12 @@ var thingHeight = window.getComputedStyle(thing).height;</pre>
    <td>
     <p>The argument to <code>error()</code>.</p>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 console.error("an error");</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7143/api-error.png" style="display: block; margin-left: auto; margin-right: auto;">
     <p>The console will display a full stack trace for errors:</p>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function error() {
   console.error("an error");
 }
@@ -329,12 +329,12 @@ call_error();</pre>
    <td>
     <p>If the assertion succeeds, nothing. If the assertion fails, the argument:</p>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 console.assert(false, "My assertion always fails");</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7139/api-assert.png" style="display: block; margin-left: auto; margin-right: auto;">
     <p>The console will display a full stack trace for assertions:</p>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 function assertion() {
   console.assert(false, "assertion failed");
 }
@@ -366,7 +366,7 @@ call_assertion();</pre>
    <td>
     <p>The argument to <code>warn()</code>.</p>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 console.warn("a warning");</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7155/api-warn.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -388,7 +388,7 @@ console.warn("a warning");</pre>
    <td>
     <p>The argument to <code>info()</code>.</p>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 console.info("some info");</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7145/api-info.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -410,7 +410,7 @@ console.info("some info");</pre>
    <td>
     <p>The label supplied, if any, and the number of times this occurrence of <code>count()</code> has been called with the given label:</p>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 console.count(user.value);</pre>
 
     <p><img alt="" src="https://mdn.mozillademos.org/files/7359/api-count.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
@@ -421,7 +421,7 @@ console.count(user.value);</pre>
    <td>
     <p>Listing of the object's properties:</p>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 var user = document.getElementById('user');
 console.dir(user);</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7157/api-dir.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
@@ -435,7 +435,7 @@ console.dir(user);</pre>
    <td>
     <p>The argument to <code>log()</code>.</p>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 console.log("logged");</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7147/api-log.png" style="display: block; margin-left: auto; margin-right: auto;">
 
@@ -456,7 +456,7 @@ console.log("logged");</pre>
    <td>
     <p>Notification that the specified timer started.</p>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 console.time("t");</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7149/api-time.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -465,7 +465,7 @@ console.time("t");</pre>
    <td>
     <p>Duration for the specified timer.</p>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 console.timeEnd("t");</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7151/api-timeEnd.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -474,7 +474,7 @@ console.timeEnd("t");</pre>
    <td>
     <p>Stack trace:</p>
 
-    <pre class="brush: js notranslate">
+    <pre class="brush: js">
 console.trace();</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7159/api-trace.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -489,7 +489,7 @@ console.trace();</pre>
 
 <p>Начиная с Firefox 31, вы можете использовать спецификатор формата <code>"%c"</code> для стилизации консольных сообщений:</p>
 
-<pre class="brush: js notranslate">console.log("%cMy stylish message", "color: red; font-style: italic");</pre>
+<pre class="brush: js">console.log("%cMy stylish message", "color: red; font-style: italic");</pre>
 
 <div><img alt="" src="https://mdn.mozillademos.org/files/7739/console-style.png" style="display: block; height: 52px; margin-left: auto; margin-right: auto; width: 293px;"></div>
 
@@ -499,7 +499,7 @@ console.trace();</pre>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/5587/web-console-message-input-output.png" style="display: block; height: 68px; margin-left: auto; margin-right: auto; width: 554px;">Темно-серая полоса служит индикатором того, что это сообщения ввода/вывода, тогда как направление стрелки обозначает различия между вводом и выводом.</p>
 
-<h3 id="Фильтрация_и_поиск"><a name="filtering-and-searching">Фильтрация и поиск</a></h3>
+<h3 id="Фильтрация_и_поиск"><a>Фильтрация и поиск</a></h3>
 
 <h4 id="Фильтрация_по_типу">Фильтрация по типу</h4>
 
@@ -522,7 +522,7 @@ console.trace();</pre>
 <dl>
 </dl>
 
-<h2 id="Интерпретатор_командной_строки"><a name="command-line">Интерпретатор командной строки</a></h2>
+<h2 id="Интерпретатор_командной_строки"><a>Интерпретатор командной строки</a></h2>
 
 <p>Вы можете выполнять JavaScript-код в реальном времени, используя командную строку в Web-консоли.</p>
 
@@ -572,26 +572,26 @@ console.trace();</pre>
 
 <p>Вы можете передать DOM-элемент для определённого iframe :</p>
 
-<pre class="brush: js notranslate">var frame = document.getElementById("frame1");
+<pre class="brush: js">var frame = document.getElementById("frame1");
 cd(frame);</pre>
 
 <p>Вы можете передать CSS селектор для определённого iframe:</p>
 
-<pre class="brush: js notranslate">cd("#frame1");</pre>
+<pre class="brush: js">cd("#frame1");</pre>
 
 <p>Вы можете передать глобальный объект <a href="https://developer.mozilla.org/ru/docs/Web/API/Window">Window</a> для определённого iframe:</p>
 
-<pre class="brush: js notranslate">var frame = document.getElementById("frame1");
+<pre class="brush: js">var frame = document.getElementById("frame1");
 cd(frame.contentWindow);
 </pre>
 
 <p>Для переключения контекста видимости обратно к окну верхнего уровня, введите <code>cd()</code> без аргументов:</p>
 
-<pre class="brush: js notranslate">cd();</pre>
+<pre class="brush: js">cd();</pre>
 
 <p>Предположим у нас есть документ, который содержит iframe:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -603,7 +603,7 @@ cd(frame.contentWindow);
 
 <p>В этом iframe определена новая функция:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -619,7 +619,7 @@ cd(frame.contentWindow);
 
 <p>Вы можете переключиться на контекст iframe например так:</p>
 
-<pre class="brush: js notranslate">cd("#frame1");</pre>
+<pre class="brush: js">cd("#frame1");</pre>
 
 <p>Сейчас вы сможете видеть, что глобальный объект <a href="https://developer.mozilla.org/ru/docs/Web/API/Window">Window</a> это теперь наш iframe:</p>
 

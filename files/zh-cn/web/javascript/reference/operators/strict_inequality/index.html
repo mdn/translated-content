@@ -5,35 +5,33 @@ translation_of: Web/JavaScript/Reference/Operators/Strict_inequality
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p><span>严格不等式操作符(!==)检查它的两个对象是否不相等，返回一个布尔结果。与不等式运算符不同，严格不等式运算符总是认为不同类型的对象是不同的。</span></p>
+<p>严格不等式操作符(!==)检查它的两个对象是否不相等，返回一个布尔结果。与不等式运算符不同，严格不等式运算符总是认为不同类型的对象是不同的。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">x !== y</pre>
+<pre class="syntaxbox">x !== y</pre>
 
 <h2 id="描述">描述</h2>
 
-<p><span>严格不等式运算符检查其对象是否不相等。它是严格相等运算符的否定，因此下面两行总是会给出相同的结果:</span></p>
+<p>严格不等式运算符检查其对象是否不相等。它是严格相等运算符的否定，因此下面两行总是会给出相同的结果:</p>
 
-<pre class="brush: js notranslate">x !== y
+<pre class="brush: js">x !== y
 
 !(x === y)</pre>
 
-<p><span>有关比较算法的详细信息，请参阅严格相等运算符的页面。</span></p>
+<p>有关比较算法的详细信息，请参阅严格相等运算符的页面。</p>
 
-<p><span>与严格相等运算符一样，严格不等运算符始终认为不同类型的对象是不同的</span>:</p>
+<p>与严格相等运算符一样，严格不等运算符始终认为不同类型的对象是不同的:</p>
 
-<pre class="brush: js notranslate">3 !== "3"; // true</pre>
+<pre class="brush: js">3 !== "3"; // true</pre>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="比较相同类型的对象">比较相同类型的对象</h3>
 
-<pre class="brush: js notranslate">console.log("hello" !== "hello");   // false
+<pre class="brush: js">console.log("hello" !== "hello");   // false
 console.log("hello" !== "hola");    // true
 
 console.log(3 !== 3);               // false
@@ -46,7 +44,7 @@ console.log(null !== null);         // false</pre>
 
 <h3 id="比较不同类型的对象">比较不同类型的对象</h3>
 
-<pre class="brush: js notranslate">console.log("3" !== 3);           // true
+<pre class="brush: js">console.log("3" !== 3);           // true
 
 console.log(true !== 1);          // true
 
@@ -54,7 +52,7 @@ console.log(null !== undefined);  // true</pre>
 
 <h3 id="比较Object对象">比较Object对象</h3>
 
-<pre class="brush: js notranslate">const object1 = {
+<pre class="brush: js">const object1 = {
   name: "hello"
 }
 

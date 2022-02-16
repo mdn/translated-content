@@ -22,11 +22,11 @@ RangeError: Invalid array buffer length (Chrome)
 <p>一個無效的陣列長度可能發生於以下幾種情形:</p>
 
 <ul>
- <li>建立了一個長度為負或大於等於2<sup>32</sup>的 {{jsxref("Array")}} 或 {{jsxref("ArrayBuffer")}} </li>
- <li>將 {{jsxref("Array.length")}} 屬性設為負值或大於等於 2<sup>32</sup></li>
+ <li>建立了一個長度為負或大於等於2^32的 {{jsxref("Array")}} 或 {{jsxref("ArrayBuffer")}} </li>
+ <li>將 {{jsxref("Array.length")}} 屬性設為負值或大於等於 2^32</li>
 </ul>
 
-<p>為什麼 <code>Array</code>  和 <code>ArrayBuffer</code> 的長度有限?   <code>Array</code> 和 <code>ArrayBuffer</code> 的屬性以一個32位元的非負整數表使，因此僅能儲存 0 到 2<sup>32</sup>-1 的數值。</p>
+<p>為什麼 <code>Array</code>  和 <code>ArrayBuffer</code> 的長度有限?   <code>Array</code> 和 <code>ArrayBuffer</code> 的屬性以一個32位元的非負整數表使，因此僅能儲存 0 到 2^32 - 1 的數值。</p>
 
 <p>If you are creating an <code>Array</code>, using the constructor, you probably want to use the literal notation instead, as the first argument is interpreted as the length of the <code>Array</code>.</p>
 

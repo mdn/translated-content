@@ -43,7 +43,7 @@ DBDeleteRequest.onsuccess = function(event) {
  <dt>
   options {{ NonStandardBadge() }}</dt>
  <dd>
-  Geckoの<a href="/en-US/Firefox/Releases/26">version 26</a>から、永続的な（既定値）IndexedDBまたは、一時的なストレージ（shared pool）を削除するための、標準化されていないオプションのストレージパラメーターを含めることができます。</dd>
+  Geckoの<a href="/ja/Firefox/Releases/26">version 26</a>から、永続的な（既定値）IndexedDBまたは、一時的なストレージ（shared pool）を削除するための、標準化されていないオプションのストレージパラメーターを含めることができます。</dd>
 </dl>
 <div class="note">
  <p><strong>Note</strong>: Data in temporary storage persists until the global limit for the pool is reached. The global limit calculation is relatively complex, but we are considering changing it (see  {{ Bug("968272") }}). When the global limit is reached, then data for the least recently used origin is deleted. There's also a group limit (eTLD+1 group/domain) which is currently 20% of the global limit. All requests that would exceed the group limit are just rejected.</p>
@@ -69,7 +69,7 @@ DBDeleteRequest.onsuccess = function(event) {
 
 <h2 id="関連情報">関連情報</h2>
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+ <li><a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>

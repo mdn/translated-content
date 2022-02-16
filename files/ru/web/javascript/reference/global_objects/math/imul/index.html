@@ -13,15 +13,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/imul
 ---
 <div>{{JSRef("Global_Objects", "Math")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>Math.imul()</code></strong> возвращает результат перемножения в стиле C двух 32-битных чисел.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>Math.imul(<var>a</var>, <var>b</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>a</code></dt>
@@ -30,13 +30,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/imul
  <dd>Второе число.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>Math.imul()</code> позволяет выполнять быстрое перемножение двух 32-битных чисел с семантикой C. Эта возможность полезна для таких проектов, как <a href="http://en.wikipedia.org/wiki/Emscripten">Emscripten</a>. Поскольку метод <code>imul()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.imul()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> (поскольку объект <code>Math</code> не является конструктором).</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_Math.imul" name="Example:_Using_Math.imul">Пример: использование метода <code>Math.imul()</code></h3>
+<h3 id="Example:_Using_Math.imul">Пример: использование метода <code>Math.imul()</code></h3>
 
 <pre class="brush: js">Math.imul(2, 4);          // 8
 Math.imul(-1, 8);         // -8
@@ -45,7 +45,7 @@ Math.imul(0xffffffff, 5); // -5
 Math.imul(0xfffffffe, 5); // -10
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Этот метод может эмулироваться следующим способом:</p>
 
@@ -60,23 +60,10 @@ Math.imul(0xfffffffe, 5); // -10
 };
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.imul', 'Math.imul')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>

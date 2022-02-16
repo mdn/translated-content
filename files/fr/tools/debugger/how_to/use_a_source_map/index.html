@@ -6,28 +6,44 @@ original_slug: Outils/Débogueur/Comment/Utiliser_une_source_map
 ---
 <div>{{ToolsSidebar}}</div>
 
-<p>Les sources JavaScript exécutées par le navigateur sont souvent différentes des sources originales crées par un développeur. Par exemple :</p>
+<p>Les sources JavaScript exécutées par le navigateur sont souvent différentes des sources originales créées par la personne qui les a développées. Par exemple&nbsp;:</p>
 
 <ul>
- <li>Les sources sont souvent combinées et <a href="https://en.wikipedia.org/wiki/Minification_%28programming%29">minifiées</a> afin d'optimiser le temps que met le serveur à les fournir.</li>
- <li>Le JavaScript d'une page est souvent généré automatiquement. Par exemple lorsqu'il est compilé depuis un langage comme <a href="http://coffeescript.org/">CoffeeScript</a> ou <a href="http://www.typescriptlang.org/">TypeScript</a>.</li>
+ <li>Les sources sont souvent combinées et <a href="https://en.wikipedia.org/wiki/Minification_(programming)">minifiées</a> afin d'optimiser le temps que met le serveur à les fournir.</li>
+ <li>Le JavaScript d'une page est souvent généré automatiquement. Par exemple lorsqu'il est compilé depuis un langage comme <a href="https://coffeescript.org/">CoffeeScript</a> ou <a href="https://www.typescriptlang.org/">TypeScript</a>.</li>
 </ul>
 
-<p>Dans ces situations, il est bien plus facile de déboguer le code dans son état original plutôt que dans celui utilisé par le navigateur. Une <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">cartographie de code source</a> (source map) est un fichier grâce auquel le débogueur peut faire le lien entre le code étant exécuté et les fichiers sources originaux, permettant ainsi au navigateur de reconstruire la source originale et de l'afficher dans le Débogueur.</p>
+<p>Dans ces situations, il est bien plus facile de déboguer le code dans son état original plutôt que dans celui utilisé par le navigateur. Une <a href="https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">cartographie de code source</a> (<i lang="en">source map</i>) est un fichier grâce auquel le débogueur peut faire le lien entre le code étant exécuté et les fichiers sources originaux, permettant ainsi au navigateur de reconstruire la source originale et de l'afficher dans le Débogueur.</p>
 
-<p>Pour activer le débogueur, il est nécessaire de :</p>
+<p>Pour activer le débogueur, il est nécessaire de&nbsp;:</p>
 
 <ul>
- <li>générer la source map</li>
- <li>inclure une instruction en commentaire dans le fichier transformé, qui pointe vers la source map. La syntaxe du commentaire est la suivante :</li>
+ <li>Générer la <i lang="en">source map</i></li>
+ <li>Inclure une instruction en commentaire dans le fichier transformé, qui pointe vers la <i lang="en">source map</i>.</li>
 </ul>
 
-<pre class="brush: js notranslate">//# sourceMappingURL=http://exemple.com/chemin/vers/votre/sourcemap.map</pre>
+<p>Le commentaire qui pointe vers la cartographie pourra avoir une syntaxe différente selon le langage utilisé.</p>
+<ul>
+  <li>
+    <p>Pour les fichiers JavaScript&nbsp;:</p>
+    <pre class="brush: js">//# sourceMappingURL=http://example.com/chemin/vers/la/sourcemap.map</pre>
+  </li>
+  <li>
+    <p>Pour les fichiers CSS, <code>/*…*/</code> est la seule syntaxe valide pour les commentaires&nbsp;:</p>
+    <pre class="brush: css">/*# sourceMappingURL=http://example.com/chemin/vers/la/sourcemap.map */</pre>
+  </li>
+</ul>
 
 <p>{{EmbedYouTube("Fqd15gHC4Pg")}}</p>
 
-<p>Dans la vidéo ci-dessus, la page <a href="https://mdn.github.io/devtools-examples/sourcemaps-in-console/index.html">https://mdn.github.io/devtools-examples/sourcemaps-in-console/index.html</a> est utilisée. Cette page charge une source nommée "main.js" qui a été écrite en CoffeeScript puis compilée vers JavaScript. La source compilée contient le commentaire suivant qui pointe vers la source map :</p>
+<p>Dans la vidéo ci-dessus, la page <a href="https://mdn.github.io/devtools-examples/sourcemaps-in-console/index.html">https://mdn.github.io/devtools-examples/sourcemaps-in-console/index.html</a> est utilisée. Cette page charge une source nommée <code>main.js</code> qui a été écrite en CoffeeScript puis compilée vers JavaScript. La source compilée contient le commentaire suivant qui pointe vers la <i lang="en">source map</i>&nbsp;:</p>
 
-<pre class="brush: js notranslate">//# sourceMappingURL=main.js.map</pre>
+<pre class="brush: js">//# sourceMappingURL=main.js.map</pre>
 
-<p>Dans le <a href="/fr/docs/Tools/Debugger/UI_Tour#Source_list_pane">panneau des sources</a>, du Débogueur, la source CoffeeScript originale apparait en tant que "main.coffee". Il est alors possible de la déboguer comme n'importe quelle source.</p>
+<p>Dans le <a href="/fr/docs/Tools/Debugger/UI_Tour#source_list_pane">panneau des sources</a>, du Débogueur, la source CoffeeScript originale apparait en tant que <code>main.coffee</code>. Il est alors possible de la déboguer comme n'importe quelle source.</p>
+
+<h2>Voir aussi</h2>
+
+<ul>
+  <li><a href="https://sourcemaps.info/spec.html">La spécification pour les <i lang="en">source maps</i></a></li>
+</ul>

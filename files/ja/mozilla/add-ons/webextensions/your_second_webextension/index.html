@@ -7,14 +7,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 ---
 <div>{{AddonSidebar}}
-<p><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Your_first_WebExtension">初めての拡張機能</a>を一通り読んでいる場合、既に拡張機能の書き方を知っていることと思います。<span class="seoSummary">この記事では、API の使い方をより詳しく説明するため、前回よりも少し複雑なアドオンを書いてみます。</span></p>
+<p><a href="/ja/Add-ons/WebExtensions/Your_first_WebExtension">初めての拡張機能</a>を一通り読んでいる場合、既に拡張機能の書き方を知っていることと思います。<span class="seoSummary">この記事では、API の使い方をより詳しく説明するため、前回よりも少し複雑なアドオンを書いてみます。</span></p>
 
 <p>この拡張機能では Firefox のツールバーにボタンを新しく追加します。ユーザーがこのボタンをクリックすると、動物を選択できるポップアップが表示されます。ユーザーが動物を選択すると、ウェブページのコンテンツが選択した動物の画像に置き換わります。</p>
 
 <p>これらの機能を以下のように実装していきます。</p>
 
 <ul>
- <li><strong><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_action">ブラウザーアクション </a></strong><strong>（Firefox のツールバーに表示させるボタン）を定義</strong><br>
+ <li><strong><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_action">ブラウザーアクション </a></strong><strong>（Firefox のツールバーに表示させるボタン）を定義</strong><br>
   このボタン用に次のものを用意します。
   <ul>
    <li>"beasts-32.png" というアイコン</li>
@@ -88,18 +88,18 @@ cd beastify</pre>
 <span class="punctuation token">}</span></code></pre>
 
 <ul>
- <li>最初の 3 つのキー <code><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>、<code><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/name">name</a></code>、<code><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/version">version</a></code> は必須であり、拡張機能の基本的なメタデータを指定します</li>
- <li><code><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/description">description</a></code> と <code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></code> は省略可能ですが、設定しておくことをお勧めします。これは拡張機能についての役立つ情報となります</li>
- <li><code><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> は省略可能ですが、設定しておくことをお勧めします。この値は拡張機能のアイコンを指定するものであり、アイコンはアドオンマネージャーに表示されます</li>
- <li><code><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> は拡張機能に必要なパーミッションのリストです。ここでは <a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code> パーミッション </a> を要請しています</li>
- <li><code><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> はツールバーのボタンを指定するものです。ここでは 3 つの情報を指定しています
+ <li>最初の 3 つのキー <code><a href="/ja/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>、<code><a href="/ja/Add-ons/WebExtensions/manifest.json/name">name</a></code>、<code><a href="/ja/Add-ons/WebExtensions/manifest.json/version">version</a></code> は必須であり、拡張機能の基本的なメタデータを指定します</li>
+ <li><code><a href="/ja/Add-ons/WebExtensions/manifest.json/description">description</a></code> と <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></code> は省略可能ですが、設定しておくことをお勧めします。これは拡張機能についての役立つ情報となります</li>
+ <li><code><a href="/ja/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> は省略可能ですが、設定しておくことをお勧めします。この値は拡張機能のアイコンを指定するものであり、アイコンはアドオンマネージャーに表示されます</li>
+ <li><code><a href="/ja/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> は拡張機能に必要なパーミッションのリストです。ここでは <a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code> パーミッション </a> を要請しています</li>
+ <li><code><a href="/ja/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> はツールバーのボタンを指定するものです。ここでは 3 つの情報を指定しています
   <ul>
    <li><code>default_icon</code> ではボタンのアイコンを指定します（必須項目）</li>
    <li><code>default_title</code> ではツールチップの文字列を指定します（省略可）</li>
    <li><code>default_popup</code> ではユーザーがボタンをクリックした際に表示されるポップアップを指定します。今回はポップアップを表示させたいので、拡張機能に含める HTML ファイルを <code>defualt_popup</code> キーで指定しています</li>
   </ul>
  </li>
- <li><code><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></code> はウェブページからアクセスしたいファイルのリストです。この拡張機能では、拡張機能に同梱した画像でウェブページを置き換えるため、画像をウェブページからアクセス可能にする必要があります</li>
+ <li><code><a href="/ja/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></code> はウェブページからアクセスしたいファイルのリストです。この拡張機能では、拡張機能に同梱した画像でウェブページを置き換えるため、画像をウェブページからアクセス可能にする必要があります</li>
 </ul>
 
 <p>パスはすべて manifest.json 自身からの相対パスで指定することに注意します。</p>
@@ -168,7 +168,7 @@ touch choose_beast.html choose_beast.css choose_beast.js</code></pre>
 
 <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
 
-<p><code>"popup-content"</code> という ID の <code><a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> 要素があって、動物の選択をする要素が入っています。<code>"error-content"</code> という ID の <code>&lt;div&gt;</code> 要素と <code>"hidden"</code> クラスもあります。それはポップアップの初期化に問題がある場合に使います。</p>
+<p><code>"popup-content"</code> という ID の <code><a href="/ja/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> 要素があって、動物の選択をする要素が入っています。<code>"error-content"</code> という ID の <code>&lt;div&gt;</code> 要素と <code>"hidden"</code> クラスもあります。それはポップアップの初期化に問題がある場合に使います。</p>
 
 <p>通常のウェブページと同じように CSS と JS ファイルを読み込んでいることに注意してください。</p>
 
@@ -312,9 +312,9 @@ browser<span class="punctuation token">.</span>tabs<span class="punctuation toke
 <span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>listenForClicks<span class="punctuation token">)</span>
 <span class="punctuation token">.</span><span class="keyword token">catch</span><span class="punctuation token">(</span>reportExecuteScriptError<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-<p>開始するのは 96行です。ポップアップスクリプトはポップアップが読み込まれ次第、アクティブなタブのコンテンツスクリプトを実行し、その手段は <code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">browser.tabs.executeScript()</a></code> API です。コンテンツスクリプトの実行が成功したら、タブが閉じられるかユーザーが別のページに移動するまで、コンテンツスクリプトがページにロードされたままになります。</p>
+<p>開始するのは 96行です。ポップアップスクリプトはポップアップが読み込まれ次第、アクティブなタブのコンテンツスクリプトを実行し、その手段は <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">browser.tabs.executeScript()</a></code> API です。コンテンツスクリプトの実行が成功したら、タブが閉じられるかユーザーが別のページに移動するまで、コンテンツスクリプトがページにロードされたままになります。</p>
 
-<p><code>browser.tabs.executeScript()</code> の呼び出しがよく失敗する理由は、コンテンツスクリプトをすべてのページでは実行できないことです。例えば、about:debugging のような権限のあるブラウザーページでは実行できませんし、<a href="https://addons.mozilla.org/">addons.mozilla.org</a> ドメイン内のページでも実行できません。失敗した場合、<code>reportExecuteScriptError()</code> は <code>"popup-content"</code> <code>&lt;div&gt;</code> を隠して、<code>"error-content"</code> <code>&lt;div&gt;</code> を表示し、エラーを <a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Debugging">console</a> にログ出力します。</p>
+<p><code>browser.tabs.executeScript()</code> の呼び出しがよく失敗する理由は、コンテンツスクリプトをすべてのページでは実行できないことです。例えば、about:debugging のような権限のあるブラウザーページでは実行できませんし、<a href="https://addons.mozilla.org/">addons.mozilla.org</a> ドメイン内のページでも実行できません。失敗した場合、<code>reportExecuteScriptError()</code> は <code>"popup-content"</code> <code>&lt;div&gt;</code> を隠して、<code>"error-content"</code> <code>&lt;div&gt;</code> を表示し、エラーを <a href="/ja/Add-ons/WebExtensions/Debugging">console</a> にログ出力します。</p>
 
 <p>コンテンツスクリプトの実行が成功したら、<code>listenForClicks()</code> を呼び出します。これはポップアップのクリックをリッスンします。</p>
 
@@ -327,14 +327,14 @@ browser<span class="punctuation token">.</span>tabs<span class="punctuation toke
 
 <ul>
  <li>特定の動物画像を指す URL をボタンクリックに割り当てる</li>
- <li>CSS を挿入してページの全コンテンツを隠し、その手段は <code><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/API/tabs/insertCSS">browser.tabs.insertCSS()</a></code> API</li>
- <li>コンテンツスクリプトに "beastify" 送り、その手段は <code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">browser.tabs.sendMessage()</a></code> API。ページを動物化するか尋ねて、動物画像への URL を渡す</li>
+ <li>CSS を挿入してページの全コンテンツを隠し、その手段は <code><a href="/ja/Add-ons/WebExtensions/API/tabs/insertCSS">browser.tabs.insertCSS()</a></code> API</li>
+ <li>コンテンツスクリプトに "beastify" 送り、その手段は <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">browser.tabs.sendMessage()</a></code> API。ページを動物化するか尋ねて、動物画像への URL を渡す</li>
 </ul>
 
 <p><code>reset()</code> 関数は動物化を取り消す:</p>
 
 <ul>
- <li>追加した CSS を削除し、その手段は <code><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/API/tabs/removeCSS">browser.tabs.removeCSS()</a></code> API</li>
+ <li>追加した CSS を削除し、その手段は <code><a href="/ja/Add-ons/WebExtensions/API/tabs/removeCSS">browser.tabs.removeCSS()</a></code> API</li>
  <li>コンテンツスクリプトにページをリセットする "reset" メッセージを送る</li>
 </ul>
 
@@ -393,10 +393,10 @@ browser<span class="punctuation token">.</span>tabs<span class="punctuation toke
 
 <p>このコンテンツスクリプトが最初にすることは、グローバル変数の <code>window.hasRun</code> のチェックです: セットされていればスクリプトは早くリターンし、そうでなければ <code>window.hasRun</code> をセットして処理し続けます。こうする理由は、ユーザーがポップアップを開くたびに、ポップアップはアクティブなタブのコンテンツスクリプトを実行して、そのために 1 つのタブに複数の実行スクリプトのインスタンスができてしまいます。これが起きると、最初のインスタンスだけが処理するのを確かめる必要があります。</p>
 
-<p>その次に、始まる場所は 40行で、ここでコンテンツスクリプトはポップアップからのメッセージをリッスンし、その手段は <code><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage</a></code> API です。上で見たように、ポップアップスクリプトは 2種類の異なるメッセージを送ります: "beastify" と "reset"</p>
+<p>その次に、始まる場所は 40行で、ここでコンテンツスクリプトはポップアップからのメッセージをリッスンし、その手段は <code><a href="/ja/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage</a></code> API です。上で見たように、ポップアップスクリプトは 2種類の異なるメッセージを送ります: "beastify" と "reset"</p>
 
 <ul>
- <li>メッセージが "beastify" なら、動物画像を指す URL が含まれるはずです。以前の "beastify" 呼び出しで追加された動物をすべて削除して、<code><a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> 要素を作成、追加して、その <code>src</code> 属性に動物の URL をセットします。</li>
+ <li>メッセージが "beastify" なら、動物画像を指す URL が含まれるはずです。以前の "beastify" 呼び出しで追加された動物をすべて削除して、<code><a href="/ja/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> 要素を作成、追加して、その <code>src</code> 属性に動物の URL をセットします。</li>
  <li>メッセージが "reset" なら、ただ追加された動物をすべて削除します。</li>
 </ul>
 
@@ -445,7 +445,7 @@ browser<span class="punctuation token">.</span>tabs<span class="punctuation toke
 
 <h2 id="Developing_from_the_command_line" name="Developing_from_the_command_line">コマンドラインから開発する</h2>
 
-<p>仮インストールを <a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a> ツールを用いて自動化できます。次を試してください:</p>
+<p>仮インストールを <a href="/ja/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a> ツールを用いて自動化できます。次を試してください:</p>
 
 <pre class="brush: bash line-numbers  language-bash"><code class="language-bash">cd beastify
 web-ext run</code></pre>

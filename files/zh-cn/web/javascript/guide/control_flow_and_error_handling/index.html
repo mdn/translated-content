@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 <p>{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Grammar_and_Types", "Web/JavaScript/Guide/Loops_and_iteration")}}</p>
 
-<p class="summary">JavaScript 提供一套灵活的语句集，<span class="notranslate">特别是控制流语句</span>，你可以<span class="notranslate">用它</span>在你的应用程序中实现大量的交互性功能。本章节我们将带来关于JavaScript语句的一些概览。</p>
+<p>JavaScript 提供一套灵活的语句集，特别是控制流语句，你可以用它在你的应用程序中实现大量的交互性功能。本章节我们将带来关于JavaScript语句的一些概览。</p>
 
 <p> 这一章中的语句，在 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript参考</a> 中包含更为详尽的细节。在 JavaScript 代码中，分号（;）字符被用来分割语句。</p>
 
@@ -31,11 +31,9 @@ translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 
 <p>语句块通常用于流程控制，如<code>if</code>，<code>for</code>，<code>while</code>等等。</p>
 
-<div style="margin-right: 270px;">
 <pre class="brush: js">while (x &lt; 10) {
   x++;
 }</pre>
-</div>
 
 <p>这里<code>{ x++; }</code>就是语句块。</p>
 
@@ -97,12 +95,13 @@ alert(x); // 输出的结果为 2
 
 <p>不建议在条件表达式中使用赋值语句，因为在快速查阅代码时容易把它看成等值比较。例如，不要使用下面的代码：</p>
 
-<div class="blockIndicator warning">
-<p>   if(x = y){</p>
-
-<p> /*  语句  */</p>
-
-<p>}</p>
+<div class="warning">
+<p><strong>警告：</strong></p>
+<pre class="brush: js">
+  if(x = y){
+    /*  语句  */
+  }
+</pre>
 </div>
 
 <p>如果你需要在条件表达式中使用赋值，通常在赋值语句前后额外添加一对括号。例如： </p>
@@ -132,9 +131,9 @@ alert(x); // 输出的结果为 2
 
 <p>请不要混淆原始的布尔值<code>true</code>和<code>false</code> 与 {{jsxref("Boolean")}}对象的真和假。例如：</p>
 
-<pre class="brush: js"><code class="language-js"><span class="keyword token">var</span> b <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Boolean</span><span class="punctuation token">(</span><span class="keyword token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">if</span> <span class="punctuation token">(</span>b<span class="punctuation token">)</span> <span class="comment token">//结果视为真</span>
-<span class="keyword token">if</span> <span class="punctuation token">(</span>b <span class="operator token">==</span> <span class="keyword token">true</span><span class="punctuation token">)</span> <span class="comment token">// 结果视为假</span></code></pre>
+<pre class="brush: js">var b = new Boolean(false);
+if (b) //结果视为真
+if (b == true) // 结果视为假</pre>
 
 <h4 id="示例_2"><strong>示例</strong></h4>
 
@@ -219,7 +218,7 @@ document.write("Is there anything else you'd like?&lt;br&gt;");
 
 <h3 id="throw_语句"><code>throw</code> 语句</h3>
 
-<p>使用<font face="Courier New, Andale Mono, monospace"><code>throw</code>语句抛出一个异常。当你抛出异常，你规定一个含有值的表达式要被抛出。</font></p>
+<p>使用<code>throw</code>语句抛出一个异常。当你抛出异常，你规定一个含有值的表达式要被抛出。</p>
 
 <pre class="brush: js">throw expression;
 </pre>
@@ -233,9 +232,8 @@ throw {toString: function() { return "I'm an object!"; } };
 
 </pre>
 
-<div class="note"><strong>注意：</strong>你可以在抛出异常时声明一个对象。那你就可以在catch块中查询到对象的属性。
-
-
+<div class="note">
+  <p><strong>备注：</strong>你可以在抛出异常时声明一个对象。那你就可以在catch块中查询到对象的属性。</p>
 </div>
 
 <pre class="brush: js">// Create an object type UserException
@@ -280,7 +278,7 @@ catch (e) {
   logMyErrors(e); // pass exception object to error handler -&gt; your own function
 }</pre>
 
-<h4 id="The_catch_Block" name="The_catch_Block"><code>catch</code> 块</h4>
+<h4 id="The_catch_Block"><code>catch</code> 块</h4>
 
 <p>你可以使用<code>catch</code>块来处理所有可能在<code>try</code>块中产生的异常。</p>
 
@@ -369,7 +367,7 @@ try {
 // caught inner "bogus"
 </pre>
 
-<h4 id="Nesting_try...catch_Statements" name="Nesting_try...catch_Statements">嵌套 try...catch 语句</h4>
+<h4 id="Nesting_try...catch_Statements">嵌套 try...catch 语句</h4>
 
 <p>你可以嵌套一个或多个<code>try ... catch</code>语句。如果一个内部<code>try ... catch</code>语句没有<code>catch</code>块，它需要有一个<code>finally</code>块，并且封闭的<code>try ... catch</code>语句的<code>catch</code>块被检查匹配。有关更多信息，请参阅<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch">try... catch</a>参考页上的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks">嵌套try-blocks</a>。</p>
 
@@ -408,7 +406,7 @@ catch (e) {
  <li><em>settled：</em>Promise 处于 fulfilled 或 rejected 二者中的任意一个状态, 不会是 pending。</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8633/promises.png" style="height: 297px; width: 801px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/8633/promises.png"></p>
 
 <h3 id="通过_XHR_加载图片">通过 XHR 加载图片</h3>
 

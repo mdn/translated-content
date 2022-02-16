@@ -7,17 +7,17 @@ translation_of: Web/CSS/perspective
 
 <h2 id="Описание">Описание</h2>
 
-<p>Свойство <a href="/en/CSS" title="CSS">CSS</a> <strong><code>perspective </code></strong><code>определяет расcтояние между плоскостью z = 0 и пользователем для того чтобы придать 3D-позиционируемому элементу эффект переспективы. Каждый трансформируемый элемент с z &gt; 0 станет больше, с z &lt; 0 соответственно меньше.</code></p>
+<p>Свойство <a href="/en/CSS" title="CSS">CSS</a> <strong><code>perspective </code></strong>определяет расcтояние между плоскостью z = 0 и пользователем для того чтобы придать 3D-позиционируемому элементу эффект переспективы. Каждый трансформируемый элемент с z &gt; 0 станет больше, с z &lt; 0 соответственно меньше.</p>
 
 <p>Элементы части которые находятся за пользователем, т.е. z-координата этих элементов больше чем значение  свойства <code>perspective, не отрисовываются.</code></p>
 
-<p><em><code>Точка схождения </code></em><code>по умолчанию расположена в центре элемента, но её можно переместить используя свойство </code>{{ cssxref("perspective-origin") }}.</p>
+<p><em><code>Точка схождения </code></em>по умолчанию расположена в центре элемента, но её можно переместить используя свойство {{ cssxref("perspective-origin") }}.</p>
 
 <p>При использовании данного свойства со значениями отличными от 0 или none создаётся новый <a href="/en/CSS/Understanding_z-index/The_stacking_context" title="en/CSS/Understanding_z-index/The_stacking_context">stacking context</a>.</p>
 
 <p>{{cssinfo}}</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="brush: css">/* Keyword value */
 perspective: none;
@@ -38,16 +38,16 @@ perspective: unset;
  <dt><code>none</code></dt>
  <dd><font face="Consolas, Liberation Mono, Courier, monospace">Указывает что трансформация перспективы к элементу применяться не будет.</font></dd>
  <dt><code>&lt;length&gt;</code></dt>
- <dd>{{cssxref("&lt;length&gt;")}} у<code>станавливает растояние от пользователя до плоскости z = 0. Применяет трасформацию к элементу и его содержимому. Если значение отрицательно или равно 0, то преобразование не применяется.</code></dd>
+ <dd>{{cssxref("&lt;length&gt;")}} устанавливает растояние от пользователя до плоскости z = 0. Применяет трасформацию к элементу и его содержимому. Если значение отрицательно или равно 0, то преобразование не применяется.</dd>
 </dl>
 
 <h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Three_cubes" name="Three_cubes">Три куба</h3>
+<h3 id="Three_cubes">Три куба</h3>
 
 <h4 id="HTML_Content">HTML Content</h4>
 
@@ -193,30 +193,15 @@ th, p, td {
 
 <p>{{ EmbedLiveSample('Three_cubes', 940, 460) }}</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ Specname('CSS3 Transforms', '#perspective', 'perspective') }}</td>
-   <td>{{ Spec2('CSS3 Transforms') }}</td>
-   <td>Первоначальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("css.properties.perspective")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/CSS/Using_CSS_transforms" title="/en-US/docs/CSS/Using_CSS_transforms">Using CSS Transforms</a></li>

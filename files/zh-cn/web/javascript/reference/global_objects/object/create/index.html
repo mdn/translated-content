@@ -16,13 +16,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <div>{{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<h2 id="Syntax">语法</h2>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<pre>Object.create(<var>proto，[</var><var>propertiesObject</var>])</pre>
 
-<pre class="notranslate">Object.create(<var>proto，[</var><var>propertiesObject</var>])</pre>
-
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>proto</code></dt>
@@ -31,21 +29,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
  <dd>可选。需要传入一个对象，该对象的属性类型参照{{jsxref("Object.defineProperties()")}}的第二个参数。如果该参数被指定且不为 {{jsxref("undefined")}}，该传入对象的自有可枚举属性(即其自身定义的属性，而不是其原型链上的枚举属性)将为新创建的对象添加指定的属性值和对应的属性描述符。</dd>
 </dl>
 
-<h3 id="Parameters" name="Parameters">返回值</h3>
+<h3 id="Parameters">返回值</h3>
 
 <p>一个新对象，带着指定的原型对象和属性。</p>
 
-<h3 id="Description" name="Description">例外</h3>
+<h3 id="Description">例外</h3>
 
-<p>如果<code>propertiesObject</code>参数是 {{jsxref("null")}} 或非原始包装对象，则抛出一个 {{jsxref("TypeError")}} 异常。</p>
+<p>如果<code>proto</code>参数不是 {{jsxref("null")}} 或非原始包装对象，则抛出一个 {{jsxref("TypeError")}} 异常。</p>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
 <h3 id="用_Object.create实现类式继承">用 <code>Object.create</code>实现类式继承</h3>
 
 <p>下面的例子演示了如何使用<code>Object.create()</code>来实现类式继承。这是一个所有版本JavaScript都支持的单继承。</p>
 
-<pre class="brush: js notranslate">// Shape - 父类(superclass)
+<pre class="brush: js">// Shape - 父类(superclass)
 function Shape() {
   this.x = 0;
   this.y = 0;
@@ -75,9 +73,9 @@ console.log('Is rect an instance of Shape?',
   rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'</pre>
 
-<p>如果你希望能继承到多个对象，则可以使用<span class="short_text" id="result_box" lang="zh-CN"><span>混入的方式。</span></span></p>
+<p>如果你希望能继承到多个对象，则可以使用混入的方式。</p>
 
-<pre class="brush: js notranslate">function MyClass() {
+<pre class="brush: js">function MyClass() {
      SuperClass.call(this);
      OtherSuperClass.call(this);
 }
@@ -98,7 +96,7 @@ MyClass.prototype.myMethod = function() {
 
 <h3 id="使用_Object.create_的_propertyObject参数">使用 <code>Object.create</code> 的 <code>propertyObject</code>参数</h3>
 
-<pre class="brush: js notranslate">var o;
+<pre class="brush: js">var o;
 
 // 创建一个原型为null的空对象
 o = Object.create(null);
@@ -161,13 +159,13 @@ o2 = Object.create({}, {
   }
 });</pre>
 
-<h2 id="Polyfill" style="line-height: 24px;">Polyfill</h2>
+<h2 id="Polyfill">Polyfill</h2>
 
 <p>这个 polyfill 涵盖了主要的应用场景，它创建一个已经选择了原型的新对象，但没有把第二个参数考虑在内。</p>
 
 <p>请注意，尽管在 ES5 中 <code>Object.create</code>支持设置为<code>[[Prototype]]</code>为<code>null</code>，但因为那些ECMAScript5以前版本限制，此 polyfill 无法支持该特性。</p>
 
-<pre class="brush: js notranslate">if (typeof Object.create !== "function") {
+<pre class="brush: js">if (typeof Object.create !== "function") {
     Object.create = function (proto, propertiesObject) {
         if (typeof proto !== 'object' &amp;&amp; typeof proto !== 'function') {
             throw new TypeError('Object prototype may only be an Object: ' + proto);
@@ -184,7 +182,7 @@ o2 = Object.create({}, {
     };
 }</pre>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -215,11 +213,11 @@ o2 = Object.create({}, {
 
 <p>{{Compat("javascript.builtins.Object.create")}}</p>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Object.defineProperty")}}</li>
  <li>{{jsxref("Object.defineProperties")}}</li>
  <li>{{jsxref("Object.prototype.isPrototypeOf")}}</li>
- <li>John Resig's post on <a class="external external-icon" href="http://ejohn.org/blog/objectgetprototypeof/" style="white-space: pre-line;" title="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a></li>
+ <li>John Resig's post on <a class="external external-icon" href="http://ejohn.org/blog/objectgetprototypeof/" title="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a></li>
 </ul>

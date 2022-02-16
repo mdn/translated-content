@@ -13,7 +13,7 @@ translation_of: Web/API/Request/cache
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p>{{domxref("Request")}} インターフェースの <strong><code>cache</code></strong> 読み取り専用プロパティには、リクエストのキャッシュモードが含まれています。リクエストがブラウザの <a href="/docs/Web/HTTP/Caching">HTTP キャッシュ</a> とどのように相互作用するかを制御します。</p>
+<p>{{domxref("Request")}} インターフェースの <strong><code>cache</code></strong> 読み取り専用プロパティには、リクエストのキャッシュモードが含まれています。リクエストがブラウザの <a href="/ja/docs/Web/HTTP/Caching">HTTP キャッシュ</a> とどのように相互作用するかを制御します。</p>
 
 <h2 id="構文">構文</h2>
 
@@ -27,8 +27,8 @@ translation_of: Web/API/Request/cache
  <li><code>default</code> — ブラウザは、HTTP キャッシュで一致するリクエストを探します。
 
   <ul>
-   <li>一致するものが<a href="/docs/Web/HTTP/Caching#Freshness">新しい</a>場合、キャッシュから返されます。</li>
-   <li>一致するものが古い場合、ブラウザはリモートサーバーに<a href="/docs/Web/HTTP/Conditional_requests">条件付きリクエスト</a>を送信します。リソースが変更されていないことをサーバーが示した場合、そのリソースはキャッシュから返されます。それ以外の場合、リソースはサーバーからダウンロードされ、キャッシュが更新されます。</li>
+   <li>一致するものが<a href="/ja/docs/Web/HTTP/Caching#Freshness">新しい</a>場合、キャッシュから返されます。</li>
+   <li>一致するものが古い場合、ブラウザはリモートサーバーに<a href="/ja/docs/Web/HTTP/Conditional_requests">条件付きリクエスト</a>を送信します。リソースが変更されていないことをサーバーが示した場合、そのリソースはキャッシュから返されます。それ以外の場合、リソースはサーバーからダウンロードされ、キャッシュが更新されます。</li>
    <li>一致するものがない場合、ブラウザは通常のリクエストを行い、ダウンロードしたリソースでキャッシュを更新します。</li>
   </ul>
  </li>
@@ -36,7 +36,7 @@ translation_of: Web/API/Request/cache
  <li><code>reload</code> — ブラウザは、最初にキャッシュを調べずにリモートサーバーからリソースをフェッチし、ダウンロードしたリソースでキャッシュを<em>更新します</em>。</li>
  <li><code>no-cache</code> — ブラウザは、HTTPキャッシュで一致するリクエストを探します。
   <ul>
-   <li>一致するものが<em>新しいか古いかを問わず</em>、ブラウザはリモートサーバーに<a href="/docs/Web/HTTP/Conditional_requests">条件付きリクエスト</a>を送信します。リソースが変更されていないことをサーバーが示した場合、そのリソースはキャッシュから返されます。それ以外の場合、リソースはサーバーからダウンロードされ、キャッシュが更新されます。</li>
+   <li>一致するものが<em>新しいか古いかを問わず</em>、ブラウザはリモートサーバーに<a href="/ja/docs/Web/HTTP/Conditional_requests">条件付きリクエスト</a>を送信します。リソースが変更されていないことをサーバーが示した場合、そのリソースはキャッシュから返されます。それ以外の場合、リソースはサーバーからダウンロードされ、キャッシュが更新されます。</li>
    <li>一致するものがない場合、ブラウザは通常のリクエストを行い、ダウンロードしたリソースでキャッシュを更新します。</li>
   </ul>
  </li>
@@ -49,9 +49,9 @@ translation_of: Web/API/Request/cache
  <li><code>only-if-cached</code> — ブラウザは、HTTPキャッシュで一致するリクエストを探します。
   <ul>
    <li>一致するものが<em>新しいか古いかを問わず</em>、キャッシュから返されます。</li>
-   <li>一致するものがない場合、ブラウザは <a href="/docs/Web/HTTP/Status/504">504 ゲートウェイタイムアウト</a>ステータスで応答します。</li>
+   <li>一致するものがない場合、ブラウザは <a href="/ja/docs/Web/HTTP/Status/504">504 ゲートウェイタイムアウト</a>ステータスで応答します。</li>
   </ul>
-  <code>"only-if-cached"</code> モードは、リクエストの<code><a href="/docs/Web/API/Request/mode">モード</a></code>が <code>"same-origin"</code> の場合にのみ使用できます。リクエストの<code>リダイレクト</code>プロパティが <code>"follow"</code> であり、リダイレクトが <code>"same-origin"</code> モードに違反していない場合、キャッシュされたリダイレクトがフォローされます。</li>
+  <code>"only-if-cached"</code> モードは、リクエストの<code><a href="/ja/docs/Web/API/Request/mode">モード</a></code>が <code>"same-origin"</code> の場合にのみ使用できます。リクエストの<code>リダイレクト</code>プロパティが <code>"follow"</code> であり、リダイレクトが <code>"same-origin"</code> モードに違反していない場合、キャッシュされたリダイレクトがフォローされます。</li>
 </ul>
 
 <h2 id="例">例</h2>
@@ -137,7 +137,7 @@ fetch("some.json", {cache: "only-if-cached", mode: "same-origin", signal: contro
 <h2 id="関連情報">関連情報</h2>
 
 <ul>
- <li><a href="/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/docs/Web/HTTP">HTTP</a></li>
+ <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+ <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
 </ul>

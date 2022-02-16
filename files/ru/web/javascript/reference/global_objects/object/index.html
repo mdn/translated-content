@@ -11,11 +11,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object
 ---
 <div>{{JSRef("Global_Objects", "Object")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Конструктор <code><strong>Object</strong></code> создаёт объект-обёртку.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>// Инициализатор объекта или литерал
 { [ <var>nameValuePair1</var>[, <var>nameValuePair2</var>[, ...<var>nameValuePairN</var>] ] ] }
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object
 new Object([<var>value</var>])
 </code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>nameValuePair1, nameValuePair2, ... nameValuePair<em>N</em></code></dt>
@@ -33,7 +33,7 @@ new Object([<var>value</var>])
  <dd>Любое значение.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Конструктор <code>Object</code> создаёт объект-обёртку для переданного значения. Если значением является {{jsxref("Global_Objects/null", "null")}} или {{jsxref("Global_Objects/undefined", "undefined")}}, создаёт и возвращает пустой объект, в противном случае возвращает объект такого типа, который соответствует переданному значению. Если значение уже является объектом, конструктор вернёт это значение.</p>
 
@@ -41,7 +41,7 @@ new Object([<var>value</var>])
 
 <p>Так же смотрите {{jsxref("Operators/Object_initializer", "синтаксис инициализатора объекта / литеральный синтаксис", "", 1)}}.</p>
 
-<h2 id="Properties" name="Properties">Свойства конструктора <code>Object</code></h2>
+<h2 id="Properties">Свойства конструктора <code>Object</code></h2>
 
 <dl>
  <dt><code>Object.length</code></dt>
@@ -50,7 +50,7 @@ new Object([<var>value</var>])
  <dd>Позволяет добавлять свойства ко всем объектам типа <code>Object</code>.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Методы конструктора <code>Object</code></h2>
+<h2 id="Methods">Методы конструктора <code>Object</code></h2>
 
 <dl>
  <dt>{{jsxref("Object.assign()")}}</dt>
@@ -91,21 +91,21 @@ new Object([<var>value</var>])
  <dd>Устанавливает прототип (т.е. внутреннее свойство <code>[[Prototype]]</code>)</dd>
 </dl>
 
-<h2 id="Object_instances" name="Object_instances">Экземпляры и прототип объекта <code>Object</code></h2>
+<h2 id="Object_instances">Экземпляры и прототип объекта <code>Object</code></h2>
 
 <p>Все объекты в JavaScript являются потомками <code>Object</code>; все объекты наследуют методы и свойства из прототипа объекта {{jsxref("Object.prototype")}}, хотя они и могут быть переопределены. Например, прототипы других конструкторов переопределяют свойство <code>constructor</code> и предоставляют свои собственные методы <code>toString()</code>. Изменения в объекте прототипа <code>Object</code> распространяются на все объекты до тех пор, пока свойства и методы, учитывающие эти изменения, не переопределяются дальше по цепочке прототипов.</p>
 
-<h3 id="Properties_of_Object_instances" name="Properties_of_Object_instances">Свойства</h3>
+<h3 id="Properties_of_Object_instances">Свойства</h3>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties')}}</div>
 
-<h3 id="Methods_of_Object_instances" name="Methods_of_Object_instances">Методы</h3>
+<h3 id="Methods_of_Object_instances">Методы</h3>
 
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example.3A_Using_Object_given_undefined_and_null_types" name="Example.3A_Using_Object_given_undefined_and_null_types">Пример: использование <code>Object</code> с типами <code>undefined</code> и <code>null</code></h3>
+<h3 id="Example.3A_Using_Object_given_undefined_and_null_types">Пример: использование <code>Object</code> с типами <code>undefined</code> и <code>null</code></h3>
 
 <p>Следующий пример сохраняет пустой объект <code>Object</code> в переменную <code>o</code>:</p>
 
@@ -130,38 +130,15 @@ var o = new Object(true);
 var o = new Object(Boolean());
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2', 'Object')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object-objects', 'Object')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer">Инициализатор объекта</a></li>

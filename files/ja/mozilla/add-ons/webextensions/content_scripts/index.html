@@ -9,11 +9,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 <p>コンテンツスクリプトは、特定のウェブページのコンテキストで実行される拡張機能の一部です（拡張機能の一部であるバックグラウンドスクリプトや、ウェブサイト自体の一部であるスクリプト、例えば {{HTMLElement("script")}} 要素みたいなものと対をなすような)。</p>
 
-<p><a href="/ja/Add-ons/WebExtensions/Background_scripts">バックグラウンドスクリプト</a>はすべての <a href="/ja/Add-ons/WebExtensions/API">WebExtension JavaScript API</a> にアクセスできますが、ウェブページのコンテンツに直接アクセスすることはできません。だからあなたの拡張機能がそれを行う必要がある場合は、コンテンツスクリプトが必要です。</p>
+<p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">バックグラウンドスクリプト</a>はすべての <a href="/ja/Add-ons/WebExtensions/API">WebExtension JavaScript API</a> にアクセスできますが、ウェブページのコンテンツに直接アクセスすることはできません。だからあなたの拡張機能がそれを行う必要がある場合は、コンテンツスクリプトが必要です。</p>
 
 <p>通常のウェブページで読み込まれたスクリプトと同様に、コンテンツスクリプトは、標準の DOM API を使用してページのコンテンツを読み取り、変更することができます。</p>
 
-<p>コンテンツスクリプトは、<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">WebExtension API</a> の小さなサブセット にしかアクセスできませんが、メッセージングシステムを使用して <a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">バックグラウンドスクリプトと通信</a>し、WebExtension API に間接的にアクセスすることができます。</p>
+<p>コンテンツスクリプトは、<a href="/ja/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">WebExtension API</a> の小さなサブセット にしかアクセスできませんが、メッセージングシステムを使用して <a href="/ja/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">バックグラウンドスクリプトと通信</a>し、WebExtension API に間接的にアクセスすることができます。</p>
 
 <div class="note">
 <p>コンテンツスクリプトは次のドメインでブロックされるのに注意してください:</p>
@@ -53,13 +53,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
  <li>
   <dl>
    <dt><strong>インストール時に、URL パターンにマッチするページ内へ</strong></dt>
-   <dd><code>manifest.json</code> の <code style="font-style: normal;"><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> キーを使用して、URL が<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Match_patterns">指定されたパターンにマッチする</a>ページをロードするたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。</dd>
+   <dd><code>manifest.json</code> の <code style="font-style: normal;"><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> キーを使用して、URL が<a href="/ja/Add-ons/WebExtensions/Match_patterns">指定されたパターンにマッチする</a>ページをロードするたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。</dd>
   </dl>
  </li>
  <li>
   <dl>
    <dt><strong>実行時に、URL パターンにマッチするページ内へ</strong></dt>
-   <dd>{{WebExtAPIRef("contentScripts")}} API を使って、URL が<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Match_patterns">指定されたパターンにマッチする</a>ページをロードするたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。これは method (1) のようなもので、違いは実行時にコンテンツスクリプトを追加/削除できることです。</dd>
+   <dd>{{WebExtAPIRef("contentScripts")}} API を使って、URL が<a href="/ja/Add-ons/WebExtensions/Match_patterns">指定されたパターンにマッチする</a>ページをロードするたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。これは method (1) のようなもので、違いは実行時にコンテンツスクリプトを追加/削除できることです。</dd>
   </dl>
  </li>
  <li>
@@ -72,7 +72,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 <p><em>フレームごと、拡張機能ごとの</em>グローバルスコープしかありません。これは 1 つのコンテンツスクリプトの変数は、読み込み方にかかわらず、他のコンテンツスクリプトからアクセスできることになります。</p>
 
-<p>方法 (1) と (2) では<a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">マッチパターン</a>を使って表現された URL のスクリプトだけを読み込みできます。</p>
+<p>方法 (1) と (2) では<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">マッチパターン</a>を使って表現された URL のスクリプトだけを読み込みできます。</p>
 
 <p>方法 (3) では、拡張機能と一緒にパッケージされたページのスクリプトも読み込みできますが、"about:debugging" や "about:addons"のような権限つきページにはスクリプトを読み込めません。</p>
 
@@ -191,12 +191,12 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 <p>すべてから:</p>
 
 <ul>
- <li><code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code></li>
+ <li><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code></li>
 </ul>
 
 <h3 id="XHR_and_Fetch" name="XHR_and_Fetch">XHR と Fetch</h3>
 
-<p>コンテンツスクリプトは通常の <code><a href="https://developer.mozilla.org/ja/docs/Web/API/XMLHttpRequest">window.XMLHttpRequest</a></code> と <code><a href="https://developer.mozilla.org/ja/docs/Web/API/Fetch_API">window.fetch()</a></code> API を使ってリクエストを作成できます。</p>
+<p>コンテンツスクリプトは通常の <code><a href="/ja/docs/Web/API/XMLHttpRequest">window.XMLHttpRequest</a></code> と <code><a href="/ja/docs/Web/API/Fetch_API">window.fetch()</a></code> API を使ってリクエストを作成できます。</p>
 
 <div class="blockIndicator note">
 <p>Firefox では、コンテンツスクリプトの (例えば、<code><a href="/ja/docs/Web/API/Fetch_API/Using_Fetch">fetch()</a></code> を使った) リクエストは、拡張機能のコンテキストで起こるので、ページコンテンツを参照する URL を絶対URL で提供せねばなりません。</p>
@@ -204,9 +204,9 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 <p>Chrome では、リクエストはページのコンテ<span class="hidden"> </span>キストで起こるので、相対 URL で行われます。例えば、<code>/api</code> は <code>https://[現在のペー<span class="hidden"> </span>ジの URL]/api</code> に送られます。</p>
 </div>
 
-<p>コンテンツスクリプトは拡張機能の他の部分と同一のクロスドメイン権限を取得します: よって拡張機能が <code>manifest.json</code> の <code><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> キーを使ってあるドメインのクロスドメインアクセスを要求している場合、コンテンツスクリプトも同様にそのドメインのアクセスを取得します。</p>
+<p>コンテンツスクリプトは拡張機能の他の部分と同一のクロスドメイン権限を取得します: よって拡張機能が <code>manifest.json</code> の <code><a href="/ja/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> キーを使ってあるドメインのクロスドメインアクセスを要求している場合、コンテンツスクリプトも同様にそのドメインのアクセスを取得します。</p>
 
-<p>これはより多く権限付けられた XHR に晒して、コンテンツスクリプトでインスタンスを取得することで達成し、その副作用としてページ自体からのリクエストがそうであるように <code><a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Origin">Origin</a></code> と <code><a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Referer">Referer</a></code> ヘッダーがセットされず、リクエストからクロスオリジンな性質を隠すことが好ましいことがよくあります。</p>
+<p>これはより多く権限付けられた XHR に晒して、コンテンツスクリプトでインスタンスを取得することで達成し、その副作用としてページ自体からのリクエストがそうであるように <code><a href="/ja/docs/Web/HTTP/Headers/Origin">Origin</a></code> と <code><a href="/ja/docs/Web/HTTP/Headers/Referer">Referer</a></code> ヘッダーがセットされず、リクエストからクロスオリジンな性質を隠すことが好ましいことがよくあります。</p>
 
 <div class="blockIndicator note">
 <p>バージョン 58 以降、コンテンツ自体から送られたかのようなリクエストを必要とする拡張機能は  <code>content.XMLHttpRequest</code> と <code>content.fetch()</code> を代わりに使うことができます。</p>

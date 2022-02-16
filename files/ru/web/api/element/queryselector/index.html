@@ -7,7 +7,7 @@ translation_of: Web/API/Element/querySelector
 
 <p>Возвращает первый элемент, являющийся потомком элемента, на который применено правило указанной группы селекторов.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><var>element</var> = baseElement.querySelector(<em>selector</em>s);
 </pre>
@@ -17,14 +17,14 @@ translation_of: Web/API/Element/querySelector
  <li><code>selectors</code> - это группа <a href="/ru-RU/docs/Web/Guide/CSS/Getting_Started/Selectors">селекторов</a> для поиска совпадения.</li>
 </ul>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <p>Данный пример получает первый элемент style, который не имеет атрибута type или этот атрибут равен text/css, в теле (body) HTML документа:</p>
 
 <pre class="brush:js">var el = document.body.querySelector("style[type='text/css'], style:not([type])");
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p>Возвращает null если совпадения не найдены, иначе первый найденный элемент.</p>
 
@@ -36,36 +36,11 @@ translation_of: Web/API/Element/querySelector
 
 <h2 id="Спецификация">Спецификация</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM4','#dom-parentnode-queryselectorallselectors','querySelectorAll')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 2','#queryselectorall','querySelectorAll')}}</td>
-   <td>{{Spec2('Selectors API Level 2')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 1','#queryselectorall','querySelectorAll')}}</td>
-   <td>{{Spec2('Selectors API Level 1')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Element.querySelector")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

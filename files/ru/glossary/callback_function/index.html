@@ -22,9 +22,9 @@ function processUserInput(callback) {
 
 processUserInput(greeting);</pre>
 
-<p>Выше приведён пример <a href="/en-US/docs/Glossary/Synchronous">синхронного</a> колбэка, поскольку функция <code>processUserInput</code> выполняется синхронно.</p>
+<p>Выше приведён пример {{glossary("synchronous","синхронного")}} колбэка, поскольку функция <code>processUserInput</code> выполняется синхронно.</p>
 
-<p>Колбэки часто используются для продолжения выполнения кода после завершения <a href="/ru/docs/Glossary/Asynchronous">асинхронной</a> операции - они называются асинхронными колбэками.</p>
+<p>Колбэки часто используются для продолжения выполнения кода после завершения {{glossary("asynchronous","асинхронной")}} операции - они называются асинхронными колбэками.</p>
 
 <pre class="brush: js">async function pageLoader(callback) {
   const data = await fetch('/ru/docs/Glossary/Callback_function')
@@ -65,7 +65,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
 <h3 id="Основное"><strong>Основное</strong></h3>
 
 <ul>
- <li><a href="https://en.wikipedia.org/wiki/Callback_(computer_programming)">Callback на Wikipedia</a></li>
+ <li>{{Interwiki("wikipedia", "Callback (программирование)", "Callback")}} на Википедии</li>
  <li><a href="https://learn.javascript.ru/custom-events">Колбэки и события на компонентах</a></li>
  <li><a href="http://callbackhell.ru/">Ад обратных вызовов</a></li>
 </ul>

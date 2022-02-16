@@ -22,7 +22,7 @@ original_slug: Web/HTTP/HTTP
 
 <p>Há muitos tipos de caches: estes podem ser agrupados em duas categorias principais, caches privados ou compartilhados. Um <em>cache compartilhado</em> é um cache que armazena respostas para serem reusadas por mais de um usuário. Um <em>cache privado</em> é dedicado a um único usuário. Esta página irá falar principalmente sobre caches em navegadores e em <em>proxy</em>, mas há também caches de <em>gateway</em>, CDN, cache de proxy reverso e balanceadores de carga (<em>load balancers)</em> que são implantados em servers da web para melhor confiabilidade, desempenho e dimensionamento de sites e aplicativos da web.</p>
 
-<p><img alt="What a cache provide, advantages/disadvantages of shared/private caches." src="https://mdn.mozillademos.org/files/13777/HTTPCachtType.png" style="height: 573px; width: 910px;"></p>
+<p><img alt="What a cache provide, advantages/disadvantages of shared/private caches." src="/en-US/docs/Web/HTTP/Caching/http_cache_type.png" style="height: 573px; width: 910px;"></p>
 
 <h3 id="Caches_privados_de_browser">Caches privados de browser</h3>
 
@@ -100,7 +100,7 @@ Cache-Control: public
 
 <p><img alt="Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale." src="https://mdn.mozillademos.org/files/13771/HTTPStaleness.png" style="height: 910px; width: 822px;"></p>
 
-<p>O tempo de Vida é calculado beaseado em vários headers. Se o "<code>Cache-control: max-age=N</code>" header é especificado, então o tempo de vida é igual a N. Se este header não está presente, o que ocorre com frequência, ele checa se um {{HTTPHeader("Expires")}} heade está presente. Se um <code>Expires</code> header existe, então é o valor menos o valor do {{HTTPHeader("Date")}} header determina o tempo de vida. Finalmente, se nenhum header está presente, procure pelo {{HTTPHeader("Last-Modified")}} header. Se este header está presente, então o tempo de vidaé igual ao valor do  <code>Date</code> header menos o valor do <code>Last-modified</code> header dividido por 10.<br>
+<p>O tempo de Vida é calculado beaseado em vários headers. Se o "<code>Cache-control: max-age=N</code>" header é especificado, então o tempo de vida é igual a N. Se este header não está presente, o que ocorre com frequência, ele checa se um {{HTTPHeader("Expires")}} header está presente. Se um <code>Expires</code> header existe, então é o valor menos o valor do {{HTTPHeader("Date")}} header determina o tempo de vida. Finalmente, se nenhum header está presente, procure pelo {{HTTPHeader("Last-Modified")}} header. Se este header está presente, então o tempo de vidaé igual ao valor do  <code>Date</code> header menos o valor do <code>Last-modified</code> header dividido por 10.<br>
  O valor de expiração é computado por:</p>
 
 <pre>expirationTime = responseTime + freshnessLifetime - currentAge

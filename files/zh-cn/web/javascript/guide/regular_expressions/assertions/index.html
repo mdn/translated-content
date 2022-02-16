@@ -32,8 +32,8 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
    <td>
     <p>匹配输入的开头。如果多行模式设为 true，<code>^</code> 在换行符后也能立即匹配，比如 <code>/^A/</code> 匹配不了 "an A" 里面的 "A"，但是可以匹配 "An A" 里面第一个 "A"。</p>
 
-    <div class="blockIndicator note">
-    <p><code>^</code> 出现在集合或范围开头时的含义与此不同（参见 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">group</a>）。</p>
+    <div class="note">
+    <p><strong>备注：</strong><code>^</code> 出现在集合或范围开头时的含义与此不同（参见 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">group</a>）。</p>
     </div>
    </td>
   </tr>
@@ -71,8 +71,8 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
 
 <h3 id="其他断言">其他断言 </h3>
 
-<div class="blockIndicator note">
-<p>提示：<code>？</code>字符也可用作量词</p>
+<div class="note">
+<p><strong>备注：</strong><code>？</code>字符也可用作量词</p>
 </div>
 
 <table class="standard-table">
@@ -103,7 +103,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
     <table>
      <tbody>
       <tr>
-       <td><strong>向前否定断言:</strong> x 没有被 y 紧随时匹配 x。例如，对于<code>/\d+(?!\。)/</code>，数字后没有跟随小数点的情况下才会得到匹配。对于<code>/\d+(?!\.)/.exec(3.141)</code>，匹配‘141’而不是‘3’。</td>
+       <td><strong>向前否定断言:</strong> x 没有被 y 紧随时匹配 x。例如，对于<code>/\d+(?!\.)/</code>，数字后没有跟随小数点的情况下才会得到匹配。对于<code>/\d+(?!\.)/.exec(3.141)</code>，匹配‘141’而不是‘3’。</td>
       </tr>
      </tbody>
     </table>
@@ -140,7 +140,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
 
 <h3 id="一般边界类型概述示例">一般边界类型概述示例</h3>
 
-<pre class="notranslate">// 使用 正则表达式边界修复错误字符串
+<pre>// 使用 正则表达式边界修复错误字符串
 buggyMultiline = `tey, ihe light-greon apple
 tangs on ihe greon traa`;
 
@@ -164,7 +164,7 @@ console.log(4, fixedMultiline); // 修复  'greon'  不影响'on'.</pre>
 
 <p>使用 <code>^</code>匹配输入的开头。在这个例子中，我们可以通过 /^A/ 正则表达式得到以A开头的水果。为了选择合适的水果，我们可以使用带有箭头函数的过滤方法.</p>
 
-<pre class="notranslate">let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
+<pre>let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
 // 使用正则 /^A/ 选择以'A'开头的水果.
 // 这里的 '^' 只有一种含义: 匹配输入的开头.
@@ -174,7 +174,7 @@ console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]</pre>
 
 <p>在第二个示例中，^用于在输入的开始处匹配，以及在内部使用时用于创建否定或被补充的字符集 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">组和范围</a>.</p>
 
-<pre class="notranslate">let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
+<pre>let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
 // 使用正则 /^[^A]/ 选择 不是以 ‘A’ 开头的水果
 // 在这个例子中，“^” 控件符号表示两种含义:
@@ -187,7 +187,7 @@ console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]</
 
 <h3 id="匹配字边界">匹配字边界</h3>
 
-<pre class="notranslate">let fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
+<pre>let fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
 // 选择包含以 “en” 或 “ed” 结尾的单词的描述:
 let enEdSelection = fruitsWithDescription.filter(descr =&gt; /(en|ed)\b/.test(descr));
@@ -196,7 +196,7 @@ console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]</pre>
 
 <h3 id="向前断言">向前断言</h3>
 
-<pre class="notranslate">// JS 向前断言 x(?=y) 匹配被 y 跟随的 x
+<pre>// JS 向前断言 x(?=y) 匹配被 y 跟随的 x
 
 let regex = /First(?= test)/g;
 
@@ -209,13 +209,13 @@ console.log('This is a First peach in a month.'.match(regex)); // null</pre>
 
 <p>例如, <code>/\d+(?!\.)/</code> 匹配没有被小数点跟随且至少有一位的数字。 <code>/\d+(?!\.)/.exec('3.141')</code> 匹配 "141" 而不是 "3" </p>
 
-<pre class="notranslate">console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]</pre>
+<pre>console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]</pre>
 
 <h3 id="不同含义的!：断言和范围的组合用法">不同含义的'?!'：断言和范围的组合用法</h3>
 
 <p>不同含义的<code>?!</code> 结合使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">断言</a>  <code>/x(?!y)/ </code>和  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">范围</a> <code>[^?!]</code>.</p>
 
-<pre class="notranslate">let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
+<pre>let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
 
 let selectNotLemonRegex = /[^?!]+have(?! a lemon)[^?!]+[?!]/gi
 console.log(orangeNotLemon.match(selectNotLemonRegex)); // [ 'Do you want to have an orange?' ]
@@ -225,7 +225,7 @@ console.log(orangeNotLemon.match(selectNotOrangeRegex)); // [ ' Yes, I do not wa
 
 <h3 id="向后断言">向后断言</h3>
 
-<pre class="notranslate">let oranges = ['ripe orange A ', 'green orange B', 'ripe orange C',];
+<pre>let oranges = ['ripe orange A ', 'green orange B', 'ripe orange C',];
 
 let ripe_oranges = oranges.filter( fruit =&gt; fruit.match(/(?&lt;=ripe )orange/));
 console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]</pre>

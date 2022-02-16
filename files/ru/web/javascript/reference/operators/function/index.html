@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Operators/function
 
 <p>Вы можете также определять функции используя конструктор {{jsxref("Function")}} и {{jsxref("Statements/function", "объявление функции")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">var myFunction = function [<em>name</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]]) {
    <em>statements</em>
@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Operators/function
 
 <p>С версии ES2015 можно также использовать <a href="/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">стрелочные функции</a>.</p>
 
-<h3 id="Parameters" name="Parameters"><a id="Параметры" name="Параметры">Параметры</a></h3>
+<h3 id="Parameters" name="Parameters"><a id="Параметры">Параметры</a></h3>
 
 <dl>
  <dt><code>name</code></dt>
@@ -32,11 +32,11 @@ translation_of: Web/JavaScript/Reference/Operators/function
  <dd>Инструкции, составляющие тело функции.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Функциональное выражение и <a href="/ru/docs/Web/JavaScript/Reference/Statements/function">объявление функции</a> очень похожи и имеют почти одинаковый синтаксис. Главным отличием между ними является <em>имя функции,</em> которое в случае функциональных выражений может быть опущено для создания <em>анонимных</em> функций. Функциональное выражение может быть использовано для создания самовызывающейся функции {{Glossary("IIFE")}} (Immediately Invoked Function Expression), которая исполняется сразу же после того, как она была определена. Более подробная информация изложена в разделе о <a href="/ru/docs/Web/JavaScript/Reference/Functions">функциях</a>.</p>
 
-<h3 id="Поднятие_функциональных_выражений_2"><a id="Поднятие_функциональных_выражений" name="Поднятие_функциональных_выражений">Поднятие функциональных выражений</a></h3>
+<h3 id="Поднятие_функциональных_выражений_2"><a id="Поднятие_функциональных_выражений">Поднятие функциональных выражений</a></h3>
 
 <p>Функциональные выражения в JavaScript не {{Glossary("поднятие", "поднимаются (hoisting)")}}, в отличие от {{jsxref("Statements/function", "объявленных функций", "#Поднимание_объявленной_функции")}}. Вы не можете использовать функциональные выражения прежде, чем вы их определили.</p>
 
@@ -48,7 +48,7 @@ var notHoisted = function() {
    console.log('bar');
 };</pre>
 
-<h3 id="Именованное_функциональное_выражение"><a id="№Именованное функциональное выражение" name="№Именованное функциональное выражение">Именованное функциональное выражение</a></h3>
+<h3 id="Именованное_функциональное_выражение"><a id="№Именованное функциональное выражение">Именованное функциональное выражение</a></h3>
 
 <p>Если вы хотите сослаться на текущую функцию внутри тела этой функции, вам необходимо создать именованное функциональное выражение. Данное имя будет локальным только для тела функции (её области видимости). Кроме того, это позволяет избежать использования нестандартного свойства {{jsxref("arguments.callee")}}.</p>
 
@@ -80,7 +80,7 @@ console.log(foo === foo2); // true
 console.log(typeof baz); // undefined
 console.log(bar === baz); // false (errors because baz == undefined)</pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <p>Следующий пример демонстрирует создание безымянной (анонимной) функции и присвоение её переменной <code>x</code>. Функция возвращает квадрат переданного значения:</p>
 
@@ -97,41 +97,13 @@ console.log(bar === baz); // false (errors because baz == undefined)</pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-13', 'Function definition')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-13', 'Function definition')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Изначальное определение. Реализовано в JavaScript 1.5.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.operators.function")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Functions_and_function_scope", "Functions and function scope")}}</li>

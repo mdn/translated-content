@@ -20,11 +20,11 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 
 <p>HTML не является языком программирования; это <em>язык разметки</em>, и используется, чтобы сообщать вашему браузеру, как отображать веб-страницы, которые вы посещаете. Он может быть сложным или простым, в зависимости от того, как хочет веб-дизайнер. HTML состоит из ряда <strong>{{Glossary("element", "элементов")}}</strong>, которые вы используете, чтобы вкладывать или оборачивать различные части контента, чтобы заставить контент отображаться или действовать определённым образом. Ограждающие {{Glossary("tag", "теги")}} могут сделать слово или изображение ссылкой на что-то ещё, могут сделать слова курсивом, сделать шрифт больше или меньше и так далее. Например, возьмём следующую строку контента:</p>
 
-<pre class="notranslate">Моя кошка очень раздражена</pre>
+<pre>Моя кошка очень раздражена</pre>
 
 <p>Если бы мы хотели, чтобы строка стояла сама по себе, мы могли бы указать, что это абзац, заключая его в теги абзаца:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Моя кошка очень раздражена&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Моя кошка очень раздражена&lt;/p&gt;</pre>
 
 <h3 id="Анатомия_HTML_элемента">Анатомия HTML элемента</h3>
 
@@ -59,11 +59,11 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 
 <p>Вы также можете располагать элементы внутри других элементов — это называется <strong>вложением</strong>. Если мы хотим заявить, что наша кошка <strong>очень</strong> раздражена, мы можем заключить слово "очень" в элемент {{htmlelement("strong")}} , который указывает, что слово должно быть сильно акцентированно:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Моя кошка &lt;strong&gt;очень&lt;/strong&gt; раздражена.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Моя кошка &lt;strong&gt;очень&lt;/strong&gt; раздражена.&lt;/p&gt;</pre>
 
 <p>Вы, однако, должны убедиться, что ваши элементы правильно вложены: в примере выше мы открыли первым элемент {{htmlelement("p")}}, затем элемент {{htmlelement("strong")}}, потом мы должны закрыть сначала элемент {{htmlelement("strong")}}, затем {{htmlelement("p")}}. Приведённое ниже неверно:</p>
 
-<pre class="example-bad brush: html notranslate">&lt;p&gt;Моя кошка &lt;strong&gt;очень раздражена.&lt;/p&gt;&lt;/strong&gt;</pre>
+<pre class="example-bad brush: html">&lt;p&gt;Моя кошка &lt;strong&gt;очень раздражена.&lt;/p&gt;&lt;/strong&gt;</pre>
 
 <p>Элементы должны открываться и закрываться правильно, поэтому они явно располагаются внутри или снаружи друг друга. Если они перекрываются, как в примере выше,  ваш веб-браузер будет пытаться сделать наилучшее предположение на основе того, что вы пытались сказать, что может привести к неожиданным результатам. Так что не стоит этого делать!</p>
 
@@ -71,7 +71,7 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 
 <p>Некоторые элементы не имеют контента, и называются <strong>пустыми элементами</strong>. Возьмём  элемент {{htmlelement("img")}}, который уже имеется в нашем HTML:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/firefox-icon.png" alt="Моё тестовое изображение"&gt;</pre>
+<pre class="brush: html">&lt;img src="images/firefox-icon.png" alt="Моё тестовое изображение"&gt;</pre>
 
 <p>Он содержит два атрибута, но не имеет закрывающего тега <code>&lt;/img&gt;</code>, и никакого внутреннего контента. Это потому, что элемент изображения не оборачивает контент для влияния на него. Его целью является вставка изображения в HTML страницу в нужном месте.</p>
 
@@ -79,7 +79,7 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 
 <p>Мы завершили изучение основ отдельных HTML элементов, но они не очень полезны сами по себе. Теперь мы посмотрим, как отдельные элементы объединяются в целую HTML страницу. Давайте вернёмся к коду, который мы записывали в наш <code>index.html</code> (с которым мы впервые встретились в статье <a href="/ru/Learn/Getting_started_with_the_web/Dealing_with_files">Работа с файлами</a>):</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -105,7 +105,7 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 
 <p>Давайте снова обратим наше внимание на элемент {{htmlelement("img", "изображения")}}:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/firefox-icon.png" alt="Mоё тестовое изображение"&gt;</pre>
+<pre class="brush: html">&lt;img src="images/firefox-icon.png" alt="Mоё тестовое изображение"&gt;</pre>
 
 <p>Как было сказано раньше, код встраивает изображение на нашу страницу в нужном месте. Это делается с помощью атрибута <code>src</code> (source, источник), который содержит путь к нашему файлу изображения.</p>
 
@@ -134,7 +134,7 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 
 <p>Элементы заголовка позволяют вам указывать определённые части вашего контента в качестве заголовков или подзаголовков. Точно так же, как книга имеет название, названия глав и подзаголовков, HTML документ может содержать то же самое. HTML включает шесть уровней заголовков {{htmlelement("h1")}}–{{htmlelement("h6")}}, хотя обычно вы будете использовать не более 3-4 :</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Мой главный заголовок&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Мой главный заголовок&lt;/h1&gt;
 &lt;h2&gt;Мой заголовок верхнего уровня&lt;/h2&gt;
 &lt;h3&gt;Мой подзаголовок&lt;/h3&gt;
 &lt;h4&gt;Мой под-подзаголовок&lt;/h4&gt;</pre>
@@ -145,7 +145,7 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 
 <p>Как было сказано раньше, элемент {{htmlelement("p")}} предназначен для абзацев текста; вы будете использовать их регулярно при разметке текстового контента:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Это одиночный абзац&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Это одиночный абзац&lt;/p&gt;</pre>
 
 <p>Добавьте свой образец текста (вы создавали его в статье <a href="/ru/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like"><em>Каким должен быть ваш веб-сайт?</em></a>) в один или несколько абзацев, расположенных прямо под элементом {{htmlelement("img")}}.</p>
 
@@ -162,11 +162,11 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 
 <p>Например, если мы хотим включить часть следующего фрагмента абзаца в список:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Mozilla, мы являемся мировым сообществом технологов, мыслителей и строителей, работающих вместе ... &lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Mozilla, мы являемся мировым сообществом технологов, мыслителей и строителей, работающих вместе ... &lt;/p&gt;</pre>
 
 <p>Мы могли бы изменить разметку на эту:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Mozilla, мы являемся мировым сообществом&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Mozilla, мы являемся мировым сообществом&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;технологов&lt;/li&gt;
@@ -185,13 +185,13 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 <ol>
  <li>Выберите некоторый текст. Мы выбрали текст "Манифест Mozilla".</li>
  <li>Оберните текст в элемент {{htmlelement("a")}}, например так:
-  <pre class="brush: html notranslate">&lt;a&gt;Манифест Mozilla&lt;/a&gt;</pre>
+  <pre class="brush: html">&lt;a&gt;Манифест Mozilla&lt;/a&gt;</pre>
  </li>
  <li>Задайте элементу {{htmlelement("a")}} атрибут<strong> </strong><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">href</span></font>, например так:
-  <pre class="brush: html notranslate">&lt;a href=""&gt;Манифест Mozilla&lt;/a&gt;</pre>
+  <pre class="brush: html">&lt;a href=""&gt;Манифест Mozilla&lt;/a&gt;</pre>
  </li>
  <li>Заполните значение этого атрибута веб-адресом, на который вы хотите указать ссылку:
-  <pre class="brush: html notranslate">&lt;a href="https://www.mozilla.org/ru/about/manifesto/details/"&gt;Манифест Mozilla&lt;/a&gt;</pre>
+  <pre class="brush: html">&lt;a href="https://www.mozilla.org/ru/about/manifesto/details/"&gt;Манифест Mozilla&lt;/a&gt;</pre>
  </li>
 </ol>
 

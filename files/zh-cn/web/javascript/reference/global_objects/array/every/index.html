@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 <p><code><strong>every()</strong></code> 方法测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值。</p>
 
 <div class="note">
-<p><strong>注意</strong>：若收到一个空数组，此方法在一切情况下都会返回 <code>true</code>。</p>
+<p><strong>备注：</strong>：若收到一个空数组，此方法在一切情况下都会返回 <code>true</code>。</p>
 </div>
 
 <div>{{EmbedInteractiveExample("pages/js/array-every.html")}}</div>
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 <h2 id="语法">语法</h2>
 
-<pre class="notranslate"><var>arr</var>.every(<var>callback</var>(<var>element</var>[, <var>index</var>[, <var>array</var>]])[, <var>thisArg</var>])</pre>
+<pre><var>arr</var>.every(<var>callback</var>(<var>element</var>[, <var>index</var>[, <var>array</var>]])[, <var>thisArg</var>])</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -68,7 +68,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 <p>下例检测数组中的所有元素是否都大于 10。</p>
 
-<pre class="brush: js notranslate">function isBigEnough(element, index, array) {
+<pre class="brush: js">function isBigEnough(element, index, array) {
   return element &gt;= 10;
 }
 [12, 5, 8, 130, 44].every(isBigEnough);   // false
@@ -79,14 +79,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 <p><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>为上面的检测过程提供了更简短的语法。</p>
 
-<pre class="brush: js notranslate">[12, 5, 8, 130, 44].every(x =&gt; x &gt;= 10); // false
+<pre class="brush: js">[12, 5, 8, 130, 44].every(x =&gt; x &gt;= 10); // false
 [12, 54, 18, 130, 44].every(x =&gt; x &gt;= 10); // true</pre>
 
 <h2 id="兼容旧环境（Polyfill）">兼容旧环境（Polyfill）</h2>
 
 <p>在 ECMA-262 第 5 版时，<code>every</code> 被添加进 ECMA-262 标准；因此，在某些实现环境中，它尚未被支持。你可以把下面的代码放到脚本的开头来解决此问题，该代码允许在那些没有原生支持 <code>every</code> 的实现环境中使用它。该算法是 ECMA-262 第 5 版中指定的算法，它假定 <code>Object</code> 和 <code>TypeError</code> 拥有它们的初始值，且 <code>fun.call</code> 等价于 {{jsxref("Function.prototype.call")}}。</p>
 
-<pre class="brush: js notranslate">if (!Array.prototype.every) {
+<pre class="brush: js">if (!Array.prototype.every) {
   Array.prototype.every = function(callbackfn, thisArg) {
     'use strict';
     var T, k;

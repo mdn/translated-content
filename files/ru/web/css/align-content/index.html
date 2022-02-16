@@ -17,7 +17,7 @@ translation_of: Web/CSS/align-content
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Основное позиционное выравнивание */
+<pre class="brush:css no-line-numbers">/* Основное позиционное выравнивание */
 /* align-content не принимает значения left и right */
 align-content: center;     /* Расположить элементы вокруг центра */
 align-content: start;      /* Расположить элементы в начале */
@@ -101,7 +101,7 @@ align-content: unset;
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css; highlight[4] notranslate">#container {
+<pre class="brush: css; highlight[4]">#container {
   height:200px;
   width: 240px;
   align-content: center; /* Can be changed in the live sample */
@@ -169,7 +169,7 @@ select {
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;div id="container" class="flex"&gt;
+<pre class="brush: html">&lt;div id="container" class="flex"&gt;
   &lt;div id="item1"&gt;1&lt;/div&gt;
   &lt;div id="item2"&gt;2&lt;/div&gt;
   &lt;div id="item3"&gt;3&lt;/div&gt;
@@ -222,7 +222,7 @@ select {
 <div class="hidden">
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">var values = document.getElementById('values');
+<pre class="brush: js">var values = document.getElementById('values');
 var display = document.getElementById('display');
 var container = document.getElementById('container');
 
@@ -242,33 +242,15 @@ display.addEventListener('change', function (evt) {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box Alignment", "#propdef-align-content", "align-content")}}</td>
-   <td>{{Spec2("CSS3 Box Alignment")}}</td>
-   <td>Добавлены значения [ first | last ]? baseline, start, end, left, right, unsafe | safe.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#align-content', 'align-content')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Начальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("css.properties.align-content.grid_context")}}
+
+{{Specifications("css.properties.align-content.grid_context")}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 <h3 id="Support_in_Flex_layout">Support in Flex layout</h3>
 
-<p>{{Compat("css.properties.align-content.flex_context")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Support_in_Grid_layout">Support in Grid layout</h3>
 

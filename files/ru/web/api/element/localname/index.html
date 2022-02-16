@@ -10,7 +10,7 @@ original_slug: Web/API/Node/localName
 
 <p>Свойство <code><strong>Node.localName</strong></code> только для чтения, возвращает локальную часть полного имени этого узла.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><var>name</var> = <var>element</var>.localName
 </pre>
@@ -19,7 +19,7 @@ original_slug: Web/API/Node/localName
  <li><code>name</code> это локальное имя в виде строки (для уточнения деталей смотрите {{Anch("Notes")}} ниже)</li>
 </ul>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <p>(Должен быть обработан с XML типом содержимого, таким как <code>text/xml</code> или <code>application/xhtml+xml</code>.)</p>
 
@@ -48,7 +48,7 @@ original_slug: Web/API/Node/localName
 &lt;/html&gt;
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p>Локальное имя узла, является полным именем узла, которое идёт после двоеточия. Полное имя, как правило, используется как часть пространства имён <span id="result_box" lang="ru"><span class="hps">для</span> <span class="hps">конкретных</span> <span class="hps">XML</span> <span class="hps">документов.</span></span> Например, полное имя <code>ecomm:partners</code>, <code>partners</code> это локальное имя и <code>ecomm</code> это префикс:</p>
 
@@ -62,19 +62,19 @@ original_slug: Web/API/Node/localName
 
 
 <div class="note">
-<p><strong>Примечание:</strong> В {{Gecko("1.9.2")}} и ранее, свойство возвращает версию локального имени в верхнем регистре для HTML элементов в HTML DOMs (в отличии от XHTML элементов в XML DOMs). В более поздних версиях, в соответствии с HTML5, свойство возвращает, в случае внутреннего хранилища DOM, в нижнем регистре для HTML элементов в HTML DOMs и XHTML элементов в XML DOMs. {{domxref("element.tagName","tagName")}} свойство продолжает возвращать в верхнем регистре для HTML элементов в HTML DOMs.</p>
+<p><strong>Примечание:</strong> В {{Gecko("1.9.2")}} и ранее, свойство возвращает версию локального имени в верхнем регистре для HTML-элементов в HTML DOMs (в отличии от XHTML элементов в XML DOMs). В более поздних версиях, в соответствии с HTML5, свойство возвращает, в случае внутреннего хранилища DOM, в нижнем регистре для HTML-элементов в HTML DOMs и XHTML элементов в XML DOMs. {{domxref("element.tagName","tagName")}} свойство продолжает возвращать в верхнем регистре для HTML-элементов в HTML DOMs.</p>
 </div>
 
 <p>Для узла другого <a href="/en-US/docs/DOM/Node.nodeType" title="DOM/Node.nodeType">типа</a> отличного от <code>ELEMENT_NODE</code> и <code>ATTRIBUTE_NODE</code> <code>localName</code> всегда <code>null</code>.</p>
 
-<h2 id="Specification" name="Specification">Спецификации</h2>
+<h2 id="Specification">Спецификации</h2>
 
 <ul>
  <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-NodeNSLocalN">DOM Level 2 Core: Node.localName</a></li>
  <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-NodeNSLocalN">DOM Level 3 Core: Node.localName</a></li>
 </ul>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("Node.namespaceURI")}}</li>

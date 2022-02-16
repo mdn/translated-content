@@ -1,0 +1,64 @@
+---
+title: Поддержка TouchEvent и MouseEvent
+slug: conflicting/Web/API/Pointer_events
+translation_of: Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
+original_slug: Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
+---
+<p>{{DefaultAPISidebar("Touch Events")}}</p>
+
+<p>Интерфейс {{domxref("Touch_events","touch")}} позволяет существенно повысить удобство работы с приложением через устройства с сенсорным экраном. Несмотря на это, большинство современного содержимого веба рассчитано только на работу с помощью мыши. Следовательно, даже если браузер поддерживает управление через сенсорную поверхность, он всё равно должен имитировать действия мыши, чтобы функциональность, рассчитанная только на действия мыши, продолжала корректно работать.</p>
+
+<p>В идеале, приложения, рассчитанные на управление касаниями, не нуждается в явной имитации действий мыши. Но так как браузер вынужден это делать, могут возникнуть некоторые проблемы взаимодействия, которые должны быть обработаны. Ниже приведены некоторые подробности таких проблем взаимодействия и последствия для разработчиков приложения.</p>
+
+<h2 id="Вызов_события">Вызов события</h2>
+
+<p>Спецификация событий касания определяет несколько требований к браузеру, касающихся действий мышью или касаний сенсорной поверхности (подробнее смотрите в разделе спецификации "<a href="https://w3c.github.io/touch-events/#mouse-events">Работа с событиями мыши и клика</a>"), отмечая, что браузер может вызывать как события касаний, так и события мыши в ответ на одно и то же действие пользователя.</p>
+
+<p>Если в ответ на какое-то действие пользователя браузер вызывает и событие касания и событие мыши, то перед любыми событиями мыши браузер должен вызывать {{event("touchstart")}}. Следовательно, если нужно, чтобы при прикосновении к {{domxref("Touch.target","целевому")}} элементу события мыши не запускались, в обработчике события касания данного элемента нужно вызвать {{domxref("Event.preventDefault()","preventDefault()")}}. После этого никакие дополнительные события мыши не вызовутся.</p>
+
+<p>Ниже представлен пример обработчика события {{event("touchmove")}}, вызывающий <code>preventDefault()</code></p>
+
+<pre class="brush: js">// touchmove handler
+function process_touchmove(ev) {
+  // Call preventDefault() to prevent any further handling
+  ev.preventDefault();
+}
+</pre>
+
+<h2 id="Последовательность_событий">Последовательность событий</h2>
+
+<p>Хотя фактическая последовательность событий касания и мыши зависит от используемого программного обеспечения, спецификация предписывает придерживаться следующей последовательности:</p>
+
+<ul>
+ <li><code>touchstart</code></li>
+ <li>Ноль или больше событий <code>touchmove</code>, в зависимости от того, было ли движение пальца</li>
+ <li><code>touchend</code></li>
+ <li><code>mousemove</code></li>
+ <li><code>mousedown</code></li>
+ <li><code>mouseup</code></li>
+ <li><code>click</code></li>
+</ul>
+
+<p>Если в течение взаимодействия событие {{event("touchstart")}}, {{event("touchmove")}} или {{event("touchend")}} прерывается, события мыши или клика вызываться не будут, а итоговая последовательность событий будет просто:</p>
+
+<ul>
+ <li><code>touchstart</code></li>
+ <li>Ноль или больше событий <code>touchmove</code>, в зависимости от того, было ли движение пальца</li>
+ <li><code>touchend</code></li>
+</ul>
+
+<h2 id="Сообщество">Сообщество</h2>
+
+<ul>
+ <li><a href="https://github.com/w3c/touch-events">Группа сообщества Touch Events</a></li>
+ <li><a href="https://lists.w3.org/Archives/Public/public-touchevents/">Mail list</a></li>
+ <li><a href="irc://irc.w3.org:6667/">IRC-канал W3C #touchevents </a></li>
+</ul>
+
+<h2 id="Связанные_темы_и_ресурсы">Связанные темы и ресурсы</h2>
+
+<ul>
+ <li><a href="/Web/API/Touch_events">Знакомство событиями касания</a></li>
+ <li><a href="/Web/API/Touch_events/Using_Touch_Events">Использование событий касаний</a></li>
+ <li><a href="http://www.html5rocks.com/en/mobile/touchandmouse/">Touch and Mouse (Together Again for the First Time)</a></li>
+</ul>

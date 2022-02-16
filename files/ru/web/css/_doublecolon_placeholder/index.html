@@ -11,12 +11,12 @@ translation_of: 'Web/CSS/::placeholder'
 
 <p><a href="/ru/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/Pseudo-elements">псевдоэлемент</a> <strong><code>::placeholder</code></strong> представляет собой <a href="/ru/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute">текст placeholder</a> в {{HTMLElement("input")}} или {{HTMLElement("textarea")}} элементах.</p>
 
-<pre class="brush: css no-line-numbers notranslate">::placeholder {
+<pre class="brush: css no-line-numbers">::placeholder {
   color: blue;
   font-size: 1.5em;
 }</pre>
 
-<p>В <code>::placeholder</code> можно использовать только те CSS свойства, которые разрешены в псевдоэлементе {{cssxref("::first-line")}}.</p>
+<p>В <code>::placeholder</code> можно использовать только те CSS-свойства, которые разрешены в псевдоэлементе {{cssxref("::first-line")}}.</p>
 
 <div class="note">
 <p><strong>Note:</strong> В большинстве браузеров по умолчанию placeholder выглядит как полупрозрачный или светло-серый текст.</p>
@@ -32,11 +32,11 @@ translation_of: 'Web/CSS/::placeholder'
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush:html line-numbers language-html notranslate">&lt;input placeholder="Введите что-нибудь!"&gt;</pre>
+<pre class="brush:html line-numbers language-html">&lt;input placeholder="Введите что-нибудь!"&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">input::placeholder {
+<pre class="brush: css">input::placeholder {
   color: red;
   font-size: 1.2em;
   font-style: italic;
@@ -50,11 +50,11 @@ translation_of: 'Web/CSS/::placeholder'
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush:html line-numbers language-html notranslate">&lt;input placeholder="Введите что-нибудь..."&gt;</pre>
+<pre class="brush:html line-numbers language-html">&lt;input placeholder="Введите что-нибудь..."&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">input::placeholder {
+<pre class="brush: css">input::placeholder {
   color: green;
 }
 </pre>
@@ -89,7 +89,7 @@ translation_of: 'Web/CSS/::placeholder'
 
 <p>В таком случае содержимое подсказки будет доступно даже в том случае, если что-то введено в форму. Большинство скринридеров используют <code>aria-describedby</code> для чтения подсказок после того, как будет прочитан текст метки формы. Пользователь может отключить эту функцию, если дополнительная информация окажется ему ненужной.</p>
 
-<pre class="brush:html line-numbers language-html notranslate">&lt;label for="user-email"&gt;Ваш email адрес&lt;/label&gt;
+<pre class="brush:html line-numbers language-html">&lt;label for="user-email"&gt;Ваш email адрес&lt;/label&gt;
 &lt;span id="user-email-hint" class="input-hint"&gt;Пример: jane@sample.com&lt;/span&gt;
 &lt;input id="user-email" aria-describedby="user-email-hint" name="email" type="email"&gt;
 </pre>
@@ -117,35 +117,20 @@ translation_of: 'Web/CSS/::placeholder'
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Pseudo-Elements', '#placeholder-pseudo', '::placeholder')}}</td>
-   <td>{{Spec2('CSS4 Pseudo-Elements')}}</td>
-   <td>Первоначальное описание.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 <div>
 
 
-<p>{{Compat("css.selectors.placeholder")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li>Псевдокласс {{cssxref(":placeholder-shown")}}, который позволяет применять стили к элементу с <em><strong>активным </strong></em>placeholder.</li>
- <li>Связанные HTML элементы: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}</li>
+ <li>Связанные HTML-элементы: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}</li>
  <li><a href="/ru/docs/Learn/HTML/Forms">HTML-формы</a></li>
 </ul>

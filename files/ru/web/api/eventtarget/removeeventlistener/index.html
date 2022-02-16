@@ -12,7 +12,7 @@ translation_of: Web/API/EventTarget/removeEventListener
 
 <p>Удаляет обработчик события, который был зарегистрирован при помощи {{domxref("EventTarget.addEventListener()")}}. Обработчик определяется типом события, самой функцией обработки события, и дополнительными параметрами, переданными при регистрации обработчика.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><em>target</em>.removeEventListener(<em>type</em>, <em>listener</em>[, <em>options</em>]);
 </code><em>target</em>.removeEventListener(<em>type</em>, <em>listener</em>[, <em>useCapture</em>]);
@@ -39,7 +39,7 @@ translation_of: Web/API/EventTarget/removeEventListener
 
 <div class="note"><strong>Примечание:</strong> <code>useCapture</code> требуется в большинстве основных браузеров старых версий. Если вы хотите поддерживать большую совместимость, вы всегда должны использовать параметр <code>useCapture</code>.</div>
 
-<h3 id="Return_value" name="Return_value">Возвращаемое значение</h3>
+<h3 id="Return_value">Возвращаемое значение</h3>
 
 <p><code>undefined</code>.</p>
 
@@ -47,7 +47,7 @@ translation_of: Web/API/EventTarget/removeEventListener
 
 <p>В большинстве браузеров помимо типа события и функции важно лишь совпадение значений параметра <code>useCapture</code> / <code>options.capture</code>, но так как это поведение не закреплено стандартом, наилучшим способом будет указание для <code>removeEventListener()</code> в точности тех же параметров, что были переданы в <code>addEventListener()</code>.</p>
 
-<h2 id="Compatibility" name="Compatibility">Примечания</h2>
+<h2 id="Compatibility">Примечания</h2>
 
 <p>Если {{domxref("EventListener")}} был удалён из {{domxref("EventTarget")}} процессе обработки события (например предшествующим {{domxref("EventListener")}} того же типа), он не будет вызван. После удаления, {{domxref("EventListener")}} не будет вызываться, однако его можно назначить заново.</p>
 
@@ -65,9 +65,9 @@ div.addEventListener('click', listener, false);
 div.removeEventListener('click', listener, false);
 </pre>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Совместимость браузеров</h2>
+<h2 id="Browser_Compatibility">Совместимость браузеров</h2>
 
-<p>{{Compat("api.EventTarget.removeEventListener", 3)}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Gecko_примечания">Gecko примечания</h3>
 
@@ -87,7 +87,7 @@ div.removeEventListener('click', listener, false);
  <li>Несмотря на то, что WebKit явно добавил "<code>[optional]</code>" к параметру <code>useCapture</code> в Safari 5.1 и Chrome 13, это работало и до изменений.</li>
 </ul>
 
-<h3 id="Specification" name="Specification">Спецификация</h3>
+<h3 id="Specification">Спецификация</h3>
 
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-EventTarget-removeEventListener">removeEventListener </a></li>

@@ -16,7 +16,7 @@ translation_of: Web/API/Document/domain
 
 <div>Свойство <code>domain</code> у {{domxref("Document")}} интерфейса получает/устанавливает доменную часть источника происхождения (origin) текущего документа, используется в <a href="https://developer.mozilla.org/en-US/docs/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">политике ограничения домена (same origin policy)</a>.</div>
 
-<h2 id="Summary" name="Summary">Синтаксис</h2>
+<h2 id="Summary">Синтаксис</h2>
 
 <pre class="syntaxbox">var <var>domainString</var> = document.domain;
 document.domain = <var>string</var>;</pre>
@@ -59,7 +59,7 @@ if (document.domain == badDomain) {
   window.close();
 }</code></pre>
 
-<h2 id="Notes" name="Notes">Замечания</h2>
+<h2 id="Notes">Замечания</h2>
 
 <p>Свойство возвращает <code>null</code> если домен документа не может быть идентифицирован, хотя теперь это изменилось с Firefox 62 - смотри обсуждение в {{bug(819475)}}.</p>
 
@@ -69,7 +69,7 @@ if (document.domain == badDomain) {
 
 <p>Mozilla отличает свойство <code>document.domain</code>, которое никогда не было установлено от явно установленного такого же домена как в URL документа, хотя свойство возвращает одинаковое значение в обоих случаях. Один документ разрешает доступ к другому, если они оба установили <code>document.domain</code> в одинаковое значение, указывая тем самым на их намерение сотрудничать или ни один из них не установил <code>document.domain</code>, а домены в URL-адресах одинаковые (<a class="link-https" href="https://mxr.mozilla.org/mozilla-central/source/caps/nsPrincipal.cpp?rev=ecb7068b07a1&amp;mark=199-215#199" title="https://mxr.mozilla.org/mozilla-central/source/caps/src/nsScriptSecurityManager.cpp#1003">реализация</a>). Если бы не эта специальная политика, то каждый сайт будет подвержен XSS от своих поддоменов (для примера <a class="link-https" href="https://bugzilla.mozilla.org" rel="freelink">https://bugzilla.mozilla.org</a> может быть атакован с помощью заведения багов (bug attachments) на <a class="link-https" href="https://bug*.bugzilla.mozilla.org" rel="freelink">https://bug*.bugzilla.mozilla.org</a>).</p>
 
-<h2 id="Specification" name="Specification">Спецификации</h2>
+<h2 id="Specification">Спецификации</h2>
 
 <table>
  <thead>
@@ -94,9 +94,9 @@ if (document.domain == badDomain) {
 </table>
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat("api.Document.domain")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">Политика ограничения домена для JavaScriptHTML</a></li>

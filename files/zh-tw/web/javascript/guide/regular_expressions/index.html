@@ -54,7 +54,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
  </thead>
  <tbody>
   <tr>
-   <td><a href="#special-backslash" id="special-backslash" name="special-backslash"><code>\</code></a></td>
+   <td><a href="#special-backslash" id="special-backslash"><code>\</code></a></td>
    <td>
     <p>反斜線放在非特殊符號前面，使非特殊符號不會被逐字譯出，代表特殊作用。<br>
      例如：'b' 如果沒有 '\' 在前頭，功能是找出小寫 b；若改為 '\b' 則代表的是邊界功能，block 用意。<br>
@@ -70,7 +70,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-caret" id="special-caret" name="special-caret"><code>^</code></a></td>
+   <td><a href="#special-caret" id="special-caret"><code>^</code></a></td>
    <td>
     <p>匹配輸入的開頭，如果 multiline flag 被設為 true，則會匹配換行字元後。</p>
 
@@ -80,7 +80,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-dollar" id="special-dollar" name="special-dollar"><code>$</code></a></td>
+   <td><a href="#special-dollar" id="special-dollar"><code>$</code></a></td>
    <td>
     <p>匹配輸入的結尾，如果 multiline flag 被設為 true，則會匹配換行字元。</p>
 
@@ -88,7 +88,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-asterisk" id="special-asterisk" name="special-asterisk"><code>*</code></a></td>
+   <td><a href="#special-asterisk" id="special-asterisk"><code>*</code></a></td>
    <td>
     <p>匹配前一字元 0 至多次。<br>
      <br>
@@ -99,7 +99,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-plus" id="special-plus" name="special-plus"><code>+</code></a></td>
+   <td><a href="#special-plus" id="special-plus"><code>+</code></a></td>
    <td>
     <p>匹配前一字元 1 至多次，等同於 <code>{1,}</code>。</p>
 
@@ -107,7 +107,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-questionmark" id="special-questionmark" name="special-questionmark"><code>?</code></a></td>
+   <td><a href="#special-questionmark" id="special-questionmark"><code>?</code></a></td>
    <td>
     <p>匹配前一字元 0 至 1 次，等同於 <code>{0,1}</code>。</p>
 
@@ -120,7 +120,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-dot" id="special-dot" name="special-dot"><code>.</code></a></td>
+   <td><a href="#special-dot" id="special-dot"><code>.</code></a></td>
    <td>
     <p>（小數點）匹配除了換行符號之外的單一字元。</p>
 
@@ -128,7 +128,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-capturing-parentheses" id="special-capturing-parentheses" name="special-capturing-parentheses"><code>(x)</code></a></td>
+   <td><a href="#special-capturing-parentheses" id="special-capturing-parentheses"><code>(x)</code></a></td>
    <td>
     <p>Capturing Parentheses</p>
 
@@ -141,7 +141,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-capturing-parentheses" id="special-non-capturing-parentheses" name="special-non-capturing-parentheses"><code>(?:x)</code></a></td>
+   <td><a href="#special-non-capturing-parentheses" id="special-non-capturing-parentheses"><code>(?:x)</code></a></td>
    <td>
     <p><em>Non-Capturing Parentheses</em></p>
 
@@ -166,7 +166,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-lookahead" id="special-lookahead" name="special-lookahead"><code>x(?=y)</code></a></td>
+   <td><a href="#special-lookahead" id="special-lookahead"><code>x(?=y)</code></a></td>
    <td>
     <p>符合'x'，且後接的是'y'。'y'為'x'存在的意義。<br>
      <br>
@@ -175,7 +175,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-negated-look-ahead" id="special-negated-look-ahead" name="special-negated-look-ahead"><code>x(?!y)</code></a></td>
+   <td><a href="#special-negated-look-ahead" id="special-negated-look-ahead"><code>x(?!y)</code></a></td>
    <td>
     <p>符合'x'，且後接的不是'y'。'y'為否定'x'存在的意義，後面不行前功盡棄(negated lookahead)。<br>
      <br>
@@ -187,7 +187,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-or" id="special-or" name="special-or"><code>x|y</code></a></td>
+   <td><a href="#special-or" id="special-or"><code>x|y</code></a></td>
    <td>
     <p>符合「x」或「y」。</p>
 
@@ -195,7 +195,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-quantifier" id="special-quantifier" name="special-quantifier"><code>{n}</code></a></td>
+   <td><a href="#special-quantifier" id="special-quantifier"><code>{n}</code></a></td>
    <td>
     <p>規定符號確切發生的次數，n為正整數</p>
 
@@ -203,7 +203,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-quantifier-range" id="special-quantifier-range" name="special-quantifier-range"><code>{n,m}</code></a></td>
+   <td><a href="#special-quantifier-range" id="special-quantifier-range"><code>{n,m}</code></a></td>
    <td>
     <p>搜尋條件：n為至少、m為至多，其n、m皆為正整數。若把m設定為0，則為Invalid regular expression。</p>
 
@@ -211,13 +211,13 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-character-set" id="special-character-set" name="special-character-set"><code>[xyz]</code></a></td>
+   <td><a href="#special-character-set" id="special-character-set"><code>[xyz]</code></a></td>
    <td>字元的集合。此格式會匹配中括號內所有字元, including <a href="https://developer.mozilla.org/zh-TW/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences" title="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences">escape sequences</a>。特殊字元，例如點（<code>.</code>） 和米字號（<code>*</code>），在字元集合中不具特殊意義，所以不需轉換。若要設一個字元範圍的集合，可以使用橫線 <code>"-"</code> ，如下例所示：<br>
     <br>
     <code>[a-d] </code>等同於 <code>[abcd]。</code>會匹配 "brisket" 的 "b" 、"city" 的 'c' ……等。 而<code>/[a-z.]+/ </code>和 <code>/[\w.]+/</code> 均可匹配字串 "test.i.ng" 。</td>
   </tr>
   <tr>
-   <td><a href="#special-negated-character-set" id="special-negated-character-set" name="special-negated-character-set"><code>[^xyz]</code></a></td>
+   <td><a href="#special-negated-character-set" id="special-negated-character-set"><code>[^xyz]</code></a></td>
    <td>
     <p>bracket中寫入的字元將被否定，匹配非出現在bracket中的符號。<br>
       可用 '-' 來界定字元的範圍。一般直接表達的符號都可以使用這種方式。</p>
@@ -226,11 +226,11 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-backspace" id="special-backspace" name="special-backspace"><code>[\b]</code></a></td>
+   <td><a href="#special-backspace" id="special-backspace"><code>[\b]</code></a></td>
    <td>吻合倒退字元 (U+0008). (不會跟 \b 混淆)</td>
   </tr>
   <tr>
-   <td><a href="#special-word-boundary" id="special-word-boundary" name="special-word-boundary"><code>\b</code></a></td>
+   <td><a href="#special-word-boundary" id="special-word-boundary"><code>\b</code></a></td>
    <td>
     <p>吻合文字邊界。A word boundary matches the position where a word character is not followed or preceded by another word-character. Note that a matched word boundary is not included in the match. In other words, the length of a matched word boundary is zero. (Not to be confused with <code>[\b]</code>.)</p>
 
@@ -244,7 +244,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-word-boundary" id="special-non-word-boundary" name="special-non-word-boundary"><code>\B</code></a></td>
+   <td><a href="#special-non-word-boundary" id="special-non-word-boundary"><code>\B</code></a></td>
    <td>
     <p>吻合非文字邊界。This matches a position where the previous and next character are of the same type: Either both must be words, or both must be non-words. The beginning and end of a string are considered non-words.</p>
 
@@ -252,7 +252,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-control" id="special-control" name="special-control"><code>\c<em>X</em></code></a></td>
+   <td><a href="#special-control" id="special-control"><code>\c<em>X</em></code></a></td>
    <td>
     <p>Where <em>X</em> is a character ranging from A to Z. Matches a control character in a string.</p>
 
@@ -260,7 +260,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-digit" id="special-digit" name="special-digit"><code>\d</code></a></td>
+   <td><a href="#special-digit" id="special-digit"><code>\d</code></a></td>
    <td>
     <p>吻合數字，寫法等同於 <code>[0-9] 。</code></p>
 
@@ -268,7 +268,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-digit" id="special-non-digit" name="special-non-digit"><code>\D</code></a></td>
+   <td><a href="#special-non-digit" id="special-non-digit"><code>\D</code></a></td>
    <td>
     <p>吻合非數字，寫法等同於 <code>[^0-9]。</code></p>
 
@@ -276,19 +276,19 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><code><a href="#special-form-feed" id="special-form-feed" name="special-form-feed">\f</a></code></td>
+   <td><code><a href="#special-form-feed" id="special-form-feed">\f</a></code></td>
    <td>Matches a form feed (U+000C).</td>
   </tr>
   <tr>
-   <td><a href="#special-line-feed" id="special-line-feed" name="special-line-feed"><code>\n</code></a></td>
+   <td><a href="#special-line-feed" id="special-line-feed"><code>\n</code></a></td>
    <td>Matches a line feed (U+000A).</td>
   </tr>
   <tr>
-   <td><a href="#special-carriage-return" id="special-carriage-return" name="special-carriage-return"><code>\r</code></a></td>
+   <td><a href="#special-carriage-return" id="special-carriage-return"><code>\r</code></a></td>
    <td>Matches a carriage return (U+000D).</td>
   </tr>
   <tr>
-   <td><a href="#special-white-space" id="special-white-space" name="special-white-space"><code>\s</code></a></td>
+   <td><a href="#special-white-space" id="special-white-space"><code>\s</code></a></td>
    <td>
     <p>Matches a single white space character, including space, tab, form feed, line feed. Equivalent to <code>[ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>.</p>
 
@@ -296,7 +296,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-white-space" id="special-non-white-space" name="special-non-white-space"><code>\S</code></a></td>
+   <td><a href="#special-non-white-space" id="special-non-white-space"><code>\S</code></a></td>
    <td>
     <p>Matches a single character other than white space. Equivalent to <code>[^ \f\n\r\t\v​\u00a0\​\u1680u180e\u2000​\u2001\u2002​\u2003\u2004​\u2005\u2006​\u2007\u2008​\u2009\u200a​\u2028\u2029​\u202f\u205f​\u3000]</code>.</p>
 
@@ -304,15 +304,15 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-tab" id="special-tab" name="special-tab"><code>\t</code></a></td>
+   <td><a href="#special-tab" id="special-tab"><code>\t</code></a></td>
    <td>Matches a tab (U+0009).</td>
   </tr>
   <tr>
-   <td><a href="#special-vertical-tab" id="special-vertical-tab" name="special-vertical-tab"><code>\v</code></a></td>
+   <td><a href="#special-vertical-tab" id="special-vertical-tab"><code>\v</code></a></td>
    <td>Matches a vertical tab (U+000B).</td>
   </tr>
   <tr>
-   <td><a href="#special-word" id="special-word" name="special-word"><code>\w</code></a></td>
+   <td><a href="#special-word" id="special-word"><code>\w</code></a></td>
    <td>
     <p>包含數字字母與底線，等同於<code>[A-Za-z0-9_]。</code></p>
 
@@ -322,7 +322,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-word" id="special-non-word" name="special-non-word"><code>\W</code></a></td>
+   <td><a href="#special-non-word" id="special-non-word"><code>\W</code></a></td>
    <td>
     <p>Matches any non-word character. Equivalent to <code>[^A-Za-z0-9_]</code>.</p>
 
@@ -330,7 +330,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-backreference" id="special-backreference" name="special-backreference"><code>\<em>n</em></code></a></td>
+   <td><a href="#special-backreference" id="special-backreference"><code>\<em>n</em></code></a></td>
    <td>
     <p>Where <em>n</em> is a positive integer, a back reference to the last substring matching the <em>n</em> parenthetical in the regular expression (counting left parentheses).</p>
 
@@ -338,15 +338,15 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-null" id="special-null" name="special-null"><code>\0</code></a></td>
+   <td><a href="#special-null" id="special-null"><code>\0</code></a></td>
    <td>Matches a NULL (U+0000) character. Do not follow this with another digit, because <code>\0&lt;digits&gt;</code> is an octal <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences" title="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences">escape sequence</a>. Instead use <code>\x00</code>.</td>
   </tr>
   <tr>
-   <td><a href="#special-hex-escape" id="special-hex-escape" name="special-hex-escape"><code>\xhh</code></a></td>
+   <td><a href="#special-hex-escape" id="special-hex-escape"><code>\xhh</code></a></td>
    <td>Matches the character with the code hh (two hexadecimal digits)</td>
   </tr>
   <tr>
-   <td><a href="#special-unicode-escape" id="special-unicode-escape" name="special-unicode-escape"><code>\uhhhh</code></a></td>
+   <td><a href="#special-unicode-escape" id="special-unicode-escape"><code>\uhhhh</code></a></td>
    <td>Matches the character with the code hhhh (four hexadecimal digits).</td>
   </tr>
  </tbody>

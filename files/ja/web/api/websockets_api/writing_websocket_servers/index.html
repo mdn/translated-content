@@ -54,7 +54,7 @@ Sec-WebSocket-Version: 13</code></pre>
 <p><strong>Tip:</strong> すべての<strong>ブラウザ</strong>は <a href="/ja/docs/Web/HTTP/HTTP_access_control#Origin"><code>Origin</code> ヘッダー</a>を送信します。 このヘッダをセキュリティ (同じ起点のチェック、ホワイトリスト/ブラックリストなど) に使用し、あなたが見ているものが気に入らなければ <a href="/ja/docs/Web/HTTP/Status#403">403 Forbidden</a> を送ることができます。ただし、ブラウザ以外のエージェントは、偽の <code>Origin</code> を送信するだけであることに注意してください。ほとんどのアプリケーションは、このヘッダーのない要求を拒否します。</p>
 </div>
 
-<p>ヘッダーが解釈されていないか値が正しくない場合、サーバーは "<a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes#400">400 Bad Request</a>" を送信し、すぐにソケットを閉じる必要があります。通常は、HTTP レスポンス本体でハンドシェークが失敗した理由を示すかもしれませんが、メッセージは表示されないかもしれません (ブラウザはそれを表示しません)。 サーバーが WebSocket のバージョンを認識しない場合、サーバーは解釈可能なバージョンを含む <code>Sec-WebSocket-Version</code> ヘッダーを返す必要があります。(このガイドでは最新のv13について説明しています)。 ここで、最も興味深いヘッダーである <code>Sec-WebSocket-Key</code> に移動しましょう。</p>
+<p>ヘッダーが解釈されていないか値が正しくない場合、サーバーは "<a href="/ja/docs/HTTP/Response_codes#400">400 Bad Request</a>" を送信し、すぐにソケットを閉じる必要があります。通常は、HTTP レスポンス本体でハンドシェークが失敗した理由を示すかもしれませんが、メッセージは表示されないかもしれません (ブラウザはそれを表示しません)。 サーバーが WebSocket のバージョンを認識しない場合、サーバーは解釈可能なバージョンを含む <code>Sec-WebSocket-Version</code> ヘッダーを返す必要があります。(このガイドでは最新のv13について説明しています)。 ここで、最も興味深いヘッダーである <code>Sec-WebSocket-Key</code> に移動しましょう。</p>
 
 <div class="note">
 <p><strong>Note:</strong> <a href="/ja/docs/Web/HTTP/Status">通常の HTTP ステータスコード</a>は、ハンドシェイクの前にのみ使用できます。ハンドシェイクが成功したら、別のコードセット (仕様の 7.4 節で定義されている) を使用する必要があります。</p>
@@ -236,7 +236,7 @@ Sec-WebSocket-Protocol: wamp</code></pre>
 
 <ul>
  <li><a href="https://github.com/alexhultman/libwshandshake">WebSocket handshake library in C++</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/WebSockets/Writing_WebSocket_server" title="/en-US/docs/WebSockets/Writing_WebSocket_server">Tutorial: Websocket server in C#</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/WebSockets/Writing_WebSocket_client_applications">Writing WebSocket client applications</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/WebSockets/WebSocket_Server_Vb.NET">Tutorial: Websocket server in VB.NET</a></li>
+ <li><a href="/ja/docs/WebSockets/Writing_WebSocket_server" title="/en-US/docs/WebSockets/Writing_WebSocket_server">Tutorial: Websocket server in C#</a></li>
+ <li><a href="/ja/docs/WebSockets/Writing_WebSocket_client_applications">Writing WebSocket client applications</a></li>
+ <li><a href="/ja/docs/WebSockets/WebSocket_Server_Vb.NET">Tutorial: Websocket server in VB.NET</a></li>
 </ul>

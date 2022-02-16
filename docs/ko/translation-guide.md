@@ -15,9 +15,28 @@
 
 이 문서는 한국(ko) 지역에 대한 번역 지침입니다. 귀하의 로케일에 대한 몇 가지 특정 지침을 문서화하는 페이지를 추가하고 싶은데 아직 여기에 나타나지 않는 경우, 하나를 추가하거나 [Locale Teams](https://github.com/mdn/translated-content#policies-for-active-community-maintenance-teams)에 문의해주세요.
 
-마찬가지로 추가하려는 일반 지침에 대한 좋은 아이디어가 있는 경우 환영합니다. Issue를 열고 문제에대해 이야기해주세요. 다음은 한국어 번역 지침 원칙의 주요 내용입니다.
+마찬가지로 추가하려는 일반 지침에 대한 좋은 아이디어가 있는 경우 환영합니다. Issue를 열고 문제에 대해 이야기해주세요. 다음은 한국어 번역 지침 원칙의 주요 내용입니다.
 
 ## 첫 기여자들을 위한 지침 안내
+
+MDN의 모든 로케일은 `en-us`를 기준으로 변역이 진행되고 있습니다. 한국 로케일[(translated-content)](https://github.com/mdn/translated-content)도 `en-us`[(content)](https://github.com/mdn/content)를 기반으로 번역이 진행되고 있습니다. **따라서, `ko`와 `en-us` 문서 사이에 차이가 있다면, 마크업을 포함하여 `en-us` 문서를 기준으로 번역하여 `translated-content` 저장소에 기여할 수 있습니다.**
+
+[번역 가이드](#번역-가이드)와 [용어 지침](#용어-지침)을 숙지 후 기여해주세요.
+
+### PR 규칙
+
+- `ko-locale`에 존재하지 않는 새로운 파일에 대한 번역을 진행할 때, **파일 전체 번역**을 원칙으로 합니다. (단, [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)와 같이 분량이 많은 파일에 대해서는 부분 번역을 허용합니다. 이때, 번역되지 않은 부분은 `en-us locale` 원본으로 대체합니다.)
+- `PR`의 `Merge` 우선 순위는 먼저 PR을 생성한 순서대로 우선권을 갖습니다. 리뷰어는 우선 순위가 있는 PR을 먼저 병합하는것을 원칙으로 합니다. 따라서, 번역을 진행하기 전에, `Draft PR`을 먼저 생성하는 것을 권장합니다. [ko-locale PR 목록](https://github.com/mdn/translated-content/pulls?q=is%3Apr+is%3Aopen+label%3Al10n-ko+)
+
+### ko-locale 현황판
+
+어디서부터 기여해야 될지 모르겠다면 현황판에 등록된 `Level 0`, `Level 1`, `Level 2` 각자 MDN의 이해도에 맞는 이슈를 처리해보세요! 새로운 이슈를 제보하는 것도 기여에 큰 도움이 됩니다.
+
+- [ko-locale 현황판](https://github.com/mdn/translated-content/projects/2)
+
+### 파일 확장자
+
+현재 translated-content 저장소는 `.html`과 `.md` 두 개의 확장자로 문서 편집을 할 수 있습니다. **(자세한 내용은 [자주 묻는 질문](https://github.com/mdn/translated-content/blob/main/docs/ko/translation-guide.md#%EC%9E%90%EC%A3%BC-%EB%AC%BB%EB%8A%94-%EC%A7%88%EB%AC%B8) 6번을 참고해주세요.)**
 
 첫 기여자분들을 위해 다음 [issue 827](https://github.com/mdn/translated-content/issues/827)에 기여 방법을 작성했습니다. 참고해주세요.
 
@@ -27,8 +46,8 @@
 
 yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크](https://github.com/mdn/translated-content#making-contributions)를 참고해주세요.
 
-1. [content](https://github.com/mdn/content) 하고 [translated-content](https://github.com/mdn/translated-content) 다운 받습니다. (fork  한뒤)
-2. content 폴더에 들어가서 `yarn install`
+1. [content](https://github.com/mdn/content)와 (Fork된 본인 레포의) [translated-content](https://github.com/mdn/translated-content)를 클론합니다.
+2. content 폴더에 들어가서 `yarn install`을 통해 yari 등 필요한 패키지를 다운받습니다.
 3. content 폴더 root에 .env 파일을 추가합니다. (translated-content/files 경로 추가, vscode editor의 경우 `EDITOR=code` 추가)
 
 ```
@@ -37,14 +56,14 @@ EDITOR=code
 ```
 4. `yarn start`
 
-다음과 같이 진행하면 아래와 같이 실시간으로 반영사항 확인할 수 있고 4가지 편집 버튼으로 편집할 수 있습니다.
+다음과 같이 진행하면 아래와 같이 실시간으로 반영사항을 확인할 수 있고 4가지 편집 버튼으로 편집할 수 있습니다.
 ![image](https://user-images.githubusercontent.com/22424891/117309001-002e0500-aebd-11eb-9842-8f78a99e8873.png)
 
 ## 번역 가이드
 
 ### heading ID 번역
 
-기사 제목에는 거의 항상 ID가 주어지는데, 기사 내에서 네비게이션을 자동으로 생성하고 실시간 샘플을 생성하기위한 코드 블록을 식별하는 등의 이유가 있습니다. 제목을 번역 할 때 ID도 같이 번역 할 필요가 없습니다. 나머지 슬러그는 번역되지 않으므로 모든 것이 일관되게 유지됩니다.
+기사 제목에는 거의 항상 ID가 주어지는데, 기사 내에서 네비게이션을 자동으로 생성하고 실시간 샘플을 생성하기 위한 코드 블록을 식별하는 등의 이유가 있습니다. 제목을 번역 할 때 ID도 같이 번역 할 필요가 없습니다. 나머지 슬러그는 번역되지 않으므로 모든 것이 일관되게 유지됩니다.
 
 예를 들면:
 
@@ -86,7 +105,7 @@ EDITOR=code
 
 ### 역주/역자주 
 
-그동안의 MDN 문서에서는 역주로인한 자의적인 해석이 많았고, 전체적인 문서의 품질을 낮췄습니다. 역주가 꼭 필요한 상황이 아니라면 역주는 남기지 않으며, 남기더라도 따로 역주를 표시하지 않고 본문에 포함합니다.
+그동안의 MDN 문서에서는 역주로 인한 자의적인 해석이 많았고, 전체적인 문서의 품질을 낮췄습니다. 역주가 꼭 필요한 상황이 아니라면 역주는 남기지 않으며, 남기더라도 따로 역주를 표시하지 않고 본문에 포함합니다.
 예시: [다음 링크 참고](https://github.com/mdn/translated-content/pull/1385#discussion_r667509255)
 
 ### 기울임꼴
@@ -99,7 +118,76 @@ EDITOR=code
 
 다만 진짜 강조를 해야하는 상황에는, 따옴표로 강조하고 PR로 소명합니다.
 
+### `:` 쌍점,  `;` 쌍반점 지침
+
+뒤의 문장 예시를 강조하기 위해 쌍점을 사용하는 경우에 `: 쌍점`은 한글 문법에 적합하지 않습니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-964241518)
+
+`한글맞춤법-부록-문장 부호` 부분의 `: 쌍점`에 대한 규정만 존재하고, `; 쌍반점`에 대한 규정은 존재하지 않습니다. 따라서, 해당 경우가 아니면 `: 쌍점`을 `. 온점`으로 치환하는 것을 권장합니다. `; 쌍반점`의 경우는 `. 온점`으로 치환하는 것을 권장합니다.[(참고: 국립 국어원)](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=70177)
+
+```
+<한글맞춤법-부록-문장부호>
+
+쌍점( : )
+
+(1) 내포되는 종류를 들 적에 쓴다.
+
+문장 부호: 마침표, 쉼표, 따옴표, 묶음표 등 문방사우: 붓, 먹, 벼루, 종이
+
+(2) 소표제 뒤에 간단한 설명이 붙을 때에 쓴다.
+
+일시: 1984 년 10 월 15 일 10 시
+마침표: 문장이 끝남을 나타낸다.
+
+(3) 저자명 다음에 저서명을 적을 때에 쓴다.
+
+정약용: 목민심서, 경세유표
+주시경: 국어 문법, 서울 박문 서관, 1910.
+
+(4) 시(時)와 분(分), 장(章)과 절(節) 따위를 구별할 때나, 둘 이상을 대비할 때에 쓴다.
+
+오전 10:20 (오전 10 시 20 분)
+요한 3:16 (요한복음 3 장 16 절)
+대비 65:60 (65 대 60)
+```
+
+- 원문 [(참고 링크)](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor/parameterDescriptors)
+```
+The properties of these objects are as follows:
+```
+
+- 변경 전
+```
+이 객체들의 속성은 다음과 같습니다:
+```
+
+- 변경 후
+```
+이 객체들의 속성은 다음과 같습니다.
+```
+
+### `—` 대시 지침
+
+`: 쌍점,  ; 쌍반점 지침`과 같은 맥락에서 `. 온점`으로 치환하는 것을 권장합니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-965500282)
+
+- 원문
+```
+A value of 0.01 was used for the value to ramp down to in the last function rather than 0, as an invalid or illegal string error is thrown if 0 is used — the value needs to be positive.
+```
+
+- 변경 전
+```
+오류가 발생되기 때문입니다 — 이 값은 양수일 필요가 있습니다.
+```
+
+- 변경 후
+```
+오류가 발생되기 때문입니다. 이 값은 양수일 필요가 있습니다.
+```
+
 ## 용어 지침
+
+새로운 용어를 추가할 때, 기존 문서의 레거시와 [국립 국어원 한국어 어문 규범](https://kornorms.korean.go.kr/main/main.do)을 고려해 추가할 것을 권장합니다.
+[국립 국어원 온라인가나다](https://www.korean.go.kr/front/onlineQna/onlineQnaList.do?mn_id=216)에서 어문 규범, 어법, 표준국어대사전 내용 등에 대하여 문의할 수 있습니다.
 
 ### 공통
 
@@ -119,34 +207,98 @@ EDITOR=code
     - 예: 정수 값, 소수 값, 반환 값, 기본 값
     - 틀린 예: 정숫값, 소숫값, 반환값, 기본값
 
+### 용어 지침 `참고 링크` 우선 순위
+
+- 1. 해당 단어에 대한 의견을 나눈 PR 링크
+- 2. 적절한 ko MDN 문서 링크
+- 3. 적절한 en-us MDN 문서 링크
+
+## Section Title
+
+각 페이지의 Section Title에 대한 단어 정의입니다. 
+
+**사전 순으로 용어집을 편집해주세요.**
+
+| 용어 | 번역 | 참고 링크 |
+| --- | --- | --- |
+| Accessibility concerns | 접근성 고려사항 | |
+| Advantages | 장점 | [링크](https://developer.mozilla.org/en-US/docs/Games/Introduction_to_HTML5_Game_Development) |
+| Aliasing | 별칭 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
+| Brief history | 간략한 역사 | [링크](https://developer.mozilla.org/ko/docs/Glossary/HTML#%EA%B0%84%EB%9E%B5%ED%95%9C_%EC%97%AD%EC%82%AC) |
+| Browser compatibility | 브라우저 호환성 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
+| Browser support | 브라우저 지원 | [링크](http://localhost:5042/en-us/docs/Web/API/Web_Audio_API/Using_IIR_filters#browser_support) |
+| Concept | 개념 | |
+| Conclusion | 결론 | |
+| Contact us | 문의하기 | |
+| Demo | 데모 | [링크](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders#demo)
+| Description | 설명 | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#description)  
+| Example | 예제 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Examples | 예제들 | [링크](https://developer.mozilla.org/en-US/docs/Glossary/loop#examples) |
+| Guides | 가이드 | |
+| In this module | | [링크](https://developer.mozilla.org/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started#in_this_module) |
+| Learn More | 더 알아보기 | [링크](https://developer.mozilla.org/en-US/docs/Glossary/Mutable) |
+| Next steps | 다음 단계 | [링크](https://developer.mozilla.org/ko/docs/Games/Tutorials/2D_breakout_game_Phaser#%EB%8B%A4%EC%9D%8C_%EB%8B%A8%EA%B3%84) |
+| Polyfill | 폴리필 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
+| Reference | 참고서 | |
+| See also | 같이 보기 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Specifications | 명세서 | [링크](https://github.com/mdn/translated-content/pull/1779/files) |
+| Summary | 요약 | |
+| Syntax | 구문 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Tools & resources | 도구 & 리소스 | [링크](https://developer.mozilla.org/en-US/docs/Web/JavaScript) |
+| Tutorial | 자습서 | |
+| Usage notes | 사용 일람 | |
+| Web Technologies | 웹 기술들 | [링크](https://developer.mozilla.org/en-US/docs/Games/Introduction_to_HTML5_Game_Development) |
+
+## Section Subtitle
+
+각 페이지의 Section Subtitle에 대한 단어 정의입니다. 
+
+**사전 순으로 용어집을 편집해주세요.**
+
+| 용어 | 번역 | 참고 링크 |
+| --- | --- | --- |
+| Compatibility notes | 호환성 참고 사항 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+| Parameters | 매개변수 | [링크](http://localhost:5042/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode#parameters) |
+| Value | 값 | [링크](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) |
+
+## 안내 문구
+
+각 페이지의 안내 문구에 대한 단어 정의입니다.
+
+**사전 순으로 용어집을 편집해주세요.**
+
+| 용어 | 번역 | 참고 링크 |
+| --- | --- | --- |
+| Note | 참고 | | 
+| Objective | 목표 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) |
+| Prerequisites | 필요한 사전 지식 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) | 
+
+## 공통 용어
+
 **사전 순으로 용어집을 편집해주세요.**
 
 | 용어 | 번역 | 기타 |
 | --- | --- | --- |
-| Accessibility concerns | 접근성 고려사항 | Heading |
+| Application | 애플리케이션 | |
 | Attribute | 특성 | |
 | Boolean | 불리언 | |
 | Class | 클래스 | |
-| Contact us | 문의하기 | |
 | Content(s) | 콘텐츠 | |
 | Context | 맥락 | |
 | Document | 문서 | |
 | Element | 요소 | |
 | Entity | 개체 | |
 | Enumerated | 열거형 | |
-| Example | 예제 | Heading |
 | Expression | 표현식 또는 식 | |
+| Framework | 프레임워크 | |
 | Global | 전역 | |
 | Glossary | 용어 사전 | |
 | Grammar | 문법 | |
-| Guides (헤딩) | 가이드 | | | 
 | Literal | 리터럴 | |
-| Method | 메서드 | |
+| Method | 메서드 | [국립국어원 Method](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=11976) |
 | Module | 모듈 | ESM에서 명시하는 모듈의 경우 '모듈'로 변역한다. | | 
 | Module | 과정 | 어떠한 교육 과정, 단위에 의한 표현은 '과정'으로 번역한다. (예: In this module) | | 
-| Note (안내문구) | 참고	 | | | 
 | Object | 객체 | |
-| Objective (안내문구) | 목표 | | |
 | Origin | 출처 | |
 | Override | 재정의 | |
 | Primitive | 원시 (값) | |
@@ -155,13 +307,8 @@ EDITOR=code
 | Reference | 참고서 | |
 | Regular expression | 정규 표현식 | |
 | Rendering | 렌더링 | |
-| See also | 같이 보기 | Heading |
 | Section | 구획 | |
-| Specification | 명세 | |
 | Statement | 명령문 또는 문 | |
-| Syntax | 구문 | |
-| Tutorial | 자습서 | |
-| Usage notes | 사용 일람 | Heading |
 | User agent | 사용자 에이전트 | |
 
 ### CSS
@@ -200,7 +347,7 @@ EDITOR=code
 
 | 용어 | 번역 | 기타 | 참고 링크 |
 | --- | --- | --- | ------ |
-| Argument | 매개변수 | | | 
+| Argument | 전달인자, 인수 | | [참고 링크](https://github.com/mdn/translated-content/pull/3888) | 
 | Blocking operation | 블로킹 연산 | | | 
 | Callback | 콜백 | | | 
 | Fulfilled | 이행(함) | | | 
@@ -212,20 +359,22 @@ EDITOR=code
 | Non-blocking operation | 논블로킹 연산 | | | 
 | Parameter | 매개변수 | | | 
 | Pending | 대기 | | | 
-| Prerequisites | 필요한 사전 지식 | | | 
-| Promise | 프로미스 | | [해당 링크 참고](https://github.com/mdn/translated-content/pull/1081#issuecomment-878333558) | 
+| Promise | 프로미스 | | [참고 링크](https://github.com/mdn/translated-content/pull/1081#issuecomment-878333558) | 
 | Promise chaining | 프로미스 체이닝 | | | 
 | Prototype | 프로토타입 | | |
 | Reject | 거부 | | | 
-| Resolve | 이행 | | | 
+| Resolve | 이행 | | |
+| Rest parameters | 나머지 매개변수 | | [참고 링크](https://github.com/mdn/translated-content/pull/2549/files) | 
 | Settled | 처리 | | | 
 | Scope | 스코프 | | | 
+| Temporal Dead Zone, TDZ | 시간상 사각지대 | | [참고 링크](https://github.com/mdn/translated-content/pull/2626/files) | 
 
 ### HTTP
 
 | 용어 | 번역 | 기타 | 참고 링크 |
 | --- | --- | --- | ------ |
 | Idempotent | 멱등성 | | | 
+| Payload | 페이로드 | | [참고 링크](https://github.com/mdn/translated-content/pull/2737) | 
 | Request Body | 요청 본문 | | | 
 | Response Body | 응답 본문 | | | 
 
@@ -292,6 +441,12 @@ https://developer.mozilla.org/en-US/docs/Web/HTML 와같이 영문 페이지라�
 **5. Issue의 라벨은 어떻게 붙이나요?**
 
 라벨은 레파지토리 관리자분들께서 확인 후 붙여주십니다.
+
+**6. content(en) 레포에는 index.md 파일로 저장되어 있는데, translated-content(ko) 레포에는 index.html 으로 되어 있습니다. 이런 경우에는 translated-content 레포의 index.html 파일이 번역된 index.md 파일로 교체되어도 되는건가요? 꼭 .html 포멧을 지켜야 한다 같은 규칙이 있는지 궁금합니다.**
+
+2021년 10월 17일 기준, html 형식에서 md 형식으로 옮겨가고 있는 과도기에있습니다. 자세한 내용은 [다음 링크](https://egas.tistory.com/m/52)를 참고해주세요.
+
+md, html 확장자 중 어느 하나를 사용하더라도 괜찮습니다. 다만, md 확장자를 사용하실 경우 [MDN ko locale Markdown 번역에 대한 일반 지침](https://github.com/mdn/translated-content/blob/main/docs/ko/markdown-guide.md)을 지켜서 기여해주시면 됩니다!
 
 ## 맺음말
 

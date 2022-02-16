@@ -13,17 +13,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 ---
 <div>{{JSRef("Global_Objects", "Array")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>join()</strong></code> объединяет все элементы массива (или <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">массивоподобного объекта</a>) в строку.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/array-join.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>arr</var>.join(<var>[separator]</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>separator </code> <span class="diff_add">{{optional_inline}}</span></dt>
@@ -34,13 +34,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 
 <p>Строка, содержащая все элементы массива. Если <em><code>arr.length</code></em> == <code>0</code>,  то будет возвращена пустая строка.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Преобразует все элементы массива в строки и объединяет их в одну большую строку. Элемент массива с типом <code>undefined</code> или <code>null </code>преобразуется в пустую строку.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Joining_an_array_three_different_ways" name="Example:_Joining_an_array_three_different_ways">Соединение массива четырьмя различными способами</h3>
+<h3 id="Example:_Joining_an_array_three_different_ways">Соединение массива четырьмя различными способами</h3>
 
 <p>В следующем примере создаётся массив <code>a</code> с тремя элементами, затем они четыре раза объединяются в строку: с использованием разделителя по умолчанию, запятой с пробелом, плюса, окружённого пробелами, и пустой строки.</p>
 
@@ -61,47 +61,19 @@ var myVar4 = a.join('');    // присвоит 'ВетерДождьОгонь'
 <span class="punctuation token">}</span>
 <span class="function token">f</span><span class="punctuation token">(</span><span class="number token">1</span><span class="punctuation token">,</span> <span class="string token">'a'</span><span class="punctuation token">,</span> <span class="keyword token">true</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.5', 'Array.prototype.join')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.join', 'Array.prototype.join')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.join', 'Array.prototype.join')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div>
 
 
-<p>{{Compat("javascript.builtins.Array.join")}}</p>
+<p>{{Compat}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.split()")}}</li>

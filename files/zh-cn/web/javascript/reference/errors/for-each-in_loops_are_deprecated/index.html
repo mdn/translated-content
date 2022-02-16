@@ -29,12 +29,14 @@ translation_of: Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 <h4 id="不赞成这么使用">不赞成这么使用</h4>
 
 <div class="warning">
-<p class="brush: js example-bad">var object = { a: 10, b: 20 };</p>
+<p><strong>警告：</strong></p>
+<pre class="brush: js example-bad">var object = { a: 10, b: 20 };</pre>
 
-<p class="brush: js example-bad">for each (var x in object) {<br>
-   console.log(x);        // 10<br>
-                          // 20<br>
- }</p>
+<pre class="brush: js example-bad">for each (var x in object) {
+   console.log(x);        // 10
+                          // 20
+ }
+</pre>
 </div>
 
 <h4 id="替换语法">替换语法</h4>
@@ -67,13 +69,14 @@ for (var x of Object.values(object)) {
 <h4 id="不赞成这么使用_2">不赞成这么使用</h4>
 
 <div class="warning">
-<p class="brush: js example-bad">var array = [10, 20, 30];</p>
+<p><strong>警告：</strong></p>
+<pre class="brush: js example-bad">var array = [10, 20, 30];</pre>
 
-<p class="brush: js example-bad">for each (var x in array) {<br>
-   console.log(x);        // 10<br>
-                          // 20<br>
-                          // 30<br>
- }</p>
+<pre class="brush: js example-bad">for each (var x in array) {
+   console.log(x);        // 10
+                          // 20
+                          // 30
+ }</pre>
 </div>
 
 <h4 id="替换语法_2">替换语法</h4>
@@ -96,15 +99,16 @@ for (var x of array) {
 <h4 id="不赞成这么使用_3">不赞成这么使用</h4>
 
 <div class="warning">
-<p class="brush: js example-bad">function func(array) {<br>
-   for each (var x in array) {<br>
-     console.log(x);<br>
-   }<br>
- }<br>
- func([10, 20]);        // 10<br>
-                        // 20<br>
- func(null);            // prints nothing<br>
- func(undefined);       // prints nothing</p>
+<p><strong>警告：</strong></p>
+<pre class="brush: js example-bad">function func(array) {
+   for each (var x in array) {
+     console.log(x);
+   }
+ }
+ func([10, 20]);        // 10
+                        // 20
+ func(null);            // prints nothing
+ func(undefined);       // prints nothing</pre>
 </div>
 
 <h4 id="替换语法_3">替换语法</h4>
@@ -131,12 +135,13 @@ func(undefined);       // prints nothing
 <p> 不赞成使用{{jsxref("Statements/for_each...in", "for each...in")}}和{{jsxref("Iterator")}} 对象来遍历指定对象的键值对.</p>
 
 <div class="warning">
-<p class="brush: js example-bad">var object = { a: 10, b: 20 };</p>
+<p><strong>警告：</strong></p>
+<pre class="brush: js example-bad">var object = { a: 10, b: 20 };</pre>
 
-<p class="brush: js example-bad">for each (var [key, value] in Iterator(object)) {<br>
-   console.log(key, value);  // "a", 10<br>
-                             // "b", 20<br>
- }</p>
+<pre class="brush: js example-bad">for each (var [key, value] in Iterator(object)) {
+   console.log(key, value);  // "a", 10
+                             // "b", 20
+ }</pre>
 </div>
 
 <h4 id="替换语法_4">替换语法</h4>

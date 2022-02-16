@@ -221,7 +221,7 @@ Person.prototype.farewell = function() {
 
 <pre class="brush: js">Person.prototype.fullName = 'Bob Smith';</pre>
 
-<p>sso não é muito flexível, pois a pessoa pode não ser chamada assim. Seria muito melhor construir o <code>fullName</code> fora do <code>name.first</code> e <code>name.last</code>:</p>
+<p>Isso não é muito flexível, pois a pessoa pode não ser chamada assim. Seria muito melhor construir o <code>fullName</code> fora do <code>name.first</code> e <code>name.last</code>:</p>
 
 <pre class="brush: js">Person.prototype.fullName = this.name.first + ' ' + this.name.last;</pre>
 

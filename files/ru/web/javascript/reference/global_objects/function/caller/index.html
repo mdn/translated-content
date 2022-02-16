@@ -10,11 +10,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 ---
 <div>{{JSRef("Global_Objects", "Function")}} {{non-standard_header}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Свойство <code><strong><em>function</em>.caller</strong></code> возвращает функцию, которая вызвала указанную функцию.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Если функция <code>f</code> была вызвана из кода самого верхнего уровня, значение <code>f.caller</code> будет равно {{jsxref("Global_Objects/null", "null")}}, в противном случае значение будет равно функции, вызвавшей <code>f</code>.</p>
 
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 
 <p>Специальное свойство <code>__caller__</code>, возвращающее объект активации вызывающей функции и, таким образом, позволяющее восстанавливать стек вызовов, было удалено по соображениям безопасности.</p>
 
-<h3 id="Notes" name="Notes">Примечания</h3>
+<h3 id="Notes">Примечания</h3>
 
 <p>Обратите внимание, что в случае рекурсии, вы не сможете воссоздать стек вызовов, используя это свойство. Пусть у нас есть функции:</p>
 
@@ -53,9 +53,9 @@ while (f) {
 
 <p>то этот цикл никогда не остановится.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Checking_the_value_of_a_function.27s_caller_property" name="Example:_Checking_the_value_of_a_function.27s_caller_property">Пример: проверка значения свойства <code>caller</code> функции</h3>
+<h3 id="Example:_Checking_the_value_of_a_function.27s_caller_property">Пример: проверка значения свойства <code>caller</code> функции</h3>
 
 <p>Следующий код проверяет значение свойства <code>caller</code> функции.</p>
 
@@ -68,15 +68,15 @@ while (f) {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
 <p>Не является частью какой-либо спецификации. Реализована в JavaScript 1.5.</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>Ошибка реализации в SpiderMonkey: {{bug(65683)}}</li>

@@ -6,7 +6,7 @@ original_slug: DOM/DOM_Reference/Examples
 ---
 <p>В этой главе представлены более длинные примеры разработки веб-сайтов и XML с использованием DOM. По возможности, примеры используют общие API, трюки и шаблоны в JavaScript для управления объектом документа.</p>
 
-<h2 id="Example_1_height_and_width" name="Example_1:_height_and_width">Пример 1: высота и ширина</h2>
+<h2 id="Example_1_height_and_width">Пример 1: высота и ширина</h2>
 
 <p>В следующем примере показано использование свойств высоты и ширины для изображений разных размеров:<br>
   </p>
@@ -64,7 +64,7 @@ function init() {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_2_Image_Attributes" name="Example_2:_Image_Attributes">Пример 2: Атрибуты Изображения</h2>
+<h2 id="Example_2_Image_Attributes">Пример 2: Атрибуты Изображения</h2>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -95,7 +95,7 @@ function setBorderWidth(width) {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_3_Manipulating_Styles" name="Example_3:_Manipulating_Styles">Пример 3: Управление Стилями</h2>
+<h2 id="Example_3_Manipulating_Styles">Пример 3: Управление Стилями</h2>
 
 <p>В этом простом примере, некоторые базовые свойства стиля элемента абзаца HTML доступны с помощью объекта стиля элемента и свойств стиля CSS этого объекта, который можно получить и установить из DOM. В этом случае вы напрямую управляете отдельными стилями. В следующем примере (см. Пример 4), вы можете использовать таблицы стилей и их правила для изменения стилей для целых документов.</p>
 
@@ -125,9 +125,9 @@ function changeText() {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_4_Using_Stylesheets" name="Example_4:_Using_Stylesheets">Пример 4: Использование Стилей</h2>
+<h2 id="Example_4_Using_Stylesheets">Пример 4: Использование Стилей</h2>
 
-<p>Свойство styleSheets объекта документа возвращает список таблиц стилей, которые были загружены в этот документ. Вы можете получить доступ к этим таблицам стилей и их правилам индивидуально, используя объекты таблицы стилей, стилей и CSS правил объекта, как показано в этом примере, который выводит все селектора правил стиля в консоль.</p>
+<p>Свойство styleSheets объекта документа возвращает список таблиц стилей, которые были загружены в этот документ. Вы можете получить доступ к этим таблицам стилей и их правилам индивидуально, используя объекты таблицы стилей, стилей и CSS-правил объекта, как показано в этом примере, который выводит все селектора правил стиля в консоль.</p>
 
 <pre class="brush:js">var ss = document.styleSheets;
 
@@ -151,7 +151,7 @@ P
 #LUMPY
 </pre>
 
-<h2 id="Example_5_Event_Propagation" name="Example_5:_Event_Propagation">Пример 5: Распространение Событий</h2>
+<h2 id="Example_5_Event_Propagation">Пример 5: Распространение Событий</h2>
 
 <p>Этот пример демонстрирует, как события срабатывают и обрабатываются в DOM очень простым путём. Когда загружается BODY в составе HTML-документа, обработчик событий регистрируется в верхней строке таблицы TABLE. Обработчик событий реагирует на событие запуском функции stopEvent, изменяющей значение в нижней ячейке.</p>
 
@@ -199,7 +199,7 @@ function load() {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_6_getComputedStyle" name="Example_6:_getComputedStyle">Пример 6: getComputedStyle</h2>
+<h2 id="Example_6_getComputedStyle">Пример 6: getComputedStyle</h2>
 
 <p>Этот пример показывает как {{domxref("window.getComputedStyle")}} метод может использоваться для получения стилей элемента, которые не заданы с помощью атрибута style или с помощью JavaScript (e.g., <code>elt.style.backgroundColor="rgb(173, 216, 230)"</code>). Эти последние типы стилей можно получить с помощью более прямых {{domxref("element.style", "elt.style")}} свойств, которые указаны в <a href="/en-US/docs/Web/CSS/Reference">DOM CSS Properties List</a>.</p>
 
@@ -259,7 +259,7 @@ function cStyles() {
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_7_Displaying_Event_Object_Properties" name="Example_7:_Displaying_Event_Object_Properties">Пример 7: Отображение Свойств Событий Объекта</h2>
+<h2 id="Example_7_Displaying_Event_Object_Properties">Пример 7: Отображение Свойств Событий Объекта</h2>
 
 
 
@@ -334,7 +334,7 @@ window.onload = function(event){
 &lt;/html&gt;
 </pre>
 
-<h2 id="Example_8_Using_the_DOM_Table_Interface" name="Example_8:_Using_the_DOM_Table_Interface">Пример 8: Использование интерфейса таблицы DOM</h2>
+<h2 id="Example_8_Using_the_DOM_Table_Interface">Пример 8: Использование интерфейса таблицы DOM</h2>
 
 
 
@@ -365,7 +365,7 @@ for (var i = 0; i &lt; 2; i++) {
 &lt;/script&gt;
 </pre>
 
-<h3 id="Notes" name="Notes">Примечания</h3>
+<h3 id="Notes">Примечания</h3>
 
 <ul>
  <li>Свойство таблицы {{domxref ("element.innerHTML", "innerHTML")}} никогда не должно использоваться для изменения таблицы, хотя вы можете использовать её для записи всей таблицы или содержимого ячейки.</li>

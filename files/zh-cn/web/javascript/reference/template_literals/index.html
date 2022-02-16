@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Reference/template_strings
 
 <p>模板字面量 是允许嵌入表达式的字符串字面量。你可以使用多行字符串和字符串插值功能。它们在ES2015规范的先前版本中被称为“模板字符串”。</p>
 
-<h2 id="语法" style="font-size: 2.14285714285714rem;">语法</h2>
+<h2 id="语法">语法</h2>
 
 <pre class="syntaxbox">`string text`
 
@@ -25,9 +25,9 @@ original_slug: Web/JavaScript/Reference/template_strings
 tag `string text ${expression} string text`
 </pre>
 
-<h2 id="描述" style="font-size: 2.14285714285714rem;">描述</h2>
+<h2 id="描述">描述</h2>
 
-<p>模板字符串使用反引号 (` `) 来代替普通字符串中的用双引号和单引号。模板字符串可以包含特定语法（<code style="font-style: normal;">${expression}</code>）的占位符。占位符中的表达式和周围的文本会一起传递给一个默认函数，该函数负责将所有的部分连接起来，如果一个模板字符串由表达式开头，则该字符串被称为带标签的模板字符串，该表达式通常是一个函数，它会在模板字符串处理后被调用，在输出最终结果前，你都可以通过该函数来对模板字符串进行操作处理。在模版字符串内使用反引号（`）时，需要在它前面加转义符（\）。</p>
+<p>模板字符串使用反引号 (` `) 来代替普通字符串中的用双引号和单引号。模板字符串可以包含特定语法（<code>${expression}</code>）的占位符。占位符中的表达式和周围的文本会一起传递给一个默认函数，该函数负责将所有的部分连接起来，如果一个模板字符串由表达式开头，则该字符串被称为带标签的模板字符串，该表达式通常是一个函数，它会在模板字符串处理后被调用，在输出最终结果前，你都可以通过该函数来对模板字符串进行操作处理。在模版字符串内使用反引号（`）时，需要在它前面加转义符（\）。</p>
 
 <pre class="brush: js">`\`` === "`" // --&gt; true</pre>
 
@@ -170,14 +170,14 @@ tag`string text line 1 \n string text line 2`;
 
 <p>另外，使用{{jsxref("String.raw()")}} 方法创建原始字符串和使用默认模板函数和字符串连接创建是一样的。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> str <span class="operator token">=</span> String<span class="punctuation token">.</span>raw<span class="template-string token"><span class="string token">`Hi\n</span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span><span class="number token">2</span><span class="operator token">+</span><span class="number token">3</span><span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">!`</span></span><span class="punctuation token">;</span>
-<span class="comment token">// "Hi\n5!"</span>
+<pre class="brush: js">var str = String.raw`Hi\n${2+3}!`;var`Hi\n${2+3}
+// "Hi\\n5!"
 
-str<span class="punctuation token">.</span>length<span class="punctuation token">;</span>
-<span class="comment token">// 6</span>
+str.length;.
+// 6
 
-str<span class="punctuation token">.</span><span class="function token">split</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">join</span><span class="punctuation token">(</span><span class="string token">','</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// "H,i,\,n,5,!"</span></code>
+str.split('').join(',');.
+// "H,i,\\,n,5,!"
 </pre>
 
 <h3 id="带标签的模版字面量及转义序列">带标签的模版字面量及转义序列</h3>
@@ -216,7 +216,7 @@ latex`\unicode`
 
 <pre class="brush: js example-bad">let bad = `bad escape sequence: \unicode`;</pre>
 
-<h2 id="规范" style="font-size: 2.14285714285714rem;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -243,15 +243,11 @@ latex`\unicode`
  </tbody>
 </table>
 
-<h2 id="浏览器兼容" style="font-size: 2.14285714285714rem;">浏览器兼容</h2>
+<h2 id="浏览器兼容">浏览器兼容</h2>
 
-<div>
+{{Compat}}
 
-
-<p>{{Compat("javascript.grammar.template_literals")}}</p>
-</div>
-
-<h2 id="相关链接" style="font-size: 2.14285714285714rem;">相关链接</h2>
+<h2 id="相关链接">相关链接</h2>
 
 <ul>
  <li>{{jsxref("String")}}</li>

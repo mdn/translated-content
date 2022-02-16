@@ -10,39 +10,35 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 
 <p><strong>catch()</strong> 方法返回一个<a href="/zh-CN/docs/Web/API/Promise">Promise</a>，并且处理拒绝的情况。它的行为与调用{{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} 相同。 (事实上, calling <code>obj.catch(onRejected)</code> 内部calls <code>obj.then(undefined, onRejected)</code>).</p>
 
-<h2 id="Syntax" name="Syntax" style="line-height: 30px;">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox" style="font-size: 14px;"><var>p.catch(onRejected)</var>;
+<pre class="syntaxbox"><var>p.catch(onRejected)</var>;
 
 p.catch(function(reason) {
    // 拒绝
 });
 </pre>
 
-<h3 id="参数" style="line-height: 24px;">参数</h3>
+<h3 id="参数">参数</h3>
 
 <dl>
  <dt><strong>onRejected</strong></dt>
- <dd>当Promise 被rejected时,被调用的一个{{jsxref("Function")}}。 该函数拥有一个参数：</dd>
- <dd><code>reason</code>    rejection 的原因。</dd>
- <dd>
- <p> 如果 <code>onRejected</code> 抛出一个错误或返回一个本身失败的 Promise ，  通过 <code>catch()</code> 返回的Promise 被rejected；否则，它将显示为成功（resolved）。 </p>
-
- <h3 id="返回值">返回值</h3>
-
- <p>一个{{jsxref("Promise")}}.</p>
- </dd>
+ <dd>当Promise 被rejected时,被调用的一个{{jsxref("Function")}}。 该函数拥有一个参数：<code>reason</code>    rejection 的原因。如果 <code>onRejected</code> 抛出一个错误或返回一个本身失败的 Promise ，  通过 <code>catch()</code> 返回的Promise 被rejected；否则，它将显示为成功（resolved）。</dd>
 </dl>
 
-<h2 id="Description" name="Description" style="line-height: 30px;">描述</h2>
+<h3 id="返回值">返回值</h3>
+
+<p>一个{{jsxref("Promise")}}.</p>
+
+<h2 id="Description">描述</h2>
 
 <p><code>catch </code>方法可以用于您的promise组合中的错误处理。</p>
 
 <p>Internally calls <code>Promise.prototype.then</code> on the object upon which is called, passing the parameters <code>undefined</code> and the <code>onRejected</code> handler received; then returns the value of that call (which is a {{jsxref("Promise")}}).</p>
 
-<h2 id="示例" style="line-height: 30px;">示例</h2>
+<h2 id="示例">示例</h2>
 
-<h3 id="使用链式语句的_catch方法" style="line-height: 24px;">使用链式语句的 <code>catch</code>方法</h3>
+<h3 id="使用链式语句的_catch方法">使用链式语句的 <code>catch</code>方法</h3>
 
 <pre class="brush: js"><code>var p1 = new Promise(function(resolve, reject) {
   resolve('Success');
@@ -71,7 +67,7 @@ p1.then(function(value) {
   console.log('Not fired due to the catch');
 });</pre>
 
-<h3 id="捕获抛出的错误" style="line-height: 30px;">捕获抛出的错误</h3>
+<h3 id="捕获抛出的错误">捕获抛出的错误</h3>
 
 <pre class="brush: js"><code>// 抛出一个错误，大多数时候将调用catch方法
 var p1 = new Promise(function(resolve, reject) {
@@ -103,7 +99,7 @@ p3.catch(function(e) {
    console.log(e); // 不会执行
 });</code></pre>
 
-<h3 id="如果已决议" style="line-height: 30px;">如果已决议</h3>
+<h3 id="如果已决议">如果已决议</h3>
 
 <pre><code>//创建一个新的 Promise ，且已决议
 var p1 = Promise.resolve("calling next");
@@ -122,7 +118,7 @@ p2.then(function (value) {
     console.log(reason);
 });</code></pre>
 
-<h2 id="规范" style="line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -144,11 +140,11 @@ p2.then(function (value) {
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="line-height: 30px;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("javascript/promise","Promise.prototype.catch")}}</p>
 
-<h2 id="相关链接" style="line-height: 30px;">相关链接</h2>
+<h2 id="相关链接">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Promise")}}</li>

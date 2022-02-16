@@ -26,9 +26,9 @@ firefox -createProfile testBeta2
 <p>テストが完了したら、今度は常用のプロファイルを使って、再度その拡張機能を使ってみます。 この作業は、保存されている既存のデータとの互換性を確認するのに役立ちます。</p>
 <h3 id="addons.mozilla.org_に登録されている拡張機能の更新">addons.mozilla.org に登録されている拡張機能の更新</h3>
 <p>ついに、更新した拡張機能を公開するときが来ました。 もし自分の拡張機能に一切コードの変更が必要ない場合は、AMO のダッシュボードにログインして、互換性のあるバージョンを更新するだけで済みます。 何らかの変更を加えた場合は、新しいバージョンを AMO にアップロードする必要があります。</p>
-<p>詳しくは <a class="internal" href="/ja/Submitting_an_add-on_to_AMO" title="ja/Submitting an add-on to AMO">AMO へのアドオンの登録</a> を参照してください。</p>
+<p>詳しくは <a class="internal" href="/ja/Submitting_an_add-on_to_AMO">AMO へのアドオンの登録</a> を参照してください。</p>
 <h2 id="Places_データベースへのアクセス">Places データベースへのアクセス</h2>
-<p>Firefox 3.1 以前は、<a class="internal" href="/ja/Storage" title="ja/Storage">Storage API</a> を使って Places データベースへ直接アクセスする場合、以下のように少々工夫が必要でした。</p>
+<p>Firefox 3.1 以前は、<a class="internal" href="/ja/Storage">Storage API</a> を使って Places データベースへ直接アクセスする場合、以下のように少々工夫が必要でした。</p>
 <pre class="brush: js">var places = Components.classes["@mozilla.org/file/directory_service;1"].
                         getService(Components.interfaces.nsIProperties).
                         get("ProfD", Components.interfaces.nsIFile);
@@ -42,7 +42,7 @@ var db = Components.classes["@mozilla.org/storage/service;1"].
                     getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
 </pre>
 <h2 id="テキストボックスの検索">テキストボックスの検索</h2>
-<p><a class="internal" href="/ja/XUL/textbox" title="ja/XUL/Textbox"><code>textbox</code></a> の種類のひとつ、<code>timed</code> は廃止予定となりました。代わりに <code>search</code> を使ってください。</p>
+<p><a class="internal" href="/ja/XUL/textbox"><code>textbox</code></a> の種類のひとつ、<code>timed</code> は廃止予定となりました。代わりに <code>search</code> を使ってください。</p>
 <p>Firefox 3 では、以下のようなコードが使われていたはずです。</p>
 <pre>&lt;textbox type="timed" timeout="1000" oncommand="alert(this.value);"/&gt;
 </pre>
@@ -50,7 +50,7 @@ var db = Components.classes["@mozilla.org/storage/service;1"].
 <pre>&lt;textbox type="search" timeout="1000" oncommand="alert(this.value);"/&gt;
 </pre>
 <h2 id="JSON">JSON</h2>
-<p>JSON.jsm JavaScript モジュールは Firefox 3.1 では削除され、ネイティブの JSON オブジェクトサポートに置き換えられました。 詳しくは、<a class="internal" href="/ja/Using_JSON_in_Firefox" title="/ja/Using JSON in Firefox">Firefox で JSON を使用する</a> をご覧ください。JSON のより一般的な概要と、各種バージョンの Firefox で JSON を使う方法については、<a class="internal" href="/ja/JSON" title="ja/JSON">JSON</a> のページからリンクされている記事を参照してください。</p>
+<p>JSON.jsm JavaScript モジュールは Firefox 3.1 では削除され、ネイティブの JSON オブジェクトサポートに置き換えられました。 詳しくは、<a class="internal" href="/ja/Using_JSON_in_Firefox" title="/ja/Using JSON in Firefox">Firefox で JSON を使用する</a> をご覧ください。JSON のより一般的な概要と、各種バージョンの Firefox で JSON を使う方法については、<a class="internal" href="/ja/JSON">JSON</a> のページからリンクされている記事を参照してください。</p>
 <p>Firefox 3 と Firefox 3.1 の両方について互換性を確保するには、以下のように記述します。</p>
 <pre class="brush: js">if (typeof(JSON) == "undefined") {
   Components.utils.import("resource://gre/modules/JSON.jsm");
@@ -67,7 +67,7 @@ var db = Components.classes["@mozilla.org/storage/service;1"].
 <p>Firefox 3.1 では、カスタマイズ可能なツールバーの挙動が次のように変更されました。&lt;xul:toolbar/&gt; バインディングは、関連付けられた &lt;xul:toolbarpalette/&gt; からツールバー削除、もしくはツールバーへ追加するようになりました。これまでは、項目を複製してツールバーへコピーしていました。 つまり、パレットには、ツールバー上に存在しないアイテムしか含めることができません。これまでの挙動では、ツールバー上に表示されているかどうかに関わらず、カスタマイズ可能なすべての要素が含まれていました。 これは、&lt;xul:toolbarpalette/&gt; からカスタマイズ可能なすべてのツールバー項目を取得できることに依存した処理を行っていたり、ツールバーのカスタマイズ中に動的にパレットへ項目を挿入し、それらを利用可能にしようとしているアドオンで問題となる可能性があります。 詳しくは、{{ Bug(407725) }} と {{ Bug(467045) }} をご覧ください。</p>
 <h2 id="興味深い新機能">興味深い新機能</h2>
 <h3 id="すべてのタブのイベントを監視する">すべてのタブのイベントを監視する</h3>
-<p>Firefox 3.1 では、すべてのタブを監視するプログレスリスナーを追加、削除できるようになりました。 詳しくは、<a class="internal" href="/ja/Listening_to_events_on_all_tabs" title="ja/Listening to events on all tabs">すべてのタブのイベントを監視する</a> をご覧ください。</p>
+<p>Firefox 3.1 では、すべてのタブを監視するプログレスリスナーを追加、削除できるようになりました。 詳しくは、<a class="internal" href="/ja/Listening_to_events_on_all_tabs">すべてのタブのイベントを監視する</a> をご覧ください。</p>
 <h2 id="テーマ開発者の方へ">テーマ開発者の方へ</h2>
-<ul> <li><a class="internal" href="/ja/Theme_changes_in_Firefox_3.1" title="ja/Theme changes in Firefox 3.1">Firefox 3.1 でのテーマ関連の変更</a> を確認してください。</li> <li>Mozillazine フォーラムの <a class="topictitle external" href="http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=665138" title="http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=665138">Theme changes for FF3.1</a> を参照して、3.0 から 3.1 の間に行われた、テーマ開発者に影響するすべての変更の概要、一覧を確認してください。 このスレッドでは、CSS の新機能 (nth-child、-moz-box-shadow など)、既存の UI 部品への変更、UI 全体の改善、Firefox 3.1 の新機能 (audio/video のサポート、プライベートブラウジング、セッション復元機能の拡張、ボックス・ウィンドウ・テキストシャドウ) が議論されています。</li>
+<ul> <li><a class="internal" href="/ja/Theme_changes_in_Firefox_3.1">Firefox 3.1 でのテーマ関連の変更</a> を確認してください。</li> <li>Mozillazine フォーラムの <a class="topictitle external" href="http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=665138" title="http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=665138">Theme changes for FF3.1</a> を参照して、3.0 から 3.1 の間に行われた、テーマ開発者に影響するすべての変更の概要、一覧を確認してください。 このスレッドでは、CSS の新機能 (nth-child、-moz-box-shadow など)、既存の UI 部品への変更、UI 全体の改善、Firefox 3.1 の新機能 (audio/video のサポート、プライベートブラウジング、セッション復元機能の拡張、ボックス・ウィンドウ・テキストシャドウ) が議論されています。</li>
 </ul>

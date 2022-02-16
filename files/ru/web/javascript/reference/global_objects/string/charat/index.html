@@ -11,24 +11,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <strong><code>charAt()</code></strong> возвращает указанный символ из строки.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code><var>str</var>.charAt(<var>index</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>index</code></dt>
  <dd>Целое число от 0 до длины строки минус 1.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Символы в строке идут слева направо. Индекс первого символа равен 0, а последнего символа в строке <code>stringName</code> равен <code>stringName.length - 1</code>. Если предоставленный вами параметр <code>index</code> выходит за пределы этого диапазона, JavaScript вернёт пустую строку.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Displaying_characters_at_different_locations_in_a_string" name="Example:_Displaying_characters_at_different_locations_in_a_string">Пример: отображение символов из различных позиций строки</h3>
+<h3 id="Example:_Displaying_characters_at_different_locations_in_a_string">Пример: отображение символов из различных позиций строки</h3>
 <p>Следующий пример показывает символы в различных позициях в строке <code>"Дивный новый мир"</code>:</p>
 <pre class="brush: js">var anyString = 'Дивный новый мир';
 
@@ -50,7 +50,7 @@ console.log("Символ по индексу 999 равен '" + anyString.char
 Символ по индексу 999 равен ''
 </pre>
 
-<h3 id="Example:_Getting_whole_characters" name="Example:_Getting_whole_characters">Пример: получение целых символов</h3>
+<h3 id="Example:_Getting_whole_characters">Пример: получение целых символов</h3>
 <p>Следующий пример показывает, как обойти строку в цикле, каждый раз гарантированно получая целый символ, даже если строка содержит символы, не помещающиеся на Базовую многоязыковую плоскость (БМП).</p>
 <pre class="brush: js">var str = 'A \uD87E\uDC04 Z'; // Также можно использовать не-БМП символы напрямую
 for (var i = 0, chr; i &lt; str.length; i++) {
@@ -153,7 +153,7 @@ function getWholeCharAndI(str, i) {
 }
 </pre>
 
-<h3 id="Example:_Fixing_charAt_to_support_non-Basic-Multilingual-Plane_(BMP)_characters" name="Example:_Fixing_charAt_to_support_non-Basic-Multilingual-Plane_(BMP)_characters">Пример: добавление к методу <code>charAt()</code> поддержки символов не в Базовой многоязыковой плоскости (БМП)</h3>
+<h3 id="Example:_Fixing_charAt_to_support_non-Basic-Multilingual-Plane_(BMP)_characters">Пример: добавление к методу <code>charAt()</code> поддержки символов не в Базовой многоязыковой плоскости (БМП)</h3>
 <p>В то время как пример выше может быть более полезен тем, кто хочет поддерживать символы не в плоскости БМП (поскольку он не требует от вызывающей стороны знания о том, где может встретиться символ из не-БМП), в случае, если кто-то желает <em>выбирать</em> символы по индексу и трактовать суррогатную пару внутри строки как один символ, он может использовать следующий код:</p>
 <pre class="brush: js">function fixedCharAt(str, idx) {
   var ret = '';
@@ -184,7 +184,7 @@ function getWholeCharAndI(str, i) {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -210,10 +210,10 @@ function getWholeCharAndI(str, i) {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("String.prototype.indexOf()")}}</li>
  <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>

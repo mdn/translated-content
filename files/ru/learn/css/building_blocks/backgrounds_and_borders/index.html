@@ -15,7 +15,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}</div>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">В этом уроке мы рассмотрим некоторые интересные возможности, которые вы можете сделать с помощью CSS свойств фона и границ .</span> <span title="">Благодаря добавлению градиентов, фоновых изображений и закруглённых углов свойства фона и границ ответят на многие вопросы стилизации в CSS.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">В этом уроке мы рассмотрим некоторые интересные возможности, которые вы можете сделать с помощью CSS-свойств фона и границ .</span> <span title="">Благодаря добавлению градиентов, фоновых изображений и закруглённых углов свойства фона и границ ответят на многие вопросы стилизации в CSS.</span></span></p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -32,9 +32,9 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <h2 id="Стилизация_фона_в_CSS">Стилизация фона в CSS</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">CSS свойство {{cssxref ("background")}} является сокращением для ряда полных свойств фона, с которыми мы познакомимся в этом уроке.</span> <span title="">Если вы обнаружите сложное свойство </span></span><code>background</code><span class="tlid-translation translation" lang="ru"><span title=""> в таблице стилей, это может показаться трудным для понимания, так как одновременно может быть передано так много значений.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">CSS-свойство {{cssxref ("background")}} является сокращением для ряда полных свойств фона, с которыми мы познакомимся в этом уроке.</span> <span title="">Если вы обнаружите сложное свойство </span></span><code>background</code><span class="tlid-translation translation" lang="ru"><span title=""> в таблице стилей, это может показаться трудным для понимания, так как одновременно может быть передано так много значений.</span></span></p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
   url(big-star.png) center no-repeat, rebeccapurple;
 } </code>
@@ -116,7 +116,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Вы можете использовать такие ключевые слова, как <code>top</code> и <code>right</code> (с остальными можете ознакомиться на странице {{cssxref ("background-position")}}):</span></span></p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top center;
@@ -125,7 +125,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <p>Допустимы значения <a href="/ru/docs/Web/CSS/размер">длины</a> и <a href="/ru/docs/Web/CSS/percentage">процентные</a>:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: 20px 10%;
@@ -134,7 +134,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Вы также можете смешивать значения ключевых слов с длинами или процентами, например:</span></span></p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top 20px;
@@ -142,7 +142,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">И наконец, вы также можете использовать синтаксис с четырьмя значениями, чтобы указать расстояние от определённых краёв блока - единица длины в данном случае представляет собой смещение от значения ключевого слова.</span> <span title="">Итак, в CSS ниже мы сместили фон на 20 пикселей сверху и на 10 пикселей справа:</span></span></p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top 20px right 10px;
@@ -178,7 +178,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Другие свойства <code>background- *</code> также могут иметь значения, разделённые запятыми,  как и <code>background-image</code>:</span></span></p>
 
-<pre class="brush: css notranslate">background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
+<pre class="brush: css">background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position: 10px 20px,  top right;</pre>
 
@@ -229,19 +229,19 @@ background-position: 10px 20px,  top right;</pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Мы можем установить границу для всех четырёх сторон блока с помощью {{cssxref ("border")}}:</span></span></p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border: 1px solid black;
 } </code></pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Или мы можем нацеливаться на один край блока, например:</span></span></p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-top: 1px solid black;
 } </code></pre>
 
 <p>Индивидуальные свойства этих сокращений будут следующими:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-width: 1px;
   border-style: solid;
   border-color: black;
@@ -249,7 +249,7 @@ background-position: 10px 20px,  top right;</pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">И более детально:</span></span></p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: black;
@@ -269,13 +269,13 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>Например, чтобы сделать все четыре угла блока радиусом 10px:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-radius: 10px;
 } </code></pre>
 
 <p>Или, чтобы верхний правый угол имел горизонтальный радиус 1em и вертикальный радиус 10%:</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   border-top-right-radius: 1em 10%;
 } </code></pre>
 

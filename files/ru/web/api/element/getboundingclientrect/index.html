@@ -18,11 +18,11 @@ translation_of: Web/API/Element/getBoundingClientRect
 
 <p>Метод <code><strong>Element.getBoundingClientRect()</strong></code> возвращает размер элемента и его позицию относительно viewport (часть страницы, показанная на экране, и которую мы видим).</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><em>domRect</em> = <em>element</em>.getBoundingClientRect();</pre>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <p>Данный метод возвращает объект {{domxref("DOMRect")}}, который является объединением прямоугольников, возвращаемых методом {{domxref("Element.getClientRects", "getClientRects()")}}  для данного элемента, т. е. CSS border-boxes (css-коробок в рамках), связанных с этим элементом. Результатом является самый маленький прямоугольник, в котором содержится весь элемент с read-only <code>left</code>, <code>top</code>, <code>right</code>, <code>bottom</code>, <code>x</code>, <code>y</code>, <code>width</code> и <code>height</code> свойствами, описывающие это в пикселях. Все свойства, кроме <code>width</code> и <code>height</code>, являются относительными к верхнему левому углу viewport-а.</p>
 
@@ -69,7 +69,7 @@ var rect = obj.getBoundingClientRect();</code></pre>
  </tbody>
 </table>
 
-<h3 id="Notes" name="Notes">Примечания</h3>
+<h3 id="Notes">Примечания</h3>
 
 <p>Возвращаемый <code>DOMRect</code> объект может быть модифицирован в современных браузерах. Это не так со старыми версиями, которые возвращали <code>DOMRectReadOnly</code>. У IE и Edge, не имея возможности добавить пропущенные свойства к возвращаемым ими <a href="https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx"><code>ClientRect</code></a>, объект не позволял добавить <code>x</code> и <code>y</code>.</p>
 
@@ -88,7 +88,7 @@ emptyObj = { ...rect }
 <h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
 
 <div>
-<p>{{Compat("api.Element.getBoundingClientRect")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="Смотрите_также">Смотрите также</h2>

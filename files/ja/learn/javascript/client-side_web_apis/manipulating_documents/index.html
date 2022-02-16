@@ -44,7 +44,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 <p><img alt="" src="https://mdn.mozillademos.org/files/14557/document-window-navigator.png" style="display: block; margin: 0 auto;"></p>
 
 <ul>
- <li>ウィンドウはウェブページが読み込まれる部分の回りのブラウザーの枠です。これは JavaScript では {{domxref("Window")}} オブジェクトで表わされます。このオブジェクトに備わるメソッドを使って、ウィンドウの大きさを調べたり ({{domxref("Window.innerWidth")}} と {{domxref("Window.innerHeight")}} を参照)、ウィンドウに読み込まれる文書を操作したり、その文書に関係するデータをクライアント側(例えばローカルデータベースや他のデータ保存機構)で保存したり、現在のウィンドウに対して<a href="/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events">イベントハンドラー</a> を追加したり、などできます。</li>
+ <li>ウィンドウはウェブページが読み込まれる部分の回りのブラウザーの枠です。これは JavaScript では {{domxref("Window")}} オブジェクトで表わされます。このオブジェクトに備わるメソッドを使って、ウィンドウの大きさを調べたり ({{domxref("Window.innerWidth")}} と {{domxref("Window.innerHeight")}} を参照)、ウィンドウに読み込まれる文書を操作したり、その文書に関係するデータをクライアント側(例えばローカルデータベースや他のデータ保存機構)で保存したり、現在のウィンドウに対して<a href="/ja/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events">イベントハンドラー</a> を追加したり、などできます。</li>
  <li>ナビゲータはブラウザーの状態やウェブで使われているようなブラウザーの身元(つまりユーザーエージェント)を表わします。JavaScript では {{domxref("Navigator")}} オブジェクトで表わされます。このオブジェクトを使って、位置情報、ユーザが好む言語、ユーザのウェブカムからの録画データ、などを取得できます。</li>
  <li>ドキュメント(ブラウザーでは DOM として表現されます)はウィンドウに実際に読み込まれているページのことで、JavaScript では {{domxref("Document")}} オブジェクトで表わされます。このオブジェクトを使って文書を構成する HTML と CSS 上の情報を調べたり操作したりできて、例えば DOM の中のある要素に対する参照を得たり、その中身のテキストを変更したり、新しいスタイルを適用したり、新しい要素を作成して現在の要素の子に追加したり、一緒くたに削除したりできます。</li>
 </ul>
@@ -112,7 +112,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 </ol>
 
 <div>
-<p>JavaScript あるあるですが、要素を選んで変数に保存する方法にはいろんなやり方があることを頭に入れておいて下さい。{{domxref("Document.querySelector()")}} を使うのが推奨される今風のやり方ですが、これは CSS セレクタと同じ方法で要素を選別できるからです。上記の <code>querySelector()</code> 呼び出しでは文書に現われる最初の {{htmlelement("a")}} がマッチします。もし複数の要素を選択し処理したいのであれば {{domxref("Document.querySelectorAll()")}} を使うことができて、これはセレクタとマッチする全ての要素にマッチし、それらへの参照を {{domxref("NodeList")}} と呼ばれる<a href="/docs/Learn/JavaScript/First_steps/Arrays">配列</a>のようなオブジェクトに保存します。</p>
+<p>JavaScript あるあるですが、要素を選んで変数に保存する方法にはいろんなやり方があることを頭に入れておいて下さい。{{domxref("Document.querySelector()")}} を使うのが推奨される今風のやり方ですが、これは CSS セレクタと同じ方法で要素を選別できるからです。上記の <code>querySelector()</code> 呼び出しでは文書に現われる最初の {{htmlelement("a")}} がマッチします。もし複数の要素を選択し処理したいのであれば {{domxref("Document.querySelectorAll()")}} を使うことができて、これはセレクタとマッチする全ての要素にマッチし、それらへの参照を {{domxref("NodeList")}} と呼ばれる<a href="/ja/docs/Learn/JavaScript/First_steps/Arrays">配列</a>のようなオブジェクトに保存します。</p>
 
 <p>要素への参照を得るための、次のような古いやり方もあります:</p>
 
@@ -190,7 +190,7 @@ para.style.padding = '10px';
 para.style.width = '250px';
 para.style.textAlign = 'center';</pre>
  </li>
- <li>ページをリロードすると指定のパラグラフにスタイルが適用されているはずです。ブラウザーの <a href="/docs/Tools/Page_Inspector">Page Inspector や DOM inspector</a> からパラグラフを見ると、言うまでもなく上の行がドキュメントのインラインスタイルに追加されているはずです:
+ <li>ページをリロードすると指定のパラグラフにスタイルが適用されているはずです。ブラウザーの <a href="/ja/docs/Tools/Page_Inspector">Page Inspector や DOM inspector</a> からパラグラフを見ると、言うまでもなく上の行がドキュメントのインラインスタイルに追加されているはずです:
   <pre class="brush: html notranslate">&lt;p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;"&gt;We hope you enjoyed the ride.&lt;/p&gt;</pre>
  </li>
 </ol>
@@ -282,15 +282,15 @@ div.style.height = winHeight + 'px';</pre>
 <ol>
  <li>まず私たちが用意した <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list.html">shopping-list.html</a> 初期ファイルをダウンロードしてローカルコピーをどこかに作成します。最小限の CSS、ラベルのついたリスト、inputとボタン、空のリストと {{htmlelement("script")}} 要素が書いてあるはずです。この先書き足していくものは全部 script の中に書きます。</li>
  <li>({{htmlelement("ul")}}) と {{htmlelement("input")}} と {{htmlelement("button")}} 要素への参照を保持する3つの変数を作成します。</li>
- <li>ボタンがクリックされた時の応答として走らせる <a href="/docs/Learn/JavaScript/Building_blocks/Functions">関数</a> を作成します。</li>
- <li>関数本体は、input 要素の現在の <a href="/docs/Web/API/HTMLInputElement#Properties">値</a>を変数に保存するところから始めます。</li>
+ <li>ボタンがクリックされた時の応答として走らせる <a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions">関数</a> を作成します。</li>
+ <li>関数本体は、input 要素の現在の <a href="/ja/docs/Web/API/HTMLInputElement#Properties">値</a>を変数に保存するところから始めます。</li>
  <li>次に、input 要素の値に空文字列(<code>''</code>)を代入して、input 要素を空にします。</li>
  <li>3つの要素を作成します — リスト項目({{htmlelement('li')}}) と {{htmlelement('span')}} と {{htmlelement('button')}} で、これらを変数に保存します。</li>
  <li>span と button をリスト項目 li の子に追加します。</li>
  <li>spanのテキストコンテントに、先程保存した input 要素の値を代入し、ボタンのテキストコンテントを「削除」にします。</li>
  <li>できたリスト項目をリストの子に追加します。</li>
  <li>削除ボタンにイベントハンドラーを追加して、クリックされたらボタンが含まれているリスト項目全体を削除するようにします。</li>
- <li>最後に、<code><a href="/docs/Web/API/HTMLElement/focus">focus()</a></code>メソッドを使って input 要素にフォーカスし、次の買い物リスト商品をすぐに入力できるようにします。</li>
+ <li>最後に、<code><a href="/ja/docs/Web/API/HTMLElement/focus">focus()</a></code>メソッドを使って input 要素にフォーカスし、次の買い物リスト商品をすぐに入力できるようにします。</li>
 </ol>
 
 <div class="note">
@@ -312,7 +312,7 @@ div.style.height = winHeight + 'px';</pre>
  <li>{{domxref("HTMLElement")}}, {{domxref("HTMLInputElement")}}, {{domxref("HTMLImageElement")}}, etc.</li>
 </ul>
 
-<p>(私共の <a href="https://developer.mozilla.org/docs/Web/API">Web API index</a> から、MDNにあるウェブAPIに関する全ドキュメント一覧も見て下さい!)</p>
+<p>(私共の <a href="/ja/docs/Web/API">Web API index</a> から、MDNにあるウェブAPIに関する全ドキュメント一覧も見て下さい!)</p>
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}</div>
 
@@ -320,13 +320,13 @@ div.style.height = winHeight + 'px';</pre>
 <h2 id="このモジュール内の文書">このモジュール内の文書</h2>
 
 <ul>
- <li><a href="/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">ウェブAPIの紹介</a></li>
- <li><a href="/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">ドキュメントの操作</a></li>
- <li><a href="/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">サーバからのデータ取得</a></li>
- <li><a href="/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs">サードパーティAPI</a></li>
- <li><a href="/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">絵を描く</a></li>
- <li><a href="/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">動画と音声のAPI</a></li>
- <li><a href="/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">クライアント側でのデータ保持</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">ウェブAPIの紹介</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">ドキュメントの操作</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">サーバからのデータ取得</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs">サードパーティAPI</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">絵を描く</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">動画と音声のAPI</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">クライアント側でのデータ保持</a></li>
 </ul>
 </div>
 

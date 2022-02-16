@@ -9,7 +9,7 @@ original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 <p>Теперь мы готовы начать изменять наши замечательные изображения. Но сначала давайте ознакомимся с {{SVGElement("g")}} элементом. С его помощью вы можете  назначить свойства для любого набора элементов. На самом деле, в этом и состоит его единственная цель. Например:</p>
 
 <div id="two_blocks">
-<pre class="brush: html notranslate">&lt;svg width="30" height="10"&gt;
+<pre class="brush: html">&lt;svg width="30" height="10"&gt;
     &lt;g fill="red"&gt;
         &lt;rect x="0" y="0" width="10" height="10" /&gt;
         &lt;rect x="20" y="0" width="10" height="10" /&gt;
@@ -26,14 +26,14 @@ original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 
 <p>Иногда необходимо сместить элемент, хотя вы спозиционировали его согласно определённым атрибутам. Для этого используется <code>translate()</code>.</p>
 
-<pre class="brush: html notranslate">&lt;svg width="40" height="50" style="background-color:#bff;"&gt;
+<pre class="brush: html">&lt;svg width="40" height="50" style="background-color:#bff;"&gt;
     &lt;rect x="0" y="0" width="10" height="10" transform="translate(30,40)" /&gt;
 &lt;/svg&gt;
 </pre>
 
 <p>Пример генерирует прямоугольник, перемещённый в точку  (30,40) вместо точки (0,0).</p>
 
-<p>{{ EmbedLiveSample('Translation', '40', '50', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
+<p>{{ EmbedLiveSample('Перемещения', '40', '50', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
 
 <p>если второе значение не задано, то оно приравнивается <var>0</var>.</p>
 
@@ -41,14 +41,14 @@ original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 
 <p>Вращение элементов - это достаточно типичная задача. Используйте  <code>rotate()</code> для этого:</p>
 
-<pre class="brush: html notranslate">&lt;svg width="31" height="31"&gt;
+<pre class="brush: html">&lt;svg width="31" height="31"&gt;
     &lt;rect x="12" y="-10" width="20" height="20" transform="rotate(45)" /&gt;
 &lt;/svg&gt;
 </pre>
 
 <p>Данный пример показывает квадрат который повернули на 45 градусов. Значение для <code>rotate()</code> задаётся в градусах.</p>
 
-<p>{{ EmbedLiveSample('Rotation', '31', '31', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
+<p>{{ EmbedLiveSample('Вращение', '31', '31', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
 
 <h2 id="Смещение_углов">Смещение углов</h2>
 
@@ -70,7 +70,7 @@ original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 
 <p>В случае использования преобразований вы устанавливаете новую систему координат внутри элемента, к которому применяются изменения. Это означает, что единицы измерения которые вы определяете и его дочерние еи не будут соответствовать 1:1, но также будут искажены, повёрнуты, перемещены и смаштабированы в соответствии с преобразованиями.</p>
 
-<pre class="brush: html notranslate">&lt;svg width="100" height="100"&gt;
+<pre class="brush: html">&lt;svg width="100" height="100"&gt;
     &lt;g transform="scale(2)"&gt;
         &lt;rect width="50" height="50" /&gt;
     &lt;/g&gt;
@@ -79,13 +79,13 @@ original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 
 <p>В результата прямоугольник в примере выше будет 100x100px. Более интригующие эффекты возникают, когда вы используете такие атрибуты, как <code>userSpaceOnUse</code>.</p>
 
-<p>{{ EmbedLiveSample('Effects_on_Coordinate_Systems', '100', '100', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
+<p>{{ EmbedLiveSample('Эффекты_на_системе_координат', '100', '100', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
 
 <h2 id="Встраивание_SVG_в_SVG">Встраивание SVG в SVG</h2>
 
 <p>В отличие от HTML, SVG позволяет встраивать другие <code>svg</code> элементы без разрыва. Таким образом вы можете запросто создать новую координатную систему используя <code>viewBox</code>, <code>width</code> и<code>height</code> внутреннего <code>svg</code> элемента.</p>
 
-<pre class="brush: html notranslate">&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100"&gt;
+<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100"&gt;
   &lt;svg width="100" height="100" viewBox="0 0 50 50"&gt;
     &lt;rect width="50" height="50" /&gt;
   &lt;/svg&gt;
@@ -94,6 +94,6 @@ original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 
 <p>На примере выше, так же как и на других примерах ранее, вы можете видеть такой же эффект увеличения изображения в два раза.</p>
 
-<p>{{ EmbedLiveSample('Embedding_SVG_in_SVG', '100', '100', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
+<p>{{ EmbedLiveSample('Встраивание_SVG_в_SVG', '100', '100', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
 
 <div>{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}</div>

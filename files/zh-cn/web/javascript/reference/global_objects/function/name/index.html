@@ -10,12 +10,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
 <div>{{JSRef("Global_Objects", "Function")}}</div>
 
-<div><code><strong><em>function</em>.name</strong></code> 属性返回函数实例的名称。</div>
+<div><code>function.name</code> 属性返回函数实例的名称。</div>
 
 <p>{{js_property_attributes(0,0,1)}}</p>
 
 <div class="note">
-<p>请注意，在非标准的ES2015之前的实现中，<code>configurable</code>属性也是<code>false</code> 。</p>
+<p><strong>备注：</strong>在非标准的ES2015之前的实现中，<code>configurable</code>属性也是<code>false</code> 。</p>
 </div>
 
 <h2 id="示例">示例</h2>
@@ -46,7 +46,7 @@ var object = {
 console.log(f.name); // "f"
 console.log(object.someMethod.name); // "someMethod"</pre>
 
-<p style="color: rgb(77, 78, 83);">你可以在 {{jsxref("Operators/Function", "函数表达式", "", 1)}}中定义函数的名称:</p>
+<p>你可以在 {{jsxref("Operators/Function", "函数表达式", "", 1)}}中定义函数的名称:</p>
 
 <pre class="brush:js">var object = {
   someMethod: function object_someMethod() {}
@@ -59,10 +59,6 @@ try { object_someMethod } catch(e) { alert(e); }
 </pre>
 
 <p>你不能更改函数的名称，此属性是只读的：</p>
-
-<div class="hidden">
-<p>Example below contradicts with what is said at the beginning of this section and doesn't work as described.</p>
-</div>
 
 <pre class="brush: js">var object = {
   // anonymous
@@ -188,7 +184,6 @@ if (b.constructor.name === 'Foo') {
 
 <p>在未压缩版本中，程序运行到真实分支并打印<code>'foo' is an instance of 'Foo'</code>。 而在压缩版本中，它的行为不同，并且进入else分支。如果您依赖于<code>Function.name</code>，就像上面的示例一样，确保您的构建管道不会更改函数名称，也不要假定函数具有特定的名称。</p>
 
-<article>
 <h2 id="规范">规范</h2>
 
 <table class="standard-table">
@@ -214,4 +209,3 @@ if (b.constructor.name === 'Foo') {
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.builtins.Function.name")}}</p>
-</article>

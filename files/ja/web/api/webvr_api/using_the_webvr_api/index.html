@@ -5,7 +5,7 @@ translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 ---
 <p>{{draft("この WebVR API ドキュメントは現在v1.0の仕様への対応作業の途中です．従って、ここにある情報のいくつかは最新ではありません。この作業について質問がある場合は ~~chrisdavidmills へ連絡をとってください．")}}</p>
 
-<p class="summary"><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> はウェブ開発者のツールキットへのすばらしい追加機能で、<a href="https://developer.oculus.com/">Oculus Rift</a> のようなバーチャルリアリティハードウェアへのアクセスが可能となります。そして出力された動きや向きはウェブアプリの描画更新に変換されます。しかし VR アプリを開発はどのようにやればいいのでしょうか？ この記事では、それに関する基礎的な解説を行います。</p>
+<p class="summary"><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> はウェブ開発者のツールキットへのすばらしい追加機能で、<a href="https://developer.oculus.com/">Oculus Rift</a> のようなバーチャルリアリティハードウェアへのアクセスが可能となります。そして出力された動きや向きはウェブアプリの描画更新に変換されます。しかし VR アプリを開発はどのようにやればいいのでしょうか？ この記事では、それに関する基礎的な解説を行います。</p>
 
 <div class="note">
 <p><span style="font-size: 14px; line-height: 21px;"><strong>注記</strong></span>: WebVR は現在実験的な段階にあります（<a href="http://mozvr.github.io/webvr-spec/webvr.html">最新の仕様はこちら</a>にあります); 今の段階でもっとも正常に動作するのは Firefox Nightly/Developer Edition で、一部の機能は Google Chrome でも動作します。詳細は Brandon Jonesの  <a class="external external-icon" href="http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html">Bringing VR to Chrome</a> を参照してください。</p>
@@ -13,18 +13,18 @@ translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 
 <h2 id="始めるには">始めるには</h2>
 
-<p>WebVRを始めるには，VRハードウェアのマニュアルに従ったセットアップと、<a href="/en-US/docs/Web/API/WebVR_API/WebVR_environment_setup">WebVR environment setup</a> に示されているコンピュータへの設定が必要になります、スムースな動作には専用GPUが推奨されます。</p>
+<p>WebVRを始めるには，VRハードウェアのマニュアルに従ったセットアップと、<a href="/ja/docs/Web/API/WebVR_API/WebVR_environment_setup">WebVR environment setup</a> に示されているコンピュータへの設定が必要になります、スムースな動作には専用GPUが推奨されます。</p>
 
 <p><a href="https://nightly.mozilla.org/">Firefox Nightly</a> (または <a href="https://www.mozilla.org/en-US/firefox/developer/">Developer Edition</a>) のインストールと合わせて <a href="http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi">WebVR Enabler Add-on</a> も必要となります。</p>
 
 <p>いちど環境が設定できたら、テストのために私たちの <a href="http://mozvr.com/projects/">MozVR projects</a> を開いて、[Enter VR<strong>]</strong> ボタンをクリックすることを試してください。</p>
 
 <div class="note">
-<p><strong>注記</strong>: より深い情報のために，<a href="/en-US/docs/Web/API/WebVR_API/WebVR_environment_setup">WebVR environment setup</a> をチェックしてください。</p>
+<p><strong>注記</strong>: より深い情報のために，<a href="/ja/docs/Web/API/WebVR_API/WebVR_environment_setup">WebVR environment setup</a> をチェックしてください。</p>
 </div>
 
 <div class="note">
-<p><strong>注記</strong>: モバイルデバイスを HMD として用いるような安価な選択肢もあります。この場合，位置センサは利用できませんので、代わりに <a href="/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes">deviceorientation API</a> を用いて擬似的な向きデータを使う必要があるかもしれません。</p>
+<p><strong>注記</strong>: モバイルデバイスを HMD として用いるような安価な選択肢もあります。この場合，位置センサは利用できませんので、代わりに <a href="/ja/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes">deviceorientation API</a> を用いて擬似的な向きデータを使う必要があるかもしれません。</p>
 </div>
 
 <h2 id="簡単なデモ">簡単なデモ</h2>
@@ -33,7 +33,7 @@ translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10797/vrpositionsensor-demo.png" style="display: block; height: 396px; margin: 0px auto; width: 800px;"></p>
 
-<p>これは簡単な 2.5D のデモで，<a href="/en-US/docs/Web/HTML/Element/canvas">HTML5 Canvas</a> にレンダリングされた Firefox ロゴが右目と左目のビューに表示されるものです．VR HMDでデモを見ているときにキャンバスをクリックすると、デモはフルスクリーンになり、Firefox ロゴに近づけるようになります。あなたが動くと頭の動きに合わせて上下左右や回転してリアルに動きます。</p>
+<p>これは簡単な 2.5D のデモで，<a href="/ja/docs/Web/HTML/Element/canvas">HTML5 Canvas</a> にレンダリングされた Firefox ロゴが右目と左目のビューに表示されるものです．VR HMDでデモを見ているときにキャンバスをクリックすると、デモはフルスクリーンになり、Firefox ロゴに近づけるようになります。あなたが動くと頭の動きに合わせて上下左右や回転してリアルに動きます。</p>
 
 <p>あなたが WebVR のコードがどう動いているかを簡単に確認できるように、デモは意図的にシンプルになるよう保持されています。API は十分シンプルであるため，単純な DOM ベースインターフェイスでも複雑な WebGL シーンでも、好きなアプリに WebVR 制御の移動を簡単に適用できます。</p>
 
@@ -87,7 +87,7 @@ var ctx = myCanvas.getContext('2d');
 var body = document.querySelector('body');
 body.appendChild(myCanvas);</pre>
 
-<p>次に、新しい <a href="/en-US/docs/Web/API/HTMLImageElement">image</a> を作成し、アプリの <a href="/en-US/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript">main loop</a> である<code>draw()を実行する前に </code>image が <code>ロードされているかをチェックするために</code> {{event("load")}} イベントを使います:</p>
+<p>次に、新しい <a href="/ja/docs/Web/API/HTMLImageElement">image</a> を作成し、アプリの <a href="/ja/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript">main loop</a> である<code>draw()を実行する前に </code>image が <code>ロードされているかをチェックするために</code> {{event("load")}} イベントを使います:</p>
 
 <pre class="brush: js">var image = new Image();
 image.src = 'firefox.png';
@@ -113,11 +113,11 @@ image.onload = draw;</pre>
   requestAnimationFrame(draw);
 }</pre>
 
-<p><a href="/en-US/docs/Web/API/Window">window</a> の <code>WIDTH</code> と <code>HEIGHT</code> は各フレームでリサンプリングされ，次の設定に使われます:</p>
+<p><a href="/ja/docs/Web/API/Window">window</a> の <code>WIDTH</code> と <code>HEIGHT</code> は各フレームでリサンプリングされ，次の設定に使われます:</p>
 
 <ul>
  <li>左右の目のビュー中心からの相対的に描画される画像を維持するのに使われる左右のオフセット値です。半分の幅のシーンのコピーを描画するので、各コピーの中心はそれぞれ、エッジの端から端までのキャンバス全体幅のちょうど1/4の幅になります。</li>
- <li>キャンバスの <a href="/en-US/docs/Web/API/HTMLCanvasElement/width">width</a> と <a href="/en-US/docs/Web/API/HTMLCanvasElement/height">height</a>。</li>
+ <li>キャンバスの <a href="/ja/docs/Web/API/HTMLCanvasElement/width">width</a> と <a href="/ja/docs/Web/API/HTMLCanvasElement/height">height</a>。</li>
 </ul>
 
 <p>これによってブラウザウィンドウがリサイズされたとしても、シーンが正しくリサイズされます。</p>
@@ -132,7 +132,7 @@ image.onload = draw;</pre>
 
 <p>これらの詳細は、後ほど解説します。</p>
 
-<p>ループの最後に <a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame(draw)</a>  を実行し<code>、draw()</code> ループが連続して呼び出されるようにします。</p>
+<p>ループの最後に <a href="/ja/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame(draw)</a>  を実行し<code>、draw()</code> ループが連続して呼び出されるようにします。</p>
 
 <h3 id="位置と向き情報の受取り">位置と向き情報の受取り</h3>
 
@@ -244,7 +244,7 @@ image.onload = draw;</pre>
 
 <h3 id="フルスクリーン表示">フルスクリーン表示</h3>
 
-<p>VRエフェクトはアプリを <a href="/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">フルスクリーンモード</a> で実行すると非常に効果的です。ディスプレイのダブルクリックやボタンの押下のような、特定のイベントが発生した時に {{htmlelement("canvas")}} 要素をフルスクリーンにするための一般的な設定を説明します。</p>
+<p>VRエフェクトはアプリを <a href="/ja/docs/Web/Guide/API/DOM/Using_full_screen_mode">フルスクリーンモード</a> で実行すると非常に効果的です。ディスプレイのダブルクリックやボタンの押下のような、特定のイベントが発生した時に {{htmlelement("canvas")}} 要素をフルスクリーンにするための一般的な設定を説明します。</p>
 
 <p>シンプルさを保つために、ここではキャンバスのクリック時に <code>fullScreen()</code> 関数を実行します:</p>
 

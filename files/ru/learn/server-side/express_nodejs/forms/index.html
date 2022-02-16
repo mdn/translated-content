@@ -46,7 +46,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 <p>Определённые в  HTML формы собираются внутри тэга <code>&lt;form&gt;...&lt;/form&gt;</code>, содержащего хотя ы один элемент <code>input</code> с <code>type="submit"</code>.</p>
 
-<pre class="brush: html notranslate">&lt;form action="/team_name_url/" method="post"&gt;
+<pre class="brush: html">&lt;form action="/team_name_url/" method="post"&gt;
     &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
     &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
     &lt;input type="submit" value="OK"&gt;
@@ -108,7 +108,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 <p>Установите модуль, выполнив следующую команду в корне проекта</p>
 
-<pre class="brush: bash notranslate">npm install express-validator
+<pre class="brush: bash">npm install express-validator
 </pre>
 
 <h4 id="Использование_express-validator">Использование express-validator</h4>
@@ -119,7 +119,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 <p>Для того, чтобы использовать валидатор в наших контроллерах, мы должны требовать функции, которые мы хотим использовать из модулей <strong>'express-validator/check</strong>' и <strong>'express-validator/filter</strong>', как показано ниже:</p>
 
-<pre class="brush: js notranslate">const { body,validationResult } = require('express-validator/check');
+<pre class="brush: js">const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
 </pre>
 
@@ -130,12 +130,12 @@ const { sanitizeBody } = require('express-validator/filter');
 <ul>
  <li><code><a href="https://github.com/ctavan/express-validator#bodyfields-message">body(fields[, message])</a></code>: Задаёт набор полей в теле запроса (параметр <code>POST</code>) для проверки, а также необязательное сообщение об ошибке, которое может отображаться в случае сбоя тестов. Критерии проверки последовательно связаны с методом <code>body()</code>. Например, первая проверка ниже проверяет, что поле" имя "не пустое и задаёт сообщение об ошибке" пустое имя", если оно не пустое. Второй тест проверяет, что поле age является допустимой датой, и с помощью optional() указывает, что пустые и пустые строки не пройдут проверку.
 
-  <pre class="brush: js notranslate">body('name', 'Empty name').isLength({ min: 1 }),
+  <pre class="brush: js">body('name', 'Empty name').isLength({ min: 1 }),
 body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601(),
 </pre>
   Можно также последовательно подключить различные валидаторы и добавить сообщения, отображаемые при выполнении предыдущих валидаторов.</li>
  <li>
-  <pre class="brush: js notranslate">body('name').isLength({ min: 1 }).trim().withMessage('Name empty.')
+  <pre class="brush: js">body('name').isLength({ min: 1 }).trim().withMessage('Name empty.')
     .isAlpha().withMessage('Name must be alphabet letters.'),
 </pre>
 
@@ -144,11 +144,11 @@ body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601(),
   </div>
  </li>
  <li><code><a href="https://github.com/ctavan/express-validator#sanitizebodyfields">sanitizeBody(fields)</a></code>: Задаёт поле тела для очистки. затем операции очистки последовательно соединяются с этим методом. Например, операция очистки <code>escape()</code>, описанная ниже, удаляет символы HTML из переменной name, которые могут использоваться в атаках сценариев между сайтами JavaScript.
-  <pre class="brush: js notranslate">sanitizeBody('name').trim().escape(),
+  <pre class="brush: js">sanitizeBody('name').trim().escape(),
 sanitizeBody('date').toDate(),</pre>
  </li>
  <li><code><a href="https://github.com/ctavan/express-validator#validationresultreq">validationResult(req)</a></code>: Запускает проверку, делая ошибки доступными в виде объекта результата проверки. Это вызывается в отдельном обратном вызове, как показано ниже:
-  <pre class="brush: js notranslate">(req, res, next) =&gt; {
+  <pre class="brush: js">(req, res, next) =&gt; {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -193,7 +193,7 @@ sanitizeBody('date').toDate(),</pre>
 
 <p>Мы уже создали маршруты для всех страниц создания нашей модели в  <strong>/routes/catalog.js</strong> (in a <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial</a>).  Например, жанровые маршруты показаны ниже:</p>
 
-<pre class="brush: js notranslate">// GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
+<pre class="brush: js">// GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
 router.get('/genre/create', genre_controller.genre_create_get);
 
 // POST request for creating Genre.

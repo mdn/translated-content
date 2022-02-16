@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <p>显式调用：</p>
 
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 <pre class="syntaxbox"><code>new Date(<var>dateString</var>).getTime()</code>
 </pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>dateString</code></dt>
@@ -38,11 +38,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 <h3 id="返回值">返回值</h3>
 
-<dl>
- <dd>一个表示从1970-1-1 00:00:00 UTC到给定日期字符串所表示时间的毫秒数的数值。如果参数不能解析为一个有效的日期，则返回{{jsxref("NaN")}}。</dd>
-</dl>
+<p>一个表示从1970-1-1 00:00:00 UTC到给定日期字符串所表示时间的毫秒数的数值。如果参数不能解析为一个有效的日期，则返回{{jsxref("NaN")}}。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>parse</code> 方法接受一个日期字符串（例如 "<code>Dec 25, 1995</code>"），并返回从1970-1-1 00:00:00 UTC到该日期字符串所表示日期的毫秒数。该方法在基于字符串值设置日期值时很有用，例如结合使用{{jsxref("Global_Objects/Date/setTime", "setTime()")}} 方法和 {{jsxref("Global_Objects/Date", "Date()")}} 构造函数。</p>
 
@@ -52,7 +50,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 <p>由于在解析日期字符串时存在偏差会导致结果不一致，因此推荐始终手动解析日期字符串，特别是不同的ECMAScript实现会把诸如“2015-10-12 12:00:00”的字符串解析为NaN，UTC或者本地时间。</p>
 
-<h3 id="ECMAScript_5_ISO-8601_日期格式支持">ECMAScript 5 <span class="caps">ISO</span>-8601 日期格式支持</h3>
+<h3 id="ECMAScript_5_ISO-8601_日期格式支持">ECMAScript 5 ISO-8601 日期格式支持</h3>
 
 <p>另外，日期时间字符串也可以使用 <a href="http://www.w3.org/TR/NOTE-datetime" title="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a> 格式。例如，"<code>2011-10-10</code>" （仅日期）或 "<code>2011-10-10T14:48:00</code>" （日期和时间）能够作为参数被传递和解析。 如果参数字符串只包含日期格式，那么将会使用UTC时区来解析该参数。而如果是<a href="http://www.w3.org/TR/NOTE-datetime" title="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a> 格式中规定的时间加日期的格式，则将会被作为本地时区处理。</p>
 
@@ -60,7 +58,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 <p>由于 <code>parse()</code> 是 {{jsxref("Date")}} 的一个静态方法 , 所以应该使用 <code>Date.parse()</code> 来调用，而不是作为 {{jsxref("Date")}} 的实例方法。</p>
 
-<h3 id="Differences in assumed time-zone" name="Differences in assumed time-zone">默认时区的区别</h3>
+<h3 id="Differences in assumed time-zone">默认时区的区别</h3>
 
 <p>当输入为 "<code>March 7, 2014</code>" 时， <code>parse()</code>  将默认使用本地时区。但如果使用 ISO  格式如 <code>"2014-03-07"</code> ，则会被默认为 UTC (ES5 和 ECMAScript 2015) 时区。  因此除非系统本地时区为 UTC，由这些字符串解析出的 {{jsxref("Date")}}  对象可能会因为 ECMAScript  版本不同而代表不同的时间。这意味着两个看起来等效的字符串可能因为它们的格式不同而被转换成不同的值。</p>
 
@@ -70,34 +68,34 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 <p>但是， 在如 ECMA-262 规范中定义的情况，如果因为无效值而导致日期字符串不能被识别为 ISO 格式时，根据浏览器和给定的值不同，返回值可以是，也可以不是 {{jsxref("NaN")}} 。比如：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// 包含无效值的非 ISO 格式字符串</span>
-<span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="string token">'23/25/2014'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">// 包含无效值的非 ISO 格式字符串
+new Date('23/25/2014');</pre>
 
 <p>在 Firefox 30 中会被识别为本地时区的2015年12月25日，而在 Safari 7 中则是无效日期。但是，如果字符串被识别为 ISO 格式并且包含无效值，则在所有遵循 ES5 或者更新标准的浏览器中都会返回 {{jsxref("NaN")}} 。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// 包含无效值的 ISO 格式字符串</span>
-<span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="string token">'2014-25-23'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">toISOString</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// 在所有遵循 ES5的浏览器中返回 "RangeError: invalid date"</span></code></pre>
+<pre class="brush: js">// 包含无效值的 ISO 格式字符串
+new Date('2014-25-23').toISOString();
+// 在所有遵循 ES5的浏览器中返回 "RangeError: invalid date"</pre>
 
 <p>SpiderMonkey 的引擎策略可以在 <a href="http://mxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889"><code>jsdate.cpp</code></a>  中找到。字符串 <code>"10 06 2014"</code>  可以作为非 ISO 格式字符串使用自定义处理方式的例子。参见这篇关于解析如何进行的<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6">粗略纲要</a>。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="string token">'10 06 2014'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">new Date('10 06 2014');</pre>
 
 <p>将会被解析为本地时间 2014年10月6日，而不是6月10日。另一个例子</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="string token">'foo-bar 2014'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">toString</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// 返回: "Invalid Date"</span>
+<pre class="brush: js">new Date('foo-bar 2014').toString();
+// 返回: "Invalid Date"
 
-Date<span class="punctuation token">.</span><span class="function token">parse</span><span class="punctuation token">(</span><span class="string token">'foo-bar 2014'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// 返回: NaN</span></code></pre>
+Date.parse('foo-bar 2014');
+// 返回: NaN</pre>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
-<h3 id="Example:_Using_parse" name="Example:_Using_parse">例子：使用 <code>Date.parse()</code></h3>
+<h3 id="Example:_Using_parse">例子：使用 <code>Date.parse()</code></h3>
 
 <p>如果 <code>IPOdate</code> 是一个已经存在的 {{jsxref("Date")}} 对象，则可以把其设置为本地时间 1995年8月9日。如下：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">IPOdate<span class="punctuation token">.</span><span class="function token">setTime</span><span class="punctuation token">(</span>Date<span class="punctuation token">.</span><span class="function token">parse</span><span class="punctuation token">(</span><span class="string token">'Aug 9, 1995'</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">IPOdate.setTime(Date.parse('Aug 9, 1995'));</pre>
 
 <p>其他一些解析非标准格式日期的例子：</p>
 
@@ -167,17 +165,13 @@ Date<span class="punctuation token">.</span><span class="function token">parse</
 
 <p> </p>
 
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>and send us a pull request.</p>
-</div>
-
 <p>{{Compat("javascript.builtins.Date.parse")}}</p>
 
-<h2 id="See_also" name="See_also">兼容性提示</h2>
+<h2 id="See_also">兼容性提示</h2>
 
 <p>Firefox 49 {{geckoRelease(49)}} 修改了解析2位数年份的方式，从和 Internet Explorer 一致改为和 Google Chrome  浏览器一致。现在，2位数的年份小于等于 <code>50</code>  的将会被解析为21世纪的年份。比如， <code>04/16/17</code> ，在之前会被解析为 1917年4月16日，现在将被解析为 2017年4月16日。为了避免任何可能的同步问题或者有歧义的年份，推荐使用 ISO 8601 格式如 "2017-04-16" ({{bug(1265136)}})。</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Date.UTC()")}}</li>

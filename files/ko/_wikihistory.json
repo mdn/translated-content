@@ -303,12 +303,6 @@
       "enfroze"
     ]
   },
-  "Glossary/Client_hints": {
-    "modified": "2020-03-30T11:50:49.956Z",
-    "contributors": [
-      "oinochoe"
-    ]
-  },
   "Glossary/Compile": {
     "modified": "2019-10-29T10:03:26.609Z",
     "contributors": [
@@ -739,6 +733,13 @@
       "enfroze"
     ]
   },
+  "Glossary/Plugin": {
+    "modified": "2019-01-16T15:11:14.478Z",
+    "contributors": [
+      "teoli",
+      "Anonymous"
+    ]
+  },
   "Glossary/Polyfill": {
     "modified": "2019-11-18T11:28:34.172Z",
     "contributors": [
@@ -953,12 +954,6 @@
     "contributors": [
       "alattalatta",
       "enfroze"
-    ]
-  },
-  "Glossary/Transmission_Control_Protocol_(TCP)": {
-    "modified": "2020-01-12T14:32:05.700Z",
-    "contributors": [
-      "doong-jo"
     ]
   },
   "Glossary/Truthy": {
@@ -2149,7 +2144,7 @@
       "dsma73"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-07-16T22:32:15.138Z",
     "contributors": [
       "youngdeok",
@@ -2167,15 +2162,6 @@
       "bjnhur",
       "JaeWorld",
       "ahnzaz"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-07-16T22:32:06.697Z",
-    "contributors": [
-      "alattalatta",
-      "beowolf9",
-      "lunarlit",
-      "dsma73"
     ]
   },
   "Learn/JavaScript/Objects/Object_prototypes": {
@@ -3164,13 +3150,6 @@
       "niceman114"
     ]
   },
-  "Plugins/Guide/Scripting_plugins": {
-    "modified": "2019-01-16T15:11:14.478Z",
-    "contributors": [
-      "teoli",
-      "Anonymous"
-    ]
-  },
   "Tools": {
     "modified": "2020-07-16T22:44:16.209Z",
     "contributors": [
@@ -3538,6 +3517,12 @@
     "contributors": [
       "alattalatta",
       "limkukhyun"
+    ]
+  },
+  "Web/API/Blob/size": {
+    "modified": "2019-03-18T20:48:30.715Z",
+    "contributors": [
+      "DeadIntegral"
     ]
   },
   "Web/API/BroadcastChannel": {
@@ -4878,12 +4863,6 @@
       "DeadIntegral"
     ]
   },
-  "Web/API/File/size": {
-    "modified": "2019-03-18T20:48:30.715Z",
-    "contributors": [
-      "DeadIntegral"
-    ]
-  },
   "Web/API/FileList": {
     "modified": "2019-03-18T21:44:05.861Z",
     "contributors": [
@@ -6073,23 +6052,10 @@
       "ESnark"
     ]
   },
-  "Web/API/PhotoCapabilities": {
-    "modified": "2020-10-15T22:27:09.730Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/API/Plugin": {
     "modified": "2019-03-23T22:11:26.376Z",
     "contributors": [
       "JinSeungHo"
-    ]
-  },
-  "Web/API/PositionOptions": {
-    "modified": "2020-10-15T22:02:42.878Z",
-    "contributors": [
-      "alattalatta",
-      "Saem"
     ]
   },
   "Web/API/Proximity_Events": {
@@ -6117,12 +6083,6 @@
     "modified": "2020-10-15T22:19:20.272Z",
     "contributors": [
       "younheeJang"
-    ]
-  },
-  "Web/API/RTCConfiguration": {
-    "modified": "2020-10-15T22:21:34.262Z",
-    "contributors": [
-      "chansbro"
     ]
   },
   "Web/API/RTCDataChannelEvent": {
@@ -7213,13 +7173,6 @@
       "alattalatta"
     ]
   },
-  "Web/API/Window/crypto": {
-    "modified": "2020-10-15T21:40:03.517Z",
-    "contributors": [
-      "alattalatta",
-      "hoony"
-    ]
-  },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T22:26:45.848Z",
     "contributors": [
@@ -7529,13 +7482,6 @@
       "alattalatta"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/setTimeout": {
-    "modified": "2019-03-23T22:22:22.449Z",
-    "contributors": [
-      "DevJang",
-      "TroyTae"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2020-10-15T21:47:12.252Z",
     "contributors": [
@@ -7637,6 +7583,13 @@
       "Sebuls"
     ]
   },
+  "Web/API/crypto_property": {
+    "modified": "2020-10-15T21:40:03.517Z",
+    "contributors": [
+      "alattalatta",
+      "hoony"
+    ]
+  },
   "Web/API/notification": {
     "modified": "2019-09-10T05:52:41.419Z",
     "contributors": [
@@ -7644,6 +7597,13 @@
       "sagnol",
       "AshfaqHossain",
       "junho85"
+    ]
+  },
+  "Web/API/setTimeout": {
+    "modified": "2019-03-23T22:22:22.449Z",
+    "contributors": [
+      "DevJang",
+      "TroyTae"
     ]
   },
   "Web/Accessibility": {
@@ -8035,31 +7995,31 @@
       "jaemin_jo"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-image_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders": {
+    "modified": "2020-08-10T06:40:27.369Z",
+    "contributors": [
+      "alattalatta",
+      "Sheppy"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
     "modified": "2019-03-20T10:30:55.489Z",
     "contributors": [
       "alattalatta",
       "young-gratia"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
     "modified": "2019-03-20T10:29:25.952Z",
     "contributors": [
       "alattalatta",
       "young-gratia"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Box-shadow_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator": {
     "modified": "2019-03-20T10:32:14.015Z",
     "contributors": [
       "alattalatta"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2020-08-10T06:40:27.369Z",
-    "contributors": [
-      "alattalatta",
-      "Sheppy"
     ]
   },
   "Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {
@@ -8081,15 +8041,6 @@
     "contributors": [
       "alattalatta",
       "SphinxKnight"
-    ]
-  },
-  "Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property": {
-    "modified": "2019-03-23T23:41:42.325Z",
-    "contributors": [
-      "hjunshin",
-      "teoli",
-      "jaemin_jo",
-      "Ioseph"
     ]
   },
   "Web/CSS/CSS_Box_Model": {
@@ -8163,6 +8114,13 @@
     "modified": "2020-10-16T09:12:34.130Z",
     "contributors": [
       "DeadIntegral"
+    ]
+  },
+  "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
+    "modified": "2020-06-15T04:03:26.893Z",
+    "contributors": [
+      "lee.juyoung.1978",
+      "citrus.alice"
     ]
   },
   "Web/CSS/CSS_Device_Adaptation": {
@@ -8343,13 +8301,6 @@
       "alattalatta",
       "teoli",
       "Ioseph"
-    ]
-  },
-  "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
-    "modified": "2020-06-15T04:03:26.893Z",
-    "contributors": [
-      "lee.juyoung.1978",
-      "citrus.alice"
     ]
   },
   "Web/CSS/CSS_Logical_Properties": {
@@ -11370,6 +11321,12 @@
       "amorfati0310",
       "seungha-kim",
       "devcken"
+    ]
+  },
+  "Web/HTTP/Client_hints": {
+    "modified": "2020-03-30T11:50:49.956Z",
+    "contributors": [
+      "oinochoe"
     ]
   },
   "Web/HTTP/Compression": {
@@ -16255,13 +16212,6 @@
       "cs09g"
     ]
   },
-  "Web/Progressive_web_apps/Responsive/Media_types": {
-    "modified": "2019-03-23T23:33:02.082Z",
-    "contributors": [
-      "teoli",
-      "SpikeYou"
-    ]
-  },
   "Web/SVG": {
     "modified": "2019-11-05T05:19:15.768Z",
     "contributors": [
@@ -17414,6 +17364,12 @@
       "limkukhyun"
     ]
   },
+  "conflicting/Glossary/TCP": {
+    "modified": "2020-01-12T14:32:05.700Z",
+    "contributors": [
+      "doong-jo"
+    ]
+  },
   "conflicting/Learn": {
     "modified": "2020-07-16T22:22:13.258Z",
     "contributors": [
@@ -17511,6 +17467,15 @@
       "JaehaAhn"
     ]
   },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-07-16T22:32:06.697Z",
+    "contributors": [
+      "alattalatta",
+      "beowolf9",
+      "lunarlit",
+      "dsma73"
+    ]
+  },
   "conflicting/MDN/Tools": {
     "modified": "2019-01-16T20:50:22.654Z",
     "contributors": [
@@ -17542,6 +17507,25 @@
     "modified": "2019-03-23T23:26:56.400Z",
     "contributors": [
       "Sheppy"
+    ]
+  },
+  "conflicting/Web/API/Geolocation/getCurrentPosition": {
+    "modified": "2020-10-15T22:02:42.878Z",
+    "contributors": [
+      "alattalatta",
+      "Saem"
+    ]
+  },
+  "conflicting/Web/API/ImageCapture/getPhotoCapabilities": {
+    "modified": "2020-10-15T22:27:09.730Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "conflicting/Web/API/RTCPeerConnection/RTCPeerConnection": {
+    "modified": "2020-10-15T22:21:34.262Z",
+    "contributors": [
+      "chansbro"
     ]
   },
   "conflicting/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL": {
@@ -17578,6 +17562,22 @@
       "teoli",
       "Inyoung",
       "jaemin_jo"
+    ]
+  },
+  "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
+    "modified": "2019-03-23T23:33:02.082Z",
+    "contributors": [
+      "teoli",
+      "SpikeYou"
+    ]
+  },
+  "conflicting/Web/CSS/cursor": {
+    "modified": "2019-03-23T23:41:42.325Z",
+    "contributors": [
+      "hjunshin",
+      "teoli",
+      "jaemin_jo",
+      "Ioseph"
     ]
   },
   "conflicting/Web/Guide": {

@@ -1,5 +1,5 @@
 ---
-title: Controlling multiple parameters with ConstantSourceNode
+title: ConstantSourceNode로 다수의 파라미터 제어하기
 slug: Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode
 tags:
   - Audio
@@ -13,29 +13,29 @@ tags:
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p><span class="seoSummary">This article demonstrates how to use a {{domxref("ConstantSourceNode")}} to link multiple parameters together so they share the same value, which can be changed by setting the value of the {{domxref("ConstantSourceNode.offset")}} parameter.</span></p>
+<p><span class="seoSummary">이 글은 다수의 파라미터가 같은 값을 공유하도록 파라미터들을 함께 연결하기 위해 어떻게 {{domxref("ConstantSourceNode")}}를 사용하는지를 설명합니다. 이 값은 {{domxref("ConstantSourceNode.offset")}} 파라미터의 값을 설정함으로써 변경될 수 있습니다.</span></p>
 
-<p>You may have times when you want to have multiple audio parameters be linked so they share the same value even while being changed in some way. For example, perhaps you have a set of oscillators, and two of them need to share the same, configurable volume, or you have a filter that's been applied to certain inputs but not to all of them. You could use a loop and change the value of each affected {{domxref("AudioParam")}} one at a time, but there are two drawbacks to doing it that way: first, that's extra code that, as you're about to see, you don't have to write; and second, that loop uses valuable CPU time on your thread (likely the main thread), and there's a way to offload all that work to the audio rendering thread, which is optimized for this kind of work and may run at a more appropriate priority level than your code.</p>
+<p>간혹 다수의 오디오 파라미터들이 같은 값을 공유할 수 있도록, 심지어 값이 어떤 방법으로 변경되는 동안일지라도, 연결시켜두고 싶을 때가 있습니다. 예를 들자면, 한 세트의 오실레이터들이 있고, 이 두 개가 하나의 설정 가능한 볼륨을 공유할 필요가 있거나, 특정한 입력에 적용되나 모든 입력에는 적용되지 않는 필터가 있을 수도 있습니다. 반복문을 사용하여 각각의 영향받는 {{domxref("AudioParam")}}의 값을 한번에 하나씩 변경할 수도 있겠지만, 여기에는 두 가지 문제점이 있습니다. 첫째는, 곧 보게 되겠지만, 작성할 필요가 없는 추가적인 코드의 작성입니다. 그리고 둘째는, 그 반복은 스레드 (메인 스레드일 가능성이 높음) 의 소중한 CPU 시간을 사용합니다. 이런 작업을 이에 최적화되어 있으며 여러분의 코드보다 더욱 적합한 우선도에서 실행할 수 있는 오디오 렌더링 스레드에 넘길 수 있는 방법이 있습니다.</p>
 
-<p>The solution is simple, and it involves using an audio node type which, at first glance, doesn't look all that useful: {{domxref("ConstantSourceNode")}}.</p>
+<p>그 해결책이란 간단한데, 바로 첫눈에는 그다지 유용해 보이지 않는 오디오 노드 유형 {{domxref("ConstantSourceNode")}}을 사용하는 것입니다.</p>
 
-<h2 id="The_technique">The technique</h2>
+<h2 id="The_technique">기법</h2>
 
-<p>This is actually a really easy way to do something that sounds like it might be hard to do. You need to create a {{domxref("ConstantSourceNode")}} and connect it to all of the {{domxref("AudioParam")}}s whose values should be linked to always match each other. Since <code>ConstantSourceNode</code>'s {{domxref("ConstantSourceNode.offset", "offset")}} value is sent straight through to all of its outputs, it acts as a splitter for that value, sending it to each connected parameter.</p>
+<p>이 방법은 듣기엔 어려워 보이지만 사실은 굉장히 쉽습니다. {{domxref("ConstantSourceNode")}}를 생성하고 항상 일치하는 값을 갖도록 연결된 모든 {{domxref("AudioParam")}}에 이 노드를 연결합니다. <code>ConstantSourceNode</code>의 {{domxref("ConstantSourceNode.offset", "offset")}} 값은 모든 출력으로 바로 전달되므로, 이 노드는 그 값을 각각의 연결된 파라미터에 보내는 스플리터 역할을 합니다.</p>
 
-<p>The diagram below shows how this works; an input value, <code>N</code>, is set as the value of the {{domxref("ConstantSourceNode.offset")}} property. The <code>ConstantSourceNode</code> can have as many outputs as necessary; in this case, we've connected it to three nodes: two {{domxref("GainNode")}}s and a {{domxref("StereoPannerNode")}}. So <code>N</code> becomes the value of the specified parameter ({{domxref("GainNode.gain", "gain")}} for the {{domxref("GainNode")}}s and pan for the {{domxref("StereoPannerNode")}}.</p>
+<p>아래의 그림은 이 과정이 어떻게 작동하는지 보여줍니다. 입력값 <code>N</code>은 {{domxref("ConstantSourceNode.offset")}} 속성의 값으로 설정됩니다. <code>ConstantSourceNode</code>는 필요한 만큼 많은 출력을 가질 수 있습니다. 아래 그림의 경우, <code>ConstantSourceNode</code>를 세 개의 노드에 연결했습니다. 두 개의 {{domxref("GainNode")}}와 {{domxref("StereoPannerNode")}}입니다. 그래서 <code>N</code>은 명시된 파라미터의 값이 됩니다 ({{domxref("GainNode")}}의 {{domxref("GainNode.gain", "gain")}}, {{domxref("StereoPannerNode")}}의 pan).</p>
 
-<p><img alt="Dagram in SVG showing how ConstantSourceNode can be used to split an input parameter to share it with multiple nodes." src="customsourcenode-as-splitter.svg"></p>
+<p><img alt="어떻게 ConstantSourceNode가 입력 매개변수를 다수의 노드에 공유하기 위해 사용될 수 있는지를 보여주는 SVG 그림." src="customsourcenode-as-splitter.svg"></p>
 
-<p>As a result, every time you change <code>N</code> (the value of the input {{domxref("AudioParam")}}, the values of the two <code>GainNode</code>s' <code>gain</code> properties and the value of the <code>StereoPannerNode</code>'s <code>pan</code> propertry are all set to <code>N</code> as well.</p>
+<p>그 결과로써, <code>N</code> (입력 {{domxref("AudioParam")}}의 값) 이 바뀔 때마다, 두 개의 <code>GainNode</code>의 <code>gain</code> 속성의 값 그리고 <code>StereoPannerNode</code>의 <code>pan</code> 속성의 값은 모두 <code>N</code>으로 또한 설정됩니다.</p>
 
-<h2 id="Example">Example</h2>
+<h2 id="Example">예제</h2>
 
-<p>Let's take a look at this technique in action. In this simple example, we create three {{domxref("OscillatorNode")}}s. Two of them have adjustable gain, controlled using a shared input control. The other oscillator has a fixed volume.</p>
+<p>실제 사용 예제를 살펴 봅시다. 이 간단한 예제에서는 세 개의 {{domxref("OscillatorNode")}}를 만들었습니다. 두 개는 공유된 입력 슬라이더를 사용해 제어되는 조정 가능한 gain을 가지고 있습니다. 나머지 오실레이터 하나는 고정된 볼륨을 가지고 있습니다.</p>
 
 <h3 id="HTML">HTML</h3>
 
-<p>The HTML content for this example is primarily a button to toggle the oscillator tones on and off and an {{HTMLElement("input")}} element of type <code>range</code> to control the volume of two of the three oscillators.</p>
+<p>이 예제의 HTML 코드는 주로 오실레이터의 음색을 켜고 끄기 위한 버튼과 세 개 중 두 개의 오실레이터의 볼륨을 조절하기 위한 <code>range</code> type의 {{HTMLElement("input")}} 요소입니다.</p>
 
 <pre class="brush: html">&lt;div class="controls"&gt;
   &lt;div class="left"&gt;
@@ -50,8 +50,8 @@ tags:
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Use the button above to start and stop the tones, and the volume control to
-change the volume of the notes E and G in the chord.&lt;/p&gt;</pre>
+&lt;p&gt;음을 재생하고 정지하기 위해 위의 버튼을,
+그리고 화음 E와 G의 볼륨을 변경하기 위해 볼륨 슬라이더를 사용하세요.&lt;/p&gt;</pre>
 
 <div class="hidden">
 <h3 id="CSS">CSS</h3>
@@ -105,11 +105,11 @@ change the volume of the notes E and G in the chord.&lt;/p&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>Now let's take a look at the JavaScript code, a piece at a time.</p>
+<p>이제 JavaScript 코드를 부분별로 살펴 봅시다.</p>
 
-<h4 id="Setting_up">Setting up</h4>
+<h4 id="Setting_up">설정하기</h4>
 
-<p>Let's start by looking at the global variable initialization.</p>
+<p>전역 변수 초기화부터 시작해 봅시다.</p>
 
 <pre class="brush: js">let context = null;
 
@@ -126,24 +126,24 @@ let gainNode3 = null;
 
 let playing = false;</pre>
 
-<p>These variables are:</p>
+<p>이 변수들은 다음과 같습니다.</p>
 
 <dl>
  <dt><code>context</code></dt>
- <dd>The {{domxref("AudioContext")}} in which all the audio nodes live.</dd>
- <dt><code>playButton</code> and <code>volumeControl</code></dt>
- <dd>References to the play button and volume control elements.</dd>
- <dt><code>oscNode1</code>, <code>oscNode2</code>, and <code>oscNode3</code></dt>
- <dd>The three {{domxref("OscillatorNode")}}s used to generate the chord.</dd>
- <dt><code>gainNode1</code>, <code>gainNode2</code>, and <code>gainNode3</code></dt>
- <dd>The three {{domxref("GainNode")}} instances which provide the volume levels for each of the three oscillators. <code>gainNode2</code> and <code>gainNode3</code> will be linked together to have the same, adjustable, value using the {{domxref("ConstantSourceNode")}}.</dd>
+ <dd>모든 오디오 노드들이 있는 {{domxref("AudioContext")}}.</dd>
+ <dt><code>playButton</code>과 <code>volumeControl</code></dt>
+ <dd>재생 버튼과 볼륨 제어 요소에 대한 참조.</dd>
+ <dt><code>oscNode1</code>, <code>oscNode2</code>, <code>oscNode3</code></dt>
+ <dd>화음을 생성하기 위해 쓰이는 세 개의 {{domxref("OscillatorNode")}}.</dd>
+ <dt><code>gainNode1</code>, <code>gainNode2</code>, <code>gainNode3</code></dt>
+ <dd>세 개의 각 오실레이터에 대해 볼륨 레벨을 제공하는 세 개의 {{domxref("GainNode")}} 인스턴스. <code>gainNode2</code>와 <code>gainNode3</code>은 {{domxref("ConstantSourceNode")}}를 사용해 같은 조정 가능한 값을 가지기 위해 함께 연결될 것입니다.</dd>
  <dt><code>constantNode</code></dt>
- <dd>The {{domxref("ConstantSourceNode")}} used to control the values of <code>gainNode2</code> and <code>gainNode3</code> together.</dd>
+ <dd><code>gainNode2</code>와 <code>gainNode3</code>의 값을 함게 제어하기 위해 쓰이는 {{domxref("ConstantSourceNode")}}.</dd>
  <dt><code>playing</code></dt>
- <dd>A {{jsxref("Boolean")}} that we'll use to keep track of whether or not we're currently playing the tones.</dd>
+ <dd>현재 음을 재생하고 있는지 아닌지를 추적하기 위해 사용할 {{jsxref("Boolean")}}.</dd>
 </dl>
 
-<p>Now let's look at the <code>setup()</code> function, which is our handler for the window's {{event("load")}} event; it handles all the initialization tasks that require the DOM to be in place.</p>
+<p>이제 <code>setup()</code> 함수를 살펴봅시다. 이 함수는 window의 {{event("load")}} 이벤트에 대한 이벤트 처리기(handler)입니다. 이것은 DOM이 준비되기 위한 모든 초기화 작업을 다룹니다.</p>
 
 <pre class="brush: js">function setup() {
   context = new (window.AudioContext || window.webkitAudioContext)();
@@ -176,21 +176,21 @@ let playing = false;</pre>
 window.addEventListener("load", setup, false);
 </pre>
 
-<p>First, we get access to the window's {{domxref("AudioContext")}}, stashing the reference in <code>context</code>. Then we get references to the control widgets, setting <code>playButton</code> to reference the play button and <code>volumeControl</code> to reference the slider control that the user will use to adjust the gain on the linked pair of oscillators.</p>
+<p>먼저, window의 {{domxref("AudioContext")}}에 대한 접근을 얻고, 이 참조를  <code>context</code> 변수에 저장합니다. 그리고 나서 <code>playButton</code>에 재생 버튼에 대한 참조와 <code>volumeControl</code>에 사용자가 연결된 오실레이터 쌍의 gain을 조정하기 위해 사용할 슬라이더에 대한 참조를 설정하며 제어 위젯에 대한 참조를 얻습니다.</p>
 
-<p>Then we assign a handler for the play button's {{event("click")}} event (see {{anch("Toggling the oscillators on and off")}} for more on the <code>togglePlay()</code> method), and for the volume slider's {{event("input")}} event (see {{anch("Controlling the linked oscillators")}} to see the very short <code>changeVolume()</code> method).</p>
+<p>그리고 나서 재생 버튼의 {{event("click")}} 이벤트와 볼륨 슬라이더의 {{event("input")}} 이벤트에 이벤트 처리기를 부착합니다 (<code>togglePlay()</code> 메서드에 대해 알아보려면 {{anch("오실레이터 켜고 끄기")}}를, 아주 짧은 <code>changeVolume()</code> 메서드를 살펴보려면 {{anch("연결된 오실레이터 제어하기")}}를 참고하세요).</p>
 
-<p>Next, the {{domxref("GainNode")}} <code>gainNode1</code> is created to handle the volume for the non-linked oscillator (<code>oscNode1</code>). We set that gain to 0.5. We also create <code>gainNode2</code> and <code>gainNode3</code>, setting their values to match <code>gainNode1</code>, then set the value of the volume slider to the same value, so it is synchronized with the gain level it controls.</p>
+<p>다음으로, {{domxref("GainNode")}} <code>gainNode1</code>은 연결되지 않은 오실레이터의 볼륨을 다루기 위해 생성됩니다 (<code>oscNode1</code>). 이 gain은 0.5로 설정합니다. 또한 <code>gainNode2</code>와 <code>gainNode3</code>를 생성하고 이들의 값을 <code>gainNode1</code>의 값과 동일하게 설정합니다. 그 후, 볼륨 슬라이더의 값을 같은 값으로 설정해 이 값이 슬라이더가 제어하는 gain 레벨과 동기화되도록 합니다.</p>
 
-<p>Once all the gain nodes are created, we create the {{domxref("ConstantSourceNode")}}, <code>constantNode</code>. We connect its output to the <code>gain</code> {{domxref("AudioParam")}} on both <code>gainNode2</code> and <code>gainNode3</code>, and we start the constant node running by calling its {{domxref("AudioScheduledSourceNode/start", "start()")}} method; now it's sending the value 0.5 to the two gain nodes' values, and any change to {{domxref("ConstantSourceNode.offset", "constantNode.offset")}} will automatically set the gain of both <code>gainNode2</code> and <code>gainNode3</code> (affecting their audio inputs as expected).</p>
+<p>모든 gain 노드가 생성되고 나면, {{domxref("ConstantSourceNode")}}, <code>constantNode</code>를 생성합니다. 이 노드의 출력을 <code>gainNode2</code>와 <code>gainNode3</code> 둘 다의 <code>gain</code> {{domxref("AudioParam")}}에 연결하고, {{domxref("AudioScheduledSourceNode/start", "start()")}} 메서드를 호출해 constant 노드 실행을 시작합니다. 이제 이 노드는 두 개의 gain 노드의 값에 값 0.5를 전달하고, {{domxref("ConstantSourceNode.offset", "constantNode.offset")}}에서의 모든 변화는 자동적으로 <code>gainNode2</code>와 <code>gainNode3</code> 둘 다의 gain을 설정할 것입니다 (예상한 대로 그들의 오디오 입력에 영향을 미칩니다).</p>
 
-<p>Finally, we connect all the gain nodes to the {{domxref("AudioContext")}}'s {{domxref("BaseAudioContext/destination", "destination")}}, so that any sound delivered to the gain nodes will reach the output, whether that output be speakers, headphones, a recording stream, or any other destination type.</p>
+<p>마지막으로, gain 노드에 전달되는 모든 소리가, 출력이 스피커이든, 헤드폰이든, 녹음 스트림이든, 또는 어떠한 다른 destination 유형이든 간에 출력에 도달하도록 모든 gain 노드를 {{domxref("AudioContext")}}의 {{domxref("BaseAudioContext/destination", "destination")}}에 연결합니다.</p>
 
-<p>After setting the window's {{event("load")}} event handler to be the <code>setup()</code> function, the stage is set. Let's see how the action plays out.</p>
+<p>window의 {{event("load")}} 이벤트 처리기를 <code>setup()</code> 함수에 설정하면, 무대는 준비 완료되었습니다. 어떻게 작동되는지 살펴봅시다.</p>
 
-<h4 id="Toggling_the_oscillators_on_and_off">Toggling the oscillators on and off</h4>
+<h4 id="오실레이터_켜고_끄기">오실레이터 켜고 끄기</h4>
 
-<p>Because {{domxref("OscillatorNode")}} doesn't support the notion of being in a paused state, we have to simulate it by terminating the oscillators and starting them again when the play button is clicked again to toggle them back on. Let's look at the code.</p>
+<p>{{domxref("OscillatorNode")}}는 정지 상태를 지원하지 않기 때문에, 오실레이터를 다시 켜기 위해서 재생 버튼을 클릭했을 때 오실레이터를 제거하고 다시 시작시킴으로써 정지 상태를 흉내내야 합니다. 코드를 살펴봅시다.</p>
 
 <pre class="brush: js">function togglePlay(event) {
   if (playing) {
@@ -202,30 +202,30 @@ window.addEventListener("load", setup, false);
   }
 }</pre>
 
-<p>If the <code>playing</code> variable indicates we're already playing the oscillators, we change the <code>playButton</code>'s content to be the Unicode character "right-pointing triangle" (▶️) and call <code>stopOscillators()</code> to shut down the oscillators. See {{anch("Stopping the oscillators")}} below for that code.</p>
+<p>만약 <code>playing</code> 변수가 이미 오실레이터가 재생되고 있음을 나타낸다면, <code>playButton</code>의 내용을 유니코드 문자 "오른쪽을 가리키는 삼각형" (▶️)으로 변경하고 오실레이터를 끄기 위해 <code>stopOscillators()</code>를 호출합니다. 이 코드에 대해 아래의 {{anch("오실레이터 멈추기")}}를 참고하세요.</p>
 
-<p>If <code>playing</code> is false, indicating that we're currently paused, we change the play button's content to be the Unicode character "pause symbol" (⏸) and call <code>startOscillators()</code> to start the oscillators playing their tones. That code is covered under {{anch("Starting the oscillators")}} below.</p>
+<p>만약 <code>playing</code>이 현재 멈춰 있음을 나타내는 false라면, 재생 버튼의 내용을 유니코드 문자 "정지 부호" (⏸)로 변경하고 오실레이터가 음을 재생하도록 <code>startOscillators()</code>를 호출합니다. 이 코드는 아래의 {{anch("오실레이터 재생하기")}}에서 다뤄집니다.</p>
 
-<h4 id="Controlling_the_linked_oscillators">Controlling the linked oscillators</h4>
+<h4 id="연결된_오실레이터_제어하기">연결된 오실레이터 제어하기</h4>
 
-<p>The <code>changeVolume()</code> function—the event handler for the slider control for the gain on the linked oscillator pair—looks like this:</p>
+<p>연결된 오실레이터 쌍의 gain 슬라이더에 대한 이벤트 처리기인 <code>changeVolume()</code> 함수는 다음과 같이 생겼습니다.</p>
 
 <pre class="brush: js">function changeVolume(event) {
   constantNode.offset.value = volumeControl.value;
 }</pre>
 
-<p>That simple function controls the gain on both nodes. All we have to do is set the value of the {{domxref("ConstantSourceNode")}}'s {{domxref("ConstantSourceNode.offset", "offset")}} parameter. That value becomes the node's constant output value, which is fed into all of its outputs, which are, as set above, <code>gainNode2</code> and <code>gainNode3</code>.</p>
+<p>이 간단한 함수는 두 노드의 gain을 제어합니다. 우리가 해야 하는 것은 {{domxref("ConstantSourceNode")}}의 {{domxref("ConstantSourceNode.offset", "offset")}} 파라미터의 값을 설정하는 것 뿐입니다. 이 값은 노드의 상수 출력 값이 되는데, 이는 노드의 모든 출력에 전달되고, 이 출력이라 함은, 위에서 설정되었다시피 <code>gainNode2</code>와 <code>gainNode3</code>입니다.</p>
 
-<p>While this is an extremely simple example, imagine having a 32 oscillator synthesizer with multiple linked parameters in play across a number of patched nodes. Being able to shorten the number of operations to adjust them all will prove invaluable for code size and performance both.</p>
+<p>이것이 아주 간단한 예제이긴 하지만, 다수의 연결된 노드에서 재생되는 다수의 연결된 파라미터를 가진 32개의 오실레이터 신시사이저를 상상해 보십시오. 그것들 모두를 조정하기 위해 연산의 수를 줄일 수 있음은 코드의 크기와 성능 양 쪽 모두에 대해 매우 유용함을 증명할 것입니다.</p>
 
-<h4 id="Starting_the_oscillators">Starting the oscillators</h4>
+<h4 id="오실레이터_재생하기">오실레이터 재생하기</h4>
 
-<p>When the user clicks the play/pause toggle button while the oscillators aren't playing, the <code>startOscillators()</code> function gets called.</p>
+<p>오실레이터가 재생 중이 아닌 도중에 사용자가 재생/정지 토글 버튼을 클릭했을 때, <code>startOscillators()</code> 함수가 호출됩니다.</p>
 
 <pre class="brush: js">function startOscillators() {
   oscNode1 = context.createOscillator();
   oscNode1.type = "sine";
-  oscNode1.frequency.value = 261.625565300598634; // middle C
+  oscNode1.frequency.value = 261.625565300598634; // 중앙 C
   oscNode1.connect(gainNode1);
 
   oscNode2 = context.createOscillator();
@@ -245,20 +245,20 @@ window.addEventListener("load", setup, false);
   playing = true;
 }</pre>
 
-<p>Each of the three oscillators is set up the same way:</p>
+<p>세 개의 각 오실레이터는 같은 방식으로 설정됩니다.</p>
 
 <ol>
- <li>Create the {{domxref("OscillatorNode")}} by calling {{domxref("BaseAudioContext.createOscillator")}}.</li>
- <li>Set the oscillator's type to <code>"sine"</code> to use a sine wave as the audio waveform.</li>
- <li>Set the oscillator's frequency to the desired value; in this case, <code>oscNode1</code> is set to a middle C, while <code>oscNode2</code> and <code>oscNode3</code> round out the chord by playing the E and G notes.</li>
- <li>Connect the new oscillator to the corresponding gain node.</li>
+ <li>{{domxref("BaseAudioContext.createOscillator")}}를 호출함으로써 {{domxref("OscillatorNode")}}를 생성합니다.</li>
+ <li>오디오 파형으로써 사인파를 사용하기 위해 오실레이터의 type을 <code>"sine"</code>으로 설정합니다.</li>
+ <li>오실레이터의 주파수를 원하는 값으로 설정합니다. 이 경우, <code>oscNode1</code>는 중앙 C로, <code>oscNode2</code>와 <code>oscNode3</code>는 E와 G음을 재생함으로써 화음을 완성합니다.</li>
+ <li>새로운 오실레이터를 해당하는 gain 노드에 연결합니다.</li>
 </ol>
 
-<p>Once all three oscillators have been created, they're started by calling each one's {{domxref("AudioScheduledSourceNode.start", "ConstantSourceNode.start()")}} method in turn, and <code>playing</code> is set to <code>true</code> to track that the tones are playing.</p>
+<p>세 개의 모든 오실레이터가 완성되고 나면, 이것들은 각각의 {{domxref("AudioScheduledSourceNode.start", "ConstantSourceNode.start()")}} 메서드를 차례로 호출함으로써 시작되고, <code>playing</code>은 음이 재생되는 것을 추적하기 위해 <code>true</code>로 설정됩니다.</p>
 
-<h4 id="Stopping_the_oscillators">Stopping the oscillators</h4>
+<h4 id="오실레이터_멈추기">오실레이터 멈추기</h4>
 
-<p>Stopping the oscillators when the user toggles the play state to pause the tones is as simple as stopping each node.</p>
+<p>음을 정지하기 위해 사용자가 재생 상태를 바꿨을 때 오실레이터를 멈추는 것은 각각의 노드를 정지하는 것과 마찬가지로 쉽습니다.</p>
 
 <pre class="brush: js">function stopOscillators() {
   oscNode1.stop();
@@ -267,18 +267,18 @@ window.addEventListener("load", setup, false);
   playing = false;
 }</pre>
 
-<p>Each node is stopped by calling its {{domxref("AudioScheduledSourceNode.stop", "ConstantSourceNode.stop()")}} method, then <code>playing</code> is set to <code>false</code>.</p>
+<p>각 노드는 {{domxref("AudioScheduledSourceNode.stop", "ConstantSourceNode.stop()")}} 메서드를 호출함으로써 정지되고, <code>playing</code>는 <code>false</code>로 설정됩니다.</p>
 
-<h3 id="Result">Result</h3>
+<h3 id="Result">결과</h3>
 
 <p>{{ EmbedLiveSample('Example', 600, 200) }}</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Simple_synth">Simple synth keyboard</a> (example)</li>
+ <li><a href="/ko/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
+ <li><a href="/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API 사용하기</a></li>
+ <li><a href="/ko/docs/Web/API/Web_Audio_API/Simple_synth">간단한 신시사이저 키보드</a> (예제)</li>
  <li>{{domxref("OscillatorNode")}}</li>
  <li>{{domxref("ConstantSourceNode")}}</li>
 </ul>

@@ -19,12 +19,12 @@ translation_of: Web/API/KeyboardEvent/key
 <div class="moreinfo pull-aside">
 <h4 id="Key_values" name="Key_values">キーの値</h4>
 
-<p><a href="/docs/Web/API/KeyboardEvent/key/Key_Values">キーの値</a>の完全なリストを参照してください。</p>
+<p><a href="/ja/docs/Web/API/KeyboardEvent/key/Key_Values">キーの値</a>の完全なリストを参照してください。</p>
 </div>
 
 <ul>
  <li>押されたキーが印刷表現を持っている場合は、返された値は空ではない Unicode 文字の文字列で、キーの印刷表現が入ります。</li>
- <li>押されたキーが制御または特殊文字である場合は、返値は<a href="/docs/Web/API/KeyboardEvent/key/Key_Values">定義済みキー値</a>の内の一つになります。</li>
+ <li>押されたキーが制御または特殊文字である場合は、返値は<a href="/ja/docs/Web/API/KeyboardEvent/key/Key_Values">定義済みキー値</a>の内の一つになります。</li>
  <li><code>KeyboardEvent</code> が<a href="https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%83%E3%83%89%E3%82%AD%E3%83%BC">デッドキー</a>が押されたことを表すのであれば、キーの値は "<code>Dead</code>" になります。</li>
  <li>キーボードの一部の特殊なキー (マルチメディアキーボードにおけるメディア制御のための拡張キーなど) は Windows のキーコードを生成しません。代わりに <code>WM_APPCOMMAND</code> イベントを起動します。これらのイベントは DOM キーボードイベントに対応付けられ、 Windows の「仮想キーコード」の中で、実際のキーコードではないものの紹介されます。</li>
  <li>キーが特定できなかった場合は、 <code>Unidentified</code> の値を返します。</li>

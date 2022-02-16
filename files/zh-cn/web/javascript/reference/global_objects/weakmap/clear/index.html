@@ -13,9 +13,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 <p><code><strong>clear()</strong></code>用来从 <code>WeakMap对象中移除所有元素。</code>但不再是ECMAScript和它的实现部分。</p>
 
 <div class="warning">
-<p>Warning:</p>
+<p><strong>警告：</strong>Warning:</p>
 
-<p><img alt="WeakMap(no clear() any more).png" src="https://mdn.mozillademos.org/files/15608/WeakMap(no%20clear()%20any%20more).png" style="height: 490px; width: 735px;"></p>
+<p><img alt="WeakMap(no clear() any more).png" src="https://mdn.mozillademos.org/files/15608/WeakMap(no%20clear()%20any%20more).png"></p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 
 <h3 id="使用_clear_方法">使用 <code>clear</code> 方法</h3>
 
-<pre class="brush: js;highlight:[10] example-bad">var wm = new WeakMap();
+<pre class="brush: js example-bad">var wm = new WeakMap();
 var obj = {};
 
 wm.set(obj, "foo");
@@ -47,55 +47,7 @@ wm.has(window)  // false
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>36</td>
-   <td>{{CompatNo}} [1]</td>
-   <td>11</td>
-   <td>23</td>
-   <td>7.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>8</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] The <code>clear()</code> 曾经在高于 20 版本低于 45 版本之间被支持。</p>
+{{Compat}}
 
 <h2 id="相近">相近</h2>
 

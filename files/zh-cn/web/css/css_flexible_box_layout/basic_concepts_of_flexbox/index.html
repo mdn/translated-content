@@ -145,12 +145,12 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 <h3 id="Flex_元素属性：_flex-shrink">Flex 元素属性： <code>flex-shrink</code></h3>
 
-<p><code>flex-grow</code>属性是处理flex元素在主轴上增加空间的问题，相反<code>flex-shrink</code>属性是处理flex元素收缩的问题。如果我们的容器中没有足够排列flex元素的空间，那么可以把flex元素<code>flex-shrink</code>属性设置为正整数来缩小它所占空间到<code>flex-basis</code>以下。与<code>flex-grow属性一</code>样，可以赋予不同的值来控制flex元素收缩的程度 —— 给<code>flex-shrink</code>属性赋予更大的数值可以比赋予小数值的同级元素收缩程度更大。</p>
+<p><code>flex-grow</code>属性是处理flex元素在主轴上增加空间的问题，相反<code>flex-shrink</code>属性是处理flex元素收缩的问题。如果我们的容器中没有足够排列flex元素的空间，那么可以把flex元素<code>flex-shrink</code>属性设置为正整数来缩小它所占空间到<code>flex-basis</code>以下。与<code>flex-grow</code>属性一样，可以赋予不同的值来控制flex元素收缩的程度 —— 给<code>flex-shrink</code>属性赋予更大的数值可以比赋予小数值的同级元素收缩程度更大。</p>
 
 <p>在计算flex元素收缩的大小时，它的最小尺寸也会被考虑进去，就是说实际上flex-shrink属性可能会和flex-grow属性表现的不一致。因此，我们可以在文章《<a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">控制Flex子元素在主轴上的比例</a>》中更详细地看一下这个算法的原理。</p>
 
 <div class="note">
-<p>在给 <code>flex-grow</code> 和 <code>flex-shrink</code> 赋值是要注意比例。如果我们给所有flex元素的flex属性赋值为 <code>1 1 200px</code> ，并且希望其中一个元素可以增加到2倍，我们可以给该元素的flex属性赋值为<code>2 1 200px</code>。然而，你也可以选择赋值为flex: <code>10 1 200px</code> 和 flex: <code>20 1 200px</code> 。</p>
+<p>在给 <code>flex-grow</code> 和 <code>flex-shrink</code> 赋值时要注意比例。如果我们给所有flex元素的flex属性赋值为 <code>1 1 200px</code> ，并且希望其中一个元素可以增加到2倍，我们可以给该元素的flex属性赋值为<code>2 1 200px</code>。然而，你也可以选择赋值为flex: <code>10 1 200px</code> 和 flex: <code>20 1 200px</code> 。</p>
 </div>
 
 <h3 id="Flex属性的简写">Flex属性的简写</h3>
@@ -226,7 +226,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 <h2 id="下一步">下一步</h2>
 
-<p>在读完这篇文章之后，你应该掌握了flexbox的基本特性。在下一篇文章中，我们将会学习如何与其他CSS一起使用。</p>
+<p>在读完这篇文章之后，你应该掌握了flexbox的基本特性。在下一篇文章中，我们将会学习如何<a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods">与其他CSS一起使用</a>。</p>
 
 <p>
  <audio class="hidden"></audio>

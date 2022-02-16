@@ -16,21 +16,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 ---
 <div>{{JSRef("Global_Objects", "RegExp")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Свойство <strong><code>sticky</code></strong> отражает тот факт, является ли поиск «липким» (то есть, начинается ли он с индекса, на который указывает свойство {{jsxref("RegExp.lastIndex", "lastIndex")}} регулярного выражения). Свойство <code>sticky</code> является свойством только для чтения и принадлежит экземпляру регулярного выражения.</p>
 
 <div>{{js_property_attributes(0, 0, 0)}}</div>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Значение свойства <code><strong>sticky</strong></code> имеет тип {{jsxref("Global_Objects/Boolean", "Boolean")}} и содержит <code>true</code>, если при определении регулярного выражения использовался флаг <code>"y",</code> в противном случае оно содержит <code>false</code>. Флаг <code>"y"</code> указывает на то, что регулярное выражение сопоставляется с целевой строкой начиная с позиции, на которую указывает его свойство {{jsxref("RegExp.lastIndex", "lastIndex")}} (и не пытается сопоставиться по любому более старшему индексу). Такое поведение позволяет эффективно использовать символ <code>"^"</code> сопоставления-с-началом в любом месте строки путём смены значения свойства {{jsxref("RegExp.lastIndex", "lastIndex")}}.</p>
 
 <p>Вы не можете напрямую изменить это свойство.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_a_regular_expression_with_the_.22sticky.22_flag" name="Example:_Using_a_regular_expression_with_the_.22sticky.22_flag">Пример: использование регулярных выражений с флагом «липучести»</h3>
+<h3 id="Example:_Using_a_regular_expression_with_the_.22sticky.22_flag">Пример: использование регулярных выражений с флагом «липучести»</h3>
 
 <p>Этот пример демонстрирует, как можно использовать флаг «липучести» регулярных выражений для сопоставления с отдельными строками многострочного ввода.</p>
 
@@ -49,7 +49,7 @@ var match3 = regex.exec(text);
 console.log(match3 === null); // напечатает 'true'
 </pre>
 
-<h2 id="Compatibility_test" name="Compatibility_test">Проверка совместимости</h2>
+<h2 id="Compatibility_test">Проверка совместимости</h2>
 
 <p>Во время выполнения можно проверить, поддерживается ли флаг «липучести», при помощи блока <code>try { … } catch { … }</code>. Для этого надо использовать либо выражение с <code>eval(…)</code>, либо конструктор <code>RegExp(<var>строка регулярного выражения</var>, <var>строка-с-флагами</var>)</code> (поскольку нотация <code>/<var>регулярное выражение</var>/<var>флаги</var></code> обрабатывается во время компиляции, исключение будет выброшено до того, как выполнение достигнет блока <code>catch</code>). Например:</p>
 
@@ -59,28 +59,15 @@ catch(e) { supports_sticky = false; }
 console.log(supports_sticky); // напечатает 'false' в Firefox 2 и 'true' в Firefox 3+
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-get-regexp.prototype.sticky', 'RegExp.prototype.sticky')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("RegExp.lastIndex")}}</li>

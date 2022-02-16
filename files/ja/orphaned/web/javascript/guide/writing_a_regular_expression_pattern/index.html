@@ -5,7 +5,7 @@ original_slug: Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
 ---
 <h3 id=".E6.AD.A3.E8.A6.8F.E8.A1.A8.E7.8F.BE.E3.83.91.E3.82.BF.E3.83.BC.E3.83.B3.E3.82.92.E6.9B.B8.E3.81.8F" name=".E6.AD.A3.E8.A6.8F.E8.A1.A8.E7.8F.BE.E3.83.91.E3.82.BF.E3.83.BC.E3.83.B3.E3.82.92.E6.9B.B8.E3.81.8F">正規表現パターンを書く</h3>
 
-<p>正規表現パターンは、<code>/abc/</code> のような単純な文字、または <code>/ab*c/</code> や <code>/Chapter (\d+)\.\d*/</code> のような単純な文字と特殊文字との組み合わせからなります。最後の例では記憶装置として使われている丸括弧が含まれています。パターンのこの部分でなされたマッチは後で使用できるように記憶されます。詳しくは <a href="/ja/docs/JavaScript/Guide/Working_with_Regular_Expressions/Using_Parenthesized_Substring_Matches" title="ja/docs/JavaScript/Guide/Working_with_Regular_Expressions/Using_Parenthesized_Substring_Matches">括弧で囲まれた部分文字列のマッチの使用</a> を参照してください。</p>
+<p>正規表現パターンは、<code>/abc/</code> のような単純な文字、または <code>/ab*c/</code> や <code>/Chapter (\d+)\.\d*/</code> のような単純な文字と特殊文字との組み合わせからなります。最後の例では記憶装置として使われている丸括弧が含まれています。パターンのこの部分でなされたマッチは後で使用できるように記憶されます。詳しくは <a href="/ja/docs/JavaScript/Guide/Working_with_Regular_Expressions/Using_Parenthesized_Substring_Matches">括弧で囲まれた部分文字列のマッチの使用</a> を参照してください。</p>
 
 <h4 id="単純なパターンの使用">単純なパターンの使用</h4>
 
@@ -183,7 +183,7 @@ original_slug: Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
 
 <h4 id="括弧の使用">括弧の使用</h4>
 
-<p>正規表現パターンの一部分を括弧で囲むことで、マッチした部分文字列のその部分を記憶しておくことができます。一度記憶すると、後からその部分文字列を呼び戻すことができます。これに関しては <a href="/ja/Core_JavaScript_1.5_Guide/Working_with_Regular_Expressions/Using_Parenthesized_Substring_Matches" title="ja/Core_JavaScript_1.5_Guide/Working_with_Regular_Expressions/Using_Parenthesized_Substring_Matches">括弧で囲まれた部分文字列のマッチの使用</a> で説明しています。</p>
+<p>正規表現パターンの一部分を括弧で囲むことで、マッチした部分文字列のその部分を記憶しておくことができます。一度記憶すると、後からその部分文字列を呼び戻すことができます。これに関しては <a href="/ja/Core_JavaScript_1.5_Guide/Working_with_Regular_Expressions/Using_Parenthesized_Substring_Matches">括弧で囲まれた部分文字列のマッチの使用</a> で説明しています。</p>
 
 <p>例えば、<code>/Chapter (\d+)\.\d*/</code> というパターンでは、エスケープされた文字と特殊文字の部分がその例で、その部分を記憶するように指示しています。これは 'Chapter ' という文字列、それに続く 1 文字以上の数字（\d はいずれかの数字を意味し、+ は 1 回以上の繰り返しを意味する）、それに続く小数点（それ自体は特殊文字であり、小数点の前の \ はパターンが '.' という文字そのものを探すようにすることを意味する）、それに続く 0 文字以上の数字（\d は数字を意味し、* は 0 回以上の繰り返しを意味する）にマッチします。さらに、括弧を使うことで最初のマッチした数値を記憶させます。</p>
 

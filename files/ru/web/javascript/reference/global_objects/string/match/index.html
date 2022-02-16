@@ -12,67 +12,67 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>match()</code></strong> возвращает получившиеся совпадения при сопоставлении <em>строки</em> с <em>регулярным выражением</em>.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.match(<var>regexp</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>regexp</code></dt>
  <dd>Объект регулярного выражения. Если будет передан объект <code>obj</code>, не являющийся регулярным выражением, он будет неявно преобразован в объект {{jsxref("Global_Objects/RegExp", "RegExp")}} через вызов конструктора <code>new RegExp(obj)</code>.</dd>
 </dl>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <dl>
  <dt><code>array</code></dt>
  <dd>Объект {{jsxref("Global_Objects/Array", "Array")}}, содержащий результаты сопоставления, или {{jsxref("Global_Objects/null", "null")}}, если ничего не было сопоставлено.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Если регулярное выражение не содержит флаг <code>g</code>, возвращаемый результат будет тем же самым, что и при вызове метода {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}. Возвращаемый объект {{jsxref("Global_Objects/Array", "массива", "", 1)}} имеет дополнительное свойство <code>input</code>, которое содержит оригинальную строку. Кроме того, он имеет свойство <code>index</code>, которое представляет индекс (нумерация с нуля) сопоставления в строке.</p>
 
 <p>Если регулярное выражение содержит флаг <code>g</code>, метод вернёт {{jsxref("Global_Objects/Array", "массив", "", 1)}}, содержащий все сопоставления. Если сопоставлений не было, метод вернёт значение {{jsxref("Global_Objects/null", "null")}}.</p>
 
-<h3 id="See_also_RegExp_methods" name="See_also:_RegExp_methods">Смотрите также: методы объекта <code>RegExp</code></h3>
+<h3 id="See_also_RegExp_methods">Смотрите также: методы объекта <code>RegExp</code></h3>
 
 <ul>
  <li>Если вам надо просто узнать, подпадает ли строка под регулярное выражение, используйте метод {{jsxref("String.prototype.search()", "search()")}}.</li>
  <li>Если вам нужно найти только первое сопоставление, вы можете использовать метод {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}.</li>
 </ul>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_match" name="Example:_Using_match">Пример: использование метода <code>match()</code></h3>
+<h3 id="Example_Using_match">Пример: использование метода <code>match()</code></h3>
 
 <p>В следующем примере метод <code>match()</code> используется для поиска слова <code>'Глава'</code>, за которым следуют 1 или более цифр, за которыми следуют 0 или более раз группы из точки и цифры. Регулярное выражение включает флаг <code>i</code>, так что регистр букв игнорируется.</p>
 
-<pre class="brush: js">var str = 'Глава 3.4.5.1 содержит дополнительную информацию';
-var re = /(глава \d+(\.\d)*)/i;
+<pre class="brush: js">var str = 'Смотри главу 3.4.5.1 для дополнительной информации';
+var re = /смотри (главу \d+(\.\d)*)/i;
 var found = str.match(re);
 
 console.log(found);
 
-// выведет [ 'Глава 3.4.5.1',
-//           'Глава 3.4.5.1',
+// выведет [ 'Смотри главу 3.4.5.1',
+//           'главу 3.4.5.1',
 //           '.1',
 //           index: 0,
-//           input: 'Глава 3.4.5.1 содержит дополнительную информацию' ]
+//           input: 'Смотри главу 3.4.5.1 для дополнительной информации' ]
 
-// 'Глава 3.4.5.1' - это первое сопоставление и первое значение,
-// сопоставленное с группой `(Глава \d+(\.\d)*)`.
-// '.1' - это последнее значение, сопоставленное с группой `(\.\d)`.
+// 'Смотри главу 3.4.5.1' - это полное сопоставление
+// 'главу 3.4.5.1' - первое значение, сопоставленное с группой "(главу \d+(\.\d)*)".
+// '.1' - это последнее значение, сопоставленное с группой "(\.\d)".
 // Свойство 'index' содержит значение (0) индекса совпадения
 // относительно начала сопоставления
 // Свойство 'input' содержит значение введённой строки.</pre>
 
-<h3 id="Example_Using_global_and_ignore_case_flags_with_match" name="Example:_Using_global_and_ignore_case_flags_with_match">Пример: использование флагов глобальности и игнорирования регистра с методом <code>match()</code></h3>
+<h3 id="Example_Using_global_and_ignore_case_flags_with_match">Пример: использование флагов глобальности и игнорирования регистра с методом <code>match()</code></h3>
 
 <p>Следующий пример демонстрирует использование флагов глобального поиска и игнорирования регистра символов вместе с методом <code>match()</code>. Возвращаются все буквы от А до Д и от а до д, каждая в своём элементе массива.</p>
 
@@ -84,38 +84,15 @@ console.log(matches_array);
 // ['А', 'Б', 'В', 'Г', 'Д', 'а', 'б', 'в', 'г', 'д']
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.10', 'String.prototype.match')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.match', 'String.prototype.match')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("RegExp.prototype.exec()")}}</li>

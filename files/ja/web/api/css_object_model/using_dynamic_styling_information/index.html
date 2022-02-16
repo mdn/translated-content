@@ -10,7 +10,7 @@ translation_of: Web/API/CSS_Object_Model/Using_dynamic_styling_information
 
 <p>DOM の一部である CSS Object Model (CSSOM) では、 CSS に関する様々な情報を操作するインターフェイスを公開しています。これらは <em>DOM Level 2 Style</em> 勧告で定義されたのち、現在ではそれを置き換える <em>CSS Object Model (CSSOM)</em> で規格化されています。</p>
 
-<p>多くの場面で、可能であれば {{ domxref("element.className", "className") }} プロパティを使ってクラスを操作することが推奨されます。最終的なスタイルをひとつのスタイルシートで制御できる上、JavaScript コードはスタイルの詳細を気にすることなく、正確な詳細はスタイルシートに任せたまま、作成・操作する各セクションの全体的な意味づけに注目できます。しかしながら（スタイルシート全体もしくはある要素についての）個々のルールを操作する方が便利なこともあり、だいぶん後でその方法を紹介します。なおスタイルシートを操作するといっても物理的なドキュメントを操作するわけではなく、要素の DOM スタイルのような内部表現を操作しているだけということに注意してください。</p>
+<p>多くの場面で、可能であれば {{ domxref("element.className", "className") }} プロパティを使ってクラスを操作することが推奨されます。最終的なスタイルをひとつのスタイルシートで制御できる上、JavaScript コードはスタイルの詳細を気にすることなく、正確な詳細はスタイルシートに任せたまま、作成・操作する各セクションの全体的な意味づけに注目できます。しかしながら（スタイルシート全体もしくはある要素についての）個々のルールを操作する方が便利なこともあり、以下でさらに詳しく説明します。なおスタイルシートを操作するといっても物理的なドキュメントを操作するわけではなく、要素の DOM スタイルのような内部表現を操作しているだけということに注意してください。</p>
 
 <p>基本となる <code>style</code> オブジェクトは {{domxref("Stylesheet")}} インターフェイスと {{domxref("CSSStylesheet")}} インターフェイスを公開しています。これらのインターフェイスが備える <code>insertRule</code>, <code>selectorText</code>, <code>parentStyleSheet</code> などのメンバーを使うことで、CSS スタイルシートを構成する個々のスタイルにアクセス・操作できます。</p>
 
@@ -89,11 +89,11 @@ function resetStyle(elemId) {
 
 <p>{{ EmbedLiveSample('Modify_an_element_style') }}</p>
 
-<p><code>document.defaultView</code> オブジェクトの {{domxref("window.getComputedStyle", "getComputedStyle()")}} メソッドは、その要素に対して計算された全てのスタイルを返します。このメソッドの使い方について詳しくはサンプルの <a href="/en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle" title="en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle">Example 6: getComputedStyle</a> を参照してください。</p>
+<p><code>document.defaultView</code> オブジェクトの {{domxref("window.getComputedStyle", "getComputedStyle()")}} メソッドは、その要素に対して計算された全てのスタイルを返します。このメソッドの使い方について詳しくはサンプルの <a href="/ja/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle" title="en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle">Example 6: getComputedStyle</a> を参照してください。</p>
 
 <h2 id="DOM_Style_Object" name="DOM_Style_Object">DOM Style オブジェクト</h2>
 
-<p><code>style</code> オブジェクトは独立したスタイル指定です。 <code><a href="/en/DOM/document.styleSheets" title="en/DOM/document.styleSheets">document.styleSheets</a></code> から個別にルールを取得するのとは異なり、 style オブジェクトは <code>document</code> またはスタイルが適用される要素から取得されます。ある特定の要素の<em>インライン</em>スタイルを表します。</p>
+<p><code>style</code> オブジェクトは独立したスタイル指定です。 <code><a href="/ja/DOM/document.styleSheets" title="en/DOM/document.styleSheets">document.styleSheets</a></code> から個別にルールを取得するのとは異なり、 style オブジェクトは <code>document</code> またはスタイルが適用される要素から取得されます。ある特定の要素の<em>インライン</em>スタイルを表します。</p>
 
 <p>この記事で例示した CSS プロパティに限らず、 <code>style</code> オブジェクトを通して要素のスタイルを個別に操作できるという点が重要です。</p>
 
@@ -128,7 +128,7 @@ function resetStyle(elemId) {
 
 <h3 id="DOM_Style_Object_SetAttribue" name="DOM_Style_Object_SetAttribue">setAttribute メソッドの利用</h3>
 
-<p>要素のスタイルの変更には、要素の <code><a href="/en/DOM/element.setAttribute" title="en/DOM/element.setAttribute">setAttribute</a></code> メソッドを使うこともできます。</p>
+<p>要素のスタイルの変更には、要素の <code><a href="/ja/DOM/element.setAttribute" title="en/DOM/element.setAttribute">setAttribute</a></code> メソッドを使うこともできます。</p>
 
 <pre class="brush: js notranslate">var el = document.getElementById('some-element');
 el.setAttribute('style', 'background-color:darkblue;');

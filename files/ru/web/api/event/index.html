@@ -14,7 +14,7 @@ translation_of: Web/API/Event
 
 <p>Интерфейс <code><strong>Event</strong></code> представляет собой любое событие, которое происходит в <a href="/ru/docs/DOM/DOM_Reference">DOM</a>; некоторые из них генерируемые пользователем (клик мышью или нажатие клавиши на клавиатуре), а некоторые - генерируемые API (события, обозначающие завершение процесса анимации, приостановка видео и т.д.). Существует много типов событий, некоторые из них используют интерфейсы, базирующиеся на главном интерфейсе <code>Event</code>. <code>Event</code> содержит общие свойства и методы для всех событий.</p>
 
-<h2 id="Introduction" name="Introduction">Интерфейсы, основанные на <code>Event</code></h2>
+<h2 id="Introduction">Интерфейсы, основанные на <code>Event</code></h2>
 
 <p>Ниже приведён список интерфейсов, основанных на главном интерфейсе <code>Event</code>, а также указаны ссылки на них в документации MDN API. Заметьте, что имена всех интерфейсов оканчиваются на "Event".</p>
 
@@ -74,14 +74,14 @@ translation_of: Web/API/Event
 </ul>
 </div>
 
-<h2 id="Constructor" name="Constructor">Конструктор</h2>
+<h2 id="Constructor">Конструктор</h2>
 
 <dl>
  <dt>{{domxref("Event.Event", "Event()")}}</dt>
  <dd>Создаёт объект <code>Event</code> и возвращает его вызывающему.</dd>
 </dl>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt>{{domxref("Event.bubbles")}} {{readonlyinline}}</dt>
@@ -107,7 +107,7 @@ translation_of: Web/API/Event
  <dt>{{domxref("Event.returnValue")}} {{non-standard_inline}}</dt>
  <dd>Нестандартная альтернатива (оставшаяся от старых версий Microsoft Internet Explorer) для {{domxref("Event.preventDefault()")}} и {{domxref("Event.defaultPrevented")}}.</dd>
  <dt>{{domxref("Event.scoped")}} {{readonlyinline}} {{obsolete_inline}}</dt>
- <dd>{{jsxref("Boolean", "Логическое значение")}}, показывающее всплывает ли данное событие через shadow root (внутренний DOM элемента). Это свойство было переименовано в  {{domxref("Event.composed", "composed")}}.</dd>
+ <dd>{{jsxref("Boolean", "Логическое значение")}}, показывающее всплывает ли данное событие через shadow root (внутренний DOM-элемента). Это свойство было переименовано в  {{domxref("Event.composed", "composed")}}.</dd>
  <dt>{{domxref("Event.srcElement")}} {{non-standard_inline}}</dt>
  <dd>Нестандартный синоним (остался от старых версий Microsoft Internet Explorer) для {{domxref("Event.target")}}.</dd>
  <dt>{{domxref("Event.target")}} {{readonlyinline}}</dt>
@@ -120,7 +120,7 @@ translation_of: Web/API/Event
  <dd>Показывает было или нет событие инициировано браузером (например, по клику мышью) или из скрипта (например, через функцию создания события, такую как <a href="/en-US/docs/DOM/event.initEvent">event.initEvent</a>)</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <p> </p>
 
@@ -152,26 +152,13 @@ translation_of: Web/API/Event
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-event', 'Event')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
 
-<p>{{Compat("api.Event")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>Типы событий: <a href="/en-US/docs/Web/Reference/Events">Event reference</a></li>

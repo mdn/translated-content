@@ -11,7 +11,7 @@ translation_of: Web/API/Event/currentTarget
 
 <p><code>event.currentTarget</code> используется, когда один и тот же обработчик события присваивается нескольким элементам.</p>
 
-<pre class="brush: js notranslate">function hide(e){
+<pre class="brush: js">function hide(e){
   e.currentTarget.style.visibility = "hidden";
   // Когда данная функция используется в качестве обработчика события: this === e.currentTarget
 }
@@ -27,32 +27,11 @@ for(var i = 0; i &lt; ps.length; i++){
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Спецификация</th>
-   <th>Статус</th>
-   <th>Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Events", "#Events-Event-currentTarget", "Event.currentTarget")}}</td>
-   <td>{{Spec2("DOM2 Events")}}</td>
-   <td>
-    <table>
-     <tbody>
-      <tr>
-       <td>Изначальное определение. </td>
-      </tr>
-     </tbody>
-    </table>
-   </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Event.currentTarget")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

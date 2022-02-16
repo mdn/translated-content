@@ -54,38 +54,38 @@ translation_of: Web/HTML/Element/a
 <dl>
  <dt>{{htmlattrdef("download")}} {{HTMLVersionInline(5)}}</dt>
  <dd>此属性指示浏览器下载 URL 而不是导航到它，因此将提示用户将其保存为本地文件。如果属性有一个值，那么此值将在下载保存过程中作为预填充的文件名（如果用户需要，仍然可以更改文件名）。此属性对允许的值没有限制，但是 <code>/</code> 和 <code>\</code> 会被转换为下划线。大多数文件系统限制了文件名中的标点符号，故此，浏览器将相应地调整建议的文件名。
- <div class="note"><strong>注意:</strong>
+ <div class="note"><strong>注意：</strong>
  <ul>
   <li>此属性仅适用于<a href="/zh-CN/docs/Web/Security/Same-origin_policy">同源 URL</a>。</li>
   <li>尽管 HTTP URL 需要位于同一源中，但是可以使用 <a href="/zh-CN/docs/Web/API/URL.createObjectURL"><code>blob:</code> URL</a> 和 <a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URL</a> ，以方便用户下载使用 JavaScript 生成的内容（例如使用在线绘图 Web 应用程序创建的照片）。</li>
   <li>如果 HTTP 头中的 <a href="/zh-CN/docs/Web/HTTP/Headers/Content-Disposition">Content-Disposition</a> 属性赋予了一个不同于此属性的文件名，HTTP 头属性优先于此属性。</li>
-  <li>如果 HTTP 头属性 <code>Content-Disposition</code> 被设置为inline（即 <code>Content-Disposition='inline'</code>），那么 Firefox 优先考虑 HTTP 头 <code>Content-Disposition</code>download 属性。</li>
+  <li>如果 HTTP 头属性 <code>Content-Disposition</code> 被设置为 inline（即 <code>Content-Disposition='inline'</code>），那么 Firefox 优先考虑 HTTP 头 <code>Content-Disposition</code>download 属性。</li>
  </ul>
  </div>
  </dd>
  <dt>{{htmlattrdef("href")}}</dt>
  <dd>包含超链接指向的 URL 或 URL 片段。</dd>
- <dd>URL 片段是哈希标记（#）前面的名称，哈希标记指定当前文档中的内部目标位置（HTML 元素的 ID）。URL 不限于基于 Web（HTTP）的文档，也可以使用浏览器支持的任何协议。例如，在大多数浏览器中正常工作的<a class="external external-icon" href="https://en.wikipedia.org/wiki/File_URI_scheme"><code>file:</code></a>、ftp:和mailto：。
+ <dd>URL 片段是哈希标记（#）前面的名称，哈希标记指定当前文档中的内部目标位置（HTML 元素的 ID）。URL 不限于基于 Web（HTTP）的文档，也可以使用浏览器支持的任何协议。例如，在大多数浏览器中正常工作的<a class="external external-icon" href="https://en.wikipedia.org/wiki/File_URI_scheme"><code>file:</code></a>、ftp:和 mailto：。
  <div class="note">
- <p><strong>注意:</strong> 可以使用 <code>href="#top"</code> 或者 <code>href="#"</code> 链接返回到页面顶部。<a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#scroll-to-fragid">这种行为是 HTML5 的特性</a>。</p>
+ <p><strong>注意：</strong> 可以使用 <code>href="#top"</code> 或者 <code>href="#"</code> 链接返回到页面顶部。<a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#scroll-to-fragid">这种行为是 HTML5 的特性</a>。</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("hreflang")}}</dt>
- <dd>该属性用于指定链接文档的人类语言。其仅提供建议，并没有内置的功能。hreflang 允许的值取决于HTML5 <a class="external" href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a>。</dd>
+ <dd>该属性用于指定链接文档的人类语言。其仅提供建议，并没有内置的功能。hreflang 允许的值取决于 HTML5 <a class="external" href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a>。</dd>
  <dt>{{htmlattrdef("ping")}}</dt>
- <dd>包含一个以空格分隔的url列表，当跟随超链接时，将由浏览器(在后台)发送带有正文 PING 的 POST 请求。通常用于跟踪。</dd>
+ <dd>包含一个以空格分隔的 url 列表，当跟随超链接时，将由浏览器 (在后台) 发送带有正文 PING 的 POST 请求。通常用于跟踪。</dd>
  <dd>
 
  </dd>
  <dt>{{htmlattrdef("referrerpolicy")}} {{experimental_inline}}</dt>
- <dd>表明在获取URL时发送哪个提交者（referrer）:
+ <dd>表明在获取 URL 时发送哪个提交者（referrer）:
  <ul>
   <li><code>"no-referrer"</code> 表示 <code>Referer:</code> 头将不会被发送。</li>
-  <li><code>"no-referrer-when-downgrade"</code> 表示当从使用HTTPS的页面导航到不使用 TLS(HTTPS)的来源 时不会发送 <code>Referer:</code> 头。如果没有指定策略，这将是用户代理的默认行为。</li>
-  <li><code>"origin"</code> 表示 referrer将会是页面的来源，大致为这样的组合：主机和端口（不包含具体的路径和参数的信息）。</li>
-  <li>"origin-when-cross-origin" 表示导航到其它源将会限制为这种组合：主机 + 端口，而导航到相同的源将会只包含 referrer的路径。</li>
+  <li><code>"no-referrer-when-downgrade"</code> 表示当从使用 HTTPS 的页面导航到不使用 TLS(HTTPS) 的来源 时不会发送 <code>Referer:</code> 头。如果没有指定策略，这将是用户代理的默认行为。</li>
+  <li><code>"origin"</code> 表示 referrer 将会是页面的来源，大致为这样的组合：主机和端口（不包含具体的路径和参数的信息）。</li>
+  <li>"origin-when-cross-origin" 表示导航到其它源将会限制为这种组合：主机 + 端口，而导航到相同的源将会只包含 referrer 的路径。</li>
   <li><code>'strict-origin-when-cross-origin'</code></li>
-  <li><code>"unsafe-url"</code> 表示 referrer将会包含源和路径（domain + path）（但是不包含密码或用户名的片段）。这种情况是不安全的，因为它可能会将安全的URLs数据泄露给不安全的源。</li>
+  <li><code>"unsafe-url"</code> 表示 referrer 将会包含源和路径（domain + path）（但是不包含密码或用户名的片段）。这种情况是不安全的，因为它可能会将安全的 URLs 数据泄露给不安全的源。</li>
  </ul>
  </dd>
 </dl>
@@ -94,12 +94,12 @@ translation_of: Web/HTML/Element/a
  <dt>{{htmlattrdef("rel")}}</dt>
  <dd>该属性指定了目标对象到链接对象的关系。该值是空格分隔的<a href="/zh-CN/docs/Web/HTML/Link_types">列表类型值</a>。</dd>
  <dt>{{htmlattrdef("target")}}</dt>
- <dd>该属性指定在何处显示链接的资源。 取值为标签（tab），窗口（window），或框架（iframe）等浏览上下文的名称或其他关键词。以下关键字具有特殊的意义:
+ <dd>该属性指定在何处显示链接的资源。 取值为标签（tab），窗口（window），或框架（iframe）等浏览上下文的名称或其他关键词。以下关键字具有特殊的意义：
  <ul>
-  <li><code>_self</code>: 当前页面加载，即当前的响应到同一HTML 4 frame（或HTML5浏览上下文）。此值是默认的，如果没有指定属性的话。</li>
-  <li><code>_blank</code>: 新窗口打开，即到一个新的未命名的HTML4窗口或HTML5浏览器上下文</li>
-  <li><code>_parent</code>: 加载响应到当前框架的HTML4父框架或当前的HTML5浏览上下文的父浏览上下文。如果没有parent框架或者浏览上下文，此选项的行为方式与 <code>_self</code> 相同。</li>
-  <li><code>_top</code>: IHTML4中：加载的响应成完整的，原来的窗口，取消所有其它frame。 HTML5中：加载响应进入顶层浏览上下文（即，浏览上下文，它是当前的一个的祖先，并且没有parent）。如果没有parent框架或者浏览上下文，此选项的行为方式相同_self</li>
+  <li><code>_self</code>: 当前页面加载，即当前的响应到同一 HTML 4 frame（或 HTML5 浏览上下文）。此值是默认的，如果没有指定属性的话。</li>
+  <li><code>_blank</code>: 新窗口打开，即到一个新的未命名的 HTML4 窗口或 HTML5 浏览器上下文</li>
+  <li><code>_parent</code>: 加载响应到当前框架的 HTML4 父框架或当前的 HTML5 浏览上下文的父浏览上下文。如果没有 parent 框架或者浏览上下文，此选项的行为方式与 <code>_self</code> 相同。</li>
+  <li><code>_top</code>: IHTML4 中：加载的响应成完整的，原来的窗口，取消所有其它 frame。 HTML5 中：加载响应进入顶层浏览上下文（即，浏览上下文，它是当前的一个的祖先，并且没有 parent）。如果没有 parent 框架或者浏览上下文，此选项的行为方式相同_self</li>
  </ul>
  </dd>
  <dd>
@@ -118,17 +118,17 @@ translation_of: Web/HTML/Element/a
  <h3 id="过时的">过时的</h3>
  </dt>
  <dt>{{htmlattrdef("charset")}} {{obsoleteGeneric("inline","HTML5")}}</dt>
- <dd>此属性定义链接资源的字符编码。该值是一个空格- 和/或逗号分隔的<a class="external" href="http://tools.ietf.org/html/rfc2045" style="color: rgb(102, 153, 204); text-decoration: none; padding-right: 16px; background-color: rgb(255, 255, 255); font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', Lucida, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 22px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;">RFC 2045</a>中定义的字符集列表。默认值是ISO-8859-1。
+ <dd>此属性定义链接资源的字符编码。该值是一个空格- 和/或逗号分隔的<a class="external" href="http://tools.ietf.org/html/rfc2045" style="color: rgb(102, 153, 204); text-decoration: none; padding-right: 16px; background-color: rgb(255, 255, 255); font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', Lucida, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 22px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;">RFC 2045</a>中定义的字符集列表。默认值是 ISO-8859-1。
  <div class="note">
- <p><strong>使用说明: </strong>在 HTML5 中该属性已作废，不应使用。 为了实现其效果，使用HTTP content - type header的链接资源。</p>
+ <p><strong>使用说明：</strong>在 HTML5 中该属性已作废，不应使用。 为了实现其效果，使用 HTTP content - type header 的链接资源。</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("coords")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
  <dd>对于使用对象的形状，此属性使用逗号分隔的数字列表来定义对象在页面上的坐标。</dd>
  <dt>{{htmlattrdef("name")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
- <dd>该属性在页面中定义锚点的目标位置时是必须的。 <strong>name</strong> 的值类似于ID核心属性值，该属性值在文档中是唯一的且由数字字母标示符所组成的。在 HTML 4.01 规范中, <strong>id</strong> 和 <strong>name</strong> 都可以使用 &lt;a&gt; 元素，只要他们有相同的值。
+ <dd>该属性在页面中定义锚点的目标位置时是必须的。 <strong>name</strong> 的值类似于 ID 核心属性值，该属性值在文档中是唯一的且由数字字母标示符所组成的。在 HTML 4.01 规范中，<strong>id</strong> 和 <strong>name</strong> 都可以使用 &lt;a&gt; 元素，只要他们有相同的值。
  <div class="note">
- <p><strong>使用说明:</strong> 该属性在 HTML5中是过时的, 使用 <a href="/zh-CN/docs/HTML/Global_attributes#attr-id" title="HTML/Global attributes#id">全局属性 <strong>id</strong></a> 来代替。</p>
+ <p><strong>使用说明：</strong> 该属性在 HTML5 中是过时的，使用 <a href="/zh-CN/docs/HTML/Global_attributes#attr-id" title="HTML/Global attributes#id">全局属性 <strong>id</strong></a> 来代替。</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("rev")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
@@ -137,7 +137,7 @@ translation_of: Web/HTML/Element/a
 
 <dl>
  <dt>{{htmlattrdef("shape")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
- <dd>此属性用于定义一个可选的超链接相关的一个数字来创建图像映射区域，该属性的值是圆，默认情况下，多边形，矩形。 所述的<strong>coords</strong> 属性的格式取决于形状的值。对于圆，该值的x，y，r其中x和y为圆心像素坐标，r是像素值半径。对于矩形，该<strong>coords</strong> 属性应该是x，y，w，h。x，y值定义的矩形的左上角的位置，而w和h分别定义宽度和高度。多边形形状的值需要x1，y1，x2，y2，......值来定义coords。每对x，y定义多边形的一个点，连续点由直线接合和，最后一个点连接到第一个点。默认为形状的值需要将整个封闭区域，典型的图像，可以使用。
+ <dd>此属性用于定义一个可选的超链接相关的一个数字来创建图像映射区域，该属性的值是圆，默认情况下，多边形，矩形。 所述的<strong>coords</strong> 属性的格式取决于形状的值。对于圆，该值的 x，y，r 其中 x 和 y 为圆心像素坐标，r 是像素值半径。对于矩形，该<strong>coords</strong> 属性应该是 x，y，w，h。x，y 值定义的矩形的左上角的位置，而 w 和 h 分别定义宽度和高度。多边形形状的值需要 x1，y1，x2，y2，......值来定义 coords。每对 x，y 定义多边形的一个点，连续点由直线接合和，最后一个点连接到第一个点。默认为形状的值需要将整个封闭区域，典型的图像，可以使用。
  <div class="note"><strong>说明：</strong>建议使用 <a href="/zh-CN/docs/Web/HTML/Element/img#attr-usemap">使用 map 属性</a>在 {{HTMLElement("img")}} 元素和相关的{{HTMLElement("map")}}元素中来定义热点而不是用形状属性。</div>
  </dd>
 </dl>
@@ -169,7 +169,7 @@ Description of Same-Page Links
 
 <h3 id="创建一个可点击的图片">创建一个可点击的图片</h3>
 
-<p>这个小例子使用图像链接到MDN主页。主页将在新的浏览环境，这是一个新的页面或新标签中打开研究。</p>
+<p>这个小例子使用图像链接到 MDN 主页。主页将在新的浏览环境，这是一个新的页面或新标签中打开研究。</p>
 
 <pre class="brush: html">&lt;a href="https://developer.mozilla.org/en-US/"&gt;
   &lt;img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png"
@@ -183,16 +183,16 @@ Description of Same-Page Links
 <p>{{EmbedLiveSample("创建一个可点击的图片", "320", "64")}}</p>
 </figure>
 
-<h3 id="创建一个email链接">创建一个email链接</h3>
+<h3 id="创建一个email链接">创建一个 email 链接</h3>
 
-<p>这是常见的创建按钮或链接，将用户的电子邮件程序打开，让他们发送新邮件。这是通过使用一个mailto链接完成的。这里有一个简单的例子：</p>
+<p>这是常见的创建按钮或链接，将用户的电子邮件程序打开，让他们发送新邮件。这是通过使用一个 mailto 链接完成的。这里有一个简单的例子：</p>
 
 <pre class="brush: html">&lt;a href="mailto:nowhere@mozilla.org"&gt;Send email to nowhere&lt;/a&gt;
 </pre>
 
-<p>生成这样的链接: <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>.</p>
+<p>生成这样的链接：<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>.</p>
 
-<p>有关mailto URL方案的更多细节，比如如何包含主题，正文，或其他预定内容，参考 <a href="/zh-CN/docs/Web/Guide/HTML/Email_links">Email links</a> or {{RFC(6068)}}.</p>
+<p>有关 mailto URL 方案的更多细节，比如如何包含主题，正文，或其他预定内容，参考 <a href="/zh-CN/docs/Web/Guide/HTML/Email_links">Email links</a> or {{RFC(6068)}}.</p>
 
 <h3 id="创建电话链接">创建电话链接</h3>
 
@@ -205,7 +205,7 @@ Description of Same-Page Links
 
 <h3 id="使用_download_属性将_&lt;canvas>_保存为_PNG_格式">使用 download 属性将 <code>&lt;canvas&gt;</code> 保存为 PNG 格式</h3>
 
-<p>如果你想允许用户下载一个HTML画布，你可以创建一个下载属性和画布数据作为文件URL链接图像：</p>
+<p>如果你想允许用户下载一个 HTML 画布，你可以创建一个下载属性和画布数据作为文件 URL 链接图像：</p>
 
 <pre class="brush: js">var link = document.createElement('a');
 link.innerHTML = 'download image';
@@ -221,7 +221,7 @@ document.body.appendChild(link);</pre>
 
 <h2 id="备注">备注</h2>
 
-<p>html 3.2 只定义 name, href, rel, rev, 和 title 属性。</p>
+<p>html 3.2 只定义 name, href, rel, rev，和 title 属性。</p>
 
 <h3 id="无障碍建议">无障碍建议</h3>
 

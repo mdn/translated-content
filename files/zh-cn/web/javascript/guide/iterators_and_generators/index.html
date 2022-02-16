@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}</div>
 
-<p class="summary">处理集合中的每个项是很常见的操作。JavaScript 提供了许多迭代集合的方法，从简单的 {{jsxref("Statements/for","for")}} 循环到 {{jsxref("Global_Objects/Array/map","map()")}} 和 {{jsxref("Global_Objects/Array/filter","filter()")}}。迭代器和生成器将迭代的概念直接带入核心语言，并提供了一种机制来自定义 {{jsxref("Statements/for...of","for...of")}} 循环的行为。</p>
+<p>处理集合中的每个项是很常见的操作。JavaScript 提供了许多迭代集合的方法，从简单的 {{jsxref("Statements/for","for")}} 循环到 {{jsxref("Global_Objects/Array/map","map()")}} 和 {{jsxref("Global_Objects/Array/filter","filter()")}}。迭代器和生成器将迭代的概念直接带入核心语言，并提供了一种机制来自定义 {{jsxref("Statements/for...of","for...of")}} 循环的行为。</p>
 
 <p>若想了解更多详情，请参考：</p>
 
@@ -70,7 +70,7 @@ console.log("Iterated over sequence of size: ", result.value); // 5
 </pre>
 
 <div class="note">
-<p>反射性地知道特定对象是否是迭代器是不可能的。 如果您需要这样做，请使用 <a href="#Iterables">Iterables</a>.</p>
+<p><strong>备注：</strong>反射性地知道特定对象是否是迭代器是不可能的。 如果您需要这样做，请使用 <a href="#Iterables">Iterables</a>.</p>
 </div>
 
 <h2 id="生成器函数">生成器函数</h2>

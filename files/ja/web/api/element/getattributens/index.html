@@ -36,7 +36,7 @@ alert(a); // div の align 属性の値を表示します。
 
 <h3 id=".E6.B3.A8.E8.A8.98" name=".E6.B3.A8.E8.A8.98">注記</h3>
 
-<p><code>getAttributeNS</code> は <a href="ja/DOM/element.getAttribute">getAttribute</a> と異なります。<code>getAttributeNS</code> は特定の名前空間に属している要求された属性をより深く特定することができます。上記の例では、属性は mozilla の架空の "specialspace" 名前空間に属しています。</p>
+<p><code>getAttributeNS</code> は <a href="/ja/DOM/element.getAttribute">getAttribute</a> と異なります。<code>getAttributeNS</code> は特定の名前空間に属している要求された属性をより深く特定することができます。上記の例では、属性は mozilla の架空の "specialspace" 名前空間に属しています。</p>
 
 <p>DOM4 より前の仕様では、このメソッドは属性が存在しない場合に <code>null</code> ではなく空文字列を返すように指定されていました。しかし、ほとんどのウェブ・ブラウザは <code>null</code> を返していました。DOM4 以降は、仕様でも <code>null</code> を返すように指定されました。しかしながら、いくつかの古いウェブ・ブラウザは空文字列を返します。そのため、指定の要素に指定の属性が存在しない可能性があるなら <code>getAttributeNS</code> を呼ぶ前に <a href="/ja/docs/Web/API/Element/hasAttributeNS"><code>hasAttributeNS</code></a> を使用して属性の存在を確かめる必要があります。</p>
 

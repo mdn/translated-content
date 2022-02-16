@@ -12,34 +12,33 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/floor
 <p><code><strong>Math.floor()</strong></code> 返回小于或等于一个给定数字的最大整数。</p>
 
 <div class="note">
-<p>Note:  可以理解 <code><strong>Math.floor()</strong></code>为向下取整</p>
+<p><strong>备注：</strong>可以理解 <code><strong>Math.floor()</strong></code>为向下取整</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code>Math.floor(<em>x</em>) </code></pre>
+<pre class="syntaxbox"><code>Math.floor(<em>x</em>) </code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>x</code></dt>
  <dd>一个数字。</dd>
- <dt>
- <h3 id="返回值">返回值 </h3>
-
- <p>一个表示小于或等于指定数字的最大整数的数字。</p>
- </dt>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h3 id="返回值">返回值 </h3>
+
+<p>一个表示小于或等于指定数字的最大整数的数字。</p>
+
+<h2 id="Description">描述</h2>
 
 <p>由于 <code>floor</code> 是 <code>Math</code> 的一个静态方法，你总是应该像这样使用它 <code>Math.floor()</code>，而不是作为你创建的一个Math对象的一种方法（Math不是一个构造函数）。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Using_Math.floor" name="Example:_Using_Math.floor">例子：使用 <code>Math.floor</code></h3>
+<h3 id="Example_Using_Math.floor">例子：使用 <code>Math.floor</code></h3>
 
-<pre class="brush:js notranslate">Math.floor( 45.95);
+<pre class="brush:js">Math.floor( 45.95);
 // 45
 Math.floor( 45.05);
 // 45
@@ -52,9 +51,9 @@ Math.floor(-45.95);
 
 </pre>
 
-<h3 id="Example_Decimal_adjustment" name="Example:_Decimal_adjustment">例子：十进制调整</h3>
+<h3 id="Example_Decimal_adjustment">例子：十进制调整</h3>
 
-<pre class="brush:js notranslate">// Closure
+<pre class="brush:js">// Closure
 (function(){
 
 	/**
@@ -146,7 +145,7 @@ Math.ceil10(-59, 1); // -50
    <td></td>
   </tr>
   <tr>
-   <td>{{SpecName('ES6', '#sec-math.floor', 'Math.floor')}}<span class="hidden"> </span></td>
+   <td>{{SpecName('ES6', '#sec-math.floor', 'Math.floor')}} </td>
    <td>{{Spec2('ES6')}}</td>
    <td></td>
   </tr>
@@ -160,57 +159,9 @@ Math.ceil10(-59, 1); // -50
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.</li>
