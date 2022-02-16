@@ -1,51 +1,48 @@
 ---
-title: in
+title: in 演算子
 slug: Web/JavaScript/Reference/Operators/in
 tags:
   - JavaScript
-  - Language feature
-  - Operator
-  - Relational Operators
+  - 言語機能
+  - 演算子
+  - 関係演算子
+browser-compat: javascript.operators.in
 translation_of: Web/JavaScript/Reference/Operators/in
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong><code>in</code> 演算子</strong>は、指定されたプロパティが指定されたオブジェクトにある場合に <code>true</code> を返します。</p>
+**`in` 演算子**は、指定されたプロパティが指定されたオブジェクトにある場合に `true` を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
 
+## 構文
 
+```js
+prop in object
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+### 引数
 
-<pre class="syntaxbox notranslate"><var>prop</var> in <var>object</var></pre>
+- `prop`
+  - : プロパティ名または配列のインデックスを表す文字列式またはシンボルです（シンボルではない場合は、文字列に強制変換されます）。
+- `object`
+  - : オブジェクト（またはそのプロトタイプチェーン）に、指定された名前（`prop`）のプロパティが含まれているかどうかを確認するオブジェクト。
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+## 例
 
-<dl>
- <dt><code><var>prop</var></code></dt>
- <dd>プロパティ名または配列のインデックスを表す文字列式またはシンボルです（シンボルではない場合は、文字列に強制変換されます）。</dd>
-</dl>
+### 基本的な使い方
 
-<dl>
- <dt><code><var>object</var></code></dt>
- <dd>オブジェクト（またはそのプロトタイプチェーン）に、指定された名前（<code><var>prop</var></code>）のプロパティが含まれているかどうかを確認するオブジェクト。</dd>
-</dl>
+次の例で `in` 演算子の使用法を示します。
 
-<h2 id="Examples" name="Examples">例</h2>
-
-<h3 id="Basic_usage" name="Basic_usage">基本的な使い方</h3>
-
-<p>次の例で <code>in</code> 演算子の使用法を示します。</p>
-
-<pre class="brush:js notranslate">// Arrays
+```js
+// 配列
 let trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 0 in trees        // true を返す
 3 in trees        // true を返す
 6 in trees        // false を返す
-'bay' in trees    // false を返す (インデックスの指す値ではなく、インデックスの数字を指定しなければならない)
+'bay' in trees    // false を返す (添字の指す値ではなく、添字の数値を指定しなければならない)
 'length' in trees // true を返す (length は Array のプロパティ)
-Symbol.iterator in trees // true を返す (配列は反復可能。ES2015 以上で動作する)
+Symbol.iterator in trees // true を返す (配列は反復可能。 ES2015 以上で動作する)
 
 // 定義済みオブジェクト
 'PI' in Math          // true を返す
@@ -54,88 +51,104 @@ Symbol.iterator in trees // true を返す (配列は反復可能。ES2015 以�
 let mycar = {make: 'Honda', model: 'Accord', year: 1998};
 'make' in mycar  // true を返す
 'model' in mycar // true を返す
-</pre>
+```
 
-<p><code>in</code> 演算子の右側には、オブジェクトを指定しなければなりません。例えば、<code>String</code> コンストラクタで作成した文字列は指定できますが、文字列リテラルは指定できません。</p>
+`in` 演算子の右側には、オブジェクトを指定しなければなりません。例えば、`String` コンストラクターで作成した文字列は指定できますが、文字列リテラルは指定できません。
 
-<pre class="brush:js notranslate">let color1 = new String('green');
+```js
+let color1 = new String('green')
 'length' in color1 // true を返す
 
-let color2 = 'coral';
-// エラーが発生 (color2 は String オブジェクトではありません)
+let color2 = 'coral'
+// エラーが発生 (color2 は String オブジェクトではない)
 'length' in color2
-</pre>
+```
 
-<h3 id="Using_in_with_deleted_or_undefined_properties" name="Using_in_with_deleted_or_undefined_properties">削除済みあるいは未定義状態のプロパティへの <code>in</code> の使用</h3>
+### 削除済みあるいは未定義状態のプロパティへの `in` の使用
 
-<p><code><a href="/ja/docs/JavaScript/Reference/Operators/delete" title="JavaScript/Reference/Operators/Special/delete">delete</a></code> 演算子で削除されたプロパティについて、<code>in</code> 演算子は <code>false</code> を返します。</p>
+[`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子で削除されたプロパティについては、`in` 演算子は `false` を返します。
 
-<pre class="brush:js notranslate">let mycar = {make: 'Honda', model: 'Accord', year: 1998};
-delete mycar.make;
-'make' in mycar;  // false を返す
+```js
+let mycar = {make: 'Honda', model: 'Accord', year: 1998}
+delete mycar.make
+'make' in mycar   // false を返す
 
-let trees = new Array('redwood', 'bay', 'cedar', 'oak', 'maple');
-delete trees[3];
-3 in trees; // false を返す
-</pre>
+let trees = new Array('redwood', 'bay', 'cedar', 'oak', 'maple')
+delete trees[3]
+3 in trees  // false を返す
+```
 
-<p>{{jsxref("Global_Objects/undefined", "undefined")}} を設定しているが削除されていないプロパティについて、<code>in</code> 演算子は true を返します。</p>
+{{jsxref("Global_Objects/undefined", "undefined")}} を設定しているが削除されていないプロパティについて、`in` 演算子は true を返します。
 
-<pre class="brush:js notranslate">let mycar = {make: 'Honda', model: 'Accord', year: 1998};
-mycar.make = undefined;
-'make' in mycar;  // true を返す
-</pre>
+```js
+let mycar = {make: 'Honda', model: 'Accord', year: 1998}
+mycar.make = undefined
+'make' in mycar   // true を返す
+```
 
-<pre class="brush:js notranslate">let trees = new Array('redwood', 'bay', 'cedar', 'oak', 'maple');
-trees[3] = undefined;
-3 in trees; // true を返す
-</pre>
+```js
+let trees = new Array('redwood', 'bay', 'cedar', 'oak', 'maple')
+trees[3] = undefined
+3 in trees  // true を返す
+```
 
-<p><code>in</code> 演算子は、空の配列スロットに対して <code>false</code> を返します。直接アクセスしても <code>undefined</code> が返されます。</p>
+`in` 演算子は、空の配列スロットに対して `false` を返します。直接アクセスしても `undefined` が返されます。
 
-<pre class="brush:js notranslate">let empties = new Array(3)
+```js
+let empties = new Array(3)
 empties[2] // undefined を返す
 2 in empties  // false を返す
-</pre>
+```
 
-<p>これを避けるためには、新しい配列が常に空でない値で埋められるようにするか、配列の終わりを超えてインデックスに書き込まないようにします。</p>
+これを避けるためには、新しい配列が常に空でない値で埋められるようにするか、配列の終わりを超える位置に書き込まないようにしてください。
 
-<pre class="brush:js notranslate">let empties = new Array(3).fill(undefined)
+```js
+let empties = new Array(3).fill(undefined)
 2 in empties  // true を返す
-</pre>
+```
 
-<h3 id="Inherited_properties" name="Inherited_properties">継承されたプロパティ</h3>
+### 継承されたプロパティ
 
-<p><code>in</code> 演算子は、プロトタイプチェーンのプロパティに対して <code>true</code> を返します。(<em>継承されていない</em>プロパティのみをチェックする場合は、代わりに {{jsxref("Object.prototype.hasOwnProperty()")}} を使用してください)。</p>
+`in` 演算子は、プロトタイプチェーンのプロパティに対して `true` を返します。(*継承されていない*プロパティのみをチェックする場合は、代わりに {{jsxref("Object.prototype.hasOwnProperty()")}} を使用してください)。
 
-<pre class="brush:js notranslate">'toString' in {}  // returns true
-</pre>
+```js
+'toString' in {}  // true を返す
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+### プライベートフィールドとメソッド
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-relational-operators', 'Relational Operators')}}</td>
-  </tr>
- </tbody>
-</table>
+`in` 演算子を使用して、特定の[クラスのプライベートフィールドまたはメソッド](/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields)がクラスで定義されているかどうかを調べることができます。そのメソッドが存在すれば演算子は `true` を返し、そうでなければ `false` を返します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+> **Note:** クラスの定義されていない*プライベート*フィールドやメソッドにアクセスしようとすると、コードで `throw` が発生します。存在しない可能性があるプライベートフィールドを `in` 演算子でチェックすると、 `try/catch` を使用するより簡潔にすることができます。
 
+以下のコードは、指定されたクラスが特定のプライベートメソッドやフィールドを持っているかどうかをチェックする静的関数です。
 
+```js
+  class ClassWithPrivateFeatures {
+    #a;
+    #b = null;
+    #c() {}
+    get #d() {}
+    static f(o) {
+      return #a in o && #b in o && #c in o && #d in o;
+    }
+  }
+  ClassWithPrivateFeatures.f(new ClassWithPrivateFeatures()) // true を返す
+  ClassWithPrivateFeatures.f({}) // false を返す
+```
 
-<p>{{Compat("javascript.operators.in")}}</p>
+## 仕様書
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Specifications}}
 
-<ul>
- <li><code><a href="/ja/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code></li>
- <li><code><a href="/ja/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code></li>
- <li>{{jsxref("Object.prototype.hasOwnProperty()")}}</li>
- <li>{{jsxref("Reflect.has()")}}</li>
- <li><a href="/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">プロパティの列挙可能性と所有権</a></li>
-</ul>
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete)
+- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Reflect.has()")}}
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
