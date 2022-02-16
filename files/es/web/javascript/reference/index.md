@@ -12,7 +12,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 
 [Objetos globales en Javascript](/es/docs/Web/JavaScript/Reference/Global_Objects), junto con sus métodos y propiedades.
 
-### Propiedades de valor
+### Propiedades de tipo valor
 
 - {{JSxRef("globalThis")}}
 - {{JSxRef("Infinity")}}
