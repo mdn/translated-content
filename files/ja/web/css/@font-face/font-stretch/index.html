@@ -4,21 +4,21 @@ slug: Web/CSS/@font-face/font-stretch
 tags:
   - '@font-face'
   - CSS
-  - Reference
+  - リファレンス
   - descripter
   - font-stretch
   - 記述子
 translation_of: Web/CSS/@font-face/font-stretch
 ---
-<div>{{CSSRef}}{{draft}}</div>
+{{CSSRef}}{{draft}}
 
-<p><strong><code>font-stretch</code></strong> は CSS の記述子で、ウェブページ作成者が {{cssxref("@font-face")}} 規則で定義されているフォントが通常か、幅狭か、幅広かを指定できるようにします。</p>
+<strong>`font-stretch`</strong> は CSS の記述子で、ウェブページ作成者が {{cssxref("@font-face")}} 規則で定義されているフォントが通常か、幅狭か、幅広かを指定できるようにします。
 
-<p>ある特定のフォントについて、作成者は同じフォントの異なるスタイルに対応するさまざまなフォントフェイスをダウンロードでき、<code>font-stretch</code> 記述子を用いることでフォントフェイスのストレッチを明示的に指定します。CSS 記述子の値は、対応するフォントプロパティの値と同じです。</p>
+ある特定のフォントについて、作成者は同じフォントの異なるスタイルに対応するさまざまなフォントフェイスをダウンロードでき、`font-stretch` 記述子を用いることでフォントフェイスのストレッチを明示的に指定します。CSS 記述子の値は、対応するフォントプロパティの値と同じです。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
 <pre class="brush: css">/* 単一の値 */
 font-stretch: ultra-condensed;
@@ -39,28 +39,26 @@ font-stretch: 75% 125%;
 font-stretch: condensed ultra-condensed;;
 </pre>
 
-<p><code>font-weight</code> プロパティは以下にリストとして示されている値のいずれかを使用して記述されます。</p>
+`font-weight` プロパティは以下にリストとして示されている値のいずれかを使用して記述されます。
 
 <h3 id="Values" name="Values">値</h3>
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>普通の文字幅。</dd>
- <dt><code>semi-condensed</code>, <code>condensed</code>, <code>extra-condensed</code>, <code>ultra-condensed</code></dt>
- <dd>通常より幅狭な字を示します。semi-condenced が regular に比べてわずかに幅が細い程度で、そこから右 (ultra-condenced) に向かうにつれてさらに細くなっていきます。</dd>
- <dt><code>semi-expanded</code>, <code>expanded</code>, <code>extra-expanded</code>, <code>ultra-expanded</code></dt>
- <dd>通常より幅広な字を示します。semi-rxpanded がわずかに広い程度で、そこから右 (ultra-expanded) に向かうにつれてさらに広くなっていきます。</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>50% から 200% の {{cssxref("&lt;percentage&gt;")}} 値で示します。このプロパティに負の値は許可されていません。</dd>
-</dl>
+- `normal`
+  - : 普通の文字幅。
+- `semi-condensed`, `condensed`, `extra-condensed`, `ultra-condensed`
+  - : 通常より幅狭な字を示します。semi-condenced が regular に比べてわずかに幅が細い程度で、そこから右 (ultra-condenced) に向かうにつれてさらに細くなっていきます。
+- `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
+  - : 通常より幅広な字を示します。semi-rxpanded がわずかに広い程度で、そこから右 (ultra-expanded) に向かうにつれてさらに広くなっていきます。
+- `&lt;percentage&gt;`
+  - : 50% から 200% の {{cssxref("&lt;percentage&gt;")}} 値で示します。このプロパティに負の値は許可されていません。
 
-<p><code>font-stretch</code> の旧バージョンではプロパティは上記の <code>&lt;percentage&gt;</code> 以外の 9 つのキーワードのみを許可していましたが、CSS Fonts Level 4 における構文の拡張により<code>&lt;percentage&gt;</code> も使用できるようになりました。これにより、バリアブルフォントは連続した文字幅のようなものを提供できます。TrueType または OpenType バリアブルフォント (後述) の場合、"wdth" バリエーションを使用してさまざまな幅を実装できます。</p>
+`font-stretch` の旧バージョンではプロパティは上記の `&lt;percentage&gt;` 以外の 9 つのキーワードのみを許可していましたが、CSS Fonts Level 4 における構文の拡張により`&lt;percentage&gt;` も使用できるようになりました。これにより、バリアブルフォントは連続した文字幅のようなものを提供できます。TrueType または OpenType バリアブルフォント (後述) の場合、"wdth" バリエーションを使用してさまざまな幅を実装できます。
 
-<p>フォントが指定された値と完全に一致するフェイスが提供されない場合、100% 未満の値は幅狭に現像され、100% 以上の値は幅広に現像されます。</p>
+フォントが指定された値と完全に一致するフェイスが提供されない場合、100% 未満の値は幅狭に現像され、100% 以上の値は幅広に現像されます。
 
 <h3 id="Keyword_to_numeric_mapping" name="Keyword_to_numeric_mapping">キーワードとパーセント値の対照表</h3>
 
-<p>以下の表はキーワード指定の際の字幅と <code>&lt;percentage&gt;</code> 指定時の幅の違いを示します:</p>
+以下の表はキーワード指定の際の字幅と `&lt;percentage&gt;` 指定時の幅の違いを示します:
 
 <table class="fullwidth-table standard-table">
  <thead>
@@ -71,39 +69,39 @@ font-stretch: condensed ultra-condensed;;
  </thead>
  <tbody>
   <tr>
-   <td><code>ultra-condensed</code></td>
+   <td>`ultra-condensed`</td>
    <td>50%</td>
   </tr>
   <tr>
-   <td><code>extra-condensed</code></td>
+   <td>`extra-condensed`</td>
    <td>62.5%</td>
   </tr>
   <tr>
-   <td><code>condensed</code></td>
+   <td>`condensed`</td>
    <td>75%</td>
   </tr>
   <tr>
-   <td><code>semi-condensed</code></td>
+   <td>`semi-condensed`</td>
    <td>87.5%</td>
   </tr>
   <tr>
-   <td><code>normal</code></td>
+   <td>`normal`</td>
    <td>100%</td>
   </tr>
   <tr>
-   <td><code>semi-expanded</code></td>
+   <td>`semi-expanded`</td>
    <td>112.5%</td>
   </tr>
   <tr>
-   <td><code>expanded</code></td>
+   <td>`expanded`</td>
    <td>125%</td>
   </tr>
   <tr>
-   <td><code>extra-expanded</code></td>
+   <td>`extra-expanded`</td>
    <td>150%</td>
   </tr>
   <tr>
-   <td><code>ultra-expanded</code></td>
+   <td>`ultra-expanded`</td>
    <td>200%</td>
   </tr>
  </tbody>
@@ -111,19 +109,19 @@ font-stretch: condensed ultra-condensed;;
 
 <h3 id="Variable_fonts" name="Variable_fonts">バリアブル (可変) フォント</h3>
 
-<p>ほとんどのフォントはキーワードの 1 つに対応する特定の幅を持ちます。しかしながら、バリアブル (可変) フォントと呼ばれる一部のフォントはきめ細かい精度で一連の伸縮が可能になっています。これにより、デザイナーは選択したウェイトをより厳密に制御できます。 これにはパーセント範囲が役立ちます。</p>
+ほとんどのフォントはキーワードの 1 つに対応する特定の幅を持ちます。しかしながら、バリアブル (可変) フォントと呼ばれる一部のフォントはきめ細かい精度で一連の伸縮が可能になっています。これにより、デザイナーは選択したウェイトをより厳密に制御できます。 これにはパーセント範囲が役立ちます。
 
-<p>TrueType または OpenType 可変フォントの場合、"wdth" バリエーションを使用して、さまざまなグリフ幅を実装します。</p>
+TrueType または OpenType 可変フォントの場合、"wdth" バリエーションを使用して、さまざまなグリフ幅を実装します。
 
-<p>以下の例が動作するには、CSS Fonts Level 4 構文をサポートするブラウザーが必要です。この構文では font-weight は 1 から 1000 の任意の数値にできます。</p>
+以下の例が動作するには、CSS Fonts Level 4 構文をサポートするブラウザーが必要です。この構文では font-weight は 1 から 1000 の任意の数値にできます。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>以下はローカルの Open Sans 書体をインポートし、normal、semi-condensed、ならびに semi-expanded を使用できるようにするものです。</p>
+以下はローカルの Open Sans 書体をインポートし、normal、semi-condensed、ならびに semi-expanded を使用できるようにするものです。
 
 <pre class="brush: css">@font-face {
   font-family: "Open Sans";
@@ -134,14 +132,14 @@ font-stretch: condensed ultra-condensed;;
 
 <h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
 
-<p>特にフォントの<a href="/ja/docs/Web/CSS/color#Accessibility_concerns">コントラストカラー比が低い</a>場合、識字障害をはじめとする認知症状のある人は凝縮しすぎたフォントを読むのが困難になる場合があります。詳細は以下をご覧ください。</p>
+特にフォントの[コントラストカラー比が低い](/ja/docs/Web/CSS/color#Accessibility_concerns)場合、識字障害をはじめとする認知症状のある人は凝縮しすぎたフォントを読むのが困難になる場合があります。詳細は以下をご覧ください。
 
 <ul>
- <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN 「知覚可能」、ガイドライン 1.4 の説明</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html" rel="noopener">Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0</a> (英語)</li>
+- [MDN 「知覚可能」、ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html" rel="noopener) (英語)
 </ul>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
 <table class="standard-table">
  <thead>
@@ -167,18 +165,18 @@ font-stretch: condensed ultra-condensed;;
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("css.at-rules.font-face.font-stretch")}}</p>
+{{Compat("css.at-rules.font-face.font-stretch")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
 <ul>
- <li>{{cssxref("@font-face/font-display", "font-display")}}</li>
- <li>{{cssxref("@font-face/font-family", "font-family")}}</li>
- <li>{{cssxref("@font-face/font-weight", "font-weight")}}</li>
- <li>{{cssxref("@font-face/font-style", "font-style")}}</li>
- <li>{{cssxref("@font-face/font-variant", "font-variant")}}</li>
- <li>{{cssxref("font-feature-settings", "font-feature-settings")}}</li>
- <li>{{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}</li>
- <li>{{cssxref("@font-face/src", "src")}}</li>
- <li>{{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}</li>
+- {{cssxref("@font-face/font-display", "font-display")}}
+- {{cssxref("@font-face/font-family", "font-family")}}
+- {{cssxref("@font-face/font-weight", "font-weight")}}
+- {{cssxref("@font-face/font-style", "font-style")}}
+- {{cssxref("@font-face/font-variant", "font-variant")}}
+- {{cssxref("font-feature-settings", "font-feature-settings")}}
+- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
+- {{cssxref("@font-face/src", "src")}}
+- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
 </ul>
