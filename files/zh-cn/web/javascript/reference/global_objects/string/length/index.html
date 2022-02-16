@@ -10,11 +10,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/length
 ---
 <p>{{JSRef("Global_Objects", "String")}}</p>
 
-<h2 id="Summary" name="Summary" style="margin-bottom: 20px; line-height: 30px;">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><strong>length</strong> 属性表示一个字符串的长度。</p>
 
-<h2 id="Description" name="Description" style="margin-bottom: 20px; line-height: 30px;">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>该属性返回字符串中字符编码单元的数量。JavaScript 使用 {{ interwiki("wikipedia", "UTF-16") }} 编码，该编码使用一个 16 比特的编码单元来表示大部分常见的字符，使用两个代码单元表示不常用的字符。因此 length 返回值可能与字符串中实际的字符数量不相同。</p>
 
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/length
 
 <p>静态属性 <strong>String.length</strong> 返回 1。</p>
 
-<h2 id="Examples" name="Examples" style="margin-bottom: 20px; line-height: 30px;">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <pre class="brush: js">var x = "Mozilla";
 var empty = "";
@@ -33,23 +33,7 @@ console.log("Mozilla is " + x.length + " code units long");
 console.log("The empty string is has a length of " + empty.length);
 /* "The empty string is has a length of 0" */</pre>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 38px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 57px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 76px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 95px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 114px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 133px; background: 0px 0px;"> </div>
-
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -76,60 +60,12 @@ console.log("The empty string is has a length of " + empty.length);
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">Feature</th>
-   <th style="line-height: 16px;">Chrome</th>
-   <th style="line-height: 16px;">Firefox (Gecko)</th>
-   <th style="line-height: 16px;">Internet Explorer</th>
-   <th style="line-height: 16px;">Opera</th>
-   <th style="line-height: 16px;">Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">Feature</th>
-   <th style="line-height: 16px;">Android</th>
-   <th style="line-height: 16px;">Chrome for Android</th>
-   <th style="line-height: 16px;">Firefox Mobile (Gecko)</th>
-   <th style="line-height: 16px;">IE Mobile</th>
-   <th style="line-height: 16px;">Opera Mobile</th>
-   <th style="line-height: 16px;">Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
- <li><a class="external external-icon" href="http://developer.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications" style="white-space: pre-line;">JavaScript String.length and Internationalizing Web Applications</a></li>
+ <li><a class="external external-icon" href="http://developer.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications">JavaScript String.length and Internationalizing Web Applications</a></li>
 </ul>

@@ -10,14 +10,14 @@ translation_of: Web/HTML/Global_attributes
 ---
 <p>{{HTMLSidebar("Global_attributes")}}</p>
 
-<p><strong>全局属性</strong>是所有HTML元素共有的属性; 它们可以用于所有元素，即使属性可能对某些元素不起作用。</p>
+<p><strong>全局属性</strong>是所有 HTML 元素共有的属性; 它们可以用于所有元素，即使属性可能对某些元素不起作用。</p>
 
-<p>我们可以在所有的HTML元素上指定全局属性，甚至是在标准里没有指定的元素。这意味着任何非标准元素仍必须能够应用这些属性，即使使用这些元素意味着文档不再是html5兼容的。例如，虽然<code>&lt;foo&gt;</code>不是一个有效的HTML元素，但是html5兼容的浏览器隐藏了标记为<code>&lt;foo hidden&gt;...&lt;foo&gt;</code>的内容。</p>
+<p>我们可以在所有的 HTML 元素上指定全局属性，甚至是在标准里没有指定的元素。这意味着任何非标准元素仍必须能够应用这些属性，即使使用这些元素意味着文档不再是 html5 兼容的。例如，虽然<code>&lt;foo&gt;</code>不是一个有效的 HTML 元素，但是 html5 兼容的浏览器隐藏了标记为<code>&lt;foo hidden&gt;...&lt;foo&gt;</code>的内容。</p>
 
-<p>除了基本的HTML全局属性之外，还存在以下全局属性:</p>
+<p>除了基本的 HTML 全局属性之外，还存在以下全局属性：</p>
 
 <ul>
- <li>{{htmlattrdef("xml:lang")}} 和 {{htmlattrdef("xml:base")}} ——两者都是从XHTML规范继承，但为了兼容性而被保留的。</li>
+ <li>{{htmlattrdef("xml:lang")}} 和 {{htmlattrdef("xml:base")}} ——两者都是从 XHTML 规范继承，但为了兼容性而被保留的。</li>
  <li>多重<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/Accessibility/ARIA">aria-*</a></code>属性，用于改善可访问性。</li>
  <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Events/Event_handlers">事件处理程序</a> 属性：<strong><code>onabort</code></strong>, <code><strong>onautocomplete</strong></code>, <code><strong>onautocompleteerror</strong></code>, <code><strong>onblur</strong></code>, <code><strong>oncancel</strong></code>, <code><strong>oncanplay</strong></code>, <code><strong>oncanplaythrough</strong></code>, <code><strong>onchange</strong></code>, <code><strong>onclick</strong></code>, <code><strong>onclose</strong></code>, <code><strong>oncontextmenu</strong></code>, <code><strong>oncuechange</strong></code>, <code><strong>ondblclick</strong></code>, <code><strong>ondrag</strong></code>, <code><strong>ondragend</strong></code>, <code><strong>ondragenter</strong></code>, <code><strong>ondragexit</strong></code>, <code><strong>ondragleave</strong></code>, <code><strong>ondragover</strong></code>, <code><strong>ondragstart</strong></code>, <code><strong>ondrop</strong></code>, <code><strong>ondurationchange</strong></code>, <code><strong>onemptied</strong></code>, <code><strong>onended</strong></code>, <code><strong>onerror</strong></code>, <code><strong>onfocus</strong></code>, <code><strong>oninput</strong></code>, <code><strong>oninvalid</strong></code>, <code><strong>onkeydown</strong></code>, <code><strong>onkeypress</strong></code>, <code><strong>onkeyup</strong></code>, <code><strong>onload</strong></code>, <code><strong>onloadeddata</strong></code>, <code><strong>onloadedmetadata</strong></code>, <code><strong>onloadstart</strong></code>, <code><strong>onmousedown</strong></code>, <code><strong>onmouseenter</strong></code>, <code><strong>onmouseleave</strong></code>, <code><strong>onmousemove</strong></code>, <code><strong>onmouseout</strong></code>, <code><strong>onmouseover</strong></code>, <code><strong>onmouseup</strong></code>, <code><strong>onmousewheel</strong></code>, <code><strong>onpause</strong></code>, <code><strong>onplay</strong></code>, <code><strong>onplaying</strong></code>, <code><strong>onprogress</strong></code>, <code><strong>onratechange</strong></code>, <code><strong>onreset</strong></code>, <code><strong>onresize</strong></code>, <code><strong>onscroll</strong></code>, <code><strong>onseeked</strong></code>, <code><strong>onseeking</strong></code>, <code><strong>onselect</strong></code>, <code><strong>onshow</strong></code>, <code><strong>onsort</strong></code>, <code><strong>onstalled</strong></code>, <code><strong>onsubmit</strong></code>, <code><strong>onsuspend</strong></code>, <code><strong>ontimeupdate</strong></code>, <code><strong>ontoggle</strong></code>, <code><strong>onvolumechange</strong></code>, <code><strong>onwaiting</strong></code>.</li>
 </ul>
@@ -40,7 +40,7 @@ translation_of: Web/HTML/Global_attributes
  </ul>
  </dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/class">{{htmlattrdef("class")}}</a></dt>
- <dd>一个以空格分隔的元素的类名（classes ）列表，它允许 CSS 和 Javascript 通过类选择器 (<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Class_selectors">class selectors</a>) 或DOM方法( <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/getElementsByClassName" title="返回一个包含了所有指定类名的子元素的类数组对象。当在document对象上调用时，会搜索整个DOM文档，包含根节点。你也可以在任意元素上调用getElementsByClassName() 方法，它将返回的是以当前元素为根节点，所有指定类名的子元素。"><code>document.getElementsByClassName</code></a>)来选择和访问特定的元素。</dd>
+ <dd>一个以空格分隔的元素的类名（classes ）列表，它允许 CSS 和 Javascript 通过类选择器 (<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Class_selectors">class selectors</a>) 或 DOM 方法 ( <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/getElementsByClassName" title="返回一个包含了所有指定类名的子元素的类数组对象。当在document对象上调用时，会搜索整个DOM文档，包含根节点。你也可以在任意元素上调用getElementsByClassName() 方法，它将返回的是以当前元素为根节点，所有指定类名的子元素。"><code>document.getElementsByClassName</code></a>) 来选择和访问特定的元素。</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">{{htmlattrdef("contenteditable")}}</a></dt>
  <dd>一个枚举属性（enumerated attribute），表示元素是否可被用户编辑。 如果可以，浏览器会调整元素的部件（widget）以允许编辑。
  <ul>
@@ -51,15 +51,15 @@ translation_of: Web/HTML/Global_attributes
  <dt><a href="/zh-CN/docs/Web/HTML/Global_attributes/contextmenu">{{htmlattrdef("contextmenu")}}</a></dt>
  <dd>{{HTMLElement("menu")}} 的<code><a href="#attr-id"><strong>id</strong></a></code> ，作为该元素的上下文菜单（已经不被支持，将从所有浏览器中删除）。</dd>
  <dt><a href="/zh-CN/docs/Web/HTML/Global_attributes/data-*">{{htmlattrdef("data-*")}}</a></dt>
- <dd>一类自定义数据属性，它赋予我们在所有 HTML 元素上嵌入自定义数据属性的能力，并可以通过脚本(一般指JavaScript) 与 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML" title="zh/HTML">HTML</a> 之间进行专有数据的交换。所有这些自定义数据属性都可以通过所属元素的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement" title="HTMLElement 接口表示所有的 HTML 元素。一些HTML元素直接实现了HTMLElement接口，其它的间接实现HTMLElement接口."><code>HTMLElement</code></a> 接口来访问。  <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/dataset" title="HTMLElement.dataset属性允许无论是在读取模式和写入模式下访问在 HTML或 DOM中的元素上设置的所有自定义数据属性(data-*)集。"><code>HTMLElement.dataset</code></a> 属性可以访问它们。</dd>
+ <dd>一类自定义数据属性，它赋予我们在所有 HTML 元素上嵌入自定义数据属性的能力，并可以通过脚本 (一般指 JavaScript) 与 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML" title="zh/HTML">HTML</a> 之间进行专有数据的交换。所有这些自定义数据属性都可以通过所属元素的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement" title="HTMLElement 接口表示所有的 HTML 元素。一些HTML元素直接实现了HTMLElement接口，其它的间接实现HTMLElement接口."><code>HTMLElement</code></a> 接口来访问。  <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/dataset" title="HTMLElement.dataset属性允许无论是在读取模式和写入模式下访问在 HTML或 DOM中的元素上设置的所有自定义数据属性(data-*)集。"><code>HTMLElement.dataset</code></a> 属性可以访问它们。</dd>
  <dt><a href="/zh-CN/docs/Web/HTML/Global_attributes/dir">{{htmlattrdef("dir")}}</a></dt>
  <dd>
  <p>一个指示元素中文本方向的枚举属性。它的取值如下：</p>
 
  <ul>
-  <li>ltr, 指从<em>左</em>到<em>右</em>，用于那种从左向右书写的语言（比如英语）；</li>
-  <li>rtl, 指从<em>右</em>到<em>左</em>，用于那种从右向左书写的语言（比如阿拉伯语）；</li>
-  <li>auto, 指由用户代理决定方向。它在解析元素中字符时会运用一个基本算法，直到发现一个具有强方向性的字符，然后将这一方向应用于整个元素。</li>
+  <li>ltr，指从<em>左</em>到<em>右</em>，用于那种从左向右书写的语言（比如英语）；</li>
+  <li>rtl，指从<em>右</em>到<em>左</em>，用于那种从右向左书写的语言（比如阿拉伯语）；</li>
+  <li>auto，指由用户代理决定方向。它在解析元素中字符时会运用一个基本算法，直到发现一个具有强方向性的字符，然后将这一方向应用于整个元素。</li>
  </ul>
  </dd>
  <dt><a href="/zh-CN/docs/Web/HTML/Global_attributes/draggable">{{htmlattrdef("draggable")}}</a></dt>
@@ -72,7 +72,7 @@ translation_of: Web/HTML/Global_attributes
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/dropzone">{{htmlattrdef("dropzone")}}</a> {{experimental_inline}}</dt>
  <dd>枚举属性，指示可以使用 <a href="https://developer.mozilla.org/en-US/docs/DragDrop/Drag_and_Drop">Drag and Drop API</a> 在元素上删除哪些类型的内容。 它可以具有以下值：
  <ul>
-  <li>copy，表示drop将创建被拖动元素的副本</li>
+  <li>copy，表示 drop 将创建被拖动元素的副本</li>
   <li>move，表示拖动的元素将移动到此新位置。</li>
   <li><code>link</code>，将创建一个指向拖动数据的链接。</li>
  </ul>
@@ -82,33 +82,33 @@ translation_of: Web/HTML/Global_attributes
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/hidden">{{htmlattrdef("hidden")}}</a></dt>
  <dd><font><font>布尔属性表示该元素尚未或不再</font></font><em><font><font>相关</font></font></em><font><font>。</font><font>例如，它可用于隐藏在登录过程完成之前无法使用的页面元素。</font><font>浏览器不会呈现此类元素。</font><font>不得使用此属性隐藏可合法显示的内容</font></font></dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/id">{{htmlattrdef("id")}}</a></dt>
- <dd>定义唯一标识符（ID），该标识符在整个文档中必须是唯一的。 其目的是在链接（使用片段标识符），脚本或样式（使用CSS）时标识元素。</dd>
+ <dd>定义唯一标识符（ID），该标识符在整个文档中必须是唯一的。 其目的是在链接（使用片段标识符），脚本或样式（使用 CSS）时标识元素。</dd>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode">{{HTMLAttrDef("inputmode")}}</a></dt>
  <dd>向浏览器提供有关在编辑此元素或其内容时要使用的虚拟键盘配置类型的提示。主要用于 {{HTMLElement("input")}}元素，但在{{HTMLAttrxRef("contenteditable")}}模式下可用于任何元素。</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/is">{{htmlattrdef("is")}}</a></dt>
- <dd>允许您指定标准HTML元素应该像已注册的自定义内置元素一样（有关更多详细信息，请参阅使用自定义元素）。</dd>
+ <dd>允许您指定标准 HTML 元素应该像已注册的自定义内置元素一样（有关更多详细信息，请参阅使用自定义元素）。</dd>
 </dl>
 
 <div class="note">
-<p><strong>注意: </strong>item *属性是 <a class="external" href="https://html.spec.whatwg.org/multipage/microdata.html#microdata">WHATWG HTML Microdata feature</a>的一部分。</p>
+<p><strong>注意：</strong>item *属性是 <a class="external" href="https://html.spec.whatwg.org/multipage/microdata.html#microdata">WHATWG HTML Microdata feature</a>的一部分。</p>
 </div>
 
 <dl>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/itemid">{{htmlattrdef("itemid")}}</a></dt>
  <dd>项的唯一全局标识符。</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">{{htmlattrdef("itemprop")}}</a></dt>
- <dd>用于向项添加属性。 每个HTML元素都可以指定一个itemprop属性，其中一个itemprop由一个名称和值对组成。</dd>
+ <dd>用于向项添加属性。 每个 HTML 元素都可以指定一个 itemprop 属性，其中一个 itemprop 由一个名称和值对组成。</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/itemref">{{htmlattrdef("itemref")}}</a></dt>
- <dd>只有不是具有<code>itemscope</code>属性的元素的后代，它的属性才可以与使用<code>itemref</code>项目相关联。它提供了元素ID列表（而不是<code>itemids</code>）以及文档中其他位置的其他属性。</dd>
+ <dd>只有不是具有<code>itemscope</code>属性的元素的后代，它的属性才可以与使用<code>itemref</code>项目相关联。它提供了元素 ID 列表（而不是<code>itemids</code>）以及文档中其他位置的其他属性。</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/itemscope">{{htmlattrdef("itemscope")}}</a></dt>
- <dd><code>itemscope</code>（通常）与{{htmlattrxref("itemtype")}}一起使用，以指定包含在关于特定项目代码块中的HTML。 <code>itemscope</code>创建Item并定义与之关联的<code>itemtype</code>的范围。 <code>itemtype</code>是描述项及其属性上下文的词汇表（例如<a class="external external-icon" href="https://schema.org/">schema.org</a>）的有效URL。</dd>
+ <dd><code>itemscope</code>（通常）与{{htmlattrxref("itemtype")}}一起使用，以指定包含在关于特定项目代码块中的 HTML。 <code>itemscope</code>创建 Item 并定义与之关联的<code>itemtype</code>的范围。 <code>itemtype</code>是描述项及其属性上下文的词汇表（例如<a class="external external-icon" href="https://schema.org/">schema.org</a>）的有效 URL。</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/itemtype">{{htmlattrdef("itemtype")}}</a></dt>
- <dd>指定将用于在数据结构中定义<code>itemprops</code>（项属性）的词汇表的URL。 <code><a href="/en-US/docs/Web/HTML/Global_attributes/itemscope">itemscope</a></code>用于设置数据结构中按<code>itemtype</code>设置的词汇表的生效范围。</dd>
+ <dd>指定将用于在数据结构中定义<code>itemprops</code>（项属性）的词汇表的 URL。 <code><a href="/en-US/docs/Web/HTML/Global_attributes/itemscope">itemscope</a></code>用于设置数据结构中按<code>itemtype</code>设置的词汇表的生效范围。</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/lang">{{htmlattrdef("lang")}}</a></dt>
- <dd>帮助定义元素的语言:不可编辑元素所在的语言，或者应该由用户编写的可编辑元素的语言。该属性包含一个“语言标记”(由用连字符分隔的“语言子标记”组成)，格式在 <a href="https://www.ietf.org/rfc/bcp/bcp47.txt"><em>Tags for Identifying Languages (BCP47)</em></a> 中定义。<strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes$edit#attr-xml:lang">xml:lang</a> </strong>优先于它。</dd>
+ <dd>帮助定义元素的语言：不可编辑元素所在的语言，或者应该由用户编写的可编辑元素的语言。该属性包含一个“语言标记”(由用连字符分隔的“语言子标记”组成)，格式在 <a href="https://www.ietf.org/rfc/bcp/bcp47.txt"><em>Tags for Identifying Languages (BCP47)</em></a> 中定义。<strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes$edit#attr-xml:lang">xml:lang</a> </strong>优先于它。</dd>
  <dt></dt>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/part">{{HTMLAttrDef("part")}}</a> {{Experimental_Inline}}</dt>
- <dd>元素的部件名称的空格分隔列表。Part名称允许CSS通过{{CSSxRef("::part()")}} 伪元素选择和设置阴影关联树中的特定元素。</dd>
+ <dd>元素的部件名称的空格分隔列表。Part 名称允许 CSS 通过{{CSSxRef("::part()")}} 伪元素选择和设置阴影关联树中的特定元素。</dd>
 </dl>
 
 <dl>
@@ -135,7 +135,7 @@ translation_of: Web/HTML/Global_attributes
  </ul>
  </dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/title">{{htmlattrdef("title")}}</a></dt>
- <dd>包含表示与其所属元素相关信息的文本。 这些信息通常可以作为提示呈现给用户,但不是必须的。</dd>
+ <dd>包含表示与其所属元素相关信息的文本。 这些信息通常可以作为提示呈现给用户，但不是必须的。</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/translate">{{htmlattrdef("translate")}}</a> {{experimental_inline}}</dt>
  <dd>枚举属性，用于指定在页面本地化时是否转换元素的属性值及其{{domxref("Text")}} 节点子节点的值，或者是否保持它们不变。它可以具有以下值：
  <ul>

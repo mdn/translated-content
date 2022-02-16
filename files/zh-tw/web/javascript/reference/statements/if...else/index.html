@@ -9,11 +9,9 @@ translation_of: Web/JavaScript/Reference/Statements/if...else
 
 <div>{{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}</div>
 
-<p class="hidden">這個互動式的源碼被放在 GitHub 的 Repository 裡，如果您想對此互動式範例專案提出貢獻的話，請 clone https://github.com/mdn/interactive-examples 並送出 pull request。</p>
-
 <h2 id="語法">語法</h2>
 
-<pre class="syntaxbox notranslate">if (<em>條件式</em>)
+<pre class="syntaxbox">if (<em>條件式</em>)
    <em>statement1</em>
 [else
    <em>statement2</em>]
@@ -22,24 +20,17 @@ translation_of: Web/JavaScript/Reference/Statements/if...else
 <dl>
  <dt><code>條件式</code></dt>
  <dd>一個成立或不成立的<a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions">運算式</a>。</dd>
-</dl>
-
-<dl>
  <dt><code>第一個陳述式(statement1)</code></dt>
  <dd>如果if中的條件(conditions)為真時執行陳述式(statements)。陳述式可以為任何內容，包含巢狀式(nested)的if陳述。當要執行多行的陳述式(statements)時，使用區塊(block)將所要執行的陳述式包覆。如果不需要執行任何動作時，則不撰寫任何陳述式(empty statement)。</dd>
  <dt><code>第二個陳述式(statement2)</code></dt>
-</dl>
-
-<dl>
  <dd>當件不成立時所執行的部份，當else被撰寫時才會被執行。可以是任何的陳述式，包含使用區塊(block)及巢狀(nested)的陳述。</dd>
- <dd></dd>
 </dl>
 
 <h2 id="描述">描述</h2>
 
 <p>多重的 <code>if...else</code> 陳述式可以使用 <code>else if</code> 子句來建立一個巢狀結構的句子。要記住，在JavaScript中沒有 <code>elseif</code> (一個單字) 的語法可以用。</p>
 
-<pre class="eval notranslate">if (<em>condition1</em>)
+<pre class="eval">if (<em>condition1</em>)
    <em>statement1</em>
 else if (<em>condition2</em>)
    <em>statement2</em>
@@ -52,7 +43,7 @@ else
 
 <p>將巢狀結構適當的排版後，我們能更了解其背後運作的邏輯：</p>
 
-<pre class="eval notranslate">if (<em>condition1</em>)
+<pre class="eval">if (<em>condition1</em>)
    <em>statement1</em>
 else
    if (<em>condition2</em>)
@@ -64,7 +55,7 @@ else
 
 <p>如果在一個條件式中有多個陳述要執行，可以使用區塊陳述式(<code>{ ... }</code>) 把所有陳述包在一起。 通常來說，無論如何都使用區塊陳述式是個很好的習慣，尤其是當你使用巢狀結構的 <code>if</code> 陳述式時，這會讓人更容易理解你的程式碼。</p>
 
-<pre class="eval notranslate">if (<em>condition</em>) {
+<pre class="eval">if (<em>condition</em>) {
    <em>statements1</em>
 } else {
    <em>statements2</em>
@@ -73,7 +64,7 @@ else
 
 <p>不要被<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>物件中，布林值的 <code>true</code> 和 <code>false</code> 給混淆了。任何值只要不是 <code>false</code>、 <code>undefined</code>、 <code>null</code>、 <code>0</code>、 <code>NaN</code>，或者空字串 (<code>""</code>)，並且任何物件，包括其值是 <code>false</code>的布林物件 ，仍然會被條件陳述式視為條件成立。舉例而言：</p>
 
-<pre class="brush: js notranslate">var b = new Boolean(false);
+<pre class="brush: js">var b = new Boolean(false);
 if (b) // this condition is truthy
 </pre>
 
@@ -81,7 +72,7 @@ if (b) // this condition is truthy
 
 <h3 id="使用_if...else">使用 <code>if...else</code></h3>
 
-<pre class="brush: js notranslate">if (cipher_char === from_char) {
+<pre class="brush: js">if (cipher_char === from_char) {
    result = result + to_char;
    x++;
 } else {
@@ -93,7 +84,7 @@ if (b) // this condition is truthy
 
 <p>要記得JavaScript沒有 <code>elseif</code> 可以使用。不過，你可以使用 <code>else</code> 和 <code>if</code>中間夾著空白的語法：</p>
 
-<pre class="brush: js notranslate">if (x &gt; 5) {
+<pre class="brush: js">if (x &gt; 5) {
  /* do the right thing */
 } else if (x &gt; 50) {
  /* do the right thing */
@@ -105,14 +96,14 @@ if (b) // this condition is truthy
 
 <p>建議不要在條件表達式中直接對物件賦值，因為這會使人在瀏覽程式碼時很容易將賦值( assignment )與相等( equality )混淆。舉例而言，不要使用以下寫法：</p>
 
-<pre class="brush: js example-bad notranslate">if (x = y) {
+<pre class="brush: js example-bad">if (x = y) {
    /* do the right thing */
 }
 </pre>
 
 <p>如果你必須在條件表達式中使用賦值，最好ˇ的作法是以額外的括號包住賦值語句，如下所示：</p>
 
-<pre class="brush: js example-good notranslate">if ((x = y)) {
+<pre class="brush: js example-good">if ((x = y)) {
    /* do the right thing */
 }
 </pre>

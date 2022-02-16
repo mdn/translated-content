@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 <p>{{jsSidebar}}</p>
 
-<h2 id="介紹">介紹</h2>
+<h2 id=介紹>介紹</h2>
 
 <p>為何需要重新介紹？因為 <a href="/zh_tw/JavaScript" title="zh_tw/JavaScript">JavaScript</a> 堪稱是<a class="external" href="http://javascript.crockford.com/javascript.html">全世界最被人誤解的程式語言</a>。儘管 JavaScript 再怎麼的被嘲諷為小兒科，在它誤導人的簡潔下隱藏著強大的語言功能。2005 年是個許多知名 JavaScript 應用程式推出的年度，在在證明：更加瞭解這項科技對任何網頁開發者來說皆是重要的技能。</p>
 
@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 
 <p>與其他程式語言大大不同的是，JavaScript 沒有任何輸入或輸出的觀念。它是被設計成在一個宿主 (host) 環境下執行的腳本 (script) 語言，所以任何與外界通訊的方式，都是宿主環境的責任。瀏覽器是最常見的宿主環境，不過有些程式也有 JavaScript 解釋器，如 Adobe Acrobat、Photoshop、以及 Yahoo! Widget Engine 等等。</p>
 
-<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
+<h3 id="概要">概要</h3>
 
 <p>先從任何語言最基本的方面講起：型態 (type)。JavaScript 程式可以改變「值」(value)，而這些值各自有其歸屬的型態。JavaScript 的型態有：</p>
 
@@ -53,7 +53,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 
 <p>其實也有內建的 <a href="/zh_tw/Core_JavaScript_1.5_Reference/Global_Objects/Error" title="zh_tw/Core_JavaScript_1.5_Reference/Global_Objects/Error">Error</a> （錯誤）類型，不過，先把重點放在上面的分佈表比較容易。</p>
 
-<h3 id=".E6.95.B8.E5.AD.97" name=".E6.95.B8.E5.AD.97">數字</h3>
+<h3 id="數字">數字</h3>
 
 <p>根據規格，JavaScript 數字算是「雙精確度 64 位元格式 IEEE 754 值」("double-precision 64-bit format IEEE 754 values")。這能造成一些有趣的後果。JavaScript 沒有所謂的整數，所以你在做算術的時候得小心一點，尤其是假如你習慣了 C 或 Java 的數學。小心類似下的的事情：</p>
 
@@ -114,7 +114,7 @@ Infinity
 -Infinity
 </pre>
 
-<h3 id=".E5.AD.97.E4.B8.B2" name=".E5.AD.97.E4.B8.B2">字串</h3>
+<h3 id="字串">字串</h3>
 
 <p>JavaScript 的字串是一序列的字元。更精確的說，是一序列的 <a href="/zh_tw/Core_JavaScript_1.5_Guide/Unicode" title="zh_tw/Core_JavaScript_1.5_Guide/Unicode">Unicode 字元</a>，每個字元皆以一個 16 位元的數字作為代表。這讓任何人不需要為國際化感到擔心。</p>
 
@@ -136,7 +136,7 @@ goodbye, world
 HELLO
 </pre>
 
-<h3 id=".E5.85.B6.E4.BB.96.E9.A1.9E.E5.9E.8B" name=".E5.85.B6.E4.BB.96.E9.A1.9E.E5.9E.8B">其他類型</h3>
+<h3 id="其他類型">其他類型</h3>
 
 <p>JavaScript 對下列兩者是有分別的：<code>null</code> （空），屬於「object」型態的一種物件，用以明言表示無數值，以及 <code>undefined</code> （無定義），屬於「undefined」類型的一種物件，用以表示未初始化的值，也就是說，根本還沒指定數值。雖然姑且先不論變數，但在 JavaScript 你可以宣告一個變數但不指定其值。如果你這麼做的話，那該變數的型態便是 <code>undefined</code>。</p>
 
@@ -159,7 +159,7 @@ true
 
 <p>JavaScript 支援布林運算，如 <code>&amp;&amp;</code> （邏輯「<em>與</em>」，英稱 <em>and</em>）、<code>||</code> （邏輯「<em>或</em>」，英稱 <em>or</em>）、以及 <code>!</code> （邏輯「<em>非</em>」，英稱 <em>not</em>），請見下。</p>
 
-<h3 id=".E8.AE.8A.E6.95.B8" name=".E8.AE.8A.E6.95.B8">變數</h3>
+<h3 id="變數">變數</h3>
 
 <p>在 JavaScript，要宣告新變數，使用的是 <code><a href="/zh_tw/Core_JavaScript_1.5_Reference/Statements/var" title="zh_tw/Core_JavaScript_1.5_Reference/Statements/var">var</a></code> 關鍵字：</p>
 
@@ -167,9 +167,9 @@ true
 var name = "simon";
 </pre>
 
-<p>如果你宣告一個變數但不指定任何值，其型態便為 <code>undefined</code> （未定義）。 <span class="comment">應該注意關於 JS 的區塊不會構成新變數作用域</span></p>
+<p>如果你宣告一個變數但不指定任何值，其型態便為 <code>undefined</code> （未定義）。 應該注意關於 JS 的區塊不會構成新變數作用域</p>
 
-<h3 id=".E9.81.8B.E7.AE.97.E5.AD.90" name=".E9.81.8B.E7.AE.97.E5.AD.90">運算子</h3>
+<h3 id="運算子">運算子</h3>
 
 <p>JavaScript 的數字運算子有 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code>、以及 <code>%</code> - 最後一個是取餘數的運算子（英稱 <em>mod</em>）。用來指定值的運算子是 <code>=</code>，另外還有複合指定陳述式，如 <code>+=</code> 以及 <code>-=</code>。這些是用以延伸 <code>x = x <em>運算子</em> y</code>。</p>
 
@@ -215,7 +215,7 @@ true
 
 <p>假如你需要用的話，JavaScript 也有<a href="/zh_tw/Core_JavaScript_1.5_Reference/Operators/Bitwise_Operators" title="zh_tw/Core_JavaScript_1.5_Reference/Operators/Bitwise_Operators">逐位元 (bitwise) 運算子</a>。</p>
 
-<h3 id=".E6.8E.A7.E5.88.B6.E7.B5.90.E6.A7.8B" name=".E6.8E.A7.E5.88.B6.E7.B5.90.E6.A7.8B">控制結構</h3>
+<h3 id="控制結構">控制結構</h3>
 
 <p>JavaScript 跟其他同屬 C 家族的程式語言有類似的控制結構。條件陳述式是靠 <code>if</code> 以及 <code>else</code> 來表示。如果你喜歡還可以串起來：</p>
 
@@ -300,7 +300,7 @@ do {
 }
 </pre>
 
-<h3 id=".E7.89.A9.E4.BB.B6" name=".E7.89.A9.E4.BB.B6">物件</h3>
+<h3 id="物件">物件</h3>
 
 <p>JavaScript 物件是一系列的「名稱對數值組合」(name-value pair)。有鑑於此，它們和下列的東西很相近:</p>
 
@@ -366,7 +366,7 @@ obj["for"] = "Simon"; //沒問題
 12
 </pre>
 
-<h3 id=".E9.99.A3.E5.88.97" name=".E9.99.A3.E5.88.97">陣列</h3>
+<h3 id="陣列">陣列</h3>
 
 <p>JavaScript 的陣列其實是一種特殊的物件。它們的運作方式跟正常的物件很像（數字性的屬性只能透過 [] 語法進行存取），不過有個神奇的屬性，叫做「length」（長度）。這個屬性一定是陣列最高索引數加一。</p>
 
@@ -464,7 +464,7 @@ a.sort(cmpfn), a.splice(start, delcount, [item]..), a.unshift([item]..)
  <li><code>unshift</code> 會在開頭加入一或多個項目</li>
 </ul>
 
-<h3 id=".E5.87.BD.E5.BC.8F" name=".E5.87.BD.E5.BC.8F">函式</h3>
+<h3 id="函式">函式</h3>
 
 <p>如同物件，函式 (function) 是瞭解 JavaScript 的核心元件。最基本的函式再簡單不過了：</p>
 
@@ -606,7 +606,7 @@ NaN // undefined 不能進行加法
 2
 </pre>
 
-<h3 id=".E8.87.AA.E8.A8.82.E7.89.A9.E4.BB.B6" name=".E8.87.AA.E8.A8.82.E7.89.A9.E4.BB.B6">自訂物件</h3>
+<h3 id="自訂物件">自訂物件</h3>
 
 <p>就典型的物件導向程式設計而言，物件是資料 (data) 以及運算該資料的方法 (method) 所構成的集合體 (collection)。我們以一個含有姓與名兩個欄位的「person」（人）物件來做為例子。在英文，一個人的姓名有兩種寫法：「名 姓」或「姓, 名」。利用之前探討的函式與物件，寫法如下：</p>
 
@@ -709,7 +709,7 @@ Person.prototype.fullNameReversed = function() {
 }
 </pre>
 
-<p>Person.prototype 是一個由所有 Person 物件共享的物件。他將產生一個可供查看的關係鍊 (有個特殊的名字 <span style="color: #0000cd;">prototype chain</span>)。任何時候當我們想要使用某個不在 Person 中定義的 property 時，JavaScript 就會到 Person.prototype 裡頭尋找。因此， Person.prototype 就成為一個所有 Person 物件共用且可視的一個共享空間(物件)。這是一個提供強大工具，允許你可以在執行的任何一刻增加物件的相關函式。</p>
+<p>Person.prototype 是一個由所有 Person 物件共享的物件。他將產生一個可供查看的關係鍊 (有個特殊的名字 prototype chain)。任何時候當我們想要使用某個不在 Person 中定義的 property 時，JavaScript 就會到 Person.prototype 裡頭尋找。因此， Person.prototype 就成為一個所有 Person 物件共用且可視的一個共享空間(物件)。這是一個提供強大工具，允許你可以在執行的任何一刻增加物件的相關函式。</p>
 
 <pre class="brush: js">&gt; s = new Person("Simon", "Willison");
 &gt; s.firstNameCaps();
@@ -764,7 +764,7 @@ desrever eb won nac sihT
 }
 </pre>
 
-<p>當我們這樣做時，並不會產生一個類似於 new() 的函式在 prototype 中。此外，apply() 有一個姊妹函式叫做 <span style="color: #0000cd;">call</span><span style="color: #000000;">，差異在於 call() 接受一個可被擴展的參數串列而非一個陣列。</span></p>
+<p>當我們這樣做時，並不會產生一個類似於 new() 的函式在 prototype 中。此外，apply() 有一個姊妹函式叫做 call，差異在於 call() 接受一個可被擴展的參數串列而非一個陣列。</p>
 
 <pre class="brush: js">function lastNameCaps() {
     return this.last.toUpperCase();
@@ -776,7 +776,7 @@ s.lastNameCaps = lastNameCaps;
 s.lastNameCaps();
 </pre>
 
-<h3 id=".E5.B7.A2.E7.8B.80.E5.87.BD.E5.BC.8F" name=".E5.B7.A2.E7.8B.80.E5.87.BD.E5.BC.8F">巢狀函式</h3>
+<h3 id="巢狀函式">巢狀函式</h3>
 
 <p>JavaScript 函式宣告可以放在其他函式內。我們之前有在 <code>makePerson()</code> 函式見過這個。巢狀函式的一樣重要的功能是：它們可以存取其母函式 (parent function) 的領域 (scope) 內的變數：</p>
 
@@ -793,7 +793,7 @@ s.lastNameCaps();
 
 <p>這也能反制全域變數 (global variable) 的誘惑。在撰寫複雜的程式碼的時候，常常會有想利用全域變數來在多個函式之間傳遞數值的這種誘惑－－但這麼做，便會導致程式碼非常難以維護。巢狀函式可與其母函式一起共用變數，因此你可以用這個原理來在適當的時機將好幾個函式配在一起，而不用「汙染」全域命名空間 (global namespace)－－這可以稱做「本地變數」 (local variable)。使用此技巧時應當小心，不過，此技巧相當有用。</p>
 
-<h3 id="Closures" name="Closures">閉包</h3>
+<h3 id="閉包">閉包</h3>
 
 <p>接著我們介紹一種十分強大卻也常使人困惑的機制：閉包 (closure)。在解釋之前，我們先看看下面這段程式，猜猜執行的結果是什麼。</p>
 
@@ -822,7 +822,7 @@ y(7)
 
 <p>簡單地做個結論，閉包是作用域物件和一個函式的組合，反映了其被創造之時的狀態。閉包允許你保留狀態，而這是很常用的功能。</p>
 
-<h3 id="Memory_leaks" name="Memory_leaks">記憶體流失</h3>
+<h3 id="記憶體流失">記憶體流失</h3>
 
 <p>雖然閉包很方便，但卻容易在 IE 中造成記憶體流失。</p>
 
@@ -833,7 +833,7 @@ y(7)
  <li>記憶體釋放：當沒有參照可以指向該物件時</li>
 </ol>
 
-<p>當瀏覽器在執行的時候，需要維護來自<span style="color: #0000cd;"> DOM</span> 的大量物件。IE 使用自己的垃圾回收機制，而這個管理機制和 JavaScript 的不同－－這就造成了記憶體流失。</p>
+<p>當瀏覽器在執行的時候，需要維護來自 DOM 的大量物件。IE 使用自己的垃圾回收機制，而這個管理機制和 JavaScript 的不同－－這就造成了記憶體流失。</p>
 
 <p>在我們這裡的例子中，記憶體流失源自於環狀的相互參照 (circular reference)－－ JavaScript 物件及原生物件之間的相互參照。以下面的程式為例：</p>
 
@@ -896,8 +896,8 @@ y(7)
 
 <p>避免閉包還有另外一種方法：利用 <code>window.onunload</code> 事件消除相互參照。許多事件函示庫都會自動這麼做。</p>
 
-<div class="originaldocinfo">
-<h2 id=".E5.8E.9F.E5.A7.8B.E6.96.87.E4.BB.B6.E8.B3.87.E8.A8.8A" name=".E5.8E.9F.E5.A7.8B.E6.96.87.E4.BB.B6.E8.B3.87.E8.A8.8A">原始文件資訊</h2>
+<div>
+<h2 id="原始文件資訊">原始文件資訊</h2>
 
 <ul>
  <li>作者：<a class="external" href="http://simon.incutio.com/">Simon Willison</a></li>
@@ -906,5 +906,3 @@ y(7)
  <li>更多資訊：其他關於這份教學的資訊（以及原作者所用的投影片）請前往原作者的網誌：<a class="external" href="http://simon.incutio.com/archive/2006/03/07/etech">Etech weblog</a>。</li>
 </ul>
 </div>
-
-<p> </p>

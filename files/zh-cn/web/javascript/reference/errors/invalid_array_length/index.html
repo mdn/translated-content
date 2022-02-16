@@ -25,11 +25,11 @@ RangeError: Invalid array buffer length (Chrome)
 <p>无效的数组错误长度通常会在以下情形中出现：</p>
 
 <ul>
- <li>当创建一个长度为负数或者长度大于等于2<sup>32 </sup>的<sup> </sup>{{jsxref("Array")}} 或者 {{jsxref("ArrayBuffer")}} 时。</li>
- <li>当设置 {{jsxref("Array.length")}} 属性为负数或者长度大于等于2<sup>32 </sup>时。</li>
+ <li>当创建一个长度为负数或者长度大于等于2^32 的{{jsxref("Array")}} 或者 {{jsxref("ArrayBuffer")}} 时。</li>
+ <li>当设置 {{jsxref("Array.length")}} 属性为负数或者长度大于等于2^32 时。</li>
 </ul>
 
-<p>为什么 Array（数组） 和 ArrayBuffer（数组缓冲区） 的长度会受到限制？因为 Array 和 ArrayBuffer 的 length（长度） 属性被定义为一个32位无符号整形（unsigned 32-bit integer）的值，所以它只能存储 0 - 2<sup>32</sup>-1 之间的数。</p>
+<p>为什么 Array（数组） 和 ArrayBuffer（数组缓冲区） 的长度会受到限制？因为 Array 和 ArrayBuffer 的 length（长度） 属性被定义为一个32位无符号整形（unsigned 32-bit integer）的值，所以它只能存储 0 - 2^32 - 1 之间的数。</p>
 
 <p>当你使用构造函数来创建一个数组的时候，你可能想使用字面值的形式，第一个参数会被解释为数组的长度。</p>
 

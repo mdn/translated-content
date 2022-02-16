@@ -11,13 +11,13 @@ translation_of: Web/JavaScript/Guide/Modules
 ---
 <div>{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}</div>
 
-<p>这篇指南会给你入门 Javascript 模块的全部信息。</p>
+<p>这篇指南会给你入门 JavaScript 模块的全部信息。</p>
 
 <h2 id="模块化的背景">模块化的背景</h2>
 
-<p>Javascript 程序本来很小——在早期，它们大多被用来执行独立的脚本任务，在你的 web 页面需要的地方提供一定交互，所以一般不需要多大的脚本。过了几年，我们现在有了运行大量 Javascript 脚本的复杂程序，还有一些被用在其他环境（例如 <a href="/en-US/docs/Glossary/Node.js">Node.js</a>）。</p>
+<p>JavaScript 程序本来很小——在早期，它们大多被用来执行独立的脚本任务，在你的 web 页面需要的地方提供一定交互，所以一般不需要多大的脚本。过了几年，我们现在有了运行大量 JavaScript 脚本的复杂程序，还有一些被用在其他环境（例如 <a href="/en-US/docs/Glossary/Node.js">Node.js</a>）。</p>
 
-<p>因此，近年来，有必要开始考虑提供一种<u>将 JavaScript 程序拆分为可按需导入的单独模块</u>的机制。Node.js 已经提供这个能力很长时间了，还有很多的 Javascript 库和框架 已经开始了模块的使用（例如， <a href="https://en.wikipedia.org/wiki/CommonJS">CommonJS</a> 和基于 <a href="https://github.com/amdjs/amdjs-api/blob/master/AMD.md">AMD</a> 的其他模块系统 如 <a href="https://requirejs.org/">RequireJS</a>, 以及最新的 <a href="https://webpack.github.io/">Webpack</a> 和 <a href="https://babeljs.io/">Babel</a>）。</p>
+<p>因此，近年来，有必要开始考虑提供一种<u>将 JavaScript 程序拆分为可按需导入的单独模块</u>的机制。Node.js 已经提供这个能力很长时间了，还有很多的 JavaScript 库和框架 已经开始了模块的使用（例如， <a href="https://en.wikipedia.org/wiki/CommonJS">CommonJS</a> 和基于 <a href="https://github.com/amdjs/amdjs-api/blob/master/AMD.md">AMD</a> 的其他模块系统 如 <a href="https://requirejs.org/">RequireJS</a>, 以及最新的 <a href="https://webpack.github.io/">Webpack</a> 和 <a href="https://babeljs.io/">Babel</a>）。</p>
 
 <p>好消息是，最新的浏览器开始原生支持模块功能了，这是本文要重点讲述的。这会是一个好事情 — 浏览器能够最优化加载模块，使它比使用库更有效率：使用库通常需要做额外的客户端处理。</p>
 
@@ -39,8 +39,8 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <p>这的确有点简单，但是保持足够简单能够清晰地演示模块。</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 如果你想去下载这个例子在本地运行，你需要通过本地web 服务器去运行。</p>
+<div class="note">
+<p><strong>备注：</strong>如果你想去下载这个例子在本地运行，你需要通过本地web 服务器去运行。</p>
 </div>
 
 <h2 id="基本的示例文件的结构">基本的示例文件的结构</h2>
@@ -53,8 +53,8 @@ modules/
     canvas.mjs
     square.mjs</pre>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 在这个指南的全部示例项目的文件结构是基本相同的； 需要熟悉上面的内容</p>
+<div class="note">
+<p><strong>备注：</strong>在这个指南的全部示例项目的文件结构是基本相同的； 需要熟悉上面的内容</p>
 </div>
 
 <p>modules 目录下的两个模块的描述如下:</p>
@@ -77,8 +77,8 @@ modules/
  </li>
 </ul>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 在原生JavaScript模块中, 扩展名 <code>.mjs</code> 非常重要，因为使用 MIME-type 为<code>javascript/esm</code> 来导入文件(其他的JavaScript 兼容 MIME-type 像 <code>application/javascript</code> 也可以), 它避免了严格的 MIME 类型检查错误，像 "The server responded with a non-JavaScript MIME type". 除此之外,  <code>.mjs</code> 的扩展名很明了(比如这个就是一个模块，而不是一个传统 JavaScript文件)，还能够和其他工具互相适用. 看这个 <a href="https://v8.dev/features/modules#mjs">Google's note for further details</a>.</p>
+<div class="note">
+<p><strong>备注：</strong>在原生JavaScript模块中, 扩展名 <code>.mjs</code> 非常重要，因为使用 MIME-type 为<code>javascript/esm</code> 来导入文件(其他的JavaScript 兼容 MIME-type 像 <code>application/javascript</code> 也可以), 它避免了严格的 MIME 类型检查错误，像 "The server responded with a non-JavaScript MIME type". 除此之外,  <code>.mjs</code> 的扩展名很明了(比如这个就是一个模块，而不是一个传统 JavaScript文件)，还能够和其他工具互相适用. 看这个 <a href="https://v8.dev/features/modules#mjs">Google's note for further details</a>.</p>
 </div>
 
 <h2 id=".mjs_与_.js"><code>.mjs</code> 与 <code>.js</code></h2>
@@ -90,7 +90,7 @@ modules/
  <li>这能保证你的模块可以被运行时环境和构建工具识别，比如  <a href="https://nodejs.org/api/esm.html#esm_enabling">Node.js</a> 和 <a href="https://babeljs.io/docs/en/options#sourcetype">Babel</a>。</li>
 </ul>
 
-<p>但是我们决定继续使用 <code>.js</code> 扩展名，未来可能会更改。为了使模块可以在浏览器中正常地工作，你需要确保你的服务器能够正常地处理 <code>Content-Type</code> 头，其应该包含 Javascript 的MIME 类型  <code>text/javascript</code>。如果没有这么做，你可能会得到 一个严格 MIME 类型检查错误：“The server responded with a non-JavaScript MIME type （服务器返回了非 JavaScript MIME 类型）”，并且浏览器会拒绝执行相应的 JavaScript 代码。多数服务器可以正确地处理 <code>.js</code> 文件的类型，但是 <code>.mjs</code> 还不行。已经可以正常响应 <code>.mjs</code> 的服务器有 <a href="https://pages.github.com/">GitHub 页面</a> 和 Node.js 的 <code><a href="https://github.com/http-party/http-server#readme">http-server</a></code>。</p>
+<p>但是我们决定继续使用 <code>.js</code> 扩展名，未来可能会更改。为了使模块可以在浏览器中正常地工作，你需要确保你的服务器能够正常地处理 <code>Content-Type</code> 头，其应该包含 JavaScript 的MIME 类型  <code>text/javascript</code>。如果没有这么做，你可能会得到 一个严格 MIME 类型检查错误：“The server responded with a non-JavaScript MIME type （服务器返回了非 JavaScript MIME 类型）”，并且浏览器会拒绝执行相应的 JavaScript 代码。多数服务器可以正确地处理 <code>.js</code> 文件的类型，但是 <code>.mjs</code> 还不行。已经可以正常响应 <code>.mjs</code> 的服务器有 <a href="https://pages.github.com/">GitHub 页面</a> 和 Node.js 的 <code><a href="https://github.com/http-party/http-server#readme">http-server</a></code>。</p>
 
 <p> 如果你已经在使用相应的环境了，那么一切正常。或者如果你还没有，但你知道你在做什么（比如你可以配置服务器以为 <code>.mjs</code> 设置正确的 <code>Content-Type</code>）。但如果你不能控制提供服务，或者用于公开文件发布的服务器，这可能会导致混乱。</p>
 
@@ -125,7 +125,7 @@ export function draw(ctx, length, x, y, color) {
   };
 }</pre>
 
-<p>你能够导出函数，<code>var</code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">，</span></font><code>let</code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">，</span></font><code>const</code>, 和等会会看到的类。export要放在最外层；比如你不能够在函数内使用<code>export</code>。</p>
+<p>你能够导出函数，<code>var</code>，<code>let</code>，<code>const</code>, 和等会会看到的类。export要放在最外层；比如你不能够在函数内使用<code>export</code>。</p>
 
 <p>一个更方便的方法导出所有你想要导出的模块的方法是在模块文件的末尾使用一个export 语句， 语句是用花括号括起来的用逗号分割的列表。比如：</p>
 
@@ -139,7 +139,7 @@ export function draw(ctx, length, x, y, color) {
 
 <p>使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></code> 语句，然后你被花括号包围的用逗号分隔的你想导入的功能列表，然后是关键字from，然后是模块文件的路径。模块文件的路径是相对于站点根目录的相对路径，对于我们的<code>basic-modules</code> 应该是<code> /js-examples/modules/basic-modules</code>。</p>
 
-<p>当然，我们写的路径有一点不同---我们使用点语法意味 “当前路径”，跟随着包含我们想要找的文件的路径。这比每次都要写下整个相对路径要好得多，因为它更短，使得URL 可移植 ---如果在站点层中你把它移动到不同的路径下面仍然能够工作。<span style='background-color: #fff3d4; color: #333333; display: inline !important; float: none; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;'>（修订版 1889482）</span></p>
+<p>当然，我们写的路径有一点不同---我们使用点语法意味 “当前路径”，跟随着包含我们想要找的文件的路径。这比每次都要写下整个相对路径要好得多，因为它更短，使得URL 可移植 ---如果在站点层中你把它移动到不同的路径下面仍然能够工作。（修订版 1889482）</p>
 
 <p>那么看看例子吧：</p>
 
@@ -151,8 +151,8 @@ export function draw(ctx, length, x, y, color) {
 
 <p>你可以在<code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.mjs</a></code>中看到这些。</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>:在一些模块系统中你可以忽略文件扩展名（比如<code>'/model/squre'</code> .这在原生JavaScript 模块系统中不工作。<s>此外，记住你需要包含最前面的正斜杠。  </s> <span style='background-color: #fff3d4; color: #333333; display: inline !important; float: none; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;'>（修订版 1889482）</span></p>
+<div class="note">
+<p><strong>备注：</strong>在一些模块系统中你可以忽略文件扩展名（比如<code>'/model/squre'</code> .这在原生JavaScript 模块系统中不工作。<del>此外，记住你需要包含最前面的正斜杠。</del> （修订版 1889482）</p>
 </div>
 
 <p>因为你导入了这些功能到你的脚本文件，你可以像定义在相同的文件中的一样去使用它。下面展示的是在 <code>main.mjs</code> 中的import 语句下面的内容。</p>
@@ -177,17 +177,17 @@ reportPerimeter(square1.length, reportList);
 
 <p>你只能在模块内部使用 <code>import</code> 和<code>export</code> 语句 ；不是普通脚本文件。</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 您还可以将模块导入内部脚本，只要包含 <code>type="module"</code>，例如 <code>&lt;script type="module"&gt; //include script here &lt;/script&gt;</code>.</p>
+<div class="note">
+<p><strong>备注：</strong>您还可以将模块导入内部脚本，只要包含 <code>type="module"</code>，例如 <code>&lt;script type="module"&gt; //include script here &lt;/script&gt;</code>.</p>
 </div>
 
 <h2 id="其他模块与标准脚本的不同">其他模块与标准脚本的不同</h2>
 
 <ul>
- <li>你需要注意本地测试 —  如果你通过本地加载Html 文件 (比如一个 <code>file://</code> 路径的文件), 你将会遇到 CORS 错误，因为Javascript 模块安全性需要。你需要通过一个服务器来测试。</li>
+ <li>你需要注意本地测试 —  如果你通过本地加载Html 文件 (比如一个 <code>file://</code> 路径的文件), 你将会遇到 CORS 错误，因为JavaScript 模块安全性需要。你需要通过一个服务器来测试。</li>
  <li>另请注意，您可能会从模块内部定义的脚本部分获得不同的行为，而不是标准脚本。 这是因为模块自动使用严格模式。</li>
  <li>加载一个模块脚本时不需要使用 <code>defer</code> 属性 (see <a href="/en-US/docs/Web/HTML/Element/script#Attributes"><code>&lt;script&gt;</code> attributes</a>) 模块会自动延迟加载。</li>
- <li>最后一个但不是不重要，你需要明白模块功能导入到单独的脚本文件的范围 — 他们无法在全局获得。因此，你只能在导入这些功能的脚本文件中使用他们，你也无法通过Javascript console 中获取到他们，比如，在DevTools 中你仍然能够获取到语法错误，但是你可能无法像你想的那样使用一些debug 技术 </li>
+ <li>最后一个但不是不重要，你需要明白模块功能导入到单独的脚本文件的范围 — 他们无法在全局获得。因此，你只能在导入这些功能的脚本文件中使用他们，你也无法通过 JavaScript console 中获取到他们，比如，在DevTools 中你仍然能够获取到语法错误，但是你可能无法像你想的那样使用一些debug 技术 </li>
 </ul>
 
 <h2 id="默认导出_versus_命名导出">默认导出 versus 命名导出</h2>
@@ -216,8 +216,8 @@ reportPerimeter(square1.length, reportList);
 
 <pre class="brush: js">import {default as randomSquare} from './modules/square.mjs';</pre>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 重命名导出项的as语法在下面的{{anch("Renaming imports and exports")}}部分中进行了说明。</p>
+<div class="note">
+<p><strong>备注：</strong>重命名导出项的as语法在下面的{{anch("Renaming imports and exports")}}部分中进行了说明。</p>
 </div>
 
 <h2 id="避免命名冲突">避免命名冲突</h2>
@@ -362,8 +362,8 @@ square1.reportPerimeter();</pre>
 <pre class="brush: js">export * from 'x.mjs'
 export { name } from 'x.mjs'</pre>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 这实际上是导入后跟导出的简写，即“我导入模块<code>x.mjs</code>，然后重新导出部分或全部导出”。</p>
+<div class="note">
+<p><strong>备注：</strong>这实际上是导入后跟导出的简写，即“我导入模块<code>x.mjs</code>，然后重新导出部分或全部导出”。</p>
 </div>
 
 <p>有关示例，请参阅我们的<a href="https://github.com/mdn/js-examples/tree/master/modules/module-aggregation">module-aggregation</a>。 在这个例子中（基于我们之前的类示例），我们有一个名为<code>shapes.mjs</code>的额外模块，它将<code>circle.mjs</code>，<code>square.mjs</code>和<code>riangle.mjs</code>中的所有功能聚合在一起。 我们还将子模块移动到名为shapes的modules目录中的子目录中。 所以模块结构现在是这样的：</p>
@@ -388,12 +388,12 @@ export { Circle } from '/js-examples/modules/module-aggregation/modules/shapes/c
 
 <p>它们从各个子模块中获取导出，并有效地从<code>shapes.mjs</code>模块中获取它们。</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 即使<code>shapes.mjs</code>文件位于modules目录中，我们仍然需要相对于模块根目录编写这些URL，因此需要<code>/modules/</code>。 这是使用JavaScript模块时混淆的常见原因。</p>
+<div class="note">
+<p><strong>备注：</strong>即使<code>shapes.mjs</code>文件位于modules目录中，我们仍然需要相对于模块根目录编写这些URL，因此需要<code>/modules/</code>。 这是使用JavaScript模块时混淆的常见原因。</p>
 </div>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: <code>shapes.mjs</code>中引用的导出基本上通过文件重定向，并且实际上并不存在，因此您将无法在同一文件中编写任何有用的相关代码。</p>
+<div class="note">
+<p><strong>备注：</strong><code>shapes.mjs</code>中引用的导出基本上通过文件重定向，并且实际上并不存在，因此您将无法在同一文件中编写任何有用的相关代码。</p>
 </div>
 
 <p>所以现在在<code>main.mjs</code> 文件中，我们可以通过替换来访问所有三个模块类</p>
@@ -443,9 +443,9 @@ import { Triangle } from './modules/triangle.mjs';</pre>
 <p>如果为了你的模块有问题，这里有一些提示有可能帮助到你。如果你发现更多的内容欢迎添加进来！</p>
 
 <ul>
- <li>在前面已经提到了，在这里再重申一次： <code>.mjs</code> 后缀的文件需要以 MIME-type 为 <code>javascript/esm</code> 来加载(或者其他的JavaScript 兼容的 MIME-type ，比如 <code>application/javascript</code>), 否则，你会一个严格的 MIME 类型检查错误，像是这样的 "The server responded with a non-JavaScript MIME type".</li>
- <li>如果你尝试用本地文件加载HTML 文件 (i.e. with a <code>file://</code> URL), 由于JavaScript 模块的安全性要求，你会遇到CORS 错误。你需要通过服务器来做你的测试。GitHub pages is ideal as it also serves <code>.mjs</code> files with the correct MIME type.</li>
- <li>因为<code>.mjs</code> 是一个相当新的文件后缀, 一些操作系统可能无法识别，或者尝试把它替换成别的。比如，我们发现macOS悄悄地该我们的 <code>.mjs</code> 后缀的文件后面添加上 <code>.js</code>  然后自动隐藏这个后缀。所以我们的文件实际上都是 <code>x.mjs.js</code>. 当我们关闭自动隐藏文件后缀名，让它去接受认可 <code>.mjs</code>。问题解决。</li>
+ <li>在前面已经提到了，在这里再重申一次： <code>.mjs</code> 后缀的文件需要以 MIME-type 为 <code>javascript/esm</code> 来加载(或者其他的 JavaScript 兼容的 MIME-type ，比如 <code>application/javascript</code>), 否则，你会一个严格的 MIME 类型检查错误，像是这样的 "The server responded with a non-JavaScript MIME type".</li>
+ <li>如果你尝试用本地文件加载 HTML 文件 (i.e. with a <code>file://</code> URL), 由于 JavaScript 模块的安全性要求，你会遇到 CORS 错误。你需要通过服务器来做你的测试。GitHub pages is ideal as it also serves <code>.mjs</code> files with the correct MIME type.</li>
+ <li>因为<code>.mjs</code> 是一个相当新的文件后缀, 一些操作系统可能无法识别，或者尝试把它替换成别的。比如，我们发现 macOS 悄悄地该我们的 <code>.mjs</code> 后缀的文件后面添加上 <code>.js</code>  然后自动隐藏这个后缀。所以我们的文件实际上都是 <code>x.mjs.js</code>. 当我们关闭自动隐藏文件后缀名，让它去接受认可 <code>.mjs</code>。问题解决。</li>
 </ul>
 
 <h2 id="参见">参见</h2>

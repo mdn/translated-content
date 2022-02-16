@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}</div>
 
-<p class="summary">JavaScript 擁有許多陳述式，特別是流程控制的陳述式，你可以用這些陳述式來增加程式的互動性。這個章節將會概要介紹陳述式。</p>
+<p>JavaScript 擁有許多陳述式，特別是流程控制的陳述式，你可以用這些陳述式來增加程式的互動性。這個章節將會概要介紹陳述式。</p>
 
 <p><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements">JavaScript 參考</a>中有比本章更多關於陳述式的細節。 在 Javascript 程式碼中，分號（;）被用來隔開陳述式。</p>
 
@@ -229,7 +229,9 @@ throw true;       // True/False
 throw {toString: function() { return "我是物件!"; } };
 </pre>
 
-<div class="note"><strong>備註：</strong>您可以在拋出例外時指定物件。 然後，可以在 catch 區塊中引用對象的屬性。</div>
+<div class="notecard note">
+  <p><strong>備註：</strong>您可以在拋出例外時指定物件。 然後，可以在 catch 區塊中引用對象的屬性。</p>
+</div>
 
 <pre class="brush: js">// 創建類型爲 UserException 的物件
 function UserException(message) {
@@ -274,7 +276,7 @@ catch (e) {
 }
 </pre>
 
-<h4 id="The_catch_Block" name="The_catch_Block"><code>catch</code> 區塊</h4>
+<h4 id="The_catch_Block"><code>catch</code> 區塊</h4>
 
 <p>你可以使用 <code>catch</code> 區塊來處理 <code>try</code> 區塊可能丟出的例外。</p>
 
@@ -359,7 +361,7 @@ try {
 
 // 輸出 -&gt; caught inner "bogus"</pre>
 
-<h4 id="Nesting_try...catch_Statements" name="Nesting_try...catch_Statements">巢狀 try...catch 陳述式</h4>
+<h4 id="Nesting_try...catch_Statements">巢狀 try...catch 陳述式</h4>
 
 <p>你可以使用一個或多個的 <code>try...catch</code> 陳述式。 假如一個內層的<code>try...catch</code> 陳述式不具有 <code>catch</code> 區塊， 它將必須要有 <code>finally</code> 區塊與及封閉的 <code>try...catch</code> 陳述式來檢測是否有符合的例外。</p>
 
@@ -398,7 +400,7 @@ catch (e) {
  <li><em>settled</em>：已完成，表示 Promise 狀態為已實現或已拒絕，但不是等待中。</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8633/promises.png" style="height: 297px; width: 801px;"></p>
+<p><img alt="promises" src="https://mdn.mozillademos.org/files/8633/promises.png"></p>
 
 <h3 id="使用_XHR_載入圖檔">使用 XHR 載入圖檔</h3>
 

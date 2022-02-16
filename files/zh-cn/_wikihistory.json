@@ -8217,18 +8217,6 @@
       "Spikef"
     ]
   },
-  "Web/API/BroadcastChannel/onmessage": {
-    "modified": "2020-10-15T22:26:22.393Z",
-    "contributors": [
-      "Spikef"
-    ]
-  },
-  "Web/API/BroadcastChannel/onmessageerror": {
-    "modified": "2020-10-15T22:26:22.343Z",
-    "contributors": [
-      "Spikef"
-    ]
-  },
   "Web/API/BroadcastChannel/postMessage": {
     "modified": "2020-10-15T22:26:23.239Z",
     "contributors": [
@@ -46793,6 +46781,18 @@
     "modified": "2019-03-18T21:27:15.606Z",
     "contributors": [
       "levo2165"
+    ]
+  },
+  "conflicting/Web/API/BroadcastChannel/message_event": {
+    "modified": "2020-10-15T22:26:22.393Z",
+    "contributors": [
+      "Spikef"
+    ]
+  },
+  "conflicting/Web/API/BroadcastChannel/messageerror_event": {
+    "modified": "2020-10-15T22:26:22.343Z",
+    "contributors": [
+      "Spikef"
     ]
   },
   "conflicting/Web/API/Canvas_API/Tutorial": {

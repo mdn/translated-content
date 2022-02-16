@@ -70,7 +70,7 @@ Math.max(-10, 20);  //  20
 <pre class="brush: js">var arr = [1,2,3];
 var max = arr.reduce(function(a, b) {
     return Math.max(a, b);
-});
+}, -Infinity);
 </pre>
 
 <p>다음 함수는 {{jsxref ( "Function.prototype.apply ()")}}을 사용하여 숫자 배열에서 최대 요소를 찾습니다. <code>getMaxOfArray([1, 2, 3])</code>는

@@ -3,8 +3,8 @@ title: <input type="time">
 slug: Web/HTML/Element/Input/time
 tags:
   - HTML
-  - HTML表单
-  - INPUT元素
+  - HTML 表单
+  - INPUT 元素
   - Input
   - Time
   - 元素
@@ -13,19 +13,19 @@ translation_of: Web/HTML/Element/input/time
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">类型为time的输入元素{{htmlelement("input")}} ，旨在让用户轻松输入时间（小时和分钟，以及可选的秒）。</span></p>
+<p><span class="seoSummary">类型为 time 的输入元素{{htmlelement("input")}} ，旨在让用户轻松输入时间（小时和分钟，以及可选的秒）。</span></p>
 
-<p>控件的用户界面因浏览器而异。在现代浏览器中，支持是很好的，因为Safari是唯一尚未实现的主要浏览器；在Safari和任何其他不支持<code>&lt;time&gt;</code>的浏览器中，它会优雅地降级为<code>&lt;input type=“text”&gt;</code>。</p>
+<p>控件的用户界面因浏览器而异。在现代浏览器中，支持是很好的，因为 Safari 是唯一尚未实现的主要浏览器；在 Safari 和任何其他不支持<code>&lt;time&gt;</code>的浏览器中，它会优雅地降级为<code>&lt;input type=“text”&gt;</code>。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}</div>
 
-<p class="hidden">这个交互式示例的源代码存储在GitHub存储库中。如果您想对交互式示例项目作出贡献，请克隆https://github.com/mdn/interactive-examples并向我们发送请求。</p>
+<p class="hidden">这个交互式示例的源代码存储在 GitHub 存储库中。如果您想对交互式示例项目作出贡献，请克隆 https://github.com/mdn/interactive-examples 并向我们发送请求。</p>
 
 <h2 id="Appearance">Appearance</h2>
 
 <h3 id="Chrome_and_Opera">Chrome and Opera</h3>
 
-<p>在chrome/opera中，选择时间很简单，根据操作系统区域设置，插槽以12或24小时格式输入小时和分钟，上下箭头用于递增和递减当前选定的组件。在某些版本中，会提供一个“x”按钮来清除控件的值。</p>
+<p>在 chrome/opera 中，选择时间很简单，根据操作系统区域设置，插槽以 12 或 24 小时格式输入小时和分钟，上下箭头用于递增和递减当前选定的组件。在某些版本中，会提供一个 “x” 按钮来清除控件的值。</p>
 
 <p><img alt="12-hour Chrome time input" src="https://mdn.mozillademos.org/files/16417/chrome_time.PNG" style="height: 30px; width: 93px;"> 12-hour</p>
 
@@ -33,7 +33,7 @@ translation_of: Web/HTML/Element/input/time
 
 <h3 id="Firefox">Firefox</h3>
 
-<p>火狐的时间选择和Chrome非常相似，只是它没有上下箭头。它还使用12或24小时格式输入时间，基于系统区域设置。提供“X”按钮以清除控件的值。</p>
+<p>火狐的时间选择和 Chrome 非常相似，只是它没有上下箭头。它还使用 12 或 24 小时格式输入时间，基于系统区域设置。提供 “X” 按钮以清除控件的值。</p>
 
 <p><img alt="12-hour Firefox time input" src="https://mdn.mozillademos.org/files/15403/firefox-time.png" style="height: 29px; width: 106px;"> 12-hour</p>
 
@@ -41,7 +41,7 @@ translation_of: Web/HTML/Element/input/time
 
 <h3 id="Edge">Edge</h3>
 
-<p>Edgede 时间选择有点复杂，打开一个小时和分钟的滚动区域。它和chrome一样，使用12或24小时格式输入时间，基于系统区域设置：</p>
+<p>Edgede 时间选择有点复杂，打开一个小时和分钟的滚动区域。它和 chrome 一样，使用 12 或 24 小时格式输入时间，基于系统区域设置：</p>
 
 <p><img alt="12-hour Edge time input" src="https://mdn.mozillademos.org/files/16418/edge_time.PNG" style="display: block; height: 290px; width: 188px;"> 12-hour</p>
 
@@ -94,7 +94,7 @@ timeControl.value = '15:30';</pre>
 
 <p>在此示例中，您可以通过输入时间并查看之后如何更改来查看时间输入的值。</p>
 
-<p>首先，看一下HTML。这很简单，带有我们之前看到的标签和输入，但添加了额外的元素<code>p</code>和<code>span</code>用来显示时间值</p>
+<p>首先，看一下 HTML。这很简单，带有我们之前看到的标签和输入，但添加了额外的元素<code>p</code>和<code>span</code>用来显示时间值</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
   &lt;label for="startTime"&gt;Start time: &lt;/label&gt;
@@ -171,7 +171,7 @@ startTime.addEventListener("input", function() {
 
 <h2 id="Using_time_inputs">Using time inputs</h2>
 
-<p>虽然data和time输入类型中的时间具有最广泛的浏览器支持，但它尚未接近普及，因此您可能需要提供一种替代方法来输入日期和时间，以便Safari用户（和用户）其他非支持浏览器）仍然可以轻松输入时间值。</p>
+<p>虽然 data 和 time 输入类型中的时间具有最广泛的浏览器支持，但它尚未接近普及，因此您可能需要提供一种替代方法来输入日期和时间，以便 Safari 用户（和用户）其他非支持浏览器）仍然可以轻松输入时间值。</p>
 
 <p>We'll look at basic and more complex uses of <code>&lt;input type="time"&gt;</code>, then offer advice on mitigating the browser support issue later on (see {{anch("Handling browser support")}}).</p>
 

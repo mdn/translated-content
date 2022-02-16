@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 <p>{{JSRef}}</p>
 
-<p><strong><code>BigInt</code></strong> 是一种内置对象，它提供了一种方法来表示大于 <code>2<sup>53 </sup>- 1</code> 的整数。这原本是 Javascript中可以用 {{JSxRef("Number")}} 表示的最大数字。<strong><code>BigInt</code></strong> 可以表示任意大的整数。</p>
+<p><strong><code>BigInt</code></strong> 是一种内置对象，它提供了一种方法来表示大于 <code>2^53 - 1</code> 的整数。这原本是 Javascript中可以用 {{JSxRef("Number")}} 表示的最大数字。<strong><code>BigInt</code></strong> 可以表示任意大的整数。</p>
 
 <dl>
 </dl>
@@ -72,8 +72,8 @@ bigN * -1n
 
 <p><code>/</code> 操作符对于整数的运算也没问题。可是因为这些变量是 <code>BigInt</code> 而不是 <code>BigDecimal</code> ，该操作符结果会向零取整，也就是说不会返回小数部分。</p>
 
-<div class="blockIndicator warning">
-<p>当使用 <code>BigInt</code> 时，带小数的运算会被取整。</p>
+<div class="warning">
+<p><strong>警告：</strong>当使用 <code>BigInt</code> 时，带小数的运算会被取整。</p>
 </div>
 
 <pre class="brush: js">const expected = 4n / 2n;
@@ -169,9 +169,9 @@ Boolean(12n)
 
 <dl>
  <dt>{{JSxRef("BigInt.asIntN()")}}</dt>
- <dd>将 BigInt 值转换为一个 -2<sup>width-1</sup> 与 2<sup>width-1</sup>-1 之间的有符号整数。</dd>
+ <dd>将 BigInt 值转换为一个 -2^(width-1) 与 2^(width-1) - 1 之间的有符号整数。</dd>
  <dt>{{JSxRef("BigInt.asUintN()")}}</dt>
- <dd>将一个 BigInt 值转换为 0 与 2<sup>width</sup>-1 之间的无符号整数。</dd>
+ <dd>将一个 BigInt 值转换为 0 与 2^(width) - 1 之间的无符号整数。</dd>
 </dl>
 
 <h2 id="实例方法">实例方法</h2>
@@ -189,7 +189,7 @@ Boolean(12n)
 
 <h3 id="转化">转化</h3>
 
-<p>由于在 {{JSxRef("Number")}} 与 <code>BigInt</code> 之间进行转换会损失精度，因而建议仅在值可能大于2<sup>53</sup> 时使用 <code>BigInt</code> 类型，并且不在两种类型之间进行相互转换。</p>
+<p>由于在 {{JSxRef("Number")}} 与 <code>BigInt</code> 之间进行转换会损失精度，因而建议仅在值可能大于2^53 时使用 <code>BigInt</code> 类型，并且不在两种类型之间进行相互转换。</p>
 
 <h3 id="密码学">密码学</h3>
 

@@ -30,14 +30,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 
 <dl>
  <dt><code>target</code></dt>
- <dd>要複製序列（sequence）至該位置的索引（起始為 0）。若為負數，<code>target</code> 將會自陣列末項開始計算。</dd>
- <dd>假如 <code>target</code> 大於等於 <code>arr.length</code>，則沒有項目會被複製。如果 <code>target</code> 的索引在 <code>start</code> 之後，則拷貝的序列將會被修剪以符合 <code>arr.length</code>。</dd>
+ <dd>要複製序列（sequence）至該位置的索引（起始為 0）。若為負數，<code>target</code> 將會自陣列末項開始計算。假如 <code>target</code> 大於等於 <code>arr.length</code>，則沒有項目會被複製。如果 <code>target</code> 的索引在 <code>start</code> 之後，則拷貝的序列將會被修剪以符合 <code>arr.length</code>。</dd>
  <dt><code>start</code> {{optional_inline}}</dt>
- <dd>開始拷貝的起始元素索引（起始為 0）。若為負數，<code>start</code> 將會自陣列末項開始計算。</dd>
- <dd>如果省略 <code>start</code>，<code>copyWithin</code> 將會自陣列首項開始複製（預設為 0）。</dd>
+ <dd>開始拷貝的起始元素索引（起始為 0）。若為負數，<code>start</code> 將會自陣列末項開始計算。如果省略 <code>start</code>，<code>copyWithin</code> 將會自陣列首項開始複製（預設為 0）。</dd>
  <dt><code>end</code> {{optional_inline}}</dt>
- <dd>結束拷貝的結尾元素索引（起始為 0）。<code>copyWithin</code> 會拷貝至此索引，但不包含 <code>end</code>。若為負數，<code>end</code> 將會自陣列末項開始計算。</dd>
- <dd>如果省略 <code>end</code>，<code>copyWithin</code> 將會一路拷貝至陣列末項（預設至 <code>arr.length</code>）。</dd>
+ <dd>結束拷貝的結尾元素索引（起始為 0）。<code>copyWithin</code> 會拷貝至此索引，但不包含 <code>end</code>。若為負數，<code>end</code> 將會自陣列末項開始計算。如果省略 <code>end</code>，<code>copyWithin</code> 將會一路拷貝至陣列末項（預設至 <code>arr.length</code>）。</dd>
 </dl>
 
 <h3 id="回傳值">回傳值</h3>

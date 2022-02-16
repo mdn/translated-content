@@ -14,32 +14,32 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 
 <div>{{EmbedInteractiveExample("pages/js/array-join.html")}}</div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre><var>arr</var>.join([<var>separator</var>])</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>separator</code> {{optional_inline}}</dt>
  <dd>指定一个字符串来分隔数组的每个元素。如果需要，将分隔符转换为字符串。如果缺省该值，数组元素用逗号（<code>,</code>）分隔。如果<code>separator</code>是空字符串(<code>""</code>)，则所有元素之间都没有任何字符。</dd>
- <dt>
- <h3 id="返回值">返回值</h3>
- </dt>
- <dd>一个所有数组元素连接的字符串。如果 <code>arr.length</code><strong> </strong>为0，则返回空字符串。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h3 id="返回值">返回值</h3>
+
+<p>一个所有数组元素连接的字符串。如果 <code>arr.length</code><strong> </strong>为0，则返回空字符串。</p>
+
+<h2 id="Description">描述</h2>
 
 <p>所有的数组元素被转换成字符串，再用一个分隔符将这些字符串连接起来。</p>
 
-<div class="blockIndicator warning">
-<p>如果一个元素为 <code>undefined</code> 或 <code>null</code>，它会被转换为空字符串。</p>
+<div class="warning">
+<p><strong>警告：</strong>如果一个元素为 <code>undefined</code> 或 <code>null</code>，它会被转换为空字符串。</p>
 </div>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Joining_an_array_three_different_ways" name="Example:_Joining_an_array_three_different_ways">使用四种不同的分隔符连接数组元素</h3>
+<h3 id="Example_Joining_an_array_three_different_ways">使用四种不同的分隔符连接数组元素</h3>
 
 <p>下例首先创建了一个数组 <code>a</code>，包含有三个元素，然后用四种不同的分隔符连接所有数组元素。首先是默认的分隔符逗号，然后是一个逗号加空格，接下来是一个加号前后加空格，最后是一个空字符串。</p>
 
@@ -60,7 +60,7 @@ var myVar4 = a.join('');    // myVar4的值变为"WindRainFire"
 }
 f(1, 'a', true);</code></pre>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -92,7 +92,7 @@ f(1, 'a', true);</code></pre>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <div>
 <div>
@@ -102,7 +102,7 @@ f(1, 'a', true);</code></pre>
 </div>
 </div>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.split()")}}</li>

@@ -232,9 +232,9 @@ const myArray = myRe.exec('cdbBdbsbz')
 <table class="fullwidth-table standard-table">
   <thead>
     <tr>
-      <th class="header" scope="col">属性/元素</td>
-      <th class="header" scope="col">说明</td>
-      <th class="header" scope="col">示例</td>
+      <th scope="col">属性/元素</td>
+      <th scope="col">说明</td>
+      <th scope="col">示例</td>
     </tr>
   </thead>
   <tbody>

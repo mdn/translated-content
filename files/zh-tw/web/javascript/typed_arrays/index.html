@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Typed_arrays
 
 <p>為了追求最大的可朔性與效率，JavaScript 型別陣列的實作分為<strong>緩衝</strong>與<strong>視圖</strong>。一個緩衝（以類別 {{jsxref("ArrayBuffer")}} 實作）為代表一塊資料資料的物件，它沒有任何格式，也沒有任何存取其內容的機制。想存取一個緩衝所佔的記憶體必須用一個視圖。一個視圖提供了一種前後關係 — 資料型別、起始偏移與元素的數目 — 使得資料變成真實的型別陣列。視圖以類別 {{jsxref("ArrayBufferView")}} 與其子類別實作。</p>
 
-<p><img alt="Typed arrays in an ArrayBuffer" src="https://mdn.mozillademos.org/files/8629/typed_arrays.png" style="height: 278px; width: 666px;"></p>
+<p><img alt="Typed arrays in an ArrayBuffer" src="https://mdn.mozillademos.org/files/8629/typed_arrays.png"></p>
 
 <h3 id="ArrayBuffer">ArrayBuffer</h3>
 
@@ -125,7 +125,7 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 <p>舉例來說，可以用 <code>amountDueView[0]</code> 存取 amountDue。</p>
 
-<div class="note"><strong>備註：</strong>C 結構的 <a class="external" href="http://en.wikipedia.org/wiki/Data_structure_alignment" title="http://en.wikipedia.org/wiki/Data_structure_alignment">data structure alignment</a> 是與使用平台有關，須小心這些填充上的差異。</div>
+<div class="notecard note"><p><strong>備註：</strong>C 結構的 <a class="external" href="http://en.wikipedia.org/wiki/Data_structure_alignment" title="http://en.wikipedia.org/wiki/Data_structure_alignment">data structure alignment</a> 是與使用平台有關，須小心這些填充上的差異。</p></div>
 
 <h3 id="Conversion_to_normal_arrays">Conversion to normal arrays</h3>
 
@@ -139,82 +139,11 @@ normalArray.constructor === Array;
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>Superseded by ECMAScript 2015.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition in an ECMA standard.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>7.0</td>
-   <td>{{ CompatGeckoDesktop("2") }}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>5.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("2") }}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>4.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="參見">參見</h2>
 

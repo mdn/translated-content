@@ -8,9 +8,7 @@ translation_of: Web/JavaScript/Guide/Introduction
 ---
 <div>{{jsSidebar("JavaScript 指南")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}</div>
 
-<div class="summary">
 <p>本章节介绍了 JavaScript，并且讨论了它的一些基本概念。</p>
-</div>
 
 <h2 id="你应该已经掌握哪些知识？">你应该已经掌握哪些知识？</h2>
 
@@ -47,7 +45,7 @@ translation_of: Web/JavaScript/Guide/Introduction
 
 <p>这意味着，在浏览器中，JavaScript 可以改变网页（DOM）的外观与样式。同样地，在服务器上，Node.js 中的 JavaScript 可以对浏览器上编写的代码发出的客户端请求做出响应。</p>
 
-<h2 id="JavaScript_and_Java" name="JavaScript_and_Java">JavaScript 和 Java</h2>
+<h2 id="JavaScript_and_Java">JavaScript 和 Java</h2>
 
 <p>JavaScript 和 Java 有一些共性但是在另一些方面有着根本性区别。JavaScript语言类似 Java 但是并没有 Java 的静态类型和强类型检查特性。JavaScript 遵循了 Java 的表达式语法，命名规范以及基础流程控制，这也是 JavaScript 从 LiveScript 更名的原因。</p>
 
@@ -85,13 +83,13 @@ translation_of: Web/JavaScript/Guide/Introduction
 
 <p>请查看章节 <a href="/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">对象模型的详情</a> 来了解更多JavaScript和Java的不同。</p>
 
-<h2 id="JavaScript_and_the_ECMAScript_Specification" name="JavaScript_and_the_ECMAScript_Specification">JavaScript 和 ECMAScript 规范</h2>
+<h2 id="JavaScript_and_the_ECMAScript_Specification">JavaScript 和 ECMAScript 规范</h2>
 
 <p>JavaScript 的标准化组织是 <a class="external" href="http://www.ecma-international.org/">ECMA</a> ——这个欧洲信息与通信系统标准化协会提供基于 Javascript 的标准化方案（ECMA 原先是欧洲计算机制造商协会的首字母缩写）。这种标准化版本的 JavaScript 被称作 ECMAScript，在所有支持该标准的应用中以相同的方式工作。公司可以使用开放标准语言来开发他们自己的 JavaScript 实现版本。ECMAScript 标准在ECMA－262规范中进行文档化。 参照 <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript">JavaScript的新特性</a> 以便学习更多关于不同版本的 JavaScript 和 ECMAScript 规范版本。</p>
 
 <p>ECMA-262 标准也通过了 国际标准化组织（<a class="external" href="http://www.iso.ch/">ISO</a>）的 ISO-16262。你可以<a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">在这里</a>找到该规范文件。 ECMAScript 规范并没有描述文档对象模型（<a href="/zh-CN/docs/Web/API/Document_Object_Model">DOM</a>），该模型由 万维网联盟（<a href="http://www.w3.org/">W3C</a>） 制定。DOM 定义了HTML文件对象被脚本操作的方法。为了更清楚地了解当使用JavaScript编程时用到的不同技术，请参阅 <a href="/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript 技术概述</a>。</p>
 
-<h3 id="JavaScript_Documentation_versus_the_ECMAScript_Specification" name="JavaScript_Documentation_versus_the_ECMAScript_Specification">JavaScript 文献 和 ECMAScript 规范</h3>
+<h3 id="JavaScript_Documentation_versus_the_ECMAScript_Specification">JavaScript 文献 和 ECMAScript 规范</h3>
 
 <p>ECMAScript规范是实现ECMAScript的一组需求;如果您想在ECMAScript实现或引擎(如Firefox中的SpiderMonkey或Chrome中的V8)中实现符合标准的语言特性，那么它是非常有用的。</p>
 
@@ -113,11 +111,11 @@ translation_of: Web/JavaScript/Guide/Introduction
 
 <p>在火狐浏览器菜单栏的 “工具" =&gt; "Web开发者" =&gt; "Web控制台" 可以打开控制台( 在Windows和Linux上<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> ，Mac上<kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>K</kbd>) ，它会如期出现在浏览器窗口的底部。如图，最下一行就是可以执行输入的命令行，面板上可以显示执行结果：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7363/web-console-commandline.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7363/web-console-commandline.png"></p>
 
 <p>控制台的工作方式与eval完全相同：返回最后输入的表达式。为了简单起见，可以想象每次输入到控制台的东西实际上都被 console.log 所包围。</p>
 
-<pre class="notranslate">function greetMe(yourName) { alert('Hello ' + yourName); } <code>console.log(eval('3 + 5'));</code></pre>
+<pre>function greetMe(yourName) { alert('Hello ' + yourName); } <code>console.log(eval('3 + 5'));</code></pre>
 
 <h3 id="代码草稿纸（Scratchpad）">代码草稿纸（Scratchpad）</h3>
 
@@ -127,13 +125,13 @@ translation_of: Web/JavaScript/Guide/Introduction
 
 <p>如果你选择显示，草稿纸中的代码会在浏览器中执行，并在内容后面以注释的形式插入返回的结果：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7365/scratchpad.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7365/scratchpad.png"></p>
 
 <h3 id="Hello_world">Hello world</h3>
 
 <p>学习JavaScript 的第一步，打开浏览器的代码草稿纸尝试编写你的第一个 JavaScript 版本的 “Hello world” 程序。</p>
 
-<pre class="brush: js notranslate">function greetMe(user) {
+<pre class="brush: js">function greetMe(user) {
   alert('Hi ' + user);
 }
 

@@ -19,11 +19,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 
 <p>如果你需要找到一个元素的位置或者一个元素是否存在于数组中，使用{{jsxref("Array.prototype.indexOf()")}} 或 {{jsxref("Array.prototype.includes()")}}。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>arr</em>.find(<em>callback</em>[, <em>thisArg</em>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 
 <p>数组中第一个满足所提供测试函数的元素的值，否则返回 {{jsxref("undefined")}}。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>find</code>方法对数组中的每一项元素执行一次 <code>callback</code> 函数，直至有一个 callback 返回 <code>true</code>。当找到了这样一个元素后，该方法会立即返回这个元素的值，否则返回 {{jsxref("undefined")}}。注意 <code>callback </code>函数会为数组中的每个索引调用即从 <code>0 </code>到 <code>length - 1</code>，而不仅仅是那些被赋值的索引，这意味着对于稀疏数组来说，该方法的效率要低于那些只遍历有值的索引的方法。</p>
 
@@ -114,7 +114,7 @@ a.find(function(value, index) {
   console.log('Visited index ' + index + ' with value ' + value);
 });</pre>
 
-<h2 id="Polyfill" name="Polyfill">Polyfill</h2>
+<h2 id="Polyfill">Polyfill</h2>
 
 <p>本方法在ECMAScript 6规范中被加入，可能不存在于某些实现中。你可以通过以下代码来补充 <code>Array.prototype.find()</code>。</p>
 
@@ -189,7 +189,7 @@ if (!Array.prototype.find) {
 
 <p>{{Compat("javascript.builtins.Array.find")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.findIndex()")}} – find and return an index</li>

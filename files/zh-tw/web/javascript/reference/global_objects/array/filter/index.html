@@ -36,16 +36,15 @@ let longWords = words.filter(word =&gt; word.length &gt; 6);
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>此函式為一個斷言，用於測試陣列中的每個元素。回傳值為 <code>true</code> 時將當前的元素保留至新陣列中，若為 <code>false</code> 則不保留。可傳入三個參數：</dd>
- <dd>
- <dl>
-  <dt><code>element</code></dt>
-  <dd>原陣列目前所迭代處理中的元素。</dd>
-  <dt><code>index</code>{{optional_inline}}</dt>
-  <dd>原陣列目前所迭代處理中的元素之索引。</dd>
-  <dt><code>array</code>{{optional_inline}}</dt>
-  <dd>呼叫 <code>filter</code> 方法的陣列。</dd>
- </dl>
+ <dd>此函式為一個斷言，用於測試陣列中的每個元素。回傳值為 <code>true</code> 時將當前的元素保留至新陣列中，若為 <code>false</code> 則不保留。可傳入三個參數：
+  <dl>
+    <dt><code>element</code></dt>
+    <dd>原陣列目前所迭代處理中的元素。</dd>
+    <dt><code>index</code>{{optional_inline}}</dt>
+    <dd>原陣列目前所迭代處理中的元素之索引。</dd>
+    <dt><code>array</code>{{optional_inline}}</dt>
+    <dd>呼叫 <code>filter</code> 方法的陣列。</dd>
+  </dl>
  </dd>
  <dt><code>thisArg</code> {{optional_inline}}</dt>
  <dd>可選的。執行 <code>callback</code> 回呼函式的 <code>this</code> 值。</dd>

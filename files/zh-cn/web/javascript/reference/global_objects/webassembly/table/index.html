@@ -10,12 +10,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 <p>这是一个包装了WebAssemble Table 的Javascript包装对象，具有类数组结构，存储了多个函数引用。在Javascript或者WebAssemble中创建Table 对象可以同时被Javascript或WebAssemble 访问和更改。</p>
 
 <div class="note">
-<p><strong>Note</strong>: Tables 对象目前只能存储函数引用，不过在将来可能会被扩展。</p>
+<p><strong>备注：</strong>: Tables 对象目前只能存储函数引用，不过在将来可能会被扩展。</p>
 </div>
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">var myTable = new WebAssembly.Table(tableDescriptor);</pre>
+<pre class="syntaxbox">var myTable = new WebAssembly.Table(tableDescriptor);</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 
 <dl>
  <dt><code>Table.prototype.constructor</code></dt>
- <dd><font><font>返回创建该对象实例的函数。</font><font>默认情况下，这是</font></font>{{jsxref("WebAssembly.Table()")}} 的<font><font>构造函数。</font></font></dd>
+ <dd>返回创建该对象实例的函数。默认情况下，这是{{jsxref("WebAssembly.Table()")}} 的构造函数。</dd>
  <dt>{{jsxref("WebAssembly/Table/length","Table.prototype.length")}}</dt>
  <dd>返回Table的长度，即元素数。</dd>
 </dl>
@@ -68,14 +68,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 
 <p>The following example (see table2.html <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html">source code</a> and <a href="https://mdn.github.io/webassembly-examples/js-api-examples/table2.html">live version</a>) creates a new WebAssembly Table instance with an initial size of 2 elements. We then print out the table length and contents of the two indexes (retrieved via {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} to show that the length is two and both elements are {{jsxref("null")}}.</p>
 
-<pre class="brush: js notranslate">var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+<pre class="brush: js">var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
 console.log(tbl.length);  // "2"
 console.log(tbl.get(0));  // "null"
 console.log(tbl.get(1));  // "null"</pre>
 
 <p>We then create an import object that contains the table:</p>
 
-<pre class="brush: js notranslate">var importObj = {
+<pre class="brush: js">var importObj = {
   js: {
     tbl:tbl
   }
@@ -83,7 +83,7 @@ console.log(tbl.get(1));  // "null"</pre>
 
 <p>Finally, we load and instantiate a wasm module (table2.wasm) using the {{jsxref("WebAssembly.instantiateStreaming()")}} method.  The table2.wasm module contains two functions (one that returns 42 and another that returns 83) and stores both into elements 0 and 1 of the imported table (see <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat">text representation</a>).  So after instantiation, the table still has length 2, but the elements now contain callable <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly Functions</a> which we can call from JS.</p>
 
-<pre class="brush: js notranslate">WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
+<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 .then(function(obj) {
   console.log(tbl.length);
   console.log(tbl.get(0)());
@@ -113,7 +113,7 @@ console.log(tbl.get(1));  // "null"</pre>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <div>
 

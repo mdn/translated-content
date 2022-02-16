@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Operators/function
 
 <p>你也可以使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function" title="The Function constructor creates a new Function object. In JavaScript every function is actually a Function object."><code>Function</code></a> 构造函数和一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/function">函数声明</a>来定义函数。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">let function_expression = function [<em>name</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]]) {
    <em>statements</em>
@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Operators/function
 
 <p>从 <a href="https://developer.mozilla.org/zh-CN/docs/">ES2015</a>开始，你也可以使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a> 。</p>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>name</code></dt>
@@ -34,15 +34,15 @@ translation_of: Web/JavaScript/Reference/Operators/function
  <dd>构成函数体的语句。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p>函数表达式（function expression）非常类似于函数声明（function statement）<span style="line-height: 1.5;">（详情查看</span><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/function" style="line-height: 1.5;">函数声明</a><span style="line-height: 1.5;">）</span><span style="line-height: 1.5;">，并且两者拥有几乎相同的语法。</span><span style="line-height: 1.5;">函数表达式与函数声明的最主要区别是函数名称（</span><em>function name</em><span style="line-height: 1.5;">），在函数表达式中可省略它，从而创建匿名函数（</span><em>anonymous</em><span style="line-height: 1.5;"> functions）。</span>一个函数表达式可以被用作一个IIFE（Immediately Invoked Function Expression，即时调用的函数表达式），它一旦定义就运行。<span style="line-height: 1.5;">更多信息请查看</span><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope" style="line-height: 1.5;">函数</a><span style="line-height: 1.5;">。</span></p>
+<p>函数表达式（function expression）非常类似于函数声明（function statement）（详情查看<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/function">函数声明</a>），并且两者拥有几乎相同的语法。函数表达式与函数声明的最主要区别是函数名称（<em>function name</em>），在函数表达式中可省略它，从而创建匿名函数（<em>anonymous</em> functions）。一个函数表达式可以被用作一个IIFE（Immediately Invoked Function Expression，即时调用的函数表达式），它一旦定义就运行。更多信息请查看<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope">函数</a>。</p>
 
 <h3 id="函数表达式提升_(Function_expression_hoisting)"> 函数表达式提升 (Function expression hoisting)</h3>
 
 <p>JavaScript中的函数表达式没有提升,不像函数声明,你在定义函数表达式之前不能使用函数表达式:</p>
 
-<pre class="brush: js"><code><font color="#333333" face="Open Sans, arial, sans-serif" size="3"><span style="background-color: #ffffff; white-space: normal;"> </span></font>notHoisted(); // TypeError: notHoisted is not a function
+<pre class="brush: js"><code> notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function() {
    console.log('bar');
@@ -120,57 +120,9 @@ console.log(bar === baz); // false (errors because baz == undefined)</code>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Functions_and_function_scope", "Functions and function scope")}}</li>
