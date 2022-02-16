@@ -1,13 +1,6 @@
 ---
 title: '<marquee> : l''élément de fronton (obsolète)'
 slug: Web/HTML/Element/marquee
-tags:
-  - Element
-  - HTML
-  - Non-standard
-  - Obsolete
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/marquee
 ---
 {{HTMLRef}}{{non-standard_header}}{{obsolete_header}}
