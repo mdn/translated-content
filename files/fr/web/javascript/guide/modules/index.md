@@ -78,7 +78,7 @@ Il n'y a pas de problème si vous utilisez déjà un tel environnement ou si vou
 
 Aussi, à des fins d'apprentissage et de portabilité, nous avons décidé de conserver l'extension `.js` ici.
 
-Si la distinction apportée par l'usage de `.mjs` pour identifier les modules (vs `.js` pour les fichiers JavaScript normaux) vous est utiles, vous pouvez toujours utiliser l'extension `.mjs` pour le développement et convertir cette extension en `.js` lors de la compilation.
+Si la distinction apportée par l'usage de `.mjs` pour identifier les modules (vs `.js` pour les fichiers JavaScript normaux) vous est utile, vous pouvez toujours utiliser l'extension `.mjs` pour le développement et convertir cette extension en `.js` lors de la compilation.
 
 On notera que&nbsp;:
 
@@ -123,7 +123,7 @@ Lorsque des fonctionnalités sont exportées par un premier module, on peut les 
 import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
 ```
 
-On utilise ici l'instruction [`import`](/fr/docs/Web/JavaScript/Reference/Statements/import), suivi d'une liste d'identifiants séparées par des virgules et délimitée par des accolades, suivie du mot-clé `from` puis du chemin vers le fichier du module. Le chemin est relatif à la racine du site. Dans notre cas, pour `basic-module`, on écrira `/js-examples/modules/basic-modules`.
+On utilise ici l'instruction [`import`](/fr/docs/Web/JavaScript/Reference/Statements/import), suivie d'une liste d'identifiants séparés par des virgules et délimitée par des accolades, suivie du mot-clé `from` puis du chemin vers le fichier du module. Le chemin est relatif à la racine du site. Dans notre cas, pour `basic-module`, on écrira `/js-examples/modules/basic-modules`.
 
 Ici, nous avons écrit le chemin d'une façon légèrement différente&nbsp;: on utilise le point (`.`) afin d'indiquer « l'emplacement courant », suivi du chemin vers le fichier. Cela permet d'éviter d'avoir à écrire l'intégralité du chemin à chaque fois, c'est aussi plus court et cela permet de déplacer le script et le modules sans avoir à modifier les scripts.
 
