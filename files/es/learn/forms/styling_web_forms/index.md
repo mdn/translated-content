@@ -6,16 +6,16 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
 {{LearnSidebar}}
 
-En este artículo aprenderemos como utilizar [CSS](/es/docs/Web/CSS) con formularios [HTML](/es/docs/Web/HTML) para hacerlos más atractivos. Aunque parezca extraño, esto es algo que puede llegar a ser complicado. Por razones históricas y técnicas, los widgets de formulario no suelen llevarse bien con CSS. Por este motivo, muchos desarrolladores prefieren [construir sus propios widgets](/es/docs/Learn/Forms/How_to_build_custom_form_widgets) para tener el control de su aspecto en vez de utilizar los nativos. De todas formas, con los navegadores modernos, los diseñadores web cada vez tienen más control sobre el diseño de los elementos de formulario. Vamos a profundizar en esto.
+En los artículos anteriores vimos todo el HTML que necesitas para crear y estructurar tus formularios HTML. En este artículo veremos como usar [CSS](/es/docs/Web/CSS) para estilizar nuestros formularios. Esto historicamente ha sido díficil — cada control tiene un nivel de dificultad distinta — pero se esta volviendo más fácil a medida de que los navegadores antiguos son retirados, y los modernos nos abren más posibilidades. 
 
 ## ¿Porqué es tan difícil aplicar estilos a formularios con CSS?
-En los principios de la Web —allá por 1995 — se añadieron los controles de formulario en la [2ª especificación HTML](https://www.ietf.org/rfc/rfc1866.txt). Debido a la complejidad de los widgets de formulario, los implementadores prefirieron dejar que el sistema operativo subyacente se encargara de su manejo y presentación.
+Se añadieron los controles de formulario en la [2ª especificación HTML](https://www.ietf.org/rfc/rfc1866.txt) en el 1995; CSS fue lanzado a finales del 1996, y ningún navegador lo implementó correctamente por años. Los navegadores le dejaban el trabajo de manejar y renderizar los formularios.
 
-Pocos años después, se creó **CSS y lo que era una necesidad técnica** — es decir, el uso de widgets nativos para implementar controles de formulario, empezó a requerir estilizado. Y en los primeros días de CSS, el estilizado de formularios no fue una prioridad.
+Aun con CSS permitiendo estilizar HTML, los fabricantes de navegadores han sido — y son, hasta el día de hoy — reacios a permitir el estilizado de estos porque los usuarios estaban acostumbrados al estilo de sus plataformas.
 
-Por otra parte, como los usuarios estaban acostumbrados a la apariencia visual de sus plataformas respectivas, los fabricantes de navegadores fueron reacios a hacer que los controles de formularios pudieran recibir estilos.
+Esto ha cambiado. Los dueños de los sitios web quieren estilos que encajen con el diseño de sus páginas más que nunca, y la plataforma web ha cambiado para hacer esto posible.
 
-Hoy en día, ni siquiera uno solo de los navegadores actuales implementa **completamente** CSS 2.1. Afortunadamente, con el tiempo, los fabricantes de navegadores han ido mejorado su soporte a CSS para los elementos de formulario e, incluso considerando que su usabilidad tiene mala reputación, actualmente, ya se puede usar CSS para estilizar **[formularios HTML](/es/docs/HTML/Forms)**
+Para algunos controles, todavía es díficil reconstruirlos para permitir que se puedan estilizar, pero ya podemos usar CSS para estilizar muchas partes de los formularios, pero hay que estar atentos; tienes que tener cuidado para no romper la funcionalidad de este.
 
 ### No todos los widgets se crean igual con CSS
 Actualmente aun se encuentran dificultades cuando se utiliza CSS con formularios; estos problemas se pueden dividir en tres categorías.
