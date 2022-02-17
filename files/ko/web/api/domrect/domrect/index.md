@@ -6,41 +6,35 @@ tags:
   - Constructor
   - DOM Reference
   - DOMRect
-  - Experimental
   - Geometry
   - Reference
 browser-compat: api.DOMRect.DOMRect
+translation_of: Web/API/DOMRect/DOMRect
 ---
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{APIRef("Geometry Interfaces")}}
 
 **`DOMRect()`** 생성자는 새로운 {{domxref("DOMRect")}} 객체를 생성합니다.
 
 ## 구문
 
 ```js
-var myDOMRect = new DOMRect(x, y, width, height);
+new DOMRect(x, y, width, height);
 ```
 
-### 파라미터
+### 매개변수
 
-- x
-  - : `DOMRect`의 오리진 `x`좌표.
-- y
-  - : `DOMRect`의 오리진 `y`좌표.
-- width
-  - : `DOMRect`의 너비.
-- height
-  - : `DOMRect`의 높이.
+- `x`
+  - : `DOMRect` 원점의 X 좌표입니다.
+- `y`
+  - : `DOMRect` 원점의 Y 좌표입니다.
+- `width`
+  - : `DOMRect`의 너비입니다.
+- `height`
+  - : `DOMRect`의 높이입니다.
 
-## 예제
+### 반환 값
 
-새로운 `DOMRect`를 생성하려면 다음과 같이 한 줄의 코드를 실행하면 됩니다.
-
-```js
-myDOMRect = new DOMRect(0,0,100,100);
-// 콘솔에서 'myDOMRect'를 실행하면 다음을 반환합니다
-// DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
-```
+새로운 {{domxref("DOMRect")}} 객체.
 
 ## 명세
 
@@ -54,3 +48,4 @@ myDOMRect = new DOMRect(0,0,100,100);
 
 - {{domxref("DOMPoint")}}
 - {{domxref("DOMRect")}}
+- {{domxref("DOMRect.fromRect()")}}

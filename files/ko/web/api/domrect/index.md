@@ -4,7 +4,6 @@ slug: Web/API/DOMRect
 tags:
   - API
   - DOM
-  - DOM Reference
   - DOMRect
   - Geometry
   - Geometry Interfaces
@@ -12,14 +11,15 @@ tags:
   - Rectangle
   - Reference
 browser-compat: api.DOMRect
+translation_of: Web/API/DOMRect
 ---
-{{draft}}{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}
 
-**`DOMRect`**는 사각형의 크기와 위치를 나타냅니다.
+**`DOMRect`** 인터페이스는 직사각형의 크기와 위치를 나타냅니다.
 
-`DOMRect`가 표현하는 박스의 타입은 이를 반환한 메서드나 속성에 의해 정해집니다. 예를 들어, WebVR API의 {{domxref("VREyeParameters.renderRect")}}는 렌더링되어야 할 헤드 마운트 디스플레이의 한쪽 눈에 대한 비주얼을 [canvas](/ko/docs/Web/API/HTMLCanvasElement)의 뷰포트로 지정합니다.
+`DOMRect`가 나타내는 사각형의 유형은 `DOMRect`를 반환한 메서드나 속성이 지정합니다. 예를 들어 WebVR API의 {{domxref("VREyeParameters.renderRect")}}는, 헤드 마운트 디스플레이에서 한쪽 눈의 뷰포트가 [캔버스](/ko/docs/Web/API/HTMLCanvasElement)의 어디에 위치하는지 나타냅니다.
 
-부모인 {{domxref("DOMRectReadOnly")}}로부터 상속받습니다.
+부모인 {{domxref("DOMRectReadOnly")}}을 상속합니다.
 
 {{InheritanceDiagram}}
 
@@ -30,28 +30,28 @@ browser-compat: api.DOMRect
 
 ## 속성
 
-_`DOMRect`는 부모인 {{domxref("DOMRectReadOnly")}}로부터 상속받습니다. 차이점은 DomRect가 더 이상 읽기 전용이 아니라는 것입니다._
+부모인 {{domxref("DOMRectReadOnly")}}의 속성을 상속합니다. 읽기 전용 속성이 아니라는 차이점이 있습니다.
 
 - {{domxref("DOMRectReadOnly.x")}}
-  - : `DOMRect`의 오리진(보통 사각형의 왼쪽 상단 코너) x 좌표.
+  - : `DOMRect` 원점의 X 좌표입니다. 원점은 보통 직사각형의 왼쪽 상단 꼭지점입니다.
 - {{domxref("DOMRectReadOnly.y")}}
-  - : `DOMRect`의 오리진(보통 사각형의 왼쪽 상단 코너) y 좌표.
+  - : `DOMRect` 원점의 Y 좌표입니다. 원점은 보통 직사각형의 왼쪽 상단 꼭지점입니다.
 - {{domxref("DOMRectReadOnly.width")}}
-  - : `DOMRect`의 너비.
+  - : `DOMRect`의 너비입니다.
 - {{domxref("DOMRectReadOnly.height")}}
-  - : `DOMRect`의 높이.
+  - : `DOMRect`의 높이입니다.
 - {{domxref("DOMRectReadOnly.top")}}
-  - : `DOMRect`의 상단 좌표를 반환합니다(`height`가 음수라면 `y`, 또는 `y + height`와 같은 값을 갖습니다).
+  - : `DOMRect` 위쪽 모서리의 Y 좌표입니다. `y` 또는, `height`가 음수인 경우, `y + height`와 같은 값입니다.
 - {{domxref("DOMRectReadOnly.right")}}
-  - : `DOMRect`의 오른쪽 좌표를 반환합니다(`width`가 음수라면 `x + width`, 또는 `x`와 같은 값을 갖습니다).
+  - : `DOMRect` 오른쪽 모서리의 X 좌표입니다. `x` 또는, `width`가 음수인 경우, `x + height`와 같은 값입니다.
 - {{domxref("DOMRectReadOnly.bottom")}}
-  - : `DOMRect`의 하단 좌표를 반환합니다(`height`가 음수라면 `y + height`, 또는 `y`와 같은 값을 갖습니다).
+  - : `DOMRect` 아래쪽 모서리의 Y 좌표입니다. `y + height` 또는, `height`가 음수인 경우, `y`와 같은 값입니다.
 - {{domxref("DOMRectReadOnly.left")}}
-  - : `DOMRect`의 왼쪽 좌표를 반환합니다(`width`가 음수라면 `x`, 또는 `x + width`와 같은 값을 갖습니다).
+  - : `DOMRect` 왼쪽 모서리의 X 좌표입니다. `x + width` 또는, `width`가 음수인 경우, `x`와 같은 값입니다.
 
 ## 메서드
 
-_`DOMRect`는 부모인 {{domxref("DOMRectReadOnly")}}로부터 메서드를 상속받습니다._
+부모인 {{domxref("DOMRectReadOnly")}}의 메서드를 상속합니다.
 
 ## 정적 메서드
 
