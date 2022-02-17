@@ -6,9 +6,9 @@ original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Utiliser_plusieurs_arrière-p
 ---
 {{CSSRef}}
 
-Avec [CSS](/fr/docs/Web/CSS), on peut appliquer plusieurs arrière-plans à des éléments. Ceux-ci seront empilés les uns sur les autres (le premier de la liste étant le plus « haut » dans la pile et le dernier étant le plus « bas ». Seul le dernier arrière-plan peut décrire une couleur.
+Avec [CSS](/fr/docs/Web/CSS), on peut appliquer plusieurs arrière-plans à des éléments. Ceux-ci seront empilés les uns sur les autres (le premier de la liste étant le plus «&nbsp;haut&nbsp;» dans la pile et le dernier étant le plus «&nbsp;bas&nbsp;». Seul le dernier arrière-plan peut décrire une couleur.
 
-Pour cela, il suffit simplement d'utiliser une liste de valeur avec {{cssxref("background")}} :
+Pour cela, il suffit d'utiliser une liste de valeur avec [`background`](/fr/docs/Web/CSS/background)&nbsp;:
 
 ```css
 .maClasse {
@@ -16,38 +16,42 @@ Pour cela, il suffit simplement d'utiliser une liste de valeur avec {{cssxref("b
 }
 ```
 
-Cela fonctionne aussi bien avec la propriété raccourcie {{cssxref("background")}} qu'avec les propriétés détaillées, exception faite de {{cssxref("background-color")}}. On peut donc utiliser une liste de valeurs, chacune pour un arrière-plan différent, pour les propriétés suivantes : {{cssxref("background")}}, {{cssxref("background-attachment")}}, {{cssxref("background-clip")}},` `{{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}.
+Cela fonctionne aussi bien avec la propriété raccourcie [`background`](/fr/docs/Web/CSS/background) qu'avec les propriétés détaillées, exception faite de [`background-color`](/fr/docs/Web/CSS/background-color). On peut donc utiliser une liste de valeurs, chacune pour un arrière-plan différent, pour les propriétés suivantes : [`background`](/fr/docs/Web/CSS/background), [`background-attachment`](/fr/docs/Web/CSS/background-attachment), [`background-clip`](/fr/docs/Web/CSS/background-clip),` `[`background-image`](/fr/docs/Web/CSS/background-image), [`background-origin`](/fr/docs/Web/CSS/background-origin), [`background-position`](/fr/docs/Web/CSS/background-position), [`background-repeat`](/fr/docs/Web/CSS/background-repeat), [`background-size`](/fr/docs/Web/CSS/background-size).
 
 ## Exemples
 
-Dans cet exemple, on cumule trois arrière-plans : le logo de Firefox, un dégradé linéaire (cf. {{cssxref("linear-gradient")}}) et une image de bulles.
+Dans cet exemple, on cumule trois arrière-plans&nbsp;: le logo de Firefox, une image de bulles et un dégradé linéaire (cf. [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient())).
 
 ### CSS
 
 ```css
-.exemple_multi_ar {
+.multi-bg-example {
   width: 100%;
   height: 400px;
-  background-image: url(https://mdn.mozillademos.org/files/11305/firefox.png), url(https://mdn.mozillademos.org/files/11307/bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: bottom right, left, right;
+  background-image: url(firefox.png),
+      url(bubbles.png),
+      linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat,
+      no-repeat,
+      no-repeat;
+  background-position: bottom right,
+      left,
+      right;
 }
 ```
 
 ### HTML
 
 ```html
-<div class="exemple_multi_ar"></div>
+<div class="multi-bg-example"></div>
 ```
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples','100%','400')}}
+{{EmbedLiveSample('','100%','440')}}
 
-Comme on peut le voir ici, le logo qui est le premier élément de la liste apparaît en dessus, il est suivi par le dégradé puis par les bulles. Chacune des propriétés ({{cssxref("background-repeat")}} et {{cssxref("background-position")}}) s'applique aux arrière-plans correspondant (la première valeur de la liste pour le premier arrière-plan, etc.).
-
-> **Note :** Si l'image n'apparaît pas sous CodePen, cliquez sur le bouton _Tidy_ de la section CSS.
+Comme on peut le voir ici, le logo qui est le premier élément de la liste apparaît en-dessus, il est suivi par les bulles puis par le dégradé. Chacune des propriétés ([`background-repeat`](/fr/docs/Web/CSS/background-repeat) et [`background-position`](/fr/docs/Web/CSS/background-position)) s'applique aux arrière-plans correspondant (la première valeur de la liste pour le premier arrière-plan, etc.).
 
 ## Voir aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/Utilisation_de_dégradés_CSS)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
