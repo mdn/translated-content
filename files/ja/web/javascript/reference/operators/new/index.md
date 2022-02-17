@@ -3,179 +3,179 @@ title: new 演算子
 slug: Web/JavaScript/Reference/Operators/new
 tags:
   - JavaScript
-  - Left-hand-side expressions
-  - Operator
-  - Reference
+  - 言語機能
   - 左辺値式
   - 演算子
+  - リファレンス
+browser-compat: javascript.operators.new
 translation_of: Web/JavaScript/Reference/Operators/new
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><span class="seoSummary"><strong><code>new</code> 演算子</strong>を使用すると、開発者はユーザー定義のオブジェクト型やコンストラクタ関数を持つ組み込みオブジェクト型のインスタンスを作成することができます。</span></p>
+**`new` 演算子**を使用すると、開発者はユーザー定義のオブジェクト型やコンストラクター関数を持つ組み込みオブジェクト型のインスタンスを作成することができます。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">new <var>constructor</var>[([<var>arguments</var>])]</pre>
+```js
+new constructor[([arguments])]
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>constructor</var></code></dt>
- <dd>オブジェクトインスタンスの型を指定するクラスまたは関数です。</dd>
-</dl>
+- `constructor`
+  - : オブジェクトインスタンスの型を指定するクラスまたは関数です。
+- `arguments`
+  - : `constructor` が呼び出される際の引数のリストです。
 
-<dl>
- <dt><code><var>arguments</var></code></dt>
- <dd><code><var>constructor</var></code> が呼び出される際の引数のリストです。</dd>
-</dl>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+**`new`** 演算子は次のことを行います。
 
+1. 空のプレーンな JavaScript オブジェクトを生成します。
+2. 新しいオブジェクトにプロパティ (`__proto__`) を追加し、コンストラクター関数のプロトタイプオブジェクトに結びつけます。
 
-<p><strong><code>new</code></strong> 演算子は次のことを行います。</p>
+    > **Note:** コンストラクター関数のプロトタイプに追加されたプロトタイプやオブジェクトは、そのためそのコンストラクター関数で（`new` を使用して）生成されたすべてのインスタンスからアクセスできます。
 
-<ol>
- <li>空白のプレーンな JavaScript オブジェクトを作成します。</li>
- <li>他のオブジェクトを親プロトタイプとすることで、新しく作成されたオブジェクトと他のオブジェクトをリンク（コンストラクターを設定）します。
-</li>
- <li>ステップ 1 で新しく作成されたオブジェクトを <code>this</code> コンテキストとして渡します。</li>
- <li>関数がオブジェクトを返さない場合は <code>this</code> を返します。</li>
-</ol>
+3. 新しく生成されたオブジェクトインスタンスを `this` コンテキストとして結びつけます。
+    （すなわち、コンストラクター関数内の `this` へのすべての参照は、最初のステップで作成されたオブジェクトを参照するようになります。）
+4. 関数がオブジェクトを返さない場合は `this` を返します。
 
-<p>ユーザー定義のオブジェクトを生成するには、2 つのステップが必要です。</p>
+ユーザー定義のオブジェクトを生成するには、2 つのステップが必要です。
 
-<ol>
- <li>関数を記述して、オブジェクトの型を定義します。</li>
- <li><code>new</code> 演算子を使用して、オブジェクトのインスタンスを生成します。</li>
-</ol>
+1. オブジェクトの名前とプロパティを指定する関数を書くことで、オブジェクトの型を定義します。
+    例えば、オブジェクト `Foo` を生成するコンストラクター関数は以下のようになります。
 
-<p>オブジェクトの型を定義するために、オブジェクトの名称やプロパティを指定する、オブジェクトの型のための関数を作成します。オブジェクトは、別のオブジェクトそのものをプロパティとして持つことができます。後述の例をご覧ください。</p>
+    ```js
+    function Foo(bar1, bar2) {
+      this.bar1 = bar1;
+      this.bar2 = bar2;
+    }
+    ```
 
-<p>コード <code>new <em>Foo</em>(...)</code> を実行すると、以下の処理が行われます:</p>
+2. `new` 演算子を使用して、オブジェクトのインスタンスを生成します。
 
-<ol>
- <li><code><em>Foo</em>.prototype</code> を継承する、新しいオブジェクトを生成します。</li>
- <li>指定した引数を伴ってコンストラクター関数 <code><em>Foo</em></code> が呼び出され、<code><a href="/ja/docs/Web/JavaScript/Reference/Operators/this">this</a></code> が新たに生成したオブジェクトに紐づけられます。<code>new <em>Foo</em></code> は <code>new <em>Foo</em>()</code> と等価です。すなわち、引数を指定しない場合は <code><em>Foo</em></code> が引数なしで呼び出されます。</li>
- <li>コンストラクター関数が返すオブジェクト (null, false, 3.1415 などのプリミティブ型ではないもの) が、<code>new</code> 式の結果になります。コンストラクター関数が明示的にオブジェクトを返さない場合は、ステップ 1 で生成したオブジェクトを代わりに使用します。(通常、コンストラクターは値を返しませんが、通常のオブジェクト生成プロセスをオーバーライドしたい場合はそのようにすることができます。)</li>
-</ol>
+    ```js
+    var myFoo = new Foo('Bar 1', 2021);
+    ```
 
-<p>以前生成したオブジェクトに、いつでもプロパティを追加できます。例えば <code>car1.color = "black"</code> という構文は、<code>color</code> プロパティを <code>car1</code> に追加して、値として "<code>black</code>" を代入します。しかし、これは他のオブジェクトには影響を与えません。同じ型のすべてのオブジェクトに新たなプロパティを追加するには、<code>Car</code> オブジェクト型の定義に対してプロパティを追加しなければなりません。</p>
+> **Note:** オブジェクトは、別のオブジェクトそのものをプロパティとして持つことができます。後述の例をご覧ください。
 
-<p><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype">Function.prototype</a></code> プロパティを使用して、以前定義したオブジェクトに対して共有のプロパティを追加できます。これはオブジェクト型のあるインスタンスのプロパティではなく、関数を使用して生成したすべてのオブジェクトで共有するプロパティを定義します。以下のコードでは <code>Car</code> 型のオブジェクトすべてに対して color プロパティを値 <code>"original color"</code> で定義しています。また、インスタンスオブジェクト <code>car1</code> の color プロパティに文字列の値 "<code>black</code>" を上書きしています。詳しくは <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype">prototype</a> をご覧ください。</p>
+コード `new Foo(...)` を実行すると、以下の処理が行われます。
 
-<pre class="brush: js notranslate">function Car() {}
+1. `Foo.prototype` を継承する、新しいオブジェクトを生成します。
+2. 指定した引数を伴ってコンストラクター関数 `Foo` が呼び出され、 [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) が新たに生成したオブジェクトに紐づけられます。`new Foo` は `new Foo()` と等価です。すなわち、引数を指定しない場合は `Foo` が引数なしで呼び出されます。
+3. コンストラクター関数が返すオブジェクト (null, false, 3.1415 などのプリミティブ型ではないもの) が、 `new` 式の結果になります。コンストラクター関数が明示的にオブジェクトを返さない場合は、ステップ 1 で生成したオブジェクトを代わりに使用します（通常、コンストラクターは値を返しませんが、通常のオブジェクト生成プロセスをオーバーライドしたい場合はそのようにすることができます）。
+
+以前生成したオブジェクトに、いつでもプロパティを追加できます。例えば `car1.color = "black"` という構文は、`color` プロパティを `car1` に追加して、値として "`black`" を代入します。
+
+しかし、これは他のオブジェクトには影響を与えません。同じ型のすべてのオブジェクトに新たなプロパティを追加するには、 `Car` オブジェクト型の定義に対してプロパティを追加しなければなりません。
+
+[`Function.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティを使用して、以前定義したオブジェクトに対して共有のプロパティを追加できます。これはオブジェクト型のあるインスタンスのプロパティではなく、関数を使用して生成したすべてのオブジェクトで共有するプロパティを定義します。以下のコードでは `Car` 型のオブジェクトすべてに対して color プロパティを値 `"original color"` で定義しています。また、インスタンスオブジェクト `car1` の color プロパティに文字列の値 "`black`" を上書きしています。詳しくは[プロトタイプ](/ja/docs/Learn/JavaScript/Objects/Object_prototypes)をご覧ください。
+
+```js
+function Car() {}
 car1 = new Car();
 car2 = new Car();
 
 console.log(car1.color);    // undefined
 
-Car.prototype.color = "original color";
-console.log(car1.color);    // original color
+Car.prototype.color = 'original color';
+console.log(car1.color);    // 'original color'
 
 car1.color = 'black';
-console.log(car1.color);   // black
+console.log(car1.color);    // 'black'
 
-console.log(car1.__proto__.color) //original color
-console.log(car2.__proto__.color) //original color
-console.log(car1.color)  // black
-console.log(car2.color) // original color
-</pre>
+console.log(Object.getPrototypeOf(car1).color); // 'original color'
+console.log(Object.getPrototypeOf(car2).color); // 'original color'
+console.log(car1.color);   // 'black'
+console.log(car2.color);   // 'original color'
+```
 
-<div class="note">
-<p><code>new</code> 演算子を記述しなかった場合、<strong>コンストラクターは通常の関数として扱われ</strong>、<em>オブジェクトを作成しません</em>。その際、<code>this</code> の値も異なるものになります。</p>
-</div>
+> **Note:** コンストラクター関数は通常の関数と同様に（つまり `new` 演算子なしで）呼び出すことができますが、この場合、新しいオブジェクトは作成されず、`this` の値も異なります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Object_type_and_object_instance" name="Object_type_and_object_instance">オブジェクトの型とオブジェクトのインスタンス</h3>
+### オブジェクトの型とオブジェクトのインスタンス
 
-<p>自動車用のオブジェクト型を作成したいとします。このオブジェクト型は <code>Car</code> という名前で、make、model、year というプロパティを持たせます。そのために、以下の関数を記述します。</p>
+自動車用のオブジェクト型を作成したいとします。このオブジェクト型は `Car` という名前で、make、model、year というプロパティを持たせます。そのために、以下の関数を記述します。
 
-<pre class="brush: js notranslate">function Car(make, model, year) {
+```js
+function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
 }
-</pre>
+```
 
-<p>これで、以下のように <code>mycar</code> という名前のオブジェクトを生成できます。</p>
+これで、以下のようにして `myCar` という名前のオブジェクトを生成できます。
 
-<pre class="brush: js notranslate">var mycar = new Car('Eagle', 'Talon TSi', 1993);
-</pre>
+```js
+var myCar = new Car('Eagle', 'Talon TSi', 1993);
+```
 
-<p>この構文は <code>mycar</code> を生成して、プロパティに特定の値を代入しています。<code>mycar.make</code> の値は文字列 "Eagle"、<code>mycar.year</code> の値は整数 1993 などとなります。</p>
+この構文は `myCar` を生成して、プロパティに特定の値を代入しています。`myCar.make` の値は文字列 "Eagle"、`myCar.year` の値は整数 1993 などとなります。
 
-<p><code>new</code> を呼び出して、<code>car</code> オブジェクトをいくつも生成できます。例えば、</p>
+`new` を呼び出して、`car` オブジェクトをいくつも生成できます。例えば、
 
-<pre class="brush: js notranslate">var kenscar = new Car('Nissan', '300ZX', 1992);
-</pre>
+```js
+var kensCar = new Car('Nissan', '300ZX', 1992);
+```
 
-<h3 id="Object_property_that_is_itself_another_object" name="Object_property_that_is_itself_another_object">それ自身が別のオブジェクトであるプロパティ</h3>
+### それ自身が別のオブジェクトであるプロパティ
 
-<p>以下のように、<code>Person</code> という名前のオブジェクトを定義します:</p>
+以下のように、`Person` という名前のオブジェクトを定義します。
 
-<pre class="brush: js notranslate">function Person(name, age, sex) {
+```js
+function Person(name, age, sex) {
   this.name = name;
   this.age = age;
   this.sex = sex;
 }
-</pre>
+```
 
-<p>そして、以下のように <code>Person</code> オブジェクトのインスタンスを新たに 2 つ生成します。</p>
+そして、以下のように `Person` オブジェクトのインスタンスを新たに 2 つ生成します。
 
-<pre class="brush: js notranslate">var rand = new Person('Rand McNally', 33, 'M');
+```js
+var rand = new Person('Rand McNally', 33, 'M');
 var ken = new Person('Ken Jones', 39, 'M');
-</pre>
+```
 
-<p>さらに <code>Car</code> の定義を、以下のように <code>Person</code> オブジェクトを値としてとる <code>owner</code> プロパティを持つように書き換えます:</p>
+さらに `Car` の定義を、以下のように `Person` オブジェクトを値としてとる `owner` プロパティを持つように書き換えます:
 
-<pre class="brush: js notranslate">function Car(make, model, year, owner) {
+```js
+function Car(make, model, year, owner) {
   this.make = make;
   this.model = model;
   this.year = year;
   this.owner = owner;
 }
-</pre>
+```
 
-<p>新しいオブジェクトを生成するため、以下のように使用します。</p>
+新しいオブジェクトを生成するため、以下のように使用します。
 
-<pre class="brush: js notranslate">var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
+```js
+var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
 var car2 = new Car('Nissan', '300ZX', 1992, ken);
-</pre>
+```
 
-<p>この構文では新しいオブジェクトを生成するときに文字列や整数のリテラル値を渡す代わりに、owner のパラメータとしてオブジェクト <code>rand</code> や <code>ken</code> を渡しています。<code>car2</code> の所有者名を調べるには、以下のようにしてプロパティにアクセスできます。</p>
+この構文では新しいオブジェクトを生成するときに文字列や整数のリテラル値を渡す代わりに、owner の引数としてオブジェクト `rand` や `ken` を渡しています。`car2` の所有者名を調べるには、以下のようにしてプロパティにアクセスできます。
 
-<pre class="brush: js notranslate">car2.owner.name
-</pre>
+```js
+car2.owner.name
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-new-operator', 'The new Operator')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("javascript.operators.new")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{jsxref("Function")}}</li>
- <li>{{jsxref("Reflect.construct()")}}</li>
- <li>{{jsxref("Object.prototype")}}</li>
-</ul>
+- {{jsxref("Function")}}
+- {{jsxref("Reflect.construct()")}}
+- {{jsxref("Object")}}
