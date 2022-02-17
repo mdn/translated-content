@@ -160,5 +160,5 @@ bCondition1 || bCondition2 && bCondition3
 ## 関連情報
 
 - {{jsxref("Boolean")}}
-- {{Glossary("Truthy")}}
-- {{Glossary("Falsy")}}
+- {{Glossary("Truthy", "真値")}}
+- {{Glossary("Falsy", "偽値")}}
