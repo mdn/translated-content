@@ -3,105 +3,93 @@ title: 論理否定 (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
 tags:
   - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-  - 演算子
   - 言語機能
   - 論理演算子
+  - 演算子
+  - リファレンス
+browser-compat: javascript.operators.logical_not
 translation_of: Web/JavaScript/Reference/Operators/Logical_NOT
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>論理否定 (<code>!</code>) 演算子 (論理反転、否定) は、真値を取ると偽値になり、その逆も同様です。これは通常 {{jsxref("Boolean")}} (論理型) の値に使用されます。論理型以外の値に使用した場合、単一のオペランドが <code>true</code> に変換できる場合は <code>false</code> を返し、それ以外は <code>true</code> を返します。</p>
+論理否定 (`!`) 演算子 (論理反転、否定) は、真値を取ると偽値になり、その逆も同様です。これは通常論理型 (ブール型) の値に使用されます。論理型以外の値に使用した場合、単一のオペランドが `true` に変換できる場合は `false` を返し、それ以外は `true` を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-logical-not.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-logical-not.html", "shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+!expr
+```
 
-<pre class="syntaxbox notranslate">!<var>expr</var>
-</pre>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+単一のオペランドが `true` に変換できる場合は `false` を返し、それ以外は `true` を返します。
 
-<p>単一のオペランドが <code>true</code> に変換できる場合は <code>false</code> を返し、それ以外は <code>true</code> を返します。</p>
+ある値が `true` に変換できる場合、その値は真値 ({{Glossary("truthy")}}) と呼ばれます。ある値が `false` に変換できる場合、その値は偽値 ({{Glossary("falsy")}}) と呼ばれます。
 
-<p>ある値が <code>true</code> に変換できる場合、その値は真値 ({{Glossary("truthy")}}) と呼ばれます。ある値が <code>false</code> に変換できる場合、その値は偽値 ({{Glossary("falsy")}}) と呼ばれます。</p>
+false に変換することができる式の例を示します。
 
-<p>false に変換することができる式の例を示します。</p>
+- `null`
+- `NaN`
+- `0`
+- 空文字列 (`""` または `''` または ` `` `)
+- `undefined`
 
-<ul>
- <li><code>null</code></li>
- <li><code>NaN</code></li>
- <li><code>0</code></li>
- <li>空文字列 (<code>""</code> または <code>''</code> または <code>``</code>)</li>
- <li><code>undefined</code></li>
-</ul>
+`!` 演算子は論理値以外のオペランドに対して使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型_boolean)に変換することが可能であるため、論理演算子と見なすことができます。返値 (または一般的な式) を対応する論理値に明示的に変換するには、二重の[否定演算子](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT)または {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
 
-<p><code>!</code> 演算子は論理値以外のオペランドに対して使用することができますが、返値が常に <a href="/ja/docs/Web/JavaScript/Data_structures#Boolean_type">boolean プリミティブ</a>に変換することが可能であるため、論理演算子と見なすことができます。返値 (または一般的な式) を対応する論理値に明示的に変換するには、二重の<a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT">否定演算子</a>または {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### 否定の使用
 
-<h3 id="Using_NOT" name="Using_NOT">否定の使用</h3>
+以下のコードは `!` (論理否定) 演算子の例を示しています。
 
-<p>以下のコードは <code>!</code> (論理否定) 演算子の例を示しています。</p>
+```js
+n1 = !true               // !t は false を返す
+n2 = !false              // !f は true を返す
+n3 = !''                 // !f は true を返す
+n4 = !'Cat'              // !t は false を返す
+```
 
-<pre class="brush: js notranslate">n1 = !true               // !t returns false
-n2 = !false              // !f returns true
-n3 = !''                 // !f returns true
-n4 = !'Cat'              // !t returns false</pre>
+### 二重否定 (`!!`)
 
-<h3 id="Double_NOT_!!" name="Double_NOT_!!">二重否定 (<code>!!</code>)</h3>
+複数の否定演算子を連続して使用することで、明示的にあらゆる値を対応する[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型_boolean)に変換することができます。変換は値の「真値性」または「偽値性」に基づいて行われます ({{Glossary("truthy")}} および {{Glossary("falsy")}} を参照)。
 
-<p>複数の否定演算子を連続して使用することで、明示的にあらゆる値を対応する<a href="/ja/docs/Web/JavaScript/Data_structures#Boolean_type">論理型プリミティブ</a>に変換することができます。変換は値の「真値性」または「偽値性」に基づいて行われます ({{Glossary("truthy")}} および {{Glossary("falsy")}} を参照)。</p>
+同じ変換は {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 関数を通じて行うこともできます。
 
-<p>同じ変換は {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 関数を通じて行うこともできます。</p>
+```js
+n1 = !!true                   // !!truthy は true を返す
+n2 = !!{}                     // !!truthy は true: *あらゆる*オブジェクトは真値になります...
+n3 = !!(new Boolean(false))   // ... .valueOF() が false の Boolean オブジェクトであっても
+n4 = !!false                  // !!falsy は false を返す
+n5 = !!""                     // !!falsy は false を返す
+n6 = !!Boolean(false)         // !!falsy は false を返す
+```
 
-<pre class="brush: js notranslate">n1 = !!true                   // !!truthy returns true
-n2 = !!{}                     // !!truthy returns true: <strong>any</strong> object is truthy...
-n3 = !!(new Boolean(false))   // ...even Boolean objects with a false <em>.valueOf()</em>!
-n4 = !!false                  // !!falsy returns false
-n5 = !!""                     // !!falsy returns false
-n6 = !!Boolean(false)         // !!falsy returns false</pre>
+### 否定同士の変換
 
-<h3 id="Converting_between_NOTs" name="Converting_between_NOTs">否定同士の変換</h3>
+以下の操作を**論理値**で行った場合、
 
-<p>以下の操作を<strong>論理値</strong>で行った場合、</p>
+```js
+!!bCondition
+```
 
-<pre class="brush: js notranslate">!!bCondition</pre>
+常に以下のものと等しくなります。
 
-<p>常に以下のものと等しくなります。</p>
+```js
+bCondition
+```
 
-<pre class="brush: js notranslate">bCondition</pre>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#prod-LogicalORExpression', 'Logical OR expression')}}</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Compat}}
 
-<p>{{Compat("javascript.operators.logical_or")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{jsxref("Boolean")}}</li>
- <li>{{Glossary("Truthy")}}</li>
- <li>{{Glossary("Falsy")}}</li>
-</ul>
+- {{jsxref("Boolean")}}
+- {{Glossary("Truthy", "真値")}}
+- {{Glossary("Falsy", "偽値")}}
