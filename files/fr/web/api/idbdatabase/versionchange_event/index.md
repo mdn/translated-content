@@ -1,12 +1,13 @@
 ---
 title: IDBDatabase.onversionchange
-slug: Web/API/IDBDatabase/onversionchange
+slug: Web/API/IDBDatabase/versionchange_event
 tags:
   - API
   - IndexedDB
   - Propriété
   - Reference
 translation_of: Web/API/IDBDatabase/onversionchange
+original_slug: Web/API/IDBDatabase/onversionchange
 ---
 {{APIRef("IndexedDB")}}
 

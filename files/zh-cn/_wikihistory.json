@@ -15987,7 +15987,7 @@
       "zquancai"
     ]
   },
-  "Web/API/IDBDatabase/onversionchange": {
+  "Web/API/IDBDatabase/versionchange_event": {
     "modified": "2020-10-15T22:17:00.625Z",
     "contributors": [
       "seawin"

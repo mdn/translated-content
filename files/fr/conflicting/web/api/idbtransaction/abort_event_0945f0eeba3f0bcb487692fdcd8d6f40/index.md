@@ -1,12 +1,14 @@
 ---
 title: IDBTransaction.onabort
-slug: Web/API/IDBTransaction/onabort
+slug: >-
+  conflicting/Web/API/IDBTransaction/abort_event_0945f0eeba3f0bcb487692fdcd8d6f40
 tags:
   - API
   - IndexedDB
   - Propriété
   - Reference
 translation_of: Web/API/IDBTransaction/onabort
+original_slug: Web/API/IDBTransaction/onabort
 ---
 {{APIRef("IndexedDB")}}
 
