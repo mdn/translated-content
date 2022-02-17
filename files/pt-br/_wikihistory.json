@@ -3695,8 +3695,29 @@
       "eliezerb"
     ]
   },
+  "Web/API/BatteryManager/chargingchange_event": {
+    "modified": "2019-03-23T23:16:56.594Z",
+    "contributors": [
+      "teoli",
+      "eliezerb"
+    ]
+  },
+  "Web/API/BatteryManager/chargingtimechange_event": {
+    "modified": "2019-03-23T23:16:56.942Z",
+    "contributors": [
+      "teoli",
+      "eliezerb"
+    ]
+  },
   "Web/API/BatteryManager/dischargingTime": {
     "modified": "2019-03-23T23:16:57.249Z",
+    "contributors": [
+      "teoli",
+      "eliezerb"
+    ]
+  },
+  "Web/API/BatteryManager/dischargingtimechange_event": {
+    "modified": "2019-03-23T23:16:54.139Z",
     "contributors": [
       "teoli",
       "eliezerb"
@@ -3709,28 +3730,7 @@
       "eliezerb"
     ]
   },
-  "Web/API/BatteryManager/onchargingchange": {
-    "modified": "2019-03-23T23:16:56.594Z",
-    "contributors": [
-      "teoli",
-      "eliezerb"
-    ]
-  },
-  "Web/API/BatteryManager/onchargingtimechange": {
-    "modified": "2019-03-23T23:16:56.942Z",
-    "contributors": [
-      "teoli",
-      "eliezerb"
-    ]
-  },
-  "Web/API/BatteryManager/ondischargingtimechange": {
-    "modified": "2019-03-23T23:16:54.139Z",
-    "contributors": [
-      "teoli",
-      "eliezerb"
-    ]
-  },
-  "Web/API/BatteryManager/onlevelchange": {
+  "Web/API/BatteryManager/levelchange_event": {
     "modified": "2019-03-23T23:16:53.281Z",
     "contributors": [
       "teoli",

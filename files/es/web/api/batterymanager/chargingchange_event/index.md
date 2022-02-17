@@ -1,6 +1,6 @@
 ---
 title: BatteryManager.onchargingchange
-slug: Web/API/BatteryManager/onchargingchange
+slug: Web/API/BatteryManager/chargingchange_event
 tags:
   - API
   - Battery API
@@ -9,6 +9,7 @@ tags:
   - Property
   - Reference
 translation_of: Web/API/BatteryManager/onchargingchange
+original_slug: Web/API/BatteryManager/onchargingchange
 browser-compat: api.BatteryManager.onchargingchange
 ---
 {{deprecated_header}}
@@ -64,4 +65,3 @@ navigator.getBattery().then(function(battery) {
 
 - {{domxref("BatteryManager")}}
 - {{domxref("Navigator.getBattery")}}
-

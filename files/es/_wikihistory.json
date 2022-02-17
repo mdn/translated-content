@@ -4899,6 +4899,14 @@
       "palfrei"
     ]
   },
+  "Web/API/BatteryManager/chargingchange_event": {
+    "modified": "2019-03-23T23:25:06.308Z",
+    "contributors": [
+      "fscholz",
+      "Pau_Ilargia",
+      "voylinux"
+    ]
+  },
   "Web/API/BatteryManager/dischargingTime": {
     "modified": "2019-03-23T23:27:15.312Z",
     "contributors": [
@@ -4918,15 +4926,7 @@
       "voylinux"
     ]
   },
-  "Web/API/BatteryManager/onchargingchange": {
-    "modified": "2019-03-23T23:25:06.308Z",
-    "contributors": [
-      "fscholz",
-      "Pau_Ilargia",
-      "voylinux"
-    ]
-  },
-  "Web/API/BatteryManager/onlevelchange": {
+  "Web/API/BatteryManager/levelchange_event": {
     "modified": "2019-03-23T23:25:08.174Z",
     "contributors": [
       "fscholz",

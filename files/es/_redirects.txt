@@ -1518,8 +1518,10 @@
 /es/docs/Web/API/BatteryManager.chargingTime	/es/docs/Web/API/BatteryManager/chargingTime
 /es/docs/Web/API/BatteryManager.dischargingTime	/es/docs/Web/API/BatteryManager/dischargingTime
 /es/docs/Web/API/BatteryManager.level	/es/docs/Web/API/BatteryManager/level
-/es/docs/Web/API/BatteryManager.onchargingchange	/es/docs/Web/API/BatteryManager/onchargingchange
-/es/docs/Web/API/BatteryManager.onlevelchange	/es/docs/Web/API/BatteryManager/onlevelchange
+/es/docs/Web/API/BatteryManager.onchargingchange	/es/docs/Web/API/BatteryManager/chargingchange_event
+/es/docs/Web/API/BatteryManager.onlevelchange	/es/docs/Web/API/BatteryManager/levelchange_event
+/es/docs/Web/API/BatteryManager/onchargingchange	/es/docs/Web/API/BatteryManager/chargingchange_event
+/es/docs/Web/API/BatteryManager/onlevelchange	/es/docs/Web/API/BatteryManager/levelchange_event
 /es/docs/Web/API/Blob.Blob	/es/docs/Web/API/Blob/Blob
 /es/docs/Web/API/CSSStyleSheet.insertRule	/es/docs/Web/API/CSSStyleSheet/insertRule
 /es/docs/Web/API/Canvas_API/Tutorial/Compositing/Ejemplo	/es/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
