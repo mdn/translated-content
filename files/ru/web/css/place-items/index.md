@@ -12,7 +12,7 @@ browser-compat: css.properties.place-items
 ---
 {{CSSRef}}
 
-Сокращенное свойство [CSS](/ru/docs/Web/CSS) **`place-items`** позволяет выравнивать элементы одновременно колонки и ряда (т.е. по свойствам {{CSSxRef("align-items")}} и {{CSSxRef("justify-items")}}) в соответствующей системе раскладки, такой как [гриды](/ru/docs/Web/CSS/CSS_Grid_Layout) или [флексбокс](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout). Если второе значение не задано, вместо него используется первое.
+Сокращённое свойство [CSS](/ru/docs/Web/CSS) **`place-items`** позволяет одновременно выравнивать элементы и колонки, и ряда (т.е. по свойствам {{CSSxRef("align-items")}} и {{CSSxRef("justify-items")}}) в соответствующей системе раскладки, такой как [гриды](/ru/docs/Web/CSS/CSS_Grid_Layout) или [флексбоксы](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout). Если задано одно значение, оно используется для выравнивания и в колонке, и в ряду.
 
 {{EmbedInteractiveExample("pages/css/place-items.html")}}
 
@@ -41,7 +41,7 @@ place-items: flex-end normal;
 place-items: left legacy;
 place-items: right normal;
 
-/* Выравнивание по базовой линии*/
+/* Выравнивание по базовой линии */
 place-items: baseline normal;
 place-items: first baseline legacy;
 place-items: last baseline normal;
@@ -56,9 +56,9 @@ place-items: unset;
 
 ### Значения
 
-Может быть записано одним из двух способов:
+Записывается одним из двух способов:
 
-- Одно и то же значение {{cssxref("align-items")}} используется для определения выравнивания как колонки, так и ряда.
+- Одно значение {{cssxref("align-items")}}, которое используется для определения выравнивания как колонки, так и ряда.
 - Значение {{cssxref("align-items")}}, определяющее выравнивание колонки, после которого следует значение {{cssxref("justify-items")}}, задающее выравнивание для ряда.
 
 ## Формальное определение
@@ -188,7 +188,7 @@ values.addEventListener('change', function (evt) {
 
 ### Выравнивание элементов в грид-контейнере
 
-В следующем грид-контейнере есть элементы, которые меньше грид-области, в которой они находятся, поэтому `place-items` будет выравнивать по оси колонки и оси ряда.
+В следующем грид-контейнере есть элементы, которые меньше грид-области, в которой они находятся, поэтому `place-items` будет выравнивать их по оси колонки и оси ряда.
 
 ```css hidden
 div > div {
