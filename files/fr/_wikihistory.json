@@ -17181,27 +17181,6 @@
       "gadgino"
     ]
   },
-  "Web/API/IDBDatabase/onabort": {
-    "modified": "2019-03-23T22:31:09.551Z",
-    "contributors": [
-      "SphinxKnight",
-      "gadgino"
-    ]
-  },
-  "Web/API/IDBDatabase/onerror": {
-    "modified": "2019-03-23T22:31:08.731Z",
-    "contributors": [
-      "SphinxKnight",
-      "gadgino"
-    ]
-  },
-  "Web/API/IDBDatabase/onversionchange": {
-    "modified": "2019-03-23T22:30:58.851Z",
-    "contributors": [
-      "SphinxKnight",
-      "gadgino"
-    ]
-  },
   "Web/API/IDBDatabase/transaction": {
     "modified": "2019-03-23T22:31:19.784Z",
     "contributors": [
@@ -17211,6 +17190,13 @@
   },
   "Web/API/IDBDatabase/version": {
     "modified": "2020-10-15T21:47:11.268Z",
+    "contributors": [
+      "SphinxKnight",
+      "gadgino"
+    ]
+  },
+  "Web/API/IDBDatabase/versionchange_event": {
+    "modified": "2019-03-23T22:30:58.851Z",
     "contributors": [
       "SphinxKnight",
       "gadgino"
@@ -17695,6 +17681,13 @@
       "gadgino"
     ]
   },
+  "Web/API/IDBTransaction/error_event": {
+    "modified": "2019-03-23T22:31:08.731Z",
+    "contributors": [
+      "SphinxKnight",
+      "gadgino"
+    ]
+  },
   "Web/API/IDBTransaction/mode": {
     "modified": "2019-03-23T22:34:37.380Z",
     "contributors": [
@@ -17706,27 +17699,6 @@
     "modified": "2019-03-23T22:34:32.499Z",
     "contributors": [
       "Faontetard",
-      "SphinxKnight",
-      "gadgino"
-    ]
-  },
-  "Web/API/IDBTransaction/onabort": {
-    "modified": "2019-03-23T22:34:39.344Z",
-    "contributors": [
-      "SphinxKnight",
-      "gadgino"
-    ]
-  },
-  "Web/API/IDBTransaction/oncomplete": {
-    "modified": "2019-03-23T22:34:31.462Z",
-    "contributors": [
-      "SphinxKnight",
-      "gadgino"
-    ]
-  },
-  "Web/API/IDBTransaction/onerror": {
-    "modified": "2019-03-23T22:34:27.556Z",
-    "contributors": [
       "SphinxKnight",
       "gadgino"
     ]
@@ -43004,6 +42976,34 @@
     "contributors": [
       "fscholz",
       "Kalwyn"
+    ]
+  },
+  "conflicting/Web/API/IDBTransaction/abort_event": {
+    "modified": "2019-03-23T22:31:09.551Z",
+    "contributors": [
+      "SphinxKnight",
+      "gadgino"
+    ]
+  },
+  "conflicting/Web/API/IDBTransaction/abort_event_0945f0eeba3f0bcb487692fdcd8d6f40": {
+    "modified": "2019-03-23T22:34:39.344Z",
+    "contributors": [
+      "SphinxKnight",
+      "gadgino"
+    ]
+  },
+  "conflicting/Web/API/IDBTransaction/complete_event": {
+    "modified": "2019-03-23T22:34:31.462Z",
+    "contributors": [
+      "SphinxKnight",
+      "gadgino"
+    ]
+  },
+  "conflicting/Web/API/IDBTransaction/error_event": {
+    "modified": "2019-03-23T22:34:27.556Z",
+    "contributors": [
+      "SphinxKnight",
+      "gadgino"
     ]
   },
   "conflicting/Web/API/KeyframeEffect/KeyframeEffect": {

@@ -1,12 +1,13 @@
 ---
 title: IDBTransaction.oncomplete
-slug: Web/API/IDBTransaction/oncomplete
+slug: conflicting/Web/API/IDBTransaction/complete_event
 tags:
   - API
   - IndexedDB
   - Propriété
   - Reference
 translation_of: Web/API/IDBTransaction/oncomplete
+original_slug: Web/API/IDBTransaction/oncomplete
 ---
 {{ APIRef("IndexedDB") }}
 

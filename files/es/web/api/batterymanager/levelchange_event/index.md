@@ -1,8 +1,9 @@
 ---
 title: BatteryManager.onlevelchange
-slug: Web/API/BatteryManager/onlevelchange
-browser-compat: api.BatteryManager.onlevelchange
+slug: Web/API/BatteryManager/levelchange_event
 translation_of: Web/API/BatteryManager/onlevelchange
+original_slug: Web/API/BatteryManager/onlevelchange
+browser-compat: api.BatteryManager.onlevelchange
 ---
 {{deprecated_header}} {{APIRef("Battery API")}}
 
@@ -63,4 +64,3 @@ navigator.getBattery().then(function(battery) {
 
 - {{domxref("BatteryManager")}}
 - {{domxref("Navigator.getBattery")}}
-

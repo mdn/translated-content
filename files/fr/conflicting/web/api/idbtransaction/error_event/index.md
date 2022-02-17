@@ -1,12 +1,13 @@
 ---
 title: IDBTransaction.onerror
-slug: Web/API/IDBTransaction/onerror
+slug: conflicting/Web/API/IDBTransaction/error_event
 tags:
   - API
   - IndexedDB
   - Propriété
   - Reference
 translation_of: Web/API/IDBTransaction/onerror
+original_slug: Web/API/IDBTransaction/onerror
 ---
 {{APIRef("IndexedDB")}}
 
