@@ -76,7 +76,7 @@ footer p:hover {
 }
 ```
 
-`:unsupported` をに対応していないブラウザーでも、正しく解釈して `:valid` に一致します。
+`:unsupported` に対応していないブラウザーでも、正しく解釈して `:valid` に一致します。
 
 ```css
 :valid, :unsupported {
