@@ -28,21 +28,21 @@ new AsyncFunction(arg0, arg1, ...argN, functionBody)
 
 - `arg1, arg2, ... argN`
 
-  - : Nombres a ser usados por la función como los nombres de los argumentos. Cada uno debe ser una cadena que corresponda a un identificador válido en JavaScript (cualquier [identificador](/es/docs/Glossary/Identifier), [parámetro rest](/es/docs/Web/JavaScript/Reference/Functions/rest_parameters), o [parámetro destructurado](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), opcionalmente con un valor por defecto), o una lista de tales cadenas separadas por comas.
+  - : Nombres a ser usados por la función como los nombres de los argumentos. Cada uno debe ser una cadena que corresponda a un identificador válido en JavaScript (cualquier [identificador](/es/docs/Glossary/Identifier), [parámetro rest](/es/docs/Web/JavaScript/Reference/Functions/rest_parameters), o [parámetro desestructurado](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), opcionalmente con un valor por defecto), o una lista de tales cadenas separadas por comas.
 
-    Así mismo, los parámetros se procesan de la misma manera que las declaraciones de funciones, aceptando espacios y comentarios. Por ejemplo: `"x", "theValue = 42", "[a, b] /* numbers */"` - o `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` es también correcto, pero muy confuso para leer).
+    Así mismo, los parámetros se procesan de la misma manera que las declaraciones de funciones, aceptando espacios y comentarios. Por ejemplo: `"x", "theValue = 42", "[a, b] /* numbers */"` — o `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` es también correcto, pero muy confuso para leer).
 
-  - : `functionBody`
-    - : Una cadena que contiene las sentencias de JavaScript que componen la definición de la función.
+- : `functionBody`
+  - : Una cadena que contiene las sentencias de JavaScript que componen la definición de la función.
 
 ## Descripción
 
-Los objetos {{jsxref("Statements/async_function", "async function")}} creados con el constructor `AsyncFunction` son procesados en el momento que la función es creada. Esto es menos eficiente que declarar una función asincrona con un {{jsxref("Statements/async_function", "async function expression")}} y llamarla con eso en tu código , ya que las funciones están procesadas junto al resto del código.
+Los objetos {{jsxref("Statements/async_function", "async function")}} creados con el constructor `AsyncFunction` son procesados en el momento que la función es creada. Esto es menos eficiente que declarar una función asincrona con un {{jsxref("Statements/async_function", "async function expression")}} y llamarla con eso en tu código , ya que las funciones son procesadas junto al resto del código.
 
 Todos los argumentos que son pasados a la función son tratados por los nombres de los identificadores de los parámetros en la función creada, en el orden en que son pasados a la función.
 
 > **Nota:** Las {{jsxref("Statements/async_function", "async functions", "", 1)}} creadas con el constructor `AsyncFunction` no crean 
-> closures en sus contextos creados, siempre son creados en el contexto global.
+> [_closures_](/es/docs/Web/JavaScript/Closures) en sus contextos creados, siempre son creados en el contexto global.
 >
 > Cuando se ejecutan, solamente podran acceder a sus variables locales y globales, no a las variables de otros contextos en el cual
 > el constructor `AsyncFuction` fue llamado.
@@ -72,7 +72,7 @@ let a = new AsyncFunction('a',
                           'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
 
 a(10, 20).then(v => {
-  console.log(v); // imprimir 30 después de 4 segundos
+  console.log(v); // imprime 30 después de 4 segundos
 });
 ```
 
