@@ -252,7 +252,7 @@ Reflect.apply("".charAt, "ponies", [3]);
 
 <h3 id="Verificando_se_a_definição_da_propriedade_obteve_sucesso">Verificando se a definição da propriedade obteve sucesso</h3>
 
-<p>Com {{jsxref("Object.defineProperty")}}, a qual returna um <code>object</code> em caso de sucesso ou lança um  {{jsxref("TypeError")}} em caso contrário, você utilizaria um bloco  {{jsxref("Statements/try...catch","try...catch")}} para capturar qualquer erro que tenha ocorrido ao definir uma propriedade.  Devido ao fato de {{jsxref("Reflect.defineProperty")}} retornar um status do tipo <code>Boolean</code>,  você pode simplesmente utilizar aqui um bloco {{jsxref("Statements/if...else","if...else")}}:</p>
+<p>Com {{jsxref("Object.defineProperty")}}, a qual retorna um <code>object</code> em caso de sucesso ou lança um  {{jsxref("TypeError")}} em caso contrário, você utilizaria um bloco  {{jsxref("Statements/try...catch","try...catch")}} para capturar qualquer erro que tenha ocorrido ao definir uma propriedade.  Devido ao fato de {{jsxref("Reflect.defineProperty")}} retornar um status do tipo <code>Boolean</code>,  você pode simplesmente utilizar aqui um bloco {{jsxref("Statements/if...else","if...else")}}:</p>
 
 <pre class="brush: js notranslate">if (Reflect.defineProperty(target, property, attributes)) {
   // success

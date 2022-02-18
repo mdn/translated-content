@@ -56,7 +56,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
  <dd>Returns <code>true</code> if <code>arg</code> is one of the ArrayBuffer views, such as <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">typed array objects</a> or a {{jsxref("DataView")}}. Returns <code>false</code> otherwise.</dd>
  <dt>{{jsxref("ArrayBuffer.transfer", "ArrayBuffer.transfer(oldBuffer [, newByteLength])")}} {{experimental_inline}}</dt>
  <dd>
- <div class="line" id="file-arraybuffer-transfer-LC6">Returns a new <code>ArrayBuffer</code> whose contents are taken from the <code>oldBuffer</code>'s data and then is either truncated or zero-extended by <code>newByteLength</code>.</div>
+ <div>Returns a new <code>ArrayBuffer</code> whose contents are taken from the <code>oldBuffer</code>'s data and then is either truncated or zero-extended by <code>newByteLength</code>.</div>
  </dd>
 </dl>
 
@@ -86,126 +86,11 @@ var view   = new Int32Array(buffer);</pre>
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>Superseded by ECMAScript 6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-arraybuffer-constructor', 'ArrayBuffer')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition in an ECMA standard. Specified that <code>new</code> is required.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-arraybuffer-constructor', 'ArrayBuffer')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>7.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td><code>ArrayBuffer()</code> without <code>new</code> throws</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("44")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>ArrayBuffer.slice()</code> {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<br>
-    {{CompatNo}} {{CompatGeckoDesktop("53")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("2")}}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>4.2</td>
-  </tr>
-  <tr>
-   <td><code>ArrayBuffer()</code> without <code>new</code> throws</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("44")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>ArrayBuffer.slice()</code> {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<br>
-    {{CompatNo}} {{CompatGeckoMobile("53")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相容性備註">相容性備註</h2>
 

@@ -5,45 +5,37 @@ translation_of: Web/JavaScript/Guide/Functions
 ---
 <p>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}</p>
 
-<p><span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>是構成javascript的基本要素之一。<span id="result_box" lang="zh-TW"><span title="一个函数本身就是一段JavaScript程序——包含用于执行某一任务或计算的一系列语句。">一個<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>本身就是一段JavaScript程序—<span id="result_box" lang="zh-TW"><span title="一个函数本身就是一段JavaScript程序——包含用于执行某一任务或计算的一系列语句。">包</span></span>含用於執行某一個任務或計算的語法。</span><span title="要使用某一个函数，你必需在想要调用这个函数的执行域的某处定义它。">要呼叫某一個<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>之前，你必需先在這個<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>欲執行的scope中定義它。</span></span></p>
+<p>函式是構成javascript的基本要素之一。一個函式本身就是一段JavaScript程序—包含用於執行某一個任務或計算的語法。要呼叫某一個函式之前，你必需先在這個函式欲執行的scope中定義它。</p>
 
-<h2 id="定義函式">定義<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span></h2>
+<h2 id="定義函式">定義函式</h2>
 
-<p><span id="result_box" lang="zh-TW"><span title="一个函数的定义（也称为函数的声明）由一系列的函数关键词组成, 依次为：
-
-    ">一個<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>的定義由一系列的<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>關鍵詞組成, 依次為：</span></span></p>
+<p>一個函式的定義由一系列的函式關鍵詞組成, 依次為：</p>
 
 <ul>
- <li><span title="一个函数的定义（也称为函数的声明）由一系列的函数关键词组成, 依次为：
-
-    ">    </span><span title="函数的名称。
-    "><span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>的名稱。</span></li>
- <li><span lang="zh-TW"><span title="函数的名称。
-    ">    </span><span title="包围在括号()中，并由逗号区隔的一个函数引数（译注：实际参数）列表。
-    ">包圍在括號()中，並由逗號區隔的一個<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>參數列表。</span></span></li>
- <li><span lang="zh-TW"><span title="包围在括号()中，并由逗号区隔的一个函数引数（译注：实际参数）列表。
-    ">    </span><span title="包围在花括号{}中，用于定义函数功能的一些JavaScript语句。">包圍在大括號{}中，用於定義<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>功能的一些JavaScript語句。</span></span></li>
+ <li>函式的名稱。</li>
+ <li>包圍在括號()中，並由逗號區隔的一個函式參數列表。</li>
+ <li>包圍在大括號{}中，用於定義函式功能的一些JavaScript語句。</li>
 </ul>
 
 <p> </p>
 
-<p><span class="short_text" id="result_box" lang="zh-TW"><span title="例如，以下的代码定义了一个名为square的简单函数:">例如，以下的程式碼定義了一個名為square的簡單<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>:</span></span></p>
+<p>例如，以下的程式碼定義了一個名為square的簡單函式:</p>
 
-<div style="margin-right: 270px;">
+<div>
 <pre class="brush: js">function square(number) {
   return number * number;
 }
 </pre>
 </div>
 
-<p><span id="result_box" lang="zh-TW"><span title="函数square使用了一个引数，叫作number。"><span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>square有一個參數，叫作number。</span><span title="这个函数只有一个语句，它说明该函数会将函数的引数（即number）自乘后返回。">這個<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>只有一行程式碼，它會回傳number自乘的結果。</span><span title="函数的return语句确定了函数的返回值。"><span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>的 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/return" title="return"><code>return</code></a> 語法描述<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>的返回值。</span></span></p>
+<p>函式square有一個參數，叫作number。這個函式只有一行程式碼，它會回傳number自乘的結果。函式的 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/return" title="return"><code>return</code></a> 語法描述函式的返回值。</p>
 
 <pre class="brush: js">return number * number;
 </pre>
 
-<p><span id="result_box" lang="zh-TW"><span title="原始参数（比如一个具体的数字）被作为值传递给函数；值被传递给函数，但是如果被调用函数改变了这个参数的值，这样的改变不会影响到全局或调用的函数。">原始參數（例如一個數字）被作為值傳遞給<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>，如果呼叫的<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>改變了這個參數的值，不會影響到<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示"><span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>外部的原始變數</span></span>。</span></span></p>
+<p>原始參數（例如一個數字）被作為值傳遞給函式，如果呼叫的函式改變了這個參數的值，不會影響到函式外部的原始變數。</p>
 
-<p><span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">如果傳遞一個物件（例如 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a> 或自定義的其它物件）作為參數，而函式改變了這個物件的屬性，這樣的改變對函式外部是有作用的(因為是傳遞物件的位址)，如下面的例子所示</span><span title="：">：</span></span></p>
+<p>如果傳遞一個物件（例如 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a> 或自定義的其它物件）作為參數，而函式改變了這個物件的屬性，這樣的改變對函式外部是有作用的(因為是傳遞物件的位址)，如下面的例子所示：</p>
 
 <pre class="brush: js">function myFunc(theObject) {
   theObject.make = "Toyota";
@@ -60,7 +52,7 @@ y = mycar.make;     // y 的值為 "Toyota"
                     // (屬性 make 被 function 改變)
 </pre>
 
-<p><span id="result_box" lang="zh-TW"><span title="请注意，重新给参数分配一个对象，并不会对函数的外部有任何影响，因为这样只是改变了参数的值，而不是改变了对象的一个属性值：">請注意，重新給參數指定一個對象(物件)，並不會對函式的外部有任何影響，因為這樣只是改變了參數的值，而不是改變了對象的一個屬性值：</span></span></p>
+<p>請注意，重新給參數指定一個對象(物件)，並不會對函式的外部有任何影響，因為這樣只是改變了參數的值，而不是改變了對象的一個屬性值：</p>
 
 <pre class="brush: js">function myFunc(theObject) {
   theObject = {make: "Ford", model: "Focus", year: 2006};
@@ -75,25 +67,21 @@ x = mycar.make;     // x 的值為 "Honda"
 myFunc(mycar);
 y = mycar.make;     // y 的值還是 "Honda" </pre>
 
-<p><span id="result_box" lang="zh-TW"><span title="当然上述函数定义都用的是语法语句，函数也同样可以由函数表达式产生。">儘管上述函式定義都是用的是陳述式，函式也同樣可以由函式表達式來定義。</span><span title="这样的函数可以是匿名的；它不必有名称。">這樣的函式可以是匿名的；它不必有名稱。</span><span title="例如，上面提到的函数square也可这样来定义：">例如，上面提到的函式square也可這樣來定義：</span></span></p>
+<p>儘管上述函式定義都是用的是陳述式，函式也同樣可以由函式表達式來定義。這樣的函式可以是匿名的；它不必有名稱。例如，上面提到的函式square也可這樣來定義：</p>
 
-<pre class="brush: js" style="font-size: 14px;">var square = function(number) {return number * number};
+<pre class="brush: js">var square = function(number) {return number * number};
 var x = square(4) //x 的值為 16</pre>
 
-<div class="almost_half_cell" id="gt-res-content">
-<div dir="ltr" style="zoom: 1;"><span id="result_box" lang="zh-TW"><span title="必要时，函数名称可与函数表达式同时存在，并且可以用于在函数内部代指其本身，或者在调试器堆栈跟踪中鉴别该函数：">必要時，函式名稱可與函式表達式同時存在，並且可以用於在函式內部代指其本身(遞迴)：</span></span></div>
+<div>必要時，函式名稱可與函式表達式同時存在，並且可以用於在函式內部代指其本身(遞迴)：</div>
 
-<div dir="ltr" style="zoom: 1;"> </div>
-</div>
-
-<pre class="brush: js" style="font-size: 14px;">var factorial = function fac(n) {return n&lt;2 ? 1 : n*fac(n-1)};
+<pre class="brush: js">var factorial = function fac(n) {return n&lt;2 ? 1 : n*fac(n-1)};
 
 console.log(factorial(3));
 </pre>
 
-<p><span id="result_box" lang="zh-TW"><span title="函数表达式在将函数作为一个引数传递给其它函数时十分方便。">函式表達式在將函式作為一個參數傳遞給其它函式時十分方便。</span><span title="下面的例子演示了一个叫map的函数如何被定义，而后调用一个匿名函数作为其第一个参数：">下面的例子展示了一個叫map的函式如何​​被定義，而後呼叫一個匿名函式作為其第一個參數：</span></span></p>
+<p>函式表達式在將函式作為一個參數傳遞給其它函式時十分方便。下面的例子展示了一個叫map的函式如何​​被定義，而後呼叫一個匿名函式作為其第一個參數：</p>
 
-<pre class="brush: js" style="font-size: 14px;">function map(f,a) {
+<pre class="brush: js">function map(f,a) {
   var result = [], // Create a new Array
       i;
   for (i = 0; i != a.length; i++)
@@ -102,26 +90,26 @@ console.log(factorial(3));
 }
 </pre>
 
-<p>下面的程式碼呼叫map<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>並將一個匿名<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>傳入作為第一個參數:</p>
+<p>下面的程式碼呼叫map函式並將一個匿名函式傳入作為第一個參數:</p>
 
-<pre class="brush: js" style="font-size: 14px;">map(function(x) {return x * x * x}, [0, 1, 2, 5, 10]);
+<pre class="brush: js">map(function(x) {return x * x * x}, [0, 1, 2, 5, 10]);
 // 結果會回傳 [0, 1, 8, 125, 1000]
 </pre>
 
-<p><span style="line-height: 1.572;">除了上述的定義方式以外，我們也可以透過 </span><a href="/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Function_Object" style="line-height: 1.572;" title="en-US/docs/JavaScript/Guide/Predefined Core Objects#Function Object"><code>Function</code> constructor</a><span style="line-height: 1.572;"> 來定義, 類似 </span><a href="/en-US/docs/JavaScript/Guide/Functions#eval_Function" style="line-height: 1.572;" title="en-US/docs/JavaScript/Guide/Functions#eval_Function"><code>eval()</code></a><span style="line-height: 1.572;">.</span></p>
+<p>除了上述的定義方式以外，我們也可以透過 <a href="/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Function_Object" title="en-US/docs/JavaScript/Guide/Predefined Core Objects#Function Object"><code>Function</code> constructor</a> 來定義, 類似 <a href="/en-US/docs/JavaScript/Guide/Functions#eval_Function" title="en-US/docs/JavaScript/Guide/Functions#eval_Function"><code>eval()</code></a>.</p>
 
 <h2 id="呼叫函式">呼叫函式</h2>
 
-<p><span id="result_box" lang="zh-TW"><span title="定义一个函数并不会自动的执行它。">定義一個<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>並不會自動的執行它。</span><span title="定义了函数仅仅是赋予函数以名称并明确函数被调用时该做些什么。">定義了<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>僅僅是賦予<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>以名稱並明確<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>被呼叫時該做些什麼。</span><span title="调用函数才会以给定的参数真正执行这些动作。">呼叫<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>才會以給定的參數真正執行這些動作。</span><span title="例如，一旦你定义了函数square，你可以如下这样调用它：">例如，一旦你定義了<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>square，你可以如下這樣呼叫它：</span></span></p>
+<p>定義一個函式並不會自動的執行它。定義了函式僅僅是賦予函式以名稱並明確函式被呼叫時該做些什麼。呼叫函式才會以給定的參數真正執行這些動作。例如，一旦你定義了函式square，你可以如下這樣呼叫它：</p>
 
 <pre class="brush: js">square(5);
 </pre>
 
-<p><span class="short_text" id="result_box" lang="zh-TW"><span title="上述语句以引数（译注：即实际参数）5来调用函数。">上述程式碼把5傳遞給square<span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>。</span><span title="函数执行完它的语句会返回值25。"><span id="result_box" lang="zh-TW"><span title="如果你传递一个对象（即一个非实际值，例如矩阵或用户自定义的其它对象）作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示">函式</span></span>執行完會回傳25。</span></span></p>
+<p>上述程式碼把5傳遞給square函式。函式執行完會回傳25。</p>
 
 <p>函式必須在呼叫區塊的可視範圍內，但函數也可以宣告在使用處的下面，如下列範例:</p>
 
-<pre>console.log(square(5));
+<pre class="brush: js">console.log(square(5));
 /* ... */
 function square(n){return n*n}
 </pre>
@@ -158,7 +146,7 @@ e = factorial(5); // e gets the value 120
 
 <p>There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime. It turns out that functions are, themselves, objects, and these objects in turn have methods (see the <a href="/en-US/docs/JavaScript/Guide/Obsolete_Pages/Predefined_Core_Objects/Function_Object" title="Function Object"><code>Function</code> object</a>). One of these, the <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/apply" title="apply"><code>apply()</code></a> method, can be used to achieve this goal.</p>
 
-<h2 class="deki-transform" id="Function_scope">Function scope</h2>
+<h2 id="Function_scope">Function scope</h2>
 
 <p>Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function. However, a function can access all variables and functions defined inside the scope in which it is defined. In other words, a function defined in the global scope can access all variables defined in the global scope. A function defined inside another function can also access all variables defined in it's parent function and any other variable to which the parent function has access.</p>
 

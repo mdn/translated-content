@@ -8,7 +8,7 @@ original_slug: Web/Web_Components/Utilisation_des_templates_et_des_slots
 
 Cet article explique comment utiliser les éléments [`<template>`](/fr/docs/Web/HTML/Element/template) et [`<slot>`](/fr/docs/Web/HTML/Element/slot) pour créer un modèle (<i lang="en">template</i>) flexible qui peut ensuite être utilisé pour alimenter le Shadow DOM d'un composant web.
 
-## La vérité sur les modèmes
+## La vérité sur les modèles
 
 Lorsqu'une structure de balises se répète sur une page web, il est judicieux d'utiliser un modèle plutôt que d'écrire cette même structure encore et encore. Il était déjà possible de le faire, mais l'élément HTML [`<template>`](/fr/docs/Web/HTML/Element/template) (pris en charge par les navigateurs modernes) nous facilite la tâche. Cet élément et ce qu'il renferme n'est pas directement retranscrit dans le DOM, mais peut par contre toujours être manipulé avec JavaScript.
 
@@ -50,7 +50,7 @@ customElements.define('my-paragraph',
 
 Le point important à noter est que l'on ajoute un clone du contenu du modèle à la racine du DOM, créé à l'aide de la méthode [`Node.cloneNode()`](/fr/docs/Web/API/Node/cloneNode).
 
-Et parce que nous ajoutons son contenu à un Shadow DOM, on peut inclure des informations de mise en forme à l'intérieur de l'élément `<template>` dans d'un élément [`<style>`](/fr/docs/Web/HTML/Element/style), qui est ensuite encapsulé à l'intérieur de l'élément personnalisé. Cette procédure n'aurait pas fonctionné si on avait ajouté le contenu à un DOM standard.
+Et parce que nous ajoutons son contenu à un Shadow DOM, on peut inclure des informations de mise en forme à l'intérieur de l'élément `<template>` dans un élément [`<style>`](/fr/docs/Web/HTML/Element/style), qui est ensuite encapsulé à l'intérieur de l'élément personnalisé. Cette procédure n'aurait pas fonctionné si on avait ajouté le contenu à un DOM standard.
 
 Par exemple :
 
@@ -67,7 +67,7 @@ Par exemple :
 </template>
 ```
 
-On peut maintenent utiliser le modèle dans le document HTML:
+On peut maintenant utiliser le modèle dans le document HTML:
 
 ```html
 <my-paragraph></my-paragraph>
@@ -240,7 +240,7 @@ body { margin-top: 47px }
 
 Assemblons l'ensemble des fragments pour voir le résultat final.
 
-{{ EmbedLiveSample('exemple_complet', '300','400','element-details.png','') }}
+{{ EmbedLiveSample('Un_exemple_plus_complexe', '300','400','element-details.png','') }}
 
 Quelques notes à propos du résultat affiché :
 

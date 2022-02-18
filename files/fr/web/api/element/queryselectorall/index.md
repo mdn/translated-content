@@ -1,91 +1,88 @@
 ---
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthode
-  - Reference
 translation_of: Web/API/Element/querySelectorAll
+browser-compat: api.Element.querySelectorAll
 ---
 {{APIRef("DOM")}}
 
-La méthode  **`querySelectorAll()`** de {{domxref("Element")}} retourne une  {{domxref("NodeList")}} non-directe des éléments correspondants au groupe de selecteurs CSS spécifiés qui sont des descendants de l'élément sur lequel la méthode a été appelée.
-
-> **Note :** La définition de cet API a été déplacée vers l'interface {{domxref("ParentNode")}} .
+La méthode **`querySelectorAll()`** de [`Element`](/fr/docs/Web/API/Element) retourne une [`NodeList`](/fr/docs/Web/API/NodeList) statique (non-dynamique) des éléments correspondants au groupe de sélecteurs CSS spécifiés qui sont des descendants de l'élément sur lequel la méthode a été appelée.
 
 ## Syntaxe
 
-    elementList = baseElement.querySelectorAll(selectors);
+```js
+elementList = parentNode.querySelectorAll(selectors);
+```
 
 ### Paramètres
 
 - `selectors`
-  - : une {{domxref("DOMString")}} contenant un ou plusieurs sélecteurs à comparer. Cette chaîne doit être valide pour les [sélecteurs CSS](/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS) ; si ce n'est pas le cas, une exception `SyntaxError` est levée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Localisation_des_%C3%A9l%C3%A9ments_DOM_avec_les_s%C3%A9lecteurs) pour plus d'informations sur l'utilisation des sélecteurs pour identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés en les séparant par une virgule.
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) contenant un ou plusieurs sélecteurs à comparer. Cette chaîne doit être valide pour les [sélecteurs CSS](/fr/docs/Web/CSS/CSS_Selectors)&nbsp;; si ce n'est pas le cas, une exception `SyntaxError` est levée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) pour plus d'informations sur l'utilisation des sélecteurs pour identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés en les séparant par une virgule.
 
-> **Note :** Les caractères qui ne font pas partie de la syntaxe CSS standard doivent être échappés à l'aide d'une barre oblique inverse. Puisque JavaScript utilise également l'échappement en retour arrière, un soin particulier doit être pris lors de l'écriture de littéraux de chaîne utilisant ces caractères.
+> **Note :** Les caractères qui ne font pas partie de la syntaxe CSS standard doivent être échappés à l'aide d'une barre oblique inverse. Puisque JavaScript utilise également l'échappement en retour arrière, un soin particulier doit être pris lors de l'écriture de littéraux de chaîne utilisant ces caractères. Voir [Échappement des caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#échappement_des_caractères) pour plus d'informations.
 
-### Valeur retournée
+### Valeur de retour
 
-Une {{domxref ("NodeList")}} contenant un objet {{domxref ("Element")}} pour chaque noeud descendant qui correspond à au moins un des sélecteurs spécifiés.
+Une [`NodeList`](/fr/docs/Web/API/NodeList) statique contenant un objet [`Element`](/fr/docs/Web/API/Element) pour chaque nœud descendant qui correspond à au moins un des sélecteurs spécifiés au moment où la méthode est appelée.
 
-> **Note :** Si le `selectors` spécifié inclus un [pseudo-element CSS](/fr/docs/Web/CSS/Pseudo-elements), la liste renvoyée est toujours vide.
+> **Note :** Si les sélecteurs spécifiés avec `selectors` incluent un [pseudo-élément CSS](/fr/docs/Web/CSS/Pseudo-elements), la liste renvoyée est toujours vide.
 
 ### Exception
 
 - `SyntaxError`
-  - : La syntaxe de la chaîne du `selectors` spécifié n'est pas correcte.
+  - : La syntaxe de la chaîne du `selectors` spécifiée n'est pas valide.
 
 ## Exemples
 
-### Obtention d'une liste de correspondances
+### Obtenir d'une liste de correspondances
 
-Pour obtenir une {{domxref("NodeList")}} de tous les éléments {{HTMLElement("p")}} contenus dans l'élément `"myBox"` :
+Pour obtenir une [`NodeList`](/fr/docs/Web/API/NodeList) de tous les éléments [`<p>`](/fr/docs/Web/HTML/Element/p) contenus dans l'élément `myBox`&nbsp;:
 
 ```js
-var matches = myBox.querySelectorAll("p");
+let matches = myBox.querySelectorAll("p");
 ```
 
-Cet exemple renvoie une liste de tous les éléments {{HTMLElement("div")}} dans `"myBox"`  avec une classe  "`note`" ou  "`alert`" :
+Cet exemple renvoie une liste de tous les éléments [`<div>`](/fr/docs/Web/HTML/Element/div) dans `myBox` avec une classe `note` ou `alert`&nbsp;:
 
 ```js
-var matches = myBox.querySelectorAll("div.note, div.alert");
+let matches = myBox.querySelectorAll("div.note, div.alert");
 ```
 
-Ici, nous obtenons une liste d'éléments `p` du document, dont le parent immédiat est un {{domxref("div")}}  qui a la classe `'highlighted'` et qui sont inclus dans un conteneur dont l'ID est `"test"` :
+Ici, nous obtenons une liste d'éléments `<p>` du document, dont le parent immédiat est un [`<div>`](/fr/docs/Web/HTML/Element/div) qui a la classe `highlighted` et qui sont inclus dans un conteneur dont l'`id` est `test`&nbsp;:
 
 ```js
-var container = document.querySelector("#test");
-var matches = container.querySelectorAll("div.highlighted > p");
+let container = document.querySelector("#test");
+let matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/S%C3%A9lecteurs_d_attribut) pour renvoyer une liste d'éléments {{domxref("iframe")}} du document lesquels contiennent un attribut nommé `'data-src'`:
+Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) pour renvoyer une liste d'éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) du document lesquels contiennent un attribut nommé `data-src`&nbsp;:
 
 ```js
-var matches = document.querySelectorAll("iframe[data-src]");
+let matches = document.querySelectorAll("iframe[data-src]");
 ```
 
-Ici, un sélecteur d'attribut est utilisé pour renvoyer une liste des éléments de la liste contenus dans une liste dont l'ID est `"userlist"` et qui ont un attribut `"data-active"` dont la valeur est `"1"`:
+Ici, un sélecteur d'attribut est utilisé pour renvoyer une liste des éléments de la liste contenus dans une liste dont l'`id` est `userlist` et qui ont un attribut `data-active` dont la valeur est `1`&nbsp;:
 
 ```js
-var container = document.querySelector("#userlist");
-var matches = container.querySelectorAll("li[data-active=1]");
+let container = document.querySelector("#userlist");
+let matches = container.querySelectorAll("li[data-active='1']");
 ```
 
-### Accès aux correspondances
+### Accéder aux correspondances
 
-Une fois que la {{domxref("NodeList")}} des éléments correspondants est retournée, vous pouvez l'examiner pour n'importe quel tableau (_array_). Si le tableau est vide (sa propriété `length` est 0), alors aucune correspondance n'a été trouvée.
+Une fois que la [`NodeList`](/fr/docs/Web/API/NodeList) des éléments correspondants est retournée, vous pouvez l'examiner pour n'importe quel tableau (<i lang="en">array</i>). Si le tableau est vide (sa propriété `length` est `0`), alors aucune correspondance n'a été trouvée.
 
-Sinon, vous pouvez simplement utiliser la notation de tableau standard pour accéder au contenu de la liste. Vous pouvez utiliser n'importe quelle instruction de boucle commune, telle que :
+Sinon, vous pouvez simplement utiliser la notation de tableau standard pour accéder au contenu de la liste. Vous pouvez utiliser n'importe quelle instruction de boucle commune, telle que&nbsp;:
 
 ```js
-var highlightedItems = userList.querySelectorAll(".highlighted");
+let highlightedItems = userList.querySelectorAll(".highlighted");
 
 highlightedItems.forEach(function(userItem) {
   deleteUser(userItem);
 });
 ```
+
+> **Note :** L'objet `NodeList` n'est pas vraiment un tableau (`Array`) — vous ne pouvez donc pas utiliser des méthodes de tableaux (telles que `slice`, `some`, `map`, etc.) avec `NodeList`. Essayez `Array.from(nodeList)` pour le convertir en tableau.
 
 ## Notes d'utilisation
 
@@ -93,7 +90,7 @@ highlightedItems.forEach(function(userItem) {
 
 ### HTML
 
-Considérons ce code HTML, avec ses trois blocs {{HTMLElement ("div")}} imbriqués.
+Considérons ce code HTML, avec ses trois blocs [`<div>`](/fr/docs/Web/HTML/Element/div) imbriqués.
 
 ```html
 <div class="outer">
@@ -107,41 +104,34 @@ Considérons ce code HTML, avec ses trois blocs {{HTMLElement ("div")}} imbriqu�
 ### JavaScript
 
 ```js
-var select = document.querySelector('.select');
-var inner = select.querySelectorAll('.outer .inner');
-inner.length; // 1, pas 0!
+let select = document.querySelector('.select');
+let inner = select.querySelectorAll('.outer .inner');
+inner.length; // 1, pas 0 !
 ```
 
-Dans cet exemple, en sélectionnant `".outer .inner"` dans le contexte `<div> `avec la classe `"select"`, l'élément avec la classe `".inner"` est toujours trouvé, même si `.outer` n'est pas un descendant de l'élément sur lequel la recherche est effectuée `(".select")`. Par défaut, `querySelectorAll()` vérifie uniquement que le dernier élément du sélecteur se trouve dans la portée de la recherche.
+Dans cet exemple, en sélectionnant `.outer .inner` dans le contexte `<div> `avec la classe `select`, l'élément avec la classe `.inner` est toujours trouvé, même si `.outer` n'est pas un descendant de l'élément sur lequel la recherche est effectuée (`.select`). Par défaut, `querySelectorAll()` vérifie uniquement que le dernier élément du sélecteur se trouve dans la portée de la recherche.
 
-La pseudo-classe {{cssxref (": scope")}} restaure le comportement attendu, ne faisant correspondre les sélecteurs que sur les descendants de l'élément de base :
+La pseudo-classe [`:scope`](/fr/docs/Web/CSS/:scope) restaure le comportement attendu, ne faisant correspondre les sélecteurs que sur les descendants de l'élément de base&nbsp;:
 
 ```js
-var select = document.querySelector('.select');
-var inner = select.querySelectorAll(':scope .outer .inner');
+let select = document.querySelector('.select');
+let inner = select.querySelectorAll(':scope .outer .inner');
 inner.length; // 0
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                                       | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName("DOM WHATWG", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}             | {{Spec2("DOM WHATWG")}}             | norme actuelle       |
-| {{SpecName("Selectors API Level 2", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}} | {{Spec2("Selectors API Level 2")}} | Pas de changement    |
-| {{SpecName("DOM4", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}                     | {{Spec2("DOM4")}}                     | Définition initiale  |
-| {{SpecName("Selectors API Level 1", "#interface-definitions", "document.querySelector()")}}                     | {{Spec2("Selectors API Level 1")}} | Définition originale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.querySelectorAll")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Localisation_des_%C3%A9l%C3%A9ments_DOM_avec_les_s%C3%A9lecteurs)
-- [Sélecteurs d'attribut](/fr/docs/Web/CSS/S%C3%A9lecteurs_d_attribut) dans le guide CSS
-- [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors) dans la zone d'apprentissage de MDN
-- {{domxref("element.querySelector()")}}
-- {{domxref("Document.querySelector()")}} et {{domxref("Document.querySelectorAll()")}}
-- {{domxref("DocumentFragment.querySelector()")}} et {{domxref("DocumentFragment.querySelectorAll()")}}
-- {{domxref("document.querySelector()")}} et {{domxref("ParentNode.querySelectorAll()")}}
-- [Extraits de code pour `querySelector`](/fr/Add-ons/Code_snippets/QuerySelector)
+- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors) dans le guide CSS
+- [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) dans la zone d'apprentissage de MDN
+- [`Element.querySelector()`](/fr/docs/Web/API/Element/querySelector)
+- [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) et [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll)
+- [`DocumentFragment.querySelector()`](/fr/docs/Web/API/DocumentFragment/querySelector) et [`DocumentFragment.querySelectorAll()`](/fr/docs/Web/API/DocumentFragment/querySelectorAll)

@@ -41,7 +41,7 @@ translation_of: Web/CSS/color_value
 
 ## 構文
 
-`<color>` データ型は以下のいずれか1つの方法を使って指定されます。
+`<color>` データ型は以下のいずれか 1 つの方法を使って指定されます。
 
 > **Note:** `<color>` の色は詳細に定義されていますが、出力機器によって (時には著しく) 違って見えるかもしれません。出力機器の大半は色補正がされておらず、ブラウザーによっては出力機器の[色プロファイル](https://ja.wikipedia.org/wiki/ICC%E3%83%97%E3%83%AD%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB)に対応していないからです。
 
@@ -919,6 +919,8 @@ HSL 色は関数表記の `hsl()` および `hsla()` を通して表現されま
 
 - ActiveText
   - : アクティブなリンクのテキスト
+- ButtonBorder
+  - : コントロールのベースの境界色
 - ButtonFace
   - : プッシュボタンの背景
 - ButtonText
@@ -1082,7 +1084,7 @@ HSL が `hsl(60 100% 50%)` と `hsl(240 100% 50%)` の両方を同じ明るさ�
 ### color() 色
 
 CSS Color 4 でこの表記が導入されました。
-{{cssxref("color_value/color()","color()")}} 関数で指定された色は、定義済みの色空間のほか、[`@color-profile`](/en-US/docs/Web/CSS/@color-profile) ルールで定義されたカスタム色空間でも色を指定できます。
+{{cssxref("color_value/color()","color()")}} 関数で指定された色は、定義済みの色空間のほか、[`@color-profile`](/ja/docs/Web/CSS/@color-profile) ルールで定義されたカスタム色空間でも色を指定できます。
 
 ## 補間
 
@@ -1226,7 +1228,7 @@ inputElem.addEventListener('change', () => {
     hsl(270 60% 50% / .15)
     hsl(270 60% 50% / 15%)
 
-### 彩度100%の色
+### 彩度 100% の色
 
 <table class="standard-table">
   <thead>
@@ -1406,7 +1408,7 @@ inputElem.addEventListener('change', () => {
     /* アルファのパーセント表記 */
     hsla(240 100% 50% / 5%)       /*   5% 半透明の青 */
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
 <table class="standard-table">
   <thead>
@@ -1430,7 +1432,8 @@ inputElem.addEventListener('change', () => {
       </td>
       <td>{{Spec2('CSS3 Colors')}}</td>
       <td>
-        システム色を非推奨化。 SVG 色を追加。<code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code> 関数表記を追加。
+        システム色を非推奨化。 SVG 色を追加。<code>rgba()</code>,
+        <code>hsl()</code>, <code>hsla()</code> 関数表記を追加。
       </td>
     </tr>
     <tr style="vertical-align: top">

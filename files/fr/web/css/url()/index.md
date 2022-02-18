@@ -11,7 +11,7 @@ translation_of: Web/CSS/url()
 ---
 {{CSSRef}}
 
-La fonction CSS **`url`\*\***`()`** est utilisée afin d'inclure un fichier. Le paramètre est une URL absolue, une URL relative ou un URI de donnée. La fonction **`url`\***\*`()`** peut être utilisée comme paramètre d'une autre fonction comme {{cssxref('attr()')}}. Selon la propriété pour laquelle elle est utilisée, la ressource utilisée peut être une image, une police ou une feuille de stye.
+La fonction CSS **`url()`** est utilisée afin d'inclure un fichier. Le paramètre est une URL absolue, une URL relative ou un URI de donnée. La fonction **`url()`** peut être utilisée comme paramètre d'une autre fonction comme {{cssxref('attr()')}}. Selon la propriété pour laquelle elle est utilisée, la ressource utilisée peut être une image, une police ou une feuille de stye.
 
 La notation fonctionelle `url()` correspond au type de donnée CSS [`<url>`](</fr/docs/conflicting/Web/CSS/url()_168028c4e5edd9e19c061adb4b604d4f>).
 
@@ -54,7 +54,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 Lorsque des URL relatives sont utilisées, elles sont relatives à l'URL de la feuille de style et pas à celle de la page web courante).
 
-La fonction **`url`\*\***`()`\*\* peut être incluse comme valeur pour les propriétés {{cssxref('background-image')}}, {{cssxref('border-image')}}, {{cssxref('list-style-image')}}, {{cssxref('content' )}}, {{cssxref('cursor')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, comme descripteur [`src`](/fr/docs/Web/CSS/@font-face/src) pour une règle [`@font-face`](/fr/docs/Web/CSS/@font-face) ou [`@counter-style/symbol`](/fr/docs/Web/CSS/@counter-style/symbols)
+La fonction **`url()`** peut être incluse comme valeur pour les propriétés {{cssxref('background-image')}}, {{cssxref('border-image')}}, {{cssxref('list-style-image')}}, {{cssxref('content' )}}, {{cssxref('cursor')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, comme descripteur [`src`](/fr/docs/Web/CSS/@font-face/src) pour une règle [`@font-face`](/fr/docs/Web/CSS/@font-face) ou [`@counter-style/symbol`](/fr/docs/Web/CSS/@counter-style/symbols)
 
 Dans la spécification CSS de niveau 1, la notation fonctionnelle `url()` ne permettait que de décrire des URL. Avec la spécification de niveau 2, la définition d'`url()` a été étendue afin de décrire n'importe quel URI, y compris des URI de données. Le module de spécification _CSS Values and Units_ de niveau 3 est revenu à la définition initiale plus stricte. Aussi, à l'heure actuelle et formellement `url()` ne permet que de décrire des valeurs `<url>`.
 

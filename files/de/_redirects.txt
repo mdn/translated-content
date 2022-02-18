@@ -377,6 +377,7 @@
 /de/docs/Learn/JavaScript/First_steps/Erster_Blick	/de/docs/Learn/JavaScript/First_steps/A_first_splash
 /de/docs/Learn/JavaScript/First_steps/Was_ist_JavaScript	/de/docs/Learn/JavaScript/First_steps/What_is_JavaScript
 /de/docs/Learn/JavaScript/First_steps/lustige_geschichten_generator	/de/docs/Learn/JavaScript/First_steps/Silly_story_generator
+/de/docs/Learn/JavaScript/Objects/Object-oriented_JS	/de/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /de/docs/Learn/Server-side/Erste_Schritte	/de/docs/Learn/Server-side/First_steps
 /de/docs/Lokalisierung	/de/docs/Glossary/Localization
 /de/docs/MDN/Contribute/Structures	/de/docs/MDN/Structures
@@ -448,6 +449,7 @@
 /de/docs/Web/API/WebGL_API/Tutorial/Hinzufügen_von_2D_Inhalten_in_einen_WebGL-Kontext	/de/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /de/docs/Web/API/WebGL_API/Tutorial/Objekte_mit_WebGL_animieren	/de/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /de/docs/Web/API/WebGL_API/Tutorial/Texturen_in_WebGL_verwenden	/de/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/de/docs/Web/API/WebSocket/onclose	/de/docs/Web/API/WebSocket/close_event
 /de/docs/Web/API/Window.alert	/de/docs/Web/API/Window/alert
 /de/docs/Web/API/Window/performance	/de/docs/Web/API/performance_property
 /de/docs/Web/API/Window/setTimeout	/de/docs/Web/API/setTimeout
@@ -481,6 +483,7 @@
 /de/docs/Web/CSS/-moz-user-select	/de/docs/Web/CSS/user-select
 /de/docs/Web/CSS/-webkit-mask-origin	/de/docs/Web/CSS/mask-origin
 /de/docs/Web/CSS/-webkit-mask-repeat	/de/docs/Web/CSS/mask-repeat
+/de/docs/Web/CSS/-webkit-print-color-adjust	/de/docs/Web/CSS/print-color-adjust
 /de/docs/Web/CSS/:-moz-placeholder	/de/docs/Web/CSS/:placeholder-shown
 /de/docs/Web/CSS/:-moz-ui-invalid	/de/docs/Web/CSS/:user-invalid
 /de/docs/Web/CSS/:-webkit-autofill	/de/docs/Web/CSS/:autofill

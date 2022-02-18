@@ -10,11 +10,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 
 <div>{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}</div>
 
-<p class="hidden">此交互式示例的源存储在GitHub存储库中。如果您想参与交互式示例项目,请克隆<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>并向我们​​发送拉取请求。</p>
-
 <h2 id="句法">句法</h2>
 
-<pre class="notranslate"><code>new Intl.RelativeTimeFormat([<var>locales</var>[, <var>options</var>]])
+<pre><code>new Intl.RelativeTimeFormat([<var>locales</var>[, <var>options</var>]])
 </code></pre>
 
 <h3 id="参数">参数</h3>
@@ -84,7 +82,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 
 <p>以下示例显示如何使用英语创建相对时间格式化程序。</p>
 
-<pre class="brush: js notranslate">//在语言环境中创建相对时间格式化程序
+<pre class="brush: js">//在语言环境中创建相对时间格式化程序
 //显式传入默认值。
 const rtf = new Intl.RelativeTimeFormat("en",{
     localeMatcher: "bestfit",//其他值："lookup"
@@ -104,7 +102,7 @@ rtf.format(1,"day");
 
 <p>如果<code>numeric:auto</code>选项被传递,它将生成字符串<code>yesterday</code>或<code>tomorrow</code>代替<code>1 day ago</code>或<code>in 1 day</code>。这允许不必总是在输出中使用数值。</p>
 
-<pre class="brush: js notranslate">//在语言环境中创建相对时间格式化程序
+<pre class="brush: js">//在语言环境中创建相对时间格式化程序
 //使用数字：传入"auto"选项值。
 const rtf = new Intl.RelativeTimeFormat("en",{numeric: "auto"});
 
@@ -121,7 +119,7 @@ rtf.format(1,"day");
 
 <p>以下示例显示如何创建返回格式化部件的相对时间格式器</p>
 
-<pre class="brush: js notranslate">const rtf = new Intl.RelativeTimeFormat("en",{numeric: "auto"});
+<pre class="brush: js">const rtf = new Intl.RelativeTimeFormat("en",{numeric: "auto"});
 
 //使用日期单位格式化相对时间。
 rtf.formatToParts(-1,"day");

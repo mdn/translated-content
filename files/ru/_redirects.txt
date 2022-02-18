@@ -223,11 +223,13 @@
 /ru/docs/Learn/How_the_Internet_works	/ru/docs/Learn/Common_questions/How_does_the_Internet_work
 /ru/docs/Learn/JavaScript/Asynchronous/Таймауты_и_интервалы	/ru/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 /ru/docs/Learn/JavaScript/Building_blocks/События	/ru/docs/Learn/JavaScript/Building_blocks/Events
+/ru/docs/Learn/JavaScript/Objects/Inheritance	/ru/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/ru/docs/Learn/JavaScript/Objects/Object-oriented_JS	/ru/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ru/docs/Learn/JavaScript/Объекты	/ru/docs/Learn/JavaScript/Objects
 /ru/docs/Learn/JavaScript/Объекты/Adding_bouncing_balls_features	/ru/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features
-/ru/docs/Learn/JavaScript/Объекты/Inheritance	/ru/docs/Learn/JavaScript/Objects/Inheritance
+/ru/docs/Learn/JavaScript/Объекты/Inheritance	/ru/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ru/docs/Learn/JavaScript/Объекты/JSON	/ru/docs/Learn/JavaScript/Objects/JSON
-/ru/docs/Learn/JavaScript/Объекты/Object-oriented_JS	/ru/docs/Learn/JavaScript/Objects/Object-oriented_JS
+/ru/docs/Learn/JavaScript/Объекты/Object-oriented_JS	/ru/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ru/docs/Learn/JavaScript/Объекты/Object_building_practice	/ru/docs/Learn/JavaScript/Objects/Object_building_practice
 /ru/docs/Learn/JavaScript/Объекты/Object_prototypes	/ru/docs/Learn/JavaScript/Objects/Object_prototypes
 /ru/docs/Learn/JavaScript/Объекты/Основы	/ru/docs/Learn/JavaScript/Objects/Basics
@@ -278,7 +280,8 @@
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-/ru/docs/Plugins/План	/ru/docs/Plugins/Roadmap
+/ru/docs/Plugins/Roadmap	/ru/docs/Glossary/Plugin
+/ru/docs/Plugins/План	/ru/docs/Glossary/Plugin
 /ru/docs/Quirks_Mode_and_Standards_Mode	/ru/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /ru/docs/SVG_In_HTML_Introduction	/ru/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /ru/docs/Sample_.htaccess_file	/ru/docs/Learn/Server-side/Apache_Configuration_htaccess
@@ -297,6 +300,7 @@
 /ru/docs/Tools/Производительность/Waterfall	/ru/docs/Tools/Performance/Waterfall
 /ru/docs/Using_Firefox_1.5_caching	/ru/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 /ru/docs/Using_files_from_web_applications	/ru/docs/Web/API/File/Using_files_from_web_applications
+/ru/docs/Web/API/AbortSignal/onabort	/ru/docs/conflicting/Web/API/AbortSignal/abort_event
 /ru/docs/Web/API/AudioContext.currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
 /ru/docs/Web/API/AudioContext/createPanner	/ru/docs/Web/API/BaseAudioContext/createPanner
 /ru/docs/Web/API/AudioContext/currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
@@ -363,6 +367,9 @@
 /ru/docs/Web/API/PositionError	/ru/docs/Web/API/GeolocationPositionError
 /ru/docs/Web/API/PositionOptions	/ru/docs/conflicting/Web/API/Geolocation/getCurrentPosition
 /ru/docs/Web/API/RandomSource/getRandomValues	/ru/docs/Web/API/Crypto/getRandomValues
+/ru/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ru/docs/conflicting/Web/API/Pointer_events
+/ru/docs/Web/API/USB/onconnect	/ru/docs/Web/API/USB/connect_event
+/ru/docs/Web/API/USB/ondisconnect	/ru/docs/Web/API/USB/disconnect_event
 /ru/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ru/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ru/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
@@ -372,6 +379,8 @@
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
 /ru/docs/Web/API/Window/crypto	/ru/docs/Web/API/crypto_property
 /ru/docs/Web/API/Window/mozAnimationStartTime	/ru/docs/Web/API/Animation/startTime
+/ru/docs/Web/API/Window/ongamepadconnected	/ru/docs/conflicting/Web/API/Window/gamepadconnected_event
+/ru/docs/Web/API/Window/ongamepaddisconnected	/ru/docs/conflicting/Web/API/Window/gamepaddisconnected_event
 /ru/docs/Web/API/Window/performance	/ru/docs/Web/API/performance_property
 /ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ru/docs/Glossary/Base64
 /ru/docs/Web/API/WindowBase64/btoa	/ru/docs/Web/API/btoa
@@ -384,6 +393,7 @@
 /ru/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ru/docs/Web/API/setTimeout
 /ru/docs/Web/API/WindowTimers.setTimeout	/ru/docs/Web/API/setTimeout
 /ru/docs/Web/API/WindowTimers/setTimeout	/ru/docs/Web/API/setTimeout
+/ru/docs/Web/API/XMLHttpRequest/onreadystatechange	/ru/docs/Web/API/XMLHttpRequest/readystatechange_event
 /ru/docs/Web/API/console.timeEnd	/ru/docs/Web/API/Console/timeEnd
 /ru/docs/Web/API/document.activeElement	/ru/docs/Web/API/Document/activeElement
 /ru/docs/Web/API/document.createComment	/ru/docs/Web/API/Document/createComment

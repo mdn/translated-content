@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}</div>
 
-<p class="summary">本章介绍在Javascript中如何使用字符串与文本内容。</p>
+<p>本章介绍在Javascript中如何使用字符串与文本内容。</p>
 
 <h2 id="字符串">字符串</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 <p>可以使用单引号或双引号创建简单的字符串:</p>
 
-<pre class="brush: js notranslate">'foo'
+<pre class="brush: js">'foo'
 "bar"</pre>
 
 <p>可以使用转义序列来创建更复杂的字符串:</p>
@@ -27,22 +27,22 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 <p>\x之后的数值将被认为是一个16进制数.</p>
 
-<pre class="brush: js notranslate">'\xA9' // "©"
+<pre class="brush: js">'\xA9' // "©"
 </pre>
 
 <h4 id="Unicode转义序列">Unicode转义序列</h4>
 
 <p>Unicode转义序列在\u之后需要至少4个字符.</p>
 
-<pre class="brush: js notranslate">'\u00A9' // "©"</pre>
+<pre class="brush: js">'\u00A9' // "©"</pre>
 
 <h4 id="Unicode字元逸出">Unicode字元逸出</h4>
 
-<p>这是ECMAScript 6中的新特性。有了Unicode字元逸出，任何字符都可以用16进制数转义, 这使得通过Unicode转义表示大于<code>0x10FFFF</code>的字符成为可能。使用简单的Unicode转义时通常需要分别写字符相应的两个部分（译注：大于<span style="font-family: courier,andale mono,monospace;">0x10FFFF的字符需要拆分为相应的两个小于0x10FFFF的部分</span>）来达到同样的效果。</p>
+<p>这是ECMAScript 6中的新特性。有了Unicode字元逸出，任何字符都可以用16进制数转义, 这使得通过Unicode转义表示大于<code>0x10FFFF</code>的字符成为可能。使用简单的Unicode转义时通常需要分别写字符相应的两个部分（译注：大于0x10FFFF的字符需要拆分为相应的两个小于0x10FFFF的部分）来达到同样的效果。</p>
 
 <p>请参阅 {{jsxref("String.fromCodePoint()")}} 或 {{jsxref("String.prototype.codePointAt()")}}。</p>
 
-<pre class="brush: js notranslate">'\u{2F804}'
+<pre class="brush: js">'\u{2F804}'
 
 // the same with simple Unicode escapes
 '\uD87E\uDC04'</pre>
@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 <p>{{jsxref("String")}} 对象是对原始string类型的封装 .</p>
 
-<pre class="brush: js notranslate">const foo = new String('foo'); // 创建一个 String 对象
+<pre class="brush: js">const foo = new String('foo'); // 创建一个 String 对象
 console.log(foo); // 输出: [String: 'foo']
 typeof foo; // 返回 'object'</pre>
 
@@ -59,14 +59,14 @@ typeof foo; // 返回 'object'</pre>
 
 <p>除非必要, 应该尽量使用 String 字面值，因为String对象的某些行为可能并不与直觉一致。举例：</p>
 
-<pre class="brush: js notranslate">const firstString = '2 + 2'; //创建一个字符串字面量
+<pre class="brush: js">const firstString = '2 + 2'; //创建一个字符串字面量
 const secondString = new String('2 + 2'); // 创建一个字符串对象
 eval(firstString); // 返回数字 4
 eval(secondString); // 返回包含 "2 + 2" 的字符串对象</pre>
 
 <p><code>String</code> 对象有一个属性 <code>length</code>，标识了字符串中 UTF-16 的码点个数。举例，下面的代码把 13 赋值给了<code>helloLength</code>，因为 "Hello, World!" 包含 13 个字符，每个字符用一个 UTF-16 码点表示。你可以通过数组的方式访问每一个码点，但你不能修改每个字符，因为字符串是不变的类数组对象： </p>
 
-<pre class="brush: js notranslate">const hello = 'Hello, World!';
+<pre class="brush: js">const hello = 'Hello, World!';
 const helloLength = hello.length;
 hello[0] = 'L'; // 无效，因为字符串是不变的
 hello[0]; // 返回 "H"</pre>
@@ -155,14 +155,14 @@ hello[0]; // 返回 "H"</pre>
 
 <p>源代码中插入的任何新行开始字符都作为模板字符串的内容. 使用一般的字符串时, 为了创建多行的字符串不得不用如下语法:</p>
 
-<pre class="brush: js notranslate">console.log("string text line 1\n\
+<pre class="brush: js">console.log("string text line 1\n\
 string text line 2");
 // "string text line 1
 // string text line 2"</pre>
 
 <p>为了实现同样效果的多行字符串, 现在可以写成如下形式:</p>
 
-<pre class="brush: js notranslate">console.log(`string text line 1
+<pre class="brush: js">console.log(`string text line 1
 string text line 2`);
 // "string text line 1
 // string text line 2"</pre>
@@ -171,14 +171,14 @@ string text line 2`);
 
 <p>为了在一般的字符串中嵌入表达式, 需要使用如下语法:</p>
 
-<pre class="brush: js notranslate">const five = 5;
+<pre class="brush: js">const five = 5;
 const ten = 10;
 console.log('Fifteen is ' + (five + ten) + ' and not ' + (2 * five + ten) + '.');
 // "Fifteen is 15 and not 20."</pre>
 
 <p>现在, 使用模板字符串, 可以使用语法糖让类似功能的实现代码更具可读性:</p>
 
-<pre class="brush: js notranslate">const five = 5;
+<pre class="brush: js">const five = 5;
 const ten = 10;
 console.log(`Fifteen is ${five + ten} and not ${2 * five + ten}.`);
 // "Fifteen is 15 and not 20."</pre>
@@ -193,7 +193,7 @@ console.log(`Fifteen is ${five + ten} and not ${2 * five + ten}.`);
 
 <p>{{jsxref("DateTimeFormat")}} 对象在日期和时间的格式化方面很有用. 下面的代码把一个日期格式化为美式英语格式. (不同时区结果不同.)</p>
 
-<pre class="brush: js notranslate">const msPerDay = 24 * 60 * 60 * 1000;
+<pre class="brush: js">const msPerDay = 24 * 60 * 60 * 1000;
 
 // July 17, 2014 00:00:00 UTC.
 const july172014 = new Date(msPerDay * (44 * 365 + 11 + 197));//2014-1970=44年
@@ -211,7 +211,7 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 
 <p>{{jsxref("NumberFormat")}} 对象在数字的格式化方面很有用, 比如货币数量值.</p>
 
-<pre class="brush: js notranslate">var gasPrice = new Intl.NumberFormat("en-US",
+<pre class="brush: js">var gasPrice = new Intl.NumberFormat("en-US",
                         { style: "currency", currency: "USD",
                           minimumFractionDigits: 3 });
 
@@ -229,7 +229,7 @@ console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 
 <p>举例, 德语中<em>有两种不同的排序方式 电话本（phonebook）</em> 和 字典（<em>dictionary）</em>. 电话本排序强调发音, 比如在排序前 “ä”, “ö”等被扩展为 “ae”, “oe”等发音.</p>
 
-<pre class="brush: js notranslate">var names = ["Hochberg", "Hönigswald", "Holzman"];
+<pre class="brush: js">var names = ["Hochberg", "Hönigswald", "Holzman"];
 
 var germanPhonebook = new Intl.Collator("de-DE-u-co-phonebk");
 
@@ -240,7 +240,7 @@ console.log(names.sort(germanPhonebook.compare).join(", "));
 
 <p>有些德语词包含变音, 所以在字典中忽略变音进行排序是合理的 (除非待排序的单词只有变音部分不同: <em>schon</em> 先于 <em>schön</em>).</p>
 
-<pre class="brush: js notranslate">var germanDictionary = new Intl.Collator("de-DE-u-co-dict");
+<pre class="brush: js">var germanDictionary = new Intl.Collator("de-DE-u-co-dict");
 
 // as if sorting ["Hochberg", "Honigswald", "Holzman"]:
 console.log(names.sort(germanDictionary.compare).join(", "));

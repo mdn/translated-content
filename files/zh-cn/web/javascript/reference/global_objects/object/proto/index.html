@@ -13,11 +13,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 <div>{{JSRef}}{{Deprecated_header}}</div>
 
 <div class="warning">
-<p><strong>警告:</strong> 通过现代浏览器的操作属性的便利性，可以改变一个对象的 <code>[[Prototype]]</code> 属性, 这种行为在每一个JavaScript引擎和浏览器中都是一个非常慢且影响性能的操作，使用这种方式来改变和继承属性是对性能影响非常严重的，并且性能消耗的时间也不是简单的花费在 <code>obj.__proto__ = ...</code> 语句上, 它还会影响到所有继承来自该 <code>[[Prototype]]</code> 的对象，如果你关心性能，你就不应该在一个对象中修改它的 [[Prototype]]。相反, 创建一个新的且可以继承 <code>[[Prototype]]</code> 的对象，推荐使用 {{jsxref("Object.create()")}}。</p>
+<p><strong>警告：</strong>通过现代浏览器的操作属性的便利性，可以改变一个对象的 <code>[[Prototype]]</code> 属性, 这种行为在每一个JavaScript引擎和浏览器中都是一个非常慢且影响性能的操作，使用这种方式来改变和继承属性是对性能影响非常严重的，并且性能消耗的时间也不是简单的花费在 <code>obj.__proto__ = ...</code> 语句上, 它还会影响到所有继承来自该 <code>[[Prototype]]</code> 的对象，如果你关心性能，你就不应该在一个对象中修改它的 [[Prototype]]。相反, 创建一个新的且可以继承 <code>[[Prototype]]</code> 的对象，推荐使用 {{jsxref("Object.create()")}}。</p>
 </div>
 
 <div class="warning">
-<p><strong>警告:</strong> 当<code>Object.prototype.__proto__</code> 已被大多数浏览器厂商所支持的今天，其存在和确切行为仅在ECMAScript 2015规范中被标准化为传统功能，以确保Web浏览器的兼容性。为了更好的支持，建议只使用 {{jsxref("Object.getPrototypeOf()")}}。</p>
+<p><strong>警告：</strong>当<code>Object.prototype.__proto__</code> 已被大多数浏览器厂商所支持的今天，其存在和确切行为仅在ECMAScript 2015规范中被标准化为传统功能，以确保Web浏览器的兼容性。为了更好的支持，建议只使用 {{jsxref("Object.getPrototypeOf()")}}。</p>
 </div>
 
 <div>{{jsxref("Object.prototype")}} 的 <code>__proto__</code>  属性是一个访问器属性（一个getter函数和一个setter函数）, 暴露了通过它访问的对象的内部<code>[[Prototype]]</code> (一个对象或 {{jsxref("Global_Objects/null", "null")}})。</div>

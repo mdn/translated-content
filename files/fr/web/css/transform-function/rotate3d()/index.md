@@ -1,22 +1,18 @@
 ---
 title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/rotate3d()
+browser-compat: css.types.transform-function.rotate3d
 ---
 {{CSSRef}}
 
-La fonction **`rotate3d()`** définit une transformation qui déplace un élément autour d'un axe sans le déformer. L'angle de la rotation est un argument de la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre. La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.
+La fonction **`rotate3d()`** définit une transformation qui déplace un élément autour d'un axe sans le déformer. L'angle de la rotation est un argument de la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
 {{EmbedInteractiveExample("pages/css/rotate3d.html")}}
 
-Dans l'espace (en trois dimensions), les rotations ont trois degrés de liberté qui définissent l'axe de rotation. Cet axe est défini par un vecteur `[x, y, z]` et passe par l'origine du repère (définie grâce à la propriété {{cssxref("transform-origin")}}). Si le vecteur n'est pas normalisé (autrement dit, si la somme des carrés de ses trois composantes ne vaut pas 1), il sera normalisé par le moteur. Un vecteur qui ne peut être normalisé (par exemple le vecteur nul `[0, 0, 0]`) empêchera la rotation d'être appliquée mais la propriété CSS restera valide.
+Dans l'espace (en trois dimensions), les rotations ont trois degrés de liberté qui définissent l'axe de rotation. Cet axe est défini par un vecteur `[x, y, z]` et passe par l'origine du repère (définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin)). Si le vecteur n'est pas normalisé (autrement dit, si la somme des carrés de ses trois composantes ne vaut pas 1), il sera normalisé par le moteur. Un vecteur qui ne peut être normalisé (par exemple le vecteur nul `[0, 0, 0]`) empêchera la rotation d'être appliquée mais la propriété CSS restera valide.
 
-> **Note :** Contrairement aux rotations appliqués dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
+> **Note :** Contrairement aux rotations appliquées dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
 
 ## Syntaxe
 
@@ -25,13 +21,13 @@ Dans l'espace (en trois dimensions), les rotations ont trois degrés de liberté
 ### Valeurs
 
 - `x`
-  - : Une valeur de type {{cssxref("&lt;number&gt;")}} qui définit la composante en X (l'abscisse) du vecteur qui sera l'axe de la rotation.
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui définit la composante en X (l'abscisse) du vecteur qui sera l'axe de la rotation.
 - `y`
-  - : Une valeur de type {{cssxref("&lt;number&gt;")}} qui définit la composante en Y (l'ordonnée) du vecteur qui sera l'axe de la rotation.
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui définit la composante en Y (l'ordonnée) du vecteur qui sera l'axe de la rotation.
 - `z`
-  - : Une valeur de type {{cssxref("&lt;number&gt;")}} qui définit la composante en Z (la côte) du vecteur qui sera l'axe de la rotation.
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui définit la composante en Z (la côte) du vecteur qui sera l'axe de la rotation.
 - `a`
-  - : Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
+  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
 
 <table class="standard-table">
   <thead>
@@ -161,15 +157,13 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS Transforms 2", "#funcdef-rotate3d", "rotate3d()")}} | {{Spec2("CSS Transforms 2")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)

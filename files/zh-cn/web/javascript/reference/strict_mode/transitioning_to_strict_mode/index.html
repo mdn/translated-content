@@ -21,8 +21,8 @@ translation_of: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mod
 
 <ul>
  <li>八进制语法<code>:var n = 023和var s = "\047"</code></li>
- <li><a class="new" href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Statements/with" title="/zh-CN/docs/JavaScript/Reference/Statements/with"><code>with</code></a>语句</li>
- <li>使用<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Operators/delete" title="/zh-CN/docs/JavaScript/Reference/Operators/delete">delete</a>删除一个变量名(而不是属性名)<code>:delete myVariable</code></li>
+ <li><a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Statements/with" title="/zh-CN/docs/JavaScript/Reference/Statements/with"><code>with</code></a>语句</li>
+ <li>使用<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Operators/delete">delete</a>删除一个变量名(而不是属性名)<code>:delete myVariable</code></li>
  <li>使用<code>eval</code>或<code>arguments</code>作为变量名或函数名</li>
  <li>使用未来保留字(也许会在ECMAScript 6中使用):<code>implements</code>, <code>interface</code>, <code>let</code>, <code>package</code>, <code>private</code>, <code>protected</code>, <code>public</code>, <code>static</code>,和<code>yield</code>作为变量名或函数名</li>
  <li>在语句块中使用函数声明:<code>if(a&lt;b){ function f(){} }</code></li>
@@ -105,11 +105,11 @@ s.opacity = 1;
 
 <h4 id="arguments对象属性不与对应的形参变量同步更新"><code>arguments</code>对象属性不与对应的形参变量同步更新</h4>
 
-<p>在非严格模式中,修改<code>arguments</code>对象中某个索引属性的值,和这个属性对应的形参变量的值也会同时变化,反之亦然.这会让JavaScript的代码混淆引擎让代码变得更难读和理解。在严格模式中<code><span style="font-family: courier,andale mono,monospace;">arguments 对象会以形参变量的拷贝的形式被创建和初始化，因此 arguments 对象的改变不会影响形参。</span></code></p>
+<p>在非严格模式中,修改<code>arguments</code>对象中某个索引属性的值,和这个属性对应的形参变量的值也会同时变化,反之亦然.这会让JavaScript的代码混淆引擎让代码变得更难读和理解。在严格模式中<code>arguments 对象会以形参变量的拷贝的形式被创建和初始化，因此 arguments 对象的改变不会影响形参。</code></p>
 
 <h4 id="eval相关的区别"><code>eval相关的区别</code></h4>
 
-<p>在严格模式中,<code>eval</code>不会在当前的作用域内创建新的变量.另外,传入eval的字符串参数也会按照严格模式来解析.你需要全面测试来确保没有代码收到影响。另外，<span style="font-family: courier,andale mono,monospace;">如果你并不是为了解决一个非常实际的解决方案中，</span>尽量不要使用<code>eval。</code></p>
+<p>在严格模式中,<code>eval</code>不会在当前的作用域内创建新的变量.另外,传入eval的字符串参数也会按照严格模式来解析.你需要全面测试来确保没有代码收到影响。另外，如果你并不是为了解决一个非常实际的解决方案中，尽量不要使用<code>eval。</code></p>
 
 <h2 id="严格中立的代码">严格中立的代码</h2>
 

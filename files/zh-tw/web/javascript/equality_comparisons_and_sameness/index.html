@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 
 <ul>
  <li>一般相等 (<code>==</code>)</li>
- <li>嚴格相等 (<code style="font-weight: 700; font-style: normal;">===</code>)：被用於 <code style="font-weight: 700; font-style: normal;">Array.prototype.indexOf</code>、 <code style="font-weight: 700; font-style: normal;">Array.prototype.lastIndexOf </code>和 <code style="font-weight: 700; font-style: normal;">case</code>-matching </li>
+ <li>嚴格相等 (<code>===</code>)：被用於 <code>Array.prototype.indexOf</code>、 <code>Array.prototype.lastIndexOf </code>和 <code>case</code>-matching </li>
  <li>零值相等：被用於 <code>%TypedArray%</code> 和 <code>ArrayBuffer</code> 建構子，以及 <code>Map</code> 和 <code>Set</code> 運算子，還有將在 ES2016 新增的 <code>String.prototype.includes。</code></li>
  <li>同值相等： 用在除上面提及的所有情況。</li>
 </ul>
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 
 <p>要用哪個操作取決於你要哪種類型的比較。</p>
 
-<p>簡單來說，一般相等會將型別一致化後比較；嚴格相等則不會（也就是說若型別不同，就會回傳 fasle）；<code>Object.is</code> 會和嚴格相等做同樣的事，但會將 <code>NaN</code>、<code>-0<font face="Open Sans, Arial, sans-serif"> 和 </font></code><code>+0 </code>獨立處理，因此這三個不會相等，而 <code>Object.is(NaN, NaN)</code> 則會回傳 true 。（用一般相等或嚴格相等比較兩個 <code>NaN</code> 時會回傳 <code>false</code> ，因為 IEEE 754 如此規範。） 切記，這三種判斷必須考慮原型，因為他們在設計上不被考慮為相等。對於任何非原型物件 x、y，即使他們有著相同結構，但如果是不同物件，比較就會是 false。</p>
+<p>簡單來說，一般相等會將型別一致化後比較；嚴格相等則不會（也就是說若型別不同，就會回傳 fasle）；<code>Object.is</code> 會和嚴格相等做同樣的事，但會將 <code>NaN</code>、<code>-0 和 </code><code>+0 </code>獨立處理，因此這三個不會相等，而 <code>Object.is(NaN, NaN)</code> 則會回傳 true 。（用一般相等或嚴格相等比較兩個 <code>NaN</code> 時會回傳 <code>false</code> ，因為 IEEE 754 如此規範。） 切記，這三種判斷必須考慮原型，因為他們在設計上不被考慮為相等。對於任何非原型物件 x、y，即使他們有著相同結構，但如果是不同物件，比較就會是 false。</p>
 
 <h2 id="嚴格相等（）">嚴格相等（<code>===</code>）</h2>
 
@@ -58,81 +58,81 @@ console.log(obj === undefined); // false
  <thead>
   <tr>
    <th scope="row"></th>
-   <th colspan="7" scope="col" style="text-align: center;">比較值 B</th>
+   <th colspan="7" scope="col">比較值 B</th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <th scope="row"></th>
    <td></td>
-   <td style="text-align: center;">Undefined</td>
-   <td style="text-align: center;">Null</td>
-   <td style="text-align: center;">Number</td>
-   <td style="text-align: center;">String</td>
-   <td style="text-align: center;">Boolean</td>
-   <td style="text-align: center;">Object</td>
+   <td>Undefined</td>
+   <td>Null</td>
+   <td>Number</td>
+   <td>String</td>
+   <td>Boolean</td>
+   <td>Object</td>
   </tr>
   <tr>
    <th colspan="1" rowspan="6" scope="row">比較值 A</th>
    <td>Undefined</td>
-   <td style="text-align: center;"><code>true</code></td>
-   <td style="text-align: center;"><code>true</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td>Null</td>
-   <td style="text-align: center;"><code>true</code></td>
-   <td style="text-align: center;"><code>true</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td>Number</td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>A === B</code></td>
-   <td style="text-align: center;"><code>A === ToNumber(B)</code></td>
-   <td style="text-align: center;"><code>A === ToNumber(B)</code></td>
-   <td style="text-align: center;"><code>A == ToPrimitive(B)</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>A === B</code></td>
+   <td><code>A === ToNumber(B)</code></td>
+   <td><code>A === ToNumber(B)</code></td>
+   <td><code>A == ToPrimitive(B)</code></td>
   </tr>
   <tr>
    <td>String</td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>ToNumber(A) === B</code></td>
-   <td style="text-align: center;"><code>A === B</code></td>
-   <td style="text-align: center;"><code>ToNumber(A) === ToNumber(B)</code></td>
-   <td style="text-align: center;"><code>A == ToPrimitive(B)</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>ToNumber(A) === B</code></td>
+   <td><code>A === B</code></td>
+   <td><code>ToNumber(A) === ToNumber(B)</code></td>
+   <td><code>A == ToPrimitive(B)</code></td>
   </tr>
   <tr>
    <td>Boolean</td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>ToNumber(A) === B</code></td>
-   <td style="text-align: center;"><code>ToNumber(A) === ToNumber(B)</code></td>
-   <td style="text-align: center;"><code>A === B</code></td>
-   <td style="text-align: center;"><code>ToNumber(A) == ToPrimitive(B)</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>ToNumber(A) === B</code></td>
+   <td><code>ToNumber(A) === ToNumber(B)</code></td>
+   <td><code>A === B</code></td>
+   <td><code>ToNumber(A) == ToPrimitive(B)</code></td>
   </tr>
   <tr>
    <td>Object</td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>false</code></td>
-   <td style="text-align: center;"><code>ToPrimitive(A) == B</code></td>
-   <td style="text-align: center;"><code>ToPrimitive(A) == B</code></td>
-   <td style="text-align: center;"><code>ToPrimitive(A) == ToNumber(B)</code></td>
-   <td style="text-align: center;"><code>A === B</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>ToPrimitive(A) == B</code></td>
+   <td><code>ToPrimitive(A) == B</code></td>
+   <td><code>ToPrimitive(A) == ToNumber(B)</code></td>
+   <td><code>A === B</code></td>
   </tr>
  </tbody>
 </table>
 
 <p>根據上表， <code>ToNumber(A)</code> 嘗試在比較前轉換成一個數字。 這等同 <code>+A</code> （單 + 運算子）。<code>ToPrimitive(A)</code> 嘗試從物件轉換成原生值，透過嘗試對 A 使用 <code>A.toString</code> 和 <code>A.valueOf</code> 方法。</p>
 
-<p>一般來說，根據 ECMAScript 規範，所有物件應該不等於 <code>undefined</code> 和 <code>null</code>。但大多數瀏覽器允許很小部分的物件（尤其是所有頁面的 <code>document.all</code> 物件）在某些情況下<em>當成</em> <code>undefined</code>。一般相等是其中一種：當 A 是個被<em>模擬</em> 成 <code>undefined </code>的物件<code><font face="Open Sans, Arial, sans-serif">，</font></code><code>null == A</code> 和 <code>undefined == A</code> 會是 true。而在其他情況下物件不會等同於 <code>undefined</code> 或 <code>null。</code></p>
+<p>一般來說，根據 ECMAScript 規範，所有物件應該不等於 <code>undefined</code> 和 <code>null</code>。但大多數瀏覽器允許很小部分的物件（尤其是所有頁面的 <code>document.all</code> 物件）在某些情況下<em>當成</em> <code>undefined</code>。一般相等是其中一種：當 A 是個被<em>模擬</em> 成 <code>undefined </code>的物件<code>，</code><code>null == A</code> 和 <code>undefined == A</code> 會是 true。而在其他情況下物件不會等同於 <code>undefined</code> 或 <code>null。</code></p>
 
 <pre class="brush: js">var num = 0;
 var obj = new String("0");
@@ -192,181 +192,181 @@ function attemptMutation(v)
  <caption>Sameness Comparisons</caption>
  <thead>
   <tr>
-   <th scope="col" style="text-align: center;">x</th>
-   <th scope="col" style="text-align: center;">y</th>
-   <th scope="col" style="width: 10em; text-align: center;"><code>==</code></th>
-   <th scope="col" style="width: 10em; text-align: center;"><code>===</code></th>
-   <th scope="col" style="width: 10em; text-align: center;"><code>Object.is</code></th>
+   <th scope="col">x</th>
+   <th scope="col">y</th>
+   <th scope="col"><code>==</code></th>
+   <th scope="col"><code>===</code></th>
+   <th scope="col"><code>Object.is</code></th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <td><code>undefined</code></td>
    <td><code>undefined</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
   </tr>
   <tr>
    <td><code>null</code></td>
    <td><code>null</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
   </tr>
   <tr>
    <td><code>true</code></td>
    <td><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
   </tr>
   <tr>
    <td><code>false</code></td>
    <td><code>false</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
   </tr>
   <tr>
    <td><code>"foo"</code></td>
    <td><code>"foo"</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
   </tr>
   <tr>
    <td><code>{ foo: "bar" }</code></td>
    <td><code>x</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
   </tr>
   <tr>
    <td><code>0</code></td>
    <td><code>0</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
   </tr>
   <tr>
    <td><code>+0</code></td>
    <td><code>-0</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>0</code></td>
    <td><code>false</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>""</code></td>
    <td><code>false</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>""</code></td>
    <td><code>0</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>"0"</code></td>
    <td><code>0</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>"17"</code></td>
    <td><code>17</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>[1,2]</code></td>
    <td><code>"1,2"</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>new String("foo")</code></td>
    <td><code>"foo"</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>null</code></td>
    <td><code>undefined</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>null</code></td>
    <td><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>undefined</code></td>
    <td><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>{ foo: "bar" }</code></td>
    <td><code>{ foo: "bar" }</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>new String("foo")</code></td>
    <td><code>new String("foo")</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>0</code></td>
    <td><code>null</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>0</code></td>
    <td><code>NaN</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>"foo"</code></td>
    <td><code>NaN</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
   </tr>
   <tr>
    <td><code>NaN</code></td>
    <td><code>NaN</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
-   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td><code>false</code></td>
+   <td><code>false</code></td>
+   <td><code>true</code></td>
   </tr>
  </tbody>
 </table>
@@ -379,9 +379,6 @@ function attemptMutation(v)
 
 <dl>
  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29" title="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators"><code>- (unary negation)</code></a></dt>
-</dl>
-
-<dl>
  <dd>
  <p>It's obvious that negating <code>0</code> produces <code>-0</code>. But the abstraction of an expression can cause <code>-0</code> to creep in when you don't realize it. For example, consider:</p>
 
@@ -389,36 +386,27 @@ function attemptMutation(v)
 
  <p>If <code>obj.velocity</code> is <code>0</code> (or computes to <code>0</code>), a <code>-0</code> is introduced at that place and propogates out into <code>stoppingForce</code>.</p>
  </dd>
-</dl>
-
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2"><code>Math.atan2</code></a></dt>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil"><code>Math.ceil</code></a></dt>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a></dt>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round"><code>Math.round</code></a></dt>
-</dl>
-
-<dl>
+ <dt>
+  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2"><code>Math.atan2</code></a>,
+  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil"><code>Math.ceil</code></a>,
+  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a>,
+  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round"><code>Math.round</code></a>
+ </dt>
  <dd>It's possible for a <code>-0</code> to be introduced into an expression as a return value of these methods in some cases, even when no <code>-0</code> exists as one of the parameters. E.g., using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a> to raise <code>-<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code> to the power of any negative, odd exponent evaluates to <code>-0</code>. Refer to the documentation for the individual methods.</dd>
-</dl>
-
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"><code>Math.floor</code></a></dt>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max"><code>Math.max</code></a></dt>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min"><code>Math.min</code></a></dt>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin"><code>Math.sin</code></a></dt>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt"><code>Math.sqrt</code></a></dt>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan"><code>Math.tan</code></a></dt>
-</dl>
-
-<dl>
+ <dt>
+  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"><code>Math.floor</code></a>,
+  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max"><code>Math.max</code></a>,
+  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min"><code>Math.min</code></a>,
+  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin"><code>Math.sin</code></a>,
+  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt"><code>Math.sqrt</code></a>,
+  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan"><code>Math.tan</code></a>
+ </dt>
  <dd>It's possible to get a <code>-0</code> return value out of these methods in some cases where a <code>-0</code> exists as one of the parameters. E.g., <code>Math.min(-0, +0)</code> evalutes to <code>-0</code>. Refer to the documentation for the individual methods.</dd>
-</dl>
-
-<dl>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">~</a></code></dt>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&lt;&lt;</a></code></dt>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&gt;&gt;</a></code></dt>
+ <dt>
+  <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"><code>~</code></a>,
+  <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"><code>&lt;&lt;</code></a>,
+  <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"><code>&gt;&gt;</code></a>
+ </dt>
  <dd>Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, <code>-0</code> will not survive a round trip after an inverse operation. E.g., both <code>Object.is(~~(-0), -0)</code> and <code>Object.is(-0 &lt;&lt; 2 &gt;&gt; 2, -0)</code> evaluate to <code>false</code>.</dd>
 </dl>
 

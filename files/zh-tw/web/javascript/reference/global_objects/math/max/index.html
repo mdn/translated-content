@@ -55,7 +55,7 @@ Math.max(-10, 20);  //  20
 <pre class="brush: js">var arr = [1,2,3];
 var max = arr.reduce(function(a, b) {
     return Math.max(a, b);
-});
+}, -Infinity);
 </pre>
 
 <p>The following function uses {{jsxref("Function.prototype.apply()")}} to get the maximum of an array. <code>getMaxOfArray([1, 2, 3])</code> is equivalent to <code>Math.max(1, 2, 3)</code>, but you can use <code>getMaxOfArray()</code> on programmatically constructed arrays. This should only be used for arrays with relatively few elements.</p>

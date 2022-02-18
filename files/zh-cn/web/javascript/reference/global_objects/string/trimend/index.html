@@ -17,7 +17,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimRight
 
 <p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.trimEnd();
 <var>str</var>.trimRight();</code></pre>
@@ -26,7 +26,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimRight
 
 <p>一个新字符串，表示从调用字串的末（右）端除去空白。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>trimEnd()</code> / <code>trimRight()</code>方法移除原字符串右端的连续空白符并返回，<code>trimEnd()</code> / <code>trimRight()</code>方法并不会直接修改原字符串本身。</p>
 
@@ -37,13 +37,13 @@ original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimRight
 <pre class="brush: js"><code>String.prototype.trimRight.name === "trimEnd";</code>
 </pre>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <h3 id="使用trimEnd">使用<code>trimEnd()</code></h3>
 
 <p>下面的例子输出了小写的字符串"   foo":</p>
 
-<pre class="brush:js;highlight:[5]">var str = "   foo  ";
+<pre class="brush:js">var str = "   foo  ";
 
 alert(str.length); // 8
 
@@ -77,7 +77,7 @@ console.log(str);       // '   foo'
 
 <p>{{Compat("javascript.builtins.String.trimEnd")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.trim()")}}</li>

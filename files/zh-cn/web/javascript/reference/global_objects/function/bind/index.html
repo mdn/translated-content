@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>function</var></code>.bind(<var>thisArg</var>[, <var>arg1</var>[, <var>arg2</var>[, ...]]])</pre>
+<pre class="syntaxbox"><code><var>function</var></code>.bind(<var>thisArg</var>[, <var>arg1</var>[, <var>arg2</var>[, ...]]])</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -63,7 +63,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <p><code>bind()</code> 最简单的用法是创建一个函数，不论怎么调用，这个函数都有同样的 <strong><code>this</code></strong> 值。JavaScript新手经常犯的一个错误是将一个方法从对象中拿出来，然后再调用，期望方法中的 <code>this</code> 是原来的对象（比如在回调中传入这个方法）。如果不做特殊处理的话，一般会丢失原来的对象。基于这个函数，用原始的对象创建一个绑定函数，巧妙地解决了这个问题：</p>
 
-<pre class="brush: js notranslate">this.x = 9;    // 在浏览器中，this 指向全局的 "window" 对象
+<pre class="brush: js">this.x = 9;    // 在浏览器中，this 指向全局的 "window" 对象
 var module = {
   x: 81,
   getX: function() { return this.x; }
@@ -85,7 +85,7 @@ boundGetX(); // 81
 
 <p><code>bind()</code> 的另一个最简单的用法是使一个函数拥有预设的初始参数。只要将这些参数（如果有的话）作为 <code>bind()</code> 的参数写在 <code>this</code> 后面。当绑定函数被调用时，这些参数会被插入到目标函数的参数列表的开始位置，传递给绑定函数的参数会跟在它们后面。</p>
 
-<pre class="brush: js notranslate">function list() {
+<pre class="brush: js">function list() {
   return Array.prototype.slice.call(arguments);
 }
 
@@ -120,7 +120,7 @@ var result3 = addThirtySeven(5, 10);
 
 <p>在默认情况下，使用 {{ domxref("window.setTimeout()") }} 时，<code>this</code> 关键字会指向 {{ domxref("window") }} （或 <code>global</code>）对象。当类的方法中需要 <code>this</code> 指向类的实例时，你可能需要显式地把 <code>this</code> 绑定到回调函数，就不会丢失该实例的引用。</p>
 
-<pre class="brush: js notranslate"><code>function LateBloomer() {
+<pre class="brush: js"><code>function LateBloomer() {
   this.petalCount = Math.ceil(Math.random() * 12) + 1;
 }
 
@@ -140,12 +140,12 @@ flower.bloom();  // 一秒钟后, 调用 'declare' 方法</code></pre>
 <h3 id="作为构造函数使用的绑定函数">作为构造函数使用的绑定函数</h3>
 
 <div class="warning">
-<p><strong>警告</strong> :这部分演示了 JavaScript 的能力并且记录了 <code>bind()</code> 的超前用法。以下展示的方法并不是最佳的解决方案，且可能不应该用在任何生产环境中。</p>
+<p><strong>警告：</strong>这部分演示了 JavaScript 的能力并且记录了 <code>bind()</code> 的超前用法。以下展示的方法并不是最佳的解决方案，且可能不应该用在任何生产环境中。</p>
 </div>
 
 <p>绑定函数自动适应于使用 {{jsxref("Operators/new", "new")}} 操作符去构造一个由目标函数创建的新实例。当一个绑定函数是用来构建一个值的，原来提供的 <code>this</code> 就会被忽略。不过提供的参数列表仍然会插入到构造函数调用时的参数列表之前。</p>
 
-<pre class="brush: js notranslate">function Point(x, y) {
+<pre class="brush: js">function Point(x, y) {
   this.x = x;
   this.y = y;
 }
@@ -178,7 +178,7 @@ new YAxisPoint(17, 42) instanceof Point; // true</pre>
 
 <p>请注意，你不需要做特别的处理就可以创建一个和 {{jsxref("Operators/new", "new")}} 操作符一起使用的绑定函数。也就是说，你不需要做特别处理就可以创建一个可以被直接调用的绑定函数，即使你更希望绑定函数是用 {{jsxref("Operators/new", "new")}} 操作符来调用。</p>
 
-<pre class="brush: js notranslate">// ...接着上面的代码继续的话，
+<pre class="brush: js">// ...接着上面的代码继续的话，
 // 这个例子可以直接在你的 JavaScript 控制台运行
 
 // 仍然能作为一个普通函数来调用
@@ -196,7 +196,7 @@ emptyObj.x + ',' + emptyObj.y;   //  '0,13'
 
 <p>你可以用 {{jsxref("Array.prototype.slice")}} 来将一个类似于数组的对象（array-like object）转换成一个真正的数组，就拿它来举例子吧。你可以简单地这样写：</p>
 
-<pre class="brush: js notranslate">var slice = Array.prototype.slice;
+<pre class="brush: js">var slice = Array.prototype.slice;
 
 // ...
 
@@ -204,7 +204,7 @@ slice.apply(arguments);</pre>
 
 <p>用 <code>bind()</code>可以使这个过程变得简单。在下面这段代码里面，<code>slice</code> 是 {{jsxref("Function.prototype")}} 的 {{jsxref("Function.prototype.apply()", "apply()")}} 方法的绑定函数，并且将 {{jsxref("Array.prototype")}} 的 {{jsxref("Array.prototype.slice()", "slice()")}} 方法作为 <strong><code>this</code></strong> 的值。这意味着我们压根儿用不着上面那个 <code>apply()</code>调用了。</p>
 
-<pre class="brush: js notranslate">// 与前一段代码的 "slice" 效果相同
+<pre class="brush: js">// 与前一段代码的 "slice" 效果相同
 var unboundSlice = Array.prototype.slice;
 var slice = Function.prototype.apply.bind(unboundSlice);
 
@@ -212,7 +212,7 @@ var slice = Function.prototype.apply.bind(unboundSlice);
 
 slice(arguments);</pre>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>

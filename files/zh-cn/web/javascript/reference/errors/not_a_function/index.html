@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Errors/Not_a_function
 
 <h2 id="信息">信息</h2>
 
-<pre class="notranslate">TypeError: Object doesn't support property or method {x} (Edge)
+<pre>TypeError: Object doesn't support property or method {x} (Edge)
 TypeError: "x" is not a function</pre>
 
 <h2 id="错误类型">错误类型</h2>
@@ -47,20 +47,20 @@ TypeError: "x" is not a function</pre>
 
 <p>函数的名称拼写错误，这种情况是经常发生的：</p>
 
-<pre class="brush: js example-bad notranslate">var x = document.getElementByID("foo");
+<pre class="brush: js example-bad">var x = document.getElementByID("foo");
 // TypeError: document.getElementByID is not a function
 </pre>
 
 <p>正确的方法名应该是 <code>getElementByI<strong>d：</strong></code></p>
 
-<pre class="brush: js example-good notranslate">var x = document.getElementById("foo");
+<pre class="brush: js example-good">var x = document.getElementById("foo");
 </pre>
 
 <h3 id="调用Object类型中不存在的方法">调用Object类型中不存在的方法</h3>
 
 <p>对于某些特殊的方法，它只属于某些特定的原生对象中，你必须提供一个回调函数才能正常运行。例如：这里调用了一个 {{jsxref("Array.prototype.map()")}} 方法，但是这方法只能被 {{jsxref("Array")}} 对象所调用。 </p>
 
-<pre class="brush: js example-bad notranslate">var obj = { a: 13, b: 37, c: 42 };
+<pre class="brush: js example-bad">var obj = { a: 13, b: 37, c: 42 };
 
 obj.map(function(num) {
   return num * 2;
@@ -70,7 +70,7 @@ obj.map(function(num) {
 
 <p>正确的做法，使用一个数组来代替:</p>
 
-<pre class="brush: js example-good notranslate">var numbers = [1, 4, 9];
+<pre class="brush: js example-good">var numbers = [1, 4, 9];
 
 numbers.map(function(num) {
   return num * 2;
@@ -83,7 +83,7 @@ numbers.map(function(num) {
 
 <p>当您在创建类时,可能会存在某个属性和某个方法的名称相同,当您在调用该函数时,编译器会认为该函数不存在.</p>
 
-<pre class="brush: js example-bad notranslate">var Dog = function () {
+<pre class="brush: js example-bad">var Dog = function () {
  this.age = 11;
  this.color = "black";
  this.name = "Ralph";
@@ -102,7 +102,7 @@ myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
 
 <p>正确的做法是使用不同的变量名.</p>
 
-<pre class="brush: js example-good notranslate">var Dog = function () {
+<pre class="brush: js example-good">var Dog = function () {
  this.age = 11;
  this.color = "black";
  this.dogName = "Ralph"; //Using this.dogName instead of .name
@@ -124,13 +124,13 @@ myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }<
 
 <p>使用后者时将会抛出错误:</p>
 
-<pre class="brush: js example-bad notranslate">const sixteen = 2(3 + 5);
+<pre class="brush: js example-bad">const sixteen = 2(3 + 5);
 alert('2 x (3 + 5) is ' + String(sixteen));
 //Uncaught TypeError: 2 is not a function</pre>
 
 <p>您可以添加乘法运算符 <code>*</code> 来改正代码:</p>
 
-<pre class="brush: js example-good notranslate">const sixteen = 2 * (3 + 5);
+<pre class="brush: js example-good">const sixteen = 2 * (3 + 5);
 alert('2 x (3 + 5) is ' + String(sixteen));
 //2 x (3 + 5) is 16</pre>
 
@@ -140,7 +140,7 @@ alert('2 x (3 + 5) is ' + String(sixteen));
 
 <p>以下为一个示例模块 (<code>helpers.js</code>)</p>
 
-<pre class="notranslate">let helpers = function () { };
+<pre>let helpers = function () { };
 
 helpers.groupBy = function (objectArray, property) {
   return objectArray.reduce(function (acc, obj) {
@@ -158,7 +158,7 @@ export default helpers;</pre>
 
 <p>在 <code>App.js</code>中正确导入该模块:</p>
 
-<pre class="notranslate">import helpers from './helpers'</pre>
+<pre>import helpers from './helpers'</pre>
 
 <h2 id="相关">相关</h2>
 

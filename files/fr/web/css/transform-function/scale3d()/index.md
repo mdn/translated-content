@@ -1,12 +1,8 @@
 ---
 title: scale3d()
 slug: Web/CSS/transform-function/scale3d()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/scale3d()
+browser-compat: css.types.transform-function.scale3d
 ---
 {{CSSRef}}
 
@@ -16,20 +12,24 @@ La fonction **`scale3d()`** permet de modifier la taille d'un élément en appli
 
 La transformation appliquée est définie par un vecteur dont les coordonnées définissent l'amplitude de l'homothétie dans chaque direction. Si les trois coordonnées du vecteur sont égales, la transformation est isotropique et la forme de l'élément est conservée.
 
-Lorsque les composantes du vecteurs sont en dehors de l'intervalle `[-1, 1]`, la transformation agrandit l'élément dans le sens des coordonnées. Lorsque les composantes sont dans cet intervalle, cela réduit l'élément.
+Lorsque les composantes du vecteur sont en dehors de l'intervalle `[-1, 1]`, la transformation agrandit l'élément dans le sens des coordonnées. Lorsque les composantes sont dans cet intervalle, cela réduit l'élément.
 
 ## Syntaxe
 
-    scale3d(sx, sy, sz)
+La fonction `scale3d()` s'utilise avec trois valeurs dont chacune représente l'intensité de la transformation selon chaque direction.
+
+```css
+scale3d(sx, sy, sz)
+```
 
 ### Valeurs
 
 - `sx`
-  - : Une valeur de type {{cssxref("&lt;number&gt;")}} qui représente l'abscisse du vecteur définissant l'homothétie.
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente l'abscisse du vecteur définissant l'homothétie.
 - `sy`
-  - : Une valeur de type {{cssxref("&lt;number&gt;")}} qui représente l'ordonnée du vecteur définissant l'homothétie
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente l'ordonnée du vecteur définissant l'homothétie
 - `sz`
-  - : Une valeur de type {{cssxref("&lt;number&gt;")}} qui représente la composante, selon l'axe Z, du vecteur définissant l'homothétie
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente la composante, selon l'axe Z, du vecteur définissant l'homothétie
 
 <table class="standard-table">
   <thead>
@@ -42,11 +42,11 @@ Lorsque les composantes du vecteurs sont en dehors de l'intervalle `[-1, 1]`, la
   </thead>
   <tbody>
     <tr>
-      <td colspan="2" rowspan="2">
+      <td colspan="2">
         Cette transformation s'applique dans en 3 dimensions et ne peut pas être
         représentée sur le plan.
       </td>
-      <td colspan="1" rowspan="2">
+      <td>
         <math
           ><mfenced
             ><mtable
@@ -57,7 +57,7 @@ Lorsque les composantes du vecteurs sont en dehors de l'intervalle `[-1, 1]`, la
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td>
         <math
           ><mfenced
             ><mtable
@@ -82,22 +82,22 @@ Lorsque les composantes du vecteurs sont en dehors de l'intervalle `[-1, 1]`, la
 #### HTML
 
 ```html
-<p>foo</p>
-<p class="transformation">bar</p>
+<div>Normal</div>
+<div class="scaled">Mis à l'échelle</div>
 ```
 
 #### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
 }
 
-.transformation {
-  transform: perspective(500px) scale3d(0.8, 2, 0.2) translateZ(100px);
-  background-color: blue;
+.scaled {
+  transform: perspective(500px) scale3d(2, 0.7, 0.2) translateZ(100px);
+  background-color: pink;
 }
 ```
 
@@ -110,23 +110,23 @@ p {
 #### HTML
 
 ```html
-<p>toto</p>
-<p class="transformation">truc</p>
+<div>Normal</div>
+<div class="scaled">Mis à l'échelle</div>
 ```
 
 #### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
 }
 
-.transformation {
-  transform: scale3d(2, 3, 0);
-  transform-origin: center;
-  background-color: blue;
+.scaled {
+  transform: perspective(500px) scale3d(2, 0.7, 0.2) translateZ(100px);
+  transform-origin: left;
+  background-color: pink;
 }
 ```
 
@@ -136,18 +136,16 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS Transforms 2", "#funcdef-scale3d", "scale3d()")}} | {{Spec2("CSS Transforms 2")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
-- [`scaleZ()`](</fr/docs/Web/CSS/transform-function/scaleZ()>)
-- [`translate3d()`](</fr/docs/Web/CSS/transform-function/translate3d()>)
-- [`rotate3d()`](</fr/docs/Web/CSS/transform-function/rotate3d()>)
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`scaleZ()`](/fr/docs/Web/CSS/transform-function/scaleZ())
+- [`translate3d()`](/fr/docs/Web/CSS/transform-function/translate3d())
+- [`rotate3d()`](/fr/docs/Web/CSS/transform-function/rotate3d())

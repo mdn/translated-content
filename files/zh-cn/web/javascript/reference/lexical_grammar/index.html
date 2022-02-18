@@ -219,12 +219,12 @@ comment();</pre>
 console.log("Hello world");
 </pre>
 
-<div class="blockIndicator note">
-<p><strong>注意</strong>：JavaScript 中的 hashbang 注释模仿 <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">Unix 中的 shebangs</a>，用于指定适当的解释器运行文件。</p>
+<div class="note">
+<p><strong>备注：</strong>：JavaScript 中的 hashbang 注释模仿 <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">Unix 中的 shebangs</a>，用于指定适当的解释器运行文件。</p>
 </div>
 
-<div class="blockIndicator warning">
-<p>尽管在 hashbang 注释之前的 <a href="https://en.wikipedia.org/wiki/Byte_order_mark">BOM</a> 在浏览器中能工作，但不建议在具有 hashbang 的脚本中使用 BOM。当您尝试在 Unix/Linux 中运行脚本时，有 BOM 将不工作。因此，如果要直接从 shell 运行脚本，请使用没有 BOM 的 UTF-8。</p>
+<div class="warning">
+<p><strong>警告：</strong>尽管在 hashbang 注释之前的 <a href="https://en.wikipedia.org/wiki/Byte_order_mark">BOM</a> 在浏览器中能工作，但不建议在具有 hashbang 的脚本中使用 BOM。当您尝试在 Unix/Linux 中运行脚本时，有 BOM 将不工作。因此，如果要直接从 shell 运行脚本，请使用没有 BOM 的 UTF-8。</p>
 </div>
 
 <p>您只能使用 <code>#!</code> 注释样式以指定 JavaScript 解释器。在所有其他情况下，只需使用 <code>//</code> 注释（或多行注释）。</p>

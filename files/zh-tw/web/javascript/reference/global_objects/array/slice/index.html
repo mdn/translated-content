@@ -15,26 +15,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <div>{{EmbedInteractiveExample("pages/js/array-slice.html")}}</div>
 
-<p class="hidden">The source for this interactive demo is stored in a GitHub repository. If you'd like to contribute to the interactive demo project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-
 <h2 id="語法">語法</h2>
 
-<pre class="syntaxbox notranslate"><var>arr</var>.slice(<em>[</em><var>begin[</var>, <var>end]]</var>)
+<pre class="syntaxbox"><var>arr</var>.slice(<em>[</em><var>begin[</var>, <var>end]]</var>)
 </pre>
 
 <h3 id="參數">參數</h3>
 
 <dl>
  <dt><code>begin</code> {{optional_inline}}</dt>
- <dd>自哪一個索引（起始為 0）開始提取拷貝。</dd>
- <dd>可使用負數索引，表示由陣列的最末項開始提取。<code>slice(-2)</code> 代表拷貝陣列中的最後兩個元素。</dd>
- <dd>假如 <code>begin</code> 為 undefined，則 <code>slice</code> 會從索引 <code>0</code> 開始提取。</dd>
+ <dd>自哪一個索引（起始為 0）開始提取拷貝。可使用負數索引，表示由陣列的最末項開始提取。<code>slice(-2)</code> 代表拷貝陣列中的最後兩個元素。假如 <code>begin</code> 為 undefined，則 <code>slice</code> 會從索引 <code>0</code> 開始提取。</dd>
  <dt><code>end</code> {{optional_inline}}</dt>
- <dd>至哪一個索引（起始為 0）<em>之前</em>停止提取。<code>slice</code> 提取但不包含至索引 <code>end</code>。</dd>
- <dd>舉例來說，<code>slice(1,4)</code> 提取了陣列中第二個元素至第四個元素前為止（元素索引 1、2 以及 3）來拷貝。</dd>
- <dd>可使用負數索引，表示由陣列的最末項開始提取。<code>slice(2,-1)</code> 代表拷貝陣列中第三個元素至倒數第二個元素。</dd>
- <dd>若省略了 <code>end</code>，則 <code>slice</code> 會提取至陣列的最後一個元素（<code>arr.length</code>）。</dd>
- <dd>假如 <code>end</code> 大於陣列的長度，<code>slice</code> 會提取至陣列的最後一個元素（<code>arr.length</code>）。</dd>
+ <dd>至哪一個索引（起始為 0）<em>之前</em>停止提取。<code>slice</code> 提取但不包含至索引 <code>end</code>。舉例來說，<code>slice(1,4)</code> 提取了陣列中第二個元素至第四個元素前為止（元素索引 1、2 以及 3）來拷貝。可使用負數索引，表示由陣列的最末項開始提取。<code>slice(2,-1)</code> 代表拷貝陣列中第三個元素至倒數第二個元素。若省略了 <code>end</code>，則 <code>slice</code> 會提取至陣列的最後一個元素（<code>arr.length</code>）。假如 <code>end</code> 大於陣列的長度，<code>slice</code> 會提取至陣列的最後一個元素（<code>arr.length</code>）。</dd>
 </dl>
 
 <h3 id="回傳值">回傳值</h3>
@@ -56,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 <h3 id="Return_a_portion_of_an_existing_array">Return a portion of an existing array</h3>
 
-<pre class="brush: js notranslate">var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+<pre class="brush: js">var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
 var citrus = fruits.slice(1, 3);
 
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
@@ -67,7 +59,7 @@ var citrus = fruits.slice(1, 3);
 
 <p>In the following example, <code>slice</code> creates a new array, <code>newCar</code>, from <code>myCar</code>. Both include a reference to the object <code>myHonda</code>. When the color of <code>myHonda</code> is changed to purple, both arrays reflect the change.</p>
 
-<pre class="brush: js notranslate">// Using slice, create newCar from myCar.
+<pre class="brush: js">// Using slice, create newCar from myCar.
 var myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } };
 var myCar = [myHonda, 2, 'cherry condition', 'purchased 1997'];
 var newCar = myCar.slice(0, 2);
@@ -90,7 +82,7 @@ console.log('newCar[0].color = ' + newCar[0].color);
 
 <p>This script writes:</p>
 
-<pre class="brush: js notranslate">myCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2,
+<pre class="brush: js">myCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2,
          'cherry condition', 'purchased 1997']
 newCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2]
 myCar[0].color = red
@@ -104,7 +96,7 @@ newCar[0].color = purple
 
 <p><code>slice</code> method can also be called to convert Array-like objects / collections to a new Array. You just bind the method to the object. The {{jsxref("Functions/arguments", "arguments")}} inside a function is an example of an 'array-like object'.</p>
 
-<pre class="brush: js notranslate">function list() {
+<pre class="brush: js">function list() {
   return Array.prototype.slice.call(arguments);
 }
 
@@ -113,7 +105,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 <p>Binding can be done with the .<code>call</code> function of {{jsxref("Function.prototype")}} and it can also be reduced using <code>[].slice.call(arguments)</code> instead of <code>Array.prototype.slice.call</code>. Anyway, it can be simplified using {{jsxref("Function.prototype.bind", "bind")}}.</p>
 
-<pre class="brush: js notranslate">var unboundSlice = Array.prototype.slice;
+<pre class="brush: js">var unboundSlice = Array.prototype.slice;
 var slice = Function.prototype.call.bind(unboundSlice);
 
 function list() {
@@ -127,7 +119,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 <p>Although host objects (such as DOM objects) are not required by spec to follow the Mozilla behavior when converted by <code>Array.prototype.slice</code> and IE &lt; 9 does not do so, versions of IE starting with version 9 do allow this. “Shimming” it can allow reliable cross-browser behavior. As long as other modern browsers continue to support this ability, as currently do IE, Mozilla, Chrome, Safari, and Opera, developers reading (DOM-supporting) slice code relying on this shim will not be misled by the semantics; they can safely rely on the semantics to provide the now apparently <em>de facto</em> standard behavior. (The shim also fixes IE to work with the second argument of <code>slice()</code> being an explicit {{jsxref("null")}}/{{jsxref("undefined")}} value as earlier versions of IE also did not allow but all modern browsers, including IE &gt;= 9, now do.)</p>
 
-<pre class="brush: js notranslate">/**
+<pre class="brush: js">/**
  * Shim for "fixing" IE's lack of support (IE &lt; 9) for applying slice
  * on host objects like NamedNodeMap, NodeList, and HTMLCollection
  * (technically, since host objects have been implementation-dependent,

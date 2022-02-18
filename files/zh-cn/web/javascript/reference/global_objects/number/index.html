@@ -13,9 +13,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
 
 <p>JavaScript的<code>Number</code>类型为<a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">双精度IEEE 754 64位浮点</a>类型。</p>
 
-<p>最近出了stage3{{jsxref("BigInt")}} <font><font>任意精度数字类型，已经进入stage3规范</font></font></p>
+<p>最近出了stage3{{jsxref("BigInt")}} 任意精度数字类型，已经进入stage3规范</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre>new Number(<em>value</em>);
 var <em>a</em> = new Number('123'); // a === 123 is false
@@ -23,14 +23,14 @@ var <em>b</em> = Number('123'); // b === 123 is true
 <em>a</em> instanceof Number; // is true
 <em>b</em> instanceof Number; // is false</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>value</code></dt>
  <dd>被创建对象的数字值。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>Number</code> 对象主要用于：</p>
 
@@ -39,17 +39,17 @@ var <em>b</em> = Number('123'); // b === 123 is true
  <li>在非构造器上下文中 (如：没有 {{jsxref("Operators/new", "new")}} 操作符)，<code>Number</code> 能被用来执行类型转换。</li>
 </ul>
 
-<h2 id="Properties" name="Properties">属性</h2>
+<h2 id="Properties">属性</h2>
 
 <dl>
  <dt>{{jsxref("Number.EPSILON")}}</dt>
  <dd>两个可表示(representable)数之间的最小间隔。</dd>
  <dt>{{jsxref("Number.MAX_SAFE_INTEGER")}}</dt>
- <dd>JavaScript 中最大的安全整数 (<code>2<sup>53</sup> - 1</code>)。</dd>
+ <dd>JavaScript 中最大的安全整数 (<code>2^53 - 1</code>)。</dd>
  <dt>{{jsxref("Number.MAX_VALUE")}}</dt>
  <dd>能表示的最大正数。最小的负数是 <code>-MAX_VALUE</code>。</dd>
  <dt>{{jsxref("Number.MIN_SAFE_INTEGER")}}</dt>
- <dd>JavaScript 中最小的安全整数 (<code>-(2<sup>53</sup> - 1)</code>).</dd>
+ <dd>JavaScript 中最小的安全整数 (<code>-(2^53 - 1)</code>).</dd>
  <dt>{{jsxref("Number.MIN_VALUE")}}</dt>
  <dd>能表示的最小正数即最接近 0 的正数 (实际上不会变成 0)。最大的负数是 <code>-MIN_VALUE</code>。</dd>
  <dt>{{jsxref("Number.NaN")}}</dt>
@@ -62,7 +62,7 @@ var <em>b</em> = Number('123'); // b === 123 is true
  <dd>Number 对象上允许的额外属性。</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
 <dl>
  <dt>{{jsxref("Number.isNaN()")}}</dt>
@@ -72,7 +72,7 @@ var <em>b</em> = Number('123'); // b === 123 is true
  <dt>{{jsxref("Number.isInteger()")}}</dt>
  <dd>确定传递的值类型是“number”，且是整数。</dd>
  <dt>{{jsxref("Number.isSafeInteger()")}}</dt>
- <dd>确定传递的值是否为安全整数 ( -<code>(2<sup>53</sup> - 1)</code> 至 <code>2<sup>53</sup> - 1之间</code>)。</dd>
+ <dd>确定传递的值是否为安全整数 ( -<code>(2^53 - 1)</code> 至 <code>2^53 - 1</code>)之间。</dd>
  <dt>{{jsxref("Number.toInteger()")}} {{obsolete_inline}}</dt>
  <dd>计算传递的值并将其转换为整数 (或无穷大)。</dd>
 </dl>
@@ -86,17 +86,17 @@ var <em>b</em> = Number('123'); // b === 123 is true
 </dl>
 </div>
 
-<h2 id="Number_instances" name="Number_instances"><code>Number</code> 实例</h2>
+<h2 id="Number_instances"><code>Number</code> 实例</h2>
 
 <p>所有 <code>Number</code> 实例都继承自 {{jsxref("Number.prototype")}}。<code>被修改的 Number</code> 构造器的原型对象对全部 <code>Number</code> 实例都生效。</p>
 
-<h3 id="Methods_of_number_instance" name="Methods_of_number_instance">方法</h3>
+<h3 id="Methods_of_number_instance">方法</h3>
 
 <div>{{page('/zh-CN/docs/JavaScript/Reference/Global_Objects/Number/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Using_the_Number_object_to_assign_values_to_numeric_variables" name="Example:_Using_the_Number_object_to_assign_values_to_numeric_variables">使用 Number 对象给数字变量赋值</h3>
+<h3 id="Example_Using_the_Number_object_to_assign_values_to_numeric_variables">使用 Number 对象给数字变量赋值</h3>
 
 <p>下例使用 <code>Number</code> 对象的属性给几个数字变量赋值：</p>
 
@@ -118,7 +118,7 @@ var smallestInt = Number.MIN_SAFE_INTEGER;
 
 <p>在解析序列化的JSON时，如果JSON解析器将它们强制转换为Number类型，那么超出此范围的整数值可能会被破坏。在工作中使用{{jsxref("String")}} 类型代替，是一个可行的解决方案。</p>
 
-<h3 id="Example_Using_Number_to_convert_a_Date_object" name="Example:_Using_Number_to_convert_a_Date_object">使用 <code>Number</code> 转换 <code>Date</code> 对象</h3>
+<h3 id="Example_Using_Number_to_convert_a_Date_object">使用 <code>Number</code> 转换 <code>Date</code> 对象</h3>
 
 <p>下例使用 Number 作为函数来转换 <code>Date</code> 对象为数字值：</p>
 
@@ -130,7 +130,7 @@ print(Number(d));
 
 <h3 id="转换数字字符串为数字">转换数字字符串为数字</h3>
 
-<pre class="brush: js" dir="rtl">Number('123')     // 123
+<pre class="brush: js">Number('123')     // 123
 Number('12.3')    // 12.3
 <code>Number('12.00')   // 12</code>
 Number('123e-1')  // 12.3
@@ -175,17 +175,13 @@ Number('-Infinity') //-Infinity</pre>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
-<div id="compat-mobile">
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>and send us a pull request.</p>
-</div>
-
+<div>
 <p>{{Compat("javascript.builtins.Number")}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">参阅</h2>
+<h2 id="See_also">参阅</h2>
 
 <ul>
  <li>{{jsxref("NaN")}}</li>

@@ -670,7 +670,7 @@ JavaScript possède plusieurs fonctions natives, disponibles au plus haut niveau
 - {{jsxref("Objets_globaux/isFinite","isFinite()")}}
   - : La fonction **`isFinite()`** détermine si la valeur passée est un nombre fini. Si nécessaire, le paramètre sera converti en un nombre.
 - {{jsxref("Objets_globaux/isNaN","isNaN()")}}
-  - : La fonction **`isNaN()`** détermine si une valeur est {{jsxref("NaN")}} ou non. Note : On pourra également utiliser {{jsxref("Number.isNaN()")}} défini avec ECMAScript 6 ou utiliser [`typeof`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof) afin de déterminer si la valeur est **\*N**ot-**A**-**N**umber\*.
+  - : La fonction **`isNaN()`** détermine si une valeur est {{jsxref("NaN")}} ou non. Note : On pourra également utiliser {{jsxref("Number.isNaN()")}} défini avec ECMAScript 6 ou utiliser [`typeof`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof) afin de déterminer si la valeur est **N**ot-**A**-**N**umber.
 - {{jsxref("Objets_globaux/parseFloat","parseFloat()")}}
   - : La fonction **`parseFloat()`** convertit une chaîne de caractères en un nombre flottant.
 - {{jsxref("Objets_globaux/parseInt","parseInt()")}}

@@ -164,7 +164,7 @@ Le HTML ci-dessus affichera :
 ### Utilisation des chiffres romains
 
 ```html
-<ol start="i">
+<ol type="i">
   <li>Introduction</li>
   <li>Liste des Greffes</li>
   <li>Conclusion</li>

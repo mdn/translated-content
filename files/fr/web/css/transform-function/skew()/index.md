@@ -1,12 +1,8 @@
 ---
 title: skew()
 slug: Web/CSS/transform-function/skew()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/skew()
+browser-compat: css.types.transform-function.skew
 ---
 {{CSSRef}}
 
@@ -14,19 +10,24 @@ La fonction **`skew()`** permet d'opérer une distorsion en étirant chaque poin
 
 {{EmbedInteractiveExample("pages/css/function-skew.html")}}
 
-La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.
+La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
 ## Syntaxe
 
-    skew(ax)
-    skew(ax, ay)
+La fonction `skew()` s'utilise avec une ou deux valeurs qui représente l'intensité de la distorsion appliquée dans chaque direction. Si une seule valeur est fournie, elle sera utilisée pour la distorsion sur l'axe horizontal et il n'y aura pas de distorsion verticale.
+
+```css
+skew(ax)
+
+skew(ax, ay)
+```
 
 ### Valeurs
 
 - `ax`
-  - : Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle avec lequel appliquer la distorsion selon l'axe des abscisses (axe horizontal).
+  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle avec lequel appliquer la distorsion selon l'axe des abscisses (axe horizontal).
 - `ay`
-  - : Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle avec lequel appliquer la distorsion selon l'axe des ordonnées (axe vertical).
+  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle avec lequel appliquer la distorsion selon l'axe des ordonnées (axe vertical).
 
 <table class="standard-table">
   <thead>
@@ -98,23 +99,26 @@ La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-functi
 #### HTML
 
 ```html
-<p>toto</p>
-<p class="transformation">truc</p>
+<div>Normal</div>
+<div class="skewed">Distordu</div>
 ```
 
 #### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+body {
+  margin: 20px;
 }
 
-.transformation {
- /* the same as skewX(10deg); */
-  transform: skew(10deg);
-  background-color: blue;
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
+}
+
+.skewed {
+  transform: skew(10deg); /* Équivalent à skewX(10deg) */
+  background-color: pink;
 }
 ```
 
@@ -127,22 +131,26 @@ p {
 #### HTML
 
 ```html
-<p>toto</p>
-<p class="transformation">truc</p>
+<div>Normal</div>
+<div class="skewed">Distordu</div>
 ```
 
 #### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+body {
+  margin: 20px;
 }
 
-.transformation {
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
+}
+
+.skewed {
   transform: skew(10deg, 10deg);
-  background-color: blue;
+  background-color: pink;
 }
 ```
 
@@ -152,15 +160,15 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS3 Transforms", "#funcdef-transform-skew", "skew()")}} | {{Spec2("CSS3 Transforms")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`skewX()`](/fr/docs/Web/CSS/transform-function/skewX())
+- [`skewY()`](/fr/docs/Web/CSS/transform-function/skewY())

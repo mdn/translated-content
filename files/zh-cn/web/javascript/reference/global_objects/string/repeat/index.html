@@ -18,11 +18,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 
 <p><strong><code>repeat()</code></strong> 构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.repeat(<var>count</var>)</code></pre>
+<pre class="syntaxbox"><code><var>str</var>.repeat(<var>count</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>count</code></dt>
@@ -44,59 +44,59 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 
 <p>此方法已添加到 ECMAScript 2015 规范中，并且可能尚未在所有 JavaScript 实现中可用。然而，你可以使用以下代码段对 String.prototype.repeat() 进行填充：</p>
 
-<pre class="brush: js  language-js notranslate"><code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>String<span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>repeat<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  String<span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>repeat <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>count<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="string token">'use strict'</span><span class="punctuation token">;</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="keyword token">this</span> <span class="operator token">==</span> <span class="keyword token">null</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">throw</span> <span class="keyword token">new</span> <span class="class-name token">TypeError</span><span class="punctuation token">(</span><span class="string token">'can\'t convert '</span> <span class="operator token">+</span> <span class="keyword token">this</span> <span class="operator token">+</span> <span class="string token">' to object'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">var</span> str <span class="operator token">=</span> <span class="string token">''</span> <span class="operator token">+</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
-    count <span class="operator token">=</span> <span class="operator token">+</span>count<span class="punctuation token">;</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>count <span class="operator token">!</span><span class="operator token">=</span> count<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      count <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>count <span class="operator token">&lt;</span> <span class="number token">0</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">throw</span> <span class="keyword token">new</span> <span class="class-name token">RangeError</span><span class="punctuation token">(</span><span class="string token">'repeat count must be non-negative'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>count <span class="operator token">==</span> <span class="number token">Infinity</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">throw</span> <span class="keyword token">new</span> <span class="class-name token">RangeError</span><span class="punctuation token">(</span><span class="string token">'repeat count must be less than infinity'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    count <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">floor<span class="punctuation token">(</span></span>count<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>str<span class="punctuation token">.</span>length <span class="operator token">==</span> <span class="number token">0</span> <span class="operator token">||</span> count <span class="operator token">==</span> <span class="number token">0</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">return</span> <span class="string token">''</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-   <span class="comment token"> // 确保 count 是一个 31 位的整数。这样我们就可以使用如下优化的算法。
-    // 当前（2014年8月），绝大多数浏览器都不能支持 1 &lt;&lt; 28 长的字符串，所以：</span><span class="comment token">
-</span>    <span class="keyword token">if</span> <span class="punctuation token">(</span>str<span class="punctuation token">.</span>length <span class="operator token">*</span> count <span class="operator token">&gt;=</span> <span class="number token">1</span> <span class="operator token">&lt;</span><span class="operator token">&lt;</span> <span class="number token">28</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">throw</span> <span class="keyword token">new</span> <span class="class-name token">RangeError</span><span class="punctuation token">(</span><span class="string token">'repeat count must not overflow maximum string size'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">var</span> rpt <span class="operator token">=</span> <span class="string token">''</span><span class="punctuation token">;</span>
-    <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="punctuation token">;</span><span class="punctuation token">;</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="punctuation token">(</span>count <span class="operator token">&amp;</span> <span class="number token">1</span><span class="punctuation token">)</span> <span class="operator token">==</span> <span class="number token">1</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        rpt <span class="operator token">+</span><span class="operator token">=</span> str<span class="punctuation token">;</span>
-      <span class="punctuation token">}</span>
-      count <span class="operator token">&gt;</span><span class="operator token">&gt;</span><span class="operator token">&gt;=</span> <span class="number token">1</span><span class="punctuation token">;</span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span>count <span class="operator token">==</span> <span class="number token">0</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        <span class="keyword token">break</span><span class="punctuation token">;</span>
-      <span class="punctuation token">}</span>
-      str <span class="operator token">+</span><span class="operator token">=</span> str<span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">return</span> rpt<span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js">if (!String.prototype.repeat) {
+  String.prototype.repeat = function(count) {
+    'use strict';
+    if (this == null) {
+      throw new TypeError('can\'t convert ' + this + ' to object');
+    }
+    var str = '' + this;
+    count = +count;
+    if (count != count) {
+      count = 0;
+    }
+    if (count &lt; 0) {
+      throw new RangeError('repeat count must be non-negative');
+    }
+    if (count == Infinity) {
+      throw new RangeError('repeat count must be less than infinity');
+    }
+    count = Math.floor(count);
+    if (str.length == 0 || count == 0) {
+      return '';
+    }
+    // 确保 count 是一个 31 位的整数。这样我们就可以使用如下优化的算法。
+    // 当前（2014年8月），绝大多数浏览器都不能支持 1 &lt;&lt; 28 长的字符串，所以：
+    if (str.length * count &gt;= 1 &lt;&lt; 28) {
+      throw new RangeError('repeat count must not overflow maximum string size');
+    }
+    var rpt = '';
+    for (;;) {
+      if ((count &amp; 1) == 1) {
+        rpt += str;
+      }
+      count &gt;&gt;&gt;= 1;
+      if (count == 0) {
+        break;
+      }
+      str += str;
+    }
+    return rpt;
+  }
+}</pre>
 
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<pre class="brush:js notranslate"><span class="difflineplus">"abc".repeat(-1)     // </span>RangeError: repeat count must be positive and less than inifinity
-<span class="difflineplus">"abc".repeat(0)      // ""</span>
-<span class="difflineplus">"abc".repeat(1)      // "abc"</span>
-<span class="difflineplus">"abc".repeat(2)      // "</span>abcabc<span class="difflineplus">"
-</span>"abc".repeat(3.5)<span class="difflineplus">    // "abcabcabc" 参数count将会被自动转换成整数.
-</span><span class="difflineplus">"abc".repeat(1/0)    //</span> RangeError: repeat count must be positive and less than inifinity
+<pre class="brush:js">"abc".repeat(-1)     // RangeError: repeat count must be positive and less than inifinity
+"abc".repeat(0)      // ""
+"abc".repeat(1)      // "abc"
+"abc".repeat(2)      // "abcabc"
+"abc".repeat(3.5)    // "abcabcabc" 参数count将会被自动转换成整数.
+"abc".repeat(1/0)    // RangeError: repeat count must be positive and less than inifinity
 
-<span class="difflineplus">({toString : () =&gt; "abc", repeat : String.prototype.repeat}</span><span class="difflineplus">).repeat(2)
-</span><span class="difflineplus">//"</span>abcabc<span class="difflineplus">",repeat是一个通用方法</span>,也就是它的调用者可以不是一个字符串对象.</pre>
+({toString : () =&gt; "abc", repeat : String.prototype.repeat}).repeat(2)
+//"abcabc",repeat是一个通用方法,也就是它的调用者可以不是一个字符串对象.</pre>
 
 <h2 id="规范">规范</h2>
 
@@ -113,7 +113,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.builtins.String.repeat")}}</p>
 

@@ -3,7 +3,7 @@ title: 'HTML attribute: pattern'
 slug: Web/HTML/Attributes/pattern
 tags:
   - 属性
-  - 约束验证API
+  - 约束验证 API
   - HTML
   - 参考
 translation_of: Web/HTML/Attributes/pattern
@@ -11,7 +11,7 @@ translation_of: Web/HTML/Attributes/pattern
 
 {{HTMLSidebar}}
 
-**`pattern`** 属性规定了一个表单控件的值应该匹配的 [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。 如果一个非 `null` 值不满足 `pattern` 值设置的约束, {{domxref('ValidityState')}} 对象的只读 {{domxref('ValidityState.patternMismatch','patternMismatch')}} 属性将为真。
+**`pattern`** 属性规定了一个表单控件的值应该匹配的 [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。 如果一个非 `null` 值不满足 `pattern` 值设置的约束，{{domxref('ValidityState')}} 对象的只读 {{domxref('ValidityState.patternMismatch','patternMismatch')}} 属性将为真。
 
 `pattern` 属性是 {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}} 和 {{HTMLElement("input/search", "search")}} 等输入类型的属性。
 
@@ -67,7 +67,7 @@ input:invalid {
 
 你可以使用 {{htmlattrxref("pattern", "input")}} 属性来指定一个正则表达式，输入的值必须与之匹配，才能被视为有效（参见 [根据正则表达式进行验证](/zh-CN/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression)）了解关于使用正则表达式来验证输入的简单速成课程）。
 
-下面的例子将该值限制为4-8个字符，并要求它只包含小写字母。
+下面的例子将该值限制为 4-8 个字符，并要求它只包含小写字母。
 
 ```html
 <form>

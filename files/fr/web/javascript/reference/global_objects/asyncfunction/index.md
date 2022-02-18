@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/AsyncFunction
 ---
 {{JSRef}}
 
-Le constructeur **`Async`\*\***`Function`\*\* crée un nouvel objet pour {{jsxref("Instructions/async function", "une fonction asynchrone","",1)}}. En JavaScript, chaque fonction asynchrone est en fait un objet `AsyncFunction`.
+Le constructeur **`AsyncFunction`** crée un nouvel objet pour {{jsxref("Instructions/async function", "une fonction asynchrone","",1)}}. En JavaScript, chaque fonction asynchrone est en fait un objet `AsyncFunction`.
 
 Attention, `AsyncFunction` n'est pas un objet global. On peut l'obtenir grâce au code suivant :
 

@@ -15,8 +15,8 @@ translation_of: Web/HTML/Element/meta
 <ul class="htmlelt">
  <li><dfn><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories">内容分类</a></dfn>元数据内容，如果 {{htmlattrxref("itemprop", "meta")}} 属性存在：<a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">流数据</a>，<a href="/en-US/docs/HTML/Content_categories#Phrasing_content">表述内容</a></li>
  <li><dfn>允许的内容</dfn> 无，这是一个 {{Glossary("空元素")}}</li>
- <li><dfn>标签省略</dfn>因为这是一个void元素，必须有开始标签而闭合标签可以省略</li>
- <li><dfn>允许的父元素</dfn><code>&lt;meta charset&gt;</code>, <code>&lt;meta http-equiv&gt;</code>: {{HTMLElement("head")}} 元素. 如果 {{htmlattrxref("http-equiv", "meta")}} 不是编码声明, 它也可以放在{{HTMLElement("noscript")}}元素内，它本身在 {{HTMLElement("head")}}元素内部。</li>
+ <li><dfn>标签省略</dfn>因为这是一个 void 元素，必须有开始标签而闭合标签可以省略</li>
+ <li><dfn>允许的父元素</dfn><code>&lt;meta charset&gt;</code>, <code>&lt;meta http-equiv&gt;</code>: {{HTMLElement("head")}} 元素。如果 {{htmlattrxref("http-equiv", "meta")}} 不是编码声明，它也可以放在{{HTMLElement("noscript")}}元素内，它本身在 {{HTMLElement("head")}}元素内部。</li>
  <li></li>
  <li><dfn>默认无障碍语义</dfn><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">没有相应的语义</a></li>
  <li><dfn>允许的无障碍语义</dfn>没有允许的语义（<code>role</code>）</li>
@@ -27,7 +27,7 @@ translation_of: Web/HTML/Element/meta
 
 <ul>
  <li>如果设置了 {{htmlattrxref("name", "meta")}} 属性，<code>meta</code> 元素提供的是文档级别（<em>document-level</em>）的元数据，应用于整个页面。</li>
- <li>如果设置了 {{htmlattrxref("http-equiv", "meta")}} 属性，<code>meta</code> 元素则是编译指令，提供的信息与类似命名的HTTP头部相同。</li>
+ <li>如果设置了 {{htmlattrxref("http-equiv", "meta")}} 属性，<code>meta</code> 元素则是编译指令，提供的信息与类似命名的 HTTP 头部相同。</li>
  <li>如果设置了 {{htmlattrxref("charset", "meta")}} 属性，<code>meta</code> 元素是一个字符集声明，告诉文档使用哪种字符编码。</li>
  <li>如果设置了 {{htmlattrxref("itemprop")}} 属性，<code>meta</code> 元素提供用户定义的元数据。</li>
 </ul>
@@ -37,23 +37,23 @@ translation_of: Web/HTML/Element/meta
 <p>此元素包括<a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
 
 <div class="note">
-<p>注意: 全局属性 {{htmlattrxref("name", "meta")}} 在 {{HTMLElement("meta")}} 元素中具有特殊的语义；另外， 在同一个 &lt;meta&gt; 标签中，{{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} 或者 {{htmlattrxref("charset", "meta")}} 三者中任何一个属性存在时，{{htmlattrxref("itemprop", "meta")}} 属性不能被使用。</p>
+<p>注意：全局属性 {{htmlattrxref("name", "meta")}} 在 {{HTMLElement("meta")}} 元素中具有特殊的语义；另外， 在同一个 &lt;meta&gt; 标签中，{{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} 或者 {{htmlattrxref("charset", "meta")}} 三者中任何一个属性存在时，{{htmlattrxref("itemprop", "meta")}} 属性不能被使用。</p>
 </div>
 
 <p><strong>{{htmlattrdef("charset")}}</strong></p>
 
-<p>这个属性声明了文档的字符编码。如果使用了这个属性，其值必须是与ASCII大小写无关（ASCII case-insensitive）的"<code>utf-8</code>"。</p>
+<p>这个属性声明了文档的字符编码。如果使用了这个属性，其值必须是与 ASCII 大小写无关（ASCII case-insensitive）的"<code>utf-8</code>"。</p>
 
 <dl>
  <dt>{{htmlattrdef("content")}}</dt>
  <dd>此属性包含{{htmlattrxref("http-equiv", "meta")}} 或{{htmlattrxref("name", "meta")}} 属性的值，具体取决于所使用的值。</dd>
  <dt>{{htmlattrdef("http-equiv")}}</dt>
- <dd>属性定义了一个编译指示指令。这个属性叫做 <code><strong>http-equiv</strong>(alent)</code> 是因为所有允许的值都是特定HTTP头部的名称，如下：
+ <dd>属性定义了一个编译指示指令。这个属性叫做 <code><strong>http-equiv</strong>(alent)</code> 是因为所有允许的值都是特定 HTTP 头部的名称，如下：
  <ul>
   <li><code>content-security-policy</code><br>
    它允许页面作者定义当前页的<a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives">内容策略</a>。 内容策略主要指定允许的服务器源和脚本端点，这有助于防止跨站点脚本攻击。</li>
   <li><code>content-type</code><br>
-   如果使用这个属性，其值必须是"<code>text/html; charset=utf-8</code>"。注意：该属性只能用于 <a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> 为 <code>text/html</code> 的文档，不能用于MIME类型为XML的文档。</li>
+   如果使用这个属性，其值必须是"<code>text/html; charset=utf-8</code>"。注意：该属性只能用于 <a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> 为 <code>text/html</code> 的文档，不能用于 MIME 类型为 XML 的文档。</li>
   <li><code>default-style</code>
    <p>设置默认 <a href="/zh-CN/docs/Web/CSS">CSS 样式表</a>组的名称。</p>
   </li>
@@ -62,10 +62,10 @@ translation_of: Web/HTML/Element/meta
     如果指定，则 <code>content</code> 属性必须具有值 "<code>IE=edge</code>"。用户代理必须忽略此指示。</p>
   </li>
   <li><code>refresh</code><br>
-   这个属性指定:
+   这个属性指定：
    <ul>
-    <li>如果 {{htmlattrxref("content", "meta")}} 只包含一个正整数，则为重新载入页面的时间间隔(秒)；</li>
-    <li>如果 {{htmlattrxref("content", "meta")}} 包含一个正整数，并且后面跟着字符串 '<code>;url=</code>' 和一个合法的 URL，则是重定向到指定链接的时间间隔(秒)</li>
+    <li>如果 {{htmlattrxref("content", "meta")}} 只包含一个正整数，则为重新载入页面的时间间隔 (秒)；</li>
+    <li>如果 {{htmlattrxref("content", "meta")}} 包含一个正整数，并且后面跟着字符串 '<code>;url=</code>' 和一个合法的 URL，则是重定向到指定链接的时间间隔 (秒)</li>
    </ul>
   </li>
  </ul>
@@ -83,7 +83,7 @@ translation_of: Web/HTML/Element/meta
  </ul>
  </dd>
  <dt>{{htmlattrdef("name")}}</dt>
- <dd><code>name</code> 和 <code>content</code> 属性可以一起使用，以名-值对的方式给文档提供元数据，其中 name 作为元数据的名称，content 作为元数据的值。</dd>
+ <dd><code>name</code> 和 <code>content</code> 属性可以一起使用，以名 - 值对的方式给文档提供元数据，其中 name 作为元数据的名称，content 作为元数据的值。</dd>
  <dd>在<a href="/zh-CN/docs/Web/HTML/Element/meta/name">标准元数据名称</a>中查看 HTML 规范等规范中定义的标准元数据名称。</dd>
 </dl>
 

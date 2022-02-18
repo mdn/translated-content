@@ -22,7 +22,7 @@ Les secondes ne sont pas prises en charge.
 
 Le contrôle est spécifié afin de pouvoir représenter une heure et une date locales et _pas nécessairement la date et l'heure locale de l'utilisateur_. Autrement dit, une implémentation devrait autoriser toute combinaison valide (d'année / mois / jour / heure / minutes) même si cette combinaison n'est pas valide pour le fuseau horaire de l'utilisateur (par exemple pour les fuseaux horaires qui ne gèrent pas les heures d'été). Certains navigateurs mobiles (sur iOS par exemple) n'implémentent pas cette règle correctement.
 
-En raison du faible support pour `datetime-local` et des variations dans ses implémentations, mieux vaudra peut-être encore (juillet 2019) utiliser un _framework_ ou une bibliothèque pour une telle saisie. Une autre option consiste à séparer les champs pour la date (`type="date"`) et pour l'heure (`type="heure"`) qui sont mieux pris en charge.
+En raison du faible support pour `datetime-local` et des variations dans ses implémentations, mieux vaudra peut-être encore (juillet 2019) utiliser un _framework_ ou une bibliothèque pour une telle saisie. Une autre option consiste à séparer les champs pour la date (`type="date"`) et pour l'heure (`type="time"`) qui sont mieux pris en charge.
 
 Certains navigateurs pourront utiliser un contrôle avec un texte simple et vérifier que la valeur date/heure est correcte avant de l'envoyer au serveur. Toutefois, ce contrôle ayant lieu côté client, vous devrez nécessairement vérifier le bon format de la donnée côté serveur.
 

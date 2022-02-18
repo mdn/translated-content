@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/measureText
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.measureText()`\*\* renvoie un objet {{domxref ("TextMetrics")}} qui contient des informations sur le texte mesuré (telle que sa largeur, par exemple).
+La méthode **`CanvasRenderingContext2D.measureText()`** renvoie un objet {{domxref ("TextMetrics")}} qui contient des informations sur le texte mesuré (telle que sa largeur, par exemple).
 
 ## Syntaxe
 

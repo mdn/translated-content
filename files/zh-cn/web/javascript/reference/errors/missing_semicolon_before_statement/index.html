@@ -61,15 +61,15 @@ array[0] = "there";
 
 <p>如果你用的是另一种编程语言，那么在javaScript中使用不具有相同或完全没有意义的关键字也是很常见的：</p>
 
-<pre class="brush: js example-bad line-numbers  language-js"><code class="language-js">def <span class="function token">print</span><span class="punctuation token">(</span>info<span class="punctuation token">)</span><span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>info<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span> <span class="comment token">// SyntaxError missing ; before statement</span></code></pre>
+<pre class="brush: js example-bad">def print(info){
+  console.log(info);
+}; // SyntaxError missing ; before statement</pre>
 
 <p>因此，建议使用<code>function</code>而不是<code>def</code>：</p>
 
-<pre class="brush: js example-good line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">print</span><span class="punctuation token">(</span>info<span class="punctuation token">)</span><span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>info<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js example-good">function print(info){
+  console.log(info);
+};</pre>
 
 <p> </p>
 

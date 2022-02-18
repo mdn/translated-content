@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/direction
 ---
 {{APIRef}} {{SeeCompatTable}}
 
-La propriété **`CanvasRenderingContext2D`\*\***`.direction`\*\* de l'API Canvas 2D indique la direction de texte courante utilisé lors du dessin de texte.
+La propriété **`CanvasRenderingContext2D.direction`** de l'API Canvas 2D indique la direction de texte courante utilisé lors du dessin de texte.
 
 ## Syntaxe
 

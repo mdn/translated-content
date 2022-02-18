@@ -18,13 +18,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="notranslate"><var>var new_array = arr</var>.map(function <var>callback(currentValue[, index[, array]]) {
+<pre><var>var new_array = arr</var>.map(function <var>callback(currentValue[, index[, array]]) {
  // Return element for new_array </var>
 <var>}</var>[, <var>thisArg</var>])</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <p>一个由原数组每个元素执行回调函数的结果组成的新数组。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>map</code> 方法会给原数组中的每个元素都按顺序调用一次  <code>callback</code> 函数。<code>callback</code> 每次执行后的返回值（包括 {{jsxref("undefined")}}）组合起来形成一个新数组。 <code>callback</code> 函数只会在有值的索引上被调用；那些从来没被赋过值或者使用 <code>delete</code> 删除的索引则不会被调用。</p>
 
@@ -62,13 +62,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <p>根据规范中定义的算法，如果被map调用的数组是离散的，新数组将也是离散的保持相同的索引为空。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Mapping_an_array_of_numbers_to_an_array_of_square_roots" name="Example:_Mapping_an_array_of_numbers_to_an_array_of_square_roots">求数组中每个元素的平方根</h3>
+<h3 id="Example_Mapping_an_array_of_numbers_to_an_array_of_square_roots">求数组中每个元素的平方根</h3>
 
 <p>下面的代码创建了一个新数组，值为原数组中对应数字的平方根。</p>
 
-<pre class="brush: js notranslate">var numbers = [1, 4, 9];
+<pre class="brush: js">var numbers = [1, 4, 9];
 var roots = numbers.map(Math.sqrt);
 // roots的值为[1, 2, 3], numbers的值仍为[1, 4, 9]</pre>
 
@@ -76,7 +76,7 @@ var roots = numbers.map(Math.sqrt);
 
 <p>以下代码使用一个包含对象的数组来重新创建一个格式化后的数组。</p>
 
-<pre class="brush: js notranslate">var kvArray = [{key: 1, value: 10},
+<pre class="brush: js">var kvArray = [{key: 1, value: 10},
                {key: 2, value: 20},
                {key: 3, value: 30}];
 
@@ -94,11 +94,11 @@ var reformattedArray = kvArray.map(function(obj) {
 //  {key: 3, value: 30}]
 </pre>
 
-<h3 id="Example_Pluralizing_the_words_.28strings.29_in_an_array" name="Example:_Pluralizing_the_words_.28strings.29_in_an_array">使用一个包含一个参数的函数来mapping(构建)一个数字数组</h3>
+<h3 id="Example_Pluralizing_the_words_.28strings.29_in_an_array">使用一个包含一个参数的函数来mapping(构建)一个数字数组</h3>
 
 <p>下面的代码表示了当函数需要一个参数时map的工作方式。当map循环遍历原始数组时，这个参数会自动被分配成数组中对应的每个元素。</p>
 
-<pre class="brush: js notranslate">var numbers = [1, 4, 9];
+<pre class="brush: js">var numbers = [1, 4, 9];
 var doubles = numbers.map(function(num) {
   return num * 2;
 });
@@ -106,11 +106,11 @@ var doubles = numbers.map(function(num) {
 // doubles数组的值为： [2, 8, 18]
 // numbers数组未被修改： [1, 4, 9]</pre>
 
-<h3 id="Example_using_map_generically" name="Example:_using_map_generically">一般的<code>map</code> 方法</h3>
+<h3 id="Example_using_map_generically">一般的<code>map</code> 方法</h3>
 
 <p>下面的例子演示如何在一个 {{jsxref("String")}}  上使用 map 方法获取字符串中每个字符所对应的 ASCII 码组成的数组：</p>
 
-<pre class="brush: js notranslate">var map = Array.prototype.map
+<pre class="brush: js">var map = Array.prototype.map
 var a = map.call("Hello World", function(x) {
   return x.charCodeAt(0);
 })
@@ -121,7 +121,7 @@ var a = map.call("Hello World", function(x) {
 
 <p>下面代码展示了如何去遍历用 <code>querySelectorAll </code>得到的动态对象集合。在这里，我们获得了文档里所有选中的选项，并将其打印：</p>
 
-<pre class="brush: js notranslate">var elems = document.querySelectorAll('select option:checked');
+<pre class="brush: js">var elems = document.querySelectorAll('select option:checked');
 var values = Array.prototype.map.call(elems, function(obj) {
   return obj.value;
 });
@@ -135,7 +135,7 @@ var values = Array.prototype.map.call(elems, function(obj) {
 
 <p>考虑下例：</p>
 
-<pre class="notranslate"><code>["1", "2", "3"].map(parseInt);</code></pre>
+<pre><code>["1", "2", "3"].map(parseInt);</code></pre>
 
 <p>我们期望输出 <code>[1, 2, 3]</code>, 而实际结果是 <code>[1, NaN, NaN]</code>.</p>
 
@@ -149,14 +149,14 @@ var values = Array.prototype.map.call(elems, function(obj) {
 
 <p>第三个参数被parseInt忽视了, <u>but not the second one</u>, 但不是第二个。因此可能出现混淆。下面是迭代步骤的简明示例：</p>
 
-<pre class="notranslate"><code>// parseInt(string, radix) -&gt; map(parseInt(value, index))
+<pre><code>// parseInt(string, radix) -&gt; map(parseInt(value, index))
 /*  first iteration (index is 0): */ parseInt("1", 0); // 1
 /* second iteration (index is 1): */ parseInt("2", 1); // NaN
 /*  third iteration (index is 2): */ parseInt("3", 2); // NaN</code></pre>
 
 <p>下面让我们来讨论解决方案：</p>
 
-<pre class="notranslate"><code>function returnInt(element) {
+<pre><code>function returnInt(element) {
   return parseInt(element, 10);
 }
 
@@ -176,7 +176,7 @@ var values = Array.prototype.map.call(elems, function(obj) {
 
 <p>一个map方法调用 parseInt 作为一个参数的等效输出运行如下:</p>
 
-<pre class="notranslate"><code>var xs = ['10', '10', '10'];
+<pre><code>var xs = ['10', '10', '10'];
 
 xs = xs.map(parseInt);
 
@@ -187,7 +187,7 @@ console.log(xs);  // 输出结果为</code>(3) [10, NaN, 2]<code>
 
 <p>当返回undefined 或没有返回任何内容时:</p>
 
-<pre class="notranslate"><code>var numbers = [1, 2, 3, 4];
+<pre><code>var numbers = [1, 2, 3, 4];
 var filteredNumbers = numbers.map(function(num, index) {
   if(index &lt; 3) {
      return num;
@@ -201,7 +201,7 @@ var filteredNumbers = numbers.map(function(num, index) {
 
 <p><code>map</code> was added to the ECMA-262 standard in the 5th edition; as such it may not be present in all implementations of the standard. You can work around this by inserting the following code at the beginning of your scripts, allowing use of <code>map</code> in implementations which do not natively support it. This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming {{jsxref("Object")}}, {{jsxref("TypeError")}}, and {{jsxref("Array")}} have their original values and that <code>callback.call</code> evaluates to the original value of <code>{{jsxref("Function.prototype.call")}}</code>.</p>
 
-<pre class="notranslate"><code>// Production steps of ECMA-262, Edition 5, 15.4.4.19
+<pre><code>// Production steps of ECMA-262, Edition 5, 15.4.4.19
 // Reference: http://es5.github.io/#x15.4.4.19
 if (!Array.prototype.map) {
 
@@ -334,7 +334,7 @@ if (!Array.prototype.map) {
 <p>{{Compat("javascript.builtins.Array.map")}}</p>
 </div>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.forEach()")}}</li>

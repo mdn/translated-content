@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/rect
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.rect()`\*_ de l'API Canvas 2D crée un chemin de rectangle à la position _(x, y)* et de dimensions *width* et *height\*. Ces quatre points sont connectés par des lignes droites et le sous-chemin est directement fermé, vous pouvez donc utiliser `fill` ou `stroke` pour dessiner ce rectangle.
+La méthode **`CanvasRenderingContext2D.rect()`** de l'API Canvas 2D crée un chemin de rectangle à la position _(x, y)_ et de dimensions *width* et *height*. Ces quatre points sont connectés par des lignes droites et le sous-chemin est directement fermé, vous pouvez donc utiliser `fill` ou `stroke` pour dessiner ce rectangle.
 
 ## Syntaxe
 

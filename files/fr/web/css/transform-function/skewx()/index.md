@@ -1,12 +1,8 @@
 ---
 title: skewX()
 slug: Web/CSS/transform-function/skewX()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/skewX()
+browser-compat: css.types.transform-function.skewX
 ---
 {{CSSRef}}
 
@@ -14,18 +10,20 @@ La fonction **`skewX()`** permet d'opérer une distorsion horizontale en étiran
 
 {{EmbedInteractiveExample("pages/css/function-skewX.html")}}
 
-La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.
+La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
 `skewX(a)` est équivalent à [`skew(a)`](</fr/docs/Web/CSS/transform-function/skew()>).
 
 ## Syntaxe
 
-    skewX(a)
+```css
+skewX(a)
+```
 
 ### Valeurs
 
 - `a`
-  - : Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle avec lequel appliquer la distorsion selon l'axe des abscisses (axe horizontal).
+  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle avec lequel appliquer la distorsion selon l'axe des abscisses (axe horizontal).
 
 <table class="standard-table">
   <thead>
@@ -96,22 +94,22 @@ La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-functi
 ### HTML
 
 ```html
-<p>toto</p>
-<p class="transformation">truc</p>
+<div>Normal</div>
+<div class="skewed">Distordu</div>
 ```
 
 ### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
 }
 
-.transformation {
-  transform: skewX(10deg);
-  background-color: blue;
+.skewed {
+  transform: skewX(10deg); /* Équivalent à skew(10deg) */
+  background-color: pink;
 }
 ```
 
@@ -121,15 +119,13 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS3 Transforms", "#funcdef-transform-skewx", "skewX()")}} | {{Spec2("CSS3 Transforms")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)

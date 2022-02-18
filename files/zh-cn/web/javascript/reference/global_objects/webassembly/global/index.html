@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 
 <p>global的值发生改变, 首先设置<code>Global.value</code> 为42, 然后使用导出函数 <code>incGlobal()</code> 增加为43. 导出函数在 <code>global.wasm</code> 模块中(它将参数的值加一并返回).</p>
 
-<pre class="brush: js notranslate">const output = document.getElementById('output');
+<pre class="brush: js">const output = document.getElementById('output');
 
 function assertEq(msg, got, expected) {
     output.innerHTML += `Testing ${msg}: `;
@@ -67,7 +67,7 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 });</pre>
 
 <div class="note">
-<p><strong>注意</strong>: 你可以在<a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html">running live on GitHub</a> 查看例子; 也可以访问<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">source code</a>.</p>
+<p><strong>备注：</strong>: 你可以在<a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html">running live on GitHub</a> 查看例子; 也可以访问<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">source code</a>.</p>
 </div>
 
 <h2 id="规格">规格</h2>
@@ -89,13 +89,9 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.WebAssembly.Global")}}</p>
-</div>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

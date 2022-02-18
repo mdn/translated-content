@@ -1454,18 +1454,18 @@
       "22tcp"
     ]
   },
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-07-16T22:32:04.669Z",
+    "contributors": [
+      "Timbuktu1982",
+      "bluefor2"
+    ]
+  },
   "Learn/JavaScript/Objects/JSON": {
     "modified": "2020-07-16T22:32:24.377Z",
     "contributors": [
       "MuellerRi",
       "DirkMassmann"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-07-16T22:32:04.669Z",
-    "contributors": [
-      "Timbuktu1982",
-      "bluefor2"
     ]
   },
   "Learn/JavaScript/Objects/Object_prototypes": {
@@ -3898,14 +3898,14 @@
       "axelrindle"
     ]
   },
-  "Web/API/WebSocket/extensions": {
-    "modified": "2020-10-15T22:23:14.946Z",
+  "Web/API/WebSocket/close_event": {
+    "modified": "2019-10-02T19:24:05.254Z",
     "contributors": [
       "axelrindle"
     ]
   },
-  "Web/API/WebSocket/onclose": {
-    "modified": "2019-10-02T19:24:05.254Z",
+  "Web/API/WebSocket/extensions": {
+    "modified": "2020-10-15T22:23:14.946Z",
     "contributors": [
       "axelrindle"
     ]
@@ -4427,12 +4427,6 @@
     "modified": "2019-03-23T22:42:43.885Z",
     "contributors": [
       "teoli",
-      "Sebastianz"
-    ]
-  },
-  "Web/CSS/-webkit-print-color-adjust": {
-    "modified": "2019-03-23T22:42:45.125Z",
-    "contributors": [
       "Sebastianz"
     ]
   },
@@ -7170,6 +7164,12 @@
     "contributors": [
       "SJW",
       "mrstork",
+      "Sebastianz"
+    ]
+  },
+  "Web/CSS/print-color-adjust": {
+    "modified": "2019-03-23T22:42:45.125Z",
+    "contributors": [
       "Sebastianz"
     ]
   },

@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/textBaseline
 ---
 {{APIRef}}
 
-La propriété **`CanvasRenderingContext2D`\*\***`.textBaseline`\*\* de l'API Canvas 2D spécifie la ligne de base de texte à utiliser lors du dessin d'un texte.
+La propriété **`CanvasRenderingContext2D.textBaseline`** de l'API Canvas 2D spécifie la ligne de base de texte à utiliser lors du dessin d'un texte.
 
 ## Syntaxe
 

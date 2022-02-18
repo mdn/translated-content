@@ -35,7 +35,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
     Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
 
-    > **Note :**cet attribut est devenu obsolète dans le dernier standard.
+    > **Note :** cet attribut est devenu obsolète dans le dernier standard.
     >
     > - Pour réaliser le même effet qu'avec les valeurs `left`, `center`, `right` ou `justify`, utilisez la propriété CSS {{cssxref("text-align")}} sur cet élément.
     > - Pour réaliser le même effet qu'avec `char`, vous pouvez, en CSS3, utiliser la valeur de {{htmlattrxref("char", "tbody")}} comme valeur pour la propriété {{cssxref("text-align")}} {{unimplemented_inline}}.

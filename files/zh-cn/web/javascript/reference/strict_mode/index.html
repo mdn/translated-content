@@ -9,7 +9,9 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 ---
 <div>{{JsSidebar("More")}}</div>
 
-<div class="note">有时你会看到非严格模式，被称为“<strong><a href="https://developer.mozilla.org/docs/Glossary/Sloppy_mode" id="sloppyModeId333">sloppy mode</a></strong>”。这不是一个官方术语，但以防万一，你应该意识到这一点。</div>
+<div class="note">
+  <p><strong>备注：</strong>有时你会看到非严格模式，被称为“<strong><a href="https://developer.mozilla.org/docs/Glossary/Sloppy_mode">sloppy mode</a></strong>”。这不是一个官方术语，但以防万一，你应该意识到这一点。</p>
+</div>
 
 <div><a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 5</a>的<strong>严格模式</strong>是采用具有限制性JavaScript变体的一种方式，从而使代码隐式地脱离“马虎模式/稀松模式/懒散模式“（sloppy）模式。</div>
 
@@ -35,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 
 <h2 id="调用严格模式">调用严格模式</h2>
 
-<p>严格模式可以应用到<span id="noHighlight_0.9206554004884853">整个脚本</span>或个别函数中。不要在封闭大括弧 <code style="font-size: 14px;">{}</code> 内这样做，在这样的上下文中这么做是没有效果的<span style="line-height: 1.5;">。</span>在 <code style="font-size: 14px;">eval</code><span style="line-height: 1.5;"> 、</span><code style="font-size: 14px;">Function</code><span style="line-height: 1.5;"> 、内联事件处理属性、 </span> {{domxref("WindowTimers.setTimeout()")}} 方法中传入的脚本字符串，其行为类似于开启了严格模式的一个单独脚本<span id="noHighlight_0.9206554004884853">，它们会</span>如预期一样工作。</p>
+<p>严格模式可以应用到整个脚本或个别函数中。不要在封闭大括弧 <code>{}</code> 内这样做，在这样的上下文中这么做是没有效果的。在 <code>eval</code> 、<code>Function</code> 、内联事件处理属性、  {{domxref("WindowTimers.setTimeout()")}} 方法中传入的脚本字符串，其行为类似于开启了严格模式的一个单独脚本，它们会如预期一样工作。</p>
 
 <h3 id="为脚本开启严格模式">为脚本开启严格模式</h3>
 
@@ -72,7 +74,7 @@ function notStrict() {
 
 <p>严格模式同时改变了语法及运行时行为。变化通常分为这几类：将问题直接转化为错误（如语法错误或运行时错误）, 简化了如何为给定名称的特定变量计算，简化了 <code>eval</code> 以及 <code>arguments</code>, 将写"安全“JavaScript的步骤变得更简单，以及改变了预测未来ECMAScript行为的方式。</p>
 
-<h3 id="将过失错误转成异常" style="position: static;">将过失错误转成异常</h3>
+<h3 id="将过失错误转成异常">将过失错误转成异常</h3>
 
 <p>在严格模式下, 某些先前被接受的过失错误将会被认为是异常. JavaScript被设计为能使新人开发者更易于上手, 所以有时候会给本来错误操作赋予新的不报错误的语义(non-error semantics). 有时候这可以解决当前的问题, 但有时候却会给以后留下更大的问题. 严格模式则把这些失误当成错误, 以便可以发现并立即将其改正.</p>
 
@@ -112,7 +114,7 @@ delete Object.prototype; // 抛出TypeError错误
 <p>第四，在Gecko版本34之前，严格模式要求一个对象内的所有属性名在对象内必须唯一。正常模式下重名属性是允许的，最后一个重名的属性决定其属性值。因为只有最后一个属性起作用，当代码要去改变属性值而不是修改最后一个重名属性的时候，复制这个对象就产生一连串的bug。在严格模式下，重名属性被认为是语法错误：</p>
 
 <div class="note">
-<p>这个问题在ECMAScript6中已经不复存在({{bug(1041128)}})。</p>
+<p><strong>备注：</strong>这个问题在ECMAScript6中已经不复存在({{bug(1041128)}})。</p>
 </div>
 
 <pre class="brush: js">"use strict";
@@ -164,7 +166,7 @@ with (obj) { // !!! 语法错误
 }
 </pre>
 
-<p><span style="line-height: 1.5;">一种取代 </span><code>with</code>的简单方法<span style="line-height: 1.5;">是，将目标对象赋给一个短命名变量，然后访问这个变量上的相应属性</span><span style="line-height: 1.5;">.</span></p>
+<p>一种取代 <code>with</code>的简单方法是，将目标对象赋给一个短命名变量，然后访问这个变量上的相应属性.</p>
 
 <p>第二, <a class="external" href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/"><code>严格模式下的 eval 不再为上层范围(surrounding scope,注:包围eval代码块的范围)引入新变量</code></a>. 在正常模式下,  代码 <code>eval("var x;")</code> 会给上层函数(surrounding function)或者全局引入一个新的变量 <code>x</code> . 这意味着, 一般情况下,  在一个包含 <code>eval</code> 调用的函数内所有没有引用到参数或者局部变量的名称都必须在运行时才能被映射到特定的定义 (因为 <code>eval</code> 可能引入的新变量会覆盖它的外层变量). 在严格模式下 <code>eval</code> 仅仅为被运行的代码创建变量, 所以 <code>eval</code> 不会使得名称映射到外部变量或者其他局部变量:</p>
 
@@ -174,7 +176,7 @@ console.assert(x === 17);
 console.assert(evalX === 42);
 </pre>
 
-<p>相应的, 如果函数 <code>eval</code> 被在严格模式下的<span style="font-family: courier new,andale mono,monospace; line-height: normal;"><code>eval(...)</code>以表达式的形式调用时</span><span style="line-height: 1.5;">, 其代码会被当做严格模式下的代码执行. 当然也可以在代码中显式开启严格模式, 但这样做并不是必须的.</span></p>
+<p>相应的, 如果函数 <code>eval</code> 被在严格模式下的<code>eval(...)</code>以表达式的形式调用时, 其代码会被当做严格模式下的代码执行. 当然也可以在代码中显式开启严格模式, 但这样做并不是必须的.</p>
 
 <pre class="brush: js">function strict1(str) {
   "use strict";
@@ -247,7 +249,7 @@ var f = function() { return arguments.callee; };
 f(); // 抛出类型错误
 </pre>
 
-<h3 id="安全的_JavaScript" style="position: static;">"安全的" JavaScript</h3>
+<h3 id="安全的_JavaScript">"安全的" JavaScript</h3>
 
 <p>严格模式下更容易写出“安全”的JavaScript。现在有些网站提供了方式给用户编写能够被网站其他用户执行的JavaScript代码。在浏览器环境下，JavaScript能够获取用户的隐私信息，因此这类Javascript必须在运行前部分被转换成需要申请访问禁用功能的权限。没有很多的执行时检查的情况，Javascript的灵活性让它无法有效率地做这件事。一些语言中的函数普遍出现，以至于执行时检查他们会引起严重的性能损耗。做一些在严格模式下发生的小改动，要求用户提交的JavaScript开启严格模式并且用特定的方式调用，就会大大减少在执行时进行检查的必要。</p>
 
@@ -288,7 +290,7 @@ function fun(a, b) {
 fun(1, 2); // 不会暴露v（或者a，或者b）
 </pre>
 
-<h3 id="为未来的ECMAScript版本铺平道路" style="position: relative;">为未来的ECMAScript版本铺平道路</h3>
+<h3 id="为未来的ECMAScript版本铺平道路">为未来的ECMAScript版本铺平道路</h3>
 
 <p>未来版本的ECMAScript很有可能会引入新语法，ECMAScript5中的严格模式就提早设置了一些限制来减轻之后版本改变产生的影响。如果提早使用了严格模式中的保护机制，那么做出改变就会变得更容易。</p>
 

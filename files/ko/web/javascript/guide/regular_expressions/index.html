@@ -9,7 +9,7 @@ original_slug: Web/JavaScript/Guide/정규식
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}</div>
 
-<p class="summary">정규 표현식은 문자열에 나타는 특정 문자 조합과 대응시키기 위해 사용되는 패턴입니다. 자바스크립트에서, 정규 표현식 또한 객체입니다.  이 패턴들은 {{jsxref("RegExp")}}의 {{jsxref("RegExp.exec", "exec")}} 메소드와 {{jsxref("RegExp.test", "test")}} 메소드  ,그리고 {{jsxref("String")}}의  {{jsxref("String.match", "match")}}메소드 , {{jsxref("String.replace", "replace")}}메소드 , {{jsxref("String.search", "search")}}메소드 ,  {{jsxref("String.split", "split")}} 메소드와 함께 쓰입니다 . 이 장에서는 자바스크립트의 정규식에 대하여 설명합니다.</p>
+<p >정규 표현식은 문자열에 나타는 특정 문자 조합과 대응시키기 위해 사용되는 패턴입니다. 자바스크립트에서, 정규 표현식 또한 객체입니다.  이 패턴들은 {{jsxref("RegExp")}}의 {{jsxref("RegExp.exec", "exec")}} 메소드와 {{jsxref("RegExp.test", "test")}} 메소드  ,그리고 {{jsxref("String")}}의  {{jsxref("String.match", "match")}}메소드 , {{jsxref("String.replace", "replace")}}메소드 , {{jsxref("String.search", "search")}}메소드 ,  {{jsxref("String.split", "split")}} 메소드와 함께 쓰입니다 . 이 장에서는 자바스크립트의 정규식에 대하여 설명합니다.</p>
 
 <h2 id="정규_표현식_만들기">정규 표현식 만들기</h2>
 
@@ -55,7 +55,7 @@ original_slug: Web/JavaScript/Guide/정규식
  </thead>
  <tbody>
   <tr>
-   <td><a href="#special-backslash" id="special-backslash" name="special-backslash"><code>\</code></a></td>
+   <td><a href="#special-backslash"  name="special-backslash"><code>\</code></a></td>
    <td>
     <p>다음의 규칙에 따라 일치합니다:<br>
      <br>
@@ -67,7 +67,7 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-caret" id="special-caret" name="special-caret"><code>^</code></a></td>
+   <td><a href="#special-caret"  name="special-caret"><code>^</code></a></td>
    <td>입력의 시작 부분에 대응됩니다. 만약 다중행 플래그가 참으로 설정되어 있다면, 줄 바꿈 문자 바로 다음 부분과도 대응됩니다.<br>
     <br>
     예를 들어, <code>/^A/</code> 는 "an A" 의 'A'와는 대응되지 않습니다, 그러나 "An E" 의 'A'와는 대응됩니다.<br>
@@ -75,7 +75,7 @@ original_slug: Web/JavaScript/Guide/정규식
     '<code>^</code>' 가 문자셋([abc]) 패턴의 첫 글자로 쓰인다면, 그 때는 전혀 다른 의미를 가집니다. 자세한 내용은 <a href="#special-negated-character-set" title="#special-negated-character-set">역 문자셋</a>을 참고하세요.</td>
   </tr>
   <tr>
-   <td><a href="#special-dollar" id="special-dollar" name="special-dollar"><code>$</code></a></td>
+   <td><a href="#special-dollar"  name="special-dollar"><code>$</code></a></td>
    <td>
     <p>입력의 끝 부분과 대응됩니다. 만약 다중행 플래그가 참으로 설정되어 있다면, 줄 바꿈 문자의 바로 앞 부분과도 대응됩니다.</p>
 
@@ -83,7 +83,7 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-asterisk" id="special-asterisk" name="special-asterisk"><code>*</code></a></td>
+   <td><a href="#special-asterisk"  name="special-asterisk"><code>*</code></a></td>
    <td>
     <p>앞의 표현식이 0회 이상 연속으로 반복되는 부분과 대응됩니다. {0,} 와 같은 의미입니다.</p>
 
@@ -91,7 +91,7 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-plus" id="special-plus" name="special-plus"><code>+</code></a></td>
+   <td><a href="#special-plus"  name="special-plus"><code>+</code></a></td>
    <td>
     <p>앞의 표현식이 1회 이상 연속으로 반복되는 부분과 대응됩니다. <code>{1,}</code> 와 같은 의미입니다.</p>
 
@@ -99,7 +99,7 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-questionmark" id="special-questionmark" name="special-questionmark"><code>?</code></a></td>
+   <td><a href="#special-questionmark"  name="special-questionmark"><code>?</code></a></td>
    <td>앞의 표현식이 0 또는 1회 등장하는 부분과 대응됩니다. <code>{0,1}</code> 와 같은 의미입니다.<br>
     <br>
     예를 들어, <code>/e?le?/</code> 는 "angel"의 'el' 에 대응되고, "angle"의 'le' 에 대응되고 또한 "oslo" 의 'l'에도 대응됩니다.<br>
@@ -110,7 +110,7 @@ original_slug: Web/JavaScript/Guide/정규식
      </td>
   </tr>
   <tr>
-   <td><a href="#special-dot" id="special-dot" name="special-dot"><code>.</code></a></td>
+   <td><a href="#special-dot"  name="special-dot"><code>.</code></a></td>
    <td>
     <p>개행 문자를 제외한 모든 단일 문자와 대응됩니다.</p>
 
@@ -118,7 +118,7 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-capturing-parentheses" id="special-capturing-parentheses" name="special-capturing-parentheses"><code>(x)</code></a></td>
+   <td><a href="#special-capturing-parentheses"  name="special-capturing-parentheses"><code>(x)</code></a></td>
    <td>
     <p>다음의 예제가 보여주는것 처럼 'x'에 대응되고, 그것을 기억합니다. 괄호는 <em>포획 괄호(capturing parentheses)라</em> 불립니다.<br>
      <br>
@@ -126,11 +126,11 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-capturing-parentheses" id="special-non-capturing-parentheses" name="special-non-capturing-parentheses"><code>(?:x)</code></a></td>
+   <td><a href="#special-non-capturing-parentheses"  name="special-non-capturing-parentheses"><code>(?:x)</code></a></td>
    <td>'x'에 대응되지만 대응된 것을 기억하지 않습니다. 괄호는 <em>비포획 괄호(non-capturing parentheses)</em>라고 불리우고, 정규식 연산자가 같이 동작할 수 있게 하위 표현을 정의할 수 있습니다. 정규식 예제 <code>/(?:foo){1,2}/</code>을 생각해보세요. 만약 정규식이 <code>/foo{1,2}/</code>라면, <code>{1,2}</code>는 'foo'의 마지막 'o' 에만 적용됩니다. 비포획 괄호과 같이 쓰인다면, <code>{1,2}</code>는 단어 'foo' 전체에 적용됩니다.</td>
   </tr>
   <tr>
-   <td><a href="#special-lookahead" id="special-lookahead" name="special-lookahead"><code>x(?=y)</code></a></td>
+   <td><a href="#special-lookahead"  name="special-lookahead"><code>x(?=y)</code></a></td>
    <td>
     <p>오직 'y'가 뒤따라오는 'x'에만 대응됩니다. 이것은 lookahead 라고 불립니다.</p>
 
@@ -138,7 +138,7 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-negated-look-ahead" id="special-negated-look-ahead" name="special-negated-look-ahead"><code>x(?!y)</code></a></td>
+   <td><a href="#special-negated-look-ahead"  name="special-negated-look-ahead"><code>x(?!y)</code></a></td>
    <td>
     <p>'x'뒤에  'y'가 없는경우에만 'x'에 일치합니다. 이것은 negated lookahead 라고 불립니다.</p>
 
@@ -146,7 +146,7 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-or" id="special-or" name="special-or"><code>x|y</code></a></td>
+   <td><a href="#special-or"  name="special-or"><code>x|y</code></a></td>
    <td>
     <p>'x' 또는 'y'에 대응됩니다.</p>
 
@@ -154,13 +154,13 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-quantifier" id="special-quantifier" name="special-quantifier"><code>{n}</code></a></td>
+   <td><a href="#special-quantifier"  name="special-quantifier"><code>{n}</code></a></td>
    <td>앞 표현식이 n번 나타나는 부분에 대응됩니다. n은 반드시 양의 정수여야 합니다.<br>
     <br>
     예를 들어, <code>/a{2}/</code>는 "candy,"의 'a'에는 대응되지 않지만, "caandy,"의 모든 a 와, "caaandy."의 첫 두 a 에는 대응됩니다.</td>
   </tr>
   <tr>
-   <td><a href="#special-quantifier-range" id="special-quantifier-range" name="special-quantifier-range"><code>{n,m}</code></a></td>
+   <td><a href="#special-quantifier-range"  name="special-quantifier-range"><code>{n,m}</code></a></td>
    <td>
     <p><code>n</code>과 <code>m</code>은 양의 정수이고, <code>n &lt;= m</code>를 만족해야 합니다. 앞 문자가 최소 <code>n</code>개, 최대 <code>m</code>개가 나타나는 부분에 대응됩니다. <code>m</code>이 생략된다면, m은 ∞로 취급됩니다.</p>
 
@@ -168,13 +168,13 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-character-set" id="special-character-set" name="special-character-set"><code>[xyz]</code></a></td>
+   <td><a href="#special-character-set"  name="special-character-set"><code>[xyz]</code></a></td>
    <td>문자셋(Character set) 입니다. 이 패턴 타입은 괄호 안의 어떤 문자(<a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences" title="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences">이스케이프 시퀀스</a>까지 포함)와도 대응됩니다. 점(<code>.</code>) 이나 별표 (<code>*</code>) 같은 특수 문자는 문자셋 내부에서는 특수 문자가 아닙니다. 따라서 이스케이프시킬 필요가 없습니다. 하이픈을 이용하여 문자의 범위를 지정해줄 수 있습니다.<br>
     <br>
     예를 들어, 패턴 <code> [a-d]</code> 는 패턴 <code>[abcd]</code> 와 똑같이 동작하며, "brisket"의 'b' 에 일치하고, "city"의 'c' 에 일치합니다. 패턴 <code>/[a-z.]+/ </code> 와 <code>/[\w.]+/</code> 는 "test.i.ng" 전체 문자열이 일치합니다.</td>
   </tr>
   <tr>
-   <td><a href="#special-negated-character-set" id="special-negated-character-set" name="special-negated-character-set"><code>[^xyz]</code></a></td>
+   <td><a href="#special-negated-character-set"  name="special-negated-character-set"><code>[^xyz]</code></a></td>
    <td>
     <p>부정 문자셋(negated character set) 또는 보충 문자셋(complemented character set)입니다. 괄호 내부에 등장하지 않는 어떤 문자와도 대응됩니다. 하이픈을 이용하여 문자의 범위를 지정할 수 있습니다. 일반적인 문자셋에서 작동하는 모든 것은 여기에서도 작동합니다.</p>
 
@@ -182,11 +182,11 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-backspace" id="special-backspace" name="special-backspace"><code>[\b]</code></a></td>
+   <td><a href="#special-backspace"  name="special-backspace"><code>[\b]</code></a></td>
    <td>백스페이스(U+0008)에 대응됩니다. 이와 같이, 백스페이스 문자 리터럴에 대응시키려면, 대괄호("[]")를 이용해야만 합니다. (<code>\b</code>와 혼동하지 마세요.)</td>
   </tr>
   <tr>
-   <td><a href="#special-word-boundary" id="special-word-boundary" name="special-word-boundary"><code>\b</code></a></td>
+   <td><a href="#special-word-boundary"  name="special-word-boundary"><code>\b</code></a></td>
    <td>
     <p>단어 경계에 대응됩니다. 단어 경계는 다른 '단어 문자'가 앞이나 뒤에 등장하지 않는 위치에 대응됩니다. 단어의 경계는 대응 결과에 포함되지 않는다는 사실에 주의하세요. 다른 말로는, 단어의 경계에 대응되는 문자열의 길이는 항상 0입니다. (패턴 <code>[\b]</code>와 혼동하지 마세요.)</p>
 
@@ -202,7 +202,7 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-word-boundary" id="special-non-word-boundary" name="special-non-word-boundary"><code>\B</code></a></td>
+   <td><a href="#special-non-word-boundary"  name="special-non-word-boundary"><code>\B</code></a></td>
    <td>
     <p>단어 경계가 아닌 부분에 대응됩니다. 아래와 같은 경우들이 있습니다:</p>
 
@@ -220,7 +220,7 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-control" id="special-control" name="special-control"><code>\c<em>X</em></code></a></td>
+   <td><a href="#special-control"  name="special-control"><code>\c<em>X</em></code></a></td>
    <td>
     <p>문자열 내부의 제어 문자에 대응됩니다. 여기서 <em>X</em>는 A에서 Z까지의 문자 중 하나입니다.</p>
 
@@ -228,7 +228,7 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-digit" id="special-digit" name="special-digit"><code>\d</code></a></td>
+   <td><a href="#special-digit"  name="special-digit"><code>\d</code></a></td>
    <td>
     <p>숫자 문자에 대응됩니다. <code>[0-9]</code>와 동일합니다.</p>
 
@@ -236,7 +236,7 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-digit" id="special-non-digit" name="special-non-digit"><code>\D</code></a></td>
+   <td><a href="#special-non-digit"  name="special-non-digit"><code>\D</code></a></td>
    <td>
     <p>숫자 문자가 아닌 문자에 대응됩니다. <code>[^0-9]</code>와 동일합니다.</p>
 
@@ -244,19 +244,19 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-form-feed" id="special-form-feed" name="special-form-feed"><code>\f</code></a></td>
+   <td><a href="#special-form-feed"  name="special-form-feed"><code>\f</code></a></td>
    <td>폼피드 (U+000C) 문자에 대응됩니다.</td>
   </tr>
   <tr>
-   <td><a href="#special-line-feed" id="special-line-feed" name="special-line-feed"><code>\n</code></a></td>
+   <td><a href="#special-line-feed"  name="special-line-feed"><code>\n</code></a></td>
    <td>줄 바꿈 (U+000A) 문자에 대응됩니다.</td>
   </tr>
   <tr>
-   <td><a href="#special-carriage-return" id="special-carriage-return" name="special-carriage-return"><code>\r</code></a></td>
+   <td><a href="#special-carriage-return"  name="special-carriage-return"><code>\r</code></a></td>
    <td>캐리지 리턴(U+000D) 문자에 대응됩니다.</td>
   </tr>
   <tr>
-   <td><a href="#special-white-space" id="special-white-space" name="special-white-space"><code>\s</code></a></td>
+   <td><a href="#special-white-space"  name="special-white-space"><code>\s</code></a></td>
    <td>
     <p>스페이스, 탭, 폼피드, 줄 바꿈 문자등을 포함한 하나의 공백 문자에 대응됩니다. <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>.와 동일합니다.</p>
 
@@ -264,7 +264,7 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-white-space" id="special-non-white-space" name="special-non-white-space"><code>\S</code></a></td>
+   <td><a href="#special-non-white-space"  name="special-non-white-space"><code>\S</code></a></td>
    <td>
     <p>공백 문자가 아닌 하나의 문자에 대응됩니다. <code>[^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. 와 동일합니다.</p>
 
@@ -272,15 +272,15 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-tab" id="special-tab" name="special-tab"><code>\t</code></a></td>
+   <td><a href="#special-tab"  name="special-tab"><code>\t</code></a></td>
    <td>탭 (U+0009) 문자에 대응됩니다.</td>
   </tr>
   <tr>
-   <td><a href="#special-vertical-tab" id="special-vertical-tab" name="special-vertical-tab"><code>\v</code></a></td>
+   <td><a href="#special-vertical-tab"  name="special-vertical-tab"><code>\v</code></a></td>
    <td>수직 탭(U+000B) 문자에 대응됩니다.</td>
   </tr>
   <tr>
-   <td><a href="#special-word" id="special-word" name="special-word"><code>\w</code></a></td>
+   <td><a href="#special-word"  name="special-word"><code>\w</code></a></td>
    <td>
     <p>밑줄 문자를 포함한 영숫자 문자에 대응됩니다. <code>[A-Za-z0-9_]</code> 와 동일합니다. (역주: 여기에 대응되는 문자를 단어 문자라고 합니다.)</p>
 
@@ -288,7 +288,7 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-word" id="special-non-word" name="special-non-word"><code>\W</code></a></td>
+   <td><a href="#special-non-word"  name="special-non-word"><code>\W</code></a></td>
    <td>
     <p>단어 문자가 아닌 문자에 대응됩니다. <code>[^A-Za-z0-9_]</code> 와 동일합니다.</p>
 
@@ -296,7 +296,7 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-backreference" id="special-backreference" name="special-backreference"><code>\<em>n</em></code></a></td>
+   <td><a href="#special-backreference"  name="special-backreference"><code>\<em>n</em></code></a></td>
    <td>
     <p>정규식 내부의 <em>n</em>번째 괄호에서 대응된 부분에 대한 역참조 입니다. 여기서, <em>n은 양의 정수입니다.</em></p>
 
@@ -304,15 +304,15 @@ original_slug: Web/JavaScript/Guide/정규식
    </td>
   </tr>
   <tr>
-   <td><a href="#special-null" id="special-null" name="special-null"><code>\0</code></a></td>
+   <td><a href="#special-null"  name="special-null"><code>\0</code></a></td>
    <td>널 (U+0000)문자에 대응합니다. 이 때 다른 숫자를 뒤에 쓰지 마세요. 왜냐하면 <code>\0&lt;digits&gt;</code>는 8진 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences" title="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences">이스케이프 시퀀스</a>이기 때문입니다.</td>
   </tr>
   <tr>
-   <td><a href="#special-hex-escape" id="special-hex-escape" name="special-hex-escape"><code>\xhh</code></a></td>
+   <td><a href="#special-hex-escape"  name="special-hex-escape"><code>\xhh</code></a></td>
    <td>코드가 hh(두 16진 숫자)인 문자에 일치합니다.</td>
   </tr>
   <tr>
-   <td><a href="#special-unicode-escape" id="special-unicode-escape" name="special-unicode-escape"><code>\uhhhh</code></a></td>
+   <td><a href="#special-unicode-escape"  name="special-unicode-escape"><code>\uhhhh</code></a></td>
    <td>코드가 hhhh(네개의 16진 숫자)인 문자에 일치합니다.</td>
   </tr>
  </tbody>
@@ -349,7 +349,7 @@ original_slug: Web/JavaScript/Guide/정규식
  <tbody>
   <tr>
    <td>{{jsxref("RegExp.exec", "exec")}}</td>
-   <td>대응되는 문자열을 찾는 <code style="font-style: normal;">RegExp</code><span style="background-color: rgba(212, 221, 228, 0.14902);"> 메소드입니다</span>. 정보를 가지고 있는 배열을 반환합니다. 대응되는 문자열을 찾지 못했다면 null을 반환합니다.</td>
+   <td>대응되는 문자열을 찾는 <code style="font-style: normal;">RegExp</code> 메소드입니다. 정보를 가지고 있는 배열을 반환합니다. 대응되는 문자열을 찾지 못했다면 null을 반환합니다.</td>
   </tr>
   <tr>
    <td>{{jsxref("RegExp.test", "test")}}</td>
@@ -357,7 +357,7 @@ original_slug: Web/JavaScript/Guide/정규식
   </tr>
   <tr>
    <td>{{jsxref("String.match", "match")}}</td>
-   <td>대응되는 문자열을 찾는 <code style="font-style: normal;">String</code><span style="background-color: rgba(212, 221, 228, 0.14902);"> 메소드입니다</span>. 정보를 가지고 있는 배열을 반환합니다. 대응되는 문자열을 찾지 못했다면 null을 반환합니다.</td>
+   <td>대응되는 문자열을 찾는 <code style="font-style: normal;">String</code> 메소드입니다. 정보를 가지고 있는 배열을 반환합니다. 대응되는 문자열을 찾지 못했다면 null을 반환합니다.</td>
   </tr>
   <tr>
    <td>{{jsxref("String.search", "search")}}</td>
@@ -634,7 +634,7 @@ console.log(output.join("\n"));
 
 <p>다음 예에서, 사용자는 전화번호를 입력 할 것으로 예상됩니다. 사용자가 "Check" 버튼을 누를 때, 스크립트는 번호의 유효성을 검사합니다. 번호가 유효한 경우(정규식에 의해 지정된 문자 시퀀스와 일치합니다), 스크립트는 사용자에게 감사하는 메시지와 번호를 확인하는 메시지를 나타냅니다. 번호가 유효하지 않은 경우, 스크립트는 전화번호가 유효하지 않다는 것을 사용자에게 알립니다.</p>
 
-<p>비 캡처링 괄호 <code>(?:</code> , 정규식은 세 자리 숫자를 찾습니다 <code>\d{3}</code> OR <code>|</code> 왼쪽 괄호<code>\(</code> 세 자리 숫자 다음에 <code>\d{3}</code>, 닫는 괄호 다음에 <code>\)</code>, (비 캡처링 괄호를 종료<code>)</code>) 안에, 하나의 대시, 슬래시, 또는 소수점을 다음과 같이 발견했을 때,  세 자리 숫자 다음에 <code>d{3}</code>, 대시의 기억 매치, 슬래시, 또는 소수점 다음에 <code>\1</code>, 네 자리 숫자 다음에 <code>\d{4}</code> 문자를 기억합니다<strong><font face="Courier New">([-\/\.])</font></strong>.</p>
+<p>비 캡처링 괄호 <code>(?:</code> , 정규식은 세 자리 숫자를 찾습니다 <code>\d{3}</code> OR <code>|</code> 왼쪽 괄호<code>\(</code> 세 자리 숫자 다음에 <code>\d{3}</code>, 닫는 괄호 다음에 <code>\)</code>, (비 캡처링 괄호를 종료<code>)</code>) 안에, 하나의 대시, 슬래시, 또는 소수점을 다음과 같이 발견했을 때,  세 자리 숫자 다음에 <code>d{3}</code>, 대시의 기억 매치, 슬래시, 또는 소수점 다음에 <code>\1</code>, 네 자리 숫자 다음에 <code>\d{4}</code> 문자를 기억합니다<strong>([-\/\.])</strong>.</p>
 
 <p>사용자가 &lt;Enter&gt; 키를 누를 때 활성화 <code>변경</code> 이벤트는 <code>RegExp.input</code>의 값을 설정합니다.</p>
 

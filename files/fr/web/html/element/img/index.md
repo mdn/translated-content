@@ -149,7 +149,7 @@ Cet élément inclut les [attributs globaux](/fr/docs/Web/HTML/Global_attributes
 
 - `src`
   - : L'[URL](/fr/docs/Glossary/URL) de l'image. Cet attribut est obligatoire pour l'élément `<img>`. Pour les [navigateurs](/fr/docs/Glossary/Browser) qui prennent en charge `srcset`, `src` est considéré comme une image candidate dont la densité de pixel vaut `1x` si aucune autre image avec cette densité n'est définie via `srcset` ou si `srcset` contient des descripteurs « `w` ».
-- `srcset`\*
+- `srcset`
 
   - : Une liste de une ou plusieurs chaînes de caractères, séparées par des virgules, qui indiquent un ensemble d'images sources parmi lequel l'agent utilisateur pourra choisir la meilleure image à afficher. Chaque chaîne de caractères se compose :
 

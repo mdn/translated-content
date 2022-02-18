@@ -5,17 +5,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error/name
 ---
 <p>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</p>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
-<p><code style="font-style: normal; line-height: 19.0909080505371px;"><strong>name</strong></code><span style="line-height: 19.0909080505371px;"> </span>属性表示error类型的名称.初始值为"Error".</p>
+<p><code><strong>name</strong></code> 属性表示error类型的名称.初始值为"Error".</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p>默认情况下,<span style="line-height: 19.0909080505371px;">{{jsxref("Error")}}</span>对象的<code>name</code>属性值为"Error".<code>name属性和</code><span style="line-height: 19.0909080505371px;">{{jsxref("Error.prototype.message", "message")}}</span>属性一起,通过调用<span style="line-height: 19.0909080505371px;">{{jsxref("Error.prototype.toString()")}}</span>方法,会作为最后异常信息的字符串表示.</p>
+<p>默认情况下,{{jsxref("Error")}}对象的<code>name</code>属性值为"Error".<code>name属性和</code>{{jsxref("Error.prototype.message", "message")}}属性一起,通过调用{{jsxref("Error.prototype.toString()")}}方法,会作为最后异常信息的字符串表示.</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example:_Throwing_a_custom_error" name="Example:_Throwing_a_custom_error">例子: 抛出一个自定义错误</h3>
+<h3 id="Example:_Throwing_a_custom_error">例子: 抛出一个自定义错误</h3>
 
 <pre class="brush:js">var e = new Error("Malformed input"); // e.name默认是"Error"
 
@@ -23,88 +23,17 @@ e.name = "ParseError";                // 修改之后,e.toString()会成为下�
 throw e;                              // "ParseError: Malformed input"
 </pre>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">规范</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table" style="line-height: 19.0909080505371px;">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.4.2', 'Error.prototype.name')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-error.prototype.name', 'Error.prototype.name')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div style="line-height: 19.0909080505371px;">{{CompatibilityTable}}</div>
+{{Compat}}
 
-<div id="compat-desktop" style="line-height: 19.0909080505371px;">
-<table class="compat-table" style="border-color: transparent;">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">Feature</th>
-   <th style="line-height: 16px;">Chrome</th>
-   <th style="line-height: 16px;">Firefox (Gecko)</th>
-   <th style="line-height: 16px;">Internet Explorer</th>
-   <th style="line-height: 16px;">Opera</th>
-   <th style="line-height: 16px;">Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="See_also">相关链接</h2>
 
-<div id="compat-mobile" style="line-height: 19.0909080505371px;">
-<table class="compat-table" style="border-color: transparent;">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">Feature</th>
-   <th style="line-height: 16px;">Android</th>
-   <th style="line-height: 16px;">Chrome for Android</th>
-   <th style="line-height: 16px;">Firefox Mobile (Gecko)</th>
-   <th style="line-height: 16px;">IE Mobile</th>
-   <th style="line-height: 16px;">Opera Mobile</th>
-   <th style="line-height: 16px;">Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">相关链接</h2>
-
-<ul style="line-height: 19.0909080505371px;">
+<ul>
  <li>{{jsxref("Error.prototype.message")}}</li>
  <li>{{jsxref("Error.prototype.toString()")}}</li>
 </ul>

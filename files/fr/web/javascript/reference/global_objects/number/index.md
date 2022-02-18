@@ -47,7 +47,7 @@ L'objet `Number` est principalement utilisé dans les cas de figure suivants :
 - {{jsxref("Number.MIN_VALUE")}}
   - : La plus petite valeur qu'on peut représenter en JavaScript, c'est-à-dire le plus petit nombre positif (le nombre le plus près de zéro qui n'est pas égal à zéro et qu'on peut représenter en JavaScript).
 - {{jsxref("Number.NaN")}}
-  - : Une valeur spéciale pour représenter les valeurs non-numériques (**NaN** correspond à « **\*n**ot **a** **n**umber\* » en anglais, qui signifie « n'est pas un nombre »).
+  - : Une valeur spéciale pour représenter les valeurs non-numériques (**NaN** correspond à «&nbsp;<i lang="en">**N**ot **a** **N**umber</i>&nbsp;» en anglais, qui signifie «&nbsp;n'est pas un nombre&nbsp;»).
 - {{jsxref("Number.NEGATIVE_INFINITY")}}
   - : Une valeur spéciale pour représenter l'infini négatif.
 - {{jsxref("Number.POSITIVE_INFINITY")}}
@@ -140,7 +140,7 @@ Number("0b11");      // 3
 Number("0o11");      // 9
 Number("toto");      // NaN
 Number("100a");      // NaN
-Number("-Infinity";) // -Infinity
+Number("-Infinity"); // -Infinity
 ```
 
 > **Note :** On pourra également convertir `null` en `0` grâce à `Number` : `Number(null)` donnera `0`.

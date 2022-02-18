@@ -168,7 +168,7 @@ function handleCommand(event) {
 }
 ```
 
-{{EmbedLiveSample("basic_button_example")}}
+{{EmbedLiveSample("Exemple_de_bouton_simple")}}
 
 ### Exemple d'interrupteur
 
@@ -242,7 +242,7 @@ function toggleButton(element) {
 
 #### Résultat
 
-{{EmbedLiveSample('toggle_button_example')}}
+{{EmbedLiveSample('Exemple_d\'interrupteur')}}
 
 ## Accessibilité
 

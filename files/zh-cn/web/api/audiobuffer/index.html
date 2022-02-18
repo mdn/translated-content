@@ -9,7 +9,7 @@ translation_of: Web/API/AudioBuffer
 <p>AudioBuffer接口表示存在内存里的一段短小的音频资源，利用{{ domxref("AudioContext.decodeAudioData()") }}方法从一个音频文件构建，或者利用 {{ domxref("AudioContext.createBuffer()") }}从原始数据构建。把音频放入AudioBuffer后，可以传入到一个 {{ domxref("AudioBufferSourceNode") }}进行播放。</p>
 </div>
 
-<p>这些类型对象被设计来控制小音频片段，往往短于45秒。对于更长的声音，通过 {{domxref("MediaElementAudioSourceNode")}}来实现更为合适。缓存区（buffer）包含以下数据：不间断的IEEE75432位线性PCM，从-1到1的范围额定，就是说，32位的浮点缓存区的每个样本在-1.0到1.0之间。如果{{domxref("AudioBuffer")}}有不同的频道，他们通常被保存在独立的缓存区。</p>
+<p>这些类型对象被设计来控制小音频片段，往往短于45秒。对于更长的声音，通过 {{domxref("MediaElementAudioSourceNode")}}来实现更为合适。缓存区（buffer）包含以下数据：不间断的IEEE754 32位线性PCM，从-1到1的范围额定，就是说，32位的浮点缓存区的每个样本在-1.0到1.0之间。如果{{domxref("AudioBuffer")}}有不同的频道，他们通常被保存在独立的缓存区。</p>
 
 <h2 id="属性">属性</h2>
 
