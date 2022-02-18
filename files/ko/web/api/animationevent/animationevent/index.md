@@ -32,7 +32,7 @@ animationEvent = new AnimationEvent(type, {animationName: aPropertyName,
 - `animationName` {{optional_inline}}
   - : 트랜지션에 관련된 {{cssxref("animation-name")}} CSS 속성 값을 나타내는 {{domxref("DOMString")}}입니다. 기본 값은 `""`입니다.
 - `elapsedTime` {{optional_inline}}
-  - : 이벤트가 발생한 시점까지 애니메이션이 재생된 총 시간을 나타내는 `float` 값입니다. 초 단위며, 애니메이션이 일시정지된 시간은 제외합니다. `animationstart` 이벤트의 `elapsedTime`은 {{cssxref("animation-delay")}}의 값이 음수인 경우에만 `(-1 * delay)`가 되고, 그 외에는 `0.0`입니다.
+  - : 이벤트가 발생한 시점까지 애니메이션이 재생된 총 시간을 나타내는 `float` 값입니다. 초 단위며, 애니메이션이 일시정지된 시간은 제외합니다. `"animationstart"` 이벤트의 `elapsedTime`은 {{cssxref("animation-delay")}}의 값이 음수인 경우에만 `(-1 * delay)`가 되고, 그 외에는 `0.0`입니다. 기본 값은 `0.0`입니다.
 - `pseudoElement` {{optional_inline}}
   - : 애니메이션이 재생 중인 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)의 이름을 값으로 가진 {{domxref("DOMString")}}입니다. `'::'`으로 시작합니다. 애니메이션이 일반 요소에서 재생 중이라면 빈 문자열(`''`)을 반환합니다.
 
