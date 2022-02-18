@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Statements/return
 
 <p><strong><code>return</code>语句</strong>终止函数的执行，并返回一个指定的值给函数调用者。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">return [[expression]]; </pre>
 
@@ -57,12 +57,12 @@ a + b;</pre>
 <p>控制台会警告“unreachable code after return statement”。</p>
 
 <div class="note">
-<p>从 Gecko 40 {{geckoRelease(40)}}开始，如果在一个 return 语句后发现无法访问的代码，控制台将会显示一个警告。</p>
+<p><strong>备注：</strong>从 Gecko 40 {{geckoRelease(40)}}开始，如果在一个 return 语句后发现无法访问的代码，控制台将会显示一个警告。</p>
 </div>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example:_Using_return" name="Example:_Using_return">中断一个函数的执行</h3>
+<h3 id="Example:_Using_return">中断一个函数的执行</h3>
 
 <p>函数将会在<code>return</code>语句执行后立即中止。</p>
 
@@ -139,7 +139,7 @@ answer(1337); // 56154
 
 <p>{{Compat("javascript.statements.return")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope" title="En/Core_JavaScript_1.5_Reference/Functions">函数和函数作用域</a></li>

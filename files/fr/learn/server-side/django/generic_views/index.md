@@ -192,11 +192,11 @@ Le code à l'intérieur de la boucle crée un élément de liste pour chaque liv
 <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
 ```
 
-Nous accédont aux _champs_ de l'enregistrement "livre" associé, en utilisant la notation "à points" (par exemple `book.title` et `book.author`), où le texte suivant l'item `book` est le nom du champ (comme défini dans le modèle).
+Nous accédons aux _champs_ de l'enregistrement "livre" associé, en utilisant la notation "à points" (par exemple `book.title` et `book.author`), où le texte suivant l'item `book` est le nom du champ (comme défini dans le modèle).
 
 Nous pouvons aussi appeler des _fonctions_ contenues dans le modèle depuis l'intérieur de notre template — dans ce cas nous appelons `Book.get_absolute_url()` pour obtenir une URL que vous pouvez utiliser pour afficher dans la vue détail l'enregistrement associé. Cela fonctionne, pourvu que la fonction ne comporte pas d'arguments (il n'y a aucun moyen de passer des arguments !).
 
-> **Note :** Il nous faut être quelque peu attentif aux "effets de bord" quand nous appelons des fonctions dans nos templates. Ici nous récupérons simplement une URL à afficher, mais une fonction peut faire à peu près n'importe quoi — nous ne voudrions pas effacer notre base de données (par exemple) juste parce que nous avons affiché notre template !
+> **Note :** Il nous faut être quelque peu attentifs aux "effets de bord" quand nous appelons des fonctions dans nos templates. Ici nous récupérons simplement une URL à afficher, mais une fonction peut faire à peu près n'importe quoi — nous ne voudrions pas effacer notre base de données (par exemple) juste parce que nous avons affiché notre template !
 
 #### Mettre à jour le template de base
 
@@ -230,7 +230,7 @@ urlpatterns = [
 
 Pour le chemin *book-detail*, le pattern d'URL utilise une syntaxe spéciale pour capturer l'id exact du livre que nous voulons voir. La syntaxe est très simple : les chevrons ('<' et '>') définissent la partie de l'URL qui doit être capturée et encadrent le nom de la variable que la vue pourra utiliser pour accéder aux données capturées. Par exemple, **\<something>**  va capturer le pattern marqué et passer la valeur à la vue en tant que variable "something". De manière optionnelle, vous pouvez faire précéder le nom de variable d'une [spécification de convertisseur](https://docs.djangoproject.com/en/2.1/topics/http/urls/#path-converters), qui définit le type de la donnée (int, str, slug, uuid, path).
 
-Dans ce cas, nous utilisons `'<int:pk>'` pour capturer l'id du livre, qui doit être une chaîne formatée d'une certaine manière, et passer cet id à la vue en tant que paramètre nommé `pk` (abbréviation pour primary key - clé primaire). C'est l'id qui doit être utilisé pour stocker le livre de manière unique dans la base de données, comme défini dans le modèle Book.
+Dans ce cas, nous utilisons `'<int:pk>'` pour capturer l'id du livre, qui doit être une chaîne formatée d'une certaine manière, et passer cet id à la vue en tant que paramètre nommé `pk` (abréviation pour primary key - clé primaire). C'est l'id qui doit être utilisé pour stocker le livre de manière unique dans la base de données, comme défini dans le modèle Book.
 
 > **Note :** Comme nous l'avons dit précédemment, notre URL correcte est en réalité `catalog/book/<digits>` (comme nous sommes dans l'application **catalog**, `/catalog/` est supposé).
 
@@ -260,10 +260,10 @@ L'essentiel de ce que vous aurez besoin de savoir pour déclarer une recherche d
 | $               | Recherche la fin du texte.                                                                                                                                                                                                                                                 |
 | \d              | Recherche un digit (0, 1, 2, ... 9).                                                                                                                                                                                                                                       |
 | \w              | Recherche un caractère de mot, c'est-à-dire tout caractère dans l'alphabet (majuscule ou minuscule), un digit ou un underscore (\_).                                                                                                                                       |
-| +               | Recherche au moins une occurence du caractère précédent. Par exemple, pour rechercher au moins 1 digit, vous utiliseriez `\d+`. Pour rechercher au moins 1 caractère "a", vous utiliseriez `a+`.                                                                           |
+| +               | Recherche au moins une occurrence du caractère précédent. Par exemple, pour rechercher au moins 1 digit, vous utiliseriez `\d+`. Pour rechercher au moins 1 caractère "a", vous utiliseriez `a+`.                                                                           |
 | \*              | Recherche zéro ou plus occurrence(s) du caractère précédent. Par exemple, pour rechercher "rien ou un mot", vous pourriez utiliser `\w*`.                                                                                                                                  |
 | ( )             | Capture la partie du pattern contenue dans les parenthèses. Toutes les valeurs capturées seront passées à la vue en tant que paramètres non nommés (si plusieurs patterns sont capturés, les paramètres associés seront fournis dans l'ordre de déclaration des captures). |
-| (?P<_name_>...) | Capture le pattern (indiqué par …) en tant que variable nommée (dans ce cas "name"). Les valeurs capturées sont passées à la vue avec le nom spécifié. Votre vue doit par conséquent déclarer un argument avec le même nom !                                               |
+| (?P<_name_>...) | Capture le pattern (indiqué par…) en tant que variable nommée (dans ce cas "name"). Les valeurs capturées sont passées à la vue avec le nom spécifié. Votre vue doit par conséquent déclarer un argument avec le même nom !                                               |
 | [  ]            | Recherche l'un des caractères contenus dans cet ensemble. Par exemple, [abc] va rechercher "a" ou "b" ou "c". [-\w] va rechercher le caractère "-" ou tout caractère de mot.                                                                                               |
 
 La plupart des autres caractères peuvent être pris littéralement.
@@ -307,7 +307,7 @@ Considérons quelques exemples réels de patterns :
       <td><strong>r'^book/(\d+)$'</strong></td>
       <td>
         <p>
-          Ceci rechercher la même URL que dans le cas précédent. L'information
+          Ceci recherche la même URL que dans le cas précédent. L'information
           capturée serait envoyée à la vue en tant qu'argument non nommé.
         </p>
       </td>
@@ -349,7 +349,7 @@ path('url/', views.my_reused_view, {'my_template_name': 'some_path'}, name='aurl
 path('anotherurl/', views.my_reused_view, {'my_template_name': 'another_path'}, name='anotherurl'),
 ```
 
-> **Note :** Les options supplémentaires aussi bien que les patterns capturés sont passés à la vue comme arguments _nommés_. Si vous utilisez le** \*\***même nom\*\* pour un pattern capturé et une option supplémentaire, alors seul la value du pattern capturé sera envoyé à la vue (la valeur spécifiée dans l'option supplémentaire sera abandonnée).
+> **Note :** Les options supplémentaires aussi bien que les patterns capturés sont passés à la vue comme arguments _nommés_. Si vous utilisez le **même nom** pour un pattern capturé et une option supplémentaire, alors seul la value du pattern capturé sera envoyé à la vue (la valeur spécifiée dans l'option supplémentaire sera abandonnée).
 
 ### Vue (basée sur classe)
 
@@ -392,7 +392,7 @@ def book_detail_view(request, primary_key):
     return render(request, 'catalog/book_detail.html', context={'book': book})
 ```
 
-### Créerle template de la Vue Détail
+### Créer le template de la Vue Détail
 
 Créez le fichier HTML **/locallibrary/catalog/templates/catalog/book_detail.html**, et copiez-y le code ci-dessous. Comme on l'a dit plus haut, c'est là le nom de template attendu par défaut par la vue générique basée sur classe _detail_ (pour un modèle appelé `Book` dans une application appelée `catalog`).
 
@@ -463,7 +463,7 @@ Cette méthode est requise parce que vous déclarez un champ `ForeignKey` (one-
 > 2.  Ajouter un attribut `queryset` dans votre vue personnalisée basée sur classe, en spécifiant un `order_by()`.
 > 3.  Ajouter une méthode `get_queryset` à votre vue personnalisée basée sur classe, et préciser de même un `order_by()`.
 >
-> Si vous décidez d'ajouter une `class Meta` au modèle `Author` (solution peut-être pas aussi flexible que personnalier la vue basée sur classe, mais assez facile), vous allez vous retrouver avec quelque chose de ce genre :
+> Si vous décidez d'ajouter une `class Meta` au modèle `Author` (solution peut-être pas aussi flexible que personnaliser la vue basée sur classe, mais assez facile), vous allez vous retrouver avec quelque chose de ce genre :
 >
 >     class Author(models.Model):
 >         first_name = models.CharField(max_length=100)
@@ -502,7 +502,7 @@ Ensuite cliquez sur un lien dirigeant vers l'un de vos livres. Si tout est régl
 
 Si vous avez seulement quelques enregistrements, notre page de liste de livres aura une bonne apparence. Mais si vous avez des dizaines ou des centaines d'enregistrements, la page va progressivement devenir plus longue à charger (et aura beaucoup trop de contenu pour naviguer de manière raisonnable). La solution à ce problème est d'ajouter une pagination à vos vues listes, en réduisant le nombre d'éléments affichés sur chaque page.
 
-Django a d'excellents outils pour la pagination. Mieux encore, ces outils sont intégrés dans les vues listes génériques basées sur classes, aussi n'avez-vous pas grand chose à faire pour les activer !
+Django a d'excellents outils pour la pagination. Mieux encore, ces outils sont intégrés dans les vues listes génériques basées sur classes, aussi n'avez-vous pas grand-chose à faire pour les activer !
 
 ### Vues
 
@@ -552,7 +552,7 @@ C'est tout !
 
 ### À quoi cela ressemble-t-il ?
 
-La capture d'écran ci-dessous montre à quoi ressemble la pagination. Si vous n'avez pas entré plus de 10 titres dans votre base de données, vous pouvez tester plus facilement cette pagination en diminuant le nombre spécifié à la ligne `paginate_by` dans votre  fichier **catalog/views.py**. Pour obtenir le résultat ci-dessous, nous avons changé la ligne en `paginate_by = 2`.
+La capture d'écran ci-dessous montre à quoi ressemble la pagination. Si vous n'avez pas entré plus de 10 titres dans votre base de données, vous pouvez tester plus facilement cette pagination en diminuant le nombre spécifié à la ligne `paginate_by` dans votre fichier **catalog/views.py**. Pour obtenir le résultat ci-dessous, nous avons changé la ligne en `paginate_by = 2`.
 
 Les liens de pagination sont affichés en bas de la page, avec les liens suivant/précédent affichés selon la page sur laquelle nous nous trouvons.
 
@@ -562,8 +562,8 @@ Les liens de pagination sont affichés en bas de la page, avec les liens suivant
 
 Le challenge dans cet article consiste à créer les vues détail et liste nécessaires à l'achèvement du projet. Ces pages devront être accessibles aux URLs suivantes :
 
-- `catalog/authors/` — La liste de tous les auteurs.
-- `catalog/author/<id>`\* *— La vue détail pour un auteur précis, avec un champ clé-primaire appelé *`<id>`\*.
+- `catalog/authors/` — La liste de tous les auteurs.
+- `catalog/author/<id>` — La vue détail pour un auteur précis, avec un champ clé-primaire appelé *`<id>`*.
 
 Le code requis pour le mappeur d'URL et les vues sera virtuellement identique aux vues liste et détail du modèle `Book`, créées ci-dessus. Les templates seront différents, mais auront un comportement semblable.
 

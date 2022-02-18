@@ -1,36 +1,23 @@
 ---
 title: Mise en forme des liens
 slug: Learn/CSS/Styling_text/Styling_links
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - Focus
-  - Guide
-  - Learn
-  - Links
-  - Pseudo-class
-  - hover
-  - hyperlinks
-  - menus
-  - tabs
 translation_of: Learn/CSS/Styling_text/Styling_links
 original_slug: Learn/CSS/Styling_text/Mise_en_forme_des_liens
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
-Lors de la mise en forme de [liens](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks), il est important de comprendre comment utiliser les pseudo-classes pour mettre en forme efficacement les états des liens, et comment créer des liens pour les utiliser dans diverses fonctionnalités d'interface courantes, telles que les menus de navigation et les onglets. Nous allons examiner tous ces sujets dans cet article.
+Lors de la mise en forme de [liens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), il est important de comprendre comment utiliser les pseudo-classes pour mettre en forme efficacement les états des liens, et comment créer des liens pour les utiliser dans diverses fonctionnalités d'interface courantes, telles que les menus de navigation et les onglets. Nous allons examiner tous ces sujets dans cet article.
 
 <table class="standard-table">
   <tbody>
     <tr>
       <th scope="row">Prérequis :</th>
       <td>
-        notions de base en informatique, notions de base en HTML (étudier l'<a
-          href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML"
+        Notions de base en informatique, notions de base en HTML (étudier l'<a
+          href="/fr/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction au HTML)</a
         >, notions de base en CSS (étudier l'<a
-          href="/fr/Apprendre/CSS/Introduction_%C3%A0_CSS"
+          href="/fr/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction à CSS</a
         >),
         <a
@@ -42,7 +29,7 @@ Lors de la mise en forme de [liens](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/
     <tr>
       <th scope="row">Objectif :</th>
       <td>
-        apprendre à mettre en forme les états des liens, et comment utiliser
+        Apprendre à mettre en forme les états des liens, et comment utiliser
         efficacement les liens dans les fonctionnalités courantes de l'IU, comme
         les menus de navigation.
       </td>
@@ -52,11 +39,11 @@ Lors de la mise en forme de [liens](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/
 
 ## Un coup d'œil à quelques liens
 
-Nous avons regardé comment les liens sont implémentés dans votre HTML selon les meilleures pratiques dans [Création d'hyperliens](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks). Dans cet article, nous allons développer ces connaissances en vous montrant les meilleures pratiques pour la mise en forme de liens.
+Nous avons regardé comment les liens sont implémentés dans votre HTML selon les meilleures pratiques dans [Création d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). Dans cet article, nous allons développer ces connaissances en vous montrant les meilleures pratiques pour la mise en forme de liens.
 
 ### État des liens
 
-La première chose à comprendre est le concept d'états des liens : les différents états dans lesquels les liens peuvent exister, qui peuvent être mis en forme en utilisant différentes [pseudo-classes](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Les_s%C3%A9lecteurs) :
+La première chose à comprendre est le concept d'états des liens : les différents états dans lesquels les liens peuvent exister, qui peuvent être mis en forme en utilisant différentes [pseudo-classes](/fr/docs/Learn/CSS/Building_blocks/Selectors#pseudo-classes_et_pseudo-éléments) :
 
 - **link (non visité)** : l'état par défaut dans lequel se trouve un lien, lorsqu'il n'est dans aucun autre état ; cela peut être spécifiquement mis en forme en utilisant la pseudo classe {{cssxref(":link")}} ;
 - **visited :** un lien qui a déjà été visité (qui existe dans l'historique du navigateur), mis en forme en utilisant la pseudo-classe {{cssxref(":visited")}} ;
@@ -84,17 +71,17 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Styles_par_défaut', '100%', 120) }}
+{{ EmbedLiveSample('', '100%', 120) }}
 
-> **Note :** tous les liens dans les exemples de cette page sont de faux liens : un # (hash, ou signe dièse) est mis à la place de l'URL réelle. En effet, si des liens réels étaient inclus, un simple clic sur ceux-ci cassererait les exemples (vous vous retrouveriez avec une erreur, ou une page chargée dans l'exemple intégré de laquelle vous ne pourriez pas revenir) ; # ne redirige que vers la page actuelle.
+> **Note :** Tous les liens dans les exemples de cette page sont de faux liens : un # (hash, ou signe dièse) est mis à la place de l'URL réelle. En effet, si des liens réels étaient inclus, un simple clic sur ceux-ci cassererait les exemples (vous vous retrouveriez avec une erreur, ou une page chargée dans l'exemple intégré de laquelle vous ne pourriez pas revenir) ; # ne redirige que vers la page actuelle.
 
 Vous remarquerez quelques petites choses en explorant les styles par défaut :
 
-- les liens sont soulignés ;
-- les liens non visités sont bleus ;
-- les liens visités sont en violet ;
-- le survol d'un lien fait se changer en petite icône de main le pointeur de la souris ;
-- les liens ayant reçus la focalisation ont un contour autour d'eux : vous devriez pouvoir vous focaliser sur les liens de cette page avec le clavier en appuyant sur la touche
+- Les liens sont soulignés ;
+- Les liens non visités sont bleus ;
+- Les liens visités sont en violet ;
+- Le survol d'un lien fait se changer en petite icône de main le pointeur de la souris ;
+- Les liens ayant reçus la focalisation ont un contour autour d'eux : vous devriez pouvoir vous focaliser sur les liens de cette page avec le clavier en appuyant sur la touche
 
   <kbd>Tab</kbd>
 
@@ -108,9 +95,9 @@ Vous remarquerez quelques petites choses en explorant les styles par défaut :
 
   pour que cela fonctionne) ;
 
-- les liens actifs sont rouges (essayez de maintenir le bouton de la souris enfoncé sur le lien lorsque vous cliquez dessus).
+- Les liens actifs sont rouges (essayez de maintenir le bouton de la souris enfoncé sur le lien lorsque vous cliquez dessus).
 
-De façon assez intéressante, ces styles par défaut sont pratiquement les mêmes que ce qu'ils étaient aux premiers temps des navigateurs, au milieu des années 1990. C'est parce que les utilisateurs connaissent - et s'attendent à - ce comportement ; si les liens étaient mis en forme différemment, cela créerait beaucoup de confusion. Cela ne signifie pas que vous ne deviez pas du tout mettre en forme les liens, mais simplement que vous ne devriez pas vous éloigner trop du comportement attendu. Vous devriez au moins :
+De façon assez intéressante, ces styles par défaut sont pratiquement les mêmes que ce qu'ils étaient aux premiers temps des navigateurs, au milieu des années 1990. C'est parce que les utilisateurs connaissent — et s'attendent à — ce comportement ; si les liens étaient mis en forme différemment, cela créerait beaucoup de confusion. Cela ne signifie pas que vous ne deviez pas du tout mettre en forme les liens, mais simplement que vous ne devriez pas vous éloigner trop du comportement attendu. Vous devriez au moins :
 
 - utiliser le soulignement pour les liens, mais pas pour d'autres choses ; si vous ne voulez pas souligner les liens, au moins les mettre en évidence d'une autre manière ;
 - les faire réagir d'une manière ou d'une autre lorsqu'ils sont survolés ou lorsqu'ils ont reçu la focalisation, et d'une manière légèrement différente lorsqu'ils sont activés.
@@ -118,10 +105,10 @@ De façon assez intéressante, ces styles par défaut sont pratiquement les mêm
 Les styles par défaut peuvent être désactivés/modifiés en utilisant les propriétés CSS suivantes :
 
 - {{cssxref ("color")}} pour la couleur du texte ;
-- {{cssxref ("cursor")}} pour le style du pointeur de la souris - vous ne devriez pas le désactiver, à moins d'avoir une très bonne raison ;
+- {{cssxref ("cursor")}} pour le style du pointeur de la souris — vous ne devriez pas le désactiver, à moins d'avoir une très bonne raison ;
 - {{cssxref ("outline")}} pour le contour du texte (un contour est similaire à une bordure, la seule différence étant que la bordure occupe de l'espace dans la boîte et non un contour, elle se trouve juste au-dessus du Contexte) ; le contour est une aide utile à l'accessibilité, alors réfléchissez bien avant de la désactiver ; vous devriez au moins dupliquer aussi les styles affectés à l'état link hover sur l'état de focalisation.
 
-> **Note :** vous n'êtes pas limité aux propriétés ci-dessus pour mettre en forme vos liens ; vous êtes libre d'utiliser les propriétés que vous aimez. Essayez seulement de ne pas devenir trop fou !
+> **Note :** Vous n'êtes pas limité aux propriétés ci-dessus pour mettre en forme vos liens ; vous êtes libre d'utiliser les propriétés que vous aimez. Essayez seulement de ne pas devenir trop fou !
 
 ### Mise en forme de quelques liens
 
@@ -212,19 +199,19 @@ Firefox</a>, <a href="#">Google Chrome</a>, et
 
 En mettant les deux ensemble, nous obtenons ce résultat :
 
-{{EmbedLiveSample('Mise_en_forme_de_quelques_liens', '100%', 150)}}
+{{EmbedLiveSample('', '100%', 150)}}
 
 Alors qu'avons-nous fait ici ? Cela semble certainement différent de la mise en forme par défaut, mais cela donne toujours une expérience suffisamment familière pour que les utilisateurs sachent ce qui se passe :
 
-- les deux premières règles ne sont pas très intéressantes pour cette discussion ;
-- la troisième règle utilise le sélecteur `a` pour se débarasser du soulignement de texte par défaut et du contour de focalisation (qui varie d'un navigateur à l'autre), et elle ajoute une petite quantité de remplissage à chaque lien ; tout ceci deviendra clair plus tard ;
-- ensuite, nous utilisons les sélecteurs `a:link` et `a:visited` pour définir deux variations de couleur sur les liens non visités et visités, afin qu'ils soient distincts ;
-- les deux règles suivantes utilisent `a:focus` et `a:hover` pour faire que les liens centrés et survolés aient des couleurs d'arrière-plan différentes, plus un soulignement afin que le lien se démarque encore davantage ; deux points à noter ici :
+- Les deux premières règles ne sont pas très intéressantes pour cette discussion ;
+- La troisième règle utilise le sélecteur `a` pour se débarasser du soulignement de texte par défaut et du contour de focalisation (qui varie d'un navigateur à l'autre), et elle ajoute une petite quantité de remplissage à chaque lien ; tout ceci deviendra clair plus tard ;
+- Ensuite, nous utilisons les sélecteurs `a:link` et `a:visited` pour définir deux variations de couleur sur les liens non visités et visités, afin qu'ils soient distincts ;
+- Les deux règles suivantes utilisent `a:focus` et `a:hover` pour faire que les liens centrés et survolés aient des couleurs d'arrière-plan différentes, plus un soulignement afin que le lien se démarque encore davantage ; deux points à noter ici :
 
-  - le soulignement a été créé en utilisant {{cssxref("border-bottom")}}, pas {{cssxref("text-decoration")}} ; certaines personnes préfèrent cela parce que le premier a de meilleures options de mise en forme que le second, et qu'il est tracé un peu plus bas, de sorte qu'il ne coupe pas les jambages du mot souligné (par exemple, les jambes du g et du y) ;
-  - la valeur {{cssxref("border-bottom")}} a été définie comme `1px solid`, sans couleur indiquée ; cela fait que la bordure adopte la même couleur que le texte de l'élément, ce qui est utile dans des cas comme celui-ci, où le texte a une couleur différente dans chaque cas ;
+  - Le soulignement a été créé en utilisant {{cssxref("border-bottom")}}, pas {{cssxref("text-decoration")}} ; certaines personnes préfèrent cela parce que le premier a de meilleures options de mise en forme que le second, et qu'il est tracé un peu plus bas, de sorte qu'il ne coupe pas les jambages du mot souligné (par exemple, les jambes du g et du y) ;
+  - La valeur {{cssxref("border-bottom")}} a été définie comme `1px solid`, sans couleur indiquée ; cela fait que la bordure adopte la même couleur que le texte de l'élément, ce qui est utile dans des cas comme celui-ci, où le texte a une couleur différente dans chaque cas ;
 
-- enfin, `a:active` est utilisé pour donner aux liens un schéma de couleurs inversé pendant qu'ils sont activés, afin de faire comprendre que quelque chose d'important est en train de se passer !
+- Enfin, `a:active` est utilisé pour donner aux liens un schéma de couleurs inversé pendant qu'ils sont activés, afin de faire comprendre que quelque chose d'important est en train de se passer !
 
 ### Apprentissage actif : mettez en forme vos propres liens
 
@@ -267,7 +254,7 @@ a:active {
   <h2>Zone de rendu</h2>
   <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Réinitialiser" style="margin: 10px 10px 0 0;">
+    <input id="reset" type="button" value="Réinitialiser" style="margin: 10px 10px 0 0;">
     <input id="solution" type="button" value="Voir la solution" style="margin: 10px 0 0 10px;">
   </div>
 </div>
@@ -292,9 +279,9 @@ function drawOutput() {
 }
 
 reset.addEventListener("click", function() {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
 solution.addEventListener("click", function() {
@@ -308,11 +295,11 @@ cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_mettez_en_forme_vos_propres_liens', 700, 800) }}
+{{ EmbedLiveSample('', 700, 800) }}
 
 ## Inclusion d'icônes dans des liens
 
-Une pratique courante consiste à inclure des icônes dans des liens pour fournir plus d'un indicateur concernant le type de contenu vers lequel le lien pointe. Regardons un exemple très simple qui ajoute une icône à des liens externes (les liens qui mènent à d'autres sites). Une telle icône ressemble généralement à une petite flèche pointant hors d'une boîte ; pour cet exemple, nous allons utiliser cet excellent exemple de icons8.com.
+Une pratique courante consiste à inclure des icônes dans des liens pour fournir plus d'un indicateur concernant le type de contenu vers lequel le lien pointe. Regardons un exemple très simple qui ajoute une icône à des liens externes (les liens qui mènent à d'autres sites). Une telle icône ressemble généralement à une petite flèche pointant hors d'une boîte ; pour cet exemple, nous allons utiliser [cet excellent exemple de icons8.com](https://icons8.com/web-app/741/external-link).
 
 Regardons un peu d'HTML et de CSS qui nous donneront l'effet que nous voulons. Tout d'abord, un peu d'HTML simple à mettre en forme :
 
@@ -357,25 +344,25 @@ a:active {
 }
 
 a[href*="http"] {
-  background: url('https://mdn.mozillademos.org/files/12982/external-link-52.png') no-repeat 100% 0;
+  background: url('external-link-52.png') no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
 }
 ```
 
-{{ EmbedLiveSample("Inclusion_d'icônes_dans_des_liens", '100%', 150) }}
+{{ EmbedLiveSample("", '100%', 150) }}
 
 Alors, qu'est-ce qui se passe ici ? Nous allons sauter le gros du CSS, du fait que c'est seulement la même information que celle que vous avez déjà regardée. La dernière règle est cependant intéressante : ici, nous insérons une image d'arrière-plan personnalisée sur les liens externes d'une manière similaire à celle dont nous avons traité les puces personnalisées sur les éléments de liste dans le dernier article ; cette fois, nous utilisons le raccourci {{cssxref("background")}} au lieu des propriétés individuelles. Nous définissons le chemin vers l'image que nous voulons insérer, nous spécifions `no-repeat` de façon à obtenir l'insertion d'une seule une copie, puis nous indiquons la position comme étant 100% de la distance à droite du contenu du texte, et 0 pixels à partir du haut.
 
-Nous utilisons également {{cssxref("background-size")}} pour indiquer à quelle taille nous voulons afficher l'image d'arrière-plan - il est utile d'avoir une icône plus grande et de la redimensionner comme nécessaire dans un but de conception web adaptative. Cela ne fonctionne cependant qu'avec IE 9 et ultérieur, donc si vous avez besoin de prendre en charge ces navigateurs plus anciens, il vous suffira de redimensionner l'image et de l'insérer telle quelle.
+Nous utilisons également {{cssxref("background-size")}} pour indiquer à quelle taille nous voulons afficher l'image d'arrière-plan — il est utile d'avoir une icône plus grande et de la redimensionner comme nécessaire dans un but de conception web adaptative. Cela ne fonctionne cependant qu'avec IE 9 et ultérieur, donc si vous avez besoin de prendre en charge ces navigateurs plus anciens, il vous suffira de redimensionner l'image et de l'insérer telle quelle.
 
 Enfin, nous avons mis un peu de {{cssxref("padding-right")}} sur les liens pour faire de la place afin que l'image d'arrière-plan se place à l'intérieur, de sorte que nous ne la faisions chevaucher le texte.
 
-Un dernier mot : comment avons-nous sélectionné uniquement les liens externes ? Eh bien, si vous écrivez vos liens HTML correctement, vous ne devriez utiliser des URL absolues que pour les liens externes : il est plus efficace d'utiliser des liens relatifs pour la redirection vers d'autres parties de votre propre site. Le texte "http" ne devrait donc apparaître que dans les liens externes, et nous pouvons le sélectionner avec un [sélecteur d'attribut](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Les_s%C3%A9lecteurs) : `a[href*="http]` sélectionne les éléments {{htmlelement("a")}}, mais seulement s'ils ont un attribut {{htmlattrxref ("href","a")}} ayant une valeur contenant "http" quelque part à l'intérieur.
+Un dernier mot : comment avons-nous sélectionné uniquement les liens externes ? Eh bien, si vous écrivez vos liens HTML correctement, vous ne devriez utiliser des URL absolues que pour les liens externes : il est plus efficace d'utiliser des liens relatifs pour la redirection vers d'autres parties de votre propre site. Le texte "http" ne devrait donc apparaître que dans les liens externes, et nous pouvons le sélectionner avec un [sélecteur d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors#sélecteurs_dattribut) : `a[href*="http]` sélectionne les éléments {{htmlelement("a")}}, mais seulement s'ils ont un attribut {{htmlattrxref ("href","a")}} ayant une valeur contenant "http" quelque part à l'intérieur.
 
 Alors voilà, essayez de revoir la section d'apprentissage actif ci-dessus et d'explorer cette nouvelle technique !
 
-> **Note :** ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/Apprendre/CSS/styliser_boites) et le [responsive web design](/fr/Apps/app_layout/responsive_design_building_blocks) ; ceux-ci sont expliqués par ailleurs.
+> **Note :** Ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/docs/Learn/CSS/Building_blocks) et le [design adaptif _(responsive web design)_](/fr/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) ; ceux-ci sont expliqués par ailleurs.
 
 ## Mise en forme de liens comme des boutons
 
@@ -387,7 +374,7 @@ D'abord, un peu d'HTML :
 
 ```html
 <ul>
-  <li><a href="#">Accueil</a></li><li><a href="#">Pizza</a></li><li><a href="#">Musique</a></li><li><a href="#">Wombats</a></li><li><a href="#">Finland<e/a></li>
+  <li><a href="#">Accueil</a></li><li><a href="#">Pizza</a></li><li><a href="#">Musique</a></li><li><a href="#">Wombats</a></li><li><a href="#">Finland</a></li>
 </ul>
 ```
 
@@ -409,18 +396,18 @@ li {
 }
 
 a {
-  outline: none;
+  outline: none;
   text-decoration: none;
-  display: inline-block;
-  width: 19.5%;
-  margin-right: 0.625%;
-  text-align: center;
-  line-height: 3;
-  color: black;
+  display: inline-block;
+  width: 19.5%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: black;
 }
 
 li:last-child a {
-  margin-right: 0;
+  margin-right: 0;
 }
 
 a:link, a:visited, a:focus {
@@ -439,31 +426,31 @@ a:active {
 
 Cela nous donne le résultat suivant :
 
-{{ EmbedLiveSample('Mise_en_forme_de_liens_comme_des_boutons', '100%', 100) }}
+{{ EmbedLiveSample('', '100%', 100) }}
 
 Expliquons ce qui se passe ici, en nous concentrant sur les parties les plus intéressantes :
 
-- notre deuxième règle supprime le {{cssxref("padding")}} par défaut de l'élément {{htmlelement ("ul")}}, et définit sa largeur de façon à couvrir 100% du conteneur externe (le {{htmlelement("body")}} dans ce cas) ;
-- par défaut, les éléments {{htmlelement("li")}} se présentent normalement sous forme de blocs (voir les types de boîtes CSS pour rappel), ce qui signifie qu'ils vont se trouver sur leurs propres lignes ; dans ce cas, nous créons une liste horizontale de liens ; pour cela, dans la troisième règle, nous mettons la propriété {{cssxref("display")}} à inline, ce qui fait que les éléments de la liste se trouvent tous sur la même ligne : ils se comportent maintenant comme des éléments inline ;
-- la quatrième règle, qui met en forme l'élément {{htmlelement("a")}}, est la plus compliquée ici ; passons-la en revue étape par étape :
+- Notre deuxième règle supprime le {{cssxref("padding")}} par défaut de l'élément {{htmlelement ("ul")}}, et définit sa largeur de façon à couvrir 100% du conteneur externe (le {{htmlelement("body")}} dans ce cas) ;
+- Par défaut, les éléments {{htmlelement("li")}} se présentent normalement sous forme de blocs (voir les types de boîtes CSS pour rappel), ce qui signifie qu'ils vont se trouver sur leurs propres lignes ; dans ce cas, nous créons une liste horizontale de liens ; pour cela, dans la troisième règle, nous mettons la propriété {{cssxref("display")}} à inline, ce qui fait que les éléments de la liste se trouvent tous sur la même ligne : ils se comportent maintenant comme des éléments inline ;
+- La quatrième règle, qui met en forme l'élément {{htmlelement("a")}}, est la plus compliquée ici ; passons-la en revue étape par étape :
 
-  - comme dans les exemples précédents, nous commençons par désactiver la valeur par défaut {{cssxref("text-decoration")}} et {{cssxref("outline")}} : nous ne voulons pas que ceux-ci gâchent notre présentation ;
-  - ensuite, nous mettons le {{cssxref ("display")}} à `inline-block` : les éléments {{htmlelement ("a")}} sont inline par défaut et, bien que nous ne voulions pas qu'ils s'étalent sur leurs propres lignes comme une valeur de `block` le ferait, nous voulons néanmoins être en mesure de les dimensionner : `inline-block` nous permet de le réaliser ;
-  - maintenant, passons au dimensionnement ; nous voulons remplir toute la largeur de l'{{htmlelement("ul")}}, laisser une petite marge entre chaque bouton (mais sans espace sur le bord droit), et nous avons 5 boutons pour accueillir tout cela, qui doit avoir la même taille ; pour ce faire, nous définissons la {{cssxref ("width")}} à 19,5%, et la {{cssxref ("margin-right")}} à 0,625% ; vous remarquerez que toute cette largeur s'élève à 100,625%, ce qui ferait que le dernier bouton déborde sur l'`<ul>` et passe à la ligne suivante ; cependant, nous le ramenons à 100%, en utilisant la règle suivante, qui sélectionne seulement le dernier `<a>` dans la liste, et en supprime la marge ; terminé !
-  - les trois dernières déclarations sont assez simples et ne sont principalement présentes qu'à des fins esthétiques ; nous centrons le texte à l'intérieur de chaque lien, nous définissons {{cssxref("line-height")}} à 3 pour donner un peu de hauteur aux boutons (ce qui a aussi l'avantage de centrer le texte verticalement) et nous définissons la couleur du texte à noir.
+  - Comme dans les exemples précédents, nous commençons par désactiver la valeur par défaut {{cssxref("text-decoration")}} et {{cssxref("outline")}} : nous ne voulons pas que ceux-ci gâchent notre présentation ;
+  - Ensuite, nous mettons le {{cssxref ("display")}} à `inline-block` : les éléments {{htmlelement ("a")}} sont inline par défaut et, bien que nous ne voulions pas qu'ils s'étalent sur leurs propres lignes comme une valeur de `block` le ferait, nous voulons néanmoins être en mesure de les dimensionner : `inline-block` nous permet de le réaliser ;
+  - Maintenant, passons au dimensionnement ; nous voulons remplir toute la largeur de l'{{htmlelement("ul")}}, laisser une petite marge entre chaque bouton (mais sans espace sur le bord droit), et nous avons 5 boutons pour accueillir tout cela, qui doit avoir la même taille ; pour ce faire, nous définissons la {{cssxref ("width")}} à 19,5%, et la {{cssxref ("margin-right")}} à 0,625% ; vous remarquerez que toute cette largeur s'élève à 100,625%, ce qui ferait que le dernier bouton déborde sur l'`<ul>` et passe à la ligne suivante ; cependant, nous le ramenons à 100%, en utilisant la règle suivante, qui sélectionne seulement le dernier `<a>` dans la liste, et en supprime la marge ; terminé !
+  - Les trois dernières déclarations sont assez simples et ne sont principalement présentes qu'à des fins esthétiques ; nous centrons le texte à l'intérieur de chaque lien, nous définissons {{cssxref("line-height")}} à 3 pour donner un peu de hauteur aux boutons (ce qui a aussi l'avantage de centrer le texte verticalement) et nous définissons la couleur du texte à noir.
 
-> **Note :** vous avez peut-être remarqué que les éléments de la liste dans le HTML sont tous placés sur la même ligne ; cela est dû au fait que les espaces/sauts de ligne entre les éléments inline block créent des espaces sur la page, tout comme des espaces entre les mots, et que de tels espaces casseraient la disposition de notre menu de navigation horizontale ; nous avons donc supprimé les espaces ; vous pouvez trouver plus d'informations (et de solutions) à propos de ce problème sur [Fighting the space between inline block elements](https://css-tricks.com/fighting-the-space-between-inline-block-elements/).
+> **Note :** Vous avez peut-être remarqué que les éléments de la liste dans le HTML sont tous placés sur la même ligne ; cela est dû au fait que les espaces/sauts de ligne entre les éléments inline block créent des espaces sur la page, tout comme des espaces entre les mots, et que de tels espaces casseraient la disposition de notre menu de navigation horizontale ; nous avons donc supprimé les espaces ; vous pouvez trouver plus d'informations (et de solutions) à propos de ce problème sur [Fighting the space between inline block elements](https://css-tricks.com/fighting-the-space-between-inline-block-elements/).
 
 ## Résumé
 
-Nous espérons que cet article vous a fourni tout ce que vous aviez besoin de savoir sur les liens - pour l'instant ! L'article final de notre module de Mise en forme de texte détaille comment utiliser des polices personnalisées (ou polices web, comme elles sont mieux connues) sur vos sites web.
+Nous espérons que cet article vous a fourni tout ce que vous aviez besoin de savoir sur les liens — pour l'instant ! L'article final de notre module de Mise en forme de texte détaille comment utiliser des polices personnalisées (ou polices web, comme elles sont mieux connues) sur vos sites web.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 ## Dans ce module
 
-- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte)
+- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
 - [Style de listes](/fr/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens)
+- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Styling_links)
 - [Polices de caractères web](/fr/docs/Learn/CSS/Styling_text/Web_fonts)
 - [Composition d'une page d'accueil d'une école communale](/fr/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

@@ -13,7 +13,7 @@ translation_of: MDN/Guidelines/Code_guidelines/JavaScript
 
 Les directives suivantes couvrent la manière d'écrire le JavaScript pour les exemples de code MDN.
 
-Ce qui suit est un ensemble assez simple de directives JavaScript. Nous pourrions aller beaucoup plus en profondeur sur ce sujet, mais nous voulons essentiellement fournir des directives simples pour écrire des exemples concis qui seront compréhensibles par le plus grand nombre de personnes possible, plutôt que des directives détaillées pour écrire des applications web complexes. Si vous voulez quelque chose qui entre dans plus de détails, nous vous recommandons le [guide stylistique JavaScript d'AirBnB](https://github.com/airbnb/javascript), qui est généralement compatible avec nos directives.
+Ce qui suit est un ensemble assez simple de directives JavaScript. Nous pourrions aller beaucoup plus en profondeur sur ce sujet, mais nous voulons essentiellement fournir des directives simples pour écrire des exemples concis qui seront compréhensibles par le plus grand nombre de personnes possible, plutôt que des directives détaillées pour écrire des applications web complexes. Si vous voulez quelque chose qui entre plus dans le détail, nous vous recommandons le [guide stylistique JavaScript d'AirBnB](https://github.com/airbnb/javascript), qui est généralement compatible avec nos directives.
 
 ## Dans cet article
 

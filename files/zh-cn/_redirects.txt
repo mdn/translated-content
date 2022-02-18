@@ -1096,6 +1096,8 @@
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/在网页中添加矢量图形	/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 /zh-CN/docs/Learn/JavaScript/First_steps/变量	/zh-CN/docs/Learn/JavaScript/First_steps/Variables
 /zh-CN/docs/Learn/JavaScript/First_steps/第一点	/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash
+/zh-CN/docs/Learn/JavaScript/Objects/Inheritance	/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS	/zh-CN/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /zh-CN/docs/Learn/JavaScript/Objects/向“弹跳球”演示程序添加新功能	/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features
 /zh-CN/docs/Learn/JavaScript/Objects/测试你的技能:面向对象的Javascript	/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
 /zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍	/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
@@ -1213,9 +1215,10 @@
 /zh-CN/docs/WOFF	/zh-CN/docs/Web/Guide/WOFF
 /zh-CN/docs/Web-based_protocol_handlers	/zh-CN/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /zh-CN/docs/Web/API/APIWwindow.sidebar	/zh-CN/docs/Web/API/Window/sidebar
+/zh-CN/docs/Web/API/AbortSignal/onabort	/zh-CN/docs/Web/API/AbortSignal/abort_event
 /zh-CN/docs/Web/API/AmbientLightSensor/reading	/zh-CN/docs/Web/API/AmbientLightSensor/illuminance
+/zh-CN/docs/Web/API/Animation/oncancel	/zh-CN/docs/Web/API/Animation/cancel_event
 /zh-CN/docs/Web/API/ArrayBuffer	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-/zh-CN/docs/Web/API/ArrayBufferView	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /zh-CN/docs/Web/API/AudioContext/createAnalyser	/zh-CN/docs/Web/API/BaseAudioContext/createAnalyser
 /zh-CN/docs/Web/API/AudioContext/createBiquadFilter	/zh-CN/docs/Web/API/BaseAudioContext/createBiquadFilter
 /zh-CN/docs/Web/API/AudioContext/createBuffer	/zh-CN/docs/Web/API/BaseAudioContext/createBuffer
@@ -1237,6 +1240,8 @@
 /zh-CN/docs/Web/API/Blob.size	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/Blob.slice	/zh-CN/docs/Web/API/Blob/slice
 /zh-CN/docs/Web/API/Blob.type	/zh-CN/docs/Web/API/Blob/type
+/zh-CN/docs/Web/API/BroadcastChannel/onmessage	/zh-CN/docs/conflicting/Web/API/BroadcastChannel/message_event
+/zh-CN/docs/Web/API/BroadcastChannel/onmessageerror	/zh-CN/docs/conflicting/Web/API/BroadcastChannel/messageerror_event
 /zh-CN/docs/Web/API/ByteString	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /zh-CN/docs/Web/API/CSSStyleSheet.insertRule	/zh-CN/docs/Web/API/CSSStyleSheet/insertRule
 /zh-CN/docs/Web/API/CSS分页规则	/zh-CN/docs/Web/API/CSSPageRule
@@ -1262,6 +1267,8 @@
 /zh-CN/docs/Web/API/Document/mozFullScreen	/zh-CN/docs/Web/API/Document/fullscreen
 /zh-CN/docs/Web/API/Document/mozFullScreenElement	/zh-CN/docs/Web/API/Document/fullscreenElement
 /zh-CN/docs/Web/API/Document/mozFullScreenEnabled	/zh-CN/docs/Web/API/Document/fullscreenEnabled
+/zh-CN/docs/Web/API/Document/onfullscreenchange	/zh-CN/docs/conflicting/Web/API/Document/fullscreenchange_event
+/zh-CN/docs/Web/API/Document/onfullscreenerror	/zh-CN/docs/Web/API/Document/fullscreenerror_event
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /zh-CN/docs/Web/API/Document/rouchmove_event	/zh-CN/docs/Web/API/Document/touchmove_event
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/activeElement	/zh-CN/docs/Web/API/Document/activeElement
@@ -1310,6 +1317,8 @@
 /zh-CN/docs/Web/API/Element/onbeforescriptexecute	/zh-CN/docs/Web/API/Document/onbeforescriptexecute
 /zh-CN/docs/Web/API/Element/oncopy	/zh-CN/docs/Web/API/HTMLElement/oncopy
 /zh-CN/docs/Web/API/Element/oncut	/zh-CN/docs/Web/API/HTMLElement/oncut
+/zh-CN/docs/Web/API/Element/onfullscreenchange	/zh-CN/docs/Web/API/Element/fullscreenchange_event
+/zh-CN/docs/Web/API/Element/onfullscreenerror	/zh-CN/docs/Web/API/Element/fullscreenerror_event
 /zh-CN/docs/Web/API/Element/onpaste	/zh-CN/docs/Web/API/HTMLElement/onpaste
 /zh-CN/docs/Web/API/Element/removeAttributre	/zh-CN/docs/Web/API/Element/removeAttribute
 /zh-CN/docs/Web/API/Event/CustomEvent	/zh-CN/docs/Web/API/CustomEvent
@@ -1354,6 +1363,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers.onscroll	/zh-CN/docs/Web/API/GlobalEventHandlers/onscroll
 /zh-CN/docs/Web/API/GlobalEventHandlers.onselect	/zh-CN/docs/Web/API/GlobalEventHandlers/onselect
 /zh-CN/docs/Web/API/GlobalEventHandlers.onsubmit	/zh-CN/docs/Web/API/GlobalEventHandlers/onsubmit
+/zh-CN/docs/Web/API/GlobalEventHandlers/oncuechange	/zh-CN/docs/Web/API/TextTrack/cuechange_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/动画效果	/zh-CN/docs/Web/API/GlobalEventHandlers/onanimationend
 /zh-CN/docs/Web/API/GlobalEventHandlers/时长改变	/zh-CN/docs/Web/API/GlobalEventHandlers/ondurationchange
 /zh-CN/docs/Web/API/GlobalFetch	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope
@@ -1384,6 +1394,7 @@
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/conflicting/Web/API/Headers/get
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
+/zh-CN/docs/Web/API/IDBDatabase/onversionchange	/zh-CN/docs/Web/API/IDBDatabase/versionchange_event
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open
 /zh-CN/docs/Web/API/IDBObjectStore.openCursor	/zh-CN/docs/Web/API/IDBObjectStore/openCursor
 /zh-CN/docs/Web/API/Index	/zh-CN/docs/conflicting/Web/API
@@ -1497,6 +1508,7 @@
 /zh-CN/docs/Web/API/Touch.screenX	/zh-CN/docs/Web/API/Touch/screenX
 /zh-CN/docs/Web/API/Touch.screenY	/zh-CN/docs/Web/API/Touch/screenY
 /zh-CN/docs/Web/API/TouchEvent.changedTouches	/zh-CN/docs/Web/API/TouchEvent/changedTouches
+/zh-CN/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/zh-CN/docs/conflicting/Web/API/Pointer_events
 /zh-CN/docs/Web/API/UIEvent/pageX	/zh-CN/docs/conflicting/Web/API/MouseEvent/pageX
 /zh-CN/docs/Web/API/UIEvent/pageY	/zh-CN/docs/conflicting/Web/API/MouseEvent/pageY
 /zh-CN/docs/Web/API/UIEvent/视图	/zh-CN/docs/Web/API/UIEvent/view
@@ -1512,9 +1524,14 @@
 /zh-CN/docs/Web/API/URLUtils/search	/zh-CN/docs/Web/API/HTMLAnchorElement/search
 /zh-CN/docs/Web/API/URLUtils/toString	/zh-CN/docs/Web/API/HTMLAnchorElement/toString
 /zh-CN/docs/Web/API/URLUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
+/zh-CN/docs/Web/API/VisualViewport/onscroll	/zh-CN/docs/Web/API/VisualViewport/scroll_event
 /zh-CN/docs/Web/API/WebGLRenderingContext/多边形偏移(polygonOffset)	/zh-CN/docs/Web/API/WebGLRenderingContext/polygonOffset
 /zh-CN/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /zh-CN/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
+/zh-CN/docs/Web/API/WebSocket/onclose	/zh-CN/docs/Web/API/WebSocket/close_event
+/zh-CN/docs/Web/API/WebSocket/onerror	/zh-CN/docs/conflicting/Web/API/WebSocket/error_event
+/zh-CN/docs/Web/API/WebSocket/onmessage	/zh-CN/docs/conflicting/Web/API/WebSocket/message_event
+/zh-CN/docs/Web/API/WebSocket/onopen	/zh-CN/docs/Web/API/WebSocket/open_event
 /zh-CN/docs/Web/API/WebSocket/二进制类型	/zh-CN/docs/Web/API/WebSocket/binaryType
 /zh-CN/docs/Web/API/WebVR_API/WebVR_concepts	/zh-CN/docs/Web/API/WebVR_API/Concepts
 /zh-CN/docs/Web/API/Web_Audio_API/基于Web_Audio_API实现的音频可视化效果	/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
@@ -1578,6 +1595,8 @@
 /zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/conflicting/Web/API/Window
 /zh-CN/docs/Web/API/Window/mozAnimationStartTIme	/zh-CN/docs/Web/API/Animation/startTime
 /zh-CN/docs/Web/API/Window/onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload
+/zh-CN/docs/Web/API/Window/ongamepadconnected	/zh-CN/docs/conflicting/Web/API/Window/gamepadconnected_event
+/zh-CN/docs/Web/API/Window/ongamepaddisconnected	/zh-CN/docs/Web/API/Window/gamepaddisconnected_event
 /zh-CN/docs/Web/API/Window/onhashchange	/zh-CN/docs/Web/API/WindowEventHandlers/onhashchange
 /zh-CN/docs/Web/API/Window/onpopstate	/zh-CN/docs/Web/API/WindowEventHandlers/onpopstate
 /zh-CN/docs/Web/API/Window/onresize	/zh-CN/docs/Web/API/GlobalEventHandlers/onresize
@@ -1607,6 +1626,12 @@
 /zh-CN/docs/Web/API/WindowTimers/clearTimeout	/zh-CN/docs/Web/API/clearTimeout
 /zh-CN/docs/Web/API/XMLDocument.load	/zh-CN/docs/Web/API/XMLDocument/load
 /zh-CN/docs/Web/API/XMLHttpRequest/FormData	/zh-CN/docs/Web/API/FormData
+/zh-CN/docs/Web/API/XMLHttpRequest/onreadystatechange	/zh-CN/docs/Web/API/XMLHttpRequest/readystatechange_event
+/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onabort	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/abort_event
+/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onerror	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/error_event
+/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onload	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/load_event
+/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onloadstart	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/loadstart_event
+/zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onprogress	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/progress_event
 /zh-CN/docs/Web/API/console.dir	/zh-CN/docs/Web/API/Console/dir
 /zh-CN/docs/Web/API/console.group	/zh-CN/docs/Web/API/Console/group
 /zh-CN/docs/Web/API/console.groupCollapsed	/zh-CN/docs/Web/API/Console/groupCollapsed

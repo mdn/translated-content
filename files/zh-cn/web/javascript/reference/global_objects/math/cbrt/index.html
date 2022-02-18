@@ -5,15 +5,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ---
 <div>{{JSRef("Global_Objects", "Math")}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><code><strong>Math.cbrt()</strong></code> 函数返回任意数字的立方根.</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">Math.cbrt(<em>x</em>)</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>x</code></dt>
@@ -28,15 +28,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 
 
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>该方法为Math的静态方法,因此请直接通过Math.cbrt()方式调用.</p>
 
 <p>而不是作为您创建的Math对象的方法(Math不是构造函数)。</p>
 
-<p><span style="font-family: 'Courier New','Andale Mono',monospace; font-weight: inherit; line-height: normal;">cbrt 是 "cube root" 的缩写, 意思是立方根.</span></p>
+<p>cbrt 是 "cube root" 的缩写, 意思是立方根.</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <h3 id="使用_Math.cbrt">使用 Math.cbrt()</h3>
 
@@ -50,11 +50,11 @@ Math.cbrt(Infinity); // Infinity
 Math.cbrt(null); // 0
 Math.cbrt(2);  // 1.2599210498948734</pre>
 
-<h2 id="Polyfill"><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Polyfill</span></font></h2>
+<h2 id="Polyfill">Polyfill</h2>
 
 <p>为了与旧版浏览器兼容, 可使用下方函数模拟cbrt():</p>
 
-<pre class="brush: js" dir="rtl">if (!Math.cbrt) {
+<pre class="brush: js">if (!Math.cbrt) {
   Math.cbrt = function(x) {
     var y = Math.pow(Math.abs(x), 1/3);
     return x &lt; 0 ? -y : y;
@@ -80,57 +80,7 @@ Math.cbrt(2);  // 1.2599210498948734</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("25")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("25")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-
+{{Compat}}
 
 <h2 id="另请参见">另请参见</h2>
 

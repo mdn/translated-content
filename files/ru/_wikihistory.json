@@ -1272,6 +1272,12 @@
       "boxa6"
     ]
   },
+  "Glossary/Plugin": {
+    "modified": "2019-08-01T03:21:45.901Z",
+    "contributors": [
+      "art-gur"
+    ]
+  },
   "Glossary/Polymorphism": {
     "modified": "2019-10-14T05:46:10.620Z",
     "contributors": [
@@ -3576,7 +3582,7 @@
       "superpuper32"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-10-17T04:55:20.992Z",
     "contributors": [
       "raylyanway",
@@ -3598,27 +3604,6 @@
       "boxa6",
       "Lirikklimov",
       "slychai85"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-11-28T15:15:40.063Z",
-    "contributors": [
-      "Tartalon",
-      "Viatcheslav-Malahov",
-      "wind-of",
-      "Detrimon",
-      "BadLame",
-      "ConstantineZz",
-      "ellegre",
-      "injashkin",
-      "NooNoo1337",
-      "Roman-Halenko",
-      "sergeomak",
-      "Elena_Petrenko",
-      "uandrew",
-      "slychai85",
-      "superpuper32",
-      "GennadyGlushenkov"
     ]
   },
   "Learn/JavaScript/Objects/Object_building_practice": {
@@ -4946,12 +4931,6 @@
       "art-gur"
     ]
   },
-  "Plugins/Roadmap": {
-    "modified": "2019-08-01T03:21:45.901Z",
-    "contributors": [
-      "art-gur"
-    ]
-  },
   "Tools": {
     "modified": "2020-12-14T08:21:24.659Z",
     "contributors": [
@@ -5516,12 +5495,6 @@
   },
   "Web/API/AbortSignal/aborted": {
     "modified": "2020-10-15T22:16:51.730Z",
-    "contributors": [
-      "VerZsuT"
-    ]
-  },
-  "Web/API/AbortSignal/onabort": {
-    "modified": "2020-10-15T22:16:51.482Z",
     "contributors": [
       "VerZsuT"
     ]
@@ -10477,12 +10450,6 @@
       "surrsoft"
     ]
   },
-  "Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent": {
-    "modified": "2020-08-27T17:02:59.997Z",
-    "contributors": [
-      "hisbvdis"
-    ]
-  },
   "Web/API/Touch_events/Using_Touch_Events": {
     "modified": "2020-09-03T17:23:38.278Z",
     "contributors": [
@@ -10541,20 +10508,20 @@
       "Kami-san"
     ]
   },
-  "Web/API/USB/getDevices": {
-    "modified": "2020-10-15T22:31:15.293Z",
-    "contributors": [
-      "Kami-san"
-    ]
-  },
-  "Web/API/USB/onconnect": {
+  "Web/API/USB/connect_event": {
     "modified": "2020-10-15T22:31:15.839Z",
     "contributors": [
       "Kami-san"
     ]
   },
-  "Web/API/USB/ondisconnect": {
+  "Web/API/USB/disconnect_event": {
     "modified": "2020-10-15T22:31:11.552Z",
+    "contributors": [
+      "Kami-san"
+    ]
+  },
+  "Web/API/USB/getDevices": {
+    "modified": "2020-10-15T22:31:15.293Z",
     "contributors": [
       "Kami-san"
     ]
@@ -11354,18 +11321,6 @@
       "timur-gilauri"
     ]
   },
-  "Web/API/Window/ongamepadconnected": {
-    "modified": "2020-11-17T12:43:15.635Z",
-    "contributors": [
-      "venanen"
-    ]
-  },
-  "Web/API/Window/ongamepaddisconnected": {
-    "modified": "2020-11-17T12:45:18.585Z",
-    "contributors": [
-      "venanen"
-    ]
-  },
   "Web/API/Window/onpaint": {
     "modified": "2019-03-23T22:08:47.903Z",
     "contributors": [
@@ -11754,12 +11709,6 @@
       "forestbird"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2019-03-23T22:31:10.101Z",
-    "contributors": [
-      "fider"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T22:01:52.733Z",
     "contributors": [
@@ -11775,6 +11724,12 @@
     "contributors": [
       "ZaWertun",
       "sollerias",
+      "fider"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2019-03-23T22:31:10.101Z",
+    "contributors": [
       "fider"
     ]
   },
@@ -24045,6 +24000,27 @@
       "iegik"
     ]
   },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-11-28T15:15:40.063Z",
+    "contributors": [
+      "Tartalon",
+      "Viatcheslav-Malahov",
+      "wind-of",
+      "Detrimon",
+      "BadLame",
+      "ConstantineZz",
+      "ellegre",
+      "injashkin",
+      "NooNoo1337",
+      "Roman-Halenko",
+      "sergeomak",
+      "Elena_Petrenko",
+      "uandrew",
+      "slychai85",
+      "superpuper32",
+      "GennadyGlushenkov"
+    ]
+  },
   "conflicting/MDN/Contribute": {
     "modified": "2020-10-30T09:21:05.942Z",
     "contributors": [
@@ -24092,6 +24068,12 @@
       "wbamberg",
       "fscholz",
       "Cyemka"
+    ]
+  },
+  "conflicting/Web/API/AbortSignal/abort_event": {
+    "modified": "2020-10-15T22:16:51.482Z",
+    "contributors": [
+      "VerZsuT"
     ]
   },
   "conflicting/Web/API/Canvas_API/A_basic_ray-caster": {
@@ -24197,6 +24179,12 @@
       "AlexAlex"
     ]
   },
+  "conflicting/Web/API/Pointer_events": {
+    "modified": "2020-08-27T17:02:59.997Z",
+    "contributors": [
+      "hisbvdis"
+    ]
+  },
   "conflicting/Web/API/Push_API": {
     "modified": "2019-03-23T22:33:26.535Z",
     "contributors": [
@@ -24239,6 +24227,18 @@
     "contributors": [
       "Steln",
       "akhabibullina"
+    ]
+  },
+  "conflicting/Web/API/Window/gamepadconnected_event": {
+    "modified": "2020-11-17T12:43:15.635Z",
+    "contributors": [
+      "venanen"
+    ]
+  },
+  "conflicting/Web/API/Window/gamepaddisconnected_event": {
+    "modified": "2020-11-17T12:45:18.585Z",
+    "contributors": [
+      "venanen"
     ]
   },
   "conflicting/Web/API/Window/localStorage": {

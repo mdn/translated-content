@@ -1,28 +1,29 @@
 ---
 title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d()
-tags:
-  - CSS
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/matrix3d()
+browser-compat: css.types.transform-function.matrix3d
 ---
 {{CSSRef}}
 
-La fonction **`matrix3d()`** décrit une transformation en trois dimensions sous la forme d'une matrice homogène (4x4). Les 16 paramètres passés à la fonction sont listés par ligne puis par colonne. Le résultat de cette fonction est une valeur de type {{cssxref("&lt;transform-function&gt;")}}.
+La fonction **`matrix3d()`** décrit une transformation en trois dimensions sous la forme d'une matrice homogène (4x4). Les 16 paramètres passés à la fonction sont listés par ligne puis par colonne. Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
 ## Syntaxe
 
-    matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
+La fonction `matrix3d()` s'utilise avec 16 valeurs qui sont décrites dans l'ordre des colonnes.
+
+```css
+matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
+```
 
 ### Valeurs
 
 - _a1_ _b1_ _c1_ _d1_ _a2_ _b2_ _c2_ _d2_ _a3_ _b3_ _c3_ _d3_ _d4_
-  - : Des valeurs de type {{cssxref("&lt;number&gt;")}} qui sont les coefficients de la matrice définissant la transformation linéaire.
+  - : Des valeurs de type [`<number>`](/fr/docs/Web/CSS/number) qui sont les coefficients de la matrice définissant la transformation linéaire.
 - `a4` `b4 c4`
-  - : Les coefficients de type {{cssxref("&lt;number&gt;")}} qui définissent la translation à appliquer.
+  - : Les coefficients de type [`<number>`](/fr/docs/Web/CSS/number) qui définissent la translation à appliquer.
 
-> **Note :** Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs {{cssxref("&lt;length&gt;")}} pour les coefficients `a4`, `b4` et `c4`.
+> **Note :** Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/length) pour les coefficients `a4`, `b4` et `c4`.
 
 <table class="standard-table">
   <thead>
@@ -176,16 +177,14 @@ body {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS Transforms 2", "#funcdef-matrix3d", "matrix3d()")}} | {{Spec2("CSS Transforms 2")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
 - [Comprendre les matrices de transformations CSS (en anglais)](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

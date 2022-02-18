@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Errors/Cyclic_object_value
 
 <h2 id="提示信息">提示信息</h2>
 
-<pre class="notranslate">TypeError: cyclic object value (Firefox)
+<pre>TypeError: cyclic object value (Firefox)
 TypeError: Converting circular structure to JSON (Chrome and Opera)
 TypeError: Circular reference in value argument not supported (Edge)</pre>
 
@@ -34,7 +34,7 @@ TypeError: Circular reference in value argument not supported (Edge)</pre>
 
 <p>在如下循环结构中：</p>
 
-<pre class="brush: js notranslate">var a = {};
+<pre class="brush: js">var a = {};
 var b = {};
 a.child = b;
 b.child = a;
@@ -42,7 +42,7 @@ b.child = a;
 
 <p>{{jsxref("JSON.stringify()")}} 将会报错</p>
 
-<pre class="brush: js example-bad notranslate">JSON.stringify(a);
+<pre class="brush: js example-bad">JSON.stringify(a);
 // TypeError: cyclic object value
 </pre>
 
@@ -52,7 +52,7 @@ b.child = a;
 
 <p>注意：以下代码并不会保存循环引用的值。</p>
 
-<pre class="brush: js example-good notranslate">var seen = [];
+<pre class="brush: js example-good">var seen = [];
 
 var replacer = function(key, value) {
   if (typeof value === "object" &amp;&amp; value !== null) {

@@ -1,28 +1,16 @@
 ---
 title: Gecko
 slug: Glossary/Gecko
-tags:
-  - Firefox OS
-  - Gecko
-  - Glossaire
-  - Infrastructure
-  - Intro
-  - Mozilla
 translation_of: Glossary/Gecko
 original_slug: Glossaire/Gecko
 ---
-**Gecko** est le moteur de rendu développé par le Projet Mozilla et utilisé dans beaucoup d'applications/appareils, dont {{glossary("Mozilla Firefox","Firefox")}} et {{glossary("Firefox OS")}}.
+**Gecko** est le moteur de rendu développé par Mozilla et utilisé dans beaucoup d'applications/appareils, dont [Firefox](/fr/docs/Glossary/Mozilla_Firefox).
 
-Les {{glossary("navigateur","navigateurs")}} Web ont besoin d'un logiciel appelé moteur de rendu pour interpréter le {{glossary("HTML")}}, les {{glossary("CSS")}}, {{glossary("JavaScript")}}, et les contenus embarqués (telles que les images) et tout dessiner sur votre écran. À côté de ça, Gecko garantit que les {{glossary("API","APIs")}} associées fonctionnent correctement sur tous les systèmes d'exploitation que Gecko supporte, et que les APIs appropriées ne sont exposées qu'aux cibles supportées concernées. Cela signifie que Gecko intègre, entre autres choses, pile réseau, couche graphique, moteur de rendu, une machine virtuelle JavaScript, et des couches de portabilité.
+Les [navigateurs](/fr/docs/Glossary/Browser) ont besoin d'un logiciel appelé moteur de rendu pour interpréter le [HTML](/fr/docs/Glossary/HTML), les feuilles de style [CSS](/fr/docs/Glossary/CSS), et les contenus embarqués (tels que les images) pour ensuite tout afficher sur votre écran. À côté de ça, Gecko garantit que les [API](/fr/docs/Glossary/API) associées fonctionnent correctement sur l'ensemble des systèmes d'exploitation pris en charge par Gecko, et que les API appropriées ne sont exposées qu'aux cibles supportées concernées. Cela signifie que Gecko intègre, entre autres choses, une pile réseau, une couche graphique, un moteur de rendu, une machine virtuelle JavaScript, et des couches de portabilité.
 
-Comme toutes les applications Firefox OS sont des applications Web, Firefox OS utilise aussi Gecko comme moteur d'exécution pour les applications.
+## Voir aussi
 
-## Pour en savoir plus
-
-### Culture générale
-
-- {{interwiki("wikipedia", "Gecko (moteur de rendu)", "Gecko")}} sur Wikipédia
-
-### Référence technique
-
-- [La documentation Gecko sur MDN](/fr/docs/Gecko)
+- [Gecko sur Wikipédia](https://fr.wikipedia.org/wiki/Gecko_(moteur_de_rendu))
+- Les autres moteurs de rendu existants&nbsp;:
+  - [Blink](/fr/docs/Glossary/Blink) utilisé pour Chromium, Chrome, Edge
+  - [WebKit](/fr/docs/Glossary/WebKit) utilisé pour Safari

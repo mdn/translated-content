@@ -23,9 +23,9 @@ var paramRef = param.setTargetAtTime(target, startTime, timeConstant);
 ### 매개변수
 
 - target
-  - : 주어진 시작 시간에 매개변수가 변화를 시작할 값.
+  - : 주어진 시작 시간에 파라미터가 변화를 시작할 값.
 - startTime
-  - : {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}과 같은 시간 좌표계에서 지수적 변화가 시작될 시간. 만약 이 값이 `AudioContext.currentTime` 보다 작거나 같다면, 매개변수는 즉시 변화를 시작할 것입니다.
+  - : {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}과 같은 시간 좌표계에서 지수적 변화가 시작될 시간. 만약 이 값이 `AudioContext.currentTime` 보다 작거나 같다면, 파라미터는 즉시 변화를 시작할 것입니다.
 - timeConstant
   - : target 값을 향한 지수적 접근의 시간 상수 값 (초 단위로 주어짐). 이 값이 클수록, 변화는 더 느려질 것입니다.
 

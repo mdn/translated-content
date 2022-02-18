@@ -11,7 +11,7 @@ Si vous avez déjà [compilé un module depuis un autre langage en utilisant de
 
 ## Quelques exemples simples
 
-Parcourons quelques exemples illustrant l'utilisation de l'API Webassembly Javascript, et en particulier la manière dont elle peut être utilisé pour charger un module wasm au sein d'une page web.
+Parcourons quelques exemples illustrant l'utilisation de l'API Webassembly JavaScript, et en particulier la manière dont elle peut être utilisé pour charger un module wasm au sein d'une page web.
 
 > **Note :** Vous pouvez trouver des exemples de code dans notre repo GitHub  [webassembly-examples](https://github.com/mdn/webassembly-examples).
 
@@ -44,16 +44,16 @@ Parcourons quelques exemples illustrant l'utilisation de l'API Webassembly Javas
 
 Il est dorénavant possible dans Firefox 58 de compiler et instancier les modules Webassembly directement à partir des ressources initiales. Il est nécessaire dans ce cas d'utiliser les méthodes {{jsxref("WebAssembly.compileStreaming()")}} et {{jsxref("WebAssembly.instantiateStreaming()")}}. Ces méthodes en streaming sont plus facile d'utilisation que leurs contreparties synchrones, car elles traduisent directement le bytecode en instances de type `Module`/`Instance`, sans nécessiter la manipulation d'une réponse intermédiaire {{domxref("Response")}} en un {{domxref("ArrayBuffer")}}.
 
-Cet exemple (voir notre démo sur GitHub [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html), et également [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)) montre comment utiliser  `instantiateStreaming()` pour récupérer un module wasm, le compiler, l'instancier afin d'avoir accès aux fonctions exportées qu'il contient et d'y importer des fonctions Javascript, le tout en une seule et même étape.
+Cet exemple (voir notre démo sur GitHub [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html), et également [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)) montre comment utiliser  `instantiateStreaming()` pour récupérer un module wasm, le compiler, l'instancier afin d'avoir accès aux fonctions exportées qu'il contient et d'y importer des fonctions JavaScript, le tout en une seule et même étape.
 
 Ajoutez le code suivant à votre script, en dessous du premier bloc:
 
     WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
     .then(obj => obj.instance.exports.exported_func());
 
-Le résultat net de l'ensemble du code est que l'appel à `exported_func`, notre fonction exportée Webassembly, entraîne à son tour l'appel à `imported_func` notre fonction importée Javscript, qui logue la valeur 42 fournie à l'instance WebAssembly dans la console. Si vous sauvegardez l'exemple et chargez le code dans un navigateur qui supporte WebAssembly, vous pourrez le voir en action.
+Le résultat net de l'ensemble du code est que l'appel à `exported_func`, notre fonction exportée Webassembly, entraîne à son tour l'appel à `imported_func` notre fonction importée JavaScript, qui logue la valeur 42 fournie à l'instance WebAssembly dans la console. Si vous sauvegardez l'exemple et chargez le code dans un navigateur qui supporte WebAssembly, vous pourrez le voir en action.
 
-**Note**: Cet exemple interminable et tarabiscoté semble aboutir à un résultat de faible importance, il permet néanmoins d'illustrer les possibilités offertes par l'utilisation conjointe d'un code WebAssembly et d'un code Javscript dans une application web. Comme il est précisé ailleurs, l'objectif de WebAssembly n'est pas de remplacer Javascript; à vrai dire les deux sont conçus pour fonctionner de concert, chacun tirant parti des forces de l'autre.
+**Note**: Cet exemple interminable et tarabiscoté semble aboutir à un résultat de faible importance, il permet néanmoins d'illustrer les possibilités offertes par l'utilisation conjointe d'un code WebAssembly et d'un code JavaScript dans une application web. Comme il est précisé ailleurs, l'objectif de WebAssembly n'est pas de remplacer JavaScript; à vrai dire les deux sont conçus pour fonctionner de concert, chacun tirant parti des forces de l'autre.
 
 ### Chargement de notre module wasm sans streaming
 
@@ -85,7 +85,7 @@ Dans le modèle mémoire bas niveau de WebAssembly, la mémoire est représent�
 
 Cependant contrairement à une implémentation native d'un programe C/C++ dans laquelle l'espace de mémoire disponible recouvre celle de l'ensemble du processus, la mémoire accessible par une instance particulière de WebAssembly est un espace mémoire spécifique  — potentiellement très réduit — contenu dans une objet mémoire WebAssembly. Ceci permet à une application web unique d'utiliser des librairies indépendantes — Chacune d'entre elles pouvant utiliser en interne WebAssembly— avec des espaces mémoires séparés qui sont complètement isolés les uns des autres.
 
-Dans Javascript, une instance Memory peut être pensée comme un ArrayBuffer redimensionnable. De la même manière que pour les ArrayBuffers, une application web peut créer de nombreux objets Memory indépendants. Vous pouvez en créer un en utilisant le constructeur {{jsxref("WebAssembly.Memory()")}}, qui prend comme arguments la taille initiale ainsi que la taille maximale de l'espace mémoire à créer.
+Dans JavaScript, une instance Memory peut être pensée comme un ArrayBuffer redimensionnable. De la même manière que pour les ArrayBuffers, une application web peut créer de nombreux objets Memory indépendants. Vous pouvez en créer un en utilisant le constructeur {{jsxref("WebAssembly.Memory()")}}, qui prend comme arguments la taille initiale ainsi que la taille maximale de l'espace mémoire à créer.
 
 Explorons ces concepts à travers un exemple rapide.
 
@@ -104,7 +104,7 @@ Explorons ces concepts à travers un exemple rapide.
 
         new Uint32Array(memory.buffer)[0]
 
-3.  À vous d'essayer — Enregistrez ce que vous avez rédigé jusqu'à maintenant, chargez-le dans votre navigateur, puis essayez d'entrer les deux lignes ci-dessus dans votre Javscript console.
+3.  À vous d'essayer — Enregistrez ce que vous avez rédigé jusqu'à maintenant, chargez-le dans votre navigateur, puis essayez d'entrer les deux lignes ci-dessus dans votre javascript console.
 
 ### Redimensionner la mémoire
 
@@ -112,11 +112,11 @@ Une instance de mémoire peut être agrandie par appel à la méthode {{jsxref(
 
     memory.grow(1);
 
-Si une valeur maximum a été fournie à la création de l'instance mémoire, les tentatives d'augmenter l'espace mémoire au delà de cette valeur maximum aboutiront à une exception de type  {{jsxref("WebAssembly.RangeError")}}. Le moteur Javsacript utilise cette valeur limite supérieure pour réserver d'avance un espace mémoire suffisant, ce qui permet de rendre les redimensionnements mémoires plus efficaces.
+Si une valeur maximum a été fournie à la création de l'instance mémoire, les tentatives d'augmenter l'espace mémoire au delà de cette valeur maximum aboutiront à une exception de type  {{jsxref("WebAssembly.RangeError")}}. Le moteur JavaScript utilise cette valeur limite supérieure pour réserver d'avance un espace mémoire suffisant, ce qui permet de rendre les redimensionnements mémoires plus efficaces.
 
 Note: En raison du caractère immuable de la longueur de byte d'un {{domxref("ArrayBuffer")}}, après une opération {{jsxref("Memory.prototype.grow()")}} réussie, le buffer getter retourne un nouvel objet ArrayBuffer (avec la nouvelle longeur de byte du buffer) et tous les objets ArrayBuffer précédents se retrouve en état "dissocié", ou déconnectés de l'espace mémoire dont ils étaient issus initialement.
 
-Tout comme les fonctions, les espaces mémoires linéaires peuvent être définis à l'intérieur du module, ou bien importés. De manière similaire aux fonctions, un module peut également exporter sa mémoire. Cela signifie que Javascript peut accéder à la mémoire d'une instance WebAssembly soit en créant un nouveau `WebAssembly.Memory` afin de le passer en import à cette instance, soit en recevant un export Memory (via [`Instance.prototype.exports`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports)).
+Tout comme les fonctions, les espaces mémoires linéaires peuvent être définis à l'intérieur du module, ou bien importés. De manière similaire aux fonctions, un module peut également exporter sa mémoire. Cela signifie que JavaScript peut accéder à la mémoire d'une instance WebAssembly soit en créant un nouveau `WebAssembly.Memory` afin de le passer en import à cette instance, soit en recevant un export Memory (via [`Instance.prototype.exports`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports)).
 
 ### Exemple avancé pour l'utilisation mémoire
 
@@ -146,7 +146,7 @@ Essayons de clarifier les affirmations ci-dessus à l'aide d'un exemple plus ab
 
 Note: vous pouvez remarquer que nous avons créé la vue {{domxref("Uint32Array")}} sur le champ buffer de l'objet Memory ([`Memory.prototype.buffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)), et pas sur l'objet Memory lui même.
 
-Les imports Memory fonctionnent de la même manière que les imports fonctions, à la différence prés que les objets Memory véhiculent des valeurs au lieu de fonctions Javscripts. Les imports Memory sont utiles pour deux raisons:
+Les imports Memory fonctionnent de la même manière que les imports fonctions, à la différence prés que les objets Memory véhiculent des valeurs au lieu de fonctions javascripts. Les imports Memory sont utiles pour deux raisons:
 
 - Ils permettent de récupérer et créer le contenu mémoire initial avant ou en parrallèle de la compilation du module.
 - Ils permettent qu'un objet mémoire unique soit importé par des instances de modules multiples, ce qui est une fonctionnalité clef dans l'objectif d'une implémentation d'une connexion dynamique dans WebAssembly.
@@ -155,7 +155,7 @@ Les imports Memory fonctionnent de la même manière que les imports fonctions,
 
 ## Tables
 
-Une Table WebAssembly est un tableau de [références](<https://en.wikipedia.org/wiki/Reference_(computer_science)>) typées redimensionnable qui peut être accédé à la fois par du code Javscript et par du code WebAssembly. Memory fournit un tableau de bytes bruts redimensionnable, mais il n'est pas prudent d'y stocker des références, car une référence est une valeur considérée comme sûre par le moteur Javascript, valeur dont les bytes ne doivent être accessibles ni en lecture, ni en écriture par le contenu pour des raisons de sécurité, de portabilité, et de stabilité.
+Une Table WebAssembly est un tableau de [références](<https://en.wikipedia.org/wiki/Reference_(computer_science)>) typées redimensionnable qui peut être accédé à la fois par du code JavaScript et par du code WebAssembly. Memory fournit un tableau de bytes bruts redimensionnable, mais il n'est pas prudent d'y stocker des références, car une référence est une valeur considérée comme sûre par le moteur JavaScript, valeur dont les bytes ne doivent être accessibles ni en lecture, ni en écriture par le contenu pour des raisons de sécurité, de portabilité, et de stabilité.
 
 Les Tables possèdent un type, qui limite les types de références qui peuvent être contenues dans la table. Dans la version actuelle de WebAssembly, il n'existe qu'un seul type de références — functions — et de fait seul ce type de références est donc valide. Dans de prochaines versions, d'autres types de références seront ajoutés.
 
@@ -193,9 +193,9 @@ Ce code accède à chaque fonction référencée contenue dans la table, et l' 
 
 ## Globals
 
-WebAssembly fournit la capacité de créer des instances de variables globales, depuis Javascript et importable/exportable à partir d'une ou plusieurs instances de {{jsxref("WebAssembly.Module")}}. C'est très utile, car cela rend possible la mise en place d'un lien dynamique entre de multiple modules WebAssembly.
+WebAssembly fournit la capacité de créer des instances de variables globales, depuis JavaScript et importable/exportable à partir d'une ou plusieurs instances de {{jsxref("WebAssembly.Module")}}. C'est très utile, car cela rend possible la mise en place d'un lien dynamique entre de multiple modules WebAssembly.
 
-Pour créer une instance globale WebAssembly à partir de Javascript, vous pouvez utiliser le constructeur {{jsxref("WebAssembly.Global()")}}, de la manière suivante:
+Pour créer une instance globale WebAssembly à partir de JavaScript, vous pouvez utiliser le constructeur {{jsxref("WebAssembly.Global()")}}, de la manière suivante:
 
     const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
 
@@ -250,7 +250,7 @@ Vous pouvez voir la mise en application du concept de multiplicité dans notre a
 
 ## Résumé
 
-Cet article  a couvert les bases de l'utilisation de l'API WebAssembly Javascript nécessaires à l'inclusion d'un module WebAssembly dans un contexte javascript, afin d'utiliser les fonctions du module dans ce contexte,  et de se familiairiser avec la manipulation de la mémoire et des tables WebAssembly. Nous avons terminé en évoquant le concept de multiplicité.
+Cet article  a couvert les bases de l'utilisation de l'API WebAssembly JavaScript nécessaires à l'inclusion d'un module WebAssembly dans un contexte JavaScript, afin d'utiliser les fonctions du module dans ce contexte,  et de se familiairiser avec la manipulation de la mémoire et des tables WebAssembly. Nous avons terminé en évoquant le concept de multiplicité.
 
 ## A voir également
 

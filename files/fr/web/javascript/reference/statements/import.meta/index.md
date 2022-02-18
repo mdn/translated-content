@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Instructions/import.meta
 ---
 {{JSSidebar("Statements")}}
 
-L'objet** `import.meta`** est une méta-propriété qui expose des métadonnées d'un module JavaScript spécifiques au contexte. Cet objet contient des informations à propos du module, telles que l'URL du module.
+L'objet **`import.meta`** est une méta-propriété qui expose des métadonnées d'un module JavaScript spécifiques au contexte. Cet objet contient des informations à propos du module, telles que l'URL du module.
 
 ## Syntaxe
 

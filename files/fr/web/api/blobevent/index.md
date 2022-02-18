@@ -34,7 +34,7 @@ _Hérite des propriétés de son parent, {{domxref("Event")}}_.
 
 ## Méthodes
 
-_Pas de méthode spécifique ; hérite des méthodes de son parent _{{domxref("Event")}}.\*\*
+_Pas de méthode spécifique ; hérite des méthodes de son parent _{{domxref("Event")}}.
 
 ## Spécifications
 

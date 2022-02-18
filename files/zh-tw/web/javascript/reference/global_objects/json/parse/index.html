@@ -41,7 +41,7 @@ JSON.parse('null');            // null
 
 <h3 id="使用_reviver_參數">使用 <strong><code>reviver</code></strong> 參數</h3>
 
-<p><code><font face="Open Sans, Arial, sans-serif">如果</font>reviver函數有被指定</code>，字串解析後產生出來的值會在函式回傳前經過轉換。 具體來講，解析後的值或是物件屬性會一個接一個地被這個reviver函數過濾（順序是由巢狀架構中最深的到最淺的），而當一個屬性即將被過濾時，該屬性的名稱（字串形態）以及值會被當作參數傳入reviver函數。如果reviver函數回傳了 {{jsxref("undefined")}} (或是沒有回傳值, 例如：函式提早結束)，則該屬性會從物件中被刪除；反之如果成功的話，該屬性的值就會被新的回傳值取代。</p>
+<p>如果<code>revive</code>r函數有被指定，字串解析後產生出來的值會在函式回傳前經過轉換。 具體來講，解析後的值或是物件屬性會一個接一個地被這個reviver函數過濾（順序是由巢狀架構中最深的到最淺的），而當一個屬性即將被過濾時，該屬性的名稱（字串形態）以及值會被當作參數傳入reviver函數。如果reviver函數回傳了 {{jsxref("undefined")}} (或是沒有回傳值, 例如：函式提早結束)，則該屬性會從物件中被刪除；反之如果成功的話，該屬性的值就會被新的回傳值取代。</p>
 
 <p>如果reviver只需轉換某些特定的值，請記得將其他不須特別轉換的值以原來的值回傳，否則這些值會從回傳的結果物件中刪除。</p>
 
@@ -77,82 +77,11 @@ JSON.parse('{"foo" : 1, }');
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規範</th>
-   <th scope="col">狀態</th>
-   <th scope="col">註解</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.12.2', 'JSON.parse')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>初始定義。從 JavaScript 1.7 導入。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-json.parse', 'JSON.parse')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特徵</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本功能</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>{{CompatIE("8.0")}}</td>
-   <td>{{CompatOpera("10.5")}}</td>
-   <td>{{CompatSafari("4.0")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特徵</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本功能</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Gecko相關">Gecko相關</h2>
 

@@ -9,12 +9,12 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 
 <p>本文假設您已經有點 JavaScript 的基礎，並且用 JavaScript 的函數創建過簡單的物件。</p>
 
-<h2 id="class-based_vs_prototype-based_languages" name="class-based_vs_prototype-based_languages">基於類 (Class-Based) 與 基於原型 (Prototype-Based) 語言的比較</h2>
+<h2 id="class-based_vs_prototype-based_languages">基於類 (Class-Based) 與 基於原型 (Prototype-Based) 語言的比較</h2>
 
 <p>基於類的物件導向語言，比如 Java 和 C++，是建基於兩種概念之上：類和實例。</p>
 
 <ul>
- <li><em>類（Class）</em>：定義了某一種物件所擁有的屬性（可以將 Java 中的方法和<span id="tran_1_15">屬性值</span>，以及 C++ 中的成員視為屬性）。類是抽象的事物，而不是其所描述的物件中的特定成員。例如 <code>Employee</code> 類可以用來代表所有僱員。</li>
+ <li><em>類（Class）</em>：定義了某一種物件所擁有的屬性（可以將 Java 中的方法和屬性值，以及 C++ 中的成員視為屬性）。類是抽象的事物，而不是其所描述的物件中的特定成員。例如 <code>Employee</code> 類可以用來代表所有僱員。</li>
  <li><em>實例（Instance）</em>：是類產生的實體，或者說，是它的一個成員。例如， <code>Victoria</code> 可以是 <code>Employee</code> 類的一個實例，表示一個特定的僱員個體。實例具有其類完全一致的屬性（不多也不少）。</li>
 </ul>
 
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 
 <p>下面的表格列出了上述區別。本節的後續部分將描述有關使用 JavaScript 構建函數和原型創建物件層級結構的詳細資訊，並與在 Java 中的做法做對比。</p>
 
-<table class="fullwidth-table">
+<table>
  <caption>表 8.1 基於類（Java）和基於原型（JavaScript）的物件系統的比較</caption>
  <thead>
   <tr>
@@ -80,7 +80,7 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 
 <p>本節的餘下部分將使用如下圖所示的僱員層級結構。</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4452/=figure8.1.png" style="height: 194px; width: 281px;"></p>
+<p><img alt="" class="internal" src="/@api/deki/files/4452/=figure8.1.png"></p>
 
 <p><small><strong>圖例 8.1：一個簡單的物件層級</strong></small></p>
 
@@ -102,7 +102,7 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 
 <p>在 真實的應用程式中，您很可能想定義允許在創建物件時給出屬性值的建構函數。（參見 <a href="#更靈活的建構函數">更靈活的建構函數</a> 獲得進一步的資訊）。對於現在而言，這些簡單的定義示範了繼承是如何發生的。</p>
 
-<p><img alt="figure8.2.png" class="default internal" src="/@api/deki/files/4390/=figure8.2.png"><br>
+<p><img alt="figure8.2.png" src="/@api/deki/files/4390/=figure8.2.png"><br>
  <small><strong>圖例 8.2：Employee 物件定義</strong></small></p>
 
 <p>以下 <code>Employee</code> 的 Java 和 JavaScript 的定義相類似。唯一的不同是在 Java 中需要指定每個屬性的類型，而在 JavaScript 中則不必指定，同時 Java 的類必須創建一個顯式的建構函數方法。</p>
@@ -238,8 +238,8 @@ public class Engineer extends WorkerBee {
 
 <p>{{ note('術語 <em><em>實例（instance）</em></em>在 基於類的語言中具有特定的技術含義。在這些語言中，實例是指類的個體成員，與類有著根本性的不同。在 JavaScript 中，“實例”並不具有這種技術含義，因為 JavaScript 中不存在類和實例之間的這種差異。然而，在談論 JavaScript 時，“實例”可以非正式地用於表示用特定的建構函數創建的物件。所以，在這個例子中，你可以非正式地 <code>jane</code> 是 <code>Engineer</code> 的一個實例。與之類似，儘管術語<em>父（parent）</em>，<em>子（child）</em>，<em>祖先（ancestor）</em>，和<em>後代（descendant）</em>在 JavaScript 中並沒有正式的含義，您可以非正式地使用這些術語用於指代原型鏈中處於更高層次或者更低層次的物件。') }}</p>
 
-<p><img alt="figure8.3.png" class="default internal" id="figure8.3" src="/@api/deki/files/4403/=figure8.3.png"><br>
- <a id="8.3" name="8.3"><small><strong>圖例 8.3：通過簡單的定義創建物件</strong></small></a></p>
+<p><img alt="figure8.3.png" src="/@api/deki/files/4403/=figure8.3.png"><br>
+ <small><strong>圖例 8.3：通過簡單的定義創建物件</strong></small></p>
 
 <h2 id="物件的屬性">物件的屬性</h2>
 
@@ -285,15 +285,15 @@ mark.projects = ["navigator"];</pre>
 
 <p>一旦 JavaScript 執行該語句，則 <code>mark</code> 物件也將具有 <code>specialty</code> 屬性，其值為 <code>"none"</code>。下圖展現了在 <code>Employee</code> 原型中添加該屬性，然後在 <code>Engineer</code> 的原型中重載該屬性的效果。</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4422/=figure8.4.png" style="height: 519px; width: 833px;"><br>
+<p><img alt="" class="internal" src="/@api/deki/files/4422/=figure8.4.png"><br>
  <small><strong>Figure 8.4: Adding properties</strong></small></p>
 
-<h2 id="more_flexible_constructors" name="more_flexible_constructors"><a name="更靈活的建構函數">更靈活的建構函數</a></h2>
+<h2 id="more_flexible_constructors">更靈活的建構函數</h2>
 
 <p>到目前為止所展現的建構函數不允許在創建新的實例時指定屬性值。正如 Java 一樣，可以為建構函數提供參數以便初始化實例的屬性值。下圖展現其中一種做法。</p>
 
-<p><img alt="" class="internal" id="figure8.5" src="/@api/deki/files/4423/=figure8.5.png" style="height: 481px; width: 1012px;"><br>
- <a id="8.5" name="8.5"><small><strong>Figure 8.5: Specifying properties in a constructor, take 1</strong></small></a></p>
+<p><img alt="" class="internal" src="/@api/deki/files/4423/=figure8.5.png"><br>
+ <small><strong>Figure 8.5: Specifying properties in a constructor, take 1</strong></small></p>
 
 <p>下面的表格中羅列了這些物件在 Java 和 JavaScript 中的定義。</p>
 
@@ -413,7 +413,7 @@ jane.machine == "belau"
 
 <p>到目前為止，建構函數已經能夠創建一個普通物件，然後為新物件指定本地的屬性和屬性值。您還可以通過直接調用原型鏈上的更高層次物件的建構函數，讓建構函數添加更多的屬性。下面的圖例展現這種新定義。</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4430/=figure8.6.png" style="height: 534px; width: 1063px;"><br>
+<p><img alt="" class="internal" src="/@api/deki/files/4430/=figure8.6.png"><br>
  <small><strong>Figure 8.6 Specifying properties in a constructor, take 2</strong></small></p>
 
 <p>讓我們仔細看看這些定義的其中之一。以下是 <code>Engineer</code> 建構函數的定義：</p>
@@ -571,7 +571,7 @@ Employee.prototype.name = "Unknown";
 
 <p>JavaScript 的屬性查找機制首先在物件自身的屬性中查找，如果指定的屬性名稱沒有找到，將在物件的特殊屬性 <code>__proto__</code> 中查找。這個過程是遞迴的；被稱為“在原型鏈中查找”。</p>
 
-<p>特殊的 <code>__proto__</code> 屬性是在構建物件時設置的；設置為建構函數的 <code>prototype</code> 屬性的值。所以運算式 <code>new Foo()</code> 將創建一個物件，其 <code>__proto__ == <code class="moz-txt-verticalline">Foo.prototype</code></code>。因而，修改 <code class="moz-txt-verticalline">Foo.prototype</code> 的屬性，將改變所有通過 <code>new Foo()</code> 創建的物件的屬性的查找。</p>
+<p>特殊的 <code>__proto__</code> 屬性是在構建物件時設置的；設置為建構函數的 <code>prototype</code> 屬性的值。所以運算式 <code>new Foo()</code> 將創建一個物件，其 <code>__proto__ == <code>Foo.prototype</code></code>。因而，修改 <code>Foo.prototype</code> 的屬性，將改變所有通過 <code>new Foo()</code> 創建的物件的屬性的查找。</p>
 
 <p>每個物件都有一個 <code>__proto__</code> 物件屬性（除了 <code>Object）；每個函數都有一個</code> <code>prototype</code> 物件屬性。因此，通過“原型繼承（prototype inheritance）”，物件與其它物件之間形成關係。通過比較物件的 <code>__proto__</code> 屬性和函數的 <code>prototype</code> 屬性可以檢測物件的繼承關係。JavaScript 提供了便捷方法：<code>instanceof</code> 操作符可以用來將一個物件和一個函數做檢測，如果物件繼承自函數的原型，則該操作符返回真。例如：</p>
 
@@ -607,7 +607,9 @@ chris.__proto__.__proto__.__proto__.__proto__.__proto__ == null;
 }
 </pre>
 
-<div class="note"><strong>Note:</strong> 在上面的實現中，檢查物件的類型是否為 "xml" 的目的在於解決新近版本的 JavaScript 中表達 XML 物件的特異之處。如果您想瞭解其中瑣碎細節，可以參考 {{ bug(634150) }}。</div>
+<div class="notecard note">
+   <p><strong>備註：</strong> 在上面的實現中，檢查物件的類型是否為 "xml" 的目的在於解決新近版本的 JavaScript 中表達 XML 物件的特異之處。如果您想瞭解其中瑣碎細節，可以參考 {{ bug(634150) }}。</p>
+</div>
 
 <pre class="brush: js">instanceOf (chris, Engineer)
 instanceOf (chris, WorkerBee)

@@ -44,7 +44,7 @@ En CSS, il existe deux type de boîtes : les boîtes **en bloc** ("_block boxes_
 Si une boîte est définie en bloc, elle suivra alors les règles suivantes :
 
 - La boîte s'étend en largeur pour remplir totalement l'espace offert par son conteneur. Dans la plupart des cas, la boîte devient alors aussi large que son conteneur, occupant 100% de l'espace disponible.
-- La boîte occupe sa propre nouvelle ligne et créé un retour à la ligne, faisant ainsi passer les éléments suivants à la ligne d'après.
+- La boîte occupe sa propre nouvelle ligne et crée un retour à la ligne, faisant ainsi passer les éléments suivants à la ligne d'après.
 - Les propriétés de largeur ([`width`](/fr/docs/Web/CSS/width)) et de hauteur ([`height`](/fr/docs/Web/CSS/height)) sont toujours respectées.
 - Les propriétés [`padding`](/fr/docs/Web/CSS/padding), [`margin`](/fr/docs/Web/CSS/margin) et [`border`](/fr/docs/Web/CSS/border) — correspondantes respectivement aux écarts de
 

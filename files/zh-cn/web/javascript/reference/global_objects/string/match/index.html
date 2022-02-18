@@ -10,13 +10,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 
 <div>{{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<h2 id="Syntax">语法</h2>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<pre class="syntaxbox"><code><em>str</em>.match(regexp)</code></pre>
 
-<pre class="syntaxbox notranslate"><code><em>str</em>.match(regexp)</code></pre>
-
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>regexp</code></dt>
@@ -26,8 +24,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 <h3 id="返回值">返回值</h3>
 
 <ul>
- <li><span style="line-height: 1.572;">如果使用g标志，则将返回与完整正则表达式匹配的所有结果，但不会返回捕获组。</span></li>
- <li>如果未使用g标志，则仅返回第一个完整匹配及其相关的捕获组<span style="line-height: 1.572;">（<code>Array</code>）</span>。 在这种情况下，返回的项目将具有如下所述的其他属性。</li>
+ <li>如果使用g标志，则将返回与完整正则表达式匹配的所有结果，但不会返回捕获组。</li>
+ <li>如果未使用g标志，则仅返回第一个完整匹配及其相关的捕获组（<code>Array</code>）。 在这种情况下，返回的项目将具有如下所述的其他属性。</li>
 </ul>
 
 <h4 id="附加属性">附加属性</h4>
@@ -40,15 +38,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
  <li><code>input</code>: 搜索的字符串.</li>
 </ul>
 
-<dl>
- <dd>一个{{jsxref("Array")}}，其内容取决于global（<code>g</code>）标志的存在与否，如果未找到匹配则为{{jsxref("null")}}。</dd>
-</dl>
+<p>一个{{jsxref("Array")}}，其内容取决于global（<code>g</code>）标志的存在与否，如果未找到匹配则为{{jsxref("null")}}。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>如果正则表达式不包含 <code>g </code>标志，<code>str.match()</code> 将返回与 {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}. 相同的结果。</p>
 
-<h3 id="Notes" name="Notes">参看：<code>RegExp</code> 方法</h3>
+<h3 id="Notes">参看：<code>RegExp</code> 方法</h3>
 
 <ul>
  <li>如果你需要知道一个字符串是否与一个正则表达式匹配 {{jsxref("RegExp")}} ，可使用 {{jsxref("RegExp.prototype.test()", "RegExp.test()")}} 。</li>
@@ -56,62 +52,62 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
  <li>如果你想要获得捕获组，并且设置了全局标志，你需要用 {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}  或者 {{jsxref("String.prototype.matchAll()", " String.prototype.matchAll()")}}</li>
 </ul>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Using_match" name="Example:_Using_match">例子：使用 <code>match</code></h3>
+<h3 id="Example_Using_match">例子：使用 <code>match</code></h3>
 
 <p>在下例中，使用 <code>match</code> 查找 "<code>Chapter</code>" 紧跟着 1 个或多个数值字符，再紧跟着一个小数点和数值字符 0 次或多次。正则表达式包含 <code>i</code> 标志，因此大小写会被忽略。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> str <span class="operator token">=</span> <span class="string token">'For more information, see Chapter 3.4.5.1'</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> re <span class="operator token">=</span> <span class="regex token">/see (chapter \d+(\.\d)*)/i</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> found <span class="operator token">=</span> str<span class="punctuation token">.</span><span class="function token">match</span><span class="punctuation token">(</span>re<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js">var str = 'For more information, see Chapter 3.4.5.1';
+var re = /see (chapter \d+(\.\d)*)/i;
+var found = str.match(re);
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>found<span class="punctuation token">)</span><span class="punctuation token">;</span>
+console.log(found);
 
-<span class="comment token">// logs [ 'see Chapter 3.4.5.1',</span>
-<span class="comment token">//        'Chapter 3.4.5.1',</span>
-<span class="comment token">//        '.1',</span>
-<span class="comment token">//        index: 22,</span>
-<span class="comment token">//        input: 'For more information, see Chapter 3.4.5.1' ]</span>
+// logs [ 'see Chapter 3.4.5.1',
+//        'Chapter 3.4.5.1',
+//        '.1',
+//        index: 22,
+//        input: 'For more information, see Chapter 3.4.5.1' ]
 
-<span class="comment token">// 'see Chapter 3.4.5.1' 是整个匹配。</span>
-<span class="comment token">// 'Chapter 3.4.5.1' 被'(chapter \d+(\.\d)*)'捕获。</span>
-<span class="comment token">// '.1' 是被'(\.\d)'捕获的最后一个值。</span>
-<span class="comment token">// 'index' 属性(22) 是整个匹配从零开始的索引。</span>
-<span class="comment token">// 'input' 属性是被解析的原始字符串。</span></code></pre>
+// 'see Chapter 3.4.5.1' 是整个匹配。
+// 'Chapter 3.4.5.1' 被'(chapter \d+(\.\d)*)'捕获。
+// '.1' 是被'(\.\d)'捕获的最后一个值。
+// 'index' 属性(22) 是整个匹配从零开始的索引。
+// 'input' 属性是被解析的原始字符串。</pre>
 
-<h3 id="Example_Using_global_and_ignore_case_flags_with_match" name="Example:_Using_global_and_ignore_case_flags_with_match">例子：<code>match</code> 使用全局（global）和忽略大小写（ignore case）标志</h3>
+<h3 id="Example_Using_global_and_ignore_case_flags_with_match">例子：<code>match</code> 使用全局（global）和忽略大小写（ignore case）标志</h3>
 
 <p>下例展示了 <code>match</code> 使用 global 和 ignore case 标志。A-E、a-e 的所有字母将会作为一个数组的元素返回。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> str <span class="operator token">=</span> <span class="string token">'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> regexp <span class="operator token">=</span> <span class="regex token">/[A-E]/gi</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> matches_array <span class="operator token">=</span> str<span class="punctuation token">.</span><span class="function token">match</span><span class="punctuation token">(</span>regexp<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js">var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+var regexp = /[A-E]/gi;
+var matches_array = str.match(regexp);
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>matches_array<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']</span></code></pre>
+console.log(matches_array);
+// ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']</pre>
 
 <h3 id="使用match，不传参数"><code>使用match()，不传参数 </code></h3>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> str <span class="operator token">=</span> <span class="string token">"Nothing will come of nothing."</span><span class="punctuation token">;</span>
+<pre class="brush: js">var str = "Nothing will come of nothing.";
 
-str<span class="punctuation token">.</span><span class="function token">match</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>   <span class="comment token">// returns [""]</span></code></pre>
+str.match();   // returns [""]</pre>
 
 <h3 id="一个非正则表达式对象作为参数">一个非正则表达式对象作为参数</h3>
 
 <p>当参数是一个字符串或一个数字，它会使用new RegExp(obj)来隐式转换成一个 {{jsxref("RegExp")}}。如果它是一个有正号的正数，RegExp() 方法将忽略正号。</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> str1 <span class="operator token">=</span> <span class="string token">"NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript."</span><span class="punctuation token">,</span>
-    str2 <span class="operator token">=</span> <span class="string token">"My grandfather is 65 years old and My grandmother is 63 years old."</span><span class="punctuation token">,</span>
-    str3 <span class="operator token">=</span> <span class="string token">"The contract was declared null and void."</span><span class="punctuation token">;</span>
-str1<span class="punctuation token">.</span><span class="function token">match</span><span class="punctuation token">(</span><span class="string token">"number"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>   <span class="comment token">// "number" 是字符串。返回["number"]</span>
-str1<span class="punctuation token">.</span><span class="function token">match</span><span class="punctuation token">(</span><span class="number token">NaN</span><span class="punctuation token">)</span><span class="punctuation token">;</span>        <span class="comment token">// NaN的类型是number。返回["NaN"]</span>
-str1<span class="punctuation token">.</span><span class="function token">match</span><span class="punctuation token">(</span><span class="number token">Infinity</span><span class="punctuation token">)</span><span class="punctuation token">;</span>   <span class="comment token">// Infinity的类型是number。返回["Infinity"]</span>
-str1<span class="punctuation token">.</span><span class="function token">match</span><span class="punctuation token">(</span><span class="operator token">+</span><span class="number token">Infinity</span><span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">// 返回["Infinity"]</span>
-str1<span class="punctuation token">.</span><span class="function token">match</span><span class="punctuation token">(</span><span class="operator token">-</span><span class="number token">Infinity</span><span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">// 返回["-Infinity"]</span>
-str2<span class="punctuation token">.</span><span class="function token">match</span><span class="punctuation token">(</span><span class="number token">65</span><span class="punctuation token">)</span><span class="punctuation token">;</span>         <span class="comment token">// 返回["65"]</span>
-str2<span class="punctuation token">.</span><span class="function token">match</span><span class="punctuation token">(</span><span class="operator token">+</span><span class="number token">65</span><span class="punctuation token">)</span><span class="punctuation token">;</span>        <span class="comment token">// 有正号的number。返回["65"]</span>
-str3<span class="punctuation token">.</span><span class="function token">match</span><span class="punctuation token">(</span><span class="keyword token">null</span><span class="punctuation token">)</span><span class="punctuation token">;</span>       <span class="comment token">// 返回["null"]</span></code></pre>
+<pre class="brush: js">var str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
+    str2 = "My grandfather is 65 years old and My grandmother is 63 years old.",
+    str3 = "The contract was declared null and void.";
+str1.match("number");   // "number" 是字符串。返回["number"]
+str1.match(NaN);        // NaN的类型是number。返回["NaN"]
+str1.match(Infinity);   // Infinity的类型是number。返回["Infinity"]
+str1.match(+Infinity);  // 返回["Infinity"]
+str1.match(-Infinity);  // 返回["-Infinity"]
+str2.match(65);         // 返回["65"]
+str2.match(+65);        // 有正号的number。返回["65"]
+str3.match(null);       // 返回["null"]</pre>
 
 <h2 id="规范">规范</h2>
 
@@ -147,66 +143,9 @@ str3<span class="punctuation token">.</span><span class="function token">match</
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="Firefox_特殊注意">Firefox 特殊注意</h2>
-
-<ul>
- <li>从Gecko 27 {{geckoRelease(27)}}开始，此方法遵守ECMAScript 规范。当使用全局正则表达式调用 <code>match()时，</code>{{jsxref("RegExp.lastIndex")}} 属性(如果指定)会重置为 <code>0</code> ({{bug(501739)}})。</li>
- <li>从 Gecko 39 {{geckoRelease(39)}}开始，不赞成使用非标准的标志参数，并抛出一个控制台警告({{bug(1142351)}})。</li>
- <li>从 Gecko 47 {{geckoRelease(47)}} 开始 ， non-release builds不再支持非标准的标志参数，并且将完全移除({{bug(1245801)}})。</li>
- <li>从 Gecko 49 {{geckoRelease(49)}} 开始 ， 不再支持非标准的标志参数 ({{bug(1108382)}}).</li>
-</ul>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("RegExp")}}</li>

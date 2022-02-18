@@ -5,13 +5,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 ---
 <div>{{JSRef("Global_Objects", "Symbol")}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><code><strong>Symbol.keyFor(sym)</strong></code> 方法用来获取全局symbol 注册表中与某个 symbol 关联的键。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>Symbol.keyFor(sym)</var>;</pre>
+<pre class="syntaxbox"><var>Symbol.keyFor(sym)</var>;</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -22,13 +22,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 
 <h3 id="返回值">返回值</h3>
 
-<dl>
- <dd>如果全局注册表中查找到该symbol，则返回该symbol的key值，返回值为字符串类型。否则返回undefined</dd>
-</dl>
+<p>如果全局注册表中查找到该symbol，则返回该symbol的key值，返回值为字符串类型。否则返回undefined</p>
 
 <h2 id="示例">示例</h2>
 
-<pre class="brush: js notranslate">// 创建一个全局 Symbol
+<pre class="brush: js">// 创建一个全局 Symbol
 var globalSym = Symbol.for("foo");
 Symbol.keyFor(globalSym); // "foo"
 
@@ -58,57 +56,9 @@ Symbol.keyFor(Symbol.iterator) // undefined
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoDesktop("33.0") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoMobile("33.0") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_Also" name="See_Also">相关链接</h2>
+<h2 id="See_Also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Symbol.prototype.for()")}}</li>

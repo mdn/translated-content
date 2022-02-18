@@ -78,7 +78,7 @@ Vous pouvez intégrer l'image en utilisant son URL absolue, par exemple :
 
 Ce n'est pas trés efficace, cela fait travailler le navigateur plus qu'il ne devrait, il cherche l'adresse IP depuis le serveur DNS à chaque fois etc... Vous devriez autant que possible garder vos images du site sur le même serveur que la page HTML.
 
-> **Attention :** La plupart des images ont des droits d'auteur. N'affichez jamais une image sur votre site à moins que :
+> **Attention :** La plupart des images ont des droits d'auteur. N'affichez jamais une image sur votre site à moins que :
 >
 > 1\) Ce soit votre image (vous en êtes le créateur),
 > 2\) vous ayez reçu une permission explicite et écrite du propriètaire de l'image ou,
@@ -118,9 +118,9 @@ Pourquoi vous verrez partout du texte alt ? Vous en aurez besoin car c'est très
 
 Que devriez-vous noter dans vos attributs `alt` ? En premier lieu, cela dépend de la raison pour laquelle cette image se trouve là. En d'autres mots, ce que vous perdriez si cette image ne s'affichait pas :
 
-- **Decoration.** Vous devriez utiliser  {{anch("CSS background images")}} pour les images décoratives mais si vous devez utiliser du HTML, ajoutez un `alt=""` vide. Si l'image ne fait pas vraiment partie du contenu, un lecteur d'écran ne perdra pas de temps à la lire.
-- **Contenu.** Si votre image fournit une ou plusieurs informations supplémentaires significatives, inscrivez ces mêmes informations dans un *bref* \* \*`alt` text –  ou mieux, dans le texte principal, que tout le monde puisse les voir. N'écrivez pas de  `alt` text redondants. Imaginez combien ce serait ennuyeux pour un lecteur si tous les paragraphes étaient écrits en double... Si l'image est décrite de manière adéquate dans le corps de texte principal, vous pouvez utiliser simplement  `alt=""`.
-- **Lien.** Si vous mettez une image à l'intérieur d'une ancre {{htmlelement("a")}} pour transformer une image en lien, vous devez quand même fournir un [Lien texte accessible ](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks#bplien). Dans de tels cas, vous pouvez, soit l'inclure dans le même élément `<a>`, soit dans l'attribut  `alt` de l'image – utilisez ce qui marche le mieux dans votre cas.
+- **Decoration.** Vous devriez utiliser {{anch("CSS background images")}} pour les images décoratives mais si vous devez utiliser du HTML, ajoutez un `alt=""` vide. Si l'image ne fait pas vraiment partie du contenu, un lecteur d'écran ne perdra pas de temps à la lire.
+- **Contenu.** Si votre image fournit une ou plusieurs informations supplémentaires significatives, inscrivez ces mêmes informations dans un *bref* `alt` text – ou mieux, dans le texte principal, que tout le monde puisse les voir. N'écrivez pas de `alt` text redondants. Imaginez combien ce serait ennuyeux pour un lecteur si tous les paragraphes étaient écrits en double... Si l'image est décrite de manière adéquate dans le corps de texte principal, vous pouvez utiliser simplement `alt=""`.
+- **Lien.** Si vous mettez une image à l'intérieur d'une ancre {{htmlelement("a")}} pour transformer une image en lien, vous devez quand même fournir un [Lien texte accessible ](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks#bplien). Dans de tels cas, vous pouvez, soit l'inclure dans le même élément `<a>`, soit dans l'attribut `alt` de l'image – utilisez ce qui marche le mieux dans votre cas.
 - **Texte.** Vous ne devez pas mettre de texte dans les images. Si votre titre principal a besoin d'un peu d'ombrage par exemple,  [utilisez CSS](/fr/docs/Web/CSS/text-shadow)  pour ça, plutôt que de mettre du texte dans une image. De toutes manières, si vous ne pouvez pas éviter de faire ça, vous devez ajouter le texte dans l'attribut  `alt` .
 
 Le but est de livrer essentiellement une expérience de qualité, même quand les images ne peuvent être vues. Cela assure à tous les utilisateurs de ne rien manquer du contenu. Essayez de ne pas afficher les images dans votre navigateur et regardez ce qu'il se passe. Vous allez vite réaliser que le texte fourni à la place est réellement utile.

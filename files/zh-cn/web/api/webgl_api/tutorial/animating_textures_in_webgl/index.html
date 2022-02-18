@@ -7,135 +7,135 @@ translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 ---
 <p>{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}</p>
 
-<p><font><font>在本演示中，我们以上一个示例为基础，将静态纹理替换为正在播放的mp4视频文件的帧。</font><font>实际上，这很容易做到，而且观看起来很有趣，所以让我们开始吧。</font><font>您可以使用类似的代码来使用任何类型的数据（例如</font></font>{{ HTMLElement("canvas") }}) <font><font>作为纹理的源。</font></font></p>
+<p>在本演示中，我们以上一个示例为基础，将静态纹理替换为正在播放的mp4视频文件的帧。实际上，这很容易做到，而且观看起来很有趣，所以让我们开始吧。您可以使用类似的代码来使用任何类型的数据（例如 {{ HTMLElement("canvas") }}) 作为纹理的源。</p>
 
 <h2 id="获取视频">获取视频</h2>
 
-<p><font><font>第一步是创建</font></font>{{ HTMLElement("video") }}<font><font>将用于检索视频帧</font><font>的</font><font>元素：</font></font></p>
+<p>第一步是创建 {{ HTMLElement("video") }} 将用于检索视频帧的元素：</p>
 
 <pre class="brush: js">// will set to true when video can be copied to texture
 var copyVideo = false;
 
 function setupVideo(url) {
-  const video = document.createElement('video');
+  const video = document.createElement('video');
 
-  var playing = false;
-  var timeupdate = false;
+  var playing = false;
+  var timeupdate = false;
 
-  video.autoplay = true;
-  video.muted = true;
-  video.loop = true;
+  video.autoplay = true;
+  video.muted = true;
+  video.loop = true;
 
-  // Waiting for these 2 events ensures
-  // there is data in the video
+  // Waiting for these 2 events ensures
+  // there is data in the video
 
-  video.addEventListener('playing', function() {
-     playing = true;
-     checkReady();
-  }, true);
+  video.addEventListener('playing', function() {
+     playing = true;
+     checkReady();
+  }, true);
 
-  video.addEventListener('timeupdate', function() {
-     timeupdate = true;
-     checkReady();
-  }, true);
+  video.addEventListener('timeupdate', function() {
+     timeupdate = true;
+     checkReady();
+  }, true);
 
-  video.src = url;
-  video.play();
+  video.src = url;
+  video.play();
 
-  function checkReady() {
-    if (playing &amp;&amp; timeupdate) {
-      copyVideo = true;
-    }
-  }
+  function checkReady() {
+    if (playing &amp;&amp; timeupdate) {
+      copyVideo = true;
+    }
+  }
 
-  return video;
+  return video;
 }
 </pre>
 
-<p><font><font>首先，我们创建一个视频元素。</font><font>我们将其设置为自动播放，静音和循环播放视频。</font><font>然后，我们设置了两个事件以确保视频正在播放并且时间轴已更新。</font><font>我们需要进行这两项检查，因为如果将视频上传到WebGL尚无可用数据，它将产生错误。</font><font>检查这两个事件可确保有可用数据，并且可以安全地开始将视频上传到WebGL纹理。</font><font>在上面的代码中，我们确认是否同时发生了这两个事件。</font><font>如果是这样，我们将全局变量设置  </font></font><code>copyVideo</code><font><font>为true，以表示可以安全地开始将视频复制到纹理。</font></font></p>
+<p>首先，我们创建一个视频元素。我们将其设置为自动播放，静音和循环播放视频。然后，我们设置了两个事件以确保视频正在播放并且时间轴已更新。我们需要进行这两项检查，因为如果将视频上传到WebGL尚无可用数据，它将产生错误。检查这两个事件可确保有可用数据，并且可以安全地开始将视频上传到WebGL纹理。在上面的代码中，我们确认是否同时发生了这两个事件。如果是这样，我们将全局变量设置 <code>copyVideo</code> 为 true，以表示可以安全地开始将视频复制到纹理。</p>
 
-<p><font><font>最后，我们将</font></font><code>src</code><font><font>属性</font><font>设置</font><font>为start并调用</font></font><code>play</code><font><font> 以开始加载和播放视频。</font></font></p>
+<p>最后，我们将 <code>src</code> 属性设置为 start 并调用 <code>play</code> 以开始加载和播放视频。</p>
 
-<h2 id="用视频帧作为纹理">用视频帧作为纹理 </h2>
+<h2 id="用视频帧作为纹理">用视频帧作为纹理</h2>
 
-<p><font><font>接下来的更改是</font></font><code>initTexture()</code><font><font>，它变得更加简单，因为它不再需要加载图像文件。</font><font>相反，它所做的只是创建一个空的纹理对象，在其中放置一个像素，然后设置其过滤条件供以后使用：</font></font></p>
+<p>接下来的更改是 <code>initTexture()</code>，它变得更加简单，因为它不再需要加载图像文件。相反，它所做的只是创建一个空的纹理对象，在其中放置一个像素，然后设置其过滤条件供以后使用：</p>
 
 <pre class="brush: js">function initTexture(gl) {
-  const texture = gl.createTexture();
-  gl.bindTexture(gl.TEXTURE_2D, texture);
+  const texture = gl.createTexture();
+  gl.bindTexture(gl.TEXTURE_2D, texture);
 
-  // Because video has to be download over the internet
-  // they might take a moment until it's ready so
-  // put a single pixel in the texture so we can
-  // use it immediately.
-  const level = 0;
-  const internalFormat = gl.RGBA;
-  const width = 1;
-  const height = 1;
-  const border = 0;
-  const srcFormat = gl.RGBA;
-  const srcType = gl.UNSIGNED_BYTE;
-  const pixel = new Uint8Array([0, 0, 255, 255]);  // opaque blue
-  gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
-                width, height, border, srcFormat, srcType,
-                pixel);
+  // Because video has to be download over the internet
+  // they might take a moment until it's ready so
+  // put a single pixel in the texture so we can
+  // use it immediately.
+  const level = 0;
+  const internalFormat = gl.RGBA;
+  const width = 1;
+  const height = 1;
+  const border = 0;
+  const srcFormat = gl.RGBA;
+  const srcType = gl.UNSIGNED_BYTE;
+  const pixel = new Uint8Array([0, 0, 255, 255]);  // opaque blue
+  gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
+                width, height, border, srcFormat, srcType,
+                pixel);
 
-  // Turn off mips and set  wrapping to clamp to edge so it
-  // will work regardless of the dimensions of the video.
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+  // Turn off mips and set  wrapping to clamp to edge so it
+  // will work regardless of the dimensions of the video.
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 
-  return texture;
+  return texture;
 }</pre>
 
-<div><font><font>这里是</font></font><code>updateTexture()</code><font><font> 方法; </font><font>这是完成实际工作的地方：</font></font></div>
+<p>这里是 <code>updateTexture()</code> 方法，这是完成实际工作的地方：</p>
 
 <pre class="brush: js">function updateTexture(gl, texture, video) {
-  const level = 0;
-  const internalFormat = gl.RGBA;
-  const srcFormat = gl.RGBA;
-  const srcType = gl.UNSIGNED_BYTE;
-  gl.bindTexture(gl.TEXTURE_2D, texture);
-  gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
-                srcFormat, srcType, video);
+  const level = 0;
+  const internalFormat = gl.RGBA;
+  const srcFormat = gl.RGBA;
+  const srcType = gl.UNSIGNED_BYTE;
+  gl.bindTexture(gl.TEXTURE_2D, texture);
+  gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
+                srcFormat, srcType, video);
 }</pre>
 
-<p><font><font>您之前已经看过此代码。</font><font>它与上一个示例中的image onload函数几乎相同-除非我们调用</font></font><code>texImage2D()</code><font><font>，而不是传递</font></font><code>Image</code><font><font>对象，而是传递</font></font>{{ HTMLElement("video") }}<font><font>元素。</font><font>WebGL知道如何拉出当前帧并将其用作纹理。</font></font></p>
+<p>您之前已经看过此代码。它与上一个示例中的image onload函数几乎相同-除非我们调用 <code>texImage2D()</code>，不是传递 <code>Image</code> 对象，而是传递 {{ HTMLElement("video") }} 元素。WebGL知道如何拉出当前帧并将其用作纹理。</p>
 
-<p><font><font>然后，在</font></font><code>main()</code><font><font> 代替通话，以</font></font><code>loadTexture()</code><font><font>在前面的例子中，我们调用   </font></font><code>initTexture</code><code>()</code><font><font>之后</font></font><code>setupVideo()</code><font><font>。</font></font></p>
+<p>然后，在 <code>main()</code> 代替通话，以 <code>loadTexture()</code> 在前面的例子中，我们调用 <code>initTexture()</code> 之后 <code>setupVideo()</code>。</p>
 
-<p><font><font>在</font></font><code>render()</code><font><font>if是否</font></font><code>copyVideo</code><font><font>为真的</font><font>定义中</font><font>，则  </font></font><code>updateTexture()</code><font><font>每次调用</font></font><code>drawScene()</code><font><font> 函数</font><font>之前都会调用一次  </font><font>。</font></font></p>
+<p>在 <code>render()</code> 是否 <code>copyVideo</code> 为真的定义中，则 <code>updateTexture()</code> 每次调用 <code>drawScene()</code> 函数之前都会调用一次。</p>
 
-<pre class="brush: js">  const texture = initTexture(gl);
+<pre class="brush: js">  const texture = initTexture(gl);
 
-  const video = setupVideo('Firefox.mp4');
+  const video = setupVideo('Firefox.mp4');
 
-  var then = 0;
+  var then = 0;
 
-  // Draw the scene repeatedly
-  function render(now) {
-    now *= 0.001;  // convert to seconds
-    const deltaTime = now - then;
-    then = now;
+  // Draw the scene repeatedly
+  function render(now) {
+    now *= 0.001;  // convert to seconds
+    const deltaTime = now - then;
+    then = now;
 
-    if (copyVideo) {
-      updateTexture(gl, texture, video);
-    }
+    if (copyVideo) {
+      updateTexture(gl, texture, video);
+    }
 
-    drawScene(gl, programInfo, buffers, texture, deltaTime);
+    drawScene(gl, programInfo, buffers, texture, deltaTime);
 
-    requestAnimationFrame(render);
-  }
-  requestAnimationFrame(render);</pre>
+    requestAnimationFrame(render);
+  }
+  requestAnimationFrame(render);</pre>
 
 <p>下面是结果:</p>
 
 <p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}</p>
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8">查看完整的代码</a> | <a href="http://mdn.github.io/webgl-examples/tutorial/sample8/">在新页中打开这个demo</a></p>
+<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8">查看完整的代码</a> | <a href="https://mdn.github.io/webgl-examples/tutorial/sample8/">在新页中打开这个demo</a></p>
 
-<h2 id="参考">参考</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li><a href="/en/Using_HTML5_audio_and_video" title="En/Using audio and video in Firefox">Using audio and video in Firefox</a></li>

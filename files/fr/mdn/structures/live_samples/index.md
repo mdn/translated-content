@@ -147,7 +147,7 @@ el.onclick = function() {
 
 Voici le résultat de l'exécution des blocs de code ci-dessus via `\{{EmbedLiveSample('live_sample_demo')}}` :
 
-{{EmbedLiveSample('live_sample_demo')}}
+{{EmbedLiveSample('Démonstration_en_direct')}}
 
 Voici un lien qui résulte de l'appel de ces blocs de code via `\{{LiveSampleLink('live_sample_demo', 'Lien vers un échantillon de démonstration en direct')}}`:
 

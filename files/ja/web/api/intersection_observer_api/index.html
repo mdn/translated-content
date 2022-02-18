@@ -435,7 +435,7 @@ window.addEventListener("load", (event) =&gt; {
 
 <p>この関数ではオブザーバーの設定を含む <code>options</code> オブジェクトを設定することから始めます。ドキュメントビューポートに対してターゲット要素がどのくらい見えているかという変化を監視したいので、<code>root</code> は <code>null</code> にします。マージンは必要がないので、マージンオフセットである <code>rootMargin</code> 設定は "0px" と指定しています。これによって、オブザーバーは追加された (もしくは差し引かれた) スペースがなくてもターゲット要素の境界とビューポートの境界の交差点がどう変化するのか監視を開始することが出来ます。</p>
 
-<p>視認率の閾値のリストである、<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">threshold</span></font>は関数 <code>buildThresholdList()</code> によって構成されます。閾値のリストは、この例ではプラグラムによって計算されています。その数が意図的に調整可能だからです。</p>
+<p>視認率の閾値のリストである、<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">threshold</span></font>は関数 <code>buildThresholdList()</code> によって構成されます。閾値のリストは、この例ではプログラムによって計算されています。その数が意図的に調整可能だからです。</p>
 
 <p><code>options</code> が用意できたら、新しいオブザーバーを作成、つまり{{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} のコンストラクタを呼び出して、閾値をまたいだ際に呼ばれる関数 <code>handleIntersect()</code> を指定し、オプションを指定します。次に、返されたオブザーバーに対して {{domxref("IntersectionObserver.observe", "observe()")}} を呼び出し、必要なターゲット要素を渡します。</p>
 

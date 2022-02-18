@@ -1,12 +1,8 @@
 ---
 title: skewY()
 slug: Web/CSS/transform-function/skewY()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/skewY()
+browser-compat: css.types.transform-function.skewY
 ---
 {{CSSRef}}
 
@@ -14,16 +10,18 @@ La fonction **`skewY()`** permet d'opérer une distorsion verticale en étirant 
 
 {{EmbedInteractiveExample("pages/css/function-skewY.html")}}
 
-La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.
+La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
 ## Syntaxe
 
-    skewY(a)
+```css
+skewY(a)
+```
 
 ### Valeurs
 
 - `a`
-  - : Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle avec lequel appliquer la distorsion selon l'axe des ordonnées (axe vertical).
+  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle avec lequel appliquer la distorsion selon l'axe des ordonnées (axe vertical).
 
 <table class="standard-table">
   <thead>
@@ -94,22 +92,22 @@ La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-functi
 ### HTML
 
 ```html
-<p>toto</p>
-<p class="transformation">truc</p>
+<div>Normal</div>
+<div class="skewed">Distordu</div>
 ```
 
 ### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
 }
 
-.transformation {
+.skewed {
   transform: skewY(40deg);
-  background-color: blue;
+  background-color: pink;
 }
 ```
 
@@ -119,15 +117,13 @@ p {
 
 ## Specifications
 
-| Spécification                                                                                | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS3 Transforms", "#funcdef-transform-skewy", "skewY()")}} | {{Spec2("CSS3 Transforms")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)

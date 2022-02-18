@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 
 <p><code><strong>exec() </strong></code>方法在一个指定字符串中执行一个搜索匹配。返回一个结果数组或 {{jsxref("null")}}。</p>
 
-<p>在设置了 {{jsxref("RegExp.global", "global")}} 或 {{jsxref("RegExp.sticky", "sticky")}} 标志位的情况下（如 <code>/foo/g</code> or <code>/foo/y</code>），JavaScript {{jsxref("RegExp")}} 对象是<strong>有状态</strong>的。他们会将上次成功匹配后的位置记录在 <span style="font-size: 1rem; letter-spacing: -0.00278rem;">{{jsxref("RegExp.lastIndex", "lastIndex")}} 属性中。使用此特性，</span><code style="font-size: 1rem; letter-spacing: -0.00278rem;">exec()</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> 可用来对单个字符串中的多次匹配结果进行逐条的遍历（包括捕获到的匹配），而相比之下， {{jsxref("String.prototype.match()")}} 只会返回匹配到的结果。</span></p>
+<p>在设置了 {{jsxref("RegExp.global", "global")}} 或 {{jsxref("RegExp.sticky", "sticky")}} 标志位的情况下（如 <code>/foo/g</code> or <code>/foo/y</code>），JavaScript {{jsxref("RegExp")}} 对象是<strong>有状态</strong>的。他们会将上次成功匹配后的位置记录在 {{jsxref("RegExp.lastIndex", "lastIndex")}} 属性中。使用此特性，<code>exec()</code> 可用来对单个字符串中的多次匹配结果进行逐条的遍历（包括捕获到的匹配），而相比之下， {{jsxref("String.prototype.match()")}} 只会返回匹配到的结果。</p>
 
 <p>如果你只是为了判断是否匹配（true或 false），可以使用 {{jsxref("RegExp.test()")}} 方法，或者 {{jsxref("String.search()")}} 方法。</p>
 
@@ -22,18 +22,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><var>regexObj</var>.exec(<var>str</var>)</pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>str</code></dt>
  <dd>要匹配正则表达式的字符串。</dd>
 </dl>
 
-<h3 id="Description" name="Description">返回值</h3>
+<h3 id="Description">返回值</h3>
 
 <p>如果匹配成功，<code>exec()</code> 方法返回一个数组（包含额外的属性 <code>index</code> 和 <code>input</code> ，参见下方表格），并更新正则表达式对象的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 属性。完全匹配成功的文本将作为返回数组的第一项，从第二项起，后续每项都对应正则表达式内捕获括号里匹配成功的文本。</p>
 
@@ -55,10 +55,10 @@ var result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
 <table class="fullwidth-table">
  <tbody>
   <tr>
-   <td class="header">对象</td>
-   <td class="header">属性/索引</td>
-   <td class="header">描述</td>
-   <td class="header">例子</td>
+   <th>对象</th>
+   <th>属性/索引</th>
+   <th>描述</th>
+   <th>例子</th>
   </tr>
   <tr>
    <td rowspan="4"><code>result</code></td>
@@ -137,8 +137,8 @@ while ((myArray = myRe.exec(str)) !== null) {
 Found ab. Next match starts at 9
 </pre>
 
-<div class="blockIndicator warning">
-<p>注意：不要把正则表达式字面量（或者{{jsxref("RegExp")}}构造器）放在 <code>while</code> 条件表达式里。由于每次迭代时 {{jsxref("RegExp.lastIndex", "lastIndex")}} 的属性都被重置，如果匹配，将会造成一个死循环。并且要确保使用了'g'标记来进行全局的匹配，否则同样会造成死循环。</p>
+<div class="warning">
+<p><strong>警告：</strong>不要把正则表达式字面量（或者{{jsxref("RegExp")}}构造器）放在 <code>while</code> 条件表达式里。由于每次迭代时 {{jsxref("RegExp.lastIndex", "lastIndex")}} 的属性都被重置，如果匹配，将会造成一个死循环。并且要确保使用了'g'标记来进行全局的匹配，否则同样会造成死循环。</p>
 </div>
 
 <h3 id="结合_RegExp_字面量使用_exec">结合 <code>RegExp</code> 字面量使用 <code>exec()</code></h3>

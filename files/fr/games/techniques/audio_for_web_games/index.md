@@ -23,7 +23,7 @@ Les plateformes mobiles sont de loin les plateformes où il est le plus difficil
 
 Beaucoup de navigateurs mobiles vont simplement ignorer n'importe quelle requête de lancement automatique de musique faite par votre jeu; à la place, l'utilisateur va être obligé de lancer lui même la lecture via une action quelconque. Cela signifie que vous allez devoir prendre en compte cette diférence lors de l'implementation de votre lecture automatique. Ce problème est généralement atténué en chargeant l'audio à l'avance et en l'amorçant sur un événement initié par l'utilisateur.
 
-Pour une lecture automatique audio plus passive, par exemple une musique de fond qui commence dès qu'un jeu se charge, une astuce consiste à détecter l'événement \* any \* initié par l'utilisateur et à démarrer la lecture. Pour d'autres sons plus actifs qui seront utilisés pendant le jeu, nous pouvons envisager de les amorcer dès que l'on appuie sur un bouton de démarrage.
+Pour une lecture automatique audio plus passive, par exemple une musique de fond qui commence dès qu'un jeu se charge, une astuce consiste à détecter l'événement `any` initié par l'utilisateur et à démarrer la lecture. Pour d'autres sons plus actifs qui seront utilisés pendant le jeu, nous pouvons envisager de les amorcer dès que l'on appuie sur un bouton de démarrage.
 
 Pour faire primer l'audio de cette façon, nous voulons en jouer une partie ; pour cette raison, il est utile d'inclure un moment de silence à la fin de votre échantillon audio. Ce silence signifiera que nous pouvons maintenant utiliser JavaScript pour lire ce fichier à des points arbitraires.
 

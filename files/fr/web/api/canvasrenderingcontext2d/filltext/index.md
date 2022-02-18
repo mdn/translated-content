@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillText
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.fillText()`\*_ de l'API Canvas 2D écrit un texte donné à la position _(x, y)\* donnée. Si le quatrième paramètre optionnel donnant une largeur maximum est fourni, le texte sera mis à l'échelle pour s'adapter à cette largeur.
+La méthode **`CanvasRenderingContext2D.fillText()`** de l'API Canvas 2D écrit un texte donné à la position _(x, y)_ donnée. Si le quatrième paramètre optionnel donnant une largeur maximum est fourni, le texte sera mis à l'échelle pour s'adapter à cette largeur.
 
 Voir aussi la méthode {{domxref("CanvasRenderingContext2D.strokeText()")}} pour dessiner un texte mis en forme.
 

@@ -3,12 +3,12 @@ title: <image>
 slug: Web/CSS/image
 tags:
   - CSS
-  - CSS Data Type
+  - CSS データ型
   - CSS 画像
-  - Data Type
+  - データ型
   - グラフィック
-  - Layout
-  - Reference
+  - レイアウト
+  - リファレンス
   - ウェブ
 browser-compat: css.types.image
 translation_of: Web/CSS/image
@@ -36,7 +36,6 @@ CSS はさまざま種類の画像を扱うことができます。
 - 単一のファイルの中に複数のバージョンが存在する、*複数の自身の寸法*を持つ画像。 (この場合、自身の寸法は領域に収まる最も大きな画像であり、かつ縦横比が包含ボックスに最も近いものになります。)
 - SVG またはその他の[ベクター形式](https://ja.wikipedia.org/wiki/ベクター画像)の画像のように、自身の寸法を持たないが、幅と高さの間に自身の縦横比のある画像。
 - CSS グラデーションなど、*自身の寸法がなく、固有の縦横比もない*画像。
-</ul>
 
 CSS はオブジェクトの*実際の*寸法を、 (1) *自身の寸法*、 (2) CSS の {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("background-size")}} などのプロパティで定義された*指定の寸法*、 (3) 画像が使用されるプロパティの種類によって指定された、以下のような*既定の寸法*によって特定します。
 

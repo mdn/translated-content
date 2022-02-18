@@ -3249,7 +3249,7 @@
       "kevin-loal98"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-07-28T01:53:21.821Z",
     "contributors": [
       "Fernando-Funes",
@@ -3266,25 +3266,6 @@
       "jorgeCaster",
       "pmiranda-geo",
       "Enesimus"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-08-08T09:41:13.386Z",
-    "contributors": [
-      "Nachec",
-      "andyesp",
-      "Fernando-Funes",
-      "jhonarielgj",
-      "rimbener",
-      "ReneAG",
-      "EnekoOdoo",
-      "ivanagui2",
-      "cristianmarquezp",
-      "djdouta",
-      "paulaco",
-      "martinGerez",
-      "anyruizd",
-      "Michelangeur"
     ]
   },
   "Learn/JavaScript/Objects/Object_building_practice": {
@@ -4762,6 +4743,12 @@
       "IngoBongo"
     ]
   },
+  "Web/API/Animation/cancel_event": {
+    "modified": "2019-03-23T22:05:09.237Z",
+    "contributors": [
+      "IngoBongo"
+    ]
+  },
   "Web/API/Animation/currentTime": {
     "modified": "2019-03-23T22:05:12.506Z",
     "contributors": [
@@ -4780,6 +4767,12 @@
       "IngoBongo"
     ]
   },
+  "Web/API/Animation/finish_event": {
+    "modified": "2019-03-23T22:05:11.188Z",
+    "contributors": [
+      "IngoBongo"
+    ]
+  },
   "Web/API/Animation/finished": {
     "modified": "2019-03-23T22:05:06.573Z",
     "contributors": [
@@ -4788,18 +4781,6 @@
   },
   "Web/API/Animation/id": {
     "modified": "2019-03-18T21:15:30.202Z",
-    "contributors": [
-      "IngoBongo"
-    ]
-  },
-  "Web/API/Animation/oncancel": {
-    "modified": "2019-03-23T22:05:09.237Z",
-    "contributors": [
-      "IngoBongo"
-    ]
-  },
-  "Web/API/Animation/onfinish": {
-    "modified": "2019-03-23T22:05:11.188Z",
     "contributors": [
       "IngoBongo"
     ]
@@ -4918,6 +4899,14 @@
       "palfrei"
     ]
   },
+  "Web/API/BatteryManager/chargingchange_event": {
+    "modified": "2019-03-23T23:25:06.308Z",
+    "contributors": [
+      "fscholz",
+      "Pau_Ilargia",
+      "voylinux"
+    ]
+  },
   "Web/API/BatteryManager/dischargingTime": {
     "modified": "2019-03-23T23:27:15.312Z",
     "contributors": [
@@ -4937,15 +4926,7 @@
       "voylinux"
     ]
   },
-  "Web/API/BatteryManager/onchargingchange": {
-    "modified": "2019-03-23T23:25:06.308Z",
-    "contributors": [
-      "fscholz",
-      "Pau_Ilargia",
-      "voylinux"
-    ]
-  },
-  "Web/API/BatteryManager/onlevelchange": {
+  "Web/API/BatteryManager/levelchange_event": {
     "modified": "2019-03-23T23:25:08.174Z",
     "contributors": [
       "fscholz",
@@ -8585,7 +8566,7 @@
       "FLAVIOALFA"
     ]
   },
-  "Web/API/WebSocket/onerror": {
+  "Web/API/WebSocket/error_event": {
     "modified": "2020-10-15T22:13:54.439Z",
     "contributors": [
       "Bumxu"
@@ -9161,7 +9142,7 @@
       "darioperez"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
+  "Web/API/XMLHttpRequest/readystatechange_event": {
     "modified": "2019-03-23T22:20:14.868Z",
     "contributors": [
       "Sheppy",
@@ -9358,13 +9339,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role": {
-    "modified": "2019-03-18T21:31:32.978Z",
-    "contributors": [
-      "IsraelFloresDGA",
-      "mayrars"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role": {
     "modified": "2019-08-28T12:48:39.532Z",
     "contributors": [
@@ -9387,6 +9361,13 @@
     "contributors": [
       "IsraelFloresDGA",
       "Karla_Glez"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/alert_role": {
+    "modified": "2019-03-18T21:31:32.978Z",
+    "contributors": [
+      "IsraelFloresDGA",
+      "mayrars"
     ]
   },
   "Web/Accessibility/ARIA/forms": {
@@ -9649,13 +9630,6 @@
       "AlePerez92",
       "teoli",
       "natav",
-      "pekechis"
-    ]
-  },
-  "Web/CSS/-webkit-print-color-adjust": {
-    "modified": "2019-03-23T22:35:50.908Z",
-    "contributors": [
-      "teoli",
       "pekechis"
     ]
   },
@@ -12895,6 +12869,13 @@
       "teoli",
       "Mgjbot",
       "HenryGR"
+    ]
+  },
+  "Web/CSS/print-color-adjust": {
+    "modified": "2019-03-23T22:35:50.908Z",
+    "contributors": [
+      "teoli",
+      "pekechis"
     ]
   },
   "Web/CSS/quotes": {
@@ -21212,6 +21193,25 @@
       "arpunk",
       "inma_610",
       "StripTM"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-08-08T09:41:13.386Z",
+    "contributors": [
+      "Nachec",
+      "andyesp",
+      "Fernando-Funes",
+      "jhonarielgj",
+      "rimbener",
+      "ReneAG",
+      "EnekoOdoo",
+      "ivanagui2",
+      "cristianmarquezp",
+      "djdouta",
+      "paulaco",
+      "martinGerez",
+      "anyruizd",
+      "Michelangeur"
     ]
   },
   "conflicting/MDN/Contribute/Getting_started": {

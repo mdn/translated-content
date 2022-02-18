@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Statements/let
 
 <h2 id="語法">語法</h2>
 
-<pre class="syntaxbox notranslate">let var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]];</pre>
+<pre class="syntaxbox">let var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]];</pre>
 
 <h3 id="參數">參數</h3>
 
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Statements/let
 
 <p>宣告 <code>let</code> 的作用範圍是它們被定義的區塊，以及該區塊包含的子區塊。這樣看起來功能跟 <strong><code>var</code></strong> 很相似。主要不同的地方在於 <strong><code>var</code></strong> 作用範圍是「整個」function：</p>
 
-<pre class="brush:js notranslate">function varTest() {
+<pre class="brush:js">function varTest() {
   var x = 1;
   {
     var x = 2;  // 這裡的 x 與 function 區塊內部的 x 是一樣的，因此會影響 function 區塊內所有的 x
@@ -52,7 +52,7 @@ function letTest() {
 
 <p>在上列例子裡的最前行 <code>let</code> 和 <code>var</code> 不同，<code>let</code> 並不會在全域物件中建立變數。舉例來說：</p>
 
-<pre class="brush:js notranslate">var x = 'global';
+<pre class="brush:js">var x = 'global';
 let y = 'global';
 console.log(this.x); // "global"
 console.log(this.y); // undefined
@@ -62,7 +62,7 @@ console.log(this.y); // undefined
 
 <p>In dealing with <a href="/en-US/docs/Glossary/Constructor">constructors</a> it is possible to use the <strong><code>let</code></strong> bindings to share one or more private members without using <a href="/en-US/docs/Web/JavaScript/Closures">closures</a>:</p>
 
-<pre class="brush:js notranslate">var Thing;
+<pre class="brush:js">var Thing;
 
 {
   let privateScope = new WeakMap();
@@ -104,21 +104,21 @@ thing.showPrivate();
 
 <p>Redeclaring the same variable within the same function or block scope raises a {{jsxref("SyntaxError")}}.</p>
 
-<pre class="brush: js example-bad notranslate">if (x) {
+<pre class="brush: js example-bad">if (x) {
   let foo;
   let foo; // SyntaxError thrown.
 }</pre>
 
 <p>In ECMAScript 2015, <strong><code>let</code></strong> bindings are not subject to <strong>Variable Hoisting</strong>, which means that <strong><code>let</code></strong> declarations do not move to the top of the current execution context. Referencing the variable in the block before the initialization results in a <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a></code> (contrary to a variable declared with <a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var</a>, which will just have the undefined value). The variable is in a "temporal dead zone" from the start of the block until the initialization is processed.</p>
 
-<pre class="brush: js notranslate">function do_something() {
+<pre class="brush: js">function do_something() {
   console.log(foo); // ReferenceError
   let foo = 2;
 }</pre>
 
 <p>你可能會在 <a href="https://developer.mozilla.org/zh-TW/docs/JavaScript/Reference/Statements/switch" title="switch"><code>switch</code></a> 中遇到錯誤，因為所有的 <code>case</code> 都屬於同樣的區塊中。</p>
 
-<pre class="brush: js notranslate">switch (x) {
+<pre class="brush: js">switch (x) {
   case 0:
     let foo;
     break;
@@ -132,7 +132,7 @@ thing.showPrivate();
 
 <p>You can use the <code>let</code> keyword to bind variables locally in the scope of <code>for</code> loops. This is different from the var keyword in the head of a for loop, which makes the variables visible in the whole function containing the loop.</p>
 
-<pre class="brush:js notranslate">var i=0;
+<pre class="brush:js">var i=0;
 for ( let i=i ; i &lt; 10 ; i++ ) {
   console.log(i);
 }
@@ -140,7 +140,7 @@ for ( let i=i ; i &lt; 10 ; i++ ) {
 
 <p>However, it's important to point out that a block nested inside a case clause will create a new block scoped lexical environment, which will not produce the redeclaration errors shown above.</p>
 
-<pre class="brush: js notranslate">let x = 1;
+<pre class="brush: js">let x = 1;
 
 switch(x) {
   case 0: {
@@ -157,7 +157,7 @@ switch(x) {
 
 <p>Unlike with simply undeclared variables and variables that hold a value of <code>undefined</code>, using the <code>typeof</code> operator to check for the type of a variable in that variable's TDZ will throw a <code>ReferenceError</code>:</p>
 
-<pre class="brush: js notranslate">// prints out 'undefined'
+<pre class="brush: js">// prints out 'undefined'
 console.log(typeof undeclaredVariable);
 // results in a 'ReferenceError'
 console.log(typeof i);
@@ -165,10 +165,10 @@ let i = 10;</pre>
 
 <h3 id="Another_example_of_temporal_dead_zone_combined_with_lexical_scoping">Another example of temporal dead zone combined with lexical scoping</h3>
 
-<p>Due to lexical scoping, the identifier<strong> "foo"</strong> inside the expression <code>(foo + 55)</code> evaluates to the <u>if block's foo</u>, and <strong>not</strong> the <u>overlying variable foo</u> with the value of 33.<br>
- In that very line, the <u>if block's "foo"</u> has already been created in the lexical environment, but has not yet reached (and <strong>terminated</strong>) its initialization (which is part of the statement itself): it's still in the temporal dead zone.</p>
+<p>Due to lexical scoping, the identifier<strong> "foo"</strong> inside the expression <code>(foo + 55)</code> evaluates to the <em>if block's foo</em>, and <strong>not</strong> the <em>overlying variable foo</em> with the value of 33.<br>
+ In that very line, the <em>if block's "foo"</em> has already been created in the lexical environment, but has not yet reached (and <strong>terminated</strong>) its initialization (which is part of the statement itself): it's still in the temporal dead zone.</p>
 
-<pre class="brush: js example-bad notranslate">function test(){
+<pre class="brush: js example-bad">function test(){
    var foo = 33;
    {
       let foo = (foo + 55); // ReferenceError
@@ -176,9 +176,9 @@ let i = 10;</pre>
 }
 test();</pre>
 
-<p>This phenomenon may confuse you in a situation like the following. The instruction <code>let n of n.a</code> is already inside the private scope of the <u>for loop's block</u>, hence the identifier<strong> "n.a"</strong> is resolved to the property 'a' of the <u>'n' object located in the first part of the instruction itself</u> ("let n"), which is still in the temporal dead zone since its declaration statement has not been reached and <strong>terminated</strong>.</p>
+<p>This phenomenon may confuse you in a situation like the following. The instruction <code>let n of n.a</code> is already inside the private scope of the <em>for loop's block</em>, hence the identifier<strong> "n.a"</strong> is resolved to the property 'a' of the <em>'n' object located in the first part of the instruction itself</em> ("let n"), which is still in the temporal dead zone since its declaration statement has not been reached and <strong>terminated</strong>.</p>
 
-<pre class="brush: js example-bad notranslate">function go(n) {
+<pre class="brush: js example-bad">function go(n) {
   // n here is defined!
   console.log(n); // Object {a: [1,2,3]}
 
@@ -194,7 +194,7 @@ go({a: [1, 2, 3]});
 
 <p>When used inside a block, <strong><code>let</code></strong> limits the variable's scope to that block. Note the difference between <code><strong>var</strong></code><em> </em>whose scope is inside the function where it is declared.</p>
 
-<pre class="brush: js notranslate">var a = 1;
+<pre class="brush: js">var a = 1;
 var b = 2;
 
 if (a === 1) {

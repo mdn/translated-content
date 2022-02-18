@@ -178,7 +178,7 @@ li.special {
 }
 ```
 
-Cette syntaxe signifie "s'applique à tous les éléments `li` dont l'attribut `class` a la valeur `special`\* *". Cette règle ne s'applique alors plus à l'élément `<span>` ou à tout autre élément dont l'attribut `class` a la valeur `special`* *mais* \*qui n'est pas un `<li>.` Pour que la règle s'applique aussi au `<span>`  il faudrait l'ajouter dans la liste des sélecteurs :
+Cette syntaxe signifie "s'applique à tous les éléments `li` dont l'attribut `class` a la valeur `special`". Cette règle ne s'applique alors plus à l'élément `<span>` ou à tout autre élément dont l'attribut `class` a la valeur `special` mais qui n'est pas un `<li>.` Pour que la règle s'applique aussi au `<span>` il faudrait l'ajouter dans la liste des sélecteurs :
 
 ```css
 li.special,
@@ -218,7 +218,7 @@ L'exemple live ci-dessous inclut les deux règles précédentes. Essayez d'ajou
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
-> **Note :**  A ce point, on a déjà découvert plusieurs méthodes CSS pour cibler les éléments et pourtant on vient à peine de commencer ! Nous passerons en revue plus systématiquement tous ces sélecteurs dans la leçon [CSS Selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors) du cours suivant.
+> **Note :** A ce point, on a déjà découvert plusieurs méthodes CSS pour cibler les éléments et pourtant on vient à peine de commencer ! Nous passerons en revue plus systématiquement tous ces sélecteurs dans la leçon [CSS Selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors) du cours suivant.
 
 ## Mise en forme basée sur l'état
 

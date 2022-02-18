@@ -2328,7 +2328,7 @@
       "webfelipemaia"
     ]
   },
-  "Learn/JavaScript/Objects/Inheritance": {
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-07-16T22:32:15.784Z",
     "contributors": [
       "WellingtonFR",
@@ -2341,14 +2341,6 @@
       "euvanribeiro",
       "WellingtonFR",
       "mateus1siqueira",
-      "greysonf"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-07-16T22:32:07.136Z",
-    "contributors": [
-      "rpizzolato",
-      "WellingtonFR",
       "greysonf"
     ]
   },
@@ -3703,8 +3695,29 @@
       "eliezerb"
     ]
   },
+  "Web/API/BatteryManager/chargingchange_event": {
+    "modified": "2019-03-23T23:16:56.594Z",
+    "contributors": [
+      "teoli",
+      "eliezerb"
+    ]
+  },
+  "Web/API/BatteryManager/chargingtimechange_event": {
+    "modified": "2019-03-23T23:16:56.942Z",
+    "contributors": [
+      "teoli",
+      "eliezerb"
+    ]
+  },
   "Web/API/BatteryManager/dischargingTime": {
     "modified": "2019-03-23T23:16:57.249Z",
+    "contributors": [
+      "teoli",
+      "eliezerb"
+    ]
+  },
+  "Web/API/BatteryManager/dischargingtimechange_event": {
+    "modified": "2019-03-23T23:16:54.139Z",
     "contributors": [
       "teoli",
       "eliezerb"
@@ -3717,28 +3730,7 @@
       "eliezerb"
     ]
   },
-  "Web/API/BatteryManager/onchargingchange": {
-    "modified": "2019-03-23T23:16:56.594Z",
-    "contributors": [
-      "teoli",
-      "eliezerb"
-    ]
-  },
-  "Web/API/BatteryManager/onchargingtimechange": {
-    "modified": "2019-03-23T23:16:56.942Z",
-    "contributors": [
-      "teoli",
-      "eliezerb"
-    ]
-  },
-  "Web/API/BatteryManager/ondischargingtimechange": {
-    "modified": "2019-03-23T23:16:54.139Z",
-    "contributors": [
-      "teoli",
-      "eliezerb"
-    ]
-  },
-  "Web/API/BatteryManager/onlevelchange": {
+  "Web/API/BatteryManager/levelchange_event": {
     "modified": "2019-03-23T23:16:53.281Z",
     "contributors": [
       "teoli",
@@ -6928,13 +6920,6 @@
       "gustavobeavis"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2019-03-23T22:16:58.340Z",
-    "contributors": [
-      "brunoczim",
-      "gustavobeavis"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T22:03:41.298Z",
     "contributors": [
@@ -6946,6 +6931,13 @@
     "modified": "2019-05-15T10:26:01.821Z",
     "contributors": [
       "eduardovivi",
+      "gustavobeavis"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2019-03-23T22:16:58.340Z",
+    "contributors": [
+      "brunoczim",
       "gustavobeavis"
     ]
   },
@@ -7049,13 +7041,6 @@
       "Sheppy"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role": {
-    "modified": "2019-03-23T22:50:52.511Z",
-    "contributors": [
-      "Aschlla",
-      "iCynthia"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute": {
     "modified": "2020-01-24T10:16:14.859Z",
     "contributors": [
@@ -7099,6 +7084,13 @@
     "contributors": [
       "Painatalman",
       "rafaelcavalcante"
+    ]
+  },
+  "Web/Accessibility/ARIA/Roles/alert_role": {
+    "modified": "2019-03-23T22:50:52.511Z",
+    "contributors": [
+      "Aschlla",
+      "iCynthia"
     ]
   },
   "Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ": {
@@ -16316,6 +16308,14 @@
       "acaua",
       "FilipeLinhares",
       "augustowebd"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-07-16T22:32:07.136Z",
+    "contributors": [
+      "rpizzolato",
+      "WellingtonFR",
+      "greysonf"
     ]
   },
   "conflicting/MDN/Contribute/Getting_started": {

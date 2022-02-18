@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 ---
 {{APIRef}}
 
-La propriété **`CanvasRenderingContext2D`\*\***`.globalCompositeOperation`\*\* de l'API Canvas 2D définit le type d'opération de composition à appliquer lors du tracé de nouvelles formes.
+La propriété **`CanvasRenderingContext2D.globalCompositeOperation`** de l'API Canvas 2D définit le type d'opération de composition à appliquer lors du tracé de nouvelles formes.
 
 Voir aussi [Composition et découpe](/fr/docs/Tutoriel_canvas/Composition) dans le [Tutoriel canvas](/fr/docs/Tutoriel_canvas).
 

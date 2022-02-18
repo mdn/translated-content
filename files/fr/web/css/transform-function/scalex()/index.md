@@ -1,12 +1,8 @@
 ---
 title: scaleX()
 slug: Web/CSS/transform-function/scaleX()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/scaleX()
+browser-compat: css.types.transform-function.scaleX
 ---
 {{CSSRef}}
 
@@ -16,16 +12,18 @@ La fonction **`scaleX()`** permet de modifier l'abscisse de chaque sommet de l'�
 
 `scaleX(sx)` est une notation raccourcie équivalente à `scale(sx, 1)` ou à `scale3d(sx, 1, 1)`.
 
-`scaleX(-1)` définit une symétrie axiale par rapport à un axe vertical passant par l'origine du repère (définie grâce à la propriété {{cssxref("transform-origin")}}).
+`scaleX(-1)` définit une symétrie axiale par rapport à un axe vertical passant par l'origine du repère (définie grâce à la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin)).
 
 ## Syntaxe
 
-    scaleX(s)
+```css
+scaleX(s)
+```
 
 ### Valeurs
 
 - `s`
-  - : Une valeur de type {{cssxref("&lt;number&gt;")}} qui représente le facteur d'échelle de l'homothétie.
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente le facteur d'échelle de l'homothétie.
 
 <table class="standard-table">
   <thead>
@@ -98,22 +96,22 @@ La fonction **`scaleX()`** permet de modifier l'abscisse de chaque sommet de l'�
 #### HTML
 
 ```html
-<p>toto</p>
-<p class="transformation">truc</p>
+<div>Normal</div>
+<div class="scaled">Mis à l'échelle</div>
 ```
 
 #### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
 }
 
-.transformation {
-  transform: scaleX(2);
-  background-color: blue;
+.scaled {
+  transform: scaleX(0.6);
+  background-color: pink;
 }
 ```
 
@@ -126,23 +124,23 @@ p {
 #### HTML
 
 ```html
-<p>toto</p>
-<p class="transformation">bar</p>
+<div>Normal</div>
+<div class="scaled">Mis à l'échelle</div>
 ```
 
 #### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
 }
 
-.transformation {
-  transform: scaleX(2);
+.scaled {
+  transform: scaleX(0.6);
   transform-origin: left;
-  background-color: blue;
+  background-color: pink;
 }
 ```
 
@@ -152,18 +150,16 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires        |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName("CSS3 Transforms", "#funcdef-transform-scalex", "scaleX()")}} | {{Spec2("CSS3 Transforms")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- [`scaleY()`](</fr/docs/Web/CSS/transform-function/scaleY()>)
-- [`scaleZ()`](</fr/docs/Web/CSS/transform-function/scaleZ()>)
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
-- {{cssxref("transform-origin")}}
+- [`scaleY()`](/fr/docs/Web/CSS/transform-function/scaleY())
+- [`scaleZ()`](/fr/docs/Web/CSS/transform-function/scaleZ())
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`transform-origin`](/fr/docs/Web/CSS/transform-origin)

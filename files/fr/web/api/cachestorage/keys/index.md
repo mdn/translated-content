@@ -14,7 +14,7 @@ translation_of: Web/API/CacheStorage/keys
 ---
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-La méthode **`keys`\*\***`()`\*\* de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie une liste content les chaines de caractères correspondant à tous les noms des {{domxref("Cache")}} suivient par l'objet {{domxref("CacheStorage")}}. Utilisez cette méthode pour itérer sur une liste de tous les objets {{domxref("Cache")}}.
+La méthode **`keys()`** de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie une liste content les chaines de caractères correspondant à tous les noms des {{domxref("Cache")}} suivient par l'objet {{domxref("CacheStorage")}}. Utilisez cette méthode pour itérer sur une liste de tous les objets {{domxref("Cache")}}.
 
 Vous pouvez accéder à `CacheStorage` via la propriété globale {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}}.
 

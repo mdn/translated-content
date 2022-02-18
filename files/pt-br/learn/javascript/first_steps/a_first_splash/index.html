@@ -76,7 +76,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 
 &lt;body&gt;
     &lt;h1&gt;Jogo Adivinhe um número&lt;/h1&gt;
-    &lt;p&gt;Selecionamos um número aleatório entre 1 e 100. Veja se consegue adivinhar em 10 chances ou menos. Lhe diremos se seu palpite está com valor alto ou baixo.&lt;/p&gt;
+    &lt;p&gt;Selecionamos um número aleatório entre 1 e 100. Veja se consegue adivinhar em 10 chances ou menos. Nós lhe diremos se seu palpite está com valor alto ou baixo.&lt;/p&gt;
     &lt;div class="form"&gt; &lt;label for="guessField"&gt;Digite seu palpite: &lt;/label&gt;&lt;input type="text" id="guessField" class="guessField"&gt; &lt;input type="submit" value="Enviar palpite" class="guessSubmit"&gt; &lt;/div&gt;
     &lt;div class="resultParas"&gt;
         &lt;p class="guesses"&gt;&lt;/p&gt;
@@ -268,7 +268,7 @@ var botaoReinicio;</pre>
 
 <p>Tente salvar o seu código agora e atualizá-lo no navegador.</p>
 
-<p>Vá até o <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">console JavaScript</a>, e insirá a seguinte linha:</p>
+<p>Vá até o <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">console JavaScript</a>, e insira a seguinte linha:</p>
 
 <pre class="brush: js">conferirPalpite();</pre>
 
@@ -525,7 +525,7 @@ cumprimento;</pre>
  <li>O próximo bloco (linhas 8–24 acima) fazem as seguintes conferências:
   <ul>
    <li>O primeiro <code>if(){ }</code> confere se o palpite do jogador é igual ao número aleatório (<code>numeroAleatorio</code>) definido no topo do nosso JavaScript. Se for, o jogador adivinhou corretamente o número e venceu o jogo. Então mostramos ao jogador uma mensagem de parabenização com uma agradável cor verde, limpamos o conteúdo do parágrado que informa sobre o palpite ser alto ou baixo <code>&lt;p class="baixoOuAlto"&gt;&lt;/p&gt;</code>, e executamos uma função chamada <code>configFimDeJogo()</code>, que iremos discutir mais tarde.</li>
-   <li>Agora nós encadeamos outro teste ao final deste anterior usando uma estrutura <code>else if(){ }</code>. Este confere se o palpite do jogador é sua última tentativa. Se for, o programa faz o mesmo que no bloco anterior, porém com uma mensagem de fim de jogo ao invés do texto de parabeninzação.</li>
+   <li>Agora nós encadeamos outro teste ao final deste anterior usando uma estrutura <code>else if(){ }</code>. Este confere se o palpite do jogador é sua última tentativa. Se for, o programa faz o mesmo que no bloco anterior, porém com uma mensagem de fim de jogo ao invés do texto de parabenização.</li>
    <li>O bloco final encadeado ao final do código (<code>else { }</code>) contém código que só é executado se nenhum dos outros dois testes retornar verdadeiro (ou seja, o jogador não acertou o número, porém ainda tem mais tentativas restantes). Neste caso nós dizemos a ele que está errado, e então rodamos outro teste condicional para checar se o palpite foi maior ou menor do que a resposta certa, exibindo então uma mensagem apropriada para informá-lo se foi maior ou menor.</li>
   </ul>
  </li>

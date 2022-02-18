@@ -25,7 +25,7 @@ translation_of: WebAssembly/Caching_modules
 
 <p>因为IndexedDB在一定程度上是老式风格的API，所以，我们想提供一个库函数以便加快写缓存代码的速度并使它能够更好的与当今更现代的API配合。</p>
 
-<p>在我们的<a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">wasm-utils.js</a>脚本库中，你会发现instantiateCachedURL()——该函数使用给定版本的dbVersion获取给定url的wasm模块，使用给定的importObject实例化，并且返回一个将会解析成最终的wasm实例的promise。而且，它会创建一个用来把已编译的wasm模块缓存起来的数据库，尝试在数据库中存储新的模块，并且从数据库中获取之前缓存的模块，从而使你免于再次下载它们。</p>
+<p>在我们的<a href="https://github.com/mdn/webassembly-examples/blob/gh-pages/wasm-utils.js">wasm-utils.js</a>脚本库中，你会发现instantiateCachedURL()——该函数使用给定版本的dbVersion获取给定url的wasm模块，使用给定的importObject实例化，并且返回一个将会解析成最终的wasm实例的promise。而且，它会创建一个用来把已编译的wasm模块缓存起来的数据库，尝试在数据库中存储新的模块，并且从数据库中获取之前缓存的模块，从而使你免于再次下载它们。</p>
 
 <div class="note">
 <p><strong>注</strong>： 整个网站的wasm缓存（不只是给定的URL）是通过传入到函数中的dbVersion进行版本控制的。如果wasm模块代码更新了或者它的URL发生了变化，你需要更新dbVersion。对于instantiateCachedURL()的任何后续调用将会清除掉全部的缓存，从而使你避免使用过时的模块。</p>
@@ -153,4 +153,4 @@ instantiateCachedURL(wasmCacheVersion, 'test.wasm').then(instance =&gt;
   console.error("Failure to instantiate: " + err)
 );</pre>
 
-<p>你可以在GitHub上找到这个例子的源代码 <a href="https://github.com/mdn/webassembly-examples/blob/master/other-examples/indexeddb-cache.html">indexeddb-cache.html</a> (或者<a href="https://mdn.github.io/webassembly-examples/other-examples/indexeddb-cache.html">实时运行</a>)。</p>
+<p>你可以在GitHub上找到这个例子的源代码 <a href="https://github.com/mdn/webassembly-examples/blob/gh-pages/other-examples/indexeddb-cache.html">indexeddb-cache.html</a> (或者<a href="https://mdn.github.io/webassembly-examples/other-examples/indexeddb-cache.html">实时运行</a>)。</p>

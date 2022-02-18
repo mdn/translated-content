@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/EventLoop
 ---
 <div>{{JsSidebar("Advanced")}}</div>
 
-<p><span class="seoSummary">JavaScript有一个基于<strong>事件循环</strong>的并发模型，事件循环负责执行代码、收集和处理事件以及执行队列中的子任务。</span>这个模型与其它语言中的模型截然不同，比如 C 和 Java。</p>
+<p>JavaScript有一个基于<strong>事件循环</strong>的并发模型，事件循环负责执行代码、收集和处理事件以及执行队列中的子任务。这个模型与其它语言中的模型截然不同，比如 C 和 Java。</p>
 
 <h2 id="运行时概念">运行时概念</h2>
 
@@ -21,13 +21,13 @@ translation_of: Web/JavaScript/EventLoop
 
 <h3 id="可视化描述">可视化描述</h3>
 
-<p style="text-align: center;"><img alt="Stack, heap, queue" src="https://mdn.mozillademos.org/files/17124/The_Javascript_Runtime_Environment_Example.svg" style="height: 271px; width: 295px;"></p>
+<p><img alt="Stack, heap, queue" src="https://mdn.mozillademos.org/files/17124/The_Javascript_Runtime_Environment_Example.svg"></p>
 
 <h3 id="栈">栈</h3>
 
 <p>函数调用形成了一个由若干帧组成的栈。</p>
 
-<pre class="brush: js notranslate">function foo(b) {
+<pre class="brush: js">function foo(b) {
   let a = 10;
   return a + b + 11;
 }
@@ -57,7 +57,7 @@ console.log(bar(7)); // 返回 42</pre>
 
 <p>之所以称之为 <strong>事件循环</strong>，是因为它经常按照类似如下的方式来被实现：</p>
 
-<pre class="brush: js notranslate">while (queue.waitForMessage()) {
+<pre class="brush: js">while (queue.waitForMessage()) {
   queue.processNextMessage();
 }</pre>
 
@@ -77,19 +77,19 @@ console.log(bar(7)); // 返回 42</pre>
 
 <p>下面的例子演示了这个概念（<code>setTimeout</code> 并不会在计时器到期之后直接执行）：</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">const</span> s <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">getSeconds</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js">const s = new Date().getSeconds();
 
-<span class="function token">setTimeout</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// 输出 "2"，表示回调函数并没有在 500 毫秒之后立即执行</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Ran after "</span> <span class="operator token">+</span> <span class="punctuation token">(</span><span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">getSeconds</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">-</span> s<span class="punctuation token">)</span> <span class="operator token">+</span> <span class="string token">" seconds"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="number token">500</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+setTimeout(function() {
+  // 输出 "2"，表示回调函数并没有在 500 毫秒之后立即执行
+  console.log("Ran after " + (new Date().getSeconds() - s) + " seconds");
+}, 500);
 
-<span class="keyword token">while</span><span class="punctuation token">(</span><span class="keyword token">true</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span><span class="punctuation token">(</span><span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">getSeconds</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">-</span> s <span class="operator token">&gt;=</span> <span class="number token">2</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Good, looped for 2 seconds"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">break</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+while(true) {
+  if(new Date().getSeconds() - s &gt;= 2) {
+    console.log("Good, looped for 2 seconds");
+    break;
+  }
+}</pre>
 
 <h3 id="零延迟">零延迟</h3>
 
@@ -99,7 +99,7 @@ console.log(bar(7)); // 返回 42</pre>
 
 <p>基本上，<code>setTimeout</code> 需要等待当前队列中所有的消息都处理完毕之后才能执行，即使已经超出了由第二参数所指定的时间。</p>
 
-<pre class="brush: js notranslate">(function() {
+<pre class="brush: js">(function() {
 
   console.log('这是开始');
 

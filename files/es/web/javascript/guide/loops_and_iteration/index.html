@@ -42,7 +42,7 @@ original_slug: Web/JavaScript/Guide/Bucles_e_iteración
 
 <h2 id="Declaración_for">Declaración <code>for</code></h2>
 
-<p>Un ciclo {{JSxRef("Sentencias/for", "for")}} se repite hasta que una condición especificada se evalúe como <code>false</code>. El bucle <code>for</code> de JavaScript es similar al bucle <code>for</code> de Java y C.</p>
+<p>Un ciclo {{JSxRef("Statements/for", "for")}} se repite hasta que una condición especificada se evalúe como <code>false</code>. El bucle <code>for</code> de JavaScript es similar al bucle <code>for</code> de Java y C.</p>
 
 <p>Una declaración <code>for</code> tiene el siguiente aspecto:</p>
 
@@ -100,7 +100,7 @@ btn.addEventListener('click', function() {
 
 <h2 id="Declaración_do...while">Declaración <code>do...while</code></h2>
 
-<p>La instrucción {{JSxRef("Sentencias/do...while", "do...while")}} se repite hasta que una condición especificada se evalúe como falsa.</p>
+<p>La instrucción {{JSxRef("Statements/do...while", "do...while")}} se repite hasta que una condición especificada se evalúe como falsa.</p>
 
 <p>Una declaración <code>do...while</code> tiene el siguiente aspecto:</p>
 
@@ -121,7 +121,7 @@ while (condición);
 
 <h2 id="Declaración_while">Declaración <code>while</code></h2>
 
-<p>Una declaración {{JSxRef("Sentencias/while", "while")}} ejecuta sus instrucciones siempre que una condición especificada se evalúe como <code>true</code>. Una instrucción <code>while</code> tiene el siguiente aspecto:</p>
+<p>Una declaración {{JSxRef("Statements/while", "while")}} ejecuta sus instrucciones siempre que una condición especificada se evalúe como <code>true</code>. Una instrucción <code>while</code> tiene el siguiente aspecto:</p>
 
 <pre class="syntaxbox notranslate">while (<em>condición</em>)
   <em>expresión</em>
@@ -164,7 +164,7 @@ while (true) {
 
 <h2 id="Declaración_labeled">Declaración <code>labeled</code></h2>
 
-<p>Una {{JSxRef("Sentencias/label", "label")}} proporciona una instrucción con un identificador que te permite hacer referencia a ella en otra parte de tu programa. Por ejemplo, puedes usar una etiqueta para identificar un bucle y luego usar las declaraciones <code>break</code> o <code>continue</code> para indicar si un programa debe interrumpir el bucle o continuar su ejecución.La sintaxis de la instrucción etiquetada es similar a la siguiente:label : instrucción</p>
+<p>Una {{JSxRef("Statements/label", "label")}} proporciona una instrucción con un identificador que te permite hacer referencia a ella en otra parte de tu programa. Por ejemplo, puedes usar una etiqueta para identificar un bucle y luego usar las declaraciones <code>break</code> o <code>continue</code> para indicar si un programa debe interrumpir el bucle o continuar su ejecución.La sintaxis de la instrucción etiquetada es similar a la siguiente:label : instrucción</p>
 
 <p>El valor de <code><em>label</em></code> puede ser cualquier identificador de JavaScript que no sea una palabra reservada. La <code><em>declaración</em></code> que identifica a una etiqueta puede ser cualquier enunciado.</p>
 
@@ -176,7 +176,7 @@ while (true) {
 
 <p>Declaración <code>break</code></p>
 
-<p>Usa la instrucción {{JSxRef("Sentencias/break", "break")}} para terminar un bucle, <code>switch</code> o junto con una declaración etiquetada.</p>
+<p>Usa la instrucción {{JSxRef("Statements/break", "break")}} para terminar un bucle, <code>switch</code> o junto con una declaración etiquetada.</p>
 
 <ul>
  <li>Cuando usas <code>break</code> sin una etiqueta, inmediatamente termina el <code>while</code>, <code>do-while</code>, <code>for</code> o <code>switch</code> y transfiere el control a la siguiente declaración.</li>
@@ -226,7 +226,7 @@ labelCancelLoops: while (true) {
 
 <h2 id="Declaración_continue">Declaración <code>continue</code></h2>
 
-<p>La instrucción {{JSxRef("Sentencias/continue", "continue")}} se puede usar para reiniciar un <code>while</code>, <code>do-while</code>, <code>for</code>, o declaración <code>label</code>.</p>
+<p>La instrucción {{JSxRef("Statements/continue", "continue")}} se puede usar para reiniciar un <code>while</code>, <code>do-while</code>, <code>for</code>, o declaración <code>label</code>.</p>
 
 <ul>
  <li>Cuando utilizas <code>continue</code> sin una etiqueta, finaliza la iteración actual del <code>while</code>, <code>do-while</code> o <code>for</code> y continúa la ejecución del bucle con la siguiente iteración. A diferencia de la instrucción <code>break</code>, <code>continue</code> no termina la ejecución del bucle por completo. En un bucle <code>while</code>, vuelve a la condición. En un bucle <code>for</code>, salta a la <code>expresión-incremento</code>.</li>
@@ -278,7 +278,7 @@ while (i &lt; 5) {
 
 <h2 id="Declaración_for...in">Declaración <code>for...in</code></h2>
 
-<p>La instrucción {{JSxRef("Sentencias/for...in", "for...in")}} itera una variable especificada sobre todas las propiedades enumerables de un objeto. Para cada propiedad distinta, JavaScript ejecuta las instrucciones especificadas. Una declaración <code>for...in</code> tiene el siguiente aspecto:</p>
+<p>La instrucción {{JSxRef("Statements/for...in", "for...in")}} itera una variable especificada sobre todas las propiedades enumerables de un objeto. Para cada propiedad distinta, JavaScript ejecuta las instrucciones especificadas. Una declaración <code>for...in</code> tiene el siguiente aspecto:</p>
 
 <pre class="syntaxbox notranslate">for (variable in objeto)
   instrucción
@@ -308,17 +308,17 @@ car.model = Mustang
 
 <p>Aunque puede ser tentador usar esto como una forma de iterar sobre los elementos {{JSxRef("Array")}}, la instrucción <code>for...in</code> devolverá el nombre de sus propiedades definidas por el usuario además de los índices numéricos.</p>
 
-<p>Por lo tanto, es mejor usar un bucle {{JSxRef("Sentencias/for", "for")}} tradicional con un índice numérico cuando se itera sobre arreglos, porque la instrucción <code>for...in</code> itera sobre las propiedades definidas por el usuario además de los elementos del arreglo, si modificas el objeto <code>Array</code> (tal como agregar propiedades o métodos personalizados).</p>
+<p>Por lo tanto, es mejor usar un bucle {{JSxRef("Statements/for", "for")}} tradicional con un índice numérico cuando se itera sobre arreglos, porque la instrucción <code>for...in</code> itera sobre las propiedades definidas por el usuario además de los elementos del arreglo, si modificas el objeto <code>Array</code> (tal como agregar propiedades o métodos personalizados).</p>
 
 <h2 id="Declaración_for...of">Declaración <code>for...of</code></h2>
 
-<p>La declaración {{JSxRef("Sentencias/for...of", "for...of")}} crea un bucle que se repite sobre {{JSxRef("../Guide/iterable", "objetos iterables")}} (incluidos {{JSxRef("Array")}}, {{JSxRef("Map")}}, {{JSxRef("Set")}}, objetos {{JSxRef("Funciones/arguments", "arguments")}} y así sucesivamente), invocando un gancho de iteración personalizado con declaraciones que se ejecutarán para el valor de cada distinta propiedad.</p>
+<p>La declaración {{JSxRef("Statements/for...of", "for...of")}} crea un bucle que se repite sobre <a href="/es/docs/Web/JavaScript/Reference/Iteration_protocols">objetos iterables</a> (incluidos {{JSxRef("Array")}}, {{JSxRef("Map")}}, {{JSxRef("Set")}}, objetos {{JSxRef("Functions/arguments", "arguments")}} y así sucesivamente), invocando un bucle de iteración personalizado con declaraciones que se ejecutarán para el valor de cada distinta propiedad.</p>
 
-<pre class="syntaxbox notranslate">para (<em>variable</em> of <em>objeto</em>)
+<pre class="syntaxbox notranslate">for (<em>variable</em> of <em>objeto</em>)
   <em>expresión</em>
 </pre>
 
-<p>El siguiente ejemplo muestra la diferencia entre un bucle for<code>...in</code> y un bucle {{JSxRef("Sentencias/for...in", "for...in")}}. Mientras que <code>for...in</code> itera sobre los nombres de propiedad, <code>for...of</code> itera sobre los valores de propiedad:</p>
+<p>El siguiente ejemplo muestra la diferencia entre un bucle <code>for...of</code> y un bucle {{JSxRef("Statements/for...in", "for...in")}}. Mientras que <code>for...in</code> itera sobre los nombres de propiedad, <code>for...of</code> itera sobre los valores de propiedad:</p>
 
 <pre class="brush:js notranslate">const arr = [3, 5, 7];
 arr.foo = 'hola';

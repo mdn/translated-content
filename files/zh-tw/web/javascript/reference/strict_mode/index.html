@@ -17,8 +17,8 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 
 <p>參考 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode">過渡到嚴格模式</a>，如果你希望將你的程式碼在  JavaScript 語法嚴格、語法受限下執行。</p>
 
-<div class="note">
-<p>Sometimes, you'll see the default, non-strict, mode referred to as "sloppy mode". This isn't an official term, but be aware of it, just in case.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> Sometimes, you'll see the default, non-strict, mode referred to as "sloppy mode". This isn't an official term, but be aware of it, just in case.</p>
 </div>
 
 <h2 id="用法">用法</h2>
@@ -98,8 +98,8 @@ delete Object.prototype; // throws a TypeError
 
 <p>Fourth, strict mode prior to Gecko 34 requires that all properties named in an object literal be unique. Normal code may duplicate property names, with the last one determining the property's value. But since only the last one does anything, the duplication is simply a vector for bugs, if the code is modified to change the property value other than by changing the last instance. Duplicate property names are a syntax error in strict mode:</p>
 
-<div class="note">
-<p>This is no longer the case in ECMAScript 2015 ({{bug(1041128)}}).</p>
+<div class="notecard note">
+<p><strong>Note:</strong> This is no longer the case in ECMAScript 2015 ({{bug(1041128)}}).</p>
 </div>
 
 <pre class="brush: js">'use strict';

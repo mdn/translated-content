@@ -13,11 +13,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/NaN
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}</div>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>NaN</code> 是一个<em>全局对象</em>的属性。</p>
 
-<p><font face="monospace">NaN </font>属性的初始值就是 NaN，和 {{jsxref("Number.NaN")}} 的值一样。在现代浏览器中（ES5中）， <code>NaN</code> 属性是一个不可配置（non-configurable），不可写（non-writable）的属性。但在ES3中，这个属性的值是可以被更改的，但是也应该避免覆盖。</p>
+<p><code>NaN </code>属性的初始值就是 NaN，和 {{jsxref("Number.NaN")}} 的值一样。在现代浏览器中（ES5中）， <code>NaN</code> 属性是一个不可配置（non-configurable），不可写（non-writable）的属性。但在ES3中，这个属性的值是可以被更改的，但是也应该避免覆盖。</p>
 
 <p>编码中很少直接使用<code>到 NaN</code>。通常都是在计算失败时，作为 Math 的某个方法的返回值出现的（例如：<code>Math.sqrt(-1)</code>）或者尝试将一个字符串解析成数字但失败了的时候（例如：<code>parseInt("blabla")</code>）。</p>
 
@@ -40,7 +40,7 @@ valueIsNaN(Number.NaN); // true</pre>
 <pre><code>isNaN('hello world');        // true
 Number.isNaN('hello world'); // false</code></pre>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <thead>
@@ -55,11 +55,11 @@ Number.isNaN('hello world'); // false</code></pre>
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.builtins.NaN")}}</p>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Number.NaN")}}</li>

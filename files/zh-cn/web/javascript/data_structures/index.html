@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Data_structures
 
 <p>JavaScript 是一种<strong>弱类型</strong>或者说<strong>动态</strong>语言。这意味着你不用提前声明变量的类型，在程序运行过程中，类型会被自动确定。这也意味着你可以使用同一个变量保存不同类型的数据：</p>
 
-<pre class="brush: js notranslate">var foo = 42;    // foo is a Number now
+<pre class="brush: js">var foo = 42;    // foo is a Number now
 foo = "bar"; // foo is a String now
 foo = true;  // foo is a Boolean now
 </pre>
@@ -60,13 +60,13 @@ foo = true;  // foo is a Boolean now
 
 <h3 id="数字类型">数字类型</h3>
 
-<p>根据 ECMAScript 标准，JavaScript 中只有一种数字类型：基于 IEEE 754 标准的双精度 64 位二进制格式的值（-(2<sup>53</sup> -1) 到 2<sup>53</sup> -1）。<strong>它并没有为整数给出一种特定的类型</strong>。除了能够表示浮点数外，还有一些带符号的值：<code>+Infinity</code>，<code>-Infinity</code> 和 <code>NaN</code> (非数值，Not-a-Number)。</p>
+<p>根据 ECMAScript 标准，JavaScript 中只有一种数字类型：基于 IEEE 754 标准的双精度 64 位二进制格式的值（-(2^53 -1) 到 2^53 -1）。<strong>它并没有为整数给出一种特定的类型</strong>。除了能够表示浮点数外，还有一些带符号的值：<code>+Infinity</code>，<code>-Infinity</code> 和 <code>NaN</code> (非数值，Not-a-Number)。</p>
 
 <p>要检查值是否大于或小于 <code>+/-Infinity</code>，你可以使用常量 {{jsxref("Number.MAX_VALUE")}} 和 {{jsxref("Number.MIN_VALUE")}}。另外在 ECMAScript 6 中，你也可以通过 {{jsxref("Number.isSafeInteger()")}} 方法还有 {{jsxref("Number.MAX_SAFE_INTEGER")}} 和 {{jsxref("Number.MIN_SAFE_INTEGER")}} 来检查值是否在双精度浮点数的取值范围内。 超出这个范围，JavaScript 中的数字不再安全了，也就是只有 second mathematical interger 可以在 JavaScript 数字类型中正确表现。</p>
 
 <p>数字类型中只有一个整数有两种表示方法： 0 可表示为 -0 和 +0（"0" 是 +0 的简写）。 在实践中，这也几乎没有影响。 例如 <code>+0 === -0</code> 为真。 但是，你可能要注意除以0的时候：</p>
 
-<pre class="brush: js notranslate">42 / +0; // Infinity
+<pre class="brush: js">42 / +0; // Infinity
 42 / -0; // -Infinity
 </pre>
 
@@ -78,15 +78,15 @@ foo = true;  // foo is a Boolean now
 
 <p>通过使用常量{{jsxref("Number.MAX_SAFE_INTEGER")}}，您可以获得可以用数字递增的最安全的值。通过引入 BigInt，您可以操作超过{{jsxref("Number.MAX_SAFE_INTEGER")}}的数字。您可以在下面的示例中观察到这一点，其中递增{{jsxref("Number.MAX_SAFE_INTEGER")}}会返回预期的结果:</p>
 
-<pre class="notranslate"><code>&gt; const x = 2n ** 53n;
+<pre><code>&gt; const x = 2n ** 53n;
 9007199254740992n
 &gt; const y = x + 1n;
 9007199254740993n</code>
 </pre>
 
-<p>可以对<code>BigInt</code>使用运算符<code>+<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font></code><code>*<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font></code><code>-<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font></code><code>**</code>和<code>%</code>，就像对数字一样。BigInt 严格来说并不等于一个数字，但它是松散的。</p>
+<p>可以对<code>BigInt</code>使用运算符<code>+</code>、<code>*</code>、<code>-</code>、<code>**</code>和<code>%</code>，就像对数字一样。BigInt 严格来说并不等于一个数字，但它是松散的。</p>
 
-<p>在将<code>BigInt</code>转换为<code>Boolean</code>时，它的行为类似于一个数字：<code>if<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font></code><code>||<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font></code><code>&amp;&amp;<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font></code><code>Boolean<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;"> 和</span></font></code><code>!。</code></p>
+<p>在将<code>BigInt</code>转换为<code>Boolean</code>时，它的行为类似于一个数字：<code>if</code>、<code>||</code>、<code>&amp;&amp;</code>、<code>Boolean</code> 和<code>!。</code></p>
 
 <p><code>BigInt</code>不能与数字互换操作。否则，将抛出{{jsxref("TypeError")}}。</p>
 
@@ -133,7 +133,7 @@ foo = true;  // foo is a Boolean now
 
 <p>数据属性是键值对，并且每个数据属性拥有下列特性:</p>
 
-<p><strong>数据属性的特性(<span style="line-height: 1.5;">Attributes of a data property)</span></strong></p>
+<p><strong>数据属性的特性(Attributes of a data property)</strong></p>
 
 <table class="standard-table">
  <tbody>
@@ -237,7 +237,7 @@ foo = true;  // foo is a Boolean now
 </table>
 
 <div class="note">
-<p>注意：这些特性只有 JavaScript 引擎才用到，因此你不能直接访问它们。所以特性被放在两对方括号中，而不是一对。</p>
+<p><strong>备注：</strong>这些特性只有 JavaScript 引擎才用到，因此你不能直接访问它们。所以特性被放在两对方括号中，而不是一对。</p>
 </div>
 
 <h3 id="标准的_对象_和函数">"标准的" 对象, 和函数</h3>

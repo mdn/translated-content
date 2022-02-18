@@ -143,7 +143,7 @@ console.log(machin);    // 4.555806215962888
 
 ### Utilisation d'exports par défaut
 
-Si on souhaite n'exporter qu'une seule valeur ou avoir une valeur de secours\* \*pour le module, on peut utiliser un export par défaut :
+Si on souhaite n'exporter qu'une seule valeur ou avoir une valeur de secours pour le module, on peut utiliser un export par défaut&nbsp;:
 
 ```js
 // module "mon-module.js"

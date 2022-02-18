@@ -48,7 +48,7 @@ button.onclick = function() {
 }
 ```
 
-{{ EmbedLiveSample('Quest_ce_quune_variable', '100%', 50) }}
+{{ EmbedLiveSample('Qu\'est_ce_qu\'une_variable_?', '100%', 50) }}
 
 Dans cet exemple, presser le bouton déclenche l'exécution de quelques lignes de code. La première ligne affiche à l'écran une boîte priant l'utilisateur de saisir son nom et stocke la valeur entrée dans une variable. La deuxième affiche un message de bienvenue avec la valeur de la variable.
 
@@ -78,7 +78,7 @@ Les variables sont essentielles et à mesure que vous en apprendrez plus sur Ja
 
 Une autre particularité des variables : elle peuvent contenir pratiquement de tout — pas uniquement des chaînes ou des nombres. Elles peuvent aussi contenir des données complexes et même des fonctions, ce qui permet de réaliser des choses étonnantes. Vous en apprendrez plus à ce propos au long de ce parcours.
 
-> **Note :** Nous disons que les variables contiennent des valeurs. C'est un distingo important. Les variables ne sont pas les valeurs elles‑mêmes : ce sont des conteneurs pour ces valeurs. Vous pouvez vous les représenter comme une boîte en carton dans laquelle il est possible de ranger des choses.
+> **Note :** Nous disons que les variables contiennent des valeurs. C'est un distingo important. Les variables ne sont pas les valeurs elles‑mêmes : ce sont des conteneurs pour ces valeurs. Vous pouvez vous les représenter comme une boîte en carton dans laquelle il est possible de ranger des choses.
 
 ![](boxes.png)
 

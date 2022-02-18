@@ -1,12 +1,8 @@
 ---
 title: rotateX()
 slug: Web/CSS/transform-function/rotateX()
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-function/rotateX()
+browser-compat: css.types.transform-function.rotateX
 ---
 {{CSSRef}}
 
@@ -14,20 +10,24 @@ La fonction **`rotateX()`** définit une transformation qui déplace l'élément
 
 {{EmbedInteractiveExample("pages/css/function-rotateX.html")}}
 
-L'axe de la rotation passe par l'origine du repère, définie par la propriété {{cssxref("transform-origin")}}.
+L'axe de la rotation passe par l'origine du repère, définie par la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin).
 
 `rotateX(a)` est une notation raccourcie, équivalente à `rotate3D(1, 0, 0, a)`.
 
-> **Note :** Contrairement aux rotations appliqués dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
+> **Note :** Contrairement aux rotations appliquées dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
 
 ## Syntaxe
 
-    rotateX(a)
+L'angle de la rotation opérée par `rotateX()` est indiquée par une valeur [`<angle>`](/fr/docs/Web/CSS/angle). Si celle-ci est positive, la rotation s'effectuera dans le sens horaire&nbsp;; si la valeur est négative elle s'effectuera dans le sens anti-horaire.
+
+```css
+rotateX(a)
+```
 
 ### Valeurs
 
 - `a`
-  - : Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
+  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/angle) qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
 
 <table class="standard-table">
   <thead>
@@ -40,11 +40,11 @@ L'axe de la rotation passe par l'origine du repère, définie par la propriété
   </thead>
   <tbody>
     <tr>
-      <td colspan="2" rowspan="2">
+      <td colspan="2">
         Cette transformation s'applique dans l'espace (3D) et ne peut pas être
         représentée en deux dimensions.
       </td>
-      <td colspan="1">
+      <td>
         <math
           ><mfenced
             ><mtable
@@ -81,22 +81,22 @@ L'axe de la rotation passe par l'origine du repère, définie par la propriété
 ### HTML
 
 ```html
-<p>toto</p>
-<p class="transformation">truc</p>
+<div>Normal</div>
+<div class="rotated">Tourné</div>
 ```
 
 ### CSS
 
 ```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
 }
 
-.transformation {
+.rotated {
   transform: rotateX(45deg);
-  background-color: blue;
+  background-color: pink;
 }
 ```
 
@@ -106,15 +106,13 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS Transforms 2", "#funcdef-rotatex", "rotateX()")}} | {{Spec2("CSS Transforms 2")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)

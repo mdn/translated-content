@@ -53,7 +53,7 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
       for (let i = 0; i < channel.length; i++) {
         channel[i] = (Math.random() * 2 - 1) *
           (parameters['customGain'].length > 1 ? parameters['customGain'][i] : parameters['customGain'][0])
-        // 참고: 매개변수는 128개의 값 (각 128 샘플에 대한 하나의 값) 을 가진 배열을 포함하지만,
+        // 참고: 파라미터는 128개의 값 (각 128 샘플에 대한 하나의 값) 을 가진 배열을 포함하지만,
         // 만약 그 순간에 자동화가 스케쥴되어 있지 않다면
         // 모든 128개의 샘플에 대해 사용될 하나의 값을 포함할 수도 있습니다.
       }

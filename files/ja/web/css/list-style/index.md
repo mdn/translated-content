@@ -5,7 +5,7 @@ tags:
   - CSS
   - CSS Lists
   - CSS プロパティ
-  - Reference
+  - リファレンス
   - recipe:css-shorthand-property
 browser-compat: css.properties.list-style
 translation_of: Web/CSS/list-style
@@ -17,7 +17,6 @@ translation_of: Web/CSS/list-style
 {{EmbedInteractiveExample("pages/css/list-style.html")}}
 
 > **Note:** このプロパティはリスト項目、すなわち `{{cssxref("display")}}: list-item;` の要素に適用されます。[既定では](https://www.w3.org/TR/html5/rendering.html#lists) {{HTMLElement("li")}} 要素が含まれます。このプロパティは継承されるので、親要素 (ふつうは {{HTMLElement("ol")}} または {{HTMLElement("ul")}}) に設定すれば、同じリストスタイルを内部のすべての項目に適用できます。
-</div>
 
 ## 構成要素のプロパティ
 
@@ -74,7 +73,7 @@ list-style: unset;
 
 この問題に対処する最も簡単な方法は、明示的に `role="list"` をマークアップ内の `<ul>` 要素に追加することです。これにより、デザインに影響を与えることなく、リストの意味を復元することができます。
 
-マークアップを変更できない場合の CSS のみの解決策もあります。一つは、それぞれのリスト項目の前に<a href="https://ja.wikipedia.org/wiki/%E3%82%BC%E3%83%AD%E5%B9%85%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9">ゼロ幅スペース</a>を[擬似コンテンツ](/ja/docs/Web/CSS/content)として追加することです。
+マークアップを変更できない場合の CSS のみの解決策もあります。一つは、それぞれのリスト項目の前に[ゼロ幅スペース](https://ja.wikipedia.org/wiki/%E3%82%BC%E3%83%AD%E5%B9%85%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9)を[擬似コンテンツ](/ja/docs/Web/CSS/content)として追加することです。
 
 ```css
 ul {

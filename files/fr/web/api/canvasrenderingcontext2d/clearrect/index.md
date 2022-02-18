@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.clearRect()`\*_ de l'API 2D des Canvas met en noir transparent tous les pixels dans le rectangle défini par le point de départ de coordonnées _(x, y)_ et par les tailles _(largeur, hauteur)\*, supprimant tout contenu précédemment dessiné.
+La méthode **`CanvasRenderingContext2D.clearRect()`** de l'API 2D des Canvas met en noir transparent tous les pixels dans le rectangle défini par le point de départ de coordonnées _(x, y)_ et par les tailles _(largeur, hauteur)_, supprimant tout contenu précédemment dessiné.
 
 ## Syntaxe
 
