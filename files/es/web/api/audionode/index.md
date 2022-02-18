@@ -1,20 +1,20 @@
 ---
 title: AudioNode
 slug: Web/API/AudioNode
-browser-compat: api.AudioNode
 translation_of: Web/API/AudioNode
 original_slug: Web/API/AudioNode
+browser-compat: api.AudioNode
 ---
 {{APIRef("Web Audio API")}}
 
-La interfaz **`AudioNode`** es una interfaz genérica para representar un módulo de procesamiento de audio.
+**`AudioNode`** es una interfaz genérica para representar un módulo de procesamiento de audio.
 
 Ejemplos que la incluyen:
 
-- una fuente de audio (por ejemplo, un elemento HTML {{HTMLElement("audio")}} o {{HTMLElement("video")}}, un {{domxref("OscillatorNode")}}, etc.),
-- el destino del audio,
-- módulo de procesamiento intermedio (por ejemplo, un filtro como {{domxref("BiquadFilterNode")}} o {{domxref("ConvolverNode")}}), o
-- control de volumen (como {{domxref("GainNode")}})
+- Una fuente de audio (por ejemplo, un elemento HTML {{HTMLElement("audio")}} o {{HTMLElement("video")}}, un {{domxref("OscillatorNode")}}, etc.),
+- El destino del audio,
+- Módulo de procesamiento intermedio (por ejemplo, un filtro como {{domxref("BiquadFilterNode")}} o {{domxref("ConvolverNode")}}), o
+- Control de volumen (como {{domxref("GainNode")}})
 
 {{InheritanceDiagram}}
 
@@ -63,7 +63,7 @@ Es libre de usar constructores o métodos de fábrica, o mezclar ambos, sin emba
 - Puede [hacer subclases de un nodo de audio](https://github.com/WebAudio/web-audio-api/issues/251). Si bien el procesamiento real lo realiza internamente el navegador y no se puede modificar, puede escribir un contenedor alrededor de un nodo de audio para proporcionar propiedades y métodos personalizados.
 - Rendimiento ligeramente mejor: tanto en Chrome como en Firefox, los métodos de fábrica llaman a los constructores internamente.
 
-_Breve historia_: la primera versión de la especificación Web Audio solo definía los métodos de fábrica. Después de una [revisión del diseño en octubre de 2013](https://github.com/WebAudio/web-audio-api/issues/250), se decidió agregar constructores porque tienen numerosos beneficios sobre los métodos de fábrica. Los constructores se agregaron a la especificación de agosto a octubre de 2016. Los métodos de fábrica continúan incluidos en la especificación y no están obsoletos.
+_Breve historia_: La primera versión de la especificación Web Audio solo definía los métodos de fábrica. Después de una [revisión del diseño en octubre de 2013](https://github.com/WebAudio/web-audio-api/issues/250), se decidió agregar constructores porque tienen numerosos beneficios sobre los métodos de fábrica. Los constructores se agregaron a la especificación de agosto a octubre de 2016. Los métodos de fábrica continúan incluidos en la especificación y no están obsoletos.
 
 ## Propiedades
 
