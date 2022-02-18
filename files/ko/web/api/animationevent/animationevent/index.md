@@ -27,7 +27,7 @@ animationEvent = new AnimationEvent(type, {animationName: aPropertyName,
 
 `AnimationEvent()` 생성자는 {{domxref("Event.Event", "Event()")}} 생성자의 매개변수도 상속합니다.
 
-- type
+- `type`
   - : `AnimationEvent`의 유형을 나타내는 대소문자 구별 {{domxref("DOMString")}}입니다. `'animationstart'`, `'animationend'`, `'animationiteration'`을 사용할 수 있습니다.
 - `animationName` {{optional_inline}}
   - : 트랜지션에 관련된 {{cssxref("animation-name")}} CSS 속성 값을 나타내는 {{domxref("DOMString")}}입니다. 기본 값은 `""`입니다.
