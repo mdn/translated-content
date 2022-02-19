@@ -2,20 +2,13 @@
 title: BatteryManager.chargingTime
 slug: Web/API/BatteryManager/chargingTime
 translation_of: Web/API/BatteryManager/chargingTime
+browser-compat: api.BatteryManager.chargingTime
 ---
-{{obsolete_header}}
-
 {{APIRef("Battery API")}}
 
-Indique le temps, en secondes, qu'il reste jusqu'à que la batterie soit rechargée.
+La propriété **`BatteryManager.chargingTime`** indique le temps, en secondes, qu'il reste jusqu'à que la batterie soit rechargée, ou vaut `0` si la batterie est déjà rechargée. Si la batterie est en décharge, la variable vaut [`Infinity`](/fr/docs/JavaScript/Reference/Global_Objects/Infinity). Lorsque sa valeur change, l'évènement [`chargingtimechange`](/fr/docs/Web/API/BatteryManager/chargingtimechange_event) est déclenché.
 
-> **Note :** Même si le temps retourné devrait être précis à la seconde, les navigateurs arrondissent cette valeur (typiquement à 15 minutes près) afin de limiter l'identification et le suivi des utilisateurs.
-
-## Syntaxe
-
-    var time = battery.chargingTime
-
-`time` est le temps restant en secondes jusqu'à que `battery`, qui est un objet de type {{domxref("BatteryManager")}}, soit rechargée, ou vaut 0 si la batterie est déjà rechargée. Si la batterie est en décharge, la variable vaut [`Infinity`](/en-US/docs/JavaScript/Reference/Global_Objects/Infinity).
+> **Note :** Même si le temps retourné devrait être précis à la seconde, les navigateurs arrondissent cette valeur (typiquement à 15 minutes près) pour des raisons de confidentialité.
 
 ## Exemple
 
@@ -28,27 +21,24 @@ Indique le temps, en secondes, qu'il reste jusqu'à que la batterie soit recharg
 ### Code JavaScript
 
 ```js
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then(battery => {
+  const time = battery.chargingTime;
 
-   var time = battery.chargingTime;
-
-   document.querySelector('#chargingTime').textContent = battery.chargingTime;
+  document.querySelector('#chargingTime').textContent = battery.chargingTime;
 });
 ```
 
-{{ EmbedLiveSample('Exemple', '100%', 30) }}
+{{EmbedLiveSample('Exemple', '100%', 30)}}
 
 ## Spécifications
 
-| Specification                        | Status                           | Comment             |
-| ------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("Battery API")}} | {{Spec2("Battery API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.BatteryManager.chargingTime")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- [`BatteryManager`](/fr/docs/Web/API/BatteryManager)
+- [`navigator.getBattery()`](/fr/docs/Web/API/Navigator/getBattery)
