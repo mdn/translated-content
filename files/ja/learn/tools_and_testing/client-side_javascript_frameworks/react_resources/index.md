@@ -79,7 +79,7 @@ React DevTools は様々な形態で提供されています。
 
 このチュートリアルで作成したアプリケーションでは、 `App` コンポーネントからデータを必要とする子コンポーネントにデータを渡すために、コンポーネントの props を利用しました。ほとんどの場合、 props はデータを共有するための適切な方法です。しかし、複雑で深くネストされたアプリケーションでは、必ずしも最適とは言えません。
 
-React はコンポーネントツリーの下にpropsを渡さずに、データを必要とするコンポーネントにデータを提供する方法として [コンテクスト API](https://reactjs.org/docs/context.html) を提供します。また、これを容易にする [useContext フック](https://reactjs.org/docs/hooks-reference.html#usecontext) も提供されています。
+React はコンポーネントツリーの下に props を渡さずに、データを必要とするコンポーネントにデータを提供する方法として [コンテクスト API](https://reactjs.org/docs/context.html) を提供します。また、これを容易にする [useContext フック](https://reactjs.org/docs/hooks-reference.html#usecontext) も提供されています。
 
 自身でこの API を試したいというかたは、 Smashing Magazine が書いた [React コンテクストの紹介記事](https://www.smashingmagazine.com/2020/01/introduction-react-context-api/) を読むといいでしょう。
 
