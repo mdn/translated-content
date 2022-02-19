@@ -24,7 +24,7 @@ new Blob(array, options);
 ### 매개변수
 
 - `array`
-  - : {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("USVString")}}으로 구성된 {{jsxref("Array")}}입니다. {{domxref("Blob")}}의 데이터를 구성하게 됩니다. `USVString`은 UTF-8로 인코딩됩니다.
+  - : {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("USVString")}} 또는 이 값들을 혼합해 구성한 {{jsxref("Array")}}입니다. {{domxref("Blob")}}의 데이터를 구성하게 됩니다. `USVString`은 UTF-8로 인코딩됩니다.
 - `options` {{optional_inline}}
   - : 다음 속성을 지정할 수 있는 {{domxref("BlobPropertyBag")}} 객체입니다.
     - `type` {{optional_inline}}
