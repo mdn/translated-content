@@ -20,7 +20,7 @@ translation_of: Web/API/Blob/type
 
 {{domxref("Blob")}} 객체의 **`type`** 속성은 데이터의 {{Glossary("MIME type", "MIME 유형")}}을 반환합니다.
 
-### 값
+## 값
 
 파일의 MIME 유형을 나타내는 {{domxref("DOMString")}}. 유형을 알아낼 수 없는 경우 빈 문자열입니다.
 

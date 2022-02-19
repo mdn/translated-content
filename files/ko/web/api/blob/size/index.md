@@ -18,13 +18,7 @@ translation_of: Web/API/Blob/size
 
 {{domxref("Blob")}} 인터페이스의 **`size`** 속성은 {{domxref("Blob")}} 또는 {{domxref("File")}}의 크기를 바이트 단위로 반환합니다.
 
-## 구문
-
-```js
-var sizeInBytes = blob.size
-```
-
-### 값
+## 값
 
 `Blob` 또는 {{domxref("File")}}과 같은 `Blob` 기반 객체의 데이터 크기를 바이트 단위로 나타낸 숫자입니다.
 

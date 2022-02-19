@@ -17,7 +17,8 @@ translation_of: Web/API/Blob/Blob
 ## 구문
 
 ```js
-var newBlob = new Blob(array, options);
+new Blob(array);
+new Blob(array, options);
 ```
 
 ### 매개변수
