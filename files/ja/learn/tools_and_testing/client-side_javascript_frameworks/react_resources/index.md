@@ -88,7 +88,7 @@ Reactはコンポーネントツリーの下にpropsを渡さずに、データ�
 このチュートリアルでは触れていませんが、 ES6 のクラスを使用して React コンポーネントを構築することは可能です。これらはクラスコンポーネントと呼ばれます。フックが登場するまで、 ES6 のクラスはコンポーネントに state をもたせたり、副作用のある描画の管理を行うための唯一の方法でした。これらは、他の特定のエッジケースな機能を処理する唯一の方法であり、従来の React プロジェクトでは非常に一般的です。公式の React ドキュメントは、それらについて学び始めるのに最適です。
 
 - [Reactドキュメントで学ぶ状態とライフサイクル](https://reactjs.org/docs/state-and-lifecycle.html)
-- [Reactドキュメントで学ぶReact入門](https://reactjs.org/tutorial/tutorial.html)
+- [Reactドキュメントで学ぶ React 入門](https://reactjs.org/tutorial/tutorial.html)
 - [MDNで学ぶ JavaScript のクラス](/ja/docs/Web/JavaScript/Reference/Classes)
 
 ## テスト
