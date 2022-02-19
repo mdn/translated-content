@@ -30,7 +30,7 @@ new Blob(array, options);
     - `type` {{optional_inline}}
       - : 블롭에 저장할 데이터의 {{Glossary("MIME type", "MIME 유형")}}입니다. 기본 값은 빈 문자열(`''`)입니다.
     - `endings` {{optional_inline}} {{non-standard_inline}}
-      - : 데이터가 텍스트일 때, 개행 문자(`\n`)를 어떻게 해석할지 지정합니다. 기본 값 `transparent`는 개행 문자를 바꾸지 않고 블롭 데이터로 복사합니다. 호스트 시스템 컨벤션에 맞춰서 변환하려면 `native`를 지정하세요.
+      - : 데이터가 텍스트일 때, 개행 문자(`\n`)를 어떻게 해석할지 지정합니다. 기본 값인 `transparent`는 개행 문자를 바꾸지 않고 블롭 데이터로 복사합니다. `native`를 지정하면 호스트 시스템 컨벤션에 맞춰서 변환합니다.
 
 ### 반환 값
 
