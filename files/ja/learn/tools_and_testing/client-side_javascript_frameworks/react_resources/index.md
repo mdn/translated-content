@@ -68,7 +68,7 @@ React DevTools は様々な形態で提供されています。
 
 - [Chrome 拡張](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 - [Firefox 拡張](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
-- Chromium版Edge 拡張 （近日公開）
+- Chromium 版 Edge 拡張 （近日公開）
 - [NPM か Yarn でインストールできるスタンドアロンアプリケーション](https://www.npmjs.com/package/react-devtools)
 
 これらのうち一つをインストールしてみて、作ったアプリの検査に使ってみてください！
