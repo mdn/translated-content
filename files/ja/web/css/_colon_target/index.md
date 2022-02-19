@@ -13,7 +13,7 @@ translation_of: Web/CSS/:target
 ---
 {{CSSRef}}
 
-**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は、 URL のフラグメントに一致する {{htmlattrxref("id")}} を持つ固有の要素 (*対象要素*) を表します。
+**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 URL のフラグメントに一致する {{htmlattrxref("id")}} を持つ固有の要素 (*対象要素*) を表します。
 
 ```css
 /* 現在の URL のフラグメントに一致する ID を持つ要素を選択 */
