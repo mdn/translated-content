@@ -1,10 +1,6 @@
 ---
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - WeakMap
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap
 browser-compat: javascript.builtins.WeakMap
@@ -13,7 +9,7 @@ browser-compat: javascript.builtins.WeakMap
 
 El objeto `WeakMap` es una colección de pares llave/valor en la que las llaves
 deben ser objetos con valores de cualquier
-[tipo de JavaScript](/en-US/docs/Web/JavaScript/Data_structures#javascript_types) arbitrario,
+[Tipos de datos en JavaScript](/es/docs/Web/JavaScript/Data_structures#javascript_types) arbitrario,
 y el cual no crea fuertes referencias a sus llaves.
 Es decir, la presencia de un objecto como llave en un `WeakMap` no evita que el
 objecto sea recolectado como basura. Una vez que se ha recopilado un objeto
@@ -144,7 +140,7 @@ class ClearableWeakMap {
 ## Véase también
 
 - [Polyfill de `WeakMap` en `core-js`](https://github.com/zloirock/core-js#weakmap)
-- [Objetos WeakMap](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object) en guía de [colecciónes con llaves](/en-US/docs/Web/JavaScript/Guide/Keyed_collections)
+- [Objetos WeakMap](/es/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object) en guía de [colecciónes con llaves](/en-US/docs/Web/JavaScript/Guide/Keyed_collections)
 - [Ocultar detalles de implementación con ECMAScript 6 WeakMap](https://fitzgeraldnick.com/weblog/53/)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
