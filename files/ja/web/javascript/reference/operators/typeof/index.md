@@ -3,105 +3,69 @@ title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
 tags:
   - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - Unary
+  - 言語機能
+  - 演算子
+  - リファレンス
+  - 単項
+browser-compat: javascript.operators.typeof
 translation_of: Web/JavaScript/Reference/Operators/typeof
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{JSSidebar("Operators")}}
 
-<p><strong><code>typeof</code></strong> 演算子は、未評価のオペランドの型を示す文字列を返します。</p>
+<strong>`typeof`</strong> 演算子は、未評価のオペランドの型を示す文字列を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+`typeof` 演算子の後に、オペランドを続けて書きます。
 
-<p><code>typeof</code> 演算子の後に、オペランドを続けて書きます。</p>
+```js
+typeof operand
+typeof(operand)
+```
 
-<pre class="syntaxbox notranslate">typeof <var>operand</var>
-typeof(<var>operand</var>)
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `operand`
+  - : 型を返すオブジェクトまたは[プリミティブ](/ja/docs/Glossary/Primitive)型を表す式です。
 
-<p><code><var>operand</var></code> は、オブジェクトまたは<a href="/ja/docs/Glossary/Primitive">プリミティブ</a>型を表す式を返します。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+以下は `typeof` が返す可能性がある値の一覧です。型とプリミティブの詳細については、[JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures)のページも参照してください。
 
-<p>以下は <code>typeof</code> が返す事が出来る値 (文字列) の一覧表です。型とプリミティブの詳細については、<a href="/ja/docs/Web/JavaScript/Data_structures">JavaScript のデータ構造</a>のページも参照してください。</p>
+| 型                                                                                     | 結果                                 |
+| ---------------------------------------------------------------------------------------- | -------------------------------------- |
+| [Undefined](/ja/docs/Glossary/Undefined)                                              | `"undefined"`                          |
+| [Null](/ja/docs/Glossary/Null)                                                        | `"object"` ([下記参照](#typeof_null)) |
+| [論理値](/ja/docs/Glossary/Boolean)                                                  | `"boolean"`                            |
+| [Number](/ja/docs/Glossary/Number)                                                    | `"number"`                             |
+| [BigInt](/ja/docs/Glossary/BigInt) (ECMAScript 2020 の新機能)                           | `"bigint"`                             |
+| [文字列](/ja/docs/Glossary/String)                                                    | `"string"`                             |
+| [シンボル](/ja/docs/Glossary/Symbol) (ECMAScript 2015 の新機能)                           | `"symbol"`                             |
+| [関数](/ja/docs/Glossary/Function) オブジェクト (ECMA-262 の用語では [[Call]] を実装) | `"function"`                           |
+| その他のオブジェクト                                                                         | `"object"`                             |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">型</th>
-   <th scope="col">返値</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="/ja/docs/Glossary/Undefined">Undefined</a></td>
-   <td><code>"undefined"</code></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Glossary/Null">Null</a></td>
-   <td><code>"object"</code> (<a href="#typeof_null">下記参照</a>)</td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Glossary/Boolean">真偽値</a></td>
-   <td><code>"boolean"</code></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Glossary/Number">数値</a></td>
-   <td><code>"number"</code></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Glossary/BigInt">BigInt</a> (ECMAScript 2020 の新機能)</td>
-   <td><code>"bigint"</code></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Glossary/String">文字列</a></td>
-   <td><code>"string"</code></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Glossary/Symbol">シンボル</a> (ECMAScript 2015 の新機能)</td>
-   <td><code>"symbol"</code></td>
-  </tr>
-  <tr>
-   <td><a href="/ja/docs/Glossary/Function">Function</a> オブジェクト (implements [[Call]] in ECMA-262 terms)</td>
-   <td><code>"function"</code></td>
-  </tr>
-  <tr>
-   <td>その他のオブジェクト</td>
-   <td><code>"object"</code></td>
-  </tr>
- </tbody>
-</table>
+> **Note:** ECMAScript 2019 およびそれ以前の実装では、呼び出し可能な標準外のオブジェクトに対して、`typeof` が任意の実装定義の文字列値を返すことを許可していました。
+>
+> 実際にこれを利用したブラウザーとして知られているのは、古い Internet Explorer だけです。（[下記参照](#ie-specific_notes)）
 
-<div class="blockIndicator note">
-<p><strong>メモ:</strong> ECMAScript 2019 およびそれ以前の実装では、呼び出し可能な非標準のオブジェクトに対して、<code>typeof</code> が任意の実装定義の文字列値を返すことを許可していました。</p>
+## 例
 
-<p>実際にこれを利用したブラウザーとして知られているのは、古い Internet Explorer だけです。（<a href="#IE-specific_notes">下記参照</a>）</p>
-</div>
+### 基本的な使い方
 
-<h2 id="Examples" name="Examples">例</h2>
-
-<h3 id="Basic_usage" name="Basic_usage">基本的な使い方</h3>
-
-<pre class="brush: js notranslate">// 数値
+```js
+// 数値
 typeof 37 === 'number';
 typeof 3.14 === 'number';
 typeof(42) === 'number';
 typeof Math.LN2 === 'number';
 typeof Infinity === 'number';
-typeof NaN === 'number';            // "Not-A-Number" であるにもかかわらず。
-typeof Number('1') === 'number';    // Number は数値に型強制できない値を含めて、
-typeof Number('shoe') === 'number'; // あらゆるものを数字に解析します。
+typeof NaN === 'number'; // "Not-A-Number" であるにもかかわらず。
+typeof Number('1') === 'number';      // Number は数値に型強制できない値を含めて、
+typeof Number('shoe') === 'number';   // あらゆるものを数字に解釈します。
 
 typeof 42n === 'bigint';
-
 
 // 文字列
 typeof '' === 'string';
@@ -111,62 +75,59 @@ typeof '1' === 'string';        // 文字列内の数値は文字列型のまま
 typeof (typeof 1) === 'string'; // typeof は常に文字列を返します。
 typeof String(1) === 'string';  // String は何でも文字列に変換するので、toString よりも安全です。
 
-
-// 真偽値
+// 論理値
 typeof true === 'boolean';
 typeof false === 'boolean';
-typeof Boolean(1) === 'boolean'; // Boolean は、値が truthy か falsy かに基づいて変換します。
-
-typeof !!(1) === 'boolean';      // ! (論理 NOT) 演算子 2 つの呼び出しは、Boolean() と同等です。
-
+typeof Boolean(1) === 'boolean'; // Boolean は、値が真値か偽値かに基づいて変換します。
+typeof !!(1) === 'boolean'; // ! (論理 NOT) を 2 回呼び出すと Boolean() と同等になります。
 
 // シンボル
 typeof Symbol() === 'symbol'
 typeof Symbol('foo') === 'symbol'
 typeof Symbol.iterator === 'symbol'
 
-
 // Undefined
 typeof undefined === 'undefined';
 typeof declaredButUndefinedVariable === 'undefined';
 typeof undeclaredVariable === 'undefined';
 
-
 // オブジェクト
 typeof {a: 1} === 'object';
 
-// <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray">Array.isArray</a> または Object.prototype.toString.call を使用して、
+// Array.isArray または Object.prototype.toString.call を使用して、
 // 通常のオブジェクトと配列を区別します。
 typeof [1, 2, 4] === 'object';
 
 typeof new Date() === 'object';
-typeof /regex/ === 'object'; // 過去の実装は<a href="#typeof_null">正規表現</a>を参照してください。
+typeof /regex/ === 'object'; // 過去の実装は正規表現の章を参照してください。
 
 
-// 以下のようなものは、紛らわしく、危険で、無駄なものです。それらの使用を避けてください。
+// 以下のようなものは、紛らわしく、危険で、無駄なものです。これらは使用しないようにしてください。
 typeof new Boolean(true) === 'object';
 typeof new Number(1) === 'object';
 typeof new String('abc') === 'object';
 
-
 // 関数
 typeof function() {} === 'function';
 typeof class C {} === 'function';
-typeof Math.sin === 'function';</pre>
+typeof Math.sin === 'function';
+```
 
-<h3 id="typeof_null" name="typeof_null"><code>null 型</code></h3>
+### `typeof null`
 
-<pre class="brush: js; no-line-numbers notranslate">// JavaScript の初期からの実装に基づく
+```js
+// JavaScript の初期からの実装に基づく
 typeof null === 'object';
-</pre>
+```
 
-<p>JavaScript の最初の実装では、JavaScript の値は型タグと値で表現されていました。オブジェクトの型タグは <code>0</code> で、<code>null</code> は NULL ポインター (ほとんどのプラットフォームで <code>0x00</code>) として表されていました。その結果、<code>null</code> はタグの型として <code>0</code> を持っていたため、<code>typeof</code> の戻り値は <code>"object"</code> です。(<a href="http://www.2ality.com/2013/10/typeof-null.html">リファレンス</a>)</p>
+JavaScript の最初の実装では、JavaScript の値は型タグと値で表現されていました。オブジェクトの型タグは `0` で、`null` は NULL ポインター (ほとんどのプラットフォームで `0x00`) として表されていました。その結果、`null` はタグの型として `0` を持っていたため、`typeof` の戻り値は `"object"` です。([リファレンス](http://www.2ality.com/2013/10/typeof-null.html))
 
-<p>ECMAScript の修正案が (オプトインを使用して) 提案されましたが、<a href="https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null">却下されました</a>。それは <code>typeof null === 'null'</code> という結果になるものでした。</p>
+ECMAScript の修正案が (オプトインを使用して) 提案されましたが、[却下されました](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null)。それは `typeof null === 'null'` という結果になるものでした。
 
-<h3 id="Using_new_operator" name="Using_new_operator"><code>new</code> 演算子の使用</h3>
+### `new` 演算子の使用
 
-<pre class="brush: js; notranslate">// Function コンストラクターを除くすべてのコンストラクター関数は、
+```js
+// Function コンストラクターを除くすべてのコンストラクター関数は、
 // 常に typeof 'object' です
 let str = new String('String');
 let num = new Number(100);
@@ -177,32 +138,36 @@ typeof num; // 'object' を返す
 let func = new Function();
 
 typeof func; // 'function' を返す
-</pre>
+```
 
-<h3 id="Need_for_parentheses_in_Syntax" name="Need_for_parentheses_in_Syntax">構文で括弧が必要な場合</h3>
+### 構文で括弧が必要な場合
 
-<pre class="brush:js notranslate">// 式のデータ型を特定するために、かっこを使用することができます。
+```js
+// 式のデータ型を特定するために、かっこを使用することができます。
 let iData = 99;
 
 typeof iData + ' Wisen'; // 'number Wisen'
 typeof (iData + ' Wisen'); // 'string'
-</pre>
+```
 
-<h3 id="Regular_expressions" name="Regular_expressions">正規表現</h3>
+### 正規表現
 
-<p>呼び出し可能な正規表現は、一部のブラウザーでは非標準的な追加機能でした。</p>
+呼び出し可能な正規表現は、一部のブラウザーにおける標準外の追加機能でした。
 
-<pre class="brush:js; no-line-numbers notranslate">typeof /s/ === 'function'; // Chrome 1-12 ECMAScript5.1 に非準拠
+```js
+typeof /s/ === 'function'; // Chrome 1-12 ECMAScript5.1 に非準拠
 typeof /s/ === 'object';   // Firefox 5+ ECMAScript 5.1 に準拠
-</pre>
+```
 
-<h3 id="Errors" name="Errors">エラー</h3>
+### エラー
 
-<p>ECMAScript 2015 より前では、<code>typeof</code> は常にそれが供給されたオペランドの文字列を返すことが保証されていました。宣言されていない識別子があっても、<code>typeof</code> は <code>'undefined'</code> を返します。<code>typeof</code> を使用すると、エラーは発生しません。</p>
+ECMAScript 2015 より前では、`typeof` は常にそれが供給されたオペランドの文字列を返すことが保証されていました。宣言されていない識別子があっても、`typeof` は `'undefined'` を返します。`typeof` を使用すると、エラーは発生しません。
 
-<p>しかしながら、ブロックスコープの <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/let">let</a></code> と <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/const">const</a></code> が追加されたことで、変数が宣言される前のブロック内で <code>let</code> と <code>const</code> に <code>typeof</code> を使用すると（またはクラスに <code>typeof</code> を使用すると）、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a></code> が投げられます。ブロックスコープ内の変数は、ブロックの開始から初期化が処理されるまで「<a href="/ja/docs/Web/JavaScript/Reference/Statements/let#The_temporal_dead_zone_and_typeof">一時的なデッドゾーン</a>」にあり、その間にアクセスされるとエラーを投げます。</p>
+しかしながら、ブロックスコープの {{JSxRef("Statements/let", "let")}} と 
+{{JSxRef("Statements/const", "const")}} が追加されたことで、変数が宣言される前のブロック内で `let` と `const` に `typeof` を使用すると（またはクラスに `typeof` を使用すると）、 {{JSxRef("ReferenceError")}} が発生します。ブロックスコープ内の変数は、ブロックの開始から初期化が処理されるまで「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)」にあり、その間にアクセスされるとエラーが発生します。
 
-<pre class="brush: js; no-line-numbers notranslate">typeof undeclaredVariable === 'undefined';
+```js
+typeof undeclaredVariable === 'undefined';
 
 typeof newLetVariable; // ReferenceError
 typeof newConstVariable; // ReferenceError
@@ -210,79 +175,72 @@ typeof newClass; // ReferenceError
 
 let newLetVariable;
 const newConstVariable = 'hello';
-class newClass{};</pre>
+class newClass{};
+```
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<p>現在のブラウザーではすべて、標準外のホストオブジェクト {{domxref("document.all")}} は <code>undefined</code> 型になります。</p>
+現在のブラウザーではすべて、標準外のホストオブジェクト [`document.all`](/en-US/docs/Web/API/Document/all) は `undefined` 型になります。
 
-<pre class="brush: js; no-line-numbers notranslate">typeof document.all === 'undefined';</pre>
+```js
+typeof document.all === 'undefined';
+```
 
-<p>仕様では、非標準のオブジェクトののためのカスタム型タグを許可していますが、それらの型タグは定義済みのものとは異なるものであることを要求しています。<code>document.all</code> が <code>'undefined'</code> という型を持っている場合、ウェブ標準ではオリジナルの ECMA JavaScript 標準の "故意の違反" として分類されています。</p>
+仕様では、標準外のオブジェクトのために独自の型タグが設定できるようにしていますが、定義済みの型タグとは異なる必要があります。 `document.all` が `'undefined'` という型であるというのは、ウェブ標準では元の ECMA JavaScript 標準において「故意の違反」として分類されています。
 
-<h3 id="Real-world_usage" name="Real-world_usage">実際の使い方</h3>
+### 実際の使い方
 
-<p><code>typeof</code> は非常に便利ですが、汎用性はそれほど高くありません。たとえば、<code>typeof([])</code> は <code>typeof(new Date())</code> や <code>typeof(/abc/)</code> などと同様に <code>'object'</code> です。</p>
+`typeof` は非常に便利ですが、汎用性はそれほど高くありません。たとえば、`typeof([])` は `typeof(new Date())` や `typeof(/abc/)` などと同様に `'object'` になります。
 
-<p>型のチェックをより具体的にするために、プロダクションレベルのコードで使用するための <code>typeof</code> ラッパーは以下のようになります。（<code>obj</code> が存在する場合）</p>
+型のチェックをより具体的にするためには、実用レベルのコードで使用するための `typeof` ラッパーは以下のようになります。（`obj` が存在する場合）
 
-<pre class="brush: js notranslate">  function type(obj, fullClass) {
+```js
+  function type(obj, fullClass) {
 
     // obj の toPrototypeString() を取得します。（すべての型を処理します）
-    // 初期の JS 環境では null の場合 '[object Object]' を返すので、直接確認するのがベストです。
-    if (fullClass) {
-        return (obj === null) ? '[object Null]' : Object.prototype.toString.call(obj);
-    }
+    if (showFullClass && typeof obj === "object") {
+        return Object.prototype.toString.call(obj);
+    }
     if (obj == null) { return (obj + '').toLowerCase(); } // 暗黙の toString() 変換
 
     var deepType = Object.prototype.toString.call(obj).slice(8,-1).toLowerCase();
-    if (deepType === 'generatorfunction') { return 'function' }
+    if (deepType === 'generatorfunction') { return 'function' }
 
     // 過剰な特異性を防いでください。(例えば、[object HTMLDivElement] など)
-    // 機能的な正規表現 (Android &lt;=2.3)、機能的な &lt;object&gt; 要素 (Chrome &lt;=57, Firefox &lt;=52) などを考慮します。
+    // 関数的な正規表現 (Android 2.3 以前)、関数的な <object> 要素 (Chrome 57 以前, Firefox 52 以前) などを考慮してください。
     // String.prototype.match は普遍的にサポートされています。
 
     return deepType.match(/^(array|bigint|date|error|function|generator|regexp|symbol)$/) ? deepType :
-       (typeof obj === 'object' || typeof obj === 'function') ? 'object' : typeof obj;
-  }</pre>
+       (typeof obj === 'object' || typeof obj === 'function') ? 'object' : typeof obj;
+  }
+```
 
-<p>存在しない変数をチェックすると、{{JSxRef("ReferenceError")}} が投げられるため、<code>typeof nonExistentVar === 'undefined'</code> を使用します。</p>
+存在しない変数をチェックすると、{{JSxRef("ReferenceError")}} が発生するため、`typeof nonExistentVar === 'undefined'` を使用します。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-typeof-operator', 'The typeof Operator')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+### IE 固有のメモ
 
-<p>{{Compat("javascript.operators.typeof")}}</p>
+IE 6、7、8 では、以下のように多くのホストオブジェクトがオブジェクト型であり、関数ではありません。
 
-<h3 id="IE-specific_notes" name="IE-specific_notes">IE 特有のメモ</h3>
+```js
+typeof alert === 'object'
+```
 
-<p>IE 6、7、8 では、以下のように多くのホストオブジェクトがオブジェクト型であり、関数ではありません。</p>
+一部の標準外 IE プロパティは他の値を返します。([tc39/ecma262#1440 (comment)](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872))
 
-<pre class="brush: js; no-line-numbers notranslate">typeof alert === 'object'</pre>
+```js
+typeof window.external.AddSearchProvider === "unknown";
+typeof window.external.IsSearchProviderInstalled === "unknown";
+```
 
-<p>一部の非標準 IE プロパティは他の値を返します。(<a href="https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872">tc39/ecma262#1440 (comment)</a>)</p>
+## 関連情報
 
-<pre class="brush: js; no-line-numbers notranslate">typeof window.external.AddSearchProvider === "unknown";
-typeof window.external.IsSearchProviderInstalled === "unknown";</pre>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{JSxRef("Operators/instanceof", "instanceof")}}</li>
- <li><a href="https://github.com/tc39/ecma262/issues/668"><code>document.all</code> willful violation of the standard</a></li>
-</ul>
+- {{JSxRef("Operators/instanceof", "instanceof")}}
+- [`document.all` willful violation of the standard](https://github.com/tc39/ecma262/issues/668)
