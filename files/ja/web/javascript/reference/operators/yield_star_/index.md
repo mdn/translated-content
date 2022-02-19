@@ -3,47 +3,45 @@ title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
 tags:
   - ECMAScript 2015
-  - Generators
-  - Iterable
-  - Iterator
-  - JavaScript
-  - Operator
-  - Reference
-  - yield*
   - ジェネレーター
+  - 反復可能
+  - 反復子
+  - JavaScript
+  - 言語機能
   - 演算子
+  - リファレンス
+browser-compat: javascript.operators.yield_star
 translation_of: Web/JavaScript/Reference/Operators/yield*
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><span class="seoSummary"><strong><code>yield*</code> 式</strong>は別の {{jsxref("Statements/function*", "ジェネレーター", "", 1)}} や反復可能なオブジェクトに委任するために使用されます。</span></p>
+**`yield*` 式**は別の{{jsxref("Statements/function*", "ジェネレーター", "", 1)}}や反復可能なオブジェクトに委任するために使用されます。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-yieldasterisk.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-yieldasterisk.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+yield* expression
+```
 
-<pre class="syntaxbox"> yield* <var>expression</var>;</pre>
+- `expression`
+  - : 反復可能なオブジェクトを返す式。
 
-<dl>
- <dt><code><var>expression</var></code></dt>
- <dd>反復可能なオブジェクトを返す式。</dd>
-</dl>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`yield*` 式はオペランドを反復し、それによって返されたそれぞれの値をもたらします。
 
-<p><code>yield*</code> 式はオペランドを反復し、それによって返されたそれぞれの値をもたらします。</p>
+`yield*` 式自体の値は、イテレーターが閉じたとき（つまり `done` が `true` のとき）に返される値です。
 
-<p><code>yield*</code> 式自体の値は、イテレーターが閉じたとき (つまり <code>done</code> が <code>true</code> のとき) に返される値です。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### 別のジェネレータに委任する
 
-<h3 id="Delegating_to_another_generator" name="Delegating_to_another_generator">別のジェネレータに委任する</h3>
+次のコードでは、 `g1()` によってもたらされる値は、 `g2()` で得られているものと同じように `next()` の呼び出しから返されます。
 
-<p>次のコードでは、 <code>g1()</code> によってもたらされる値は、 <code>g2()</code> で得られているものと同じように <code>next()</code> の呼び出しから返されます。</p>
-
-<pre class="brush: js">function* g1() {
+```js
+function* g1() {
   yield 2;
   yield 3;
   yield 4;
@@ -63,13 +61,14 @@ console.log(iterator.next()); // {value: 3, done: false}
 console.log(iterator.next()); // {value: 4, done: false}
 console.log(iterator.next()); // {value: 5, done: false}
 console.log(iterator.next()); // {value: undefined, done: true}
-</pre>
+```
 
-<h3 id="Other_Iterable_objects" name="Other_Iterable_objects">他の反復可能なオブジェクト</h3>
+### 他の反復可能なオブジェクト
 
-<p>ジェネレータオブジェクトのほかに、 <code>yield*</code> は他の種類の反復 (例えば、配列、文字列、 {{jsxref("Functions/arguments", "arguments")}} オブジェクト) を <code>yield</code> することができます。</p>
+ジェネレータオブジェクトのほかに、 `yield*` は他の種類の反復 (例えば、配列、文字列、 {{jsxref("Functions/arguments", "arguments")}} オブジェクト) を `yield` することができます。
 
-<pre class="brush: js">function* g3() {
+```js
+function* g3() {
   yield* [1, 2];
   yield* '34';
   yield* Array.from(arguments);
@@ -84,13 +83,14 @@ console.log(iterator.next()); // {value: "4", done: false}
 console.log(iterator.next()); // {value: 5, done: false}
 console.log(iterator.next()); // {value: 6, done: false}
 console.log(iterator.next()); // {value: undefined, done: true}
-</pre>
+```
 
-<h3 id="The_value_of_yield*_expression_itself" name="The_value_of_yield*_expression_itself"><code>yield*</code> 式自体の値</h3>
+### `yield*` 式自体の値
 
-<p><code>yield*</code> は式であり、文ではありません。そのため、値に評価されます。</p>
+`yield*` は式であり、文ではありません。そのため、値に評価されます。
 
-<pre class="brush: js">function* g4() {
+```js
+function* g4() {
   yield* [1, 2, 3];
   return 'foo';
 }
@@ -107,32 +107,19 @@ console.log(iterator.next()); // {value: 1, done: false}
 console.log(iterator.next()); // {value: 2, done: false}
 console.log(iterator.next()); // {value: 3, done: false} done is false because g5 generator isn't finished, only g4
 console.log(iterator.next()); // {value: 'foo', done: true}
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-generator-function-definitions-runtime-semantics-evaluation', 'Yield')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.operators.yield_star")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Guide/The_Iterator_protocol">Iterator プロトコル</a></li>
- <li>{{jsxref("Statements/function*", "function*")}}</li>
- <li>{{jsxref("Operators/function*", "function* expression")}}</li>
- <li>{{jsxref("Operators/yield", "yield")}}</li>
-</ul>
+- [Iterator プロトコル](/ja/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Operators/function*", "function* expression")}}
+- {{jsxref("Operators/yield", "yield")}}
