@@ -89,7 +89,7 @@ React はコンポーネントツリーの下にpropsを渡さずに、データ
 
 - [Reactドキュメントで学ぶ状態とライフサイクル](https://reactjs.org/docs/state-and-lifecycle.html)
 - [Reactドキュメントで学ぶ React 入門](https://reactjs.org/tutorial/tutorial.html)
-- [MDNで学ぶ JavaScript のクラス](/ja/docs/Web/JavaScript/Reference/Classes)
+- [MDN で学ぶ JavaScript のクラス](/ja/docs/Web/JavaScript/Reference/Classes)
 
 ## テスト
 
