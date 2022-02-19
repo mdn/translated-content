@@ -99,7 +99,7 @@ Reactはコンポーネントツリーの下にpropsを渡さずに、データ�
 
 ルーティングは従来、ユーザーのコンピューター上のアプリケーションではなく、サーバーによって処理されていました。しかし、現在では、ウェブアプリケーションがブラウザーの位置を読み取り、更新し、特定のユーザーインターフェースをレンダリングすることが可能です。これをクライアントサイドルーティングと呼びます。アプリケーションのために多くの一意なルート (`/home` または `/dashboard` 、 `login/` など) を作成することが可能です。
 
-Reactコミュニティはクライアントサイドルーティングについて、2つの主要なライブラリを作成しています。 [React Router](https://reacttraining.com/react-router/) と [Reach Router](https://reach.tech/router) です。
+React コミュニティはクライアントサイドルーティングについて、2つの主要なライブラリを作成しています。 [React Router](https://reacttraining.com/react-router/) と [Reach Router](https://reach.tech/router) です。
 
 - React Router は、複雑なルーティングを必要とするアプリケーションに適しており、 Reach Router よりもエッジケースに対応することができます。しかし、 React Router はサイズが大きいライブラリになります。
 - Reach Routerは、より単純なアプリケーションに適しており、ユーザーがページ間を移動するときにフォーカスを自動的に管理します。
