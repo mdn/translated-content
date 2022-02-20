@@ -12,7 +12,7 @@ browser-compat: api.CookieStore.change_event
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
-任意のCookieに変更が加えられると、 {{domxref("CookieStore")}} オブジェクトで `change` イベントが発火します。
+任意の Cookie に変更が加えられると、{{domxref("CookieStore")}} オブジェクトで `change` イベントが発火します。
 
 ## 構文
 
@@ -34,7 +34,7 @@ cookieStore.addEventListener('change', function(event) {
 });
 ```
 
-あるいは、 `CookieStore.onchange` イベントハンドラープロパティを使用して、 `change` イベントのハンドラを定義することもできます。
+あるいは、`CookieStore.onchange` イベントハンドラープロパティを使用して、`change` イベントのハンドラを定義することもできます。
 
 ```js
 cookieStore.onchange = function(event) {

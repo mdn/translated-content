@@ -11,7 +11,7 @@ browser-compat: api.CookieStore.delete
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
-domxref("CookieStore")}} インターフェースの **`delete()`** メソッドは、与えられた名前またはオプションオブジェクトを持つ Cookie を削除します（下記参照）。`delete()` メソッドは日付を過去のものに変更することでCookieを失効させます。
+{{domxref("CookieStore")}} インターフェイスの **`delete()`** メソッドは、与えられた名前またはオプションオブジェクトを持つ Cookie を削除します（下記参照）。`delete()` メソッドは日付を過去のものに変更することでCookieを失効させます。
 
 ## 構文
 
@@ -50,7 +50,7 @@ var promise = cookieStore.delete(options);
 
 ## 例
 
-この例では、`delete()` メソッドに名前を渡すことで、 Cookie を削除しています。
+この例では、`delete()` メソッドに名前を渡すことで、Cookie を削除しています。
 
 ```js
 let result = cookieStore.delete('cookie1');
