@@ -182,7 +182,7 @@ a?.b.c;        // `a` を最初に評価し、then produce `a` if `a` is `null` 
 
 <h2 id="Table" name="Table">一覧表</h2>
 
-<p>以下の表は優先順位の最も高いもの (21) から最も低いもの (1) の順に並べられています。</p>
+<p>以下の表は優先順位の最も高いもの (19) から最も低いもの (1) の順に並べられています。</p>
 
 <table class="fullwidth-table">
  <tbody>
@@ -193,13 +193,13 @@ a?.b.c;        // `a` を最初に評価し、then produce `a` if `a` is `null` 
    <th>演算子</th>
   </tr>
   <tr>
-   <td>21</td>
+   <td>19</td>
    <td>{{jsxref("Operators/Grouping", "グループ化", "", 1)}}</td>
    <td>n/a</td>
    <td><code>( … )</code></td>
   </tr>
   <tr>
-   <td colspan="1" rowspan="5">20</td>
+   <td colspan="1" rowspan="5">18</td>
    <td>{{jsxref("Operators/Property_Accessors", "メンバーへのアクセス", "#Dot_notation", 1)}}</td>
    <td>左から右</td>
    <td><code>… . …</code></td>
@@ -225,13 +225,13 @@ a?.b.c;        // `a` を最初に評価し、then produce `a` if `a` is `null` 
    <td><code>?.</code></td>
   </tr>
   <tr>
-   <td rowspan="1">19</td>
+   <td rowspan="1">17</td>
    <td>{{jsxref("Operators/new","new")}} (引数リストなし)</td>
    <td>右から左</td>
    <td><code>new …</code></td>
   </tr>
   <tr>
-   <td rowspan="2">18</td>
+   <td rowspan="2">16</td>
    <td>{{jsxref("Operators/Arithmetic_Operators","後置インクリメント","#Increment", 1)}}</td>
    <td colspan="1" rowspan="2">なし</td>
    <td><code>… ++</code></td>
@@ -241,7 +241,7 @@ a?.b.c;        // `a` を最初に評価し、then produce `a` if `a` is `null` 
    <td><code>… --</code></td>
   </tr>
   <tr>
-   <td colspan="1" rowspan="10">17</td>
+   <td colspan="1" rowspan="10">15</td>
    <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT">論理 NOT</a></td>
    <td colspan="1" rowspan="10">右から左</td>
    <td><code>! …</code></td>
@@ -283,13 +283,13 @@ a?.b.c;        // `a` を最初に評価し、then produce `a` if `a` is `null` 
    <td><code>await …</code></td>
   </tr>
   <tr>
-   <td>16</td>
+   <td>14</td>
    <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation">べき乗</a></td>
    <td>右から左</td>
    <td><code>… ** …</code></td>
   </tr>
   <tr>
-   <td rowspan="3">15</td>
+   <td rowspan="3">13</td>
    <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Multiplication">乗算</a></td>
    <td colspan="1" rowspan="3">左から右</td>
    <td><code>… * …</code></td>
@@ -303,7 +303,7 @@ a?.b.c;        // `a` を最初に評価し、then produce `a` if `a` is `null` 
    <td><code>… % …</code></td>
   </tr>
   <tr>
-   <td rowspan="2">14</td>
+   <td rowspan="2">12</td>
    <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition">加算</a></td>
    <td colspan="1" rowspan="2">左から右</td>
    <td><code>… + …</code></td>
@@ -313,7 +313,7 @@ a?.b.c;        // `a` を最初に評価し、then produce `a` if `a` is `null` 
    <td><code>… - …</code></td>
   </tr>
   <tr>
-   <td rowspan="3">13</td>
+   <td rowspan="3">11</td>
    <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">左ビットシフト</a></td>
    <td colspan="1" rowspan="3">左から右</td>
    <td><code>… &lt;&lt; …</code></td>
@@ -327,7 +327,7 @@ a?.b.c;        // `a` を最初に評価し、then produce `a` if `a` is `null` 
    <td><code>… &gt;&gt;&gt; …</code></td>
   </tr>
   <tr>
-   <td rowspan="6">12</td>
+   <td rowspan="6">10</td>
    <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator">小なり</a></td>
    <td colspan="1" rowspan="6">左から右</td>
    <td><code>… &lt; …</code></td>
@@ -353,7 +353,7 @@ a?.b.c;        // `a` を最初に評価し、then produce `a` if `a` is `null` 
    <td><code>… instanceof …</code></td>
   </tr>
   <tr>
-   <td rowspan="4">11</td>
+   <td rowspan="4">9</td>
    <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality">等価</a></td>
    <td colspan="1" rowspan="4">左から右</td>
    <td><code>… == …</code></td>
@@ -371,49 +371,48 @@ a?.b.c;        // `a` を最初に評価し、then produce `a` if `a` is `null` 
    <td><code>… !== …</code></td>
   </tr>
   <tr>
-   <td>10</td>
+   <td>8</td>
    <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND">ビット単位 AND</a></td>
    <td>左から右</td>
    <td><code>… &amp; …</code></td>
   </tr>
   <tr>
-   <td>9</td>
+   <td>7</td>
    <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR">ビット単位 XOR</a></td>
    <td>左から右</td>
    <td><code>… ^ …</code></td>
   </tr>
   <tr>
-   <td>8</td>
+   <td>6</td>
    <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR">ビット単位 OR</a></td>
    <td>左から右</td>
    <td><code>… | …</code></td>
   </tr>
   <tr>
-   <td>7</td>
+   <td>5</td>
    <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND">論理 AND</a></td>
    <td>左から右</td>
    <td><code>… &amp;&amp; …</code></td>
   </tr>
   <tr>
-   <td>6</td>
+   <td rowspan="2">4</td>
    <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR">論理 OR</a></td>
    <td>左から右</td>
    <td><code>… || …</code></td>
   </tr>
   <tr>
-   <td>5</td>
    <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">Null 合体</a></td>
    <td>left-to-right</td>
    <td><code>… ?? …</code></td>
   </tr>
   <tr>
-   <td>4</td>
+   <td>3</td>
    <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">条件</a></td>
    <td>右から左</td>
    <td><code>… ? … : …</code></td>
   </tr>
   <tr>
-   <td rowspan="16">3</td>
+   <td rowspan="18">2</td>
    <td rowspan="16"><a href="/ja/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">代入</a></td>
    <td rowspan="16">右から左</td>
    <td><code>… = …</code></td>
@@ -464,7 +463,6 @@ a?.b.c;        // `a` を最初に評価し、then produce `a` if `a` is `null` 
    <td><code>… ??= …</code></td>
   </tr>
   <tr>
-   <td rowspan="2">2</td>
    <td>{{jsxref("Operators/yield", "yield")}}</td>
    <td colspan="1" rowspan="2">右から左</td>
    <td><code>yield …</code></td>
