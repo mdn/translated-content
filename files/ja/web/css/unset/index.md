@@ -3,41 +3,42 @@ title: unset
 slug: Web/CSS/unset
 tags:
   - CSS
-  - CSS カスケードと継承
+  - CSS カスケード
   - CSS 値
-  - Keyword
-  - Layout
-  - Reference
-  - Style
-  - unset
-  - スタイル
+  - キーワード
   - レイアウト
+  - リファレンス
+  - スタイル
+  - unset
+browser-compat: css.types.global_keywords.unset
 translation_of: Web/CSS/unset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>unset</code></strong> は CSS のキーワードで、プロパティをリセットし、親から自然に継承された場合は継承値、そうでなければ<a href="/ja/docs/Web/CSS/initial_value">初期値</a>を設定します。</span>言い換えれば、前者の<a href="/ja/docs/Web/CSS/inheritance#Inherited_properties">継承プロパティ</a>の場合は {{cssxref("inherit")}} キーワードのように動作し、後者の<a href="/ja/docs/Web/CSS/inheritance#Non-inherited_properties">非継承プロパティ</a>の場合は {{cssxref("initial")}} キーワードのように動作します。</p>
+**`unset`** は CSS のキーワードで、プロパティをリセットし、親から自然に継承された場合は継承値、そうでなければ[初期値](/ja/docs/Web/CSS/initial_value)を設定します。言い換えれば、前者の[継承プロパティ](/ja/docs/Web/CSS/inheritance#inherited_properties)の場合は {{cssxref("inherit")}} キーワードのように動作し、後者の[非継承プロパティ](/ja/docs/Web/CSS/inheritance#non-inherited_properties)の場合は {{cssxref("initial")}} キーワードのように動作します。
 
-<p><strong><code>unset</code></strong> はあらゆる CSS プロパティに対して、一括指定の {{cssxref("all")}} を含み、適用することができます。</p>
+**`unset`** は一括指定の {{cssxref("all")}} を含む、あらゆる CSS プロパティに対して適用することができます。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Color" name="Color">色</h3>
+### 色
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;このテキストは赤です。&lt;/p&gt;
-&lt;div class="foo"&gt;
-  &lt;p&gt;このテキストも赤です。&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="bar"&gt;
-  &lt;p&gt;このテキストは緑色 (既定の継承値) です。&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<p>このテキストは赤です。</p>
+<div class="foo">
+  <p>このテキストも赤です。</p>
+</div>
+<div class="bar">
+  <p>このテキストは緑色（既定の継承値）です。</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">.foo {
+```css
+.foo {
   color: blue;
 }
 .bar {
@@ -50,28 +51,30 @@ p {
 .bar p {
   color: unset;
 }
-</pre>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Color') }}</p>
+{{ EmbedLiveSample('Color') }}
 
-<h3 id="Border" name="Border">境界線</h3>
+### 境界線
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;This text has a red border.&lt;/p&gt;
-&lt;div&gt;
-  &lt;p&gt;This text has a red border.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="bar"&gt;
-  &lt;p&gt;This text has a black border (initial default, not inherited).&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<p>このテキストには赤い境界線があります。</p>
+<div>
+  <p>このテキストには赤い境界線があります。</p>
+</div>
+<div class="bar">
+  <p>このテキストには黒い境界線があります（既定値、継承なし）。</p>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   border: 1px solid green;
 }
 
@@ -82,47 +85,23 @@ p {
 .bar p {
   border-color: unset;
 }
-</pre>
+```
 
-<h4 id="Result_2" name="Result_2">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Border', 'auto', 200) }}</p>
+{{ EmbedLiveSample('Border', 'auto', 200) }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Cascade', '#inherit-initial', 'unset') }}</td>
-   <td>{{ Spec2('CSS4 Cascade') }}</td>
-   <td>Level 3 から変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Cascade', '#inherit-initial', 'unset') }}</td>
-   <td>{{ Spec2('CSS3 Cascade') }}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("css.types.global_keywords.unset")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{cssxref("initial")}} を使用すると、プロパティを初期値に設定します。</li>
- <li>{{cssxref("revert")}} を使用すると、プロパティをユーザーエージェントのスタイルシート (又はもしあれば、ユーザーのスタイル) で設定された値に初期化します。</li>
- <li>{{cssxref("inherit")}} を使用すると、要素のプロパティを親と同じ値にします。</li>
- <li>{{cssxref("all")}} プロパティは、すべてのプロパティを一度に initial, inherit, revert, unset の状態にします。</li>
-</ul>
+- {{cssxref("initial")}} を使用すると、プロパティを初期値に設定します。
+- {{cssxref("revert")}} を使用すると、プロパティをユーザーエージェントのスタイルシート（またはもしあれば、ユーザーのスタイル）で設定された値に初期化します。
+- {{cssxref("inherit")}} を使用すると、要素のプロパティを親と同じ値にします。
+- {{cssxref("all")}} プロパティは、すべてのプロパティを一度に initial, inherit, revert, unset の状態にします。

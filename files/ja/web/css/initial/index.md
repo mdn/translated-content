@@ -3,77 +3,64 @@ title: initial
 slug: Web/CSS/initial
 tags:
   - CSS
-  - CSS カスケードと継承
+  - CSS カスケード
   - CSS 値
-  - Reference
-  - initial
+  - 既定の状態
+  - 初期状態
+  - キーワード
   - レイアウト
-  - 初期値
+  - リファレンス
+  - initial
+browser-compat: css.types.global_keywords.initial
 translation_of: Web/CSS/initial
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>initial</code></strong> は CSS のキーワードで、要素にプロパティの<a href="/ja/docs/Web/CSS/initial_value">初期値 (または既定値)</a> を設定します。どの CSS プロパティにも適用できます。</span>これは CSS の一括指定 {{cssxref("all")}} を含み、 <code>initial</code> を指定して、すべての CSS プロパティを初期値に戻すために使用することができます。</p>
+**`initial`** は CSS のキーワードで、要素にプロパティの[初期値（または既定値）](/ja/docs/Web/CSS/initial_value)を設定します。どの CSS プロパティにも適用できます。これは CSS の一括指定である {{cssxref("all")}} を含み、 `initial` を指定して、すべての CSS プロパティを初期値に戻すために使用することができます。
 
-<div class="note">
-<p><strong>注:</strong> <a href="/ja/docs/Web/CSS/inheritance#Inherited_properties">継承プロパティ</a>では、初期値は期待されない値かもしれません。代わりに {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}} キーワードを使用することを検討してください。</p>
-</div>
+[継承プロパティ](/ja/docs/Web/CSS/inheritance#inherited_properties)では、初期値は予期せぬ値になるかもしれません。代わりに {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}} キーワードを使用することを検討してください。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h4 id="HTML">HTML</h4>
+### initial を使用して要素の色を初期化
 
-<pre class="brush: html notranslate">&lt;p&gt;
-  &lt;span&gt;このテキストは赤です。&lt;/span&gt;
-  &lt;em&gt;このテキストは初期値 (ふつうは黒) です。&lt;/em&gt;
-  &lt;span&gt;これは再び赤です。&lt;/span&gt;
-&lt;/p&gt;</pre>
+#### HTML
 
-<h4 id="CSS">CSS</h4>
+```html
+<p>
+  <span>このテキストは赤です。</span>
+  <em>このテキストは初期値（ふつうは黒）です。</em>
+  <span>これは再び赤です。</span>
+</p>
+```
 
-<pre class="brush: css notranslate">p {
+#### CSS
+
+```css
+p {
   color: red;
 }
 
 em {
   color: initial;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Example')}}</p>
+#### 結果
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{EmbedLiveSample('Using_initial_to_reset_color_for_an_element')}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Cascade', '#initial', 'initial') }}</td>
-   <td>{{Spec2('CSS4 Cascade')}}</td>
-   <td>Level 3 から変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Cascade', '#initial', 'initial') }}</td>
-   <td>{{Spec2('CSS3 Cascade')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("css.types.global_keywords.initial")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li>{{cssxref("unset")}} を使用すると、継承プロパティは継承値に、それ以外は初期値に設定します。</li>
- <li>{{cssxref("revert")}} を使用すると、プロパティをユーザーエージェントのスタイルシート (又はもしあれば、ユーザーのスタイル) で設定された値に初期化します。</li>
- <li>{{cssxref("inherit")}} を使用すると、要素のプロパティを親と同じ値にします。</li>
- <li>{{cssxref("all")}} プロパティは、すべてのプロパティを一度に initial, inherit, revert, unset の状態にします。</li>
-</ul>
+## 関連情報
+
+- {{cssxref("unset")}} を使用すると、継承プロパティは継承値に、それ以外は初期値に設定します。
+- {{cssxref("revert")}} を使用すると、プロパティをユーザーエージェントのスタイルシート（またはもしあれば、ユーザーのスタイル）で設定された値に初期化します。
+- {{cssxref("inherit")}} を使用すると、要素のプロパティを親と同じ値にします。
+- {{cssxref("all")}} プロパティは、すべてのプロパティを一度に initial, inherit, revert, unset の状態にします。
