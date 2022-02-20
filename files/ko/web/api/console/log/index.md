@@ -17,7 +17,7 @@ translation_of: Web/API/Console/log
 ---
 {{APIRef("Console API")}}
 
-**`console.log()`** 메서드는 웹 콘솔에 메시지를 출력합니다. 메시지는 단일 문자열(선택적 대체 값 포함)이거나 더 많은 JavaScript 객체중 하나일 수 있습니다.
+**`console.log()`** 메서드는 웹 콘솔에 메시지를 출력합니다. 메시지는 (선택적 대체 값을 포함한) 단일 문자열이거나 더 많은 JavaScript 객체중 하나일 수 있습니다.
 
 {{AvailableInWorkers}}
 
@@ -46,8 +46,6 @@ console.log(msg [, subst1, ..., substN]);
 DOM 요소들을 콘솔로 보낼 때 Chrome에서 다른 유용한 차이점이 있습니다.
 
 ![](dozdcyr.png)
-
-안내:
 
 - `console.log`는 요소를 HTML과 같은 트리 구조로 출력합니다.
 - `console.dir`은 요소를 JSON과 같은 트리 구조로 출력합니다.
