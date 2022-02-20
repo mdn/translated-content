@@ -1,12 +1,6 @@
 ---
 title: DragEvent
 slug: Web/API/DragEvent
-tags:
-  - API
-  - DragEvent
-  - Referencia
-  - arrastrar y soltar
-  - drag and drop
 translation_of: Web/API/DragEvent
 browser-compat: api.DragEvent
 ---
@@ -14,7 +8,7 @@ browser-compat: api.DragEvent
 
 La interfaz **`DragEvent`** es un {{domxref("Event","DOM event")}} que representa una interacción de arrastrar y soltar. El usuario inicia el evento al posicionar el puntero sobre un elemento, seleccionándolo con el puntero y comenazado a arrasrrarlo a una nueva posición (Cambiando su ubicación en el DOM). Las aplicaciones tienen la libertad de interpretar esta interacción de una manera especifica en ella.
 
-Esta interfaz hereda propiedades de {{domxref("MouseEvent")}} y {{domxref("Event")}}.</p>
+Esta interfaz hereda propiedades de {{domxref("MouseEvent")}} y {{domxref("Event")}}.
 
 {{InheritanceDiagram}}
 
@@ -78,8 +72,8 @@ Ejemplos para cada propiedad, constructor, tipo de evento y manejadores de event
 
 ## Véase también 
 
-- [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [Arrastrar y soltar](/es/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Operaciones de arrastre](/es/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Tipos de arrastre recomendados](/es/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Arrastrando y soltando múltiples elementos](/es/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
