@@ -36,7 +36,7 @@ console.debug(msg [, subst1, ..., substN]);
 - `msg`
   - : 0개 이상의 치환 문자열을 포함하는 JavaScript 문자열. `subst1`부터 `substN`까지 순서대로 치환됩니다.
 - `subst1` ... `substN`
-  - : `msg` 매개변수의 치환 문자열에 대체할 JavaScript 객체. 출력 형식에 추가 제어를 할 수 있게 해줍니다. 치환 작동 방식에 대한 설명은 [문자열 치환 사용하기](/ko/docs/Web/API/console#문자열_치환_사용하기)를 참조하세요.
+  - : `msg` 매개변수의 치환 문자열에 대체할 JavaScript 객체. 출력 형식에 추가 제어를 할 수 있게 해줍니다. 치환 작동 방식에 대한 설명은 [console](/ko/docs/Web/API/console) 문서의 [문자열 치환 사용하기](/ko/docs/Web/API/console#문자열_치환_사용하기)를 참조하세요.
 
 ## 명세
 

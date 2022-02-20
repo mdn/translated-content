@@ -30,6 +30,13 @@ console.time(label);
 - `label`
   - : 새 타이머에게 설정할 이름. 타이머를 식별합니다. 같은 이름으로 {{domxref("console.timeEnd()")}}를 호출하면 타이머가 중단되고 콘솔에 시간을 출력합니다.
 
+## 명세
+
+{{Specifications}}
+
+## 브라우저 호환성
+
+{{Compat}}
 
 ## 같이 보기
 

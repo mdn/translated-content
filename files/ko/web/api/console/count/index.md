@@ -27,7 +27,7 @@ console.count([label]);
 ### 매개변수
 
 - `label` {{Optional_Inline}}
-  - : {{jsxref("String")}}. 지정한 경우, 이 레이블을 지정한 count() 호출의 수를 출력합니다. 누락한 경우 "default"를 지정한 것처럼 동작합니다.
+  - : {{jsxref("String")}}. 지정한 경우, 이 레이블을 지정한 `count()` 호출의 수를 출력합니다. 누락한 경우 "default"를 지정한 것처럼 동작합니다.
 
 
 ## 예제
