@@ -280,6 +280,7 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 | 용어 | 번역 | 기타 |
 | --- | --- | --- |
 | Application | 애플리케이션 | |
+| Assertion | 어설션 | |
 | Attribute | 특성 | |
 | Boolean | 불리언 | |
 | Class | 클래스 | |
