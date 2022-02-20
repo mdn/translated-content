@@ -12,7 +12,7 @@ Esta interfaz hereda propiedades de {{domxref("MouseEvent")}} y {{domxref("Event
 
 {{InheritanceDiagram}}
 
-## Properties
+## Propiedades
 
 - {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
   - : Los datos que son transferidos en un evento de arrastrar y soltar.
