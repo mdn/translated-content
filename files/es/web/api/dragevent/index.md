@@ -8,6 +8,7 @@ tags:
   - arrastrar y soltar
   - drag and drop
 translation_of: Web/API/DragEvent
+browser-compat: api.DragEvent
 ---
 {{APIRef("HTML Drag and Drop API")}}
 
