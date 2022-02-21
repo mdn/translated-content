@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.WeakMap
 
 El objeto `WeakMap` es una colección de pares llave/valor en la que las llaves
 deben ser objetos con valores de cualquier
-[Tipos de datos en JavaScript](/es/docs/Web/JavaScript/Data_structures#javascript_types) arbitrario,
+[tipo de dato en JavaScript](/es/docs/Web/JavaScript/Data_structures#javascript_types),
 y el cual no crea fuertes referencias a sus llaves.
 Es decir, la presencia de un objeto como llave en un `WeakMap` no evita que el
 objeto sea recolectado como basura. Una vez que se ha recopilado un objeto
@@ -32,16 +32,16 @@ de la guía [colecciónes con llaves](/es/docs/Web/JavaScript/Guide/Keyed_collec
 
 Las llaves de los WeakMaps solamente pueden ser del tipo `Object`. Los {{Glossary("Primitive", "Primitive data types")}} como claves no están permitidos (ej. un {{jsxref("Symbol")}} no pueden ser una clave de `WeakMap`).
 
-### Por qué *Weak*Map?
+### ¿Por qué *Weak*Map?
 
-La API `map` _podría_ ser implementada en JavaScript con dos arrays (uno para las llaves, otro para los valores) compartidos por los cuatro métodos de la API.
-Establecer elementos en este `map` implicaría colocar una llave y valor al final de cada uno de los arreglos sumultáneamente.
+Una API de mapeo _podría_ ser implementada en JavaScript con dos arreglos (uno para las llaves, otro para los valores) compartidos por los cuatro métodos de la API.
+Establecer elementos en este mapa implicaría colocar una llave y valor al final de cada uno de los arreglos simultáneamente.
 Como resultado, los índices de la llave y el valor corresponderían a ambas matrices.
-Obtener valores del `map` implicaría iterar a través de todas las llaves hasta encontrar una coincidencia, luego usar el índice de esta coincidencia para recuperar el valor correspondiente del arreglo de valores.
+Obtener valores del mapa implicaría iterar a través de todas las llaves hasta encontrar una coincidencia, luego usar el índice de esta coincidencia para recuperar el valor correspondiente del arreglo de valores.
 
 Tal implementación tendría dos inconvenientes principales:
 
-1. El primero es una búsqueda *O(*n*)* (siendo _n_ el número de claves en el mapa). ya que ambas operaciones deben iterar a través de la lista de llaves para encontrar un valor coincidente.
+1. El primero es una búsqueda *O(*n*)* (siendo _n_ el número de claves en el mapa) ya que ambas operaciones deben iterar a través de la lista de llaves para encontrar un valor coincidente.
 2. El segundo inconveniente es un problema de pérdida de memoria por que los arreglos se aseguran que las referencias a cada llave y cada valor se manengan indefinidamente. Estas referencias evitan que las llaves se recopilen como basura, incluso si no hay otras referencias al objeto. Esto también evitaría que los valores correspondientes se recopilen como basura.
 
 Por el contrario, en un `WeakMap`, un objecto llave se refiere fuertemente a su contenido siempre que la llave no se recolecte como basura, pero débilmente a partir de ese momento. Como tal, un `WeakMap`:
@@ -65,9 +65,9 @@ Pero debido a que un `WeakMap` no permite observar la vida de sus llaves, sus ll
 - {{jsxref("WeakMap.get", "WeakMap.prototype.get(<var>key</var>)")}}
   - : Regresa el valor asociado a la `key`, o `undefined` si no hay ninguno.
 - {{jsxref("WeakMap.has", "WeakMap.prototype.has(<var>key</var>)")}}
-  - : Devuelve un valor boleano que afirma si se ha asociado un valor a la `key` en el objeto `WeakMap` o no.
+  - : Devuelve un valor booleano que afirma si se ha asociado un valor a la `key` en el objeto `WeakMap` o no.
 - {{jsxref("WeakMap.set", "WeakMap.prototype.set(<var>key</var>, <var>value</var>)")}}
-  - : Establece el `value` para la `key` in el objeto `WeakMap`. Devuelve el objeto `WeakMap`.
+  - : Establece el `value` para la `key` en el objeto `WeakMap`. Devuelve el objeto `WeakMap`.
 
 ## Ejemplos
 
