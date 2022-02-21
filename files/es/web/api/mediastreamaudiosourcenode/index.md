@@ -48,7 +48,7 @@ El número de canales emitidos por el nodo coincide con el número de pistas enc
 _Además de las siguientes propiedades, `MediaStreamAudioSourceNode` hereda las propiedades de su padre, {{domxref("AudioNode")}}_.
 
 - {{domxref("MediaStreamAudioSourceNode.mediaStream", "mediaStream")}} {{ReadOnlyInline}}
-  - : {{domxref("MediaStream")}} es utilizado al construir este `MediaStreamAudioSourceNode`.
+  - : El {{domxref("MediaStream")}} utilizado al construir este `MediaStreamAudioSourceNode`.
 
 ## Métodos
 
