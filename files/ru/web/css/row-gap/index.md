@@ -20,13 +20,13 @@ browser-compat: css.properties.row-gap
 ## Синтаксис
 
 ```css
-/* Значения <length> */
+/* Значения типа <length> */
 row-gap: 20px;
 row-gap: 1em;
 row-gap: 3vmin;
 row-gap: 0.5cm;
 
-/* Значения <percentage> */
+/* Значения типа <percentage> */
 row-gap: 10%;
 
 /* Глобальные значения */
@@ -85,7 +85,7 @@ row-gap: unset;
 }
 ```
 
-#### Result
+#### Результат
 
 {{EmbedLiveSample('Флексбокс-раскладка', "auto", "120px")}}
 
